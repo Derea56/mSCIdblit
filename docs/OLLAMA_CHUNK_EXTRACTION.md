@@ -9,7 +9,7 @@ The Tamaru 2023 trial showed the failure mode clearly: a long prompt can make th
 ## Standard run
 
 1. Save extracted full text under ignored scratch space, usually `work/module_1a/...`.
-2. Generate chunks and prompts without running Ollama:
+2. Generate chunks and prompts without running Ollama. The default task is `extract`, but for most papers start with `triage` or `figure_candidate_experiments`:
 
    ```bash
    python3 scripts/ollama_chunk_extract.py \
@@ -19,6 +19,7 @@ The Tamaru 2023 trial showed the failure mode clearly: a long prompt can make th
      --doi 10.1016/j.expneurol.2022.114264 \
      --pmid 36336030 \
      --url https://catalog.lib.kyushu-u.ac.jp/opac_download_md/6787512/med3703.pdf \
+     --task figure_candidate_experiments \
      --output-dir work/module_1a/extraction_runs/M1A-P003
    ```
 
@@ -34,6 +35,7 @@ The Tamaru 2023 trial showed the failure mode clearly: a long prompt can make th
      --pmid 36336030 \
      --url https://catalog.lib.kyushu-u.ac.jp/opac_download_md/6787512/med3703.pdf \
      --output-dir work/module_1a/extraction_runs/M1A-P003 \
+     --task figure_candidate_experiments \
      --run-ollama \
      --model qwen2.5-coder:32b
    ```
@@ -45,11 +47,34 @@ The Tamaru 2023 trial showed the failure mode clearly: a long prompt can make th
 | File | Purpose |
 |---|---|
 | `source_clean.txt` | Normalized source text used for chunking |
-| `chunk_manifest.json` | Machine-readable chunk inventory with line ranges |
+| `all_chunk_manifest.json` | Machine-readable inventory for all chunks before task filtering |
+| `chunk_manifest.json` | Machine-readable inventory for chunks selected by the task |
 | `review_packet.md` | Human-readable source packet summary |
 | `prompts/*.txt` | Narrow prompts for each chunk |
 | `ollama_outputs/*.md` | Raw model outputs when `--run-ollama` is used |
 | `sanity_report.md` | Automated warnings and review checklist |
+
+## Task modes
+
+| Task | Best use | Output role |
+|---|---|---|
+| `triage` | Decide whether chunks are worth curator attention | Skip/keep guidance, not rows |
+| `methods_metadata` | Index species, injury model, device, timepoints, assays, culture and transplant details | Factual methods map |
+| `figure_candidate_experiments` | Scout candidate comparisons from figures/results | Candidate comparison list, not curated rows |
+| `row_sanity_check` | Check proposed rows against source chunks | Unsupported fields, contradictions, contamination warnings |
+| `extract` | Legacy full candidate extraction | Draft rows requiring manual review |
+
+Use `row_sanity_check` with a file containing proposed tracker/database rows:
+
+```bash
+python3 scripts/ollama_chunk_extract.py \
+  --source-text work/module_1a/tamaru_2023_pdf_text_clean.txt \
+  --paper-id M1A-P003 \
+  --title "Glial scar survives until the chronic phase by recruiting scar-forming astrocytes after spinal cord injury" \
+  --task row_sanity_check \
+  --rows-file work/module_1a/proposed_rows/M1A-P003_rows.md \
+  --output-dir work/module_1a/extraction_runs/M1A-P003_row_check
+```
 
 ## Review rules
 

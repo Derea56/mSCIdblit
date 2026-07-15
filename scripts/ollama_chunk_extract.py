@@ -47,6 +47,7 @@ SUSPICIOUS_IN_VITRO_RE = re.compile(
     r"(infinite horizons|ih impactor|kdyn|\bt[0-9]{1,2}\b|contusion)",
     re.I | re.S,
 )
+TASKS = ("extract", "triage", "methods_metadata", "figure_candidate_experiments", "row_sanity_check")
 
 
 @dataclass
@@ -228,8 +229,18 @@ def make_chunks(text: str, max_chars: int, figure_context_lines: int, front_char
     return unique_chunks
 
 
-def prompt_for_chunk(args: argparse.Namespace, chunk: Chunk) -> str:
-    metadata = {
+def select_chunks(chunks: list[Chunk], task: str) -> list[Chunk]:
+    if task == "triage":
+        return [chunk for chunk in chunks if chunk.chunk_type in {"paper_context", "results_subsection", "figure_or_results"}]
+    if task == "methods_metadata":
+        return [chunk for chunk in chunks if chunk.chunk_type in {"methods", "paper_context"}]
+    if task == "figure_candidate_experiments":
+        return [chunk for chunk in chunks if chunk.chunk_type in {"figure_or_results", "results_subsection"}]
+    return chunks
+
+
+def paper_metadata(args: argparse.Namespace, chunk: Chunk) -> dict[str, str]:
+    return {
         "paper_id": args.paper_id,
         "title": args.title,
         "doi": args.doi or "UNKNOWN",
@@ -238,8 +249,89 @@ def prompt_for_chunk(args: argparse.Namespace, chunk: Chunk) -> str:
         "chunk_id": chunk.chunk_id,
         "chunk_type": chunk.chunk_type,
         "line_range": f"{chunk.start_line}-{chunk.end_line}",
+        "task": args.task,
     }
-    schema = {
+
+
+def schema_for_task(args: argparse.Namespace, chunk: Chunk) -> dict[str, object]:
+    if args.task == "triage":
+        return {
+            "chunk_id": chunk.chunk_id,
+            "paper_id": args.paper_id,
+            "contains_extractable_experiments": "yes|no|unclear",
+            "module_1a_relevance": "high|medium|low|none",
+            "relevance_reason": "brief source-grounded reason",
+            "likely_context_types": [],
+            "candidate_figures_or_sections": [],
+            "do_not_extract_reasons": [],
+            "missing_information_needed": [],
+        }
+
+    if args.task == "methods_metadata":
+        return {
+            "chunk_id": chunk.chunk_id,
+            "paper_id": args.paper_id,
+            "methods_metadata": {
+                "species": [],
+                "strains": [],
+                "sex": "UNKNOWN",
+                "ages": [],
+                "injury_models": [],
+                "injury_devices_and_parameters": [],
+                "vertebral_levels": [],
+                "surgeries_or_interventions": [],
+                "cell_culture_systems": [],
+                "transplantation_details": [],
+                "antibody_or_drug_treatments": [],
+                "timepoints": [],
+                "assays": [],
+                "sample_sizes": [],
+            },
+            "fields_not_stated": [],
+            "context_separation_notes": [],
+            "source_evidence": [],
+        }
+
+    if args.task == "figure_candidate_experiments":
+        return {
+            "chunk_id": chunk.chunk_id,
+            "paper_id": args.paper_id,
+            "candidate_experiments": [
+                {
+                    "figure_or_panel": "UNKNOWN",
+                    "candidate_comparison": "brief contrast, not a final database row",
+                    "context_type": "in_vivo_sci|in_vitro|transplantation_after_sci|transplantation_naive|human_pathology|imaging|other|no_experiment",
+                    "control_condition": "UNKNOWN",
+                    "intervention_or_contrast": "UNKNOWN",
+                    "fields_explicitly_stated": [],
+                    "fields_missing_from_chunk": [],
+                    "why_candidate_not_final": "what a curator still needs to verify",
+                    "contamination_risks": [],
+                }
+            ],
+            "no_experiment_reason": "N/A unless no experiment is present",
+        }
+
+    if args.task == "row_sanity_check":
+        return {
+            "chunk_id": chunk.chunk_id,
+            "paper_id": args.paper_id,
+            "row_audit": [
+                {
+                    "row_id_or_label": "UNKNOWN",
+                    "supported_by_this_chunk": "yes|no|partial|unclear",
+                    "unsupported_fields": [],
+                    "contradictions": [],
+                    "missing_but_needed_fields": [],
+                    "context_contamination_warning": "yes|no",
+                    "recommended_curator_action": "keep|revise|split|merge|discard|needs_manual_review",
+                    "source_evidence": "brief paraphrase with line/figure reference if possible",
+                }
+            ],
+            "chunk_level_warnings": [],
+        }
+
+    return {
         "chunk_id": chunk.chunk_id,
         "paper_id": args.paper_id,
         "experiments": [
@@ -267,23 +359,79 @@ def prompt_for_chunk(args: argparse.Namespace, chunk: Chunk) -> str:
         "chunk_level_notes": [],
     }
 
+
+def task_instructions(args: argparse.Namespace) -> str:
+    shared = """Use ONLY the source chunk below. If a field is absent in this chunk, write UNKNOWN. If a field is biologically not applicable, write N/A. Do not borrow injury devices, vertebral levels, severities, or timepoints from other experiments or other chunks."""
+    guardrails = """Critical guardrails:
+- in_vitro/cell culture experiments must use injury_device_and_parameters=N/A, vertebral_level=N/A, injury_model=N/A unless the chunk explicitly describes a tissue injury model.
+- transplantation_naive experiments must not inherit spinal cord injury metadata unless this exact chunk says the recipient animals were injured.
+- in_vivo_sci experiments need explicit source support for model, device, severity, level, and chronicity; otherwise use UNKNOWN.
+- Prefer fewer, well-supported candidates over speculative rows."""
+
+    if args.task == "triage":
+        return f"""{shared}
+
+Task: triage this chunk for whether it is worth curator attention for Module 1A chronic SCI lesion architecture. Do not extract final experiment rows. Identify relevance, likely context types, and whether the chunk can be skipped."""
+
+    if args.task == "methods_metadata":
+        return f"""{shared}
+
+Task: index factual methods metadata only. Separate in vivo SCI, in vitro culture, transplantation, and antibody/drug details. Do not decide experiment granularity and do not infer missing metadata.
+
+{guardrails}"""
+
+    if args.task == "figure_candidate_experiments":
+        return f"""{shared}
+
+Task: scout candidate figure-level comparisons. These are NOT final database rows. List only comparisons that the source chunk directly supports and explain what a curator still needs to verify.
+
+{guardrails}"""
+
+    if args.task == "row_sanity_check":
+        return f"""{shared}
+
+Task: audit the proposed curated rows against this source chunk. Do not create new rows unless noting that a row may be missing. Mark unsupported fields and context contamination risks clearly.
+
+{guardrails}"""
+
+    return f"""{shared}
+
+Task: extract experiment-level metadata for curator review. These candidate rows must still be manually checked before entering the database.
+
+{guardrails}"""
+
+
+def prompt_for_chunk(args: argparse.Namespace, chunk: Chunk) -> str:
+    metadata = {
+        **paper_metadata(args, chunk),
+    }
+    schema = schema_for_task(args, chunk)
+    proposed_rows = ""
+    if args.task == "row_sanity_check":
+        if not args.rows_file:
+            raise SystemExit("--task row_sanity_check requires --rows-file.")
+        rows_text = Path(args.rows_file).read_text(encoding="utf-8", errors="replace")
+        proposed_rows = f"""
+
+        Proposed curated rows to audit:
+        ```text
+        {rows_text}
+        ```
+        """
+
     return textwrap.dedent(
         f"""\
-        You are extracting experiment-level metadata for an auditable spinal cord injury literature database.
+        You are a local-model subagent helping with an auditable spinal cord injury literature database.
+        Your role is limited: provide source-grounded scouting, indexing, or checks for a human/primary curator.
 
-        Use ONLY the source chunk below. If a field is absent in this chunk, write UNKNOWN. If a field is biologically not applicable, write N/A. Do not borrow injury devices, vertebral levels, severities, or timepoints from other experiments or other chunks.
-
-        First classify context_type. Critical guardrails:
-        - in_vitro/cell culture experiments must use injury_device_and_parameters=N/A, vertebral_level=N/A, injury_model=N/A unless the chunk explicitly describes a tissue injury model.
-        - transplantation_naive experiments must not inherit spinal cord injury metadata unless this exact chunk says the recipient animals were injured.
-        - in_vivo_sci experiments need explicit source support for model, device, severity, level, and chronicity; otherwise use UNKNOWN.
-        - Prefer fewer, well-supported experiments over many speculative rows.
+        {task_instructions(args)}
 
         Paper metadata:
         {json.dumps(metadata, indent=2)}
 
         Return strict JSON matching this shape:
         {json.dumps(schema, indent=2)}
+        {proposed_rows}
 
         Source chunk:
         ```text
@@ -356,6 +504,7 @@ def write_review_packet(path: Path, args: argparse.Namespace, chunks: list[Chunk
         f"- Title: {args.title}",
         f"- DOI: {args.doi or 'UNKNOWN'}",
         f"- PMID: {args.pmid or 'UNKNOWN'}",
+        f"- Task: {args.task}",
         f"- Generated: {datetime.now(timezone.utc).isoformat()}",
         f"- Chunk count: {len(chunks)}",
         "",
@@ -380,11 +529,12 @@ def write_review_packet(path: Path, args: argparse.Namespace, chunks: list[Chunk
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
-def write_sanity_report(path: Path, chunks: list[Chunk], warnings: list[str], ran_ollama: bool) -> None:
+def write_sanity_report(path: Path, args: argparse.Namespace, chunks: list[Chunk], warnings: list[str], ran_ollama: bool) -> None:
     lines = [
         "# Ollama Chunk Sanity Report",
         "",
         f"- Generated: {datetime.now(timezone.utc).isoformat()}",
+        f"- Task: {args.task}",
         f"- Chunks prepared: {len(chunks)}",
         f"- Ollama executed: {'YES' if ran_ollama else 'NO'}",
         "",
@@ -419,6 +569,13 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--pmid")
     parser.add_argument("--url")
     parser.add_argument("--output-dir", required=True)
+    parser.add_argument(
+        "--task",
+        choices=TASKS,
+        default="extract",
+        help="Prompt mode: full extraction, triage, methods indexing, figure scouting, or row audit.",
+    )
+    parser.add_argument("--rows-file", help="Curated/proposed rows to audit with --task row_sanity_check.")
     parser.add_argument("--max-chars", type=int, default=4500, help="Approximate maximum source characters per chunk.")
     parser.add_argument("--figure-context-lines", type=int, default=45)
     parser.add_argument("--front-chars", type=int, default=3500)
@@ -431,6 +588,8 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv or sys.argv[1:])
+    if args.task == "row_sanity_check" and not args.rows_file:
+        raise SystemExit("--task row_sanity_check requires --rows-file.")
     output_dir = Path(args.output_dir)
     prompts_dir = output_dir / "prompts"
     outputs_dir = output_dir / "ollama_outputs"
@@ -441,8 +600,10 @@ def main(argv: list[str] | None = None) -> int:
     source_text = normalize_text(read_source_text(args))
     (output_dir / "source_clean.txt").write_text(source_text, encoding="utf-8")
 
-    chunks = make_chunks(source_text, args.max_chars, args.figure_context_lines, args.front_chars)
+    all_chunks = make_chunks(source_text, args.max_chars, args.figure_context_lines, args.front_chars)
+    chunks = select_chunks(all_chunks, args.task)
     write_json(output_dir / "chunk_manifest.json", [asdict(chunk) for chunk in chunks])
+    write_json(output_dir / "all_chunk_manifest.json", [asdict(chunk) for chunk in all_chunks])
     write_review_packet(output_dir / "review_packet.md", args, chunks)
 
     warnings: list[str] = []
@@ -465,8 +626,8 @@ def main(argv: list[str] | None = None) -> int:
                 warnings.append(f"{chunk.chunk_id}: Ollama exited with status {returncode}.")
             warnings.extend(sanity_warnings_for_output(output_text, chunk.chunk_id))
 
-    write_sanity_report(output_dir / "sanity_report.md", chunks, warnings, args.run_ollama)
-    print(f"Prepared {len(chunks)} chunks in {output_dir}")
+    write_sanity_report(output_dir / "sanity_report.md", args, chunks, warnings, args.run_ollama)
+    print(f"Prepared {len(chunks)} {args.task} chunks in {output_dir}")
     print(f"Prompts: {prompts_dir}")
     if args.run_ollama:
         print(f"Ollama outputs: {outputs_dir}")
