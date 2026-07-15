@@ -11,6 +11,7 @@ This schema embodies strict scientific principles:
 5. **Hypotheses are generated only from consensus** — New ideas emerge from synthesized knowledge, not speculation
 6. **Every observation is traceable to a source** — Figure, table, or explicit results text reference
 7. **Controlled vocabulary ensures standardization** — Terms like injury models, assays, cell types use standardized definitions
+8. **Curation status is auditable** — Extraction passes, curator notes, and blockers are represented in the database
 
 ---
 
@@ -130,6 +131,9 @@ experiment_id (FK)
 evidence_type_id (FK) — references ControlledVocabulary_EvidenceType
 outcome_type_id (FK) — references ControlledVocabulary_OutcomeType
 observation_value — THE EXACT VALUE as stated/measured
+raw_observation_text — literal source text before normalization
+normalized_observation_value — curator-normalized value, if needed
+normalization_notes
 unit — measurement unit
 standard_error
 confidence_interval_lower, confidence_interval_upper
@@ -138,6 +142,11 @@ effect_size
 n_subjects
 measurement_method — HOW was this measured?
 timepoint_postinjury_days — if different from experiment
+source_section — results, figure legend, table, methods, etc.
+source_quote
+source_page
+figure_panel_reference
+extraction_confidence — high, medium, low, uncertain
 notes — contextual notes (NEVER inferred)
 created_at (immutable)
 ```
@@ -145,6 +154,7 @@ created_at (immutable)
 **IMMUTABILITY GUARANTEE**:
 - `created_at` is set once, never updated
 - No `updated_at` column (observations don't change)
+- `UPDATE` and `DELETE` are blocked by PostgreSQL triggers
 - If an observation is wrong, a new (corrected) observation is recorded with notes
 
 **Example Observation**:
@@ -168,6 +178,10 @@ paper_id (FK)
 claim_text — the full claim
 claim_type — 'interpretation', 'conclusion', 'speculation', 'mechanistic', 'implication'
 confidence_level — 'high', 'medium', 'low', 'speculative'
+source_section — abstract, results, discussion, conclusion, etc.
+source_quote
+source_page
+extraction_confidence — high, medium, low, uncertain
 notes
 created_at, updated_at
 ```
@@ -364,12 +378,51 @@ notes
 
 ---
 
+### **CurationPass, PaperCurationStatus, ExperimentCurationStatus**
+
+Workflow tables for tracking extraction progress through repeatable passes.
+
+```sql
+CurationPass
+  pass_code — '-1', '0', '1', '2', '3', '4', '5'
+  pass_name
+  description
+  expected_table
+  sort_order
+
+PaperCurationStatus / ExperimentCurationStatus
+  status — pending, in_progress, complete, blocked, needs_review
+  curator
+  started_at, completed_at
+  blocker_reason
+  notes
+```
+
+These tables let the database answer operational questions such as "Which papers have verified full text but no extracted observations?"
+
+---
+
+### **CuratorNote**
+
+Structured notes for ambiguity, vocabulary requests, extraction issues, and quality flags.
+
+```sql
+note_type — ambiguity, vocabulary_request, extraction_issue, quality_flag
+note_text
+curator
+resolved
+resolved_at
+```
+
+---
+
 ## Data Integrity Constraints
 
-1. **Observations are immutable**: No `updated_at` column; immutability enforced by application logic.
+1. **Observations are immutable**: No `updated_at` column; `UPDATE` and `DELETE` blocked by trigger.
 2. **Hypotheses require consensus**: FK constraint `hypothesis.derived_from_consensus_id` ensures hypotheses cannot exist in isolation.
-3. **Consensus is versioned**: New versions are recorded; old versions remain in `Consensus_Version`.
+3. **Consensus is versioned**: Insert/update triggers write records to `Consensus_Version`.
 4. **EvidenceLink prevents duplicates**: UNIQUE constraint on `(claim_id, observation_id)`.
+5. **Curation progress is auditable**: Status tables and curator notes preserve extraction state.
 
 ---
 

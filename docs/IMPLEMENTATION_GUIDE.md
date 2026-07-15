@@ -28,6 +28,12 @@ Consensus (versioned project-level synthesis)
   └─ Hypothesis (generated ideas, never from speculation)
 
 SearchSession (reproducible search record)
+  └─ SearchSession_Paper (included/excluded/under review)
+
+CurationPass
+  ├─ PaperCurationStatus
+  ├─ ExperimentCurationStatus
+  └─ CuratorNote
 ```
 
 ---
@@ -186,6 +192,11 @@ INSERT INTO Observation (
   n_subjects,
   measurement_method,
   timepoint_postinjury_days,
+  raw_observation_text,
+  source_section,
+  source_quote,
+  figure_panel_reference,
+  extraction_confidence,
   notes
 ) VALUES (
   1,
@@ -197,6 +208,11 @@ INSERT INTO Observation (
   12,
   'Open field locomotion assessment',
   28,
+  'Mean BMS score for wild-type controls at 28 days post-injury',
+  'figure legend',
+  'Mean of 3 trials per animal; SEM = 0.8',
+  'Fig 3A',
+  'high',
   'Mean of 3 trials per animal; SEM = 0.8'
 );
 -- Returns: observation_id = 1
@@ -212,6 +228,11 @@ INSERT INTO Observation (
   n_subjects,
   measurement_method,
   timepoint_postinjury_days,
+  raw_observation_text,
+  source_section,
+  source_quote,
+  figure_panel_reference,
+  extraction_confidence,
   notes
 ) VALUES (
   1,
@@ -223,10 +244,17 @@ INSERT INTO Observation (
   12,
   'Open field locomotion assessment',
   28,
+  'Mean BMS score for BDNF conditional knockout at 28 days post-injury',
+  'figure legend',
+  'Mean of 3 trials per animal; SEM = 1.2',
+  'Fig 3A',
+  'high',
   'Mean of 3 trials per animal; SEM = 1.2'
 );
 -- Returns: observation_id = 2
 ```
+
+Treat observations as complete only after source provenance is recorded. If a finalized observation is wrong, insert a corrected observation rather than updating the original.
 
 ---
 
@@ -236,14 +264,21 @@ From the paper's discussion and conclusion:
 
 ```sql
 INSERT INTO AuthorClaim (
-  paper_id, claim_text, claim_type, confidence_level
+  paper_id, claim_text, claim_type, confidence_level,
+  source_section, source_quote, extraction_confidence
 ) VALUES
   (1, 'BDNF expression in macrophages is necessary for functional recovery after SCI',
-      'conclusion', 'high'),
+      'conclusion', 'high', 'discussion',
+      'BDNF expression in macrophages is necessary for functional recovery after SCI',
+      'high'),
   (1, 'BDNF-expressing macrophages promote axonal regeneration and neural sprouting',
-      'interpretation', 'medium'),
+      'interpretation', 'medium', 'discussion',
+      'BDNF-expressing macrophages promote axonal regeneration and neural sprouting',
+      'medium'),
   (1, 'Therapeutic targeting of macrophage BDNF could enhance recovery in chronic SCI',
-      'implication', 'speculative');
+      'implication', 'speculative', 'conclusion',
+      'Therapeutic targeting of macrophage BDNF could enhance recovery in chronic SCI',
+      'medium');
 -- Returns: claim_id = 1, 2, 3
 ```
 
@@ -418,8 +453,9 @@ WHERE s.search_id = 1;
 | Principle | How Enforced |
 |-----------|---------------|
 | Observations are atomic | Only one value per Observation record |
-| Observations are immutable | No `updated_at`; new records added, never modified |
+| Observations are immutable | No `updated_at`; UPDATE/DELETE blocked by trigger |
 | Evidence is traceable | `EvidenceLink` explicitly connects Claims to Observations |
+| Source provenance is traceable | Source section, quote, page, and figure/panel fields |
 | Hypotheses are grounded | FK constraint: `Hypothesis.derived_from_consensus_id` cannot be NULL |
-| Consensus is versioned | `Consensus_Version` table preserves all historical versions |
+| Consensus is versioned | Trigger writes `Consensus_Version` history |
 | Controlled vocabulary used | FK constraints enforce valid species, injury models, assays, etc. |
