@@ -72,7 +72,7 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 | Paper ID | First Author | Year | Title | Species | Injury Model | Status | Notes |
 |----------|--------------|------|-------|---------|--------------|--------|-------|
 | M1A-P007 | Cooper JG | 2018 | Fibronectin EDA forms the chronic fibrotic scar after contusive spinal cord injury | Mouse | Contusion | PASS 3 COMPLETE | Anchor for chronic fibrotic compartment |
-| M1A-P008 | Soderblom C | 2013 | Perivascular fibroblasts form the fibrotic scar after contusive spinal cord injury | Mouse | Contusion | QUEUED PASS -1 | Candidate for fibroblast source/cell identity |
+| M1A-P008 | Soderblom C | 2013 | Perivascular fibroblasts form the fibrotic scar after contusive spinal cord injury | Mouse | Contusion | PASS 3 COMPLETE | Anchor for perivascular fibroblast source/cell identity |
 | M1A-P009 | Dias DO | 2018 | Reducing pericyte-derived scarring promotes recovery after spinal cord injury | Mouse | SCI | QUEUED PASS -1 | Candidate for pericyte-derived scar |
 | M1A-P010 | Yokota K | 2017 | Periostin promotes scar formation through the interaction between pericytes and infiltrating monocytes/macrophages after spinal cord injury | Mouse | SCI | QUEUED PASS -1 | Candidate for pericyte/macrophage scar mechanism |
 
@@ -162,6 +162,7 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 |----------|---|---|---|---|---|---|
 | M1A-P003 | YES | YES | YES | YES | YES | PASS |
 | M1A-P007 | YES | YES | YES | YES | YES | PASS |
+| M1A-P008 | YES | YES | YES | YES | YES | PASS |
 
 **BLOCKED papers**: Log separately for future retrieval attempts
 
@@ -173,6 +174,7 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 |----------|-------|---------|------|---------|--------|-------|-------|-----|------|-----|---|
 | M1A-P003 | Glial scar survives until the chronic phase by recruiting scar-forming astrocytes after spinal cord injury | Tetsuya Tamaru; Kazu Kobayakawa; Hirokazu Saiwai; Daijiro Konno; Ken Kijima; Shingo Yoshizaki; Kazuhiro Hata; Hirotaka Iura; Gentaro Ono; Yohei Haruta; Kazuki Kitade; Kei-Ichiro Iida; Ken-Ichi Kawaguchi; Yoshihiro Matsumoto; Kensuke Kubota; Takeshi Maeda; Seiji Okada; Yasuharu Nakashima | 2023 | Experimental Neurology | 359 | — | 114264 | 10.1016/j.expneurol.2022.114264 | 36336030 | https://catalog.lib.kyushu-u.ac.jp/opac_download_md/6787512/med3703.pdf | YES |
 | M1A-P007 | Fibronectin EDA forms the chronic fibrotic scar after contusive spinal cord injury | John G. Cooper; Su Ji Jeong; Tammy L. McGuire; Sripadh Sharma; Wenxia Wang; Swati Bhattacharyya; John Varga; John A. Kessler | 2018 | Neurobiology of Disease | 116 | — | 60-68 | 10.1016/j.nbd.2018.04.014 | 29705186 | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5995671/ | YES |
+| M1A-P008 | Perivascular Fibroblasts Form the Fibrotic Scar after Contusive Spinal Cord Injury | Cynthia Soderblom; Xueting Luo; Ezra Blumenthal; Eric Bray; Kirill Lyapichev; Jose Ramos; Vidhya Krishnan; Catherine Lai-Hsu; Kevin K Park; Pantelis Tsoulfas; Jae K Lee | 2013 | The Journal of Neuroscience | 33 | 34 | 13882-13887 | 10.1523/JNEUROSCI.2524-13.2013 | 23966707 | https://pmc.ncbi.nlm.nih.gov/articles/PMC3755723/ | YES |
 
 ---
 
@@ -182,6 +184,7 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 |----------|-------------|---|---|---|---|
 | M1A-P003 | M1A-P003-RQ001 | Do scar-forming astrocytes persist into the chronic phase after SCI, retain scar-forming autonomy, and recruit surrounding astrocytes through beta1-integrin/N-cadherin signaling? | exploratory | chronic phase; glial scar; scar-forming astrocyte; beta1-integrin; N-cadherin; astrocyte plasticity | YES |
 | M1A-P007 | M1A-P007-RQ001 | Does eliminating the fibronectin Extra Domain A isoform reduce fibrotic scarring and improve recovery after contusive spinal cord injury in mice? | positive | FnEDA; fibronectin matrix; fibrotic scar; contusion SCI; chronic lesion | YES |
+| M1A-P008 | M1A-P008-RQ001 | Do Col1alpha1-expressing perivascular fibroblasts enter and form the fibrotic scar after contusive SCI with intact dura, and are they distinct from NG2-positive pericytes? | exploratory | Col1alpha1-GFP; perivascular fibroblast; fibrotic scar; contusion SCI; NG2 lineage tracing; PDGFR-beta | YES |
 
 ---
 
@@ -193,6 +196,10 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 | M1A-P003 | M1A-P003-P002 | In vitro astrocyte phenotype manipulation | Generate IL-6 reactive astrocytes and collagen-I-grown scar-forming astrocytes, then test whether removing collagen signaling or blocking beta1-integrin/N-cadherin reverts scar-forming astrocytes. | Primary astrocytes from P1-P3 C57BL/6J mice; IL-6 plus soluble IL-6 receptor; type I collagen-coated dishes; Poly-D-lysine reseeding; anti-beta1 integrin and anti-N-cadherin antibodies; immunostaining and qPCR. | YES |
 | M1A-P003 | M1A-P003-P003 | Scar-forming astrocyte transplantation and beta1-integrin blockade | Test whether transplanted scar-forming astrocytes maintain scar phenotype, recruit host astrocytes, and whether beta1-integrin blockade reduces recruitment after transplantation or SCI. | EGFP-positive Col-I-SAs from CAG-EGFP neonatal mice transplanted into naive spinal cord; anti-beta1 integrin antibody after transplantation or after SCI; GFAP/N-cadherin/GAP43 immunostaining and LMD/qPCR. | YES |
 | M1A-P007 | M1A-P007-P001 | FnEDA-null versus wildtype mouse contusion SCI | Compare FnEDA-null mice with littermate wildtype controls after T11 contusion SCI, measuring fibronectin isoforms, lesion/fibrotic scar anatomy, fibronectin matrix stability, axonal density, and locomotor recovery across acute, subacute, and chronic time points. | Infinite Horizons impactor, 70 kdyn force, 60 s dwell; 8-10 week male/female FnEDA-null and littermate wildtype mice for genotype comparisons; 8 week female C57BL/6 mice for FnEDA mRNA/protein time course; IHC, western blot, qPCR, DOC digestion, BMS/mBBB scoring. | YES |
+| M1A-P008 | M1A-P008-P001 | Uninjured Col1alpha1-positive perivascular fibroblast identity | Map Col1alpha1-GFP-positive cells in uninjured spinal cord and determine whether they resemble perivascular fibroblasts rather than pericytes, endothelial cells, immune cells, or neural lineage cells. | Col1alpha1-GFP mouse spinal cord; light-sheet fluorescence microscopy with LEL-labeled vasculature; sagittal cryosections; immunostaining for CD13, PDGFR-beta, NG2, nestin, alphaSMA, CD45, GFAP, Olig2, PECAM, and related markers. | YES |
+| M1A-P008 | M1A-P008-P002 | Contusive SCI fibrotic scar time course | Track entry, expansion, organization, and persistence of Col1alpha1-GFP-positive cells after closed-dura contusive SCI. | Seven- to 9-week-old female Col1alpha1-GFP mice received T8 75 kdyn Infinite Horizon contusion; tissue examined at 0, 3, 4, 5, 7, 14, 28, and 56 DPI by immunohistochemistry, cell density counts, GFAP border analysis, ECM staining, 5-HT axon staining, and LSFM. | YES |
+| M1A-P008 | M1A-P008-P003 | Contusion versus dorsal hemisection fibrotic scar geometry | Compare fibrotic scar organization after contusive SCI with intact dura versus dorsal hemisection with dural disruption. | Col1alpha1-GFP mice underwent T8 contusion or dorsal hemisection; 3 and 14 DPI sections were assessed for Col1alpha1-GFP distribution, laminin, fibronectin, GFAP boundary organization, and continuity with meninges. | YES |
+| M1A-P008 | M1A-P008-P004 | NG2 lineage tracing for pericyte distinction | Test whether NG2-positive pericytes contribute substantially to the Col1alpha1-positive fibrotic scar after contusive SCI. | Col1alpha1-GFP; NG2-CreER; Rosa26-tdTomato mice received tamoxifen before T8 contusion; 7 and 14 DPI tissue was assessed for spatial overlap between Col1alpha1-GFP-positive fibroblasts, tdTomato-positive NG2-lineage cells, and Glut1-positive vessels. | YES |
 
 ---
 
@@ -211,6 +218,11 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 | M1A-P007 | M1A-P007-E003 | Fig 3A-F | Mus musculus | FnEDA-null and littermate WT | Male and female | Contusion SCI | Infinite Horizons IH-0400 | 70 kdyn, 60 s dwell | T11 | 7, 21, 90 DPI | Wildtype littermate injured mice | FnEDA domain deletion | DOC/SDS biochemical fractionation separated soluble fibronectin from insoluble matrix-assembled fibronectin in 4 mm lesion-containing cord tissue. | YES |
 | M1A-P007 | M1A-P007-E004 | Fig 4A-C | Mus musculus | FnEDA-null and littermate WT | Male and female | Contusion SCI | Infinite Horizons IH-0400 | 70 kdyn, 60 s dwell | T11 | 90 DPI | Wildtype littermate injured mice | FnEDA domain deletion | 20 um mid-sagittal sections stained for SMI-312; axonal staining intensity quantified across distances from lesion center and normalized to 2 mm rostral tissue. | YES |
 | M1A-P007 | M1A-P007-E005 | Fig 5A-D | Mus musculus | FnEDA-null and littermate WT | Male and female | Contusion SCI | Infinite Horizons IH-0400 | 70 kdyn, 60 s dwell | T11 | weekly after SCI through final behavioral week | Wildtype littermate injured mice | FnEDA domain deletion | Blinded open-field locomotor scoring using BMS and modified BBB; mice with combined 24 h BMS >1 excluded as improperly injured. | YES |
+| M1A-P008 | M1A-P008-E001 | Fig 1A-L | Mus musculus | Col1alpha1-GFP, C57BL/6 background | UNKNOWN | Uninjured spinal cord | N/A | N/A | Spinal cord, exact level UNKNOWN | Uninjured baseline | Marker-negative nonfibroblast lineages / vascular context | Baseline anatomical mapping | Uninjured Col1alpha1-GFP spinal cord was analyzed by LSFM and immunostaining; Col1alpha1-positive cells localized to larger blood vessels, expressed CD13 and PDGFR-beta, and lacked NG2, nestin, alphaSMA, immune, endothelial, astrocyte, oligodendrocyte, and fibrocyte markers. | YES |
+| M1A-P008 | M1A-P008-E002 | Fig 2A-H, K-V | Mus musculus | Col1alpha1-GFP, C57BL/6 background | Female | Contusion SCI | Infinite Horizon impactor | 75 kdyn | T8 | 0, 3, 4, 5, 7, 14, 28, 56 DPI | Uninjured spinal cord / earlier post-injury time points | Injury time course | Col1alpha1-GFP mice underwent T8 contusion; sagittal sections and LSFM were used to quantify Col1alpha1-positive cell entry, peak density, chronic persistence, fibrotic scar apposition to GFAP-positive astrocytic border, ECM deposition, vascular association, and 5-HT axon exclusion. | YES |
+| M1A-P008 | M1A-P008-E003 | Fig 3A-O | Mus musculus | Col1alpha1-GFP, C57BL/6 background | Female | Contusion SCI | Infinite Horizon impactor | 75 kdyn | T8 | 5, 7, 14 DPI; chronic time points included in text | Uninjured Col1alpha1-positive cell marker profile | Injury-induced marker time course | Col1alpha1-GFP-positive cells in the contusion scar were immunophenotyped for PDGFR-beta, CD13, alphaSMA, and nonfibroblast lineage markers; PDGFR-beta remained broadly expressed, CD13 decreased by 14 DPI, and alphaSMA was transient. | YES |
+| M1A-P008 | M1A-P008-E004 | Fig 2I-J, O-V; Fig 3P-T | Mus musculus | Col1alpha1-GFP, C57BL/6 background | Female | Dorsal hemisection SCI | Microsurgical dorsal hemisection | Penetrating injury with dural disruption | T8 | 3, 14 DPI | T8 contusion SCI with intact dura | Dorsal hemisection injury model | Col1alpha1-GFP distribution after dorsal hemisection was compared with contusion; dorsal hemisection produced a Col1alpha1-positive scar continuous with dura, with different laminin/fibronectin organization and similar acute alphaSMA expression. | YES |
+| M1A-P008 | M1A-P008-E005 | Fig 4A-L | Mus musculus | Col1alpha1-GFP; NG2-CreER; Rosa26-tdTomato, C57BL/6 background | Female | Contusion SCI | Infinite Horizon impactor | 75 kdyn | T8 | 7 DPI data noted; 14 DPI shown | Uninjured Col1alpha1/NG2 vascular organization | NG2-lineage tracing after contusion | Tamoxifen-induced NG2-CreER lineage tracing labeled NG2-positive pericytes and OPCs before T8 contusion; 14 DPI tissue showed Col1alpha1-positive fibroblasts concentrated at the injury epicenter and NG2-lineage cells largely outside it, with rare overlap. | YES |
 
 ---
 
@@ -234,11 +246,11 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Pass | Total Papers | Completed | In Progress | Blocked | Pending | Completion % |
 |------|---|---|---|---|---|---|
-| -1 (Verify) | 27 | 2 | 0 | 0 | 25 | 7% |
-| 0 (Register) | 27 | 2 | 0 | 0 | 25 | 7% |
-| 1 (Questions) | 27 | 2 | 0 | 0 | 25 | 7% |
-| 2 (Paradigms) | 27 | 2 | 0 | 0 | 25 | 7% |
-| 3 (Experiments) | 27 | 2 papers / 11 experiments | 0 | 0 | 25 papers | 7% papers |
+| -1 (Verify) | 27 | 3 | 0 | 0 | 24 | 11% |
+| 0 (Register) | 27 | 3 | 0 | 0 | 24 | 11% |
+| 1 (Questions) | 27 | 3 | 0 | 0 | 24 | 11% |
+| 2 (Paradigms) | 27 | 3 | 0 | 0 | 24 | 11% |
+| 3 (Experiments) | 27 | 3 papers / 16 experiments | 0 | 0 | 24 papers | 11% papers |
 | 4 (Observations) | 27 | 0 | 0 | 0 | 27 | 0% |
 | 5 (Claims) | 27 | 0 | 0 | 0 | 27 | 0% |
 
@@ -272,8 +284,8 @@ Log papers that report conflicting findings on the same anatomical compartment o
 
 | Model Name | Anatomical Target | Species | Represented in Corpus | Status |
 |---|---|---|---|---|
-| Thoracic contusion | T9–T10 | Mouse, rat | YES | REPRESENTED |
-| Dorsal hemisection | Thoracic | Mouse, rat | — | — |
+| Thoracic contusion | T8–T11 | Mouse, rat | YES | REPRESENTED |
+| Dorsal hemisection | Thoracic | Mouse, rat | YES | REPRESENTED |
 | Lateral hemisection | Thoracic | Mouse, rat | — | — |
 | Complete transection | Thoracic | Mouse, rat | — | — |
 | Compression | T10 | Mouse, rat | — | — |
@@ -290,8 +302,8 @@ Log papers that report conflicting findings on the same anatomical compartment o
 | Spared white matter | Preserved WM tracts at periphery | PRIMARY | — |
 | Spared gray matter | Preserved GM at lesion periphery | PRIMARY | — |
 | Cystic cavity | Fluid-filled void within lesion | PRIMARY | — |
-| Pericyte border | Mesenchymal cell zone | SECONDARY | — |
-| Meningeal fibrosis | Dural involvement | SECONDARY | — |
+| Pericyte border | Mesenchymal cell zone | SECONDARY | REPRESENTED |
+| Meningeal fibrosis | Dural involvement | SECONDARY | REPRESENTED |
 | Remote spinal cord | Tissue rostral/caudal to lesion | SECONDARY | — |
 
 ### Evidence Types (ControlledVocabulary_EvidenceType)
@@ -306,7 +318,7 @@ Log papers that report conflicting findings on the same anatomical compartment o
 | Two-photon imaging | Live tissue visualization | — |
 | Confocal microscopy | High-resolution cellular imaging | — |
 | Serial section reconstruction | 3D computational reconstruction | — |
-| Qualitative histology | Descriptive anatomical characterization | — |
+| Qualitative histology | Descriptive anatomical characterization | YES |
 | Human tissue examination | Autopsy or surgical specimen | — |
 
 ### Assays (ControlledVocabulary_Assay)
@@ -320,6 +332,9 @@ Log papers that report conflicting findings on the same anatomical compartment o
 | GAP43 immunostaining | Immunohistochemistry | Axonal growth near lesion | YES |
 | Astrocyte LMD qPCR | Molecular assay | Astrocytic border | YES |
 | Collagen staining (Masson's trichrome) | Histological | Fibrotic scar | — |
+| Col1alpha1-GFP reporter imaging | Reporter histology | Fibrotic scar / perivascular fibroblasts | YES |
+| NG2-CreER lineage tracing | Genetic lineage tracing | Pericyte border / fibrotic scar | YES |
+| Light-sheet fluorescence microscopy | 3D imaging | Vascular-associated fibrotic scar | YES |
 | White matter sparing quantification | Histological | Spared WM | — |
 | Gray matter loss quantification | Histological | Gray matter | — |
 | MRI T2-weighted lesion volume | MRI | Overall lesion | — |
@@ -356,7 +371,7 @@ Papers identified but not yet processed:
 | 10.1002/jor.20793 | Rasouli A | 2009 | Resection of glial scar following spinal cord injury | S003/S009; anchor for scar resection anatomy | 2026-07-15 | QUEUED PASS -1 |
 | 10.14670/HH-26.45 | Zhang SX | 2011 | Histological repair of damaged spinal cord tissue from chronic contusion injury of rat: a LM observation | S004/S010; lesion core and cavity histology | 2026-07-15 | QUEUED PASS -1 |
 | 10.3171/2010.3.SPINE09190 | Hu R | 2010 | Glial scar and neuroregeneration: histological, functional, and magnetic resonance imaging analysis in chronic spinal cord injury | S010; histology plus MRI candidate | 2026-07-15 | QUEUED PASS -1 |
-| 10.1523/JNEUROSCI.2524-13.2013 | Soderblom C | 2013 | Perivascular fibroblasts form the fibrotic scar after contusive spinal cord injury | S005; fibrotic scar cell-source candidate | 2026-07-15 | QUEUED PASS -1 |
+| 10.1523/JNEUROSCI.2524-13.2013 | Soderblom C | 2013 | Perivascular fibroblasts form the fibrotic scar after contusive spinal cord injury | S005; fibrotic scar cell-source candidate | 2026-07-15 | PASS 3 COMPLETE |
 | 10.1016/j.cell.2018.02.004 | Dias DO | 2018 | Reducing pericyte-derived scarring promotes recovery after spinal cord injury | S005; pericyte-derived scar candidate | 2026-07-15 | QUEUED PASS -1 |
 | 10.1016/j.ajpath.2016.11.010 | Yokota K | 2017 | Periostin promotes scar formation through the interaction between pericytes and infiltrating monocytes/macrophages after spinal cord injury | S005; pericyte/macrophage scar mechanism | 2026-07-15 | QUEUED PASS -1 |
 | 10.1016/j.expneurol.2005.08.009 | Radojicic M | 2005 | Septations in chronic spinal cord injury cavities contain axons | S010; cavity internal architecture | 2026-07-15 | QUEUED PASS -1 |
@@ -408,8 +423,8 @@ Papers identified but not yet processed:
 **Module 1A Curator**: ___________________  
 **Date Initiated**: 2026-07-15
 **Date Completed**: ___________________  
-**Total Papers Extracted**: 2 through Pass 3
-**Total Experiments**: 11
+**Total Papers Extracted**: 3 through Pass 3
+**Total Experiments**: 16
 **Total Observations**: _____  
 **Total Claims**: _____  
 **Contradictions Found**: _____  
@@ -417,6 +432,7 @@ Papers identified but not yet processed:
 **Notes**:
 
 - 2026-07-15: Tamaru 2023 was first routed through local Ollama (`qwen2.5-coder:32b`) for a second-pass experiment extraction. The model recovered the broad figure-level experiment families but incorrectly propagated in vivo SCI device/model fields into in vitro and transplantation rows. Final tracker rows were manually curated from the open Kyushu University PDF text and kept consistent with the Cooper 2018 granularity standard.
+- 2026-07-15: Soderblom 2013 was manually curated from the PubMed Central article text without Ollama because the source text was compact enough for direct extraction. The paper adds perivascular fibroblast identity, T8 contusion fibrotic scar time course, dorsal hemisection comparison, and NG2-lineage distinction experiments.
 
 ---
 
