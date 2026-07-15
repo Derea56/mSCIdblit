@@ -48,6 +48,7 @@ SUSPICIOUS_IN_VITRO_RE = re.compile(
     re.I | re.S,
 )
 TASKS = ("extract", "triage", "methods_metadata", "figure_candidate_experiments", "row_sanity_check")
+PROMPT_STYLES = ("standard", "compact")
 
 
 @dataclass
@@ -229,14 +230,25 @@ def make_chunks(text: str, max_chars: int, figure_context_lines: int, front_char
     return unique_chunks
 
 
-def select_chunks(chunks: list[Chunk], task: str) -> list[Chunk]:
+def select_chunks(chunks: list[Chunk], task: str, chunk_ids: list[str]) -> list[Chunk]:
     if task == "triage":
-        return [chunk for chunk in chunks if chunk.chunk_type in {"paper_context", "results_subsection", "figure_or_results"}]
-    if task == "methods_metadata":
-        return [chunk for chunk in chunks if chunk.chunk_type in {"methods", "paper_context"}]
-    if task == "figure_candidate_experiments":
-        return [chunk for chunk in chunks if chunk.chunk_type in {"figure_or_results", "results_subsection"}]
-    return chunks
+        selected = [chunk for chunk in chunks if chunk.chunk_type in {"paper_context", "results_subsection", "figure_or_results"}]
+    elif task == "methods_metadata":
+        selected = [chunk for chunk in chunks if chunk.chunk_type in {"methods", "paper_context"}]
+    elif task == "figure_candidate_experiments":
+        selected = [chunk for chunk in chunks if chunk.chunk_type in {"figure_or_results", "results_subsection"}]
+    else:
+        selected = chunks
+
+    if not chunk_ids:
+        return selected
+    wanted = set(chunk_ids)
+    filtered = [chunk for chunk in selected if chunk.chunk_id in wanted]
+    missing = wanted - {chunk.chunk_id for chunk in filtered}
+    if missing:
+        available = ", ".join(chunk.chunk_id for chunk in selected)
+        raise SystemExit(f"Requested --chunk-id value(s) not found for task {task}: {', '.join(sorted(missing))}\nAvailable chunks: {available}")
+    return filtered
 
 
 def paper_metadata(args: argparse.Namespace, chunk: Chunk) -> dict[str, str]:
@@ -401,7 +413,84 @@ Task: extract experiment-level metadata for curator review. These candidate rows
 {guardrails}"""
 
 
+def compact_prompt_for_chunk(args: argparse.Namespace, chunk: Chunk) -> str:
+    if args.task == "figure_candidate_experiments":
+        return textwrap.dedent(
+            f"""\
+            Task: scout candidate experiment comparisons for SCI database.
+            Paper: {args.paper_id}; chunk: {chunk.chunk_id}; lines: {chunk.start_line}-{chunk.end_line}
+            Rules: source only. JSON only. Max 2 candidates. Combine panels in the same comparison.
+            If in vitro/culture, put SCI injury device/level/model in n_a, not missing. Do not borrow facts.
+            Return exactly:
+            {{"chunk_id":"{chunk.chunk_id}","candidates":[{{"fig_panel":"","comparison":"","context":"","control":"","contrast":"","missing":[],"n_a":[],"flags":[]}}],"skip_reason":""}}
+
+            Source:
+            {chunk.source_excerpt}
+            """
+        )
+
+    if args.task == "triage":
+        return textwrap.dedent(
+            f"""\
+            Task: triage source chunk for Module 1A chronic SCI lesion architecture.
+            Paper: {args.paper_id}; chunk: {chunk.chunk_id}; lines: {chunk.start_line}-{chunk.end_line}
+            Return minified JSON:
+            {{"chunk_id":"{chunk.chunk_id}","extractable":"yes|no|unclear","relevance":"high|medium|low|none","contexts":[],"keep_reason":"","skip_reason":""}}
+
+            Source:
+            {chunk.source_excerpt}
+            """
+        )
+
+    if args.task == "methods_metadata":
+        return textwrap.dedent(
+            f"""\
+            Task: index methods facts only. Separate in_vivo, in_vitro, transplant, treatment. No inference.
+            Paper: {args.paper_id}; chunk: {chunk.chunk_id}; lines: {chunk.start_line}-{chunk.end_line}
+            Return minified JSON:
+            {{"chunk_id":"{chunk.chunk_id}","species":[],"strain_age_sex":[],"in_vivo_sci":[],"in_vitro":[],"transplant":[],"treatments":[],"assays":[],"timepoints":[],"unstated":[]}}
+
+            Source:
+            {chunk.source_excerpt}
+            """
+        )
+
+    if args.task == "row_sanity_check":
+        if not args.rows_file:
+            raise SystemExit("--task row_sanity_check requires --rows-file.")
+        rows_text = Path(args.rows_file).read_text(encoding="utf-8", errors="replace")
+        return textwrap.dedent(
+            f"""\
+            Task: audit proposed rows against source. Use only source. Report unsupported/contradictory fields.
+            Paper: {args.paper_id}; chunk: {chunk.chunk_id}; lines: {chunk.start_line}-{chunk.end_line}
+            Return minified JSON:
+            {{"chunk_id":"{chunk.chunk_id}","audits":[{{"row":"","support":"yes|no|partial|unclear","unsupported":[],"contradictions":[],"action":""}}],"warnings":[]}}
+
+            Rows:
+            {rows_text}
+
+            Source:
+            {chunk.source_excerpt}
+            """
+        )
+
+    return textwrap.dedent(
+        f"""\
+        Task: draft candidate experiment metadata for curator review. Use only source. Unknown if absent; N/A if not applicable.
+        Paper: {args.paper_id}; chunk: {chunk.chunk_id}; lines: {chunk.start_line}-{chunk.end_line}
+        Return minified JSON:
+        {{"chunk_id":"{chunk.chunk_id}","experiments":[{{"figure":"","context_type":"","control":"","contrast":"","species":"","injury_model":"","injury_device":"","level":"","timepoint":"","assays":[],"flags":[]}}]}}
+
+        Source:
+        {chunk.source_excerpt}
+        """
+    )
+
+
 def prompt_for_chunk(args: argparse.Namespace, chunk: Chunk) -> str:
+    if args.prompt_style == "compact":
+        return compact_prompt_for_chunk(args, chunk)
+
     metadata = {
         **paper_metadata(args, chunk),
     }
@@ -505,6 +594,7 @@ def write_review_packet(path: Path, args: argparse.Namespace, chunks: list[Chunk
         f"- DOI: {args.doi or 'UNKNOWN'}",
         f"- PMID: {args.pmid or 'UNKNOWN'}",
         f"- Task: {args.task}",
+        f"- Prompt style: {args.prompt_style}",
         f"- Generated: {datetime.now(timezone.utc).isoformat()}",
         f"- Chunk count: {len(chunks)}",
         "",
@@ -535,6 +625,7 @@ def write_sanity_report(path: Path, args: argparse.Namespace, chunks: list[Chunk
         "",
         f"- Generated: {datetime.now(timezone.utc).isoformat()}",
         f"- Task: {args.task}",
+        f"- Prompt style: {args.prompt_style}",
         f"- Chunks prepared: {len(chunks)}",
         f"- Ollama executed: {'YES' if ran_ollama else 'NO'}",
         "",
@@ -575,6 +666,18 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         default="extract",
         help="Prompt mode: full extraction, triage, methods indexing, figure scouting, or row audit.",
     )
+    parser.add_argument(
+        "--prompt-style",
+        choices=PROMPT_STYLES,
+        default="standard",
+        help="Use standard verbose prompts or compact prompts for lower token use.",
+    )
+    parser.add_argument(
+        "--chunk-id",
+        action="append",
+        default=[],
+        help="Restrict prompt generation/runs to a selected chunk id. May be repeated.",
+    )
     parser.add_argument("--rows-file", help="Curated/proposed rows to audit with --task row_sanity_check.")
     parser.add_argument("--max-chars", type=int, default=4500, help="Approximate maximum source characters per chunk.")
     parser.add_argument("--figure-context-lines", type=int, default=45)
@@ -601,7 +704,7 @@ def main(argv: list[str] | None = None) -> int:
     (output_dir / "source_clean.txt").write_text(source_text, encoding="utf-8")
 
     all_chunks = make_chunks(source_text, args.max_chars, args.figure_context_lines, args.front_chars)
-    chunks = select_chunks(all_chunks, args.task)
+    chunks = select_chunks(all_chunks, args.task, args.chunk_id)
     write_json(output_dir / "chunk_manifest.json", [asdict(chunk) for chunk in chunks])
     write_json(output_dir / "all_chunk_manifest.json", [asdict(chunk) for chunk in all_chunks])
     write_review_packet(output_dir / "review_packet.md", args, chunks)

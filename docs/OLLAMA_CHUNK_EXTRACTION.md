@@ -24,7 +24,25 @@ The Tamaru 2023 trial showed the failure mode clearly: a long prompt can make th
    ```
 
 3. Inspect `review_packet.md` and the files in `prompts/`. If a chunk is obviously irrelevant, skip it.
-4. Run Ollama only when the chunking looks reasonable:
+4. Run Ollama only when the chunking looks reasonable. Prefer one compact selected chunk first:
+
+   ```bash
+   python3 scripts/ollama_chunk_extract.py \
+     --source-text work/module_1a/tamaru_2023_pdf_text_clean.txt \
+     --paper-id M1A-P003 \
+     --title "Glial scar survives until the chronic phase by recruiting scar-forming astrocytes after spinal cord injury" \
+     --doi 10.1016/j.expneurol.2022.114264 \
+     --pmid 36336030 \
+     --url https://catalog.lib.kyushu-u.ac.jp/opac_download_md/6787512/med3703.pdf \
+     --output-dir work/module_1a/extraction_runs/M1A-P003_fig2_scout \
+     --task figure_candidate_experiments \
+     --prompt-style compact \
+     --chunk-id figure_02_fig_2 \
+     --run-ollama \
+     --model qwen2.5-coder:32b
+   ```
+
+   Use broader runs only after the compact one-chunk prompt gives useful output:
 
    ```bash
    python3 scripts/ollama_chunk_extract.py \
@@ -53,6 +71,12 @@ The Tamaru 2023 trial showed the failure mode clearly: a long prompt can make th
 | `prompts/*.txt` | Narrow prompts for each chunk |
 | `ollama_outputs/*.md` | Raw model outputs when `--run-ollama` is used |
 | `sanity_report.md` | Automated warnings and review checklist |
+
+## Token Control
+
+- Use `--chunk-id` to run only one or a few selected chunks.
+- Use `--prompt-style compact` for scouting and sanity checks when token cost matters.
+- Use standard prompts when the output needs more structure or the compact prompt becomes ambiguous.
 
 ## Task modes
 
