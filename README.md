@@ -61,6 +61,11 @@ A scientifically rigorous, auditable knowledge base for synthesizing spinal cord
    psql -U <username> -d mscidbl -c "SELECT table_name FROM information_schema.tables WHERE table_schema='public';"
    ```
 
+5. **Run smoke test (optional but recommended before curation):**
+   ```bash
+   psql -v ON_ERROR_STOP=1 -U <username> -d mscidbl -f scripts/smoke_test.sql
+   ```
+
 ## 📁 Repository Structure
 
 ```
@@ -73,7 +78,8 @@ mSCIdblit/
 │   ├── EXPERIMENT_GRANULARITY.md     # Experiment-splitting rules
 │   └── VALIDATION_QUERIES.md         # Database hygiene checks
 ├── scripts/
-│   └── seed_controlled_vocab.sql     # Populate reference tables
+│   ├── seed_controlled_vocab.sql     # Populate reference tables
+│   └── smoke_test.sql                # Toy workflow validation script
 ├── templates/
 │   ├── paper_extraction_template.md
 │   ├── experiment_extraction_template.md
@@ -112,10 +118,10 @@ JOIN Observation o ON el.observation_id = o.observation_id;
 ### 3. Consensus is Versioned
 ```sql
 -- Consensus evolves; version history is preserved
-SELECT consensus_statement, version 
+SELECT statement_text, version_number
 FROM Consensus_Version 
 WHERE consensus_id = 1 
-ORDER BY version;
+ORDER BY version_number;
 ```
 
 ### 4. Hypotheses Grounded in Consensus
@@ -163,9 +169,14 @@ VALUES (1, 'Genetic macrophage targeting', 'Using Ccl2-Cre to label macrophages.
 
 **Step 4**: Populate Controlled Vocabulary
 ```sql
-INSERT INTO ControlledVocabulary_Species VALUES (DEFAULT, 'Mus musculus', '10090');
-INSERT INTO ControlledVocabulary_InjuryModel VALUES (DEFAULT, 'T10 contusion', 'T10');
-INSERT INTO ControlledVocabulary_Assay VALUES (DEFAULT, 'Basso Mouse Scale', 'behavioral');
+INSERT INTO ControlledVocabulary_Species (species_name, ncbi_taxonomy_id)
+VALUES ('Mus musculus', '10090') ON CONFLICT DO NOTHING;
+
+INSERT INTO ControlledVocabulary_InjuryModel (model_name, anatomical_target)
+VALUES ('T10 contusion', 'T10') ON CONFLICT DO NOTHING;
+
+INSERT INTO ControlledVocabulary_Assay (assay_name, assay_type)
+VALUES ('Basso Mouse Scale', 'behavioral') ON CONFLICT DO NOTHING;
 -- ... etc for all reference data
 ```
 
