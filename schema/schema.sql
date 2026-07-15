@@ -188,17 +188,29 @@ CREATE TABLE IF NOT EXISTS Observation (
   n_subjects INTEGER,
   measurement_method VARCHAR(255),  -- how was this measured?
   timepoint_postinjury_days FLOAT,  -- if different from experiment
+  raw_observation_text TEXT,  -- literal source text before normalization
+  normalized_observation_value VARCHAR(500),  -- curator-normalized value, if needed
+  normalization_notes TEXT,
+  source_section VARCHAR(100),  -- e.g., 'results', 'figure legend', 'table'
+  source_quote TEXT,
+  source_page VARCHAR(50),
+  figure_panel_reference VARCHAR(100),
+  extraction_confidence VARCHAR(50),  -- 'high', 'medium', 'low', 'uncertain'
   notes TEXT,  -- contextual notes only; never inferred
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   -- Immutability: observations are never deleted (only new ones added)
   FOREIGN KEY (experiment_id) REFERENCES Experiment(experiment_id) ON DELETE CASCADE,
   FOREIGN KEY (evidence_type_id) REFERENCES ControlledVocabulary_EvidenceType(evidence_type_id),
   FOREIGN KEY (outcome_type_id) REFERENCES ControlledVocabulary_OutcomeType(outcome_type_id),
-  CONSTRAINT valid_p_value CHECK (p_value >= 0 AND p_value <= 1 OR p_value IS NULL)
+  CONSTRAINT valid_p_value CHECK (p_value >= 0 AND p_value <= 1 OR p_value IS NULL),
+  CONSTRAINT valid_observation_confidence CHECK (
+    extraction_confidence IS NULL OR extraction_confidence IN ('high', 'medium', 'low', 'uncertain')
+  )
 );
 
 CREATE INDEX idx_observation_experiment ON Observation(experiment_id);
 CREATE INDEX idx_observation_evidence_type ON Observation(evidence_type_id);
+CREATE INDEX idx_observation_source_section ON Observation(source_section);
 
 -- ============================================================================
 -- AUTHOR CLAIMS (INTERPRETATIONS)
@@ -210,14 +222,22 @@ CREATE TABLE IF NOT EXISTS AuthorClaim (
   claim_text TEXT NOT NULL,
   claim_type VARCHAR(100),  -- 'interpretation', 'conclusion', 'speculation', 'mechanistic', 'implication'
   confidence_level VARCHAR(50),  -- 'high', 'medium', 'low', 'speculative'
+  source_section VARCHAR(100),  -- e.g., 'abstract', 'results', 'discussion', 'conclusion'
+  source_quote TEXT,
+  source_page VARCHAR(50),
+  extraction_confidence VARCHAR(50),  -- 'high', 'medium', 'low', 'uncertain'
   notes TEXT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (paper_id) REFERENCES Paper(paper_id) ON DELETE CASCADE
+  FOREIGN KEY (paper_id) REFERENCES Paper(paper_id) ON DELETE CASCADE,
+  CONSTRAINT valid_claim_extraction_confidence CHECK (
+    extraction_confidence IS NULL OR extraction_confidence IN ('high', 'medium', 'low', 'uncertain')
+  )
 );
 
 CREATE INDEX idx_claim_paper ON AuthorClaim(paper_id);
 CREATE INDEX idx_claim_type ON AuthorClaim(claim_type);
+CREATE INDEX idx_claim_source_section ON AuthorClaim(source_section);
 
 -- ============================================================================
 -- EVIDENCE LINK (TRACEABILITY: CLAIMS ← OBSERVATIONS)
@@ -472,6 +492,80 @@ CREATE TABLE IF NOT EXISTS SearchSession_Paper (
 );
 
 -- ============================================================================
+-- CURATION STATUS TRACKING
+-- ============================================================================
+
+CREATE TABLE IF NOT EXISTS CurationPass (
+  pass_id SERIAL PRIMARY KEY,
+  pass_code VARCHAR(50) NOT NULL UNIQUE,  -- e.g., '-1', '0', '1', '2', '3', '4', '5'
+  pass_name VARCHAR(255) NOT NULL,
+  description TEXT,
+  expected_table VARCHAR(255),
+  sort_order INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS PaperCurationStatus (
+  paper_id INTEGER NOT NULL,
+  pass_id INTEGER NOT NULL,
+  status VARCHAR(50) NOT NULL DEFAULT 'pending',
+  curator VARCHAR(255),
+  started_at TIMESTAMP,
+  completed_at TIMESTAMP,
+  blocker_reason TEXT,
+  notes TEXT,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (paper_id, pass_id),
+  FOREIGN KEY (paper_id) REFERENCES Paper(paper_id) ON DELETE CASCADE,
+  FOREIGN KEY (pass_id) REFERENCES CurationPass(pass_id) ON DELETE CASCADE,
+  CONSTRAINT valid_paper_curation_status CHECK (
+    status IN ('pending', 'in_progress', 'complete', 'blocked', 'needs_review')
+  )
+);
+
+CREATE INDEX idx_paper_curation_status ON PaperCurationStatus(status);
+
+CREATE TABLE IF NOT EXISTS ExperimentCurationStatus (
+  experiment_id INTEGER NOT NULL,
+  pass_id INTEGER NOT NULL,
+  status VARCHAR(50) NOT NULL DEFAULT 'pending',
+  curator VARCHAR(255),
+  started_at TIMESTAMP,
+  completed_at TIMESTAMP,
+  blocker_reason TEXT,
+  notes TEXT,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (experiment_id, pass_id),
+  FOREIGN KEY (experiment_id) REFERENCES Experiment(experiment_id) ON DELETE CASCADE,
+  FOREIGN KEY (pass_id) REFERENCES CurationPass(pass_id) ON DELETE CASCADE,
+  CONSTRAINT valid_experiment_curation_status CHECK (
+    status IN ('pending', 'in_progress', 'complete', 'blocked', 'needs_review')
+  )
+);
+
+CREATE INDEX idx_experiment_curation_status ON ExperimentCurationStatus(status);
+
+CREATE TABLE IF NOT EXISTS CuratorNote (
+  note_id SERIAL PRIMARY KEY,
+  paper_id INTEGER,
+  experiment_id INTEGER,
+  observation_id INTEGER,
+  claim_id INTEGER,
+  note_type VARCHAR(100),  -- 'ambiguity', 'vocabulary_request', 'extraction_issue', 'quality_flag'
+  note_text TEXT NOT NULL,
+  curator VARCHAR(255),
+  resolved BOOLEAN DEFAULT FALSE,
+  resolved_at TIMESTAMP,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (paper_id) REFERENCES Paper(paper_id) ON DELETE CASCADE,
+  FOREIGN KEY (experiment_id) REFERENCES Experiment(experiment_id) ON DELETE CASCADE,
+  FOREIGN KEY (observation_id) REFERENCES Observation(observation_id) ON DELETE CASCADE,
+  FOREIGN KEY (claim_id) REFERENCES AuthorClaim(claim_id) ON DELETE CASCADE
+);
+
+CREATE INDEX idx_curator_note_resolved ON CuratorNote(resolved);
+CREATE INDEX idx_curator_note_type ON CuratorNote(note_type);
+
+-- ============================================================================
 -- AUDIT & PROVENANCE TABLES
 -- ============================================================================
 
@@ -497,19 +591,94 @@ CREATE TABLE IF NOT EXISTS ChangeLog (
 CREATE INDEX idx_changelog_table ON ChangeLog(table_name, record_id, changed_at);
 
 -- ============================================================================
--- CRITICAL CONSTRAINTS FOR DATA INTEGRITY
+-- TRIGGERS FOR CRITICAL DATA INTEGRITY
 -- ============================================================================
 
--- Constraint: Observations are never inferred (ensured by application logic)
+CREATE OR REPLACE FUNCTION prevent_observation_update_delete()
+RETURNS TRIGGER AS $$
+BEGIN
+  RAISE EXCEPTION 'Observation records are immutable. Insert a corrected observation instead of updating or deleting observation_id=%.', OLD.observation_id;
+END;
+$$ LANGUAGE plpgsql;
+
+DROP TRIGGER IF EXISTS trg_prevent_observation_update ON Observation;
+CREATE TRIGGER trg_prevent_observation_update
+BEFORE UPDATE ON Observation
+FOR EACH ROW
+EXECUTE FUNCTION prevent_observation_update_delete();
+
+DROP TRIGGER IF EXISTS trg_prevent_observation_delete ON Observation;
+CREATE TRIGGER trg_prevent_observation_delete
+BEFORE DELETE ON Observation
+FOR EACH ROW
+EXECUTE FUNCTION prevent_observation_update_delete();
+
+CREATE OR REPLACE FUNCTION record_consensus_version()
+RETURNS TRIGGER AS $$
+BEGIN
+  IF TG_OP = 'INSERT' THEN
+    INSERT INTO Consensus_Version (
+      consensus_id,
+      version_number,
+      statement_text,
+      agreement_level,
+      summary_of_changes
+    ) VALUES (
+      NEW.consensus_id,
+      NEW.version,
+      NEW.consensus_statement,
+      NEW.agreement_level,
+      'Initial consensus version'
+    );
+    RETURN NEW;
+  END IF;
+
+  IF (
+    NEW.version IS DISTINCT FROM OLD.version OR
+    NEW.consensus_statement IS DISTINCT FROM OLD.consensus_statement OR
+    NEW.agreement_level IS DISTINCT FROM OLD.agreement_level
+  ) THEN
+    INSERT INTO Consensus_Version (
+      consensus_id,
+      version_number,
+      statement_text,
+      agreement_level,
+      summary_of_changes
+    ) VALUES (
+      NEW.consensus_id,
+      NEW.version,
+      NEW.consensus_statement,
+      NEW.agreement_level,
+      'Consensus updated'
+    );
+  END IF;
+
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+DROP TRIGGER IF EXISTS trg_record_consensus_insert ON Consensus;
+CREATE TRIGGER trg_record_consensus_insert
+AFTER INSERT ON Consensus
+FOR EACH ROW
+EXECUTE FUNCTION record_consensus_version();
+
+DROP TRIGGER IF EXISTS trg_record_consensus_update ON Consensus;
+CREATE TRIGGER trg_record_consensus_update
+AFTER UPDATE ON Consensus
+FOR EACH ROW
+EXECUTE FUNCTION record_consensus_version();
+
+-- Constraint: Observations are never inferred (curation protocol + source fields)
 -- Constraint: Hypotheses can only be derived from Consensus (FK enforced)
--- Constraint: Consensus statements are versioned, never deleted
--- Constraint: Evidence remains immutable once recorded
+-- Constraint: Consensus statements are versioned (trigger enforced)
+-- Constraint: Evidence remains immutable once recorded (trigger enforced)
 
 -- ============================================================================
 -- VIEWS FOR COMMON QUERIES
 -- ============================================================================
 
-CREATE VIEW v_paper_with_experiments AS
+CREATE OR REPLACE VIEW v_paper_with_experiments AS
 SELECT 
   p.paper_id,
   p.title,
@@ -521,7 +690,7 @@ LEFT JOIN Experiment e ON p.paper_id = e.paper_id
 LEFT JOIN Observation o ON e.experiment_id = o.experiment_id
 GROUP BY p.paper_id, p.title, p.publication_year;
 
-CREATE VIEW v_claim_evidence_chain AS
+CREATE OR REPLACE VIEW v_claim_evidence_chain AS
 SELECT 
   ac.claim_id,
   ac.claim_text,
@@ -532,7 +701,7 @@ FROM AuthorClaim ac
 LEFT JOIN EvidenceLink el ON ac.claim_id = el.claim_id
 GROUP BY ac.claim_id, ac.claim_text, ac.claim_type;
 
-CREATE VIEW v_consensus_supporting_papers AS
+CREATE OR REPLACE VIEW v_consensus_supporting_papers AS
 SELECT 
   c.consensus_id,
   c.consensus_statement,

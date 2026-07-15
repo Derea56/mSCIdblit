@@ -12,6 +12,7 @@ A scientifically rigorous, auditable knowledge base for synthesizing spinal cord
 5. **Hypotheses are generated only from consensus** — prevents unfounded speculation
 6. **Every observation is traceable to source** — figure, table, or results text reference
 7. **Controlled vocabulary ensures standardization** — all terms use approved definitions
+8. **Curation status is auditable** — extraction passes and curator notes are tracked explicitly
 
 ## 📊 Database Overview
 
@@ -29,6 +30,8 @@ A scientifically rigorous, auditable knowledge base for synthesizing spinal cord
 | **Hypothesis** | Generated ideas (from consensus only) |
 | **Lineage** | Scientific traditions |
 | **SearchSession** | Reproducible search records |
+| **CurationPass / Status tables** | Paper and experiment extraction workflow |
+| **CuratorNote** | Ambiguities, blockers, vocabulary requests, quality flags |
 
 ## 🚀 Quick Start
 
@@ -48,7 +51,12 @@ A scientifically rigorous, auditable knowledge base for synthesizing spinal cord
    psql -U <username> -d mscidbl -f schema/schema.sql
    ```
 
-3. **Verify:**
+3. **Seed controlled vocabulary:**
+   ```bash
+   psql -U <username> -d mscidbl -f scripts/seed_controlled_vocab.sql
+   ```
+
+4. **Verify:**
    ```bash
    psql -U <username> -d mscidbl -c "SELECT table_name FROM information_schema.tables WHERE table_schema='public';"
    ```
@@ -62,13 +70,20 @@ mSCIdblit/
 ├── docs/
 │   ├── SCHEMA_DOCUMENTATION.md       # Detailed entity documentation
 │   ├── IMPLEMENTATION_GUIDE.md       # Data entry examples
-│   └── QUERY_EXAMPLES.md             # Common queries
+│   ├── EXPERIMENT_GRANULARITY.md     # Experiment-splitting rules
+│   └── VALIDATION_QUERIES.md         # Database hygiene checks
 ├── scripts/
-│   ├── init_database.sql             # Sample data & verification queries
-│   ├── migrations/                   # Future schema updates
 │   └── seed_controlled_vocab.sql     # Populate reference tables
-├── README.md                          # This file
-└── LICENSE
+├── templates/
+│   ├── paper_extraction_template.md
+│   ├── experiment_extraction_template.md
+│   ├── observation_extraction_template.md
+│   ├── claim_extraction_template.md
+│   └── controlled_vocab_request_template.md
+├── modules/
+│   └── Module_1A_TRACKER.md          # Chronic SCI lesion architecture tracker
+├── CONTRIBUTING.md                    # Scientific curation protocol
+└── README.md                          # This file
 ```
 
 ## 🔑 Key Features
@@ -79,6 +94,7 @@ mSCIdblit/
 INSERT INTO Observation (...) VALUES (...);  -- Original
 INSERT INTO Observation (..., notes = 'Correction to previous entry') 
 VALUES (...);  -- Correction (old record remains)
+-- UPDATE/DELETE are blocked by database triggers
 ```
 
 ### 2. Traceability: Claims → Observations
@@ -225,7 +241,9 @@ INSERT INTO Hypothesis (
 
 - **[SCHEMA_DOCUMENTATION.md](docs/SCHEMA_DOCUMENTATION.md)** — Entity definitions, relationships, design rationale
 - **[IMPLEMENTATION_GUIDE.md](docs/IMPLEMENTATION_GUIDE.md)** — Step-by-step data entry with examples
-- **[QUERY_EXAMPLES.md](docs/QUERY_EXAMPLES.md)** — Common queries (building evidence chains, consensus analysis, etc.)
+- **[EXPERIMENT_GRANULARITY.md](docs/EXPERIMENT_GRANULARITY.md)** — Rules for splitting studies into experiments and observations
+- **[VALIDATION_QUERIES.md](docs/VALIDATION_QUERIES.md)** — Quality-control checks after curation batches
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** — Scientific curation protocol
 
 ## 🔍 Key Queries
 
@@ -275,12 +293,14 @@ AND c.agreement_level IN ('strong', 'moderate');
 
 | Constraint | Enforcement |
 |-----------|--------------|
-| Observations are immutable | No `updated_at`; new records added if corrections needed |
+| Observations are immutable | No `updated_at`; UPDATE/DELETE blocked by trigger |
 | Observations are atomic | Single value per Observation record |
+| Source provenance is preserved | Source section, quote, page, figure/panel fields on evidence tables |
 | Hypotheses require consensus | FK: `hypothesis.derived_from_consensus_id` NOT NULL |
 | Claims require evidence | Via `EvidenceLink` (no orphaned claims) |
 | Controlled vocabulary standardization | FK constraints on species, injury models, assays, etc. |
-| Consensus is versioned | `Consensus_Version` table preserves history |
+| Consensus is versioned | Trigger writes `Consensus_Version` history |
+| Curation progress is auditable | `CurationPass`, status tables, and `CuratorNote` |
 
 ---
 
@@ -304,5 +324,6 @@ For questions, issues, or contributions, open a GitHub issue or discussion in th
 ---
 
 **Status**: Active Development  
-**Last Updated**: 2026-07-14  
-**Version**: 2.0 (Immutable Evidence + Versioned Interpretation)
+**Last Updated**: 2026-07-15
+
+**Version**: 2.1 (Curation Workflow + Enforced Immutability)
