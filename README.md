@@ -76,8 +76,10 @@ mSCIdblit/
 │   ├── SCHEMA_DOCUMENTATION.md       # Detailed entity documentation
 │   ├── IMPLEMENTATION_GUIDE.md       # Data entry examples
 │   ├── EXPERIMENT_GRANULARITY.md     # Experiment-splitting rules
+│   ├── OLLAMA_CHUNK_EXTRACTION.md    # Local model chunking workflow
 │   └── VALIDATION_QUERIES.md         # Database hygiene checks
 ├── scripts/
+│   ├── ollama_chunk_extract.py       # Generate small Ollama extraction prompts
 │   ├── seed_controlled_vocab.sql     # Populate reference tables
 │   └── smoke_test.sql                # Toy workflow validation script
 ├── templates/
