@@ -71,7 +71,7 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Paper ID | First Author | Year | Title | Species | Injury Model | Status | Notes |
 |----------|--------------|------|-------|---------|--------------|--------|-------|
-| M1A-P007 | Cooper JG | 2018 | Fibronectin EDA forms the chronic fibrotic scar after contusive spinal cord injury | Mouse | Contusion | QUEUED PASS -1 | Anchor for chronic fibrotic compartment |
+| M1A-P007 | Cooper JG | 2018 | Fibronectin EDA forms the chronic fibrotic scar after contusive spinal cord injury | Mouse | Contusion | PASS 3 COMPLETE | Anchor for chronic fibrotic compartment |
 | M1A-P008 | Soderblom C | 2013 | Perivascular fibroblasts form the fibrotic scar after contusive spinal cord injury | Mouse | Contusion | QUEUED PASS -1 | Candidate for fibroblast source/cell identity |
 | M1A-P009 | Dias DO | 2018 | Reducing pericyte-derived scarring promotes recovery after spinal cord injury | Mouse | SCI | QUEUED PASS -1 | Candidate for pericyte-derived scar |
 | M1A-P010 | Yokota K | 2017 | Periostin promotes scar formation through the interaction between pericytes and infiltrating monocytes/macrophages after spinal cord injury | Mouse | SCI | QUEUED PASS -1 | Candidate for pericyte/macrophage scar mechanism |
@@ -160,7 +160,7 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Paper ID | Full Text Available | Figures Available | Figure Legends Available | Methods Accessible | Results Section Present | Status |
 |----------|---|---|---|---|---|---|
-| — | YES/NO | YES/NO | YES/NO | YES/NO | YES/NO | PASS/-1 or BLOCKED |
+| M1A-P007 | YES | YES | YES | YES | YES | PASS |
 
 **BLOCKED papers**: Log separately for future retrieval attempts
 
@@ -170,7 +170,7 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Paper ID | Title | Authors | Year | Journal | Volume | Issue | Pages | DOI | PMID | URL | Registered |
 |----------|-------|---------|------|---------|--------|-------|-------|-----|------|-----|---|
-| — | — | — | — | — | — | — | — | — | — | — | — |
+| M1A-P007 | Fibronectin EDA forms the chronic fibrotic scar after contusive spinal cord injury | John G. Cooper; Su Ji Jeong; Tammy L. McGuire; Sripadh Sharma; Wenxia Wang; Swati Bhattacharyya; John Varga; John A. Kessler | 2018 | Neurobiology of Disease | 116 | — | 60-68 | 10.1016/j.nbd.2018.04.014 | 29705186 | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5995671/ | YES |
 
 ---
 
@@ -178,7 +178,7 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Paper ID | Question ID | Research Question Text | Hypothesis Direction | Keywords | Question Extracted |
 |----------|-------------|---|---|---|---|
-| — | RQ001 | — | positive/negative/exploratory | — | YES/NO |
+| M1A-P007 | M1A-P007-RQ001 | Does eliminating the fibronectin Extra Domain A isoform reduce fibrotic scarring and improve recovery after contusive spinal cord injury in mice? | positive | FnEDA; fibronectin matrix; fibrotic scar; contusion SCI; chronic lesion | YES |
 
 ---
 
@@ -186,7 +186,7 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Paper ID | Paradigm ID | Paradigm Name | Description | Methodology | Paradigm Extracted |
 |----------|-------------|---|---|---|---|
-| — | P001 | — | — | — | YES/NO |
+| M1A-P007 | M1A-P007-P001 | FnEDA-null versus wildtype mouse contusion SCI | Compare FnEDA-null mice with littermate wildtype controls after T11 contusion SCI, measuring fibronectin isoforms, lesion/fibrotic scar anatomy, fibronectin matrix stability, axonal density, and locomotor recovery across acute, subacute, and chronic time points. | Infinite Horizons impactor, 70 kdyn force, 60 s dwell; 8-10 week male/female FnEDA-null and littermate wildtype mice for genotype comparisons; 8 week female C57BL/6 mice for FnEDA mRNA/protein time course; IHC, western blot, qPCR, DOC digestion, BMS/mBBB scoring. | YES |
 
 ---
 
@@ -194,7 +194,11 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Paper ID | Experiment ID | Figure Ref | Species | Strain | Sex | Injury Model | Injury Device | Injury Severity | Vertebral Level | Chronicity (DPI) | Control Type | Intervention Type | Methods Summary | Experiment Extracted |
 |----------|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| — | E001 | Fig 2A | — | — | — | — | — | — | — | — | — | — | — | YES/NO |
+| M1A-P007 | M1A-P007-E001 | Fig 1A-G | Mus musculus | C57BL/6 | Female | Contusion SCI | Infinite Horizons IH-0400 | 70 kdyn, 60 s dwell | T11 | uninjured, 3, 7, 21, 90 DPI / 13 weeks | Uninjured spinal cord | Injury time course | Lesion tissue harvested for qPCR and western blot quantification of FnEDA/FnEDB/total fibronectin. | YES |
+| M1A-P007 | M1A-P007-E002 | Fig 2A-I | Mus musculus | FnEDA-null and littermate WT | Male and female | Contusion SCI | Infinite Horizons IH-0400 | 70 kdyn, 60 s dwell | T11 | 7, 21, 90 DPI | Wildtype littermate injured mice | FnEDA domain deletion | Western blot and 20 um mid-sagittal IHC sections quantified for total fibronectin, GFAP-defined lesion core/rim, lesion area, and GFAP response. | YES |
+| M1A-P007 | M1A-P007-E003 | Fig 3A-F | Mus musculus | FnEDA-null and littermate WT | Male and female | Contusion SCI | Infinite Horizons IH-0400 | 70 kdyn, 60 s dwell | T11 | 7, 21, 90 DPI | Wildtype littermate injured mice | FnEDA domain deletion | DOC/SDS biochemical fractionation separated soluble fibronectin from insoluble matrix-assembled fibronectin in 4 mm lesion-containing cord tissue. | YES |
+| M1A-P007 | M1A-P007-E004 | Fig 4A-C | Mus musculus | FnEDA-null and littermate WT | Male and female | Contusion SCI | Infinite Horizons IH-0400 | 70 kdyn, 60 s dwell | T11 | 90 DPI | Wildtype littermate injured mice | FnEDA domain deletion | 20 um mid-sagittal sections stained for SMI-312; axonal staining intensity quantified across distances from lesion center and normalized to 2 mm rostral tissue. | YES |
+| M1A-P007 | M1A-P007-E005 | Fig 5A-D | Mus musculus | FnEDA-null and littermate WT | Male and female | Contusion SCI | Infinite Horizons IH-0400 | 70 kdyn, 60 s dwell | T11 | weekly after SCI through final behavioral week | Wildtype littermate injured mice | FnEDA domain deletion | Blinded open-field locomotor scoring using BMS and modified BBB; mice with combined 24 h BMS >1 excluded as improperly injured. | YES |
 
 ---
 
@@ -218,11 +222,11 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Pass | Total Papers | Completed | In Progress | Blocked | Pending | Completion % |
 |------|---|---|---|---|---|---|
-| -1 (Verify) | 27 | 0 | 0 | 0 | 27 | 0% |
-| 0 (Register) | 27 | 0 | 0 | 0 | 27 | 0% |
-| 1 (Questions) | 27 | 0 | 0 | 0 | 27 | 0% |
-| 2 (Paradigms) | 27 | 0 | 0 | 0 | 27 | 0% |
-| 3 (Experiments) | 27 | 0 | 0 | 0 | 27 | 0% |
+| -1 (Verify) | 27 | 1 | 0 | 0 | 26 | 4% |
+| 0 (Register) | 27 | 1 | 0 | 0 | 26 | 4% |
+| 1 (Questions) | 27 | 1 | 0 | 0 | 26 | 4% |
+| 2 (Paradigms) | 27 | 1 | 0 | 0 | 26 | 4% |
+| 3 (Experiments) | 27 | 1 paper / 5 experiments | 0 | 0 | 26 papers | 4% papers |
 | 4 (Observations) | 27 | 0 | 0 | 0 | 27 | 0% |
 | 5 (Claims) | 27 | 0 | 0 | 0 | 27 | 0% |
 
@@ -245,7 +249,7 @@ Log papers that report conflicting findings on the same anatomical compartment o
 
 | Species Name | NCBI Taxonomy ID | Represented in Corpus | Status |
 |---|---|---|---|
-| Mus musculus | 10090 | — | — |
+| Mus musculus | 10090 | YES | REPRESENTED |
 | Rattus norvegicus | 10116 | — | — |
 | Cavia porcellus | 10141 | — | — |
 | Canis lupus familiaris | 9615 | — | — |
@@ -256,7 +260,7 @@ Log papers that report conflicting findings on the same anatomical compartment o
 
 | Model Name | Anatomical Target | Species | Represented in Corpus | Status |
 |---|---|---|---|---|
-| Thoracic contusion | T9–T10 | Mouse, rat | — | — |
+| Thoracic contusion | T9–T10 | Mouse, rat | YES | REPRESENTED |
 | Dorsal hemisection | Thoracic | Mouse, rat | — | — |
 | Lateral hemisection | Thoracic | Mouse, rat | — | — |
 | Complete transection | Thoracic | Mouse, rat | — | — |
@@ -268,8 +272,8 @@ Log papers that report conflicting findings on the same anatomical compartment o
 | Compartment Name | Description | Primary/Secondary | Status |
 |---|---|---|---|
 | Lesion core | Central zone of tissue destruction | PRIMARY | — |
-| Fibrotic core | Fibroblast-rich central region | PRIMARY | — |
-| Astrocytic border | Glial scar boundary | PRIMARY | — |
+| Fibrotic core | Fibroblast-rich central region | PRIMARY | REPRESENTED |
+| Astrocytic border | Glial scar boundary | PRIMARY | REPRESENTED |
 | Reactive neural tissue | Altered but intact tissue surrounding lesion | PRIMARY | — |
 | Spared white matter | Preserved WM tracts at periphery | PRIMARY | — |
 | Spared gray matter | Preserved GM at lesion periphery | PRIMARY | — |
@@ -282,8 +286,8 @@ Log papers that report conflicting findings on the same anatomical compartment o
 
 | Evidence Type | Description | Represented in Corpus |
 |---|---|---|
-| Histological measurement | Quantitative measurement from tissue sections | — |
-| Immunohistochemistry | Labeled cellular/molecular identification | — |
+| Histological measurement | Quantitative measurement from tissue sections | YES |
+| Immunohistochemistry | Labeled cellular/molecular identification | YES |
 | Electron microscopy | Ultrastructural observation | — |
 | MRI measurement | Imaging-based quantification | — |
 | CT imaging | Imaging-based quantification | — |
@@ -297,9 +301,9 @@ Log papers that report conflicting findings on the same anatomical compartment o
 
 | Assay Name | Assay Type | Measured Compartment | Represented in Corpus |
 |---|---|---|---|
-| Lesion area measurement | Histological | Lesion core | — |
+| Lesion area measurement | Histological | Lesion core | YES |
 | Cavity volume quantification | Histological | Cystic cavity | — |
-| GFAP immunostaining | Immunohistochemistry | Astrocytic border | — |
+| GFAP immunostaining | Immunohistochemistry | Astrocytic border | YES |
 | Collagen staining (Masson's trichrome) | Histological | Fibrotic scar | — |
 | White matter sparing quantification | Histological | Spared WM | — |
 | Gray matter loss quantification | Histological | Gray matter | — |
@@ -312,7 +316,7 @@ Log papers that report conflicting findings on the same anatomical compartment o
 
 | Outcome Type | Measurement Unit | Relevant Compartment | Represented in Corpus |
 |---|---|---|---|
-| Lesion area | mm² | Lesion core | — |
+| Lesion area | mm² | Lesion core | YES |
 | Lesion length | mm | Lesion core | — |
 | Lesion volume | mm³ | Lesion core | — |
 | Cavity volume | mm³ or % of lesion | Cystic cavity | — |
@@ -331,7 +335,7 @@ Papers identified but not yet processed:
 | DOI / PMID | First Author | Year | Title | Reason Identified | Date Added | Status |
 |---|---|---|---|---|---|---|
 | 10.1002/glia.20096 | Rosenberg LJ | 2005 | Chronic alterations in the cellular composition of spinal cord white matter following contusion injury | S002; anchor for chronic contusion white matter pathology | 2026-07-15 | QUEUED PASS -1 |
-| 10.1016/j.nbd.2018.04.014 | Cooper JG | 2018 | Fibronectin EDA forms the chronic fibrotic scar after contusive spinal cord injury | S004; anchor for chronic fibrotic scar | 2026-07-15 | QUEUED PASS -1 |
+| 10.1016/j.nbd.2018.04.014 | Cooper JG | 2018 | Fibronectin EDA forms the chronic fibrotic scar after contusive spinal cord injury | S004; anchor for chronic fibrotic scar | 2026-07-15 | PASS 3 COMPLETE |
 | 10.1016/j.expneurol.2022.114264 | Tamaru T | 2023 | Glial scar survives until the chronic phase by recruiting scar-forming astrocytes after spinal cord injury | S003; anchor for chronic astrocytic scar | 2026-07-15 | QUEUED PASS -1 |
 | PMID:10391368 | Tuszynski MH | 1999 | Human spinal cord retains substantial structural mass in chronic stages after injury | S007; anchor for human chronic pathology | 2026-07-15 | QUEUED PASS -1 |
 | 10.1002/jor.20793 | Rasouli A | 2009 | Resection of glial scar following spinal cord injury | S003/S009; anchor for scar resection anatomy | 2026-07-15 | QUEUED PASS -1 |
@@ -387,10 +391,10 @@ Papers identified but not yet processed:
 ## Sign-Off
 
 **Module 1A Curator**: ___________________  
-**Date Initiated**: ___________________  
+**Date Initiated**: 2026-07-15
 **Date Completed**: ___________________  
-**Total Papers Extracted**: _____  
-**Total Experiments**: _____  
+**Total Papers Extracted**: 1 through Pass 3
+**Total Experiments**: 5
 **Total Observations**: _____  
 **Total Claims**: _____  
 **Contradictions Found**: _____  
