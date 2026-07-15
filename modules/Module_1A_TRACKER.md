@@ -14,18 +14,18 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Search ID | Query | Database | Date Executed | Papers Retrieved | Papers Already In Corpus | New Papers | Status | Notes |
 |-----------|-------|----------|---|---|---|---|---|---|
-| S001 | `chronic spinal cord injury lesion architecture` | PubMed | — | — | — | — | PENDING | Initial broad search |
-| S002 | `thoracic contusion chronic histopathology` | PubMed | — | — | — | — | PENDING | Species: mouse, rat, guinea pig |
-| S003 | `glial scar anatomy spinal cord injury` | PubMed | — | — | — | — | PENDING | Focus: astrocytic border |
-| S004 | `fibrotic scar spinal cord injury chronic` | PubMed | — | — | — | — | PENDING | Focus: fibrotic compartment |
-| S005 | `pericyte spinal cord scar fibrosis` | PubMed | — | — | — | — | PENDING | Focus: mesenchymal border |
-| S006 | `astrocytic border spinal cord injury` | PubMed | — | — | — | — | PENDING | Focus: border architecture |
-| S007 | `human chronic spinal cord injury pathology` | PubMed | — | — | — | — | PENDING | Human tissue data |
-| S008 | `MRI chronic spinal cord injury lesion volume` | PubMed | — | — | — | — | PENDING | Imaging correlates |
-| S009 | `scar resection spinal cord injury surgery` | PubMed | — | — | — | — | PENDING | Surgical intervention |
-| S010 | `cavity formation spinal cord injury chronic` | PubMed | — | — | — | — | PENDING | Cystic cavitation |
-| S011 | `white matter sparing spinal cord injury` | PubMed | — | — | — | — | PENDING | Spared tissue |
-| S012 | `gray matter loss spinal cord injury chronic` | PubMed | — | — | — | — | PENDING | Gray matter compartment |
+| S001 | `chronic spinal cord injury lesion architecture` | PubMed | 2026-07-15 | 9 | 0 | 9 | COMPLETE | Initial broad search; all PubMed hits retained for screening |
+| S002 | `thoracic contusion chronic histopathology` | PubMed | 2026-07-15 | 75 | 0 | 75 | COMPLETE | Species: mouse, rat, guinea pig; top 25 PMID window retained |
+| S003 | `glial scar anatomy spinal cord injury` | PubMed | 2026-07-15 | 1138 | 0 | 1138 | COMPLETE | Focus: astrocytic border; top 25 PMID window retained |
+| S004 | `fibrotic scar spinal cord injury chronic` | PubMed | 2026-07-15 | 28 | 0 | 28 | COMPLETE | Focus: fibrotic compartment; top 25 PMID window retained |
+| S005 | `pericyte spinal cord scar fibrosis` | PubMed | 2026-07-15 | 28 | 0 | 28 | COMPLETE | Focus: mesenchymal border; top 25 PMID window retained |
+| S006 | `astrocytic border spinal cord injury` | PubMed | 2026-07-15 | 90 | 0 | 90 | COMPLETE | Focus: border architecture; top 25 PMID window retained |
+| S007 | `human chronic spinal cord injury pathology` | PubMed | 2026-07-15 | 1457 | 0 | 1457 | COMPLETE | Human tissue data; top 25 PMID window retained |
+| S008 | `MRI chronic spinal cord injury lesion volume` | PubMed | 2026-07-15 | 23 | 0 | 23 | COMPLETE | Imaging correlates; all PubMed hits retained for screening |
+| S009 | `scar resection spinal cord injury surgery` | PubMed | 2026-07-15 | 26 | 0 | 26 | COMPLETE | Surgical intervention; top 25 PMID window retained |
+| S010 | `cavity formation spinal cord injury chronic` | PubMed | 2026-07-15 | 74 | 0 | 74 | COMPLETE | Cystic cavitation; top 25 PMID window retained |
+| S011 | `white matter sparing spinal cord injury` | PubMed | 2026-07-15 | 365 | 0 | 365 | COMPLETE | Spared tissue; top 25 PMID window retained |
+| S012 | `gray matter loss spinal cord injury chronic` | PubMed | 2026-07-15 | 44 | 0 | 44 | COMPLETE | Gray matter compartment; top 25 PMID window retained |
 | S013 | Citation forward/backward from anchor papers | — | — | — | — | — | PENDING | See Anchor Paper List |
 
 ---
@@ -34,9 +34,9 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Phase | Date | Cumulative Papers | New Unique Papers This Phase | Repeat Rate (%) | Saturation Indicator |
 |-------|------|---|---|---|---|
-| Phase 1 (S001–S004) | — | — | — | — | — |
-| Phase 2 (S005–S009) | — | — | — | — | — |
-| Phase 3 (S010–S012) | — | — | — | — | — |
+| Phase 1 (S001–S004) | 2026-07-15 | 84 screened PMIDs | 84 | 0.0 | Broad anatomy/scar searches still discovery-rich |
+| Phase 2 (S005–S009) | 2026-07-15 | 200 screened PMIDs | 116 | 5.7 | Pericyte, human, MRI, and scar-resection searches added many new candidates |
+| Phase 3 (S010–S012) | 2026-07-15 | 266 screened PMIDs | 66 | 12.0 | Cavitation/white-gray matter searches remain below saturation threshold |
 | Phase 4 (Citation chains) | — | — | — | — | — |
 | Phase 5 (Review mining) | — | — | — | — | — |
 
@@ -50,73 +50,87 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Paper ID | First Author | Year | Title | Species | Injury Model | Status | Notes |
 |----------|--------------|------|-------|---------|--------------|--------|-------|
-| — | — | — | — | — | — | PENDING | — |
+| M1A-P001 | Zhang SX | 2011 | Histological repair of damaged spinal cord tissue from chronic contusion injury of rat: a LM observation | Rat | Chronic contusion | QUEUED PASS -1 | Candidate for lesion core/cavity histology |
+| M1A-P002 | Hu R | 2010 | Glial scar and neuroregeneration: histological, functional, and magnetic resonance imaging analysis in chronic spinal cord injury | Rat | Chronic SCI | QUEUED PASS -1 | Candidate for lesion architecture plus MRI |
 
 ### 2. Astrocytic Border
 
 | Paper ID | First Author | Year | Title | Species | Injury Model | Status | Notes |
 |----------|--------------|------|-------|---------|--------------|--------|-------|
-| — | — | — | — | — | — | PENDING | — |
+| M1A-P003 | Tamaru T | 2023 | Glial scar survives until the chronic phase by recruiting scar-forming astrocytes after spinal cord injury | Mouse/rat | SCI | QUEUED PASS -1 | Anchor for chronic astrocytic scar persistence |
+| M1A-P004 | Gong L | 2023 | Spatiotemporal dynamics of the molecular expression pattern and intercellular interactions in the glial scar response to spinal cord injury | Mouse | SCI | QUEUED PASS -1 | Candidate for border cell interactions |
+| M1A-P005 | Rasouli A | 2009 | Resection of glial scar following spinal cord injury | Rat | SCI with scar resection | QUEUED PASS -1 | Also relevant to scar resection anatomy |
 
 ### 3. Reactive Surrounding Neural Tissue
 
 | Paper ID | First Author | Year | Title | Species | Injury Model | Status | Notes |
 |----------|--------------|------|-------|---------|--------------|--------|-------|
-| — | — | — | — | — | — | PENDING | — |
+| M1A-P006 | Li Y | 2020 | Delayed microglial depletion after spinal cord injury reduces chronic inflammation and neurodegeneration in the brain and improves neurological recovery in male mice | Mouse | SCI | QUEUED PASS -1 | Candidate for chronic inflammatory/neurodegenerative tissue context |
 
 ### 4. Fibrotic Scar
 
 | Paper ID | First Author | Year | Title | Species | Injury Model | Status | Notes |
 |----------|--------------|------|-------|---------|--------------|--------|-------|
-| — | — | — | — | — | — | PENDING | — |
+| M1A-P007 | Cooper JG | 2018 | Fibronectin EDA forms the chronic fibrotic scar after contusive spinal cord injury | Mouse | Contusion | QUEUED PASS -1 | Anchor for chronic fibrotic compartment |
+| M1A-P008 | Soderblom C | 2013 | Perivascular fibroblasts form the fibrotic scar after contusive spinal cord injury | Mouse | Contusion | QUEUED PASS -1 | Candidate for fibroblast source/cell identity |
+| M1A-P009 | Dias DO | 2018 | Reducing pericyte-derived scarring promotes recovery after spinal cord injury | Mouse | SCI | QUEUED PASS -1 | Candidate for pericyte-derived scar |
+| M1A-P010 | Yokota K | 2017 | Periostin promotes scar formation through the interaction between pericytes and infiltrating monocytes/macrophages after spinal cord injury | Mouse | SCI | QUEUED PASS -1 | Candidate for pericyte/macrophage scar mechanism |
 
 ### 5. Cystic Cavitation
 
 | Paper ID | First Author | Year | Title | Species | Injury Model | Status | Notes |
 |----------|--------------|------|-------|---------|--------------|--------|-------|
-| — | — | — | — | — | — | PENDING | — |
+| M1A-P011 | Radojicic M | 2005 | Septations in chronic spinal cord injury cavities contain axons | Rat | Chronic SCI cavity | QUEUED PASS -1 | Candidate for cavity internal architecture |
+| M1A-P012 | Wang N | 2018 | Collagen scaffold combined with human umbilical cord-derived mesenchymal stem cells promote functional recovery after scar resection in rats with chronic spinal cord injury | Rat | Chronic SCI with scar resection | QUEUED PASS -1 | Candidate for cavity/resection anatomy |
 
 ### 6. White Matter Sparing
 
 | Paper ID | First Author | Year | Title | Species | Injury Model | Status | Notes |
 |----------|--------------|------|-------|---------|--------------|--------|-------|
-| — | — | — | — | — | — | PENDING | — |
+| M1A-P013 | Rosenberg LJ | 2005 | Chronic alterations in the cellular composition of spinal cord white matter following contusion injury | Rat | Contusion | QUEUED PASS -1 | Anchor for chronic white matter pathology |
+| M1A-P014 | McCallum S | 2026 | Lesion-remote astrocytes govern microglia-mediated white matter repair | Mouse | SCI | QUEUED PASS -1 | Candidate for lesion-remote spared white matter |
 
 ### 7. Gray Matter Loss
 
 | Paper ID | First Author | Year | Title | Species | Injury Model | Status | Notes |
 |----------|--------------|------|-------|---------|--------------|--------|-------|
-| — | — | — | — | — | — | PENDING | — |
+| M1A-P015 | Collazos-Castro JE | 2005 | Motoneuron loss associated with chronic locomotion impairments after spinal cord contusion in the rat | Rat | Contusion | QUEUED PASS -1 | Candidate for gray matter/motoneuron loss |
 
 ### 8. Lesion Geometry
 
 | Paper ID | First Author | Year | Title | Species | Injury Model | Status | Notes |
 |----------|--------------|------|-------|---------|--------------|--------|-------|
-| — | — | — | — | — | — | PENDING | — |
+| M1A-P016 | Emmenegger TM | 2024 | Longitudinal motor system changes from acute to chronic spinal cord injury | Human | SCI | QUEUED PASS -1 | Candidate for longitudinal lesion geometry/imaging context |
+| M1A-P017 | Burks JD | 2019 | Imaging characteristics of chronic spinal cord injury identified during screening for a cell transplantation clinical trial | Human | Chronic SCI | QUEUED PASS -1 | Candidate for chronic lesion imaging morphology |
 
 ### 9. Human Chronic Pathology
 
 | Paper ID | First Author | Year | Title | Tissue Source | Status | Notes |
 |----------|--------------|------|-------|---|--------|-------|
-| — | — | — | — | — | PENDING | — |
+| M1A-P018 | Tuszynski MH | 1999 | Human spinal cord retains substantial structural mass in chronic stages after injury | Human spinal cord | QUEUED PASS -1 | Anchor for human chronic structural preservation |
+| M1A-P019 | Grumbles RM | 2017 | Motoneuron death after human spinal cord injury | Human spinal cord | QUEUED PASS -1 | Candidate for human gray matter/motoneuron pathology |
+| M1A-P020 | Tator CH | 1997 | Vascular mechanisms in the pathophysiology of human spinal cord injury | Human spinal cord | QUEUED PASS -1 | Candidate for vascular pathology context |
 
 ### 10. Species Differences
 
 | Paper ID | First Author | Year | Title | Species Compared | Status | Notes |
 |----------|--------------|------|-------|---|--------|-------|
-| — | — | — | — | — | PENDING | — |
+| M1A-P021 | Xue X | 2024 | Heterogeneous fibroblasts contribute to fibrotic scar formation after spinal cord injury in mice and monkeys | Mouse, monkey | QUEUED PASS -1 | Candidate for cross-species fibrotic scar architecture |
 
 ### 11. Scar Resection Anatomy
 
 | Paper ID | First Author | Year | Title | Species | Intervention | Status | Notes |
 |----------|--------------|------|-------|---------|---|--------|-------|
-| — | — | — | — | — | — | PENDING | — |
+| M1A-P005 | Rasouli A | 2009 | Resection of glial scar following spinal cord injury | Rat | Scar resection | QUEUED PASS -1 | Resection anatomy anchor |
+| M1A-P022 | Xiao Z | 2016 | One-year clinical study of NeuroRegen scaffold implantation following scar resection in complete chronic spinal cord injury patients | Human | Scar resection + scaffold | QUEUED PASS -1 | Candidate for human chronic scar resection |
+| M1A-P023 | Estrada V | 2014 | Long-lasting significant functional improvement in chronic severe spinal cord injury following scar resection and polyethylene glycol implantation | Human | Scar resection + PEG | QUEUED PASS -1 | Candidate for surgical anatomy |
 
 ### 12. Three-Dimensional Lesion Organization
 
 | Paper ID | First Author | Year | Title | Species | Imaging/Reconstruction Method | Status | Notes |
 |----------|--------------|------|-------|---------|---|--------|-------|
-| — | — | — | — | — | — | PENDING | — |
+| M1A-P024 | Scholtes F | 2011 | Post-mortem assessment of rat spinal cord injury and white matter sparing using inversion recovery-supported proton density magnetic resonance imaging | Rat | MRI plus post-mortem tissue | QUEUED PASS -1 | Candidate for 3D/imaging-to-histology linkage |
+| M1A-P025 | Zhao C | 2018 | Diffusion tensor imaging of spinal cord parenchyma lesion in rat with chronic spinal cord injury | Rat | DTI | QUEUED PASS -1 | Candidate for chronic parenchymal lesion geometry |
 
 ---
 
@@ -126,9 +140,11 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Paper ID | First Author | Year | Title | Lesion Compartment Focus | Extraction Status |
 |----------|--------------|------|-------|---|---|
-| ANCHOR001 | — | — | — | — | PENDING |
-| ANCHOR002 | — | — | — | — | PENDING |
-| ANCHOR003 | — | — | — | — | PENDING |
+| ANCHOR001 | Rosenberg LJ | 2005 | Chronic alterations in the cellular composition of spinal cord white matter following contusion injury | White matter sparing / chronic contusion histopathology | QUEUED PASS -1 |
+| ANCHOR002 | Cooper JG | 2018 | Fibronectin EDA forms the chronic fibrotic scar after contusive spinal cord injury | Chronic fibrotic scar | QUEUED PASS -1 |
+| ANCHOR003 | Tamaru T | 2023 | Glial scar survives until the chronic phase by recruiting scar-forming astrocytes after spinal cord injury | Astrocytic scar persistence | QUEUED PASS -1 |
+| ANCHOR004 | Tuszynski MH | 1999 | Human spinal cord retains substantial structural mass in chronic stages after injury | Human chronic pathology | QUEUED PASS -1 |
+| ANCHOR005 | Rasouli A | 2009 | Resection of glial scar following spinal cord injury | Scar resection anatomy | QUEUED PASS -1 |
 
 **Instructions for Anchor Paper Identification**:
 1. Search: "chronic spinal cord injury lesion architecture" + "anatomy" + "histopathology"
@@ -202,13 +218,13 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Pass | Total Papers | Completed | In Progress | Blocked | Pending | Completion % |
 |------|---|---|---|---|---|---|
-| -1 (Verify) | — | — | — | — | — | — |
-| 0 (Register) | — | — | — | — | — | — |
-| 1 (Questions) | — | — | — | — | — | — |
-| 2 (Paradigms) | — | — | — | — | — | — |
-| 3 (Experiments) | — | — | — | — | — | — |
-| 4 (Observations) | — | — | — | — | — | — |
-| 5 (Claims) | — | — | — | — | — | — |
+| -1 (Verify) | 27 | 0 | 0 | 0 | 27 | 0% |
+| 0 (Register) | 27 | 0 | 0 | 0 | 27 | 0% |
+| 1 (Questions) | 27 | 0 | 0 | 0 | 27 | 0% |
+| 2 (Paradigms) | 27 | 0 | 0 | 0 | 27 | 0% |
+| 3 (Experiments) | 27 | 0 | 0 | 0 | 27 | 0% |
+| 4 (Observations) | 27 | 0 | 0 | 0 | 27 | 0% |
+| 5 (Claims) | 27 | 0 | 0 | 0 | 27 | 0% |
 
 ---
 
@@ -314,7 +330,33 @@ Papers identified but not yet processed:
 
 | DOI / PMID | First Author | Year | Title | Reason Identified | Date Added | Status |
 |---|---|---|---|---|---|---|
-| — | — | — | — | — | — | PENDING |
+| 10.1002/glia.20096 | Rosenberg LJ | 2005 | Chronic alterations in the cellular composition of spinal cord white matter following contusion injury | S002; anchor for chronic contusion white matter pathology | 2026-07-15 | QUEUED PASS -1 |
+| 10.1016/j.nbd.2018.04.014 | Cooper JG | 2018 | Fibronectin EDA forms the chronic fibrotic scar after contusive spinal cord injury | S004; anchor for chronic fibrotic scar | 2026-07-15 | QUEUED PASS -1 |
+| 10.1016/j.expneurol.2022.114264 | Tamaru T | 2023 | Glial scar survives until the chronic phase by recruiting scar-forming astrocytes after spinal cord injury | S003; anchor for chronic astrocytic scar | 2026-07-15 | QUEUED PASS -1 |
+| PMID:10391368 | Tuszynski MH | 1999 | Human spinal cord retains substantial structural mass in chronic stages after injury | S007; anchor for human chronic pathology | 2026-07-15 | QUEUED PASS -1 |
+| 10.1002/jor.20793 | Rasouli A | 2009 | Resection of glial scar following spinal cord injury | S003/S009; anchor for scar resection anatomy | 2026-07-15 | QUEUED PASS -1 |
+| 10.14670/HH-26.45 | Zhang SX | 2011 | Histological repair of damaged spinal cord tissue from chronic contusion injury of rat: a LM observation | S004/S010; lesion core and cavity histology | 2026-07-15 | QUEUED PASS -1 |
+| 10.3171/2010.3.SPINE09190 | Hu R | 2010 | Glial scar and neuroregeneration: histological, functional, and magnetic resonance imaging analysis in chronic spinal cord injury | S010; histology plus MRI candidate | 2026-07-15 | QUEUED PASS -1 |
+| 10.1523/JNEUROSCI.2524-13.2013 | Soderblom C | 2013 | Perivascular fibroblasts form the fibrotic scar after contusive spinal cord injury | S005; fibrotic scar cell-source candidate | 2026-07-15 | QUEUED PASS -1 |
+| 10.1016/j.cell.2018.02.004 | Dias DO | 2018 | Reducing pericyte-derived scarring promotes recovery after spinal cord injury | S005; pericyte-derived scar candidate | 2026-07-15 | QUEUED PASS -1 |
+| 10.1016/j.ajpath.2016.11.010 | Yokota K | 2017 | Periostin promotes scar formation through the interaction between pericytes and infiltrating monocytes/macrophages after spinal cord injury | S005; pericyte/macrophage scar mechanism | 2026-07-15 | QUEUED PASS -1 |
+| 10.1016/j.expneurol.2005.08.009 | Radojicic M | 2005 | Septations in chronic spinal cord injury cavities contain axons | S010; cavity internal architecture | 2026-07-15 | QUEUED PASS -1 |
+| 10.1002/term.2450 | Wang N | 2018 | Collagen scaffold combined with human umbilical cord-derived mesenchymal stem cells promote functional recovery after scar resection in rats with chronic spinal cord injury | S009/S010; chronic scar resection/cavity anatomy | 2026-07-15 | QUEUED PASS -1 |
+| 10.1089/neu.2015.4374 | Grumbles RM | 2017 | Motoneuron death after human spinal cord injury | S002/S007; human gray matter pathology | 2026-07-15 | QUEUED PASS -1 |
+| 10.3171/jns.1997.86.3.0483 | Tator CH | 1997 | Vascular mechanisms in the pathophysiology of human spinal cord injury | S012; human vascular pathology context | 2026-07-15 | QUEUED PASS -1 |
+| 10.1089/neu.2005.22.544 | Collazos-Castro JE | 2005 | Motoneuron loss associated with chronic locomotion impairments after spinal cord contusion in the rat | S012; gray matter/motoneuron loss | 2026-07-15 | QUEUED PASS -1 |
+| 10.1038/s41586-025-09887-y | McCallum S | 2026 | Lesion-remote astrocytes govern microglia-mediated white matter repair | S011; lesion-remote white matter repair | 2026-07-15 | QUEUED PASS -1 |
+| 10.1007/s12264-022-00897-8 | Gong L | 2023 | Spatiotemporal dynamics of the molecular expression pattern and intercellular interactions in the glial scar response to spinal cord injury | S003; glial scar spatiotemporal organization | 2026-07-15 | QUEUED PASS -1 |
+| 10.1096/fj.202200463R | Hou J | 2022 | Heterogeneity analysis of astrocytes following spinal cord injury at single-cell resolution | S003; astrocyte heterogeneity candidate | 2026-07-15 | QUEUED PASS -1 |
+| 10.1038/s41467-024-50564-x | Xue X | 2024 | Heterogeneous fibroblasts contribute to fibrotic scar formation after spinal cord injury in mice and monkeys | S005; cross-species fibrotic scar candidate | 2026-07-15 | QUEUED PASS -1 |
+| 10.1016/j.jmbbm.2020.103953 | Baumann HJ | 2020 | Softening of the chronic hemi-section spinal cord injury scar parallels dysregulation of cellular and extracellular matrix content | S004; chronic scar mechanics/ECM | 2026-07-15 | QUEUED PASS -1 |
+| 10.1089/neu.2019.6540 | Cooper JG | 2020 | Spinal cord injury results in chronic mechanical stiffening | S004; chronic scar/tissue stiffness | 2026-07-15 | QUEUED PASS -1 |
+| 10.1038/s41393-022-00770-5 | Faro SH | 2022 | DTI of chronic spinal cord injury in children without MRI abnormalities and with pathology on MRI and comparison to severity of motor impairment | S007/S008; human imaging pathology | 2026-07-15 | QUEUED PASS -1 |
+| 10.3171/2018.12.FOCUS18593 | Burks JD | 2019 | Imaging characteristics of chronic spinal cord injury identified during screening for a cell transplantation clinical trial | S008; chronic lesion imaging morphology | 2026-07-15 | QUEUED PASS -1 |
+| 10.1007/s11427-016-5080-z | Xiao Z | 2016 | One-year clinical study of NeuroRegen scaffold implantation following scar resection in complete chronic spinal cord injury patients | S009; human scar resection candidate | 2026-07-15 | QUEUED PASS -1 |
+| 10.1016/j.nbd.2014.03.018 | Estrada V | 2014 | Long-lasting significant functional improvement in chronic severe spinal cord injury following scar resection and polyethylene glycol implantation | S009; chronic scar resection candidate | 2026-07-15 | QUEUED PASS -1 |
+| 10.1038/sc.2010.129 | Scholtes F | 2011 | Post-mortem assessment of rat spinal cord injury and white matter sparing using inversion recovery-supported proton density magnetic resonance imaging | S008/S011; MRI-to-histology white matter sparing | 2026-07-15 | QUEUED PASS -1 |
+| 10.1016/j.mri.2017.11.009 | Zhao C | 2018 | Diffusion tensor imaging of spinal cord parenchyma lesion in rat with chronic spinal cord injury | S010; chronic parenchymal lesion DTI | 2026-07-15 | QUEUED PASS -1 |
 
 ---
 
