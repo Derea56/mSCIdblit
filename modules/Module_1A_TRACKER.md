@@ -57,7 +57,7 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Paper ID | First Author | Year | Title | Species | Injury Model | Status | Notes |
 |----------|--------------|------|-------|---------|--------------|--------|-------|
-| M1A-P003 | Tamaru T | 2023 | Glial scar survives until the chronic phase by recruiting scar-forming astrocytes after spinal cord injury | Mouse/rat | SCI | QUEUED PASS -1 | Anchor for chronic astrocytic scar persistence |
+| M1A-P003 | Tamaru T | 2023 | Glial scar survives until the chronic phase by recruiting scar-forming astrocytes after spinal cord injury | Mouse | Contusion SCI / astrocyte culture / astrocyte transplantation | PASS 3 COMPLETE | Anchor for chronic astrocytic scar persistence |
 | M1A-P004 | Gong L | 2023 | Spatiotemporal dynamics of the molecular expression pattern and intercellular interactions in the glial scar response to spinal cord injury | Mouse | SCI | QUEUED PASS -1 | Candidate for border cell interactions |
 | M1A-P005 | Rasouli A | 2009 | Resection of glial scar following spinal cord injury | Rat | SCI with scar resection | QUEUED PASS -1 | Also relevant to scar resection anatomy |
 
@@ -142,7 +142,7 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 |----------|--------------|------|-------|---|---|
 | ANCHOR001 | Rosenberg LJ | 2005 | Chronic alterations in the cellular composition of spinal cord white matter following contusion injury | White matter sparing / chronic contusion histopathology | QUEUED PASS -1 |
 | ANCHOR002 | Cooper JG | 2018 | Fibronectin EDA forms the chronic fibrotic scar after contusive spinal cord injury | Chronic fibrotic scar | QUEUED PASS -1 |
-| ANCHOR003 | Tamaru T | 2023 | Glial scar survives until the chronic phase by recruiting scar-forming astrocytes after spinal cord injury | Astrocytic scar persistence | QUEUED PASS -1 |
+| ANCHOR003 | Tamaru T | 2023 | Glial scar survives until the chronic phase by recruiting scar-forming astrocytes after spinal cord injury | Astrocytic scar persistence | PASS 3 COMPLETE |
 | ANCHOR004 | Tuszynski MH | 1999 | Human spinal cord retains substantial structural mass in chronic stages after injury | Human chronic pathology | QUEUED PASS -1 |
 | ANCHOR005 | Rasouli A | 2009 | Resection of glial scar following spinal cord injury | Scar resection anatomy | QUEUED PASS -1 |
 
@@ -160,6 +160,7 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Paper ID | Full Text Available | Figures Available | Figure Legends Available | Methods Accessible | Results Section Present | Status |
 |----------|---|---|---|---|---|---|
+| M1A-P003 | YES | YES | YES | YES | YES | PASS |
 | M1A-P007 | YES | YES | YES | YES | YES | PASS |
 
 **BLOCKED papers**: Log separately for future retrieval attempts
@@ -170,6 +171,7 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Paper ID | Title | Authors | Year | Journal | Volume | Issue | Pages | DOI | PMID | URL | Registered |
 |----------|-------|---------|------|---------|--------|-------|-------|-----|------|-----|---|
+| M1A-P003 | Glial scar survives until the chronic phase by recruiting scar-forming astrocytes after spinal cord injury | Tetsuya Tamaru; Kazu Kobayakawa; Hirokazu Saiwai; Daijiro Konno; Ken Kijima; Shingo Yoshizaki; Kazuhiro Hata; Hirotaka Iura; Gentaro Ono; Yohei Haruta; Kazuki Kitade; Kei-Ichiro Iida; Ken-Ichi Kawaguchi; Yoshihiro Matsumoto; Kensuke Kubota; Takeshi Maeda; Seiji Okada; Yasuharu Nakashima | 2023 | Experimental Neurology | 359 | — | 114264 | 10.1016/j.expneurol.2022.114264 | 36336030 | https://catalog.lib.kyushu-u.ac.jp/opac_download_md/6787512/med3703.pdf | YES |
 | M1A-P007 | Fibronectin EDA forms the chronic fibrotic scar after contusive spinal cord injury | John G. Cooper; Su Ji Jeong; Tammy L. McGuire; Sripadh Sharma; Wenxia Wang; Swati Bhattacharyya; John Varga; John A. Kessler | 2018 | Neurobiology of Disease | 116 | — | 60-68 | 10.1016/j.nbd.2018.04.014 | 29705186 | https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5995671/ | YES |
 
 ---
@@ -178,6 +180,7 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Paper ID | Question ID | Research Question Text | Hypothesis Direction | Keywords | Question Extracted |
 |----------|-------------|---|---|---|---|
+| M1A-P003 | M1A-P003-RQ001 | Do scar-forming astrocytes persist into the chronic phase after SCI, retain scar-forming autonomy, and recruit surrounding astrocytes through beta1-integrin/N-cadherin signaling? | exploratory | chronic phase; glial scar; scar-forming astrocyte; beta1-integrin; N-cadherin; astrocyte plasticity | YES |
 | M1A-P007 | M1A-P007-RQ001 | Does eliminating the fibronectin Extra Domain A isoform reduce fibrotic scarring and improve recovery after contusive spinal cord injury in mice? | positive | FnEDA; fibronectin matrix; fibrotic scar; contusion SCI; chronic lesion | YES |
 
 ---
@@ -186,14 +189,23 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Paper ID | Paradigm ID | Paradigm Name | Description | Methodology | Paradigm Extracted |
 |----------|-------------|---|---|---|---|
+| M1A-P003 | M1A-P003-P001 | Astrocyte phenotype time course after mouse contusion SCI | Compare naive astrocytes, reactive astrocytes, subacute scar-forming astrocytes, and chronic-phase astrocytes after SCI. | T9 70 kdyn Infinite Horizons contusion SCI; GFAP/N-cadherin immunostaining; LMD isolation of GFAP-positive astrocytes; RT-PCR/qPCR for scar-associated genes. | YES |
+| M1A-P003 | M1A-P003-P002 | In vitro astrocyte phenotype manipulation | Generate IL-6 reactive astrocytes and collagen-I-grown scar-forming astrocytes, then test whether removing collagen signaling or blocking beta1-integrin/N-cadherin reverts scar-forming astrocytes. | Primary astrocytes from P1-P3 C57BL/6J mice; IL-6 plus soluble IL-6 receptor; type I collagen-coated dishes; Poly-D-lysine reseeding; anti-beta1 integrin and anti-N-cadherin antibodies; immunostaining and qPCR. | YES |
+| M1A-P003 | M1A-P003-P003 | Scar-forming astrocyte transplantation and beta1-integrin blockade | Test whether transplanted scar-forming astrocytes maintain scar phenotype, recruit host astrocytes, and whether beta1-integrin blockade reduces recruitment after transplantation or SCI. | EGFP-positive Col-I-SAs from CAG-EGFP neonatal mice transplanted into naive spinal cord; anti-beta1 integrin antibody after transplantation or after SCI; GFAP/N-cadherin/GAP43 immunostaining and LMD/qPCR. | YES |
 | M1A-P007 | M1A-P007-P001 | FnEDA-null versus wildtype mouse contusion SCI | Compare FnEDA-null mice with littermate wildtype controls after T11 contusion SCI, measuring fibronectin isoforms, lesion/fibrotic scar anatomy, fibronectin matrix stability, axonal density, and locomotor recovery across acute, subacute, and chronic time points. | Infinite Horizons impactor, 70 kdyn force, 60 s dwell; 8-10 week male/female FnEDA-null and littermate wildtype mice for genotype comparisons; 8 week female C57BL/6 mice for FnEDA mRNA/protein time course; IHC, western blot, qPCR, DOC digestion, BMS/mBBB scoring. | YES |
 
 ---
 
 ### Pass 3: Experiments Extracted
 
-| Paper ID | Experiment ID | Figure Ref | Species | Strain | Sex | Injury Model | Injury Device | Injury Severity | Vertebral Level | Chronicity (DPI) | Control Type | Intervention Type | Methods Summary | Experiment Extracted |
+| Paper ID | Experiment ID | Figure Ref | Species | Strain | Sex | Injury Model | Injury Device | Injury Severity | Vertebral Level | Chronicity (DPI/WPI) | Control Type | Intervention Type | Methods Summary | Experiment Extracted |
 |----------|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| M1A-P003 | M1A-P003-E001 | Fig 1A-E | Mus musculus | C57BL/6J | UNKNOWN | Contusion SCI | Infinite Horizons impactor | 70 kdyn | T9 | naive, 1, 2, 12 WPI | Naive spinal cord / earlier post-injury astrocyte states | Injury time course | GFAP/Hoechst histology quantified GFAP-positive area and astrocyte process overlap; GFAP-positive astrocytes isolated by LMD for qPCR of scar-associated genes. | YES |
+| M1A-P003 | M1A-P003-E002 | Fig 2A-F | Mus musculus | C57BL/6J primary astrocytes | UNKNOWN | In vitro astrocyte culture | N/A | N/A | N/A | 48 h culture/reseed interval | Primary astrocytes / IL-6 reactive astrocytes / Col-I-SAs on collagen | Removal of type I collagen signaling by reseeding Col-I-SAs onto Poly-D-lysine | P1-P3 primary astrocytes were converted to IL-6-RAs with IL-6/sIL-6R, then to Col-I-SAs on type I collagen; morphology, N-cadherin, GFAP, and SA-marker qPCR were assessed before/after reseeding. | YES |
+| M1A-P003 | M1A-P003-E003 | Fig 3A-D | Mus musculus | C57BL/6J primary astrocytes | UNKNOWN | In vitro astrocyte culture | N/A | N/A | N/A | 24 h antibody exposure | Control antibody / control IgG treated Col-I-SAs | Anti-beta1 integrin antibody or anti-N-cadherin neutralizing antibody | Col-I-SAs were treated with beta1-integrin or N-cadherin blocking antibodies and assessed by GFAP/N-cadherin/Hoechst immunostaining and SA-marker qPCR. | YES |
+| M1A-P003 | M1A-P003-E004 | Fig 4A-F | Mus musculus | Donor CAG-EGFP; host wildtype C57BL/6J | UNKNOWN | Naive spinal cord astrocyte transplantation | Glass tip stereotaxic injector | 1 x 10^5 Col-I-SAs at 0.5 ul/min | Spinal cord, exact level UNKNOWN | 0, 4, 7, 14, 28 days post-transplantation | Day 0 transplanted SAs / surrounding host astrocytes | EGFP-positive Col-I-SA transplantation into naive spinal cord | EGFP-positive Col-I-SAs were transplanted into naive spinal cord; transplanted SAs and neighboring host astrocytes were examined by GFAP/N-cadherin/Hoechst staining and LMD/qPCR. | YES |
+| M1A-P003 | M1A-P003-E005 | Fig 5A-C | Mus musculus | Donor CAG-EGFP; host wildtype C57BL/6J | UNKNOWN | Naive spinal cord astrocyte transplantation | Stereotaxic injector | 1 ug anti-beta1 integrin antibody every 2 days from 2-12 days post-transplantation | Transplant site, exact level UNKNOWN | 14 days post-transplantation | Isotype control antibody | Anti-beta1 integrin antibody after Col-I-SA transplantation | After EGFP-positive Col-I-SA transplantation, anti-beta1 integrin antibody was injected at the transplant site; host EGFP-negative/GFAP-positive/N-cadherin-positive astrocyte recruitment was quantified. | YES |
+| M1A-P003 | M1A-P003-E006 | Fig 5D-H | Mus musculus | C57BL/6J | UNKNOWN | Contusion SCI | Infinite Horizons impactor | 70 kdyn | T9 | antibody dosing 14-26 DPI; assessment 28 DPI | Isotype control antibody | Anti-beta1 integrin antibody after SCI | Anti-beta1 integrin antibody was injected into the spinal cord epicenter every 2 days from 14-26 DPI; GFAP/N-cadherin-positive chronic astrocytes and GAP43-positive area were quantified. | YES |
 | M1A-P007 | M1A-P007-E001 | Fig 1A-G | Mus musculus | C57BL/6 | Female | Contusion SCI | Infinite Horizons IH-0400 | 70 kdyn, 60 s dwell | T11 | uninjured, 3, 7, 21, 90 DPI / 13 weeks | Uninjured spinal cord | Injury time course | Lesion tissue harvested for qPCR and western blot quantification of FnEDA/FnEDB/total fibronectin. | YES |
 | M1A-P007 | M1A-P007-E002 | Fig 2A-I | Mus musculus | FnEDA-null and littermate WT | Male and female | Contusion SCI | Infinite Horizons IH-0400 | 70 kdyn, 60 s dwell | T11 | 7, 21, 90 DPI | Wildtype littermate injured mice | FnEDA domain deletion | Western blot and 20 um mid-sagittal IHC sections quantified for total fibronectin, GFAP-defined lesion core/rim, lesion area, and GFAP response. | YES |
 | M1A-P007 | M1A-P007-E003 | Fig 3A-F | Mus musculus | FnEDA-null and littermate WT | Male and female | Contusion SCI | Infinite Horizons IH-0400 | 70 kdyn, 60 s dwell | T11 | 7, 21, 90 DPI | Wildtype littermate injured mice | FnEDA domain deletion | DOC/SDS biochemical fractionation separated soluble fibronectin from insoluble matrix-assembled fibronectin in 4 mm lesion-containing cord tissue. | YES |
@@ -222,11 +234,11 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Pass | Total Papers | Completed | In Progress | Blocked | Pending | Completion % |
 |------|---|---|---|---|---|---|
-| -1 (Verify) | 27 | 1 | 0 | 0 | 26 | 4% |
-| 0 (Register) | 27 | 1 | 0 | 0 | 26 | 4% |
-| 1 (Questions) | 27 | 1 | 0 | 0 | 26 | 4% |
-| 2 (Paradigms) | 27 | 1 | 0 | 0 | 26 | 4% |
-| 3 (Experiments) | 27 | 1 paper / 5 experiments | 0 | 0 | 26 papers | 4% papers |
+| -1 (Verify) | 27 | 2 | 0 | 0 | 25 | 7% |
+| 0 (Register) | 27 | 2 | 0 | 0 | 25 | 7% |
+| 1 (Questions) | 27 | 2 | 0 | 0 | 25 | 7% |
+| 2 (Paradigms) | 27 | 2 | 0 | 0 | 25 | 7% |
+| 3 (Experiments) | 27 | 2 papers / 11 experiments | 0 | 0 | 25 papers | 7% papers |
 | 4 (Observations) | 27 | 0 | 0 | 0 | 27 | 0% |
 | 5 (Claims) | 27 | 0 | 0 | 0 | 27 | 0% |
 
@@ -304,6 +316,9 @@ Log papers that report conflicting findings on the same anatomical compartment o
 | Lesion area measurement | Histological | Lesion core | YES |
 | Cavity volume quantification | Histological | Cystic cavity | — |
 | GFAP immunostaining | Immunohistochemistry | Astrocytic border | YES |
+| N-cadherin immunostaining | Immunohistochemistry | Astrocytic border | YES |
+| GAP43 immunostaining | Immunohistochemistry | Axonal growth near lesion | YES |
+| Astrocyte LMD qPCR | Molecular assay | Astrocytic border | YES |
 | Collagen staining (Masson's trichrome) | Histological | Fibrotic scar | — |
 | White matter sparing quantification | Histological | Spared WM | — |
 | Gray matter loss quantification | Histological | Gray matter | — |
@@ -336,7 +351,7 @@ Papers identified but not yet processed:
 |---|---|---|---|---|---|---|
 | 10.1002/glia.20096 | Rosenberg LJ | 2005 | Chronic alterations in the cellular composition of spinal cord white matter following contusion injury | S002; anchor for chronic contusion white matter pathology | 2026-07-15 | QUEUED PASS -1 |
 | 10.1016/j.nbd.2018.04.014 | Cooper JG | 2018 | Fibronectin EDA forms the chronic fibrotic scar after contusive spinal cord injury | S004; anchor for chronic fibrotic scar | 2026-07-15 | PASS 3 COMPLETE |
-| 10.1016/j.expneurol.2022.114264 | Tamaru T | 2023 | Glial scar survives until the chronic phase by recruiting scar-forming astrocytes after spinal cord injury | S003; anchor for chronic astrocytic scar | 2026-07-15 | QUEUED PASS -1 |
+| 10.1016/j.expneurol.2022.114264 | Tamaru T | 2023 | Glial scar survives until the chronic phase by recruiting scar-forming astrocytes after spinal cord injury | S003; anchor for chronic astrocytic scar | 2026-07-15 | PASS 3 COMPLETE |
 | PMID:10391368 | Tuszynski MH | 1999 | Human spinal cord retains substantial structural mass in chronic stages after injury | S007; anchor for human chronic pathology | 2026-07-15 | QUEUED PASS -1 |
 | 10.1002/jor.20793 | Rasouli A | 2009 | Resection of glial scar following spinal cord injury | S003/S009; anchor for scar resection anatomy | 2026-07-15 | QUEUED PASS -1 |
 | 10.14670/HH-26.45 | Zhang SX | 2011 | Histological repair of damaged spinal cord tissue from chronic contusion injury of rat: a LM observation | S004/S010; lesion core and cavity histology | 2026-07-15 | QUEUED PASS -1 |
@@ -393,13 +408,15 @@ Papers identified but not yet processed:
 **Module 1A Curator**: ___________________  
 **Date Initiated**: 2026-07-15
 **Date Completed**: ___________________  
-**Total Papers Extracted**: 1 through Pass 3
-**Total Experiments**: 5
+**Total Papers Extracted**: 2 through Pass 3
+**Total Experiments**: 11
 **Total Observations**: _____  
 **Total Claims**: _____  
 **Contradictions Found**: _____  
 
 **Notes**:
+
+- 2026-07-15: Tamaru 2023 was first routed through local Ollama (`qwen2.5-coder:32b`) for a second-pass experiment extraction. The model recovered the broad figure-level experiment families but incorrectly propagated in vivo SCI device/model fields into in vitro and transplantation rows. Final tracker rows were manually curated from the open Kyushu University PDF text and kept consistent with the Cooper 2018 granularity standard.
 
 ---
 
