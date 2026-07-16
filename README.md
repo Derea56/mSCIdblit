@@ -89,7 +89,14 @@ mSCIdblit/
 │   ├── claim_extraction_template.md
 │   └── controlled_vocab_request_template.md
 ├── modules/
-│   └── Module_1A_TRACKER.md          # Chronic SCI lesion architecture tracker
+│   ├── ROADMAP.md                    # Saturation and consolidation module map
+│   ├── Module_1A_TRACKER.md          # Chronic SCI lesion architecture tracker
+│   ├── Module_1B_TRACKER.md          # Lesion architecture evidence consolidation
+│   ├── Module_2A_TRACKER.md          # Biomaterials and scaffold repair tracker
+│   ├── Module_3A_TRACKER.md          # Immune and myeloid modulation tracker
+│   ├── Module_4A_TRACKER.md          # Cell transplantation and graft integration tracker
+│   ├── Module_5A_TRACKER.md          # Axon regeneration, remyelination, and white matter repair tracker
+│   └── Module_6A_TRACKER.md          # Human chronic SCI pathology and translational imaging tracker
 ├── CONTRIBUTING.md                    # Scientific curation protocol
 └── README.md                          # This file
 ```
