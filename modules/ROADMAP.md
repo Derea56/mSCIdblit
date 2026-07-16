@@ -26,3 +26,7 @@ A topic is considered practically saturated when two consecutive targeted search
 ## Module 1 Freeze Note
 
 Module 1 is frozen as a first-pass lesion-architecture evidence base as of 2026-07-16. Remaining queued Module 1A candidate papers are future opportunistic upgrades unless they introduce a new lesion-architecture compartment or materially change a boundary condition. The next Module 1 step is consensus drafting and optional SQL materialization from the curated tracker rows, not more saturation searching.
+
+## Cross-Module Synthesis Note
+
+The first Module 1 + Module 2 synthesis draft is recorded in `docs/MODULE_1_2_SYNTHESIS.md`. It bridges chronic lesion architecture to scaffold-repair strategy, defines first-pass design rules, and proposes grounded hypotheses derived from the SQL-materialized consensus bases.
