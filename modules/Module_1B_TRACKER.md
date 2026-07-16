@@ -27,7 +27,7 @@ This tracker begins the post-saturation phase for Module 1A. Module 1B converts 
 
 | Topic ID | Consensus-Ready Topic | Primary Papers | Evidence Need | Status |
 |---|---|---|---|---|
-| M1B-T001 | Chronic SCI lesions organize into fibrotic core, astrocytic border, spared/reactive neural tissue, and cavities | M1A-P001, P002, P003, P004, P007, P008, P009, P026, P027, P029, P030, P031, P032, P033 | Extract anatomy observations and boundary/cell-marker claims | QUEUED |
+| M1B-T001 | Chronic SCI lesions organize into fibrotic core, astrocytic border, spared/reactive neural tissue, and cavities | M1A-P001, P002, P003, P004, P007, P008, P009, P026, P027, P029, P030, P031, P032, P033 | Extract anatomy observations and boundary/cell-marker claims | STARTED |
 | M1B-T002 | Fibrotic scar cellular origins vary by model and include perivascular fibroblast/pericyte-associated lineages | M1A-P007, P008, P009, P021, P026, P029 | Extract lineage, marker, and compartment observations | STARTED |
 | M1B-T003 | Astrocytic borders are active wound-repair structures, not only inhibitory barriers | M1A-P003, P004, P030, P032, P033 | Extract border formation, signaling, and containment observations | STARTED |
 | M1B-T004 | Chronic lesion biomechanics are model-dependent and currently directionally conflicting | M1A-P026, P027 | Extract stiffness values, tissue-preparation conditions, and model details | STARTED |
@@ -62,6 +62,10 @@ This tracker begins the post-saturation phase for Module 1A. Module 1B converts 
 | M1B-T003 | M1A-P030 | M1A-P030-E001–E002 | Corralling, compaction, inflammatory containment | COMPLETE SOURCE-PAGE PASS | Observation rows M1B-O032–O033 |
 | M1B-T003 | M1A-P032 | M1A-P032-E001–E002 | Ryk induction, astrocytic border morphology, wound containment | COMPLETE SOURCE-PAGE PASS | Observation row M1B-O034 |
 | M1B-T003 | M1A-P033 | M1A-P033-E001–E002 | Border-forming astrocyte origin and transcriptional program | COMPLETE SOURCE-PAGE PASS | Observation rows M1B-O035–O036 |
+| M1B-T001 | M1A-P004 | M1A-P004-E001–E004 | Spatial transcriptomic compartments, scar boundary, marker maps, phase model | COMPLETE FIRST PASS | Observation rows M1B-O037–O040 |
+| M1B-T001 | M1A-P007 | M1A-P007-E001–E005 | FnEDA chronic fibrotic scar, GFAP border, fibronectin matrix stability, recovery | COMPLETE FIRST PASS | Observation rows M1B-O041–O044 |
+| M1B-T001 | M1A-P001 | M1A-P001-E001–E002 | Chronic repaired tissue zones and scar-ablation/transplantation response | COMPLETE ABSTRACT PASS | Observation row M1B-O045 |
+| M1B-T001 | M1A-P031 | M1A-P031-E001–E002 | Single-cell lesion ecology and scar cell-cell interactions | COMPLETE SOURCE-PAGE PASS | Observation row M1B-O046 |
 
 ---
 
@@ -107,6 +111,16 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | M1B-O034 | M1B-T003 | M1A-P032 | M1A-P032-E001–E002 | Abstract/source page | Astrocyte signaling perturbation | Border morphology / wound architecture | Source-page extraction reports that astrocytic Ryk is induced after SCI and that astrocyte-focused Ryk perturbation alters morphological transformation, scarring, wound architecture, and lesion-core containment. | astrocytic Ryk coordinates border formation and wound healing | source-page qualitative | YES | Source-page level in Module 1A | Abstract / source page | medium | Needs full-text parsing before high-confidence observation materialization. |
 | M1B-O035 | M1B-T003 | M1A-P033 | M1A-P033-E001 | Abstract/source page | Lineage analysis | Border astrocyte origin | Source-page extraction reports that border-forming astrocytes after SCI or stroke arise mainly from local astrocytes, with a minority contribution from OPC-derived astrocytes. | local astrocytes are major border-forming source; OPCs minor source | source-page lineage proportion | YES | Source-page level in Module 1A | Abstract / source page | medium | Complements Tamaru's recruitment model with origin tracing. |
 | M1B-O036 | M1B-T003 | M1A-P033 | M1A-P033-E002 | Abstract/source page | snRNA-seq / temporal transcriptomics | Wound-repair astrocyte state | Source-page extraction reports temporal transcriptomic and single-nucleus RNA-seq definition of border-forming wound repair astrocyte programs after SCI/stroke. | border astrocytes are a wound-repair transcriptional state | source-page transcriptomic program | YES | Source-page level in Module 1A | Abstract / source page | medium | Supports classification of astrocytic scar as an active wound-repair compartment. |
+| M1B-O037 | M1B-T001 | M1A-P004 | M1A-P004-E001 | Fig 1A-L | Spatial transcriptomics / H&E | Scar spatial atlas | Gong generated a T10 lateral hemisection spatial transcriptomic atlas across 3, 7, 14, and 28 DPI using 32 sections and 15,449 spots, mapping clusters back to tissue morphology to define scar regions. | spatially mapped scar maturation atlas | spatial spots / time course | YES | 32 sections; 15,449 spots; 3, 7, 14, 28 DPI | Results / Figure 1 | high | Provides architecture scaffold for Module 1B compartment definitions. |
+| M1B-O038 | M1B-T001 | M1A-P004 | M1A-P004-E002 | Fig 2-Fig 8 | ST reclustering / marker mapping | Scar-resident cell composition | Reclustered scar spots resolved six major scar-resident cell groups: microglia, macrophages, astrocytes, oligodendrocytes, fibroblasts, and endothelial cells; fibroblasts occupied the scar center from 7 DPI, with microglia, astrocytes, and oligodendrocytes arranged outward toward the boundary. | multicellular scar with fibroblast core and glial/immune boundary layers | cell-state spatial distribution | YES | Scar-cell fractions quantified across maturation stages | Results / Figures 2-8 | high | Source also notes very few neurons in the scar area. |
+| M1B-O039 | M1B-T001 | M1A-P004 | M1A-P004-E004 | Fig 10A-F | Tissue transparency / ST marker maps | Scar boundary markers | Laminin, Fn1, collagen IV staining and ST maps showed changing scar marker distributions; fibroblasts remained central during shrinkage/maturation, while microglial and astrocytic scar regions expanded along white matter at 28 DPI. | ECM marker maps define dynamic scar boundary and subcompartments | spatial marker map / cell fraction | YES | Cell-type spot counts and fractions quantified | Results / Figure 10 | high | Confirms fibrotic scar surrounded by microglial scar wrapped by astrocytic scar in this model. |
+| M1B-O040 | M1B-T001 | M1A-P004 | M1A-P004-E003–E004 | Fig 9-Fig 10G | WGCNA / phase synthesis | Scar maturation phase model | Gong proposed four scar-formation phases after lateral hemisection: macrophage infiltration, proliferation/differentiation of scar-resident cells, scar emergence, and stationary scar. | four-phase scar maturation model | phase classification | NO | WGCNA modules and cell-fraction trajectories support synthesis | Results / Discussion | medium | Interpretive synthesis from spatial transcriptomics, not a direct single assay. |
+| M1B-O041 | M1B-T001 | M1A-P007 | M1A-P007-E001 | Fig 1A-G | qPCR / western blot | Fibrotic ECM isoform time course | FnEDA and FnEDB were low/detectable in uninjured spinal cord, rose sharply after T11 contusion, and remained elevated even 13 weeks after injury. | persistent cellular fibronectin isoform expression after SCI | fold-change / protein level | YES | FnEDA mRNA about 70-fold and FnEDB about 40-fold at 7 DPI; n = 8-10 for qPCR | Results / Figure 1 | high | FnEDA protein increased around 10-fold by 7 DPI and declined but remained elevated. |
+| M1B-O042 | M1B-T001 | M1A-P007 | M1A-P007-E002 | Fig 2A-I | IHC / western blot | Chronic fibrotic scar anatomy | FnEDA-null mice had smaller GFAP-bounded lesion cores and lower fibronectin intensity inside the GFAP-negative lesion core at 90 DPI, while GFAP glial scarring was not reduced. | FnEDA deletion reduces chronic fibrotic core without reducing glial rim | lesion area / intensity | YES | lesion area p < 0.01; fibronectin intensity p < 0.01 | Results / Figure 2 | high | Supports separability of fibrotic core and astrocytic border compartments. |
+| M1B-O043 | M1B-T001 | M1A-P007 | M1A-P007-E003 | Fig 3A-F | DOC/SDS fractionation | Matrix stability | At 21 and 90 DPI, FnEDA-null mice had reduced insoluble matrix-assembled fibronectin while soluble fibronectin did not differ from wildtype. | FnEDA stabilizes chronic assembled fibronectin matrix | soluble/insoluble protein fraction | YES | n = 7-8 mice/group; p < 0.01 | Results / Figure 3 | high | No difference in soluble/insoluble fibronectin at 7 DPI. |
+| M1B-O044 | M1B-T001 | M1A-P007 | M1A-P007-E004–E005 | Fig 4-Fig 5 | Axon staining / behavior | Axon density and recovery | FnEDA-null mice had higher SMI-312 axonal density in lesion areas at 90 DPI and improved locomotor recovery by BMS and modified BBB compared with wildtype controls. | reduced chronic fibrotic matrix associates with axon density and recovery | staining intensity / behavior score | YES | SMI-312 p < 0.05 or p < 0.01 by distance; behavior p < 0.05 to p < 0.001 | Results / Figures 4-5 | high | Functional link supports chronic fibrotic compartment as recovery-relevant. |
+| M1B-O045 | M1B-T001 | M1A-P001 | M1A-P001-E001–E002 | Abstract | Light microscopy histology | Chronic repaired-tissue zones | Abstract-level extraction reports chronic rat contusion repaired tissue organized into fibrotic, cellular, and axonal zones, and scar ablation plus lamina propria/acellular lamina propria transplantation expanded cellular/axonal zones, reduced cavity, and improved integration with spared tissue. | chronic repaired tissue has zone architecture modifiable by ablation/transplantation | abstract-level qualitative | YES | Abstract-level only | PubMed abstract / Module 1A row | low | Full text needed before high-confidence materialization. |
+| M1B-O046 | M1B-T001 | M1A-P031 | M1A-P031-E001–E002 | Abstract/source page | scRNA-seq / interaction inference | Single-cell lesion ecology | Source-page extraction reports that single-cell RNA-seq resolved heterogeneous injured-spinal-cord scar-like cell states and inferred cell-cell interactions shaping the wound-healing/scar environment. | scar is multicellular interaction ecosystem | source-page transcriptomic atlas | YES | Source-page level in Module 1A | Abstract / source page | medium | Supports T001/T008 but needs full-text extraction for exact cell-state names. |
 
 ---
 
@@ -123,6 +137,10 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | M1B-T003 | M1A-P030 | conclusion; mechanism | COMPLETE SOURCE-PAGE PASS |
 | M1B-T003 | M1A-P032 | conclusion; mechanism | COMPLETE SOURCE-PAGE PASS |
 | M1B-T003 | M1A-P033 | conclusion; mechanism | COMPLETE SOURCE-PAGE PASS |
+| M1B-T001 | M1A-P004 | conclusion; interpretation | COMPLETE FIRST PASS |
+| M1B-T001 | M1A-P007 | conclusion; mechanism; implication | COMPLETE FIRST PASS |
+| M1B-T001 | M1A-P001 | conclusion | COMPLETE ABSTRACT PASS |
+| M1B-T001 | M1A-P031 | conclusion; mechanism | COMPLETE SOURCE-PAGE PASS |
 
 ---
 
@@ -148,6 +166,12 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | M1B-C016 | M1B-T003 | M1A-P030 | Injury-activated microglia/macrophages promote corralling, wound compaction, astrocytic border containment, and recovery through Plexin-B2. | mechanistic | medium | Abstract / source page | medium | Source-page level; full-text extraction still needed. |
 | M1B-C017 | M1B-T003 | M1A-P032 | Astrocytic Ryk signaling coordinates astrocyte morphological transformation, scarring, wound healing, and lesion-core containment after SCI. | mechanistic | medium | Abstract / source page | medium | Source-page level; full-text extraction still needed. |
 | M1B-C018 | M1B-T003 | M1A-P033 | Border-forming wound repair astrocytes are an active, transcriptionally reprogrammed repair state derived mainly from local astrocytes with a minority OPC-derived contribution. | conclusion | medium | Abstract / source page | medium | Source-page level; full-text extraction still needed. |
+| M1B-C019 | M1B-T001 | M1A-P004 | SCI scar architecture is spatially heterogeneous and multicellular, with fibroblast-rich central regions, microglial/astrocytic boundary layers, endothelial/oligodendrocyte-associated compartments, and time-dependent maturation. | conclusion | high | Abstract / Results / Discussion | high | Supported by spatial transcriptomic atlas, marker maps, and cell-fraction analyses. |
+| M1B-C020 | M1B-T001 | M1A-P004 | Scar formation follows a staged process in the lateral hemisection model: macrophage infiltration, proliferation/differentiation of scar-resident cells, scar emergence, and stationary scar. | interpretation | medium | Results / Discussion | high | Author synthesis from ST time course; should be model-specific. |
+| M1B-C021 | M1B-T001 | M1A-P007 | FnEDA is required for long-term stability of the assembled fibronectin matrix and for the chronic fibrotic scar after contusive SCI, without being required for acute fibrotic response or GFAP glial scarring. | mechanistic | high | Abstract / Results / Discussion | high | Strongly supported by FnEDA-null matrix fractionation and chronic lesion histology. |
+| M1B-C022 | M1B-T001 | M1A-P007 | Reducing chronic FnEDA-dependent fibrotic scarring improves axonal density and locomotor recovery after contusive SCI. | implication | medium | Abstract / Results / Discussion | high | Supported by genotype comparison; causal inference should stay tied to FnEDA-null model. |
+| M1B-C023 | M1B-T001 | M1A-P001 | Chronic contusion repair tissue can be described as fibrotic, cellular, and axonal zones, and combined scar ablation/transplantation can alter zone integration and cavity morphology. | conclusion | low | Abstract | medium | Abstract-level only; useful as historical/zone-architecture support. |
+| M1B-C024 | M1B-T001 | M1A-P031 | The injured spinal cord scar environment is a heterogeneous multicellular ecosystem whose cell-cell interactions shape wound healing and inhibitory scar features. | conclusion | medium | Abstract / source page | medium | Source-page level; full text still needed. |
 
 ---
 
@@ -200,6 +224,18 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | M1B-L043 | M1B-C018 | M1B-O035 | directly_supports | Lineage source-page observation supports local astrocyte-majority and OPC-minority origin claim. |
 | M1B-L044 | M1B-C018 | M1B-O036 | directly_supports | snRNA-seq/temporal transcriptomic observation supports wound-repair astrocyte state claim. |
 | M1B-L045 | M1B-C018 | M1B-O027 | concordant_boundary | Tamaru's chronic phenotype-shift data is consistent with border astrocytes being dynamic rather than static scar cells. |
+| M1B-L046 | M1B-C019 | M1B-O037 | directly_supports | ST atlas provides tissue-wide scar region mapping over time. |
+| M1B-L047 | M1B-C019 | M1B-O038 | directly_supports | Reclustered ST spots identify multicellular scar-resident composition and spatial ordering. |
+| M1B-L048 | M1B-C019 | M1B-O039 | directly_supports | ECM/ST marker maps support fibrotic core and glial boundary structure. |
+| M1B-L049 | M1B-C020 | M1B-O040 | directly_supports | Four-phase model observation directly supports staged scar-formation claim. |
+| M1B-L050 | M1B-C021 | M1B-O041 | partially_supports | Persistent FnEDA/FnEDB expression establishes fibronectin isoform response after SCI. |
+| M1B-L051 | M1B-C021 | M1B-O042 | directly_supports | FnEDA-null chronic histology supports reduced fibrotic core with preserved GFAP glial scarring. |
+| M1B-L052 | M1B-C021 | M1B-O043 | directly_supports | Matrix fractionation supports FnEDA role in insoluble assembled fibronectin stability. |
+| M1B-L053 | M1B-C022 | M1B-O044 | directly_supports | FnEDA-null axon-density and behavioral results support recovery implication. |
+| M1B-L054 | M1B-C022 | M1B-O042 | partially_supports | Smaller chronic fibrotic lesion core provides anatomical context for recovery effect. |
+| M1B-L055 | M1B-C023 | M1B-O045 | directly_supports | Abstract-level chronic rat zone architecture and repair modification support historical claim. |
+| M1B-L056 | M1B-C024 | M1B-O046 | directly_supports | Source-page scRNA-seq and interaction inference support multicellular ecosystem claim. |
+| M1B-L057 | M1B-C024 | M1B-O038 | concordant_boundary | Gong spatial atlas is consistent with Milich source-page single-cell heterogeneity. |
 
 ---
 
@@ -246,6 +282,20 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | Current interpretation | A safe curated statement is that astrocytic borders are dynamic repair compartments with separable processes of formation, maintenance, recruitment, and containment. Established scar astrocytes may be hard to revert directly, while recruitment and border organization remain intervention-sensitive. |
 | Next evidence needed | Pull full text for M1A-P030, M1A-P032, and M1A-P033 into local evidence files; add M1A-P004 spatial transcriptomics as a full-text bridge between astrocyte, fibroblast, myeloid, and endothelial scar states. |
 
+### M1B-T001: Core Lesion Architecture
+
+**Status**: consensus-ready profile started; consensus statement not yet finalized.
+
+| Profile Element | Curated Summary |
+|---|---|
+| Evidence base | Two full-text studies, M1A-P004 and M1A-P007, plus abstract/source-page support from M1A-P001 and M1A-P031, with 10 extracted observations and 6 author claims. |
+| Agreement | Chronic and maturing SCI lesions are compartmentalized rather than homogeneous: fibrotic/ECM-rich central regions, immune/microglial and astrocytic boundary layers, altered white-matter-adjacent zones, and sometimes cavities or repaired-tissue zones. |
+| Strong points | Gong provides spatial transcriptomic evidence for multicellular scar compartments and maturation phases; Cooper provides intervention/genetic evidence that the fibrotic matrix compartment can be reduced independently of GFAP glial scarring. |
+| Main uncertainty | Older chronic rat/dog zone and cavity observations are abstract-level here, and Milich single-cell interaction support remains source-page level. |
+| Likely boundary conditions | Hemisection versus contusion, acute/subacute/intermediate/chronic timing, whether cavity formation occurs, spatial resolution of the assay, and whether compartments are defined anatomically, histologically, mechanically, or transcriptionally. |
+| Current interpretation | The database should represent lesion architecture as multiple linked compartments rather than a single "scar" field. Fibrotic matrix, astrocytic border, microglial/myeloid containment, spared/reactive neural tissue, and cavity/repaired-tissue zones should remain separately queryable. |
+| Next evidence needed | Pull full text for M1A-P001, M1A-P002, and M1A-P031; integrate M1A-P004 with T002/T003/T008 controlled vocabularies so spatial compartments can link to lineage and signaling evidence. |
+
 ---
 
 ## Contradiction Map
@@ -262,11 +312,11 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 | Gate | Requirement | Status |
 |---|---|---|
-| GATE-1 | At least 3 independent papers with linked observations for a topic | MET FOR T002 AND T003; NOT MET FOR T004; 2 linked papers |
+| GATE-1 | At least 3 independent papers with linked observations for a topic | MET FOR T001, T002, AND T003; NOT MET FOR T004; 2 linked papers |
 | GATE-2 | At least 1 contradicting or boundary-condition check for each major consensus topic | MET FOR T002, T003, AND T004 |
 | GATE-3 | Source strength recorded: full-text/source-page/abstract-level | MET FOR PAPER LEVEL |
-| GATE-4 | Claims linked to observations through EvidenceLink | STARTED; MET FOR T002, T003, AND T004 FIRST PASS |
-| GATE-5 | No consensus statement depends on a single paper | MET FOR T002, T003, AND T004 PROFILES; NOT MET GLOBALLY |
+| GATE-4 | Claims linked to observations through EvidenceLink | STARTED; MET FOR T001, T002, T003, AND T004 FIRST PASS |
+| GATE-5 | No consensus statement depends on a single paper | MET FOR T001, T002, T003, AND T004 PROFILES; NOT MET GLOBALLY |
 
 ---
 
@@ -277,3 +327,4 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 - 2026-07-16: Began full Module 1 curation. Completed first-pass Observation, AuthorClaim, EvidenceLink, contradiction-map, and consensus-ready profile rows for M1B-T004 using Baumann 2020 and Cooper 2020.
 - 2026-07-16: Completed first-pass Observation, AuthorClaim, EvidenceLink, contradiction-map, and consensus-ready profile rows for M1B-T002 using Soderblom 2013, Dias 2018, and Xue 2024.
 - 2026-07-16: Completed first-pass Observation, AuthorClaim, EvidenceLink, and consensus-ready profile rows for M1B-T003 using Tamaru 2023 full text plus source-page rows for Zhou 2020, Shen 2025, and O'Shea 2024.
+- 2026-07-16: Completed first-pass Observation, AuthorClaim, EvidenceLink, and consensus-ready profile rows for M1B-T001 using Gong 2023 and Cooper 2018 full text plus abstract/source-page rows for Zhang 2011 and Milich 2021.
