@@ -6,9 +6,11 @@ This tracker records the B-phase evidence-consolidation layer for Module 3A. It 
 
 **Boundary condition**: This is a provisional seed-consensus layer, not a saturation-level consensus. It is useful for hypothesis framing and cross-module synthesis, but it should be upgraded after Module 3A reaches practical saturation and experiment-level extraction is completed.
 
-**Input corpus**: Module 3A seed corpus, 7 registered primary papers; Module 3A remains active and not saturated.
+**Input corpus**: Original Module 3A seed corpus, 7 registered primary papers.
 
-**Module 3 seed-consensus note**: 2026-07-16. Status: Module 3A remains ACTIVE / NOT SATURATED; Module 3B is PROVISIONAL SEED-CONSENSUS FIRST PASS.
+**Module 3 seed-consensus note**: 2026-07-16. At creation time, Module 3A remained ACTIVE / NOT SATURATED; Module 3B was PROVISIONAL SEED-CONSENSUS FIRST PASS.
+
+**Refresh note**: Module 3A was subsequently saturated/frozen first pass on 2026-07-16 with 47 primary papers, 94 abstract-level experiment rows, and 10 review/map anchors. This seed 3B tracker should be refreshed before being treated as the current Module 3 consensus layer.
 
 ---
 
@@ -152,4 +154,3 @@ These rows are tracker-level Observation candidates. They preserve intended data
 | Evidence links | 21 | COMPLETE SEED PASS |
 | Boundary records | 6 | COMPLETE SEED PASS |
 | Consensus drafts | 6 | PROVISIONAL SEED-CONSENSUS FIRST PASS |
-

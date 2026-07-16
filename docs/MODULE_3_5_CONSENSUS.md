@@ -4,9 +4,11 @@
 
 This synthesis bridges the current B-phase evidence layers for Modules 3B, 4B, and 5B.
 
-- Module 3B is a provisional seed-consensus layer from 7 immune/myeloid papers. Module 3A is active and not saturated.
+- Module 3B is a provisional seed-consensus layer from the original 7-paper immune/myeloid seed corpus. Module 3A is now saturated/frozen first pass and 3B needs refresh.
 - Module 4B is consensus-ready first pass from the saturated Module 4A corpus.
-- Module 5B is a provisional seed-consensus layer from 9 axon/white-matter repair papers. Module 5A is active and not saturated.
+- Module 5B is a provisional seed-consensus layer from the original 9-paper axon/white-matter repair seed corpus. Module 5A is now saturated/frozen first pass and 5B needs refresh.
+
+**Refresh note**: Module 3A and Module 5A were subsequently saturated/frozen first pass on 2026-07-16. The 3B and 5B portions of this synthesis now represent historical seed consensus and should be refreshed from the saturated A-phase corpora before downstream materialization.
 
 ## Cross-Module Consensus Drafts
 
@@ -22,7 +24,7 @@ This synthesis bridges the current B-phase evidence layers for Modules 3B, 4B, a
 
 | Priority | Work Needed | Why It Matters |
 |---|---|---|
-| 1 | Saturate Module 3A immune/myeloid searches and extract experiments | Needed before immune consensus can balance depletion, containment, neutrophils, monocytes, and single-cell state maps. |
-| 2 | Saturate Module 5A axon/remyelination/white-matter searches and extract experiments | Needed before regeneration and remyelination claims can be separated by tract, lesion type, and repair mechanism. |
+| 1 | Refresh Module 3B from saturated Module 3A | Needed to replace the seed immune consensus with depletion, containment, neutrophil, monocyte, single-cell, pyroptosis, scar, metabolic, and delivery evidence from the full first-pass corpus. |
+| 2 | Refresh Module 5B from saturated Module 5A | Needed to replace the seed axon/white-matter consensus with tract, sprouting, remyelination, intrinsic-growth, inhibitory-matrix, stimulation, and graft-enabled evidence from the full first-pass corpus. |
 | 3 | Full-text upgrade Module 4B clinical and mechanistic anchors | Needed for adverse events, comparator arms, effect sizes, and figure-level host-graft connectivity evidence. |
-| 4 | Materialize 3B, 4B, and 5B together after 3A/5A saturation | Prevents provisional seed claims from becoming durable database consensus too early. |
+| 4 | Materialize refreshed 3B, mature 4B, and refreshed 5B together | Prevents historical seed claims from becoming durable database consensus too early. |
