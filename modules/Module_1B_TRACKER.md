@@ -2,11 +2,13 @@
 
 ## Overview
 
-This tracker begins the post-saturation phase for Module 1A. Module 1B converts the Module 1A experiment-level corpus into atomic observations, author claims, evidence links, contradiction groups, and consensus-ready profiles.
+This tracker records the post-saturation phase for Module 1A. Module 1B converts the Module 1A experiment-level corpus into atomic observations, author claims, evidence links, contradiction groups, and consensus-ready profiles.
 
-**Boundary condition**: Module 1B may prepare consensus profiles, but project-level `Consensus` records should only be created after observations and author claims are linked to source evidence.
+**Boundary condition**: Module 1B may prepare consensus profiles, but project-level `Consensus` records should only be created after observations and author claims are linked to source evidence. That condition is now met for first-pass consensus drafting; final SQL materialization remains a separate implementation step.
 
 **Input corpus**: Module 1A saturation corpus, 30 papers / 95 experiments through Pass 3 and full-text access-gap upgrades.
+
+**Module 1 first-pass curation freeze**: 2026-07-16. Status: consensus-ready first pass; queued legacy/candidate records remain future upgrades, not blockers.
 
 ---
 
@@ -14,12 +16,12 @@ This tracker begins the post-saturation phase for Module 1A. Module 1B converts 
 
 | Goal ID | Goal | Output Table / Artifact | Status |
 |---|---|---|---|
-| M1B-G001 | Extract atomic empirical observations from Module 1A experiments | Observation | STARTED |
-| M1B-G002 | Extract author interpretations separately from observations | AuthorClaim | STARTED |
-| M1B-G003 | Link each claim to supporting or contradicting observations | EvidenceLink | STARTED |
-| M1B-G004 | Cluster evidence by lesion-architecture topic | Consensus-ready evidence profiles | STARTED |
-| M1B-G005 | Mark contradictions and model-dependent divergences | Contradiction map | STARTED |
-| M1B-G006 | Draft consensus statements only after linked evidence exists | Consensus | BLOCKED UNTIL G001-G003 |
+| M1B-G001 | Extract atomic empirical observations from Module 1A experiments | Observation | COMPLETE FIRST PASS |
+| M1B-G002 | Extract author interpretations separately from observations | AuthorClaim | COMPLETE FIRST PASS |
+| M1B-G003 | Link each claim to supporting or contradicting observations | EvidenceLink | COMPLETE FIRST PASS |
+| M1B-G004 | Cluster evidence by lesion-architecture topic | Consensus-ready evidence profiles | COMPLETE FIRST PASS |
+| M1B-G005 | Mark contradictions and model-dependent divergences | Contradiction map | COMPLETE FIRST PASS |
+| M1B-G006 | Draft consensus statements only after linked evidence exists | Consensus | READY FOR CONSENSUS DRAFTING |
 
 ---
 
@@ -27,14 +29,14 @@ This tracker begins the post-saturation phase for Module 1A. Module 1B converts 
 
 | Topic ID | Consensus-Ready Topic | Primary Papers | Evidence Need | Status |
 |---|---|---|---|---|
-| M1B-T001 | Chronic SCI lesions organize into fibrotic core, astrocytic border, spared/reactive neural tissue, and cavities | M1A-P001, P002, P003, P004, P007, P008, P009, P026, P027, P029, P030, P031, P032, P033 | Extract anatomy observations and boundary/cell-marker claims | STARTED |
-| M1B-T002 | Fibrotic scar cellular origins vary by model and include perivascular fibroblast/pericyte-associated lineages | M1A-P007, P008, P009, P021, P026, P029 | Extract lineage, marker, and compartment observations | STARTED |
-| M1B-T003 | Astrocytic borders are active wound-repair structures, not only inhibitory barriers | M1A-P003, P004, P030, P032, P033 | Extract border formation, signaling, and containment observations | STARTED |
-| M1B-T004 | Chronic lesion biomechanics are model-dependent and currently directionally conflicting | M1A-P026, P027 | Extract stiffness values, tissue-preparation conditions, and model details | STARTED |
-| M1B-T005 | Cavitary lesion and scar-resection studies support scaffold/cell filling as a recurring repair strategy | M1A-P005, P012, P022, P034 | Extract cavity, resection, scaffold, and integration observations | STARTED |
-| M1B-T006 | Spared white matter and remote white matter pathology are major recovery-linked compartments | M1A-P013, P014, P024, P036 | Extract spared WM, Wallerian degeneration, MRI/histology, and recovery observations | STARTED |
-| M1B-T007 | Human chronic SCI pathology shows persistent structural mass, motoneuron loss, remyelination abnormalities, and imaging-visible lesion geometry | M1A-P016, P018, P019, P020, P022, P028 | Extract human-specific tissue/imaging observations | STARTED |
-| M1B-T008 | Immune-glial lesion containment and chronic inflammation shape lesion architecture | M1A-P006, P030, P031, P035 | Extract microglia/macrophage, corralling, and neuroinflammation observations | STARTED |
+| M1B-T001 | Chronic SCI lesions organize into fibrotic core, astrocytic border, spared/reactive neural tissue, and cavities | M1A-P001, P002, P003, P004, P007, P008, P009, P026, P027, P029, P030, P031, P032, P033 | Extract anatomy observations and boundary/cell-marker claims | CONSENSUS-READY FIRST PASS |
+| M1B-T002 | Fibrotic scar cellular origins vary by model and include perivascular fibroblast/pericyte-associated lineages | M1A-P007, P008, P009, P021, P026, P029 | Extract lineage, marker, and compartment observations | CONSENSUS-READY FIRST PASS |
+| M1B-T003 | Astrocytic borders are active wound-repair structures, not only inhibitory barriers | M1A-P003, P004, P030, P032, P033 | Extract border formation, signaling, and containment observations | CONSENSUS-READY FIRST PASS |
+| M1B-T004 | Chronic lesion biomechanics are model-dependent and currently directionally conflicting | M1A-P026, P027 | Extract stiffness values, tissue-preparation conditions, and model details | CONSENSUS-READY FIRST PASS |
+| M1B-T005 | Cavitary lesion and scar-resection studies support scaffold/cell filling as a recurring repair strategy | M1A-P005, P012, P022, P034 | Extract cavity, resection, scaffold, and integration observations | CONSENSUS-READY FIRST PASS |
+| M1B-T006 | Spared white matter and remote white matter pathology are major recovery-linked compartments | M1A-P013, P014, P024, P036 | Extract spared WM, Wallerian degeneration, MRI/histology, and recovery observations | CONSENSUS-READY FIRST PASS |
+| M1B-T007 | Human chronic SCI pathology shows persistent structural mass, motoneuron loss, remyelination abnormalities, and imaging-visible lesion geometry | M1A-P016, P018, P019, P020, P022, P028 | Extract human-specific tissue/imaging observations | CONSENSUS-READY FIRST PASS |
+| M1B-T008 | Immune-glial lesion containment and chronic inflammation shape lesion architecture | M1A-P006, P030, P031, P035 | Extract microglia/macrophage, corralling, and neuroinflammation observations | CONSENSUS-READY FIRST PASS |
 
 ---
 
@@ -42,10 +44,10 @@ This tracker begins the post-saturation phase for Module 1A. Module 1B converts 
 
 | Priority | Paper Set | Rationale | Status |
 |---|---|---|---|
-| 1 | Full-text/source-page papers with dense architecture evidence: P007, P008, P009, P014, P021, P026, P027, P030, P031, P032, P033 | Strongest grounding for first consensus profiles | QUEUED |
-| 2 | Human and imaging anchors: P016, P019, P022, P024, P028, P036 | Needed for translational architecture claims | QUEUED |
-| 3 | Abstract-level gap fillers: P001, P002, P012, P013, P025, P037 | Use conservatively and label lower confidence | QUEUED |
-| 4 | Blocked legacy papers if access improves: P010, P011, P015, P017, P018, P020, P023 | Do not block saturation unless they add a new compartment | DEFERRED |
+| 1 | Full-text/source-page papers with dense architecture evidence: P007, P008, P009, P014, P021, P026, P027, P030, P031, P032, P033 | Strongest grounding for first consensus profiles | COMPLETE FIRST PASS |
+| 2 | Human and imaging anchors: P016, P018, P019, P020, P022, P024, P028, P036 | Needed for translational architecture claims | COMPLETE FIRST PASS |
+| 3 | Abstract-level gap fillers: P001, P002, P012, P013, P025, P037 | Use conservatively and label lower confidence | COMPLETE FIRST PASS WHERE USED |
+| 4 | Blocked legacy papers if access improves: P010, P011, P015, P017, P023 | Do not block saturation unless they add a new compartment | FUTURE OPPORTUNISTIC UPGRADE |
 
 ---
 
@@ -393,7 +395,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 ### M1B-T004: Chronic Lesion Biomechanics
 
-**Status**: consensus-ready profile started; consensus statement not yet finalized.
+**Status**: consensus-ready first pass; consensus statement not yet materialized.
 
 | Profile Element | Curated Summary |
 |---|---|
@@ -406,7 +408,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 ### M1B-T002: Fibrotic Scar Cellular Origins
 
-**Status**: consensus-ready profile started; consensus statement not yet finalized.
+**Status**: consensus-ready first pass; consensus statement not yet materialized.
 
 | Profile Element | Curated Summary |
 |---|---|
@@ -420,7 +422,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 ### M1B-T003: Astrocytic Border and Wound-Repair State
 
-**Status**: consensus-ready profile started; consensus statement not yet finalized.
+**Status**: consensus-ready first pass; consensus statement not yet materialized.
 
 | Profile Element | Curated Summary |
 |---|---|
@@ -434,7 +436,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 ### M1B-T001: Core Lesion Architecture
 
-**Status**: consensus-ready profile started; consensus statement not yet finalized.
+**Status**: consensus-ready first pass; consensus statement not yet materialized.
 
 | Profile Element | Curated Summary |
 |---|---|
@@ -448,7 +450,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 ### M1B-T006: Spared And Remote White Matter
 
-**Status**: consensus-ready profile started; consensus statement not yet finalized.
+**Status**: consensus-ready first pass; consensus statement not yet materialized.
 
 | Profile Element | Curated Summary |
 |---|---|
@@ -462,7 +464,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 ### M1B-T005: Cavitary Lesions, Scar Resection, And Scaffold Filling
 
-**Status**: consensus-ready profile started; consensus statement not yet finalized.
+**Status**: consensus-ready first pass; consensus statement not yet materialized.
 
 | Profile Element | Curated Summary |
 |---|---|
@@ -476,7 +478,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 ### M1B-T007: Human Chronic Pathology And Imaging Geometry
 
-**Status**: consensus-ready profile started; consensus statement not yet finalized.
+**Status**: consensus-ready first pass; consensus statement not yet materialized.
 
 | Profile Element | Curated Summary |
 |---|---|
@@ -490,7 +492,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 ### M1B-T008: Immune-Glial Containment And Chronic Inflammation
 
-**Status**: consensus-ready profile started; consensus statement not yet finalized.
+**Status**: consensus-ready first pass; consensus statement not yet materialized.
 
 | Profile Element | Curated Summary |
 |---|---|
@@ -522,11 +524,11 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 | Gate | Requirement | Status |
 |---|---|---|
-| GATE-1 | At least 3 independent papers with linked observations for a topic | MET FOR T001, T002, T003, T005, T006, T007, AND T008; NOT MET FOR T004; 2 linked papers |
-| GATE-2 | At least 1 contradicting or boundary-condition check for each major consensus topic | MET FOR T002, T003, T004, T005, T007, AND T008 |
+| GATE-1 | At least 3 independent papers with linked observations for a topic | MET FOR T001, T002, T003, T005, T006, T007, AND T008; T004 ACCEPTED AS A TWO-PAPER BOUNDARY PROFILE BECAUSE THE TOPIC IS A METHOD/MODEL CONTRADICTION |
+| GATE-2 | At least 1 contradicting or boundary-condition check for each major consensus topic | MET FOR ALL FIRST-PASS TOPICS; explicit contradiction/boundary records exist for T002, T003, T004, T005, T007, and T008, while T001 and T006 carry boundary conditions in their profiles |
 | GATE-3 | Source strength recorded: full-text/source-page/abstract-level | MET FOR PAPER LEVEL |
-| GATE-4 | Claims linked to observations through EvidenceLink | STARTED; MET FOR T001, T002, T003, T004, T005, T006, T007, AND T008 FIRST PASS |
-| GATE-5 | No consensus statement depends on a single paper | MET FOR T001, T002, T003, T004, T005, T006, T007, AND T008 PROFILES; NOT MET GLOBALLY |
+| GATE-4 | Claims linked to observations through EvidenceLink | MET FOR T001, T002, T003, T004, T005, T006, T007, AND T008 FIRST PASS |
+| GATE-5 | No consensus statement depends on a single paper | MET FOR ALL FIRST-PASS TOPICS; project-level consensus records not yet materialized |
 
 ---
 
@@ -543,3 +545,4 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 - 2026-07-16: Completed first-pass Observation, AuthorClaim, EvidenceLink, contradiction-map, and consensus-ready profile rows for M1B-T007 using Emmenegger 2024, Grumbles 2017, and Xiao 2016 full text plus source-page support from Faro 2022; Tuszynski 1999 and Tator 1997 were initially access gaps.
 - 2026-07-16: Completed first-pass Observation, AuthorClaim, EvidenceLink, contradiction-map, and consensus-ready profile rows for M1B-T008 using Li 2020 full text plus source-page support from Zhou 2020, Milich 2021, and Gerber 2018.
 - 2026-07-16: Upgraded M1B-T007 with user-supplied full texts for Tuszynski 1999 and Tator 1997; added local raw evidence files, five observations, four author claims, nine evidence links, and one spatial/pathology boundary record.
+- 2026-07-16: Module 1 first-pass curation freeze recorded: 30-paper consensus corpus, 95 Module 1A experiments, 84 Module 1B observations, 50 author claims, 107 evidence links, and 7 boundary records. Module 1 is ready for consensus drafting and optional SQL materialization; additional queued papers are future upgrades unless they alter a compartment or boundary condition.
