@@ -1,0 +1,285 @@
+[
+  {
+    "consensus_draft_id": "M1B-S001",
+    "topic_id": "M1B-T001",
+    "topic": "M1B-T001: Core lesion architecture",
+    "consensus_statement": "Chronic SCI lesion architecture should be represented as a multicompartment structure rather than as a single undifferentiated scar. First-pass compartments include fibrotic/ECM-rich core or matrix, astrocytic border, immune/myeloid containment zone, spared or reactive neural tissue, altered white matter, and cystic or repaired-tissue cavities when present.",
+    "agreement_level": "moderate",
+    "source_agreement_label": "moderate",
+    "supporting_evidence_scope": "Supported by spatial transcriptomics and scar-matrix full-text evidence, with lower-confidence abstract/source-page support for chronic zone architecture and single-cell lesion ecology; observations M1B-O037-M1B-O046; claims M1B-C019-M1B-C024.",
+    "boundary_or_contradiction_handling": "Compartment definitions vary by model, time point, assay resolution, and whether lesions are contusive, hemisection, cavitary, or scaffold-repaired; do not collapse all scar biology into one field.",
+    "sql_materialization_status": "CONSENSUS SQL EXPORTED; CONSENSUS_OBSERVATION DEFERRED",
+    "source_tracker": "modules/Module_1B_TRACKER.md",
+    "observation_tracker_ids": [
+      "M1B-O037",
+      "M1B-O038",
+      "M1B-O039",
+      "M1B-O040",
+      "M1B-O041",
+      "M1B-O042",
+      "M1B-O043",
+      "M1B-O044",
+      "M1B-O045",
+      "M1B-O046"
+    ],
+    "claim_tracker_ids": [
+      "M1B-C019",
+      "M1B-C020",
+      "M1B-C021",
+      "M1B-C022",
+      "M1B-C023",
+      "M1B-C024"
+    ],
+    "boundary_tracker_ids": []
+  },
+  {
+    "consensus_draft_id": "M1B-S002",
+    "topic_id": "M1B-T002",
+    "topic": "M1B-T002: Fibrotic scar cellular origins",
+    "consensus_statement": "The SCI fibrotic scar is produced by perivascular and meningeal-associated stromal lineages, but exact lineage labels depend on markers, Cre drivers, injury type, dural disruption, and endpoint. Partial modulation of fibrotic scarring can support regeneration or recovery in some models, while complete loss of closure-producing stromal response can be harmful.",
+    "agreement_level": "moderate",
+    "source_agreement_label": "moderate",
+    "supporting_evidence_scope": "Supported by three full-text lineage/function studies; observations M1B-O012-M1B-O026; claims M1B-C006-M1B-C012.",
+    "boundary_or_contradiction_handling": "M1B-X002 resolves apparent pericyte-versus-fibroblast conflicts as marker/system dependent; store marker, lineage driver, injury model, and dural status with each claim.",
+    "sql_materialization_status": "CONSENSUS SQL EXPORTED; CONSENSUS_OBSERVATION DEFERRED",
+    "source_tracker": "modules/Module_1B_TRACKER.md",
+    "observation_tracker_ids": [
+      "M1B-O012",
+      "M1B-O013",
+      "M1B-O014",
+      "M1B-O015",
+      "M1B-O016",
+      "M1B-O017",
+      "M1B-O018",
+      "M1B-O019",
+      "M1B-O020",
+      "M1B-O021",
+      "M1B-O022",
+      "M1B-O023",
+      "M1B-O024",
+      "M1B-O025",
+      "M1B-O026"
+    ],
+    "claim_tracker_ids": [
+      "M1B-C006",
+      "M1B-C007",
+      "M1B-C008",
+      "M1B-C009",
+      "M1B-C010",
+      "M1B-C011",
+      "M1B-C012"
+    ],
+    "boundary_tracker_ids": [
+      "M1B-X002"
+    ]
+  },
+  {
+    "consensus_draft_id": "M1B-S003",
+    "topic_id": "M1B-T003",
+    "topic": "M1B-T003: Astrocytic border and wound-repair state",
+    "consensus_statement": "Astrocytic scar borders are active wound-repair and containment structures with separable formation, maintenance, recruitment, and morphology programs. Established scar-forming astrocytes may resist direct state reversal, but border recruitment and organization remain intervention-sensitive in vivo.",
+    "agreement_level": "moderate",
+    "source_agreement_label": "moderate",
+    "supporting_evidence_scope": "Strongest support comes from Tamaru 2023 full text, with source-page support from immune-corralling, Ryk, and wound-repair astrocyte studies; observations M1B-O027-M1B-O036; claims M1B-C013-M1B-C018.",
+    "boundary_or_contradiction_handling": "M1B-X003 distinguishes established astrocyte-state reversal from border recruitment/organization. Source-page studies should remain medium confidence until full-text upgrades.",
+    "sql_materialization_status": "CONSENSUS SQL EXPORTED; CONSENSUS_OBSERVATION DEFERRED",
+    "source_tracker": "modules/Module_1B_TRACKER.md",
+    "observation_tracker_ids": [
+      "M1B-O027",
+      "M1B-O028",
+      "M1B-O029",
+      "M1B-O030",
+      "M1B-O031",
+      "M1B-O032",
+      "M1B-O033",
+      "M1B-O034",
+      "M1B-O035",
+      "M1B-O036"
+    ],
+    "claim_tracker_ids": [
+      "M1B-C013",
+      "M1B-C014",
+      "M1B-C015",
+      "M1B-C016",
+      "M1B-C017",
+      "M1B-C018"
+    ],
+    "boundary_tracker_ids": [
+      "M1B-X003"
+    ]
+  },
+  {
+    "consensus_draft_id": "M1B-S004",
+    "topic_id": "M1B-T004",
+    "topic": "M1B-T004: Chronic lesion biomechanics",
+    "consensus_statement": "Chronic SCI lesion mechanics are altered relative to uninjured spinal cord, but the direction of stiffness change is model- and method-dependent. The database should not encode a universal \"chronic scar stiffness\" direction without injury model, species, time point, tissue preparation, AFM method, and lesion subregion context.",
+    "agreement_level": "emerging",
+    "source_agreement_label": "emerging / boundary-specific",
+    "supporting_evidence_scope": "Supported by two full-text mechanics studies with directly conflicting directionality; observations M1B-O001-M1B-O011; claims M1B-C001-M1B-C005.",
+    "boundary_or_contradiction_handling": "M1B-X001 is the central synthesis: rat hemisection scar softening and mouse contusion lesion stiffening are both admissible under different model/method conditions.",
+    "sql_materialization_status": "CONSENSUS SQL EXPORTED; CONSENSUS_OBSERVATION DEFERRED",
+    "source_tracker": "modules/Module_1B_TRACKER.md",
+    "observation_tracker_ids": [
+      "M1B-O001",
+      "M1B-O002",
+      "M1B-O003",
+      "M1B-O004",
+      "M1B-O005",
+      "M1B-O006",
+      "M1B-O007",
+      "M1B-O008",
+      "M1B-O009",
+      "M1B-O010",
+      "M1B-O011"
+    ],
+    "claim_tracker_ids": [
+      "M1B-C001",
+      "M1B-C002",
+      "M1B-C003",
+      "M1B-C004",
+      "M1B-C005"
+    ],
+    "boundary_tracker_ids": [
+      "M1B-X001"
+    ]
+  },
+  {
+    "consensus_draft_id": "M1B-S005",
+    "topic_id": "M1B-T005",
+    "topic": "M1B-T005: Cavitary lesions, scar resection, and scaffold filling",
+    "consensus_statement": "Chronic scar resection should be separated into at least two intervention classes: resection alone and resection followed by cavity or gap reconstruction. Resection alone is not consensus-reparative and may be harmful in contusion models, whereas scaffold/cell filling is a recurring repair strategy whose claims remain model-, completeness-, and endpoint-dependent.",
+    "agreement_level": "moderate",
+    "source_agreement_label": "moderate",
+    "supporting_evidence_scope": "Supported by two full-text resection/human scaffold studies plus abstract/source-page scaffold support; observations M1B-O056-M1B-O062; claims M1B-C030-M1B-C034.",
+    "boundary_or_contradiction_handling": "M1B-X004 resolves the apparent conflict by distinguishing tissue removal from reconstruction after resection; efficacy claims should not be generalized beyond feasibility/safety or specific animal endpoints.",
+    "sql_materialization_status": "CONSENSUS SQL EXPORTED; CONSENSUS_OBSERVATION DEFERRED",
+    "source_tracker": "modules/Module_1B_TRACKER.md",
+    "observation_tracker_ids": [
+      "M1B-O056",
+      "M1B-O057",
+      "M1B-O058",
+      "M1B-O059",
+      "M1B-O060",
+      "M1B-O061",
+      "M1B-O062"
+    ],
+    "claim_tracker_ids": [
+      "M1B-C030",
+      "M1B-C031",
+      "M1B-C032",
+      "M1B-C033",
+      "M1B-C034"
+    ],
+    "boundary_tracker_ids": [
+      "M1B-X004"
+    ]
+  },
+  {
+    "consensus_draft_id": "M1B-S006",
+    "topic_id": "M1B-T006",
+    "topic": "M1B-T006: Spared and remote white matter",
+    "consensus_statement": "Spared and lesion-remote white matter should be modeled as an active, recovery-linked compartment rather than normal residual tissue. It can show chronic degeneration, repair-associated glial and immune remodeling, MRI-visible tract changes, debris/lipid handling programs, and behavioral associations.",
+    "agreement_level": "moderate",
+    "source_agreement_label": "moderate",
+    "supporting_evidence_scope": "Strongest support comes from McCallum 2026 full text, with imaging and abstract support from Scholtes, Song, and Rosenberg; observations M1B-O047-M1B-O055; claims M1B-C025-M1B-C029.",
+    "boundary_or_contradiction_handling": "Boundary conditions include tract, distance from lesion, injury severity, post-mortem versus in vivo imaging, and exact MRI/histology metric. Lower-access white matter papers should not carry high-confidence numeric claims yet.",
+    "sql_materialization_status": "CONSENSUS SQL EXPORTED; CONSENSUS_OBSERVATION DEFERRED",
+    "source_tracker": "modules/Module_1B_TRACKER.md",
+    "observation_tracker_ids": [
+      "M1B-O047",
+      "M1B-O048",
+      "M1B-O049",
+      "M1B-O050",
+      "M1B-O051",
+      "M1B-O052",
+      "M1B-O053",
+      "M1B-O054",
+      "M1B-O055"
+    ],
+    "claim_tracker_ids": [
+      "M1B-C025",
+      "M1B-C026",
+      "M1B-C027",
+      "M1B-C028",
+      "M1B-C029"
+    ],
+    "boundary_tracker_ids": []
+  },
+  {
+    "consensus_draft_id": "M1B-S007",
+    "topic_id": "M1B-T007",
+    "topic": "M1B-T007: Human chronic pathology and imaging geometry",
+    "consensus_statement": "Human chronic SCI lesion architecture is multi-scale: local lesion geometry and tissue bridges, focal cystic atrophy, retained adjacent parenchyma, vascular territory and remote infarct-like pathology, scar-marker composition, segmental motoneuron/root pathology, remyelination status, perilesional DTI abnormalities, and remote motor-system degeneration should remain separately queryable.",
+    "agreement_level": "strong",
+    "source_agreement_label": "strong first-pass",
+    "supporting_evidence_scope": "Supported by five full-text human studies plus source-page pediatric DTI support; observations M1B-O063-M1B-O070 and M1B-O080-M1B-O084; claims M1B-C035-M1B-C040 and M1B-C047-M1B-C050.",
+    "boundary_or_contradiction_handling": "M1B-X005 and M1B-X007 separate local lesion stability/adjacent mass preservation from remote degeneration, vascular infarct-like lesions, and syrinx-associated atrophy.",
+    "sql_materialization_status": "CONSENSUS SQL EXPORTED; CONSENSUS_OBSERVATION DEFERRED",
+    "source_tracker": "modules/Module_1B_TRACKER.md",
+    "observation_tracker_ids": [
+      "M1B-O063",
+      "M1B-O064",
+      "M1B-O065",
+      "M1B-O066",
+      "M1B-O067",
+      "M1B-O068",
+      "M1B-O069",
+      "M1B-O070",
+      "M1B-O080",
+      "M1B-O081",
+      "M1B-O082",
+      "M1B-O083",
+      "M1B-O084"
+    ],
+    "claim_tracker_ids": [
+      "M1B-C035",
+      "M1B-C036",
+      "M1B-C037",
+      "M1B-C038",
+      "M1B-C039",
+      "M1B-C040",
+      "M1B-C047",
+      "M1B-C048",
+      "M1B-C049",
+      "M1B-C050"
+    ],
+    "boundary_tracker_ids": [
+      "M1B-X005",
+      "M1B-X007"
+    ]
+  },
+  {
+    "consensus_draft_id": "M1B-S008",
+    "topic_id": "M1B-T008",
+    "topic": "M1B-T008: Immune-glial containment and chronic inflammation",
+    "consensus_statement": "Immune-glial lesion biology should be represented by phase, cell population, function, and endpoint rather than as globally beneficial or harmful. Myeloid and glial responses can support corralling, compaction, containment, debris handling, and repair while also contributing to chronic neuroinflammatory pathology and remote effects.",
+    "agreement_level": "moderate",
+    "source_agreement_label": "moderate",
+    "supporting_evidence_scope": "Supported by Li 2020 full text plus source-page evidence from Zhou, Milich, and Gerber; observations M1B-O071-M1B-O079; claims M1B-C041-M1B-C046.",
+    "boundary_or_contradiction_handling": "M1B-X006 resolves the main tension as phase- and function-specific: protective early containment/debris roles can coexist with chronic inflammatory harm. Source-page mechanistic rows remain medium confidence.",
+    "sql_materialization_status": "CONSENSUS SQL EXPORTED; CONSENSUS_OBSERVATION DEFERRED",
+    "source_tracker": "modules/Module_1B_TRACKER.md",
+    "observation_tracker_ids": [
+      "M1B-O071",
+      "M1B-O072",
+      "M1B-O073",
+      "M1B-O074",
+      "M1B-O075",
+      "M1B-O076",
+      "M1B-O077",
+      "M1B-O078",
+      "M1B-O079"
+    ],
+    "claim_tracker_ids": [
+      "M1B-C041",
+      "M1B-C042",
+      "M1B-C043",
+      "M1B-C044",
+      "M1B-C045",
+      "M1B-C046"
+    ],
+    "boundary_tracker_ids": [
+      "M1B-X006"
+    ]
+  }
+]

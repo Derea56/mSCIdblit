@@ -1,0 +1,236 @@
+#!/usr/bin/env python3
+"""Export Module 1 Pass 6 consensus drafts from the Markdown tracker.
+
+This is an intentionally narrow materialization step. It exports first-pass
+consensus drafts into JSON and PostgreSQL INSERT statements for the `Consensus`
+table. `Consensus_Observation` rows are deferred until Observation tracker rows
+have stable database primary keys.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import sys
+from dataclasses import asdict, dataclass
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_TRACKER = ROOT / "modules" / "Module_1B_TRACKER.md"
+DEFAULT_JSON = ROOT / "data" / "processed" / "module1_consensus_drafts.json"
+DEFAULT_SQL = ROOT / "data" / "processed" / "module1_consensus_inserts.sql"
+
+TOPIC_TITLES = {
+    "M1B-T001": "Core lesion architecture",
+    "M1B-T002": "Fibrotic scar cellular origins",
+    "M1B-T003": "Astrocytic border and wound-repair state",
+    "M1B-T004": "Chronic lesion biomechanics",
+    "M1B-T005": "Cavitary lesions, scar resection, and scaffold filling",
+    "M1B-T006": "Spared and remote white matter",
+    "M1B-T007": "Human chronic pathology and imaging geometry",
+    "M1B-T008": "Immune-glial containment and chronic inflammation",
+}
+
+AGREEMENT_LEVELS = {
+    "strong first-pass": "strong",
+    "moderate": "moderate",
+    "emerging / boundary-specific": "emerging",
+}
+
+
+@dataclass(frozen=True)
+class ConsensusDraft:
+    consensus_draft_id: str
+    topic_id: str
+    topic: str
+    consensus_statement: str
+    agreement_level: str
+    source_agreement_label: str
+    supporting_evidence_scope: str
+    boundary_or_contradiction_handling: str
+    sql_materialization_status: str
+    source_tracker: str
+    observation_tracker_ids: list[str]
+    claim_tracker_ids: list[str]
+    boundary_tracker_ids: list[str]
+
+
+def split_markdown_row(line: str) -> list[str]:
+    return [cell.strip() for cell in line.strip().strip("|").split("|")]
+
+
+def expand_tracker_range(prefix: str, start: str, end: str) -> list[str]:
+    start_num = int(start)
+    end_num = int(end)
+    return [f"{prefix}{num:03d}" for num in range(start_num, end_num + 1)]
+
+
+def tracker_ids(text: str, prefix: str) -> list[str]:
+    ids: list[str] = []
+    seen: set[str] = set()
+    pattern = re.compile(rf"\b({prefix})(\d{{3}})(?:-({prefix})(\d{{3}}))?\b")
+    for match in pattern.finditer(text):
+        first_prefix, first_num, second_prefix, second_num = match.groups()
+        expanded = (
+            expand_tracker_range(first_prefix, first_num, second_num)
+            if second_prefix and second_num
+            else [f"{first_prefix}{first_num}"]
+        )
+        for item in expanded:
+            if item not in seen:
+                seen.add(item)
+                ids.append(item)
+    return ids
+
+
+def extract_pass6_table(markdown: str) -> list[list[str]]:
+    in_section = False
+    rows: list[list[str]] = []
+    for line in markdown.splitlines():
+        if line.startswith("## Pass 6: Draft Consensus Statements"):
+            in_section = True
+            continue
+        if in_section and line.startswith("## ") and rows:
+            break
+        if not in_section or not line.startswith("|"):
+            continue
+        if line.startswith("|---") or "Consensus Draft ID" in line:
+            continue
+        cells = split_markdown_row(line)
+        if len(cells) != 7:
+            raise ValueError(f"Unexpected Pass 6 table row with {len(cells)} cells: {line}")
+        rows.append(cells)
+    return rows
+
+
+def parse_drafts(tracker: Path) -> list[ConsensusDraft]:
+    markdown = tracker.read_text()
+    drafts: list[ConsensusDraft] = []
+    for cells in extract_pass6_table(markdown):
+        draft_id, topic_id, statement, agreement, evidence_scope, boundary, status = cells
+        topic = f"{topic_id}: {TOPIC_TITLES.get(topic_id, topic_id)}"
+        drafts.append(
+            ConsensusDraft(
+                consensus_draft_id=draft_id,
+                topic_id=topic_id,
+                topic=topic,
+                consensus_statement=statement,
+                agreement_level=AGREEMENT_LEVELS.get(agreement, agreement),
+                source_agreement_label=agreement,
+                supporting_evidence_scope=evidence_scope,
+                boundary_or_contradiction_handling=boundary,
+                sql_materialization_status=status,
+                source_tracker=str(tracker.relative_to(ROOT)),
+                observation_tracker_ids=tracker_ids(evidence_scope, "M1B-O"),
+                claim_tracker_ids=tracker_ids(evidence_scope, "M1B-C"),
+                boundary_tracker_ids=tracker_ids(boundary, "M1B-X"),
+            )
+        )
+    return drafts
+
+
+def sql_literal(value: str | None) -> str:
+    if value is None:
+        return "NULL"
+    return "'" + value.replace("'", "''") + "'"
+
+
+def consensus_notes(draft: ConsensusDraft) -> str:
+    payload = {
+        "consensus_draft_id": draft.consensus_draft_id,
+        "topic_id": draft.topic_id,
+        "source_tracker": draft.source_tracker,
+        "source_agreement_label": draft.source_agreement_label,
+        "supporting_evidence_scope": draft.supporting_evidence_scope,
+        "boundary_or_contradiction_handling": draft.boundary_or_contradiction_handling,
+        "observation_tracker_ids": draft.observation_tracker_ids,
+        "claim_tracker_ids": draft.claim_tracker_ids,
+        "boundary_tracker_ids": draft.boundary_tracker_ids,
+        "materialization_note": "Consensus_Observation rows deferred until Observation tracker rows have database primary keys.",
+    }
+    return json.dumps(payload, sort_keys=True)
+
+
+def render_sql(drafts: list[ConsensusDraft]) -> str:
+    lines = [
+        "-- Module 1 first-pass consensus inserts generated from modules/Module_1B_TRACKER.md",
+        "-- Consensus_Observation rows are intentionally deferred until observations are SQL-materialized.",
+        "BEGIN;",
+        "",
+    ]
+    for draft in drafts:
+        lines.extend(
+            [
+                "INSERT INTO Consensus (",
+                "  consensus_statement, topic, version, agreement_level,",
+                "  num_supporting_papers, num_contradicting_papers, notes",
+                ") VALUES (",
+                f"  {sql_literal(draft.consensus_statement)},",
+                f"  {sql_literal(draft.topic)},",
+                "  1,",
+                f"  {sql_literal(draft.agreement_level)},",
+                "  NULL,",
+                "  NULL,",
+                f"  {sql_literal(consensus_notes(draft))}",
+                ");",
+                "",
+            ]
+        )
+    lines.append("COMMIT;")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def write_outputs(drafts: list[ConsensusDraft], json_path: Path, sql_path: Path) -> None:
+    json_path.parent.mkdir(parents=True, exist_ok=True)
+    sql_path.parent.mkdir(parents=True, exist_ok=True)
+    json_path.write_text(json.dumps([asdict(draft) for draft in drafts], indent=2) + "\n")
+    sql_path.write_text(render_sql(drafts))
+
+
+def validate_drafts(drafts: list[ConsensusDraft]) -> list[str]:
+    errors: list[str] = []
+    expected = [f"M1B-S{num:03d}" for num in range(1, 9)]
+    actual = [draft.consensus_draft_id for draft in drafts]
+    if actual != expected:
+        errors.append(f"Expected consensus draft IDs {expected}, found {actual}")
+    for draft in drafts:
+        if not draft.observation_tracker_ids:
+            errors.append(f"{draft.consensus_draft_id} has no observation tracker IDs")
+        if not draft.claim_tracker_ids:
+            errors.append(f"{draft.consensus_draft_id} has no claim tracker IDs")
+        if draft.topic_id not in TOPIC_TITLES:
+            errors.append(f"{draft.consensus_draft_id} has unknown topic ID {draft.topic_id}")
+    return errors
+
+
+def parse_args(argv: list[str]) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--tracker", type=Path, default=DEFAULT_TRACKER)
+    parser.add_argument("--json-output", type=Path, default=DEFAULT_JSON)
+    parser.add_argument("--sql-output", type=Path, default=DEFAULT_SQL)
+    parser.add_argument("--check", action="store_true", help="Validate generated content without writing files.")
+    return parser.parse_args(argv)
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = parse_args(argv or sys.argv[1:])
+    drafts = parse_drafts(args.tracker)
+    errors = validate_drafts(drafts)
+    if errors:
+        for error in errors:
+            print(f"FAIL {error}", file=sys.stderr)
+        return 1
+    if args.check:
+        print(f"PASS parsed {len(drafts)} Module 1 consensus drafts")
+        return 0
+    write_outputs(drafts, args.json_output, args.sql_output)
+    print(f"Wrote {args.json_output.relative_to(ROOT)}")
+    print(f"Wrote {args.sql_output.relative_to(ROOT)}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
