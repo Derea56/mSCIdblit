@@ -34,7 +34,7 @@ This tracker begins the post-saturation phase for Module 1A. Module 1B converts 
 | M1B-T005 | Cavitary lesion and scar-resection studies support scaffold/cell filling as a recurring repair strategy | M1A-P005, P012, P022, P034 | Extract cavity, resection, scaffold, and integration observations | STARTED |
 | M1B-T006 | Spared white matter and remote white matter pathology are major recovery-linked compartments | M1A-P013, P014, P024, P036 | Extract spared WM, Wallerian degeneration, MRI/histology, and recovery observations | STARTED |
 | M1B-T007 | Human chronic SCI pathology shows persistent structural mass, motoneuron loss, remyelination abnormalities, and imaging-visible lesion geometry | M1A-P016, P018, P019, P020, P022, P028 | Extract human-specific tissue/imaging observations | STARTED |
-| M1B-T008 | Immune-glial lesion containment and chronic inflammation shape lesion architecture | M1A-P006, P030, P031, P035 | Extract microglia/macrophage, corralling, and neuroinflammation observations | QUEUED |
+| M1B-T008 | Immune-glial lesion containment and chronic inflammation shape lesion architecture | M1A-P006, P030, P031, P035 | Extract microglia/macrophage, corralling, and neuroinflammation observations | STARTED |
 
 ---
 
@@ -79,6 +79,10 @@ This tracker begins the post-saturation phase for Module 1A. Module 1B converts 
 | M1B-T007 | M1A-P028 | M1A-P028-E001–E002 | Pediatric chronic DTI abnormalities and AIS association | COMPLETE SOURCE-PAGE PASS | Observation rows M1B-O068–O069 |
 | M1B-T007 | M1A-P022 | M1A-P022-E002 | Human chronic resected scar marker profile | COMPLETE FIRST PASS | Observation row M1B-O070 |
 | M1B-T007 | M1A-P018, P020 | Deferred legacy human pathology papers | Structural mass and vascular pathology context | DEFERRED ACCESS GAP | Local files blocked by Cloudflare/403; no new observation rows |
+| M1B-T008 | M1A-P006 | M1A-P006-E001–E005 | Acute myeloid infiltration, chronic transcriptomics, behavior, lesion/brain pathology | COMPLETE FIRST PASS | Observation rows M1B-O071–O076 |
+| M1B-T008 | M1A-P030 | M1A-P030-E001–E002 | IAM transcriptomics, myeloid Plexin-B2 corralling and containment | COMPLETE SOURCE-PAGE PASS | Observation row M1B-O077 |
+| M1B-T008 | M1A-P031 | M1A-P031-E001–E002 | Single-cell scar ecology and cell-cell interactions | COMPLETE SOURCE-PAGE PASS | Observation row M1B-O078 |
+| M1B-T008 | M1A-P035 | M1A-P035-E001–E002 | CSF1R inhibition, tissue preservation, motor recovery | COMPLETE SOURCE-PAGE PASS | Observation row M1B-O079 |
 
 ---
 
@@ -158,6 +162,15 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | M1B-O068 | M1B-T007 | M1A-P028 | M1A-P028-E001 | Abstract / article metadata | Pediatric spinal cord DTI | Normal-appearing cord abnormality | In 19 children with chronic SCI and 36 typically developing controls, both SCIWOMR and MRI-positive groups showed abnormal FA and RD values in adjacent MRI-normal-appearing cephalad and caudal spinal cord segments. | pediatric chronic SCI has DTI abnormalities beyond conventional MRI lesion | FA / RD | YES | Abstract/source-page level; exact values not extracted | Abstract / source page | medium | Includes traumatic and nontraumatic chronic SCI, >=6 months post-injury. |
 | M1B-O069 | M1B-T007 | M1A-P028 | M1A-P028-E002 | Abstract / article metadata | Pediatric spinal cord DTI / clinical severity | AIS-linked perilesional abnormality | In the SCIWOMR subgroup, FA values showed perilesional abnormalities in middle and proximal cephalad and caudal cord segments when AIS A/B children were compared with AIS C/D children. | DTI perilesional abnormality relates to AIS severity | FA / AIS class | YES | Abstract/source-page level; exact values not extracted | Abstract / source page | medium | Useful translational imaging bridge, but full text needed for numeric DTI values. |
 | M1B-O070 | M1B-T007 | M1A-P022 | M1A-P022-E002 | Fig 3 | Human scar tissue immunohistochemistry | Chronic scar marker profile | Resected complete chronic SCI scar tissue was CSPG/vimentin-positive and NF/nestin/Tuj-1/S100-negative, providing human tissue evidence for a scar-rich, neural-marker-poor chronic lesion component. | human chronic scar component is inhibitory-matrix/stromal-marker rich | marker panel | YES | qualitative IHC | Results / Figure 3 | high | Duplicates tissue fact from T005 in a human-pathology context. |
+| M1B-O071 | M1B-T008 | M1A-P006 | M1A-P006-E001 | Fig 1 | Flow cytometry / ROS / qPCR | Acute intraspinal inflammation | PLX5622 pre-treatment reduced spinal microglia, infiltrating myeloid cells, monocytes, neutrophils, immune-cell ROS production, CD11b expression, and TNFalpha upregulation at 2 DPI after thoracic contusion. | CSF1R inhibition dampens acute lesion-site myeloid inflammation | cell counts / ROS / qPCR | YES | figure-level statistics reported; n values per group reported | Results / Figure 1 | high | Pre-injury depletion design is a boundary condition. |
+| M1B-O072 | M1B-T008 | M1A-P006 | M1A-P006-E002 | Fig 2 | Flow cytometry | Post-injury myeloid response | PLX5622 started after SCI and continued to 7 DPI significantly reduced microglia and infiltrating myeloid counts in the spinal impact site and reduced microglia/myeloid populations in the brain. | post-injury CSF1R inhibition reduces acute spinal and brain myeloid populations | cell counts | YES | n = 4-5 per group; p values reported in figure | Results / Figure 2 | high | Supports myeloid contribution to leukocyte infiltration after injury. |
+| M1B-O073 | M1B-T008 | M1A-P006 | M1A-P006-E003 | Fig 3-Fig 4 | Behavioral testing | Neurological recovery | Long-term post-injury PLX5622 did not significantly improve gross BMS locomotion, but improved CatWalk step-sequence regularity and stride length and improved cognitive/depressive-like behavior readouts at 5-6 WPI. | microglial depletion improves selected fine motor and brain-linked behavioral outcomes | behavioral scores | YES | regularity p = 0.0056; stride length p = 0.0162; NOR/Y-maze/TS/FS p values reported | Results / Figures 3-4 | high | Outcome benefit is not a simple gross locomotion/lesion-volume effect. |
+| M1B-O074 | M1B-T008 | M1A-P006 | M1A-P006-E005 | Fig 5 | Histology / stereology | Lesion and remote neurodegeneration | At 6 WPI after severe contusion, PLX5622 reduced CX3CR1-GFP-positive cells by more than 90% but did not significantly change GFAP-positive area, lesion volume, spared white matter, or BMS; it reduced neuronal loss in thalamus and dentate gyrus. | chronic microglial depletion changes remote neurodegeneration more than lesion volume | histology / stereology | YES | GFP reduction and neuronal-density statistics reported | Results / Figure 5 | high | Important boundary between lesion architecture preservation and remote brain pathology. |
+| M1B-O075 | M1B-T008 | M1A-P006 | M1A-P006-E004 | Fig 6-Fig 9 | NanoString / qPCR | Chronic spinal cord inflammation | At 6 WPI, spinal cord NanoString showed 384 injury genes; 218 were PLX-modified and nearly all were attenuated, with strongest effects in inflammatory signaling, innate immune response, microglia function, NF-kappaB, cytokine signaling, adaptive immunity, apoptosis, astrocyte function, growth-factor signaling, and matrix remodeling. | chronic lesion transcriptome has microglia-linked inflammatory/apoptotic/matrix components | differential expression | YES | adjusted p < 0.05; 218/384 injury genes PLX-modified | Results / Figures 6-9 | high | qPCR validated microglial receptors, apoptosis/autophagy markers, and reduced Gfap after PLX. |
+| M1B-O076 | M1B-T008 | M1A-P006 | M1A-P006-E004–E005 | Fig 10-Fig 12 | NanoString / qPCR / brain stereology | Remote brain inflammation | SCI altered cortical neuronal/synaptic, apoptosis, and microglia-function genes at 6 WPI; PLX reduced injury-induced Il1a and Lrrc25 and was associated with improved neuronal survival and neurobehavioral outcomes. | chronic SCI-linked brain inflammation is microglia-modifiable | differential expression / stereology | YES | cortex DE genes and qPCR statistics reported | Results / Figures 10-12 | high | Extends immune-glial lesion response to remote brain pathology. |
+| M1B-O077 | M1B-T008 | M1A-P030 | M1A-P030-E001–E002 | Fig 1-Fig 7 / source page | Myeloid transcriptomics / conditional deletion | Corralling and containment | Source-page extraction reports that injury-activated microglia/macrophages acquire temporal IAM signatures and that myeloid Plexin-B2 deletion disrupts wound corralling, matrix compaction, astrocytic border containment, inflammatory restriction, axon regeneration, and recovery. | myeloid cells can promote lesion containment and compaction | source-page qualitative | YES | Source-page level in Module 1A | Source page / Module 1A row | medium | Also supports T003 astrocytic border profile. |
+| M1B-O078 | M1B-T008 | M1A-P031 | M1A-P031-E001–E002 | Abstract/source page | scRNA-seq / interaction inference | Immune-glial scar ecology | Source-page extraction reports that single-cell RNA-seq resolved injured-spinal-cord scar-like cell heterogeneity and inferred cell-cell interactions shaping the wound-healing/scar environment. | lesion scar is multicellular immune-glial/stromal interaction ecosystem | source-page transcriptomic atlas | YES | Source-page level in Module 1A | Abstract / source page | medium | Shared with T001 but placed here for interaction ecology. |
+| M1B-O079 | M1B-T008 | M1A-P035 | M1A-P035-E001–E002 | Abstract/source page | CSF1R inhibition / recovery | Microglia/macrophage modulation | Source-page extraction reports that CSF1R inhibition after compression SCI reduced microglia/macrophage proliferation and inflammatory response, promoted tissue preservation, and improved motor recovery. | CSF1R-pathway modulation can preserve tissue and improve recovery | source-page qualitative | YES | Source-page level in Module 1A | Abstract / source page | medium | Directionally concordant with Li but needs full-text extraction for treatment window and lesion metrics. |
 
 ---
 
@@ -190,6 +203,10 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | M1B-T007 | M1A-P019 | conclusion; pathology | COMPLETE FIRST PASS |
 | M1B-T007 | M1A-P028 | conclusion; imaging | COMPLETE SOURCE-PAGE PASS |
 | M1B-T007 | M1A-P022 | conclusion; pathology | COMPLETE FIRST PASS |
+| M1B-T008 | M1A-P006 | conclusion; mechanism; boundary condition | COMPLETE FIRST PASS |
+| M1B-T008 | M1A-P030 | mechanism; boundary condition | COMPLETE SOURCE-PAGE PASS |
+| M1B-T008 | M1A-P031 | conclusion; mechanism | COMPLETE SOURCE-PAGE PASS |
+| M1B-T008 | M1A-P035 | conclusion; mechanism | COMPLETE SOURCE-PAGE PASS |
 
 ---
 
@@ -237,6 +254,12 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | M1B-C038 | M1B-T007 | M1A-P019 | Thin myelin on large ventral-root axons at or below the epicenter indicates incomplete remyelination as a chronic human SCI pathology feature. | conclusion | high | Results / Discussion | high | Directly supported by g-ratio analysis. |
 | M1B-C039 | M1B-T007 | M1A-P028 | Pediatric chronic SCI can show DTI abnormalities in adjacent MRI-normal-appearing cord, and FA abnormalities can relate to AIS severity even when conventional MRI is normal. | conclusion | medium | Abstract / source page | medium | Source-page/abstract-level until full text values are parsed. |
 | M1B-C040 | M1B-T007 | M1A-P022 | Human chronic complete SCI scar tissue can be CSPG/vimentin-positive and neural-marker-poor, providing tissue-level support for a persistent scar-rich component in chronic lesions. | conclusion | high | Results / Figure 3 | high | Same tissue observation also supports T005 scar-resection boundary. |
+| M1B-C041 | M1B-T008 | M1A-P006 | CSF1R inhibition with PLX5622 reduces acute spinal cord microglia/myeloid infiltration, ROS, and inflammatory cytokine expression after contusion SCI. | conclusion | high | Abstract / Results / Discussion | high | Supported by pre- and post-injury treatment experiments. |
+| M1B-C042 | M1B-T008 | M1A-P006 | Chronic microglia-linked neuroinflammation after SCI modifies spinal cord and brain transcriptomes, astrocyte/matrix/apoptosis programs, remote neuronal survival, and selected neurological behaviors. | conclusion | high | Results / Discussion / Conclusion | high | Captures spinal and remote brain components without claiming reduced lesion volume. |
+| M1B-C043 | M1B-T008 | M1A-P006 | Beneficial immune modulation is timing- and function-dependent because early microglia may support neuroprotection/repair, while sustained neurotoxic activation contributes to chronic pathology. | interpretation | medium | Discussion | high | Explicit author discussion; important boundary for T008 consensus. |
+| M1B-C044 | M1B-T008 | M1A-P030 | Injury-activated microglia/macrophages can be required for lesion corralling, wound compaction, astrocytic containment, inflammatory restriction, axon regeneration, and recovery through Plexin-B2. | mechanistic | medium | Abstract / source page | medium | Source-page level; full-text extraction needed before high-confidence materialization. |
+| M1B-C045 | M1B-T008 | M1A-P031 | The injured spinal cord scar environment is a multicellular interaction ecosystem whose immune, glial, and stromal cell states communicate during wound healing and scar formation. | conclusion | medium | Abstract / source page | medium | Shared conceptual bridge with T001. |
+| M1B-C046 | M1B-T008 | M1A-P035 | CSF1R-pathway inhibition can reduce microglia/macrophage proliferation and inflammation while promoting tissue preservation and motor recovery after SCI. | conclusion | medium | Abstract / source page | medium | Source-page level; treatment timing/details needed. |
 
 ---
 
@@ -329,6 +352,19 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | M1B-L083 | M1B-C039 | M1B-O069 | directly_supports | AIS A/B versus C/D comparison supports severity-related FA abnormality claim. |
 | M1B-L084 | M1B-C040 | M1B-O070 | directly_supports | Human scar marker profile supports persistent scar-rich component claim. |
 | M1B-L085 | M1B-C040 | M1B-O060 | concordant_boundary | Same specimen evidence also supports T005 scar-targeting interpretation. |
+| M1B-L086 | M1B-C041 | M1B-O071 | directly_supports | Pre-injury PLX flow cytometry/ROS/qPCR supports acute inflammation reduction. |
+| M1B-L087 | M1B-C041 | M1B-O072 | directly_supports | Post-injury PLX 7 DPI flow cytometry supports reduced spinal and brain myeloid populations. |
+| M1B-L088 | M1B-C042 | M1B-O073 | directly_supports | Fine motor, cognitive, and depressive-like behavior outcomes support functional component. |
+| M1B-L089 | M1B-C042 | M1B-O074 | directly_supports | Remote neuronal survival with unchanged lesion volume supports brain pathology component. |
+| M1B-L090 | M1B-C042 | M1B-O075 | directly_supports | Spinal NanoString/qPCR supports chronic inflammatory, apoptotic, astrocyte, and matrix program modification. |
+| M1B-L091 | M1B-C042 | M1B-O076 | directly_supports | Cortical transcriptome and qPCR support remote brain inflammatory component. |
+| M1B-L092 | M1B-C043 | M1B-O071 | partially_supports | Pre-injury depletion benefit in acute inflammation supports modulation but not the protective early-microglia side alone. |
+| M1B-L093 | M1B-C043 | M1B-O077 | concordant_boundary | Zhou source-page corralling evidence supports protective/containment functions for myeloid cells. |
+| M1B-L094 | M1B-C044 | M1B-O077 | directly_supports | Plexin-B2 source-page observation supports corralling and containment mechanism. |
+| M1B-L095 | M1B-C045 | M1B-O078 | directly_supports | Milich source-page single-cell interaction observation supports multicellular ecosystem claim. |
+| M1B-L096 | M1B-C045 | M1B-O046 | concordant_boundary | Same source-page evidence also supports T001 core lesion ecology. |
+| M1B-L097 | M1B-C046 | M1B-O079 | directly_supports | Gerber source-page CSF1R inhibition observation supports tissue-preservation and recovery claim. |
+| M1B-L098 | M1B-C046 | M1B-O074 | concordant_boundary | Li shows CSF1R inhibition effects without lesion-volume/spared-white-matter improvement, marking treatment/model boundary. |
 
 ---
 
@@ -431,6 +467,20 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | Current interpretation | Human lesion architecture should be modeled as a multi-scale phenotype: local lesion geometry and tissue bridges, local scar-marker composition, segmental motor-neuron/root pathology, remyelination status, perilesional DTI abnormalities, and remote motor-system degeneration. |
 | Next evidence needed | Retrieve clean full text for Tuszynski 1999 and Tator 1997; parse Faro full text for exact FA/RD values; connect human imaging fields to the white-matter and cavity/scaffold topic vocabularies. |
 
+### M1B-T008: Immune-Glial Containment And Chronic Inflammation
+
+**Status**: consensus-ready profile started; consensus statement not yet finalized.
+
+| Profile Element | Curated Summary |
+|---|---|
+| Evidence base | One full-text mechanistic/intervention study, M1A-P006, plus source-page support from M1A-P030, M1A-P031, and M1A-P035, with 9 extracted observations and 6 author claims. |
+| Agreement | Immune and glial lesion responses shape SCI architecture through multiple separable roles: acute myeloid infiltration, wound corralling/compaction, astrocytic containment, chronic neuroinflammatory transcriptional programs, matrix/astrocyte/apoptosis pathway modulation, and remote brain inflammation. |
+| Strong points | Li provides high-confidence evidence that CSF1R inhibition reduces acute myeloid inflammation and chronic neuroinflammatory transcriptional programs, with selected behavioral and remote neuronal survival benefits but not gross BMS, lesion-volume, or spared-white-matter improvement. Zhou provides the complementary source-page boundary that myeloid cells can be required for corralling and containment. |
+| Main uncertainty | Zhou, Milich, and Gerber remain source-page level in this tracker, so their mechanistic details should be upgraded before database materialization. Li uses male mice and systemic CSF1R inhibition, so microglia-specific conclusions require caution because peripheral myeloid cells may also be affected. |
+| Likely boundary conditions | Acute versus chronic phase, resident microglia versus infiltrating monocytes/neutrophils/macrophages, protective corralling/debris functions versus neurotoxic chronic activation, systemic CSF1R inhibition versus cell-specific perturbation, injury model, sex, and endpoint class. |
+| Current interpretation | The database should represent immune-glial lesion biology with phase, cell population, function, and endpoint fields. A single "microglia beneficial/harmful" field would lose the main lesson: containment and repair functions can coexist with chronic neuroinflammatory pathology. |
+| Next evidence needed | Pull full texts for Zhou 2020, Milich 2021, and Gerber 2018; add controlled vocabulary for immune function labels such as corralling, infiltration, ROS, chemokine signaling, debris handling, matrix remodeling, and remote neuroinflammation. |
+
 ---
 
 ## Contradiction Map
@@ -442,6 +492,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | M1B-X003 | M1B-T003 | M1B-C014: established scar-forming astrocytes resist direct in vitro reversion | M1B-C015/M1B-C016/M1B-C017: astrocytic border recruitment, corralling, and morphology remain intervention-sensitive in vivo | Process-boundary distinction | Established astrocyte state maintenance versus recruitment of neighboring astrocytes; in vitro Col-I-SA assays versus in vivo chronic contusion/transplantation and source-page wound-healing perturbations | RESOLVED AS PROCESS-SPECIFIC; distinguish astrocyte-state reversal from border recruitment/organization |
 | M1B-X004 | M1B-T005 | M1B-C030: scar resection alone is neutral or harmful and does not restore axon crossing | M1B-C031/M1B-C032/M1B-C034: resection plus scaffold/cell filling is used as a repair strategy | Process-boundary distinction | Resection alone versus resection followed by gap/cavity reconstruction; contusion/hemisection animal models versus complete chronic human SCI; locomotor/axon tracing versus feasibility/safety/histology endpoints | RESOLVED AS INTERVENTION-SPECIFIC; store resection-only and reconstruction-after-resection separately |
 | M1B-X005 | M1B-T007 | M1B-C035: local lesion geometry stabilizes after the first month | M1B-C035/M1B-C036: remote motor-system degeneration continues for years and relates to recovery | Spatial-scale boundary | Midsagittal local lesion metrics and tissue bridges versus supralesional C1-C3, intracranial CST, and M1/S1 volume/MTsat/R2* metrics; early lesion demarcation versus chronic remote degeneration | RESOLVED AS COMPARTMENT-SPECIFIC; store local lesion geometry separately from remote degeneration fields |
+| M1B-X006 | M1B-T008 | M1B-C041/M1B-C042/M1B-C046: CSF1R inhibition reduces inflammation and can improve selected outcomes | M1B-C043/M1B-C044: microglia/macrophages can be protective for early repair, corralling, and containment | Timing/function boundary | Acute protective debris/corralling/containment functions versus chronic neurotoxic inflammation; resident microglia versus infiltrating myeloid cells; systemic CSF1R inhibition versus myeloid-specific Plexin-B2 perturbation; behavior/lesion volume/remote brain endpoints | PARTIALLY RESOLVED AS PHASE-AND-FUNCTION-SPECIFIC; store immune roles with timing and endpoint labels |
 
 ---
 
@@ -449,11 +500,11 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 | Gate | Requirement | Status |
 |---|---|---|
-| GATE-1 | At least 3 independent papers with linked observations for a topic | MET FOR T001, T002, T003, T005, T006, AND T007; NOT MET FOR T004; 2 linked papers |
-| GATE-2 | At least 1 contradicting or boundary-condition check for each major consensus topic | MET FOR T002, T003, T004, T005, AND T007 |
+| GATE-1 | At least 3 independent papers with linked observations for a topic | MET FOR T001, T002, T003, T005, T006, T007, AND T008; NOT MET FOR T004; 2 linked papers |
+| GATE-2 | At least 1 contradicting or boundary-condition check for each major consensus topic | MET FOR T002, T003, T004, T005, T007, AND T008 |
 | GATE-3 | Source strength recorded: full-text/source-page/abstract-level | MET FOR PAPER LEVEL |
-| GATE-4 | Claims linked to observations through EvidenceLink | STARTED; MET FOR T001, T002, T003, T004, T005, T006, AND T007 FIRST PASS |
-| GATE-5 | No consensus statement depends on a single paper | MET FOR T001, T002, T003, T004, T005, T006, AND T007 PROFILES; NOT MET GLOBALLY |
+| GATE-4 | Claims linked to observations through EvidenceLink | STARTED; MET FOR T001, T002, T003, T004, T005, T006, T007, AND T008 FIRST PASS |
+| GATE-5 | No consensus statement depends on a single paper | MET FOR T001, T002, T003, T004, T005, T006, T007, AND T008 PROFILES; NOT MET GLOBALLY |
 
 ---
 
@@ -468,3 +519,4 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 - 2026-07-16: Completed first-pass Observation, AuthorClaim, EvidenceLink, and consensus-ready profile rows for M1B-T006 using McCallum 2026 full text plus imaging/abstract support from Scholtes 2011, Song 2018, and Rosenberg 2005.
 - 2026-07-16: Completed first-pass Observation, AuthorClaim, EvidenceLink, contradiction-map, and consensus-ready profile rows for M1B-T005 using Rasouli 2009 and Xiao 2016 full text plus abstract/source-page support from Wang 2018 and Ito 2024.
 - 2026-07-16: Completed first-pass Observation, AuthorClaim, EvidenceLink, contradiction-map, and consensus-ready profile rows for M1B-T007 using Emmenegger 2024, Grumbles 2017, and Xiao 2016 full text plus source-page support from Faro 2022; Tuszynski 1999 and Tator 1997 remain access gaps.
+- 2026-07-16: Completed first-pass Observation, AuthorClaim, EvidenceLink, contradiction-map, and consensus-ready profile rows for M1B-T008 using Li 2020 full text plus source-page support from Zhou 2020, Milich 2021, and Gerber 2018.
