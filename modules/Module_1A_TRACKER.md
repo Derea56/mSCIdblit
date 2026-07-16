@@ -75,6 +75,8 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 | M1A-P008 | Soderblom C | 2013 | Perivascular fibroblasts form the fibrotic scar after contusive spinal cord injury | Mouse | Contusion | PASS 3 COMPLETE | Anchor for perivascular fibroblast source/cell identity |
 | M1A-P009 | Dias DO | 2018 | Reducing pericyte-derived scarring promotes recovery after spinal cord injury | Mouse | Dorsal hemisection / dorsal funiculus incision | PASS 3 COMPLETE | Anchor for type A pericyte-derived scar modulation |
 | M1A-P010 | Yokota K | 2017 | Periostin promotes scar formation through the interaction between pericytes and infiltrating monocytes/macrophages after spinal cord injury | Mouse | SCI | QUEUED PASS -1 | Candidate for pericyte/macrophage scar mechanism |
+| M1A-P026 | Baumann HJ | 2020 | Softening of the chronic hemi-section spinal cord injury scar parallels dysregulation of cellular and extracellular matrix content | Rat | Lateral hemisection | PASS 3 COMPLETE | Chronic scar mechanics, cavitation, CNS cell loss, and ECM/GAG dysregulation |
+| M1A-P027 | Cooper JG | 2020 | Spinal cord injury results in chronic mechanical stiffening | Mouse | Contusion | PASS 3 COMPLETE | Chronic scar stiffness and fibrotic-scar modulation by IMP |
 
 ### 5. Cystic Cavitation
 
@@ -108,7 +110,7 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 | Paper ID | First Author | Year | Title | Tissue Source | Status | Notes |
 |----------|--------------|------|-------|---|--------|-------|
 | M1A-P018 | Tuszynski MH | 1999 | Human spinal cord retains substantial structural mass in chronic stages after injury | Human spinal cord | QUEUED PASS -1 | Anchor for human chronic structural preservation |
-| M1A-P019 | Grumbles RM | 2017 | Motoneuron death after human spinal cord injury | Human spinal cord | QUEUED PASS -1 | Candidate for human gray matter/motoneuron pathology |
+| M1A-P019 | Grumbles RM | 2017 | Motoneuron death after human spinal cord injury | Human spinal cord | PASS 3 COMPLETE | Human ventral-root evidence for motoneuron death and remyelination pathology |
 | M1A-P020 | Tator CH | 1997 | Vascular mechanisms in the pathophysiology of human spinal cord injury | Human spinal cord | QUEUED PASS -1 | Candidate for vascular pathology context |
 
 ### 10. Species Differences
@@ -122,14 +124,14 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 | Paper ID | First Author | Year | Title | Species | Intervention | Status | Notes |
 |----------|--------------|------|-------|---------|---|--------|-------|
 | M1A-P005 | Rasouli A | 2009 | Resection of glial scar following spinal cord injury | Rat | Scar resection | PASS 3 COMPLETE | Resection anatomy anchor |
-| M1A-P022 | Xiao Z | 2016 | One-year clinical study of NeuroRegen scaffold implantation following scar resection in complete chronic spinal cord injury patients | Human | Scar resection + scaffold | QUEUED PASS -1 | Candidate for human chronic scar resection |
+| M1A-P022 | Xiao Z | 2016 | One-year clinical study of NeuroRegen scaffold implantation following scar resection in complete chronic spinal cord injury patients | Human | Scar resection + scaffold | PASS 3 COMPLETE | Human electrophysiology-guided scar resection and NeuroRegen scaffold implantation |
 | M1A-P023 | Estrada V | 2014 | Long-lasting significant functional improvement in chronic severe spinal cord injury following scar resection and polyethylene glycol implantation | Human | Scar resection + PEG | QUEUED PASS -1 | Candidate for surgical anatomy |
 
 ### 12. Three-Dimensional Lesion Organization
 
 | Paper ID | First Author | Year | Title | Species | Imaging/Reconstruction Method | Status | Notes |
 |----------|--------------|------|-------|---------|---|--------|-------|
-| M1A-P024 | Scholtes F | 2011 | Post-mortem assessment of rat spinal cord injury and white matter sparing using inversion recovery-supported proton density magnetic resonance imaging | Rat | MRI plus post-mortem tissue | QUEUED PASS -1 | Candidate for 3D/imaging-to-histology linkage |
+| M1A-P024 | Scholtes F | 2011 | Post-mortem assessment of rat spinal cord injury and white matter sparing using inversion recovery-supported proton density magnetic resonance imaging | Rat | MRI plus post-mortem tissue | PASS 3 COMPLETE | Chronic post-mortem MRI-to-histology white matter sparing linkage |
 | M1A-P025 | Zhao C | 2018 | Diffusion tensor imaging of spinal cord parenchyma lesion in rat with chronic spinal cord injury | Rat | DTI | QUEUED PASS -1 | Candidate for chronic parenchymal lesion geometry |
 
 ---
@@ -184,7 +186,12 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 | M1A-P008 | Perivascular Fibroblasts Form the Fibrotic Scar after Contusive Spinal Cord Injury | Cynthia Soderblom; Xueting Luo; Ezra Blumenthal; Eric Bray; Kirill Lyapichev; Jose Ramos; Vidhya Krishnan; Catherine Lai-Hsu; Kevin K Park; Pantelis Tsoulfas; Jae K Lee | 2013 | The Journal of Neuroscience | 33 | 34 | 13882-13887 | 10.1523/JNEUROSCI.2524-13.2013 | 23966707 | https://pmc.ncbi.nlm.nih.gov/articles/PMC3755723/ | YES |
 | M1A-P009 | Reducing Pericyte-Derived Scarring Promotes Recovery after Spinal Cord Injury | David Oliveira Dias; Hoseok Kim; Daniel Holl; Beata Werne Solnestam; Joakim Lundeberg; Marie Carlen; Christian Goritz; Jonas Frisen | 2018 | Cell | 173 | 1 | 153-165.e22 | 10.1016/j.cell.2018.02.004 | 29502968 | https://pmc.ncbi.nlm.nih.gov/articles/PMC5871719/ | YES |
 | M1A-P014 | Lesion-remote astrocytes govern microglia-mediated white matter repair | Sarah McCallum; Keshav B Suresh; Timothy S Islam; Manish K Tripathi; Ann W Saustad; Oksana Shelest; Aditya Patil; David Lee; Brandon Kwon; Katherine Leitholf; Inga Yenokian; Sophia E Shaka; Connor H Beveridge; Palak Manchandra; Caitlin E Randolph; Gordon P Meares; Ranjan Dutta; Jasmine Plummer; Vinicius F Calsavara; Riki Kawaguchi; Simon R V Knott; Gaurav Chopra; Joshua E Burda | 2026 | Nature | 649 | 8098 | 959-970 | 10.1038/s41586-025-09887-y | 41407858 | https://pmc.ncbi.nlm.nih.gov/articles/PMC12823418/ | YES |
+| M1A-P019 | Motoneuron Death after Human Spinal Cord Injury | Robert M Grumbles; Christine K Thomas | 2017 | Journal of Neurotrauma | 34 | 3 | 581-590 | 10.1089/neu.2015.4374 | 27349409 | https://pmc.ncbi.nlm.nih.gov/articles/PMC5286554/ | YES |
 | M1A-P021 | Heterogeneous fibroblasts contribute to fibrotic scar formation after spinal cord injury in mice and monkeys | Xiaoyu Xue; Xianming Wu; Yongheng Fan; Shuyu Han; Haipeng Zhang; Yuting Sun; Yanyun Yin; Man Yin; Bing Chen; Zheng Sun; Shuaijing Zhao; Qi Zhang; Weiyuan Liu; Jiaojiao Zhang; Jiayin Li; Ya Shi; Zhifeng Xiao; Jianwu Dai; Yannan Zhao | 2024 | Nature Communications | 15 | 1 | 6321 | 10.1038/s41467-024-50564-x | 39060269 | https://pmc.ncbi.nlm.nih.gov/articles/PMC11282111/ | YES |
+| M1A-P022 | One-year clinical study of NeuroRegen scaffold implantation following scar resection in complete chronic spinal cord injury patients | Zhifeng Xiao; Fengwu Tang; Jiaguang Tang; Huilin Yang; Yannan Zhao; Bing Chen; Sufang Han; Nuo Wang; Xing Li; Shixiang Cheng; Guang Han; Changyu Zhao; Xiaoxiong Yang; Yumei Chen; Qin Shi; Shuxun Hou; Sai Zhang; Jianwu Dai | 2016 | Science China Life Sciences | 59 | 7 | 647-655 | 10.1007/s11427-016-5080-z | 27333785 | https://link.springer.com/article/10.1007/s11427-016-5080-z | YES |
+| M1A-P024 | Post-mortem assessment of rat spinal cord injury and white matter sparing using inversion recovery-supported proton density magnetic resonance imaging | F Scholtes; E Theunissen; R Phan-Ba; P Adriaensens; G Brook; R Franzen; J Gelan; J Schoenen; D Martin | 2011 | Spinal Cord | 49 | 3 | 345-351 | 10.1038/sc.2010.129 | 20877332 | https://www.nature.com/articles/sc2010129 | YES |
+| M1A-P026 | Softening of the chronic hemi-section spinal cord injury scar parallels dysregulation of cellular and extracellular matrix content | Hannah J Baumann; Gautam Mahajan; Trevor R Ham; Patricia Betonio; Chandrasekhar R Kothapalli; Leah P Shriver; Nicholas D Leipzig | 2020 | Journal of the Mechanical Behavior of Biomedical Materials | 110 | — | 103953 | 10.1016/j.jmbbm.2020.103953 | 32957245 | https://pmc.ncbi.nlm.nih.gov/articles/PMC7509206/ | YES |
+| M1A-P027 | Spinal Cord Injury Results in Chronic Mechanical Stiffening | John G Cooper; Delphine Sicard; Sripadh Sharma; Stephanie Van Gulden; Tammy L McGuire; Miguel Pareja Cajiao; Daniel J Tschumperlin; John A Kessler | 2020 | Journal of Neurotrauma | 37 | 14 | 1568-1581 | 10.1089/neu.2019.6540 | 31516087 | https://pmc.ncbi.nlm.nih.gov/articles/PMC6978780/ | YES |
 
 ---
 
@@ -199,7 +206,12 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 | M1A-P008 | M1A-P008-RQ001 | Do Col1alpha1-expressing perivascular fibroblasts enter and form the fibrotic scar after contusive SCI with intact dura, and are they distinct from NG2-positive pericytes? | exploratory | Col1alpha1-GFP; perivascular fibroblast; fibrotic scar; contusion SCI; NG2 lineage tracing; PDGFR-beta | YES |
 | M1A-P009 | M1A-P009-RQ001 | Does attenuating type A pericyte-derived fibrotic scarring reduce ECM deposition and permit axonal regeneration, circuit integration, and functional recovery after mouse SCI? | positive | type A pericyte; Glast-Rasless; fibrotic scar; dorsal hemisection; CST; 5-HT; optogenetics | YES |
 | M1A-P014 | M1A-P014-RQ001 | Do lesion-remote astrocyte reactivity states, particularly CCN1-expressing white matter astrocytes, govern microglial debris clearance and white matter repair after SCI? | positive | lesion-remote astrocyte; CCN1; microglia; white matter degeneration; debris clearance; lipid metabolism | YES |
+| M1A-P019 | M1A-P019-RQ001 | Does traumatic human SCI cause motoneuron death and ventral-root myelinated axon loss at and near the lesion epicenter? | positive | human autopsy; ventral root; motoneuron death; myelinated axon; remyelination; lesion epicenter | YES |
 | M1A-P021 | M1A-P021-RQ001 | What fibroblast lineages and functional subtypes form fibrotic scars after SCI in mice and rhesus macaques, and how do penetrating and non-penetrating injuries differ? | exploratory | fibrotic scar heterogeneity; meningeal fibroblast; perivascular fibroblast; transection; crush; monkey | YES |
+| M1A-P022 | M1A-P022-RQ001 | Is electrophysiology-guided scar resection followed by NeuroRegen scaffold plus autologous BMMC implantation feasible and safe in complete chronic human SCI? | positive | human chronic SCI; scar resection; NeuroRegen scaffold; BMMC; SSEP; MEP; ASIA | YES |
+| M1A-P024 | M1A-P024-RQ001 | Can post-mortem inversion-recovery-supported proton density MRI depict spared white matter and lesion severity in chronic rat compressive SCI in agreement with histology and locomotor recovery? | positive | post-mortem MRI; inversion recovery; proton density; white matter sparing; BBB score; histology | YES |
+| M1A-P026 | M1A-P026-RQ001 | Does the chronic rat hemisection scar show reduced Young's modulus together with altered tissue architecture, CNS cell content, and ECM/GAG composition? | positive | chronic scar softening; AFM; hemisection; cavities; vimentin; GAG; hyaluronic acid | YES |
+| M1A-P027 | M1A-P027-RQ001 | Does chronic mouse contusion SCI stiffen lesion tissue, and can reducing fibrotic scarring with immune-modifying nanoparticles rescue that stiffening and glial fiber alignment? | positive | chronic mechanical stiffening; AFM; fibrotic scar; IMP; astrocyte mechanosensitivity; GFAP alignment | YES |
 
 ---
 
@@ -229,11 +241,21 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 | M1A-P014 | M1A-P014-P003 | Astrocyte Ccn1 deletion after SCI | Test whether astrocyte-derived CCN1 controls microglial debris handling and recovery. | Aldh1l1-CreERT2;Ccn1-loxP mice with tamoxifen clearance; T12 iSCI; FluoroMyelin/SMI32/IBA1 3D reconstructions, debris clearance assays, and neurological recovery assays through chronic time points. | YES |
 | M1A-P014 | M1A-P014-P004 | CCN1 microglial lipid metabolism mechanism | Test whether CCN1 directly reprograms microglial lipid metabolism. | Primary microglia treated with recombinant CCN1 versus vehicle; RNA-seq, cholesterol efflux, lipid droplet and lipid metabolism readouts. | YES |
 | M1A-P014 | M1A-P014-P005 | Myelin-damage induction of Ccn1-positive astrocytes | Determine whether myelin damage is sufficient to induce Ccn1-positive astrocytes and whether this state appears in demyelinating disorders. | Intraspinal CFSE-myelin or lysolecithin injections, saporin models, EAE, and human/mouse disorder tissue comparisons. | YES |
+| M1A-P019 | M1A-P019-P001 | Human ventral-root motoneuron loss pathology | Estimate motoneuron death after traumatic human SCI by quantifying large-diameter myelinated axons in ventral roots relative to lesion epicenter. | Human SCI tissue-bank spinal cords and uninjured controls; ventral roots fixed in formalin/osmium, epoxy embedded, toluidine blue stained, sampled by microscopy, and compared by root level relative to lesion epicenter. | YES |
+| M1A-P019 | M1A-P019-P002 | Ventral-root remyelination assessment | Determine whether large-diameter ventral-root axons at or below the lesion show abnormally thin myelin. | Myelinated axon and fiber diameters measured from selected ventral roots; g-ratio analysis compared above-lesion and epicenter roots. | YES |
 | M1A-P021 | M1A-P021-P001 | PDGFRbeta-lineage scar recruitment after transection versus crush SCI | Compare recruitment of PDGFRbeta-positive cells into fibrotic scars after penetrating and non-penetrating SCI. | PDGFRbeta-CreER::R26-TdT mice; T10 complete transection or forceps crush; immunostaining for PDGFRbeta/TdT/CD31/GFAP and time points including 5 DPI, 14 DPI, and 1 MPI. | YES |
 | M1A-P021 | M1A-P021-P002 | Mouse fibroblast/pericyte scRNA-seq and lineage tracing | Distinguish fibroblasts, dividing fibroblasts, pericytes/vSMCs, and myofibroblasts after SCI. | PDGFRbeta-CreER::R26-TdT sorted cells from 4 mm lesion-centered tissue at 0, 5, and 14 DPI; 10x scRNA-seq plus Myh11-, NG2-, Col1a2-, and Crabp2-CreER lineage tracing. | YES |
 | M1A-P021 | M1A-P021-P003 | CE-F versus LA-F spatial organization in mouse scars | Map meningeal Crabp2/Emb fibroblasts and perivascular/pial Lama1/Lama2 fibroblasts in fibrotic scar subregions. | Immunostaining and lineage tracing after T10 transection and crush SCI; quantification of Emb/Lama1 and Crabp2/Lama2 spatial compartments at 14 DPI. | YES |
 | M1A-P021 | M1A-P021-P004 | Rhesus macaque fibrotic scar comparison | Test whether monkey SCI shows fibroblast subtypes and spatial organization similar to mouse scars. | Female rhesus macaques underwent T9 complete transection; lesion core and edge samples at 0, 7, 14, 30 DPI, and 6 MPI were analyzed by scRNA-seq/snRNA-seq and immunostaining. | YES |
 | M1A-P021 | M1A-P021-P005 | Fibroblast subtype function assays | Compare CE-F and LA-F functions in lipid metabolism and angiogenesis. | Mouse/monkey scRNA-seq pathway analyses, Bodipy lipid droplet staining, in vitro myelin uptake, RT-qPCR, endothelial tube formation co-culture, and ligand-receptor interaction analysis. | YES |
+| M1A-P022 | M1A-P022-P001 | Human scar resection and NeuroRegen scaffold implantation | Assess feasibility and safety of electrophysiology-guided scar resection followed by NeuroRegen scaffold plus autologous BMMC implantation. | Five complete chronic traumatic SCI patients; MRI localization, intraoperative SSEP/MEP scar-boundary mapping, scar excision, BMMC-loaded NeuroRegen scaffold implantation, and 12-month follow-up. | YES |
+| M1A-P022 | M1A-P022-P002 | Resected human scar tissue characterization | Confirm that excised tissue represented scar rather than preserved neural tissue. | Resected scar samples were formalin-fixed and immunostained for CSPGs, vimentin, NF, nestin, Tuj-1, and S100. | YES |
+| M1A-P024 | M1A-P024-P001 | Post-mortem IR-supported PD MRI of chronic rat SCI | Test whether high-resolution post-mortem MRI can depict chronic lesion severity and spared white matter after compressive SCI. | Five excised rat spines at 2 months after compressive SCI; 9.4 T MRI using inversion recovery-supported proton density imaging; lesion volume, cord atrophy, and preserved white matter assessed. | YES |
+| M1A-P024 | M1A-P024-P002 | MRI-histology-functional linkage | Validate MRI white matter sparing against histology and locomotor recovery. | Weekly BBB locomotor scoring before harvest; post-mortem MRI findings compared with histological confirmation of spared and injured white matter. | YES |
+| M1A-P026 | M1A-P026-P001 | Chronic hemisection scar mechanics and composition | Measure Young's modulus of chronic rat hemisection scar and correlate stiffness with scar morphometry, CNS cell markers, and ECM/GAG composition. | Female Fisher 344 rats received T10 right lateral hemisection with 2 mm cord removal; tissue collected at 15-18 WPI; AFM, histology, IHC, DNA, sGAG/CSPG, and HA assays. | YES |
+| M1A-P027 | M1A-P027-P001 | Chronic contusion scar mechanical stiffening | Quantify stiffness of uninjured and chronically contused mouse spinal cord lesion core/rim regions. | Female C57BL/6 mice received severe T11 100 kdyn Infinite Horizons contusion or sham; 12 WPI transverse sections were analyzed by AFM microindentation and stiffness mapping. | YES |
+| M1A-P027 | M1A-P027-P002 | Astrocyte response to physiologic substrate stiffness | Test whether mouse and human astrocytes respond to stiffness values approximating uninjured versus scarred spinal cord. | Primary mouse astrocytes and hESC-derived human astrocytes cultured on 200 Pa and 2000 Pa substrates; morphology, actin, beta1-integrin/ILK, and GFAP readouts. | YES |
+| M1A-P027 | M1A-P027-P003 | IMP modulation of fibrotic stiffness and glial alignment | Test whether reducing fibrotic scarring with IMP lowers chronic lesion stiffness and changes GFAP-positive glial fiber alignment. | PLG immune-modifying nanoparticles or saline were injected at 2, 24, and 48 h after SCI; 12 WPI tissue assessed by fibronectin/GFAP IHC, AFM, stiffness maps, and CurveAlign. | YES |
 
 ---
 
@@ -272,11 +294,27 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 | M1A-P014 | M1A-P014-E003 | Fig 3; Extended Data Fig 7 | Mus musculus | Aldh1l1-CreERT2; Ccn1-loxP | Male and female | Incomplete SCI | Microknife unilateral hemisection | Unilateral T12 incomplete hemisection | T12 | 7, 28, 90 DPI | Wildtype or Ccn1-intact injured mice | Astrocyte-specific Ccn1 deletion | FluoroMyelin, SMI32, and IBA1 3D reconstructions quantified microglial internalized myelin/axon debris, debris clearance, and recovery after astrocyte Ccn1 loss. | YES |
 | M1A-P014 | M1A-P014-E004 | Fig 4; Extended Data Fig 8 | Mus musculus | Primary microglia culture | UNKNOWN | In vitro microglia culture | N/A | N/A | N/A | acute culture exposure | Vehicle/BSA-treated microglia | Recombinant CCN1 treatment | Primary microglia RNA-seq, cholesterol efflux, lipid droplet, and lipid metabolism assays tested direct CCN1 effects on microglial lipid handling. | YES |
 | M1A-P014 | M1A-P014-E005 | Fig 5; Extended Data Fig 9 | Mus musculus; Homo sapiens tissue comparison | C57BL/6 and disease-model mice; human disorder tissue | Male and female / human sex variable | Myelin injection / lysolecithin / saporin / EAE / human demyelinating pathology | Intraspinal microinjection or disease model | CFSE-myelin, lysolecithin, saporin, or EAE | T12 lateral white matter for injections | 3 days post-myelin; 3, 10, 25 days post-lysolecithin; additional model-specific time points | PBS vehicle or non-demyelinating controls | Myelin damage and demyelinating disease contexts | Myelin debris injection and demyelinating disorder comparisons tested whether Ccn1-positive astrocytes are induced by local myelin damage and conserved across disease contexts. | YES |
+| M1A-P019 | M1A-P019-E001 | Table 1; Fig 1-Fig 3 | Homo sapiens | Human autopsy tissue | Male and female | Traumatic SCI | Human injury, device N/A | Contusion or laceration; lesion level C7, C8, T4, L1, or T9 in SCI cases | Cervical, thoracic, lumbar | >=6 months post-injury for included SCI cases | Uninjured human spinal cords / ventral roots remote from lesion | Post-mortem tissue-bank pathology | Human ventral roots and cord sections were classified by lesion level and injury type; solochrome cyanine/Sevier-Munger cord pathology and toluidine blue ventral-root histology established tissue context and sampling. | YES |
+| M1A-P019 | M1A-P019-E002 | Fig 4 | Homo sapiens | Human autopsy tissue | Male and female | Traumatic SCI | Human injury, device N/A | Contusion or laceration | Cervical, thoracic, lumbar | >=6 months post-injury | Uninjured segment-matched ventral roots | Motoneuron death estimation from ventral-root axons | Large-diameter myelinated axons (>=7 um) were sampled and counted in ventral roots above, at, and below the lesion epicenter to estimate motoneuron loss relative to uninjured controls. | YES |
+| M1A-P019 | M1A-P019-E003 | Fig 5 | Homo sapiens | Human autopsy tissue | Male and female | Traumatic SCI | Human injury, device N/A | Contusion or laceration | Cervical, thoracic, lumbar | chronic SCI tissue-bank cases | Above-lesion ventral roots | Ventral-root myelin thickness analysis | Axon and fiber diameters were measured in selected ventral roots; g-ratio analysis tested for unusually thin myelin in large-diameter axons at or below the lesion epicenter. | YES |
 | M1A-P021 | M1A-P021-E001 | Fig 1A-I | Mus musculus | PDGFRbeta-CreER::R26-TdT | Male and female | Transection or crush SCI | Microsurgical scissors or forceps | T10 complete transection or 5 s bilateral forceps crush with intact dura | T10 | 0, 5, 14 DPI; 1 MPI | Uninjured spinal cord / 0 DPI | Injury model comparison | PDGFRbeta-lineage tracing and immunostaining compared recruitment of PDGFRbeta-positive cells to lesion cores after penetrating transection versus non-penetrating crush SCI. | YES |
 | M1A-P021 | M1A-P021-E002 | Fig 2-Fig 3 | Mus musculus | PDGFRbeta-, Myh11-, NG2-, Col1a2-CreER::R26-TdT | Male and female | Transection SCI with lineage comparisons | Microsurgical scissors | T10 complete transection | T10 | 0, 5, 14 DPI | Pericyte/vSMC lineages and uninjured tissue | Fibroblast lineage/scRNA-seq mapping | FACS-enriched TdT-positive lesion cells were profiled by 10x scRNA-seq and lineage tracing to distinguish fibroblasts, dividing fibroblasts, pericytes/vSMCs, and ECM-producing myofibroblasts. | YES |
 | M1A-P021 | M1A-P021-E003 | Fig 4A-E | Mus musculus | PDGFRbeta-CreER; Col1a2-CreER; Crabp2-CreER reporters | Male and female | Transection or crush SCI | Microsurgical scissors or forceps | T10 complete transection or 5 s crush | T10 | 14 DPI | Uninjured fibroblast spatial markers | CE-F versus LA-F scar spatial mapping | Emb/Crabp2 and Lama1/Lama2 immunostaining and lineage tracing mapped meningeal CE-F cells in central scar regions and LA-F cells in peripheral/perivascular scar regions. | YES |
 | M1A-P021 | M1A-P021-E004 | Fig 6A-H | Macaca mulatta | Rhesus macaque | Female | Complete transection SCI | Surgical resection/transection | T9 laminectomy with 8 mm spinal cord tissue removed | T9 | 0, 7, 14, 30 DPI; 6 MPI | Uninjured monkey spinal cord / lesion edge versus core | Cross-species scar fibroblast profiling | Monkey lesion core/edge tissue was analyzed by scRNA-seq/snRNA-seq and immunostaining to compare CE-F and LA-F-like fibroblast organization with mouse scars. | YES |
 | M1A-P021 | M1A-P021-E005 | Fig 7-Fig 8 | Mus musculus; Macaca mulatta | Mouse fibroblast subtypes and rhesus macaque tissue | Mixed / female monkey | SCI-derived fibroblast analysis plus in vitro assays | N/A for in vitro components | N/A for in vitro components | N/A for in vitro components | SCI time points plus culture assays | CE-F subtype / endothelial cells alone | LA-F lipid transport and angiogenesis function assays | Bodipy lipid droplet staining, myelin uptake, RT-qPCR, GO analysis, endothelial co-culture tube formation, and ligand-receptor analysis compared LA-F and CE-F functional programs. | YES |
+| M1A-P022 | M1A-P022-E001 | Fig 1-Fig 2; Table 1-Table 2 | Homo sapiens | Human clinical cohort | UNKNOWN | Complete chronic traumatic SCI with scar resection | Microsurgical scar resection under SSEP/MEP monitoring | Complete ASIA A chronic cervical or thoracic SCI; scar length 0.5-4.5 cm resected | Cervical or thoracic | Chronic SCI, exact duration per patient | Preoperative neurological status | Scar resection + NeuroRegen scaffold + autologous BMMC implantation | Five complete chronic SCI patients underwent MRI localization, intraoperative electrophysiology-guided scar boundary mapping, scar resection, and implantation of BMMC-loaded NeuroRegen scaffold into the spinal cord gap. | YES |
+| M1A-P022 | M1A-P022-E002 | Fig 3 | Homo sapiens | Resected human scar tissue | UNKNOWN | Complete chronic traumatic SCI | Surgical resection specimen | Scar tissue removed during chronic SCI operation | Cervical or thoracic | Chronic SCI | Neural marker staining panel | Scar tissue immunophenotyping | Resected tissue was immunostained for NF, nestin, Tuj-1, S100, CSPGs, and vimentin to verify a scar-rich, neural-marker-poor surgical specimen. | YES |
+| M1A-P022 | M1A-P022-E003 | Table 3-Table 4 | Homo sapiens | Human clinical cohort | UNKNOWN | Complete chronic traumatic SCI with scaffold implantation | Microsurgical scar resection under SSEP/MEP monitoring | Complete ASIA A chronic cervical or thoracic SCI | Cervical or thoracic | 1, 3, 6, 12 months after surgery | Preoperative baseline | Safety and electrophysiology follow-up | ASIA grade, sensory/motor levels, adverse events, autonomic function, and SSEP were followed for at least 12 months after scar resection and scaffold implantation. | YES |
+| M1A-P024 | M1A-P024-E001 | Abstract methods/results; figures on Nature page | Rattus norvegicus | Rat strain UNKNOWN | UNKNOWN | Compressive SCI | Compression device UNKNOWN | Traumatic compressive SCI | Spinal level UNKNOWN | 2 months post-injury | Preserved and injured regions within excised spinal cord | Post-mortem 9.4 T MRI | Five excised rat spines were imaged post-mortem using high-resolution proton density MRI with inversion recovery to depict lesion volume, cord atrophy, and spared white matter. | YES |
+| M1A-P024 | M1A-P024-E002 | Abstract methods/results; figures on Nature page | Rattus norvegicus | Rat strain UNKNOWN | UNKNOWN | Compressive SCI | Compression device UNKNOWN | Traumatic compressive SCI | Spinal level UNKNOWN | weekly behavioral follow-up to 2 months | Histology and BBB locomotor score | MRI-histology-functional validation | Weekly BBB locomotor recovery was compared with MRI lesion severity and white matter sparing, and histology was used to confirm MRI interpretation. | YES |
+| M1A-P026 | M1A-P026-E001 | Fig 1 | Rattus norvegicus | Fisher 344 | Female | Right lateral hemisection SCI | #11 scalpel blade | 2 mm cord removal, right side, no remaining right-side neuronal connections | T10 | 15-18 WPI | Naive spinal cord tissue | Chronic scar AFM mapping | Fresh 500 um spinal cord sections were measured by AFM with 80 um bead cantilevers to compare Young's modulus in naive white/gray matter and chronic glial/fibrotic scar regions. | YES |
+| M1A-P026 | M1A-P026-E002 | Fig 2 | Rattus norvegicus | Fisher 344 | Female | Right lateral hemisection SCI | #11 scalpel blade | 2 mm cord removal | T10 | 15-18 WPI | Naive white and gray matter | Chronic scar morphometry | Toluidine blue/Hoechst histology, DNA content, and nuclei spacing analyses assessed cystic cavities, dense nuclei packing, and tissue organization in chronic scar. | YES |
+| M1A-P026 | M1A-P026-E003 | Fig 3 | Rattus norvegicus | Fisher 344 | Female | Right lateral hemisection SCI | #11 scalpel blade | 2 mm cord removal | T10 | 15-18 WPI | Naive white and gray matter | CNS cell and epithelial/fibrotic marker profiling | IHC for beta-III tubulin, GFAP, antigalactocerebroside/myelin, tenascin R, vimentin, and Hoechst compared scar, glial border, and naive spinal cord regions. | YES |
+| M1A-P026 | M1A-P026-E004 | Fig 4 | Rattus norvegicus | Fisher 344 | Female | Right lateral hemisection SCI | #11 scalpel blade | 2 mm cord removal | T10 | 15-18 WPI | Naive spinal cord tissue | ECM/GAG quantification | Scar-containing spinal cord segments were digested for Blyscan sGAG/O-sulfated GAG assays and HA ELISA, with toluidine blue staining used to localize sulfated proteoglycans. | YES |
+| M1A-P027 | M1A-P027-E001 | Fig 1 | Mus musculus | C57BL/6 | Female | Uninjured/sham spinal cord stiffness method optimization | N/A or sham exposure | Sham/no laminectomy for controls; fresh versus frozen tissue comparison | T11 region | 12 weeks post-sham or adult uninjured | Fresh tissue / force and loading-rate parameter comparisons | AFM protocol optimization | Uninjured spinal cord sections were measured by AFM across force thresholds, loading rates, and fresh versus frozen/thawed preparation to define the stiffness protocol. | YES |
+| M1A-P027 | M1A-P027-E002 | Fig 2 | Mus musculus | C57BL/6 | Female | Severe contusion SCI | Infinite Horizons IH-0400 | 100 kdyn, 60 s dwell | T11 | 12 WPI | Sham/uninjured spinal cord | Chronic contusion stiffness mapping | AFM microindentation and stiffness maps compared uninjured white/gray matter with lesion core and lesion rim in saline-treated contused spinal cords. | YES |
+| M1A-P027 | M1A-P027-E003 | Fig 3-Fig 4 | Mus musculus astrocytes; Homo sapiens hESC-derived astrocytes | Primary mouse cortical astrocytes; hESC-derived astrocytes | UNKNOWN | In vitro astrocyte culture | N/A | 200 Pa versus 2000 Pa substrate stiffness | N/A | 4-5 days culture on stiffness substrates | 200 Pa intact-tissue stiffness substrate | Scar-stiffness substrate exposure | Mouse and human astrocytes were cultured on physiologic soft versus stiff substrates and analyzed for morphology, actin stress fibers, beta1-integrin/ILK signaling, GFAP, and process complexity. | YES |
+| M1A-P027 | M1A-P027-E004 | Fig 5-Fig 6 | Mus musculus | C57BL/6 | Female | Severe contusion SCI | Infinite Horizons IH-0400 | 100 kdyn, 60 s dwell | T11 | IMP dosing 2, 24, 48 h after SCI; assessment 12 WPI | Saline-treated injured mice / uninjured controls | Immune-modifying nanoparticle treatment | PLG IMP or saline was delivered intravenously after SCI; 12 WPI lesion stiffness, fibronectin/GFAP anatomy, and CurveAlign GFAP fiber alignment at the glial/fibrotic interface were quantified. | YES |
 
 ---
 
@@ -300,11 +338,11 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Pass | Total Papers | Completed | In Progress | Blocked | Pending | Completion % |
 |------|---|---|---|---|---|---|
-| -1 (Verify) | 27 | 8 | 0 | 0 | 19 | 30% |
-| 0 (Register) | 27 | 8 | 0 | 0 | 19 | 30% |
-| 1 (Questions) | 27 | 8 | 0 | 0 | 19 | 30% |
-| 2 (Paradigms) | 27 | 8 | 0 | 0 | 19 | 30% |
-| 3 (Experiments) | 27 | 8 papers / 36 experiments | 0 | 0 | 19 papers | 30% papers |
+| -1 (Verify) | 27 | 13 | 0 | 0 | 14 | 48% |
+| 0 (Register) | 27 | 13 | 0 | 0 | 14 | 48% |
+| 1 (Questions) | 27 | 13 | 0 | 0 | 14 | 48% |
+| 2 (Paradigms) | 27 | 13 | 0 | 0 | 14 | 48% |
+| 3 (Experiments) | 27 | 13 papers / 52 experiments | 0 | 0 | 14 papers | 48% papers |
 | 4 (Observations) | 27 | 0 | 0 | 0 | 27 | 0% |
 | 5 (Claims) | 27 | 0 | 0 | 0 | 27 | 0% |
 
@@ -316,8 +354,7 @@ Log papers that report conflicting findings on the same anatomical compartment o
 
 | Topic | Paper 1 ID | Finding 1 | Paper 2 ID | Finding 2 | Conflict Type | Resolution Status |
 |-------|---|---|---|---|---|---|
-| Example: Cavity volume at 8 weeks | P001 | "30% volume" | P002 | "15% volume" | Quantitative divergence | UNRESOLVED |
-| — | — | — | — | — | — | — |
+| Chronic SCI scar mechanics | M1A-P026 | Chronic rat hemisection scar had decreased Young's modulus relative to naive tissue, with cavitation and ECM/GAG dysregulation | M1A-P027 | Chronic mouse contusion lesion core/rim were stiffer than uninjured spinal cord, and IMP reduced stiffness | Directional/mechanistic divergence | UNRESOLVED; likely model/time/sample-preparation dependent |
 
 ---
 
@@ -345,8 +382,8 @@ Log papers that report conflicting findings on the same anatomical compartment o
 | Complete transection | Thoracic | Mouse, rat, monkey | YES | REPRESENTED |
 | Crush | Thoracic | Mouse | YES | REPRESENTED |
 | Dorsal funiculus incision | Thoracic | Mouse | YES | REPRESENTED |
-| Compression | T10 | Mouse, rat | — | — |
-| Human traumatic lesion | Variable | Human | — | — |
+| Compression | T10 | Mouse, rat | YES | REPRESENTED |
+| Human traumatic lesion | Variable | Human | YES | REPRESENTED |
 
 ### Lesion Compartments (ControlledVocabulary_LesionCompartment)
 
@@ -358,7 +395,7 @@ Log papers that report conflicting findings on the same anatomical compartment o
 | Reactive neural tissue | Altered but intact tissue surrounding lesion | PRIMARY | REPRESENTED |
 | Spared white matter | Preserved WM tracts at periphery | PRIMARY | REPRESENTED |
 | Spared gray matter | Preserved GM at lesion periphery | PRIMARY | — |
-| Cystic cavity | Fluid-filled void within lesion | PRIMARY | — |
+| Cystic cavity | Fluid-filled void within lesion | PRIMARY | REPRESENTED |
 | Pericyte border | Mesenchymal cell zone | SECONDARY | REPRESENTED |
 | Meningeal fibrosis | Dural involvement | SECONDARY | REPRESENTED |
 | Remote spinal cord | Tissue rostral/caudal to lesion | SECONDARY | REPRESENTED |
@@ -370,13 +407,13 @@ Log papers that report conflicting findings on the same anatomical compartment o
 | Histological measurement | Quantitative measurement from tissue sections | YES |
 | Immunohistochemistry | Labeled cellular/molecular identification | YES |
 | Electron microscopy | Ultrastructural observation | — |
-| MRI measurement | Imaging-based quantification | — |
+| MRI measurement | Imaging-based quantification | YES |
 | CT imaging | Imaging-based quantification | — |
 | Two-photon imaging | Live tissue visualization | — |
 | Confocal microscopy | High-resolution cellular imaging | YES |
 | Serial section reconstruction | 3D computational reconstruction | — |
 | Qualitative histology | Descriptive anatomical characterization | YES |
-| Human tissue examination | Autopsy or surgical specimen | — |
+| Human tissue examination | Autopsy or surgical specimen | YES |
 
 ### Assays (ControlledVocabulary_Assay)
 
@@ -398,26 +435,26 @@ Log papers that report conflicting findings on the same anatomical compartment o
 | BDA axon tracing | Tract tracing | Axons near lesion | YES |
 | BBB locomotor scoring | Behavioral assay | Functional recovery | YES |
 | Optogenetic stimulation/recording | Functional circuit assay | Regenerated CST circuitry | YES |
-| White matter sparing quantification | Histological | Spared WM | — |
+| White matter sparing quantification | Histological | Spared WM | YES |
 | Gray matter loss quantification | Histological | Gray matter | — |
-| MRI T2-weighted lesion volume | MRI | Overall lesion | — |
+| MRI T2-weighted lesion volume | MRI | Overall lesion | YES |
 | Voxel-based morphometry | MRI analysis | Tissue loss | — |
 | Eriochrome cyanine stain | Histological | Myelinated axons | — |
-| Cellularity assessment | Immunohistochemistry | Cell density | — |
+| Cellularity assessment | Immunohistochemistry | Cell density | YES |
 
 ### Outcome Types (ControlledVocabulary_OutcomeType)
 
 | Outcome Type | Measurement Unit | Relevant Compartment | Represented in Corpus |
 |---|---|---|---|
 | Lesion area | mm² | Lesion core | YES |
-| Lesion length | mm | Lesion core | — |
-| Lesion volume | mm³ | Lesion core | — |
-| Cavity volume | mm³ or % of lesion | Cystic cavity | — |
+| Lesion length | mm | Lesion core | YES |
+| Lesion volume | mm³ | Lesion core | YES |
+| Cavity volume | mm³ or % of lesion | Cystic cavity | YES |
 | White matter sparing | mm² or % | Spared WM | YES |
 | Gray matter loss | mm² or % | Gray matter | — |
 | Lesion width | mm | Lesion geometry | — |
-| Rostral extension | mm | Lesion extent | — |
-| Caudal extension | mm | Lesion extent | — |
+| Rostral extension | mm | Lesion extent | YES |
+| Caudal extension | mm | Lesion extent | YES |
 
 ---
 
@@ -439,20 +476,20 @@ Papers identified but not yet processed:
 | 10.1016/j.ajpath.2016.11.010 | Yokota K | 2017 | Periostin promotes scar formation through the interaction between pericytes and infiltrating monocytes/macrophages after spinal cord injury | S005; pericyte/macrophage scar mechanism | 2026-07-15 | QUEUED PASS -1 |
 | 10.1016/j.expneurol.2005.08.009 | Radojicic M | 2005 | Septations in chronic spinal cord injury cavities contain axons | S010; cavity internal architecture | 2026-07-15 | QUEUED PASS -1 |
 | 10.1002/term.2450 | Wang N | 2018 | Collagen scaffold combined with human umbilical cord-derived mesenchymal stem cells promote functional recovery after scar resection in rats with chronic spinal cord injury | S009/S010; chronic scar resection/cavity anatomy | 2026-07-15 | QUEUED PASS -1 |
-| 10.1089/neu.2015.4374 | Grumbles RM | 2017 | Motoneuron death after human spinal cord injury | S002/S007; human gray matter pathology | 2026-07-15 | QUEUED PASS -1 |
+| 10.1089/neu.2015.4374 | Grumbles RM | 2017 | Motoneuron death after human spinal cord injury | S002/S007; human gray matter pathology | 2026-07-15 | PASS 3 COMPLETE |
 | 10.3171/jns.1997.86.3.0483 | Tator CH | 1997 | Vascular mechanisms in the pathophysiology of human spinal cord injury | S012; human vascular pathology context | 2026-07-15 | QUEUED PASS -1 |
 | 10.1089/neu.2005.22.544 | Collazos-Castro JE | 2005 | Motoneuron loss associated with chronic locomotion impairments after spinal cord contusion in the rat | S012; gray matter/motoneuron loss | 2026-07-15 | QUEUED PASS -1 |
 | 10.1038/s41586-025-09887-y | McCallum S | 2026 | Lesion-remote astrocytes govern microglia-mediated white matter repair | S011; lesion-remote white matter repair | 2026-07-15 | PASS 3 COMPLETE |
 | 10.1007/s12264-022-00897-8 | Gong L | 2023 | Spatiotemporal dynamics of the molecular expression pattern and intercellular interactions in the glial scar response to spinal cord injury | S003; glial scar spatiotemporal organization | 2026-07-15 | PASS 3 COMPLETE |
 | 10.1096/fj.202200463R | Hou J | 2022 | Heterogeneity analysis of astrocytes following spinal cord injury at single-cell resolution | S003; astrocyte heterogeneity candidate | 2026-07-15 | QUEUED PASS -1 |
 | 10.1038/s41467-024-50564-x | Xue X | 2024 | Heterogeneous fibroblasts contribute to fibrotic scar formation after spinal cord injury in mice and monkeys | S005; cross-species fibrotic scar candidate | 2026-07-15 | PASS 3 COMPLETE |
-| 10.1016/j.jmbbm.2020.103953 | Baumann HJ | 2020 | Softening of the chronic hemi-section spinal cord injury scar parallels dysregulation of cellular and extracellular matrix content | S004; chronic scar mechanics/ECM | 2026-07-15 | QUEUED PASS -1 |
-| 10.1089/neu.2019.6540 | Cooper JG | 2020 | Spinal cord injury results in chronic mechanical stiffening | S004; chronic scar/tissue stiffness | 2026-07-15 | QUEUED PASS -1 |
+| 10.1016/j.jmbbm.2020.103953 | Baumann HJ | 2020 | Softening of the chronic hemi-section spinal cord injury scar parallels dysregulation of cellular and extracellular matrix content | S004; chronic scar mechanics/ECM | 2026-07-15 | PASS 3 COMPLETE |
+| 10.1089/neu.2019.6540 | Cooper JG | 2020 | Spinal cord injury results in chronic mechanical stiffening | S004; chronic scar/tissue stiffness | 2026-07-15 | PASS 3 COMPLETE |
 | 10.1038/s41393-022-00770-5 | Faro SH | 2022 | DTI of chronic spinal cord injury in children without MRI abnormalities and with pathology on MRI and comparison to severity of motor impairment | S007/S008; human imaging pathology | 2026-07-15 | QUEUED PASS -1 |
 | 10.3171/2018.12.FOCUS18593 | Burks JD | 2019 | Imaging characteristics of chronic spinal cord injury identified during screening for a cell transplantation clinical trial | S008; chronic lesion imaging morphology | 2026-07-15 | QUEUED PASS -1 |
-| 10.1007/s11427-016-5080-z | Xiao Z | 2016 | One-year clinical study of NeuroRegen scaffold implantation following scar resection in complete chronic spinal cord injury patients | S009; human scar resection candidate | 2026-07-15 | QUEUED PASS -1 |
+| 10.1007/s11427-016-5080-z | Xiao Z | 2016 | One-year clinical study of NeuroRegen scaffold implantation following scar resection in complete chronic spinal cord injury patients | S009; human scar resection candidate | 2026-07-15 | PASS 3 COMPLETE |
 | 10.1016/j.nbd.2014.03.018 | Estrada V | 2014 | Long-lasting significant functional improvement in chronic severe spinal cord injury following scar resection and polyethylene glycol implantation | S009; chronic scar resection candidate | 2026-07-15 | QUEUED PASS -1 |
-| 10.1038/sc.2010.129 | Scholtes F | 2011 | Post-mortem assessment of rat spinal cord injury and white matter sparing using inversion recovery-supported proton density magnetic resonance imaging | S008/S011; MRI-to-histology white matter sparing | 2026-07-15 | QUEUED PASS -1 |
+| 10.1038/sc.2010.129 | Scholtes F | 2011 | Post-mortem assessment of rat spinal cord injury and white matter sparing using inversion recovery-supported proton density magnetic resonance imaging | S008/S011; MRI-to-histology white matter sparing | 2026-07-15 | PASS 3 COMPLETE |
 | 10.1016/j.mri.2017.11.009 | Zhao C | 2018 | Diffusion tensor imaging of spinal cord parenchyma lesion in rat with chronic spinal cord injury | S010; chronic parenchymal lesion DTI | 2026-07-15 | QUEUED PASS -1 |
 
 ---
@@ -486,8 +523,8 @@ Papers identified but not yet processed:
 **Module 1A Curator**: ___________________  
 **Date Initiated**: 2026-07-15
 **Date Completed**: ___________________  
-**Total Papers Extracted**: 8 through Pass 3
-**Total Experiments**: 36
+**Total Papers Extracted**: 13 through Pass 3
+**Total Experiments**: 52
 **Total Observations**: _____  
 **Total Claims**: _____  
 **Contradictions Found**: _____  
@@ -497,6 +534,7 @@ Papers identified but not yet processed:
 - 2026-07-15: Tamaru 2023 was first routed through local Ollama (`qwen2.5-coder:32b`) for a second-pass experiment extraction. The model recovered the broad figure-level experiment families but incorrectly propagated in vivo SCI device/model fields into in vitro and transplantation rows. Final tracker rows were manually curated from the open Kyushu University PDF text and kept consistent with the Cooper 2018 granularity standard.
 - 2026-07-15: Soderblom 2013 was manually curated from the PubMed Central article text without Ollama because the source text was compact enough for direct extraction. The paper adds perivascular fibroblast identity, T8 contusion fibrotic scar time course, dorsal hemisection comparison, and NG2-lineage distinction experiments.
 - 2026-07-15: Five additional full-text papers were curated through Pass 3 from PubMed Central text: Gong 2023, Rasouli 2009, Dias 2018, McCallum 2026, and Xue 2024. Immediate queue papers without accessible full text through current routes (Yokota 2017, Radojicic 2005, Wang 2018, Rosenberg 2005) remain queued for later retrieval rather than abstract-only extraction.
+- 2026-07-15: Five more papers were curated through Pass 3: Grumbles 2017, Xiao 2016, Scholtes 2011, Baumann 2020, and Cooper 2020. Baumann 2020 and Cooper 2020 were assigned inventory IDs M1A-P026 and M1A-P027 from the reference queue, and their opposite scar-mechanics directions were logged as an unresolved contradiction likely influenced by injury model and tissue-preparation differences.
 
 ---
 
