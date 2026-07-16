@@ -21,7 +21,7 @@ This tracker records the post-saturation phase for Module 2A. Module 2B converts
 | M2B-G003 | Link each claim to supporting or contradicting observations | EvidenceLink | COMPLETE FIRST PASS |
 | M2B-G004 | Cluster evidence by scaffold-repair topic | Consensus-ready evidence profiles | COMPLETE FIRST PASS |
 | M2B-G005 | Mark contradictions, material-specific boundaries, and translational limitations | Boundary / contradiction map | COMPLETE FIRST PASS |
-| M2B-G006 | Draft consensus statements only after linked evidence exists | Consensus | CONSENSUS-READY FIRST PASS |
+| M2B-G006 | Draft consensus statements only after linked evidence exists | Consensus | FULL SQL EXPORTED; CONSENSUS_OBSERVATION VALIDATED |
 
 ---
 
@@ -291,4 +291,4 @@ These rows are tracker-level Observation candidates. They preserve intended data
 
 **Extraction confidence mix**: mostly abstract-level first-pass observations; full-text upgrades should prioritize PMC-available papers before final SQL materialization.
 
-**Module 2B status**: CONSENSUS-READY FIRST PASS as of 2026-07-16. The evidence base is linked enough for synthesis and is exported to `data/processed/module2_evidence_bundle.json` by the shared tracker bundle exporter. Full SQL materialization should wait until Module 2 paper/experiment metadata mapping is generalized beyond the Module 1-specific SQL loader.
+**Module 2B status**: CONSENSUS-READY FIRST PASS as of 2026-07-16. The evidence base is linked enough for synthesis and is exported to `data/processed/module2_evidence_bundle.json` by the shared tracker bundle exporter. Full first-pass SQL materialization is exported to `data/processed/module2_full_materialization.sql` and validated in a temporary PostgreSQL load with 51 source records, 46 tracker experiments, 50 observations, 36 author claims, 56 evidence links, 8 consensus rows, and 54 consensus-observation links.

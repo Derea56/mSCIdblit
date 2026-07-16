@@ -82,6 +82,7 @@ mSCIdblit/
 │   ├── export_tracker_evidence_bundle.py # Shared 1B/2B tracker audit + JSON export
 │   ├── export_module1_full_sql.py    # Module 1 SQL materialization
 │   ├── export_module1_evidence_bundle.py # Module 1 SQL-oriented evidence JSON
+│   ├── export_module2_full_sql.py    # Module 2 SQL materialization
 │   ├── ollama_chunk_extract.py       # Generate small Ollama extraction prompts
 │   ├── seed_controlled_vocab.sql     # Populate reference tables
 │   └── smoke_test.sql                # Toy workflow validation script
