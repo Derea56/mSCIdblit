@@ -508,7 +508,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 ## Pass 6: Draft Consensus Statements
 
-These are first-pass project-level synthesis candidates derived from the linked Module 1B observations, author claims, and boundary records. They have been exported to `data/processed/module1_consensus_drafts.json`, `data/processed/module1_consensus_inserts.sql`, `data/processed/module1_evidence_bundle.json`, and `data/processed/module1_full_materialization.sql`. The full materialization SQL validates `Consensus_Observation` links after creating stable database primary-key maps for tracker observations.
+These are first-pass project-level synthesis candidates derived from the linked Module 1B observations, author claims, and boundary records. They have been exported to `data/processed/module1_consensus_drafts.json`, `data/processed/module1_consensus_inserts.sql`, `data/processed/module1_evidence_bundle.json`, `data/processed/module1_tracker_evidence_bundle.json`, and `data/processed/module1_full_materialization.sql`. The full materialization SQL validates `Consensus_Observation` links after creating stable database primary-key maps for tracker observations.
 
 | Consensus Draft ID | Topic ID | Draft Consensus Statement | Agreement Level | Supporting Evidence Scope | Boundary / Contradiction Handling | SQL Materialization Status |
 |---|---|---|---|---|---|---|

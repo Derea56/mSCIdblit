@@ -79,6 +79,9 @@ mSCIdblit/
 │   ├── OLLAMA_CHUNK_EXTRACTION.md    # Local model chunking workflow
 │   └── VALIDATION_QUERIES.md         # Database hygiene checks
 ├── scripts/
+│   ├── export_tracker_evidence_bundle.py # Shared 1B/2B tracker audit + JSON export
+│   ├── export_module1_full_sql.py    # Module 1 SQL materialization
+│   ├── export_module1_evidence_bundle.py # Module 1 SQL-oriented evidence JSON
 │   ├── ollama_chunk_extract.py       # Generate small Ollama extraction prompts
 │   ├── seed_controlled_vocab.sql     # Populate reference tables
 │   └── smoke_test.sql                # Toy workflow validation script
@@ -93,6 +96,7 @@ mSCIdblit/
 │   ├── Module_1A_TRACKER.md          # Chronic SCI lesion architecture tracker
 │   ├── Module_1B_TRACKER.md          # Lesion architecture evidence consolidation
 │   ├── Module_2A_TRACKER.md          # Biomaterials and scaffold repair tracker
+│   ├── Module_2B_TRACKER.md          # Biomaterials evidence consolidation
 │   ├── Module_3A_TRACKER.md          # Immune and myeloid modulation tracker
 │   ├── Module_4A_TRACKER.md          # Cell transplantation and graft integration tracker
 │   ├── Module_5A_TRACKER.md          # Axon regeneration, remyelination, and white matter repair tracker
