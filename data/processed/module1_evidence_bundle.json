@@ -3058,7 +3058,7 @@
       "source_agreement_label": "moderate",
       "supporting_evidence_scope": "Supported by spatial transcriptomics and scar-matrix full-text evidence, with lower-confidence abstract/source-page support for chronic zone architecture and single-cell lesion ecology; observations M1B-O037-M1B-O046; claims M1B-C019-M1B-C024.",
       "boundary_or_contradiction_handling": "Compartment definitions vary by model, time point, assay resolution, and whether lesions are contusive, hemisection, cavitary, or scaffold-repaired; do not collapse all scar biology into one field.",
-      "sql_materialization_status": "CONSENSUS SQL EXPORTED; CONSENSUS_OBSERVATION DEFERRED",
+      "sql_materialization_status": "FULL SQL EXPORTED; CONSENSUS_OBSERVATION VALIDATED",
       "source_tracker": "modules/Module_1B_TRACKER.md",
       "observation_tracker_ids": [
         "M1B-O037",
@@ -3091,7 +3091,7 @@
       "source_agreement_label": "moderate",
       "supporting_evidence_scope": "Supported by three full-text lineage/function studies; observations M1B-O012-M1B-O026; claims M1B-C006-M1B-C012.",
       "boundary_or_contradiction_handling": "M1B-X002 resolves apparent pericyte-versus-fibroblast conflicts as marker/system dependent; store marker, lineage driver, injury model, and dural status with each claim.",
-      "sql_materialization_status": "CONSENSUS SQL EXPORTED; CONSENSUS_OBSERVATION DEFERRED",
+      "sql_materialization_status": "FULL SQL EXPORTED; CONSENSUS_OBSERVATION VALIDATED",
       "source_tracker": "modules/Module_1B_TRACKER.md",
       "observation_tracker_ids": [
         "M1B-O012",
@@ -3132,7 +3132,7 @@
       "source_agreement_label": "moderate",
       "supporting_evidence_scope": "Strongest support comes from Tamaru 2023 full text, with source-page support from immune-corralling, Ryk, and wound-repair astrocyte studies; observations M1B-O027-M1B-O036; claims M1B-C013-M1B-C018.",
       "boundary_or_contradiction_handling": "M1B-X003 distinguishes established astrocyte-state reversal from border recruitment/organization. Source-page studies should remain medium confidence until full-text upgrades.",
-      "sql_materialization_status": "CONSENSUS SQL EXPORTED; CONSENSUS_OBSERVATION DEFERRED",
+      "sql_materialization_status": "FULL SQL EXPORTED; CONSENSUS_OBSERVATION VALIDATED",
       "source_tracker": "modules/Module_1B_TRACKER.md",
       "observation_tracker_ids": [
         "M1B-O027",
@@ -3167,7 +3167,7 @@
       "source_agreement_label": "emerging / boundary-specific",
       "supporting_evidence_scope": "Supported by two full-text mechanics studies with directly conflicting directionality; observations M1B-O001-M1B-O011; claims M1B-C001-M1B-C005.",
       "boundary_or_contradiction_handling": "M1B-X001 is the central synthesis: rat hemisection scar softening and mouse contusion lesion stiffening are both admissible under different model/method conditions.",
-      "sql_materialization_status": "CONSENSUS SQL EXPORTED; CONSENSUS_OBSERVATION DEFERRED",
+      "sql_materialization_status": "FULL SQL EXPORTED; CONSENSUS_OBSERVATION VALIDATED",
       "source_tracker": "modules/Module_1B_TRACKER.md",
       "observation_tracker_ids": [
         "M1B-O001",
@@ -3202,7 +3202,7 @@
       "source_agreement_label": "moderate",
       "supporting_evidence_scope": "Supported by two full-text resection/human scaffold studies plus abstract/source-page scaffold support; observations M1B-O056-M1B-O062; claims M1B-C030-M1B-C034.",
       "boundary_or_contradiction_handling": "M1B-X004 resolves the apparent conflict by distinguishing tissue removal from reconstruction after resection; efficacy claims should not be generalized beyond feasibility/safety or specific animal endpoints.",
-      "sql_materialization_status": "CONSENSUS SQL EXPORTED; CONSENSUS_OBSERVATION DEFERRED",
+      "sql_materialization_status": "FULL SQL EXPORTED; CONSENSUS_OBSERVATION VALIDATED",
       "source_tracker": "modules/Module_1B_TRACKER.md",
       "observation_tracker_ids": [
         "M1B-O056",
@@ -3233,7 +3233,7 @@
       "source_agreement_label": "moderate",
       "supporting_evidence_scope": "Strongest support comes from McCallum 2026 full text, with imaging and abstract support from Scholtes, Song, and Rosenberg; observations M1B-O047-M1B-O055; claims M1B-C025-M1B-C029.",
       "boundary_or_contradiction_handling": "Boundary conditions include tract, distance from lesion, injury severity, post-mortem versus in vivo imaging, and exact MRI/histology metric. Lower-access white matter papers should not carry high-confidence numeric claims yet.",
-      "sql_materialization_status": "CONSENSUS SQL EXPORTED; CONSENSUS_OBSERVATION DEFERRED",
+      "sql_materialization_status": "FULL SQL EXPORTED; CONSENSUS_OBSERVATION VALIDATED",
       "source_tracker": "modules/Module_1B_TRACKER.md",
       "observation_tracker_ids": [
         "M1B-O047",
@@ -3264,7 +3264,7 @@
       "source_agreement_label": "strong first-pass",
       "supporting_evidence_scope": "Supported by five full-text human studies plus source-page pediatric DTI support; observations M1B-O063-M1B-O070 and M1B-O080-M1B-O084; claims M1B-C035-M1B-C040 and M1B-C047-M1B-C050.",
       "boundary_or_contradiction_handling": "M1B-X005 and M1B-X007 separate local lesion stability/adjacent mass preservation from remote degeneration, vascular infarct-like lesions, and syrinx-associated atrophy.",
-      "sql_materialization_status": "CONSENSUS SQL EXPORTED; CONSENSUS_OBSERVATION DEFERRED",
+      "sql_materialization_status": "FULL SQL EXPORTED; CONSENSUS_OBSERVATION VALIDATED",
       "source_tracker": "modules/Module_1B_TRACKER.md",
       "observation_tracker_ids": [
         "M1B-O063",
@@ -3307,7 +3307,7 @@
       "source_agreement_label": "moderate",
       "supporting_evidence_scope": "Supported by Li 2020 full text plus source-page evidence from Zhou, Milich, and Gerber; observations M1B-O071-M1B-O079; claims M1B-C041-M1B-C046.",
       "boundary_or_contradiction_handling": "M1B-X006 resolves the main tension as phase- and function-specific: protective early containment/debris roles can coexist with chronic inflammatory harm. Source-page mechanistic rows remain medium confidence.",
-      "sql_materialization_status": "CONSENSUS SQL EXPORTED; CONSENSUS_OBSERVATION DEFERRED",
+      "sql_materialization_status": "FULL SQL EXPORTED; CONSENSUS_OBSERVATION VALIDATED",
       "source_tracker": "modules/Module_1B_TRACKER.md",
       "observation_tracker_ids": [
         "M1B-O071",
