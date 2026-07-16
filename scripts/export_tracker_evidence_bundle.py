@@ -164,6 +164,31 @@ MODULES = {
             "COMPLETE FIRST PASS",
         ),
     ),
+    "7b": ModuleConfig(
+        key="7b",
+        label="Module 7B",
+        tracker=ROOT / "modules" / "Module_7B_TRACKER.md",
+        output=ROOT / "data" / "processed" / "module7_evidence_bundle.json",
+        id_prefix="M7B",
+        boundary_prefix="M7B-B",
+        evidence_link_section="## Pass 6: Evidence Links Drafted",
+        boundary_section="## Boundary Conditions Draft",
+        boundary_id_key="boundary_id",
+        consensus_section="## Consensus Draft Queue",
+        consensus_statement_key="draft_statement",
+        expected_counts={
+            "observations": 40,
+            "author_claims": 36,
+            "evidence_links": 88,
+            "boundary_records": 8,
+            "consensus_drafts": 8,
+        },
+        required_phrases=(
+            "CONSENSUS-READY FIRST PASS",
+            "Module 7 first-pass curation freeze",
+            "MET FOR ALL FIRST-PASS TOPICS",
+        ),
+    ),
 }
 
 
