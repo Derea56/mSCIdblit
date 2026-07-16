@@ -31,7 +31,7 @@ This tracker begins the post-saturation phase for Module 1A. Module 1B converts 
 | M1B-T002 | Fibrotic scar cellular origins vary by model and include perivascular fibroblast/pericyte-associated lineages | M1A-P007, P008, P009, P021, P026, P029 | Extract lineage, marker, and compartment observations | STARTED |
 | M1B-T003 | Astrocytic borders are active wound-repair structures, not only inhibitory barriers | M1A-P003, P004, P030, P032, P033 | Extract border formation, signaling, and containment observations | STARTED |
 | M1B-T004 | Chronic lesion biomechanics are model-dependent and currently directionally conflicting | M1A-P026, P027 | Extract stiffness values, tissue-preparation conditions, and model details | STARTED |
-| M1B-T005 | Cavitary lesion and scar-resection studies support scaffold/cell filling as a recurring repair strategy | M1A-P005, P012, P022, P034 | Extract cavity, resection, scaffold, and integration observations | QUEUED |
+| M1B-T005 | Cavitary lesion and scar-resection studies support scaffold/cell filling as a recurring repair strategy | M1A-P005, P012, P022, P034 | Extract cavity, resection, scaffold, and integration observations | STARTED |
 | M1B-T006 | Spared white matter and remote white matter pathology are major recovery-linked compartments | M1A-P013, P014, P024, P036 | Extract spared WM, Wallerian degeneration, MRI/histology, and recovery observations | STARTED |
 | M1B-T007 | Human chronic SCI pathology shows persistent structural mass, motoneuron loss, remyelination abnormalities, and imaging-visible lesion geometry | M1A-P016, P018, P019, P020, P022, P028 | Extract human-specific tissue/imaging observations | QUEUED |
 | M1B-T008 | Immune-glial lesion containment and chronic inflammation shape lesion architecture | M1A-P006, P030, P031, P035 | Extract microglia/macrophage, corralling, and neuroinflammation observations | QUEUED |
@@ -70,6 +70,10 @@ This tracker begins the post-saturation phase for Module 1A. Module 1B converts 
 | M1B-T006 | M1A-P024 | M1A-P024-E001–E002 | Post-mortem MRI, spared white matter, histology, locomotor recovery | COMPLETE SOURCE-PAGE PASS | Observation row M1B-O053 |
 | M1B-T006 | M1A-P036 | M1A-P036-E001–E002 | In vivo MRI white matter tract pathology and recovery linkage | COMPLETE SOURCE-PAGE PASS | Observation row M1B-O054 |
 | M1B-T006 | M1A-P013 | M1A-P013-E001–E002 | Chronic residual white matter cellular composition | COMPLETE ABSTRACT PASS | Observation row M1B-O055 |
+| M1B-T005 | M1A-P005 | M1A-P005-E001–E002 | Delayed scar resection, behavior, axon tracing, injury-model boundary | COMPLETE FIRST PASS | Observation rows M1B-O056–O057 |
+| M1B-T005 | M1A-P012 | M1A-P012-E001–E002 | Chronic scar resection, NeuroRegen scaffold, hUC-MSC repair | COMPLETE ABSTRACT PASS | Observation row M1B-O058 |
+| M1B-T005 | M1A-P022 | M1A-P022-E001–E003 | Human electrophysiology-guided resection, scar tissue markers, safety/SSEP | COMPLETE FIRST PASS | Observation rows M1B-O059–O061 |
+| M1B-T005 | M1A-P034 | M1A-P034-E001–E002 | Chronic cavitary lesion filling with dECM scaffold and hNS/PC support | COMPLETE SOURCE-PAGE PASS | Observation row M1B-O062 |
 
 ---
 
@@ -134,6 +138,13 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | M1B-O053 | M1B-T006 | M1A-P024 | M1A-P024-E001–E002 | Abstract / Nature page | Post-mortem MRI / histology / BBB | Spared white matter imaging | In five rat spines 2 months after compressive SCI, 9.4T inversion-recovery-supported proton-density MRI depicted spared and injured white matter, lesion volume, and cord atrophy; MRI severity and white-matter sparing aligned with locomotor recovery and histology. | spared white matter is MRI-visible and recovery-linked | MRI / histology / BBB | YES | n = 5 excised rat spines | Abstract / source page | medium | Post-mortem MRI; not in vivo longitudinal imaging. |
 | M1B-O054 | M1B-T006 | M1A-P036 | M1A-P036-E001–E002 | Abstract/source page | In vivo MRI / pathology-function linkage | White matter tract pathology | Source-page extraction reports that 7.0T MRI tracked pathological variation in white matter tracts after severe thoracic contusion, and spared white matter/pathological tract variation related to hindlimb motor recovery. | MRI-visible white matter tract pathology relates to recovery | MRI metrics / motor recovery | YES | Source-page level in Module 1A | Abstract / source page | medium | Full text needed for exact MRI metric values. |
 | M1B-O055 | M1B-T006 | M1A-P013 | M1A-P013-E001–E002 | Abstract | Histology / cellular composition | Chronic residual white matter cellularity | Abstract-level extraction reports chronic changes in residual dorsal, lateral, and ventral funicular white matter cellular composition 6 WPI after contusion, with acute TTX treatment related to chronic axon density, function, and cellular composition. | residual white matter has chronic cellular remodeling | abstract-level qualitative | YES | Abstract-level only | PubMed abstract / Module 1A row | low | Full text needed before high-confidence materialization. |
+| M1B-O056 | M1B-T005 | M1A-P005 | M1A-P005-E001 | Fig 1-Fig 4 | Behavioral assay / BDA tract tracing | Resection outcome after contusion | In adult female rat moderate contusion SCI, delayed 2 mm glial scar resection at 1 WPI produced significantly worse BBB locomotor scores than nonresection contusion controls and did not produce BDA-positive axons at or caudal to the lesion epicenter. | scar resection alone worsened contusion recovery and did not restore axon crossing | BBB score / BDA axon index | YES | BBB p < 0.05 versus nonresection contusion; axon comparisons p values reported | Results / Figures 1-4 | high | Critical boundary condition against treating resection alone as inherently reparative. |
+| M1B-O057 | M1B-T005 | M1A-P005 | M1A-P005-E002 | Fig 1-Fig 4 | Behavioral assay / BDA tract tracing | Resection outcome after hemisection | In adult female rat dorsal hemisection SCI, delayed 2 mm glial scar resection at 1 WPI did not significantly change BBB locomotor scores versus nonresection hemisection controls, and no group showed BDA-positive axons at or caudal to the lesion epicenter. | scar resection alone neutral after hemisection and insufficient for lesion crossing | BBB score / BDA axon index | YES | BBB p = 0.61 for resection versus nonresection hemisection; BDA comparisons reported | Results / Figures 1-4 | high | Shows injury-model dependence and lack of axon-bridging benefit from resection alone. |
+| M1B-O058 | M1B-T005 | M1A-P012 | M1A-P012-E001–E002 | Abstract | Behavioral / electrophysiology / histology | Scaffold-cell repair after chronic resection | Abstract-level extraction reports that, in 12-week chronic rat SCI, scar resection was evaluated for locomotor safety and NeuroRegen collagen scaffold plus hUC-MSC implantation into the resected cavity was assessed by locomotion, evoked potentials, and histological repair outcomes. | chronic resection cavity used as scaffold/cell implantation site | abstract-level qualitative | YES | Abstract-level only | PubMed abstract / Module 1A row | low | Full text needed before exact effect sizes or histological endpoints are materialized. |
+| M1B-O059 | M1B-T005 | M1A-P022 | M1A-P022-E001 | Fig 1-Fig 2; Table 1-Table 2 | Human clinical surgery | Scar boundary mapping and gap filling | In five complete chronic ASIA A SCI patients, SSEP/MEP monitoring was used to distinguish scar from normal neural tissue, scars ranging from 0.5-4.5 cm were resected, and BMMC-loaded NeuroRegen scaffold was implanted into the spinal cord gap. | electrophysiology-guided human scar resection plus scaffold/cell filling | scar length cm / procedure | YES | n = 5 patients; scar length table reported | Results / Tables 1-2 | high | MRI lesion length was sometimes smaller than intraoperative electrophysiological scar mapping. |
+| M1B-O060 | M1B-T005 | M1A-P022 | M1A-P022-E002 | Fig 3 | Immunohistochemistry | Resected human scar composition | Resected chronic human SCI tissue showed strong CSPG and vimentin staining and negative NF, nestin, Tuj-1, and S100 staining, supporting that the dissected tissue was scar-rich and neural-marker-poor. | resected human scar is CSPG/vimentin-positive and neural-marker-poor | marker panel | YES | qualitative IHC | Results / Figure 3 | high | Supports surgical target identity for complete chronic SCI cases. |
+| M1B-O061 | M1B-T005 | M1A-P022 | M1A-P022-E003 | Table 3-Table 4 | Clinical safety / electrophysiology follow-up | Safety and signal recovery | After human scar resection and BMMC-loaded NeuroRegen implantation, no obvious adverse effects related to resection or scaffold transplantation were observed immediately or at 12 months; two cases showed lower-limb SSEP recovery by 6 months that persisted to the end of observation. | procedure feasible/safe in small cohort with partial SSEP recovery | adverse events / SSEP | YES | n = 5; 2 cases with SSEP recovery | Results / Tables 3-4 | high | No neurological deterioration or spine instability was detected after scar resection. |
+| M1B-O062 | M1B-T005 | M1A-P034 | M1A-P034-E001–E002 | Abstract/source page | Histology / transplantation | Scaffold-supported cavitary repair | Source-page extraction reports that chronic complete SCI scar resection created a cavitary lesion repair setting where decellularized ECM hydrogel scaffold filling, with or without human iPSC-derived NS/PC transplantation, was assessed for histological repair effects. | dECM scaffold and hNS/PC support after chronic scar resection | source-page qualitative | YES | Source-page level in Module 1A | Abstract / source page | medium | Full text should be parsed for lesion filling, graft survival, and histological outcome details before high-confidence materialization. |
 
 ---
 
@@ -158,6 +169,10 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | M1B-T006 | M1A-P024 | conclusion; imaging | COMPLETE SOURCE-PAGE PASS |
 | M1B-T006 | M1A-P036 | conclusion; imaging | COMPLETE SOURCE-PAGE PASS |
 | M1B-T006 | M1A-P013 | conclusion | COMPLETE ABSTRACT PASS |
+| M1B-T005 | M1A-P005 | conclusion; interpretation; boundary condition | COMPLETE FIRST PASS |
+| M1B-T005 | M1A-P012 | conclusion | COMPLETE ABSTRACT PASS |
+| M1B-T005 | M1A-P022 | conclusion; feasibility; safety | COMPLETE FIRST PASS |
+| M1B-T005 | M1A-P034 | conclusion | COMPLETE SOURCE-PAGE PASS |
 
 ---
 
@@ -194,6 +209,11 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | M1B-C027 | M1B-T006 | M1A-P024 | White matter sparing can be detected by high-resolution MRI and aligns with histology and locomotor recovery after chronic rat SCI. | conclusion | medium | Abstract / source page | medium | Source-page/abstract-level details; n = 5. |
 | M1B-C028 | M1B-T006 | M1A-P036 | In vivo MRI can track white matter tract pathology after severe thoracic SCI and relate spared white matter to hindlimb recovery. | conclusion | medium | Abstract / source page | medium | Needs full-text metric extraction. |
 | M1B-C029 | M1B-T006 | M1A-P013 | Residual white matter undergoes chronic cellular-composition changes after contusion SCI, making spared funiculi a lesion-adjacent compartment rather than normal tissue. | conclusion | low | Abstract | medium | Abstract-level only. |
+| M1B-C030 | M1B-T005 | M1A-P005 | Glial scar resection alone is not uniformly beneficial after SCI; it can be neutral after dorsal hemisection and harmful after contusion, implying that the scar can have protective/stabilizing functions. | interpretation | high | Results / Discussion | high | Strong boundary-condition claim for scaffold/resection strategies. |
+| M1B-C031 | M1B-T005 | M1A-P012 | Chronic scar resection can be used as a preparation step for NeuroRegen collagen scaffold plus hUC-MSC implantation, with outcomes assessed by locomotion, electrophysiology, and histological repair. | conclusion | low | Abstract | medium | Abstract-level only until full text is parsed. |
+| M1B-C032 | M1B-T005 | M1A-P022 | In complete chronic SCI patients, electrophysiology-guided scar resection followed by BMMC-loaded NeuroRegen scaffold implantation is feasible and did not produce obvious procedure-related adverse effects in a small one-year cohort. | conclusion | high | Abstract / Results / Discussion | high | Keep scoped to five ASIA A patients and feasibility/safety, not proven efficacy. |
+| M1B-C033 | M1B-T005 | M1A-P022 | Human chronic resection specimens can be scar-rich and neural-marker-poor, supporting careful scar targeting in complete chronic cases but highlighting a challenge for incomplete injuries where scar and spared neural tissue may mix. | interpretation | medium | Results / Discussion | high | Directly tied to CSPG/vimentin-positive and neural-marker-negative specimen plus authors' incomplete-injury caution. |
+| M1B-C034 | M1B-T005 | M1A-P034 | Scaffold-supported filling of chronic post-resection cavitary lesions, including dECM hydrogel with human iPSC-derived NS/PCs, is a recurring histological repair strategy in chronic complete SCI models. | conclusion | medium | Abstract / source page | medium | Source-page level; exact histological endpoints need full-text extraction. |
 
 ---
 
@@ -268,6 +288,15 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | M1B-L065 | M1B-C027 | M1B-O053 | directly_supports | Scholtes MRI/histology/BBB observation supports spared white matter imaging claim. |
 | M1B-L066 | M1B-C028 | M1B-O054 | directly_supports | Song source-page MRI observation supports tract pathology and recovery-link claim. |
 | M1B-L067 | M1B-C029 | M1B-O055 | directly_supports | Rosenberg abstract-level residual white matter observation supports chronic cellular remodeling claim. |
+| M1B-L068 | M1B-C030 | M1B-O056 | directly_supports | Contusion scar resection worsened BBB recovery and failed to restore axon crossing. |
+| M1B-L069 | M1B-C030 | M1B-O057 | directly_supports | Hemisection scar resection was neutral and failed to restore axon crossing. |
+| M1B-L070 | M1B-C031 | M1B-O058 | directly_supports | Wang abstract-level scaffold/cell implantation observation supports chronic resection cavity repair claim. |
+| M1B-L071 | M1B-C032 | M1B-O059 | directly_supports | Human SSEP/MEP-guided resection and BMMC-loaded scaffold implantation supports feasibility. |
+| M1B-L072 | M1B-C032 | M1B-O061 | directly_supports | One-year safety follow-up and SSEP recovery observations support small-cohort feasibility/safety claim. |
+| M1B-L073 | M1B-C033 | M1B-O060 | directly_supports | Human scar-marker panel supports scar-rich/neural-marker-poor specimen claim. |
+| M1B-L074 | M1B-C033 | M1B-O059 | partially_supports | Electrophysiology-guided mapping supports careful scar targeting but does not alone prove tissue composition. |
+| M1B-L075 | M1B-C034 | M1B-O062 | directly_supports | Ito source-page observation supports dECM scaffold and hNS/PC histological repair strategy. |
+| M1B-L076 | M1B-C034 | M1B-O058 | concordant_boundary | Wang abstract-level NeuroRegen+hUC-MSC strategy is directionally consistent with scaffold/cell filling after chronic resection. |
 
 ---
 
@@ -342,6 +371,20 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | Current interpretation | The database should include spared/remote white matter as its own recovery-linked compartment, with fields for tract, distance from lesion, degeneration state, glial state, microglial debris handling, MRI metrics, and behavioral linkage. |
 | Next evidence needed | Parse full texts for M1A-P013, M1A-P036, and any available DTI/MRI supplements; connect human/pediatric DTI evidence from M1A-P028 during the M1B-T007 pass. |
 
+### M1B-T005: Cavitary Lesions, Scar Resection, And Scaffold Filling
+
+**Status**: consensus-ready profile started; consensus statement not yet finalized.
+
+| Profile Element | Curated Summary |
+|---|---|
+| Evidence base | Two full-text studies, M1A-P005 and M1A-P022, plus abstract/source-page support from M1A-P012 and M1A-P034, with 7 extracted observations and 5 author claims. |
+| Agreement | Chronic scar-resection and cavitary lesion repair studies repeatedly treat the post-resection gap/cavity as a repair compartment that may need filling, bridging, or trophic/cellular support rather than simple tissue removal. |
+| Strong points | Rasouli provides the key negative boundary condition that resection alone failed to support axon crossing and worsened recovery after contusion. Xiao provides human feasibility evidence for electrophysiology-guided scar identification, scar-rich/neural-poor resection specimens, scaffold/cell filling, and one-year safety follow-up in complete chronic SCI. |
+| Main uncertainty | Wang and Ito are currently abstract/source-page level in this tracker; they support the recurring scaffold/cell-filling pattern but cannot yet carry exact efficacy or histological-integration claims. |
+| Likely boundary conditions | Contusion versus hemisection, complete versus incomplete SCI, timing of resection, whether scar removal is paired with scaffold/cell filling, how scar boundaries are identified, and whether outcomes are safety, electrophysiology, histological repair, axon crossing, or functional recovery. |
+| Current interpretation | The database should distinguish "scar resection alone" from "scar resection plus cavity/gap reconstruction." Resection alone is not consensus-reparative, while scaffold/cell filling is a recurring repair strategy that remains source- and model-dependent. |
+| Next evidence needed | Parse Wang 2018 and Ito 2024 full texts for exact locomotor, evoked-potential, lesion-filling, graft-survival, and histological repair endpoints; add queued human PEG/scar-resection papers only if they change the safety or cavity-repair boundary. |
+
 ---
 
 ## Contradiction Map
@@ -351,6 +394,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | M1B-X001 | M1B-T004 | M1B-C001: chronic rat hemisection scar softening | M1B-C003: chronic mouse contusion lesion stiffening | Directional divergence | Rat hemisection, fresh 500 um sections, 80 um bead, 15-18 WPI versus mouse severe contusion, 10 um freeze/thaw cryosections, 2.5 um radius bead, 12 WPI | PARTIALLY RESOLVED AS MODEL/METHOD-DEPENDENT; not suitable for single-direction consensus |
 | M1B-X002 | M1B-T002 | M1B-C008/M1B-C009: type A pericyte-derived scarring drives fibrosis and recovery limits | M1B-C006/M1B-C011: Col1alpha1/Col1a2 fibroblasts, not NG2/Myh11 pericytes, are primary fibrotic scar source | Lineage-definition divergence | GLAST/type A pericyte lineage and functional attenuation versus Col1alpha1/Col1a2 fibroblast lineage, NG2/Myh11 pericyte/vSMC exclusion, contusion/hemisection/transection/crush models, dura intact/disrupted | PARTIALLY RESOLVED AS MARKER-AND-DEFINITION-DEPENDENT; store cell-origin evidence with driver/marker context |
 | M1B-X003 | M1B-T003 | M1B-C014: established scar-forming astrocytes resist direct in vitro reversion | M1B-C015/M1B-C016/M1B-C017: astrocytic border recruitment, corralling, and morphology remain intervention-sensitive in vivo | Process-boundary distinction | Established astrocyte state maintenance versus recruitment of neighboring astrocytes; in vitro Col-I-SA assays versus in vivo chronic contusion/transplantation and source-page wound-healing perturbations | RESOLVED AS PROCESS-SPECIFIC; distinguish astrocyte-state reversal from border recruitment/organization |
+| M1B-X004 | M1B-T005 | M1B-C030: scar resection alone is neutral or harmful and does not restore axon crossing | M1B-C031/M1B-C032/M1B-C034: resection plus scaffold/cell filling is used as a repair strategy | Process-boundary distinction | Resection alone versus resection followed by gap/cavity reconstruction; contusion/hemisection animal models versus complete chronic human SCI; locomotor/axon tracing versus feasibility/safety/histology endpoints | RESOLVED AS INTERVENTION-SPECIFIC; store resection-only and reconstruction-after-resection separately |
 
 ---
 
@@ -358,11 +402,11 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 | Gate | Requirement | Status |
 |---|---|---|
-| GATE-1 | At least 3 independent papers with linked observations for a topic | MET FOR T001, T002, T003, AND T006; NOT MET FOR T004; 2 linked papers |
-| GATE-2 | At least 1 contradicting or boundary-condition check for each major consensus topic | MET FOR T002, T003, AND T004 |
+| GATE-1 | At least 3 independent papers with linked observations for a topic | MET FOR T001, T002, T003, T005, AND T006; NOT MET FOR T004; 2 linked papers |
+| GATE-2 | At least 1 contradicting or boundary-condition check for each major consensus topic | MET FOR T002, T003, T004, AND T005 |
 | GATE-3 | Source strength recorded: full-text/source-page/abstract-level | MET FOR PAPER LEVEL |
-| GATE-4 | Claims linked to observations through EvidenceLink | STARTED; MET FOR T001, T002, T003, T004, AND T006 FIRST PASS |
-| GATE-5 | No consensus statement depends on a single paper | MET FOR T001, T002, T003, T004, AND T006 PROFILES; NOT MET GLOBALLY |
+| GATE-4 | Claims linked to observations through EvidenceLink | STARTED; MET FOR T001, T002, T003, T004, T005, AND T006 FIRST PASS |
+| GATE-5 | No consensus statement depends on a single paper | MET FOR T001, T002, T003, T004, T005, AND T006 PROFILES; NOT MET GLOBALLY |
 
 ---
 
@@ -375,3 +419,4 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 - 2026-07-16: Completed first-pass Observation, AuthorClaim, EvidenceLink, and consensus-ready profile rows for M1B-T003 using Tamaru 2023 full text plus source-page rows for Zhou 2020, Shen 2025, and O'Shea 2024.
 - 2026-07-16: Completed first-pass Observation, AuthorClaim, EvidenceLink, and consensus-ready profile rows for M1B-T001 using Gong 2023 and Cooper 2018 full text plus abstract/source-page rows for Zhang 2011 and Milich 2021.
 - 2026-07-16: Completed first-pass Observation, AuthorClaim, EvidenceLink, and consensus-ready profile rows for M1B-T006 using McCallum 2026 full text plus imaging/abstract support from Scholtes 2011, Song 2018, and Rosenberg 2005.
+- 2026-07-16: Completed first-pass Observation, AuthorClaim, EvidenceLink, contradiction-map, and consensus-ready profile rows for M1B-T005 using Rasouli 2009 and Xiao 2016 full text plus abstract/source-page support from Wang 2018 and Ito 2024.
