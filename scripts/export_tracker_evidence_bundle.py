@@ -89,6 +89,31 @@ MODULES = {
             "COMPLETE FIRST PASS",
         ),
     ),
+    "4b": ModuleConfig(
+        key="4b",
+        label="Module 4B",
+        tracker=ROOT / "modules" / "Module_4B_TRACKER.md",
+        output=ROOT / "data" / "processed" / "module4_evidence_bundle.json",
+        id_prefix="M4B",
+        boundary_prefix="M4B-B",
+        evidence_link_section="## Pass 6: Evidence Links Drafted",
+        boundary_section="## Boundary Conditions Draft",
+        boundary_id_key="boundary_id",
+        consensus_section="## Consensus Draft Queue",
+        consensus_statement_key="draft_statement",
+        expected_counts={
+            "observations": 60,
+            "author_claims": 40,
+            "evidence_links": 72,
+            "boundary_records": 8,
+            "consensus_drafts": 8,
+        },
+        required_phrases=(
+            "CONSENSUS-READY FIRST PASS",
+            "Module 4 first-pass curation freeze",
+            "COMPLETE FIRST PASS",
+        ),
+    ),
 }
 
 
