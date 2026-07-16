@@ -1,0 +1,727 @@
+
+
+===== PAGE 1 =====
+JOURNAL OF NEUROTRAUMA
+Volume 16, Number 6, 1999
+Mary Ann Liebert, Inc.
+Human Spinal Cord Retains Substantial Structural Mass in
+Chronic Stages After Injury
+MARK H. TUSZYNSKI,12 KATIE GABRIEL,1 KEVIN GERHARDT,2
+and SUZANNE SZOLLAR2
+ABSTRACT
+In chronic stages of human spinal cord injury, atrophy of the cord has been reported in regions
+both at and distant to the injury site. Local cord atrophy results from the direct effects of bony im-
+pact and ischemia, whereas distant atrophy results from anterograde (Wallerian) and retrograde
+axonal degeneration. However, the actual extent of degenerative changes in the chronically injured
+human spinal cord both at and remote from the injury site has rarely been reported, and has not
+been rigorously quantified to date. In the present study, we quantified the extent of spinal cord at-
+rophy in 12 humans with chronic injury (2-34 years posttrauma) utilizing quantitative stereologi-
+cal assessment of spinal cord magnetic resonance images, and compared the results to uninjured
+human spinal cords. Focal cystic atrophy of the cord, characterized by signal attenuation on Tl-
+weighted images, was regularly present at the actual site of impact injury and replaced a mean lon-
+gitudinal area equaling less than one spinal cord segment in length (2.01± 0.60 cm2, or a loss of
+89.3 ± 17.4% of the longitudinal area of one spinal cord segment). Spinal cord segments immedi-
+ately rostral to the zone of cystic degeneration showed atrophy of only 19.4 ± 7.5 % of normal cord
+longitudinal area, and spinal cord segments immediately caudal to the zone of cystic degeneration
+showed atrophy of 16.5 ±4.1% of normal cord longitudinal area. Extensive spinal cord atrophy ex-
+tending beyond the region of injury occurred in two of twelve cases (16.7%), and both were caused
+by late syrinx formation. Thus, spinal cord atrophy after trauma remains primarily restricted to
+the original site of injury. Experimental neural repair strategies should take into account the im-
+portance of "bridging" relatively short zones of cystic atrophy, then promoting axonal regeneration
+through potentially long segments of remaining cord parenchyma.
+Key words: atrophy; chronic; MRI; regeneration; spinal cord injury; stereology
+INTRODUCTION cord often develops at the level of the original injury
+caused by both primary cell damage resulting from di-
+MosT
+human spinal cord injuries result from acute rect trauma and ischemia, and secondary cell damage re-
+compressive events (Stovers and Fine, 1986; Di- suiting from free radical formation, accumulation of ex-
+tunno and Formal, 1994; Kakulas and Taylor, 1992). citatory neurotransmitters, calcium toxicity, necrosis and
+Over extended time periods, focal atrophy of the spinal apoptosis (Narayan et al.,1996; Bunge et al.,1993; Kaku-
+1
+Department of Neurosciences, University of California-San Diego, La Jolla, California.
+2Veterans Affairs Medical Center, San Diego, California.
+523
+
+
+
+===== PAGE 2 =====
+TUSZYNSKI ET AL.
+las and Taylor, 1992; Young, 1992; Choi, 1988; Hall et
+al.,1989; Yum and Faden, 1990; Crowe et al.,1997).
+Spinal cord atrophy distant to the injury site also occurs,
+due to anterograde (Wallerian) and retrograde axonal de-
+generation (Bunge et al.,1993; Kakulas and Taylor, 1992;
+Becerra et al.,1995; Taneichi et al.,1994;Nidecker et
+al.,1991).
+Yet spinal cord injury rarely completely transects the
+spinal cord, and electrophysiological transmission across
+injury sites has been demonstrated in humans with sub-
+stantial neurological impairment after spinal cord injury.
+Indeed, the function of these maintained projections can
+be transiently augmented by conduction-enhancing com-
+pounds such as 4-aminopyridine (Hayes, 1994; Hanse-
+boutetal., 1993; Young, 1992; Blight et al.,1991). Patho-
+logical studies also frequently reveal a persistent rim of
+spinal cord parenchyma between rostral and caudal seg-
+ments of the injured spinal cord, and the sprouting of
+some neural systems, including sensory projections, into
+injured regions (Melinek et al.,1994).Thus, both struc-
+tural and electrophysiological evidence indicates the per-
+sistence of some neural systems across sites of spinal cord
+injury, although these systems may be nonfunctional or
+partially functional. Clearly, our knowledge regarding the
+full spectrum of anatomical, physiological and functional
+alterations that result from spinal cord injury is incom-
+plete.
+The purpose of the present study was to more fully un-
+derstand the structural consequences of chronic human
+spinal cord injury. Previous studies have described a
+diminution in local and distant spinal cord mass in
+chronic stages after human spinal cord injury, but detailed
+quantification of the extent of this loss is lacking (Bunge
+et al.,1993; Becerra et al.,1995; Taneichi et al.,1994;
+Nidecker et al.,1991). Thus, in the present study the ex-
+tent of atrophie change in the chronically injured human
+spinal cord was determined. Spinal longitudinal areas
+were objectively quantified using stereological methods
+(Coggeshall, 1992) on magnetic resonance images
+(MRIs) of chronically injured human spinal cords at in-
+jured segments and in spinal cord regions rostral and cau-
+dal to the injury site. Results were compared to MRIs of
+uninjured human spinal cords at similar spinal segments.
+METHODS
+MRI scans of 20 patients were examined. Twelve pa-
+tients who had suffered acute mid-cervical spinal cord
+compressive injuries at least two years earlier were com-
+pared to eight uninjured controls (Table 1).The mean age
+of the injured patients was 46 ± 3 years, and that of con-
+trol (uninjured) patients was 52 ± 6 years. Eleven of the
+12 injured patients were male, and six of the eight con-
+trol patients were male. To standardize subject sampling,
+patients with lesions outside the mid-cervical region were
+not included in the analysis. Scans were performed on a
+General Electric 1.5 tesla Clinical Image MRI (General
+Electric, Milwaukee, WI) with a TR interval of 500-700,
+TE of 12-17, and parasagittal slice thickness of 3 mm.
+Table 1. Spinal Cord Injured Patients
+Age Sex
+Mechanism
+of injury
+Duration
+of injury
+(years)
+Level of
+injury Frankel grade1*
+25
+36
+37
+40
+43
+44
+46
+46
+48
+52
+61
+72
+M
+M
+F
+M
+M
+M
+M
+M
+M
+M
+M
+M
+MVA
+Fall
+MVA
+MVA
+Diving
+Swimming
+Gunshot
+MVA
+MVA
+MVA
+2.7
+18.3
+7.7
+5.5
+2.1
+11.8
+4.3
+27.9
+24.9
+13.6
+34.8
+31.7
+C6
+C6
+C5
+C8
+C5
+C7
+C5
+C4
+C6
+C6
+C7
+C6
+B
+A
+Dl
+Dl
+A
+B
+Dl
+Dl
+A
+A
+B
+aFrankel Grade: A, complete; B, incomplete, preserved sensation only; C, incomplete, preserved motor, nonfunctional; Dl,
+incomplete, preserved motor, functional with assistive devices; D2, incomplete, preserved motor, functional with no assistive
+devices; E, complete recovery.
+MVA, motor vehicle accident.
+Blank spaces indicate data not available.
+524
+
+
+
+===== PAGE 3 =====
+CHRONIC SPINAL CORD ATROPHY
+All measurements were obtained from the most cen-
+tral and medial parasagittal MRI slice in each subject.
+The following parameters were assessed: (1) the area of
+spinal cord atrophy at the original lesion site, (2) the lon-
+gitudinal area of spinal cord immediately rostral to the
+lesion site over three spinal segments in lesioned sub-
+jects, or in three spinal segments rostral to the C4-5 in-
+tervertebral disc space in uninjured subjects; and (3) the
+longitudinal area of spinal cord immediately caudal to the
+lesion site over three spinal segments in lesioned sub-
+jects, or in three spinal segments caudal to the C4-5 in-
+tervertebral disc space in uninjured subjects. Spinal cord
+lesion margins were recognized by diminished MR sig-
+nal characteristics on Tl-weighted images and enhanced
+signal characteristics in T2-weighted images.
+Spinal cord areas were quantified in each subject in
+the parasagittal plane using quantitative stereological
+methods (Coggeshall, 1992).Stereological methods uti-
+lize an "optical dissector" (a standard reference sampling
+plane in space) to obtain an unbiased estimate of sample
+size for an identified anatomical structure as follows (for
+review, see Peterson and Jones, 1993): a regular grid of
+crosses on an acetyl acetate sheet with in intergrid dis-
+tance of 5 mm was superimposed on a X 10 magnified
+image of MR images from each patient. The number of
+crosses intersecting the spinal cord in each defined re-
+gion was summated, converted to actual area measure-
+ments according to the appropriate distance and magni-
+fication factors (X10), and expressed in mm2. Area
+measurements for each subject rostral to the injured site
+were divided by mean area measurements in the same
+sampling region rostral to C4-5 in the uninjured group.
+Similarly, area measurements for each subject caudal to
+the injured site were divided by mean area measurements
+in the same sampling region caudal to C4-5 in the unin-
+jured group.
+Area measurements and height measurements were
+compared between the injured and intact group using un-
+paired, one-tailed Student's t test. Data are presented as
+mean ± SEM.
+RESULTS
+The average time from original injury to MRI scan was
+15.4 ± 3.4years among injured subjects (range, 2.1-34.8
+years). Two of the 12 injured subjects showed posttrau-
+matic syrinx formation on MRI scans and were not in-
+cluded in statistical analysis of lesion areas, since syrinx
+formation is an indirect sequel of the injury. Therefore
+FIG. 1. MR images of human spinal cords. Region of spinal cord injury (arrows) in patients 4years (A) and 11 years (B) af-
+ter mid-cervical spinal cord injury. Note that region of signal attenuation corresponding to injury site is focal, extends for less
+than one spinal cord segment, and corresponds to region of overlying orthopedic distortion. (C) Normal spinal cord for compar-
+525
+
+
+
+===== PAGE 4 =====
+TUSZYNSKI ET AL.
+Spinal Longitudinal Areas
+Rostral to Injury Site
+Mean Spinal Longitudinal
+Area Rostral to Injury Site
+u>
+c
+o
+Injured Uninjured Injured Uninjured
+B Spinal Longitudinal Areas g
+Caudal to Injury Site —
+Mean Spinal Longitudinal
+Area Caudal to Injury Site
+E
+ra
+ta
+c
+T3
+C
+O
+ra
+c
+ u ^
+D CM
+•s<
+0)£
+c u
+o —
+-I <C
+Q)
+ra <
+(D
+Injured Uninjured
+FIG. 2. Area measurements over three spinal cord segments
+directly (A) rostral and (B) caudal to lesion site in spinal cord
+injured patients, or over three spinal cord segments adjacent to
+C4-5 in uninjured subjects.
+Injured Uninjured
+FIG. 3. Comparison of mean spinal cord area measurements
+in spinal-injured and uninjured subjects over three segments (A)
+rostral and (B) caudal to the lesion site in spinal injured sub-
+jects, or over three spinal cord segments adjacent to C4-5 in
+uninjured subjects.
+526
+
+
+
+===== PAGE 5 =====
+CHRONIC SPINAL CORD ATROPHY
+measurements of spinal cord areas after injury were based
+upon 10 subjects in the injured group and eight subjects
+in the intact control group.
+Spinal Cord Atrophy at the Lesion Site
+The spinal cord lesion site was identifiable as a dis-
+tinct region of MRI signal attenuation typically corre-
+sponding closely to an anterior dissociation of vertebral
+body integrity (Fig. 1). The average area of this spinal
+cord lesion site in the 10 lesioned subjects, quantified uti-
+lizing the stereological methods noted above, was 2.01 ±
+0.60 cm2. In comparison, the average area of one intact
+segment of the cervical spinal cord spanning a region
+from the mid-C4 to mid-C5 disc space was 2.25 ± 0.44
+cm2 in uninjured subjects. Thus, the mean area of signal
+attenuation corresponding to atrophy from a chronic
+spinal cord injury equaled 89.3% of the longitudinal area
+of one normal spinal cord segment.
+Spinal Cord Atrophy Rostral and Caudal to the
+Lesion Site
+Average spinal cord area rostral to the injury site mea-
+sured 5.31 ± 0.49cm2 (±SEM) in injured individuals and
+6.61 ±0.35 cm2 in uninjured controls, a difference that was
+statistically significant (p < 0.05;Table 1,Fig.2A).Cau-
+dal to the injury site, average spinal cord areas also differed
+significantly, measuring 5.35 ± 0.26cm2 (±SEM) in in-
+jured individuals and 6.42± 0.24cm2 in uninjured sub-
+jects (p < 0.005;Table 1,Fig.2B).However, the magni-
+tude of difference in area measurements between the two
+groups was not substantial: injured subjects demonstrated
+a loss of mean spinal longitudinal area of only 19.4 ± 7.5%
+compared to uninjured subjects rostral the lesion site, and
+16.5 ±4.1% caudal to the injury site compared to unin-
+jured subjects. Stated differently, uninjured subjects re-
+tained a mean of 80.6% of normal spinal cord longitudinal
+area rostral to the injury site, and retained 83.5% of nor-
+mal area caudal to the injury site (Fig.3A,B).
+Correlation of Spinal Cord Atrophy to
+Frankel Grade
+The severity of neurological deficit (Frankel grade)
+generally correlated with the extent of spinal cord atro-
+phy at the lesion site (Fig. 4),although the number of
+subjects in each group was insufficient to generate sig-
+nificant statistical correlations.
+DISCUSSION
+The present study indicates that spinal cord atrophy in
+chronic stages after cervical impact injury is relatively
+Correlation of Frankel Grade
+with Area of Lesion
+5.0 H
+CM
+<
+£
+ta
+c
+o
+"35
+a>
+3.0 H
+0.0
+ABC
+Frankel Grade
+D1
+FIG. 4. Correlation of lesion area with Frankel grade.
+527
+
+
+
+===== PAGE 6 =====
+TUSZYNSKI ET AL.
+restricted in degree. The mean amount of cystic atrophy at
+the actual spinal cord injury site replaces less than one lon-
+gitudinal cord segment. Further, the degree of atrophy ros-
+tral and caudal to sites immediately adjoining the injury
+site is also relatively modest in degree: approximately 80%
+of normal spinal cord longitudinal area is retained in spinal
+cord segments adjacent to injury sites an average of 15
+years after injury. Atrophy at the injury site is caused by
+direct tissue damage with secondary necrosis and cavita-
+tion, whereas anterograde and retrograde axonal degener-
+ation is likely to account for spinal cord atrophy in spinal
+cord segments adjacent to the injury (Ramon y Cajal, 1928;
+Bunge et al.,1993; Becerra et al.,1995; Taneichi et al.,
+1994; Nidecker et al.,1991). Extensive atrophy remote
+from the injury site occurs uncommonly and can be at-
+tributed to posttraumatic syrinx formation (Bunge et al.,
+1993; Curati et al.,1992; Tosi et al.,1993; Ditunno and
+Formal, 1994;Nidecker et al.,1991).
+Spinal cord damage from an acute compressive injury
+is caused by several factors: (1) direct neuronal and ax-
+onal destruction from mechanical disruption by
+compressive forces, (2) ischemia, (3) posttraumatic/
+postanoxic release of excitotoxins, free radicals and cal-
+cium, (4) edema, (5) mediators of inflammatory re-
+sponses, and (6) delayed apoptosis, or programmed cell
+death (Narayan et al.,1996; Zivin and Choi, 1991; Kaku-
+las and Taylor, 1992; Young, 1992; Choi, 1988; Hall et
+al., 1989; Yum and Faden,- 1990; Crowe et al.,1997).
+Thus, what begins as a relatively restricted injury may
+enlarge in extent in subacute and chronic phases of in-
+jury. Several therapeutic efforts in acute spinal cord in-
+jury are directed at preventing the severity of secondary
+events that contribute to injury (Zivin and Choi, 1991;
+Young, 1992; Choi, 1988; Hall et al.,1989; Yum and
+Faden, 1990; Narayan et al.,1996).
+Few options are currently available for the treatment
+of chronic spinal cord injury. Experimental efforts di-
+rected at enhancing axonal impulse conduction through
+residual spinal pathways after chronic injury are under
+examination in both animals and humans, using agents
+such as 4-aminopyridine (Young, 1992; Blight et al.,
+1991). Other experimental strategies in animal models
+have attempted to promote axonal regrowth and regen-
+eration, although primarily in acute injury models
+(Schnell and Schwab, 1990; Bregman et al., 1995;
+Schnell et al., 1994; Cheng et al.,1996; Reier et al.,
+1992a,b; Young, 1992). Means of promoting regenera-
+tion have included the provision of ( 1) supportive cellu-
+lar, biological and artificial axonal growth substrates
+(Gage et al.,1988; Richardson et al.,1980; Houle and
+Johnson, 1989; Yakovleff et al.,1989; Kromer et al.,
+1981; Marchand and Woerly, 1990; Hoovler and
+Wrathall, 1991; de la Torre, 1982; Gelderd and Quarles,
+1990; Tessler, 1991; Himes et al.,1994; Li, Raisman,
+1993; Foster et al.,1990; Duncan et al.,1988; Paino and
+Bunge, 1991); (2) neuronal growth factors (Houle and
+Johnson, 1989; Houle, 1992; Tuszynski et al., 1996,
+1997; Nakahara et al.,1996; Schnell et al.,1994;Xu et
+al.,1995; Cheng et al.,1996; Menei et al.,1997; Grill et
+al., 1997b); (3) blockade of myelin-associated axon
+growth inhibitors (Schwab, 1990; McKerracher et al.,
+1994;Bregman et al.,1995); or (4)combinations of these
+approaches (Tuszynski and Gage, 1995; Schnell et al.,
+1994). These experimental manipulations have only
+rarely been examined in models of chronic spinal cord
+injury, however (Reier et al.,1988; Houle and Reier,
+1988; Houle, 1991; Anderson et al.,1991; Houle, 1992;
+Houle and Ye, 1997; Houle et al.,1996; Grill et al,
+1997a).
+Findings from the present study support the testing of
+these experimental paradigms in chronic animal injury
+models for two reasons: first, loss of spinal cord mass re-
+mains primarily restricted to the original injury site in
+chronic injury, thus "bridging" growth strategies which
+attempt to induce axonal growth across relatively short
+zones of parenchymal destruction are appropriate. This
+short-distance bridging should then be followed by ma-
+nipulations of the injury model that promote axonal
+growth through longer segments of remaining cord
+parenchyma. Second, the transected proximal tips of ax-
+ons remain adjacent to injured regions for extended time
+periods after injury (McBride et al., 1990; Li and Rais-
+man, 1995), unless injury occurs at high cervical levels,
+and these chronically injured axons remain responsive to
+neurotrophic factors (Houle and Ye, 1997; Houle et al.,
+1996; Grill et al., 1997a). Thus regenerative axonal
+growth after chronic spinal cord injury is potentially re-
+cruitable. Since the majority of the 250,000 Americans
+with spinal cord injuries are in the chronic stages of in-
+jury (Stovers and Fine, 1986; Ditunno and Formal, 1994),
+further research into chronic injury models could be of
+potential relevance to a substantial number of patients.
+ACKNOWLEDGMENTS
+This work was supported by Veterans Affairs, the
+Hollfelder Foundation, the Heumann Foundation, and the
+National Institutes of Health (NS37083).
+REFERENCES
+ANDERSON, D.K.,REIER, P.J.,WIRTH, E.D., THEELE,
+D.P.,MARECI, T.,and BROWN, S.A. (1991). Delayed
+528
+
+
+
+===== PAGE 7 =====
+CHRONIC SPINAL CORD ATROPHY
+grafting of fetal CNS tissue into chronic compression lesions
+of the adult cat spinal cord. Restor. Neurol. Neurosci. 2,
+309-325.
+BECERRA, J.L.,PUCKETT, W.R., HIESTER, E.D., et al.
+(1995). MR-pathologic comparisons of Wallerian degenera-
+tion in spinal cord injury. Am. J.Neuroradiol. 16, 125-133.
+BLIGHT, A.R.,TOOMBS, J.P.,BAUER, M.S.,and WIDMER,
+W.R. (1991). The effects of 4-aminopyridine on neurologi-
+cal deficits in chronic cases of traumatic spinal cord injury
+in dogs: a phase I clinical trial. J.Neurotrauma 8,103-119.
+BREGMAN, B.S.,KUNKEL-BAGDEN, E.,SCHNELL, L.,
+DAI, H.N.,GAO, D.,and SCHWAB, M.E. (1995). Recov-
+ery from spinal cord injury by antibodies to neurite growth
+inhibitors. Nature 378, 498-501.
+BUNGE, R.P., PUCKETT, W.R., BECERRA, J.L.,MAR-
+CILLO, A.,and QUENCER, R.M. (1993). Observations on
+the pathology of human spinal cord injury. A review and clas-
+sification of 22 new cases with details from a case of chronic
+cord compression with extensive focal demyelination. Adv.
+Neurol. 59, 75-89.
+CHENG, H.,YIHAI, C, and OLSON, L. (1996). Spinal cord
+repair in adult paraplegic rats: partial restoration of hind limb
+function. Science 273, 510-513.
+CHOI, D.W. (1988). Glutamate neurotoxicity and diseases of
+the nervous system. Neuron 1,623-634.
+COGGESHALL, R.E. (1992). A consideration of neural count-
+ing methods. Trends Neurosci. 15, 9-13.
+CROWE, M.J.,BRESNAHAN, J.C.,SHUMAN, S.L.,MAS-
+TERS, J.N.,and BEATTIE, M.S. (1997). Apoptosis and de-
+layed degeneration after spinal cord injury in rats and mon-
+keys. Nat. Med. 3, 73-76.
+CURATI, W.L., KINGSLEY, D.P.E.,KENDALL, B.E.,and
+MOSELEY, I.F.(1992). MRI in chronic spinal cord trauma.
+Neuroradiology 35, 30-35.
+de la TORRE, J.C. (1982). Catecholamine fiber regeneration
+across a collagen bioimplant after spinal cord transection.
+Brain Res. Bull. 9,545-552.
+DITUNNO, J.F.,and FORMAL, C.S. (1994). Chronic spinal
+cord injury. N. Engl. J.Med. 330, 550-556.
+DUNCAN, I.R.,HAMMANG, J.P.,JACKSON, K.F.,WOOD,
+P.M.,BUNGE, R.P.,and LANGFORD, L. (1988). Trans-
+plantation of oligodendrocytes and Schwann cells into the
+spinal cord of the myelin-deficient rat. J.Neurocytol. 17,
+351-360.
+FOSTER, G.A.,BRODIN, E.,GAGE, F.H.,MAXWELL, D.J.,
+ROBERTS, M.H.,and SHARP, T.(1990). Restoration of
+function to the denervated spinal cord after implantation of
+embryonic 5HT- and substance P-containing raphe neurones.
+Prog. Brain Res. 82,247-259.
+GAGE, F.H.,BLAKER, S.N.,DAVIS, G.E.,ENGVALL, E.,
+VARON, S.,and MANTHORPE, M. (1988). Human amnion
+membrane matrix as a substratum for axonal regeneration in
+the central nervous system. Exp. Brain Res. 72,371-380.
+GELDERD, J.B.,and QUARLES, J.E. (1990). A preliminary
+study of homotopic fetal cortical and spinal cotransplants in
+adult rats. Brain Res. Bull. 25,35^18.
+GRILL, R.,BLESCH, A.,and TUSZYNSKI, M.H. (1997a).
+Augmented growth responses of supraspinal and spinal cord
+axons to cellularly delivered nerve growth factor after chronic
+spinal cord injury in adult rats. Exp. Neurol. 148,444^152.
+GRILL, R., MURAI, K.,BLESCH, A.,GAGE, F.H.,and
+TUSZYNSKI, M.H. (1997b). Cellular delivery of neu-
+rotrophin-3 promotes corticospinal axonal growth and par-
+tial functional recovery after spinal cord injury. J.Neurosci.
+17, 5560-5572.
+HALL, E.D.,YONKERS, P.A.,HORAN, K.L.,and BRAUGH-
+LER, J.M. (1989). Correlation between attentuation of post-
+traumatic spinal cord ischemia and preservation of tissue by
+vitamin E by the 21-aminosteroid U74006F: evidence for an
+in vivo antioxidant mechanism. J.Neurotrauma 6, 169-176.
+HANSEBOUT, R.R., BLIGHT, A.R., FAWCETT, S., and
+REDDY, K.(1993). 4-Aminopyridine in chronic spinal cord
+injury: a controlled, double-blind, crossover study in eight
+patients. J.Neurotrauma 10, 1-18.
+HAYES, K.C.(1994).4-Aminopyridine and spinal cord injury:
+a review. Restor. Neurol. Neurosci. 6,259-270.
+HIMES, B.T.,GOLDBERGER, M.E., and TESSLER, A.
+(1994). Grafts of fetal central nervous system tissue rescue
+axotomized Clarke's nucleus neurons in adult and neonatal
+operates. J.Comp. Neurol. 339, 117-131.
+HOOVLER, D.W., and WRATHALL, J.R. (1991). Implanta-
+tion of neuronal suspensions into contusive injury sites in the
+adult rat spinal cord. Acta Neuropathol. 81, 303-311.
+HOULE, J.(1992). The structural integrity of glial scar tissue
+associated with a chronic spinal cord lesion can be altered
+by transplanted fetal spinal cord tissue. J.Neurosci. Res. 31,
+120-130.
+HOULE, J.D.,and REIER, P.J.(1988). Transplantation of fe-
+tal spinal cord tissue into the chronically injured adult rat
+spinal cord. J.Comp. Neurol. 269,535-547.
+HOULE, J.D.,and JOHNSON, J.E.(1989). Nerve growth fac-
+tor (NGF)-treated nitrocellulose enhances and directs the re-
+generation of adult rat dorsal root axons through intraspinal
+neural tissue transplants. Neurosci. Lett. 103, 17-23.
+HOULE, J.D.(1991). Demonstration of the potential for chron-
+ically injured neurons to regenerate axons into intraspinal pe-
+ripheral nerve grafts. Exp. Neurol. 113, 1-9.
+HOULE, J.D. (1992). Regeneration of dorsal root axons is re-
+lated to specific non-neuronal cells lining NGF-treated in-
+traspinal nitrocellulose transplants. Exp. Neurol. 118,
+133-142.
+HOULE, J.D.,YE, J.-H.,and KANE, C.J.M. (1996). Axonal
+529
+
+
+
+===== PAGE 8 =====
+TUSZYNSKI ET AL.
+regeneration by chronically injured supraspinal neurons can
+be enhanced by exposure to insulin-like growth factor, basic
+fibroblast growth factor or transforming growth factor beta.
+Restor. Neurol. Neurosci. 10,205-215.
+HOULE, J.D.,and YE, J.-H.(1997). Treatment of the chroni-
+cally injured spinal cord with neurotrophic factors can pro-
+mote axonal regeneration from supraspinal axons. Exp. Neu-
+rol. 143,70-81.
+KAKULAS, B.A.,and TAYLOR, J.R.(1992). Pathology of in-
+juries to the vertebral column and spinal cord, in: Spinal Cord
+Trauma. HL. Frankel (ed), Elsevier Science: Amsterdam,
+pp. 21-54.
+KROMER, L.F.,BJORKLUND, A.,and STENEVI, U. (1981).
+Regeneration of the septohippocampal pathways in adult rats
+is promoted by utilizing embryonic hippocampal implants as
+bridges. Brain Res. 210, 172-200.
+LI, Y.,and RAISMAN, G. (1993). Long axon growth from em-
+bryonic neurons transplanted into myelinated tracts of the
+adult rat spinal cord. Brain Res. 629, 115-127.
+LI, Y., and RAISMAN, G (1995). Sprouts from cut corti-
+cospinal axons persist in the presence of astrocytic scarring
+in long-term lesions of the adult rat spinal cord. Exp. Neu-
+rol. 134, 102-115.
+MARCHAND, R.,and WOERLY, S.(1990). Transected spinal
+cords grafted with in situ self-assembled collage matrices.
+Neuroscience 36, 45-60.
+McBRIDE, R.L., FERINGA, E.R., GARVER, M.K.,and
+WILLIAMS, J.K.(1990). Retrograde transport of fluoro-gold
+in corticospinal and rubrospinal neurons 10 and 20 weeks af-
+ter T-9 spinal cord transection. Exp. Neurol. 108, 83-85.
+McKERRACHER, L.,DAVID, S.,JACKSON, D.L.,KOTTIS,
+V.,DUNN, R.J.,and BRAUN, P.E. (1994). Identification of
+myelin-associated glycoprotein as a major myelin-derived in-
+hibitor of neurite growth. Neuron 13, 805-811.
+MELINEK, R.,HOLETS, V.R., PUCKETT, W.R., KREGER,
+H.,and BUNGE, R.P. (1994). Calcitonin gene-related pep-
+tide (CGRP)-like immunoreactivity in motoneurons of the
+human spinal cord following injury. J. Neurotrauma 11,
+63-71.
+MENEI, P.,MONTERO-MENEI, C, WHITTEMORE, S.R.,
+BUNGE, M.B.,and BUNGE, R.P. (1997). Schwann cells ge-
+netically modified to secrete human BDNF promote en-
+hanced axonal regrowth across transected adult rat spinal
+cord. Eur. J.Neurosci. 10,607-621.
+NAKAHARA, Y., SENUT, M.-C, GAGE, F.H.,and
+TUSZYNSKI, M.H. (1996). Grafts of fibroblasts genetically
+modified to secrete NGF, BDNF, NT-3 or basic FGF elicit
+differential responses in the adult spinal cord. Cell Trans-
+plant. 5, 191-204.
+NARAYAN, R.K.,WILBERGER, J.E.,Jr.,and POVLISHOCK,
+JT.(1996). Neurotrauma. McGraw-Hill: New York.
+NIDECKER, A.,KOCHER, M., MAEDER, M., GRATZL,
+G.A.,BENZ, U.F.,and BURCKHARDT, B. (1991). MR-
+imaging of chronic spinal cord injury. Association with neu-
+rologic function. Neurosurg. Rev. 14,169-179.
+PAINO, C.L.,and BUNGE, M.B. (1991). Induction of axon
+growth into Schwann cell implants grafted into lesioned adult
+rat spinal cord. Exp. Neurol. 114, 254-257.
+PETERSON, D.A.,and JONES, D.G. (1993). Determination of
+neuronal number and process surface area in organotypic cul-
+tures: a stereological approach. J.Neurosci. Methods 46,
+107-120.
+RAMON y CAJAL, S. (1928). Degeneration and Regeneration
+of the Nervous System. Oxford University Press: London.
+REIER, P.J.,HOULE, J.D.,JAKEMAN, L.,WINIALSKI, D.,
+and TESSLER, A. (1988). Transplantation of fetal spinal
+cord tissue into acute and chronic hemisection and contusion
+lesions of the adult rat spinal cord. Prog. Brain Res. 78,
+173-179.
+REIER, P.J.,ANDERSON, D.K.,THOMPSON, F.J.,and
+STOKES, B.T.(1992a). Neural tissue transplantation and
+CNS trauma: anatomical and functional repair of the injured
+spinal cord. J.Neurotrauma 9,Suppl. 1, S223-S248.
+REIER, P.J.,STOKES, B.T.,THOMPSON, F.J.,and AN-
+DERSON, D.K. (1992b). Fetal cell grafts into resection and
+contusion/compression injuries of the rat and cat spinal cord.
+Exp. Neurol. 115, 177-188.
+RICHARDSON, P.M.,McGUINESS, U.M., and AGUAYO,
+A.J.(1980). Axons from CNS neurons regenerate into PNS
+grafts. Nature 284,264-265.
+SCHNELL, L.,and SCHWAB, M.E. (1990). Axonal regener-
+ation in the rat spinal cord produced by antibody against
+myelin-assicated neurite growth inhibitors. Nature 343,
+269-272.
+SCHNELL, L.,SCHNEIDER, R.,KOLBECK, R., BARDE,
+Y.A.,and SCHWAB, M.E. (1994).Neurotrophin-3 enhances
+sprouting of corticospinal tract during development and af-
+ter adult spinal cord lesion. Nature 367, 170-173.
+SCHWAB, M.E. (1990). Myelin-associated inhibitors of neu-
+rite growth and regeneration in the CNS. Trends Neurosci.
+13, 452^156.
+STOVERS, S.L.,and FINE, P.R. (1986). Spinal Cord Injury.
+The Facts and Figures. Univ. Alabama: Birmingham.
+TANEICHI, H.,ABUMI, K,KANEDA, K.,and TERAE, S.
+(1994). Monitoring the evolution of intramedullary lesions
+in cervical spinal cord injury. Quanlitative and quantitative
+analysis with sequential MR imaging. Paraplegia 32, 9-18.
+TESSLER, A. (1991). Intraspinal transplants. Ann. Neurol. 29,
+115-123.
+TOSI, L.,RIGHETTI, C, TERRINI, G, and ZANETTE, G
+(1993). Atypical syndromes caudal to the injury site in pa-
+tients following spinal cord injury. A clinical, neurophysio-
+logical and MRI study. Paraplegia 31, 751-756.
+530
+
+
+
+===== PAGE 9 =====
+CHRONIC SPINAL CORD ATROPHY
+TUSZYNSKI, M.H.,and GAGE, F.H.(1995). Bridging grafts
+and transient NGF infusions promote long-term CNS neu-
+ronal rescue and partial functional recovery. P.N.A.S. 92,
+4621^625.
+TUSZYNSKI, M.H.,GABRIEL, K,GAGE, F.H.,SUHR, S.,
+MEYER, S.,and ROSETTI, A. (1996). Nerve growth factor
+delivery by gene transfer induces differential outgrowth of
+sensory, motor and noradrenergic neurites after adult spinal
+cord injury. Exp. Neurol. 137, 157-173.
+TUSZYNSKI, M.H.,MURAI, K„BLESCH, A.,GRILL, R.,
+and MILLER, I.(1997). Functional characterization of NGF-
+secreting cell grafts to the acutely injured spinal cord. Cell
+Transplant 6,361-368.
+XU, X.M., GUENARD, V., KLEITMAN, N.,AEBISCHER,
+P.,and BUNGE, M.B. (1995). A combination of BDNF and
+NT3 promotes supraspinal axonal regeneration in Schwann
+cell grafts in adult rat thoracic spinal cord. Exp. Neurol. 134,
+261-272.
+YAKOVLEFF, A.,ROBY-BRAMI, A.,GUEZARD, B.,MAN-
+SOUR, H„BUSSEL, B.,and PRIVAT, A. (1989). Locomo-
+tion in rats transplanted with noradrenergic neurons. Brain
+Res. Bull. 22,115-121.
+YOUNG, W. (1992). Clinical trials and experimental therapies
+of spinal cord injury, in: Spinal Cord Trauma. H.L. Frankel
+(ed), Elsevier Science: Amsterdam, pps. 399^120.
+YUM, S.W., and FADEN, A.I.(1990). Comparison of the neu-
+roprotective effects if the /V-methyl-D-aspastate antagonist
+MK-801 and the opiate receptor antagonist nalmefene in ex-
+perimental spinal cord ischemia. Arch. Neurol. 47,277-281.
+ZIVIN, J.A.,and CHOI, D.W. (1991). Stroke therapy. Sei. Am.
+265,56-61.
+Address reprint requests to:
+Mark H. Tuszynski
+Department of Neurosciences (0608)
+University of California-San Diego
+La Jolla, CA 92093
+E-mail: mtuszyns@ucsd.edu
+531
