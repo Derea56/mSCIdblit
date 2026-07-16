@@ -75,7 +75,8 @@ def main() -> int:
 
     required_phrases = [
         "CONSENSUS-READY FIRST PASS",
-        "DRAFTED FIRST PASS; NOT SQL-MATERIALIZED",
+        "DRAFTED FIRST PASS; CONSENSUS SQL EXPORTED; OBSERVATION LINKS DEFERRED",
+        "CONSENSUS SQL EXPORTED; CONSENSUS_OBSERVATION DEFERRED",
         "MET FOR ALL FIRST-PASS TOPICS",
         "Module 1 first-pass curation freeze",
     ]
