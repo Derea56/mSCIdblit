@@ -50,7 +50,7 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Paper ID | First Author | Year | Title | Species | Injury Model | Status | Notes |
 |----------|--------------|------|-------|---------|--------------|--------|-------|
-| M1A-P001 | Zhang SX | 2011 | Histological repair of damaged spinal cord tissue from chronic contusion injury of rat: a LM observation | Rat | Chronic contusion | QUEUED PASS -1 | Candidate for lesion core/cavity histology |
+| M1A-P001 | Zhang SX | 2011 | Histological repair of damaged spinal cord tissue from chronic contusion injury of rat: a LM observation | Rat | Chronic contusion | PASS 3 ABSTRACT-LEVEL | PubMed abstract supports conservative lesion-core/cavity-zone extraction; full text retrieval still needed |
 | M1A-P002 | Hu R | 2010 | Glial scar and neuroregeneration: histological, functional, and magnetic resonance imaging analysis in chronic spinal cord injury | Rat | Chronic SCI | QUEUED PASS -1 | Candidate for lesion architecture plus MRI |
 
 ### 2. Astrocytic Border
@@ -65,7 +65,7 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Paper ID | First Author | Year | Title | Species | Injury Model | Status | Notes |
 |----------|--------------|------|-------|---------|--------------|--------|-------|
-| M1A-P006 | Li Y | 2020 | Delayed microglial depletion after spinal cord injury reduces chronic inflammation and neurodegeneration in the brain and improves neurological recovery in male mice | Mouse | SCI | QUEUED PASS -1 | Candidate for chronic inflammatory/neurodegenerative tissue context |
+| M1A-P006 | Li Y | 2020 | Delayed microglial depletion after spinal cord injury reduces chronic inflammation and neurodegeneration in the brain and improves neurological recovery in male mice | Mouse | Thoracic contusion | PASS 3 COMPLETE | Chronic inflammatory/neurodegenerative tissue context after PLX5622 microglial depletion |
 
 ### 4. Fibrotic Scar
 
@@ -102,8 +102,9 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Paper ID | First Author | Year | Title | Species | Injury Model | Status | Notes |
 |----------|--------------|------|-------|---------|--------------|--------|-------|
-| M1A-P016 | Emmenegger TM | 2024 | Longitudinal motor system changes from acute to chronic spinal cord injury | Human | SCI | QUEUED PASS -1 | Candidate for longitudinal lesion geometry/imaging context |
+| M1A-P016 | Emmenegger TM | 2024 | Longitudinal motor system changes from acute to chronic spinal cord injury | Human | Acute-to-chronic SCI | PASS 3 COMPLETE | Five-year lesion geometry and remote motor-system degeneration imaging context |
 | M1A-P017 | Burks JD | 2019 | Imaging characteristics of chronic spinal cord injury identified during screening for a cell transplantation clinical trial | Human | Chronic SCI | QUEUED PASS -1 | Candidate for chronic lesion imaging morphology |
+| M1A-P028 | Faro SH | 2022 | DTI of chronic spinal cord injury in children without MRI abnormalities and with pathology on MRI and comparison to severity of motor impairment | Human pediatric | Chronic SCI / SCIWOMR | PASS 3 COMPLETE | Pediatric chronic SCI DTI abnormalities adjacent to lesion and AIS severity association |
 
 ### 9. Human Chronic Pathology
 
@@ -132,7 +133,7 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 | Paper ID | First Author | Year | Title | Species | Imaging/Reconstruction Method | Status | Notes |
 |----------|--------------|------|-------|---------|---|--------|-------|
 | M1A-P024 | Scholtes F | 2011 | Post-mortem assessment of rat spinal cord injury and white matter sparing using inversion recovery-supported proton density magnetic resonance imaging | Rat | MRI plus post-mortem tissue | PASS 3 COMPLETE | Chronic post-mortem MRI-to-histology white matter sparing linkage |
-| M1A-P025 | Zhao C | 2018 | Diffusion tensor imaging of spinal cord parenchyma lesion in rat with chronic spinal cord injury | Rat | DTI | QUEUED PASS -1 | Candidate for chronic parenchymal lesion geometry |
+| M1A-P025 | Zhao C | 2018 | Diffusion tensor imaging of spinal cord parenchyma lesion in rat with chronic spinal cord injury | Rat | Chronic contusion DTI | PASS 3 ABSTRACT-LEVEL | PubMed abstract supports conservative chronic DTI-to-histology extraction; full text retrieval still needed |
 
 ---
 
@@ -170,6 +171,11 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 | M1A-P009 | YES | YES | YES | YES | YES | PASS |
 | M1A-P014 | YES | YES | YES | YES | YES | PASS |
 | M1A-P021 | YES | YES | YES | YES | YES | PASS |
+| M1A-P001 | NO | NO | NO | ABSTRACT ONLY | ABSTRACT ONLY | PASS 3 ABSTRACT-LEVEL |
+| M1A-P006 | YES | YES | YES | YES | YES | PASS |
+| M1A-P016 | YES | YES | YES | YES | YES | PASS |
+| M1A-P025 | NO | NO | NO | ABSTRACT ONLY | ABSTRACT ONLY | PASS 3 ABSTRACT-LEVEL |
+| M1A-P028 | SOURCE PAGE | YES | YES | ABSTRACT + article metadata | ABSTRACT + article metadata | PASS |
 
 **BLOCKED papers**: Log separately for future retrieval attempts
 
@@ -192,6 +198,11 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 | M1A-P024 | Post-mortem assessment of rat spinal cord injury and white matter sparing using inversion recovery-supported proton density magnetic resonance imaging | F Scholtes; E Theunissen; R Phan-Ba; P Adriaensens; G Brook; R Franzen; J Gelan; J Schoenen; D Martin | 2011 | Spinal Cord | 49 | 3 | 345-351 | 10.1038/sc.2010.129 | 20877332 | https://www.nature.com/articles/sc2010129 | YES |
 | M1A-P026 | Softening of the chronic hemi-section spinal cord injury scar parallels dysregulation of cellular and extracellular matrix content | Hannah J Baumann; Gautam Mahajan; Trevor R Ham; Patricia Betonio; Chandrasekhar R Kothapalli; Leah P Shriver; Nicholas D Leipzig | 2020 | Journal of the Mechanical Behavior of Biomedical Materials | 110 | — | 103953 | 10.1016/j.jmbbm.2020.103953 | 32957245 | https://pmc.ncbi.nlm.nih.gov/articles/PMC7509206/ | YES |
 | M1A-P027 | Spinal Cord Injury Results in Chronic Mechanical Stiffening | John G Cooper; Delphine Sicard; Sripadh Sharma; Stephanie Van Gulden; Tammy L McGuire; Miguel Pareja Cajiao; Daniel J Tschumperlin; John A Kessler | 2020 | Journal of Neurotrauma | 37 | 14 | 1568-1581 | 10.1089/neu.2019.6540 | 31516087 | https://pmc.ncbi.nlm.nih.gov/articles/PMC6978780/ | YES |
+| M1A-P001 | Histological repair of damaged spinal cord tissue from chronic contusion injury of rat: a LM observation | Shu-xin Zhang; Fengfa Huang; Mary Gates; Jason White; Eric G Holmberg | 2011 | Histology and Histopathology | 26 | 1 | 45-58 | 10.14670/HH-26.45 | 21117026 | https://pubmed.ncbi.nlm.nih.gov/21117026/ | YES (abstract-level) |
+| M1A-P006 | Delayed microglial depletion after spinal cord injury reduces chronic inflammation and neurodegeneration in the brain and improves neurological recovery in male mice | Yun Li; Rodney M Ritzel; Niaz Khan; Tuoxin Cao; Junyun He; Zhuofan Lei; Jessica J Matyas; Boris Sabirzhanov; Jiping Wang | 2020 | Theranostics | 10 | 25 | 11376-11403 | 10.7150/thno.49199 | 33052221 | https://pmc.ncbi.nlm.nih.gov/articles/PMC7545988/ | YES |
+| M1A-P016 | Longitudinal motor system changes from acute to chronic spinal cord injury | Tim M Emmenegger; Dario Pfyffer; Armin Curt; Simon Schading-Sassenhausen; Markus Hupp; John Ashburner; Karl Friston; Nikolaus Weiskopf; Patrick Freund | 2024 | European Journal of Neurology | 31 | 4 | e16196 | 10.1111/ene.16196 | 38258488 | https://pmc.ncbi.nlm.nih.gov/articles/PMC11235629/ | YES |
+| M1A-P025 | Diffusion tensor imaging of spinal cord parenchyma lesion in rat with chronic spinal cord injury | Can Zhao; Jia-Sheng Rao; Xiao-Jiao Pei; Jian-Feng Lei; Zhan-Jing Wang; Wen Zhao; Rui-Han Wei; Zhao-Yang Yang | 2018 | Magnetic Resonance Imaging | 47 | — | 25-32 | 10.1016/j.mri.2017.11.009 | 29154896 | https://pubmed.ncbi.nlm.nih.gov/29154896/ | YES (abstract-level) |
+| M1A-P028 | DTI of chronic spinal cord injury in children without MRI abnormalities and with pathology on MRI and comparison to severity of motor impairment | Scott H Faro; Sona Saksena; Laura Krisa; Devon M Middleton; Mahdi Alizadeh; Jurgen Finsterbusch; Adam E Flanders; Kiran Talekar; M J Mulcahey; Feroze B Mohamed | 2022 | Spinal Cord | 60 | 5 | 457-464 | 10.1038/s41393-022-00770-5 | 35379960 | https://www.nature.com/articles/s41393-022-00770-5 | YES |
 
 ---
 
@@ -212,6 +223,11 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 | M1A-P024 | M1A-P024-RQ001 | Can post-mortem inversion-recovery-supported proton density MRI depict spared white matter and lesion severity in chronic rat compressive SCI in agreement with histology and locomotor recovery? | positive | post-mortem MRI; inversion recovery; proton density; white matter sparing; BBB score; histology | YES |
 | M1A-P026 | M1A-P026-RQ001 | Does the chronic rat hemisection scar show reduced Young's modulus together with altered tissue architecture, CNS cell content, and ECM/GAG composition? | positive | chronic scar softening; AFM; hemisection; cavities; vimentin; GAG; hyaluronic acid | YES |
 | M1A-P027 | M1A-P027-RQ001 | Does chronic mouse contusion SCI stiffen lesion tissue, and can reducing fibrotic scarring with immune-modifying nanoparticles rescue that stiffening and glial fiber alignment? | positive | chronic mechanical stiffening; AFM; fibrotic scar; IMP; astrocyte mechanosensitivity; GFAP alignment | YES |
+| M1A-P001 | M1A-P001-RQ001 | What histological zones make up repaired tissue at the chronic rat contusion injury site, and how do scar ablation plus lamina propria transplantation alter cavity integration? | exploratory/positive | chronic contusion; fibrotic zone; Schwann cell zone; axonal zone; lamina propria; lesion cavity | YES (abstract-level) |
+| M1A-P006 | M1A-P006-RQ001 | Does CSF1R inhibition with PLX5622 reduce acute and chronic neuroinflammation after mouse thoracic contusion SCI and improve brain pathology and neurological recovery? | positive | PLX5622; microglia depletion; chronic neuroinflammation; brain degeneration; BMS; NanoString | YES |
+| M1A-P016 | M1A-P016-RQ001 | How do hyperacute spinal cord lesion dynamics relate to remote motor-system neurodegeneration and recovery over 5 years after human SCI? | exploratory/predictive | tissue bridge; lesion area; C1-C3; CST; quantitative MRI; SCIM; ISNCSCI motor | YES |
+| M1A-P025 | M1A-P025-RQ001 | Can DTI metrics identify chronic rat spinal cord parenchymal lesion extent and align with histology and locomotor outcomes better than conventional MRI? | positive | DTI; FA; MD; AD; RD; cavity percentage; BBB score; chronic contusion | YES (abstract-level) |
+| M1A-P028 | M1A-P028-RQ001 | Do pediatric chronic SCI patients, including SCIWOMR cases, show DTI abnormalities in normal-appearing cord segments that relate to AIS severity? | positive | pediatric SCI; SCIWOMR; DTI; FA; RD; AIS; cephalad and caudal cord | YES |
 
 ---
 
@@ -256,6 +272,19 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 | M1A-P027 | M1A-P027-P001 | Chronic contusion scar mechanical stiffening | Quantify stiffness of uninjured and chronically contused mouse spinal cord lesion core/rim regions. | Female C57BL/6 mice received severe T11 100 kdyn Infinite Horizons contusion or sham; 12 WPI transverse sections were analyzed by AFM microindentation and stiffness mapping. | YES |
 | M1A-P027 | M1A-P027-P002 | Astrocyte response to physiologic substrate stiffness | Test whether mouse and human astrocytes respond to stiffness values approximating uninjured versus scarred spinal cord. | Primary mouse astrocytes and hESC-derived human astrocytes cultured on 200 Pa and 2000 Pa substrates; morphology, actin, beta1-integrin/ILK, and GFAP readouts. | YES |
 | M1A-P027 | M1A-P027-P003 | IMP modulation of fibrotic stiffness and glial alignment | Test whether reducing fibrotic scarring with IMP lowers chronic lesion stiffness and changes GFAP-positive glial fiber alignment. | PLG immune-modifying nanoparticles or saline were injected at 2, 24, and 48 h after SCI; 12 WPI tissue assessed by fibronectin/GFAP IHC, AFM, stiffness maps, and CurveAlign. | YES |
+| M1A-P001 | M1A-P001-P001 | Chronic rat contusion repaired-tissue histology | Describe repaired tissue organization at chronic rat T10 contusion sites. | Rats were examined 6 or 14 weeks after NYU impactor contusion at T10; PubMed abstract reports light-microscopy histological analysis of fibrotic, cellular, and axonal zones. | YES (abstract-level) |
+| M1A-P001 | M1A-P001-P002 | Scar ablation plus lamina propria transplantation repair comparison | Assess whether lamina propria or acellular lamina propria transplantation after scar ablation changes repaired tissue and lesion cavity integration. | Rats were examined 8 weeks after transplantation; PubMed abstract reports zone expansion, cavity disappearance, and integration of repaired with spared tissue after combination treatment. | YES (abstract-level) |
+| M1A-P006 | M1A-P006-P001 | PLX5622 pre-depletion acute spinal cord inflammation | Test whether pre-injury PLX5622 depletion alters acute myeloid infiltration and ROS after SCI. | Male C57BL/6 mice received PLX5622 chow for 3 weeks before T10 60/70 kdyn contusion through 2 DPI; flow cytometry, ROS assay, and qPCR assessed injured spinal cord. | YES |
+| M1A-P006 | M1A-P006-P002 | Post-injury PLX5622 acute myeloid response | Test whether starting PLX5622 after SCI reduces early spinal cord and brain myeloid populations. | PLX5622 or vehicle chow started on injury day; injured spinal cord and brain were collected at 7 DPI for flow cytometry. | YES |
+| M1A-P006 | M1A-P006-P003 | Long-term PLX5622 behavioral recovery and tissue pathology | Determine whether delayed microglial depletion improves locomotor, cognitive, depressive-like, lesion, and neuronal survival outcomes. | Male mice received PLX5622 or vehicle up to 6 WPI after moderate/severe contusion; BMS, open field, CatWalk, Y-maze, novel object recognition, tail suspension, forced swim, sucrose preference, lesion volume, and brain stereology were assessed. | YES |
+| M1A-P006 | M1A-P006-P004 | Chronic spinal cord and cortex neuroinflammation transcriptomics | Profile chronic spinal cord and cerebral cortex transcriptome changes after SCI and PLX5622. | NanoString Mouse Neuroinflammation panel measured 757 genes in lesion-centered spinal cord and cortex at 6 WPI with pairwise injury and treatment comparisons. | YES |
+| M1A-P016 | M1A-P016-P001 | Hyperacute-to-chronic lesion geometry time course | Track focal lesion area, length, and tissue bridges from 3 days to 60 months after human SCI. | Acute SCI patients underwent serial T2-weighted MRI at 3 days, 1, 3, 6, 12, 24, and 60 months; IMLA, IMLL, and midsagittal tissue bridges were manually segmented. | YES |
+| M1A-P016 | M1A-P016-P002 | Remote motor-system quantitative MRI degeneration | Characterize supralesional spinal cord, corticospinal tract, and sensorimotor cortex volume/myelin/iron trajectories. | 3T quantitative MRI with MPRAGE and multiparameter mapping analyzed C1-C3, intracranial CST, and M1/S1 ROIs using hMRI and SPM-BSC methods. | YES |
+| M1A-P016 | M1A-P016-P003 | Imaging predictors of motor and independence recovery | Relate early lesion dynamics and remote degeneration to 5-year clinical recovery. | GLMs and correlations linked tissue bridge changes, swelling, atrophy, MT, and R2* measures to ISNCSCI total motor score and SCIM recovery. | YES |
+| M1A-P025 | M1A-P025-P001 | Chronic rat contusion DTI-to-histology lesion mapping | Determine how DTI metrics vary by distance from chronic contusion epicenter and compare with histology. | Wistar rats were imaged 84 DPI after spinal cord contusion; FA, MD, AD, RD, tractography, cavity percentage, histology, and BBB scores were compared according to the PubMed abstract. | YES (abstract-level) |
+| M1A-P025 | M1A-P025-P002 | DTI cavity percentage and locomotor correlation | Test whether DTI improves cavity percentage estimation and whether epicenter metrics relate to locomotor outcome. | DTI-derived cavity percentage was compared with conventional MRI and histology; epicenter ventral funiculus DTI metrics were correlated with BBB scores according to the PubMed abstract. | YES (abstract-level) |
+| M1A-P028 | M1A-P028-P001 | Pediatric chronic SCIWOMR and MRI-positive DTI comparison | Compare DTI values in children with chronic SCIWOMR, MRI-positive SCI, and typically developing controls. | Thirty-six typically developing children and 19 children with chronic traumatic or nontraumatic SCI underwent cervical/thoracic MRI and DTI from 2014-2017. | YES |
+| M1A-P028 | M1A-P028-P002 | DTI association with AIS severity | Assess whether perilesional DTI abnormalities differ by AIS A/B versus C/D severity. | FA and RD were assessed in cephalad and caudal normal-appearing cord segments and compared with clinical AIS categories. | YES |
 
 ---
 
@@ -316,6 +345,21 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 | M1A-P027 | M1A-P027-E003 | Fig 3-Fig 4 | Mus musculus astrocytes; Homo sapiens hESC-derived astrocytes | Primary mouse cortical astrocytes; hESC-derived astrocytes | UNKNOWN | In vitro astrocyte culture | N/A | 200 Pa versus 2000 Pa substrate stiffness | N/A | 4-5 days culture on stiffness substrates | 200 Pa intact-tissue stiffness substrate | Scar-stiffness substrate exposure | Mouse and human astrocytes were cultured on physiologic soft versus stiff substrates and analyzed for morphology, actin stress fibers, beta1-integrin/ILK signaling, GFAP, and process complexity. | YES |
 | M1A-P027 | M1A-P027-E004 | Fig 5-Fig 6 | Mus musculus | C57BL/6 | Female | Severe contusion SCI | Infinite Horizons IH-0400 | 100 kdyn, 60 s dwell | T11 | IMP dosing 2, 24, 48 h after SCI; assessment 12 WPI | Saline-treated injured mice / uninjured controls | Immune-modifying nanoparticle treatment | PLG IMP or saline was delivered intravenously after SCI; 12 WPI lesion stiffness, fibronectin/GFAP anatomy, and CurveAlign GFAP fiber alignment at the glial/fibrotic interface were quantified. | YES |
 
+| M1A-P001 | M1A-P001-E001 | Abstract | Rattus norvegicus | UNKNOWN | UNKNOWN | Chronic contusion SCI | NYU impactor | 25 mm height setting | T10 | 6 or 14 WPI | Chronic contusion time points | Injury time course histology | Light-microscopy histology described repaired lesion tissue as fibrotic, cellular, and axonal zones, including Schwann-cell organization and axonal/myelin features. | YES (abstract-level) |
+| M1A-P001 | M1A-P001-E002 | Abstract | Rattus norvegicus | UNKNOWN | UNKNOWN | Chronic contusion SCI with scar ablation/transplantation | NYU impactor plus surgical scar ablation | 25 mm height setting; LP or acellular LP transplantation | T10 | 8 weeks after transplantation | Contusion repaired tissue without combination treatment | Lamina propria/acellular lamina propria transplantation after scar ablation | PubMed abstract reports expansion of cellular and axonal zones, lesion cavity disappearance, and integration of repaired tissue with spared tissue after combination treatment. | YES (abstract-level) |
+| M1A-P006 | M1A-P006-E001 | Fig 1 | Mus musculus | C57BL/6 | Male | Moderate/severe thoracic contusion SCI | Infinite Horizon impactor | 60 or 70 kdyn | T10 | PLX from 3 weeks pre-injury to 2 DPI; assessment 2 DPI | Vehicle chow / sham groups | PLX5622 pre-injury microglial depletion | Flow cytometry, DHR123 ROS measurement, and qPCR assessed microglia, infiltrating monocytes, neutrophils, ROS, CD11b, and TNFalpha in lesion-centered spinal cord. | YES |
+| M1A-P006 | M1A-P006-E002 | Fig 2 | Mus musculus | C57BL/6 | Male | Moderate/severe thoracic contusion SCI | Infinite Horizon impactor | 60 or 70 kdyn | T10 | PLX from injury day to 7 DPI; assessment 7 DPI | Vehicle chow / sham groups | Post-injury PLX5622 treatment | Flow cytometry quantified CD45/CD11b myeloid populations in injured spinal cord and brain after delayed PLX5622 initiation. | YES |
+| M1A-P006 | M1A-P006-E003 | Fig 3-Fig 5 | Mus musculus | C57BL/6 | Male | Moderate/severe thoracic contusion SCI | Infinite Horizon impactor | 60 kdyn | T10 | PLX from injury day to 6 WPI | Vehicle chow / sham groups | Long-term post-injury PLX5622 treatment | BMS, open field, CatWalk, Y-maze, novel object recognition, tail suspension, forced swim, and sucrose preference tested locomotor, cognitive, and depressive-like outcomes. | YES |
+| M1A-P006 | M1A-P006-E004 | Fig 6-Fig 9 | Mus musculus | C57BL/6 | Male | Moderate/severe thoracic contusion SCI | Infinite Horizon impactor | 60 kdyn | T10 | 6 WPI | Vehicle chow / sham groups | Long-term post-injury PLX5622 treatment | NanoString neuroinflammation profiling of lesion-centered spinal cord and cerebral cortex assessed chronic injury- and treatment-associated transcriptome changes. | YES |
+| M1A-P006 | M1A-P006-E005 | Fig 10-Fig 11 | Mus musculus | Cx3cr1-GFP / C57BL/6 background | Male | Severe thoracic contusion SCI | Infinite Horizon impactor | 70 kdyn | T10 | 6 WPI | Vehicle chow / sham groups | Long-term post-injury PLX5622 treatment | LFB/GFAP lesion-volume assessment, Cx3cr1-GFP/GFAP histology, and brain neuronal stereology evaluated chronic spinal cord pathology and remote neuronal survival. | YES |
+| M1A-P016 | M1A-P016-E001 | Fig 1 | Homo sapiens | N/A | Mixed | Acute traumatic and nontraumatic SCI | Clinical SCI | Variable | Variable | 3 days, 1, 3, 6, 12, 24, 60 months | Healthy controls / longitudinal baseline | Prospective longitudinal MRI/clinical follow-up | T2-weighted MRI segmentation tracked IMLA, IMLL, and midsagittal tissue bridge width alongside ISNCSCI motor and SCIM recovery. | YES |
+| M1A-P016 | M1A-P016-E002 | Fig 2 | Homo sapiens | N/A | Mixed | Acute traumatic and nontraumatic SCI | Clinical SCI | Variable | Variable | 1 to 60 months | Healthy controls | Quantitative MRI motor-system degeneration mapping | hMRI/SPM-BSC analysis quantified volume, MT, and R2* changes in C1-C3 cord, intracranial CST, and M1/S1 over 5 years. | YES |
+| M1A-P016 | M1A-P016-E003 | Fig 3-Fig 4 | Homo sapiens | N/A | Mixed | Acute traumatic and nontraumatic SCI | Clinical SCI | Variable | Variable | 3 days to 60 months | Healthy controls / baseline clinical scores | Lesion-recovery association modeling | GLMs and Spearman correlations related early tissue bridge changes, swelling, atrophy, MT, and R2* trajectories to final and baseline-adjusted ISNCSCI motor and SCIM outcomes. | YES |
+| M1A-P025 | M1A-P025-E001 | Abstract | Rattus norvegicus | Wistar | UNKNOWN | Chronic contusion SCI | UNKNOWN | UNKNOWN | UNKNOWN | 84 DPI | Regional distance from epicenter / histology | DTI lesion mapping | PubMed abstract reports FA, MD, AD, and RD measured at multiple positions relative to epicenter, compared with histology and locomotor outcomes. | YES (abstract-level) |
+| M1A-P025 | M1A-P025-E002 | Abstract | Rattus norvegicus | Wistar | UNKNOWN | Chronic contusion SCI | UNKNOWN | UNKNOWN | UNKNOWN | 84 DPI | Conventional MRI / histological cavity percentage | DTI tractography and cavity estimation | Fiber tractography and DTI-derived cavity percentage were compared with conventional MRI and histology; ventral funiculus epicenter metrics correlated with BBB scores. | YES (abstract-level) |
+| M1A-P028 | M1A-P028-E001 | Abstract / article metadata | Homo sapiens | N/A | Mixed | Chronic traumatic or nontraumatic pediatric SCI | Clinical SCI | SCIWOMR or MRI-positive lesion | Cervical/thoracic spinal cord | >=6 months post-injury | Typically developing children | Pediatric chronic SCI DTI cohort imaging | Thirty-six typically developing children and 19 children with chronic SCI underwent cervical/thoracic MRI and DTI; FA and RD were compared in adjacent normal-appearing cord segments. | YES |
+| M1A-P028 | M1A-P028-E002 | Abstract / article metadata | Homo sapiens | N/A | Mixed | Chronic pediatric SCI | Clinical SCI | AIS A/B versus AIS C/D subgroup comparison | Cervical/thoracic spinal cord | >=6 months post-injury | SCIWOMR AIS C/D or MRI-positive comparisons | DTI-clinical severity association | Perilesional FA abnormalities in cephalad and caudal cord segments were compared across AIS severity categories to assess relation between DTI changes and motor impairment. | YES |
+
 ---
 
 ### Pass 4: Observations Extracted
@@ -338,13 +382,13 @@ This tracker monitors the systematic population of mSCIdblit with experiment-lev
 
 | Pass | Total Papers | Completed | In Progress | Blocked | Pending | Completion % |
 |------|---|---|---|---|---|---|
-| -1 (Verify) | 27 | 13 | 0 | 0 | 14 | 48% |
-| 0 (Register) | 27 | 13 | 0 | 0 | 14 | 48% |
-| 1 (Questions) | 27 | 13 | 0 | 0 | 14 | 48% |
-| 2 (Paradigms) | 27 | 13 | 0 | 0 | 14 | 48% |
-| 3 (Experiments) | 27 | 13 papers / 52 experiments | 0 | 0 | 14 papers | 48% papers |
-| 4 (Observations) | 27 | 0 | 0 | 0 | 27 | 0% |
-| 5 (Claims) | 27 | 0 | 0 | 0 | 27 | 0% |
+| -1 (Verify) | 28 | 15 full-text + 1 source-page + 2 abstract-level | 0 | 0 | 10 | 64% papers |
+| 0 (Register) | 28 | 18 | 0 | 0 | 10 | 64% |
+| 1 (Questions) | 28 | 18 | 0 | 0 | 10 | 64% |
+| 2 (Paradigms) | 28 | 18 | 0 | 0 | 10 | 64% |
+| 3 (Experiments) | 28 | 18 papers / 66 experiments | 0 | 0 | 10 papers | 64% papers |
+| 4 (Observations) | 28 | 0 | 0 | 0 | 28 | 0% |
+| 5 (Claims) | 28 | 0 | 0 | 0 | 28 | 0% |
 
 ---
 
@@ -469,7 +513,7 @@ Papers identified but not yet processed:
 | 10.1016/j.expneurol.2022.114264 | Tamaru T | 2023 | Glial scar survives until the chronic phase by recruiting scar-forming astrocytes after spinal cord injury | S003; anchor for chronic astrocytic scar | 2026-07-15 | PASS 3 COMPLETE |
 | PMID:10391368 | Tuszynski MH | 1999 | Human spinal cord retains substantial structural mass in chronic stages after injury | S007; anchor for human chronic pathology | 2026-07-15 | QUEUED PASS -1 |
 | 10.1002/jor.20793 | Rasouli A | 2009 | Resection of glial scar following spinal cord injury | S003/S009; anchor for scar resection anatomy | 2026-07-15 | PASS 3 COMPLETE |
-| 10.14670/HH-26.45 | Zhang SX | 2011 | Histological repair of damaged spinal cord tissue from chronic contusion injury of rat: a LM observation | S004/S010; lesion core and cavity histology | 2026-07-15 | QUEUED PASS -1 |
+| 10.14670/HH-26.45 | Zhang SX | 2011 | Histological repair of damaged spinal cord tissue from chronic contusion injury of rat: a LM observation | S004/S010; lesion core and cavity histology | 2026-07-15 | PASS 3 ABSTRACT-LEVEL |
 | 10.3171/2010.3.SPINE09190 | Hu R | 2010 | Glial scar and neuroregeneration: histological, functional, and magnetic resonance imaging analysis in chronic spinal cord injury | S010; histology plus MRI candidate | 2026-07-15 | QUEUED PASS -1 |
 | 10.1523/JNEUROSCI.2524-13.2013 | Soderblom C | 2013 | Perivascular fibroblasts form the fibrotic scar after contusive spinal cord injury | S005; fibrotic scar cell-source candidate | 2026-07-15 | PASS 3 COMPLETE |
 | 10.1016/j.cell.2018.02.004 | Dias DO | 2018 | Reducing pericyte-derived scarring promotes recovery after spinal cord injury | S005; pericyte-derived scar candidate | 2026-07-15 | PASS 3 COMPLETE |
@@ -485,12 +529,12 @@ Papers identified but not yet processed:
 | 10.1038/s41467-024-50564-x | Xue X | 2024 | Heterogeneous fibroblasts contribute to fibrotic scar formation after spinal cord injury in mice and monkeys | S005; cross-species fibrotic scar candidate | 2026-07-15 | PASS 3 COMPLETE |
 | 10.1016/j.jmbbm.2020.103953 | Baumann HJ | 2020 | Softening of the chronic hemi-section spinal cord injury scar parallels dysregulation of cellular and extracellular matrix content | S004; chronic scar mechanics/ECM | 2026-07-15 | PASS 3 COMPLETE |
 | 10.1089/neu.2019.6540 | Cooper JG | 2020 | Spinal cord injury results in chronic mechanical stiffening | S004; chronic scar/tissue stiffness | 2026-07-15 | PASS 3 COMPLETE |
-| 10.1038/s41393-022-00770-5 | Faro SH | 2022 | DTI of chronic spinal cord injury in children without MRI abnormalities and with pathology on MRI and comparison to severity of motor impairment | S007/S008; human imaging pathology | 2026-07-15 | QUEUED PASS -1 |
+| 10.1038/s41393-022-00770-5 | Faro SH | 2022 | DTI of chronic spinal cord injury in children without MRI abnormalities and with pathology on MRI and comparison to severity of motor impairment | S007/S008; human imaging pathology | 2026-07-15 | PASS 3 COMPLETE |
 | 10.3171/2018.12.FOCUS18593 | Burks JD | 2019 | Imaging characteristics of chronic spinal cord injury identified during screening for a cell transplantation clinical trial | S008; chronic lesion imaging morphology | 2026-07-15 | QUEUED PASS -1 |
 | 10.1007/s11427-016-5080-z | Xiao Z | 2016 | One-year clinical study of NeuroRegen scaffold implantation following scar resection in complete chronic spinal cord injury patients | S009; human scar resection candidate | 2026-07-15 | PASS 3 COMPLETE |
 | 10.1016/j.nbd.2014.03.018 | Estrada V | 2014 | Long-lasting significant functional improvement in chronic severe spinal cord injury following scar resection and polyethylene glycol implantation | S009; chronic scar resection candidate | 2026-07-15 | QUEUED PASS -1 |
 | 10.1038/sc.2010.129 | Scholtes F | 2011 | Post-mortem assessment of rat spinal cord injury and white matter sparing using inversion recovery-supported proton density magnetic resonance imaging | S008/S011; MRI-to-histology white matter sparing | 2026-07-15 | PASS 3 COMPLETE |
-| 10.1016/j.mri.2017.11.009 | Zhao C | 2018 | Diffusion tensor imaging of spinal cord parenchyma lesion in rat with chronic spinal cord injury | S010; chronic parenchymal lesion DTI | 2026-07-15 | QUEUED PASS -1 |
+| 10.1016/j.mri.2017.11.009 | Zhao C | 2018 | Diffusion tensor imaging of spinal cord parenchyma lesion in rat with chronic spinal cord injury | S010; chronic parenchymal lesion DTI | 2026-07-15 | PASS 3 ABSTRACT-LEVEL |
 
 ---
 
@@ -523,8 +567,8 @@ Papers identified but not yet processed:
 **Module 1A Curator**: ___________________  
 **Date Initiated**: 2026-07-15
 **Date Completed**: ___________________  
-**Total Papers Extracted**: 13 through Pass 3
-**Total Experiments**: 52
+**Total Papers Extracted**: 18 through Pass 3 (15 full-text, 1 source-page, 2 abstract-level)
+**Total Experiments**: 66
 **Total Observations**: _____  
 **Total Claims**: _____  
 **Contradictions Found**: _____  
@@ -535,6 +579,7 @@ Papers identified but not yet processed:
 - 2026-07-15: Soderblom 2013 was manually curated from the PubMed Central article text without Ollama because the source text was compact enough for direct extraction. The paper adds perivascular fibroblast identity, T8 contusion fibrotic scar time course, dorsal hemisection comparison, and NG2-lineage distinction experiments.
 - 2026-07-15: Five additional full-text papers were curated through Pass 3 from PubMed Central text: Gong 2023, Rasouli 2009, Dias 2018, McCallum 2026, and Xue 2024. Immediate queue papers without accessible full text through current routes (Yokota 2017, Radojicic 2005, Wang 2018, Rosenberg 2005) remain queued for later retrieval rather than abstract-only extraction.
 - 2026-07-15: Five more papers were curated through Pass 3: Grumbles 2017, Xiao 2016, Scholtes 2011, Baumann 2020, and Cooper 2020. Baumann 2020 and Cooper 2020 were assigned inventory IDs M1A-P026 and M1A-P027 from the reference queue, and their opposite scar-mechanics directions were logged as an unresolved contradiction likely influenced by injury model and tissue-preparation differences.
+- 2026-07-15: Next five-paper increment completed through Pass 3. Li 2020 and Emmenegger 2024 were curated from accessible full text, Faro 2022 from the accessible Nature source page, and Zhang 2011 and Zhao 2018 conservatively at abstract level only because full-text routes were blocked or resolved to unusable publisher pages. Faro 2022 was promoted from the reference queue to inventory as M1A-P028.
 
 ---
 
