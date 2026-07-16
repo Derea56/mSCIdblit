@@ -32,7 +32,7 @@ This tracker begins the post-saturation phase for Module 1A. Module 1B converts 
 | M1B-T003 | Astrocytic borders are active wound-repair structures, not only inhibitory barriers | M1A-P003, P004, P030, P032, P033 | Extract border formation, signaling, and containment observations | STARTED |
 | M1B-T004 | Chronic lesion biomechanics are model-dependent and currently directionally conflicting | M1A-P026, P027 | Extract stiffness values, tissue-preparation conditions, and model details | STARTED |
 | M1B-T005 | Cavitary lesion and scar-resection studies support scaffold/cell filling as a recurring repair strategy | M1A-P005, P012, P022, P034 | Extract cavity, resection, scaffold, and integration observations | QUEUED |
-| M1B-T006 | Spared white matter and remote white matter pathology are major recovery-linked compartments | M1A-P013, P014, P024, P036 | Extract spared WM, Wallerian degeneration, MRI/histology, and recovery observations | QUEUED |
+| M1B-T006 | Spared white matter and remote white matter pathology are major recovery-linked compartments | M1A-P013, P014, P024, P036 | Extract spared WM, Wallerian degeneration, MRI/histology, and recovery observations | STARTED |
 | M1B-T007 | Human chronic SCI pathology shows persistent structural mass, motoneuron loss, remyelination abnormalities, and imaging-visible lesion geometry | M1A-P016, P018, P019, P020, P022, P028 | Extract human-specific tissue/imaging observations | QUEUED |
 | M1B-T008 | Immune-glial lesion containment and chronic inflammation shape lesion architecture | M1A-P006, P030, P031, P035 | Extract microglia/macrophage, corralling, and neuroinflammation observations | QUEUED |
 
@@ -66,6 +66,10 @@ This tracker begins the post-saturation phase for Module 1A. Module 1B converts 
 | M1B-T001 | M1A-P007 | M1A-P007-E001–E005 | FnEDA chronic fibrotic scar, GFAP border, fibronectin matrix stability, recovery | COMPLETE FIRST PASS | Observation rows M1B-O041–O044 |
 | M1B-T001 | M1A-P001 | M1A-P001-E001–E002 | Chronic repaired tissue zones and scar-ablation/transplantation response | COMPLETE ABSTRACT PASS | Observation row M1B-O045 |
 | M1B-T001 | M1A-P031 | M1A-P031-E001–E002 | Single-cell lesion ecology and scar cell-cell interactions | COMPLETE SOURCE-PAGE PASS | Observation row M1B-O046 |
+| M1B-T006 | M1A-P014 | M1A-P014-E001–E005 | Lesion-remote astrocytes, Wallerian degeneration, CCN1, microglial debris clearance | COMPLETE FIRST PASS | Observation rows M1B-O047–O052 |
+| M1B-T006 | M1A-P024 | M1A-P024-E001–E002 | Post-mortem MRI, spared white matter, histology, locomotor recovery | COMPLETE SOURCE-PAGE PASS | Observation row M1B-O053 |
+| M1B-T006 | M1A-P036 | M1A-P036-E001–E002 | In vivo MRI white matter tract pathology and recovery linkage | COMPLETE SOURCE-PAGE PASS | Observation row M1B-O054 |
+| M1B-T006 | M1A-P013 | M1A-P013-E001–E002 | Chronic residual white matter cellular composition | COMPLETE ABSTRACT PASS | Observation row M1B-O055 |
 
 ---
 
@@ -121,6 +125,15 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | M1B-O044 | M1B-T001 | M1A-P007 | M1A-P007-E004–E005 | Fig 4-Fig 5 | Axon staining / behavior | Axon density and recovery | FnEDA-null mice had higher SMI-312 axonal density in lesion areas at 90 DPI and improved locomotor recovery by BMS and modified BBB compared with wildtype controls. | reduced chronic fibrotic matrix associates with axon density and recovery | staining intensity / behavior score | YES | SMI-312 p < 0.05 or p < 0.01 by distance; behavior p < 0.05 to p < 0.001 | Results / Figures 4-5 | high | Functional link supports chronic fibrotic compartment as recovery-relevant. |
 | M1B-O045 | M1B-T001 | M1A-P001 | M1A-P001-E001–E002 | Abstract | Light microscopy histology | Chronic repaired-tissue zones | Abstract-level extraction reports chronic rat contusion repaired tissue organized into fibrotic, cellular, and axonal zones, and scar ablation plus lamina propria/acellular lamina propria transplantation expanded cellular/axonal zones, reduced cavity, and improved integration with spared tissue. | chronic repaired tissue has zone architecture modifiable by ablation/transplantation | abstract-level qualitative | YES | Abstract-level only | PubMed abstract / Module 1A row | low | Full text needed before high-confidence materialization. |
 | M1B-O046 | M1B-T001 | M1A-P031 | M1A-P031-E001–E002 | Abstract/source page | scRNA-seq / interaction inference | Single-cell lesion ecology | Source-page extraction reports that single-cell RNA-seq resolved heterogeneous injured-spinal-cord scar-like cell states and inferred cell-cell interactions shaping the wound-healing/scar environment. | scar is multicellular interaction ecosystem | source-page transcriptomic atlas | YES | Source-page level in Module 1A | Abstract / source page | medium | Supports T001/T008 but needs full-text extraction for exact cell-state names. |
+| M1B-O047 | M1B-T006 | M1A-P014 | M1A-P014-E001 | Fig 1; Extended Data Fig 1-3 | RiboTag / RNA-seq / snRNA-seq / spatial transcriptomics | Lesion-remote astrocyte states | After incomplete SCI, lesion-remote astrocytes in spared rostral and caudal cord acquired molecularly distinct, neuroanatomically restricted reactivity states across 3, 7, 14, and 28 DPI. | lesion-remote astrocytes are heterogeneous spatial states | transcriptomic state / time course | YES | n values reported per figure; multiple transcriptomic modalities | Results / Figure 1 | high | Distinct from border-forming astrocytes and nontraumatic astrocyte states. |
+| M1B-O048 | M1B-T006 | M1A-P014 | M1A-P014-E002 | Fig 2; Extended Data Fig 4-6 | Spatial transcriptomics / NMF | White matter repair niche | WM3/4 lesion-remote astrocytes co-localized with Mg2/Mg5 white matter degeneration-associated microglia in ipsilesional Wallerian-degenerating white matter. | WM3/4 LRA-WDM microglia niche | spatial co-localization / cell state | YES | Spatial and snRNA-seq integration; WDM nodules quantified | Results / Figure 2 | high | Mg2/5 microglia phagocytose myelin debris and assemble into nodules. |
+| M1B-O049 | M1B-T006 | M1A-P014 | M1A-P014-E002–E003 | Fig 2-Fig 3 | RNAscope / histology / conditional deletion | CCN1 spatial regulation | Ccn1-positive white matter LRAs were restricted to Wallerian-degenerating white matter, neighbored debris-clearing WDM nodules, persisted to at least 90 DPI, and were required to restrain excessive/spatially aberrant microglial activation. | Ccn1+ LRAs regulate WDM localization and magnitude | cell count / spatial distribution | YES | WDM nodules up to about fourfold increased in Ccn1-cKO regions | Results / Figures 2-3 | high | CCN1 loss amplified microglial response rather than eliminating it. |
+| M1B-O050 | M1B-T006 | M1A-P014 | M1A-P014-E003 | Fig 3; Extended Data Fig 7 | 3D debris reconstruction / behavior | Debris clearance and recovery | Astrocyte-specific Ccn1 deletion caused microglia to accumulate more internalized myelin and axon debris, attenuated debris clearance, and impaired neurological recovery after incomplete SCI. | astrocyte CCN1 supports microglial debris processing and recovery | debris volume / behavior | YES | About 40% greater myelin debris and about 23% greater axon debris reported in Ccn1-cKO microglia | Results / Figure 3 | high | Demonstrates remote white matter repair affects outcome. |
+| M1B-O051 | M1B-T006 | M1A-P014 | M1A-P014-E004 | Fig 4; Extended Data Fig 8 | Primary microglia / lipid assays | Microglial lipid handling | Recombinant CCN1 altered primary microglial lipid metabolism, including cholesterol efflux/lipid storage responses, supporting a mechanism for repair-associated lipid buffering. | CCN1 modulates microglial lipid metabolism | lipid assay / RNA-seq | YES | RNA-seq, cholesterol efflux, LipidTOX, and lipidomics assays | Results / Figure 4 | high | Mechanistic bridge from astrocyte secreted factor to debris-clearing microglia. |
+| M1B-O052 | M1B-T006 | M1A-P014 | M1A-P014-E005 | Fig 5; Extended Data Fig 9 | Myelin damage models / human tissue comparison | Conserved white matter astrocyte state | Local myelin damage induced Ccn1-positive astrocytes, and comparable white-matter damage-associated astrocyte patterns were observed across demyelinating models and human disorder tissue, including SCI-relevant lesion-remote white matter. | Ccn1+ white matter astrocyte response is damage-linked and conserved | cross-model / human tissue comparison | YES | Multiple mouse injury/demyelination models and human tissues | Results / Figure 5 | high | Supports generality beyond the primary incomplete SCI model. |
+| M1B-O053 | M1B-T006 | M1A-P024 | M1A-P024-E001–E002 | Abstract / Nature page | Post-mortem MRI / histology / BBB | Spared white matter imaging | In five rat spines 2 months after compressive SCI, 9.4T inversion-recovery-supported proton-density MRI depicted spared and injured white matter, lesion volume, and cord atrophy; MRI severity and white-matter sparing aligned with locomotor recovery and histology. | spared white matter is MRI-visible and recovery-linked | MRI / histology / BBB | YES | n = 5 excised rat spines | Abstract / source page | medium | Post-mortem MRI; not in vivo longitudinal imaging. |
+| M1B-O054 | M1B-T006 | M1A-P036 | M1A-P036-E001–E002 | Abstract/source page | In vivo MRI / pathology-function linkage | White matter tract pathology | Source-page extraction reports that 7.0T MRI tracked pathological variation in white matter tracts after severe thoracic contusion, and spared white matter/pathological tract variation related to hindlimb motor recovery. | MRI-visible white matter tract pathology relates to recovery | MRI metrics / motor recovery | YES | Source-page level in Module 1A | Abstract / source page | medium | Full text needed for exact MRI metric values. |
+| M1B-O055 | M1B-T006 | M1A-P013 | M1A-P013-E001–E002 | Abstract | Histology / cellular composition | Chronic residual white matter cellularity | Abstract-level extraction reports chronic changes in residual dorsal, lateral, and ventral funicular white matter cellular composition 6 WPI after contusion, with acute TTX treatment related to chronic axon density, function, and cellular composition. | residual white matter has chronic cellular remodeling | abstract-level qualitative | YES | Abstract-level only | PubMed abstract / Module 1A row | low | Full text needed before high-confidence materialization. |
 
 ---
 
@@ -141,6 +154,10 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | M1B-T001 | M1A-P007 | conclusion; mechanism; implication | COMPLETE FIRST PASS |
 | M1B-T001 | M1A-P001 | conclusion | COMPLETE ABSTRACT PASS |
 | M1B-T001 | M1A-P031 | conclusion; mechanism | COMPLETE SOURCE-PAGE PASS |
+| M1B-T006 | M1A-P014 | conclusion; mechanism; implication | COMPLETE FIRST PASS |
+| M1B-T006 | M1A-P024 | conclusion; imaging | COMPLETE SOURCE-PAGE PASS |
+| M1B-T006 | M1A-P036 | conclusion; imaging | COMPLETE SOURCE-PAGE PASS |
+| M1B-T006 | M1A-P013 | conclusion | COMPLETE ABSTRACT PASS |
 
 ---
 
@@ -172,6 +189,11 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | M1B-C022 | M1B-T001 | M1A-P007 | Reducing chronic FnEDA-dependent fibrotic scarring improves axonal density and locomotor recovery after contusive SCI. | implication | medium | Abstract / Results / Discussion | high | Supported by genotype comparison; causal inference should stay tied to FnEDA-null model. |
 | M1B-C023 | M1B-T001 | M1A-P001 | Chronic contusion repair tissue can be described as fibrotic, cellular, and axonal zones, and combined scar ablation/transplantation can alter zone integration and cavity morphology. | conclusion | low | Abstract | medium | Abstract-level only; useful as historical/zone-architecture support. |
 | M1B-C024 | M1B-T001 | M1A-P031 | The injured spinal cord scar environment is a heterogeneous multicellular ecosystem whose cell-cell interactions shape wound healing and inhibitory scar features. | conclusion | medium | Abstract / source page | medium | Source-page level; full text still needed. |
+| M1B-C025 | M1B-T006 | M1A-P014 | Spared lesion-remote white matter is an active repair compartment where region-specific astrocyte states regulate debris-clearing microglia and neurological recovery after SCI. | conclusion | high | Abstract / Results / Discussion | high | Strongly supported by transcriptomics, spatial mapping, conditional deletion, debris assays, and behavior. |
+| M1B-C026 | M1B-T006 | M1A-P014 | Astrocyte-derived CCN1 coordinates white matter repair by restricting excessive microglial activation and supporting lipid/debris processing in Wallerian-degenerating tracts. | mechanistic | high | Results / Discussion | high | Supported by Ccn1-cKO, CCN1 protein/secreted factor, debris, and lipid assays. |
+| M1B-C027 | M1B-T006 | M1A-P024 | White matter sparing can be detected by high-resolution MRI and aligns with histology and locomotor recovery after chronic rat SCI. | conclusion | medium | Abstract / source page | medium | Source-page/abstract-level details; n = 5. |
+| M1B-C028 | M1B-T006 | M1A-P036 | In vivo MRI can track white matter tract pathology after severe thoracic SCI and relate spared white matter to hindlimb recovery. | conclusion | medium | Abstract / source page | medium | Needs full-text metric extraction. |
+| M1B-C029 | M1B-T006 | M1A-P013 | Residual white matter undergoes chronic cellular-composition changes after contusion SCI, making spared funiculi a lesion-adjacent compartment rather than normal tissue. | conclusion | low | Abstract | medium | Abstract-level only. |
 
 ---
 
@@ -236,6 +258,16 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | M1B-L055 | M1B-C023 | M1B-O045 | directly_supports | Abstract-level chronic rat zone architecture and repair modification support historical claim. |
 | M1B-L056 | M1B-C024 | M1B-O046 | directly_supports | Source-page scRNA-seq and interaction inference support multicellular ecosystem claim. |
 | M1B-L057 | M1B-C024 | M1B-O038 | concordant_boundary | Gong spatial atlas is consistent with Milich source-page single-cell heterogeneity. |
+| M1B-L058 | M1B-C025 | M1B-O047 | directly_supports | Lesion-remote astrocyte transcriptomic states support remote white matter as active compartment. |
+| M1B-L059 | M1B-C025 | M1B-O048 | directly_supports | WM3/4 LRA-WDM niche supports astrocyte-microglia repair organization. |
+| M1B-L060 | M1B-C025 | M1B-O050 | directly_supports | Ccn1 deletion debris/recovery phenotype links remote white matter repair to outcome. |
+| M1B-L061 | M1B-C026 | M1B-O049 | directly_supports | Ccn1-positive LRAs regulate WDM localization and magnitude. |
+| M1B-L062 | M1B-C026 | M1B-O050 | directly_supports | Debris accumulation after Ccn1 deletion supports impaired processing mechanism. |
+| M1B-L063 | M1B-C026 | M1B-O051 | directly_supports | CCN1 microglia lipid assays support lipid-buffering mechanism. |
+| M1B-L064 | M1B-C026 | M1B-O052 | partially_supports | Myelin-damage and human tissue comparisons support conservation of the CCN1-positive white matter astrocyte response. |
+| M1B-L065 | M1B-C027 | M1B-O053 | directly_supports | Scholtes MRI/histology/BBB observation supports spared white matter imaging claim. |
+| M1B-L066 | M1B-C028 | M1B-O054 | directly_supports | Song source-page MRI observation supports tract pathology and recovery-link claim. |
+| M1B-L067 | M1B-C029 | M1B-O055 | directly_supports | Rosenberg abstract-level residual white matter observation supports chronic cellular remodeling claim. |
 
 ---
 
@@ -296,6 +328,20 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 | Current interpretation | The database should represent lesion architecture as multiple linked compartments rather than a single "scar" field. Fibrotic matrix, astrocytic border, microglial/myeloid containment, spared/reactive neural tissue, and cavity/repaired-tissue zones should remain separately queryable. |
 | Next evidence needed | Pull full text for M1A-P001, M1A-P002, and M1A-P031; integrate M1A-P004 with T002/T003/T008 controlled vocabularies so spatial compartments can link to lineage and signaling evidence. |
 
+### M1B-T006: Spared And Remote White Matter
+
+**Status**: consensus-ready profile started; consensus statement not yet finalized.
+
+| Profile Element | Curated Summary |
+|---|---|
+| Evidence base | One full-text mechanistic study, M1A-P014, plus imaging/source-page or abstract support from M1A-P024, M1A-P036, and M1A-P013, with 9 extracted observations and 5 author claims. |
+| Agreement | Spared and lesion-remote white matter is not a passive residual compartment. It undergoes chronic degeneration/repair, glial and immune remodeling, MRI-visible structural change, and recovery-linked variation. |
+| Strong points | McCallum provides high-confidence mechanistic evidence for a CCN1-positive lesion-remote astrocyte state that shapes WDM microglia, debris clearance, lipid processing, and recovery. Scholtes and Song support imaging visibility and recovery linkage of spared white matter. |
+| Main uncertainty | Rosenberg and Song are currently abstract/source-page level here; exact cellular counts and MRI metric values should be extracted from full text before database materialization. |
+| Likely boundary conditions | Incomplete versus severe contusion/compression models, rostral versus caudal tracts, dorsal column versus corticospinal Wallerian degeneration, post-mortem versus in vivo MRI, and acute/subacute/chronic timing. |
+| Current interpretation | The database should include spared/remote white matter as its own recovery-linked compartment, with fields for tract, distance from lesion, degeneration state, glial state, microglial debris handling, MRI metrics, and behavioral linkage. |
+| Next evidence needed | Parse full texts for M1A-P013, M1A-P036, and any available DTI/MRI supplements; connect human/pediatric DTI evidence from M1A-P028 during the M1B-T007 pass. |
+
 ---
 
 ## Contradiction Map
@@ -312,11 +358,11 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 | Gate | Requirement | Status |
 |---|---|---|
-| GATE-1 | At least 3 independent papers with linked observations for a topic | MET FOR T001, T002, AND T003; NOT MET FOR T004; 2 linked papers |
+| GATE-1 | At least 3 independent papers with linked observations for a topic | MET FOR T001, T002, T003, AND T006; NOT MET FOR T004; 2 linked papers |
 | GATE-2 | At least 1 contradicting or boundary-condition check for each major consensus topic | MET FOR T002, T003, AND T004 |
 | GATE-3 | Source strength recorded: full-text/source-page/abstract-level | MET FOR PAPER LEVEL |
-| GATE-4 | Claims linked to observations through EvidenceLink | STARTED; MET FOR T001, T002, T003, AND T004 FIRST PASS |
-| GATE-5 | No consensus statement depends on a single paper | MET FOR T001, T002, T003, AND T004 PROFILES; NOT MET GLOBALLY |
+| GATE-4 | Claims linked to observations through EvidenceLink | STARTED; MET FOR T001, T002, T003, T004, AND T006 FIRST PASS |
+| GATE-5 | No consensus statement depends on a single paper | MET FOR T001, T002, T003, T004, AND T006 PROFILES; NOT MET GLOBALLY |
 
 ---
 
@@ -328,3 +374,4 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 - 2026-07-16: Completed first-pass Observation, AuthorClaim, EvidenceLink, contradiction-map, and consensus-ready profile rows for M1B-T002 using Soderblom 2013, Dias 2018, and Xue 2024.
 - 2026-07-16: Completed first-pass Observation, AuthorClaim, EvidenceLink, and consensus-ready profile rows for M1B-T003 using Tamaru 2023 full text plus source-page rows for Zhou 2020, Shen 2025, and O'Shea 2024.
 - 2026-07-16: Completed first-pass Observation, AuthorClaim, EvidenceLink, and consensus-ready profile rows for M1B-T001 using Gong 2023 and Cooper 2018 full text plus abstract/source-page rows for Zhang 2011 and Milich 2021.
+- 2026-07-16: Completed first-pass Observation, AuthorClaim, EvidenceLink, and consensus-ready profile rows for M1B-T006 using McCallum 2026 full text plus imaging/abstract support from Scholtes 2011, Song 2018, and Rosenberg 2005.
