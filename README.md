@@ -77,6 +77,7 @@ mSCIdblit/
 │   ├── IMPLEMENTATION_GUIDE.md       # Data entry examples
 │   ├── EXPERIMENT_GRANULARITY.md     # Experiment-splitting rules
 │   ├── OLLAMA_CHUNK_EXTRACTION.md    # Local model chunking workflow
+│   ├── MODULE_1_2_SYNTHESIS.md       # First cross-module lesion/scaffold synthesis
 │   └── VALIDATION_QUERIES.md         # Database hygiene checks
 ├── scripts/
 │   ├── export_tracker_evidence_bundle.py # Shared 1B/2B tracker audit + JSON export
