@@ -1,0 +1,588 @@
+{
+  "source_tracker": "modules/Module_3B_TRACKER.md",
+  "module": "Module 3B",
+  "status": "first-pass evidence bundle exported from tracker rows",
+  "observations": [
+    {
+      "observation_id": "M3B-O001",
+      "topic_id": "M3B-T001",
+      "paper_id": "M3A-P001",
+      "experiment_id": "M3A-P001-E001",
+      "figure_ref": "Abstract / tracker seed",
+      "evidence_type": "Immune intervention",
+      "outcome_type": "Chronic inflammation / remote degeneration / recovery",
+      "observation_value": "Li Y 2020 indicates delayed microglial depletion can reduce chronic inflammation and remote neurodegeneration while improving neurological recovery in male mice.",
+      "normalized_value": "li y 2020 indicates delayed microglial depletion can reduce chronic inflammation and remote neurodegeneration while improving neurological recovery in male mice.",
+      "unit": "qualitative",
+      "quantitative": "NO",
+      "statistics_reported": "Seed pass; exact statistics not extracted",
+      "source_section": "Module 3A tracker / paper title metadata",
+      "extraction_confidence": "medium",
+      "notes": "Carried Module 1A anchor; timing and sex boundary retained.",
+      "tracker_id": "M3B-O001"
+    },
+    {
+      "observation_id": "M3B-O002",
+      "topic_id": "M3B-T002",
+      "paper_id": "M3A-P002",
+      "experiment_id": "M3A-P002-E001",
+      "figure_ref": "Abstract / tracker seed",
+      "evidence_type": "Immune-glial mechanism",
+      "outcome_type": "Wound corralling / compaction / recovery",
+      "observation_value": "Zhou X 2020 indicates microglia and macrophages can promote corralling, wound compaction, and recovery via Plexin-B2 after SCI.",
+      "normalized_value": "zhou x 2020 indicates microglia and macrophages can promote corralling, wound compaction, and recovery via plexin-b2 after sci.",
+      "unit": "qualitative",
+      "quantitative": "NO",
+      "statistics_reported": "Seed pass; exact statistics not extracted",
+      "source_section": "Module 3A tracker / paper title metadata",
+      "extraction_confidence": "medium",
+      "notes": "Important counterweight to simple depletion logic.",
+      "tracker_id": "M3B-O002"
+    },
+    {
+      "observation_id": "M3B-O003",
+      "topic_id": "M3B-T001",
+      "paper_id": "M3A-P003",
+      "experiment_id": "M3A-P003-E001",
+      "figure_ref": "Abstract / tracker seed",
+      "evidence_type": "Immune intervention",
+      "outcome_type": "Microglia proliferation / tissue preservation / motor recovery",
+      "observation_value": "Gerber YN 2018 indicates CSF1R inhibition reduces microglia proliferation, promotes tissue preservation, and improves motor recovery after SCI.",
+      "normalized_value": "gerber yn 2018 indicates csf1r inhibition reduces microglia proliferation, promotes tissue preservation, and improves motor recovery after sci.",
+      "unit": "qualitative",
+      "quantitative": "NO",
+      "statistics_reported": "Seed pass; exact statistics not extracted",
+      "source_section": "Module 3A tracker / paper title metadata",
+      "extraction_confidence": "medium",
+      "notes": "CSF1R intervention anchor; cell-specificity needs full text.",
+      "tracker_id": "M3B-O003"
+    },
+    {
+      "observation_id": "M3B-O004",
+      "topic_id": "M3B-T003",
+      "paper_id": "M3A-P004",
+      "experiment_id": "M3A-P004-E001",
+      "figure_ref": "Abstract / tracker seed",
+      "evidence_type": "Danger-signaling intervention",
+      "outcome_type": "Pro-inflammatory polarization / neuroprotection",
+      "observation_value": "Fan H 2020 links HMGB1-RAGE inhibition to reduced pro-inflammatory macrophage/microglia polarization and neuroprotection after SCI.",
+      "normalized_value": "fan h 2020 links hmgb1-rage inhibition to reduced pro-inflammatory macrophage/microglia polarization and neuroprotection after sci.",
+      "unit": "qualitative",
+      "quantitative": "NO",
+      "statistics_reported": "Seed pass; exact statistics not extracted",
+      "source_section": "Module 3A tracker / paper title metadata",
+      "extraction_confidence": "low",
+      "notes": "Polarization terminology should be upgraded with markers during full-text pass.",
+      "tracker_id": "M3B-O004"
+    },
+    {
+      "observation_id": "M3B-O005",
+      "topic_id": "M3B-T003",
+      "paper_id": "M3A-P005",
+      "experiment_id": "M3A-P005-E001",
+      "figure_ref": "Abstract / tracker seed",
+      "evidence_type": "Innate injury-amplification mechanism",
+      "outcome_type": "Extracellular traps / polarization / secondary injury",
+      "observation_value": "Zhang C 2022 links macrophage extracellular traps to worsened secondary SCI through LL37, P2X7R, NF-kappaB, and macrophage/microglia polarization.",
+      "normalized_value": "zhang c 2022 links macrophage extracellular traps to worsened secondary sci through ll37, p2x7r, nf-kappab, and macrophage/microglia polarization.",
+      "unit": "qualitative",
+      "quantitative": "NO",
+      "statistics_reported": "Seed pass; exact statistics not extracted",
+      "source_section": "Module 3A tracker / paper title metadata",
+      "extraction_confidence": "low",
+      "notes": "Recent candidate; mechanism needs detailed extraction.",
+      "tracker_id": "M3B-O005"
+    },
+    {
+      "observation_id": "M3B-O006",
+      "topic_id": "M3B-T004",
+      "paper_id": "M3A-P006",
+      "experiment_id": "M3A-P006-E001",
+      "figure_ref": "Abstract / tracker seed",
+      "evidence_type": "Exosome immune modulation",
+      "outcome_type": "Pyroptosis / motor function",
+      "observation_value": "Liu J 2024 indicates iPSC-NSC-derived exosomal let-7b-5p improves motor function by modulating microglial/macrophage pyroptosis.",
+      "normalized_value": "liu j 2024 indicates ipsc-nsc-derived exosomal let-7b-5p improves motor function by modulating microglial/macrophage pyroptosis.",
+      "unit": "qualitative",
+      "quantitative": "NO",
+      "statistics_reported": "Seed pass; exact statistics not extracted",
+      "source_section": "Module 3A tracker / paper title metadata",
+      "extraction_confidence": "low",
+      "notes": "Bridge to Module 4 cell-derived products; immune mechanism is primary here.",
+      "tracker_id": "M3B-O006"
+    },
+    {
+      "observation_id": "M3B-O007",
+      "topic_id": "M3B-T005",
+      "paper_id": "M3A-P007",
+      "experiment_id": "M3A-P007-E001",
+      "figure_ref": "Abstract / tracker seed",
+      "evidence_type": "Metabolic immune-state mechanism",
+      "outcome_type": "Histone lactylation / CD8 T-cell recruitment / injury aggravation",
+      "observation_value": "Ge X 2025 links metabolic reprogramming through histone lactylation in microglia and macrophages to CD8 T lymphocyte recruitment and aggravated SCI.",
+      "normalized_value": "ge x 2025 links metabolic reprogramming through histone lactylation in microglia and macrophages to cd8 t lymphocyte recruitment and aggravated sci.",
+      "unit": "qualitative",
+      "quantitative": "NO",
+      "statistics_reported": "Seed pass; exact statistics not extracted",
+      "source_section": "Module 3A tracker / paper title metadata",
+      "extraction_confidence": "low",
+      "notes": "Seed row for immune-metabolic crosstalk.",
+      "tracker_id": "M3B-O007"
+    }
+  ],
+  "author_claims": [
+    {
+      "claim_id": "M3B-C001",
+      "topic_id": "M3B-T001",
+      "paper_id": "M3A-P001",
+      "claim_text": "Delayed microglial depletion may reduce chronic inflammatory damage when timed after the acute phase.",
+      "claim_type": "boundary condition",
+      "confidence_level": "medium",
+      "source_section": "Module 3A tracker / abstract metadata",
+      "extraction_confidence": "low",
+      "notes": "Seed claim; full-text extraction required before saturation-level consensus.",
+      "tracker_id": "M3B-C001"
+    },
+    {
+      "claim_id": "M3B-C002",
+      "topic_id": "M3B-T001",
+      "paper_id": "M3A-P003",
+      "claim_text": "CSF1R-pathway inhibition is a candidate strategy for reducing microglial proliferation and preserving tissue after SCI.",
+      "claim_type": "conclusion",
+      "confidence_level": "medium",
+      "source_section": "Module 3A tracker / abstract metadata",
+      "extraction_confidence": "low",
+      "notes": "Seed claim; full-text extraction required before saturation-level consensus.",
+      "tracker_id": "M3B-C002"
+    },
+    {
+      "claim_id": "M3B-C003",
+      "topic_id": "M3B-T002",
+      "paper_id": "M3A-P002",
+      "claim_text": "Microglia and macrophages can be beneficial wound-organizing cells, not only damaging inflammatory cells.",
+      "claim_type": "boundary condition",
+      "confidence_level": "medium",
+      "source_section": "Module 3A tracker / abstract metadata",
+      "extraction_confidence": "low",
+      "notes": "Seed claim; full-text extraction required before saturation-level consensus.",
+      "tracker_id": "M3B-C003"
+    },
+    {
+      "claim_id": "M3B-C004",
+      "topic_id": "M3B-T002",
+      "paper_id": "M3A-P002",
+      "claim_text": "Plexin-B2-linked corralling supports recovery by compacting and containing the SCI wound.",
+      "claim_type": "mechanistic",
+      "confidence_level": "medium",
+      "source_section": "Module 3A tracker / abstract metadata",
+      "extraction_confidence": "low",
+      "notes": "Seed claim; full-text extraction required before saturation-level consensus.",
+      "tracker_id": "M3B-C004"
+    },
+    {
+      "claim_id": "M3B-C005",
+      "topic_id": "M3B-T003",
+      "paper_id": "M3A-P004",
+      "claim_text": "HMGB1-RAGE signaling contributes to pro-inflammatory macrophage/microglia polarization after SCI.",
+      "claim_type": "mechanistic",
+      "confidence_level": "low",
+      "source_section": "Module 3A tracker / abstract metadata",
+      "extraction_confidence": "low",
+      "notes": "Seed claim; full-text extraction required before saturation-level consensus.",
+      "tracker_id": "M3B-C005"
+    },
+    {
+      "claim_id": "M3B-C006",
+      "topic_id": "M3B-T003",
+      "paper_id": "M3A-P005",
+      "claim_text": "Macrophage extracellular traps can amplify secondary injury through LL37/P2X7R/NF-kappaB signaling.",
+      "claim_type": "mechanistic",
+      "confidence_level": "low",
+      "source_section": "Module 3A tracker / abstract metadata",
+      "extraction_confidence": "low",
+      "notes": "Seed claim; full-text extraction required before saturation-level consensus.",
+      "tracker_id": "M3B-C006"
+    },
+    {
+      "claim_id": "M3B-C007",
+      "topic_id": "M3B-T003",
+      "paper_id": "M3A-P004-M3A-P005",
+      "claim_text": "Polarization claims require marker-level extraction before they can support high-confidence consensus.",
+      "claim_type": "evidence standard",
+      "confidence_level": "high",
+      "source_section": "Module 3A tracker / abstract metadata",
+      "extraction_confidence": "low",
+      "notes": "Seed claim; full-text extraction required before saturation-level consensus.",
+      "tracker_id": "M3B-C007"
+    },
+    {
+      "claim_id": "M3B-C008",
+      "topic_id": "M3B-T004",
+      "paper_id": "M3A-P006",
+      "claim_text": "Cell-derived exosomes can act as immune-state modulators when their effect is tied to microglial/macrophage pyroptosis.",
+      "claim_type": "implication",
+      "confidence_level": "low",
+      "source_section": "Module 3A tracker / abstract metadata",
+      "extraction_confidence": "low",
+      "notes": "Seed claim; full-text extraction required before saturation-level consensus.",
+      "tracker_id": "M3B-C008"
+    },
+    {
+      "claim_id": "M3B-C009",
+      "topic_id": "M3B-T004",
+      "paper_id": "M3A-P006",
+      "claim_text": "Cell therapy products should be cross-tagged with immune mechanisms when the reported mechanism is exosomal immune modulation.",
+      "claim_type": "curation rule",
+      "confidence_level": "medium",
+      "source_section": "Module 3A tracker / abstract metadata",
+      "extraction_confidence": "low",
+      "notes": "Seed claim; full-text extraction required before saturation-level consensus.",
+      "tracker_id": "M3B-C009"
+    },
+    {
+      "claim_id": "M3B-C010",
+      "topic_id": "M3B-T005",
+      "paper_id": "M3A-P007",
+      "claim_text": "Metabolic and epigenetic state changes in myeloid cells may recruit lymphocytes and worsen SCI.",
+      "claim_type": "mechanistic",
+      "confidence_level": "low",
+      "source_section": "Module 3A tracker / abstract metadata",
+      "extraction_confidence": "low",
+      "notes": "Seed claim; full-text extraction required before saturation-level consensus.",
+      "tracker_id": "M3B-C010"
+    },
+    {
+      "claim_id": "M3B-C011",
+      "topic_id": "M3B-T006",
+      "paper_id": "M3A-P001-M3A-P007",
+      "claim_text": "Module 3B currently supports immune-state hypotheses but not saturation-level immune consensus.",
+      "claim_type": "curation boundary",
+      "confidence_level": "high",
+      "source_section": "Module 3A tracker / abstract metadata",
+      "extraction_confidence": "low",
+      "notes": "Seed claim; full-text extraction required before saturation-level consensus.",
+      "tracker_id": "M3B-C011"
+    },
+    {
+      "claim_id": "M3B-C012",
+      "topic_id": "M3B-T006",
+      "paper_id": "M3A-P001-M3A-P007",
+      "claim_text": "Future Module 3 synthesis must stratify by timing, myeloid subtype, depletion versus modulation, and injury phase.",
+      "claim_type": "synthesis rule",
+      "confidence_level": "high",
+      "source_section": "Module 3A tracker / abstract metadata",
+      "extraction_confidence": "low",
+      "notes": "Seed claim; full-text extraction required before saturation-level consensus.",
+      "tracker_id": "M3B-C012"
+    }
+  ],
+  "evidence_links": [
+    {
+      "link_id": "M3B-L001",
+      "claim_id": "M3B-C001",
+      "observation_id": "M3B-O001",
+      "relationship": "supports",
+      "evidence_weight": "medium",
+      "notes": "Primary seed evidence link.",
+      "tracker_id": "M3B-L001"
+    },
+    {
+      "link_id": "M3B-L002",
+      "claim_id": "M3B-C002",
+      "observation_id": "M3B-O003",
+      "relationship": "supports",
+      "evidence_weight": "medium",
+      "notes": "Primary seed evidence link.",
+      "tracker_id": "M3B-L002"
+    },
+    {
+      "link_id": "M3B-L003",
+      "claim_id": "M3B-C003",
+      "observation_id": "M3B-O002",
+      "relationship": "supports",
+      "evidence_weight": "medium",
+      "notes": "Primary seed evidence link.",
+      "tracker_id": "M3B-L003"
+    },
+    {
+      "link_id": "M3B-L004",
+      "claim_id": "M3B-C004",
+      "observation_id": "M3B-O002",
+      "relationship": "supports",
+      "evidence_weight": "medium",
+      "notes": "Primary seed evidence link.",
+      "tracker_id": "M3B-L004"
+    },
+    {
+      "link_id": "M3B-L005",
+      "claim_id": "M3B-C005",
+      "observation_id": "M3B-O004",
+      "relationship": "supports",
+      "evidence_weight": "low",
+      "notes": "Primary seed evidence link.",
+      "tracker_id": "M3B-L005"
+    },
+    {
+      "link_id": "M3B-L006",
+      "claim_id": "M3B-C006",
+      "observation_id": "M3B-O005",
+      "relationship": "supports",
+      "evidence_weight": "low",
+      "notes": "Primary seed evidence link.",
+      "tracker_id": "M3B-L006"
+    },
+    {
+      "link_id": "M3B-L007",
+      "claim_id": "M3B-C007",
+      "observation_id": "M3B-O004",
+      "relationship": "supports",
+      "evidence_weight": "low",
+      "notes": "Primary seed evidence link.",
+      "tracker_id": "M3B-L007"
+    },
+    {
+      "link_id": "M3B-L008",
+      "claim_id": "M3B-C008",
+      "observation_id": "M3B-O006",
+      "relationship": "supports",
+      "evidence_weight": "low",
+      "notes": "Primary seed evidence link.",
+      "tracker_id": "M3B-L008"
+    },
+    {
+      "link_id": "M3B-L009",
+      "claim_id": "M3B-C009",
+      "observation_id": "M3B-O006",
+      "relationship": "supports",
+      "evidence_weight": "low",
+      "notes": "Primary seed evidence link.",
+      "tracker_id": "M3B-L009"
+    },
+    {
+      "link_id": "M3B-L010",
+      "claim_id": "M3B-C010",
+      "observation_id": "M3B-O007",
+      "relationship": "supports",
+      "evidence_weight": "low",
+      "notes": "Primary seed evidence link.",
+      "tracker_id": "M3B-L010"
+    },
+    {
+      "link_id": "M3B-L011",
+      "claim_id": "M3B-C011",
+      "observation_id": "M3B-O001",
+      "relationship": "supports",
+      "evidence_weight": "low",
+      "notes": "Primary seed evidence link.",
+      "tracker_id": "M3B-L011"
+    },
+    {
+      "link_id": "M3B-L012",
+      "claim_id": "M3B-C012",
+      "observation_id": "M3B-O001",
+      "relationship": "supports",
+      "evidence_weight": "low",
+      "notes": "Primary seed evidence link.",
+      "tracker_id": "M3B-L012"
+    },
+    {
+      "link_id": "M3B-L013",
+      "claim_id": "M3B-C001",
+      "observation_id": "M3B-O003",
+      "relationship": "boundary support",
+      "evidence_weight": "low",
+      "notes": "Additional seed boundary link.",
+      "tracker_id": "M3B-L013"
+    },
+    {
+      "link_id": "M3B-L014",
+      "claim_id": "M3B-C002",
+      "observation_id": "M3B-O001",
+      "relationship": "boundary support",
+      "evidence_weight": "low",
+      "notes": "Additional seed boundary link.",
+      "tracker_id": "M3B-L014"
+    },
+    {
+      "link_id": "M3B-L015",
+      "claim_id": "M3B-C003",
+      "observation_id": "M3B-O001",
+      "relationship": "boundary support",
+      "evidence_weight": "low",
+      "notes": "Additional seed boundary link.",
+      "tracker_id": "M3B-L015"
+    },
+    {
+      "link_id": "M3B-L016",
+      "claim_id": "M3B-C005",
+      "observation_id": "M3B-O005",
+      "relationship": "boundary support",
+      "evidence_weight": "low",
+      "notes": "Additional seed boundary link.",
+      "tracker_id": "M3B-L016"
+    },
+    {
+      "link_id": "M3B-L017",
+      "claim_id": "M3B-C006",
+      "observation_id": "M3B-O004",
+      "relationship": "boundary support",
+      "evidence_weight": "low",
+      "notes": "Additional seed boundary link.",
+      "tracker_id": "M3B-L017"
+    },
+    {
+      "link_id": "M3B-L018",
+      "claim_id": "M3B-C007",
+      "observation_id": "M3B-O005",
+      "relationship": "boundary support",
+      "evidence_weight": "low",
+      "notes": "Additional seed boundary link.",
+      "tracker_id": "M3B-L018"
+    },
+    {
+      "link_id": "M3B-L019",
+      "claim_id": "M3B-C010",
+      "observation_id": "M3B-O006",
+      "relationship": "boundary support",
+      "evidence_weight": "low",
+      "notes": "Additional seed boundary link.",
+      "tracker_id": "M3B-L019"
+    },
+    {
+      "link_id": "M3B-L020",
+      "claim_id": "M3B-C011",
+      "observation_id": "M3B-O007",
+      "relationship": "boundary support",
+      "evidence_weight": "low",
+      "notes": "Additional seed boundary link.",
+      "tracker_id": "M3B-L020"
+    },
+    {
+      "link_id": "M3B-L021",
+      "claim_id": "M3B-C012",
+      "observation_id": "M3B-O002",
+      "relationship": "boundary support",
+      "evidence_weight": "low",
+      "notes": "Additional seed boundary link.",
+      "tracker_id": "M3B-L021"
+    }
+  ],
+  "boundary_records": [
+    {
+      "boundary_id": "M3B-B001",
+      "boundary": "Timing boundary",
+      "interpretation_rule": "Microglial depletion can be interpreted differently in acute versus delayed or chronic windows.",
+      "supporting_evidence": "O001, O003",
+      "confidence": "high",
+      "tracker_id": "M3B-B001"
+    },
+    {
+      "boundary_id": "M3B-B002",
+      "boundary": "Beneficial myeloid function boundary",
+      "interpretation_rule": "Myeloid cells can promote corralling and wound compaction, so broad suppression claims are unsafe.",
+      "supporting_evidence": "O002",
+      "confidence": "high",
+      "tracker_id": "M3B-B002"
+    },
+    {
+      "boundary_id": "M3B-B003",
+      "boundary": "Polarization vocabulary boundary",
+      "interpretation_rule": "M1/M2 or pro-inflammatory labels require marker-level and cell-identity extraction.",
+      "supporting_evidence": "O004-O005",
+      "confidence": "high",
+      "tracker_id": "M3B-B003"
+    },
+    {
+      "boundary_id": "M3B-B004",
+      "boundary": "Cell product boundary",
+      "interpretation_rule": "Exosome or stem-cell products belong in Module 3 when immune-state modulation is the reported mechanism.",
+      "supporting_evidence": "O006",
+      "confidence": "medium",
+      "tracker_id": "M3B-B004"
+    },
+    {
+      "boundary_id": "M3B-B005",
+      "boundary": "Immune crosstalk boundary",
+      "interpretation_rule": "Myeloid mechanisms may involve lymphocyte recruitment and cannot be reduced to macrophage-only effects.",
+      "supporting_evidence": "O007",
+      "confidence": "medium",
+      "tracker_id": "M3B-B005"
+    },
+    {
+      "boundary_id": "M3B-B006",
+      "boundary": "Seed corpus boundary",
+      "interpretation_rule": "Module 3A has not reached saturation and has not completed experiment-level extraction.",
+      "supporting_evidence": "O001-O007",
+      "confidence": "high",
+      "tracker_id": "M3B-B006"
+    }
+  ],
+  "consensus_drafts": [
+    {
+      "consensus_draft_id": "M3B-S001",
+      "topic_id": "M3B-T001",
+      "draft_statement": "Seed evidence supports timing-sensitive microglial/CSF1R modulation as a tissue-preservation strategy, but not broad immune depletion as a universal rule.",
+      "supporting_claims": "C001-C002, C012",
+      "supporting_observations": "O001, O003",
+      "boundary_notes": "B001, B006",
+      "status": "PROVISIONAL SEED-CONSENSUS FIRST PASS",
+      "tracker_id": "M3B-S001",
+      "consensus_statement": "Seed evidence supports timing-sensitive microglial/CSF1R modulation as a tissue-preservation strategy, but not broad immune depletion as a universal rule."
+    },
+    {
+      "consensus_draft_id": "M3B-S002",
+      "topic_id": "M3B-T002",
+      "draft_statement": "Microglia and macrophages can organize SCI wound containment through corralling and compaction, creating a beneficial myeloid-function boundary.",
+      "supporting_claims": "C003-C004",
+      "supporting_observations": "O002",
+      "boundary_notes": "B002, B006",
+      "status": "PROVISIONAL SEED-CONSENSUS FIRST PASS",
+      "tracker_id": "M3B-S002",
+      "consensus_statement": "Microglia and macrophages can organize SCI wound containment through corralling and compaction, creating a beneficial myeloid-function boundary."
+    },
+    {
+      "consensus_draft_id": "M3B-S003",
+      "topic_id": "M3B-T003",
+      "draft_statement": "Danger-signaling and extracellular-trap pathways are plausible pro-inflammatory injury amplifiers but need marker-level full-text extraction.",
+      "supporting_claims": "C005-C007",
+      "supporting_observations": "O004-O005",
+      "boundary_notes": "B003, B006",
+      "status": "PROVISIONAL SEED-CONSENSUS FIRST PASS",
+      "tracker_id": "M3B-S003",
+      "consensus_statement": "Danger-signaling and extracellular-trap pathways are plausible pro-inflammatory injury amplifiers but need marker-level full-text extraction."
+    },
+    {
+      "consensus_draft_id": "M3B-S004",
+      "topic_id": "M3B-T004",
+      "draft_statement": "Cell-derived exosome interventions should be treated as immune-modulating therapies when the claimed mechanism is pyroptosis regulation.",
+      "supporting_claims": "C008-C009",
+      "supporting_observations": "O006",
+      "boundary_notes": "B004, B006",
+      "status": "PROVISIONAL SEED-CONSENSUS FIRST PASS",
+      "tracker_id": "M3B-S004",
+      "consensus_statement": "Cell-derived exosome interventions should be treated as immune-modulating therapies when the claimed mechanism is pyroptosis regulation."
+    },
+    {
+      "consensus_draft_id": "M3B-S005",
+      "topic_id": "M3B-T005",
+      "draft_statement": "Immune-metabolic reprogramming may couple microglia/macrophages to adaptive immune recruitment after SCI.",
+      "supporting_claims": "C010",
+      "supporting_observations": "O007",
+      "boundary_notes": "B005, B006",
+      "status": "PROVISIONAL SEED-CONSENSUS FIRST PASS",
+      "tracker_id": "M3B-S005",
+      "consensus_statement": "Immune-metabolic reprogramming may couple microglia/macrophages to adaptive immune recruitment after SCI."
+    },
+    {
+      "consensus_draft_id": "M3B-S006",
+      "topic_id": "M3B-T006",
+      "draft_statement": "Module 3B should remain a provisional seed consensus until more myeloid, neutrophil, monocyte, and single-cell papers are extracted.",
+      "supporting_claims": "C011-C012",
+      "supporting_observations": "O001-O007",
+      "boundary_notes": "all boundary records",
+      "status": "PROVISIONAL SEED-CONSENSUS FIRST PASS",
+      "tracker_id": "M3B-S006",
+      "consensus_statement": "Module 3B should remain a provisional seed consensus until more myeloid, neutrophil, monocyte, and single-cell papers are extracted."
+    }
+  ]
+}
