@@ -291,4 +291,4 @@ These rows are tracker-level Observation candidates. They preserve intended data
 
 **Extraction confidence mix**: mostly abstract-level first-pass observations; full-text upgrades should prioritize PMC-available papers before final SQL materialization.
 
-**Module 2B status**: CONSENSUS-READY FIRST PASS as of 2026-07-16. The evidence base is linked enough for synthesis, but SQL materialization should wait until the same style of exporter/validator used for Module 1 is generalized beyond Module 1-specific scripts.
+**Module 2B status**: CONSENSUS-READY FIRST PASS as of 2026-07-16. The evidence base is linked enough for synthesis and is exported to `data/processed/module2_evidence_bundle.json` by the shared tracker bundle exporter. Full SQL materialization should wait until Module 2 paper/experiment metadata mapping is generalized beyond the Module 1-specific SQL loader.
