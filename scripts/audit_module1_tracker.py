@@ -49,6 +49,7 @@ def main() -> int:
     observations = unique_ids(r"M1B-O\d{3}", one_b)
     claims = unique_ids(r"M1B-C\d{3}", one_b)
     links = unique_ids(r"M1B-L\d{3}", one_b)
+    syntheses = unique_ids(r"M1B-S\d{3}", one_b)
     boundaries = unique_ids(r"M1B-X\d{3}", one_b)
 
     checks.append(f"PASS Module 1B curated corpus papers: {len(paper_ids_1b)}")
@@ -56,6 +57,7 @@ def main() -> int:
     checks.extend(check_contiguous("Module 1B observations", observations))
     checks.extend(check_contiguous("Module 1B author claims", claims))
     checks.extend(check_contiguous("Module 1B evidence links", links))
+    checks.extend(check_contiguous("Module 1B consensus drafts", syntheses))
     checks.extend(check_contiguous("Module 1B boundary records", boundaries))
 
     expected_counts = {
@@ -64,6 +66,7 @@ def main() -> int:
         "Module 1B observations": (len(observations), 84),
         "Module 1B author claims": (len(claims), 50),
         "Module 1B evidence links": (len(links), 107),
+        "Module 1B consensus drafts": (len(syntheses), 8),
         "Module 1B boundary records": (len(boundaries), 7),
     }
     for label, (actual, expected) in expected_counts.items():
@@ -71,8 +74,8 @@ def main() -> int:
             checks.append(f"FAIL {label}: expected {expected}, found {actual}")
 
     required_phrases = [
-        "READY FOR CONSENSUS DRAFTING",
         "CONSENSUS-READY FIRST PASS",
+        "DRAFTED FIRST PASS; NOT SQL-MATERIALIZED",
         "MET FOR ALL FIRST-PASS TOPICS",
         "Module 1 first-pass curation freeze",
     ]
