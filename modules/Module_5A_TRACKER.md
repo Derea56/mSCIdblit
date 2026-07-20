@@ -216,3 +216,15 @@ These rows are first-pass abstract-level experiment placeholders. They preserve 
 | Search strategies logged | 10 | COMPLETE FIRST PASS |
 
 **Module 5A status**: SATURATED / FROZEN FIRST PASS as of 2026-07-16. The corpus now contains 47 primary papers, 94 abstract-level experiment rows, and 12 review/map anchors. Late targeted searches added variants inside already represented regeneration, sprouting, remyelination, and white-matter categories rather than new repair-mechanism families. Next step is refreshing Module 5B from this saturated corpus.
+
+## ODC-SCI Update Candidates
+
+Access date: 2026-07-17. These ODC-SCI dataset records should be considered for the next Module 5A source-confidence and result-linkage upgrade pass; they are not included in the frozen first-pass corpus counts above.
+
+| ODC ID | DOI | Dataset / Study | Module 5 Relevance | Update Action |
+|---|---|---|---|---|
+| ODC-SCI:1612 | 10.34945/F5FS42 | Robot-assisted rehabilitation after nerve transfer surgery in chronic complete cervical SCI | Nerve-transfer rehabilitation, cortical reorganization, hand/arm outcomes | Link to clinical neuromotor repair and Module 10 result linkage |
+| ODC-SCI:1609 | 10.34945/F5ZS3B | Diaphragm EMG and C4 spatial transcriptomics during epidural stimulation after C2 hemisection/C1 transection | Respiratory motor output, stimulation, spatial transcriptomics | Add as stimulation/circuit raw-data anchor |
+| ODC-SCI:1587 | 10.34945/F5888V | Genioglossus EMG during C4 stimulation after C2 hemisection and C1 transection | Respiratory/hypoglossal motor output after stimulation | Add as respiratory circuit endpoint boundary |
+| ODC-SCI:1410 | 10.34945/F51W2M | Clinical outcomes after perilesional spinal neuromodulation in chronic thoracic SCI | Human chronic neuromodulation outcome | Link to Module 10 and chronic functional repair boundary |
+| ODC-SCI:1315 | 10.34945/F5G30Z | Closed-loop vagus nerve stimulation aids hand recovery after cervical SCI in humans | Human stimulation-assisted upper-limb recovery | Add as clinical stimulation result anchor |

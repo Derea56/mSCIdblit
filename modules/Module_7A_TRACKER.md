@@ -262,3 +262,14 @@ Module 7A reached practical first-pass saturation on 2026-07-16 after targeted P
 
 Next step: create `Module_7B_TRACKER.md` only after selecting Module 7A rows for observation-level extraction. Module 7B should extract atomic observations, separate author claims from observations, link claims to observations, record contradictions and boundaries, and only then draft consensus statements. It should preserve procedure class, host-versus-graft target, timing, route, remodeling endpoint, and confidence boundaries.
 
+## ODC-SCI Update Candidates
+
+Access date: 2026-07-17. These ODC-SCI dataset records should be considered for the next Module 7A host-conditioning update pass; they are not included in the frozen first-pass corpus counts above.
+
+| ODC ID | DOI | Dataset / Study | Module 7 Relevance | Update Action |
+|---|---|---|---|---|
+| ODC-SCI:1536 | 10.34945/F55G67 | Systemic LPS drives microglia-mediated PNN degradation after cervical SCI | Systemic inflammatory host-state perturbation | Add as direct SCI host-conditioning bridge with Module 3 |
+| ODC-SCI:1389 | 10.34945/F58C8W | TLR2 agonist Pam3CSK4 dose-response testing in naive female Lewis rats | Pre-injury/naive immune-conditioning dose-response | Add as host-state calibration boundary row |
+| ODC-SCI:1387 | 10.34945/F54P47 | TLR2 and TLR4 agonist efficacy after SCI | Innate immune agonist conditioning after injury | Add as SCI inflammation-conditioning candidate |
+| ODC-SCI:688 | 10.34945/F5CP4D | Probiotic treatment after unilateral incomplete cervical C5 contusion | Microbiome/systemic host state | Add as gut-host conditioning candidate |
+| ODC-SCI:578 | 10.34945/F5XW2P | Fecal transplant from anxious donors after unilateral cervical contusion | Microbiota/systemic inflammation/behavior | Add as host-state transfer boundary row |

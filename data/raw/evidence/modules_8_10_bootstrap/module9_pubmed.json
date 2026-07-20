@@ -1,0 +1,226 @@
+[
+  {
+    "pmid": "41136603",
+    "title": "Engineered thoracic spinal cord organoids for transplantation after spinal cord injury.",
+    "year": "2025",
+    "author": "Zhu Y",
+    "abstract": "Stem-cell-based neural tissue engineering and spinal cord organoids show promises for spinal cord injury repair. However, the native spinal cord presents cell heterogeneity and a stereotypical spatial structure that makes difficult their recapitulation within an organoid architecture, which requires an assembly encompassing cellular composition, segmental organization and dorsoventral features. Here we engineer a thoracic vertebral segment-specific spinal cord organoid (enTsOrg) model that can precisely match the transplantation site, establish synaptic connections and enhance in vivo neuroelectric conduction. The organoids are generated from fibroblasts-derived induced pluripotent stem cells and a layered double-hydroxide matrix in a basement membrane hydrogel (Matrigel). Grafted in a spinal cord injury mouse model, enTsOrg presents advanced maturation, functionalization and organized d"
+  },
+  {
+    "pmid": "38565140",
+    "title": "Harnessing developmental dynamics of spinal cord extracellular matrix improves regenerative potential of spinal cord organoids.",
+    "year": "2024",
+    "author": "Sun Z",
+    "abstract": "Neonatal spinal cord tissues exhibit remarkable regenerative capabilities as compared to adult spinal cord tissues after injury, but the role of extracellular matrix (ECM) in this process has remained elusive. Here, we found that early developmental spinal cord had higher levels of ECM proteins associated with neural development and axon growth, but fewer inhibitory proteoglycans, compared to those of adult spinal cord. Decellularized spinal cord ECM from neonatal (DNSCM) and adult (DASCM) rabbits preserved these differences. DNSCM promoted proliferation, migration, and neuronal differentiation of neural progenitor cells (NPCs) and facilitated axonal outgrowth and regeneration of spinal cord organoids more effectively than DASCM. Pleiotrophin (PTN) and Tenascin (TNC) in DNSCM were identified as contributors to these abilities. Furthermore, DNSCM demonstrated superior performance as a del"
+  },
+  {
+    "pmid": "40405306",
+    "title": "Stem cell therapy: a revolutionary cure or a pandora's box.",
+    "year": "2025",
+    "author": "Marei HE",
+    "abstract": "This review article examines how stem cell therapies can cure various diseases and injuries while also discussing the difficulties and moral conundrums that come with their application. The article focuses on the revolutionary developments in stem cell research, especially the introduction of gene editing tools like CRISPR-Cas9, which can potentially improve the safety and effectiveness of stem cell-based treatments. To guarantee the responsible use of stem cells in clinical applications, it is also argued that standardizing clinical procedures and fortifying ethical and regulatory frameworks are essential first steps. The assessment also highlights the substantial obstacles that still need to be addressed, such as the moral dilemmas raised by the use of embryonic stem cells, the dangers of unlicensed stem cell clinics, and the difficulties in obtaining and paying for care for patients. "
+  },
+  {
+    "pmid": "39872925",
+    "title": "Progress in spinal cord organoid research: advancing understanding of neural development, disease modelling, and regenerative medicine.",
+    "year": "2025",
+    "author": "Huang R",
+    "abstract": "Stem cell-derived spinal cord organoids (SCOs) have revolutionised the study of spinal cord development and disease mechanisms, offering a three-dimensional model that recapitulates the complexity of native tissue. This review synthesises recent advancements in SCO technology, highlighting their role in modelling spinal cord morphogenesis and their application in neurodegenerative disease research. We discuss the methodological breakthroughs in inducing regional specification and cellular diversity within SCOs, which have enhanced their predictive ability for drug screening and their relevance in mimicking pathological conditions such as neurodegenerative diseases and neuromuscular disorders. Despite these strides, challenges in achieving vascularisation and mature neuronal integration persist. The future of SCOs lies in addressing these limitations, potentially leading to transformative"
+  },
+  {
+    "pmid": "41673139",
+    "title": "Injury and therapy in a human spinal cord organoid.",
+    "year": "2026",
+    "author": "Takata N",
+    "abstract": "Damage to the spinal cord can lead to irreversible paralysis and loss of sensory function, but translation of preclinical therapies remains elusive. We recently showed that bioactive supramolecular assemblies of peptide amphiphiles can reverse paralysis in an acute mouse model following severe spinal cord injury (SCI). Here we report the development of two human spinal cord organoid injury models to simulate SCI in vitro, a laceration of the organoid with a scalpel and a compressive contusion commonly used in preclinical models, both resulting in immediate neuronal death and the formation of glial scar-like tissue. Treatment of the injured organoids with the preclinical therapy suppressed the scar-like tissue and promoted significant axonal regeneration, as observed previously in vivo. With the inclusion of microglia into the spinal cord organoids, we demonstrate that the supramolecular "
+  },
+  {
+    "pmid": "41051068",
+    "title": "GelMA Hydrogel Encapsulating iPSC-Derived Human Spinal Cord Organoids Enhances Neural Regeneration and Restores Motor Function in Rat Spinal Cord Injury.",
+    "year": "2025",
+    "author": "Li Y",
+    "abstract": "Spinal cord injury (SCI) severely compromises neural regeneration due to limited intrinsic repair capacity. Combining induced pluripotent stem cell (iPSC)-derived organoids with biomaterial scaffolds offers a promising regenerative strategy. This study investigated the therapeutic potential of human spinal cord organoids (hSCOs) encapsulated within gelatin methacryloyl (GelMA) hydrogel for SCI repair. hSCOs were generated from iPSCs via stage-specific patterning (dorsoventral inhibition followed by retinoic acid/SAG-induced motor neuron specification) and encapsulated in GelMA hydrogel. The therapeutic efficacy of hSCOs/GelMA composites was evaluated in a rat T10 contusion SCI model (n = 6/group: Sham, SCI, GelMA-only, GelMA+hSCOs). Functional recovery was assessed weekly for 4 weeks using Basso-Beattie-Bresnahan (BBB) locomotor scores and inclined plane tests. Histological (H&E, Nissl) "
+  },
+  {
+    "pmid": "34373751",
+    "title": "Self-assembly of differentiated progenitor cells facilitates spheroid human skin organoid formation and planar skin regeneration.",
+    "year": "2021",
+    "author": "Ebner-Peking P",
+    "abstract": "Self-assembly of solid organs from single cells would greatly expand applicability of regenerative medicine. Stem/progenitor cells can self-organize into micro-sized organ units, termed organoids, partially modelling tissue function and regeneration. Here we demonstrated 3D self-assembly of adult and induced pluripotent stem cell (iPSC)-derived fibroblasts, keratinocytes and endothelial progenitors into both, planar human skin in vivo and a novel type of spheroid-shaped skin organoids in vitro, under the aegis of human platelet lysate. Methods: Primary endothelial colony forming cells (ECFCs), skin fibroblasts (FBs) and keratinocytes (KCs) were isolated from human tissues and polyclonally propagated under 2D xeno-free conditions. Human tissue-derived iPSCs were differentiated into endothelial cells (hiPSC-ECs), fibroblasts (hiPSC-FBs) and keratinocytes (hiPSC-KCs) according to efficiency"
+  },
+  {
+    "pmid": "41061610",
+    "title": "Generation of engineered human spinal cord organoid in channel-patterned collagen and transplantation for spinal cord regeneration.",
+    "year": "2025",
+    "author": "Ma L",
+    "abstract": "The construction of artificially manipulable tissue-engineered human spinal cord organoids (HSCO) in vitro is crucial for recapitulating spinal cord development and facilitating the transplantation repair of complete spinal cord injury (SCI). Here, we develop a millimeter-scale macroscopic complex scaffold assembled by Matrigel-filled channel-patterned type II collagen (CPCol II-M), in which a spheroid derived from human motor neural progenitors extends within the channel to generate the human spinal cord organoids in CPCol II-M (HSCO-CPCol II-M). The CPCol II-M scaffold, with enhanced mechanical properties, mimics the anisotropic architecture of the spinal cord and improves cell survival after long-term cultivation. Notably, the HSCO-CPCol II-M exhibits spinal cord differentiation and expresses spinal cord-associated mature neurons. When transplanted into nude mice model with completely"
+  },
+  {
+    "pmid": "40967224",
+    "title": "Spatially patterned kidney assembloids recapitulate progenitor self-assembly and enable high-fidelity in vivo disease modeling.",
+    "year": "2025",
+    "author": "Huang B",
+    "abstract": "Current kidney organoids do not recapitulate the kidney's complex spatial patterning and function, limiting their applications. The human kidney comprises one million nephrons, derived from nephron progenitor cells, that connect to an arborized ureteric progenitor cell-derived collecting system. Here, we develop spatially organized mouse and human kidney progenitor assembloid (KPA) models in which the nephrons undergo extensive development and fuse to a centrally located collecting system, recapitulating kidney progenitor self-assembly processes observed in vivo. KPAs show dramatically improved cellular complexity and maturity and exhibit several aspects of major kidney functions in vitro and in vivo. Modeling human autosomal dominant polycystic kidney disease (ADPKD) with genome-edited, in vivo-grown human KPAs recapitulated the cystic phenotype and the molecular and cellular hallmarks "
+  },
+  {
+    "pmid": "42201810",
+    "title": "A human corticospinal organoid-slice connectoid model informs enhancer strategies for post-injury axon regrowth.",
+    "year": "2026",
+    "author": "Gibbons GM",
+    "abstract": "Axon elongation in the mammalian central nervous system (CNS) declines during development, limiting regenerative capacity after birth. Intrinsic regulators of this process are promising repair targets, as immature axons can regrow in tissues otherwise not conducive to regeneration. Yet the precise timing and mechanisms underlying the cessation of axon growth in the human CNS remain unresolved. Here, we developed a three-dimensional human corticospinal motor organoid-slice connectoid platform mimicking the developmental axon elongation program and its subsequent restriction through maturation. Cortical and spinal slices establish functional connections while remaining spatially segregated, enabling cortical cell-type-specific observations without direct confounding effects by spinal cells. Using single-cell transcriptomics, computational analyses, axon regrowth assays, and live imaging, w"
+  },
+  {
+    "pmid": "41467418",
+    "title": "Spatiotemporal disarray of inflammatory microenvironment following spinal cord injury.",
+    "year": "2025",
+    "author": "Di J",
+    "abstract": "Spinal cord injury is a severe neurological condition with far-reaching consequences for both individuals and society. Its progression involves a complex interplay between the initial mechanical insult and inflammation-driven secondary injury. This review interprets recent studies on the spatiotemporal map of the inflammatory microenvironment in spinal cord injury and other neurological disorders, focusing on the latest mechanistic research and treatment options. The postinjury inflammatory microenvironment comprises diverse immune and glial cell populations whose phenotypes and functions change over time. The current consensus suggests that inflammation has a paradoxical nature: while it can limit lesion spread in the acute stage, chronic or dysregulated responses contribute to further neural damage through pathways such as excitotoxicity, oxidative stress, and glial scar formation. Met"
+  },
+  {
+    "pmid": "39681560",
+    "title": "Selectively targeting the AdipoR2-CaM-CaMKII-NOS3 axis by SCM-198 as a rapid-acting therapy for advanced acute liver failure.",
+    "year": "2024",
+    "author": "Wang R",
+    "abstract": "Acute liver failure (ALF) is a hepatology emergency with rapid hepatic destruction, multiple organ failures, and high mortality. Despite decades of research, established ALF has minimal therapeutic options. Here, we report that the small bioactive compound SCM-198 increases the survival of male ALF mice to 100%, even administered 24 hours after ALF establishment. We identify adiponectin receptor 2 (AdipoR2) as a selective target of SCM-198, with the AdipoR2 R335 residue being critical for the binding and signaling of SCM-198-AdipoR2 and AdipoR2 Y274 residue serving as a molecular switch for Ca2+ influx. SCM-198-AdipoR2 binding causes Ca2+ influx and elevates the phosphorylation levels of CaMKII and NOS3 in the AdipoR2-CaM-CaMKII-NOS3 complex identified in this study, rapidly inducing nitric oxide production for liver protection in murine ALF. SCM-198 also protects human ESC-derived liver"
+  },
+  {
+    "pmid": "38368393",
+    "title": "Exosome lncRNA IFNG-AS1 derived from mesenchymal stem cells of human adipose ameliorates neurogenesis and ASD-like behavior in BTBR mice.",
+    "year": "2024",
+    "author": "Fu Y",
+    "abstract": "The transplantation of exosomes derived from human adipose-derived mesenchymal stem cells (hADSCs) has emerged as a prospective cellular-free therapeutic intervention for the treatment of neurodevelopmental disorders (NDDs), as well as autism spectrum disorder (ASD). Nevertheless, the efficacy of hADSC exosome transplantation for ASD treatment remains to be verified, and the underlying mechanism of action remains unclear. The exosomal long non-coding RNAs (lncRNAs) from hADSC and human umbilical cord mesenchymal stem cells (hUCMSC) were sequenced and 13,915 and 729 lncRNAs were obtained, respectively. The lncRNAs present in hADSC-Exos encompass those found in hUCMSC-Exos and are associated with neurogenesis. The biodistribution of hADSC-Exos in mouse brain ventricles and organoids was tracked, and the cellular uptake of hADSC-Exos was evaluated both in vivo and in vitro. hADSC-Exos promo"
+  },
+  {
+    "pmid": "40411400",
+    "title": "Generation of Neural Organoids and Their Application in Disease Modeling and Regenerative Medicine.",
+    "year": "2025",
+    "author": "Huang R",
+    "abstract": "The complexity and precision of the human nervous system have posed significant challenges for researchers seeking suitable models to elucidate refractory neural disorders. Traditional approaches, including monolayer cell cultures and animal models, often fail to replicate the intricacies of human neural tissue. The advent of organoid technology derived from stem cells has addressed many of these limitations, providing highly representative platforms for studying the structure and function of the human embryonic brain and spinal cord. Researchers have induced neural organoids with regional characteristics by mimicking morphogen gradients in neural development. Recent advancements have demonstrated the utility of neural organoids in disease modeling, offering insights into the pathophysiology of various neural disorders, as well as in the field of neural regeneration. Developmental defect"
+  },
+  {
+    "pmid": "34938909",
+    "title": "Construction of a niche-specific spinal white matter-like tissue to promote directional axon regeneration and myelination for rat spinal cord injury repair.",
+    "year": "2021",
+    "author": "Lai BQ",
+    "abstract": "Directional axon regeneration and remyelination are crucial for repair of spinal cord injury (SCI), but existing treatments do not effectively promote those processes. Here, we propose a strategy for construction of niche-specific spinal white matter-like tissue (WMLT) using decellularized optic nerve (DON) loaded with neurotrophin-3 (NT-3)-overexpressing oligodendrocyte precursor cells. A rat model with a white matter defect in the dorsal spinal cord of the T10 segment was used. The WMLT transplantation group showed significant improvement in coordinated motor functions compared with the control groups. WMLT transplants integrated well with host spinal cord white matter, effectively addressing several barriers to directional axonal regeneration and myelination during SCI repair. In WMLT, laminin was found to promote development of oligodendroglial lineage (OL) cells by binding to lamini"
+  },
+  {
+    "pmid": "42250855",
+    "title": "Trichostatin A-primed spinal cord organoids alleviate oxidative stress and improve recovery after spinal cord injury involving the NRF2/HO-1 signaling pathway.",
+    "year": "2026",
+    "author": "Wang Y",
+    "abstract": "Oxidative stress represents a fundamental pathological driver of the secondary injury cascade following traumatic spinal cord injury (SCI). Although the pan-histone deacetylase inhibitor Trichostatin A (TSA) exhibits neuroprotective properties in various contexts, its capacity to modulate the endogenous NRF2/HO-1 antioxidant defense system within the human spinal cord microenvironment remains to be elucidated. In this study, we utilized human induced pluripotent stem cell-derived spinal cord organoids (hSCOs) as a sophisticated, human-relevant platform to investigate these mechanisms. In vitro analyses revealed that TSA preconditioning significantly bolsters the resilience of hSCOs against oxidative damage, manifesting as enhanced cellular viability, diminished accumulation of reactive oxygen species and malondialdehyde, and elevated superoxide dismutase activity. Mechanistic evaluations"
+  },
+  {
+    "pmid": "42266586",
+    "title": "Current status of neural progenitor/stem cells for spinal cord injury: fundamental research and clinical trials.",
+    "year": "2026",
+    "author": "Chen XX",
+    "abstract": "Spinal cord injury (SCI) causes irreversible neurological deficits and represents a major global health and socioeconomic burden. Although neural progenitor cell (NPC) transplantation is strongly supported by preclinical evidence through cell replacement, intrinsic neuroregeneration, and broad neurotrophic and immunomodulatory effects, its clinical translation has progressed more slowly than anticipated. In parallel, rapid advances in gene editing, biomaterial engineering, and organoid technologies are reshaping the therapeutic landscape. Therefore, it is timely to systematically re-evaluate the current evidence on NPC-based therapies for SCI and to refine future translational strategies. This review provides an updated and comprehensive overview of NPC therapy for SCI across the full translational continuum. First, we summarize the biological properties, advantages, and limitations of N"
+  },
+  {
+    "pmid": "36749877",
+    "title": "Cell reprogramming for oligodendrocytes: A review of protocols and their applications to disease modeling and cell-based remyelination therapies.",
+    "year": "2023",
+    "author": "McCaughey-Chapman A",
+    "abstract": "Oligodendrocytes are a type of glial cells that produce a lipid-rich membrane called myelin. Myelin assembles into a sheath and lines neuronal axons in the brain and spinal cord to insulate them. This not only increases the speed and efficiency of nerve signal transduction but also protects the axons from damage and degradation, which could trigger neuronal cell death. Demyelination, which is caused by a loss of myelin and oligodendrocytes, is a prominent feature of many neurological conditions, including Multiple sclerosis (MS), spinal cord injuries (SCI), and leukodystrophies. Demyelination is followed by a time of remyelination mediated by the recruitment of endogenous oligodendrocyte precursor cells, their migration to the injury site, and differentiation into myelin-producing oligodendrocytes. Unfortunately, endogenous remyelination is not sufficient to overcome demyelination, which"
+  },
+  {
+    "pmid": "40926052",
+    "title": "CETN3 deficiency induces microcephaly by disrupting neural stem/progenitor cell fate through impaired centrosome assembly and RNA splicing.",
+    "year": "2025",
+    "author": "Xu J",
+    "abstract": "Primary microcephaly, a rare congenital condition characterized by reduced brain size, occurs due to impaired neurogenesis during brain development. Through whole-exome sequencing, we identified compound heterozygous loss-of-function mutations in CENTRIN 3 (CETN3) in a 5-year-old patient with primary microcephaly. As CETN3 has not been previously linked to microcephaly, we investigated its potential function in neurodevelopment in human pluripotent stem cell-derived cerebral organoids. We showed that CETN3-knockout (KO) organoids successfully recapitulated the microcephaly phenotype of reduced size compared to the control organoids. Through transcriptomic, histological, and protein analyses, we found that CETN3 deficiency directly interferes with neuronal differentiation and reduces proliferative capacity in neural stem/progenitor cells by impairing centrosome assembly required in cell c"
+  },
+  {
+    "pmid": "33708360",
+    "title": "Functional assays to assess the therapeutic potential of extracellular vesicles.",
+    "year": "2021",
+    "author": "Nguyen VVT",
+    "abstract": "An important aspect in the development of extracellular vesicle (EV) therapeutics is identifying and quantifying the key features defining their identity, purity, sterility, potency and stability to ensure batch-to-batch reproducibility of their therapeutic efficacy. Apart from EV-inherent features, therapeutic efficacy depends on a variety of additional parameters, like dosing, frequency of application, and administration route, some of which can be addressed only in clinical trials. Before initiating clinical trials, EV-inherent features should be tested in well-standardized quantitative assays in vitro or in appropriate animal models in vivo. Ideally, such assays would predict if a particular EV preparation has the potential to achieve its intended therapeutic effects, and could be further developed into formal potency assays as published by the International Council for Harmonization"
+  },
+  {
+    "pmid": "41965870",
+    "title": "Proteome profiles of esophageal squamous cell carcinoma tie mitochondrial complex I to immunotherapy.",
+    "year": "2026",
+    "author": "Ma F",
+    "abstract": "Immunotherapy has revolutionized cancer treatment, yet many patients show non-sensitivity. Here, we collected treatment-na\u00efve samples from 190 esophageal squamous cell carcinoma (ESCC) patients undergoing anti-programmed death 1 (PD1) immunotherapy for proteome, phosphoproteome, and immunohistochemistry (IHC) analysis. Proteome-based stratification of ESCC identifies three proteomic subtypes (G-I-G-III) related to immunotherapy response and different molecular features, revealing that patients with high mitochondrial complex I protein expression show sensitivity to anti-PD1 immunotherapy. High mitochondrial complex I protein expression of ESCC cells or patient-derived organoids increases sensitivity to CD8 + T cell-mediated killing in the co-culture systems. Phosphoproteomic data analysis reveals YAP1 activation impairs immunotherapy efficacy. Inhibiting YAP1 or increasing mitochondrial "
+  },
+  {
+    "pmid": "34454068",
+    "title": "The Evolving Role of Induced Pluripotent Stem Cells and Cerebral Organoids in Treating and Modeling Neurosurgical Diseases.",
+    "year": "2021",
+    "author": "Jovanovich N",
+    "abstract": "Over the past decade, the use of induced pluripotent stem cells (IPSCs), as both direct therapeutics and building blocks for 3D in vitro models, has exhibited exciting potential in both helping to elucidate pathogenic mechanisms and treating diseases relevant to neurosurgery. Transplantation of IPSCs is being studied in neurological injuries and diseases, such as spinal cord injury and Parkinson's disease, whose clinical manifestations stem from underlying neuronal and/or axonal degeneration. Both animal models and clinical trials have shown that IPSCs have the ability to regenerate damaged neural tissue. Such evidence makes IPSCs a potentially promising therapeutic modality for patients who suffer from these neurological injuries/diseases. In addition, the cerebral organoid, a 3D assembly of IPSC aggregates that develops heterogeneous brain regions, has become the first in vitro model t"
+  },
+  {
+    "pmid": "30734212",
+    "title": "3D-Embedded Cell Cultures to Study Tendon Biology.",
+    "year": "2019",
+    "author": "Gehwolf R",
+    "abstract": "Tendons harbor various cell populations, including cells displaying classical adult mesenchymal stromal cell criteria. Previous studies have shown that a tenogenic phenotype is more effectively maintained in a 3D cell culture model under mechanical load. This chapter describes a method to isolate tendon-derived cells from rat Achilles tendons and the subsequent formation of 3D-embedded cell cultures. These tendon-like constructs can then be analyzed by various means, including histology, immunohistochemistry, qPCR, or standard protein analysis techniques."
+  },
+  {
+    "pmid": "35203448",
+    "title": "Synergy of Human Platelet-Derived Extracellular Vesicles with Secretome Proteins Promotes Regenerative Functions.",
+    "year": "2022",
+    "author": "Gomes FG",
+    "abstract": "Platelet-rich plasma is a promising regenerative therapeutic with controversial efficacy. We and others have previously demonstrated regenerative functions of human platelet lysate (HPL) as an alternative platelet-derived product. Here we separated extracellular vesicles (EVs) from soluble factors of HPL to understand the mode of action during skin-organoid formation and immune modulation as model systems for tissue regeneration. HPL-EVs were isolated by tangential-flow filtration (TFF) and further purified by size-exclusion chromatography (SEC) separating EVs from (lipo)protein-enriched soluble fractions. We characterized samples by tunable resistive pulse sensing, western blot, tandem mass-tag proteomics and super-resolution microscopy. We evaluated EV function during angiogenesis, wound healing, organoid formation and immune modulation. We characterized EV enrichment by TFF and SEC ac"
+  },
+  {
+    "pmid": "34323349",
+    "title": "RGCC balances self-renewal and neuronal differentiation of neural stem cells in the developing mammalian neocortex.",
+    "year": "2021",
+    "author": "Guo Z",
+    "abstract": "During neocortical development, neural stem cells (NSCs) divide symmetrically to self-renew at the early stage and then divide asymmetrically to generate post-mitotic neurons. The molecular mechanisms regulating the balance between NSC self-renewal and neurogenesis are not fully understood. Using mouse in utero electroporation (IUE) technique and in vitro human NSC differentiation models including cerebral organoids (hCOs), we show here that regulator of cell cycle (RGCC) modulates NSC self-renewal and neuronal differentiation by affecting cell cycle regulation and spindle orientation. RGCC deficiency hampers normal cell cycle process and dysregulates the mitotic spindle, thus driving more cells to divide asymmetrically. These modulations diminish the NSC population and cause NSC pre-differentiation that eventually leads to brain developmental malformation in hCOs. We further show that R"
+  },
+  {
+    "pmid": "41982329",
+    "title": "Integrating 3D bioprinting and neural stem cell therapy for central nervous system repair: implications for regenerative neurosurgery.",
+    "year": "2026",
+    "author": "Guo Y",
+    "abstract": "The limited regenerative capacity of the central nervous system (CNS)poses a major challenge in neurosurgical interventions for spinal cord injuries, neurodegenerative diseases,and traumatic brain injuries. Traditional approaches offer structural stabilization but rarely achieve true neural tissue regeneration. Recent advances in regenerative medicine have spotlighted two promising strategies: 3D bioprinting and neural stem cell (NSC) therapy.3D bioprinting enables the fabrication of anatomically precise, biocompatible scaffolds that mimic native neural architecture, offering structural and biochemical support for tissue repair. Concurrently, NSCs capable of differentiating into neurons, astrocytes, and oligodendrocytes promote neurogenesis, synaptic integration,and immune modulation, making them attractive candidates for functional recovery. Despite extensive preclinical success, clinic"
+  },
+  {
+    "pmid": "42016760",
+    "title": "RBFOX1 Dysfunction Unlocks APOE4-Associated Microglial Genesis and Exacerbates Alzheimer's Pathology in Human Cerebral Organoids.",
+    "year": "2026",
+    "author": "Zhang B",
+    "abstract": "Alzheimer's disease (AD) pathogenesis is strongly influenced by APOE4, though how cooperative genetic factors modulate this relationship remains unclear. While genomic studies have tentatively linked RBFOX1 to AD susceptibility, its functional synergy with APOE4 has never been experimentally defined. We engineered APOE3 or APOE4 isogenic human cerebral organoids with CRISPR/Cas9-mediated RBFOX1 knockout. Remarkably, RBFOX1 depletion selectively triggered robust microglial generation exclusively in APOE4 organoids. Time-course gene expression revealed that this APOE4-specific effect correlated with prolonged mesodermal priming during early embryoid body differentiation, creating a permissive niche for microglial lineage specification. The emergent microglia exhibited pronounced neurotoxic phenotypes, including pro-inflammatory factor secretion, synaptic architecture remodeling, and lipid "
+  },
+  {
+    "pmid": "35882128",
+    "title": "Graphene-collagen cryogel controls neuroinflammation and fosters accelerated axonal regeneration in spinal cord injury.",
+    "year": "2022",
+    "author": "Agarwal G",
+    "abstract": "Spinal cord injury (SCI) is a devastating condition resulting in loss of motor function. The pathology of SCI is multifaceted and involves a cascade of events, including neuroinflammation and neuronal degeneration at the epicenter, limiting repair process. We developed a supermacroporous, mechanically elastic, electro-conductive, graphene crosslinked collagen (Gr-Col) cryogels for the regeneration of the spinal cord post-injury. The effects of graphene in controlling astrocytes reactivity and microglia polarization are evaluated in spinal cord slice organotypic culture and rat spinal cord lateral hemisection model of SCI. In our work, the application of external electric stimulus results in the enhanced expression of neuronal markers in an organotypic culture. The implantation of Gr-Col cryogels in rat thoracic T9-T11 hemisection model demonstrates an improved functional recovery within "
+  },
+  {
+    "pmid": "18513321",
+    "title": "Spontaneous regeneration of intrinsic spinal cord axons in a novel spinal cord slice culture model.",
+    "year": "2008",
+    "author": "Bonnici B",
+    "abstract": "A substantial problem in research concerned with axonal repair is the use of a wide variety of lesion models and the complexity associated with the respective in vivo lesion paradigms. Organotypic slice cultures are a potential in vitro alternative because the cytoarchitectonic tissue organization is well preserved and the slices can be maintained in culture for several weeks. Until now no spinal cord slice culture model for the study of axonal growth has been available. Here we present a spinal cord slice culture model that is well suited for the study of axonal growth. The spinal cord slices were cut not in the transverse but in the sagittal longitudinal plane such that several spinal cord segments were included in the slice culture. In these cultures the typical ventro-dorsal polarity of the spinal cord was maintained and intrinsic spinal cord axons formed a strong fibre tract extendi"
+  },
+  {
+    "pmid": "19711121",
+    "title": "Axonal regeneration and neural network reconstruction in mammalian CNS.",
+    "year": "2009",
+    "author": "Nishio T",
+    "abstract": "Following injury to the white matter of the adult mammalian central nervous system (CNS), severed axons fail to regenerate beyond the lesion site. Recent studies have revealed that the CNS white matter contains numerous axon growth inhibitors. These findings can easily lead to the concept that regenerating axons cannot grow in the CNS white matter because of the growth inhibition by these inhibitory molecules. This \"misconception\" appears to be generally accepted. However, it is erroneous because axons can grow along the CNS white matter very rapidly. Neurons cultured on a slice of adult rat brain can extend their neurites along the white matter tract, while axons of neurons transplanted into the adult rat spinal cord white matter can grow along the CNS white matter very rapidly, at more than 1 mm/day. Not only artificially transplanted neurons, but also in situ CNS neurons can elongate "
+  },
+  {
+    "pmid": "27708562",
+    "title": "Embryonic Cell Grafts in a Culture Model of Spinal Cord Lesion: Neuronal Relay Formation Is Essential for Functional Regeneration.",
+    "year": "2016",
+    "author": "Tscherter A",
+    "abstract": "Presently there exists no cure for spinal cord injury (SCI). However, transplantation of embryonic tissue into spinal cord (SC) lesions resulted in axon outgrowth across the lesion site and some functional recovery, fostering hope for future stem cell therapies. Although in vivo evidence for functional recovery is given, the exact cellular mechanism of the graft support remains elusive: either the grafted cells provide a permissive environment for the host tissue to regenerate itself or the grafts actually integrate functionally into the host neuronal network reconnecting the separated SC circuits. We tested the two hypotheses in an in vitro SC lesion model that is based on propagation of activity between two rat organotypic SC slices in culture. Transplantation of dissociated cells from E14 rat SC or forebrain (FB) re-established the relay of activity over the lesion site and thus, prov"
+  },
+  {
+    "pmid": "19429051",
+    "title": "Transplantation of mesenchymal stem cells enhances axonal outgrowth and cell survival in an organotypic spinal cord slice culture.",
+    "year": "2009",
+    "author": "Cho JS",
+    "abstract": "Mesenchymal stem cells (MSCs) have demonstrated a measurable therapeutic effect following transplantation into animal models of spinal cord injury. However, the mechanism(s) by which transplanted cells promote nerve regeneration and/or functional recovery remains indeterminate. Several studies have suggested that MSCs promote tissue repair via secretion of trophic factors, but delineating the effect of such factors is difficult due to the complexity of the in vivo systems. Therefore, we developed an organotypic spinal cord slice culture system that can be sustained for sufficient periods of time in vitro to evaluate nerve regeneration as an ex vivo model of spinal cord injury. Using this model, we demonstrate that treatment of lumbar slices of spinal cord with lysolecithin induced a significant degree of cell death and demyelination of nerve fibers, but that these effects were ameliorate"
+  }
+]

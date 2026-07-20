@@ -214,6 +214,131 @@ MODULES = {
             "MET FOR ALL FIRST-PASS TOPICS",
         ),
     ),
+    "8b": ModuleConfig(
+        key="8b",
+        label="Module 8B",
+        tracker=ROOT / "modules" / "Module_8B_TRACKER.md",
+        output=ROOT / "data" / "processed" / "module8_evidence_bundle.json",
+        id_prefix="M8B",
+        boundary_prefix="M8B-B",
+        evidence_link_section="## Pass 6: Evidence Links Drafted",
+        boundary_section="## Boundary Conditions Draft",
+        boundary_id_key="boundary_id",
+        consensus_section="## Consensus Draft Queue",
+        consensus_statement_key="draft_statement",
+        expected_counts={
+            "observations": 14,
+            "author_claims": 16,
+            "evidence_links": 40,
+            "boundary_records": 8,
+            "consensus_drafts": 8,
+        },
+        required_phrases=(
+            "CONSENSUS-READY FIRST PASS",
+            "Module 8 first-pass curation freeze",
+            "MET FOR ALL FIRST-PASS TOPICS",
+        ),
+    ),
+    "9b": ModuleConfig(
+        key="9b",
+        label="Module 9B",
+        tracker=ROOT / "modules" / "Module_9B_TRACKER.md",
+        output=ROOT / "data" / "processed" / "module9_evidence_bundle.json",
+        id_prefix="M9B",
+        boundary_prefix="M9B-B",
+        evidence_link_section="## Pass 6: Evidence Links Drafted",
+        boundary_section="## Boundary Conditions Draft",
+        boundary_id_key="boundary_id",
+        consensus_section="## Consensus Draft Queue",
+        consensus_statement_key="draft_statement",
+        expected_counts={
+            "observations": 17,
+            "author_claims": 17,
+            "evidence_links": 40,
+            "boundary_records": 8,
+            "consensus_drafts": 8,
+        },
+        required_phrases=(
+            "CONSENSUS-READY FIRST PASS",
+            "Module 9 first-pass curation freeze",
+            "MET FOR ALL FIRST-PASS TOPICS",
+        ),
+    ),
+    "10b": ModuleConfig(
+        key="10b",
+        label="Module 10B",
+        tracker=ROOT / "modules" / "Module_10B_TRACKER.md",
+        output=ROOT / "data" / "processed" / "module10_evidence_bundle.json",
+        id_prefix="M10B",
+        boundary_prefix="M10B-B",
+        evidence_link_section="## Pass 6: Evidence Links Drafted",
+        boundary_section="## Boundary Conditions Draft",
+        boundary_id_key="boundary_id",
+        consensus_section="## Consensus Draft Queue",
+        consensus_statement_key="draft_statement",
+        expected_counts={
+            "observations": 80,
+            "author_claims": 36,
+            "evidence_links": 116,
+            "boundary_records": 8,
+            "consensus_drafts": 8,
+        },
+        required_phrases=(
+            "CONSENSUS-READY FIRST PASS",
+            "Module 10 first-pass curation freeze",
+            "MET FOR ALL FIRST-PASS TOPICS",
+        ),
+    ),
+    "11b": ModuleConfig(
+        key="11b",
+        label="Module 11B",
+        tracker=ROOT / "modules" / "Module_11B_TRACKER.md",
+        output=ROOT / "data" / "processed" / "module11_evidence_bundle.json",
+        id_prefix="M11B",
+        boundary_prefix="M11B-B",
+        evidence_link_section="## Pass 6: Evidence Links Drafted",
+        boundary_section="## Boundary Conditions Draft",
+        boundary_id_key="boundary_id",
+        consensus_section="## Consensus Draft Queue",
+        consensus_statement_key="draft_statement",
+        expected_counts={
+            "observations": 32,
+            "author_claims": 32,
+            "evidence_links": 72,
+            "boundary_records": 8,
+            "consensus_drafts": 8,
+        },
+        required_phrases=(
+            "CONSENSUS-READY FIRST PASS",
+            "Module 11 first-pass curation freeze",
+            "MET FOR ALL FIRST-PASS TOPICS",
+        ),
+    ),
+    "12b": ModuleConfig(
+        key="12b",
+        label="Module 12B",
+        tracker=ROOT / "modules" / "Module_12B_TRACKER.md",
+        output=ROOT / "data" / "processed" / "module12_evidence_bundle.json",
+        id_prefix="M12B",
+        boundary_prefix="M12B-B",
+        evidence_link_section="## Pass 6: Evidence Links Drafted",
+        boundary_section="## Boundary Conditions Draft",
+        boundary_id_key="boundary_id",
+        consensus_section="## Consensus Draft Queue",
+        consensus_statement_key="draft_statement",
+        expected_counts={
+            "observations": 24,
+            "author_claims": 24,
+            "evidence_links": 56,
+            "boundary_records": 8,
+            "consensus_drafts": 8,
+        },
+        required_phrases=(
+            "CONSENSUS-READY FIRST PASS",
+            "Module 12 first-pass curation freeze",
+            "MET FOR ALL FIRST-PASS TOPICS",
+        ),
+    ),
 }
 
 
@@ -279,10 +404,12 @@ def normalize_rows(rows: list[dict[str, str]], kind: str, config: ModuleConfig) 
             add_alias(item, "claim_id", "tracker_id")
         elif kind == "evidence_links":
             add_alias(item, "link_id", "tracker_id")
+            add_alias(item, "evidence_link_id", "tracker_id")
         elif kind == "boundary_records":
             add_alias(item, config.boundary_id_key, "tracker_id")
         elif kind == "consensus_drafts":
             add_alias(item, "consensus_draft_id", "tracker_id")
+            add_alias(item, "consensus_id", "tracker_id")
             add_alias(item, config.consensus_statement_key, "consensus_statement")
         normalized.append(item)
     return normalized

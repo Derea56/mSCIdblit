@@ -218,3 +218,15 @@ This tracker monitors experiment-level and cohort-level evidence on human chroni
 Module 6A reached practical first-pass saturation on 2026-07-16 after targeted searches captured the major human pathology and translational imaging categories: chronic MRI stereology, ventral-root motoneuron/remyelination pathology, surgical scar-resection anatomy, pediatric and adult DTI, tissue bridge prognostic MRI, cervical cord and supraspinal MRS, qMRI/MTsat tract degeneration, fMRI cortical reorganization, vascular autopsy pathology, post-traumatic syrinx/cyst pathology, and clinical trial imaging frameworks.
 
 Next step: create `Module_6B_TRACKER.md` only after selecting Module 6A rows for observation-level extraction. Module 6B should extract atomic observations, author claims, evidence links, contradictions/boundaries, and then consensus drafts. It should preserve modality-specific confidence labels and upgrade abstract/source-page rows only when full text supports model, timing, metric, anatomy, and endpoint details.
+
+## ODC-SCI Update Candidates
+
+Access date: 2026-07-17. These ODC-SCI dataset records should be considered for the next Module 6A human outcome/source-confidence upgrade pass; they are not included in the frozen first-pass corpus counts above.
+
+| ODC ID | DOI | Dataset / Study | Module 6 Relevance | Update Action |
+|---|---|---|---|---|
+| ODC-SCI:1282 | 10.34945/F5VC85 | TRACK-SCI acute clinical predictors of neuropathic pain | Acute clinical variables, chronic pain follow-up | Add as TRACK-SCI clinical outcome raw-data anchor |
+| ODC-SCI:1479 | 10.34945/F5D022 | TRACK-SCI functional independence and quality-of-life measures | Human longitudinal outcome, QoL, functional independence | Add as human outcome and endpoint ontology anchor |
+| ODC-SCI:536 | 10.34945/F58C7H | Surgical blood pressure and expected motor recovery in traumatic SCI | Surgical physiology, motor recovery | Add as perioperative clinical-boundary row |
+| ODC-SCI:405 | 10.34945/F5QC7J | Acute blood RNA sequencing from SCI human patients | Human molecular response after acute SCI | Add as translational molecular dataset anchor |
+| ODC-SCI:1096 | 10.34945/F5RP56 | ISNCSCI workbook with classification cases | Neurologic classification standardization | Add as standards/endpoint harmonization anchor |
