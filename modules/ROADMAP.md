@@ -6,8 +6,8 @@ This roadmap keeps saturation modules separate from evidence-consolidation modul
 
 | Module | Topic | Role | Status | Notes |
 |---|---|---|---|---|
-| Module 1A | Chronic SCI lesion architecture | Corpus saturation | SATURATED / FROZEN FIRST PASS | 30-paper consensus corpus; 95 extracted experiments after full-text access-gap upgrades |
-| Module 1B | Chronic SCI lesion architecture evidence consolidation | Observation and claim linkage | CONSENSUS-READY FIRST PASS | 84 observations, 50 author claims, 107 evidence links, 7 boundary records, and 8 consensus-ready statements from the saturated Module 1A corpus; full SQL materialization exported |
+| Module 1A | Chronic SCI lesion architecture | Corpus saturation | COMPLETE FIRST-PASS MATERIALIZATION | 30-paper consensus corpus; 95 extracted experiments after full-text access-gap upgrades; Module 1 completion audit passed |
+| Module 1B | Chronic SCI lesion architecture evidence consolidation | Observation, claim, link, boundary, consensus, and SQL materialization | COMPLETE FIRST-PASS MATERIALIZATION | 84 observations, 50 author claims, 107 evidence links, 7 boundary records, 8 consensus statements, and 84 Consensus_Observation links from the saturated Module 1A corpus; tracker bundle and full SQL materialization validated |
 | Module 2A | Biomaterials and scaffold repair in SCI | Corpus saturation | SATURATED / FROZEN FIRST PASS | 43-paper consensus corpus; 84 extracted experiments plus 8 review/map anchors across scaffold-only, scaffold plus cells, hydrogels, conduits, decellularized matrices, and chronic scar-resection scaffold studies |
 | Module 2B | Biomaterials and scaffold repair evidence consolidation | Observation and claim linkage | CONSENSUS-READY FIRST PASS | 50 observations, 36 author claims, 56 evidence links, 8 boundary records, and 8 consensus-ready statements from the saturated Module 2A corpus; tracker bundle and full SQL materialization exported |
 | Module 3A | Immune and myeloid modulation after SCI | Corpus saturation | SATURATED / FROZEN FIRST PASS | 47 primary papers, 94 extracted experiments, and 10 review/map anchors across depletion, corralling, monocyte/macrophage scar, neutrophil, single-cell, polarization, inflammasome, immune-metabolic, debris-handling, and immune-delivery categories |
@@ -41,7 +41,7 @@ A topic is considered practically saturated when two consecutive targeted search
 
 ## Module 1 Freeze Note
 
-Module 1 is frozen as a first-pass lesion-architecture evidence base as of 2026-07-16. Remaining queued Module 1A candidate papers are future opportunistic upgrades unless they introduce a new lesion-architecture compartment or materially change a boundary condition. The next Module 1 step is consensus drafting and optional SQL materialization from the curated tracker rows, not more saturation searching.
+Module 1 is frozen as a first-pass lesion-architecture evidence base as of 2026-07-16 and passed completion audit on 2026-07-20. Remaining queued Module 1A candidate papers are future opportunistic upgrades unless they introduce a new lesion-architecture compartment, materially change a boundary condition, or upgrade a low-confidence quantitative row. The next Module 1 work is downstream cross-module synthesis or targeted confidence upgrades, not more saturation searching.
 
 ## Cross-Module Synthesis Note
 
