@@ -2638,7 +2638,7 @@ INSERT INTO _m12_link_map (tracker_id, link_id) SELECT 'M12B-L056', link_id FROM
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Direct LPS preconditioning has enough first-pass SCI evidence to support a mechanistic discovery claim, centered on timed innate immune reprogramming rather than broad inflammatory suppression.',
+    'Low-dose LPS preconditioning is consensus-ready as a mechanistic discovery model for SCI because timed innate stimulation can shift resident and recruited immune responses toward protective programs; it should not be summarized as simple inflammatory suppression.',
     'M12B-T001',
     1,
     'consensus-ready first pass',
@@ -2669,7 +2669,7 @@ WHERE c.tracker_id = 'M12B-S001';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Repeated systemic LPS can induce a spinal microglia-endothelial protective state in spinal ischemia contexts, with IL-1/IL-1R1 signaling acting as a key boundary condition.',
+    'Repeated systemic LPS can induce a protective spinal microglia-endothelial state in spinal ischemia contexts, with IL-1/IL-1R1 signaling and injection schedule acting as essential boundaries for interpreting protection.',
     'M12B-T002',
     1,
     'consensus-ready first pass',
@@ -2700,7 +2700,7 @@ WHERE c.tracker_id = 'M12B-S002';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'TLR pathway routing is a central determinant of whether innate stimulation is protective or damaging, so adaptor/cytokine boundaries must be retained in every synthesis row.',
+    'TLR4 and innate-adaptor routing determine whether stimulation becomes protective tolerance or damaging inflammation; TRIF/IRF3, MyD88/CXCL10, IL-10, IL-1, NF-kB, and caspase boundaries must be retained.',
     'M12B-T003',
     1,
     'consensus-ready first pass',
@@ -2731,7 +2731,7 @@ WHERE c.tracker_id = 'M12B-S003';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Peripheral monocytes and endothelial cells are credible upstream regulatory compartments for host conditioning and should be carried into Aim 1C regulatory-node extraction.',
+    'Peripheral monocytes and endothelial cells are credible upstream regulatory compartments for conditioning because systemic innate priming can alter CNS injury response without requiring the spinal cord parenchyma to be the initial target.',
     'M12B-T004',
     1,
     'consensus-ready first pass',
@@ -2762,7 +2762,7 @@ WHERE c.tracker_id = 'M12B-S004';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'TLR4 and inflammatory signaling after SCI have repair-supporting as well as injury-driving roles, making complete anti-inflammatory framing too coarse for this project.',
+    'TLR4 and inflammatory signaling after SCI can support repair-relevant processes as well as injury amplification, so the project should pursue state- and timing-specific regulatory nodes rather than a blanket anti-inflammatory framing.',
     'M12B-T005',
     1,
     'consensus-ready first pass',
@@ -2793,7 +2793,7 @@ WHERE c.tracker_id = 'M12B-S005';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Chronic or post-injury LPS can reveal latent spinal plasticity and microglial-state capacity, but it is consensus-ready only as a boundary/comparator to preconditioning.',
+    'Post-injury or chronic LPS studies reveal inducible spinal plasticity and microglial-state capacity, but they should be treated as boundary and comparator evidence unless the experiment tests pre-injury conditioning timing.',
     'M12B-T006',
     1,
     'consensus-ready first pass',
@@ -2824,7 +2824,7 @@ WHERE c.tracker_id = 'M12B-S006';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'In vitro, ODC-SCI, and microbiome-host-conditioning rows provide candidate validation paths but require source extraction before they become high-confidence mechanistic evidence.',
+    'In vitro rows, ODC-SCI datasets, TLR-agonist studies, and microbiome host-conditioning analogs define validation paths for candidate regulatory nodes, but they require source extraction before they can carry high-confidence mechanistic claims.',
     'M12B-T007',
     1,
     'consensus-ready first pass',
@@ -2855,7 +2855,7 @@ WHERE c.tracker_id = 'M12B-S007';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'LPS should be treated as a discovery platform for endogenous protective programs; translational host conditioning before implants or reconstruction should route through safer analogs.',
+    'Module 12 should be used to identify endogenous protective programs and safer host-conditioning analogs. LPS remains a discovery platform for Aim 1 biology, not a proposed clinical conditioning agent before implantation or reconstruction.',
     'M12B-T008',
     1,
     'consensus-ready first pass',

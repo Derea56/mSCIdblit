@@ -1777,15 +1777,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P001-E001',
+    'Tracker experiment M10A-T001-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O001"], "source_experiment_tracker_id": "M10A-P001-E001", "source_paper_tracker_id": "M10A-P001", "tracker_key": "M10A-P001::M10A-P001-E001"}'
+    '{"observation_tracker_ids": ["M10B-O001"], "source_experiment_tracker_id": "M10A-T001-E001", "source_paper_tracker_id": "M10A-P001", "tracker_key": "M10A-P001::M10A-T001-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P001'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P001::M10A-P001-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P001::M10A-T001-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1794,15 +1794,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P002-E001',
+    'Tracker experiment M10A-T002-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O002"], "source_experiment_tracker_id": "M10A-P002-E001", "source_paper_tracker_id": "M10A-P002", "tracker_key": "M10A-P002::M10A-P002-E001"}'
+    '{"observation_tracker_ids": ["M10B-O002"], "source_experiment_tracker_id": "M10A-T002-E001", "source_paper_tracker_id": "M10A-P002", "tracker_key": "M10A-P002::M10A-T002-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P002'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P002::M10A-P002-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P002::M10A-T002-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1811,15 +1811,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P003-E001',
+    'Tracker experiment M10A-T003-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O003"], "source_experiment_tracker_id": "M10A-P003-E001", "source_paper_tracker_id": "M10A-P003", "tracker_key": "M10A-P003::M10A-P003-E001"}'
+    '{"observation_tracker_ids": ["M10B-O003"], "source_experiment_tracker_id": "M10A-T003-E001", "source_paper_tracker_id": "M10A-P003", "tracker_key": "M10A-P003::M10A-T003-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P003'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P003::M10A-P003-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P003::M10A-T003-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1828,15 +1828,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P004-E001',
+    'Tracker experiment M10A-T004-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O004"], "source_experiment_tracker_id": "M10A-P004-E001", "source_paper_tracker_id": "M10A-P004", "tracker_key": "M10A-P004::M10A-P004-E001"}'
+    '{"observation_tracker_ids": ["M10B-O004"], "source_experiment_tracker_id": "M10A-T004-E001", "source_paper_tracker_id": "M10A-P004", "tracker_key": "M10A-P004::M10A-T004-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P004'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P004::M10A-P004-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P004::M10A-T004-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1845,15 +1845,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P005-E001',
+    'Tracker experiment M10A-T005-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O005"], "source_experiment_tracker_id": "M10A-P005-E001", "source_paper_tracker_id": "M10A-P005", "tracker_key": "M10A-P005::M10A-P005-E001"}'
+    '{"observation_tracker_ids": ["M10B-O005"], "source_experiment_tracker_id": "M10A-T005-E001", "source_paper_tracker_id": "M10A-P005", "tracker_key": "M10A-P005::M10A-T005-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P005'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P005::M10A-P005-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P005::M10A-T005-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1862,15 +1862,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P006-E001',
+    'Tracker experiment M10A-T006-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O006"], "source_experiment_tracker_id": "M10A-P006-E001", "source_paper_tracker_id": "M10A-P006", "tracker_key": "M10A-P006::M10A-P006-E001"}'
+    '{"observation_tracker_ids": ["M10B-O006"], "source_experiment_tracker_id": "M10A-T006-E001", "source_paper_tracker_id": "M10A-P006", "tracker_key": "M10A-P006::M10A-T006-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P006'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P006::M10A-P006-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P006::M10A-T006-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1879,15 +1879,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P007-E001',
+    'Tracker experiment M10A-T007-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O007"], "source_experiment_tracker_id": "M10A-P007-E001", "source_paper_tracker_id": "M10A-P007", "tracker_key": "M10A-P007::M10A-P007-E001"}'
+    '{"observation_tracker_ids": ["M10B-O007"], "source_experiment_tracker_id": "M10A-T007-E001", "source_paper_tracker_id": "M10A-P007", "tracker_key": "M10A-P007::M10A-T007-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P007'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P007::M10A-P007-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P007::M10A-T007-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1896,15 +1896,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P008-E001',
+    'Tracker experiment M10A-T008-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O008"], "source_experiment_tracker_id": "M10A-P008-E001", "source_paper_tracker_id": "M10A-P008", "tracker_key": "M10A-P008::M10A-P008-E001"}'
+    '{"observation_tracker_ids": ["M10B-O008"], "source_experiment_tracker_id": "M10A-T008-E001", "source_paper_tracker_id": "M10A-P008", "tracker_key": "M10A-P008::M10A-T008-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P008'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P008::M10A-P008-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P008::M10A-T008-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1913,15 +1913,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P009-E001',
+    'Tracker experiment M10A-T009-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O009"], "source_experiment_tracker_id": "M10A-P009-E001", "source_paper_tracker_id": "M10A-P009", "tracker_key": "M10A-P009::M10A-P009-E001"}'
+    '{"observation_tracker_ids": ["M10B-O009"], "source_experiment_tracker_id": "M10A-T009-E001", "source_paper_tracker_id": "M10A-P009", "tracker_key": "M10A-P009::M10A-T009-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P009'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P009::M10A-P009-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P009::M10A-T009-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1930,15 +1930,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P010-E001',
+    'Tracker experiment M10A-T010-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O010"], "source_experiment_tracker_id": "M10A-P010-E001", "source_paper_tracker_id": "M10A-P010", "tracker_key": "M10A-P010::M10A-P010-E001"}'
+    '{"observation_tracker_ids": ["M10B-O010"], "source_experiment_tracker_id": "M10A-T010-E001", "source_paper_tracker_id": "M10A-P010", "tracker_key": "M10A-P010::M10A-T010-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P010'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P010::M10A-P010-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P010::M10A-T010-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1947,15 +1947,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P011-E001',
+    'Tracker experiment M10A-T011-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O011"], "source_experiment_tracker_id": "M10A-P011-E001", "source_paper_tracker_id": "M10A-P011", "tracker_key": "M10A-P011::M10A-P011-E001"}'
+    '{"observation_tracker_ids": ["M10B-O011"], "source_experiment_tracker_id": "M10A-T011-E001", "source_paper_tracker_id": "M10A-P011", "tracker_key": "M10A-P011::M10A-T011-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P011'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P011::M10A-P011-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P011::M10A-T011-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1964,15 +1964,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P012-E001',
+    'Tracker experiment M10A-T012-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O012"], "source_experiment_tracker_id": "M10A-P012-E001", "source_paper_tracker_id": "M10A-P012", "tracker_key": "M10A-P012::M10A-P012-E001"}'
+    '{"observation_tracker_ids": ["M10B-O012"], "source_experiment_tracker_id": "M10A-T012-E001", "source_paper_tracker_id": "M10A-P012", "tracker_key": "M10A-P012::M10A-T012-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P012'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P012::M10A-P012-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P012::M10A-T012-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1981,15 +1981,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P013-E001',
+    'Tracker experiment M10A-T013-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O013"], "source_experiment_tracker_id": "M10A-P013-E001", "source_paper_tracker_id": "M10A-P013", "tracker_key": "M10A-P013::M10A-P013-E001"}'
+    '{"observation_tracker_ids": ["M10B-O013"], "source_experiment_tracker_id": "M10A-T013-E001", "source_paper_tracker_id": "M10A-P013", "tracker_key": "M10A-P013::M10A-T013-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P013'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P013::M10A-P013-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P013::M10A-T013-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1998,15 +1998,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P014-E001',
+    'Tracker experiment M10A-T014-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O014"], "source_experiment_tracker_id": "M10A-P014-E001", "source_paper_tracker_id": "M10A-P014", "tracker_key": "M10A-P014::M10A-P014-E001"}'
+    '{"observation_tracker_ids": ["M10B-O014"], "source_experiment_tracker_id": "M10A-T014-E001", "source_paper_tracker_id": "M10A-P014", "tracker_key": "M10A-P014::M10A-T014-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P014'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P014::M10A-P014-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P014::M10A-T014-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2015,15 +2015,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P015-E001',
+    'Tracker experiment M10A-T015-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O015"], "source_experiment_tracker_id": "M10A-P015-E001", "source_paper_tracker_id": "M10A-P015", "tracker_key": "M10A-P015::M10A-P015-E001"}'
+    '{"observation_tracker_ids": ["M10B-O015"], "source_experiment_tracker_id": "M10A-T015-E001", "source_paper_tracker_id": "M10A-P015", "tracker_key": "M10A-P015::M10A-T015-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P015'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P015::M10A-P015-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P015::M10A-T015-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2032,15 +2032,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P016-E001',
+    'Tracker experiment M10A-T016-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O016"], "source_experiment_tracker_id": "M10A-P016-E001", "source_paper_tracker_id": "M10A-P016", "tracker_key": "M10A-P016::M10A-P016-E001"}'
+    '{"observation_tracker_ids": ["M10B-O016"], "source_experiment_tracker_id": "M10A-T016-E001", "source_paper_tracker_id": "M10A-P016", "tracker_key": "M10A-P016::M10A-T016-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P016'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P016::M10A-P016-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P016::M10A-T016-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2049,15 +2049,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P017-E001',
+    'Tracker experiment M10A-T017-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O017"], "source_experiment_tracker_id": "M10A-P017-E001", "source_paper_tracker_id": "M10A-P017", "tracker_key": "M10A-P017::M10A-P017-E001"}'
+    '{"observation_tracker_ids": ["M10B-O017"], "source_experiment_tracker_id": "M10A-T017-E001", "source_paper_tracker_id": "M10A-P017", "tracker_key": "M10A-P017::M10A-T017-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P017'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P017::M10A-P017-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P017::M10A-T017-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2066,15 +2066,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P018-E001',
+    'Tracker experiment M10A-T018-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O018"], "source_experiment_tracker_id": "M10A-P018-E001", "source_paper_tracker_id": "M10A-P018", "tracker_key": "M10A-P018::M10A-P018-E001"}'
+    '{"observation_tracker_ids": ["M10B-O018"], "source_experiment_tracker_id": "M10A-T018-E001", "source_paper_tracker_id": "M10A-P018", "tracker_key": "M10A-P018::M10A-T018-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P018'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P018::M10A-P018-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P018::M10A-T018-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2083,15 +2083,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P019-E001',
+    'Tracker experiment M10A-T019-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O019"], "source_experiment_tracker_id": "M10A-P019-E001", "source_paper_tracker_id": "M10A-P019", "tracker_key": "M10A-P019::M10A-P019-E001"}'
+    '{"observation_tracker_ids": ["M10B-O019"], "source_experiment_tracker_id": "M10A-T019-E001", "source_paper_tracker_id": "M10A-P019", "tracker_key": "M10A-P019::M10A-T019-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P019'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P019::M10A-P019-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P019::M10A-T019-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2100,15 +2100,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P020-E001',
+    'Tracker experiment M10A-T020-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O020"], "source_experiment_tracker_id": "M10A-P020-E001", "source_paper_tracker_id": "M10A-P020", "tracker_key": "M10A-P020::M10A-P020-E001"}'
+    '{"observation_tracker_ids": ["M10B-O020"], "source_experiment_tracker_id": "M10A-T020-E001", "source_paper_tracker_id": "M10A-P020", "tracker_key": "M10A-P020::M10A-T020-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P020'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P020::M10A-P020-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P020::M10A-T020-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2117,15 +2117,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P021-E001',
+    'Tracker experiment M10A-T021-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O021"], "source_experiment_tracker_id": "M10A-P021-E001", "source_paper_tracker_id": "M10A-P021", "tracker_key": "M10A-P021::M10A-P021-E001"}'
+    '{"observation_tracker_ids": ["M10B-O021"], "source_experiment_tracker_id": "M10A-T021-E001", "source_paper_tracker_id": "M10A-P021", "tracker_key": "M10A-P021::M10A-T021-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P021'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P021::M10A-P021-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P021::M10A-T021-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2134,15 +2134,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P022-E001',
+    'Tracker experiment M10A-T022-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O022"], "source_experiment_tracker_id": "M10A-P022-E001", "source_paper_tracker_id": "M10A-P022", "tracker_key": "M10A-P022::M10A-P022-E001"}'
+    '{"observation_tracker_ids": ["M10B-O022"], "source_experiment_tracker_id": "M10A-T022-E001", "source_paper_tracker_id": "M10A-P022", "tracker_key": "M10A-P022::M10A-T022-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P022'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P022::M10A-P022-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P022::M10A-T022-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2151,15 +2151,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P023-E001',
+    'Tracker experiment M10A-T023-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O023"], "source_experiment_tracker_id": "M10A-P023-E001", "source_paper_tracker_id": "M10A-P023", "tracker_key": "M10A-P023::M10A-P023-E001"}'
+    '{"observation_tracker_ids": ["M10B-O023"], "source_experiment_tracker_id": "M10A-T023-E001", "source_paper_tracker_id": "M10A-P023", "tracker_key": "M10A-P023::M10A-T023-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P023'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P023::M10A-P023-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P023::M10A-T023-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2168,15 +2168,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P024-E001',
+    'Tracker experiment M10A-T024-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O024"], "source_experiment_tracker_id": "M10A-P024-E001", "source_paper_tracker_id": "M10A-P024", "tracker_key": "M10A-P024::M10A-P024-E001"}'
+    '{"observation_tracker_ids": ["M10B-O024"], "source_experiment_tracker_id": "M10A-T024-E001", "source_paper_tracker_id": "M10A-P024", "tracker_key": "M10A-P024::M10A-T024-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P024'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P024::M10A-P024-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P024::M10A-T024-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2185,15 +2185,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P025-E001',
+    'Tracker experiment M10A-T025-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O025"], "source_experiment_tracker_id": "M10A-P025-E001", "source_paper_tracker_id": "M10A-P025", "tracker_key": "M10A-P025::M10A-P025-E001"}'
+    '{"observation_tracker_ids": ["M10B-O025"], "source_experiment_tracker_id": "M10A-T025-E001", "source_paper_tracker_id": "M10A-P025", "tracker_key": "M10A-P025::M10A-T025-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P025'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P025::M10A-P025-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P025::M10A-T025-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2202,15 +2202,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P026-E001',
+    'Tracker experiment M10A-T026-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O026"], "source_experiment_tracker_id": "M10A-P026-E001", "source_paper_tracker_id": "M10A-P026", "tracker_key": "M10A-P026::M10A-P026-E001"}'
+    '{"observation_tracker_ids": ["M10B-O026"], "source_experiment_tracker_id": "M10A-T026-E001", "source_paper_tracker_id": "M10A-P026", "tracker_key": "M10A-P026::M10A-T026-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P026'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P026::M10A-P026-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P026::M10A-T026-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2219,15 +2219,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P027-E001',
+    'Tracker experiment M10A-T027-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O027"], "source_experiment_tracker_id": "M10A-P027-E001", "source_paper_tracker_id": "M10A-P027", "tracker_key": "M10A-P027::M10A-P027-E001"}'
+    '{"observation_tracker_ids": ["M10B-O027"], "source_experiment_tracker_id": "M10A-T027-E001", "source_paper_tracker_id": "M10A-P027", "tracker_key": "M10A-P027::M10A-T027-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P027'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P027::M10A-P027-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P027::M10A-T027-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2236,15 +2236,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P028-E001',
+    'Tracker experiment M10A-T028-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O028"], "source_experiment_tracker_id": "M10A-P028-E001", "source_paper_tracker_id": "M10A-P028", "tracker_key": "M10A-P028::M10A-P028-E001"}'
+    '{"observation_tracker_ids": ["M10B-O028"], "source_experiment_tracker_id": "M10A-T028-E001", "source_paper_tracker_id": "M10A-P028", "tracker_key": "M10A-P028::M10A-T028-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P028'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P028::M10A-P028-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P028::M10A-T028-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2253,15 +2253,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P029-E001',
+    'Tracker experiment M10A-T029-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O029"], "source_experiment_tracker_id": "M10A-P029-E001", "source_paper_tracker_id": "M10A-P029", "tracker_key": "M10A-P029::M10A-P029-E001"}'
+    '{"observation_tracker_ids": ["M10B-O029"], "source_experiment_tracker_id": "M10A-T029-E001", "source_paper_tracker_id": "M10A-P029", "tracker_key": "M10A-P029::M10A-T029-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P029'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P029::M10A-P029-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P029::M10A-T029-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2270,15 +2270,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P030-E001',
+    'Tracker experiment M10A-T030-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O030"], "source_experiment_tracker_id": "M10A-P030-E001", "source_paper_tracker_id": "M10A-P030", "tracker_key": "M10A-P030::M10A-P030-E001"}'
+    '{"observation_tracker_ids": ["M10B-O030"], "source_experiment_tracker_id": "M10A-T030-E001", "source_paper_tracker_id": "M10A-P030", "tracker_key": "M10A-P030::M10A-T030-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P030'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P030::M10A-P030-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P030::M10A-T030-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2287,15 +2287,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P031-E001',
+    'Tracker experiment M10A-T031-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O031"], "source_experiment_tracker_id": "M10A-P031-E001", "source_paper_tracker_id": "M10A-P031", "tracker_key": "M10A-P031::M10A-P031-E001"}'
+    '{"observation_tracker_ids": ["M10B-O031"], "source_experiment_tracker_id": "M10A-T031-E001", "source_paper_tracker_id": "M10A-P031", "tracker_key": "M10A-P031::M10A-T031-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P031'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P031::M10A-P031-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P031::M10A-T031-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2304,15 +2304,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P032-E001',
+    'Tracker experiment M10A-T032-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O032"], "source_experiment_tracker_id": "M10A-P032-E001", "source_paper_tracker_id": "M10A-P032", "tracker_key": "M10A-P032::M10A-P032-E001"}'
+    '{"observation_tracker_ids": ["M10B-O032"], "source_experiment_tracker_id": "M10A-T032-E001", "source_paper_tracker_id": "M10A-P032", "tracker_key": "M10A-P032::M10A-T032-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P032'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P032::M10A-P032-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P032::M10A-T032-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2321,15 +2321,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P033-E001',
+    'Tracker experiment M10A-T033-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O033"], "source_experiment_tracker_id": "M10A-P033-E001", "source_paper_tracker_id": "M10A-P033", "tracker_key": "M10A-P033::M10A-P033-E001"}'
+    '{"observation_tracker_ids": ["M10B-O033"], "source_experiment_tracker_id": "M10A-T033-E001", "source_paper_tracker_id": "M10A-P033", "tracker_key": "M10A-P033::M10A-T033-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P033'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P033::M10A-P033-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P033::M10A-T033-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2338,15 +2338,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P034-E001',
+    'Tracker experiment M10A-T034-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O034"], "source_experiment_tracker_id": "M10A-P034-E001", "source_paper_tracker_id": "M10A-P034", "tracker_key": "M10A-P034::M10A-P034-E001"}'
+    '{"observation_tracker_ids": ["M10B-O034"], "source_experiment_tracker_id": "M10A-T034-E001", "source_paper_tracker_id": "M10A-P034", "tracker_key": "M10A-P034::M10A-T034-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P034'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P034::M10A-P034-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P034::M10A-T034-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2355,15 +2355,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P035-E001',
+    'Tracker experiment M10A-T035-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O035"], "source_experiment_tracker_id": "M10A-P035-E001", "source_paper_tracker_id": "M10A-P035", "tracker_key": "M10A-P035::M10A-P035-E001"}'
+    '{"observation_tracker_ids": ["M10B-O035"], "source_experiment_tracker_id": "M10A-T035-E001", "source_paper_tracker_id": "M10A-P035", "tracker_key": "M10A-P035::M10A-T035-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P035'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P035::M10A-P035-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P035::M10A-T035-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2372,15 +2372,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P036-E001',
+    'Tracker experiment M10A-T036-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O036"], "source_experiment_tracker_id": "M10A-P036-E001", "source_paper_tracker_id": "M10A-P036", "tracker_key": "M10A-P036::M10A-P036-E001"}'
+    '{"observation_tracker_ids": ["M10B-O036"], "source_experiment_tracker_id": "M10A-T036-E001", "source_paper_tracker_id": "M10A-P036", "tracker_key": "M10A-P036::M10A-T036-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P036'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P036::M10A-P036-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P036::M10A-T036-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2389,15 +2389,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P037-E001',
+    'Tracker experiment M10A-T037-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O037"], "source_experiment_tracker_id": "M10A-P037-E001", "source_paper_tracker_id": "M10A-P037", "tracker_key": "M10A-P037::M10A-P037-E001"}'
+    '{"observation_tracker_ids": ["M10B-O037"], "source_experiment_tracker_id": "M10A-T037-E001", "source_paper_tracker_id": "M10A-P037", "tracker_key": "M10A-P037::M10A-T037-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P037'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P037::M10A-P037-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P037::M10A-T037-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2406,15 +2406,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P038-E001',
+    'Tracker experiment M10A-T038-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O038"], "source_experiment_tracker_id": "M10A-P038-E001", "source_paper_tracker_id": "M10A-P038", "tracker_key": "M10A-P038::M10A-P038-E001"}'
+    '{"observation_tracker_ids": ["M10B-O038"], "source_experiment_tracker_id": "M10A-T038-E001", "source_paper_tracker_id": "M10A-P038", "tracker_key": "M10A-P038::M10A-T038-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P038'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P038::M10A-P038-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P038::M10A-T038-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2423,15 +2423,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P039-E001',
+    'Tracker experiment M10A-T039-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O039"], "source_experiment_tracker_id": "M10A-P039-E001", "source_paper_tracker_id": "M10A-P039", "tracker_key": "M10A-P039::M10A-P039-E001"}'
+    '{"observation_tracker_ids": ["M10B-O039"], "source_experiment_tracker_id": "M10A-T039-E001", "source_paper_tracker_id": "M10A-P039", "tracker_key": "M10A-P039::M10A-T039-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P039'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P039::M10A-P039-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P039::M10A-T039-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2440,15 +2440,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P040-E001',
+    'Tracker experiment M10A-T040-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O040"], "source_experiment_tracker_id": "M10A-P040-E001", "source_paper_tracker_id": "M10A-P040", "tracker_key": "M10A-P040::M10A-P040-E001"}'
+    '{"observation_tracker_ids": ["M10B-O040"], "source_experiment_tracker_id": "M10A-T040-E001", "source_paper_tracker_id": "M10A-P040", "tracker_key": "M10A-P040::M10A-T040-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P040'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P040::M10A-P040-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P040::M10A-T040-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2457,15 +2457,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P041-E001',
+    'Tracker experiment M10A-T041-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O041"], "source_experiment_tracker_id": "M10A-P041-E001", "source_paper_tracker_id": "M10A-P041", "tracker_key": "M10A-P041::M10A-P041-E001"}'
+    '{"observation_tracker_ids": ["M10B-O041"], "source_experiment_tracker_id": "M10A-T041-E001", "source_paper_tracker_id": "M10A-P041", "tracker_key": "M10A-P041::M10A-T041-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P041'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P041::M10A-P041-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P041::M10A-T041-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2474,15 +2474,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P042-E001',
+    'Tracker experiment M10A-T042-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O042"], "source_experiment_tracker_id": "M10A-P042-E001", "source_paper_tracker_id": "M10A-P042", "tracker_key": "M10A-P042::M10A-P042-E001"}'
+    '{"observation_tracker_ids": ["M10B-O042"], "source_experiment_tracker_id": "M10A-T042-E001", "source_paper_tracker_id": "M10A-P042", "tracker_key": "M10A-P042::M10A-T042-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P042'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P042::M10A-P042-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P042::M10A-T042-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2491,15 +2491,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P043-E001',
+    'Tracker experiment M10A-T043-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O043"], "source_experiment_tracker_id": "M10A-P043-E001", "source_paper_tracker_id": "M10A-P043", "tracker_key": "M10A-P043::M10A-P043-E001"}'
+    '{"observation_tracker_ids": ["M10B-O043"], "source_experiment_tracker_id": "M10A-T043-E001", "source_paper_tracker_id": "M10A-P043", "tracker_key": "M10A-P043::M10A-T043-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P043'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P043::M10A-P043-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P043::M10A-T043-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2508,15 +2508,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P044-E001',
+    'Tracker experiment M10A-T044-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O044"], "source_experiment_tracker_id": "M10A-P044-E001", "source_paper_tracker_id": "M10A-P044", "tracker_key": "M10A-P044::M10A-P044-E001"}'
+    '{"observation_tracker_ids": ["M10B-O044"], "source_experiment_tracker_id": "M10A-T044-E001", "source_paper_tracker_id": "M10A-P044", "tracker_key": "M10A-P044::M10A-T044-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P044'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P044::M10A-P044-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P044::M10A-T044-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2525,15 +2525,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P045-E001',
+    'Tracker experiment M10A-T045-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O045"], "source_experiment_tracker_id": "M10A-P045-E001", "source_paper_tracker_id": "M10A-P045", "tracker_key": "M10A-P045::M10A-P045-E001"}'
+    '{"observation_tracker_ids": ["M10B-O045"], "source_experiment_tracker_id": "M10A-T045-E001", "source_paper_tracker_id": "M10A-P045", "tracker_key": "M10A-P045::M10A-T045-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P045'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P045::M10A-P045-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P045::M10A-T045-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2542,15 +2542,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P046-E001',
+    'Tracker experiment M10A-T046-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O046"], "source_experiment_tracker_id": "M10A-P046-E001", "source_paper_tracker_id": "M10A-P046", "tracker_key": "M10A-P046::M10A-P046-E001"}'
+    '{"observation_tracker_ids": ["M10B-O046"], "source_experiment_tracker_id": "M10A-T046-E001", "source_paper_tracker_id": "M10A-P046", "tracker_key": "M10A-P046::M10A-T046-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P046'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P046::M10A-P046-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P046::M10A-T046-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2559,15 +2559,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P047-E001',
+    'Tracker experiment M10A-T047-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O047"], "source_experiment_tracker_id": "M10A-P047-E001", "source_paper_tracker_id": "M10A-P047", "tracker_key": "M10A-P047::M10A-P047-E001"}'
+    '{"observation_tracker_ids": ["M10B-O047"], "source_experiment_tracker_id": "M10A-T047-E001", "source_paper_tracker_id": "M10A-P047", "tracker_key": "M10A-P047::M10A-T047-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P047'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P047::M10A-P047-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P047::M10A-T047-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2576,15 +2576,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P048-E001',
+    'Tracker experiment M10A-T048-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O048"], "source_experiment_tracker_id": "M10A-P048-E001", "source_paper_tracker_id": "M10A-P048", "tracker_key": "M10A-P048::M10A-P048-E001"}'
+    '{"observation_tracker_ids": ["M10B-O048"], "source_experiment_tracker_id": "M10A-T048-E001", "source_paper_tracker_id": "M10A-P048", "tracker_key": "M10A-P048::M10A-T048-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P048'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P048::M10A-P048-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P048::M10A-T048-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2593,15 +2593,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P049-E001',
+    'Tracker experiment M10A-T049-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O049"], "source_experiment_tracker_id": "M10A-P049-E001", "source_paper_tracker_id": "M10A-P049", "tracker_key": "M10A-P049::M10A-P049-E001"}'
+    '{"observation_tracker_ids": ["M10B-O049"], "source_experiment_tracker_id": "M10A-T049-E001", "source_paper_tracker_id": "M10A-P049", "tracker_key": "M10A-P049::M10A-T049-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P049'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P049::M10A-P049-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P049::M10A-T049-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2610,15 +2610,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P050-E001',
+    'Tracker experiment M10A-T050-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O050"], "source_experiment_tracker_id": "M10A-P050-E001", "source_paper_tracker_id": "M10A-P050", "tracker_key": "M10A-P050::M10A-P050-E001"}'
+    '{"observation_tracker_ids": ["M10B-O050"], "source_experiment_tracker_id": "M10A-T050-E001", "source_paper_tracker_id": "M10A-P050", "tracker_key": "M10A-P050::M10A-T050-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P050'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P050::M10A-P050-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P050::M10A-T050-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2627,15 +2627,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P051-E001',
+    'Tracker experiment M10A-T051-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O051"], "source_experiment_tracker_id": "M10A-P051-E001", "source_paper_tracker_id": "M10A-P051", "tracker_key": "M10A-P051::M10A-P051-E001"}'
+    '{"observation_tracker_ids": ["M10B-O051"], "source_experiment_tracker_id": "M10A-T051-E001", "source_paper_tracker_id": "M10A-P051", "tracker_key": "M10A-P051::M10A-T051-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P051'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P051::M10A-P051-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P051::M10A-T051-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2644,15 +2644,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P052-E001',
+    'Tracker experiment M10A-T052-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O052"], "source_experiment_tracker_id": "M10A-P052-E001", "source_paper_tracker_id": "M10A-P052", "tracker_key": "M10A-P052::M10A-P052-E001"}'
+    '{"observation_tracker_ids": ["M10B-O052"], "source_experiment_tracker_id": "M10A-T052-E001", "source_paper_tracker_id": "M10A-P052", "tracker_key": "M10A-P052::M10A-T052-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P052'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P052::M10A-P052-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P052::M10A-T052-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2661,15 +2661,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P053-E001',
+    'Tracker experiment M10A-T053-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O053"], "source_experiment_tracker_id": "M10A-P053-E001", "source_paper_tracker_id": "M10A-P053", "tracker_key": "M10A-P053::M10A-P053-E001"}'
+    '{"observation_tracker_ids": ["M10B-O053"], "source_experiment_tracker_id": "M10A-T053-E001", "source_paper_tracker_id": "M10A-P053", "tracker_key": "M10A-P053::M10A-T053-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P053'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P053::M10A-P053-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P053::M10A-T053-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2678,15 +2678,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P054-E001',
+    'Tracker experiment M10A-T054-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O054"], "source_experiment_tracker_id": "M10A-P054-E001", "source_paper_tracker_id": "M10A-P054", "tracker_key": "M10A-P054::M10A-P054-E001"}'
+    '{"observation_tracker_ids": ["M10B-O054"], "source_experiment_tracker_id": "M10A-T054-E001", "source_paper_tracker_id": "M10A-P054", "tracker_key": "M10A-P054::M10A-T054-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P054'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P054::M10A-P054-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P054::M10A-T054-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2695,15 +2695,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P055-E001',
+    'Tracker experiment M10A-T055-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O055"], "source_experiment_tracker_id": "M10A-P055-E001", "source_paper_tracker_id": "M10A-P055", "tracker_key": "M10A-P055::M10A-P055-E001"}'
+    '{"observation_tracker_ids": ["M10B-O055"], "source_experiment_tracker_id": "M10A-T055-E001", "source_paper_tracker_id": "M10A-P055", "tracker_key": "M10A-P055::M10A-T055-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P055'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P055::M10A-P055-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P055::M10A-T055-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2712,15 +2712,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P056-E001',
+    'Tracker experiment M10A-T056-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O056"], "source_experiment_tracker_id": "M10A-P056-E001", "source_paper_tracker_id": "M10A-P056", "tracker_key": "M10A-P056::M10A-P056-E001"}'
+    '{"observation_tracker_ids": ["M10B-O056"], "source_experiment_tracker_id": "M10A-T056-E001", "source_paper_tracker_id": "M10A-P056", "tracker_key": "M10A-P056::M10A-T056-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P056'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P056::M10A-P056-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P056::M10A-T056-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2729,15 +2729,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P057-E001',
+    'Tracker experiment M10A-T057-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O057"], "source_experiment_tracker_id": "M10A-P057-E001", "source_paper_tracker_id": "M10A-P057", "tracker_key": "M10A-P057::M10A-P057-E001"}'
+    '{"observation_tracker_ids": ["M10B-O057"], "source_experiment_tracker_id": "M10A-T057-E001", "source_paper_tracker_id": "M10A-P057", "tracker_key": "M10A-P057::M10A-T057-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P057'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P057::M10A-P057-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P057::M10A-T057-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2746,15 +2746,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P058-E001',
+    'Tracker experiment M10A-T058-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O058"], "source_experiment_tracker_id": "M10A-P058-E001", "source_paper_tracker_id": "M10A-P058", "tracker_key": "M10A-P058::M10A-P058-E001"}'
+    '{"observation_tracker_ids": ["M10B-O058"], "source_experiment_tracker_id": "M10A-T058-E001", "source_paper_tracker_id": "M10A-P058", "tracker_key": "M10A-P058::M10A-T058-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P058'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P058::M10A-P058-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P058::M10A-T058-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2763,15 +2763,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P059-E001',
+    'Tracker experiment M10A-T059-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O059"], "source_experiment_tracker_id": "M10A-P059-E001", "source_paper_tracker_id": "M10A-P059", "tracker_key": "M10A-P059::M10A-P059-E001"}'
+    '{"observation_tracker_ids": ["M10B-O059"], "source_experiment_tracker_id": "M10A-T059-E001", "source_paper_tracker_id": "M10A-P059", "tracker_key": "M10A-P059::M10A-T059-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P059'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P059::M10A-P059-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P059::M10A-T059-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2780,15 +2780,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P060-E001',
+    'Tracker experiment M10A-T060-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O060"], "source_experiment_tracker_id": "M10A-P060-E001", "source_paper_tracker_id": "M10A-P060", "tracker_key": "M10A-P060::M10A-P060-E001"}'
+    '{"observation_tracker_ids": ["M10B-O060"], "source_experiment_tracker_id": "M10A-T060-E001", "source_paper_tracker_id": "M10A-P060", "tracker_key": "M10A-P060::M10A-T060-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P060'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P060::M10A-P060-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P060::M10A-T060-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2797,15 +2797,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P061-E001',
+    'Tracker experiment M10A-T061-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O061"], "source_experiment_tracker_id": "M10A-P061-E001", "source_paper_tracker_id": "M10A-P061", "tracker_key": "M10A-P061::M10A-P061-E001"}'
+    '{"observation_tracker_ids": ["M10B-O061"], "source_experiment_tracker_id": "M10A-T061-E001", "source_paper_tracker_id": "M10A-P061", "tracker_key": "M10A-P061::M10A-T061-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P061'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P061::M10A-P061-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P061::M10A-T061-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2814,15 +2814,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P062-E001',
+    'Tracker experiment M10A-T062-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O062"], "source_experiment_tracker_id": "M10A-P062-E001", "source_paper_tracker_id": "M10A-P062", "tracker_key": "M10A-P062::M10A-P062-E001"}'
+    '{"observation_tracker_ids": ["M10B-O062"], "source_experiment_tracker_id": "M10A-T062-E001", "source_paper_tracker_id": "M10A-P062", "tracker_key": "M10A-P062::M10A-T062-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P062'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P062::M10A-P062-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P062::M10A-T062-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2831,15 +2831,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P063-E001',
+    'Tracker experiment M10A-T063-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O063"], "source_experiment_tracker_id": "M10A-P063-E001", "source_paper_tracker_id": "M10A-P063", "tracker_key": "M10A-P063::M10A-P063-E001"}'
+    '{"observation_tracker_ids": ["M10B-O063"], "source_experiment_tracker_id": "M10A-T063-E001", "source_paper_tracker_id": "M10A-P063", "tracker_key": "M10A-P063::M10A-T063-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P063'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P063::M10A-P063-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P063::M10A-T063-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2848,15 +2848,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P064-E001',
+    'Tracker experiment M10A-T064-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O064"], "source_experiment_tracker_id": "M10A-P064-E001", "source_paper_tracker_id": "M10A-P064", "tracker_key": "M10A-P064::M10A-P064-E001"}'
+    '{"observation_tracker_ids": ["M10B-O064"], "source_experiment_tracker_id": "M10A-T064-E001", "source_paper_tracker_id": "M10A-P064", "tracker_key": "M10A-P064::M10A-T064-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P064'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P064::M10A-P064-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P064::M10A-T064-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2865,15 +2865,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P065-E001',
+    'Tracker experiment M10A-T065-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O065"], "source_experiment_tracker_id": "M10A-P065-E001", "source_paper_tracker_id": "M10A-P065", "tracker_key": "M10A-P065::M10A-P065-E001"}'
+    '{"observation_tracker_ids": ["M10B-O065"], "source_experiment_tracker_id": "M10A-T065-E001", "source_paper_tracker_id": "M10A-P065", "tracker_key": "M10A-P065::M10A-T065-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P065'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P065::M10A-P065-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P065::M10A-T065-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2882,15 +2882,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P066-E001',
+    'Tracker experiment M10A-T066-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O066"], "source_experiment_tracker_id": "M10A-P066-E001", "source_paper_tracker_id": "M10A-P066", "tracker_key": "M10A-P066::M10A-P066-E001"}'
+    '{"observation_tracker_ids": ["M10B-O066"], "source_experiment_tracker_id": "M10A-T066-E001", "source_paper_tracker_id": "M10A-P066", "tracker_key": "M10A-P066::M10A-T066-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P066'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P066::M10A-P066-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P066::M10A-T066-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2899,15 +2899,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P067-E001',
+    'Tracker experiment M10A-T067-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O067"], "source_experiment_tracker_id": "M10A-P067-E001", "source_paper_tracker_id": "M10A-P067", "tracker_key": "M10A-P067::M10A-P067-E001"}'
+    '{"observation_tracker_ids": ["M10B-O067"], "source_experiment_tracker_id": "M10A-T067-E001", "source_paper_tracker_id": "M10A-P067", "tracker_key": "M10A-P067::M10A-T067-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P067'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P067::M10A-P067-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P067::M10A-T067-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2916,15 +2916,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P068-E001',
+    'Tracker experiment M10A-T068-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O068"], "source_experiment_tracker_id": "M10A-P068-E001", "source_paper_tracker_id": "M10A-P068", "tracker_key": "M10A-P068::M10A-P068-E001"}'
+    '{"observation_tracker_ids": ["M10B-O068"], "source_experiment_tracker_id": "M10A-T068-E001", "source_paper_tracker_id": "M10A-P068", "tracker_key": "M10A-P068::M10A-T068-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P068'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P068::M10A-P068-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P068::M10A-T068-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2933,15 +2933,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P069-E001',
+    'Tracker experiment M10A-T069-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O069"], "source_experiment_tracker_id": "M10A-P069-E001", "source_paper_tracker_id": "M10A-P069", "tracker_key": "M10A-P069::M10A-P069-E001"}'
+    '{"observation_tracker_ids": ["M10B-O069"], "source_experiment_tracker_id": "M10A-T069-E001", "source_paper_tracker_id": "M10A-P069", "tracker_key": "M10A-P069::M10A-T069-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P069'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P069::M10A-P069-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P069::M10A-T069-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2950,15 +2950,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P070-E001',
+    'Tracker experiment M10A-T070-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O070"], "source_experiment_tracker_id": "M10A-P070-E001", "source_paper_tracker_id": "M10A-P070", "tracker_key": "M10A-P070::M10A-P070-E001"}'
+    '{"observation_tracker_ids": ["M10B-O070"], "source_experiment_tracker_id": "M10A-T070-E001", "source_paper_tracker_id": "M10A-P070", "tracker_key": "M10A-P070::M10A-T070-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P070'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P070::M10A-P070-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P070::M10A-T070-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2967,15 +2967,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P071-E001',
+    'Tracker experiment M10A-T071-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O071"], "source_experiment_tracker_id": "M10A-P071-E001", "source_paper_tracker_id": "M10A-P071", "tracker_key": "M10A-P071::M10A-P071-E001"}'
+    '{"observation_tracker_ids": ["M10B-O071"], "source_experiment_tracker_id": "M10A-T071-E001", "source_paper_tracker_id": "M10A-P071", "tracker_key": "M10A-P071::M10A-T071-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P071'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P071::M10A-P071-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P071::M10A-T071-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -2984,15 +2984,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P072-E001',
+    'Tracker experiment M10A-T072-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O072"], "source_experiment_tracker_id": "M10A-P072-E001", "source_paper_tracker_id": "M10A-P072", "tracker_key": "M10A-P072::M10A-P072-E001"}'
+    '{"observation_tracker_ids": ["M10B-O072"], "source_experiment_tracker_id": "M10A-T072-E001", "source_paper_tracker_id": "M10A-P072", "tracker_key": "M10A-P072::M10A-T072-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P072'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P072::M10A-P072-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P072::M10A-T072-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -3001,15 +3001,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P073-E001',
+    'Tracker experiment M10A-T073-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O073"], "source_experiment_tracker_id": "M10A-P073-E001", "source_paper_tracker_id": "M10A-P073", "tracker_key": "M10A-P073::M10A-P073-E001"}'
+    '{"observation_tracker_ids": ["M10B-O073"], "source_experiment_tracker_id": "M10A-T073-E001", "source_paper_tracker_id": "M10A-P073", "tracker_key": "M10A-P073::M10A-T073-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P073'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P073::M10A-P073-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P073::M10A-T073-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -3018,15 +3018,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P074-E001',
+    'Tracker experiment M10A-T074-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O074"], "source_experiment_tracker_id": "M10A-P074-E001", "source_paper_tracker_id": "M10A-P074", "tracker_key": "M10A-P074::M10A-P074-E001"}'
+    '{"observation_tracker_ids": ["M10B-O074"], "source_experiment_tracker_id": "M10A-T074-E001", "source_paper_tracker_id": "M10A-P074", "tracker_key": "M10A-P074::M10A-T074-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P074'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P074::M10A-P074-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P074::M10A-T074-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -3035,15 +3035,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P075-E001',
+    'Tracker experiment M10A-T075-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O075"], "source_experiment_tracker_id": "M10A-P075-E001", "source_paper_tracker_id": "M10A-P075", "tracker_key": "M10A-P075::M10A-P075-E001"}'
+    '{"observation_tracker_ids": ["M10B-O075"], "source_experiment_tracker_id": "M10A-T075-E001", "source_paper_tracker_id": "M10A-P075", "tracker_key": "M10A-P075::M10A-T075-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P075'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P075::M10A-P075-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P075::M10A-T075-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -3052,15 +3052,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P076-E001',
+    'Tracker experiment M10A-T076-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O076"], "source_experiment_tracker_id": "M10A-P076-E001", "source_paper_tracker_id": "M10A-P076", "tracker_key": "M10A-P076::M10A-P076-E001"}'
+    '{"observation_tracker_ids": ["M10B-O076"], "source_experiment_tracker_id": "M10A-T076-E001", "source_paper_tracker_id": "M10A-P076", "tracker_key": "M10A-P076::M10A-T076-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P076'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P076::M10A-P076-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P076::M10A-T076-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -3069,15 +3069,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P077-E001',
+    'Tracker experiment M10A-T077-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O077"], "source_experiment_tracker_id": "M10A-P077-E001", "source_paper_tracker_id": "M10A-P077", "tracker_key": "M10A-P077::M10A-P077-E001"}'
+    '{"observation_tracker_ids": ["M10B-O077"], "source_experiment_tracker_id": "M10A-T077-E001", "source_paper_tracker_id": "M10A-P077", "tracker_key": "M10A-P077::M10A-T077-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P077'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P077::M10A-P077-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P077::M10A-T077-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -3086,15 +3086,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P078-E001',
+    'Tracker experiment M10A-T078-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O078"], "source_experiment_tracker_id": "M10A-P078-E001", "source_paper_tracker_id": "M10A-P078", "tracker_key": "M10A-P078::M10A-P078-E001"}'
+    '{"observation_tracker_ids": ["M10B-O078"], "source_experiment_tracker_id": "M10A-T078-E001", "source_paper_tracker_id": "M10A-P078", "tracker_key": "M10A-P078::M10A-T078-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P078'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P078::M10A-P078-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P078::M10A-T078-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -3103,15 +3103,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P079-E001',
+    'Tracker experiment M10A-T079-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O079"], "source_experiment_tracker_id": "M10A-P079-E001", "source_paper_tracker_id": "M10A-P079", "tracker_key": "M10A-P079::M10A-P079-E001"}'
+    '{"observation_tracker_ids": ["M10B-O079"], "source_experiment_tracker_id": "M10A-T079-E001", "source_paper_tracker_id": "M10A-P079", "tracker_key": "M10A-P079::M10A-T079-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P079'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P079::M10A-P079-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P079::M10A-T079-E001', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -3120,15 +3120,15 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'ClinicalTrials.gov registry',
-    'Tracker experiment M10A-P080-E001',
+    'Tracker experiment M10A-T080-E001',
     'Module 10B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M10B-O080"], "source_experiment_tracker_id": "M10A-P080-E001", "source_paper_tracker_id": "M10A-P080", "tracker_key": "M10A-P080::M10A-P080-E001"}'
+    '{"observation_tracker_ids": ["M10B-O080"], "source_experiment_tracker_id": "M10A-T080-E001", "source_paper_tracker_id": "M10A-P080", "tracker_key": "M10A-P080::M10A-T080-E001"}'
   FROM _m10_paper_map p
   JOIN _m10_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M10A-P080'
   RETURNING experiment_id
 )
-INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P080::M10A-P080-E001', experiment_id FROM inserted;
+INSERT INTO _m10_experiment_map (tracker_id, experiment_id) SELECT 'M10A-P080::M10A-T080-E001', experiment_id FROM inserted;
 
 INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('Clinical trial registry evidence', 'Module 10B tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
 
@@ -3159,11 +3159,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P001-E001", "paper_tracker_id": "M10A-P001", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O001"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T001-E001", "paper_tracker_id": "M10A-P001", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O001"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P001::M10A-P001-E001'
+  WHERE e.tracker_id = 'M10A-P001::M10A-T001-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -3184,11 +3184,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P002-E001", "paper_tracker_id": "M10A-P002", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O002"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T002-E001", "paper_tracker_id": "M10A-P002", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O002"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P002::M10A-P002-E001'
+  WHERE e.tracker_id = 'M10A-P002::M10A-T002-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DRUG, OTHER'
   RETURNING observation_id
@@ -3209,11 +3209,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P003-E001", "paper_tracker_id": "M10A-P003", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O003"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T003-E001", "paper_tracker_id": "M10A-P003", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O003"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P003::M10A-P003-E001'
+  WHERE e.tracker_id = 'M10A-P003::M10A-T003-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -3234,11 +3234,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P004-E001", "paper_tracker_id": "M10A-P004", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O004"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T004-E001", "paper_tracker_id": "M10A-P004", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O004"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P004::M10A-P004-E001'
+  WHERE e.tracker_id = 'M10A-P004::M10A-T004-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -3259,11 +3259,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P005-E001", "paper_tracker_id": "M10A-P005", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O005"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T005-E001", "paper_tracker_id": "M10A-P005", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O005"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P005::M10A-P005-E001'
+  WHERE e.tracker_id = 'M10A-P005::M10A-T005-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -3284,11 +3284,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P006-E001", "paper_tracker_id": "M10A-P006", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O006"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T006-E001", "paper_tracker_id": "M10A-P006", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O006"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P006::M10A-P006-E001'
+  WHERE e.tracker_id = 'M10A-P006::M10A-T006-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE, OTHER'
   RETURNING observation_id
@@ -3309,11 +3309,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P007-E001", "paper_tracker_id": "M10A-P007", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O007"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T007-E001", "paper_tracker_id": "M10A-P007", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O007"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P007::M10A-P007-E001'
+  WHERE e.tracker_id = 'M10A-P007::M10A-T007-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE, OTHER'
   RETURNING observation_id
@@ -3334,11 +3334,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P008-E001", "paper_tracker_id": "M10A-P008", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O008"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T008-E001", "paper_tracker_id": "M10A-P008", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O008"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P008::M10A-P008-E001'
+  WHERE e.tracker_id = 'M10A-P008::M10A-T008-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -3359,11 +3359,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P009-E001", "paper_tracker_id": "M10A-P009", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O009"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T009-E001", "paper_tracker_id": "M10A-P009", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O009"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P009::M10A-P009-E001'
+  WHERE e.tracker_id = 'M10A-P009::M10A-T009-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'COMBINATION_PRODUCT, OTHER'
   RETURNING observation_id
@@ -3384,11 +3384,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P010-E001", "paper_tracker_id": "M10A-P010", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O010"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T010-E001", "paper_tracker_id": "M10A-P010", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O010"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P010::M10A-P010-E001'
+  WHERE e.tracker_id = 'M10A-P010::M10A-T010-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -3409,11 +3409,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P011-E001", "paper_tracker_id": "M10A-P011", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O011"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T011-E001", "paper_tracker_id": "M10A-P011", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O011"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P011::M10A-P011-E001'
+  WHERE e.tracker_id = 'M10A-P011::M10A-T011-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -3434,11 +3434,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P012-E001", "paper_tracker_id": "M10A-P012", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O012"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T012-E001", "paper_tracker_id": "M10A-P012", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O012"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P012::M10A-P012-E001'
+  WHERE e.tracker_id = 'M10A-P012::M10A-T012-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DRUG'
   RETURNING observation_id
@@ -3459,11 +3459,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P013-E001", "paper_tracker_id": "M10A-P013", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O013"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T013-E001", "paper_tracker_id": "M10A-P013", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O013"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P013::M10A-P013-E001'
+  WHERE e.tracker_id = 'M10A-P013::M10A-T013-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -3484,11 +3484,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P014-E001", "paper_tracker_id": "M10A-P014", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O014"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T014-E001", "paper_tracker_id": "M10A-P014", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O014"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P014::M10A-P014-E001'
+  WHERE e.tracker_id = 'M10A-P014::M10A-T014-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -3509,11 +3509,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P015-E001", "paper_tracker_id": "M10A-P015", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O015"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T015-E001", "paper_tracker_id": "M10A-P015", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O015"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P015::M10A-P015-E001'
+  WHERE e.tracker_id = 'M10A-P015::M10A-T015-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -3534,11 +3534,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P016-E001", "paper_tracker_id": "M10A-P016", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O016"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T016-E001", "paper_tracker_id": "M10A-P016", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O016"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P016::M10A-P016-E001'
+  WHERE e.tracker_id = 'M10A-P016::M10A-T016-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'PROCEDURE'
   RETURNING observation_id
@@ -3559,11 +3559,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P017-E001", "paper_tracker_id": "M10A-P017", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O017"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T017-E001", "paper_tracker_id": "M10A-P017", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O017"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P017::M10A-P017-E001'
+  WHERE e.tracker_id = 'M10A-P017::M10A-T017-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE, OTHER'
   RETURNING observation_id
@@ -3584,11 +3584,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P018-E001", "paper_tracker_id": "M10A-P018", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O018"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T018-E001", "paper_tracker_id": "M10A-P018", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O018"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P018::M10A-P018-E001'
+  WHERE e.tracker_id = 'M10A-P018::M10A-T018-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -3609,11 +3609,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P019-E001", "paper_tracker_id": "M10A-P019", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O019"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T019-E001", "paper_tracker_id": "M10A-P019", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O019"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P019::M10A-P019-E001'
+  WHERE e.tracker_id = 'M10A-P019::M10A-T019-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -3634,11 +3634,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P020-E001", "paper_tracker_id": "M10A-P020", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O020"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T020-E001", "paper_tracker_id": "M10A-P020", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O020"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P020::M10A-P020-E001'
+  WHERE e.tracker_id = 'M10A-P020::M10A-T020-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -3659,11 +3659,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P021-E001", "paper_tracker_id": "M10A-P021", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O021"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T021-E001", "paper_tracker_id": "M10A-P021", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O021"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P021::M10A-P021-E001'
+  WHERE e.tracker_id = 'M10A-P021::M10A-T021-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -3684,11 +3684,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P022-E001", "paper_tracker_id": "M10A-P022", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O022"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T022-E001", "paper_tracker_id": "M10A-P022", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O022"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P022::M10A-P022-E001'
+  WHERE e.tracker_id = 'M10A-P022::M10A-T022-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -3709,11 +3709,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P023-E001", "paper_tracker_id": "M10A-P023", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O023"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T023-E001", "paper_tracker_id": "M10A-P023", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O023"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P023::M10A-P023-E001'
+  WHERE e.tracker_id = 'M10A-P023::M10A-T023-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'PROCEDURE'
   RETURNING observation_id
@@ -3734,11 +3734,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P024-E001", "paper_tracker_id": "M10A-P024", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O024"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T024-E001", "paper_tracker_id": "M10A-P024", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O024"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P024::M10A-P024-E001'
+  WHERE e.tracker_id = 'M10A-P024::M10A-T024-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE, OTHER'
   RETURNING observation_id
@@ -3759,11 +3759,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P025-E001", "paper_tracker_id": "M10A-P025", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O025"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T025-E001", "paper_tracker_id": "M10A-P025", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O025"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P025::M10A-P025-E001'
+  WHERE e.tracker_id = 'M10A-P025::M10A-T025-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DRUG'
   RETURNING observation_id
@@ -3784,11 +3784,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P026-E001", "paper_tracker_id": "M10A-P026", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O026"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T026-E001", "paper_tracker_id": "M10A-P026", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O026"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P026::M10A-P026-E001'
+  WHERE e.tracker_id = 'M10A-P026::M10A-T026-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -3809,11 +3809,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P027-E001", "paper_tracker_id": "M10A-P027", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O027"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T027-E001", "paper_tracker_id": "M10A-P027", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O027"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P027::M10A-P027-E001'
+  WHERE e.tracker_id = 'M10A-P027::M10A-T027-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -3834,11 +3834,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P028-E001", "paper_tracker_id": "M10A-P028", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O028"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T028-E001", "paper_tracker_id": "M10A-P028", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O028"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P028::M10A-P028-E001'
+  WHERE e.tracker_id = 'M10A-P028::M10A-T028-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -3859,11 +3859,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P029-E001", "paper_tracker_id": "M10A-P029", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O029"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T029-E001", "paper_tracker_id": "M10A-P029", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O029"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P029::M10A-P029-E001'
+  WHERE e.tracker_id = 'M10A-P029::M10A-T029-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -3884,11 +3884,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P030-E001", "paper_tracker_id": "M10A-P030", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O030"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T030-E001", "paper_tracker_id": "M10A-P030", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O030"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P030::M10A-P030-E001'
+  WHERE e.tracker_id = 'M10A-P030::M10A-T030-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE, DRUG'
   RETURNING observation_id
@@ -3909,11 +3909,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P031-E001", "paper_tracker_id": "M10A-P031", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O031"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T031-E001", "paper_tracker_id": "M10A-P031", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O031"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P031::M10A-P031-E001'
+  WHERE e.tracker_id = 'M10A-P031::M10A-T031-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -3934,11 +3934,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P032-E001", "paper_tracker_id": "M10A-P032", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O032"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T032-E001", "paper_tracker_id": "M10A-P032", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O032"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P032::M10A-P032-E001'
+  WHERE e.tracker_id = 'M10A-P032::M10A-T032-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'BIOLOGICAL'
   RETURNING observation_id
@@ -3959,11 +3959,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P033-E001", "paper_tracker_id": "M10A-P033", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O033"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T033-E001", "paper_tracker_id": "M10A-P033", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O033"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P033::M10A-P033-E001'
+  WHERE e.tracker_id = 'M10A-P033::M10A-T033-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'BEHAVIORAL'
   RETURNING observation_id
@@ -3984,11 +3984,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P034-E001", "paper_tracker_id": "M10A-P034", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O034"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T034-E001", "paper_tracker_id": "M10A-P034", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O034"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P034::M10A-P034-E001'
+  WHERE e.tracker_id = 'M10A-P034::M10A-T034-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -4009,11 +4009,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P035-E001", "paper_tracker_id": "M10A-P035", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O035"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T035-E001", "paper_tracker_id": "M10A-P035", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O035"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P035::M10A-P035-E001'
+  WHERE e.tracker_id = 'M10A-P035::M10A-T035-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -4034,11 +4034,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P036-E001", "paper_tracker_id": "M10A-P036", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O036"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T036-E001", "paper_tracker_id": "M10A-P036", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O036"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P036::M10A-P036-E001'
+  WHERE e.tracker_id = 'M10A-P036::M10A-T036-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -4059,11 +4059,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P037-E001", "paper_tracker_id": "M10A-P037", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O037"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T037-E001", "paper_tracker_id": "M10A-P037", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O037"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P037::M10A-P037-E001'
+  WHERE e.tracker_id = 'M10A-P037::M10A-T037-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -4084,11 +4084,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P038-E001", "paper_tracker_id": "M10A-P038", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O038"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T038-E001", "paper_tracker_id": "M10A-P038", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O038"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P038::M10A-P038-E001'
+  WHERE e.tracker_id = 'M10A-P038::M10A-T038-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'BEHAVIORAL, DRUG'
   RETURNING observation_id
@@ -4109,11 +4109,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P039-E001", "paper_tracker_id": "M10A-P039", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O039"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T039-E001", "paper_tracker_id": "M10A-P039", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O039"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P039::M10A-P039-E001'
+  WHERE e.tracker_id = 'M10A-P039::M10A-T039-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'BEHAVIORAL'
   RETURNING observation_id
@@ -4134,11 +4134,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P040-E001", "paper_tracker_id": "M10A-P040", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O040"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T040-E001", "paper_tracker_id": "M10A-P040", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O040"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P040::M10A-P040-E001'
+  WHERE e.tracker_id = 'M10A-P040::M10A-T040-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE, OTHER'
   RETURNING observation_id
@@ -4159,11 +4159,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P041-E001", "paper_tracker_id": "M10A-P041", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O041"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T041-E001", "paper_tracker_id": "M10A-P041", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O041"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P041::M10A-P041-E001'
+  WHERE e.tracker_id = 'M10A-P041::M10A-T041-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'BEHAVIORAL'
   RETURNING observation_id
@@ -4184,11 +4184,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P042-E001", "paper_tracker_id": "M10A-P042", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O042"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T042-E001", "paper_tracker_id": "M10A-P042", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O042"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P042::M10A-P042-E001'
+  WHERE e.tracker_id = 'M10A-P042::M10A-T042-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DRUG'
   RETURNING observation_id
@@ -4209,11 +4209,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P043-E001", "paper_tracker_id": "M10A-P043", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O043"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T043-E001", "paper_tracker_id": "M10A-P043", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O043"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P043::M10A-P043-E001'
+  WHERE e.tracker_id = 'M10A-P043::M10A-T043-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -4234,11 +4234,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P044-E001", "paper_tracker_id": "M10A-P044", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O044"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T044-E001", "paper_tracker_id": "M10A-P044", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O044"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P044::M10A-P044-E001'
+  WHERE e.tracker_id = 'M10A-P044::M10A-T044-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -4259,11 +4259,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P045-E001", "paper_tracker_id": "M10A-P045", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O045"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T045-E001", "paper_tracker_id": "M10A-P045", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O045"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P045::M10A-P045-E001'
+  WHERE e.tracker_id = 'M10A-P045::M10A-T045-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -4284,11 +4284,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P046-E001", "paper_tracker_id": "M10A-P046", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O046"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T046-E001", "paper_tracker_id": "M10A-P046", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O046"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P046::M10A-P046-E001'
+  WHERE e.tracker_id = 'M10A-P046::M10A-T046-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -4309,11 +4309,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P047-E001", "paper_tracker_id": "M10A-P047", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O047"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T047-E001", "paper_tracker_id": "M10A-P047", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O047"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P047::M10A-P047-E001'
+  WHERE e.tracker_id = 'M10A-P047::M10A-T047-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -4334,11 +4334,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P048-E001", "paper_tracker_id": "M10A-P048", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O048"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T048-E001", "paper_tracker_id": "M10A-P048", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O048"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P048::M10A-P048-E001'
+  WHERE e.tracker_id = 'M10A-P048::M10A-T048-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -4359,11 +4359,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P049-E001", "paper_tracker_id": "M10A-P049", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O049"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T049-E001", "paper_tracker_id": "M10A-P049", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O049"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P049::M10A-P049-E001'
+  WHERE e.tracker_id = 'M10A-P049::M10A-T049-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'PROCEDURE'
   RETURNING observation_id
@@ -4384,11 +4384,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P050-E001", "paper_tracker_id": "M10A-P050", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O050"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T050-E001", "paper_tracker_id": "M10A-P050", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O050"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P050::M10A-P050-E001'
+  WHERE e.tracker_id = 'M10A-P050::M10A-T050-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -4409,11 +4409,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P051-E001", "paper_tracker_id": "M10A-P051", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O051"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T051-E001", "paper_tracker_id": "M10A-P051", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O051"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P051::M10A-P051-E001'
+  WHERE e.tracker_id = 'M10A-P051::M10A-T051-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -4434,11 +4434,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P052-E001", "paper_tracker_id": "M10A-P052", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O052"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T052-E001", "paper_tracker_id": "M10A-P052", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O052"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P052::M10A-P052-E001'
+  WHERE e.tracker_id = 'M10A-P052::M10A-T052-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'BEHAVIORAL, OTHER'
   RETURNING observation_id
@@ -4459,11 +4459,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P053-E001", "paper_tracker_id": "M10A-P053", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O053"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T053-E001", "paper_tracker_id": "M10A-P053", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O053"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P053::M10A-P053-E001'
+  WHERE e.tracker_id = 'M10A-P053::M10A-T053-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'BEHAVIORAL'
   RETURNING observation_id
@@ -4484,11 +4484,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P054-E001", "paper_tracker_id": "M10A-P054", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O054"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T054-E001", "paper_tracker_id": "M10A-P054", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O054"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P054::M10A-P054-E001'
+  WHERE e.tracker_id = 'M10A-P054::M10A-T054-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DRUG'
   RETURNING observation_id
@@ -4509,11 +4509,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P055-E001", "paper_tracker_id": "M10A-P055", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O055"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T055-E001", "paper_tracker_id": "M10A-P055", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O055"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P055::M10A-P055-E001'
+  WHERE e.tracker_id = 'M10A-P055::M10A-T055-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DRUG'
   RETURNING observation_id
@@ -4534,11 +4534,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P056-E001", "paper_tracker_id": "M10A-P056", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O056"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T056-E001", "paper_tracker_id": "M10A-P056", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O056"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P056::M10A-P056-E001'
+  WHERE e.tracker_id = 'M10A-P056::M10A-T056-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -4559,11 +4559,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P057-E001", "paper_tracker_id": "M10A-P057", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O057"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T057-E001", "paper_tracker_id": "M10A-P057", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O057"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P057::M10A-P057-E001'
+  WHERE e.tracker_id = 'M10A-P057::M10A-T057-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -4584,11 +4584,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P058-E001", "paper_tracker_id": "M10A-P058", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O058"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T058-E001", "paper_tracker_id": "M10A-P058", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O058"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P058::M10A-P058-E001'
+  WHERE e.tracker_id = 'M10A-P058::M10A-T058-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -4609,11 +4609,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P059-E001", "paper_tracker_id": "M10A-P059", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O059"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T059-E001", "paper_tracker_id": "M10A-P059", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O059"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P059::M10A-P059-E001'
+  WHERE e.tracker_id = 'M10A-P059::M10A-T059-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -4634,11 +4634,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P060-E001", "paper_tracker_id": "M10A-P060", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O060"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T060-E001", "paper_tracker_id": "M10A-P060", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O060"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P060::M10A-P060-E001'
+  WHERE e.tracker_id = 'M10A-P060::M10A-T060-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -4659,11 +4659,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P061-E001", "paper_tracker_id": "M10A-P061", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O061"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T061-E001", "paper_tracker_id": "M10A-P061", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O061"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P061::M10A-P061-E001'
+  WHERE e.tracker_id = 'M10A-P061::M10A-T061-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -4684,11 +4684,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P062-E001", "paper_tracker_id": "M10A-P062", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O062"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T062-E001", "paper_tracker_id": "M10A-P062", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O062"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P062::M10A-P062-E001'
+  WHERE e.tracker_id = 'M10A-P062::M10A-T062-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE, OTHER'
   RETURNING observation_id
@@ -4709,11 +4709,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P063-E001", "paper_tracker_id": "M10A-P063", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O063"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T063-E001", "paper_tracker_id": "M10A-P063", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O063"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P063::M10A-P063-E001'
+  WHERE e.tracker_id = 'M10A-P063::M10A-T063-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -4734,11 +4734,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P064-E001", "paper_tracker_id": "M10A-P064", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O064"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T064-E001", "paper_tracker_id": "M10A-P064", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O064"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P064::M10A-P064-E001'
+  WHERE e.tracker_id = 'M10A-P064::M10A-T064-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -4759,11 +4759,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P065-E001", "paper_tracker_id": "M10A-P065", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O065"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T065-E001", "paper_tracker_id": "M10A-P065", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O065"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P065::M10A-P065-E001'
+  WHERE e.tracker_id = 'M10A-P065::M10A-T065-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -4784,11 +4784,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P066-E001", "paper_tracker_id": "M10A-P066", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O066"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T066-E001", "paper_tracker_id": "M10A-P066", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O066"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P066::M10A-P066-E001'
+  WHERE e.tracker_id = 'M10A-P066::M10A-T066-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -4809,11 +4809,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P067-E001", "paper_tracker_id": "M10A-P067", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O067"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T067-E001", "paper_tracker_id": "M10A-P067", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O067"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P067::M10A-P067-E001'
+  WHERE e.tracker_id = 'M10A-P067::M10A-T067-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -4834,11 +4834,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P068-E001", "paper_tracker_id": "M10A-P068", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O068"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T068-E001", "paper_tracker_id": "M10A-P068", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O068"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P068::M10A-P068-E001'
+  WHERE e.tracker_id = 'M10A-P068::M10A-T068-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -4859,11 +4859,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P069-E001", "paper_tracker_id": "M10A-P069", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O069"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T069-E001", "paper_tracker_id": "M10A-P069", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O069"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P069::M10A-P069-E001'
+  WHERE e.tracker_id = 'M10A-P069::M10A-T069-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'PROCEDURE'
   RETURNING observation_id
@@ -4884,11 +4884,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P070-E001", "paper_tracker_id": "M10A-P070", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O070"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T070-E001", "paper_tracker_id": "M10A-P070", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O070"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P070::M10A-P070-E001'
+  WHERE e.tracker_id = 'M10A-P070::M10A-T070-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -4909,11 +4909,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P071-E001", "paper_tracker_id": "M10A-P071", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O071"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T071-E001", "paper_tracker_id": "M10A-P071", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O071"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P071::M10A-P071-E001'
+  WHERE e.tracker_id = 'M10A-P071::M10A-T071-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -4934,11 +4934,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P072-E001", "paper_tracker_id": "M10A-P072", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O072"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T072-E001", "paper_tracker_id": "M10A-P072", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O072"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P072::M10A-P072-E001'
+  WHERE e.tracker_id = 'M10A-P072::M10A-T072-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -4959,11 +4959,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P073-E001", "paper_tracker_id": "M10A-P073", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O073"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T073-E001", "paper_tracker_id": "M10A-P073", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O073"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P073::M10A-P073-E001'
+  WHERE e.tracker_id = 'M10A-P073::M10A-T073-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -4984,11 +4984,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P074-E001", "paper_tracker_id": "M10A-P074", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O074"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T074-E001", "paper_tracker_id": "M10A-P074", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O074"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P074::M10A-P074-E001'
+  WHERE e.tracker_id = 'M10A-P074::M10A-T074-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'PROCEDURE'
   RETURNING observation_id
@@ -5009,11 +5009,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P075-E001", "paper_tracker_id": "M10A-P075", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O075"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T075-E001", "paper_tracker_id": "M10A-P075", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O075"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P075::M10A-P075-E001'
+  WHERE e.tracker_id = 'M10A-P075::M10A-T075-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'BEHAVIORAL'
   RETURNING observation_id
@@ -5034,11 +5034,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P076-E001", "paper_tracker_id": "M10A-P076", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O076"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T076-E001", "paper_tracker_id": "M10A-P076", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O076"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P076::M10A-P076-E001'
+  WHERE e.tracker_id = 'M10A-P076::M10A-T076-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -5059,11 +5059,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P077-E001", "paper_tracker_id": "M10A-P077", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O077"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T077-E001", "paper_tracker_id": "M10A-P077", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O077"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P077::M10A-P077-E001'
+  WHERE e.tracker_id = 'M10A-P077::M10A-T077-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'BEHAVIORAL'
   RETURNING observation_id
@@ -5084,11 +5084,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P078-E001", "paper_tracker_id": "M10A-P078", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O078"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T078-E001", "paper_tracker_id": "M10A-P078", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O078"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P078::M10A-P078-E001'
+  WHERE e.tracker_id = 'M10A-P078::M10A-T078-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'DEVICE'
   RETURNING observation_id
@@ -5109,11 +5109,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P079-E001", "paper_tracker_id": "M10A-P079", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O079"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T079-E001", "paper_tracker_id": "M10A-P079", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O079"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P079::M10A-P079-E001'
+  WHERE e.tracker_id = 'M10A-P079::M10A-T079-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -5134,11 +5134,11 @@ WITH inserted AS (
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-P080-E001", "paper_tracker_id": "M10A-P080", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O080"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T080-E001", "paper_tracker_id": "M10A-P080", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O080"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M10A-P080::M10A-P080-E001'
+  WHERE e.tracker_id = 'M10A-P080::M10A-T080-E001'
     AND et.evidence_type_name = 'Clinical trial registry evidence'
     AND ot.outcome_type_name = 'OTHER'
   RETURNING observation_id
@@ -7152,7 +7152,7 @@ INSERT INTO _m10_link_map (tracker_id, link_id) SELECT 'M10B-L116', link_id FROM
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Trial status currency is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'SCI clinical-trial evidence must preserve registry status and verification date because recruiting, active, completed, terminated, withdrawn, unknown, and results-posted trials carry different evidentiary meanings.',
     'M10B-T001',
     1,
     'consensus-ready first pass',
@@ -7225,7 +7225,7 @@ WHERE c.tracker_id = 'M10B-S001';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Safety/feasibility versus efficacy is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'Most SCI trials in the registry-first corpus should be interpreted initially as safety, feasibility, dosing, device, rehabilitation, or endpoint-development evidence unless controlled results support efficacy.',
     'M10B-T002',
     1,
     'consensus-ready first pass',
@@ -7298,7 +7298,7 @@ WHERE c.tracker_id = 'M10B-S002';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Registry-publication result linkage is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'Registry records are not equivalent to published outcomes; each trial needs linkage to results postings, publications, intervention details, sample size, comparator, and endpoint definitions before quantitative clinical synthesis.',
     'M10B-T003',
     1,
     'consensus-ready first pass',
@@ -7371,7 +7371,7 @@ WHERE c.tracker_id = 'M10B-S003';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Intervention-class ontology is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'Intervention-class ontology is essential for clinical synthesis because cells, devices, drugs, rehabilitation, stimulation, surgery, biologics, behavioral interventions, and observational protocols answer different translational questions.',
     'M10B-T004',
     1,
     'consensus-ready first pass',
@@ -7444,7 +7444,7 @@ WHERE c.tracker_id = 'M10B-S004';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'SCI population boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'SCI clinical-trial rows must retain population boundaries, including traumatic versus nontraumatic injury, acute versus chronic stage, complete versus incomplete injury, neurological level, age, comorbidity, and whether SCI is the primary condition.',
     'M10B-T005',
     1,
     'consensus-ready first pass',
@@ -7517,7 +7517,7 @@ WHERE c.tracker_id = 'M10B-S005';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Terminated/withdrawn trial interpretation is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'Terminated, withdrawn, suspended, and unknown-status trials are informative about feasibility and translation risk, but they should not be treated as negative efficacy evidence without documented reasons and outcome data.',
     'M10B-T006',
     1,
     'consensus-ready first pass',
@@ -7590,7 +7590,7 @@ WHERE c.tracker_id = 'M10B-S006';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Endpoint-family separation is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'Clinical endpoints should be grouped by functional domain and evidence role: safety, adverse events, AIS or motor scores, walking, hand function, bladder, pain, autonomic function, quality of life, imaging, biomarkers, and device performance require separate synthesis fields.',
     'M10B-T007',
     1,
     'consensus-ready first pass',
@@ -7663,7 +7663,7 @@ WHERE c.tracker_id = 'M10B-S007';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Clinical translation evidence tier is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'Module 10 should serve as the clinical translation map for the database: it can identify what has reached humans and where evidence is thin, but causal or efficacy claims require linked results and intervention-specific review.',
     'M10B-T008',
     1,
     'consensus-ready first pass',

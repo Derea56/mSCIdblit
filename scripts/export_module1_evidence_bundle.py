@@ -22,7 +22,7 @@ DEFAULT_TRACKER = ROOT / "modules" / "Module_1B_TRACKER.md"
 DEFAULT_OUTPUT = ROOT / "data" / "processed" / "module1_evidence_bundle.json"
 
 EXPECTED_COUNTS = {
-    "observations": 84,
+    "observations": 93,
     "author_claims": 50,
     "evidence_links": 107,
     "boundary_records": 7,

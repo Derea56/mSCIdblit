@@ -6,7 +6,7 @@ INSERT INTO Consensus (
   consensus_statement, topic, version, agreement_level,
   num_supporting_papers, num_contradicting_papers, notes
 ) VALUES (
-  'Chronic SCI lesion architecture should be represented as a multicompartment structure rather than as a single undifferentiated scar. First-pass compartments include fibrotic/ECM-rich core or matrix, astrocytic border, immune/myeloid containment zone, spared or reactive neural tissue, altered white matter, and cystic or repaired-tissue cavities when present.',
+  'Chronic SCI lesion architecture is a multicompartment structure, not a single scar. The core evidence supports separately queryable fibrotic or ECM-rich matrix, astrocytic border, immune/myeloid containment zone, spared or reactive neural tissue, altered white matter, and cystic or repaired-tissue cavities when present.',
   'M1B-T001: Core lesion architecture',
   1,
   'moderate',
@@ -19,7 +19,7 @@ INSERT INTO Consensus (
   consensus_statement, topic, version, agreement_level,
   num_supporting_papers, num_contradicting_papers, notes
 ) VALUES (
-  'The SCI fibrotic scar is produced by perivascular and meningeal-associated stromal lineages, but exact lineage labels depend on markers, Cre drivers, injury type, dural disruption, and endpoint. Partial modulation of fibrotic scarring can support regeneration or recovery in some models, while complete loss of closure-producing stromal response can be harmful.',
+  'SCI fibrotic scarring arises from perivascular and meningeal-associated stromal lineages, but lineage assignment depends on marker system, Cre driver, injury geometry, dural disruption, and endpoint. The consensus is modulation, not ablation: partial attenuation can support repair in some models, whereas loss of closure-producing stroma can be harmful.',
   'M1B-T002: Fibrotic scar cellular origins',
   1,
   'moderate',
@@ -32,7 +32,7 @@ INSERT INTO Consensus (
   consensus_statement, topic, version, agreement_level,
   num_supporting_papers, num_contradicting_papers, notes
 ) VALUES (
-  'Astrocytic scar borders are active wound-repair and containment structures with separable formation, maintenance, recruitment, and morphology programs. Established scar-forming astrocytes may resist direct state reversal, but border recruitment and organization remain intervention-sensitive in vivo.',
+  'Astrocytic scar borders are active wound-repair and containment structures with separable programs for formation, maintenance, recruitment, and morphology. Established scar-forming astrocytes may resist direct reversal, while border recruitment and organization remain intervention-sensitive in vivo.',
   'M1B-T003: Astrocytic border and wound-repair state',
   1,
   'moderate',
@@ -45,7 +45,7 @@ INSERT INTO Consensus (
   consensus_statement, topic, version, agreement_level,
   num_supporting_papers, num_contradicting_papers, notes
 ) VALUES (
-  'Chronic SCI lesion mechanics are altered relative to uninjured spinal cord, but the direction of stiffness change is model- and method-dependent. The database should not encode a universal "chronic scar stiffness" direction without injury model, species, time point, tissue preparation, AFM method, and lesion subregion context.',
+  'Chronic SCI changes lesion mechanics, but stiffness direction is model- and method-dependent. No universal chronic-scar stiffness claim should be encoded without species, injury model, time point, tissue preparation, AFM method, and lesion subregion.',
   'M1B-T004: Chronic lesion biomechanics',
   1,
   'emerging',
@@ -58,7 +58,7 @@ INSERT INTO Consensus (
   consensus_statement, topic, version, agreement_level,
   num_supporting_papers, num_contradicting_papers, notes
 ) VALUES (
-  'Chronic scar resection should be separated into at least two intervention classes: resection alone and resection followed by cavity or gap reconstruction. Resection alone is not consensus-reparative and may be harmful in contusion models, whereas scaffold/cell filling is a recurring repair strategy whose claims remain model-, completeness-, and endpoint-dependent.',
+  'Chronic scar resection divides into distinct intervention classes: tissue removal alone and resection followed by cavity or gap reconstruction. Resection alone is not consensus-reparative and may be harmful in contusion models, whereas scaffold or cell filling is a recurring but model- and endpoint-dependent reconstruction strategy.',
   'M1B-T005: Cavitary lesions, scar resection, and scaffold filling',
   1,
   'moderate',
@@ -71,7 +71,7 @@ INSERT INTO Consensus (
   consensus_statement, topic, version, agreement_level,
   num_supporting_papers, num_contradicting_papers, notes
 ) VALUES (
-  'Spared and lesion-remote white matter should be modeled as an active, recovery-linked compartment rather than normal residual tissue. It can show chronic degeneration, repair-associated glial and immune remodeling, MRI-visible tract changes, debris/lipid handling programs, and behavioral associations.',
+  'Spared and lesion-remote white matter is an active recovery-linked compartment rather than normal residual tissue. It can carry chronic degeneration, repair-associated glial and immune remodeling, MRI-visible tract changes, debris and lipid-handling programs, and behavioral associations.',
   'M1B-T006: Spared and remote white matter',
   1,
   'moderate',
@@ -84,7 +84,7 @@ INSERT INTO Consensus (
   consensus_statement, topic, version, agreement_level,
   num_supporting_papers, num_contradicting_papers, notes
 ) VALUES (
-  'Human chronic SCI lesion architecture is multi-scale: local lesion geometry and tissue bridges, focal cystic atrophy, retained adjacent parenchyma, vascular territory and remote infarct-like pathology, scar-marker composition, segmental motoneuron/root pathology, remyelination status, perilesional DTI abnormalities, and remote motor-system degeneration should remain separately queryable.',
+  'Human chronic SCI lesion architecture is multi-scale and should retain separate fields for local lesion geometry and tissue bridges, focal cystic atrophy, retained adjacent parenchyma, vascular territory and remote infarct-like pathology, scar-marker composition, segmental motoneuron/root pathology, remyelination status, perilesional DTI abnormalities, and remote motor-system degeneration.',
   'M1B-T007: Human chronic pathology and imaging geometry',
   1,
   'strong',
@@ -97,7 +97,7 @@ INSERT INTO Consensus (
   consensus_statement, topic, version, agreement_level,
   num_supporting_papers, num_contradicting_papers, notes
 ) VALUES (
-  'Immune-glial lesion biology should be represented by phase, cell population, function, and endpoint rather than as globally beneficial or harmful. Myeloid and glial responses can support corralling, compaction, containment, debris handling, and repair while also contributing to chronic neuroinflammatory pathology and remote effects.',
+  'Immune-glial lesion biology is phase-, cell-, function-, and endpoint-specific. Myeloid and glial responses can support corralling, compaction, containment, debris handling, and repair while also contributing to chronic neuroinflammatory pathology and remote effects.',
   'M1B-T008: Immune-glial containment and chronic inflammation',
   1,
   'moderate',

@@ -51,7 +51,7 @@ MODULES = {
         consensus_section="## Pass 6: Draft Consensus Statements",
         consensus_statement_key="draft_consensus_statement",
         expected_counts={
-            "observations": 84,
+            "observations": 93,
             "author_claims": 50,
             "evidence_links": 107,
             "boundary_records": 7,
@@ -77,7 +77,7 @@ MODULES = {
         consensus_section="## Consensus Draft Queue",
         consensus_statement_key="draft_statement",
         expected_counts={
-            "observations": 50,
+            "observations": 90,
             "author_claims": 36,
             "evidence_links": 56,
             "boundary_records": 8,
@@ -102,7 +102,7 @@ MODULES = {
         consensus_section="## Consensus Draft Queue",
         consensus_statement_key="draft_statement",
         expected_counts={
-            "observations": 47,
+            "observations": 94,
             "author_claims": 36,
             "evidence_links": 60,
             "boundary_records": 8,
@@ -127,7 +127,7 @@ MODULES = {
         consensus_section="## Consensus Draft Queue",
         consensus_statement_key="draft_statement",
         expected_counts={
-            "observations": 60,
+            "observations": 98,
             "author_claims": 40,
             "evidence_links": 72,
             "boundary_records": 8,
@@ -152,7 +152,7 @@ MODULES = {
         consensus_section="## Consensus Draft Queue",
         consensus_statement_key="draft_statement",
         expected_counts={
-            "observations": 47,
+            "observations": 94,
             "author_claims": 36,
             "evidence_links": 60,
             "boundary_records": 8,

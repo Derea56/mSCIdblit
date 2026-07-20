@@ -1686,98 +1686,98 @@
     {
       "consensus_id": "M11B-S001",
       "topic_id": "M11B-T001",
-      "draft_statement": "CSF drainage and perfusion-pressure protection is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims.",
+      "draft_statement": "CSF drainage and perfusion-pressure protocols are established perioperative spinal-cord-protection strategies in aortic surgery contexts, but synthesis must separate prophylactic, therapeutic, rescue, pressure-target, and drain-complication endpoints.",
       "supporting_observations": "M11B-O001-O004",
       "supporting_claims": "M11B-C001-C004",
       "boundary_records": "M11B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 11 first-pass curation freeze.",
       "tracker_id": "M11B-S001",
-      "consensus_statement": "CSF drainage and perfusion-pressure protection is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims."
+      "consensus_statement": "CSF drainage and perfusion-pressure protocols are established perioperative spinal-cord-protection strategies in aortic surgery contexts, but synthesis must separate prophylactic, therapeutic, rescue, pressure-target, and drain-complication endpoints."
     },
     {
       "consensus_id": "M11B-S002",
       "topic_id": "M11B-T002",
-      "draft_statement": "Staged repair and collateral-network conditioning is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims.",
+      "draft_statement": "Staged aortic repair and collateral-network conditioning are plausible spinal-cord-protection strategies because they aim to preserve or recruit perfusion before definitive coverage, but open, endovascular, hybrid, interval, and extent-of-coverage designs require separate interpretation.",
       "supporting_observations": "M11B-O005-O008",
       "supporting_claims": "M11B-C005-C008",
       "boundary_records": "M11B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 11 first-pass curation freeze.",
       "tracker_id": "M11B-S002",
-      "consensus_statement": "Staged repair and collateral-network conditioning is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims."
+      "consensus_statement": "Staged aortic repair and collateral-network conditioning are plausible spinal-cord-protection strategies because they aim to preserve or recruit perfusion before definitive coverage, but open, endovascular, hybrid, interval, and extent-of-coverage designs require separate interpretation."
     },
     {
       "consensus_id": "M11B-S003",
       "topic_id": "M11B-T003",
-      "draft_statement": "Direct/local ischemic conditioning and postconditioning is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims.",
+      "draft_statement": "Direct or local ischemic preconditioning and early postconditioning have the clearest spinal-cord-specific conditioning logic in animal ischemia models, but species, occlusion method, ischemia duration, timing, and reperfusion window determine applicability.",
       "supporting_observations": "M11B-O009-O012",
       "supporting_claims": "M11B-C009-C012",
       "boundary_records": "M11B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 11 first-pass curation freeze.",
       "tracker_id": "M11B-S003",
-      "consensus_statement": "Direct/local ischemic conditioning and postconditioning is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims."
+      "consensus_statement": "Direct or local ischemic preconditioning and early postconditioning have the clearest spinal-cord-specific conditioning logic in animal ischemia models, but species, occlusion method, ischemia duration, timing, and reperfusion window determine applicability."
     },
     {
       "consensus_id": "M11B-S004",
       "topic_id": "M11B-T004",
-      "draft_statement": "Remote ischemic conditioning has weaker spinal-cord-specific evidence is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims.",
+      "draft_statement": "Remote ischemic conditioning evidence is weaker for spinal-cord-specific protection than direct/local conditioning because limb, kidney, or obstructive-sleep-apnea analogs often measure systemic or non-spinal endpoints rather than direct cord preservation.",
       "supporting_observations": "M11B-O013-O016",
       "supporting_claims": "M11B-C013-C016",
       "boundary_records": "M11B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 11 first-pass curation freeze.",
       "tracker_id": "M11B-S004",
-      "consensus_statement": "Remote ischemic conditioning has weaker spinal-cord-specific evidence is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims."
+      "consensus_statement": "Remote ischemic conditioning evidence is weaker for spinal-cord-specific protection than direct/local conditioning because limb, kidney, or obstructive-sleep-apnea analogs often measure systemic or non-spinal endpoints rather than direct cord preservation."
     },
     {
       "consensus_id": "M11B-S005",
       "topic_id": "M11B-T005",
-      "draft_statement": "Hypothermia, anesthetic, and pharmacologic protection is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims.",
+      "draft_statement": "Hypothermia, anesthetic conditioning, and pharmacologic protection form a perioperative adjunct family, but causal strength depends on whether the intervention is isolated from perfusion management, CSF drainage, monitoring, and rescue bundles.",
       "supporting_observations": "M11B-O017-O020",
       "supporting_claims": "M11B-C017-C020",
       "boundary_records": "M11B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 11 first-pass curation freeze.",
       "tracker_id": "M11B-S005",
-      "consensus_statement": "Hypothermia, anesthetic, and pharmacologic protection is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims."
+      "consensus_statement": "Hypothermia, anesthetic conditioning, and pharmacologic protection form a perioperative adjunct family, but causal strength depends on whether the intervention is isolated from perfusion management, CSF drainage, monitoring, and rescue bundles."
     },
     {
       "consensus_id": "M11B-S006",
       "topic_id": "M11B-T006",
-      "draft_statement": "Neuromonitoring-guided protection and rescue is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims.",
+      "draft_statement": "Neuromonitoring can guide risk detection and rescue during aortic procedures, but it is not itself proof of neuroprotection unless changes are linked to a defined intervention and neurologic endpoint recovery.",
       "supporting_observations": "M11B-O021-O024",
       "supporting_claims": "M11B-C021-C024",
       "boundary_records": "M11B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 11 first-pass curation freeze.",
       "tracker_id": "M11B-S006",
-      "consensus_statement": "Neuromonitoring-guided protection and rescue is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims."
+      "consensus_statement": "Neuromonitoring can guide risk detection and rescue during aortic procedures, but it is not itself proof of neuroprotection unless changes are linked to a defined intervention and neurologic endpoint recovery."
     },
     {
       "consensus_id": "M11B-S007",
       "topic_id": "M11B-T007",
-      "draft_statement": "Clinical trial and registry linkage is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims.",
+      "draft_statement": "Clinical trial and registry rows in perioperative spinal-cord ischemia should remain protocol, status, feasibility, safety, or monitoring evidence until linked outcomes define the intervention, comparator, and neurologic endpoint.",
       "supporting_observations": "M11B-O025-O028",
       "supporting_claims": "M11B-C025-C028",
       "boundary_records": "M11B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 11 first-pass curation freeze.",
       "tracker_id": "M11B-S007",
-      "consensus_statement": "Clinical trial and registry linkage is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims."
+      "consensus_statement": "Clinical trial and registry rows in perioperative spinal-cord ischemia should remain protocol, status, feasibility, safety, or monitoring evidence until linked outcomes define the intervention, comparator, and neurologic endpoint."
     },
     {
       "consensus_id": "M11B-S008",
       "topic_id": "M11B-T008",
-      "draft_statement": "Translation boundary to traumatic SCI reconstruction is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims.",
+      "draft_statement": "Module 11 is a conditioning analog for the SCI project, not direct evidence for traumatic chronic reconstruction: perioperative ischemia prevention can inform timing, perfusion, and host-state logic only when ischemic versus traumatic mechanisms are kept separate.",
       "supporting_observations": "M11B-O029-O032",
       "supporting_claims": "M11B-C029-C032",
       "boundary_records": "M11B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 11 first-pass curation freeze.",
       "tracker_id": "M11B-S008",
-      "consensus_statement": "Translation boundary to traumatic SCI reconstruction is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims."
+      "consensus_statement": "Module 11 is a conditioning analog for the SCI project, not direct evidence for traumatic chronic reconstruction: perioperative ischemia prevention can inform timing, perfusion, and host-state logic only when ischemic versus traumatic mechanisms are kept separate."
     }
   ]
 }

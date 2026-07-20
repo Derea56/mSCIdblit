@@ -2094,98 +2094,98 @@
     {
       "consensus_draft_id": "M6B-S001",
       "topic_id": "M6B-T001",
-      "draft_statement": "Human chronic SCI lesion architecture includes preserved adjacent tissue, focal cystic loss, scar-resection anatomy, and chronic syrinx/cyst complications; these compartments should be tracked separately.",
+      "draft_statement": "Human chronic SCI lesion architecture should be represented as separable compartments, including focal cystic loss, retained adjacent cord, scar-resection anatomy, syrinx or cyst complications, and potential tissue bridges, because each carries different surgical and translational implications.",
       "supporting_observations": "M6B-O001, O003, O018-O019",
       "supporting_claims": "M6B-C001, C003, C005, C023",
       "boundary_records": "M6B-B001, M6B-B005, M6B-B008",
       "readiness_status": "CONSENSUS-READY FIRST PASS",
       "notes": "Architecture statement.",
       "tracker_id": "M6B-S001",
-      "consensus_statement": "Human chronic SCI lesion architecture includes preserved adjacent tissue, focal cystic loss, scar-resection anatomy, and chronic syrinx/cyst complications; these compartments should be tracked separately."
+      "consensus_statement": "Human chronic SCI lesion architecture should be represented as separable compartments, including focal cystic loss, retained adjacent cord, scar-resection anatomy, syrinx or cyst complications, and potential tissue bridges, because each carries different surgical and translational implications."
     },
     {
       "consensus_draft_id": "M6B-S002",
       "topic_id": "M6B-T002",
-      "draft_statement": "Human tissue pathology shows ventral-root axon/myelin injury and vascular/cystic compartments that are not reducible to MRI-visible lesion geometry.",
+      "draft_statement": "Human pathology adds tissue-level constraints that imaging alone cannot resolve: ventral-root and motoneuron loss, axon/myelin abnormalities, vascular injury patterns, cystic cavitation, and scar composition should remain separately queryable.",
       "supporting_observations": "M6B-O002, O017-O018",
       "supporting_claims": "M6B-C002, C004, C018, C024-C025",
       "boundary_records": "M6B-B001, M6B-B002",
       "readiness_status": "CONSENSUS-READY FIRST PASS",
       "notes": "Autopsy/pathology statement.",
       "tracker_id": "M6B-S002",
-      "consensus_statement": "Human tissue pathology shows ventral-root axon/myelin injury and vascular/cystic compartments that are not reducible to MRI-visible lesion geometry."
+      "consensus_statement": "Human pathology adds tissue-level constraints that imaging alone cannot resolve: ventral-root and motoneuron loss, axon/myelin abnormalities, vascular injury patterns, cystic cavitation, and scar composition should remain separately queryable."
     },
     {
       "consensus_draft_id": "M6B-S003",
       "topic_id": "M6B-T003",
-      "draft_statement": "DTI and tract-specific diffusion measures can reveal clinically relevant injury beyond conventional MRI and can relate to motor or sensory impairment.",
+      "draft_statement": "Diffusion MRI and tract-specific measures can reveal clinically relevant cord injury beyond conventional MRI, but consensus use requires tract, spinal level, directionality, clinical endpoint, acquisition method, and confidence labels.",
       "supporting_observations": "M6B-O004, O006-O007, O022",
       "supporting_claims": "M6B-C006-C007, C027-C028",
       "boundary_records": "M6B-B002, M6B-B003, M6B-B006",
       "readiness_status": "CONSENSUS-READY FIRST PASS",
       "notes": "Diffusion/tract statement.",
       "tracker_id": "M6B-S003",
-      "consensus_statement": "DTI and tract-specific diffusion measures can reveal clinically relevant injury beyond conventional MRI and can relate to motor or sensory impairment."
+      "consensus_statement": "Diffusion MRI and tract-specific measures can reveal clinically relevant cord injury beyond conventional MRI, but consensus use requires tract, spinal level, directionality, clinical endpoint, acquisition method, and confidence labels."
     },
     {
       "consensus_draft_id": "M6B-S004",
       "topic_id": "M6B-T004",
-      "draft_statement": "Tissue bridges and lesion-geometry measures are promising prognostic MRI biomarkers for recovery and walking ability, but interpretation must preserve level, etiology, timing, completeness, and endpoint boundaries.",
+      "draft_statement": "Tissue bridges and lesion-geometry measures are among the strongest human imaging candidates for prognosis and stratification, but their meaning depends on injury level, etiology, completeness, timing, scan modality, and the specific recovery endpoint.",
       "supporting_observations": "M6B-O005, O008-O009, O035",
       "supporting_claims": "M6B-C008-C009, C028, C032",
       "boundary_records": "M6B-B001, M6B-B006",
       "readiness_status": "CONSENSUS-READY FIRST PASS",
       "notes": "Tissue bridge statement.",
       "tracker_id": "M6B-S004",
-      "consensus_statement": "Tissue bridges and lesion-geometry measures are promising prognostic MRI biomarkers for recovery and walking ability, but interpretation must preserve level, etiology, timing, completeness, and endpoint boundaries."
+      "consensus_statement": "Tissue bridges and lesion-geometry measures are among the strongest human imaging candidates for prognosis and stratification, but their meaning depends on injury level, etiology, completeness, timing, scan modality, and the specific recovery endpoint."
     },
     {
       "consensus_draft_id": "M6B-S005",
       "topic_id": "M6B-T005",
-      "draft_statement": "qMRI, MRS, atrophy, and longitudinal neuroimaging support a model of chronic system-level pathology involving remote spinal, sensory, motor, brainstem, and metabolic changes.",
+      "draft_statement": "qMRI, MRS, atrophy, and longitudinal neuroimaging support chronic SCI as a system-level condition with remote spinal, sensory, motor, brainstem, cortical, and metabolic changes; these should be modeled as linked but distinct from local lesion-bed anatomy.",
       "supporting_observations": "M6B-O010-O012, O016, O021, O027-O032",
       "supporting_claims": "M6B-C010-C012, C015, C026, C029",
       "boundary_records": "M6B-B003, M6B-B004, M6B-B007",
       "readiness_status": "CONSENSUS-READY FIRST PASS",
       "notes": "Remote degeneration statement.",
       "tracker_id": "M6B-S005",
-      "consensus_statement": "qMRI, MRS, atrophy, and longitudinal neuroimaging support a model of chronic system-level pathology involving remote spinal, sensory, motor, brainstem, and metabolic changes."
+      "consensus_statement": "qMRI, MRS, atrophy, and longitudinal neuroimaging support chronic SCI as a system-level condition with remote spinal, sensory, motor, brainstem, cortical, and metabolic changes; these should be modeled as linked but distinct from local lesion-bed anatomy."
     },
     {
       "consensus_draft_id": "M6B-S006",
       "topic_id": "M6B-T006",
-      "draft_statement": "fMRI and cortical reorganization studies support remote plasticity after SCI, but they are indirect lesion-bed evidence unless paired with spinal lesion, tract, or clinical impairment measures.",
+      "draft_statement": "fMRI and cortical reorganization evidence supports remote neural plasticity after SCI, but it should remain indirect lesion-bed evidence unless paired with spinal lesion metrics, tract integrity, or clinical impairment measures.",
       "supporting_observations": "M6B-O013-O015, O023-O026",
       "supporting_claims": "M6B-C013-C014, C030",
       "boundary_records": "M6B-B003, M6B-B004",
       "readiness_status": "CONSENSUS-READY FIRST PASS",
       "notes": "Cortical plasticity statement.",
       "tracker_id": "M6B-S006",
-      "consensus_statement": "fMRI and cortical reorganization studies support remote plasticity after SCI, but they are indirect lesion-bed evidence unless paired with spinal lesion, tract, or clinical impairment measures."
+      "consensus_statement": "fMRI and cortical reorganization evidence supports remote neural plasticity after SCI, but it should remain indirect lesion-bed evidence unless paired with spinal lesion metrics, tract integrity, or clinical impairment measures."
     },
     {
       "consensus_draft_id": "M6B-S007",
       "topic_id": "M6B-T007",
-      "draft_statement": "Human imaging can support surgical planning, trial screening, and stratification, but review and trial-readiness rows should not be treated as direct repair efficacy evidence.",
+      "draft_statement": "Human imaging is ready to support surgical planning, trial screening, stratification, and endpoint selection, but registry, review, and trial-readiness rows should not be promoted to repair-efficacy evidence without intervention-linked outcomes.",
       "supporting_observations": "M6B-O003, O020, O029, O033-O036",
       "supporting_claims": "M6B-C016, C020-C021, C031",
       "boundary_records": "M6B-B005, M6B-B007, M6B-B008",
       "readiness_status": "CONSENSUS-READY FIRST PASS",
       "notes": "Translation/trial statement.",
       "tracker_id": "M6B-S007",
-      "consensus_statement": "Human imaging can support surgical planning, trial screening, and stratification, but review and trial-readiness rows should not be treated as direct repair efficacy evidence."
+      "consensus_statement": "Human imaging is ready to support surgical planning, trial screening, stratification, and endpoint selection, but registry, review, and trial-readiness rows should not be promoted to repair-efficacy evidence without intervention-linked outcomes."
     },
     {
       "consensus_draft_id": "M6B-S008",
       "topic_id": "M6B-T008",
-      "draft_statement": "Module 6 consensus should remain human-specific, modality-stratified, confidence-labeled, and bounded by timing, injury level, etiology, completeness, and evidence directness.",
+      "draft_statement": "Module 6 should function as the human translation boundary layer: every consensus statement must preserve modality, confidence, timing, injury level, etiology, completeness, endpoint directness, and whether the evidence is pathology, imaging, planning, or efficacy.",
       "supporting_observations": "M6B-O001-O036",
       "supporting_claims": "M6B-C017-C019, C022, C032-C036",
       "boundary_records": "all boundary records",
       "readiness_status": "CONSENSUS-READY FIRST PASS",
       "notes": "Cross-module guardrail.",
       "tracker_id": "M6B-S008",
-      "consensus_statement": "Module 6 consensus should remain human-specific, modality-stratified, confidence-labeled, and bounded by timing, injury level, etiology, completeness, and evidence directness."
+      "consensus_statement": "Module 6 should function as the human translation boundary layer: every consensus statement must preserve modality, confidence, timing, injury level, etiology, completeness, endpoint directness, and whether the evidence is pathology, imaging, planning, or efficacy."
     }
   ]
 }

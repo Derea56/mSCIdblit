@@ -948,98 +948,98 @@
     {
       "consensus_id": "M9B-S001",
       "topic_id": "M9B-T001",
-      "draft_statement": "Culture format boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.",
+      "draft_statement": "In vitro and ex vivo SCI models should be classified first by culture format, because dissociated cultures, organoids, slices, explants, microfluidic systems, and biomaterial cultures preserve different degrees of cytoarchitecture, injury context, and assay control.",
       "supporting_observations": "M9B-O001-O002",
       "supporting_claims": "M9B-C001-C003",
       "boundary_records": "M9B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 9 first-pass curation freeze.",
       "tracker_id": "M9B-S001",
-      "consensus_statement": "Culture format boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims."
+      "consensus_statement": "In vitro and ex vivo SCI models should be classified first by culture format, because dissociated cultures, organoids, slices, explants, microfluidic systems, and biomaterial cultures preserve different degrees of cytoarchitecture, injury context, and assay control."
     },
     {
       "consensus_id": "M9B-S002",
       "topic_id": "M9B-T002",
-      "draft_statement": "Cell-source and maturity boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.",
+      "draft_statement": "Cell source and maturity determine what an in vitro model can validate: primary rodent cells, human iPSC derivatives, organoids, glia, neurons, macrophages, and mixed cultures should not be pooled without lineage, maturation, and species labels.",
       "supporting_observations": "M9B-O003-O004",
       "supporting_claims": "M9B-C004-C006",
       "boundary_records": "M9B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 9 first-pass curation freeze.",
       "tracker_id": "M9B-S002",
-      "consensus_statement": "Cell-source and maturity boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims."
+      "consensus_statement": "Cell source and maturity determine what an in vitro model can validate: primary rodent cells, human iPSC derivatives, organoids, glia, neurons, macrophages, and mixed cultures should not be pooled without lineage, maturation, and species labels."
     },
     {
       "consensus_id": "M9B-S003",
       "topic_id": "M9B-T003",
-      "draft_statement": "Injury stimulus boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.",
+      "draft_statement": "Injury stimulus must remain explicit in culture-model synthesis; scratch, stretch, compression, excitotoxicity, hypoxia, inflammatory challenge, myelin debris, matrix inhibition, and conditioned media model different parts of SCI.",
       "supporting_observations": "M9B-O005-O006",
       "supporting_claims": "M9B-C007-C009",
       "boundary_records": "M9B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 9 first-pass curation freeze.",
       "tracker_id": "M9B-S003",
-      "consensus_statement": "Injury stimulus boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims."
+      "consensus_statement": "Injury stimulus must remain explicit in culture-model synthesis; scratch, stretch, compression, excitotoxicity, hypoxia, inflammatory challenge, myelin debris, matrix inhibition, and conditioned media model different parts of SCI."
     },
     {
       "consensus_id": "M9B-S004",
       "topic_id": "M9B-T004",
-      "draft_statement": "Assay/readout boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.",
+      "draft_statement": "In vitro readouts are strongest when matched to their intended validation role: survival, neurite growth, electrophysiology, myelination, glial activation, cytokines, matrix response, migration, and biomaterial compatibility require separate assay fields.",
       "supporting_observations": "M9B-O007-O008",
       "supporting_claims": "M9B-C010-C012",
       "boundary_records": "M9B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 9 first-pass curation freeze.",
       "tracker_id": "M9B-S004",
-      "consensus_statement": "Assay/readout boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims."
+      "consensus_statement": "In vitro readouts are strongest when matched to their intended validation role: survival, neurite growth, electrophysiology, myelination, glial activation, cytokines, matrix response, migration, and biomaterial compatibility require separate assay fields."
     },
     {
       "consensus_id": "M9B-S005",
       "topic_id": "M9B-T005",
-      "draft_statement": "Matrix/debris model boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.",
+      "draft_statement": "Matrix, myelin-debris, and inhibitory-substrate models are useful for isolating regeneration barriers, but they cannot substitute for full lesion architecture unless paired with cells, ECM, inflammatory cues, and 3D spatial context.",
       "supporting_observations": "M9B-O009-O010",
       "supporting_claims": "M9B-C013-C015",
       "boundary_records": "M9B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 9 first-pass curation freeze.",
       "tracker_id": "M9B-S005",
-      "consensus_statement": "Matrix/debris model boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims."
+      "consensus_statement": "Matrix, myelin-debris, and inhibitory-substrate models are useful for isolating regeneration barriers, but they cannot substitute for full lesion architecture unless paired with cells, ECM, inflammatory cues, and 3D spatial context."
     },
     {
       "consensus_id": "M9B-S006",
       "topic_id": "M9B-T006",
-      "draft_statement": "Biomaterial compatibility boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.",
+      "draft_statement": "Biomaterial-compatible in vitro systems are best used as bridge assays for cytocompatibility, adhesion, release, differentiation, axon guidance, and inflammatory response before in vivo testing, not as standalone proof of repair efficacy.",
       "supporting_observations": "M9B-O011-O012",
       "supporting_claims": "M9B-C016-C017",
       "boundary_records": "M9B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 9 first-pass curation freeze.",
       "tracker_id": "M9B-S006",
-      "consensus_statement": "Biomaterial compatibility boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims."
+      "consensus_statement": "Biomaterial-compatible in vitro systems are best used as bridge assays for cytocompatibility, adhesion, release, differentiation, axon guidance, and inflammatory response before in vivo testing, not as standalone proof of repair efficacy."
     },
     {
       "consensus_id": "M9B-S007",
       "topic_id": "M9B-T007",
-      "draft_statement": "Organoid/slice/explant translation boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.",
+      "draft_statement": "Organoid, slice, and explant systems provide higher-order tissue context than dissociated cultures, but translation depends on species, maturation, vascular or immune absence, injury induction, and whether host-lesion architecture is represented.",
       "supporting_observations": "M9B-O013-O014",
       "supporting_claims": "M9B-C017-C017",
       "boundary_records": "M9B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 9 first-pass curation freeze.",
       "tracker_id": "M9B-S007",
-      "consensus_statement": "Organoid/slice/explant translation boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims."
+      "consensus_statement": "Organoid, slice, and explant systems provide higher-order tissue context than dissociated cultures, but translation depends on species, maturation, vascular or immune absence, injury induction, and whether host-lesion architecture is represented."
     },
     {
       "consensus_id": "M9B-S008",
       "topic_id": "M9B-T008",
-      "draft_statement": "In vitro confidence boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.",
+      "draft_statement": "Module 9 should function as the validation-model ontology layer: culture format, cell source, maturity, injury stimulus, matrix context, biomaterial exposure, readout, and confidence level must be retained before in vitro evidence is used in cross-module consensus.",
       "supporting_observations": "M9B-O015-O016",
       "supporting_claims": "M9B-C017-C017",
       "boundary_records": "M9B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 9 first-pass curation freeze.",
       "tracker_id": "M9B-S008",
-      "consensus_statement": "In vitro confidence boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims."
+      "consensus_statement": "Module 9 should function as the validation-model ontology layer: culture format, cell source, maturity, injury stimulus, matrix context, biomaterial exposure, readout, and confidence level must be retained before in vitro evidence is used in cross-module consensus."
     }
   ]
 }

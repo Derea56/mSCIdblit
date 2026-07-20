@@ -4251,7 +4251,7 @@ INSERT INTO _m6_link_map (tracker_id, link_id) SELECT 'M6B-L104', link_id FROM i
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Human chronic SCI lesion architecture includes preserved adjacent tissue, focal cystic loss, scar-resection anatomy, and chronic syrinx/cyst complications; these compartments should be tracked separately.',
+    'Human chronic SCI lesion architecture should be represented as separable compartments, including focal cystic loss, retained adjacent cord, scar-resection anatomy, syrinx or cyst complications, and potential tissue bridges, because each carries different surgical and translational implications.',
     'M6B-T001',
     1,
     'consensus-ready first pass',
@@ -4288,7 +4288,7 @@ WHERE c.tracker_id = 'M6B-S001';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Human tissue pathology shows ventral-root axon/myelin injury and vascular/cystic compartments that are not reducible to MRI-visible lesion geometry.',
+    'Human pathology adds tissue-level constraints that imaging alone cannot resolve: ventral-root and motoneuron loss, axon/myelin abnormalities, vascular injury patterns, cystic cavitation, and scar composition should remain separately queryable.',
     'M6B-T002',
     1,
     'consensus-ready first pass',
@@ -4319,7 +4319,7 @@ WHERE c.tracker_id = 'M6B-S002';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'DTI and tract-specific diffusion measures can reveal clinically relevant injury beyond conventional MRI and can relate to motor or sensory impairment.',
+    'Diffusion MRI and tract-specific measures can reveal clinically relevant cord injury beyond conventional MRI, but consensus use requires tract, spinal level, directionality, clinical endpoint, acquisition method, and confidence labels.',
     'M6B-T003',
     1,
     'consensus-ready first pass',
@@ -4356,7 +4356,7 @@ WHERE c.tracker_id = 'M6B-S003';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Tissue bridges and lesion-geometry measures are promising prognostic MRI biomarkers for recovery and walking ability, but interpretation must preserve level, etiology, timing, completeness, and endpoint boundaries.',
+    'Tissue bridges and lesion-geometry measures are among the strongest human imaging candidates for prognosis and stratification, but their meaning depends on injury level, etiology, completeness, timing, scan modality, and the specific recovery endpoint.',
     'M6B-T004',
     1,
     'consensus-ready first pass',
@@ -4393,7 +4393,7 @@ WHERE c.tracker_id = 'M6B-S004';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'qMRI, MRS, atrophy, and longitudinal neuroimaging support a model of chronic system-level pathology involving remote spinal, sensory, motor, brainstem, and metabolic changes.',
+    'qMRI, MRS, atrophy, and longitudinal neuroimaging support chronic SCI as a system-level condition with remote spinal, sensory, motor, brainstem, cortical, and metabolic changes; these should be modeled as linked but distinct from local lesion-bed anatomy.',
     'M6B-T005',
     1,
     'consensus-ready first pass',
@@ -4472,7 +4472,7 @@ WHERE c.tracker_id = 'M6B-S005';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'fMRI and cortical reorganization studies support remote plasticity after SCI, but they are indirect lesion-bed evidence unless paired with spinal lesion, tract, or clinical impairment measures.',
+    'fMRI and cortical reorganization evidence supports remote neural plasticity after SCI, but it should remain indirect lesion-bed evidence unless paired with spinal lesion metrics, tract integrity, or clinical impairment measures.',
     'M6B-T006',
     1,
     'consensus-ready first pass',
@@ -4527,7 +4527,7 @@ WHERE c.tracker_id = 'M6B-S006';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Human imaging can support surgical planning, trial screening, and stratification, but review and trial-readiness rows should not be treated as direct repair efficacy evidence.',
+    'Human imaging is ready to support surgical planning, trial screening, stratification, and endpoint selection, but registry, review, and trial-readiness rows should not be promoted to repair-efficacy evidence without intervention-linked outcomes.',
     'M6B-T007',
     1,
     'consensus-ready first pass',
@@ -4582,7 +4582,7 @@ WHERE c.tracker_id = 'M6B-S007';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Module 6 consensus should remain human-specific, modality-stratified, confidence-labeled, and bounded by timing, injury level, etiology, completeness, and evidence directness.',
+    'Module 6 should function as the human translation boundary layer: every consensus statement must preserve modality, confidence, timing, injury level, etiology, completeness, endpoint directness, and whether the evidence is pathology, imaging, planning, or efficacy.',
     'M6B-T008',
     1,
     'consensus-ready first pass',
