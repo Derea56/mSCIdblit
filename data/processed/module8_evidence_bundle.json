@@ -882,98 +882,98 @@
     {
       "consensus_id": "M8B-S001",
       "topic_id": "M8B-T001",
-      "draft_statement": "Species/strain model boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.",
+      "draft_statement": "In vivo SCI evidence must retain species, strain, age, sex, and genetic background because model choice changes lesion biology, immune response, spontaneous recovery, surgical feasibility, and translatability.",
       "supporting_observations": "M8B-O001-O001",
       "supporting_claims": "M8B-C001-C003",
       "boundary_records": "M8B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 8 first-pass curation freeze.",
       "tracker_id": "M8B-S001",
-      "consensus_statement": "Species/strain model boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims."
+      "consensus_statement": "In vivo SCI evidence must retain species, strain, age, sex, and genetic background because model choice changes lesion biology, immune response, spontaneous recovery, surgical feasibility, and translatability."
     },
     {
       "consensus_id": "M8B-S002",
       "topic_id": "M8B-T002",
-      "draft_statement": "Injury mechanism boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.",
+      "draft_statement": "Injury mechanism is a primary evidence boundary: contusion, compression, transection, hemisection, crush, ischemia, and chemical or demyelinating models answer different questions and should not be pooled as interchangeable SCI models.",
       "supporting_observations": "M8B-O002-O002",
       "supporting_claims": "M8B-C004-C006",
       "boundary_records": "M8B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 8 first-pass curation freeze.",
       "tracker_id": "M8B-S002",
-      "consensus_statement": "Injury mechanism boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims."
+      "consensus_statement": "Injury mechanism is a primary evidence boundary: contusion, compression, transection, hemisection, crush, ischemia, and chemical or demyelinating models answer different questions and should not be pooled as interchangeable SCI models."
     },
     {
       "consensus_id": "M8B-S003",
       "topic_id": "M8B-T003",
-      "draft_statement": "Spinal level and tract boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.",
+      "draft_statement": "Spinal level and tract involvement define what a model can test; cervical, thoracic, lumbar, dorsal-column, lateral-column, complete, and incomplete injuries should be mapped to the relevant motor, sensory, autonomic, and respiratory endpoints.",
       "supporting_observations": "M8B-O003-O003",
       "supporting_claims": "M8B-C007-C009",
       "boundary_records": "M8B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 8 first-pass curation freeze.",
       "tracker_id": "M8B-S003",
-      "consensus_statement": "Spinal level and tract boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims."
+      "consensus_statement": "Spinal level and tract involvement define what a model can test; cervical, thoracic, lumbar, dorsal-column, lateral-column, complete, and incomplete injuries should be mapped to the relevant motor, sensory, autonomic, and respiratory endpoints."
     },
     {
       "consensus_id": "M8B-S004",
       "topic_id": "M8B-T004",
-      "draft_statement": "Severity/chronicity boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.",
+      "draft_statement": "Severity and chronicity are not metadata: force, displacement, duration, lesion completeness, time post-injury, and spontaneous recovery determine whether a model is appropriate for acute neuroprotection, chronic reconstruction, biomaterial testing, or rehabilitation studies.",
       "supporting_observations": "M8B-O004-O004",
       "supporting_claims": "M8B-C010-C012",
       "boundary_records": "M8B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 8 first-pass curation freeze.",
       "tracker_id": "M8B-S004",
-      "consensus_statement": "Severity/chronicity boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims."
+      "consensus_statement": "Severity and chronicity are not metadata: force, displacement, duration, lesion completeness, time post-injury, and spontaneous recovery determine whether a model is appropriate for acute neuroprotection, chronic reconstruction, biomaterial testing, or rehabilitation studies."
     },
     {
       "consensus_id": "M8B-S005",
       "topic_id": "M8B-T005",
-      "draft_statement": "Lesion architecture boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.",
+      "draft_statement": "In vivo model selection should be tied to lesion architecture. Models that create cystic cavities, spared tissue bridges, fibrotic cores, astrocytic borders, demyelination, or transection gaps support different reconstruction and repair claims.",
       "supporting_observations": "M8B-O005-O005",
       "supporting_claims": "M8B-C013-C015",
       "boundary_records": "M8B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 8 first-pass curation freeze.",
       "tracker_id": "M8B-S005",
-      "consensus_statement": "Lesion architecture boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims."
+      "consensus_statement": "In vivo model selection should be tied to lesion architecture. Models that create cystic cavities, spared tissue bridges, fibrotic cores, astrocytic borders, demyelination, or transection gaps support different reconstruction and repair claims."
     },
     {
       "consensus_id": "M8B-S006",
       "topic_id": "M8B-T006",
-      "draft_statement": "Behavioral endpoint boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.",
+      "draft_statement": "Behavioral endpoints must be interpreted as model-specific functional readouts rather than generic recovery measures; locomotor, skilled forelimb, sensory, autonomic, respiratory, pain, and electrophysiologic assays require separate endpoint fields.",
       "supporting_observations": "M8B-O006-O006",
       "supporting_claims": "M8B-C016-C016",
       "boundary_records": "M8B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 8 first-pass curation freeze.",
       "tracker_id": "M8B-S006",
-      "consensus_statement": "Behavioral endpoint boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims."
+      "consensus_statement": "Behavioral endpoints must be interpreted as model-specific functional readouts rather than generic recovery measures; locomotor, skilled forelimb, sensory, autonomic, respiratory, pain, and electrophysiologic assays require separate endpoint fields."
     },
     {
       "consensus_id": "M8B-S007",
       "topic_id": "M8B-T007",
-      "draft_statement": "Large-animal/translational boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.",
+      "draft_statement": "Large-animal and translational in vivo models add value for scale, surgical handling, device placement, imaging, and safety, but they do not automatically validate efficacy unless matched endpoints and controls are present.",
       "supporting_observations": "M8B-O007-O007",
       "supporting_claims": "M8B-C016-C016",
       "boundary_records": "M8B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 8 first-pass curation freeze.",
       "tracker_id": "M8B-S007",
-      "consensus_statement": "Large-animal/translational boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims."
+      "consensus_statement": "Large-animal and translational in vivo models add value for scale, surgical handling, device placement, imaging, and safety, but they do not automatically validate efficacy unless matched endpoints and controls are present."
     },
     {
       "consensus_id": "M8B-S008",
       "topic_id": "M8B-T008",
-      "draft_statement": "Model ontology confidence boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.",
+      "draft_statement": "Module 8 should function as the in vivo model ontology layer: every downstream consensus claim should preserve species, injury mechanism, level, severity, chronicity, lesion architecture, endpoint family, and extraction confidence.",
       "supporting_observations": "M8B-O008-O008",
       "supporting_claims": "M8B-C016-C016",
       "boundary_records": "M8B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 8 first-pass curation freeze.",
       "tracker_id": "M8B-S008",
-      "consensus_statement": "Model ontology confidence boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims."
+      "consensus_statement": "Module 8 should function as the in vivo model ontology layer: every downstream consensus claim should preserve species, injury mechanism, level, severity, chronicity, lesion architecture, endpoint family, and extraction confidence."
     }
   ]
 }

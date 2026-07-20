@@ -4491,7 +4491,7 @@ INSERT INTO _m7_link_map (tracker_id, link_id) SELECT 'M7B-L088', link_id FROM i
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Breast implant capsular contracture provides the strongest direct precedent that recipient-directed pharmacologic conditioning can alter fibrotic capsule outcomes, especially through leukotriene antagonists and anti-fibrotic or anti-estrogen strategies.',
+    'Breast implant capsular contracture is the clearest precedent that recipient-directed pharmacologic conditioning can alter a fibrotic foreign-body outcome, but SCI translation must preserve drug class, route, prophylaxis-versus-treatment timing, and capsule endpoint boundaries.',
     'M7B-T001',
     1,
     'consensus-ready first pass',
@@ -4576,7 +4576,7 @@ WHERE c.tracker_id = 'M7B-S001';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Flap and ischemic-tissue studies show that recipient or remote systemic preconditioning can improve vascular survival biology before tissue transfer, but this is not yet equivalent to anti-fibrotic recipient-bed conditioning.',
+    'Flap and ischemic-tissue conditioning studies support preoperative or remote preparation of vascular host biology before tissue transfer, but they do not by themselves establish anti-fibrotic recipient-bed remodeling for SCI reconstruction.',
     'M7B-T002',
     1,
     'consensus-ready first pass',
@@ -4619,7 +4619,7 @@ WHERE c.tracker_id = 'M7B-S002';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Islet transplantation supports peri-transplant host conditioning as a strategy to reduce early inflammatory engraftment barriers, including IBMIR, complement/coagulation signaling, macrophage activation, chemokine recruitment, and regulatory immune balance.',
+    'Islet transplantation provides a useful host-conditioning analog for early engraftment barriers because IBMIR, complement/coagulation signaling, macrophage activation, chemokine recruitment, and regulatory immune balance are explicitly peri-transplant processes.',
     'M7B-T003',
     1,
     'consensus-ready first pass',
@@ -4710,7 +4710,7 @@ WHERE c.tracker_id = 'M7B-S003';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Organ tolerance studies are useful for the host-conditioning concept but should remain boundary evidence unless rejection control is linked to remodeling, vascular integration, fibrosis, or functional graft integration.',
+    'Organ-tolerance evidence supports the general concept that host immune state can be conditioned before graft challenge, but it should remain boundary evidence for this project unless rejection control is linked to remodeling, vascular integration, fibrosis, or functional graft integration.',
     'M7B-T004',
     1,
     'consensus-ready first pass',
@@ -4735,7 +4735,7 @@ WHERE c.tracker_id = 'M7B-S004';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'SCI leukotriene and pro-resolving mediator studies support the plausibility that early fibroinflammatory lesion-bed state can be modified, but they are analogs rather than direct preoperative reconstruction studies.',
+    'SCI leukotriene and pro-resolving mediator studies show that early lesion-bed inflammatory tone can be modified in ways relevant to repair, but they are mechanistic analogs rather than direct evidence for preoperative conditioning before reconstruction.',
     'M7B-T005',
     1,
     'consensus-ready first pass',
@@ -4784,7 +4784,7 @@ WHERE c.tracker_id = 'M7B-S005';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Tranilast scar and hypertrophic-scar studies inform matrix-maturation biology, but local or topical delivery rows should not be used as evidence for systemic host conditioning.',
+    'Tranilast, scar, and hypertrophic-scar rows inform matrix maturation and anti-fibrotic biology, but local or topical delivery should not be generalized to systemic host conditioning without route, dose, tissue, and endpoint alignment.',
     'M7B-T006',
     1,
     'consensus-ready first pass',
@@ -4809,7 +4809,7 @@ WHERE c.tracker_id = 'M7B-S006';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Module 7 host-conditioning synthesis requires an explicit ontology for intervention target, route, timing, procedure class, endpoint, and evidence directness, because the corpus spans systemic drugs, remote ischemic conditioning, local delivery, immune-cell modulation, and co-therapy.',
+    'Module 7 requires an explicit host-conditioning ontology: intervention target, route, timing, procedure class, host tissue state, endpoint, and evidence directness must be recorded because the corpus spans systemic drugs, remote ischemia, local delivery, immune-cell modulation, and co-therapy.',
     'M7B-T007',
     1,
     'consensus-ready first pass',
@@ -5062,7 +5062,7 @@ WHERE c.tracker_id = 'M7B-S007';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Cross-field host-conditioning evidence is hypothesis-generating for SCI reconstruction and should remain confidence-stratified until full-text extraction confirms dose, route, timing, host target, and remodeling endpoint.',
+    'Cross-field host-conditioning evidence is strong enough to generate SCI reconstruction hypotheses, but not yet strong enough for clinical-strength claims; dose, route, timing, host target, remodeling endpoint, and field-to-SCI distance must remain confidence-stratified.',
     'M7B-T008',
     1,
     'consensus-ready first pass',

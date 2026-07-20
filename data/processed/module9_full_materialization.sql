@@ -1877,7 +1877,7 @@ INSERT INTO _m9_link_map (tracker_id, link_id) SELECT 'M9B-L040', link_id FROM i
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Culture format boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'In vitro and ex vivo SCI models should be classified first by culture format, because dissociated cultures, organoids, slices, explants, microfluidic systems, and biomaterial cultures preserve different degrees of cytoarchitecture, injury context, and assay control.',
     'M9B-T001',
     1,
     'consensus-ready first pass',
@@ -1902,7 +1902,7 @@ WHERE c.tracker_id = 'M9B-S001';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Cell-source and maturity boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'Cell source and maturity determine what an in vitro model can validate: primary rodent cells, human iPSC derivatives, organoids, glia, neurons, macrophages, and mixed cultures should not be pooled without lineage, maturation, and species labels.',
     'M9B-T002',
     1,
     'consensus-ready first pass',
@@ -1927,7 +1927,7 @@ WHERE c.tracker_id = 'M9B-S002';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Injury stimulus boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'Injury stimulus must remain explicit in culture-model synthesis; scratch, stretch, compression, excitotoxicity, hypoxia, inflammatory challenge, myelin debris, matrix inhibition, and conditioned media model different parts of SCI.',
     'M9B-T003',
     1,
     'consensus-ready first pass',
@@ -1952,7 +1952,7 @@ WHERE c.tracker_id = 'M9B-S003';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Assay/readout boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'In vitro readouts are strongest when matched to their intended validation role: survival, neurite growth, electrophysiology, myelination, glial activation, cytokines, matrix response, migration, and biomaterial compatibility require separate assay fields.',
     'M9B-T004',
     1,
     'consensus-ready first pass',
@@ -1977,7 +1977,7 @@ WHERE c.tracker_id = 'M9B-S004';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Matrix/debris model boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'Matrix, myelin-debris, and inhibitory-substrate models are useful for isolating regeneration barriers, but they cannot substitute for full lesion architecture unless paired with cells, ECM, inflammatory cues, and 3D spatial context.',
     'M9B-T005',
     1,
     'consensus-ready first pass',
@@ -2002,7 +2002,7 @@ WHERE c.tracker_id = 'M9B-S005';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Biomaterial compatibility boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'Biomaterial-compatible in vitro systems are best used as bridge assays for cytocompatibility, adhesion, release, differentiation, axon guidance, and inflammatory response before in vivo testing, not as standalone proof of repair efficacy.',
     'M9B-T006',
     1,
     'consensus-ready first pass',
@@ -2027,7 +2027,7 @@ WHERE c.tracker_id = 'M9B-S006';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Organoid/slice/explant translation boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'Organoid, slice, and explant systems provide higher-order tissue context than dissociated cultures, but translation depends on species, maturation, vascular or immune absence, injury induction, and whether host-lesion architecture is represented.',
     'M9B-T007',
     1,
     'consensus-ready first pass',
@@ -2052,7 +2052,7 @@ WHERE c.tracker_id = 'M9B-S007';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'In vitro confidence boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'Module 9 should function as the validation-model ontology layer: culture format, cell source, maturity, injury stimulus, matrix context, biomaterial exposure, readout, and confidence level must be retained before in vitro evidence is used in cross-module consensus.',
     'M9B-T008',
     1,
     'consensus-ready first pass',

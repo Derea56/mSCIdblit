@@ -1,0 +1,4250 @@
+{
+  "status": "cross-module consensus review register",
+  "generated_from": "validated B-tracker evidence bundles",
+  "module_count": 12,
+  "consensus_count": 96,
+  "module_rows": [
+    {
+      "module_key": "1b",
+      "module": "Module 1B",
+      "source_tracker": "modules/Module_1B_TRACKER.md",
+      "review_status": "COMPLETE FIRST-PASS MATERIALIZATION",
+      "observations": 93,
+      "author_claims": 50,
+      "evidence_links": 107,
+      "boundary_records": 7,
+      "consensus_drafts": 8,
+      "module_action": "Use as the reference standard for later module consensus passes.",
+      "priority": "promote with normal manuscript-style editing"
+    },
+    {
+      "module_key": "2b",
+      "module": "Module 2B",
+      "source_tracker": "modules/Module_2B_TRACKER.md",
+      "review_status": "CONSENSUS-READY FIRST PASS",
+      "observations": 90,
+      "author_claims": 36,
+      "evidence_links": 56,
+      "boundary_records": 8,
+      "consensus_drafts": 8,
+      "module_action": "Tighten scaffold statements against Module 1 lesion-anatomy boundaries before promotion.",
+      "priority": "rewrite for attribution and lesion-context precision"
+    },
+    {
+      "module_key": "3b",
+      "module": "Module 3B",
+      "source_tracker": "modules/Module_3B_TRACKER.md",
+      "review_status": "CONSENSUS-READY FIRST PASS",
+      "observations": 94,
+      "author_claims": 36,
+      "evidence_links": 60,
+      "boundary_records": 8,
+      "consensus_drafts": 8,
+      "module_action": "Preserve timing, cell-population, and pathway boundaries; avoid global anti-inflammatory claims.",
+      "priority": "rewrite for mechanism specificity"
+    },
+    {
+      "module_key": "4b",
+      "module": "Module 4B",
+      "source_tracker": "modules/Module_4B_TRACKER.md",
+      "review_status": "CONSENSUS-READY FIRST PASS",
+      "observations": 98,
+      "author_claims": 40,
+      "evidence_links": 72,
+      "boundary_records": 8,
+      "consensus_drafts": 8,
+      "module_action": "Separate graft survival, differentiation, integration, and functional-recovery claims.",
+      "priority": "rewrite for cell-source and endpoint precision"
+    },
+    {
+      "module_key": "5b",
+      "module": "Module 5B",
+      "source_tracker": "modules/Module_5B_TRACKER.md",
+      "review_status": "CONSENSUS-READY FIRST PASS",
+      "observations": 94,
+      "author_claims": 36,
+      "evidence_links": 60,
+      "boundary_records": 8,
+      "consensus_drafts": 8,
+      "module_action": "Keep regeneration, sprouting, remyelination, relay, and activity-dependent plasticity as separate consensus families.",
+      "priority": "rewrite for tract and endpoint precision"
+    },
+    {
+      "module_key": "6b",
+      "module": "Module 6B",
+      "source_tracker": "modules/Module_6B_TRACKER.md",
+      "review_status": "CONSENSUS-READY FIRST PASS",
+      "observations": 36,
+      "author_claims": 36,
+      "evidence_links": 104,
+      "boundary_records": 8,
+      "consensus_drafts": 8,
+      "module_action": "Use as the human-translation boundary layer; keep pathology, imaging, and clinical-readiness claims separated.",
+      "priority": "promote after human-specific wording pass"
+    },
+    {
+      "module_key": "7b",
+      "module": "Module 7B",
+      "source_tracker": "modules/Module_7B_TRACKER.md",
+      "review_status": "CONSENSUS-READY FIRST PASS",
+      "observations": 40,
+      "author_claims": 36,
+      "evidence_links": 88,
+      "boundary_records": 8,
+      "consensus_drafts": 8,
+      "module_action": "Keep host-conditioning evidence directness explicit across implant, flap, islet, organ, wound, and SCI analogs.",
+      "priority": "rewrite for cross-field translation boundaries"
+    },
+    {
+      "module_key": "8b",
+      "module": "Module 8B",
+      "source_tracker": "modules/Module_8B_TRACKER.md",
+      "review_status": "CONSENSUS-READY FIRST PASS",
+      "observations": 14,
+      "author_claims": 16,
+      "evidence_links": 40,
+      "boundary_records": 8,
+      "consensus_drafts": 8,
+      "module_action": "Treat as model-ontology consensus; rewrite generic first-pass statements into operational model-selection rules.",
+      "priority": "needs statement rewrite before promotion"
+    },
+    {
+      "module_key": "9b",
+      "module": "Module 9B",
+      "source_tracker": "modules/Module_9B_TRACKER.md",
+      "review_status": "CONSENSUS-READY FIRST PASS",
+      "observations": 17,
+      "author_claims": 17,
+      "evidence_links": 40,
+      "boundary_records": 8,
+      "consensus_drafts": 8,
+      "module_action": "Treat as in vitro/ex vivo model-ontology consensus; rewrite into validation-use rules.",
+      "priority": "needs statement rewrite before promotion"
+    },
+    {
+      "module_key": "10b",
+      "module": "Module 10B",
+      "source_tracker": "modules/Module_10B_TRACKER.md",
+      "review_status": "CONSENSUS-READY FIRST PASS",
+      "observations": 80,
+      "author_claims": 36,
+      "evidence_links": 116,
+      "boundary_records": 8,
+      "consensus_drafts": 8,
+      "module_action": "Treat as clinical-trial map consensus; keep registry status separate from efficacy evidence.",
+      "priority": "needs trial-result linkage before strength claims"
+    },
+    {
+      "module_key": "11b",
+      "module": "Module 11B",
+      "source_tracker": "modules/Module_11B_TRACKER.md",
+      "review_status": "CONSENSUS-READY FIRST PASS",
+      "observations": 32,
+      "author_claims": 32,
+      "evidence_links": 72,
+      "boundary_records": 8,
+      "consensus_drafts": 8,
+      "module_action": "Rewrite perioperative ischemia-protection statements so they are not just topic labels plus caveats.",
+      "priority": "needs statement rewrite before promotion"
+    },
+    {
+      "module_key": "12b",
+      "module": "Module 12B",
+      "source_tracker": "modules/Module_12B_TRACKER.md",
+      "review_status": "CONSENSUS-READY FIRST PASS",
+      "observations": 24,
+      "author_claims": 24,
+      "evidence_links": 56,
+      "boundary_records": 8,
+      "consensus_drafts": 8,
+      "module_action": "Keep low-dose LPS as discovery platform; route translational claims through safer host-conditioning analogs.",
+      "priority": "promote after full-text confidence upgrade of direct LPS anchors"
+    }
+  ],
+  "consensus_rows": [
+    {
+      "module_key": "1b",
+      "module": "Module 1B",
+      "consensus_id": "M1B-S001",
+      "topic_id": "M1B-T001",
+      "statement": "Chronic SCI lesion architecture is a multicompartment structure, not a single scar. The core evidence supports separately queryable fibrotic or ECM-rich matrix, astrocytic border, immune/myeloid containment zone, spared or reactive neural tissue, altered white matter, and cystic or repaired-tissue cavities when present.",
+      "status": "FULL SQL EXPORTED; CONSENSUS_OBSERVATION VALIDATED",
+      "supporting_observations": [
+        "M1B-O037",
+        "M1B-O038",
+        "M1B-O039",
+        "M1B-O040",
+        "M1B-O041",
+        "M1B-O042",
+        "M1B-O043",
+        "M1B-O044",
+        "M1B-O045",
+        "M1B-O046"
+      ],
+      "supporting_claims": [
+        "M1B-C019",
+        "M1B-C020",
+        "M1B-C021",
+        "M1B-C022",
+        "M1B-C023",
+        "M1B-C024"
+      ],
+      "boundary_records": [],
+      "observation_count": 10,
+      "claim_count": 6,
+      "boundary_count": 0,
+      "observation_confidence": {
+        "high": 7,
+        "low": 1,
+        "medium": 2
+      },
+      "claim_confidence": {
+        "high": 4,
+        "medium": 2
+      },
+      "boundary_confidence": "0 linked",
+      "review_action": "promote after prose polish"
+    },
+    {
+      "module_key": "1b",
+      "module": "Module 1B",
+      "consensus_id": "M1B-S002",
+      "topic_id": "M1B-T002",
+      "statement": "SCI fibrotic scarring arises from perivascular and meningeal-associated stromal lineages, but lineage assignment depends on marker system, Cre driver, injury geometry, dural disruption, and endpoint. The consensus is modulation, not ablation: partial attenuation can support repair in some models, whereas loss of closure-producing stroma can be harmful.",
+      "status": "FULL SQL EXPORTED; CONSENSUS_OBSERVATION VALIDATED",
+      "supporting_observations": [
+        "M1B-O012",
+        "M1B-O013",
+        "M1B-O014",
+        "M1B-O015",
+        "M1B-O016",
+        "M1B-O017",
+        "M1B-O018",
+        "M1B-O019",
+        "M1B-O020",
+        "M1B-O021",
+        "M1B-O022",
+        "M1B-O023",
+        "M1B-O024",
+        "M1B-O025",
+        "M1B-O026"
+      ],
+      "supporting_claims": [
+        "M1B-C006",
+        "M1B-C007",
+        "M1B-C008",
+        "M1B-C009",
+        "M1B-C010",
+        "M1B-C011",
+        "M1B-C012"
+      ],
+      "boundary_records": [
+        "M1B-X002"
+      ],
+      "observation_count": 15,
+      "claim_count": 7,
+      "boundary_count": 1,
+      "observation_confidence": {
+        "high": 15
+      },
+      "claim_confidence": {
+        "high": 7
+      },
+      "boundary_confidence": "1 linked",
+      "review_action": "promote after prose polish"
+    },
+    {
+      "module_key": "1b",
+      "module": "Module 1B",
+      "consensus_id": "M1B-S003",
+      "topic_id": "M1B-T003",
+      "statement": "Astrocytic scar borders are active wound-repair and containment structures with separable programs for formation, maintenance, recruitment, and morphology. Established scar-forming astrocytes may resist direct reversal, while border recruitment and organization remain intervention-sensitive in vivo.",
+      "status": "FULL SQL EXPORTED; CONSENSUS_OBSERVATION VALIDATED",
+      "supporting_observations": [
+        "M1B-O027",
+        "M1B-O028",
+        "M1B-O029",
+        "M1B-O030",
+        "M1B-O031",
+        "M1B-O032",
+        "M1B-O033",
+        "M1B-O034",
+        "M1B-O035",
+        "M1B-O036"
+      ],
+      "supporting_claims": [
+        "M1B-C013",
+        "M1B-C014",
+        "M1B-C015",
+        "M1B-C016",
+        "M1B-C017",
+        "M1B-C018"
+      ],
+      "boundary_records": [
+        "M1B-X003"
+      ],
+      "observation_count": 10,
+      "claim_count": 6,
+      "boundary_count": 1,
+      "observation_confidence": {
+        "high": 5,
+        "medium": 5
+      },
+      "claim_confidence": {
+        "high": 3,
+        "medium": 3
+      },
+      "boundary_confidence": "1 linked",
+      "review_action": "promote after prose polish"
+    },
+    {
+      "module_key": "1b",
+      "module": "Module 1B",
+      "consensus_id": "M1B-S004",
+      "topic_id": "M1B-T004",
+      "statement": "Chronic SCI changes lesion mechanics, but stiffness direction is model- and method-dependent. No universal chronic-scar stiffness claim should be encoded without species, injury model, time point, tissue preparation, AFM method, and lesion subregion.",
+      "status": "FULL SQL EXPORTED; CONSENSUS_OBSERVATION VALIDATED",
+      "supporting_observations": [
+        "M1B-O001",
+        "M1B-O002",
+        "M1B-O003",
+        "M1B-O004",
+        "M1B-O005",
+        "M1B-O006",
+        "M1B-O007",
+        "M1B-O008",
+        "M1B-O009",
+        "M1B-O010",
+        "M1B-O011"
+      ],
+      "supporting_claims": [
+        "M1B-C001",
+        "M1B-C002",
+        "M1B-C003",
+        "M1B-C004",
+        "M1B-C005"
+      ],
+      "boundary_records": [
+        "M1B-X001"
+      ],
+      "observation_count": 11,
+      "claim_count": 5,
+      "boundary_count": 1,
+      "observation_confidence": {
+        "high": 11
+      },
+      "claim_confidence": {
+        "high": 5
+      },
+      "boundary_confidence": "1 linked",
+      "review_action": "promote after prose polish"
+    },
+    {
+      "module_key": "1b",
+      "module": "Module 1B",
+      "consensus_id": "M1B-S005",
+      "topic_id": "M1B-T005",
+      "statement": "Chronic scar resection divides into distinct intervention classes: tissue removal alone and resection followed by cavity or gap reconstruction. Resection alone is not consensus-reparative and may be harmful in contusion models, whereas scaffold or cell filling is a recurring but model- and endpoint-dependent reconstruction strategy.",
+      "status": "FULL SQL EXPORTED; CONSENSUS_OBSERVATION VALIDATED",
+      "supporting_observations": [
+        "M1B-O056",
+        "M1B-O057",
+        "M1B-O058",
+        "M1B-O059",
+        "M1B-O060",
+        "M1B-O061",
+        "M1B-O062"
+      ],
+      "supporting_claims": [
+        "M1B-C030",
+        "M1B-C031",
+        "M1B-C032",
+        "M1B-C033",
+        "M1B-C034"
+      ],
+      "boundary_records": [
+        "M1B-X004"
+      ],
+      "observation_count": 7,
+      "claim_count": 5,
+      "boundary_count": 1,
+      "observation_confidence": {
+        "high": 5,
+        "low": 1,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "high": 3,
+        "medium": 2
+      },
+      "boundary_confidence": "1 linked",
+      "review_action": "promote after prose polish"
+    },
+    {
+      "module_key": "1b",
+      "module": "Module 1B",
+      "consensus_id": "M1B-S006",
+      "topic_id": "M1B-T006",
+      "statement": "Spared and lesion-remote white matter is an active recovery-linked compartment rather than normal residual tissue. It can carry chronic degeneration, repair-associated glial and immune remodeling, MRI-visible tract changes, debris and lipid-handling programs, and behavioral associations.",
+      "status": "FULL SQL EXPORTED; CONSENSUS_OBSERVATION VALIDATED",
+      "supporting_observations": [
+        "M1B-O047",
+        "M1B-O048",
+        "M1B-O049",
+        "M1B-O050",
+        "M1B-O051",
+        "M1B-O052",
+        "M1B-O053",
+        "M1B-O054",
+        "M1B-O055"
+      ],
+      "supporting_claims": [
+        "M1B-C025",
+        "M1B-C026",
+        "M1B-C027",
+        "M1B-C028",
+        "M1B-C029"
+      ],
+      "boundary_records": [],
+      "observation_count": 9,
+      "claim_count": 5,
+      "boundary_count": 0,
+      "observation_confidence": {
+        "high": 6,
+        "low": 1,
+        "medium": 2
+      },
+      "claim_confidence": {
+        "high": 2,
+        "medium": 3
+      },
+      "boundary_confidence": "0 linked",
+      "review_action": "promote after prose polish"
+    },
+    {
+      "module_key": "1b",
+      "module": "Module 1B",
+      "consensus_id": "M1B-S007",
+      "topic_id": "M1B-T007",
+      "statement": "Human chronic SCI lesion architecture is multi-scale and should retain separate fields for local lesion geometry and tissue bridges, focal cystic atrophy, retained adjacent parenchyma, vascular territory and remote infarct-like pathology, scar-marker composition, segmental motoneuron/root pathology, remyelination status, perilesional DTI abnormalities, and remote motor-system degeneration.",
+      "status": "FULL SQL EXPORTED; CONSENSUS_OBSERVATION VALIDATED",
+      "supporting_observations": [
+        "M1B-O063",
+        "M1B-O064",
+        "M1B-O065",
+        "M1B-O066",
+        "M1B-O067",
+        "M1B-O068",
+        "M1B-O069",
+        "M1B-O070",
+        "M1B-O080",
+        "M1B-O081",
+        "M1B-O082",
+        "M1B-O083",
+        "M1B-O084"
+      ],
+      "supporting_claims": [
+        "M1B-C035",
+        "M1B-C036",
+        "M1B-C037",
+        "M1B-C038",
+        "M1B-C039",
+        "M1B-C040",
+        "M1B-C047",
+        "M1B-C048",
+        "M1B-C049",
+        "M1B-C050"
+      ],
+      "boundary_records": [
+        "M1B-X005",
+        "M1B-X007"
+      ],
+      "observation_count": 13,
+      "claim_count": 10,
+      "boundary_count": 2,
+      "observation_confidence": {
+        "high": 11,
+        "medium": 2
+      },
+      "claim_confidence": {
+        "high": 9,
+        "medium": 1
+      },
+      "boundary_confidence": "2 linked",
+      "review_action": "promote after prose polish"
+    },
+    {
+      "module_key": "1b",
+      "module": "Module 1B",
+      "consensus_id": "M1B-S008",
+      "topic_id": "M1B-T008",
+      "statement": "Immune-glial lesion biology is phase-, cell-, function-, and endpoint-specific. Myeloid and glial responses can support corralling, compaction, containment, debris handling, and repair while also contributing to chronic neuroinflammatory pathology and remote effects.",
+      "status": "FULL SQL EXPORTED; CONSENSUS_OBSERVATION VALIDATED",
+      "supporting_observations": [
+        "M1B-O071",
+        "M1B-O072",
+        "M1B-O073",
+        "M1B-O074",
+        "M1B-O075",
+        "M1B-O076",
+        "M1B-O077",
+        "M1B-O078",
+        "M1B-O079"
+      ],
+      "supporting_claims": [
+        "M1B-C041",
+        "M1B-C042",
+        "M1B-C043",
+        "M1B-C044",
+        "M1B-C045",
+        "M1B-C046"
+      ],
+      "boundary_records": [
+        "M1B-X006"
+      ],
+      "observation_count": 9,
+      "claim_count": 6,
+      "boundary_count": 1,
+      "observation_confidence": {
+        "high": 6,
+        "medium": 3
+      },
+      "claim_confidence": {
+        "high": 3,
+        "medium": 3
+      },
+      "boundary_confidence": "1 linked",
+      "review_action": "promote after prose polish"
+    },
+    {
+      "module_key": "2b",
+      "module": "Module 2B",
+      "consensus_id": "M2B-S001",
+      "topic_id": "M2B-T001",
+      "statement": "Scaffold architecture is best treated as a lesion-topology intervention: aligned fibers, channels, pores, conduits, and printed geometry can organize axon, cell, and tissue growth, but the relevant claim depends on matching the scaffold format to lesion shape, gap size, and endpoint.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M2B-O004",
+        "M2B-O005",
+        "M2B-O006",
+        "M2B-O007",
+        "M2B-O008",
+        "M2B-O024",
+        "M2B-O025",
+        "M2B-O026",
+        "M2B-O027",
+        "M2B-O028",
+        "M2B-O029"
+      ],
+      "supporting_claims": [],
+      "boundary_records": [],
+      "observation_count": 11,
+      "claim_count": 0,
+      "boundary_count": 0,
+      "observation_confidence": {
+        "medium": 11
+      },
+      "claim_confidence": {},
+      "boundary_confidence": "0 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "2b",
+      "module": "Module 2B",
+      "consensus_id": "M2B-S002",
+      "topic_id": "M2B-T002",
+      "statement": "Scaffold-cell combinations repeatedly improve retention, survival, bridging, or repair-associated signals after SCI, but first-pass consensus should assign causality jointly unless experiments isolate scaffold-only, cell-only, and combined arms.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M2B-O009",
+        "M2B-O010",
+        "M2B-O011",
+        "M2B-O030",
+        "M2B-O031",
+        "M2B-O032",
+        "M2B-O033",
+        "M2B-O034",
+        "M2B-O035",
+        "M2B-O036"
+      ],
+      "supporting_claims": [],
+      "boundary_records": [],
+      "observation_count": 10,
+      "claim_count": 0,
+      "boundary_count": 0,
+      "observation_confidence": {
+        "medium": 10
+      },
+      "claim_confidence": {},
+      "boundary_confidence": "0 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "2b",
+      "module": "Module 2B",
+      "consensus_id": "M2B-S003",
+      "topic_id": "M2B-T003",
+      "statement": "Scaffold cargo delivery can reshape trophic, inflammatory, angiogenic, and regenerative conditions at the lesion, yet histological improvement and motor recovery must remain separate endpoints because release success does not guarantee functional benefit.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M2B-O012",
+        "M2B-O013",
+        "M2B-O014",
+        "M2B-O037",
+        "M2B-O038",
+        "M2B-O039",
+        "M2B-O040",
+        "M2B-O041",
+        "M2B-O042"
+      ],
+      "supporting_claims": [],
+      "boundary_records": [],
+      "observation_count": 9,
+      "claim_count": 0,
+      "boundary_count": 0,
+      "observation_confidence": {
+        "medium": 9
+      },
+      "claim_confidence": {},
+      "boundary_confidence": "0 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "2b",
+      "module": "Module 2B",
+      "consensus_id": "M2B-S004",
+      "topic_id": "M2B-T004",
+      "statement": "Natural ECM, decellularized matrix, and hydrogel scaffolds provide tissue-like repair environments, but their effects are conditional on ECM source, stiffness/degradation, immune response, vascular integration, lesion model, and whether added cells or factors are present.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M2B-O015",
+        "M2B-O016",
+        "M2B-O043",
+        "M2B-O044",
+        "M2B-O045"
+      ],
+      "supporting_claims": [],
+      "boundary_records": [],
+      "observation_count": 5,
+      "claim_count": 0,
+      "boundary_count": 0,
+      "observation_confidence": {
+        "medium": 5
+      },
+      "claim_confidence": {},
+      "boundary_confidence": "0 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "2b",
+      "module": "Module 2B",
+      "consensus_id": "M2B-S005",
+      "topic_id": "M2B-T005",
+      "statement": "Chronic scar or cavity scaffold repair is a reconstruction strategy only when lesion anatomy permits safe resection, boundary identification, and gap filling; these rows should be interpreted through Module 1 lesion architecture rather than as generic scaffold efficacy.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M2B-O001",
+        "M2B-O002",
+        "M2B-O017",
+        "M2B-O018",
+        "M2B-O046",
+        "M2B-O047"
+      ],
+      "supporting_claims": [],
+      "boundary_records": [],
+      "observation_count": 6,
+      "claim_count": 0,
+      "boundary_count": 0,
+      "observation_confidence": {
+        "medium": 6
+      },
+      "claim_confidence": {},
+      "boundary_confidence": "0 linked",
+      "review_action": "promote as boundary consensus after wording pass"
+    },
+    {
+      "module_key": "2b",
+      "module": "Module 2B",
+      "consensus_id": "M2B-S006",
+      "topic_id": "M2B-T006",
+      "statement": "Large-animal, primate, and early human scaffold studies establish feasibility, surgical handling, safety monitoring, and translational plausibility more strongly than definitive efficacy, so species, lesion completeness, follow-up, and clinical endpoint class must be retained.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M2B-O001",
+        "M2B-O002",
+        "M2B-O003",
+        "M2B-O018",
+        "M2B-O022",
+        "M2B-O023",
+        "M2B-O040"
+      ],
+      "supporting_claims": [],
+      "boundary_records": [],
+      "observation_count": 7,
+      "claim_count": 0,
+      "boundary_count": 0,
+      "observation_confidence": {
+        "medium": 7
+      },
+      "claim_confidence": {},
+      "boundary_confidence": "0 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "2b",
+      "module": "Module 2B",
+      "consensus_id": "M2B-S007",
+      "topic_id": "M2B-T007",
+      "statement": "Conductive, electrically active, multimodal, and surface-patch scaffolds extend the module beyond passive bridging by adding stimulation interfaces, inflammatory modulation, or lesion capping, but each active component needs its own attribution boundary.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M2B-O008",
+        "M2B-O019",
+        "M2B-O020",
+        "M2B-O048"
+      ],
+      "supporting_claims": [],
+      "boundary_records": [],
+      "observation_count": 4,
+      "claim_count": 0,
+      "boundary_count": 0,
+      "observation_confidence": {
+        "medium": 4
+      },
+      "claim_confidence": {},
+      "boundary_confidence": "0 linked",
+      "review_action": "promote as boundary consensus after wording pass"
+    },
+    {
+      "module_key": "2b",
+      "module": "Module 2B",
+      "consensus_id": "M2B-S008",
+      "topic_id": "M2B-T008",
+      "statement": "Module 2 should synthesize scaffold repair by material class, architecture, cargo, cell combination, lesion chronicity, species, and endpoint family; a pooled pro-regenerative scaffold claim would erase the main design and attribution boundaries.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M2B-O049",
+        "M2B-O050"
+      ],
+      "supporting_claims": [],
+      "boundary_records": [],
+      "observation_count": 2,
+      "claim_count": 0,
+      "boundary_count": 0,
+      "observation_confidence": {
+        "medium": 2
+      },
+      "claim_confidence": {},
+      "boundary_confidence": "all boundary records",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "3b",
+      "module": "Module 3B",
+      "consensus_id": "M3B-S001",
+      "topic_id": "M3B-T001",
+      "statement": "Microglial depletion and CSF1R-pathway modulation have phase-dependent effects after SCI: early broad depletion can remove useful repair functions, while delayed or pathway-specific modulation can reduce chronic inflammatory programs and selected secondary injury endpoints.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M3B-O001",
+        "M3B-O003",
+        "M3B-O013",
+        "M3B-O014",
+        "M3B-O015",
+        "M3B-O016",
+        "M3B-O017"
+      ],
+      "supporting_claims": [
+        "M3B-C001",
+        "M3B-C002",
+        "M3B-C018",
+        "M3B-C035"
+      ],
+      "boundary_records": [
+        "M3B-B001",
+        "M3B-B008"
+      ],
+      "observation_count": 7,
+      "claim_count": 4,
+      "boundary_count": 2,
+      "observation_confidence": {
+        "low": 2,
+        "medium": 5
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "2 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "3b",
+      "module": "Module 3B",
+      "consensus_id": "M3B-S002",
+      "topic_id": "M3B-T002",
+      "statement": "Myeloid cells are not a single injury-amplifying compartment; they can compact and contain wounds while also contributing to fibrotic scarring, so consensus claims must distinguish corralling, debris handling, matrix remodeling, and fibrosis-promoting functions.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M3B-O002",
+        "M3B-O018",
+        "M3B-O019",
+        "M3B-O045",
+        "M3B-O046"
+      ],
+      "supporting_claims": [
+        "M3B-C003",
+        "M3B-C004",
+        "M3B-C019",
+        "M3B-C026"
+      ],
+      "boundary_records": [
+        "M3B-B002",
+        "M3B-B007",
+        "M3B-B008"
+      ],
+      "observation_count": 5,
+      "claim_count": 4,
+      "boundary_count": 3,
+      "observation_confidence": {
+        "high": 2,
+        "low": 1,
+        "medium": 2
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "3 linked",
+      "review_action": "promote as boundary consensus after wording pass"
+    },
+    {
+      "module_key": "3b",
+      "module": "Module 3B",
+      "consensus_id": "M3B-S003",
+      "topic_id": "M3B-T003",
+      "statement": "Macrophage and microglia polarization findings support state-dependent immune modulation, but M1/M2 labels are insufficient without marker panels, timing, resident-versus-recruited identity, injury model, and endpoint-specific outcome data.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M3B-O004",
+        "M3B-O005",
+        "M3B-O006",
+        "M3B-O007",
+        "M3B-O008",
+        "M3B-O009",
+        "M3B-O010",
+        "M3B-O011",
+        "M3B-O033",
+        "M3B-O034",
+        "M3B-O035",
+        "M3B-O036",
+        "M3B-O044"
+      ],
+      "supporting_claims": [
+        "M3B-C005",
+        "M3B-C006",
+        "M3B-C020",
+        "M3B-C031"
+      ],
+      "boundary_records": [
+        "M3B-B003",
+        "M3B-B008"
+      ],
+      "observation_count": 13,
+      "claim_count": 4,
+      "boundary_count": 2,
+      "observation_confidence": {
+        "high": 1,
+        "low": 4,
+        "medium": 8
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "2 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "3b",
+      "module": "Module 3B",
+      "consensus_id": "M3B-S004",
+      "topic_id": "M3B-T004",
+      "statement": "Inflammasome activation, pyroptosis, PANoptosis, and related inflammatory death pathways form a coherent secondary-injury axis after SCI, but pathway claims should remain tied to the assayed molecule, cell population, timing, and readout.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M3B-O006",
+        "M3B-O022",
+        "M3B-O023",
+        "M3B-O024",
+        "M3B-O025",
+        "M3B-O026",
+        "M3B-O027"
+      ],
+      "supporting_claims": [
+        "M3B-C007",
+        "M3B-C008",
+        "M3B-C021",
+        "M3B-C027"
+      ],
+      "boundary_records": [
+        "M3B-B004",
+        "M3B-B008"
+      ],
+      "observation_count": 7,
+      "claim_count": 4,
+      "boundary_count": 2,
+      "observation_confidence": {
+        "high": 4,
+        "low": 1,
+        "medium": 2
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "2 linked",
+      "review_action": "promote as boundary consensus after wording pass"
+    },
+    {
+      "module_key": "3b",
+      "module": "Module 3B",
+      "consensus_id": "M3B-S005",
+      "topic_id": "M3B-T005",
+      "statement": "Immune metabolism, lipid handling, debris clearance, and efferocytosis link myeloid state to both repair and chronic degeneration; the strongest consensus is that phagocytic and metabolic competence must be tracked separately from inflammatory cytokine tone.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M3B-O007",
+        "M3B-O018",
+        "M3B-O019",
+        "M3B-O020",
+        "M3B-O021",
+        "M3B-O028",
+        "M3B-O029",
+        "M3B-O030",
+        "M3B-O031",
+        "M3B-O032",
+        "M3B-O039",
+        "M3B-O040",
+        "M3B-O041",
+        "M3B-O042",
+        "M3B-O043"
+      ],
+      "supporting_claims": [
+        "M3B-C009",
+        "M3B-C010",
+        "M3B-C022",
+        "M3B-C028",
+        "M3B-C032"
+      ],
+      "boundary_records": [
+        "M3B-B002",
+        "M3B-B006",
+        "M3B-B008"
+      ],
+      "observation_count": 15,
+      "claim_count": 5,
+      "boundary_count": 3,
+      "observation_confidence": {
+        "high": 2,
+        "low": 9,
+        "medium": 4
+      },
+      "claim_confidence": {
+        "medium": 5
+      },
+      "boundary_confidence": "3 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "3b",
+      "module": "Module 3B",
+      "consensus_id": "M3B-S006",
+      "topic_id": "M3B-T006",
+      "statement": "Single-cell, spatial, and multi-omic studies should be used to refine immune-cell identity, lesion geography, and state-transition vocabulary, not as standalone proof that any one immune state is therapeutically sufficient.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M3B-O033",
+        "M3B-O042"
+      ],
+      "supporting_claims": [
+        "M3B-C011",
+        "M3B-C012",
+        "M3B-C025"
+      ],
+      "boundary_records": [
+        "M3B-B006",
+        "M3B-B008"
+      ],
+      "observation_count": 2,
+      "claim_count": 3,
+      "boundary_count": 2,
+      "observation_confidence": {
+        "low": 1,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "2 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "3b",
+      "module": "Module 3B",
+      "consensus_id": "M3B-S007",
+      "topic_id": "M3B-T007",
+      "statement": "Immune-modifying biomaterials, vesicles, nanoparticles, and hydrogels create actionable delivery strategies, but consensus must separate payload biology from carrier effects, route, release kinetics, lesion localization, and treatment window.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M3B-O006",
+        "M3B-O012",
+        "M3B-O037",
+        "M3B-O038",
+        "M3B-O039",
+        "M3B-O040",
+        "M3B-O041"
+      ],
+      "supporting_claims": [
+        "M3B-C013",
+        "M3B-C014",
+        "M3B-C023",
+        "M3B-C029"
+      ],
+      "boundary_records": [
+        "M3B-B005",
+        "M3B-B008"
+      ],
+      "observation_count": 7,
+      "claim_count": 4,
+      "boundary_count": 2,
+      "observation_confidence": {
+        "high": 1,
+        "low": 3,
+        "medium": 3
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "2 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "3b",
+      "module": "Module 3B",
+      "consensus_id": "M3B-S008",
+      "topic_id": "M3B-T008",
+      "statement": "Module 3 supports mechanism-specific immune consensus profiles, not a broad anti-inflammatory thesis: timing, cell origin, immune function, sex/species/model context, and endpoint class are required fields for interpreting immune modulation after SCI.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M3B-O001",
+        "M3B-O002",
+        "M3B-O003",
+        "M3B-O004",
+        "M3B-O005",
+        "M3B-O006",
+        "M3B-O007",
+        "M3B-O008",
+        "M3B-O009",
+        "M3B-O010",
+        "M3B-O011",
+        "M3B-O012",
+        "M3B-O013",
+        "M3B-O014",
+        "M3B-O015",
+        "M3B-O016",
+        "M3B-O017",
+        "M3B-O018",
+        "M3B-O019",
+        "M3B-O020",
+        "M3B-O021",
+        "M3B-O022",
+        "M3B-O023",
+        "M3B-O024",
+        "M3B-O025",
+        "M3B-O026",
+        "M3B-O027",
+        "M3B-O028",
+        "M3B-O029",
+        "M3B-O030",
+        "M3B-O031",
+        "M3B-O032",
+        "M3B-O033",
+        "M3B-O034",
+        "M3B-O035",
+        "M3B-O036",
+        "M3B-O037",
+        "M3B-O038",
+        "M3B-O039",
+        "M3B-O040",
+        "M3B-O041",
+        "M3B-O042",
+        "M3B-O043",
+        "M3B-O044",
+        "M3B-O045",
+        "M3B-O046",
+        "M3B-O047"
+      ],
+      "supporting_claims": [
+        "M3B-C015",
+        "M3B-C016",
+        "M3B-C017",
+        "M3B-C024",
+        "M3B-C030",
+        "M3B-C033",
+        "M3B-C034",
+        "M3B-C035",
+        "M3B-C036"
+      ],
+      "boundary_records": [],
+      "observation_count": 47,
+      "claim_count": 9,
+      "boundary_count": 0,
+      "observation_confidence": {
+        "high": 10,
+        "low": 17,
+        "medium": 20
+      },
+      "claim_confidence": {
+        "medium": 9
+      },
+      "boundary_confidence": "all boundary records",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "4b",
+      "module": "Module 4B",
+      "consensus_id": "M4B-S001",
+      "topic_id": "M4B-T001",
+      "statement": "Human SCI cell-transplantation studies most strongly support procedural feasibility, safety monitoring, and trial design lessons; efficacy claims should remain provisional unless linked to controlled functional, imaging, electrophysiologic, or histologic endpoints.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M4B-O004",
+        "M4B-O005",
+        "M4B-O006",
+        "M4B-O007",
+        "M4B-O008",
+        "M4B-O009",
+        "M4B-O010",
+        "M4B-O048",
+        "M4B-O051",
+        "M4B-O053",
+        "M4B-O055",
+        "M4B-O056",
+        "M4B-O057",
+        "M4B-O058",
+        "M4B-O059",
+        "M4B-O060"
+      ],
+      "supporting_claims": [
+        "M4B-C001",
+        "M4B-C002",
+        "M4B-C003",
+        "M4B-C004",
+        "M4B-C024",
+        "M4B-C030"
+      ],
+      "boundary_records": [
+        "M4B-B001",
+        "M4B-B007",
+        "M4B-B008"
+      ],
+      "observation_count": 16,
+      "claim_count": 6,
+      "boundary_count": 3,
+      "observation_confidence": {
+        "low": 3,
+        "medium": 13
+      },
+      "claim_confidence": {
+        "medium": 6
+      },
+      "boundary_confidence": "3 linked",
+      "review_action": "promote as boundary consensus after wording pass"
+    },
+    {
+      "module_key": "4b",
+      "module": "Module 4B",
+      "consensus_id": "M4B-S002",
+      "topic_id": "M4B-T002",
+      "statement": "Neural progenitor, iPSC, ESC, interneuron, and organoid-derived grafts provide the clearest mechanistic evidence for host-graft integration when survival, differentiation, synaptic connectivity, axon extension, and behavior are measured as separate outcomes.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M4B-O011",
+        "M4B-O012",
+        "M4B-O013",
+        "M4B-O014",
+        "M4B-O015",
+        "M4B-O016",
+        "M4B-O017",
+        "M4B-O018",
+        "M4B-O019",
+        "M4B-O020",
+        "M4B-O021",
+        "M4B-O022",
+        "M4B-O023",
+        "M4B-O024",
+        "M4B-O025",
+        "M4B-O026"
+      ],
+      "supporting_claims": [
+        "M4B-C005",
+        "M4B-C006",
+        "M4B-C007",
+        "M4B-C008",
+        "M4B-C009",
+        "M4B-C010",
+        "M4B-C012",
+        "M4B-C027",
+        "M4B-C031"
+      ],
+      "boundary_records": [
+        "M4B-B002",
+        "M4B-B005",
+        "M4B-B008"
+      ],
+      "observation_count": 16,
+      "claim_count": 9,
+      "boundary_count": 3,
+      "observation_confidence": {
+        "low": 6,
+        "medium": 10
+      },
+      "claim_confidence": {
+        "medium": 9
+      },
+      "boundary_confidence": "3 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "4b",
+      "module": "Module 4B",
+      "consensus_id": "M4B-S003",
+      "topic_id": "M4B-T003",
+      "statement": "Cell identity, maturity, manufacturing route, purity, dose, and graft composition are core evidence fields for transplantation synthesis because nominally similar cell therapies can differ in mechanism, risk, and expected repair function.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M4B-O024",
+        "M4B-O026",
+        "M4B-O030"
+      ],
+      "supporting_claims": [
+        "M4B-C011",
+        "M4B-C013",
+        "M4B-C035",
+        "M4B-C038"
+      ],
+      "boundary_records": [
+        "M4B-B003",
+        "M4B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 4,
+      "boundary_count": 2,
+      "observation_confidence": {
+        "low": 3
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "2 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "4b",
+      "module": "Module 4B",
+      "consensus_id": "M4B-S004",
+      "topic_id": "M4B-T004",
+      "statement": "Glial, Schwann, OPC, and restricted-precursor strategies form a distinct repair family focused on myelination, axon support, substrate provision, and circuit-specific outcomes rather than broad neuronal replacement.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M4B-O027",
+        "M4B-O028",
+        "M4B-O029",
+        "M4B-O030",
+        "M4B-O031",
+        "M4B-O032",
+        "M4B-O033",
+        "M4B-O034",
+        "M4B-O035",
+        "M4B-O051",
+        "M4B-O052",
+        "M4B-O053",
+        "M4B-O059"
+      ],
+      "supporting_claims": [
+        "M4B-C014",
+        "M4B-C015",
+        "M4B-C016",
+        "M4B-C017",
+        "M4B-C028",
+        "M4B-C032"
+      ],
+      "boundary_records": [
+        "M4B-B003",
+        "M4B-B006",
+        "M4B-B008"
+      ],
+      "observation_count": 13,
+      "claim_count": 6,
+      "boundary_count": 3,
+      "observation_confidence": {
+        "low": 8,
+        "medium": 5
+      },
+      "claim_confidence": {
+        "medium": 6
+      },
+      "boundary_confidence": "3 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "4b",
+      "module": "Module 4B",
+      "consensus_id": "M4B-S005",
+      "topic_id": "M4B-T005",
+      "statement": "OEC, MSC, BMMC, UCB, and other stromal or mixed-cell interventions should be synthesized primarily as trophic, immunomodulatory, supportive, or delivery-associated therapies unless direct replacement, integration, and lineage-specific function are demonstrated.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M4B-O007",
+        "M4B-O008",
+        "M4B-O009",
+        "M4B-O036",
+        "M4B-O037",
+        "M4B-O038",
+        "M4B-O039",
+        "M4B-O040",
+        "M4B-O055",
+        "M4B-O056",
+        "M4B-O057",
+        "M4B-O058",
+        "M4B-O059",
+        "M4B-O060"
+      ],
+      "supporting_claims": [
+        "M4B-C018",
+        "M4B-C019",
+        "M4B-C033",
+        "M4B-C034"
+      ],
+      "boundary_records": [
+        "M4B-B003",
+        "M4B-B006",
+        "M4B-B008"
+      ],
+      "observation_count": 14,
+      "claim_count": 4,
+      "boundary_count": 3,
+      "observation_confidence": {
+        "low": 8,
+        "medium": 6
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "3 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "4b",
+      "module": "Module 4B",
+      "consensus_id": "M4B-S006",
+      "topic_id": "M4B-T006",
+      "statement": "Scaffold-cell and microenvironment combination therapies are especially relevant to chronic or complete lesions, but attribution must remain bundled unless the design separates scaffold architecture, cell source, matrix/cargo effects, lesion preparation, and rehabilitation or stimulation.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M4B-O001",
+        "M4B-O002",
+        "M4B-O003",
+        "M4B-O041",
+        "M4B-O042",
+        "M4B-O043",
+        "M4B-O044",
+        "M4B-O045",
+        "M4B-O059"
+      ],
+      "supporting_claims": [
+        "M4B-C020",
+        "M4B-C021",
+        "M4B-C029",
+        "M4B-C036"
+      ],
+      "boundary_records": [
+        "M4B-B004",
+        "M4B-B007",
+        "M4B-B008"
+      ],
+      "observation_count": 9,
+      "claim_count": 4,
+      "boundary_count": 3,
+      "observation_confidence": {
+        "low": 9
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "3 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "4b",
+      "module": "Module 4B",
+      "consensus_id": "M4B-S007",
+      "topic_id": "M4B-T007",
+      "statement": "Fetal, embryonic, respiratory, autonomic, bladder, pain, and cardiovascular graft studies show that transplantation endpoints extend beyond locomotion; consensus rows should preserve the target circuit, outcome domain, and risk profile.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M4B-O046",
+        "M4B-O047",
+        "M4B-O048",
+        "M4B-O049",
+        "M4B-O050",
+        "M4B-O054",
+        "M4B-O055",
+        "M4B-O056"
+      ],
+      "supporting_claims": [
+        "M4B-C022",
+        "M4B-C023",
+        "M4B-C037"
+      ],
+      "boundary_records": [
+        "M4B-B003",
+        "M4B-B006",
+        "M4B-B008"
+      ],
+      "observation_count": 8,
+      "claim_count": 3,
+      "boundary_count": 3,
+      "observation_confidence": {
+        "low": 5,
+        "medium": 3
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "3 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "4b",
+      "module": "Module 4B",
+      "consensus_id": "M4B-S008",
+      "topic_id": "M4B-T008",
+      "statement": "Module 4 should be organized into mechanism- and context-specific transplantation profiles defined by cell identity, host lesion state, delivery environment, integration assay, and endpoint class rather than one pooled cell-therapy efficacy claim.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M4B-O001",
+        "M4B-O002",
+        "M4B-O003",
+        "M4B-O004",
+        "M4B-O005",
+        "M4B-O006",
+        "M4B-O007",
+        "M4B-O008",
+        "M4B-O009",
+        "M4B-O010",
+        "M4B-O011",
+        "M4B-O012",
+        "M4B-O013",
+        "M4B-O014",
+        "M4B-O015",
+        "M4B-O016",
+        "M4B-O017",
+        "M4B-O018",
+        "M4B-O019",
+        "M4B-O020",
+        "M4B-O021",
+        "M4B-O022",
+        "M4B-O023",
+        "M4B-O024",
+        "M4B-O025",
+        "M4B-O026",
+        "M4B-O027",
+        "M4B-O028",
+        "M4B-O029",
+        "M4B-O030",
+        "M4B-O031",
+        "M4B-O032",
+        "M4B-O033",
+        "M4B-O034",
+        "M4B-O035",
+        "M4B-O036",
+        "M4B-O037",
+        "M4B-O038",
+        "M4B-O039",
+        "M4B-O040",
+        "M4B-O041",
+        "M4B-O042",
+        "M4B-O043",
+        "M4B-O044",
+        "M4B-O045",
+        "M4B-O046",
+        "M4B-O047",
+        "M4B-O048",
+        "M4B-O049",
+        "M4B-O050",
+        "M4B-O051",
+        "M4B-O052",
+        "M4B-O053",
+        "M4B-O054",
+        "M4B-O055",
+        "M4B-O056",
+        "M4B-O057",
+        "M4B-O058",
+        "M4B-O059",
+        "M4B-O060"
+      ],
+      "supporting_claims": [
+        "M4B-C024",
+        "M4B-C025",
+        "M4B-C026",
+        "M4B-C027",
+        "M4B-C028",
+        "M4B-C029",
+        "M4B-C030",
+        "M4B-C031",
+        "M4B-C032",
+        "M4B-C033",
+        "M4B-C034",
+        "M4B-C035",
+        "M4B-C036",
+        "M4B-C037",
+        "M4B-C038",
+        "M4B-C039",
+        "M4B-C040"
+      ],
+      "boundary_records": [],
+      "observation_count": 60,
+      "claim_count": 17,
+      "boundary_count": 0,
+      "observation_confidence": {
+        "low": 34,
+        "medium": 26
+      },
+      "claim_confidence": {
+        "medium": 17
+      },
+      "boundary_confidence": "all boundary records",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "5b",
+      "module": "Module 5B",
+      "consensus_id": "M5B-S001",
+      "topic_id": "M5B-T001",
+      "statement": "Descending-tract repair claims must specify whether the evidence shows true long-distance regeneration, local sprouting, spared-tract plasticity, relay engagement, or behavioral association; these outcomes should not be collapsed into one regeneration label.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M5B-O001",
+        "M5B-O002",
+        "M5B-O006",
+        "M5B-O009",
+        "M5B-O010",
+        "M5B-O011",
+        "M5B-O012",
+        "M5B-O013",
+        "M5B-O014",
+        "M5B-O016",
+        "M5B-O017",
+        "M5B-O018",
+        "M5B-O019",
+        "M5B-O020",
+        "M5B-O021",
+        "M5B-O027",
+        "M5B-O039",
+        "M5B-O040"
+      ],
+      "supporting_claims": [
+        "M5B-C001",
+        "M5B-C002",
+        "M5B-C025",
+        "M5B-C033"
+      ],
+      "boundary_records": [
+        "M5B-B001",
+        "M5B-B008"
+      ],
+      "observation_count": 18,
+      "claim_count": 4,
+      "boundary_count": 2,
+      "observation_confidence": {
+        "high": 2,
+        "medium": 16
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "2 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "5b",
+      "module": "Module 5B",
+      "consensus_id": "M5B-S002",
+      "topic_id": "M5B-T002",
+      "statement": "Extrinsic matrix, CSPG/Nogo/Rho/ROCK, and guidance-pathway interventions define environmental permissiveness, but their effects overlap with scar architecture, immune state, graft support, and tract-specific growth competence.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M5B-O006",
+        "M5B-O015",
+        "M5B-O023",
+        "M5B-O024",
+        "M5B-O025",
+        "M5B-O026",
+        "M5B-O027",
+        "M5B-O047"
+      ],
+      "supporting_claims": [
+        "M5B-C003",
+        "M5B-C004",
+        "M5B-C019",
+        "M5B-C026"
+      ],
+      "boundary_records": [
+        "M5B-B002",
+        "M5B-B005",
+        "M5B-B008"
+      ],
+      "observation_count": 8,
+      "claim_count": 4,
+      "boundary_count": 3,
+      "observation_confidence": {
+        "high": 2,
+        "medium": 6
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "3 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "5b",
+      "module": "Module 5B",
+      "consensus_id": "M5B-S003",
+      "topic_id": "M5B-T003",
+      "statement": "Remyelination, oligodendrocyte lineage repair, myelin-debris clearance, and white-matter preservation are a distinct repair axis from axon regrowth; consensus statements should retain myelin, axon, glial, and functional endpoints separately.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M5B-O003",
+        "M5B-O004",
+        "M5B-O028",
+        "M5B-O029",
+        "M5B-O030",
+        "M5B-O031",
+        "M5B-O032",
+        "M5B-O046"
+      ],
+      "supporting_claims": [
+        "M5B-C005",
+        "M5B-C006",
+        "M5B-C018",
+        "M5B-C023",
+        "M5B-C024",
+        "M5B-C029"
+      ],
+      "boundary_records": [
+        "M5B-B003",
+        "M5B-B006",
+        "M5B-B008"
+      ],
+      "observation_count": 8,
+      "claim_count": 6,
+      "boundary_count": 3,
+      "observation_confidence": {
+        "high": 2,
+        "medium": 6
+      },
+      "claim_confidence": {
+        "medium": 6
+      },
+      "boundary_confidence": "3 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "5b",
+      "module": "Module 5B",
+      "consensus_id": "M5B-S004",
+      "topic_id": "M5B-T004",
+      "statement": "Serotonergic, propriospinal, relay, KCC2, and circuit-rebalancing mechanisms support recovery through network reconstruction and plasticity, which may complement or substitute for direct long-tract regeneration depending on lesion completeness and target behavior.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M5B-O020",
+        "M5B-O025",
+        "M5B-O033",
+        "M5B-O034",
+        "M5B-O035",
+        "M5B-O036",
+        "M5B-O037",
+        "M5B-O038"
+      ],
+      "supporting_claims": [
+        "M5B-C007",
+        "M5B-C008",
+        "M5B-C020",
+        "M5B-C034"
+      ],
+      "boundary_records": [
+        "M5B-B004",
+        "M5B-B008"
+      ],
+      "observation_count": 8,
+      "claim_count": 4,
+      "boundary_count": 2,
+      "observation_confidence": {
+        "high": 1,
+        "medium": 7
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "2 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "5b",
+      "module": "Module 5B",
+      "consensus_id": "M5B-S005",
+      "topic_id": "M5B-T005",
+      "statement": "Neuron-intrinsic growth competence spans metabolic, transcriptional, epigenetic, PTEN/mTOR, SOCS3/STAT, and ciliogenesis programs; these should be interpreted separately from environmental permissiveness unless the experiment tests both axes.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M5B-O005",
+        "M5B-O008",
+        "M5B-O011",
+        "M5B-O018",
+        "M5B-O019",
+        "M5B-O043",
+        "M5B-O044"
+      ],
+      "supporting_claims": [
+        "M5B-C009",
+        "M5B-C010",
+        "M5B-C021",
+        "M5B-C022",
+        "M5B-C030"
+      ],
+      "boundary_records": [
+        "M5B-B002",
+        "M5B-B008"
+      ],
+      "observation_count": 7,
+      "claim_count": 5,
+      "boundary_count": 2,
+      "observation_confidence": {
+        "high": 3,
+        "medium": 4
+      },
+      "claim_confidence": {
+        "medium": 5
+      },
+      "boundary_confidence": "2 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "5b",
+      "module": "Module 5B",
+      "consensus_id": "M5B-S006",
+      "topic_id": "M5B-T006",
+      "statement": "Graft- and scaffold-enabled axon repair is a combination-intervention family: axon growth claims should be cross-tagged with cell source, biomaterial architecture, trophic/cargo support, host lesion state, and whether axons enter, traverse, or exit the graft.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M5B-O001",
+        "M5B-O007",
+        "M5B-O028",
+        "M5B-O041",
+        "M5B-O042",
+        "M5B-O045",
+        "M5B-O047"
+      ],
+      "supporting_claims": [
+        "M5B-C011",
+        "M5B-C012",
+        "M5B-C024",
+        "M5B-C031"
+      ],
+      "boundary_records": [
+        "M5B-B005",
+        "M5B-B007",
+        "M5B-B008"
+      ],
+      "observation_count": 7,
+      "claim_count": 4,
+      "boundary_count": 3,
+      "observation_confidence": {
+        "medium": 7
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "3 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "5b",
+      "module": "Module 5B",
+      "consensus_id": "M5B-S007",
+      "topic_id": "M5B-T007",
+      "statement": "Activity, stimulation, training, and neuromodulation can amplify repair-associated plasticity, but they should be modeled as timing- and dose-dependent combination axes rather than evidence that the paired biologic intervention works alone.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M5B-O012",
+        "M5B-O020",
+        "M5B-O021",
+        "M5B-O039",
+        "M5B-O040"
+      ],
+      "supporting_claims": [
+        "M5B-C013",
+        "M5B-C014",
+        "M5B-C027"
+      ],
+      "boundary_records": [
+        "M5B-B001",
+        "M5B-B005",
+        "M5B-B008"
+      ],
+      "observation_count": 5,
+      "claim_count": 3,
+      "boundary_count": 3,
+      "observation_confidence": {
+        "medium": 5
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "3 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "5b",
+      "module": "Module 5B",
+      "consensus_id": "M5B-S008",
+      "topic_id": "M5B-T008",
+      "statement": "Module 5 consensus should separate tract class, growth mechanism, myelin/white-matter repair, circuit compensation, intrinsic growth state, combination therapy, species, chronicity, and endpoint rather than producing a single axon-regeneration efficacy summary.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M5B-O001",
+        "M5B-O002",
+        "M5B-O003",
+        "M5B-O004",
+        "M5B-O005",
+        "M5B-O006",
+        "M5B-O007",
+        "M5B-O008",
+        "M5B-O009",
+        "M5B-O010",
+        "M5B-O011",
+        "M5B-O012",
+        "M5B-O013",
+        "M5B-O014",
+        "M5B-O015",
+        "M5B-O016",
+        "M5B-O017",
+        "M5B-O018",
+        "M5B-O019",
+        "M5B-O020",
+        "M5B-O021",
+        "M5B-O022",
+        "M5B-O023",
+        "M5B-O024",
+        "M5B-O025",
+        "M5B-O026",
+        "M5B-O027",
+        "M5B-O028",
+        "M5B-O029",
+        "M5B-O030",
+        "M5B-O031",
+        "M5B-O032",
+        "M5B-O033",
+        "M5B-O034",
+        "M5B-O035",
+        "M5B-O036",
+        "M5B-O037",
+        "M5B-O038",
+        "M5B-O039",
+        "M5B-O040",
+        "M5B-O041",
+        "M5B-O042",
+        "M5B-O043",
+        "M5B-O044",
+        "M5B-O045",
+        "M5B-O046",
+        "M5B-O047"
+      ],
+      "supporting_claims": [
+        "M5B-C015",
+        "M5B-C016",
+        "M5B-C017",
+        "M5B-C028",
+        "M5B-C032",
+        "M5B-C035",
+        "M5B-C036"
+      ],
+      "boundary_records": [],
+      "observation_count": 47,
+      "claim_count": 7,
+      "boundary_count": 0,
+      "observation_confidence": {
+        "high": 8,
+        "medium": 39
+      },
+      "claim_confidence": {
+        "medium": 7
+      },
+      "boundary_confidence": "all boundary records",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "6b",
+      "module": "Module 6B",
+      "consensus_id": "M6B-S001",
+      "topic_id": "M6B-T001",
+      "statement": "Human chronic SCI lesion architecture should be represented as separable compartments, including focal cystic loss, retained adjacent cord, scar-resection anatomy, syrinx or cyst complications, and potential tissue bridges, because each carries different surgical and translational implications.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M6B-O001",
+        "M6B-O003",
+        "M6B-O018",
+        "M6B-O019"
+      ],
+      "supporting_claims": [
+        "M6B-C001",
+        "M6B-C003",
+        "M6B-C005",
+        "M6B-C023"
+      ],
+      "boundary_records": [
+        "M6B-B001",
+        "M6B-B005",
+        "M6B-B008"
+      ],
+      "observation_count": 4,
+      "claim_count": 4,
+      "boundary_count": 3,
+      "observation_confidence": {
+        "high": 2,
+        "low": 1,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "high": 2,
+        "medium": 2
+      },
+      "boundary_confidence": "3 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "6b",
+      "module": "Module 6B",
+      "consensus_id": "M6B-S002",
+      "topic_id": "M6B-T002",
+      "statement": "Human pathology adds tissue-level constraints that imaging alone cannot resolve: ventral-root and motoneuron loss, axon/myelin abnormalities, vascular injury patterns, cystic cavitation, and scar composition should remain separately queryable.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M6B-O002",
+        "M6B-O017",
+        "M6B-O018"
+      ],
+      "supporting_claims": [
+        "M6B-C002",
+        "M6B-C004",
+        "M6B-C018",
+        "M6B-C024",
+        "M6B-C025"
+      ],
+      "boundary_records": [
+        "M6B-B001",
+        "M6B-B002"
+      ],
+      "observation_count": 3,
+      "claim_count": 5,
+      "boundary_count": 2,
+      "observation_confidence": {
+        "high": 2,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "high": 4,
+        "medium": 1
+      },
+      "boundary_confidence": "2 linked",
+      "review_action": "promote as boundary consensus after wording pass"
+    },
+    {
+      "module_key": "6b",
+      "module": "Module 6B",
+      "consensus_id": "M6B-S003",
+      "topic_id": "M6B-T003",
+      "statement": "Diffusion MRI and tract-specific measures can reveal clinically relevant cord injury beyond conventional MRI, but consensus use requires tract, spinal level, directionality, clinical endpoint, acquisition method, and confidence labels.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M6B-O004",
+        "M6B-O006",
+        "M6B-O007",
+        "M6B-O022"
+      ],
+      "supporting_claims": [
+        "M6B-C006",
+        "M6B-C007",
+        "M6B-C027",
+        "M6B-C028"
+      ],
+      "boundary_records": [
+        "M6B-B002",
+        "M6B-B003",
+        "M6B-B006"
+      ],
+      "observation_count": 4,
+      "claim_count": 4,
+      "boundary_count": 3,
+      "observation_confidence": {
+        "medium": 4
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "3 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "6b",
+      "module": "Module 6B",
+      "consensus_id": "M6B-S004",
+      "topic_id": "M6B-T004",
+      "statement": "Tissue bridges and lesion-geometry measures are among the strongest human imaging candidates for prognosis and stratification, but their meaning depends on injury level, etiology, completeness, timing, scan modality, and the specific recovery endpoint.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M6B-O005",
+        "M6B-O008",
+        "M6B-O009",
+        "M6B-O035"
+      ],
+      "supporting_claims": [
+        "M6B-C008",
+        "M6B-C009",
+        "M6B-C028",
+        "M6B-C032"
+      ],
+      "boundary_records": [
+        "M6B-B001",
+        "M6B-B006"
+      ],
+      "observation_count": 4,
+      "claim_count": 4,
+      "boundary_count": 2,
+      "observation_confidence": {
+        "high": 1,
+        "medium": 3
+      },
+      "claim_confidence": {
+        "high": 2,
+        "medium": 2
+      },
+      "boundary_confidence": "2 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "6b",
+      "module": "Module 6B",
+      "consensus_id": "M6B-S005",
+      "topic_id": "M6B-T005",
+      "statement": "qMRI, MRS, atrophy, and longitudinal neuroimaging support chronic SCI as a system-level condition with remote spinal, sensory, motor, brainstem, cortical, and metabolic changes; these should be modeled as linked but distinct from local lesion-bed anatomy.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M6B-O010",
+        "M6B-O011",
+        "M6B-O012",
+        "M6B-O016",
+        "M6B-O021",
+        "M6B-O027",
+        "M6B-O028",
+        "M6B-O029",
+        "M6B-O030",
+        "M6B-O031",
+        "M6B-O032"
+      ],
+      "supporting_claims": [
+        "M6B-C010",
+        "M6B-C011",
+        "M6B-C012",
+        "M6B-C015",
+        "M6B-C026",
+        "M6B-C029"
+      ],
+      "boundary_records": [
+        "M6B-B003",
+        "M6B-B004",
+        "M6B-B007"
+      ],
+      "observation_count": 11,
+      "claim_count": 6,
+      "boundary_count": 3,
+      "observation_confidence": {
+        "low": 4,
+        "medium": 7
+      },
+      "claim_confidence": {
+        "low": 1,
+        "medium": 5
+      },
+      "boundary_confidence": "3 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "6b",
+      "module": "Module 6B",
+      "consensus_id": "M6B-S006",
+      "topic_id": "M6B-T006",
+      "statement": "fMRI and cortical reorganization evidence supports remote neural plasticity after SCI, but it should remain indirect lesion-bed evidence unless paired with spinal lesion metrics, tract integrity, or clinical impairment measures.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M6B-O013",
+        "M6B-O014",
+        "M6B-O015",
+        "M6B-O023",
+        "M6B-O024",
+        "M6B-O025",
+        "M6B-O026"
+      ],
+      "supporting_claims": [
+        "M6B-C013",
+        "M6B-C014",
+        "M6B-C030"
+      ],
+      "boundary_records": [
+        "M6B-B003",
+        "M6B-B004"
+      ],
+      "observation_count": 7,
+      "claim_count": 3,
+      "boundary_count": 2,
+      "observation_confidence": {
+        "low": 5,
+        "medium": 2
+      },
+      "claim_confidence": {
+        "high": 2,
+        "low": 1
+      },
+      "boundary_confidence": "2 linked",
+      "review_action": "promote as boundary consensus after wording pass"
+    },
+    {
+      "module_key": "6b",
+      "module": "Module 6B",
+      "consensus_id": "M6B-S007",
+      "topic_id": "M6B-T007",
+      "statement": "Human imaging is ready to support surgical planning, trial screening, stratification, and endpoint selection, but registry, review, and trial-readiness rows should not be promoted to repair-efficacy evidence without intervention-linked outcomes.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M6B-O003",
+        "M6B-O020",
+        "M6B-O029",
+        "M6B-O033",
+        "M6B-O034",
+        "M6B-O035",
+        "M6B-O036"
+      ],
+      "supporting_claims": [
+        "M6B-C016",
+        "M6B-C020",
+        "M6B-C021",
+        "M6B-C031"
+      ],
+      "boundary_records": [
+        "M6B-B005",
+        "M6B-B007",
+        "M6B-B008"
+      ],
+      "observation_count": 7,
+      "claim_count": 4,
+      "boundary_count": 3,
+      "observation_confidence": {
+        "high": 1,
+        "low": 1,
+        "medium": 5
+      },
+      "claim_confidence": {
+        "high": 2,
+        "medium": 2
+      },
+      "boundary_confidence": "3 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "6b",
+      "module": "Module 6B",
+      "consensus_id": "M6B-S008",
+      "topic_id": "M6B-T008",
+      "statement": "Module 6 should function as the human translation boundary layer: every consensus statement must preserve modality, confidence, timing, injury level, etiology, completeness, endpoint directness, and whether the evidence is pathology, imaging, planning, or efficacy.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M6B-O001",
+        "M6B-O002",
+        "M6B-O003",
+        "M6B-O004",
+        "M6B-O005",
+        "M6B-O006",
+        "M6B-O007",
+        "M6B-O008",
+        "M6B-O009",
+        "M6B-O010",
+        "M6B-O011",
+        "M6B-O012",
+        "M6B-O013",
+        "M6B-O014",
+        "M6B-O015",
+        "M6B-O016",
+        "M6B-O017",
+        "M6B-O018",
+        "M6B-O019",
+        "M6B-O020",
+        "M6B-O021",
+        "M6B-O022",
+        "M6B-O023",
+        "M6B-O024",
+        "M6B-O025",
+        "M6B-O026",
+        "M6B-O027",
+        "M6B-O028",
+        "M6B-O029",
+        "M6B-O030",
+        "M6B-O031",
+        "M6B-O032",
+        "M6B-O033",
+        "M6B-O034",
+        "M6B-O035",
+        "M6B-O036"
+      ],
+      "supporting_claims": [
+        "M6B-C017",
+        "M6B-C018",
+        "M6B-C019",
+        "M6B-C022",
+        "M6B-C032",
+        "M6B-C033",
+        "M6B-C034",
+        "M6B-C035",
+        "M6B-C036"
+      ],
+      "boundary_records": [],
+      "observation_count": 36,
+      "claim_count": 9,
+      "boundary_count": 0,
+      "observation_confidence": {
+        "high": 5,
+        "low": 11,
+        "medium": 20
+      },
+      "claim_confidence": {
+        "high": 9
+      },
+      "boundary_confidence": "all boundary records",
+      "review_action": "promote as boundary consensus after wording pass"
+    },
+    {
+      "module_key": "7b",
+      "module": "Module 7B",
+      "consensus_id": "M7B-S001",
+      "topic_id": "M7B-T001",
+      "statement": "Breast implant capsular contracture is the clearest precedent that recipient-directed pharmacologic conditioning can alter a fibrotic foreign-body outcome, but SCI translation must preserve drug class, route, prophylaxis-versus-treatment timing, and capsule endpoint boundaries.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M7B-O001",
+        "M7B-O002",
+        "M7B-O003",
+        "M7B-O004",
+        "M7B-O005",
+        "M7B-O006",
+        "M7B-O007",
+        "M7B-O008",
+        "M7B-O009",
+        "M7B-O038",
+        "M7B-O039",
+        "M7B-O040"
+      ],
+      "supporting_claims": [
+        "M7B-C001",
+        "M7B-C002",
+        "M7B-C003",
+        "M7B-C004",
+        "M7B-C005",
+        "M7B-C026",
+        "M7B-C029",
+        "M7B-C033"
+      ],
+      "boundary_records": [
+        "M7B-B001",
+        "M7B-B002",
+        "M7B-B007",
+        "M7B-B008"
+      ],
+      "observation_count": 12,
+      "claim_count": 8,
+      "boundary_count": 4,
+      "observation_confidence": {
+        "low": 5,
+        "medium": 7
+      },
+      "claim_confidence": {
+        "high": 1,
+        "low": 1,
+        "medium": 6
+      },
+      "boundary_confidence": "4 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "7b",
+      "module": "Module 7B",
+      "consensus_id": "M7B-S002",
+      "topic_id": "M7B-T002",
+      "statement": "Flap and ischemic-tissue conditioning studies support preoperative or remote preparation of vascular host biology before tissue transfer, but they do not by themselves establish anti-fibrotic recipient-bed remodeling for SCI reconstruction.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M7B-O010",
+        "M7B-O011",
+        "M7B-O012",
+        "M7B-O013",
+        "M7B-O014"
+      ],
+      "supporting_claims": [
+        "M7B-C006",
+        "M7B-C007",
+        "M7B-C008",
+        "M7B-C028",
+        "M7B-C034"
+      ],
+      "boundary_records": [
+        "M7B-B003",
+        "M7B-B008"
+      ],
+      "observation_count": 5,
+      "claim_count": 5,
+      "boundary_count": 2,
+      "observation_confidence": {
+        "low": 4,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "high": 1,
+        "low": 2,
+        "medium": 2
+      },
+      "boundary_confidence": "2 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "7b",
+      "module": "Module 7B",
+      "consensus_id": "M7B-S003",
+      "topic_id": "M7B-T003",
+      "statement": "Islet transplantation provides a useful host-conditioning analog for early engraftment barriers because IBMIR, complement/coagulation signaling, macrophage activation, chemokine recruitment, and regulatory immune balance are explicitly peri-transplant processes.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M7B-O015",
+        "M7B-O016",
+        "M7B-O017",
+        "M7B-O018",
+        "M7B-O019",
+        "M7B-O020",
+        "M7B-O021",
+        "M7B-O022",
+        "M7B-O023",
+        "M7B-O024",
+        "M7B-O025",
+        "M7B-O026",
+        "M7B-O027"
+      ],
+      "supporting_claims": [
+        "M7B-C009",
+        "M7B-C010",
+        "M7B-C011",
+        "M7B-C012",
+        "M7B-C013",
+        "M7B-C027",
+        "M7B-C031",
+        "M7B-C035"
+      ],
+      "boundary_records": [
+        "M7B-B004",
+        "M7B-B007",
+        "M7B-B008"
+      ],
+      "observation_count": 13,
+      "claim_count": 8,
+      "boundary_count": 3,
+      "observation_confidence": {
+        "low": 4,
+        "medium": 9
+      },
+      "claim_confidence": {
+        "high": 1,
+        "medium": 7
+      },
+      "boundary_confidence": "3 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "7b",
+      "module": "Module 7B",
+      "consensus_id": "M7B-S004",
+      "topic_id": "M7B-T004",
+      "statement": "Organ-tolerance evidence supports the general concept that host immune state can be conditioned before graft challenge, but it should remain boundary evidence for this project unless rejection control is linked to remodeling, vascular integration, fibrosis, or functional graft integration.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M7B-O028",
+        "M7B-O029"
+      ],
+      "supporting_claims": [
+        "M7B-C014"
+      ],
+      "boundary_records": [
+        "M7B-B005"
+      ],
+      "observation_count": 2,
+      "claim_count": 1,
+      "boundary_count": 1,
+      "observation_confidence": {
+        "low": 1,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "high": 1
+      },
+      "boundary_confidence": "1 linked",
+      "review_action": "promote as boundary consensus after wording pass"
+    },
+    {
+      "module_key": "7b",
+      "module": "Module 7B",
+      "consensus_id": "M7B-S005",
+      "topic_id": "M7B-T005",
+      "statement": "SCI leukotriene and pro-resolving mediator studies show that early lesion-bed inflammatory tone can be modified in ways relevant to repair, but they are mechanistic analogs rather than direct evidence for preoperative conditioning before reconstruction.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M7B-O030",
+        "M7B-O031",
+        "M7B-O032",
+        "M7B-O033",
+        "M7B-O034",
+        "M7B-O035"
+      ],
+      "supporting_claims": [
+        "M7B-C015",
+        "M7B-C016",
+        "M7B-C017",
+        "M7B-C018",
+        "M7B-C030"
+      ],
+      "boundary_records": [
+        "M7B-B006",
+        "M7B-B008"
+      ],
+      "observation_count": 6,
+      "claim_count": 5,
+      "boundary_count": 2,
+      "observation_confidence": {
+        "low": 2,
+        "medium": 4
+      },
+      "claim_confidence": {
+        "high": 1,
+        "medium": 4
+      },
+      "boundary_confidence": "2 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "7b",
+      "module": "Module 7B",
+      "consensus_id": "M7B-S006",
+      "topic_id": "M7B-T006",
+      "statement": "Tranilast, scar, and hypertrophic-scar rows inform matrix maturation and anti-fibrotic biology, but local or topical delivery should not be generalized to systemic host conditioning without route, dose, tissue, and endpoint alignment.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M7B-O036",
+        "M7B-O037"
+      ],
+      "supporting_claims": [
+        "M7B-C019",
+        "M7B-C032"
+      ],
+      "boundary_records": [
+        "M7B-B007"
+      ],
+      "observation_count": 2,
+      "claim_count": 2,
+      "boundary_count": 1,
+      "observation_confidence": {
+        "low": 2
+      },
+      "claim_confidence": {
+        "high": 1,
+        "low": 1
+      },
+      "boundary_confidence": "1 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "7b",
+      "module": "Module 7B",
+      "consensus_id": "M7B-S007",
+      "topic_id": "M7B-T007",
+      "statement": "Module 7 requires an explicit host-conditioning ontology: intervention target, route, timing, procedure class, host tissue state, endpoint, and evidence directness must be recorded because the corpus spans systemic drugs, remote ischemia, local delivery, immune-cell modulation, and co-therapy.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M7B-O001",
+        "M7B-O002",
+        "M7B-O003",
+        "M7B-O004",
+        "M7B-O005",
+        "M7B-O006",
+        "M7B-O007",
+        "M7B-O008",
+        "M7B-O009",
+        "M7B-O010",
+        "M7B-O011",
+        "M7B-O012",
+        "M7B-O013",
+        "M7B-O014",
+        "M7B-O015",
+        "M7B-O016",
+        "M7B-O017",
+        "M7B-O018",
+        "M7B-O019",
+        "M7B-O020",
+        "M7B-O021",
+        "M7B-O022",
+        "M7B-O023",
+        "M7B-O024",
+        "M7B-O025",
+        "M7B-O026",
+        "M7B-O027",
+        "M7B-O028",
+        "M7B-O029",
+        "M7B-O030",
+        "M7B-O031",
+        "M7B-O032",
+        "M7B-O033",
+        "M7B-O034",
+        "M7B-O035",
+        "M7B-O036",
+        "M7B-O037",
+        "M7B-O038",
+        "M7B-O039",
+        "M7B-O040"
+      ],
+      "supporting_claims": [
+        "M7B-C020",
+        "M7B-C021",
+        "M7B-C022",
+        "M7B-C023",
+        "M7B-C031",
+        "M7B-C032",
+        "M7B-C036"
+      ],
+      "boundary_records": [
+        "M7B-B001",
+        "M7B-B002",
+        "M7B-B003",
+        "M7B-B004",
+        "M7B-B005",
+        "M7B-B006",
+        "M7B-B007",
+        "M7B-B008"
+      ],
+      "observation_count": 40,
+      "claim_count": 7,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "low": 18,
+        "medium": 22
+      },
+      "claim_confidence": {
+        "high": 6,
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "7b",
+      "module": "Module 7B",
+      "consensus_id": "M7B-S008",
+      "topic_id": "M7B-T008",
+      "statement": "Cross-field host-conditioning evidence is strong enough to generate SCI reconstruction hypotheses, but not yet strong enough for clinical-strength claims; dose, route, timing, host target, remodeling endpoint, and field-to-SCI distance must remain confidence-stratified.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M7B-O001",
+        "M7B-O002",
+        "M7B-O003",
+        "M7B-O004",
+        "M7B-O005",
+        "M7B-O006",
+        "M7B-O007",
+        "M7B-O008",
+        "M7B-O009",
+        "M7B-O010",
+        "M7B-O011",
+        "M7B-O012",
+        "M7B-O013",
+        "M7B-O014",
+        "M7B-O015",
+        "M7B-O016",
+        "M7B-O017",
+        "M7B-O018",
+        "M7B-O019",
+        "M7B-O020",
+        "M7B-O021",
+        "M7B-O022",
+        "M7B-O023",
+        "M7B-O024",
+        "M7B-O025",
+        "M7B-O026",
+        "M7B-O027",
+        "M7B-O028",
+        "M7B-O029",
+        "M7B-O030",
+        "M7B-O031",
+        "M7B-O032",
+        "M7B-O033",
+        "M7B-O034",
+        "M7B-O035",
+        "M7B-O036",
+        "M7B-O037",
+        "M7B-O038",
+        "M7B-O039",
+        "M7B-O040"
+      ],
+      "supporting_claims": [
+        "M7B-C024",
+        "M7B-C025"
+      ],
+      "boundary_records": [
+        "M7B-B001",
+        "M7B-B002",
+        "M7B-B003",
+        "M7B-B004",
+        "M7B-B005",
+        "M7B-B006",
+        "M7B-B007",
+        "M7B-B008"
+      ],
+      "observation_count": 40,
+      "claim_count": 2,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "low": 18,
+        "medium": 22
+      },
+      "claim_confidence": {
+        "high": 1,
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "8b",
+      "module": "Module 8B",
+      "consensus_id": "M8B-S001",
+      "topic_id": "M8B-T001",
+      "statement": "In vivo SCI evidence must retain species, strain, age, sex, and genetic background because model choice changes lesion biology, immune response, spontaneous recovery, surgical feasibility, and translatability.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M8B-O001"
+      ],
+      "supporting_claims": [
+        "M8B-C001",
+        "M8B-C002",
+        "M8B-C003"
+      ],
+      "boundary_records": [
+        "M8B-B001",
+        "M8B-B002",
+        "M8B-B003",
+        "M8B-B004",
+        "M8B-B005",
+        "M8B-B006",
+        "M8B-B007",
+        "M8B-B008"
+      ],
+      "observation_count": 1,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 1
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "8b",
+      "module": "Module 8B",
+      "consensus_id": "M8B-S002",
+      "topic_id": "M8B-T002",
+      "statement": "Injury mechanism is a primary evidence boundary: contusion, compression, transection, hemisection, crush, ischemia, and chemical or demyelinating models answer different questions and should not be pooled as interchangeable SCI models.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M8B-O002"
+      ],
+      "supporting_claims": [
+        "M8B-C004",
+        "M8B-C005",
+        "M8B-C006"
+      ],
+      "boundary_records": [
+        "M8B-B001",
+        "M8B-B002",
+        "M8B-B003",
+        "M8B-B004",
+        "M8B-B005",
+        "M8B-B006",
+        "M8B-B007",
+        "M8B-B008"
+      ],
+      "observation_count": 1,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 1
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "promote as boundary consensus after wording pass"
+    },
+    {
+      "module_key": "8b",
+      "module": "Module 8B",
+      "consensus_id": "M8B-S003",
+      "topic_id": "M8B-T003",
+      "statement": "Spinal level and tract involvement define what a model can test; cervical, thoracic, lumbar, dorsal-column, lateral-column, complete, and incomplete injuries should be mapped to the relevant motor, sensory, autonomic, and respiratory endpoints.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M8B-O003"
+      ],
+      "supporting_claims": [
+        "M8B-C007",
+        "M8B-C008",
+        "M8B-C009"
+      ],
+      "boundary_records": [
+        "M8B-B001",
+        "M8B-B002",
+        "M8B-B003",
+        "M8B-B004",
+        "M8B-B005",
+        "M8B-B006",
+        "M8B-B007",
+        "M8B-B008"
+      ],
+      "observation_count": 1,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 1
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "8b",
+      "module": "Module 8B",
+      "consensus_id": "M8B-S004",
+      "topic_id": "M8B-T004",
+      "statement": "Severity and chronicity are not metadata: force, displacement, duration, lesion completeness, time post-injury, and spontaneous recovery determine whether a model is appropriate for acute neuroprotection, chronic reconstruction, biomaterial testing, or rehabilitation studies.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M8B-O004"
+      ],
+      "supporting_claims": [
+        "M8B-C010",
+        "M8B-C011",
+        "M8B-C012"
+      ],
+      "boundary_records": [
+        "M8B-B001",
+        "M8B-B002",
+        "M8B-B003",
+        "M8B-B004",
+        "M8B-B005",
+        "M8B-B006",
+        "M8B-B007",
+        "M8B-B008"
+      ],
+      "observation_count": 1,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 1
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "8b",
+      "module": "Module 8B",
+      "consensus_id": "M8B-S005",
+      "topic_id": "M8B-T005",
+      "statement": "In vivo model selection should be tied to lesion architecture. Models that create cystic cavities, spared tissue bridges, fibrotic cores, astrocytic borders, demyelination, or transection gaps support different reconstruction and repair claims.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M8B-O005"
+      ],
+      "supporting_claims": [
+        "M8B-C013",
+        "M8B-C014",
+        "M8B-C015"
+      ],
+      "boundary_records": [
+        "M8B-B001",
+        "M8B-B002",
+        "M8B-B003",
+        "M8B-B004",
+        "M8B-B005",
+        "M8B-B006",
+        "M8B-B007",
+        "M8B-B008"
+      ],
+      "observation_count": 1,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 1
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "8b",
+      "module": "Module 8B",
+      "consensus_id": "M8B-S006",
+      "topic_id": "M8B-T006",
+      "statement": "Behavioral endpoints must be interpreted as model-specific functional readouts rather than generic recovery measures; locomotor, skilled forelimb, sensory, autonomic, respiratory, pain, and electrophysiologic assays require separate endpoint fields.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M8B-O006"
+      ],
+      "supporting_claims": [
+        "M8B-C016"
+      ],
+      "boundary_records": [
+        "M8B-B001",
+        "M8B-B002",
+        "M8B-B003",
+        "M8B-B004",
+        "M8B-B005",
+        "M8B-B006",
+        "M8B-B007",
+        "M8B-B008"
+      ],
+      "observation_count": 1,
+      "claim_count": 1,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 1
+      },
+      "claim_confidence": {
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "8b",
+      "module": "Module 8B",
+      "consensus_id": "M8B-S007",
+      "topic_id": "M8B-T007",
+      "statement": "Large-animal and translational in vivo models add value for scale, surgical handling, device placement, imaging, and safety, but they do not automatically validate efficacy unless matched endpoints and controls are present.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M8B-O007"
+      ],
+      "supporting_claims": [
+        "M8B-C016"
+      ],
+      "boundary_records": [
+        "M8B-B001",
+        "M8B-B002",
+        "M8B-B003",
+        "M8B-B004",
+        "M8B-B005",
+        "M8B-B006",
+        "M8B-B007",
+        "M8B-B008"
+      ],
+      "observation_count": 1,
+      "claim_count": 1,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 1
+      },
+      "claim_confidence": {
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "8b",
+      "module": "Module 8B",
+      "consensus_id": "M8B-S008",
+      "topic_id": "M8B-T008",
+      "statement": "Module 8 should function as the in vivo model ontology layer: every downstream consensus claim should preserve species, injury mechanism, level, severity, chronicity, lesion architecture, endpoint family, and extraction confidence.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M8B-O008"
+      ],
+      "supporting_claims": [
+        "M8B-C016"
+      ],
+      "boundary_records": [
+        "M8B-B001",
+        "M8B-B002",
+        "M8B-B003",
+        "M8B-B004",
+        "M8B-B005",
+        "M8B-B006",
+        "M8B-B007",
+        "M8B-B008"
+      ],
+      "observation_count": 1,
+      "claim_count": 1,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 1
+      },
+      "claim_confidence": {
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "9b",
+      "module": "Module 9B",
+      "consensus_id": "M9B-S001",
+      "topic_id": "M9B-T001",
+      "statement": "In vitro and ex vivo SCI models should be classified first by culture format, because dissociated cultures, organoids, slices, explants, microfluidic systems, and biomaterial cultures preserve different degrees of cytoarchitecture, injury context, and assay control.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M9B-O001",
+        "M9B-O002"
+      ],
+      "supporting_claims": [
+        "M9B-C001",
+        "M9B-C002",
+        "M9B-C003"
+      ],
+      "boundary_records": [
+        "M9B-B001",
+        "M9B-B002",
+        "M9B-B003",
+        "M9B-B004",
+        "M9B-B005",
+        "M9B-B006",
+        "M9B-B007",
+        "M9B-B008"
+      ],
+      "observation_count": 2,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 2
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "9b",
+      "module": "Module 9B",
+      "consensus_id": "M9B-S002",
+      "topic_id": "M9B-T002",
+      "statement": "Cell source and maturity determine what an in vitro model can validate: primary rodent cells, human iPSC derivatives, organoids, glia, neurons, macrophages, and mixed cultures should not be pooled without lineage, maturation, and species labels.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M9B-O003",
+        "M9B-O004"
+      ],
+      "supporting_claims": [
+        "M9B-C004",
+        "M9B-C005",
+        "M9B-C006"
+      ],
+      "boundary_records": [
+        "M9B-B001",
+        "M9B-B002",
+        "M9B-B003",
+        "M9B-B004",
+        "M9B-B005",
+        "M9B-B006",
+        "M9B-B007",
+        "M9B-B008"
+      ],
+      "observation_count": 2,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 2
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "9b",
+      "module": "Module 9B",
+      "consensus_id": "M9B-S003",
+      "topic_id": "M9B-T003",
+      "statement": "Injury stimulus must remain explicit in culture-model synthesis; scratch, stretch, compression, excitotoxicity, hypoxia, inflammatory challenge, myelin debris, matrix inhibition, and conditioned media model different parts of SCI.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M9B-O005",
+        "M9B-O006"
+      ],
+      "supporting_claims": [
+        "M9B-C007",
+        "M9B-C008",
+        "M9B-C009"
+      ],
+      "boundary_records": [
+        "M9B-B001",
+        "M9B-B002",
+        "M9B-B003",
+        "M9B-B004",
+        "M9B-B005",
+        "M9B-B006",
+        "M9B-B007",
+        "M9B-B008"
+      ],
+      "observation_count": 2,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 2
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "9b",
+      "module": "Module 9B",
+      "consensus_id": "M9B-S004",
+      "topic_id": "M9B-T004",
+      "statement": "In vitro readouts are strongest when matched to their intended validation role: survival, neurite growth, electrophysiology, myelination, glial activation, cytokines, matrix response, migration, and biomaterial compatibility require separate assay fields.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M9B-O007",
+        "M9B-O008"
+      ],
+      "supporting_claims": [
+        "M9B-C010",
+        "M9B-C011",
+        "M9B-C012"
+      ],
+      "boundary_records": [
+        "M9B-B001",
+        "M9B-B002",
+        "M9B-B003",
+        "M9B-B004",
+        "M9B-B005",
+        "M9B-B006",
+        "M9B-B007",
+        "M9B-B008"
+      ],
+      "observation_count": 2,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 2
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "9b",
+      "module": "Module 9B",
+      "consensus_id": "M9B-S005",
+      "topic_id": "M9B-T005",
+      "statement": "Matrix, myelin-debris, and inhibitory-substrate models are useful for isolating regeneration barriers, but they cannot substitute for full lesion architecture unless paired with cells, ECM, inflammatory cues, and 3D spatial context.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M9B-O009",
+        "M9B-O010"
+      ],
+      "supporting_claims": [
+        "M9B-C013",
+        "M9B-C014",
+        "M9B-C015"
+      ],
+      "boundary_records": [
+        "M9B-B001",
+        "M9B-B002",
+        "M9B-B003",
+        "M9B-B004",
+        "M9B-B005",
+        "M9B-B006",
+        "M9B-B007",
+        "M9B-B008"
+      ],
+      "observation_count": 2,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 2
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "9b",
+      "module": "Module 9B",
+      "consensus_id": "M9B-S006",
+      "topic_id": "M9B-T006",
+      "statement": "Biomaterial-compatible in vitro systems are best used as bridge assays for cytocompatibility, adhesion, release, differentiation, axon guidance, and inflammatory response before in vivo testing, not as standalone proof of repair efficacy.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M9B-O011",
+        "M9B-O012"
+      ],
+      "supporting_claims": [
+        "M9B-C016",
+        "M9B-C017"
+      ],
+      "boundary_records": [
+        "M9B-B001",
+        "M9B-B002",
+        "M9B-B003",
+        "M9B-B004",
+        "M9B-B005",
+        "M9B-B006",
+        "M9B-B007",
+        "M9B-B008"
+      ],
+      "observation_count": 2,
+      "claim_count": 2,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 2
+      },
+      "claim_confidence": {
+        "medium": 2
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "9b",
+      "module": "Module 9B",
+      "consensus_id": "M9B-S007",
+      "topic_id": "M9B-T007",
+      "statement": "Organoid, slice, and explant systems provide higher-order tissue context than dissociated cultures, but translation depends on species, maturation, vascular or immune absence, injury induction, and whether host-lesion architecture is represented.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M9B-O013",
+        "M9B-O014"
+      ],
+      "supporting_claims": [
+        "M9B-C017"
+      ],
+      "boundary_records": [
+        "M9B-B001",
+        "M9B-B002",
+        "M9B-B003",
+        "M9B-B004",
+        "M9B-B005",
+        "M9B-B006",
+        "M9B-B007",
+        "M9B-B008"
+      ],
+      "observation_count": 2,
+      "claim_count": 1,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 2
+      },
+      "claim_confidence": {
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "9b",
+      "module": "Module 9B",
+      "consensus_id": "M9B-S008",
+      "topic_id": "M9B-T008",
+      "statement": "Module 9 should function as the validation-model ontology layer: culture format, cell source, maturity, injury stimulus, matrix context, biomaterial exposure, readout, and confidence level must be retained before in vitro evidence is used in cross-module consensus.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M9B-O015",
+        "M9B-O016"
+      ],
+      "supporting_claims": [
+        "M9B-C017"
+      ],
+      "boundary_records": [
+        "M9B-B001",
+        "M9B-B002",
+        "M9B-B003",
+        "M9B-B004",
+        "M9B-B005",
+        "M9B-B006",
+        "M9B-B007",
+        "M9B-B008"
+      ],
+      "observation_count": 2,
+      "claim_count": 1,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 2
+      },
+      "claim_confidence": {
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "10b",
+      "module": "Module 10B",
+      "consensus_id": "M10B-S001",
+      "topic_id": "M10B-T001",
+      "statement": "SCI clinical-trial evidence must preserve registry status and verification date because recruiting, active, completed, terminated, withdrawn, unknown, and results-posted trials carry different evidentiary meanings.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M10B-O001",
+        "M10B-O002",
+        "M10B-O003",
+        "M10B-O004",
+        "M10B-O005",
+        "M10B-O006",
+        "M10B-O007",
+        "M10B-O008",
+        "M10B-O009",
+        "M10B-O010"
+      ],
+      "supporting_claims": [
+        "M10B-C001",
+        "M10B-C002",
+        "M10B-C003"
+      ],
+      "boundary_records": [
+        "M10B-B001",
+        "M10B-B002",
+        "M10B-B003",
+        "M10B-B004",
+        "M10B-B005",
+        "M10B-B006",
+        "M10B-B007",
+        "M10B-B008"
+      ],
+      "observation_count": 10,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 10
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "10b",
+      "module": "Module 10B",
+      "consensus_id": "M10B-S002",
+      "topic_id": "M10B-T002",
+      "statement": "Most SCI trials in the registry-first corpus should be interpreted initially as safety, feasibility, dosing, device, rehabilitation, or endpoint-development evidence unless controlled results support efficacy.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M10B-O011",
+        "M10B-O012",
+        "M10B-O013",
+        "M10B-O014",
+        "M10B-O015",
+        "M10B-O016",
+        "M10B-O017",
+        "M10B-O018",
+        "M10B-O019",
+        "M10B-O020"
+      ],
+      "supporting_claims": [
+        "M10B-C004",
+        "M10B-C005",
+        "M10B-C006"
+      ],
+      "boundary_records": [
+        "M10B-B001",
+        "M10B-B002",
+        "M10B-B003",
+        "M10B-B004",
+        "M10B-B005",
+        "M10B-B006",
+        "M10B-B007",
+        "M10B-B008"
+      ],
+      "observation_count": 10,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 10
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "10b",
+      "module": "Module 10B",
+      "consensus_id": "M10B-S003",
+      "topic_id": "M10B-T003",
+      "statement": "Registry records are not equivalent to published outcomes; each trial needs linkage to results postings, publications, intervention details, sample size, comparator, and endpoint definitions before quantitative clinical synthesis.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M10B-O021",
+        "M10B-O022",
+        "M10B-O023",
+        "M10B-O024",
+        "M10B-O025",
+        "M10B-O026",
+        "M10B-O027",
+        "M10B-O028",
+        "M10B-O029",
+        "M10B-O030"
+      ],
+      "supporting_claims": [
+        "M10B-C007",
+        "M10B-C008",
+        "M10B-C009"
+      ],
+      "boundary_records": [
+        "M10B-B001",
+        "M10B-B002",
+        "M10B-B003",
+        "M10B-B004",
+        "M10B-B005",
+        "M10B-B006",
+        "M10B-B007",
+        "M10B-B008"
+      ],
+      "observation_count": 10,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 10
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "10b",
+      "module": "Module 10B",
+      "consensus_id": "M10B-S004",
+      "topic_id": "M10B-T004",
+      "statement": "Intervention-class ontology is essential for clinical synthesis because cells, devices, drugs, rehabilitation, stimulation, surgery, biologics, behavioral interventions, and observational protocols answer different translational questions.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M10B-O031",
+        "M10B-O032",
+        "M10B-O033",
+        "M10B-O034",
+        "M10B-O035",
+        "M10B-O036",
+        "M10B-O037",
+        "M10B-O038",
+        "M10B-O039",
+        "M10B-O040"
+      ],
+      "supporting_claims": [
+        "M10B-C010",
+        "M10B-C011",
+        "M10B-C012"
+      ],
+      "boundary_records": [
+        "M10B-B001",
+        "M10B-B002",
+        "M10B-B003",
+        "M10B-B004",
+        "M10B-B005",
+        "M10B-B006",
+        "M10B-B007",
+        "M10B-B008"
+      ],
+      "observation_count": 10,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 10
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "10b",
+      "module": "Module 10B",
+      "consensus_id": "M10B-S005",
+      "topic_id": "M10B-T005",
+      "statement": "SCI clinical-trial rows must retain population boundaries, including traumatic versus nontraumatic injury, acute versus chronic stage, complete versus incomplete injury, neurological level, age, comorbidity, and whether SCI is the primary condition.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M10B-O041",
+        "M10B-O042",
+        "M10B-O043",
+        "M10B-O044",
+        "M10B-O045",
+        "M10B-O046",
+        "M10B-O047",
+        "M10B-O048",
+        "M10B-O049",
+        "M10B-O050"
+      ],
+      "supporting_claims": [
+        "M10B-C013",
+        "M10B-C014",
+        "M10B-C015"
+      ],
+      "boundary_records": [
+        "M10B-B001",
+        "M10B-B002",
+        "M10B-B003",
+        "M10B-B004",
+        "M10B-B005",
+        "M10B-B006",
+        "M10B-B007",
+        "M10B-B008"
+      ],
+      "observation_count": 10,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 10
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "10b",
+      "module": "Module 10B",
+      "consensus_id": "M10B-S006",
+      "topic_id": "M10B-T006",
+      "statement": "Terminated, withdrawn, suspended, and unknown-status trials are informative about feasibility and translation risk, but they should not be treated as negative efficacy evidence without documented reasons and outcome data.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M10B-O051",
+        "M10B-O052",
+        "M10B-O053",
+        "M10B-O054",
+        "M10B-O055",
+        "M10B-O056",
+        "M10B-O057",
+        "M10B-O058",
+        "M10B-O059",
+        "M10B-O060"
+      ],
+      "supporting_claims": [
+        "M10B-C016",
+        "M10B-C017",
+        "M10B-C018"
+      ],
+      "boundary_records": [
+        "M10B-B001",
+        "M10B-B002",
+        "M10B-B003",
+        "M10B-B004",
+        "M10B-B005",
+        "M10B-B006",
+        "M10B-B007",
+        "M10B-B008"
+      ],
+      "observation_count": 10,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 10
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "10b",
+      "module": "Module 10B",
+      "consensus_id": "M10B-S007",
+      "topic_id": "M10B-T007",
+      "statement": "Clinical endpoints should be grouped by functional domain and evidence role: safety, adverse events, AIS or motor scores, walking, hand function, bladder, pain, autonomic function, quality of life, imaging, biomarkers, and device performance require separate synthesis fields.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M10B-O061",
+        "M10B-O062",
+        "M10B-O063",
+        "M10B-O064",
+        "M10B-O065",
+        "M10B-O066",
+        "M10B-O067",
+        "M10B-O068",
+        "M10B-O069",
+        "M10B-O070"
+      ],
+      "supporting_claims": [
+        "M10B-C019",
+        "M10B-C020",
+        "M10B-C021"
+      ],
+      "boundary_records": [
+        "M10B-B001",
+        "M10B-B002",
+        "M10B-B003",
+        "M10B-B004",
+        "M10B-B005",
+        "M10B-B006",
+        "M10B-B007",
+        "M10B-B008"
+      ],
+      "observation_count": 10,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 10
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "10b",
+      "module": "Module 10B",
+      "consensus_id": "M10B-S008",
+      "topic_id": "M10B-T008",
+      "statement": "Module 10 should serve as the clinical translation map for the database: it can identify what has reached humans and where evidence is thin, but causal or efficacy claims require linked results and intervention-specific review.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M10B-O071",
+        "M10B-O072",
+        "M10B-O073",
+        "M10B-O074",
+        "M10B-O075",
+        "M10B-O076",
+        "M10B-O077",
+        "M10B-O078",
+        "M10B-O079",
+        "M10B-O080"
+      ],
+      "supporting_claims": [
+        "M10B-C022",
+        "M10B-C023",
+        "M10B-C024"
+      ],
+      "boundary_records": [
+        "M10B-B001",
+        "M10B-B002",
+        "M10B-B003",
+        "M10B-B004",
+        "M10B-B005",
+        "M10B-B006",
+        "M10B-B007",
+        "M10B-B008"
+      ],
+      "observation_count": 10,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 10
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "11b",
+      "module": "Module 11B",
+      "consensus_id": "M11B-S001",
+      "topic_id": "M11B-T001",
+      "statement": "CSF drainage and perfusion-pressure protocols are established perioperative spinal-cord-protection strategies in aortic surgery contexts, but synthesis must separate prophylactic, therapeutic, rescue, pressure-target, and drain-complication endpoints.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M11B-O001",
+        "M11B-O002",
+        "M11B-O003",
+        "M11B-O004"
+      ],
+      "supporting_claims": [
+        "M11B-C001",
+        "M11B-C002",
+        "M11B-C003",
+        "M11B-C004"
+      ],
+      "boundary_records": [
+        "M11B-B001",
+        "M11B-B002",
+        "M11B-B003",
+        "M11B-B004",
+        "M11B-B005",
+        "M11B-B006",
+        "M11B-B007",
+        "M11B-B008"
+      ],
+      "observation_count": 4,
+      "claim_count": 4,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 4
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "11b",
+      "module": "Module 11B",
+      "consensus_id": "M11B-S002",
+      "topic_id": "M11B-T002",
+      "statement": "Staged aortic repair and collateral-network conditioning are plausible spinal-cord-protection strategies because they aim to preserve or recruit perfusion before definitive coverage, but open, endovascular, hybrid, interval, and extent-of-coverage designs require separate interpretation.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M11B-O005",
+        "M11B-O006",
+        "M11B-O007",
+        "M11B-O008"
+      ],
+      "supporting_claims": [
+        "M11B-C005",
+        "M11B-C006",
+        "M11B-C007",
+        "M11B-C008"
+      ],
+      "boundary_records": [
+        "M11B-B001",
+        "M11B-B002",
+        "M11B-B003",
+        "M11B-B004",
+        "M11B-B005",
+        "M11B-B006",
+        "M11B-B007",
+        "M11B-B008"
+      ],
+      "observation_count": 4,
+      "claim_count": 4,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 4
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "11b",
+      "module": "Module 11B",
+      "consensus_id": "M11B-S003",
+      "topic_id": "M11B-T003",
+      "statement": "Direct or local ischemic preconditioning and early postconditioning have the clearest spinal-cord-specific conditioning logic in animal ischemia models, but species, occlusion method, ischemia duration, timing, and reperfusion window determine applicability.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M11B-O009",
+        "M11B-O010",
+        "M11B-O011",
+        "M11B-O012"
+      ],
+      "supporting_claims": [
+        "M11B-C009",
+        "M11B-C010",
+        "M11B-C011",
+        "M11B-C012"
+      ],
+      "boundary_records": [
+        "M11B-B001",
+        "M11B-B002",
+        "M11B-B003",
+        "M11B-B004",
+        "M11B-B005",
+        "M11B-B006",
+        "M11B-B007",
+        "M11B-B008"
+      ],
+      "observation_count": 4,
+      "claim_count": 4,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 4
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "11b",
+      "module": "Module 11B",
+      "consensus_id": "M11B-S004",
+      "topic_id": "M11B-T004",
+      "statement": "Remote ischemic conditioning evidence is weaker for spinal-cord-specific protection than direct/local conditioning because limb, kidney, or obstructive-sleep-apnea analogs often measure systemic or non-spinal endpoints rather than direct cord preservation.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M11B-O013",
+        "M11B-O014",
+        "M11B-O015",
+        "M11B-O016"
+      ],
+      "supporting_claims": [
+        "M11B-C013",
+        "M11B-C014",
+        "M11B-C015",
+        "M11B-C016"
+      ],
+      "boundary_records": [
+        "M11B-B001",
+        "M11B-B002",
+        "M11B-B003",
+        "M11B-B004",
+        "M11B-B005",
+        "M11B-B006",
+        "M11B-B007",
+        "M11B-B008"
+      ],
+      "observation_count": 4,
+      "claim_count": 4,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 4
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "11b",
+      "module": "Module 11B",
+      "consensus_id": "M11B-S005",
+      "topic_id": "M11B-T005",
+      "statement": "Hypothermia, anesthetic conditioning, and pharmacologic protection form a perioperative adjunct family, but causal strength depends on whether the intervention is isolated from perfusion management, CSF drainage, monitoring, and rescue bundles.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M11B-O017",
+        "M11B-O018",
+        "M11B-O019",
+        "M11B-O020"
+      ],
+      "supporting_claims": [
+        "M11B-C017",
+        "M11B-C018",
+        "M11B-C019",
+        "M11B-C020"
+      ],
+      "boundary_records": [
+        "M11B-B001",
+        "M11B-B002",
+        "M11B-B003",
+        "M11B-B004",
+        "M11B-B005",
+        "M11B-B006",
+        "M11B-B007",
+        "M11B-B008"
+      ],
+      "observation_count": 4,
+      "claim_count": 4,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 4
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "11b",
+      "module": "Module 11B",
+      "consensus_id": "M11B-S006",
+      "topic_id": "M11B-T006",
+      "statement": "Neuromonitoring can guide risk detection and rescue during aortic procedures, but it is not itself proof of neuroprotection unless changes are linked to a defined intervention and neurologic endpoint recovery.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M11B-O021",
+        "M11B-O022",
+        "M11B-O023",
+        "M11B-O024"
+      ],
+      "supporting_claims": [
+        "M11B-C021",
+        "M11B-C022",
+        "M11B-C023",
+        "M11B-C024"
+      ],
+      "boundary_records": [
+        "M11B-B001",
+        "M11B-B002",
+        "M11B-B003",
+        "M11B-B004",
+        "M11B-B005",
+        "M11B-B006",
+        "M11B-B007",
+        "M11B-B008"
+      ],
+      "observation_count": 4,
+      "claim_count": 4,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 4
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "11b",
+      "module": "Module 11B",
+      "consensus_id": "M11B-S007",
+      "topic_id": "M11B-T007",
+      "statement": "Clinical trial and registry rows in perioperative spinal-cord ischemia should remain protocol, status, feasibility, safety, or monitoring evidence until linked outcomes define the intervention, comparator, and neurologic endpoint.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M11B-O025",
+        "M11B-O026",
+        "M11B-O027",
+        "M11B-O028"
+      ],
+      "supporting_claims": [
+        "M11B-C025",
+        "M11B-C026",
+        "M11B-C027",
+        "M11B-C028"
+      ],
+      "boundary_records": [
+        "M11B-B001",
+        "M11B-B002",
+        "M11B-B003",
+        "M11B-B004",
+        "M11B-B005",
+        "M11B-B006",
+        "M11B-B007",
+        "M11B-B008"
+      ],
+      "observation_count": 4,
+      "claim_count": 4,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 4
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "promote as boundary consensus after wording pass"
+    },
+    {
+      "module_key": "11b",
+      "module": "Module 11B",
+      "consensus_id": "M11B-S008",
+      "topic_id": "M11B-T008",
+      "statement": "Module 11 is a conditioning analog for the SCI project, not direct evidence for traumatic chronic reconstruction: perioperative ischemia prevention can inform timing, perfusion, and host-state logic only when ischemic versus traumatic mechanisms are kept separate.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M11B-O029",
+        "M11B-O030",
+        "M11B-O031",
+        "M11B-O032"
+      ],
+      "supporting_claims": [
+        "M11B-C029",
+        "M11B-C030",
+        "M11B-C031",
+        "M11B-C032"
+      ],
+      "boundary_records": [
+        "M11B-B001",
+        "M11B-B002",
+        "M11B-B003",
+        "M11B-B004",
+        "M11B-B005",
+        "M11B-B006",
+        "M11B-B007",
+        "M11B-B008"
+      ],
+      "observation_count": 4,
+      "claim_count": 4,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 4
+      },
+      "claim_confidence": {
+        "medium": 4
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "12b",
+      "module": "Module 12B",
+      "consensus_id": "M12B-S001",
+      "topic_id": "M12B-T001",
+      "statement": "Low-dose LPS preconditioning is consensus-ready as a mechanistic discovery model for SCI because timed innate stimulation can shift resident and recruited immune responses toward protective programs; it should not be summarized as simple inflammatory suppression.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M12B-O001",
+        "M12B-O002",
+        "M12B-O003"
+      ],
+      "supporting_claims": [
+        "M12B-C001",
+        "M12B-C002",
+        "M12B-C003"
+      ],
+      "boundary_records": [
+        "M12B-B001",
+        "M12B-B002",
+        "M12B-B003",
+        "M12B-B004",
+        "M12B-B005",
+        "M12B-B006",
+        "M12B-B007",
+        "M12B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 2,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "high": 2,
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "12b",
+      "module": "Module 12B",
+      "consensus_id": "M12B-S002",
+      "topic_id": "M12B-T002",
+      "statement": "Repeated systemic LPS can induce a protective spinal microglia-endothelial state in spinal ischemia contexts, with IL-1/IL-1R1 signaling and injection schedule acting as essential boundaries for interpreting protection.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M12B-O004",
+        "M12B-O005",
+        "M12B-O006"
+      ],
+      "supporting_claims": [
+        "M12B-C004",
+        "M12B-C005",
+        "M12B-C006"
+      ],
+      "boundary_records": [
+        "M12B-B001",
+        "M12B-B002",
+        "M12B-B003",
+        "M12B-B004",
+        "M12B-B005",
+        "M12B-B006",
+        "M12B-B007",
+        "M12B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 1,
+        "medium": 2
+      },
+      "claim_confidence": {
+        "high": 1,
+        "medium": 2
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "12b",
+      "module": "Module 12B",
+      "consensus_id": "M12B-S003",
+      "topic_id": "M12B-T003",
+      "statement": "TLR4 and innate-adaptor routing determine whether stimulation becomes protective tolerance or damaging inflammation; TRIF/IRF3, MyD88/CXCL10, IL-10, IL-1, NF-kB, and caspase boundaries must be retained.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M12B-O007",
+        "M12B-O008",
+        "M12B-O009"
+      ],
+      "supporting_claims": [
+        "M12B-C007",
+        "M12B-C008",
+        "M12B-C009"
+      ],
+      "boundary_records": [
+        "M12B-B001",
+        "M12B-B002",
+        "M12B-B003",
+        "M12B-B004",
+        "M12B-B005",
+        "M12B-B006",
+        "M12B-B007",
+        "M12B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 3
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "12b",
+      "module": "Module 12B",
+      "consensus_id": "M12B-S004",
+      "topic_id": "M12B-T004",
+      "statement": "Peripheral monocytes and endothelial cells are credible upstream regulatory compartments for conditioning because systemic innate priming can alter CNS injury response without requiring the spinal cord parenchyma to be the initial target.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M12B-O010",
+        "M12B-O011",
+        "M12B-O012"
+      ],
+      "supporting_claims": [
+        "M12B-C010",
+        "M12B-C011",
+        "M12B-C012"
+      ],
+      "boundary_records": [
+        "M12B-B001",
+        "M12B-B002",
+        "M12B-B003",
+        "M12B-B004",
+        "M12B-B005",
+        "M12B-B006",
+        "M12B-B007",
+        "M12B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 3
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "12b",
+      "module": "Module 12B",
+      "consensus_id": "M12B-S005",
+      "topic_id": "M12B-T005",
+      "statement": "TLR4 and inflammatory signaling after SCI can support repair-relevant processes as well as injury amplification, so the project should pursue state- and timing-specific regulatory nodes rather than a blanket anti-inflammatory framing.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M12B-O013",
+        "M12B-O014",
+        "M12B-O015"
+      ],
+      "supporting_claims": [
+        "M12B-C013",
+        "M12B-C014",
+        "M12B-C015"
+      ],
+      "boundary_records": [
+        "M12B-B001",
+        "M12B-B002",
+        "M12B-B003",
+        "M12B-B004",
+        "M12B-B005",
+        "M12B-B006",
+        "M12B-B007",
+        "M12B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 1,
+        "medium": 2
+      },
+      "claim_confidence": {
+        "high": 1,
+        "medium": 2
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "12b",
+      "module": "Module 12B",
+      "consensus_id": "M12B-S006",
+      "topic_id": "M12B-T006",
+      "statement": "Post-injury or chronic LPS studies reveal inducible spinal plasticity and microglial-state capacity, but they should be treated as boundary and comparator evidence unless the experiment tests pre-injury conditioning timing.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M12B-O016",
+        "M12B-O017",
+        "M12B-O018"
+      ],
+      "supporting_claims": [
+        "M12B-C016",
+        "M12B-C017",
+        "M12B-C018"
+      ],
+      "boundary_records": [
+        "M12B-B001",
+        "M12B-B002",
+        "M12B-B003",
+        "M12B-B004",
+        "M12B-B005",
+        "M12B-B006",
+        "M12B-B007",
+        "M12B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 3
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "promote as boundary consensus after wording pass"
+    },
+    {
+      "module_key": "12b",
+      "module": "Module 12B",
+      "consensus_id": "M12B-S007",
+      "topic_id": "M12B-T007",
+      "statement": "In vitro rows, ODC-SCI datasets, TLR-agonist studies, and microbiome host-conditioning analogs define validation paths for candidate regulatory nodes, but they require source extraction before they can carry high-confidence mechanistic claims.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M12B-O019",
+        "M12B-O020",
+        "M12B-O021"
+      ],
+      "supporting_claims": [
+        "M12B-C019",
+        "M12B-C020",
+        "M12B-C021"
+      ],
+      "boundary_records": [
+        "M12B-B001",
+        "M12B-B002",
+        "M12B-B003",
+        "M12B-B004",
+        "M12B-B005",
+        "M12B-B006",
+        "M12B-B007",
+        "M12B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 3
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "12b",
+      "module": "Module 12B",
+      "consensus_id": "M12B-S008",
+      "topic_id": "M12B-T008",
+      "statement": "Module 12 should be used to identify endogenous protective programs and safer host-conditioning analogs. LPS remains a discovery platform for Aim 1 biology, not a proposed clinical conditioning agent before implantation or reconstruction.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M12B-O022",
+        "M12B-O023",
+        "M12B-O024"
+      ],
+      "supporting_claims": [
+        "M12B-C022",
+        "M12B-C023",
+        "M12B-C024"
+      ],
+      "boundary_records": [
+        "M12B-B001",
+        "M12B-B002",
+        "M12B-B003",
+        "M12B-B004",
+        "M12B-B005",
+        "M12B-B006",
+        "M12B-B007",
+        "M12B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 3
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    }
+  ]
+}

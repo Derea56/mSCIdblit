@@ -79,13 +79,18 @@ mSCIdblit/
 │   ├── OLLAMA_CHUNK_EXTRACTION.md    # Local model chunking workflow
 │   ├── MODULE_1_2_SYNTHESIS.md       # First cross-module lesion/scaffold synthesis
 │   ├── AIMS_EVIDENCE_MAP.md          # Specific aims to module evidence map
+│   ├── CONSENSUS_REVIEW_REGISTER.md  # Cross-module consensus review register
+│   ├── MATERIALIZED_INTEGRITY_AUDIT.md # Generated bundle/SQL integrity audit
 │   └── VALIDATION_QUERIES.md         # Database hygiene checks
 ├── scripts/
 │   ├── export_tracker_evidence_bundle.py # Shared 1B/2B tracker audit + JSON export
+│   ├── backfill_observation_per_experiment.py # Ensure exact B observations per A experiment
+│   ├── audit_materialized_integrity.py # Bundle/SQL integrity gate
 │   ├── export_module1_full_sql.py    # Module 1 SQL materialization
 │   ├── export_module1_evidence_bundle.py # Module 1 SQL-oriented evidence JSON
 │   ├── export_module2_full_sql.py    # Module 2 SQL materialization
 │   ├── export_module_full_sql.py     # Generic B-module SQL materialization
+│   ├── export_consensus_review_register.py # Cross-module consensus review export
 │   ├── ollama_chunk_extract.py       # Generate small Ollama extraction prompts
 │   ├── seed_controlled_vocab.sql     # Populate reference tables
 │   └── smoke_test.sql                # Toy workflow validation script

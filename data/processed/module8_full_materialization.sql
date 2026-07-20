@@ -1669,7 +1669,7 @@ INSERT INTO _m8_link_map (tracker_id, link_id) SELECT 'M8B-L040', link_id FROM i
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Species/strain model boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'In vivo SCI evidence must retain species, strain, age, sex, and genetic background because model choice changes lesion biology, immune response, spontaneous recovery, surgical feasibility, and translatability.',
     'M8B-T001',
     1,
     'consensus-ready first pass',
@@ -1688,7 +1688,7 @@ WHERE c.tracker_id = 'M8B-S001';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Injury mechanism boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'Injury mechanism is a primary evidence boundary: contusion, compression, transection, hemisection, crush, ischemia, and chemical or demyelinating models answer different questions and should not be pooled as interchangeable SCI models.',
     'M8B-T002',
     1,
     'consensus-ready first pass',
@@ -1707,7 +1707,7 @@ WHERE c.tracker_id = 'M8B-S002';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Spinal level and tract boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'Spinal level and tract involvement define what a model can test; cervical, thoracic, lumbar, dorsal-column, lateral-column, complete, and incomplete injuries should be mapped to the relevant motor, sensory, autonomic, and respiratory endpoints.',
     'M8B-T003',
     1,
     'consensus-ready first pass',
@@ -1726,7 +1726,7 @@ WHERE c.tracker_id = 'M8B-S003';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Severity/chronicity boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'Severity and chronicity are not metadata: force, displacement, duration, lesion completeness, time post-injury, and spontaneous recovery determine whether a model is appropriate for acute neuroprotection, chronic reconstruction, biomaterial testing, or rehabilitation studies.',
     'M8B-T004',
     1,
     'consensus-ready first pass',
@@ -1745,7 +1745,7 @@ WHERE c.tracker_id = 'M8B-S004';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Lesion architecture boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'In vivo model selection should be tied to lesion architecture. Models that create cystic cavities, spared tissue bridges, fibrotic cores, astrocytic borders, demyelination, or transection gaps support different reconstruction and repair claims.',
     'M8B-T005',
     1,
     'consensus-ready first pass',
@@ -1764,7 +1764,7 @@ WHERE c.tracker_id = 'M8B-S005';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Behavioral endpoint boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'Behavioral endpoints must be interpreted as model-specific functional readouts rather than generic recovery measures; locomotor, skilled forelimb, sensory, autonomic, respiratory, pain, and electrophysiologic assays require separate endpoint fields.',
     'M8B-T006',
     1,
     'consensus-ready first pass',
@@ -1783,7 +1783,7 @@ WHERE c.tracker_id = 'M8B-S006';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Large-animal/translational boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'Large-animal and translational in vivo models add value for scale, surgical handling, device placement, imaging, and safety, but they do not automatically validate efficacy unless matched endpoints and controls are present.',
     'M8B-T007',
     1,
     'consensus-ready first pass',
@@ -1802,7 +1802,7 @@ WHERE c.tracker_id = 'M8B-S007';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Model ontology confidence boundaries is consensus-ready as a first-pass boundary statement, but requires full-text/results upgrades before quantitative or causal strength claims.',
+    'Module 8 should function as the in vivo model ontology layer: every downstream consensus claim should preserve species, injury mechanism, level, severity, chronicity, lesion architecture, endpoint family, and extraction confidence.',
     'M8B-T008',
     1,
     'consensus-ready first pass',

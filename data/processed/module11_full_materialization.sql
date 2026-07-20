@@ -3506,7 +3506,7 @@ INSERT INTO _m11_link_map (tracker_id, link_id) SELECT 'M11B-L072', link_id FROM
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'CSF drainage and perfusion-pressure protection is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims.',
+    'CSF drainage and perfusion-pressure protocols are established perioperative spinal-cord-protection strategies in aortic surgery contexts, but synthesis must separate prophylactic, therapeutic, rescue, pressure-target, and drain-complication endpoints.',
     'M11B-T001',
     1,
     'consensus-ready first pass',
@@ -3543,7 +3543,7 @@ WHERE c.tracker_id = 'M11B-S001';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Staged repair and collateral-network conditioning is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims.',
+    'Staged aortic repair and collateral-network conditioning are plausible spinal-cord-protection strategies because they aim to preserve or recruit perfusion before definitive coverage, but open, endovascular, hybrid, interval, and extent-of-coverage designs require separate interpretation.',
     'M11B-T002',
     1,
     'consensus-ready first pass',
@@ -3580,7 +3580,7 @@ WHERE c.tracker_id = 'M11B-S002';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Direct/local ischemic conditioning and postconditioning is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims.',
+    'Direct or local ischemic preconditioning and early postconditioning have the clearest spinal-cord-specific conditioning logic in animal ischemia models, but species, occlusion method, ischemia duration, timing, and reperfusion window determine applicability.',
     'M11B-T003',
     1,
     'consensus-ready first pass',
@@ -3617,7 +3617,7 @@ WHERE c.tracker_id = 'M11B-S003';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Remote ischemic conditioning has weaker spinal-cord-specific evidence is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims.',
+    'Remote ischemic conditioning evidence is weaker for spinal-cord-specific protection than direct/local conditioning because limb, kidney, or obstructive-sleep-apnea analogs often measure systemic or non-spinal endpoints rather than direct cord preservation.',
     'M11B-T004',
     1,
     'consensus-ready first pass',
@@ -3654,7 +3654,7 @@ WHERE c.tracker_id = 'M11B-S004';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Hypothermia, anesthetic, and pharmacologic protection is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims.',
+    'Hypothermia, anesthetic conditioning, and pharmacologic protection form a perioperative adjunct family, but causal strength depends on whether the intervention is isolated from perfusion management, CSF drainage, monitoring, and rescue bundles.',
     'M11B-T005',
     1,
     'consensus-ready first pass',
@@ -3691,7 +3691,7 @@ WHERE c.tracker_id = 'M11B-S005';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Neuromonitoring-guided protection and rescue is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims.',
+    'Neuromonitoring can guide risk detection and rescue during aortic procedures, but it is not itself proof of neuroprotection unless changes are linked to a defined intervention and neurologic endpoint recovery.',
     'M11B-T006',
     1,
     'consensus-ready first pass',
@@ -3728,7 +3728,7 @@ WHERE c.tracker_id = 'M11B-S006';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Clinical trial and registry linkage is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims.',
+    'Clinical trial and registry rows in perioperative spinal-cord ischemia should remain protocol, status, feasibility, safety, or monitoring evidence until linked outcomes define the intervention, comparator, and neurologic endpoint.',
     'M11B-T007',
     1,
     'consensus-ready first pass',
@@ -3765,7 +3765,7 @@ WHERE c.tracker_id = 'M11B-S007';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Translation boundary to traumatic SCI reconstruction is consensus-ready as a first-pass perioperative ischemia-protection statement, but full-text extraction is needed before quantitative effect-size or protocol-strength claims.',
+    'Module 11 is a conditioning analog for the SCI project, not direct evidence for traumatic chronic reconstruction: perioperative ischemia prevention can inform timing, perfusion, and host-state logic only when ischemic versus traumatic mechanisms are kept separate.',
     'M11B-T008',
     1,
     'consensus-ready first pass',

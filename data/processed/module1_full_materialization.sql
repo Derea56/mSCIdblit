@@ -699,6 +699,20 @@ WITH inserted AS (
   INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, title, description, notes)
   SELECT p.paper_id, ep.paradigm_id,
     5,
+    'Tracker experiment M1A-P003-E005',
+    'Module 1 tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M1B-O085"], "tracker_id": "M1A-P003-E005"}'
+  FROM _m1_paper_map p
+  JOIN _m1_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M1A-P003'
+  RETURNING experiment_id
+)
+INSERT INTO _m1_experiment_map (tracker_id, experiment_id) SELECT 'M1A-P003-E005', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, title, description, notes)
+  SELECT p.paper_id, ep.paradigm_id,
+    5,
     'Tracker experiment M1A-P003-E005–E006',
     'Module 1 tracker-derived experiment placeholder for SQL materialization.',
     '{"observation_tracker_ids": ["M1B-O031"], "tracker_id": "M1A-P003-E005\u2013E006"}'
@@ -708,6 +722,20 @@ WITH inserted AS (
   RETURNING experiment_id
 )
 INSERT INTO _m1_experiment_map (tracker_id, experiment_id) SELECT 'M1A-P003-E005–E006', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, title, description, notes)
+  SELECT p.paper_id, ep.paradigm_id,
+    6,
+    'Tracker experiment M1A-P003-E006',
+    'Module 1 tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M1B-O086"], "tracker_id": "M1A-P003-E006"}'
+  FROM _m1_paper_map p
+  JOIN _m1_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M1A-P003'
+  RETURNING experiment_id
+)
+INSERT INTO _m1_experiment_map (tracker_id, experiment_id) SELECT 'M1A-P003-E006', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, title, description, notes)
@@ -736,6 +764,20 @@ WITH inserted AS (
   RETURNING experiment_id
 )
 INSERT INTO _m1_experiment_map (tracker_id, experiment_id) SELECT 'M1A-P004-E002', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, title, description, notes)
+  SELECT p.paper_id, ep.paradigm_id,
+    3,
+    'Tracker experiment M1A-P004-E003',
+    'Module 1 tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M1B-O087"], "tracker_id": "M1A-P004-E003"}'
+  FROM _m1_paper_map p
+  JOIN _m1_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M1A-P004'
+  RETURNING experiment_id
+)
+INSERT INTO _m1_experiment_map (tracker_id, experiment_id) SELECT 'M1A-P004-E003', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, title, description, notes)
@@ -923,6 +965,20 @@ WITH inserted AS (
   INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, title, description, notes)
   SELECT p.paper_id, ep.paradigm_id,
     4,
+    'Tracker experiment M1A-P007-E004',
+    'Module 1 tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M1B-O088"], "tracker_id": "M1A-P007-E004"}'
+  FROM _m1_paper_map p
+  JOIN _m1_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M1A-P007'
+  RETURNING experiment_id
+)
+INSERT INTO _m1_experiment_map (tracker_id, experiment_id) SELECT 'M1A-P007-E004', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, title, description, notes)
+  SELECT p.paper_id, ep.paradigm_id,
+    4,
     'Tracker experiment M1A-P007-E004–E005',
     'Module 1 tracker-derived experiment placeholder for SQL materialization.',
     '{"observation_tracker_ids": ["M1B-O044"], "tracker_id": "M1A-P007-E004\u2013E005"}'
@@ -932,6 +988,20 @@ WITH inserted AS (
   RETURNING experiment_id
 )
 INSERT INTO _m1_experiment_map (tracker_id, experiment_id) SELECT 'M1A-P007-E004–E005', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, title, description, notes)
+  SELECT p.paper_id, ep.paradigm_id,
+    5,
+    'Tracker experiment M1A-P007-E005',
+    'Module 1 tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M1B-O089"], "tracker_id": "M1A-P007-E005"}'
+  FROM _m1_paper_map p
+  JOIN _m1_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M1A-P007'
+  RETURNING experiment_id
+)
+INSERT INTO _m1_experiment_map (tracker_id, experiment_id) SELECT 'M1A-P007-E005', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, title, description, notes)
@@ -1245,6 +1315,20 @@ WITH inserted AS (
   INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, title, description, notes)
   SELECT p.paper_id, ep.paradigm_id,
     1,
+    'Tracker experiment M1A-P019-E001',
+    'Module 1 tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M1B-O090"], "tracker_id": "M1A-P019-E001"}'
+  FROM _m1_paper_map p
+  JOIN _m1_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M1A-P019'
+  RETURNING experiment_id
+)
+INSERT INTO _m1_experiment_map (tracker_id, experiment_id) SELECT 'M1A-P019-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, title, description, notes)
+  SELECT p.paper_id, ep.paradigm_id,
+    1,
     'Tracker experiment M1A-P019-E001–E002',
     'Module 1 tracker-derived experiment placeholder for SQL materialization.',
     '{"observation_tracker_ids": ["M1B-O066"], "tracker_id": "M1A-P019-E001\u2013E002"}'
@@ -1254,6 +1338,20 @@ WITH inserted AS (
   RETURNING experiment_id
 )
 INSERT INTO _m1_experiment_map (tracker_id, experiment_id) SELECT 'M1A-P019-E001–E002', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, title, description, notes)
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Tracker experiment M1A-P019-E002',
+    'Module 1 tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M1B-O091"], "tracker_id": "M1A-P019-E002"}'
+  FROM _m1_paper_map p
+  JOIN _m1_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M1A-P019'
+  RETURNING experiment_id
+)
+INSERT INTO _m1_experiment_map (tracker_id, experiment_id) SELECT 'M1A-P019-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, title, description, notes)
@@ -1427,6 +1525,20 @@ WITH inserted AS (
   INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, title, description, notes)
   SELECT p.paper_id, ep.paradigm_id,
     1,
+    'Tracker experiment M1A-P024-E001',
+    'Module 1 tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M1B-O092"], "tracker_id": "M1A-P024-E001"}'
+  FROM _m1_paper_map p
+  JOIN _m1_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M1A-P024'
+  RETURNING experiment_id
+)
+INSERT INTO _m1_experiment_map (tracker_id, experiment_id) SELECT 'M1A-P024-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, title, description, notes)
+  SELECT p.paper_id, ep.paradigm_id,
+    1,
     'Tracker experiment M1A-P024-E001–E002',
     'Module 1 tracker-derived experiment placeholder for SQL materialization.',
     '{"observation_tracker_ids": ["M1B-O053"], "tracker_id": "M1A-P024-E001\u2013E002"}'
@@ -1436,6 +1548,20 @@ WITH inserted AS (
   RETURNING experiment_id
 )
 INSERT INTO _m1_experiment_map (tracker_id, experiment_id) SELECT 'M1A-P024-E001–E002', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, title, description, notes)
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Tracker experiment M1A-P024-E002',
+    'Module 1 tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M1B-O093"], "tracker_id": "M1A-P024-E002"}'
+  FROM _m1_paper_map p
+  JOIN _m1_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M1A-P024'
+  RETURNING experiment_id
+)
+INSERT INTO _m1_experiment_map (tracker_id, experiment_id) SELECT 'M1A-P024-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, title, description, notes)
@@ -1718,6 +1844,7 @@ WITH inserted AS (
 INSERT INTO _m1_experiment_map (tracker_id, experiment_id) SELECT 'M1A-P036-E001–E002', experiment_id FROM inserted;
 
 INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('3D debris reconstruction / behavior', 'Module 1 tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('A-layer experiment evidence', 'Module 1 tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('AFM microindentation', 'Module 1 tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('Association modeling', 'Module 1 tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('Astrocyte signaling perturbation', 'Module 1 tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
@@ -1792,13 +1919,17 @@ INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) 
 INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('scRNA-seq / lineage tracing', 'Module 1 tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('snRNA-seq / temporal transcriptomics', 'Module 1 tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
 
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('20 um mid-sagittal sections stained for SMI-312; axonal staining intensity quantified across distances from lesion center and normalized to 2 mm rostral tissue.', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('AIS-linked perilesional abnormality', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Acute intraspinal inflammation', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Acute vascular lesion pattern', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('After EGFP-positive Col-I-SA transplantation, anti-beta1 integrin antibody was injected at the transplant site; host EGFP-negative/GFAP-positive/N-cadherin-positive astrocyte recruitment was quantified.', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Anti-beta1 integrin antibody was injected into the spinal cord epicenter every 2 days from 14-26 DPI; GFAP/N-cadherin-positive chronic astrocytes and GAP43-positive area were quantified.', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Astrocyte mechanosensitivity', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Axon density and recovery', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Axonal regeneration', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Baseline scar-lineage identity', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Blinded open-field locomotor scoring using BMS and modified BBB; mice with combined 24 h BMS >1 excluded as improperly injured.', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Border astrocyte origin', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Border morphology / wound architecture', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('CCN1 spatial regulation', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
@@ -1822,10 +1953,12 @@ INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VA
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Fibrotic ECM isoform time course', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Fibrotic scar occupancy', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Fibrotic scar organization', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Five excised rat spines were imaged post-mortem using high-resolution proton density MRI with inversion recovery to depict lesion volume, cord atrophy, and spared white matter.', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Focal cystic atrophy', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Functional recovery', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Glial fiber alignment', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Human cord vascular supply', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Human ventral roots and cord sections were classified by lesion level and injury type; solochrome cyanine/Sevier-Munger cord pathology and toluidine blue ventral-root histology established tissue context and sampling.', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Hyaluronic acid content', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Imaging-recovery linkage', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Immune-glial scar ecology', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
@@ -1833,6 +1966,7 @@ INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VA
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Injury-induced marker shift', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Injury-model recruitment', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Injury-model scar geometry', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Large-diameter myelinated axons (>=7 um) were sampled and counted in ventral roots above, at, and below the lesion epicenter to estimate motoneuron loss relative to uninjured controls.', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Lesion and remote neurodegeneration', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Lesion geometry', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Lesion subregion stiffness', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
@@ -1869,6 +2003,8 @@ INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VA
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Spared white matter imaging', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Sulfated GAG / CSPG content', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Tissue architecture', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('WGCNA and co-expression module analyses identified time-correlated scar modules, including ECM-receptor and lysosome-associated modules.', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Weekly BBB locomotor recovery was compared with MRI lesion severity and white matter sparing, and histology was used to confirm MRI interpretation.', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('White matter repair niche', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('White matter tract pathology', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Wound-repair astrocyte state', 'Module 1 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
@@ -3976,6 +4112,231 @@ WITH inserted AS (
 INSERT INTO _m1_observation_map (tracker_id, observation_id) SELECT 'M1B-O084', observation_id FROM inserted;
 
 WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Tetsuya Tamaru; Kazu Kobayakawa; Hirokazu Saiwai; Daijiro Konno; Ken Kijima; Shingo Yoshizaki; Kazuhiro Hata; Hirotaka Iura; Gentaro Ono; Yohei Haruta; Kazuki Kitade; Kei-Ichiro Iida; Ken-Ichi Kawaguchi; Yoshihiro Matsumoto; Kensuke Kubota; Takeshi Maeda; Seiji Okada; Yasuharu Nakashima 2023 M1A-P003-E005 preserves a distinct Mus musculus experiment testing Anti-beta1 integrin antibody after Col-I-SA transplantation with endpoint/readout: After EGFP-positive Col-I-SA transplantation, anti-beta1 integrin antibody was injected at the transplant site; host EGFP-negative/GFAP-positive/N-cadherin-positive astrocyte recruitment was quantified..',
+    'qualitative',
+    'Tetsuya Tamaru; Kazu Kobayakawa; Hirokazu Saiwai; Daijiro Konno; Ken Kijima; Shingo Yoshizaki; Kazuhiro Hata; Hirotaka Iura; Gentaro Ono; Yohei Haruta; Kazuki Kitade; Kei-Ichiro Iida; Ken-Ichi Kawaguchi; Yoshihiro Matsumoto; Kensuke Kubota; Takeshi Maeda; Seiji Okada; Yasuharu Nakashima 2023 M1A-P003-E005 preserves a distinct Mus musculus experiment testing Anti-beta1 integrin antibody after Col-I-SA transplantation with endpoint/readout: After EGFP-positive Col-I-SA transplantation, anti-beta1 integrin antibody was injected at the transplant site; host EGFP-negative/GFAP-positive/N-cadherin-positive astrocyte recruitment was quantified..',
+    'M1A-P003-E005 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Fig 5A-C',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Glial scar survives until the chronic phase by recruiting scar-forming astrocytes after spinal cord injury. Existing consensus links remain on original curated observations.", "paper_tracker_id": "M1A-P003", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M1B-T003", "tracker_id": "M1B-O085"}'
+  FROM _m1_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M1A-P003-E005'
+    AND et.evidence_type_name = 'In vivo antibody treatment'
+    AND ot.outcome_type_name = 'After EGFP-positive Col-I-SA transplantation, anti-beta1 integrin antibody was injected at the transplant site; host EGFP-negative/GFAP-positive/N-cadherin-positive astrocyte recruitment was quantified.'
+  RETURNING observation_id
+)
+INSERT INTO _m1_observation_map (tracker_id, observation_id) SELECT 'M1B-O085', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Tetsuya Tamaru; Kazu Kobayakawa; Hirokazu Saiwai; Daijiro Konno; Ken Kijima; Shingo Yoshizaki; Kazuhiro Hata; Hirotaka Iura; Gentaro Ono; Yohei Haruta; Kazuki Kitade; Kei-Ichiro Iida; Ken-Ichi Kawaguchi; Yoshihiro Matsumoto; Kensuke Kubota; Takeshi Maeda; Seiji Okada; Yasuharu Nakashima 2023 M1A-P003-E006 preserves a distinct Mus musculus experiment testing Anti-beta1 integrin antibody after SCI with endpoint/readout: Anti-beta1 integrin antibody was injected into the spinal cord epicenter every 2 days from 14-26 DPI; GFAP/N-cadherin-positive chronic astrocytes and GAP43-positive area were quantified..',
+    'qualitative',
+    'Tetsuya Tamaru; Kazu Kobayakawa; Hirokazu Saiwai; Daijiro Konno; Ken Kijima; Shingo Yoshizaki; Kazuhiro Hata; Hirotaka Iura; Gentaro Ono; Yohei Haruta; Kazuki Kitade; Kei-Ichiro Iida; Ken-Ichi Kawaguchi; Yoshihiro Matsumoto; Kensuke Kubota; Takeshi Maeda; Seiji Okada; Yasuharu Nakashima 2023 M1A-P003-E006 preserves a distinct Mus musculus experiment testing Anti-beta1 integrin antibody after SCI with endpoint/readout: Anti-beta1 integrin antibody was injected into the spinal cord epicenter every 2 days from 14-26 DPI; GFAP/N-cadherin-positive chronic astrocytes and GAP43-positive area were quantified..',
+    'M1A-P003-E006 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Fig 5D-H',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Glial scar survives until the chronic phase by recruiting scar-forming astrocytes after spinal cord injury. Existing consensus links remain on original curated observations.", "paper_tracker_id": "M1A-P003", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M1B-T006", "tracker_id": "M1B-O086"}'
+  FROM _m1_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M1A-P003-E006'
+    AND et.evidence_type_name = 'A-layer experiment evidence'
+    AND ot.outcome_type_name = 'Anti-beta1 integrin antibody was injected into the spinal cord epicenter every 2 days from 14-26 DPI; GFAP/N-cadherin-positive chronic astrocytes and GAP43-positive area were quantified.'
+  RETURNING observation_id
+)
+INSERT INTO _m1_observation_map (tracker_id, observation_id) SELECT 'M1B-O086', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Leilei Gong; Yun Gu; Xiaoxiao Han; Chengcheng Luan; Chang Liu; Xinghui Wang; Yufeng Sun; Mengru Zheng; Mengya Fang; Shuhai Yang; Lai Xu; Hualin Sun; Bin Yu; Xiaosong Gu; Songlin Zhou 2023 M1A-P004-E003 preserves a distinct Mus musculus experiment testing Scar gene-network maturation with endpoint/readout: WGCNA and co-expression module analyses identified time-correlated scar modules, including ECM-receptor and lysosome-associated modules..',
+    'qualitative',
+    'Leilei Gong; Yun Gu; Xiaoxiao Han; Chengcheng Luan; Chang Liu; Xinghui Wang; Yufeng Sun; Mengru Zheng; Mengya Fang; Shuhai Yang; Lai Xu; Hualin Sun; Bin Yu; Xiaosong Gu; Songlin Zhou 2023 M1A-P004-E003 preserves a distinct Mus musculus experiment testing Scar gene-network maturation with endpoint/readout: WGCNA and co-expression module analyses identified time-correlated scar modules, including ECM-receptor and lysosome-associated modules..',
+    'M1A-P004-E003 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Fig 9A-H',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Spatiotemporal Dynamics of the Molecular Expression Pattern and Intercellular Interactions in the Glial Scar Response to Spinal Cord Injury. Existing consensus links remain on original curated observations.", "paper_tracker_id": "M1A-P004", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M1B-T001", "tracker_id": "M1B-O087"}'
+  FROM _m1_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M1A-P004-E003'
+    AND et.evidence_type_name = 'WGCNA / phase synthesis'
+    AND ot.outcome_type_name = 'WGCNA and co-expression module analyses identified time-correlated scar modules, including ECM-receptor and lysosome-associated modules.'
+  RETURNING observation_id
+)
+INSERT INTO _m1_observation_map (tracker_id, observation_id) SELECT 'M1B-O087', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'John G. Cooper; Su Ji Jeong; Tammy L. McGuire; Sripadh Sharma; Wenxia Wang; Swati Bhattacharyya; John Varga; John A. Kessler 2018 M1A-P007-E004 preserves a distinct Mus musculus experiment testing FnEDA domain deletion with endpoint/readout: 20 um mid-sagittal sections stained for SMI-312; axonal staining intensity quantified across distances from lesion center and normalized to 2 mm rostral tissue..',
+    'qualitative',
+    'John G. Cooper; Su Ji Jeong; Tammy L. McGuire; Sripadh Sharma; Wenxia Wang; Swati Bhattacharyya; John Varga; John A. Kessler 2018 M1A-P007-E004 preserves a distinct Mus musculus experiment testing FnEDA domain deletion with endpoint/readout: 20 um mid-sagittal sections stained for SMI-312; axonal staining intensity quantified across distances from lesion center and normalized to 2 mm rostral tissue..',
+    'M1A-P007-E004 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Fig 4A-C',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Fibronectin EDA forms the chronic fibrotic scar after contusive spinal cord injury. Existing consensus links remain on original curated observations.", "paper_tracker_id": "M1A-P007", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M1B-T001", "tracker_id": "M1B-O088"}'
+  FROM _m1_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M1A-P007-E004'
+    AND et.evidence_type_name = 'Axon staining / behavior'
+    AND ot.outcome_type_name = '20 um mid-sagittal sections stained for SMI-312; axonal staining intensity quantified across distances from lesion center and normalized to 2 mm rostral tissue.'
+  RETURNING observation_id
+)
+INSERT INTO _m1_observation_map (tracker_id, observation_id) SELECT 'M1B-O088', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'John G. Cooper; Su Ji Jeong; Tammy L. McGuire; Sripadh Sharma; Wenxia Wang; Swati Bhattacharyya; John Varga; John A. Kessler 2018 M1A-P007-E005 preserves a distinct Mus musculus experiment testing FnEDA domain deletion with endpoint/readout: Blinded open-field locomotor scoring using BMS and modified BBB; mice with combined 24 h BMS >1 excluded as improperly injured..',
+    'qualitative',
+    'John G. Cooper; Su Ji Jeong; Tammy L. McGuire; Sripadh Sharma; Wenxia Wang; Swati Bhattacharyya; John Varga; John A. Kessler 2018 M1A-P007-E005 preserves a distinct Mus musculus experiment testing FnEDA domain deletion with endpoint/readout: Blinded open-field locomotor scoring using BMS and modified BBB; mice with combined 24 h BMS >1 excluded as improperly injured..',
+    'M1A-P007-E005 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Fig 5A-D',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Fibronectin EDA forms the chronic fibrotic scar after contusive spinal cord injury. Existing consensus links remain on original curated observations.", "paper_tracker_id": "M1A-P007", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M1B-T001", "tracker_id": "M1B-O089"}'
+  FROM _m1_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M1A-P007-E005'
+    AND et.evidence_type_name = 'A-layer experiment evidence'
+    AND ot.outcome_type_name = 'Blinded open-field locomotor scoring using BMS and modified BBB; mice with combined 24 h BMS >1 excluded as improperly injured.'
+  RETURNING observation_id
+)
+INSERT INTO _m1_observation_map (tracker_id, observation_id) SELECT 'M1B-O089', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Robert M Grumbles; Christine K Thomas 2017 M1A-P019-E001 preserves a distinct Homo sapiens experiment testing Post-mortem tissue-bank pathology with endpoint/readout: Human ventral roots and cord sections were classified by lesion level and injury type; solochrome cyanine/Sevier-Munger cord pathology and toluidine blue ventral-root histology established tissue context and sampling..',
+    'qualitative',
+    'Robert M Grumbles; Christine K Thomas 2017 M1A-P019-E001 preserves a distinct Homo sapiens experiment testing Post-mortem tissue-bank pathology with endpoint/readout: Human ventral roots and cord sections were classified by lesion level and injury type; solochrome cyanine/Sevier-Munger cord pathology and toluidine blue ventral-root histology established tissue context and sampling..',
+    'M1A-P019-E001 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Table 1; Fig 1-Fig 3',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Motoneuron Death after Human Spinal Cord Injury. Existing consensus links remain on original curated observations.", "paper_tracker_id": "M1A-P019", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M1B-T007", "tracker_id": "M1B-O090"}'
+  FROM _m1_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M1A-P019-E001'
+    AND et.evidence_type_name = 'Human post-mortem pathology / ventral-root axon counts'
+    AND ot.outcome_type_name = 'Human ventral roots and cord sections were classified by lesion level and injury type; solochrome cyanine/Sevier-Munger cord pathology and toluidine blue ventral-root histology established tissue context and sampling.'
+  RETURNING observation_id
+)
+INSERT INTO _m1_observation_map (tracker_id, observation_id) SELECT 'M1B-O090', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Robert M Grumbles; Christine K Thomas 2017 M1A-P019-E002 preserves a distinct Homo sapiens experiment testing Motoneuron death estimation from ventral-root axons with endpoint/readout: Large-diameter myelinated axons (>=7 um) were sampled and counted in ventral roots above, at, and below the lesion epicenter to estimate motoneuron loss relative to uninjured controls..',
+    'qualitative',
+    'Robert M Grumbles; Christine K Thomas 2017 M1A-P019-E002 preserves a distinct Homo sapiens experiment testing Motoneuron death estimation from ventral-root axons with endpoint/readout: Large-diameter myelinated axons (>=7 um) were sampled and counted in ventral roots above, at, and below the lesion epicenter to estimate motoneuron loss relative to uninjured controls..',
+    'M1A-P019-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Fig 4',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Motoneuron Death after Human Spinal Cord Injury. Existing consensus links remain on original curated observations.", "paper_tracker_id": "M1A-P019", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M1B-T003", "tracker_id": "M1B-O091"}'
+  FROM _m1_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M1A-P019-E002'
+    AND et.evidence_type_name = 'A-layer experiment evidence'
+    AND ot.outcome_type_name = 'Large-diameter myelinated axons (>=7 um) were sampled and counted in ventral roots above, at, and below the lesion epicenter to estimate motoneuron loss relative to uninjured controls.'
+  RETURNING observation_id
+)
+INSERT INTO _m1_observation_map (tracker_id, observation_id) SELECT 'M1B-O091', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'F Scholtes; E Theunissen; R Phan-Ba; P Adriaensens; G Brook; R Franzen; J Gelan; J Schoenen; D Martin 2011 M1A-P024-E001 preserves a distinct Rattus norvegicus experiment testing Post-mortem 9.4 T MRI with endpoint/readout: Five excised rat spines were imaged post-mortem using high-resolution proton density MRI with inversion recovery to depict lesion volume, cord atrophy, and spared white matter..',
+    'qualitative',
+    'F Scholtes; E Theunissen; R Phan-Ba; P Adriaensens; G Brook; R Franzen; J Gelan; J Schoenen; D Martin 2011 M1A-P024-E001 preserves a distinct Rattus norvegicus experiment testing Post-mortem 9.4 T MRI with endpoint/readout: Five excised rat spines were imaged post-mortem using high-resolution proton density MRI with inversion recovery to depict lesion volume, cord atrophy, and spared white matter..',
+    'M1A-P024-E001 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract methods/results; figures on Nature page',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Post-mortem assessment of rat spinal cord injury and white matter sparing using inversion recovery-supported proton density magnetic resonance imaging. Existing consensus links remain on original curated observations.", "paper_tracker_id": "M1A-P024", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M1B-T006", "tracker_id": "M1B-O092"}'
+  FROM _m1_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M1A-P024-E001'
+    AND et.evidence_type_name = 'Post-mortem MRI / histology / BBB'
+    AND ot.outcome_type_name = 'Five excised rat spines were imaged post-mortem using high-resolution proton density MRI with inversion recovery to depict lesion volume, cord atrophy, and spared white matter.'
+  RETURNING observation_id
+)
+INSERT INTO _m1_observation_map (tracker_id, observation_id) SELECT 'M1B-O092', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'F Scholtes; E Theunissen; R Phan-Ba; P Adriaensens; G Brook; R Franzen; J Gelan; J Schoenen; D Martin 2011 M1A-P024-E002 preserves a distinct Rattus norvegicus experiment testing MRI-histology-functional validation with endpoint/readout: Weekly BBB locomotor recovery was compared with MRI lesion severity and white matter sparing, and histology was used to confirm MRI interpretation..',
+    'qualitative',
+    'F Scholtes; E Theunissen; R Phan-Ba; P Adriaensens; G Brook; R Franzen; J Gelan; J Schoenen; D Martin 2011 M1A-P024-E002 preserves a distinct Rattus norvegicus experiment testing MRI-histology-functional validation with endpoint/readout: Weekly BBB locomotor recovery was compared with MRI lesion severity and white matter sparing, and histology was used to confirm MRI interpretation..',
+    'M1A-P024-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract methods/results; figures on Nature page',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Post-mortem assessment of rat spinal cord injury and white matter sparing using inversion recovery-supported proton density magnetic resonance imaging. Existing consensus links remain on original curated observations.", "paper_tracker_id": "M1A-P024", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M1B-T005", "tracker_id": "M1B-O093"}'
+  FROM _m1_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M1A-P024-E002'
+    AND et.evidence_type_name = 'A-layer experiment evidence'
+    AND ot.outcome_type_name = 'Weekly BBB locomotor recovery was compared with MRI lesion severity and white matter sparing, and histology was used to confirm MRI interpretation.'
+  RETURNING observation_id
+)
+INSERT INTO _m1_observation_map (tracker_id, observation_id) SELECT 'M1B-O093', observation_id FROM inserted;
+
+WITH inserted AS (
   INSERT INTO AuthorClaim (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
@@ -5684,7 +6045,7 @@ WHERE c.tracker_id = 'M1B-C050';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Chronic SCI lesion architecture should be represented as a multicompartment structure rather than as a single undifferentiated scar. First-pass compartments include fibrotic/ECM-rich core or matrix, astrocytic border, immune/myeloid containment zone, spared or reactive neural tissue, altered white matter, and cystic or repaired-tissue cavities when present.',
+    'Chronic SCI lesion architecture is a multicompartment structure, not a single scar. The core evidence supports separately queryable fibrotic or ECM-rich matrix, astrocytic border, immune/myeloid containment zone, spared or reactive neural tissue, altered white matter, and cystic or repaired-tissue cavities when present.',
     'M1B-T001: Core lesion architecture',
     1,
     'moderate',
@@ -5757,7 +6118,7 @@ WHERE c.tracker_id = 'M1B-S001';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'The SCI fibrotic scar is produced by perivascular and meningeal-associated stromal lineages, but exact lineage labels depend on markers, Cre drivers, injury type, dural disruption, and endpoint. Partial modulation of fibrotic scarring can support regeneration or recovery in some models, while complete loss of closure-producing stromal response can be harmful.',
+    'SCI fibrotic scarring arises from perivascular and meningeal-associated stromal lineages, but lineage assignment depends on marker system, Cre driver, injury geometry, dural disruption, and endpoint. The consensus is modulation, not ablation: partial attenuation can support repair in some models, whereas loss of closure-producing stroma can be harmful.',
     'M1B-T002: Fibrotic scar cellular origins',
     1,
     'moderate',
@@ -5860,7 +6221,7 @@ WHERE c.tracker_id = 'M1B-S002';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Astrocytic scar borders are active wound-repair and containment structures with separable formation, maintenance, recruitment, and morphology programs. Established scar-forming astrocytes may resist direct state reversal, but border recruitment and organization remain intervention-sensitive in vivo.',
+    'Astrocytic scar borders are active wound-repair and containment structures with separable programs for formation, maintenance, recruitment, and morphology. Established scar-forming astrocytes may resist direct reversal, while border recruitment and organization remain intervention-sensitive in vivo.',
     'M1B-T003: Astrocytic border and wound-repair state',
     1,
     'moderate',
@@ -5933,7 +6294,7 @@ WHERE c.tracker_id = 'M1B-S003';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Chronic SCI lesion mechanics are altered relative to uninjured spinal cord, but the direction of stiffness change is model- and method-dependent. The database should not encode a universal "chronic scar stiffness" direction without injury model, species, time point, tissue preparation, AFM method, and lesion subregion context.',
+    'Chronic SCI changes lesion mechanics, but stiffness direction is model- and method-dependent. No universal chronic-scar stiffness claim should be encoded without species, injury model, time point, tissue preparation, AFM method, and lesion subregion.',
     'M1B-T004: Chronic lesion biomechanics',
     1,
     'emerging',
@@ -6012,7 +6373,7 @@ WHERE c.tracker_id = 'M1B-S004';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Chronic scar resection should be separated into at least two intervention classes: resection alone and resection followed by cavity or gap reconstruction. Resection alone is not consensus-reparative and may be harmful in contusion models, whereas scaffold/cell filling is a recurring repair strategy whose claims remain model-, completeness-, and endpoint-dependent.',
+    'Chronic scar resection divides into distinct intervention classes: tissue removal alone and resection followed by cavity or gap reconstruction. Resection alone is not consensus-reparative and may be harmful in contusion models, whereas scaffold or cell filling is a recurring but model- and endpoint-dependent reconstruction strategy.',
     'M1B-T005: Cavitary lesions, scar resection, and scaffold filling',
     1,
     'moderate',
@@ -6067,7 +6428,7 @@ WHERE c.tracker_id = 'M1B-S005';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Spared and lesion-remote white matter should be modeled as an active, recovery-linked compartment rather than normal residual tissue. It can show chronic degeneration, repair-associated glial and immune remodeling, MRI-visible tract changes, debris/lipid handling programs, and behavioral associations.',
+    'Spared and lesion-remote white matter is an active recovery-linked compartment rather than normal residual tissue. It can carry chronic degeneration, repair-associated glial and immune remodeling, MRI-visible tract changes, debris and lipid-handling programs, and behavioral associations.',
     'M1B-T006: Spared and remote white matter',
     1,
     'moderate',
@@ -6134,7 +6495,7 @@ WHERE c.tracker_id = 'M1B-S006';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Human chronic SCI lesion architecture is multi-scale: local lesion geometry and tissue bridges, focal cystic atrophy, retained adjacent parenchyma, vascular territory and remote infarct-like pathology, scar-marker composition, segmental motoneuron/root pathology, remyelination status, perilesional DTI abnormalities, and remote motor-system degeneration should remain separately queryable.',
+    'Human chronic SCI lesion architecture is multi-scale and should retain separate fields for local lesion geometry and tissue bridges, focal cystic atrophy, retained adjacent parenchyma, vascular territory and remote infarct-like pathology, scar-marker composition, segmental motoneuron/root pathology, remyelination status, perilesional DTI abnormalities, and remote motor-system degeneration.',
     'M1B-T007: Human chronic pathology and imaging geometry',
     1,
     'strong',
@@ -6225,7 +6586,7 @@ WHERE c.tracker_id = 'M1B-S007';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Immune-glial lesion biology should be represented by phase, cell population, function, and endpoint rather than as globally beneficial or harmful. Myeloid and glial responses can support corralling, compaction, containment, debris handling, and repair while also contributing to chronic neuroinflammatory pathology and remote effects.',
+    'Immune-glial lesion biology is phase-, cell-, function-, and endpoint-specific. Myeloid and glial responses can support corralling, compaction, containment, debris handling, and repair while also contributing to chronic neuroinflammatory pathology and remote effects.',
     'M1B-T008: Immune-glial containment and chronic inflammation',
     1,
     'moderate',
@@ -6307,7 +6668,7 @@ BEGIN
   SELECT COUNT(*) INTO consensus_count FROM _m1_consensus_map;
   SELECT COUNT(*) INTO consensus_observation_count FROM Consensus_Observation;
   IF paper_count <> 28 THEN RAISE EXCEPTION 'Expected 28 papers, found %', paper_count; END IF;
-  IF experiment_count <> 78 THEN RAISE EXCEPTION 'Unexpected experiment count %', experiment_count; END IF;
+  IF experiment_count <> 87 THEN RAISE EXCEPTION 'Unexpected experiment count %', experiment_count; END IF;
   IF observation_count <> 84 THEN RAISE EXCEPTION 'Expected 84 observations, found %', observation_count; END IF;
   IF claim_count <> 50 THEN RAISE EXCEPTION 'Expected 50 claims, found %', claim_count; END IF;
   IF link_count <> 107 THEN RAISE EXCEPTION 'Expected 107 evidence links, found %', link_count; END IF;

@@ -1051,15 +1051,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P001-E001-M5A-P001-E002',
+    'Tracker experiment M5A-P001-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O001"], "source_experiment_tracker_id": "M5A-P001-E001-M5A-P001-E002", "source_paper_tracker_id": "M5A-P001", "tracker_key": "M5A-P001::M5A-P001-E001-M5A-P001-E002"}'
+    '{"observation_tracker_ids": ["M5B-O001"], "source_experiment_tracker_id": "M5A-P001-E001", "source_paper_tracker_id": "M5A-P001", "tracker_key": "M5A-P001::M5A-P001-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P001'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P001::M5A-P001-E001-M5A-P001-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P001::M5A-P001-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P001-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O048"], "source_experiment_tracker_id": "M5A-P001-E002", "source_paper_tracker_id": "M5A-P001", "tracker_key": "M5A-P001::M5A-P001-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P001'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P001::M5A-P001-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1068,15 +1085,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P002-E001-M5A-P002-E002',
+    'Tracker experiment M5A-P002-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O002"], "source_experiment_tracker_id": "M5A-P002-E001-M5A-P002-E002", "source_paper_tracker_id": "M5A-P002", "tracker_key": "M5A-P002::M5A-P002-E001-M5A-P002-E002"}'
+    '{"observation_tracker_ids": ["M5B-O002"], "source_experiment_tracker_id": "M5A-P002-E001", "source_paper_tracker_id": "M5A-P002", "tracker_key": "M5A-P002::M5A-P002-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P002'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P002::M5A-P002-E001-M5A-P002-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P002::M5A-P002-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P002-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O049"], "source_experiment_tracker_id": "M5A-P002-E002", "source_paper_tracker_id": "M5A-P002", "tracker_key": "M5A-P002::M5A-P002-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P002'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P002::M5A-P002-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1085,15 +1119,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P003-E001-M5A-P003-E002',
+    'Tracker experiment M5A-P003-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O003"], "source_experiment_tracker_id": "M5A-P003-E001-M5A-P003-E002", "source_paper_tracker_id": "M5A-P003", "tracker_key": "M5A-P003::M5A-P003-E001-M5A-P003-E002"}'
+    '{"observation_tracker_ids": ["M5B-O003"], "source_experiment_tracker_id": "M5A-P003-E001", "source_paper_tracker_id": "M5A-P003", "tracker_key": "M5A-P003::M5A-P003-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P003'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P003::M5A-P003-E001-M5A-P003-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P003::M5A-P003-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P003-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O050"], "source_experiment_tracker_id": "M5A-P003-E002", "source_paper_tracker_id": "M5A-P003", "tracker_key": "M5A-P003::M5A-P003-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P003'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P003::M5A-P003-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1102,15 +1153,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P004-E001-M5A-P004-E002',
+    'Tracker experiment M5A-P004-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O004"], "source_experiment_tracker_id": "M5A-P004-E001-M5A-P004-E002", "source_paper_tracker_id": "M5A-P004", "tracker_key": "M5A-P004::M5A-P004-E001-M5A-P004-E002"}'
+    '{"observation_tracker_ids": ["M5B-O004"], "source_experiment_tracker_id": "M5A-P004-E001", "source_paper_tracker_id": "M5A-P004", "tracker_key": "M5A-P004::M5A-P004-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P004'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P004::M5A-P004-E001-M5A-P004-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P004::M5A-P004-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P004-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O051"], "source_experiment_tracker_id": "M5A-P004-E002", "source_paper_tracker_id": "M5A-P004", "tracker_key": "M5A-P004::M5A-P004-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P004'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P004::M5A-P004-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1119,15 +1187,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P005-E001-M5A-P005-E002',
+    'Tracker experiment M5A-P005-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O005"], "source_experiment_tracker_id": "M5A-P005-E001-M5A-P005-E002", "source_paper_tracker_id": "M5A-P005", "tracker_key": "M5A-P005::M5A-P005-E001-M5A-P005-E002"}'
+    '{"observation_tracker_ids": ["M5B-O005"], "source_experiment_tracker_id": "M5A-P005-E001", "source_paper_tracker_id": "M5A-P005", "tracker_key": "M5A-P005::M5A-P005-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P005'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P005::M5A-P005-E001-M5A-P005-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P005::M5A-P005-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P005-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O052"], "source_experiment_tracker_id": "M5A-P005-E002", "source_paper_tracker_id": "M5A-P005", "tracker_key": "M5A-P005::M5A-P005-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P005'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P005::M5A-P005-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1136,15 +1221,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P006-E001-M5A-P006-E002',
+    'Tracker experiment M5A-P006-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O006"], "source_experiment_tracker_id": "M5A-P006-E001-M5A-P006-E002", "source_paper_tracker_id": "M5A-P006", "tracker_key": "M5A-P006::M5A-P006-E001-M5A-P006-E002"}'
+    '{"observation_tracker_ids": ["M5B-O006"], "source_experiment_tracker_id": "M5A-P006-E001", "source_paper_tracker_id": "M5A-P006", "tracker_key": "M5A-P006::M5A-P006-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P006'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P006::M5A-P006-E001-M5A-P006-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P006::M5A-P006-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P006-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O053"], "source_experiment_tracker_id": "M5A-P006-E002", "source_paper_tracker_id": "M5A-P006", "tracker_key": "M5A-P006::M5A-P006-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P006'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P006::M5A-P006-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1153,15 +1255,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P007-E001-M5A-P007-E002',
+    'Tracker experiment M5A-P007-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O007"], "source_experiment_tracker_id": "M5A-P007-E001-M5A-P007-E002", "source_paper_tracker_id": "M5A-P007", "tracker_key": "M5A-P007::M5A-P007-E001-M5A-P007-E002"}'
+    '{"observation_tracker_ids": ["M5B-O007"], "source_experiment_tracker_id": "M5A-P007-E001", "source_paper_tracker_id": "M5A-P007", "tracker_key": "M5A-P007::M5A-P007-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P007'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P007::M5A-P007-E001-M5A-P007-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P007::M5A-P007-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P007-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O054"], "source_experiment_tracker_id": "M5A-P007-E002", "source_paper_tracker_id": "M5A-P007", "tracker_key": "M5A-P007::M5A-P007-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P007'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P007::M5A-P007-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1170,15 +1289,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P008-E001-M5A-P008-E002',
+    'Tracker experiment M5A-P008-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O008"], "source_experiment_tracker_id": "M5A-P008-E001-M5A-P008-E002", "source_paper_tracker_id": "M5A-P008", "tracker_key": "M5A-P008::M5A-P008-E001-M5A-P008-E002"}'
+    '{"observation_tracker_ids": ["M5B-O008"], "source_experiment_tracker_id": "M5A-P008-E001", "source_paper_tracker_id": "M5A-P008", "tracker_key": "M5A-P008::M5A-P008-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P008'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P008::M5A-P008-E001-M5A-P008-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P008::M5A-P008-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P008-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O055"], "source_experiment_tracker_id": "M5A-P008-E002", "source_paper_tracker_id": "M5A-P008", "tracker_key": "M5A-P008::M5A-P008-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P008'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P008::M5A-P008-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1187,15 +1323,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P009-E001-M5A-P009-E002',
+    'Tracker experiment M5A-P009-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O009"], "source_experiment_tracker_id": "M5A-P009-E001-M5A-P009-E002", "source_paper_tracker_id": "M5A-P009", "tracker_key": "M5A-P009::M5A-P009-E001-M5A-P009-E002"}'
+    '{"observation_tracker_ids": ["M5B-O009"], "source_experiment_tracker_id": "M5A-P009-E001", "source_paper_tracker_id": "M5A-P009", "tracker_key": "M5A-P009::M5A-P009-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P009'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P009::M5A-P009-E001-M5A-P009-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P009::M5A-P009-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P009-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O056"], "source_experiment_tracker_id": "M5A-P009-E002", "source_paper_tracker_id": "M5A-P009", "tracker_key": "M5A-P009::M5A-P009-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P009'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P009::M5A-P009-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1204,15 +1357,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P010-E001-M5A-P010-E002',
+    'Tracker experiment M5A-P010-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O010"], "source_experiment_tracker_id": "M5A-P010-E001-M5A-P010-E002", "source_paper_tracker_id": "M5A-P010", "tracker_key": "M5A-P010::M5A-P010-E001-M5A-P010-E002"}'
+    '{"observation_tracker_ids": ["M5B-O010"], "source_experiment_tracker_id": "M5A-P010-E001", "source_paper_tracker_id": "M5A-P010", "tracker_key": "M5A-P010::M5A-P010-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P010'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P010::M5A-P010-E001-M5A-P010-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P010::M5A-P010-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P010-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O057"], "source_experiment_tracker_id": "M5A-P010-E002", "source_paper_tracker_id": "M5A-P010", "tracker_key": "M5A-P010::M5A-P010-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P010'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P010::M5A-P010-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1221,15 +1391,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P011-E001-M5A-P011-E002',
+    'Tracker experiment M5A-P011-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O011"], "source_experiment_tracker_id": "M5A-P011-E001-M5A-P011-E002", "source_paper_tracker_id": "M5A-P011", "tracker_key": "M5A-P011::M5A-P011-E001-M5A-P011-E002"}'
+    '{"observation_tracker_ids": ["M5B-O011"], "source_experiment_tracker_id": "M5A-P011-E001", "source_paper_tracker_id": "M5A-P011", "tracker_key": "M5A-P011::M5A-P011-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P011'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P011::M5A-P011-E001-M5A-P011-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P011::M5A-P011-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P011-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O058"], "source_experiment_tracker_id": "M5A-P011-E002", "source_paper_tracker_id": "M5A-P011", "tracker_key": "M5A-P011::M5A-P011-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P011'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P011::M5A-P011-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1238,15 +1425,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P012-E001-M5A-P012-E002',
+    'Tracker experiment M5A-P012-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O012"], "source_experiment_tracker_id": "M5A-P012-E001-M5A-P012-E002", "source_paper_tracker_id": "M5A-P012", "tracker_key": "M5A-P012::M5A-P012-E001-M5A-P012-E002"}'
+    '{"observation_tracker_ids": ["M5B-O012"], "source_experiment_tracker_id": "M5A-P012-E001", "source_paper_tracker_id": "M5A-P012", "tracker_key": "M5A-P012::M5A-P012-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P012'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P012::M5A-P012-E001-M5A-P012-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P012::M5A-P012-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P012-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O059"], "source_experiment_tracker_id": "M5A-P012-E002", "source_paper_tracker_id": "M5A-P012", "tracker_key": "M5A-P012::M5A-P012-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P012'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P012::M5A-P012-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1255,15 +1459,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P013-E001-M5A-P013-E002',
+    'Tracker experiment M5A-P013-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O013"], "source_experiment_tracker_id": "M5A-P013-E001-M5A-P013-E002", "source_paper_tracker_id": "M5A-P013", "tracker_key": "M5A-P013::M5A-P013-E001-M5A-P013-E002"}'
+    '{"observation_tracker_ids": ["M5B-O013"], "source_experiment_tracker_id": "M5A-P013-E001", "source_paper_tracker_id": "M5A-P013", "tracker_key": "M5A-P013::M5A-P013-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P013'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P013::M5A-P013-E001-M5A-P013-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P013::M5A-P013-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P013-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O060"], "source_experiment_tracker_id": "M5A-P013-E002", "source_paper_tracker_id": "M5A-P013", "tracker_key": "M5A-P013::M5A-P013-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P013'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P013::M5A-P013-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1272,15 +1493,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P014-E001-M5A-P014-E002',
+    'Tracker experiment M5A-P014-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O014"], "source_experiment_tracker_id": "M5A-P014-E001-M5A-P014-E002", "source_paper_tracker_id": "M5A-P014", "tracker_key": "M5A-P014::M5A-P014-E001-M5A-P014-E002"}'
+    '{"observation_tracker_ids": ["M5B-O014"], "source_experiment_tracker_id": "M5A-P014-E001", "source_paper_tracker_id": "M5A-P014", "tracker_key": "M5A-P014::M5A-P014-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P014'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P014::M5A-P014-E001-M5A-P014-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P014::M5A-P014-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P014-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O061"], "source_experiment_tracker_id": "M5A-P014-E002", "source_paper_tracker_id": "M5A-P014", "tracker_key": "M5A-P014::M5A-P014-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P014'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P014::M5A-P014-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1289,15 +1527,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P015-E001-M5A-P015-E002',
+    'Tracker experiment M5A-P015-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O015"], "source_experiment_tracker_id": "M5A-P015-E001-M5A-P015-E002", "source_paper_tracker_id": "M5A-P015", "tracker_key": "M5A-P015::M5A-P015-E001-M5A-P015-E002"}'
+    '{"observation_tracker_ids": ["M5B-O015"], "source_experiment_tracker_id": "M5A-P015-E001", "source_paper_tracker_id": "M5A-P015", "tracker_key": "M5A-P015::M5A-P015-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P015'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P015::M5A-P015-E001-M5A-P015-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P015::M5A-P015-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P015-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O062"], "source_experiment_tracker_id": "M5A-P015-E002", "source_paper_tracker_id": "M5A-P015", "tracker_key": "M5A-P015::M5A-P015-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P015'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P015::M5A-P015-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1306,15 +1561,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P016-E001-M5A-P016-E002',
+    'Tracker experiment M5A-P016-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O016"], "source_experiment_tracker_id": "M5A-P016-E001-M5A-P016-E002", "source_paper_tracker_id": "M5A-P016", "tracker_key": "M5A-P016::M5A-P016-E001-M5A-P016-E002"}'
+    '{"observation_tracker_ids": ["M5B-O016"], "source_experiment_tracker_id": "M5A-P016-E001", "source_paper_tracker_id": "M5A-P016", "tracker_key": "M5A-P016::M5A-P016-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P016'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P016::M5A-P016-E001-M5A-P016-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P016::M5A-P016-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P016-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O063"], "source_experiment_tracker_id": "M5A-P016-E002", "source_paper_tracker_id": "M5A-P016", "tracker_key": "M5A-P016::M5A-P016-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P016'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P016::M5A-P016-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1323,15 +1595,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P017-E001-M5A-P017-E002',
+    'Tracker experiment M5A-P017-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O017"], "source_experiment_tracker_id": "M5A-P017-E001-M5A-P017-E002", "source_paper_tracker_id": "M5A-P017", "tracker_key": "M5A-P017::M5A-P017-E001-M5A-P017-E002"}'
+    '{"observation_tracker_ids": ["M5B-O017"], "source_experiment_tracker_id": "M5A-P017-E001", "source_paper_tracker_id": "M5A-P017", "tracker_key": "M5A-P017::M5A-P017-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P017'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P017::M5A-P017-E001-M5A-P017-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P017::M5A-P017-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P017-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O064"], "source_experiment_tracker_id": "M5A-P017-E002", "source_paper_tracker_id": "M5A-P017", "tracker_key": "M5A-P017::M5A-P017-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P017'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P017::M5A-P017-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1340,15 +1629,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Full text / PMC12831131',
-    'Tracker experiment M5A-P018-E001-M5A-P018-E002',
+    'Tracker experiment M5A-P018-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O018"], "source_experiment_tracker_id": "M5A-P018-E001-M5A-P018-E002", "source_paper_tracker_id": "M5A-P018", "tracker_key": "M5A-P018::M5A-P018-E001-M5A-P018-E002"}'
+    '{"observation_tracker_ids": ["M5B-O018"], "source_experiment_tracker_id": "M5A-P018-E001", "source_paper_tracker_id": "M5A-P018", "tracker_key": "M5A-P018::M5A-P018-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P018'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P018::M5A-P018-E001-M5A-P018-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P018::M5A-P018-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P018-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O065"], "source_experiment_tracker_id": "M5A-P018-E002", "source_paper_tracker_id": "M5A-P018", "tracker_key": "M5A-P018::M5A-P018-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P018'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P018::M5A-P018-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1357,15 +1663,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P019-E001-M5A-P019-E002',
+    'Tracker experiment M5A-P019-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O019"], "source_experiment_tracker_id": "M5A-P019-E001-M5A-P019-E002", "source_paper_tracker_id": "M5A-P019", "tracker_key": "M5A-P019::M5A-P019-E001-M5A-P019-E002"}'
+    '{"observation_tracker_ids": ["M5B-O019"], "source_experiment_tracker_id": "M5A-P019-E001", "source_paper_tracker_id": "M5A-P019", "tracker_key": "M5A-P019::M5A-P019-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P019'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P019::M5A-P019-E001-M5A-P019-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P019::M5A-P019-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P019-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O066"], "source_experiment_tracker_id": "M5A-P019-E002", "source_paper_tracker_id": "M5A-P019", "tracker_key": "M5A-P019::M5A-P019-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P019'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P019::M5A-P019-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1374,15 +1697,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P020-E001-M5A-P020-E002',
+    'Tracker experiment M5A-P020-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O020"], "source_experiment_tracker_id": "M5A-P020-E001-M5A-P020-E002", "source_paper_tracker_id": "M5A-P020", "tracker_key": "M5A-P020::M5A-P020-E001-M5A-P020-E002"}'
+    '{"observation_tracker_ids": ["M5B-O020"], "source_experiment_tracker_id": "M5A-P020-E001", "source_paper_tracker_id": "M5A-P020", "tracker_key": "M5A-P020::M5A-P020-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P020'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P020::M5A-P020-E001-M5A-P020-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P020::M5A-P020-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P020-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O067"], "source_experiment_tracker_id": "M5A-P020-E002", "source_paper_tracker_id": "M5A-P020", "tracker_key": "M5A-P020::M5A-P020-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P020'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P020::M5A-P020-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1391,15 +1731,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P021-E001-M5A-P021-E002',
+    'Tracker experiment M5A-P021-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O021"], "source_experiment_tracker_id": "M5A-P021-E001-M5A-P021-E002", "source_paper_tracker_id": "M5A-P021", "tracker_key": "M5A-P021::M5A-P021-E001-M5A-P021-E002"}'
+    '{"observation_tracker_ids": ["M5B-O021"], "source_experiment_tracker_id": "M5A-P021-E001", "source_paper_tracker_id": "M5A-P021", "tracker_key": "M5A-P021::M5A-P021-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P021'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P021::M5A-P021-E001-M5A-P021-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P021::M5A-P021-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P021-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O068"], "source_experiment_tracker_id": "M5A-P021-E002", "source_paper_tracker_id": "M5A-P021", "tracker_key": "M5A-P021::M5A-P021-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P021'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P021::M5A-P021-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1408,15 +1765,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'PubMed abstract verified',
-    'Tracker experiment M5A-P022-E001-M5A-P022-E002',
+    'Tracker experiment M5A-P022-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O022"], "source_experiment_tracker_id": "M5A-P022-E001-M5A-P022-E002", "source_paper_tracker_id": "M5A-P022", "tracker_key": "M5A-P022::M5A-P022-E001-M5A-P022-E002"}'
+    '{"observation_tracker_ids": ["M5B-O022"], "source_experiment_tracker_id": "M5A-P022-E001", "source_paper_tracker_id": "M5A-P022", "tracker_key": "M5A-P022::M5A-P022-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P022'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P022::M5A-P022-E001-M5A-P022-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P022::M5A-P022-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P022-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O069"], "source_experiment_tracker_id": "M5A-P022-E002", "source_paper_tracker_id": "M5A-P022", "tracker_key": "M5A-P022::M5A-P022-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P022'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P022::M5A-P022-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1425,15 +1799,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P023-E001-M5A-P023-E002',
+    'Tracker experiment M5A-P023-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O023"], "source_experiment_tracker_id": "M5A-P023-E001-M5A-P023-E002", "source_paper_tracker_id": "M5A-P023", "tracker_key": "M5A-P023::M5A-P023-E001-M5A-P023-E002"}'
+    '{"observation_tracker_ids": ["M5B-O023"], "source_experiment_tracker_id": "M5A-P023-E001", "source_paper_tracker_id": "M5A-P023", "tracker_key": "M5A-P023::M5A-P023-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P023'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P023::M5A-P023-E001-M5A-P023-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P023::M5A-P023-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P023-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O070"], "source_experiment_tracker_id": "M5A-P023-E002", "source_paper_tracker_id": "M5A-P023", "tracker_key": "M5A-P023::M5A-P023-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P023'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P023::M5A-P023-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1442,15 +1833,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Full text / PMC12866793',
-    'Tracker experiment M5A-P024-E001-M5A-P024-E002',
+    'Tracker experiment M5A-P024-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O024"], "source_experiment_tracker_id": "M5A-P024-E001-M5A-P024-E002", "source_paper_tracker_id": "M5A-P024", "tracker_key": "M5A-P024::M5A-P024-E001-M5A-P024-E002"}'
+    '{"observation_tracker_ids": ["M5B-O024"], "source_experiment_tracker_id": "M5A-P024-E001", "source_paper_tracker_id": "M5A-P024", "tracker_key": "M5A-P024::M5A-P024-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P024'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P024::M5A-P024-E001-M5A-P024-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P024::M5A-P024-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P024-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O071"], "source_experiment_tracker_id": "M5A-P024-E002", "source_paper_tracker_id": "M5A-P024", "tracker_key": "M5A-P024::M5A-P024-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P024'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P024::M5A-P024-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1459,15 +1867,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P025-E001-M5A-P025-E002',
+    'Tracker experiment M5A-P025-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O025"], "source_experiment_tracker_id": "M5A-P025-E001-M5A-P025-E002", "source_paper_tracker_id": "M5A-P025", "tracker_key": "M5A-P025::M5A-P025-E001-M5A-P025-E002"}'
+    '{"observation_tracker_ids": ["M5B-O025"], "source_experiment_tracker_id": "M5A-P025-E001", "source_paper_tracker_id": "M5A-P025", "tracker_key": "M5A-P025::M5A-P025-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P025'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P025::M5A-P025-E001-M5A-P025-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P025::M5A-P025-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P025-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O072"], "source_experiment_tracker_id": "M5A-P025-E002", "source_paper_tracker_id": "M5A-P025", "tracker_key": "M5A-P025::M5A-P025-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P025'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P025::M5A-P025-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1476,15 +1901,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P026-E001-M5A-P026-E002',
+    'Tracker experiment M5A-P026-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O026"], "source_experiment_tracker_id": "M5A-P026-E001-M5A-P026-E002", "source_paper_tracker_id": "M5A-P026", "tracker_key": "M5A-P026::M5A-P026-E001-M5A-P026-E002"}'
+    '{"observation_tracker_ids": ["M5B-O026"], "source_experiment_tracker_id": "M5A-P026-E001", "source_paper_tracker_id": "M5A-P026", "tracker_key": "M5A-P026::M5A-P026-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P026'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P026::M5A-P026-E001-M5A-P026-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P026::M5A-P026-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P026-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O073"], "source_experiment_tracker_id": "M5A-P026-E002", "source_paper_tracker_id": "M5A-P026", "tracker_key": "M5A-P026::M5A-P026-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P026'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P026::M5A-P026-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1493,15 +1935,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Full text / PMC13168246',
-    'Tracker experiment M5A-P027-E001-M5A-P027-E002',
+    'Tracker experiment M5A-P027-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O027"], "source_experiment_tracker_id": "M5A-P027-E001-M5A-P027-E002", "source_paper_tracker_id": "M5A-P027", "tracker_key": "M5A-P027::M5A-P027-E001-M5A-P027-E002"}'
+    '{"observation_tracker_ids": ["M5B-O027"], "source_experiment_tracker_id": "M5A-P027-E001", "source_paper_tracker_id": "M5A-P027", "tracker_key": "M5A-P027::M5A-P027-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P027'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P027::M5A-P027-E001-M5A-P027-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P027::M5A-P027-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P027-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O074"], "source_experiment_tracker_id": "M5A-P027-E002", "source_paper_tracker_id": "M5A-P027", "tracker_key": "M5A-P027::M5A-P027-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P027'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P027::M5A-P027-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1510,15 +1969,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P028-E001-M5A-P028-E002',
+    'Tracker experiment M5A-P028-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O028"], "source_experiment_tracker_id": "M5A-P028-E001-M5A-P028-E002", "source_paper_tracker_id": "M5A-P028", "tracker_key": "M5A-P028::M5A-P028-E001-M5A-P028-E002"}'
+    '{"observation_tracker_ids": ["M5B-O028"], "source_experiment_tracker_id": "M5A-P028-E001", "source_paper_tracker_id": "M5A-P028", "tracker_key": "M5A-P028::M5A-P028-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P028'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P028::M5A-P028-E001-M5A-P028-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P028::M5A-P028-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P028-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O075"], "source_experiment_tracker_id": "M5A-P028-E002", "source_paper_tracker_id": "M5A-P028", "tracker_key": "M5A-P028::M5A-P028-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P028'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P028::M5A-P028-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1527,15 +2003,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Full text / PMC12884443',
-    'Tracker experiment M5A-P029-E001-M5A-P029-E002',
+    'Tracker experiment M5A-P029-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O029"], "source_experiment_tracker_id": "M5A-P029-E001-M5A-P029-E002", "source_paper_tracker_id": "M5A-P029", "tracker_key": "M5A-P029::M5A-P029-E001-M5A-P029-E002"}'
+    '{"observation_tracker_ids": ["M5B-O029"], "source_experiment_tracker_id": "M5A-P029-E001", "source_paper_tracker_id": "M5A-P029", "tracker_key": "M5A-P029::M5A-P029-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P029'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P029::M5A-P029-E001-M5A-P029-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P029::M5A-P029-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P029-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O076"], "source_experiment_tracker_id": "M5A-P029-E002", "source_paper_tracker_id": "M5A-P029", "tracker_key": "M5A-P029::M5A-P029-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P029'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P029::M5A-P029-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1544,15 +2037,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Full text / PMC12823418',
-    'Tracker experiment M5A-P030-E001-M5A-P030-E002',
+    'Tracker experiment M5A-P030-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O030"], "source_experiment_tracker_id": "M5A-P030-E001-M5A-P030-E002", "source_paper_tracker_id": "M5A-P030", "tracker_key": "M5A-P030::M5A-P030-E001-M5A-P030-E002"}'
+    '{"observation_tracker_ids": ["M5B-O030"], "source_experiment_tracker_id": "M5A-P030-E001", "source_paper_tracker_id": "M5A-P030", "tracker_key": "M5A-P030::M5A-P030-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P030'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P030::M5A-P030-E001-M5A-P030-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P030::M5A-P030-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P030-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O077"], "source_experiment_tracker_id": "M5A-P030-E002", "source_paper_tracker_id": "M5A-P030", "tracker_key": "M5A-P030::M5A-P030-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P030'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P030::M5A-P030-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1561,15 +2071,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P031-E001-M5A-P031-E002',
+    'Tracker experiment M5A-P031-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O031"], "source_experiment_tracker_id": "M5A-P031-E001-M5A-P031-E002", "source_paper_tracker_id": "M5A-P031", "tracker_key": "M5A-P031::M5A-P031-E001-M5A-P031-E002"}'
+    '{"observation_tracker_ids": ["M5B-O031"], "source_experiment_tracker_id": "M5A-P031-E001", "source_paper_tracker_id": "M5A-P031", "tracker_key": "M5A-P031::M5A-P031-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P031'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P031::M5A-P031-E001-M5A-P031-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P031::M5A-P031-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P031-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O078"], "source_experiment_tracker_id": "M5A-P031-E002", "source_paper_tracker_id": "M5A-P031", "tracker_key": "M5A-P031::M5A-P031-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P031'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P031::M5A-P031-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1578,15 +2105,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P032-E001-M5A-P032-E002',
+    'Tracker experiment M5A-P032-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O032"], "source_experiment_tracker_id": "M5A-P032-E001-M5A-P032-E002", "source_paper_tracker_id": "M5A-P032", "tracker_key": "M5A-P032::M5A-P032-E001-M5A-P032-E002"}'
+    '{"observation_tracker_ids": ["M5B-O032"], "source_experiment_tracker_id": "M5A-P032-E001", "source_paper_tracker_id": "M5A-P032", "tracker_key": "M5A-P032::M5A-P032-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P032'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P032::M5A-P032-E001-M5A-P032-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P032::M5A-P032-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P032-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O079"], "source_experiment_tracker_id": "M5A-P032-E002", "source_paper_tracker_id": "M5A-P032", "tracker_key": "M5A-P032::M5A-P032-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P032'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P032::M5A-P032-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1595,15 +2139,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Full text / PMC12921341',
-    'Tracker experiment M5A-P033-E001-M5A-P033-E002',
+    'Tracker experiment M5A-P033-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O033"], "source_experiment_tracker_id": "M5A-P033-E001-M5A-P033-E002", "source_paper_tracker_id": "M5A-P033", "tracker_key": "M5A-P033::M5A-P033-E001-M5A-P033-E002"}'
+    '{"observation_tracker_ids": ["M5B-O033"], "source_experiment_tracker_id": "M5A-P033-E001", "source_paper_tracker_id": "M5A-P033", "tracker_key": "M5A-P033::M5A-P033-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P033'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P033::M5A-P033-E001-M5A-P033-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P033::M5A-P033-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P033-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O080"], "source_experiment_tracker_id": "M5A-P033-E002", "source_paper_tracker_id": "M5A-P033", "tracker_key": "M5A-P033::M5A-P033-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P033'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P033::M5A-P033-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1612,15 +2173,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P034-E001-M5A-P034-E002',
+    'Tracker experiment M5A-P034-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O034"], "source_experiment_tracker_id": "M5A-P034-E001-M5A-P034-E002", "source_paper_tracker_id": "M5A-P034", "tracker_key": "M5A-P034::M5A-P034-E001-M5A-P034-E002"}'
+    '{"observation_tracker_ids": ["M5B-O034"], "source_experiment_tracker_id": "M5A-P034-E001", "source_paper_tracker_id": "M5A-P034", "tracker_key": "M5A-P034::M5A-P034-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P034'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P034::M5A-P034-E001-M5A-P034-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P034::M5A-P034-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P034-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O081"], "source_experiment_tracker_id": "M5A-P034-E002", "source_paper_tracker_id": "M5A-P034", "tracker_key": "M5A-P034::M5A-P034-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P034'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P034::M5A-P034-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1629,15 +2207,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P035-E001-M5A-P035-E002',
+    'Tracker experiment M5A-P035-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O035"], "source_experiment_tracker_id": "M5A-P035-E001-M5A-P035-E002", "source_paper_tracker_id": "M5A-P035", "tracker_key": "M5A-P035::M5A-P035-E001-M5A-P035-E002"}'
+    '{"observation_tracker_ids": ["M5B-O035"], "source_experiment_tracker_id": "M5A-P035-E001", "source_paper_tracker_id": "M5A-P035", "tracker_key": "M5A-P035::M5A-P035-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P035'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P035::M5A-P035-E001-M5A-P035-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P035::M5A-P035-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P035-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O082"], "source_experiment_tracker_id": "M5A-P035-E002", "source_paper_tracker_id": "M5A-P035", "tracker_key": "M5A-P035::M5A-P035-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P035'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P035::M5A-P035-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1646,15 +2241,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P036-E001-M5A-P036-E002',
+    'Tracker experiment M5A-P036-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O036"], "source_experiment_tracker_id": "M5A-P036-E001-M5A-P036-E002", "source_paper_tracker_id": "M5A-P036", "tracker_key": "M5A-P036::M5A-P036-E001-M5A-P036-E002"}'
+    '{"observation_tracker_ids": ["M5B-O036"], "source_experiment_tracker_id": "M5A-P036-E001", "source_paper_tracker_id": "M5A-P036", "tracker_key": "M5A-P036::M5A-P036-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P036'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P036::M5A-P036-E001-M5A-P036-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P036::M5A-P036-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P036-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O083"], "source_experiment_tracker_id": "M5A-P036-E002", "source_paper_tracker_id": "M5A-P036", "tracker_key": "M5A-P036::M5A-P036-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P036'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P036::M5A-P036-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1663,15 +2275,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P037-E001-M5A-P037-E002',
+    'Tracker experiment M5A-P037-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O037"], "source_experiment_tracker_id": "M5A-P037-E001-M5A-P037-E002", "source_paper_tracker_id": "M5A-P037", "tracker_key": "M5A-P037::M5A-P037-E001-M5A-P037-E002"}'
+    '{"observation_tracker_ids": ["M5B-O037"], "source_experiment_tracker_id": "M5A-P037-E001", "source_paper_tracker_id": "M5A-P037", "tracker_key": "M5A-P037::M5A-P037-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P037'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P037::M5A-P037-E001-M5A-P037-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P037::M5A-P037-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P037-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O084"], "source_experiment_tracker_id": "M5A-P037-E002", "source_paper_tracker_id": "M5A-P037", "tracker_key": "M5A-P037::M5A-P037-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P037'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P037::M5A-P037-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1680,15 +2309,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P038-E001-M5A-P038-E002',
+    'Tracker experiment M5A-P038-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O038"], "source_experiment_tracker_id": "M5A-P038-E001-M5A-P038-E002", "source_paper_tracker_id": "M5A-P038", "tracker_key": "M5A-P038::M5A-P038-E001-M5A-P038-E002"}'
+    '{"observation_tracker_ids": ["M5B-O038"], "source_experiment_tracker_id": "M5A-P038-E001", "source_paper_tracker_id": "M5A-P038", "tracker_key": "M5A-P038::M5A-P038-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P038'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P038::M5A-P038-E001-M5A-P038-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P038::M5A-P038-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P038-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O085"], "source_experiment_tracker_id": "M5A-P038-E002", "source_paper_tracker_id": "M5A-P038", "tracker_key": "M5A-P038::M5A-P038-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P038'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P038::M5A-P038-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1697,15 +2343,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P039-E001-M5A-P039-E002',
+    'Tracker experiment M5A-P039-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O039"], "source_experiment_tracker_id": "M5A-P039-E001-M5A-P039-E002", "source_paper_tracker_id": "M5A-P039", "tracker_key": "M5A-P039::M5A-P039-E001-M5A-P039-E002"}'
+    '{"observation_tracker_ids": ["M5B-O039"], "source_experiment_tracker_id": "M5A-P039-E001", "source_paper_tracker_id": "M5A-P039", "tracker_key": "M5A-P039::M5A-P039-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P039'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P039::M5A-P039-E001-M5A-P039-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P039::M5A-P039-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P039-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O086"], "source_experiment_tracker_id": "M5A-P039-E002", "source_paper_tracker_id": "M5A-P039", "tracker_key": "M5A-P039::M5A-P039-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P039'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P039::M5A-P039-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1714,15 +2377,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P040-E001-M5A-P040-E002',
+    'Tracker experiment M5A-P040-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O040"], "source_experiment_tracker_id": "M5A-P040-E001-M5A-P040-E002", "source_paper_tracker_id": "M5A-P040", "tracker_key": "M5A-P040::M5A-P040-E001-M5A-P040-E002"}'
+    '{"observation_tracker_ids": ["M5B-O040"], "source_experiment_tracker_id": "M5A-P040-E001", "source_paper_tracker_id": "M5A-P040", "tracker_key": "M5A-P040::M5A-P040-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P040'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P040::M5A-P040-E001-M5A-P040-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P040::M5A-P040-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P040-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O087"], "source_experiment_tracker_id": "M5A-P040-E002", "source_paper_tracker_id": "M5A-P040", "tracker_key": "M5A-P040::M5A-P040-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P040'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P040::M5A-P040-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1731,15 +2411,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P041-E001-M5A-P041-E002',
+    'Tracker experiment M5A-P041-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O041"], "source_experiment_tracker_id": "M5A-P041-E001-M5A-P041-E002", "source_paper_tracker_id": "M5A-P041", "tracker_key": "M5A-P041::M5A-P041-E001-M5A-P041-E002"}'
+    '{"observation_tracker_ids": ["M5B-O041"], "source_experiment_tracker_id": "M5A-P041-E001", "source_paper_tracker_id": "M5A-P041", "tracker_key": "M5A-P041::M5A-P041-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P041'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P041::M5A-P041-E001-M5A-P041-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P041::M5A-P041-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P041-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O088"], "source_experiment_tracker_id": "M5A-P041-E002", "source_paper_tracker_id": "M5A-P041", "tracker_key": "M5A-P041::M5A-P041-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P041'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P041::M5A-P041-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1748,15 +2445,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P042-E001-M5A-P042-E002',
+    'Tracker experiment M5A-P042-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O042"], "source_experiment_tracker_id": "M5A-P042-E001-M5A-P042-E002", "source_paper_tracker_id": "M5A-P042", "tracker_key": "M5A-P042::M5A-P042-E001-M5A-P042-E002"}'
+    '{"observation_tracker_ids": ["M5B-O042"], "source_experiment_tracker_id": "M5A-P042-E001", "source_paper_tracker_id": "M5A-P042", "tracker_key": "M5A-P042::M5A-P042-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P042'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P042::M5A-P042-E001-M5A-P042-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P042::M5A-P042-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P042-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O089"], "source_experiment_tracker_id": "M5A-P042-E002", "source_paper_tracker_id": "M5A-P042", "tracker_key": "M5A-P042::M5A-P042-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P042'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P042::M5A-P042-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1765,15 +2479,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Full text / PMC12908063',
-    'Tracker experiment M5A-P043-E001-M5A-P043-E002',
+    'Tracker experiment M5A-P043-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O043"], "source_experiment_tracker_id": "M5A-P043-E001-M5A-P043-E002", "source_paper_tracker_id": "M5A-P043", "tracker_key": "M5A-P043::M5A-P043-E001-M5A-P043-E002"}'
+    '{"observation_tracker_ids": ["M5B-O043"], "source_experiment_tracker_id": "M5A-P043-E001", "source_paper_tracker_id": "M5A-P043", "tracker_key": "M5A-P043::M5A-P043-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P043'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P043::M5A-P043-E001-M5A-P043-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P043::M5A-P043-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P043-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O090"], "source_experiment_tracker_id": "M5A-P043-E002", "source_paper_tracker_id": "M5A-P043", "tracker_key": "M5A-P043::M5A-P043-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P043'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P043::M5A-P043-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1782,15 +2513,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Full text / PMC13083982',
-    'Tracker experiment M5A-P044-E001-M5A-P044-E002',
+    'Tracker experiment M5A-P044-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O044"], "source_experiment_tracker_id": "M5A-P044-E001-M5A-P044-E002", "source_paper_tracker_id": "M5A-P044", "tracker_key": "M5A-P044::M5A-P044-E001-M5A-P044-E002"}'
+    '{"observation_tracker_ids": ["M5B-O044"], "source_experiment_tracker_id": "M5A-P044-E001", "source_paper_tracker_id": "M5A-P044", "tracker_key": "M5A-P044::M5A-P044-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P044'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P044::M5A-P044-E001-M5A-P044-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P044::M5A-P044-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P044-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O091"], "source_experiment_tracker_id": "M5A-P044-E002", "source_paper_tracker_id": "M5A-P044", "tracker_key": "M5A-P044::M5A-P044-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P044'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P044::M5A-P044-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1799,15 +2547,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P045-E001-M5A-P045-E002',
+    'Tracker experiment M5A-P045-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O045"], "source_experiment_tracker_id": "M5A-P045-E001-M5A-P045-E002", "source_paper_tracker_id": "M5A-P045", "tracker_key": "M5A-P045::M5A-P045-E001-M5A-P045-E002"}'
+    '{"observation_tracker_ids": ["M5B-O045"], "source_experiment_tracker_id": "M5A-P045-E001", "source_paper_tracker_id": "M5A-P045", "tracker_key": "M5A-P045::M5A-P045-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P045'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P045::M5A-P045-E001-M5A-P045-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P045::M5A-P045-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P045-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O092"], "source_experiment_tracker_id": "M5A-P045-E002", "source_paper_tracker_id": "M5A-P045", "tracker_key": "M5A-P045::M5A-P045-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P045'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P045::M5A-P045-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1816,15 +2581,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P046-E001-M5A-P046-E002',
+    'Tracker experiment M5A-P046-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O046"], "source_experiment_tracker_id": "M5A-P046-E001-M5A-P046-E002", "source_paper_tracker_id": "M5A-P046", "tracker_key": "M5A-P046::M5A-P046-E001-M5A-P046-E002"}'
+    '{"observation_tracker_ids": ["M5B-O046"], "source_experiment_tracker_id": "M5A-P046-E001", "source_paper_tracker_id": "M5A-P046", "tracker_key": "M5A-P046::M5A-P046-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P046'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P046::M5A-P046-E001-M5A-P046-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P046::M5A-P046-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P046-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O093"], "source_experiment_tracker_id": "M5A-P046-E002", "source_paper_tracker_id": "M5A-P046", "tracker_key": "M5A-P046::M5A-P046-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P046'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P046::M5A-P046-E002', experiment_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -1833,15 +2615,32 @@ WITH inserted AS (
   SELECT p.paper_id, ep.paradigm_id,
     1,
     'Abstract / saturated A tracker',
-    'Tracker experiment M5A-P047-E001-M5A-P047-E002',
+    'Tracker experiment M5A-P047-E001',
     'Module 5B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M5B-O047"], "source_experiment_tracker_id": "M5A-P047-E001-M5A-P047-E002", "source_paper_tracker_id": "M5A-P047", "tracker_key": "M5A-P047::M5A-P047-E001-M5A-P047-E002"}'
+    '{"observation_tracker_ids": ["M5B-O047"], "source_experiment_tracker_id": "M5A-P047-E001", "source_paper_tracker_id": "M5A-P047", "tracker_key": "M5A-P047::M5A-P047-E001"}'
   FROM _m5_paper_map p
   JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M5A-P047'
   RETURNING experiment_id
 )
-INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P047::M5A-P047-E001-M5A-P047-E002', experiment_id FROM inserted;
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P047::M5A-P047-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    2,
+    'Abstract / PubMed-indexed metadata',
+    'Tracker experiment M5A-P047-E002',
+    'Module 5B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M5B-O094"], "source_experiment_tracker_id": "M5A-P047-E002", "source_paper_tracker_id": "M5A-P047", "tracker_key": "M5A-P047::M5A-P047-E002"}'
+  FROM _m5_paper_map p
+  JOIN _m5_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M5A-P047'
+  RETURNING experiment_id
+)
+INSERT INTO _m5_experiment_map (tracker_id, experiment_id) SELECT 'M5A-P047::M5A-P047-E002', experiment_id FROM inserted;
 
 INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('Axon/white-matter repair intervention or mechanism', 'Module 5B tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
 
@@ -1850,6 +2649,53 @@ INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VA
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Axonal regeneration / cellular energetics', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Extrinsic inhibitory matrix / guidance pathway', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Graft/scaffold-enabled axon repair', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for A Myelin Debris Cleaner for Spinal Cord Injury Recovery: Polycaprolactone / Cell Membrane Assembled Scaffolds.; first-pass row captures remyelination / white matter repair in rat sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for A laminin-based therapy for dogs with chronic spinal cord injury: promising results of a longitudinal trial.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in dog chronic sci at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Activated alpha 9 integrin expression enables sensory pathway reconstruction after spinal cord injury.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in rat sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Activation of MAP2K signaling by genetic engineering or HF-rTMS promotes corticospinal axon sprouting and functional regeneration; first-pass row captures cst sprouting/regeneration in rodent model context at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Anti-Nogo-A NG101 treatment induces changes in spinal cord micro- and macrostructure following spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in rat sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Axon regeneration through scars and into sites of chronic spinal cord injury; first-pass row captures axon regeneration through chronic scar/graft in rat at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for CITED2 is a druggable epigenetic switch coupling neuronal maturation to regenerative decline.; first-pass row captures intrinsic neuronal growth competence in rat sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Central Serotonin Deficiency Impairs Recovery of Sensorimotor Abilities After Spinal Cord Injury in Rats.; first-pass row captures serotonergic/propriospinal relay plasticity in rat sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Chondroitinase ABC combined with Schwann cell transplantation enhances restoration of neural connection and functional recovery following acute and chronic spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in human / translational context at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Co-overexpression of OPN, IGF-1 and CNTF augment the therapeutic effect of DPSC on spinal cord injury.; first-pass row captures graft/scaffold-enabled axon repair in mouse sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Compensatory changes after spinal cord injury in a remyelination deficient mouse model.; first-pass row captures remyelination / white matter repair in mouse sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Corticospinal tract regeneration after spinal cord injury in receptor protein tyrosine phosphatase sigma deficient mice; first-pass row captures cst regeneration / receptor ptp sigma in mouse at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Development of a <i>PTEN</i>-siRNA activated scaffold to promote axonal regrowth following spinal cord injury.; first-pass row captures intrinsic neuronal growth competence in rat sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Disrupting CSPG-Driven Microglia-Astrocyte Crosstalk Enables Scar-Free Repair in Spinal Cord Injury.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in rat sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Effects of transcranial magnetic stimulation on axonal regeneration in the corticospinal tract of female rats with spinal cord injury.; first-pass row captures activity or stimulation-enabled axon repair in rat sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Enhanced locomotor recovery in mice lacking GlcNAc6ST1 and GlcNAc6ST4 following spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in mouse sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Functional recovery induced by KCC2-enabled relay pathways in completely injured spinal cords in adult rats.; first-pass row captures serotonergic/propriospinal relay plasticity in rat sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Functionalized nanozyme delivery of a KCC2-activator conjugate for the promotion of functional recovery after acute spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in rat sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Gabapentinoid treatment promotes corticospinal plasticity and regeneration following murine spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Human Oligodendrogenic Neural Progenitor Cells Delivered with Chondroitinase ABC Facilitate Functional Repair of Chronic Spinal Cord Injury.; first-pass row captures remyelination / white matter repair in human / translational context at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Injured adult neurons regress to an embryonic transcriptional growth state; first-pass row captures intrinsic neuronal growth state in mouse at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.; first-pass row captures remyelination / white matter repair in rat sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Lentivirus-mediated overexpression of netrin-1/DCC co-expression promotes axonal regeneration and functional recovery in spinal cord injury via the inhibition of the NgR1-RhoA-ROCK signaling pathway.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in human / translational context at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Lesion-remote astrocytes govern microglia-mediated white matter repair.; first-pass row captures remyelination / white matter repair in human / translational context at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Lesion-remote astrocytes govern microglia-mediated white matter repair; first-pass row captures lesion-remote white matter repair in mouse at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Lipin1 depletion coordinates neuronal signaling pathways to promote motor and sensory axon regeneration after spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in rat sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Modulation of Extrinsic and Intrinsic Signaling Together with Neuronal Activation Enhances Forelimb Motor Recovery after Cervical Spinal Cord Injury.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Motoneuron Death after Human Spinal Cord Injury; first-pass row captures ventral-root axon loss/remyelination pathology in human at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Multichannel 3D-Printed Bioactive Scaffold Combined with Small Interfering RNA Delivery to Promote Neurological Recovery after Spinal Cord Injury.; first-pass row captures graft/scaffold-enabled axon repair in rat sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Netrin-1 Therapy Restores Partial Hindlimb Movement in a Rat Model of High-Severity Chronic Spinal Cord Injury.; first-pass row captures corticospinal tract regeneration / sprouting in human / translational context at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Neuronal HDAC3 knockdown promotes propriospinal detour pathway formation and locomotor recovery in a mouse model of spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in human / translational context at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Osteopontin enhances the effect of treadmill training and promotes functional recovery after spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Poly-L-Ornithine coated plant scaffolds support motor recovery in rats after traumatic spinal cord injury.; first-pass row captures graft/scaffold-enabled axon repair in human / translational context at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Precise rewiring of corticospinal axons and spinal interneurons via near-infrared optogenetics for spinal cord injury treatment.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Reducing Pericyte-Derived Scarring Promotes Recovery after Spinal Cord Injury; first-pass row captures cst/rst regeneration after scar attenuation in mouse at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Restoring Cellular Energetics Promotes Axonal Regeneration and Functional Recovery after Spinal Cord Injury; first-pass row captures axonal regeneration / cellular energetics in rodent model context at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Schwann Cell-Derived Exosomes Induced Axon Growth after Spinal Cord Injury by Decreasing PTP- Activation on CSPGs via the Rho/ROCK Pathway.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in mouse sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Serotonergic System-Targeted Nucleic Acid Hydrogel Coordinates Excitability Restoration and Circuit Reconstruction for Spinal Cord Injury Therapy.; first-pass row captures serotonergic/propriospinal relay plasticity in mouse sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Spinal cord reconstitution with homologous neural grafts enables robust corticospinal regeneration; first-pass row captures neural graft-enabled cst regeneration in rat at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Stimulation of corticospinal neurons by optogenetic cAMP inductions promotes motor recovery after spinal cord injury in female rats via raphespinal tract modulation.; first-pass row captures corticospinal tract regeneration / sprouting in rat sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Synaptotagmin 4 Supports Spontaneous Axon Sprouting after Spinal Cord Injury.; first-pass row captures corticospinal tract regeneration / sprouting in experimental sci model context at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for TREM2 Facilitates Myelin Debris Clearance but Exacerbates Chronic Inflammation and Fibrosis After Spinal Cord Injury.; first-pass row captures remyelination / white matter repair in mouse sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for TTBK2-Driven Ciliogenesis Is Required for Intrinsic Neuronal Regeneration After Spinal Cord Injury.; first-pass row captures intrinsic neuronal growth competence in mouse sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for The transcription factor combination MEF2 and KLF7 promotes axonal sprouting in the injured spinal cord with functional improvement and regeneration-associated gene expression.; first-pass row captures intrinsic neuronal growth competence in rat sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Thiorphan reprograms neurons to promote functional recovery after spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in human / translational context at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Transcranial Optogenetic Stimulation Promotes Corticospinal Tract Axon Regeneration to Repair Spinal Cord Injury by Activating the JAK2/STAT3 Pathway.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcome/mechanistic validation row for Treadmill exercise supplemented by OPN promote axon regeneration through the IGF-1R/Akt/mTOR signaling pathway.; first-pass row captures corticospinal tract regeneration / sprouting in human / translational context at abstract/source-title level.', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('intrinsic growth competence', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('relay plasticity / circuit reconstruction', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('tract regeneration / sprouting / recovery', 'Module 5B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
@@ -1869,11 +2715,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Axon regeneration through scars and into sites of chronic spinal cord injury. Note: Chronic scar axon-regeneration anchor.", "experiment_tracker_id": "M5A-P001-E001-M5A-P001-E002", "paper_tracker_id": "M5A-P001", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O001"}'
+    '{"curator_notes": "Primary title: Axon regeneration through scars and into sites of chronic spinal cord injury. Note: Chronic scar axon-regeneration anchor.", "experiment_tracker_id": "M5A-P001-E001", "paper_tracker_id": "M5A-P001", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O001"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P001::M5A-P001-E001-M5A-P001-E002'
+  WHERE e.tracker_id = 'M5A-P001::M5A-P001-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'Axon regeneration through chronic scar/graft'
   RETURNING observation_id
@@ -1894,11 +2740,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Reducing Pericyte-Derived Scarring Promotes Recovery after Spinal Cord Injury. Note: Axon regeneration with scar-modulation anchor.", "experiment_tracker_id": "M5A-P002-E001-M5A-P002-E002", "paper_tracker_id": "M5A-P002", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O002"}'
+    '{"curator_notes": "Primary title: Reducing Pericyte-Derived Scarring Promotes Recovery after Spinal Cord Injury. Note: Axon regeneration with scar-modulation anchor.", "experiment_tracker_id": "M5A-P002-E001", "paper_tracker_id": "M5A-P002", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O002"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P002::M5A-P002-E001-M5A-P002-E002'
+  WHERE e.tracker_id = 'M5A-P002::M5A-P002-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'tract regeneration / sprouting / recovery'
   RETURNING observation_id
@@ -1919,11 +2765,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Lesion-remote astrocytes govern microglia-mediated white matter repair. Note: White matter repair anchor.", "experiment_tracker_id": "M5A-P003-E001-M5A-P003-E002", "paper_tracker_id": "M5A-P003", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O003"}'
+    '{"curator_notes": "Primary title: Lesion-remote astrocytes govern microglia-mediated white matter repair. Note: White matter repair anchor.", "experiment_tracker_id": "M5A-P003-E001", "paper_tracker_id": "M5A-P003", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O003"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P003::M5A-P003-E001-M5A-P003-E002'
+  WHERE e.tracker_id = 'M5A-P003::M5A-P003-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'white matter / remyelination / debris handling'
   RETURNING observation_id
@@ -1944,11 +2790,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Motoneuron Death after Human Spinal Cord Injury. Note: Human remyelination/pathology bridge.", "experiment_tracker_id": "M5A-P004-E001-M5A-P004-E002", "paper_tracker_id": "M5A-P004", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O004"}'
+    '{"curator_notes": "Primary title: Motoneuron Death after Human Spinal Cord Injury. Note: Human remyelination/pathology bridge.", "experiment_tracker_id": "M5A-P004-E001", "paper_tracker_id": "M5A-P004", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O004"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P004::M5A-P004-E001-M5A-P004-E002'
+  WHERE e.tracker_id = 'M5A-P004::M5A-P004-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'white matter / remyelination / debris handling'
   RETURNING observation_id
@@ -1969,11 +2815,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Restoring Cellular Energetics Promotes Axonal Regeneration and Functional Recovery after Spinal Cord Injury. Note: Metabolic mechanism anchor.", "experiment_tracker_id": "M5A-P005-E001-M5A-P005-E002", "paper_tracker_id": "M5A-P005", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T005", "tracker_id": "M5B-O005"}'
+    '{"curator_notes": "Primary title: Restoring Cellular Energetics Promotes Axonal Regeneration and Functional Recovery after Spinal Cord Injury. Note: Metabolic mechanism anchor.", "experiment_tracker_id": "M5A-P005-E001", "paper_tracker_id": "M5A-P005", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T005", "tracker_id": "M5B-O005"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P005::M5A-P005-E001-M5A-P005-E002'
+  WHERE e.tracker_id = 'M5A-P005::M5A-P005-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'Axonal regeneration / cellular energetics'
   RETURNING observation_id
@@ -1994,11 +2840,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Corticospinal tract regeneration after spinal cord injury in receptor protein tyrosine phosphatase sigma deficient mice. Note: CSPG-receptor pathway anchor.", "experiment_tracker_id": "M5A-P006-E001-M5A-P006-E002", "paper_tracker_id": "M5A-P006", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O006"}'
+    '{"curator_notes": "Primary title: Corticospinal tract regeneration after spinal cord injury in receptor protein tyrosine phosphatase sigma deficient mice. Note: CSPG-receptor pathway anchor.", "experiment_tracker_id": "M5A-P006-E001", "paper_tracker_id": "M5A-P006", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O006"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P006::M5A-P006-E001-M5A-P006-E002'
+  WHERE e.tracker_id = 'M5A-P006::M5A-P006-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'tract regeneration / sprouting / recovery'
   RETURNING observation_id
@@ -2019,11 +2865,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Spinal cord reconstitution with homologous neural grafts enables robust corticospinal regeneration. Note: Graft-regeneration bridge to Module 4A.", "experiment_tracker_id": "M5A-P007-E001-M5A-P007-E002", "paper_tracker_id": "M5A-P007", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O007"}'
+    '{"curator_notes": "Primary title: Spinal cord reconstitution with homologous neural grafts enables robust corticospinal regeneration. Note: Graft-regeneration bridge to Module 4A.", "experiment_tracker_id": "M5A-P007-E001", "paper_tracker_id": "M5A-P007", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O007"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P007::M5A-P007-E001-M5A-P007-E002'
+  WHERE e.tracker_id = 'M5A-P007::M5A-P007-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'tract regeneration / sprouting / recovery'
   RETURNING observation_id
@@ -2044,11 +2890,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Injured adult neurons regress to an embryonic transcriptional growth state. Note: Transcriptional growth-state anchor.", "experiment_tracker_id": "M5A-P008-E001-M5A-P008-E002", "paper_tracker_id": "M5A-P008", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T005", "tracker_id": "M5B-O008"}'
+    '{"curator_notes": "Primary title: Injured adult neurons regress to an embryonic transcriptional growth state. Note: Transcriptional growth-state anchor.", "experiment_tracker_id": "M5A-P008-E001", "paper_tracker_id": "M5A-P008", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T005", "tracker_id": "M5B-O008"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P008::M5A-P008-E001-M5A-P008-E002'
+  WHERE e.tracker_id = 'M5A-P008::M5A-P008-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'intrinsic growth competence'
   RETURNING observation_id
@@ -2069,11 +2915,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Activation of MAP2K signaling by genetic engineering or HF-rTMS promotes corticospinal axon sprouting and functional regeneration. Note: Stimulation/signaling intervention anchor.", "experiment_tracker_id": "M5A-P009-E001-M5A-P009-E002", "paper_tracker_id": "M5A-P009", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O009"}'
+    '{"curator_notes": "Primary title: Activation of MAP2K signaling by genetic engineering or HF-rTMS promotes corticospinal axon sprouting and functional regeneration. Note: Stimulation/signaling intervention anchor.", "experiment_tracker_id": "M5A-P009-E001", "paper_tracker_id": "M5A-P009", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O009"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P009::M5A-P009-E001-M5A-P009-E002'
+  WHERE e.tracker_id = 'M5A-P009::M5A-P009-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'tract regeneration / sprouting / recovery'
   RETURNING observation_id
@@ -2094,11 +2940,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Transcranial Optogenetic Stimulation Promotes Corticospinal Tract Axon Regeneration to Repair Spinal Cord Injury by Activating the JAK2/STAT3 Pathway.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P010-E001-M5A-P010-E002", "paper_tracker_id": "M5A-P010", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O010"}'
+    '{"curator_notes": "Primary title: Transcranial Optogenetic Stimulation Promotes Corticospinal Tract Axon Regeneration to Repair Spinal Cord Injury by Activating the JAK2/STAT3 Pathway.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P010-E001", "paper_tracker_id": "M5A-P010", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O010"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P010::M5A-P010-E001-M5A-P010-E002'
+  WHERE e.tracker_id = 'M5A-P010::M5A-P010-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'tract regeneration / sprouting / recovery'
   RETURNING observation_id
@@ -2119,11 +2965,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Lipin1 depletion coordinates neuronal signaling pathways to promote motor and sensory axon regeneration after spinal cord injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P011-E001-M5A-P011-E002", "paper_tracker_id": "M5A-P011", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T005", "tracker_id": "M5B-O011"}'
+    '{"curator_notes": "Primary title: Lipin1 depletion coordinates neuronal signaling pathways to promote motor and sensory axon regeneration after spinal cord injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P011-E001", "paper_tracker_id": "M5A-P011", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T005", "tracker_id": "M5B-O011"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P011::M5A-P011-E001-M5A-P011-E002'
+  WHERE e.tracker_id = 'M5A-P011::M5A-P011-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'tract regeneration / sprouting / recovery'
   RETURNING observation_id
@@ -2144,11 +2990,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Effects of transcranial magnetic stimulation on axonal regeneration in the corticospinal tract of female rats with spinal cord injury.. Note: TMS corticospinal regeneration anchor.", "experiment_tracker_id": "M5A-P012-E001-M5A-P012-E002", "paper_tracker_id": "M5A-P012", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O012"}'
+    '{"curator_notes": "Primary title: Effects of transcranial magnetic stimulation on axonal regeneration in the corticospinal tract of female rats with spinal cord injury.. Note: TMS corticospinal regeneration anchor.", "experiment_tracker_id": "M5A-P012-E001", "paper_tracker_id": "M5A-P012", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O012"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P012::M5A-P012-E001-M5A-P012-E002'
+  WHERE e.tracker_id = 'M5A-P012::M5A-P012-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'Activity or stimulation-enabled axon repair'
   RETURNING observation_id
@@ -2169,11 +3015,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Synaptotagmin 4 Supports Spontaneous Axon Sprouting after Spinal Cord Injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P013-E001-M5A-P013-E002", "paper_tracker_id": "M5A-P013", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O013"}'
+    '{"curator_notes": "Primary title: Synaptotagmin 4 Supports Spontaneous Axon Sprouting after Spinal Cord Injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P013-E001", "paper_tracker_id": "M5A-P013", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O013"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P013::M5A-P013-E001-M5A-P013-E002'
+  WHERE e.tracker_id = 'M5A-P013::M5A-P013-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'tract regeneration / sprouting / recovery'
   RETURNING observation_id
@@ -2194,11 +3040,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Gabapentinoid treatment promotes corticospinal plasticity and regeneration following murine spinal cord injury.. Note: Gabapentinoid CST plasticity anchor.", "experiment_tracker_id": "M5A-P014-E001-M5A-P014-E002", "paper_tracker_id": "M5A-P014", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O014"}'
+    '{"curator_notes": "Primary title: Gabapentinoid treatment promotes corticospinal plasticity and regeneration following murine spinal cord injury.. Note: Gabapentinoid CST plasticity anchor.", "experiment_tracker_id": "M5A-P014-E001", "paper_tracker_id": "M5A-P014", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O014"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P014::M5A-P014-E001-M5A-P014-E002'
+  WHERE e.tracker_id = 'M5A-P014::M5A-P014-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'tract regeneration / sprouting / recovery'
   RETURNING observation_id
@@ -2219,11 +3065,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Activated alpha 9 integrin expression enables sensory pathway reconstruction after spinal cord injury.. Note: Extrinsic inhibitory matrix / guidance pathway anchor.", "experiment_tracker_id": "M5A-P015-E001-M5A-P015-E002", "paper_tracker_id": "M5A-P015", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T002", "tracker_id": "M5B-O015"}'
+    '{"curator_notes": "Primary title: Activated alpha 9 integrin expression enables sensory pathway reconstruction after spinal cord injury.. Note: Extrinsic inhibitory matrix / guidance pathway anchor.", "experiment_tracker_id": "M5A-P015-E001", "paper_tracker_id": "M5A-P015", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T002", "tracker_id": "M5B-O015"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P015::M5A-P015-E001-M5A-P015-E002'
+  WHERE e.tracker_id = 'M5A-P015::M5A-P015-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'Extrinsic inhibitory matrix / guidance pathway'
   RETURNING observation_id
@@ -2244,11 +3090,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Modulation of Extrinsic and Intrinsic Signaling Together with Neuronal Activation Enhances Forelimb Motor Recovery after Cervical Spinal Cord Injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P016-E001-M5A-P016-E002", "paper_tracker_id": "M5A-P016", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O016"}'
+    '{"curator_notes": "Primary title: Modulation of Extrinsic and Intrinsic Signaling Together with Neuronal Activation Enhances Forelimb Motor Recovery after Cervical Spinal Cord Injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P016-E001", "paper_tracker_id": "M5A-P016", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O016"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P016::M5A-P016-E001-M5A-P016-E002'
+  WHERE e.tracker_id = 'M5A-P016::M5A-P016-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'tract regeneration / sprouting / recovery'
   RETURNING observation_id
@@ -2269,11 +3115,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Thiorphan reprograms neurons to promote functional recovery after spinal cord injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P017-E001-M5A-P017-E002", "paper_tracker_id": "M5A-P017", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O017"}'
+    '{"curator_notes": "Primary title: Thiorphan reprograms neurons to promote functional recovery after spinal cord injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P017-E001", "paper_tracker_id": "M5A-P017", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O017"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P017::M5A-P017-E001-M5A-P017-E002'
+  WHERE e.tracker_id = 'M5A-P017::M5A-P017-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'tract regeneration / sprouting / recovery'
   RETURNING observation_id
@@ -2294,11 +3140,11 @@ WITH inserted AS (
     'Full text / PMC',
     'Full text / PMC12831131',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41578860; preserves intrinsic-growth/ciliogenesis boundary.", "experiment_tracker_id": "M5A-P018-E001-M5A-P018-E002", "paper_tracker_id": "M5A-P018", "quantitative": "YES", "statistics_reported": "Full text reports in vitro overexpression/knockdown, RNA-seq/RT-qPCR, conditional knockout, behavior, immunofluorescence, and BDA tracing", "topic_id": "M5B-T005", "tracker_id": "M5B-O018"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41578860; preserves intrinsic-growth/ciliogenesis boundary.", "experiment_tracker_id": "M5A-P018-E001", "paper_tracker_id": "M5A-P018", "quantitative": "YES", "statistics_reported": "Full text reports in vitro overexpression/knockdown, RNA-seq/RT-qPCR, conditional knockout, behavior, immunofluorescence, and BDA tracing", "topic_id": "M5B-T005", "tracker_id": "M5B-O018"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P018::M5A-P018-E001-M5A-P018-E002'
+  WHERE e.tracker_id = 'M5A-P018::M5A-P018-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'intrinsic growth competence'
   RETURNING observation_id
@@ -2319,11 +3165,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: The transcription factor combination MEF2 and KLF7 promotes axonal sprouting in the injured spinal cord with functional improvement and regeneration-associated gene expression.. Note: Intrinsic neuronal growth competence anchor.", "experiment_tracker_id": "M5A-P019-E001-M5A-P019-E002", "paper_tracker_id": "M5A-P019", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T005", "tracker_id": "M5B-O019"}'
+    '{"curator_notes": "Primary title: The transcription factor combination MEF2 and KLF7 promotes axonal sprouting in the injured spinal cord with functional improvement and regeneration-associated gene expression.. Note: Intrinsic neuronal growth competence anchor.", "experiment_tracker_id": "M5A-P019-E001", "paper_tracker_id": "M5A-P019", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T005", "tracker_id": "M5B-O019"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P019::M5A-P019-E001-M5A-P019-E002'
+  WHERE e.tracker_id = 'M5A-P019::M5A-P019-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'intrinsic growth competence'
   RETURNING observation_id
@@ -2344,11 +3190,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Stimulation of corticospinal neurons by optogenetic cAMP inductions promotes motor recovery after spinal cord injury in female rats via raphespinal tract modulation.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P020-E001-M5A-P020-E002", "paper_tracker_id": "M5A-P020", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O020"}'
+    '{"curator_notes": "Primary title: Stimulation of corticospinal neurons by optogenetic cAMP inductions promotes motor recovery after spinal cord injury in female rats via raphespinal tract modulation.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P020-E001", "paper_tracker_id": "M5A-P020", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O020"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P020::M5A-P020-E001-M5A-P020-E002'
+  WHERE e.tracker_id = 'M5A-P020::M5A-P020-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'tract regeneration / sprouting / recovery'
   RETURNING observation_id
@@ -2369,11 +3215,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Precise rewiring of corticospinal axons and spinal interneurons via near-infrared optogenetics for spinal cord injury treatment.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P021-E001-M5A-P021-E002", "paper_tracker_id": "M5A-P021", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O021"}'
+    '{"curator_notes": "Primary title: Precise rewiring of corticospinal axons and spinal interneurons via near-infrared optogenetics for spinal cord injury treatment.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P021-E001", "paper_tracker_id": "M5A-P021", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O021"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P021::M5A-P021-E001-M5A-P021-E002'
+  WHERE e.tracker_id = 'M5A-P021::M5A-P021-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'tract regeneration / sprouting / recovery'
   RETURNING observation_id
@@ -2394,11 +3240,11 @@ WITH inserted AS (
     'PubMed abstract',
     'PubMed abstract verified',
     'medium',
-    '{"curator_notes": "Source-verified but not full-text upgraded; PMID 41163574.", "experiment_tracker_id": "M5A-P022-E001-M5A-P022-E002", "paper_tracker_id": "M5A-P022", "quantitative": "YES", "statistics_reported": "PubMed abstract reports functional and anatomical endpoints; open full text not identified in metadata batch", "topic_id": "M5B-T002", "tracker_id": "M5B-O022"}'
+    '{"curator_notes": "Source-verified but not full-text upgraded; PMID 41163574.", "experiment_tracker_id": "M5A-P022-E001", "paper_tracker_id": "M5A-P022", "quantitative": "YES", "statistics_reported": "PubMed abstract reports functional and anatomical endpoints; open full text not identified in metadata batch", "topic_id": "M5B-T002", "tracker_id": "M5B-O022"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P022::M5A-P022-E001-M5A-P022-E002'
+  WHERE e.tracker_id = 'M5A-P022::M5A-P022-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'tract regeneration / sprouting / recovery'
   RETURNING observation_id
@@ -2419,11 +3265,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Lentivirus-mediated overexpression of netrin-1/DCC co-expression promotes axonal regeneration and functional recovery in spinal cord injury via the inhibition of the NgR1-RhoA-ROCK signaling pathway.. Note: Extrinsic inhibitory matrix / guidance pathway anchor.", "experiment_tracker_id": "M5A-P023-E001-M5A-P023-E002", "paper_tracker_id": "M5A-P023", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T002", "tracker_id": "M5B-O023"}'
+    '{"curator_notes": "Primary title: Lentivirus-mediated overexpression of netrin-1/DCC co-expression promotes axonal regeneration and functional recovery in spinal cord injury via the inhibition of the NgR1-RhoA-ROCK signaling pathway.. Note: Extrinsic inhibitory matrix / guidance pathway anchor.", "experiment_tracker_id": "M5A-P023-E001", "paper_tracker_id": "M5A-P023", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T002", "tracker_id": "M5B-O023"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P023::M5A-P023-E001-M5A-P023-E002'
+  WHERE e.tracker_id = 'M5A-P023::M5A-P023-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'Extrinsic inhibitory matrix / guidance pathway'
   RETURNING observation_id
@@ -2444,11 +3290,11 @@ WITH inserted AS (
     'Full text / PMC',
     'Full text / PMC12866793',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41221600; cross-tags Module 3 immune-glial scar boundary.", "experiment_tracker_id": "M5A-P024-E001-M5A-P024-E002", "paper_tracker_id": "M5A-P024", "quantitative": "YES", "statistics_reported": "Full text reports CSPG-driven microglial inflammatory signaling, astrocyte scar transition, ChABC-based intervention, and matrix/scar endpoints", "topic_id": "M5B-T002", "tracker_id": "M5B-O024"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41221600; cross-tags Module 3 immune-glial scar boundary.", "experiment_tracker_id": "M5A-P024-E001", "paper_tracker_id": "M5A-P024", "quantitative": "YES", "statistics_reported": "Full text reports CSPG-driven microglial inflammatory signaling, astrocyte scar transition, ChABC-based intervention, and matrix/scar endpoints", "topic_id": "M5B-T002", "tracker_id": "M5B-O024"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P024::M5A-P024-E001-M5A-P024-E002'
+  WHERE e.tracker_id = 'M5A-P024::M5A-P024-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'Extrinsic inhibitory matrix / guidance pathway'
   RETURNING observation_id
@@ -2469,11 +3315,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Chondroitinase ABC combined with Schwann cell transplantation enhances restoration of neural connection and functional recovery following acute and chronic spinal cord injury.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P025-E001-M5A-P025-E002", "paper_tracker_id": "M5A-P025", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O025"}'
+    '{"curator_notes": "Primary title: Chondroitinase ABC combined with Schwann cell transplantation enhances restoration of neural connection and functional recovery following acute and chronic spinal cord injury.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P025-E001", "paper_tracker_id": "M5A-P025", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O025"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P025::M5A-P025-E001-M5A-P025-E002'
+  WHERE e.tracker_id = 'M5A-P025::M5A-P025-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'relay plasticity / circuit reconstruction'
   RETURNING observation_id
@@ -2494,11 +3340,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Schwann Cell-Derived Exosomes Induced Axon Growth after Spinal Cord Injury by Decreasing PTP- Activation on CSPGs via the Rho/ROCK Pathway.. Note: Extrinsic inhibitory matrix / guidance pathway anchor.", "experiment_tracker_id": "M5A-P026-E001-M5A-P026-E002", "paper_tracker_id": "M5A-P026", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T002", "tracker_id": "M5B-O026"}'
+    '{"curator_notes": "Primary title: Schwann Cell-Derived Exosomes Induced Axon Growth after Spinal Cord Injury by Decreasing PTP- Activation on CSPGs via the Rho/ROCK Pathway.. Note: Extrinsic inhibitory matrix / guidance pathway anchor.", "experiment_tracker_id": "M5A-P026-E001", "paper_tracker_id": "M5A-P026", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T002", "tracker_id": "M5B-O026"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P026::M5A-P026-E001-M5A-P026-E002'
+  WHERE e.tracker_id = 'M5A-P026::M5A-P026-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'Extrinsic inhibitory matrix / guidance pathway'
   RETURNING observation_id
@@ -2519,11 +3365,11 @@ WITH inserted AS (
     'Full text / PMC',
     'Full text / PMC13168246',
     'high',
-    '{"curator_notes": "Human trial imaging biomarker row; interpret as structural biomarker evidence, not direct axon-regrowth proof.", "experiment_tracker_id": "M5A-P027-E001-M5A-P027-E002", "paper_tracker_id": "M5A-P027", "quantitative": "YES", "statistics_reported": "Full text reports trial MRI biomarkers including lesion volume, tissue bridges, CSA, and tract-specific MTsat over six months", "topic_id": "M5B-T002", "tracker_id": "M5B-O027"}'
+    '{"curator_notes": "Human trial imaging biomarker row; interpret as structural biomarker evidence, not direct axon-regrowth proof.", "experiment_tracker_id": "M5A-P027-E001", "paper_tracker_id": "M5A-P027", "quantitative": "YES", "statistics_reported": "Full text reports trial MRI biomarkers including lesion volume, tissue bridges, CSA, and tract-specific MTsat over six months", "topic_id": "M5B-T002", "tracker_id": "M5B-O027"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P027::M5A-P027-E001-M5A-P027-E002'
+  WHERE e.tracker_id = 'M5A-P027::M5A-P027-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'tract regeneration / sprouting / recovery'
   RETURNING observation_id
@@ -2544,11 +3390,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Human Oligodendrogenic Neural Progenitor Cells Delivered with Chondroitinase ABC Facilitate Functional Repair of Chronic Spinal Cord Injury.. Note: Remyelination / white matter repair anchor.", "experiment_tracker_id": "M5A-P028-E001-M5A-P028-E002", "paper_tracker_id": "M5A-P028", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O028"}'
+    '{"curator_notes": "Primary title: Human Oligodendrogenic Neural Progenitor Cells Delivered with Chondroitinase ABC Facilitate Functional Repair of Chronic Spinal Cord Injury.. Note: Remyelination / white matter repair anchor.", "experiment_tracker_id": "M5A-P028-E001", "paper_tracker_id": "M5A-P028", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O028"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P028::M5A-P028-E001-M5A-P028-E002'
+  WHERE e.tracker_id = 'M5A-P028::M5A-P028-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'white matter / remyelination / debris handling'
   RETURNING observation_id
@@ -2569,11 +3415,11 @@ WITH inserted AS (
     'Full text / PMC',
     'Full text / PMC12884443',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41660680; preserves contradiction boundary.", "experiment_tracker_id": "M5A-P029-E001-M5A-P029-E002", "paper_tracker_id": "M5A-P029", "quantitative": "YES", "statistics_reported": "Full text reports TREM2 expression, phagocytosis, foamy macrophages, DAM activation, axon regeneration, neuronal survival, BMS, and footprint outcomes", "topic_id": "M5B-T003", "tracker_id": "M5B-O029"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41660680; preserves contradiction boundary.", "experiment_tracker_id": "M5A-P029-E001", "paper_tracker_id": "M5A-P029", "quantitative": "YES", "statistics_reported": "Full text reports TREM2 expression, phagocytosis, foamy macrophages, DAM activation, axon regeneration, neuronal survival, BMS, and footprint outcomes", "topic_id": "M5B-T003", "tracker_id": "M5B-O029"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P029::M5A-P029-E001-M5A-P029-E002'
+  WHERE e.tracker_id = 'M5A-P029::M5A-P029-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'white matter / remyelination / debris handling'
   RETURNING observation_id
@@ -2594,11 +3440,11 @@ WITH inserted AS (
     'Full text / PMC',
     'Full text / PMC12823418',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41407858; cross-links Module 3 immune-glial state.", "experiment_tracker_id": "M5A-P030-E001-M5A-P030-E002", "paper_tracker_id": "M5A-P030", "quantitative": "YES", "statistics_reported": "Full text reports LRA transcriptional states, astrocyte-specific perturbation, microglial lipid-debris clearance, and white matter repair outcomes", "topic_id": "M5B-T003", "tracker_id": "M5B-O030"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41407858; cross-links Module 3 immune-glial state.", "experiment_tracker_id": "M5A-P030-E001", "paper_tracker_id": "M5A-P030", "quantitative": "YES", "statistics_reported": "Full text reports LRA transcriptional states, astrocyte-specific perturbation, microglial lipid-debris clearance, and white matter repair outcomes", "topic_id": "M5B-T003", "tracker_id": "M5B-O030"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P030::M5A-P030-E001-M5A-P030-E002'
+  WHERE e.tracker_id = 'M5A-P030::M5A-P030-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'white matter / remyelination / debris handling'
   RETURNING observation_id
@@ -2619,11 +3465,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Compensatory changes after spinal cord injury in a remyelination deficient mouse model.. Note: Remyelination / white matter repair anchor.", "experiment_tracker_id": "M5A-P031-E001-M5A-P031-E002", "paper_tracker_id": "M5A-P031", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O031"}'
+    '{"curator_notes": "Primary title: Compensatory changes after spinal cord injury in a remyelination deficient mouse model.. Note: Remyelination / white matter repair anchor.", "experiment_tracker_id": "M5A-P031-E001", "paper_tracker_id": "M5A-P031", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O031"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P031::M5A-P031-E001-M5A-P031-E002'
+  WHERE e.tracker_id = 'M5A-P031::M5A-P031-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'white matter / remyelination / debris handling'
   RETURNING observation_id
@@ -2644,11 +3490,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: A Myelin Debris Cleaner for Spinal Cord Injury Recovery: Polycaprolactone / Cell Membrane Assembled Scaffolds.. Note: Remyelination / white matter repair anchor.", "experiment_tracker_id": "M5A-P032-E001-M5A-P032-E002", "paper_tracker_id": "M5A-P032", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O032"}'
+    '{"curator_notes": "Primary title: A Myelin Debris Cleaner for Spinal Cord Injury Recovery: Polycaprolactone / Cell Membrane Assembled Scaffolds.. Note: Remyelination / white matter repair anchor.", "experiment_tracker_id": "M5A-P032-E001", "paper_tracker_id": "M5A-P032", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O032"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P032::M5A-P032-E001-M5A-P032-E002'
+  WHERE e.tracker_id = 'M5A-P032::M5A-P032-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'white matter / remyelination / debris handling'
   RETURNING observation_id
@@ -2669,11 +3515,11 @@ WITH inserted AS (
     'Full text / PMC',
     'Full text / PMC12921341',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41531173; cross-tags biomaterial delivery boundary.", "experiment_tracker_id": "M5A-P033-E001-M5A-P033-E002", "paper_tracker_id": "M5A-P033", "quantitative": "YES", "statistics_reported": "Full text reports 5-HTP-derived targeting/neuromodulatory hydrogel design, PTEN-targeted nucleic-acid delivery, excitability, and circuit-reconstruction endpoints", "topic_id": "M5B-T004", "tracker_id": "M5B-O033"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41531173; cross-tags biomaterial delivery boundary.", "experiment_tracker_id": "M5A-P033-E001", "paper_tracker_id": "M5A-P033", "quantitative": "YES", "statistics_reported": "Full text reports 5-HTP-derived targeting/neuromodulatory hydrogel design, PTEN-targeted nucleic-acid delivery, excitability, and circuit-reconstruction endpoints", "topic_id": "M5B-T004", "tracker_id": "M5B-O033"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P033::M5A-P033-E001-M5A-P033-E002'
+  WHERE e.tracker_id = 'M5A-P033::M5A-P033-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'relay plasticity / circuit reconstruction'
   RETURNING observation_id
@@ -2694,11 +3540,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Central Serotonin Deficiency Impairs Recovery of Sensorimotor Abilities After Spinal Cord Injury in Rats.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P034-E001-M5A-P034-E002", "paper_tracker_id": "M5A-P034", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O034"}'
+    '{"curator_notes": "Primary title: Central Serotonin Deficiency Impairs Recovery of Sensorimotor Abilities After Spinal Cord Injury in Rats.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P034-E001", "paper_tracker_id": "M5A-P034", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O034"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P034::M5A-P034-E001-M5A-P034-E002'
+  WHERE e.tracker_id = 'M5A-P034::M5A-P034-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'relay plasticity / circuit reconstruction'
   RETURNING observation_id
@@ -2719,11 +3565,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Neuronal HDAC3 knockdown promotes propriospinal detour pathway formation and locomotor recovery in a mouse model of spinal cord injury.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P035-E001-M5A-P035-E002", "paper_tracker_id": "M5A-P035", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O035"}'
+    '{"curator_notes": "Primary title: Neuronal HDAC3 knockdown promotes propriospinal detour pathway formation and locomotor recovery in a mouse model of spinal cord injury.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P035-E001", "paper_tracker_id": "M5A-P035", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O035"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P035::M5A-P035-E001-M5A-P035-E002'
+  WHERE e.tracker_id = 'M5A-P035::M5A-P035-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'relay plasticity / circuit reconstruction'
   RETURNING observation_id
@@ -2744,11 +3590,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Functional recovery induced by KCC2-enabled relay pathways in completely injured spinal cords in adult rats.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P036-E001-M5A-P036-E002", "paper_tracker_id": "M5A-P036", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O036"}'
+    '{"curator_notes": "Primary title: Functional recovery induced by KCC2-enabled relay pathways in completely injured spinal cords in adult rats.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P036-E001", "paper_tracker_id": "M5A-P036", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O036"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P036::M5A-P036-E001-M5A-P036-E002'
+  WHERE e.tracker_id = 'M5A-P036::M5A-P036-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'relay plasticity / circuit reconstruction'
   RETURNING observation_id
@@ -2769,11 +3615,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Functionalized nanozyme delivery of a KCC2-activator conjugate for the promotion of functional recovery after acute spinal cord injury.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P037-E001-M5A-P037-E002", "paper_tracker_id": "M5A-P037", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O037"}'
+    '{"curator_notes": "Primary title: Functionalized nanozyme delivery of a KCC2-activator conjugate for the promotion of functional recovery after acute spinal cord injury.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P037-E001", "paper_tracker_id": "M5A-P037", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O037"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P037::M5A-P037-E001-M5A-P037-E002'
+  WHERE e.tracker_id = 'M5A-P037::M5A-P037-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'relay plasticity / circuit reconstruction'
   RETURNING observation_id
@@ -2794,11 +3640,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Enhanced locomotor recovery in mice lacking GlcNAc6ST1 and GlcNAc6ST4 following spinal cord injury.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P038-E001-M5A-P038-E002", "paper_tracker_id": "M5A-P038", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O038"}'
+    '{"curator_notes": "Primary title: Enhanced locomotor recovery in mice lacking GlcNAc6ST1 and GlcNAc6ST4 following spinal cord injury.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P038-E001", "paper_tracker_id": "M5A-P038", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O038"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P038::M5A-P038-E001-M5A-P038-E002'
+  WHERE e.tracker_id = 'M5A-P038::M5A-P038-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'relay plasticity / circuit reconstruction'
   RETURNING observation_id
@@ -2819,11 +3665,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Treadmill exercise supplemented by OPN promote axon regeneration through the IGF-1R/Akt/mTOR signaling pathway.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P039-E001-M5A-P039-E002", "paper_tracker_id": "M5A-P039", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O039"}'
+    '{"curator_notes": "Primary title: Treadmill exercise supplemented by OPN promote axon regeneration through the IGF-1R/Akt/mTOR signaling pathway.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P039-E001", "paper_tracker_id": "M5A-P039", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O039"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P039::M5A-P039-E001-M5A-P039-E002'
+  WHERE e.tracker_id = 'M5A-P039::M5A-P039-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'tract regeneration / sprouting / recovery'
   RETURNING observation_id
@@ -2844,11 +3690,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Osteopontin enhances the effect of treadmill training and promotes functional recovery after spinal cord injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P040-E001-M5A-P040-E002", "paper_tracker_id": "M5A-P040", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O040"}'
+    '{"curator_notes": "Primary title: Osteopontin enhances the effect of treadmill training and promotes functional recovery after spinal cord injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P040-E001", "paper_tracker_id": "M5A-P040", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O040"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P040::M5A-P040-E001-M5A-P040-E002'
+  WHERE e.tracker_id = 'M5A-P040::M5A-P040-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'tract regeneration / sprouting / recovery'
   RETURNING observation_id
@@ -2869,11 +3715,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Co-overexpression of OPN, IGF-1 and CNTF augment the therapeutic effect of DPSC on spinal cord injury.. Note: Graft/scaffold-enabled axon repair anchor.", "experiment_tracker_id": "M5A-P041-E001-M5A-P041-E002", "paper_tracker_id": "M5A-P041", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O041"}'
+    '{"curator_notes": "Primary title: Co-overexpression of OPN, IGF-1 and CNTF augment the therapeutic effect of DPSC on spinal cord injury.. Note: Graft/scaffold-enabled axon repair anchor.", "experiment_tracker_id": "M5A-P041-E001", "paper_tracker_id": "M5A-P041", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O041"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P041::M5A-P041-E001-M5A-P041-E002'
+  WHERE e.tracker_id = 'M5A-P041::M5A-P041-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'Graft/scaffold-enabled axon repair'
   RETURNING observation_id
@@ -2894,11 +3740,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Multichannel 3D-Printed Bioactive Scaffold Combined with Small Interfering RNA Delivery to Promote Neurological Recovery after Spinal Cord Injury.. Note: Graft/scaffold-enabled axon repair anchor.", "experiment_tracker_id": "M5A-P042-E001-M5A-P042-E002", "paper_tracker_id": "M5A-P042", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O042"}'
+    '{"curator_notes": "Primary title: Multichannel 3D-Printed Bioactive Scaffold Combined with Small Interfering RNA Delivery to Promote Neurological Recovery after Spinal Cord Injury.. Note: Graft/scaffold-enabled axon repair anchor.", "experiment_tracker_id": "M5A-P042-E001", "paper_tracker_id": "M5A-P042", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O042"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P042::M5A-P042-E001-M5A-P042-E002'
+  WHERE e.tracker_id = 'M5A-P042::M5A-P042-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'Graft/scaffold-enabled axon repair'
   RETURNING observation_id
@@ -2919,11 +3765,11 @@ WITH inserted AS (
     'Full text / PMC',
     'Full text / PMC12908063',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41704619; scaffold/gene-therapy attribution boundary.", "experiment_tracker_id": "M5A-P043-E001-M5A-P043-E002", "paper_tracker_id": "M5A-P043", "quantitative": "YES", "statistics_reported": "Full text reports GET-siRNA nanoparticle formulation, primary-neuron transfection, scaffold incorporation, and neurite-outgrowth endpoint", "topic_id": "M5B-T005", "tracker_id": "M5B-O043"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41704619; scaffold/gene-therapy attribution boundary.", "experiment_tracker_id": "M5A-P043-E001", "paper_tracker_id": "M5A-P043", "quantitative": "YES", "statistics_reported": "Full text reports GET-siRNA nanoparticle formulation, primary-neuron transfection, scaffold incorporation, and neurite-outgrowth endpoint", "topic_id": "M5B-T005", "tracker_id": "M5B-O043"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P043::M5A-P043-E001-M5A-P043-E002'
+  WHERE e.tracker_id = 'M5A-P043::M5A-P043-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'intrinsic growth competence'
   RETURNING observation_id
@@ -2944,11 +3790,11 @@ WITH inserted AS (
     'Full text / PMC',
     'Full text / PMC13083982',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41731079; intrinsic-growth epigenetic switch.", "experiment_tracker_id": "M5A-P044-E001-M5A-P044-E002", "paper_tracker_id": "M5A-P044", "quantitative": "YES", "statistics_reported": "Full text reports developmental/regenerative DRG profiling, Cited2 gain/loss, in vivo SCI regeneration, pharmacologic HDAC inhibitor targeting, growth/sprouting, and functional endpoints", "topic_id": "M5B-T005", "tracker_id": "M5B-O044"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41731079; intrinsic-growth epigenetic switch.", "experiment_tracker_id": "M5A-P044-E001", "paper_tracker_id": "M5A-P044", "quantitative": "YES", "statistics_reported": "Full text reports developmental/regenerative DRG profiling, Cited2 gain/loss, in vivo SCI regeneration, pharmacologic HDAC inhibitor targeting, growth/sprouting, and functional endpoints", "topic_id": "M5B-T005", "tracker_id": "M5B-O044"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P044::M5A-P044-E001-M5A-P044-E002'
+  WHERE e.tracker_id = 'M5A-P044::M5A-P044-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'intrinsic growth competence'
   RETURNING observation_id
@@ -2969,11 +3815,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Poly-L-Ornithine coated plant scaffolds support motor recovery in rats after traumatic spinal cord injury.. Note: Graft/scaffold-enabled axon repair anchor.", "experiment_tracker_id": "M5A-P045-E001-M5A-P045-E002", "paper_tracker_id": "M5A-P045", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O045"}'
+    '{"curator_notes": "Primary title: Poly-L-Ornithine coated plant scaffolds support motor recovery in rats after traumatic spinal cord injury.. Note: Graft/scaffold-enabled axon repair anchor.", "experiment_tracker_id": "M5A-P045-E001", "paper_tracker_id": "M5A-P045", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O045"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P045::M5A-P045-E001-M5A-P045-E002'
+  WHERE e.tracker_id = 'M5A-P045::M5A-P045-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'Graft/scaffold-enabled axon repair'
   RETURNING observation_id
@@ -2994,11 +3840,11 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.. Note: Remyelination / white matter repair anchor.", "experiment_tracker_id": "M5A-P046-E001-M5A-P046-E002", "paper_tracker_id": "M5A-P046", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O046"}'
+    '{"curator_notes": "Primary title: Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.. Note: Remyelination / white matter repair anchor.", "experiment_tracker_id": "M5A-P046-E001", "paper_tracker_id": "M5A-P046", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O046"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P046::M5A-P046-E001-M5A-P046-E002'
+  WHERE e.tracker_id = 'M5A-P046::M5A-P046-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'white matter / remyelination / debris handling'
   RETURNING observation_id
@@ -3019,16 +3865,1191 @@ WITH inserted AS (
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: A laminin-based therapy for dogs with chronic spinal cord injury: promising results of a longitudinal trial.. Note: Extrinsic inhibitory matrix / guidance pathway anchor.", "experiment_tracker_id": "M5A-P047-E001-M5A-P047-E002", "paper_tracker_id": "M5A-P047", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T002", "tracker_id": "M5B-O047"}'
+    '{"curator_notes": "Primary title: A laminin-based therapy for dogs with chronic spinal cord injury: promising results of a longitudinal trial.. Note: Extrinsic inhibitory matrix / guidance pathway anchor.", "experiment_tracker_id": "M5A-P047-E001", "paper_tracker_id": "M5A-P047", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T002", "tracker_id": "M5B-O047"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M5A-P047::M5A-P047-E001-M5A-P047-E002'
+  WHERE e.tracker_id = 'M5A-P047::M5A-P047-E001'
     AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
     AND ot.outcome_type_name = 'Extrinsic inhibitory matrix / guidance pathway'
   RETURNING observation_id
 )
 INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O047', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Lu P 2007 M5A-P001-E002 preserves a distinct Rat experiment testing Mechanistic outcome assessment after axon regeneration through chronic scar/graft with endpoint/readout: Outcome/mechanistic validation row for Axon regeneration through scars and into sites of chronic spinal cord injury; first-pass row captures axon regeneration through chronic scar/graft in rat at abstract/source-title level..',
+    'qualitative',
+    'Lu P 2007 M5A-P001-E002 preserves a distinct Rat experiment testing Mechanistic outcome assessment after axon regeneration through chronic scar/graft with endpoint/readout: Outcome/mechanistic validation row for Axon regeneration through scars and into sites of chronic spinal cord injury; first-pass row captures axon regeneration through chronic scar/graft in rat at abstract/source-title level..',
+    'M5A-P001-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Axon regeneration through scars and into sites of chronic spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P001-E002", "paper_tracker_id": "M5A-P001", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T006", "tracker_id": "M5B-O048"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P001::M5A-P001-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Axon regeneration through scars and into sites of chronic spinal cord injury; first-pass row captures axon regeneration through chronic scar/graft in rat at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O048', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Dias DO 2018 M5A-P002-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after cst/rst regeneration after scar attenuation with endpoint/readout: Outcome/mechanistic validation row for Reducing Pericyte-Derived Scarring Promotes Recovery after Spinal Cord Injury; first-pass row captures cst/rst regeneration after scar attenuation in mouse at abstract/source-title level..',
+    'qualitative',
+    'Dias DO 2018 M5A-P002-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after cst/rst regeneration after scar attenuation with endpoint/readout: Outcome/mechanistic validation row for Reducing Pericyte-Derived Scarring Promotes Recovery after Spinal Cord Injury; first-pass row captures cst/rst regeneration after scar attenuation in mouse at abstract/source-title level..',
+    'M5A-P002-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Reducing Pericyte-Derived Scarring Promotes Recovery after Spinal Cord Injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P002-E002", "paper_tracker_id": "M5A-P002", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O049"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P002::M5A-P002-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Reducing Pericyte-Derived Scarring Promotes Recovery after Spinal Cord Injury; first-pass row captures cst/rst regeneration after scar attenuation in mouse at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O049', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'McCallum S 2026 M5A-P003-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after lesion-remote white matter repair with endpoint/readout: Outcome/mechanistic validation row for Lesion-remote astrocytes govern microglia-mediated white matter repair; first-pass row captures lesion-remote white matter repair in mouse at abstract/source-title level..',
+    'qualitative',
+    'McCallum S 2026 M5A-P003-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after lesion-remote white matter repair with endpoint/readout: Outcome/mechanistic validation row for Lesion-remote astrocytes govern microglia-mediated white matter repair; first-pass row captures lesion-remote white matter repair in mouse at abstract/source-title level..',
+    'M5A-P003-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Lesion-remote astrocytes govern microglia-mediated white matter repair. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P003-E002", "paper_tracker_id": "M5A-P003", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O050"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P003::M5A-P003-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Lesion-remote astrocytes govern microglia-mediated white matter repair; first-pass row captures lesion-remote white matter repair in mouse at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O050', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Grumbles RM 2017 M5A-P004-E002 preserves a distinct Human experiment testing Mechanistic outcome assessment after ventral-root axon loss/remyelination pathology with endpoint/readout: Outcome/mechanistic validation row for Motoneuron Death after Human Spinal Cord Injury; first-pass row captures ventral-root axon loss/remyelination pathology in human at abstract/source-title level..',
+    'qualitative',
+    'Grumbles RM 2017 M5A-P004-E002 preserves a distinct Human experiment testing Mechanistic outcome assessment after ventral-root axon loss/remyelination pathology with endpoint/readout: Outcome/mechanistic validation row for Motoneuron Death after Human Spinal Cord Injury; first-pass row captures ventral-root axon loss/remyelination pathology in human at abstract/source-title level..',
+    'M5A-P004-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Motoneuron Death after Human Spinal Cord Injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P004-E002", "paper_tracker_id": "M5A-P004", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O051"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P004::M5A-P004-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Motoneuron Death after Human Spinal Cord Injury; first-pass row captures ventral-root axon loss/remyelination pathology in human at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O051', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Han Q 2020 M5A-P005-E002 preserves a distinct Rodent model context experiment testing Mechanistic outcome assessment after axonal regeneration / cellular energetics with endpoint/readout: Outcome/mechanistic validation row for Restoring Cellular Energetics Promotes Axonal Regeneration and Functional Recovery after Spinal Cord Injury; first-pass row captures axonal regeneration / cellular energetics in rodent model context at abstract/source-title level..',
+    'qualitative',
+    'Han Q 2020 M5A-P005-E002 preserves a distinct Rodent model context experiment testing Mechanistic outcome assessment after axonal regeneration / cellular energetics with endpoint/readout: Outcome/mechanistic validation row for Restoring Cellular Energetics Promotes Axonal Regeneration and Functional Recovery after Spinal Cord Injury; first-pass row captures axonal regeneration / cellular energetics in rodent model context at abstract/source-title level..',
+    'M5A-P005-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Restoring Cellular Energetics Promotes Axonal Regeneration and Functional Recovery after Spinal Cord Injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P005-E002", "paper_tracker_id": "M5A-P005", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O052"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P005::M5A-P005-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Restoring Cellular Energetics Promotes Axonal Regeneration and Functional Recovery after Spinal Cord Injury; first-pass row captures axonal regeneration / cellular energetics in rodent model context at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O052', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Fry EJ 2010 M5A-P006-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after cst regeneration / receptor ptp sigma with endpoint/readout: Outcome/mechanistic validation row for Corticospinal tract regeneration after spinal cord injury in receptor protein tyrosine phosphatase sigma deficient mice; first-pass row captures cst regeneration / receptor ptp sigma in mouse at abstract/source-title level..',
+    'qualitative',
+    'Fry EJ 2010 M5A-P006-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after cst regeneration / receptor ptp sigma with endpoint/readout: Outcome/mechanistic validation row for Corticospinal tract regeneration after spinal cord injury in receptor protein tyrosine phosphatase sigma deficient mice; first-pass row captures cst regeneration / receptor ptp sigma in mouse at abstract/source-title level..',
+    'M5A-P006-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Corticospinal tract regeneration after spinal cord injury in receptor protein tyrosine phosphatase sigma deficient mice. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P006-E002", "paper_tracker_id": "M5A-P006", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O053"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P006::M5A-P006-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Corticospinal tract regeneration after spinal cord injury in receptor protein tyrosine phosphatase sigma deficient mice; first-pass row captures cst regeneration / receptor ptp sigma in mouse at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O053', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Kadoya K 2016 M5A-P007-E002 preserves a distinct Rat experiment testing Mechanistic outcome assessment after neural graft-enabled cst regeneration with endpoint/readout: Outcome/mechanistic validation row for Spinal cord reconstitution with homologous neural grafts enables robust corticospinal regeneration; first-pass row captures neural graft-enabled cst regeneration in rat at abstract/source-title level..',
+    'qualitative',
+    'Kadoya K 2016 M5A-P007-E002 preserves a distinct Rat experiment testing Mechanistic outcome assessment after neural graft-enabled cst regeneration with endpoint/readout: Outcome/mechanistic validation row for Spinal cord reconstitution with homologous neural grafts enables robust corticospinal regeneration; first-pass row captures neural graft-enabled cst regeneration in rat at abstract/source-title level..',
+    'M5A-P007-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Spinal cord reconstitution with homologous neural grafts enables robust corticospinal regeneration. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P007-E002", "paper_tracker_id": "M5A-P007", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T006", "tracker_id": "M5B-O054"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P007::M5A-P007-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Spinal cord reconstitution with homologous neural grafts enables robust corticospinal regeneration; first-pass row captures neural graft-enabled cst regeneration in rat at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O054', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Poplawski GHD 2020 M5A-P008-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after intrinsic neuronal growth state with endpoint/readout: Outcome/mechanistic validation row for Injured adult neurons regress to an embryonic transcriptional growth state; first-pass row captures intrinsic neuronal growth state in mouse at abstract/source-title level..',
+    'qualitative',
+    'Poplawski GHD 2020 M5A-P008-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after intrinsic neuronal growth state with endpoint/readout: Outcome/mechanistic validation row for Injured adult neurons regress to an embryonic transcriptional growth state; first-pass row captures intrinsic neuronal growth state in mouse at abstract/source-title level..',
+    'M5A-P008-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Injured adult neurons regress to an embryonic transcriptional growth state. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P008-E002", "paper_tracker_id": "M5A-P008", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O055"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P008::M5A-P008-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Injured adult neurons regress to an embryonic transcriptional growth state; first-pass row captures intrinsic neuronal growth state in mouse at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O055', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Boato F 2023 M5A-P009-E002 preserves a distinct Rodent model context experiment testing Mechanistic outcome assessment after cst sprouting/regeneration with endpoint/readout: Outcome/mechanistic validation row for Activation of MAP2K signaling by genetic engineering or HF-rTMS promotes corticospinal axon sprouting and functional regeneration; first-pass row captures cst sprouting/regeneration in rodent model context at abstract/source-title level..',
+    'qualitative',
+    'Boato F 2023 M5A-P009-E002 preserves a distinct Rodent model context experiment testing Mechanistic outcome assessment after cst sprouting/regeneration with endpoint/readout: Outcome/mechanistic validation row for Activation of MAP2K signaling by genetic engineering or HF-rTMS promotes corticospinal axon sprouting and functional regeneration; first-pass row captures cst sprouting/regeneration in rodent model context at abstract/source-title level..',
+    'M5A-P009-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Activation of MAP2K signaling by genetic engineering or HF-rTMS promotes corticospinal axon sprouting and functional regeneration. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P009-E002", "paper_tracker_id": "M5A-P009", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O056"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P009::M5A-P009-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Activation of MAP2K signaling by genetic engineering or HF-rTMS promotes corticospinal axon sprouting and functional regeneration; first-pass row captures cst sprouting/regeneration in rodent model context at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O056', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Ma YH 2025 M5A-P010-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Transcranial Optogenetic Stimulation Promotes Corticospinal Tract Axon Regeneration to Repair Spinal Cord Injury by Activating the JAK2/STAT3 Pathway.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
+    'qualitative',
+    'Ma YH 2025 M5A-P010-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Transcranial Optogenetic Stimulation Promotes Corticospinal Tract Axon Regeneration to Repair Spinal Cord Injury by Activating the JAK2/STAT3 Pathway.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
+    'M5A-P010-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Transcranial Optogenetic Stimulation Promotes Corticospinal Tract Axon Regeneration to Repair Spinal Cord Injury by Activating the JAK2/STAT3 Pathway.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P010-E002", "paper_tracker_id": "M5A-P010", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T007", "tracker_id": "M5B-O057"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P010::M5A-P010-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Transcranial Optogenetic Stimulation Promotes Corticospinal Tract Axon Regeneration to Repair Spinal Cord Injury by Activating the JAK2/STAT3 Pathway.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O057', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Chen W 2024 M5A-P011-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Lipin1 depletion coordinates neuronal signaling pathways to promote motor and sensory axon regeneration after spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in rat sci model at abstract/source-title level..',
+    'qualitative',
+    'Chen W 2024 M5A-P011-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Lipin1 depletion coordinates neuronal signaling pathways to promote motor and sensory axon regeneration after spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in rat sci model at abstract/source-title level..',
+    'M5A-P011-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Lipin1 depletion coordinates neuronal signaling pathways to promote motor and sensory axon regeneration after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P011-E002", "paper_tracker_id": "M5A-P011", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O058"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P011::M5A-P011-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Lipin1 depletion coordinates neuronal signaling pathways to promote motor and sensory axon regeneration after spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in rat sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O058', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Hu M 2024 M5A-P012-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after activity or stimulation-enabled axon repair with endpoint/readout: Outcome/mechanistic validation row for Effects of transcranial magnetic stimulation on axonal regeneration in the corticospinal tract of female rats with spinal cord injury.; first-pass row captures activity or stimulation-enabled axon repair in rat sci model at abstract/source-title level..',
+    'qualitative',
+    'Hu M 2024 M5A-P012-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after activity or stimulation-enabled axon repair with endpoint/readout: Outcome/mechanistic validation row for Effects of transcranial magnetic stimulation on axonal regeneration in the corticospinal tract of female rats with spinal cord injury.; first-pass row captures activity or stimulation-enabled axon repair in rat sci model at abstract/source-title level..',
+    'M5A-P012-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Effects of transcranial magnetic stimulation on axonal regeneration in the corticospinal tract of female rats with spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P012-E002", "paper_tracker_id": "M5A-P012", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T007", "tracker_id": "M5B-O059"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P012::M5A-P012-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Effects of transcranial magnetic stimulation on axonal regeneration in the corticospinal tract of female rats with spinal cord injury.; first-pass row captures activity or stimulation-enabled axon repair in rat sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O059', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Higuchi K 2024 M5A-P013-E002 preserves a distinct Experimental SCI model context experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Synaptotagmin 4 Supports Spontaneous Axon Sprouting after Spinal Cord Injury.; first-pass row captures corticospinal tract regeneration / sprouting in experimental sci model context at abstract/source-title level..',
+    'qualitative',
+    'Higuchi K 2024 M5A-P013-E002 preserves a distinct Experimental SCI model context experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Synaptotagmin 4 Supports Spontaneous Axon Sprouting after Spinal Cord Injury.; first-pass row captures corticospinal tract regeneration / sprouting in experimental sci model context at abstract/source-title level..',
+    'M5A-P013-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Synaptotagmin 4 Supports Spontaneous Axon Sprouting after Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P013-E002", "paper_tracker_id": "M5A-P013", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O060"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P013::M5A-P013-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Synaptotagmin 4 Supports Spontaneous Axon Sprouting after Spinal Cord Injury.; first-pass row captures corticospinal tract regeneration / sprouting in experimental sci model context at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O060', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Sun W 2020 M5A-P014-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Gabapentinoid treatment promotes corticospinal plasticity and regeneration following murine spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
+    'qualitative',
+    'Sun W 2020 M5A-P014-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Gabapentinoid treatment promotes corticospinal plasticity and regeneration following murine spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
+    'M5A-P014-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Gabapentinoid treatment promotes corticospinal plasticity and regeneration following murine spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P014-E002", "paper_tracker_id": "M5A-P014", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O061"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P014::M5A-P014-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Gabapentinoid treatment promotes corticospinal plasticity and regeneration following murine spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O061', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Stepankova K 2025 M5A-P015-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for Activated alpha 9 integrin expression enables sensory pathway reconstruction after spinal cord injury.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in rat sci model at abstract/source-title level..',
+    'qualitative',
+    'Stepankova K 2025 M5A-P015-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for Activated alpha 9 integrin expression enables sensory pathway reconstruction after spinal cord injury.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in rat sci model at abstract/source-title level..',
+    'M5A-P015-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Activated alpha 9 integrin expression enables sensory pathway reconstruction after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P015-E002", "paper_tracker_id": "M5A-P015", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O062"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P015::M5A-P015-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Activated alpha 9 integrin expression enables sensory pathway reconstruction after spinal cord injury.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in rat sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O062', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Takatani H 2025 M5A-P016-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Modulation of Extrinsic and Intrinsic Signaling Together with Neuronal Activation Enhances Forelimb Motor Recovery after Cervical Spinal Cord Injury.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
+    'qualitative',
+    'Takatani H 2025 M5A-P016-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Modulation of Extrinsic and Intrinsic Signaling Together with Neuronal Activation Enhances Forelimb Motor Recovery after Cervical Spinal Cord Injury.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
+    'M5A-P016-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Modulation of Extrinsic and Intrinsic Signaling Together with Neuronal Activation Enhances Forelimb Motor Recovery after Cervical Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P016-E002", "paper_tracker_id": "M5A-P016", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O063"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P016::M5A-P016-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Modulation of Extrinsic and Intrinsic Signaling Together with Neuronal Activation Enhances Forelimb Motor Recovery after Cervical Spinal Cord Injury.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O063', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'van Niekerk EA 2025 M5A-P017-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Thiorphan reprograms neurons to promote functional recovery after spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in human / translational context at abstract/source-title level..',
+    'qualitative',
+    'van Niekerk EA 2025 M5A-P017-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Thiorphan reprograms neurons to promote functional recovery after spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in human / translational context at abstract/source-title level..',
+    'M5A-P017-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Thiorphan reprograms neurons to promote functional recovery after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P017-E002", "paper_tracker_id": "M5A-P017", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O064"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P017::M5A-P017-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Thiorphan reprograms neurons to promote functional recovery after spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in human / translational context at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O064', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Zhang R 2026 M5A-P018-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after intrinsic neuronal growth competence with endpoint/readout: Outcome/mechanistic validation row for TTBK2-Driven Ciliogenesis Is Required for Intrinsic Neuronal Regeneration After Spinal Cord Injury.; first-pass row captures intrinsic neuronal growth competence in mouse sci model at abstract/source-title level..',
+    'qualitative',
+    'Zhang R 2026 M5A-P018-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after intrinsic neuronal growth competence with endpoint/readout: Outcome/mechanistic validation row for TTBK2-Driven Ciliogenesis Is Required for Intrinsic Neuronal Regeneration After Spinal Cord Injury.; first-pass row captures intrinsic neuronal growth competence in mouse sci model at abstract/source-title level..',
+    'M5A-P018-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: TTBK2-Driven Ciliogenesis Is Required for Intrinsic Neuronal Regeneration After Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P018-E002", "paper_tracker_id": "M5A-P018", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O065"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P018::M5A-P018-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for TTBK2-Driven Ciliogenesis Is Required for Intrinsic Neuronal Regeneration After Spinal Cord Injury.; first-pass row captures intrinsic neuronal growth competence in mouse sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O065', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Attwell CL 2025 M5A-P019-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after intrinsic neuronal growth competence with endpoint/readout: Outcome/mechanistic validation row for The transcription factor combination MEF2 and KLF7 promotes axonal sprouting in the injured spinal cord with functional improvement and regeneration-associated gene expression.; first-pass row captures intrinsic neuronal growth competence in rat sci model at abstract/source-title level..',
+    'qualitative',
+    'Attwell CL 2025 M5A-P019-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after intrinsic neuronal growth competence with endpoint/readout: Outcome/mechanistic validation row for The transcription factor combination MEF2 and KLF7 promotes axonal sprouting in the injured spinal cord with functional improvement and regeneration-associated gene expression.; first-pass row captures intrinsic neuronal growth competence in rat sci model at abstract/source-title level..',
+    'M5A-P019-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: The transcription factor combination MEF2 and KLF7 promotes axonal sprouting in the injured spinal cord with functional improvement and regeneration-associated gene expression.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P019-E002", "paper_tracker_id": "M5A-P019", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O066"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P019::M5A-P019-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for The transcription factor combination MEF2 and KLF7 promotes axonal sprouting in the injured spinal cord with functional improvement and regeneration-associated gene expression.; first-pass row captures intrinsic neuronal growth competence in rat sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O066', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Martinez-Rojas B 2025 M5A-P020-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Stimulation of corticospinal neurons by optogenetic cAMP inductions promotes motor recovery after spinal cord injury in female rats via raphespinal tract modulation.; first-pass row captures corticospinal tract regeneration / sprouting in rat sci model at abstract/source-title level..',
+    'qualitative',
+    'Martinez-Rojas B 2025 M5A-P020-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Stimulation of corticospinal neurons by optogenetic cAMP inductions promotes motor recovery after spinal cord injury in female rats via raphespinal tract modulation.; first-pass row captures corticospinal tract regeneration / sprouting in rat sci model at abstract/source-title level..',
+    'M5A-P020-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Stimulation of corticospinal neurons by optogenetic cAMP inductions promotes motor recovery after spinal cord injury in female rats via raphespinal tract modulation.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P020-E002", "paper_tracker_id": "M5A-P020", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T007", "tracker_id": "M5B-O067"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P020::M5A-P020-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Stimulation of corticospinal neurons by optogenetic cAMP inductions promotes motor recovery after spinal cord injury in female rats via raphespinal tract modulation.; first-pass row captures corticospinal tract regeneration / sprouting in rat sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O067', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Ji Z 2025 M5A-P021-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Precise rewiring of corticospinal axons and spinal interneurons via near-infrared optogenetics for spinal cord injury treatment.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
+    'qualitative',
+    'Ji Z 2025 M5A-P021-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Precise rewiring of corticospinal axons and spinal interneurons via near-infrared optogenetics for spinal cord injury treatment.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
+    'M5A-P021-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Precise rewiring of corticospinal axons and spinal interneurons via near-infrared optogenetics for spinal cord injury treatment.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P021-E002", "paper_tracker_id": "M5A-P021", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T007", "tracker_id": "M5B-O068"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P021::M5A-P021-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Precise rewiring of corticospinal axons and spinal interneurons via near-infrared optogenetics for spinal cord injury treatment.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O068', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Schmidt J 2026 M5A-P022-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Netrin-1 Therapy Restores Partial Hindlimb Movement in a Rat Model of High-Severity Chronic Spinal Cord Injury.; first-pass row captures corticospinal tract regeneration / sprouting in human / translational context at abstract/source-title level..',
+    'qualitative',
+    'Schmidt J 2026 M5A-P022-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Netrin-1 Therapy Restores Partial Hindlimb Movement in a Rat Model of High-Severity Chronic Spinal Cord Injury.; first-pass row captures corticospinal tract regeneration / sprouting in human / translational context at abstract/source-title level..',
+    'M5A-P022-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Netrin-1 Therapy Restores Partial Hindlimb Movement in a Rat Model of High-Severity Chronic Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P022-E002", "paper_tracker_id": "M5A-P022", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O069"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P022::M5A-P022-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Netrin-1 Therapy Restores Partial Hindlimb Movement in a Rat Model of High-Severity Chronic Spinal Cord Injury.; first-pass row captures corticospinal tract regeneration / sprouting in human / translational context at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O069', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Zheng ML 2025 M5A-P023-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for Lentivirus-mediated overexpression of netrin-1/DCC co-expression promotes axonal regeneration and functional recovery in spinal cord injury via the inhibition of the NgR1-RhoA-ROCK signaling pathway.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in human / translational context at abstract/source-title level..',
+    'qualitative',
+    'Zheng ML 2025 M5A-P023-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for Lentivirus-mediated overexpression of netrin-1/DCC co-expression promotes axonal regeneration and functional recovery in spinal cord injury via the inhibition of the NgR1-RhoA-ROCK signaling pathway.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in human / translational context at abstract/source-title level..',
+    'M5A-P023-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Lentivirus-mediated overexpression of netrin-1/DCC co-expression promotes axonal regeneration and functional recovery in spinal cord injury via the inhibition of the NgR1-RhoA-ROCK signaling pathway.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P023-E002", "paper_tracker_id": "M5A-P023", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O070"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P023::M5A-P023-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Lentivirus-mediated overexpression of netrin-1/DCC co-expression promotes axonal regeneration and functional recovery in spinal cord injury via the inhibition of the NgR1-RhoA-ROCK signaling pathway.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in human / translational context at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O070', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Zheng Y 2026 M5A-P024-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for Disrupting CSPG-Driven Microglia-Astrocyte Crosstalk Enables Scar-Free Repair in Spinal Cord Injury.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in rat sci model at abstract/source-title level..',
+    'qualitative',
+    'Zheng Y 2026 M5A-P024-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for Disrupting CSPG-Driven Microglia-Astrocyte Crosstalk Enables Scar-Free Repair in Spinal Cord Injury.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in rat sci model at abstract/source-title level..',
+    'M5A-P024-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Disrupting CSPG-Driven Microglia-Astrocyte Crosstalk Enables Scar-Free Repair in Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P024-E002", "paper_tracker_id": "M5A-P024", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O071"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P024::M5A-P024-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Disrupting CSPG-Driven Microglia-Astrocyte Crosstalk Enables Scar-Free Repair in Spinal Cord Injury.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in rat sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O071', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Qu W 2025 M5A-P025-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Chondroitinase ABC combined with Schwann cell transplantation enhances restoration of neural connection and functional recovery following acute and chronic spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in human / translational context at abstract/source-title level..',
+    'qualitative',
+    'Qu W 2025 M5A-P025-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Chondroitinase ABC combined with Schwann cell transplantation enhances restoration of neural connection and functional recovery following acute and chronic spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in human / translational context at abstract/source-title level..',
+    'M5A-P025-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Chondroitinase ABC combined with Schwann cell transplantation enhances restoration of neural connection and functional recovery following acute and chronic spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P025-E002", "paper_tracker_id": "M5A-P025", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O072"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P025::M5A-P025-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Chondroitinase ABC combined with Schwann cell transplantation enhances restoration of neural connection and functional recovery following acute and chronic spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in human / translational context at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O072', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Zhu S 2024 M5A-P026-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for Schwann Cell-Derived Exosomes Induced Axon Growth after Spinal Cord Injury by Decreasing PTP- Activation on CSPGs via the Rho/ROCK Pathway.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in mouse sci model at abstract/source-title level..',
+    'qualitative',
+    'Zhu S 2024 M5A-P026-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for Schwann Cell-Derived Exosomes Induced Axon Growth after Spinal Cord Injury by Decreasing PTP- Activation on CSPGs via the Rho/ROCK Pathway.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in mouse sci model at abstract/source-title level..',
+    'M5A-P026-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Schwann Cell-Derived Exosomes Induced Axon Growth after Spinal Cord Injury by Decreasing PTP- Activation on CSPGs via the Rho/ROCK Pathway.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P026-E002", "paper_tracker_id": "M5A-P026", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O073"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P026::M5A-P026-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Schwann Cell-Derived Exosomes Induced Axon Growth after Spinal Cord Injury by Decreasing PTP- Activation on CSPGs via the Rho/ROCK Pathway.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in mouse sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O073', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Farner L 2026 M5A-P027-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Anti-Nogo-A NG101 treatment induces changes in spinal cord micro- and macrostructure following spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in rat sci model at abstract/source-title level..',
+    'qualitative',
+    'Farner L 2026 M5A-P027-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Anti-Nogo-A NG101 treatment induces changes in spinal cord micro- and macrostructure following spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in rat sci model at abstract/source-title level..',
+    'M5A-P027-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Anti-Nogo-A NG101 treatment induces changes in spinal cord micro- and macrostructure following spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P027-E002", "paper_tracker_id": "M5A-P027", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O074"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P027::M5A-P027-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Anti-Nogo-A NG101 treatment induces changes in spinal cord micro- and macrostructure following spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in rat sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O074', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Nori S 2018 M5A-P028-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for Human Oligodendrogenic Neural Progenitor Cells Delivered with Chondroitinase ABC Facilitate Functional Repair of Chronic Spinal Cord Injury.; first-pass row captures remyelination / white matter repair in human / translational context at abstract/source-title level..',
+    'qualitative',
+    'Nori S 2018 M5A-P028-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for Human Oligodendrogenic Neural Progenitor Cells Delivered with Chondroitinase ABC Facilitate Functional Repair of Chronic Spinal Cord Injury.; first-pass row captures remyelination / white matter repair in human / translational context at abstract/source-title level..',
+    'M5A-P028-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Human Oligodendrogenic Neural Progenitor Cells Delivered with Chondroitinase ABC Facilitate Functional Repair of Chronic Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P028-E002", "paper_tracker_id": "M5A-P028", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O075"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P028::M5A-P028-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Human Oligodendrogenic Neural Progenitor Cells Delivered with Chondroitinase ABC Facilitate Functional Repair of Chronic Spinal Cord Injury.; first-pass row captures remyelination / white matter repair in human / translational context at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O075', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Wu Z 2026 M5A-P029-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for TREM2 Facilitates Myelin Debris Clearance but Exacerbates Chronic Inflammation and Fibrosis After Spinal Cord Injury.; first-pass row captures remyelination / white matter repair in mouse sci model at abstract/source-title level..',
+    'qualitative',
+    'Wu Z 2026 M5A-P029-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for TREM2 Facilitates Myelin Debris Clearance but Exacerbates Chronic Inflammation and Fibrosis After Spinal Cord Injury.; first-pass row captures remyelination / white matter repair in mouse sci model at abstract/source-title level..',
+    'M5A-P029-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: TREM2 Facilitates Myelin Debris Clearance but Exacerbates Chronic Inflammation and Fibrosis After Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P029-E002", "paper_tracker_id": "M5A-P029", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O076"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P029::M5A-P029-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for TREM2 Facilitates Myelin Debris Clearance but Exacerbates Chronic Inflammation and Fibrosis After Spinal Cord Injury.; first-pass row captures remyelination / white matter repair in mouse sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O076', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'McCallum S 2026 M5A-P030-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for Lesion-remote astrocytes govern microglia-mediated white matter repair.; first-pass row captures remyelination / white matter repair in human / translational context at abstract/source-title level..',
+    'qualitative',
+    'McCallum S 2026 M5A-P030-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for Lesion-remote astrocytes govern microglia-mediated white matter repair.; first-pass row captures remyelination / white matter repair in human / translational context at abstract/source-title level..',
+    'M5A-P030-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Lesion-remote astrocytes govern microglia-mediated white matter repair.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P030-E002", "paper_tracker_id": "M5A-P030", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O077"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P030::M5A-P030-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Lesion-remote astrocytes govern microglia-mediated white matter repair.; first-pass row captures remyelination / white matter repair in human / translational context at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O077', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Manesh SB 2025 M5A-P031-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for Compensatory changes after spinal cord injury in a remyelination deficient mouse model.; first-pass row captures remyelination / white matter repair in mouse sci model at abstract/source-title level..',
+    'qualitative',
+    'Manesh SB 2025 M5A-P031-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for Compensatory changes after spinal cord injury in a remyelination deficient mouse model.; first-pass row captures remyelination / white matter repair in mouse sci model at abstract/source-title level..',
+    'M5A-P031-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Compensatory changes after spinal cord injury in a remyelination deficient mouse model.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P031-E002", "paper_tracker_id": "M5A-P031", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O078"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P031::M5A-P031-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Compensatory changes after spinal cord injury in a remyelination deficient mouse model.; first-pass row captures remyelination / white matter repair in mouse sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O078', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Zhou Y 2025 M5A-P032-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for A Myelin Debris Cleaner for Spinal Cord Injury Recovery: Polycaprolactone / Cell Membrane Assembled Scaffolds.; first-pass row captures remyelination / white matter repair in rat sci model at abstract/source-title level..',
+    'qualitative',
+    'Zhou Y 2025 M5A-P032-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for A Myelin Debris Cleaner for Spinal Cord Injury Recovery: Polycaprolactone / Cell Membrane Assembled Scaffolds.; first-pass row captures remyelination / white matter repair in rat sci model at abstract/source-title level..',
+    'M5A-P032-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: A Myelin Debris Cleaner for Spinal Cord Injury Recovery: Polycaprolactone / Cell Membrane Assembled Scaffolds.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P032-E002", "paper_tracker_id": "M5A-P032", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O079"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P032::M5A-P032-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for A Myelin Debris Cleaner for Spinal Cord Injury Recovery: Polycaprolactone / Cell Membrane Assembled Scaffolds.; first-pass row captures remyelination / white matter repair in rat sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O079', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Li C 2026 M5A-P033-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Serotonergic System-Targeted Nucleic Acid Hydrogel Coordinates Excitability Restoration and Circuit Reconstruction for Spinal Cord Injury Therapy.; first-pass row captures serotonergic/propriospinal relay plasticity in mouse sci model at abstract/source-title level..',
+    'qualitative',
+    'Li C 2026 M5A-P033-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Serotonergic System-Targeted Nucleic Acid Hydrogel Coordinates Excitability Restoration and Circuit Reconstruction for Spinal Cord Injury Therapy.; first-pass row captures serotonergic/propriospinal relay plasticity in mouse sci model at abstract/source-title level..',
+    'M5A-P033-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Serotonergic System-Targeted Nucleic Acid Hydrogel Coordinates Excitability Restoration and Circuit Reconstruction for Spinal Cord Injury Therapy.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P033-E002", "paper_tracker_id": "M5A-P033", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O080"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P033::M5A-P033-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Serotonergic System-Targeted Nucleic Acid Hydrogel Coordinates Excitability Restoration and Circuit Reconstruction for Spinal Cord Injury Therapy.; first-pass row captures serotonergic/propriospinal relay plasticity in mouse sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O080', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Sysoev YI 2025 M5A-P034-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Central Serotonin Deficiency Impairs Recovery of Sensorimotor Abilities After Spinal Cord Injury in Rats.; first-pass row captures serotonergic/propriospinal relay plasticity in rat sci model at abstract/source-title level..',
+    'qualitative',
+    'Sysoev YI 2025 M5A-P034-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Central Serotonin Deficiency Impairs Recovery of Sensorimotor Abilities After Spinal Cord Injury in Rats.; first-pass row captures serotonergic/propriospinal relay plasticity in rat sci model at abstract/source-title level..',
+    'M5A-P034-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Central Serotonin Deficiency Impairs Recovery of Sensorimotor Abilities After Spinal Cord Injury in Rats.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P034-E002", "paper_tracker_id": "M5A-P034", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O081"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P034::M5A-P034-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Central Serotonin Deficiency Impairs Recovery of Sensorimotor Abilities After Spinal Cord Injury in Rats.; first-pass row captures serotonergic/propriospinal relay plasticity in rat sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O081', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Gao Z 2025 M5A-P035-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Neuronal HDAC3 knockdown promotes propriospinal detour pathway formation and locomotor recovery in a mouse model of spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in human / translational context at abstract/source-title level..',
+    'qualitative',
+    'Gao Z 2025 M5A-P035-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Neuronal HDAC3 knockdown promotes propriospinal detour pathway formation and locomotor recovery in a mouse model of spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in human / translational context at abstract/source-title level..',
+    'M5A-P035-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Neuronal HDAC3 knockdown promotes propriospinal detour pathway formation and locomotor recovery in a mouse model of spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P035-E002", "paper_tracker_id": "M5A-P035", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O082"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P035::M5A-P035-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Neuronal HDAC3 knockdown promotes propriospinal detour pathway formation and locomotor recovery in a mouse model of spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in human / translational context at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O082', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Wang Y 2025 M5A-P036-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Functional recovery induced by KCC2-enabled relay pathways in completely injured spinal cords in adult rats.; first-pass row captures serotonergic/propriospinal relay plasticity in rat sci model at abstract/source-title level..',
+    'qualitative',
+    'Wang Y 2025 M5A-P036-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Functional recovery induced by KCC2-enabled relay pathways in completely injured spinal cords in adult rats.; first-pass row captures serotonergic/propriospinal relay plasticity in rat sci model at abstract/source-title level..',
+    'M5A-P036-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Functional recovery induced by KCC2-enabled relay pathways in completely injured spinal cords in adult rats.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P036-E002", "paper_tracker_id": "M5A-P036", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O083"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P036::M5A-P036-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Functional recovery induced by KCC2-enabled relay pathways in completely injured spinal cords in adult rats.; first-pass row captures serotonergic/propriospinal relay plasticity in rat sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O083', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Zhao H 2025 M5A-P037-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Functionalized nanozyme delivery of a KCC2-activator conjugate for the promotion of functional recovery after acute spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in rat sci model at abstract/source-title level..',
+    'qualitative',
+    'Zhao H 2025 M5A-P037-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Functionalized nanozyme delivery of a KCC2-activator conjugate for the promotion of functional recovery after acute spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in rat sci model at abstract/source-title level..',
+    'M5A-P037-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Functionalized nanozyme delivery of a KCC2-activator conjugate for the promotion of functional recovery after acute spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P037-E002", "paper_tracker_id": "M5A-P037", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O084"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P037::M5A-P037-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Functionalized nanozyme delivery of a KCC2-activator conjugate for the promotion of functional recovery after acute spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in rat sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O084', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Morozumi M 2025 M5A-P038-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Enhanced locomotor recovery in mice lacking GlcNAc6ST1 and GlcNAc6ST4 following spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in mouse sci model at abstract/source-title level..',
+    'qualitative',
+    'Morozumi M 2025 M5A-P038-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Enhanced locomotor recovery in mice lacking GlcNAc6ST1 and GlcNAc6ST4 following spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in mouse sci model at abstract/source-title level..',
+    'M5A-P038-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Enhanced locomotor recovery in mice lacking GlcNAc6ST1 and GlcNAc6ST4 following spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P038-E002", "paper_tracker_id": "M5A-P038", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O085"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P038::M5A-P038-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Enhanced locomotor recovery in mice lacking GlcNAc6ST1 and GlcNAc6ST4 following spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in mouse sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O085', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Zhao Q 2025 M5A-P039-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Treadmill exercise supplemented by OPN promote axon regeneration through the IGF-1R/Akt/mTOR signaling pathway.; first-pass row captures corticospinal tract regeneration / sprouting in human / translational context at abstract/source-title level..',
+    'qualitative',
+    'Zhao Q 2025 M5A-P039-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Treadmill exercise supplemented by OPN promote axon regeneration through the IGF-1R/Akt/mTOR signaling pathway.; first-pass row captures corticospinal tract regeneration / sprouting in human / translational context at abstract/source-title level..',
+    'M5A-P039-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Treadmill exercise supplemented by OPN promote axon regeneration through the IGF-1R/Akt/mTOR signaling pathway.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P039-E002", "paper_tracker_id": "M5A-P039", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T007", "tracker_id": "M5B-O086"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P039::M5A-P039-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Treadmill exercise supplemented by OPN promote axon regeneration through the IGF-1R/Akt/mTOR signaling pathway.; first-pass row captures corticospinal tract regeneration / sprouting in human / translational context at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O086', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Wang Y 2023 M5A-P040-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Osteopontin enhances the effect of treadmill training and promotes functional recovery after spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
+    'qualitative',
+    'Wang Y 2023 M5A-P040-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Osteopontin enhances the effect of treadmill training and promotes functional recovery after spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
+    'M5A-P040-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Osteopontin enhances the effect of treadmill training and promotes functional recovery after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P040-E002", "paper_tracker_id": "M5A-P040", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T007", "tracker_id": "M5B-O087"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P040::M5A-P040-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Osteopontin enhances the effect of treadmill training and promotes functional recovery after spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O087', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Tao N 2023 M5A-P041-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after graft/scaffold-enabled axon repair with endpoint/readout: Outcome/mechanistic validation row for Co-overexpression of OPN, IGF-1 and CNTF augment the therapeutic effect of DPSC on spinal cord injury.; first-pass row captures graft/scaffold-enabled axon repair in mouse sci model at abstract/source-title level..',
+    'qualitative',
+    'Tao N 2023 M5A-P041-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after graft/scaffold-enabled axon repair with endpoint/readout: Outcome/mechanistic validation row for Co-overexpression of OPN, IGF-1 and CNTF augment the therapeutic effect of DPSC on spinal cord injury.; first-pass row captures graft/scaffold-enabled axon repair in mouse sci model at abstract/source-title level..',
+    'M5A-P041-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Co-overexpression of OPN, IGF-1 and CNTF augment the therapeutic effect of DPSC on spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P041-E002", "paper_tracker_id": "M5A-P041", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T006", "tracker_id": "M5B-O088"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P041::M5A-P041-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Co-overexpression of OPN, IGF-1 and CNTF augment the therapeutic effect of DPSC on spinal cord injury.; first-pass row captures graft/scaffold-enabled axon repair in mouse sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O088', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Ye J 2025 M5A-P042-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after graft/scaffold-enabled axon repair with endpoint/readout: Outcome/mechanistic validation row for Multichannel 3D-Printed Bioactive Scaffold Combined with Small Interfering RNA Delivery to Promote Neurological Recovery after Spinal Cord Injury.; first-pass row captures graft/scaffold-enabled axon repair in rat sci model at abstract/source-title level..',
+    'qualitative',
+    'Ye J 2025 M5A-P042-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after graft/scaffold-enabled axon repair with endpoint/readout: Outcome/mechanistic validation row for Multichannel 3D-Printed Bioactive Scaffold Combined with Small Interfering RNA Delivery to Promote Neurological Recovery after Spinal Cord Injury.; first-pass row captures graft/scaffold-enabled axon repair in rat sci model at abstract/source-title level..',
+    'M5A-P042-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Multichannel 3D-Printed Bioactive Scaffold Combined with Small Interfering RNA Delivery to Promote Neurological Recovery after Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P042-E002", "paper_tracker_id": "M5A-P042", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T006", "tracker_id": "M5B-O089"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P042::M5A-P042-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Multichannel 3D-Printed Bioactive Scaffold Combined with Small Interfering RNA Delivery to Promote Neurological Recovery after Spinal Cord Injury.; first-pass row captures graft/scaffold-enabled axon repair in rat sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O089', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'McGuire TK 2026 M5A-P043-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after intrinsic neuronal growth competence with endpoint/readout: Outcome/mechanistic validation row for Development of a <i>PTEN</i>-siRNA activated scaffold to promote axonal regrowth following spinal cord injury.; first-pass row captures intrinsic neuronal growth competence in rat sci model at abstract/source-title level..',
+    'qualitative',
+    'McGuire TK 2026 M5A-P043-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after intrinsic neuronal growth competence with endpoint/readout: Outcome/mechanistic validation row for Development of a <i>PTEN</i>-siRNA activated scaffold to promote axonal regrowth following spinal cord injury.; first-pass row captures intrinsic neuronal growth competence in rat sci model at abstract/source-title level..',
+    'M5A-P043-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Development of a <i>PTEN</i>-siRNA activated scaffold to promote axonal regrowth following spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P043-E002", "paper_tracker_id": "M5A-P043", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O090"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P043::M5A-P043-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Development of a <i>PTEN</i>-siRNA activated scaffold to promote axonal regrowth following spinal cord injury.; first-pass row captures intrinsic neuronal growth competence in rat sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O090', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Muller F 2026 M5A-P044-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after intrinsic neuronal growth competence with endpoint/readout: Outcome/mechanistic validation row for CITED2 is a druggable epigenetic switch coupling neuronal maturation to regenerative decline.; first-pass row captures intrinsic neuronal growth competence in rat sci model at abstract/source-title level..',
+    'qualitative',
+    'Muller F 2026 M5A-P044-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after intrinsic neuronal growth competence with endpoint/readout: Outcome/mechanistic validation row for CITED2 is a druggable epigenetic switch coupling neuronal maturation to regenerative decline.; first-pass row captures intrinsic neuronal growth competence in rat sci model at abstract/source-title level..',
+    'M5A-P044-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: CITED2 is a druggable epigenetic switch coupling neuronal maturation to regenerative decline.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P044-E002", "paper_tracker_id": "M5A-P044", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O091"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P044::M5A-P044-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for CITED2 is a druggable epigenetic switch coupling neuronal maturation to regenerative decline.; first-pass row captures intrinsic neuronal growth competence in rat sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O091', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Couvrette LJ 2025 M5A-P045-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after graft/scaffold-enabled axon repair with endpoint/readout: Outcome/mechanistic validation row for Poly-L-Ornithine coated plant scaffolds support motor recovery in rats after traumatic spinal cord injury.; first-pass row captures graft/scaffold-enabled axon repair in human / translational context at abstract/source-title level..',
+    'qualitative',
+    'Couvrette LJ 2025 M5A-P045-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after graft/scaffold-enabled axon repair with endpoint/readout: Outcome/mechanistic validation row for Poly-L-Ornithine coated plant scaffolds support motor recovery in rats after traumatic spinal cord injury.; first-pass row captures graft/scaffold-enabled axon repair in human / translational context at abstract/source-title level..',
+    'M5A-P045-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Poly-L-Ornithine coated plant scaffolds support motor recovery in rats after traumatic spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P045-E002", "paper_tracker_id": "M5A-P045", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T006", "tracker_id": "M5B-O092"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P045::M5A-P045-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Poly-L-Ornithine coated plant scaffolds support motor recovery in rats after traumatic spinal cord injury.; first-pass row captures graft/scaffold-enabled axon repair in human / translational context at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O092', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Dong H 2025 M5A-P046-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.; first-pass row captures remyelination / white matter repair in rat sci model at abstract/source-title level..',
+    'qualitative',
+    'Dong H 2025 M5A-P046-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.; first-pass row captures remyelination / white matter repair in rat sci model at abstract/source-title level..',
+    'M5A-P046-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P046-E002", "paper_tracker_id": "M5A-P046", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O093"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P046::M5A-P046-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.; first-pass row captures remyelination / white matter repair in rat sci model at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O093', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'Chize CM 2025 M5A-P047-E002 preserves a distinct Dog chronic SCI experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for A laminin-based therapy for dogs with chronic spinal cord injury: promising results of a longitudinal trial.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in dog chronic sci at abstract/source-title level..',
+    'qualitative',
+    'Chize CM 2025 M5A-P047-E002 preserves a distinct Dog chronic SCI experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for A laminin-based therapy for dogs with chronic spinal cord injury: promising results of a longitudinal trial.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in dog chronic sci at abstract/source-title level..',
+    'M5A-P047-E002 preserves distinct model/timing/intervention/endpoint boundary',
+    'Module A tracker',
+    'Abstract / PubMed-indexed metadata',
+    'medium',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: A laminin-based therapy for dogs with chronic spinal cord injury: promising results of a longitudinal trial.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P047-E002", "paper_tracker_id": "M5A-P047", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O094"}'
+  FROM _m5_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M5A-P047::M5A-P047-E002'
+    AND et.evidence_type_name = 'Axon/white-matter repair intervention or mechanism'
+    AND ot.outcome_type_name = 'Outcome/mechanistic validation row for A laminin-based therapy for dogs with chronic spinal cord injury: promising results of a longitudinal trial.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in dog chronic sci at abstract/source-title level.'
+  RETURNING observation_id
+)
+INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O094', observation_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO AuthorClaim (
@@ -4365,7 +6386,7 @@ INSERT INTO _m5_link_map (tracker_id, link_id) SELECT 'M5B-L060', link_id FROM i
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Descending-tract repair evidence must distinguish regeneration, sprouting, plasticity, and behavioral recovery.',
+    'Descending-tract repair claims must specify whether the evidence shows true long-distance regeneration, local sprouting, spared-tract plasticity, relay engagement, or behavioral association; these outcomes should not be collapsed into one regeneration label.',
     'M5B-T001',
     1,
     'consensus-ready first pass',
@@ -4486,7 +6507,7 @@ WHERE c.tracker_id = 'M5B-S001';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Extrinsic matrix and guidance-pathway interventions define environmental permissiveness, but overlap with scar, immune, and cell-therapy mechanisms.',
+    'Extrinsic matrix, CSPG/Nogo/Rho/ROCK, and guidance-pathway interventions define environmental permissiveness, but their effects overlap with scar architecture, immune state, graft support, and tract-specific growth competence.',
     'M5B-T002',
     1,
     'consensus-ready first pass',
@@ -4547,7 +6568,7 @@ WHERE c.tracker_id = 'M5B-S002';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Remyelination, myelin debris clearance, and white matter repair are distinct from axon regeneration and require separate consensus profiles.',
+    'Remyelination, oligodendrocyte lineage repair, myelin-debris clearance, and white-matter preservation are a distinct repair axis from axon regrowth; consensus statements should retain myelin, axon, glial, and functional endpoints separately.',
     'M5B-T003',
     1,
     'consensus-ready first pass',
@@ -4608,7 +6629,7 @@ WHERE c.tracker_id = 'M5B-S003';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Relay, serotonergic, propriospinal, and KCC2 mechanisms support circuit reconstruction as an alternative to direct long-tract regrowth.',
+    'Serotonergic, propriospinal, relay, KCC2, and circuit-rebalancing mechanisms support recovery through network reconstruction and plasticity, which may complement or substitute for direct long-tract regeneration depending on lesion completeness and target behavior.',
     'M5B-T004',
     1,
     'consensus-ready first pass',
@@ -4669,7 +6690,7 @@ WHERE c.tracker_id = 'M5B-S004';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Intrinsic growth competence includes metabolic, transcriptional, epigenetic, PTEN/mTOR, and ciliogenesis programs that should be separated from environmental repair.',
+    'Neuron-intrinsic growth competence spans metabolic, transcriptional, epigenetic, PTEN/mTOR, SOCS3/STAT, and ciliogenesis programs; these should be interpreted separately from environmental permissiveness unless the experiment tests both axes.',
     'M5B-T005',
     1,
     'consensus-ready first pass',
@@ -4724,7 +6745,7 @@ WHERE c.tracker_id = 'M5B-S005';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Graft and scaffold-enabled axon repair is promising but must be cross-tagged with cell-transplant and biomaterial mechanisms.',
+    'Graft- and scaffold-enabled axon repair is a combination-intervention family: axon growth claims should be cross-tagged with cell source, biomaterial architecture, trophic/cargo support, host lesion state, and whether axons enter, traverse, or exit the graft.',
     'M5B-T006',
     1,
     'consensus-ready first pass',
@@ -4779,7 +6800,7 @@ WHERE c.tracker_id = 'M5B-S006';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Activity, stimulation, and training can amplify repair programs and should be modeled as combination interventions.',
+    'Activity, stimulation, training, and neuromodulation can amplify repair-associated plasticity, but they should be modeled as timing- and dose-dependent combination axes rather than evidence that the paired biologic intervention works alone.',
     'M5B-T007',
     1,
     'consensus-ready first pass',
@@ -4822,7 +6843,7 @@ WHERE c.tracker_id = 'M5B-S007';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Module 5 supports mechanism-specific repair profiles rather than one pooled axon-regeneration efficacy claim.',
+    'Module 5 consensus should separate tract class, growth mechanism, myelin/white-matter repair, circuit compensation, intrinsic growth state, combination therapy, species, chronicity, and endpoint rather than producing a single axon-regeneration efficacy summary.',
     'M5B-T008',
     1,
     'consensus-ready first pass',
@@ -5134,8 +7155,8 @@ BEGIN
   FROM Consensus_Observation co
   JOIN _m5_consensus_map cm ON cm.consensus_id = co.consensus_id;
   IF paper_count <> 47 THEN RAISE EXCEPTION 'Expected 47 papers, found %', paper_count; END IF;
-  IF experiment_count <> 47 THEN RAISE EXCEPTION 'Unexpected experiment count %', experiment_count; END IF;
-  IF observation_count <> 47 THEN RAISE EXCEPTION 'Expected 47 observations, found %', observation_count; END IF;
+  IF experiment_count <> 94 THEN RAISE EXCEPTION 'Unexpected experiment count %', experiment_count; END IF;
+  IF observation_count <> 94 THEN RAISE EXCEPTION 'Expected 94 observations, found %', observation_count; END IF;
   IF claim_count <> 36 THEN RAISE EXCEPTION 'Expected 36 claims, found %', claim_count; END IF;
   IF link_count <> 60 THEN RAISE EXCEPTION 'Expected 60 evidence links, found %', link_count; END IF;
   IF consensus_count <> 8 THEN RAISE EXCEPTION 'Expected 8 consensus rows, found %', consensus_count; END IF;
