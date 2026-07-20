@@ -4,11 +4,11 @@
 
 This tracker records the post-saturation phase for Module 1A. Module 1B converts the Module 1A experiment-level corpus into atomic observations, author claims, evidence links, contradiction groups, and consensus-ready profiles.
 
-**Boundary condition**: Module 1B may prepare consensus profiles, but project-level `Consensus` records should only be created after observations and author claims are linked to source evidence. That condition is now met for first-pass consensus drafting; final SQL materialization remains a separate implementation step.
+**Boundary condition**: Module 1B may create first-pass project-level `Consensus` records only after observations and author claims are linked to source evidence. That condition is met: observations, claims, evidence links, contradiction/boundary records, consensus drafts, and `Consensus_Observation` rows are exported and validated in the full SQL materialization.
 
 **Input corpus**: Module 1A saturation corpus, 30 papers / 95 experiments through Pass 3 and full-text access-gap upgrades.
 
-**Module 1 first-pass curation freeze**: 2026-07-16. Status: consensus-ready first pass; queued legacy/candidate records remain future upgrades, not blockers.
+**Module 1 first-pass curation freeze**: 2026-07-16. Completion audit: 2026-07-20. Status: COMPLETE FIRST-PASS MATERIALIZATION; queued legacy/candidate records remain future upgrades, not blockers.
 
 ---
 
@@ -395,7 +395,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 ### M1B-T004: Chronic Lesion Biomechanics
 
-**Status**: consensus-ready first pass; consensus statement not yet materialized.
+**Status**: COMPLETE FIRST-PASS MATERIALIZATION; consensus statement exported and `Consensus_Observation` links validated.
 
 | Profile Element | Curated Summary |
 |---|---|
@@ -408,7 +408,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 ### M1B-T002: Fibrotic Scar Cellular Origins
 
-**Status**: consensus-ready first pass; consensus statement not yet materialized.
+**Status**: COMPLETE FIRST-PASS MATERIALIZATION; consensus statement exported and `Consensus_Observation` links validated.
 
 | Profile Element | Curated Summary |
 |---|---|
@@ -422,7 +422,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 ### M1B-T003: Astrocytic Border and Wound-Repair State
 
-**Status**: consensus-ready first pass; consensus statement not yet materialized.
+**Status**: COMPLETE FIRST-PASS MATERIALIZATION; consensus statement exported and `Consensus_Observation` links validated.
 
 | Profile Element | Curated Summary |
 |---|---|
@@ -436,7 +436,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 ### M1B-T001: Core Lesion Architecture
 
-**Status**: consensus-ready first pass; consensus statement not yet materialized.
+**Status**: COMPLETE FIRST-PASS MATERIALIZATION; consensus statement exported and `Consensus_Observation` links validated.
 
 | Profile Element | Curated Summary |
 |---|---|
@@ -450,7 +450,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 ### M1B-T006: Spared And Remote White Matter
 
-**Status**: consensus-ready first pass; consensus statement not yet materialized.
+**Status**: COMPLETE FIRST-PASS MATERIALIZATION; consensus statement exported and `Consensus_Observation` links validated.
 
 | Profile Element | Curated Summary |
 |---|---|
@@ -464,7 +464,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 ### M1B-T005: Cavitary Lesions, Scar Resection, And Scaffold Filling
 
-**Status**: consensus-ready first pass; consensus statement not yet materialized.
+**Status**: COMPLETE FIRST-PASS MATERIALIZATION; consensus statement exported and `Consensus_Observation` links validated.
 
 | Profile Element | Curated Summary |
 |---|---|
@@ -478,7 +478,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 ### M1B-T007: Human Chronic Pathology And Imaging Geometry
 
-**Status**: consensus-ready first pass; consensus statement not yet materialized.
+**Status**: COMPLETE FIRST-PASS MATERIALIZATION; consensus statement exported and `Consensus_Observation` links validated.
 
 | Profile Element | Curated Summary |
 |---|---|
@@ -492,7 +492,7 @@ These rows are tracker-level Observation candidates. They preserve the intended 
 
 ### M1B-T008: Immune-Glial Containment And Chronic Inflammation
 
-**Status**: consensus-ready first pass; consensus statement not yet materialized.
+**Status**: COMPLETE FIRST-PASS MATERIALIZATION; consensus statement exported and `Consensus_Observation` links validated.
 
 | Profile Element | Curated Summary |
 |---|---|
@@ -563,3 +563,4 @@ These are first-pass project-level synthesis candidates derived from the linked 
 - 2026-07-16: Completed first-pass Observation, AuthorClaim, EvidenceLink, contradiction-map, and consensus-ready profile rows for M1B-T008 using Li 2020 full text plus source-page support from Zhou 2020, Milich 2021, and Gerber 2018.
 - 2026-07-16: Upgraded M1B-T007 with user-supplied full texts for Tuszynski 1999 and Tator 1997; added local raw evidence files, five observations, four author claims, nine evidence links, and one spatial/pathology boundary record.
 - 2026-07-16: Module 1 first-pass curation freeze recorded: 30-paper consensus corpus, 95 Module 1A experiments, 84 Module 1B observations, 50 author claims, 107 evidence links, and 7 boundary records. Module 1 is ready for consensus drafting and optional SQL materialization; additional queued papers are future upgrades unless they alter a compartment or boundary condition.
+- 2026-07-20: Module 1 completion audit passed. Tracker bundle exports validate 84 observations, 50 author claims, 107 evidence links, 7 contradiction/boundary records, and 8 consensus drafts. Full SQL materialization validates the evidence-referenced subset: 28 papers, 78 experiments, 84 observations, 50 claims, 107 evidence links, 8 consensus rows, and 84 `Consensus_Observation` links.
