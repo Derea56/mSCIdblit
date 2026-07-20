@@ -78,12 +78,14 @@ mSCIdblit/
 │   ├── EXPERIMENT_GRANULARITY.md     # Experiment-splitting rules
 │   ├── OLLAMA_CHUNK_EXTRACTION.md    # Local model chunking workflow
 │   ├── MODULE_1_2_SYNTHESIS.md       # First cross-module lesion/scaffold synthesis
+│   ├── AIMS_EVIDENCE_MAP.md          # Specific aims to module evidence map
 │   └── VALIDATION_QUERIES.md         # Database hygiene checks
 ├── scripts/
 │   ├── export_tracker_evidence_bundle.py # Shared 1B/2B tracker audit + JSON export
 │   ├── export_module1_full_sql.py    # Module 1 SQL materialization
 │   ├── export_module1_evidence_bundle.py # Module 1 SQL-oriented evidence JSON
 │   ├── export_module2_full_sql.py    # Module 2 SQL materialization
+│   ├── export_module_full_sql.py     # Generic B-module SQL materialization
 │   ├── ollama_chunk_extract.py       # Generate small Ollama extraction prompts
 │   ├── seed_controlled_vocab.sql     # Populate reference tables
 │   └── smoke_test.sql                # Toy workflow validation script
@@ -100,9 +102,25 @@ mSCIdblit/
 │   ├── Module_2A_TRACKER.md          # Biomaterials and scaffold repair tracker
 │   ├── Module_2B_TRACKER.md          # Biomaterials evidence consolidation
 │   ├── Module_3A_TRACKER.md          # Immune and myeloid modulation tracker
+│   ├── Module_3B_TRACKER.md          # Immune/myeloid evidence consolidation
 │   ├── Module_4A_TRACKER.md          # Cell transplantation and graft integration tracker
+│   ├── Module_4B_TRACKER.md          # Cell transplantation evidence consolidation
 │   ├── Module_5A_TRACKER.md          # Axon regeneration, remyelination, and white matter repair tracker
-│   └── Module_6A_TRACKER.md          # Human chronic SCI pathology and translational imaging tracker
+│   ├── Module_5B_TRACKER.md          # Axon/white matter evidence consolidation
+│   ├── Module_6A_TRACKER.md          # Human chronic SCI pathology and translational imaging tracker
+│   ├── Module_6B_TRACKER.md          # Human pathology/imaging evidence consolidation
+│   ├── Module_7A_TRACKER.md          # Host fibroinflammatory conditioning tracker
+│   ├── Module_7B_TRACKER.md          # Host-conditioning evidence consolidation
+│   ├── Module_8A_TRACKER.md          # In vivo SCI model systems tracker
+│   ├── Module_8B_TRACKER.md          # In vivo SCI model-system evidence consolidation
+│   ├── Module_9A_TRACKER.md          # In vitro/ex vivo SCI model systems tracker
+│   ├── Module_9B_TRACKER.md          # In vitro/ex vivo SCI model-system evidence consolidation
+│   ├── Module_10A_TRACKER.md         # SCI clinical trials tracker
+│   ├── Module_10B_TRACKER.md         # SCI clinical trials evidence consolidation
+│   ├── Module_11A_TRACKER.md         # Spinal cord ischemic conditioning in cardiac/aortic surgery tracker
+│   ├── Module_11B_TRACKER.md         # Spinal cord ischemic conditioning evidence consolidation
+│   ├── Module_12A_TRACKER.md         # LPS and innate immune preconditioning tracker
+│   └── Module_12B_TRACKER.md         # LPS/innate preconditioning evidence consolidation
 ├── CONTRIBUTING.md                    # Scientific curation protocol
 └── README.md                          # This file
 ```

@@ -216,3 +216,15 @@ These rows are first-pass abstract-level experiment placeholders. They preserve 
 | Search strategies logged | 10 | COMPLETE FIRST PASS |
 
 **Module 3A status**: SATURATED / FROZEN FIRST PASS as of 2026-07-16. The corpus now contains 47 primary papers, 94 abstract-level experiment rows, and 10 review/map anchors. Late targeted searches added variants inside already represented categories rather than new immune-mechanism families. Next step is refreshing Module 3B from this saturated corpus.
+
+## ODC-SCI Update Candidates
+
+Access date: 2026-07-17. These ODC-SCI dataset records should be considered for the next Module 3A raw-data/source-confidence upgrade pass; they are not included in the frozen first-pass corpus counts above.
+
+| ODC ID | DOI | Dataset / Study | Module 3 Relevance | Update Action |
+|---|---|---|---|---|
+| ODC-SCI:1536 | 10.34945/F55G67 | Activating systemic inflammation with LPS drives microglia-mediated perineuronal-net degradation after cervical SCI | LPS, microglia, PNN remodeling, cervical injury | Add as raw-data anchor for inflammation-driven microglial remodeling and host-state boundary with Module 7 |
+| ODC-SCI:1519 | 10.34945/F5PG6W | Lesion size, fibroblast and macrophage density at 4 and 28 days after thoracic contusion in young and middle-aged female mice | Fibroblast/macrophage density, timing, age boundary | Add as quantitative scar/immune density anchor |
+| ODC-SCI:1413 | 10.34945/F5X601 | Exercise effects on macrophage activation-state and cytokine genes in DRG after C5 unilateral contusion | Macrophage activation genes, DRG pain axis | Add as immune/pain outcome boundary row |
+| ODC-SCI:1387 | 10.34945/F54P47 | TLR2 and TLR4 agonist efficacy after SCI | Pattern-recognition receptor inflammation modulation | Add to inflammasome/innate immune intervention queue |
+| ODC-SCI:695 | 10.34945/F5B012 | Microglia coordinate cellular interactions during spinal cord repair after contusion or crush SCI | Microglia-cell interaction map | Add as interaction-map raw-data anchor |
