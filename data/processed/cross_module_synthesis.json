@@ -1,0 +1,935 @@
+{
+  "status": "first-pass cross-module synthesis",
+  "generated_from": "data/processed/consensus_review_register.json",
+  "theme_count": 6,
+  "core_consensus_count": 46,
+  "source_module_count": 12,
+  "source_consensus_count": 96,
+  "themes": [
+    {
+      "theme_id": "CMS-T001",
+      "title": "Anatomy-First Reconstruction Logic",
+      "aim_alignment": "Aim 2 and Aim 3",
+      "module_keys": [
+        "1b",
+        "2b",
+        "6b",
+        "8b",
+        "10b"
+      ],
+      "core_consensus_ids": [
+        "M1B-S001",
+        "M1B-S005",
+        "M1B-S007",
+        "M2B-S005",
+        "M6B-S001",
+        "M6B-S008",
+        "M8B-S005",
+        "M10B-S005"
+      ],
+      "synthesis_statement": "SCI reconstruction should begin from lesion anatomy rather than from a generic repair intervention. Chronic lesions contain separable fibrotic, astrocytic, immune, white-matter, cavitary, bridge, and human imaging/pathology compartments, and scaffold or surgical strategies only become interpretable when matched to those compartments.",
+      "evidence_ladder": [
+        "Observations: Module 1 and Module 6 define local and human lesion compartments; Module 8 defines model-system fields needed to preserve lesion architecture.",
+        "Author claims: scaffold and clinical rows repeatedly frame feasibility or targeting around lesion geometry, chronicity, and completeness.",
+        "Consensus: Module 1 and Module 6 support anatomy-specific representation; Module 2 and Module 10 caution against generic efficacy claims."
+      ],
+      "boundaries": [
+        "Scar resection alone is distinct from resection plus reconstruction.",
+        "Human imaging, pathology, and registry rows support selection and feasibility more strongly than efficacy.",
+        "Rodent transection, contusion, and hemisection lesions should not be pooled without lesion-topology fields."
+      ],
+      "experimental_implications": [
+        "Represent each proposed reconstruction experiment with explicit lesion compartment, chronicity, resection status, scaffold geometry, and endpoint family.",
+        "Use human imaging/pathology boundaries to define candidacy logic before translating scaffold or cell claims."
+      ],
+      "confidence_label": "high for ontology and boundary logic; medium for intervention selection",
+      "module_labels": [
+        "Module 1B",
+        "Module 2B",
+        "Module 6B",
+        "Module 8B",
+        "Module 10B"
+      ],
+      "module_counts": {
+        "observations": 313,
+        "author_claims": 174,
+        "evidence_links": 423,
+        "boundary_records": 39,
+        "consensus_drafts": 40
+      },
+      "core_consensus": [
+        {
+          "consensus_id": "M1B-S001",
+          "module": "Module 1B",
+          "topic_id": "M1B-T001",
+          "statement": "Chronic SCI lesion architecture is a multicompartment structure, not a single scar. The core evidence supports separately queryable fibrotic or ECM-rich matrix, astrocytic border, immune/myeloid containment zone, spared or reactive neural tissue, altered white matter, and cystic or repaired-tissue cavities when present.",
+          "observation_count": 10,
+          "claim_count": 6,
+          "boundary_count": 0,
+          "review_action": "promote after prose polish"
+        },
+        {
+          "consensus_id": "M1B-S005",
+          "module": "Module 1B",
+          "topic_id": "M1B-T005",
+          "statement": "Chronic scar resection divides into distinct intervention classes: tissue removal alone and resection followed by cavity or gap reconstruction. Resection alone is not consensus-reparative and may be harmful in contusion models, whereas scaffold or cell filling is a recurring but model- and endpoint-dependent reconstruction strategy.",
+          "observation_count": 7,
+          "claim_count": 5,
+          "boundary_count": 1,
+          "review_action": "promote after prose polish"
+        },
+        {
+          "consensus_id": "M1B-S007",
+          "module": "Module 1B",
+          "topic_id": "M1B-T007",
+          "statement": "Human chronic SCI lesion architecture is multi-scale and should retain separate fields for local lesion geometry and tissue bridges, focal cystic atrophy, retained adjacent parenchyma, vascular territory and remote infarct-like pathology, scar-marker composition, segmental motoneuron/root pathology, remyelination status, perilesional DTI abnormalities, and remote motor-system degeneration.",
+          "observation_count": 13,
+          "claim_count": 10,
+          "boundary_count": 2,
+          "review_action": "promote after prose polish"
+        },
+        {
+          "consensus_id": "M2B-S005",
+          "module": "Module 2B",
+          "topic_id": "M2B-T005",
+          "statement": "Chronic scar or cavity scaffold repair is a reconstruction strategy only when lesion anatomy permits safe resection, boundary identification, and gap filling; these rows should be interpreted through Module 1 lesion architecture rather than as generic scaffold efficacy.",
+          "observation_count": 6,
+          "claim_count": 0,
+          "boundary_count": 0,
+          "review_action": "promote as boundary consensus after wording pass"
+        },
+        {
+          "consensus_id": "M6B-S001",
+          "module": "Module 6B",
+          "topic_id": "M6B-T001",
+          "statement": "Human chronic SCI lesion architecture should be represented as separable compartments, including focal cystic loss, retained adjacent cord, scar-resection anatomy, syrinx or cyst complications, and potential tissue bridges, because each carries different surgical and translational implications.",
+          "observation_count": 4,
+          "claim_count": 4,
+          "boundary_count": 3,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M6B-S008",
+          "module": "Module 6B",
+          "topic_id": "M6B-T008",
+          "statement": "Module 6 should function as the human translation boundary layer: every consensus statement must preserve modality, confidence, timing, injury level, etiology, completeness, endpoint directness, and whether the evidence is pathology, imaging, planning, or efficacy.",
+          "observation_count": 36,
+          "claim_count": 9,
+          "boundary_count": 0,
+          "review_action": "promote as boundary consensus after wording pass"
+        },
+        {
+          "consensus_id": "M8B-S005",
+          "module": "Module 8B",
+          "topic_id": "M8B-T005",
+          "statement": "In vivo model selection should be tied to lesion architecture. Models that create cystic cavities, spared tissue bridges, fibrotic cores, astrocytic borders, demyelination, or transection gaps support different reconstruction and repair claims.",
+          "observation_count": 1,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M10B-S005",
+          "module": "Module 10B",
+          "topic_id": "M10B-T005",
+          "statement": "SCI clinical-trial rows must retain population boundaries, including traumatic versus nontraumatic injury, acute versus chronic stage, complete versus incomplete injury, neurological level, age, comorbidity, and whether SCI is the primary condition.",
+          "observation_count": 10,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        }
+      ],
+      "observation_confidence_tally": {
+        "high": 30,
+        "low": 14,
+        "medium": 43
+      }
+    },
+    {
+      "theme_id": "CMS-T002",
+      "title": "Host State Is a Modifiable Repair Variable",
+      "aim_alignment": "Aim 1, Aim 1C, Aim 2, and Aim 3",
+      "module_keys": [
+        "3b",
+        "7b",
+        "11b",
+        "12b"
+      ],
+      "core_consensus_ids": [
+        "M3B-S001",
+        "M3B-S002",
+        "M3B-S005",
+        "M7B-S007",
+        "M7B-S008",
+        "M11B-S008",
+        "M12B-S001",
+        "M12B-S008"
+      ],
+      "synthesis_statement": "The host response is not merely damage to suppress; it is a timing-, cell-state-, and tissue-context-dependent variable that can be conditioned. Immune, vascular, stromal, and innate-adaptor programs can support containment, debris handling, tolerance-like protection, or repair permissiveness, but the same broad intervention class can be harmful or uninformative when timing and cell identity are lost.",
+      "evidence_ladder": [
+        "Observations: immune/myeloid rows separate depletion, corralling, metabolism, pyroptosis, debris handling, and delivery contexts.",
+        "Author claims: host-conditioning analogs from implants, flaps, islets, organ tolerance, ischemia, and LPS support pre-challenge state modification.",
+        "Consensus: Modules 3, 7, 11, and 12 converge on state-specific conditioning while rejecting broad anti-inflammatory or direct clinical LPS framing."
+      ],
+      "boundaries": [
+        "Low-dose LPS is a discovery platform for endogenous protection, not a proposed clinical conditioning agent.",
+        "Perioperative ischemic conditioning is an analog for timing and host-state logic, not direct evidence for traumatic chronic reconstruction.",
+        "Cross-field host-conditioning evidence requires route, dose, timing, tissue, endpoint, and field-to-SCI distance labels."
+      ],
+      "experimental_implications": [
+        "Build candidate-node tables for TLR4/adaptor routing, IL-1/IL-1R1, IL-10, monocyte/endothelial state, and myeloid metabolic competence.",
+        "Design conditioning experiments around pre-specified windows: pre-injury conditioning, peri-implant conditioning, and post-injury remodeling are separate questions."
+      ],
+      "confidence_label": "medium-high for biological logic; medium for SCI reconstruction translation",
+      "module_labels": [
+        "Module 3B",
+        "Module 7B",
+        "Module 11B",
+        "Module 12B"
+      ],
+      "module_counts": {
+        "observations": 190,
+        "author_claims": 128,
+        "evidence_links": 276,
+        "boundary_records": 32,
+        "consensus_drafts": 32
+      },
+      "core_consensus": [
+        {
+          "consensus_id": "M3B-S001",
+          "module": "Module 3B",
+          "topic_id": "M3B-T001",
+          "statement": "Microglial depletion and CSF1R-pathway modulation have phase-dependent effects after SCI: early broad depletion can remove useful repair functions, while delayed or pathway-specific modulation can reduce chronic inflammatory programs and selected secondary injury endpoints.",
+          "observation_count": 7,
+          "claim_count": 4,
+          "boundary_count": 2,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M3B-S002",
+          "module": "Module 3B",
+          "topic_id": "M3B-T002",
+          "statement": "Myeloid cells are not a single injury-amplifying compartment; they can compact and contain wounds while also contributing to fibrotic scarring, so consensus claims must distinguish corralling, debris handling, matrix remodeling, and fibrosis-promoting functions.",
+          "observation_count": 5,
+          "claim_count": 4,
+          "boundary_count": 3,
+          "review_action": "promote as boundary consensus after wording pass"
+        },
+        {
+          "consensus_id": "M3B-S005",
+          "module": "Module 3B",
+          "topic_id": "M3B-T005",
+          "statement": "Immune metabolism, lipid handling, debris clearance, and efferocytosis link myeloid state to both repair and chronic degeneration; the strongest consensus is that phagocytic and metabolic competence must be tracked separately from inflammatory cytokine tone.",
+          "observation_count": 15,
+          "claim_count": 5,
+          "boundary_count": 3,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M7B-S007",
+          "module": "Module 7B",
+          "topic_id": "M7B-T007",
+          "statement": "Module 7 requires an explicit host-conditioning ontology: intervention target, route, timing, procedure class, host tissue state, endpoint, and evidence directness must be recorded because the corpus spans systemic drugs, remote ischemia, local delivery, immune-cell modulation, and co-therapy.",
+          "observation_count": 40,
+          "claim_count": 7,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M7B-S008",
+          "module": "Module 7B",
+          "topic_id": "M7B-T008",
+          "statement": "Cross-field host-conditioning evidence is strong enough to generate SCI reconstruction hypotheses, but not yet strong enough for clinical-strength claims; dose, route, timing, host target, remodeling endpoint, and field-to-SCI distance must remain confidence-stratified.",
+          "observation_count": 40,
+          "claim_count": 2,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M11B-S008",
+          "module": "Module 11B",
+          "topic_id": "M11B-T008",
+          "statement": "Module 11 is a conditioning analog for the SCI project, not direct evidence for traumatic chronic reconstruction: perioperative ischemia prevention can inform timing, perfusion, and host-state logic only when ischemic versus traumatic mechanisms are kept separate.",
+          "observation_count": 4,
+          "claim_count": 4,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M12B-S001",
+          "module": "Module 12B",
+          "topic_id": "M12B-T001",
+          "statement": "Low-dose LPS preconditioning is consensus-ready as a mechanistic discovery model for SCI because timed innate stimulation can shift resident and recruited immune responses toward protective programs; it should not be summarized as simple inflammatory suppression.",
+          "observation_count": 3,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M12B-S008",
+          "module": "Module 12B",
+          "topic_id": "M12B-T008",
+          "statement": "Module 12 should be used to identify endogenous protective programs and safer host-conditioning analogs. LPS remains a discovery platform for Aim 1 biology, not a proposed clinical conditioning agent before implantation or reconstruction.",
+          "observation_count": 3,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        }
+      ],
+      "observation_confidence_tally": {
+        "high": 6,
+        "low": 48,
+        "medium": 63
+      }
+    },
+    {
+      "theme_id": "CMS-T003",
+      "title": "Biomaterial and Cell Effects Are System-Level Claims",
+      "aim_alignment": "Aim 1B and Aim 3",
+      "module_keys": [
+        "2b",
+        "3b",
+        "4b",
+        "5b",
+        "7b",
+        "9b",
+        "12b"
+      ],
+      "core_consensus_ids": [
+        "M2B-S002",
+        "M2B-S003",
+        "M2B-S007",
+        "M3B-S007",
+        "M4B-S006",
+        "M5B-S006",
+        "M7B-S008",
+        "M9B-S006",
+        "M12B-S007"
+      ],
+      "synthesis_statement": "Most biomaterial, cell, cargo, vesicle, and stimulation strategies should be treated as combined repair systems unless experiments isolate each component. The database should therefore preserve material architecture, cell identity, payload, release kinetics, lesion preparation, host state, and validation model before making causal claims.",
+      "evidence_ladder": [
+        "Observations: scaffold, cell-transplant, immune-delivery, and axon-repair rows often combine architecture, cells, trophic cargo, immunomodulation, and stimulation.",
+        "Author claims: many papers interpret bundled interventions as repair-promoting, but component attribution is often not isolated.",
+        "Consensus: Modules 2, 4, and 5 agree that scaffold-cell-graft-regeneration claims require component and endpoint separation."
+      ],
+      "boundaries": [
+        "Histological improvement does not guarantee functional recovery.",
+        "Carrier effects must be separated from payload biology where possible.",
+        "In vitro biomaterial compatibility supports validation, not standalone in vivo repair efficacy."
+      ],
+      "experimental_implications": [
+        "Use factorial or staged designs where feasible: scaffold-only, cell-only, cargo-only, host-conditioning-only, and combined arms.",
+        "Before in vivo reconstruction, validate cytocompatibility, inflammatory response, release behavior, and guidance effects in Module 9-style systems."
+      ],
+      "confidence_label": "high for attribution boundary; medium for specific component prioritization",
+      "module_labels": [
+        "Module 2B",
+        "Module 3B",
+        "Module 4B",
+        "Module 5B",
+        "Module 7B",
+        "Module 9B",
+        "Module 12B"
+      ],
+      "module_counts": {
+        "observations": 457,
+        "author_claims": 225,
+        "evidence_links": 432,
+        "boundary_records": 56,
+        "consensus_drafts": 56
+      },
+      "core_consensus": [
+        {
+          "consensus_id": "M2B-S002",
+          "module": "Module 2B",
+          "topic_id": "M2B-T002",
+          "statement": "Scaffold-cell combinations repeatedly improve retention, survival, bridging, or repair-associated signals after SCI, but first-pass consensus should assign causality jointly unless experiments isolate scaffold-only, cell-only, and combined arms.",
+          "observation_count": 10,
+          "claim_count": 0,
+          "boundary_count": 0,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M2B-S003",
+          "module": "Module 2B",
+          "topic_id": "M2B-T003",
+          "statement": "Scaffold cargo delivery can reshape trophic, inflammatory, angiogenic, and regenerative conditions at the lesion, yet histological improvement and motor recovery must remain separate endpoints because release success does not guarantee functional benefit.",
+          "observation_count": 9,
+          "claim_count": 0,
+          "boundary_count": 0,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M2B-S007",
+          "module": "Module 2B",
+          "topic_id": "M2B-T007",
+          "statement": "Conductive, electrically active, multimodal, and surface-patch scaffolds extend the module beyond passive bridging by adding stimulation interfaces, inflammatory modulation, or lesion capping, but each active component needs its own attribution boundary.",
+          "observation_count": 4,
+          "claim_count": 0,
+          "boundary_count": 0,
+          "review_action": "promote as boundary consensus after wording pass"
+        },
+        {
+          "consensus_id": "M3B-S007",
+          "module": "Module 3B",
+          "topic_id": "M3B-T007",
+          "statement": "Immune-modifying biomaterials, vesicles, nanoparticles, and hydrogels create actionable delivery strategies, but consensus must separate payload biology from carrier effects, route, release kinetics, lesion localization, and treatment window.",
+          "observation_count": 7,
+          "claim_count": 4,
+          "boundary_count": 2,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M4B-S006",
+          "module": "Module 4B",
+          "topic_id": "M4B-T006",
+          "statement": "Scaffold-cell and microenvironment combination therapies are especially relevant to chronic or complete lesions, but attribution must remain bundled unless the design separates scaffold architecture, cell source, matrix/cargo effects, lesion preparation, and rehabilitation or stimulation.",
+          "observation_count": 9,
+          "claim_count": 4,
+          "boundary_count": 3,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M5B-S006",
+          "module": "Module 5B",
+          "topic_id": "M5B-T006",
+          "statement": "Graft- and scaffold-enabled axon repair is a combination-intervention family: axon growth claims should be cross-tagged with cell source, biomaterial architecture, trophic/cargo support, host lesion state, and whether axons enter, traverse, or exit the graft.",
+          "observation_count": 7,
+          "claim_count": 4,
+          "boundary_count": 3,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M7B-S008",
+          "module": "Module 7B",
+          "topic_id": "M7B-T008",
+          "statement": "Cross-field host-conditioning evidence is strong enough to generate SCI reconstruction hypotheses, but not yet strong enough for clinical-strength claims; dose, route, timing, host target, remodeling endpoint, and field-to-SCI distance must remain confidence-stratified.",
+          "observation_count": 40,
+          "claim_count": 2,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M9B-S006",
+          "module": "Module 9B",
+          "topic_id": "M9B-T006",
+          "statement": "Biomaterial-compatible in vitro systems are best used as bridge assays for cytocompatibility, adhesion, release, differentiation, axon guidance, and inflammatory response before in vivo testing, not as standalone proof of repair efficacy.",
+          "observation_count": 2,
+          "claim_count": 2,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M12B-S007",
+          "module": "Module 12B",
+          "topic_id": "M12B-T007",
+          "statement": "In vitro rows, ODC-SCI datasets, TLR-agonist studies, and microbiome host-conditioning analogs define validation paths for candidate regulatory nodes, but they require source extraction before they can carry high-confidence mechanistic claims.",
+          "observation_count": 3,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        }
+      ],
+      "observation_confidence_tally": {
+        "high": 1,
+        "low": 30,
+        "medium": 60
+      }
+    },
+    {
+      "theme_id": "CMS-T004",
+      "title": "Repair Endpoints Must Remain Orthogonal",
+      "aim_alignment": "Aim 2 and Aim 3",
+      "module_keys": [
+        "1b",
+        "2b",
+        "4b",
+        "5b",
+        "6b",
+        "8b",
+        "10b"
+      ],
+      "core_consensus_ids": [
+        "M1B-S006",
+        "M2B-S003",
+        "M4B-S002",
+        "M4B-S004",
+        "M5B-S001",
+        "M5B-S003",
+        "M5B-S004",
+        "M6B-S005",
+        "M8B-S006",
+        "M10B-S007"
+      ],
+      "synthesis_statement": "SCI repair cannot be summarized by a single recovery axis. Axon growth, sprouting, remyelination, white-matter preservation, graft integration, relay formation, electrophysiology, imaging biomarkers, and behavior are related but non-interchangeable endpoint families.",
+      "evidence_ladder": [
+        "Observations: modules preserve separate histology, imaging, behavior, electrophysiology, graft, myelin, and circuit readouts.",
+        "Author claims: many studies infer repair from selected endpoints, but consensus records repeatedly flag endpoint mismatch.",
+        "Consensus: Module 5 provides the strongest endpoint taxonomy, with Modules 2, 4, 6, 8, and 10 reinforcing context-specific interpretation."
+      ],
+      "boundaries": [
+        "Sprouting, regeneration, relay engagement, spared-tract plasticity, and behavioral association should not be collapsed.",
+        "Clinical registry endpoints need results linkage before efficacy synthesis.",
+        "Remote neurodegeneration and local lesion-bed repair are linked but distinct evidence layers."
+      ],
+      "experimental_implications": [
+        "Predefine primary endpoint family for each proposed experiment and treat secondary endpoints as mechanistic support rather than proof of efficacy.",
+        "Map in vivo behavioral assays to tract, level, injury severity, and lesion architecture before comparing across studies."
+      ],
+      "confidence_label": "high for endpoint ontology; medium for cross-endpoint causal inference",
+      "module_labels": [
+        "Module 1B",
+        "Module 2B",
+        "Module 4B",
+        "Module 5B",
+        "Module 6B",
+        "Module 8B",
+        "Module 10B"
+      ],
+      "module_counts": {
+        "observations": 505,
+        "author_claims": 250,
+        "evidence_links": 555,
+        "boundary_records": 55,
+        "consensus_drafts": 56
+      },
+      "core_consensus": [
+        {
+          "consensus_id": "M1B-S006",
+          "module": "Module 1B",
+          "topic_id": "M1B-T006",
+          "statement": "Spared and lesion-remote white matter is an active recovery-linked compartment rather than normal residual tissue. It can carry chronic degeneration, repair-associated glial and immune remodeling, MRI-visible tract changes, debris and lipid-handling programs, and behavioral associations.",
+          "observation_count": 9,
+          "claim_count": 5,
+          "boundary_count": 0,
+          "review_action": "promote after prose polish"
+        },
+        {
+          "consensus_id": "M2B-S003",
+          "module": "Module 2B",
+          "topic_id": "M2B-T003",
+          "statement": "Scaffold cargo delivery can reshape trophic, inflammatory, angiogenic, and regenerative conditions at the lesion, yet histological improvement and motor recovery must remain separate endpoints because release success does not guarantee functional benefit.",
+          "observation_count": 9,
+          "claim_count": 0,
+          "boundary_count": 0,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M4B-S002",
+          "module": "Module 4B",
+          "topic_id": "M4B-T002",
+          "statement": "Neural progenitor, iPSC, ESC, interneuron, and organoid-derived grafts provide the clearest mechanistic evidence for host-graft integration when survival, differentiation, synaptic connectivity, axon extension, and behavior are measured as separate outcomes.",
+          "observation_count": 16,
+          "claim_count": 9,
+          "boundary_count": 3,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M4B-S004",
+          "module": "Module 4B",
+          "topic_id": "M4B-T004",
+          "statement": "Glial, Schwann, OPC, and restricted-precursor strategies form a distinct repair family focused on myelination, axon support, substrate provision, and circuit-specific outcomes rather than broad neuronal replacement.",
+          "observation_count": 13,
+          "claim_count": 6,
+          "boundary_count": 3,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M5B-S001",
+          "module": "Module 5B",
+          "topic_id": "M5B-T001",
+          "statement": "Descending-tract repair claims must specify whether the evidence shows true long-distance regeneration, local sprouting, spared-tract plasticity, relay engagement, or behavioral association; these outcomes should not be collapsed into one regeneration label.",
+          "observation_count": 18,
+          "claim_count": 4,
+          "boundary_count": 2,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M5B-S003",
+          "module": "Module 5B",
+          "topic_id": "M5B-T003",
+          "statement": "Remyelination, oligodendrocyte lineage repair, myelin-debris clearance, and white-matter preservation are a distinct repair axis from axon regrowth; consensus statements should retain myelin, axon, glial, and functional endpoints separately.",
+          "observation_count": 8,
+          "claim_count": 6,
+          "boundary_count": 3,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M5B-S004",
+          "module": "Module 5B",
+          "topic_id": "M5B-T004",
+          "statement": "Serotonergic, propriospinal, relay, KCC2, and circuit-rebalancing mechanisms support recovery through network reconstruction and plasticity, which may complement or substitute for direct long-tract regeneration depending on lesion completeness and target behavior.",
+          "observation_count": 8,
+          "claim_count": 4,
+          "boundary_count": 2,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M6B-S005",
+          "module": "Module 6B",
+          "topic_id": "M6B-T005",
+          "statement": "qMRI, MRS, atrophy, and longitudinal neuroimaging support chronic SCI as a system-level condition with remote spinal, sensory, motor, brainstem, cortical, and metabolic changes; these should be modeled as linked but distinct from local lesion-bed anatomy.",
+          "observation_count": 11,
+          "claim_count": 6,
+          "boundary_count": 3,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M8B-S006",
+          "module": "Module 8B",
+          "topic_id": "M8B-T006",
+          "statement": "Behavioral endpoints must be interpreted as model-specific functional readouts rather than generic recovery measures; locomotor, skilled forelimb, sensory, autonomic, respiratory, pain, and electrophysiologic assays require separate endpoint fields.",
+          "observation_count": 1,
+          "claim_count": 1,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M10B-S007",
+          "module": "Module 10B",
+          "topic_id": "M10B-T007",
+          "statement": "Clinical endpoints should be grouped by functional domain and evidence role: safety, adverse events, AIS or motor scores, walking, hand function, bladder, pain, autonomic function, quality of life, imaging, biomarkers, and device performance require separate synthesis fields.",
+          "observation_count": 10,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        }
+      ],
+      "observation_confidence_tally": {
+        "high": 11,
+        "low": 19,
+        "medium": 73
+      }
+    },
+    {
+      "theme_id": "CMS-T005",
+      "title": "Model Systems Are Evidence Filters",
+      "aim_alignment": "Aim 1A, Aim 1B, Aim 2, and Aim 3",
+      "module_keys": [
+        "8b",
+        "9b",
+        "10b",
+        "11b",
+        "12b"
+      ],
+      "core_consensus_ids": [
+        "M8B-S001",
+        "M8B-S002",
+        "M8B-S004",
+        "M8B-S008",
+        "M9B-S001",
+        "M9B-S003",
+        "M9B-S008",
+        "M10B-S003",
+        "M11B-S003",
+        "M12B-S007"
+      ],
+      "synthesis_statement": "Model choice is not background metadata; it filters what any observation can mean. In vivo, in vitro, registry, ischemia-conditioning, and innate-stimulation systems answer different questions and should be used as a ladder from discovery to validation to translation.",
+      "evidence_ladder": [
+        "Observations: Module 8 and 9 define in vivo and in vitro model fields; Modules 10-12 define clinical, ischemia, and innate-conditioning evidence roles.",
+        "Author claims: model-system claims are often broad, but the consensus layer converts them into operational model-selection rules.",
+        "Consensus: model modules support structured evidence use rather than pooled model-agnostic conclusions."
+      ],
+      "boundaries": [
+        "In vitro injury stimuli isolate mechanisms but do not reproduce full lesion architecture.",
+        "Animal ischemia conditioning informs protection timing but differs from traumatic SCI and chronic reconstruction.",
+        "Registry records identify translational activity but require publication/results linkage for outcome synthesis."
+      ],
+      "experimental_implications": [
+        "Use model systems sequentially: discovery in conditioning datasets, mechanism validation in vitro, anatomy-appropriate in vivo testing, and clinical translation only through safety-feasibility frames.",
+        "Record species, injury mechanism, level, severity, chronicity, culture format, maturity, stimulus, and endpoint for every cross-module synthesis claim."
+      ],
+      "confidence_label": "high for model-selection rules; medium for translational extrapolation",
+      "module_labels": [
+        "Module 8B",
+        "Module 9B",
+        "Module 10B",
+        "Module 11B",
+        "Module 12B"
+      ],
+      "module_counts": {
+        "observations": 167,
+        "author_claims": 125,
+        "evidence_links": 324,
+        "boundary_records": 40,
+        "consensus_drafts": 40
+      },
+      "core_consensus": [
+        {
+          "consensus_id": "M8B-S001",
+          "module": "Module 8B",
+          "topic_id": "M8B-T001",
+          "statement": "In vivo SCI evidence must retain species, strain, age, sex, and genetic background because model choice changes lesion biology, immune response, spontaneous recovery, surgical feasibility, and translatability.",
+          "observation_count": 1,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M8B-S002",
+          "module": "Module 8B",
+          "topic_id": "M8B-T002",
+          "statement": "Injury mechanism is a primary evidence boundary: contusion, compression, transection, hemisection, crush, ischemia, and chemical or demyelinating models answer different questions and should not be pooled as interchangeable SCI models.",
+          "observation_count": 1,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "promote as boundary consensus after wording pass"
+        },
+        {
+          "consensus_id": "M8B-S004",
+          "module": "Module 8B",
+          "topic_id": "M8B-T004",
+          "statement": "Severity and chronicity are not metadata: force, displacement, duration, lesion completeness, time post-injury, and spontaneous recovery determine whether a model is appropriate for acute neuroprotection, chronic reconstruction, biomaterial testing, or rehabilitation studies.",
+          "observation_count": 1,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M8B-S008",
+          "module": "Module 8B",
+          "topic_id": "M8B-T008",
+          "statement": "Module 8 should function as the in vivo model ontology layer: every downstream consensus claim should preserve species, injury mechanism, level, severity, chronicity, lesion architecture, endpoint family, and extraction confidence.",
+          "observation_count": 1,
+          "claim_count": 1,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M9B-S001",
+          "module": "Module 9B",
+          "topic_id": "M9B-T001",
+          "statement": "In vitro and ex vivo SCI models should be classified first by culture format, because dissociated cultures, organoids, slices, explants, microfluidic systems, and biomaterial cultures preserve different degrees of cytoarchitecture, injury context, and assay control.",
+          "observation_count": 2,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M9B-S003",
+          "module": "Module 9B",
+          "topic_id": "M9B-T003",
+          "statement": "Injury stimulus must remain explicit in culture-model synthesis; scratch, stretch, compression, excitotoxicity, hypoxia, inflammatory challenge, myelin debris, matrix inhibition, and conditioned media model different parts of SCI.",
+          "observation_count": 2,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M9B-S008",
+          "module": "Module 9B",
+          "topic_id": "M9B-T008",
+          "statement": "Module 9 should function as the validation-model ontology layer: culture format, cell source, maturity, injury stimulus, matrix context, biomaterial exposure, readout, and confidence level must be retained before in vitro evidence is used in cross-module consensus.",
+          "observation_count": 2,
+          "claim_count": 1,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M10B-S003",
+          "module": "Module 10B",
+          "topic_id": "M10B-T003",
+          "statement": "Registry records are not equivalent to published outcomes; each trial needs linkage to results postings, publications, intervention details, sample size, comparator, and endpoint definitions before quantitative clinical synthesis.",
+          "observation_count": 10,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M11B-S003",
+          "module": "Module 11B",
+          "topic_id": "M11B-T003",
+          "statement": "Direct or local ischemic preconditioning and early postconditioning have the clearest spinal-cord-specific conditioning logic in animal ischemia models, but species, occlusion method, ischemia duration, timing, and reperfusion window determine applicability.",
+          "observation_count": 4,
+          "claim_count": 4,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M12B-S007",
+          "module": "Module 12B",
+          "topic_id": "M12B-T007",
+          "statement": "In vitro rows, ODC-SCI datasets, TLR-agonist studies, and microbiome host-conditioning analogs define validation paths for candidate regulatory nodes, but they require source extraction before they can carry high-confidence mechanistic claims.",
+          "observation_count": 3,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        }
+      ],
+      "observation_confidence_tally": {
+        "medium": 27
+      }
+    },
+    {
+      "theme_id": "CMS-T006",
+      "title": "Preconditioning Hypothesis for SCI Reconstruction",
+      "aim_alignment": "Integrated aims logic",
+      "module_keys": [
+        "1b",
+        "2b",
+        "3b",
+        "4b",
+        "5b",
+        "7b",
+        "9b",
+        "11b",
+        "12b"
+      ],
+      "core_consensus_ids": [
+        "M1B-S008",
+        "M2B-S005",
+        "M3B-S008",
+        "M4B-S008",
+        "M5B-S008",
+        "M7B-S008",
+        "M9B-S008",
+        "M11B-S008",
+        "M12B-S008"
+      ],
+      "synthesis_statement": "The most defensible project-level hypothesis is that conditioning can improve SCI reconstruction only if it creates a host state compatible with the target lesion anatomy, implanted material or graft, and desired endpoint family. The evidence supports a conditioning-discovery and validation program, not an immediate universal conditioning therapy claim.",
+      "evidence_ladder": [
+        "Observations: all core modules now provide experiment-level rows and B-layer observations suitable for cross-module tracing.",
+        "Author claims: repair, conditioning, graft, biomaterial, and immune claims are strongest when narrowed to model, timing, and endpoint.",
+        "Consensus: Modules 1-12 collectively support an aim-aligned logic of endogenous protective programs, host response modification, and host-biomaterial interaction testing."
+      ],
+      "boundaries": [
+        "Conditioning should not be framed as simply anti-inflammatory.",
+        "Pre-injury conditioning, perioperative conditioning, and post-injury remodeling are distinct intervention classes.",
+        "Clinical translation must route through safer analogs and trial-readiness logic rather than direct LPS or unvalidated host priming."
+      ],
+      "experimental_implications": [
+        "Aim 1 should identify protective regulatory programs and candidate nodes, with full source confidence labels retained.",
+        "Aim 2 should test whether conditioning changes acute/subacute lesion response using anatomy- and endpoint-defined in vivo models.",
+        "Aim 3 should test whether conditioning improves scaffold/graft integration through host-state, biomaterial, immune, and repair endpoint readouts."
+      ],
+      "confidence_label": "medium-high as a project synthesis hypothesis",
+      "module_labels": [
+        "Module 1B",
+        "Module 2B",
+        "Module 3B",
+        "Module 4B",
+        "Module 5B",
+        "Module 7B",
+        "Module 9B",
+        "Module 11B",
+        "Module 12B"
+      ],
+      "module_counts": {
+        "observations": 582,
+        "author_claims": 307,
+        "evidence_links": 611,
+        "boundary_records": 71,
+        "consensus_drafts": 72
+      },
+      "core_consensus": [
+        {
+          "consensus_id": "M1B-S008",
+          "module": "Module 1B",
+          "topic_id": "M1B-T008",
+          "statement": "Immune-glial lesion biology is phase-, cell-, function-, and endpoint-specific. Myeloid and glial responses can support corralling, compaction, containment, debris handling, and repair while also contributing to chronic neuroinflammatory pathology and remote effects.",
+          "observation_count": 9,
+          "claim_count": 6,
+          "boundary_count": 1,
+          "review_action": "promote after prose polish"
+        },
+        {
+          "consensus_id": "M2B-S005",
+          "module": "Module 2B",
+          "topic_id": "M2B-T005",
+          "statement": "Chronic scar or cavity scaffold repair is a reconstruction strategy only when lesion anatomy permits safe resection, boundary identification, and gap filling; these rows should be interpreted through Module 1 lesion architecture rather than as generic scaffold efficacy.",
+          "observation_count": 6,
+          "claim_count": 0,
+          "boundary_count": 0,
+          "review_action": "promote as boundary consensus after wording pass"
+        },
+        {
+          "consensus_id": "M3B-S008",
+          "module": "Module 3B",
+          "topic_id": "M3B-T008",
+          "statement": "Module 3 supports mechanism-specific immune consensus profiles, not a broad anti-inflammatory thesis: timing, cell origin, immune function, sex/species/model context, and endpoint class are required fields for interpreting immune modulation after SCI.",
+          "observation_count": 47,
+          "claim_count": 9,
+          "boundary_count": 0,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M4B-S008",
+          "module": "Module 4B",
+          "topic_id": "M4B-T008",
+          "statement": "Module 4 should be organized into mechanism- and context-specific transplantation profiles defined by cell identity, host lesion state, delivery environment, integration assay, and endpoint class rather than one pooled cell-therapy efficacy claim.",
+          "observation_count": 60,
+          "claim_count": 17,
+          "boundary_count": 0,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M5B-S008",
+          "module": "Module 5B",
+          "topic_id": "M5B-T008",
+          "statement": "Module 5 consensus should separate tract class, growth mechanism, myelin/white-matter repair, circuit compensation, intrinsic growth state, combination therapy, species, chronicity, and endpoint rather than producing a single axon-regeneration efficacy summary.",
+          "observation_count": 47,
+          "claim_count": 7,
+          "boundary_count": 0,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M7B-S008",
+          "module": "Module 7B",
+          "topic_id": "M7B-T008",
+          "statement": "Cross-field host-conditioning evidence is strong enough to generate SCI reconstruction hypotheses, but not yet strong enough for clinical-strength claims; dose, route, timing, host target, remodeling endpoint, and field-to-SCI distance must remain confidence-stratified.",
+          "observation_count": 40,
+          "claim_count": 2,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M9B-S008",
+          "module": "Module 9B",
+          "topic_id": "M9B-T008",
+          "statement": "Module 9 should function as the validation-model ontology layer: culture format, cell source, maturity, injury stimulus, matrix context, biomaterial exposure, readout, and confidence level must be retained before in vitro evidence is used in cross-module consensus.",
+          "observation_count": 2,
+          "claim_count": 1,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M11B-S008",
+          "module": "Module 11B",
+          "topic_id": "M11B-T008",
+          "statement": "Module 11 is a conditioning analog for the SCI project, not direct evidence for traumatic chronic reconstruction: perioperative ischemia prevention can inform timing, perfusion, and host-state logic only when ischemic versus traumatic mechanisms are kept separate.",
+          "observation_count": 4,
+          "claim_count": 4,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M12B-S008",
+          "module": "Module 12B",
+          "topic_id": "M12B-T008",
+          "statement": "Module 12 should be used to identify endogenous protective programs and safer host-conditioning analogs. LPS remains a discovery platform for Aim 1 biology, not a proposed clinical conditioning agent before implantation or reconstruction.",
+          "observation_count": 3,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        }
+      ],
+      "observation_confidence_tally": {
+        "high": 24,
+        "low": 69,
+        "medium": 125
+      }
+    }
+  ],
+  "global_boundaries": [
+    "Do not pool across lesion anatomy, model system, timing, or endpoint family.",
+    "Keep empirical observations, author claims, consensus statements, and project hypotheses separated.",
+    "Treat medium/low-confidence abstract rows as synthesis-supporting but not quantitative proof.",
+    "Route clinical interpretation through registry/publication/results linkage before efficacy claims."
+  ],
+  "next_actions": [
+    "Use this synthesis as the scaffold for a grant-facing significance/innovation narrative.",
+    "Build an Aim 1C regulatory-node table from Modules 3B, 7B, 11B, and 12B.",
+    "Perform full-text upgrades for direct LPS, host-conditioning, immune-myeloid, and scaffold/graft anchor rows before quantitative claims.",
+    "Run PostgreSQL fresh-load validation when psql/createdb are available."
+  ]
+}
