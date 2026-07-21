@@ -36,15 +36,15 @@ THEMES = (
         theme_id="CMS-T001",
         title="Anatomy-First Reconstruction Logic",
         aim_alignment="Aim 2 and Aim 3",
-        module_keys=("1b", "2b", "6b", "8b", "10b"),
-        core_consensus_ids=("M1B-S001", "M1B-S005", "M1B-S007", "M2B-S005", "M6B-S001", "M6B-S008", "M8B-S005", "M10B-S005"),
+        module_keys=("1b", "2b", "6b", "8b", "10b", "13b"),
+        core_consensus_ids=("M1B-S001", "M1B-S005", "M1B-S007", "M2B-S005", "M6B-S001", "M6B-S008", "M8B-S005", "M10B-S005", "M13B-S001", "M13B-S007"),
         synthesis_statement=(
             "SCI reconstruction should begin from lesion anatomy rather than from a generic repair intervention. "
-            "Chronic lesions contain separable fibrotic, astrocytic, immune, white-matter, cavitary, bridge, and human imaging/pathology compartments, "
+            "Traumatic SCI evolves through vascular, inflammatory, glial, stromal, axon/myelin, and cavitation processes into chronic lesions with separable fibrotic, astrocytic, immune, white-matter, cavitary, bridge, and human imaging/pathology compartments, "
             "and scaffold or surgical strategies only become interpretable when matched to those compartments."
         ),
         evidence_ladder=(
-            "Observations: Module 1 and Module 6 define local and human lesion compartments; Module 8 defines model-system fields needed to preserve lesion architecture.",
+            "Observations: Module 13 defines injury-to-lesion trajectory; Module 1 and Module 6 define local and human lesion compartments; Module 8 defines model-system fields needed to preserve lesion architecture.",
             "Author claims: scaffold and clinical rows repeatedly frame feasibility or targeting around lesion geometry, chronicity, and completeness.",
             "Consensus: Module 1 and Module 6 support anatomy-specific representation; Module 2 and Module 10 caution against generic efficacy claims.",
         ),
@@ -116,13 +116,13 @@ THEMES = (
         theme_id="CMS-T004",
         title="Repair Endpoints Must Remain Orthogonal",
         aim_alignment="Aim 2 and Aim 3",
-        module_keys=("1b", "2b", "4b", "5b", "6b", "8b", "10b"),
-        core_consensus_ids=("M1B-S006", "M2B-S003", "M4B-S002", "M4B-S004", "M5B-S001", "M5B-S003", "M5B-S004", "M6B-S005", "M8B-S006", "M10B-S007"),
+        module_keys=("1b", "2b", "4b", "5b", "6b", "8b", "10b", "13b"),
+        core_consensus_ids=("M1B-S006", "M2B-S003", "M4B-S002", "M4B-S004", "M5B-S001", "M5B-S003", "M5B-S004", "M6B-S005", "M8B-S006", "M10B-S007", "M13B-S003"),
         synthesis_statement=(
             "SCI repair cannot be summarized by a single recovery axis. Axon growth, sprouting, remyelination, white-matter preservation, graft integration, relay formation, electrophysiology, imaging biomarkers, and behavior are related but non-interchangeable endpoint families."
         ),
         evidence_ladder=(
-            "Observations: modules preserve separate histology, imaging, behavior, electrophysiology, graft, myelin, and circuit readouts.",
+            "Observations: modules preserve separate pathobiology, histology, imaging, behavior, electrophysiology, graft, myelin, and circuit readouts.",
             "Author claims: many studies infer repair from selected endpoints, but consensus records repeatedly flag endpoint mismatch.",
             "Consensus: Module 5 provides the strongest endpoint taxonomy, with Modules 2, 4, 6, 8, and 10 reinforcing context-specific interpretation.",
         ),
@@ -166,16 +166,16 @@ THEMES = (
         theme_id="CMS-T006",
         title="Preconditioning Hypothesis for SCI Reconstruction",
         aim_alignment="Integrated aims logic",
-        module_keys=("1b", "2b", "3b", "4b", "5b", "7b", "9b", "11b", "12b"),
-        core_consensus_ids=("M1B-S008", "M2B-S005", "M3B-S008", "M4B-S008", "M5B-S008", "M7B-S008", "M9B-S008", "M11B-S008", "M12B-S008"),
+        module_keys=("1b", "2b", "3b", "4b", "5b", "7b", "9b", "11b", "12b", "13b"),
+        core_consensus_ids=("M1B-S008", "M2B-S005", "M3B-S008", "M4B-S008", "M5B-S008", "M7B-S008", "M9B-S008", "M11B-S008", "M12B-S008", "M13B-S008"),
         synthesis_statement=(
             "The most defensible project-level hypothesis is that conditioning can improve SCI reconstruction only if it creates a host state compatible with the target lesion anatomy, implanted material or graft, and desired endpoint family. "
             "The evidence supports a conditioning-discovery and validation program, not an immediate universal conditioning therapy claim."
         ),
         evidence_ladder=(
-            "Observations: all core modules now provide experiment-level rows and B-layer observations suitable for cross-module tracing.",
+            "Observations: all core modules now provide experiment-level rows and B-layer observations suitable for cross-module tracing, including the traumatic injury-to-lesion trajectory layer.",
             "Author claims: repair, conditioning, graft, biomaterial, and immune claims are strongest when narrowed to model, timing, and endpoint.",
-            "Consensus: Modules 1-12 collectively support an aim-aligned logic of endogenous protective programs, host response modification, and host-biomaterial interaction testing.",
+            "Consensus: Modules 1-13 collectively support an aim-aligned logic of endogenous protective programs, host response modification, injury-to-lesion modification, and host-biomaterial interaction testing.",
         ),
         boundaries=(
             "Conditioning should not be framed as simply anti-inflammatory.",
@@ -276,7 +276,7 @@ def render_markdown(synthesis: dict[str, Any]) -> str:
         "",
         "**Status**: first-pass synthesis from the consensus review register.",
         "",
-        "**Scope**: Modules 1B-12B, organized around the revised preconditioning and reconstruction aims.",
+        "**Scope**: Modules 1B-13B, organized around the revised preconditioning and reconstruction aims.",
         "",
         "**Use**: grant-facing logic layer and database navigation aid; not a final quantitative meta-analysis.",
         "",

@@ -2,7 +2,7 @@
 
 This register is the working layer for going through consensus in each module. The B trackers remain the source of truth; this file summarizes which consensus statements are ready to promote, which need wording cleanup, and which require confidence upgrades before stronger claims.
 
-**Coverage**: 12 modules, 96 consensus statements.
+**Coverage**: 13 modules, 104 consensus statements.
 
 ## Module Pass Order
 
@@ -20,6 +20,7 @@ This register is the working layer for going through consensus in each module. T
 | Module 10B | CONSENSUS-READY FIRST PASS | 80 obs / 36 claims / 116 links / 8 boundaries / 8 drafts | Treat as clinical-trial map consensus; keep registry status separate from efficacy evidence. | needs trial-result linkage before strength claims |
 | Module 11B | CONSENSUS-READY FIRST PASS | 32 obs / 32 claims / 72 links / 8 boundaries / 8 drafts | Rewrite perioperative ischemia-protection statements so they are not just topic labels plus caveats. | needs statement rewrite before promotion |
 | Module 12B | CONSENSUS-READY FIRST PASS | 24 obs / 24 claims / 56 links / 8 boundaries / 8 drafts | Keep innate immune conditioning broad; treat endotoxin/LPS as one discovery platform and route translational claims through safer host-conditioning analogs. | promote after full-text confidence upgrade of direct innate-conditioning anchors |
+| Module 13B | CONSENSUS-READY FIRST PASS | 24 obs / 24 claims / 56 links / 8 boundaries / 8 drafts | Use as the injury-to-chronic-lesion bridge; preserve timing, model severity, vascular, immune, glial, stromal, axon/myelin, and cavitation boundaries. | promote after full-text confidence upgrade of key vascular, scar, and degeneration anchors |
 
 ## Recommended Review Sequence
 
@@ -187,3 +188,16 @@ This register is the working layer for going through consensus in each module. T
 | M12B-S006 | M12B-T006 | 3 obs / 3 claims / 8 boundaries | promote as boundary consensus after wording pass | Post-injury or chronic innate stimulation studies reveal inducible spinal plasticity and microglial-state capacity, but they should be treated as boundary and comparator evidence unless the experiment tests pre-injury or peri-procedural conditioning timing. |
 | M12B-S007 | M12B-T007 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | In vitro rows, ODC-SCI datasets, TLR-agonist studies, and microbiome host-conditioning analogs define validation paths for candidate regulatory nodes, but they require source extraction before they can carry high-confidence mechanistic claims. |
 | M12B-S008 | M12B-T008 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | Module 12 should be used to identify endogenous protective programs and safer host-conditioning analogs across innate immune tolerance, trained/tolerized states, microbiome/systemic inflammatory priming, monocyte/endothelial signaling, and TLR/non-TLR agonist biology. LPS remains one discovery platform for Aim 1 biology, not a proposed clinical conditioning agent before implantation or reconstruction. |
+
+### Module 13B
+
+| Consensus | Topic | Evidence | Review Action | Statement |
+|---|---|---|---|---|
+| M13B-S001 | M13B-T001 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | Primary traumatic SCI sets an initial lesion geometry, but the chronic lesion is produced by a time-dependent cascade rather than by the mechanical insult alone; injury model, severity, spinal level, and early hemorrhage must be retained as causal boundaries. |
+| M13B-S002 | M13B-T002 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | Vascular failure, blood-spinal cord barrier disruption, edema, and progressive hemorrhagic necrosis are early drivers of lesion expansion and are experimentally modifiable, making vascular integrity a core injury-to-lesion mechanism. |
+| M13B-S003 | M13B-T003 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | Gray matter loss can occur rapidly while white matter loss, axon degeneration, demyelination, and Wallerian degeneration evolve over longer windows, so chronic spared-tissue anatomy must be interpreted through time-resolved tract and cell-population boundaries. |
+| M13B-S004 | M13B-T004 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | Innate immune responses after traumatic SCI are not only damaging inflammation: microglia and macrophages can expand injury, clear debris, compact wounds, corral lesion cores, and alter chronic neurodegeneration depending on timing and state. |
+| M13B-S005 | M13B-T005 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | Astrocytic border formation is an active wound-repair process that contains non-neural lesion cores and coordinates multicellular scar responses; it should not be summarized only as a regeneration-inhibitory barrier. |
+| M13B-S006 | M13B-T006 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | Fibrotic scar formation is a spatially organized stromal response involving heterogeneous fibroblast/perivascular/meningeal compartments and extracellular matrix programs that help define the chronic lesion core and interface. |
+| M13B-S007 | M13B-T007 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | Cavitation and chronic lesion stabilization emerge from interacting vascular, immune, glial, stromal, axon/myelin, and tissue-clearance processes; static chronic lesion anatomy should be linked back to the temporal mechanisms that formed it. |
+| M13B-S008 | M13B-T008 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | Module 13 should serve as the causal bridge between model-system selection and chronic lesion architecture: every downstream conditioning, biomaterial, cell, or axon-repair claim should specify which injury-to-lesion process it is expected to modify. |

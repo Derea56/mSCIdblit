@@ -84,6 +84,11 @@ MODULE_REVIEW_NOTES = {
         "module_action": "Keep innate immune conditioning broad; treat endotoxin/LPS as one discovery platform and route translational claims through safer host-conditioning analogs.",
         "priority": "promote after full-text confidence upgrade of direct innate-conditioning anchors",
     },
+    "13b": {
+        "review_status": "CONSENSUS-READY FIRST PASS",
+        "module_action": "Use as the injury-to-chronic-lesion bridge; preserve timing, model severity, vascular, immune, glial, stromal, axon/myelin, and cavitation boundaries.",
+        "priority": "promote after full-text confidence upgrade of key vascular, scar, and degeneration anchors",
+    },
 }
 
 
