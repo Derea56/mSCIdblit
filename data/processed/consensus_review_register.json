@@ -1,8 +1,8 @@
 {
   "status": "cross-module consensus review register",
   "generated_from": "validated B-tracker evidence bundles",
-  "module_count": 12,
-  "consensus_count": 96,
+  "module_count": 13,
+  "consensus_count": 104,
   "module_rows": [
     {
       "module_key": "1b",
@@ -159,6 +159,19 @@
       "consensus_drafts": 8,
       "module_action": "Keep innate immune conditioning broad; treat endotoxin/LPS as one discovery platform and route translational claims through safer host-conditioning analogs.",
       "priority": "promote after full-text confidence upgrade of direct innate-conditioning anchors"
+    },
+    {
+      "module_key": "13b",
+      "module": "Module 13B",
+      "source_tracker": "modules/Module_13B_TRACKER.md",
+      "review_status": "CONSENSUS-READY FIRST PASS",
+      "observations": 24,
+      "author_claims": 24,
+      "evidence_links": 56,
+      "boundary_records": 8,
+      "consensus_drafts": 8,
+      "module_action": "Use as the injury-to-chronic-lesion bridge; preserve timing, model severity, vascular, immune, glial, stromal, axon/myelin, and cavitation boundaries.",
+      "priority": "promote after full-text confidence upgrade of key vascular, scar, and degeneration anchors"
     }
   ],
   "consensus_rows": [
@@ -4242,6 +4255,330 @@
       },
       "claim_confidence": {
         "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "13b",
+      "module": "Module 13B",
+      "consensus_id": "M13B-S001",
+      "topic_id": "M13B-T001",
+      "statement": "Primary traumatic SCI sets an initial lesion geometry, but the chronic lesion is produced by a time-dependent cascade rather than by the mechanical insult alone; injury model, severity, spinal level, and early hemorrhage must be retained as causal boundaries.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M13B-O001",
+        "M13B-O002",
+        "M13B-O003"
+      ],
+      "supporting_claims": [
+        "M13B-C001",
+        "M13B-C002",
+        "M13B-C003"
+      ],
+      "boundary_records": [
+        "M13B-B001",
+        "M13B-B002",
+        "M13B-B003",
+        "M13B-B004",
+        "M13B-B005",
+        "M13B-B006",
+        "M13B-B007",
+        "M13B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 2,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "high": 2,
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "13b",
+      "module": "Module 13B",
+      "consensus_id": "M13B-S002",
+      "topic_id": "M13B-T002",
+      "statement": "Vascular failure, blood-spinal cord barrier disruption, edema, and progressive hemorrhagic necrosis are early drivers of lesion expansion and are experimentally modifiable, making vascular integrity a core injury-to-lesion mechanism.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M13B-O004",
+        "M13B-O005",
+        "M13B-O006"
+      ],
+      "supporting_claims": [
+        "M13B-C004",
+        "M13B-C005",
+        "M13B-C006"
+      ],
+      "boundary_records": [
+        "M13B-B001",
+        "M13B-B002",
+        "M13B-B003",
+        "M13B-B004",
+        "M13B-B005",
+        "M13B-B006",
+        "M13B-B007",
+        "M13B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 1,
+        "medium": 2
+      },
+      "claim_confidence": {
+        "high": 1,
+        "medium": 2
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "13b",
+      "module": "Module 13B",
+      "consensus_id": "M13B-S003",
+      "topic_id": "M13B-T003",
+      "statement": "Gray matter loss can occur rapidly while white matter loss, axon degeneration, demyelination, and Wallerian degeneration evolve over longer windows, so chronic spared-tissue anatomy must be interpreted through time-resolved tract and cell-population boundaries.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M13B-O007",
+        "M13B-O008",
+        "M13B-O009"
+      ],
+      "supporting_claims": [
+        "M13B-C007",
+        "M13B-C008",
+        "M13B-C009"
+      ],
+      "boundary_records": [
+        "M13B-B001",
+        "M13B-B002",
+        "M13B-B003",
+        "M13B-B004",
+        "M13B-B005",
+        "M13B-B006",
+        "M13B-B007",
+        "M13B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 3
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "13b",
+      "module": "Module 13B",
+      "consensus_id": "M13B-S004",
+      "topic_id": "M13B-T004",
+      "statement": "Innate immune responses after traumatic SCI are not only damaging inflammation: microglia and macrophages can expand injury, clear debris, compact wounds, corral lesion cores, and alter chronic neurodegeneration depending on timing and state.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M13B-O010",
+        "M13B-O011",
+        "M13B-O012"
+      ],
+      "supporting_claims": [
+        "M13B-C010",
+        "M13B-C011",
+        "M13B-C012"
+      ],
+      "boundary_records": [
+        "M13B-B001",
+        "M13B-B002",
+        "M13B-B003",
+        "M13B-B004",
+        "M13B-B005",
+        "M13B-B006",
+        "M13B-B007",
+        "M13B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 3
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "13b",
+      "module": "Module 13B",
+      "consensus_id": "M13B-S005",
+      "topic_id": "M13B-T005",
+      "statement": "Astrocytic border formation is an active wound-repair process that contains non-neural lesion cores and coordinates multicellular scar responses; it should not be summarized only as a regeneration-inhibitory barrier.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M13B-O013",
+        "M13B-O014",
+        "M13B-O015"
+      ],
+      "supporting_claims": [
+        "M13B-C013",
+        "M13B-C014",
+        "M13B-C015"
+      ],
+      "boundary_records": [
+        "M13B-B001",
+        "M13B-B002",
+        "M13B-B003",
+        "M13B-B004",
+        "M13B-B005",
+        "M13B-B006",
+        "M13B-B007",
+        "M13B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 2,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "high": 2,
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "13b",
+      "module": "Module 13B",
+      "consensus_id": "M13B-S006",
+      "topic_id": "M13B-T006",
+      "statement": "Fibrotic scar formation is a spatially organized stromal response involving heterogeneous fibroblast/perivascular/meningeal compartments and extracellular matrix programs that help define the chronic lesion core and interface.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M13B-O016",
+        "M13B-O017",
+        "M13B-O018"
+      ],
+      "supporting_claims": [
+        "M13B-C016",
+        "M13B-C017",
+        "M13B-C018"
+      ],
+      "boundary_records": [
+        "M13B-B001",
+        "M13B-B002",
+        "M13B-B003",
+        "M13B-B004",
+        "M13B-B005",
+        "M13B-B006",
+        "M13B-B007",
+        "M13B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 1,
+        "low": 1,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "high": 1,
+        "low": 1,
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "13b",
+      "module": "Module 13B",
+      "consensus_id": "M13B-S007",
+      "topic_id": "M13B-T007",
+      "statement": "Cavitation and chronic lesion stabilization emerge from interacting vascular, immune, glial, stromal, axon/myelin, and tissue-clearance processes; static chronic lesion anatomy should be linked back to the temporal mechanisms that formed it.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M13B-O019",
+        "M13B-O020",
+        "M13B-O021"
+      ],
+      "supporting_claims": [
+        "M13B-C019",
+        "M13B-C020",
+        "M13B-C021"
+      ],
+      "boundary_records": [
+        "M13B-B001",
+        "M13B-B002",
+        "M13B-B003",
+        "M13B-B004",
+        "M13B-B005",
+        "M13B-B006",
+        "M13B-B007",
+        "M13B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 3
+      },
+      "claim_confidence": {
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "13b",
+      "module": "Module 13B",
+      "consensus_id": "M13B-S008",
+      "topic_id": "M13B-T008",
+      "statement": "Module 13 should serve as the causal bridge between model-system selection and chronic lesion architecture: every downstream conditioning, biomaterial, cell, or axon-repair claim should specify which injury-to-lesion process it is expected to modify.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M13B-O022",
+        "M13B-O023",
+        "M13B-O024"
+      ],
+      "supporting_claims": [
+        "M13B-C022",
+        "M13B-C023",
+        "M13B-C024"
+      ],
+      "boundary_records": [
+        "M13B-B001",
+        "M13B-B002",
+        "M13B-B003",
+        "M13B-B004",
+        "M13B-B005",
+        "M13B-B006",
+        "M13B-B007",
+        "M13B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 2,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "high": 2,
+        "medium": 1
       },
       "boundary_confidence": "8 linked",
       "review_action": "review for final consensus wording"

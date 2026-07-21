@@ -82,7 +82,7 @@ mSCIdblit/
 │   ├── EXPERIMENT_GRANULARITY.md     # Experiment-splitting rules
 │   ├── OLLAMA_CHUNK_EXTRACTION.md    # Local model chunking workflow
 │   ├── MODULE_1_2_SYNTHESIS.md       # First cross-module lesion/scaffold synthesis
-│   ├── CROSS_MODULE_SYNTHESIS.md     # Aim-aligned synthesis across Modules 1B-12B
+│   ├── CROSS_MODULE_SYNTHESIS.md     # Aim-aligned synthesis across Modules 1B-13B
 │   ├── AIMS_EVIDENCE_MAP.md          # Specific aims to module evidence map
 │   ├── CONSENSUS_REVIEW_REGISTER.md  # Cross-module consensus review register
 │   ├── MATERIALIZED_INTEGRITY_AUDIT.md # Generated bundle/SQL integrity audit

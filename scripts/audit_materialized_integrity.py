@@ -349,7 +349,7 @@ def main(argv: list[str] | None = None) -> int:
     audits: list[ModuleAudit] = []
     all_errors: list[str] = []
     all_warnings: list[str] = []
-    for module_num in range(1, 13):
+    for module_num in range(1, 14):
         audit, errors, warnings = audit_module(module_num)
         audits.append(audit)
         all_errors.extend(errors)

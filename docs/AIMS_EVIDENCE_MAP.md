@@ -26,7 +26,7 @@ Module 13 has been added to cover the process of traumatic SCI and how it produc
 | Priority | Modules | Action |
 |---|---|---|
 | Full-text confidence upgrade | Modules 12B, 7B, 3B | Upgrade direct innate-conditioning, repeated-stimulation spinal cord, and host-conditioning rows before making quantitative claims. |
-| Traumatic SCI-to-lesion saturation | Module 13A | Build the acute-to-chronic pathobiology corpus before drafting Module 13B consensus. |
+| Traumatic SCI-to-lesion confidence upgrade | Module 13B | Upgrade key vascular, scar, degeneration, and atlas rows before making quantitative timing claims. |
 | Regulatory-node extraction | Modules 3B, 11B, 12B | Pull TLR4/TRIF/IRF3, MyD88/CXCL10, IL-10, IL-1/IL-1R1, monocyte, and endothelial nodes into an Aim 1C candidate table. |
 | In vitro validation bridge | Modules 2B, 9B, 12B | Convert candidate innate-conditioning pathways into testable in vitro or biomaterial-context validation rows. |
 | Translation boundary | Modules 7B, 10B, 11B, 12B | Keep endotoxin/LPS as one discovery platform while routing clinical/implant-conditioning ideas through safer innate-conditioning analogs and clinical-trial context. |

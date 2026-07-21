@@ -2,9 +2,9 @@
   "status": "first-pass cross-module synthesis",
   "generated_from": "data/processed/consensus_review_register.json",
   "theme_count": 6,
-  "core_consensus_count": 46,
-  "source_module_count": 12,
-  "source_consensus_count": 96,
+  "core_consensus_count": 50,
+  "source_module_count": 13,
+  "source_consensus_count": 104,
   "themes": [
     {
       "theme_id": "CMS-T001",
@@ -15,7 +15,8 @@
         "2b",
         "6b",
         "8b",
-        "10b"
+        "10b",
+        "13b"
       ],
       "core_consensus_ids": [
         "M1B-S001",
@@ -25,11 +26,13 @@
         "M6B-S001",
         "M6B-S008",
         "M8B-S005",
-        "M10B-S005"
+        "M10B-S005",
+        "M13B-S001",
+        "M13B-S007"
       ],
-      "synthesis_statement": "SCI reconstruction should begin from lesion anatomy rather than from a generic repair intervention. Chronic lesions contain separable fibrotic, astrocytic, immune, white-matter, cavitary, bridge, and human imaging/pathology compartments, and scaffold or surgical strategies only become interpretable when matched to those compartments.",
+      "synthesis_statement": "SCI reconstruction should begin from lesion anatomy rather than from a generic repair intervention. Traumatic SCI evolves through vascular, inflammatory, glial, stromal, axon/myelin, and cavitation processes into chronic lesions with separable fibrotic, astrocytic, immune, white-matter, cavitary, bridge, and human imaging/pathology compartments, and scaffold or surgical strategies only become interpretable when matched to those compartments.",
       "evidence_ladder": [
-        "Observations: Module 1 and Module 6 define local and human lesion compartments; Module 8 defines model-system fields needed to preserve lesion architecture.",
+        "Observations: Module 13 defines injury-to-lesion trajectory; Module 1 and Module 6 define local and human lesion compartments; Module 8 defines model-system fields needed to preserve lesion architecture.",
         "Author claims: scaffold and clinical rows repeatedly frame feasibility or targeting around lesion geometry, chronicity, and completeness.",
         "Consensus: Module 1 and Module 6 support anatomy-specific representation; Module 2 and Module 10 caution against generic efficacy claims."
       ],
@@ -48,14 +51,15 @@
         "Module 2B",
         "Module 6B",
         "Module 8B",
-        "Module 10B"
+        "Module 10B",
+        "Module 13B"
       ],
       "module_counts": {
-        "observations": 313,
-        "author_claims": 174,
-        "evidence_links": 423,
-        "boundary_records": 39,
-        "consensus_drafts": 40
+        "observations": 337,
+        "author_claims": 198,
+        "evidence_links": 479,
+        "boundary_records": 47,
+        "consensus_drafts": 48
       },
       "core_consensus": [
         {
@@ -137,12 +141,32 @@
           "claim_count": 3,
           "boundary_count": 8,
           "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M13B-S001",
+          "module": "Module 13B",
+          "topic_id": "M13B-T001",
+          "statement": "Primary traumatic SCI sets an initial lesion geometry, but the chronic lesion is produced by a time-dependent cascade rather than by the mechanical insult alone; injury model, severity, spinal level, and early hemorrhage must be retained as causal boundaries.",
+          "observation_count": 3,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M13B-S007",
+          "module": "Module 13B",
+          "topic_id": "M13B-T007",
+          "statement": "Cavitation and chronic lesion stabilization emerge from interacting vascular, immune, glial, stromal, axon/myelin, and tissue-clearance processes; static chronic lesion anatomy should be linked back to the temporal mechanisms that formed it.",
+          "observation_count": 3,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
         }
       ],
       "observation_confidence_tally": {
-        "high": 30,
+        "high": 32,
         "low": 14,
-        "medium": 43
+        "medium": 47
       }
     },
     {
@@ -447,7 +471,8 @@
         "5b",
         "6b",
         "8b",
-        "10b"
+        "10b",
+        "13b"
       ],
       "core_consensus_ids": [
         "M1B-S006",
@@ -459,11 +484,12 @@
         "M5B-S004",
         "M6B-S005",
         "M8B-S006",
-        "M10B-S007"
+        "M10B-S007",
+        "M13B-S003"
       ],
       "synthesis_statement": "SCI repair cannot be summarized by a single recovery axis. Axon growth, sprouting, remyelination, white-matter preservation, graft integration, relay formation, electrophysiology, imaging biomarkers, and behavior are related but non-interchangeable endpoint families.",
       "evidence_ladder": [
-        "Observations: modules preserve separate histology, imaging, behavior, electrophysiology, graft, myelin, and circuit readouts.",
+        "Observations: modules preserve separate pathobiology, histology, imaging, behavior, electrophysiology, graft, myelin, and circuit readouts.",
         "Author claims: many studies infer repair from selected endpoints, but consensus records repeatedly flag endpoint mismatch.",
         "Consensus: Module 5 provides the strongest endpoint taxonomy, with Modules 2, 4, 6, 8, and 10 reinforcing context-specific interpretation."
       ],
@@ -484,14 +510,15 @@
         "Module 5B",
         "Module 6B",
         "Module 8B",
-        "Module 10B"
+        "Module 10B",
+        "Module 13B"
       ],
       "module_counts": {
-        "observations": 505,
-        "author_claims": 250,
-        "evidence_links": 555,
-        "boundary_records": 55,
-        "consensus_drafts": 56
+        "observations": 529,
+        "author_claims": 274,
+        "evidence_links": 611,
+        "boundary_records": 63,
+        "consensus_drafts": 64
       },
       "core_consensus": [
         {
@@ -593,12 +620,22 @@
           "claim_count": 3,
           "boundary_count": 8,
           "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M13B-S003",
+          "module": "Module 13B",
+          "topic_id": "M13B-T003",
+          "statement": "Gray matter loss can occur rapidly while white matter loss, axon degeneration, demyelination, and Wallerian degeneration evolve over longer windows, so chronic spared-tissue anatomy must be interpreted through time-resolved tract and cell-population boundaries.",
+          "observation_count": 3,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
         }
       ],
       "observation_confidence_tally": {
         "high": 11,
         "low": 19,
-        "medium": 73
+        "medium": 76
       }
     },
     {
@@ -773,7 +810,8 @@
         "7b",
         "9b",
         "11b",
-        "12b"
+        "12b",
+        "13b"
       ],
       "core_consensus_ids": [
         "M1B-S008",
@@ -784,13 +822,14 @@
         "M7B-S008",
         "M9B-S008",
         "M11B-S008",
-        "M12B-S008"
+        "M12B-S008",
+        "M13B-S008"
       ],
       "synthesis_statement": "The most defensible project-level hypothesis is that conditioning can improve SCI reconstruction only if it creates a host state compatible with the target lesion anatomy, implanted material or graft, and desired endpoint family. The evidence supports a conditioning-discovery and validation program, not an immediate universal conditioning therapy claim.",
       "evidence_ladder": [
-        "Observations: all core modules now provide experiment-level rows and B-layer observations suitable for cross-module tracing.",
+        "Observations: all core modules now provide experiment-level rows and B-layer observations suitable for cross-module tracing, including the traumatic injury-to-lesion trajectory layer.",
         "Author claims: repair, conditioning, graft, biomaterial, and immune claims are strongest when narrowed to model, timing, and endpoint.",
-        "Consensus: Modules 1-12 collectively support an aim-aligned logic of endogenous protective programs, host response modification, and host-biomaterial interaction testing."
+        "Consensus: Modules 1-13 collectively support an aim-aligned logic of endogenous protective programs, host response modification, injury-to-lesion modification, and host-biomaterial interaction testing."
       ],
       "boundaries": [
         "Conditioning should not be framed as simply anti-inflammatory.",
@@ -812,14 +851,15 @@
         "Module 7B",
         "Module 9B",
         "Module 11B",
-        "Module 12B"
+        "Module 12B",
+        "Module 13B"
       ],
       "module_counts": {
-        "observations": 582,
-        "author_claims": 307,
-        "evidence_links": 611,
-        "boundary_records": 71,
-        "consensus_drafts": 72
+        "observations": 606,
+        "author_claims": 331,
+        "evidence_links": 667,
+        "boundary_records": 79,
+        "consensus_drafts": 80
       },
       "core_consensus": [
         {
@@ -911,12 +951,22 @@
           "claim_count": 3,
           "boundary_count": 8,
           "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M13B-S008",
+          "module": "Module 13B",
+          "topic_id": "M13B-T008",
+          "statement": "Module 13 should serve as the causal bridge between model-system selection and chronic lesion architecture: every downstream conditioning, biomaterial, cell, or axon-repair claim should specify which injury-to-lesion process it is expected to modify.",
+          "observation_count": 3,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
         }
       ],
       "observation_confidence_tally": {
-        "high": 24,
+        "high": 26,
         "low": 69,
-        "medium": 125
+        "medium": 126
       }
     }
   ],
