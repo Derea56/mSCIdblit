@@ -59,7 +59,7 @@ MODULE_TOPICS = {
     "9b": "in vitro and ex vivo SCI model systems",
     "10b": "SCI clinical trials",
     "11b": "spinal cord ischemic conditioning in cardiac and aortic surgery",
-    "12b": "LPS and innate immune preconditioning in spinal cord injury",
+    "12b": "innate immune conditioning and tolerance biology",
 }
 
 

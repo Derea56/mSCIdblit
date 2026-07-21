@@ -73,15 +73,15 @@ THEMES = (
         evidence_ladder=(
             "Observations: immune/myeloid rows separate depletion, corralling, metabolism, pyroptosis, debris handling, and delivery contexts.",
             "Author claims: host-conditioning analogs from implants, flaps, islets, organ tolerance, ischemia, and LPS support pre-challenge state modification.",
-            "Consensus: Modules 3, 7, 11, and 12 converge on state-specific conditioning while rejecting broad anti-inflammatory or direct clinical LPS framing.",
+            "Consensus: Modules 3, 7, 11, and 12 converge on state-specific conditioning while rejecting broad anti-inflammatory or direct clinical endotoxin/LPS framing.",
         ),
         boundaries=(
-            "Low-dose LPS is a discovery platform for endogenous protection, not a proposed clinical conditioning agent.",
+            "Endotoxin/LPS is one discovery platform for endogenous protection, not a proposed clinical conditioning agent.",
             "Perioperative ischemic conditioning is an analog for timing and host-state logic, not direct evidence for traumatic chronic reconstruction.",
             "Cross-field host-conditioning evidence requires route, dose, timing, tissue, endpoint, and field-to-SCI distance labels.",
         ),
         experimental_implications=(
-            "Build candidate-node tables for TLR4/adaptor routing, IL-1/IL-1R1, IL-10, monocyte/endothelial state, and myeloid metabolic competence.",
+            "Build candidate-node tables for TLR/adaptor routing, IL-1/IL-1R1, IL-10, monocyte/endothelial state, myeloid metabolic competence, and trained/tolerized innate-state markers.",
             "Design conditioning experiments around pre-specified windows: pre-injury conditioning, peri-implant conditioning, and post-injury remodeling are separate questions.",
         ),
         confidence_label="medium-high for biological logic; medium for SCI reconstruction translation",
@@ -153,7 +153,7 @@ THEMES = (
         ),
         boundaries=(
             "In vitro injury stimuli isolate mechanisms but do not reproduce full lesion architecture.",
-            "Animal ischemia conditioning informs protection timing but differs from traumatic SCI and chronic reconstruction.",
+            "Animal ischemia and non-SCI innate-conditioning models inform protection timing and regulatory-node logic but differ from traumatic SCI and chronic reconstruction.",
             "Registry records identify translational activity but require publication/results linkage for outcome synthesis.",
         ),
         experimental_implications=(
@@ -180,7 +180,7 @@ THEMES = (
         boundaries=(
             "Conditioning should not be framed as simply anti-inflammatory.",
             "Pre-injury conditioning, perioperative conditioning, and post-injury remodeling are distinct intervention classes.",
-            "Clinical translation must route through safer analogs and trial-readiness logic rather than direct LPS or unvalidated host priming.",
+            "Clinical translation must route through safer analogs and trial-readiness logic rather than direct endotoxin/LPS or unvalidated host priming.",
         ),
         experimental_implications=(
             "Aim 1 should identify protective regulatory programs and candidate nodes, with full source confidence labels retained.",
@@ -264,7 +264,7 @@ def build_synthesis(register: dict[str, Any]) -> dict[str, Any]:
         "next_actions": [
             "Use this synthesis as the scaffold for a grant-facing significance/innovation narrative.",
             "Build an Aim 1C regulatory-node table from Modules 3B, 7B, 11B, and 12B.",
-            "Perform full-text upgrades for direct LPS, host-conditioning, immune-myeloid, and scaffold/graft anchor rows before quantitative claims.",
+            "Perform full-text upgrades for direct innate-conditioning, host-conditioning, immune-myeloid, and scaffold/graft anchor rows before quantitative claims.",
             "Run PostgreSQL fresh-load validation when psql/createdb are available.",
         ],
     }

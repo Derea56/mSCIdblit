@@ -9,16 +9,16 @@
       "paper_id": "M12A-P001",
       "experiment_id": "M12A-P001-E001",
       "figure_ref": "Abstract/source page",
-      "evidence_type": "Direct SCI LPS evidence",
+      "evidence_type": "SCI innate-conditioning evidence",
       "outcome_type": "Innate immune conditioning / protection",
-      "observation_value": "Lipopolysaccharide preconditioning facilitates M2 activation of resident microglia after spinal cord injury tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: Mouse thoracic contusion; systemic low-dose LPS 48 h before SCI; resident microglia M2/IL-10/IRF3 and functional/tissue repair signal.",
-      "normalized_value": "low-dose or repeated lps / innate agonist conditioning",
+      "observation_value": "Lipopolysaccharide preconditioning facilitates M2 activation of resident microglia after spinal cord injury tested or summarized Endotoxin/LPS or innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: Mouse thoracic contusion; systemic low-dose LPS 48 h before SCI; resident microglia M2/IL-10/IRF3 and functional/tissue repair signal.",
+      "normalized_value": "endotoxin/lps or innate agonist conditioning",
       "unit": "qualitative",
       "quantitative": "YES",
       "statistics_reported": "Mouse thoracic contusion; systemic low-dose LPS 48 h before SCI; resident microglia M2/IL-10/IRF3 and functional/tissue repair signal.",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O001"
     },
     {
@@ -29,14 +29,14 @@
       "figure_ref": "Abstract/source page",
       "evidence_type": "Spinal microglia-endothelial evidence",
       "outcome_type": "Innate immune conditioning / protection",
-      "observation_value": "Serial Systemic Injections of Endotoxin (LPS) Elicit Neuroprotective Spinal Cord Microglia through IL-1-Dependent Cross Talk with Endothelial Cells tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Spinal cord ischemia / ischemia-reperfusion model; first-pass note: Repeated systemic LPS primes spinal cord microglia/endothelium and protects in ischemic SCI; IL-1-dependent cross-talk boundary.",
-      "normalized_value": "low-dose or repeated lps / innate agonist conditioning",
+      "observation_value": "Serial Systemic Injections of Endotoxin (LPS) Elicit Neuroprotective Spinal Cord Microglia through IL-1-Dependent Cross Talk with Endothelial Cells tested or summarized Endotoxin/LPS or innate agonist conditioning in Spinal cord ischemia / ischemia-reperfusion model; first-pass note: Repeated systemic LPS primes spinal cord microglia/endothelium and protects in ischemic SCI; IL-1-dependent cross-talk boundary.",
+      "normalized_value": "endotoxin/lps or innate agonist conditioning",
       "unit": "qualitative",
       "quantitative": "YES",
       "statistics_reported": "Repeated systemic LPS primes spinal cord microglia/endothelium and protects in ischemic SCI; IL-1-dependent cross-talk boundary.",
       "source_section": "Abstract/source page",
       "extraction_confidence": "high",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O002"
     },
     {
@@ -47,14 +47,14 @@
       "figure_ref": "Abstract/source page",
       "evidence_type": "Spinal microglia-endothelial evidence",
       "outcome_type": "Innate immune conditioning / protection",
-      "observation_value": "Dynamic Interleukin-1 Receptor Type 1 Signaling Mediates Microglia-Vasculature Interactions Following Repeated Systemic LPS tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Spinal cord ischemia / ischemia-reperfusion model; first-pass note: Repeated LPS programs spinal microglia-vascular interactions through IL-1R1 signaling; mechanistic follow-up to Freria.",
-      "normalized_value": "low-dose or repeated lps / innate agonist conditioning",
+      "observation_value": "Dynamic Interleukin-1 Receptor Type 1 Signaling Mediates Microglia-Vasculature Interactions Following Repeated Systemic LPS tested or summarized Endotoxin/LPS or innate agonist conditioning in Spinal cord ischemia / ischemia-reperfusion model; first-pass note: Repeated LPS programs spinal microglia-vascular interactions through IL-1R1 signaling; mechanistic follow-up to Freria.",
+      "normalized_value": "endotoxin/lps or innate agonist conditioning",
       "unit": "qualitative",
       "quantitative": "YES",
       "statistics_reported": "Repeated LPS programs spinal microglia-vascular interactions through IL-1R1 signaling; mechanistic follow-up to Freria.",
       "source_section": "Abstract/source page",
       "extraction_confidence": "high",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O003"
     },
     {
@@ -65,14 +65,14 @@
       "figure_ref": "Abstract/source page",
       "evidence_type": "Mechanistic comparator evidence",
       "outcome_type": "Innate immune conditioning / protection",
-      "observation_value": "LPS Preconditioning Attenuates Apoptosis Mechanism by Inhibiting NF-kB and Caspase-3 Activity: TLR4 Pre-activation in the Signaling Pathway of LPS-Induced Neuroprotection tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Review, project, or mechanism anchor; first-pass note: Review anchor for LPS/TLR4 preconditioning mechanisms and apoptosis/NF-kB/caspase-3 boundaries.",
-      "normalized_value": "low-dose or repeated lps / innate agonist conditioning",
+      "observation_value": "LPS Preconditioning Attenuates Apoptosis Mechanism by Inhibiting NF-kB and Caspase-3 Activity: TLR4 Pre-activation in the Signaling Pathway of LPS-Induced Neuroprotection tested or summarized Endotoxin/LPS or innate agonist conditioning in Review, project, or mechanism anchor; first-pass note: Review anchor for LPS/TLR4 preconditioning mechanisms and apoptosis/NF-kB/caspase-3 boundaries.",
+      "normalized_value": "endotoxin/lps or innate agonist conditioning",
       "unit": "qualitative",
       "quantitative": "NO",
       "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O004"
     },
     {
@@ -83,14 +83,14 @@
       "figure_ref": "Abstract/source page",
       "evidence_type": "Mechanistic comparator evidence",
       "outcome_type": "Innate immune conditioning / protection",
-      "observation_value": "LPS preconditioning redirects TLR signaling following stroke: TRIF-IRF3 plays a seminal role in mediating tolerance to ischemic injury tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: Brain ischemia comparator; TRIF-IRF3 and NF-kB redirection provide mechanistic boundary for innate conditioning.",
-      "normalized_value": "low-dose or repeated lps / innate agonist conditioning",
+      "observation_value": "LPS preconditioning redirects TLR signaling following stroke: TRIF-IRF3 plays a seminal role in mediating tolerance to ischemic injury tested or summarized Endotoxin/LPS or innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: Brain ischemia comparator; TRIF-IRF3 and NF-kB redirection provide mechanistic boundary for innate conditioning.",
+      "normalized_value": "endotoxin/lps or innate agonist conditioning",
       "unit": "qualitative",
       "quantitative": "NO",
       "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted",
       "source_section": "Abstract/source page",
       "extraction_confidence": "high",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O005"
     },
     {
@@ -101,14 +101,14 @@
       "figure_ref": "Abstract/source page",
       "evidence_type": "Mechanistic comparator evidence",
       "outcome_type": "Innate immune conditioning / protection",
-      "observation_value": "Endogenous Protection from Ischemic Brain Injury by Preconditioned Monocytes tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: Peripheral monocyte preconditioning comparator; IL-10/iNOS/CCR2 and adoptive-transfer logic for systemic conditioning.",
-      "normalized_value": "low-dose or repeated lps / innate agonist conditioning",
+      "observation_value": "Endogenous Protection from Ischemic Brain Injury by Preconditioned Monocytes tested or summarized Endotoxin/LPS or innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: Peripheral monocyte preconditioning comparator; IL-10/iNOS/CCR2 and adoptive-transfer logic for systemic conditioning.",
+      "normalized_value": "endotoxin/lps or innate agonist conditioning",
       "unit": "qualitative",
       "quantitative": "NO",
       "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O006"
     },
     {
@@ -119,14 +119,14 @@
       "figure_ref": "Abstract/source page",
       "evidence_type": "Mechanistic comparator evidence",
       "outcome_type": "Innate immune conditioning / protection",
-      "observation_value": "Neuroprotection by Preconditioning in Mice is Dependent on MyD88-Mediated CXCL10 Expression in Endothelial Cells tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: Peripheral LPS preconditioning brain ischemia model; endothelial MyD88/CXCL10 upstream regulatory-node comparator.",
-      "normalized_value": "low-dose or repeated lps / innate agonist conditioning",
+      "observation_value": "Neuroprotection by Preconditioning in Mice is Dependent on MyD88-Mediated CXCL10 Expression in Endothelial Cells tested or summarized Endotoxin/LPS or innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: Peripheral LPS preconditioning brain ischemia model; endothelial MyD88/CXCL10 upstream regulatory-node comparator.",
+      "normalized_value": "endotoxin/lps or innate agonist conditioning",
       "unit": "qualitative",
       "quantitative": "NO",
       "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O007"
     },
     {
@@ -144,7 +144,7 @@
       "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O008"
     },
     {
@@ -153,7 +153,7 @@
       "paper_id": "M12A-P009",
       "experiment_id": "M12A-P009-E001",
       "figure_ref": "Abstract/source page",
-      "evidence_type": "Direct SCI LPS evidence",
+      "evidence_type": "SCI innate-conditioning evidence",
       "outcome_type": "Innate immune conditioning / protection",
       "observation_value": "Spinal cord injury in the rat: treatment with bacterial lipopolysaccharide and indomethacin enhances cellular repair and locomotor function tested or summarized SCI innate immune mechanism / boundary evidence in Traumatic SCI or post-SCI host response model; first-pass note: Older traumatic SCI treatment row; LPS plus indomethacin after SCI improves repair/locomotion but not preconditioning.",
       "normalized_value": "sci innate immune mechanism / boundary evidence",
@@ -162,7 +162,7 @@
       "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O009"
     },
     {
@@ -171,7 +171,7 @@
       "paper_id": "M12A-P010",
       "experiment_id": "M12A-P010-E001",
       "figure_ref": "Abstract/source page",
-      "evidence_type": "Direct SCI LPS evidence",
+      "evidence_type": "SCI innate-conditioning evidence",
       "outcome_type": "Innate immune conditioning / protection",
       "observation_value": "Reawakening inflammation in the chronically injured spinal cord using lipopolysaccharide induces diverse microglial states tested or summarized SCI innate immune mechanism / boundary evidence in Traumatic SCI or post-SCI host response model; first-pass note: Chronic SCI scRNA-seq/plasticity row; LPS reawakens inflammatory/microglial states after chronic injury.",
       "normalized_value": "sci innate immune mechanism / boundary evidence",
@@ -180,7 +180,7 @@
       "statistics_reported": "Chronic SCI scRNA-seq/plasticity row; LPS reawakens inflammatory/microglial states after chronic injury.",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O010"
     },
     {
@@ -198,7 +198,7 @@
       "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O011"
     },
     {
@@ -216,7 +216,7 @@
       "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O012"
     },
     {
@@ -227,14 +227,14 @@
       "figure_ref": "Abstract/source page",
       "evidence_type": "Mechanistic comparator evidence",
       "outcome_type": "Innate immune conditioning / protection",
-      "observation_value": "Single low-dose lipopolysaccharide preconditioning: neuroprotective against axonal injury and modulates glial cells tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: TBI comparator; single low-dose LPS preconditioning reduces axonal injury and changes glial responses.",
-      "normalized_value": "low-dose or repeated lps / innate agonist conditioning",
+      "observation_value": "Single low-dose lipopolysaccharide preconditioning: neuroprotective against axonal injury and modulates glial cells tested or summarized Endotoxin/LPS or innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: TBI comparator; single low-dose LPS preconditioning reduces axonal injury and changes glial responses.",
+      "normalized_value": "endotoxin/lps or innate agonist conditioning",
       "unit": "qualitative",
       "quantitative": "YES",
       "statistics_reported": "TBI comparator; single low-dose LPS preconditioning reduces axonal injury and changes glial responses.",
       "source_section": "Abstract/source page",
       "extraction_confidence": "high",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O013"
     },
     {
@@ -252,7 +252,7 @@
       "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O014"
     },
     {
@@ -270,7 +270,7 @@
       "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O015"
     },
     {
@@ -288,7 +288,7 @@
       "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O016"
     },
     {
@@ -297,16 +297,16 @@
       "paper_id": "M12A-P017",
       "experiment_id": "M12A-P017-E001",
       "figure_ref": "Abstract/source page",
-      "evidence_type": "Direct SCI LPS evidence",
+      "evidence_type": "SCI innate-conditioning evidence",
       "outcome_type": "Innate immune conditioning / protection",
-      "observation_value": "TLR2 agonist Pam3CSK4 dose-response testing after SCI tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: ODC dataset row from prior audit; TLR agonist/dose-response comparator for innate immune conditioning.",
-      "normalized_value": "low-dose or repeated lps / innate agonist conditioning",
+      "observation_value": "TLR2 agonist Pam3CSK4 dose-response testing after SCI tested or summarized Endotoxin/LPS or innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: ODC dataset row from prior audit; TLR agonist/dose-response comparator for innate immune conditioning.",
+      "normalized_value": "endotoxin/lps or innate agonist conditioning",
       "unit": "qualitative",
       "quantitative": "YES",
       "statistics_reported": "ODC dataset row from prior audit; TLR agonist/dose-response comparator for innate immune conditioning.",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O017"
     },
     {
@@ -315,16 +315,16 @@
       "paper_id": "M12A-P018",
       "experiment_id": "M12A-P018-E001",
       "figure_ref": "Abstract/source page",
-      "evidence_type": "Direct SCI LPS evidence",
+      "evidence_type": "SCI innate-conditioning evidence",
       "outcome_type": "Innate immune conditioning / protection",
-      "observation_value": "TLR2 and TLR4 agonist testing in SCI tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: ODC dataset row from prior audit; innate agonist boundary requiring source extraction.",
-      "normalized_value": "low-dose or repeated lps / innate agonist conditioning",
+      "observation_value": "TLR2 and TLR4 agonist testing in SCI tested or summarized Endotoxin/LPS or innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: ODC dataset row from prior audit; innate agonist boundary requiring source extraction.",
+      "normalized_value": "endotoxin/lps or innate agonist conditioning",
       "unit": "qualitative",
       "quantitative": "YES",
       "statistics_reported": "ODC dataset row from prior audit; innate agonist boundary requiring source extraction.",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O018"
     },
     {
@@ -333,16 +333,16 @@
       "paper_id": "M12A-P019",
       "experiment_id": "M12A-P019-E001",
       "figure_ref": "Abstract/source page",
-      "evidence_type": "Direct SCI LPS evidence",
+      "evidence_type": "SCI innate-conditioning evidence",
       "outcome_type": "Innate immune conditioning / protection",
-      "observation_value": "Systemic LPS drives microglia-mediated perineuronal net degradation after cervical SCI tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: ODC dataset row from prior audit; systemic LPS after cervical SCI and PNN/plasticity endpoint.",
-      "normalized_value": "low-dose or repeated lps / innate agonist conditioning",
+      "observation_value": "Systemic LPS drives microglia-mediated perineuronal net degradation after cervical SCI tested or summarized Endotoxin/LPS or innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: ODC dataset row from prior audit; systemic LPS after cervical SCI and PNN/plasticity endpoint.",
+      "normalized_value": "endotoxin/lps or innate agonist conditioning",
       "unit": "qualitative",
       "quantitative": "YES",
       "statistics_reported": "ODC dataset row from prior audit; systemic LPS after cervical SCI and PNN/plasticity endpoint.",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O019"
     },
     {
@@ -360,7 +360,7 @@
       "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O020"
     },
     {
@@ -378,7 +378,7 @@
       "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O021"
     },
     {
@@ -396,7 +396,7 @@
       "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O022"
     },
     {
@@ -414,7 +414,7 @@
       "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O023"
     },
     {
@@ -425,14 +425,14 @@
       "figure_ref": "Abstract/source page",
       "evidence_type": "Project logic evidence",
       "outcome_type": "Innate immune conditioning / protection",
-      "observation_value": "Revised Specific Aims Preconditioning Logic tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Review, project, or mechanism anchor; first-pass note: Project logic anchor: low-dose LPS is a discovery platform to define endogenous protective programs, not a clinical therapeutic.",
-      "normalized_value": "low-dose or repeated lps / innate agonist conditioning",
+      "observation_value": "Revised Specific Aims Preconditioning Logic tested or summarized Endotoxin/LPS or innate agonist conditioning in Review, project, or mechanism anchor; first-pass note: Project logic anchor: innate immune conditioning is broader than LPS; endotoxin/LPS is one discovery platform, not a clinical therapeutic.",
+      "normalized_value": "endotoxin/lps or innate agonist conditioning",
       "unit": "qualitative",
       "quantitative": "YES",
-      "statistics_reported": "Project logic anchor: low-dose LPS is a discovery platform to define endogenous protective programs, not a clinical therapeutic.",
+      "statistics_reported": "Project logic anchor: innate immune conditioning is broader than LPS; endotoxin/LPS is one discovery platform, not a clinical therapeutic.",
       "source_section": "Abstract/source page",
       "extraction_confidence": "medium",
-      "notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.",
+      "notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.",
       "tracker_id": "M12B-O024"
     }
   ],
@@ -537,7 +537,7 @@
       "claim_id": "M12B-C009",
       "topic_id": "M12B-T001",
       "paper_id": "M12A-P009",
-      "claim_text": "Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI LPS preconditioning evidence.",
+      "claim_text": "Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI innate-conditioning evidence.",
       "claim_type": "boundary condition",
       "confidence_level": "medium",
       "source_section": "Module 12A tracker / source-page, full-text PMC, database, or project metadata",
@@ -549,7 +549,7 @@
       "claim_id": "M12B-C010",
       "topic_id": "M12B-T002",
       "paper_id": "M12A-P010",
-      "claim_text": "Post-injury or chronic LPS rows indicate inducible spinal plasticity and microglial-state shifts, but should not be merged with pre-injury conditioning rows.",
+      "claim_text": "Post-injury or chronic innate-stimulation rows indicate inducible spinal plasticity and microglial-state shifts, but should not be merged with pre-injury or peri-procedural conditioning rows.",
       "claim_type": "boundary condition",
       "confidence_level": "medium",
       "source_section": "Module 12A tracker / source-page, full-text PMC, database, or project metadata",
@@ -561,7 +561,7 @@
       "claim_id": "M12B-C011",
       "topic_id": "M12B-T003",
       "paper_id": "M12A-P011",
-      "claim_text": "Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI LPS preconditioning evidence.",
+      "claim_text": "Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI innate-conditioning evidence.",
       "claim_type": "boundary condition",
       "confidence_level": "medium",
       "source_section": "Module 12A tracker / source-page, full-text PMC, database, or project metadata",
@@ -585,7 +585,7 @@
       "claim_id": "M12B-C013",
       "topic_id": "M12B-T005",
       "paper_id": "M12A-P013",
-      "claim_text": "Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI LPS preconditioning evidence.",
+      "claim_text": "Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI innate-conditioning evidence.",
       "claim_type": "boundary condition",
       "confidence_level": "high",
       "source_section": "Module 12A tracker / source-page, full-text PMC, database, or project metadata",
@@ -597,7 +597,7 @@
       "claim_id": "M12B-C014",
       "topic_id": "M12B-T006",
       "paper_id": "M12A-P014",
-      "claim_text": "Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI LPS preconditioning evidence.",
+      "claim_text": "Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI innate-conditioning evidence.",
       "claim_type": "boundary condition",
       "confidence_level": "medium",
       "source_section": "Module 12A tracker / source-page, full-text PMC, database, or project metadata",
@@ -609,7 +609,7 @@
       "claim_id": "M12B-C015",
       "topic_id": "M12B-T007",
       "paper_id": "M12A-P015",
-      "claim_text": "Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI LPS preconditioning evidence.",
+      "claim_text": "Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI innate-conditioning evidence.",
       "claim_type": "boundary condition",
       "confidence_level": "medium",
       "source_section": "Module 12A tracker / source-page, full-text PMC, database, or project metadata",
@@ -621,7 +621,7 @@
       "claim_id": "M12B-C016",
       "topic_id": "M12B-T008",
       "paper_id": "M12A-P016",
-      "claim_text": "Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI LPS preconditioning evidence.",
+      "claim_text": "Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI innate-conditioning evidence.",
       "claim_type": "boundary condition",
       "confidence_level": "medium",
       "source_section": "Module 12A tracker / source-page, full-text PMC, database, or project metadata",
@@ -633,7 +633,7 @@
       "claim_id": "M12B-C017",
       "topic_id": "M12B-T001",
       "paper_id": "M12A-P017",
-      "claim_text": "Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI LPS preconditioning evidence.",
+      "claim_text": "Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI innate-conditioning evidence.",
       "claim_type": "boundary condition",
       "confidence_level": "medium",
       "source_section": "Module 12A tracker / source-page, full-text PMC, database, or project metadata",
@@ -645,7 +645,7 @@
       "claim_id": "M12B-C018",
       "topic_id": "M12B-T002",
       "paper_id": "M12A-P018",
-      "claim_text": "Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI LPS preconditioning evidence.",
+      "claim_text": "Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI innate-conditioning evidence.",
       "claim_type": "boundary condition",
       "confidence_level": "medium",
       "source_section": "Module 12A tracker / source-page, full-text PMC, database, or project metadata",
@@ -657,7 +657,7 @@
       "claim_id": "M12B-C019",
       "topic_id": "M12B-T003",
       "paper_id": "M12A-P019",
-      "claim_text": "Post-injury or chronic LPS rows indicate inducible spinal plasticity and microglial-state shifts, but should not be merged with pre-injury conditioning rows.",
+      "claim_text": "Post-injury or chronic innate-stimulation rows indicate inducible spinal plasticity and microglial-state shifts, but should not be merged with pre-injury or peri-procedural conditioning rows.",
       "claim_type": "boundary condition",
       "confidence_level": "medium",
       "source_section": "Module 12A tracker / source-page, full-text PMC, database, or project metadata",
@@ -717,7 +717,7 @@
       "claim_id": "M12B-C024",
       "topic_id": "M12B-T008",
       "paper_id": "M12A-P024",
-      "claim_text": "Project logic frames low-dose LPS as a discovery platform for endogenous protective programs, not as a direct clinical therapeutic.",
+      "claim_text": "Project logic frames innate immune conditioning broadly, with LPS as one discovery platform for endogenous protective programs rather than a direct clinical therapeutic.",
       "claim_type": "boundary condition",
       "confidence_level": "medium",
       "source_section": "Module 12A tracker / source-page, full-text PMC, database, or project metadata",
@@ -1235,7 +1235,7 @@
   "boundary_records": [
     {
       "boundary_id": "M12B-B001",
-      "boundary_statement": "LPS dose, route, schedule, and timing must be preserved; pre-injury conditioning, repeated priming, post-injury treatment, and chronic reactivation are not interchangeable.",
+      "boundary_statement": "Innate stimulus class, dose, route, schedule, and timing must be preserved; pre-injury conditioning, repeated priming, post-injury treatment, chronic reactivation, tolerance, and trained-immunity states are not interchangeable.",
       "observation_ids": "M12B-O001-O024",
       "claim_ids": "M12B-C001-C024",
       "status": "ACTIVE",
@@ -1251,7 +1251,7 @@
     },
     {
       "boundary_id": "M12B-B003",
-      "boundary_statement": "Protective innate immune conditioning cannot be inferred from generic inflammation; pathway routing through TLR4/TRIF/IRF3/MyD88/CXCL10/IL-10/IL-1 must be tracked.",
+      "boundary_statement": "Protective innate immune conditioning cannot be inferred from generic inflammation; pathway routing through TLR/adaptor, cytokine, endothelial, monocyte, inflammasome, metabolic, and tolerance/training programs must be tracked.",
       "observation_ids": "M12B-O001-O024",
       "claim_ids": "M12B-C001-C024",
       "status": "ACTIVE",
@@ -1291,7 +1291,7 @@
     },
     {
       "boundary_id": "M12B-B008",
-      "boundary_statement": "Low-dose LPS is a discovery platform for Aim 1 regulatory-node discovery and should not be framed as a clinical implant/reconstructive-surgery intervention.",
+      "boundary_statement": "LPS/endotoxin tolerance is one discovery platform for Aim 1 regulatory-node discovery and should not be framed as a clinical implant/reconstructive-surgery intervention; safer innate-conditioning analogs must be evaluated separately.",
       "observation_ids": "M12B-O001-O024",
       "claim_ids": "M12B-C001-C024",
       "status": "ACTIVE",
@@ -1302,38 +1302,38 @@
     {
       "consensus_id": "M12B-S001",
       "topic_id": "M12B-T001",
-      "draft_statement": "Low-dose LPS preconditioning is consensus-ready as a mechanistic discovery model for SCI because timed innate stimulation can shift resident and recruited immune responses toward protective programs; it should not be summarized as simple inflammatory suppression.",
+      "draft_statement": "Innate immune conditioning is consensus-ready as a mechanistic discovery framework for SCI because timed host stimulation can shift resident and recruited immune responses toward protective programs; LPS is one anchor stimulus, and the result should not be summarized as simple inflammatory suppression.",
       "supporting_observations": "M12B-O001-O003",
       "supporting_claims": "M12B-C001-C003",
       "boundary_records": "M12B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 12 first-pass curation freeze.",
       "tracker_id": "M12B-S001",
-      "consensus_statement": "Low-dose LPS preconditioning is consensus-ready as a mechanistic discovery model for SCI because timed innate stimulation can shift resident and recruited immune responses toward protective programs; it should not be summarized as simple inflammatory suppression."
+      "consensus_statement": "Innate immune conditioning is consensus-ready as a mechanistic discovery framework for SCI because timed host stimulation can shift resident and recruited immune responses toward protective programs; LPS is one anchor stimulus, and the result should not be summarized as simple inflammatory suppression."
     },
     {
       "consensus_id": "M12B-S002",
       "topic_id": "M12B-T002",
-      "draft_statement": "Repeated systemic LPS can induce a protective spinal microglia-endothelial state in spinal ischemia contexts, with IL-1/IL-1R1 signaling and injection schedule acting as essential boundaries for interpreting protection.",
+      "draft_statement": "Repeated systemic innate stimulation can induce protective spinal microglia-endothelial states in spinal ischemia contexts, with stimulus schedule, endothelial/microglial compartment, and IL-1/IL-1R1 signaling acting as essential boundaries for interpreting protection.",
       "supporting_observations": "M12B-O004-O006",
       "supporting_claims": "M12B-C004-C006",
       "boundary_records": "M12B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 12 first-pass curation freeze.",
       "tracker_id": "M12B-S002",
-      "consensus_statement": "Repeated systemic LPS can induce a protective spinal microglia-endothelial state in spinal ischemia contexts, with IL-1/IL-1R1 signaling and injection schedule acting as essential boundaries for interpreting protection."
+      "consensus_statement": "Repeated systemic innate stimulation can induce protective spinal microglia-endothelial states in spinal ischemia contexts, with stimulus schedule, endothelial/microglial compartment, and IL-1/IL-1R1 signaling acting as essential boundaries for interpreting protection."
     },
     {
       "consensus_id": "M12B-S003",
       "topic_id": "M12B-T003",
-      "draft_statement": "TLR4 and innate-adaptor routing determine whether stimulation becomes protective tolerance or damaging inflammation; TRIF/IRF3, MyD88/CXCL10, IL-10, IL-1, NF-kB, and caspase boundaries must be retained.",
+      "draft_statement": "Innate-adaptor and cytokine routing determine whether stimulation becomes protective tolerance, trained repair competence, or damaging inflammation; TRIF/IRF3, MyD88/CXCL10, IL-10, IL-1, NF-kB, caspase, and non-TLR innate boundaries must be retained.",
       "supporting_observations": "M12B-O007-O009",
       "supporting_claims": "M12B-C007-C009",
       "boundary_records": "M12B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 12 first-pass curation freeze.",
       "tracker_id": "M12B-S003",
-      "consensus_statement": "TLR4 and innate-adaptor routing determine whether stimulation becomes protective tolerance or damaging inflammation; TRIF/IRF3, MyD88/CXCL10, IL-10, IL-1, NF-kB, and caspase boundaries must be retained."
+      "consensus_statement": "Innate-adaptor and cytokine routing determine whether stimulation becomes protective tolerance, trained repair competence, or damaging inflammation; TRIF/IRF3, MyD88/CXCL10, IL-10, IL-1, NF-kB, caspase, and non-TLR innate boundaries must be retained."
     },
     {
       "consensus_id": "M12B-S004",
@@ -1362,14 +1362,14 @@
     {
       "consensus_id": "M12B-S006",
       "topic_id": "M12B-T006",
-      "draft_statement": "Post-injury or chronic LPS studies reveal inducible spinal plasticity and microglial-state capacity, but they should be treated as boundary and comparator evidence unless the experiment tests pre-injury conditioning timing.",
+      "draft_statement": "Post-injury or chronic innate stimulation studies reveal inducible spinal plasticity and microglial-state capacity, but they should be treated as boundary and comparator evidence unless the experiment tests pre-injury or peri-procedural conditioning timing.",
       "supporting_observations": "M12B-O016-O018",
       "supporting_claims": "M12B-C016-C018",
       "boundary_records": "M12B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 12 first-pass curation freeze.",
       "tracker_id": "M12B-S006",
-      "consensus_statement": "Post-injury or chronic LPS studies reveal inducible spinal plasticity and microglial-state capacity, but they should be treated as boundary and comparator evidence unless the experiment tests pre-injury conditioning timing."
+      "consensus_statement": "Post-injury or chronic innate stimulation studies reveal inducible spinal plasticity and microglial-state capacity, but they should be treated as boundary and comparator evidence unless the experiment tests pre-injury or peri-procedural conditioning timing."
     },
     {
       "consensus_id": "M12B-S007",
@@ -1386,14 +1386,14 @@
     {
       "consensus_id": "M12B-S008",
       "topic_id": "M12B-T008",
-      "draft_statement": "Module 12 should be used to identify endogenous protective programs and safer host-conditioning analogs. LPS remains a discovery platform for Aim 1 biology, not a proposed clinical conditioning agent before implantation or reconstruction.",
+      "draft_statement": "Module 12 should be used to identify endogenous protective programs and safer host-conditioning analogs across innate immune tolerance, trained/tolerized states, microbiome/systemic inflammatory priming, monocyte/endothelial signaling, and TLR/non-TLR agonist biology. LPS remains one discovery platform for Aim 1 biology, not a proposed clinical conditioning agent before implantation or reconstruction.",
       "supporting_observations": "M12B-O022-O024",
       "supporting_claims": "M12B-C022-C024",
       "boundary_records": "M12B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
       "notes": "Module 12 first-pass curation freeze.",
       "tracker_id": "M12B-S008",
-      "consensus_statement": "Module 12 should be used to identify endogenous protective programs and safer host-conditioning analogs. LPS remains a discovery platform for Aim 1 biology, not a proposed clinical conditioning agent before implantation or reconstruction."
+      "consensus_statement": "Module 12 should be used to identify endogenous protective programs and safer host-conditioning analogs across innate immune tolerance, trained/tolerized states, microbiome/systemic inflammatory priming, monocyte/endothelial signaling, and TLR/non-TLR agonist biology. LPS remains one discovery platform for Aim 1 biology, not a proposed clinical conditioning agent before implantation or reconstruction."
     }
   ]
 }

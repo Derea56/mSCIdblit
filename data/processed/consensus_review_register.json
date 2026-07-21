@@ -157,8 +157,8 @@
       "evidence_links": 56,
       "boundary_records": 8,
       "consensus_drafts": 8,
-      "module_action": "Keep low-dose LPS as discovery platform; route translational claims through safer host-conditioning analogs.",
-      "priority": "promote after full-text confidence upgrade of direct LPS anchors"
+      "module_action": "Keep innate immune conditioning broad; treat endotoxin/LPS as one discovery platform and route translational claims through safer host-conditioning analogs.",
+      "priority": "promote after full-text confidence upgrade of direct innate-conditioning anchors"
     }
   ],
   "consensus_rows": [
@@ -3933,7 +3933,7 @@
       "module": "Module 12B",
       "consensus_id": "M12B-S001",
       "topic_id": "M12B-T001",
-      "statement": "Low-dose LPS preconditioning is consensus-ready as a mechanistic discovery model for SCI because timed innate stimulation can shift resident and recruited immune responses toward protective programs; it should not be summarized as simple inflammatory suppression.",
+      "statement": "Innate immune conditioning is consensus-ready as a mechanistic discovery framework for SCI because timed host stimulation can shift resident and recruited immune responses toward protective programs; LPS is one anchor stimulus, and the result should not be summarized as simple inflammatory suppression.",
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
         "M12B-O001",
@@ -3974,7 +3974,7 @@
       "module": "Module 12B",
       "consensus_id": "M12B-S002",
       "topic_id": "M12B-T002",
-      "statement": "Repeated systemic LPS can induce a protective spinal microglia-endothelial state in spinal ischemia contexts, with IL-1/IL-1R1 signaling and injection schedule acting as essential boundaries for interpreting protection.",
+      "statement": "Repeated systemic innate stimulation can induce protective spinal microglia-endothelial states in spinal ischemia contexts, with stimulus schedule, endothelial/microglial compartment, and IL-1/IL-1R1 signaling acting as essential boundaries for interpreting protection.",
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
         "M12B-O004",
@@ -4015,7 +4015,7 @@
       "module": "Module 12B",
       "consensus_id": "M12B-S003",
       "topic_id": "M12B-T003",
-      "statement": "TLR4 and innate-adaptor routing determine whether stimulation becomes protective tolerance or damaging inflammation; TRIF/IRF3, MyD88/CXCL10, IL-10, IL-1, NF-kB, and caspase boundaries must be retained.",
+      "statement": "Innate-adaptor and cytokine routing determine whether stimulation becomes protective tolerance, trained repair competence, or damaging inflammation; TRIF/IRF3, MyD88/CXCL10, IL-10, IL-1, NF-kB, caspase, and non-TLR innate boundaries must be retained.",
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
         "M12B-O007",
@@ -4134,7 +4134,7 @@
       "module": "Module 12B",
       "consensus_id": "M12B-S006",
       "topic_id": "M12B-T006",
-      "statement": "Post-injury or chronic LPS studies reveal inducible spinal plasticity and microglial-state capacity, but they should be treated as boundary and comparator evidence unless the experiment tests pre-injury conditioning timing.",
+      "statement": "Post-injury or chronic innate stimulation studies reveal inducible spinal plasticity and microglial-state capacity, but they should be treated as boundary and comparator evidence unless the experiment tests pre-injury or peri-procedural conditioning timing.",
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
         "M12B-O016",
@@ -4212,7 +4212,7 @@
       "module": "Module 12B",
       "consensus_id": "M12B-S008",
       "topic_id": "M12B-T008",
-      "statement": "Module 12 should be used to identify endogenous protective programs and safer host-conditioning analogs. LPS remains a discovery platform for Aim 1 biology, not a proposed clinical conditioning agent before implantation or reconstruction.",
+      "statement": "Module 12 should be used to identify endogenous protective programs and safer host-conditioning analogs across innate immune tolerance, trained/tolerized states, microbiome/systemic inflammatory priming, monocyte/endothelial signaling, and TLR/non-TLR agonist biology. LPS remains one discovery platform for Aim 1 biology, not a proposed clinical conditioning agent before implantation or reconstruction.",
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
         "M12B-O022",
