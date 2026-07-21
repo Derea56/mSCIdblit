@@ -1,6 +1,24 @@
 # mSCIdblit Module Roadmap
 
-This roadmap keeps saturation modules separate from evidence-consolidation modules.
+This roadmap keeps saturation modules separate from evidence-consolidation modules. Module numbers are stable historical identifiers; use the logical order below when presenting the project narrative.
+
+## Recommended Logical Presentation Order
+
+| Presentation Step | Module Pair | Topic | Narrative Role |
+|---|---|---|---|
+| 1 | Module 8A/8B | In vivo spinal cord injury model systems | Defines the experimental injury models, severity variables, species boundaries, and model-selection limits. |
+| 2 | Module 13A/13B | Traumatic SCI pathobiology and chronic lesion formation | Explains how primary traumatic SCI evolves through secondary injury into chronic lesion architecture. |
+| 3 | Module 1A/1B | Chronic SCI lesion architecture | Defines the chronic lesion endpoint: cavity, scar, spared tissue, tissue bridges, human pathology, and surgical anatomy. |
+| 4 | Module 6A/6B | Human chronic SCI pathology and translational imaging | Grounds chronic lesion concepts in human tissue, MRI, tract integrity, and surgical-screening anatomy. |
+| 5 | Module 3A/3B | Immune and myeloid modulation after SCI | Defines immune-cell states, inflammatory repair boundaries, and myeloid mechanisms across the injury course. |
+| 6 | Module 12A/12B | Innate immune conditioning and tolerance biology | Captures broader innate conditioning, tolerance, trained/tolerized host-state logic, and regulatory-node discovery. |
+| 7 | Module 11A/11B | Spinal cord ischemic conditioning in cardiac and aortic surgery | Provides perioperative spinal cord protection and conditioning comparators. |
+| 8 | Module 7A/7B | Host fibroinflammatory conditioning before regenerative reconstruction or transplantation | Connects host-state modulation to implant, graft, and reconstructive readiness. |
+| 9 | Module 9A/9B | In vitro and ex vivo spinal cord injury model systems | Defines validation platforms for mechanisms, biomaterials, cells, and host-conditioning candidates. |
+| 10 | Module 2A/2B | Biomaterials and scaffold repair in SCI | Covers matrix, hydrogel, conduit, decellularized scaffold, and scaffold-enabled lesion repair strategies. |
+| 11 | Module 4A/4B | Cell transplantation and graft integration after SCI | Covers graft survival, integration, lineage boundaries, and scaffold-cell combinations. |
+| 12 | Module 5A/5B | Axon regeneration, remyelination, and white matter repair after SCI | Covers regenerative endpoints that repaired tissue must support. |
+| 13 | Module 10A/10B | SCI clinical trials completed or currently active | Places mechanisms and interventions against the current human translation landscape. |
 
 ## Active and Planned Saturation Modules
 
@@ -43,7 +61,7 @@ A topic is considered practically saturated when two consecutive targeted search
 
 ## Logical Ordering Note
 
-Module numbering reflects when topics were added. Conceptually, Module 13 sits upstream of Module 1: traumatic SCI pathobiology explains the acute-to-chronic trajectory that produces the chronic lesion architecture described in Module 1.
+Module numbering reflects when topics were added and should not be treated as the reading order. For grant, manuscript, or presentation use, follow the recommended logical presentation order above.
 
 ## Module 1 Freeze Note
 

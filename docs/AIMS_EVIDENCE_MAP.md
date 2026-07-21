@@ -2,6 +2,10 @@
 
 This map links the current module set to the revised preconditioning-specific aims. It is a navigation layer, not a replacement for module-level trackers or consensus bundles.
 
+## Logical Module Order
+
+For presentation, use this order rather than numeric module order: Module 8 model systems; Module 13 traumatic SCI-to-chronic-lesion pathobiology; Module 1 chronic lesion architecture; Module 6 human pathology and imaging; Module 3 immune/myeloid modulation; Module 12 innate immune conditioning and tolerance; Module 11 ischemic conditioning comparators; Module 7 host fibroinflammatory conditioning; Module 9 in vitro/ex vivo validation systems; Module 2 biomaterials/scaffolds; Module 4 cell transplantation; Module 5 axon, remyelination, and white matter repair; Module 10 clinical trials.
+
 ## Aim-to-Module Logic
 
 | Specific Aim | Evidence Modules | Current Use |

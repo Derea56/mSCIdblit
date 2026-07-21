@@ -3,6 +3,10 @@
 
 A scientifically rigorous, auditable knowledge base for synthesizing spinal cord injury research.
 
+## Module Narrative Order
+
+Module numbers are stable identifiers, not the recommended reading order. For presentations and synthesis, use: model systems (Module 8), traumatic SCI-to-chronic-lesion pathobiology (Module 13), chronic lesion architecture (Module 1), human pathology/imaging (Module 6), immune/myeloid modulation (Module 3), innate immune conditioning/tolerance (Module 12), ischemic-conditioning comparators (Module 11), host fibroinflammatory conditioning (Module 7), in vitro/ex vivo validation systems (Module 9), biomaterials/scaffolds (Module 2), cell transplantation (Module 4), axon/remyelination/white matter repair (Module 5), and clinical trials (Module 10).
+
 ## 🎯 Core Principles
 
 1. **Experiment is the fundamental evidence unit** — not papers, not observations in isolation
