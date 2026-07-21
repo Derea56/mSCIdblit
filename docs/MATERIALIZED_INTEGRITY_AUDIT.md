@@ -17,6 +17,7 @@ Generated from `scripts/audit_materialized_integrity.py`.
 | Module 11 | 32/32 | 32 | 32 | 32 | 72 | 8 | 32 |
 | Module 12 | 24/24 | 24 | 24 | 24 | 56 | 8 | 24 |
 | Module 13 | 24/24 | 24 | 24 | 24 | 56 | 8 | 24 |
+| Module 14 | 16/16 | 16 | 16 | 16 | 40 | 8 | 24 |
 
 ## Warnings
 

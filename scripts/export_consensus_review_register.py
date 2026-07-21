@@ -89,6 +89,11 @@ MODULE_REVIEW_NOTES = {
         "module_action": "Use as the injury-to-chronic-lesion bridge; preserve timing, model severity, vascular, immune, glial, stromal, axon/myelin, and cavitation boundaries.",
         "priority": "promote after full-text confidence upgrade of key vascular, scar, and degeneration anchors",
     },
+    "14b": {
+        "review_status": "CONSENSUS-READY FIRST PASS",
+        "module_action": "Keep CRISPR epigenome editing separate from permanent genome editing; preserve effector, target, cell type, delivery, chromatin-state, and neuroregeneration endpoint boundaries.",
+        "priority": "promote after full-text confidence upgrade of PTEN dCas9-KRAB, neuronal CRISPRa, and injury-enhancer anchors",
+    },
 }
 
 

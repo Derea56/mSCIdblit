@@ -2,9 +2,9 @@
   "status": "first-pass cross-module synthesis",
   "generated_from": "data/processed/consensus_review_register.json",
   "theme_count": 6,
-  "core_consensus_count": 50,
-  "source_module_count": 13,
-  "source_consensus_count": 104,
+  "core_consensus_count": 54,
+  "source_module_count": 14,
+  "source_consensus_count": 112,
   "themes": [
     {
       "theme_id": "CMS-T001",
@@ -317,7 +317,8 @@
         "5b",
         "7b",
         "9b",
-        "12b"
+        "12b",
+        "14b"
       ],
       "core_consensus_ids": [
         "M2B-S002",
@@ -328,11 +329,12 @@
         "M5B-S006",
         "M7B-S008",
         "M9B-S006",
-        "M12B-S007"
+        "M12B-S007",
+        "M14B-S008"
       ],
-      "synthesis_statement": "Most biomaterial, cell, cargo, vesicle, and stimulation strategies should be treated as combined repair systems unless experiments isolate each component. The database should therefore preserve material architecture, cell identity, payload, release kinetics, lesion preparation, host state, and validation model before making causal claims.",
+      "synthesis_statement": "Most biomaterial, cell, cargo, vesicle, and stimulation strategies should be treated as combined repair systems unless experiments isolate each component. The database should therefore preserve material architecture, cell identity, payload, release kinetics, lesion preparation, host state, regulatory-editing target, and validation model before making causal claims.",
       "evidence_ladder": [
-        "Observations: scaffold, cell-transplant, immune-delivery, and axon-repair rows often combine architecture, cells, trophic cargo, immunomodulation, and stimulation.",
+        "Observations: scaffold, cell-transplant, immune-delivery, regulatory-editing, and axon-repair rows often combine architecture, cells, trophic cargo, immunomodulation, target regulation, and stimulation.",
         "Author claims: many papers interpret bundled interventions as repair-promoting, but component attribution is often not isolated.",
         "Consensus: Modules 2, 4, and 5 agree that scaffold-cell-graft-regeneration claims require component and endpoint separation."
       ],
@@ -353,14 +355,15 @@
         "Module 5B",
         "Module 7B",
         "Module 9B",
-        "Module 12B"
+        "Module 12B",
+        "Module 14B"
       ],
       "module_counts": {
-        "observations": 457,
-        "author_claims": 225,
-        "evidence_links": 432,
-        "boundary_records": 56,
-        "consensus_drafts": 56
+        "observations": 473,
+        "author_claims": 241,
+        "evidence_links": 472,
+        "boundary_records": 64,
+        "consensus_drafts": 64
       },
       "core_consensus": [
         {
@@ -452,12 +455,22 @@
           "claim_count": 3,
           "boundary_count": 8,
           "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M14B-S008",
+          "module": "Module 14B",
+          "topic_id": "M14B-T008",
+          "statement": "Module 14 should be used as a programmable regulatory-editing layer for neuroregeneration: candidate experiments should specify target locus, effector, guide design, delivery vehicle, target cell, chromatin state, model, and endpoint before linking CRISPR epigenome editing to SCI reconstruction, conditioning, graft integration, or axon repair.",
+          "observation_count": 3,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
         }
       ],
       "observation_confidence_tally": {
-        "high": 1,
+        "high": 3,
         "low": 30,
-        "medium": 60
+        "medium": 61
       }
     },
     {
@@ -472,7 +485,8 @@
         "6b",
         "8b",
         "10b",
-        "13b"
+        "13b",
+        "14b"
       ],
       "core_consensus_ids": [
         "M1B-S006",
@@ -485,9 +499,10 @@
         "M6B-S005",
         "M8B-S006",
         "M10B-S007",
-        "M13B-S003"
+        "M13B-S003",
+        "M14B-S006"
       ],
-      "synthesis_statement": "SCI repair cannot be summarized by a single recovery axis. Axon growth, sprouting, remyelination, white-matter preservation, graft integration, relay formation, electrophysiology, imaging biomarkers, and behavior are related but non-interchangeable endpoint families.",
+      "synthesis_statement": "SCI repair cannot be summarized by a single recovery axis. Axon growth, sprouting, remyelination, white-matter preservation, graft integration, target-gene regulation, relay formation, electrophysiology, imaging biomarkers, and behavior are related but non-interchangeable endpoint families.",
       "evidence_ladder": [
         "Observations: modules preserve separate pathobiology, histology, imaging, behavior, electrophysiology, graft, myelin, and circuit readouts.",
         "Author claims: many studies infer repair from selected endpoints, but consensus records repeatedly flag endpoint mismatch.",
@@ -511,14 +526,15 @@
         "Module 6B",
         "Module 8B",
         "Module 10B",
-        "Module 13B"
+        "Module 13B",
+        "Module 14B"
       ],
       "module_counts": {
-        "observations": 529,
-        "author_claims": 274,
-        "evidence_links": 611,
-        "boundary_records": 63,
-        "consensus_drafts": 64
+        "observations": 545,
+        "author_claims": 290,
+        "evidence_links": 651,
+        "boundary_records": 71,
+        "consensus_drafts": 72
       },
       "core_consensus": [
         {
@@ -630,12 +646,22 @@
           "claim_count": 3,
           "boundary_count": 8,
           "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M14B-S006",
+          "module": "Module 14B",
+          "topic_id": "M14B-T006",
+          "statement": "Neuroregeneration screens and intrinsic-growth target studies identify candidate loci for CRISPRi/a, including PTEN/KLF-style repression and regeneration-associated gene activation, but target discovery is not equivalent to dCas9 epigenome-editing efficacy.",
+          "observation_count": 2,
+          "claim_count": 2,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
         }
       ],
       "observation_confidence_tally": {
-        "high": 11,
+        "high": 12,
         "low": 19,
-        "medium": 76
+        "medium": 77
       }
     },
     {
@@ -647,7 +673,8 @@
         "9b",
         "10b",
         "11b",
-        "12b"
+        "12b",
+        "14b"
       ],
       "core_consensus_ids": [
         "M8B-S001",
@@ -659,11 +686,13 @@
         "M9B-S008",
         "M10B-S003",
         "M11B-S003",
-        "M12B-S007"
+        "M12B-S007",
+        "M14B-S002",
+        "M14B-S007"
       ],
-      "synthesis_statement": "Model choice is not background metadata; it filters what any observation can mean. In vivo, in vitro, registry, ischemia-conditioning, and innate-stimulation systems answer different questions and should be used as a ladder from discovery to validation to translation.",
+      "synthesis_statement": "Model and tool choice are not background metadata; they filter what any observation can mean. In vivo, in vitro, registry, ischemia-conditioning, innate-stimulation, and CRISPR epigenome-editing systems answer different questions and should be used as a ladder from discovery to validation to translation.",
       "evidence_ladder": [
-        "Observations: Module 8 and 9 define in vivo and in vitro model fields; Modules 10-12 define clinical, ischemia, and innate-conditioning evidence roles.",
+        "Observations: Module 8 and 9 define in vivo and in vitro model fields; Modules 10-12 define clinical, ischemia, and innate-conditioning evidence roles; Module 14 defines programmable regulatory-editing tool boundaries.",
         "Author claims: model-system claims are often broad, but the consensus layer converts them into operational model-selection rules.",
         "Consensus: model modules support structured evidence use rather than pooled model-agnostic conclusions."
       ],
@@ -682,14 +711,15 @@
         "Module 9B",
         "Module 10B",
         "Module 11B",
-        "Module 12B"
+        "Module 12B",
+        "Module 14B"
       ],
       "module_counts": {
-        "observations": 167,
-        "author_claims": 125,
-        "evidence_links": 324,
-        "boundary_records": 40,
-        "consensus_drafts": 40
+        "observations": 183,
+        "author_claims": 141,
+        "evidence_links": 364,
+        "boundary_records": 48,
+        "consensus_drafts": 48
       },
       "core_consensus": [
         {
@@ -791,10 +821,31 @@
           "claim_count": 3,
           "boundary_count": 8,
           "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M14B-S002",
+          "module": "Module 14B",
+          "topic_id": "M14B-T002",
+          "statement": "Neuron-optimized CRISPRa/i systems provide a practical platform for tunable endogenous gene regulation in post-mitotic neural cells, including promoter-selective and multiplexed activation, but each claim must preserve vector, cell type, guide, expression, and in vivo/in vitro boundaries.",
+          "observation_count": 3,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M14B-S007",
+          "module": "Module 14B",
+          "topic_id": "M14B-T007",
+          "statement": "CNS delivery and safety are central boundaries for CRISPR epigenome editing: vector capacity, cell specificity, immune response, off-target regulation, expression duration, reversibility, and durability must be recorded before translational neuroregeneration claims.",
+          "observation_count": 5,
+          "claim_count": 5,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
         }
       ],
       "observation_confidence_tally": {
-        "medium": 27
+        "high": 3,
+        "medium": 32
       }
     },
     {
@@ -811,7 +862,8 @@
         "9b",
         "11b",
         "12b",
-        "13b"
+        "13b",
+        "14b"
       ],
       "core_consensus_ids": [
         "M1B-S008",
@@ -823,13 +875,14 @@
         "M9B-S008",
         "M11B-S008",
         "M12B-S008",
-        "M13B-S008"
+        "M13B-S008",
+        "M14B-S008"
       ],
-      "synthesis_statement": "The most defensible project-level hypothesis is that conditioning can improve SCI reconstruction only if it creates a host state compatible with the target lesion anatomy, implanted material or graft, and desired endpoint family. The evidence supports a conditioning-discovery and validation program, not an immediate universal conditioning therapy claim.",
+      "synthesis_statement": "The most defensible project-level hypothesis is that conditioning can improve SCI reconstruction only if it creates a host state compatible with the target lesion anatomy, implanted material or graft, and desired endpoint family. The evidence supports a conditioning-discovery, programmable regulatory-editing, and validation program, not an immediate universal conditioning or gene-editing therapy claim.",
       "evidence_ladder": [
         "Observations: all core modules now provide experiment-level rows and B-layer observations suitable for cross-module tracing, including the traumatic injury-to-lesion trajectory layer.",
         "Author claims: repair, conditioning, graft, biomaterial, and immune claims are strongest when narrowed to model, timing, and endpoint.",
-        "Consensus: Modules 1-13 collectively support an aim-aligned logic of endogenous protective programs, host response modification, injury-to-lesion modification, and host-biomaterial interaction testing."
+        "Consensus: Modules 1-14 collectively support an aim-aligned logic of endogenous protective programs, host response modification, injury-to-lesion modification, programmable regulatory editing, and host-biomaterial interaction testing."
       ],
       "boundaries": [
         "Conditioning should not be framed as simply anti-inflammatory.",
@@ -852,14 +905,15 @@
         "Module 9B",
         "Module 11B",
         "Module 12B",
-        "Module 13B"
+        "Module 13B",
+        "Module 14B"
       ],
       "module_counts": {
-        "observations": 606,
-        "author_claims": 331,
-        "evidence_links": 667,
-        "boundary_records": 79,
-        "consensus_drafts": 80
+        "observations": 622,
+        "author_claims": 347,
+        "evidence_links": 707,
+        "boundary_records": 87,
+        "consensus_drafts": 88
       },
       "core_consensus": [
         {
@@ -961,12 +1015,22 @@
           "claim_count": 3,
           "boundary_count": 8,
           "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M14B-S008",
+          "module": "Module 14B",
+          "topic_id": "M14B-T008",
+          "statement": "Module 14 should be used as a programmable regulatory-editing layer for neuroregeneration: candidate experiments should specify target locus, effector, guide design, delivery vehicle, target cell, chromatin state, model, and endpoint before linking CRISPR epigenome editing to SCI reconstruction, conditioning, graft integration, or axon repair.",
+          "observation_count": 3,
+          "claim_count": 3,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
         }
       ],
       "observation_confidence_tally": {
-        "high": 26,
+        "high": 28,
         "low": 69,
-        "medium": 126
+        "medium": 127
       }
     }
   ],
