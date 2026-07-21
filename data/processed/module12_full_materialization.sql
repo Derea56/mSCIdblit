@@ -292,7 +292,7 @@ WITH inserted AS (
     'Revised Specific Aims Preconditioning Logic', 'mSCIdblit project', 2026,
     'Project aims', NULL, NULL,
     NULL, NULL, 'Project aims document',
-    NULL, '{"curator_notes": "Project logic anchor: low-dose LPS is a discovery platform to define endogenous protective programs, not a clinical therapeutic.", "module": "Module 12B", "tracker_id": "M12A-P024"}'
+    NULL, '{"curator_notes": "Project logic anchor: innate immune conditioning is broader than LPS; endotoxin/LPS is one discovery platform, not a clinical therapeutic.", "module": "Module 12B", "tracker_id": "M12A-P024"}'
   )
   RETURNING paper_id
 )
@@ -301,7 +301,7 @@ INSERT INTO _m12_paper_map (tracker_id, paper_id) SELECT 'M12A-P024', paper_id F
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P001',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P001',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P001'
   RETURNING paradigm_id
@@ -311,7 +311,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P001', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P002',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P002',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P002'
   RETURNING paradigm_id
@@ -321,7 +321,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P002', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P003',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P003',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P003'
   RETURNING paradigm_id
@@ -331,7 +331,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P003', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P004',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P004',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P004'
   RETURNING paradigm_id
@@ -341,7 +341,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P004', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P005',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P005',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P005'
   RETURNING paradigm_id
@@ -351,7 +351,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P005', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P006',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P006',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P006'
   RETURNING paradigm_id
@@ -361,7 +361,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P006', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P007',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P007',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P007'
   RETURNING paradigm_id
@@ -371,7 +371,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P007', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P008',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P008',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P008'
   RETURNING paradigm_id
@@ -381,7 +381,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P008', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P009',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P009',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P009'
   RETURNING paradigm_id
@@ -391,7 +391,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P009', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P010',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P010',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P010'
   RETURNING paradigm_id
@@ -401,7 +401,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P010', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P011',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P011',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P011'
   RETURNING paradigm_id
@@ -411,7 +411,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P011', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P012',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P012',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P012'
   RETURNING paradigm_id
@@ -421,7 +421,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P012', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P013',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P013',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P013'
   RETURNING paradigm_id
@@ -431,7 +431,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P013', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P014',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P014',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P014'
   RETURNING paradigm_id
@@ -441,7 +441,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P014', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P015',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P015',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P015'
   RETURNING paradigm_id
@@ -451,7 +451,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P015', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P016',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P016',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P016'
   RETURNING paradigm_id
@@ -461,7 +461,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P016', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P017',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P017',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P017'
   RETURNING paradigm_id
@@ -471,7 +471,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P017', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P018',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P018',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P018'
   RETURNING paradigm_id
@@ -481,7 +481,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P018', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P019',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P019',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P019'
   RETURNING paradigm_id
@@ -491,7 +491,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P019', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P020',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P020',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P020'
   RETURNING paradigm_id
@@ -501,7 +501,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P020', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P021',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P021',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P021'
   RETURNING paradigm_id
@@ -511,7 +511,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P021', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P022',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P022',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P022'
   RETURNING paradigm_id
@@ -521,7 +521,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P022', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P023',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P023',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P023'
   RETURNING paradigm_id
@@ -531,7 +531,7 @@ INSERT INTO _m12_paradigm_map (tracker_id, paradigm_id) SELECT 'M12A-P023', para
 WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 12B curated evidence extraction',
-    'First-pass Module 12B LPS and innate immune preconditioning in spinal cord injury curation for M12A-P024',
+    'First-pass Module 12B innate immune conditioning and tolerance biology curation for M12A-P024',
     'Tracker-derived materialization from Module_12B_TRACKER.md'
   FROM _m12_paper_map WHERE tracker_id = 'M12A-P024'
   RETURNING paradigm_id
@@ -947,10 +947,10 @@ WITH inserted AS (
 INSERT INTO _m12_experiment_map (tracker_id, experiment_id) SELECT 'M12A-P024::M12A-P024-E001', experiment_id FROM inserted;
 
 INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('Dataset/in vitro candidate evidence', 'Module 12B tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('Direct SCI LPS evidence', 'Module 12B tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('Mechanistic comparator evidence', 'Module 12B tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('Project logic evidence', 'Module 12B tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('SCI innate repair boundary evidence', 'Module 12B tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('SCI innate-conditioning evidence', 'Module 12B tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('Spinal microglia-endothelial evidence', 'Module 12B tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
 
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Innate immune conditioning / protection', 'Module 12B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
@@ -962,19 +962,19 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Lipopolysaccharide preconditioning facilitates M2 activation of resident microglia after spinal cord injury tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: Mouse thoracic contusion; systemic low-dose LPS 48 h before SCI; resident microglia M2/IL-10/IRF3 and functional/tissue repair signal.',
+    'Lipopolysaccharide preconditioning facilitates M2 activation of resident microglia after spinal cord injury tested or summarized Endotoxin/LPS or innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: Mouse thoracic contusion; systemic low-dose LPS 48 h before SCI; resident microglia M2/IL-10/IRF3 and functional/tissue repair signal.',
     'qualitative',
-    'Lipopolysaccharide preconditioning facilitates M2 activation of resident microglia after spinal cord injury tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: Mouse thoracic contusion; systemic low-dose LPS 48 h before SCI; resident microglia M2/IL-10/IRF3 and functional/tissue repair signal.',
-    'low-dose or repeated lps / innate agonist conditioning',
+    'Lipopolysaccharide preconditioning facilitates M2 activation of resident microglia after spinal cord injury tested or summarized Endotoxin/LPS or innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: Mouse thoracic contusion; systemic low-dose LPS 48 h before SCI; resident microglia M2/IL-10/IRF3 and functional/tissue repair signal.',
+    'endotoxin/lps or innate agonist conditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P001-E001", "paper_tracker_id": "M12A-P001", "quantitative": "YES", "statistics_reported": "Mouse thoracic contusion; systemic low-dose LPS 48 h before SCI; resident microglia M2/IL-10/IRF3 and functional/tissue repair signal.", "topic_id": "M12B-T001", "tracker_id": "M12B-O001"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P001-E001", "paper_tracker_id": "M12A-P001", "quantitative": "YES", "statistics_reported": "Mouse thoracic contusion; systemic low-dose LPS 48 h before SCI; resident microglia M2/IL-10/IRF3 and functional/tissue repair signal.", "topic_id": "M12B-T001", "tracker_id": "M12B-O001"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M12A-P001::M12A-P001-E001'
-    AND et.evidence_type_name = 'Direct SCI LPS evidence'
+    AND et.evidence_type_name = 'SCI innate-conditioning evidence'
     AND ot.outcome_type_name = 'Innate immune conditioning / protection'
   RETURNING observation_id
 )
@@ -987,14 +987,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Serial Systemic Injections of Endotoxin (LPS) Elicit Neuroprotective Spinal Cord Microglia through IL-1-Dependent Cross Talk with Endothelial Cells tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Spinal cord ischemia / ischemia-reperfusion model; first-pass note: Repeated systemic LPS primes spinal cord microglia/endothelium and protects in ischemic SCI; IL-1-dependent cross-talk boundary.',
+    'Serial Systemic Injections of Endotoxin (LPS) Elicit Neuroprotective Spinal Cord Microglia through IL-1-Dependent Cross Talk with Endothelial Cells tested or summarized Endotoxin/LPS or innate agonist conditioning in Spinal cord ischemia / ischemia-reperfusion model; first-pass note: Repeated systemic LPS primes spinal cord microglia/endothelium and protects in ischemic SCI; IL-1-dependent cross-talk boundary.',
     'qualitative',
-    'Serial Systemic Injections of Endotoxin (LPS) Elicit Neuroprotective Spinal Cord Microglia through IL-1-Dependent Cross Talk with Endothelial Cells tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Spinal cord ischemia / ischemia-reperfusion model; first-pass note: Repeated systemic LPS primes spinal cord microglia/endothelium and protects in ischemic SCI; IL-1-dependent cross-talk boundary.',
-    'low-dose or repeated lps / innate agonist conditioning',
+    'Serial Systemic Injections of Endotoxin (LPS) Elicit Neuroprotective Spinal Cord Microglia through IL-1-Dependent Cross Talk with Endothelial Cells tested or summarized Endotoxin/LPS or innate agonist conditioning in Spinal cord ischemia / ischemia-reperfusion model; first-pass note: Repeated systemic LPS primes spinal cord microglia/endothelium and protects in ischemic SCI; IL-1-dependent cross-talk boundary.',
+    'endotoxin/lps or innate agonist conditioning',
     'Abstract/source page',
     'Abstract/source page',
     'high',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P002-E001", "paper_tracker_id": "M12A-P002", "quantitative": "YES", "statistics_reported": "Repeated systemic LPS primes spinal cord microglia/endothelium and protects in ischemic SCI; IL-1-dependent cross-talk boundary.", "topic_id": "M12B-T002", "tracker_id": "M12B-O002"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P002-E001", "paper_tracker_id": "M12A-P002", "quantitative": "YES", "statistics_reported": "Repeated systemic LPS primes spinal cord microglia/endothelium and protects in ischemic SCI; IL-1-dependent cross-talk boundary.", "topic_id": "M12B-T002", "tracker_id": "M12B-O002"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1012,14 +1012,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Dynamic Interleukin-1 Receptor Type 1 Signaling Mediates Microglia-Vasculature Interactions Following Repeated Systemic LPS tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Spinal cord ischemia / ischemia-reperfusion model; first-pass note: Repeated LPS programs spinal microglia-vascular interactions through IL-1R1 signaling; mechanistic follow-up to Freria.',
+    'Dynamic Interleukin-1 Receptor Type 1 Signaling Mediates Microglia-Vasculature Interactions Following Repeated Systemic LPS tested or summarized Endotoxin/LPS or innate agonist conditioning in Spinal cord ischemia / ischemia-reperfusion model; first-pass note: Repeated LPS programs spinal microglia-vascular interactions through IL-1R1 signaling; mechanistic follow-up to Freria.',
     'qualitative',
-    'Dynamic Interleukin-1 Receptor Type 1 Signaling Mediates Microglia-Vasculature Interactions Following Repeated Systemic LPS tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Spinal cord ischemia / ischemia-reperfusion model; first-pass note: Repeated LPS programs spinal microglia-vascular interactions through IL-1R1 signaling; mechanistic follow-up to Freria.',
-    'low-dose or repeated lps / innate agonist conditioning',
+    'Dynamic Interleukin-1 Receptor Type 1 Signaling Mediates Microglia-Vasculature Interactions Following Repeated Systemic LPS tested or summarized Endotoxin/LPS or innate agonist conditioning in Spinal cord ischemia / ischemia-reperfusion model; first-pass note: Repeated LPS programs spinal microglia-vascular interactions through IL-1R1 signaling; mechanistic follow-up to Freria.',
+    'endotoxin/lps or innate agonist conditioning',
     'Abstract/source page',
     'Abstract/source page',
     'high',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P003-E001", "paper_tracker_id": "M12A-P003", "quantitative": "YES", "statistics_reported": "Repeated LPS programs spinal microglia-vascular interactions through IL-1R1 signaling; mechanistic follow-up to Freria.", "topic_id": "M12B-T003", "tracker_id": "M12B-O003"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P003-E001", "paper_tracker_id": "M12A-P003", "quantitative": "YES", "statistics_reported": "Repeated LPS programs spinal microglia-vascular interactions through IL-1R1 signaling; mechanistic follow-up to Freria.", "topic_id": "M12B-T003", "tracker_id": "M12B-O003"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1037,14 +1037,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'LPS Preconditioning Attenuates Apoptosis Mechanism by Inhibiting NF-kB and Caspase-3 Activity: TLR4 Pre-activation in the Signaling Pathway of LPS-Induced Neuroprotection tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Review, project, or mechanism anchor; first-pass note: Review anchor for LPS/TLR4 preconditioning mechanisms and apoptosis/NF-kB/caspase-3 boundaries.',
+    'LPS Preconditioning Attenuates Apoptosis Mechanism by Inhibiting NF-kB and Caspase-3 Activity: TLR4 Pre-activation in the Signaling Pathway of LPS-Induced Neuroprotection tested or summarized Endotoxin/LPS or innate agonist conditioning in Review, project, or mechanism anchor; first-pass note: Review anchor for LPS/TLR4 preconditioning mechanisms and apoptosis/NF-kB/caspase-3 boundaries.',
     'qualitative',
-    'LPS Preconditioning Attenuates Apoptosis Mechanism by Inhibiting NF-kB and Caspase-3 Activity: TLR4 Pre-activation in the Signaling Pathway of LPS-Induced Neuroprotection tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Review, project, or mechanism anchor; first-pass note: Review anchor for LPS/TLR4 preconditioning mechanisms and apoptosis/NF-kB/caspase-3 boundaries.',
-    'low-dose or repeated lps / innate agonist conditioning',
+    'LPS Preconditioning Attenuates Apoptosis Mechanism by Inhibiting NF-kB and Caspase-3 Activity: TLR4 Pre-activation in the Signaling Pathway of LPS-Induced Neuroprotection tested or summarized Endotoxin/LPS or innate agonist conditioning in Review, project, or mechanism anchor; first-pass note: Review anchor for LPS/TLR4 preconditioning mechanisms and apoptosis/NF-kB/caspase-3 boundaries.',
+    'endotoxin/lps or innate agonist conditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P004-E001", "paper_tracker_id": "M12A-P004", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T004", "tracker_id": "M12B-O004"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P004-E001", "paper_tracker_id": "M12A-P004", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T004", "tracker_id": "M12B-O004"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1062,14 +1062,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'LPS preconditioning redirects TLR signaling following stroke: TRIF-IRF3 plays a seminal role in mediating tolerance to ischemic injury tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: Brain ischemia comparator; TRIF-IRF3 and NF-kB redirection provide mechanistic boundary for innate conditioning.',
+    'LPS preconditioning redirects TLR signaling following stroke: TRIF-IRF3 plays a seminal role in mediating tolerance to ischemic injury tested or summarized Endotoxin/LPS or innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: Brain ischemia comparator; TRIF-IRF3 and NF-kB redirection provide mechanistic boundary for innate conditioning.',
     'qualitative',
-    'LPS preconditioning redirects TLR signaling following stroke: TRIF-IRF3 plays a seminal role in mediating tolerance to ischemic injury tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: Brain ischemia comparator; TRIF-IRF3 and NF-kB redirection provide mechanistic boundary for innate conditioning.',
-    'low-dose or repeated lps / innate agonist conditioning',
+    'LPS preconditioning redirects TLR signaling following stroke: TRIF-IRF3 plays a seminal role in mediating tolerance to ischemic injury tested or summarized Endotoxin/LPS or innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: Brain ischemia comparator; TRIF-IRF3 and NF-kB redirection provide mechanistic boundary for innate conditioning.',
+    'endotoxin/lps or innate agonist conditioning',
     'Abstract/source page',
     'Abstract/source page',
     'high',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P005-E001", "paper_tracker_id": "M12A-P005", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T005", "tracker_id": "M12B-O005"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P005-E001", "paper_tracker_id": "M12A-P005", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T005", "tracker_id": "M12B-O005"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1087,14 +1087,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Endogenous Protection from Ischemic Brain Injury by Preconditioned Monocytes tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: Peripheral monocyte preconditioning comparator; IL-10/iNOS/CCR2 and adoptive-transfer logic for systemic conditioning.',
+    'Endogenous Protection from Ischemic Brain Injury by Preconditioned Monocytes tested or summarized Endotoxin/LPS or innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: Peripheral monocyte preconditioning comparator; IL-10/iNOS/CCR2 and adoptive-transfer logic for systemic conditioning.',
     'qualitative',
-    'Endogenous Protection from Ischemic Brain Injury by Preconditioned Monocytes tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: Peripheral monocyte preconditioning comparator; IL-10/iNOS/CCR2 and adoptive-transfer logic for systemic conditioning.',
-    'low-dose or repeated lps / innate agonist conditioning',
+    'Endogenous Protection from Ischemic Brain Injury by Preconditioned Monocytes tested or summarized Endotoxin/LPS or innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: Peripheral monocyte preconditioning comparator; IL-10/iNOS/CCR2 and adoptive-transfer logic for systemic conditioning.',
+    'endotoxin/lps or innate agonist conditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P006-E001", "paper_tracker_id": "M12A-P006", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T006", "tracker_id": "M12B-O006"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P006-E001", "paper_tracker_id": "M12A-P006", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T006", "tracker_id": "M12B-O006"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1112,14 +1112,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Neuroprotection by Preconditioning in Mice is Dependent on MyD88-Mediated CXCL10 Expression in Endothelial Cells tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: Peripheral LPS preconditioning brain ischemia model; endothelial MyD88/CXCL10 upstream regulatory-node comparator.',
+    'Neuroprotection by Preconditioning in Mice is Dependent on MyD88-Mediated CXCL10 Expression in Endothelial Cells tested or summarized Endotoxin/LPS or innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: Peripheral LPS preconditioning brain ischemia model; endothelial MyD88/CXCL10 upstream regulatory-node comparator.',
     'qualitative',
-    'Neuroprotection by Preconditioning in Mice is Dependent on MyD88-Mediated CXCL10 Expression in Endothelial Cells tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: Peripheral LPS preconditioning brain ischemia model; endothelial MyD88/CXCL10 upstream regulatory-node comparator.',
-    'low-dose or repeated lps / innate agonist conditioning',
+    'Neuroprotection by Preconditioning in Mice is Dependent on MyD88-Mediated CXCL10 Expression in Endothelial Cells tested or summarized Endotoxin/LPS or innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: Peripheral LPS preconditioning brain ischemia model; endothelial MyD88/CXCL10 upstream regulatory-node comparator.',
+    'endotoxin/lps or innate agonist conditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P007-E001", "paper_tracker_id": "M12A-P007", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T007", "tracker_id": "M12B-O007"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P007-E001", "paper_tracker_id": "M12A-P007", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T007", "tracker_id": "M12B-O007"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1144,7 +1144,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P008-E001", "paper_tracker_id": "M12A-P008", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T008", "tracker_id": "M12B-O008"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P008-E001", "paper_tracker_id": "M12A-P008", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T008", "tracker_id": "M12B-O008"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1169,12 +1169,12 @@ WITH inserted AS (
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P009-E001", "paper_tracker_id": "M12A-P009", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T001", "tracker_id": "M12B-O009"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P009-E001", "paper_tracker_id": "M12A-P009", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T001", "tracker_id": "M12B-O009"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M12A-P009::M12A-P009-E001'
-    AND et.evidence_type_name = 'Direct SCI LPS evidence'
+    AND et.evidence_type_name = 'SCI innate-conditioning evidence'
     AND ot.outcome_type_name = 'Innate immune conditioning / protection'
   RETURNING observation_id
 )
@@ -1194,12 +1194,12 @@ WITH inserted AS (
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P010-E001", "paper_tracker_id": "M12A-P010", "quantitative": "YES", "statistics_reported": "Chronic SCI scRNA-seq/plasticity row; LPS reawakens inflammatory/microglial states after chronic injury.", "topic_id": "M12B-T002", "tracker_id": "M12B-O010"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P010-E001", "paper_tracker_id": "M12A-P010", "quantitative": "YES", "statistics_reported": "Chronic SCI scRNA-seq/plasticity row; LPS reawakens inflammatory/microglial states after chronic injury.", "topic_id": "M12B-T002", "tracker_id": "M12B-O010"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M12A-P010::M12A-P010-E001'
-    AND et.evidence_type_name = 'Direct SCI LPS evidence'
+    AND et.evidence_type_name = 'SCI innate-conditioning evidence'
     AND ot.outcome_type_name = 'Innate immune conditioning / protection'
   RETURNING observation_id
 )
@@ -1219,7 +1219,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P011-E001", "paper_tracker_id": "M12A-P011", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T003", "tracker_id": "M12B-O011"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P011-E001", "paper_tracker_id": "M12A-P011", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T003", "tracker_id": "M12B-O011"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1244,7 +1244,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P012-E001", "paper_tracker_id": "M12A-P012", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T004", "tracker_id": "M12B-O012"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P012-E001", "paper_tracker_id": "M12A-P012", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T004", "tracker_id": "M12B-O012"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1262,14 +1262,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Single low-dose lipopolysaccharide preconditioning: neuroprotective against axonal injury and modulates glial cells tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: TBI comparator; single low-dose LPS preconditioning reduces axonal injury and changes glial responses.',
+    'Single low-dose lipopolysaccharide preconditioning: neuroprotective against axonal injury and modulates glial cells tested or summarized Endotoxin/LPS or innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: TBI comparator; single low-dose LPS preconditioning reduces axonal injury and changes glial responses.',
     'qualitative',
-    'Single low-dose lipopolysaccharide preconditioning: neuroprotective against axonal injury and modulates glial cells tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: TBI comparator; single low-dose LPS preconditioning reduces axonal injury and changes glial responses.',
-    'low-dose or repeated lps / innate agonist conditioning',
+    'Single low-dose lipopolysaccharide preconditioning: neuroprotective against axonal injury and modulates glial cells tested or summarized Endotoxin/LPS or innate agonist conditioning in Non-SCI neuroprotection comparator; first-pass note: TBI comparator; single low-dose LPS preconditioning reduces axonal injury and changes glial responses.',
+    'endotoxin/lps or innate agonist conditioning',
     'Abstract/source page',
     'Abstract/source page',
     'high',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P013-E001", "paper_tracker_id": "M12A-P013", "quantitative": "YES", "statistics_reported": "TBI comparator; single low-dose LPS preconditioning reduces axonal injury and changes glial responses.", "topic_id": "M12B-T005", "tracker_id": "M12B-O013"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P013-E001", "paper_tracker_id": "M12A-P013", "quantitative": "YES", "statistics_reported": "TBI comparator; single low-dose LPS preconditioning reduces axonal injury and changes glial responses.", "topic_id": "M12B-T005", "tracker_id": "M12B-O013"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1294,7 +1294,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P014-E001", "paper_tracker_id": "M12A-P014", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T006", "tracker_id": "M12B-O014"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P014-E001", "paper_tracker_id": "M12A-P014", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T006", "tracker_id": "M12B-O014"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1319,7 +1319,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P015-E001", "paper_tracker_id": "M12A-P015", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T007", "tracker_id": "M12B-O015"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P015-E001", "paper_tracker_id": "M12A-P015", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T007", "tracker_id": "M12B-O015"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1344,7 +1344,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P016-E001", "paper_tracker_id": "M12A-P016", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T008", "tracker_id": "M12B-O016"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P016-E001", "paper_tracker_id": "M12A-P016", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T008", "tracker_id": "M12B-O016"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1362,19 +1362,19 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'TLR2 agonist Pam3CSK4 dose-response testing after SCI tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: ODC dataset row from prior audit; TLR agonist/dose-response comparator for innate immune conditioning.',
+    'TLR2 agonist Pam3CSK4 dose-response testing after SCI tested or summarized Endotoxin/LPS or innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: ODC dataset row from prior audit; TLR agonist/dose-response comparator for innate immune conditioning.',
     'qualitative',
-    'TLR2 agonist Pam3CSK4 dose-response testing after SCI tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: ODC dataset row from prior audit; TLR agonist/dose-response comparator for innate immune conditioning.',
-    'low-dose or repeated lps / innate agonist conditioning',
+    'TLR2 agonist Pam3CSK4 dose-response testing after SCI tested or summarized Endotoxin/LPS or innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: ODC dataset row from prior audit; TLR agonist/dose-response comparator for innate immune conditioning.',
+    'endotoxin/lps or innate agonist conditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P017-E001", "paper_tracker_id": "M12A-P017", "quantitative": "YES", "statistics_reported": "ODC dataset row from prior audit; TLR agonist/dose-response comparator for innate immune conditioning.", "topic_id": "M12B-T001", "tracker_id": "M12B-O017"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P017-E001", "paper_tracker_id": "M12A-P017", "quantitative": "YES", "statistics_reported": "ODC dataset row from prior audit; TLR agonist/dose-response comparator for innate immune conditioning.", "topic_id": "M12B-T001", "tracker_id": "M12B-O017"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M12A-P017::M12A-P017-E001'
-    AND et.evidence_type_name = 'Direct SCI LPS evidence'
+    AND et.evidence_type_name = 'SCI innate-conditioning evidence'
     AND ot.outcome_type_name = 'Innate immune conditioning / protection'
   RETURNING observation_id
 )
@@ -1387,19 +1387,19 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'TLR2 and TLR4 agonist testing in SCI tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: ODC dataset row from prior audit; innate agonist boundary requiring source extraction.',
+    'TLR2 and TLR4 agonist testing in SCI tested or summarized Endotoxin/LPS or innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: ODC dataset row from prior audit; innate agonist boundary requiring source extraction.',
     'qualitative',
-    'TLR2 and TLR4 agonist testing in SCI tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: ODC dataset row from prior audit; innate agonist boundary requiring source extraction.',
-    'low-dose or repeated lps / innate agonist conditioning',
+    'TLR2 and TLR4 agonist testing in SCI tested or summarized Endotoxin/LPS or innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: ODC dataset row from prior audit; innate agonist boundary requiring source extraction.',
+    'endotoxin/lps or innate agonist conditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P018-E001", "paper_tracker_id": "M12A-P018", "quantitative": "YES", "statistics_reported": "ODC dataset row from prior audit; innate agonist boundary requiring source extraction.", "topic_id": "M12B-T002", "tracker_id": "M12B-O018"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P018-E001", "paper_tracker_id": "M12A-P018", "quantitative": "YES", "statistics_reported": "ODC dataset row from prior audit; innate agonist boundary requiring source extraction.", "topic_id": "M12B-T002", "tracker_id": "M12B-O018"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M12A-P018::M12A-P018-E001'
-    AND et.evidence_type_name = 'Direct SCI LPS evidence'
+    AND et.evidence_type_name = 'SCI innate-conditioning evidence'
     AND ot.outcome_type_name = 'Innate immune conditioning / protection'
   RETURNING observation_id
 )
@@ -1412,19 +1412,19 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Systemic LPS drives microglia-mediated perineuronal net degradation after cervical SCI tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: ODC dataset row from prior audit; systemic LPS after cervical SCI and PNN/plasticity endpoint.',
+    'Systemic LPS drives microglia-mediated perineuronal net degradation after cervical SCI tested or summarized Endotoxin/LPS or innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: ODC dataset row from prior audit; systemic LPS after cervical SCI and PNN/plasticity endpoint.',
     'qualitative',
-    'Systemic LPS drives microglia-mediated perineuronal net degradation after cervical SCI tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: ODC dataset row from prior audit; systemic LPS after cervical SCI and PNN/plasticity endpoint.',
-    'low-dose or repeated lps / innate agonist conditioning',
+    'Systemic LPS drives microglia-mediated perineuronal net degradation after cervical SCI tested or summarized Endotoxin/LPS or innate agonist conditioning in Traumatic SCI or post-SCI host response model; first-pass note: ODC dataset row from prior audit; systemic LPS after cervical SCI and PNN/plasticity endpoint.',
+    'endotoxin/lps or innate agonist conditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P019-E001", "paper_tracker_id": "M12A-P019", "quantitative": "YES", "statistics_reported": "ODC dataset row from prior audit; systemic LPS after cervical SCI and PNN/plasticity endpoint.", "topic_id": "M12B-T003", "tracker_id": "M12B-O019"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P019-E001", "paper_tracker_id": "M12A-P019", "quantitative": "YES", "statistics_reported": "ODC dataset row from prior audit; systemic LPS after cervical SCI and PNN/plasticity endpoint.", "topic_id": "M12B-T003", "tracker_id": "M12B-O019"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M12A-P019::M12A-P019-E001'
-    AND et.evidence_type_name = 'Direct SCI LPS evidence'
+    AND et.evidence_type_name = 'SCI innate-conditioning evidence'
     AND ot.outcome_type_name = 'Innate immune conditioning / protection'
   RETURNING observation_id
 )
@@ -1444,7 +1444,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P020-E001", "paper_tracker_id": "M12A-P020", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T004", "tracker_id": "M12B-O020"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P020-E001", "paper_tracker_id": "M12A-P020", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T004", "tracker_id": "M12B-O020"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1469,7 +1469,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P021-E001", "paper_tracker_id": "M12A-P021", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T005", "tracker_id": "M12B-O021"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P021-E001", "paper_tracker_id": "M12A-P021", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T005", "tracker_id": "M12B-O021"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1494,7 +1494,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P022-E001", "paper_tracker_id": "M12A-P022", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T006", "tracker_id": "M12B-O022"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P022-E001", "paper_tracker_id": "M12A-P022", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T006", "tracker_id": "M12B-O022"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1519,7 +1519,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P023-E001", "paper_tracker_id": "M12A-P023", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T007", "tracker_id": "M12B-O023"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P023-E001", "paper_tracker_id": "M12A-P023", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or project-anchor row; exact quantitative estimates not extracted", "topic_id": "M12B-T007", "tracker_id": "M12B-O023"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1537,14 +1537,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Revised Specific Aims Preconditioning Logic tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Review, project, or mechanism anchor; first-pass note: Project logic anchor: low-dose LPS is a discovery platform to define endogenous protective programs, not a clinical therapeutic.',
+    'Revised Specific Aims Preconditioning Logic tested or summarized Endotoxin/LPS or innate agonist conditioning in Review, project, or mechanism anchor; first-pass note: Project logic anchor: innate immune conditioning is broader than LPS; endotoxin/LPS is one discovery platform, not a clinical therapeutic.',
     'qualitative',
-    'Revised Specific Aims Preconditioning Logic tested or summarized Low-dose or repeated LPS / innate agonist conditioning in Review, project, or mechanism anchor; first-pass note: Project logic anchor: low-dose LPS is a discovery platform to define endogenous protective programs, not a clinical therapeutic.',
-    'low-dose or repeated lps / innate agonist conditioning',
+    'Revised Specific Aims Preconditioning Logic tested or summarized Endotoxin/LPS or innate agonist conditioning in Review, project, or mechanism anchor; first-pass note: Project logic anchor: innate immune conditioning is broader than LPS; endotoxin/LPS is one discovery platform, not a clinical therapeutic.',
+    'endotoxin/lps or innate agonist conditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve LPS discovery-platform, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P024-E001", "paper_tracker_id": "M12A-P024", "quantitative": "YES", "statistics_reported": "Project logic anchor: low-dose LPS is a discovery platform to define endogenous protective programs, not a clinical therapeutic.", "topic_id": "M12B-T008", "tracker_id": "M12B-O024"}'
+    '{"curator_notes": "Preserve innate-conditioning stimulus, timing, cell-population, and endpoint boundaries.", "experiment_tracker_id": "M12A-P024-E001", "paper_tracker_id": "M12A-P024", "quantitative": "YES", "statistics_reported": "Project logic anchor: innate immune conditioning is broader than LPS; endotoxin/LPS is one discovery platform, not a clinical therapeutic.", "topic_id": "M12B-T008", "tracker_id": "M12B-O024"}'
   FROM _m12_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1696,7 +1696,7 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI LPS preconditioning evidence.',
+    'Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI innate-conditioning evidence.',
     'boundary condition',
     'medium',
     'Module 12A tracker / source-page, full-text PMC, database, or project metadata',
@@ -1713,7 +1713,7 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Post-injury or chronic LPS rows indicate inducible spinal plasticity and microglial-state shifts, but should not be merged with pre-injury conditioning rows.',
+    'Post-injury or chronic innate-stimulation rows indicate inducible spinal plasticity and microglial-state shifts, but should not be merged with pre-injury or peri-procedural conditioning rows.',
     'boundary condition',
     'medium',
     'Module 12A tracker / source-page, full-text PMC, database, or project metadata',
@@ -1730,7 +1730,7 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI LPS preconditioning evidence.',
+    'Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI innate-conditioning evidence.',
     'boundary condition',
     'medium',
     'Module 12A tracker / source-page, full-text PMC, database, or project metadata',
@@ -1764,7 +1764,7 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI LPS preconditioning evidence.',
+    'Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI innate-conditioning evidence.',
     'boundary condition',
     'high',
     'Module 12A tracker / source-page, full-text PMC, database, or project metadata',
@@ -1781,7 +1781,7 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI LPS preconditioning evidence.',
+    'Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI innate-conditioning evidence.',
     'boundary condition',
     'medium',
     'Module 12A tracker / source-page, full-text PMC, database, or project metadata',
@@ -1798,7 +1798,7 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI LPS preconditioning evidence.',
+    'Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI innate-conditioning evidence.',
     'boundary condition',
     'medium',
     'Module 12A tracker / source-page, full-text PMC, database, or project metadata',
@@ -1815,7 +1815,7 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI LPS preconditioning evidence.',
+    'Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI innate-conditioning evidence.',
     'boundary condition',
     'medium',
     'Module 12A tracker / source-page, full-text PMC, database, or project metadata',
@@ -1832,7 +1832,7 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI LPS preconditioning evidence.',
+    'Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI innate-conditioning evidence.',
     'boundary condition',
     'medium',
     'Module 12A tracker / source-page, full-text PMC, database, or project metadata',
@@ -1849,7 +1849,7 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI LPS preconditioning evidence.',
+    'Comparator conditioning evidence supports mechanism generation but cannot substitute for direct traumatic SCI innate-conditioning evidence.',
     'boundary condition',
     'medium',
     'Module 12A tracker / source-page, full-text PMC, database, or project metadata',
@@ -1866,7 +1866,7 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Post-injury or chronic LPS rows indicate inducible spinal plasticity and microglial-state shifts, but should not be merged with pre-injury conditioning rows.',
+    'Post-injury or chronic innate-stimulation rows indicate inducible spinal plasticity and microglial-state shifts, but should not be merged with pre-injury or peri-procedural conditioning rows.',
     'boundary condition',
     'medium',
     'Module 12A tracker / source-page, full-text PMC, database, or project metadata',
@@ -1951,7 +1951,7 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Project logic frames low-dose LPS as a discovery platform for endogenous protective programs, not as a direct clinical therapeutic.',
+    'Project logic frames innate immune conditioning broadly, with LPS as one discovery platform for endogenous protective programs rather than a direct clinical therapeutic.',
     'boundary condition',
     'medium',
     'Module 12A tracker / source-page, full-text PMC, database, or project metadata',
@@ -2638,7 +2638,7 @@ INSERT INTO _m12_link_map (tracker_id, link_id) SELECT 'M12B-L056', link_id FROM
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Low-dose LPS preconditioning is consensus-ready as a mechanistic discovery model for SCI because timed innate stimulation can shift resident and recruited immune responses toward protective programs; it should not be summarized as simple inflammatory suppression.',
+    'Innate immune conditioning is consensus-ready as a mechanistic discovery framework for SCI because timed host stimulation can shift resident and recruited immune responses toward protective programs; LPS is one anchor stimulus, and the result should not be summarized as simple inflammatory suppression.',
     'M12B-T001',
     1,
     'consensus-ready first pass',
@@ -2669,7 +2669,7 @@ WHERE c.tracker_id = 'M12B-S001';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Repeated systemic LPS can induce a protective spinal microglia-endothelial state in spinal ischemia contexts, with IL-1/IL-1R1 signaling and injection schedule acting as essential boundaries for interpreting protection.',
+    'Repeated systemic innate stimulation can induce protective spinal microglia-endothelial states in spinal ischemia contexts, with stimulus schedule, endothelial/microglial compartment, and IL-1/IL-1R1 signaling acting as essential boundaries for interpreting protection.',
     'M12B-T002',
     1,
     'consensus-ready first pass',
@@ -2700,7 +2700,7 @@ WHERE c.tracker_id = 'M12B-S002';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'TLR4 and innate-adaptor routing determine whether stimulation becomes protective tolerance or damaging inflammation; TRIF/IRF3, MyD88/CXCL10, IL-10, IL-1, NF-kB, and caspase boundaries must be retained.',
+    'Innate-adaptor and cytokine routing determine whether stimulation becomes protective tolerance, trained repair competence, or damaging inflammation; TRIF/IRF3, MyD88/CXCL10, IL-10, IL-1, NF-kB, caspase, and non-TLR innate boundaries must be retained.',
     'M12B-T003',
     1,
     'consensus-ready first pass',
@@ -2793,7 +2793,7 @@ WHERE c.tracker_id = 'M12B-S005';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Post-injury or chronic LPS studies reveal inducible spinal plasticity and microglial-state capacity, but they should be treated as boundary and comparator evidence unless the experiment tests pre-injury conditioning timing.',
+    'Post-injury or chronic innate stimulation studies reveal inducible spinal plasticity and microglial-state capacity, but they should be treated as boundary and comparator evidence unless the experiment tests pre-injury or peri-procedural conditioning timing.',
     'M12B-T006',
     1,
     'consensus-ready first pass',
@@ -2855,7 +2855,7 @@ WHERE c.tracker_id = 'M12B-S007';
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
-    'Module 12 should be used to identify endogenous protective programs and safer host-conditioning analogs. LPS remains a discovery platform for Aim 1 biology, not a proposed clinical conditioning agent before implantation or reconstruction.',
+    'Module 12 should be used to identify endogenous protective programs and safer host-conditioning analogs across innate immune tolerance, trained/tolerized states, microbiome/systemic inflammatory priming, monocyte/endothelial signaling, and TLR/non-TLR agonist biology. LPS remains one discovery platform for Aim 1 biology, not a proposed clinical conditioning agent before implantation or reconstruction.',
     'M12B-T008',
     1,
     'consensus-ready first pass',

@@ -126,8 +126,8 @@ mSCIdblit/
 │   ├── Module_10B_TRACKER.md         # SCI clinical trials evidence consolidation
 │   ├── Module_11A_TRACKER.md         # Spinal cord ischemic conditioning in cardiac/aortic surgery tracker
 │   ├── Module_11B_TRACKER.md         # Spinal cord ischemic conditioning evidence consolidation
-│   ├── Module_12A_TRACKER.md         # LPS and innate immune preconditioning tracker
-│   └── Module_12B_TRACKER.md         # LPS/innate preconditioning evidence consolidation
+│   ├── Module_12A_TRACKER.md         # Innate immune conditioning and tolerance tracker
+│   └── Module_12B_TRACKER.md         # Innate conditioning evidence consolidation
 ├── CONTRIBUTING.md                    # Scientific curation protocol
 └── README.md                          # This file
 ```

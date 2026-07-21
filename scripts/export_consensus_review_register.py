@@ -81,8 +81,8 @@ MODULE_REVIEW_NOTES = {
     },
     "12b": {
         "review_status": "CONSENSUS-READY FIRST PASS",
-        "module_action": "Keep low-dose LPS as discovery platform; route translational claims through safer host-conditioning analogs.",
-        "priority": "promote after full-text confidence upgrade of direct LPS anchors",
+        "module_action": "Keep innate immune conditioning broad; treat endotoxin/LPS as one discovery platform and route translational claims through safer host-conditioning analogs.",
+        "priority": "promote after full-text confidence upgrade of direct innate-conditioning anchors",
     },
 }
 
@@ -240,7 +240,7 @@ def render_markdown(register: dict[str, Any]) -> str:
                 ["1", "Module 1B", "Use as the completed reference style for final consensus wording and materialized evidence."],
                 ["2", "Modules 2B-7B", "These are closest to biological/reconstructive synthesis and should be polished into final consensus statements first."],
                 ["3", "Modules 8B-10B", "These are model-system and clinical-trial ontology layers; rewrite generic boundary drafts into operational rules."],
-                ["4", "Modules 11B-12B", "These support conditioning logic; refine perioperative ischemia and LPS discovery-platform boundaries before grant-facing use."],
+                ["4", "Modules 11B-12B", "These support conditioning logic; refine perioperative ischemia and innate-conditioning discovery-platform boundaries before grant-facing use."],
             ],
         ),
         "",
