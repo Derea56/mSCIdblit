@@ -30,6 +30,8 @@ This roadmap keeps saturation modules separate from evidence-consolidation modul
 | Module 11B | Spinal cord ischemic conditioning evidence consolidation | Observation and claim linkage | CONSENSUS-READY FIRST PASS | 32 observations, 32 author/registry claims, 72 evidence links, 8 boundary records, and 8 consensus-ready perioperative ischemia-protection statements from the Module 11A corpus |
 | Module 12A | Innate immune conditioning and tolerance biology | Corpus saturation | SATURATED / FROZEN FIRST PASS | 24-source first-pass corpus spanning innate immune conditioning, endotoxin/LPS tolerance, repeated systemic innate stimulation, TLR/adaptor mechanisms, peripheral immune/endothelial regulatory nodes, SCI innate repair boundaries, ODC-SCI candidates, non-SCI comparators, and safer translational alternatives |
 | Module 12B | Innate conditioning evidence consolidation | Observation and claim linkage | CONSENSUS-READY FIRST PASS | 24 observations, 24 author/project/database claims, 56 evidence links, 8 boundary records, and 8 consensus-ready statements preserving stimulus, timing, cell-compartment, model, and translation boundaries |
+| Module 13A | Traumatic SCI pathobiology and chronic lesion formation | Corpus saturation | PLANNED / NOT YET SATURATED | New temporal bridge module tracking how primary traumatic SCI evolves through secondary injury, vascular failure, inflammation, glial/fibrotic scar formation, demyelination, axon degeneration, cavitation, and remodeling into the chronic lesion architecture captured in Module 1 |
+| Module 13B | Traumatic SCI pathobiology evidence consolidation | Observation and claim linkage | PLANNED / WAITING FOR MODULE 13A SATURATION | Will extract atomic observations, author claims, evidence links, boundary records, and consensus statements after Module 13A is saturated |
 
 ## Saturation Rule
 
@@ -38,6 +40,10 @@ A topic is considered practically saturated when two consecutive targeted search
 ## Module Naming Rule
 
 `A` modules are corpus-building and experiment-extraction modules. Follow-on `B` modules consolidate observations, author claims, evidence links, contradiction groups, and consensus readiness after the corresponding `A` module reaches practical saturation.
+
+## Logical Ordering Note
+
+Module numbering reflects when topics were added. Conceptually, Module 13 sits upstream of Module 1: traumatic SCI pathobiology explains the acute-to-chronic trajectory that produces the chronic lesion architecture described in Module 1.
 
 ## Module 1 Freeze Note
 
