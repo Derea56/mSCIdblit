@@ -1,8 +1,8 @@
 {
   "status": "cross-module consensus review register",
   "generated_from": "validated B-tracker evidence bundles",
-  "module_count": 13,
-  "consensus_count": 104,
+  "module_count": 14,
+  "consensus_count": 112,
   "module_rows": [
     {
       "module_key": "1b",
@@ -172,6 +172,19 @@
       "consensus_drafts": 8,
       "module_action": "Use as the injury-to-chronic-lesion bridge; preserve timing, model severity, vascular, immune, glial, stromal, axon/myelin, and cavitation boundaries.",
       "priority": "promote after full-text confidence upgrade of key vascular, scar, and degeneration anchors"
+    },
+    {
+      "module_key": "14b",
+      "module": "Module 14B",
+      "source_tracker": "modules/Module_14B_TRACKER.md",
+      "review_status": "CONSENSUS-READY FIRST PASS",
+      "observations": 16,
+      "author_claims": 16,
+      "evidence_links": 40,
+      "boundary_records": 8,
+      "consensus_drafts": 8,
+      "module_action": "Keep CRISPR epigenome editing separate from permanent genome editing; preserve effector, target, cell type, delivery, chromatin-state, and neuroregeneration endpoint boundaries.",
+      "priority": "promote after full-text confidence upgrade of PTEN dCas9-KRAB, neuronal CRISPRa, and injury-enhancer anchors"
     }
   ],
   "consensus_rows": [
@@ -4568,6 +4581,334 @@
         "M13B-B006",
         "M13B-B007",
         "M13B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 2,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "high": 2,
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "14b",
+      "module": "Module 14B",
+      "consensus_id": "M14B-S001",
+      "topic_id": "M14B-T001",
+      "statement": "CRISPR/dCas9 epigenome editing is consensus-ready as a regeneration-relevant regulatory strategy because dCas9-KRAB can repress PTEN in neural cells, induce local repressive chromatin marks, and improve neurite outgrowth; however, this direct evidence is still primarily in vitro and should not be overstated as in vivo SCI efficacy.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M14B-O001",
+        "M14B-O002",
+        "M14B-O003"
+      ],
+      "supporting_claims": [
+        "M14B-C001",
+        "M14B-C002",
+        "M14B-C003"
+      ],
+      "boundary_records": [
+        "M14B-B001",
+        "M14B-B002",
+        "M14B-B003",
+        "M14B-B004",
+        "M14B-B005",
+        "M14B-B006",
+        "M14B-B007",
+        "M14B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 1,
+        "medium": 2
+      },
+      "claim_confidence": {
+        "high": 1,
+        "medium": 2
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "14b",
+      "module": "Module 14B",
+      "consensus_id": "M14B-S002",
+      "topic_id": "M14B-T002",
+      "statement": "Neuron-optimized CRISPRa/i systems provide a practical platform for tunable endogenous gene regulation in post-mitotic neural cells, including promoter-selective and multiplexed activation, but each claim must preserve vector, cell type, guide, expression, and in vivo/in vitro boundaries.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M14B-O002",
+        "M14B-O003",
+        "M14B-O004"
+      ],
+      "supporting_claims": [
+        "M14B-C002",
+        "M14B-C003",
+        "M14B-C004"
+      ],
+      "boundary_records": [
+        "M14B-B001",
+        "M14B-B002",
+        "M14B-B003",
+        "M14B-B004",
+        "M14B-B005",
+        "M14B-B006",
+        "M14B-B007",
+        "M14B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 2,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "high": 2,
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "14b",
+      "module": "Module 14B",
+      "consensus_id": "M14B-S003",
+      "topic_id": "M14B-T003",
+      "statement": "CRISPR epigenome editing should be organized by effector mechanism rather than by the word CRISPR alone: repression, activation, acetylation, methylation, demethylation, and scaffolded activator systems produce different chromatin states, durations, and safety questions.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M14B-O003",
+        "M14B-O004",
+        "M14B-O005"
+      ],
+      "supporting_claims": [
+        "M14B-C003",
+        "M14B-C004",
+        "M14B-C005"
+      ],
+      "boundary_records": [
+        "M14B-B001",
+        "M14B-B002",
+        "M14B-B003",
+        "M14B-B004",
+        "M14B-B005",
+        "M14B-B006",
+        "M14B-B007",
+        "M14B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 2,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "high": 2,
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "14b",
+      "module": "Module 14B",
+      "consensus_id": "M14B-S004",
+      "topic_id": "M14B-T004",
+      "statement": "SCI and CNS injury epigenetic maps are useful for nominating regulatory targets because injury changes chromatin, enhancer activity, glial activation, neurogenesis, and axon-growth programs, but map evidence must be followed by perturbation before causal repair claims.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M14B-O006",
+        "M14B-O007",
+        "M14B-O008"
+      ],
+      "supporting_claims": [
+        "M14B-C006",
+        "M14B-C007",
+        "M14B-C008"
+      ],
+      "boundary_records": [
+        "M14B-B001",
+        "M14B-B002",
+        "M14B-B003",
+        "M14B-B004",
+        "M14B-B005",
+        "M14B-B006",
+        "M14B-B007",
+        "M14B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 2,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "high": 2,
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "14b",
+      "module": "Module 14B",
+      "consensus_id": "M14B-S005",
+      "topic_id": "M14B-T005",
+      "statement": "Injury-responsive enhancers create an important bridge between epigenome editing and cell-state specificity: they may help target reactive CNS states such as astrocytes after SCI, but enhancer targeting is a delivery/regulatory specificity claim until linked to repair endpoints.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M14B-O007",
+        "M14B-O008"
+      ],
+      "supporting_claims": [
+        "M14B-C007",
+        "M14B-C008"
+      ],
+      "boundary_records": [
+        "M14B-B001",
+        "M14B-B002",
+        "M14B-B003",
+        "M14B-B004",
+        "M14B-B005",
+        "M14B-B006",
+        "M14B-B007",
+        "M14B-B008"
+      ],
+      "observation_count": 2,
+      "claim_count": 2,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 1,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "high": 1,
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "14b",
+      "module": "Module 14B",
+      "consensus_id": "M14B-S006",
+      "topic_id": "M14B-T006",
+      "statement": "Neuroregeneration screens and intrinsic-growth target studies identify candidate loci for CRISPRi/a, including PTEN/KLF-style repression and regeneration-associated gene activation, but target discovery is not equivalent to dCas9 epigenome-editing efficacy.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M14B-O009",
+        "M14B-O010"
+      ],
+      "supporting_claims": [
+        "M14B-C009",
+        "M14B-C010"
+      ],
+      "boundary_records": [
+        "M14B-B001",
+        "M14B-B002",
+        "M14B-B003",
+        "M14B-B004",
+        "M14B-B005",
+        "M14B-B006",
+        "M14B-B007",
+        "M14B-B008"
+      ],
+      "observation_count": 2,
+      "claim_count": 2,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 1,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "high": 1,
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "14b",
+      "module": "Module 14B",
+      "consensus_id": "M14B-S007",
+      "topic_id": "M14B-T007",
+      "statement": "CNS delivery and safety are central boundaries for CRISPR epigenome editing: vector capacity, cell specificity, immune response, off-target regulation, expression duration, reversibility, and durability must be recorded before translational neuroregeneration claims.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M14B-O011",
+        "M14B-O012",
+        "M14B-O013",
+        "M14B-O014",
+        "M14B-O015"
+      ],
+      "supporting_claims": [
+        "M14B-C011",
+        "M14B-C012",
+        "M14B-C013",
+        "M14B-C014",
+        "M14B-C015"
+      ],
+      "boundary_records": [
+        "M14B-B001",
+        "M14B-B002",
+        "M14B-B003",
+        "M14B-B004",
+        "M14B-B005",
+        "M14B-B006",
+        "M14B-B007",
+        "M14B-B008"
+      ],
+      "observation_count": 5,
+      "claim_count": 5,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 1,
+        "medium": 4
+      },
+      "claim_confidence": {
+        "high": 1,
+        "medium": 4
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "14b",
+      "module": "Module 14B",
+      "consensus_id": "M14B-S008",
+      "topic_id": "M14B-T008",
+      "statement": "Module 14 should be used as a programmable regulatory-editing layer for neuroregeneration: candidate experiments should specify target locus, effector, guide design, delivery vehicle, target cell, chromatin state, model, and endpoint before linking CRISPR epigenome editing to SCI reconstruction, conditioning, graft integration, or axon repair.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M14B-O014",
+        "M14B-O015",
+        "M14B-O016"
+      ],
+      "supporting_claims": [
+        "M14B-C014",
+        "M14B-C015",
+        "M14B-C016"
+      ],
+      "boundary_records": [
+        "M14B-B001",
+        "M14B-B002",
+        "M14B-B003",
+        "M14B-B004",
+        "M14B-B005",
+        "M14B-B006",
+        "M14B-B007",
+        "M14B-B008"
       ],
       "observation_count": 3,
       "claim_count": 3,

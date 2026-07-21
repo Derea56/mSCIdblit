@@ -2,7 +2,7 @@
 
 **Status**: first-pass synthesis from the consensus review register.
 
-**Scope**: Modules 1B-13B, organized around the revised preconditioning and reconstruction aims.
+**Scope**: Modules 1B-14B, organized around the revised preconditioning and reconstruction aims.
 
 **Use**: grant-facing logic layer and database navigation aid; not a final quantitative meta-analysis.
 
@@ -84,19 +84,19 @@ The preconditioning logic is therefore defensible as a discovery and validation 
 
 **Aim alignment**: Aim 1B and Aim 3
 
-**Modules**: Module 2B, Module 3B, Module 4B, Module 5B, Module 7B, Module 9B, Module 12B
+**Modules**: Module 2B, Module 3B, Module 4B, Module 5B, Module 7B, Module 9B, Module 12B, Module 14B
 
-**Core consensus IDs**: M2B-S002, M2B-S003, M2B-S007, M3B-S007, M4B-S006, M5B-S006, M7B-S008, M9B-S006, M12B-S007
+**Core consensus IDs**: M2B-S002, M2B-S003, M2B-S007, M3B-S007, M4B-S006, M5B-S006, M7B-S008, M9B-S006, M12B-S007, M14B-S008
 
-**Evidence footprint**: 457 observations / 225 claims / 432 links / 56 boundaries / 56 consensus drafts across participating modules.
+**Evidence footprint**: 473 observations / 241 claims / 472 links / 64 boundaries / 64 consensus drafts across participating modules.
 
-**Observation confidence in core consensus**: high: 1, low: 30, medium: 60.
+**Observation confidence in core consensus**: high: 3, low: 30, medium: 61.
 
-**Synthesis statement**: Most biomaterial, cell, cargo, vesicle, and stimulation strategies should be treated as combined repair systems unless experiments isolate each component. The database should therefore preserve material architecture, cell identity, payload, release kinetics, lesion preparation, host state, and validation model before making causal claims.
+**Synthesis statement**: Most biomaterial, cell, cargo, vesicle, and stimulation strategies should be treated as combined repair systems unless experiments isolate each component. The database should therefore preserve material architecture, cell identity, payload, release kinetics, lesion preparation, host state, regulatory-editing target, and validation model before making causal claims.
 
 **Evidence Ladder**
 
-- Observations: scaffold, cell-transplant, immune-delivery, and axon-repair rows often combine architecture, cells, trophic cargo, immunomodulation, and stimulation.
+- Observations: scaffold, cell-transplant, immune-delivery, regulatory-editing, and axon-repair rows often combine architecture, cells, trophic cargo, immunomodulation, target regulation, and stimulation.
 - Author claims: many papers interpret bundled interventions as repair-promoting, but component attribution is often not isolated.
 - Consensus: Modules 2, 4, and 5 agree that scaffold-cell-graft-regeneration claims require component and endpoint separation.
 
@@ -117,15 +117,15 @@ The preconditioning logic is therefore defensible as a discovery and validation 
 
 **Aim alignment**: Aim 2 and Aim 3
 
-**Modules**: Module 1B, Module 2B, Module 4B, Module 5B, Module 6B, Module 8B, Module 10B, Module 13B
+**Modules**: Module 1B, Module 2B, Module 4B, Module 5B, Module 6B, Module 8B, Module 10B, Module 13B, Module 14B
 
-**Core consensus IDs**: M1B-S006, M2B-S003, M4B-S002, M4B-S004, M5B-S001, M5B-S003, M5B-S004, M6B-S005, M8B-S006, M10B-S007, M13B-S003
+**Core consensus IDs**: M1B-S006, M2B-S003, M4B-S002, M4B-S004, M5B-S001, M5B-S003, M5B-S004, M6B-S005, M8B-S006, M10B-S007, M13B-S003, M14B-S006
 
-**Evidence footprint**: 529 observations / 274 claims / 611 links / 63 boundaries / 64 consensus drafts across participating modules.
+**Evidence footprint**: 545 observations / 290 claims / 651 links / 71 boundaries / 72 consensus drafts across participating modules.
 
-**Observation confidence in core consensus**: high: 11, low: 19, medium: 76.
+**Observation confidence in core consensus**: high: 12, low: 19, medium: 77.
 
-**Synthesis statement**: SCI repair cannot be summarized by a single recovery axis. Axon growth, sprouting, remyelination, white-matter preservation, graft integration, relay formation, electrophysiology, imaging biomarkers, and behavior are related but non-interchangeable endpoint families.
+**Synthesis statement**: SCI repair cannot be summarized by a single recovery axis. Axon growth, sprouting, remyelination, white-matter preservation, graft integration, target-gene regulation, relay formation, electrophysiology, imaging biomarkers, and behavior are related but non-interchangeable endpoint families.
 
 **Evidence Ladder**
 
@@ -150,19 +150,19 @@ The preconditioning logic is therefore defensible as a discovery and validation 
 
 **Aim alignment**: Aim 1A, Aim 1B, Aim 2, and Aim 3
 
-**Modules**: Module 8B, Module 9B, Module 10B, Module 11B, Module 12B
+**Modules**: Module 8B, Module 9B, Module 10B, Module 11B, Module 12B, Module 14B
 
-**Core consensus IDs**: M8B-S001, M8B-S002, M8B-S004, M8B-S008, M9B-S001, M9B-S003, M9B-S008, M10B-S003, M11B-S003, M12B-S007
+**Core consensus IDs**: M8B-S001, M8B-S002, M8B-S004, M8B-S008, M9B-S001, M9B-S003, M9B-S008, M10B-S003, M11B-S003, M12B-S007, M14B-S002, M14B-S007
 
-**Evidence footprint**: 167 observations / 125 claims / 324 links / 40 boundaries / 40 consensus drafts across participating modules.
+**Evidence footprint**: 183 observations / 141 claims / 364 links / 48 boundaries / 48 consensus drafts across participating modules.
 
-**Observation confidence in core consensus**: medium: 27.
+**Observation confidence in core consensus**: high: 3, medium: 32.
 
-**Synthesis statement**: Model choice is not background metadata; it filters what any observation can mean. In vivo, in vitro, registry, ischemia-conditioning, and innate-stimulation systems answer different questions and should be used as a ladder from discovery to validation to translation.
+**Synthesis statement**: Model and tool choice are not background metadata; they filter what any observation can mean. In vivo, in vitro, registry, ischemia-conditioning, innate-stimulation, and CRISPR epigenome-editing systems answer different questions and should be used as a ladder from discovery to validation to translation.
 
 **Evidence Ladder**
 
-- Observations: Module 8 and 9 define in vivo and in vitro model fields; Modules 10-12 define clinical, ischemia, and innate-conditioning evidence roles.
+- Observations: Module 8 and 9 define in vivo and in vitro model fields; Modules 10-12 define clinical, ischemia, and innate-conditioning evidence roles; Module 14 defines programmable regulatory-editing tool boundaries.
 - Author claims: model-system claims are often broad, but the consensus layer converts them into operational model-selection rules.
 - Consensus: model modules support structured evidence use rather than pooled model-agnostic conclusions.
 
@@ -183,21 +183,21 @@ The preconditioning logic is therefore defensible as a discovery and validation 
 
 **Aim alignment**: Integrated aims logic
 
-**Modules**: Module 1B, Module 2B, Module 3B, Module 4B, Module 5B, Module 7B, Module 9B, Module 11B, Module 12B, Module 13B
+**Modules**: Module 1B, Module 2B, Module 3B, Module 4B, Module 5B, Module 7B, Module 9B, Module 11B, Module 12B, Module 13B, Module 14B
 
-**Core consensus IDs**: M1B-S008, M2B-S005, M3B-S008, M4B-S008, M5B-S008, M7B-S008, M9B-S008, M11B-S008, M12B-S008, M13B-S008
+**Core consensus IDs**: M1B-S008, M2B-S005, M3B-S008, M4B-S008, M5B-S008, M7B-S008, M9B-S008, M11B-S008, M12B-S008, M13B-S008, M14B-S008
 
-**Evidence footprint**: 606 observations / 331 claims / 667 links / 79 boundaries / 80 consensus drafts across participating modules.
+**Evidence footprint**: 622 observations / 347 claims / 707 links / 87 boundaries / 88 consensus drafts across participating modules.
 
-**Observation confidence in core consensus**: high: 26, low: 69, medium: 126.
+**Observation confidence in core consensus**: high: 28, low: 69, medium: 127.
 
-**Synthesis statement**: The most defensible project-level hypothesis is that conditioning can improve SCI reconstruction only if it creates a host state compatible with the target lesion anatomy, implanted material or graft, and desired endpoint family. The evidence supports a conditioning-discovery and validation program, not an immediate universal conditioning therapy claim.
+**Synthesis statement**: The most defensible project-level hypothesis is that conditioning can improve SCI reconstruction only if it creates a host state compatible with the target lesion anatomy, implanted material or graft, and desired endpoint family. The evidence supports a conditioning-discovery, programmable regulatory-editing, and validation program, not an immediate universal conditioning or gene-editing therapy claim.
 
 **Evidence Ladder**
 
 - Observations: all core modules now provide experiment-level rows and B-layer observations suitable for cross-module tracing, including the traumatic injury-to-lesion trajectory layer.
 - Author claims: repair, conditioning, graft, biomaterial, and immune claims are strongest when narrowed to model, timing, and endpoint.
-- Consensus: Modules 1-13 collectively support an aim-aligned logic of endogenous protective programs, host response modification, injury-to-lesion modification, and host-biomaterial interaction testing.
+- Consensus: Modules 1-14 collectively support an aim-aligned logic of endogenous protective programs, host response modification, injury-to-lesion modification, programmable regulatory editing, and host-biomaterial interaction testing.
 
 **Boundaries**
 
@@ -258,6 +258,7 @@ The preconditioning logic is therefore defensible as a discovery and validation 
 | CMS-T003 | M7B-S008 | Module 7B | M7B-T008 | 40 | 2 | 8 | review for final consensus wording |
 | CMS-T003 | M9B-S006 | Module 9B | M9B-T006 | 2 | 2 | 8 | review for final consensus wording |
 | CMS-T003 | M12B-S007 | Module 12B | M12B-T007 | 3 | 3 | 8 | review for final consensus wording |
+| CMS-T003 | M14B-S008 | Module 14B | M14B-T008 | 3 | 3 | 8 | review for final consensus wording |
 | CMS-T004 | M1B-S006 | Module 1B | M1B-T006 | 9 | 5 | 0 | promote after prose polish |
 | CMS-T004 | M2B-S003 | Module 2B | M2B-T003 | 9 | 0 | 0 | review for final consensus wording |
 | CMS-T004 | M4B-S002 | Module 4B | M4B-T002 | 16 | 9 | 3 | review for final consensus wording |
@@ -269,6 +270,7 @@ The preconditioning logic is therefore defensible as a discovery and validation 
 | CMS-T004 | M8B-S006 | Module 8B | M8B-T006 | 1 | 1 | 8 | review for final consensus wording |
 | CMS-T004 | M10B-S007 | Module 10B | M10B-T007 | 10 | 3 | 8 | review for final consensus wording |
 | CMS-T004 | M13B-S003 | Module 13B | M13B-T003 | 3 | 3 | 8 | review for final consensus wording |
+| CMS-T004 | M14B-S006 | Module 14B | M14B-T006 | 2 | 2 | 8 | review for final consensus wording |
 | CMS-T005 | M8B-S001 | Module 8B | M8B-T001 | 1 | 3 | 8 | review for final consensus wording |
 | CMS-T005 | M8B-S002 | Module 8B | M8B-T002 | 1 | 3 | 8 | promote as boundary consensus after wording pass |
 | CMS-T005 | M8B-S004 | Module 8B | M8B-T004 | 1 | 3 | 8 | review for final consensus wording |
@@ -279,6 +281,8 @@ The preconditioning logic is therefore defensible as a discovery and validation 
 | CMS-T005 | M10B-S003 | Module 10B | M10B-T003 | 10 | 3 | 8 | review for final consensus wording |
 | CMS-T005 | M11B-S003 | Module 11B | M11B-T003 | 4 | 4 | 8 | review for final consensus wording |
 | CMS-T005 | M12B-S007 | Module 12B | M12B-T007 | 3 | 3 | 8 | review for final consensus wording |
+| CMS-T005 | M14B-S002 | Module 14B | M14B-T002 | 3 | 3 | 8 | review for final consensus wording |
+| CMS-T005 | M14B-S007 | Module 14B | M14B-T007 | 5 | 5 | 8 | review for final consensus wording |
 | CMS-T006 | M1B-S008 | Module 1B | M1B-T008 | 9 | 6 | 1 | promote after prose polish |
 | CMS-T006 | M2B-S005 | Module 2B | M2B-T005 | 6 | 0 | 0 | promote as boundary consensus after wording pass |
 | CMS-T006 | M3B-S008 | Module 3B | M3B-T008 | 47 | 9 | 0 | review for final consensus wording |
@@ -289,3 +293,4 @@ The preconditioning logic is therefore defensible as a discovery and validation 
 | CMS-T006 | M11B-S008 | Module 11B | M11B-T008 | 4 | 4 | 8 | review for final consensus wording |
 | CMS-T006 | M12B-S008 | Module 12B | M12B-T008 | 3 | 3 | 8 | review for final consensus wording |
 | CMS-T006 | M13B-S008 | Module 13B | M13B-T008 | 3 | 3 | 8 | review for final consensus wording |
+| CMS-T006 | M14B-S008 | Module 14B | M14B-T008 | 3 | 3 | 8 | review for final consensus wording |

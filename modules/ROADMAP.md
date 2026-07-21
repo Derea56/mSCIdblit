@@ -18,7 +18,8 @@ This roadmap keeps saturation modules separate from evidence-consolidation modul
 | 10 | Module 2A/2B | Biomaterials and scaffold repair in SCI | Covers matrix, hydrogel, conduit, decellularized scaffold, and scaffold-enabled lesion repair strategies. |
 | 11 | Module 4A/4B | Cell transplantation and graft integration after SCI | Covers graft survival, integration, lineage boundaries, and scaffold-cell combinations. |
 | 12 | Module 5A/5B | Axon regeneration, remyelination, and white matter repair after SCI | Covers regenerative endpoints that repaired tissue must support. |
-| 13 | Module 10A/10B | SCI clinical trials completed or currently active | Places mechanisms and interventions against the current human translation landscape. |
+| 13 | Module 14A/14B | CRISPR-based epigenome editing for neuroregeneration | Covers programmable regulatory editing as a target-validation and repair-modulation strategy for intrinsic growth, glial state, and injury-responsive enhancers. |
+| 14 | Module 10A/10B | SCI clinical trials completed or currently active | Places mechanisms and interventions against the current human translation landscape. |
 
 ## Active and Planned Saturation Modules
 
@@ -50,6 +51,8 @@ This roadmap keeps saturation modules separate from evidence-consolidation modul
 | Module 12B | Innate conditioning evidence consolidation | Observation and claim linkage | CONSENSUS-READY FIRST PASS | 24 observations, 24 author/project/database claims, 56 evidence links, 8 boundary records, and 8 consensus-ready statements preserving stimulus, timing, cell-compartment, model, and translation boundaries |
 | Module 13A | Traumatic SCI pathobiology and chronic lesion formation | Corpus saturation | SATURATED / FROZEN FIRST PASS | 24-source first-pass corpus tracking how primary traumatic SCI evolves through secondary injury, vascular failure, inflammation, glial/fibrotic scar formation, demyelination, axon degeneration, cavitation, and remodeling into the chronic lesion architecture captured in Module 1 |
 | Module 13B | Traumatic SCI pathobiology evidence consolidation | Observation and claim linkage | CONSENSUS-READY FIRST PASS | 24 observations, 24 author claims, 56 evidence links, 8 boundary records, and 8 consensus-ready statements from the saturated Module 13A corpus |
+| Module 14A | CRISPR-based epigenome editing for neuroregeneration | Corpus saturation | SATURATED / FROZEN FIRST PASS | 16-source first-pass corpus spanning PTEN dCas9-KRAB repression, neuronal CRISPRa/i platforms, dCas9 chromatin effectors, injury-responsive enhancers, SCI epigenetic context, target-discovery comparators, and delivery/safety boundaries |
+| Module 14B | CRISPR epigenome editing evidence consolidation | Observation and claim linkage | CONSENSUS-READY FIRST PASS | 16 observations, 16 author claims, 40 evidence links, 8 boundary records, and 8 consensus-ready statements from the saturated Module 14A corpus |
 
 ## Saturation Rule
 

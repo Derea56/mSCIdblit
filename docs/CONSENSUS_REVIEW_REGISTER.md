@@ -2,7 +2,7 @@
 
 This register is the working layer for going through consensus in each module. The B trackers remain the source of truth; this file summarizes which consensus statements are ready to promote, which need wording cleanup, and which require confidence upgrades before stronger claims.
 
-**Coverage**: 13 modules, 104 consensus statements.
+**Coverage**: 14 modules, 112 consensus statements.
 
 ## Module Pass Order
 
@@ -21,6 +21,7 @@ This register is the working layer for going through consensus in each module. T
 | Module 11B | CONSENSUS-READY FIRST PASS | 32 obs / 32 claims / 72 links / 8 boundaries / 8 drafts | Rewrite perioperative ischemia-protection statements so they are not just topic labels plus caveats. | needs statement rewrite before promotion |
 | Module 12B | CONSENSUS-READY FIRST PASS | 24 obs / 24 claims / 56 links / 8 boundaries / 8 drafts | Keep innate immune conditioning broad; treat endotoxin/LPS as one discovery platform and route translational claims through safer host-conditioning analogs. | promote after full-text confidence upgrade of direct innate-conditioning anchors |
 | Module 13B | CONSENSUS-READY FIRST PASS | 24 obs / 24 claims / 56 links / 8 boundaries / 8 drafts | Use as the injury-to-chronic-lesion bridge; preserve timing, model severity, vascular, immune, glial, stromal, axon/myelin, and cavitation boundaries. | promote after full-text confidence upgrade of key vascular, scar, and degeneration anchors |
+| Module 14B | CONSENSUS-READY FIRST PASS | 16 obs / 16 claims / 40 links / 8 boundaries / 8 drafts | Keep CRISPR epigenome editing separate from permanent genome editing; preserve effector, target, cell type, delivery, chromatin-state, and neuroregeneration endpoint boundaries. | promote after full-text confidence upgrade of PTEN dCas9-KRAB, neuronal CRISPRa, and injury-enhancer anchors |
 
 ## Recommended Review Sequence
 
@@ -201,3 +202,16 @@ This register is the working layer for going through consensus in each module. T
 | M13B-S006 | M13B-T006 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | Fibrotic scar formation is a spatially organized stromal response involving heterogeneous fibroblast/perivascular/meningeal compartments and extracellular matrix programs that help define the chronic lesion core and interface. |
 | M13B-S007 | M13B-T007 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | Cavitation and chronic lesion stabilization emerge from interacting vascular, immune, glial, stromal, axon/myelin, and tissue-clearance processes; static chronic lesion anatomy should be linked back to the temporal mechanisms that formed it. |
 | M13B-S008 | M13B-T008 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | Module 13 should serve as the causal bridge between model-system selection and chronic lesion architecture: every downstream conditioning, biomaterial, cell, or axon-repair claim should specify which injury-to-lesion process it is expected to modify. |
+
+### Module 14B
+
+| Consensus | Topic | Evidence | Review Action | Statement |
+|---|---|---|---|---|
+| M14B-S001 | M14B-T001 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | CRISPR/dCas9 epigenome editing is consensus-ready as a regeneration-relevant regulatory strategy because dCas9-KRAB can repress PTEN in neural cells, induce local repressive chromatin marks, and improve neurite outgrowth; however, this direct evidence is still primarily in vitro and should not be overstated as in vivo SCI efficacy. |
+| M14B-S002 | M14B-T002 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | Neuron-optimized CRISPRa/i systems provide a practical platform for tunable endogenous gene regulation in post-mitotic neural cells, including promoter-selective and multiplexed activation, but each claim must preserve vector, cell type, guide, expression, and in vivo/in vitro boundaries. |
+| M14B-S003 | M14B-T003 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | CRISPR epigenome editing should be organized by effector mechanism rather than by the word CRISPR alone: repression, activation, acetylation, methylation, demethylation, and scaffolded activator systems produce different chromatin states, durations, and safety questions. |
+| M14B-S004 | M14B-T004 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | SCI and CNS injury epigenetic maps are useful for nominating regulatory targets because injury changes chromatin, enhancer activity, glial activation, neurogenesis, and axon-growth programs, but map evidence must be followed by perturbation before causal repair claims. |
+| M14B-S005 | M14B-T005 | 2 obs / 2 claims / 8 boundaries | review for final consensus wording | Injury-responsive enhancers create an important bridge between epigenome editing and cell-state specificity: they may help target reactive CNS states such as astrocytes after SCI, but enhancer targeting is a delivery/regulatory specificity claim until linked to repair endpoints. |
+| M14B-S006 | M14B-T006 | 2 obs / 2 claims / 8 boundaries | review for final consensus wording | Neuroregeneration screens and intrinsic-growth target studies identify candidate loci for CRISPRi/a, including PTEN/KLF-style repression and regeneration-associated gene activation, but target discovery is not equivalent to dCas9 epigenome-editing efficacy. |
+| M14B-S007 | M14B-T007 | 5 obs / 5 claims / 8 boundaries | review for final consensus wording | CNS delivery and safety are central boundaries for CRISPR epigenome editing: vector capacity, cell specificity, immune response, off-target regulation, expression duration, reversibility, and durability must be recorded before translational neuroregeneration claims. |
+| M14B-S008 | M14B-T008 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | Module 14 should be used as a programmable regulatory-editing layer for neuroregeneration: candidate experiments should specify target locus, effector, guide design, delivery vehicle, target cell, chromatin state, model, and endpoint before linking CRISPR epigenome editing to SCI reconstruction, conditioning, graft integration, or axon repair. |

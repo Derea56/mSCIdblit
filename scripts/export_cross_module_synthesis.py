@@ -90,14 +90,14 @@ THEMES = (
         theme_id="CMS-T003",
         title="Biomaterial and Cell Effects Are System-Level Claims",
         aim_alignment="Aim 1B and Aim 3",
-        module_keys=("2b", "3b", "4b", "5b", "7b", "9b", "12b"),
-        core_consensus_ids=("M2B-S002", "M2B-S003", "M2B-S007", "M3B-S007", "M4B-S006", "M5B-S006", "M7B-S008", "M9B-S006", "M12B-S007"),
+        module_keys=("2b", "3b", "4b", "5b", "7b", "9b", "12b", "14b"),
+        core_consensus_ids=("M2B-S002", "M2B-S003", "M2B-S007", "M3B-S007", "M4B-S006", "M5B-S006", "M7B-S008", "M9B-S006", "M12B-S007", "M14B-S008"),
         synthesis_statement=(
             "Most biomaterial, cell, cargo, vesicle, and stimulation strategies should be treated as combined repair systems unless experiments isolate each component. "
-            "The database should therefore preserve material architecture, cell identity, payload, release kinetics, lesion preparation, host state, and validation model before making causal claims."
+            "The database should therefore preserve material architecture, cell identity, payload, release kinetics, lesion preparation, host state, regulatory-editing target, and validation model before making causal claims."
         ),
         evidence_ladder=(
-            "Observations: scaffold, cell-transplant, immune-delivery, and axon-repair rows often combine architecture, cells, trophic cargo, immunomodulation, and stimulation.",
+            "Observations: scaffold, cell-transplant, immune-delivery, regulatory-editing, and axon-repair rows often combine architecture, cells, trophic cargo, immunomodulation, target regulation, and stimulation.",
             "Author claims: many papers interpret bundled interventions as repair-promoting, but component attribution is often not isolated.",
             "Consensus: Modules 2, 4, and 5 agree that scaffold-cell-graft-regeneration claims require component and endpoint separation.",
         ),
@@ -116,10 +116,10 @@ THEMES = (
         theme_id="CMS-T004",
         title="Repair Endpoints Must Remain Orthogonal",
         aim_alignment="Aim 2 and Aim 3",
-        module_keys=("1b", "2b", "4b", "5b", "6b", "8b", "10b", "13b"),
-        core_consensus_ids=("M1B-S006", "M2B-S003", "M4B-S002", "M4B-S004", "M5B-S001", "M5B-S003", "M5B-S004", "M6B-S005", "M8B-S006", "M10B-S007", "M13B-S003"),
+        module_keys=("1b", "2b", "4b", "5b", "6b", "8b", "10b", "13b", "14b"),
+        core_consensus_ids=("M1B-S006", "M2B-S003", "M4B-S002", "M4B-S004", "M5B-S001", "M5B-S003", "M5B-S004", "M6B-S005", "M8B-S006", "M10B-S007", "M13B-S003", "M14B-S006"),
         synthesis_statement=(
-            "SCI repair cannot be summarized by a single recovery axis. Axon growth, sprouting, remyelination, white-matter preservation, graft integration, relay formation, electrophysiology, imaging biomarkers, and behavior are related but non-interchangeable endpoint families."
+            "SCI repair cannot be summarized by a single recovery axis. Axon growth, sprouting, remyelination, white-matter preservation, graft integration, target-gene regulation, relay formation, electrophysiology, imaging biomarkers, and behavior are related but non-interchangeable endpoint families."
         ),
         evidence_ladder=(
             "Observations: modules preserve separate pathobiology, histology, imaging, behavior, electrophysiology, graft, myelin, and circuit readouts.",
@@ -141,13 +141,13 @@ THEMES = (
         theme_id="CMS-T005",
         title="Model Systems Are Evidence Filters",
         aim_alignment="Aim 1A, Aim 1B, Aim 2, and Aim 3",
-        module_keys=("8b", "9b", "10b", "11b", "12b"),
-        core_consensus_ids=("M8B-S001", "M8B-S002", "M8B-S004", "M8B-S008", "M9B-S001", "M9B-S003", "M9B-S008", "M10B-S003", "M11B-S003", "M12B-S007"),
+        module_keys=("8b", "9b", "10b", "11b", "12b", "14b"),
+        core_consensus_ids=("M8B-S001", "M8B-S002", "M8B-S004", "M8B-S008", "M9B-S001", "M9B-S003", "M9B-S008", "M10B-S003", "M11B-S003", "M12B-S007", "M14B-S002", "M14B-S007"),
         synthesis_statement=(
-            "Model choice is not background metadata; it filters what any observation can mean. In vivo, in vitro, registry, ischemia-conditioning, and innate-stimulation systems answer different questions and should be used as a ladder from discovery to validation to translation."
+            "Model and tool choice are not background metadata; they filter what any observation can mean. In vivo, in vitro, registry, ischemia-conditioning, innate-stimulation, and CRISPR epigenome-editing systems answer different questions and should be used as a ladder from discovery to validation to translation."
         ),
         evidence_ladder=(
-            "Observations: Module 8 and 9 define in vivo and in vitro model fields; Modules 10-12 define clinical, ischemia, and innate-conditioning evidence roles.",
+            "Observations: Module 8 and 9 define in vivo and in vitro model fields; Modules 10-12 define clinical, ischemia, and innate-conditioning evidence roles; Module 14 defines programmable regulatory-editing tool boundaries.",
             "Author claims: model-system claims are often broad, but the consensus layer converts them into operational model-selection rules.",
             "Consensus: model modules support structured evidence use rather than pooled model-agnostic conclusions.",
         ),
@@ -166,16 +166,16 @@ THEMES = (
         theme_id="CMS-T006",
         title="Preconditioning Hypothesis for SCI Reconstruction",
         aim_alignment="Integrated aims logic",
-        module_keys=("1b", "2b", "3b", "4b", "5b", "7b", "9b", "11b", "12b", "13b"),
-        core_consensus_ids=("M1B-S008", "M2B-S005", "M3B-S008", "M4B-S008", "M5B-S008", "M7B-S008", "M9B-S008", "M11B-S008", "M12B-S008", "M13B-S008"),
+        module_keys=("1b", "2b", "3b", "4b", "5b", "7b", "9b", "11b", "12b", "13b", "14b"),
+        core_consensus_ids=("M1B-S008", "M2B-S005", "M3B-S008", "M4B-S008", "M5B-S008", "M7B-S008", "M9B-S008", "M11B-S008", "M12B-S008", "M13B-S008", "M14B-S008"),
         synthesis_statement=(
             "The most defensible project-level hypothesis is that conditioning can improve SCI reconstruction only if it creates a host state compatible with the target lesion anatomy, implanted material or graft, and desired endpoint family. "
-            "The evidence supports a conditioning-discovery and validation program, not an immediate universal conditioning therapy claim."
+            "The evidence supports a conditioning-discovery, programmable regulatory-editing, and validation program, not an immediate universal conditioning or gene-editing therapy claim."
         ),
         evidence_ladder=(
             "Observations: all core modules now provide experiment-level rows and B-layer observations suitable for cross-module tracing, including the traumatic injury-to-lesion trajectory layer.",
             "Author claims: repair, conditioning, graft, biomaterial, and immune claims are strongest when narrowed to model, timing, and endpoint.",
-            "Consensus: Modules 1-13 collectively support an aim-aligned logic of endogenous protective programs, host response modification, injury-to-lesion modification, and host-biomaterial interaction testing.",
+            "Consensus: Modules 1-14 collectively support an aim-aligned logic of endogenous protective programs, host response modification, injury-to-lesion modification, programmable regulatory editing, and host-biomaterial interaction testing.",
         ),
         boundaries=(
             "Conditioning should not be framed as simply anti-inflammatory.",
@@ -276,7 +276,7 @@ def render_markdown(synthesis: dict[str, Any]) -> str:
         "",
         "**Status**: first-pass synthesis from the consensus review register.",
         "",
-        "**Scope**: Modules 1B-13B, organized around the revised preconditioning and reconstruction aims.",
+        "**Scope**: Modules 1B-14B, organized around the revised preconditioning and reconstruction aims.",
         "",
         "**Use**: grant-facing logic layer and database navigation aid; not a final quantitative meta-analysis.",
         "",
