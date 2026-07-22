@@ -2,7 +2,7 @@
 
 This register is the working layer for going through consensus in each module. The B trackers remain the source of truth; this file summarizes which consensus statements are ready to promote, which need wording cleanup, and which require confidence upgrades before stronger claims.
 
-**Coverage**: 14 modules, 112 consensus statements.
+**Coverage**: 15 modules, 120 consensus statements.
 
 ## Module Pass Order
 
@@ -22,6 +22,7 @@ This register is the working layer for going through consensus in each module. T
 | Module 12B | CONSENSUS-READY FIRST PASS | 24 obs / 24 claims / 56 links / 8 boundaries / 8 drafts | Keep innate immune conditioning broad; treat endotoxin/LPS as one discovery platform and route translational claims through safer host-conditioning analogs. | promote after full-text confidence upgrade of direct innate-conditioning anchors |
 | Module 13B | CONSENSUS-READY FIRST PASS | 24 obs / 24 claims / 56 links / 8 boundaries / 8 drafts | Use as the injury-to-chronic-lesion bridge; preserve timing, model severity, vascular, immune, glial, stromal, axon/myelin, and cavitation boundaries. | promote after full-text confidence upgrade of key vascular, scar, and degeneration anchors |
 | Module 14B | CONSENSUS-READY FIRST PASS | 16 obs / 16 claims / 40 links / 8 boundaries / 8 drafts | Keep CRISPR epigenome editing separate from permanent genome editing; preserve effector, target, cell type, delivery, chromatin-state, and neuroregeneration endpoint boundaries. | promote after full-text confidence upgrade of PTEN dCas9-KRAB, neuronal CRISPRa, and injury-enhancer anchors |
+| Module 15B | CONSENSUS-READY FIRST PASS | 16 obs / 16 claims / 40 links / 8 boundaries / 8 drafts | Use as the peripheral nerve-to-DRG-to-CNS priming layer; preserve lesion order, side, segment, associated versus remote DRG status, pathway, and central repair endpoint boundaries. | promote after full-text confidence upgrade of remote DRG, STAT3/IL-6, and timing-order anchors |
 
 ## Recommended Review Sequence
 
@@ -215,3 +216,16 @@ This register is the working layer for going through consensus in each module. T
 | M14B-S006 | M14B-T006 | 2 obs / 2 claims / 8 boundaries | review for final consensus wording | Neuroregeneration screens and intrinsic-growth target studies identify candidate loci for CRISPRi/a, including PTEN/KLF-style repression and regeneration-associated gene activation, but target discovery is not equivalent to dCas9 epigenome-editing efficacy. |
 | M14B-S007 | M14B-T007 | 5 obs / 5 claims / 8 boundaries | review for final consensus wording | CNS delivery and safety are central boundaries for CRISPR epigenome editing: vector capacity, cell specificity, immune response, off-target regulation, expression duration, reversibility, and durability must be recorded before translational neuroregeneration claims. |
 | M14B-S008 | M14B-T008 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | Module 14 should be used as a programmable regulatory-editing layer for neuroregeneration: candidate experiments should specify target locus, effector, guide design, delivery vehicle, target cell, chromatin state, model, and endpoint before linking CRISPR epigenome editing to SCI reconstruction, conditioning, graft integration, or axon repair. |
+
+### Module 15B
+
+| Consensus | Topic | Evidence | Review Action | Statement |
+|---|---|---|---|---|
+| M15B-S001 | M15B-T001 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | Peripheral nerve injury can induce a DRG intrinsic growth state that improves central sensory axon regeneration, but the claim is strongest for DRG/dorsal-column sensory systems and must preserve peripheral lesion, central test lesion, species, and endpoint boundaries. |
+| M15B-S002 | M15B-T002 | 3 obs / 3 claims / 8 boundaries | review for final consensus wording | Timing is a causal variable in conditioning-lesion biology: preconditioning, concurrent priming, post-SCI priming, repeated priming, and enriched conditioning produce different regenerative outcomes and should be analyzed as separate intervention classes. |
+| M15B-S003 | M15B-T003 | 5 obs / 5 claims / 8 boundaries | review for final consensus wording | cAMP/PKA signaling can mimic part of the conditioning effect, but peripheral nerve conditioning recruits broader and more durable transcriptional programs, so cAMP should be treated as one mechanism rather than the whole priming state. |
+| M15B-S004 | M15B-T004 | 7 obs / 7 claims / 8 boundaries | review for final consensus wording | IL-6/JAK/STAT3 signaling is a consensus-ready mediator family for conditioning-induced DRG growth competence, with enriched-conditioning evidence extending this axis into PKC-STAT3-NOX2 redox signaling after SCI. |
+| M15B-S005 | M15B-T005 | 2 obs / 2 claims / 8 boundaries | review for final consensus wording | Conditioning lesion effects include non-neuronal support: DRG macrophages and spinal glial division contribute to the maintenance or expression of regenerative capacity and should be separated by compartment and timing. |
+| M15B-S006 | M15B-T006 | 1 obs / 1 claims / 8 boundaries | promote as boundary consensus after wording pass | Unilateral sciatic nerve injury can induce pro-regenerative marker expression and enhanced growth capacity in DRGs not directly associated with the damaged nerve, making remote or contralateral DRG priming a real boundary to track separately from ipsilateral conditioning. |
+| M15B-S007 | M15B-T007 | 14 obs / 14 claims / 8 boundaries | review for final consensus wording | Peripheral conditioning is not a universal regeneration switch: early branch-specific negative evidence and dorsal-column model boundaries show that peripheral, central, ipsilateral, contralateral, and tract-specific outcomes must remain separated. |
+| M15B-S008 | M15B-T008 | 13 obs / 13 claims / 8 boundaries | review for final consensus wording | Module 15 should function as a peripheral-to-CNS host-priming comparator for SCI repair: candidate synthesis should ask whether a treatment mimics DRG growth-state induction, sustains that state after SCI, recruits systemic/remote DRG programs, or changes the lesion environment enough for central axon growth. |

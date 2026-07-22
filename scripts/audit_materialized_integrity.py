@@ -67,6 +67,29 @@ def extract_tables(markdown: str) -> list[tuple[list[str], list[dict[str, str]]]
     return tables
 
 
+def extract_section_table(markdown: str, section_title: str) -> list[dict[str, str]]:
+    in_section = False
+    headers: list[str] | None = None
+    rows: list[dict[str, str]] = []
+    for line in markdown.splitlines():
+        if line.startswith(section_title):
+            in_section = True
+            continue
+        if in_section and line.startswith("## ") and headers is not None:
+            break
+        if not in_section or not line.startswith("|"):
+            continue
+        if line.startswith("|---"):
+            continue
+        cells = split_markdown_row(line)
+        if headers is None:
+            headers = [snake_case(cell) for cell in cells]
+            continue
+        if len(cells) == len(headers):
+            rows.append(dict(zip(headers, cells, strict=True)))
+    return rows
+
+
 def referenced_ids(text: str, full_prefix: str) -> list[str]:
     ids: list[str] = []
     seen: set[str] = set()
@@ -106,13 +129,10 @@ def a_experiments(module_num: int) -> set[str]:
     tracker = ROOT / "modules" / f"Module_{module_num}A_TRACKER.md"
     pattern = exact_experiment_pattern(module_num)
     ids: set[str] = set()
-    for headers, rows in extract_tables(tracker.read_text()):
-        if "experiment_id" not in headers or "observation_id" in headers:
-            continue
-        for row in rows:
-            experiment_id = row.get("experiment_id", "")
-            if pattern.fullmatch(experiment_id):
-                ids.add(experiment_id)
+    for row in extract_section_table(tracker.read_text(), "## Experiment-Level Rows"):
+        experiment_id = row.get("experiment_id", "")
+        if pattern.fullmatch(experiment_id):
+            ids.add(experiment_id)
     return ids
 
 
@@ -349,7 +369,7 @@ def main(argv: list[str] | None = None) -> int:
     audits: list[ModuleAudit] = []
     all_errors: list[str] = []
     all_warnings: list[str] = []
-    for module_num in range(1, 15):
+    for module_num in range(1, 16):
         audit, errors, warnings = audit_module(module_num)
         audits.append(audit)
         all_errors.extend(errors)

@@ -14,12 +14,13 @@ This roadmap keeps saturation modules separate from evidence-consolidation modul
 | 6 | Module 12A/12B | Innate immune conditioning and tolerance biology | Captures broader innate conditioning, tolerance, trained/tolerized host-state logic, and regulatory-node discovery. |
 | 7 | Module 11A/11B | Spinal cord ischemic conditioning in cardiac and aortic surgery | Provides perioperative spinal cord protection and conditioning comparators. |
 | 8 | Module 7A/7B | Host fibroinflammatory conditioning before regenerative reconstruction or transplantation | Connects host-state modulation to implant, graft, and reconstructive readiness. |
-| 9 | Module 9A/9B | In vitro and ex vivo spinal cord injury model systems | Defines validation platforms for mechanisms, biomaterials, cells, and host-conditioning candidates. |
-| 10 | Module 2A/2B | Biomaterials and scaffold repair in SCI | Covers matrix, hydrogel, conduit, decellularized scaffold, and scaffold-enabled lesion repair strategies. |
-| 11 | Module 4A/4B | Cell transplantation and graft integration after SCI | Covers graft survival, integration, lineage boundaries, and scaffold-cell combinations. |
-| 12 | Module 5A/5B | Axon regeneration, remyelination, and white matter repair after SCI | Covers regenerative endpoints that repaired tissue must support. |
-| 13 | Module 14A/14B | CRISPR-based epigenome editing for neuroregeneration | Covers programmable regulatory editing as a target-validation and repair-modulation strategy for intrinsic growth, glial state, and injury-responsive enhancers. |
-| 14 | Module 10A/10B | SCI clinical trials completed or currently active | Places mechanisms and interventions against the current human translation landscape. |
+| 9 | Module 15A/15B | Peripheral nerve and DRG priming of CNS repair | Covers sciatic/DRG conditioning lesions, remote or contralateral DRG priming, and peripheral-to-CNS growth-state mechanisms. |
+| 10 | Module 9A/9B | In vitro and ex vivo spinal cord injury model systems | Defines validation platforms for mechanisms, biomaterials, cells, and host-conditioning candidates. |
+| 11 | Module 2A/2B | Biomaterials and scaffold repair in SCI | Covers matrix, hydrogel, conduit, decellularized scaffold, and scaffold-enabled lesion repair strategies. |
+| 12 | Module 4A/4B | Cell transplantation and graft integration after SCI | Covers graft survival, integration, lineage boundaries, and scaffold-cell combinations. |
+| 13 | Module 5A/5B | Axon regeneration, remyelination, and white matter repair after SCI | Covers regenerative endpoints that repaired tissue must support. |
+| 14 | Module 14A/14B | CRISPR-based epigenome editing for neuroregeneration | Covers programmable regulatory editing as a target-validation and repair-modulation strategy for intrinsic growth, glial state, and injury-responsive enhancers. |
+| 15 | Module 10A/10B | SCI clinical trials completed or currently active | Places mechanisms and interventions against the current human translation landscape. |
 
 ## Active and Planned Saturation Modules
 
@@ -53,6 +54,8 @@ This roadmap keeps saturation modules separate from evidence-consolidation modul
 | Module 13B | Traumatic SCI pathobiology evidence consolidation | Observation and claim linkage | CONSENSUS-READY FIRST PASS | 24 observations, 24 author claims, 56 evidence links, 8 boundary records, and 8 consensus-ready statements from the saturated Module 13A corpus |
 | Module 14A | CRISPR-based epigenome editing for neuroregeneration | Corpus saturation | SATURATED / FROZEN FIRST PASS | 16-source first-pass corpus spanning PTEN dCas9-KRAB repression, neuronal CRISPRa/i platforms, dCas9 chromatin effectors, injury-responsive enhancers, SCI epigenetic context, target-discovery comparators, and delivery/safety boundaries |
 | Module 14B | CRISPR epigenome editing evidence consolidation | Observation and claim linkage | CONSENSUS-READY FIRST PASS | 16 observations, 16 author claims, 40 evidence links, 8 boundary records, and 8 consensus-ready statements from the saturated Module 14A corpus |
+| Module 15A | Peripheral nerve and DRG priming of CNS repair | Corpus saturation | SATURATED / FROZEN FIRST PASS | 16-source first-pass corpus spanning peripheral nerve conditioning, DRG intrinsic growth-state induction, dorsal column regeneration, cAMP, IL-6/JAK/STAT3, macrophage/glial support, enriched conditioning, and remote/non-associated DRG priming |
+| Module 15B | Peripheral nerve and DRG priming evidence consolidation | Observation and claim linkage | CONSENSUS-READY FIRST PASS | 16 observations, 16 author claims, 40 evidence links, 8 boundary records, and 8 consensus-ready statements from the saturated Module 15A corpus |
 
 ## Saturation Rule
 
