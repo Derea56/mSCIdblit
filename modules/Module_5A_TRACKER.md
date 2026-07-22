@@ -228,3 +228,28 @@ Access date: 2026-07-17. These ODC-SCI dataset records should be considered for 
 | ODC-SCI:1587 | 10.34945/F5888V | Genioglossus EMG during C4 stimulation after C2 hemisection and C1 transection | Respiratory/hypoglossal motor output after stimulation | Add as respiratory circuit endpoint boundary |
 | ODC-SCI:1410 | 10.34945/F51W2M | Clinical outcomes after perilesional spinal neuromodulation in chronic thoracic SCI | Human chronic neuromodulation outcome | Link to Module 10 and chronic functional repair boundary |
 | ODC-SCI:1315 | 10.34945/F5G30Z | Closed-loop vagus nerve stimulation aids hand recovery after cervical SCI in humans | Human stimulation-assisted upper-limb recovery | Add as clinical stimulation result anchor |
+
+## Targeted Grant-Citation Addendum: TNFR2 Repair-Biasing Signal
+
+**Date added**: 2026-07-21.
+**Reason added**: two citations from the systemic innate immune preconditioning grant/evidence documents support TNFR2 as an optional repair-biasing adjunct. They belong in Module 5 because their evidentiary role is neuronal survival, locomotor recovery, OPC proliferation, remyelination, and white-matter repair, not primary TLR/adaptor conditioning.
+
+### Addendum Paper Inventory
+
+| Paper ID | PMID / Source ID | First Author | Year | Title | Species / System | Repair Focus | Status | Notes |
+|---|---|---|---:|---|---|---|---|---|
+| M5A-P048 | PMC6630008 | Gerald MJ | 2019 | Continuous infusion of an agonist of the tumor necrosis factor receptor 2 in the spinal cord improves recovery after traumatic contusive injury | Rat SCI / in vitro neuronal excitotoxicity | TNFR2 agonism, neuronal protection, locomotor recovery | TARGETED FULLTEXT-PMC | Local spinal TNFR2-selective agonist improved recovery after contusive SCI and protected neurons in vitro; supports repair-bias adjunct only, not systemic innate preconditioning by itself. |
+| M5A-P049 | DOI:10.1038/nn738 | Arnett HA | 2001 | TNFalpha promotes proliferation of oligodendrocyte progenitors and remyelination | Mouse cuprizone demyelination | TNFR2-dependent OPC proliferation and remyelination | TARGETED SOURCE-PAGE | Non-SCI demyelination comparator; supports TNFR2/remyelination biology but requires model boundary. |
+
+### Addendum Experiment Rows
+
+| Paper ID | Experiment ID | Figure Ref | Species | Strain | Sex | Injury Model | Injury Device | Injury Severity | Vertebral Level | Chronicity (DPI/WPI) | Control Type | Intervention Type | Methods Summary | Experiment Extracted |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| M5A-P048 | M5A-P048-E001 | Full text PMC / source page | Rat; cultured neurons | UNKNOWN | UNKNOWN | Traumatic contusive SCI plus in vitro excitotoxicity comparator | Contusion model as reported | Contusive SCI as reported | spinal cord level as reported | post-injury local infusion as reported | vehicle/control agonist as reported | TNFR2-selective agonist repair-biasing intervention | TNFR2-selective agonism was tested for neuronal survival and locomotor recovery after SCI, with in vitro neuronal protection context. | YES (targeted source-level) |
+| M5A-P049 | M5A-P049-E001 | Source page | Mouse | UNKNOWN | UNKNOWN | Cuprizone demyelination comparator | N/A | N/A | CNS white matter comparator | demyelination/remyelination timing as reported | wild-type/TNFR pathway controls as reported | TNF/TNFR2 remyelination mechanism | TNFalpha/TNFR2 signaling supported OPC proliferation and remyelination in a non-SCI demyelination model. | YES (targeted source-level) |
+
+### Addendum Decision
+
+| Decision ID | Status | Basis | Boundary / Queue |
+|---|---|---|---|
+| M5A-D002 | TARGETED ADDENDUM COMPLETE | Gerald 2019 and Arnett 2001 are mapped as TNFR2 repair/remyelination adjunct citations from the grant evidence set. | Treat TNFR2 as an optional repair-biasing signal downstream/alongside innate conditioning; do not collapse TNFR2 repair biology with TLR4/MPLA or TLR2 induction mechanisms. |

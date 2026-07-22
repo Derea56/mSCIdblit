@@ -182,3 +182,49 @@ This tracker converts the saturated Module 13A first-pass corpus into atomic obs
 | Decision ID | Status | Basis | Boundary / Queue |
 |---|---|---|---|
 | M13B-D001 | CONSENSUS-READY FIRST PASS | 24 observations, 24 author claims, 56 evidence links, 8 boundary records, and 8 consensus-ready statements extracted from the saturated Module 13A corpus. | Export tracker evidence bundle, full SQL materialization, consensus review register, and cross-module synthesis after wiring Module 13 into the scripts. |
+
+## Targeted Grant-Citation Consolidation Addendum: BSCB and Atlas Receiver-State Mapping
+
+Purpose: consolidate targeted grant citations that support the question of whether systemic innate agonist signals reach the injured CNS through endothelial/barrier relay, peripheral immune relay, CNS-resident receiver states, or a combination of these routes.
+
+### Topic Extensions
+
+| Topic ID | Topic Label | Added Source Rows | Status | Notes |
+|---|---|---|---|---|
+| M13B-T009 | Blood-spinal cord barrier and endothelial interface as systemic-signal relay candidate | M13A-P025 | TARGETED ADDENDUM | Adds BSCB review evidence to support vascular/endothelial relay framing. |
+| M13B-T010 | Modern single-cell and spatial SCI atlas as receiver-state map | M13A-P026 | TARGETED ADDENDUM | Adds Tabulae Paralytica as atlas support for mapping cell states and spatial neighborhoods. |
+
+### Observation Addendum
+
+| Observation ID | Source Experiment ID | Atomic Observation | Species / Model Boundary | Timing Boundary | Confidence | Notes |
+|---|---|---|---|---|---|---|
+| M13B-O025 | M13A-P025-E001 | The blood-spinal cord barrier/endothelial interface is a central injury-responsive structure whose disruption and repair shape SCI pathobiology. | Review of SCI barrier literature; not a direct systemic preconditioning experiment. | Acute-to-chronic barrier phases as summarized by the review. | medium | Supports treating endothelial/barrier biology as an active signal-processing relay rather than only a passive delivery obstacle. |
+| M13B-O026 | M13A-P026-E001 | A modern single-cell and spatial SCI atlas can nominate CNS receiver states, spatial neighborhoods, and candidate cell-cell signaling routes after injury. | Mouse SCI atlas; not a direct perturbation or conditioning experiment. | Source-specific atlas windows; timing must be preserved when used for hypothesis generation. | medium | Supports downstream lookup of endothelial, immune, glial, and stromal response states relevant to TLR4/MPLA or TLR2 agonist relay hypotheses. |
+
+### Claim Addendum
+
+| Claim ID | Claim Statement | Claim Confidence | Required Boundaries |
+|---|---|---|---|
+| M13B-C025 | The BSCB/endothelial interface should be modeled as an active relay for systemic innate signals that may act on CNS cells, peripheral immune cells, or both. | medium | This is a mechanistic framing claim supported by barrier pathobiology, not proof that MPLA or TLR2 agonism induces CNS tolerance. |
+| M13B-C026 | Single-cell and spatial atlas data can guide receiver-state and ligand-receptor hypotheses, but cannot substitute for timed perturbation experiments testing repeated or pulsed innate agonism. | high | Atlas-derived hypotheses require experimental validation with agonist, time, repetition, tissue compartment, and endpoint controls. |
+
+### Evidence Link Addendum
+
+| Link ID | Claim ID | Observation ID | Link Type | Strength | Rationale |
+|---|---|---|---|---|---|
+| M13B-L057 | M13B-C025 | M13B-O025 | supports | medium | BSCB pathobiology supports the endothelial/barrier relay concept. |
+| M13B-L058 | M13B-C026 | M13B-O026 | supports | medium | Single-cell/spatial atlas evidence supports receiver-state mapping and hypothesis generation. |
+| M13B-L059 | M13B-C025 | M13B-O026 | contextual_support | low | Atlas data can help resolve which CNS/perivascular cell states are positioned to receive systemic relay signals. |
+
+### Boundary Addendum
+
+| Boundary ID | Boundary Statement | Observation IDs | Claim IDs | Status |
+|---|---|---|---|---|
+| M13B-B009 | BSCB review and atlas rows inform mechanism and experimental design but do not establish systemic innate preconditioning efficacy; intervention claims require direct agonist, timing, repetition, and endpoint evidence. | M13B-O025-O026 | M13B-C025-C026 | ACTIVE |
+
+### Consensus Draft Addendum
+
+| Consensus ID | Topic ID | Draft Statement | Supporting Observations | Supporting Claims | Boundary Records | Status | Notes |
+|---|---|---|---|---|---|---|---|
+| M13B-S009 | M13B-T009 | The BSCB/endothelial interface is an active injury-responsive relay candidate for systemic innate conditioning signals and should be separated experimentally from direct parenchymal effects and peripheral immune-cell effects. | M13B-O025 | M13B-C025 | M13B-B009 | TARGETED ADDENDUM | Useful for the grant question about whether the CNS signal is endothelial, peripheral immune, CNS-resident, or mixed. |
+| M13B-S010 | M13B-T010 | Modern single-cell and spatial SCI atlas data can guide which CNS receiver states and candidate ligand-receptor routes to test after MPLA/LPS/TLR2 agonism, but the atlas evidence must remain hypothesis-generating until perturbation data are available. | M13B-O026 | M13B-C026 | M13B-B009 | TARGETED ADDENDUM | Use for study-design logic, not as efficacy evidence. |

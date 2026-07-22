@@ -116,3 +116,27 @@ This module feeds Module 1 rather than duplicating it. Module 1 defines the chro
 | Decision ID | Status | Basis | Boundary / Queue |
 |---|---|---|---|
 | M13A-D001 | SATURATED / FROZEN FIRST PASS | 24-source first-pass corpus covers traumatic SCI biomechanical severity, progressive gray/white matter damage, vascular/barrier disruption, hemorrhagic expansion, immune-cell wound organization, astrocytic and fibrotic scar formation, axon/myelin degeneration, Wallerian degeneration, modern cell-state atlases, and chronic lesion stabilization. | Next step is Module 13B consensus-ready extraction with timing, model, species, severity, and endpoint boundaries preserved. |
+
+## Targeted Grant-Citation Addendum: Blood-Spinal Cord Barrier and Modern SCI Atlas
+
+Purpose: targeted post-freeze addition of grant citations that support the blood-spinal cord barrier/endothelial relay question and modern receiver-state mapping. These rows are appended as traceable addenda and should not be treated as replacing the frozen first-pass Module 13 corpus.
+
+### Paper Inventory Addendum
+
+| Paper ID | PMID / Source ID | First Author | Year | Title | Journal | DOI / URL | Curation Status | Notes |
+|---|---|---|---|---|---|---|---|---|
+| M13A-P025 | PMID:33292072 | Jin LY | 2021 | Blood-Spinal Cord Barrier in Spinal Cord Injury: A Review | Journal of Neurotrauma | 10.1089/neu.2020.7413 | TARGETED GRANT-CITATION ADDENDUM | Review anchor for BSCB structure, disruption, repair, and barrier-protection concepts after SCI; supports endothelial/barrier relay framing but is not direct evidence for systemic innate preconditioning. |
+| M13A-P026 | DOI:10.1038/s41586-024-07504-y | Skinnider | 2024 | Single-cell and spatial atlases of spinal cord injury in the Tabulae Paralytica | Nature | 10.1038/s41586-024-07504-y | TARGETED GRANT-CITATION ADDENDUM | Modern single-cell and spatial SCI atlas anchor for CNS receiver-state mapping; supports hypothesis generation for endothelial, immune, glial, and stromal response states, not proof of systemic conditioning. |
+
+### Experiment-Level Rows Addendum
+
+| Experiment ID | Paper ID | Figure/Table Ref | Species / Population | Injury Model | Time Window | Mechanistic Process | Comparator | Endpoint | Observation Seed | Confidence |
+|---|---|---|---|---|---|---|---|---|---|---|
+| M13A-P025-E001 | M13A-P025 | Abstract/source page or full text | Review of SCI barrier literature | SCI review context | Acute-to-chronic post-SCI barrier phases | blood-spinal cord barrier disruption and repair | source-specific study comparisons summarized by review | BSCB structure, permeability, endothelial-pericyte-astrocyte interface, barrier-protection concepts | BSCB disruption and repair are framed as central SCI pathobiology and plausible targets for interventions that act through vascular/endothelial relay mechanisms. | medium |
+| M13A-P026-E001 | M13A-P026 | Abstract/source page or full text | Mouse SCI atlas | Traumatic SCI atlas context | Source-specific acute/subacute/chronic atlas windows | single-cell and spatial receiver-state mapping | uninjured/injured/timepoint/cell-state comparisons as reported | CNS cell states, spatial neighborhoods, ligand-receptor context, immune-glial-stromal organization | Tabulae Paralytica provides a modern single-cell and spatial framework for identifying CNS receiver states and candidate relay routes after SCI. | medium |
+
+### Targeted Addendum Decision
+
+| Decision ID | Status | Basis | Boundary / Queue |
+|---|---|---|---|
+| M13A-D002 | TARGETED ADDENDUM COMPLETE | Added BSCB review and modern single-cell/spatial SCI atlas citations requested for the systemic innate preconditioning grant logic. | Promote into full Module 13 materialization after source-level extraction and explicit consensus review; do not infer preconditioning efficacy from review/atlas evidence alone. |

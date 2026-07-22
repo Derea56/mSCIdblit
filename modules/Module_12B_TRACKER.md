@@ -175,3 +175,112 @@ This tracker converts the saturated Module 12A first-pass corpus into atomic obs
 | Claims linked to observations | MET FOR ALL FIRST-PASS TOPICS | 56 evidence links drafted. |
 | Contradictions/boundaries recorded | MET FOR ALL FIRST-PASS TOPICS | 8 active boundary records capture innate stimulus class, timing, cell compartment, model, and translation constraints. |
 | Consensus-ready first pass | CONSENSUS-READY FIRST PASS | Ready for tracker evidence bundle export and SQL materialization. |
+
+## Targeted Grant-Citation Consolidation Addendum
+
+**Date added**: 2026-07-21.
+**Input corpus**: Module 12A targeted addendum rows M12A-P025-M12A-P048.
+**Purpose**: integrate the systemic innate immune preconditioning grant citations without changing the frozen first-pass status. These rows refine the project from a TLR2-first model into a comparator architecture: LPS as direct SCI-positive-control biology, MPLA/TLR4 as a tolerance-induction candidate, TLR2 as a sustained/reinforced MyD88-biased alternative, and endothelial/immune/CNS relay routing as the unresolved mechanism.
+
+### Addendum Evidence Topic Map
+
+| Topic ID | Consensus-Ready Topic | Primary Sources | Evidence Need | Status |
+|---|---|---|---|---|
+| M12B-T009 | Direct traumatic SCI LPS preconditioning provides a positive-control benchmark, not a translational endpoint | M12A-P025-P026 | Preserve dose/timing/species and separate positive-control biology from therapeutic ligand choice | TARGETED ADDENDUM |
+| M12B-T010 | MPLA/TLR4 and TLR2 represent competing systemic agonist architectures | M12A-P027-P030, P033-P038 | Distinguish TLR4 burst/pivot, MPLA tolerance, TLR2 sustained MyD88 signaling, and non-SCI comparator boundaries | TARGETED ADDENDUM |
+| M12B-T011 | MyD88/TRIF routing, MyD88S, and IL-10 regulation are measurable mechanisms, not assumptions | M12A-P039-P045 | Separate macrophage, review, and cytokine-signaling contexts; avoid assuming TLR2 cannot induce feedback | TARGETED ADDENDUM |
+| M12B-T012 | Endothelial cells may be active relay nodes with ligand- and cell-type-specific pathway bias | M12A-P046-P048 | Test direct endothelial agonist response, immune-to-endothelial relay, endothelial-to-CNS relay, time, repetition, and barrier-risk outputs | TARGETED ADDENDUM |
+
+### Addendum Atomic Observations
+
+| Observation ID | Topic ID | Paper ID | Experiment ID | Figure Ref | Evidence Type | Outcome Type | Observation Value | Normalized Value | Unit | Quantitative | Statistics Reported | Source Section | Extraction Confidence | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| M12B-O025 | M12B-T009 | M12A-P025 | M12A-P025-E001 | Abstract/source page | Direct SCI positive-control evidence | Innate immune conditioning / protection | Systemic low-dose LPS before traumatic SCI reduced apoptotic markers and improved neuropathologic readouts in rats. | LPS positive-control SCI preconditioning | qualitative | YES | Source reports apoptosis/tissue endpoints; exact values not extracted in tracker addendum | Abstract/source page | medium | Use as proof that the assay should detect LPS-positive-control biology; not a translational ligand endorsement. |
+| M12B-O026 | M12B-T009 | M12A-P026 | M12A-P026-E001 | Abstract/source page | Direct SCI positive-control evidence | Innate immune conditioning / protection | LPS preconditioning before traumatic SCI was linked to Nrf2 antioxidant signaling in rats. | LPS-Nrf2 SCI preconditioning | qualitative | YES | Source reports Nrf2/antioxidant endpoints; exact values not extracted in tracker addendum | Abstract/source page | medium | Direct SCI positive control; preserve species and timing. |
+| M12B-O027 | M12B-T010 | M12A-P027 | M12A-P027-E001 | Full text/source page | Myeloid trained-immunity comparator | Innate immune conditioning / durable function | MPLA-induced macrophage trained immunity was MyD88-dependent and retained in TRIF-deficient cells; CpG reproduced while Poly(I:C) did not. | MPLA/CpG MyD88 convergence | qualitative | YES | Full extraction pending | Full text/source page | high | Supports comparator panel; does not prove CNS relay. |
+| M12B-O028 | M12B-T010 | M12A-P028 | M12A-P028-E001 | Full text PMC | Non-SCI CNS preconditioning comparator | CNS-facing protection | Systemic Pam3CSK4 protected in cerebral ischemia/reperfusion with barrier and injury endpoints. | TLR2 CNS preconditioning comparator | qualitative | YES | Full extraction pending | Full text PMC | high | Brain ischemia comparator only. |
+| M12B-O029 | M12B-T010 | M12A-P029 | M12A-P029-E001 | Full text PMC | Non-SCI CNS mechanism comparator | PI3K/Akt survival signaling | Pam3CSK4 protection required TLR2 and PI3K/Akt signaling and shifted survival/inflammatory markers. | TLR2-PI3K/Akt CNS comparator | qualitative | YES | Full extraction pending | Full text PMC | high | Supports survival-biased TLR2 mechanism in CNS comparator. |
+| M12B-O030 | M12B-T010 | M12A-P030 | M12A-P030-E001 | Abstract/source page | Ex vivo spinal cord comparator | Spinal cord tissue TLR2 proof-of-biology | Pam3CSK4 was neuroprotective in ex vivo SCI tissue with axonal, microglial, and oligodendroglial endpoints. | Ex vivo spinal cord TLR2 response | qualitative | YES | Exact values not extracted | Abstract/source page | medium | Not systemic preconditioning. |
+| M12B-O031 | M12B-T010 | M12A-P031 | M12A-P031-E001 | Abstract/source page | TLR2 mechanism anchor | Adaptor binding | TLR2 cytoplasmic domain preferentially binds MyD88 relative to related TLR TIR domains. | TLR2/MyD88 receptor mechanics | qualitative | NO | Mechanistic source-page row | Abstract/source page | medium | Supports TLR2 as a MyD88-biased entry route. |
+| M12B-O032 | M12B-T010 | M12A-P032 | M12A-P032-E001 | Abstract/source page | TLR2 structural anchor | Myddosome assembly | TLR2 TIR domain can nucleate higher-order MyD88 TIR assemblies. | TLR2/MyD88 assembly | qualitative | NO | Mechanistic source-page row | Abstract/source page | medium | Structural mechanism anchor. |
+| M12B-O033 | M12B-T010 | M12A-P033 | M12A-P033-E001 | Review/source page | TLR pathway review | Adaptor routing | Review supports TLR2/TIRAP/MyD88, TLR3/TRIF, TLR4 dual signaling, and endosomal MyD88 receptor distinctions. | canonical TLR routing | qualitative | NO | Review row | Source page | medium | Review anchor; not primary experimental evidence. |
+| M12B-O034 | M12B-T010 | M12A-P034 | M12A-P034-E001 | Full text PMC | Sorting-adaptor review | Compartmentalization | TIRAP/TRAM sorting-adaptor biology complicates simplified TLR pathway assignments. | adaptor compartmentalization | qualitative | NO | Review row | Full text PMC | high | Review anchor for TIRAP/TRAM nuance. |
+| M12B-O035 | M12B-T010 | M12A-P035 | M12A-P035-E001 | Full text PMC | TLR4 trafficking mechanism | TRAM/TRIF endosomal signaling | TRAM couples TLR4 endocytosis to IFN-beta induction, supporting surface-to-endosome TLR4 pivot logic. | TLR4 endosomal TRIF pivot | qualitative | YES | Full extraction pending | Full text PMC | high | Primary mechanism source. |
+| M12B-O036 | M12B-T010 | M12A-P036 | M12A-P036-E001 | Abstract/source page | Cell-biological review | Compartment-specific signaling | Cell-biological review supports compartment-specific innate receptor signaling interpretation. | PRR compartment logic | qualitative | NO | Review row | Abstract/source page | medium | Review anchor. |
+| M12B-O037 | M12B-T010 | M12A-P037 | M12A-P037-E001 | Full text PMC | TLR4/TLR9 review | Receptor compartmentalization | TLR4 signaling changes with receptor compartment, supporting surface MyD88/TIRAP versus endosomal TRAM/TRIF boundaries. | TLR4 compartmentalized signaling | qualitative | NO | Review row | Full text PMC | high | Review anchor. |
+| M12B-O038 | M12B-T010 | M12A-P038 | M12A-P038-E001 | Abstract/source page | TLR4 trafficking mechanism | Endocytic control | Endocytic pathways regulate TLR4 signaling and should be preserved as a mechanistic boundary. | TLR4 endocytosis boundary | qualitative | YES | Full extraction pending | Abstract/source page | medium | Mechanism source-page row. |
+| M12B-O039 | M12B-T011 | M12A-P039 | M12A-P039-E001 | Full text PMC | MyD88S feedback mechanism | Alternative splicing | LPS-induced MyD88 alternative splicing is regulated by MyD88/TRIF arms and NF-kB. | MyD88S measurable feedback | qualitative | YES | Full extraction pending | Full text PMC | high | Do not assume TLR2 lacks this feedback without measurement. |
+| M12B-O040 | M12B-T011 | M12A-P040 | M12A-P040-E001 | Abstract/source page | MyD88S mechanism | IRAK4 recruitment | MyD88S limits IL-1R/TLR signaling because it fails to recruit IRAK4. | MyD88S dominant-negative mechanism | qualitative | NO | Mechanistic source-page row | Abstract/source page | medium | Supports mechanism, not receptor-specific absence. |
+| M12B-O041 | M12B-T011 | M12A-P041 | M12A-P041-E001 | Abstract/source page | IL-10 review | Cytokine regulation | IL-10 regulation is context-dependent and should not be inferred from receptor activation alone. | IL-10 context boundary | qualitative | NO | Review row | Abstract/source page | medium | Review anchor. |
+| M12B-O042 | M12B-T011 | M12A-P042 | M12A-P042-E001 | Abstract/source page | TLR4 inflammatory-boundary review | Safety / chronic inflammation | TLR4 can contribute to chronic inflammatory cycles; use as safety/boundary context, not direct preconditioning proof. | TLR4 chronic-inflammation boundary | qualitative | NO | Review row | Abstract/source page | medium | Safety boundary. |
+| M12B-O043 | M12B-T011 | M12A-P043 | M12A-P043-E001 | Abstract/source page | IL-10 metabolic-resolution mechanism | Macrophage inflammatory control | IL-10 constrains sphingolipid metabolism to limit inflammation in a TLR2-activated macrophage context. | TLR2/IL-10 lipid-resolution mechanism | qualitative | YES | Full extraction pending | Abstract/source page | medium | Supports testable survival/resolution module. |
+| M12B-O044 | M12B-T011 | M12A-P044 | M12A-P044-E001 | Abstract/source page | JAK-STAT review | STAT3 pathway context | JAK-STAT/STAT3 biology provides context for IL-10 receptor signaling interpretation. | IL-10/STAT3 context | qualitative | NO | Review row | Abstract/source page | medium | Review anchor. |
+| M12B-O045 | M12B-T011 | M12A-P045 | M12A-P045-E001 | Full text PMC | TLR2/TLR4 IL-10 mechanism | mRNA stability | TLR2 induced rapid Il10 mRNA induction/degradation, while TLR4/TRIF/p38 stabilized Il10 mRNA and supported stronger IL-10 secretion. | TLR4/TRIF-p38 IL-10 stabilization | qualitative | YES | Full extraction pending | Full text PMC | high | Important boundary against assuming TLR2 automatically gives longer IL-10 output. |
+| M12B-O046 | M12B-T012 | M12A-P046 | M12A-P046-E001 | Full text PMC | Endothelial tolerance model | MPLA/TLR4 endothelial tolerance | MPLA induced endothelial tolerance to later LPS challenge; HUVEC tolerance was reported as MyD88-dependent rather than TRIF-dependent. | endothelial MPLA tolerance | qualitative | YES | Full extraction pending | Full text PMC | high | Test cell-type-specific pathway bias. |
+| M12B-O047 | M12B-T012 | M12A-P047 | M12A-P047-E001 | Full text PMC | Endothelial activation model | MPLA modulation of LPS response | MPLA weakly stimulated endothelial cytokine responses and reduced LPS-mediated endothelial cytokine/chemokine activation. | MPLA endothelial weak agonist/antagonist behavior | qualitative | YES | Full extraction pending | Full text PMC | high | Supports MPLA as endothelial modulator, not simple TRIF-biased assumption. |
+| M12B-O048 | M12B-T012 | M12A-P048 | M12A-P048-E001 | Full text PMC | Brain endothelial TLR2 model | Barrier-risk signaling | Pam3CSK4 regulated MMP-2/9 and tight-junction-associated outputs in brain microvascular endothelial cells through MAPK/NF-kB-linked pathways. | TLR2 brain endothelial MMP/TJ response | qualitative | YES | Full extraction pending | Full text PMC | high | Direct TLR2 endothelial effects may be protective, disruptive, or timing-dependent. |
+
+### Addendum Claims
+
+| Claim ID | Topic ID | Source Paper ID | Claim Statement | Claim Type | Claim Confidence | Source Basis | Evidence Linkage Readiness | Notes |
+|---|---|---|---|---|---|---|---|---|
+| M12B-C025 | M12B-T009 | M12A-P025-P026 | LPS should be retained as the direct SCI-positive-control benchmark for systemic innate preconditioning assays, while translation should move toward safer agonists. | project synthesis | medium | Direct SCI source-page rows | ready | Separates proof-of-assay from therapeutic selection. |
+| M12B-C026 | M12B-T010 | M12A-P027-P038 | The key design question is whether TLR4/MPLA tolerance induction, TLR2 sustained MyD88-biased signaling, or a shared downstream relay best prepares the CNS-facing compartment. | project synthesis | medium | Comparator/mechanism rows | ready | Replaces TLR2-first framing. |
+| M12B-C027 | M12B-T011 | M12A-P039-P045 | MyD88S, IL-10, and MyD88/TRIF routing should be measured as context-specific mechanisms rather than assumed from receptor identity. | boundary condition | high | Mechanistic source rows | ready | Prevents unsupported claims about TLR2 lacking negative feedback. |
+| M12B-C028 | M12B-T012 | M12A-P046-P048 | Endothelial cells are plausible active relay nodes, but their MPLA/TLR2 pathway bias, barrier response, and time/repetition dependence must be empirically tested. | boundary condition | high | Endothelial full-text PMC rows | ready | Adds direct endothelial evidence to Module 12. |
+
+### Addendum Evidence Links
+
+| Evidence Link ID | Claim ID | Observation ID | Link Type | Strength | Notes |
+|---|---|---|---|---|---|
+| M12B-L057 | M12B-C025 | M12B-O025 | supports | medium | Direct SCI LPS preconditioning positive-control row. |
+| M12B-L058 | M12B-C025 | M12B-O026 | supports | medium | Direct SCI LPS/Nrf2 preconditioning positive-control row. |
+| M12B-L059 | M12B-C026 | M12B-O027 | supports | medium | MPLA/CpG/Poly(I:C) trained-immunity comparator. |
+| M12B-L060 | M12B-C026 | M12B-O028 | contextual_support | medium | TLR2 systemic CNS comparator; brain ischemia, not SCI. |
+| M12B-L061 | M12B-C026 | M12B-O029 | contextual_support | medium | TLR2 PI3K/Akt CNS comparator. |
+| M12B-L062 | M12B-C026 | M12B-O030 | contextual_support | medium | Ex vivo spinal cord TLR2 proof-of-biology. |
+| M12B-L063 | M12B-C026 | M12B-O031 | supports | low | TLR2/MyD88 receptor-mechanics anchor. |
+| M12B-L064 | M12B-C026 | M12B-O032 | supports | low | TLR2/MyD88 structural anchor. |
+| M12B-L065 | M12B-C026 | M12B-O033 | contextual_support | low | Review pathway map. |
+| M12B-L066 | M12B-C026 | M12B-O034 | contextual_support | low | Sorting-adaptor review. |
+| M12B-L067 | M12B-C026 | M12B-O035 | supports | high | TLR4 endocytosis/TRAM/TRIF primary mechanism. |
+| M12B-L068 | M12B-C026 | M12B-O036 | contextual_support | low | Cell-biological review. |
+| M12B-L069 | M12B-C026 | M12B-O037 | contextual_support | medium | TLR4 compartmentalization review. |
+| M12B-L070 | M12B-C026 | M12B-O038 | supports | medium | TLR4 endocytic pathway source-page row. |
+| M12B-L071 | M12B-C027 | M12B-O039 | supports | high | MyD88 alternative-splicing mechanism. |
+| M12B-L072 | M12B-C027 | M12B-O040 | supports | medium | MyD88S/IRAK4 mechanism. |
+| M12B-L073 | M12B-C027 | M12B-O041 | contextual_support | low | IL-10 regulation review. |
+| M12B-L074 | M12B-C027 | M12B-O042 | contextual_support | low | TLR4 chronic-inflammation boundary. |
+| M12B-L075 | M12B-C027 | M12B-O043 | contextual_support | medium | IL-10 metabolic-resolution mechanism. |
+| M12B-L076 | M12B-C027 | M12B-O044 | contextual_support | low | STAT3/JAK-STAT review. |
+| M12B-L077 | M12B-C027 | M12B-O045 | supports | high | TLR2/TLR4 IL-10 mRNA-stability comparison. |
+| M12B-L078 | M12B-C028 | M12B-O046 | supports | high | MPLA endothelial tolerance row. |
+| M12B-L079 | M12B-C028 | M12B-O047 | supports | high | MPLA endothelial weak agonist/antagonist row. |
+| M12B-L080 | M12B-C028 | M12B-O048 | supports | high | TLR2/Pam3CSK4 brain endothelial MMP/tight-junction row. |
+
+### Addendum Boundary Conditions
+
+| Boundary ID | Boundary Statement | Observation IDs | Claim IDs | Status |
+|---|---|---|---|---|
+| M12B-B009 | LPS-positive-control evidence in traumatic SCI supports assay validation but should not be treated as the preferred translational conditioning ligand. | M12B-O025-O026 | M12B-C025 | ACTIVE |
+| M12B-B010 | MPLA/TLR4 biology should be evaluated as a tolerance-inducing architecture with possible TRIF contribution in myeloid cells, but endothelial MPLA tolerance may not follow the same TRIF-biased logic. | M12B-O027, M12B-O035-O038, M12B-O046-O047 | M12B-C026, M12B-C028 | ACTIVE |
+| M12B-B011 | TLR2 agonism should be treated as a sustained/reinforced MyD88-biased comparator with direct CNS and ex vivo spinal cord support, but endothelial barrier/MMP effects require dose, timing, and repetition testing. | M12B-O028-O032, M12B-O048 | M12B-C026, M12B-C028 | ACTIVE |
+| M12B-B012 | Direct endothelial agonist effects, peripheral immune-to-endothelial relay, endothelial-to-CNS signaling, and direct peripheral immune-to-CNS signaling must be separated experimentally. | M12B-O046-O048 | M12B-C028 | ACTIVE |
+
+### Addendum Consensus Draft Queue
+
+| Consensus ID | Topic ID | Draft Statement | Supporting Observations | Supporting Claims | Boundary Records | Status | Notes |
+|---|---|---|---|---|---|---|---|
+| M12B-S009 | M12B-T009 | Direct traumatic SCI LPS preconditioning establishes a positive-control benchmark for systemic innate preconditioning, but LPS should remain a mechanistic probe and assay validator rather than the translational endpoint. | M12B-O025-O026 | M12B-C025 | M12B-B009 | TARGETED CONSENSUS DRAFT | Requires full extraction before gold promotion. |
+| M12B-S010 | M12B-T010 | Module 12 should frame systemic innate preconditioning as a comparator problem: test whether TLR4/MPLA tolerance induction, TLR2 sustained/reinforced signaling, or shared downstream relay biology best prepares the CNS-facing compartment. | M12B-O027-O038 | M12B-C026 | M12B-B010-B011 | TARGETED CONSENSUS DRAFT | Replaces TLR2-first project wording. |
+| M12B-S011 | M12B-T011 | MyD88/TRIF routing, MyD88S splicing, and IL-10 regulation are candidate mechanisms that require direct measurement across ligand, cell type, dose, rest interval, and repetition; they should not be inferred solely from receptor identity. | M12B-O039-O045 | M12B-C027 | M12B-B010-B011 | TARGETED CONSENSUS DRAFT | Important guardrail for grant language. |
+| M12B-S012 | M12B-T012 | Endothelial cells are plausible active translators of systemic innate conditioning, but existing MPLA and Pam3CSK4 endothelial studies show cell-type- and ligand-specific behavior, requiring direct tests of endothelial pathway bias and downstream CNS-cell effects. | M12B-O046-O048 | M12B-C028 | M12B-B012 | TARGETED CONSENSUS DRAFT | Supports Aim 1B/1C decision gates. |
+
+### Addendum Readiness Checklist
+
+| Check | Status | Notes |
+|---|---|---|
+| Grant citations mapped to Module 12 | MET | 24 source rows from the grant/evidence documents are represented as M12A-P025-M12A-P048 and M12B-O025-M12B-O048. |
+| Claims separated from observations | MET FOR TARGETED ADDENDUM | Four addendum claims summarize project implications separately from paper-level observations. |
+| Endothelial relay boundary added | MET | Boundary records now explicitly separate direct endothelial agonist response, immune-to-endothelial relay, endothelial-to-CNS relay, and peripheral immune-to-CNS routing. |
+| Promotion status | QUEUED | Rows are targeted addendum entries; selected rows should undergo full extraction/materialization before being promoted to gold evidence. |

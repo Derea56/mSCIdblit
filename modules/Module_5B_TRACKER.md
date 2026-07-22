@@ -316,3 +316,41 @@ These rows are tracker-level Observation candidates. They preserve intended data
 | Evidence links | 60 | COMPLETE FIRST PASS |
 | Boundary records | 8 | COMPLETE FIRST PASS |
 | Consensus drafts | 8 | CONSENSUS-READY FIRST PASS |
+
+## Targeted Grant-Citation Consolidation Addendum: TNFR2 Repair-Biasing Signal
+
+**Date added**: 2026-07-21.
+**Input corpus**: Module 5A targeted addendum rows M5A-P048-M5A-P049.
+**Purpose**: represent the grant citations supporting TNFR2 as a repair-biasing adjunct while preserving the boundary that TNFR2 is not the core innate-conditioning inducer.
+
+### Addendum Atomic Observations
+
+| Observation ID | Topic ID | Paper ID | Experiment ID | Figure Ref | Evidence Type | Outcome Type | Observation Value | Normalized Value | Unit | Quantitative | Statistics Reported | Source Section | Extraction Confidence | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| M5B-O094 | M5B-T003 | M5A-P048 | M5A-P048-E001 | Full text PMC / source page | TNFR2 repair adjunct evidence | neuronal survival / locomotor recovery | TNFR2-selective agonism protected neurons in vitro and improved locomotor recovery after local spinal infusion in contusive SCI. | TNFR2 SCI repair-bias signal | qualitative | YES | Full extraction pending | Full text PMC / source page | high | Supports TNFR2 as optional repair-biasing adjunct; route is local spinal infusion, not systemic preconditioning. |
+| M5B-O095 | M5B-T003 | M5A-P049 | M5A-P049-E001 | Source page | TNFR2 remyelination comparator | OPC proliferation / remyelination | TNFalpha/TNFR2 signaling supported oligodendrocyte progenitor proliferation and remyelination in cuprizone demyelination. | TNFR2 remyelination comparator | qualitative | YES | Exact values not extracted | Source page | medium | Non-SCI demyelination comparator; useful for remyelination mechanism only. |
+
+### Addendum Claims
+
+| Claim ID | Topic ID | Source Paper ID | Claim Statement | Claim Type | Claim Confidence | Source Basis | Evidence Linkage Readiness | Notes |
+|---|---|---|---|---|---|---|---|---|
+| M5B-C037 | M5B-T003 | M5A-P048-M5A-P049 | TNFR2 is best represented as an optional repair-biasing adjunct that may support survival and remyelination after a separate conditioning program has established host competence. | project synthesis | medium | SCI TNFR2 agonist and non-SCI remyelination comparator rows | ready | Do not represent TNFR2 as the primary TLR/MyD88/TRIF induction mechanism. |
+
+### Addendum Evidence Links
+
+| Evidence Link ID | Claim ID | Observation ID | Link Type | Strength | Notes |
+|---|---|---|---|---|---|
+| M5B-L061 | M5B-C037 | M5B-O094 | supports | high | Direct SCI TNFR2 agonist repair-biasing evidence, with local-delivery boundary. |
+| M5B-L062 | M5B-C037 | M5B-O095 | contextual_support | medium | Non-SCI TNFR2 remyelination comparator. |
+
+### Addendum Boundary Conditions
+
+| Boundary ID | Boundary | Interpretation Rule | Supporting Evidence | Confidence |
+|---|---|---|---|---|
+| M5B-B009 | TNFR2 adjunct boundary | TNFR2 survival/remyelination biology should be modeled as a repair-biasing adjunct, not as evidence that TNFR2 substitutes for TLR4/MPLA or TLR2 innate-conditioning induction. | M5B-O094-O095 | high |
+
+### Addendum Consensus Draft
+
+| Consensus Draft ID | Topic ID | Draft Statement | Supporting Claims | Supporting Observations | Boundary Notes | Status |
+|---|---|---|---|---|---|---|
+| M5B-S009 | M5B-T003 | TNFR2 agonism has SCI repair and non-SCI remyelination support, but should be treated as a survival/remyelination biasing signal that may complement systemic innate preconditioning rather than as the core conditioning trigger. | M5B-C037 | M5B-O094-O095 | M5B-B009 | TARGETED CONSENSUS DRAFT |
