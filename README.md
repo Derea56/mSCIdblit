@@ -5,7 +5,7 @@ A scientifically rigorous, auditable knowledge base for synthesizing spinal cord
 
 ## Module Narrative Order
 
-Module numbers are stable identifiers, not the recommended reading order. For presentations and synthesis, use: model systems (Module 8), traumatic SCI-to-chronic-lesion pathobiology (Module 13), chronic lesion architecture (Module 1), human pathology/imaging (Module 6), immune/myeloid modulation (Module 3), innate immune conditioning/tolerance (Module 12), ischemic-conditioning comparators (Module 11), host fibroinflammatory conditioning (Module 7), peripheral nerve and DRG priming of CNS repair (Module 15), in vitro/ex vivo validation systems (Module 9), biomaterials/scaffolds (Module 2), cell transplantation (Module 4), axon/remyelination/white matter repair (Module 5), CRISPR epigenome editing for neuroregeneration (Module 14), and clinical trials (Module 10).
+Module numbers are stable identifiers, not the recommended reading order. For presentations and synthesis, use: model systems (Module 8), traumatic SCI-to-chronic-lesion pathobiology (Module 13), chronic lesion architecture (Module 1), human pathology/imaging (Module 6), immune/myeloid modulation (Module 3), innate immune conditioning/tolerance (Module 12), ischemic-conditioning comparators (Module 11), host fibroinflammatory conditioning (Module 7), peripheral nerve and DRG priming of CNS repair (Module 15), PNS electrical stimulation preconditioning (Module 16), in vitro/ex vivo validation systems (Module 9), biomaterials/scaffolds (Module 2), cell transplantation (Module 4), axon/remyelination/white matter repair (Module 5), CRISPR epigenome editing for neuroregeneration (Module 14), and clinical trials (Module 10).
 
 ## 🎯 Core Principles
 
@@ -82,7 +82,7 @@ mSCIdblit/
 │   ├── EXPERIMENT_GRANULARITY.md     # Experiment-splitting rules
 │   ├── OLLAMA_CHUNK_EXTRACTION.md    # Local model chunking workflow
 │   ├── MODULE_1_2_SYNTHESIS.md       # First cross-module lesion/scaffold synthesis
-│   ├── CROSS_MODULE_SYNTHESIS.md     # Aim-aligned synthesis across Modules 1B-15B
+│   ├── CROSS_MODULE_SYNTHESIS.md     # Aim-aligned synthesis across Modules 1B-16B
 │   ├── AIMS_EVIDENCE_MAP.md          # Specific aims to module evidence map
 │   ├── CONSENSUS_REVIEW_REGISTER.md  # Cross-module consensus review register
 │   ├── MATERIALIZED_INTEGRITY_AUDIT.md # Generated bundle/SQL integrity audit
@@ -137,7 +137,9 @@ mSCIdblit/
 │   ├── Module_14A_TRACKER.md         # CRISPR epigenome editing for neuroregeneration tracker
 │   ├── Module_14B_TRACKER.md         # CRISPR epigenome editing evidence consolidation
 │   ├── Module_15A_TRACKER.md         # Peripheral nerve and DRG priming of CNS repair tracker
-│   └── Module_15B_TRACKER.md         # Peripheral nerve and DRG priming evidence consolidation
+│   ├── Module_15B_TRACKER.md         # Peripheral nerve and DRG priming evidence consolidation
+│   ├── Module_16A_TRACKER.md         # PNS electrical stimulation preconditioning tracker
+│   └── Module_16B_TRACKER.md         # PNS electrical stimulation preconditioning evidence consolidation
 ├── CONTRIBUTING.md                    # Scientific curation protocol
 └── README.md                          # This file
 ```

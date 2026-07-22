@@ -2,7 +2,7 @@
 
 **Status**: first-pass synthesis from the consensus review register.
 
-**Scope**: Modules 1B-15B, organized around the revised preconditioning and reconstruction aims.
+**Scope**: Modules 1B-16B, organized around the revised preconditioning and reconstruction aims.
 
 **Use**: grant-facing logic layer and database navigation aid; not a final quantitative meta-analysis.
 
@@ -51,21 +51,21 @@ The preconditioning logic is therefore defensible as a discovery and validation 
 
 **Aim alignment**: Aim 1, Aim 1C, Aim 2, and Aim 3
 
-**Modules**: Module 3B, Module 7B, Module 11B, Module 12B, Module 15B
+**Modules**: Module 3B, Module 7B, Module 11B, Module 12B, Module 15B, Module 16B
 
-**Core consensus IDs**: M3B-S001, M3B-S002, M3B-S005, M7B-S007, M7B-S008, M11B-S008, M12B-S001, M12B-S008, M15B-S003, M15B-S006
+**Core consensus IDs**: M3B-S001, M3B-S002, M3B-S005, M7B-S007, M7B-S008, M11B-S008, M12B-S001, M12B-S008, M15B-S003, M15B-S006, M16B-S001, M16B-S004
 
-**Evidence footprint**: 206 observations / 144 claims / 316 links / 40 boundaries / 40 consensus drafts across participating modules.
+**Evidence footprint**: 222 observations / 160 claims / 356 links / 48 boundaries / 48 consensus drafts across participating modules.
 
-**Observation confidence in core consensus**: high: 11, low: 48, medium: 64.
+**Observation confidence in core consensus**: high: 20, low: 48, medium: 68.
 
-**Synthesis statement**: The host response is not merely damage to suppress; it is a timing-, cell-state-, and tissue-context-dependent variable that can be conditioned. Immune, vascular, stromal, innate-adaptor, and DRG-intrinsic programs can support containment, debris handling, tolerance-like protection, remote priming, or repair permissiveness, but the same broad intervention class can be harmful or uninformative when timing and cell identity are lost.
+**Synthesis statement**: The host response is not merely damage to suppress; it is a timing-, cell-state-, and tissue-context-dependent variable that can be conditioned. Immune, vascular, stromal, innate-adaptor, DRG-intrinsic, and activity-dependent PNS stimulation programs can support containment, debris handling, tolerance-like protection, remote priming, or repair permissiveness, but the same broad intervention class can be harmful or uninformative when timing and cell identity are lost.
 
 **Evidence Ladder**
 
 - Observations: immune/myeloid rows separate depletion, corralling, metabolism, pyroptosis, debris handling, and delivery contexts.
 - Author claims: host-conditioning analogs from implants, flaps, islets, organ tolerance, ischemia, and LPS support pre-challenge state modification.
-- Consensus: Modules 3, 7, 11, 12, and 15 converge on state-specific conditioning while rejecting broad anti-inflammatory, direct clinical endotoxin/LPS, or generic nerve-injury framing.
+- Consensus: Modules 3, 7, 11, 12, 15, and 16 converge on state-specific conditioning while rejecting broad anti-inflammatory, direct clinical endotoxin/LPS, generic nerve-injury, or stimulation-equals-conditioning framing.
 
 **Boundaries**
 
@@ -73,6 +73,7 @@ The preconditioning logic is therefore defensible as a discovery and validation 
 - Perioperative ischemic conditioning is an analog for timing and host-state logic, not direct evidence for traumatic chronic reconstruction.
 - Cross-field host-conditioning evidence requires route, dose, timing, tissue, endpoint, and field-to-SCI distance labels.
 - Peripheral nerve/DRG priming requires lesion order, side, segment, and associated versus remote DRG labels.
+- PNS electrical stimulation requires nerve target, stimulation parameters, timing, and proof that DRG/spinal growth-state readouts were engaged.
 
 **Experimental Implications**
 
@@ -118,15 +119,15 @@ The preconditioning logic is therefore defensible as a discovery and validation 
 
 **Aim alignment**: Aim 2 and Aim 3
 
-**Modules**: Module 1B, Module 2B, Module 4B, Module 5B, Module 6B, Module 8B, Module 10B, Module 13B, Module 14B, Module 15B
+**Modules**: Module 1B, Module 2B, Module 4B, Module 5B, Module 6B, Module 8B, Module 10B, Module 13B, Module 14B, Module 15B, Module 16B
 
-**Core consensus IDs**: M1B-S006, M2B-S003, M4B-S002, M4B-S004, M5B-S001, M5B-S003, M5B-S004, M6B-S005, M8B-S006, M10B-S007, M13B-S003, M14B-S006, M15B-S001, M15B-S007
+**Core consensus IDs**: M1B-S006, M2B-S003, M4B-S002, M4B-S004, M5B-S001, M5B-S003, M5B-S004, M6B-S005, M8B-S006, M10B-S007, M13B-S003, M14B-S006, M15B-S001, M15B-S007, M16B-S003, M16B-S007
 
-**Evidence footprint**: 561 observations / 306 claims / 691 links / 79 boundaries / 80 consensus drafts across participating modules.
+**Evidence footprint**: 577 observations / 322 claims / 731 links / 87 boundaries / 88 consensus drafts across participating modules.
 
-**Observation confidence in core consensus**: high: 20, low: 19, medium: 86.
+**Observation confidence in core consensus**: high: 25, low: 19, medium: 86.
 
-**Synthesis statement**: SCI repair cannot be summarized by a single recovery axis. Axon growth, DRG growth-state priming, sprouting, remyelination, white-matter preservation, graft integration, target-gene regulation, relay formation, electrophysiology, imaging biomarkers, and behavior are related but non-interchangeable endpoint families.
+**Synthesis statement**: SCI repair cannot be summarized by a single recovery axis. Axon growth, DRG growth-state priming, ES-induced initiation, sprouting, remyelination, white-matter preservation, graft integration, target-gene regulation, relay formation, electrophysiology, imaging biomarkers, and behavior are related but non-interchangeable endpoint families.
 
 **Evidence Ladder**
 
@@ -138,6 +139,7 @@ The preconditioning logic is therefore defensible as a discovery and validation 
 
 - Sprouting, regeneration, relay engagement, spared-tract plasticity, and behavioral association should not be collapsed.
 - Peripheral nerve conditioning evidence should remain sensory-pathway and DRG-specific unless tested in other CNS axon systems.
+- PNS ES evidence should separate peripheral nerve repair, central growth initiation, lesion traversal, growth beyond lesion, and chronic sensory physiology.
 - Clinical registry endpoints need results linkage before efficacy synthesis.
 - Remote neurodegeneration and local lesion-bed repair are linked but distinct evidence layers.
 
@@ -185,13 +187,13 @@ The preconditioning logic is therefore defensible as a discovery and validation 
 
 **Aim alignment**: Integrated aims logic
 
-**Modules**: Module 1B, Module 2B, Module 3B, Module 4B, Module 5B, Module 7B, Module 9B, Module 11B, Module 12B, Module 13B, Module 14B, Module 15B
+**Modules**: Module 1B, Module 2B, Module 3B, Module 4B, Module 5B, Module 7B, Module 9B, Module 11B, Module 12B, Module 13B, Module 14B, Module 15B, Module 16B
 
-**Core consensus IDs**: M1B-S008, M2B-S005, M3B-S008, M4B-S008, M5B-S008, M7B-S008, M9B-S008, M11B-S008, M12B-S008, M13B-S008, M14B-S008, M15B-S008
+**Core consensus IDs**: M1B-S008, M2B-S005, M3B-S008, M4B-S008, M5B-S008, M7B-S008, M9B-S008, M11B-S008, M12B-S008, M13B-S008, M14B-S008, M15B-S008, M16B-S008
 
-**Evidence footprint**: 638 observations / 363 claims / 747 links / 95 boundaries / 96 consensus drafts across participating modules.
+**Evidence footprint**: 654 observations / 379 claims / 787 links / 103 boundaries / 104 consensus drafts across participating modules.
 
-**Observation confidence in core consensus**: high: 35, low: 69, medium: 133.
+**Observation confidence in core consensus**: high: 45, low: 69, medium: 139.
 
 **Synthesis statement**: The most defensible project-level hypothesis is that conditioning can improve SCI reconstruction only if it creates a host state compatible with the target lesion anatomy, implanted material or graft, and desired endpoint family. The evidence supports a conditioning-discovery, programmable regulatory-editing, and validation program, not an immediate universal conditioning or gene-editing therapy claim.
 
@@ -199,7 +201,7 @@ The preconditioning logic is therefore defensible as a discovery and validation 
 
 - Observations: all core modules now provide experiment-level rows and B-layer observations suitable for cross-module tracing, including the traumatic injury-to-lesion trajectory layer.
 - Author claims: repair, conditioning, graft, biomaterial, and immune claims are strongest when narrowed to model, timing, and endpoint.
-- Consensus: Modules 1-15 collectively support an aim-aligned logic of endogenous protective programs, host response modification, injury-to-lesion modification, peripheral-to-CNS priming, programmable regulatory editing, and host-biomaterial interaction testing.
+- Consensus: Modules 1-16 collectively support an aim-aligned logic of endogenous protective programs, host response modification, injury-to-lesion modification, peripheral-to-CNS priming, non-destructive stimulation conditioning, programmable regulatory editing, and host-biomaterial interaction testing.
 
 **Boundaries**
 
@@ -253,6 +255,8 @@ The preconditioning logic is therefore defensible as a discovery and validation 
 | CMS-T002 | M12B-S008 | Module 12B | M12B-T008 | 3 | 3 | 8 | review for final consensus wording |
 | CMS-T002 | M15B-S003 | Module 15B | M15B-T003 | 5 | 5 | 8 | review for final consensus wording |
 | CMS-T002 | M15B-S006 | Module 15B | M15B-T006 | 1 | 1 | 8 | promote as boundary consensus after wording pass |
+| CMS-T002 | M16B-S001 | Module 16B | M16B-T001 | 4 | 4 | 8 | review for final consensus wording |
+| CMS-T002 | M16B-S004 | Module 16B | M16B-T004 | 9 | 9 | 8 | review for final consensus wording |
 | CMS-T003 | M2B-S002 | Module 2B | M2B-T002 | 10 | 0 | 0 | review for final consensus wording |
 | CMS-T003 | M2B-S003 | Module 2B | M2B-T003 | 9 | 0 | 0 | review for final consensus wording |
 | CMS-T003 | M2B-S007 | Module 2B | M2B-T007 | 4 | 0 | 0 | promote as boundary consensus after wording pass |
@@ -277,6 +281,8 @@ The preconditioning logic is therefore defensible as a discovery and validation 
 | CMS-T004 | M14B-S006 | Module 14B | M14B-T006 | 2 | 2 | 8 | review for final consensus wording |
 | CMS-T004 | M15B-S001 | Module 15B | M15B-T001 | 3 | 3 | 8 | review for final consensus wording |
 | CMS-T004 | M15B-S007 | Module 15B | M15B-T007 | 14 | 14 | 8 | review for final consensus wording |
+| CMS-T004 | M16B-S003 | Module 16B | M16B-T003 | 4 | 4 | 8 | review for final consensus wording |
+| CMS-T004 | M16B-S007 | Module 16B | M16B-T007 | 1 | 1 | 8 | review for final consensus wording |
 | CMS-T005 | M8B-S001 | Module 8B | M8B-T001 | 1 | 3 | 8 | review for final consensus wording |
 | CMS-T005 | M8B-S002 | Module 8B | M8B-T002 | 1 | 3 | 8 | promote as boundary consensus after wording pass |
 | CMS-T005 | M8B-S004 | Module 8B | M8B-T004 | 1 | 3 | 8 | review for final consensus wording |
@@ -301,3 +307,4 @@ The preconditioning logic is therefore defensible as a discovery and validation 
 | CMS-T006 | M13B-S008 | Module 13B | M13B-T008 | 3 | 3 | 8 | review for final consensus wording |
 | CMS-T006 | M14B-S008 | Module 14B | M14B-T008 | 3 | 3 | 8 | review for final consensus wording |
 | CMS-T006 | M15B-S008 | Module 15B | M15B-T008 | 13 | 13 | 8 | review for final consensus wording |
+| CMS-T006 | M16B-S008 | Module 16B | M16B-T008 | 16 | 16 | 8 | review for final consensus wording |

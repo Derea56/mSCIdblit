@@ -99,6 +99,11 @@ MODULE_REVIEW_NOTES = {
         "module_action": "Use as the peripheral nerve-to-DRG-to-CNS priming layer; preserve lesion order, side, segment, associated versus remote DRG status, pathway, and central repair endpoint boundaries.",
         "priority": "promote after full-text confidence upgrade of remote DRG, STAT3/IL-6, and timing-order anchors",
     },
+    "16b": {
+        "review_status": "CONSENSUS-READY FIRST PASS",
+        "module_action": "Keep PNS electrical stimulation separate from lesion conditioning; preserve stimulation parameters, nerve target, timing, DRG/spinal compartment, endpoint, and chronic safety boundaries.",
+        "priority": "promote after full-text confidence upgrade of direct ES-plus-SCI and brief-ES conditioning anchors",
+    },
 }
 
 

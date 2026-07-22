@@ -1,8 +1,8 @@
 {
   "status": "cross-module consensus review register",
   "generated_from": "validated B-tracker evidence bundles",
-  "module_count": 15,
-  "consensus_count": 120,
+  "module_count": 16,
+  "consensus_count": 128,
   "module_rows": [
     {
       "module_key": "1b",
@@ -198,6 +198,19 @@
       "consensus_drafts": 8,
       "module_action": "Use as the peripheral nerve-to-DRG-to-CNS priming layer; preserve lesion order, side, segment, associated versus remote DRG status, pathway, and central repair endpoint boundaries.",
       "priority": "promote after full-text confidence upgrade of remote DRG, STAT3/IL-6, and timing-order anchors"
+    },
+    {
+      "module_key": "16b",
+      "module": "Module 16B",
+      "source_tracker": "modules/Module_16B_TRACKER.md",
+      "review_status": "CONSENSUS-READY FIRST PASS",
+      "observations": 16,
+      "author_claims": 16,
+      "evidence_links": 40,
+      "boundary_records": 8,
+      "consensus_drafts": 8,
+      "module_action": "Keep PNS electrical stimulation separate from lesion conditioning; preserve stimulation parameters, nerve target, timing, DRG/spinal compartment, endpoint, and chronic safety boundaries.",
+      "priority": "promote after full-text confidence upgrade of direct ES-plus-SCI and brief-ES conditioning anchors"
     }
   ],
   "consensus_rows": [
@@ -5304,6 +5317,362 @@
       },
       "claim_confidence": {
         "high": 7,
+        "medium": 6
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "16b",
+      "module": "Module 16B",
+      "consensus_id": "M16B-S001",
+      "topic_id": "M16B-T001",
+      "statement": "PNS electrical stimulation is consensus-ready as a non-destructive conditioning-like strategy that can enhance sensory axon growth initiation, but current evidence does not support treating it as fully equivalent to peripheral nerve crush or axotomy conditioning for sustained central regeneration through SCI lesions.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M16B-O001",
+        "M16B-O002",
+        "M16B-O003",
+        "M16B-O004"
+      ],
+      "supporting_claims": [
+        "M16B-C001",
+        "M16B-C002",
+        "M16B-C003",
+        "M16B-C004"
+      ],
+      "boundary_records": [
+        "M16B-B001",
+        "M16B-B002",
+        "M16B-B003",
+        "M16B-B004",
+        "M16B-B005",
+        "M16B-B006",
+        "M16B-B007",
+        "M16B-B008"
+      ],
+      "observation_count": 4,
+      "claim_count": 4,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 4
+      },
+      "claim_confidence": {
+        "high": 4
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "16b",
+      "module": "Module 16B",
+      "consensus_id": "M16B-S002",
+      "topic_id": "M16B-T002",
+      "statement": "Sciatic nerve stimulation can activate spinal afferent-terminal metabolism without parallel DRG soma metabolic activation, so PNS ES studies must distinguish peripheral axon, spinal terminal, DRG cell body, and central lesion compartments.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M16B-O002"
+      ],
+      "supporting_claims": [
+        "M16B-C002"
+      ],
+      "boundary_records": [
+        "M16B-B001",
+        "M16B-B002",
+        "M16B-B003",
+        "M16B-B004",
+        "M16B-B005",
+        "M16B-B006",
+        "M16B-B007",
+        "M16B-B008"
+      ],
+      "observation_count": 1,
+      "claim_count": 1,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 1
+      },
+      "claim_confidence": {
+        "high": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "promote as boundary consensus after wording pass"
+    },
+    {
+      "module_key": "16b",
+      "module": "Module 16B",
+      "consensus_id": "M16B-S003",
+      "topic_id": "M16B-T003",
+      "statement": "Brief electrical stimulation has strong peripheral nerve repair and DRG neurite-outgrowth support, but CNS repair claims require direct central-branch, dorsal-column, lesion-crossing, and chronic functional endpoints.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M16B-O001",
+        "M16B-O002",
+        "M16B-O003",
+        "M16B-O004"
+      ],
+      "supporting_claims": [
+        "M16B-C001",
+        "M16B-C002",
+        "M16B-C003",
+        "M16B-C004"
+      ],
+      "boundary_records": [
+        "M16B-B001",
+        "M16B-B002",
+        "M16B-B003",
+        "M16B-B004",
+        "M16B-B005",
+        "M16B-B006",
+        "M16B-B007",
+        "M16B-B008"
+      ],
+      "observation_count": 4,
+      "claim_count": 4,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 4
+      },
+      "claim_confidence": {
+        "high": 4
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "16b",
+      "module": "Module 16B",
+      "consensus_id": "M16B-S004",
+      "topic_id": "M16B-T004",
+      "statement": "Conditioning lesion biology should be used as the benchmark for ES preconditioning: cAMP, STAT3, transcriptional programs, timing, interval, and branch-specific outcomes define what must be measured before claiming ES has induced a true DRG growth state.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M16B-O005",
+        "M16B-O006",
+        "M16B-O007",
+        "M16B-O008",
+        "M16B-O009",
+        "M16B-O010",
+        "M16B-O011",
+        "M16B-O012",
+        "M16B-O013"
+      ],
+      "supporting_claims": [
+        "M16B-C005",
+        "M16B-C006",
+        "M16B-C007",
+        "M16B-C008",
+        "M16B-C009",
+        "M16B-C010",
+        "M16B-C011",
+        "M16B-C012",
+        "M16B-C013"
+      ],
+      "boundary_records": [
+        "M16B-B001",
+        "M16B-B002",
+        "M16B-B003",
+        "M16B-B004",
+        "M16B-B005",
+        "M16B-B006",
+        "M16B-B007",
+        "M16B-B008"
+      ],
+      "observation_count": 9,
+      "claim_count": 9,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 5,
+        "medium": 4
+      },
+      "claim_confidence": {
+        "high": 5,
+        "medium": 4
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "16b",
+      "module": "Module 16B",
+      "consensus_id": "M16B-S005",
+      "topic_id": "M16B-T005",
+      "statement": "Activity-state and metabolic pathways, including PKC-STAT3-NOX2 redox signaling and AMPK-linked regenerative ability, are candidate readouts for PNS ES preconditioning but need direct perturbation in ES-conditioned SCI models.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M16B-O008",
+        "M16B-O009",
+        "M16B-O010",
+        "M16B-O011",
+        "M16B-O012",
+        "M16B-O013",
+        "M16B-O014"
+      ],
+      "supporting_claims": [
+        "M16B-C008",
+        "M16B-C009",
+        "M16B-C010",
+        "M16B-C011",
+        "M16B-C012",
+        "M16B-C013",
+        "M16B-C014"
+      ],
+      "boundary_records": [
+        "M16B-B001",
+        "M16B-B002",
+        "M16B-B003",
+        "M16B-B004",
+        "M16B-B005",
+        "M16B-B006",
+        "M16B-B007",
+        "M16B-B008"
+      ],
+      "observation_count": 7,
+      "claim_count": 7,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 3,
+        "medium": 4
+      },
+      "claim_confidence": {
+        "high": 3,
+        "medium": 4
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "16b",
+      "module": "Module 16B",
+      "consensus_id": "M16B-S006",
+      "topic_id": "M16B-T006",
+      "statement": "Remote or contralateral DRG priming is established for unilateral sciatic lesion conditioning, but PNS electrical stimulation should not inherit that claim until experiments directly measure side, segment, associated versus non-associated DRGs, and later CNS repair endpoints.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M16B-O011"
+      ],
+      "supporting_claims": [
+        "M16B-C011"
+      ],
+      "boundary_records": [
+        "M16B-B001",
+        "M16B-B002",
+        "M16B-B003",
+        "M16B-B004",
+        "M16B-B005",
+        "M16B-B006",
+        "M16B-B007",
+        "M16B-B008"
+      ],
+      "observation_count": 1,
+      "claim_count": 1,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 1
+      },
+      "claim_confidence": {
+        "high": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "16b",
+      "module": "Module 16B",
+      "consensus_id": "M16B-S007",
+      "topic_id": "M16B-T007",
+      "statement": "ES-enabled regeneration strategies should include chronic sensory physiology and maladaptive plasticity endpoints because regenerating afferents may remain pathophysiological even when anatomical growth is achieved.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M16B-O016"
+      ],
+      "supporting_claims": [
+        "M16B-C016"
+      ],
+      "boundary_records": [
+        "M16B-B001",
+        "M16B-B002",
+        "M16B-B003",
+        "M16B-B004",
+        "M16B-B005",
+        "M16B-B006",
+        "M16B-B007",
+        "M16B-B008"
+      ],
+      "observation_count": 1,
+      "claim_count": 1,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 1
+      },
+      "claim_confidence": {
+        "high": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "16b",
+      "module": "Module 16B",
+      "consensus_id": "M16B-S008",
+      "topic_id": "M16B-T008",
+      "statement": "Module 16 should function as the PNS electrical-stimulation preconditioning layer: candidate studies should specify nerve target, intact or injured nerve status, stimulation parameters, timing, DRG and spinal readouts, lesion model, and whether the endpoint is peripheral repair, central initiation, lesion traversal, growth beyond lesion, or functional recovery.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M16B-O001",
+        "M16B-O002",
+        "M16B-O003",
+        "M16B-O004",
+        "M16B-O005",
+        "M16B-O006",
+        "M16B-O007",
+        "M16B-O008",
+        "M16B-O009",
+        "M16B-O010",
+        "M16B-O011",
+        "M16B-O012",
+        "M16B-O013",
+        "M16B-O014",
+        "M16B-O015",
+        "M16B-O016"
+      ],
+      "supporting_claims": [
+        "M16B-C001",
+        "M16B-C002",
+        "M16B-C003",
+        "M16B-C004",
+        "M16B-C005",
+        "M16B-C006",
+        "M16B-C007",
+        "M16B-C008",
+        "M16B-C009",
+        "M16B-C010",
+        "M16B-C011",
+        "M16B-C012",
+        "M16B-C013",
+        "M16B-C014",
+        "M16B-C015",
+        "M16B-C016"
+      ],
+      "boundary_records": [
+        "M16B-B001",
+        "M16B-B002",
+        "M16B-B003",
+        "M16B-B004",
+        "M16B-B005",
+        "M16B-B006",
+        "M16B-B007",
+        "M16B-B008"
+      ],
+      "observation_count": 16,
+      "claim_count": 16,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 10,
+        "medium": 6
+      },
+      "claim_confidence": {
+        "high": 10,
         "medium": 6
       },
       "boundary_confidence": "8 linked",

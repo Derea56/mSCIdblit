@@ -19,6 +19,7 @@ Generated from `scripts/audit_materialized_integrity.py`.
 | Module 13 | 24/24 | 24 | 24 | 24 | 56 | 8 | 24 |
 | Module 14 | 16/16 | 16 | 16 | 16 | 40 | 8 | 24 |
 | Module 15 | 16/16 | 16 | 16 | 16 | 40 | 8 | 48 |
+| Module 16 | 16/16 | 16 | 16 | 16 | 40 | 8 | 43 |
 
 ## Warnings
 
@@ -41,3 +42,6 @@ Generated from `scripts/audit_materialized_integrity.py`.
 - Module 8 M8B-S007 has fewer than two observation refs
 - Module 8 M8B-S008 has fewer than two observation refs
 - Module 15 M15B-S006 has fewer than two observation refs
+- Module 16 M16B-S002 has fewer than two observation refs
+- Module 16 M16B-S006 has fewer than two observation refs
+- Module 16 M16B-S007 has fewer than two observation refs
