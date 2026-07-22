@@ -49,6 +49,7 @@ MODULE_A_TRACKERS = {
     "13b": ROOT / "modules" / "Module_13A_TRACKER.md",
     "14b": ROOT / "modules" / "Module_14A_TRACKER.md",
     "15b": ROOT / "modules" / "Module_15A_TRACKER.md",
+    "16b": ROOT / "modules" / "Module_16A_TRACKER.md",
 }
 
 MODULE_TOPICS = {
@@ -66,6 +67,7 @@ MODULE_TOPICS = {
     "13b": "traumatic SCI pathobiology and chronic lesion formation",
     "14b": "CRISPR-based epigenome editing for neuroregeneration",
     "15b": "peripheral nerve and DRG priming of CNS repair",
+    "16b": "PNS electrical stimulation preconditioning for CNS repair",
 }
 
 
@@ -582,7 +584,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         "--module",
         choices=sorted(key for key in MODULES if key != "1b"),
         action="append",
-        help="Module key to materialize. May be repeated. Defaults to 3b-15b.",
+        help="Module key to materialize. May be repeated. Defaults to 3b-16b.",
     )
     parser.add_argument("--check", action="store_true", help="Validate generated SQL without writing it.")
     return parser.parse_args(argv)
@@ -595,7 +597,7 @@ def default_output(config: ModuleConfig) -> Path:
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv or sys.argv[1:])
-    module_keys = args.module or ["3b", "4b", "5b", "6b", "7b", "8b", "9b", "10b", "11b", "12b", "13b", "14b", "15b"]
+    module_keys = args.module or ["3b", "4b", "5b", "6b", "7b", "8b", "9b", "10b", "11b", "12b", "13b", "14b", "15b", "16b"]
     failed = False
     for module_key in module_keys:
         config = MODULES[module_key]

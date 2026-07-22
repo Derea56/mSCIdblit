@@ -2,9 +2,9 @@
   "status": "first-pass cross-module synthesis",
   "generated_from": "data/processed/consensus_review_register.json",
   "theme_count": 6,
-  "core_consensus_count": 59,
-  "source_module_count": 15,
-  "source_consensus_count": 120,
+  "core_consensus_count": 64,
+  "source_module_count": 16,
+  "source_consensus_count": 128,
   "themes": [
     {
       "theme_id": "CMS-T001",
@@ -178,7 +178,8 @@
         "7b",
         "11b",
         "12b",
-        "15b"
+        "15b",
+        "16b"
       ],
       "core_consensus_ids": [
         "M3B-S001",
@@ -190,19 +191,22 @@
         "M12B-S001",
         "M12B-S008",
         "M15B-S003",
-        "M15B-S006"
+        "M15B-S006",
+        "M16B-S001",
+        "M16B-S004"
       ],
-      "synthesis_statement": "The host response is not merely damage to suppress; it is a timing-, cell-state-, and tissue-context-dependent variable that can be conditioned. Immune, vascular, stromal, innate-adaptor, and DRG-intrinsic programs can support containment, debris handling, tolerance-like protection, remote priming, or repair permissiveness, but the same broad intervention class can be harmful or uninformative when timing and cell identity are lost.",
+      "synthesis_statement": "The host response is not merely damage to suppress; it is a timing-, cell-state-, and tissue-context-dependent variable that can be conditioned. Immune, vascular, stromal, innate-adaptor, DRG-intrinsic, and activity-dependent PNS stimulation programs can support containment, debris handling, tolerance-like protection, remote priming, or repair permissiveness, but the same broad intervention class can be harmful or uninformative when timing and cell identity are lost.",
       "evidence_ladder": [
         "Observations: immune/myeloid rows separate depletion, corralling, metabolism, pyroptosis, debris handling, and delivery contexts.",
         "Author claims: host-conditioning analogs from implants, flaps, islets, organ tolerance, ischemia, and LPS support pre-challenge state modification.",
-        "Consensus: Modules 3, 7, 11, 12, and 15 converge on state-specific conditioning while rejecting broad anti-inflammatory, direct clinical endotoxin/LPS, or generic nerve-injury framing."
+        "Consensus: Modules 3, 7, 11, 12, 15, and 16 converge on state-specific conditioning while rejecting broad anti-inflammatory, direct clinical endotoxin/LPS, generic nerve-injury, or stimulation-equals-conditioning framing."
       ],
       "boundaries": [
         "Endotoxin/LPS is one discovery platform for endogenous protection, not a proposed clinical conditioning agent.",
         "Perioperative ischemic conditioning is an analog for timing and host-state logic, not direct evidence for traumatic chronic reconstruction.",
         "Cross-field host-conditioning evidence requires route, dose, timing, tissue, endpoint, and field-to-SCI distance labels.",
-        "Peripheral nerve/DRG priming requires lesion order, side, segment, and associated versus remote DRG labels."
+        "Peripheral nerve/DRG priming requires lesion order, side, segment, and associated versus remote DRG labels.",
+        "PNS electrical stimulation requires nerve target, stimulation parameters, timing, and proof that DRG/spinal growth-state readouts were engaged."
       ],
       "experimental_implications": [
         "Build candidate-node tables for TLR/adaptor routing, IL-1/IL-1R1, IL-10, monocyte/endothelial state, myeloid metabolic competence, trained/tolerized innate-state markers, cAMP, IL-6/JAK/STAT3, NOX2 redox signaling, and DRG macrophage support.",
@@ -214,14 +218,15 @@
         "Module 7B",
         "Module 11B",
         "Module 12B",
-        "Module 15B"
+        "Module 15B",
+        "Module 16B"
       ],
       "module_counts": {
-        "observations": 206,
-        "author_claims": 144,
-        "evidence_links": 316,
-        "boundary_records": 40,
-        "consensus_drafts": 40
+        "observations": 222,
+        "author_claims": 160,
+        "evidence_links": 356,
+        "boundary_records": 48,
+        "consensus_drafts": 48
       },
       "core_consensus": [
         {
@@ -323,12 +328,32 @@
           "claim_count": 1,
           "boundary_count": 8,
           "review_action": "promote as boundary consensus after wording pass"
+        },
+        {
+          "consensus_id": "M16B-S001",
+          "module": "Module 16B",
+          "topic_id": "M16B-T001",
+          "statement": "PNS electrical stimulation is consensus-ready as a non-destructive conditioning-like strategy that can enhance sensory axon growth initiation, but current evidence does not support treating it as fully equivalent to peripheral nerve crush or axotomy conditioning for sustained central regeneration through SCI lesions.",
+          "observation_count": 4,
+          "claim_count": 4,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M16B-S004",
+          "module": "Module 16B",
+          "topic_id": "M16B-T004",
+          "statement": "Conditioning lesion biology should be used as the benchmark for ES preconditioning: cAMP, STAT3, transcriptional programs, timing, interval, and branch-specific outcomes define what must be measured before claiming ES has induced a true DRG growth state.",
+          "observation_count": 9,
+          "claim_count": 9,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
         }
       ],
       "observation_confidence_tally": {
-        "high": 11,
+        "high": 20,
         "low": 48,
-        "medium": 64
+        "medium": 68
       }
     },
     {
@@ -512,7 +537,8 @@
         "10b",
         "13b",
         "14b",
-        "15b"
+        "15b",
+        "16b"
       ],
       "core_consensus_ids": [
         "M1B-S006",
@@ -528,9 +554,11 @@
         "M13B-S003",
         "M14B-S006",
         "M15B-S001",
-        "M15B-S007"
+        "M15B-S007",
+        "M16B-S003",
+        "M16B-S007"
       ],
-      "synthesis_statement": "SCI repair cannot be summarized by a single recovery axis. Axon growth, DRG growth-state priming, sprouting, remyelination, white-matter preservation, graft integration, target-gene regulation, relay formation, electrophysiology, imaging biomarkers, and behavior are related but non-interchangeable endpoint families.",
+      "synthesis_statement": "SCI repair cannot be summarized by a single recovery axis. Axon growth, DRG growth-state priming, ES-induced initiation, sprouting, remyelination, white-matter preservation, graft integration, target-gene regulation, relay formation, electrophysiology, imaging biomarkers, and behavior are related but non-interchangeable endpoint families.",
       "evidence_ladder": [
         "Observations: modules preserve separate pathobiology, histology, imaging, behavior, electrophysiology, graft, myelin, and circuit readouts.",
         "Author claims: many studies infer repair from selected endpoints, but consensus records repeatedly flag endpoint mismatch.",
@@ -539,6 +567,7 @@
       "boundaries": [
         "Sprouting, regeneration, relay engagement, spared-tract plasticity, and behavioral association should not be collapsed.",
         "Peripheral nerve conditioning evidence should remain sensory-pathway and DRG-specific unless tested in other CNS axon systems.",
+        "PNS ES evidence should separate peripheral nerve repair, central growth initiation, lesion traversal, growth beyond lesion, and chronic sensory physiology.",
         "Clinical registry endpoints need results linkage before efficacy synthesis.",
         "Remote neurodegeneration and local lesion-bed repair are linked but distinct evidence layers."
       ],
@@ -557,14 +586,15 @@
         "Module 10B",
         "Module 13B",
         "Module 14B",
-        "Module 15B"
+        "Module 15B",
+        "Module 16B"
       ],
       "module_counts": {
-        "observations": 561,
-        "author_claims": 306,
-        "evidence_links": 691,
-        "boundary_records": 79,
-        "consensus_drafts": 80
+        "observations": 577,
+        "author_claims": 322,
+        "evidence_links": 731,
+        "boundary_records": 87,
+        "consensus_drafts": 88
       },
       "core_consensus": [
         {
@@ -706,10 +736,30 @@
           "claim_count": 14,
           "boundary_count": 8,
           "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M16B-S003",
+          "module": "Module 16B",
+          "topic_id": "M16B-T003",
+          "statement": "Brief electrical stimulation has strong peripheral nerve repair and DRG neurite-outgrowth support, but CNS repair claims require direct central-branch, dorsal-column, lesion-crossing, and chronic functional endpoints.",
+          "observation_count": 4,
+          "claim_count": 4,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M16B-S007",
+          "module": "Module 16B",
+          "topic_id": "M16B-T007",
+          "statement": "ES-enabled regeneration strategies should include chronic sensory physiology and maladaptive plasticity endpoints because regenerating afferents may remain pathophysiological even when anatomical growth is achieved.",
+          "observation_count": 1,
+          "claim_count": 1,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
         }
       ],
       "observation_confidence_tally": {
-        "high": 20,
+        "high": 25,
         "low": 19,
         "medium": 86
       }
@@ -914,7 +964,8 @@
         "12b",
         "13b",
         "14b",
-        "15b"
+        "15b",
+        "16b"
       ],
       "core_consensus_ids": [
         "M1B-S008",
@@ -928,13 +979,14 @@
         "M12B-S008",
         "M13B-S008",
         "M14B-S008",
-        "M15B-S008"
+        "M15B-S008",
+        "M16B-S008"
       ],
       "synthesis_statement": "The most defensible project-level hypothesis is that conditioning can improve SCI reconstruction only if it creates a host state compatible with the target lesion anatomy, implanted material or graft, and desired endpoint family. The evidence supports a conditioning-discovery, programmable regulatory-editing, and validation program, not an immediate universal conditioning or gene-editing therapy claim.",
       "evidence_ladder": [
         "Observations: all core modules now provide experiment-level rows and B-layer observations suitable for cross-module tracing, including the traumatic injury-to-lesion trajectory layer.",
         "Author claims: repair, conditioning, graft, biomaterial, and immune claims are strongest when narrowed to model, timing, and endpoint.",
-        "Consensus: Modules 1-15 collectively support an aim-aligned logic of endogenous protective programs, host response modification, injury-to-lesion modification, peripheral-to-CNS priming, programmable regulatory editing, and host-biomaterial interaction testing."
+        "Consensus: Modules 1-16 collectively support an aim-aligned logic of endogenous protective programs, host response modification, injury-to-lesion modification, peripheral-to-CNS priming, non-destructive stimulation conditioning, programmable regulatory editing, and host-biomaterial interaction testing."
       ],
       "boundaries": [
         "Conditioning should not be framed as simply anti-inflammatory.",
@@ -959,14 +1011,15 @@
         "Module 12B",
         "Module 13B",
         "Module 14B",
-        "Module 15B"
+        "Module 15B",
+        "Module 16B"
       ],
       "module_counts": {
-        "observations": 638,
-        "author_claims": 363,
-        "evidence_links": 747,
-        "boundary_records": 95,
-        "consensus_drafts": 96
+        "observations": 654,
+        "author_claims": 379,
+        "evidence_links": 787,
+        "boundary_records": 103,
+        "consensus_drafts": 104
       },
       "core_consensus": [
         {
@@ -1088,12 +1141,22 @@
           "claim_count": 13,
           "boundary_count": 8,
           "review_action": "review for final consensus wording"
+        },
+        {
+          "consensus_id": "M16B-S008",
+          "module": "Module 16B",
+          "topic_id": "M16B-T008",
+          "statement": "Module 16 should function as the PNS electrical-stimulation preconditioning layer: candidate studies should specify nerve target, intact or injured nerve status, stimulation parameters, timing, DRG and spinal readouts, lesion model, and whether the endpoint is peripheral repair, central initiation, lesion traversal, growth beyond lesion, or functional recovery.",
+          "observation_count": 16,
+          "claim_count": 16,
+          "boundary_count": 8,
+          "review_action": "review for final consensus wording"
         }
       ],
       "observation_confidence_tally": {
-        "high": 35,
+        "high": 45,
         "low": 69,
-        "medium": 133
+        "medium": 139
       }
     }
   ],

@@ -2,7 +2,7 @@
 
 This register is the working layer for going through consensus in each module. The B trackers remain the source of truth; this file summarizes which consensus statements are ready to promote, which need wording cleanup, and which require confidence upgrades before stronger claims.
 
-**Coverage**: 15 modules, 120 consensus statements.
+**Coverage**: 16 modules, 128 consensus statements.
 
 ## Module Pass Order
 
@@ -23,6 +23,7 @@ This register is the working layer for going through consensus in each module. T
 | Module 13B | CONSENSUS-READY FIRST PASS | 24 obs / 24 claims / 56 links / 8 boundaries / 8 drafts | Use as the injury-to-chronic-lesion bridge; preserve timing, model severity, vascular, immune, glial, stromal, axon/myelin, and cavitation boundaries. | promote after full-text confidence upgrade of key vascular, scar, and degeneration anchors |
 | Module 14B | CONSENSUS-READY FIRST PASS | 16 obs / 16 claims / 40 links / 8 boundaries / 8 drafts | Keep CRISPR epigenome editing separate from permanent genome editing; preserve effector, target, cell type, delivery, chromatin-state, and neuroregeneration endpoint boundaries. | promote after full-text confidence upgrade of PTEN dCas9-KRAB, neuronal CRISPRa, and injury-enhancer anchors |
 | Module 15B | CONSENSUS-READY FIRST PASS | 16 obs / 16 claims / 40 links / 8 boundaries / 8 drafts | Use as the peripheral nerve-to-DRG-to-CNS priming layer; preserve lesion order, side, segment, associated versus remote DRG status, pathway, and central repair endpoint boundaries. | promote after full-text confidence upgrade of remote DRG, STAT3/IL-6, and timing-order anchors |
+| Module 16B | CONSENSUS-READY FIRST PASS | 16 obs / 16 claims / 40 links / 8 boundaries / 8 drafts | Keep PNS electrical stimulation separate from lesion conditioning; preserve stimulation parameters, nerve target, timing, DRG/spinal compartment, endpoint, and chronic safety boundaries. | promote after full-text confidence upgrade of direct ES-plus-SCI and brief-ES conditioning anchors |
 
 ## Recommended Review Sequence
 
@@ -229,3 +230,16 @@ This register is the working layer for going through consensus in each module. T
 | M15B-S006 | M15B-T006 | 1 obs / 1 claims / 8 boundaries | promote as boundary consensus after wording pass | Unilateral sciatic nerve injury can induce pro-regenerative marker expression and enhanced growth capacity in DRGs not directly associated with the damaged nerve, making remote or contralateral DRG priming a real boundary to track separately from ipsilateral conditioning. |
 | M15B-S007 | M15B-T007 | 14 obs / 14 claims / 8 boundaries | review for final consensus wording | Peripheral conditioning is not a universal regeneration switch: early branch-specific negative evidence and dorsal-column model boundaries show that peripheral, central, ipsilateral, contralateral, and tract-specific outcomes must remain separated. |
 | M15B-S008 | M15B-T008 | 13 obs / 13 claims / 8 boundaries | review for final consensus wording | Module 15 should function as a peripheral-to-CNS host-priming comparator for SCI repair: candidate synthesis should ask whether a treatment mimics DRG growth-state induction, sustains that state after SCI, recruits systemic/remote DRG programs, or changes the lesion environment enough for central axon growth. |
+
+### Module 16B
+
+| Consensus | Topic | Evidence | Review Action | Statement |
+|---|---|---|---|---|
+| M16B-S001 | M16B-T001 | 4 obs / 4 claims / 8 boundaries | review for final consensus wording | PNS electrical stimulation is consensus-ready as a non-destructive conditioning-like strategy that can enhance sensory axon growth initiation, but current evidence does not support treating it as fully equivalent to peripheral nerve crush or axotomy conditioning for sustained central regeneration through SCI lesions. |
+| M16B-S002 | M16B-T002 | 1 obs / 1 claims / 8 boundaries | promote as boundary consensus after wording pass | Sciatic nerve stimulation can activate spinal afferent-terminal metabolism without parallel DRG soma metabolic activation, so PNS ES studies must distinguish peripheral axon, spinal terminal, DRG cell body, and central lesion compartments. |
+| M16B-S003 | M16B-T003 | 4 obs / 4 claims / 8 boundaries | review for final consensus wording | Brief electrical stimulation has strong peripheral nerve repair and DRG neurite-outgrowth support, but CNS repair claims require direct central-branch, dorsal-column, lesion-crossing, and chronic functional endpoints. |
+| M16B-S004 | M16B-T004 | 9 obs / 9 claims / 8 boundaries | review for final consensus wording | Conditioning lesion biology should be used as the benchmark for ES preconditioning: cAMP, STAT3, transcriptional programs, timing, interval, and branch-specific outcomes define what must be measured before claiming ES has induced a true DRG growth state. |
+| M16B-S005 | M16B-T005 | 7 obs / 7 claims / 8 boundaries | review for final consensus wording | Activity-state and metabolic pathways, including PKC-STAT3-NOX2 redox signaling and AMPK-linked regenerative ability, are candidate readouts for PNS ES preconditioning but need direct perturbation in ES-conditioned SCI models. |
+| M16B-S006 | M16B-T006 | 1 obs / 1 claims / 8 boundaries | review for final consensus wording | Remote or contralateral DRG priming is established for unilateral sciatic lesion conditioning, but PNS electrical stimulation should not inherit that claim until experiments directly measure side, segment, associated versus non-associated DRGs, and later CNS repair endpoints. |
+| M16B-S007 | M16B-T007 | 1 obs / 1 claims / 8 boundaries | review for final consensus wording | ES-enabled regeneration strategies should include chronic sensory physiology and maladaptive plasticity endpoints because regenerating afferents may remain pathophysiological even when anatomical growth is achieved. |
+| M16B-S008 | M16B-T008 | 16 obs / 16 claims / 8 boundaries | review for final consensus wording | Module 16 should function as the PNS electrical-stimulation preconditioning layer: candidate studies should specify nerve target, intact or injured nerve status, stimulation parameters, timing, DRG and spinal readouts, lesion model, and whether the endpoint is peripheral repair, central initiation, lesion traversal, growth beyond lesion, or functional recovery. |
