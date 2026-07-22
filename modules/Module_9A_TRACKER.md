@@ -11,6 +11,7 @@ This tracker is a first-pass saturated/source-page corpus for in vitro and ex vi
 | Search ID | Source | Query/Source | Retrieved | Included | Notes |
 |---|---|---|---|---|---|
 | M9A-S001 | Saved source snapshot | data/raw/evidence/modules_8_10_bootstrap | 17 | 17 | Source-page rows retained after relevance cleanup; full-text upgrade queued. |
+| M9A-S002 | ODC-SCI targeted update | queued Module 9A in vitro/ex vivo candidates | 2 | 2 | Promoted ODC-SCI in vitro-to-in vivo bridge and cultured immune/debris model datasets into active first-pass corpus; dataset-page confidence retained. |
 
 ## Paper Inventory
 
@@ -33,6 +34,8 @@ This tracker is a first-pass saturated/source-page corpus for in vitro and ex vi
 | M9A-P015 | 19711121 | Nishio T | 2009 | Axonal regeneration and neural network reconstruction in mammalian CNS. | In vitro/ex vivo model context | slice/explant SCI model | PASS 3 SOURCE-PAGE | Following injury to the white matter of the adult mammalian central nervous system (CNS), severed axons fail to |
 | M9A-P016 | 27708562 | Tscherter A | 2016 | Embryonic Cell Grafts in a Culture Model of Spinal Cord Lesion: Neuronal Relay Formation Is Essential for Functional Regeneration. | In vitro/ex vivo model context | slice/explant SCI model | PASS 3 SOURCE-PAGE | Presently there exists no cure for spinal cord injury (SCI). However, transplantation of embryonic tissue into spinal |
 | M9A-P017 | 19429051 | Cho JS | 2009 | Transplantation of mesenchymal stem cells enhances axonal outgrowth and cell survival in an organotypic spinal cord slice culture. | In vitro/ex vivo model context | slice/explant SCI model | PASS 3 SOURCE-PAGE | Mesenchymal stem cells (MSCs) have demonstrated a measurable therapeutic effect following transplantation into animal |
+| M9A-P018 | N/A | ODC-SCI dataset | 2026 | Pleiotrophin efficacy in vitro and dose-response experiments in vivo after incomplete cervical dorsolateral quadrant SCI. | In vitro/ex vivo plus in vivo bridge context | in vitro-to-in vivo dose-response model | PASS 4 DATASET-PAGE | ODC-SCI:1235; DOI 10.34945/F55S36; promoted as in vitro efficacy/dose-response bridge with cervical SCI validation. |
+| M9A-P019 | N/A | ODC-SCI dataset | 2026 | PI3K inhibition in foamy macrophages after T8 contusion and in cultured macrophages treated with spinal cord homogenate. | Cultured macrophage/spinal cord homogenate context | in vitro immune/debris model | PASS 4 DATASET-PAGE | ODC-SCI:930; DOI 10.34945/F5JC70; promoted as cultured macrophage/spinal cord homogenate model with Module 3 linkage. |
 
 ## Experiment-Level Rows
 
@@ -55,16 +58,18 @@ This tracker is a first-pass saturated/source-page corpus for in vitro and ex vi
 | M9A-P015-E001 | M9A-P015 | Abstract / PubMed | In vitro/ex vivo model context | slice/explant SCI model | TBD | TBD | TBD | PubMed/source metadata | Following injury to the white matter of the adult mammalian central nervous system (CNS), severed axons fail to regenerate beyond the lesion site. Recent studies have revealed that the CNS white matter contains numerous axon growth inhibitors. These findings can easily lead to the concept that regenerating axons cannot grow in the CNS white matter because of the growth inhibition by these inhibitory molecules. This "misconception" appears to be generally accepted. However, it is erroneous | medium |
 | M9A-P016-E001 | M9A-P016 | Abstract / PubMed | In vitro/ex vivo model context | slice/explant SCI model | TBD | TBD | TBD | PubMed/source metadata | Presently there exists no cure for spinal cord injury (SCI). However, transplantation of embryonic tissue into spinal cord (SC) lesions resulted in axon outgrowth across the lesion site and some functional recovery, fostering hope for future stem cell therapies. Although in vivo evidence for functional recovery is given, the exact cellular mechanism of the graft support remains elusive: either the grafted cells provide a permissive environment for the host tissue to regenerate itself or the | medium |
 | M9A-P017-E001 | M9A-P017 | Abstract / PubMed | In vitro/ex vivo model context | slice/explant SCI model | TBD | TBD | TBD | PubMed/source metadata | Mesenchymal stem cells (MSCs) have demonstrated a measurable therapeutic effect following transplantation into animal models of spinal cord injury. However, the mechanism(s) by which transplanted cells promote nerve regeneration and/or functional recovery remains indeterminate. Several studies have suggested that MSCs promote tissue repair via secretion of trophic factors, but delineating the effect of such factors is difficult due to the complexity of the in vivo systems. Therefore, we | medium |
+| M9A-P018-E001 | M9A-P018 | ODC-SCI dataset page | In vitro assay plus rat cervical dorsolateral quadrant SCI | Pleiotrophin exposure and dose-response testing | In vitro testing with in vivo validation window | Neural repair assay context | In vitro efficacy, dosing, and cervical SCI translation endpoints | ODC-SCI dataset metadata | Dataset links in vitro pleiotrophin efficacy and dosing observations to incomplete cervical SCI validation, making assay-to-in-vivo translation an explicit boundary. | medium |
+| M9A-P019-E001 | M9A-P019 | ODC-SCI dataset page | Cultured macrophages treated with spinal cord homogenate plus rat T8 contusion context | PI3K inhibition and SCI debris/homogenate exposure | Culture exposure and post-contusion comparison | Foamy macrophages / innate immune cells | Lipid/debris handling and inflammatory pathway endpoints | ODC-SCI dataset metadata | Dataset anchors a cultured macrophage spinal-cord-homogenate model for testing debris-associated immune states linked to in vivo T8 contusion biology. | medium |
 
 ## Saturation Decision
 
 | Decision ID | Status | Basis | Boundary / Queue |
 |---|---|---|---|
-| M9A-D001 | SATURATED / FROZEN FIRST PASS | Current source-page corpus covers the requested model-system categories sufficiently for B-phase boundary synthesis. | Full-text upgrade and additional targeted expansion can refine rows without blocking first-pass B consensus. |
+| M9A-D001 | SATURATED / FROZEN FIRST PASS | Expanded source-page plus ODC-SCI dataset corpus covers organoid, slice/explant, biomaterial, white-matter-like tissue, in vitro-to-in vivo dosing, and cultured immune/debris model boundaries sufficiently for B-phase synthesis. | Full-text/source-document upgrades can refine rows without blocking first-pass B consensus. |
 
 ## ODC-SCI Update Candidates
 
-Access date: 2026-07-17. These ODC-SCI dataset records should be considered for the next Module 9A in vitro/ex vivo update pass; they are not included in the frozen first-pass corpus counts above.
+Access date: 2026-07-17. These ODC-SCI dataset records were promoted into the active Module 9A first-pass corpus on 2026-07-22; retained here as provenance for the saturation update.
 
 | ODC ID | DOI | Dataset / Study | Module 9 Relevance | Update Action |
 |---|---|---|---|---|

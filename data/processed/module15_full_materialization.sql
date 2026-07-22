@@ -2012,7 +2012,7 @@ WITH inserted AS (
     'M15B-T006',
     1,
     'consensus-ready first pass',
-    '{"boundary_tracker_ids": ["M15B-B001", "M15B-B002", "M15B-B003", "M15B-B004", "M15B-B005", "M15B-B006", "M15B-B007", "M15B-B008"], "claim_tracker_ids": ["M15B-C011"], "consensus_draft_id": "M15B-S006", "observation_tracker_ids": ["M15B-O011"], "readiness_status": "CONSENSUS-READY FIRST PASS", "source_agreement_label": null, "supporting_evidence_notes": "Module 15 first-pass curation freeze.", "topic_id": "M15B-T006"}'
+    '{"boundary_tracker_ids": ["M15B-B001", "M15B-B002", "M15B-B003", "M15B-B004", "M15B-B005", "M15B-B006", "M15B-B007", "M15B-B008"], "claim_tracker_ids": ["M15B-C011", "M15B-C012"], "consensus_draft_id": "M15B-S006", "observation_tracker_ids": ["M15B-O011", "M15B-O012"], "readiness_status": "CONSENSUS-READY FIRST PASS", "source_agreement_label": null, "supporting_evidence_notes": "Module 15 first-pass curation freeze.", "topic_id": "M15B-T006"}'
   )
   RETURNING consensus_id
 )
@@ -2022,6 +2022,12 @@ INSERT INTO Consensus_Observation (consensus_id, observation_id, support_type)
 SELECT c.consensus_id, o.observation_id, 'supporting'
 FROM _m15_consensus_map c
 JOIN _m15_observation_map o ON o.tracker_id = 'M15B-O011'
+WHERE c.tracker_id = 'M15B-S006';
+
+INSERT INTO Consensus_Observation (consensus_id, observation_id, support_type)
+SELECT c.consensus_id, o.observation_id, 'supporting'
+FROM _m15_consensus_map c
+JOIN _m15_observation_map o ON o.tracker_id = 'M15B-O012'
 WHERE c.tracker_id = 'M15B-S006';
 
 WITH inserted AS (
@@ -2237,7 +2243,7 @@ BEGIN
   IF claim_count <> 16 THEN RAISE EXCEPTION 'Expected 16 claims, found %', claim_count; END IF;
   IF link_count <> 40 THEN RAISE EXCEPTION 'Expected 40 evidence links, found %', link_count; END IF;
   IF consensus_count <> 8 THEN RAISE EXCEPTION 'Expected 8 consensus rows, found %', consensus_count; END IF;
-  IF consensus_observation_count <> 48 THEN RAISE EXCEPTION 'Unexpected consensus-observation count %', consensus_observation_count; END IF;
+  IF consensus_observation_count <> 49 THEN RAISE EXCEPTION 'Unexpected consensus-observation count %', consensus_observation_count; END IF;
 END $$;
 
 COMMIT;
