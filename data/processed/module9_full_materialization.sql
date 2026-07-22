@@ -765,18 +765,19 @@ INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VA
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Stem-cell-based neural tissue engineering and spinal cord organoids show promises for spinal cord injury repair. However, the native spinal cord presents cell heterogeneity and a stereotypical spatial structure that makes difficult their recapitulation within an organoid architecture, which requires an assembly encompassing cellular composition, segmental organization and dorsoventral features. Here we engineer a thoracic vertebral segment-specific spinal',
     'qualitative',
+    'spatial transcriptomics / spatial atlas',
     'Stem-cell-based neural tissue engineering and spinal cord organoids show promises for spinal cord injury repair. However, the native spinal cord presents cell heterogeneity and a stereotypical spatial structure that makes difficult their recapitulation within an organoid architecture, which requires an assembly encompassing cellular composition, segmental organization and dorsoventral features. Here we engineer a thoracic vertebral segment-specific spinal',
     'spinal cord organoid injury model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P001-E001", "paper_tracker_id": "M9A-P001", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T001", "tracker_id": "M9B-O001"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P001-E001", "measurement_method_inference": "spatial transcriptomics / spatial atlas", "paper_tracker_id": "M9A-P001", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T001", "tracker_id": "M9B-O001"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -790,18 +791,19 @@ INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O001', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Neonatal spinal cord tissues exhibit remarkable regenerative capabilities as compared to adult spinal cord tissues after injury, but the role of extracellular matrix (ECM) in this process has remained elusive. Here, we found that early developmental spinal cord had higher levels of ECM proteins associated with neural development and axon growth, but fewer inhibitory proteoglycans, compared to those of adult spinal cord. Decellularized spinal cord ECM from',
     'qualitative',
+    NULL,
     'Neonatal spinal cord tissues exhibit remarkable regenerative capabilities as compared to adult spinal cord tissues after injury, but the role of extracellular matrix (ECM) in this process has remained elusive. Here, we found that early developmental spinal cord had higher levels of ECM proteins associated with neural development and axon growth, but fewer inhibitory proteoglycans, compared to those of adult spinal cord. Decellularized spinal cord ECM from',
     'spinal cord organoid injury model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P002-E001", "paper_tracker_id": "M9A-P002", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T002", "tracker_id": "M9B-O002"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P002-E001", "measurement_method_inference": null, "paper_tracker_id": "M9A-P002", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T002", "tracker_id": "M9B-O002"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -815,18 +817,19 @@ INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O002', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Stem cell-derived spinal cord organoids (SCOs) have revolutionised the study of spinal cord development and disease mechanisms, offering a three-dimensional model that recapitulates the complexity of native tissue. This review synthesises recent advancements in SCO technology, highlighting their role in modelling spinal cord morphogenesis and their application in neurodegenerative disease research. We discuss the methodological breakthroughs in inducing',
     'qualitative',
+    NULL,
     'Stem cell-derived spinal cord organoids (SCOs) have revolutionised the study of spinal cord development and disease mechanisms, offering a three-dimensional model that recapitulates the complexity of native tissue. This review synthesises recent advancements in SCO technology, highlighting their role in modelling spinal cord morphogenesis and their application in neurodegenerative disease research. We discuss the methodological breakthroughs in inducing',
     'spinal cord organoid injury model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P003-E001", "paper_tracker_id": "M9A-P003", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T003", "tracker_id": "M9B-O003"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P003-E001", "measurement_method_inference": null, "paper_tracker_id": "M9A-P003", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T003", "tracker_id": "M9B-O003"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -840,18 +843,19 @@ INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O003', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Damage to the spinal cord can lead to irreversible paralysis and loss of sensory function, but translation of preclinical therapies remains elusive. We recently showed that bioactive supramolecular assemblies of peptide amphiphiles can reverse paralysis in an acute mouse model following severe spinal cord injury (SCI). Here we report the development of two human spinal cord organoid injury models to simulate SCI in vitro, a laceration of the organoid with',
     'qualitative',
+    NULL,
     'Damage to the spinal cord can lead to irreversible paralysis and loss of sensory function, but translation of preclinical therapies remains elusive. We recently showed that bioactive supramolecular assemblies of peptide amphiphiles can reverse paralysis in an acute mouse model following severe spinal cord injury (SCI). Here we report the development of two human spinal cord organoid injury models to simulate SCI in vitro, a laceration of the organoid with',
     'spinal cord organoid injury model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P004-E001", "paper_tracker_id": "M9A-P004", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T004", "tracker_id": "M9B-O004"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P004-E001", "measurement_method_inference": null, "paper_tracker_id": "M9A-P004", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T004", "tracker_id": "M9B-O004"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -865,18 +869,19 @@ INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O004', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Spinal cord injury (SCI) severely compromises neural regeneration due to limited intrinsic repair capacity. Combining induced pluripotent stem cell (iPSC)-derived organoids with biomaterial scaffolds offers a promising regenerative strategy. This study investigated the therapeutic potential of human spinal cord organoids (hSCOs) encapsulated within gelatin methacryloyl (GelMA) hydrogel for SCI repair. hSCOs were generated from iPSCs via stage-specific',
     'qualitative',
+    NULL,
     'Spinal cord injury (SCI) severely compromises neural regeneration due to limited intrinsic repair capacity. Combining induced pluripotent stem cell (iPSC)-derived organoids with biomaterial scaffolds offers a promising regenerative strategy. This study investigated the therapeutic potential of human spinal cord organoids (hSCOs) encapsulated within gelatin methacryloyl (GelMA) hydrogel for SCI repair. hSCOs were generated from iPSCs via stage-specific',
     'spinal cord organoid injury model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P005-E001", "paper_tracker_id": "M9A-P005", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T005", "tracker_id": "M9B-O005"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P005-E001", "measurement_method_inference": null, "paper_tracker_id": "M9A-P005", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T005", "tracker_id": "M9B-O005"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -890,18 +895,19 @@ INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O005', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'The construction of artificially manipulable tissue-engineered human spinal cord organoids (HSCO) in vitro is crucial for recapitulating spinal cord development and facilitating the transplantation repair of complete spinal cord injury (SCI). Here, we develop a millimeter-scale macroscopic complex scaffold assembled by Matrigel-filled channel-patterned type II collagen (CPCol II-M), in which a spheroid derived from human motor neural progenitors extends',
     'qualitative',
+    NULL,
     'The construction of artificially manipulable tissue-engineered human spinal cord organoids (HSCO) in vitro is crucial for recapitulating spinal cord development and facilitating the transplantation repair of complete spinal cord injury (SCI). Here, we develop a millimeter-scale macroscopic complex scaffold assembled by Matrigel-filled channel-patterned type II collagen (CPCol II-M), in which a spheroid derived from human motor neural progenitors extends',
     'spinal cord organoid injury model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P006-E001", "paper_tracker_id": "M9A-P006", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T006", "tracker_id": "M9B-O006"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P006-E001", "measurement_method_inference": null, "paper_tracker_id": "M9A-P006", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T006", "tracker_id": "M9B-O006"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -915,18 +921,19 @@ INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O006', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'The complexity and precision of the human nervous system have posed significant challenges for researchers seeking suitable models to elucidate refractory neural disorders. Traditional approaches, including monolayer cell cultures and animal models, often fail to replicate the intricacies of human neural tissue. The advent of organoid technology derived from stem cells has addressed many of these limitations, providing highly representative platforms for',
     'qualitative',
+    NULL,
     'The complexity and precision of the human nervous system have posed significant challenges for researchers seeking suitable models to elucidate refractory neural disorders. Traditional approaches, including monolayer cell cultures and animal models, often fail to replicate the intricacies of human neural tissue. The advent of organoid technology derived from stem cells has addressed many of these limitations, providing highly representative platforms for',
     'spinal cord organoid injury model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P007-E001", "paper_tracker_id": "M9A-P007", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T007", "tracker_id": "M9B-O007"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P007-E001", "measurement_method_inference": null, "paper_tracker_id": "M9A-P007", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T007", "tracker_id": "M9B-O007"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -940,18 +947,19 @@ INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O007', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Directional axon regeneration and remyelination are crucial for repair of spinal cord injury (SCI), but existing treatments do not effectively promote those processes. Here, we propose a strategy for construction of niche-specific spinal white matter-like tissue (WMLT) using decellularized optic nerve (DON) loaded with neurotrophin-3 (NT-3)-overexpressing oligodendrocyte precursor cells. A rat model with a white matter defect in the dorsal spinal cord of',
     'qualitative',
+    NULL,
     'Directional axon regeneration and remyelination are crucial for repair of spinal cord injury (SCI), but existing treatments do not effectively promote those processes. Here, we propose a strategy for construction of niche-specific spinal white matter-like tissue (WMLT) using decellularized optic nerve (DON) loaded with neurotrophin-3 (NT-3)-overexpressing oligodendrocyte precursor cells. A rat model with a white matter defect in the dorsal spinal cord of',
     'in vitro/ex vivo sci model taxonomy',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P008-E001", "paper_tracker_id": "M9A-P008", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T008", "tracker_id": "M9B-O008"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P008-E001", "measurement_method_inference": null, "paper_tracker_id": "M9A-P008", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T008", "tracker_id": "M9B-O008"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -965,18 +973,19 @@ INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O008', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Oxidative stress represents a fundamental pathological driver of the secondary injury cascade following traumatic spinal cord injury (SCI). Although the pan-histone deacetylase inhibitor Trichostatin A (TSA) exhibits neuroprotective properties in various contexts, its capacity to modulate the endogenous NRF2/HO-1 antioxidant defense system within the human spinal cord microenvironment remains to be elucidated. In this study, we utilized human induced',
     'qualitative',
+    'pathway activity / phospho-signaling assay',
     'Oxidative stress represents a fundamental pathological driver of the secondary injury cascade following traumatic spinal cord injury (SCI). Although the pan-histone deacetylase inhibitor Trichostatin A (TSA) exhibits neuroprotective properties in various contexts, its capacity to modulate the endogenous NRF2/HO-1 antioxidant defense system within the human spinal cord microenvironment remains to be elucidated. In this study, we utilized human induced',
     'spinal cord organoid injury model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P009-E001", "paper_tracker_id": "M9A-P009", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T001", "tracker_id": "M9B-O009"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P009-E001", "measurement_method_inference": "pathway activity / phospho-signaling assay", "paper_tracker_id": "M9A-P009", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T001", "tracker_id": "M9B-O009"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -990,18 +999,19 @@ INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O009', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Spinal cord injury (SCI) causes irreversible neurological deficits and represents a major global health and socioeconomic burden. Although neural progenitor cell (NPC) transplantation is strongly supported by preclinical evidence through cell replacement, intrinsic neuroregeneration, and broad neurotrophic and immunomodulatory effects, its clinical translation has progressed more slowly than anticipated. In parallel, rapid advances in gene editing,',
     'qualitative',
+    NULL,
     'Spinal cord injury (SCI) causes irreversible neurological deficits and represents a major global health and socioeconomic burden. Although neural progenitor cell (NPC) transplantation is strongly supported by preclinical evidence through cell replacement, intrinsic neuroregeneration, and broad neurotrophic and immunomodulatory effects, its clinical translation has progressed more slowly than anticipated. In parallel, rapid advances in gene editing,',
     'spinal cord organoid injury model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P010-E001", "paper_tracker_id": "M9A-P010", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T002", "tracker_id": "M9B-O010"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P010-E001", "measurement_method_inference": null, "paper_tracker_id": "M9A-P010", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T002", "tracker_id": "M9B-O010"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1015,18 +1025,19 @@ INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O010', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Over the past decade, the use of induced pluripotent stem cells (IPSCs), as both direct therapeutics and building blocks for 3D in vitro models, has exhibited exciting potential in both helping to elucidate pathogenic mechanisms and treating diseases relevant to neurosurgery. Transplantation of IPSCs is being studied in neurological injuries and diseases, such as spinal cord injury and Parkinson''s disease, whose clinical manifestations stem from',
     'qualitative',
+    NULL,
     'Over the past decade, the use of induced pluripotent stem cells (IPSCs), as both direct therapeutics and building blocks for 3D in vitro models, has exhibited exciting potential in both helping to elucidate pathogenic mechanisms and treating diseases relevant to neurosurgery. Transplantation of IPSCs is being studied in neurological injuries and diseases, such as spinal cord injury and Parkinson''s disease, whose clinical manifestations stem from',
     'spinal cord organoid injury model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P011-E001", "paper_tracker_id": "M9A-P011", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T003", "tracker_id": "M9B-O011"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P011-E001", "measurement_method_inference": null, "paper_tracker_id": "M9A-P011", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T003", "tracker_id": "M9B-O011"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1040,18 +1051,19 @@ INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O011', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'The limited regenerative capacity of the central nervous system (CNS)poses a major challenge in neurosurgical interventions for spinal cord injuries, neurodegenerative diseases,and traumatic brain injuries. Traditional approaches offer structural stabilization but rarely achieve true neural tissue regeneration. Recent advances in regenerative medicine have spotlighted two promising strategies: 3D bioprinting and neural stem cell (NSC) therapy.3D',
     'qualitative',
+    NULL,
     'The limited regenerative capacity of the central nervous system (CNS)poses a major challenge in neurosurgical interventions for spinal cord injuries, neurodegenerative diseases,and traumatic brain injuries. Traditional approaches offer structural stabilization but rarely achieve true neural tissue regeneration. Recent advances in regenerative medicine have spotlighted two promising strategies: 3D bioprinting and neural stem cell (NSC) therapy.3D',
     'biomaterial culture model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P012-E001", "paper_tracker_id": "M9A-P012", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T004", "tracker_id": "M9B-O012"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P012-E001", "measurement_method_inference": null, "paper_tracker_id": "M9A-P012", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T004", "tracker_id": "M9B-O012"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1065,18 +1077,19 @@ INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O012', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Spinal cord injury (SCI) is a devastating condition resulting in loss of motor function. The pathology of SCI is multifaceted and involves a cascade of events, including neuroinflammation and neuronal degeneration at the epicenter, limiting repair process. We developed a supermacroporous, mechanically elastic, electro-conductive, graphene crosslinked collagen (Gr-Col) cryogels for the regeneration of the spinal cord post-injury. The effects of graphene in',
     'qualitative',
+    'immunostaining / histology / pathology',
     'Spinal cord injury (SCI) is a devastating condition resulting in loss of motor function. The pathology of SCI is multifaceted and involves a cascade of events, including neuroinflammation and neuronal degeneration at the epicenter, limiting repair process. We developed a supermacroporous, mechanically elastic, electro-conductive, graphene crosslinked collagen (Gr-Col) cryogels for the regeneration of the spinal cord post-injury. The effects of graphene in',
     'slice/explant sci model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P013-E001", "paper_tracker_id": "M9A-P013", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T005", "tracker_id": "M9B-O013"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P013-E001", "measurement_method_inference": "immunostaining / histology / pathology", "paper_tracker_id": "M9A-P013", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T005", "tracker_id": "M9B-O013"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1090,18 +1103,19 @@ INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O013', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'A substantial problem in research concerned with axonal repair is the use of a wide variety of lesion models and the complexity associated with the respective in vivo lesion paradigms. Organotypic slice cultures are a potential in vitro alternative because the cytoarchitectonic tissue organization is well preserved and the slices can be maintained in culture for several weeks. Until now no spinal cord slice culture model for the study of axonal growth has',
     'qualitative',
+    NULL,
     'A substantial problem in research concerned with axonal repair is the use of a wide variety of lesion models and the complexity associated with the respective in vivo lesion paradigms. Organotypic slice cultures are a potential in vitro alternative because the cytoarchitectonic tissue organization is well preserved and the slices can be maintained in culture for several weeks. Until now no spinal cord slice culture model for the study of axonal growth has',
     'slice/explant sci model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P014-E001", "paper_tracker_id": "M9A-P014", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T006", "tracker_id": "M9B-O014"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P014-E001", "measurement_method_inference": null, "paper_tracker_id": "M9A-P014", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T006", "tracker_id": "M9B-O014"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1115,18 +1129,19 @@ INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O014', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Following injury to the white matter of the adult mammalian central nervous system (CNS), severed axons fail to regenerate beyond the lesion site. Recent studies have revealed that the CNS white matter contains numerous axon growth inhibitors. These findings can easily lead to the concept that regenerating axons cannot grow in the CNS white matter because of the growth inhibition by these inhibitory molecules. This "misconception" appears to be generally',
     'qualitative',
+    NULL,
     'Following injury to the white matter of the adult mammalian central nervous system (CNS), severed axons fail to regenerate beyond the lesion site. Recent studies have revealed that the CNS white matter contains numerous axon growth inhibitors. These findings can easily lead to the concept that regenerating axons cannot grow in the CNS white matter because of the growth inhibition by these inhibitory molecules. This "misconception" appears to be generally',
     'slice/explant sci model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P015-E001", "paper_tracker_id": "M9A-P015", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T007", "tracker_id": "M9B-O015"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P015-E001", "measurement_method_inference": null, "paper_tracker_id": "M9A-P015", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T007", "tracker_id": "M9B-O015"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1140,18 +1155,19 @@ INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O015', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Presently there exists no cure for spinal cord injury (SCI). However, transplantation of embryonic tissue into spinal cord (SC) lesions resulted in axon outgrowth across the lesion site and some functional recovery, fostering hope for future stem cell therapies. Although in vivo evidence for functional recovery is given, the exact cellular mechanism of the graft support remains elusive: either the grafted cells provide a permissive environment for the',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Presently there exists no cure for spinal cord injury (SCI). However, transplantation of embryonic tissue into spinal cord (SC) lesions resulted in axon outgrowth across the lesion site and some functional recovery, fostering hope for future stem cell therapies. Although in vivo evidence for functional recovery is given, the exact cellular mechanism of the graft support remains elusive: either the grafted cells provide a permissive environment for the',
     'slice/explant sci model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P016-E001", "paper_tracker_id": "M9A-P016", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T008", "tracker_id": "M9B-O016"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P016-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M9A-P016", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T008", "tracker_id": "M9B-O016"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1165,18 +1181,19 @@ INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O016', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Mesenchymal stem cells (MSCs) have demonstrated a measurable therapeutic effect following transplantation into animal models of spinal cord injury. However, the mechanism(s) by which transplanted cells promote nerve regeneration and/or functional recovery remains indeterminate. Several studies have suggested that MSCs promote tissue repair via secretion of trophic factors, but delineating the effect of such factors is difficult due to the complexity of',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Mesenchymal stem cells (MSCs) have demonstrated a measurable therapeutic effect following transplantation into animal models of spinal cord injury. However, the mechanism(s) by which transplanted cells promote nerve regeneration and/or functional recovery remains indeterminate. Several studies have suggested that MSCs promote tissue repair via secretion of trophic factors, but delineating the effect of such factors is difficult due to the complexity of',
     'slice/explant sci model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P017-E001", "paper_tracker_id": "M9A-P017", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T001", "tracker_id": "M9B-O017"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M9A-P017-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M9A-P017", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M9B-T001", "tracker_id": "M9B-O017"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1190,18 +1207,19 @@ INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O017', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'ODC-SCI pleiotrophin dataset links in vitro efficacy/dose-response evidence with incomplete cervical dorsolateral quadrant SCI validation.',
     'qualitative/dataset',
+    NULL,
     'ODC-SCI pleiotrophin dataset links in vitro efficacy/dose-response evidence with incomplete cervical dorsolateral quadrant SCI validation.',
     'in vitro-to-in vivo validation bridge',
     'ODC-SCI dataset metadata',
     'ODC-SCI dataset page',
     'medium',
-    '{"curator_notes": "Promoted ODC-SCI candidate; dataset-page confidence retained.", "experiment_tracker_id": "M9A-P018-E001", "paper_tracker_id": "M9A-P018", "quantitative": "NO", "statistics_reported": "Dataset-page first pass; raw data not reanalyzed", "topic_id": "M9B-T007", "tracker_id": "M9B-O018"}'
+    '{"curator_notes": "Promoted ODC-SCI candidate; dataset-page confidence retained.", "experiment_tracker_id": "M9A-P018-E001", "measurement_method_inference": null, "paper_tracker_id": "M9A-P018", "quantitative": "NO", "statistics_reported": "Dataset-page first pass; raw data not reanalyzed", "topic_id": "M9B-T007", "tracker_id": "M9B-O018"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1215,18 +1233,19 @@ INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O018', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'ODC-SCI PI3K dataset anchors cultured macrophages exposed to spinal cord homogenate as an immune/debris model linked to T8 contusion biology.',
     'qualitative/dataset',
+    NULL,
     'ODC-SCI PI3K dataset anchors cultured macrophages exposed to spinal cord homogenate as an immune/debris model linked to T8 contusion biology.',
     'cultured macrophage spinal-cord-homogenate model',
     'ODC-SCI dataset metadata',
     'ODC-SCI dataset page',
     'medium',
-    '{"curator_notes": "Promoted ODC-SCI candidate; dataset-page confidence retained.", "experiment_tracker_id": "M9A-P019-E001", "paper_tracker_id": "M9A-P019", "quantitative": "NO", "statistics_reported": "Dataset-page first pass; raw data not reanalyzed", "topic_id": "M9B-T005", "tracker_id": "M9B-O019"}'
+    '{"curator_notes": "Promoted ODC-SCI candidate; dataset-page confidence retained.", "experiment_tracker_id": "M9A-P019-E001", "measurement_method_inference": null, "paper_tracker_id": "M9A-P019", "quantitative": "NO", "statistics_reported": "Dataset-page first pass; raw data not reanalyzed", "topic_id": "M9B-T005", "tracker_id": "M9B-O019"}'
   FROM _m9_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot

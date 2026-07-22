@@ -3054,18 +3054,19 @@ INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VA
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Lu P 2007 combined MSC graft with scaffold, scar, hydrogel, exosome, or microenvironmental features, making attribution to the cell product alone limited.',
     'qualitative',
+    NULL,
     'Lu P 2007 combined MSC graft with scaffold, scar, hydrogel, exosome, or microenvironmental features, making attribution to the cell product alone limited.',
     'lu p 2007 combined msc graft with scaffold, scar, hydrogel, exosome, or microenvironmental features, making attribution to the cell product alone limited.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Axon regeneration through scars and into sites of chronic spinal cord injury. Note: Chronic scar/graft permissiveness anchor.", "experiment_tracker_id": "M4A-P001-E001", "paper_tracker_id": "M4A-P001", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T006", "tracker_id": "M4B-O001"}'
+    '{"curator_notes": "Primary title: Axon regeneration through scars and into sites of chronic spinal cord injury. Note: Chronic scar/graft permissiveness anchor.", "experiment_tracker_id": "M4A-P001-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P001", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T006", "tracker_id": "M4B-O001"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3079,18 +3080,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O001', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Xiao Z 2016 tested BMMC + NeuroRegen scaffold in Human, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'qualitative',
+    NULL,
     'Xiao Z 2016 tested BMMC + NeuroRegen scaffold in Human, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'xiao z 2016 tested bmmc + neuroregen scaffold in human, providing a clinical feasibility or safety anchor for cell transplantation after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: One-year clinical study of NeuroRegen scaffold implantation following scar resection in complete chronic spinal cord injury patients. Note: Human scaffold-cell anchor.", "experiment_tracker_id": "M4A-P002-E001", "paper_tracker_id": "M4A-P002", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O002"}'
+    '{"curator_notes": "Primary title: One-year clinical study of NeuroRegen scaffold implantation following scar resection in complete chronic spinal cord injury patients. Note: Human scaffold-cell anchor.", "experiment_tracker_id": "M4A-P002-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P002", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O002"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3104,18 +3106,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O002', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ito K 2024 combined hNS/PC + dECM scaffold with scaffold, scar, hydrogel, exosome, or microenvironmental features, making attribution to the cell product alone limited.',
     'qualitative',
+    NULL,
     'Ito K 2024 combined hNS/PC + dECM scaffold with scaffold, scar, hydrogel, exosome, or microenvironmental features, making attribution to the cell product alone limited.',
     'ito k 2024 combined hns/pc + decm scaffold with scaffold, scar, hydrogel, exosome, or microenvironmental features, making attribution to the cell product alone limited.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Histological effects of combined therapy involving scar resection, decellularized scaffolds, and human iPSC-NS/PCs transplantation in chronic complete spinal cord injury.. Note: Chronic complete SCI hNS/PC scaffold anchor.", "experiment_tracker_id": "M4A-P003-E001", "paper_tracker_id": "M4A-P003", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T006", "tracker_id": "M4B-O003"}'
+    '{"curator_notes": "Primary title: Histological effects of combined therapy involving scar resection, decellularized scaffolds, and human iPSC-NS/PCs transplantation in chronic complete spinal cord injury.. Note: Chronic complete SCI hNS/PC scaffold anchor.", "experiment_tracker_id": "M4A-P003-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P003", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T006", "tracker_id": "M4B-O003"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3129,18 +3132,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O003', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Abraham ME 2026 tested NSI-566 human spinal cord-derived neural stem cells in Human chronic cervical SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'qualitative',
+    NULL,
     'Abraham ME 2026 tested NSI-566 human spinal cord-derived neural stem cells in Human chronic cervical SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'abraham me 2026 tested nsi-566 human spinal cord-derived neural stem cells in human chronic cervical sci, providing a clinical feasibility or safety anchor for cell transplantation after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Long-term safety and clinical outcomes from a single-site phase 1 study of neural stem cell transplantation for chronic cervical spinal cord injury.. Note: Long-term cervical phase I safety/outcomes.", "experiment_tracker_id": "M4A-P004-E001", "paper_tracker_id": "M4A-P004", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O004"}'
+    '{"curator_notes": "Primary title: Long-term safety and clinical outcomes from a single-site phase 1 study of neural stem cell transplantation for chronic cervical spinal cord injury.. Note: Long-term cervical phase I safety/outcomes.", "experiment_tracker_id": "M4A-P004-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P004", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O004"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3154,18 +3158,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O004', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Martin JR 2024 tested NSI-566 human spinal cord-derived neural stem cells in Human chronic thoracic SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'qualitative',
+    NULL,
     'Martin JR 2024 tested NSI-566 human spinal cord-derived neural stem cells in Human chronic thoracic SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'martin jr 2024 tested nsi-566 human spinal cord-derived neural stem cells in human chronic thoracic sci, providing a clinical feasibility or safety anchor for cell transplantation after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Long-term clinical and safety outcomes from a single-site phase 1 study of neural stem cell transplantation for chronic thoracic spinal cord injury.. Note: Long-term thoracic phase I safety/outcomes.", "experiment_tracker_id": "M4A-P005-E001", "paper_tracker_id": "M4A-P005", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O005"}'
+    '{"curator_notes": "Primary title: Long-term clinical and safety outcomes from a single-site phase 1 study of neural stem cell transplantation for chronic thoracic spinal cord injury.. Note: Long-term thoracic phase I safety/outcomes.", "experiment_tracker_id": "M4A-P005-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P005", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O005"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3179,18 +3184,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O005', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Gant KL 2022 tested Autologous Schwann cells in Human chronic SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'qualitative',
+    NULL,
     'Gant KL 2022 tested Autologous Schwann cells in Human chronic SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'gant kl 2022 tested autologous schwann cells in human chronic sci, providing a clinical feasibility or safety anchor for cell transplantation after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Phase 1 Safety Trial of Autologous Human Schwann Cell Transplantation in Chronic Spinal Cord Injury.. Note: Phase I Schwann-cell safety anchor.", "experiment_tracker_id": "M4A-P006-E001", "paper_tracker_id": "M4A-P006", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O006"}'
+    '{"curator_notes": "Primary title: Phase 1 Safety Trial of Autologous Human Schwann Cell Transplantation in Chronic Spinal Cord Injury.. Note: Phase I Schwann-cell safety anchor.", "experiment_tracker_id": "M4A-P006-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P006", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O006"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3204,18 +3210,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O006', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Kaplan N 2025 tested Wharton jelly MSCs in Human chronic complete SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'qualitative',
+    NULL,
     'Kaplan N 2025 tested Wharton jelly MSCs in Human chronic complete SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'kaplan n 2025 tested wharton jelly mscs in human chronic complete sci, providing a clinical feasibility or safety anchor for cell transplantation after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Multiroute administration of Wharton''s jelly mesenchymal stem cells in chronic complete spinal cord injury: A phase I safety and feasibility study.. Note: Multiroute MSC phase I feasibility.", "experiment_tracker_id": "M4A-P007-E001", "paper_tracker_id": "M4A-P007", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O007"}'
+    '{"curator_notes": "Primary title: Multiroute administration of Wharton''s jelly mesenchymal stem cells in chronic complete spinal cord injury: A phase I safety and feasibility study.. Note: Multiroute MSC phase I feasibility.", "experiment_tracker_id": "M4A-P007-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P007", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O007"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3229,18 +3236,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O007', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Macedo CT 2024 tested Autologous mesenchymal stromal cells in Human complete cervical SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'qualitative',
+    NULL,
     'Macedo CT 2024 tested Autologous mesenchymal stromal cells in Human complete cervical SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'macedo ct 2024 tested autologous mesenchymal stromal cells in human complete cervical sci, providing a clinical feasibility or safety anchor for cell transplantation after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Transplantation of autologous mesenchymal stromal cells in complete cervical spinal cord injury: a pilot study.. Note: Pilot autologous MSC study.", "experiment_tracker_id": "M4A-P008-E001", "paper_tracker_id": "M4A-P008", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O008"}'
+    '{"curator_notes": "Primary title: Transplantation of autologous mesenchymal stromal cells in complete cervical spinal cord injury: a pilot study.. Note: Pilot autologous MSC study.", "experiment_tracker_id": "M4A-P008-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P008", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O008"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3254,18 +3262,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O008', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zamani H 2022 tested Autologous OEC + BM-MSC in Human chronic SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'qualitative',
+    NULL,
     'Zamani H 2022 tested Autologous OEC + BM-MSC in Human chronic SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'zamani h 2022 tested autologous oec + bm-msc in human chronic sci, providing a clinical feasibility or safety anchor for cell transplantation after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Safety and feasibility of autologous olfactory ensheathing cell and bone marrow mesenchymal stem cell co-transplantation in chronic human spinal cord injury: a clinical trial.. Note: OEC/BM-MSC co-transplant feasibility.", "experiment_tracker_id": "M4A-P009-E001", "paper_tracker_id": "M4A-P009", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O009"}'
+    '{"curator_notes": "Primary title: Safety and feasibility of autologous olfactory ensheathing cell and bone marrow mesenchymal stem cell co-transplantation in chronic human spinal cord injury: a clinical trial.. Note: OEC/BM-MSC co-transplant feasibility.", "experiment_tracker_id": "M4A-P009-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P009", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O009"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3279,18 +3288,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O009', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Chen W 2020 tested BMMC + NeuroRegen scaffold in Human acute complete SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'qualitative',
+    NULL,
     'Chen W 2020 tested BMMC + NeuroRegen scaffold in Human acute complete SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'chen w 2020 tested bmmc + neuroregen scaffold in human acute complete sci, providing a clinical feasibility or safety anchor for cell transplantation after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: NeuroRegen Scaffolds Combined with Autologous Bone Marrow Mononuclear Cells for the Repair of Acute Complete Spinal Cord Injury: A 3-Year Clinical Study.. Note: Acute complete scaffold/BMMC clinical anchor.", "experiment_tracker_id": "M4A-P010-E001", "paper_tracker_id": "M4A-P010", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O010"}'
+    '{"curator_notes": "Primary title: NeuroRegen Scaffolds Combined with Autologous Bone Marrow Mononuclear Cells for the Repair of Acute Complete Spinal Cord Injury: A 3-Year Clinical Study.. Note: Acute complete scaffold/BMMC clinical anchor.", "experiment_tracker_id": "M4A-P010-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P010", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O010"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3304,18 +3314,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O010', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Sinopoulou E 2025 evaluated Human ESC-derived spinal cord NSCs in Non-human primate, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Sinopoulou E 2025 evaluated Human ESC-derived spinal cord NSCs in Non-human primate, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
     'sinopoulou e 2025 evaluated human esc-derived spinal cord nscs in non-human primate, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Extensive restoration of forelimb function in primates with spinal cord injury by neural stem cell transplantation.. Note: Primate skilled forelimb recovery anchor.", "experiment_tracker_id": "M4A-P011-E001", "paper_tracker_id": "M4A-P011", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O011"}'
+    '{"curator_notes": "Primary title: Extensive restoration of forelimb function in primates with spinal cord injury by neural stem cell transplantation.. Note: Primate skilled forelimb recovery anchor.", "experiment_tracker_id": "M4A-P011-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P011", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O011"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3329,18 +3340,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O011', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Iwai H 2015 evaluated ESC-derived NS/PCs in Common marmoset, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Iwai H 2015 evaluated ESC-derived NS/PCs in Common marmoset, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
     'iwai h 2015 evaluated esc-derived ns/pcs in common marmoset, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Allogeneic Neural Stem/Progenitor Cells Derived From Embryonic Stem Cells Promote Functional Recovery After Transplantation Into Injured Spinal Cord of Nonhuman Primates.. Note: Non-human primate safety/efficacy bridge.", "experiment_tracker_id": "M4A-P012-E001", "paper_tracker_id": "M4A-P012", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O012"}'
+    '{"curator_notes": "Primary title: Allogeneic Neural Stem/Progenitor Cells Derived From Embryonic Stem Cells Promote Functional Recovery After Transplantation Into Injured Spinal Cord of Nonhuman Primates.. Note: Non-human primate safety/efficacy bridge.", "experiment_tracker_id": "M4A-P012-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P012", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O012"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3354,18 +3366,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O012', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Tucker A 2025 is a core synaptic-connectivity anchor showing that neural grafts can be interrogated for host-graft network integration after SCI.',
     'qualitative',
+    NULL,
     'Tucker A 2025 is a core synaptic-connectivity anchor showing that neural grafts can be interrogated for host-graft network integration after SCI.',
     'tucker a 2025 is a core synaptic-connectivity anchor showing that neural grafts can be interrogated for host-graft network integration after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Functional synaptic connectivity of engrafted spinal cord neurons with hindlimb motor circuitry in the injured spinal cord.. Note: Functional synaptic connectivity with hindlimb circuitry.", "experiment_tracker_id": "M4A-P013-E001", "paper_tracker_id": "M4A-P013", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O013"}'
+    '{"curator_notes": "Primary title: Functional synaptic connectivity of engrafted spinal cord neurons with hindlimb motor circuitry in the injured spinal cord.. Note: Functional synaptic connectivity with hindlimb circuitry.", "experiment_tracker_id": "M4A-P013-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P013", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O013"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3379,18 +3392,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O013', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ceto S 2020 is a core synaptic-connectivity anchor showing that neural grafts can be interrogated for host-graft network integration after SCI.',
     'qualitative',
+    NULL,
     'Ceto S 2020 is a core synaptic-connectivity anchor showing that neural grafts can be interrogated for host-graft network integration after SCI.',
     'ceto s 2020 is a core synaptic-connectivity anchor showing that neural grafts can be interrogated for host-graft network integration after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Neural Stem Cell Grafts Form Extensive Synaptic Networks that Integrate with Host Circuits after Spinal Cord Injury.. Note: In vivo graft network integration anchor.", "experiment_tracker_id": "M4A-P014-E001", "paper_tracker_id": "M4A-P014", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O014"}'
+    '{"curator_notes": "Primary title: Neural Stem Cell Grafts Form Extensive Synaptic Networks that Integrate with Host Circuits after Spinal Cord Injury.. Note: In vivo graft network integration anchor.", "experiment_tracker_id": "M4A-P014-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P014", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O014"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3404,18 +3418,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O014', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Adler AF 2017 is a core synaptic-connectivity anchor showing that neural grafts can be interrogated for host-graft network integration after SCI.',
     'qualitative',
+    NULL,
     'Adler AF 2017 is a core synaptic-connectivity anchor showing that neural grafts can be interrogated for host-graft network integration after SCI.',
     'adler af 2017 is a core synaptic-connectivity anchor showing that neural grafts can be interrogated for host-graft network integration after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Comprehensive Monosynaptic Rabies Virus Mapping of Host Connectivity with Neural Progenitor Grafts after Spinal Cord Injury.. Note: Host connectivity mapping anchor.", "experiment_tracker_id": "M4A-P015-E001", "paper_tracker_id": "M4A-P015", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O015"}'
+    '{"curator_notes": "Primary title: Comprehensive Monosynaptic Rabies Virus Mapping of Host Connectivity with Neural Progenitor Grafts after Spinal Cord Injury.. Note: Host connectivity mapping anchor.", "experiment_tracker_id": "M4A-P015-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P015", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O015"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3429,18 +3444,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O015', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Bonner JF 2011 is a core synaptic-connectivity anchor showing that neural grafts can be interrogated for host-graft network integration after SCI.',
     'qualitative',
+    NULL,
     'Bonner JF 2011 is a core synaptic-connectivity anchor showing that neural grafts can be interrogated for host-graft network integration after SCI.',
     'bonner jf 2011 is a core synaptic-connectivity anchor showing that neural grafts can be interrogated for host-graft network integration after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Grafted neural progenitors integrate and restore synaptic connectivity across the injured spinal cord.. Note: Relay connectivity across injured cord.", "experiment_tracker_id": "M4A-P016-E001", "paper_tracker_id": "M4A-P016", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O016"}'
+    '{"curator_notes": "Primary title: Grafted neural progenitors integrate and restore synaptic connectivity across the injured spinal cord.. Note: Relay connectivity across injured cord.", "experiment_tracker_id": "M4A-P016-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P016", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O016"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3454,18 +3470,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O016', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zholudeva LV 2024 is a core synaptic-connectivity anchor showing that neural grafts can be interrogated for host-graft network integration after SCI.',
     'qualitative',
+    NULL,
     'Zholudeva LV 2024 is a core synaptic-connectivity anchor showing that neural grafts can be interrogated for host-graft network integration after SCI.',
     'zholudeva lv 2024 is a core synaptic-connectivity anchor showing that neural grafts can be interrogated for host-graft network integration after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Human spinal interneurons repair the injured spinal cord through synaptic integration.. Note: Human interneuron synaptic integration anchor.", "experiment_tracker_id": "M4A-P017-E001", "paper_tracker_id": "M4A-P017", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O017"}'
+    '{"curator_notes": "Primary title: Human spinal interneurons repair the injured spinal cord through synaptic integration.. Note: Human interneuron synaptic integration anchor.", "experiment_tracker_id": "M4A-P017-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P017", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O017"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3479,18 +3496,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O017', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhu Y 2025 evaluated Engineered thoracic spinal cord organoids in Organoid / rodent SCI, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Zhu Y 2025 evaluated Engineered thoracic spinal cord organoids in Organoid / rodent SCI, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
     'zhu y 2025 evaluated engineered thoracic spinal cord organoids in organoid / rodent sci, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Engineered thoracic spinal cord organoids for transplantation after spinal cord injury.. Note: Tissueoid/organoid transplantation anchor.", "experiment_tracker_id": "M4A-P018-E001", "paper_tracker_id": "M4A-P018", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O018"}'
+    '{"curator_notes": "Primary title: Engineered thoracic spinal cord organoids for transplantation after spinal cord injury.. Note: Tissueoid/organoid transplantation anchor.", "experiment_tracker_id": "M4A-P018-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P018", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O018"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3504,18 +3522,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O018', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Yao X 2025 evaluated Human iPSC-derived spinal neural progenitors in NOD-SCID mouse contusion, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Yao X 2025 evaluated Human iPSC-derived spinal neural progenitors in NOD-SCID mouse contusion, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
     'yao x 2025 evaluated human ipsc-derived spinal neural progenitors in nod-scid mouse contusion, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Human iPSC-derived spinal neural progenitors enhance sensorimotor recovery in spinal cord-injured NOD-SCID mice via differentiation and microenvironment regulation.. Note: iPSC spinal progenitor differentiation and microenvironment regulation.", "experiment_tracker_id": "M4A-P019-E001", "paper_tracker_id": "M4A-P019", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O019"}'
+    '{"curator_notes": "Primary title: Human iPSC-derived spinal neural progenitors enhance sensorimotor recovery in spinal cord-injured NOD-SCID mice via differentiation and microenvironment regulation.. Note: iPSC spinal progenitor differentiation and microenvironment regulation.", "experiment_tracker_id": "M4A-P019-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P019", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O019"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3529,18 +3548,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O019', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zheng Y 2025 evaluated Human iPSC-derived A2B5+ neural progenitors in Mouse SCI, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Zheng Y 2025 evaluated Human iPSC-derived A2B5+ neural progenitors in Mouse SCI, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
     'zheng y 2025 evaluated human ipsc-derived a2b5+ neural progenitors in mouse sci, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Functional Recovery by Transplantation of Human iPSC-Derived A2B5 Positive Neural Progenitor Cell After Spinal Cord Injury in Mice.. Note: A2B5+ iPSC progenitor functional recovery anchor.", "experiment_tracker_id": "M4A-P020-E001", "paper_tracker_id": "M4A-P020", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O020"}'
+    '{"curator_notes": "Primary title: Functional Recovery by Transplantation of Human iPSC-Derived A2B5 Positive Neural Progenitor Cell After Spinal Cord Injury in Mice.. Note: A2B5+ iPSC progenitor functional recovery anchor.", "experiment_tracker_id": "M4A-P020-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P020", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O020"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3554,18 +3574,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O020', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Shibata T 2023 links neural graft effects to rehabilitation, synaptic organizer, trophic pretreatment, or axon-guidance enhancement rather than grafting alone.',
     'qualitative',
+    NULL,
     'Shibata T 2023 links neural graft effects to rehabilitation, synaptic organizer, trophic pretreatment, or axon-guidance enhancement rather than grafting alone.',
     'shibata t 2023 links neural graft effects to rehabilitation, synaptic organizer, trophic pretreatment, or axon-guidance enhancement rather than grafting alone.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Rehabilitative Training Enhances Therapeutic Effect of Human-iPSC-Derived Neural Stem/Progenitor Cells Transplantation in Chronic Spinal Cord Injury.. Note: Rehabilitation as graft-effect amplifier.", "experiment_tracker_id": "M4A-P021-E001", "paper_tracker_id": "M4A-P021", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O021"}'
+    '{"curator_notes": "Primary title: Rehabilitative Training Enhances Therapeutic Effect of Human-iPSC-Derived Neural Stem/Progenitor Cells Transplantation in Chronic Spinal Cord Injury.. Note: Rehabilitation as graft-effect amplifier.", "experiment_tracker_id": "M4A-P021-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P021", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O021"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3579,18 +3600,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O021', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Saijo Y 2024 links neural graft effects to rehabilitation, synaptic organizer, trophic pretreatment, or axon-guidance enhancement rather than grafting alone.',
     'qualitative',
+    NULL,
     'Saijo Y 2024 links neural graft effects to rehabilitation, synaptic organizer, trophic pretreatment, or axon-guidance enhancement rather than grafting alone.',
     'saijo y 2024 links neural graft effects to rehabilitation, synaptic organizer, trophic pretreatment, or axon-guidance enhancement rather than grafting alone.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Human-induced pluripotent stem cell-derived neural stem/progenitor cell ex vivo gene therapy with synaptic organizer CPTX for spinal cord injury.. Note: Ex vivo gene therapy to enhance synapse formation.", "experiment_tracker_id": "M4A-P022-E001", "paper_tracker_id": "M4A-P022", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O022"}'
+    '{"curator_notes": "Primary title: Human-induced pluripotent stem cell-derived neural stem/progenitor cell ex vivo gene therapy with synaptic organizer CPTX for spinal cord injury.. Note: Ex vivo gene therapy to enhance synapse formation.", "experiment_tracker_id": "M4A-P022-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P022", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O022"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3604,18 +3626,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O022', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Suematsu Y 2023 links neural graft effects to rehabilitation, synaptic organizer, trophic pretreatment, or axon-guidance enhancement rather than grafting alone.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Suematsu Y 2023 links neural graft effects to rehabilitation, synaptic organizer, trophic pretreatment, or axon-guidance enhancement rather than grafting alone.',
     'suematsu y 2023 links neural graft effects to rehabilitation, synaptic organizer, trophic pretreatment, or axon-guidance enhancement rather than grafting alone.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Hepatocyte growth factor pretreatment boosts functional recovery after spinal cord injury through human iPSC-derived neural stem/progenitor cell transplantation.. Note: Microenvironment/growth-factor pretreatment combination.", "experiment_tracker_id": "M4A-P023-E001", "paper_tracker_id": "M4A-P023", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O023"}'
+    '{"curator_notes": "Primary title: Hepatocyte growth factor pretreatment boosts functional recovery after spinal cord injury through human iPSC-derived neural stem/progenitor cell transplantation.. Note: Microenvironment/growth-factor pretreatment combination.", "experiment_tracker_id": "M4A-P023-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P023", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O023"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3629,18 +3652,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O023', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Xu B 2023 evaluated NS/PCs from fetal brain, spinal cord, and ESC sources in Rat severe SCI, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Xu B 2023 evaluated NS/PCs from fetal brain, spinal cord, and ESC sources in Rat severe SCI, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
     'xu b 2023 evaluated ns/pcs from fetal brain, spinal cord, and esc sources in rat severe sci, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Transplantation of neural stem progenitor cells from different sources for severe spinal cord injury repair in rat.. Note: Cell-source comparison anchor.", "experiment_tracker_id": "M4A-P024-E001", "paper_tracker_id": "M4A-P024", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O024"}'
+    '{"curator_notes": "Primary title: Transplantation of neural stem progenitor cells from different sources for severe spinal cord injury repair in rat.. Note: Cell-source comparison anchor.", "experiment_tracker_id": "M4A-P024-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P024", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O024"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3654,18 +3678,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O024', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Li Y 2023 links neural graft effects to rehabilitation, synaptic organizer, trophic pretreatment, or axon-guidance enhancement rather than grafting alone.',
     'qualitative',
+    NULL,
     'Li Y 2023 links neural graft effects to rehabilitation, synaptic organizer, trophic pretreatment, or axon-guidance enhancement rather than grafting alone.',
     'li y 2023 links neural graft effects to rehabilitation, synaptic organizer, trophic pretreatment, or axon-guidance enhancement rather than grafting alone.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: BDNF guides neural stem cell-derived axons to ventral interneurons and motor neurons after spinal cord injury.. Note: Host target guidance of graft-derived axons.", "experiment_tracker_id": "M4A-P025-E001", "paper_tracker_id": "M4A-P025", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O025"}'
+    '{"curator_notes": "Primary title: BDNF guides neural stem cell-derived axons to ventral interneurons and motor neurons after spinal cord injury.. Note: Host target guidance of graft-derived axons.", "experiment_tracker_id": "M4A-P025-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P025", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O025"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3679,18 +3704,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O025', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Li M 2024 evaluated iPSC/ESC-derived pyramidal neuronal precursors in Rat contusion SCI, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Li M 2024 evaluated iPSC/ESC-derived pyramidal neuronal precursors in Rat contusion SCI, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
     'li m 2024 evaluated ipsc/esc-derived pyramidal neuronal precursors in rat contusion sci, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Human induced pluripotent stem cell/embryonic stem cell-derived pyramidal neuronal precursors show safety and efficacy in a rat spinal cord injury model.. Note: Pyramidal neuronal precursor safety/efficacy.", "experiment_tracker_id": "M4A-P026-E001", "paper_tracker_id": "M4A-P026", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O026"}'
+    '{"curator_notes": "Primary title: Human induced pluripotent stem cell/embryonic stem cell-derived pyramidal neuronal precursors show safety and efficacy in a rat spinal cord injury model.. Note: Pyramidal neuronal precursor safety/efficacy.", "experiment_tracker_id": "M4A-P026-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P026", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O026"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3704,18 +3730,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O026', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Manley NC 2017 anchors OPC or oligodendrogenic transplantation evidence where remyelination and safety are distinct from neuronal relay claims.',
     'qualitative',
+    NULL,
     'Manley NC 2017 anchors OPC or oligodendrogenic transplantation evidence where remyelination and safety are distinct from neuronal relay claims.',
     'manley nc 2017 anchors opc or oligodendrogenic transplantation evidence where remyelination and safety are distinct from neuronal relay claims.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Human Embryonic Stem Cell-Derived Oligodendrocyte Progenitor Cells: Preclinical Efficacy and Safety in Cervical Spinal Cord Injury.. Note: OPC preclinical efficacy and safety anchor.", "experiment_tracker_id": "M4A-P027-E001", "paper_tracker_id": "M4A-P027", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T004", "tracker_id": "M4B-O027"}'
+    '{"curator_notes": "Primary title: Human Embryonic Stem Cell-Derived Oligodendrocyte Progenitor Cells: Preclinical Efficacy and Safety in Cervical Spinal Cord Injury.. Note: OPC preclinical efficacy and safety anchor.", "experiment_tracker_id": "M4A-P027-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P027", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T004", "tracker_id": "M4B-O027"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3729,18 +3756,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O027', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Luo Z 2025 anchors OPC or oligodendrogenic transplantation evidence where remyelination and safety are distinct from neuronal relay claims.',
     'qualitative',
+    NULL,
     'Luo Z 2025 anchors OPC or oligodendrogenic transplantation evidence where remyelination and safety are distinct from neuronal relay claims.',
     'luo z 2025 anchors opc or oligodendrogenic transplantation evidence where remyelination and safety are distinct from neuronal relay claims.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Oligodendrogenic neural progenitors for treatment of chronic compressive cervical spinal cord injury.. Note: Chronic compressive cervical progenitor anchor.", "experiment_tracker_id": "M4A-P028-E001", "paper_tracker_id": "M4A-P028", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T004", "tracker_id": "M4B-O028"}'
+    '{"curator_notes": "Primary title: Oligodendrogenic neural progenitors for treatment of chronic compressive cervical spinal cord injury.. Note: Chronic compressive cervical progenitor anchor.", "experiment_tracker_id": "M4A-P028-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P028", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T004", "tracker_id": "M4B-O028"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3754,18 +3782,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O028', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Hejrati N 2025 evaluated DLK1-expressing neural progenitor cells in Cervical SCI, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Hejrati N 2025 evaluated DLK1-expressing neural progenitor cells in Cervical SCI, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
     'hejrati n 2025 evaluated dlk1-expressing neural progenitor cells in cervical sci, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: DLK1-expressing neural progenitor cells promote tissue repair and functional recovery after cervical spinal cord injury.. Note: Neural progenitor subtype/tissue repair anchor.", "experiment_tracker_id": "M4A-P029-E001", "paper_tracker_id": "M4A-P029", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O029"}'
+    '{"curator_notes": "Primary title: DLK1-expressing neural progenitor cells promote tissue repair and functional recovery after cervical spinal cord injury.. Note: Neural progenitor subtype/tissue repair anchor.", "experiment_tracker_id": "M4A-P029-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P029", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O029"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3779,18 +3808,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O029', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ren J 2026 evaluated Cryopreserved neural stem cells in SCI repair platform, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Ren J 2026 evaluated Cryopreserved neural stem cells in SCI repair platform, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
     'ren j 2026 evaluated cryopreserved neural stem cells in sci repair platform, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Integrated cryopreservation-thawing-transplantation platform for neural stem cell-based spinal cord injury repair.. Note: Cryopreservation-thaw-transplant platform.", "experiment_tracker_id": "M4A-P030-E001", "paper_tracker_id": "M4A-P030", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O030"}'
+    '{"curator_notes": "Primary title: Integrated cryopreservation-thawing-transplantation platform for neural stem cell-based spinal cord injury repair.. Note: Cryopreservation-thaw-transplant platform.", "experiment_tracker_id": "M4A-P030-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P030", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O030"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3804,18 +3834,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O030', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Qu W 2025 anchors Schwann or glial-support transplantation evidence for axon growth, connectivity, remyelination, or safety.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Qu W 2025 anchors Schwann or glial-support transplantation evidence for axon growth, connectivity, remyelination, or safety.',
     'qu w 2025 anchors schwann or glial-support transplantation evidence for axon growth, connectivity, remyelination, or safety.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Chondroitinase ABC combined with Schwann cell transplantation enhances restoration of neural connection and functional recovery following acute and chronic spinal cord injury.. Note: Schwann/chABC acute and chronic connectivity anchor.", "experiment_tracker_id": "M4A-P031-E001", "paper_tracker_id": "M4A-P031", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T004", "tracker_id": "M4B-O031"}'
+    '{"curator_notes": "Primary title: Chondroitinase ABC combined with Schwann cell transplantation enhances restoration of neural connection and functional recovery following acute and chronic spinal cord injury.. Note: Schwann/chABC acute and chronic connectivity anchor.", "experiment_tracker_id": "M4A-P031-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P031", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T004", "tracker_id": "M4B-O031"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3829,18 +3860,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O031', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Du X 2024 anchors Schwann or glial-support transplantation evidence for axon growth, connectivity, remyelination, or safety.',
     'qualitative',
+    NULL,
     'Du X 2024 anchors Schwann or glial-support transplantation evidence for axon growth, connectivity, remyelination, or safety.',
     'du x 2024 anchors schwann or glial-support transplantation evidence for axon growth, connectivity, remyelination, or safety.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Regeneration of Propriospinal Axons in Rat Transected Spinal Cord Injury through a Growth-Promoting Pathway Constructed by Schwann Cells Overexpressing GDNF.. Note: Propriospinal axon pathway construction.", "experiment_tracker_id": "M4A-P032-E001", "paper_tracker_id": "M4A-P032", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T004", "tracker_id": "M4B-O032"}'
+    '{"curator_notes": "Primary title: Regeneration of Propriospinal Axons in Rat Transected Spinal Cord Injury through a Growth-Promoting Pathway Constructed by Schwann Cells Overexpressing GDNF.. Note: Propriospinal axon pathway construction.", "experiment_tracker_id": "M4A-P032-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P032", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T004", "tracker_id": "M4B-O032"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3854,18 +3886,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O032', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Hu JG 2013 anchors Schwann or glial-support transplantation evidence for axon growth, connectivity, remyelination, or safety.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Hu JG 2013 anchors Schwann or glial-support transplantation evidence for axon growth, connectivity, remyelination, or safety.',
     'hu jg 2013 anchors schwann or glial-support transplantation evidence for axon growth, connectivity, remyelination, or safety.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Cotransplantation of glial restricted precursor cells and Schwann cells promotes functional recovery after spinal cord injury.. Note: GRP/Schwann cotransplant functional recovery.", "experiment_tracker_id": "M4A-P033-E001", "paper_tracker_id": "M4A-P033", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T004", "tracker_id": "M4B-O033"}'
+    '{"curator_notes": "Primary title: Cotransplantation of glial restricted precursor cells and Schwann cells promotes functional recovery after spinal cord injury.. Note: GRP/Schwann cotransplant functional recovery.", "experiment_tracker_id": "M4A-P033-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P033", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T004", "tracker_id": "M4B-O033"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3879,18 +3912,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O033', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Dugan EA 2015 tested Neural + glial restricted precursors + quipazine in Rat SCI, contributing glial-lineage evidence for remyelination, axon support, circuitry, or functional recovery.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Dugan EA 2015 tested Neural + glial restricted precursors + quipazine in Rat SCI, contributing glial-lineage evidence for remyelination, axon support, circuitry, or functional recovery.',
     'dugan ea 2015 tested neural + glial restricted precursors + quipazine in rat sci, contributing glial-lineage evidence for remyelination, axon support, circuitry, or functional recovery.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: A combination therapy of neural and glial restricted precursor cells and chronic quipazine treatment paired with passive cycling promotes quipazine-induced stepping in adult spinalized rats.. Note: Cell transplant plus serotonergic pharmacology/rehab-like combination.", "experiment_tracker_id": "M4A-P034-E001", "paper_tracker_id": "M4A-P034", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T004", "tracker_id": "M4B-O034"}'
+    '{"curator_notes": "Primary title: A combination therapy of neural and glial restricted precursor cells and chronic quipazine treatment paired with passive cycling promotes quipazine-induced stepping in adult spinalized rats.. Note: Cell transplant plus serotonergic pharmacology/rehab-like combination.", "experiment_tracker_id": "M4A-P034-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P034", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T004", "tracker_id": "M4B-O034"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3904,18 +3938,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O034', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Mitsui T 2005 shows that transplantation outcomes include autonomic, bladder, pain, respiratory, or cardiovascular readouts that should not be collapsed into locomotor recovery.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Mitsui T 2005 shows that transplantation outcomes include autonomic, bladder, pain, respiratory, or cardiovascular readouts that should not be collapsed into locomotor recovery.',
     'mitsui t 2005 shows that transplantation outcomes include autonomic, bladder, pain, respiratory, or cardiovascular readouts that should not be collapsed into locomotor recovery.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Transplantation of neuronal and glial restricted precursors into contused spinal cord improves bladder and motor functions, decreases thermal hypersensitivity, and modifies intraspinal circuitry.. Note: Restricted precursor bladder/motor/sensory circuitry anchor.", "experiment_tracker_id": "M4A-P035-E001", "paper_tracker_id": "M4A-P035", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T004", "tracker_id": "M4B-O035"}'
+    '{"curator_notes": "Primary title: Transplantation of neuronal and glial restricted precursors into contused spinal cord improves bladder and motor functions, decreases thermal hypersensitivity, and modifies intraspinal circuitry.. Note: Restricted precursor bladder/motor/sensory circuitry anchor.", "experiment_tracker_id": "M4A-P035-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P035", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T004", "tracker_id": "M4B-O035"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3929,18 +3964,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O035', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhang L 2024 tested Olfactory ensheathing cells as an OEC, MSC, BMMC, or UCB-family intervention, supporting a trophic or immunomodulatory transplantation profile.',
     'qualitative',
+    NULL,
     'Zhang L 2024 tested Olfactory ensheathing cells as an OEC, MSC, BMMC, or UCB-family intervention, supporting a trophic or immunomodulatory transplantation profile.',
     'zhang l 2024 tested olfactory ensheathing cells as an oec, msc, bmmc, or ucb-family intervention, supporting a trophic or immunomodulatory transplantation profile.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Olfactory Ensheathing Cell Ameliorate Neuroinflammation Following Spinal Cord Injury Through Upregulating REV-ERB in Microglia.. Note: OEC microglia/REV-ERBalpha neuroinflammation anchor.", "experiment_tracker_id": "M4A-P036-E001", "paper_tracker_id": "M4A-P036", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T005", "tracker_id": "M4B-O036"}'
+    '{"curator_notes": "Primary title: Olfactory Ensheathing Cell Ameliorate Neuroinflammation Following Spinal Cord Injury Through Upregulating REV-ERB in Microglia.. Note: OEC microglia/REV-ERBalpha neuroinflammation anchor.", "experiment_tracker_id": "M4A-P036-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P036", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T005", "tracker_id": "M4B-O036"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3954,18 +3990,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O036', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Wang Y 2022 tested Olfactory ensheathing cells as an OEC, MSC, BMMC, or UCB-family intervention, supporting a trophic or immunomodulatory transplantation profile.',
     'qualitative',
+    NULL,
     'Wang Y 2022 tested Olfactory ensheathing cells as an OEC, MSC, BMMC, or UCB-family intervention, supporting a trophic or immunomodulatory transplantation profile.',
     'wang y 2022 tested olfactory ensheathing cells as an oec, msc, bmmc, or ucb-family intervention, supporting a trophic or immunomodulatory transplantation profile.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Transplantation of olfactory ensheathing cells decreases local and serological monocyte chemoattractant protein 1 level during the acute phase of rat spinal cord injury.. Note: OEC MCP-1/local-serological inflammation anchor.", "experiment_tracker_id": "M4A-P037-E001", "paper_tracker_id": "M4A-P037", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T005", "tracker_id": "M4B-O037"}'
+    '{"curator_notes": "Primary title: Transplantation of olfactory ensheathing cells decreases local and serological monocyte chemoattractant protein 1 level during the acute phase of rat spinal cord injury.. Note: OEC MCP-1/local-serological inflammation anchor.", "experiment_tracker_id": "M4A-P037-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P037", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T005", "tracker_id": "M4B-O037"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3979,18 +4016,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O037', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Li W 2025 tested Olfactory mucosal MSCs + gelatin sponge as an OEC, MSC, BMMC, or UCB-family intervention, supporting a trophic or immunomodulatory transplantation profile.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Li W 2025 tested Olfactory mucosal MSCs + gelatin sponge as an OEC, MSC, BMMC, or UCB-family intervention, supporting a trophic or immunomodulatory transplantation profile.',
     'li w 2025 tested olfactory mucosal mscs + gelatin sponge as an oec, msc, bmmc, or ucb-family intervention, supporting a trophic or immunomodulatory transplantation profile.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Olfactory mucosal mesenchymal stem cells delivered by gelatin sponge scaffolds promote functional recovery of spinal cord injury.. Note: Olfactory mucosal MSC scaffold-delivery anchor.", "experiment_tracker_id": "M4A-P038-E001", "paper_tracker_id": "M4A-P038", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T005", "tracker_id": "M4B-O038"}'
+    '{"curator_notes": "Primary title: Olfactory mucosal mesenchymal stem cells delivered by gelatin sponge scaffolds promote functional recovery of spinal cord injury.. Note: Olfactory mucosal MSC scaffold-delivery anchor.", "experiment_tracker_id": "M4A-P038-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P038", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T005", "tracker_id": "M4B-O038"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4004,18 +4042,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O038', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhao Y 2024 tested hUC-MSC cell sheets as an OEC, MSC, BMMC, or UCB-family intervention, supporting a trophic or immunomodulatory transplantation profile.',
     'qualitative',
+    NULL,
     'Zhao Y 2024 tested hUC-MSC cell sheets as an OEC, MSC, BMMC, or UCB-family intervention, supporting a trophic or immunomodulatory transplantation profile.',
     'zhao y 2024 tested huc-msc cell sheets as an oec, msc, bmmc, or ucb-family intervention, supporting a trophic or immunomodulatory transplantation profile.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Cell Sheets Formation Enhances Therapeutic Effects of Human Umbilical Cord Mesenchymal Stem Cells on Spinal Cord Injury.. Note: Cell-sheet MSC delivery anchor.", "experiment_tracker_id": "M4A-P039-E001", "paper_tracker_id": "M4A-P039", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T005", "tracker_id": "M4B-O039"}'
+    '{"curator_notes": "Primary title: Cell Sheets Formation Enhances Therapeutic Effects of Human Umbilical Cord Mesenchymal Stem Cells on Spinal Cord Injury.. Note: Cell-sheet MSC delivery anchor.", "experiment_tracker_id": "M4A-P039-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P039", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T005", "tracker_id": "M4B-O039"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4029,18 +4068,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O039', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Yang L 2024 tested MSC scaffold / IL-10 response as an OEC, MSC, BMMC, or UCB-family intervention, supporting a trophic or immunomodulatory transplantation profile.',
     'qualitative',
+    'ELISA / cytokine protein assay',
     'Yang L 2024 tested MSC scaffold / IL-10 response as an OEC, MSC, BMMC, or UCB-family intervention, supporting a trophic or immunomodulatory transplantation profile.',
     'yang l 2024 tested msc scaffold / il-10 response as an oec, msc, bmmc, or ucb-family intervention, supporting a trophic or immunomodulatory transplantation profile.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Initial IL-10 production dominates the therapy of mesenchymal stem cell scaffold in spinal cord injury.. Note: MSC scaffold immunomodulatory mechanism anchor.", "experiment_tracker_id": "M4A-P040-E001", "paper_tracker_id": "M4A-P040", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T005", "tracker_id": "M4B-O040"}'
+    '{"curator_notes": "Primary title: Initial IL-10 production dominates the therapy of mesenchymal stem cell scaffold in spinal cord injury.. Note: MSC scaffold immunomodulatory mechanism anchor.", "experiment_tracker_id": "M4A-P040-E001", "measurement_method_inference": "ELISA / cytokine protein assay", "paper_tracker_id": "M4A-P040", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T005", "tracker_id": "M4B-O040"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4054,18 +4094,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O040', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Liu D 2023 combined NSCs + ROS-scavenging hydrogel with scaffold, scar, hydrogel, exosome, or microenvironmental features, making attribution to the cell product alone limited.',
     'qualitative',
+    NULL,
     'Liu D 2023 combined NSCs + ROS-scavenging hydrogel with scaffold, scar, hydrogel, exosome, or microenvironmental features, making attribution to the cell product alone limited.',
     'liu d 2023 combined nscs + ros-scavenging hydrogel with scaffold, scar, hydrogel, exosome, or microenvironmental features, making attribution to the cell product alone limited.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: ROS-Scavenging Hydrogels Synergize with Neural Stem Cells to Enhance Spinal Cord Injury Repair via Regulating Microenvironment and Facilitating Nerve Regeneration.. Note: Microenvironment-modulating hydrogel plus NSC anchor.", "experiment_tracker_id": "M4A-P041-E001", "paper_tracker_id": "M4A-P041", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T006", "tracker_id": "M4B-O041"}'
+    '{"curator_notes": "Primary title: ROS-Scavenging Hydrogels Synergize with Neural Stem Cells to Enhance Spinal Cord Injury Repair via Regulating Microenvironment and Facilitating Nerve Regeneration.. Note: Microenvironment-modulating hydrogel plus NSC anchor.", "experiment_tracker_id": "M4A-P041-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P041", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T006", "tracker_id": "M4B-O041"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4079,18 +4120,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O041', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'He W 2023 tested bFGF-overexpressing hUC-MSC + dSCM scaffold as an OEC, MSC, BMMC, or UCB-family intervention, supporting a trophic or immunomodulatory transplantation profile.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'He W 2023 tested bFGF-overexpressing hUC-MSC + dSCM scaffold as an OEC, MSC, BMMC, or UCB-family intervention, supporting a trophic or immunomodulatory transplantation profile.',
     'he w 2023 tested bfgf-overexpressing huc-msc + dscm scaffold as an oec, msc, bmmc, or ucb-family intervention, supporting a trophic or immunomodulatory transplantation profile.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Spinal cord decellularized matrix scaffold loaded with engineered basic fibroblast growth factor-overexpressed human umbilical cord mesenchymal stromal cells promoted the recovery of spinal cord injury.. Note: Engineered MSC + decellularized matrix scaffold.", "experiment_tracker_id": "M4A-P042-E001", "paper_tracker_id": "M4A-P042", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T005", "tracker_id": "M4B-O042"}'
+    '{"curator_notes": "Primary title: Spinal cord decellularized matrix scaffold loaded with engineered basic fibroblast growth factor-overexpressed human umbilical cord mesenchymal stromal cells promoted the recovery of spinal cord injury.. Note: Engineered MSC + decellularized matrix scaffold.", "experiment_tracker_id": "M4A-P042-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P042", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T005", "tracker_id": "M4B-O042"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4104,18 +4146,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O042', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Li X 2025 combined NSC-laden microfibers + UC-MSC exosomes with scaffold, scar, hydrogel, exosome, or microenvironmental features, making attribution to the cell product alone limited.',
     'qualitative',
+    NULL,
     'Li X 2025 combined NSC-laden microfibers + UC-MSC exosomes with scaffold, scar, hydrogel, exosome, or microenvironmental features, making attribution to the cell product alone limited.',
     'li x 2025 combined nsc-laden microfibers + uc-msc exosomes with scaffold, scar, hydrogel, exosome, or microenvironmental features, making attribution to the cell product alone limited.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Conjugated therapy with coaxially printed neural stem cell-laden microfibers and umbilical cord mesenchymal stem cell derived exosomes on complete transactional spinal cord defects.. Note: Printed NSC/exosome conjugated therapy.", "experiment_tracker_id": "M4A-P043-E001", "paper_tracker_id": "M4A-P043", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T006", "tracker_id": "M4B-O043"}'
+    '{"curator_notes": "Primary title: Conjugated therapy with coaxially printed neural stem cell-laden microfibers and umbilical cord mesenchymal stem cell derived exosomes on complete transactional spinal cord defects.. Note: Printed NSC/exosome conjugated therapy.", "experiment_tracker_id": "M4A-P043-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P043", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T006", "tracker_id": "M4B-O043"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4129,18 +4172,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O043', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Kao Y 2025 combined hMSC + HA hydrogel/polydopamine nanoparticles with scaffold, scar, hydrogel, exosome, or microenvironmental features, making attribution to the cell product alone limited.',
     'qualitative',
+    NULL,
     'Kao Y 2025 combined hMSC + HA hydrogel/polydopamine nanoparticles with scaffold, scar, hydrogel, exosome, or microenvironmental features, making attribution to the cell product alone limited.',
     'kao y 2025 combined hmsc + ha hydrogel/polydopamine nanoparticles with scaffold, scar, hydrogel, exosome, or microenvironmental features, making attribution to the cell product alone limited.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Synergistic restoration of spinal cord injury through hyaluronic acid conjugated hydrogel-polydopamine nanoparticles combined with human mesenchymal stem cell transplantation.. Note: hMSC/hydrogel nanoparticle combination.", "experiment_tracker_id": "M4A-P044-E001", "paper_tracker_id": "M4A-P044", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T006", "tracker_id": "M4B-O044"}'
+    '{"curator_notes": "Primary title: Synergistic restoration of spinal cord injury through hyaluronic acid conjugated hydrogel-polydopamine nanoparticles combined with human mesenchymal stem cell transplantation.. Note: hMSC/hydrogel nanoparticle combination.", "experiment_tracker_id": "M4A-P044-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P044", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T006", "tracker_id": "M4B-O044"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4154,18 +4198,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O044', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Liu D 2025 combined NSC + NO-releasing cerium oxide hydrogel with scaffold, scar, hydrogel, exosome, or microenvironmental features, making attribution to the cell product alone limited.',
     'qualitative',
+    NULL,
     'Liu D 2025 combined NSC + NO-releasing cerium oxide hydrogel with scaffold, scar, hydrogel, exosome, or microenvironmental features, making attribution to the cell product alone limited.',
     'liu d 2025 combined nsc + no-releasing cerium oxide hydrogel with scaffold, scar, hydrogel, exosome, or microenvironmental features, making attribution to the cell product alone limited.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Nitric Oxide-Releasing Mesoporous Hollow Cerium Oxide Nanozyme-Based Hydrogel Synergizes with Neural Stem Cell for Spinal Cord Injury Repair.. Note: NO/nanozyme hydrogel plus NSC anchor.", "experiment_tracker_id": "M4A-P045-E001", "paper_tracker_id": "M4A-P045", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T006", "tracker_id": "M4B-O045"}'
+    '{"curator_notes": "Primary title: Nitric Oxide-Releasing Mesoporous Hollow Cerium Oxide Nanozyme-Based Hydrogel Synergizes with Neural Stem Cell for Spinal Cord Injury Repair.. Note: NO/nanozyme hydrogel plus NSC anchor.", "experiment_tracker_id": "M4A-P045-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P045", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T006", "tracker_id": "M4B-O045"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4179,18 +4224,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O045', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Sanchez-Martin MDM 2025 used Fetal rat neural progenitor cells + optogenetic stimulation in Rodent SCI, extending transplantation evidence to fetal, embryonic, autonomic, respiratory, or historical graft paradigms.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Sanchez-Martin MDM 2025 used Fetal rat neural progenitor cells + optogenetic stimulation in Rodent SCI, extending transplantation evidence to fetal, embryonic, autonomic, respiratory, or historical graft paradigms.',
     'sanchez-martin mdm 2025 used fetal rat neural progenitor cells + optogenetic stimulation in rodent sci, extending transplantation evidence to fetal, embryonic, autonomic, respiratory, or historical graft paradigms.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Fetal rat neural progenitor cell transplantation after spinal cord injury improves motor recovery following optogenetic stimulation.. Note: Fetal NPC optogenetic stimulation motor recovery.", "experiment_tracker_id": "M4A-P046-E001", "paper_tracker_id": "M4A-P046", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T007", "tracker_id": "M4B-O046"}'
+    '{"curator_notes": "Primary title: Fetal rat neural progenitor cell transplantation after spinal cord injury improves motor recovery following optogenetic stimulation.. Note: Fetal NPC optogenetic stimulation motor recovery.", "experiment_tracker_id": "M4A-P046-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P046", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T007", "tracker_id": "M4B-O046"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4204,18 +4250,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O046', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Giraldo E 2022 used Human fetal spinal-cord-derived NPCs primed with Rho/ROCK inhibitor in Rodent acute SCI, extending transplantation evidence to fetal, embryonic, autonomic, respiratory, or historical graft paradigms.',
     'qualitative',
+    NULL,
     'Giraldo E 2022 used Human fetal spinal-cord-derived NPCs primed with Rho/ROCK inhibitor in Rodent acute SCI, extending transplantation evidence to fetal, embryonic, autonomic, respiratory, or historical graft paradigms.',
     'giraldo e 2022 used human fetal spinal-cord-derived npcs primed with rho/rock inhibitor in rodent acute sci, extending transplantation evidence to fetal, embryonic, autonomic, respiratory, or historical graft paradigms.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Transplantation of Human-Fetal-Spinal-Cord-Derived NPCs Primed with a Polyglutamate-Conjugated Rho/Rock Inhibitor in Acute Spinal Cord Injury.. Note: Human fetal spinal NPC priming acute SCI.", "experiment_tracker_id": "M4A-P047-E001", "paper_tracker_id": "M4A-P047", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T007", "tracker_id": "M4B-O047"}'
+    '{"curator_notes": "Primary title: Transplantation of Human-Fetal-Spinal-Cord-Derived NPCs Primed with a Polyglutamate-Conjugated Rho/Rock Inhibitor in Acute Spinal Cord Injury.. Note: Human fetal spinal NPC priming acute SCI.", "experiment_tracker_id": "M4A-P047-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P047", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T007", "tracker_id": "M4B-O047"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4229,18 +4276,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O047', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Shin JC 2015 tested Human fetal brain-derived neural stem/progenitor cells in Human traumatic cervical SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'qualitative',
+    NULL,
     'Shin JC 2015 tested Human fetal brain-derived neural stem/progenitor cells in Human traumatic cervical SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'shin jc 2015 tested human fetal brain-derived neural stem/progenitor cells in human traumatic cervical sci, providing a clinical feasibility or safety anchor for cell transplantation after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Clinical Trial of Human Fetal Brain-Derived Neural Stem/Progenitor Cell Transplantation in Patients with Traumatic Cervical Spinal Cord Injury.. Note: Human fetal NSPC traumatic cervical clinical trial.", "experiment_tracker_id": "M4A-P048-E001", "paper_tracker_id": "M4A-P048", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O048"}'
+    '{"curator_notes": "Primary title: Clinical Trial of Human Fetal Brain-Derived Neural Stem/Progenitor Cell Transplantation in Patients with Traumatic Cervical Spinal Cord Injury.. Note: Human fetal NSPC traumatic cervical clinical trial.", "experiment_tracker_id": "M4A-P048-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P048", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O048"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4254,18 +4302,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O048', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Tarasenko YI 2007 used Human fetal neural stem cells in Rat contusion SCI, extending transplantation evidence to fetal, embryonic, autonomic, respiratory, or historical graft paradigms.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Tarasenko YI 2007 used Human fetal neural stem cells in Rat contusion SCI, extending transplantation evidence to fetal, embryonic, autonomic, respiratory, or historical graft paradigms.',
     'tarasenko yi 2007 used human fetal neural stem cells in rat contusion sci, extending transplantation evidence to fetal, embryonic, autonomic, respiratory, or historical graft paradigms.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Human fetal neural stem cells grafted into contusion-injured rat spinal cords improve behavior.. Note: Human fetal NSC grafting into contusion-injured rat cord.", "experiment_tracker_id": "M4A-P049-E001", "paper_tracker_id": "M4A-P049", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T007", "tracker_id": "M4B-O049"}'
+    '{"curator_notes": "Primary title: Human fetal neural stem cells grafted into contusion-injured rat spinal cords improve behavior.. Note: Human fetal NSC grafting into contusion-injured rat cord.", "experiment_tracker_id": "M4A-P049-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P049", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T007", "tracker_id": "M4B-O049"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4279,18 +4328,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O049', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Lin CC 2017 shows that transplantation outcomes include autonomic, bladder, pain, respiratory, or cardiovascular readouts that should not be collapsed into locomotor recovery.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Lin CC 2017 shows that transplantation outcomes include autonomic, bladder, pain, respiratory, or cardiovascular readouts that should not be collapsed into locomotor recovery.',
     'lin cc 2017 shows that transplantation outcomes include autonomic, bladder, pain, respiratory, or cardiovascular readouts that should not be collapsed into locomotor recovery.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: The Therapeutic Effectiveness of Delayed Fetal Spinal Cord Tissue Transplantation on Respiratory Function Following Mid-Cervical Spinal Cord Injury.. Note: Delayed fetal spinal tissue respiratory recovery.", "experiment_tracker_id": "M4A-P050-E001", "paper_tracker_id": "M4A-P050", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T007", "tracker_id": "M4B-O050"}'
+    '{"curator_notes": "Primary title: The Therapeutic Effectiveness of Delayed Fetal Spinal Cord Tissue Transplantation on Respiratory Function Following Mid-Cervical Spinal Cord Injury.. Note: Delayed fetal spinal tissue respiratory recovery.", "experiment_tracker_id": "M4A-P050-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P050", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T007", "tracker_id": "M4B-O050"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4304,18 +4354,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O050', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Fessler RG 2022 anchors OPC or oligodendrogenic transplantation evidence where remyelination and safety are distinct from neuronal relay claims.',
     'qualitative',
+    NULL,
     'Fessler RG 2022 anchors OPC or oligodendrogenic transplantation evidence where remyelination and safety are distinct from neuronal relay claims.',
     'fessler rg 2022 anchors opc or oligodendrogenic transplantation evidence where remyelination and safety are distinct from neuronal relay claims.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: A phase 1/2a dose-escalation study of oligodendrocyte progenitor cells in individuals with subacute cervical spinal cord injury.. Note: OPC phase 1/2a dose-escalation clinical study.", "experiment_tracker_id": "M4A-P051-E001", "paper_tracker_id": "M4A-P051", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O051"}'
+    '{"curator_notes": "Primary title: A phase 1/2a dose-escalation study of oligodendrocyte progenitor cells in individuals with subacute cervical spinal cord injury.. Note: OPC phase 1/2a dose-escalation clinical study.", "experiment_tracker_id": "M4A-P051-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P051", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O051"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4329,18 +4380,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O051', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Priest CA 2015 anchors OPC or oligodendrogenic transplantation evidence where remyelination and safety are distinct from neuronal relay claims.',
     'qualitative',
+    NULL,
     'Priest CA 2015 anchors OPC or oligodendrogenic transplantation evidence where remyelination and safety are distinct from neuronal relay claims.',
     'priest ca 2015 anchors opc or oligodendrogenic transplantation evidence where remyelination and safety are distinct from neuronal relay claims.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Preclinical safety of human embryonic stem cell-derived oligodendrocyte progenitors supporting clinical trials in spinal cord injury.. Note: hESC-OPC preclinical safety for SCI clinical trials.", "experiment_tracker_id": "M4A-P052-E001", "paper_tracker_id": "M4A-P052", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T004", "tracker_id": "M4B-O052"}'
+    '{"curator_notes": "Primary title: Preclinical safety of human embryonic stem cell-derived oligodendrocyte progenitors supporting clinical trials in spinal cord injury.. Note: hESC-OPC preclinical safety for SCI clinical trials.", "experiment_tracker_id": "M4A-P052-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P052", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T004", "tracker_id": "M4B-O052"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4354,18 +4406,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O052', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Anderson KD 2017 anchors Schwann or glial-support transplantation evidence for axon growth, connectivity, remyelination, or safety.',
     'qualitative',
+    NULL,
     'Anderson KD 2017 anchors Schwann or glial-support transplantation evidence for axon growth, connectivity, remyelination, or safety.',
     'anderson kd 2017 anchors schwann or glial-support transplantation evidence for axon growth, connectivity, remyelination, or safety.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Safety of Autologous Human Schwann Cell Transplantation in Subacute Thoracic Spinal Cord Injury.. Note: Autologous Schwann cell subacute thoracic safety.", "experiment_tracker_id": "M4A-P053-E001", "paper_tracker_id": "M4A-P053", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O053"}'
+    '{"curator_notes": "Primary title: Safety of Autologous Human Schwann Cell Transplantation in Subacute Thoracic Spinal Cord Injury.. Note: Autologous Schwann cell subacute thoracic safety.", "experiment_tracker_id": "M4A-P053-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P053", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O053"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4379,18 +4432,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O053', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Trueblood CT 2025 shows that transplantation outcomes include autonomic, bladder, pain, respiratory, or cardiovascular readouts that should not be collapsed into locomotor recovery.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Trueblood CT 2025 shows that transplantation outcomes include autonomic, bladder, pain, respiratory, or cardiovascular readouts that should not be collapsed into locomotor recovery.',
     'trueblood ct 2025 shows that transplantation outcomes include autonomic, bladder, pain, respiratory, or cardiovascular readouts that should not be collapsed into locomotor recovery.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Transplanting Neural Progenitor Cells Improves Neural Regulation But Not Hormonal Reliance of Cardiovascular Function Following Spinal Cord Injury.. Note: Neural progenitor cardiovascular/autonomic regulation.", "experiment_tracker_id": "M4A-P054-E001", "paper_tracker_id": "M4A-P054", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T007", "tracker_id": "M4B-O054"}'
+    '{"curator_notes": "Primary title: Transplanting Neural Progenitor Cells Improves Neural Regulation But Not Hormonal Reliance of Cardiovascular Function Following Spinal Cord Injury.. Note: Neural progenitor cardiovascular/autonomic regulation.", "experiment_tracker_id": "M4A-P054-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P054", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T007", "tracker_id": "M4B-O054"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4404,18 +4458,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O054', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Akhlaghpasand M 2025 shows that transplantation outcomes include autonomic, bladder, pain, respiratory, or cardiovascular readouts that should not be collapsed into locomotor recovery.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Akhlaghpasand M 2025 shows that transplantation outcomes include autonomic, bladder, pain, respiratory, or cardiovascular readouts that should not be collapsed into locomotor recovery.',
     'akhlaghpasand m 2025 shows that transplantation outcomes include autonomic, bladder, pain, respiratory, or cardiovascular readouts that should not be collapsed into locomotor recovery.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Improvement of Neurogenic Bladder Dysfunction Following Combined Cell Therapy with Mesenchymal Stem Cell and Schwann Cell in Spinal Cord Injury: A Randomized, Open-Label, Phase II Clinical Trial.. Note: Combined MSC/Schwann neurogenic bladder clinical outcome.", "experiment_tracker_id": "M4A-P055-E001", "paper_tracker_id": "M4A-P055", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O055"}'
+    '{"curator_notes": "Primary title: Improvement of Neurogenic Bladder Dysfunction Following Combined Cell Therapy with Mesenchymal Stem Cell and Schwann Cell in Spinal Cord Injury: A Randomized, Open-Label, Phase II Clinical Trial.. Note: Combined MSC/Schwann neurogenic bladder clinical outcome.", "experiment_tracker_id": "M4A-P055-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P055", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O055"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4429,18 +4484,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O055', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Akhlaghpasand M 2025 shows that transplantation outcomes include autonomic, bladder, pain, respiratory, or cardiovascular readouts that should not be collapsed into locomotor recovery.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Akhlaghpasand M 2025 shows that transplantation outcomes include autonomic, bladder, pain, respiratory, or cardiovascular readouts that should not be collapsed into locomotor recovery.',
     'akhlaghpasand m 2025 shows that transplantation outcomes include autonomic, bladder, pain, respiratory, or cardiovascular readouts that should not be collapsed into locomotor recovery.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Effects of Combined Intrathecal Mesenchymal Stem Cells and Schwann Cells Transplantation on Neuropathic Pain in Complete Spinal Cord Injury: A Phase II Randomized Active-Controlled Trial.. Note: Combined MSC/Schwann neuropathic pain clinical outcome.", "experiment_tracker_id": "M4A-P056-E001", "paper_tracker_id": "M4A-P056", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O056"}'
+    '{"curator_notes": "Primary title: Effects of Combined Intrathecal Mesenchymal Stem Cells and Schwann Cells Transplantation on Neuropathic Pain in Complete Spinal Cord Injury: A Phase II Randomized Active-Controlled Trial.. Note: Combined MSC/Schwann neuropathic pain clinical outcome.", "experiment_tracker_id": "M4A-P056-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P056", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O056"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4454,18 +4510,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O056', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Lima C 2006 tested Olfactory mucosa autograft in Human SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'qualitative',
+    NULL,
     'Lima C 2006 tested Olfactory mucosa autograft in Human SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'lima c 2006 tested olfactory mucosa autograft in human sci, providing a clinical feasibility or safety anchor for cell transplantation after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Olfactory mucosa autografts in human spinal cord injury: a pilot clinical study.. Note: Olfactory mucosa autograft human pilot.", "experiment_tracker_id": "M4A-P057-E001", "paper_tracker_id": "M4A-P057", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O057"}'
+    '{"curator_notes": "Primary title: Olfactory mucosa autografts in human spinal cord injury: a pilot clinical study.. Note: Olfactory mucosa autograft human pilot.", "experiment_tracker_id": "M4A-P057-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P057", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O057"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4479,18 +4536,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O057', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Iwatsuki K 2016 tested Olfactory mucosa autograft in Human chronic complete SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'qualitative',
+    NULL,
     'Iwatsuki K 2016 tested Olfactory mucosa autograft in Human chronic complete SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'iwatsuki k 2016 tested olfactory mucosa autograft in human chronic complete sci, providing a clinical feasibility or safety anchor for cell transplantation after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: A Pilot Clinical Study of Olfactory Mucosa Autograft for Chronic Complete Spinal Cord Injury.. Note: Olfactory mucosa autograft chronic complete pilot.", "experiment_tracker_id": "M4A-P058-E001", "paper_tracker_id": "M4A-P058", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O058"}'
+    '{"curator_notes": "Primary title: A Pilot Clinical Study of Olfactory Mucosa Autograft for Chronic Complete Spinal Cord Injury.. Note: Olfactory mucosa autograft chronic complete pilot.", "experiment_tracker_id": "M4A-P058-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P058", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O058"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4504,18 +4562,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O058', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'DePaul MA 2017 anchors Schwann or glial-support transplantation evidence for axon growth, connectivity, remyelination, or safety.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'DePaul MA 2017 anchors Schwann or glial-support transplantation evidence for axon growth, connectivity, remyelination, or safety.',
     'depaul ma 2017 anchors schwann or glial-support transplantation evidence for axon growth, connectivity, remyelination, or safety.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'low',
-    '{"curator_notes": "Primary title: Combinatory repair strategy to promote axon regeneration and functional recovery after chronic spinal cord injury.. Note: Combinatory repair strategy after chronic SCI.", "experiment_tracker_id": "M4A-P059-E001", "paper_tracker_id": "M4A-P059", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T004", "tracker_id": "M4B-O059"}'
+    '{"curator_notes": "Primary title: Combinatory repair strategy to promote axon regeneration and functional recovery after chronic spinal cord injury.. Note: Combinatory repair strategy after chronic SCI.", "experiment_tracker_id": "M4A-P059-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P059", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T004", "tracker_id": "M4B-O059"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4529,18 +4588,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O059', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhu H 2016 tested Umbilical cord blood mononuclear cells in Human chronic complete SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'qualitative',
+    NULL,
     'Zhu H 2016 tested Umbilical cord blood mononuclear cells in Human chronic complete SCI, providing a clinical feasibility or safety anchor for cell transplantation after SCI.',
     'zhu h 2016 tested umbilical cord blood mononuclear cells in human chronic complete sci, providing a clinical feasibility or safety anchor for cell transplantation after sci.',
     'Module 4A tracker / PubMed metadata',
     'Abstract / carried',
     'medium',
-    '{"curator_notes": "Primary title: Phase I-II Clinical Trial Assessing Safety and Efficacy of Umbilical Cord Blood Mononuclear Cell Transplant Therapy of Chronic Complete Spinal Cord Injury.. Note: UCB mononuclear phase I/II clinical trial.", "experiment_tracker_id": "M4A-P060-E001", "paper_tracker_id": "M4A-P060", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O060"}'
+    '{"curator_notes": "Primary title: Phase I-II Clinical Trial Assessing Safety and Efficacy of Umbilical Cord Blood Mononuclear Cell Transplant Therapy of Chronic Complete Spinal Cord Injury.. Note: UCB mononuclear phase I/II clinical trial.", "experiment_tracker_id": "M4A-P060-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P060", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T001", "tracker_id": "M4B-O060"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4554,18 +4614,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O060', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Lu P 2007 M4A-P001-E002 preserves a distinct Rat experiment testing Mechanistic outcome assessment after MSC graft transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for chronic MSC graft permissiveness: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Lu P 2007 M4A-P001-E002 preserves a distinct Rat experiment testing Mechanistic outcome assessment after MSC graft transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for chronic MSC graft permissiveness: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P001-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Axon regeneration through scars and into sites of chronic spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P001-E002", "paper_tracker_id": "M4A-P001", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T006", "tracker_id": "M4B-O061"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Axon regeneration through scars and into sites of chronic spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P001-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P001", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T006", "tracker_id": "M4B-O061"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4579,18 +4640,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O061', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ito K 2024 M4A-P003-E002 preserves a distinct Rodent chronic complete SCI model experiment testing Mechanistic outcome assessment after hNS/PC + dECM scaffold transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for chronic iPSC-NS/PC scaffold histology: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    'immunostaining / histology / pathology',
     'Ito K 2024 M4A-P003-E002 preserves a distinct Rodent chronic complete SCI model experiment testing Mechanistic outcome assessment after hNS/PC + dECM scaffold transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for chronic iPSC-NS/PC scaffold histology: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P003-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Histological effects of combined therapy involving scar resection, decellularized scaffolds, and human iPSC-NS/PCs transplantation in chronic complete spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P003-E002", "paper_tracker_id": "M4A-P003", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T006", "tracker_id": "M4B-O062"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Histological effects of combined therapy involving scar resection, decellularized scaffolds, and human iPSC-NS/PCs transplantation in chronic complete spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P003-E002", "measurement_method_inference": "immunostaining / histology / pathology", "paper_tracker_id": "M4A-P003", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T006", "tracker_id": "M4B-O062"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4604,18 +4666,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O062', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Abraham ME 2026 M4A-P004-E002 preserves a distinct Human chronic cervical SCI experiment testing Mechanistic outcome assessment after NSI-566 human spinal cord-derived neural stem cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for clinical NSC safety: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Abraham ME 2026 M4A-P004-E002 preserves a distinct Human chronic cervical SCI experiment testing Mechanistic outcome assessment after NSI-566 human spinal cord-derived neural stem cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for clinical NSC safety: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P004-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Long-term safety and clinical outcomes from a single-site phase 1 study of neural stem cell transplantation for chronic cervical spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P004-E002", "paper_tracker_id": "M4A-P004", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T001", "tracker_id": "M4B-O063"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Long-term safety and clinical outcomes from a single-site phase 1 study of neural stem cell transplantation for chronic cervical spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P004-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P004", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T001", "tracker_id": "M4B-O063"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4629,18 +4692,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O063', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Martin JR 2024 M4A-P005-E002 preserves a distinct Human chronic thoracic SCI experiment testing Mechanistic outcome assessment after NSI-566 human spinal cord-derived neural stem cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for clinical NSC safety: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Martin JR 2024 M4A-P005-E002 preserves a distinct Human chronic thoracic SCI experiment testing Mechanistic outcome assessment after NSI-566 human spinal cord-derived neural stem cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for clinical NSC safety: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P005-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Long-term clinical and safety outcomes from a single-site phase 1 study of neural stem cell transplantation for chronic thoracic spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P005-E002", "paper_tracker_id": "M4A-P005", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T001", "tracker_id": "M4B-O064"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Long-term clinical and safety outcomes from a single-site phase 1 study of neural stem cell transplantation for chronic thoracic spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P005-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P005", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T001", "tracker_id": "M4B-O064"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4654,18 +4718,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O064', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Gant KL 2022 M4A-P006-E002 preserves a distinct Human chronic SCI experiment testing Mechanistic outcome assessment after Autologous Schwann cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for clinical Schwann safety: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Gant KL 2022 M4A-P006-E002 preserves a distinct Human chronic SCI experiment testing Mechanistic outcome assessment after Autologous Schwann cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for clinical Schwann safety: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P006-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Phase 1 Safety Trial of Autologous Human Schwann Cell Transplantation in Chronic Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P006-E002", "paper_tracker_id": "M4A-P006", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T001", "tracker_id": "M4B-O065"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Phase 1 Safety Trial of Autologous Human Schwann Cell Transplantation in Chronic Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P006-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P006", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T001", "tracker_id": "M4B-O065"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4679,18 +4744,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O065', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Kaplan N 2025 M4A-P007-E002 preserves a distinct Human chronic complete SCI experiment testing Mechanistic outcome assessment after Wharton jelly MSCs transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for clinical MSC safety: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Kaplan N 2025 M4A-P007-E002 preserves a distinct Human chronic complete SCI experiment testing Mechanistic outcome assessment after Wharton jelly MSCs transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for clinical MSC safety: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P007-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Multiroute administration of Wharton''s jelly mesenchymal stem cells in chronic complete spinal cord injury: A phase I safety and feasibility study.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P007-E002", "paper_tracker_id": "M4A-P007", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T001", "tracker_id": "M4B-O066"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Multiroute administration of Wharton''s jelly mesenchymal stem cells in chronic complete spinal cord injury: A phase I safety and feasibility study.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P007-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P007", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T001", "tracker_id": "M4B-O066"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4704,18 +4770,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O066', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Macêdo CT 2024 M4A-P008-E002 preserves a distinct Human complete cervical SCI experiment testing Mechanistic outcome assessment after Autologous mesenchymal stromal cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for clinical MSC pilot: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Macêdo CT 2024 M4A-P008-E002 preserves a distinct Human complete cervical SCI experiment testing Mechanistic outcome assessment after Autologous mesenchymal stromal cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for clinical MSC pilot: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P008-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Transplantation of autologous mesenchymal stromal cells in complete cervical spinal cord injury: a pilot study.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P008-E002", "paper_tracker_id": "M4A-P008", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T001", "tracker_id": "M4B-O067"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Transplantation of autologous mesenchymal stromal cells in complete cervical spinal cord injury: a pilot study.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P008-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P008", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T001", "tracker_id": "M4B-O067"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4729,18 +4796,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O067', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zamani H 2022 M4A-P009-E002 preserves a distinct Human chronic SCI experiment testing Mechanistic outcome assessment after Autologous OEC + BM-MSC transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for clinical OEC MSC safety: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Zamani H 2022 M4A-P009-E002 preserves a distinct Human chronic SCI experiment testing Mechanistic outcome assessment after Autologous OEC + BM-MSC transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for clinical OEC MSC safety: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P009-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Safety and feasibility of autologous olfactory ensheathing cell and bone marrow mesenchymal stem cell co-transplantation in chronic human spinal cord injury: a clinical trial.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P009-E002", "paper_tracker_id": "M4A-P009", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T001", "tracker_id": "M4B-O068"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Safety and feasibility of autologous olfactory ensheathing cell and bone marrow mesenchymal stem cell co-transplantation in chronic human spinal cord injury: a clinical trial.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P009-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P009", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T001", "tracker_id": "M4B-O068"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4754,18 +4822,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O068', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Sinopoulou E 2025 M4A-P011-E002 preserves a distinct Non-human primate experiment testing Mechanistic outcome assessment after Human ESC-derived spinal cord NSCs transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for primate NSC function: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Sinopoulou E 2025 M4A-P011-E002 preserves a distinct Non-human primate experiment testing Mechanistic outcome assessment after Human ESC-derived spinal cord NSCs transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for primate NSC function: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P011-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Extensive restoration of forelimb function in primates with spinal cord injury by neural stem cell transplantation.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P011-E002", "paper_tracker_id": "M4A-P011", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O069"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Extensive restoration of forelimb function in primates with spinal cord injury by neural stem cell transplantation.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P011-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P011", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O069"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4779,18 +4848,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O069', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Iwai H 2015 M4A-P012-E002 preserves a distinct Common marmoset experiment testing Mechanistic outcome assessment after ESC-derived NS/PCs transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for primate ESC-NSPC safety: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Iwai H 2015 M4A-P012-E002 preserves a distinct Common marmoset experiment testing Mechanistic outcome assessment after ESC-derived NS/PCs transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for primate ESC-NSPC safety: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P012-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Allogeneic Neural Stem/Progenitor Cells Derived From Embryonic Stem Cells Promote Functional Recovery After Transplantation Into Injured Spinal Cord of Nonhuman Primates.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P012-E002", "paper_tracker_id": "M4A-P012", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O070"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Allogeneic Neural Stem/Progenitor Cells Derived From Embryonic Stem Cells Promote Functional Recovery After Transplantation Into Injured Spinal Cord of Nonhuman Primates.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P012-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P012", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O070"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4804,18 +4874,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O070', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Tucker A 2025 M4A-P013-E002 preserves a distinct Mouse thoracic contusion experiment testing Mechanistic outcome assessment after Engrafted spinal cord neurons / NPC-derived neurons transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for synaptic integration: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Tucker A 2025 M4A-P013-E002 preserves a distinct Mouse thoracic contusion experiment testing Mechanistic outcome assessment after Engrafted spinal cord neurons / NPC-derived neurons transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for synaptic integration: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P013-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Functional synaptic connectivity of engrafted spinal cord neurons with hindlimb motor circuitry in the injured spinal cord.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P013-E002", "paper_tracker_id": "M4A-P013", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O071"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Functional synaptic connectivity of engrafted spinal cord neurons with hindlimb motor circuitry in the injured spinal cord.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P013-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P013", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O071"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4829,18 +4900,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O071', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ceto S 2020 M4A-P014-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after NS/PC grafts transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for synaptic integration: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Ceto S 2020 M4A-P014-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after NS/PC grafts transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for synaptic integration: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P014-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Neural Stem Cell Grafts Form Extensive Synaptic Networks that Integrate with Host Circuits after Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P014-E002", "paper_tracker_id": "M4A-P014", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O072"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Neural Stem Cell Grafts Form Extensive Synaptic Networks that Integrate with Host Circuits after Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P014-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P014", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O072"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4854,18 +4926,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O072', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Bonner JF 2011 M4A-P016-E002 preserves a distinct Rat dorsal column SCI experiment testing Mechanistic outcome assessment after Neuronal/glial restricted precursor graft transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for synaptic relay: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Bonner JF 2011 M4A-P016-E002 preserves a distinct Rat dorsal column SCI experiment testing Mechanistic outcome assessment after Neuronal/glial restricted precursor graft transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for synaptic relay: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P016-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Grafted neural progenitors integrate and restore synaptic connectivity across the injured spinal cord.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P016-E002", "paper_tracker_id": "M4A-P016", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O073"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Grafted neural progenitors integrate and restore synaptic connectivity across the injured spinal cord.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P016-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P016", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O073"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4879,18 +4952,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O073', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhu Y 2025 M4A-P018-E002 preserves a distinct Organoid / rodent SCI experiment testing Mechanistic outcome assessment after Engineered thoracic spinal cord organoids transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for organoid graft: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Zhu Y 2025 M4A-P018-E002 preserves a distinct Organoid / rodent SCI experiment testing Mechanistic outcome assessment after Engineered thoracic spinal cord organoids transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for organoid graft: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P018-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Engineered thoracic spinal cord organoids for transplantation after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P018-E002", "paper_tracker_id": "M4A-P018", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O074"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Engineered thoracic spinal cord organoids for transplantation after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P018-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P018", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O074"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4904,18 +4978,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O074', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Yao X 2025 M4A-P019-E002 preserves a distinct NOD-SCID mouse contusion experiment testing Mechanistic outcome assessment after Human iPSC-derived spinal neural progenitors transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for iPSC spinal progenitors: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Yao X 2025 M4A-P019-E002 preserves a distinct NOD-SCID mouse contusion experiment testing Mechanistic outcome assessment after Human iPSC-derived spinal neural progenitors transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for iPSC spinal progenitors: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P019-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Human iPSC-derived spinal neural progenitors enhance sensorimotor recovery in spinal cord-injured NOD-SCID mice via differentiation and microenvironment regulation.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P019-E002", "paper_tracker_id": "M4A-P019", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O075"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Human iPSC-derived spinal neural progenitors enhance sensorimotor recovery in spinal cord-injured NOD-SCID mice via differentiation and microenvironment regulation.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P019-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P019", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O075"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4929,18 +5004,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O075', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zheng Y 2025 M4A-P020-E002 preserves a distinct Mouse SCI experiment testing Mechanistic outcome assessment after Human iPSC-derived A2B5+ neural progenitors transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for iPSC A2B5 progenitors: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Zheng Y 2025 M4A-P020-E002 preserves a distinct Mouse SCI experiment testing Mechanistic outcome assessment after Human iPSC-derived A2B5+ neural progenitors transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for iPSC A2B5 progenitors: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P020-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Functional Recovery by Transplantation of Human iPSC-Derived A2B5 Positive Neural Progenitor Cell After Spinal Cord Injury in Mice.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P020-E002", "paper_tracker_id": "M4A-P020", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O076"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Functional Recovery by Transplantation of Human iPSC-Derived A2B5 Positive Neural Progenitor Cell After Spinal Cord Injury in Mice.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P020-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P020", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O076"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4954,18 +5030,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O076', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Shibata T 2023 M4A-P021-E002 preserves a distinct Chronic SCI model experiment testing Mechanistic outcome assessment after hiPSC-derived NS/PC + rehabilitation transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for iPSC rehabilitation combination: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Shibata T 2023 M4A-P021-E002 preserves a distinct Chronic SCI model experiment testing Mechanistic outcome assessment after hiPSC-derived NS/PC + rehabilitation transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for iPSC rehabilitation combination: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P021-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Rehabilitative Training Enhances Therapeutic Effect of Human-iPSC-Derived Neural Stem/Progenitor Cells Transplantation in Chronic Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P021-E002", "paper_tracker_id": "M4A-P021", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O077"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Rehabilitative Training Enhances Therapeutic Effect of Human-iPSC-Derived Neural Stem/Progenitor Cells Transplantation in Chronic Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P021-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P021", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O077"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4979,18 +5056,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O077', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Saijo Y 2024 M4A-P022-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after hiPSC-NS/PCs expressing synaptic organizer CPTX transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for iPSC synaptic organizer: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Saijo Y 2024 M4A-P022-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after hiPSC-NS/PCs expressing synaptic organizer CPTX transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for iPSC synaptic organizer: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P022-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Human-induced pluripotent stem cell-derived neural stem/progenitor cell ex vivo gene therapy with synaptic organizer CPTX for spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P022-E002", "paper_tracker_id": "M4A-P022", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O078"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Human-induced pluripotent stem cell-derived neural stem/progenitor cell ex vivo gene therapy with synaptic organizer CPTX for spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P022-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P022", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O078"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5004,18 +5082,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O078', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Suematsu Y 2023 M4A-P023-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after HGF-pretreated hiPSC-NS/PC strategy transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for iPSC HGF pretreatment: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Suematsu Y 2023 M4A-P023-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after HGF-pretreated hiPSC-NS/PC strategy transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for iPSC HGF pretreatment: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P023-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Hepatocyte growth factor pretreatment boosts functional recovery after spinal cord injury through human iPSC-derived neural stem/progenitor cell transplantation.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P023-E002", "paper_tracker_id": "M4A-P023", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O079"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Hepatocyte growth factor pretreatment boosts functional recovery after spinal cord injury through human iPSC-derived neural stem/progenitor cell transplantation.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P023-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P023", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O079"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5029,18 +5108,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O079', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Li Y 2023 M4A-P025-E002 preserves a distinct Rat SCI experiment testing Mechanistic outcome assessment after NSC grafts + caudal BDNF guidance transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for BDNF axon guidance: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Li Y 2023 M4A-P025-E002 preserves a distinct Rat SCI experiment testing Mechanistic outcome assessment after NSC grafts + caudal BDNF guidance transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for BDNF axon guidance: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P025-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: BDNF guides neural stem cell-derived axons to ventral interneurons and motor neurons after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P025-E002", "paper_tracker_id": "M4A-P025", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O080"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: BDNF guides neural stem cell-derived axons to ventral interneurons and motor neurons after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P025-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P025", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O080"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5054,18 +5134,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O080', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Manley NC 2017 M4A-P027-E002 preserves a distinct Rat cervical SCI / clinical-enabling experiment testing Mechanistic outcome assessment after hESC-derived oligodendrocyte progenitor cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for OPC remyelination: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Manley NC 2017 M4A-P027-E002 preserves a distinct Rat cervical SCI / clinical-enabling experiment testing Mechanistic outcome assessment after hESC-derived oligodendrocyte progenitor cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for OPC remyelination: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P027-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Human Embryonic Stem Cell-Derived Oligodendrocyte Progenitor Cells: Preclinical Efficacy and Safety in Cervical Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P027-E002", "paper_tracker_id": "M4A-P027", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T004", "tracker_id": "M4B-O081"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Human Embryonic Stem Cell-Derived Oligodendrocyte Progenitor Cells: Preclinical Efficacy and Safety in Cervical Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P027-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P027", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T004", "tracker_id": "M4B-O081"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5079,18 +5160,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O081', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Luo Z 2025 M4A-P028-E002 preserves a distinct Chronic compressive cervical SCI experiment testing Mechanistic outcome assessment after Oligodendrogenic neural progenitors transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for oligodendrogenic progenitors: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Luo Z 2025 M4A-P028-E002 preserves a distinct Chronic compressive cervical SCI experiment testing Mechanistic outcome assessment after Oligodendrogenic neural progenitors transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for oligodendrogenic progenitors: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P028-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Oligodendrogenic neural progenitors for treatment of chronic compressive cervical spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P028-E002", "paper_tracker_id": "M4A-P028", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T004", "tracker_id": "M4B-O082"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Oligodendrogenic neural progenitors for treatment of chronic compressive cervical spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P028-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P028", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T004", "tracker_id": "M4B-O082"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5104,18 +5186,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O082', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ren J 2026 M4A-P030-E002 preserves a distinct SCI repair platform experiment testing Mechanistic outcome assessment after Cryopreserved neural stem cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for NSC manufacturing: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Ren J 2026 M4A-P030-E002 preserves a distinct SCI repair platform experiment testing Mechanistic outcome assessment after Cryopreserved neural stem cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for NSC manufacturing: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P030-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Integrated cryopreservation-thawing-transplantation platform for neural stem cell-based spinal cord injury repair.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P030-E002", "paper_tracker_id": "M4A-P030", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O083"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Integrated cryopreservation-thawing-transplantation platform for neural stem cell-based spinal cord injury repair.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P030-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P030", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O083"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5129,18 +5212,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O083', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Qu W 2025 M4A-P031-E002 preserves a distinct Acute/chronic SCI models experiment testing Mechanistic outcome assessment after Schwann cells + chondroitinase ABC transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for Schwann chABC: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Qu W 2025 M4A-P031-E002 preserves a distinct Acute/chronic SCI models experiment testing Mechanistic outcome assessment after Schwann cells + chondroitinase ABC transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for Schwann chABC: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P031-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Chondroitinase ABC combined with Schwann cell transplantation enhances restoration of neural connection and functional recovery following acute and chronic spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P031-E002", "paper_tracker_id": "M4A-P031", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T004", "tracker_id": "M4B-O084"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Chondroitinase ABC combined with Schwann cell transplantation enhances restoration of neural connection and functional recovery following acute and chronic spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P031-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P031", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T004", "tracker_id": "M4B-O084"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5154,18 +5238,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O084', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Du X 2024 M4A-P032-E002 preserves a distinct Rat transection SCI experiment testing Mechanistic outcome assessment after GDNF-overexpressing Schwann cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for Schwann GDNF pathway: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Du X 2024 M4A-P032-E002 preserves a distinct Rat transection SCI experiment testing Mechanistic outcome assessment after GDNF-overexpressing Schwann cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for Schwann GDNF pathway: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P032-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Regeneration of Propriospinal Axons in Rat Transected Spinal Cord Injury through a Growth-Promoting Pathway Constructed by Schwann Cells Overexpressing GDNF.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P032-E002", "paper_tracker_id": "M4A-P032", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T004", "tracker_id": "M4B-O085"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Regeneration of Propriospinal Axons in Rat Transected Spinal Cord Injury through a Growth-Promoting Pathway Constructed by Schwann Cells Overexpressing GDNF.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P032-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P032", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T004", "tracker_id": "M4B-O085"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5179,18 +5264,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O085', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Hu JG 2013 M4A-P033-E002 preserves a distinct Rat SCI experiment testing Mechanistic outcome assessment after Glial restricted precursor + Schwann cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for GRP Schwann combination: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Hu JG 2013 M4A-P033-E002 preserves a distinct Rat SCI experiment testing Mechanistic outcome assessment after Glial restricted precursor + Schwann cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for GRP Schwann combination: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P033-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Cotransplantation of glial restricted precursor cells and Schwann cells promotes functional recovery after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P033-E002", "paper_tracker_id": "M4A-P033", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T004", "tracker_id": "M4B-O086"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Cotransplantation of glial restricted precursor cells and Schwann cells promotes functional recovery after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P033-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P033", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T004", "tracker_id": "M4B-O086"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5204,18 +5290,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O086', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Dugan EA 2015 M4A-P034-E002 preserves a distinct Rat SCI experiment testing Mechanistic outcome assessment after Neural + glial restricted precursors + quipazine transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for NRP GRP quipazine: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Dugan EA 2015 M4A-P034-E002 preserves a distinct Rat SCI experiment testing Mechanistic outcome assessment after Neural + glial restricted precursors + quipazine transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for NRP GRP quipazine: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P034-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: A combination therapy of neural and glial restricted precursor cells and chronic quipazine treatment paired with passive cycling promotes quipazine-induced stepping in adult spinalized rats.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P034-E002", "paper_tracker_id": "M4A-P034", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T004", "tracker_id": "M4B-O087"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: A combination therapy of neural and glial restricted precursor cells and chronic quipazine treatment paired with passive cycling promotes quipazine-induced stepping in adult spinalized rats.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P034-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P034", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T004", "tracker_id": "M4B-O087"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5229,18 +5316,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O087', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Mitsui T 2005 M4A-P035-E002 preserves a distinct Rat contusion SCI experiment testing Mechanistic outcome assessment after Neuronal and glial restricted precursors transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for NRP/GRP contusion circuitry: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Mitsui T 2005 M4A-P035-E002 preserves a distinct Rat contusion SCI experiment testing Mechanistic outcome assessment after Neuronal and glial restricted precursors transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for NRP/GRP contusion circuitry: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P035-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Transplantation of neuronal and glial restricted precursors into contused spinal cord improves bladder and motor functions, decreases thermal hypersensitivity, and modifies intraspinal circuitry.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P035-E002", "paper_tracker_id": "M4A-P035", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T004", "tracker_id": "M4B-O088"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Transplantation of neuronal and glial restricted precursors into contused spinal cord improves bladder and motor functions, decreases thermal hypersensitivity, and modifies intraspinal circuitry.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P035-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P035", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T004", "tracker_id": "M4B-O088"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5254,18 +5342,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O088', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhang L 2024 M4A-P036-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after Olfactory ensheathing cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for OEC immunomodulation: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Zhang L 2024 M4A-P036-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after Olfactory ensheathing cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for OEC immunomodulation: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P036-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Olfactory Ensheathing Cell Ameliorate Neuroinflammation Following Spinal Cord Injury Through Upregulating REV-ERB\u03b1 in Microglia.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P036-E002", "paper_tracker_id": "M4A-P036", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T005", "tracker_id": "M4B-O089"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Olfactory Ensheathing Cell Ameliorate Neuroinflammation Following Spinal Cord Injury Through Upregulating REV-ERB\u03b1 in Microglia.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P036-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P036", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T005", "tracker_id": "M4B-O089"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5279,18 +5368,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O089', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Wang Y 2022 M4A-P037-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after Olfactory ensheathing cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for OEC inflammation: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Wang Y 2022 M4A-P037-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after Olfactory ensheathing cells transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for OEC inflammation: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P037-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Transplantation of olfactory ensheathing cells decreases local and serological monocyte chemoattractant protein 1 level during the acute phase of rat spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P037-E002", "paper_tracker_id": "M4A-P037", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T005", "tracker_id": "M4B-O090"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Transplantation of olfactory ensheathing cells decreases local and serological monocyte chemoattractant protein 1 level during the acute phase of rat spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P037-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P037", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T005", "tracker_id": "M4B-O090"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5304,18 +5394,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O090', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Li W 2025 M4A-P038-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after Olfactory mucosal MSCs + gelatin sponge transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for olfactory mucosal MSC scaffold: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Li W 2025 M4A-P038-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after Olfactory mucosal MSCs + gelatin sponge transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for olfactory mucosal MSC scaffold: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P038-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Olfactory mucosal mesenchymal stem cells delivered by gelatin sponge scaffolds promote functional recovery of spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P038-E002", "paper_tracker_id": "M4A-P038", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T005", "tracker_id": "M4B-O091"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Olfactory mucosal mesenchymal stem cells delivered by gelatin sponge scaffolds promote functional recovery of spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P038-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P038", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T005", "tracker_id": "M4B-O091"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5329,18 +5420,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O091', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhao Y 2024 M4A-P039-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after hUC-MSC cell sheets transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for MSC cell sheet: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Zhao Y 2024 M4A-P039-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after hUC-MSC cell sheets transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for MSC cell sheet: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P039-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Cell Sheets Formation Enhances Therapeutic Effects of Human Umbilical Cord Mesenchymal Stem Cells on Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P039-E002", "paper_tracker_id": "M4A-P039", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T005", "tracker_id": "M4B-O092"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Cell Sheets Formation Enhances Therapeutic Effects of Human Umbilical Cord Mesenchymal Stem Cells on Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P039-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P039", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T005", "tracker_id": "M4B-O092"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5354,18 +5446,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O092', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Yang L 2024 M4A-P040-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after MSC scaffold / IL-10 response transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for MSC IL-10 scaffold: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    'ELISA / cytokine protein assay',
     'Yang L 2024 M4A-P040-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after MSC scaffold / IL-10 response transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for MSC IL-10 scaffold: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P040-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Initial IL-10 production dominates the therapy of mesenchymal stem cell scaffold in spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P040-E002", "paper_tracker_id": "M4A-P040", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T005", "tracker_id": "M4B-O093"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Initial IL-10 production dominates the therapy of mesenchymal stem cell scaffold in spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P040-E002", "measurement_method_inference": "ELISA / cytokine protein assay", "paper_tracker_id": "M4A-P040", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T005", "tracker_id": "M4B-O093"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5379,18 +5472,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O093', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Liu D 2023 M4A-P041-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after NSCs + ROS-scavenging hydrogel transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for NSC hydrogel microenvironment: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Liu D 2023 M4A-P041-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after NSCs + ROS-scavenging hydrogel transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for NSC hydrogel microenvironment: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P041-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: ROS-Scavenging Hydrogels Synergize with Neural Stem Cells to Enhance Spinal Cord Injury Repair via Regulating Microenvironment and Facilitating Nerve Regeneration.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P041-E002", "paper_tracker_id": "M4A-P041", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T006", "tracker_id": "M4B-O094"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: ROS-Scavenging Hydrogels Synergize with Neural Stem Cells to Enhance Spinal Cord Injury Repair via Regulating Microenvironment and Facilitating Nerve Regeneration.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P041-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P041", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T006", "tracker_id": "M4B-O094"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5404,18 +5498,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O094', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'He W 2023 M4A-P042-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after bFGF-overexpressing hUC-MSC + dSCM scaffold transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for engineered MSC scaffold: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'He W 2023 M4A-P042-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after bFGF-overexpressing hUC-MSC + dSCM scaffold transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for engineered MSC scaffold: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P042-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Spinal cord decellularized matrix scaffold loaded with engineered basic fibroblast growth factor-overexpressed human umbilical cord mesenchymal stromal cells promoted the recovery of spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P042-E002", "paper_tracker_id": "M4A-P042", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T005", "tracker_id": "M4B-O095"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Spinal cord decellularized matrix scaffold loaded with engineered basic fibroblast growth factor-overexpressed human umbilical cord mesenchymal stromal cells promoted the recovery of spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P042-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P042", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T005", "tracker_id": "M4B-O095"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5429,18 +5524,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O095', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Li X 2025 M4A-P043-E002 preserves a distinct Complete transection defect experiment testing Mechanistic outcome assessment after NSC-laden microfibers + UC-MSC exosomes transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for NSC exosome microfiber: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Li X 2025 M4A-P043-E002 preserves a distinct Complete transection defect experiment testing Mechanistic outcome assessment after NSC-laden microfibers + UC-MSC exosomes transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for NSC exosome microfiber: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P043-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Conjugated therapy with coaxially printed neural stem cell-laden microfibers and umbilical cord mesenchymal stem cell derived exosomes on complete transactional spinal cord defects.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P043-E002", "paper_tracker_id": "M4A-P043", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T006", "tracker_id": "M4B-O096"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Conjugated therapy with coaxially printed neural stem cell-laden microfibers and umbilical cord mesenchymal stem cell derived exosomes on complete transactional spinal cord defects.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P043-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P043", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T006", "tracker_id": "M4B-O096"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5454,18 +5550,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O096', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Kao Y 2025 M4A-P044-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after hMSC + HA hydrogel/polydopamine nanoparticles transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for MSC hydrogel nanoparticle: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Kao Y 2025 M4A-P044-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after hMSC + HA hydrogel/polydopamine nanoparticles transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for MSC hydrogel nanoparticle: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P044-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Synergistic restoration of spinal cord injury through hyaluronic acid conjugated hydrogel-polydopamine nanoparticles combined with human mesenchymal stem cell transplantation.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P044-E002", "paper_tracker_id": "M4A-P044", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T006", "tracker_id": "M4B-O097"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Synergistic restoration of spinal cord injury through hyaluronic acid conjugated hydrogel-polydopamine nanoparticles combined with human mesenchymal stem cell transplantation.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P044-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P044", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T006", "tracker_id": "M4B-O097"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5479,18 +5576,19 @@ INSERT INTO _m4_observation_map (tracker_id, observation_id) SELECT 'M4B-O097', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Liu D 2025 M4A-P045-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after NSC + NO-releasing cerium oxide hydrogel transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for NSC NO hydrogel: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'qualitative',
+    NULL,
     'Liu D 2025 M4A-P045-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after NSC + NO-releasing cerium oxide hydrogel transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for NSC NO hydrogel: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
     'M4A-P045-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Nitric Oxide-Releasing Mesoporous Hollow Cerium Oxide Nanozyme-Based Hydrogel Synergizes with Neural Stem Cell for Spinal Cord Injury Repair.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P045-E002", "paper_tracker_id": "M4A-P045", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T006", "tracker_id": "M4B-O098"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Nitric Oxide-Releasing Mesoporous Hollow Cerium Oxide Nanozyme-Based Hydrogel Synergizes with Neural Stem Cell for Spinal Cord Injury Repair.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P045-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P045", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T006", "tracker_id": "M4B-O098"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot

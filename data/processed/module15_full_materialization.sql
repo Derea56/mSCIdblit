@@ -671,18 +671,19 @@ INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VA
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Peripheral axon injury made long spinal primary sensory axons far more likely to regenerate into peripheral nerve grafts, implicating inducible neuronal events.',
     'qualitative',
+    NULL,
     'Peripheral axon injury made long spinal primary sensory axons far more likely to regenerate into peripheral nerve grafts, implicating inducible neuronal events.',
     'peripheral injury enhances central sensory axon regeneration',
     'Module 15A tracker / source-page, full-text PMC, or review metadata',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Foundational conditioning lesion row.", "experiment_tracker_id": "M15A-P001-E001", "paper_tracker_id": "M15A-P001", "quantitative": "YES", "statistics_reported": "Source-page reports approximately 100-fold likelihood increase", "topic_id": "M15B-T001", "tracker_id": "M15B-O001"}'
+    '{"curator_notes": "Foundational conditioning lesion row.", "experiment_tracker_id": "M15A-P001-E001", "measurement_method_inference": null, "paper_tracker_id": "M15A-P001", "quantitative": "YES", "statistics_reported": "Source-page reports approximately 100-fold likelihood increase", "topic_id": "M15B-T001", "tracker_id": "M15B-O001"}'
   FROM _m15_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -696,18 +697,19 @@ INSERT INTO _m15_observation_map (tracker_id, observation_id) SELECT 'M15B-O001'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Conditioning accelerated peripheral branch regeneration but did not significantly accelerate dorsal-root central branch regeneration in this assay.',
     'qualitative',
+    NULL,
     'Conditioning accelerated peripheral branch regeneration but did not significantly accelerate dorsal-root central branch regeneration in this assay.',
     'branch-specific conditioning effect',
     'Module 15A tracker / source-page, full-text PMC, or review metadata',
     'Full-text PMC',
     'high',
-    '{"curator_notes": "Important negative/boundary row.", "experiment_tracker_id": "M15A-P002-E001", "paper_tracker_id": "M15A-P002", "quantitative": "YES", "statistics_reported": "Peripheral branch rate increased from 4.4 to 5.5 mm/day; dorsal-root central branch not significantly affected", "topic_id": "M15B-T007", "tracker_id": "M15B-O002"}'
+    '{"curator_notes": "Important negative/boundary row.", "experiment_tracker_id": "M15A-P002-E001", "measurement_method_inference": null, "paper_tracker_id": "M15A-P002", "quantitative": "YES", "statistics_reported": "Peripheral branch rate increased from 4.4 to 5.5 mm/day; dorsal-root central branch not significantly affected", "topic_id": "M15B-T007", "tracker_id": "M15B-O002"}'
   FROM _m15_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -721,18 +723,19 @@ INSERT INTO _m15_observation_map (tracker_id, observation_id) SELECT 'M15B-O002'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Preconditioning 1-2 weeks before dorsal column injury increased central axon growth into spinal cord above the lesion.',
     'qualitative',
+    NULL,
     'Preconditioning 1-2 weeks before dorsal column injury increased central axon growth into spinal cord above the lesion.',
     'preconditioning enables dorsal column growth beyond lesion',
     'Module 15A tracker / source-page, full-text PMC, or review metadata',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Timing-sensitive positive row.", "experiment_tracker_id": "M15A-P003-E001", "paper_tracker_id": "M15A-P003", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact fiber counts not extracted", "topic_id": "M15B-T001", "tracker_id": "M15B-O003"}'
+    '{"curator_notes": "Timing-sensitive positive row.", "experiment_tracker_id": "M15A-P003-E001", "measurement_method_inference": null, "paper_tracker_id": "M15A-P003", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact fiber counts not extracted", "topic_id": "M15B-T001", "tracker_id": "M15B-O003"}'
   FROM _m15_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -746,18 +749,19 @@ INSERT INTO _m15_observation_map (tracker_id, observation_id) SELECT 'M15B-O003'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Two priming lesions sustained intrinsic growth capacity and promoted regeneration within and beyond spinal lesion after SCI.',
     'qualitative',
+    NULL,
     'Two priming lesions sustained intrinsic growth capacity and promoted regeneration within and beyond spinal lesion after SCI.',
     'repeated priming sustains regeneration after SCI',
     'Module 15A tracker / source-page, full-text PMC, or review metadata',
     'Full-text PMC',
     'high',
-    '{"curator_notes": "Clinically relevant post-SCI timing row.", "experiment_tracker_id": "M15A-P004-E001", "paper_tracker_id": "M15A-P004", "quantitative": "NO", "statistics_reported": "Full-text first pass; exact regeneration distances not materialized here", "topic_id": "M15B-T002", "tracker_id": "M15B-O004"}'
+    '{"curator_notes": "Clinically relevant post-SCI timing row.", "experiment_tracker_id": "M15A-P004-E001", "measurement_method_inference": null, "paper_tracker_id": "M15A-P004", "quantitative": "NO", "statistics_reported": "Full-text first pass; exact regeneration distances not materialized here", "topic_id": "M15B-T002", "tracker_id": "M15B-O004"}'
   FROM _m15_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -771,18 +775,19 @@ INSERT INTO _m15_observation_map (tracker_id, observation_id) SELECT 'M15B-O004'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Conditioning lesions outperformed cAMP, worked before or shortly after SCI, and recruited broader, longer-lasting genetic mechanisms.',
     'qualitative',
+    NULL,
     'Conditioning lesions outperformed cAMP, worked before or shortly after SCI, and recruited broader, longer-lasting genetic mechanisms.',
     'conditioning broader than cAMP mimicry',
     'Module 15A tracker / source-page, full-text PMC, or review metadata',
     'Full-text PMC',
     'high',
-    '{"curator_notes": "Broad mechanism comparator.", "experiment_tracker_id": "M15A-P005-E001", "paper_tracker_id": "M15A-P005", "quantitative": "NO", "statistics_reported": "Full-text first pass; microarray details queued", "topic_id": "M15B-T003", "tracker_id": "M15B-O005"}'
+    '{"curator_notes": "Broad mechanism comparator.", "experiment_tracker_id": "M15A-P005-E001", "measurement_method_inference": null, "paper_tracker_id": "M15A-P005", "quantitative": "NO", "statistics_reported": "Full-text first pass; microarray details queued", "topic_id": "M15B-T003", "tracker_id": "M15B-O005"}'
   FROM _m15_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -796,18 +801,19 @@ INSERT INTO _m15_observation_map (tracker_id, observation_id) SELECT 'M15B-O005'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'STAT3 activation after sciatic transection was necessary for enhanced DRG growth ability and dorsal column regeneration.',
     'qualitative',
+    'pathway activity / phospho-signaling assay',
     'STAT3 activation after sciatic transection was necessary for enhanced DRG growth ability and dorsal column regeneration.',
     'STAT3 required for conditioning effect',
     'Module 15A tracker / source-page, full-text PMC, or review metadata',
     'Full-text PMC',
     'high',
-    '{"curator_notes": "JAK/STAT boundary.", "experiment_tracker_id": "M15A-P006-E001", "paper_tracker_id": "M15A-P006", "quantitative": "NO", "statistics_reported": "Full-text first pass; inhibitor results queued for quantitative extraction", "topic_id": "M15B-T004", "tracker_id": "M15B-O006"}'
+    '{"curator_notes": "JAK/STAT boundary.", "experiment_tracker_id": "M15A-P006-E001", "measurement_method_inference": "pathway activity / phospho-signaling assay", "paper_tracker_id": "M15A-P006", "quantitative": "NO", "statistics_reported": "Full-text first pass; inhibitor results queued for quantitative extraction", "topic_id": "M15B-T004", "tracker_id": "M15B-O006"}'
   FROM _m15_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -821,18 +827,19 @@ INSERT INTO _m15_observation_map (tracker_id, observation_id) SELECT 'M15B-O006'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'IL-6 knockout abolished conditioning-induced GAP-43 upregulation and dorsal column regeneration.',
     'qualitative',
+    'ELISA / cytokine protein assay; genetic perturbation / knockdown assay',
     'IL-6 knockout abolished conditioning-induced GAP-43 upregulation and dorsal column regeneration.',
     'IL-6 required for conditioning-induced regeneration',
     'Module 15A tracker / source-page, full-text PMC, or review metadata',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Genetic cytokine boundary.", "experiment_tracker_id": "M15A-P007-E001", "paper_tracker_id": "M15A-P007", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M15B-T004", "tracker_id": "M15B-O007"}'
+    '{"curator_notes": "Genetic cytokine boundary.", "experiment_tracker_id": "M15A-P007-E001", "measurement_method_inference": "ELISA / cytokine protein assay; genetic perturbation / knockdown assay", "paper_tracker_id": "M15A-P007", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M15B-T004", "tracker_id": "M15B-O007"}'
   FROM _m15_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -846,18 +853,19 @@ INSERT INTO _m15_observation_map (tracker_id, observation_id) SELECT 'M15B-O007'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'cAMP elevation in DRG can mimic part of the conditioning lesion effect on central axon regeneration.',
     'qualitative',
+    NULL,
     'cAMP elevation in DRG can mimic part of the conditioning lesion effect on central axon regeneration.',
     'cAMP mimics part of conditioning effect',
     'Module 15A tracker / source-page, full-text PMC, or review metadata',
     'Full-text PMC',
     'high',
-    '{"curator_notes": "Mechanistic comparator.", "experiment_tracker_id": "M15A-P008-E001", "paper_tracker_id": "M15A-P008", "quantitative": "NO", "statistics_reported": "Review/full-text context", "topic_id": "M15B-T003", "tracker_id": "M15B-O008"}'
+    '{"curator_notes": "Mechanistic comparator.", "experiment_tracker_id": "M15A-P008-E001", "measurement_method_inference": null, "paper_tracker_id": "M15A-P008", "quantitative": "NO", "statistics_reported": "Review/full-text context", "topic_id": "M15B-T003", "tracker_id": "M15B-O008"}'
   FROM _m15_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -871,18 +879,19 @@ INSERT INTO _m15_observation_map (tracker_id, observation_id) SELECT 'M15B-O008'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Adult sensory neuron axon growth competence depends on transcriptional state, supporting an intrinsic-growth switch after conditioning.',
     'qualitative',
+    'qPCR / RT-PCR / mRNA assay',
     'Adult sensory neuron axon growth competence depends on transcriptional state, supporting an intrinsic-growth switch after conditioning.',
     'transcriptional switch controls growth competence',
     'Module 15A tracker / source-page, full-text PMC, or review metadata',
     'Full-text PMC',
     'high',
-    '{"curator_notes": "Intrinsic program boundary.", "experiment_tracker_id": "M15A-P009-E001", "paper_tracker_id": "M15A-P009", "quantitative": "NO", "statistics_reported": "Full-text first pass", "topic_id": "M15B-T003", "tracker_id": "M15B-O009"}'
+    '{"curator_notes": "Intrinsic program boundary.", "experiment_tracker_id": "M15A-P009-E001", "measurement_method_inference": "qPCR / RT-PCR / mRNA assay", "paper_tracker_id": "M15A-P009", "quantitative": "NO", "statistics_reported": "Full-text first pass", "topic_id": "M15B-T003", "tracker_id": "M15B-O009"}'
   FROM _m15_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -896,18 +905,19 @@ INSERT INTO _m15_observation_map (tracker_id, observation_id) SELECT 'M15B-O009'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Conditioning altered neurite initiation, outgrowth rate, and branching, showing multiple separable components of enhanced regeneration.',
     'qualitative',
+    NULL,
     'Conditioning altered neurite initiation, outgrowth rate, and branching, showing multiple separable components of enhanced regeneration.',
     'conditioning changes neurite initiation/outgrowth/branching',
     'Module 15A tracker / source-page, full-text PMC, or review metadata',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "In vitro DRG phenotype row.", "experiment_tracker_id": "M15A-P010-E001", "paper_tracker_id": "M15A-P010", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M15B-T002", "tracker_id": "M15B-O010"}'
+    '{"curator_notes": "In vitro DRG phenotype row.", "experiment_tracker_id": "M15A-P010-E001", "measurement_method_inference": null, "paper_tracker_id": "M15A-P010", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M15B-T002", "tracker_id": "M15B-O010"}'
   FROM _m15_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -921,18 +931,19 @@ INSERT INTO _m15_observation_map (tracker_id, observation_id) SELECT 'M15B-O010'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Unilateral sciatic injury induced bilateral and remote DRG pro-regenerative markers and increased regeneration capacity in DRGs not associated with the injured nerve.',
     'qualitative',
+    NULL,
     'Unilateral sciatic injury induced bilateral and remote DRG pro-regenerative markers and increased regeneration capacity in DRGs not associated with the injured nerve.',
     'unilateral sciatic injury primes remote DRGs',
     'Module 15A tracker / source-page, full-text PMC, or review metadata',
     'Full-text PMC',
     'high',
-    '{"curator_notes": "Direct remote/contralateral-style row.", "experiment_tracker_id": "M15A-P011-E001", "paper_tracker_id": "M15A-P011", "quantitative": "NO", "statistics_reported": "Full-text first pass; exact marker and neurite values queued", "topic_id": "M15B-T006", "tracker_id": "M15B-O011"}'
+    '{"curator_notes": "Direct remote/contralateral-style row.", "experiment_tracker_id": "M15A-P011-E001", "measurement_method_inference": null, "paper_tracker_id": "M15A-P011", "quantitative": "NO", "statistics_reported": "Full-text first pass; exact marker and neurite values queued", "topic_id": "M15B-T006", "tracker_id": "M15B-O011"}'
   FROM _m15_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -946,18 +957,19 @@ INSERT INTO _m15_observation_map (tracker_id, observation_id) SELECT 'M15B-O011'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Enriched conditioning enhanced DRG regeneration after SCI via PKC-STAT3-NOX2 redox signaling and improved functional recovery.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Enriched conditioning enhanced DRG regeneration after SCI via PKC-STAT3-NOX2 redox signaling and improved functional recovery.',
     'enriched conditioning uses PKC-STAT3-NOX2 redox axis',
     'Module 15A tracker / source-page, full-text PMC, or review metadata',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Extended conditioning paradigm.", "experiment_tracker_id": "M15A-P012-E001", "paper_tracker_id": "M15A-P012", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M15B-T004", "tracker_id": "M15B-O012"}'
+    '{"curator_notes": "Extended conditioning paradigm.", "experiment_tracker_id": "M15A-P012-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M15A-P012", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M15B-T004", "tracker_id": "M15B-O012"}'
   FROM _m15_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -971,18 +983,19 @@ INSERT INTO _m15_observation_map (tracker_id, observation_id) SELECT 'M15B-O012'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'DRG macrophages and inflammatory mediators contributed to maintenance of conditioning-induced regenerative capacity.',
     'qualitative',
+    NULL,
     'DRG macrophages and inflammatory mediators contributed to maintenance of conditioning-induced regenerative capacity.',
     'DRG macrophages maintain conditioning effect',
     'Module 15A tracker / source-page, full-text PMC, or review metadata',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Intraganglionic immune support.", "experiment_tracker_id": "M15A-P013-E001", "paper_tracker_id": "M15A-P013", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M15B-T005", "tracker_id": "M15B-O013"}'
+    '{"curator_notes": "Intraganglionic immune support.", "experiment_tracker_id": "M15A-P013-E001", "measurement_method_inference": null, "paper_tracker_id": "M15A-P013", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M15B-T005", "tracker_id": "M15B-O013"}'
   FROM _m15_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -996,18 +1009,19 @@ INSERT INTO _m15_observation_map (tracker_id, observation_id) SELECT 'M15B-O013'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Spinal glia division contributed to conditioning lesion-induced sensory axon regeneration into injured spinal cord.',
     'qualitative',
+    NULL,
     'Spinal glia division contributed to conditioning lesion-induced sensory axon regeneration into injured spinal cord.',
     'spinal glia division supports conditioning-induced regeneration',
     'Module 15A tracker / source-page, full-text PMC, or review metadata',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Lesion-site support boundary.", "experiment_tracker_id": "M15A-P014-E001", "paper_tracker_id": "M15A-P014", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M15B-T005", "tracker_id": "M15B-O014"}'
+    '{"curator_notes": "Lesion-site support boundary.", "experiment_tracker_id": "M15A-P014-E001", "measurement_method_inference": null, "paper_tracker_id": "M15A-P014", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M15B-T005", "tracker_id": "M15B-O014"}'
   FROM _m15_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1021,18 +1035,19 @@ INSERT INTO _m15_observation_map (tracker_id, observation_id) SELECT 'M15B-O014'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Dorsal column model review frames DRG neurons as ideal for separating peripheral and central branch injury responses.',
     'qualitative',
+    NULL,
     'Dorsal column model review frames DRG neurons as ideal for separating peripheral and central branch injury responses.',
     'DRG model separates peripheral and central branch responses',
     'Module 15A tracker / source-page, full-text PMC, or review metadata',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Model boundary row.", "experiment_tracker_id": "M15A-P015-E001", "paper_tracker_id": "M15A-P015", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M15B-T007", "tracker_id": "M15B-O015"}'
+    '{"curator_notes": "Model boundary row.", "experiment_tracker_id": "M15A-P015-E001", "measurement_method_inference": null, "paper_tracker_id": "M15A-P015", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M15B-T007", "tracker_id": "M15B-O015"}'
   FROM _m15_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1046,18 +1061,19 @@ INSERT INTO _m15_observation_map (tracker_id, observation_id) SELECT 'M15B-O015'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Commentary highlights that peripheral DRG conditioning can enable central axon regeneration and that sequence/timing determines effect.',
     'qualitative',
+    NULL,
     'Commentary highlights that peripheral DRG conditioning can enable central axon regeneration and that sequence/timing determines effect.',
     'conditioning paradigm timing boundary',
     'Module 15A tracker / source-page, full-text PMC, or review metadata',
     'Full-text PMC',
     'high',
-    '{"curator_notes": "Synthesis boundary row.", "experiment_tracker_id": "M15A-P016-E001", "paper_tracker_id": "M15A-P016", "quantitative": "NO", "statistics_reported": "Review/commentary first pass", "topic_id": "M15B-T008", "tracker_id": "M15B-O016"}'
+    '{"curator_notes": "Synthesis boundary row.", "experiment_tracker_id": "M15A-P016-E001", "measurement_method_inference": null, "paper_tracker_id": "M15A-P016", "quantitative": "NO", "statistics_reported": "Review/commentary first pass", "topic_id": "M15B-T008", "tracker_id": "M15B-O016"}'
   FROM _m15_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot

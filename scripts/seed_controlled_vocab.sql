@@ -57,7 +57,20 @@ INSERT INTO ControlledVocabulary_Assay (assay_name, assay_type, description) VAL
   ('MRI T2-weighted lesion volume', 'MRI', 'Lesion volume assessment by T2-weighted MRI'),
   ('Voxel-based morphometry', 'MRI analysis', 'Imaging-based tissue loss analysis'),
   ('Eriochrome cyanine stain', 'histological', 'Myelinated axon and white matter staining'),
-  ('Cellularity assessment', 'immunohistochemical', 'Cell density or cell identity assessment')
+  ('Cellularity assessment', 'immunohistochemical', 'Cell density or cell identity assessment'),
+  ('Western blot / immunoblot', 'molecular protein', 'Protein abundance or pathway-node assessment by western blot or immunoblot'),
+  ('ELISA / cytokine protein assay', 'molecular protein', 'Cytokine, chemokine, or soluble-protein measurement'),
+  ('qPCR / RT-PCR / mRNA assay', 'molecular transcript', 'Targeted transcript abundance measurement'),
+  ('Flow cytometry / FACS', 'cellular profiling', 'Cell phenotyping, sorting, or abundance measurement by flow cytometry'),
+  ('Single-cell RNA-seq / cell-state atlas', 'single-cell transcriptomic', 'Single-cell or single-nucleus transcriptomic cell-state profiling'),
+  ('Spatial transcriptomics / spatial atlas', 'spatial transcriptomic', 'Spatial gene-expression or spatial cell-state mapping'),
+  ('Bulk transcriptomics / GEO dataset', 'bulk transcriptomic', 'Bulk transcriptomic or public dataset-derived expression profiling'),
+  ('Immunostaining / histology / pathology', 'histological', 'Tissue staining, immunolabeling, or pathology assessment'),
+  ('Barrier / permeability / endothelial assay', 'vascular barrier', 'Blood-spinal cord barrier, endothelial, permeability, tight-junction, or MMP-associated readout'),
+  ('Pathway activity / phospho-signaling assay', 'molecular signaling', 'Signaling pathway activity, phosphorylation, or regulatory-node readout'),
+  ('Genetic perturbation / knockdown assay', 'mechanistic perturbation', 'Knockout, deficiency, siRNA, CRISPR, or related causal perturbation'),
+  ('MRI / imaging assay', 'imaging', 'MRI or other imaging-based readout'),
+  ('Behavioral / functional recovery assay', 'functional', 'Locomotor, neurologic, behavioral, or recovery endpoint')
 ON CONFLICT (assay_name) DO NOTHING;
 
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, measurement_unit, description) VALUES

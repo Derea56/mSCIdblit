@@ -1491,18 +1491,19 @@ INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VA
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Focal cystic atrophy was largely restricted to the impact site, with substantial adjacent rostral/caudal cord mass preserved except in late syrinx cases.',
     'cord area/anatomy',
+    'MRI / imaging assay',
     'Focal cystic atrophy was largely restricted to the impact site, with substantial adjacent rostral/caudal cord mass preserved except in late syrinx cases.',
     'chronic SCI can preserve adjacent cord mass despite focal cystic loss',
     'M1A carried',
     'Fig 1; Table 1',
     'high',
-    '{"curator_notes": "Human structural preservation anchor.", "experiment_tracker_id": "M6A-P001-E001", "paper_tracker_id": "M6A-P001", "quantitative": "YES", "statistics_reported": "source/full-text carried", "topic_id": "M6B-T001", "tracker_id": "M6B-O001"}'
+    '{"curator_notes": "Human structural preservation anchor.", "experiment_tracker_id": "M6A-P001-E001", "measurement_method_inference": "MRI / imaging assay", "paper_tracker_id": "M6A-P001", "quantitative": "YES", "statistics_reported": "source/full-text carried", "topic_id": "M6B-T001", "tracker_id": "M6B-O001"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1516,18 +1517,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O001', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Human SCI caused large-diameter ventral-root axon loss at/near lesion levels and thin myelin in surviving large fibers.',
     'axon count/myelin',
+    'immunostaining / histology / pathology; MRI / imaging assay',
     'Human SCI caused large-diameter ventral-root axon loss at/near lesion levels and thin myelin in surviving large fibers.',
     'chronic SCI includes ventral-root axon loss and thin-myelin pathology',
     'M1A carried',
     'Fig 1-Fig 5',
     'high',
-    '{"curator_notes": "Tissue pathology not captured by MRI alone.", "experiment_tracker_id": "M6A-P002-E001", "paper_tracker_id": "M6A-P002", "quantitative": "YES", "statistics_reported": "source/full-text carried", "topic_id": "M6B-T002", "tracker_id": "M6B-O002"}'
+    '{"curator_notes": "Tissue pathology not captured by MRI alone.", "experiment_tracker_id": "M6A-P002-E001", "measurement_method_inference": "immunostaining / histology / pathology; MRI / imaging assay", "paper_tracker_id": "M6A-P002", "quantitative": "YES", "statistics_reported": "source/full-text carried", "topic_id": "M6B-T002", "tracker_id": "M6B-O002"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1541,18 +1543,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O002', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Five patients underwent MRI/electrophysiology-guided chronic scar resection and scaffold-cell implantation.',
     'feasibility/anatomy',
+    'MRI / imaging assay',
     'Five patients underwent MRI/electrophysiology-guided chronic scar resection and scaffold-cell implantation.',
     'chronic scar-resection anatomy can be mapped for human scaffold implantation',
     'Source page',
     'Clinical source',
     'high',
-    '{"curator_notes": "Human reconstructive anatomy precedent.", "experiment_tracker_id": "M6A-P003-E001", "paper_tracker_id": "M6A-P003", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M6B-T001", "tracker_id": "M6B-O003"}'
+    '{"curator_notes": "Human reconstructive anatomy precedent.", "experiment_tracker_id": "M6A-P003-E001", "measurement_method_inference": "MRI / imaging assay", "paper_tracker_id": "M6A-P003", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M6B-T001", "tracker_id": "M6B-O003"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1566,18 +1569,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O003', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Pediatric SCI groups showed abnormal FA/RD in adjacent MRI-normal-appearing cord segments, with FA patterns related to AIS severity.',
     'FA/RD/AIS',
+    'MRI / imaging assay',
     'Pediatric SCI groups showed abnormal FA/RD in adjacent MRI-normal-appearing cord segments, with FA patterns related to AIS severity.',
     'DTI detects pediatric SCI abnormalities beyond conventional MRI',
     'Abstract/source page',
     'Abstract/source',
     'medium',
-    '{"curator_notes": "Pediatric and MRI-normal boundary.", "experiment_tracker_id": "M6A-P004-E001", "paper_tracker_id": "M6A-P004", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T003", "tracker_id": "M6B-O004"}'
+    '{"curator_notes": "Pediatric and MRI-normal boundary.", "experiment_tracker_id": "M6A-P004-E001", "measurement_method_inference": "MRI / imaging assay", "paper_tracker_id": "M6A-P004", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T003", "tracker_id": "M6B-O004"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1591,18 +1595,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O004', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Lesion size contracted early, tissue bridges emerged, remote cord/CST degeneration progressed, and lesion/myelin metrics predicted long-term motor and SCIM recovery.',
     'lesion/qMRI/recovery',
+    'MRI / imaging assay; behavioral / functional recovery assay',
     'Lesion size contracted early, tissue bridges emerged, remote cord/CST degeneration progressed, and lesion/myelin metrics predicted long-term motor and SCIM recovery.',
     'acute-to-chronic MRI tracks lesion contraction, bridges, degeneration, and recovery prediction',
     'Abstract/source page',
     'Abstract/source',
     'high',
-    '{"curator_notes": "Strong longitudinal imaging anchor.", "experiment_tracker_id": "M6A-P005-E001", "paper_tracker_id": "M6A-P005", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M6B-T004", "tracker_id": "M6B-O005"}'
+    '{"curator_notes": "Strong longitudinal imaging anchor.", "experiment_tracker_id": "M6A-P005-E001", "measurement_method_inference": "MRI / imaging assay; behavioral / functional recovery assay", "paper_tracker_id": "M6A-P005", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M6B-T004", "tracker_id": "M6B-O005"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1616,18 +1621,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O005', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Chronic SCI showed elevated lesion diffusion, lower FA at lesion, completeness-dependent FA, and altered upper-cervical diffusion.',
     'FA/diffusion',
+    NULL,
     'Chronic SCI showed elevated lesion diffusion, lower FA at lesion, completeness-dependent FA, and altered upper-cervical diffusion.',
     'chronic SCI alters lesion and remote DTI metrics',
     'Abstract/PMC',
     'Abstract/PMC',
     'medium',
-    '{"curator_notes": "Whole-cord DTI anchor.", "experiment_tracker_id": "M6A-P006-E001", "paper_tracker_id": "M6A-P006", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T003", "tracker_id": "M6B-O006"}'
+    '{"curator_notes": "Whole-cord DTI anchor.", "experiment_tracker_id": "M6A-P006-E001", "measurement_method_inference": null, "paper_tracker_id": "M6A-P006", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T003", "tracker_id": "M6B-O006"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1641,18 +1647,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O006', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Subject-specific injury-region DTI metrics were associated with residual motor and sensory impairment.',
     'DTI/ISNCSCI',
+    NULL,
     'Subject-specific injury-region DTI metrics were associated with residual motor and sensory impairment.',
     'subject-specific DTI metrics relate to motor/sensory impairment',
     'Abstract/PMC',
     'Abstract/PMC',
     'medium',
-    '{"curator_notes": "Tractography-region boundary.", "experiment_tracker_id": "M6A-P007-E001", "paper_tracker_id": "M6A-P007", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T003", "tracker_id": "M6B-O007"}'
+    '{"curator_notes": "Tractography-region boundary.", "experiment_tracker_id": "M6A-P007-E001", "measurement_method_inference": null, "paper_tracker_id": "M6A-P007", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T003", "tracker_id": "M6B-O007"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1666,18 +1673,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O007', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Wider midsagittal tissue bridges at 1 month were associated with better lower-extremity motor and pinprick recovery at 1 year.',
     'bridge width/recovery',
+    'MRI / imaging assay; behavioral / functional recovery assay',
     'Wider midsagittal tissue bridges at 1 month were associated with better lower-extremity motor and pinprick recovery at 1 year.',
     'thoracic tissue bridges predict lower-extremity motor and pinprick recovery',
     'Abstract/PMC',
     'Abstract/PMC',
     'medium',
-    '{"curator_notes": "Thoracic traumatic/ischemic boundary.", "experiment_tracker_id": "M6A-P008-E001", "paper_tracker_id": "M6A-P008", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T004", "tracker_id": "M6B-O008"}'
+    '{"curator_notes": "Thoracic traumatic/ischemic boundary.", "experiment_tracker_id": "M6A-P008-E001", "measurement_method_inference": "MRI / imaging assay; behavioral / functional recovery assay", "paper_tracker_id": "M6A-P008", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T004", "tracker_id": "M6B-O008"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1691,18 +1699,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O008', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Cervical tissue bridge measures supported recovery-specific stratification and trial prognostication.',
     'bridge metrics/recovery',
+    'MRI / imaging assay; behavioral / functional recovery assay',
     'Cervical tissue bridge measures supported recovery-specific stratification and trial prognostication.',
     'cervical tissue bridges support recovery prognostication',
     'Abstract/PMC',
     'Abstract/PMC',
     'medium',
-    '{"curator_notes": "Multicentre cervical anchor.", "experiment_tracker_id": "M6A-P009-E001", "paper_tracker_id": "M6A-P009", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T004", "tracker_id": "M6B-O009"}'
+    '{"curator_notes": "Multicentre cervical anchor.", "experiment_tracker_id": "M6A-P009-E001", "measurement_method_inference": "MRI / imaging assay; behavioral / functional recovery assay", "paper_tracker_id": "M6A-P009", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T004", "tracker_id": "M6B-O009"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1716,18 +1725,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O009', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Chronic SCI showed lower tNAA/mI and tCho/mI ratios at C2, associated with atrophy, tissue bridge severity, and worse sensory/motor outcomes.',
     'metabolite ratios',
+    NULL,
     'Chronic SCI showed lower tNAA/mI and tCho/mI ratios at C2, associated with atrophy, tissue bridge severity, and worse sensory/motor outcomes.',
     'cervical MRS detects supralesional metabolic change linked to impairment',
     'Abstract/source page',
     'Abstract/source',
     'medium',
-    '{"curator_notes": "Metabolic spinal cord biomarker.", "experiment_tracker_id": "M6A-P010-E001", "paper_tracker_id": "M6A-P010", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T005", "tracker_id": "M6B-O010"}'
+    '{"curator_notes": "Metabolic spinal cord biomarker.", "experiment_tracker_id": "M6A-P010-E001", "measurement_method_inference": null, "paper_tracker_id": "M6A-P010", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T005", "tracker_id": "M6B-O010"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1741,18 +1751,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O010', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Longitudinal MRI detected degeneration above lesion in cranial CST and sensorimotor cortices with clinical outcome relevance.',
     'volume/morphometry',
+    'MRI / imaging assay',
     'Longitudinal MRI detected degeneration above lesion in cranial CST and sensorimotor cortices with clinical outcome relevance.',
     'SCI causes remote CST and sensorimotor cortical degeneration',
     'PubMed',
     'Abstract/PubMed',
     'low',
-    '{"curator_notes": "Full text upgrade needed.", "experiment_tracker_id": "M6A-P011-E001", "paper_tracker_id": "M6A-P011", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T005", "tracker_id": "M6B-O011"}'
+    '{"curator_notes": "Full text upgrade needed.", "experiment_tracker_id": "M6A-P011-E001", "measurement_method_inference": "MRI / imaging assay", "paper_tracker_id": "M6A-P011", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T005", "tracker_id": "M6B-O011"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1766,18 +1777,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O011', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Early rostral cord and brain volume/microstructural changes predicted functional recovery.',
     'qMRI/recovery',
+    'behavioral / functional recovery assay',
     'Early rostral cord and brain volume/microstructural changes predicted functional recovery.',
     'early qMRI rostral cord/brain metrics predict recovery',
     'PubMed',
     'Abstract/PubMed',
     'medium',
-    '{"curator_notes": "Prediction anchor.", "experiment_tracker_id": "M6A-P012-E001", "paper_tracker_id": "M6A-P012", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T005", "tracker_id": "M6B-O012"}'
+    '{"curator_notes": "Prediction anchor.", "experiment_tracker_id": "M6A-P012-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M6A-P012", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T005", "tracker_id": "M6B-O012"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1791,18 +1803,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O012', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'CST microstructural integrity related to spinal cord area and sensorimotor cortical reorganization.',
     'CST/cortex',
+    'MRI / imaging assay',
     'CST microstructural integrity related to spinal cord area and sensorimotor cortical reorganization.',
     'axonal integrity links spinal structure to cortical reorganization',
     'PubMed',
     'Abstract/PubMed',
     'medium',
-    '{"curator_notes": "Tract-plasticity linkage.", "experiment_tracker_id": "M6A-P013-E001", "paper_tracker_id": "M6A-P013", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T006", "tracker_id": "M6B-O013"}'
+    '{"curator_notes": "Tract-plasticity linkage.", "experiment_tracker_id": "M6A-P013-E001", "measurement_method_inference": "MRI / imaging assay", "paper_tracker_id": "M6A-P013", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T006", "tracker_id": "M6B-O013"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1816,18 +1829,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O013', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Cord and cortical atrophy were associated with sensorimotor cortical reorganization and disability.',
     'atrophy/fMRI',
+    'MRI / imaging assay',
     'Cord and cortical atrophy were associated with sensorimotor cortical reorganization and disability.',
     'cord/cortical atrophy associates with reorganization and disability',
     'Abstract/PMC',
     'Abstract/PMC',
     'medium',
-    '{"curator_notes": "Brain-spine linkage.", "experiment_tracker_id": "M6A-P014-E001", "paper_tracker_id": "M6A-P014", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T006", "tracker_id": "M6B-O014"}'
+    '{"curator_notes": "Brain-spine linkage.", "experiment_tracker_id": "M6A-P014-E001", "measurement_method_inference": "MRI / imaging assay", "paper_tracker_id": "M6A-P014", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T006", "tracker_id": "M6B-O014"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1841,18 +1855,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O014', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Paraplegic patients showed altered cortical representation of non-affected upper limb movements.',
     'fMRI activation',
+    NULL,
     'Paraplegic patients showed altered cortical representation of non-affected upper limb movements.',
     'chronic SCI alters motor cortical representation',
     'PubMed',
     'Abstract/PubMed',
     'low',
-    '{"curator_notes": "Indirect for lesion anatomy.", "experiment_tracker_id": "M6A-P015-E001", "paper_tracker_id": "M6A-P015", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T006", "tracker_id": "M6B-O015"}'
+    '{"curator_notes": "Indirect for lesion anatomy.", "experiment_tracker_id": "M6A-P015-E001", "measurement_method_inference": null, "paper_tracker_id": "M6A-P015", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T006", "tracker_id": "M6B-O015"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1866,18 +1881,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O015', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Remote CST and dorsal column degeneration formed progressive spatial gradients after SCI.',
     'tract qMRI',
+    'spatial transcriptomics / spatial atlas',
     'Remote CST and dorsal column degeneration formed progressive spatial gradients after SCI.',
     'major spinal pathways degenerate progressively after SCI',
     'Abstract/PMC',
     'Abstract/PMC',
     'medium',
-    '{"curator_notes": "Tract-gradient anchor.", "experiment_tracker_id": "M6A-P016-E001", "paper_tracker_id": "M6A-P016", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T005", "tracker_id": "M6B-O016"}'
+    '{"curator_notes": "Tract-gradient anchor.", "experiment_tracker_id": "M6A-P016-E001", "measurement_method_inference": "spatial transcriptomics / spatial atlas", "paper_tracker_id": "M6A-P016", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T005", "tracker_id": "M6B-O016"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1891,18 +1907,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O016', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Human SCI vascular pathology included hemorrhage, white-matter degeneration, venous occlusion, cavitation, and remote infarct-like lesions.',
     'histology/microangiography',
+    'immunostaining / histology / pathology',
     'Human SCI vascular pathology included hemorrhage, white-matter degeneration, venous occlusion, cavitation, and remote infarct-like lesions.',
     'human SCI includes vascular pathology and remote infarct-like lesions',
     'M1A carried',
     'M1A carried',
     'high',
-    '{"curator_notes": "Vascular compartment anchor.", "experiment_tracker_id": "M6A-P017-E001", "paper_tracker_id": "M6A-P017", "quantitative": "YES", "statistics_reported": "source/full-text carried", "topic_id": "M6B-T002", "tracker_id": "M6B-O017"}'
+    '{"curator_notes": "Vascular compartment anchor.", "experiment_tracker_id": "M6A-P017-E001", "measurement_method_inference": "immunostaining / histology / pathology", "paper_tracker_id": "M6A-P017", "quantitative": "YES", "statistics_reported": "source/full-text carried", "topic_id": "M6B-T002", "tracker_id": "M6B-O017"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1916,18 +1933,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O017', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Syrinx occurred in partially damaged segments and drainage did not yield satisfactory symptom relief despite radiographic drainage.',
     'syrinx/function',
+    'immunostaining / histology / pathology',
     'Syrinx occurred in partially damaged segments and drainage did not yield satisfactory symptom relief despite radiographic drainage.',
     'post-traumatic syrinx can persist as chronic structural pathology',
     'Abstract/source page',
     'Abstract/source',
     'medium',
-    '{"curator_notes": "Cyst/syrinx boundary.", "experiment_tracker_id": "M6A-P018-E001", "paper_tracker_id": "M6A-P018", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T001", "tracker_id": "M6B-O018"}'
+    '{"curator_notes": "Cyst/syrinx boundary.", "experiment_tracker_id": "M6A-P018-E001", "measurement_method_inference": "immunostaining / histology / pathology", "paper_tracker_id": "M6A-P018", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T001", "tracker_id": "M6B-O018"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1941,18 +1959,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O018', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Progressive late post-traumatic syringomyelia was identified as a chronic structural complication after SCI.',
     'syrinx',
+    NULL,
     'Progressive late post-traumatic syringomyelia was identified as a chronic structural complication after SCI.',
     'late post-traumatic syringomyelia is a chronic SCI complication',
     'Abstract/source page',
     'Abstract/source',
     'low',
-    '{"curator_notes": "Legacy row.", "experiment_tracker_id": "M6A-P019-E001", "paper_tracker_id": "M6A-P019", "quantitative": "NO", "statistics_reported": "abstract-level", "topic_id": "M6B-T001", "tracker_id": "M6B-O019"}'
+    '{"curator_notes": "Legacy row.", "experiment_tracker_id": "M6A-P019-E001", "measurement_method_inference": null, "paper_tracker_id": "M6A-P019", "quantitative": "NO", "statistics_reported": "abstract-level", "topic_id": "M6B-T001", "tracker_id": "M6B-O019"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1966,18 +1985,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O019', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'MRI anatomy is positioned as a clinical trial screening and outcome-measure tool.',
     'trial framework',
+    'MRI / imaging assay',
     'MRI anatomy is positioned as a clinical trial screening and outcome-measure tool.',
     'MRI supports SCI trial screening and endpoint selection',
     'Review/source',
     'Review/source',
     'medium',
-    '{"curator_notes": "Map anchor, not primary cohort.", "experiment_tracker_id": "M6A-P020-E001", "paper_tracker_id": "M6A-P020", "quantitative": "NO", "statistics_reported": "review-level", "topic_id": "M6B-T007", "tracker_id": "M6B-O020"}'
+    '{"curator_notes": "Map anchor, not primary cohort.", "experiment_tracker_id": "M6A-P020-E001", "measurement_method_inference": "MRI / imaging assay", "paper_tracker_id": "M6A-P020", "quantitative": "NO", "statistics_reported": "review-level", "topic_id": "M6B-T007", "tracker_id": "M6B-O020"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1991,18 +2011,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O020', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Independent spinal cord atrophy measures correlated with motor and sensory deficits.',
     'atrophy/deficits',
+    'MRI / imaging assay',
     'Independent spinal cord atrophy measures correlated with motor and sensory deficits.',
     'cord atrophy metrics correlate with impairment',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Full text upgrade needed.", "experiment_tracker_id": "M6A-P021-E001", "paper_tracker_id": "M6A-P021", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T005", "tracker_id": "M6B-O021"}'
+    '{"curator_notes": "Full text upgrade needed.", "experiment_tracker_id": "M6A-P021-E001", "measurement_method_inference": "MRI / imaging assay", "paper_tracker_id": "M6A-P021", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T005", "tracker_id": "M6B-O021"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2016,18 +2037,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O021', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Lateral corticospinal tract damage correlated with motor output in incomplete SCI.',
     'CST diffusion/motor',
+    'MRI / imaging assay',
     'Lateral corticospinal tract damage correlated with motor output in incomplete SCI.',
     'lateral CST damage correlates with motor output',
     'Abstract/PMC reference',
     'Abstract/PMC ref',
     'medium',
-    '{"curator_notes": "Tract-specific motor anchor.", "experiment_tracker_id": "M6A-P022-E001", "paper_tracker_id": "M6A-P022", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T003", "tracker_id": "M6B-O022"}'
+    '{"curator_notes": "Tract-specific motor anchor.", "experiment_tracker_id": "M6A-P022-E001", "measurement_method_inference": "MRI / imaging assay", "paper_tracker_id": "M6A-P022", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T003", "tracker_id": "M6B-O022"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2041,18 +2063,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O022', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Specific brain regions showed atrophy after cervical SCI.',
     'brain volume',
+    NULL,
     'Specific brain regions showed atrophy after cervical SCI.',
     'cervical SCI is associated with brain-region atrophy',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Secondary to spinal anatomy.", "experiment_tracker_id": "M6A-P023-E001", "paper_tracker_id": "M6A-P023", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T006", "tracker_id": "M6B-O023"}'
+    '{"curator_notes": "Secondary to spinal anatomy.", "experiment_tracker_id": "M6A-P023-E001", "measurement_method_inference": null, "paper_tracker_id": "M6A-P023", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T006", "tracker_id": "M6B-O023"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2066,18 +2089,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O023', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Sensorimotor cortical plasticity changed during recovery following SCI.',
     'fMRI/recovery',
+    'behavioral / functional recovery assay',
     'Sensorimotor cortical plasticity changed during recovery following SCI.',
     'sensorimotor cortical plasticity changes during recovery',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Full text upgrade needed.", "experiment_tracker_id": "M6A-P024-E001", "paper_tracker_id": "M6A-P024", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T006", "tracker_id": "M6B-O024"}'
+    '{"curator_notes": "Full text upgrade needed.", "experiment_tracker_id": "M6A-P024-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M6A-P024", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T006", "tracker_id": "M6B-O024"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2091,18 +2115,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O024', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Human motor cortex plasticity was observed after cervical SCI.',
     'fMRI',
+    NULL,
     'Human motor cortex plasticity was observed after cervical SCI.',
     'cervical SCI is associated with motor cortex plasticity',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Early fMRI anchor.", "experiment_tracker_id": "M6A-P025-E001", "paper_tracker_id": "M6A-P025", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T006", "tracker_id": "M6B-O025"}'
+    '{"curator_notes": "Early fMRI anchor.", "experiment_tracker_id": "M6A-P025-E001", "measurement_method_inference": null, "paper_tracker_id": "M6A-P025", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T006", "tracker_id": "M6B-O025"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2116,18 +2141,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O025', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Motor cortex activation related to squeezing force after SCI.',
     'fMRI/force',
+    NULL,
     'Motor cortex activation related to squeezing force after SCI.',
     'motor cortex activation relates to residual force',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Functional endpoint boundary.", "experiment_tracker_id": "M6A-P026-E001", "paper_tracker_id": "M6A-P026", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T006", "tracker_id": "M6B-O026"}'
+    '{"curator_notes": "Functional endpoint boundary.", "experiment_tracker_id": "M6A-P026-E001", "measurement_method_inference": null, "paper_tracker_id": "M6A-P026", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T006", "tracker_id": "M6B-O026"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2141,18 +2167,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O026', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Sensory system atrophy was tracked and linked to outcome prediction.',
     'sensory MRI/outcome',
+    'MRI / imaging assay',
     'Sensory system atrophy was tracked and linked to outcome prediction.',
     'sensory pathway atrophy can support outcome prediction',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Full text upgrade needed.", "experiment_tracker_id": "M6A-P027-E001", "paper_tracker_id": "M6A-P027", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T005", "tracker_id": "M6B-O027"}'
+    '{"curator_notes": "Full text upgrade needed.", "experiment_tracker_id": "M6A-P027-E001", "measurement_method_inference": "MRI / imaging assay", "paper_tracker_id": "M6A-P027", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T005", "tracker_id": "M6B-O027"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2166,18 +2193,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O027', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Neurodegeneration above the level of SCI was tracked longitudinally.',
     'neuroimaging',
+    'MRI / imaging assay',
     'Neurodegeneration above the level of SCI was tracked longitudinally.',
     'above-lesion neurodegeneration progresses after SCI',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Remote degeneration context.", "experiment_tracker_id": "M6A-P028-E001", "paper_tracker_id": "M6A-P028", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T005", "tracker_id": "M6B-O028"}'
+    '{"curator_notes": "Remote degeneration context.", "experiment_tracker_id": "M6A-P028-E001", "measurement_method_inference": "MRI / imaging assay", "paper_tracker_id": "M6A-P028", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T005", "tracker_id": "M6B-O028"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2191,18 +2219,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O028', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Neuroimaging can reveal pathological similarities and boundaries across traumatic and nontraumatic SCI.',
     'synthesis',
+    'immunostaining / histology / pathology; MRI / imaging assay',
     'Neuroimaging can reveal pathological similarities and boundaries across traumatic and nontraumatic SCI.',
     'traumatic and nontraumatic SCI need separate imaging-pathology boundaries',
     'Review/map',
     'Review/map',
     'medium',
-    '{"curator_notes": "Etiology boundary.", "experiment_tracker_id": "M6A-P029-E001", "paper_tracker_id": "M6A-P029", "quantitative": "NO", "statistics_reported": "review-level", "topic_id": "M6B-T007", "tracker_id": "M6B-O029"}'
+    '{"curator_notes": "Etiology boundary.", "experiment_tracker_id": "M6A-P029-E001", "measurement_method_inference": "immunostaining / histology / pathology; MRI / imaging assay", "paper_tracker_id": "M6A-P029", "quantitative": "NO", "statistics_reported": "review-level", "topic_id": "M6B-T007", "tracker_id": "M6B-O029"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2216,18 +2245,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O029', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'qMRI metrics require cautious interpretation as indirect markers of myelin, iron, and tissue structure.',
     'methods boundary',
+    'immunostaining / histology / pathology',
     'qMRI metrics require cautious interpretation as indirect markers of myelin, iron, and tissue structure.',
     'qMRI markers are indirect and histology-informed',
     'Methods/map',
     'Methods/map',
     'medium',
-    '{"curator_notes": "Prevents overinterpretation.", "experiment_tracker_id": "M6A-P030-E001", "paper_tracker_id": "M6A-P030", "quantitative": "NO", "statistics_reported": "methods-level", "topic_id": "M6B-T008", "tracker_id": "M6B-O030"}'
+    '{"curator_notes": "Prevents overinterpretation.", "experiment_tracker_id": "M6A-P030-E001", "measurement_method_inference": "immunostaining / histology / pathology", "paper_tracker_id": "M6A-P030", "quantitative": "NO", "statistics_reported": "methods-level", "topic_id": "M6B-T008", "tracker_id": "M6B-O030"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2241,18 +2271,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O030', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Chronic complete SCI showed supraspinal qMRI changes mainly as caudal brainstem volume reduction consistent with dorsal column Wallerian degeneration.',
     'qMRI volume',
+    NULL,
     'Chronic complete SCI showed supraspinal qMRI changes mainly as caudal brainstem volume reduction consistent with dorsal column Wallerian degeneration.',
     'complete SCI qMRI changes localize mainly to caudal brainstem volume reduction',
     'Abstract/source page',
     'Abstract/source',
     'medium',
-    '{"curator_notes": "Complete-SCI boundary.", "experiment_tracker_id": "M6A-P031-E001", "paper_tracker_id": "M6A-P031", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T005", "tracker_id": "M6B-O031"}'
+    '{"curator_notes": "Complete-SCI boundary.", "experiment_tracker_id": "M6A-P031-E001", "measurement_method_inference": null, "paper_tracker_id": "M6A-P031", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T005", "tracker_id": "M6B-O031"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2266,18 +2297,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O031', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Complete SCI showed altered metabolites in pons/cerebellum with correlations to clinical scores.',
     'MRS/metabolites',
+    NULL,
     'Complete SCI showed altered metabolites in pons/cerebellum with correlations to clinical scores.',
     'supraspinal MRS detects metabolic changes linked to clinical scores',
     'Abstract/source page',
     'Abstract/source',
     'medium',
-    '{"curator_notes": "Supraspinal metabolic anchor.", "experiment_tracker_id": "M6A-P032-E001", "paper_tracker_id": "M6A-P032", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T005", "tracker_id": "M6B-O032"}'
+    '{"curator_notes": "Supraspinal metabolic anchor.", "experiment_tracker_id": "M6A-P032-E001", "measurement_method_inference": null, "paper_tracker_id": "M6A-P032", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T005", "tracker_id": "M6B-O032"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2291,18 +2323,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O032', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Imaging biomarkers are part of a broader diagnostic workup after traumatic SCI.',
     'biomarker framework',
+    'MRI / imaging assay',
     'Imaging biomarkers are part of a broader diagnostic workup after traumatic SCI.',
     'imaging is one component of SCI biomarker workup',
     'Review/map',
     'Review/map',
     'medium',
-    '{"curator_notes": "Review-map only.", "experiment_tracker_id": "M6A-P033-E001", "paper_tracker_id": "M6A-P033", "quantitative": "NO", "statistics_reported": "review-level", "topic_id": "M6B-T007", "tracker_id": "M6B-O033"}'
+    '{"curator_notes": "Review-map only.", "experiment_tracker_id": "M6A-P033-E001", "measurement_method_inference": "MRI / imaging assay", "paper_tracker_id": "M6A-P033", "quantitative": "NO", "statistics_reported": "review-level", "topic_id": "M6B-T007", "tracker_id": "M6B-O033"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2316,18 +2349,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O033', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Neuroimaging tracks structural, microstructural, metabolic, and functional consequences of SCI.',
     'synthesis',
+    'MRI / imaging assay',
     'Neuroimaging tracks structural, microstructural, metabolic, and functional consequences of SCI.',
     'SCI neuroimaging spans structural, microstructural, metabolic, and functional domains',
     'Review/map',
     'Review/map',
     'medium',
-    '{"curator_notes": "Modality map.", "experiment_tracker_id": "M6A-P034-E001", "paper_tracker_id": "M6A-P034", "quantitative": "NO", "statistics_reported": "review-level", "topic_id": "M6B-T007", "tracker_id": "M6B-O034"}'
+    '{"curator_notes": "Modality map.", "experiment_tracker_id": "M6A-P034-E001", "measurement_method_inference": "MRI / imaging assay", "paper_tracker_id": "M6A-P034", "quantitative": "NO", "statistics_reported": "review-level", "topic_id": "M6B-T007", "tracker_id": "M6B-O034"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2341,18 +2375,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O034', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Tissue bridge ratio was associated with 6-minute walk distance in incomplete SCI.',
     'bridge ratio/6MWD',
+    'MRI / imaging assay',
     'Tissue bridge ratio was associated with 6-minute walk distance in incomplete SCI.',
     'midsagittal tissue bridge ratio associates with walking ability',
     'Abstract/PMC',
     'Abstract/PMC',
     'medium',
-    '{"curator_notes": "Incomplete SCI case-series anchor.", "experiment_tracker_id": "M6A-P035-E001", "paper_tracker_id": "M6A-P035", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T004", "tracker_id": "M6B-O035"}'
+    '{"curator_notes": "Incomplete SCI case-series anchor.", "experiment_tracker_id": "M6A-P035-E001", "measurement_method_inference": "MRI / imaging assay", "paper_tracker_id": "M6A-P035", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M6B-T004", "tracker_id": "M6B-O035"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2366,18 +2401,19 @@ INSERT INTO _m6_observation_map (tracker_id, observation_id) SELECT 'M6B-O035', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Trial-readiness literature frames imaging as screening and stratification rather than direct repair evidence.',
     'trial framework',
+    'MRI / imaging assay',
     'Trial-readiness literature frames imaging as screening and stratification rather than direct repair evidence.',
     'imaging trial readiness is screening/stratification evidence',
     'Review/map',
     'Review/map',
     'low',
-    '{"curator_notes": "Review-map boundary.", "experiment_tracker_id": "M6A-P036-E001", "paper_tracker_id": "M6A-P036", "quantitative": "NO", "statistics_reported": "review-level", "topic_id": "M6B-T007", "tracker_id": "M6B-O036"}'
+    '{"curator_notes": "Review-map boundary.", "experiment_tracker_id": "M6A-P036-E001", "measurement_method_inference": "MRI / imaging assay", "paper_tracker_id": "M6A-P036", "quantitative": "NO", "statistics_reported": "review-level", "topic_id": "M6B-T007", "tracker_id": "M6B-O036"}'
   FROM _m6_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot

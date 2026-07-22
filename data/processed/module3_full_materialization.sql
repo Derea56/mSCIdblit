@@ -2710,18 +2710,19 @@ INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VA
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Li Y 2020 contributes microglial depletion / chronic inflammation evidence in mouse, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Li Y 2020 contributes microglial depletion / chronic inflammation evidence in mouse, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'li y 2020 contributes microglial depletion / chronic inflammation evidence in mouse, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Delayed microglial depletion after spinal cord injury reduces chronic inflammation and neurodegeneration in the brain and improves neurological recovery in male mice. Note: Chronic inflammation and remote degeneration anchor.", "experiment_tracker_id": "M3A-P001-E001", "paper_tracker_id": "M3A-P001", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T001", "tracker_id": "M3B-O001"}'
+    '{"curator_notes": "Primary title: Delayed microglial depletion after spinal cord injury reduces chronic inflammation and neurodegeneration in the brain and improves neurological recovery in male mice. Note: Chronic inflammation and remote degeneration anchor.", "experiment_tracker_id": "M3A-P001-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P001", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T001", "tracker_id": "M3B-O001"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2735,18 +2736,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O001', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhou X 2020 contributes microglia/macrophage corralling evidence in mouse, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Zhou X 2020 contributes microglia/macrophage corralling evidence in mouse, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'zhou x 2020 contributes microglia/macrophage corralling evidence in mouse, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Microglia and macrophages promote corralling, wound compaction and recovery after spinal cord injury via Plexin-B2. Note: Immune-glial containment anchor.", "experiment_tracker_id": "M3A-P002-E001", "paper_tracker_id": "M3A-P002", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T002", "tracker_id": "M3B-O002"}'
+    '{"curator_notes": "Primary title: Microglia and macrophages promote corralling, wound compaction and recovery after spinal cord injury via Plexin-B2. Note: Immune-glial containment anchor.", "experiment_tracker_id": "M3A-P002-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P002", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T002", "tracker_id": "M3B-O002"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2760,18 +2762,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O002', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Gerber YN 2018 contributes csf1r inhibition evidence in mouse, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Gerber YN 2018 contributes csf1r inhibition evidence in mouse, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'gerber yn 2018 contributes csf1r inhibition evidence in mouse, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: CSF1R Inhibition Reduces Microglia Proliferation, Promotes Tissue Preservation and Improves Motor Recovery After Spinal Cord Injury. Note: Microglia/macrophage modulation anchor.", "experiment_tracker_id": "M3A-P003-E001", "paper_tracker_id": "M3A-P003", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T001", "tracker_id": "M3B-O003"}'
+    '{"curator_notes": "Primary title: CSF1R Inhibition Reduces Microglia Proliferation, Promotes Tissue Preservation and Improves Motor Recovery After Spinal Cord Injury. Note: Microglia/macrophage modulation anchor.", "experiment_tracker_id": "M3A-P003-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P003", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T001", "tracker_id": "M3B-O003"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2785,18 +2788,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O003', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Fan H 2020 contributes hmgb1-rage / macrophage-microglia polarization evidence in rodent model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Fan H 2020 contributes hmgb1-rage / macrophage-microglia polarization evidence in rodent model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'fan h 2020 contributes hmgb1-rage / macrophage-microglia polarization evidence in rodent model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Inhibiting HMGB1-RAGE axis prevents pro-inflammatory macrophages/microglia polarization and affords neuroprotection after spinal cord injury. Note: Mechanistic polarization anchor.", "experiment_tracker_id": "M3A-P004-E001", "paper_tracker_id": "M3A-P004", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O004"}'
+    '{"curator_notes": "Primary title: Inhibiting HMGB1-RAGE axis prevents pro-inflammatory macrophages/microglia polarization and affords neuroprotection after spinal cord injury. Note: Mechanistic polarization anchor.", "experiment_tracker_id": "M3A-P004-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P004", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O004"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2810,18 +2814,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O004', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhang C 2022 contributes macrophage extracellular traps evidence in rodent model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Zhang C 2022 contributes macrophage extracellular traps evidence in rodent model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'zhang c 2022 contributes macrophage extracellular traps evidence in rodent model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Macrophage Extracellular Traps Exacerbate Secondary Spinal Cord Injury by Modulating Macrophage/Microglia Polarization via LL37/P2X7R/NF-kappaB Signaling Pathway. Note: Innate immune injury-amplification anchor.", "experiment_tracker_id": "M3A-P005-E001", "paper_tracker_id": "M3A-P005", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T008", "tracker_id": "M3B-O005"}'
+    '{"curator_notes": "Primary title: Macrophage Extracellular Traps Exacerbate Secondary Spinal Cord Injury by Modulating Macrophage/Microglia Polarization via LL37/P2X7R/NF-kappaB Signaling Pathway. Note: Innate immune injury-amplification anchor.", "experiment_tracker_id": "M3A-P005-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P005", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T008", "tracker_id": "M3B-O005"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2835,18 +2840,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O005', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Liu J 2024 contributes microglia/macrophage pyroptosis evidence in rodent model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Liu J 2024 contributes microglia/macrophage pyroptosis evidence in rodent model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'liu j 2024 contributes microglia/macrophage pyroptosis evidence in rodent model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: IPSC-NSCs-derived exosomal let-7b-5p improves motor function after spinal cord Injury by modulating microglial/macrophage pyroptosis. Note: Cell/exosome immune-modulation bridge.", "experiment_tracker_id": "M3A-P006-E001", "paper_tracker_id": "M3A-P006", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T004", "tracker_id": "M3B-O006"}'
+    '{"curator_notes": "Primary title: IPSC-NSCs-derived exosomal let-7b-5p improves motor function after spinal cord Injury by modulating microglial/macrophage pyroptosis. Note: Cell/exosome immune-modulation bridge.", "experiment_tracker_id": "M3A-P006-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P006", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T004", "tracker_id": "M3B-O006"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2860,18 +2866,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O006', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ge X 2025 contributes lactylation / microglia-macrophage-t cell axis evidence in rodent model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Ge X 2025 contributes lactylation / microglia-macrophage-t cell axis evidence in rodent model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'ge x 2025 contributes lactylation / microglia-macrophage-t cell axis evidence in rodent model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Metabolic reprogramming through histone lactylation in microglia and macrophages recruits CD8+ T lymphocytes and aggravates spinal cord injury. Note: Recent immune-state mechanism.", "experiment_tracker_id": "M3A-P007-E001", "paper_tracker_id": "M3A-P007", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T008", "tracker_id": "M3B-O007"}'
+    '{"curator_notes": "Primary title: Metabolic reprogramming through histone lactylation in microglia and macrophages recruits CD8+ T lymphocytes and aggravates spinal cord injury. Note: Recent immune-state mechanism.", "experiment_tracker_id": "M3A-P007-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P007", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T008", "tracker_id": "M3B-O007"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2885,18 +2892,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O007', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ying W 2025 contributes immune metabolism / lipid and debris handling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Ying W 2025 contributes immune metabolism / lipid and debris handling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'ying w 2025 contributes immune metabolism / lipid and debris handling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: N-Lactoyl-Phenylalanine modulates lipid metabolism in microglia/macrophage via the AMPK-PGC1alpha-PPARgamma pathway to promote recovery in mice with spinal cord injury.. Note: N-lactoyl-phenylalanine metabolic immunomodulation anchor.", "experiment_tracker_id": "M3A-P008-E001", "paper_tracker_id": "M3A-P008", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T005", "tracker_id": "M3B-O008"}'
+    '{"curator_notes": "Primary title: N-Lactoyl-Phenylalanine modulates lipid metabolism in microglia/macrophage via the AMPK-PGC1alpha-PPARgamma pathway to promote recovery in mice with spinal cord injury.. Note: N-lactoyl-phenylalanine metabolic immunomodulation anchor.", "experiment_tracker_id": "M3A-P008-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P008", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T005", "tracker_id": "M3B-O008"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2910,18 +2918,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O008', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Wang C 2026 contributes macrophage/microglia autophagy and polarization evidence in rodent sci model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Wang C 2026 contributes macrophage/microglia autophagy and polarization evidence in rodent sci model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'wang c 2026 contributes macrophage/microglia autophagy and polarization evidence in rodent sci model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'low',
-    '{"curator_notes": "Primary title: Naringenin alleviates spinal cord injury by ameliorating macrophage/microglia autophagy via progranulin stabilisation.. Note: Natural-product autophagy/polarization anchor.", "experiment_tracker_id": "M3A-P009-E001", "paper_tracker_id": "M3A-P009", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O009"}'
+    '{"curator_notes": "Primary title: Naringenin alleviates spinal cord injury by ameliorating macrophage/microglia autophagy via progranulin stabilisation.. Note: Natural-product autophagy/polarization anchor.", "experiment_tracker_id": "M3A-P009-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P009", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O009"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2935,18 +2944,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O009', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Li Y 2025 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Li Y 2025 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'li y 2025 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: A dual-drug sequential delivery hydrogel for programmatic microglia/macrophage polarization and function recovery in spinal cord injury.. Note: Macrophage/microglia polarization signaling anchor.", "experiment_tracker_id": "M3A-P010-E001", "paper_tracker_id": "M3A-P010", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O010"}'
+    '{"curator_notes": "Primary title: A dual-drug sequential delivery hydrogel for programmatic microglia/macrophage polarization and function recovery in spinal cord injury.. Note: Macrophage/microglia polarization signaling anchor.", "experiment_tracker_id": "M3A-P010-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P010", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O010"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2960,18 +2970,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O010', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Qian D 2024 contributes immune-modifying nanomedicine evidence in rodent sci model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Qian D 2024 contributes immune-modifying nanomedicine evidence in rodent sci model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qian d 2024 contributes immune-modifying nanomedicine evidence in rodent sci model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Microenvironment Self-Adaptive Nanomedicine Promotes Spinal Cord Repair by Suppressing Inflammation Cascade and Neural Apoptosis.. Note: Nanomedicine inflammation-cascade anchor.", "experiment_tracker_id": "M3A-P011-E001", "paper_tracker_id": "M3A-P011", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T008", "tracker_id": "M3B-O011"}'
+    '{"curator_notes": "Primary title: Microenvironment Self-Adaptive Nanomedicine Promotes Spinal Cord Repair by Suppressing Inflammation Cascade and Neural Apoptosis.. Note: Nanomedicine inflammation-cascade anchor.", "experiment_tracker_id": "M3A-P011-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P011", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T008", "tracker_id": "M3B-O011"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2985,18 +2996,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O011', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Chen Y 2025 contributes macrophage/microglia polarization signaling evidence in rodent sci model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Chen Y 2025 contributes macrophage/microglia polarization signaling evidence in rodent sci model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'chen y 2025 contributes macrophage/microglia polarization signaling evidence in rodent sci model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Farrerol confers neuroprotection in spinal cord injury by regulating macrophages/microglia polarization through the JAK2/STAT3 pathway.. Note: JAK2/STAT3 polarization anchor.", "experiment_tracker_id": "M3A-P012-E001", "paper_tracker_id": "M3A-P012", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O012"}'
+    '{"curator_notes": "Primary title: Farrerol confers neuroprotection in spinal cord injury by regulating macrophages/microglia polarization through the JAK2/STAT3 pathway.. Note: JAK2/STAT3 polarization anchor.", "experiment_tracker_id": "M3A-P012-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P012", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O012"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3010,18 +3022,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O012', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Wang Z 2025 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Wang Z 2025 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'wang z 2025 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: GDF11 alleviates spinal cord injury in rats by modulating microglia polarization through Smad2/3 and MAPK/NFkappaB signaling pathways.. Note: GDF11 microglial-polarization anchor.", "experiment_tracker_id": "M3A-P013-E001", "paper_tracker_id": "M3A-P013", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O013"}'
+    '{"curator_notes": "Primary title: GDF11 alleviates spinal cord injury in rats by modulating microglia polarization through Smad2/3 and MAPK/NFkappaB signaling pathways.. Note: GDF11 microglial-polarization anchor.", "experiment_tracker_id": "M3A-P013-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P013", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O013"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3035,18 +3048,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O013', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ji R 2024 contributes macrophage/microglia polarization signaling evidence in rodent sci model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Ji R 2024 contributes macrophage/microglia polarization signaling evidence in rodent sci model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'ji r 2024 contributes macrophage/microglia polarization signaling evidence in rodent sci model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Fisetin Promotes Functional Recovery after Spinal Cord Injury by Inhibiting Microglia/Macrophage M1 Polarization and JAK2/STAT3 Signaling Pathway.. Note: Fisetin polarization anchor.", "experiment_tracker_id": "M3A-P014-E001", "paper_tracker_id": "M3A-P014", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O014"}'
+    '{"curator_notes": "Primary title: Fisetin Promotes Functional Recovery after Spinal Cord Injury by Inhibiting Microglia/Macrophage M1 Polarization and JAK2/STAT3 Signaling Pathway.. Note: Fisetin polarization anchor.", "experiment_tracker_id": "M3A-P014-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P014", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O014"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3060,18 +3074,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O014', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Xue MT 2022 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Xue MT 2022 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'xue mt 2022 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Atractylenolide III ameliorates spinal cord injury in rats by modulating microglial/macrophage polarization.. Note: Atractylenolide polarization anchor.", "experiment_tracker_id": "M3A-P015-E001", "paper_tracker_id": "M3A-P015", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O015"}'
+    '{"curator_notes": "Primary title: Atractylenolide III ameliorates spinal cord injury in rats by modulating microglial/macrophage polarization.. Note: Atractylenolide polarization anchor.", "experiment_tracker_id": "M3A-P015-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P015", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O015"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3085,18 +3100,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O015', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhao Y 2026 contributes single-cell / spatial immune-state mapping evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'single-cell RNA-seq / cell-state atlas; spatial transcriptomics / spatial atlas',
     'Zhao Y 2026 contributes single-cell / spatial immune-state mapping evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'zhao y 2026 contributes single-cell / spatial immune-state mapping evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'low',
-    '{"curator_notes": "Primary title: Engineered CCR2 positive macrophages coordinate immunoregulation with neural regeneration and matrix remodeling after spinal cord injury.. Note: Single-cell / spatial immune-state mapping anchor.", "experiment_tracker_id": "M3A-P016-E001", "paper_tracker_id": "M3A-P016", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T006", "tracker_id": "M3B-O016"}'
+    '{"curator_notes": "Primary title: Engineered CCR2 positive macrophages coordinate immunoregulation with neural regeneration and matrix remodeling after spinal cord injury.. Note: Single-cell / spatial immune-state mapping anchor.", "experiment_tracker_id": "M3A-P016-E001", "measurement_method_inference": "single-cell RNA-seq / cell-state atlas; spatial transcriptomics / spatial atlas", "paper_tracker_id": "M3A-P016", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T006", "tracker_id": "M3B-O016"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3110,18 +3126,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O016', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Cucarian J 2026 contributes microglial depletion / csf1r modulation evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Cucarian J 2026 contributes microglial depletion / csf1r modulation evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'cucarian j 2026 contributes microglial depletion / csf1r modulation evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'low',
-    '{"curator_notes": "Primary title: PLX5622 did not alter anxiety-like behaviour and showed limited microglial depletion efficacy in a spinal cord injury model in female rats.. Note: Microglial depletion / CSF1R modulation anchor.", "experiment_tracker_id": "M3A-P017-E001", "paper_tracker_id": "M3A-P017", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T001", "tracker_id": "M3B-O017"}'
+    '{"curator_notes": "Primary title: PLX5622 did not alter anxiety-like behaviour and showed limited microglial depletion efficacy in a spinal cord injury model in female rats.. Note: Microglial depletion / CSF1R modulation anchor.", "experiment_tracker_id": "M3A-P017-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P017", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T001", "tracker_id": "M3B-O017"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3135,18 +3152,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O017', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Yang J 2025 contributes microglial depletion / csf1r modulation evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Yang J 2025 contributes microglial depletion / csf1r modulation evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'yang j 2025 contributes microglial depletion / csf1r modulation evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Nanoparticles loaded with a CSF1R antagonist selectively depletes microglial cells and modulates inflammation in spinal cord injury.. Note: Microglial depletion / CSF1R modulation anchor.", "experiment_tracker_id": "M3A-P018-E001", "paper_tracker_id": "M3A-P018", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T001", "tracker_id": "M3B-O018"}'
+    '{"curator_notes": "Primary title: Nanoparticles loaded with a CSF1R antagonist selectively depletes microglial cells and modulates inflammation in spinal cord injury.. Note: Microglial depletion / CSF1R modulation anchor.", "experiment_tracker_id": "M3A-P018-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P018", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T001", "tracker_id": "M3B-O018"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3160,18 +3178,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O018', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Xue S 2026 contributes microglial depletion / csf1r modulation evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Xue S 2026 contributes microglial depletion / csf1r modulation evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'xue s 2026 contributes microglial depletion / csf1r modulation evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'low',
-    '{"curator_notes": "Primary title: Identification of repopulated microglia-associated genes in microglia depleted/repopulated mice after spinal cord injury.. Note: Microglial depletion / CSF1R modulation anchor.", "experiment_tracker_id": "M3A-P019-E001", "paper_tracker_id": "M3A-P019", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T001", "tracker_id": "M3B-O019"}'
+    '{"curator_notes": "Primary title: Identification of repopulated microglia-associated genes in microglia depleted/repopulated mice after spinal cord injury.. Note: Microglial depletion / CSF1R modulation anchor.", "experiment_tracker_id": "M3A-P019-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P019", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T001", "tracker_id": "M3B-O019"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3185,18 +3204,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O019', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Stewart AN 2025 contributes microglial depletion / csf1r modulation evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Stewart AN 2025 contributes microglial depletion / csf1r modulation evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'stewart an 2025 contributes microglial depletion / csf1r modulation evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Nonresolving Neuroinflammation Regulates Axon Regeneration in Chronic Spinal Cord Injury.. Note: Microglial depletion / CSF1R modulation anchor.", "experiment_tracker_id": "M3A-P020-E001", "paper_tracker_id": "M3A-P020", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T001", "tracker_id": "M3B-O020"}'
+    '{"curator_notes": "Primary title: Nonresolving Neuroinflammation Regulates Axon Regeneration in Chronic Spinal Cord Injury.. Note: Microglial depletion / CSF1R modulation anchor.", "experiment_tracker_id": "M3A-P020-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P020", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T001", "tracker_id": "M3B-O020"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3210,18 +3230,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O020', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Capes DE 2026 contributes microglial depletion / csf1r modulation evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Capes DE 2026 contributes microglial depletion / csf1r modulation evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'capes de 2026 contributes microglial depletion / csf1r modulation evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'low',
-    '{"curator_notes": "Primary title: Depleting non-resolving neuroinflammation in chronic spinal cord injury attenuates thermal hypersensitivity.. Note: Microglial depletion / CSF1R modulation anchor.", "experiment_tracker_id": "M3A-P021-E001", "paper_tracker_id": "M3A-P021", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T001", "tracker_id": "M3B-O021"}'
+    '{"curator_notes": "Primary title: Depleting non-resolving neuroinflammation in chronic spinal cord injury attenuates thermal hypersensitivity.. Note: Microglial depletion / CSF1R modulation anchor.", "experiment_tracker_id": "M3A-P021-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P021", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T001", "tracker_id": "M3B-O021"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3235,18 +3256,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O021', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Early beta2-adrenergic receptor agonist treatment drove microglia toward a homeostatic phenotype after SCI, reduced inhibitory extracellular-matrix deposition, remodeled the scar microenvironment, and supported reticulospinal axon regrowth/circuit reconstruction.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Early beta2-adrenergic receptor agonist treatment drove microglia toward a homeostatic phenotype after SCI, reduced inhibitory extracellular-matrix deposition, remodeled the scar microenvironment, and supported reticulospinal axon regrowth/circuit reconstruction.',
     'pharmacological microglial inhibition can remodel scar environment for reticulospinal reconstruction',
     'Full text / PMC',
     'Full text / PMC12767085',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41103249; inhibition/remodeling rather than simple depletion.", "experiment_tracker_id": "M3A-P022-E001", "paper_tracker_id": "M3A-P022", "quantitative": "YES", "statistics_reported": "Full text reports microglial phenotype, ECM/scar remodeling, reticulospinal regeneration, and functional recovery endpoints", "topic_id": "M3B-T001", "tracker_id": "M3B-O022"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41103249; inhibition/remodeling rather than simple depletion.", "experiment_tracker_id": "M3A-P022-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P022", "quantitative": "YES", "statistics_reported": "Full text reports microglial phenotype, ECM/scar remodeling, reticulospinal regeneration, and functional recovery endpoints", "topic_id": "M3B-T001", "tracker_id": "M3B-O022"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3260,18 +3282,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O022', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhao Y 2026 contributes immune metabolism / lipid and debris handling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Zhao Y 2026 contributes immune metabolism / lipid and debris handling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'zhao y 2026 contributes immune metabolism / lipid and debris handling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'low',
-    '{"curator_notes": "Primary title: SYK-dependent lipid handling in monocyte-derived macrophages governs functional recovery after spinal cord injury.. Note: Immune metabolism / lipid and debris handling anchor.", "experiment_tracker_id": "M3A-P023-E001", "paper_tracker_id": "M3A-P023", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T005", "tracker_id": "M3B-O023"}'
+    '{"curator_notes": "Primary title: SYK-dependent lipid handling in monocyte-derived macrophages governs functional recovery after spinal cord injury.. Note: Immune metabolism / lipid and debris handling anchor.", "experiment_tracker_id": "M3A-P023-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P023", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T005", "tracker_id": "M3B-O023"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3285,18 +3308,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O023', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Peng Y 2025 contributes immune metabolism / lipid and debris handling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Peng Y 2025 contributes immune metabolism / lipid and debris handling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'peng y 2025 contributes immune metabolism / lipid and debris handling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Lipid accumulation in foam cells drives C1q-dependent synaptic loss and impairs motor function recovery after spinal cord injury.. Note: Immune metabolism / lipid and debris handling anchor.", "experiment_tracker_id": "M3A-P024-E001", "paper_tracker_id": "M3A-P024", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T005", "tracker_id": "M3B-O024"}'
+    '{"curator_notes": "Primary title: Lipid accumulation in foam cells drives C1q-dependent synaptic loss and impairs motor function recovery after spinal cord injury.. Note: Immune metabolism / lipid and debris handling anchor.", "experiment_tracker_id": "M3A-P024-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P024", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T005", "tracker_id": "M3B-O024"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3310,18 +3334,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O024', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'In female mouse spinal cord crush injury, TREM2 deletion and COG1410 activation experiments showed that TREM2 promotes myelin-debris clearance and disease-associated microglia activation but can also exacerbate chronic inflammation and fibrosis.',
     'qualitative',
+    NULL,
     'In female mouse spinal cord crush injury, TREM2 deletion and COG1410 activation experiments showed that TREM2 promotes myelin-debris clearance and disease-associated microglia activation but can also exacerbate chronic inflammation and fibrosis.',
     'TREM2 couples myelin debris clearance to chronic inflammation/fibrosis tradeoffs after SCI',
     'Full text / PMC',
     'Full text / PMC12884443',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41660680; contradiction boundary retained.", "experiment_tracker_id": "M3A-P025-E001", "paper_tracker_id": "M3A-P025", "quantitative": "YES", "statistics_reported": "Full text reports TREM2 expression, phagocytosis, foamy macrophages, DAM activation, axon regeneration, neuronal survival, BMS, and footprint outcomes", "topic_id": "M3B-T005", "tracker_id": "M3B-O025"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41660680; contradiction boundary retained.", "experiment_tracker_id": "M3A-P025-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P025", "quantitative": "YES", "statistics_reported": "Full text reports TREM2 expression, phagocytosis, foamy macrophages, DAM activation, axon regeneration, neuronal survival, BMS, and footprint outcomes", "topic_id": "M3B-T005", "tracker_id": "M3B-O025"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3335,18 +3360,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O025', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'SCI-associated lactate accumulation was linked to H3K9 lactylation in lesion-infiltrating macrophages and circulating monocytes; integrated CUT&Tag/RNA-seq identified TXNIP as an H3K9la target that activates TXNIP-NLRP3 signaling and worsens inflammatory injury.',
     'qualitative',
+    'bulk transcriptomics / GEO dataset',
     'SCI-associated lactate accumulation was linked to H3K9 lactylation in lesion-infiltrating macrophages and circulating monocytes; integrated CUT&Tag/RNA-seq identified TXNIP as an H3K9la target that activates TXNIP-NLRP3 signaling and worsens inflammatory injury.',
     'lactate-H3K9 lactylation drives macrophage TXNIP/NLRP3 inflammation after SCI',
     'Full text / PMC',
     'Full text / PMC13010529',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41856077; human/translational plus mouse mechanism.", "experiment_tracker_id": "M3A-P026-E001", "paper_tracker_id": "M3A-P026", "quantitative": "YES", "statistics_reported": "Full text reports human serum lactate association, mouse SCI macrophage/monocyte H3K9la, multi-omics, and TXNIP/NLRP3 perturbation", "topic_id": "M3B-T004", "tracker_id": "M3B-O026"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41856077; human/translational plus mouse mechanism.", "experiment_tracker_id": "M3A-P026-E001", "measurement_method_inference": "bulk transcriptomics / GEO dataset", "paper_tracker_id": "M3A-P026", "quantitative": "YES", "statistics_reported": "Full text reports human serum lactate association, mouse SCI macrophage/monocyte H3K9la, multi-omics, and TXNIP/NLRP3 perturbation", "topic_id": "M3B-T004", "tracker_id": "M3B-O026"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3360,18 +3386,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O026', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Integrative bioinformatic and experimental analyses identified microglia as the predominant PANoptotic cell population after SCI; metformin-mediated AMPK activation suppressed microglial PANoptosis, shifted microglia toward repair-associated phenotypes, reduced inflammatory injury, and improved recovery endpoints.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Integrative bioinformatic and experimental analyses identified microglia as the predominant PANoptotic cell population after SCI; metformin-mediated AMPK activation suppressed microglial PANoptosis, shifted microglia toward repair-associated phenotypes, reduced inflammatory injury, and improved recovery endpoints.',
     'AMPK activation suppresses microglial PANoptosis after SCI',
     'Full text / PMC',
     'Full text / PMC13199823',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 42199531.", "experiment_tracker_id": "M3A-P027-E001", "paper_tracker_id": "M3A-P027", "quantitative": "YES", "statistics_reported": "Full text reports bioinformatics, microglial cell-death specificity, metformin/AMPK perturbation, inflammation, tissue preservation, and functional outcomes", "topic_id": "M3B-T004", "tracker_id": "M3B-O027"}'
+    '{"curator_notes": "Full-text upgrade from PMID 42199531.", "experiment_tracker_id": "M3A-P027-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P027", "quantitative": "YES", "statistics_reported": "Full text reports bioinformatics, microglial cell-death specificity, metformin/AMPK perturbation, inflammation, tissue preservation, and functional outcomes", "topic_id": "M3B-T004", "tracker_id": "M3B-O027"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3385,18 +3412,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O027', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Integrated bulk RNA-seq and scRNA-seq analyses after SCI implicated activated microglia in PANoptosis activity and identified an IRF1-ZBP1 axis as a candidate driver of microglial pro-inflammatory cell death.',
     'qualitative',
+    'single-cell RNA-seq / cell-state atlas; bulk transcriptomics / GEO dataset',
     'Integrated bulk RNA-seq and scRNA-seq analyses after SCI implicated activated microglia in PANoptosis activity and identified an IRF1-ZBP1 axis as a candidate driver of microglial pro-inflammatory cell death.',
     'multi-omics identifies IRF1-ZBP1 microglial PANoptosis after SCI',
     'Full text / PMC',
     'Full text / PMC13003968',
     'high',
-    '{"curator_notes": "Reclassified from generic polarization to programmed inflammatory death based on full text.", "experiment_tracker_id": "M3A-P028-E001", "paper_tracker_id": "M3A-P028", "quantitative": "YES", "statistics_reported": "Full text reports cell-type PANoptosis scoring, candidate-gene prioritization, and therapeutic-target screening", "topic_id": "M3B-T004", "tracker_id": "M3B-O028"}'
+    '{"curator_notes": "Reclassified from generic polarization to programmed inflammatory death based on full text.", "experiment_tracker_id": "M3A-P028-E001", "measurement_method_inference": "single-cell RNA-seq / cell-state atlas; bulk transcriptomics / GEO dataset", "paper_tracker_id": "M3A-P028", "quantitative": "YES", "statistics_reported": "Full text reports cell-type PANoptosis scoring, candidate-gene prioritization, and therapeutic-target screening", "topic_id": "M3B-T004", "tracker_id": "M3B-O028"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3410,18 +3438,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O028', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Qian S 2026 contributes microglia/macrophage programmed inflammatory death evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Qian S 2026 contributes microglia/macrophage programmed inflammatory death evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qian s 2026 contributes microglia/macrophage programmed inflammatory death evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'low',
-    '{"curator_notes": "Primary title: Trimethylamine N-Oxide Aggravates Neuro-inflammation in Spinal Cord Injury Through NLRP3 Inflammasome Activation in Microglia.. Note: Microglia/macrophage programmed inflammatory death anchor.", "experiment_tracker_id": "M3A-P029-E001", "paper_tracker_id": "M3A-P029", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T004", "tracker_id": "M3B-O029"}'
+    '{"curator_notes": "Primary title: Trimethylamine N-Oxide Aggravates Neuro-inflammation in Spinal Cord Injury Through NLRP3 Inflammasome Activation in Microglia.. Note: Microglia/macrophage programmed inflammatory death anchor.", "experiment_tracker_id": "M3A-P029-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P029", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T004", "tracker_id": "M3B-O029"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3435,18 +3464,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O029', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zeng Y 2026 contributes macrophage/microglia polarization signaling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Zeng Y 2026 contributes macrophage/microglia polarization signaling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'zeng y 2026 contributes macrophage/microglia polarization signaling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'low',
-    '{"curator_notes": "Primary title: Thiolutin attenuates neuroinflammation and neuronal apoptosis by suppressing microglial pyroptosis through NLRP3 inflammasome inhibition after spinal cord injury.. Note: Macrophage/microglia polarization signaling anchor.", "experiment_tracker_id": "M3A-P030-E001", "paper_tracker_id": "M3A-P030", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T001", "tracker_id": "M3B-O030"}'
+    '{"curator_notes": "Primary title: Thiolutin attenuates neuroinflammation and neuronal apoptosis by suppressing microglial pyroptosis through NLRP3 inflammasome inhibition after spinal cord injury.. Note: Macrophage/microglia polarization signaling anchor.", "experiment_tracker_id": "M3A-P030-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P030", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T001", "tracker_id": "M3B-O030"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3460,18 +3490,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O030', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Xu J 2026 contributes macrophage/microglia polarization signaling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Xu J 2026 contributes macrophage/microglia polarization signaling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'xu j 2026 contributes macrophage/microglia polarization signaling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'low',
-    '{"curator_notes": "Primary title: Type 2 Diabetes Promotes the Microglial Pyroptosis by Activating NLRP3 Inflammasome to Impede Remyelination After Spinal Cord Injury.. Note: Macrophage/microglia polarization signaling anchor.", "experiment_tracker_id": "M3A-P031-E001", "paper_tracker_id": "M3A-P031", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O031"}'
+    '{"curator_notes": "Primary title: Type 2 Diabetes Promotes the Microglial Pyroptosis by Activating NLRP3 Inflammasome to Impede Remyelination After Spinal Cord Injury.. Note: Macrophage/microglia polarization signaling anchor.", "experiment_tracker_id": "M3A-P031-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P031", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O031"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3485,18 +3516,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O031', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'FGF4 was identified as a regulator of macrophage-mediated myelin-debris clearance; exogenous FGF4 activated FGFR1-PI3K/AKT signaling, upregulated Clec10a, enhanced intracellular myelin-debris processing, reduced neuroinflammation, and promoted spinal cord repair.',
     'qualitative',
+    'pathway activity / phospho-signaling assay',
     'FGF4 was identified as a regulator of macrophage-mediated myelin-debris clearance; exogenous FGF4 activated FGFR1-PI3K/AKT signaling, upregulated Clec10a, enhanced intracellular myelin-debris processing, reduced neuroinflammation, and promoted spinal cord repair.',
     'FGF4-FGFR1-PI3K/AKT-Clec10a signaling enhances macrophage myelin-debris processing after SCI',
     'Full text / PMC',
     'Full text / PMC13037223',
     'high',
-    '{"curator_notes": "Reclassified from programmed death to lipid/debris handling based on full text.", "experiment_tracker_id": "M3A-P032-E001", "paper_tracker_id": "M3A-P032", "quantitative": "YES", "statistics_reported": "Full text reports in vitro debris phagocytosis, Clec10a perturbation, macrophage lipid/debris processing, inflammation, and repair endpoints", "topic_id": "M3B-T005", "tracker_id": "M3B-O032"}'
+    '{"curator_notes": "Reclassified from programmed death to lipid/debris handling based on full text.", "experiment_tracker_id": "M3A-P032-E001", "measurement_method_inference": "pathway activity / phospho-signaling assay", "paper_tracker_id": "M3A-P032", "quantitative": "YES", "statistics_reported": "Full text reports in vitro debris phagocytosis, Clec10a perturbation, macrophage lipid/debris processing, inflammation, and repair endpoints", "topic_id": "M3B-T005", "tracker_id": "M3B-O032"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3510,18 +3542,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O032', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Gao M 2026 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'single-cell RNA-seq / cell-state atlas; behavioral / functional recovery assay',
     'Gao M 2026 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'gao m 2026 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'low',
-    '{"curator_notes": "Primary title: GP130 Regulates Macrophage Polarization and Functional Recovery after Spinal Cord Injury in Rats: A Single-Cell RNA Sequencing Study.. Note: Macrophage/microglia polarization signaling anchor.", "experiment_tracker_id": "M3A-P033-E001", "paper_tracker_id": "M3A-P033", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O033"}'
+    '{"curator_notes": "Primary title: GP130 Regulates Macrophage Polarization and Functional Recovery after Spinal Cord Injury in Rats: A Single-Cell RNA Sequencing Study.. Note: Macrophage/microglia polarization signaling anchor.", "experiment_tracker_id": "M3A-P033-E001", "measurement_method_inference": "single-cell RNA-seq / cell-state atlas; behavioral / functional recovery assay", "paper_tracker_id": "M3A-P033", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O033"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3535,18 +3568,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O033', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Hu R 2026 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Hu R 2026 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'hu r 2026 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'low',
-    '{"curator_notes": "Primary title: Temporal regulation of macrophage polarization by abnormally innervated CGRP + Sensory nerves following spinal cord injury.. Note: Macrophage/microglia polarization signaling anchor.", "experiment_tracker_id": "M3A-P034-E001", "paper_tracker_id": "M3A-P034", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O034"}'
+    '{"curator_notes": "Primary title: Temporal regulation of macrophage polarization by abnormally innervated CGRP + Sensory nerves following spinal cord injury.. Note: Macrophage/microglia polarization signaling anchor.", "experiment_tracker_id": "M3A-P034-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P034", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O034"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3560,18 +3594,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O034', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'In a female rat T10 contusion-compression SCI model, systemic IL-4 treatment was tested as an anti-inflammatory/M2-polarizing therapy and was reported to improve functional recovery while reprogramming local and systemic neuroinflammatory molecular responses, with human SCI cytokine signatures examined for translational relevance.',
     'qualitative',
+    'ELISA / cytokine protein assay; bulk transcriptomics / GEO dataset; behavioral / functional recovery assay',
     'In a female rat T10 contusion-compression SCI model, systemic IL-4 treatment was tested as an anti-inflammatory/M2-polarizing therapy and was reported to improve functional recovery while reprogramming local and systemic neuroinflammatory molecular responses, with human SCI cytokine signatures examined for translational relevance.',
     'systemic IL-4 reprograms SCI neuroinflammation and supports functional recovery',
     'Full text / PMC',
     'Full text / PMC12964225',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41799191; translational context retained.", "experiment_tracker_id": "M3A-P035-E001", "paper_tracker_id": "M3A-P035", "quantitative": "YES", "statistics_reported": "Full text reports randomized rat SCI treatment groups, systemic IL-4 dosing, behavioral recovery, macrophage/microglia polarization, transcriptomic/cytokine analyses, and human translational signature comparison", "topic_id": "M3B-T003", "tracker_id": "M3B-O035"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41799191; translational context retained.", "experiment_tracker_id": "M3A-P035-E001", "measurement_method_inference": "ELISA / cytokine protein assay; bulk transcriptomics / GEO dataset; behavioral / functional recovery assay", "paper_tracker_id": "M3A-P035", "quantitative": "YES", "statistics_reported": "Full text reports randomized rat SCI treatment groups, systemic IL-4 dosing, behavioral recovery, macrophage/microglia polarization, transcriptomic/cytokine analyses, and human translational signature comparison", "topic_id": "M3B-T003", "tracker_id": "M3B-O035"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3585,18 +3620,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O035', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhao P 2025 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Zhao P 2025 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'zhao p 2025 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Omaveloxolone promotes functional recovery of spinal cord injury by reducing inflammatory response and regulating macrophage polarization.. Note: Macrophage/microglia polarization signaling anchor.", "experiment_tracker_id": "M3A-P036-E001", "paper_tracker_id": "M3A-P036", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O036"}'
+    '{"curator_notes": "Primary title: Omaveloxolone promotes functional recovery of spinal cord injury by reducing inflammatory response and regulating macrophage polarization.. Note: Macrophage/microglia polarization signaling anchor.", "experiment_tracker_id": "M3A-P036-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P036", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O036"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3610,18 +3646,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O036', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Walsh CM 2025 contributes immune-modifying biomaterial or vesicle delivery evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Walsh CM 2025 contributes immune-modifying biomaterial or vesicle delivery evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'walsh cm 2025 contributes immune-modifying biomaterial or vesicle delivery evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Localised delivery of interleukin-13 from a PLGA microparticle embedded GelMA hydrogel improves functional and histopathological recovery in a mouse contusion spinal cord injury model.. Note: Immune-modifying biomaterial or vesicle delivery anchor.", "experiment_tracker_id": "M3A-P037-E001", "paper_tracker_id": "M3A-P037", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T007", "tracker_id": "M3B-O037"}'
+    '{"curator_notes": "Primary title: Localised delivery of interleukin-13 from a PLGA microparticle embedded GelMA hydrogel improves functional and histopathological recovery in a mouse contusion spinal cord injury model.. Note: Immune-modifying biomaterial or vesicle delivery anchor.", "experiment_tracker_id": "M3A-P037-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P037", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T007", "tracker_id": "M3B-O037"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3635,18 +3672,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O037', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Neonatal circulating blood-derived small extracellular vesicles loaded into GelNB hydrogel reprogrammed adult spinal cord microvascular endothelial lipid metabolism, reduced immune imbalance, interrupted CXCL12-CXCR4 macrophage recruitment feedback, and supported neuroaxonal regrowth after SCI.',
     'qualitative',
+    'barrier / permeability / endothelial assay',
     'Neonatal circulating blood-derived small extracellular vesicles loaded into GelNB hydrogel reprogrammed adult spinal cord microvascular endothelial lipid metabolism, reduced immune imbalance, interrupted CXCL12-CXCR4 macrophage recruitment feedback, and supported neuroaxonal regrowth after SCI.',
     'neonatal vesicle GelNB hydrogel reprograms vascular-immune lipid/inflammatory SCI microenvironment',
     'Full text / PMC',
     'Full text / PMC13157101',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 42111233; biomaterial-delivery boundary retained.", "experiment_tracker_id": "M3A-P038-E001", "paper_tracker_id": "M3A-P038", "quantitative": "YES", "statistics_reported": "Full text reports neonatal repair comparison, SCMEC lipid metabolism, CXCL12/CXCR4 macrophage recruitment, hydrogel vesicle delivery, scarring, and neuroaxonal repair endpoints", "topic_id": "M3B-T005", "tracker_id": "M3B-O038"}'
+    '{"curator_notes": "Full-text upgrade from PMID 42111233; biomaterial-delivery boundary retained.", "experiment_tracker_id": "M3A-P038-E001", "measurement_method_inference": "barrier / permeability / endothelial assay", "paper_tracker_id": "M3A-P038", "quantitative": "YES", "statistics_reported": "Full text reports neonatal repair comparison, SCMEC lipid metabolism, CXCL12/CXCR4 macrophage recruitment, hydrogel vesicle delivery, scarring, and neuroaxonal repair endpoints", "topic_id": "M3B-T005", "tracker_id": "M3B-O038"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3660,18 +3698,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O038', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Tian Z 2026 contributes immune metabolism / lipid and debris handling evidence in experimental sci model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Tian Z 2026 contributes immune metabolism / lipid and debris handling evidence in experimental sci model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'tian z 2026 contributes immune metabolism / lipid and debris handling evidence in experimental sci model context, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'low',
-    '{"curator_notes": "Primary title: Dual-targeting nanoparticles enhance microglial P2Y12R expression to promote neuronal mitophagy for repairing spinal cord injury.. Note: Immune metabolism / lipid and debris handling anchor.", "experiment_tracker_id": "M3A-P039-E001", "paper_tracker_id": "M3A-P039", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T005", "tracker_id": "M3B-O039"}'
+    '{"curator_notes": "Primary title: Dual-targeting nanoparticles enhance microglial P2Y12R expression to promote neuronal mitophagy for repairing spinal cord injury.. Note: Immune metabolism / lipid and debris handling anchor.", "experiment_tracker_id": "M3A-P039-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P039", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T005", "tracker_id": "M3B-O039"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3685,18 +3724,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O039', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Deng Y 2026 contributes immune metabolism / lipid and debris handling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Deng Y 2026 contributes immune metabolism / lipid and debris handling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'deng y 2026 contributes immune metabolism / lipid and debris handling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'low',
-    '{"curator_notes": "Primary title: Targeted biohybrid nanoplatform for spinal cord injury treatment: Restoring microglial mitophagy and alleviating oxidative stress.. Note: Immune metabolism / lipid and debris handling anchor.", "experiment_tracker_id": "M3A-P040-E001", "paper_tracker_id": "M3A-P040", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T005", "tracker_id": "M3B-O040"}'
+    '{"curator_notes": "Primary title: Targeted biohybrid nanoplatform for spinal cord injury treatment: Restoring microglial mitophagy and alleviating oxidative stress.. Note: Immune metabolism / lipid and debris handling anchor.", "experiment_tracker_id": "M3A-P040-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P040", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T005", "tracker_id": "M3B-O040"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3710,18 +3750,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O040', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Lv Y 2026 contributes immune metabolism / lipid and debris handling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Lv Y 2026 contributes immune metabolism / lipid and debris handling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'lv y 2026 contributes immune metabolism / lipid and debris handling evidence in mouse sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'low',
-    '{"curator_notes": "Primary title: An inflammation-targeted lipid nanoparticle inhibiting ferroptosis for spinal cord injury repair.. Note: Immune metabolism / lipid and debris handling anchor.", "experiment_tracker_id": "M3A-P041-E001", "paper_tracker_id": "M3A-P041", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T005", "tracker_id": "M3B-O041"}'
+    '{"curator_notes": "Primary title: An inflammation-targeted lipid nanoparticle inhibiting ferroptosis for spinal cord injury repair.. Note: Immune metabolism / lipid and debris handling anchor.", "experiment_tracker_id": "M3A-P041-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P041", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T005", "tracker_id": "M3B-O041"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3735,18 +3776,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O041', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Dong H 2025 contributes immune metabolism / lipid and debris handling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'single-cell RNA-seq / cell-state atlas; spatial transcriptomics / spatial atlas',
     'Dong H 2025 contributes immune metabolism / lipid and debris handling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'dong h 2025 contributes immune metabolism / lipid and debris handling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.. Note: Immune metabolism / lipid and debris handling anchor.", "experiment_tracker_id": "M3A-P042-E001", "paper_tracker_id": "M3A-P042", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T005", "tracker_id": "M3B-O042"}'
+    '{"curator_notes": "Primary title: Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.. Note: Immune metabolism / lipid and debris handling anchor.", "experiment_tracker_id": "M3A-P042-E001", "measurement_method_inference": "single-cell RNA-seq / cell-state atlas; spatial transcriptomics / spatial atlas", "paper_tracker_id": "M3A-P042", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T005", "tracker_id": "M3B-O042"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3760,18 +3802,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O042', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Wang Y 2026 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Wang Y 2026 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'wang y 2026 contributes macrophage/microglia polarization signaling evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'low',
-    '{"curator_notes": "Primary title: Midkine Overexpression Promotes Functional Recovery After Spinal Cord Injury by Enhancing Microglial Efferocytosis Via LRP-1.. Note: Macrophage/microglia polarization signaling anchor.", "experiment_tracker_id": "M3A-P043-E001", "paper_tracker_id": "M3A-P043", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O043"}'
+    '{"curator_notes": "Primary title: Midkine Overexpression Promotes Functional Recovery After Spinal Cord Injury by Enhancing Microglial Efferocytosis Via LRP-1.. Note: Macrophage/microglia polarization signaling anchor.", "experiment_tracker_id": "M3A-P043-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P043", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O043"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3785,18 +3828,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O043', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Tian X 2026 contributes macrophage/microglia polarization signaling evidence in zebrafish sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Tian X 2026 contributes macrophage/microglia polarization signaling evidence in zebrafish sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'tian x 2026 contributes macrophage/microglia polarization signaling evidence in zebrafish sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'low',
-    '{"curator_notes": "Primary title: A reparative neutrophil subpopulation accelerates spinal cord regeneration in zebrafish by controlling macrophage inflammation via Il-4.. Note: Macrophage/microglia polarization signaling anchor.", "experiment_tracker_id": "M3A-P044-E001", "paper_tracker_id": "M3A-P044", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O044"}'
+    '{"curator_notes": "Primary title: A reparative neutrophil subpopulation accelerates spinal cord regeneration in zebrafish by controlling macrophage inflammation via Il-4.. Note: Macrophage/microglia polarization signaling anchor.", "experiment_tracker_id": "M3A-P044-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P044", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T003", "tracker_id": "M3B-O044"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3810,18 +3854,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O044', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'scRNA-seq and perturbation experiments identified profibrotic Spp1/Fn1 macrophage-derived CXCL4 as a driver of pericyte-to-myofibroblast transition after SCI, linking macrophage signaling to fibrotic scar formation.',
     'qualitative',
+    'single-cell RNA-seq / cell-state atlas',
     'scRNA-seq and perturbation experiments identified profibrotic Spp1/Fn1 macrophage-derived CXCL4 as a driver of pericyte-to-myofibroblast transition after SCI, linking macrophage signaling to fibrotic scar formation.',
     'macrophage-derived CXCL4 promotes pericyte-to-myofibroblast fibrotic scarring after SCI',
     'Full text / PMC',
     'Full text / PMC12988535',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41836554.", "experiment_tracker_id": "M3A-P045-E001", "paper_tracker_id": "M3A-P045", "quantitative": "YES", "statistics_reported": "Full text reports scRNA-seq, primary pericyte/CXCL4 assays, macrophage co-culture, PMT markers, pathway perturbation, and scar/fibrosis outcomes", "topic_id": "M3B-T002", "tracker_id": "M3B-O045"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41836554.", "experiment_tracker_id": "M3A-P045-E001", "measurement_method_inference": "single-cell RNA-seq / cell-state atlas", "paper_tracker_id": "M3A-P045", "quantitative": "YES", "statistics_reported": "Full text reports scRNA-seq, primary pericyte/CXCL4 assays, macrophage co-culture, PMT markers, pathway perturbation, and scar/fibrosis outcomes", "topic_id": "M3B-T002", "tracker_id": "M3B-O045"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3835,18 +3880,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O045', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'After SCI, recruited macrophages were identified as a major source of activated TGF-beta1, which recruited mesenchymal stromal/stem cells and acted on resident pericytes to promote fibroblast differentiation and fibrotic scar formation; inhibiting fibrotic scarring improved recovery in adult mice.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'After SCI, recruited macrophages were identified as a major source of activated TGF-beta1, which recruited mesenchymal stromal/stem cells and acted on resident pericytes to promote fibroblast differentiation and fibrotic scar formation; inhibiting fibrotic scarring improved recovery in adult mice.',
     'macrophage-derived active TGF-beta1 promotes pericyte/MSC fibrotic scar formation after SCI',
     'Full text / PMC',
     'Full text / PMC12936232',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41741406.", "experiment_tracker_id": "M3A-P046-E001", "paper_tracker_id": "M3A-P046", "quantitative": "YES", "statistics_reported": "Full text reports active TGF-beta elevation, macrophage source, MSC/pericyte fibroblast differentiation, fibrotic scar inhibition, and recovery endpoints", "topic_id": "M3B-T002", "tracker_id": "M3B-O046"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41741406.", "experiment_tracker_id": "M3A-P046-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P046", "quantitative": "YES", "statistics_reported": "Full text reports active TGF-beta elevation, macrophage source, MSC/pericyte fibroblast differentiation, fibrotic scar inhibition, and recovery endpoints", "topic_id": "M3B-T002", "tracker_id": "M3B-O046"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3860,18 +3906,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O046', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Lei H 2026 contributes neutrophil or macrophage extracellular-trap axis evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Lei H 2026 contributes neutrophil or macrophage extracellular-trap axis evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'lei h 2026 contributes neutrophil or macrophage extracellular-trap axis evidence in rat sci model, supporting the immune and myeloid modulation after sci first-pass corpus.',
     'Module 3A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'low',
-    '{"curator_notes": "Primary title: Olfactory ensheathing cell transplantation targets macrophage extracellular traps and NKCC1 to alleviate pain after spinal cord injury.. Note: Neutrophil or macrophage extracellular-trap axis anchor.", "experiment_tracker_id": "M3A-P047-E001", "paper_tracker_id": "M3A-P047", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T008", "tracker_id": "M3B-O047"}'
+    '{"curator_notes": "Primary title: Olfactory ensheathing cell transplantation targets macrophage extracellular traps and NKCC1 to alleviate pain after spinal cord injury.. Note: Neutrophil or macrophage extracellular-trap axis anchor.", "experiment_tracker_id": "M3A-P047-E001", "measurement_method_inference": null, "paper_tracker_id": "M3A-P047", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M3B-T008", "tracker_id": "M3B-O047"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3885,18 +3932,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O047', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Li Y 2020 M3A-P001-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after microglial depletion / chronic inflammation with endpoint/readout: Outcome/mechanistic validation row for Delayed microglial depletion after spinal cord injury reduces chronic inflammation and neurodegeneration in the brain and improves neurological recovery in male mice; first-pass row captures microglial depletion / chronic inflammation in mouse at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Li Y 2020 M3A-P001-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after microglial depletion / chronic inflammation with endpoint/readout: Outcome/mechanistic validation row for Delayed microglial depletion after spinal cord injury reduces chronic inflammation and neurodegeneration in the brain and improves neurological recovery in male mice; first-pass row captures microglial depletion / chronic inflammation in mouse at abstract/source-title level..',
     'M3A-P001-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Delayed microglial depletion after spinal cord injury reduces chronic inflammation and neurodegeneration in the brain and improves neurological recovery in male mice. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P001-E002", "paper_tracker_id": "M3A-P001", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T001", "tracker_id": "M3B-O048"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Delayed microglial depletion after spinal cord injury reduces chronic inflammation and neurodegeneration in the brain and improves neurological recovery in male mice. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P001-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P001", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T001", "tracker_id": "M3B-O048"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3910,18 +3958,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O048', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhou X 2020 M3A-P002-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after microglia/macrophage corralling with endpoint/readout: Outcome/mechanistic validation row for Microglia and macrophages promote corralling, wound compaction and recovery after spinal cord injury via Plexin-B2; first-pass row captures microglia/macrophage corralling in mouse at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Zhou X 2020 M3A-P002-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after microglia/macrophage corralling with endpoint/readout: Outcome/mechanistic validation row for Microglia and macrophages promote corralling, wound compaction and recovery after spinal cord injury via Plexin-B2; first-pass row captures microglia/macrophage corralling in mouse at abstract/source-title level..',
     'M3A-P002-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Microglia and macrophages promote corralling, wound compaction and recovery after spinal cord injury via Plexin-B2. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P002-E002", "paper_tracker_id": "M3A-P002", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T002", "tracker_id": "M3B-O049"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Microglia and macrophages promote corralling, wound compaction and recovery after spinal cord injury via Plexin-B2. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P002-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P002", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T002", "tracker_id": "M3B-O049"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3935,18 +3984,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O049', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Gerber YN 2018 M3A-P003-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after csf1r inhibition with endpoint/readout: Outcome/mechanistic validation row for CSF1R Inhibition Reduces Microglia Proliferation, Promotes Tissue Preservation and Improves Motor Recovery After Spinal Cord Injury; first-pass row captures csf1r inhibition in mouse at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Gerber YN 2018 M3A-P003-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after csf1r inhibition with endpoint/readout: Outcome/mechanistic validation row for CSF1R Inhibition Reduces Microglia Proliferation, Promotes Tissue Preservation and Improves Motor Recovery After Spinal Cord Injury; first-pass row captures csf1r inhibition in mouse at abstract/source-title level..',
     'M3A-P003-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: CSF1R Inhibition Reduces Microglia Proliferation, Promotes Tissue Preservation and Improves Motor Recovery After Spinal Cord Injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P003-E002", "paper_tracker_id": "M3A-P003", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T001", "tracker_id": "M3B-O050"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: CSF1R Inhibition Reduces Microglia Proliferation, Promotes Tissue Preservation and Improves Motor Recovery After Spinal Cord Injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P003-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P003", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T001", "tracker_id": "M3B-O050"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3960,18 +4010,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O050', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Fan H 2020 M3A-P004-E002 preserves a distinct Rodent model context experiment testing Mechanistic outcome assessment after hmgb1-rage / macrophage-microglia polarization with endpoint/readout: Outcome/mechanistic validation row for Inhibiting HMGB1-RAGE axis prevents pro-inflammatory macrophages/microglia polarization and affords neuroprotection after spinal cord injury; first-pass row captures hmgb1-rage / macrophage-microglia polarization in rodent model context at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Fan H 2020 M3A-P004-E002 preserves a distinct Rodent model context experiment testing Mechanistic outcome assessment after hmgb1-rage / macrophage-microglia polarization with endpoint/readout: Outcome/mechanistic validation row for Inhibiting HMGB1-RAGE axis prevents pro-inflammatory macrophages/microglia polarization and affords neuroprotection after spinal cord injury; first-pass row captures hmgb1-rage / macrophage-microglia polarization in rodent model context at abstract/source-title level..',
     'M3A-P004-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Inhibiting HMGB1-RAGE axis prevents pro-inflammatory macrophages/microglia polarization and affords neuroprotection after spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P004-E002", "paper_tracker_id": "M3A-P004", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O051"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Inhibiting HMGB1-RAGE axis prevents pro-inflammatory macrophages/microglia polarization and affords neuroprotection after spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P004-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P004", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O051"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3985,18 +4036,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O051', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhang C 2022 M3A-P005-E002 preserves a distinct Rodent model context experiment testing Mechanistic outcome assessment after macrophage extracellular traps with endpoint/readout: Outcome/mechanistic validation row for Macrophage Extracellular Traps Exacerbate Secondary Spinal Cord Injury by Modulating Macrophage/Microglia Polarization via LL37/P2X7R/NF-kappaB Signaling Pathway; first-pass row captures macrophage extracellular traps in rodent model context at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Zhang C 2022 M3A-P005-E002 preserves a distinct Rodent model context experiment testing Mechanistic outcome assessment after macrophage extracellular traps with endpoint/readout: Outcome/mechanistic validation row for Macrophage Extracellular Traps Exacerbate Secondary Spinal Cord Injury by Modulating Macrophage/Microglia Polarization via LL37/P2X7R/NF-kappaB Signaling Pathway; first-pass row captures macrophage extracellular traps in rodent model context at abstract/source-title level..',
     'M3A-P005-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Macrophage Extracellular Traps Exacerbate Secondary Spinal Cord Injury by Modulating Macrophage/Microglia Polarization via LL37/P2X7R/NF-kappaB Signaling Pathway. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P005-E002", "paper_tracker_id": "M3A-P005", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T008", "tracker_id": "M3B-O052"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Macrophage Extracellular Traps Exacerbate Secondary Spinal Cord Injury by Modulating Macrophage/Microglia Polarization via LL37/P2X7R/NF-kappaB Signaling Pathway. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P005-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P005", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T008", "tracker_id": "M3B-O052"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4010,18 +4062,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O052', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Liu J 2024 M3A-P006-E002 preserves a distinct Rodent model context experiment testing Mechanistic outcome assessment after microglia/macrophage pyroptosis with endpoint/readout: Outcome/mechanistic validation row for IPSC-NSCs-derived exosomal let-7b-5p improves motor function after spinal cord Injury by modulating microglial/macrophage pyroptosis; first-pass row captures microglia/macrophage pyroptosis in rodent model context at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Liu J 2024 M3A-P006-E002 preserves a distinct Rodent model context experiment testing Mechanistic outcome assessment after microglia/macrophage pyroptosis with endpoint/readout: Outcome/mechanistic validation row for IPSC-NSCs-derived exosomal let-7b-5p improves motor function after spinal cord Injury by modulating microglial/macrophage pyroptosis; first-pass row captures microglia/macrophage pyroptosis in rodent model context at abstract/source-title level..',
     'M3A-P006-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: IPSC-NSCs-derived exosomal let-7b-5p improves motor function after spinal cord Injury by modulating microglial/macrophage pyroptosis. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P006-E002", "paper_tracker_id": "M3A-P006", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T004", "tracker_id": "M3B-O053"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: IPSC-NSCs-derived exosomal let-7b-5p improves motor function after spinal cord Injury by modulating microglial/macrophage pyroptosis. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P006-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P006", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T004", "tracker_id": "M3B-O053"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4035,18 +4088,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O053', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ge X 2025 M3A-P007-E002 preserves a distinct Rodent model context experiment testing Mechanistic outcome assessment after lactylation / microglia-macrophage-t cell axis with endpoint/readout: Outcome/mechanistic validation row for Metabolic reprogramming through histone lactylation in microglia and macrophages recruits CD8+ T lymphocytes and aggravates spinal cord injury; first-pass row captures lactylation / microglia-macrophage-t cell axis in rodent model context at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Ge X 2025 M3A-P007-E002 preserves a distinct Rodent model context experiment testing Mechanistic outcome assessment after lactylation / microglia-macrophage-t cell axis with endpoint/readout: Outcome/mechanistic validation row for Metabolic reprogramming through histone lactylation in microglia and macrophages recruits CD8+ T lymphocytes and aggravates spinal cord injury; first-pass row captures lactylation / microglia-macrophage-t cell axis in rodent model context at abstract/source-title level..',
     'M3A-P007-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Metabolic reprogramming through histone lactylation in microglia and macrophages recruits CD8+ T lymphocytes and aggravates spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P007-E002", "paper_tracker_id": "M3A-P007", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T008", "tracker_id": "M3B-O054"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Metabolic reprogramming through histone lactylation in microglia and macrophages recruits CD8+ T lymphocytes and aggravates spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P007-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P007", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T008", "tracker_id": "M3B-O054"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4060,18 +4114,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O054', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ying W 2025 M3A-P008-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after immune metabolism / lipid and debris handling with endpoint/readout: Outcome/mechanistic validation row for N-Lactoyl-Phenylalanine modulates lipid metabolism in microglia/macrophage via the AMPK-PGC1alpha-PPARgamma pathway to promote recovery in mice with spinal cord injury.; first-pass row captures immune metabolism / lipid and debris handling in mouse sci model at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Ying W 2025 M3A-P008-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after immune metabolism / lipid and debris handling with endpoint/readout: Outcome/mechanistic validation row for N-Lactoyl-Phenylalanine modulates lipid metabolism in microglia/macrophage via the AMPK-PGC1alpha-PPARgamma pathway to promote recovery in mice with spinal cord injury.; first-pass row captures immune metabolism / lipid and debris handling in mouse sci model at abstract/source-title level..',
     'M3A-P008-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: N-Lactoyl-Phenylalanine modulates lipid metabolism in microglia/macrophage via the AMPK-PGC1alpha-PPARgamma pathway to promote recovery in mice with spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P008-E002", "paper_tracker_id": "M3A-P008", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O055"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: N-Lactoyl-Phenylalanine modulates lipid metabolism in microglia/macrophage via the AMPK-PGC1alpha-PPARgamma pathway to promote recovery in mice with spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P008-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P008", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O055"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4085,18 +4140,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O055', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Wang C 2026 M3A-P009-E002 preserves a distinct Rodent SCI model context experiment testing Mechanistic outcome assessment after macrophage/microglia autophagy and polarization with endpoint/readout: Outcome/mechanistic validation row for Naringenin alleviates spinal cord injury by ameliorating macrophage/microglia autophagy via progranulin stabilisation.; first-pass row captures macrophage/microglia autophagy and polarization in rodent sci model context at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Wang C 2026 M3A-P009-E002 preserves a distinct Rodent SCI model context experiment testing Mechanistic outcome assessment after macrophage/microglia autophagy and polarization with endpoint/readout: Outcome/mechanistic validation row for Naringenin alleviates spinal cord injury by ameliorating macrophage/microglia autophagy via progranulin stabilisation.; first-pass row captures macrophage/microglia autophagy and polarization in rodent sci model context at abstract/source-title level..',
     'M3A-P009-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Naringenin alleviates spinal cord injury by ameliorating macrophage/microglia autophagy via progranulin stabilisation.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P009-E002", "paper_tracker_id": "M3A-P009", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O056"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Naringenin alleviates spinal cord injury by ameliorating macrophage/microglia autophagy via progranulin stabilisation.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P009-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P009", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O056"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4110,18 +4166,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O056', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Li Y 2025 M3A-P010-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for A dual-drug sequential delivery hydrogel for programmatic microglia/macrophage polarization and function recovery in spinal cord injury.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Li Y 2025 M3A-P010-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for A dual-drug sequential delivery hydrogel for programmatic microglia/macrophage polarization and function recovery in spinal cord injury.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level..',
     'M3A-P010-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: A dual-drug sequential delivery hydrogel for programmatic microglia/macrophage polarization and function recovery in spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P010-E002", "paper_tracker_id": "M3A-P010", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O057"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: A dual-drug sequential delivery hydrogel for programmatic microglia/macrophage polarization and function recovery in spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P010-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P010", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O057"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4135,18 +4192,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O057', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Qian D 2024 M3A-P011-E002 preserves a distinct Rodent SCI model context experiment testing Mechanistic outcome assessment after immune-modifying nanomedicine with endpoint/readout: Outcome/mechanistic validation row for Microenvironment Self-Adaptive Nanomedicine Promotes Spinal Cord Repair by Suppressing Inflammation Cascade and Neural Apoptosis.; first-pass row captures immune-modifying nanomedicine in rodent sci model context at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Qian D 2024 M3A-P011-E002 preserves a distinct Rodent SCI model context experiment testing Mechanistic outcome assessment after immune-modifying nanomedicine with endpoint/readout: Outcome/mechanistic validation row for Microenvironment Self-Adaptive Nanomedicine Promotes Spinal Cord Repair by Suppressing Inflammation Cascade and Neural Apoptosis.; first-pass row captures immune-modifying nanomedicine in rodent sci model context at abstract/source-title level..',
     'M3A-P011-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Microenvironment Self-Adaptive Nanomedicine Promotes Spinal Cord Repair by Suppressing Inflammation Cascade and Neural Apoptosis.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P011-E002", "paper_tracker_id": "M3A-P011", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T008", "tracker_id": "M3B-O058"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Microenvironment Self-Adaptive Nanomedicine Promotes Spinal Cord Repair by Suppressing Inflammation Cascade and Neural Apoptosis.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P011-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P011", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T008", "tracker_id": "M3B-O058"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4160,18 +4218,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O058', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Chen Y 2025 M3A-P012-E002 preserves a distinct Rodent SCI model context experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Farrerol confers neuroprotection in spinal cord injury by regulating macrophages/microglia polarization through the JAK2/STAT3 pathway.; first-pass row captures macrophage/microglia polarization signaling in rodent sci model context at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Chen Y 2025 M3A-P012-E002 preserves a distinct Rodent SCI model context experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Farrerol confers neuroprotection in spinal cord injury by regulating macrophages/microglia polarization through the JAK2/STAT3 pathway.; first-pass row captures macrophage/microglia polarization signaling in rodent sci model context at abstract/source-title level..',
     'M3A-P012-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Farrerol confers neuroprotection in spinal cord injury by regulating macrophages/microglia polarization through the JAK2/STAT3 pathway.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P012-E002", "paper_tracker_id": "M3A-P012", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O059"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Farrerol confers neuroprotection in spinal cord injury by regulating macrophages/microglia polarization through the JAK2/STAT3 pathway.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P012-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P012", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O059"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4185,18 +4244,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O059', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Wang Z 2025 M3A-P013-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for GDF11 alleviates spinal cord injury in rats by modulating microglia polarization through Smad2/3 and MAPK/NFkappaB signaling pathways.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Wang Z 2025 M3A-P013-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for GDF11 alleviates spinal cord injury in rats by modulating microglia polarization through Smad2/3 and MAPK/NFkappaB signaling pathways.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level..',
     'M3A-P013-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: GDF11 alleviates spinal cord injury in rats by modulating microglia polarization through Smad2/3 and MAPK/NFkappaB signaling pathways.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P013-E002", "paper_tracker_id": "M3A-P013", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O060"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: GDF11 alleviates spinal cord injury in rats by modulating microglia polarization through Smad2/3 and MAPK/NFkappaB signaling pathways.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P013-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P013", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O060"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4210,18 +4270,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O060', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ji R 2024 M3A-P014-E002 preserves a distinct Rodent SCI model context experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Fisetin Promotes Functional Recovery after Spinal Cord Injury by Inhibiting Microglia/Macrophage M1 Polarization and JAK2/STAT3 Signaling Pathway.; first-pass row captures macrophage/microglia polarization signaling in rodent sci model context at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Ji R 2024 M3A-P014-E002 preserves a distinct Rodent SCI model context experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Fisetin Promotes Functional Recovery after Spinal Cord Injury by Inhibiting Microglia/Macrophage M1 Polarization and JAK2/STAT3 Signaling Pathway.; first-pass row captures macrophage/microglia polarization signaling in rodent sci model context at abstract/source-title level..',
     'M3A-P014-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Fisetin Promotes Functional Recovery after Spinal Cord Injury by Inhibiting Microglia/Macrophage M1 Polarization and JAK2/STAT3 Signaling Pathway.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P014-E002", "paper_tracker_id": "M3A-P014", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O061"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Fisetin Promotes Functional Recovery after Spinal Cord Injury by Inhibiting Microglia/Macrophage M1 Polarization and JAK2/STAT3 Signaling Pathway.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P014-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P014", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O061"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4235,18 +4296,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O061', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Xue MT 2022 M3A-P015-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Atractylenolide III ameliorates spinal cord injury in rats by modulating microglial/macrophage polarization.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Xue MT 2022 M3A-P015-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Atractylenolide III ameliorates spinal cord injury in rats by modulating microglial/macrophage polarization.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level..',
     'M3A-P015-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Atractylenolide III ameliorates spinal cord injury in rats by modulating microglial/macrophage polarization.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P015-E002", "paper_tracker_id": "M3A-P015", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O062"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Atractylenolide III ameliorates spinal cord injury in rats by modulating microglial/macrophage polarization.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P015-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P015", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O062"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4260,18 +4322,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O062', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhao Y 2026 M3A-P016-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after single-cell / spatial immune-state mapping with endpoint/readout: Outcome/mechanistic validation row for Engineered CCR2 positive macrophages coordinate immunoregulation with neural regeneration and matrix remodeling after spinal cord injury.; first-pass row captures single-cell / spatial immune-state mapping in mouse sci model at abstract/source-title level..',
     'qualitative',
+    'single-cell RNA-seq / cell-state atlas; spatial transcriptomics / spatial atlas',
     'Zhao Y 2026 M3A-P016-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after single-cell / spatial immune-state mapping with endpoint/readout: Outcome/mechanistic validation row for Engineered CCR2 positive macrophages coordinate immunoregulation with neural regeneration and matrix remodeling after spinal cord injury.; first-pass row captures single-cell / spatial immune-state mapping in mouse sci model at abstract/source-title level..',
     'M3A-P016-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Engineered CCR2 positive macrophages coordinate immunoregulation with neural regeneration and matrix remodeling after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P016-E002", "paper_tracker_id": "M3A-P016", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T006", "tracker_id": "M3B-O063"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Engineered CCR2 positive macrophages coordinate immunoregulation with neural regeneration and matrix remodeling after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P016-E002", "measurement_method_inference": "single-cell RNA-seq / cell-state atlas; spatial transcriptomics / spatial atlas", "paper_tracker_id": "M3A-P016", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T006", "tracker_id": "M3B-O063"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4285,18 +4348,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O063', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Cucarian J 2026 M3A-P017-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after microglial depletion / csf1r modulation with endpoint/readout: Outcome/mechanistic validation row for PLX5622 did not alter anxiety-like behaviour and showed limited microglial depletion efficacy in a spinal cord injury model in female rats.; first-pass row captures microglial depletion / csf1r modulation in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Cucarian J 2026 M3A-P017-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after microglial depletion / csf1r modulation with endpoint/readout: Outcome/mechanistic validation row for PLX5622 did not alter anxiety-like behaviour and showed limited microglial depletion efficacy in a spinal cord injury model in female rats.; first-pass row captures microglial depletion / csf1r modulation in mouse sci model at abstract/source-title level..',
     'M3A-P017-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: PLX5622 did not alter anxiety-like behaviour and showed limited microglial depletion efficacy in a spinal cord injury model in female rats.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P017-E002", "paper_tracker_id": "M3A-P017", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T001", "tracker_id": "M3B-O064"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: PLX5622 did not alter anxiety-like behaviour and showed limited microglial depletion efficacy in a spinal cord injury model in female rats.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P017-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P017", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T001", "tracker_id": "M3B-O064"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4310,18 +4374,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O064', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Yang J 2025 M3A-P018-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after microglial depletion / csf1r modulation with endpoint/readout: Outcome/mechanistic validation row for Nanoparticles loaded with a CSF1R antagonist selectively depletes microglial cells and modulates inflammation in spinal cord injury.; first-pass row captures microglial depletion / csf1r modulation in rat sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Yang J 2025 M3A-P018-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after microglial depletion / csf1r modulation with endpoint/readout: Outcome/mechanistic validation row for Nanoparticles loaded with a CSF1R antagonist selectively depletes microglial cells and modulates inflammation in spinal cord injury.; first-pass row captures microglial depletion / csf1r modulation in rat sci model at abstract/source-title level..',
     'M3A-P018-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Nanoparticles loaded with a CSF1R antagonist selectively depletes microglial cells and modulates inflammation in spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P018-E002", "paper_tracker_id": "M3A-P018", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T001", "tracker_id": "M3B-O065"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Nanoparticles loaded with a CSF1R antagonist selectively depletes microglial cells and modulates inflammation in spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P018-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P018", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T001", "tracker_id": "M3B-O065"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4335,18 +4400,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O065', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Xue S 2026 M3A-P019-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after microglial depletion / csf1r modulation with endpoint/readout: Outcome/mechanistic validation row for Identification of repopulated microglia-associated genes in microglia depleted/repopulated mice after spinal cord injury.; first-pass row captures microglial depletion / csf1r modulation in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Xue S 2026 M3A-P019-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after microglial depletion / csf1r modulation with endpoint/readout: Outcome/mechanistic validation row for Identification of repopulated microglia-associated genes in microglia depleted/repopulated mice after spinal cord injury.; first-pass row captures microglial depletion / csf1r modulation in mouse sci model at abstract/source-title level..',
     'M3A-P019-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Identification of repopulated microglia-associated genes in microglia depleted/repopulated mice after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P019-E002", "paper_tracker_id": "M3A-P019", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T001", "tracker_id": "M3B-O066"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Identification of repopulated microglia-associated genes in microglia depleted/repopulated mice after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P019-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P019", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T001", "tracker_id": "M3B-O066"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4360,18 +4426,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O066', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Stewart AN 2025 M3A-P020-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after microglial depletion / csf1r modulation with endpoint/readout: Outcome/mechanistic validation row for Nonresolving Neuroinflammation Regulates Axon Regeneration in Chronic Spinal Cord Injury.; first-pass row captures microglial depletion / csf1r modulation in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Stewart AN 2025 M3A-P020-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after microglial depletion / csf1r modulation with endpoint/readout: Outcome/mechanistic validation row for Nonresolving Neuroinflammation Regulates Axon Regeneration in Chronic Spinal Cord Injury.; first-pass row captures microglial depletion / csf1r modulation in mouse sci model at abstract/source-title level..',
     'M3A-P020-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Nonresolving Neuroinflammation Regulates Axon Regeneration in Chronic Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P020-E002", "paper_tracker_id": "M3A-P020", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T001", "tracker_id": "M3B-O067"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Nonresolving Neuroinflammation Regulates Axon Regeneration in Chronic Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P020-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P020", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T001", "tracker_id": "M3B-O067"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4385,18 +4452,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O067', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Capes DE 2026 M3A-P021-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after microglial depletion / csf1r modulation with endpoint/readout: Outcome/mechanistic validation row for Depleting non-resolving neuroinflammation in chronic spinal cord injury attenuates thermal hypersensitivity.; first-pass row captures microglial depletion / csf1r modulation in rat sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Capes DE 2026 M3A-P021-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after microglial depletion / csf1r modulation with endpoint/readout: Outcome/mechanistic validation row for Depleting non-resolving neuroinflammation in chronic spinal cord injury attenuates thermal hypersensitivity.; first-pass row captures microglial depletion / csf1r modulation in rat sci model at abstract/source-title level..',
     'M3A-P021-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Depleting non-resolving neuroinflammation in chronic spinal cord injury attenuates thermal hypersensitivity.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P021-E002", "paper_tracker_id": "M3A-P021", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T001", "tracker_id": "M3B-O068"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Depleting non-resolving neuroinflammation in chronic spinal cord injury attenuates thermal hypersensitivity.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P021-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P021", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T001", "tracker_id": "M3B-O068"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4410,18 +4478,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O068', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Li R 2026 M3A-P022-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after microglial depletion / csf1r modulation with endpoint/readout: Outcome/mechanistic validation row for Pharmacological Microglial Inhibition Remodels the Scar Microenvironment to Support Reticulospinal Circuit Reconstruction After Spinal Cord Injury.; first-pass row captures microglial depletion / csf1r modulation in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Li R 2026 M3A-P022-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after microglial depletion / csf1r modulation with endpoint/readout: Outcome/mechanistic validation row for Pharmacological Microglial Inhibition Remodels the Scar Microenvironment to Support Reticulospinal Circuit Reconstruction After Spinal Cord Injury.; first-pass row captures microglial depletion / csf1r modulation in mouse sci model at abstract/source-title level..',
     'M3A-P022-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Pharmacological Microglial Inhibition Remodels the Scar Microenvironment to Support Reticulospinal Circuit Reconstruction After Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P022-E002", "paper_tracker_id": "M3A-P022", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T001", "tracker_id": "M3B-O069"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Pharmacological Microglial Inhibition Remodels the Scar Microenvironment to Support Reticulospinal Circuit Reconstruction After Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P022-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P022", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T001", "tracker_id": "M3B-O069"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4435,18 +4504,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O069', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhao Y 2026 M3A-P023-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after immune metabolism / lipid and debris handling with endpoint/readout: Outcome/mechanistic validation row for SYK-dependent lipid handling in monocyte-derived macrophages governs functional recovery after spinal cord injury.; first-pass row captures immune metabolism / lipid and debris handling in mouse sci model at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Zhao Y 2026 M3A-P023-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after immune metabolism / lipid and debris handling with endpoint/readout: Outcome/mechanistic validation row for SYK-dependent lipid handling in monocyte-derived macrophages governs functional recovery after spinal cord injury.; first-pass row captures immune metabolism / lipid and debris handling in mouse sci model at abstract/source-title level..',
     'M3A-P023-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: SYK-dependent lipid handling in monocyte-derived macrophages governs functional recovery after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P023-E002", "paper_tracker_id": "M3A-P023", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O070"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: SYK-dependent lipid handling in monocyte-derived macrophages governs functional recovery after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P023-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P023", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O070"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4460,18 +4530,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O070', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Peng Y 2025 M3A-P024-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after immune metabolism / lipid and debris handling with endpoint/readout: Outcome/mechanistic validation row for Lipid accumulation in foam cells drives C1q-dependent synaptic loss and impairs motor function recovery after spinal cord injury.; first-pass row captures immune metabolism / lipid and debris handling in mouse sci model at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Peng Y 2025 M3A-P024-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after immune metabolism / lipid and debris handling with endpoint/readout: Outcome/mechanistic validation row for Lipid accumulation in foam cells drives C1q-dependent synaptic loss and impairs motor function recovery after spinal cord injury.; first-pass row captures immune metabolism / lipid and debris handling in mouse sci model at abstract/source-title level..',
     'M3A-P024-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Lipid accumulation in foam cells drives C1q-dependent synaptic loss and impairs motor function recovery after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P024-E002", "paper_tracker_id": "M3A-P024", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O071"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Lipid accumulation in foam cells drives C1q-dependent synaptic loss and impairs motor function recovery after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P024-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P024", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O071"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4485,18 +4556,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O071', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Wu Z 2026 M3A-P025-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after immune metabolism / lipid and debris handling with endpoint/readout: Outcome/mechanistic validation row for TREM2 Facilitates Myelin Debris Clearance but Exacerbates Chronic Inflammation and Fibrosis After Spinal Cord Injury.; first-pass row captures immune metabolism / lipid and debris handling in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Wu Z 2026 M3A-P025-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after immune metabolism / lipid and debris handling with endpoint/readout: Outcome/mechanistic validation row for TREM2 Facilitates Myelin Debris Clearance but Exacerbates Chronic Inflammation and Fibrosis After Spinal Cord Injury.; first-pass row captures immune metabolism / lipid and debris handling in mouse sci model at abstract/source-title level..',
     'M3A-P025-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: TREM2 Facilitates Myelin Debris Clearance but Exacerbates Chronic Inflammation and Fibrosis After Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P025-E002", "paper_tracker_id": "M3A-P025", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O072"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: TREM2 Facilitates Myelin Debris Clearance but Exacerbates Chronic Inflammation and Fibrosis After Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P025-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P025", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O072"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4510,18 +4582,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O072', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Shi C 2026 M3A-P026-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after microglia/macrophage programmed inflammatory death with endpoint/readout: Outcome/mechanistic validation row for Histone H3K9 lactylation activates the TXNIP/NLRP3 pathway to drive macrophage inflammation after spinal cord injury.; first-pass row captures microglia/macrophage programmed inflammatory death in human / translational context at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Shi C 2026 M3A-P026-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after microglia/macrophage programmed inflammatory death with endpoint/readout: Outcome/mechanistic validation row for Histone H3K9 lactylation activates the TXNIP/NLRP3 pathway to drive macrophage inflammation after spinal cord injury.; first-pass row captures microglia/macrophage programmed inflammatory death in human / translational context at abstract/source-title level..',
     'M3A-P026-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Histone H3K9 lactylation activates the TXNIP/NLRP3 pathway to drive macrophage inflammation after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P026-E002", "paper_tracker_id": "M3A-P026", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T004", "tracker_id": "M3B-O073"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Histone H3K9 lactylation activates the TXNIP/NLRP3 pathway to drive macrophage inflammation after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P026-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P026", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T004", "tracker_id": "M3B-O073"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4535,18 +4608,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O073', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Liu S 2026 M3A-P027-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after microglia/macrophage programmed inflammatory death with endpoint/readout: Outcome/mechanistic validation row for Targeting microglial PANoptosis through AMPK activation: Metformin as a promising therapy for spinal cord injury.; first-pass row captures microglia/macrophage programmed inflammatory death in rat sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Liu S 2026 M3A-P027-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after microglia/macrophage programmed inflammatory death with endpoint/readout: Outcome/mechanistic validation row for Targeting microglial PANoptosis through AMPK activation: Metformin as a promising therapy for spinal cord injury.; first-pass row captures microglia/macrophage programmed inflammatory death in rat sci model at abstract/source-title level..',
     'M3A-P027-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Targeting microglial PANoptosis through AMPK activation: Metformin as a promising therapy for spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P027-E002", "paper_tracker_id": "M3A-P027", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T004", "tracker_id": "M3B-O074"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Targeting microglial PANoptosis through AMPK activation: Metformin as a promising therapy for spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P027-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P027", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T004", "tracker_id": "M3B-O074"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4560,18 +4634,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O074', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Xu X 2026 M3A-P028-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Integrated Multi-Omics Analysis Reveals IRF1-Driven Microglial PANoptosis via ZBP1 in Spinal Cord Injury.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Xu X 2026 M3A-P028-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Integrated Multi-Omics Analysis Reveals IRF1-Driven Microglial PANoptosis via ZBP1 in Spinal Cord Injury.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level..',
     'M3A-P028-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Integrated Multi-Omics Analysis Reveals IRF1-Driven Microglial PANoptosis via ZBP1 in Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P028-E002", "paper_tracker_id": "M3A-P028", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T004", "tracker_id": "M3B-O075"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Integrated Multi-Omics Analysis Reveals IRF1-Driven Microglial PANoptosis via ZBP1 in Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P028-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P028", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T004", "tracker_id": "M3B-O075"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4585,18 +4660,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O075', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Qian S 2026 M3A-P029-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after microglia/macrophage programmed inflammatory death with endpoint/readout: Outcome/mechanistic validation row for Trimethylamine N-Oxide Aggravates Neuro-inflammation in Spinal Cord Injury Through NLRP3 Inflammasome Activation in Microglia.; first-pass row captures microglia/macrophage programmed inflammatory death in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Qian S 2026 M3A-P029-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after microglia/macrophage programmed inflammatory death with endpoint/readout: Outcome/mechanistic validation row for Trimethylamine N-Oxide Aggravates Neuro-inflammation in Spinal Cord Injury Through NLRP3 Inflammasome Activation in Microglia.; first-pass row captures microglia/macrophage programmed inflammatory death in mouse sci model at abstract/source-title level..',
     'M3A-P029-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Trimethylamine N-Oxide Aggravates Neuro-inflammation in Spinal Cord Injury Through NLRP3 Inflammasome Activation in Microglia.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P029-E002", "paper_tracker_id": "M3A-P029", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T004", "tracker_id": "M3B-O076"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Trimethylamine N-Oxide Aggravates Neuro-inflammation in Spinal Cord Injury Through NLRP3 Inflammasome Activation in Microglia.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P029-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P029", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T004", "tracker_id": "M3B-O076"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4610,18 +4686,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O076', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zeng Y 2026 M3A-P030-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Thiolutin attenuates neuroinflammation and neuronal apoptosis by suppressing microglial pyroptosis through NLRP3 inflammasome inhibition after spinal cord injury.; first-pass row captures macrophage/microglia polarization signaling in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Zeng Y 2026 M3A-P030-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Thiolutin attenuates neuroinflammation and neuronal apoptosis by suppressing microglial pyroptosis through NLRP3 inflammasome inhibition after spinal cord injury.; first-pass row captures macrophage/microglia polarization signaling in mouse sci model at abstract/source-title level..',
     'M3A-P030-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Thiolutin attenuates neuroinflammation and neuronal apoptosis by suppressing microglial pyroptosis through NLRP3 inflammasome inhibition after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P030-E002", "paper_tracker_id": "M3A-P030", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T001", "tracker_id": "M3B-O077"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Thiolutin attenuates neuroinflammation and neuronal apoptosis by suppressing microglial pyroptosis through NLRP3 inflammasome inhibition after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P030-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P030", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T001", "tracker_id": "M3B-O077"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4635,18 +4712,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O077', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Xu J 2026 M3A-P031-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Type 2 Diabetes Promotes the Microglial Pyroptosis by Activating NLRP3 Inflammasome to Impede Remyelination After Spinal Cord Injury.; first-pass row captures macrophage/microglia polarization signaling in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Xu J 2026 M3A-P031-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Type 2 Diabetes Promotes the Microglial Pyroptosis by Activating NLRP3 Inflammasome to Impede Remyelination After Spinal Cord Injury.; first-pass row captures macrophage/microglia polarization signaling in mouse sci model at abstract/source-title level..',
     'M3A-P031-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Type 2 Diabetes Promotes the Microglial Pyroptosis by Activating NLRP3 Inflammasome to Impede Remyelination After Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P031-E002", "paper_tracker_id": "M3A-P031", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O078"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Type 2 Diabetes Promotes the Microglial Pyroptosis by Activating NLRP3 Inflammasome to Impede Remyelination After Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P031-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P031", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O078"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4660,18 +4738,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O078', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Lu W 2026 M3A-P032-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after microglia/macrophage programmed inflammatory death with endpoint/readout: Outcome/mechanistic validation row for FGF4 activates FGFR1 - PI3K/AKT signaling to enhance Clec10a-mediated intracellular myelin debris processing and promote spinal cord repair.; first-pass row captures microglia/macrophage programmed inflammatory death in rat sci model at abstract/source-title level..',
     'qualitative',
+    'pathway activity / phospho-signaling assay',
     'Lu W 2026 M3A-P032-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after microglia/macrophage programmed inflammatory death with endpoint/readout: Outcome/mechanistic validation row for FGF4 activates FGFR1 - PI3K/AKT signaling to enhance Clec10a-mediated intracellular myelin debris processing and promote spinal cord repair.; first-pass row captures microglia/macrophage programmed inflammatory death in rat sci model at abstract/source-title level..',
     'M3A-P032-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: FGF4 activates FGFR1 - PI3K/AKT signaling to enhance Clec10a-mediated intracellular myelin debris processing and promote spinal cord repair.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P032-E002", "paper_tracker_id": "M3A-P032", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O079"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: FGF4 activates FGFR1 - PI3K/AKT signaling to enhance Clec10a-mediated intracellular myelin debris processing and promote spinal cord repair.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P032-E002", "measurement_method_inference": "pathway activity / phospho-signaling assay", "paper_tracker_id": "M3A-P032", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O079"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4685,18 +4764,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O079', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Gao M 2026 M3A-P033-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for GP130 Regulates Macrophage Polarization and Functional Recovery after Spinal Cord Injury in Rats: A Single-Cell RNA Sequencing Study.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level..',
     'qualitative',
+    'single-cell RNA-seq / cell-state atlas; behavioral / functional recovery assay',
     'Gao M 2026 M3A-P033-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for GP130 Regulates Macrophage Polarization and Functional Recovery after Spinal Cord Injury in Rats: A Single-Cell RNA Sequencing Study.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level..',
     'M3A-P033-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: GP130 Regulates Macrophage Polarization and Functional Recovery after Spinal Cord Injury in Rats: A Single-Cell RNA Sequencing Study.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P033-E002", "paper_tracker_id": "M3A-P033", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O080"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: GP130 Regulates Macrophage Polarization and Functional Recovery after Spinal Cord Injury in Rats: A Single-Cell RNA Sequencing Study.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P033-E002", "measurement_method_inference": "single-cell RNA-seq / cell-state atlas; behavioral / functional recovery assay", "paper_tracker_id": "M3A-P033", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O080"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4710,18 +4790,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O080', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Hu R 2026 M3A-P034-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Temporal regulation of macrophage polarization by abnormally innervated CGRP + Sensory nerves following spinal cord injury.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Hu R 2026 M3A-P034-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Temporal regulation of macrophage polarization by abnormally innervated CGRP + Sensory nerves following spinal cord injury.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level..',
     'M3A-P034-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Temporal regulation of macrophage polarization by abnormally innervated CGRP + Sensory nerves following spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P034-E002", "paper_tracker_id": "M3A-P034", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O081"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Temporal regulation of macrophage polarization by abnormally innervated CGRP + Sensory nerves following spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P034-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P034", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O081"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4735,18 +4816,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O081', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Alhalabi OT 2026 M3A-P035-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Systemic Interleukin-4 Application Promotes Functional Recovery and Reprograms Neuroinflammatory and Molecular Responses after Spinal Cord Injury in Rats.; first-pass row captures macrophage/microglia polarization signaling in human / translational context at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Alhalabi OT 2026 M3A-P035-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Systemic Interleukin-4 Application Promotes Functional Recovery and Reprograms Neuroinflammatory and Molecular Responses after Spinal Cord Injury in Rats.; first-pass row captures macrophage/microglia polarization signaling in human / translational context at abstract/source-title level..',
     'M3A-P035-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Systemic Interleukin-4 Application Promotes Functional Recovery and Reprograms Neuroinflammatory and Molecular Responses after Spinal Cord Injury in Rats.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P035-E002", "paper_tracker_id": "M3A-P035", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O082"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Systemic Interleukin-4 Application Promotes Functional Recovery and Reprograms Neuroinflammatory and Molecular Responses after Spinal Cord Injury in Rats.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P035-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P035", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O082"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4760,18 +4842,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O082', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhao P 2025 M3A-P036-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Omaveloxolone promotes functional recovery of spinal cord injury by reducing inflammatory response and regulating macrophage polarization.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Zhao P 2025 M3A-P036-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Omaveloxolone promotes functional recovery of spinal cord injury by reducing inflammatory response and regulating macrophage polarization.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level..',
     'M3A-P036-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Omaveloxolone promotes functional recovery of spinal cord injury by reducing inflammatory response and regulating macrophage polarization.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P036-E002", "paper_tracker_id": "M3A-P036", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O083"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Omaveloxolone promotes functional recovery of spinal cord injury by reducing inflammatory response and regulating macrophage polarization.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P036-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P036", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O083"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4785,18 +4868,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O083', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Walsh CM 2025 M3A-P037-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after immune-modifying biomaterial or vesicle delivery with endpoint/readout: Outcome/mechanistic validation row for Localised delivery of interleukin-13 from a PLGA microparticle embedded GelMA hydrogel improves functional and histopathological recovery in a mouse contusion spinal cord injury model.; first-pass row captures immune-modifying biomaterial or vesicle delivery in mouse sci model at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Walsh CM 2025 M3A-P037-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after immune-modifying biomaterial or vesicle delivery with endpoint/readout: Outcome/mechanistic validation row for Localised delivery of interleukin-13 from a PLGA microparticle embedded GelMA hydrogel improves functional and histopathological recovery in a mouse contusion spinal cord injury model.; first-pass row captures immune-modifying biomaterial or vesicle delivery in mouse sci model at abstract/source-title level..',
     'M3A-P037-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Localised delivery of interleukin-13 from a PLGA microparticle embedded GelMA hydrogel improves functional and histopathological recovery in a mouse contusion spinal cord injury model.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P037-E002", "paper_tracker_id": "M3A-P037", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T007", "tracker_id": "M3B-O084"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Localised delivery of interleukin-13 from a PLGA microparticle embedded GelMA hydrogel improves functional and histopathological recovery in a mouse contusion spinal cord injury model.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P037-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P037", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T007", "tracker_id": "M3B-O084"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4810,18 +4894,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O084', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Yuan F 2026 M3A-P038-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after immune metabolism / lipid and debris handling with endpoint/readout: Outcome/mechanistic validation row for Neonatal small extracellular vesicle-loaded GelNB hydrogel reprograms the vascular-immune microenvironment for spinal cord injury repair.; first-pass row captures immune metabolism / lipid and debris handling in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Yuan F 2026 M3A-P038-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after immune metabolism / lipid and debris handling with endpoint/readout: Outcome/mechanistic validation row for Neonatal small extracellular vesicle-loaded GelNB hydrogel reprograms the vascular-immune microenvironment for spinal cord injury repair.; first-pass row captures immune metabolism / lipid and debris handling in mouse sci model at abstract/source-title level..',
     'M3A-P038-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Neonatal small extracellular vesicle-loaded GelNB hydrogel reprograms the vascular-immune microenvironment for spinal cord injury repair.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P038-E002", "paper_tracker_id": "M3A-P038", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O085"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Neonatal small extracellular vesicle-loaded GelNB hydrogel reprograms the vascular-immune microenvironment for spinal cord injury repair.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P038-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P038", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O085"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4835,18 +4920,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O085', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Tian Z 2026 M3A-P039-E002 preserves a distinct Experimental SCI model context experiment testing Mechanistic outcome assessment after immune metabolism / lipid and debris handling with endpoint/readout: Outcome/mechanistic validation row for Dual-targeting nanoparticles enhance microglial P2Y12R expression to promote neuronal mitophagy for repairing spinal cord injury.; first-pass row captures immune metabolism / lipid and debris handling in experimental sci model context at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Tian Z 2026 M3A-P039-E002 preserves a distinct Experimental SCI model context experiment testing Mechanistic outcome assessment after immune metabolism / lipid and debris handling with endpoint/readout: Outcome/mechanistic validation row for Dual-targeting nanoparticles enhance microglial P2Y12R expression to promote neuronal mitophagy for repairing spinal cord injury.; first-pass row captures immune metabolism / lipid and debris handling in experimental sci model context at abstract/source-title level..',
     'M3A-P039-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Dual-targeting nanoparticles enhance microglial P2Y12R expression to promote neuronal mitophagy for repairing spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P039-E002", "paper_tracker_id": "M3A-P039", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O086"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Dual-targeting nanoparticles enhance microglial P2Y12R expression to promote neuronal mitophagy for repairing spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P039-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P039", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O086"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4860,18 +4946,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O086', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Deng Y 2026 M3A-P040-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after immune metabolism / lipid and debris handling with endpoint/readout: Outcome/mechanistic validation row for Targeted biohybrid nanoplatform for spinal cord injury treatment: Restoring microglial mitophagy and alleviating oxidative stress.; first-pass row captures immune metabolism / lipid and debris handling in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Deng Y 2026 M3A-P040-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after immune metabolism / lipid and debris handling with endpoint/readout: Outcome/mechanistic validation row for Targeted biohybrid nanoplatform for spinal cord injury treatment: Restoring microglial mitophagy and alleviating oxidative stress.; first-pass row captures immune metabolism / lipid and debris handling in mouse sci model at abstract/source-title level..',
     'M3A-P040-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Targeted biohybrid nanoplatform for spinal cord injury treatment: Restoring microglial mitophagy and alleviating oxidative stress.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P040-E002", "paper_tracker_id": "M3A-P040", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O087"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Targeted biohybrid nanoplatform for spinal cord injury treatment: Restoring microglial mitophagy and alleviating oxidative stress.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P040-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P040", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O087"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4885,18 +4972,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O087', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Lv Y 2026 M3A-P041-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after immune metabolism / lipid and debris handling with endpoint/readout: Outcome/mechanistic validation row for An inflammation-targeted lipid nanoparticle inhibiting ferroptosis for spinal cord injury repair.; first-pass row captures immune metabolism / lipid and debris handling in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Lv Y 2026 M3A-P041-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after immune metabolism / lipid and debris handling with endpoint/readout: Outcome/mechanistic validation row for An inflammation-targeted lipid nanoparticle inhibiting ferroptosis for spinal cord injury repair.; first-pass row captures immune metabolism / lipid and debris handling in mouse sci model at abstract/source-title level..',
     'M3A-P041-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: An inflammation-targeted lipid nanoparticle inhibiting ferroptosis for spinal cord injury repair.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P041-E002", "paper_tracker_id": "M3A-P041", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O088"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: An inflammation-targeted lipid nanoparticle inhibiting ferroptosis for spinal cord injury repair.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P041-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P041", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O088"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4910,18 +4998,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O088', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Dong H 2025 M3A-P042-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after immune metabolism / lipid and debris handling with endpoint/readout: Outcome/mechanistic validation row for Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.; first-pass row captures immune metabolism / lipid and debris handling in rat sci model at abstract/source-title level..',
     'qualitative',
+    'single-cell RNA-seq / cell-state atlas; spatial transcriptomics / spatial atlas',
     'Dong H 2025 M3A-P042-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after immune metabolism / lipid and debris handling with endpoint/readout: Outcome/mechanistic validation row for Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.; first-pass row captures immune metabolism / lipid and debris handling in rat sci model at abstract/source-title level..',
     'M3A-P042-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P042-E002", "paper_tracker_id": "M3A-P042", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O089"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P042-E002", "measurement_method_inference": "single-cell RNA-seq / cell-state atlas; spatial transcriptomics / spatial atlas", "paper_tracker_id": "M3A-P042", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T005", "tracker_id": "M3B-O089"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4935,18 +5024,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O089', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Wang Y 2026 M3A-P043-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Midkine Overexpression Promotes Functional Recovery After Spinal Cord Injury by Enhancing Microglial Efferocytosis Via LRP-1.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Wang Y 2026 M3A-P043-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for Midkine Overexpression Promotes Functional Recovery After Spinal Cord Injury by Enhancing Microglial Efferocytosis Via LRP-1.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level..',
     'M3A-P043-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Midkine Overexpression Promotes Functional Recovery After Spinal Cord Injury by Enhancing Microglial Efferocytosis Via LRP-1.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P043-E002", "paper_tracker_id": "M3A-P043", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O090"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Midkine Overexpression Promotes Functional Recovery After Spinal Cord Injury by Enhancing Microglial Efferocytosis Via LRP-1.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P043-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P043", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O090"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4960,18 +5050,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O090', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Tian X 2026 M3A-P044-E002 preserves a distinct Zebrafish SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for A reparative neutrophil subpopulation accelerates spinal cord regeneration in zebrafish by controlling macrophage inflammation via Il-4.; first-pass row captures macrophage/microglia polarization signaling in zebrafish sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Tian X 2026 M3A-P044-E002 preserves a distinct Zebrafish SCI model experiment testing Mechanistic outcome assessment after macrophage/microglia polarization signaling with endpoint/readout: Outcome/mechanistic validation row for A reparative neutrophil subpopulation accelerates spinal cord regeneration in zebrafish by controlling macrophage inflammation via Il-4.; first-pass row captures macrophage/microglia polarization signaling in zebrafish sci model at abstract/source-title level..',
     'M3A-P044-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: A reparative neutrophil subpopulation accelerates spinal cord regeneration in zebrafish by controlling macrophage inflammation via Il-4.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P044-E002", "paper_tracker_id": "M3A-P044", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O091"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: A reparative neutrophil subpopulation accelerates spinal cord regeneration in zebrafish by controlling macrophage inflammation via Il-4.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P044-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P044", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T003", "tracker_id": "M3B-O091"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4985,18 +5076,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O091', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Li G 2026 M3A-P045-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after macrophage-fibrotic scar interaction with endpoint/readout: Outcome/mechanistic validation row for Profibrotic macrophage-derived CXCL4 promotes pericyte-to-myofibroblast transition after spinal cord injury.; first-pass row captures macrophage-fibrotic scar interaction in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Li G 2026 M3A-P045-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after macrophage-fibrotic scar interaction with endpoint/readout: Outcome/mechanistic validation row for Profibrotic macrophage-derived CXCL4 promotes pericyte-to-myofibroblast transition after spinal cord injury.; first-pass row captures macrophage-fibrotic scar interaction in mouse sci model at abstract/source-title level..',
     'M3A-P045-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Profibrotic macrophage-derived CXCL4 promotes pericyte-to-myofibroblast transition after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P045-E002", "paper_tracker_id": "M3A-P045", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T002", "tracker_id": "M3B-O092"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Profibrotic macrophage-derived CXCL4 promotes pericyte-to-myofibroblast transition after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P045-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P045", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T002", "tracker_id": "M3B-O092"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5010,18 +5102,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O092', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Pan D 2026 M3A-P046-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after macrophage-fibrotic scar interaction with endpoint/readout: Outcome/mechanistic validation row for TGF--induced fibrotic scar formation limits recovery of spinal cord injury.; first-pass row captures macrophage-fibrotic scar interaction in mouse sci model at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Pan D 2026 M3A-P046-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after macrophage-fibrotic scar interaction with endpoint/readout: Outcome/mechanistic validation row for TGF--induced fibrotic scar formation limits recovery of spinal cord injury.; first-pass row captures macrophage-fibrotic scar interaction in mouse sci model at abstract/source-title level..',
     'M3A-P046-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: TGF--induced fibrotic scar formation limits recovery of spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P046-E002", "paper_tracker_id": "M3A-P046", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T002", "tracker_id": "M3B-O093"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: TGF--induced fibrotic scar formation limits recovery of spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P046-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M3A-P046", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T002", "tracker_id": "M3B-O093"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5035,18 +5128,19 @@ INSERT INTO _m3_observation_map (tracker_id, observation_id) SELECT 'M3B-O093', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Lei H 2026 M3A-P047-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after neutrophil or macrophage extracellular-trap axis with endpoint/readout: Outcome/mechanistic validation row for Olfactory ensheathing cell transplantation targets macrophage extracellular traps and NKCC1 to alleviate pain after spinal cord injury.; first-pass row captures neutrophil or macrophage extracellular-trap axis in rat sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Lei H 2026 M3A-P047-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after neutrophil or macrophage extracellular-trap axis with endpoint/readout: Outcome/mechanistic validation row for Olfactory ensheathing cell transplantation targets macrophage extracellular traps and NKCC1 to alleviate pain after spinal cord injury.; first-pass row captures neutrophil or macrophage extracellular-trap axis in rat sci model at abstract/source-title level..',
     'M3A-P047-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Olfactory ensheathing cell transplantation targets macrophage extracellular traps and NKCC1 to alleviate pain after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P047-E002", "paper_tracker_id": "M3A-P047", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T008", "tracker_id": "M3B-O094"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Olfactory ensheathing cell transplantation targets macrophage extracellular traps and NKCC1 to alleviate pain after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M3A-P047-E002", "measurement_method_inference": null, "paper_tracker_id": "M3A-P047", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M3B-T008", "tracker_id": "M3B-O094"}'
   FROM _m3_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot

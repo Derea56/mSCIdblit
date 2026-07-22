@@ -2704,18 +2704,19 @@ INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VA
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Lu P 2007 contributes axon regeneration through chronic scar/graft evidence in rat, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Lu P 2007 contributes axon regeneration through chronic scar/graft evidence in rat, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'lu p 2007 contributes axon regeneration through chronic scar/graft evidence in rat, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Axon regeneration through scars and into sites of chronic spinal cord injury. Note: Chronic scar axon-regeneration anchor.", "experiment_tracker_id": "M5A-P001-E001", "paper_tracker_id": "M5A-P001", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O001"}'
+    '{"curator_notes": "Primary title: Axon regeneration through scars and into sites of chronic spinal cord injury. Note: Chronic scar axon-regeneration anchor.", "experiment_tracker_id": "M5A-P001-E001", "measurement_method_inference": null, "paper_tracker_id": "M5A-P001", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O001"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2729,18 +2730,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O001', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Dias DO 2018 contributes cst/rst regeneration after scar attenuation evidence in mouse, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Dias DO 2018 contributes cst/rst regeneration after scar attenuation evidence in mouse, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'dias do 2018 contributes cst/rst regeneration after scar attenuation evidence in mouse, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Reducing Pericyte-Derived Scarring Promotes Recovery after Spinal Cord Injury. Note: Axon regeneration with scar-modulation anchor.", "experiment_tracker_id": "M5A-P002-E001", "paper_tracker_id": "M5A-P002", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O002"}'
+    '{"curator_notes": "Primary title: Reducing Pericyte-Derived Scarring Promotes Recovery after Spinal Cord Injury. Note: Axon regeneration with scar-modulation anchor.", "experiment_tracker_id": "M5A-P002-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P002", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O002"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2754,18 +2756,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O002', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'McCallum S 2026 contributes lesion-remote white matter repair evidence in mouse, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'McCallum S 2026 contributes lesion-remote white matter repair evidence in mouse, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'mccallum s 2026 contributes lesion-remote white matter repair evidence in mouse, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Lesion-remote astrocytes govern microglia-mediated white matter repair. Note: White matter repair anchor.", "experiment_tracker_id": "M5A-P003-E001", "paper_tracker_id": "M5A-P003", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O003"}'
+    '{"curator_notes": "Primary title: Lesion-remote astrocytes govern microglia-mediated white matter repair. Note: White matter repair anchor.", "experiment_tracker_id": "M5A-P003-E001", "measurement_method_inference": null, "paper_tracker_id": "M5A-P003", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O003"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2779,18 +2782,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O003', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Grumbles RM 2017 contributes ventral-root axon loss/remyelination pathology evidence in human, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'immunostaining / histology / pathology',
     'Grumbles RM 2017 contributes ventral-root axon loss/remyelination pathology evidence in human, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'grumbles rm 2017 contributes ventral-root axon loss/remyelination pathology evidence in human, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Motoneuron Death after Human Spinal Cord Injury. Note: Human remyelination/pathology bridge.", "experiment_tracker_id": "M5A-P004-E001", "paper_tracker_id": "M5A-P004", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O004"}'
+    '{"curator_notes": "Primary title: Motoneuron Death after Human Spinal Cord Injury. Note: Human remyelination/pathology bridge.", "experiment_tracker_id": "M5A-P004-E001", "measurement_method_inference": "immunostaining / histology / pathology", "paper_tracker_id": "M5A-P004", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O004"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2804,18 +2808,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O004', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Han Q 2020 contributes axonal regeneration / cellular energetics evidence in rodent model context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Han Q 2020 contributes axonal regeneration / cellular energetics evidence in rodent model context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'han q 2020 contributes axonal regeneration / cellular energetics evidence in rodent model context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Restoring Cellular Energetics Promotes Axonal Regeneration and Functional Recovery after Spinal Cord Injury. Note: Metabolic mechanism anchor.", "experiment_tracker_id": "M5A-P005-E001", "paper_tracker_id": "M5A-P005", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T005", "tracker_id": "M5B-O005"}'
+    '{"curator_notes": "Primary title: Restoring Cellular Energetics Promotes Axonal Regeneration and Functional Recovery after Spinal Cord Injury. Note: Metabolic mechanism anchor.", "experiment_tracker_id": "M5A-P005-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P005", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T005", "tracker_id": "M5B-O005"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2829,18 +2834,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O005', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Fry EJ 2010 contributes cst regeneration / receptor ptp sigma evidence in mouse, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'genetic perturbation / knockdown assay; behavioral / functional recovery assay',
     'Fry EJ 2010 contributes cst regeneration / receptor ptp sigma evidence in mouse, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'fry ej 2010 contributes cst regeneration / receptor ptp sigma evidence in mouse, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Corticospinal tract regeneration after spinal cord injury in receptor protein tyrosine phosphatase sigma deficient mice. Note: CSPG-receptor pathway anchor.", "experiment_tracker_id": "M5A-P006-E001", "paper_tracker_id": "M5A-P006", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O006"}'
+    '{"curator_notes": "Primary title: Corticospinal tract regeneration after spinal cord injury in receptor protein tyrosine phosphatase sigma deficient mice. Note: CSPG-receptor pathway anchor.", "experiment_tracker_id": "M5A-P006-E001", "measurement_method_inference": "genetic perturbation / knockdown assay; behavioral / functional recovery assay", "paper_tracker_id": "M5A-P006", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O006"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2854,18 +2860,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O006', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Kadoya K 2016 contributes neural graft-enabled cst regeneration evidence in rat, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Kadoya K 2016 contributes neural graft-enabled cst regeneration evidence in rat, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'kadoya k 2016 contributes neural graft-enabled cst regeneration evidence in rat, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Spinal cord reconstitution with homologous neural grafts enables robust corticospinal regeneration. Note: Graft-regeneration bridge to Module 4A.", "experiment_tracker_id": "M5A-P007-E001", "paper_tracker_id": "M5A-P007", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O007"}'
+    '{"curator_notes": "Primary title: Spinal cord reconstitution with homologous neural grafts enables robust corticospinal regeneration. Note: Graft-regeneration bridge to Module 4A.", "experiment_tracker_id": "M5A-P007-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P007", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O007"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2879,18 +2886,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O007', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Poplawski GHD 2020 contributes intrinsic neuronal growth state evidence in mouse, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'qPCR / RT-PCR / mRNA assay',
     'Poplawski GHD 2020 contributes intrinsic neuronal growth state evidence in mouse, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'poplawski ghd 2020 contributes intrinsic neuronal growth state evidence in mouse, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Injured adult neurons regress to an embryonic transcriptional growth state. Note: Transcriptional growth-state anchor.", "experiment_tracker_id": "M5A-P008-E001", "paper_tracker_id": "M5A-P008", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T005", "tracker_id": "M5B-O008"}'
+    '{"curator_notes": "Primary title: Injured adult neurons regress to an embryonic transcriptional growth state. Note: Transcriptional growth-state anchor.", "experiment_tracker_id": "M5A-P008-E001", "measurement_method_inference": "qPCR / RT-PCR / mRNA assay", "paper_tracker_id": "M5A-P008", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T005", "tracker_id": "M5B-O008"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2904,18 +2912,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O008', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Boato F 2023 contributes cst sprouting/regeneration evidence in rodent model context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Boato F 2023 contributes cst sprouting/regeneration evidence in rodent model context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'boato f 2023 contributes cst sprouting/regeneration evidence in rodent model context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Activation of MAP2K signaling by genetic engineering or HF-rTMS promotes corticospinal axon sprouting and functional regeneration. Note: Stimulation/signaling intervention anchor.", "experiment_tracker_id": "M5A-P009-E001", "paper_tracker_id": "M5A-P009", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O009"}'
+    '{"curator_notes": "Primary title: Activation of MAP2K signaling by genetic engineering or HF-rTMS promotes corticospinal axon sprouting and functional regeneration. Note: Stimulation/signaling intervention anchor.", "experiment_tracker_id": "M5A-P009-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P009", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O009"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2929,18 +2938,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O009', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ma YH 2025 contributes corticospinal tract regeneration / sprouting evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Ma YH 2025 contributes corticospinal tract regeneration / sprouting evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'ma yh 2025 contributes corticospinal tract regeneration / sprouting evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Transcranial Optogenetic Stimulation Promotes Corticospinal Tract Axon Regeneration to Repair Spinal Cord Injury by Activating the JAK2/STAT3 Pathway.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P010-E001", "paper_tracker_id": "M5A-P010", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O010"}'
+    '{"curator_notes": "Primary title: Transcranial Optogenetic Stimulation Promotes Corticospinal Tract Axon Regeneration to Repair Spinal Cord Injury by Activating the JAK2/STAT3 Pathway.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P010-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P010", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O010"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2954,18 +2964,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O010', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Chen W 2024 contributes corticospinal tract regeneration / sprouting evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Chen W 2024 contributes corticospinal tract regeneration / sprouting evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'chen w 2024 contributes corticospinal tract regeneration / sprouting evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Lipin1 depletion coordinates neuronal signaling pathways to promote motor and sensory axon regeneration after spinal cord injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P011-E001", "paper_tracker_id": "M5A-P011", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T005", "tracker_id": "M5B-O011"}'
+    '{"curator_notes": "Primary title: Lipin1 depletion coordinates neuronal signaling pathways to promote motor and sensory axon regeneration after spinal cord injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P011-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P011", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T005", "tracker_id": "M5B-O011"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2979,18 +2990,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O011', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Hu M 2024 contributes activity or stimulation-enabled axon repair evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Hu M 2024 contributes activity or stimulation-enabled axon repair evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'hu m 2024 contributes activity or stimulation-enabled axon repair evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Effects of transcranial magnetic stimulation on axonal regeneration in the corticospinal tract of female rats with spinal cord injury.. Note: TMS corticospinal regeneration anchor.", "experiment_tracker_id": "M5A-P012-E001", "paper_tracker_id": "M5A-P012", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O012"}'
+    '{"curator_notes": "Primary title: Effects of transcranial magnetic stimulation on axonal regeneration in the corticospinal tract of female rats with spinal cord injury.. Note: TMS corticospinal regeneration anchor.", "experiment_tracker_id": "M5A-P012-E001", "measurement_method_inference": null, "paper_tracker_id": "M5A-P012", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O012"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3004,18 +3016,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O012', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Higuchi K 2024 contributes corticospinal tract regeneration / sprouting evidence in experimental sci model context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Higuchi K 2024 contributes corticospinal tract regeneration / sprouting evidence in experimental sci model context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'higuchi k 2024 contributes corticospinal tract regeneration / sprouting evidence in experimental sci model context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Synaptotagmin 4 Supports Spontaneous Axon Sprouting after Spinal Cord Injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P013-E001", "paper_tracker_id": "M5A-P013", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O013"}'
+    '{"curator_notes": "Primary title: Synaptotagmin 4 Supports Spontaneous Axon Sprouting after Spinal Cord Injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P013-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P013", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O013"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3029,18 +3042,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O013', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Sun W 2020 contributes corticospinal tract regeneration / sprouting evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Sun W 2020 contributes corticospinal tract regeneration / sprouting evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'sun w 2020 contributes corticospinal tract regeneration / sprouting evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Gabapentinoid treatment promotes corticospinal plasticity and regeneration following murine spinal cord injury.. Note: Gabapentinoid CST plasticity anchor.", "experiment_tracker_id": "M5A-P014-E001", "paper_tracker_id": "M5A-P014", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O014"}'
+    '{"curator_notes": "Primary title: Gabapentinoid treatment promotes corticospinal plasticity and regeneration following murine spinal cord injury.. Note: Gabapentinoid CST plasticity anchor.", "experiment_tracker_id": "M5A-P014-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P014", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O014"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3054,18 +3068,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O014', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Stepankova K 2025 contributes extrinsic inhibitory matrix / guidance pathway evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Stepankova K 2025 contributes extrinsic inhibitory matrix / guidance pathway evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'stepankova k 2025 contributes extrinsic inhibitory matrix / guidance pathway evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Activated alpha 9 integrin expression enables sensory pathway reconstruction after spinal cord injury.. Note: Extrinsic inhibitory matrix / guidance pathway anchor.", "experiment_tracker_id": "M5A-P015-E001", "paper_tracker_id": "M5A-P015", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T002", "tracker_id": "M5B-O015"}'
+    '{"curator_notes": "Primary title: Activated alpha 9 integrin expression enables sensory pathway reconstruction after spinal cord injury.. Note: Extrinsic inhibitory matrix / guidance pathway anchor.", "experiment_tracker_id": "M5A-P015-E001", "measurement_method_inference": null, "paper_tracker_id": "M5A-P015", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T002", "tracker_id": "M5B-O015"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3079,18 +3094,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O015', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Takatani H 2025 contributes corticospinal tract regeneration / sprouting evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Takatani H 2025 contributes corticospinal tract regeneration / sprouting evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'takatani h 2025 contributes corticospinal tract regeneration / sprouting evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Modulation of Extrinsic and Intrinsic Signaling Together with Neuronal Activation Enhances Forelimb Motor Recovery after Cervical Spinal Cord Injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P016-E001", "paper_tracker_id": "M5A-P016", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O016"}'
+    '{"curator_notes": "Primary title: Modulation of Extrinsic and Intrinsic Signaling Together with Neuronal Activation Enhances Forelimb Motor Recovery after Cervical Spinal Cord Injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P016-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P016", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O016"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3104,18 +3120,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O016', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'van Niekerk EA 2025 contributes corticospinal tract regeneration / sprouting evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'van Niekerk EA 2025 contributes corticospinal tract regeneration / sprouting evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'van niekerk ea 2025 contributes corticospinal tract regeneration / sprouting evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Thiorphan reprograms neurons to promote functional recovery after spinal cord injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P017-E001", "paper_tracker_id": "M5A-P017", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O017"}'
+    '{"curator_notes": "Primary title: Thiorphan reprograms neurons to promote functional recovery after spinal cord injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P017-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P017", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T001", "tracker_id": "M5B-O017"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3129,18 +3146,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O017', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'TTBK2 was manipulated in spinal neurons in vitro and in conditional knockout mice after spinal cord hemisection; behavioral assays, immunofluorescence, and BDA tracing showed that intact TTBK2/primary-cilium activity supports neuronal survival, axonal regeneration, and circuit reorganization after SCI.',
     'qualitative',
+    'qPCR / RT-PCR / mRNA assay; bulk transcriptomics / GEO dataset; immunostaining / histology / pathology; genetic perturbation / knockdown assay',
     'TTBK2 was manipulated in spinal neurons in vitro and in conditional knockout mice after spinal cord hemisection; behavioral assays, immunofluorescence, and BDA tracing showed that intact TTBK2/primary-cilium activity supports neuronal survival, axonal regeneration, and circuit reorganization after SCI.',
     'TTBK2-driven ciliogenesis supports intrinsic neuronal regeneration and circuit repair after SCI',
     'Full text / PMC',
     'Full text / PMC12831131',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41578860; preserves intrinsic-growth/ciliogenesis boundary.", "experiment_tracker_id": "M5A-P018-E001", "paper_tracker_id": "M5A-P018", "quantitative": "YES", "statistics_reported": "Full text reports in vitro overexpression/knockdown, RNA-seq/RT-qPCR, conditional knockout, behavior, immunofluorescence, and BDA tracing", "topic_id": "M5B-T005", "tracker_id": "M5B-O018"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41578860; preserves intrinsic-growth/ciliogenesis boundary.", "experiment_tracker_id": "M5A-P018-E001", "measurement_method_inference": "qPCR / RT-PCR / mRNA assay; bulk transcriptomics / GEO dataset; immunostaining / histology / pathology; genetic perturbation / knockdown assay", "paper_tracker_id": "M5A-P018", "quantitative": "YES", "statistics_reported": "Full text reports in vitro overexpression/knockdown, RNA-seq/RT-qPCR, conditional knockout, behavior, immunofluorescence, and BDA tracing", "topic_id": "M5B-T005", "tracker_id": "M5B-O018"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3154,18 +3172,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O018', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Attwell CL 2025 contributes intrinsic neuronal growth competence evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Attwell CL 2025 contributes intrinsic neuronal growth competence evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'attwell cl 2025 contributes intrinsic neuronal growth competence evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: The transcription factor combination MEF2 and KLF7 promotes axonal sprouting in the injured spinal cord with functional improvement and regeneration-associated gene expression.. Note: Intrinsic neuronal growth competence anchor.", "experiment_tracker_id": "M5A-P019-E001", "paper_tracker_id": "M5A-P019", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T005", "tracker_id": "M5B-O019"}'
+    '{"curator_notes": "Primary title: The transcription factor combination MEF2 and KLF7 promotes axonal sprouting in the injured spinal cord with functional improvement and regeneration-associated gene expression.. Note: Intrinsic neuronal growth competence anchor.", "experiment_tracker_id": "M5A-P019-E001", "measurement_method_inference": null, "paper_tracker_id": "M5A-P019", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T005", "tracker_id": "M5B-O019"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3179,18 +3198,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O019', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Martinez-Rojas B 2025 contributes corticospinal tract regeneration / sprouting evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Martinez-Rojas B 2025 contributes corticospinal tract regeneration / sprouting evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'martinez-rojas b 2025 contributes corticospinal tract regeneration / sprouting evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Stimulation of corticospinal neurons by optogenetic cAMP inductions promotes motor recovery after spinal cord injury in female rats via raphespinal tract modulation.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P020-E001", "paper_tracker_id": "M5A-P020", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O020"}'
+    '{"curator_notes": "Primary title: Stimulation of corticospinal neurons by optogenetic cAMP inductions promotes motor recovery after spinal cord injury in female rats via raphespinal tract modulation.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P020-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P020", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O020"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3204,18 +3224,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O020', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ji Z 2025 contributes corticospinal tract regeneration / sprouting evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Ji Z 2025 contributes corticospinal tract regeneration / sprouting evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'ji z 2025 contributes corticospinal tract regeneration / sprouting evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Precise rewiring of corticospinal axons and spinal interneurons via near-infrared optogenetics for spinal cord injury treatment.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P021-E001", "paper_tracker_id": "M5A-P021", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O021"}'
+    '{"curator_notes": "Primary title: Precise rewiring of corticospinal axons and spinal interneurons via near-infrared optogenetics for spinal cord injury treatment.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P021-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P021", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O021"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3229,18 +3250,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O021', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'In a rat high-severity chronic SCI model at Th10-Th11, Netrin-1 delivery to the lesion epicenter promoted recovery of hindlimb joint movement plus partial climbing/grasping and was associated with CST regrowth/sprouting/remyelination, extrapyramidal and serotonergic/dopaminergic axon reconnection, lower motoneuron preservation, and sensory-pathway neuroprotection.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'In a rat high-severity chronic SCI model at Th10-Th11, Netrin-1 delivery to the lesion epicenter promoted recovery of hindlimb joint movement plus partial climbing/grasping and was associated with CST regrowth/sprouting/remyelination, extrapyramidal and serotonergic/dopaminergic axon reconnection, lower motoneuron preservation, and sensory-pathway neuroprotection.',
     'Netrin-1 promotes functional and anatomical repair signals in high-severity chronic rat SCI',
     'PubMed abstract',
     'PubMed abstract verified',
     'medium',
-    '{"curator_notes": "Source-verified but not full-text upgraded; PMID 41163574.", "experiment_tracker_id": "M5A-P022-E001", "paper_tracker_id": "M5A-P022", "quantitative": "YES", "statistics_reported": "PubMed abstract reports functional and anatomical endpoints; open full text not identified in metadata batch", "topic_id": "M5B-T002", "tracker_id": "M5B-O022"}'
+    '{"curator_notes": "Source-verified but not full-text upgraded; PMID 41163574.", "experiment_tracker_id": "M5A-P022-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P022", "quantitative": "YES", "statistics_reported": "PubMed abstract reports functional and anatomical endpoints; open full text not identified in metadata batch", "topic_id": "M5B-T002", "tracker_id": "M5B-O022"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3254,18 +3276,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O022', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zheng ML 2025 contributes extrinsic inhibitory matrix / guidance pathway evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Zheng ML 2025 contributes extrinsic inhibitory matrix / guidance pathway evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'zheng ml 2025 contributes extrinsic inhibitory matrix / guidance pathway evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Lentivirus-mediated overexpression of netrin-1/DCC co-expression promotes axonal regeneration and functional recovery in spinal cord injury via the inhibition of the NgR1-RhoA-ROCK signaling pathway.. Note: Extrinsic inhibitory matrix / guidance pathway anchor.", "experiment_tracker_id": "M5A-P023-E001", "paper_tracker_id": "M5A-P023", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T002", "tracker_id": "M5B-O023"}'
+    '{"curator_notes": "Primary title: Lentivirus-mediated overexpression of netrin-1/DCC co-expression promotes axonal regeneration and functional recovery in spinal cord injury via the inhibition of the NgR1-RhoA-ROCK signaling pathway.. Note: Extrinsic inhibitory matrix / guidance pathway anchor.", "experiment_tracker_id": "M5A-P023-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P023", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T002", "tracker_id": "M5B-O023"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3279,18 +3302,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O023', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'CSPGs were identified as regulators of chronic scar maturation through a pro-inflammatory microglia-astrocyte axis; targeted CSPG degradation reprogrammed microglia toward an anti-inflammatory state and attenuated scar-forming astrocyte differentiation and fibrotic matrix deposition.',
     'qualitative',
+    NULL,
     'CSPGs were identified as regulators of chronic scar maturation through a pro-inflammatory microglia-astrocyte axis; targeted CSPG degradation reprogrammed microglia toward an anti-inflammatory state and attenuated scar-forming astrocyte differentiation and fibrotic matrix deposition.',
     'CSPG degradation can alter microglia-astrocyte scar crosstalk and reduce fibrotic scar maturation',
     'Full text / PMC',
     'Full text / PMC12866793',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41221600; cross-tags Module 3 immune-glial scar boundary.", "experiment_tracker_id": "M5A-P024-E001", "paper_tracker_id": "M5A-P024", "quantitative": "YES", "statistics_reported": "Full text reports CSPG-driven microglial inflammatory signaling, astrocyte scar transition, ChABC-based intervention, and matrix/scar endpoints", "topic_id": "M5B-T002", "tracker_id": "M5B-O024"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41221600; cross-tags Module 3 immune-glial scar boundary.", "experiment_tracker_id": "M5A-P024-E001", "measurement_method_inference": null, "paper_tracker_id": "M5A-P024", "quantitative": "YES", "statistics_reported": "Full text reports CSPG-driven microglial inflammatory signaling, astrocyte scar transition, ChABC-based intervention, and matrix/scar endpoints", "topic_id": "M5B-T002", "tracker_id": "M5B-O024"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3304,18 +3328,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O024', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Qu W 2025 contributes serotonergic/propriospinal relay plasticity evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Qu W 2025 contributes serotonergic/propriospinal relay plasticity evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qu w 2025 contributes serotonergic/propriospinal relay plasticity evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Chondroitinase ABC combined with Schwann cell transplantation enhances restoration of neural connection and functional recovery following acute and chronic spinal cord injury.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P025-E001", "paper_tracker_id": "M5A-P025", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O025"}'
+    '{"curator_notes": "Primary title: Chondroitinase ABC combined with Schwann cell transplantation enhances restoration of neural connection and functional recovery following acute and chronic spinal cord injury.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P025-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P025", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O025"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3329,18 +3354,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O025', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhu S 2024 contributes extrinsic inhibitory matrix / guidance pathway evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Zhu S 2024 contributes extrinsic inhibitory matrix / guidance pathway evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'zhu s 2024 contributes extrinsic inhibitory matrix / guidance pathway evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Schwann Cell-Derived Exosomes Induced Axon Growth after Spinal Cord Injury by Decreasing PTP- Activation on CSPGs via the Rho/ROCK Pathway.. Note: Extrinsic inhibitory matrix / guidance pathway anchor.", "experiment_tracker_id": "M5A-P026-E001", "paper_tracker_id": "M5A-P026", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T002", "tracker_id": "M5B-O026"}'
+    '{"curator_notes": "Primary title: Schwann Cell-Derived Exosomes Induced Axon Growth after Spinal Cord Injury by Decreasing PTP- Activation on CSPGs via the Rho/ROCK Pathway.. Note: Extrinsic inhibitory matrix / guidance pathway anchor.", "experiment_tracker_id": "M5A-P026-E001", "measurement_method_inference": null, "paper_tracker_id": "M5A-P026", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T002", "tracker_id": "M5B-O026"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3354,18 +3380,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O026', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'In 106 participants with acute cervical SCI from the phase 2b NISCI trial, anti-Nogo-A NG101 treatment was associated with faster lesion-volume reduction and slower decline of cord area and tract-specific MTsat in corticospinal tracts and dorsal columns relative to placebo.',
     'qualitative',
+    'MRI / imaging assay; behavioral / functional recovery assay',
     'In 106 participants with acute cervical SCI from the phase 2b NISCI trial, anti-Nogo-A NG101 treatment was associated with faster lesion-volume reduction and slower decline of cord area and tract-specific MTsat in corticospinal tracts and dorsal columns relative to placebo.',
     'NG101 anti-Nogo-A treatment modifies human cervical SCI MRI macro/microstructure biomarkers',
     'Full text / PMC',
     'Full text / PMC13168246',
     'high',
-    '{"curator_notes": "Human trial imaging biomarker row; interpret as structural biomarker evidence, not direct axon-regrowth proof.", "experiment_tracker_id": "M5A-P027-E001", "paper_tracker_id": "M5A-P027", "quantitative": "YES", "statistics_reported": "Full text reports trial MRI biomarkers including lesion volume, tissue bridges, CSA, and tract-specific MTsat over six months", "topic_id": "M5B-T002", "tracker_id": "M5B-O027"}'
+    '{"curator_notes": "Human trial imaging biomarker row; interpret as structural biomarker evidence, not direct axon-regrowth proof.", "experiment_tracker_id": "M5A-P027-E001", "measurement_method_inference": "MRI / imaging assay; behavioral / functional recovery assay", "paper_tracker_id": "M5A-P027", "quantitative": "YES", "statistics_reported": "Full text reports trial MRI biomarkers including lesion volume, tissue bridges, CSA, and tract-specific MTsat over six months", "topic_id": "M5B-T002", "tracker_id": "M5B-O027"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3379,18 +3406,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O027', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Nori S 2018 contributes remyelination / white matter repair evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Nori S 2018 contributes remyelination / white matter repair evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'nori s 2018 contributes remyelination / white matter repair evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Human Oligodendrogenic Neural Progenitor Cells Delivered with Chondroitinase ABC Facilitate Functional Repair of Chronic Spinal Cord Injury.. Note: Remyelination / white matter repair anchor.", "experiment_tracker_id": "M5A-P028-E001", "paper_tracker_id": "M5A-P028", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O028"}'
+    '{"curator_notes": "Primary title: Human Oligodendrogenic Neural Progenitor Cells Delivered with Chondroitinase ABC Facilitate Functional Repair of Chronic Spinal Cord Injury.. Note: Remyelination / white matter repair anchor.", "experiment_tracker_id": "M5A-P028-E001", "measurement_method_inference": null, "paper_tracker_id": "M5A-P028", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O028"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3404,18 +3432,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O028', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'In female mouse spinal cord crush injury, TREM2 deletion and COG1410 activation experiments showed that TREM2 promotes myelin-debris clearance and disease-associated microglia activation but can also exacerbate chronic inflammation and fibrosis after SCI.',
     'qualitative',
+    NULL,
     'In female mouse spinal cord crush injury, TREM2 deletion and COG1410 activation experiments showed that TREM2 promotes myelin-debris clearance and disease-associated microglia activation but can also exacerbate chronic inflammation and fibrosis after SCI.',
     'TREM2 links myelin debris clearance to a repair-versus-fibrosis tradeoff after SCI',
     'Full text / PMC',
     'Full text / PMC12884443',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41660680; preserves contradiction boundary.", "experiment_tracker_id": "M5A-P029-E001", "paper_tracker_id": "M5A-P029", "quantitative": "YES", "statistics_reported": "Full text reports TREM2 expression, phagocytosis, foamy macrophages, DAM activation, axon regeneration, neuronal survival, BMS, and footprint outcomes", "topic_id": "M5B-T003", "tracker_id": "M5B-O029"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41660680; preserves contradiction boundary.", "experiment_tracker_id": "M5A-P029-E001", "measurement_method_inference": null, "paper_tracker_id": "M5A-P029", "quantitative": "YES", "statistics_reported": "Full text reports TREM2 expression, phagocytosis, foamy macrophages, DAM activation, axon regeneration, neuronal survival, BMS, and footprint outcomes", "topic_id": "M5B-T003", "tracker_id": "M5B-O029"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3429,18 +3458,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O029', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Multiple transcriptional profiling methods after traumatic mouse SCI identified lesion-remote astrocyte states in degenerating white matter that direct local microglia to clear lipid-rich myelin debris and promote tissue repair.',
     'qualitative',
+    'qPCR / RT-PCR / mRNA assay',
     'Multiple transcriptional profiling methods after traumatic mouse SCI identified lesion-remote astrocyte states in degenerating white matter that direct local microglia to clear lipid-rich myelin debris and promote tissue repair.',
     'lesion-remote astrocytes govern microglia-mediated white matter repair after SCI',
     'Full text / PMC',
     'Full text / PMC12823418',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41407858; cross-links Module 3 immune-glial state.", "experiment_tracker_id": "M5A-P030-E001", "paper_tracker_id": "M5A-P030", "quantitative": "YES", "statistics_reported": "Full text reports LRA transcriptional states, astrocyte-specific perturbation, microglial lipid-debris clearance, and white matter repair outcomes", "topic_id": "M5B-T003", "tracker_id": "M5B-O030"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41407858; cross-links Module 3 immune-glial state.", "experiment_tracker_id": "M5A-P030-E001", "measurement_method_inference": "qPCR / RT-PCR / mRNA assay", "paper_tracker_id": "M5A-P030", "quantitative": "YES", "statistics_reported": "Full text reports LRA transcriptional states, astrocyte-specific perturbation, microglial lipid-debris clearance, and white matter repair outcomes", "topic_id": "M5B-T003", "tracker_id": "M5B-O030"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3454,18 +3484,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O030', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Manesh SB 2025 contributes remyelination / white matter repair evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'genetic perturbation / knockdown assay',
     'Manesh SB 2025 contributes remyelination / white matter repair evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'manesh sb 2025 contributes remyelination / white matter repair evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Compensatory changes after spinal cord injury in a remyelination deficient mouse model.. Note: Remyelination / white matter repair anchor.", "experiment_tracker_id": "M5A-P031-E001", "paper_tracker_id": "M5A-P031", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O031"}'
+    '{"curator_notes": "Primary title: Compensatory changes after spinal cord injury in a remyelination deficient mouse model.. Note: Remyelination / white matter repair anchor.", "experiment_tracker_id": "M5A-P031-E001", "measurement_method_inference": "genetic perturbation / knockdown assay", "paper_tracker_id": "M5A-P031", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O031"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3479,18 +3510,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O031', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhou Y 2025 contributes remyelination / white matter repair evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Zhou Y 2025 contributes remyelination / white matter repair evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'zhou y 2025 contributes remyelination / white matter repair evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: A Myelin Debris Cleaner for Spinal Cord Injury Recovery: Polycaprolactone / Cell Membrane Assembled Scaffolds.. Note: Remyelination / white matter repair anchor.", "experiment_tracker_id": "M5A-P032-E001", "paper_tracker_id": "M5A-P032", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O032"}'
+    '{"curator_notes": "Primary title: A Myelin Debris Cleaner for Spinal Cord Injury Recovery: Polycaprolactone / Cell Membrane Assembled Scaffolds.. Note: Remyelination / white matter repair anchor.", "experiment_tracker_id": "M5A-P032-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P032", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O032"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3504,18 +3536,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O032', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'A DNA/RNA heteroduplex hydrogel combined 5-HT-mediated neuronal excitability restoration with PTEN-targeted spinal circuit reconstruction, aiming to reactivate dormant spared circuits and improve reconnection after SCI.',
     'qualitative',
+    NULL,
     'A DNA/RNA heteroduplex hydrogel combined 5-HT-mediated neuronal excitability restoration with PTEN-targeted spinal circuit reconstruction, aiming to reactivate dormant spared circuits and improve reconnection after SCI.',
     'serotonergic-targeted nucleic acid hydrogel couples excitability restoration with PTEN circuit reconstruction',
     'Full text / PMC',
     'Full text / PMC12921341',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41531173; cross-tags biomaterial delivery boundary.", "experiment_tracker_id": "M5A-P033-E001", "paper_tracker_id": "M5A-P033", "quantitative": "YES", "statistics_reported": "Full text reports 5-HTP-derived targeting/neuromodulatory hydrogel design, PTEN-targeted nucleic-acid delivery, excitability, and circuit-reconstruction endpoints", "topic_id": "M5B-T004", "tracker_id": "M5B-O033"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41531173; cross-tags biomaterial delivery boundary.", "experiment_tracker_id": "M5A-P033-E001", "measurement_method_inference": null, "paper_tracker_id": "M5A-P033", "quantitative": "YES", "statistics_reported": "Full text reports 5-HTP-derived targeting/neuromodulatory hydrogel design, PTEN-targeted nucleic-acid delivery, excitability, and circuit-reconstruction endpoints", "topic_id": "M5B-T004", "tracker_id": "M5B-O033"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3529,18 +3562,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O033', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Sysoev YI 2025 contributes serotonergic/propriospinal relay plasticity evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'genetic perturbation / knockdown assay; behavioral / functional recovery assay',
     'Sysoev YI 2025 contributes serotonergic/propriospinal relay plasticity evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'sysoev yi 2025 contributes serotonergic/propriospinal relay plasticity evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Central Serotonin Deficiency Impairs Recovery of Sensorimotor Abilities After Spinal Cord Injury in Rats.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P034-E001", "paper_tracker_id": "M5A-P034", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O034"}'
+    '{"curator_notes": "Primary title: Central Serotonin Deficiency Impairs Recovery of Sensorimotor Abilities After Spinal Cord Injury in Rats.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P034-E001", "measurement_method_inference": "genetic perturbation / knockdown assay; behavioral / functional recovery assay", "paper_tracker_id": "M5A-P034", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O034"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3554,18 +3588,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O034', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Gao Z 2025 contributes serotonergic/propriospinal relay plasticity evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Gao Z 2025 contributes serotonergic/propriospinal relay plasticity evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'gao z 2025 contributes serotonergic/propriospinal relay plasticity evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Neuronal HDAC3 knockdown promotes propriospinal detour pathway formation and locomotor recovery in a mouse model of spinal cord injury.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P035-E001", "paper_tracker_id": "M5A-P035", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O035"}'
+    '{"curator_notes": "Primary title: Neuronal HDAC3 knockdown promotes propriospinal detour pathway formation and locomotor recovery in a mouse model of spinal cord injury.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P035-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P035", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O035"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3579,18 +3614,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O035', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Wang Y 2025 contributes serotonergic/propriospinal relay plasticity evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Wang Y 2025 contributes serotonergic/propriospinal relay plasticity evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'wang y 2025 contributes serotonergic/propriospinal relay plasticity evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Functional recovery induced by KCC2-enabled relay pathways in completely injured spinal cords in adult rats.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P036-E001", "paper_tracker_id": "M5A-P036", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O036"}'
+    '{"curator_notes": "Primary title: Functional recovery induced by KCC2-enabled relay pathways in completely injured spinal cords in adult rats.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P036-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P036", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O036"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3604,18 +3640,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O036', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhao H 2025 contributes serotonergic/propriospinal relay plasticity evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Zhao H 2025 contributes serotonergic/propriospinal relay plasticity evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'zhao h 2025 contributes serotonergic/propriospinal relay plasticity evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Functionalized nanozyme delivery of a KCC2-activator conjugate for the promotion of functional recovery after acute spinal cord injury.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P037-E001", "paper_tracker_id": "M5A-P037", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O037"}'
+    '{"curator_notes": "Primary title: Functionalized nanozyme delivery of a KCC2-activator conjugate for the promotion of functional recovery after acute spinal cord injury.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P037-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P037", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O037"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3629,18 +3666,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O037', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Morozumi M 2025 contributes serotonergic/propriospinal relay plasticity evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Morozumi M 2025 contributes serotonergic/propriospinal relay plasticity evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'morozumi m 2025 contributes serotonergic/propriospinal relay plasticity evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Enhanced locomotor recovery in mice lacking GlcNAc6ST1 and GlcNAc6ST4 following spinal cord injury.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P038-E001", "paper_tracker_id": "M5A-P038", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O038"}'
+    '{"curator_notes": "Primary title: Enhanced locomotor recovery in mice lacking GlcNAc6ST1 and GlcNAc6ST4 following spinal cord injury.. Note: Serotonergic/propriospinal relay plasticity anchor.", "experiment_tracker_id": "M5A-P038-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P038", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T004", "tracker_id": "M5B-O038"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3654,18 +3692,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O038', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhao Q 2025 contributes corticospinal tract regeneration / sprouting evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'pathway activity / phospho-signaling assay; behavioral / functional recovery assay',
     'Zhao Q 2025 contributes corticospinal tract regeneration / sprouting evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'zhao q 2025 contributes corticospinal tract regeneration / sprouting evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Treadmill exercise supplemented by OPN promote axon regeneration through the IGF-1R/Akt/mTOR signaling pathway.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P039-E001", "paper_tracker_id": "M5A-P039", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O039"}'
+    '{"curator_notes": "Primary title: Treadmill exercise supplemented by OPN promote axon regeneration through the IGF-1R/Akt/mTOR signaling pathway.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P039-E001", "measurement_method_inference": "pathway activity / phospho-signaling assay; behavioral / functional recovery assay", "paper_tracker_id": "M5A-P039", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O039"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3679,18 +3718,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O039', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Wang Y 2023 contributes corticospinal tract regeneration / sprouting evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Wang Y 2023 contributes corticospinal tract regeneration / sprouting evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'wang y 2023 contributes corticospinal tract regeneration / sprouting evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Osteopontin enhances the effect of treadmill training and promotes functional recovery after spinal cord injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P040-E001", "paper_tracker_id": "M5A-P040", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O040"}'
+    '{"curator_notes": "Primary title: Osteopontin enhances the effect of treadmill training and promotes functional recovery after spinal cord injury.. Note: Corticospinal tract regeneration / sprouting anchor.", "experiment_tracker_id": "M5A-P040-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P040", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T007", "tracker_id": "M5B-O040"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3704,18 +3744,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O040', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Tao N 2023 contributes graft/scaffold-enabled axon repair evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Tao N 2023 contributes graft/scaffold-enabled axon repair evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'tao n 2023 contributes graft/scaffold-enabled axon repair evidence in mouse sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Co-overexpression of OPN, IGF-1 and CNTF augment the therapeutic effect of DPSC on spinal cord injury.. Note: Graft/scaffold-enabled axon repair anchor.", "experiment_tracker_id": "M5A-P041-E001", "paper_tracker_id": "M5A-P041", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O041"}'
+    '{"curator_notes": "Primary title: Co-overexpression of OPN, IGF-1 and CNTF augment the therapeutic effect of DPSC on spinal cord injury.. Note: Graft/scaffold-enabled axon repair anchor.", "experiment_tracker_id": "M5A-P041-E001", "measurement_method_inference": null, "paper_tracker_id": "M5A-P041", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O041"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3729,18 +3770,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O041', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ye J 2025 contributes graft/scaffold-enabled axon repair evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Ye J 2025 contributes graft/scaffold-enabled axon repair evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'ye j 2025 contributes graft/scaffold-enabled axon repair evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Multichannel 3D-Printed Bioactive Scaffold Combined with Small Interfering RNA Delivery to Promote Neurological Recovery after Spinal Cord Injury.. Note: Graft/scaffold-enabled axon repair anchor.", "experiment_tracker_id": "M5A-P042-E001", "paper_tracker_id": "M5A-P042", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O042"}'
+    '{"curator_notes": "Primary title: Multichannel 3D-Printed Bioactive Scaffold Combined with Small Interfering RNA Delivery to Promote Neurological Recovery after Spinal Cord Injury.. Note: Graft/scaffold-enabled axon repair anchor.", "experiment_tracker_id": "M5A-P042-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P042", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O042"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3754,18 +3796,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O042', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'A hyaluronic-acid scaffold enriched with collagen IV and fibronectin was functionalized with GET-peptide PTEN-siRNA nanoparticles, which transfected primary neurons and significantly enhanced neurite outgrowth from the scaffold platform.',
     'qualitative',
+    'genetic perturbation / knockdown assay',
     'A hyaluronic-acid scaffold enriched with collagen IV and fibronectin was functionalized with GET-peptide PTEN-siRNA nanoparticles, which transfected primary neurons and significantly enhanced neurite outgrowth from the scaffold platform.',
     'PTEN-siRNA activated scaffold promotes neurite outgrowth in an SCI repair scaffold platform',
     'Full text / PMC',
     'Full text / PMC12908063',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41704619; scaffold/gene-therapy attribution boundary.", "experiment_tracker_id": "M5A-P043-E001", "paper_tracker_id": "M5A-P043", "quantitative": "YES", "statistics_reported": "Full text reports GET-siRNA nanoparticle formulation, primary-neuron transfection, scaffold incorporation, and neurite-outgrowth endpoint", "topic_id": "M5B-T005", "tracker_id": "M5B-O043"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41704619; scaffold/gene-therapy attribution boundary.", "experiment_tracker_id": "M5A-P043-E001", "measurement_method_inference": "genetic perturbation / knockdown assay", "paper_tracker_id": "M5A-P043", "quantitative": "YES", "statistics_reported": "Full text reports GET-siRNA nanoparticle formulation, primary-neuron transfection, scaffold incorporation, and neurite-outgrowth endpoint", "topic_id": "M5B-T005", "tracker_id": "M5B-O043"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3779,18 +3822,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O043', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'CITED2 was identified as an epigenetic switch active in immature/regenerating DRG neurons but silent after non-regenerative SCI; Cited2 overexpression reactivated growth programs and enhanced in vivo regeneration after SCI, while Cited2-targeting panobinostat promoted sensory and motor neuron growth/sprouting and functional recovery.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'CITED2 was identified as an epigenetic switch active in immature/regenerating DRG neurons but silent after non-regenerative SCI; Cited2 overexpression reactivated growth programs and enhanced in vivo regeneration after SCI, while Cited2-targeting panobinostat promoted sensory and motor neuron growth/sprouting and functional recovery.',
     'CITED2/panobinostat reactivates neuronal growth programs after SCI',
     'Full text / PMC',
     'Full text / PMC13083982',
     'high',
-    '{"curator_notes": "Full-text upgrade from PMID 41731079; intrinsic-growth epigenetic switch.", "experiment_tracker_id": "M5A-P044-E001", "paper_tracker_id": "M5A-P044", "quantitative": "YES", "statistics_reported": "Full text reports developmental/regenerative DRG profiling, Cited2 gain/loss, in vivo SCI regeneration, pharmacologic HDAC inhibitor targeting, growth/sprouting, and functional endpoints", "topic_id": "M5B-T005", "tracker_id": "M5B-O044"}'
+    '{"curator_notes": "Full-text upgrade from PMID 41731079; intrinsic-growth epigenetic switch.", "experiment_tracker_id": "M5A-P044-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P044", "quantitative": "YES", "statistics_reported": "Full text reports developmental/regenerative DRG profiling, Cited2 gain/loss, in vivo SCI regeneration, pharmacologic HDAC inhibitor targeting, growth/sprouting, and functional endpoints", "topic_id": "M5B-T005", "tracker_id": "M5B-O044"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3804,18 +3848,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O044', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Couvrette LJ 2025 contributes graft/scaffold-enabled axon repair evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Couvrette LJ 2025 contributes graft/scaffold-enabled axon repair evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'couvrette lj 2025 contributes graft/scaffold-enabled axon repair evidence in human / translational context, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Poly-L-Ornithine coated plant scaffolds support motor recovery in rats after traumatic spinal cord injury.. Note: Graft/scaffold-enabled axon repair anchor.", "experiment_tracker_id": "M5A-P045-E001", "paper_tracker_id": "M5A-P045", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O045"}'
+    '{"curator_notes": "Primary title: Poly-L-Ornithine coated plant scaffolds support motor recovery in rats after traumatic spinal cord injury.. Note: Graft/scaffold-enabled axon repair anchor.", "experiment_tracker_id": "M5A-P045-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P045", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T006", "tracker_id": "M5B-O045"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3829,18 +3874,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O045', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Dong H 2025 contributes remyelination / white matter repair evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    'single-cell RNA-seq / cell-state atlas; spatial transcriptomics / spatial atlas',
     'Dong H 2025 contributes remyelination / white matter repair evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'dong h 2025 contributes remyelination / white matter repair evidence in rat sci model, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.. Note: Remyelination / white matter repair anchor.", "experiment_tracker_id": "M5A-P046-E001", "paper_tracker_id": "M5A-P046", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O046"}'
+    '{"curator_notes": "Primary title: Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.. Note: Remyelination / white matter repair anchor.", "experiment_tracker_id": "M5A-P046-E001", "measurement_method_inference": "single-cell RNA-seq / cell-state atlas; spatial transcriptomics / spatial atlas", "paper_tracker_id": "M5A-P046", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T003", "tracker_id": "M5B-O046"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3854,18 +3900,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O046', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Chize CM 2025 contributes extrinsic inhibitory matrix / guidance pathway evidence in dog chronic sci, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'qualitative',
+    NULL,
     'Chize CM 2025 contributes extrinsic inhibitory matrix / guidance pathway evidence in dog chronic sci, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'chize cm 2025 contributes extrinsic inhibitory matrix / guidance pathway evidence in dog chronic sci, supporting the axon regeneration, remyelination, and white matter repair after sci first-pass corpus.',
     'Module 5A tracker / PubMed-indexed metadata',
     'Abstract / saturated A tracker',
     'medium',
-    '{"curator_notes": "Primary title: A laminin-based therapy for dogs with chronic spinal cord injury: promising results of a longitudinal trial.. Note: Extrinsic inhibitory matrix / guidance pathway anchor.", "experiment_tracker_id": "M5A-P047-E001", "paper_tracker_id": "M5A-P047", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T002", "tracker_id": "M5B-O047"}'
+    '{"curator_notes": "Primary title: A laminin-based therapy for dogs with chronic spinal cord injury: promising results of a longitudinal trial.. Note: Extrinsic inhibitory matrix / guidance pathway anchor.", "experiment_tracker_id": "M5A-P047-E001", "measurement_method_inference": null, "paper_tracker_id": "M5A-P047", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M5B-T002", "tracker_id": "M5B-O047"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3879,18 +3926,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O047', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Lu P 2007 M5A-P001-E002 preserves a distinct Rat experiment testing Mechanistic outcome assessment after axon regeneration through chronic scar/graft with endpoint/readout: Outcome/mechanistic validation row for Axon regeneration through scars and into sites of chronic spinal cord injury; first-pass row captures axon regeneration through chronic scar/graft in rat at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Lu P 2007 M5A-P001-E002 preserves a distinct Rat experiment testing Mechanistic outcome assessment after axon regeneration through chronic scar/graft with endpoint/readout: Outcome/mechanistic validation row for Axon regeneration through scars and into sites of chronic spinal cord injury; first-pass row captures axon regeneration through chronic scar/graft in rat at abstract/source-title level..',
     'M5A-P001-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Axon regeneration through scars and into sites of chronic spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P001-E002", "paper_tracker_id": "M5A-P001", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T006", "tracker_id": "M5B-O048"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Axon regeneration through scars and into sites of chronic spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P001-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P001", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T006", "tracker_id": "M5B-O048"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3904,18 +3952,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O048', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Dias DO 2018 M5A-P002-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after cst/rst regeneration after scar attenuation with endpoint/readout: Outcome/mechanistic validation row for Reducing Pericyte-Derived Scarring Promotes Recovery after Spinal Cord Injury; first-pass row captures cst/rst regeneration after scar attenuation in mouse at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Dias DO 2018 M5A-P002-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after cst/rst regeneration after scar attenuation with endpoint/readout: Outcome/mechanistic validation row for Reducing Pericyte-Derived Scarring Promotes Recovery after Spinal Cord Injury; first-pass row captures cst/rst regeneration after scar attenuation in mouse at abstract/source-title level..',
     'M5A-P002-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Reducing Pericyte-Derived Scarring Promotes Recovery after Spinal Cord Injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P002-E002", "paper_tracker_id": "M5A-P002", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O049"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Reducing Pericyte-Derived Scarring Promotes Recovery after Spinal Cord Injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P002-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P002", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O049"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3929,18 +3978,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O049', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'McCallum S 2026 M5A-P003-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after lesion-remote white matter repair with endpoint/readout: Outcome/mechanistic validation row for Lesion-remote astrocytes govern microglia-mediated white matter repair; first-pass row captures lesion-remote white matter repair in mouse at abstract/source-title level..',
     'qualitative',
+    NULL,
     'McCallum S 2026 M5A-P003-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after lesion-remote white matter repair with endpoint/readout: Outcome/mechanistic validation row for Lesion-remote astrocytes govern microglia-mediated white matter repair; first-pass row captures lesion-remote white matter repair in mouse at abstract/source-title level..',
     'M5A-P003-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Lesion-remote astrocytes govern microglia-mediated white matter repair. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P003-E002", "paper_tracker_id": "M5A-P003", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O050"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Lesion-remote astrocytes govern microglia-mediated white matter repair. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P003-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P003", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O050"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3954,18 +4004,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O050', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Grumbles RM 2017 M5A-P004-E002 preserves a distinct Human experiment testing Mechanistic outcome assessment after ventral-root axon loss/remyelination pathology with endpoint/readout: Outcome/mechanistic validation row for Motoneuron Death after Human Spinal Cord Injury; first-pass row captures ventral-root axon loss/remyelination pathology in human at abstract/source-title level..',
     'qualitative',
+    'immunostaining / histology / pathology',
     'Grumbles RM 2017 M5A-P004-E002 preserves a distinct Human experiment testing Mechanistic outcome assessment after ventral-root axon loss/remyelination pathology with endpoint/readout: Outcome/mechanistic validation row for Motoneuron Death after Human Spinal Cord Injury; first-pass row captures ventral-root axon loss/remyelination pathology in human at abstract/source-title level..',
     'M5A-P004-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Motoneuron Death after Human Spinal Cord Injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P004-E002", "paper_tracker_id": "M5A-P004", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O051"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Motoneuron Death after Human Spinal Cord Injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P004-E002", "measurement_method_inference": "immunostaining / histology / pathology", "paper_tracker_id": "M5A-P004", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O051"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3979,18 +4030,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O051', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Han Q 2020 M5A-P005-E002 preserves a distinct Rodent model context experiment testing Mechanistic outcome assessment after axonal regeneration / cellular energetics with endpoint/readout: Outcome/mechanistic validation row for Restoring Cellular Energetics Promotes Axonal Regeneration and Functional Recovery after Spinal Cord Injury; first-pass row captures axonal regeneration / cellular energetics in rodent model context at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Han Q 2020 M5A-P005-E002 preserves a distinct Rodent model context experiment testing Mechanistic outcome assessment after axonal regeneration / cellular energetics with endpoint/readout: Outcome/mechanistic validation row for Restoring Cellular Energetics Promotes Axonal Regeneration and Functional Recovery after Spinal Cord Injury; first-pass row captures axonal regeneration / cellular energetics in rodent model context at abstract/source-title level..',
     'M5A-P005-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Restoring Cellular Energetics Promotes Axonal Regeneration and Functional Recovery after Spinal Cord Injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P005-E002", "paper_tracker_id": "M5A-P005", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O052"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Restoring Cellular Energetics Promotes Axonal Regeneration and Functional Recovery after Spinal Cord Injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P005-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P005", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O052"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4004,18 +4056,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O052', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Fry EJ 2010 M5A-P006-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after cst regeneration / receptor ptp sigma with endpoint/readout: Outcome/mechanistic validation row for Corticospinal tract regeneration after spinal cord injury in receptor protein tyrosine phosphatase sigma deficient mice; first-pass row captures cst regeneration / receptor ptp sigma in mouse at abstract/source-title level..',
     'qualitative',
+    'genetic perturbation / knockdown assay',
     'Fry EJ 2010 M5A-P006-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after cst regeneration / receptor ptp sigma with endpoint/readout: Outcome/mechanistic validation row for Corticospinal tract regeneration after spinal cord injury in receptor protein tyrosine phosphatase sigma deficient mice; first-pass row captures cst regeneration / receptor ptp sigma in mouse at abstract/source-title level..',
     'M5A-P006-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Corticospinal tract regeneration after spinal cord injury in receptor protein tyrosine phosphatase sigma deficient mice. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P006-E002", "paper_tracker_id": "M5A-P006", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O053"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Corticospinal tract regeneration after spinal cord injury in receptor protein tyrosine phosphatase sigma deficient mice. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P006-E002", "measurement_method_inference": "genetic perturbation / knockdown assay", "paper_tracker_id": "M5A-P006", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O053"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4029,18 +4082,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O053', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Kadoya K 2016 M5A-P007-E002 preserves a distinct Rat experiment testing Mechanistic outcome assessment after neural graft-enabled cst regeneration with endpoint/readout: Outcome/mechanistic validation row for Spinal cord reconstitution with homologous neural grafts enables robust corticospinal regeneration; first-pass row captures neural graft-enabled cst regeneration in rat at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Kadoya K 2016 M5A-P007-E002 preserves a distinct Rat experiment testing Mechanistic outcome assessment after neural graft-enabled cst regeneration with endpoint/readout: Outcome/mechanistic validation row for Spinal cord reconstitution with homologous neural grafts enables robust corticospinal regeneration; first-pass row captures neural graft-enabled cst regeneration in rat at abstract/source-title level..',
     'M5A-P007-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Spinal cord reconstitution with homologous neural grafts enables robust corticospinal regeneration. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P007-E002", "paper_tracker_id": "M5A-P007", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T006", "tracker_id": "M5B-O054"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Spinal cord reconstitution with homologous neural grafts enables robust corticospinal regeneration. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P007-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P007", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T006", "tracker_id": "M5B-O054"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4054,18 +4108,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O054', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Poplawski GHD 2020 M5A-P008-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after intrinsic neuronal growth state with endpoint/readout: Outcome/mechanistic validation row for Injured adult neurons regress to an embryonic transcriptional growth state; first-pass row captures intrinsic neuronal growth state in mouse at abstract/source-title level..',
     'qualitative',
+    'qPCR / RT-PCR / mRNA assay',
     'Poplawski GHD 2020 M5A-P008-E002 preserves a distinct Mouse experiment testing Mechanistic outcome assessment after intrinsic neuronal growth state with endpoint/readout: Outcome/mechanistic validation row for Injured adult neurons regress to an embryonic transcriptional growth state; first-pass row captures intrinsic neuronal growth state in mouse at abstract/source-title level..',
     'M5A-P008-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Injured adult neurons regress to an embryonic transcriptional growth state. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P008-E002", "paper_tracker_id": "M5A-P008", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O055"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Injured adult neurons regress to an embryonic transcriptional growth state. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P008-E002", "measurement_method_inference": "qPCR / RT-PCR / mRNA assay", "paper_tracker_id": "M5A-P008", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O055"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4079,18 +4134,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O055', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Boato F 2023 M5A-P009-E002 preserves a distinct Rodent model context experiment testing Mechanistic outcome assessment after cst sprouting/regeneration with endpoint/readout: Outcome/mechanistic validation row for Activation of MAP2K signaling by genetic engineering or HF-rTMS promotes corticospinal axon sprouting and functional regeneration; first-pass row captures cst sprouting/regeneration in rodent model context at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Boato F 2023 M5A-P009-E002 preserves a distinct Rodent model context experiment testing Mechanistic outcome assessment after cst sprouting/regeneration with endpoint/readout: Outcome/mechanistic validation row for Activation of MAP2K signaling by genetic engineering or HF-rTMS promotes corticospinal axon sprouting and functional regeneration; first-pass row captures cst sprouting/regeneration in rodent model context at abstract/source-title level..',
     'M5A-P009-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Activation of MAP2K signaling by genetic engineering or HF-rTMS promotes corticospinal axon sprouting and functional regeneration. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P009-E002", "paper_tracker_id": "M5A-P009", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O056"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Activation of MAP2K signaling by genetic engineering or HF-rTMS promotes corticospinal axon sprouting and functional regeneration. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P009-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P009", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O056"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4104,18 +4160,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O056', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ma YH 2025 M5A-P010-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Transcranial Optogenetic Stimulation Promotes Corticospinal Tract Axon Regeneration to Repair Spinal Cord Injury by Activating the JAK2/STAT3 Pathway.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Ma YH 2025 M5A-P010-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Transcranial Optogenetic Stimulation Promotes Corticospinal Tract Axon Regeneration to Repair Spinal Cord Injury by Activating the JAK2/STAT3 Pathway.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
     'M5A-P010-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Transcranial Optogenetic Stimulation Promotes Corticospinal Tract Axon Regeneration to Repair Spinal Cord Injury by Activating the JAK2/STAT3 Pathway.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P010-E002", "paper_tracker_id": "M5A-P010", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T007", "tracker_id": "M5B-O057"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Transcranial Optogenetic Stimulation Promotes Corticospinal Tract Axon Regeneration to Repair Spinal Cord Injury by Activating the JAK2/STAT3 Pathway.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P010-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P010", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T007", "tracker_id": "M5B-O057"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4129,18 +4186,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O057', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Chen W 2024 M5A-P011-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Lipin1 depletion coordinates neuronal signaling pathways to promote motor and sensory axon regeneration after spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in rat sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Chen W 2024 M5A-P011-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Lipin1 depletion coordinates neuronal signaling pathways to promote motor and sensory axon regeneration after spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in rat sci model at abstract/source-title level..',
     'M5A-P011-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Lipin1 depletion coordinates neuronal signaling pathways to promote motor and sensory axon regeneration after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P011-E002", "paper_tracker_id": "M5A-P011", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O058"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Lipin1 depletion coordinates neuronal signaling pathways to promote motor and sensory axon regeneration after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P011-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P011", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O058"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4154,18 +4212,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O058', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Hu M 2024 M5A-P012-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after activity or stimulation-enabled axon repair with endpoint/readout: Outcome/mechanistic validation row for Effects of transcranial magnetic stimulation on axonal regeneration in the corticospinal tract of female rats with spinal cord injury.; first-pass row captures activity or stimulation-enabled axon repair in rat sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Hu M 2024 M5A-P012-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after activity or stimulation-enabled axon repair with endpoint/readout: Outcome/mechanistic validation row for Effects of transcranial magnetic stimulation on axonal regeneration in the corticospinal tract of female rats with spinal cord injury.; first-pass row captures activity or stimulation-enabled axon repair in rat sci model at abstract/source-title level..',
     'M5A-P012-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Effects of transcranial magnetic stimulation on axonal regeneration in the corticospinal tract of female rats with spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P012-E002", "paper_tracker_id": "M5A-P012", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T007", "tracker_id": "M5B-O059"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Effects of transcranial magnetic stimulation on axonal regeneration in the corticospinal tract of female rats with spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P012-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P012", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T007", "tracker_id": "M5B-O059"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4179,18 +4238,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O059', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Higuchi K 2024 M5A-P013-E002 preserves a distinct Experimental SCI model context experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Synaptotagmin 4 Supports Spontaneous Axon Sprouting after Spinal Cord Injury.; first-pass row captures corticospinal tract regeneration / sprouting in experimental sci model context at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Higuchi K 2024 M5A-P013-E002 preserves a distinct Experimental SCI model context experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Synaptotagmin 4 Supports Spontaneous Axon Sprouting after Spinal Cord Injury.; first-pass row captures corticospinal tract regeneration / sprouting in experimental sci model context at abstract/source-title level..',
     'M5A-P013-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Synaptotagmin 4 Supports Spontaneous Axon Sprouting after Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P013-E002", "paper_tracker_id": "M5A-P013", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O060"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Synaptotagmin 4 Supports Spontaneous Axon Sprouting after Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P013-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P013", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O060"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4204,18 +4264,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O060', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Sun W 2020 M5A-P014-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Gabapentinoid treatment promotes corticospinal plasticity and regeneration following murine spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Sun W 2020 M5A-P014-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Gabapentinoid treatment promotes corticospinal plasticity and regeneration following murine spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
     'M5A-P014-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Gabapentinoid treatment promotes corticospinal plasticity and regeneration following murine spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P014-E002", "paper_tracker_id": "M5A-P014", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O061"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Gabapentinoid treatment promotes corticospinal plasticity and regeneration following murine spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P014-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P014", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O061"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4229,18 +4290,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O061', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Stepankova K 2025 M5A-P015-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for Activated alpha 9 integrin expression enables sensory pathway reconstruction after spinal cord injury.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in rat sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Stepankova K 2025 M5A-P015-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for Activated alpha 9 integrin expression enables sensory pathway reconstruction after spinal cord injury.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in rat sci model at abstract/source-title level..',
     'M5A-P015-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Activated alpha 9 integrin expression enables sensory pathway reconstruction after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P015-E002", "paper_tracker_id": "M5A-P015", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O062"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Activated alpha 9 integrin expression enables sensory pathway reconstruction after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P015-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P015", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O062"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4254,18 +4316,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O062', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Takatani H 2025 M5A-P016-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Modulation of Extrinsic and Intrinsic Signaling Together with Neuronal Activation Enhances Forelimb Motor Recovery after Cervical Spinal Cord Injury.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Takatani H 2025 M5A-P016-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Modulation of Extrinsic and Intrinsic Signaling Together with Neuronal Activation Enhances Forelimb Motor Recovery after Cervical Spinal Cord Injury.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
     'M5A-P016-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Modulation of Extrinsic and Intrinsic Signaling Together with Neuronal Activation Enhances Forelimb Motor Recovery after Cervical Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P016-E002", "paper_tracker_id": "M5A-P016", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O063"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Modulation of Extrinsic and Intrinsic Signaling Together with Neuronal Activation Enhances Forelimb Motor Recovery after Cervical Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P016-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P016", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O063"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4279,18 +4342,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O063', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'van Niekerk EA 2025 M5A-P017-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Thiorphan reprograms neurons to promote functional recovery after spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in human / translational context at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'van Niekerk EA 2025 M5A-P017-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Thiorphan reprograms neurons to promote functional recovery after spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in human / translational context at abstract/source-title level..',
     'M5A-P017-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Thiorphan reprograms neurons to promote functional recovery after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P017-E002", "paper_tracker_id": "M5A-P017", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O064"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Thiorphan reprograms neurons to promote functional recovery after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P017-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P017", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T001", "tracker_id": "M5B-O064"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4304,18 +4368,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O064', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhang R 2026 M5A-P018-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after intrinsic neuronal growth competence with endpoint/readout: Outcome/mechanistic validation row for TTBK2-Driven Ciliogenesis Is Required for Intrinsic Neuronal Regeneration After Spinal Cord Injury.; first-pass row captures intrinsic neuronal growth competence in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Zhang R 2026 M5A-P018-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after intrinsic neuronal growth competence with endpoint/readout: Outcome/mechanistic validation row for TTBK2-Driven Ciliogenesis Is Required for Intrinsic Neuronal Regeneration After Spinal Cord Injury.; first-pass row captures intrinsic neuronal growth competence in mouse sci model at abstract/source-title level..',
     'M5A-P018-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: TTBK2-Driven Ciliogenesis Is Required for Intrinsic Neuronal Regeneration After Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P018-E002", "paper_tracker_id": "M5A-P018", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O065"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: TTBK2-Driven Ciliogenesis Is Required for Intrinsic Neuronal Regeneration After Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P018-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P018", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O065"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4329,18 +4394,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O065', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Attwell CL 2025 M5A-P019-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after intrinsic neuronal growth competence with endpoint/readout: Outcome/mechanistic validation row for The transcription factor combination MEF2 and KLF7 promotes axonal sprouting in the injured spinal cord with functional improvement and regeneration-associated gene expression.; first-pass row captures intrinsic neuronal growth competence in rat sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Attwell CL 2025 M5A-P019-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after intrinsic neuronal growth competence with endpoint/readout: Outcome/mechanistic validation row for The transcription factor combination MEF2 and KLF7 promotes axonal sprouting in the injured spinal cord with functional improvement and regeneration-associated gene expression.; first-pass row captures intrinsic neuronal growth competence in rat sci model at abstract/source-title level..',
     'M5A-P019-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: The transcription factor combination MEF2 and KLF7 promotes axonal sprouting in the injured spinal cord with functional improvement and regeneration-associated gene expression.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P019-E002", "paper_tracker_id": "M5A-P019", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O066"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: The transcription factor combination MEF2 and KLF7 promotes axonal sprouting in the injured spinal cord with functional improvement and regeneration-associated gene expression.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P019-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P019", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O066"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4354,18 +4420,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O066', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Martinez-Rojas B 2025 M5A-P020-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Stimulation of corticospinal neurons by optogenetic cAMP inductions promotes motor recovery after spinal cord injury in female rats via raphespinal tract modulation.; first-pass row captures corticospinal tract regeneration / sprouting in rat sci model at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Martinez-Rojas B 2025 M5A-P020-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Stimulation of corticospinal neurons by optogenetic cAMP inductions promotes motor recovery after spinal cord injury in female rats via raphespinal tract modulation.; first-pass row captures corticospinal tract regeneration / sprouting in rat sci model at abstract/source-title level..',
     'M5A-P020-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Stimulation of corticospinal neurons by optogenetic cAMP inductions promotes motor recovery after spinal cord injury in female rats via raphespinal tract modulation.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P020-E002", "paper_tracker_id": "M5A-P020", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T007", "tracker_id": "M5B-O067"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Stimulation of corticospinal neurons by optogenetic cAMP inductions promotes motor recovery after spinal cord injury in female rats via raphespinal tract modulation.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P020-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P020", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T007", "tracker_id": "M5B-O067"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4379,18 +4446,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O067', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ji Z 2025 M5A-P021-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Precise rewiring of corticospinal axons and spinal interneurons via near-infrared optogenetics for spinal cord injury treatment.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Ji Z 2025 M5A-P021-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Precise rewiring of corticospinal axons and spinal interneurons via near-infrared optogenetics for spinal cord injury treatment.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
     'M5A-P021-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Precise rewiring of corticospinal axons and spinal interneurons via near-infrared optogenetics for spinal cord injury treatment.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P021-E002", "paper_tracker_id": "M5A-P021", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T007", "tracker_id": "M5B-O068"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Precise rewiring of corticospinal axons and spinal interneurons via near-infrared optogenetics for spinal cord injury treatment.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P021-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P021", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T007", "tracker_id": "M5B-O068"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4404,18 +4472,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O068', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Schmidt J 2026 M5A-P022-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Netrin-1 Therapy Restores Partial Hindlimb Movement in a Rat Model of High-Severity Chronic Spinal Cord Injury.; first-pass row captures corticospinal tract regeneration / sprouting in human / translational context at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Schmidt J 2026 M5A-P022-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Netrin-1 Therapy Restores Partial Hindlimb Movement in a Rat Model of High-Severity Chronic Spinal Cord Injury.; first-pass row captures corticospinal tract regeneration / sprouting in human / translational context at abstract/source-title level..',
     'M5A-P022-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Netrin-1 Therapy Restores Partial Hindlimb Movement in a Rat Model of High-Severity Chronic Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P022-E002", "paper_tracker_id": "M5A-P022", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O069"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Netrin-1 Therapy Restores Partial Hindlimb Movement in a Rat Model of High-Severity Chronic Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P022-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P022", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O069"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4429,18 +4498,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O069', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zheng ML 2025 M5A-P023-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for Lentivirus-mediated overexpression of netrin-1/DCC co-expression promotes axonal regeneration and functional recovery in spinal cord injury via the inhibition of the NgR1-RhoA-ROCK signaling pathway.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in human / translational context at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Zheng ML 2025 M5A-P023-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for Lentivirus-mediated overexpression of netrin-1/DCC co-expression promotes axonal regeneration and functional recovery in spinal cord injury via the inhibition of the NgR1-RhoA-ROCK signaling pathway.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in human / translational context at abstract/source-title level..',
     'M5A-P023-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Lentivirus-mediated overexpression of netrin-1/DCC co-expression promotes axonal regeneration and functional recovery in spinal cord injury via the inhibition of the NgR1-RhoA-ROCK signaling pathway.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P023-E002", "paper_tracker_id": "M5A-P023", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O070"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Lentivirus-mediated overexpression of netrin-1/DCC co-expression promotes axonal regeneration and functional recovery in spinal cord injury via the inhibition of the NgR1-RhoA-ROCK signaling pathway.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P023-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P023", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O070"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4454,18 +4524,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O070', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zheng Y 2026 M5A-P024-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for Disrupting CSPG-Driven Microglia-Astrocyte Crosstalk Enables Scar-Free Repair in Spinal Cord Injury.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in rat sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Zheng Y 2026 M5A-P024-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for Disrupting CSPG-Driven Microglia-Astrocyte Crosstalk Enables Scar-Free Repair in Spinal Cord Injury.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in rat sci model at abstract/source-title level..',
     'M5A-P024-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Disrupting CSPG-Driven Microglia-Astrocyte Crosstalk Enables Scar-Free Repair in Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P024-E002", "paper_tracker_id": "M5A-P024", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O071"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Disrupting CSPG-Driven Microglia-Astrocyte Crosstalk Enables Scar-Free Repair in Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P024-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P024", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O071"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4479,18 +4550,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O071', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Qu W 2025 M5A-P025-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Chondroitinase ABC combined with Schwann cell transplantation enhances restoration of neural connection and functional recovery following acute and chronic spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in human / translational context at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Qu W 2025 M5A-P025-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Chondroitinase ABC combined with Schwann cell transplantation enhances restoration of neural connection and functional recovery following acute and chronic spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in human / translational context at abstract/source-title level..',
     'M5A-P025-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Chondroitinase ABC combined with Schwann cell transplantation enhances restoration of neural connection and functional recovery following acute and chronic spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P025-E002", "paper_tracker_id": "M5A-P025", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O072"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Chondroitinase ABC combined with Schwann cell transplantation enhances restoration of neural connection and functional recovery following acute and chronic spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P025-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P025", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O072"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4504,18 +4576,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O072', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhu S 2024 M5A-P026-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for Schwann Cell-Derived Exosomes Induced Axon Growth after Spinal Cord Injury by Decreasing PTP- Activation on CSPGs via the Rho/ROCK Pathway.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Zhu S 2024 M5A-P026-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for Schwann Cell-Derived Exosomes Induced Axon Growth after Spinal Cord Injury by Decreasing PTP- Activation on CSPGs via the Rho/ROCK Pathway.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in mouse sci model at abstract/source-title level..',
     'M5A-P026-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Schwann Cell-Derived Exosomes Induced Axon Growth after Spinal Cord Injury by Decreasing PTP- Activation on CSPGs via the Rho/ROCK Pathway.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P026-E002", "paper_tracker_id": "M5A-P026", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O073"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Schwann Cell-Derived Exosomes Induced Axon Growth after Spinal Cord Injury by Decreasing PTP- Activation on CSPGs via the Rho/ROCK Pathway.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P026-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P026", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O073"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4529,18 +4602,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O073', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Farner L 2026 M5A-P027-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Anti-Nogo-A NG101 treatment induces changes in spinal cord micro- and macrostructure following spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in rat sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Farner L 2026 M5A-P027-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Anti-Nogo-A NG101 treatment induces changes in spinal cord micro- and macrostructure following spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in rat sci model at abstract/source-title level..',
     'M5A-P027-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Anti-Nogo-A NG101 treatment induces changes in spinal cord micro- and macrostructure following spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P027-E002", "paper_tracker_id": "M5A-P027", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O074"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Anti-Nogo-A NG101 treatment induces changes in spinal cord micro- and macrostructure following spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P027-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P027", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O074"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4554,18 +4628,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O074', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Nori S 2018 M5A-P028-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for Human Oligodendrogenic Neural Progenitor Cells Delivered with Chondroitinase ABC Facilitate Functional Repair of Chronic Spinal Cord Injury.; first-pass row captures remyelination / white matter repair in human / translational context at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Nori S 2018 M5A-P028-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for Human Oligodendrogenic Neural Progenitor Cells Delivered with Chondroitinase ABC Facilitate Functional Repair of Chronic Spinal Cord Injury.; first-pass row captures remyelination / white matter repair in human / translational context at abstract/source-title level..',
     'M5A-P028-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Human Oligodendrogenic Neural Progenitor Cells Delivered with Chondroitinase ABC Facilitate Functional Repair of Chronic Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P028-E002", "paper_tracker_id": "M5A-P028", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O075"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Human Oligodendrogenic Neural Progenitor Cells Delivered with Chondroitinase ABC Facilitate Functional Repair of Chronic Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P028-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P028", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O075"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4579,18 +4654,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O075', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Wu Z 2026 M5A-P029-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for TREM2 Facilitates Myelin Debris Clearance but Exacerbates Chronic Inflammation and Fibrosis After Spinal Cord Injury.; first-pass row captures remyelination / white matter repair in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Wu Z 2026 M5A-P029-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for TREM2 Facilitates Myelin Debris Clearance but Exacerbates Chronic Inflammation and Fibrosis After Spinal Cord Injury.; first-pass row captures remyelination / white matter repair in mouse sci model at abstract/source-title level..',
     'M5A-P029-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: TREM2 Facilitates Myelin Debris Clearance but Exacerbates Chronic Inflammation and Fibrosis After Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P029-E002", "paper_tracker_id": "M5A-P029", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O076"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: TREM2 Facilitates Myelin Debris Clearance but Exacerbates Chronic Inflammation and Fibrosis After Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P029-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P029", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O076"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4604,18 +4680,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O076', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'McCallum S 2026 M5A-P030-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for Lesion-remote astrocytes govern microglia-mediated white matter repair.; first-pass row captures remyelination / white matter repair in human / translational context at abstract/source-title level..',
     'qualitative',
+    NULL,
     'McCallum S 2026 M5A-P030-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for Lesion-remote astrocytes govern microglia-mediated white matter repair.; first-pass row captures remyelination / white matter repair in human / translational context at abstract/source-title level..',
     'M5A-P030-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Lesion-remote astrocytes govern microglia-mediated white matter repair.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P030-E002", "paper_tracker_id": "M5A-P030", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O077"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Lesion-remote astrocytes govern microglia-mediated white matter repair.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P030-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P030", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O077"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4629,18 +4706,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O077', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Manesh SB 2025 M5A-P031-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for Compensatory changes after spinal cord injury in a remyelination deficient mouse model.; first-pass row captures remyelination / white matter repair in mouse sci model at abstract/source-title level..',
     'qualitative',
+    'genetic perturbation / knockdown assay',
     'Manesh SB 2025 M5A-P031-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for Compensatory changes after spinal cord injury in a remyelination deficient mouse model.; first-pass row captures remyelination / white matter repair in mouse sci model at abstract/source-title level..',
     'M5A-P031-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Compensatory changes after spinal cord injury in a remyelination deficient mouse model.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P031-E002", "paper_tracker_id": "M5A-P031", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O078"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Compensatory changes after spinal cord injury in a remyelination deficient mouse model.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P031-E002", "measurement_method_inference": "genetic perturbation / knockdown assay", "paper_tracker_id": "M5A-P031", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O078"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4654,18 +4732,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O078', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhou Y 2025 M5A-P032-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for A Myelin Debris Cleaner for Spinal Cord Injury Recovery: Polycaprolactone / Cell Membrane Assembled Scaffolds.; first-pass row captures remyelination / white matter repair in rat sci model at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Zhou Y 2025 M5A-P032-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for A Myelin Debris Cleaner for Spinal Cord Injury Recovery: Polycaprolactone / Cell Membrane Assembled Scaffolds.; first-pass row captures remyelination / white matter repair in rat sci model at abstract/source-title level..',
     'M5A-P032-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: A Myelin Debris Cleaner for Spinal Cord Injury Recovery: Polycaprolactone / Cell Membrane Assembled Scaffolds.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P032-E002", "paper_tracker_id": "M5A-P032", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O079"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: A Myelin Debris Cleaner for Spinal Cord Injury Recovery: Polycaprolactone / Cell Membrane Assembled Scaffolds.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P032-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P032", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O079"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4679,18 +4758,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O079', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Li C 2026 M5A-P033-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Serotonergic System-Targeted Nucleic Acid Hydrogel Coordinates Excitability Restoration and Circuit Reconstruction for Spinal Cord Injury Therapy.; first-pass row captures serotonergic/propriospinal relay plasticity in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Li C 2026 M5A-P033-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Serotonergic System-Targeted Nucleic Acid Hydrogel Coordinates Excitability Restoration and Circuit Reconstruction for Spinal Cord Injury Therapy.; first-pass row captures serotonergic/propriospinal relay plasticity in mouse sci model at abstract/source-title level..',
     'M5A-P033-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Serotonergic System-Targeted Nucleic Acid Hydrogel Coordinates Excitability Restoration and Circuit Reconstruction for Spinal Cord Injury Therapy.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P033-E002", "paper_tracker_id": "M5A-P033", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O080"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Serotonergic System-Targeted Nucleic Acid Hydrogel Coordinates Excitability Restoration and Circuit Reconstruction for Spinal Cord Injury Therapy.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P033-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P033", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O080"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4704,18 +4784,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O080', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Sysoev YI 2025 M5A-P034-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Central Serotonin Deficiency Impairs Recovery of Sensorimotor Abilities After Spinal Cord Injury in Rats.; first-pass row captures serotonergic/propriospinal relay plasticity in rat sci model at abstract/source-title level..',
     'qualitative',
+    'genetic perturbation / knockdown assay; behavioral / functional recovery assay',
     'Sysoev YI 2025 M5A-P034-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Central Serotonin Deficiency Impairs Recovery of Sensorimotor Abilities After Spinal Cord Injury in Rats.; first-pass row captures serotonergic/propriospinal relay plasticity in rat sci model at abstract/source-title level..',
     'M5A-P034-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Central Serotonin Deficiency Impairs Recovery of Sensorimotor Abilities After Spinal Cord Injury in Rats.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P034-E002", "paper_tracker_id": "M5A-P034", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O081"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Central Serotonin Deficiency Impairs Recovery of Sensorimotor Abilities After Spinal Cord Injury in Rats.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P034-E002", "measurement_method_inference": "genetic perturbation / knockdown assay; behavioral / functional recovery assay", "paper_tracker_id": "M5A-P034", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O081"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4729,18 +4810,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O081', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Gao Z 2025 M5A-P035-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Neuronal HDAC3 knockdown promotes propriospinal detour pathway formation and locomotor recovery in a mouse model of spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in human / translational context at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Gao Z 2025 M5A-P035-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Neuronal HDAC3 knockdown promotes propriospinal detour pathway formation and locomotor recovery in a mouse model of spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in human / translational context at abstract/source-title level..',
     'M5A-P035-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Neuronal HDAC3 knockdown promotes propriospinal detour pathway formation and locomotor recovery in a mouse model of spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P035-E002", "paper_tracker_id": "M5A-P035", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O082"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Neuronal HDAC3 knockdown promotes propriospinal detour pathway formation and locomotor recovery in a mouse model of spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P035-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P035", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O082"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4754,18 +4836,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O082', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Wang Y 2025 M5A-P036-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Functional recovery induced by KCC2-enabled relay pathways in completely injured spinal cords in adult rats.; first-pass row captures serotonergic/propriospinal relay plasticity in rat sci model at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Wang Y 2025 M5A-P036-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Functional recovery induced by KCC2-enabled relay pathways in completely injured spinal cords in adult rats.; first-pass row captures serotonergic/propriospinal relay plasticity in rat sci model at abstract/source-title level..',
     'M5A-P036-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Functional recovery induced by KCC2-enabled relay pathways in completely injured spinal cords in adult rats.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P036-E002", "paper_tracker_id": "M5A-P036", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O083"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Functional recovery induced by KCC2-enabled relay pathways in completely injured spinal cords in adult rats.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P036-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P036", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O083"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4779,18 +4862,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O083', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhao H 2025 M5A-P037-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Functionalized nanozyme delivery of a KCC2-activator conjugate for the promotion of functional recovery after acute spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in rat sci model at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Zhao H 2025 M5A-P037-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Functionalized nanozyme delivery of a KCC2-activator conjugate for the promotion of functional recovery after acute spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in rat sci model at abstract/source-title level..',
     'M5A-P037-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Functionalized nanozyme delivery of a KCC2-activator conjugate for the promotion of functional recovery after acute spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P037-E002", "paper_tracker_id": "M5A-P037", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O084"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Functionalized nanozyme delivery of a KCC2-activator conjugate for the promotion of functional recovery after acute spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P037-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P037", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O084"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4804,18 +4888,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O084', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Morozumi M 2025 M5A-P038-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Enhanced locomotor recovery in mice lacking GlcNAc6ST1 and GlcNAc6ST4 following spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in mouse sci model at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Morozumi M 2025 M5A-P038-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after serotonergic/propriospinal relay plasticity with endpoint/readout: Outcome/mechanistic validation row for Enhanced locomotor recovery in mice lacking GlcNAc6ST1 and GlcNAc6ST4 following spinal cord injury.; first-pass row captures serotonergic/propriospinal relay plasticity in mouse sci model at abstract/source-title level..',
     'M5A-P038-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Enhanced locomotor recovery in mice lacking GlcNAc6ST1 and GlcNAc6ST4 following spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P038-E002", "paper_tracker_id": "M5A-P038", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O085"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Enhanced locomotor recovery in mice lacking GlcNAc6ST1 and GlcNAc6ST4 following spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P038-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P038", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T004", "tracker_id": "M5B-O085"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4829,18 +4914,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O085', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zhao Q 2025 M5A-P039-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Treadmill exercise supplemented by OPN promote axon regeneration through the IGF-1R/Akt/mTOR signaling pathway.; first-pass row captures corticospinal tract regeneration / sprouting in human / translational context at abstract/source-title level..',
     'qualitative',
+    'pathway activity / phospho-signaling assay',
     'Zhao Q 2025 M5A-P039-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Treadmill exercise supplemented by OPN promote axon regeneration through the IGF-1R/Akt/mTOR signaling pathway.; first-pass row captures corticospinal tract regeneration / sprouting in human / translational context at abstract/source-title level..',
     'M5A-P039-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Treadmill exercise supplemented by OPN promote axon regeneration through the IGF-1R/Akt/mTOR signaling pathway.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P039-E002", "paper_tracker_id": "M5A-P039", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T007", "tracker_id": "M5B-O086"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Treadmill exercise supplemented by OPN promote axon regeneration through the IGF-1R/Akt/mTOR signaling pathway.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P039-E002", "measurement_method_inference": "pathway activity / phospho-signaling assay", "paper_tracker_id": "M5A-P039", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T007", "tracker_id": "M5B-O086"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4854,18 +4940,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O086', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Wang Y 2023 M5A-P040-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Osteopontin enhances the effect of treadmill training and promotes functional recovery after spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Wang Y 2023 M5A-P040-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after corticospinal tract regeneration / sprouting with endpoint/readout: Outcome/mechanistic validation row for Osteopontin enhances the effect of treadmill training and promotes functional recovery after spinal cord injury.; first-pass row captures corticospinal tract regeneration / sprouting in mouse sci model at abstract/source-title level..',
     'M5A-P040-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Osteopontin enhances the effect of treadmill training and promotes functional recovery after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P040-E002", "paper_tracker_id": "M5A-P040", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T007", "tracker_id": "M5B-O087"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Osteopontin enhances the effect of treadmill training and promotes functional recovery after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P040-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P040", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T007", "tracker_id": "M5B-O087"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4879,18 +4966,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O087', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Tao N 2023 M5A-P041-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after graft/scaffold-enabled axon repair with endpoint/readout: Outcome/mechanistic validation row for Co-overexpression of OPN, IGF-1 and CNTF augment the therapeutic effect of DPSC on spinal cord injury.; first-pass row captures graft/scaffold-enabled axon repair in mouse sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Tao N 2023 M5A-P041-E002 preserves a distinct Mouse SCI model experiment testing Mechanistic outcome assessment after graft/scaffold-enabled axon repair with endpoint/readout: Outcome/mechanistic validation row for Co-overexpression of OPN, IGF-1 and CNTF augment the therapeutic effect of DPSC on spinal cord injury.; first-pass row captures graft/scaffold-enabled axon repair in mouse sci model at abstract/source-title level..',
     'M5A-P041-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Co-overexpression of OPN, IGF-1 and CNTF augment the therapeutic effect of DPSC on spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P041-E002", "paper_tracker_id": "M5A-P041", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T006", "tracker_id": "M5B-O088"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Co-overexpression of OPN, IGF-1 and CNTF augment the therapeutic effect of DPSC on spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P041-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P041", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T006", "tracker_id": "M5B-O088"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4904,18 +4992,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O088', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ye J 2025 M5A-P042-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after graft/scaffold-enabled axon repair with endpoint/readout: Outcome/mechanistic validation row for Multichannel 3D-Printed Bioactive Scaffold Combined with Small Interfering RNA Delivery to Promote Neurological Recovery after Spinal Cord Injury.; first-pass row captures graft/scaffold-enabled axon repair in rat sci model at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Ye J 2025 M5A-P042-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after graft/scaffold-enabled axon repair with endpoint/readout: Outcome/mechanistic validation row for Multichannel 3D-Printed Bioactive Scaffold Combined with Small Interfering RNA Delivery to Promote Neurological Recovery after Spinal Cord Injury.; first-pass row captures graft/scaffold-enabled axon repair in rat sci model at abstract/source-title level..',
     'M5A-P042-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Multichannel 3D-Printed Bioactive Scaffold Combined with Small Interfering RNA Delivery to Promote Neurological Recovery after Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P042-E002", "paper_tracker_id": "M5A-P042", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T006", "tracker_id": "M5B-O089"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Multichannel 3D-Printed Bioactive Scaffold Combined with Small Interfering RNA Delivery to Promote Neurological Recovery after Spinal Cord Injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P042-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P042", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T006", "tracker_id": "M5B-O089"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4929,18 +5018,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O089', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'McGuire TK 2026 M5A-P043-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after intrinsic neuronal growth competence with endpoint/readout: Outcome/mechanistic validation row for Development of a <i>PTEN</i>-siRNA activated scaffold to promote axonal regrowth following spinal cord injury.; first-pass row captures intrinsic neuronal growth competence in rat sci model at abstract/source-title level..',
     'qualitative',
+    'genetic perturbation / knockdown assay',
     'McGuire TK 2026 M5A-P043-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after intrinsic neuronal growth competence with endpoint/readout: Outcome/mechanistic validation row for Development of a <i>PTEN</i>-siRNA activated scaffold to promote axonal regrowth following spinal cord injury.; first-pass row captures intrinsic neuronal growth competence in rat sci model at abstract/source-title level..',
     'M5A-P043-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Development of a <i>PTEN</i>-siRNA activated scaffold to promote axonal regrowth following spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P043-E002", "paper_tracker_id": "M5A-P043", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O090"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Development of a <i>PTEN</i>-siRNA activated scaffold to promote axonal regrowth following spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P043-E002", "measurement_method_inference": "genetic perturbation / knockdown assay", "paper_tracker_id": "M5A-P043", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O090"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4954,18 +5044,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O090', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Muller F 2026 M5A-P044-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after intrinsic neuronal growth competence with endpoint/readout: Outcome/mechanistic validation row for CITED2 is a druggable epigenetic switch coupling neuronal maturation to regenerative decline.; first-pass row captures intrinsic neuronal growth competence in rat sci model at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Muller F 2026 M5A-P044-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after intrinsic neuronal growth competence with endpoint/readout: Outcome/mechanistic validation row for CITED2 is a druggable epigenetic switch coupling neuronal maturation to regenerative decline.; first-pass row captures intrinsic neuronal growth competence in rat sci model at abstract/source-title level..',
     'M5A-P044-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: CITED2 is a druggable epigenetic switch coupling neuronal maturation to regenerative decline.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P044-E002", "paper_tracker_id": "M5A-P044", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O091"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: CITED2 is a druggable epigenetic switch coupling neuronal maturation to regenerative decline.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P044-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P044", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T005", "tracker_id": "M5B-O091"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4979,18 +5070,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O091', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Couvrette LJ 2025 M5A-P045-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after graft/scaffold-enabled axon repair with endpoint/readout: Outcome/mechanistic validation row for Poly-L-Ornithine coated plant scaffolds support motor recovery in rats after traumatic spinal cord injury.; first-pass row captures graft/scaffold-enabled axon repair in human / translational context at abstract/source-title level..',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Couvrette LJ 2025 M5A-P045-E002 preserves a distinct Human / translational context experiment testing Mechanistic outcome assessment after graft/scaffold-enabled axon repair with endpoint/readout: Outcome/mechanistic validation row for Poly-L-Ornithine coated plant scaffolds support motor recovery in rats after traumatic spinal cord injury.; first-pass row captures graft/scaffold-enabled axon repair in human / translational context at abstract/source-title level..',
     'M5A-P045-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Poly-L-Ornithine coated plant scaffolds support motor recovery in rats after traumatic spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P045-E002", "paper_tracker_id": "M5A-P045", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T006", "tracker_id": "M5B-O092"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Poly-L-Ornithine coated plant scaffolds support motor recovery in rats after traumatic spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P045-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M5A-P045", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T006", "tracker_id": "M5B-O092"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5004,18 +5096,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O092', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Dong H 2025 M5A-P046-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.; first-pass row captures remyelination / white matter repair in rat sci model at abstract/source-title level..',
     'qualitative',
+    'single-cell RNA-seq / cell-state atlas; spatial transcriptomics / spatial atlas',
     'Dong H 2025 M5A-P046-E002 preserves a distinct Rat SCI model experiment testing Mechanistic outcome assessment after remyelination / white matter repair with endpoint/readout: Outcome/mechanistic validation row for Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.; first-pass row captures remyelination / white matter repair in rat sci model at abstract/source-title level..',
     'M5A-P046-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P046-E002", "paper_tracker_id": "M5A-P046", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O093"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Integrating single-cell RNA sequencing and spatial multi-omics reveals the molecular signature of regeneration after spinal cord injury.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P046-E002", "measurement_method_inference": "single-cell RNA-seq / cell-state atlas; spatial transcriptomics / spatial atlas", "paper_tracker_id": "M5A-P046", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T003", "tracker_id": "M5B-O093"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5029,18 +5122,19 @@ INSERT INTO _m5_observation_map (tracker_id, observation_id) SELECT 'M5B-O093', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Chize CM 2025 M5A-P047-E002 preserves a distinct Dog chronic SCI experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for A laminin-based therapy for dogs with chronic spinal cord injury: promising results of a longitudinal trial.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in dog chronic sci at abstract/source-title level..',
     'qualitative',
+    NULL,
     'Chize CM 2025 M5A-P047-E002 preserves a distinct Dog chronic SCI experiment testing Mechanistic outcome assessment after extrinsic inhibitory matrix / guidance pathway with endpoint/readout: Outcome/mechanistic validation row for A laminin-based therapy for dogs with chronic spinal cord injury: promising results of a longitudinal trial.; first-pass row captures extrinsic inhibitory matrix / guidance pathway in dog chronic sci at abstract/source-title level..',
     'M5A-P047-E002 preserves distinct model/timing/intervention/endpoint boundary',
     'Module A tracker',
     'Abstract / PubMed-indexed metadata',
     'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: A laminin-based therapy for dogs with chronic spinal cord injury: promising results of a longitudinal trial.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P047-E002", "paper_tracker_id": "M5A-P047", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O094"}'
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: A laminin-based therapy for dogs with chronic spinal cord injury: promising results of a longitudinal trial.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M5A-P047-E002", "measurement_method_inference": null, "paper_tracker_id": "M5A-P047", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M5B-T002", "tracker_id": "M5B-O094"}'
   FROM _m5_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
