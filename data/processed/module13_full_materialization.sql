@@ -960,18 +960,19 @@ INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VA
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Graded contusion time course from 15 min to 8 weeks linking hemorrhage, lesion expansion, gray/white matter loss, residual white matter, and function.',
     'qualitative',
+    NULL,
     'Graded contusion time course from 15 min to 8 weeks linking hemorrhage, lesion expansion, gray/white matter loss, residual white matter, and function.',
     'graded contusion lesion development',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'medium',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P001-E001", "paper_tracker_id": "M13A-P001", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T001", "tracker_id": "M13B-O001"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P001-E001", "measurement_method_inference": null, "paper_tracker_id": "M13A-P001", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T001", "tracker_id": "M13B-O001"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -985,18 +986,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O001'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Controlled contusion time course from 15 min to 10 weeks; gray matter loss rapid by 24 h and white matter loss extends to 1 week.',
     'qualitative',
+    NULL,
     'Controlled contusion time course from 15 min to 10 weeks; gray matter loss rapid by 24 h and white matter loss extends to 1 week.',
     'gray/white matter progression',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'high',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P002-E001", "paper_tracker_id": "M13A-P002", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T001", "tracker_id": "M13B-O002"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P002-E001", "measurement_method_inference": null, "paper_tracker_id": "M13A-P002", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T001", "tracker_id": "M13B-O002"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1010,18 +1012,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O002'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Human postmortem MRI-pathology series from 8 days to 23 years after SCI defining ascending/descending Wallerian degeneration.',
     'qualitative',
+    'immunostaining / histology / pathology; MRI / imaging assay',
     'Human postmortem MRI-pathology series from 8 days to 23 years after SCI defining ascending/descending Wallerian degeneration.',
     'human Wallerian degeneration',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'high',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P003-E001", "paper_tracker_id": "M13A-P003", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T007", "tracker_id": "M13B-O003"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P003-E001", "measurement_method_inference": "immunostaining / histology / pathology; MRI / imaging assay", "paper_tracker_id": "M13A-P003", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T007", "tracker_id": "M13B-O003"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1035,18 +1038,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O003'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Systematic review/meta-analysis of animal axonal degeneration and demyelination across SCI phase, model, severity, and level.',
     'qualitative',
+    NULL,
     'Systematic review/meta-analysis of animal axonal degeneration and demyelination across SCI phase, model, severity, and level.',
     'axon/myelin degeneration meta-analysis',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'medium',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P004-E001", "paper_tracker_id": "M13A-P004", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T007", "tracker_id": "M13B-O004"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P004-E001", "measurement_method_inference": null, "paper_tracker_id": "M13A-P004", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T007", "tracker_id": "M13B-O004"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1060,18 +1064,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O004'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Barrier disruption and vascular remodeling time-course anchor.',
     'qualitative',
+    'barrier / permeability / endothelial assay',
     'Barrier disruption and vascular remodeling time-course anchor.',
     'barrier and vascular remodeling',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'medium',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P005-E001", "paper_tracker_id": "M13A-P005", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T002", "tracker_id": "M13B-O005"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P005-E001", "measurement_method_inference": "barrier / permeability / endothelial assay", "paper_tracker_id": "M13A-P005", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T002", "tracker_id": "M13B-O005"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1085,18 +1090,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O005'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'MRI/histology evidence that hemorrhagic lesion expansion occurs over first 24 h and is modifiable by Sur1-Trpm4 blockade.',
     'qualitative',
+    'immunostaining / histology / pathology; barrier / permeability / endothelial assay; MRI / imaging assay',
     'MRI/histology evidence that hemorrhagic lesion expansion occurs over first 24 h and is modifiable by Sur1-Trpm4 blockade.',
     'progressive hemorrhagic necrosis',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'high',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P006-E001", "paper_tracker_id": "M13A-P006", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T002", "tracker_id": "M13B-O006"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P006-E001", "measurement_method_inference": "immunostaining / histology / pathology; barrier / permeability / endothelial assay; MRI / imaging assay", "paper_tracker_id": "M13A-P006", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T002", "tracker_id": "M13B-O006"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1110,18 +1116,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O006'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Astrocytic scar-border formation from 5-14 days corrals inflammatory and fibrotic cells through STAT3-dependent mechanisms.',
     'qualitative',
+    NULL,
     'Astrocytic scar-border formation from 5-14 days corrals inflammatory and fibrotic cells through STAT3-dependent mechanisms.',
     'STAT3 astrocytic border formation',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'medium',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P007-E001", "paper_tracker_id": "M13A-P007", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T005", "tracker_id": "M13B-O007"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P007-E001", "measurement_method_inference": null, "paper_tracker_id": "M13A-P007", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T005", "tracker_id": "M13B-O007"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1135,18 +1142,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O007'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Spatial transcriptomic scar atlas with phases from macrophage infiltration to scar stationary state.',
     'qualitative',
+    'spatial transcriptomics / spatial atlas; bulk transcriptomics / GEO dataset',
     'Spatial transcriptomic scar atlas with phases from macrophage infiltration to scar stationary state.',
     'spatial scar phase progression',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'medium',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P008-E001", "paper_tracker_id": "M13A-P008", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T005", "tracker_id": "M13B-O008"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P008-E001", "measurement_method_inference": "spatial transcriptomics / spatial atlas; bulk transcriptomics / GEO dataset", "paper_tracker_id": "M13A-P008", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T005", "tracker_id": "M13B-O008"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1160,18 +1168,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O008'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Astrocyte Ryk signaling regulates astrocyte morphology, border formation, scar size, and multicellular injury responses.',
     'qualitative',
+    NULL,
     'Astrocyte Ryk signaling regulates astrocyte morphology, border formation, scar size, and multicellular injury responses.',
     'astrocytic Ryk wound signaling',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'medium',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P009-E001", "paper_tracker_id": "M13A-P009", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T005", "tracker_id": "M13B-O009"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P009-E001", "measurement_method_inference": null, "paper_tracker_id": "M13A-P009", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T005", "tracker_id": "M13B-O009"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1185,18 +1194,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O009'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Border-forming wound repair astrocytes derive mainly from local mature astrocytes and acquire persistent wound-healing states.',
     'qualitative',
+    NULL,
     'Border-forming wound repair astrocytes derive mainly from local mature astrocytes and acquire persistent wound-healing states.',
     'wound repair astrocyte derivation',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'medium',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P010-E001", "paper_tracker_id": "M13A-P010", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T005", "tracker_id": "M13B-O010"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P010-E001", "measurement_method_inference": null, "paper_tracker_id": "M13A-P010", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T005", "tracker_id": "M13B-O010"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1210,18 +1220,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O010'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Mouse/monkey fibroblast heterogeneity; perivascular and meningeal fibroblast compartments contribute spatially distinct scar domains.',
     'qualitative',
+    NULL,
     'Mouse/monkey fibroblast heterogeneity; perivascular and meningeal fibroblast compartments contribute spatially distinct scar domains.',
     'fibroblast scar heterogeneity',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'medium',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P011-E001", "paper_tracker_id": "M13A-P011", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T006", "tracker_id": "M13B-O011"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P011-E001", "measurement_method_inference": null, "paper_tracker_id": "M13A-P011", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T006", "tracker_id": "M13B-O011"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1235,18 +1246,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O011'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Innate signaling boundary: post-SCI inflammation can support debris clearance, oligodendrocyte replacement, remyelination, and recovery.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Innate signaling boundary: post-SCI inflammation can support debris clearance, oligodendrocyte replacement, remyelination, and recovery.',
     'TLR4-linked oligodendrocyte replacement',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'medium',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P012-E001", "paper_tracker_id": "M13A-P012", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T003", "tracker_id": "M13B-O012"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P012-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M13A-P012", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T003", "tracker_id": "M13B-O012"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1260,18 +1272,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O012'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Microglia/macrophage modulation changes chronic inflammatory and neurodegenerative outcomes.',
     'qualitative',
+    NULL,
     'Microglia/macrophage modulation changes chronic inflammatory and neurodegenerative outcomes.',
     'microglial depletion and chronic inflammation',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'high',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P013-E001", "paper_tracker_id": "M13A-P013", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T004", "tracker_id": "M13B-O013"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P013-E001", "measurement_method_inference": null, "paper_tracker_id": "M13A-P013", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T004", "tracker_id": "M13B-O013"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1285,18 +1298,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O013'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Duplicate full-text anchor retained for chronic remote degeneration and behavior boundary.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Duplicate full-text anchor retained for chronic remote degeneration and behavior boundary.',
     'remote neurodegeneration after SCI',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'high',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P014-E001", "paper_tracker_id": "M13A-P014", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T004", "tracker_id": "M13B-O014"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P014-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M13A-P014", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T004", "tracker_id": "M13B-O014"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1310,18 +1324,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O014'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Microglia/macrophages promote wound corralling and compaction, supporting protective organization rather than simple suppression.',
     'qualitative',
+    NULL,
     'Microglia/macrophages promote wound corralling and compaction, supporting protective organization rather than simple suppression.',
     'microglia/macrophage wound corralling',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'medium',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P015-E001", "paper_tracker_id": "M13A-P015", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T004", "tracker_id": "M13B-O015"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P015-E001", "measurement_method_inference": null, "paper_tracker_id": "M13A-P015", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T004", "tracker_id": "M13B-O015"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1335,18 +1350,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O015'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'MRI tracks white matter tract pathology after severe thoracic contusion and relates spared white matter to locomotor recovery.',
     'qualitative',
+    'immunostaining / histology / pathology; MRI / imaging assay; behavioral / functional recovery assay',
     'MRI tracks white matter tract pathology after severe thoracic contusion and relates spared white matter to locomotor recovery.',
     'white matter tract MRI pathology',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'high',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P016-E001", "paper_tracker_id": "M13A-P016", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T007", "tracker_id": "M13B-O016"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P016-E001", "measurement_method_inference": "immunostaining / histology / pathology; MRI / imaging assay; behavioral / functional recovery assay", "paper_tracker_id": "M13A-P016", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T007", "tracker_id": "M13B-O016"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1360,18 +1376,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O016'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Chronic contusion lesion histology describing fibrotic, cellular, Schwann-cell, axonal, and cavity zones.',
     'qualitative',
+    'immunostaining / histology / pathology',
     'Chronic contusion lesion histology describing fibrotic, cellular, Schwann-cell, axonal, and cavity zones.',
     'chronic cavity-zone histology',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'low',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P017-E001", "paper_tracker_id": "M13A-P017", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T008", "tracker_id": "M13B-O017"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P017-E001", "measurement_method_inference": "immunostaining / histology / pathology", "paper_tracker_id": "M13A-P017", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T008", "tracker_id": "M13B-O017"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1385,18 +1402,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O017'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Chronic SCI microglial plasticity boundary; chronic lesion remains inducible rather than inert.',
     'qualitative',
+    NULL,
     'Chronic SCI microglial plasticity boundary; chronic lesion remains inducible rather than inert.',
     'chronic microglial plasticity',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'medium',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P018-E001", "paper_tracker_id": "M13A-P018", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T008", "tracker_id": "M13B-O018"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P018-E001", "measurement_method_inference": null, "paper_tracker_id": "M13A-P018", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T008", "tracker_id": "M13B-O018"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1410,18 +1428,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O018'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Human/rodent astrocytic wound-healing signal bridge.',
     'qualitative',
+    NULL,
     'Human/rodent astrocytic wound-healing signal bridge.',
     'human/rodent astrocyte scar signaling',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'medium',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P019-E001", "paper_tracker_id": "M13A-P019", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T005", "tracker_id": "M13B-O019"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P019-E001", "measurement_method_inference": null, "paper_tracker_id": "M13A-P019", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T005", "tracker_id": "M13B-O019"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1435,18 +1454,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O019'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Cross-species fibrotic scar conservation boundary.',
     'qualitative',
+    NULL,
     'Cross-species fibrotic scar conservation boundary.',
     'cross-species fibrotic scar conservation',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'medium',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P020-E001", "paper_tracker_id": "M13A-P020", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T006", "tracker_id": "M13B-O020"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P020-E001", "measurement_method_inference": null, "paper_tracker_id": "M13A-P020", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T006", "tracker_id": "M13B-O020"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1460,18 +1480,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O020'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ligand-receptor and spatial boundary evidence for multicellular scar architecture.',
     'qualitative',
+    'spatial transcriptomics / spatial atlas',
     'Ligand-receptor and spatial boundary evidence for multicellular scar architecture.',
     'ligand-receptor scar interactions',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'medium',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P021-E001", "paper_tracker_id": "M13A-P021", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T006", "tracker_id": "M13B-O021"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P021-E001", "measurement_method_inference": "spatial transcriptomics / spatial atlas", "paper_tracker_id": "M13A-P021", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T006", "tracker_id": "M13B-O021"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1485,18 +1506,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O021'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Single-cell astrocyte time course at 0.5, 1, 3, 7, 14, 60, and 90 days after mouse hemisection SCI.',
     'qualitative',
+    'single-cell RNA-seq / cell-state atlas',
     'Single-cell astrocyte time course at 0.5, 1, 3, 7, 14, 60, and 90 days after mouse hemisection SCI.',
     'single-cell astrocyte time course',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'medium',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P022-E001", "paper_tracker_id": "M13A-P022", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T005", "tracker_id": "M13B-O022"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P022-E001", "measurement_method_inference": "single-cell RNA-seq / cell-state atlas", "paper_tracker_id": "M13A-P022", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T005", "tracker_id": "M13B-O022"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1510,18 +1532,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O022'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Human cord postmortem MRI-pathology evidence of Wallerian degeneration across days to decades.',
     'qualitative',
+    'immunostaining / histology / pathology; MRI / imaging assay',
     'Human cord postmortem MRI-pathology evidence of Wallerian degeneration across days to decades.',
     'MRI-pathology Wallerian course',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'high',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P023-E001", "paper_tracker_id": "M13A-P023", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T007", "tracker_id": "M13B-O023"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P023-E001", "measurement_method_inference": "immunostaining / histology / pathology; MRI / imaging assay", "paper_tracker_id": "M13A-P023", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T007", "tracker_id": "M13B-O023"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1535,18 +1558,19 @@ INSERT INTO _m13_observation_map (tracker_id, observation_id) SELECT 'M13B-O023'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Progressive hemorrhagic necrosis intervention anchor showing acute lesion expansion can be reduced.',
     'qualitative',
+    'barrier / permeability / endothelial assay',
     'Progressive hemorrhagic necrosis intervention anchor showing acute lesion expansion can be reduced.',
     'modifiable acute hemorrhagic expansion',
     'Module 13A tracker / source-page, full-text PMC, database, or abstract metadata',
     'Abstract/source page or PMC',
     'high',
-    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P024-E001", "paper_tracker_id": "M13A-P024", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T002", "tracker_id": "M13B-O024"}'
+    '{"curator_notes": "First-pass extraction preserving temporal pathobiology boundary.", "experiment_tracker_id": "M13A-P024-E001", "measurement_method_inference": "barrier / permeability / endothelial assay", "paper_tracker_id": "M13A-P024", "quantitative": "NO", "statistics_reported": "Source-page/full-text first pass; exact statistics retained only when directly available", "topic_id": "M13B-T002", "tracker_id": "M13B-O024"}'
   FROM _m13_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot

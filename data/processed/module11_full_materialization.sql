@@ -1298,18 +1298,19 @@ INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VA
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Cerebrospinal fluid drainage for thoracic and thoracoabdominal aortic aneurysm surgery tested or summarized CSF drainage in Human TAA/TAAA surgery evidence review; first-pass note: Cochrane review; 3 RCTs, 287 participants; limited but supportive evidence with boundary conditions.',
     'qualitative',
+    NULL,
     'Cerebrospinal fluid drainage for thoracic and thoracoabdominal aortic aneurysm surgery tested or summarized CSF drainage in Human TAA/TAAA surgery evidence review; first-pass note: Cochrane review; 3 RCTs, 287 participants; limited but supportive evidence with boundary conditions.',
     'csf drainage',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P001-E001", "paper_tracker_id": "M11A-P001", "quantitative": "YES", "statistics_reported": "Cochrane review; 3 RCTs, 287 participants; limited but supportive evidence with boundary conditions.", "topic_id": "M11B-T001", "tracker_id": "M11B-O001"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P001-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P001", "quantitative": "YES", "statistics_reported": "Cochrane review; 3 RCTs, 287 participants; limited but supportive evidence with boundary conditions.", "topic_id": "M11B-T001", "tracker_id": "M11B-O001"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1323,18 +1324,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O001'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Prospective randomized pilot trial comparing prophylactic and therapeutic cerebrospinal fluid drainage during complex endovascular thoracoabdominal aortic aneurysm repair tested or summarized Prophylactic versus therapeutic CSF drainage in Human FBEVAR/TAAA randomized pilot; first-pass note: 20-patient randomized feasibility trial; one SCI event and one drain-related epidural hematoma.',
     'qualitative',
+    NULL,
     'Prospective randomized pilot trial comparing prophylactic and therapeutic cerebrospinal fluid drainage during complex endovascular thoracoabdominal aortic aneurysm repair tested or summarized Prophylactic versus therapeutic CSF drainage in Human FBEVAR/TAAA randomized pilot; first-pass note: 20-patient randomized feasibility trial; one SCI event and one drain-related epidural hematoma.',
     'prophylactic versus therapeutic csf drainage',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P002-E001", "paper_tracker_id": "M11A-P002", "quantitative": "YES", "statistics_reported": "20-patient randomized feasibility trial; one SCI event and one drain-related epidural hematoma.", "topic_id": "M11B-T002", "tracker_id": "M11B-O002"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P002-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P002", "quantitative": "YES", "statistics_reported": "20-patient randomized feasibility trial; one SCI event and one drain-related epidural hematoma.", "topic_id": "M11B-T002", "tracker_id": "M11B-O002"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1348,18 +1350,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O002'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Current strategies of spinal cord protection during thoracoabdominal aortic surgery tested or summarized Multimodality protection: distal perfusion, CSF drainage, segmental reattachment, MAP targets in Human TAAA operative strategy review; first-pass note: Emphasizes no single protective measure and recommends multimodal protection.',
     'qualitative',
+    NULL,
     'Current strategies of spinal cord protection during thoracoabdominal aortic surgery tested or summarized Multimodality protection: distal perfusion, CSF drainage, segmental reattachment, MAP targets in Human TAAA operative strategy review; first-pass note: Emphasizes no single protective measure and recommends multimodal protection.',
     'multimodality protection: distal perfusion, csf drainage, segmental reattachment, map targets',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P003-E001", "paper_tracker_id": "M11A-P003", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T003", "tracker_id": "M11B-O003"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P003-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P003", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T003", "tracker_id": "M11B-O003"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1373,18 +1376,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O003'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Spinal cord protection for thoracoabdominal aortic aneurysm repair: from bench to bedside tested or summarized Collateral perfusion and ischemia-reperfusion protection in Bench-to-bedside TAAA review; first-pass note: Review of anatomy, mechanisms, laboratory and clinical protective strategies.',
     'qualitative',
+    NULL,
     'Spinal cord protection for thoracoabdominal aortic aneurysm repair: from bench to bedside tested or summarized Collateral perfusion and ischemia-reperfusion protection in Bench-to-bedside TAAA review; first-pass note: Review of anatomy, mechanisms, laboratory and clinical protective strategies.',
     'collateral perfusion and ischemia-reperfusion protection',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P004-E001", "paper_tracker_id": "M11A-P004", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T004", "tracker_id": "M11B-O004"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P004-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P004", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T004", "tracker_id": "M11B-O004"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1398,18 +1402,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O004'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Staging Endovascular Thoracic and Thoracoabdominal Aortic Aneurysm Repairs and the Risk of Post-operative Spinal Cord Ischemia tested or summarized Staged endovascular repair/collateral conditioning in Human VQI endovascular aortic repair cohort; first-pass note: 1421 VQI cases; staged repair not independently associated with lower SCI after adjustment; trend toward less permanent SCI among SCI cases.',
     'qualitative',
+    NULL,
     'Staging Endovascular Thoracic and Thoracoabdominal Aortic Aneurysm Repairs and the Risk of Post-operative Spinal Cord Ischemia tested or summarized Staged endovascular repair/collateral conditioning in Human VQI endovascular aortic repair cohort; first-pass note: 1421 VQI cases; staged repair not independently associated with lower SCI after adjustment; trend toward less permanent SCI among SCI cases.',
     'staged endovascular repair/collateral conditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P005-E001", "paper_tracker_id": "M11A-P005", "quantitative": "YES", "statistics_reported": "1421 VQI cases; staged repair not independently associated with lower SCI after adjustment; trend toward less permanent SCI among SCI cases.", "topic_id": "M11B-T005", "tracker_id": "M11B-O005"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P005-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P005", "quantitative": "YES", "statistics_reported": "1421 VQI cases; staged repair not independently associated with lower SCI after adjustment; trend toward less permanent SCI among SCI cases.", "topic_id": "M11B-T005", "tracker_id": "M11B-O005"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1423,18 +1428,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O005'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Staged procedures for prevention of spinal cord ischemia in endovascular aortic surgery tested or summarized Staged repair, perfusion branches, delayed bridging, open branch, MISACE in Human endovascular aortic surgery review; first-pass note: Review of staging methods to reinforce collateral spinal perfusion.',
     'qualitative',
+    NULL,
     'Staged procedures for prevention of spinal cord ischemia in endovascular aortic surgery tested or summarized Staged repair, perfusion branches, delayed bridging, open branch, MISACE in Human endovascular aortic surgery review; first-pass note: Review of staging methods to reinforce collateral spinal perfusion.',
     'staged repair, perfusion branches, delayed bridging, open branch, misace',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P006-E001", "paper_tracker_id": "M11A-P006", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T006", "tracker_id": "M11B-O006"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P006-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P006", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T006", "tracker_id": "M11B-O006"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1448,18 +1454,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O006'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Open, closed or a bit of both: a systematic review and meta-analysis of staged thoraco-abdominal aortic aneurysm repair tested or summarized Open/endovascular/hybrid staged repair in Human staged TAAA systematic review/meta-analysis; first-pass note: 20 studies, 924 patients; SCI differed by approach while all used drainage/monitoring/staging components.',
     'qualitative',
+    NULL,
     'Open, closed or a bit of both: a systematic review and meta-analysis of staged thoraco-abdominal aortic aneurysm repair tested or summarized Open/endovascular/hybrid staged repair in Human staged TAAA systematic review/meta-analysis; first-pass note: 20 studies, 924 patients; SCI differed by approach while all used drainage/monitoring/staging components.',
     'open/endovascular/hybrid staged repair',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P007-E001", "paper_tracker_id": "M11A-P007", "quantitative": "YES", "statistics_reported": "20 studies, 924 patients; SCI differed by approach while all used drainage/monitoring/staging components.", "topic_id": "M11B-T007", "tracker_id": "M11B-O007"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P007-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P007", "quantitative": "YES", "statistics_reported": "20 studies, 924 patients; SCI differed by approach while all used drainage/monitoring/staging components.", "topic_id": "M11B-T007", "tracker_id": "M11B-O007"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1473,18 +1480,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O007'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Planned Staged Repair of Thoracoabdominal Aortic Aneurysms to Minimize Spinal Cord Injury: A Proof of Concept tested or summarized Planned staged repair/collateral-network conditioning in Human TAAA staged repair proof-of-concept; first-pass note: Proof-of-concept for planned staging to reduce spinal cord injury risk.',
     'qualitative',
+    NULL,
     'Planned Staged Repair of Thoracoabdominal Aortic Aneurysms to Minimize Spinal Cord Injury: A Proof of Concept tested or summarized Planned staged repair/collateral-network conditioning in Human TAAA staged repair proof-of-concept; first-pass note: Proof-of-concept for planned staging to reduce spinal cord injury risk.',
     'planned staged repair/collateral-network conditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P008-E001", "paper_tracker_id": "M11A-P008", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T008", "tracker_id": "M11B-O008"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P008-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P008", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T008", "tracker_id": "M11B-O008"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1498,18 +1506,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O008'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Patterns of collateral arteries to the spinal cord after thoraco-abdominal aortic aneurysm repair tested or summarized Collateral artery remodeling after segmental artery occlusion in Human TAAR/TEVAR imaging cohort; first-pass note: 179 patients; postoperative collateral pathways assessed after AKA-segmental artery occlusion.',
     'qualitative',
+    'MRI / imaging assay',
     'Patterns of collateral arteries to the spinal cord after thoraco-abdominal aortic aneurysm repair tested or summarized Collateral artery remodeling after segmental artery occlusion in Human TAAR/TEVAR imaging cohort; first-pass note: 179 patients; postoperative collateral pathways assessed after AKA-segmental artery occlusion.',
     'collateral artery remodeling after segmental artery occlusion',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P009-E001", "paper_tracker_id": "M11A-P009", "quantitative": "YES", "statistics_reported": "179 patients; postoperative collateral pathways assessed after AKA-segmental artery occlusion.", "topic_id": "M11B-T001", "tracker_id": "M11B-O009"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P009-E001", "measurement_method_inference": "MRI / imaging assay", "paper_tracker_id": "M11A-P009", "quantitative": "YES", "statistics_reported": "179 patients; postoperative collateral pathways assessed after AKA-segmental artery occlusion.", "topic_id": "M11B-T001", "tracker_id": "M11B-O009"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1523,18 +1532,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O009'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Comparison of the protective effects of direct ischemic preconditioning and remote ischemic preconditioning in a rabbit model of transient spinal cord ischemia tested or summarized Direct ischemic preconditioning versus kidney/limb remote preconditioning in Rabbit transient spinal cord ischemia; first-pass note: DIPC protected neurologic/histologic outcomes; kidney/limb RIPC did not; Akt2 signal implicated.',
     'qualitative',
+    'immunostaining / histology / pathology',
     'Comparison of the protective effects of direct ischemic preconditioning and remote ischemic preconditioning in a rabbit model of transient spinal cord ischemia tested or summarized Direct ischemic preconditioning versus kidney/limb remote preconditioning in Rabbit transient spinal cord ischemia; first-pass note: DIPC protected neurologic/histologic outcomes; kidney/limb RIPC did not; Akt2 signal implicated.',
     'direct ischemic preconditioning versus kidney/limb remote preconditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P010-E001", "paper_tracker_id": "M11A-P010", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T002", "tracker_id": "M11B-O010"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P010-E001", "measurement_method_inference": "immunostaining / histology / pathology", "paper_tracker_id": "M11A-P010", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T002", "tracker_id": "M11B-O010"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1548,18 +1558,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O010'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ischaemic preconditioning of the spinal cord to prevent spinal cord ischaemia during endovascular repair of thoracoabdominal aortic aneurysm: first clinical experience tested or summarized MISACE segmental artery coil embolization preconditioning in Human endovascular TAAA repair; first-pass note: 57 patients underwent MISACE; 55 proceeded to endovascular repair; no 30-day SCI reported.',
     'qualitative',
+    NULL,
     'Ischaemic preconditioning of the spinal cord to prevent spinal cord ischaemia during endovascular repair of thoracoabdominal aortic aneurysm: first clinical experience tested or summarized MISACE segmental artery coil embolization preconditioning in Human endovascular TAAA repair; first-pass note: 57 patients underwent MISACE; 55 proceeded to endovascular repair; no 30-day SCI reported.',
     'misace segmental artery coil embolization preconditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P011-E001", "paper_tracker_id": "M11A-P011", "quantitative": "YES", "statistics_reported": "57 patients underwent MISACE; 55 proceeded to endovascular repair; no 30-day SCI reported.", "topic_id": "M11B-T003", "tracker_id": "M11B-O011"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P011-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P011", "quantitative": "YES", "statistics_reported": "57 patients underwent MISACE; 55 proceeded to endovascular repair; no 30-day SCI reported.", "topic_id": "M11B-T003", "tracker_id": "M11B-O011"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1573,18 +1584,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O011'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Remote ischaemic preconditioning versus sham procedure for abdominal aortic aneurysm repair: an external feasibility randomized controlled trial tested or summarized Upper-arm remote ischemic conditioning in Human elective AAA repair feasibility RCT; first-pass note: 69 randomized; feasible and acceptable; not spinal-cord-specific and confounded by EVAR complexity.',
     'qualitative',
+    NULL,
     'Remote ischaemic preconditioning versus sham procedure for abdominal aortic aneurysm repair: an external feasibility randomized controlled trial tested or summarized Upper-arm remote ischemic conditioning in Human elective AAA repair feasibility RCT; first-pass note: 69 randomized; feasible and acceptable; not spinal-cord-specific and confounded by EVAR complexity.',
     'upper-arm remote ischemic conditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P012-E001", "paper_tracker_id": "M11A-P012", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T004", "tracker_id": "M11B-O012"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P012-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P012", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T004", "tracker_id": "M11B-O012"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1598,18 +1610,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O012'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Sevoflurane preconditioning induces rapid ischemic tolerance against spinal cord ischemia/reperfusion through activation of extracellular signal-regulated kinase in rabbits tested or summarized Sevoflurane anesthetic preconditioning in Rabbit infrarenal aortic occlusion spinal I/R; first-pass note: Sevoflurane improved neurologic/histologic outcomes; ERK blockade attenuated effect.',
     'qualitative',
+    'immunostaining / histology / pathology',
     'Sevoflurane preconditioning induces rapid ischemic tolerance against spinal cord ischemia/reperfusion through activation of extracellular signal-regulated kinase in rabbits tested or summarized Sevoflurane anesthetic preconditioning in Rabbit infrarenal aortic occlusion spinal I/R; first-pass note: Sevoflurane improved neurologic/histologic outcomes; ERK blockade attenuated effect.',
     'sevoflurane anesthetic preconditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P013-E001", "paper_tracker_id": "M11A-P013", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T005", "tracker_id": "M11B-O013"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P013-E001", "measurement_method_inference": "immunostaining / histology / pathology", "paper_tracker_id": "M11A-P013", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T005", "tracker_id": "M11B-O013"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1623,18 +1636,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O013'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Ischemic preconditioning protects against spinal cord ischemia-reperfusion injury in rabbits by attenuating blood spinal cord barrier disruption tested or summarized Local ischemic preconditioning in Rabbit abdominal aortic occlusion I/R; first-pass note: IPC improved Tarlov scores, reduced barrier permeability/edema, preserved ZO-1, reduced MMP-9/TNF-alpha.',
     'qualitative',
+    'ELISA / cytokine protein assay; barrier / permeability / endothelial assay',
     'Ischemic preconditioning protects against spinal cord ischemia-reperfusion injury in rabbits by attenuating blood spinal cord barrier disruption tested or summarized Local ischemic preconditioning in Rabbit abdominal aortic occlusion I/R; first-pass note: IPC improved Tarlov scores, reduced barrier permeability/edema, preserved ZO-1, reduced MMP-9/TNF-alpha.',
     'local ischemic preconditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P014-E001", "paper_tracker_id": "M11A-P014", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T006", "tracker_id": "M11B-O014"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P014-E001", "measurement_method_inference": "ELISA / cytokine protein assay; barrier / permeability / endothelial assay", "paper_tracker_id": "M11A-P014", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T006", "tracker_id": "M11B-O014"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1648,18 +1662,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O014'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Co-application of ischemic preconditioning and postconditioning provides additive neuroprotection against spinal cord ischemia in rabbits tested or summarized IPC plus ischemic postconditioning in Rabbit infrarenal aortic occlusion; first-pass note: Combined IPC/postconditioning improved Tarlov scores and preserved motor neurons/white matter.',
     'qualitative',
+    NULL,
     'Co-application of ischemic preconditioning and postconditioning provides additive neuroprotection against spinal cord ischemia in rabbits tested or summarized IPC plus ischemic postconditioning in Rabbit infrarenal aortic occlusion; first-pass note: Combined IPC/postconditioning improved Tarlov scores and preserved motor neurons/white matter.',
     'ipc plus ischemic postconditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P015-E001", "paper_tracker_id": "M11A-P015", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T007", "tracker_id": "M11B-O015"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P015-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P015", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T007", "tracker_id": "M11B-O015"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1673,18 +1688,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O015'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Postconditioning, a series of brief interruptions of early reperfusion, prevents neurologic injury after spinal cord ischemia tested or summarized Early reperfusion postconditioning in Rabbit transient spinal cord ischemia; first-pass note: 4-cycle postconditioning protected; benefit disappeared when delayed 10 minutes.',
     'qualitative',
+    NULL,
     'Postconditioning, a series of brief interruptions of early reperfusion, prevents neurologic injury after spinal cord ischemia tested or summarized Early reperfusion postconditioning in Rabbit transient spinal cord ischemia; first-pass note: 4-cycle postconditioning protected; benefit disappeared when delayed 10 minutes.',
     'early reperfusion postconditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P016-E001", "paper_tracker_id": "M11A-P016", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T008", "tracker_id": "M11B-O016"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P016-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P016", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T008", "tracker_id": "M11B-O016"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1698,18 +1714,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O016'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Isoflurane produces delayed preconditioning against spinal cord ischemic injury via release of free radicals in rabbits tested or summarized Isoflurane delayed preconditioning in Rabbit spinal ischemia; first-pass note: Delayed protection at 24-48 h; free-radical scavenger blocked benefit.',
     'qualitative',
+    NULL,
     'Isoflurane produces delayed preconditioning against spinal cord ischemic injury via release of free radicals in rabbits tested or summarized Isoflurane delayed preconditioning in Rabbit spinal ischemia; first-pass note: Delayed protection at 24-48 h; free-radical scavenger blocked benefit.',
     'isoflurane delayed preconditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P017-E001", "paper_tracker_id": "M11A-P017", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T001", "tracker_id": "M11B-O017"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P017-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P017", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T001", "tracker_id": "M11B-O017"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1723,18 +1740,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O017'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Epidural perfusion cooling protection against protracted spinal cord ischemia in rabbits tested or summarized Epidural perfusion cooling/deep spinal hypothermia in Rabbit aortic ligation model; first-pass note: Cold epidural perfusion protected even after prolonged ischemia relative to normothermia.',
     'qualitative',
+    NULL,
     'Epidural perfusion cooling protection against protracted spinal cord ischemia in rabbits tested or summarized Epidural perfusion cooling/deep spinal hypothermia in Rabbit aortic ligation model; first-pass note: Cold epidural perfusion protected even after prolonged ischemia relative to normothermia.',
     'epidural perfusion cooling/deep spinal hypothermia',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P018-E001", "paper_tracker_id": "M11A-P018", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T002", "tracker_id": "M11B-O018"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P018-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P018", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T002", "tracker_id": "M11B-O018"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1748,18 +1766,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O018'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Appraisal of cerebrospinal fluid alterations during aortic surgery with intrathecal papaverine administration and cerebrospinal fluid drainage tested or summarized Intrathecal papaverine plus CSF drainage in Human aortic cross-clamping physiology; first-pass note: 11-patient physiologic study; CSF pressure rose with induction/cross-clamp and fell with drainage.',
     'qualitative',
+    NULL,
     'Appraisal of cerebrospinal fluid alterations during aortic surgery with intrathecal papaverine administration and cerebrospinal fluid drainage tested or summarized Intrathecal papaverine plus CSF drainage in Human aortic cross-clamping physiology; first-pass note: 11-patient physiologic study; CSF pressure rose with induction/cross-clamp and fell with drainage.',
     'intrathecal papaverine plus csf drainage',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P019-E001", "paper_tracker_id": "M11A-P019", "quantitative": "YES", "statistics_reported": "11-patient physiologic study; CSF pressure rose with induction/cross-clamp and fell with drainage.", "topic_id": "M11B-T003", "tracker_id": "M11B-O019"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P019-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P019", "quantitative": "YES", "statistics_reported": "11-patient physiologic study; CSF pressure rose with induction/cross-clamp and fell with drainage.", "topic_id": "M11B-T003", "tracker_id": "M11B-O019"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1773,18 +1792,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O019'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Effects of darbepoetin-alpha in spinal cord ischemia-reperfusion injury in the rabbit tested or summarized Darbepoetin-alpha versus methylprednisolone in Rabbit aortic occlusion spinal I/R; first-pass note: Darbepoetin reduced oxidative/apoptotic markers and improved neurologic outcomes.',
     'qualitative',
+    NULL,
     'Effects of darbepoetin-alpha in spinal cord ischemia-reperfusion injury in the rabbit tested or summarized Darbepoetin-alpha versus methylprednisolone in Rabbit aortic occlusion spinal I/R; first-pass note: Darbepoetin reduced oxidative/apoptotic markers and improved neurologic outcomes.',
     'darbepoetin-alpha versus methylprednisolone',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P020-E001", "paper_tracker_id": "M11A-P020", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T004", "tracker_id": "M11B-O020"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P020-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P020", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T004", "tracker_id": "M11B-O020"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1798,18 +1818,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O020'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Naloxone infusion and drainage of cerebrospinal fluid as adjuncts to postoperative care after repair of thoracoabdominal aneurysms tested or summarized Naloxone infusion plus CSF drainage in Human TAAA postoperative care review; first-pass note: Review frames paraplegia as multifactorial and supports combined adjunctive postoperative care.',
     'qualitative',
+    NULL,
     'Naloxone infusion and drainage of cerebrospinal fluid as adjuncts to postoperative care after repair of thoracoabdominal aneurysms tested or summarized Naloxone infusion plus CSF drainage in Human TAAA postoperative care review; first-pass note: Review frames paraplegia as multifactorial and supports combined adjunctive postoperative care.',
     'naloxone infusion plus csf drainage',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P021-E001", "paper_tracker_id": "M11A-P021", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T005", "tracker_id": "M11B-O021"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P021-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P021", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T005", "tracker_id": "M11B-O021"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1823,18 +1844,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O021'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Strategy for spinal cord protection during thoracoabdominal aortic surgery tested or summarized Distal perfusion, sequential clamping, hypothermia, evoked potentials, CSF drainage, naloxone, methylprednisolone in Human TAAA strategy review; first-pass note: Japanese strategy paper; multimodal surgical protection bundle.',
     'qualitative',
+    NULL,
     'Strategy for spinal cord protection during thoracoabdominal aortic surgery tested or summarized Distal perfusion, sequential clamping, hypothermia, evoked potentials, CSF drainage, naloxone, methylprednisolone in Human TAAA strategy review; first-pass note: Japanese strategy paper; multimodal surgical protection bundle.',
     'distal perfusion, sequential clamping, hypothermia, evoked potentials, csf drainage, naloxone, methylprednisolone',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P022-E001", "paper_tracker_id": "M11A-P022", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T006", "tracker_id": "M11B-O022"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P022-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P022", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T006", "tracker_id": "M11B-O022"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1848,18 +1870,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O022'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'The combination of insulin-like growth factor 1 and erythropoietin protects against ischemic spinal cord injury in rabbits tested or summarized IGF-1 plus erythropoietin after reperfusion in Rabbit abdominal aortic occlusion; first-pass note: Combination treatment tested for post-ischemic neuroprotection and signaling activation.',
     'qualitative',
+    NULL,
     'The combination of insulin-like growth factor 1 and erythropoietin protects against ischemic spinal cord injury in rabbits tested or summarized IGF-1 plus erythropoietin after reperfusion in Rabbit abdominal aortic occlusion; first-pass note: Combination treatment tested for post-ischemic neuroprotection and signaling activation.',
     'igf-1 plus erythropoietin after reperfusion',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P023-E001", "paper_tracker_id": "M11A-P023", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T007", "tracker_id": "M11B-O023"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P023-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P023", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T007", "tracker_id": "M11B-O023"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1873,18 +1896,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O023'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Combined use of cerebral spinal fluid drainage and naloxone reduces the risk of paraplegia in thoracoabdominal aneurysm repair tested or summarized CSF drainage plus naloxone in Human TAA/TAAA cohort; first-pass note: 110-patient cohort; 1 deficit with CSFD/naloxone versus 11 without, but nonrandomized/historical boundaries.',
     'qualitative',
+    NULL,
     'Combined use of cerebral spinal fluid drainage and naloxone reduces the risk of paraplegia in thoracoabdominal aneurysm repair tested or summarized CSF drainage plus naloxone in Human TAA/TAAA cohort; first-pass note: 110-patient cohort; 1 deficit with CSFD/naloxone versus 11 without, but nonrandomized/historical boundaries.',
     'csf drainage plus naloxone',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P024-E001", "paper_tracker_id": "M11A-P024", "quantitative": "YES", "statistics_reported": "110-patient cohort; 1 deficit with CSFD/naloxone versus 11 without, but nonrandomized/historical boundaries.", "topic_id": "M11B-T008", "tracker_id": "M11B-O024"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P024-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P024", "quantitative": "YES", "statistics_reported": "110-patient cohort; 1 deficit with CSFD/naloxone versus 11 without, but nonrandomized/historical boundaries.", "topic_id": "M11B-T008", "tracker_id": "M11B-O024"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1898,18 +1922,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O024'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Intraoperative neuroprotective interventions prevent spinal cord ischemia and injury in thoracic endovascular aortic repair tested or summarized Hypothermia, MAP/hemoglobin targets, mannitol, methylprednisolone, naloxone, rescue protocols in Human TEVAR cohort; first-pass note: Aggressive intra/postoperative neuroprotective bundle in TEVAR; retrospective cohort boundary.',
     'qualitative',
+    NULL,
     'Intraoperative neuroprotective interventions prevent spinal cord ischemia and injury in thoracic endovascular aortic repair tested or summarized Hypothermia, MAP/hemoglobin targets, mannitol, methylprednisolone, naloxone, rescue protocols in Human TEVAR cohort; first-pass note: Aggressive intra/postoperative neuroprotective bundle in TEVAR; retrospective cohort boundary.',
     'hypothermia, map/hemoglobin targets, mannitol, methylprednisolone, naloxone, rescue protocols',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P025-E001", "paper_tracker_id": "M11A-P025", "quantitative": "YES", "statistics_reported": "Aggressive intra/postoperative neuroprotective bundle in TEVAR; retrospective cohort boundary.", "topic_id": "M11B-T001", "tracker_id": "M11B-O025"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P025-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P025", "quantitative": "YES", "statistics_reported": "Aggressive intra/postoperative neuroprotective bundle in TEVAR; retrospective cohort boundary.", "topic_id": "M11B-T001", "tracker_id": "M11B-O025"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1923,18 +1948,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O025'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Benefits and Risks of Prophylactic Cerebrospinal Fluid Catheter and Evoked Potential Monitoring in Symptomatic Spinal Cord Ischemia Low-Risk Thoracic Endovascular Aortic Repair tested or summarized CSF catheter/drainage plus evoked-potential monitoring in Human low-risk TEVAR cohort; first-pass note: 223 procedures; CSF drainage associated with lower symptomatic SCI; EP monitoring detected acute inflow problems.',
     'qualitative',
+    NULL,
     'Benefits and Risks of Prophylactic Cerebrospinal Fluid Catheter and Evoked Potential Monitoring in Symptomatic Spinal Cord Ischemia Low-Risk Thoracic Endovascular Aortic Repair tested or summarized CSF catheter/drainage plus evoked-potential monitoring in Human low-risk TEVAR cohort; first-pass note: 223 procedures; CSF drainage associated with lower symptomatic SCI; EP monitoring detected acute inflow problems.',
     'csf catheter/drainage plus evoked-potential monitoring',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P026-E001", "paper_tracker_id": "M11A-P026", "quantitative": "YES", "statistics_reported": "223 procedures; CSF drainage associated with lower symptomatic SCI; EP monitoring detected acute inflow problems.", "topic_id": "M11B-T002", "tracker_id": "M11B-O026"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P026-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P026", "quantitative": "YES", "statistics_reported": "223 procedures; CSF drainage associated with lower symptomatic SCI; EP monitoring detected acute inflow problems.", "topic_id": "M11B-T002", "tracker_id": "M11B-O026"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1948,18 +1974,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O026'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Safety of cerebrospinal fluid drainage for spinal cord ischemia prevention in thoracic endovascular aortic repair tested or summarized Prophylactic/selective CSF drainage safety in Human TEVAR safety cohort; first-pass note: 936 TEVAR procedures; 390 drains; assesses complication severity and timing.',
     'qualitative',
+    NULL,
     'Safety of cerebrospinal fluid drainage for spinal cord ischemia prevention in thoracic endovascular aortic repair tested or summarized Prophylactic/selective CSF drainage safety in Human TEVAR safety cohort; first-pass note: 936 TEVAR procedures; 390 drains; assesses complication severity and timing.',
     'prophylactic/selective csf drainage safety',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P027-E001", "paper_tracker_id": "M11A-P027", "quantitative": "YES", "statistics_reported": "936 TEVAR procedures; 390 drains; assesses complication severity and timing.", "topic_id": "M11B-T003", "tracker_id": "M11B-O027"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P027-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P027", "quantitative": "YES", "statistics_reported": "936 TEVAR procedures; 390 drains; assesses complication severity and timing.", "topic_id": "M11B-T003", "tracker_id": "M11B-O027"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1973,18 +2000,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O027'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Open reconstruction of thoracoabdominal aortic aneurysms tested or summarized Intercostal reconstruction, hypothermic bypass, hypotension-risk management in Human open TAAA reconstruction cohort; first-pass note: SCI occurred in 10.5%; risk factors included prior aortic surgery, diabetes, and post-bypass hypotension.',
     'qualitative',
+    NULL,
     'Open reconstruction of thoracoabdominal aortic aneurysms tested or summarized Intercostal reconstruction, hypothermic bypass, hypotension-risk management in Human open TAAA reconstruction cohort; first-pass note: SCI occurred in 10.5%; risk factors included prior aortic surgery, diabetes, and post-bypass hypotension.',
     'intercostal reconstruction, hypothermic bypass, hypotension-risk management',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P028-E001", "paper_tracker_id": "M11A-P028", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T004", "tracker_id": "M11B-O028"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P028-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P028", "quantitative": "NO", "statistics_reported": "Source-page mechanistic or protocol row; exact statistics not extracted", "topic_id": "M11B-T004", "tracker_id": "M11B-O028"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1998,18 +2026,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O028'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Prophylactic vs Therapeutic Cerebrospinal Fluid Drain Placement During Endovascular Thoracoabdominal Aortic Aneurysm Repair tested or summarized Randomized prophylactic versus selective/therapeutic CSF drain protocol in Human high-risk endovascular TAAA trial; first-pass note: ClinicalTrials.gov source-page row; primary endpoint is SCI onset baseline to 1 year.',
     'qualitative',
+    NULL,
     'Prophylactic vs Therapeutic Cerebrospinal Fluid Drain Placement During Endovascular Thoracoabdominal Aortic Aneurysm Repair tested or summarized Randomized prophylactic versus selective/therapeutic CSF drain protocol in Human high-risk endovascular TAAA trial; first-pass note: ClinicalTrials.gov source-page row; primary endpoint is SCI onset baseline to 1 year.',
     'randomized prophylactic versus selective/therapeutic csf drain protocol',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P029-E001", "paper_tracker_id": "M11A-P029", "quantitative": "YES", "statistics_reported": "ClinicalTrials.gov source-page row; primary endpoint is SCI onset baseline to 1 year.", "topic_id": "M11B-T005", "tracker_id": "M11B-O029"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P029-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P029", "quantitative": "YES", "statistics_reported": "ClinicalTrials.gov source-page row; primary endpoint is SCI onset baseline to 1 year.", "topic_id": "M11B-T005", "tracker_id": "M11B-O029"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2023,18 +2052,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O029'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'OSA as a Remote Ischemic Preconditioning in Vascular Surgery tested or summarized Obstructive sleep apnea as remote ischemic preconditioning analog in Human aorto-bifemoral bypass trial; first-pass note: Recruiting vascular-surgery trial; primary endpoints are I/R injury markers, not spinal cord-specific endpoints.',
     'qualitative',
+    NULL,
     'OSA as a Remote Ischemic Preconditioning in Vascular Surgery tested or summarized Obstructive sleep apnea as remote ischemic preconditioning analog in Human aorto-bifemoral bypass trial; first-pass note: Recruiting vascular-surgery trial; primary endpoints are I/R injury markers, not spinal cord-specific endpoints.',
     'obstructive sleep apnea as remote ischemic preconditioning analog',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P030-E001", "paper_tracker_id": "M11A-P030", "quantitative": "YES", "statistics_reported": "Recruiting vascular-surgery trial; primary endpoints are I/R injury markers, not spinal cord-specific endpoints.", "topic_id": "M11B-T006", "tracker_id": "M11B-O030"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P030-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P030", "quantitative": "YES", "statistics_reported": "Recruiting vascular-surgery trial; primary endpoints are I/R injury markers, not spinal cord-specific endpoints.", "topic_id": "M11B-T006", "tracker_id": "M11B-O030"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2048,18 +2078,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O030'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NIRS Monitoring of Spinal Cord Ischemia in Aortic Surgery tested or summarized Paraspinal NIRS plus CSF drainage/perfusion monitoring in Human aortic surgery observational trial; first-pass note: Observational monitoring/prevention trial; estimated completion 2027; endpoint boundary with neuromonitoring.',
     'qualitative',
+    NULL,
     'NIRS Monitoring of Spinal Cord Ischemia in Aortic Surgery tested or summarized Paraspinal NIRS plus CSF drainage/perfusion monitoring in Human aortic surgery observational trial; first-pass note: Observational monitoring/prevention trial; estimated completion 2027; endpoint boundary with neuromonitoring.',
     'paraspinal nirs plus csf drainage/perfusion monitoring',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P031-E001", "paper_tracker_id": "M11A-P031", "quantitative": "YES", "statistics_reported": "Observational monitoring/prevention trial; estimated completion 2027; endpoint boundary with neuromonitoring.", "topic_id": "M11B-T007", "tracker_id": "M11B-O031"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P031-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P031", "quantitative": "YES", "statistics_reported": "Observational monitoring/prevention trial; estimated completion 2027; endpoint boundary with neuromonitoring.", "topic_id": "M11B-T007", "tracker_id": "M11B-O031"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2073,18 +2104,19 @@ INSERT INTO _m11_observation_map (tracker_id, observation_id) SELECT 'M11B-O031'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Randomized trial anchors summarized in CSF-drainage reviews tested or summarized CSF drainage, intrathecal papaverine, neurologic deficit outcomes in Human type I/II TAAA randomized evidence; first-pass note: Composite anchor for the three RCTs because individual trial metadata should be expanded in full-text pass.',
     'qualitative',
+    NULL,
     'Randomized trial anchors summarized in CSF-drainage reviews tested or summarized CSF drainage, intrathecal papaverine, neurologic deficit outcomes in Human type I/II TAAA randomized evidence; first-pass note: Composite anchor for the three RCTs because individual trial metadata should be expanded in full-text pass.',
     'csf drainage, intrathecal papaverine, neurologic deficit outcomes',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P032-E001", "paper_tracker_id": "M11A-P032", "quantitative": "YES", "statistics_reported": "Composite anchor for the three RCTs because individual trial metadata should be expanded in full-text pass.", "topic_id": "M11B-T008", "tracker_id": "M11B-O032"}'
+    '{"curator_notes": "Preserve ischemic-conditioning/protection boundary; full-text extraction queued.", "experiment_tracker_id": "M11A-P032-E001", "measurement_method_inference": null, "paper_tracker_id": "M11A-P032", "quantitative": "YES", "statistics_reported": "Composite anchor for the three RCTs because individual trial metadata should be expanded in full-text pass.", "topic_id": "M11B-T008", "tracker_id": "M11B-O032"}'
   FROM _m11_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot

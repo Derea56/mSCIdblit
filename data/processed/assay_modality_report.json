@@ -1,0 +1,643 @@
+{
+  "interpretation_note": "Counts are tracker-text mentions, not source-level assay re-extractions. Mixed/inferred labels require full-text confirmation before gold assay claims.",
+  "module_assay_counts": [
+    {
+      "assay_family": "ELISA / cytokine protein assay",
+      "evidence_status": "mixed",
+      "mention_count": 1,
+      "module": "Module 3"
+    },
+    {
+      "assay_family": "Single-cell RNA-seq / cell-state atlas",
+      "evidence_status": "mixed",
+      "mention_count": 8,
+      "module": "Module 3"
+    },
+    {
+      "assay_family": "Bulk transcriptomics / GEO dataset",
+      "evidence_status": "mixed",
+      "mention_count": 3,
+      "module": "Module 3"
+    },
+    {
+      "assay_family": "Barrier / permeability / endothelial assay",
+      "evidence_status": "inferred",
+      "mention_count": 1,
+      "module": "Module 3"
+    },
+    {
+      "assay_family": "Pathway activity / phospho-signaling assay",
+      "evidence_status": "inferred",
+      "mention_count": 2,
+      "module": "Module 3"
+    },
+    {
+      "assay_family": "Behavioral / functional recovery assay",
+      "evidence_status": "inferred",
+      "mention_count": 35,
+      "module": "Module 3"
+    },
+    {
+      "assay_family": "ELISA / cytokine protein assay",
+      "evidence_status": "mixed",
+      "mention_count": 3,
+      "module": "Module 12"
+    },
+    {
+      "assay_family": "Single-cell RNA-seq / cell-state atlas",
+      "evidence_status": "mixed",
+      "mention_count": 1,
+      "module": "Module 12"
+    },
+    {
+      "assay_family": "Barrier / permeability / endothelial assay",
+      "evidence_status": "inferred",
+      "mention_count": 4,
+      "module": "Module 12"
+    },
+    {
+      "assay_family": "Pathway activity / phospho-signaling assay",
+      "evidence_status": "inferred",
+      "mention_count": 4,
+      "module": "Module 12"
+    },
+    {
+      "assay_family": "Genetic perturbation / knockdown assay",
+      "evidence_status": "mixed",
+      "mention_count": 1,
+      "module": "Module 12"
+    },
+    {
+      "assay_family": "Behavioral / functional recovery assay",
+      "evidence_status": "inferred",
+      "mention_count": 2,
+      "module": "Module 12"
+    },
+    {
+      "assay_family": "Single-cell RNA-seq / cell-state atlas",
+      "evidence_status": "mixed",
+      "mention_count": 1,
+      "module": "Module 13"
+    },
+    {
+      "assay_family": "Spatial transcriptomics / spatial atlas",
+      "evidence_status": "mixed",
+      "mention_count": 1,
+      "module": "Module 13"
+    },
+    {
+      "assay_family": "Bulk transcriptomics / GEO dataset",
+      "evidence_status": "mixed",
+      "mention_count": 1,
+      "module": "Module 13"
+    },
+    {
+      "assay_family": "Immunostaining / histology / pathology",
+      "evidence_status": "mixed",
+      "mention_count": 5,
+      "module": "Module 13"
+    },
+    {
+      "assay_family": "Barrier / permeability / endothelial assay",
+      "evidence_status": "inferred",
+      "mention_count": 3,
+      "module": "Module 13"
+    },
+    {
+      "assay_family": "MRI / imaging assay",
+      "evidence_status": "mixed",
+      "mention_count": 4,
+      "module": "Module 13"
+    },
+    {
+      "assay_family": "Behavioral / functional recovery assay",
+      "evidence_status": "inferred",
+      "mention_count": 3,
+      "module": "Module 13"
+    }
+  ],
+  "module_summary": [
+    {
+      "module": "Module 3",
+      "observation_count": 94,
+      "observations_with_assay_family": 45,
+      "observations_without_assay_family": 49
+    },
+    {
+      "module": "Module 12",
+      "observation_count": 24,
+      "observations_with_assay_family": 12,
+      "observations_without_assay_family": 12
+    },
+    {
+      "module": "Module 13",
+      "observation_count": 24,
+      "observations_with_assay_family": 11,
+      "observations_without_assay_family": 13
+    }
+  ],
+  "scope": "Innate-signaling-related modules 3, 12, and 13 plus targeted grant addenda in modules 5, 12, and 13.",
+  "targeted_addendum_assay_mentions": [
+    {
+      "assay_family": "ELISA / cytokine protein assay",
+      "evidence_status": "mixed",
+      "mention_count": 106
+    },
+    {
+      "assay_family": "qPCR / RT-PCR / mRNA assay",
+      "evidence_status": "mixed",
+      "mention_count": 30
+    },
+    {
+      "assay_family": "Single-cell RNA-seq / cell-state atlas",
+      "evidence_status": "mixed",
+      "mention_count": 64
+    },
+    {
+      "assay_family": "Spatial transcriptomics / spatial atlas",
+      "evidence_status": "mixed",
+      "mention_count": 6
+    },
+    {
+      "assay_family": "Bulk transcriptomics / GEO dataset",
+      "evidence_status": "mixed",
+      "mention_count": 9
+    },
+    {
+      "assay_family": "Immunostaining / histology / pathology",
+      "evidence_status": "mixed",
+      "mention_count": 48
+    },
+    {
+      "assay_family": "Barrier / permeability / endothelial assay",
+      "evidence_status": "inferred",
+      "mention_count": 174
+    },
+    {
+      "assay_family": "Pathway activity / phospho-signaling assay",
+      "evidence_status": "inferred",
+      "mention_count": 58
+    },
+    {
+      "assay_family": "Genetic perturbation / knockdown assay",
+      "evidence_status": "mixed",
+      "mention_count": 40
+    },
+    {
+      "assay_family": "MRI / imaging assay",
+      "evidence_status": "mixed",
+      "mention_count": 51
+    },
+    {
+      "assay_family": "Behavioral / functional recovery assay",
+      "evidence_status": "inferred",
+      "mention_count": 229
+    }
+  ],
+  "unmatched_observations": [
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O004",
+      "outcome_type": "HMGB1-RAGE / macrophage-microglia polarization"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O005",
+      "outcome_type": "Macrophage extracellular traps"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O006",
+      "outcome_type": "Microglia/macrophage pyroptosis"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O007",
+      "outcome_type": "Lactylation / microglia-macrophage-T cell axis"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O009",
+      "outcome_type": "Macrophage/microglia autophagy and polarization"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O011",
+      "outcome_type": "Immune-modifying nanomedicine"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O012",
+      "outcome_type": "Macrophage/microglia polarization signaling"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O013",
+      "outcome_type": "Macrophage/microglia polarization signaling"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O015",
+      "outcome_type": "Macrophage/microglia polarization signaling"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O025",
+      "outcome_type": "Immune metabolism / lipid and debris handling"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O029",
+      "outcome_type": "Microglia/macrophage programmed inflammatory death"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O030",
+      "outcome_type": "Macrophage/microglia polarization signaling"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O031",
+      "outcome_type": "Macrophage/microglia polarization signaling"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O034",
+      "outcome_type": "Macrophage/microglia polarization signaling"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O039",
+      "outcome_type": "Immune metabolism / lipid and debris handling"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O040",
+      "outcome_type": "Immune metabolism / lipid and debris handling"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O041",
+      "outcome_type": "Immune metabolism / lipid and debris handling"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O044",
+      "outcome_type": "Macrophage/microglia polarization signaling"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O047",
+      "outcome_type": "Neutrophil or macrophage extracellular-trap axis"
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O051",
+      "outcome_type": "Outcome/mechanistic validation row for Inhibiting HMGB1-RAGE axis prevents pro-inflammatory macrophages/microglia polarization and affords neuroprotection after spinal cord injury; first-pass row captures hmgb1-rage / macrophage-microglia polarization in rodent model context at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O052",
+      "outcome_type": "Outcome/mechanistic validation row for Macrophage Extracellular Traps Exacerbate Secondary Spinal Cord Injury by Modulating Macrophage/Microglia Polarization via LL37/P2X7R/NF-kappaB Signaling Pathway; first-pass row captures macrophage extracellular traps in rodent model context at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O053",
+      "outcome_type": "Outcome/mechanistic validation row for IPSC-NSCs-derived exosomal let-7b-5p improves motor function after spinal cord Injury by modulating microglial/macrophage pyroptosis; first-pass row captures microglia/macrophage pyroptosis in rodent model context at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O054",
+      "outcome_type": "Outcome/mechanistic validation row for Metabolic reprogramming through histone lactylation in microglia and macrophages recruits CD8+ T lymphocytes and aggravates spinal cord injury; first-pass row captures lactylation / microglia-macrophage-t cell axis in rodent model context at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O056",
+      "outcome_type": "Outcome/mechanistic validation row for Naringenin alleviates spinal cord injury by ameliorating macrophage/microglia autophagy via progranulin stabilisation.; first-pass row captures macrophage/microglia autophagy and polarization in rodent sci model context at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O058",
+      "outcome_type": "Outcome/mechanistic validation row for Microenvironment Self-Adaptive Nanomedicine Promotes Spinal Cord Repair by Suppressing Inflammation Cascade and Neural Apoptosis.; first-pass row captures immune-modifying nanomedicine in rodent sci model context at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O059",
+      "outcome_type": "Outcome/mechanistic validation row for Farrerol confers neuroprotection in spinal cord injury by regulating macrophages/microglia polarization through the JAK2/STAT3 pathway.; first-pass row captures macrophage/microglia polarization signaling in rodent sci model context at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O060",
+      "outcome_type": "Outcome/mechanistic validation row for GDF11 alleviates spinal cord injury in rats by modulating microglia polarization through Smad2/3 and MAPK/NFkappaB signaling pathways.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O062",
+      "outcome_type": "Outcome/mechanistic validation row for Atractylenolide III ameliorates spinal cord injury in rats by modulating microglial/macrophage polarization.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O064",
+      "outcome_type": "Outcome/mechanistic validation row for PLX5622 did not alter anxiety-like behaviour and showed limited microglial depletion efficacy in a spinal cord injury model in female rats.; first-pass row captures microglial depletion / csf1r modulation in mouse sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O065",
+      "outcome_type": "Outcome/mechanistic validation row for Nanoparticles loaded with a CSF1R antagonist selectively depletes microglial cells and modulates inflammation in spinal cord injury.; first-pass row captures microglial depletion / csf1r modulation in rat sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O066",
+      "outcome_type": "Outcome/mechanistic validation row for Identification of repopulated microglia-associated genes in microglia depleted/repopulated mice after spinal cord injury.; first-pass row captures microglial depletion / csf1r modulation in mouse sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O067",
+      "outcome_type": "Outcome/mechanistic validation row for Nonresolving Neuroinflammation Regulates Axon Regeneration in Chronic Spinal Cord Injury.; first-pass row captures microglial depletion / csf1r modulation in mouse sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O068",
+      "outcome_type": "Outcome/mechanistic validation row for Depleting non-resolving neuroinflammation in chronic spinal cord injury attenuates thermal hypersensitivity.; first-pass row captures microglial depletion / csf1r modulation in rat sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O069",
+      "outcome_type": "Outcome/mechanistic validation row for Pharmacological Microglial Inhibition Remodels the Scar Microenvironment to Support Reticulospinal Circuit Reconstruction After Spinal Cord Injury.; first-pass row captures microglial depletion / csf1r modulation in mouse sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O072",
+      "outcome_type": "Outcome/mechanistic validation row for TREM2 Facilitates Myelin Debris Clearance but Exacerbates Chronic Inflammation and Fibrosis After Spinal Cord Injury.; first-pass row captures immune metabolism / lipid and debris handling in mouse sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O073",
+      "outcome_type": "Outcome/mechanistic validation row for Histone H3K9 lactylation activates the TXNIP/NLRP3 pathway to drive macrophage inflammation after spinal cord injury.; first-pass row captures microglia/macrophage programmed inflammatory death in human / translational context at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O074",
+      "outcome_type": "Outcome/mechanistic validation row for Targeting microglial PANoptosis through AMPK activation: Metformin as a promising therapy for spinal cord injury.; first-pass row captures microglia/macrophage programmed inflammatory death in rat sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O075",
+      "outcome_type": "Outcome/mechanistic validation row for Integrated Multi-Omics Analysis Reveals IRF1-Driven Microglial PANoptosis via ZBP1 in Spinal Cord Injury.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O076",
+      "outcome_type": "Outcome/mechanistic validation row for Trimethylamine N-Oxide Aggravates Neuro-inflammation in Spinal Cord Injury Through NLRP3 Inflammasome Activation in Microglia.; first-pass row captures microglia/macrophage programmed inflammatory death in mouse sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O077",
+      "outcome_type": "Outcome/mechanistic validation row for Thiolutin attenuates neuroinflammation and neuronal apoptosis by suppressing microglial pyroptosis through NLRP3 inflammasome inhibition after spinal cord injury.; first-pass row captures macrophage/microglia polarization signaling in mouse sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O078",
+      "outcome_type": "Outcome/mechanistic validation row for Type 2 Diabetes Promotes the Microglial Pyroptosis by Activating NLRP3 Inflammasome to Impede Remyelination After Spinal Cord Injury.; first-pass row captures macrophage/microglia polarization signaling in mouse sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O081",
+      "outcome_type": "Outcome/mechanistic validation row for Temporal regulation of macrophage polarization by abnormally innervated CGRP + Sensory nerves following spinal cord injury.; first-pass row captures macrophage/microglia polarization signaling in rat sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O085",
+      "outcome_type": "Outcome/mechanistic validation row for Neonatal small extracellular vesicle-loaded GelNB hydrogel reprograms the vascular-immune microenvironment for spinal cord injury repair.; first-pass row captures immune metabolism / lipid and debris handling in mouse sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O086",
+      "outcome_type": "Outcome/mechanistic validation row for Dual-targeting nanoparticles enhance microglial P2Y12R expression to promote neuronal mitophagy for repairing spinal cord injury.; first-pass row captures immune metabolism / lipid and debris handling in experimental sci model context at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O087",
+      "outcome_type": "Outcome/mechanistic validation row for Targeted biohybrid nanoplatform for spinal cord injury treatment: Restoring microglial mitophagy and alleviating oxidative stress.; first-pass row captures immune metabolism / lipid and debris handling in mouse sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O088",
+      "outcome_type": "Outcome/mechanistic validation row for An inflammation-targeted lipid nanoparticle inhibiting ferroptosis for spinal cord injury repair.; first-pass row captures immune metabolism / lipid and debris handling in mouse sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O091",
+      "outcome_type": "Outcome/mechanistic validation row for A reparative neutrophil subpopulation accelerates spinal cord regeneration in zebrafish by controlling macrophage inflammation via Il-4.; first-pass row captures macrophage/microglia polarization signaling in zebrafish sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O092",
+      "outcome_type": "Outcome/mechanistic validation row for Profibrotic macrophage-derived CXCL4 promotes pericyte-to-myofibroblast transition after spinal cord injury.; first-pass row captures macrophage-fibrotic scar interaction in mouse sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 3",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M3B-O094",
+      "outcome_type": "Outcome/mechanistic validation row for Olfactory ensheathing cell transplantation targets macrophage extracellular traps and NKCC1 to alleviate pain after spinal cord injury.; first-pass row captures neutrophil or macrophage extracellular-trap axis in rat sci model at abstract/source-title level."
+    },
+    {
+      "module": "Module 12",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M12B-O011",
+      "outcome_type": "Innate immune conditioning / protection"
+    },
+    {
+      "module": "Module 12",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M12B-O012",
+      "outcome_type": "Innate immune conditioning / protection"
+    },
+    {
+      "module": "Module 12",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M12B-O013",
+      "outcome_type": "Innate immune conditioning / protection"
+    },
+    {
+      "module": "Module 12",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M12B-O016",
+      "outcome_type": "Innate immune conditioning / protection"
+    },
+    {
+      "module": "Module 12",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M12B-O017",
+      "outcome_type": "Innate immune conditioning / protection"
+    },
+    {
+      "module": "Module 12",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M12B-O018",
+      "outcome_type": "Innate immune conditioning / protection"
+    },
+    {
+      "module": "Module 12",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M12B-O019",
+      "outcome_type": "Innate immune conditioning / protection"
+    },
+    {
+      "module": "Module 12",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M12B-O020",
+      "outcome_type": "Innate immune conditioning / protection"
+    },
+    {
+      "module": "Module 12",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M12B-O021",
+      "outcome_type": "Innate immune conditioning / protection"
+    },
+    {
+      "module": "Module 12",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M12B-O022",
+      "outcome_type": "Innate immune conditioning / protection"
+    },
+    {
+      "module": "Module 12",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M12B-O023",
+      "outcome_type": "Innate immune conditioning / protection"
+    },
+    {
+      "module": "Module 12",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M12B-O024",
+      "outcome_type": "Innate immune conditioning / protection"
+    },
+    {
+      "module": "Module 13",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M13B-O001",
+      "outcome_type": "lesion geometry"
+    },
+    {
+      "module": "Module 13",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M13B-O002",
+      "outcome_type": "lesion geometry"
+    },
+    {
+      "module": "Module 13",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M13B-O004",
+      "outcome_type": "axon myelin degeneration"
+    },
+    {
+      "module": "Module 13",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M13B-O007",
+      "outcome_type": "astrocytic border formation"
+    },
+    {
+      "module": "Module 13",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M13B-O009",
+      "outcome_type": "astrocytic border formation"
+    },
+    {
+      "module": "Module 13",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M13B-O010",
+      "outcome_type": "astrocytic border formation"
+    },
+    {
+      "module": "Module 13",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M13B-O011",
+      "outcome_type": "fibrotic scar formation"
+    },
+    {
+      "module": "Module 13",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M13B-O013",
+      "outcome_type": "immune wound response"
+    },
+    {
+      "module": "Module 13",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M13B-O015",
+      "outcome_type": "immune wound response"
+    },
+    {
+      "module": "Module 13",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M13B-O018",
+      "outcome_type": "chronic lesion stabilization"
+    },
+    {
+      "module": "Module 13",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M13B-O019",
+      "outcome_type": "astrocytic border formation"
+    },
+    {
+      "module": "Module 13",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M13B-O020",
+      "outcome_type": "fibrotic scar formation"
+    },
+    {
+      "module": "Module 13",
+      "note": "No assay family inferred from tracker text.",
+      "observation_id": "M13B-O021",
+      "outcome_type": "fibrotic scar formation"
+    }
+  ]
+}

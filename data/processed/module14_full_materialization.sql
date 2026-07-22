@@ -670,18 +670,19 @@ INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VA
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'dCas9-KRAB repressed PTEN, induced promoter histone methylation/deacetylation, outperformed shRNA, and enhanced PC-12 neurite outgrowth.',
     'qualitative',
+    'genetic perturbation / knockdown assay',
     'dCas9-KRAB repressed PTEN, induced promoter histone methylation/deacetylation, outperformed shRNA, and enhanced PC-12 neurite outgrowth.',
     'dCas9-KRAB PTEN repression enhances neurite outgrowth',
     'Module 14A tracker / source-page, full-text PMC, or review metadata',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Direct regeneration-relevant CRISPRi anchor.", "experiment_tracker_id": "M14A-P001-E001", "paper_tracker_id": "M14A-P001", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M14B-T001", "tracker_id": "M14B-O001"}'
+    '{"curator_notes": "Direct regeneration-relevant CRISPRi anchor.", "experiment_tracker_id": "M14A-P001-E001", "measurement_method_inference": "genetic perturbation / knockdown assay", "paper_tracker_id": "M14A-P001", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M14B-T001", "tracker_id": "M14B-O001"}'
   FROM _m14_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -695,18 +696,19 @@ INSERT INTO _m14_observation_map (tracker_id, observation_id) SELECT 'M14B-O001'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Neuron-optimized CRISPRa produced robust, tunable, multiplexed, and promoter-selective gene activation in neurons and in vivo CNS structures.',
     'qualitative',
+    NULL,
     'Neuron-optimized CRISPRa produced robust, tunable, multiplexed, and promoter-selective gene activation in neurons and in vivo CNS structures.',
     'neuronal CRISPRa enables tunable endogenous activation',
     'Module 14A tracker / source-page, full-text PMC, or review metadata',
     'Full-text PMC',
     'high',
-    '{"curator_notes": "Tool-platform anchor for neuronal gene activation.", "experiment_tracker_id": "M14A-P002-E001", "paper_tracker_id": "M14A-P002", "quantitative": "NO", "statistics_reported": "Full-text first pass; exact effect sizes not materialized here", "topic_id": "M14B-T002", "tracker_id": "M14B-O002"}'
+    '{"curator_notes": "Tool-platform anchor for neuronal gene activation.", "experiment_tracker_id": "M14A-P002-E001", "measurement_method_inference": null, "paper_tracker_id": "M14A-P002", "quantitative": "NO", "statistics_reported": "Full-text first pass; exact effect sizes not materialized here", "topic_id": "M14B-T002", "tracker_id": "M14B-O002"}'
   FROM _m14_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -720,18 +722,19 @@ INSERT INTO _m14_observation_map (tracker_id, observation_id) SELECT 'M14B-O002'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Review maps locus-specific neuroepigenome editing tools and emphasizes chromatin-effector boundaries in vivo.',
     'qualitative',
+    NULL,
     'Review maps locus-specific neuroepigenome editing tools and emphasizes chromatin-effector boundaries in vivo.',
     'neuroepigenome editing toolkit boundary',
     'Module 14A tracker / source-page, full-text PMC, or review metadata',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Tool-class boundary row.", "experiment_tracker_id": "M14A-P003-E001", "paper_tracker_id": "M14A-P003", "quantitative": "NO", "statistics_reported": "Review/source-page first pass", "topic_id": "M14B-T003", "tracker_id": "M14B-O003"}'
+    '{"curator_notes": "Tool-class boundary row.", "experiment_tracker_id": "M14A-P003-E001", "measurement_method_inference": null, "paper_tracker_id": "M14A-P003", "quantitative": "NO", "statistics_reported": "Review/source-page first pass", "topic_id": "M14B-T003", "tracker_id": "M14B-O003"}'
   FROM _m14_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -745,18 +748,19 @@ INSERT INTO _m14_observation_map (tracker_id, observation_id) SELECT 'M14B-O003'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'CNS CRISPR review identifies dCas9-based chromatin modification as a modular way to interrogate neuronal gene regulation.',
     'qualitative',
+    'genetic perturbation / knockdown assay',
     'CNS CRISPR review identifies dCas9-based chromatin modification as a modular way to interrogate neuronal gene regulation.',
     'dCas9 enables local chromatin regulation in CNS',
     'Module 14A tracker / source-page, full-text PMC, or review metadata',
     'Full-text PMC',
     'high',
-    '{"curator_notes": "CNS tool context.", "experiment_tracker_id": "M14A-P004-E001", "paper_tracker_id": "M14A-P004", "quantitative": "NO", "statistics_reported": "Review-level evidence", "topic_id": "M14B-T002", "tracker_id": "M14B-O004"}'
+    '{"curator_notes": "CNS tool context.", "experiment_tracker_id": "M14A-P004-E001", "measurement_method_inference": "genetic perturbation / knockdown assay", "paper_tracker_id": "M14A-P004", "quantitative": "NO", "statistics_reported": "Review-level evidence", "topic_id": "M14B-T002", "tracker_id": "M14B-O004"}'
   FROM _m14_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -770,18 +774,19 @@ INSERT INTO _m14_observation_map (tracker_id, observation_id) SELECT 'M14B-O004'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Review separates enhancer editing, CRISPRa/i, and epigenome manipulation as distinct neurobiology applications.',
     'qualitative',
+    'genetic perturbation / knockdown assay',
     'Review separates enhancer editing, CRISPRa/i, and epigenome manipulation as distinct neurobiology applications.',
     'enhancer editing and epigenome manipulation are distinct tool uses',
     'Module 14A tracker / source-page, full-text PMC, or review metadata',
     'Full-text PMC',
     'high',
-    '{"curator_notes": "Prevents tool-class collapse.", "experiment_tracker_id": "M14A-P005-E001", "paper_tracker_id": "M14A-P005", "quantitative": "NO", "statistics_reported": "Review-level evidence", "topic_id": "M14B-T003", "tracker_id": "M14B-O005"}'
+    '{"curator_notes": "Prevents tool-class collapse.", "experiment_tracker_id": "M14A-P005-E001", "measurement_method_inference": "genetic perturbation / knockdown assay", "paper_tracker_id": "M14A-P005", "quantitative": "NO", "statistics_reported": "Review-level evidence", "topic_id": "M14B-T003", "tracker_id": "M14B-O005"}'
   FROM _m14_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -795,18 +800,19 @@ INSERT INTO _m14_observation_map (tracker_id, observation_id) SELECT 'M14B-O005'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'SCI review links post-injury epigenetic landmarks to regeneration and secondary injury, supporting target selection for epigenome editing.',
     'qualitative',
+    NULL,
     'SCI review links post-injury epigenetic landmarks to regeneration and secondary injury, supporting target selection for epigenome editing.',
     'SCI epigenetic landmarks inform target selection',
     'Module 14A tracker / source-page, full-text PMC, or review metadata',
     'Full-text PMC',
     'high',
-    '{"curator_notes": "SCI context anchor.", "experiment_tracker_id": "M14A-P006-E001", "paper_tracker_id": "M14A-P006", "quantitative": "NO", "statistics_reported": "Review-level evidence", "topic_id": "M14B-T004", "tracker_id": "M14B-O006"}'
+    '{"curator_notes": "SCI context anchor.", "experiment_tracker_id": "M14A-P006-E001", "measurement_method_inference": null, "paper_tracker_id": "M14A-P006", "quantitative": "NO", "statistics_reported": "Review-level evidence", "topic_id": "M14B-T004", "tracker_id": "M14B-O006"}'
   FROM _m14_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -820,18 +826,19 @@ INSERT INTO _m14_observation_map (tracker_id, observation_id) SELECT 'M14B-O006'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Injured cortical neuron study identifies enhancer-level epigenetic regulation of WNT3A during regeneration.',
     'qualitative',
+    NULL,
     'Injured cortical neuron study identifies enhancer-level epigenetic regulation of WNT3A during regeneration.',
     'WNT3A enhancer regulation in injured neurons',
     'Module 14A tracker / source-page, full-text PMC, or review metadata',
     'Full-text PMC',
     'high',
-    '{"curator_notes": "Enhancer target candidate row.", "experiment_tracker_id": "M14A-P007-E001", "paper_tracker_id": "M14A-P007", "quantitative": "NO", "statistics_reported": "Full-text first pass", "topic_id": "M14B-T004", "tracker_id": "M14B-O007"}'
+    '{"curator_notes": "Enhancer target candidate row.", "experiment_tracker_id": "M14A-P007-E001", "measurement_method_inference": null, "paper_tracker_id": "M14A-P007", "quantitative": "NO", "statistics_reported": "Full-text first pass", "topic_id": "M14B-T004", "tracker_id": "M14B-O007"}'
   FROM _m14_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -845,18 +852,19 @@ INSERT INTO _m14_observation_map (tracker_id, observation_id) SELECT 'M14B-O007'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Injury-responsive enhancers in mouse spinal cord injury retain cell-type specificity and can target reactive astrocytes across CNS using gene-delivery vectors.',
     'qualitative',
+    'single-cell RNA-seq / cell-state atlas',
     'Injury-responsive enhancers in mouse spinal cord injury retain cell-type specificity and can target reactive astrocytes across CNS using gene-delivery vectors.',
     'injury enhancers target reactive astrocyte states',
     'Module 14A tracker / source-page, full-text PMC, or review metadata',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "SCI enhancer targeting boundary.", "experiment_tracker_id": "M14A-P008-E001", "paper_tracker_id": "M14A-P008", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M14B-T005", "tracker_id": "M14B-O008"}'
+    '{"curator_notes": "SCI enhancer targeting boundary.", "experiment_tracker_id": "M14A-P008-E001", "measurement_method_inference": "single-cell RNA-seq / cell-state atlas", "paper_tracker_id": "M14A-P008", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M14B-T005", "tracker_id": "M14B-O008"}'
   FROM _m14_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -870,18 +878,19 @@ INSERT INTO _m14_observation_map (tracker_id, observation_id) SELECT 'M14B-O008'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Optic nerve screen identified multiple regeneration-restricting genes and used CRISPR validation to define target candidates for regulatory repression.',
     'qualitative',
+    'genetic perturbation / knockdown assay',
     'Optic nerve screen identified multiple regeneration-restricting genes and used CRISPR validation to define target candidates for regulatory repression.',
     'CRISPR-validated regeneration suppressor targets',
     'Module 14A tracker / source-page, full-text PMC, or review metadata',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Comparator; not epigenome editing efficacy.", "experiment_tracker_id": "M14A-P009-E001", "paper_tracker_id": "M14A-P009", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M14B-T006", "tracker_id": "M14B-O009"}'
+    '{"curator_notes": "Comparator; not epigenome editing efficacy.", "experiment_tracker_id": "M14A-P009-E001", "measurement_method_inference": "genetic perturbation / knockdown assay", "paper_tracker_id": "M14A-P009", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M14B-T006", "tracker_id": "M14B-O009"}'
   FROM _m14_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -895,18 +904,19 @@ INSERT INTO _m14_observation_map (tracker_id, observation_id) SELECT 'M14B-O009'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'miRNA-135/KLF4 work supports KLF4-family repression as an intrinsic-growth target logic relevant to CRISPRi.',
     'qualitative',
+    NULL,
     'miRNA-135/KLF4 work supports KLF4-family repression as an intrinsic-growth target logic relevant to CRISPRi.',
     'KLF4 repression target logic',
     'Module 14A tracker / source-page, full-text PMC, or review metadata',
     'Full-text PMC',
     'high',
-    '{"curator_notes": "Target-discovery comparator.", "experiment_tracker_id": "M14A-P010-E001", "paper_tracker_id": "M14A-P010", "quantitative": "NO", "statistics_reported": "Full-text first pass", "topic_id": "M14B-T006", "tracker_id": "M14B-O010"}'
+    '{"curator_notes": "Target-discovery comparator.", "experiment_tracker_id": "M14A-P010-E001", "measurement_method_inference": null, "paper_tracker_id": "M14A-P010", "quantitative": "NO", "statistics_reported": "Full-text first pass", "topic_id": "M14B-T006", "tracker_id": "M14B-O010"}'
   FROM _m14_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -920,18 +930,19 @@ INSERT INTO _m14_observation_map (tracker_id, observation_id) SELECT 'M14B-O010'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'dCas9-p300 provides a programmable enhancer/promoter acetylation strategy relevant to activating regeneration-associated loci.',
     'qualitative',
+    NULL,
     'dCas9-p300 provides a programmable enhancer/promoter acetylation strategy relevant to activating regeneration-associated loci.',
     'dCas9-p300 acetylation activation tool',
     'Module 14A tracker / source-page, full-text PMC, or review metadata',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Activation effector boundary.", "experiment_tracker_id": "M14A-P011-E001", "paper_tracker_id": "M14A-P011", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M14B-T003", "tracker_id": "M14B-O011"}'
+    '{"curator_notes": "Activation effector boundary.", "experiment_tracker_id": "M14A-P011-E001", "measurement_method_inference": null, "paper_tracker_id": "M14A-P011", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M14B-T003", "tracker_id": "M14B-O011"}'
   FROM _m14_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -945,18 +956,19 @@ INSERT INTO _m14_observation_map (tracker_id, observation_id) SELECT 'M14B-O011'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Foundational CRISPRi/a work establishes guide-programmable transcriptional regulation without DNA cleavage.',
     'qualitative',
+    'qPCR / RT-PCR / mRNA assay; genetic perturbation / knockdown assay',
     'Foundational CRISPRi/a work establishes guide-programmable transcriptional regulation without DNA cleavage.',
     'guide-programmable transcriptional regulation',
     'Module 14A tracker / source-page, full-text PMC, or review metadata',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Foundational tool boundary.", "experiment_tracker_id": "M14A-P012-E001", "paper_tracker_id": "M14A-P012", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M14B-T003", "tracker_id": "M14B-O012"}'
+    '{"curator_notes": "Foundational tool boundary.", "experiment_tracker_id": "M14A-P012-E001", "measurement_method_inference": "qPCR / RT-PCR / mRNA assay; genetic perturbation / knockdown assay", "paper_tracker_id": "M14A-P012", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M14B-T003", "tracker_id": "M14B-O012"}'
   FROM _m14_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -970,18 +982,19 @@ INSERT INTO _m14_observation_map (tracker_id, observation_id) SELECT 'M14B-O012'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'SAM CRISPRa establishes multiplexed activation logic for discovering growth-promoting regulatory programs.',
     'qualitative',
+    NULL,
     'SAM CRISPRa establishes multiplexed activation logic for discovering growth-promoting regulatory programs.',
     'multiplexed CRISPRa target discovery',
     'Module 14A tracker / source-page, full-text PMC, or review metadata',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "CRISPRa discovery boundary.", "experiment_tracker_id": "M14A-P013-E001", "paper_tracker_id": "M14A-P013", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M14B-T003", "tracker_id": "M14B-O013"}'
+    '{"curator_notes": "CRISPRa discovery boundary.", "experiment_tracker_id": "M14A-P013-E001", "measurement_method_inference": null, "paper_tracker_id": "M14A-P013", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M14B-T003", "tracker_id": "M14B-O013"}'
   FROM _m14_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -995,18 +1008,19 @@ INSERT INTO _m14_observation_map (tracker_id, observation_id) SELECT 'M14B-O013'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'In vivo CNS CRISPRa proof-of-concept supports therapeutic feasibility boundaries for gene activation in neural tissue.',
     'qualitative',
+    NULL,
     'In vivo CNS CRISPRa proof-of-concept supports therapeutic feasibility boundaries for gene activation in neural tissue.',
     'in vivo CNS CRISPRa feasibility',
     'Module 14A tracker / source-page, full-text PMC, or review metadata',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Translation comparator.", "experiment_tracker_id": "M14A-P014-E001", "paper_tracker_id": "M14A-P014", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M14B-T007", "tracker_id": "M14B-O014"}'
+    '{"curator_notes": "Translation comparator.", "experiment_tracker_id": "M14A-P014-E001", "measurement_method_inference": null, "paper_tracker_id": "M14A-P014", "quantitative": "NO", "statistics_reported": "Source-page first pass", "topic_id": "M14B-T007", "tracker_id": "M14B-O014"}'
   FROM _m14_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1020,18 +1034,19 @@ INSERT INTO _m14_observation_map (tracker_id, observation_id) SELECT 'M14B-O014'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Nervous-system CRISPR review provides delivery, specificity, and tool-class boundaries for CNS translation.',
     'qualitative',
+    'genetic perturbation / knockdown assay',
     'Nervous-system CRISPR review provides delivery, specificity, and tool-class boundaries for CNS translation.',
     'CNS CRISPR delivery and safety boundaries',
     'Module 14A tracker / source-page, full-text PMC, or review metadata',
     'Full-text PMC',
     'high',
-    '{"curator_notes": "Safety/tool-class boundary.", "experiment_tracker_id": "M14A-P015-E001", "paper_tracker_id": "M14A-P015", "quantitative": "NO", "statistics_reported": "Review-level evidence", "topic_id": "M14B-T007", "tracker_id": "M14B-O015"}'
+    '{"curator_notes": "Safety/tool-class boundary.", "experiment_tracker_id": "M14A-P015-E001", "measurement_method_inference": "genetic perturbation / knockdown assay", "paper_tracker_id": "M14A-P015", "quantitative": "NO", "statistics_reported": "Review-level evidence", "topic_id": "M14B-T007", "tracker_id": "M14B-O015"}'
   FROM _m14_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1045,18 +1060,19 @@ INSERT INTO _m14_observation_map (tracker_id, observation_id) SELECT 'M14B-O015'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Recent review frames epigenetic CRISPR editing as reversible/flexible gene-program control for neuroregeneration, while requiring validation before clinical claims.',
     'qualitative',
+    'genetic perturbation / knockdown assay',
     'Recent review frames epigenetic CRISPR editing as reversible/flexible gene-program control for neuroregeneration, while requiring validation before clinical claims.',
     'epigenetic CRISPR as flexible neuroregeneration platform',
     'Module 14A tracker / source-page, full-text PMC, or review metadata',
     'Full-text PMC',
     'high',
-    '{"curator_notes": "Project-level translation boundary.", "experiment_tracker_id": "M14A-P016-E001", "paper_tracker_id": "M14A-P016", "quantitative": "NO", "statistics_reported": "Review-level evidence", "topic_id": "M14B-T008", "tracker_id": "M14B-O016"}'
+    '{"curator_notes": "Project-level translation boundary.", "experiment_tracker_id": "M14A-P016-E001", "measurement_method_inference": "genetic perturbation / knockdown assay", "paper_tracker_id": "M14A-P016", "quantitative": "NO", "statistics_reported": "Review-level evidence", "topic_id": "M14B-T008", "tracker_id": "M14B-O016"}'
   FROM _m14_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot

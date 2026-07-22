@@ -1823,18 +1823,19 @@ INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VA
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zafirlukast was reported to reduce capsular contracture in a preliminary breast implant clinical report.',
     'Baker grade/contracture',
+    NULL,
     'Zafirlukast was reported to reduce capsular contracture in a preliminary breast implant clinical report.',
     'zafirlukast may reduce implant capsule contracture',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Preliminary clinical precedent.", "experiment_tracker_id": "M7A-P001-E001", "paper_tracker_id": "M7A-P001", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T001", "tracker_id": "M7B-O001"}'
+    '{"curator_notes": "Preliminary clinical precedent.", "experiment_tracker_id": "M7A-P001-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P001", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T001", "tracker_id": "M7B-O001"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1848,18 +1849,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O001', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Pirfenidone prevented capsular contracture after mammary implantation.',
     'capsule/contracture',
+    NULL,
     'Pirfenidone prevented capsular contracture after mammary implantation.',
     'pirfenidone reduces mammary implant capsule fibrosis',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Anti-fibrotic anchor.", "experiment_tracker_id": "M7A-P002-E001", "paper_tracker_id": "M7A-P002", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T001", "tracker_id": "M7B-O002"}'
+    '{"curator_notes": "Anti-fibrotic anchor.", "experiment_tracker_id": "M7A-P002-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P002", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T001", "tracker_id": "M7B-O002"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1873,18 +1875,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O002', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Pirfenidone was tested clinically for capsular contracture with TGF-beta polymorphism association analysis.',
     'contracture/TGF-beta context',
+    NULL,
     'Pirfenidone was tested clinically for capsular contracture with TGF-beta polymorphism association analysis.',
     'pirfenidone clinical capsule treatment tested',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Treatment rather than prophylaxis.", "experiment_tracker_id": "M7A-P003-E001", "paper_tracker_id": "M7A-P003", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T001", "tracker_id": "M7B-O003"}'
+    '{"curator_notes": "Treatment rather than prophylaxis.", "experiment_tracker_id": "M7A-P003-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P003", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T001", "tracker_id": "M7B-O003"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1898,18 +1901,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O003', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Cromolyn, montelukast, and zafirlukast prophylaxis were compared for capsular contracture prevention.',
     'capsule thickness/fibrosis',
+    NULL,
     'Cromolyn, montelukast, and zafirlukast prophylaxis were compared for capsular contracture prevention.',
     'leukotriene/mast-cell prophylaxis tested for capsule prevention',
     'Abstract/source page',
     'Abstract/source page',
     'low',
-    '{"curator_notes": "Direct prophylaxis framing.", "experiment_tracker_id": "M7A-P004-E001", "paper_tracker_id": "M7A-P004", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T001", "tracker_id": "M7B-O004"}'
+    '{"curator_notes": "Direct prophylaxis framing.", "experiment_tracker_id": "M7A-P004-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P004", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T001", "tracker_id": "M7B-O004"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1923,18 +1927,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O004', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Follow-up literature supported capsule prophylaxis as a recurring construct for cromolyn, montelukast, and zafirlukast.',
     'contracture',
+    NULL,
     'Follow-up literature supported capsule prophylaxis as a recurring construct for cromolyn, montelukast, and zafirlukast.',
     'capsule prophylaxis construct repeated in implant literature',
     'Source page',
     'Source page',
     'low',
-    '{"curator_notes": "Commentary/follow-up row.", "experiment_tracker_id": "M7A-P005-E001", "paper_tracker_id": "M7A-P005", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T001", "tracker_id": "M7B-O005"}'
+    '{"curator_notes": "Commentary/follow-up row.", "experiment_tracker_id": "M7A-P005-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P005", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T001", "tracker_id": "M7B-O005"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1948,18 +1953,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O005', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Leukotriene inhibitors were studied for prevention of recurrent capsular contracture in secondary breast augmentation.',
     'recurrence',
+    NULL,
     'Leukotriene inhibitors were studied for prevention of recurrent capsular contracture in secondary breast augmentation.',
     'leukotriene inhibitors studied for recurrent capsule prevention',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Clinical recurrence anchor.", "experiment_tracker_id": "M7A-P006-E001", "paper_tracker_id": "M7A-P006", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T001", "tracker_id": "M7B-O006"}'
+    '{"curator_notes": "Clinical recurrence anchor.", "experiment_tracker_id": "M7A-P006-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P006", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T001", "tracker_id": "M7B-O006"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1973,18 +1979,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O006', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Montelukast and tranilast were compared as prophylactic capsule-modifying agents in an alloplastic breast surgery mouse model.',
     'capsule formation',
+    NULL,
     'Montelukast and tranilast were compared as prophylactic capsule-modifying agents in an alloplastic breast surgery mouse model.',
     'montelukast/tranilast prophylaxis modifies implant capsule biology',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Direct host-conditioning comparison.", "experiment_tracker_id": "M7A-P007-E001", "paper_tracker_id": "M7A-P007", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T001", "tracker_id": "M7B-O007"}'
+    '{"curator_notes": "Direct host-conditioning comparison.", "experiment_tracker_id": "M7A-P007-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P007", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T001", "tracker_id": "M7B-O007"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1998,18 +2005,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O007', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Tamoxifen reduced silicone implant capsule formation in a mouse model.',
     'capsule formation',
+    NULL,
     'Tamoxifen reduced silicone implant capsule formation in a mouse model.',
     'tamoxifen reduces silicone implant capsule formation',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Systemic/host endocrine boundary.", "experiment_tracker_id": "M7A-P008-E001", "paper_tracker_id": "M7A-P008", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T001", "tracker_id": "M7B-O008"}'
+    '{"curator_notes": "Systemic/host endocrine boundary.", "experiment_tracker_id": "M7A-P008-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P008", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T001", "tracker_id": "M7B-O008"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2023,18 +2031,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O008', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Transdermal tamoxifen improved capsular contracture outcomes in murine breast implantation.',
     'capsular contracture',
+    NULL,
     'Transdermal tamoxifen improved capsular contracture outcomes in murine breast implantation.',
     'transdermal tamoxifen improves capsule outcome',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Recipient-directed but route-limited.", "experiment_tracker_id": "M7A-P009-E001", "paper_tracker_id": "M7A-P009", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T001", "tracker_id": "M7B-O009"}'
+    '{"curator_notes": "Recipient-directed but route-limited.", "experiment_tracker_id": "M7A-P009-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P009", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T001", "tracker_id": "M7B-O009"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2048,18 +2057,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O009', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Monophosphoryl lipid A preconditioning improved survival of critically ischemic tissue.',
     'survival',
+    NULL,
     'Monophosphoryl lipid A preconditioning improved survival of critically ischemic tissue.',
     'innate preconditioning improves ischemic tissue survival',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Flap survival analog.", "experiment_tracker_id": "M7A-P010-E001", "paper_tracker_id": "M7A-P010", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T002", "tracker_id": "M7B-O010"}'
+    '{"curator_notes": "Flap survival analog.", "experiment_tracker_id": "M7A-P010-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P010", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T002", "tracker_id": "M7B-O010"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2073,18 +2083,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O010', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Remote ischemic preconditioning modulated p38 MAP kinase in rat adipocutaneous flaps.',
     'p38 signaling',
+    'pathway activity / phospho-signaling assay',
     'Remote ischemic preconditioning modulated p38 MAP kinase in rat adipocutaneous flaps.',
     'remote preconditioning alters flap stress signaling',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Mechanistic vascular row.", "experiment_tracker_id": "M7A-P011-E001", "paper_tracker_id": "M7A-P011", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T002", "tracker_id": "M7B-O011"}'
+    '{"curator_notes": "Mechanistic vascular row.", "experiment_tracker_id": "M7A-P011-E001", "measurement_method_inference": "pathway activity / phospho-signaling assay", "paper_tracker_id": "M7A-P011", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T002", "tracker_id": "M7B-O011"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2098,18 +2109,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O011', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Systemic prolyl hydroxylase inhibitor preconditioning prevented skin flap necrosis via HIF-1-induced bone marrow-derived cells.',
     'necrosis/host cells',
+    NULL,
     'Systemic prolyl hydroxylase inhibitor preconditioning prevented skin flap necrosis via HIF-1-induced bone marrow-derived cells.',
     'systemic HIF preconditioning reduces flap necrosis',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Strong host-cell mobilization anchor.", "experiment_tracker_id": "M7A-P012-E001", "paper_tracker_id": "M7A-P012", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T002", "tracker_id": "M7B-O012"}'
+    '{"curator_notes": "Strong host-cell mobilization anchor.", "experiment_tracker_id": "M7A-P012-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P012", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T002", "tracker_id": "M7B-O012"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2123,18 +2135,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O012', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Remote ischemic preconditioning was tested for rat dorsal skin flap value across clamping time.',
     'flap survival',
+    NULL,
     'Remote ischemic preconditioning was tested for rat dorsal skin flap value across clamping time.',
     'remote preconditioning tested for flap survival timing',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Timing boundary.", "experiment_tracker_id": "M7A-P013-E001", "paper_tracker_id": "M7A-P013", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T002", "tracker_id": "M7B-O013"}'
+    '{"curator_notes": "Timing boundary.", "experiment_tracker_id": "M7A-P013-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P013", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T002", "tracker_id": "M7B-O013"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2148,18 +2161,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O013', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'A randomized trial tested remote ischemic preconditioning in head and neck cancer reconstruction.',
     'trial endpoint',
+    NULL,
     'A randomized trial tested remote ischemic preconditioning in head and neck cancer reconstruction.',
     'remote preconditioning tested in human free-flap reconstruction',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Human reconstruction anchor.", "experiment_tracker_id": "M7A-P014-E001", "paper_tracker_id": "M7A-P014", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T002", "tracker_id": "M7B-O014"}'
+    '{"curator_notes": "Human reconstruction anchor.", "experiment_tracker_id": "M7A-P014-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P014", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T002", "tracker_id": "M7B-O014"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2173,18 +2187,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O014', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Alpha-1 antitrypsin enhanced islet engraftment by suppressing instant blood-mediated inflammatory reaction.',
     'IBMIR/engraftment',
+    NULL,
     'Alpha-1 antitrypsin enhanced islet engraftment by suppressing instant blood-mediated inflammatory reaction.',
     'A1AT suppresses IBMIR and improves islet engraftment',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Strong cell-transplant anchor.", "experiment_tracker_id": "M7A-P015-E001", "paper_tracker_id": "M7A-P015", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O015"}'
+    '{"curator_notes": "Strong cell-transplant anchor.", "experiment_tracker_id": "M7A-P015-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P015", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O015"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2198,18 +2213,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O015', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Alpha-1 antitrypsin reduced inflammation and enhanced mouse pancreatic islet transplant survival.',
     'graft survival',
+    NULL,
     'Alpha-1 antitrypsin reduced inflammation and enhanced mouse pancreatic islet transplant survival.',
     'A1AT improves islet survival through inflammation reduction',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Mouse graft survival.", "experiment_tracker_id": "M7A-P016-E001", "paper_tracker_id": "M7A-P016", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T003", "tracker_id": "M7B-O016"}'
+    '{"curator_notes": "Mouse graft survival.", "experiment_tracker_id": "M7A-P016-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P016", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T003", "tracker_id": "M7B-O016"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2223,18 +2239,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O016', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Alpha-1 antitrypsin suppressed macrophage activation and promoted islet graft survival after intrahepatic transplantation.',
     'macrophage/graft survival',
+    NULL,
     'Alpha-1 antitrypsin suppressed macrophage activation and promoted islet graft survival after intrahepatic transplantation.',
     'A1AT suppresses macrophage activation and promotes islet survival',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Immune-stromal transition anchor.", "experiment_tracker_id": "M7A-P017-E001", "paper_tracker_id": "M7A-P017", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O017"}'
+    '{"curator_notes": "Immune-stromal transition anchor.", "experiment_tracker_id": "M7A-P017-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P017", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O017"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2248,18 +2265,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O017', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'A randomized pilot trial tested etanercept and alpha-1 antitrypsin to improve autologous islet engraftment.',
     'engraftment',
+    NULL,
     'A randomized pilot trial tested etanercept and alpha-1 antitrypsin to improve autologous islet engraftment.',
     'anti-inflammatory peri-transplant trial tested in human islet autotransplant',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Human trial anchor.", "experiment_tracker_id": "M7A-P018-E001", "paper_tracker_id": "M7A-P018", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O018"}'
+    '{"curator_notes": "Human trial anchor.", "experiment_tracker_id": "M7A-P018-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P018", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O018"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2273,18 +2291,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O018', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Alpha-1 antitrypsin augmentation therapy was tested in chronic pancreatitis patients undergoing total pancreatectomy and islet autotransplantation.',
     'islet autotransplant outcome',
+    NULL,
     'Alpha-1 antitrypsin augmentation therapy was tested in chronic pancreatitis patients undergoing total pancreatectomy and islet autotransplantation.',
     'A1AT augmentation tested in TPIAT',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Human RCT anchor.", "experiment_tracker_id": "M7A-P019-E001", "paper_tracker_id": "M7A-P019", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O019"}'
+    '{"curator_notes": "Human RCT anchor.", "experiment_tracker_id": "M7A-P019-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P019", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O019"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2298,18 +2317,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O019', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Peri-transplant inflammation and long-term diabetes outcomes were not improved by etanercept or alpha-1 antitrypsin in a follow-up analysis.',
     'diabetes outcome/inflammation',
+    NULL,
     'Peri-transplant inflammation and long-term diabetes outcomes were not improved by etanercept or alpha-1 antitrypsin in a follow-up analysis.',
     'A1AT/etanercept benefit not confirmed in long-term islet autotransplant outcomes',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Contradiction boundary.", "experiment_tracker_id": "M7A-P020-E001", "paper_tracker_id": "M7A-P020", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O020"}'
+    '{"curator_notes": "Contradiction boundary.", "experiment_tracker_id": "M7A-P020-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P020", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O020"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2323,18 +2343,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O020', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Low molecular weight sulfated dextran was evaluated for safety and efficacy in islet transplantation.',
     'safety/efficacy',
+    NULL,
     'Low molecular weight sulfated dextran was evaluated for safety and efficacy in islet transplantation.',
     'sulfated dextran tested as IBMIR-related islet conditioning',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Complement/coagulation-adjacent.", "experiment_tracker_id": "M7A-P021-E001", "paper_tracker_id": "M7A-P021", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O021"}'
+    '{"curator_notes": "Complement/coagulation-adjacent.", "experiment_tracker_id": "M7A-P021-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P021", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O021"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2348,18 +2369,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O021', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'C5a inhibitory peptide was analyzed for inflammatory mediators induced after islet transplantation.',
     'inflammatory mediators',
+    NULL,
     'C5a inhibitory peptide was analyzed for inflammatory mediators induced after islet transplantation.',
     'C5a inhibition targets early islet inflammatory mediators',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Complement phase 1.", "experiment_tracker_id": "M7A-P022-E001", "paper_tracker_id": "M7A-P022", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T003", "tracker_id": "M7B-O022"}'
+    '{"curator_notes": "Complement phase 1.", "experiment_tracker_id": "M7A-P022-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P022", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T003", "tracker_id": "M7B-O022"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2373,18 +2395,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O022', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'CCL2/MCP-1 and CXCL12/SDF-1 blockade improved pancreatic islet engraftment and survival in mouse.',
     'engraftment/survival',
+    'ELISA / cytokine protein assay',
     'CCL2/MCP-1 and CXCL12/SDF-1 blockade improved pancreatic islet engraftment and survival in mouse.',
     'chemokine blockade improves islet engraftment/survival',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Monocyte recruitment axis.", "experiment_tracker_id": "M7A-P023-E001", "paper_tracker_id": "M7A-P023", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O023"}'
+    '{"curator_notes": "Monocyte recruitment axis.", "experiment_tracker_id": "M7A-P023-E001", "measurement_method_inference": "ELISA / cytokine protein assay", "paper_tracker_id": "M7A-P023", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O023"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2398,18 +2421,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O023', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Macrophage depletion altered graft survival and microenvironment activation after allogeneic islet transplantation.',
     'graft survival/microenvironment',
+    NULL,
     'Macrophage depletion altered graft survival and microenvironment activation after allogeneic islet transplantation.',
     'macrophages shape islet graft microenvironment and survival',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Direction needs full text.", "experiment_tracker_id": "M7A-P024-E001", "paper_tracker_id": "M7A-P024", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T003", "tracker_id": "M7B-O024"}'
+    '{"curator_notes": "Direction needs full text.", "experiment_tracker_id": "M7A-P024-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P024", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T003", "tracker_id": "M7B-O024"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2423,18 +2447,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O024', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Apoptotic cell administration enhanced islet engraftment by inducing Tregs and tolerogenic dendritic cells.',
     'Tregs/DCs/engraftment',
+    NULL,
     'Apoptotic cell administration enhanced islet engraftment by inducing Tregs and tolerogenic dendritic cells.',
     'apoptotic cell host conditioning induces Tregs/DCs and improves engraftment',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Immune transition anchor.", "experiment_tracker_id": "M7A-P025-E001", "paper_tracker_id": "M7A-P025", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O025"}'
+    '{"curator_notes": "Immune transition anchor.", "experiment_tracker_id": "M7A-P025-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P025", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O025"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2448,18 +2473,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O025', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Endogenous expansion of regulatory T cells led to long-term islet graft survival in diabetic NOD mice.',
     'graft survival',
+    NULL,
     'Endogenous expansion of regulatory T cells led to long-term islet graft survival in diabetic NOD mice.',
     'Treg expansion supports long-term islet graft survival',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Regulatory host state.", "experiment_tracker_id": "M7A-P026-E001", "paper_tracker_id": "M7A-P026", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T003", "tracker_id": "M7B-O026"}'
+    '{"curator_notes": "Regulatory host state.", "experiment_tracker_id": "M7A-P026-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P026", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T003", "tracker_id": "M7B-O026"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2473,18 +2499,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O026', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Immunomodulating tolerogenic microparticles improved islet engrafts via Treg induction.',
     'engraftment',
+    NULL,
     'Immunomodulating tolerogenic microparticles improved islet engrafts via Treg induction.',
     'tolerogenic microparticles induce Tregs and improve islet engraftment',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Biomaterial but host-directed.", "experiment_tracker_id": "M7A-P027-E001", "paper_tracker_id": "M7A-P027", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O027"}'
+    '{"curator_notes": "Biomaterial but host-directed.", "experiment_tracker_id": "M7A-P027-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P027", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O027"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2498,18 +2525,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O027', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Circular RNA FSCN1-silenced dendritic cells prevented alloimmune rejection in heart transplantation.',
     'rejection',
+    NULL,
     'Circular RNA FSCN1-silenced dendritic cells prevented alloimmune rejection in heart transplantation.',
     'tolerogenic dendritic cell strategy prevents rejection',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Remodeling endpoint unclear.", "experiment_tracker_id": "M7A-P028-E001", "paper_tracker_id": "M7A-P028", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T004", "tracker_id": "M7B-O028"}'
+    '{"curator_notes": "Remodeling endpoint unclear.", "experiment_tracker_id": "M7A-P028-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P028", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T004", "tracker_id": "M7B-O028"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2523,18 +2551,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O028', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'A second renal allograft model analyzed mechanisms of tolerance induction in chronic rejection.',
     'tolerance/rejection',
+    NULL,
     'A second renal allograft model analyzed mechanisms of tolerance induction in chronic rejection.',
     'renal allograft tolerance model informs chronic rejection boundary',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Rejection-heavy boundary.", "experiment_tracker_id": "M7A-P029-E001", "paper_tracker_id": "M7A-P029", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T004", "tracker_id": "M7B-O029"}'
+    '{"curator_notes": "Rejection-heavy boundary.", "experiment_tracker_id": "M7A-P029-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P029", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T004", "tracker_id": "M7B-O029"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2548,18 +2577,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O029', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zileuton and montelukast were tested for effects in mouse experimental SCI.',
     'inflammation/function',
+    NULL,
     'Zileuton and montelukast were tested for effects in mouse experimental SCI.',
     'leukotriene inhibitors tested after SCI',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "SCI lesion-bed analog.", "experiment_tracker_id": "M7A-P030-E001", "paper_tracker_id": "M7A-P030", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T005", "tracker_id": "M7B-O030"}'
+    '{"curator_notes": "SCI lesion-bed analog.", "experiment_tracker_id": "M7A-P030-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P030", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T005", "tracker_id": "M7B-O030"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2573,18 +2603,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O030', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'LTB4-BLT1 mediated neutrophil infiltration and secondary injury after experimental SCI.',
     'neutrophil/secondary injury',
+    NULL,
     'LTB4-BLT1 mediated neutrophil infiltration and secondary injury after experimental SCI.',
     'LTB4-BLT1 drives neutrophil-linked secondary SCI injury',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Phase 1 inflammatory amplification.", "experiment_tracker_id": "M7A-P031-E001", "paper_tracker_id": "M7A-P031", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T005", "tracker_id": "M7B-O031"}'
+    '{"curator_notes": "Phase 1 inflammatory amplification.", "experiment_tracker_id": "M7A-P031-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P031", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T005", "tracker_id": "M7B-O031"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2598,18 +2629,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O031', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zafirlukast plus pseudohypericin attenuated SCI and motor dysfunction in mice.',
     'motor function',
+    NULL,
     'Zafirlukast plus pseudohypericin attenuated SCI and motor dysfunction in mice.',
     'zafirlukast combination attenuates SCI motor dysfunction',
     'Abstract/source page',
     'Abstract/source page',
     'low',
-    '{"curator_notes": "Combination boundary.", "experiment_tracker_id": "M7A-P032-E001", "paper_tracker_id": "M7A-P032", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T005", "tracker_id": "M7B-O032"}'
+    '{"curator_notes": "Combination boundary.", "experiment_tracker_id": "M7A-P032-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P032", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T005", "tracker_id": "M7B-O032"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2623,18 +2655,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O032', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zileuton ameliorated neuronal ferroptosis and functional recovery after SCI.',
     'ferroptosis/function',
+    'behavioral / functional recovery assay',
     'Zileuton ameliorated neuronal ferroptosis and functional recovery after SCI.',
     'zileuton improves ferroptosis/recovery endpoints after SCI',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Recent low-confidence row.", "experiment_tracker_id": "M7A-P033-E001", "paper_tracker_id": "M7A-P033", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T005", "tracker_id": "M7B-O033"}'
+    '{"curator_notes": "Recent low-confidence row.", "experiment_tracker_id": "M7A-P033-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M7A-P033", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T005", "tracker_id": "M7B-O033"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2648,18 +2681,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O033', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Resolvin D3 promoted inflammatory resolution, neuroprotection, and functional recovery after SCI.',
     'resolution/function',
+    'behavioral / functional recovery assay',
     'Resolvin D3 promoted inflammatory resolution, neuroprotection, and functional recovery after SCI.',
     'resolvin D3 promotes resolution and recovery after SCI',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Pro-resolving anchor.", "experiment_tracker_id": "M7A-P034-E001", "paper_tracker_id": "M7A-P034", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T005", "tracker_id": "M7B-O034"}'
+    '{"curator_notes": "Pro-resolving anchor.", "experiment_tracker_id": "M7A-P034-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M7A-P034", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T005", "tracker_id": "M7B-O034"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2673,18 +2707,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O034', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Resolvin D1 co-administered with peripheral nerve-derived stem cell spheroids was tested as SCI therapy.',
     'repair/function',
+    NULL,
     'Resolvin D1 co-administered with peripheral nerve-derived stem cell spheroids was tested as SCI therapy.',
     'resolvin D1 co-therapy tested with cell spheroids',
     'Abstract/source page',
     'Abstract/source page',
     'medium',
-    '{"curator_notes": "Not pure host conditioning.", "experiment_tracker_id": "M7A-P035-E001", "paper_tracker_id": "M7A-P035", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T005", "tracker_id": "M7B-O035"}'
+    '{"curator_notes": "Not pure host conditioning.", "experiment_tracker_id": "M7A-P035-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P035", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T005", "tracker_id": "M7B-O035"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2698,18 +2733,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O035', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Tranilast liposomal gel was tested against placebo for post-cesarean scar outcome.',
     'scar cosmesis',
+    NULL,
     'Tranilast liposomal gel was tested against placebo for post-cesarean scar outcome.',
     'topical tranilast affects surgical scar outcome',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Local-route boundary.", "experiment_tracker_id": "M7A-P036-E001", "paper_tracker_id": "M7A-P036", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T006", "tracker_id": "M7B-O036"}'
+    '{"curator_notes": "Local-route boundary.", "experiment_tracker_id": "M7A-P036-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P036", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T006", "tracker_id": "M7B-O036"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2723,18 +2759,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O036', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Tranilast-loaded microneedles were tested for hypertrophic scar treatment in rabbits.',
     'scar/fibrosis',
+    NULL,
     'Tranilast-loaded microneedles were tested for hypertrophic scar treatment in rabbits.',
     'local tranilast delivery targets hypertrophic scar fibrosis',
     'Abstract',
     'Abstract',
     'low',
-    '{"curator_notes": "Local delivery, not systemic.", "experiment_tracker_id": "M7A-P037-E001", "paper_tracker_id": "M7A-P037", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T006", "tracker_id": "M7B-O037"}'
+    '{"curator_notes": "Local delivery, not systemic.", "experiment_tracker_id": "M7A-P037-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P037", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T006", "tracker_id": "M7B-O037"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2748,18 +2785,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O037', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'A systematic review mapped non-surgical treatment and prophylaxis of mammary implant capsular contracture.',
     'review synthesis',
+    NULL,
     'A systematic review mapped non-surgical treatment and prophylaxis of mammary implant capsular contracture.',
     'implant capsule prophylaxis/treatment literature exists as synthesis base',
     'Review/source',
     'Review/source',
     'medium',
-    '{"curator_notes": "Review anchor.", "experiment_tracker_id": "M7A-P038-E001", "paper_tracker_id": "M7A-P038", "quantitative": "YES", "statistics_reported": "review-level", "topic_id": "M7B-T001", "tracker_id": "M7B-O038"}'
+    '{"curator_notes": "Review anchor.", "experiment_tracker_id": "M7A-P038-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P038", "quantitative": "YES", "statistics_reported": "review-level", "topic_id": "M7B-T001", "tracker_id": "M7B-O038"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2773,18 +2811,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O038', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'A systematic review/meta-analysis evaluated leukotriene receptor antagonists for capsular contracture prevention/treatment.',
     'meta-analysis',
+    NULL,
     'A systematic review/meta-analysis evaluated leukotriene receptor antagonists for capsular contracture prevention/treatment.',
     'LTRA capsule evidence has meta-analytic synthesis',
     'Review/source',
     'Review/source',
     'medium',
-    '{"curator_notes": "Review anchor.", "experiment_tracker_id": "M7A-P039-E001", "paper_tracker_id": "M7A-P039", "quantitative": "YES", "statistics_reported": "review-level", "topic_id": "M7B-T001", "tracker_id": "M7B-O039"}'
+    '{"curator_notes": "Review anchor.", "experiment_tracker_id": "M7A-P039-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P039", "quantitative": "YES", "statistics_reported": "review-level", "topic_id": "M7B-T001", "tracker_id": "M7B-O039"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2798,18 +2837,19 @@ INSERT INTO _m7_observation_map (tracker_id, observation_id) SELECT 'M7B-O039', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'A meta-analysis evaluated leukotriene receptor antagonists for periprosthetic capsular contracture treatment and prevention.',
     'meta-analysis',
+    NULL,
     'A meta-analysis evaluated leukotriene receptor antagonists for periprosthetic capsular contracture treatment and prevention.',
     'LTRA capsule prevention/treatment has prior meta-analysis',
     'Review/source',
     'Review/source',
     'medium',
-    '{"curator_notes": "Review anchor.", "experiment_tracker_id": "M7A-P040-E001", "paper_tracker_id": "M7A-P040", "quantitative": "YES", "statistics_reported": "review-level", "topic_id": "M7B-T001", "tracker_id": "M7B-O040"}'
+    '{"curator_notes": "Review anchor.", "experiment_tracker_id": "M7A-P040-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P040", "quantitative": "YES", "statistics_reported": "review-level", "topic_id": "M7B-T001", "tracker_id": "M7B-O040"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot

@@ -134,6 +134,43 @@ def json_note(payload: dict[str, Any]) -> str:
     return json.dumps(payload, sort_keys=True)
 
 
+ASSAY_PATTERNS: tuple[tuple[str, str], ...] = (
+    ("western blot / immunoblot", r"\bwestern blot\b|\bimmunoblot\b"),
+    ("ELISA / cytokine protein assay", r"\bELISA\b|\bcytokine\b|\bchemokine\b|\bIL-6\b|\bIL-10\b|\bTNF\b|\bCXCL\b|\bCCL\b|\bRANTES\b"),
+    ("qPCR / RT-PCR / mRNA assay", r"\bqPCR\b|\bRT-PCR\b|\breal-time PCR\b|\bmRNA\b|\btranscriptional\b"),
+    ("flow cytometry / FACS", r"\bflow cytometry\b|\bFACS\b|\bcell sorting\b"),
+    ("single-cell RNA-seq / cell-state atlas", r"\bscRNA-seq\b|\bsingle-cell\b|\bsingle cell\b|\bsingle-nucleus\b|\bsingle nucleus\b|\bcell-state\b|\bcell state\b"),
+    ("spatial transcriptomics / spatial atlas", r"\bspatial transcriptomic\b|\bspatial atlas\b|\bspatial\b"),
+    ("bulk transcriptomics / GEO dataset", r"\bRNA-seq\b|\btranscriptomic\b|\bGEO\b"),
+    ("immunostaining / histology / pathology", r"\bimmunohistochemistry\b|\bimmunofluorescence\b|\bIHC\b|\bIF\b|\bhistology\b|\bhistologic\b|\bhistopathology\b|\bneuropathology\b|\bpathology\b|\bstaining\b"),
+    ("barrier / permeability / endothelial assay", r"\bbarrier\b|\bpermeability\b|\btight junction\b|\bBSCB\b|\bBBB\b|\bendothelial\b|\bMMP-2\b|\bMMP-9\b"),
+    ("pathway activity / phospho-signaling assay", r"\bNF-kB activity\b|\bcaspase-?3 activity\b|\bphospho\b|\bphosphorylation\b|\bp38\b|\bAkt\b|\bGSK\b|\bSTAT\b|\bNrf2\b|\bIRF3\b"),
+    ("genetic perturbation / knockdown assay", r"\bknockout\b|\bdeficien\w*\b|\bsiRNA\b|\bsiMyD88\b|\bsiTRIF\b|\bCRISPR\b|\bguide RNA\b"),
+    ("MRI / imaging assay", r"\bMRI\b|\bimaging\b"),
+    ("behavioral / functional recovery assay", r"\blocomo\w*\b|\bbehavior\w*\b|\bfunctional recovery\b|\bneurologic score\b|\brecovery\b"),
+)
+
+
+def infer_measurement_method(row: dict[str, str]) -> str | None:
+    text = " ".join(
+        row.get(key, "")
+        for key in (
+            "figure_ref",
+            "evidence_type",
+            "outcome_type",
+            "observation_value",
+            "normalized_value",
+            "statistics_reported",
+            "source_section",
+            "notes",
+        )
+    )
+    matches = [label for label, pattern in ASSAY_PATTERNS if re.search(pattern, text, flags=re.IGNORECASE)]
+    if not matches:
+        return None
+    return "; ".join(matches[:4])
+
+
 def table_value(row: dict[str, str], *keys: str) -> str | None:
     for key in keys:
         value = row.get(key)
@@ -384,6 +421,7 @@ def render_materialization_sql(
                 "topic_id": row["topic_id"],
                 "paper_tracker_id": row["paper_id"],
                 "experiment_tracker_id": row["experiment_id"],
+                "measurement_method_inference": infer_measurement_method(row),
                 "statistics_reported": row["statistics_reported"],
                 "quantitative": row["quantitative"],
                 "curator_notes": row["notes"],
@@ -394,12 +432,13 @@ def render_materialization_sql(
                 "WITH inserted AS (",
                 "  INSERT INTO Observation (",
                 "    experiment_id, evidence_type_id, outcome_type_id, observation_value,",
-                "    unit, raw_observation_text, normalized_observation_value, source_section,",
+                "    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,",
                 "    figure_panel_reference, extraction_confidence, notes",
                 "  )",
                 "  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,",
                 f"    {sql_literal(row['observation_value'])},",
                 f"    {sql_literal(row['unit'])},",
+                f"    {sql_literal(infer_measurement_method(row))},",
                 f"    {sql_literal(row['observation_value'])},",
                 f"    {sql_literal(row['normalized_value'])},",
                 f"    {sql_literal(row['source_section'])},",

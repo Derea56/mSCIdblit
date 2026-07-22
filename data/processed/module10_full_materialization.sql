@@ -3148,18 +3148,19 @@ INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VA
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT03752749 status COMPLETED verified 2018-11 accessed 2026-07-16; intervention Prednisolone + Acute Intermittent Hypoxia, Placebo + Acute Intermittent Hypoxia; population Spinal Cord Injuries.',
     'qualitative',
+    NULL,
     'NCT03752749 status COMPLETED verified 2018-11 accessed 2026-07-16; intervention Prednisolone + Acute Intermittent Hypoxia, Placebo + Acute Intermittent Hypoxia; population Spinal Cord Injuries.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T001-E001", "paper_tracker_id": "M10A-P001", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O001"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T001-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P001", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O001"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3173,18 +3174,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O001'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT02455336 status COMPLETED verified 2019-05 accessed 2026-07-16; intervention Fenofibrate, No intervention; population Spinal Cord Injury, Dyslipidemia.',
     'qualitative',
+    NULL,
     'NCT02455336 status COMPLETED verified 2019-05 accessed 2026-07-16; intervention Fenofibrate, No intervention; population Spinal Cord Injury, Dyslipidemia.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T002-E001", "paper_tracker_id": "M10A-P002", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O002"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T002-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P002", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O002"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3198,18 +3200,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O002'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT06740006 status COMPLETED verified 2025-09 accessed 2026-07-16; intervention Not specified; population Cerebral Palsy (CP), Spastic Paraplegia, Spinal Cord Injuries (SCI), Spina Bifida, Neuropathy (Disorder).',
     'qualitative',
+    NULL,
     'NCT06740006 status COMPLETED verified 2025-09 accessed 2026-07-16; intervention Not specified; population Cerebral Palsy (CP), Spastic Paraplegia, Spinal Cord Injuries (SCI), Spina Bifida, Neuropathy (Disorder).',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T003-E001", "paper_tracker_id": "M10A-P003", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O003"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T003-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P003", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O003"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3223,18 +3226,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O003'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT05863988 status UNKNOWN verified 2023-05 accessed 2026-07-16; intervention Functional Electrical Stimulation, Upper Limb Loading Exercises; population Spinal Cord Injuries.',
     'qualitative',
+    NULL,
     'NCT05863988 status UNKNOWN verified 2023-05 accessed 2026-07-16; intervention Functional Electrical Stimulation, Upper Limb Loading Exercises; population Spinal Cord Injuries.',
     'unknown',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T004-E001", "paper_tracker_id": "M10A-P004", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O004"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T004-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P004", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O004"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3248,18 +3252,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O004'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT03458169 status COMPLETED verified 2018-03 accessed 2026-07-16; intervention Therapist LEAP session feedback, Participant LEAP session feedback, LEAP risk control validation; population Spinal Cord Injuries, Cerebral Palsy, Parkinson Disease, Multiple Sclerosis, Stroke.',
     'qualitative',
+    NULL,
     'NCT03458169 status COMPLETED verified 2018-03 accessed 2026-07-16; intervention Therapist LEAP session feedback, Participant LEAP session feedback, LEAP risk control validation; population Spinal Cord Injuries, Cerebral Palsy, Parkinson Disease, Multiple Sclerosis, Stroke.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T005-E001", "paper_tracker_id": "M10A-P005", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O005"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T005-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P005", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O005"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3273,18 +3278,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O005'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT01407354 status COMPLETED verified 2021-05 accessed 2026-07-16; intervention Lokomat treadmill training, Aquatic exercise therapy; population Spinal Cord Injury.',
     'qualitative',
+    NULL,
     'NCT01407354 status COMPLETED verified 2021-05 accessed 2026-07-16; intervention Lokomat treadmill training, Aquatic exercise therapy; population Spinal Cord Injury.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T006-E001", "paper_tracker_id": "M10A-P006", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O006"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T006-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P006", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O006"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3298,18 +3304,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O006'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT03632005 status UNKNOWN verified 2018-08 accessed 2026-07-16; intervention Vacuum Assisted Closure, Sterile dressing; population Metastatic Disease, Spinal Cord Injury, Spinal Degeneration, Spinal Deformity.',
     'qualitative',
+    NULL,
     'NCT03632005 status UNKNOWN verified 2018-08 accessed 2026-07-16; intervention Vacuum Assisted Closure, Sterile dressing; population Metastatic Disease, Spinal Cord Injury, Spinal Degeneration, Spinal Deformity.',
     'unknown',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T007-E001", "paper_tracker_id": "M10A-P007", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O007"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T007-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P007", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O007"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3323,18 +3330,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O007'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT02098122 status COMPLETED verified 2019-06 accessed 2026-07-16; intervention Not specified; population Spinal Cord Injury.',
     'qualitative',
+    NULL,
     'NCT02098122 status COMPLETED verified 2019-06 accessed 2026-07-16; intervention Not specified; population Spinal Cord Injury.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T008-E001", "paper_tracker_id": "M10A-P008", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O008"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T008-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P008", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O008"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3348,18 +3356,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O008'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT03810963 status COMPLETED verified 2019-10 accessed 2026-07-16; intervention HIIT-FES Cycling combined with Nutritional Counseling, Nutritional Counseling Only; population Spinal Cord Injuries.',
     'qualitative',
+    NULL,
     'NCT03810963 status COMPLETED verified 2019-10 accessed 2026-07-16; intervention HIIT-FES Cycling combined with Nutritional Counseling, Nutritional Counseling Only; population Spinal Cord Injuries.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T009-E001", "paper_tracker_id": "M10A-P009", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O009"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T009-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P009", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O009"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3373,18 +3382,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O009'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT05415514 status COMPLETED verified 2024-07 accessed 2026-07-16; intervention Instrumented assessment of muscle function; population Paralysis.',
     'qualitative',
+    NULL,
     'NCT05415514 status COMPLETED verified 2024-07 accessed 2026-07-16; intervention Instrumented assessment of muscle function; population Paralysis.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T010-E001", "paper_tracker_id": "M10A-P010", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O010"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T010-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P010", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O010"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3398,18 +3408,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O010'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT05094752 status UNKNOWN verified 2021-09 accessed 2026-07-16; intervention Proprioceptive stimulations, Sham stimulations; population Spinal Cord Injuries.',
     'qualitative',
+    NULL,
     'NCT05094752 status UNKNOWN verified 2021-09 accessed 2026-07-16; intervention Proprioceptive stimulations, Sham stimulations; population Spinal Cord Injuries.',
     'unknown',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T011-E001", "paper_tracker_id": "M10A-P011", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O011"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T011-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P011", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O011"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3423,18 +3434,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O011'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT01353599 status UNKNOWN verified 2015-10 accessed 2026-07-16; intervention Mometasone furoate; population Spinal Cord Injury.',
     'qualitative',
+    NULL,
     'NCT01353599 status UNKNOWN verified 2015-10 accessed 2026-07-16; intervention Mometasone furoate; population Spinal Cord Injury.',
     'unknown',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T012-E001", "paper_tracker_id": "M10A-P012", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O012"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T012-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P012", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O012"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3448,18 +3460,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O012'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT04910204 status NOT_YET_RECRUITING verified 2024-12 accessed 2026-07-16; intervention FES Therapy combined with task-specific training (FEST+TST); population Spinal Cord Injuries.',
     'qualitative',
+    NULL,
     'NCT04910204 status NOT_YET_RECRUITING verified 2024-12 accessed 2026-07-16; intervention FES Therapy combined with task-specific training (FEST+TST); population Spinal Cord Injuries.',
     'not_yet_recruiting',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T013-E001", "paper_tracker_id": "M10A-P013", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O013"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T013-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P013", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O013"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3473,18 +3486,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O013'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT02786966 status COMPLETED verified 2025-09 accessed 2026-07-16; intervention Canadian C-Spine Rule; population Neck Injuries.',
     'qualitative',
+    NULL,
     'NCT02786966 status COMPLETED verified 2025-09 accessed 2026-07-16; intervention Canadian C-Spine Rule; population Neck Injuries.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T014-E001", "paper_tracker_id": "M10A-P014", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O014"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T014-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P014", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O014"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3498,18 +3512,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O014'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT04440709 status UNKNOWN verified 2020-06 accessed 2026-07-16; intervention Brain/neural hand exoskeleton (B/NHE); population Spinal Cord Injury, Stroke.',
     'qualitative',
+    NULL,
     'NCT04440709 status UNKNOWN verified 2020-06 accessed 2026-07-16; intervention Brain/neural hand exoskeleton (B/NHE); population Spinal Cord Injury, Stroke.',
     'unknown',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T015-E001", "paper_tracker_id": "M10A-P015", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O015"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T015-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P015", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O015"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3523,18 +3538,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O015'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT04266964 status COMPLETED verified 2023-03 accessed 2026-07-16; intervention Manual examination; population Spasticity, Muscle, Spinal Cord Injuries.',
     'qualitative',
+    NULL,
     'NCT04266964 status COMPLETED verified 2023-03 accessed 2026-07-16; intervention Manual examination; population Spasticity, Muscle, Spinal Cord Injuries.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T016-E001", "paper_tracker_id": "M10A-P016", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O016"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T016-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P016", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O016"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3548,18 +3564,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O016'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT05888714 status UNKNOWN verified 2023-05 accessed 2026-07-16; intervention Experimental FES cycling, Comparator FES cycling, Conventional physical therapy; population Spinal Cord Injuries, Brain Injuries, Muscle Atrophy.',
     'qualitative',
+    NULL,
     'NCT05888714 status UNKNOWN verified 2023-05 accessed 2026-07-16; intervention Experimental FES cycling, Comparator FES cycling, Conventional physical therapy; population Spinal Cord Injuries, Brain Injuries, Muscle Atrophy.',
     'unknown',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T017-E001", "paper_tracker_id": "M10A-P017", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O017"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T017-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P017", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O017"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3573,18 +3590,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O017'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT06624566 status COMPLETED verified 2024-09 accessed 2026-07-16; intervention Experimental: Implementation of an intensive therapeutic group exercise program in the neurorehabilitation process; population Spinal Cord Injury.',
     'qualitative',
+    NULL,
     'NCT06624566 status COMPLETED verified 2024-09 accessed 2026-07-16; intervention Experimental: Implementation of an intensive therapeutic group exercise program in the neurorehabilitation process; population Spinal Cord Injury.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T018-E001", "paper_tracker_id": "M10A-P018", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O018"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T018-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P018", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O018"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3598,18 +3616,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O018'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT06596629 status COMPLETED verified 2025-01 accessed 2026-07-16; intervention Not specified; population Nerve Transfer.',
     'qualitative',
+    NULL,
     'NCT06596629 status COMPLETED verified 2025-01 accessed 2026-07-16; intervention Not specified; population Nerve Transfer.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T019-E001", "paper_tracker_id": "M10A-P019", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O019"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T019-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P019", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O019"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3623,18 +3642,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O019'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT04213131 status UNKNOWN verified 2019-12 accessed 2026-07-16; intervention Stem cell transplantation; population Spinal Cord Injuries.',
     'qualitative',
+    NULL,
     'NCT04213131 status UNKNOWN verified 2019-12 accessed 2026-07-16; intervention Stem cell transplantation; population Spinal Cord Injuries.',
     'unknown',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T020-E001", "paper_tracker_id": "M10A-P020", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O020"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T020-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P020", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O020"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3648,18 +3668,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O020'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT06565351 status COMPLETED verified 2024-08 accessed 2026-07-16; intervention eGFR estimated from creatinine and cystatin C; population Spinal Cord Injuries, Renal Failure.',
     'qualitative',
+    NULL,
     'NCT06565351 status COMPLETED verified 2024-08 accessed 2026-07-16; intervention eGFR estimated from creatinine and cystatin C; population Spinal Cord Injuries, Renal Failure.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T021-E001", "paper_tracker_id": "M10A-P021", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O021"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T021-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P021", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O021"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3673,18 +3694,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O021'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT05644522 status RECRUITING verified 2026-05 accessed 2026-07-16; intervention Indego Nomad® Powered Knee-Ankle-Foot Orthosis (P-KAFO) (Parker Hannifin Corp., Cleveland, OH); population Cerebrovascular Accident, Post-polio Syndrome, Spinal Cord Injuries, Multiple Sclerosis, Muscular Dystrophy.',
     'qualitative',
+    NULL,
     'NCT05644522 status RECRUITING verified 2026-05 accessed 2026-07-16; intervention Indego Nomad® Powered Knee-Ankle-Foot Orthosis (P-KAFO) (Parker Hannifin Corp., Cleveland, OH); population Cerebrovascular Accident, Post-polio Syndrome, Spinal Cord Injuries, Multiple Sclerosis, Muscular Dystrophy.',
     'recruiting',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T022-E001", "paper_tracker_id": "M10A-P022", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O022"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T022-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P022", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O022"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3698,18 +3720,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O022'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT06375759 status RECRUITING verified 2024-04 accessed 2026-07-16; intervention Subarachnoid-Subarachnoid (S-S) Bypass, Intradural Adhesion Lysis; population Syringomyelia.',
     'qualitative',
+    NULL,
     'NCT06375759 status RECRUITING verified 2024-04 accessed 2026-07-16; intervention Subarachnoid-Subarachnoid (S-S) Bypass, Intradural Adhesion Lysis; population Syringomyelia.',
     'recruiting',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T023-E001", "paper_tracker_id": "M10A-P023", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O023"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T023-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P023", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O023"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3723,18 +3746,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O023'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT04036422 status COMPLETED verified 2021-05 accessed 2026-07-16; intervention Rejoyce (Rehabilitation Joystick for Computerized Exercise), Conventional physical therapy, Occupational therapy; population Stroke, Neuronal Plasticity, Hemiplegia.',
     'qualitative',
+    NULL,
     'NCT04036422 status COMPLETED verified 2021-05 accessed 2026-07-16; intervention Rejoyce (Rehabilitation Joystick for Computerized Exercise), Conventional physical therapy, Occupational therapy; population Stroke, Neuronal Plasticity, Hemiplegia.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T024-E001", "paper_tracker_id": "M10A-P024", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O024"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T024-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P024", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O024"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3748,18 +3772,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O024'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT02970773 status WITHDRAWN verified 2019-01 accessed 2026-07-16; intervention Rivaroxaban Oral Tablet; population Spinal Cord Injuries, Thromboembolism.',
     'qualitative',
+    NULL,
     'NCT02970773 status WITHDRAWN verified 2019-01 accessed 2026-07-16; intervention Rivaroxaban Oral Tablet; population Spinal Cord Injuries, Thromboembolism.',
     'withdrawn',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T025-E001", "paper_tracker_id": "M10A-P025", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O025"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T025-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P025", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O025"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3773,18 +3798,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O025'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT06965127 status RECRUITING verified 2025-05 accessed 2026-07-16; intervention NNP-LE; population Spinal Cord Injury (SCI), Gait.',
     'qualitative',
+    NULL,
     'NCT06965127 status RECRUITING verified 2025-05 accessed 2026-07-16; intervention NNP-LE; population Spinal Cord Injury (SCI), Gait.',
     'recruiting',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T026-E001", "paper_tracker_id": "M10A-P026", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O026"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T026-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P026", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O026"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3798,18 +3824,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O026'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT06898242 status ACTIVE_NOT_RECRUITING verified 2025-03 accessed 2026-07-16; intervention Manual myofascial treatment direct to upper and lower limb, Rehabilitative treatment following rehabilitation project; population Brain Injury, Brain Injury, Vascular, Brain Injuries, Traumatic.',
     'qualitative',
+    NULL,
     'NCT06898242 status ACTIVE_NOT_RECRUITING verified 2025-03 accessed 2026-07-16; intervention Manual myofascial treatment direct to upper and lower limb, Rehabilitative treatment following rehabilitation project; population Brain Injury, Brain Injury, Vascular, Brain Injuries, Traumatic.',
     'active_not_recruiting',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T027-E001", "paper_tracker_id": "M10A-P027", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O027"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T027-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P027", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O027"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3823,18 +3850,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O027'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT04559724 status UNKNOWN verified 2024-04 accessed 2026-07-16; intervention Indego Therapy; population Stroke, Brain Injuries, Traumatic, Brain Tumor Benign.',
     'qualitative',
+    NULL,
     'NCT04559724 status UNKNOWN verified 2024-04 accessed 2026-07-16; intervention Indego Therapy; population Stroke, Brain Injuries, Traumatic, Brain Tumor Benign.',
     'unknown',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T028-E001", "paper_tracker_id": "M10A-P028", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O028"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T028-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P028", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O028"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3848,18 +3876,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O028'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT06627881 status UNKNOWN verified 2024-01 accessed 2026-07-16; intervention Continuous aerobic kayak training program, Aerobic Endurance Circuit Program, High intensity interval program with rope; population Spinal Cord Injuries, Cardiovascular Condition, Exercise.',
     'qualitative',
+    NULL,
     'NCT06627881 status UNKNOWN verified 2024-01 accessed 2026-07-16; intervention Continuous aerobic kayak training program, Aerobic Endurance Circuit Program, High intensity interval program with rope; population Spinal Cord Injuries, Cardiovascular Condition, Exercise.',
     'unknown',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T029-E001", "paper_tracker_id": "M10A-P029", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O029"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T029-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P029", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O029"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3873,18 +3902,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O029'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT01225055 status COMPLETED verified 2025-11 accessed 2026-07-16; intervention Teriparatide, vibration; population Spinal Cord Injury, Bone Loss, Osteoporosis.',
     'qualitative',
+    NULL,
     'NCT01225055 status COMPLETED verified 2025-11 accessed 2026-07-16; intervention Teriparatide, vibration; population Spinal Cord Injury, Bone Loss, Osteoporosis.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T030-E001", "paper_tracker_id": "M10A-P030", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O030"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T030-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P030", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O030"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3898,18 +3928,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O030'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT01012635 status COMPLETED verified 2013-01 accessed 2026-07-16; intervention Hypnosis, Meditation, Neurofeedback training, Two different levels of tDCS; population Spinal Cord Injury.',
     'qualitative',
+    NULL,
     'NCT01012635 status COMPLETED verified 2013-01 accessed 2026-07-16; intervention Hypnosis, Meditation, Neurofeedback training, Two different levels of tDCS; population Spinal Cord Injury.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T031-E001", "paper_tracker_id": "M10A-P031", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O031"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T031-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P031", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O031"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3923,18 +3954,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O031'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT01686139 status UNKNOWN verified 2016-01 accessed 2026-07-16; intervention ABMD-MSC; population Type I Diabetes Mellitus With Ulcer, Type II Diabetes Mellitus With Ulcer.',
     'qualitative',
+    NULL,
     'NCT01686139 status UNKNOWN verified 2016-01 accessed 2026-07-16; intervention ABMD-MSC; population Type I Diabetes Mellitus With Ulcer, Type II Diabetes Mellitus With Ulcer.',
     'unknown',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T032-E001", "paper_tracker_id": "M10A-P032", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O032"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T032-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P032", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O032"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3948,18 +3980,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O032'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT00004812 status COMPLETED verified 2001-12 accessed 2026-07-16; intervention Exercise; population Spinal Cord Injury.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'NCT00004812 status COMPLETED verified 2001-12 accessed 2026-07-16; intervention Exercise; population Spinal Cord Injury.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T033-E001", "paper_tracker_id": "M10A-P033", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O033"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T033-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M10A-P033", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O033"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3973,18 +4006,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O033'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT03139344 status COMPLETED verified 2023-01 accessed 2026-07-16; intervention Low-frequency Exercise, High-frequency Exercise; population Spinal Cord Injuries.',
     'qualitative',
+    NULL,
     'NCT03139344 status COMPLETED verified 2023-01 accessed 2026-07-16; intervention Low-frequency Exercise, High-frequency Exercise; population Spinal Cord Injuries.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T034-E001", "paper_tracker_id": "M10A-P034", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O034"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T034-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P034", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O034"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3998,18 +4032,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O034'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT01191307 status TERMINATED verified 2016-10 accessed 2026-07-16; intervention Not specified; population Primary Dystonia, Epilepsy, Hydrocephalus, Bladder Control, Hearing Impaired (Partially).',
     'qualitative',
+    NULL,
     'NCT01191307 status TERMINATED verified 2016-10 accessed 2026-07-16; intervention Not specified; population Primary Dystonia, Epilepsy, Hydrocephalus, Bladder Control, Hearing Impaired (Partially).',
     'terminated',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T035-E001", "paper_tracker_id": "M10A-P035", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O035"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T035-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P035", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O035"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4023,18 +4058,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O035'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT07052344 status RECRUITING verified 2025-11 accessed 2026-07-16; intervention Preload condition, Ad-libitum control condition; population SCI - Spinal Cord Injury.',
     'qualitative',
+    NULL,
     'NCT07052344 status RECRUITING verified 2025-11 accessed 2026-07-16; intervention Preload condition, Ad-libitum control condition; population SCI - Spinal Cord Injury.',
     'recruiting',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T036-E001", "paper_tracker_id": "M10A-P036", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O036"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T036-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P036", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O036"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4048,18 +4084,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O036'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT04161612 status COMPLETED verified 2019-11 accessed 2026-07-16; intervention Demographic characteristics, duration of spinal cord injury, spinal cord injurylevel, etiology, number of intermittent bladder catheterization (IC), number of night time; population Sleep Disorder.',
     'qualitative',
+    NULL,
     'NCT04161612 status COMPLETED verified 2019-11 accessed 2026-07-16; intervention Demographic characteristics, duration of spinal cord injury, spinal cord injurylevel, etiology, number of intermittent bladder catheterization (IC), number of night time; population Sleep Disorder.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T037-E001", "paper_tracker_id": "M10A-P037", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O037"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T037-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P037", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O037"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4073,18 +4110,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O037'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT03576001 status COMPLETED verified 2025-09 accessed 2026-07-16; intervention Testosterone Undecanoate, hybrid exercise; population Spinal Cord Injuries.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'NCT03576001 status COMPLETED verified 2025-09 accessed 2026-07-16; intervention Testosterone Undecanoate, hybrid exercise; population Spinal Cord Injuries.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T038-E001", "paper_tracker_id": "M10A-P038", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O038"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T038-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M10A-P038", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O038"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4098,18 +4136,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O038'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT03743077 status COMPLETED verified 2021-01 accessed 2026-07-16; intervention Exercise training including inspiratory muscle training; population Spinal Cord Injuries.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'NCT03743077 status COMPLETED verified 2021-01 accessed 2026-07-16; intervention Exercise training including inspiratory muscle training; population Spinal Cord Injuries.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T039-E001", "paper_tracker_id": "M10A-P039", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O039"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T039-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M10A-P039", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O039"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4123,18 +4162,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O039'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT06349434 status RECRUITING verified 2025-11 accessed 2026-07-16; intervention MyoMo, conventional therapy; population SCI - Spinal Cord Injury, Upper Extremity Dysfunction, Upper Extremity Problem.',
     'qualitative',
+    NULL,
     'NCT06349434 status RECRUITING verified 2025-11 accessed 2026-07-16; intervention MyoMo, conventional therapy; population SCI - Spinal Cord Injury, Upper Extremity Dysfunction, Upper Extremity Problem.',
     'recruiting',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T040-E001", "paper_tracker_id": "M10A-P040", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O040"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T040-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P040", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O040"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4148,18 +4188,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O040'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT04378218 status COMPLETED verified 2021-08 accessed 2026-07-16; intervention High Intensity Interval Training (HIIT); population Paraplegia, Spinal, Spinal Cord Trauma.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'NCT04378218 status COMPLETED verified 2021-08 accessed 2026-07-16; intervention High Intensity Interval Training (HIIT); population Paraplegia, Spinal, Spinal Cord Trauma.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T041-E001", "paper_tracker_id": "M10A-P041", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O041"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T041-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M10A-P041", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O041"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4173,18 +4214,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O041'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT01765803 status TERMINATED verified 2016-03 accessed 2026-07-16; intervention Mellaril; population Healthy Subjects.',
     'qualitative',
+    NULL,
     'NCT01765803 status TERMINATED verified 2016-03 accessed 2026-07-16; intervention Mellaril; population Healthy Subjects.',
     'terminated',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T042-E001", "paper_tracker_id": "M10A-P042", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O042"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T042-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P042", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O042"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4198,18 +4240,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O042'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT06583538 status COMPLETED verified 2024-11 accessed 2026-07-16; intervention Giraffe Healthcare; population Spinal Cord Injuries, Physical Inactivity, Spinal Cord Injury, Acute.',
     'qualitative',
+    NULL,
     'NCT06583538 status COMPLETED verified 2024-11 accessed 2026-07-16; intervention Giraffe Healthcare; population Spinal Cord Injuries, Physical Inactivity, Spinal Cord Injury, Acute.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T043-E001", "paper_tracker_id": "M10A-P043", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O043"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T043-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P043", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O043"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4223,18 +4266,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O043'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT03721861 status TERMINATED verified 2021-02 accessed 2026-07-16; intervention Intra-operative neural cuff stimulation; population Spinal Cord Injuries.',
     'qualitative',
+    NULL,
     'NCT03721861 status TERMINATED verified 2021-02 accessed 2026-07-16; intervention Intra-operative neural cuff stimulation; population Spinal Cord Injuries.',
     'terminated',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T044-E001", "paper_tracker_id": "M10A-P044", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O044"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T044-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P044", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O044"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4248,18 +4292,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O044'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT01117090 status COMPLETED verified 2017-04 accessed 2026-07-16; intervention Not specified; population Cerebral Palsy, Multiple Sclerosis, Traumatic Brain Injury, Spinal Cord Injury.',
     'qualitative',
+    NULL,
     'NCT01117090 status COMPLETED verified 2017-04 accessed 2026-07-16; intervention Not specified; population Cerebral Palsy, Multiple Sclerosis, Traumatic Brain Injury, Spinal Cord Injury.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T045-E001", "paper_tracker_id": "M10A-P045", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O045"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T045-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P045", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O045"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4273,18 +4318,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O045'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT01968096 status UNKNOWN verified 2013-10 accessed 2026-07-16; intervention home-based ankle continuous passive motion machine.; population Spinal Cord Injury(SCI).',
     'qualitative',
+    NULL,
     'NCT01968096 status UNKNOWN verified 2013-10 accessed 2026-07-16; intervention home-based ankle continuous passive motion machine.; population Spinal Cord Injury(SCI).',
     'unknown',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T046-E001", "paper_tracker_id": "M10A-P046", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O046"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T046-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P046", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O046"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4298,18 +4344,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O046'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT00175773 status COMPLETED verified 2019-09 accessed 2026-07-16; intervention Not specified; population Spinal Cord Injury.',
     'qualitative',
+    NULL,
     'NCT00175773 status COMPLETED verified 2019-09 accessed 2026-07-16; intervention Not specified; population Spinal Cord Injury.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T047-E001", "paper_tracker_id": "M10A-P047", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O047"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T047-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P047", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O047"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4323,18 +4370,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O047'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT04238013 status TERMINATED verified 2022-06 accessed 2026-07-16; intervention Whole Body Vibration (WBV), Electrical Stimulation; population Spinal Cord Injuries, Spastic Gait, Foot Drop.',
     'qualitative',
+    NULL,
     'NCT04238013 status TERMINATED verified 2022-06 accessed 2026-07-16; intervention Whole Body Vibration (WBV), Electrical Stimulation; population Spinal Cord Injuries, Spastic Gait, Foot Drop.',
     'terminated',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T048-E001", "paper_tracker_id": "M10A-P048", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O048"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T048-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P048", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O048"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4348,18 +4396,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O048'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT02891096 status COMPLETED verified 2025-01 accessed 2026-07-16; intervention inspiratory muscle strength; population Spinal Cord Injuries, Pneumonia.',
     'qualitative',
+    NULL,
     'NCT02891096 status COMPLETED verified 2025-01 accessed 2026-07-16; intervention inspiratory muscle strength; population Spinal Cord Injuries, Pneumonia.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T049-E001", "paper_tracker_id": "M10A-P049", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O049"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T049-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P049", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O049"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4373,18 +4422,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O049'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT07062796 status COMPLETED verified 2025-07 accessed 2026-07-16; intervention Water Faucet; population Spinal Cord Injury Cervical.',
     'qualitative',
+    NULL,
     'NCT07062796 status COMPLETED verified 2025-07 accessed 2026-07-16; intervention Water Faucet; population Spinal Cord Injury Cervical.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T050-E001", "paper_tracker_id": "M10A-P050", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O050"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T050-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P050", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O050"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4398,18 +4448,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O050'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT04403256 status COMPLETED verified 2021-08 accessed 2026-07-16; intervention Not specified; population Spinal Cord Injuries, Bone Resorption, Osteoporosis.',
     'qualitative',
+    NULL,
     'NCT04403256 status COMPLETED verified 2021-08 accessed 2026-07-16; intervention Not specified; population Spinal Cord Injuries, Bone Resorption, Osteoporosis.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T051-E001", "paper_tracker_id": "M10A-P051", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O051"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T051-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P051", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O051"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4423,18 +4474,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O051'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT01851629 status COMPLETED verified 2015-04 accessed 2026-07-16; intervention Locomotor Training, Cross-Sectional Testing (No Intervention); population Incomplete Spinal Cord Injury, Brown Sequard Syndrome.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'NCT01851629 status COMPLETED verified 2015-04 accessed 2026-07-16; intervention Locomotor Training, Cross-Sectional Testing (No Intervention); population Incomplete Spinal Cord Injury, Brown Sequard Syndrome.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T052-E001", "paper_tracker_id": "M10A-P052", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O052"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T052-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M10A-P052", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O052"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4448,18 +4500,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O052'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT05424172 status RECRUITING verified 2026-05 accessed 2026-07-16; intervention Stage-I, Group 1: Self monitoring using Non-interactive App, Stage-I, Group 2: Self monitoring using Interactive App, Stage-II, Groups 1a/2a: E-Coaching 1x per month, Stage-II, Groups 1b/2b: E-Coaching 2x per month; population Spinal Cord Injuries.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'NCT05424172 status RECRUITING verified 2026-05 accessed 2026-07-16; intervention Stage-I, Group 1: Self monitoring using Non-interactive App, Stage-I, Group 2: Self monitoring using Interactive App, Stage-II, Groups 1a/2a: E-Coaching 1x per month, Stage-II, Groups 1b/2b: E-Coaching 2x per month; population Spinal Cord Injuries.',
     'recruiting',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T053-E001", "paper_tracker_id": "M10A-P053", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O053"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T053-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M10A-P053", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O053"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4473,18 +4526,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O053'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT04708886 status COMPLETED verified 2025-09 accessed 2026-07-16; intervention Romosozumab, Alendronate; population Osteoporosis, Bone Loss, Osteopenia, Osteoporosis, Spinal Cord Injuries, Chronic Spinal Paralysis.',
     'qualitative',
+    NULL,
     'NCT04708886 status COMPLETED verified 2025-09 accessed 2026-07-16; intervention Romosozumab, Alendronate; population Osteoporosis, Bone Loss, Osteopenia, Osteoporosis, Spinal Cord Injuries, Chronic Spinal Paralysis.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T054-E001", "paper_tracker_id": "M10A-P054", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O054"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T054-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P054", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O054"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4498,18 +4552,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O054'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT03513822 status UNKNOWN verified 2018-04 accessed 2026-07-16; intervention Ketamine 10 MG/ML, Placebos, Midazolam 1 MG/ML; population Neuralgia, Chronic Pain, Inflammation.',
     'qualitative',
+    NULL,
     'NCT03513822 status UNKNOWN verified 2018-04 accessed 2026-07-16; intervention Ketamine 10 MG/ML, Placebos, Midazolam 1 MG/ML; population Neuralgia, Chronic Pain, Inflammation.',
     'unknown',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T055-E001", "paper_tracker_id": "M10A-P055", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O055"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T055-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P055", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O055"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4523,18 +4578,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O055'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT05997251 status COMPLETED verified 2023-08 accessed 2026-07-16; intervention Keeping a 1-day food consumption record by the patient, Measurement of adiponectin level; population Spinal Cord Injuries.',
     'qualitative',
+    NULL,
     'NCT05997251 status COMPLETED verified 2023-08 accessed 2026-07-16; intervention Keeping a 1-day food consumption record by the patient, Measurement of adiponectin level; population Spinal Cord Injuries.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T056-E001", "paper_tracker_id": "M10A-P056", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O056"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T056-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P056", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O056"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4548,18 +4604,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O056'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT02244931 status COMPLETED verified 2013-09 accessed 2026-07-16; intervention Servomatic™ assisting device, E.Motion© assisting device, Standard manual Wheelchair; population Spinal Cord Injuries.',
     'qualitative',
+    NULL,
     'NCT02244931 status COMPLETED verified 2013-09 accessed 2026-07-16; intervention Servomatic™ assisting device, E.Motion© assisting device, Standard manual Wheelchair; population Spinal Cord Injuries.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T057-E001", "paper_tracker_id": "M10A-P057", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O057"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T057-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P057", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O057"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4573,18 +4630,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O057'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT02398331 status COMPLETED verified 2017-11 accessed 2026-07-16; intervention Standardised information and education on sexuality in women with spinal cord injury; population Spinal Cord Injuries.',
     'qualitative',
+    NULL,
     'NCT02398331 status COMPLETED verified 2017-11 accessed 2026-07-16; intervention Standardised information and education on sexuality in women with spinal cord injury; population Spinal Cord Injuries.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T058-E001", "paper_tracker_id": "M10A-P058", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O058"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T058-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P058", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O058"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4598,18 +4656,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O058'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT03424551 status COMPLETED verified 2019-08 accessed 2026-07-16; intervention vibrator; population Muscle, Physiology.',
     'qualitative',
+    NULL,
     'NCT03424551 status COMPLETED verified 2019-08 accessed 2026-07-16; intervention vibrator; population Muscle, Physiology.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T059-E001", "paper_tracker_id": "M10A-P059", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O059"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T059-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P059", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O059"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4623,18 +4682,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O059'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT03048331 status TERMINATED verified 2025-11 accessed 2026-07-16; intervention Functional Electrical Stimulation; population Spinal Cord Injury Cervical.',
     'qualitative',
+    NULL,
     'NCT03048331 status TERMINATED verified 2025-11 accessed 2026-07-16; intervention Functional Electrical Stimulation; population Spinal Cord Injury Cervical.',
     'terminated',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T060-E001", "paper_tracker_id": "M10A-P060", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O060"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T060-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P060", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O060"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4648,18 +4708,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O060'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT00886145 status COMPLETED verified 2016-02 accessed 2026-07-16; intervention Vibration: Right Leg and No Vibration: Left Leg.; population Spinal Cord Injuries.',
     'qualitative',
+    NULL,
     'NCT00886145 status COMPLETED verified 2016-02 accessed 2026-07-16; intervention Vibration: Right Leg and No Vibration: Left Leg.; population Spinal Cord Injuries.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T061-E001", "paper_tracker_id": "M10A-P061", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O061"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T061-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P061", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O061"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4673,18 +4734,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O061'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT07212634 status NOT_YET_RECRUITING verified 2025-10 accessed 2026-07-16; intervention Transcranial Direct Current Stimulation, Sham tDCS; population Dysphagia After Stroke.',
     'qualitative',
+    NULL,
     'NCT07212634 status NOT_YET_RECRUITING verified 2025-10 accessed 2026-07-16; intervention Transcranial Direct Current Stimulation, Sham tDCS; population Dysphagia After Stroke.',
     'not_yet_recruiting',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T062-E001", "paper_tracker_id": "M10A-P062", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O062"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T062-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P062", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O062"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4698,18 +4760,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O062'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT03877432 status UNKNOWN verified 2020-10 accessed 2026-07-16; intervention Dermatome stimulation; population Spinal Cord Injuries.',
     'qualitative',
+    NULL,
     'NCT03877432 status UNKNOWN verified 2020-10 accessed 2026-07-16; intervention Dermatome stimulation; population Spinal Cord Injuries.',
     'unknown',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T063-E001", "paper_tracker_id": "M10A-P063", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O063"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T063-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P063", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O063"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4723,18 +4786,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O063'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT05550987 status UNKNOWN verified 2022-11 accessed 2026-07-16; intervention Rehabilitation program with the use of mechanical vibration using the Vibramoov device and conventional physiotherapy, Rehabilitation program with gait training using the Ekso GT exoskeleton and conventional physiotherapy, Rehabilitation program with the use of gait training with the use of a RoboGait stationary robot and conventional physiotherapy., Rehabilitation program with',
     'qualitative',
+    NULL,
     'NCT05550987 status UNKNOWN verified 2022-11 accessed 2026-07-16; intervention Rehabilitation program with the use of mechanical vibration using the Vibramoov device and conventional physiotherapy, Rehabilitation program with gait training using the Ekso GT exoskeleton and conventional physiotherapy, Rehabilitation program with the use of gait training with the use of a RoboGait stationary robot and conventional physiotherapy., Rehabilitation program with',
     'unknown',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T064-E001", "paper_tracker_id": "M10A-P064", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O064"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T064-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P064", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O064"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4748,18 +4812,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O064'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT07037628 status NOT_YET_RECRUITING verified 2025-06 accessed 2026-07-16; intervention Not specified; population Spinal Cord Injury, Spinal Cord Injury Thoracic, Spinal Cord Injury/Damage, Spinal Cord Injury T1-L2, Spinal Cord Stimulation (SCS).',
     'qualitative',
+    NULL,
     'NCT07037628 status NOT_YET_RECRUITING verified 2025-06 accessed 2026-07-16; intervention Not specified; population Spinal Cord Injury, Spinal Cord Injury Thoracic, Spinal Cord Injury/Damage, Spinal Cord Injury T1-L2, Spinal Cord Stimulation (SCS).',
     'not_yet_recruiting',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T065-E001", "paper_tracker_id": "M10A-P065", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O065"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T065-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P065", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O065"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4773,18 +4838,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O065'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT05343130 status RECRUITING verified 2025-06 accessed 2026-07-16; intervention Brain-Computer Interface, Sham Brain-Computer Interface; population Cervical Spinal Cord Injury.',
     'qualitative',
+    NULL,
     'NCT05343130 status RECRUITING verified 2025-06 accessed 2026-07-16; intervention Brain-Computer Interface, Sham Brain-Computer Interface; population Cervical Spinal Cord Injury.',
     'recruiting',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T066-E001", "paper_tracker_id": "M10A-P066", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O066"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T066-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P066", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O066"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4798,18 +4864,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O066'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT04625309 status COMPLETED verified 2021-09 accessed 2026-07-16; intervention Adaptive sports; population Spinal Cord Injuries, Sports Physical Therapy.',
     'qualitative',
+    NULL,
     'NCT04625309 status COMPLETED verified 2021-09 accessed 2026-07-16; intervention Adaptive sports; population Spinal Cord Injuries, Sports Physical Therapy.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T067-E001", "paper_tracker_id": "M10A-P067", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O067"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T067-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P067", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O067"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4823,18 +4890,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O067'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT04387864 status COMPLETED verified 2020-05 accessed 2026-07-16; intervention Whole-body Vibration Device; population Postpolio Syndrome.',
     'qualitative',
+    NULL,
     'NCT04387864 status COMPLETED verified 2020-05 accessed 2026-07-16; intervention Whole-body Vibration Device; population Postpolio Syndrome.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T068-E001", "paper_tracker_id": "M10A-P068", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O068"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T068-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P068", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O068"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4848,18 +4916,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O068'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT02974673 status TERMINATED verified 2020-06 accessed 2026-07-16; intervention Ejaculatory test; population Spinal Cord Diseases, Disorder of Ejaculation.',
     'qualitative',
+    NULL,
     'NCT02974673 status TERMINATED verified 2020-06 accessed 2026-07-16; intervention Ejaculatory test; population Spinal Cord Diseases, Disorder of Ejaculation.',
     'terminated',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T069-E001", "paper_tracker_id": "M10A-P069", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O069"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T069-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P069", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O069"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4873,18 +4942,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O069'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT02381977 status COMPLETED verified 2015-03 accessed 2026-07-16; intervention No intervention; population Cardiac Arrest, Stroke, Traumatic Brain Injury, Brain Mass, Status Epilepticus.',
     'qualitative',
+    NULL,
     'NCT02381977 status COMPLETED verified 2015-03 accessed 2026-07-16; intervention No intervention; population Cardiac Arrest, Stroke, Traumatic Brain Injury, Brain Mass, Status Epilepticus.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T070-E001", "paper_tracker_id": "M10A-P070", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O070"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T070-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P070", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O070"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4898,18 +4968,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O070'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT02315339 status TERMINATED verified 2020-04 accessed 2026-07-16; intervention Not specified; population Pulmonary Disease, Chronic Obstructive, Amyotrophic Lateral Sclerosis, Spinal Cord Injury, Muscular Dystrophies, Obesity Hypoventilation Syndrome.',
     'qualitative',
+    NULL,
     'NCT02315339 status TERMINATED verified 2020-04 accessed 2026-07-16; intervention Not specified; population Pulmonary Disease, Chronic Obstructive, Amyotrophic Lateral Sclerosis, Spinal Cord Injury, Muscular Dystrophies, Obesity Hypoventilation Syndrome.',
     'terminated',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T071-E001", "paper_tracker_id": "M10A-P071", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O071"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T071-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P071", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O071"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4923,18 +4994,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O071'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT06543277 status RECRUITING verified 2025-09 accessed 2026-07-16; intervention Transcutaneous Auricular Vagus Nerve Stimulation (taVNS); population Chronic Incomplete Cervical Spinal Cord Injury (SCI).',
     'qualitative',
+    NULL,
     'NCT06543277 status RECRUITING verified 2025-09 accessed 2026-07-16; intervention Transcutaneous Auricular Vagus Nerve Stimulation (taVNS); population Chronic Incomplete Cervical Spinal Cord Injury (SCI).',
     'recruiting',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T072-E001", "paper_tracker_id": "M10A-P072", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O072"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T072-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P072", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O072"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4948,18 +5020,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O072'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT06587841 status RECRUITING verified 2026-02 accessed 2026-07-16; intervention Spinal COrd NEuromodulation™ (SCONE™) for transcutaneous spinal cord stimulation (TSCS); population Spinal Cord Injuries, Bowel Dysfunction, Sexual Dysfunction, Autonomic Dysfunction, Urologic Disorders.',
     'qualitative',
+    NULL,
     'NCT06587841 status RECRUITING verified 2026-02 accessed 2026-07-16; intervention Spinal COrd NEuromodulation™ (SCONE™) for transcutaneous spinal cord stimulation (TSCS); population Spinal Cord Injuries, Bowel Dysfunction, Sexual Dysfunction, Autonomic Dysfunction, Urologic Disorders.',
     'recruiting',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T073-E001", "paper_tracker_id": "M10A-P073", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O073"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T073-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P073", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T001", "tracker_id": "M10B-O073"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4973,18 +5046,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O073'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT07518251 status RECRUITING verified 2026-03 accessed 2026-07-16; intervention Thoracoabdominal aortic aneurysm repair under fCPB, Thoracoabdominal aortic aneurysm repair under LHB; population Thoracoabdominal Aortic Aneurysm, Cardiopulmonary Bypass, Open Repair.',
     'qualitative',
+    NULL,
     'NCT07518251 status RECRUITING verified 2026-03 accessed 2026-07-16; intervention Thoracoabdominal aortic aneurysm repair under fCPB, Thoracoabdominal aortic aneurysm repair under LHB; population Thoracoabdominal Aortic Aneurysm, Cardiopulmonary Bypass, Open Repair.',
     'recruiting',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T074-E001", "paper_tracker_id": "M10A-P074", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O074"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T074-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P074", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T002", "tracker_id": "M10B-O074"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4998,18 +5072,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O074'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT04446195 status UNKNOWN verified 2020-06 accessed 2026-07-16; intervention Individualized Intervention; population Bowel Preparation Solutions.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'NCT04446195 status UNKNOWN verified 2020-06 accessed 2026-07-16; intervention Individualized Intervention; population Bowel Preparation Solutions.',
     'unknown',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T075-E001", "paper_tracker_id": "M10A-P075", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O075"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T075-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M10A-P075", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T003", "tracker_id": "M10B-O075"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5023,18 +5098,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O075'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT03046875 status WITHDRAWN verified 2018-02 accessed 2026-07-16; intervention Transcutaneous Spinal Cord Stimulation, Sham stimulation; population Spinal Cord Injuries.',
     'qualitative',
+    NULL,
     'NCT03046875 status WITHDRAWN verified 2018-02 accessed 2026-07-16; intervention Transcutaneous Spinal Cord Stimulation, Sham stimulation; population Spinal Cord Injuries.',
     'withdrawn',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T076-E001", "paper_tracker_id": "M10A-P076", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O076"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T076-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P076", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T004", "tracker_id": "M10B-O076"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5048,18 +5124,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O076'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT02225028 status COMPLETED verified 2017-05 accessed 2026-07-16; intervention Physical Activity Counseling; population Spinal Cord Injury.',
     'qualitative',
+    'behavioral / functional recovery assay',
     'NCT02225028 status COMPLETED verified 2017-05 accessed 2026-07-16; intervention Physical Activity Counseling; population Spinal Cord Injury.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T077-E001", "paper_tracker_id": "M10A-P077", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O077"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T077-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M10A-P077", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T005", "tracker_id": "M10B-O077"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5073,18 +5150,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O077'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT01599767 status COMPLETED verified 2020-04 accessed 2026-07-16; intervention Transcranial direct current stimulation (tDCS); population Spinal Cord Injury, Chronic Pain, Neuropathic Pain.',
     'qualitative',
+    NULL,
     'NCT01599767 status COMPLETED verified 2020-04 accessed 2026-07-16; intervention Transcranial direct current stimulation (tDCS); population Spinal Cord Injury, Chronic Pain, Neuropathic Pain.',
     'completed',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T078-E001", "paper_tracker_id": "M10A-P078", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O078"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T078-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P078", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T006", "tracker_id": "M10B-O078"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5098,18 +5176,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O078'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT05065437 status WITHDRAWN verified 2022-06 accessed 2026-07-16; intervention Active (Virtual reality and spinal stimulation); population Tetraplegia.',
     'qualitative',
+    NULL,
     'NCT05065437 status WITHDRAWN verified 2022-06 accessed 2026-07-16; intervention Active (Virtual reality and spinal stimulation); population Tetraplegia.',
     'withdrawn',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T079-E001", "paper_tracker_id": "M10A-P079", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O079"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T079-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P079", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T007", "tracker_id": "M10B-O079"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5123,18 +5202,19 @@ INSERT INTO _m10_observation_map (tracker_id, observation_id) SELECT 'M10B-O079'
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'NCT02274116 status ACTIVE_NOT_RECRUITING verified 2026-03 accessed 2026-07-16; intervention SHAM - Intermittent Room Air - room air mixture, AIH - Intermittent Hypoxia - hypoxia air mixture; population Spinal Cord Injuries.',
     'qualitative',
+    NULL,
     'NCT02274116 status ACTIVE_NOT_RECRUITING verified 2026-03 accessed 2026-07-16; intervention SHAM - Intermittent Room Air - room air mixture, AIH - Intermittent Hypoxia - hypoxia air mixture; population Spinal Cord Injuries.',
     'active_not_recruiting',
     'ClinicalTrials.gov registry',
     'ClinicalTrials.gov registry',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T080-E001", "paper_tracker_id": "M10A-P080", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O080"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M10A-T080-E001", "measurement_method_inference": null, "paper_tracker_id": "M10A-P080", "quantitative": "YES", "statistics_reported": "Registry status/design fields extracted; results linkage queued", "topic_id": "M10B-T008", "tracker_id": "M10B-O080"}'
   FROM _m10_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot

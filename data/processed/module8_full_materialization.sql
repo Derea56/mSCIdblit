@@ -770,18 +770,19 @@ INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VA
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'PRISMA-guided systematic review. To provide a comprehensive framework of the current animal models for investigating spinal cord injury (SCI) and categorize them based on the aims, patterns and levels of injury, and outcome measurements as well as animal species. Sina Trauma and Surgery Research Center, Tehran University of Medical Sciences, Tehran, Iran. An electronic search of the Medline database for literature describing animal models of SCI was',
     'qualitative',
+    NULL,
     'PRISMA-guided systematic review. To provide a comprehensive framework of the current animal models for investigating spinal cord injury (SCI) and categorize them based on the aims, patterns and levels of injury, and outcome measurements as well as animal species. Sina Trauma and Surgery Research Center, Tehran University of Medical Sciences, Tehran, Iran. An electronic search of the Medline database for literature describing animal models of SCI was',
     'in vivo sci model taxonomy',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P001-E001", "paper_tracker_id": "M8A-P001", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T001", "tracker_id": "M8B-O001"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P001-E001", "measurement_method_inference": null, "paper_tracker_id": "M8A-P001", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T001", "tracker_id": "M8B-O001"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -795,18 +796,19 @@ INSERT INTO _m8_observation_map (tracker_id, observation_id) SELECT 'M8B-O001', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Spinal cord injury (SCI) is one of the most frequent causes of disability, accompanied by motor and postural impairments, as well as autonomic and behavioural disorders. Since the beginning of the last century, researchers have been developing and refining experimental models of SCI to study pathogenesis and find therapies. Since the beginning of the 20th century, quite a wide range of methods have been developed for contusion and compression injury,',
     'qualitative',
+    NULL,
     'Spinal cord injury (SCI) is one of the most frequent causes of disability, accompanied by motor and postural impairments, as well as autonomic and behavioural disorders. Since the beginning of the last century, researchers have been developing and refining experimental models of SCI to study pathogenesis and find therapies. Since the beginning of the 20th century, quite a wide range of methods have been developed for contusion and compression injury,',
     'compression/clip injury model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P002-E001", "paper_tracker_id": "M8A-P002", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T002", "tracker_id": "M8B-O002"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P002-E001", "measurement_method_inference": null, "paper_tracker_id": "M8A-P002", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T002", "tracker_id": "M8B-O002"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -820,18 +822,19 @@ INSERT INTO _m8_observation_map (tracker_id, observation_id) SELECT 'M8B-O002', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'There is considerable interest in translating laboratory advances in neuronal regeneration following spinal cord injury (SCI). A multimodality approach has been advocated for successful functional neuronal regeneration. With this goal in mind several biomaterials have been employed as neuronal bridges either to support cellular transplants, to release neurotrophic factors, or to do both. A systematic review of this literature is lacking. Such a review may',
     'qualitative',
+    NULL,
     'There is considerable interest in translating laboratory advances in neuronal regeneration following spinal cord injury (SCI). A multimodality approach has been advocated for successful functional neuronal regeneration. With this goal in mind several biomaterials have been employed as neuronal bridges either to support cellular transplants, to release neurotrophic factors, or to do both. A systematic review of this literature is lacking. Such a review may',
     'in vivo sci model taxonomy',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P003-E001", "paper_tracker_id": "M8A-P003", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T003", "tracker_id": "M8B-O003"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P003-E001", "measurement_method_inference": null, "paper_tracker_id": "M8A-P003", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T003", "tracker_id": "M8B-O003"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -845,18 +848,19 @@ INSERT INTO _m8_observation_map (tracker_id, observation_id) SELECT 'M8B-O003', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Animal spinal cord injury (SCI) models have proved invaluable in better understanding the mechanisms involved in traumatic SCI and evaluating the effectiveness of experimental therapeutic interventions. Over the past 25 years, substantial gains have been made in developing consistent, reproducible and reliable animal SCI models. Review. The objective of this review was to consolidate current knowledge on SCI models and introduce newer paradigms that are',
     'qualitative',
+    NULL,
     'Animal spinal cord injury (SCI) models have proved invaluable in better understanding the mechanisms involved in traumatic SCI and evaluating the effectiveness of experimental therapeutic interventions. Over the past 25 years, substantial gains have been made in developing consistent, reproducible and reliable animal SCI models. Review. The objective of this review was to consolidate current knowledge on SCI models and introduce newer paradigms that are',
     'compression/clip injury model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P004-E001", "paper_tracker_id": "M8A-P004", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T004", "tracker_id": "M8B-O004"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P004-E001", "measurement_method_inference": null, "paper_tracker_id": "M8A-P004", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T004", "tracker_id": "M8B-O004"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -870,18 +874,19 @@ INSERT INTO _m8_observation_map (tracker_id, observation_id) SELECT 'M8B-O004', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Most animal models of contused, compressed or transected spinal cord injury (SCI) require a laminectomy to be performed. However, despite advantages and disadvantages associated with each of these models, the laminectomy itself is generally associated with significant problems including longer surgery and anaesthesia (related post-operative complications), neuropathic pain, spinal instabilities, deformities, lordosis, and biomechanical problems, etc. This',
     'qualitative',
+    NULL,
     'Most animal models of contused, compressed or transected spinal cord injury (SCI) require a laminectomy to be performed. However, despite advantages and disadvantages associated with each of these models, the laminectomy itself is generally associated with significant problems including longer surgery and anaesthesia (related post-operative complications), neuropathic pain, spinal instabilities, deformities, lordosis, and biomechanical problems, etc. This',
     'transection/hemisection model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P005-E001", "paper_tracker_id": "M8A-P005", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T005", "tracker_id": "M8B-O005"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P005-E001", "measurement_method_inference": null, "paper_tracker_id": "M8A-P005", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T005", "tracker_id": "M8B-O005"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -895,18 +900,19 @@ INSERT INTO _m8_observation_map (tracker_id, observation_id) SELECT 'M8B-O005', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'To acquire evidence-based knowledge in temporal and spatial patterns of microglia/macrophages changes to facilitate finding proper intervention time for functional restoration after traumatic spinal cord injury (TSCI). Sina Trauma and Surgery Research Center, Tehran University of Medical Sciences, Tehran, Iran. We searched PubMed and EMBASE via Ovid SP with no temporal and linguistic restrictions. Besides, hand-search was performed in the bibliographies',
     'qualitative',
+    'spatial transcriptomics / spatial atlas',
     'To acquire evidence-based knowledge in temporal and spatial patterns of microglia/macrophages changes to facilitate finding proper intervention time for functional restoration after traumatic spinal cord injury (TSCI). Sina Trauma and Surgery Research Center, Tehran University of Medical Sciences, Tehran, Iran. We searched PubMed and EMBASE via Ovid SP with no temporal and linguistic restrictions. Besides, hand-search was performed in the bibliographies',
     'in vivo sci model taxonomy',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P006-E001", "paper_tracker_id": "M8A-P006", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T006", "tracker_id": "M8B-O006"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P006-E001", "measurement_method_inference": "spatial transcriptomics / spatial atlas", "paper_tracker_id": "M8A-P006", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T006", "tracker_id": "M8B-O006"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -920,18 +926,19 @@ INSERT INTO _m8_observation_map (tracker_id, observation_id) SELECT 'M8B-O006', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Spinal cord injury (SCI) is one of the most devastating neurological disorders associated with severe locomotor disability and a high rate of morbidity. Over the last 20-30 years, animal SCI models have proven to be extremely useful in better understanding the underlying molecular mechanism(s) involved in human traumatic SCI and in assessing the efficacy of available therapeutic agents. Thus, the current review article aims to provide readers with an',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Spinal cord injury (SCI) is one of the most devastating neurological disorders associated with severe locomotor disability and a high rate of morbidity. Over the last 20-30 years, animal SCI models have proven to be extremely useful in better understanding the underlying molecular mechanism(s) involved in human traumatic SCI and in assessing the efficacy of available therapeutic agents. Thus, the current review article aims to provide readers with an',
     'compression/clip injury model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P007-E001", "paper_tracker_id": "M8A-P007", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T007", "tracker_id": "M8B-O007"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P007-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M8A-P007", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T007", "tracker_id": "M8B-O007"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -945,18 +952,19 @@ INSERT INTO _m8_observation_map (tracker_id, observation_id) SELECT 'M8B-O007', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'A literature review was conducted. To review animal models and injury paradigms used in the neurobiologic study of spinal cord regeneration, and to assist the spinal clinician in interpreting the many encouraging reports of potential therapies emerging from basic science laboratories. An enormous amount of interest in spinal cord regeneration research has been generated within the past 20 years with the hope that experimental therapies will become',
     'qualitative',
+    NULL,
     'A literature review was conducted. To review animal models and injury paradigms used in the neurobiologic study of spinal cord regeneration, and to assist the spinal clinician in interpreting the many encouraging reports of potential therapies emerging from basic science laboratories. An enormous amount of interest in spinal cord regeneration research has been generated within the past 20 years with the hope that experimental therapies will become',
     'in vivo sci model taxonomy',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P008-E001", "paper_tracker_id": "M8A-P008", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T008", "tracker_id": "M8B-O008"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P008-E001", "measurement_method_inference": null, "paper_tracker_id": "M8A-P008", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T008", "tracker_id": "M8B-O008"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -970,18 +978,19 @@ INSERT INTO _m8_observation_map (tracker_id, observation_id) SELECT 'M8B-O008', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'In this review, we have documented some current research trends in rodent models of spinal cord injury. We have also catalogued the treatments used in studies published between October 2002 and November 2003, with special attention given to studies in which treatments were delayed for at least 4 days after injury. Most spinal cord injury studies are performed with one of three general injury models: transection, compression, or contusion. Although most',
     'qualitative',
+    NULL,
     'In this review, we have documented some current research trends in rodent models of spinal cord injury. We have also catalogued the treatments used in studies published between October 2002 and November 2003, with special attention given to studies in which treatments were delayed for at least 4 days after injury. Most spinal cord injury studies are performed with one of three general injury models: transection, compression, or contusion. Although most',
     'compression/clip injury model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P009-E001", "paper_tracker_id": "M8A-P009", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T001", "tracker_id": "M8B-O009"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P009-E001", "measurement_method_inference": null, "paper_tracker_id": "M8A-P009", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T001", "tracker_id": "M8B-O009"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -995,18 +1004,19 @@ INSERT INTO _m8_observation_map (tracker_id, observation_id) SELECT 'M8B-O009', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Stem cell-based therapies offer promising treatment for spinal cord injury (SCI) by reducing inflammation, restoring plasticity, and supporting neuroprotection and nerve regeneration. Brain-derived neurotrophic factor (BDNF) is crucial in SCI pathophysiology. This study reviews the impact of stem cells on BDNF expression in preclinical SCI models. A thorough search was performed in PubMed, Scopus, and Web of Science until June 2023, identifying studies on',
     'qualitative',
+    NULL,
     'Stem cell-based therapies offer promising treatment for spinal cord injury (SCI) by reducing inflammation, restoring plasticity, and supporting neuroprotection and nerve regeneration. Brain-derived neurotrophic factor (BDNF) is crucial in SCI pathophysiology. This study reviews the impact of stem cells on BDNF expression in preclinical SCI models. A thorough search was performed in PubMed, Scopus, and Web of Science until June 2023, identifying studies on',
     'compression/clip injury model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P010-E001", "paper_tracker_id": "M8A-P010", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T002", "tracker_id": "M8B-O010"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P010-E001", "measurement_method_inference": null, "paper_tracker_id": "M8A-P010", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T002", "tracker_id": "M8B-O010"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1020,18 +1030,19 @@ INSERT INTO _m8_observation_map (tracker_id, observation_id) SELECT 'M8B-O010', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Spinal cord contusion injury in rodents is widely used as a model for spinal cord trauma in humans. Several biomechanical variables can influence injury outcome. In this work, we have assessed the influence of impact force and displacement of the spinal cord at the time of contusion injury on the severity of locomotor deficits and histopathological changes. Our work indicates that there is a linear relationship between force and tissue displacement, and',
     'qualitative',
+    'behavioral / functional recovery assay',
     'Spinal cord contusion injury in rodents is widely used as a model for spinal cord trauma in humans. Several biomechanical variables can influence injury outcome. In this work, we have assessed the influence of impact force and displacement of the spinal cord at the time of contusion injury on the severity of locomotor deficits and histopathological changes. Our work indicates that there is a linear relationship between force and tissue displacement, and',
     'contusion injury model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P011-E001", "paper_tracker_id": "M8A-P011", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T003", "tracker_id": "M8B-O011"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P011-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M8A-P011", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T003", "tracker_id": "M8B-O011"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1045,18 +1056,19 @@ INSERT INTO _m8_observation_map (tracker_id, observation_id) SELECT 'M8B-O011', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Over the past decade, our laboratory has attempted to create a simple, accurate device that could be used to produce reliable and quantifiable spinal cord injuries in the rodent. We report here on our latest of several modifications of a spinal cord impactor that has allowed us to meet these design criteria. The impactor uses the dynamic capacity of an electromagnetic driver (Ling shaker) and a unique pattern generator to briefly compress the dorsal',
     'qualitative',
+    NULL,
     'Over the past decade, our laboratory has attempted to create a simple, accurate device that could be used to produce reliable and quantifiable spinal cord injuries in the rodent. We report here on our latest of several modifications of a spinal cord impactor that has allowed us to meet these design criteria. The impactor uses the dynamic capacity of an electromagnetic driver (Ling shaker) and a unique pattern generator to briefly compress the dorsal',
     'compression/clip injury model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P012-E001", "paper_tracker_id": "M8A-P012", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T004", "tracker_id": "M8B-O012"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P012-E001", "measurement_method_inference": null, "paper_tracker_id": "M8A-P012", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T004", "tracker_id": "M8B-O012"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1070,18 +1082,19 @@ INSERT INTO _m8_observation_map (tracker_id, observation_id) SELECT 'M8B-O012', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Zebrafish exhibit robust regeneration following spinal cord injury, promoted by macrophages that control post-injury inflammation. However, the mechanistic basis of how macrophages regulate regeneration is poorly understood. To address this gap in understanding, we conducted a rapid in vivo phenotypic screen for macrophage-related genes that promote regeneration after spinal injury. We used acute injection of synthetic RNA Oligo CRISPR guide RNAs',
     'qualitative',
+    'genetic perturbation / knockdown assay',
     'Zebrafish exhibit robust regeneration following spinal cord injury, promoted by macrophages that control post-injury inflammation. However, the mechanistic basis of how macrophages regulate regeneration is poorly understood. To address this gap in understanding, we conducted a rapid in vivo phenotypic screen for macrophage-related genes that promote regeneration after spinal injury. We used acute injection of synthetic RNA Oligo CRISPR guide RNAs',
     'regenerative zebrafish sci model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P013-E001", "paper_tracker_id": "M8A-P013", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T005", "tracker_id": "M8B-O013"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P013-E001", "measurement_method_inference": "genetic perturbation / knockdown assay", "paper_tracker_id": "M8A-P013", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T005", "tracker_id": "M8B-O013"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1095,18 +1108,19 @@ INSERT INTO _m8_observation_map (tracker_id, observation_id) SELECT 'M8B-O013', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'The models used to investigate the pathophysiological mechanisms of acute critical illness are not limited to mammalian species. The zebrafish (Danio rerio) is a popular model organism for studying diseases due to its transparency and rapid development. The genes and signaling pathways involved in acute critical illness appear highly conserved among zebrafish and humans. Forward genetics such as random mutagenesis by a chemical mutagen or reverse genetics',
     'qualitative',
+    NULL,
     'The models used to investigate the pathophysiological mechanisms of acute critical illness are not limited to mammalian species. The zebrafish (Danio rerio) is a popular model organism for studying diseases due to its transparency and rapid development. The genes and signaling pathways involved in acute critical illness appear highly conserved among zebrafish and humans. Forward genetics such as random mutagenesis by a chemical mutagen or reverse genetics',
     'regenerative zebrafish sci model',
     'PubMed/source metadata',
     'Abstract / PubMed',
     'medium',
-    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P014-E001", "paper_tracker_id": "M8A-P014", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T006", "tracker_id": "M8B-O014"}'
+    '{"curator_notes": "Source-page/registry first pass; full extraction queued.", "experiment_tracker_id": "M8A-P014-E001", "measurement_method_inference": null, "paper_tracker_id": "M8A-P014", "quantitative": "NO", "statistics_reported": "Source-page first pass; exact statistics not extracted", "topic_id": "M8B-T006", "tracker_id": "M8B-O014"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1120,18 +1134,19 @@ INSERT INTO _m8_observation_map (tracker_id, observation_id) SELECT 'M8B-O014', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'ODC-SCI graded T8 contusion dataset links severity variables to locomotor, sensorimotor, pain, and histologic endpoints.',
     'qualitative/dataset',
+    'immunostaining / histology / pathology; behavioral / functional recovery assay',
     'ODC-SCI graded T8 contusion dataset links severity variables to locomotor, sensorimotor, pain, and histologic endpoints.',
     'severity-calibrated thoracic contusion model',
     'ODC-SCI dataset metadata',
     'ODC-SCI dataset page',
     'medium',
-    '{"curator_notes": "Promoted ODC-SCI candidate; dataset-page confidence retained.", "experiment_tracker_id": "M8A-P015-E001", "paper_tracker_id": "M8A-P015", "quantitative": "NO", "statistics_reported": "Dataset-page first pass; raw data not reanalyzed", "topic_id": "M8B-T004", "tracker_id": "M8B-O015"}'
+    '{"curator_notes": "Promoted ODC-SCI candidate; dataset-page confidence retained.", "experiment_tracker_id": "M8A-P015-E001", "measurement_method_inference": "immunostaining / histology / pathology; behavioral / functional recovery assay", "paper_tracker_id": "M8A-P015", "quantitative": "NO", "statistics_reported": "Dataset-page first pass; raw data not reanalyzed", "topic_id": "M8B-T004", "tracker_id": "M8B-O015"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1145,18 +1160,19 @@ INSERT INTO _m8_observation_map (tracker_id, observation_id) SELECT 'M8B-O015', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Large MASCIS dataset records physiologic covariates and overground locomotion across thoracic contusion severities in 1125 rats.',
     'qualitative/dataset',
+    'behavioral / functional recovery assay',
     'Large MASCIS dataset records physiologic covariates and overground locomotion across thoracic contusion severities in 1125 rats.',
     'large-scale contusion severity standardization',
     'ODC-SCI dataset metadata',
     'ODC-SCI dataset page',
     'medium',
-    '{"curator_notes": "Promoted ODC-SCI candidate; dataset-page confidence retained.", "experiment_tracker_id": "M8A-P016-E001", "paper_tracker_id": "M8A-P016", "quantitative": "YES", "statistics_reported": "Dataset size reported in source title/metadata", "topic_id": "M8B-T004", "tracker_id": "M8B-O016"}'
+    '{"curator_notes": "Promoted ODC-SCI candidate; dataset-page confidence retained.", "experiment_tracker_id": "M8A-P016-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M8A-P016", "quantitative": "YES", "statistics_reported": "Dataset size reported in source title/metadata", "topic_id": "M8B-T004", "tracker_id": "M8B-O016"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1170,18 +1186,19 @@ INSERT INTO _m8_observation_map (tracker_id, observation_id) SELECT 'M8B-O016', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'CLIMBER individual-animal data support cross-study harmonization of species, injury level, severity, and outcome scales for contusive SCI.',
     'qualitative/dataset',
+    NULL,
     'CLIMBER individual-animal data support cross-study harmonization of species, injury level, severity, and outcome scales for contusive SCI.',
     'individual-animal model harmonization',
     'ODC-SCI dataset metadata',
     'ODC-SCI dataset page',
     'medium',
-    '{"curator_notes": "Promoted ODC-SCI candidate; dataset-page confidence retained.", "experiment_tracker_id": "M8A-P017-E001", "paper_tracker_id": "M8A-P017", "quantitative": "NO", "statistics_reported": "Dataset-page first pass; meta-analysis estimates not re-extracted", "topic_id": "M8B-T008", "tracker_id": "M8B-O017"}'
+    '{"curator_notes": "Promoted ODC-SCI candidate; dataset-page confidence retained.", "experiment_tracker_id": "M8A-P017-E001", "measurement_method_inference": null, "paper_tracker_id": "M8A-P017", "quantitative": "NO", "statistics_reported": "Dataset-page first pass; meta-analysis estimates not re-extracted", "topic_id": "M8B-T008", "tracker_id": "M8B-O017"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1195,18 +1212,19 @@ INSERT INTO _m8_observation_map (tracker_id, observation_id) SELECT 'M8B-O017', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'CLIMBER group-level literature-extracted data provide complementary model-reporting and endpoint-comparability structure for contusive SCI.',
     'qualitative/dataset',
+    NULL,
     'CLIMBER group-level literature-extracted data provide complementary model-reporting and endpoint-comparability structure for contusive SCI.',
     'group-level model harmonization',
     'ODC-SCI dataset metadata',
     'ODC-SCI dataset page',
     'medium',
-    '{"curator_notes": "Promoted ODC-SCI candidate; dataset-page confidence retained.", "experiment_tracker_id": "M8A-P018-E001", "paper_tracker_id": "M8A-P018", "quantitative": "NO", "statistics_reported": "Dataset-page first pass; meta-analysis estimates not re-extracted", "topic_id": "M8B-T008", "tracker_id": "M8B-O018"}'
+    '{"curator_notes": "Promoted ODC-SCI candidate; dataset-page confidence retained.", "experiment_tracker_id": "M8A-P018-E001", "measurement_method_inference": null, "paper_tracker_id": "M8A-P018", "quantitative": "NO", "statistics_reported": "Dataset-page first pass; meta-analysis estimates not re-extracted", "topic_id": "M8B-T008", "tracker_id": "M8B-O018"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -1220,18 +1238,19 @@ INSERT INTO _m8_observation_map (tracker_id, observation_id) SELECT 'M8B-O018', 
 WITH inserted AS (
   INSERT INTO Observation (
     experiment_id, evidence_type_id, outcome_type_id, observation_value,
-    unit, raw_observation_text, normalized_observation_value, source_section,
+    unit, measurement_method, raw_observation_text, normalized_observation_value, source_section,
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
     'Cervical C5 unilateral SCI dataset adds level, laterality, modality, forelimb/sensorimotor, and histopathologic boundaries absent from thoracic-only models.',
     'qualitative/dataset',
+    NULL,
     'Cervical C5 unilateral SCI dataset adds level, laterality, modality, forelimb/sensorimotor, and histopathologic boundaries absent from thoracic-only models.',
     'cervical-level multimodal model boundary',
     'ODC-SCI dataset metadata',
     'ODC-SCI dataset page',
     'medium',
-    '{"curator_notes": "Promoted ODC-SCI candidate; dataset-page confidence retained.", "experiment_tracker_id": "M8A-P019-E001", "paper_tracker_id": "M8A-P019", "quantitative": "NO", "statistics_reported": "Dataset-page first pass; raw data not reanalyzed", "topic_id": "M8B-T003", "tracker_id": "M8B-O019"}'
+    '{"curator_notes": "Promoted ODC-SCI candidate; dataset-page confidence retained.", "experiment_tracker_id": "M8A-P019-E001", "measurement_method_inference": null, "paper_tracker_id": "M8A-P019", "quantitative": "NO", "statistics_reported": "Dataset-page first pass; raw data not reanalyzed", "topic_id": "M8B-T003", "tracker_id": "M8B-O019"}'
   FROM _m8_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
