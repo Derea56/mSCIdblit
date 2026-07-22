@@ -215,6 +215,30 @@ WITH inserted AS (
 INSERT INTO _m9_paper_map (tracker_id, paper_id) SELECT 'M9A-P017', paper_id FROM inserted;
 
 WITH inserted AS (
+  INSERT INTO Paper (title, authors, publication_year, journal, volume, issue, pages, doi, pmid, url, abstract)
+  VALUES (
+    'Pleiotrophin efficacy in vitro and dose-response experiments in vivo after incomplete cervical dorsolateral quadrant SCI.', 'ODC-SCI dataset', 2026,
+    NULL, NULL, NULL,
+    NULL, NULL, NULL,
+    NULL, '{"curator_notes": "ODC-SCI:1235; DOI 10.34945/F55S36; promoted as in vitro efficacy/dose-response bridge with cervical SCI validation.", "module": "Module 9B", "tracker_id": "M9A-P018"}'
+  )
+  RETURNING paper_id
+)
+INSERT INTO _m9_paper_map (tracker_id, paper_id) SELECT 'M9A-P018', paper_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Paper (title, authors, publication_year, journal, volume, issue, pages, doi, pmid, url, abstract)
+  VALUES (
+    'PI3K inhibition in foamy macrophages after T8 contusion and in cultured macrophages treated with spinal cord homogenate.', 'ODC-SCI dataset', 2026,
+    NULL, NULL, NULL,
+    NULL, NULL, NULL,
+    NULL, '{"curator_notes": "ODC-SCI:930; DOI 10.34945/F5JC70; promoted as cultured macrophage/spinal cord homogenate model with Module 3 linkage.", "module": "Module 9B", "tracker_id": "M9A-P019"}'
+  )
+  RETURNING paper_id
+)
+INSERT INTO _m9_paper_map (tracker_id, paper_id) SELECT 'M9A-P019', paper_id FROM inserted;
+
+WITH inserted AS (
   INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
   SELECT paper_id, 'Module 9B curated evidence extraction',
     'First-pass Module 9B in vitro and ex vivo SCI model systems curation for M9A-P001',
@@ -383,6 +407,26 @@ WITH inserted AS (
   RETURNING paradigm_id
 )
 INSERT INTO _m9_paradigm_map (tracker_id, paradigm_id) SELECT 'M9A-P017', paradigm_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
+  SELECT paper_id, 'Module 9B curated evidence extraction',
+    'First-pass Module 9B in vitro and ex vivo SCI model systems curation for M9A-P018',
+    'Tracker-derived materialization from Module_9B_TRACKER.md'
+  FROM _m9_paper_map WHERE tracker_id = 'M9A-P018'
+  RETURNING paradigm_id
+)
+INSERT INTO _m9_paradigm_map (tracker_id, paradigm_id) SELECT 'M9A-P018', paradigm_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO ExperimentalParadigm (paper_id, paradigm_name, description, methodology)
+  SELECT paper_id, 'Module 9B curated evidence extraction',
+    'First-pass Module 9B in vitro and ex vivo SCI model systems curation for M9A-P019',
+    'Tracker-derived materialization from Module_9B_TRACKER.md'
+  FROM _m9_paper_map WHERE tracker_id = 'M9A-P019'
+  RETURNING paradigm_id
+)
+INSERT INTO _m9_paradigm_map (tracker_id, paradigm_id) SELECT 'M9A-P019', paradigm_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO Experiment (
@@ -673,9 +717,47 @@ WITH inserted AS (
 )
 INSERT INTO _m9_experiment_map (tracker_id, experiment_id) SELECT 'M9A-P017::M9A-P017-E001', experiment_id FROM inserted;
 
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    1,
+    'ODC-SCI dataset page',
+    'Tracker experiment M9A-P018-E001',
+    'Module 9B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M9B-O018"], "source_experiment_tracker_id": "M9A-P018-E001", "source_paper_tracker_id": "M9A-P018", "tracker_key": "M9A-P018::M9A-P018-E001"}'
+  FROM _m9_paper_map p
+  JOIN _m9_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M9A-P018'
+  RETURNING experiment_id
+)
+INSERT INTO _m9_experiment_map (tracker_id, experiment_id) SELECT 'M9A-P018::M9A-P018-E001', experiment_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Experiment (
+    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes
+  )
+  SELECT p.paper_id, ep.paradigm_id,
+    1,
+    'ODC-SCI dataset page',
+    'Tracker experiment M9A-P019-E001',
+    'Module 9B tracker-derived experiment placeholder for SQL materialization.',
+    '{"observation_tracker_ids": ["M9B-O019"], "source_experiment_tracker_id": "M9A-P019-E001", "source_paper_tracker_id": "M9A-P019", "tracker_key": "M9A-P019::M9A-P019-E001"}'
+  FROM _m9_paper_map p
+  JOIN _m9_paradigm_map ep ON ep.tracker_id = p.tracker_id
+  WHERE p.tracker_id = 'M9A-P019'
+  RETURNING experiment_id
+)
+INSERT INTO _m9_experiment_map (tracker_id, experiment_id) SELECT 'M9A-P019::M9A-P019-E001', experiment_id FROM inserted;
+
+INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('Dataset/culture model evidence', 'Module 9B tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('Dataset/model translation evidence', 'Module 9B tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('Model-system evidence', 'Module 9B tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
 
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('biomaterial culture model', 'Module 9B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('in vitro immune/debris model', 'Module 9B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('in vitro-to-in vivo dose-response model', 'Module 9B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('in vitro/ex vivo SCI model taxonomy', 'Module 9B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('slice/explant SCI model', 'Module 9B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('spinal cord organoid injury model', 'Module 9B tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
@@ -1106,6 +1188,56 @@ WITH inserted AS (
 INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O017', observation_id FROM inserted;
 
 WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'ODC-SCI pleiotrophin dataset links in vitro efficacy/dose-response evidence with incomplete cervical dorsolateral quadrant SCI validation.',
+    'qualitative/dataset',
+    'ODC-SCI pleiotrophin dataset links in vitro efficacy/dose-response evidence with incomplete cervical dorsolateral quadrant SCI validation.',
+    'in vitro-to-in vivo validation bridge',
+    'ODC-SCI dataset metadata',
+    'ODC-SCI dataset page',
+    'medium',
+    '{"curator_notes": "Promoted ODC-SCI candidate; dataset-page confidence retained.", "experiment_tracker_id": "M9A-P018-E001", "paper_tracker_id": "M9A-P018", "quantitative": "NO", "statistics_reported": "Dataset-page first pass; raw data not reanalyzed", "topic_id": "M9B-T007", "tracker_id": "M9B-O018"}'
+  FROM _m9_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M9A-P018::M9A-P018-E001'
+    AND et.evidence_type_name = 'Dataset/model translation evidence'
+    AND ot.outcome_type_name = 'in vitro-to-in vivo dose-response model'
+  RETURNING observation_id
+)
+INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O018', observation_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO Observation (
+    experiment_id, evidence_type_id, outcome_type_id, observation_value,
+    unit, raw_observation_text, normalized_observation_value, source_section,
+    figure_panel_reference, extraction_confidence, notes
+  )
+  SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
+    'ODC-SCI PI3K dataset anchors cultured macrophages exposed to spinal cord homogenate as an immune/debris model linked to T8 contusion biology.',
+    'qualitative/dataset',
+    'ODC-SCI PI3K dataset anchors cultured macrophages exposed to spinal cord homogenate as an immune/debris model linked to T8 contusion biology.',
+    'cultured macrophage spinal-cord-homogenate model',
+    'ODC-SCI dataset metadata',
+    'ODC-SCI dataset page',
+    'medium',
+    '{"curator_notes": "Promoted ODC-SCI candidate; dataset-page confidence retained.", "experiment_tracker_id": "M9A-P019-E001", "paper_tracker_id": "M9A-P019", "quantitative": "NO", "statistics_reported": "Dataset-page first pass; raw data not reanalyzed", "topic_id": "M9B-T005", "tracker_id": "M9B-O019"}'
+  FROM _m9_experiment_map e
+  CROSS JOIN ControlledVocabulary_EvidenceType et
+  CROSS JOIN ControlledVocabulary_OutcomeType ot
+  WHERE e.tracker_id = 'M9A-P019::M9A-P019-E001'
+    AND et.evidence_type_name = 'Dataset/culture model evidence'
+    AND ot.outcome_type_name = 'in vitro immune/debris model'
+  RETURNING observation_id
+)
+INSERT INTO _m9_observation_map (tracker_id, observation_id) SELECT 'M9B-O019', observation_id FROM inserted;
+
+WITH inserted AS (
   INSERT INTO AuthorClaim (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
@@ -1393,6 +1525,40 @@ WITH inserted AS (
   RETURNING claim_id
 )
 INSERT INTO _m9_claim_map (tracker_id, claim_id) SELECT 'M9B-C017', claim_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO AuthorClaim (
+    paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
+  )
+  SELECT p.paper_id,
+    'In vitro dose-response rows are strongest when explicitly bridged to in vivo SCI validation without treating culture efficacy as standalone repair proof.',
+    'boundary condition',
+    'medium',
+    'Module 9A tracker / ODC-SCI metadata',
+    'medium',
+    '{"curator_notes": "Dataset-page first pass; raw data reanalysis queued.", "source_paper_tracker_id": "M9A-P018", "topic_id": "M9B-T007", "tracker_id": "M9B-C018"}'
+  FROM _m9_paper_map p
+  WHERE p.tracker_id = 'M9A-P018'
+  RETURNING claim_id
+)
+INSERT INTO _m9_claim_map (tracker_id, claim_id) SELECT 'M9B-C018', claim_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO AuthorClaim (
+    paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
+  )
+  SELECT p.paper_id,
+    'Cultured macrophage/spinal-cord-homogenate systems are useful for debris and innate-state mechanisms but should remain separate from whole-lesion immune claims.',
+    'boundary condition',
+    'medium',
+    'Module 9A tracker / ODC-SCI metadata',
+    'medium',
+    '{"curator_notes": "Dataset-page first pass; raw data reanalysis queued.", "source_paper_tracker_id": "M9A-P019", "topic_id": "M9B-T005", "tracker_id": "M9B-C019"}'
+  FROM _m9_paper_map p
+  WHERE p.tracker_id = 'M9A-P019'
+  RETURNING claim_id
+)
+INSERT INTO _m9_claim_map (tracker_id, claim_id) SELECT 'M9B-C019', claim_id FROM inserted;
 
 WITH inserted AS (
   INSERT INTO EvidenceLink (claim_id, observation_id, link_type, notes)
@@ -1875,6 +2041,78 @@ WITH inserted AS (
 INSERT INTO _m9_link_map (tracker_id, link_id) SELECT 'M9B-L040', link_id FROM inserted;
 
 WITH inserted AS (
+  INSERT INTO EvidenceLink (claim_id, observation_id, link_type, notes)
+  SELECT c.claim_id, o.observation_id,
+  'supports',
+  '{"notes": "Dataset-page evidence supports in vitro-to-in vivo translation boundary.", "strength": "medium", "tracker_id": "M9B-L041"}'
+  FROM _m9_claim_map c
+  JOIN _m9_observation_map o ON o.tracker_id = 'M9B-O018'
+  WHERE c.tracker_id = 'M9B-C018'
+  RETURNING link_id
+)
+INSERT INTO _m9_link_map (tracker_id, link_id) SELECT 'M9B-L041', link_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO EvidenceLink (claim_id, observation_id, link_type, notes)
+  SELECT c.claim_id, o.observation_id,
+  'supports',
+  '{"notes": "Dataset-page evidence supports cultured immune/debris model boundary.", "strength": "medium", "tracker_id": "M9B-L042"}'
+  FROM _m9_claim_map c
+  JOIN _m9_observation_map o ON o.tracker_id = 'M9B-O019'
+  WHERE c.tracker_id = 'M9B-C019'
+  RETURNING link_id
+)
+INSERT INTO _m9_link_map (tracker_id, link_id) SELECT 'M9B-L042', link_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO EvidenceLink (claim_id, observation_id, link_type, notes)
+  SELECT c.claim_id, o.observation_id,
+  'contextual_support',
+  '{"notes": "Pleiotrophin dataset strengthens organoid/slice/explant translation boundary by adding explicit in vitro-to-in vivo bridge evidence.", "strength": "medium", "tracker_id": "M9B-L043"}'
+  FROM _m9_claim_map c
+  JOIN _m9_observation_map o ON o.tracker_id = 'M9B-O018'
+  WHERE c.tracker_id = 'M9B-C015'
+  RETURNING link_id
+)
+INSERT INTO _m9_link_map (tracker_id, link_id) SELECT 'M9B-L043', link_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO EvidenceLink (claim_id, observation_id, link_type, notes)
+  SELECT c.claim_id, o.observation_id,
+  'contextual_support',
+  '{"notes": "Cultured macrophage homogenate dataset strengthens matrix/debris model boundary.", "strength": "medium", "tracker_id": "M9B-L044"}'
+  FROM _m9_claim_map c
+  JOIN _m9_observation_map o ON o.tracker_id = 'M9B-O019'
+  WHERE c.tracker_id = 'M9B-C008'
+  RETURNING link_id
+)
+INSERT INTO _m9_link_map (tracker_id, link_id) SELECT 'M9B-L044', link_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO EvidenceLink (claim_id, observation_id, link_type, notes)
+  SELECT c.claim_id, o.observation_id,
+  'contextual_support',
+  '{"notes": "Dataset-page confidence reinforces extraction-confidence boundary for bridge assays.", "strength": "low", "tracker_id": "M9B-L045"}'
+  FROM _m9_claim_map c
+  JOIN _m9_observation_map o ON o.tracker_id = 'M9B-O018'
+  WHERE c.tracker_id = 'M9B-C016'
+  RETURNING link_id
+)
+INSERT INTO _m9_link_map (tracker_id, link_id) SELECT 'M9B-L045', link_id FROM inserted;
+
+WITH inserted AS (
+  INSERT INTO EvidenceLink (claim_id, observation_id, link_type, notes)
+  SELECT c.claim_id, o.observation_id,
+  'contextual_support',
+  '{"notes": "Dataset-page confidence reinforces extraction-confidence boundary for culture-debris assays.", "strength": "low", "tracker_id": "M9B-L046"}'
+  FROM _m9_claim_map c
+  JOIN _m9_observation_map o ON o.tracker_id = 'M9B-O019'
+  WHERE c.tracker_id = 'M9B-C016'
+  RETURNING link_id
+)
+INSERT INTO _m9_link_map (tracker_id, link_id) SELECT 'M9B-L046', link_id FROM inserted;
+
+WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
     'In vitro and ex vivo SCI models should be classified first by culture format, because dissociated cultures, organoids, slices, explants, microfluidic systems, and biomaterial cultures preserve different degrees of cytoarchitecture, injury context, and assay control.',
@@ -1981,7 +2219,7 @@ WITH inserted AS (
     'M9B-T005',
     1,
     'consensus-ready first pass',
-    '{"boundary_tracker_ids": ["M9B-B001", "M9B-B002", "M9B-B003", "M9B-B004", "M9B-B005", "M9B-B006", "M9B-B007", "M9B-B008"], "claim_tracker_ids": ["M9B-C013", "M9B-C014", "M9B-C015"], "consensus_draft_id": "M9B-S005", "observation_tracker_ids": ["M9B-O009", "M9B-O010"], "readiness_status": "CONSENSUS-READY FIRST PASS", "source_agreement_label": null, "supporting_evidence_notes": "Module 9 first-pass curation freeze.", "topic_id": "M9B-T005"}'
+    '{"boundary_tracker_ids": ["M9B-B001", "M9B-B002", "M9B-B003", "M9B-B004", "M9B-B005", "M9B-B006", "M9B-B007", "M9B-B008"], "claim_tracker_ids": ["M9B-C013", "M9B-C014", "M9B-C015", "M9B-C019"], "consensus_draft_id": "M9B-S005", "observation_tracker_ids": ["M9B-O009", "M9B-O010", "M9B-O019"], "readiness_status": "CONSENSUS-READY FIRST PASS", "source_agreement_label": null, "supporting_evidence_notes": "Module 9 first-pass curation freeze; ODC-SCI saturation update incorporated.", "topic_id": "M9B-T005"}'
   )
   RETURNING consensus_id
 )
@@ -1997,6 +2235,12 @@ INSERT INTO Consensus_Observation (consensus_id, observation_id, support_type)
 SELECT c.consensus_id, o.observation_id, 'supporting'
 FROM _m9_consensus_map c
 JOIN _m9_observation_map o ON o.tracker_id = 'M9B-O010'
+WHERE c.tracker_id = 'M9B-S005';
+
+INSERT INTO Consensus_Observation (consensus_id, observation_id, support_type)
+SELECT c.consensus_id, o.observation_id, 'supporting'
+FROM _m9_consensus_map c
+JOIN _m9_observation_map o ON o.tracker_id = 'M9B-O019'
 WHERE c.tracker_id = 'M9B-S005';
 
 WITH inserted AS (
@@ -2031,7 +2275,7 @@ WITH inserted AS (
     'M9B-T007',
     1,
     'consensus-ready first pass',
-    '{"boundary_tracker_ids": ["M9B-B001", "M9B-B002", "M9B-B003", "M9B-B004", "M9B-B005", "M9B-B006", "M9B-B007", "M9B-B008"], "claim_tracker_ids": ["M9B-C017"], "consensus_draft_id": "M9B-S007", "observation_tracker_ids": ["M9B-O013", "M9B-O014"], "readiness_status": "CONSENSUS-READY FIRST PASS", "source_agreement_label": null, "supporting_evidence_notes": "Module 9 first-pass curation freeze.", "topic_id": "M9B-T007"}'
+    '{"boundary_tracker_ids": ["M9B-B001", "M9B-B002", "M9B-B003", "M9B-B004", "M9B-B005", "M9B-B006", "M9B-B007", "M9B-B008"], "claim_tracker_ids": ["M9B-C015", "M9B-C017", "M9B-C018"], "consensus_draft_id": "M9B-S007", "observation_tracker_ids": ["M9B-O013", "M9B-O014", "M9B-O018"], "readiness_status": "CONSENSUS-READY FIRST PASS", "source_agreement_label": null, "supporting_evidence_notes": "Module 9 first-pass curation freeze; ODC-SCI saturation update incorporated.", "topic_id": "M9B-T007"}'
   )
   RETURNING consensus_id
 )
@@ -2049,6 +2293,12 @@ FROM _m9_consensus_map c
 JOIN _m9_observation_map o ON o.tracker_id = 'M9B-O014'
 WHERE c.tracker_id = 'M9B-S007';
 
+INSERT INTO Consensus_Observation (consensus_id, observation_id, support_type)
+SELECT c.consensus_id, o.observation_id, 'supporting'
+FROM _m9_consensus_map c
+JOIN _m9_observation_map o ON o.tracker_id = 'M9B-O018'
+WHERE c.tracker_id = 'M9B-S007';
+
 WITH inserted AS (
   INSERT INTO Consensus (consensus_statement, topic, version, agreement_level, notes)
   VALUES (
@@ -2056,7 +2306,7 @@ WITH inserted AS (
     'M9B-T008',
     1,
     'consensus-ready first pass',
-    '{"boundary_tracker_ids": ["M9B-B001", "M9B-B002", "M9B-B003", "M9B-B004", "M9B-B005", "M9B-B006", "M9B-B007", "M9B-B008"], "claim_tracker_ids": ["M9B-C017"], "consensus_draft_id": "M9B-S008", "observation_tracker_ids": ["M9B-O015", "M9B-O016"], "readiness_status": "CONSENSUS-READY FIRST PASS", "source_agreement_label": null, "supporting_evidence_notes": "Module 9 first-pass curation freeze.", "topic_id": "M9B-T008"}'
+    '{"boundary_tracker_ids": ["M9B-B001", "M9B-B002", "M9B-B003", "M9B-B004", "M9B-B005", "M9B-B006", "M9B-B007", "M9B-B008"], "claim_tracker_ids": ["M9B-C016", "M9B-C017", "M9B-C018", "M9B-C019"], "consensus_draft_id": "M9B-S008", "observation_tracker_ids": ["M9B-O015", "M9B-O016", "M9B-O017", "M9B-O018", "M9B-O019"], "readiness_status": "CONSENSUS-READY FIRST PASS", "source_agreement_label": null, "supporting_evidence_notes": "Module 9 first-pass curation freeze; ODC-SCI saturation update incorporated.", "topic_id": "M9B-T008"}'
   )
   RETURNING consensus_id
 )
@@ -2072,6 +2322,24 @@ INSERT INTO Consensus_Observation (consensus_id, observation_id, support_type)
 SELECT c.consensus_id, o.observation_id, 'supporting'
 FROM _m9_consensus_map c
 JOIN _m9_observation_map o ON o.tracker_id = 'M9B-O016'
+WHERE c.tracker_id = 'M9B-S008';
+
+INSERT INTO Consensus_Observation (consensus_id, observation_id, support_type)
+SELECT c.consensus_id, o.observation_id, 'supporting'
+FROM _m9_consensus_map c
+JOIN _m9_observation_map o ON o.tracker_id = 'M9B-O017'
+WHERE c.tracker_id = 'M9B-S008';
+
+INSERT INTO Consensus_Observation (consensus_id, observation_id, support_type)
+SELECT c.consensus_id, o.observation_id, 'supporting'
+FROM _m9_consensus_map c
+JOIN _m9_observation_map o ON o.tracker_id = 'M9B-O018'
+WHERE c.tracker_id = 'M9B-S008';
+
+INSERT INTO Consensus_Observation (consensus_id, observation_id, support_type)
+SELECT c.consensus_id, o.observation_id, 'supporting'
+FROM _m9_consensus_map c
+JOIN _m9_observation_map o ON o.tracker_id = 'M9B-O019'
 WHERE c.tracker_id = 'M9B-S008';
 
 DO $$
@@ -2093,13 +2361,13 @@ BEGIN
   SELECT COUNT(*) INTO consensus_observation_count
   FROM Consensus_Observation co
   JOIN _m9_consensus_map cm ON cm.consensus_id = co.consensus_id;
-  IF paper_count <> 17 THEN RAISE EXCEPTION 'Expected 17 papers, found %', paper_count; END IF;
-  IF experiment_count <> 17 THEN RAISE EXCEPTION 'Unexpected experiment count %', experiment_count; END IF;
-  IF observation_count <> 17 THEN RAISE EXCEPTION 'Expected 17 observations, found %', observation_count; END IF;
-  IF claim_count <> 17 THEN RAISE EXCEPTION 'Expected 17 claims, found %', claim_count; END IF;
-  IF link_count <> 40 THEN RAISE EXCEPTION 'Expected 40 evidence links, found %', link_count; END IF;
+  IF paper_count <> 19 THEN RAISE EXCEPTION 'Expected 19 papers, found %', paper_count; END IF;
+  IF experiment_count <> 19 THEN RAISE EXCEPTION 'Unexpected experiment count %', experiment_count; END IF;
+  IF observation_count <> 19 THEN RAISE EXCEPTION 'Expected 19 observations, found %', observation_count; END IF;
+  IF claim_count <> 19 THEN RAISE EXCEPTION 'Expected 19 claims, found %', claim_count; END IF;
+  IF link_count <> 46 THEN RAISE EXCEPTION 'Expected 46 evidence links, found %', link_count; END IF;
   IF consensus_count <> 8 THEN RAISE EXCEPTION 'Expected 8 consensus rows, found %', consensus_count; END IF;
-  IF consensus_observation_count <> 16 THEN RAISE EXCEPTION 'Unexpected consensus-observation count %', consensus_observation_count; END IF;
+  IF consensus_observation_count <> 21 THEN RAISE EXCEPTION 'Unexpected consensus-observation count %', consensus_observation_count; END IF;
 END $$;
 
 COMMIT;

@@ -308,6 +308,42 @@
       "extraction_confidence": "medium",
       "notes": "Source-page/registry first pass; full extraction queued.",
       "tracker_id": "M9B-O017"
+    },
+    {
+      "observation_id": "M9B-O018",
+      "topic_id": "M9B-T007",
+      "paper_id": "M9A-P018",
+      "experiment_id": "M9A-P018-E001",
+      "figure_ref": "ODC-SCI dataset page",
+      "evidence_type": "Dataset/model translation evidence",
+      "outcome_type": "in vitro-to-in vivo dose-response model",
+      "observation_value": "ODC-SCI pleiotrophin dataset links in vitro efficacy/dose-response evidence with incomplete cervical dorsolateral quadrant SCI validation.",
+      "normalized_value": "in vitro-to-in vivo validation bridge",
+      "unit": "qualitative/dataset",
+      "quantitative": "NO",
+      "statistics_reported": "Dataset-page first pass; raw data not reanalyzed",
+      "source_section": "ODC-SCI dataset metadata",
+      "extraction_confidence": "medium",
+      "notes": "Promoted ODC-SCI candidate; dataset-page confidence retained.",
+      "tracker_id": "M9B-O018"
+    },
+    {
+      "observation_id": "M9B-O019",
+      "topic_id": "M9B-T005",
+      "paper_id": "M9A-P019",
+      "experiment_id": "M9A-P019-E001",
+      "figure_ref": "ODC-SCI dataset page",
+      "evidence_type": "Dataset/culture model evidence",
+      "outcome_type": "in vitro immune/debris model",
+      "observation_value": "ODC-SCI PI3K dataset anchors cultured macrophages exposed to spinal cord homogenate as an immune/debris model linked to T8 contusion biology.",
+      "normalized_value": "cultured macrophage spinal-cord-homogenate model",
+      "unit": "qualitative/dataset",
+      "quantitative": "NO",
+      "statistics_reported": "Dataset-page first pass; raw data not reanalyzed",
+      "source_section": "ODC-SCI dataset metadata",
+      "extraction_confidence": "medium",
+      "notes": "Promoted ODC-SCI candidate; dataset-page confidence retained.",
+      "tracker_id": "M9B-O019"
     }
   ],
   "author_claims": [
@@ -514,6 +550,30 @@
       "extraction_confidence": "medium",
       "notes": "First-pass claim abstraction; full-text/results linkage needed for strength claims.",
       "tracker_id": "M9B-C017"
+    },
+    {
+      "claim_id": "M9B-C018",
+      "topic_id": "M9B-T007",
+      "paper_id": "M9A-P018",
+      "claim_text": "In vitro dose-response rows are strongest when explicitly bridged to in vivo SCI validation without treating culture efficacy as standalone repair proof.",
+      "claim_type": "boundary condition",
+      "confidence_level": "medium",
+      "source_section": "Module 9A tracker / ODC-SCI metadata",
+      "extraction_confidence": "medium",
+      "notes": "Dataset-page first pass; raw data reanalysis queued.",
+      "tracker_id": "M9B-C018"
+    },
+    {
+      "claim_id": "M9B-C019",
+      "topic_id": "M9B-T005",
+      "paper_id": "M9A-P019",
+      "claim_text": "Cultured macrophage/spinal-cord-homogenate systems are useful for debris and innate-state mechanisms but should remain separate from whole-lesion immune claims.",
+      "claim_type": "boundary condition",
+      "confidence_level": "medium",
+      "source_section": "Module 9A tracker / ODC-SCI metadata",
+      "extraction_confidence": "medium",
+      "notes": "Dataset-page first pass; raw data reanalysis queued.",
+      "tracker_id": "M9B-C019"
     }
   ],
   "evidence_links": [
@@ -876,6 +936,60 @@
       "strength": "low",
       "notes": "First-pass evidence link preserving source-level confidence.",
       "tracker_id": "M9B-L040"
+    },
+    {
+      "evidence_link_id": "M9B-L041",
+      "claim_id": "M9B-C018",
+      "observation_id": "M9B-O018",
+      "link_type": "supports",
+      "strength": "medium",
+      "notes": "Dataset-page evidence supports in vitro-to-in vivo translation boundary.",
+      "tracker_id": "M9B-L041"
+    },
+    {
+      "evidence_link_id": "M9B-L042",
+      "claim_id": "M9B-C019",
+      "observation_id": "M9B-O019",
+      "link_type": "supports",
+      "strength": "medium",
+      "notes": "Dataset-page evidence supports cultured immune/debris model boundary.",
+      "tracker_id": "M9B-L042"
+    },
+    {
+      "evidence_link_id": "M9B-L043",
+      "claim_id": "M9B-C015",
+      "observation_id": "M9B-O018",
+      "link_type": "contextual_support",
+      "strength": "medium",
+      "notes": "Pleiotrophin dataset strengthens organoid/slice/explant translation boundary by adding explicit in vitro-to-in vivo bridge evidence.",
+      "tracker_id": "M9B-L043"
+    },
+    {
+      "evidence_link_id": "M9B-L044",
+      "claim_id": "M9B-C008",
+      "observation_id": "M9B-O019",
+      "link_type": "contextual_support",
+      "strength": "medium",
+      "notes": "Cultured macrophage homogenate dataset strengthens matrix/debris model boundary.",
+      "tracker_id": "M9B-L044"
+    },
+    {
+      "evidence_link_id": "M9B-L045",
+      "claim_id": "M9B-C016",
+      "observation_id": "M9B-O018",
+      "link_type": "contextual_support",
+      "strength": "low",
+      "notes": "Dataset-page confidence reinforces extraction-confidence boundary for bridge assays.",
+      "tracker_id": "M9B-L045"
+    },
+    {
+      "evidence_link_id": "M9B-L046",
+      "claim_id": "M9B-C016",
+      "observation_id": "M9B-O019",
+      "link_type": "contextual_support",
+      "strength": "low",
+      "notes": "Dataset-page confidence reinforces extraction-confidence boundary for culture-debris assays.",
+      "tracker_id": "M9B-L046"
     }
   ],
   "boundary_records": [
@@ -997,11 +1111,11 @@
       "consensus_id": "M9B-S005",
       "topic_id": "M9B-T005",
       "draft_statement": "Matrix, myelin-debris, and inhibitory-substrate models are useful for isolating regeneration barriers, but they cannot substitute for full lesion architecture unless paired with cells, ECM, inflammatory cues, and 3D spatial context.",
-      "supporting_observations": "M9B-O009-O010",
-      "supporting_claims": "M9B-C013-C015",
+      "supporting_observations": "M9B-O009-O010, M9B-O019",
+      "supporting_claims": "M9B-C013-C015, M9B-C019",
       "boundary_records": "M9B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
-      "notes": "Module 9 first-pass curation freeze.",
+      "notes": "Module 9 first-pass curation freeze; ODC-SCI saturation update incorporated.",
       "tracker_id": "M9B-S005",
       "consensus_statement": "Matrix, myelin-debris, and inhibitory-substrate models are useful for isolating regeneration barriers, but they cannot substitute for full lesion architecture unless paired with cells, ECM, inflammatory cues, and 3D spatial context."
     },
@@ -1021,11 +1135,11 @@
       "consensus_id": "M9B-S007",
       "topic_id": "M9B-T007",
       "draft_statement": "Organoid, slice, and explant systems provide higher-order tissue context than dissociated cultures, but translation depends on species, maturation, vascular or immune absence, injury induction, and whether host-lesion architecture is represented.",
-      "supporting_observations": "M9B-O013-O014",
-      "supporting_claims": "M9B-C017-C017",
+      "supporting_observations": "M9B-O013-O014, M9B-O018",
+      "supporting_claims": "M9B-C015, M9B-C017-C018",
       "boundary_records": "M9B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
-      "notes": "Module 9 first-pass curation freeze.",
+      "notes": "Module 9 first-pass curation freeze; ODC-SCI saturation update incorporated.",
       "tracker_id": "M9B-S007",
       "consensus_statement": "Organoid, slice, and explant systems provide higher-order tissue context than dissociated cultures, but translation depends on species, maturation, vascular or immune absence, injury induction, and whether host-lesion architecture is represented."
     },
@@ -1033,11 +1147,11 @@
       "consensus_id": "M9B-S008",
       "topic_id": "M9B-T008",
       "draft_statement": "Module 9 should function as the validation-model ontology layer: culture format, cell source, maturity, injury stimulus, matrix context, biomaterial exposure, readout, and confidence level must be retained before in vitro evidence is used in cross-module consensus.",
-      "supporting_observations": "M9B-O015-O016",
-      "supporting_claims": "M9B-C017-C017",
+      "supporting_observations": "M9B-O015-O019",
+      "supporting_claims": "M9B-C016-C019",
       "boundary_records": "M9B-B001-B008",
       "status": "CONSENSUS-READY FIRST PASS",
-      "notes": "Module 9 first-pass curation freeze.",
+      "notes": "Module 9 first-pass curation freeze; ODC-SCI saturation update incorporated.",
       "tracker_id": "M9B-S008",
       "consensus_statement": "Module 9 should function as the validation-model ontology layer: culture format, cell source, maturity, injury stimulus, matrix context, biomaterial exposure, readout, and confidence level must be retained before in vitro evidence is used in cross-module consensus."
     }

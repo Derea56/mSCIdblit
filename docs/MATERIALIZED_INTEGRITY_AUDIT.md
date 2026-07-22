@@ -11,15 +11,15 @@ Generated from `scripts/audit_materialized_integrity.py`.
 | Module 5 | N/A | 94 | 94 | 36 | 60 | 8 | 108 |
 | Module 6 | N/A | 36 | 36 | 36 | 104 | 8 | 76 |
 | Module 7 | N/A | 40 | 40 | 36 | 88 | 8 | 120 |
-| Module 8 | 14/14 | 14 | 14 | 16 | 40 | 8 | 8 |
-| Module 9 | 17/17 | 17 | 17 | 17 | 40 | 8 | 16 |
+| Module 8 | 19/19 | 19 | 19 | 21 | 55 | 8 | 29 |
+| Module 9 | 19/19 | 19 | 19 | 19 | 46 | 8 | 21 |
 | Module 10 | 80/80 | 80 | 80 | 36 | 116 | 8 | 80 |
 | Module 11 | 32/32 | 32 | 32 | 32 | 72 | 8 | 32 |
 | Module 12 | 24/24 | 24 | 24 | 24 | 56 | 8 | 24 |
 | Module 13 | 24/24 | 24 | 24 | 24 | 56 | 8 | 24 |
 | Module 14 | 16/16 | 16 | 16 | 16 | 40 | 8 | 24 |
-| Module 15 | 16/16 | 16 | 16 | 16 | 40 | 8 | 48 |
-| Module 16 | 16/16 | 16 | 16 | 16 | 40 | 8 | 43 |
+| Module 15 | 16/16 | 16 | 16 | 16 | 40 | 8 | 49 |
+| Module 16 | 16/16 | 16 | 16 | 16 | 40 | 8 | 49 |
 
 ## Warnings
 
@@ -33,15 +33,3 @@ Generated from `scripts/audit_materialized_integrity.py`.
 - Module 5 has 94 exact B experiments not in parsed A table
 - Module 7 has 1 observations not linked to author claims (expected for per-experiment backfill rows)
 - Module 7 has 40 exact B experiments not in parsed A table
-- Module 8 M8B-S001 has fewer than two observation refs
-- Module 8 M8B-S002 has fewer than two observation refs
-- Module 8 M8B-S003 has fewer than two observation refs
-- Module 8 M8B-S004 has fewer than two observation refs
-- Module 8 M8B-S005 has fewer than two observation refs
-- Module 8 M8B-S006 has fewer than two observation refs
-- Module 8 M8B-S007 has fewer than two observation refs
-- Module 8 M8B-S008 has fewer than two observation refs
-- Module 15 M15B-S006 has fewer than two observation refs
-- Module 16 M16B-S002 has fewer than two observation refs
-- Module 16 M16B-S006 has fewer than two observation refs
-- Module 16 M16B-S007 has fewer than two observation refs

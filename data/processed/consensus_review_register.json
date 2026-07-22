@@ -100,9 +100,9 @@
       "module": "Module 8B",
       "source_tracker": "modules/Module_8B_TRACKER.md",
       "review_status": "CONSENSUS-READY FIRST PASS",
-      "observations": 14,
-      "author_claims": 16,
-      "evidence_links": 40,
+      "observations": 19,
+      "author_claims": 21,
+      "evidence_links": 55,
       "boundary_records": 8,
       "consensus_drafts": 8,
       "module_action": "Treat as model-ontology consensus; rewrite generic first-pass statements into operational model-selection rules.",
@@ -113,9 +113,9 @@
       "module": "Module 9B",
       "source_tracker": "modules/Module_9B_TRACKER.md",
       "review_status": "CONSENSUS-READY FIRST PASS",
-      "observations": 17,
-      "author_claims": 17,
-      "evidence_links": 40,
+      "observations": 19,
+      "author_claims": 19,
+      "evidence_links": 46,
       "boundary_records": 8,
       "consensus_drafts": 8,
       "module_action": "Treat as in vitro/ex vivo model-ontology consensus; rewrite into validation-use rules.",
@@ -2703,7 +2703,8 @@
       "statement": "In vivo SCI evidence must retain species, strain, age, sex, and genetic background because model choice changes lesion biology, immune response, spontaneous recovery, surgical feasibility, and translatability.",
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
-        "M8B-O001"
+        "M8B-O001",
+        "M8B-O002"
       ],
       "supporting_claims": [
         "M8B-C001",
@@ -2720,11 +2721,11 @@
         "M8B-B007",
         "M8B-B008"
       ],
-      "observation_count": 1,
+      "observation_count": 2,
       "claim_count": 3,
       "boundary_count": 8,
       "observation_confidence": {
-        "medium": 1
+        "medium": 2
       },
       "claim_confidence": {
         "medium": 3
@@ -2740,7 +2741,9 @@
       "statement": "Injury mechanism is a primary evidence boundary: contusion, compression, transection, hemisection, crush, ischemia, and chemical or demyelinating models answer different questions and should not be pooled as interchangeable SCI models.",
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
-        "M8B-O002"
+        "M8B-O002",
+        "M8B-O003",
+        "M8B-O004"
       ],
       "supporting_claims": [
         "M8B-C004",
@@ -2757,11 +2760,11 @@
         "M8B-B007",
         "M8B-B008"
       ],
-      "observation_count": 1,
+      "observation_count": 3,
       "claim_count": 3,
       "boundary_count": 8,
       "observation_confidence": {
-        "medium": 1
+        "medium": 3
       },
       "claim_confidence": {
         "medium": 3
@@ -2777,12 +2780,14 @@
       "statement": "Spinal level and tract involvement define what a model can test; cervical, thoracic, lumbar, dorsal-column, lateral-column, complete, and incomplete injuries should be mapped to the relevant motor, sensory, autonomic, and respiratory endpoints.",
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
-        "M8B-O003"
+        "M8B-O003",
+        "M8B-O019"
       ],
       "supporting_claims": [
         "M8B-C007",
         "M8B-C008",
-        "M8B-C009"
+        "M8B-C009",
+        "M8B-C021"
       ],
       "boundary_records": [
         "M8B-B001",
@@ -2794,14 +2799,14 @@
         "M8B-B007",
         "M8B-B008"
       ],
-      "observation_count": 1,
-      "claim_count": 3,
+      "observation_count": 2,
+      "claim_count": 4,
       "boundary_count": 8,
       "observation_confidence": {
-        "medium": 1
+        "medium": 2
       },
       "claim_confidence": {
-        "medium": 3
+        "medium": 4
       },
       "boundary_confidence": "8 linked",
       "review_action": "review for final consensus wording"
@@ -2814,12 +2819,16 @@
       "statement": "Severity and chronicity are not metadata: force, displacement, duration, lesion completeness, time post-injury, and spontaneous recovery determine whether a model is appropriate for acute neuroprotection, chronic reconstruction, biomaterial testing, or rehabilitation studies.",
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
-        "M8B-O004"
+        "M8B-O004",
+        "M8B-O015",
+        "M8B-O016"
       ],
       "supporting_claims": [
         "M8B-C010",
         "M8B-C011",
-        "M8B-C012"
+        "M8B-C012",
+        "M8B-C017",
+        "M8B-C018"
       ],
       "boundary_records": [
         "M8B-B001",
@@ -2831,14 +2840,14 @@
         "M8B-B007",
         "M8B-B008"
       ],
-      "observation_count": 1,
-      "claim_count": 3,
+      "observation_count": 3,
+      "claim_count": 5,
       "boundary_count": 8,
       "observation_confidence": {
-        "medium": 1
+        "medium": 3
       },
       "claim_confidence": {
-        "medium": 3
+        "medium": 5
       },
       "boundary_confidence": "8 linked",
       "review_action": "review for final consensus wording"
@@ -2851,12 +2860,15 @@
       "statement": "In vivo model selection should be tied to lesion architecture. Models that create cystic cavities, spared tissue bridges, fibrotic cores, astrocytic borders, demyelination, or transection gaps support different reconstruction and repair claims.",
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
-        "M8B-O005"
+        "M8B-O005",
+        "M8B-O013",
+        "M8B-O019"
       ],
       "supporting_claims": [
         "M8B-C013",
         "M8B-C014",
-        "M8B-C015"
+        "M8B-C015",
+        "M8B-C021"
       ],
       "boundary_records": [
         "M8B-B001",
@@ -2868,14 +2880,14 @@
         "M8B-B007",
         "M8B-B008"
       ],
-      "observation_count": 1,
-      "claim_count": 3,
+      "observation_count": 3,
+      "claim_count": 4,
       "boundary_count": 8,
       "observation_confidence": {
-        "medium": 1
+        "medium": 3
       },
       "claim_confidence": {
-        "medium": 3
+        "medium": 4
       },
       "boundary_confidence": "8 linked",
       "review_action": "review for final consensus wording"
@@ -2888,10 +2900,18 @@
       "statement": "Behavioral endpoints must be interpreted as model-specific functional readouts rather than generic recovery measures; locomotor, skilled forelimb, sensory, autonomic, respiratory, pain, and electrophysiologic assays require separate endpoint fields.",
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
-        "M8B-O006"
+        "M8B-O006",
+        "M8B-O014",
+        "M8B-O015",
+        "M8B-O016",
+        "M8B-O019"
       ],
       "supporting_claims": [
-        "M8B-C016"
+        "M8B-C014",
+        "M8B-C016",
+        "M8B-C017",
+        "M8B-C018",
+        "M8B-C021"
       ],
       "boundary_records": [
         "M8B-B001",
@@ -2903,14 +2923,14 @@
         "M8B-B007",
         "M8B-B008"
       ],
-      "observation_count": 1,
-      "claim_count": 1,
+      "observation_count": 5,
+      "claim_count": 5,
       "boundary_count": 8,
       "observation_confidence": {
-        "medium": 1
+        "medium": 5
       },
       "claim_confidence": {
-        "medium": 1
+        "medium": 5
       },
       "boundary_confidence": "8 linked",
       "review_action": "review for final consensus wording"
@@ -2923,10 +2943,17 @@
       "statement": "Large-animal and translational in vivo models add value for scale, surgical handling, device placement, imaging, and safety, but they do not automatically validate efficacy unless matched endpoints and controls are present.",
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
-        "M8B-O007"
+        "M8B-O007",
+        "M8B-O008",
+        "M8B-O009",
+        "M8B-O017",
+        "M8B-O018"
       ],
       "supporting_claims": [
-        "M8B-C016"
+        "M8B-C015",
+        "M8B-C016",
+        "M8B-C019",
+        "M8B-C020"
       ],
       "boundary_records": [
         "M8B-B001",
@@ -2938,14 +2965,14 @@
         "M8B-B007",
         "M8B-B008"
       ],
-      "observation_count": 1,
-      "claim_count": 1,
+      "observation_count": 5,
+      "claim_count": 4,
       "boundary_count": 8,
       "observation_confidence": {
-        "medium": 1
+        "medium": 5
       },
       "claim_confidence": {
-        "medium": 1
+        "medium": 4
       },
       "boundary_confidence": "8 linked",
       "review_action": "review for final consensus wording"
@@ -2958,10 +2985,20 @@
       "statement": "Module 8 should function as the in vivo model ontology layer: every downstream consensus claim should preserve species, injury mechanism, level, severity, chronicity, lesion architecture, endpoint family, and extraction confidence.",
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
-        "M8B-O008"
+        "M8B-O008",
+        "M8B-O015",
+        "M8B-O016",
+        "M8B-O017",
+        "M8B-O018",
+        "M8B-O019"
       ],
       "supporting_claims": [
-        "M8B-C016"
+        "M8B-C016",
+        "M8B-C017",
+        "M8B-C018",
+        "M8B-C019",
+        "M8B-C020",
+        "M8B-C021"
       ],
       "boundary_records": [
         "M8B-B001",
@@ -2973,14 +3010,14 @@
         "M8B-B007",
         "M8B-B008"
       ],
-      "observation_count": 1,
-      "claim_count": 1,
+      "observation_count": 6,
+      "claim_count": 6,
       "boundary_count": 8,
       "observation_confidence": {
-        "medium": 1
+        "medium": 6
       },
       "claim_confidence": {
-        "medium": 1
+        "medium": 6
       },
       "boundary_confidence": "8 linked",
       "review_action": "review for final consensus wording"
@@ -3146,12 +3183,14 @@
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
         "M9B-O009",
-        "M9B-O010"
+        "M9B-O010",
+        "M9B-O019"
       ],
       "supporting_claims": [
         "M9B-C013",
         "M9B-C014",
-        "M9B-C015"
+        "M9B-C015",
+        "M9B-C019"
       ],
       "boundary_records": [
         "M9B-B001",
@@ -3163,14 +3202,14 @@
         "M9B-B007",
         "M9B-B008"
       ],
-      "observation_count": 2,
-      "claim_count": 3,
+      "observation_count": 3,
+      "claim_count": 4,
       "boundary_count": 8,
       "observation_confidence": {
-        "medium": 2
+        "medium": 3
       },
       "claim_confidence": {
-        "medium": 3
+        "medium": 4
       },
       "boundary_confidence": "8 linked",
       "review_action": "review for final consensus wording"
@@ -3221,10 +3260,13 @@
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
         "M9B-O013",
-        "M9B-O014"
+        "M9B-O014",
+        "M9B-O018"
       ],
       "supporting_claims": [
-        "M9B-C017"
+        "M9B-C015",
+        "M9B-C017",
+        "M9B-C018"
       ],
       "boundary_records": [
         "M9B-B001",
@@ -3236,14 +3278,14 @@
         "M9B-B007",
         "M9B-B008"
       ],
-      "observation_count": 2,
-      "claim_count": 1,
+      "observation_count": 3,
+      "claim_count": 3,
       "boundary_count": 8,
       "observation_confidence": {
-        "medium": 2
+        "medium": 3
       },
       "claim_confidence": {
-        "medium": 1
+        "medium": 3
       },
       "boundary_confidence": "8 linked",
       "review_action": "review for final consensus wording"
@@ -3257,10 +3299,16 @@
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
         "M9B-O015",
-        "M9B-O016"
+        "M9B-O016",
+        "M9B-O017",
+        "M9B-O018",
+        "M9B-O019"
       ],
       "supporting_claims": [
-        "M9B-C017"
+        "M9B-C016",
+        "M9B-C017",
+        "M9B-C018",
+        "M9B-C019"
       ],
       "boundary_records": [
         "M9B-B001",
@@ -3272,14 +3320,14 @@
         "M9B-B007",
         "M9B-B008"
       ],
-      "observation_count": 2,
-      "claim_count": 1,
+      "observation_count": 5,
+      "claim_count": 4,
       "boundary_count": 8,
       "observation_confidence": {
-        "medium": 2
+        "medium": 5
       },
       "claim_confidence": {
-        "medium": 1
+        "medium": 4
       },
       "boundary_confidence": "8 linked",
       "review_action": "review for final consensus wording"
@@ -5171,10 +5219,12 @@
       "statement": "Unilateral sciatic nerve injury can induce pro-regenerative marker expression and enhanced growth capacity in DRGs not directly associated with the damaged nerve, making remote or contralateral DRG priming a real boundary to track separately from ipsilateral conditioning.",
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
-        "M15B-O011"
+        "M15B-O011",
+        "M15B-O012"
       ],
       "supporting_claims": [
-        "M15B-C011"
+        "M15B-C011",
+        "M15B-C012"
       ],
       "boundary_records": [
         "M15B-B001",
@@ -5186,14 +5236,16 @@
         "M15B-B007",
         "M15B-B008"
       ],
-      "observation_count": 1,
-      "claim_count": 1,
+      "observation_count": 2,
+      "claim_count": 2,
       "boundary_count": 8,
       "observation_confidence": {
-        "high": 1
+        "high": 1,
+        "medium": 1
       },
       "claim_confidence": {
-        "high": 1
+        "high": 1,
+        "medium": 1
       },
       "boundary_confidence": "8 linked",
       "review_action": "promote as boundary consensus after wording pass"
@@ -5371,10 +5423,14 @@
       "statement": "Sciatic nerve stimulation can activate spinal afferent-terminal metabolism without parallel DRG soma metabolic activation, so PNS ES studies must distinguish peripheral axon, spinal terminal, DRG cell body, and central lesion compartments.",
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
-        "M16B-O002"
+        "M16B-O002",
+        "M16B-O003",
+        "M16B-O004"
       ],
       "supporting_claims": [
-        "M16B-C002"
+        "M16B-C002",
+        "M16B-C003",
+        "M16B-C004"
       ],
       "boundary_records": [
         "M16B-B001",
@@ -5386,14 +5442,14 @@
         "M16B-B007",
         "M16B-B008"
       ],
-      "observation_count": 1,
-      "claim_count": 1,
+      "observation_count": 3,
+      "claim_count": 3,
       "boundary_count": 8,
       "observation_confidence": {
-        "high": 1
+        "high": 3
       },
       "claim_confidence": {
-        "high": 1
+        "high": 3
       },
       "boundary_confidence": "8 linked",
       "review_action": "promote as boundary consensus after wording pass"
@@ -5549,9 +5605,13 @@
       "statement": "Remote or contralateral DRG priming is established for unilateral sciatic lesion conditioning, but PNS electrical stimulation should not inherit that claim until experiments directly measure side, segment, associated versus non-associated DRGs, and later CNS repair endpoints.",
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
+        "M16B-O009",
+        "M16B-O010",
         "M16B-O011"
       ],
       "supporting_claims": [
+        "M16B-C009",
+        "M16B-C010",
         "M16B-C011"
       ],
       "boundary_records": [
@@ -5564,14 +5624,16 @@
         "M16B-B007",
         "M16B-B008"
       ],
-      "observation_count": 1,
-      "claim_count": 1,
+      "observation_count": 3,
+      "claim_count": 3,
       "boundary_count": 8,
       "observation_confidence": {
-        "high": 1
+        "high": 2,
+        "medium": 1
       },
       "claim_confidence": {
-        "high": 1
+        "high": 2,
+        "medium": 1
       },
       "boundary_confidence": "8 linked",
       "review_action": "review for final consensus wording"
@@ -5584,9 +5646,13 @@
       "statement": "ES-enabled regeneration strategies should include chronic sensory physiology and maladaptive plasticity endpoints because regenerating afferents may remain pathophysiological even when anatomical growth is achieved.",
       "status": "CONSENSUS-READY FIRST PASS",
       "supporting_observations": [
+        "M16B-O001",
+        "M16B-O002",
         "M16B-O016"
       ],
       "supporting_claims": [
+        "M16B-C001",
+        "M16B-C002",
         "M16B-C016"
       ],
       "boundary_records": [
@@ -5599,14 +5665,14 @@
         "M16B-B007",
         "M16B-B008"
       ],
-      "observation_count": 1,
-      "claim_count": 1,
+      "observation_count": 3,
+      "claim_count": 3,
       "boundary_count": 8,
       "observation_confidence": {
-        "high": 1
+        "high": 3
       },
       "claim_confidence": {
-        "high": 1
+        "high": 3
       },
       "boundary_confidence": "8 linked",
       "review_action": "review for final consensus wording"

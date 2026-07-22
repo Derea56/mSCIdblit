@@ -55,9 +55,9 @@
         "Module 13B"
       ],
       "module_counts": {
-        "observations": 337,
-        "author_claims": 198,
-        "evidence_links": 479,
+        "observations": 342,
+        "author_claims": 203,
+        "evidence_links": 494,
         "boundary_records": 47,
         "consensus_drafts": 48
       },
@@ -127,8 +127,8 @@
           "module": "Module 8B",
           "topic_id": "M8B-T005",
           "statement": "In vivo model selection should be tied to lesion architecture. Models that create cystic cavities, spared tissue bridges, fibrotic cores, astrocytic borders, demyelination, or transection gaps support different reconstruction and repair claims.",
-          "observation_count": 1,
-          "claim_count": 3,
+          "observation_count": 3,
+          "claim_count": 4,
           "boundary_count": 8,
           "review_action": "review for final consensus wording"
         },
@@ -166,7 +166,7 @@
       "observation_confidence_tally": {
         "high": 32,
         "low": 14,
-        "medium": 47
+        "medium": 49
       }
     },
     {
@@ -324,8 +324,8 @@
           "module": "Module 15B",
           "topic_id": "M15B-T006",
           "statement": "Unilateral sciatic nerve injury can induce pro-regenerative marker expression and enhanced growth capacity in DRGs not directly associated with the damaged nerve, making remote or contralateral DRG priming a real boundary to track separately from ipsilateral conditioning.",
-          "observation_count": 1,
-          "claim_count": 1,
+          "observation_count": 2,
+          "claim_count": 2,
           "boundary_count": 8,
           "review_action": "promote as boundary consensus after wording pass"
         },
@@ -353,7 +353,7 @@
       "observation_confidence_tally": {
         "high": 20,
         "low": 48,
-        "medium": 68
+        "medium": 69
       }
     },
     {
@@ -409,9 +409,9 @@
         "Module 14B"
       ],
       "module_counts": {
-        "observations": 473,
-        "author_claims": 241,
-        "evidence_links": 472,
+        "observations": 475,
+        "author_claims": 243,
+        "evidence_links": 478,
         "boundary_records": 64,
         "consensus_drafts": 64
       },
@@ -590,9 +590,9 @@
         "Module 16B"
       ],
       "module_counts": {
-        "observations": 577,
-        "author_claims": 322,
-        "evidence_links": 731,
+        "observations": 582,
+        "author_claims": 327,
+        "evidence_links": 746,
         "boundary_records": 87,
         "consensus_drafts": 88
       },
@@ -682,8 +682,8 @@
           "module": "Module 8B",
           "topic_id": "M8B-T006",
           "statement": "Behavioral endpoints must be interpreted as model-specific functional readouts rather than generic recovery measures; locomotor, skilled forelimb, sensory, autonomic, respiratory, pain, and electrophysiologic assays require separate endpoint fields.",
-          "observation_count": 1,
-          "claim_count": 1,
+          "observation_count": 5,
+          "claim_count": 5,
           "boundary_count": 8,
           "review_action": "review for final consensus wording"
         },
@@ -752,16 +752,16 @@
           "module": "Module 16B",
           "topic_id": "M16B-T007",
           "statement": "ES-enabled regeneration strategies should include chronic sensory physiology and maladaptive plasticity endpoints because regenerating afferents may remain pathophysiological even when anatomical growth is achieved.",
-          "observation_count": 1,
-          "claim_count": 1,
+          "observation_count": 3,
+          "claim_count": 3,
           "boundary_count": 8,
           "review_action": "review for final consensus wording"
         }
       ],
       "observation_confidence_tally": {
-        "high": 25,
+        "high": 27,
         "low": 19,
-        "medium": 86
+        "medium": 90
       }
     },
     {
@@ -815,9 +815,9 @@
         "Module 14B"
       ],
       "module_counts": {
-        "observations": 183,
-        "author_claims": 141,
-        "evidence_links": 364,
+        "observations": 190,
+        "author_claims": 148,
+        "evidence_links": 385,
         "boundary_records": 48,
         "consensus_drafts": 48
       },
@@ -827,7 +827,7 @@
           "module": "Module 8B",
           "topic_id": "M8B-T001",
           "statement": "In vivo SCI evidence must retain species, strain, age, sex, and genetic background because model choice changes lesion biology, immune response, spontaneous recovery, surgical feasibility, and translatability.",
-          "observation_count": 1,
+          "observation_count": 2,
           "claim_count": 3,
           "boundary_count": 8,
           "review_action": "review for final consensus wording"
@@ -837,7 +837,7 @@
           "module": "Module 8B",
           "topic_id": "M8B-T002",
           "statement": "Injury mechanism is a primary evidence boundary: contusion, compression, transection, hemisection, crush, ischemia, and chemical or demyelinating models answer different questions and should not be pooled as interchangeable SCI models.",
-          "observation_count": 1,
+          "observation_count": 3,
           "claim_count": 3,
           "boundary_count": 8,
           "review_action": "promote as boundary consensus after wording pass"
@@ -847,8 +847,8 @@
           "module": "Module 8B",
           "topic_id": "M8B-T004",
           "statement": "Severity and chronicity are not metadata: force, displacement, duration, lesion completeness, time post-injury, and spontaneous recovery determine whether a model is appropriate for acute neuroprotection, chronic reconstruction, biomaterial testing, or rehabilitation studies.",
-          "observation_count": 1,
-          "claim_count": 3,
+          "observation_count": 3,
+          "claim_count": 5,
           "boundary_count": 8,
           "review_action": "review for final consensus wording"
         },
@@ -857,8 +857,8 @@
           "module": "Module 8B",
           "topic_id": "M8B-T008",
           "statement": "Module 8 should function as the in vivo model ontology layer: every downstream consensus claim should preserve species, injury mechanism, level, severity, chronicity, lesion architecture, endpoint family, and extraction confidence.",
-          "observation_count": 1,
-          "claim_count": 1,
+          "observation_count": 6,
+          "claim_count": 6,
           "boundary_count": 8,
           "review_action": "review for final consensus wording"
         },
@@ -887,8 +887,8 @@
           "module": "Module 9B",
           "topic_id": "M9B-T008",
           "statement": "Module 9 should function as the validation-model ontology layer: culture format, cell source, maturity, injury stimulus, matrix context, biomaterial exposure, readout, and confidence level must be retained before in vitro evidence is used in cross-module consensus.",
-          "observation_count": 2,
-          "claim_count": 1,
+          "observation_count": 5,
+          "claim_count": 4,
           "boundary_count": 8,
           "review_action": "review for final consensus wording"
         },
@@ -945,7 +945,7 @@
       ],
       "observation_confidence_tally": {
         "high": 3,
-        "medium": 32
+        "medium": 45
       }
     },
     {
@@ -1015,9 +1015,9 @@
         "Module 16B"
       ],
       "module_counts": {
-        "observations": 654,
-        "author_claims": 379,
-        "evidence_links": 787,
+        "observations": 656,
+        "author_claims": 381,
+        "evidence_links": 793,
         "boundary_records": 103,
         "consensus_drafts": 104
       },
@@ -1087,8 +1087,8 @@
           "module": "Module 9B",
           "topic_id": "M9B-T008",
           "statement": "Module 9 should function as the validation-model ontology layer: culture format, cell source, maturity, injury stimulus, matrix context, biomaterial exposure, readout, and confidence level must be retained before in vitro evidence is used in cross-module consensus.",
-          "observation_count": 2,
-          "claim_count": 1,
+          "observation_count": 5,
+          "claim_count": 4,
           "boundary_count": 8,
           "review_action": "review for final consensus wording"
         },
@@ -1156,7 +1156,7 @@
       "observation_confidence_tally": {
         "high": 45,
         "low": 69,
-        "medium": 139
+        "medium": 142
       }
     }
   ],

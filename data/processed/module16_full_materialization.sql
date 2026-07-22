@@ -1864,7 +1864,7 @@ WITH inserted AS (
     'M16B-T002',
     1,
     'consensus-ready first pass',
-    '{"boundary_tracker_ids": ["M16B-B001", "M16B-B002", "M16B-B003", "M16B-B004", "M16B-B005", "M16B-B006", "M16B-B007", "M16B-B008"], "claim_tracker_ids": ["M16B-C002"], "consensus_draft_id": "M16B-S002", "observation_tracker_ids": ["M16B-O002"], "readiness_status": "CONSENSUS-READY FIRST PASS", "source_agreement_label": null, "supporting_evidence_notes": "Module 16 first-pass curation freeze.", "topic_id": "M16B-T002"}'
+    '{"boundary_tracker_ids": ["M16B-B001", "M16B-B002", "M16B-B003", "M16B-B004", "M16B-B005", "M16B-B006", "M16B-B007", "M16B-B008"], "claim_tracker_ids": ["M16B-C002", "M16B-C003", "M16B-C004"], "consensus_draft_id": "M16B-S002", "observation_tracker_ids": ["M16B-O002", "M16B-O003", "M16B-O004"], "readiness_status": "CONSENSUS-READY FIRST PASS", "source_agreement_label": null, "supporting_evidence_notes": "Module 16 first-pass curation freeze.", "topic_id": "M16B-T002"}'
   )
   RETURNING consensus_id
 )
@@ -1874,6 +1874,18 @@ INSERT INTO Consensus_Observation (consensus_id, observation_id, support_type)
 SELECT c.consensus_id, o.observation_id, 'supporting'
 FROM _m16_consensus_map c
 JOIN _m16_observation_map o ON o.tracker_id = 'M16B-O002'
+WHERE c.tracker_id = 'M16B-S002';
+
+INSERT INTO Consensus_Observation (consensus_id, observation_id, support_type)
+SELECT c.consensus_id, o.observation_id, 'supporting'
+FROM _m16_consensus_map c
+JOIN _m16_observation_map o ON o.tracker_id = 'M16B-O003'
+WHERE c.tracker_id = 'M16B-S002';
+
+INSERT INTO Consensus_Observation (consensus_id, observation_id, support_type)
+SELECT c.consensus_id, o.observation_id, 'supporting'
+FROM _m16_consensus_map c
+JOIN _m16_observation_map o ON o.tracker_id = 'M16B-O004'
 WHERE c.tracker_id = 'M16B-S002';
 
 WITH inserted AS (
@@ -2042,11 +2054,23 @@ WITH inserted AS (
     'M16B-T006',
     1,
     'consensus-ready first pass',
-    '{"boundary_tracker_ids": ["M16B-B001", "M16B-B002", "M16B-B003", "M16B-B004", "M16B-B005", "M16B-B006", "M16B-B007", "M16B-B008"], "claim_tracker_ids": ["M16B-C011"], "consensus_draft_id": "M16B-S006", "observation_tracker_ids": ["M16B-O011"], "readiness_status": "CONSENSUS-READY FIRST PASS", "source_agreement_label": null, "supporting_evidence_notes": "Module 16 first-pass curation freeze.", "topic_id": "M16B-T006"}'
+    '{"boundary_tracker_ids": ["M16B-B001", "M16B-B002", "M16B-B003", "M16B-B004", "M16B-B005", "M16B-B006", "M16B-B007", "M16B-B008"], "claim_tracker_ids": ["M16B-C009", "M16B-C010", "M16B-C011"], "consensus_draft_id": "M16B-S006", "observation_tracker_ids": ["M16B-O009", "M16B-O010", "M16B-O011"], "readiness_status": "CONSENSUS-READY FIRST PASS", "source_agreement_label": null, "supporting_evidence_notes": "Module 16 first-pass curation freeze.", "topic_id": "M16B-T006"}'
   )
   RETURNING consensus_id
 )
 INSERT INTO _m16_consensus_map (tracker_id, consensus_id) SELECT 'M16B-S006', consensus_id FROM inserted;
+
+INSERT INTO Consensus_Observation (consensus_id, observation_id, support_type)
+SELECT c.consensus_id, o.observation_id, 'supporting'
+FROM _m16_consensus_map c
+JOIN _m16_observation_map o ON o.tracker_id = 'M16B-O009'
+WHERE c.tracker_id = 'M16B-S006';
+
+INSERT INTO Consensus_Observation (consensus_id, observation_id, support_type)
+SELECT c.consensus_id, o.observation_id, 'supporting'
+FROM _m16_consensus_map c
+JOIN _m16_observation_map o ON o.tracker_id = 'M16B-O010'
+WHERE c.tracker_id = 'M16B-S006';
 
 INSERT INTO Consensus_Observation (consensus_id, observation_id, support_type)
 SELECT c.consensus_id, o.observation_id, 'supporting'
@@ -2061,11 +2085,23 @@ WITH inserted AS (
     'M16B-T007',
     1,
     'consensus-ready first pass',
-    '{"boundary_tracker_ids": ["M16B-B001", "M16B-B002", "M16B-B003", "M16B-B004", "M16B-B005", "M16B-B006", "M16B-B007", "M16B-B008"], "claim_tracker_ids": ["M16B-C016"], "consensus_draft_id": "M16B-S007", "observation_tracker_ids": ["M16B-O016"], "readiness_status": "CONSENSUS-READY FIRST PASS", "source_agreement_label": null, "supporting_evidence_notes": "Module 16 first-pass curation freeze.", "topic_id": "M16B-T007"}'
+    '{"boundary_tracker_ids": ["M16B-B001", "M16B-B002", "M16B-B003", "M16B-B004", "M16B-B005", "M16B-B006", "M16B-B007", "M16B-B008"], "claim_tracker_ids": ["M16B-C001", "M16B-C002", "M16B-C016"], "consensus_draft_id": "M16B-S007", "observation_tracker_ids": ["M16B-O001", "M16B-O002", "M16B-O016"], "readiness_status": "CONSENSUS-READY FIRST PASS", "source_agreement_label": null, "supporting_evidence_notes": "Module 16 first-pass curation freeze.", "topic_id": "M16B-T007"}'
   )
   RETURNING consensus_id
 )
 INSERT INTO _m16_consensus_map (tracker_id, consensus_id) SELECT 'M16B-S007', consensus_id FROM inserted;
+
+INSERT INTO Consensus_Observation (consensus_id, observation_id, support_type)
+SELECT c.consensus_id, o.observation_id, 'supporting'
+FROM _m16_consensus_map c
+JOIN _m16_observation_map o ON o.tracker_id = 'M16B-O001'
+WHERE c.tracker_id = 'M16B-S007';
+
+INSERT INTO Consensus_Observation (consensus_id, observation_id, support_type)
+SELECT c.consensus_id, o.observation_id, 'supporting'
+FROM _m16_consensus_map c
+JOIN _m16_observation_map o ON o.tracker_id = 'M16B-O002'
+WHERE c.tracker_id = 'M16B-S007';
 
 INSERT INTO Consensus_Observation (consensus_id, observation_id, support_type)
 SELECT c.consensus_id, o.observation_id, 'supporting'
@@ -2207,7 +2243,7 @@ BEGIN
   IF claim_count <> 16 THEN RAISE EXCEPTION 'Expected 16 claims, found %', claim_count; END IF;
   IF link_count <> 40 THEN RAISE EXCEPTION 'Expected 40 evidence links, found %', link_count; END IF;
   IF consensus_count <> 8 THEN RAISE EXCEPTION 'Expected 8 consensus rows, found %', consensus_count; END IF;
-  IF consensus_observation_count <> 43 THEN RAISE EXCEPTION 'Unexpected consensus-observation count %', consensus_observation_count; END IF;
+  IF consensus_observation_count <> 49 THEN RAISE EXCEPTION 'Unexpected consensus-observation count %', consensus_observation_count; END IF;
 END $$;
 
 COMMIT;
