@@ -63,25 +63,26 @@ THEMES = (
         theme_id="CMS-T002",
         title="Host State Is a Modifiable Repair Variable",
         aim_alignment="Aim 1, Aim 1C, Aim 2, and Aim 3",
-        module_keys=("3b", "7b", "11b", "12b"),
-        core_consensus_ids=("M3B-S001", "M3B-S002", "M3B-S005", "M7B-S007", "M7B-S008", "M11B-S008", "M12B-S001", "M12B-S008"),
+        module_keys=("3b", "7b", "11b", "12b", "15b"),
+        core_consensus_ids=("M3B-S001", "M3B-S002", "M3B-S005", "M7B-S007", "M7B-S008", "M11B-S008", "M12B-S001", "M12B-S008", "M15B-S003", "M15B-S006"),
         synthesis_statement=(
             "The host response is not merely damage to suppress; it is a timing-, cell-state-, and tissue-context-dependent variable that can be conditioned. "
-            "Immune, vascular, stromal, and innate-adaptor programs can support containment, debris handling, tolerance-like protection, or repair permissiveness, "
+            "Immune, vascular, stromal, innate-adaptor, and DRG-intrinsic programs can support containment, debris handling, tolerance-like protection, remote priming, or repair permissiveness, "
             "but the same broad intervention class can be harmful or uninformative when timing and cell identity are lost."
         ),
         evidence_ladder=(
             "Observations: immune/myeloid rows separate depletion, corralling, metabolism, pyroptosis, debris handling, and delivery contexts.",
             "Author claims: host-conditioning analogs from implants, flaps, islets, organ tolerance, ischemia, and LPS support pre-challenge state modification.",
-            "Consensus: Modules 3, 7, 11, and 12 converge on state-specific conditioning while rejecting broad anti-inflammatory or direct clinical endotoxin/LPS framing.",
+            "Consensus: Modules 3, 7, 11, 12, and 15 converge on state-specific conditioning while rejecting broad anti-inflammatory, direct clinical endotoxin/LPS, or generic nerve-injury framing.",
         ),
         boundaries=(
             "Endotoxin/LPS is one discovery platform for endogenous protection, not a proposed clinical conditioning agent.",
             "Perioperative ischemic conditioning is an analog for timing and host-state logic, not direct evidence for traumatic chronic reconstruction.",
             "Cross-field host-conditioning evidence requires route, dose, timing, tissue, endpoint, and field-to-SCI distance labels.",
+            "Peripheral nerve/DRG priming requires lesion order, side, segment, and associated versus remote DRG labels.",
         ),
         experimental_implications=(
-            "Build candidate-node tables for TLR/adaptor routing, IL-1/IL-1R1, IL-10, monocyte/endothelial state, myeloid metabolic competence, and trained/tolerized innate-state markers.",
+            "Build candidate-node tables for TLR/adaptor routing, IL-1/IL-1R1, IL-10, monocyte/endothelial state, myeloid metabolic competence, trained/tolerized innate-state markers, cAMP, IL-6/JAK/STAT3, NOX2 redox signaling, and DRG macrophage support.",
             "Design conditioning experiments around pre-specified windows: pre-injury conditioning, peri-implant conditioning, and post-injury remodeling are separate questions.",
         ),
         confidence_label="medium-high for biological logic; medium for SCI reconstruction translation",
@@ -116,10 +117,10 @@ THEMES = (
         theme_id="CMS-T004",
         title="Repair Endpoints Must Remain Orthogonal",
         aim_alignment="Aim 2 and Aim 3",
-        module_keys=("1b", "2b", "4b", "5b", "6b", "8b", "10b", "13b", "14b"),
-        core_consensus_ids=("M1B-S006", "M2B-S003", "M4B-S002", "M4B-S004", "M5B-S001", "M5B-S003", "M5B-S004", "M6B-S005", "M8B-S006", "M10B-S007", "M13B-S003", "M14B-S006"),
+        module_keys=("1b", "2b", "4b", "5b", "6b", "8b", "10b", "13b", "14b", "15b"),
+        core_consensus_ids=("M1B-S006", "M2B-S003", "M4B-S002", "M4B-S004", "M5B-S001", "M5B-S003", "M5B-S004", "M6B-S005", "M8B-S006", "M10B-S007", "M13B-S003", "M14B-S006", "M15B-S001", "M15B-S007"),
         synthesis_statement=(
-            "SCI repair cannot be summarized by a single recovery axis. Axon growth, sprouting, remyelination, white-matter preservation, graft integration, target-gene regulation, relay formation, electrophysiology, imaging biomarkers, and behavior are related but non-interchangeable endpoint families."
+            "SCI repair cannot be summarized by a single recovery axis. Axon growth, DRG growth-state priming, sprouting, remyelination, white-matter preservation, graft integration, target-gene regulation, relay formation, electrophysiology, imaging biomarkers, and behavior are related but non-interchangeable endpoint families."
         ),
         evidence_ladder=(
             "Observations: modules preserve separate pathobiology, histology, imaging, behavior, electrophysiology, graft, myelin, and circuit readouts.",
@@ -128,6 +129,7 @@ THEMES = (
         ),
         boundaries=(
             "Sprouting, regeneration, relay engagement, spared-tract plasticity, and behavioral association should not be collapsed.",
+            "Peripheral nerve conditioning evidence should remain sensory-pathway and DRG-specific unless tested in other CNS axon systems.",
             "Clinical registry endpoints need results linkage before efficacy synthesis.",
             "Remote neurodegeneration and local lesion-bed repair are linked but distinct evidence layers.",
         ),
@@ -166,8 +168,8 @@ THEMES = (
         theme_id="CMS-T006",
         title="Preconditioning Hypothesis for SCI Reconstruction",
         aim_alignment="Integrated aims logic",
-        module_keys=("1b", "2b", "3b", "4b", "5b", "7b", "9b", "11b", "12b", "13b", "14b"),
-        core_consensus_ids=("M1B-S008", "M2B-S005", "M3B-S008", "M4B-S008", "M5B-S008", "M7B-S008", "M9B-S008", "M11B-S008", "M12B-S008", "M13B-S008", "M14B-S008"),
+        module_keys=("1b", "2b", "3b", "4b", "5b", "7b", "9b", "11b", "12b", "13b", "14b", "15b"),
+        core_consensus_ids=("M1B-S008", "M2B-S005", "M3B-S008", "M4B-S008", "M5B-S008", "M7B-S008", "M9B-S008", "M11B-S008", "M12B-S008", "M13B-S008", "M14B-S008", "M15B-S008"),
         synthesis_statement=(
             "The most defensible project-level hypothesis is that conditioning can improve SCI reconstruction only if it creates a host state compatible with the target lesion anatomy, implanted material or graft, and desired endpoint family. "
             "The evidence supports a conditioning-discovery, programmable regulatory-editing, and validation program, not an immediate universal conditioning or gene-editing therapy claim."
@@ -175,7 +177,7 @@ THEMES = (
         evidence_ladder=(
             "Observations: all core modules now provide experiment-level rows and B-layer observations suitable for cross-module tracing, including the traumatic injury-to-lesion trajectory layer.",
             "Author claims: repair, conditioning, graft, biomaterial, and immune claims are strongest when narrowed to model, timing, and endpoint.",
-            "Consensus: Modules 1-14 collectively support an aim-aligned logic of endogenous protective programs, host response modification, injury-to-lesion modification, programmable regulatory editing, and host-biomaterial interaction testing.",
+            "Consensus: Modules 1-15 collectively support an aim-aligned logic of endogenous protective programs, host response modification, injury-to-lesion modification, peripheral-to-CNS priming, programmable regulatory editing, and host-biomaterial interaction testing.",
         ),
         boundaries=(
             "Conditioning should not be framed as simply anti-inflammatory.",
@@ -276,7 +278,7 @@ def render_markdown(synthesis: dict[str, Any]) -> str:
         "",
         "**Status**: first-pass synthesis from the consensus review register.",
         "",
-        "**Scope**: Modules 1B-14B, organized around the revised preconditioning and reconstruction aims.",
+        "**Scope**: Modules 1B-15B, organized around the revised preconditioning and reconstruction aims.",
         "",
         "**Use**: grant-facing logic layer and database navigation aid; not a final quantitative meta-analysis.",
         "",

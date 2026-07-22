@@ -1,8 +1,8 @@
 {
   "status": "cross-module consensus review register",
   "generated_from": "validated B-tracker evidence bundles",
-  "module_count": 14,
-  "consensus_count": 112,
+  "module_count": 15,
+  "consensus_count": 120,
   "module_rows": [
     {
       "module_key": "1b",
@@ -185,6 +185,19 @@
       "consensus_drafts": 8,
       "module_action": "Keep CRISPR epigenome editing separate from permanent genome editing; preserve effector, target, cell type, delivery, chromatin-state, and neuroregeneration endpoint boundaries.",
       "priority": "promote after full-text confidence upgrade of PTEN dCas9-KRAB, neuronal CRISPRa, and injury-enhancer anchors"
+    },
+    {
+      "module_key": "15b",
+      "module": "Module 15B",
+      "source_tracker": "modules/Module_15B_TRACKER.md",
+      "review_status": "CONSENSUS-READY FIRST PASS",
+      "observations": 16,
+      "author_claims": 16,
+      "evidence_links": 40,
+      "boundary_records": 8,
+      "consensus_drafts": 8,
+      "module_action": "Use as the peripheral nerve-to-DRG-to-CNS priming layer; preserve lesion order, side, segment, associated versus remote DRG status, pathway, and central repair endpoint boundaries.",
+      "priority": "promote after full-text confidence upgrade of remote DRG, STAT3/IL-6, and timing-order anchors"
     }
   ],
   "consensus_rows": [
@@ -4920,6 +4933,378 @@
       "claim_confidence": {
         "high": 2,
         "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "15b",
+      "module": "Module 15B",
+      "consensus_id": "M15B-S001",
+      "topic_id": "M15B-T001",
+      "statement": "Peripheral nerve injury can induce a DRG intrinsic growth state that improves central sensory axon regeneration, but the claim is strongest for DRG/dorsal-column sensory systems and must preserve peripheral lesion, central test lesion, species, and endpoint boundaries.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M15B-O001",
+        "M15B-O002",
+        "M15B-O003"
+      ],
+      "supporting_claims": [
+        "M15B-C001",
+        "M15B-C002",
+        "M15B-C003"
+      ],
+      "boundary_records": [
+        "M15B-B001",
+        "M15B-B002",
+        "M15B-B003",
+        "M15B-B004",
+        "M15B-B005",
+        "M15B-B006",
+        "M15B-B007",
+        "M15B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 1,
+        "medium": 2
+      },
+      "claim_confidence": {
+        "high": 1,
+        "medium": 2
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "15b",
+      "module": "Module 15B",
+      "consensus_id": "M15B-S002",
+      "topic_id": "M15B-T002",
+      "statement": "Timing is a causal variable in conditioning-lesion biology: preconditioning, concurrent priming, post-SCI priming, repeated priming, and enriched conditioning produce different regenerative outcomes and should be analyzed as separate intervention classes.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M15B-O003",
+        "M15B-O004",
+        "M15B-O005"
+      ],
+      "supporting_claims": [
+        "M15B-C003",
+        "M15B-C004",
+        "M15B-C005"
+      ],
+      "boundary_records": [
+        "M15B-B001",
+        "M15B-B002",
+        "M15B-B003",
+        "M15B-B004",
+        "M15B-B005",
+        "M15B-B006",
+        "M15B-B007",
+        "M15B-B008"
+      ],
+      "observation_count": 3,
+      "claim_count": 3,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 2,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "high": 2,
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "15b",
+      "module": "Module 15B",
+      "consensus_id": "M15B-S003",
+      "topic_id": "M15B-T003",
+      "statement": "cAMP/PKA signaling can mimic part of the conditioning effect, but peripheral nerve conditioning recruits broader and more durable transcriptional programs, so cAMP should be treated as one mechanism rather than the whole priming state.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M15B-O005",
+        "M15B-O006",
+        "M15B-O007",
+        "M15B-O008",
+        "M15B-O009"
+      ],
+      "supporting_claims": [
+        "M15B-C005",
+        "M15B-C006",
+        "M15B-C007",
+        "M15B-C008",
+        "M15B-C009"
+      ],
+      "boundary_records": [
+        "M15B-B001",
+        "M15B-B002",
+        "M15B-B003",
+        "M15B-B004",
+        "M15B-B005",
+        "M15B-B006",
+        "M15B-B007",
+        "M15B-B008"
+      ],
+      "observation_count": 5,
+      "claim_count": 5,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 4,
+        "medium": 1
+      },
+      "claim_confidence": {
+        "high": 4,
+        "medium": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "15b",
+      "module": "Module 15B",
+      "consensus_id": "M15B-S004",
+      "topic_id": "M15B-T004",
+      "statement": "IL-6/JAK/STAT3 signaling is a consensus-ready mediator family for conditioning-induced DRG growth competence, with enriched-conditioning evidence extending this axis into PKC-STAT3-NOX2 redox signaling after SCI.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M15B-O006",
+        "M15B-O007",
+        "M15B-O008",
+        "M15B-O009",
+        "M15B-O010",
+        "M15B-O011",
+        "M15B-O012"
+      ],
+      "supporting_claims": [
+        "M15B-C006",
+        "M15B-C007",
+        "M15B-C008",
+        "M15B-C009",
+        "M15B-C010",
+        "M15B-C011",
+        "M15B-C012"
+      ],
+      "boundary_records": [
+        "M15B-B001",
+        "M15B-B002",
+        "M15B-B003",
+        "M15B-B004",
+        "M15B-B005",
+        "M15B-B006",
+        "M15B-B007",
+        "M15B-B008"
+      ],
+      "observation_count": 7,
+      "claim_count": 7,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 4,
+        "medium": 3
+      },
+      "claim_confidence": {
+        "high": 4,
+        "medium": 3
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "15b",
+      "module": "Module 15B",
+      "consensus_id": "M15B-S005",
+      "topic_id": "M15B-T005",
+      "statement": "Conditioning lesion effects include non-neuronal support: DRG macrophages and spinal glial division contribute to the maintenance or expression of regenerative capacity and should be separated by compartment and timing.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M15B-O013",
+        "M15B-O014"
+      ],
+      "supporting_claims": [
+        "M15B-C013",
+        "M15B-C014"
+      ],
+      "boundary_records": [
+        "M15B-B001",
+        "M15B-B002",
+        "M15B-B003",
+        "M15B-B004",
+        "M15B-B005",
+        "M15B-B006",
+        "M15B-B007",
+        "M15B-B008"
+      ],
+      "observation_count": 2,
+      "claim_count": 2,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "medium": 2
+      },
+      "claim_confidence": {
+        "medium": 2
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "15b",
+      "module": "Module 15B",
+      "consensus_id": "M15B-S006",
+      "topic_id": "M15B-T006",
+      "statement": "Unilateral sciatic nerve injury can induce pro-regenerative marker expression and enhanced growth capacity in DRGs not directly associated with the damaged nerve, making remote or contralateral DRG priming a real boundary to track separately from ipsilateral conditioning.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M15B-O011"
+      ],
+      "supporting_claims": [
+        "M15B-C011"
+      ],
+      "boundary_records": [
+        "M15B-B001",
+        "M15B-B002",
+        "M15B-B003",
+        "M15B-B004",
+        "M15B-B005",
+        "M15B-B006",
+        "M15B-B007",
+        "M15B-B008"
+      ],
+      "observation_count": 1,
+      "claim_count": 1,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 1
+      },
+      "claim_confidence": {
+        "high": 1
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "promote as boundary consensus after wording pass"
+    },
+    {
+      "module_key": "15b",
+      "module": "Module 15B",
+      "consensus_id": "M15B-S007",
+      "topic_id": "M15B-T007",
+      "statement": "Peripheral conditioning is not a universal regeneration switch: early branch-specific negative evidence and dorsal-column model boundaries show that peripheral, central, ipsilateral, contralateral, and tract-specific outcomes must remain separated.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M15B-O002",
+        "M15B-O003",
+        "M15B-O004",
+        "M15B-O005",
+        "M15B-O006",
+        "M15B-O007",
+        "M15B-O008",
+        "M15B-O009",
+        "M15B-O010",
+        "M15B-O011",
+        "M15B-O012",
+        "M15B-O013",
+        "M15B-O014",
+        "M15B-O015"
+      ],
+      "supporting_claims": [
+        "M15B-C002",
+        "M15B-C003",
+        "M15B-C004",
+        "M15B-C005",
+        "M15B-C006",
+        "M15B-C007",
+        "M15B-C008",
+        "M15B-C009",
+        "M15B-C010",
+        "M15B-C011",
+        "M15B-C012",
+        "M15B-C013",
+        "M15B-C014",
+        "M15B-C015"
+      ],
+      "boundary_records": [
+        "M15B-B001",
+        "M15B-B002",
+        "M15B-B003",
+        "M15B-B004",
+        "M15B-B005",
+        "M15B-B006",
+        "M15B-B007",
+        "M15B-B008"
+      ],
+      "observation_count": 14,
+      "claim_count": 14,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 7,
+        "medium": 7
+      },
+      "claim_confidence": {
+        "high": 7,
+        "medium": 7
+      },
+      "boundary_confidence": "8 linked",
+      "review_action": "review for final consensus wording"
+    },
+    {
+      "module_key": "15b",
+      "module": "Module 15B",
+      "consensus_id": "M15B-S008",
+      "topic_id": "M15B-T008",
+      "statement": "Module 15 should function as a peripheral-to-CNS host-priming comparator for SCI repair: candidate synthesis should ask whether a treatment mimics DRG growth-state induction, sustains that state after SCI, recruits systemic/remote DRG programs, or changes the lesion environment enough for central axon growth.",
+      "status": "CONSENSUS-READY FIRST PASS",
+      "supporting_observations": [
+        "M15B-O004",
+        "M15B-O005",
+        "M15B-O006",
+        "M15B-O007",
+        "M15B-O008",
+        "M15B-O009",
+        "M15B-O010",
+        "M15B-O011",
+        "M15B-O012",
+        "M15B-O013",
+        "M15B-O014",
+        "M15B-O015",
+        "M15B-O016"
+      ],
+      "supporting_claims": [
+        "M15B-C004",
+        "M15B-C005",
+        "M15B-C006",
+        "M15B-C007",
+        "M15B-C008",
+        "M15B-C009",
+        "M15B-C010",
+        "M15B-C011",
+        "M15B-C012",
+        "M15B-C013",
+        "M15B-C014",
+        "M15B-C015",
+        "M15B-C016"
+      ],
+      "boundary_records": [
+        "M15B-B001",
+        "M15B-B002",
+        "M15B-B003",
+        "M15B-B004",
+        "M15B-B005",
+        "M15B-B006",
+        "M15B-B007",
+        "M15B-B008"
+      ],
+      "observation_count": 13,
+      "claim_count": 13,
+      "boundary_count": 8,
+      "observation_confidence": {
+        "high": 7,
+        "medium": 6
+      },
+      "claim_confidence": {
+        "high": 7,
+        "medium": 6
       },
       "boundary_confidence": "8 linked",
       "review_action": "review for final consensus wording"

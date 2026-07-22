@@ -389,6 +389,31 @@ MODULES = {
             "MET FOR ALL FIRST-PASS TOPICS",
         ),
     ),
+    "15b": ModuleConfig(
+        key="15b",
+        label="Module 15B",
+        tracker=ROOT / "modules" / "Module_15B_TRACKER.md",
+        output=ROOT / "data" / "processed" / "module15_evidence_bundle.json",
+        id_prefix="M15B",
+        boundary_prefix="M15B-B",
+        evidence_link_section="## Pass 6: Evidence Links Drafted",
+        boundary_section="## Boundary Conditions Draft",
+        boundary_id_key="boundary_id",
+        consensus_section="## Consensus Draft Queue",
+        consensus_statement_key="draft_statement",
+        expected_counts={
+            "observations": 16,
+            "author_claims": 16,
+            "evidence_links": 40,
+            "boundary_records": 8,
+            "consensus_drafts": 8,
+        },
+        required_phrases=(
+            "CONSENSUS-READY FIRST PASS",
+            "Module 15 first-pass curation freeze",
+            "MET FOR ALL FIRST-PASS TOPICS",
+        ),
+    ),
 }
 
 

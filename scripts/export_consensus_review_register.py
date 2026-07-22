@@ -94,6 +94,11 @@ MODULE_REVIEW_NOTES = {
         "module_action": "Keep CRISPR epigenome editing separate from permanent genome editing; preserve effector, target, cell type, delivery, chromatin-state, and neuroregeneration endpoint boundaries.",
         "priority": "promote after full-text confidence upgrade of PTEN dCas9-KRAB, neuronal CRISPRa, and injury-enhancer anchors",
     },
+    "15b": {
+        "review_status": "CONSENSUS-READY FIRST PASS",
+        "module_action": "Use as the peripheral nerve-to-DRG-to-CNS priming layer; preserve lesion order, side, segment, associated versus remote DRG status, pathway, and central repair endpoint boundaries.",
+        "priority": "promote after full-text confidence upgrade of remote DRG, STAT3/IL-6, and timing-order anchors",
+    },
 }
 
 
