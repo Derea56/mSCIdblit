@@ -1,0 +1,46 @@
+edge_id	queue_id	evidence_id	evidence_layer	edge_class	layer_boundary
+M21A-E066	M21A-Q001	M21A-SAT-EVID-015	receptor_proximal_relay	receptor_complex_pathway_edge	Complex-level receptor configuration to STAT3; does not add LR binding evidence.
+M21A-E067	M21A-Q001	M21A-SAT-EVID-015	receptor_proximal_relay	receptor_complex_pathway_edge	Alternative OSMR-containing CNTFR complex is kept distinct from LIFR-containing complex.
+M21A-E068	M21A-Q001	M21A-SAT-EVID-016	downstream_pathway_function	functional_output_edge	Cx43/coupling is a cellular output and is not encoded as a direct receptor-protein interaction.
+M21A-E069	M21A-Q001	M21A-SAT-EVID-017	downstream_pathway_function	functional_output_edge	Astrocyte FGF2 release and neuronal support are functional outputs; receptor subunit usage remains unresolved.
+M21A-E070	M21A-Q002	M21A-SAT-EVID-018	receptor_proximal_relay	direct_molecular_edge	Synthetic type-III receptor experiments support receptor-associated kinase participation but are not native astrocyte or SCI evidence.
+M21A-E071	M21A-Q002	M21A-SAT-EVID-019	downstream_pathway_function	pathway_complex_edge	IRF/ISG induction is retained as a pathway-level output; no single kinase necessity is inferred.
+M21A-E072	M21A-Q002	M21A-SAT-EVID-019	downstream_pathway_function	functional_output_edge	HSV-1 restriction is a cellular function and is not encoded as direct IFNLR1-to-STAT1 binding.
+M21A-E073	M21A-Q003	M21A-SAT-EVID-020	receptor_proximal_relay	direct_molecular_edge	TRAF2 recruitment is a receptor-proximal molecular interaction; it is distinct from downstream NF-kappaB output.
+M21A-E074	M21A-Q003	M21A-SAT-EVID-021	receptor_proximal_relay	pathway_complex_edge	TNFR2-TRAF2 to NF-kappaB/JNK is a receptor-proximal pathway relay.
+M21A-E075	M21A-Q003	M21A-SAT-EVID-021	downstream_pathway_function	pathway_complex_edge	Alternative NF-kappaB/p100 processing is retained as a branch output and is ligand-form dependent.
+M21A-E076	M21A-Q003	M21A-SAT-EVID-023	downstream_pathway_function	functional_output_edge	Locomotor recovery after SCI is a functional output; no astrocyte-specific molecular edge is inferred.
+M21A-E077	M21A-Q003	M21A-SAT-EVID-022	downstream_pathway_function	functional_output_edge	Astrocyte CXCL12 induction and OPC repair are functional CNS outputs, not direct TNFR2-to-CXCL12 molecular binding.
+M21A-E078	M21A-Q004	M21A-SAT-EVID-024	receptor_proximal_relay	direct_molecular_edge	IL1R2-IL1RAP decoy-complex assembly is retained as a receptor-complex boundary, not as an intracellular signaling edge.
+M21A-E079	M21A-Q004	M21A-SAT-EVID-025	downstream_pathway_function	functional_output_edge	IL1R2-mediated ligand sequestration and shedding are inhibitory functional outputs distinct from IL1R1-MyD88 relay steps.
+M21A-E080	M21A-Q004	M21A-SAT-EVID-026	downstream_pathway_function	functional_output_edge	The SCI astrocyte edge is IL1R1-based; it is not used to infer IL1R2 function.
+M21A-E081	M21A-Q005	M21A-SAT-EVID-027	receptor_proximal_relay	pathway_complex_edge	CCR4 arrestin-biased signaling is retained as a GPCR branch in a matched receptor assay.
+M21A-E082	M21A-Q005	M21A-SAT-EVID-027	receptor_proximal_relay	pathway_complex_edge	CCR7 G-protein and arrestin coupling are kept as parallel receptor-proximal outputs.
+M21A-E083	M21A-Q005	M21A-SAT-EVID-028	receptor_proximal_relay	direct_molecular_edge	CXCR3A G-protein coupling is separated from CXCR3B splice-variant behavior.
+M21A-E084	M21A-Q005	M21A-SAT-EVID-028	downstream_pathway_function	pathway_complex_edge	CXCR3B beta-arrestin/ERK behavior is a splice-variant branch and not a general ligand-bias claim.
+M21A-E085	M21A-Q006	M21A-SAT-EVID-029	receptor_proximal_relay	direct_molecular_edge	TGFBR-TRAF6 association is direct receptor-proximal evidence, separate from JNK/p38 output.
+M21A-E086	M21A-Q006	M21A-SAT-EVID-029	receptor_proximal_relay	pathway_complex_edge	TRAF6-TAK1-to-JNK/p38 is retained at pathway-complex resolution.
+M21A-E087	M21A-Q006	M21A-SAT-EVID-030	receptor_proximal_relay	direct_molecular_edge	BMPR2-LIMK1 is a noncanonical receptor-tail branch, distinct from SMAD1/5/9.
+M21A-E088	M21A-Q006	M21A-SAT-EVID-031	receptor_proximal_relay	pathway_complex_edge	BMP-SMAD activation in spinal astrocytes is receptor/pathway evidence, not an inferred direct protein interaction.
+M21A-E089	M21A-Q006	M21A-SAT-EVID-031	downstream_pathway_function	functional_output_edge	CSPG induction is a cellular/extracellular functional output.
+M21A-E090	M21A-Q006	M21A-SAT-EVID-032	downstream_pathway_function	functional_output_edge	Astrocyte neurocan/scar formation is a functional output and remains CNS-injury comparator evidence.
+M21A-E091	M21A-Q007	M21A-SAT-EVID-033	receptor_proximal_relay	pathway_complex_edge	PDGFR-Src receptor-associated activation is retained at receptor-proximal pathway resolution; the source does not establish a direct physical PDGFR-SRC interaction.
+M21A-E092	M21A-Q007	M21A-SAT-EVID-033	receptor_proximal_relay	pathway_complex_edge	PDGFR-to-ERK is a receptor-proximal kinase branch with adaptor/redox context.
+M21A-E093	M21A-Q007	M21A-SAT-EVID-034	downstream_pathway_function	functional_output_edge	OPC migration is a cellular function supported by ERK perturbation.
+M21A-E094	M21A-Q007	M21A-SAT-EVID-035	downstream_pathway_function	functional_output_edge	FGF2-RhoA-YAP astrocyte proliferation is a functional/pathway output; FGFR identity is unresolved.
+M21A-E095	M21A-Q008	M21A-SAT-EVID-036	receptor_proximal_relay	pathway_complex_edge	WNT5A-ROR2-JNK is retained as a noncanonical pathway complex; no direct binding edge is inferred.
+M21A-E096	M21A-Q008	M21A-SAT-EVID-036	downstream_pathway_function	functional_output_edge	Inflammatory spinal-neuron death is a functional output of the WNT-ROR2 pathway.
+M21A-E097	M21A-Q008	M21A-SAT-EVID-037	downstream_pathway_function	functional_output_edge	WNT5A-JNK neural differentiation and SCI repair are functional outputs with unresolved receptor identity.
+M21A-E098	M21A-Q009	M21A-SAT-EVID-038	receptor_proximal_relay	pathway_complex_edge	Jagged1-Notch1 to STAT3 is a CNS astrocyte pathway branch, not a generic Notch output.
+M21A-E099	M21A-Q009	M21A-SAT-EVID-038	downstream_pathway_function	pathway_complex_edge	EDNRB/ETBR transcription is a downstream branch output.
+M21A-E100	M21A-Q009	M21A-SAT-EVID-039	downstream_pathway_function	pathway_complex_edge	HES5 induction is a transcriptional pathway output in injured spinal cord.
+M21A-E101	M21A-Q009	M21A-SAT-EVID-039	downstream_pathway_function	functional_output_edge	Astrogliosis and functional recovery are cellular/organismal outputs, not direct NICD interactions.
+M21A-E102	M21A-Q009	M21A-SAT-EVID-040	receptor_proximal_relay	pathway_complex_edge	DLL4-versus-DLL1 signaling strength is retained as ligand-context-dependent Notch output; Module 20A LR ledgers remain untouched.
+M21A-E103	M21A-Q001	M21A-SAT-EVID-041	receptor_proximal_relay	receptor_complex_pathway_edge	CNTFR-alpha astrocyte localization and functional receptor-complex competence are receptor-context evidence, not a direct claim about the unresolved LIFR-versus-OSMR branch in contusive SCI.
+M21A-E104	M21A-Q007	M21A-SAT-EVID-042	receptor_proximal_relay	pathway_complex_edge	FGFR2-associated PI3K-AKT signaling is retained as a receptor-proximal SCI branch with a neuronal/microglial receiver boundary.
+M21A-E105	M21A-Q007	M21A-SAT-EVID-043	downstream_pathway_function	functional_output_edge	PDGFR-beta pathway inhibition changes fibrotic scar and recovery outputs after SCI; no direct ligand-receptor interaction is inferred.
+M21A-E106	M21A-Q007	M21A-SAT-EVID-044	receptor_proximal_relay	pathway_complex_edge	VEGF-to-EGFR transactivation is retained as the tested branch; VEGFR paralog identity is unresolved.
+M21A-E107	M21A-Q007	M21A-SAT-EVID-044	downstream_pathway_function	functional_output_edge	Spinal neural stem-cell activation is a cellular output of the VEGF-EGFR transactivation branch.
+M21A-E108	M21A-Q008	M21A-SAT-EVID-045	downstream_pathway_function	functional_output_edge	Astrocytic RYK control of scar-border formation and wound healing is a SCI functional edge; the noncanonical PCP interpretation remains untested.
+M21A-E109	M21A-Q009	M21A-SAT-EVID-046	downstream_pathway_function	pathway_complex_edge	DLL4-NOTCH1/NICD control of IL-6 transcription is a reactive-astrocyte pathway edge, not a contusive-SCI Notch paralog claim.
+M21A-E110	M21A-Q009	M21A-SAT-EVID-046	downstream_pathway_function	pathway_complex_edge	IL-6-dependent STAT3 phosphorylation and astrocyte reactivity are downstream outputs of the DLL4-NOTCH1 branch.
