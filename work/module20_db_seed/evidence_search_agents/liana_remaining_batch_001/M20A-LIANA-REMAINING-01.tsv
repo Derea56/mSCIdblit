@@ -1,0 +1,201 @@
+pair_key	pair_label_canonical	liana_status	module20a_status	review_id	current_confidence	prior_notes
+alcam nrp1	Alcam Nrp1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+angpt1 itgb1	Angpt1 Itgb1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+angptl2 tlr4	Angptl2 Tlr4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+anxa1 dysf	Anxa1 Dysf	liana_consensus	no	M20A-EXT-0801	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+anxa1 egfr	Anxa1 Egfr	liana_consensus	no	M20A-EXT-0802	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+anxa1 grm7	Anxa1 Grm7	liana_consensus	no	M20A-EXT-0804	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+anxa1 mtnr1a	Anxa1 Mtnr1a	liana_consensus	no	M20A-EXT-0805	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+anxa2 tlr2	Anxa2 Tlr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+apln adra2a	Apln Adra2a	liana_consensus	no	M20A-EXT-0807	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+apln grm7	Apln Grm7	liana_consensus	no	M20A-EXT-0809	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+apln mtnr1a	Apln Mtnr1a	liana_consensus	no	M20A-EXT-0810	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+apob adrb2	Apob Adrb2	liana_consensus	no	M20A-EXT-0821	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+apob eno1	Apob Eno1	liana_consensus	no	M20A-EXT-0823	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+apob gm5506	Apob Gm5506	liana_consensus	no	M20A-EXT-0824	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+apob mttp	Apob Mttp	liana_consensus	no	M20A-EXT-0833	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+apob olr1	Apob Olr1	liana_consensus	no	M20A-EXT-0834	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+apob tlr4	Apob Tlr4	liana_consensus	no	M20A-EXT-0835	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+apob tlr6	Apob Tlr6	liana_consensus	no	M20A-EXT-0836	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+apoe chrna4	Apoe Chrna4	liana_consensus	no	M20A-EXT-0845	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+apoe lrp1	Apoe Lrp1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+apoo il1rapl2	Apoo Il1rapl2	liana_consensus	no	M20A-EXT-0858	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app adra2a	App Adra2a	liana_consensus	no	M20A-EXT-0859	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app ager	App Ager	liana_consensus	no	M20A-EXT-0860	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app aplp1	App Aplp1	liana_consensus	no	M20A-EXT-0861	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app aplp2	App Aplp2	liana_consensus	no	M20A-EXT-0862	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app cd74	App Cd74	liana_consensus	no	M20A-EXT-0863	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app dcc	App Dcc	liana_consensus	no	M20A-EXT-0864	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app fpr2	App Fpr2	liana_consensus	no	M20A-EXT-0865	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app gpc1	App Gpc1	liana_consensus	no	M20A-EXT-0866	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app grm7	App Grm7	liana_consensus	no	M20A-EXT-0867	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app lrp1	App Lrp1	liana_consensus	no	M20A-EXT-0868	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app lrp10	App Lrp10	liana_consensus	no	M20A-EXT-0869	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app lrp6	App Lrp6	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+app mtnr1a	App Mtnr1a	liana_consensus	no	M20A-EXT-0870	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app ncstn	App Ncstn	liana_consensus	no	M20A-EXT-0871	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app ngfr	App Ngfr	liana_consensus	no	M20A-EXT-0872	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app notch2	App Notch2	liana_consensus	no	M20A-EXT-0873	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app ptger2	App Ptger2	liana_consensus	no	M20A-EXT-0874	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app rpsa	App Rpsa	liana_consensus	no	M20A-EXT-0875	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app tspan12	App Tspan12	liana_consensus	no	M20A-EXT-0876	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app tspan15	App Tspan15	liana_consensus	no	M20A-EXT-0877	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+app vldlr	App Vldlr	liana_consensus	no	M20A-EXT-0878	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+arf1 chrm3	Arf1 Chrm3	liana_consensus	no	M20A-EXT-0880	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+arf1 insr	Arf1 Insr	liana_consensus	no	M20A-EXT-0881	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+arf1 pld2	Arf1 Pld2	liana_consensus	no	M20A-EXT-0882	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+arf6 pld1	Arf6 Pld1	liana_consensus	no	M20A-EXT-0883	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+arf6 smap1	Arf6 Smap1	liana_consensus	no	M20A-EXT-0884	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+arpc5 adrb2	Arpc5 Adrb2	liana_consensus	no	M20A-EXT-0885	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+arpc5 ldlr	Arpc5 Ldlr	liana_consensus	no	M20A-EXT-0886	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+arpc5 lrp2	Arpc5 Lrp2	liana_consensus	no	M20A-EXT-0887	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+avp adcyap1r1	Avp Adcyap1r1	liana_consensus	no	M20A-EXT-0889	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+avp adrb2	Avp Adrb2	liana_consensus	no	M20A-EXT-0890	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+avp adrb3	Avp Adrb3	liana_consensus	no	M20A-EXT-0891	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+avp gpr20	Avp Gpr20	liana_consensus	no	M20A-EXT-0895	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+avp gpr84	Avp Gpr84	liana_consensus	no	M20A-EXT-0896	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+avp oxtr	Avp Oxtr	liana_consensus	no	M20A-EXT-0899	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+avp pth1r	Avp Pth1r	liana_consensus	no	M20A-EXT-0900	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+avp tshr	Avp Tshr	liana_consensus	no	M20A-EXT-0903	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+avp vipr1	Avp Vipr1	liana_consensus	no	M20A-EXT-0904	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+b2m cd247	B2m Cd247	liana_consensus	no	M20A-EXT-0906	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+b2m cd3d	B2m Cd3d	liana_consensus	no	M20A-EXT-0907	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+b2m cd3g	B2m Cd3g	liana_consensus	no	M20A-EXT-0908	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+b2m hfe	B2m Hfe	liana_consensus	no	M20A-EXT-0909	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+b2m klrc1	B2m Klrc1	liana_consensus	no	M20A-EXT-0910	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+b2m klrd1	B2m Klrd1	liana_consensus	no	M20A-EXT-0911	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+b2m tfrc	B2m Tfrc	liana_consensus	no	M20A-EXT-0912	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bcan egfr	Bcan Egfr	liana_consensus	no	M20A-EXT-0913	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bdnf ngfr	Bdnf Ngfr	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+bgn ly96	Bgn Ly96	liana_consensus	no	M20A-EXT-0918	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bgn tlr1	Bgn Tlr1	liana_consensus	no	M20A-EXT-0919	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bgn tlr2	Bgn Tlr2	liana_consensus	no	M20A-EXT-0920	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bgn tlr4	Bgn Tlr4	liana_consensus	no	M20A-EXT-0921	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp10 acvr2a_acvrl1	Bmp10 Acvr2a_Acvrl1	liana_consensus	no	M20A-EXT-0925	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp10 acvr2b_acvrl1	Bmp10 Acvr2b_Acvrl1	liana_consensus	no	M20A-EXT-0926	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp10 eng	Bmp10 Eng	liana_consensus	no	M20A-EXT-0929	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp10 ffar2	Bmp10 Ffar2	liana_consensus	no	M20A-EXT-0930	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp10 gpr152	Bmp10 Gpr152	liana_consensus	no	M20A-EXT-0931	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp2 acvr2a_bmpr1a	Bmp2 Acvr2a_Bmpr1a	liana_consensus	no	M20A-EXT-0938	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp2 acvr2a_bmpr1b	Bmp2 Acvr2a_Bmpr1b	liana_consensus	no	M20A-EXT-0939	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp2 acvr2b_bmpr1a	Bmp2 Acvr2b_Bmpr1a	liana_consensus	no	M20A-EXT-0940	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp2 acvr2b_bmpr1b	Bmp2 Acvr2b_Bmpr1b	liana_consensus	no	M20A-EXT-0941	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp2 eng	Bmp2 Eng	liana_consensus	no	M20A-EXT-0942	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp2 smo	Bmp2 Smo	liana_consensus	no	M20A-EXT-0945	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp3 acvr1b_acvr2a	Bmp3 Acvr1b_Acvr2a	liana_consensus	no	M20A-EXT-0946	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp3 acvr2b	Bmp3 Acvr2b	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+bmp4 acvr2a_bmpr1a	Bmp4 Acvr2a_Bmpr1a	liana_consensus	no	M20A-EXT-0950	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp4 acvr2a_bmpr1b	Bmp4 Acvr2a_Bmpr1b	liana_consensus	no	M20A-EXT-0951	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp4 acvr2b_bmpr1a	Bmp4 Acvr2b_Bmpr1a	liana_consensus	no	M20A-EXT-0952	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp4 acvr2b_bmpr1b	Bmp4 Acvr2b_Bmpr1b	liana_consensus	no	M20A-EXT-0953	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp4 cfc1	Bmp4 Cfc1	liana_consensus	no	M20A-EXT-0954	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp4 grem2	Bmp4 Grem2	liana_consensus	no	M20A-EXT-0955	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp4 lrp6	Bmp4 Lrp6	liana_consensus	no	M20A-EXT-0956	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp4 rgmb	Bmp4 Rgmb	liana_consensus	no	M20A-EXT-0957	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp5 acvr2a_bmpr1a	Bmp5 Acvr2a_Bmpr1a	liana_consensus	no	M20A-EXT-0958	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp5 acvr2a_bmpr1b	Bmp5 Acvr2a_Bmpr1b	liana_consensus	no	M20A-EXT-0959	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp5 acvr2b_bmpr1a	Bmp5 Acvr2b_Bmpr1a	liana_consensus	no	M20A-EXT-0960	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp5 acvr2b_bmpr1b	Bmp5 Acvr2b_Bmpr1b	liana_consensus	no	M20A-EXT-0961	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp6 acvr2a_bmpr1a	Bmp6 Acvr2a_Bmpr1a	liana_consensus	no	M20A-EXT-0962	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp6 acvr2a_bmpr1b	Bmp6 Acvr2a_Bmpr1b	liana_consensus	no	M20A-EXT-0963	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp6 acvr2b_bmpr1a	Bmp6 Acvr2b_Bmpr1a	liana_consensus	no	M20A-EXT-0964	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp6 acvr2b_bmpr1b	Bmp6 Acvr2b_Bmpr1b	liana_consensus	no	M20A-EXT-0965	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp6 bmpr1b_bmpr2	Bmp6 Bmpr1b_bmpr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+bmp7 acvr1_acvr2a	Bmp7 Acvr1_acvr2a	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+bmp7 acvr1_acvr2b	Bmp7 Acvr1_acvr2b	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+bmp7 acvr1_bmpr2	Bmp7 Acvr1_bmpr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+bmp7 acvr2a_bmpr1a	Bmp7 Acvr2a_Bmpr1a	liana_consensus	no	M20A-EXT-0969	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp7 acvr2a_bmpr1b	Bmp7 Acvr2a_Bmpr1b	liana_consensus	no	M20A-EXT-0970	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp7 acvr2b_bmpr1a	Bmp7 Acvr2b_Bmpr1a	liana_consensus	no	M20A-EXT-0971	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp7 acvr2b_bmpr1b	Bmp7 Acvr2b_Bmpr1b	liana_consensus	no	M20A-EXT-0972	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp7 bmpr1a_bmpr2	Bmp7 Bmpr1a_bmpr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+bmp7 bmpr1b_bmpr2	Bmp7 Bmpr1b_bmpr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+bmp7 eng	Bmp7 Eng	liana_consensus	no	M20A-EXT-0973	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp7 ptprk	Bmp7 Ptprk	liana_consensus	no	M20A-EXT-0974	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp8a acvr1_acvr2a	Bmp8a Acvr1_acvr2a	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+bmp8a acvr1_acvr2b	Bmp8a Acvr1_acvr2b	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+bmp8a acvr1_bmpr2	Bmp8a Acvr1_bmpr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+bmp8a acvr2a_bmpr1a	Bmp8a Acvr2a_Bmpr1a	liana_consensus	no	M20A-EXT-0975	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp8a acvr2a_bmpr1b	Bmp8a Acvr2a_Bmpr1b	liana_consensus	no	M20A-EXT-0976	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp8a acvr2b_bmpr1a	Bmp8a Acvr2b_Bmpr1a	liana_consensus	no	M20A-EXT-0977	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp8a acvr2b_bmpr1b	Bmp8a Acvr2b_Bmpr1b	liana_consensus	no	M20A-EXT-0978	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bmp8a bmpr1a_bmpr2	Bmp8a Bmpr1a_bmpr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+bmp8a bmpr1b_bmpr2	Bmp8a Bmpr1b_bmpr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+bpi slamf9	Bpi Slamf9	liana_consensus	no	M20A-EXT-0981	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bsg slc16a1	Bsg Slc16a1	liana_consensus	no	M20A-EXT-0982	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bsg slc16a7	Bsg Slc16a7	liana_consensus	no	M20A-EXT-0983	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+bst1 cav1	Bst1 Cav1	liana_consensus	no	M20A-EXT-0984	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+btla cd247	Btla Cd247	liana_consensus	no	M20A-EXT-0986	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+btla cd79a	Btla Cd79a	liana_consensus	no	M20A-EXT-0987	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+btla tnfrsf14	Btla Tnfrsf14	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+btn1a1 negr1	Btn1a1 Negr1	liana_consensus	no	M20A-EXT-0988	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+btn1a1 tarm1	Btn1a1 Tarm1	liana_consensus	no	M20A-EXT-0989	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c1qa cd93	C1qa Cd93	liana_consensus	no	M20A-EXT-0990	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c1qb c1qbp	C1qb C1qbp	liana_consensus	no	M20A-EXT-0991	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c1qb lrp1	C1qb Lrp1	liana_consensus	no	M20A-EXT-0992	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c1qtnf5 mfrp	C1qtnf5 Mfrp	liana_consensus	no	M20A-EXT-0994	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c3 adra2a	C3 Adra2a	liana_consensus	no	M20A-EXT-0995	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c3 c3ar1	C3 C3ar1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+c3 c5ar2	C3 C5ar2	liana_consensus	no	M20A-EXT-0996	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c3 cd19	C3 Cd19	liana_consensus	no	M20A-EXT-0997	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c3 cd46	C3 Cd46	liana_consensus	no	M20A-EXT-0998	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c3 cd81	C3 Cd81	liana_consensus	no	M20A-EXT-0999	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c3 cr2	C3 Cr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+c3 grm7	C3 Grm7	liana_consensus	no	M20A-EXT-1000	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c3 itgam	C3 Itgam	liana_consensus	no	M20A-EXT-1001	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c3 itgax	C3 Itgax	liana_consensus	no	M20A-EXT-1002	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c3 lrp1	C3 Lrp1	liana_consensus	no	M20A-EXT-1003	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c3 mtnr1a	C3 Mtnr1a	liana_consensus	no	M20A-EXT-1004	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c3 nrp1	C3 Nrp1	liana_consensus	no	M20A-EXT-1005	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c4a c3ar1	C4a C3ar1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+c4a c5ar2	C4a C5ar2	liana_consensus	no	M20A-EXT-1006	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c4a cd46	C4a Cd46	liana_consensus	no	M20A-EXT-1007	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c4a cr2	C4a Cr2	liana_consensus	no	M20A-EXT-1008	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c4a nrp1	C4a Nrp1	liana_consensus	no	M20A-EXT-1009	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c4b c3ar1	C4b C3ar1	liana_consensus	no	M20A-EXT-1010	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c4b c5ar2	C4b C5ar2	liana_consensus	no	M20A-EXT-1011	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c4b cd46	C4b Cd46	liana_consensus	no	M20A-EXT-1012	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c4b cr2	C4b Cr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+c4b nrp1	C4b Nrp1	liana_consensus	no	M20A-EXT-1013	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c920025e04rik cd8a	C920025E04Rik Cd8a	liana_consensus	no	M20A-EXT-1014	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+c920025e04rik cd8b1	C920025E04Rik Cd8b1	liana_consensus	no	M20A-EXT-1015	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+cadm1 crtam	Cadm1 Crtam	liana_consensus	no	M20A-EXT-1016	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+cadm3 cadm1	Cadm3 Cadm1	liana_consensus	no	M20A-EXT-1017	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calca adcyap1r1	Calca Adcyap1r1	liana_consensus	no	M20A-EXT-1018	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calca adrb2	Calca Adrb2	liana_consensus	no	M20A-EXT-1019	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calca adrb3	Calca Adrb3	liana_consensus	no	M20A-EXT-1020	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calca gpr20	Calca Gpr20	liana_consensus	no	M20A-EXT-1023	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calca gpr84	Calca Gpr84	liana_consensus	no	M20A-EXT-1024	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calca pth1r	Calca Pth1r	liana_consensus	no	M20A-EXT-1025	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calca ramp1	Calca Ramp1	liana_consensus	no	M20A-EXT-1026	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calca ramp2	Calca Ramp2	liana_consensus	no	M20A-EXT-1027	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calca ramp3	Calca Ramp3	liana_consensus	no	M20A-EXT-1028	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calca tshr	Calca Tshr	liana_consensus	no	M20A-EXT-1029	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calca vipr1	Calca Vipr1	liana_consensus	no	M20A-EXT-1030	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calml3 kcnq1	Calml3 Kcnq1	liana_consensus	no	M20A-EXT-1031	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calr itga2b	Calr Itga2b	liana_consensus	no	M20A-EXT-1032	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calr itga3	Calr Itga3	liana_consensus	no	M20A-EXT-1033	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calr itgav	Calr Itgav	liana_consensus	no	M20A-EXT-1034	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calr lrp1	Calr Lrp1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+calr mpl	Calr Mpl	liana_consensus	no	M20A-EXT-1035	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calr mtnr1a	Calr Mtnr1a	liana_consensus	no	M20A-EXT-1036	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calr scarf1	Calr Scarf1	liana_consensus	no	M20A-EXT-1037	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+calr tshr	Calr Tshr	liana_consensus	no	M20A-EXT-1038	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+camp egfr	Camp Egfr	liana_consensus	no	M20A-EXT-1039	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+camp fpr2	Camp Fpr2	liana_consensus	no	M20A-EXT-1040	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+camp igf1r	Camp Igf1r	liana_consensus	no	M20A-EXT-1041	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+camp p2rx7	Camp P2rx7	liana_consensus	no	M20A-EXT-1042	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+ccl1 ccr8	Ccl1 Ccr8	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl11 ccr3	Ccl11 Ccr3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl11 ccr5	Ccl11 Ccr5	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl12 ccr2	Ccl12 Ccr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl17 ccr4	Ccl17 Ccr4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl2 ccr5	Ccl2 Ccr5	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl20 ccr6	Ccl20 Ccr6	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl21b ccr7	Ccl21b Ccr7	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl21b cxcr3	Ccl21b Cxcr3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl22 ccr4	Ccl22 Ccr4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl24 ccr3	Ccl24 Ccr3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl25 ccr9	Ccl25 Ccr9	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl27b ccr3	Ccl27b Ccr3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl28 ccr10	Ccl28 Ccr10	liana_consensus	yes		unreviewed	not_in_module20a_review_queue

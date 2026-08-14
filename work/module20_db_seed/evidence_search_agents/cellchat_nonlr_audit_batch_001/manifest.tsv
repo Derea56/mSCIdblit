@@ -1,0 +1,3 @@
+packet_id	row_count	first_pair_key	last_pair_key	packet_path	report_path	status
+M20A-CELLCHAT-NONLR-AUDIT-01	200	5-ht-dopa-ddc drd1	gaba-gad1_slc6a13 gabr_a2b3g2	work/module20_db_seed/evidence_search_agents/cellchat_nonlr_audit_batch_001/M20A-CELLCHAT-NONLR-AUDIT-01.tsv	work/module20_db_seed/evidence_search_agents/cellchat_nonlr_audit_batch_001/M20A-CELLCHAT-NONLR-AUDIT-01.report.tsv	assigned
+M20A-CELLCHAT-NONLR-AUDIT-02	197	gaba-gad1_slc6a13 gabr_a3b3e	vsir igsf11	work/module20_db_seed/evidence_search_agents/cellchat_nonlr_audit_batch_001/M20A-CELLCHAT-NONLR-AUDIT-02.tsv	work/module20_db_seed/evidence_search_agents/cellchat_nonlr_audit_batch_001/M20A-CELLCHAT-NONLR-AUDIT-02.report.tsv	assigned

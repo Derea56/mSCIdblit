@@ -1,0 +1,14 @@
+{
+  "generated_utc": "2026-08-13T18:09:10+00:00",
+  "remaining_cellchat_rows": 1869,
+  "final_class_counts": {
+    "low_evidence": 1006,
+    "manual_review": 411,
+    "no_evidence": 271,
+    "non_ligand_receptor": 181
+  },
+  "queue_rows_added": 1775,
+  "manual_review_rows": 411,
+  "confidence_promotions": 0,
+  "canonical_ledgers_backed_up": true
+}

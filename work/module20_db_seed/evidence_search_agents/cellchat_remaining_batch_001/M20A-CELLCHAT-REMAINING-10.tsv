@@ -1,0 +1,70 @@
+pair_key	pair_label_canonical	cellchat_status	module20a_status	review_id	current_confidence	prior_notes
+tenm4 adgrl3	Tenm4 Adgrl3	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+tenm4_flrt1 adgrl1	TENM4_FLRT1 Adgrl1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+tenm4_flrt3 adgrl1	TENM4_FLRT3 Adgrl1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+testosterone-akr1d1 ar	Testosterone-AKR1D1 Ar	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+testosterone-hsd17b12 ar	Testosterone-HSD17B12 Ar	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+testosterone-hsd17b3 ar	Testosterone-HSD17B3 Ar	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+tgfa egfr	Tgfa Egfr	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+tgfb1 acvr1_tgfbr	Tgfb1 Acvr1_tgfbr	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+tgfb1 tgfbr1_r2	Tgfb1 Tgfbr1_r2	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+tgfb2 acvr1_tgfbr	Tgfb2 Acvr1_tgfbr	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+tgfb2 tgfbr1_r2	Tgfb2 Tgfbr1_r2	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+tgfb3 acvr1_tgfbr	Tgfb3 Acvr1_tgfbr	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+tgfb3 tgfbr1_r2	Tgfb3 Tgfbr1_r2	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+tgm2 adgrg1	Tgm2 Adgrg1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+thy1 adgre5	Thy1 Adgre5	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+tnfsf9 tnfrsf9	Tnfsf9 Tnfrsf9	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+trh trhr2	Trh Trhr2	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+tslp il7r_crlf2	Tslp IL7R_CRLF2	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+tub mertk	Tub Mertk	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+tulp1 axl	Tulp1 Axl	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+tulp1 mertk	Tulp1 Mertk	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+tulp1 tyro3	Tulp1 Tyro3	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+tulp2 tyro3	Tulp2 Tyro3	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+txa2-tbxas1 tbxa2r	TXA2-TBXAS1 Tbxa2r	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ulbp1 klrk1	Ulbp1 Klrk1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ulbp1 klrk1_hcst	Ulbp1 KLRK1_HCST	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+unc5a adgrl3	Unc5a Adgrl3	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+vegfa flt1	Vegfa Flt1	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+vegfa kdr	Vegfa Kdr	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+vegfb flt1	Vegfb Flt1	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+vegfc flt4	Vegfc Flt4	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+vegfc kdr	Vegfc Kdr	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+vegfd flt4	Vegfd Flt4	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+vegfd flt4_kdr	Vegfd Flt4_kdr	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+vegfd kdr	Vegfd Kdr	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+vsir igsf11	Vsir Igsf11	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+wnt11 fzd1	Wnt11 Fzd1	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+wnt3 fzd7_lrp5	Wnt3 Fzd7_lrp5	cellchat_full	yes	M20A-LIANA-REMAINING-0404	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt3 fzd7_lrp6	Wnt3 Fzd7_lrp6	cellchat_full	yes	M20A-LIANA-REMAINING-0405	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt3 fzd8_lrp5	Wnt3 Fzd8_lrp5	cellchat_full	yes	M20A-LIANA-REMAINING-0406	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt3 fzd8_lrp6	Wnt3 Fzd8_lrp6	cellchat_full	yes	M20A-LIANA-REMAINING-0407	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt3a fzd1_lrp5	Wnt3a Fzd1_lrp5	cellchat_full	yes	M20A-LIANA-REMAINING-0412	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt3a fzd1_lrp6	Wnt3a Fzd1_lrp6	cellchat_full	yes	M20A-LIANA-REMAINING-0413	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt3a fzd3_lrp5	Wnt3a Fzd3_lrp5	cellchat_full	yes	M20A-LIANA-REMAINING-0416	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt3a fzd3_lrp6	Wnt3a Fzd3_lrp6	cellchat_full	yes	M20A-LIANA-REMAINING-0417	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt3a fzd6_lrp5	Wnt3a Fzd6_lrp5	cellchat_full	yes	M20A-LIANA-REMAINING-0422	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt3a fzd6_lrp6	Wnt3a Fzd6_lrp6	cellchat_full	yes	M20A-LIANA-REMAINING-0423	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt3a fzd7_lrp5	Wnt3a Fzd7_lrp5	cellchat_full	yes	M20A-LIANA-REMAINING-0424	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt3a fzd7_lrp6	Wnt3a Fzd7_lrp6	cellchat_full	yes	M20A-LIANA-REMAINING-0425	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt3a fzd9_lrp5	Wnt3a Fzd9_lrp5	cellchat_full	yes	M20A-LIANA-REMAINING-0428	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt3a fzd9_lrp6	Wnt3a Fzd9_lrp6	cellchat_full	yes	M20A-LIANA-REMAINING-0429	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt4 fzd6_lrp5	Wnt4 Fzd6_lrp5	cellchat_full	yes	M20A-LIANA-REMAINING-0443	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt4 fzd6_lrp6	Wnt4 Fzd6_lrp6	cellchat_full	yes	M20A-LIANA-REMAINING-0444	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt5b fzd1	Wnt5b Fzd1	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+wnt5b fzd10	Wnt5b Fzd10	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+wnt5b fzd2	Wnt5b Fzd2	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+wnt5b fzd3	Wnt5b Fzd3	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+wnt5b fzd5	Wnt5b Fzd5	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+wnt5b fzd6	Wnt5b Fzd6	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+wnt5b fzd7	Wnt5b Fzd7	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+wnt5b fzd8	Wnt5b Fzd8	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+wnt5b fzd9	Wnt5b Fzd9	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+wnt6 fzd4_lrp5	Wnt6 Fzd4_lrp5	cellchat_full	yes	M20A-LIANA-REMAINING-0470	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt6 fzd4_lrp6	Wnt6 Fzd4_lrp6	cellchat_full	yes	M20A-LIANA-REMAINING-0471	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt7a fzd5_lrp5	Wnt7a Fzd5_lrp5	cellchat_full	yes	M20A-LIANA-REMAINING-0492	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt7b fzd10_lrp6	Wnt7b Fzd10_lrp6	cellchat_full	yes	M20A-LIANA-REMAINING-0503	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt7b fzd1_lrp6	Wnt7b Fzd1_lrp6	cellchat_full	yes	M20A-LIANA-REMAINING-0505	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt9a fzd9_lrp5	Wnt9a Fzd9_lrp5	cellchat_full	yes	M20A-LIANA-REMAINING-0580	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+wnt9a fzd9_lrp6	Wnt9a Fzd9_lrp6	cellchat_full	yes	M20A-LIANA-REMAINING-0581	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.

@@ -1,0 +1,14 @@
+{
+  "generated_utc": "2026-08-13T16:31:38+00:00",
+  "remaining_liana_rows": 799,
+  "final_class_counts": {
+    "low_evidence": 241,
+    "manual_review": 114,
+    "no_evidence": 413,
+    "non_ligand_receptor": 31
+  },
+  "queue_rows_added": 602,
+  "manual_review_rows": 114,
+  "confidence_promotions": 0,
+  "canonical_ledgers_backed_up": true
+}

@@ -1,0 +1,14 @@
+{
+  "generated_utc": "2026-08-13T17:26:23+00:00",
+  "expected_rows": 1869,
+  "reported_rows": 1869,
+  "verdict_counts": {
+    "hold_low": 657,
+    "needs_manual_review": 397,
+    "no_evidence": 192,
+    "promote_candidate": 551,
+    "reject_pair": 72
+  },
+  "validation_errors": [],
+  "canonical_ledgers_mutated": false
+}

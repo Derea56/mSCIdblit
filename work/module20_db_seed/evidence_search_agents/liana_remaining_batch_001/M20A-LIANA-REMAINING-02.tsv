@@ -1,0 +1,201 @@
+pair_key	pair_label_canonical	liana_status	module20a_status	review_id	current_confidence	prior_notes
+ccl28 ccr3	Ccl28 Ccr3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl4 ccr5	Ccl4 Ccr5	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl5 ackr2	Ccl5 Ackr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl5 ccr1	Ccl5 Ccr1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl5 ccr3	Ccl5 Ccr3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl5 ccr4	Ccl5 Ccr4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ccl5 ccr5	Ccl5 Ccr5	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cd40lg cd40	Cd40lg Cd40	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cd40lg itga2b_itgb3	Cd40lg Itga2b_itgb3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cd40lg itga5_itgb1	Cd40lg Itga5_itgb1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cd40lg itgam_itgb2	Cd40lg Itgam_itgb2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cd70 cd27	Cd70 Cd27	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+col4a1 gp6	Col4a1 Gp6	liana_consensus	no	M20A-EXT-0183	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a1 itga9_itgb1	Col4a1 ITGA9_ITGB1	liana_consensus	no	M20A-EXT-0189	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a2 cd44	Col4a2 Cd44	liana_consensus	no	M20A-EXT-0192	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a2 gp6	Col4a2 Gp6	liana_consensus	no	M20A-EXT-0193	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a2 itga3_itgb1	Col4a2 ITGA3_ITGB1	liana_consensus	no	M20A-EXT-0198	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a2 itga9_itgb1	Col4a2 ITGA9_ITGB1	liana_consensus	no	M20A-EXT-0199	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a3 cd44	Col4a3 Cd44	liana_consensus	no	M20A-EXT-0202	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a3 gp6	Col4a3 Gp6	liana_consensus	no	M20A-EXT-0203	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a3 itga1_itgb1	Col4a3 ITGA1_ITGB1	liana_consensus	no	M20A-EXT-0206	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a3 itga2_itgb1	Col4a3 ITGA2_ITGB1	liana_consensus	no	M20A-EXT-0207	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a3 itga9_itgb1	Col4a3 ITGA9_ITGB1	liana_consensus	no	M20A-EXT-0209	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a3 itgav_itgb8	Col4a3 ITGAV_ITGB8	liana_consensus	no	M20A-EXT-0210	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a3 sdc1	Col4a3 Sdc1	liana_consensus	no	M20A-EXT-0211	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a4 cd44	Col4a4 Cd44	liana_consensus	no	M20A-EXT-0212	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a4 gp6	Col4a4 Gp6	liana_consensus	no	M20A-EXT-0213	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a4 itga1_itgb1	Col4a4 ITGA1_ITGB1	liana_consensus	no	M20A-EXT-0216	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a4 itga2_itgb1	Col4a4 ITGA2_ITGB1	liana_consensus	no	M20A-EXT-0217	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a4 itga3_itgb1	Col4a4 ITGA3_ITGB1	liana_consensus	no	M20A-EXT-0218	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a4 itga9_itgb1	Col4a4 ITGA9_ITGB1	liana_consensus	no	M20A-EXT-0219	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a4 itgav_itgb8	Col4a4 ITGAV_ITGB8	liana_consensus	no	M20A-EXT-0220	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+col4a4 sdc1	Col4a4 Sdc1	liana_consensus	no	M20A-EXT-0221	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale.
+csf3 csf3r	Csf3 Csf3r	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cx3cl1 cx3cr1	Cx3cl1 Cx3cr1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cxcl1 cxcr1	Cxcl1 Cxcr1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cxcl1 cxcr2	Cxcl1 Cxcr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cxcl10 ccr3	Cxcl10 Ccr3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cxcl10 cxcr3	Cxcl10 Cxcr3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cxcl12 ackr3	Cxcl12 Ackr3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cxcl12 cxcr4	Cxcl12 Cxcr4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cxcl13 cxcr3	Cxcl13 Cxcr3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cxcl13 cxcr5	Cxcl13 Cxcr5	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cxcl16 cxcr6	Cxcl16 Cxcr6	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cxcl2 cxcr1	Cxcl2 Cxcr1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cxcl2 cxcr2	Cxcl2 Cxcr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cxcl5 cxcr1	Cxcl5 Cxcr1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+cxcl5 cxcr2	Cxcl5 Cxcr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+dcn tlr2	Dcn Tlr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+dkk2 lrp6	Dkk2 Lrp6	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+dlk1 notch1	Dlk1 Notch1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+dlk2 notch1	Dlk2 Notch1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+dll1 notch1	Dll1 Notch1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+dll1 notch2	Dll1 Notch2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+dll1 notch3	Dll1 Notch3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+dll4 notch1	Dll4 Notch1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+dll4 notch2	Dll4 Notch2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+edil3 itgav	Edil3 Itgav	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+edil3 itgb3	Edil3 Itgb3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efna2 epha2	Efna2 Epha2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efna2 epha3	Efna2 Epha3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efna2 epha4	Efna2 Epha4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efna2 epha5	Efna2 Epha5	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efna2 epha6	Efna2 Epha6	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efna2 epha7	Efna2 Epha7	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efna2 epha8	Efna2 Epha8	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efna3 epha4	Efna3 Epha4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efna3 epha5	Efna3 Epha5	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efna4 epha3	Efna4 Epha3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efna4 epha4	Efna4 Epha4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efna4 epha5	Efna4 Epha5	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efna4 epha6	Efna4 Epha6	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efna4 epha7	Efna4 Epha7	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efna4 epha8	Efna4 Epha8	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efna5 epha4	Efna5 Epha4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efna5 epha5	Efna5 Epha5	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efna5 epha8	Efna5 Epha8	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efnb1 epha4	Efnb1 Epha4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efnb1 ephb2	Efnb1 Ephb2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efnb1 ephb3	Efnb1 Ephb3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efnb1 ephb4	Efnb1 Ephb4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efnb1 ephb6	Efnb1 Ephb6	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efnb2 epha4	Efnb2 Epha4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efnb2 ephb2	Efnb2 Ephb2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efnb2 ephb3	Efnb2 Ephb3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efnb2 ephb4	Efnb2 Ephb4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efnb2 ephb6	Efnb2 Ephb6	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efnb3 epha4	Efnb3 Epha4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efnb3 ephb1	Efnb3 Ephb1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efnb3 ephb2	Efnb3 Ephb2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efnb3 ephb3	Efnb3 Ephb3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+efnb3 ephb4	Efnb3 Ephb4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+epo crlf3	Epo Crlf3	liana_consensus	no	M20A-EXT-1572	uncertain	Parallel worker packet did not establish pair-specific support beyond a database or indirect candidate; retain uncertain pending a cleaner evidence packet.
+fasl fas	Fasl Fas	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fbln2 itgb3	Fbln2 Itgb3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fga itga2b	Fga Itga2b	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fga itgb3	Fga Itgb3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fgb itga2b	Fgb Itga2b	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fgb itgb3	Fgb Itgb3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fgf1 fgfr1	Fgf1 Fgfr1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fgf1 fgfr4	Fgf1 Fgfr4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fgf17 fgfr1	Fgf17 Fgfr1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fgf17 fgfr2	Fgf17 Fgfr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fgf18 fgfr3	Fgf18 Fgfr3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fgf20 fgfr1	Fgf20 Fgfr1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fgf20 fgfr2	Fgf20 Fgfr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fgf21 klb	Fgf21 Klb	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fgf23 fgfr3	Fgf23 Fgfr3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fgf3 fgfr1	Fgf3 Fgfr1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fgf3 fgfr2	Fgf3 Fgfr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fgf8 fgfr1	Fgf8 Fgfr1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fgf9 fgfr2	Fgf9 Fgfr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fgf9 fgfr3	Fgf9 Fgfr3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fgg itga2b	Fgg Itga2b	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fgg itgb3	Fgg Itgb3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fndc5 itgav	Fndc5 Itgav	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+fndc5 itgb5	Fndc5 Itgb5	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+gdf1 acvr1b_acvr2a_cfc1	Gdf1 Acvr1b_acvr2a_cfc1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+gdf1 acvr1b_acvr2b_cfc1	Gdf1 Acvr1b_acvr2b_cfc1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+gdf1 acvr1c_acvr2a_cfc1	Gdf1 Acvr1c_acvr2a_cfc1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+gdf10 acvr1b_acvr2a	Gdf10 Acvr1b_acvr2a	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+gdf11 acvr1b_acvr2b	Gdf11 Acvr1b_acvr2b	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+gdf15 gfral	Gdf15 Gfral	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+gdf2 acvrl1_bmpr2	Gdf2 Acvrl1_bmpr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+gdf3 acvr1b_acvr2a_cfc1	Gdf3 Acvr1b_acvr2a_cfc1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+gdf3 acvr1b_acvr2b_cfc1	Gdf3 Acvr1b_acvr2b_cfc1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+gdf3 acvr1c_acvr2a_cfc1	Gdf3 Acvr1c_acvr2a_cfc1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+gdf5 bmpr1a_bmpr2	Gdf5 Bmpr1a_bmpr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+gdf5 bmpr1b_bmpr2	Gdf5 Bmpr1b_bmpr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+gdf5 ror2	Gdf5 Ror2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+gdf6 bmpr1a_bmpr2	Gdf6 Bmpr1a_bmpr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+gdf6 bmpr1b_bmpr2	Gdf6 Bmpr1b_bmpr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+gdf7 bmpr1a_bmpr2	Gdf7 Bmpr1a_bmpr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+gdf7 bmpr1b_bmpr2	Gdf7 Bmpr1b_bmpr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+gdf9 acvr1b_bmpr2	Gdf9 Acvr1b_bmpr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+grn tnfrsf1a	Grn Tnfrsf1a	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+grn tnfrsf1b	Grn Tnfrsf1b	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+hbegf egfr_erbb2	Hbegf Egfr_erbb2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+hbegf erbb2_erbb4	Hbegf Erbb2_erbb4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+hc c5ar1	Hc C5ar1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+hgf met	Hgf Met	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ifna11 ifnar1_ifnar2	Ifna11 Ifnar1_ifnar2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+il10 il10ra_il10rb	Il10 Il10ra_il10rb	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+il17b il17rb	Il17b Il17rb	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+il17c il17ra_il17re	Il17c Il17ra_il17re	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+il19 il20ra_il20rb	Il19 Il20ra_il20rb	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+il1a il1r1_il1rap	Il1a Il1r1_il1rap	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+il1b il1r1_il1rap	Il1b Il1r1_il1rap	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+il20 il20ra_il20rb	Il20 Il20ra_il20rb	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+il24 il20ra_il20rb	Il24 Il20ra_il20rb	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+il25 il17ra_il17rb	Il25 Il17ra_il17rb	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+inhbc acvr1b_acvr2a	Inhbc Acvr1b_acvr2a	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+inhbc acvr1b_acvr2b	Inhbc Acvr1b_acvr2b	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+inhbc acvr1c_acvr2a	Inhbc Acvr1c_acvr2a	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+inhbc acvr1c_acvr2b	Inhbc Acvr1c_acvr2b	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+inhbe acvr1b_acvr2a	Inhbe Acvr1b_acvr2a	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+inhbe acvr1b_acvr2b	Inhbe Acvr1b_acvr2b	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+inhbe acvr1c_acvr2a	Inhbe Acvr1c_acvr2a	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+inhbe acvr1c_acvr2b	Inhbe Acvr1c_acvr2b	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+jag1 notch1	Jag1 Notch1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+jag1 notch2	Jag1 Notch2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+jag1 notch3	Jag1 Notch3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+jag1 notch4	Jag1 Notch4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+jag2 notch1	Jag2 Notch1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+jag2 notch2	Jag2 Notch2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+jag2 notch3	Jag2 Notch3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+leap2 ghsr	Leap2 Ghsr	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+lta tnfrsf14	Lta Tnfrsf14	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+lta tnfrsf1a	Lta Tnfrsf1a	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+lta tnfrsf1b	Lta Tnfrsf1b	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+mif ackr3	Mif Ackr3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+msmp ccr2	Msmp Ccr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ndp fzd4	Ndp Fzd4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ngf ngfr	Ngf Ngfr	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ngf ntrk1	Ngf Ntrk1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+nrtn gfra2_ret	Nrtn Gfra2_ret	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ntf3 ngfr	Ntf3 Ngfr	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+ntf5 ngfr	Ntf5 Ngfr	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+pdgfa pdgfra	Pdgfa Pdgfra	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+pdgfa pdgfrb	Pdgfa Pdgfrb	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+pdgfc pdgfra	Pdgfc Pdgfra	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+pf4 cxcr3	Pf4 Cxcr3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+pspn gfra4_ret	Pspn Gfra4_ret	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+rarres2 ccrl2	Rarres2 Ccrl2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+reln lrp8	Reln Lrp8	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+reln vldlr	Reln Vldlr	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+retn tlr4	Retn Tlr4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+rspo1 fzd8	Rspo1 Fzd8	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+rspo3 fzd8	Rspo3 Fzd8	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+s100a8 ager	S100a8 Ager	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+s100a8 tlr4	S100a8 Tlr4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+s100a9 ager	S100a9 Ager	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+s100a9 tlr4	S100a9 Tlr4	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+s100b ager	S100b Ager	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+saa1 tlr2	Saa1 Tlr2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+sema3a nrp2	Sema3a Nrp2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+sema4a plxnb1	Sema4a Plxnb1	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+sema4a plxnb2	Sema4a Plxnb2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+sema4a plxnb3	Sema4a Plxnb3	liana_consensus	yes		unreviewed	not_in_module20a_review_queue
+sema4c plxnb2	Sema4c Plxnb2	liana_consensus	yes		unreviewed	not_in_module20a_review_queue

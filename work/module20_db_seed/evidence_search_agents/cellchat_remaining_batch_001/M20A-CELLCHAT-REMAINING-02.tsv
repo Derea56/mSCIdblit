@@ -1,0 +1,201 @@
+pair_key	pair_label_canonical	cellchat_status	module20a_status	review_id	current_confidence	prior_notes
+apoe trem2_tyrobp	Apoe TREM2_TYROBP	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+app sorl1	App Sorl1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+app trem2_tyrobp	App TREM2_TYROBP	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+areg egfr	Areg Egfr	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+b-endorphin-pomc oprd1	b-Endorphin-POMC Oprd1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+b-endorphin-pomc oprk1	b-Endorphin-POMC Oprk1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+b-endorphin-pomc oprm1	b-Endorphin-POMC Oprm1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+bag6 ncr3-ps	Bag6 Ncr3-ps	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+bmp7 bmpr1a_acvr2a	Bmp7 Bmpr1a_acvr2a	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+bmp7 bmpr1a_acvr2b	Bmp7 Bmpr1a_acvr2b	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+bmp7 bmpr1b_acvr2a	Bmp7 Bmpr1b_acvr2a	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+bmp7 bmpr1b_acvr2b	Bmp7 Bmpr1b_acvr2b	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+bmp8a bmpr1a_acvr2a	Bmp8a Bmpr1a_acvr2a	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+bmp8a bmpr1a_acvr2b	Bmp8a Bmpr1a_acvr2b	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+bmp8a bmpr1b_acvr2a	Bmp8a Bmpr1b_acvr2a	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+bmp8a bmpr1b_acvr2b	Bmp8a Bmpr1b_acvr2b	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+bmp8b acvr1_acvr2a	Bmp8b Acvr1_acvr2a	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+bmp8b acvr1_acvr2b	Bmp8b Acvr1_acvr2b	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+bmp8b acvr1_bmpr2	Bmp8b Acvr1_bmpr2	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+bmp8b bmpr1a_acvr2a	Bmp8b Bmpr1a_acvr2a	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+bmp8b bmpr1a_acvr2b	Bmp8b Bmpr1a_acvr2b	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+bmp8b bmpr1a_bmpr2	Bmp8b Bmpr1a_bmpr2	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+bmp8b bmpr1b_acvr2a	Bmp8b Bmpr1b_acvr2a	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+bmp8b bmpr1b_acvr2b	Bmp8b Bmpr1b_acvr2b	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+bmp8b bmpr1b_bmpr2	Bmp8b Bmpr1b_bmpr2	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+bst2 pira2	Bst2 Pira2	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+btc egfr	Btc Egfr	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+btc erbb4	Btc Erbb4	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+cadm1 cadm1	Cadm1 Cadm1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cadm1 nectin3	Cadm1 Nectin3	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cadm3 cadm3	Cadm3 Cadm3	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cadm3 cadm4	Cadm3 Cadm4	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cadm3 epb41l1	Cadm3 Epb41l1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cadm3 nectin3	Cadm3 Nectin3	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+calca calcr_ramp1	Calca CALCR_RAMP1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+calca calcr_ramp2	Calca CALCR_RAMP2	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+calca calcr_ramp3	Calca CALCR_RAMP3	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+calca calcrl_ramp1	Calca CALCRL_RAMP1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+calca calcrl_ramp2	Calca CALCRL_RAMP2	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+calca calcrl_ramp3	Calca CALCRL_RAMP3	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+calcb calcr_ramp1	Calcb CALCR_RAMP1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+calcb calcr_ramp2	Calcb CALCR_RAMP2	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+calcb calcr_ramp3	Calcb CALCR_RAMP3	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+calcb calcrl_ramp1	Calcb CALCRL_RAMP1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+calcb calcrl_ramp2	Calcb CALCRL_RAMP2	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+calcb calcrl_ramp3	Calcb CALCRL_RAMP3	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+calcitriol-cyp27b1 vdr	Calcitriol-CYP27B1 Vdr	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ccl19 ccr7	Ccl19 Ccr7	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl21 ccr7	Ccl21 Ccr7	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl21a ccr7	Ccl21a Ccr7	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl21d ccr7	Ccl21d Ccr7	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl21e ccr7	Ccl21e Ccr7	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl21f ccr7	Ccl21f Ccr7	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl26 ccr3	Ccl26 Ccr3	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl27a ccr3	Ccl27a Ccr3	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl3 ccr1l1	Ccl3 Ccr1l1	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl3 ccr5	Ccl3 Ccr5	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl5 ackr1	Ccl5 Ackr1	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl5 ccr1	Ccl5 Ccr1	cellchat_full	yes	M20A-LIANA-REMAINING-0043	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Candidate audit verdict=needs_manual_review.
+ccl5 ccr1l1	Ccl5 Ccr1l1	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl5 ccr4	Ccl5 Ccr4	cellchat_full	yes	M20A-LIANA-REMAINING-0045	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+ccl5 ccr5	Ccl5 Ccr5	cellchat_full	yes	M20A-LIANA-REMAINING-0046	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Candidate audit verdict=needs_manual_review.
+ccl6 ccr1	Ccl6 Ccr1	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl6 ccr1l1	Ccl6 Ccr1l1	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl6 ccr2	Ccl6 Ccr2	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl6 ccr3	Ccl6 Ccr3	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl7 ackr1	Ccl7 Ackr1	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl7 ccr1	Ccl7 Ccr1	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl7 ccr1l1	Ccl7 Ccr1l1	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl7 ccr2	Ccl7 Ccr2	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl7 ccr3	Ccl7 Ccr3	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl8 ackr1	Ccl8 Ackr1	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl8 ackr4	Ccl8 Ackr4	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl8 ccr1	Ccl8 Ccr1	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl8 ccr1l1	Ccl8 Ccr1l1	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl8 ccr2	Ccl8 Ccr2	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl8 ccr5	Ccl8 Ccr5	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl9 ccr1	Ccl9 Ccr1	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+ccl9 ccr1l1	Ccl9 Ccr1l1	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+cd160 tnfrsf14	Cd160 Tnfrsf14	cellchat_full	yes		unreviewed	not_in_module20a_review_queue
+cd1d1 ceacam5	Cd1d1 Ceacam5	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cd1d2 pira2	Cd1d2 Pira2	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cd200 cd200r1l	Cd200 Cd200r1l	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cd200 cd200r3	Cd200 Cd200r3	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cd209a ceacam1	Cd209a Ceacam1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cd276 treml2	Cd276 Treml2	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cd40lg cd40	Cd40lg Cd40	cellchat_full	yes	M20A-LIANA-REMAINING-0047	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Candidate audit verdict=needs_manual_review.
+cd40lg itga5_itgb1	Cd40lg Itga5_itgb1	cellchat_full	yes	M20A-LIANA-REMAINING-0049	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+cd40lg itgam_itgb2	Cd40lg Itgam_itgb2	cellchat_full	yes	M20A-LIANA-REMAINING-0050	uncertain	Remaining LIANA pair searched in bounded exact-pair and expanded-family pass. Expanded search verdict=needs_manual_review.
+cd46 jag1	Cd46 Jag1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cd48 cd244a	Cd48 Cd244a	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cd52 siglecg	Cd52 Siglecg	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cd55 adgre5	Cd55 Adgre5	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cd55b adgre5	Cd55b Adgre5	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cd6 alcam	Cd6 Alcam	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cd80 cd274	Cd80 Cd274	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cd8a ceacam5	Cd8a Ceacam5	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cd96 pvr	Cd96 Pvr	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cd99 cd99	Cd99 Cd99	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cd99 pilra	Cd99 Pilra	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cd99 pilrb1	Cd99 Pilrb1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cd99 pilrb2	Cd99 Pilrb2	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cdh1 cdh1	Cdh1 Cdh1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cdh12 itga1_itgb1	Cdh12 ITGA1_ITGB1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cdh15 cdh15	Cdh15 Cdh15	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cdh2 cdh2	Cdh2 Cdh2	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cdh3 cdh3	Cdh3 Cdh3	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cdh4 cdh4	Cdh4 Cdh4	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cdh5 cdh5	Cdh5 Cdh5	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam1 cd1d1	Ceacam1 Cd1d1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam1 cd1d2	Ceacam1 Cd1d2	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam1 cd209b	Ceacam1 Cd209b	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam1 cd209c	Ceacam1 Cd209c	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam1 cd209d	Ceacam1 Cd209d	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam1 cd209e	Ceacam1 Cd209e	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam1 cd8a	Ceacam1 Cd8a	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam1 ceacam1	Ceacam1 Ceacam1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam1 ceacam2	Ceacam1 Ceacam2	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam1 ceacam5	Ceacam1 Ceacam5	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam1 psg20	Ceacam1 Psg20	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam2 cd1d1	Ceacam2 Cd1d1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam2 cd1d2	Ceacam2 Cd1d2	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam2 cd209a	Ceacam2 Cd209a	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam2 cd209b	Ceacam2 Cd209b	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam2 cd209c	Ceacam2 Cd209c	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam2 cd209d	Ceacam2 Cd209d	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam2 cd209e	Ceacam2 Cd209e	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam2 cd8a	Ceacam2 Cd8a	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam2 ceacam2	Ceacam2 Ceacam2	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam2 psg20	Ceacam2 Psg20	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+ceacam2 sele	Ceacam2 Sele	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cga_tshb tshr	CGA_TSHB Tshr	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cholesterol-cel rora	Cholesterol-CEL Rora	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cholesterol-cel rorc	Cholesterol-CEL Rorc	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cholesterol-dhcr7 rora	Cholesterol-DHCR7 Rora	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cholesterol-dhcr7 rorc	Cholesterol-DHCR7 Rorc	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cholesterol-lipa rora	Cholesterol-LIPA Rora	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cholesterol-lipa rorc	Cholesterol-LIPA Rorc	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clcf1 cntfr_lifr	Clcf1 CNTFR_LIFR	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cldn1 cldn1	Cldn1 Cldn1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cldn11 cldn11	Cldn11 Cldn11	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cldn2 cldn2	Cldn2 Cldn2	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cldn3 cldn3	Cldn3 Cldn3	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2d klrb1	Clec2d Klrb1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2d klrb1a	Clec2d Klrb1a	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2d klrb1b	Clec2d Klrb1b	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2d klrb1c	Clec2d Klrb1c	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2d klrb1f	Clec2d Klrb1f	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2e klrb1	Clec2e Klrb1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2e klrb1a	Clec2e Klrb1a	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2e klrb1b	Clec2e Klrb1b	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2e klrb1c	Clec2e Klrb1c	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2e klrb1f	Clec2e Klrb1f	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2f klrb1	Clec2f Klrb1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2f klrb1a	Clec2f Klrb1a	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2f klrb1b	Clec2f Klrb1b	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2f klrb1c	Clec2f Klrb1c	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2f klrb1f	Clec2f Klrb1f	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2g klrb1	Clec2g Klrb1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2g klrb1a	Clec2g Klrb1a	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2g klrb1b	Clec2g Klrb1b	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2g klrb1c	Clec2g Klrb1c	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2g klrb1f	Clec2g Klrb1f	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2h klrb1	Clec2h Klrb1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2h klrb1a	Clec2h Klrb1a	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2h klrb1b	Clec2h Klrb1b	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2h klrb1c	Clec2h Klrb1c	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2h klrb1f	Clec2h Klrb1f	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2i klrb1	Clec2i Klrb1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2i klrb1a	Clec2i Klrb1a	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2i klrb1b	Clec2i Klrb1b	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2i klrb1c	Clec2i Klrb1c	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+clec2i klrb1f	Clec2i Klrb1f	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cntf cntfr_lifr	Cntf CNTFR_LIFR	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cntn2 cntn2	Cntn2 Cntn2	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cntn2 cntn2_cntnap2	Cntn2 CNTN2_CNTNAP2	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+cntn2 l1cam	Cntn2 L1cam	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+col3a1 adgrg1	Col3a1 Adgrg1	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+col4a1 adgrg6	Col4a1 Adgrg6	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+col4a1 gp6	Col4a1 Gp6	cellchat_full	no	M20A-EXT-0183	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale. Expanded search verdict=needs_manual_review.
+col4a1 itga9_itgb1	Col4a1 ITGA9_ITGB1	cellchat_full	no	M20A-EXT-0189	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale. Expanded search verdict=needs_manual_review.
+col4a2 adgrg6	Col4a2 Adgrg6	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+col4a2 cd44	Col4a2 Cd44	cellchat_full	no	M20A-EXT-0192	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale. Expanded search verdict=needs_manual_review.
+col4a2 gp6	Col4a2 Gp6	cellchat_full	no	M20A-EXT-0193	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale. Expanded search verdict=needs_manual_review.
+col4a2 itga3_itgb1	Col4a2 ITGA3_ITGB1	cellchat_full	no	M20A-EXT-0198	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale. Expanded search verdict=needs_manual_review.
+col4a2 itga9_itgb1	Col4a2 ITGA9_ITGB1	cellchat_full	no	M20A-EXT-0199	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale. Expanded search verdict=needs_manual_review.
+col4a3 adgrg6	Col4a3 Adgrg6	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+col4a3 cd44	Col4a3 Cd44	cellchat_full	no	M20A-EXT-0202	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale. Expanded search verdict=needs_manual_review.
+col4a3 gp6	Col4a3 Gp6	cellchat_full	no	M20A-EXT-0203	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale. Expanded search verdict=needs_manual_review.
+col4a3 itga1_itgb1	Col4a3 ITGA1_ITGB1	cellchat_full	no	M20A-EXT-0206	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale. Expanded search verdict=needs_manual_review.
+col4a3 itga2_itgb1	Col4a3 ITGA2_ITGB1	cellchat_full	no	M20A-EXT-0207	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale. Expanded search verdict=needs_manual_review.
+col4a3 itga9_itgb1	Col4a3 ITGA9_ITGB1	cellchat_full	no	M20A-EXT-0209	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale. Expanded search verdict=needs_manual_review.
+col4a3 itgav_itgb8	Col4a3 ITGAV_ITGB8	cellchat_full	no	M20A-EXT-0210	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale. Expanded search verdict=needs_manual_review.
+col4a3 sdc1	Col4a3 Sdc1	cellchat_full	no	M20A-EXT-0211	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale. Expanded search verdict=needs_manual_review.
+col4a4 adgrg6	Col4a4 Adgrg6	cellchat_full	no		unreviewed	not_in_module20a_review_queue
+col4a4 cd44	Col4a4 Cd44	cellchat_full	no	M20A-EXT-0212	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale. Expanded search verdict=needs_manual_review.
+col4a4 gp6	Col4a4 Gp6	cellchat_full	no	M20A-EXT-0213	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale. Expanded search verdict=needs_manual_review.
+col4a4 itga1_itgb1	Col4a4 ITGA1_ITGB1	cellchat_full	no	M20A-EXT-0216	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale. Expanded search verdict=needs_manual_review.
+col4a4 itga2_itgb1	Col4a4 ITGA2_ITGB1	cellchat_full	no	M20A-EXT-0217	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale. Expanded search verdict=needs_manual_review.
+col4a4 itga3_itgb1	Col4a4 ITGA3_ITGB1	cellchat_full	no	M20A-EXT-0218	uncertain	Parallel worker evidence packet integrated with conservative species-specific reconciliation; see source locator and worker output for pair-level rationale. Expanded search verdict=needs_manual_review.
