@@ -8,14 +8,13 @@ The script preserves stable edge/evidence/perturbation IDs, source locators, spe
 
 Static payload validation passed before staging generation:
 
-- 110 combined edges
-- 50 combined evidence records
-- 54 combined perturbation records
-- 45 evidence-layer rows
-- 10 unresolved cases
+- 113 combined edges
+- 52 combined evidence records
+- 57 combined perturbation records
+- 48 evidence-layer rows
+- 12 unresolved cases
 - every edge evidence-backed
 - every layer row references an edge and evidence record
 - Module 20A manifest SHA-256 unchanged: `02e77740cdd46dc7835fbfe356835feeb2a0c692a3c6a5962831f6de1786288e`
 
 Runtime execution against a temporary PostgreSQL cluster was attempted but could not initialize because the sandbox disallows the PostgreSQL shared-memory segment required by `initdb`. The SQL remains ready for execution in a normal PostgreSQL environment.
-

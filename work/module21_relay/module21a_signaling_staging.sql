@@ -158,13 +158,13 @@ DECLARE
   n INTEGER;
 BEGIN
   SELECT COUNT(*) INTO n FROM module21a_edge_staging;
-  IF n <> 110 THEN RAISE EXCEPTION 'Expected 110 combined edges, found %', n; END IF;
+  IF n <> 113 THEN RAISE EXCEPTION 'Expected 113 combined edges, found %', n; END IF;
 
   SELECT COUNT(*) INTO n FROM module21a_evidence_staging;
-  IF n <> 50 THEN RAISE EXCEPTION 'Expected 50 combined evidence records, found %', n; END IF;
+  IF n <> 52 THEN RAISE EXCEPTION 'Expected 52 combined evidence records, found %', n; END IF;
 
   SELECT COUNT(*) INTO n FROM module21a_perturbation_staging;
-  IF n <> 54 THEN RAISE EXCEPTION 'Expected 54 combined perturbation records, found %', n; END IF;
+  IF n <> 57 THEN RAISE EXCEPTION 'Expected 57 combined perturbation records, found %', n; END IF;
 
   SELECT COUNT(*) INTO n
   FROM module21a_edge_staging e
