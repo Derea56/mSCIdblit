@@ -14,6 +14,7 @@ This is a read-only reconciliation against the frozen Module 20A source-union qu
 - Q007 RTKs: FGF10–FGFR2 is present at medium (`M20A-EXT-0086`); PDGFB/PDGFD–PDGFRβ and VEGFA–KDR are present at low. These LR calls do not establish the downstream SCI receiver branches separately recorded in Module 21A.
 - Q008 WNT: WNT5A–RYK is present at low and WNT5A–PTK7 at medium. The Module 21A RYK edge remains a functional SCI astrocyte record with a noncanonical-branch limitation.
 - Q009 Notch: DLL4–NOTCH1 and JAG1–NOTCH1/2/3/4 contexts are present at low. The Module 21A DLL4–NOTCH1 pathway record is supported by separate primary intracellular/functional evidence and is not promoted to NOTCH2/3/4 equivalence.
+- Q010 CSF1/CSF1R: `csf1 csf1r` is present in the frozen source-union queue (`M20A-CELLCHAT-REMAINING-0381`) and in the audited CellChat/ConnectomeDB seed contexts. These Module 20A LR records remain separate from the new focal-SCI CSF1/IFN-beta pathway/function edges; no Module 20A confidence call is copied into Module 21A.
 
 ## Unresolved or absent exact contexts
 
@@ -24,4 +25,3 @@ This is a read-only reconciliation against the frozen Module 20A source-union qu
 ## Pre-SQL implication
 
 All Module 21A relay and functional edges can retain their current source and target node labels for staging, but materialization must preserve the distinction between Module 20A ligand/receptor context and Module 21A intracellular/pathway/function evidence. Module 20A ledgers and the frozen manifest were not modified.
-
