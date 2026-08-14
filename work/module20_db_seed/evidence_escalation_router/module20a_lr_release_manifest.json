@@ -1,0 +1,71 @@
+{
+  "manifest_version": "module20a-lr-release-2026-08-14",
+  "generated_utc": "2026-08-14T13:01:57+00:00",
+  "source_git_commit": "83cef801a7e0436916f0623e0c33a46df9050908",
+  "pair_universe": {
+    "comparison_total": 6116,
+    "source_union_total": 5906,
+    "comparison_only_total": 210,
+    "cellchat_full_total": 3379,
+    "liana_consensus_total": 3989
+  },
+  "classification_counts": {
+    "source_union": {
+      "high": 99,
+      "low_evidence": 1731,
+      "medium": 1011,
+      "no_evidence": 2157,
+      "non_ligand_receptor": 725,
+      "uncertain": 183
+    },
+    "comparison_only": {
+      "unclassified": 210
+    },
+    "cellchat_full": {
+      "high": 69,
+      "low_evidence": 1505,
+      "medium": 513,
+      "no_evidence": 995,
+      "non_ligand_receptor": 134,
+      "uncertain": 163
+    },
+    "liana_consensus": {
+      "high": 93,
+      "low_evidence": 476,
+      "medium": 940,
+      "no_evidence": 1817,
+      "non_ligand_receptor": 615,
+      "uncertain": 48
+    }
+  },
+  "ledger_row_counts": {
+    "low_evidence": 1731,
+    "no_evidence": 2157,
+    "non_ligand_receptor": 725
+  },
+  "queue_row_count": 5906,
+  "files": {
+    "work/module20_db_seed/evidence_escalation_router/module20a_cellchat_liana_pair_comparison.tsv": {
+      "sha256": "29a6d3a9b59615449f66dcc2c7473554dd60364090ee095686bda38aaf89fe3c",
+      "bytes": 761065
+    },
+    "work/module20_db_seed/evidence_escalation_router/module20a_external_review_queue.tsv": {
+      "sha256": "b4fee1449e6a9c6868ee44d41436f7fc4b95cdb54afc53a14918d23016867384",
+      "bytes": 2265714
+    },
+    "work/module20_db_seed/evidence_escalation_router/module20a_low_evidence_registry.tsv": {
+      "sha256": "9729bb35a8a1fe8f77def4394b75ad2129d3f67c59a01f4f43234c4070bf8335",
+      "bytes": 1758609
+    },
+    "work/module20_db_seed/evidence_escalation_router/module20a_no_evidence_registry.tsv": {
+      "sha256": "9bc6c5ebf719fc7904cda60d37648e99ea2ba30b7472f001a72e0c635486e12a",
+      "bytes": 1927134
+    },
+    "work/module20_db_seed/evidence_escalation_router/module20a_non_ligand_receptor_registry.tsv": {
+      "sha256": "39c7a015fef64368d92ba8710f875942b64501d255e64234edc3a16381890a1e",
+      "bytes": 449533
+    }
+  },
+  "classification_rule": "ledger membership takes precedence over queue confidence; remaining queue confidence is retained as high, medium, or uncertain; unclassified is explicit.",
+  "module21a_guardrail": "LR evidence establishes ligand/receptor evidence only; intracellular relay edges require separate primary evidence and must retain species, assay, branch, and context qualifiers."
+}
