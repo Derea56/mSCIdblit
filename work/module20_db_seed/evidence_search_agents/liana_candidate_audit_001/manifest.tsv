@@ -1,0 +1,5 @@
+packet_id	row_count	first_pair_key	last_pair_key	packet_path	report_path	status
+M20A-LIANA-AUDIT-01	60	apoe lrp1	dcn tlr2	work/module20_db_seed/evidence_search_agents/liana_candidate_audit_001/M20A-LIANA-AUDIT-01.tsv	work/module20_db_seed/evidence_search_agents/liana_candidate_audit_001/M20A-LIANA-AUDIT-01.report.tsv	assigned
+M20A-LIANA-AUDIT-02	60	dkk2 lrp6	il17b il17rb	work/module20_db_seed/evidence_search_agents/liana_candidate_audit_001/M20A-LIANA-AUDIT-02.tsv	work/module20_db_seed/evidence_search_agents/liana_candidate_audit_001/M20A-LIANA-AUDIT-02.report.tsv	assigned
+M20A-LIANA-AUDIT-03	60	il17c il17ra_il17re	tnfsf14 ltbr	work/module20_db_seed/evidence_search_agents/liana_candidate_audit_001/M20A-LIANA-AUDIT-03.tsv	work/module20_db_seed/evidence_search_agents/liana_candidate_audit_001/M20A-LIANA-AUDIT-03.report.tsv	assigned
+M20A-LIANA-AUDIT-04	26	tnfsf14 tnfrsf14	xcl1 xcr1	work/module20_db_seed/evidence_search_agents/liana_candidate_audit_001/M20A-LIANA-AUDIT-04.tsv	work/module20_db_seed/evidence_search_agents/liana_candidate_audit_001/M20A-LIANA-AUDIT-04.report.tsv	assigned

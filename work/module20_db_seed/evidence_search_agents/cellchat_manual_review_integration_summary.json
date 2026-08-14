@@ -1,0 +1,17 @@
+{
+  "generated_utc": "2026-08-13T21:05:25+00:00",
+  "reviewed_rows": 411,
+  "final_class_counts": {
+    "no_evidence": 56,
+    "non_ligand_receptor": 172,
+    "promote_low": 48,
+    "promote_medium": 14,
+    "retain_manual": 121
+  },
+  "medium_promotions": 14,
+  "low_promotions": 48,
+  "no_evidence_added": 56,
+  "non_ligand_receptor_added": 172,
+  "retained_manual": 121,
+  "canonical_ledgers_backed_up": true
+}

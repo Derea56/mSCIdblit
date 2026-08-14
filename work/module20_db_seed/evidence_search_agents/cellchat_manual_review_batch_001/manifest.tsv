@@ -1,0 +1,4 @@
+packet_id	row_count	first_pair_key	last_pair_key	packet_path	report_path	status
+M20A-CELLCHAT-MANUAL-01	200	anxa1 fpr2_lxa4	gdf7 bmpr1b_bmpr2	work/module20_db_seed/evidence_search_agents/cellchat_manual_review_batch_001/M20A-CELLCHAT-MANUAL-01.tsv	work/module20_db_seed/evidence_search_agents/cellchat_manual_review_batch_001/M20A-CELLCHAT-MANUAL-01.report.tsv	assigned
+M20A-CELLCHAT-MANUAL-02	200	gdf9 acvr1b_bmpr2	wnt3a fzd7_lrp6	work/module20_db_seed/evidence_search_agents/cellchat_manual_review_batch_001/M20A-CELLCHAT-MANUAL-02.tsv	work/module20_db_seed/evidence_search_agents/cellchat_manual_review_batch_001/M20A-CELLCHAT-MANUAL-02.report.tsv	assigned
+M20A-CELLCHAT-MANUAL-03	11	wnt3a fzd9_lrp5	wnt9a fzd9_lrp6	work/module20_db_seed/evidence_search_agents/cellchat_manual_review_batch_001/M20A-CELLCHAT-MANUAL-03.tsv	work/module20_db_seed/evidence_search_agents/cellchat_manual_review_batch_001/M20A-CELLCHAT-MANUAL-03.report.tsv	assigned

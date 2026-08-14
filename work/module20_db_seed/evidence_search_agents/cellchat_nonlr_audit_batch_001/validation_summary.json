@@ -1,0 +1,13 @@
+{
+  "generated_utc": "2026-08-13T21:26:55+00:00",
+  "expected_rows": 397,
+  "reported_rows": 397,
+  "final_class_counts": {
+    "restore_low": 213,
+    "restore_medium": 8,
+    "retain_manual": 42,
+    "retain_non_ligand_receptor": 134
+  },
+  "validation_errors": [],
+  "canonical_ledgers_mutated": false
+}

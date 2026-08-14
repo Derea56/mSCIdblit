@@ -1,0 +1,15 @@
+{
+  "generated_utc": "2026-08-13T21:27:46+00:00",
+  "audited_rows": 397,
+  "final_class_counts": {
+    "restore_low": 213,
+    "restore_medium": 8,
+    "retain_manual": 42,
+    "retain_non_ligand_receptor": 134
+  },
+  "restored_low": 213,
+  "restored_medium": 8,
+  "retained_manual": 42,
+  "confirmed_non_ligand_receptor": 134,
+  "canonical_ledgers_backed_up": true
+}

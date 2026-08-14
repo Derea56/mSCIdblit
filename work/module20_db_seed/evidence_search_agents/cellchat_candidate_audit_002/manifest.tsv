@@ -1,0 +1,4 @@
+packet_id	row_count	first_pair_key	last_pair_key	packet_path	report_path	status
+M20A-CELLCHAT-MISSING-AUDIT-01	60	pcdhb4 pcdhb4	pvr tigit	work/module20_db_seed/evidence_search_agents/cellchat_candidate_audit_002/M20A-CELLCHAT-MISSING-AUDIT-01.tsv	work/module20_db_seed/evidence_search_agents/cellchat_candidate_audit_002/M20A-CELLCHAT-MISSING-AUDIT-01.report.tsv	assigned
+M20A-CELLCHAT-MISSING-AUDIT-02	60	pyy npy4r	vegfd kdr	work/module20_db_seed/evidence_search_agents/cellchat_candidate_audit_002/M20A-CELLCHAT-MISSING-AUDIT-02.tsv	work/module20_db_seed/evidence_search_agents/cellchat_candidate_audit_002/M20A-CELLCHAT-MISSING-AUDIT-02.report.tsv	assigned
+M20A-CELLCHAT-MISSING-AUDIT-03	6	wnt5b fzd1	wnt5b fzd7	work/module20_db_seed/evidence_search_agents/cellchat_candidate_audit_002/M20A-CELLCHAT-MISSING-AUDIT-03.tsv	work/module20_db_seed/evidence_search_agents/cellchat_candidate_audit_002/M20A-CELLCHAT-MISSING-AUDIT-03.report.tsv	assigned

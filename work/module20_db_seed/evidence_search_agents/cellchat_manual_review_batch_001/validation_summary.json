@@ -1,0 +1,14 @@
+{
+  "generated_utc": "2026-08-13T21:04:02+00:00",
+  "expected_rows": 411,
+  "reported_rows": 411,
+  "final_class_counts": {
+    "no_evidence": 56,
+    "non_ligand_receptor": 172,
+    "promote_low": 48,
+    "promote_medium": 14,
+    "retain_manual": 121
+  },
+  "validation_errors": [],
+  "canonical_ledgers_mutated": false
+}
