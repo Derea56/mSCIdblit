@@ -38,3 +38,20 @@ an audit-layer seed until node identity and branch semantics are reconciled.
 The queue is intentionally family-level for this pass. Each extracted edge
 should retain a stable evidence ID and link back to the LR snapshot only as
 its upstream receptor/ligand context.
+
+## Current extraction progress
+
+After batches 176–177, all 5,906 frozen Module20A pairs remain represented in
+the audit coverage and Module22A handoff tables. The current audit layer has
+2,046 reusable pathway groups and 4,322 detailed evidence records. Exactly
+4,401 pairs have been reviewed and 1,505 remain queued; 163 pair-level rows
+carry provisional terminal-TF candidates for separate Module22A validation.
+
+Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
+rows, 8 explicit no-evidence boundaries, and 6 unresolved rows. One provisional
+TF handoff was added: STAT3 for IL10–IL10RA/IL10RB. The
+batch evidence includes FGF receptor-specificity, FGG–integrin, irisin–integrin,
+GDF/BMP/Activin receptor-complex, GDF15–GFRAL, HGF–MET, IL-10/IL-17/IL-20/IL-1/
+IL-25, and INHBC boundary cases. Receptor-complex, pathway, and functional
+outputs remain distinct, and no direct molecular edge was inferred from a
+pathway-only or functional-only result.
