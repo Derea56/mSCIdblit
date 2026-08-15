@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batches 208–209, all 5,906 frozen Module20A pairs remain represented in
+After batches 210–211, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,404 reusable pathway groups and 5,122 detailed evidence records. Exactly
-5,165 pairs have been reviewed and 741 remain queued; 196 pair-level rows
+2,420 reusable pathway groups and 5,172 detailed evidence records. Exactly
+5,215 pairs have been reviewed and 691 remain queued; 197 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -189,3 +189,12 @@ EPO, EREG/ERBB3, F10/F3, and related signaling or extracellular handling. Five
 provisional terminal-TF handoffs (STAT1/STAT4, STAT1/STAT3, NANOG, STAT3, and
 STAT5) were added for Module22A validation; adhesion, binding-only, and
 functional output evidence remain separated from direct intracellular edges.
+
+Batches 210–211 added 50 previously queued coagulation, lipid, FADD/FAS,
+adhesion, semaphorin, FGF, and receptor-context pairs: 12 relay candidates, 8
+binding-only rows, 4 scavenging-only rows, 15 unresolved cases, and 11 explicit
+no-evidence boundaries. The review covered F10/F11/F12/F13/F2/F7/F8,
+FABP5/RXRA, FADD death-receptor branches, FAM3 ligands, FARP2/PLXNA, FASL,
+FAT4/DCHS1, fibulin/fibrillin integrin contexts, and FGF1/FGF10. One
+provisional STAT3 handoff was added for Module22A validation; coagulation,
+uptake, matrix binding, and death-complex evidence remain layer-separated.
