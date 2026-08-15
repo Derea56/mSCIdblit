@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batches 190–191, all 5,906 frozen Module20A pairs remain represented in
+After batches 192–193, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,146 reusable pathway groups and 4,672 detailed evidence records. Exactly
-4,715 pairs have been reviewed and 1,191 remain queued; 170 pair-level rows
+2,167 reusable pathway groups and 4,722 detailed evidence records. Exactly
+4,765 pairs have been reviewed and 1,141 remain queued; 170 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -105,3 +105,11 @@ CXCR4-linked functional outputs, TFPI uptake/inhibitory branches, thyroglobulin
 handling, and TGF-beta/integrin boundaries. No terminal TF was assigned, and
 pathway or functional observations were not used to infer direct molecular
 interactions.
+
+Batches 192–193 advanced 50 previously queued CellChat-remaining pairs: 20
+relay candidates, 10 binding-only rows, 1 function-only row, 3 unresolved
+cases, and 16 explicit no-evidence boundaries. The reviewed families include
+adenosine transporter/receptor contexts, BMP receptor complexes, chemokine and
+atypical-chemokine receptors, CNTN/CNTNAP2, CSF1R, and EGFR. Receptor-family,
+expression, pathway, uptake, and phenotype evidence was retained only at its
+appropriate layer; no terminal TF was assigned.
