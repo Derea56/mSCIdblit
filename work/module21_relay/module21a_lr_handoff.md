@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batches 196–197, all 5,906 frozen Module20A pairs remain represented in
+After batches 198–199, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,231 reusable pathway groups and 4,822 detailed evidence records. Exactly
-4,865 pairs have been reviewed and 1,041 remain queued; 184 pair-level rows
+2,272 reusable pathway groups and 4,872 detailed evidence records. Exactly
+4,915 pairs have been reviewed and 991 remain queued; 186 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -122,6 +122,16 @@ IL-36, IL-5/IL-6, activin/inhibin, NGF-receptor aliases, LGALS9–HAVCR2, MSTN,
 and NRXN–ADGR adhesion. Twelve provisional terminal-TF handoffs (STAT-family
 and SMAD2/3 candidates) were added for Module22A validation; no TF was inferred
 from pathway or phenotype evidence alone.
+
+Batches 198–199 added 50 previously queued external-review pairs: 34 relay
+candidates, 7 binding-only rows, 3 function-only rows, 4 scavenging-only rows,
+and 2 explicit no-evidence boundaries. The review covered ADAM/adhesion and
+protease contexts, adrenomedullin and adenosine GPCRs, adiponectin receptors,
+agrin/LRP4/MuSK, melanocortin receptors, albumin uptake, ALK/AMH, angiopoietin
+and ANGPTL branches, and integrin or endothelial outputs. Two provisional
+terminal-TF handoffs (SMAD1/5/8 and CTNNB1) were added for Module22A review;
+uptake, scavenging, and extracellular adhesion findings remain distinct from
+intracellular relay evidence.
 
 Batches 196–197 added 50 previously queued pairs: 24 relay candidates, 8
 binding-only rows, 4 function-only rows, 8 unresolved cases, and 6 explicit
