@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batches 178–179, all 5,906 frozen Module20A pairs remain represented in
+After batches 180–181, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,083 reusable pathway groups and 4,372 detailed evidence records. Exactly
-4,451 pairs have been reviewed and 1,455 remain queued; 170 pair-level rows
+2,106 reusable pathway groups and 4,422 detailed evidence records. Exactly
+4,501 pairs have been reviewed and 1,405 remain queued; 170 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -55,9 +55,11 @@ Eight
 provisional TF handoffs are now represented in these two batch windows:
 STAT3 for IL10–IL10RA/IL10RB; RELA/p65 for RETN–TLR4, S100A8–TLR4,
 S100A9–TLR4, and SAA1–TLR2; TCF/LEF for RSPO1/3–FZD8; and NFATC1 for
-SEMA6A–PLXNA2. The
-batch evidence includes FGF receptor-specificity, FGG–integrin, irisin–integrin,
+SEMA6A–PLXNA2. Batches 180–181 added a further 50 reviewed rows: 20 relay candidates, 3
+binding-only rows, 3 function-only rows, 11 explicit no-evidence boundaries,
+and 10 unresolved rows. No new terminal-TF assignment was added. The batch
+evidence includes FGF receptor-specificity, FGG–integrin, irisin–integrin,
 GDF/BMP/Activin receptor-complex, GDF15–GFRAL, HGF–MET, IL-10/IL-17/IL-20/IL-1/
-IL-25, and INHBC boundary cases. Receptor-complex, pathway, and functional
-outputs remain distinct, and no direct molecular edge was inferred from a
-pathway-only or functional-only result.
+IL-25, TNF/TNFSF, VEGF/WNT, and INHBC boundary cases. Receptor-complex,
+pathway, and functional outputs remain distinct, and no direct molecular edge
+was inferred from a pathway-only or functional-only result.
