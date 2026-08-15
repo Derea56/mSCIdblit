@@ -12,7 +12,7 @@ Batch 155 reviewed the exact 25 filtered priority-8 queue rows assigned from que
 | Reviewed binding-only physical-interaction records | 2 |
 | **Total** | **25** |
 
-The 17 relaxin-family rows remain unresolved for the submitted exact pairs. Primary RLN3 studies support cognate RXFP3/RXFP4 binding and activation, including Gi/o-linked signaling, but that evidence was not transferred to Rln1-Rxfp2/3/4 or the assigned Rln3 non-RXFP3/4 receptors. Comparator and expression/pathway findings were retained only as boundaries.
+The 17 relaxin-family rows remain unresolved for the submitted exact pairs. Primary RLN3 studies support cognate RXFP3/RXFP4 binding and activation, including Gi/o-linked signaling, but that evidence was not transferred to Rln1-Rxfp2/3/4 or the assigned Rln3 non-RXFP3/4 receptors. The Rln3–Rxfp2 row explicitly preserves the species boundary: human H3/RXFP2 evidence is weak or negative depending on assay, whereas nonhuman comparator reports differ by species; this does not establish an endogenous exact-mouse Rln3–Rxfp2 mechanism. Comparator and expression/pathway findings were retained only as boundaries.
 
 RSPO3–LRP6 was retained as downstream pathway/function evidence: recombinant RSPO3 participates in WNT/LRP6-dependent potentiation and LRP6 phosphorylation, but the primary work does not establish direct binary RSPO3–LRP6 binding. The four RSPO4 composite rows were retained as low-confidence composite relay candidates because primary studies support RSPO4 binding to LGR4/LGR5 and LGR-associated FZD/LRP WNT signalosomes, while the exact RSPO4–LGR4/5–LRP5/6 ternary bridge and direct RSPO4–LRP5/6 interaction remain unresolved. RTN4–LINGO1 is the fifth relay-candidate row and is retained only at the Nogo receptor-complex level.
 
@@ -20,7 +20,7 @@ RTN4–CNTNAP1 and RTN4–GJB2 were retained as binding-only records. The former
 
 ## Primary source anchors
 
-- Relaxin-family receptor specificity and RLN3 receptor interaction: [PMID 16411781](https://pubmed.ncbi.nlm.nih.gov/16411781/), [PMID 24802387](https://pubmed.ncbi.nlm.nih.gov/24802387/), and [PMID 40410443](https://pubmed.ncbi.nlm.nih.gov/40410443/).
+- Relaxin-family receptor specificity and RLN3 receptor interaction: [PMID 16411781](https://pubmed.ncbi.nlm.nih.gov/16411781/), [PMID 18434306](https://pubmed.ncbi.nlm.nih.gov/18434306/), [PMID 24802387](https://pubmed.ncbi.nlm.nih.gov/24802387/), and [PMID 40410443](https://pubmed.ncbi.nlm.nih.gov/40410443/); species-dependent RXFP2 cross-reactivity was retained as a limitation rather than transferred to the exact mouse row.
 - RSPO/LRP6 pathway potentiation: [PMID 18400942](https://pubmed.ncbi.nlm.nih.gov/18400942/) / [PMCID PMC2397303](https://pmc.ncbi.nlm.nih.gov/articles/PMC2397303/).
 - LGR4/5 binding and association with WNT receptor complexes: [PMID 21727895](https://pubmed.ncbi.nlm.nih.gov/21727895/) / [PMCID PMC3185347](https://pmc.ncbi.nlm.nih.gov/articles/PMC3185347/), with LGR5–LRP5/6 relay context in [PMID 33262293](https://pubmed.ncbi.nlm.nih.gov/33262293/).
 - RTN4/Nogo-66–CNTNAP1/Caspr: [PMID 14592966](https://pubmed.ncbi.nlm.nih.gov/14592966/) / [PMCID PMC275427](https://pmc.ncbi.nlm.nih.gov/articles/PMC275427/).
