@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batches 212–213, all 5,906 frozen Module20A pairs remain represented in
+After batches 214–215, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,438 reusable pathway groups and 5,222 detailed evidence records. Exactly
-5,265 pairs have been reviewed and 641 remain queued; 197 pair-level rows
+2,460 reusable pathway groups and 5,272 detailed evidence records. Exactly
+5,315 pairs have been reviewed and 591 remain queued; 199 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -207,3 +207,12 @@ FGL1/EGFR/LAG3, FLT3L/FLT3, FN1 receptor contexts, FSHR and FSHB receptor
 alternatives, Fraser/NPNT–integrin complexes, and FGF receptor-specificity
 boundaries. No terminal TF was assigned; receptor-family, matrix-binding, and
 functional evidence remained separate from exact intracellular relay claims.
+
+Batches 214–215 added 50 previously queued FSHB, follistatin, galanin,
+GAS6/TAM, gastrin, Gc/LRP2, and GDF receptor-complex pairs: 21 relay
+candidates, 1 binding-only row, 1 scavenging-only row, 5 unresolved cases, and
+22 explicit no-evidence boundaries. The review covered FST/FSTL5, galanin
+receptor alternatives, GAS6/AXL/MERTK/TYRO3, GDF1/GDF10/GDF11/GDF2/GDF3
+receptor complexes, and Gc-mediated uptake. Two provisional terminal-TF
+handoffs (CREB and SMAD1/5/8) were added for Module22A validation; receptor
+family, uptake, and matrix or complex evidence remain layer-separated.
