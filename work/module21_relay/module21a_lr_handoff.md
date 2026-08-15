@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batches 210–211, all 5,906 frozen Module20A pairs remain represented in
+After batches 212–213, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,420 reusable pathway groups and 5,172 detailed evidence records. Exactly
-5,215 pairs have been reviewed and 691 remain queued; 197 pair-level rows
+2,438 reusable pathway groups and 5,222 detailed evidence records. Exactly
+5,265 pairs have been reviewed and 641 remain queued; 197 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -198,3 +198,12 @@ FABP5/RXRA, FADD death-receptor branches, FAM3 ligands, FARP2/PLXNA, FASL,
 FAT4/DCHS1, fibulin/fibrillin integrin contexts, and FGF1/FGF10. One
 provisional STAT3 handoff was added for Module22A validation; coagulation,
 uptake, matrix binding, and death-complex evidence remain layer-separated.
+
+Batches 212–213 added 50 previously queued FGF, FGG, fibronectin, FSHB, and
+receptor-context pairs: 15 relay candidates, 10 binding-only rows, 3
+function-only rows, 2 unresolved cases, and 20 explicit no-evidence
+boundaries. The review covered FHF/FGFR1 and endocrine FGF branches,
+FGL1/EGFR/LAG3, FLT3L/FLT3, FN1 receptor contexts, FSHR and FSHB receptor
+alternatives, Fraser/NPNT–integrin complexes, and FGF receptor-specificity
+boundaries. No terminal TF was assigned; receptor-family, matrix-binding, and
+functional evidence remained separate from exact intracellular relay claims.
