@@ -41,15 +41,21 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batches 176–177, all 5,906 frozen Module20A pairs remain represented in
+After batches 178–179, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,046 reusable pathway groups and 4,322 detailed evidence records. Exactly
-4,401 pairs have been reviewed and 1,505 remain queued; 163 pair-level rows
+2,083 reusable pathway groups and 4,372 detailed evidence records. Exactly
+4,451 pairs have been reviewed and 1,455 remain queued; 170 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
-rows, 8 explicit no-evidence boundaries, and 6 unresolved rows. One provisional
-TF handoff was added: STAT3 for IL10–IL10RA/IL10RB. The
+rows, 8 explicit no-evidence boundaries, and 6 unresolved rows. Batches 178–179
+added a further 50 reviewed rows: 36 relay candidates, 5 binding-only rows,
+1 function-only row, 7 explicit no-evidence boundaries, and no unresolved rows.
+Eight
+provisional TF handoffs are now represented in these two batch windows:
+STAT3 for IL10–IL10RA/IL10RB; RELA/p65 for RETN–TLR4, S100A8–TLR4,
+S100A9–TLR4, and SAA1–TLR2; TCF/LEF for RSPO1/3–FZD8; and NFATC1 for
+SEMA6A–PLXNA2. The
 batch evidence includes FGF receptor-specificity, FGG–integrin, irisin–integrin,
 GDF/BMP/Activin receptor-complex, GDF15–GFRAL, HGF–MET, IL-10/IL-17/IL-20/IL-1/
 IL-25, and INHBC boundary cases. Receptor-complex, pathway, and functional
