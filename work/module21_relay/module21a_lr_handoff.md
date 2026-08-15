@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batches 202–203, all 5,906 frozen Module20A pairs remain represented in
+After batches 204–205, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,340 reusable pathway groups and 4,972 detailed evidence records. Exactly
-5,015 pairs have been reviewed and 891 remain queued; 188 pair-level rows
+2,354 reusable pathway groups and 5,022 detailed evidence records. Exactly
+5,065 pairs have been reviewed and 841 remain queued; 190 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -161,3 +161,12 @@ WNT5B/FZD, A2M/LRP1, ADAM-family adhesion or protease contexts, and related
 guidance-receptor pairs. ATF2 and CREB were recorded as provisional terminal-TF
 handoffs for separate Module22A validation; no direct TF endpoint was inferred
 from pathway or phenotype evidence alone.
+
+Batches 204–205 added 50 previously queued matrix, adhesion, neuropeptide, and
+GPCR-context pairs: 13 relay candidates, 13 binding-only rows, 1 function-only
+row, and 23 explicit no-evidence boundaries. The review covered DDR/collagen
+and collagen–integrin branches, COLQ–MuSK, COMP–ITGA5, COPA receptor-context
+rows, cortistatin receptor families, Cp/CRH signaling, and CRHR1/CRHR2. Two
+provisional terminal-TF handoffs (PEA3 and CREB) were added for Module22A
+validation; matrix binding, receptor-family pharmacology, and phenotype-only
+findings were not promoted to direct intracellular edges.
