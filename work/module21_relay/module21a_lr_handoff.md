@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batches 200–201, all 5,906 frozen Module20A pairs remain represented in
+After batches 202–203, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,312 reusable pathway groups and 4,922 detailed evidence records. Exactly
-4,965 pairs have been reviewed and 941 remain queued; 187 pair-level rows
+2,340 reusable pathway groups and 4,972 detailed evidence records. Exactly
+5,015 pairs have been reviewed and 891 remain queued; 188 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -142,6 +142,16 @@ AVP, BMP2/BMP10, calcitonin/CCK, chemokine receptors, CD200/CD200R, and CD22.
 One provisional STAT3 handoff was added for Module22A validation; scavenging,
 uptake, and Fc/receptor-complex observations remain separate from intracellular
 relay evidence.
+
+Batches 202–203 added 50 previously queued immune-adhesion, guidance, and
+matrix-receptor pairs: 27 relay candidates, 18 binding-only rows, 1
+function-only row, and 4 explicit no-evidence boundaries. The review covered
+PD-L1/CD80 and PD-1, CD28/CD80-CD86, CD47/SIRPA, CD200/CD200R, cadherin and
+integrin adhesion, CLCF1 receptor complexes, CNTN/NRP/PTPR guidance systems,
+and collagen–integrin or collagen–proteoglycan contexts. One provisional STAT3
+handoff was added for Module22A validation; extracellular adhesion and matrix
+binding were not promoted to intracellular relay evidence without supporting
+perturbation.
 
 Batches 196–197 added 50 previously queued pairs: 24 relay candidates, 8
 binding-only rows, 4 function-only rows, 8 unresolved cases, and 6 explicit
