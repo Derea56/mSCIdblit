@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batches 194–195, all 5,906 frozen Module20A pairs remain represented in
+After batches 196–197, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,203 reusable pathway groups and 4,772 detailed evidence records. Exactly
-4,815 pairs have been reviewed and 1,091 remain queued; 182 pair-level rows
+2,231 reusable pathway groups and 4,822 detailed evidence records. Exactly
+4,865 pairs have been reviewed and 1,041 remain queued; 184 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -121,4 +121,13 @@ GDF/BMP/Nodal receptor complexes, IL-17/IL-20/IL-22-family cytokine complexes,
 IL-36, IL-5/IL-6, activin/inhibin, NGF-receptor aliases, LGALS9–HAVCR2, MSTN,
 and NRXN–ADGR adhesion. Twelve provisional terminal-TF handoffs (STAT-family
 and SMAD2/3 candidates) were added for Module22A validation; no TF was inferred
+from pathway or phenotype evidence alone.
+
+Batches 196–197 added 50 previously queued pairs: 24 relay candidates, 8
+binding-only rows, 4 function-only rows, 8 unresolved cases, and 6 explicit
+no-evidence boundaries. The review covered PDGF/PDGFR, prostaglandin and
+VEGF-receptor branches, TGF-beta complexes, SEMA7A-integrin, TAC4/TACR1,
+WNT5B/FZD, A2M/LRP1, ADAM-family adhesion or protease contexts, and related
+guidance-receptor pairs. ATF2 and CREB were recorded as provisional terminal-TF
+handoffs for separate Module22A validation; no direct TF endpoint was inferred
 from pathway or phenotype evidence alone.
