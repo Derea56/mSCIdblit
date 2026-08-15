@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batches 188–189, all 5,906 frozen Module20A pairs remain represented in
+After batches 190–191, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,119 reusable pathway groups and 4,622 detailed evidence records. Exactly
-4,701 pairs have been reviewed and 1,205 remain queued; 170 pair-level rows
+2,146 reusable pathway groups and 4,672 detailed evidence records. Exactly
+4,715 pairs have been reviewed and 1,191 remain queued; 170 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -92,3 +92,16 @@ WNT4/WNT6 composite and WNT3A/WNT4/WNT6 FZD/LRP boundaries remain unresolved
 or unassigned. No terminal TF was assigned, and generic WNT pathway,
 beta-catenin, receptor-family, or comparator evidence was not transferred to
 untested exact composites.
+
+Batches 190–191 added 50 broader external-review records: 18 relay candidates,
+7 binding-only rows, 9 function-only rows, 13 unresolved cases, and 3 explicit
+no-evidence boundaries. Thirty-six of these records had pre-existing Module21A
+coverage; their prior evidence and pathway-reuse references were retained
+alongside the new review records. Fourteen previously queued pairs advanced to
+reviewed status (6 relay candidates, 4 function-only, 3 binding-only, and 1
+unresolved). The batch evidence covers SST/SSTR pharmacology, tachykinin
+receptor signaling, transcobalamin uptake, Cripto/Nodal receptor complexes,
+CXCR4-linked functional outputs, TFPI uptake/inhibitory branches, thyroglobulin
+handling, and TGF-beta/integrin boundaries. No terminal TF was assigned, and
+pathway or functional observations were not used to infer direct molecular
+interactions.
