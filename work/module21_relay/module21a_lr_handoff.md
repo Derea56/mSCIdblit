@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batches 184–185, all 5,906 frozen Module20A pairs remain represented in
+After batches 186–187, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,113 reusable pathway groups and 4,522 detailed evidence records. Exactly
-4,601 pairs have been reviewed and 1,305 remain queued; 170 pair-level rows
+2,113 reusable pathway groups and 4,572 detailed evidence records. Exactly
+4,651 pairs have been reviewed and 1,255 remain queued; 170 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -78,3 +78,8 @@ restricted to WNT11–FZD4, WNT11–FZD7, WNT11–MuSK/Unplugged, and WNT16B–F
 contexts with species, isoform, receptor-association, and model limitations
 preserved. No terminal TF was assigned, and generic WNT pathway or component
 evidence was not transferred to unresolved composites.
+
+Batches 186–187 added a further 50 WNT-family rows: 38 explicit no-evidence
+boundaries and 12 unresolved FZD-level relay boundaries. None of these rows
+supports an isolated WNT–FZD–LRP5/6 ternary claim or a terminal TF endpoint;
+component and comparator evidence remains documented only as a search boundary.
