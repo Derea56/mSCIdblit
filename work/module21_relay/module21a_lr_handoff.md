@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batches 206–207, all 5,906 frozen Module20A pairs remain represented in
+After batches 208–209, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,378 reusable pathway groups and 5,072 detailed evidence records. Exactly
-5,115 pairs have been reviewed and 791 remain queued; 191 pair-level rows
+2,404 reusable pathway groups and 5,122 detailed evidence records. Exactly
+5,165 pairs have been reviewed and 741 remain queued; 196 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -179,3 +179,13 @@ CTHRC1/FZD/ROR2, CXCL12–SDC4, decorin–EGFR/MET, DHH coreceptors, and
 DKK/Kremen/LRP contexts. One provisional STAT3 handoff was added for Module22A
 validation; family-level WNT/DKK, pathway, and extracellular matrix evidence was
 not transferred to untested direct intracellular edges.
+
+Batches 208–209 added 50 previously queued pairs: 19 relay candidates, 18
+binding-only rows, 7 function-only rows, 4 unresolved cases, 1 scavenging-only
+row, and 2 explicit no-evidence boundaries. The review covered DKK4/LRP6,
+DCC/desmosomal cadherin adhesion, IL-35/IL-27 receptor complexes, endothelin
+and Eph receptor families, EGF accessory contexts, ENTPD1/purinergic branches,
+EPO, EREG/ERBB3, F10/F3, and related signaling or extracellular handling. Five
+provisional terminal-TF handoffs (STAT1/STAT4, STAT1/STAT3, NANOG, STAT3, and
+STAT5) were added for Module22A validation; adhesion, binding-only, and
+functional output evidence remain separated from direct intracellular edges.
