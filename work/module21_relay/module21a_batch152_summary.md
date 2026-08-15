@@ -1,0 +1,14 @@
+# Module 21A batch 152 review summary
+
+- Reviewed exactly 25 assigned queue rows: `M20A-EXT-2836`–`M20A-EXT-2853` plus `M20A-EXT-2857`–`M20A-EXT-2863`.
+- Outcomes: 5 receptor-proximal relay candidates, 2 binding-only rows, 2 downstream-function-only rows, and 16 unresolved/no-exact-pair-evidence boundaries.
+- The five relay candidates are PSEN1–Notch1/2/3/4 and PSPN–GFRα1. The two function-only rows are PTGS2–ALOX5 enzyme-pathway cross-talk and PTH–ADRB2 downstream regulation. The two binding-only rows are PSPN–SDC3 weak association and PTGS2–CAV1 protein complex/compartmental association.
+- RBPJ/CSL is retained only for the four PSEN1–Notch rows because presenilin-dependent Notch cleavage and RBP-J reporter activation were directly assayed for the mammalian Notch family. No TF-target programs were assigned.
+- Direct ligand/receptor binding or activation, receptor-proximal processing/relay, and downstream pathway/function were kept as separate evidence layers. In particular, PTGS2–GPR44 was not promoted: PGD2–GPR44 evidence requires the intermediate prostanoid-synthesis steps and does not establish PTGS2 as the direct ligand or receptor activator.
+- Persephin boundaries were preserved: GFRα4 is the canonical receptor in primary binding studies, a later sensitive-reporter study supports a context-dependent GFRα1/RET branch, GFRα2/GFRα3 remain unresolved, and PSPN–SDC3 showed only weak association without a PSPN-specific functional relay.
+- Ptdss1–Jmjd6 and Ptdss1–Scarb1 remain unresolved. Phosphatidylserine–SR-BI recognition and efferocytosis do not establish a direct PTDSS1–SCARB1 interaction because PTDSS1 is the biosynthetic enzyme rather than the assayed lipid ligand.
+- PTH/PTH2 rows retain explicit receptor-specificity boundaries. PTH–ADRB2 is downstream crosstalk in osteoblast-like cells, not direct PTH–ADRB2 binding; no evidence was transferred from PTH1R/PTH2R, PAC1, adrenergic, TSHR, VIPR1, or RAMP receptor-family studies to the unresolved exact pairs.
+
+Primary source anchors include presenilin/Notch processing and RBP-J activation (PMID:10206645; PMID:10593990; PMID:11459941; PMCID:PMC55367), persephin receptor specificity (PMID:9740802; PMID:10958791; PMID:20350599), syndecan-3 binding boundaries (PMCID:PMC3019558), PTGS2/ALOX5 biochemical cross-talk (PMID:16417352; PMCID:PMC2532595), PTGS2/CAV1 association (PMID:11432874; PMID:19244345; PMCID:PMC2669036), phosphatidylserine–SR-BI function (PMID:26059978), and PTH–ADRB2 downstream regulation (PMID:25164990).
+
+The batch TSV is standalone raw review output using the required 13-column batch-review schema (`review_id`, `pair`, `status`, `stable_citations`, `species`, `cell_type_model`, `assay_or_perturbation`, `relation_type`, `evidence_layer`, `pathway_branch`, `confidence`, `limitations`, `terminal_TF`). Module 20A ledgers, the frozen manifest, and shared Module 21A registers were not modified.
