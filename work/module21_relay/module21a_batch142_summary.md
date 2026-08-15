@@ -1,0 +1,7 @@
+# Module 21A Batch 142 review summary
+
+Batch 142 contains exactly 25 queue-matched rows with unique review IDs and canonical pair labels. The batch records 13 reviewed relay candidates, 4 binding-only records, 4 function-only records, and 4 unresolved exact-pair boundaries. The strongest additions are MMP9 relay evidence for EphB2, IFNAR1, LRP1 and endosomal TLR9; MSTN receptor-complex/SMAD2/3 branches; MYOC binding to FZD1/FZD7/FZD10 with FZD3/FZD4 binding-only evidence; NAMPT modulation of INSR; AGR2-MUC2 processing; and NCAM relays through PTPRA and PTPRZ1-associated extracellular phosphacan.
+
+Unresolved or deliberately limited cases include MMP9-ITGAM, MPZ-MPZL1, MRC1-PTPRC, and NAMPT-ADORA2A. MMP9-ITGAM is bounded by direct evidence for the distinct ITGB2/CD18 subunit rather than ITGAM/CD11b. NCAM-CACNA1C and NCAM-ROBO1 retain function/pathway evidence without subunit-specific or direct molecular proof. Terminal TF assignments were retained only where the cited receptor-complex or TLR9 perturbation source explicitly measured the corresponding activated factor: SMAD2/SMAD3 for MSTN complexes and RELA for the MMP9-TLR9 NF-kappaB branch.
+
+Search boundary: exact-pair searches covered PubMed, PMC, publisher pages, Reactome and interaction/pathway resources, with primary research prioritized. No shared Module 21A registers, Module 20A files, frozen manifest, or integration outputs were modified.
