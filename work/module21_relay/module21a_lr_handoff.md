@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batches 180–181, all 5,906 frozen Module20A pairs remain represented in
+After batches 182–183, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,106 reusable pathway groups and 4,422 detailed evidence records. Exactly
-4,501 pairs have been reviewed and 1,405 remain queued; 170 pair-level rows
+2,109 reusable pathway groups and 4,472 detailed evidence records. Exactly
+4,551 pairs have been reviewed and 1,355 remain queued; 170 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -63,3 +63,11 @@ GDF/BMP/Activin receptor-complex, GDF15–GFRAL, HGF–MET, IL-10/IL-17/IL-20/IL
 IL-25, TNF/TNFSF, VEGF/WNT, and INHBC boundary cases. Receptor-complex,
 pathway, and functional outputs remain distinct, and no direct molecular edge
 was inferred from a pathway-only or functional-only result.
+
+Batches 182–183 added a further 50 WNT-family rows: 3 bounded relay
+candidates, 1 unresolved case, and 46 explicit no-evidence boundaries. The
+positive rows are restricted to WNT1–FZD8/LRP6 receptor-complex/function
+precedent, WNT1–RYK Frizzled-coupled coreceptor evidence, and WNT10B–FZD6/LRP6
+receptor-proximity/function evidence. Generic WNT pathway, beta-catenin,
+FZD-family, or LRP-family results were not transferred to untested composite
+edges, and no terminal TF was assigned.
