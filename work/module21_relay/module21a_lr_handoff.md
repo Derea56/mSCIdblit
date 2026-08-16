@@ -276,6 +276,14 @@ NKX2-2/OLIG2 endpoints for separate Module22A validation. RSPO/WNT, semaphorin
 receptor-complex, scavenger/inhibitory TLR, and SHH coreceptor evidence remain
 layer-separated and were not generalized across receptor families.
 
+Batch 230 added 25 previously queued SHH/SCUBE2, SLIT/ROBO, SLPI/PLSCR,
+SLURP1/CHRNA7, SNCA/LAG3, SOST/SOSTDC1/LRP, SPON1/SPON2, and SPP1/integrin
+contexts: 15 relay candidates and 10 function-only rows. Provisional
+terminal-TF handoffs were added for GLI1, RELA, and TCF/LEF-family reporter
+endpoints for separate Module22A validation. APP/ApoER2, Mac-1 subunit,
+WNT/BMP, uptake, adhesion, and extracellular-complex findings remain distinct
+from direct intracellular relay claims.
+
 Batch 231 added 25 previously queued SPP1/integrin, TGFB1/2/3 receptor-complex,
 TGM2, and THBS1 contexts: 8 relay candidates, 2 binding-only rows, 5
 function-only rows, 1 scavenging-only row, 8 no-downstream-evidence rows, and 1
