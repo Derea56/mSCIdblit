@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batch 234, all 5,906 frozen Module20A pairs remain represented in
+After batch 235, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,816 reusable pathway groups and 5,747 detailed evidence records. Exactly
-5,790 pairs have been reviewed and 116 remain queued; 274 pair-level rows
+2,822 reusable pathway groups and 5,772 detailed evidence records. Exactly
+5,815 pairs have been reviewed and 91 remain queued; 274 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -315,3 +315,10 @@ boundaries. Provisional terminal-TF handoffs were added for AP-1, CREB,
 TCF/LEF-family, and HES5 endpoints. Exact WNT/FZD/LRP composites, WNT5A/PTK7
 assay conflicts, membrane-versus-soluble chemokine behavior, and receptor
 stoichiometry remain explicitly bounded.
+
+Batch 235 added 25 previously queued WNT7A/WNT7B FZD/LRP5/6 composite rows: 5
+relay candidates, 1 function-only row, 5 unresolved cases, and 14 explicit
+no-evidence boundaries. Exact-composite evidence was required; FZD/LRP family
+analogy, generic beta-catenin reporters, unmatched ectodomain binding, and
+GPR124/RECK comparator branches were not transferred. No terminal-TF handoff
+was added.
