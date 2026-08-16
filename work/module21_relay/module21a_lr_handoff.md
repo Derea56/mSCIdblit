@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batches 224–225, all 5,906 frozen Module20A pairs remain represented in
+After batches 226–227, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,641 reusable pathway groups and 5,522 detailed evidence records. Exactly
-5,565 pairs have been reviewed and 341 remain queued; 227 pair-level rows
+2,685 reusable pathway groups and 5,572 detailed evidence records. Exactly
+5,615 pairs have been reviewed and 291 remain queued; 246 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -257,3 +257,12 @@ provisional terminal-TF handoffs (STAT3, STAT5, and CREB candidates) were added
 for Module22A validation; neuronal adhesion, uptake, receptor-family, and
 functional output evidence remain distinct from direct intracellular relay
 claims.
+
+Batches 226–227 added 50 previously queued prokineticin, TAM/PSAP, PTH/PTHLH,
+pleiotrophin, PYY, RARRES2/RBP4/REN1, RGMA/RGMB, relaxin, RPS19, and RSPO
+contexts: 41 relay candidates, 3 binding-only rows, 2 function-only rows, 1
+scavenging-only row, 2 unresolved cases, and 1 no-downstream-evidence case.
+Provisional terminal-TF handoffs were added for RELA, CTNNB1, SOX9, ERF,
+STAT3/STAT5, CREB, and TCF/LEF-family reporter endpoints for separate Module22A
+validation; receptor-complex, uptake, species-specific, and functional-output
+evidence remain distinct from direct intracellular relay claims.
