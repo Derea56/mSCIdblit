@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batches 214–215, all 5,906 frozen Module20A pairs remain represented in
+After batches 216–217, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,460 reusable pathway groups and 5,272 detailed evidence records. Exactly
-5,315 pairs have been reviewed and 591 remain queued; 199 pair-level rows
+2,489 reusable pathway groups and 5,322 detailed evidence records. Exactly
+5,365 pairs have been reviewed and 541 remain queued; 202 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -216,3 +216,11 @@ receptor alternatives, GAS6/AXL/MERTK/TYRO3, GDF1/GDF10/GDF11/GDF2/GDF3
 receptor complexes, and Gc-mediated uptake. Two provisional terminal-TF
 handoffs (CREB and SMAD1/5/8) were added for Module22A validation; receptor
 family, uptake, and matrix or complex evidence remain layer-separated.
+
+Batches 216–217 added 50 previously queued GDF, GDNF, GH/GHR, GHRH, GIP,
+GPC3, HLA/MHC, orexin, HGF, and haptoglobin contexts: 25 relay candidates,
+4 binding-only rows, 3 scavenging-only rows, 1 function-only row, 10
+unresolved cases, and 7 explicit no-evidence boundaries. Three provisional
+terminal-TF handoffs (STAT5, CREB, and HHEX) were added for Module22A
+validation; MHC presentation, uptake, receptor-family, and complex evidence
+remain distinct from direct intracellular relay claims.
