@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batches 218–219, all 5,906 frozen Module20A pairs remain represented in
+After batches 220–221, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,519 reusable pathway groups and 5,372 detailed evidence records. Exactly
-5,415 pairs have been reviewed and 491 remain queued; 211 pair-level rows
+2,558 reusable pathway groups and 5,422 detailed evidence records. Exactly
+5,465 pairs have been reviewed and 441 remain queued; 221 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -232,3 +232,11 @@ function-only row, and 2 unresolved cases. Nine provisional cytokine TF
 handoffs (STAT3, STAT4, STAT3/STAT4, STAT6, and STAT5 candidates) were added
 for Module22A validation; uptake, adhesion, receptor-family, and complex
 evidence remain separated from direct intracellular relay claims.
+
+Batches 220–221 added 50 previously queued cytokine, growth-factor, hormone,
+adhesion, and extracellular-matrix pairs: 33 relay candidates, 11 binding-only
+rows, and 6 function-only rows. The review covered IL-4/5/6/7/9/11/33/34,
+INS/INSL/RXFP, JAG1/CD46, KISS1/KISS1R, KITL/KIT, L1CAM/laminin, LEP/LEPR,
+galectin/LGI, LHB/LHCGR, LIF, LTA/LTB, LTF, MATN1, and MDK receptor branches.
+Ten provisional STAT handoffs were added for Module22A validation; hormone,
+adhesion, matrix-binding, and receptor-complex evidence remain layer-separated.
