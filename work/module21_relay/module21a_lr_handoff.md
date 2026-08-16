@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batches 226–227, all 5,906 frozen Module20A pairs remain represented in
+After batches 228–229, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,685 reusable pathway groups and 5,572 detailed evidence records. Exactly
-5,615 pairs have been reviewed and 291 remain queued; 246 pair-level rows
+2,726 reusable pathway groups and 5,622 detailed evidence records. Exactly
+5,665 pairs have been reviewed and 241 remain queued; 257 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -266,3 +266,12 @@ Provisional terminal-TF handoffs were added for RELA, CTNNB1, SOX9, ERF,
 STAT3/STAT5, CREB, and TCF/LEF-family reporter endpoints for separate Module22A
 validation; receptor-complex, uptake, species-specific, and functional-output
 evidence remain distinct from direct intracellular relay claims.
+
+Batches 228–229 added 50 previously queued RSPO, RTN4, S100/SAA, SCUBE2,
+SECTM1, selectin, semaphorin, SERPINE1/SERPINF1, SFRP2, SFTPA/SFTPD, and SHH
+contexts: 35 relay candidates, 4 binding-only rows, 6 function-only rows, 4
+unresolved cases, and 1 explicit no-evidence boundary. Provisional terminal-TF
+handoffs were added for TCF/LEF family, RELA, EGR1, MYC/YAP, NFATC3, GLI1, and
+NKX2-2/OLIG2 endpoints for separate Module22A validation. RSPO/WNT, semaphorin
+receptor-complex, scavenger/inhibitory TLR, and SHH coreceptor evidence remain
+layer-separated and were not generalized across receptor families.
