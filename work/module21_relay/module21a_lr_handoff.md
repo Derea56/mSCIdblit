@@ -41,10 +41,10 @@ its upstream receptor/ligand context.
 
 ## Current extraction progress
 
-After batch 231, all 5,906 frozen Module20A pairs remain represented in
+After batch 233, all 5,906 frozen Module20A pairs remain represented in
 the audit coverage and Module22A handoff tables. The current audit layer has
-2,740 reusable pathway groups and 5,647 detailed evidence records. Exactly
-5,690 pairs have been reviewed and 216 remain queued; 257 pair-level rows
+2,784 reusable pathway groups and 5,697 detailed evidence records. Exactly
+5,740 pairs have been reviewed and 166 remain queued; 265 pair-level rows
 carry provisional terminal-TF candidates for separate Module22A validation.
 
 Batches 176–177 added 50 reviewed rows: 34 relay candidates, 2 binding-only
@@ -291,3 +291,11 @@ unresolved case. No terminal-TF handoff was added. Canonical TGFBR1/TGFBR2
 complexes, accessory TGFBR3/ENG/SDC2/VASN branches, latent-TGF-beta integrin
 activation, matrix adhesion, and uptake remain separate evidence layers; queued
 subunit labels were not promoted to standalone receptors.
+
+Batch 233 added 25 previously queued UCN/CRHR, UTS2/UTS2R, VCAM1/integrin,
+versican, VEGF, vimentin, VIP, vitronectin, VWF, and WNT1/ROR2 contexts: 13
+relay candidates, 2 binding-only rows, 3 function-only rows, 3 scavenging-only
+rows, 3 no-downstream-evidence rows, and 1 unresolved case. One provisional
+RelB handoff was added for the versican-TLR2 MyD88/RelB transcriptional axis;
+integrin heterodimers, glycosaminoglycan presentation, uptake/clearance,
+VWF-complex components, and VEGF co-receptor branches remain layer-separated.
