@@ -1,0 +1,5 @@
+batch_id	queue_start	queue_end	candidate_count	priority_counts	review_status	write_scope
+M24A-B001	M24A-Q0001	M24A-Q0050	50	P1=50	partial_anchor_review	24A queue/audit files only
+M24A-B002	M24A-Q0051	M24A-Q0100	50	P1=11;P2=39	reviewed_first_pass	24A queue/audit files only
+M24A-B003	M24A-Q0101	M24A-Q0150	50	P2=50	reviewed_first_pass	24A queue/audit files only
+M24A-B004	M24A-Q0151	M24A-Q0171	21	P2=21	queued	24A queue/audit files only
