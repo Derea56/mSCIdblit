@@ -1,0 +1,6 @@
+path_id	supplemental_evidence_ids	linkage_role
+CMS-P09-SEMA7A-ITGA1B1-FAKMAPK	CMS-P09-EXT-EVID-001	Integrin/MAPK axon-outgrowth support
+CMS-P09-SPP1-ITGAVB1-FAK	CMS-P09-EXT-EVID-002	OPN/integrin FAK-AKT-ERK functional support; exact heterodimer qualified
+CMS-P09-TGM2-SDC4-FAKERK	CMS-P09-EXT-EVID-003	TG2-SDC4/PKCα/beta1-integrin/FAK-ERK relay support
+CMS-P09-THY1-ITGAVB3-RHOA	CMS-P09-EXT-EVID-004	THY1-integrin-syndecan/RhoA mechanotransduction support
+CMS-P09-VEGFA-ITGAVB3-FAKERK	CMS-P09-EXT-EVID-005	VEGFA165 αVβ3/VEGFR2/FAK-ERK support with boundary qualification

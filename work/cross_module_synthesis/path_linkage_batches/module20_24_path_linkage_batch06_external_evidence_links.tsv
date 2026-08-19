@@ -1,0 +1,5 @@
+path_id	supplemental_evidence_ids	linkage_role
+CMS-P06-FGF2-FGFR1-RHOA-YAP	CMS-P06-EXT-EVID-001	SCI RhoA-YAP functional support; terminal target remains unresolved
+CMS-P06-FGF2-FGFR1-MAPK	CMS-P06-EXT-EVID-002	FGFR1/MAPK and cell-function support in comparator systems
+CMS-P06-FGF10-FGFR2-ETV5	CMS-P06-EXT-EVID-003	ETV5/Shh direct target and developmental-function support
+CMS-P06-FGF18-FGFR2-ETV45	CMS-P06-EXT-EVID-004	FGFR-contextual ETV4/ETV5 program support with receptor specificity qualified

@@ -1,0 +1,4 @@
+path_id	supplemental_evidence_ids	linkage_role
+CMS-P15-TNC-EGFR-ERK	CMS-P15-EXT-EVID-001	TNC-EGFR-ERK support
+CMS-P15-L1CAM-EGFR-MAPK	CMS-P15-EXT-EVID-002	L1CAM-EGFR-MAPK neurite-adhesion support
+CMS-P15-CDH1-CDH2-ADHESION	CMS-P15-EXT-EVID-003	Cadherin adhesion and force-transmission support

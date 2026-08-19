@@ -1,0 +1,7 @@
+path_id	supplemental_evidence_ids	linkage_role
+CMS-P03-DLL4-NOTCH1-HEY1	CMS-P03-EXT-EVID-001;CMS-P03-EXT-EVID-004;CMS-P03-EXT-EVID-005;CMS-P03-EXT-EVID-006	Ligand selectivity, RBPJ-dependent HEY output, and direct DLL4-NOTCH1 binding support
+CMS-P03-DLL4-NOTCH1-HES1	CMS-P03-EXT-EVID-001	Ligand-discrimination evidence qualifies HES1 as a DLL4 composite candidate rather than a dominant DLL4 terminal output
+CMS-P03-JAG1-NOTCH1-HES5-SCI	CMS-P03-EXT-EVID-002;CMS-P03-EXT-EVID-003	SCI JAG1-HES5 functional support plus canonical RBPJ target-layer support
+CMS-P03-JAG1-NOTCH1-STAT3-ASTROCYTE		Existing 21B functional evidence only; no new terminal TF evidence assigned
+CMS-P03-DLL4-NOTCH1-IL6-STAT3		Existing 21B functional evidence only; no direct 22A terminal TF evidence assigned
+CMS-P03-JAG1-NOTCH2-RBPJ	CMS-P03-EXT-EVID-005	Receptor-paralog selectivity context; does not create a JAG1-NOTCH2 terminal TF edge

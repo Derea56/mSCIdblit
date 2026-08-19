@@ -1,0 +1,5 @@
+path_id	supplemental_evidence_ids	linkage_role
+CMS-P07-WNT5A-FZD3-ROR2-JNK	CMS-P07-EXT-EVID-002	SCI neural-stem-cell JNK functional support
+CMS-P07-WNT5A-FZD3-ROR2-NEURON-DEATH	CMS-P07-EXT-EVID-001	ROR2/JNK neurodegeneration support
+CMS-P07-WNT5A-FZD5-LRP5-TCFLEF	CMS-P07-EXT-EVID-003	Canonical-context TCF/LEF program support with boundary qualification
+CMS-P07-WNT5A-FZD10-LR-ONLY	CMS-P07-EXT-EVID-004	Search-boundary evidence; no WNT5A-FZD10 downstream promotion
