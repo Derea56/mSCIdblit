@@ -1,0 +1,6 @@
+path_id	supplemental_evidence_ids	linkage_role
+CMS-P05-IFNA-B-IFNAR-ISGF3	CMS-P05-EXT-EVID-001;CMS-P05-EXT-EVID-002	ISGF3 composition and ISRE transcription support
+CMS-P05-IFNB-IFNAR-SCI-ASTROCYTE		Existing 21B SCI functional evidence retained; no new terminal TF record assigned
+CMS-P05-IFNG-IFNGR-STAT1	CMS-P05-EXT-EVID-002;CMS-P05-EXT-EVID-003	STAT1/GAS transcription support while preserving type-II versus type-I distinctions
+CMS-P05-IFNL-IFNLR-ISG		Existing 21B type-III receptor and astrocyte antiviral evidence retained
+CMS-P05-IFNA-B-ISGF3-TARGETS	CMS-P05-EXT-EVID-001;CMS-P05-EXT-EVID-004	ISGF3/U-ISGF3 program and ISRE-associated target support; not a single ligand-to-each-ISG edge

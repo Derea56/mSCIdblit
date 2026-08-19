@@ -1,0 +1,5 @@
+path_id	supplemental_evidence_ids	linkage_role
+CMS-P08-2AG-CB1CB2-AP1	CMS-P08-EXT-EVID-001	CB1/CB2 composite ERK/Fyn/AP-1 program support
+CMS-P08-5HT4-CREB-ENS	CMS-P08-EXT-EVID-002	5-HT4-PKA-CREB enteric function support
+CMS-P08-5HT2A-CREB-TARGETS	CMS-P08-EXT-EVID-003	CREB promoter occupancy and target induction support
+CMS-P08-CXCL12-CXCR4-ERK-AKT	CMS-P08-EXT-EVID-004	CXCR4-dependent ERK/AKT and OPC migration support

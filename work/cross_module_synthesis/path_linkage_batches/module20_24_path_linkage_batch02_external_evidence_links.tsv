@@ -1,0 +1,7 @@
+path_id	supplemental_evidence_ids	linkage_role
+CMS-P02-TNF-TNFR1-RELA-FAS	CMS-P02-EXT-EVID-001;CMS-P02-EXT-EVID-002	Independent primary support for TNF-canonical NF-kB/RelA target regulation; supports the existing FAS target edge without changing its context limits
+CMS-P02-TNF-TNFR2-RELA	CMS-P02-EXT-EVID-002	Broad TNF-NF-kB/RelA target support; does not resolve TNFR2-specific terminal routing
+CMS-P02-TNF-TNFR2-NFKB2-RELB	CMS-P02-EXT-EVID-003	Direct TNFR2-selective noncanonical NFKB2/RELB support in human T cells
+CMS-P02-TNF-TNFR2-CXCL12		No supplemental terminal-TF evidence assigned; functional CNS record remains separate
+CMS-P02-TNF-TNFR2-SCI-RECOVERY		No supplemental terminal-TF evidence assigned; SCI functional record remains separate
+CMS-P02-TNF-NFKB2-P100-MODULATION	CMS-P02-EXT-EVID-004	Independent TNF-p100/NFKB2 modulation and genetic support; receptor assignment remains unresolved

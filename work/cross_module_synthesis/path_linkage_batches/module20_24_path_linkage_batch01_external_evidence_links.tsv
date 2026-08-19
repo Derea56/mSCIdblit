@@ -1,0 +1,9 @@
+path_id	supplemental_evidence_ids	linkage_role
+CMS-P01-IL6-STAT3	CMS-P01-EXT-EVID-001;CMS-P01-EXT-EVID-002	SCI pathway and functional support for IL6/JAK-STAT-associated astrocyte and microglial outcomes; terminal STAT3 target remains unresolved
+CMS-P02-LIF-STAT3-BMP2	CMS-P01-EXT-EVID-005	Receptor-complex specificity support for LIFR-gp130 STAT3/STAT5B signaling in comparator systems
+CMS-P03-OSM-STAT3-PROGRAM	CMS-P01-EXT-EVID-003;CMS-P01-EXT-EVID-005	Perturbation-defined OSMR-gp130-STAT3 target output plus receptor-complex specificity
+CMS-P04-OSM-STAT3-SOCS3	CMS-P01-EXT-EVID-003	Independent OSMR/gp130/STAT3 perturbation support; target differs from the existing 22B Socs3 record
+CMS-P05-OSM-STAT5B	CMS-P01-EXT-EVID-005	Direct receptor-complex STAT5B activation support; terminal target remains unresolved
+CMS-P06-CNTF-STAT3-LIFR	CMS-P01-EXT-EVID-004	STAT3 requirement for CNTF-associated astrocyte differentiation
+CMS-P07-CNTF-STAT3-ASTROCYTE-FUNCTION	CMS-P01-EXT-EVID-004	Functional TF requirement supporting CNTF-STAT3 astrocyte output
+CMS-P08-CNTF-STAT3-OSMR		No supplemental terminal-output evidence assigned; receptor-complex competence remains from 21B only

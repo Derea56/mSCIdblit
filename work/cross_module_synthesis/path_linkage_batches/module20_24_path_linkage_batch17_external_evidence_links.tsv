@@ -1,0 +1,5 @@
+path_id	supplemental_evidence_ids	linkage_role
+CMS-P17-IGF1-IGF1R-ITGA6B4	CMS-P17-EXT-EVID-001	IGF1R/alpha6beta4 crosstalk support
+CMS-P17-IGF2-IGF1R-ITGA6B4	CMS-P17-EXT-EVID-002	IGF2/IGF1R/alpha6beta4 crosstalk support
+CMS-P17-NRG1-ITGA6B4-ERBB3	CMS-P17-EXT-EVID-003	NRG1/ERBB3/integrin beta4 ternary support
+CMS-P17-NRG1-ITGAVB3-ERBB3	CMS-P17-EXT-EVID-003	NRG1/ERBB3/integrin beta3 ternary support
