@@ -28,6 +28,19 @@ This first layer does not add an activation-state table, a pathway-to-regulon
 shortcut, or a speculative `TGFB -> TF` edge. A `SignalingEdge` remains the
 only place to assert a signaling relationship.
 
+The NFKB1 core summary remains the focused external-database example, applied
+by [`schema/nfkb1_core_regulon_layer.sql`](../schema/nfkb1_core_regulon_layer.sql).
+It adds an explicit `NFKB1` TF node, 17 TRRUST v2 target-gene memberships, and
+non-activating component/pathway mappings for the TNF–NF-kappaB branch. The
+generalized release migration
+[`schema/materialize_all_tf_regulons.sql`](../schema/materialize_all_tf_regulons.sql)
+now materializes every existing evidence-backed TF-target edge into a
+release-scoped regulon, including all explicit TF and target-gene roles. It
+does not create a direct TNFR-to-NFKB1 activation edge. See
+[`NFKB1_TNF_LAYER.md`](NFKB1_TNF_LAYER.md) and
+[`GENERALIZED_TF_LAYER_RELEASE.md`](GENERALIZED_TF_LAYER_RELEASE.md) for the
+query and release gates.
+
 ## Release gate
 
 Run the read-only checks after applying the migration:
