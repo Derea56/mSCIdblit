@@ -72,6 +72,11 @@
     "nodes": 2787,
     "edges": 3167,
     "edge_sources": 4393,
+    "node_roles": 4345,
+    "nodes_with_ligand_role": 728,
+    "nodes_with_receptor_role": 712,
+    "nodes_with_transcription_factor_role": 51,
+    "nodes_with_target_gene_role": 67,
     "pathways": 949,
     "boundary_groups": 9,
     "nonexportable_edges": 9809
@@ -125,6 +130,7 @@
   ],
   "files": {
     "nodes": "mechanism_nodes.tsv",
+    "node_roles": "mechanism_node_roles.tsv",
     "edges": "mechanism_edges.tsv",
     "edge_sources": "mechanism_edge_sources.tsv",
     "pathways": "mechanism_pathways.tsv",
@@ -133,8 +139,10 @@
   },
   "accuracy_contract": [
     "Every exported edge must reference existing source and target nodes.",
+    "Every exported node must have a signaling_cascade role; specialized roles are only added from explicit register layers or curated role hints.",
     "Every exported edge must retain at least one evidence-register source row.",
     "Every exported edge must belong to a pathway row.",
+    "Role-aware edges use canonical binds_receptor or target-gene relation types with matching endpoint roles; original register relations remain audit fields.",
     "Non-exportable edges remain summarized as boundaries and are not traversable graph edges.",
     "Stable PMID/PMCID/DOI/URL locators are retained in edge-source rows where available; local paths are not released."
   ]
