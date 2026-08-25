@@ -61,17 +61,23 @@ def validate(bundle_dir: Path) -> dict[str, object]:
     metadata = json.loads((bundle_dir / "bundle_metadata.json").read_text())
 
     expected_fields = {
-        "nodes": ["node_id", "canonical_label", "label_variants", "modules", "pathways", "exportable_edge_count"],
+        "nodes": [
+            "node_id", "canonical_name", "node_type", "node_subtype", "gene_symbol",
+            "organism_scope", "compartment", "notes", "canonical_label", "label_variants",
+            "modules", "pathways", "exportable_edge_count",
+        ],
         "edges": [
-            "edge_id", "module", "source_node_id", "target_node_id", "source_label",
-            "relation_type", "target_label", "pathway_name", "evidence_layer", "edge_status",
-            "context_scope", "cell_type_context", "compartment_context", "species_context",
-            "injury_context", "confidence_tier", "export_priority", "evidence_ids",
+            "edge_id", "source_node_id", "target_node_id", "pathway_label", "relation_type",
+            "effect_polarity", "species_context", "cell_type_context", "compartment_context",
+            "injury_context", "evidence_status", "context_scope", "export_priority", "notes",
+            "module", "source_label", "target_label", "pathway_name", "evidence_layer", "edge_status",
+            "confidence_tier", "evidence_ids",
             "evidence_count", "source_locator_count", "exportable", "consolidation_note",
         ],
         "sources": [
-            "source_id", "edge_id", "module", "evidence_id", "source_kind", "source_locator",
-            "source_locator_status", "support_kind", "species_support", "source_scope", "confidence_tier", "citation_note",
+            "edge_source_id", "edge_id", "paper_id", "observation_id", "claim_id", "support_kind",
+            "species_support", "source_scope", "confidence_tier", "citation_note", "notes",
+            "module", "evidence_id", "source_kind", "source_locator", "source_locator_status",
             "evidence_summary", "limitations", "evidence_layer", "evidence_exportable",
             "consolidation_note",
         ],
@@ -93,7 +99,7 @@ def validate(bundle_dir: Path) -> dict[str, object]:
 
     node_ids = [row["node_id"] for row in nodes]
     edge_ids = [row["edge_id"] for row in edges]
-    source_ids = [row["source_id"] for row in sources]
+    source_ids = [row["edge_source_id"] for row in sources]
     if duplicates(node_ids):
         errors.append(f"duplicate node IDs: {duplicates(node_ids)[:5]}")
     if duplicates(edge_ids):

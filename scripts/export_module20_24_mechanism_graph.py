@@ -98,6 +98,84 @@ def public_locator(value: str) -> tuple[str, str]:
     return "", "missing"
 
 
+def effect_polarity(value: str) -> str:
+    """Normalize register prose without inventing a sign for mixed relations."""
+    lowered = value.casefold()
+    negative = any(token in lowered for token in ("inhibit", "suppress", "repress", "decrease", "negative"))
+    positive = any(token in lowered for token in ("activat", "promot", "induc", "increase", "positive"))
+    if negative and positive:
+        return "unknown"
+    if negative:
+        return "inhibitory"
+    if positive:
+        return "activating"
+    return "unknown"
+
+
+def normalize_species_support(value: str) -> str:
+    lowered = value.casefold()
+    has_mouse = "mouse" in lowered or "murine" in lowered
+    has_human = "human" in lowered
+    if has_mouse and has_human:
+        return "both"
+    if has_mouse:
+        return "mouse"
+    if has_human:
+        return "human"
+    if lowered.strip():
+        return "mixed"
+    return "not_applicable"
+
+
+def normalize_confidence(value: str) -> str:
+    lowered = value.casefold().strip()
+    if lowered.startswith("high"):
+        return "high"
+    if lowered.startswith("medium"):
+        return "medium"
+    if lowered.startswith("low"):
+        return "low"
+    return "uncertain"
+
+
+def normalize_export_priority(value: str) -> str:
+    lowered = value.casefold().strip()
+    return {
+        "p1": "high",
+        "p2": "medium",
+        "p3": "low",
+        "high": "high",
+        "medium": "medium",
+        "low": "low",
+        "exclude": "exclude",
+        "": "",
+    }.get(lowered, "")
+
+
+def normalize_support_kind(source_kind: str, support_kind: str) -> str:
+    value = f"{source_kind} {support_kind}".casefold()
+    if "primary" in value or "validated" in value:
+        return "primary_experiment"
+    if "review" in value:
+        return "review_statement"
+    if "database" in value or "frozen_" in value:
+        return "database_curated"
+    if "consensus" in value:
+        return "consensus_summary"
+    return "manual_background"
+
+
+def normalize_source_scope(source_scope: str, source_kind: str, support_kind: str) -> str:
+    value = f"{source_scope} {source_kind} {support_kind}".casefold()
+    if any(token in value for token in ("negative", "boundary", "search", "unresolved", "no_evidence", "no exact")):
+        return "negative_evidence"
+    if "direct" in value:
+        return "direct_edge"
+    if "pathway" in value:
+        return "pathway_membership"
+    return "contextual_support"
+
+
 def file_sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as handle:
@@ -175,13 +253,30 @@ def build_release(source_root: Path) -> dict[str, object]:
     node_rows: list[dict[str, object]] = []
     for key in sorted(node_records):
         record = node_records[key]
+        label_variants = "; ".join(sorted(record["labels"]))
+        modules = ";".join(sorted(record["modules"]))
+        pathways = ";".join(sorted(filter(None, record["pathways"])))
         node_rows.append(
             {
                 "node_id": node_id_by_key[key],
+                # Required mSCS contract fields. The source registers contain
+                # curated labels, not a safe gene-symbol/entity-type mapping.
+                "canonical_name": record["label"],
+                "node_type": "curated_signaling_entity",
+                "node_subtype": "",
+                "gene_symbol": "",
+                "organism_scope": "",
+                "compartment": "",
+                "notes": (
+                    f"modules={modules}; pathways={pathways}; "
+                    f"label_variants={label_variants}; "
+                    f"exportable_edge_count={len(record['edge_ids'])}"
+                ),
+                # Extra audit fields retained for the mSCIdblit release.
                 "canonical_label": record["label"],
-                "label_variants": "; ".join(sorted(record["labels"])),
-                "modules": ";".join(sorted(record["modules"])),
-                "pathways": ";".join(sorted(filter(None, record["pathways"]))),
+                "label_variants": label_variants,
+                "modules": modules,
+                "pathways": pathways,
                 "exportable_edge_count": len(record["edge_ids"]),
             }
         )
@@ -207,6 +302,10 @@ def build_release(source_root: Path) -> dict[str, object]:
                 "module": edge["module"],
                 "source_node_id": node_id_by_key[source_key],
                 "target_node_id": node_id_by_key[target_key],
+                "pathway_label": pathway,
+                "effect_polarity": effect_polarity(edge["relation_type"]),
+                "evidence_status": edge["edge_status"],
+                "notes": edge["consolidation_note"],
                 "source_label": edge["source_entity"],
                 "relation_type": edge["relation_type"],
                 "target_label": edge["target_entity"],
@@ -219,7 +318,7 @@ def build_release(source_root: Path) -> dict[str, object]:
                 "species_context": edge["species_context"],
                 "injury_context": edge["injury_context"],
                 "confidence_tier": edge["confidence_tier"],
-                "export_priority": edge["export_priority"],
+                "export_priority": normalize_export_priority(edge["export_priority"]),
                 "evidence_ids": ";".join(evidence_ids),
                 "evidence_count": len(evidence_ids),
                 "source_locator_count": locator_count,
@@ -235,18 +334,33 @@ def build_release(source_root: Path) -> dict[str, object]:
             locator, locator_status = public_locator(evidence["source_locator"])
             source_rows.append(
                 {
-                    "source_id": f"SRC{len(source_rows) + 1:06d}",
+                    "edge_source_id": f"SRC{len(source_rows) + 1:06d}",
                     "edge_id": edge_id,
+                    # The register evidence ID is an explicit external
+                    # observation token, not a fabricated database integer.
+                    "paper_id": "",
+                    "observation_id": f"REGISTER:{evidence['b_evidence_id']}",
+                    "claim_id": "",
+                    "support_kind": normalize_support_kind(
+                        evidence["source_kind"], evidence["support_kind"]
+                    ),
+                    "species_support": normalize_species_support(evidence["species_support"]),
+                    "source_scope": normalize_source_scope(
+                        evidence["source_scope"], evidence["source_kind"], evidence["support_kind"]
+                    ),
+                    "confidence_tier": normalize_confidence(evidence["confidence_tier"]),
+                    "citation_note": evidence["citation_note"],
+                    "notes": (
+                        f"register_evidence_id={evidence['b_evidence_id']}; "
+                        f"original_source_kind={evidence['source_kind']}; "
+                        f"original_support_kind={evidence['support_kind']}; "
+                        f"source_locator_status={locator_status}"
+                    ),
                     "module": edge["module"],
                     "evidence_id": evidence["b_evidence_id"],
                     "source_kind": evidence["source_kind"],
                     "source_locator": locator,
                     "source_locator_status": locator_status,
-                    "support_kind": evidence["support_kind"],
-                    "species_support": evidence["species_support"],
-                    "source_scope": evidence["source_scope"],
-                    "confidence_tier": evidence["confidence_tier"],
-                    "citation_note": evidence["citation_note"],
                     "evidence_summary": evidence["evidence_summary"],
                     "limitations": evidence["limitations"],
                     "evidence_layer": evidence["evidence_layer"],
@@ -304,12 +418,19 @@ def build_release(source_root: Path) -> dict[str, object]:
 
     metadata = {
         "release_name": "mSCIdblit Module 20B-24B mechanism graph",
+        "bundle_name": "module20_24_mechanism_graph",
         "release_id": f"module20_24_mechanism_graph:{date.today().isoformat()}",
         "release_status": "conservative_register_backed_snapshot",
         "source_repo": "mSCIdblit",
+        "target_repo": "mSCS",
         "source_scope": "validated Module 20B-24B edge and evidence registers",
         "generated_at": date.today().isoformat(),
         "canonical_database_materialization": False,
+        "authoritative_pathway_snapshot": True,
+        "replacement_policy": (
+            "Importing this bundle replaces the selected active mechanism release in mSCS; "
+            "it does not alter atlas-derived tables."
+        ),
         "input_registers": input_registers,
         "graph_policy": {
             "exportable_edges_only": True,
@@ -364,16 +485,21 @@ def main() -> None:
 
     write_tsv(
         output_dir / "mechanism_nodes.tsv",
-        ["node_id", "canonical_label", "label_variants", "modules", "pathways", "exportable_edge_count"],
+        [
+            "node_id", "canonical_name", "node_type", "node_subtype", "gene_symbol",
+            "organism_scope", "compartment", "notes", "canonical_label", "label_variants",
+            "modules", "pathways", "exportable_edge_count",
+        ],
         release["nodes"],
     )
     write_tsv(
         output_dir / "mechanism_edges.tsv",
         [
-            "edge_id", "module", "source_node_id", "target_node_id", "source_label",
-            "relation_type", "target_label", "pathway_name", "evidence_layer", "edge_status",
-            "context_scope", "cell_type_context", "compartment_context", "species_context",
-            "injury_context", "confidence_tier", "export_priority", "evidence_ids",
+            "edge_id", "source_node_id", "target_node_id", "pathway_label", "relation_type",
+            "effect_polarity", "species_context", "cell_type_context", "compartment_context",
+            "injury_context", "evidence_status", "context_scope", "export_priority", "notes",
+            "module", "source_label", "target_label", "pathway_name", "evidence_layer", "edge_status",
+            "confidence_tier", "evidence_ids",
             "evidence_count", "source_locator_count", "exportable", "consolidation_note",
         ],
         release["edges"],
@@ -381,8 +507,9 @@ def main() -> None:
     write_tsv(
         output_dir / "mechanism_edge_sources.tsv",
         [
-            "source_id", "edge_id", "module", "evidence_id", "source_kind", "source_locator",
-            "source_locator_status", "support_kind", "species_support", "source_scope", "confidence_tier", "citation_note",
+            "edge_source_id", "edge_id", "paper_id", "observation_id", "claim_id", "support_kind",
+            "species_support", "source_scope", "confidence_tier", "citation_note", "notes",
+            "module", "evidence_id", "source_kind", "source_locator", "source_locator_status",
             "evidence_summary", "limitations", "evidence_layer", "evidence_exportable",
             "consolidation_note",
         ],

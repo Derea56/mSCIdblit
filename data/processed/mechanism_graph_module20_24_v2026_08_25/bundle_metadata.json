@@ -1,11 +1,15 @@
 {
   "release_name": "mSCIdblit Module 20B-24B mechanism graph",
+  "bundle_name": "module20_24_mechanism_graph",
   "release_id": "module20_24_mechanism_graph:2026-08-25",
   "release_status": "conservative_register_backed_snapshot",
   "source_repo": "mSCIdblit",
+  "target_repo": "mSCS",
   "source_scope": "validated Module 20B-24B edge and evidence registers",
   "generated_at": "2026-08-25",
   "canonical_database_materialization": false,
+  "authoritative_pathway_snapshot": true,
+  "replacement_policy": "Importing this bundle replaces the selected active mechanism release in mSCS; it does not alter atlas-derived tables.",
   "input_registers": [
     {
       "module": "20B",
