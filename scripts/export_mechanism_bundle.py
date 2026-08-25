@@ -27,6 +27,16 @@ DEFAULT_OUTPUT = ROOT / "data" / "processed" / "mechanism_bundle"
 PRIORITY_RANK = {"high": 3, "medium": 2, "low": 1, "exclude": 0}
 
 
+def read_project_version() -> str:
+    version_path = ROOT / "VERSION"
+    if not version_path.exists():
+        return "0.0.0-dev"
+    version = version_path.read_text().strip()
+    if not version:
+        raise SystemExit(f"Project version file is empty: {version_path}")
+    return version
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -85,6 +95,17 @@ def parse_args() -> argparse.Namespace:
         "--bundle-name",
         default="mscs_mechanism_bundle",
         help="Metadata label for this export bundle.",
+    )
+    parser.add_argument(
+        "--graph-version",
+        default=read_project_version(),
+        help="Frozen mechanism-graph version. Defaults to VERSION in the repository root.",
+    )
+    parser.add_argument(
+        "--release-status",
+        choices=("snapshot", "frozen"),
+        default="snapshot",
+        help="Release status recorded in metadata. Default: snapshot.",
     )
     return parser.parse_args()
 
@@ -386,9 +407,11 @@ ORDER BY edge_source_id
 
 def metadata(args: argparse.Namespace, nodes: list[dict[str, str]], node_roles: list[dict[str, str]], edges: list[dict[str, str]], edge_sources: list[dict[str, str]]) -> dict[str, object]:
     pathway_rows = supported_pathway_summary(edges, edge_sources)
-    release_id = f"{args.bundle_name}:{date.today().isoformat()}"
+    release_id = f"{args.bundle_name}:v{args.graph_version}"
     return {
         "bundle_name": args.bundle_name,
+        "graph_version": args.graph_version,
+        "release_status": args.release_status,
         "release_id": release_id,
         "exported_at": date.today().isoformat(),
         "source_repo": "mSCIdblit",

@@ -2,6 +2,12 @@
 
 Release date: 2026-08-25
 
+Frozen graph version: `v1.0.0`
+
+Preferred frozen bundle: `data/processed/mechanism_bundle_module20_24_db_v1_0_0/`
+
+Graph release identifier: `module20_24_database_graph:v1.0.0`
+
 This release generalizes the NFKB1 correction across the complete current
 mechanism database. It materializes what is already evidence-backed in the
 graph; it does not claim an exhaustive biological regulon for every TF.
