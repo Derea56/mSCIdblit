@@ -1,0 +1,677 @@
+{
+  "status": "reviewable first-pass cross-module synthesis",
+  "source_scope": "Module 20B-24B audit layers",
+  "canonical_materialization_status": "blocked_pending_canonical_schema_and_source_anchor_resolution",
+  "module_summaries": [
+    {
+      "module": "20B",
+      "edges": 5906,
+      "evidence": 7586,
+      "boundaries": 4796,
+      "exportable_edges": 1110,
+      "edge_layers": {
+        "boundary": 4613,
+        "ligand_receptor_or_direct_molecular": 1293
+      },
+      "nonexportable_edges": 4796,
+      "exportable_evidence_without_locator": 0
+    },
+    {
+      "module": "21B",
+      "edges": 111,
+      "evidence": 54,
+      "boundaries": 0,
+      "exportable_edges": 111,
+      "edge_layers": {
+        "downstream_or_functional": 35,
+        "ligand_receptor_or_direct_molecular": 6,
+        "receptor_proximal_or_pathway": 70
+      },
+      "nonexportable_edges": 0,
+      "exportable_evidence_without_locator": 0
+    },
+    {
+      "module": "22B",
+      "edges": 5733,
+      "evidence": 5906,
+      "boundaries": 5047,
+      "exportable_edges": 723,
+      "edge_layers": {
+        "boundary": 34,
+        "downstream_or_functional": 5658,
+        "ligand_receptor_or_direct_molecular": 41
+      },
+      "nonexportable_edges": 5010,
+      "exportable_evidence_without_locator": 0
+    },
+    {
+      "module": "23B",
+      "edges": 1075,
+      "evidence": 1467,
+      "boundaries": 289,
+      "exportable_edges": 1072,
+      "edge_layers": {
+        "contextual_or_unresolved": 25,
+        "downstream_or_functional": 376,
+        "ligand_receptor_or_direct_molecular": 401,
+        "receptor_proximal_or_pathway": 273
+      },
+      "nonexportable_edges": 3,
+      "exportable_evidence_without_locator": 0
+    },
+    {
+      "module": "24B",
+      "edges": 151,
+      "evidence": 200,
+      "boundaries": 31,
+      "exportable_edges": 151,
+      "edge_layers": {
+        "downstream_or_functional": 44,
+        "ligand_receptor_or_direct_molecular": 62,
+        "receptor_proximal_or_pathway": 45
+      },
+      "nonexportable_edges": 0,
+      "exportable_evidence_without_locator": 0
+    }
+  ],
+  "candidate_convergence_nodes": [
+    "CSL",
+    "HES1",
+    "HEY1",
+    "RBPJ",
+    "SMAD1",
+    "SMAD2",
+    "SMAD3",
+    "SMAD4",
+    "SMAD5",
+    "SMAD8",
+    "STAT1",
+    "STAT2",
+    "STAT3",
+    "STAT5B"
+  ],
+  "candidate_convergence_summary": {
+    "strict_exact_label_overlap_count": 14,
+    "alias_aware_candidate_group_count": 19,
+    "alias_aware_candidate_groups": [
+      {
+        "node_id": "CSL",
+        "display_label": "CSL",
+        "normalization_basis": "exact token overlap",
+        "relay_21b_edge_ids": [
+          "M21B-E000055"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000307",
+          "M22B-E000308",
+          "M22B-E000309"
+        ],
+        "relay_21b_edge_count": 1,
+        "tf_22b_edge_count": 3,
+        "relay_21b_exportable_edge_count": 1,
+        "tf_22b_exportable_edge_count": 3,
+        "status": "candidate_convergence_only",
+        "limitation": "21B uses the RBPJ/CSL composite; CSL is not separately resolved."
+      },
+      {
+        "node_id": "RBPJ",
+        "display_label": "RBPJ",
+        "normalization_basis": "exact token overlap",
+        "relay_21b_edge_ids": [
+          "M21B-E000055",
+          "M21B-E000094"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000307",
+          "M22B-E000308",
+          "M22B-E000309"
+        ],
+        "relay_21b_edge_count": 2,
+        "tf_22b_edge_count": 3,
+        "relay_21b_exportable_edge_count": 2,
+        "tf_22b_exportable_edge_count": 3,
+        "status": "candidate_convergence_only",
+        "limitation": "21B uses the RBPJ/CSL composite; RBPJ is not separately resolved from CSL."
+      },
+      {
+        "node_id": "HES1",
+        "display_label": "HES1",
+        "normalization_basis": "exact token overlap",
+        "relay_21b_edge_ids": [
+          "M21B-E000056"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000193",
+          "M22B-E000194",
+          "M22B-E000195"
+        ],
+        "relay_21b_edge_count": 1,
+        "tf_22b_edge_count": 3,
+        "relay_21b_exportable_edge_count": 1,
+        "tf_22b_exportable_edge_count": 3,
+        "status": "candidate_convergence_only",
+        "limitation": "22B includes program and phenotype outputs; no shared ligand-to-HES1 route is asserted."
+      },
+      {
+        "node_id": "HES5",
+        "display_label": "HES5",
+        "normalization_basis": "exact token overlap",
+        "relay_21b_edge_ids": [
+          "M21B-E000092"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000193",
+          "M22B-E000196",
+          "M22B-E000197"
+        ],
+        "relay_21b_edge_count": 1,
+        "tf_22b_edge_count": 3,
+        "relay_21b_exportable_edge_count": 1,
+        "tf_22b_exportable_edge_count": 3,
+        "status": "candidate_convergence_only",
+        "limitation": "21B is a Notch/HES5 SCI-context relay; 22B also contains BMP/HES5 comparator evidence."
+      },
+      {
+        "node_id": "HEY1",
+        "display_label": "HEY1",
+        "normalization_basis": "exact token overlap",
+        "relay_21b_edge_ids": [
+          "M21B-E000057"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000194",
+          "M22B-E000195"
+        ],
+        "relay_21b_edge_count": 1,
+        "tf_22b_edge_count": 2,
+        "relay_21b_exportable_edge_count": 1,
+        "tf_22b_exportable_edge_count": 2,
+        "status": "candidate_convergence_only",
+        "limitation": "22B HEY1 records are program/phenotype associations, not a universal Notch output claim."
+      },
+      {
+        "node_id": "NFKB2",
+        "display_label": "NFKB2",
+        "normalization_basis": "explicit token in NFKB2-p100/p52 and NFKB2;RELB labels",
+        "relay_21b_edge_ids": [
+          "M21B-E000067"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000283"
+        ],
+        "relay_21b_edge_count": 1,
+        "tf_22b_edge_count": 1,
+        "relay_21b_exportable_edge_count": 1,
+        "tf_22b_exportable_edge_count": 1,
+        "status": "candidate_convergence_only",
+        "limitation": "21B resolves an alternative NF-kappaB branch but not every p100/p52 processing step."
+      },
+      {
+        "node_id": "RELA_NFKB_P65",
+        "display_label": "RELA / NF-kB p65",
+        "normalization_basis": "curated alias group with bounded RELA matching",
+        "relay_21b_edge_ids": [
+          "M21B-E000021",
+          "M21B-E000066"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000255",
+          "M22B-E000256",
+          "M22B-E000257",
+          "M22B-E000258",
+          "M22B-E000259",
+          "M22B-E000260",
+          "M22B-E000261",
+          "M22B-E000262",
+          "M22B-E000263",
+          "M22B-E000264",
+          "M22B-E000265",
+          "M22B-E000266",
+          "M22B-E000267",
+          "M22B-E000268",
+          "M22B-E000269",
+          "M22B-E000310",
+          "M22B-E000311",
+          "M22B-E000312",
+          "M22B-E000313",
+          "M22B-E000314",
+          "M22B-E000315",
+          "M22B-E000316",
+          "M22B-E000317",
+          "M22B-E000318",
+          "M22B-E000319",
+          "M22B-E000320",
+          "M22B-E000321",
+          "M22B-E000322",
+          "M22B-E000323",
+          "M22B-E000324",
+          "M22B-E000325",
+          "M22B-E000326",
+          "M22B-E000327",
+          "M22B-E000328",
+          "M22B-E000329",
+          "M22B-E000330",
+          "M22B-E000331",
+          "M22B-E000332",
+          "M22B-E000333",
+          "M22B-E000334",
+          "M22B-E000335",
+          "M22B-E000413"
+        ],
+        "relay_21b_edge_count": 2,
+        "tf_22b_edge_count": 42,
+        "relay_21b_exportable_edge_count": 2,
+        "tf_22b_exportable_edge_count": 34,
+        "status": "candidate_convergence_only",
+        "limitation": "RELA and NF-kB p65 are routing aliases, not a new direct edge; 'relay' is excluded."
+      },
+      {
+        "node_id": "SMAD1",
+        "display_label": "SMAD1",
+        "normalization_basis": "exact token plus composite-branch match",
+        "relay_21b_edge_ids": [
+          "M21B-E000037",
+          "M21B-E000080"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000344",
+          "M22B-E000345",
+          "M22B-E000346",
+          "M22B-E000347",
+          "M22B-E000348",
+          "M22B-E000349",
+          "M22B-E000350",
+          "M22B-E000351",
+          "M22B-E000352",
+          "M22B-E000353",
+          "M22B-E000354",
+          "M22B-E000355",
+          "M22B-E000356",
+          "M22B-E000357",
+          "M22B-E000358",
+          "M22B-E000359",
+          "M22B-E000360",
+          "M22B-E000361",
+          "M22B-E000362",
+          "M22B-E000363",
+          "M22B-E000364",
+          "M22B-E000365",
+          "M22B-E000366",
+          "M22B-E000367",
+          "M22B-E000368",
+          "M22B-E000369",
+          "M22B-E000370",
+          "M22B-E000371",
+          "M22B-E000372",
+          "M22B-E000373",
+          "M22B-E000374"
+        ],
+        "relay_21b_edge_count": 2,
+        "tf_22b_edge_count": 31,
+        "relay_21b_exportable_edge_count": 2,
+        "tf_22b_exportable_edge_count": 21,
+        "status": "candidate_convergence_only",
+        "limitation": "21B BMP labels are composite/paralog-unresolved; SMAD1 is not an independent 21B edge."
+      },
+      {
+        "node_id": "SMAD2",
+        "display_label": "SMAD2",
+        "normalization_basis": "exact token overlap",
+        "relay_21b_edge_ids": [
+          "M21B-E000034"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000348",
+          "M22B-E000374",
+          "M22B-E000375",
+          "M22B-E000376",
+          "M22B-E000377",
+          "M22B-E000378",
+          "M22B-E000379",
+          "M22B-E000380",
+          "M22B-E000381",
+          "M22B-E000382",
+          "M22B-E000383",
+          "M22B-E000384",
+          "M22B-E000385",
+          "M22B-E000386"
+        ],
+        "relay_21b_edge_count": 1,
+        "tf_22b_edge_count": 14,
+        "relay_21b_exportable_edge_count": 1,
+        "tf_22b_exportable_edge_count": 12,
+        "status": "candidate_convergence_only",
+        "limitation": "Shared SMAD2 does not establish receptor, species, or cell-model equivalence."
+      },
+      {
+        "node_id": "SMAD3",
+        "display_label": "SMAD3",
+        "normalization_basis": "exact token overlap",
+        "relay_21b_edge_ids": [
+          "M21B-E000035"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000374",
+          "M22B-E000382",
+          "M22B-E000383",
+          "M22B-E000384",
+          "M22B-E000385",
+          "M22B-E000386",
+          "M22B-E000387",
+          "M22B-E000388",
+          "M22B-E000389",
+          "M22B-E000390",
+          "M22B-E000391",
+          "M22B-E000392",
+          "M22B-E000393",
+          "M22B-E000394",
+          "M22B-E000395"
+        ],
+        "relay_21b_edge_count": 1,
+        "tf_22b_edge_count": 15,
+        "relay_21b_exportable_edge_count": 1,
+        "tf_22b_exportable_edge_count": 13,
+        "status": "candidate_convergence_only",
+        "limitation": "Shared SMAD3 does not establish receptor, species, or cell-model equivalence."
+      },
+      {
+        "node_id": "SMAD4",
+        "display_label": "SMAD4",
+        "normalization_basis": "exact token overlap",
+        "relay_21b_edge_ids": [
+          "M21B-E000036",
+          "M21B-E000038"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000348",
+          "M22B-E000349",
+          "M22B-E000350",
+          "M22B-E000351",
+          "M22B-E000352",
+          "M22B-E000353",
+          "M22B-E000380",
+          "M22B-E000391",
+          "M22B-E000392",
+          "M22B-E000393",
+          "M22B-E000394",
+          "M22B-E000395"
+        ],
+        "relay_21b_edge_count": 2,
+        "tf_22b_edge_count": 12,
+        "relay_21b_exportable_edge_count": 2,
+        "tf_22b_exportable_edge_count": 10,
+        "status": "candidate_convergence_only",
+        "limitation": "SMAD4 is a shared complex partner/output node, not proof of one upstream route."
+      },
+      {
+        "node_id": "SMAD5",
+        "display_label": "SMAD5",
+        "normalization_basis": "exact token plus composite-branch match",
+        "relay_21b_edge_ids": [
+          "M21B-E000037",
+          "M21B-E000080"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000354",
+          "M22B-E000355",
+          "M22B-E000356",
+          "M22B-E000357",
+          "M22B-E000358",
+          "M22B-E000359",
+          "M22B-E000360",
+          "M22B-E000361",
+          "M22B-E000362",
+          "M22B-E000363",
+          "M22B-E000364",
+          "M22B-E000365",
+          "M22B-E000366",
+          "M22B-E000367",
+          "M22B-E000368",
+          "M22B-E000369",
+          "M22B-E000370",
+          "M22B-E000371",
+          "M22B-E000372",
+          "M22B-E000373",
+          "M22B-E000374",
+          "M22B-E000396"
+        ],
+        "relay_21b_edge_count": 2,
+        "tf_22b_edge_count": 22,
+        "relay_21b_exportable_edge_count": 2,
+        "tf_22b_exportable_edge_count": 14,
+        "status": "candidate_convergence_only",
+        "limitation": "21B BMP labels are composite/paralog-unresolved; SMAD5 is not an independent 21B edge."
+      },
+      {
+        "node_id": "SMAD8",
+        "display_label": "SMAD8",
+        "normalization_basis": "exact token plus composite-branch match",
+        "relay_21b_edge_ids": [
+          "M21B-E000037",
+          "M21B-E000080"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000355",
+          "M22B-E000356",
+          "M22B-E000357",
+          "M22B-E000358",
+          "M22B-E000359",
+          "M22B-E000360",
+          "M22B-E000361",
+          "M22B-E000362",
+          "M22B-E000363",
+          "M22B-E000364",
+          "M22B-E000365",
+          "M22B-E000366",
+          "M22B-E000367",
+          "M22B-E000368",
+          "M22B-E000369",
+          "M22B-E000370",
+          "M22B-E000396",
+          "M22B-E000397"
+        ],
+        "relay_21b_edge_count": 2,
+        "tf_22b_edge_count": 18,
+        "relay_21b_exportable_edge_count": 2,
+        "tf_22b_exportable_edge_count": 11,
+        "status": "candidate_convergence_only",
+        "limitation": "21B BMP labels are composite/paralog-unresolved; SMAD8 is not an independent 21B edge."
+      },
+      {
+        "node_id": "SMAD9",
+        "display_label": "SMAD9",
+        "normalization_basis": "explicit compact composite-branch match",
+        "relay_21b_edge_ids": [
+          "M21B-E000037",
+          "M21B-E000080"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000371",
+          "M22B-E000372",
+          "M22B-E000373",
+          "M22B-E000374",
+          "M22B-E000398"
+        ],
+        "relay_21b_edge_count": 2,
+        "tf_22b_edge_count": 5,
+        "relay_21b_exportable_edge_count": 2,
+        "tf_22b_exportable_edge_count": 4,
+        "status": "candidate_convergence_only",
+        "limitation": "SMAD9 is represented in 21B by the compact SMAD1/SMAD5/SMAD8/9 label; it is not independently resolved."
+      },
+      {
+        "node_id": "STAT1",
+        "display_label": "STAT1",
+        "normalization_basis": "exact token overlap",
+        "relay_21b_edge_ids": [
+          "M21B-E000010",
+          "M21B-E000015"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000407",
+          "M22B-E000408",
+          "M22B-E000409",
+          "M22B-E000410",
+          "M22B-E000411",
+          "M22B-E000412",
+          "M22B-E000413",
+          "M22B-E000414",
+          "M22B-E000415",
+          "M22B-E000416",
+          "M22B-E000417",
+          "M22B-E000418",
+          "M22B-E000440",
+          "M22B-E000442"
+        ],
+        "relay_21b_edge_count": 2,
+        "tf_22b_edge_count": 14,
+        "relay_21b_exportable_edge_count": 2,
+        "tf_22b_exportable_edge_count": 8,
+        "status": "candidate_convergence_only",
+        "limitation": "22B includes STAT1-only and composite STAT/IRF records; no single receptor route is selected."
+      },
+      {
+        "node_id": "STAT2",
+        "display_label": "STAT2",
+        "normalization_basis": "exact token overlap",
+        "relay_21b_edge_ids": [
+          "M21B-E000011"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000414",
+          "M22B-E000415",
+          "M22B-E000442"
+        ],
+        "relay_21b_edge_count": 1,
+        "tf_22b_edge_count": 3,
+        "relay_21b_exportable_edge_count": 1,
+        "tf_22b_exportable_edge_count": 2,
+        "status": "candidate_convergence_only",
+        "limitation": "STAT2 may be part of the composite STAT1/STAT2/IRF9 evidence and is not split from it."
+      },
+      {
+        "node_id": "STAT3",
+        "display_label": "STAT3",
+        "normalization_basis": "exact token overlap",
+        "relay_21b_edge_ids": [
+          "M21B-E000002",
+          "M21B-E000006",
+          "M21B-E000058",
+          "M21B-E000059",
+          "M21B-E000090",
+          "M21B-E000102"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000138",
+          "M22B-E000416",
+          "M22B-E000420",
+          "M22B-E000421",
+          "M22B-E000422",
+          "M22B-E000423",
+          "M22B-E000424",
+          "M22B-E000425",
+          "M22B-E000426",
+          "M22B-E000427",
+          "M22B-E000428",
+          "M22B-E000429",
+          "M22B-E000430",
+          "M22B-E000431",
+          "M22B-E000432",
+          "M22B-E000433",
+          "M22B-E000434",
+          "M22B-E000435",
+          "M22B-E000436",
+          "M22B-E000437",
+          "M22B-E000438",
+          "M22B-E000439",
+          "M22B-E000440",
+          "M22B-E000441",
+          "M22B-E000442"
+        ],
+        "relay_21b_edge_count": 6,
+        "tf_22b_edge_count": 25,
+        "relay_21b_exportable_edge_count": 6,
+        "tf_22b_exportable_edge_count": 21,
+        "status": "candidate_convergence_only",
+        "limitation": "STAT3 is a candidate convergence point, not a claim that all upstream complexes share one outcome."
+      },
+      {
+        "node_id": "STAT5B",
+        "display_label": "STAT5B",
+        "normalization_basis": "exact token overlap",
+        "relay_21b_edge_ids": [
+          "M21B-E000007"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000442",
+          "M22B-E000455",
+          "M22B-E000456",
+          "M22B-E000457",
+          "M22B-E000458"
+        ],
+        "relay_21b_edge_count": 1,
+        "tf_22b_edge_count": 5,
+        "relay_21b_exportable_edge_count": 1,
+        "tf_22b_exportable_edge_count": 4,
+        "status": "candidate_convergence_only",
+        "limitation": "22B includes STAT5A/STAT5B composite records; those remain composite."
+      },
+      {
+        "node_id": "YAP",
+        "display_label": "YAP",
+        "normalization_basis": "exact token overlap",
+        "relay_21b_edge_ids": [
+          "M21B-E000086"
+        ],
+        "tf_22b_edge_ids": [
+          "M22B-E000484",
+          "M22B-E000485"
+        ],
+        "relay_21b_edge_count": 1,
+        "tf_22b_edge_count": 2,
+        "relay_21b_exportable_edge_count": 1,
+        "tf_22b_exportable_edge_count": 1,
+        "status": "candidate_convergence_only",
+        "limitation": "The FGF/RHOA/YAP and mechanotransduction records do not establish a universal FGF-to-YAP route."
+      }
+    ]
+  },
+  "synthesis_themes": [
+    {
+      "theme_id": "CMS20-24-T001",
+      "title": "Extracellular Handoff Is the Entry Layer, Not a Complete Mechanism",
+      "statement": "20B defines a large ligand-receptor candidate universe, but its LR evidence does not by itself establish receptor-proximal relay, downstream TF, or cellular-function outcomes.",
+      "boundary": "Only the 1,110 high/medium rows pass the conservative 20B export gate. The 183 uncertain direct candidates remain queryable but non-exportable; low, no-evidence, and non-LR classifications remain explicit boundaries."
+    },
+    {
+      "theme_id": "CMS20-24-T002",
+      "title": "Receptor Complexes Converge on a Limited Relay Vocabulary",
+      "statement": "21B shows convergence onto JAK/STAT, NF-kappaB/MAPK, GPCR, RTK, TGF-beta/SMAD, WNT, and Notch branches while retaining receptor-complex and ligand-context distinctions.",
+      "boundary": "Shared relay nodes such as STAT3 or SMAD4 are candidate convergence points, not proof that every upstream ligand uses the same receptor complex or branch."
+    },
+    {
+      "theme_id": "CMS20-24-T003",
+      "title": "Terminal TF Evidence Is More Selective Than Pathway Evidence",
+      "statement": "22B contains many pathway/program and phenotype records, but only the exportable subset should support receiver-state traversal; direct TF binding, target regulation, program association, and phenotype evidence remain separate.",
+      "boundary": "Most 22B records are non-exportable or boundary-limited, so pathway presence must not be converted into a terminal TF-target claim."
+    },
+    {
+      "theme_id": "CMS20-24-T004",
+      "title": "Matrix and Noncanonical Extracellular Systems Are Parallel Inputs",
+      "statement": "23B and 24B add matrix/adhesion/mechanotransduction and complement/coagulation/lipid/protease records as candidate extracellular inputs alongside soluble cytokine signaling.",
+      "boundary": "Exportable means source-backed at the audit layer, not SCI-specific applicability or a complete intracellular route. These layers require explicit receptor, sensor, fragment, compartment, timing, and perturbation evidence before being merged into a shared mechanism."
+    }
+  ],
+  "linkage_rules": [
+    "20B ligand-receptor edges are not automatically connected to 21B relay edges; exact ligand, receptor complex, species, cell model, and assay context must match.",
+    "21B relay targets and 22B TF sources define candidate convergence nodes only; shared names do not prove a ligand-to-TF path.",
+    "23B and 24B matrix, adhesion, complement, coagulation, lipid, and protease edges remain parallel extracellular/contextual layers unless an explicit receptor-to-relay link is source-backed.",
+    "Boundary and no-evidence records remain queryable but are excluded from supported path claims.",
+    "Exportability is a provenance gate, not a claim of universal biology, SCI receiver-cell relevance, or end-to-end pathway completion."
+  ],
+  "next_validation": [
+    "Resolve stable PMID/PMCID/DOI/URL citations to canonical Paper rows.",
+    "Attach each exportable evidence record to a canonical paper, observation, or author-claim anchor.",
+    "Materialize only after source-anchor and entity/pathway deduplication checks pass."
+  ]
+}

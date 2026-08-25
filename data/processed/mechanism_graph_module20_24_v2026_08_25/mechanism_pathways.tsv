@@ -1,0 +1,950 @@
+module	pathway_name	edge_count	node_count	evidence_count
+20B	module20a_frozen_ligand_receptor	1110	969	2077
+21B	BMP-SMAD	2	4	1
+21B	BMP-SMAD-glial	1	2	1
+21B	BMP-glial-scar-function	1	2	1
+21B	BMP-noncanonical-LIMK1	1	2	1
+21B	CNTF-astrocyte-JAK-STAT	1	2	1
+21B	CNTF-astrocyte-neurotrophic-support	1	2	1
+21B	CNTF-astrocyte-receptor-context	1	2	1
+21B	CNTF-gp130-JAK-STAT3	3	5	2
+21B	CSF1-astrocyte-microglia-SCI	1	2	1
+21B	CXCL12-CXCR4-GPCR	4	6	1
+21B	Chemokine-CCR-biased-signaling	2	4	1
+21B	Chemokine-CXCR3-biased-signaling	2	4	1
+21B	DLL4-NOTCH1-IL6-STAT3	2	4	1
+21B	EGF-RTK-PI3K-AKT	1	2	1
+21B	EGF-RTK-RAS-ERK	4	5	1
+21B	FGF-RHOA-YAP-SCI	1	2	1
+21B	FGF-RTK-FRS2-ERK-AKT	3	5	1
+21B	FGF10-FGFR2-PI3K-AKT-SCI	1	2	1
+21B	IFN-lambda-JAK-STAT	1	2	1
+21B	IFN-lambda-JAK-STAT-IRF	1	2	1
+21B	IFN-lambda-astrocyte-antiviral	1	2	1
+21B	IFN-type-I-JAK-STAT-IRF	6	8	2
+21B	IFN-type-II-JAK-STAT	4	5	2
+21B	IFN-type-II-noncanonical	1	2	1
+21B	IFNbeta-IFNAR-astrocyte-SCI	1	2	1
+21B	IL1-MyD88-NF-kappaB-MAPK	7	8	1
+21B	IL1-SCI-astrocyte	1	2	1
+21B	IL1R2-decoy	2	4	2
+21B	IL6-gp130-receptor-complex	1	2	1
+21B	Jagged1-Notch-SCI	1	2	1
+21B	Jagged1-Notch-SCI-function	1	2	1
+21B	LIF-gp130-JAK-STAT	2	3	1
+21B	Notch-NICD-RBPJ	4	6	1
+21B	Notch-ligand-selectivity	1	2	1
+21B	Notch1-STAT3-ETBR	1	2	1
+21B	Notch1-STAT3-astrocyte	1	2	1
+21B	OSM-gp130-JAK-STAT	5	6	1
+21B	PDGF-OPC-ERK-function	1	2	1
+21B	PDGF-RTK-ERK	1	2	1
+21B	PDGF-RTK-PI3K-AKT	1	2	1
+21B	PDGF-RTK-SRC-ERK	1	2	1
+21B	PDGFR-beta-fibrotic-scar-SCI	1	2	1
+21B	TGF-beta-CNS-scar-function	1	2	1
+21B	TGF-beta-SMAD	3	5	1
+21B	TGF-beta-TRAF6-TAK1-noncanonical	2	4	1
+21B	TNF-NF-kappaB	1	2	1
+21B	TNF-NF-kappaB-MAPK-death	5	8	2
+21B	TNF-cell-death	1	2	1
+21B	TNFR2-NF-kappaB-JNK	1	2	1
+21B	TNFR2-PI3Kgamma-neuroprotection	1	2	1
+21B	TNFR2-SCI-repair	1	2	1
+21B	TNFR2-TRAF2-NF-kappaB	2	3	2
+21B	TNFR2-alternative-NF-kappaB	1	2	1
+21B	TNFR2-astrocyte-CXCL12-CXCR4	1	2	1
+21B	VEGF-EGFR-NSC-SCI	2	3	1
+21B	VEGF-RTK-PI3K-AKT	1	2	1
+21B	VEGF-RTK-PLC-ERK	1	2	1
+21B	WNT-RYK-SCI-astrocyte-function	1	2	1
+21B	WNT-beta-catenin	4	7	1
+21B	WNT5A-JNK-NSC-function	1	2	1
+21B	WNT5A-ROR2-neurodegeneration	1	2	1
+21B	WNT5A-ROR2-noncanonical	1	2	1
+22B	cell_state_program	349	422	430
+22B	none_identified	19	9	19
+22B	phenotype	270	311	275
+22B	target_gene	78	110	128
+22B	target_module	7	14	7
+23B	 ephrB axon/OPC relay	1	2	1
+23B	 tPA receptor-complex function	1	2	1
+23B	 tPA-Mac1 receptor-complex relay	1	2	1
+23B	 with downstream αVβ3	3	2	3
+23B	ADAM10-CADM1 shedding	1	2	1
+23B	ADAM10-CADM1 shedding-adhesion	1	2	1
+23B	ADAM10-CD44 shedding	1	2	1
+23B	ADAM10-CD44 shedding output	1	2	1
+23B	ADAM10-NrCAM function	1	2	1
+23B	ADAM10-NrCAM processing	1	2	1
+23B	ADAM12-SDC4 proteoglycan association	1	2	1
+23B	ADAM12-SDC4-PKCalpha-RhoA	1	2	1
+23B	ADAM12-alpha9beta1 adhesion	1	2	1
+23B	ADAM12-alpha9beta1-PI3K	1	2	1
+23B	ADAM15-alpha5beta1-ERK motility	1	2	1
+23B	ADAM17-alpha5beta1 localization	1	2	1
+23B	ADAM2-alpha6beta1-CD9 membrane adhesion	1	2	1
+23B	ADGRE5-CD97-RGD-alphaVbeta3-adhesion/angiogenesis branch	2	2	2
+23B	ALCAM-NRP1 trans-adhesion	1	2	1
+23B	ALCAM-NRP1-neural function	1	2	1
+23B	ANGPT1-Tie2 PI3K-AKT barrier and survival signaling	3	2	3
+23B	ANGPTL1 integrin inhibition	1	2	1
+23B	ANGPTL2-alpha5beta1	1	2	1
+23B	ANGPTL2-alpha5beta1 function	1	2	1
+23B	ANGPTL2-alpha5beta1 signaling	1	2	1
+23B	ANGPTL3 integrin engagement	1	2	1
+23B	ANGPTL3-alpha5 vascular complex	1	2	1
+23B	ANGPTL3-alpha5 vascular function	1	2	1
+23B	ANGPTL4 integrin engagement	1	2	1
+23B	ANXA2-ROBO4-ARF6 barrier function	1	2	1
+23B	ANXA2-ROBO4-paxillin complex	1	2	1
+23B	Agrin-dystroglycan adhesion	1	2	1
+23B	Agrin-dystroglycan synaptic function	1	2	1
+23B	AngII GPCR activation	1	2	1
+23B	ApoC3-LDLR/LRP1 hepatic triglyceride-rich-lipoprotein clearance axis	1	2	1
+23B	ApoE-LRP1 endosomal trafficking	1	2	1
+23B	ApoE-LRP1 lipoprotein receptor recognition	1	2	1
+23B	ApoE-LRP1 recycling/clearance function	1	2	1
+23B	CADM1-CRTAM immune function	1	2	1
+23B	CADM1-CRTAM trans-adhesion	1	2	1
+23B	CADM1-nectin3 adhesion function	1	2	1
+23B	CADM1-nectin3 trans-adhesion	1	2	1
+23B	CADM3 adhesion-proliferation	1	2	1
+23B	CADM3 homophilic adhesion	1	1	1
+23B	CADM3-CADM4 axon-Schwann adhesion	1	2	1
+23B	CADM3-CADM4 myelination	1	2	1
+23B	CALR-LRP1 coreceptor complex	1	2	1
+23B	CALR-LRP1 focal-adhesion disassembly relay	1	2	1
+23B	CALR-LRP1 focal-adhesion function	1	2	1
+23B	CALR-alpha3 integrin function	1	2	1
+23B	CALR-alpha3 intracellular association	1	2	1
+23B	CCL28 chemokine activation	1	2	1
+23B	CCN4-alpha5beta1 cellular function	1	2	1
+23B	CCN4-alpha5beta1 focal-adhesion relay	1	2	1
+23B	CCN4-alpha5beta1 wound/osteogenesis branch	1	2	1
+23B	CD23-alphaVbeta3/CD47 -> integrin-associated signaling -> inflammatory cytokines	3	2	3
+23B	CD23-alphaXbeta2 MAPK inflammatory activation	2	2	2
+23B	CD40LG-Mac-1 adhesion function	1	2	1
+23B	CD40LG-Mac-1 leukocyte recruitment branch	1	2	1
+23B	CD40LG-alpha5beta1 MAPK/ERK and platelet activation	3	2	3
+23B	CD44–LCK/T-cell activation relay	1	2	1
+23B	CD47–SIRPα ITIM–SHP1/2 self-recognition checkpoint	3	2	3
+23B	CD53 co-stimulation and IL-2-dependent lymphocyte proliferation/adhesion	1	2	1
+23B	CD9-L1CAM-alpha6beta1 membrane organization and Ca2+/adhesion signaling	3	2	3
+23B	CD96–PVR immune-synapse adhesion and NK cytotoxicity	2	2	2
+23B	CD99 homophilic transendothelial migration	3	2	3
+23B	CEACAM1 adhesion/oligomerization	1	2	1
+23B	CHAD-alpha2beta1 adhesion and MAPK	1	2	1
+23B	CLEC11A-integrin osteogenic WNT/beta-catenin signaling	2	2	2
+23B	CLEC11A–α11β1 integrin–Wnt osteogenic branch	3	2	3
+23B	CLEC2 hemITAM signaling	1	2	1
+23B	CNTN2-L1CAM cis neurite outgrowth and fasciculation	2	2	2
+23B	COL15A1 matrix migration	1	2	1
+23B	COL2A1 SCI scar function	1	2	1
+23B	COL4A3 NC1-CD47-cAMP anti-proliferative signaling	2	2	2
+23B	COL4A3–α2β1 renal matrix maturation/fibrosis	1	2	1
+23B	COL4A6 NC1 adhesion boundary	1	2	1
+23B	COMP RGD–αVβ3 adhesion branch	2	2	2
+23B	COMP–CD47 cytoskeletal adhesion branch	2	2	2
+23B	CSPG4/NG2–galectin-3–α3β1 endothelial motility branch	3	2	3
+23B	CX3CL1–CX3CR1 Gi/o–PI3K/Ca/MAPK chemotaxis and adhesion	3	2	3
+23B	CXCL12 CXCR4-independent αVβ3 allosteric activation	3	2	3
+23B	CXCL12 activation of β1-containing integrin heterodimers	2	2	2
+23B	CXCL12 β3-containing integrin activation and CXCR4–Btk platelet branch	3	2	3
+23B	CXCL12–α4β1 activation via Vav1/Rac and CXCR4 context	3	2	3
+23B	CXCL12–α5β1 allosteric activation and stromal migration	3	2	3
+23B	CXCL16–CXCR6 chemotaxis/adhesion and immune recruitment	2	2	2
+23B	Claudin-2 homophilic adhesion and metastatic cell–hepatocyte interaction	2	1	2
+23B	DAG1/DGC–actin and neuromuscular-basement-membrane function	1	2	1
+23B	DAG1–DLL4/Notch endothelial relay	1	2	1
+23B	DLL1-NOTCH1 ligand-triggered proteolysis and canonical Notch program	3	2	3
+23B	DLL1-NOTCH2 canonical NICD/RBPJ signaling	3	2	3
+23B	DMP1 integrin signaling	1	2	1
+23B	DPP RGD integrin adhesion/signaling	1	2	1
+23B	DSP-beta6 developmental function	1	2	1
+23B	DSP-beta6 integrin binding	1	2	1
+23B	DSP-beta6 integrin intracellular signaling	1	2	1
+23B	Dab1–Src-family–PI3K/Akt	2	4	2
+23B	Del-1 integrin branches	1	2	1
+23B	E-cadherin–EGFR association and context-dependent ERK/Rac crosstalk	3	2	3
+23B	E-cadherin–IGF1R availability/adhesion–PI3K-AKT branch	3	2	3
+23B	E-cadherin–αEβ7 outside-in synapse and CTL killing	3	2	3
+23B	ECM1 receptor complex	1	2	1
+23B	EDIL3-LFA1 inflammatory adhesion interference	1	2	1
+23B	EDIL3-alphaVbeta5 angiogenic switch and neovascularization	2	2	2
+23B	EFNA1-EPHA1 Eph signaling	1	2	3
+23B	EFNA1-EPHA4 Rho/actin neuronal branch	1	2	3
+23B	EFNA1-EPHA5 binding survey	1	2	1
+23B	EFNA1-EPHA6 binding survey	1	2	1
+23B	EFNA1-EPHA8 activation	1	2	1
+23B	EFNA2-EPHA2 binding survey	1	2	1
+23B	EFNA2-EPHA5 binding survey	1	2	1
+23B	EFNA2-EPHA6 binding survey	1	2	1
+23B	EFNA2-EPHA7 neural branch	1	2	3
+23B	EFNA2-EPHA8 activation	1	2	1
+23B	EFNB1 -> EPHB3 -> kinase-dependent adhesion inhibition and kinase-independent Rac1/Cdc42 decrease with relative RhoA increase -> altered adhesion/migration	2	2	2
+23B	EFNB1-EPHB6 trans co-clustering -> double-membrane tubular contacts and stabilized cell-cell adhesion -> reduced cancer-cell invasion	2	2	2
+23B	EGF migration crosstalk	1	2	1
+23B	EGFL7-alphaVbeta3 angiogenic branch	1	2	1
+23B	EGFL7-alphaVbeta3 angiogenic function	1	2	1
+23B	EGFL7-alphaVbeta3 focal-adhesion signaling	1	2	1
+23B	EGFR phosphorylation of CEACAM1 and RAS-MAPK feedback	2	2	2
+23B	EPHA3-ephrin-A2 reverse signaling	1	2	3
+23B	Eph-ephrin axon guidance/repulsion	1	2	1
+23B	Eph-ephrin axon organization	1	2	1
+23B	Eph-ephrin bidirectional adhesion	1	2	1
+23B	Eph-ephrin cross-class ligand binding	2	3	2
+23B	Eph-ephrin cytoskeletal relay	1	2	1
+23B	Eph-ephrin endocytosis and cytoskeletal relay	1	2	1
+23B	Eph-ephrin immune signaling	1	2	1
+23B	Eph-ephrin inflammatory pathway	1	2	1
+23B	Eph-ephrin ligand-receptor binding	10	11	10
+23B	Eph-ephrin ligand-receptor relay	1	2	1
+23B	Eph-ephrin neural crest guidance	1	2	1
+23B	Eph-ephrin neural/metabolic function	1	2	1
+23B	Eph-ephrin tissue separation	1	2	1
+23B	Eph-ephrin tumor-cell relay	1	2	1
+23B	Eph-ephrin vascular development	1	2	1
+23B	EphA10–ephrin-A5 association and E-cadherin/β-catenin invasion phenotype	2	2	2
+23B	EphA2–ephrin-A3 adhesion and hypoxia-sensitive SREBP1/ACLY output	2	2	2
+23B	EphA3–ephrin-A2 binding and ephrin reverse signaling to β1 adhesion	3	2	3
+23B	EphB-ephrin-B subclass signaling	1	2	1
+23B	EphB2 phosphotyrosine/adaptor signaling	1	2	1
+23B	EphB2-ephrin-B1 / adhesion and migration	1	2	1
+23B	EphB4-ephrin-B2	1	2	1
+23B	EphB6-ephrin-B1 / JNK-Rac1	1	2	1
+23B	EphB6-ephrin-B2	1	2	1
+23B	EphB6/ephrin-B3 forward signaling; myelin repulsion and integrin-beta1 migration branch	2	2	2
+23B	F11R-LFA-1 -> junctional adhesion and leukocyte transendothelial migration; cytoplasmic relay not uniquely resolved	2	2	2
+23B	FAT4-DCHS1 Hippo adhesion	1	2	1
+23B	FBLN2 matrix adhesion -> beta3-integrin-dependent cell attachment; intracellular relay and terminal output unresolved	1	2	1
+23B	FGA-420 alpha(E)C-alphaMbeta2 -> leukocyte adhesion/migration	2	2	2
+23B	FGA-420 alpha(E)C/alpha-chain motif-alphaXbeta2 -> leukocyte adhesion	2	2	2
+23B	FGA-RGD-alphaIIbbeta3 platelet recognition	1	2	1
+23B	FGB betaN domain -> VE-cadherin -> endothelial barrier/angiogenesis modulation	2	2	2
+23B	FGF18-FGFR3 ERK/AKT proliferation and invasion	3	2	3
+23B	FGF2-alpha-v-beta-3-FGFR1 adhesion, ERK/angiogenesis branch	3	2	3
+23B	FGF23-FGFR2 -> PKA -> Rap1 inhibition -> beta2-integrin deactivation and impaired neutrophil recruitment	3	2	3
+23B	FGG-gammaC-alphaIIbbeta3 platelet recognition	1	2	1
+23B	FGL1/hepassocin-EGFR -> NOX1/ROS and p38 -> endothelial injury and monocyte adhesion	2	2	2
+23B	FLRT2 -> UNC5D cell-recognition/adhesion antagonism -> elimination of mistargeted dendrites and inappropriate synapses	2	2	2
+23B	FLRT3 -> ADGRL3 adhesion-GPCR context -> G-protein/actin-associated synapse organization and excitatory connectivity	2	2	2
+23B	FLRT3 -> UNC5B cell-adhesion/guidance interface -> context-dependent embryonic cell positioning and morphogenesis	2	2	2
+23B	FLT1 signaling	1	2	1
+23B	FN1 EIIIA-alpha9beta1 lymphatic valve morphogenesis	2	2	2
+23B	FN1-CD44 adhesion/cytoskeletal branch	2	2	2
+23B	FN1-CS1-alpha4beta1 leukocyte adhesion branch	2	2	2
+23B	FN1-CS1-alpha4beta7 lymphocyte adhesion branch	2	2	2
+23B	FN1-RGD-alpha8beta1 adhesion/neurite branch	2	2	2
+23B	FN1-RGD-alphaVbeta6-PKC adhesion/migration branch	3	2	3
+23B	FN1-alphaVbeta1 adhesion branch	2	2	2
+23B	FN1-alphaVbeta3-RGD/RhoA focal adhesion branch	3	2	3
+23B	FnEDA SCI scar function	1	2	1
+23B	GPCR activation	1	2	1
+23B	GPIb-IX-V platelet function	1	2	1
+23B	GPIb-IX-V-Src-Syk-PLCgamma2 relay	1	2	1
+23B	GPR126 Gs–cAMP/PKA relay	1	2	1
+23B	GPR126–cAMP/PKA–Schwann-cell myelination	1	2	1
+23B	GPVI dimer-FcRgamma / ITAM-Syk-PLCgamma2	1	2	1
+23B	GPVI–FcRγ ITAM/Syk/PLCγ2 platelet branch	3	2	3
+23B	GalNAcPTase -> cadherin/catenin and Fer-associated cross-talk -> N-cadherin adhesion and neurite outgrowth	1	2	1
+23B	GnRH receptor relay	1	2	1
+23B	HGF integrin crosstalk	1	2	1
+23B	HKa–Mac-1 adhesion blockade and JNK/ERK/p38/NF-kappaB inflammatory branch	3	2	6
+23B	HSP90 client receptor complex	1	2	1
+23B	HSP90alpha-LRP1-Akt motility relay	1	2	1
+23B	HSP90alpha-LRP1-Akt wound-healing function	1	2	1
+23B	HSP90alpha-LRP1/CD91 binding	1	2	1
+23B	Hsp70-LRP1/CD91 antigen-uptake recognition	1	2	1
+23B	Hsp70-LRP1/CD91 immune function	1	2	1
+23B	Hsp70-LRP1/CD91 innate signaling	1	2	1
+23B	IBSP integrin adhesion	2	3	2
+23B	IBSP-RGD-alphaVbeta5 cancer-cell adhesion branch	2	2	2
+23B	ICAM1 -> Mac-1/ITGAM-ITGB2 -> integrin outside-in cytoskeletal/phagocytic and migration branch	3	2	3
+23B	ICAM1-LFA1 adhesion	1	2	3
+23B	ICAM1-Mac1 adhesion	1	2	1
+23B	ICAM2 -> LFA-1/ITGAL-ITGB2 -> integrin avidity, actin remodeling, and leukocyte transmigration	3	2	6
+23B	ICAM5-alpha5beta1 neuronal function	1	2	1
+23B	ICAM5-alpha5beta1 synaptic adhesion relay	1	2	1
+23B	ICAM5-alpha5beta1 trans-adhesion	1	2	1
+23B	IGF1R-alpha6beta4 PI3K-AKT/ERK crosstalk	2	2	2
+23B	IGF1R-alphaVbeta3 PI3K-AKT/ERK crosstalk	2	2	2
+23B	IGF2-IGF1R-alpha6beta4 PI3K-AKT/ERK crosstalk	2	2	2
+23B	IGF2-IGF1R-alphaVbeta3 PI3K-AKT/ERK crosstalk	2	2	2
+23B	IL34-PTPRZ1 CS-dependent binding	1	2	1
+23B	IL34-PTPRZ1 neural/myeloid cellular function	1	2	1
+23B	IL34-PTPRZ1 signaling	1	2	1
+23B	INSL5-RXFP4 endocrine function	1	2	1
+23B	ISG15-LFA-1 cytokine function	1	2	1
+23B	ISG15-LFA-1 receptor recognition	1	2	1
+23B	ISG15-LFA-1-SFK cytokine relay	1	2	1
+23B	ITGB3 inside-out activation and adhesion-complex regulation	3	2	3
+23B	IZUMO1–JUNO adhesion followed by CD9-dependent sperm-oocyte fusion and membrane remodeling	1	2	1
+23B	JAM2–JAM3–alpha4beta1 leukocyte rolling, firm adhesion, and extravasation	2	2	2
+23B	JAM3-Mac-1 platelet-leukocyte adhesion recognition	1	2	1
+23B	JAM3-Mac-1 vascular adhesion function	1	2	1
+23B	JAM3–Mac-1 adhesion and junctional-complex control of leukocyte recruitment	2	2	2
+23B	KGD-dependent αIIbβ3 outside-in platelet branch	3	2	3
+23B	KIT RTK signaling	1	2	1
+23B	KIT proximal signaling	1	2	1
+23B	KITL-KIT hematopoietic output	1	2	1
+23B	L1/NCAM adhesion and neurite-outgrowth branch	1	2	1
+23B	L1CAM-CNTN1 cis complex and axon-guidance/adhesion signaling	2	2	2
+23B	L1CAM-EGFR-cis/trans interaction-RTK phosphorylation-MAPK/neurite-adhesion branch	3	2	3
+23B	LAMA1/laminin-111-DAG1/DGC branch	2	2	2
+23B	LAMA2 domain-VI–alpha2beta1 recognition	1	2	1
+23B	LAR-RPTP–presynaptic differentiation	5	5	5
+23B	LFA-1; talin/kindlin-integrin activation, actin polymerization and leukocyte adhesion	3	2	3
+23B	LFA1 outside-in signaling	1	2	1
+23B	LGALS1-integrin binding	1	2	1
+23B	LGALS3BP–beta1-integrin adhesion context	1	2	1
+23B	LGI1-ADAM22 synaptic MAGUK-Kv1/AMPA complex	3	2	3
+23B	LGI3-ADAM22 signaling	1	2	1
+23B	LRRC4/NGL-2–netrin-G2 trans-synaptic adhesion	1	2	1
+23B	LRRC4B/NGL-3-PTPRS trans-synaptic adhesion	2	2	2
+23B	LRRC4B/NGL-3–PTPRF/LAR trans-synaptic adhesion	1	2	1
+23B	LRRC4C/NGL-1–netrin-G1 trans-synaptic adhesion	1	2	1
+23B	Laminin-211–ADGRG6 NTF/CTF adhesion-GPCR branch	1	2	1
+23B	Laminin–dystroglycan basement-membrane anchorage	1	2	1
+23B	MAdCAM1-alpha4beta7 adhesion	1	2	1
+23B	MDK-ALK PI3K/ERK-MAPK survival and angiogenic signaling	3	2	3
+23B	MDK-integrin receptor-complex relay	1	2	1
+23B	MDK–GPC2–neuronal adhesion/neurite outgrowth	1	2	1
+23B	MDK–SDC3–neuronal adhesion/neurite outgrowth	1	2	1
+23B	MFGE8 focal-adhesion relay	1	2	1
+23B	MFGE8-alpha8beta1 gastrointestinal function	1	2	1
+23B	MFGE8-alpha8beta1 gastrointestinal smooth-muscle recognition	1	2	1
+23B	MFGE8-alpha8beta1 smooth-muscle signaling	1	2	1
+23B	MFGE8-alphaVbeta5 apoptotic-cell recognition	1	2	1
+23B	MFGE8-alphaVbeta5 efferocytic signaling	1	2	1
+23B	MFGE8-alphaVbeta5 phagocytic function	1	2	1
+23B	MIA -> alpha4beta1/alpha5beta1 -> reduced integrin activity/MAPK-ERK -> detachment and migration	2	2	2
+23B	MIA–alpha4beta1 integrin inhibitory branch	1	2	1
+23B	MIF receptor-complex binding	1	2	1
+23B	MIF-CD74-CD44 signaling	1	2	1
+23B	MIF-CD74/CXCR2-Gi/integrin/Ca2+ branch	2	2	2
+23B	MMP7 -> SDC1 shedding -> alpha2beta1 integrin activation-state change -> re-epithelialization and wound closure	2	2	2
+23B	MMP9-EphB2 cleavage signaling	1	2	1
+23B	MMP9-PEX-LRP1 Schwann-cell function	1	2	1
+23B	MMP9-PEX-LRP1 Schwann-cell injury recognition	1	2	1
+23B	MMP9-PEX-LRP1 Schwann-cell signaling	1	2	1
+23B	MMRN2-CLEC14A -> endothelial adhesion/angiogenesis branch	2	2	2
+23B	MST1R RTK activation	1	2	1
+23B	MST1R/RON signaling	1	2	1
+23B	MYL9-CD69 inflammatory adhesion/recruitment platform -> airway inflammation	2	2	2
+23B	Mac1 outside-in signaling	1	2	1
+23B	NAMPT/NAD salvage -> integrin expression and adhesion -> tumor-cell dissemination	1	2	1
+23B	NCAM-Robo guidance machinery and dopaminergic axon growth	2	2	2
+23B	NCAM1 homophilic adhesion	1	2	1
+23B	NCAM1 homophilic signaling	1	2	1
+23B	NCAM1-FGFR1 signaling	1	2	1
+23B	NCAM1-GDNF receptor signaling	1	2	1
+23B	NCAM140-RPTPalpha signaling	1	2	1
+23B	NF155 -> CNTN1-CNTNAP1/Caspr1 paranodal adhesion complex -> axoglial junction organization	3	2	3
+23B	NGF-TrkA-TRPV1 output	1	2	1
+23B	NID1 -> alphaVbeta3 integrin -> survival, angiogenesis, and tissue regeneration	2	2	4
+23B	NID1 G2 domain -> alpha3beta1 integrin -> cell adhesion and pericellular matrix deposition	3	2	6
+23B	NLGN1-NRXN1 synaptic adhesion -> pre/post-synaptic specialization and excitatory transmission	4	3	4
+23B	NLGN1-NRXN2 synaptic adhesion and GABAergic receptor-complex branch	2	2	2
+23B	NLGN1-NRXN2beta trans-synaptic adhesion -> GABAergic receptor organization and synaptic function	2	2	2
+23B	NLGN2-NRXN1beta trans-synaptic adhesion -> inhibitory postsynaptic differentiation and synaptic transmission	4	3	4
+23B	NLGN3-NRXN1beta trans-synaptic adhesion -> excitatory/inhibitory synapse differentiation	2	2	2
+23B	NLGN3-NRXN1beta trans-synaptic adhesion -> excitatory/inhibitory synapse differentiation branch	2	2	2
+23B	NPNT integrin function	1	2	1
+23B	NPNT-alpha8beta1 GDNF kidney-development branch	1	2	2
+23B	NPNT-alpha8beta1 binding	1	2	3
+23B	NRCAM/Plexin-A1 guidance relay	1	2	1
+23B	NRG1–ITGA6/ITGB4 → ternary integrin/NRG1/ERBB3 complex → AKT and ERK1/2	3	2	3
+23B	NRG1–ITGAV/ITGB3 → integrin/NRG1/ERBB3 cross-talk → AKT and ERK1/2	3	2	3
+23B	NRP1/Plexin-A1 with L1CAM cis modulation	1	2	1
+23B	NRXN1 SS4-negative -> ADGRL1/CIRL1 transsynaptic adhesion -> synaptic cell-adhesion organization; GPCR signaling remains unresolved	2	2	2
+23B	NRXN2 SS4-negative -> ADGRL1/CIRL1 transsynaptic adhesion -> synaptic organization; no direct GPCR relay or terminal TF assigned	2	2	2
+23B	NTN1-neogenin recognition	1	2	1
+23B	NTN3 myogenic receptor-complex relay	1	2	1
+23B	NTN3-NEO1-CDON/BOC myogenic cellular function	1	2	1
+23B	NTN4 guidance/vascular complex	1	2	1
+23B	NTN4-NEO1-UNC5B signaling	1	2	1
+23B	NTNG1-LRRC4C/NGL-1 trans-synaptic adhesion -> lamina-specific connectivity and excitatory synapse organization	2	2	2
+23B	NTNG2-LRRC4/NGL-2 trans-synaptic adhesion -> lamina-specific connectivity and excitatory synapse organization	2	2	2
+23B	P2RY12 -> Gi2 -> adenylyl-cyclase inhibition and Gβγ-PI3K/Rap1b/Akt -> integrin activation	2	2	2
+23B	PAC1 intracellular signaling	1	2	1
+23B	PAC1 neuronal output	1	2	1
+23B	PACAP VPAC1 signaling	1	2	1
+23B	PACAP VPAC2 output	1	2	1
+23B	PACAP receptor activation	1	2	1
+23B	PACAP secretin-receptor cross-reactivity	1	2	1
+23B	PDGFB co-receptor trafficking	1	2	1
+23B	PDGFB-LRP1-PDGFRB signaling	1	2	1
+23B	PDGFB-PDGFRB-integrin cooperation	1	2	1
+23B	PDPN-CLEC2 recognition	1	2	1
+23B	PECAM1-alphaVbeta3 adhesion	1	2	1
+23B	PI3K–AKT	1	2	1
+23B	PKCtheta–TAP20–alphaVbeta5 adhesion, focal-adhesion, migration, and angiogenic branch	3	2	3
+23B	PLAU -> PLAUR/uPAR -> ITGA5-ITGB1 conformation/function -> fibronectin adhesion and migration	2	2	2
+23B	PLAU -> PLAUR/uPAR -> Mac-1 (ITGAM-ITGB2) -> adhesion, chemotaxis, and matrix/fibrin handling	2	2	2
+23B	PLG-PLGRKT -> cell-surface plasmin activation -> extracellular-matrix degradation -> monocyte/macrophage migration and recruitment	2	2	2
+23B	POSTN SCI scar function	1	2	1
+23B	POSTN-integrin scar relay	1	2	1
+23B	PROCR-HSP90AA1 chaperone complex	1	2	1
+23B	PROK1-PROKR1 GPCR signaling	1	2	3
+23B	PSGL1-P-selectin tethering, rolling, inflammatory recruitment	3	2	3
+23B	PTN-PTPRZ1 phosphatase branch	1	2	3
+23B	PTN-SDC3 proteoglycan branch	1	2	3
+23B	PTN-integrin/PTPRZ1 adhesion branch	1	2	3
+23B	PTPRD–presynaptic differentiation and excitatory synaptic strength	1	2	1
+23B	PTPRF/LAR–presynaptic differentiation	1	2	1
+23B	PTPRS-NTRK3 transsynaptic adhesion and non-catalytic synapse-organizing signaling	3	2	3
+23B	PTPμ–E-cadherin/catenin tyrosine-phosphorylation control	2	2	2
+23B	PYY-NPY1R GPCR branch	1	2	3
+23B	PlGF-FLT1 activation	1	2	1
+23B	PlGF2-NRP1 binding	1	2	1
+23B	PlGF2-NRP1 co-receptor signaling	1	2	1
+23B	Plexin-D1 -> Rac suppression and integrin-dependent endothelial adhesion/migration; separate CD4+ T-cell branch changes TBX21/GATA3/RORC	2	2	2
+23B	RELN-LRP8-DAB1 branch	1	2	5
+23B	RELN-VLDLR-DAB1 branch	1	2	5
+23B	RGC midline crossing	1	2	1
+23B	RGMA-NEO1-Unc5B/LARG-FAK-RhoA or BMP/Smad	1	2	3
+23B	RTN4R-ADGRB1/BAI1 adhesion-GPCR axis -> dendritic arborization, axonal elongation, synapse formation, and network activity	2	2	2
+23B	RXFP4 downstream signaling	1	2	1
+23B	Reelin integrin adhesion relay	1	2	1
+23B	Reelin lipoprotein-receptor recognition	2	4	2
+23B	Reelin-alpha3beta1-Dab1 neuronal migration	1	2	1
+23B	Reelin-integrin adhesion	1	2	2
+23B	Reelin/ephrin-B-dependent neuronal migration and lamination	1	2	1
+23B	Reelin–ephrin-B3 co-receptor recognition	1	2	1
+23B	S100A8/A9 -> Mac-1 (ITGAM/ITGB2) activation -> Ca2+-linked adhesion and chemotaxis	2	3	2
+23B	SAA/SCARB1 -> receptor-dependent uptake and lipid handling, with IL-6/IL-8 and endothelial-adhesion inflammatory branch	3	2	3
+23B	SALM3/LRFN4–LAR-RPTP trans-synaptic adhesion complex	1	2	1
+23B	SALM3/LRFN4–PTPRF trans-synaptic adhesion complex	1	2	1
+23B	SALM3/LRFN4–PTPRS trans-synaptic adhesion complex	1	2	1
+23B	SALM5/LRFN5–PTPRD trans-synaptic adhesion complex	1	2	1
+23B	SALM5/LRFN5–PTPRF trans-synaptic adhesion complex	1	2	1
+23B	SALM5/LRFN5–PTPRS trans-synaptic adhesion complex	1	2	1
+23B	SCI mechanotransduction context	1	2	1
+23B	SDC2-PTPRJ-PI3K/Src-beta1 integrin	1	2	3
+23B	SELE -> glycosylated CD44/HCELL -> p38 and adhesion-receptor redistribution -> beta2-integrin-supported slow rolling/firm arrest	3	2	3
+23B	SELE-GLG1 leukocyte rolling	1	2	3
+23B	SEMA3A-NRP1:PLXNA1-Rho/Rac/FAK/CRMP	1	2	3
+23B	SEMA3C -> NRP1/PlexinD1 and NRP2 semaphorin-guidance complexes -> cytoskeletal/adhesion signaling and axon/angiogenic guidance	3	2	3
+23B	SEMA3G-NRP2:PLXNA1-YAP or Cdc42-WWP2	1	2	3
+23B	SEMA4A–TIM-2 recognition	1	2	1
+23B	SEMA4D-PLXNB2 -> SEMA4D intracellular-domain or PLXNB2-associated Rac1 regulation -> NET/oxidative-burst suppression or monocyte-endothelial adhesion	3	2	3
+23B	SEMA7A-alpha1beta1 integrin	1	2	3
+23B	SFTPD-SIRPA SHP1-RhoA-ROCK inhibitory phagocytosis	3	2	3
+23B	SLIT1-ROBO2 -> N-cadherin/cytoskeletal adhesion and guidance -> ganglion assembly and olfactory axon patterning	3	2	3
+23B	SLIT3-ROBO1 -> cardiac neural-crest adhesion/migration/survival -> pericardial and systemic venous development	3	2	3
+23B	SLITRK-PTPRS synaptogenic adhesion/scaffold branch	1	2	1
+23B	SLITRK3-PTPRD inhibitory synaptic-adhesion branch	2	2	2
+23B	SLITRK4-PTPRS excitatory synaptic-adhesion branch	2	2	2
+23B	SLITRK5-PTPRS excitatory synaptic-adhesion branch	2	2	2
+23B	SPON2-mindin -> ITGAM-ITGB2/Mac-1 -> Syk/MAPK -> adhesion and phagocytosis with nuclear NF-kB p65	3	2	6
+23B	SPP1 / IGF1R-AKT-mTOR / axon regeneration	1	2	1
+23B	SPP1 SCI function	1	2	1
+23B	SPP1-CD44v adhesion/Src branch	1	2	3
+23B	SPP1-alpha8beta1 adhesion	1	2	1
+23B	SPP1/OPN -> ITGA4-ITGB1 -> leukocyte and hematopoietic-stem-cell adhesion/migration; unique intracellular relay unresolved	2	2	2
+23B	SPP1/OPN -> ITGA5-ITGB1 -> RGD-dependent adhesion and context-specific integrin activation; downstream relay unresolved	2	2	2
+23B	SPP1/OPN -> ITGA8-ITGB1 -> cell adhesion and kidney morphogenesis; unique intracellular relay unresolved	2	2	2
+23B	SPP1/OPN -> ITGA9-ITGB1 -> hematopoietic-stem-cell migration and retention; unique intracellular relay unresolved	2	2	2
+23B	SPP1/OPN -> ITGAV-ITGB1 -> integrin-dependent adhesion and migration; unique intracellular relay unresolved	2	2	2
+23B	Sema3A / NRP1-Plexin-A relay	1	2	1
+23B	Sema3A / NRP1-Plexin-A1	1	2	1
+23B	Sema3A / NRP1-Plexin-A4	1	2	1
+23B	Sema3B / PI3K-AKT	1	2	1
+23B	Sema3C / NRP1-Plexin-D1 / angiogenesis	1	2	1
+23B	Sema3E-PLXND1 -> RhoA/actin and focal-adhesion signaling -> vascular patterning, thymocyte migration and synapse formation	3	2	3
+23B	Sema3E-Plexin-D1	1	2	1
+23B	Sema3F / NRP2-Plexin-A1 / cytoskeleton	1	2	1
+23B	Sema3F / NRP2-Plexin-A3 / cytoskeleton	1	2	1
+23B	Sema3G / vascular and axon guidance	1	2	1
+23B	Sema4A-NRP1 / immune regulation	1	2	1
+23B	Sema4A-Plexin-B1 / Rho-family signaling	1	2	1
+23B	Sema4A-Plexin-B2 / Rho-family signaling	1	2	1
+23B	Sema4B-Plexin-B2 / microglial activation	1	2	1
+23B	Sema4C/G-Plexin-B2 / cerebellar development	1	2	1
+23B	Sema5A-Plexin-A1 / retinal lamination	1	2	1
+23B	Sema5A-Plexin-B3 / Met and cytoskeletal signaling	1	2	1
+23B	Sema6A-Plexin-A2 / axon guidance	1	2	1
+23B	Sema6A/B-Plexin-A4 / axon guidance	1	2	1
+23B	Sema6C/D-Plexin-A1 / spinal axon guidance	1	2	1
+23B	Sema6D–NRCAM–Plexin-A1 complex	1	2	1
+23B	Sema7A integrin neural guidance	1	2	1
+23B	Src/Syk–PLCgamma2/PKC/Ca2+; ADAP–alphaIIbbeta3	1	2	1
+23B	T-cell activation/differentiation	1	2	1
+23B	TDGF1-GPC1 epithelial growth	1	2	3
+23B	TENM2-ADGRL1 transsynaptic adhesion and synapse/axonal-guidance branch	2	2	2
+23B	TENM2-ADGRL2 transsynaptic adhesion and perforant-path synapse-specification branch	2	2	2
+23B	TENM2-ADGRL3 transsynaptic adhesion plus FLRT-coincident excitatory-synapse branch	2	2	2
+23B	TENM3-ADGRL2 trans-cellular recognition and sensory maps	2	2	2
+23B	TG2 + MFG-E8 -> integrin beta3 phagocytic cup -> phagocytic signaling and apoptotic-cell clearance	2	2	2
+23B	TG2-ADGRG1 RhoA-ROCK-ADAM17-EGFR transactivation	3	2	3
+23B	TG2-FN matrix -> SDC4/SDC2-beta1 integrin/PKCalpha co-signaling -> focal adhesion and FN deposition	2	2	2
+23B	TGFB1 -> TGFBR/SMAD -> ITGB1/alpha-beta1 expression and matrix-adhesion remodeling	1	2	1
+23B	TGFB1 -> TGFBR2/TGFBR1 -> receptor kinase -> SMAD2/3-SMAD4 and non-SMAD MAPK branches -> growth inhibition, matrix, EMT, and context-dependent repair outputs	3	2	3
+23B	TGFB1 -> TGFBR2/TGFBR1 complex -> receptor kinase signaling -> SMAD2/3-associated growth and matrix responses	3	2	3
+23B	TGFB1-SDC2 binding/uptake -> betaglycan/TGFBR trafficking -> SMAD signaling and matrix/fibrosis outputs	3	2	3
+23B	TGFB3 -> TGFBR2/TGFBR1 complex -> receptor kinase signaling -> SMAD2/3-associated growth and matrix responses	3	2	3
+23B	TGM2-SDC4-PKC/FAK-integrin	1	2	3
+23B	TGM2-beta1-integrin-ILK	1	2	2
+23B	THBS1 -> endothelial SCARB1-associated inflammatory/fibrotic and EndoMT-like program in pressure-overload heart failure	1	2	1
+23B	THBS1 N-terminal HBD -> LRP1 binding -> endocytosis/degradation; TSP1-calreticulin-LRP1 -> PI3K/survival and focal-adhesion output	3	2	3
+23B	THBS1 RGD-alphaVbeta3 adhesion relay	1	2	1
+23B	THBS1 type-1 repeat -> PTPRJ/CD148 binding -> CD148 phosphatase-dependent growth inhibition	2	2	2
+23B	THBS1-CD36 antiangiogenic endothelial branch	2	2	3
+23B	THBS1-CD36-Fyn/Syk-VEGFR2 angiogenic relay	1	2	1
+23B	THBS1-CD47 endothelial motility/NO branch	2	2	2
+23B	THBS1-CD47 recognition	1	2	1
+23B	THBS1-CD47-CD14 inflammation	1	2	1
+23B	THBS1-CD47-sGC inhibitory relay	1	2	1
+23B	THBS1-CD47/IAP-alphaIIbbeta3 platelet branch	1	2	2
+23B	THBS1-RGD-alphaVbeta3	1	2	1
+23B	THBS1-SDC1 heparan-sulfate adhesion relay	1	2	1
+23B	THBS1-SDC1-GAG matrix spreading branch	1	2	1
+23B	THBS1-SDC4 PKC/Akt relay	1	2	1
+23B	THBS1-SDC4-GAG/PKC-AKT angiogenesis branch	1	2	2
+23B	THBS1-alpha3beta1 adhesion and chemotaxis relay	1	2	1
+23B	THBS1-alpha3beta1 matrix adhesion	1	2	1
+23B	THBS1-alpha3beta1 matrix adhesion branch	1	2	1
+23B	THBS2 -> NOTCH3/JAG1 extracellular complex -> Notch cleavage/NICD-RBPJ -> HES1/HES5 transcription and proliferation control	3	2	3
+23B	THBS2 N-terminal module -> alpha6beta1 -> endothelial adhesion/chemotaxis	2	2	2
+23B	THBS2-CD36 antiangiogenic branch	2	2	4
+23B	THBS2-SDC4 EMT and tumor-progression branch	1	2	1
+23B	THBS2-alphaVbeta3 adhesion relay	1	2	1
+23B	THBS2-alphaVbeta3 vascular function	1	2	2
+23B	THBS4 inflammatory adhesion	1	2	1
+23B	THBS4-alphaVbeta3 integrin adhesion/remodeling branch	2	2	2
+23B	THY1 RLD motif -> alphaVbeta3/syndecan-4 -> PKCalpha/RhoA and adhesion-complex signaling -> astrocyte adhesion or fibroblast mechanotransduction	3	2	3
+23B	THY1 integrin adhesion	1	2	1
+23B	THY1 integrin cytoskeletal signaling	1	2	1
+23B	THY1–alphaMbeta2/Mac-1 adhesion and integrin outside-in cytoskeletal signaling	3	2	3
+23B	TIMP1 -> CD63/beta1-integrin complex -> PI3K and ERK survival signaling -> anoikis resistance and tumor-cell function	3	2	3
+23B	TIMP1-LRP1 binding and uptake	1	2	1
+23B	TIMP1-LRP1 neuronal function	1	2	1
+23B	TIMP2-alpha3beta1 SHP1/Csk-cAMP/Rap1-MAPK inhibition	3	2	3
+23B	TIMP2-alpha3beta1 complex relay; ITGB1 subunit boundary	2	2	2
+23B	TIMP3-KDR extracellular antagonism and VEGF angiogenesis inhibition	2	2	2
+23B	TNC -> alpha2beta1 -> endothelial adhesion/spreading; intracellular kinase relay unresolved	2	2	2
+23B	TNC -> fibronectin/syndecan-4 -> alpha5beta1 adhesion and cytoskeletal signaling	1	2	1
+23B	TNC EGF-like repeats -> EGFR -> EGFR autophosphorylation/ERK-MAPK -> mitogenesis and EGFR-dependent adhesion	3	2	3
+23B	TNC FNIII domains -> CNTN1/contactin -> neuronal adhesion and neurite outgrowth	2	2	2
+23B	TNC cryptic peptide adhesion	1	2	1
+23B	TNC smooth-muscle growth	1	2	1
+23B	TNC-SDC4 cryptic-peptide/GAG adhesion branch	1	2	1
+23B	TNC-alpha7beta1 neurite extension	2	2	2
+23B	TNC-alpha8beta1 adhesion	1	2	1
+23B	TNC-alpha8beta1 cryptic-fragment adhesion/migration branch	1	2	1
+23B	TNC-alpha9beta1 adhesion	1	2	1
+23B	TNC-alpha9beta1 adhesion/migration branch	2	2	2
+23B	TNC-alphaVbeta3 RGD adhesion/migration branch	2	2	2
+23B	TNC-alphaVbeta3 adhesion	1	2	1
+23B	TNC-alphaVbeta6 adhesion	1	2	1
+23B	TNC-alphaVbeta6 cellular output	1	2	1
+23B	TNC-alphaVbeta6 matrix-adhesion/invasion branch	1	2	1
+23B	TNX cryptic RGD adhesion	1	2	1
+23B	TSP1 N-terminal LDVP motif -> alpha4beta1 -> adhesion/chemotaxis and MMP response	2	2	2
+23B	TSP2 N-terminal LDVP fragment -> alpha4-beta1 -> T-cell adhesion/chemotaxis and MMP expression	2	2	2
+23B	Talin1-alphaVbeta5 inside-out adhesion versus talin-independent phagocytic activation	2	2	2
+23B	Thy-1–ADGRE5 adhesion and inflammatory leukocyte trafficking	2	2	2
+23B	Tim-2-associated T-cell activation	1	2	1
+23B	Tspan15-ADAM10 substrate selection	1	2	1
+23B	TspanC8-ADAM10 scissor complex	1	2	1
+23B	VCAM1 -> alpha9beta1 -> endothelial adhesion and transendothelial neutrophil migration	2	2	2
+23B	VCAM1-alpha4beta1-VLA4-paxillin/talin-adhesion-strengthening branch	3	2	3
+23B	VCAM1-alpha9beta1 adhesion	1	2	1
+23B	VCAM1-alphaD/beta2 integrin adhesion/inflammatory branch	2	2	2
+23B	VCAN C-terminal G3-beta1 integrin	1	2	3
+23B	VCAN-TLR2/TLR6-CD14-MyD88-RelB inflammatory program	3	2	3
+23B	VCAN-domain/ADAMTS1-EGFR transactivation ERK invasion	2	2	2
+23B	VEGF165 HBD-alphaVbeta3	1	2	3
+23B	VEGFA -> alpha9beta1 plus VEGFR2 -> endothelial adhesion/migration and angiogenesis	3	2	3
+23B	VEGFA -> alpha9beta1/ITGB1 plus VEGFR2 -> endothelial adhesion, migration and angiogenesis	3	2	3
+23B	VEGFA-FLT1 vascular branch	1	2	3
+23B	VEGFA-VEGFR2-NR2B neuronal branch	1	2	2
+23B	VEGFC -> alpha9beta1 -> Erk1/2/paxillin and adhesion/migration; VEGFR3 co-expression is a separate cooperating branch	3	2	3
+23B	VEGFC -> alpha9beta1 -> Erk1/2/paxillin and adhesion/migration; VEGFR3 cooperation remains distinct	3	2	3
+23B	VIP-PAC1-Gs-cAMP	1	2	3
+23B	VTN alphaIIbbeta3 adhesion	1	2	1
+23B	VTN beta3-tail relay	1	2	1
+23B	VTN-alpha8beta1 adhesion	1	2	1
+23B	VTN-alphaVbeta1 function	1	2	1
+23B	VTN-alphaVbeta3 adhesion	1	2	1
+23B	VTN-alphaVbeta5 function	1	2	1
+23B	VTN-alphaVbeta8 adhesion	1	2	1
+23B	VTN-uPAR-integrin adhesion and migration	2	2	2
+23B	VTN–alpha8beta1 RGD recognition	1	2	1
+23B	VTN–alphaVbeta5 matrix recognition	1	2	1
+23B	VWF platelet arrest	1	2	1
+23B	VWF platelet binding	1	2	1
+23B	VWF platelet tethering and alphaIIbbeta3 stabilization	1	2	1
+23B	VWF-GPIb-IX-V initial adhesion	1	2	1
+23B	VWF-P-selectin endothelial VWF-string anchoring	2	2	2
+23B	VWF-alphaVbeta3 adhesion	1	2	1
+23B	VWF–GPIb-IX-V complex	1	2	1
+23B	VWF–alphaVbeta3 RGD adhesion	1	2	1
+23B	WNT5A–FZD3 CRD recognition	1	2	1
+23B	WNT5B-FZD7 noncanonical Wnt	1	2	3
+23B	activated A2M neural function	1	2	1
+23B	activated A2M neural relay	1	2	1
+23B	activated A2M-LRP1 binding	1	2	1
+23B	adiponectin receptor signaling	2	3	2
+23B	agrin-Na+/K+-ATPase tyrosine-phosphorylation and pump signaling	3	2	3
+23B	agrin-alphaVbeta1 adhesion	1	2	1
+23B	agrin-integrin synaptic function	1	2	1
+23B	alpha1beta1-mediated chondrocyte/fibroblast adhesion and spreading	1	2	1
+23B	alpha2beta1-mediated adhesion and neurite outgrowth	1	2	1
+23B	alpha2beta1–epithelial adhesion/migration	1	2	1
+23B	alpha3beta1–ERK/Akt–epithelial proliferation	1	2	1
+23B	alpha3beta1–FAK/ERK–epithelial migration	1	2	1
+23B	alpha3beta1–STAT1 phosphorylation/apoptosis relay	1	2	1
+23B	alpha4beta1 inactivation–MAPK/ERK reduction	1	2	1
+23B	alpha4beta1–MAPK/ERK–matrix detachment and migration	1	2	1
+23B	alpha4beta7 outside-in signaling	1	2	1
+23B	alpha6beta1 matrix mechanotransduction	1	2	1
+23B	alpha6beta1–Schwann-cell adhesion/myelination context	1	2	1
+23B	alpha6beta4 hemidesmosome–EGFR/FAK/ERK–NF-kB context	1	2	1
+23B	alpha7beta1–Schwann/peripheral-nerve adhesion	1	2	1
+23B	alpha9 integrin sensory regeneration	1	2	1
+23B	alpha9beta1 outside-in signaling	1	2	1
+23B	alphaIIb/beta3 platelet adhesion and thrombus-related erythrocyte contact	2	2	2
+23B	alphaMbeta2 activation–ICAM2 adhesion and chemokine-dependent migration/extravasation	2	2	4
+23B	alphaVbeta1-dependent beta-cell motility	1	2	1
+23B	alphaVbeta3-dependent adhesion	1	2	1
+23B	alphaVbeta5-zyxin-vinculin adhesome organization	1	2	1
+23B	alphaVbeta6–PKC motility output	1	2	1
+23B	alphaVbeta8-dependent adhesion/migration context	1	2	1
+23B	alphaXbeta2 activation–adhesion/transmigration and antigen-presenting-cell recruitment	2	2	2
+23B	alternative EPO receptor signaling	1	2	1
+23B	ameloblast matrix adhesion	1	2	1
+23B	amelogenin-CD63 endocytic output	1	2	1
+23B	amelogenin-CD63 trafficking	1	2	1
+23B	amelogenin-LAMP1 trafficking	1	2	1
+23B	amelogenin-LAMP2 trafficking	1	2	1
+23B	angiopoietin Tie2 signaling	1	2	1
+23B	angiopoietin integrin engagement	1	2	1
+23B	angiopoietin matrix crosstalk	1	2	1
+23B	angiopoietin neural adhesion	1	2	1
+23B	astrocyte mechanotransduction	1	2	1
+23B	beta1-integrin–FAK/TGF-beta–SMAD2 EMT-associated relay	1	2	1
+23B	beta1-laminin–alpha3beta1 recognition	1	2	1
+23B	beta2-integrin adhesion, erythrocyte clearance, and phagocytic-cell contact	2	2	2
+23B	beta2-laminin–alpha3beta1 enhanced recognition	1	2	1
+23B	beta2-laminin–alpha7X2beta1 recognition	1	2	1
+23B	cANGPTL4-CDH11 cadherin complex	1	2	1
+23B	cANGPTL4-CDH11-beta-catenin	1	2	1
+23B	cANGPTL4-alpha5beta1 junction function	1	2	1
+23B	cANGPTL4-alpha5beta1 vascular relay	1	2	1
+23B	canstatin alphaVbeta3 binding	1	2	1
+23B	canstatin alphaVbeta5 binding	1	2	1
+23B	chondroadherin–α2β1 adhesion/MAPK branch	2	2	2
+23B	chronic SCI scar mechanics	1	2	1
+23B	chronic hemisection scar mechanics	1	2	1
+23B	chronic lesion mechanics	1	2	1
+23B	chronic lesion mechanics / ECM-GAG branch	1	2	1
+23B	clustered ephrin-A5–EphA2 signaling to MEK/ERK or AKT and cytoskeletal output	3	2	3
+23B	collagen I-GPVI / platelet ITAM signaling	1	2	1
+23B	collagen IX neural guidance	1	2	1
+23B	collagen XI alpha2beta1 binding	1	2	1
+23B	collagen XI fibroblast program	1	2	1
+23B	collagen-I astrocytic scar	1	2	1
+23B	collagen-I-DDR2 JAK2/ERK/MMP10 and PEA3 response	3	2	3
+23B	collagen-III-ADGRG1 G-alpha12/13-RhoA cortical migration	3	2	3
+23B	collagen-III-DDR1 receptor autophosphorylation	1	2	1
+23B	collagen-III-DDR2 receptor autophosphorylation	1	2	1
+23B	collagen-II–GPVI/FcRγ platelet activation	3	2	3
+23B	collagen-II–α10β1 cartilage adhesion	2	2	2
+23B	collagen-II–α1β1 cartilage adhesion	2	2	2
+23B	collagen-II–α2β1 cartilage adhesion	2	2	2
+23B	collagen-IV NC1–α3β1 adhesion/angiogenesis	2	2	2
+23B	collagen-IV migration relay	1	2	1
+23B	collagen-IV neural adhesion	1	2	1
+23B	collagen-IV scaffold function	1	2	1
+23B	collagen-IV–GPVI matrix recognition	1	2	1
+23B	collagen-I–DDR1 activation	3	2	3
+23B	collagen-I–syndecan-1 heparan-sulfate adhesion branch	3	2	3
+23B	collagen-I–α11β1 adhesion/remodeling	2	2	2
+23B	collagen-I–α2β1 adhesion and collagen-response signaling	3	2	3
+23B	collagen-V NTD–syndecan-3 cytoskeletal/ERK branch	3	2	3
+23B	collagen-VI alpha10 binding	1	2	1
+23B	collagen-VI chain boundary	1	2	1
+23B	collagen-VI family adhesion	1	2	1
+23B	collagen-VI integrin relay	1	2	2
+23B	collagen-VI peripheral-nerve function	1	2	1
+23B	collagen-V–DDR1 dimer/RTK phosphorylation and Shc/MAPK	3	2	3
+23B	collagen-XI fibril–DDR1 dimer–Shc/MAPK matrix response	3	2	3
+23B	collagen-XIII–α11β1 adhesion and bone-homeostasis branch	3	2	3
+23B	collagen-XIII–α1β1 adhesion/transmigration and renal inflammation	3	2	3
+23B	contactin–NrCAM neuronal adhesion and RPTPβ-associated differentiation	2	2	2
+23B	endostatin growth-factor receptor antagonism	1	2	1
+23B	endostatin integrin binding	1	2	1
+23B	endostatin-alpha3beta1 cerebellar synapse organization	2	2	2
+23B	endostatin–α2β1 endothelial adhesion and anti-angiogenic function	1	2	1
+23B	endothelial THY1 -> alphaMbeta2/Mac-1 -> leukocyte adhesion and transendothelial migration	2	2	2
+23B	ephrin contact signaling	1	2	1
+23B	ephrin-A5–EphA4 clustering/RTK signaling and context-dependent guidance/adhesion	3	2	3
+23B	ephrin-B–ApoER2/VLDLR–Dab1	1	2	1
+23B	factor-H glycosaminoglycan-tethered Mac-1 adhesion and oxidative activation	3	2	3
+23B	fibrillar collagen-I–CD36 platelet/macrophage adhesion branch	2	2	2
+23B	fibrillar collagen-I–CD36 platelet/macrophage adhesion branch (COL1A2 alias)	2	2	2
+23B	fibrinogen alpha5beta1 relay	1	2	1
+23B	fibrinogen beta1-context relay	1	2	1
+23B	fibronectin SCI scar relay	1	2	1
+23B	fibronectin alpha5beta1 binding	1	2	1
+23B	fibronectin barrier crosstalk	1	2	1
+23B	fibronectin coreceptor binding	1	2	1
+23B	fibronectin neural guidance	1	2	1
+23B	fibronectin uPAR crosstalk	1	2	1
+23B	fibronectin-EDA chronic fibrotic scar	1	2	1
+23B	fractalkine–αVβ3/CX3CR1 integrin activation and adhesion	3	2	3
+23B	fractalkine–αVβ3/CX3CR1 integrin activation and adhesion (ITGB3 alias)	3	2	3
+23B	galectin-3-alpha3beta1 epithelial function	1	2	1
+23B	galectin-3-alpha3beta1 glycan recognition	1	2	1
+23B	galectin-3-alpha3beta1 lamellipodia relay	1	2	1
+23B	galectin-8–alpha3beta1 lectin/integrin context	1	2	1
+23B	galectin-8–integrin–apoptosis/adhesion loss	1	2	1
+23B	galectin-9–CD44 glycan-dependent immune receptor context	1	2	1
+23B	galectin-integrin outside-in signaling	1	2	1
+23B	glycan-sulfation SCI matrix program	1	2	1
+23B	gp96-LRP1/CD91 antigen-uptake recognition	1	2	1
+23B	gp96-LRP1/CD91 immune function	1	2	1
+23B	gp96-LRP1/CD91 innate signaling	1	2	1
+23B	growth-cone collapse/chemorepulsion	1	2	1
+23B	heparan-sulfate-dependent MDK–GPC2 clustering	1	2	1
+23B	heparan/chondroitin-sulfate-dependent MDK–SDC3 clustering	1	2	1
+23B	heterophilic E-cadherin/N-cadherin adhesion and force transmission	3	2	3
+23B	integrin alphaVbeta6 -> latent TGF-beta1 activation -> TGFBR/SMAD3	3	2	3
+23B	integrin-ILK mechanosensing	1	2	1
+23B	integrin-activated sensory regeneration	1	2	1
+23B	integrin-cadherin astrocyte scar recruitment	1	2	1
+23B	integrin-mediated adhesion	1	2	1
+23B	integrin-mediated adhesion/focal contacts	1	2	1
+23B	irisin complex hold	1	2	1
+23B	irisin integrin binding	1	2	1
+23B	lamina-specific excitatory synapse development/function	1	2	1
+23B	lamina-specific excitatory synapse organization	1	2	1
+23B	laminin gamma1-containing isoform–alpha3beta1 recognition	1	2	1
+23B	laminin gamma1-containing isoform–alpha6beta1 recognition	1	2	1
+23B	laminin neural adhesion	1	2	1
+23B	laminin neural guidance	2	3	2
+23B	laminin neural regeneration	1	2	1
+23B	laminin-2 Schwann-cell function	1	2	1
+23B	laminin-2 axon-sorting relay	1	2	1
+23B	laminin-2 neural guidance	1	2	1
+23B	laminin-2-dystroglycan matrix association	2	2	2
+23B	laminin-2/211–alpha6beta1 adhesion	1	2	1
+23B	laminin-2–alpha3beta1–EGFR/Src–ERK relay	1	2	1
+23B	laminin-332 adhesion	2	3	6
+23B	laminin-332 adhesion signaling	1	2	1
+23B	laminin-332 focal-contact signaling	1	2	1
+23B	laminin-332 gamma2 signaling	1	2	1
+23B	laminin-332 hemidesmosome adhesion	1	2	3
+23B	laminin-332 stable matrix adhesion	1	2	1
+23B	laminin-332-alpha3beta1 basement-membrane recognition	1	2	1
+23B	laminin-332-alpha3beta1 epithelial function	1	2	1
+23B	laminin-332-alpha3beta1 focal-adhesion signaling	1	2	1
+23B	laminin-332–alpha2beta1 epithelial adhesion	1	2	1
+23B	laminin-332–alpha2beta1 epithelial branch	1	2	1
+23B	laminin-332–alpha2beta1 epithelial migration	1	2	2
+23B	laminin-332–alpha3beta1 branch	1	2	1
+23B	laminin-332–alpha3beta1 focal adhesion	1	2	1
+23B	laminin-332–alpha3beta1 focal-adhesion branch	1	2	1
+23B	laminin-332–alpha6beta1 branch	1	2	1
+23B	laminin-332–alpha6beta4 hemidesmosome branch	2	3	2
+23B	laminin-332–alpha6beta4 hemidesmosome complex	1	2	1
+23B	laminin-411 adhesion	2	3	2
+23B	laminin-411–alpha3beta1 endothelial/epithelial adhesion	1	2	1
+23B	laminin-411–alpha6beta1 adhesion	1	2	1
+23B	laminin-411–alpha7beta1 laminin recognition	1	2	1
+23B	laminin-511 cell survival	1	2	1
+23B	laminin-511 dystroglycan adhesion	1	2	1
+23B	laminin-511 hiPSC signaling	1	2	1
+23B	laminin-511 molecular interface	1	2	2
+23B	laminin-511/521 adhesion	3	4	6
+23B	laminin-511/521–alpha3beta1 recognition	1	2	1
+23B	laminin-511/521–alpha6beta4 recognition	2	3	2
+23B	laminin-511–alpha6beta1 recognition	1	2	1
+23B	laminin-511–dystroglycan anchorage	1	2	1
+23B	laminin-521–alpha6beta4 recognition	1	2	1
+23B	laminin-gamma3–DAG1–DLL4/Notch–retinal arteriogenesis	1	2	1
+23B	laminin-gamma3–dystroglycan retinal vascular branch	1	2	1
+23B	laminin-integrin Schwann-cell radial sorting	1	2	1
+23B	latent TGF-beta1-alphaVbeta6 activation and TGFBR-SMAD	3	2	3
+23B	latent TGFB1-LAP -> alphaVbeta8 -> MT1-MMP-mediated release -> autocrine/paracrine growth and matrix responses	3	2	3
+23B	matrilin-1–alpha1beta1 cartilage adhesion	1	2	1
+23B	melatonin receptor G-protein branch	1	2	1
+23B	netrin-1-MCAM G-alpha-i/Gab1-AKT-mTOR and ERK	3	2	3
+23B	neuronal migration/cytoskeletal function	2	4	2
+23B	neutrophil endothelial adhesion	1	2	1
+23B	periostin / fibrotic scar / inflammatory macrophages	1	2	1
+23B	periostin alphaVbeta5 context	1	2	1
+23B	periostin-alphaVbeta3 vascular output	1	2	1
+23B	perivascular fibroblast / ECM scar	1	2	1
+23B	perlecan alpha2beta1 binding	1	2	1
+23B	perlecan-dystroglycan node organization	1	2	1
+23B	perlecan-integrin-PDGFRB pericyte relay	1	2	1
+23B	perlecan-integrin-PDGFRB relay	1	2	1
+23B	platelet adhesion/aggregation	1	2	1
+23B	podoplanin platelet activation	1	2	1
+23B	selectin-PSGL1-Mac-1 firm adhesion	1	2	1
+23B	selectin-PSGL1-beta2 avidity	1	2	1
+23B	sulfated glycan / collagen-fibronectin / neuroinflammation	1	2	1
+23B	talin-beta3 inside-out activation	1	2	2
+23B	tumstatin alphaVbeta3 binding	1	2	1
+23B	type IX collagen adhesion	4	5	4
+23B	type IX collagen function	3	4	3
+23B	type-A pericyte / fibrotic scar / regeneration	1	2	1
+23B	uPA-alphaMbeta2 plasminogen activation	1	2	1
+23B	uPA-uPAR transactivation	1	2	1
+23B	uPA-uPAR-alpha3beta1 cis complex	1	2	2
+23B	uPA-uPAR-beta1 relay	1	2	1
+23B	uPA/uPAR -> ITGB5 turnover and beta1-integrin activity -> TGF-beta-associated myofibroblast phenotype	1	2	1
+23B	vasopressin V1A signaling	1	2	1
+23B	vasopressin V2 signaling	1	2	1
+23B	vitronectin-alphaIIbbeta3 platelet adhesion	1	2	1
+23B	vitronectin-alphaVbeta3 vascular adhesion	1	2	1
+23B	vitronectin-dependent attachment	1	2	1
+23B	vitronectin-uPAR-integrin adhesion	1	2	1
+24B	ANGPTL2-TLR4-associated inflammatory branch	1	2	1
+24B	ANXA2-TLR2 dendritic inflammatory relay	1	2	1
+24B	APC-PAR1 biased cytoprotective program	1	2	1
+24B	ApoC3-LDLR/LRP1 lipoprotein clearance axis	1	2	1
+24B	BDKRB2-PLC/IP3-Ca2+-GDNF relay	1	2	1
+24B	C1QL2-NRXN3 synaptic branch	1	2	1
+24B	C1QL2-NRXN3-GluK2/GluK4 synaptic complex	1	2	1
+24B	C1QTNF5-MFRP RPE adhesion complex	1	2	1
+24B	C3-CR3-NR2B neuropathic-pain branch	1	2	1
+24B	C3a-C3aR1-NF-kB p65-Nrf2- UCHL1 downstream relay	1	2	1
+24B	C3a-C3aR1-NF-kB p65-Nrf2-UCHL1-proteasome functional output	1	2	1
+24B	C3aR1-PTEN antagonism of CXCR2/PI3K-AKT	1	2	2
+24B	C3d-CR2 complement co-receptor binding	1	2	1
+24B	C5L2/C5aR2 ligand-clearance branch	1	2	1
+24B	C5a-C5L2/C5aR2 decoy and internalization branch	1	2	1
+24B	C5aR1 acute inflammation and post-acute astrocyte relay	1	2	2
+24B	CCL11-CCR2 weak chemotaxis branch	1	2	1
+24B	CCL11-CCR3 eosinophil chemotaxis branch	1	2	1
+24B	CCL24-CCR3 eosinophil branch	1	2	1
+24B	CCL27-CCR10 skin T-cell recruitment branch	1	2	1
+24B	CCL28-CCR3 eosinophil migration branch	1	2	1
+24B	CCL3-CCR1 chemokine receptor branch	1	2	1
+24B	CCL5-CCR1 chemotaxis branch	1	2	1
+24B	CCL5-CCR3 eosinophil branch	1	2	1
+24B	CCL7-MCP-3/CCR1 branch	1	2	1
+24B	CCL7-MCP-3/CCR2 branch	1	2	1
+24B	CCL7-MCP-3/CCR3 branch	1	2	1
+24B	CCL8/MCP-2-CCR1 chemotaxis branch	1	2	1
+24B	CCN1-SDC4 debris-buffering repair	1	2	1
+24B	CCN1-SDC4 repair relay	1	2	1
+24B	CIRP-TLR4 inflammatory relay	1	2	1
+24B	CX3CL1-CX3CR1 SCI repair	1	2	1
+24B	CXCL1-CXCR2-C3aR1/PTEN relay	1	2	1
+24B	CXCL10-CXCR3 injury relay	1	2	1
+24B	CXCL2-CXCR2 inflammatory context	1	2	1
+24B	CXCL3-CXCR2 scar relay	1	2	1
+24B	CXCL5-CXCR2 comparator pain relay	1	2	1
+24B	CYTL1-CCR2-Gi/ERK chemotaxis relay	1	2	1
+24B	Cripto-ACVR1B/ALK4 coreceptor branch	1	2	1
+24B	Cripto-Nodal-ALK7/ActRIIB coreceptor branch	1	2	1
+24B	DAMP/TLR boundary relay	2	4	2
+24B	DEFB2-TLR4 dendritic maturation relay	1	2	1
+24B	ECM-DAMP/TLR boundary relay	1	2	1
+24B	EPCR-beta-arrestin-Dvl2-Rac1 barrier relay	1	2	1
+24B	FAM3D-FPR1-Gi/beta-arrestin-ERK/p38 relay	1	2	1
+24B	FAM3D-FPR2-Gi/beta-arrestin-ERK/p38 relay	1	2	1
+24B	FLRT3 homophilic adhesion	1	1	1
+24B	FLRT3 homophilic adhesion/migration branch	1	2	1
+24B	FPR2-Gi-ERK/Akt migration relay	1	2	1
+24B	Gal-9-TIM-3 checkpoint output	1	2	1
+24B	Gal-9-TIM-3 immune checkpoint relay	1	2	1
+24B	HMGB1-TIM-3 nucleic-acid sensing suppression	1	2	1
+24B	HMGB1-TLR2 inflammatory relay	1	2	1
+24B	IL-1 receptor-complex activation	2	3	2
+24B	IL-36 inflammatory output	1	2	1
+24B	IL-36 receptor-complex activation	3	4	3
+24B	IL-36 receptor-complex proximal relay	1	2	1
+24B	IL17D-CD93 ILC3 homeostasis relay	1	2	1
+24B	IL17D-CD93-IL22 homeostatic branch	1	2	1
+24B	Klk6-PAR1/PAR2-PI3K/MEK-ERK neurotoxicity relay	1	2	1
+24B	Klk6-PAR2-MEK/ERK-STAT3 astrocyte relay	1	2	1
+24B	Klk6-PAR2-MEK/ERK-STAT3 inflammatory astrocyte output	1	2	1
+24B	LEAP2-GHSR central appetite output	1	2	1
+24B	LEAP2-GHSR ghrelin antagonism	1	2	1
+24B	LGALS9-TLR4 glycan-dependent modulation branch	1	2	1
+24B	LTB4 release-PMN infiltration branch	1	2	1
+24B	LTB4-BLT1 neutrophil recruitment	1	2	1
+24B	MMP2/MMP9 ECM-vascular injury branch	1	2	1
+24B	NKA-NK1 GPCR/PLC-Ca2+ relay	1	2	2
+24B	NKA-NK2 GPCR/PLC-Ca2+ relay	1	2	2
+24B	NKA-NK3 weak cross-reactivity	1	2	2
+24B	NKB-NK1 weak cross-reactivity	1	2	2
+24B	NKB-NK2 weak cross-reactivity	1	2	2
+24B	NKB-NK3 GPCR relay	1	2	2
+24B	NPgamma-NK1 binding branch	1	2	2
+24B	NPgamma-NK2 native-tissue relay	1	2	1
+24B	P2Y14-Gi/ERK/RhoA chemotaxis relay	1	2	1
+24B	P2Y14-Gi/PI3K-RhoA relay	1	2	1
+24B	P2Y14-Gi/Rho relay	1	2	1
+24B	P2Y14-Gi/RhoA-Rho-kinase relay	1	2	1
+24B	PANP-PILRA glycosylation-dependent neural relay	1	2	1
+24B	PAR1-Rho/ERK/MAPK-NF-kB/JAK2-STAT3 relay	1	2	2
+24B	PCDHGC3 junctional barrier branch	1	2	1
+24B	PCDHGC5 homophilic synaptic adhesion	1	1	1
+24B	PGE2-EP2-ERK/cAMP spinal pain relay	1	2	1
+24B	PGE2-EP4 anti-inflammatory spinal feedback	1	2	1
+24B	PTPdelta-IL1RAP trans-synaptic adhesion complex	1	2	1
+24B	Resistin-TLR4 inflammatory function	1	2	1
+24B	Resistin-TLR4 proximal inflammatory relay	1	2	1
+24B	Resistin-TLR4-MyD88/MAPK/NFkB relay	1	2	1
+24B	RvD1-FPR2 resolution relay	1	2	1
+24B	RvD1-FPR2/ALX spinal resolution branch	1	2	1
+24B	RvD1-GPR32 proresolution GPCR relay	1	2	1
+24B	RvD1-GPR32 proresolution cellular output	1	2	1
+24B	S100B-RAGE-Src/ERK/NFkB relay	1	2	1
+24B	S1P-S1PR1-NLRP3-IL1beta relay	1	2	1
+24B	S1P-S1PR2-ERK/ACSL4 ferroptosis relay	1	2	1
+24B	S1P-S1PR3-p38-NF-kB relay	1	2	1
+24B	SAA1-TLR2 inflammatory branch	1	2	1
+24B	SAA1-TLR4-MyD88/NFkB branch	1	2	1
+24B	SAA3-TLR4 inflammatory branch	1	2	1
+24B	SP-NK1-PLC-Ca2+/ERK-p38 relay	1	2	1
+24B	SP-NK2 GPCR relay	1	2	1
+24B	SP-NK3 weak GPCR cross-reactivity	1	2	1
+24B	TF-FVIIa-Xa-PAR2 protease relay	1	2	1
+24B	TNC-FBG-C-TLR4 alarmin relay	1	2	1
+24B	Tac1-NKA-NK2 branch	1	2	1
+24B	Tac1-SP-NK1-ERK/p38 branch	1	2	1
+24B	Tac4-HK1-NK1 GPCR relay	1	2	1
+24B	VCAN-TLR2/TLR6 inflammatory relay	1	2	1
+24B	WNT5A-ROR2-VANGL2 planar-cell-polarity branch	1	2	1
+24B	XCL1-XCR1 comparator context	1	2	1
+24B	bradykinin-B2R-NF-kB neuroprotection relay	1	2	1
+24B	bradykinin-B2R-NF-kB neuroprotective output	1	2	1
+24B	chemokine receptor comparator pharmacology	2	3	2
+24B	chemokine receptor context	1	2	1
+24B	chemokine receptor functional boundary	2	4	2
+24B	coagulation-linked protease danger adjacency	1	2	2
+24B	complement fragment targeting and SCI protection	1	2	1
+24B	complement receptor-associated synaptic function	1	2	1
+24B	complement-linked synaptic loss	1	2	2
+24B	debris-sensor PI3K-AKT/DAM relay	1	2	2
+24B	decorin-TLR2-MAPK/NFkB inflammatory relay	1	2	1
+24B	extracellular protease adjacency	1	2	1
+24B	ficolin-A-TLR4 macrophage polarization branch	1	2	1
+24B	hemokinin-1-NK1 GPCR relay	1	2	2
+24B	hemokinin-1-NK2 GPCR relay	1	2	2
+24B	hemokinin-1-NK3 GPCR relay	1	2	2
+24B	iC3b-CR3 opsonin binding	1	2	1
+24B	iC3b-CR4 opsonin binding	1	2	1
+24B	kinin-B1 receptor SCI bladder relay	1	2	1
+24B	kinin-B1 receptor bladder hyperexcitability output	1	2	1
+24B	kinin-system receptor induction context	1	2	1
+24B	leukotriene/eicosanoid pharmacology	1	2	1
+24B	lipid-debris-complement signaling	1	2	2
+24B	pro-resolving lipid mediator co-therapy	1	2	2
+24B	pro-resolving lipid mediator function	1	2	1
+24B	purinergic excitotoxicity	1	2	2
+24B	purinergic mitochondrial repair	1	2	1
+24B	purinergic pain relay	1	2	1
+24B	purinergic repair relay	1	2	2
+24B	purinergic secondary injury	1	2	1
+24B	reverse-direction DAMP-ECM pathway context	1	2	1
+24B	thrombin-cleavage and PAR3-assisted-PAR4 relay	1	2	1
+24B	trap-mediated purinergic inflammation	1	2	2
