@@ -166,12 +166,29 @@ def normalize_support_kind(source_kind: str, support_kind: str) -> str:
 
 
 def normalize_source_scope(source_scope: str, source_kind: str, support_kind: str) -> str:
-    value = f"{source_scope} {source_kind} {support_kind}".casefold()
-    if any(token in value for token in ("negative", "boundary", "search", "unresolved", "no_evidence", "no exact")):
+    scope = source_scope.casefold().strip()
+    kind = source_kind.casefold().strip()
+    support = support_kind.casefold().strip()
+    boundary_kind = (
+        kind.startswith("search")
+        or kind.endswith("_boundary")
+        or kind in {"no_evidence_boundary", "unresolved"}
+    )
+    boundary_scope = (
+        scope.startswith("search")
+        or "_search" in scope
+        or any(token in scope for token in ("negative", "boundary", "unresolved", "no_evidence"))
+    )
+    if (
+        boundary_kind
+        or boundary_scope
+        or support in {"negative_evidence", "no_exact_primary_packet"}
+        or "no exact" in support
+    ):
         return "negative_evidence"
-    if "direct" in value:
+    if "direct" in scope:
         return "direct_edge"
-    if "pathway" in value:
+    if "pathway" in scope:
         return "pathway_membership"
     return "contextual_support"
 
