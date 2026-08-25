@@ -7,6 +7,10 @@ Modules 20B–24B. It is designed for inspection and simulator import while
 preserving the evidence gate: only rows marked `exportable=true` in the
 validated edge registers become traversable graph edges.
 
+The release now emits the required mSCS mechanism-bundle columns and has been
+validated by running mSCS's `import_mechanism_bundle.py` into a temporary active
+release directory. The mSCS checkout was not modified by that verification.
+
 ## Release contents
 
 The bundle is at
@@ -14,9 +18,9 @@ The bundle is at
 
 | Artifact | Purpose |
 |---|---|
-| `mechanism_nodes.tsv` | All curated source and target labels used by exported edges; composite labels are preserved. |
-| `mechanism_edges.tsv` | Directed, typed, evidence-gated pathway edges with module, context, confidence, and exportability fields. |
-| `mechanism_edge_sources.tsv` | Evidence-register provenance, source locators, summaries, limitations, and citation notes for every exported edge. |
+| `mechanism_nodes.tsv` | mSCS-compatible node table plus curated labels and audit fields; composite labels are preserved. |
+| `mechanism_edges.tsv` | mSCS-compatible directed, typed, evidence-gated pathway edges plus module, context, confidence, and exportability fields. |
+| `mechanism_edge_sources.tsv` | mSCS-compatible evidence provenance fields plus evidence-register IDs, source locators, summaries, limitations, and citation notes. |
 | `mechanism_pathways.tsv` | Pathway-level edge, node, and evidence counts. |
 | `mechanism_boundary_summary.tsv` | Aggregate view of non-exportable edge boundaries. |
 | `bundle_metadata.json` | Release policy, counts, module coverage, and accuracy contract. |
@@ -59,6 +63,29 @@ The validator checks:
 The current release passes with zero errors; the validator reports the
 local-only/unresolved locator count as a warning, not as a graph-integrity
 failure.
+
+Validate the mSCS import contract with the mSCS virtual environment (which
+provides its optional Parquet dependency):
+
+```bash
+rm -rf /private/tmp/mscs_module20_24_import_check
+PYTHONPATH=/Users/derea/Documents/SCI/mSCS/src \
+  /Users/derea/Documents/SCI/mSCS/.venv/bin/python \
+  /Users/derea/Documents/SCI/mSCS/src/mscs/import_mechanism_bundle.py \
+  data/processed/mechanism_graph_module20_24_v2026_08_25 \
+  --mechanism-dir /private/tmp/mscs_module20_24_import_check --export-tsv
+```
+
+The verified import retained 2,787 nodes, 3,167 edges, and 4,393 evidence
+sources. The bundle is a mechanism snapshot, not a claim that the
+register-backed labels are already canonical database entities; the metadata
+therefore keeps `canonical_database_materialization=false`.
+
+Regulon modeling is deliberately not inferred into this release. The
+database-native, evidence-gated extension is documented in
+[`REGULON_MODELING_LAYER.md`](REGULON_MODELING_LAYER.md) and applied through
+`schema/regulon_layer.sql` when separately curated TF-target memberships are
+ready.
 
 ## Interpretation boundaries
 
