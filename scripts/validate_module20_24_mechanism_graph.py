@@ -195,6 +195,14 @@ def validate(bundle_dir: Path) -> dict[str, object]:
     if nonexportable_edges:
         errors.append(f"non-exportable rows present in graph edge file: {nonexportable_edges[:5]}")
 
+    self_loop_edges = [
+        row["edge_id"]
+        for row in edges
+        if row["source_node_id"] == row["target_node_id"]
+    ]
+    if self_loop_edges:
+        errors.append(f"self-loop edges present in graph edge file: {self_loop_edges[:5]}")
+
     sources_by_edge: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in sources:
         sources_by_edge[row["edge_id"]].append(row)
@@ -280,6 +288,7 @@ def validate(bundle_dir: Path) -> dict[str, object]:
             "edge_node_references_resolve": not missing_nodes,
             "source_edge_references_resolve": not missing_source_edges,
             "all_graph_edges_exportable": not nonexportable_edges,
+            "no_self_loop_edges": not self_loop_edges,
             "all_graph_edges_have_evidence": not no_sources,
             "pathway_summaries_resolve": not missing_pathways,
             "metadata_counts_match": not any("metadata count mismatch" in error for error in errors),
