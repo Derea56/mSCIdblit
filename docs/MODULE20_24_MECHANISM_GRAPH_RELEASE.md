@@ -19,6 +19,7 @@ The bundle is at
 | Artifact | Purpose |
 |---|---|
 | `mechanism_nodes.tsv` | mSCS-compatible node table plus curated labels and audit fields; composite labels are preserved. |
+| `mechanism_node_roles.tsv` | Explicit many-to-many mSCS role assignments with provenance: ligand, receptor, transcription factor, target gene, and signaling cascade. |
 | `mechanism_edges.tsv` | mSCS-compatible directed, typed, evidence-gated pathway edges plus module, context, confidence, and exportability fields. |
 | `mechanism_edge_sources.tsv` | mSCS-compatible evidence provenance fields plus evidence-register IDs, source locators, summaries, limitations, and citation notes. |
 | `mechanism_pathways.tsv` | Pathway-level edge, node, and evidence counts. |
@@ -42,6 +43,14 @@ linked evidence-source rows, 3,256 retain stable PMID, PMCID, DOI, or HTTP
 locators in the release bundle; 1,137 are marked local-only or unresolved and
 retain their evidence summaries and limitations without exposing local paths.
 
+The role table contains 4,345 assignments: 2,787 baseline
+`signaling_cascade` assignments, 728 `ligand`, 712 `receptor`, 51
+`transcription_factor`, and 67 `target_gene` assignments. Role assignments are
+many-to-many; a node can therefore be both a signaling-cascade participant and
+a specialized endpoint. `node_type` remains the legacy single-valued mSCS
+field and uses `signaling_effector` for generic relay, complex, and program
+labels rather than inventing a new legacy type.
+
 ## Accuracy check
 
 Run the exporter and validator from the repository root:
@@ -58,7 +67,11 @@ The validator checks:
 - evidence-source references for every exported edge;
 - pathway summary consistency;
 - metadata count consistency; and
-- absence of non-exportable edges from the traversable graph.
+- absence of non-exportable edges from the traversable graph;
+- role vocabulary, role provenance, role-to-node resolution, and complete
+  `signaling_cascade` coverage; and
+- canonical role-edge compatibility (`binds_receptor` for ligand-receptor
+  edges and the three target-gene relation types for TF-target edges).
 
 The current release passes with zero errors; the validator reports the
 local-only/unresolved locator count as a warning, not as a graph-integrity
@@ -76,10 +89,17 @@ PYTHONPATH=/Users/derea/Documents/SCI/mSCS/src \
   --mechanism-dir /private/tmp/mscs_module20_24_import_check --export-tsv
 ```
 
-The verified import retained 2,787 nodes, 3,167 edges, and 4,393 evidence
-sources. The bundle is a mechanism snapshot, not a claim that the
+The verified import retained 2,787 nodes, 4,345 node-role assignments, 3,167
+edges, and 4,393 evidence sources. The bundle is a mechanism snapshot, not a claim that the
 register-backed labels are already canonical database entities; the metadata
 therefore keeps `canonical_database_materialization=false`.
+
+The database-side role contract is defined in
+[`MECHANISM_ROLE_CONTRACT.md`](MECHANISM_ROLE_CONTRACT.md). Apply
+`schema/mechanism_roles_layer.sql` after the base schema, populate roles only
+from evidence-backed entity mappings (or derive the canonical edge roles with
+`scripts/materialize_mechanism_roles.sql`), and run
+`scripts/validate_mechanism_roles.sql` before a database-native export.
 
 Regulon modeling is deliberately not inferred into this release. The
 database-native, evidence-gated extension is documented in
