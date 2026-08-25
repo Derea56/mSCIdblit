@@ -6,12 +6,12 @@
     "some evidence sources have no stable locator; inspect evidence_exportable and limitations"
   ],
   "counts": {
-    "nodes": 2787,
-    "edges": 3167,
-    "edge_sources": 4393,
-    "node_roles": 4345,
-    "pathways": 949,
-    "boundary_groups": 9
+    "nodes": 2784,
+    "edges": 3151,
+    "edge_sources": 4377,
+    "node_roles": 4333,
+    "pathways": 945,
+    "boundary_groups": 16
   },
   "checks": {
     "unique_node_ids": true,
@@ -24,6 +24,7 @@
     "edge_node_references_resolve": true,
     "source_edge_references_resolve": true,
     "all_graph_edges_exportable": true,
+    "no_self_loop_edges": true,
     "all_graph_edges_have_evidence": true,
     "pathway_summaries_resolve": true,
     "metadata_counts_match": true

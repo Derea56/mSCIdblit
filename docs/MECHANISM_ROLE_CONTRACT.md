@@ -46,6 +46,12 @@ The database authority is `SignalingEntityRole`, added by
 registry/version, and an export gate. `SignalingEntity.entity_type` remains a
 legacy single-valued field and is not the authority for role-aware queries.
 
+Register-backed graph provenance is stored separately in
+`SignalingEdgeRegister` and `SignalingEdgeRegisterSource`, added by
+`schema/mechanism_register_layer.sql`. This preserves register IDs and evidence
+summaries without pretending that unresolved register tokens are database
+`Paper`, `Observation`, or `AuthorClaim` IDs.
+
 For an already materialized database graph, the safe idempotent derivation is
 `scripts/materialize_mechanism_roles.sql`. It derives only the baseline and
 canonical relation-implied roles, uses `ON CONFLICT DO NOTHING`, and does not

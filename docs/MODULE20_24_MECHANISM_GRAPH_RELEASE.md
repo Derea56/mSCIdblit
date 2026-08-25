@@ -31,20 +31,22 @@ The bundle is at
 
 | Module | Register edges | Exported edges | Evidence rows | Non-exportable edges |
 |---|---:|---:|---:|---:|
-| 20B | 5,906 | 1,110 | 7,586 | 4,796 |
+| 20B | 5,906 | 1,108 | 7,586 | 4,798 |
 | 21B | 111 | 111 | 54 | 0 |
-| 22B | 5,733 | 723 | 5,906 | 5,010 |
-| 23B | 1,075 | 1,072 | 1,467 | 3 |
-| 24B | 151 | 151 | 200 | 0 |
-| **Total graph** | — | **3,167** | **4,393 linked source rows** | **9,809** |
+| 22B | 5,733 | 714 | 5,906 | 5,019 |
+| 23B | 1,075 | 1,069 | 1,467 | 6 |
+| 24B | 151 | 149 | 200 | 2 |
+| **Total graph** | — | **3,151** | **4,377 linked source rows** | **9,825** |
 
-The graph contains 2,787 node labels and 949 pathway labels. Of the 4,393
-linked evidence-source rows, 3,256 retain stable PMID, PMCID, DOI, or HTTP
-locators in the release bundle; 1,137 are marked local-only or unresolved and
+The graph contains 2,784 node labels and 945 pathway labels. Sixteen
+self-loop register rows are retained as non-exportable boundaries because the
+normalized database requires distinct source and target entities. Of the 4,377
+linked evidence-source rows, 3,242 retain stable PMID, PMCID, DOI, or HTTP
+locators in the release bundle; 1,135 are marked local-only or unresolved and
 retain their evidence summaries and limitations without exposing local paths.
 
-The role table contains 4,345 assignments: 2,787 baseline
-`signaling_cascade` assignments, 728 `ligand`, 712 `receptor`, 51
+The role table contains 4,333 assignments: 2,784 baseline
+`signaling_cascade` assignments, 725 `ligand`, 706 `receptor`, 51
 `transcription_factor`, and 67 `target_gene` assignments. Role assignments are
 many-to-many; a node can therefore be both a signaling-cascade participant and
 a specialized endpoint. `node_type` remains the legacy single-valued mSCS
@@ -123,3 +125,6 @@ ready.
 The broader narrative synthesis is in
 [`CROSS_MODULE_SYNTHESIS_20_24.md`](CROSS_MODULE_SYNTHESIS_20_24.md), while the
 machine-readable graph contract is captured in `bundle_metadata.json`.
+
+The PostgreSQL-materialized companion release is documented in
+[`MODULE20_24_DATABASE_GRAPH_RELEASE.md`](MODULE20_24_DATABASE_GRAPH_RELEASE.md).

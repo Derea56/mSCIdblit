@@ -92,6 +92,10 @@ def node_key(label: str) -> str:
     return " ".join(normalized.split()).casefold()
 
 
+def is_self_loop(edge: dict[str, str]) -> bool:
+    return node_key(edge.get("source_entity", "")) == node_key(edge.get("target_entity", ""))
+
+
 def add_role(
     role_map: dict[str, dict[str, dict[str, set[str]]]],
     node_id: str,
@@ -295,7 +299,7 @@ def build_release(source_root: Path) -> dict[str, object]:
             row = dict(row)
             row["module"] = f"{module}B"
             all_edges.append(row)
-            if row.get("exportable") == "true":
+            if row.get("exportable") == "true" and not is_self_loop(row):
                 exportable_edges.append(row)
         for row in evidence:
             row = dict(row)
@@ -305,10 +309,14 @@ def build_release(source_root: Path) -> dict[str, object]:
             {
                 "module": f"{module}B",
                 "edge_count": len(edges),
-                "exportable_edge_count": sum(row.get("exportable") == "true" for row in edges),
+                "exportable_edge_count": sum(
+                    row.get("exportable") == "true" and not is_self_loop(row) for row in edges
+                ),
                 "evidence_count": len(evidence),
                 "pathway_count": len({row.get("pathway_name", "") for row in edges}),
-                "nonexportable_edge_count": sum(row.get("exportable") != "true" for row in edges),
+                "nonexportable_edge_count": sum(
+                    row.get("exportable") != "true" or is_self_loop(row) for row in edges
+                ),
             }
         )
 
@@ -551,7 +559,7 @@ def build_release(source_root: Path) -> dict[str, object]:
 
     boundary_counter: Counter[tuple[str, str, str, str, str]] = Counter()
     for edge in all_edges:
-        if edge.get("exportable") == "true":
+        if edge.get("exportable") == "true" and not is_self_loop(edge):
             continue
         key = (
             edge["module"],
@@ -606,6 +614,7 @@ def build_release(source_root: Path) -> dict[str, object]:
             "composite_labels_preserved": True,
             "unresolved_and_nonexportable_edges_excluded_from_graph": True,
             "evidence_rows_retained_for_exported_edges": True,
+            "self_loops_excluded_from_traversable_graph": True,
         },
         "counts": {
             "nodes": len(node_rows),
@@ -641,6 +650,7 @@ def build_release(source_root: Path) -> dict[str, object]:
             "Every exported edge must retain at least one evidence-register source row.",
             "Every exported edge must belong to a pathway row.",
             "Role-aware edges use canonical binds_receptor or target-gene relation types with matching endpoint roles; original register relations remain audit fields.",
+            "Self-loop register rows are retained as boundaries and are not inserted into the normalized graph.",
             "Non-exportable edges remain summarized as boundaries and are not traversable graph edges.",
             "Stable PMID/PMCID/DOI/URL locators are retained in edge-source rows where available; local paths are not released.",
         ],

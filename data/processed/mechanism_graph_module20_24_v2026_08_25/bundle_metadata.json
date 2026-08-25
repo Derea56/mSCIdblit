@@ -66,34 +66,35 @@
     "exportable_edges_only": true,
     "composite_labels_preserved": true,
     "unresolved_and_nonexportable_edges_excluded_from_graph": true,
-    "evidence_rows_retained_for_exported_edges": true
+    "evidence_rows_retained_for_exported_edges": true,
+    "self_loops_excluded_from_traversable_graph": true
   },
   "counts": {
-    "nodes": 2787,
-    "edges": 3167,
-    "edge_sources": 4393,
-    "node_roles": 4345,
-    "nodes_with_ligand_role": 728,
-    "nodes_with_receptor_role": 712,
+    "nodes": 2784,
+    "edges": 3151,
+    "edge_sources": 4377,
+    "node_roles": 4333,
+    "nodes_with_ligand_role": 725,
+    "nodes_with_receptor_role": 706,
     "nodes_with_transcription_factor_role": 51,
     "nodes_with_target_gene_role": 67,
-    "pathways": 949,
-    "boundary_groups": 9,
-    "nonexportable_edges": 9809
+    "pathways": 945,
+    "boundary_groups": 16,
+    "nonexportable_edges": 9825
   },
   "source_locator_status_counts": {
-    "local_only_or_unresolved": 1137,
-    "stable": 2111,
-    "stable_plus_local": 1145
+    "local_only_or_unresolved": 1135,
+    "stable": 2105,
+    "stable_plus_local": 1137
   },
   "module_counts": [
     {
       "module": "20B",
       "edge_count": 5906,
-      "exportable_edge_count": 1110,
+      "exportable_edge_count": 1108,
       "evidence_count": 7586,
       "pathway_count": 1,
-      "nonexportable_edge_count": 4796
+      "nonexportable_edge_count": 4798
     },
     {
       "module": "21B",
@@ -106,26 +107,26 @@
     {
       "module": "22B",
       "edge_count": 5733,
-      "exportable_edge_count": 723,
+      "exportable_edge_count": 714,
       "evidence_count": 5906,
       "pathway_count": 5,
-      "nonexportable_edge_count": 5010
+      "nonexportable_edge_count": 5019
     },
     {
       "module": "23B",
       "edge_count": 1075,
-      "exportable_edge_count": 1072,
+      "exportable_edge_count": 1069,
       "evidence_count": 1467,
       "pathway_count": 738,
-      "nonexportable_edge_count": 3
+      "nonexportable_edge_count": 6
     },
     {
       "module": "24B",
       "edge_count": 151,
-      "exportable_edge_count": 151,
+      "exportable_edge_count": 149,
       "evidence_count": 200,
       "pathway_count": 145,
-      "nonexportable_edge_count": 0
+      "nonexportable_edge_count": 2
     }
   ],
   "files": {
@@ -143,6 +144,7 @@
     "Every exported edge must retain at least one evidence-register source row.",
     "Every exported edge must belong to a pathway row.",
     "Role-aware edges use canonical binds_receptor or target-gene relation types with matching endpoint roles; original register relations remain audit fields.",
+    "Self-loop register rows are retained as boundaries and are not inserted into the normalized graph.",
     "Non-exportable edges remain summarized as boundaries and are not traversable graph edges.",
     "Stable PMID/PMCID/DOI/URL locators are retained in edge-source rows where available; local paths are not released."
   ]

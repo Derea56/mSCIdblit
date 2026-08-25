@@ -24,8 +24,9 @@ This preserves:
 - source-level provenance for mouse, human, or mixed support
 - release-level supported-pathway metadata for clean replacement in `mSCS`
 
-Apply `schema/mechanism_roles_layer.sql` after `schema/schema.sql` before using
-the database-native exporter. `SignalingEntityRole` is the role authority;
+Apply `schema/mechanism_roles_layer.sql` and
+`schema/mechanism_register_layer.sql` after `schema/schema.sql` before using
+the database-native loader/exporter. `SignalingEntityRole` is the role authority;
 `SignalingEntity.entity_type` remains a legacy single-valued compatibility
 field. After loading canonical `SignalingEntity` and `SignalingEdge` rows, run
 `scripts/materialize_mechanism_roles.sql`, then run the role release gate before
@@ -35,6 +36,12 @@ export:
 psql "$MSCIDBLIT_DATABASE_URL" -v ON_ERROR_STOP=1 \
   -f /Users/derea/Documents/SCI/mSCIdblit/scripts/validate_mechanism_roles.sql
 ```
+
+For a validated TSV graph release, use
+`scripts/load_mechanism_graph_bundle.py`. It resolves endpoints by stable bundle
+node IDs, preserves register evidence in `SignalingEdgeRegisterSource`, and
+does not fabricate `Paper`/`Observation` foreign keys for unresolved source
+anchors.
 
 ## Export Script
 

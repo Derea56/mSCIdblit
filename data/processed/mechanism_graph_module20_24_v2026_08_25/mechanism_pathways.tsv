@@ -1,5 +1,5 @@
 module	pathway_name	edge_count	node_count	evidence_count
-20B	module20a_frozen_ligand_receptor	1110	969	2077
+20B	module20a_frozen_ligand_receptor	1108	968	2075
 21B	BMP-SMAD	2	4	1
 21B	BMP-SMAD-glial	1	2	1
 21B	BMP-glial-scar-function	1	2	1
@@ -63,7 +63,7 @@ module	pathway_name	edge_count	node_count	evidence_count
 21B	WNT5A-ROR2-neurodegeneration	1	2	1
 21B	WNT5A-ROR2-noncanonical	1	2	1
 22B	cell_state_program	349	422	430
-22B	none_identified	19	9	19
+22B	none_identified	10	8	10
 22B	phenotype	270	311	275
 22B	target_gene	78	110	128
 22B	target_module	7	14	7
@@ -110,7 +110,6 @@ module	pathway_name	edge_count	node_count	evidence_count
 23B	CADM1-nectin3 adhesion function	1	2	1
 23B	CADM1-nectin3 trans-adhesion	1	2	1
 23B	CADM3 adhesion-proliferation	1	2	1
-23B	CADM3 homophilic adhesion	1	1	1
 23B	CADM3-CADM4 axon-Schwann adhesion	1	2	1
 23B	CADM3-CADM4 myelination	1	2	1
 23B	CALR-LRP1 coreceptor complex	1	2	1
@@ -154,7 +153,6 @@ module	pathway_name	edge_count	node_count	evidence_count
 23B	CXCL12–α4β1 activation via Vav1/Rac and CXCR4 context	3	2	3
 23B	CXCL12–α5β1 allosteric activation and stromal migration	3	2	3
 23B	CXCL16–CXCR6 chemotaxis/adhesion and immune recruitment	2	2	2
-23B	Claudin-2 homophilic adhesion and metastatic cell–hepatocyte interaction	2	1	2
 23B	DAG1/DGC–actin and neuromuscular-basement-membrane function	1	2	1
 23B	DAG1–DLL4/Notch endothelial relay	1	2	1
 23B	DLL1-NOTCH1 ligand-triggered proteolysis and canonical Notch program	3	2	3
@@ -849,7 +847,6 @@ module	pathway_name	edge_count	node_count	evidence_count
 24B	EPCR-beta-arrestin-Dvl2-Rac1 barrier relay	1	2	1
 24B	FAM3D-FPR1-Gi/beta-arrestin-ERK/p38 relay	1	2	1
 24B	FAM3D-FPR2-Gi/beta-arrestin-ERK/p38 relay	1	2	1
-24B	FLRT3 homophilic adhesion	1	1	1
 24B	FLRT3 homophilic adhesion/migration branch	1	2	1
 24B	FPR2-Gi-ERK/Akt migration relay	1	2	1
 24B	Gal-9-TIM-3 checkpoint output	1	2	1
@@ -886,7 +883,6 @@ module	pathway_name	edge_count	node_count	evidence_count
 24B	PANP-PILRA glycosylation-dependent neural relay	1	2	1
 24B	PAR1-Rho/ERK/MAPK-NF-kB/JAK2-STAT3 relay	1	2	2
 24B	PCDHGC3 junctional barrier branch	1	2	1
-24B	PCDHGC5 homophilic synaptic adhesion	1	1	1
 24B	PGE2-EP2-ERK/cAMP spinal pain relay	1	2	1
 24B	PGE2-EP4 anti-inflammatory spinal feedback	1	2	1
 24B	PTPdelta-IL1RAP trans-synaptic adhesion complex	1	2	1

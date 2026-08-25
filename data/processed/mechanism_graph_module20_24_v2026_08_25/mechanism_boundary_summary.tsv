@@ -3,8 +3,15 @@ module	pathway_name	evidence_layer	edge_status	export_priority	nonexportable_edg
 20B	module20a_frozen_ligand_receptor	boundary	no_evidence	exclude	2157
 20B	module20a_frozen_ligand_receptor	boundary	non_ligand_receptor	exclude	725
 20B	module20a_frozen_ligand_receptor	ligand_receptor_or_direct_molecular	frozen_lr_supported	exclude	183
+20B	module20a_frozen_ligand_receptor	ligand_receptor_or_direct_molecular	frozen_lr_supported	high	2
 22B	none_identified	boundary	no_evidence_boundary	medium	34
 22B	none_identified	downstream_or_functional	no_evidence_boundary	medium	4976
+22B	none_identified	downstream_or_functional	unresolved	medium	9
+23B	CADM3 homophilic adhesion	ligand_receptor_or_direct_molecular	reviewed_first_pass	P2	1
 23B	CALR-alphaV integrin function	downstream_or_functional	held_unresolved_exact_pair	P2	1
 23B	CALR-alphaV intracellular association	ligand_receptor_or_direct_molecular	held_unresolved_exact_pair	P2	1
+23B	Claudin-2 homophilic adhesion and metastatic cell–hepatocyte interaction	downstream_or_functional	staged_primary_review	P2	1
+23B	Claudin-2 homophilic adhesion and metastatic cell–hepatocyte interaction	ligand_receptor_or_direct_molecular	staged_primary_review	P2	1
 23B	EphA2–ephrin-A3 adhesion and hypoxia-sensitive SREBP1/ACLY output	ligand_receptor_or_direct_molecular	held_unresolved_exact_directness	P2	1
+24B	FLRT3 homophilic adhesion	ligand_receptor_or_direct_molecular	reviewed_batch002B	P2	1
+24B	PCDHGC5 homophilic synaptic adhesion	ligand_receptor_or_direct_molecular	reviewed_batch003A	P2	1

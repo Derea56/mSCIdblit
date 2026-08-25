@@ -115,24 +115,35 @@ def edge_filters(args: argparse.Namespace) -> list[str]:
     return filters
 
 
-def source_filters(args: argparse.Namespace) -> list[str]:
+def source_filters(args: argparse.Namespace, alias: str = "ses") -> list[str]:
     filters: list[str] = []
     if args.species_support:
-        filters.append(f"COALESCE(ses.species_support, '') IN {make_in_clause(args.species_support)}")
+        filters.append(f"COALESCE({alias}.species_support, '') IN {make_in_clause(args.species_support)}")
     return filters
 
 
 def filtered_edges_cte(args: argparse.Namespace) -> str:
     edge_where = " AND ".join(edge_filters(args))
     source_where = " AND ".join(source_filters(args)) if source_filters(args) else "TRUE"
+    register_source_where = (
+        " AND ".join(source_filters(args, "sers")) if source_filters(args, "sers") else "TRUE"
+    )
     source_exists = ""
     if args.require_sources:
         source_exists = f"""
-  AND EXISTS (
-    SELECT 1
-    FROM SignalingEdgeSource ses
-    WHERE ses.edge_id = se.edge_id
-      AND {source_where}
+  AND (
+    EXISTS (
+      SELECT 1
+      FROM SignalingEdgeSource ses
+      WHERE ses.edge_id = se.edge_id
+        AND {source_where}
+    )
+    OR EXISTS (
+      SELECT 1
+      FROM SignalingEdgeRegisterSource sers
+      WHERE sers.edge_id = se.edge_id
+        AND {register_source_where}
+    )
   )"""
     return f"""
 WITH filtered_edges AS (
@@ -241,7 +252,7 @@ SELECT
       FROM SignalingEntityRole ser
       WHERE ser.entity_id = se.entity_id
         AND ser.role IN ('ligand', 'receptor', 'transcription_factor', 'target_gene')
-        AND ser.role_status <> 'retired'
+        AND ser.role_status IN ('curated', 'derived')
         AND ser.export_priority <> 'exclude'
       ORDER BY CASE ser.role
         WHEN 'ligand' THEN 1
@@ -291,7 +302,7 @@ WHERE ser.entity_id IN (
   UNION
   SELECT target_entity_id FROM filtered_edges
 )
-  AND ser.role_status <> 'retired'
+  AND ser.role_status IN ('curated', 'derived')
   AND ser.export_priority <> 'exclude'
 ORDER BY ser.entity_id, ser.role
 """
@@ -324,6 +335,9 @@ ORDER BY fe.edge_id
 
 def export_edge_sources(database_url: str, args: argparse.Namespace) -> list[dict[str, str]]:
     source_where = " AND ".join(source_filters(args)) if source_filters(args) else "TRUE"
+    register_source_where = (
+        " AND ".join(source_filters(args, "sers")) if source_filters(args, "sers") else "TRUE"
+    )
     sql = f"""
 {filtered_edges_cte(args)}
 SELECT
@@ -341,7 +355,31 @@ SELECT
 FROM SignalingEdgeSource ses
 JOIN filtered_edges fe ON fe.edge_id = ses.edge_id
 WHERE {source_where}
-ORDER BY ses.edge_source_id
+UNION ALL
+SELECT
+  'REGSRC' || LPAD(sers.register_source_id::text, 5, '0') AS edge_source_id,
+  'EDGE' || LPAD(sers.edge_id::text, 5, '0') AS edge_id,
+  '' AS paper_id,
+  'REGISTER:' || sers.register_evidence_id AS observation_id,
+  '' AS claim_id,
+  COALESCE(sers.support_kind, 'database_curated') AS support_kind,
+  COALESCE(sers.species_support, '') AS species_support,
+  COALESCE(sers.source_scope, 'register_evidence') AS source_scope,
+  COALESCE(sers.confidence_tier, '') AS confidence_tier,
+  COALESCE(sers.citation_note, '') AS citation_note,
+  concat_ws('; ',
+    'register_edge_id=' || sers.register_edge_id,
+    'register_evidence_id=' || sers.register_evidence_id,
+    'source_kind=' || COALESCE(sers.source_kind, ''),
+    'source_locator=' || COALESCE(sers.source_locator, ''),
+    'source_locator_status=' || COALESCE(sers.source_locator_status, ''),
+    COALESCE(sers.notes, ''),
+    COALESCE(sers.limitations, '')
+  ) AS notes
+FROM SignalingEdgeRegisterSource sers
+JOIN filtered_edges fe ON fe.edge_id = sers.edge_id
+WHERE {register_source_where}
+ORDER BY edge_source_id
 """
     return parse_tsv_string(run_copy(database_url, sql))
 
@@ -356,6 +394,9 @@ def metadata(args: argparse.Namespace, nodes: list[dict[str, str]], node_roles: 
         "source_repo": "mSCIdblit",
         "target_repo": "mSCS",
         "authoritative_pathway_snapshot": True,
+        "canonical_database_materialization": True,
+        "role_authority": "SignalingEntityRole",
+        "register_evidence_materialization": "SignalingEdgeRegisterSource",
         "replacement_policy": "Importing this bundle should replace the currently supported pathway set in mSCS.",
         "filters": {
             "species_context": args.species_context,
