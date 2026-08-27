@@ -1,0 +1,21 @@
+species	tf_symbol	tf_key	source_labels	source_record_count	records_with_reference	unique_reference_pmids	source_registries	mapping_decision	frozen_entity_match_status	frozen_entity_ids	explicit_tf_role_present	default_module	existing_module_overlap_flags	both_species_present	priority_rank	review_status	notes
+mouse	Trim32	trim32	Trim32	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	TRIP6	trip6	TRIP6	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	TSC22D1	tsc22d1	TSC22D1	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Tshz3	tshz3	Tshz3	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Ube2k	ube2k	Ube2k	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	UBP1	ubp1	UBP1	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	UBTF	ubtf	UBTF	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	UPF2	upf2	UPF2	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	URI1	uri1	URI1	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Vax2	vax2	Vax2	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	WDR5	wdr5	WDR5	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Whsc1l1	whsc1l1	Whsc1l1	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	YEATS4	yeats4	YEATS4	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	ZBTB14	zbtb14	ZBTB14	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Zbtb20	zbtb20	Zbtb20	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Zbtb32	zbtb32	Zbtb32	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Zbtb38	zbtb38	Zbtb38	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	ZBTB5	zbtb5	ZBTB5	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Zfp13	zfp13	Zfp13	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Zfp263	zfp263	Zfp263	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	

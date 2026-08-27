@@ -1,0 +1,11 @@
+species	tf_symbol	tf_key	source_labels	source_record_count	records_with_reference	unique_reference_pmids	source_registries	mapping_decision	frozen_entity_match_status	frozen_entity_ids	explicit_tf_role_present	default_module	existing_module_overlap_flags	both_species_present	priority_rank	review_status	notes
+human	ZNF444	znf444	ZNF444	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	D3Z1J4	d3z1j4	D3Z1J4	1	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		false	0	new_candidate	no PMID parsed from imported source records
+mouse	E0CYW8	e0cyw8	E0CYW8	1	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		false	0	new_candidate	no PMID parsed from imported source records
+mouse	E9Q1A5	e9q1a5	E9Q1A5	1	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		false	0	new_candidate	no PMID parsed from imported source records
+human	FOXJ2	foxj2	FOXJ2	1	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		false	0	new_candidate	no PMID parsed from imported source records
+mouse	H3BKM3	h3bkm3	H3BKM3	2	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		false	0	new_candidate	no PMID parsed from imported source records
+human	HMBOX1	hmbox1	HMBOX1	2	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		false	0	new_candidate	no PMID parsed from imported source records
+human	PBX3	pbx3	PBX3	2	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		false	0	new_candidate	no PMID parsed from imported source records
+human	ZNF274	znf274	ZNF274	2	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		false	0	new_candidate	no PMID parsed from imported source records
+human	ZNF384	znf384	ZNF384	1	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		false	0	new_candidate	no PMID parsed from imported source records

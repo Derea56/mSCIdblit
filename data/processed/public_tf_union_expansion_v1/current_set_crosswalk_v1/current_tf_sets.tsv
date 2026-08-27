@@ -1,0 +1,673 @@
+current_set	current_id	species_scope	tf_symbol	tf_key	role_status	module_code
+canonical_tf_edge	16799	human	AHR	ahr	curated	
+canonical_tf_edge	16800	human	ARNT	arnt	curated	
+canonical_tf_edge	16728	human	ATF3	atf3	curated	
+canonical_tf_edge	16801	human	ATF4	atf4	curated	
+canonical_tf_edge	16802	human	BACH1	bach1	curated	
+canonical_tf_edge	16803	human	BCL6	bcl6	curated	
+canonical_tf_edge	16804	human	BMAL1	bmal1	curated	
+canonical_tf_edge	16730	human	BRCA1	brca1	curated	
+canonical_tf_edge	16805	human	BRCA2	brca2	curated	
+canonical_tf_edge	16806	human	BTAF1	btaf1	curated	
+canonical_tf_edge	16807	human	CDX2	cdx2	curated	
+canonical_tf_edge	16808	human	CEBPA	cebpa	curated	
+canonical_tf_edge	16809	human	CEBPD	cebpd	curated	
+canonical_tf_edge	16740	human	CIITA	ciita	curated	
+canonical_tf_edge	16810	human	CREB1	creb1	curated	
+canonical_tf_edge	16811	human	CREM	crem	curated	
+canonical_tf_edge	16812	human	CTCF	ctcf	curated	
+canonical_tf_edge	16813	human	CUX1	cux1	curated	
+canonical_tf_edge	16814	human	DNMT1	dnmt1	curated	
+canonical_tf_edge	16747	human	E2F1	e2f1	curated	
+canonical_tf_edge	16815	human	E2F3	e2f3	curated	
+canonical_tf_edge	16816	human	E2F4	e2f4	curated	
+canonical_tf_edge	16817	human	E2F6	e2f6	curated	
+canonical_tf_edge	16818	human	E2F8	e2f8	curated	
+canonical_tf_edge	16819	human	ELF1	elf1	curated	
+canonical_tf_edge	16820	human	ERG	erg	curated	
+canonical_tf_edge	16821	human	ETS1	ets1	curated	
+canonical_tf_edge	16822	human	EZH2	ezh2	curated	
+canonical_tf_edge	16823	human	FOXM1	foxm1	curated	
+canonical_tf_edge	16824	human	FOXP2	foxp2	curated	
+canonical_tf_edge	16825	human	GATA1	gata1	curated	
+canonical_tf_edge	16826	human	GATA3	gata3	curated	
+canonical_tf_edge	16827	human	GATA4	gata4	curated	
+canonical_tf_edge	16828	human	GFI1	gfi1	curated	
+canonical_tf_edge	16829	human	HDAC2	hdac2	curated	
+canonical_tf_edge	16830	human	HDAC3	hdac3	curated	
+canonical_tf_edge	16831	human	HIC1	hic1	curated	
+canonical_tf_edge	16832	human	HMGA1	hmga1	curated	
+canonical_tf_edge	16833	human	HNF4A	hnf4a	curated	
+canonical_tf_edge	16834	human	HOXA10	hoxa10	curated	
+canonical_tf_edge	16835	human	HOXB7	hoxb7	curated	
+canonical_tf_edge	16836	human	HSF1	hsf1	curated	
+canonical_tf_edge	16837	human	ID4	id4	curated	
+canonical_tf_edge	16838	human	IRF1	irf1	curated	
+canonical_tf_edge	16763	human	IRF7	irf7	curated	
+canonical_tf_edge	16839	human	JDP2	jdp2	curated	
+canonical_tf_edge	16840	human	KLF1	klf1	curated	
+canonical_tf_edge	16841	human	KLF11	klf11	curated	
+canonical_tf_edge	16842	human	KLF13	klf13	curated	
+canonical_tf_edge	16843	human	KLF4	klf4	curated	
+canonical_tf_edge	16844	human	KLF5	klf5	curated	
+canonical_tf_edge	16845	human	KLF6	klf6	curated	
+canonical_tf_edge	16846	human	KMT2A	kmt2a	curated	
+canonical_tf_edge	16847	human	LHX3	lhx3	curated	
+canonical_tf_edge	16848	human	LMO4	lmo4	curated	
+canonical_tf_edge	16849	human	LMX1B	lmx1b	curated	
+canonical_tf_edge	16850	human	MBD2	mbd2	curated	
+canonical_tf_edge	16851	human	MECP2	mecp2	curated	
+canonical_tf_edge	16852	human	MEF2A	mef2a	curated	
+canonical_tf_edge	16853	human	MEF2C	mef2c	curated	
+canonical_tf_edge	16854	human	MEF2D	mef2d	curated	
+canonical_tf_edge	16769	human	MEIS1	meis1	curated	
+canonical_tf_edge	16771	human	MITF	mitf	curated	
+canonical_tf_edge	16855	human	MKL1	mkl1	curated	
+canonical_tf_edge	16856	human	MYB	myb	curated	
+canonical_tf_edge	16857	human	NEUROG3	neurog3	curated	
+canonical_tf_edge	16858	human	NFIC	nfic	curated	
+canonical_tf_edge	16859	human	NFKB2	nfkb2	curated	
+canonical_tf_edge	16860	human	NME2	nme2	curated	
+canonical_tf_edge	16861	human	NR1H2	nr1h2	curated	
+canonical_tf_edge	16862	human	NR1I2	nr1i2	curated	
+canonical_tf_edge	16863	human	NR1I3	nr1i3	curated	
+canonical_tf_edge	16864	human	NR2E1	nr2e1	curated	
+canonical_tf_edge	16865	human	NR5A1	nr5a1	curated	
+canonical_tf_edge	16866	human	NRF1	nrf1	curated	
+canonical_tf_edge	16867	human	PAX2	pax2	curated	
+canonical_tf_edge	16868	human	PAX5	pax5	curated	
+canonical_tf_edge	16869	human	PAX6	pax6	curated	
+canonical_tf_edge	16870	human	PAX8	pax8	curated	
+canonical_tf_edge	16781	human	PGR	pgr	curated	
+canonical_tf_edge	16871	human	PHOX2B	phox2b	curated	
+canonical_tf_edge	16872	human	PIAS1	pias1	curated	
+canonical_tf_edge	16873	human	PLAG1	plag1	curated	
+canonical_tf_edge	16874	human	PLAGL2	plagl2	curated	
+canonical_tf_edge	16875	human	PML	pml	curated	
+canonical_tf_edge	16876	human	POU1F1	pou1f1	curated	
+canonical_tf_edge	16782	human	PPARG	pparg	curated	
+canonical_tf_edge	16877	human	PRDM1	prdm1	curated	
+canonical_tf_edge	16787	human	RB1	rb1	curated	
+canonical_tf_edge	16878	human	RB1CC1	rb1cc1	curated	
+canonical_tf_edge	16879	human	REST	rest	curated	
+canonical_tf_edge	16880	human	RFX1	rfx1	curated	
+canonical_tf_edge	16881	human	RFX5	rfx5	curated	
+canonical_tf_edge	16882	human	RUNX1	runx1	curated	
+canonical_tf_edge	16883	human	SALL4	sall4	curated	
+canonical_tf_edge	16789	human	SIRT1	sirt1	curated	
+canonical_tf_edge	16884	human	SNAI1	snai1	curated	
+canonical_tf_edge	16885	human	SNAI2	snai2	curated	
+canonical_tf_edge	16886	human	SOX10	sox10	curated	
+canonical_tf_edge	16887	human	SP4	sp4	curated	
+canonical_tf_edge	16888	human	SPI1	spi1	curated	
+canonical_tf_edge	16889	human	SREBF1	srebf1	curated	
+canonical_tf_edge	16890	human	SREBF2	srebf2	curated	
+canonical_tf_edge	16791	human	SRF	srf	curated	
+canonical_tf_edge	16891	human	SRY	sry	curated	
+canonical_tf_edge	16892	human	STAT5A	stat5a	curated	
+canonical_tf_edge	16893	human	SUZ12	suz12	curated	
+canonical_tf_edge	16794	human	TBP	tbp	curated	
+canonical_tf_edge	16894	human	TBX21	tbx21	curated	
+canonical_tf_edge	16895	human	TBX5	tbx5	curated	
+canonical_tf_edge	16896	human	TCF4	tcf4	curated	
+canonical_tf_edge	16897	human	TFAP2A	tfap2a	curated	
+canonical_tf_edge	16898	human	TFDP1	tfdp1	curated	
+canonical_tf_edge	16899	human	TLX1	tlx1	curated	
+canonical_tf_edge	16900	human	TP53	tp53	curated	
+canonical_tf_edge	16901	human	TWIST1	twist1	curated	
+canonical_tf_edge	16902	human	USF1	usf1	curated	
+canonical_tf_edge	16903	human	VHL	vhl	curated	
+canonical_tf_edge	16904	human	YY1	yy1	curated	
+canonical_tf_edge	16905	human	ZEB1	zeb1	curated	
+canonical_tf_edge	16906	human	ZEB2	zeb2	curated	
+canonical_tf_edge	13927	human; mouse	NFKB1	nfkb1	curated	
+canonical_tf_edge	16936	mouse	Apc	apc	curated	
+canonical_tf_edge	16937	mouse	Arid3a	arid3a	curated	
+canonical_tf_edge	16938	mouse	Bach2	bach2	curated	
+canonical_tf_edge	16939	mouse	Clock	clock	curated	
+canonical_tf_edge	16940	mouse	Dlx5	dlx5	curated	
+canonical_tf_edge	16941	mouse	E2f7	e2f7	curated	
+canonical_tf_edge	16942	mouse	Ebf1	ebf1	curated	
+canonical_tf_edge	16943	mouse	Egr1	egr1	curated	
+canonical_tf_edge	16944	mouse	Elf2	elf2	curated	
+canonical_tf_edge	16945	mouse	Elk4	elk4	curated	
+canonical_tf_edge	16946	mouse	Eomes	eomes	curated	
+canonical_tf_edge	16947	mouse	Ets1	ets1	curated	
+canonical_tf_edge	16948	mouse	Foxa2	foxa2	curated	
+canonical_tf_edge	16949	mouse	Foxc1	foxc1	curated	
+canonical_tf_edge	16950	mouse	Foxp3	foxp3	curated	
+canonical_tf_edge	16951	mouse	Gata4	gata4	curated	
+canonical_tf_edge	16952	mouse	Gli2	gli2	curated	
+canonical_tf_edge	16953	mouse	Gli3	gli3	curated	
+canonical_tf_edge	16954	mouse	Hif1a	hif1a	curated	
+canonical_tf_edge	16955	mouse	Hoxa9	hoxa9	curated	
+canonical_tf_edge	16956	mouse	Irf1	irf1	curated	
+canonical_tf_edge	16957	mouse	Irf5	irf5	curated	
+canonical_tf_edge	16958	mouse	Jarid2	jarid2	curated	
+canonical_tf_edge	16959	mouse	Jun	jun	curated	
+canonical_tf_edge	16960	mouse	Klf4	klf4	curated	
+canonical_tf_edge	16961	mouse	Lhx4	lhx4	curated	
+canonical_tf_edge	16962	mouse	Mafa	mafa	curated	
+canonical_tf_edge	16963	mouse	Mixl1	mixl1	curated	
+canonical_tf_edge	16964	mouse	Msx1	msx1	curated	
+canonical_tf_edge	16965	mouse	Msx2	msx2	curated	
+canonical_tf_edge	16966	mouse	Mtf1	mtf1	curated	
+canonical_tf_edge	16967	mouse	Mxi1	mxi1	curated	
+canonical_tf_edge	16968	mouse	Nfatc2	nfatc2	curated	
+canonical_tf_edge	16969	mouse	Nfe2l2	nfe2l2	curated	
+canonical_tf_edge	16970	mouse	Nfil3	nfil3	curated	
+canonical_tf_edge	16971	mouse	Nr0b1	nr0b1	curated	
+canonical_tf_edge	16972	mouse	Nr5a2	nr5a2	curated	
+canonical_tf_edge	16923	mouse	Pax3	pax3	curated	
+canonical_tf_edge	16926	mouse	Pou5f1	pou5f1	curated	
+canonical_tf_edge	16973	mouse	Rel	rel	curated	
+canonical_tf_edge	16929	mouse	Runx2	runx2	curated	
+canonical_tf_edge	16974	mouse	Runx3	runx3	curated	
+canonical_tf_edge	16975	mouse	Sf1	sf1	curated	
+canonical_tf_edge	16976	mouse	Six3	six3	curated	
+canonical_tf_edge	16977	mouse	Smad1	smad1	curated	
+canonical_tf_edge	16978	mouse	Sox2	sox2	curated	
+canonical_tf_edge	16979	mouse	Tbx1	tbx1	curated	
+canonical_tf_edge	16980	mouse	Tbx2	tbx2	curated	
+canonical_tf_edge	16981	mouse	Tbx3	tbx3	curated	
+canonical_tf_edge	16982	mouse	Tbx6	tbx6	curated	
+canonical_tf_edge	16983	mouse	Tcf3	tcf3	curated	
+canonical_tf_edge	16984	mouse	Tead2	tead2	curated	
+canonical_tf_edge	16985	mouse	Zic3	zic3	curated	
+canonical_tf_edge	11197	unspecified	AR	ar	curated	
+canonical_tf_edge	11199	unspecified	ATF2	atf2	curated	
+canonical_tf_edge	11447	unspecified	CLOCK;BMAL1	clock;bmal1	derived	
+canonical_tf_edge	11484	unspecified	CREB	creb	derived	
+canonical_tf_edge	11488	unspecified	CREB/PAX6	creb/pax6	derived	
+canonical_tf_edge	11494	unspecified	CREB;FOXO1	creb;foxo1	derived	
+canonical_tf_edge	11495	unspecified	CREB;HIF1A	creb;hif1a	derived	
+canonical_tf_edge	11506	unspecified	CTNNB1	ctnnb1	curated	
+canonical_tf_edge	11787	unspecified	EGR1	egr1	curated	
+canonical_tf_edge	11827	unspecified	Elk-1	elk-1	derived	
+canonical_tf_edge	11791	unspecified	ELK1	elk1	curated	
+canonical_tf_edge	11807	unspecified	ESR1	esr1	curated	
+canonical_tf_edge	11808	unspecified	ESR2	esr2	derived	
+canonical_tf_edge	11811	unspecified	ETV5	etv5	curated	
+canonical_tf_edge	11928	unspecified	FOS	fos	curated	
+canonical_tf_edge	12023	unspecified	GLI1	gli1	curated	
+canonical_tf_edge	12198	unspecified	HIF1A	hif1a	curated	
+canonical_tf_edge	12199	unspecified	HIF1A/Sp1	hif1a/sp1	derived	
+canonical_tf_edge	12200	unspecified	HIF1A;SP1	hif1a;sp1	derived	
+canonical_tf_edge	12204	unspecified	HOXD3	hoxd3	derived	
+canonical_tf_edge	12281	unspecified	IRF3	irf3	curated	
+canonical_tf_edge	12545	unspecified	JUN	jun	curated	
+canonical_tf_edge	12548	unspecified	JunD	jund	derived	
+canonical_tf_edge	12727	unspecified	MYC	myc	curated	
+canonical_tf_edge	12768	unspecified	NF-kB	nf-kb	derived	
+canonical_tf_edge	12767	unspecified	NF-YB	nf-yb	derived	
+canonical_tf_edge	12781	unspecified	NFATc4	nfatc4	derived	
+canonical_tf_edge	12802	unspecified	NR1H4	nr1h4	derived	
+canonical_tf_edge	12805	unspecified	NR3C1	nr3c1	derived	
+canonical_tf_edge	12806	unspecified	NR3C2	nr3c2	derived	
+canonical_tf_edge	12915	unspecified	OCA-B/Oct-2	oca-b/oct-2	derived	
+canonical_tf_edge	12953	unspecified	PEA3	pea3	derived	
+canonical_tf_edge	13083	unspecified	RBPJ/CSL	rbpj/csl	derived	
+canonical_tf_edge	13084	unspecified	RELA	rela	curated	
+canonical_tf_edge	13085	unspecified	RELA/p65	rela/p65	derived	
+canonical_tf_edge	13087	unspecified	RELB	relb	derived	
+canonical_tf_edge	13230	unspecified	SMAD1/5/8	smad1/5/8	derived	
+canonical_tf_edge	13231	unspecified	SMAD1/5/8;SMAD4	smad1/5/8;smad4	curated	
+canonical_tf_edge	13232	unspecified	SMAD1/5;SMAD4	smad1/5;smad4	curated	
+canonical_tf_edge	13236	unspecified	SMAD1;SMAD4	smad1;smad4	derived	
+canonical_tf_edge	13237	unspecified	SMAD1;SMAD5	smad1;smad5	derived	
+canonical_tf_edge	13242	unspecified	SMAD2	smad2	curated	
+canonical_tf_edge	13243	unspecified	SMAD2-SMAD3	smad2-smad3	curated	
+canonical_tf_edge	13244	unspecified	SMAD2/3	smad2/3	derived	
+canonical_tf_edge	13245	unspecified	SMAD2/3;SMAD4	smad2/3;smad4	curated	
+canonical_tf_edge	13246	unspecified	SMAD2/Sp1	smad2/sp1	derived	
+canonical_tf_edge	13247	unspecified	SMAD2;SMAD3	smad2;smad3	curated	
+canonical_tf_edge	13248	unspecified	SMAD3	smad3	curated	
+canonical_tf_edge	13249	unspecified	SMAD3;SMAD4	smad3;smad4	derived	
+canonical_tf_edge	13250	unspecified	SMAD4	smad4	curated	
+canonical_tf_edge	13258	unspecified	SOX9	sox9	curated	
+canonical_tf_edge	13259	unspecified	SP1	sp1	curated	
+canonical_tf_edge	13275	unspecified	STAT1	stat1	curated	
+canonical_tf_edge	13278	unspecified	STAT1;STAT3	stat1;stat3	derived	
+canonical_tf_edge	13282	unspecified	STAT3	stat3	curated	
+canonical_tf_edge	13286	unspecified	STAT4	stat4	derived	
+canonical_tf_edge	13287	unspecified	STAT5	stat5	derived	
+canonical_tf_edge	13288	unspecified	STAT5A;STAT5B	stat5a;stat5b	derived	
+canonical_tf_edge	13290	unspecified	STAT6	stat6	curated	
+canonical_tf_edge	13389	unspecified	TAZ	taz	derived	
+canonical_tf_edge	13432	unspecified	THRA	thra	derived	
+canonical_tf_edge	13602	unspecified	VDR	vdr	curated	
+canonical_tf_role	16799	human	AHR	ahr	curated	
+canonical_tf_role	16800	human	ARNT	arnt	curated	
+canonical_tf_role	16728	human	ATF3	atf3	curated	
+canonical_tf_role	16801	human	ATF4	atf4	curated	
+canonical_tf_role	16802	human	BACH1	bach1	curated	
+canonical_tf_role	16803	human	BCL6	bcl6	curated	
+canonical_tf_role	16804	human	BMAL1	bmal1	curated	
+canonical_tf_role	16730	human	BRCA1	brca1	curated	
+canonical_tf_role	16805	human	BRCA2	brca2	curated	
+canonical_tf_role	16806	human	BTAF1	btaf1	curated	
+canonical_tf_role	16807	human	CDX2	cdx2	curated	
+canonical_tf_role	16808	human	CEBPA	cebpa	curated	
+canonical_tf_role	16809	human	CEBPD	cebpd	curated	
+canonical_tf_role	16740	human	CIITA	ciita	curated	
+canonical_tf_role	16810	human	CREB1	creb1	curated	
+canonical_tf_role	16811	human	CREM	crem	curated	
+canonical_tf_role	16812	human	CTCF	ctcf	curated	
+canonical_tf_role	16813	human	CUX1	cux1	curated	
+canonical_tf_role	16814	human	DNMT1	dnmt1	curated	
+canonical_tf_role	16747	human	E2F1	e2f1	curated	
+canonical_tf_role	16815	human	E2F3	e2f3	curated	
+canonical_tf_role	16816	human	E2F4	e2f4	curated	
+canonical_tf_role	16817	human	E2F6	e2f6	curated	
+canonical_tf_role	16818	human	E2F8	e2f8	curated	
+canonical_tf_role	16819	human	ELF1	elf1	curated	
+canonical_tf_role	16820	human	ERG	erg	curated	
+canonical_tf_role	16821	human	ETS1	ets1	curated	
+canonical_tf_role	16822	human	EZH2	ezh2	curated	
+canonical_tf_role	16823	human	FOXM1	foxm1	curated	
+canonical_tf_role	16824	human	FOXP2	foxp2	curated	
+canonical_tf_role	16825	human	GATA1	gata1	curated	
+canonical_tf_role	16826	human	GATA3	gata3	curated	
+canonical_tf_role	16827	human	GATA4	gata4	curated	
+canonical_tf_role	16828	human	GFI1	gfi1	curated	
+canonical_tf_role	16829	human	HDAC2	hdac2	curated	
+canonical_tf_role	16830	human	HDAC3	hdac3	curated	
+canonical_tf_role	16831	human	HIC1	hic1	curated	
+canonical_tf_role	16832	human	HMGA1	hmga1	curated	
+canonical_tf_role	16833	human	HNF4A	hnf4a	curated	
+canonical_tf_role	16834	human	HOXA10	hoxa10	curated	
+canonical_tf_role	16835	human	HOXB7	hoxb7	curated	
+canonical_tf_role	16836	human	HSF1	hsf1	curated	
+canonical_tf_role	16837	human	ID4	id4	curated	
+canonical_tf_role	16838	human	IRF1	irf1	curated	
+canonical_tf_role	16763	human	IRF7	irf7	curated	
+canonical_tf_role	16839	human	JDP2	jdp2	curated	
+canonical_tf_role	16840	human	KLF1	klf1	curated	
+canonical_tf_role	16841	human	KLF11	klf11	curated	
+canonical_tf_role	16842	human	KLF13	klf13	curated	
+canonical_tf_role	16843	human	KLF4	klf4	curated	
+canonical_tf_role	16844	human	KLF5	klf5	curated	
+canonical_tf_role	16845	human	KLF6	klf6	curated	
+canonical_tf_role	16846	human	KMT2A	kmt2a	curated	
+canonical_tf_role	16847	human	LHX3	lhx3	curated	
+canonical_tf_role	16848	human	LMO4	lmo4	curated	
+canonical_tf_role	16849	human	LMX1B	lmx1b	curated	
+canonical_tf_role	16850	human	MBD2	mbd2	curated	
+canonical_tf_role	16851	human	MECP2	mecp2	curated	
+canonical_tf_role	16852	human	MEF2A	mef2a	curated	
+canonical_tf_role	16853	human	MEF2C	mef2c	curated	
+canonical_tf_role	16854	human	MEF2D	mef2d	curated	
+canonical_tf_role	16769	human	MEIS1	meis1	curated	
+canonical_tf_role	16771	human	MITF	mitf	curated	
+canonical_tf_role	16855	human	MKL1	mkl1	curated	
+canonical_tf_role	16856	human	MYB	myb	curated	
+canonical_tf_role	16857	human	NEUROG3	neurog3	curated	
+canonical_tf_role	16858	human	NFIC	nfic	curated	
+canonical_tf_role	16859	human	NFKB2	nfkb2	curated	
+canonical_tf_role	16860	human	NME2	nme2	curated	
+canonical_tf_role	16861	human	NR1H2	nr1h2	curated	
+canonical_tf_role	16862	human	NR1I2	nr1i2	curated	
+canonical_tf_role	16863	human	NR1I3	nr1i3	curated	
+canonical_tf_role	16864	human	NR2E1	nr2e1	curated	
+canonical_tf_role	16865	human	NR5A1	nr5a1	curated	
+canonical_tf_role	16866	human	NRF1	nrf1	curated	
+canonical_tf_role	16867	human	PAX2	pax2	curated	
+canonical_tf_role	16868	human	PAX5	pax5	curated	
+canonical_tf_role	16869	human	PAX6	pax6	curated	
+canonical_tf_role	16870	human	PAX8	pax8	curated	
+canonical_tf_role	16781	human	PGR	pgr	curated	
+canonical_tf_role	16871	human	PHOX2B	phox2b	curated	
+canonical_tf_role	16872	human	PIAS1	pias1	curated	
+canonical_tf_role	16873	human	PLAG1	plag1	curated	
+canonical_tf_role	16874	human	PLAGL2	plagl2	curated	
+canonical_tf_role	16875	human	PML	pml	curated	
+canonical_tf_role	16876	human	POU1F1	pou1f1	curated	
+canonical_tf_role	16782	human	PPARG	pparg	curated	
+canonical_tf_role	16877	human	PRDM1	prdm1	curated	
+canonical_tf_role	16787	human	RB1	rb1	curated	
+canonical_tf_role	16878	human	RB1CC1	rb1cc1	curated	
+canonical_tf_role	16879	human	REST	rest	curated	
+canonical_tf_role	16880	human	RFX1	rfx1	curated	
+canonical_tf_role	16881	human	RFX5	rfx5	curated	
+canonical_tf_role	16882	human	RUNX1	runx1	curated	
+canonical_tf_role	16883	human	SALL4	sall4	curated	
+canonical_tf_role	16789	human	SIRT1	sirt1	curated	
+canonical_tf_role	16884	human	SNAI1	snai1	curated	
+canonical_tf_role	16885	human	SNAI2	snai2	curated	
+canonical_tf_role	16886	human	SOX10	sox10	curated	
+canonical_tf_role	16887	human	SP4	sp4	curated	
+canonical_tf_role	16888	human	SPI1	spi1	curated	
+canonical_tf_role	16889	human	SREBF1	srebf1	curated	
+canonical_tf_role	16890	human	SREBF2	srebf2	curated	
+canonical_tf_role	16791	human	SRF	srf	curated	
+canonical_tf_role	16891	human	SRY	sry	curated	
+canonical_tf_role	16892	human	STAT5A	stat5a	curated	
+canonical_tf_role	16893	human	SUZ12	suz12	curated	
+canonical_tf_role	16794	human	TBP	tbp	curated	
+canonical_tf_role	16894	human	TBX21	tbx21	curated	
+canonical_tf_role	16895	human	TBX5	tbx5	curated	
+canonical_tf_role	16896	human	TCF4	tcf4	curated	
+canonical_tf_role	16897	human	TFAP2A	tfap2a	curated	
+canonical_tf_role	16898	human	TFDP1	tfdp1	curated	
+canonical_tf_role	16899	human	TLX1	tlx1	curated	
+canonical_tf_role	16900	human	TP53	tp53	curated	
+canonical_tf_role	16901	human	TWIST1	twist1	curated	
+canonical_tf_role	16902	human	USF1	usf1	curated	
+canonical_tf_role	16903	human	VHL	vhl	curated	
+canonical_tf_role	16904	human	YY1	yy1	curated	
+canonical_tf_role	16905	human	ZEB1	zeb1	curated	
+canonical_tf_role	16906	human	ZEB2	zeb2	curated	
+canonical_tf_role	13927	human; mouse	NFKB1	nfkb1	curated	
+canonical_tf_role	16936	mouse	Apc	apc	curated	
+canonical_tf_role	16937	mouse	Arid3a	arid3a	curated	
+canonical_tf_role	16938	mouse	Bach2	bach2	curated	
+canonical_tf_role	16939	mouse	Clock	clock	curated	
+canonical_tf_role	16940	mouse	Dlx5	dlx5	curated	
+canonical_tf_role	16941	mouse	E2f7	e2f7	curated	
+canonical_tf_role	16942	mouse	Ebf1	ebf1	curated	
+canonical_tf_role	16943	mouse	Egr1	egr1	curated	
+canonical_tf_role	16944	mouse	Elf2	elf2	curated	
+canonical_tf_role	16945	mouse	Elk4	elk4	curated	
+canonical_tf_role	16946	mouse	Eomes	eomes	curated	
+canonical_tf_role	16947	mouse	Ets1	ets1	curated	
+canonical_tf_role	16948	mouse	Foxa2	foxa2	curated	
+canonical_tf_role	16949	mouse	Foxc1	foxc1	curated	
+canonical_tf_role	16950	mouse	Foxp3	foxp3	curated	
+canonical_tf_role	16951	mouse	Gata4	gata4	curated	
+canonical_tf_role	16952	mouse	Gli2	gli2	curated	
+canonical_tf_role	16953	mouse	Gli3	gli3	curated	
+canonical_tf_role	16954	mouse	Hif1a	hif1a	curated	
+canonical_tf_role	16955	mouse	Hoxa9	hoxa9	curated	
+canonical_tf_role	16956	mouse	Irf1	irf1	curated	
+canonical_tf_role	16957	mouse	Irf5	irf5	curated	
+canonical_tf_role	16958	mouse	Jarid2	jarid2	curated	
+canonical_tf_role	16959	mouse	Jun	jun	curated	
+canonical_tf_role	16960	mouse	Klf4	klf4	curated	
+canonical_tf_role	16961	mouse	Lhx4	lhx4	curated	
+canonical_tf_role	16962	mouse	Mafa	mafa	curated	
+canonical_tf_role	16963	mouse	Mixl1	mixl1	curated	
+canonical_tf_role	16964	mouse	Msx1	msx1	curated	
+canonical_tf_role	16965	mouse	Msx2	msx2	curated	
+canonical_tf_role	16966	mouse	Mtf1	mtf1	curated	
+canonical_tf_role	16967	mouse	Mxi1	mxi1	curated	
+canonical_tf_role	16968	mouse	Nfatc2	nfatc2	curated	
+canonical_tf_role	16969	mouse	Nfe2l2	nfe2l2	curated	
+canonical_tf_role	16970	mouse	Nfil3	nfil3	curated	
+canonical_tf_role	16971	mouse	Nr0b1	nr0b1	curated	
+canonical_tf_role	16972	mouse	Nr5a2	nr5a2	curated	
+canonical_tf_role	16923	mouse	Pax3	pax3	curated	
+canonical_tf_role	16926	mouse	Pou5f1	pou5f1	curated	
+canonical_tf_role	16973	mouse	Rel	rel	curated	
+canonical_tf_role	16929	mouse	Runx2	runx2	curated	
+canonical_tf_role	16974	mouse	Runx3	runx3	curated	
+canonical_tf_role	16975	mouse	Sf1	sf1	curated	
+canonical_tf_role	16976	mouse	Six3	six3	curated	
+canonical_tf_role	16977	mouse	Smad1	smad1	curated	
+canonical_tf_role	16978	mouse	Sox2	sox2	curated	
+canonical_tf_role	16979	mouse	Tbx1	tbx1	curated	
+canonical_tf_role	16980	mouse	Tbx2	tbx2	curated	
+canonical_tf_role	16981	mouse	Tbx3	tbx3	curated	
+canonical_tf_role	16982	mouse	Tbx6	tbx6	curated	
+canonical_tf_role	16983	mouse	Tcf3	tcf3	curated	
+canonical_tf_role	16984	mouse	Tead2	tead2	curated	
+canonical_tf_role	16985	mouse	Zic3	zic3	curated	
+canonical_tf_role	11197	unspecified	AR	ar	curated	
+canonical_tf_role	11199	unspecified	ATF2	atf2	curated	
+canonical_tf_role	11447	unspecified	CLOCK;BMAL1	clock;bmal1	derived	
+canonical_tf_role	11484	unspecified	CREB	creb	derived	
+canonical_tf_role	11488	unspecified	CREB/PAX6	creb/pax6	derived	
+canonical_tf_role	11494	unspecified	CREB;FOXO1	creb;foxo1	derived	
+canonical_tf_role	11495	unspecified	CREB;HIF1A	creb;hif1a	derived	
+canonical_tf_role	11506	unspecified	CTNNB1	ctnnb1	curated	
+canonical_tf_role	11787	unspecified	EGR1	egr1	curated	
+canonical_tf_role	11827	unspecified	Elk-1	elk-1	derived	
+canonical_tf_role	11791	unspecified	ELK1	elk1	curated	
+canonical_tf_role	11807	unspecified	ESR1	esr1	curated	
+canonical_tf_role	11808	unspecified	ESR2	esr2	derived	
+canonical_tf_role	11811	unspecified	ETV5	etv5	curated	
+canonical_tf_role	11928	unspecified	FOS	fos	curated	
+canonical_tf_role	12023	unspecified	GLI1	gli1	curated	
+canonical_tf_role	12198	unspecified	HIF1A	hif1a	curated	
+canonical_tf_role	12199	unspecified	HIF1A/Sp1	hif1a/sp1	derived	
+canonical_tf_role	12200	unspecified	HIF1A;SP1	hif1a;sp1	derived	
+canonical_tf_role	12204	unspecified	HOXD3	hoxd3	derived	
+canonical_tf_role	12281	unspecified	IRF3	irf3	curated	
+canonical_tf_role	12545	unspecified	JUN	jun	curated	
+canonical_tf_role	12548	unspecified	JunD	jund	derived	
+canonical_tf_role	12727	unspecified	MYC	myc	curated	
+canonical_tf_role	12768	unspecified	NF-kB	nf-kb	derived	
+canonical_tf_role	12767	unspecified	NF-YB	nf-yb	derived	
+canonical_tf_role	12781	unspecified	NFATc4	nfatc4	derived	
+canonical_tf_role	12802	unspecified	NR1H4	nr1h4	derived	
+canonical_tf_role	12805	unspecified	NR3C1	nr3c1	derived	
+canonical_tf_role	12806	unspecified	NR3C2	nr3c2	derived	
+canonical_tf_role	12915	unspecified	OCA-B/Oct-2	oca-b/oct-2	derived	
+canonical_tf_role	12953	unspecified	PEA3	pea3	derived	
+canonical_tf_role	13083	unspecified	RBPJ/CSL	rbpj/csl	derived	
+canonical_tf_role	13084	unspecified	RELA	rela	curated	
+canonical_tf_role	13085	unspecified	RELA/p65	rela/p65	derived	
+canonical_tf_role	13087	unspecified	RELB	relb	derived	
+canonical_tf_role	13230	unspecified	SMAD1/5/8	smad1/5/8	derived	
+canonical_tf_role	13231	unspecified	SMAD1/5/8;SMAD4	smad1/5/8;smad4	curated	
+canonical_tf_role	13232	unspecified	SMAD1/5;SMAD4	smad1/5;smad4	curated	
+canonical_tf_role	13236	unspecified	SMAD1;SMAD4	smad1;smad4	derived	
+canonical_tf_role	13237	unspecified	SMAD1;SMAD5	smad1;smad5	derived	
+canonical_tf_role	13242	unspecified	SMAD2	smad2	curated	
+canonical_tf_role	13243	unspecified	SMAD2-SMAD3	smad2-smad3	curated	
+canonical_tf_role	13244	unspecified	SMAD2/3	smad2/3	derived	
+canonical_tf_role	13245	unspecified	SMAD2/3;SMAD4	smad2/3;smad4	curated	
+canonical_tf_role	13246	unspecified	SMAD2/Sp1	smad2/sp1	derived	
+canonical_tf_role	13247	unspecified	SMAD2;SMAD3	smad2;smad3	curated	
+canonical_tf_role	13248	unspecified	SMAD3	smad3	curated	
+canonical_tf_role	13249	unspecified	SMAD3;SMAD4	smad3;smad4	derived	
+canonical_tf_role	13250	unspecified	SMAD4	smad4	curated	
+canonical_tf_role	13258	unspecified	SOX9	sox9	curated	
+canonical_tf_role	13259	unspecified	SP1	sp1	curated	
+canonical_tf_role	13275	unspecified	STAT1	stat1	curated	
+canonical_tf_role	13278	unspecified	STAT1;STAT3	stat1;stat3	derived	
+canonical_tf_role	13282	unspecified	STAT3	stat3	curated	
+canonical_tf_role	13286	unspecified	STAT4	stat4	derived	
+canonical_tf_role	13287	unspecified	STAT5	stat5	derived	
+canonical_tf_role	13288	unspecified	STAT5A;STAT5B	stat5a;stat5b	derived	
+canonical_tf_role	13290	unspecified	STAT6	stat6	curated	
+canonical_tf_role	13389	unspecified	TAZ	taz	derived	
+canonical_tf_role	13432	unspecified	THRA	thra	derived	
+canonical_tf_role	13602	unspecified	VDR	vdr	curated	
+module_22B_regulon	16799	human	AHR	ahr	curated	22B
+module_22B_regulon	11197	human	AR	ar	curated	22B
+module_22B_regulon	16800	human	ARNT	arnt	curated	22B
+module_22B_regulon	11199	human	ATF2	atf2	curated	22B
+module_22B_regulon	16728	human	ATF3	atf3	curated	22B
+module_22B_regulon	16801	human	ATF4	atf4	curated	22B
+module_22B_regulon	16802	human	BACH1	bach1	curated	22B
+module_22B_regulon	16803	human	BCL6	bcl6	curated	22B
+module_22B_regulon	16804	human	BMAL1	bmal1	curated	22B
+module_22B_regulon	16730	human	BRCA1	brca1	curated	22B
+module_22B_regulon	16805	human	BRCA2	brca2	curated	22B
+module_22B_regulon	16806	human	BTAF1	btaf1	curated	22B
+module_22B_regulon	16807	human	CDX2	cdx2	curated	22B
+module_22B_regulon	16808	human	CEBPA	cebpa	curated	22B
+module_22B_regulon	16809	human	CEBPD	cebpd	curated	22B
+module_22B_regulon	16740	human	CIITA	ciita	curated	22B
+module_22B_regulon	16810	human	CREB1	creb1	curated	22B
+module_22B_regulon	16811	human	CREM	crem	curated	22B
+module_22B_regulon	16812	human	CTCF	ctcf	curated	22B
+module_22B_regulon	11506	human	CTNNB1	ctnnb1	curated	22B
+module_22B_regulon	16813	human	CUX1	cux1	curated	22B
+module_22B_regulon	16814	human	DNMT1	dnmt1	curated	22B
+module_22B_regulon	16747	human	E2F1	e2f1	curated	22B
+module_22B_regulon	16815	human	E2F3	e2f3	curated	22B
+module_22B_regulon	16816	human	E2F4	e2f4	curated	22B
+module_22B_regulon	16817	human	E2F6	e2f6	curated	22B
+module_22B_regulon	16818	human	E2F8	e2f8	curated	22B
+module_22B_regulon	11787	human	EGR1	egr1	curated	22B
+module_22B_regulon	16819	human	ELF1	elf1	curated	22B
+module_22B_regulon	11791	human	ELK1	elk1	curated	22B
+module_22B_regulon	16820	human	ERG	erg	curated	22B
+module_22B_regulon	11807	human	ESR1	esr1	curated	22B
+module_22B_regulon	16821	human	ETS1	ets1	curated	22B
+module_22B_regulon	11811	human	ETV5	etv5	curated	22B
+module_22B_regulon	16822	human	EZH2	ezh2	curated	22B
+module_22B_regulon	11928	human	FOS	fos	curated	22B
+module_22B_regulon	16823	human	FOXM1	foxm1	curated	22B
+module_22B_regulon	16824	human	FOXP2	foxp2	curated	22B
+module_22B_regulon	16825	human	GATA1	gata1	curated	22B
+module_22B_regulon	16826	human	GATA3	gata3	curated	22B
+module_22B_regulon	16827	human	GATA4	gata4	curated	22B
+module_22B_regulon	16828	human	GFI1	gfi1	curated	22B
+module_22B_regulon	12023	human	GLI1	gli1	curated	22B
+module_22B_regulon	16829	human	HDAC2	hdac2	curated	22B
+module_22B_regulon	16830	human	HDAC3	hdac3	curated	22B
+module_22B_regulon	16831	human	HIC1	hic1	curated	22B
+module_22B_regulon	12198	human	HIF1A	hif1a	curated	22B
+module_22B_regulon	16832	human	HMGA1	hmga1	curated	22B
+module_22B_regulon	16833	human	HNF4A	hnf4a	curated	22B
+module_22B_regulon	16834	human	HOXA10	hoxa10	curated	22B
+module_22B_regulon	16835	human	HOXB7	hoxb7	curated	22B
+module_22B_regulon	16836	human	HSF1	hsf1	curated	22B
+module_22B_regulon	16837	human	ID4	id4	curated	22B
+module_22B_regulon	16838	human	IRF1	irf1	curated	22B
+module_22B_regulon	12281	human	IRF3	irf3	curated	22B
+module_22B_regulon	16763	human	IRF7	irf7	curated	22B
+module_22B_regulon	16839	human	JDP2	jdp2	curated	22B
+module_22B_regulon	12545	human	JUN	jun	curated	22B
+module_22B_regulon	16840	human	KLF1	klf1	curated	22B
+module_22B_regulon	16841	human	KLF11	klf11	curated	22B
+module_22B_regulon	16842	human	KLF13	klf13	curated	22B
+module_22B_regulon	16843	human	KLF4	klf4	curated	22B
+module_22B_regulon	16844	human	KLF5	klf5	curated	22B
+module_22B_regulon	16845	human	KLF6	klf6	curated	22B
+module_22B_regulon	16846	human	KMT2A	kmt2a	curated	22B
+module_22B_regulon	16847	human	LHX3	lhx3	curated	22B
+module_22B_regulon	16848	human	LMO4	lmo4	curated	22B
+module_22B_regulon	16849	human	LMX1B	lmx1b	curated	22B
+module_22B_regulon	16850	human	MBD2	mbd2	curated	22B
+module_22B_regulon	16851	human	MECP2	mecp2	curated	22B
+module_22B_regulon	16852	human	MEF2A	mef2a	curated	22B
+module_22B_regulon	16853	human	MEF2C	mef2c	curated	22B
+module_22B_regulon	16854	human	MEF2D	mef2d	curated	22B
+module_22B_regulon	16769	human	MEIS1	meis1	curated	22B
+module_22B_regulon	16771	human	MITF	mitf	curated	22B
+module_22B_regulon	16855	human	MKL1	mkl1	curated	22B
+module_22B_regulon	16856	human	MYB	myb	curated	22B
+module_22B_regulon	12727	human	MYC	myc	curated	22B
+module_22B_regulon	16857	human	NEUROG3	neurog3	curated	22B
+module_22B_regulon	16858	human	NFIC	nfic	curated	22B
+module_22B_regulon	13927	human	NFKB1	nfkb1	curated	22B
+module_22B_regulon	16859	human	NFKB2	nfkb2	curated	22B
+module_22B_regulon	16860	human	NME2	nme2	curated	22B
+module_22B_regulon	16861	human	NR1H2	nr1h2	curated	22B
+module_22B_regulon	16862	human	NR1I2	nr1i2	curated	22B
+module_22B_regulon	16863	human	NR1I3	nr1i3	curated	22B
+module_22B_regulon	16864	human	NR2E1	nr2e1	curated	22B
+module_22B_regulon	16865	human	NR5A1	nr5a1	curated	22B
+module_22B_regulon	16866	human	NRF1	nrf1	curated	22B
+module_22B_regulon	16867	human	PAX2	pax2	curated	22B
+module_22B_regulon	16868	human	PAX5	pax5	curated	22B
+module_22B_regulon	16869	human	PAX6	pax6	curated	22B
+module_22B_regulon	16870	human	PAX8	pax8	curated	22B
+module_22B_regulon	16781	human	PGR	pgr	curated	22B
+module_22B_regulon	16871	human	PHOX2B	phox2b	curated	22B
+module_22B_regulon	16872	human	PIAS1	pias1	curated	22B
+module_22B_regulon	16873	human	PLAG1	plag1	curated	22B
+module_22B_regulon	16874	human	PLAGL2	plagl2	curated	22B
+module_22B_regulon	16875	human	PML	pml	curated	22B
+module_22B_regulon	16876	human	POU1F1	pou1f1	curated	22B
+module_22B_regulon	16782	human	PPARG	pparg	curated	22B
+module_22B_regulon	16877	human	PRDM1	prdm1	curated	22B
+module_22B_regulon	16787	human	RB1	rb1	curated	22B
+module_22B_regulon	16878	human	RB1CC1	rb1cc1	curated	22B
+module_22B_regulon	13084	human	RELA	rela	curated	22B
+module_22B_regulon	16879	human	REST	rest	curated	22B
+module_22B_regulon	16880	human	RFX1	rfx1	curated	22B
+module_22B_regulon	16881	human	RFX5	rfx5	curated	22B
+module_22B_regulon	16882	human	RUNX1	runx1	curated	22B
+module_22B_regulon	16883	human	SALL4	sall4	curated	22B
+module_22B_regulon	16789	human	SIRT1	sirt1	curated	22B
+module_22B_regulon	13248	human	SMAD3	smad3	curated	22B
+module_22B_regulon	13250	human	SMAD4	smad4	curated	22B
+module_22B_regulon	16884	human	SNAI1	snai1	curated	22B
+module_22B_regulon	16885	human	SNAI2	snai2	curated	22B
+module_22B_regulon	16886	human	SOX10	sox10	curated	22B
+module_22B_regulon	13258	human	SOX9	sox9	curated	22B
+module_22B_regulon	13259	human	SP1	sp1	curated	22B
+module_22B_regulon	16887	human	SP4	sp4	curated	22B
+module_22B_regulon	16888	human	SPI1	spi1	curated	22B
+module_22B_regulon	16889	human	SREBF1	srebf1	curated	22B
+module_22B_regulon	16890	human	SREBF2	srebf2	curated	22B
+module_22B_regulon	16791	human	SRF	srf	curated	22B
+module_22B_regulon	16891	human	SRY	sry	curated	22B
+module_22B_regulon	13275	human	STAT1	stat1	curated	22B
+module_22B_regulon	13282	human	STAT3	stat3	curated	22B
+module_22B_regulon	16892	human	STAT5A	stat5a	curated	22B
+module_22B_regulon	13290	human	STAT6	stat6	curated	22B
+module_22B_regulon	16893	human	SUZ12	suz12	curated	22B
+module_22B_regulon	16794	human	TBP	tbp	curated	22B
+module_22B_regulon	16894	human	TBX21	tbx21	curated	22B
+module_22B_regulon	16895	human	TBX5	tbx5	curated	22B
+module_22B_regulon	16896	human	TCF4	tcf4	curated	22B
+module_22B_regulon	16897	human	TFAP2A	tfap2a	curated	22B
+module_22B_regulon	16898	human	TFDP1	tfdp1	curated	22B
+module_22B_regulon	16899	human	TLX1	tlx1	curated	22B
+module_22B_regulon	16900	human	TP53	tp53	curated	22B
+module_22B_regulon	16901	human	TWIST1	twist1	curated	22B
+module_22B_regulon	16902	human	USF1	usf1	curated	22B
+module_22B_regulon	13602	human	VDR	vdr	curated	22B
+module_22B_regulon	16903	human	VHL	vhl	curated	22B
+module_22B_regulon	16904	human	YY1	yy1	curated	22B
+module_22B_regulon	16905	human	ZEB1	zeb1	curated	22B
+module_22B_regulon	16906	human	ZEB2	zeb2	curated	22B
+module_22B_regulon	16936	mouse	Apc	apc	curated	22B
+module_22B_regulon	16937	mouse	Arid3a	arid3a	curated	22B
+module_22B_regulon	16938	mouse	Bach2	bach2	curated	22B
+module_22B_regulon	16939	mouse	Clock	clock	curated	22B
+module_22B_regulon	16940	mouse	Dlx5	dlx5	curated	22B
+module_22B_regulon	16941	mouse	E2f7	e2f7	curated	22B
+module_22B_regulon	16942	mouse	Ebf1	ebf1	curated	22B
+module_22B_regulon	16943	mouse	Egr1	egr1	curated	22B
+module_22B_regulon	16944	mouse	Elf2	elf2	curated	22B
+module_22B_regulon	16945	mouse	Elk4	elk4	curated	22B
+module_22B_regulon	16946	mouse	Eomes	eomes	curated	22B
+module_22B_regulon	16947	mouse	Ets1	ets1	curated	22B
+module_22B_regulon	16948	mouse	Foxa2	foxa2	curated	22B
+module_22B_regulon	16949	mouse	Foxc1	foxc1	curated	22B
+module_22B_regulon	16950	mouse	Foxp3	foxp3	curated	22B
+module_22B_regulon	16951	mouse	Gata4	gata4	curated	22B
+module_22B_regulon	16952	mouse	Gli2	gli2	curated	22B
+module_22B_regulon	16953	mouse	Gli3	gli3	curated	22B
+module_22B_regulon	16954	mouse	Hif1a	hif1a	curated	22B
+module_22B_regulon	16955	mouse	Hoxa9	hoxa9	curated	22B
+module_22B_regulon	16956	mouse	Irf1	irf1	curated	22B
+module_22B_regulon	16957	mouse	Irf5	irf5	curated	22B
+module_22B_regulon	16958	mouse	Jarid2	jarid2	curated	22B
+module_22B_regulon	16959	mouse	Jun	jun	curated	22B
+module_22B_regulon	16960	mouse	Klf4	klf4	curated	22B
+module_22B_regulon	16961	mouse	Lhx4	lhx4	curated	22B
+module_22B_regulon	16962	mouse	Mafa	mafa	curated	22B
+module_22B_regulon	16963	mouse	Mixl1	mixl1	curated	22B
+module_22B_regulon	16964	mouse	Msx1	msx1	curated	22B
+module_22B_regulon	16965	mouse	Msx2	msx2	curated	22B
+module_22B_regulon	16966	mouse	Mtf1	mtf1	curated	22B
+module_22B_regulon	16967	mouse	Mxi1	mxi1	curated	22B
+module_22B_regulon	16968	mouse	Nfatc2	nfatc2	curated	22B
+module_22B_regulon	16969	mouse	Nfe2l2	nfe2l2	curated	22B
+module_22B_regulon	16970	mouse	Nfil3	nfil3	curated	22B
+module_22B_regulon	16971	mouse	Nr0b1	nr0b1	curated	22B
+module_22B_regulon	16972	mouse	Nr5a2	nr5a2	curated	22B
+module_22B_regulon	16923	mouse	Pax3	pax3	curated	22B
+module_22B_regulon	16926	mouse	Pou5f1	pou5f1	curated	22B
+module_22B_regulon	16973	mouse	Rel	rel	curated	22B
+module_22B_regulon	16929	mouse	Runx2	runx2	curated	22B
+module_22B_regulon	16974	mouse	Runx3	runx3	curated	22B
+module_22B_regulon	16975	mouse	Sf1	sf1	curated	22B
+module_22B_regulon	16976	mouse	Six3	six3	curated	22B
+module_22B_regulon	16977	mouse	Smad1	smad1	curated	22B
+module_22B_regulon	13242	mouse	SMAD2	smad2	curated	22B
+module_22B_regulon	16978	mouse	Sox2	sox2	curated	22B
+module_22B_regulon	16979	mouse	Tbx1	tbx1	curated	22B
+module_22B_regulon	16980	mouse	Tbx2	tbx2	curated	22B
+module_22B_regulon	16981	mouse	Tbx3	tbx3	curated	22B
+module_22B_regulon	16982	mouse	Tbx6	tbx6	curated	22B
+module_22B_regulon	16983	mouse	Tcf3	tcf3	curated	22B
+module_22B_regulon	16984	mouse	Tead2	tead2	curated	22B
+module_22B_regulon	16985	mouse	Zic3	zic3	curated	22B

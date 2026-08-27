@@ -1,0 +1,86 @@
+{
+  "boundary_audit_rows": 0,
+  "canonical_database_writes": false,
+  "decision_counts": {
+    "hold_direction_conflict": 2,
+    "promote_to_22B": 20
+  },
+  "decision_rows": 22,
+  "errors": [],
+  "frozen_release_modified": false,
+  "held_rows": 2,
+  "module_specific_review_rows": 0,
+  "policy": {
+    "cross_module_evidence": "retained in module_specific_review_queue.tsv; no citation-overlap-only promotion",
+    "independent_corroboration": "required for promoted rows with actual cross-module relevance",
+    "public_tf_default_module": "22B"
+  },
+  "promoted_rows": 20,
+  "promotion_module_counts": {
+    "22B": 20
+  },
+  "source_link_rows": 105,
+  "status": "pass",
+  "tf_species_coverage": {
+    "AR": [
+      "human"
+    ],
+    "CEBPA": [
+      "human"
+    ],
+    "CREB1": [
+      "human"
+    ],
+    "CTCF": [
+      "human"
+    ],
+    "E2F1": [
+      "human"
+    ],
+    "ELK1": [
+      "human"
+    ],
+    "ESR1": [
+      "human"
+    ],
+    "HNF4A": [
+      "human"
+    ],
+    "MITF": [
+      "human"
+    ],
+    "NFKB1": [
+      "human"
+    ],
+    "RELA": [
+      "human"
+    ],
+    "RELB": [
+      "human"
+    ],
+    "SMAD3": [
+      "human"
+    ],
+    "SMAD4": [
+      "human"
+    ],
+    "SP3": [
+      "human"
+    ],
+    "SPI1": [
+      "human"
+    ],
+    "STAT3": [
+      "human"
+    ],
+    "STAT5A": [
+      "human"
+    ],
+    "TFAP2A": [
+      "human"
+    ],
+    "VDR": [
+      "human"
+    ]
+  }
+}

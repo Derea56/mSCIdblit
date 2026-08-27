@@ -1,0 +1,19 @@
+{
+  "batch_id": "public_tf_evidence_batch_001",
+  "source_set_ranks_reviewed": [16, 17, 18, 19, 20],
+  "pair_rows_reviewed": 20,
+  "unique_regulators_reviewed": 5,
+  "exact_pair_support_rows": 0,
+  "target_cell_presence_rows_supported": 0,
+  "binding_or_association_rows_supported": 0,
+  "downstream_expression_or_perturbation_rows_supported": 0,
+  "upstream_relay_rows_supported": 0,
+  "database_membership_retained_as_search_lead_only": 20,
+  "exportable_pair_rows": 0,
+  "canonical_writes_performed": false,
+  "module22b_promotions_performed": false,
+  "status": "staging_only",
+  "interpretation": "No qualifying exact regulator-target-species pair evidence was located in the bounded PubMed/PMC search. Regulator-level literature was kept separate and was not used to promote any pair.",
+  "provenance_preserved": true,
+  "output": "public_tf_evidence_review_batch001_ranks16_20.tsv"
+}

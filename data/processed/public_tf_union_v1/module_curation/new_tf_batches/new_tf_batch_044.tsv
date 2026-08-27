@@ -1,0 +1,21 @@
+species	tf_symbol	tf_key	source_labels	source_record_count	records_with_reference	unique_reference_pmids	source_registries	mapping_decision	frozen_entity_match_status	frozen_entity_ids	explicit_tf_role_present	default_module	existing_module_overlap_flags	both_species_present	priority_rank	review_status	notes
+human	HDAC10	hdac10	HDAC10	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	HIF3A	hif3a	HIF3A	2	2	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	HINFP	hinfp	HINFP	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	HIRA	hira	HIRA	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	HMG20B	hmg20b	HMG20B	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Hmgn3	hmgn3	Hmgn3	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Hnrnpk	hnrnpk	Hnrnpk	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	HNRNPR	hnrnpr	HNRNPR	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Hoxa3	hoxa3	Hoxa3	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Hoxb3	hoxb3	Hoxb3	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Hoxb5	hoxb5	Hoxb5	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Hoxb8	hoxb8	Hoxb8	3	3	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	HOXC10	hoxc10	HOXC10	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	HOXC9	hoxc9	HOXC9	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	HOXD1	hoxd1	HOXD1	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+human	HOXD9	hoxd9	HOXD9	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Hspb1	hspb1	Hspb1	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Ifi204	ifi204	Ifi204	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Ifih1	ifih1	Ifih1	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	
+mouse	Il17a	il17a	Il17a	2	2	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	1	new_candidate	

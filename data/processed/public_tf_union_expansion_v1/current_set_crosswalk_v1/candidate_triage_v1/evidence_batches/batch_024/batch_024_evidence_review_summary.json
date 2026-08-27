@@ -1,0 +1,63 @@
+{
+  "batch_id": "public_tf_evidence_batch_024",
+  "canonical_writes_performed": false,
+  "exact_pair_status_counts": {
+    "binding_profile_only_not_promotable": 45,
+    "contextual_ortholog_complex_near_match_not_promotable": 1,
+    "contextual_ortholog_near_match_not_promotable": 1,
+    "database_membership_only_not_promotable": 46,
+    "expression_only_exact_pair_not_promotable": 2,
+    "indirect_coexpression_without_regulator_causality_not_promotable": 1,
+    "ortholog_expression_near_match_not_promotable": 1,
+    "paralog_subunit_identity_trap_not_promotable": 1,
+    "reverse_direction_near_match_not_promotable": 1,
+    "reverse_pathway_association_not_promotable": 1
+  },
+  "exportable_pair_rows": 0,
+  "limitations": [
+    "TFLink/profile resources are search leads, not causal regulation.",
+    "Exact-pair negatives are bounded search results, not global absence.",
+    "AUTS2-to-CCND1 and TET1-to-IL5 are expression-only; AFF4-to-CDH1 and SETD7-to-CCND1 are species/complex near-matches; CHAF1B-to-ETV5 is reverse-direction evidence.",
+    "No canonical or Module 22B write was performed."
+  ],
+  "module22b_promotions_performed": false,
+  "noncanonical_exact_candidate_rows": 0,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_024/public_tf_evidence_review_batch024_pairs.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_024/public_tf_evidence_review_batch024_regulator_register.tsv"
+  ],
+  "pair_rows_reviewed": 100,
+  "provenance_preserved": true,
+  "regulator_register_rows": 24,
+  "source_set_ranks_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "status": "staging_only",
+  "strict_tf_promotion_candidate_rows": 0,
+  "unique_provenance_aware_pairs": 100,
+  "unique_regulators_reviewed": 24
+}

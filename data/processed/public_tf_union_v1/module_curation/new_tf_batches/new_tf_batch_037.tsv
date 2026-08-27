@@ -1,0 +1,21 @@
+species	tf_symbol	tf_key	source_labels	source_record_count	records_with_reference	unique_reference_pmids	source_registries	mapping_decision	frozen_entity_match_status	frozen_entity_ids	explicit_tf_role_present	default_module	existing_module_overlap_flags	both_species_present	priority_rank	review_status	notes
+human	FOXK2	foxk2	FOXK2	2	2	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+mouse	Gcgr	gcgr	Gcgr	2	2	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+mouse	Gtf2ird1	gtf2ird1	Gtf2ird1	6	6	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+mouse	Hcls1	hcls1	Hcls1	2	2	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+mouse	Hes7	hes7	Hes7	2	2	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+human	HMGN1	hmgn1	HMGN1	3	3	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+human	HOPX	hopx	HOPX	3	3	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+mouse	Hoxb2	hoxb2	Hoxb2	2	2	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+mouse	Ikzf2	ikzf2	Ikzf2	2	2	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+mouse	Ikzf3	ikzf3	Ikzf3	2	2	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+human	KAT6A	kat6a	KAT6A	1	1	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+human	KDM2A	kdm2a	KDM2A	3	3	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+human	L3MBTL1	l3mbtl1	L3MBTL1	2	2	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+mouse	Lbx1	lbx1	Lbx1	3	3	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+human	LRRFIP1	lrrfip1	LRRFIP1	2	2	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+human	MAML1	maml1	MAML1	3	3	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+mouse	Mkx	mkx	Mkx	3	3	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+mouse	Mtf2	mtf2	Mtf2	2	2	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+human	NELFB	nelfb	NELFB	2	2	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	
+mouse	Neurod6	neurod6	Neurod6	2	2	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	2	new_candidate	

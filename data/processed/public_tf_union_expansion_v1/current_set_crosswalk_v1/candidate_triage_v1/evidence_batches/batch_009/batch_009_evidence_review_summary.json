@@ -1,0 +1,65 @@
+{
+  "batch_id": "public_tf_evidence_batch_009",
+  "binding_dataset_only_not_promotable_rows": 94,
+  "bounded_negative_rows": 3,
+  "canonical_writes_performed": false,
+  "exact_pair_status_counts": {
+    "binding_dataset_only_not_promotable": 94,
+    "functional_direct_binding_promotion_candidate": 1,
+    "no_exact_pair_support_found_in_bounded_search": 3,
+    "perturbation_signal_directness_unproven_not_promotable": 1,
+    "readthrough_near_match_not_promotable": 1
+  },
+  "exact_pair_support_rows": 1,
+  "exportable_pair_rows": 0,
+  "limitations": [
+    "GTRD/TFLink/MSigDB membership is binding or database evidence, not causal regulation.",
+    "No-exact-support and bounded negatives are restricted to the searches recorded in this batch and are not global absence claims.",
+    "The Ovol2-Cdh2 evidence is strong but from mouse mammary models; SCI target-cell context is not established, so it remains staging-only.",
+    "The ZNF507-IGF2R expression change has unresolved directness and is not promotion-ready."
+  ],
+  "module22b_promotions_performed": false,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_009/public_tf_evidence_review_batch009_pairs.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_009/public_tf_evidence_review_batch009_regulator_register.tsv"
+  ],
+  "pair_rows_reviewed": 100,
+  "partial_or_near_match_rows": 2,
+  "promotion_candidate_rows": 1,
+  "provenance_preserved": true,
+  "regulator_register_rows": 25,
+  "regulator_support_kind_counts": {
+    "authoritative_binding_dataset_only": 7,
+    "primary_literature_regulator_level": 18
+  },
+  "source_set_ranks_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "status": "staging_only",
+  "unique_provenance_aware_pairs": 100,
+  "unique_regulators_reviewed": 25
+}

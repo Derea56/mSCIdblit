@@ -1,0 +1,59 @@
+{
+  "batch_id": "public_tf_evidence_batch_022",
+  "canonical_writes_performed": false,
+  "exact_pair_status_counts": {
+    "binding_profile_only_not_promotable": 14,
+    "contextual_ortholog_near_match_not_promotable": 1,
+    "database_membership_only_not_promotable": 82,
+    "genetic_cooccurrence_only_not_promotable": 1,
+    "perturbation_association_without_direct_binding_not_promotable": 1,
+    "protein_interaction_only_not_promotable": 1
+  },
+  "exportable_pair_rows": 0,
+  "limitations": [
+    "TFLink/profile resources are search leads, not causal regulation.",
+    "Exact-pair negatives are bounded search results, not global absence.",
+    "KDM5C-to-Abca1 is perturbation-only without direct occupancy; KDM4A-to-Adam10 and SIRT6-to-Adam12 are cross-species/contextual leads; CHD2 interaction/profile evidence is not regulation.",
+    "No canonical or Module 22B write was performed."
+  ],
+  "module22b_promotions_performed": false,
+  "noncanonical_exact_candidate_rows": 0,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_022/public_tf_evidence_review_batch022_pairs.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_022/public_tf_evidence_review_batch022_regulator_register.tsv"
+  ],
+  "pair_rows_reviewed": 100,
+  "provenance_preserved": true,
+  "regulator_register_rows": 24,
+  "source_set_ranks_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "status": "staging_only",
+  "strict_tf_promotion_candidate_rows": 0,
+  "unique_provenance_aware_pairs": 100,
+  "unique_regulators_reviewed": 24
+}

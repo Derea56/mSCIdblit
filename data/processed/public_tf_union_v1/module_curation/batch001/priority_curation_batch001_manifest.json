@@ -1,0 +1,27 @@
+{
+  "batch": "public_tf_union_priority_batch001",
+  "module_assignment": "22B",
+  "decision_rows": 49,
+  "promoted_to_22B_staging": 28,
+  "held": 21,
+  "source_link_rows": 147,
+  "promotions_with_cross_module_overlap_review": 4,
+  "promotions_to_modules_other_than_22B": 0,
+  "cross_module_holds": 7,
+  "canonical_database_writes": false,
+  "frozen_release_modified": false,
+  "policy": {
+    "public_tf_default_module": "22B",
+    "shared_paper_requires_pair_scope": true,
+    "independent_corroboration_used_for_shared_groups": [
+      "TP53",
+      "JUN/FOS",
+      "STAT1",
+      "HIF1A"
+    ],
+    "retracted_citations_excluded": [
+      "21398698"
+    ],
+    "receptor_ecm_complement_boundary": "TF-target evidence stays in 22B; no 20B/21B/23B/24B promotion by citation overlap alone"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "canonical_write_performed": false,
+  "input_new_inventory_unique_tf_keys": 2051,
+  "module_evidence_promotions_performed": false,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/tf_expansion_triage.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/exclude_from_automatic_module_promotion_profile_only.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/exclude_unresolved_identifier.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/manual_identity_review.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/prioritize_target_evidence_search.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/promote_identity_staging.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/triage_validation.json"
+  ],
+  "policy": {
+    "human_mouse": "species-specific evidence remains separate; collapse is inventory-only",
+    "identity_promotion": "only both Lambert_HumanTFs and AnimalTFDB3; identity layer only",
+    "jaspar_only": "excluded from automatic Module 22B promotion, not deleted from inventory",
+    "tflink": "target-search lead only; GMT is not pair-level evidence",
+    "unresolved_protein_accession": "excluded from gene-symbol review queue pending mapping"
+  },
+  "status": "staging_triage_only",
+  "triage_bucket_counts": {
+    "exclude_from_automatic_module_promotion_profile_only": 4,
+    "exclude_unresolved_identifier": 16,
+    "manual_identity_review": 684,
+    "prioritize_target_evidence_search": 478,
+    "promote_identity_staging": 869
+  },
+  "triage_rows": 2051,
+  "validation_checks": {
+    "bucket_total_mismatch": 0,
+    "duplicate_triage_keys": 0,
+    "input_keys_missing_from_triage": 0,
+    "triage_keys_not_in_input": 0,
+    "triage_rows_without_source_registries": 0,
+    "triage_rows_without_source_versions": 0,
+    "unexpected_module_evidence_promotions": 0
+  }
+}

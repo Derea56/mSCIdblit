@@ -1,0 +1,26 @@
+{
+  "canonical_writes_performed": false,
+  "downstream_activation_status": "not_assessed_for_all_rows",
+  "inputs": {
+    "mechanism_nodes": "data/processed/mechanism_graph_module20_24_v2026_08_25/mechanism_nodes.tsv",
+    "role_triage": "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/public_tf_role_triage.tsv",
+    "tflink_summary": "data/processed/public_tf_union_expansion_v1/tflink_tf_summary.tsv"
+  },
+  "module22b_promotions_performed": false,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_005/public_tf_evidence_collection_batch_005.tsv"
+  ],
+  "pair_search_rows": 100,
+  "role_category_counts": {
+    "catalog_concordant_tf_candidate": 25
+  },
+  "selection_policy": "canonical and dual-role candidates first, then noncanonical/provisional candidates; source sets ranked by overlap with current mechanism gene symbols and reported target count",
+  "source_sets_available_after_filters": 969,
+  "source_sets_selected": 25,
+  "status": "staging_only",
+  "target_cell_presence_status": "not_assessed_for_all_rows",
+  "target_graph_overlap_rows": 100,
+  "unique_regulators": 25,
+  "unique_source_records": 25,
+  "upstream_relay_status": "not_assessed_for_all_rows"
+}

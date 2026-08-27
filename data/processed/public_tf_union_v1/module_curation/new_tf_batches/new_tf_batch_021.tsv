@@ -1,0 +1,41 @@
+species	tf_symbol	tf_key	source_labels	source_record_count	records_with_reference	unique_reference_pmids	source_registries	mapping_decision	frozen_entity_match_status	frozen_entity_ids	explicit_tf_role_present	default_module	existing_module_overlap_flags	both_species_present	priority_rank	review_status	notes
+human	RFXAP	rfxap	RFXAP	15	15	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1005	new_candidate	
+mouse	Shox2	shox2	Shox2	4	4	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1005	new_candidate	
+mouse	Six2	six2	Six2	6	5	4	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1005	new_candidate	
+mouse	Sox8	sox8	Sox8	5	4	4	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1005	new_candidate	
+mouse	Spic	spic	Spic	5	5	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1005	new_candidate	
+mouse	Suz12	suz12	Suz12	4	4	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1005	new_candidate	
+mouse	Tead2	tead2	Tead2	5	3	4	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1005	new_candidate	
+mouse	Tead4	tead4	Tead4	4	4	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1005	new_candidate	
+mouse	Vezf1	vezf1	Vezf1	5	5	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1005	new_candidate	
+human	XPC	xpc	XPC	4	4	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1005	new_candidate	
+human	ZIC2	zic2	ZIC2	4	4	4	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1005	new_candidate	
+mouse	Zic2	zic2	Zic2	5	5	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1005	new_candidate	
+mouse	Barx2	barx2	Barx2	4	4	3	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1004	new_candidate	
+human	CHD8	chd8	CHD8	5	5	3	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1004	new_candidate	
+human	DMAP1	dmap1	DMAP1	4	4	3	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1004	new_candidate	
+human	ELF2	elf2	ELF2	3	3	4	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1004	new_candidate	
+mouse	Elf2	elf2	Elf2	2	2	4	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1004	new_candidate	
+human	ERF	erf	ERF	4	4	3	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1004	new_candidate	
+mouse	Esrrg	esrrg	Esrrg	4	4	3	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1004	new_candidate	
+human	FOXA3	foxa3	FOXA3	5	5	3	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1004	new_candidate	
+mouse	Foxa3	foxa3	Foxa3	6	6	3	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1004	new_candidate	
+human	FOXQ1	foxq1	FOXQ1	6	6	3	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1004	new_candidate	
+human	FUS	fus	FUS	4	4	3	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1004	new_candidate	
+human	SUZ12	suz12	SUZ12	4	4	3	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1004	new_candidate	
+mouse	Chd8	chd8	Chd8	4	4	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1003	new_candidate	
+mouse	Rfxap	rfxap	Rfxap	8	8	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1003	new_candidate	
+mouse	Foxq1	foxq1	Foxq1	2	2	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1002	new_candidate	
+mouse	Fus	fus	Fus	2	2	2	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1002	new_candidate	
+human	BARX2	barx2	BARX2	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1001	new_candidate	
+mouse	Dmap1	dmap1	Dmap1	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1001	new_candidate	
+mouse	Erf	erf	Erf	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1001	new_candidate	
+human	ESRRG	esrrg	ESRRG	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1001	new_candidate	
+human	SHOX2	shox2	SHOX2	2	2	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1001	new_candidate	
+human	SPIC	spic	SPIC	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1001	new_candidate	
+human	TEAD4	tead4	TEAD4	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1001	new_candidate	
+human	VEZF1	vezf1	VEZF1	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1001	new_candidate	
+mouse	Xpc	xpc	Xpc	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1001	new_candidate	
+human	SIX2	six2	SIX2	1	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		true	1000	new_candidate	no PMID parsed from imported source records
+human	SOX8	sox8	SOX8	1	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		true	1000	new_candidate	no PMID parsed from imported source records
+human	TEAD2	tead2	TEAD2	2	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		true	1000	new_candidate	no PMID parsed from imported source records

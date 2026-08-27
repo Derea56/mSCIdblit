@@ -1,0 +1,70 @@
+{
+  "checks": {
+    "all_member_rows_export_gated": true,
+    "all_record_rows_export_gated": true,
+    "artifact_row_counts": {
+      "frozen_entity_mapping_rows": 16894,
+      "identity_mapping_rows": 16894,
+      "materialized_source_regulon_members": 44965,
+      "priority_tf_verification_rows": 117,
+      "source_records": 45795,
+      "source_references": 240805,
+      "source_registry_rows": 4,
+      "source_regulons": 2317
+    },
+    "audit_acceptance_checks": {
+      "all_external_rows_export_gated": true,
+      "frozen_core_counts_match_release_metadata": true,
+      "frozen_derived_tables_nonempty": true,
+      "priority_tf_rows_present": true,
+      "zero_referential_integrity_failures": true
+    },
+    "external_record_keys_unique": true,
+    "frozen_bundle_sha256_matches_tag": {
+      "data/processed/mechanism_bundle_module20_24_db_v1_0_0/bundle_metadata.json": {
+        "current_sha256": "9360e6b0478d967e76019561e6b0cf816b0c56f45f4d7e5617cf4bb4cfc1fd5e",
+        "match": true,
+        "tagged_sha256": "9360e6b0478d967e76019561e6b0cf816b0c56f45f4d7e5617cf4bb4cfc1fd5e"
+      },
+      "data/processed/mechanism_bundle_module20_24_db_v1_0_0/mechanism_edge_sources.tsv": {
+        "current_sha256": "208c47cac823c2e6169c039e58f6183334c1f95cc46db350dfa03ca7e5602f53",
+        "match": true,
+        "tagged_sha256": "208c47cac823c2e6169c039e58f6183334c1f95cc46db350dfa03ca7e5602f53"
+      },
+      "data/processed/mechanism_bundle_module20_24_db_v1_0_0/mechanism_edges.tsv": {
+        "current_sha256": "a4b89b890d5f05b53a3f6fbc5bc68deb3259e22c2cb6fb6ab095df281db1c03e",
+        "match": true,
+        "tagged_sha256": "a4b89b890d5f05b53a3f6fbc5bc68deb3259e22c2cb6fb6ab095df281db1c03e"
+      },
+      "data/processed/mechanism_bundle_module20_24_db_v1_0_0/mechanism_node_roles.tsv": {
+        "current_sha256": "1d0ef5ce08fd3fafa4aee94ad540d9be2e50acb19db3ad4f6360c2956f50e339",
+        "match": true,
+        "tagged_sha256": "1d0ef5ce08fd3fafa4aee94ad540d9be2e50acb19db3ad4f6360c2956f50e339"
+      },
+      "data/processed/mechanism_bundle_module20_24_db_v1_0_0/mechanism_nodes.tsv": {
+        "current_sha256": "67772bac7c658d3e39305e7c3dae5a12f81e62ff218c5c38a5d8e134f56fcf1a",
+        "match": true,
+        "tagged_sha256": "67772bac7c658d3e39305e7c3dae5a12f81e62ff218c5c38a5d8e134f56fcf1a"
+      }
+    },
+    "frozen_mapping_rows_have_resolution_status": true,
+    "frozen_release_metadata": {
+      "frozen_commit": "eeb9960",
+      "graph_version": "1.0.0",
+      "integration_status": "additive_discovery_layer"
+    },
+    "frozen_release_paths_unchanged": {
+      "VERSION": true,
+      "data/processed/mechanism_bundle_module20_24_db_v1_0_0": true,
+      "docs/RELEASE_v1.0.0.md": true
+    },
+    "snapshot_hashes_match_registry": {
+      "OmniPath_DoRothEA:human": true,
+      "OmniPath_DoRothEA:mouse": true,
+      "TRRUST:human": true,
+      "TRRUST:mouse": true
+    }
+  },
+  "errors": [],
+  "status": "pass"
+}

@@ -1,0 +1,29 @@
+{
+  "checks": {
+    "crosswalk_rows_marked_promoted": 0,
+    "crosswalk_rows_missing_from_input": 0,
+    "crosswalk_rows_not_in_input": 0,
+    "crosswalk_rows_without_sources": 0,
+    "duplicate_cross_species_keys": 0,
+    "duplicate_crosswalk_keys": 0
+  },
+  "counts": {
+    "canonical_tf_role_any_species_rows": 571,
+    "canonical_tf_role_exact_species_rows": 174,
+    "cross_species_collapsed_rows": 3184,
+    "cross_species_existing_or_canonical_unique_tf_keys": 1133,
+    "cross_species_new_candidate_unique_tf_keys": 2051,
+    "cross_species_unique_tf_keys": 3184,
+    "crosswalk_rows": 5435,
+    "current_set_rows": 672,
+    "existing_or_canonical_rows": 1910,
+    "existing_public_pair_union_rows": 1734,
+    "human_crosswalk_rows": 2381,
+    "module_22B_exact_species_rows": 198,
+    "mouse_crosswalk_rows": 2171,
+    "new_candidate_rows": 3525,
+    "new_candidate_unique_tf_keys": 2548,
+    "vertebrate_crosswalk_rows": 883
+  },
+  "status": "pass"
+}

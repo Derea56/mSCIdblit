@@ -1,0 +1,81 @@
+{
+  "canonical_database_writes": false,
+  "decision_counts": {
+    "hold_direction_conflict": 2,
+    "promote_to_22B": 20
+  },
+  "default_module": "22B",
+  "errors": [],
+  "frozen_release_modified": false,
+  "lane_counts": {
+    "lane_A_rela_nfkb1_stat3_relb.tsv": 4,
+    "lane_B_esr1_vdr_ar.tsv": 4,
+    "lane_C_cebpa_e2f1_hnf4a_ctcf.tsv": 4,
+    "lane_D_smad3_smad4_stat5a.tsv": 4,
+    "lane_E_elk1_tfap2a_mitf_spi1_sp3_creb1.tsv": 6
+  },
+  "merged_rows": 22,
+  "status": "pass",
+  "tf_species_coverage": {
+    "ar": [
+      "human"
+    ],
+    "cebpa": [
+      "human"
+    ],
+    "creb1": [
+      "human"
+    ],
+    "ctcf": [
+      "human"
+    ],
+    "e2f1": [
+      "human"
+    ],
+    "elk1": [
+      "human"
+    ],
+    "esr1": [
+      "human"
+    ],
+    "hnf4a": [
+      "human"
+    ],
+    "mitf": [
+      "human"
+    ],
+    "nfkb1": [
+      "human"
+    ],
+    "rela": [
+      "human"
+    ],
+    "relb": [
+      "human"
+    ],
+    "smad3": [
+      "human"
+    ],
+    "smad4": [
+      "human"
+    ],
+    "sp3": [
+      "human"
+    ],
+    "spi1": [
+      "human"
+    ],
+    "stat3": [
+      "human"
+    ],
+    "stat5a": [
+      "human"
+    ],
+    "tfap2a": [
+      "human"
+    ],
+    "vdr": [
+      "human"
+    ]
+  }
+}

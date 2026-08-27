@@ -1,0 +1,1 @@
+{"count": "2", "error": "", "ids": ["21503582", "10789082"], "query": "\"SON\"[Title/Abstract] AND \"PC\"[Title/Abstract] AND (regulat*[Title/Abstract] OR transcri*[Title/Abstract] OR promoter[Title/Abstract] OR binding[Title/Abstract] OR expression[Title/Abstract]) AND Homo sapiens[Organism]", "query_variant": "species_restricted"}

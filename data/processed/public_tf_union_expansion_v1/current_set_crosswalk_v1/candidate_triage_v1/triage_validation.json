@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "bucket_total_mismatch": 0,
+    "duplicate_triage_keys": 0,
+    "input_keys_missing_from_triage": 0,
+    "triage_keys_not_in_input": 0,
+    "triage_rows_without_source_registries": 0,
+    "triage_rows_without_source_versions": 0,
+    "unexpected_module_evidence_promotions": 0
+  },
+  "status": "staging_triage_only"
+}

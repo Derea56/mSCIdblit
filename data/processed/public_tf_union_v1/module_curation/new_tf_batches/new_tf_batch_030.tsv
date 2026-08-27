@@ -1,0 +1,21 @@
+species	tf_symbol	tf_key	source_labels	source_record_count	records_with_reference	unique_reference_pmids	source_registries	mapping_decision	frozen_entity_match_status	frozen_entity_ids	explicit_tf_role_present	default_module	existing_module_overlap_flags	both_species_present	priority_rank	review_status	notes
+mouse	Cd7	cd7	Cd7	1	1	1	TRRUST	normalized_exact	mapped_unique	11597	false	22B		false	51	new_candidate	
+mouse	Csf2	csf2	Csf2	1	1	1	TRRUST	normalized_exact	mapped_unique	11671	false	22B		false	51	new_candidate	
+mouse	Ctf1	ctf1	Ctf1	1	1	1	TRRUST	normalized_exact	mapped_unique	11674	false	22B		false	51	new_candidate	
+mouse	Dmp1	dmp1	Dmp1	1	1	1	TRRUST	normalized_exact	mapped_unique	11734	false	22B		false	51	new_candidate	
+mouse	Edn1	edn1	Edn1	1	1	1	TRRUST	normalized_exact	mapped_unique	11814	false	22B		false	51	new_candidate	
+human	EGF	egf	EGF	1	1	1	TRRUST	normalized_exact	mapped_unique	11825	false	22B		false	51	new_candidate	
+mouse	Epo	epo	Epo	1	1	1	TRRUST	normalized_exact	mapped_unique	11865	false	22B		false	51	new_candidate	
+mouse	Epor	epor	Epor	1	1	1	TRRUST	normalized_exact	mapped_unique	11866	false	22B		false	51	new_candidate	
+mouse	Gnrh1	gnrh1	Gnrh1	1	1	1	TRRUST	normalized_exact	mapped_unique	12155	false	22B		false	51	new_candidate	
+mouse	H3BJ24	h3bj24	H3BJ24	162	21	11	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		false	51	new_candidate	
+mouse	Havcr2	havcr2	Havcr2	1	1	1	TRRUST	normalized_exact	mapped_unique	12214	false	22B		false	51	new_candidate	
+mouse	Hgf	hgf	Hgf	1	1	1	TRRUST	normalized_exact	mapped_unique	12221	false	22B		false	51	new_candidate	
+mouse	Il10	il10	Il10	1	1	1	TRRUST	normalized_exact	mapped_unique	12456	false	22B		false	51	new_candidate	
+mouse	Il4	il4	Il4	1	1	1	TRRUST	normalized_exact	mapped_unique	12495	false	22B		false	51	new_candidate	
+mouse	Notch4	notch4	Notch4	3	3	1	TRRUST	normalized_exact	mapped_unique	12870	false	22B		false	51	new_candidate	
+mouse	Prl	prl	Prl	1	1	1	TRRUST	normalized_exact	mapped_unique	13046	false	22B		false	51	new_candidate	
+mouse	Pth	pth	Pth	1	1	1	TRRUST	normalized_exact	mapped_unique	13060	false	22B		false	51	new_candidate	
+mouse	Pthlh	pthlh	Pthlh	2	2	1	TRRUST	normalized_exact	mapped_unique	13064	false	22B		false	51	new_candidate	
+mouse	Shh	shh	Shh	1	1	1	TRRUST	normalized_exact	mapped_unique	13338	false	22B		false	51	new_candidate	
+human	STAT5	stat5	STAT5	1	1	1	TRRUST	normalized_exact	mapped_unique	13287	true	22B		false	51	new_candidate	

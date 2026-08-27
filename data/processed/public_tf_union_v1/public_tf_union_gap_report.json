@@ -1,0 +1,1402 @@
+{
+  "acceptance_checks": {
+    "all_external_rows_export_gated": true,
+    "frozen_core_counts_match_release_metadata": true,
+    "frozen_derived_tables_nonempty": true,
+    "priority_tf_rows_present": true,
+    "zero_referential_integrity_failures": true
+  },
+  "audit_name": "public_tf_union_v1_independent_gap_audit",
+  "audit_status": "complete",
+  "database_counts": {
+    "external_identity_mapping": 16894,
+    "external_members": 44965,
+    "external_records": 45795,
+    "external_references": 240805,
+    "external_regulons": 2317,
+    "external_source_registry": 4,
+    "external_verification": 117
+  },
+  "direction_conflicts": {
+    "named_example_count": 50,
+    "named_examples": [
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "tnfrsf10b",
+        "tf": "ddit3"
+      },
+      {
+        "assertions": "TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "mouse",
+        "target": "spi1",
+        "tf": "gata2"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "cyp1a1",
+        "tf": "ahr"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "cdkn1a",
+        "tf": "ar"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "klk3",
+        "tf": "ar"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:repressing_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "hmox1",
+        "tf": "bach1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "ptgs2",
+        "tf": "cebpb"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "ifng",
+        "tf": "creb1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "app",
+        "tf": "ctcf"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:repressing_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "myc",
+        "tf": "ctcf"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "birc5",
+        "tf": "e2f1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "kif2c",
+        "tf": "e2f1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:repressing_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "tert",
+        "tf": "e2f1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "tp53",
+        "tf": "e2f1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:repressing_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "brca1",
+        "tf": "e2f4"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "alox5",
+        "tf": "egr1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "vegfa",
+        "tf": "egr1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "cdkn1a",
+        "tf": "esr1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "parp1",
+        "tf": "ets1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "tgfbr2",
+        "tf": "fli1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "mmp9",
+        "tf": "fos"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "nos2",
+        "tf": "fos"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "igfbp1",
+        "tf": "foxo1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "epo",
+        "tf": "gata1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "bcl2",
+        "tf": "gli1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "tgfb3",
+        "tf": "hif1a"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "vegfa",
+        "tf": "hif1a"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:repressing_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "emx2",
+        "tf": "hoxa10"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "ifnb1",
+        "tf": "irf7"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "ccnd1",
+        "tf": "jun"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "mmp9",
+        "tf": "jun"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "nos2",
+        "tf": "jun"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "myb",
+        "tf": "jund"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:repressing_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "ccnd1",
+        "tf": "klf4"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "cdkn1a",
+        "tf": "klf4"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "jun",
+        "tf": "mef2c"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "bcl2",
+        "tf": "myb"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:repressing_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "cdkn1a",
+        "tf": "myc"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:repressing_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "ndrg1",
+        "tf": "mycn"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "tp53",
+        "tf": "mycn"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "gsta1",
+        "tf": "nfe2l2"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "hmox1",
+        "tf": "nfe2l2"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "nqo1",
+        "tf": "nfe2l2"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "abcb1",
+        "tf": "nfkb1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "bcl2",
+        "tf": "nfkb1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "bcl2l1",
+        "tf": "nfkb1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "birc2",
+        "tf": "nfkb1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "birc3",
+        "tf": "nfkb1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "ccnd1",
+        "tf": "nfkb1"
+      },
+      {
+        "assertions": "OmniPath_DoRothEA:activating_target, TRRUST:activating_target, TRRUST:repressing_target",
+        "direction_count": 2,
+        "species": "human",
+        "target": "cflar",
+        "tf": "nfkb1"
+      }
+    ],
+    "total_conflict_group_count": 435
+  },
+  "downstream_gaps": {
+    "raw_simple_pairs_not_materialized_examples": [],
+    "records_with_explicit_target_role": 1802,
+    "records_with_target_absent_from_frozen_graph": 37279,
+    "records_with_target_node_but_missing_explicit_target_role": 6205,
+    "records_with_unresolved_target_identity": 509,
+    "records_with_unresolved_tf_identity": 329
+  },
+  "evidence_gaps": {
+    "all_record_verification_status_counts": {
+      "context_limited_reference": 22,
+      "primary_reference_verified": 63,
+      "unverified_public_record": 45710
+    },
+    "priority_tf_identity_matrix": [
+      {
+        "species": "human",
+        "status": "database_curated_unverified",
+        "tf": "ATF2"
+      },
+      {
+        "species": "mouse",
+        "status": "database_curated_unverified",
+        "tf": "ATF2"
+      },
+      {
+        "species": "human",
+        "status": "primary_reference_verified",
+        "tf": "CEBPB"
+      },
+      {
+        "species": "mouse",
+        "status": "context_limited_reference",
+        "tf": "CEBPB"
+      },
+      {
+        "species": "human",
+        "status": "database_curated_unverified",
+        "tf": "EGR1"
+      },
+      {
+        "species": "mouse",
+        "status": "database_curated_unverified",
+        "tf": "EGR1"
+      },
+      {
+        "species": "human",
+        "status": "primary_reference_verified",
+        "tf": "ETS1"
+      },
+      {
+        "species": "mouse",
+        "status": "primary_reference_verified",
+        "tf": "ETS1"
+      },
+      {
+        "species": "human",
+        "status": "primary_reference_verified",
+        "tf": "FOS"
+      },
+      {
+        "species": "mouse",
+        "status": "context_limited_reference",
+        "tf": "FOS"
+      },
+      {
+        "species": "human",
+        "status": "primary_reference_verified",
+        "tf": "GATA3"
+      },
+      {
+        "species": "mouse",
+        "status": "context_limited_reference",
+        "tf": "GATA3"
+      },
+      {
+        "species": "human",
+        "status": "primary_reference_verified",
+        "tf": "HIF1A"
+      },
+      {
+        "species": "mouse",
+        "status": "context_limited_reference",
+        "tf": "HIF1A"
+      },
+      {
+        "species": "human",
+        "status": "database_curated_unverified",
+        "tf": "IRF1"
+      },
+      {
+        "species": "mouse",
+        "status": "database_curated_unverified",
+        "tf": "IRF1"
+      },
+      {
+        "species": "human",
+        "status": "primary_reference_verified",
+        "tf": "JUN"
+      },
+      {
+        "species": "mouse",
+        "status": "context_limited_reference",
+        "tf": "JUN"
+      },
+      {
+        "species": "human",
+        "status": "database_curated_unverified",
+        "tf": "KLF4"
+      },
+      {
+        "species": "mouse",
+        "status": "database_curated_unverified",
+        "tf": "KLF4"
+      },
+      {
+        "species": "human",
+        "status": "primary_reference_verified",
+        "tf": "MYC"
+      },
+      {
+        "species": "mouse",
+        "status": "context_limited_reference",
+        "tf": "MYC"
+      },
+      {
+        "species": "human",
+        "status": "primary_reference_verified",
+        "tf": "NFKB2"
+      },
+      {
+        "species": "mouse",
+        "status": "context_limited_reference",
+        "tf": "NFKB2"
+      },
+      {
+        "species": "human",
+        "status": "primary_reference_verified",
+        "tf": "RUNX1"
+      },
+      {
+        "species": "mouse",
+        "status": "database_curated_unverified",
+        "tf": "RUNX1"
+      },
+      {
+        "species": "human",
+        "status": "primary_reference_verified",
+        "tf": "SP1"
+      },
+      {
+        "species": "mouse",
+        "status": "database_curated_unverified",
+        "tf": "SP1"
+      },
+      {
+        "species": "human",
+        "status": "primary_reference_verified",
+        "tf": "STAT1"
+      },
+      {
+        "species": "mouse",
+        "status": "database_curated_unverified",
+        "tf": "STAT1"
+      },
+      {
+        "species": "human",
+        "status": "primary_reference_verified",
+        "tf": "TP53"
+      },
+      {
+        "species": "mouse",
+        "status": "context_limited_reference",
+        "tf": "TP53"
+      }
+    ],
+    "priority_tf_identity_status_counts": {
+      "context_limited_reference": 8,
+      "database_curated_unverified": 11,
+      "primary_reference_verified": 13
+    }
+  },
+  "frozen_counts_after_load": {
+    "regulon": 45,
+    "regulonmember": 107,
+    "regulonmembersource": 162,
+    "signalingedge": 3172,
+    "signalingentity": 2792,
+    "signalingentityrole": 4358
+  },
+  "pair_coverage": {
+    "OmniPath_DoRothEA:human": {
+      "materialized_pairs_not_in_raw": 0,
+      "materialized_simple_pairs": 15116,
+      "raw_pairs_not_materialized": 0,
+      "raw_pairs_overlapping_frozen_regulon": 20,
+      "raw_simple_pairs": 15116,
+      "raw_tfs": 367
+    },
+    "OmniPath_DoRothEA:mouse": {
+      "materialized_pairs_not_in_raw": 0,
+      "materialized_simple_pairs": 13197,
+      "raw_pairs_not_materialized": 0,
+      "raw_pairs_overlapping_frozen_regulon": 13,
+      "raw_simple_pairs": 13197,
+      "raw_tfs": 328
+    },
+    "TRRUST:human": {
+      "materialized_pairs_not_in_raw": 0,
+      "materialized_simple_pairs": 8426,
+      "raw_pairs_not_materialized": 0,
+      "raw_pairs_overlapping_frozen_regulon": 20,
+      "raw_simple_pairs": 8426,
+      "raw_tfs": 795
+    },
+    "TRRUST:mouse": {
+      "materialized_pairs_not_in_raw": 0,
+      "materialized_simple_pairs": 6490,
+      "raw_pairs_not_materialized": 0,
+      "raw_pairs_overlapping_frozen_regulon": 17,
+      "raw_simple_pairs": 6490,
+      "raw_tfs": 827
+    }
+  },
+  "referential_integrity": {
+    "identity_source_fk": 0,
+    "member_record_fk": 0,
+    "member_regulon_fk": 0,
+    "non_excluded_external_members": 0,
+    "non_excluded_external_rows": 0,
+    "record_source_fk": 0,
+    "reference_record_fk": 0,
+    "regulon_member_count_mismatch": 0,
+    "verification_record_fk": 0
+  },
+  "source_summary": {
+    "OmniPath_DoRothEA:human": {
+      "raw_records": 15267,
+      "raw_simple_pairs": 15116,
+      "raw_tfs": 367
+    },
+    "OmniPath_DoRothEA:mouse": {
+      "raw_records": 14075,
+      "raw_simple_pairs": 13197,
+      "raw_tfs": 328
+    },
+    "TRRUST:human": {
+      "raw_records": 9396,
+      "raw_simple_pairs": 8426,
+      "raw_tfs": 795
+    },
+    "TRRUST:mouse": {
+      "raw_records": 7057,
+      "raw_simple_pairs": 6490,
+      "raw_tfs": 827
+    }
+  },
+  "tf_node_coverage_categories": {
+    "absent_tf_node": 2180,
+    "tf_node_and_role_present": 79,
+    "tf_node_missing_explicit_tf_role": 58
+  },
+  "unresolved_identity": {
+    "named_examples": [
+      {
+        "line": 7702,
+        "reason": "target_unresolved",
+        "source": "trrust",
+        "species": "human",
+        "target": "P2RY10",
+        "tf": "SPI1"
+      },
+      {
+        "line": 4689,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "human",
+        "target": "P2RY10",
+        "tf": "SPI1"
+      },
+      {
+        "line": 8,
+        "reason": "tf_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Ccna2",
+        "tf": "Q3UQ17"
+      },
+      {
+        "line": 16,
+        "reason": "tf_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Irf1",
+        "tf": "Q3V157"
+      },
+      {
+        "line": 18,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q61718",
+        "tf": "Irf3"
+      },
+      {
+        "line": 20,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q810G3",
+        "tf": "Irf3"
+      },
+      {
+        "line": 23,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q810G2",
+        "tf": "Irf3"
+      },
+      {
+        "line": 24,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q810G6",
+        "tf": "Irf3"
+      },
+      {
+        "line": 25,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q1WWN2",
+        "tf": "Irf3"
+      },
+      {
+        "line": 29,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q810G5",
+        "tf": "Irf3"
+      },
+      {
+        "line": 35,
+        "reason": "tf_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Cyp1b1",
+        "tf": "Q3U5D9"
+      },
+      {
+        "line": 93,
+        "reason": "tf_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Ifng",
+        "tf": "Q3V157"
+      },
+      {
+        "line": 141,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q61718",
+        "tf": "Irf1"
+      },
+      {
+        "line": 143,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q810G3",
+        "tf": "Irf1"
+      },
+      {
+        "line": 146,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q810G2",
+        "tf": "Irf1"
+      },
+      {
+        "line": 147,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q810G6",
+        "tf": "Irf1"
+      },
+      {
+        "line": 148,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q1WWN2",
+        "tf": "Irf1"
+      },
+      {
+        "line": 152,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q810G5",
+        "tf": "Irf1"
+      },
+      {
+        "line": 178,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q80YQ1",
+        "tf": "F6Y2T6"
+      },
+      {
+        "line": 188,
+        "reason": "tf_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Cyp1a1",
+        "tf": "Q3U5D9"
+      },
+      {
+        "line": 194,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q3UN27",
+        "tf": "Lef1"
+      },
+      {
+        "line": 219,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Cyp3a41a; Cyp3a41b",
+        "tf": "Nr1i2"
+      },
+      {
+        "line": 244,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q3U2G2",
+        "tf": "Hsf1"
+      },
+      {
+        "line": 247,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q3U2G2",
+        "tf": "Myc"
+      },
+      {
+        "line": 271,
+        "reason": "tf_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Mitf",
+        "tf": "Q8BRF1"
+      },
+      {
+        "line": 318,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q3UPN1",
+        "tf": "Nfkb1"
+      },
+      {
+        "line": 320,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q3UPN1",
+        "tf": "Rela"
+      },
+      {
+        "line": 361,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q924X4",
+        "tf": "Ets1"
+      },
+      {
+        "line": 408,
+        "reason": "tf_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Myc",
+        "tf": "Q3V157"
+      },
+      {
+        "line": 413,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q8C1N9",
+        "tf": "Cebpa"
+      },
+      {
+        "line": 472,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q8R084",
+        "tf": "A0A0R4J1Z4"
+      },
+      {
+        "line": 474,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q3V117",
+        "tf": "Srebf1"
+      },
+      {
+        "line": 485,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q3V117",
+        "tf": "Srebf2"
+      },
+      {
+        "line": 524,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q80YQ1",
+        "tf": "Myc"
+      },
+      {
+        "line": 526,
+        "reason": "tf_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Bcl2l1",
+        "tf": "Q8BRF1"
+      },
+      {
+        "line": 557,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q61718",
+        "tf": "Irf7"
+      },
+      {
+        "line": 559,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q810G3",
+        "tf": "Irf7"
+      },
+      {
+        "line": 562,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q810G2",
+        "tf": "Irf7"
+      },
+      {
+        "line": 563,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q810G6",
+        "tf": "Irf7"
+      },
+      {
+        "line": 564,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q1WWN2",
+        "tf": "Irf7"
+      },
+      {
+        "line": 568,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q810G5",
+        "tf": "Irf7"
+      },
+      {
+        "line": 572,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q3UGX2",
+        "tf": "Gata1"
+      },
+      {
+        "line": 581,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q3U5F6",
+        "tf": "Atf3"
+      },
+      {
+        "line": 607,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q3TG86",
+        "tf": "Nr5a1"
+      },
+      {
+        "line": 655,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q9D8D6",
+        "tf": "Tfap2c"
+      },
+      {
+        "line": 661,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q497J0",
+        "tf": "Tfap2c"
+      },
+      {
+        "line": 665,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q8BWM3",
+        "tf": "Tfap2c"
+      },
+      {
+        "line": 666,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q05B95",
+        "tf": "Tfap2c"
+      },
+      {
+        "line": 679,
+        "reason": "tf_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Myc",
+        "tf": "Q3U5D9"
+      },
+      {
+        "line": 699,
+        "reason": "target_unresolved",
+        "source": "dorothea",
+        "species": "mouse",
+        "target": "Q3UN27",
+        "tf": "A2A5C3"
+      }
+    ],
+    "raw_unresolved_rows": 830
+  },
+  "upstream_gaps": {
+    "categories": {
+      "tf_node_unmapped": 2180,
+      "upstream_path_absent": 76,
+      "upstream_path_present": 61
+    },
+    "named_examples": [
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "AHR"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "AR"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "ARID3A"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "ARNT"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "ASCL1"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "ATF1"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "ATF2"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "ATF3"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "ATF4"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "ATF5"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "ATF6"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "ATOH1"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "BACH1"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "BACH2"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "BATF"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "BCL6"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "BHLHE40"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "BMAL1"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "BMAL2"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "CDX1"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "CDX2"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "CEBPA"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "CEBPD"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "CEBPE"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "CEBPG"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "CEBPZ"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "CLOCK"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "CREB1"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "CREB3"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "CREB3L1"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "CREM"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "CTCF"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "CUX1"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "DDIT3"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "DNMT1"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "E2F1"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "E2F2"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "E2F3"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "E2F4"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "E2F5"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "E2F6"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "E2F7"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "E2F8"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "E4F1"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "EBF1"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "EGR1"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "EGR2"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "EGR3"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "EHF"
+      },
+      {
+        "gap_class": "tf_node_unmapped",
+        "source_registry": "OmniPath_DoRothEA",
+        "species": "human",
+        "supported_edge_count": 0,
+        "tf": "ELF1"
+      }
+    ]
+  }
+}

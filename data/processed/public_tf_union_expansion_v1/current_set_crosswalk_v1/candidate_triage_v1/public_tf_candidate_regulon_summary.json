@@ -1,0 +1,63 @@
+{
+  "attribution_role_category_counts": {
+    "alias_or_ingestion_artifact_review": 2,
+    "catalog_concordant_tf_candidate": 377,
+    "dna_repair_or_genome_maintenance": 21,
+    "dual_role_tf_chromatin_candidate": 10,
+    "noncanonical_transcriptional_regulator": 256,
+    "nuclear_machinery_or_structural_not_regulatory": 4,
+    "nuclear_structure_or_transport": 10,
+    "regulon_lead_unclassified": 249,
+    "rna_binding_or_post_transcriptional": 27,
+    "signaling_metabolic_membrane_or_cell_cycle": 35
+  },
+  "attribution_rows": 991,
+  "attribution_source_counts": {
+    "TFLink": 991
+  },
+  "candidate_index_rows": 2051,
+  "candidate_regulon_status_counts": {
+    "blocked_identifier_mapping_before_regulon_review": 16,
+    "database_attributed_regulon_available": 854,
+    "no_regulon_set_in_current_imported_sources": 1181
+  },
+  "canonical_writes_performed": false,
+  "claimed_effect_counts": {
+    "unknown": 991
+  },
+  "downstream_activation_status": "not_assessed_for_all_rows",
+  "inputs": {
+    "pair_records": "data/processed/public_tf_union_expansion_v1/tf_pair_records.tsv",
+    "role_triage": "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/public_tf_role_triage.tsv",
+    "tflink_summary": "data/processed/public_tf_union_expansion_v1/tflink_tf_summary.tsv"
+  },
+  "module22b_promotions_performed": false,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/public_tf_candidate_regulon_index.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/public_tf_candidate_regulon_attribution.tsv"
+  ],
+  "policy": {
+    "activation": "candidate membership does not establish target-cell presence, upstream relay activation, or downstream gene activation",
+    "database_attribution": "preserved as candidate regulon or pair membership, source-specific and export-excluded",
+    "noncanonical": "chromatin/cofactor candidates route to a regulatory-machinery sidecar rather than strict TF role promotion",
+    "species": "human and mouse remain separate",
+    "tflink": "set-level target membership is retained by source record and raw snapshot hash; no target-level assay or PMID is inferred"
+  },
+  "raw_snapshots": {
+    "human": {
+      "path": "data/raw/public_database_snapshots/tf_union_expansion_v1/tflink_human_v1.0.gmt",
+      "sha256": "4b253ad538edd311071b925213ef16647bef1ddb98aca8d36d6a74f63054e11d"
+    },
+    "mouse": {
+      "path": "data/raw/public_database_snapshots/tf_union_expansion_v1/tflink_mouse_v1.0.gmt",
+      "sha256": "b06c59dae999026247a1cd5d027688b6f5a46c7b83450e946f54c40103587e07"
+    }
+  },
+  "role_triage_rows": 2051,
+  "source_pair_attribution_rows": 0,
+  "status": "staging_only",
+  "target_cell_presence_status": "not_assessed_for_all_rows",
+  "tflink_attribution_rows": 991,
+  "tflink_target_memberships_reported": 3442771,
+  "upstream_relay_status": "not_assessed_for_all_rows"
+}
