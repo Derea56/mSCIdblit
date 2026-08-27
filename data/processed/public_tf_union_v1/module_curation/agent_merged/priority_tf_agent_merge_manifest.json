@@ -1,0 +1,87 @@
+{
+  "boundary_audit_rows": 49,
+  "canonical_database_writes": false,
+  "decision_counts": {
+    "database_only_unverified": 8893,
+    "hold_direction_conflict": 86,
+    "hold_exact_pair": 78,
+    "promote_to_22B": 37
+  },
+  "errors": [],
+  "frozen_release_modified": false,
+  "lane_counts": {
+    "lane_A_tp53_jun_fos_myc.tsv": 3208,
+    "lane_B_stat1_hif1a_ets1.tsv": 2240,
+    "lane_C_sp1_runx1_gata3_cebpb.tsv": 2187,
+    "lane_D_irf1_atf2_egr1_klf4.tsv": 1414,
+    "lane_E_nfkb2_boundary.tsv": 94
+  },
+  "merged_rows": 9094,
+  "status": "pass",
+  "tf_species_coverage": {
+    "ATF2": [
+      "human",
+      "mouse"
+    ],
+    "CEBPB": [
+      "human",
+      "mouse"
+    ],
+    "EGR1": [
+      "human",
+      "mouse"
+    ],
+    "ETS1": [
+      "human",
+      "mouse"
+    ],
+    "FOS": [
+      "human",
+      "mouse"
+    ],
+    "GATA3": [
+      "human",
+      "mouse"
+    ],
+    "HIF1A": [
+      "human",
+      "mouse"
+    ],
+    "IRF1": [
+      "human",
+      "mouse"
+    ],
+    "JUN": [
+      "human",
+      "mouse"
+    ],
+    "KLF4": [
+      "human",
+      "mouse"
+    ],
+    "MYC": [
+      "human",
+      "mouse"
+    ],
+    "NFKB2": [
+      "human",
+      "mouse"
+    ],
+    "RUNX1": [
+      "human",
+      "mouse"
+    ],
+    "SP1": [
+      "human",
+      "mouse"
+    ],
+    "STAT1": [
+      "human",
+      "mouse"
+    ],
+    "TP53": [
+      "human",
+      "mouse"
+    ]
+  }
+}

@@ -1,0 +1,3236 @@
+{
+  "boundary_audit_rows": 0,
+  "canonical_database_writes": false,
+  "decision_counts": {
+    "database_only_unverified": 1064,
+    "promote_to_22B": 6
+  },
+  "decision_rows": 1070,
+  "errors": [],
+  "frozen_release_modified": false,
+  "held_rows": 1064,
+  "module_specific_review_rows": 993,
+  "policy": {
+    "cross_module_evidence": "retained in module_specific_review_queue.tsv; no citation-overlap-only promotion",
+    "independent_corroboration": "required for promoted rows with actual cross-module relevance",
+    "public_tf_default_module": "22B"
+  },
+  "promoted_rows": 6,
+  "promotion_module_counts": {
+    "22B": 6
+  },
+  "source_link_rows": 1448,
+  "status": "pass",
+  "tf_species_coverage": {
+    "A2A5C3": [
+      "mouse"
+    ],
+    "A3KN90": [
+      "mouse"
+    ],
+    "A4QPD3": [
+      "mouse"
+    ],
+    "A5D6P6": [
+      "mouse"
+    ],
+    "AATF": [
+      "mouse"
+    ],
+    "ABL1": [
+      "human"
+    ],
+    "AEBP2": [
+      "mouse"
+    ],
+    "AES": [
+      "mouse"
+    ],
+    "AHR": [
+      "human"
+    ],
+    "AIP": [
+      "human"
+    ],
+    "AIRE": [
+      "mouse"
+    ],
+    "ALX4": [
+      "mouse"
+    ],
+    "ANKRD1": [
+      "mouse"
+    ],
+    "APBB1": [
+      "mouse"
+    ],
+    "APC": [
+      "mouse"
+    ],
+    "APEX1": [
+      "mouse"
+    ],
+    "ARID1A": [
+      "human"
+    ],
+    "ARID1B": [
+      "human"
+    ],
+    "ARID3A": [
+      "mouse"
+    ],
+    "ARID3B": [
+      "mouse"
+    ],
+    "ARID5B": [
+      "mouse"
+    ],
+    "ARL6IP5": [
+      "mouse"
+    ],
+    "ARNT": [
+      "human"
+    ],
+    "ARNTL": [
+      "mouse"
+    ],
+    "ARNTL2": [
+      "mouse"
+    ],
+    "ARX": [
+      "mouse"
+    ],
+    "ASCL1": [
+      "mouse"
+    ],
+    "ASH1L": [
+      "mouse"
+    ],
+    "ASXL1": [
+      "mouse"
+    ],
+    "ATF1": [
+      "mouse"
+    ],
+    "ATF3": [
+      "mouse"
+    ],
+    "ATF4": [
+      "human"
+    ],
+    "ATF5": [
+      "human"
+    ],
+    "ATF6": [
+      "human"
+    ],
+    "ATF7": [
+      "human"
+    ],
+    "ATM": [
+      "mouse"
+    ],
+    "ATOH1": [
+      "mouse"
+    ],
+    "ATRX": [
+      "human"
+    ],
+    "B1AUF1": [
+      "mouse"
+    ],
+    "B5B2N2": [
+      "mouse"
+    ],
+    "BACH1": [
+      "human"
+    ],
+    "BACH2": [
+      "mouse"
+    ],
+    "BARD1": [
+      "human"
+    ],
+    "BARX2": [
+      "mouse"
+    ],
+    "BATF": [
+      "human"
+    ],
+    "BATF2": [
+      "mouse"
+    ],
+    "BATF3": [
+      "mouse"
+    ],
+    "BCL11A": [
+      "mouse"
+    ],
+    "BCL11B": [
+      "mouse"
+    ],
+    "BCL3": [
+      "mouse"
+    ],
+    "BCL6": [
+      "mouse"
+    ],
+    "BCL6B": [
+      "mouse"
+    ],
+    "BDP1": [
+      "human"
+    ],
+    "BHLHE40": [
+      "mouse"
+    ],
+    "BHLHE41": [
+      "human"
+    ],
+    "BIN1": [
+      "human"
+    ],
+    "BMAL1": [
+      "human"
+    ],
+    "BMAL2": [
+      "mouse"
+    ],
+    "BMI1": [
+      "mouse"
+    ],
+    "BMP4": [
+      "mouse"
+    ],
+    "BMP6": [
+      "mouse"
+    ],
+    "BPTF": [
+      "human"
+    ],
+    "BRCA1": [
+      "human"
+    ],
+    "BRCA2": [
+      "human"
+    ],
+    "BRD7": [
+      "human"
+    ],
+    "BRIP1": [
+      "human"
+    ],
+    "BRPF1": [
+      "human"
+    ],
+    "BTAF1": [
+      "human"
+    ],
+    "BTF3": [
+      "human"
+    ],
+    "BTG2": [
+      "human"
+    ],
+    "BUB3": [
+      "mouse"
+    ],
+    "CBFA2T3": [
+      "mouse"
+    ],
+    "CBFB": [
+      "human"
+    ],
+    "CBX6": [
+      "mouse"
+    ],
+    "CBX7": [
+      "human"
+    ],
+    "CBX8": [
+      "human"
+    ],
+    "CCND1": [
+      "mouse"
+    ],
+    "CD7": [
+      "mouse"
+    ],
+    "CDC5L": [
+      "human"
+    ],
+    "CDCA7L": [
+      "human"
+    ],
+    "CDX1": [
+      "mouse"
+    ],
+    "CDX2": [
+      "human"
+    ],
+    "CDX4": [
+      "mouse"
+    ],
+    "CEBPD": [
+      "mouse"
+    ],
+    "CEBPE": [
+      "mouse"
+    ],
+    "CEBPG": [
+      "mouse"
+    ],
+    "CEBPZ": [
+      "mouse"
+    ],
+    "CHD1": [
+      "mouse"
+    ],
+    "CHD4": [
+      "mouse"
+    ],
+    "CHD7": [
+      "mouse"
+    ],
+    "CHD8": [
+      "mouse"
+    ],
+    "CIITA": [
+      "human"
+    ],
+    "CITED2": [
+      "mouse"
+    ],
+    "CLOCK": [
+      "human"
+    ],
+    "CNBP": [
+      "human"
+    ],
+    "CNOT3": [
+      "mouse"
+    ],
+    "CNOT7": [
+      "mouse"
+    ],
+    "CNOT8": [
+      "human"
+    ],
+    "COPS5": [
+      "mouse"
+    ],
+    "CRABP2": [
+      "human"
+    ],
+    "CREB3": [
+      "mouse"
+    ],
+    "CREB3L1": [
+      "human"
+    ],
+    "CREB3L3": [
+      "mouse"
+    ],
+    "CREB3L4": [
+      "mouse"
+    ],
+    "CREB5": [
+      "human"
+    ],
+    "CREBBP": [
+      "mouse"
+    ],
+    "CREBZF": [
+      "mouse"
+    ],
+    "CREG1": [
+      "human"
+    ],
+    "CREM": [
+      "human"
+    ],
+    "CRTC1": [
+      "mouse"
+    ],
+    "CRX": [
+      "mouse"
+    ],
+    "CRY1": [
+      "mouse"
+    ],
+    "CSF1": [
+      "mouse"
+    ],
+    "CSF2": [
+      "mouse"
+    ],
+    "CTBP1": [
+      "human"
+    ],
+    "CTCFL": [
+      "mouse"
+    ],
+    "CTF1": [
+      "mouse"
+    ],
+    "CTNNB1": [
+      "human"
+    ],
+    "CTNNBIP1": [
+      "human"
+    ],
+    "CTR9": [
+      "mouse"
+    ],
+    "CUX1": [
+      "human"
+    ],
+    "CUX2": [
+      "mouse"
+    ],
+    "D3YU76": [
+      "mouse"
+    ],
+    "D3Z1J4": [
+      "mouse"
+    ],
+    "D3Z4G2": [
+      "mouse"
+    ],
+    "DAB2": [
+      "mouse"
+    ],
+    "DACH1": [
+      "mouse"
+    ],
+    "DACH2": [
+      "mouse"
+    ],
+    "DAXX": [
+      "mouse"
+    ],
+    "DBP": [
+      "mouse"
+    ],
+    "DDB1": [
+      "human"
+    ],
+    "DDB2": [
+      "human"
+    ],
+    "DDIT3": [
+      "human"
+    ],
+    "DDX5": [
+      "mouse"
+    ],
+    "DDX54": [
+      "mouse"
+    ],
+    "DDX58": [
+      "mouse"
+    ],
+    "DEAF1": [
+      "mouse"
+    ],
+    "DEDD": [
+      "human"
+    ],
+    "DEK": [
+      "human"
+    ],
+    "DENND4A": [
+      "human"
+    ],
+    "DLX1": [
+      "mouse"
+    ],
+    "DLX2": [
+      "mouse"
+    ],
+    "DLX3": [
+      "mouse"
+    ],
+    "DLX4": [
+      "human"
+    ],
+    "DLX5": [
+      "mouse"
+    ],
+    "DMAP1": [
+      "mouse"
+    ],
+    "DMBX1": [
+      "mouse"
+    ],
+    "DMP1": [
+      "mouse"
+    ],
+    "DMRT1": [
+      "mouse"
+    ],
+    "DMRT2": [
+      "mouse"
+    ],
+    "DMTF1": [
+      "mouse"
+    ],
+    "DNAJC2": [
+      "mouse"
+    ],
+    "DNMT1": [
+      "mouse"
+    ],
+    "DNMT3A": [
+      "mouse"
+    ],
+    "DNMT3B": [
+      "mouse"
+    ],
+    "DNMT3L": [
+      "human"
+    ],
+    "DOT1L": [
+      "mouse"
+    ],
+    "DR1": [
+      "human"
+    ],
+    "DRAP1": [
+      "human"
+    ],
+    "DTX1": [
+      "mouse"
+    ],
+    "DUX4": [
+      "human"
+    ],
+    "E0CYW8": [
+      "mouse"
+    ],
+    "E2F2": [
+      "mouse"
+    ],
+    "E2F3": [
+      "human"
+    ],
+    "E2F4": [
+      "human"
+    ],
+    "E2F5": [
+      "mouse"
+    ],
+    "E2F6": [
+      "mouse"
+    ],
+    "E2F7": [
+      "mouse"
+    ],
+    "E2F8": [
+      "mouse"
+    ],
+    "E4F1": [
+      "mouse"
+    ],
+    "E9PVV1": [
+      "mouse"
+    ],
+    "E9PZJ2": [
+      "mouse"
+    ],
+    "E9Q1A5": [
+      "mouse"
+    ],
+    "E9Q1A8": [
+      "mouse"
+    ],
+    "E9Q2D3": [
+      "mouse"
+    ],
+    "E9QKT0": [
+      "mouse"
+    ],
+    "E9QPS1": [
+      "mouse"
+    ],
+    "E9QQ91": [
+      "mouse"
+    ],
+    "EAF1": [
+      "human"
+    ],
+    "EAPP": [
+      "human"
+    ],
+    "EBF1": [
+      "mouse"
+    ],
+    "EBF3": [
+      "human"
+    ],
+    "ECD": [
+      "human"
+    ],
+    "EDN1": [
+      "mouse"
+    ],
+    "EED": [
+      "human"
+    ],
+    "EGF": [
+      "human"
+    ],
+    "EGR2": [
+      "mouse"
+    ],
+    "EGR3": [
+      "mouse"
+    ],
+    "EGR4": [
+      "mouse"
+    ],
+    "EHF": [
+      "mouse"
+    ],
+    "EHMT1": [
+      "mouse"
+    ],
+    "EHMT2": [
+      "mouse"
+    ],
+    "EIF2AK2": [
+      "mouse"
+    ],
+    "ELF1": [
+      "mouse"
+    ],
+    "ELF2": [
+      "mouse"
+    ],
+    "ELF3": [
+      "mouse"
+    ],
+    "ELF4": [
+      "mouse"
+    ],
+    "ELF5": [
+      "mouse"
+    ],
+    "ELK3": [
+      "mouse"
+    ],
+    "ELK4": [
+      "mouse"
+    ],
+    "ELL": [
+      "human"
+    ],
+    "ELL3": [
+      "mouse"
+    ],
+    "ELP2": [
+      "mouse"
+    ],
+    "ELP3": [
+      "mouse"
+    ],
+    "EMX2": [
+      "mouse"
+    ],
+    "EN1": [
+      "mouse"
+    ],
+    "EN2": [
+      "mouse"
+    ],
+    "ENO1": [
+      "human"
+    ],
+    "EOMES": [
+      "mouse"
+    ],
+    "EP300": [
+      "human"
+    ],
+    "EPAS1": [
+      "human"
+    ],
+    "EPC1": [
+      "mouse"
+    ],
+    "EPO": [
+      "mouse"
+    ],
+    "EPOR": [
+      "mouse"
+    ],
+    "ERCC2": [
+      "human"
+    ],
+    "ERF": [
+      "mouse"
+    ],
+    "ERG": [
+      "human"
+    ],
+    "ESR2": [
+      "human"
+    ],
+    "ESRRA": [
+      "mouse"
+    ],
+    "ESRRB": [
+      "mouse"
+    ],
+    "ESRRG": [
+      "mouse"
+    ],
+    "ETS2": [
+      "human"
+    ],
+    "ETV1": [
+      "mouse"
+    ],
+    "ETV2": [
+      "mouse"
+    ],
+    "ETV3": [
+      "human"
+    ],
+    "ETV4": [
+      "human"
+    ],
+    "ETV5": [
+      "mouse"
+    ],
+    "ETV6": [
+      "mouse"
+    ],
+    "ETV7": [
+      "human"
+    ],
+    "EVX1": [
+      "human"
+    ],
+    "EWSR1": [
+      "mouse"
+    ],
+    "EYA1": [
+      "mouse"
+    ],
+    "EYA2": [
+      "mouse"
+    ],
+    "EZH1": [
+      "mouse"
+    ],
+    "EZH2": [
+      "human"
+    ],
+    "F6Y2T6": [
+      "mouse"
+    ],
+    "F8VPV3": [
+      "mouse"
+    ],
+    "FHL2": [
+      "mouse"
+    ],
+    "FIGLA": [
+      "human"
+    ],
+    "FLI1": [
+      "mouse"
+    ],
+    "FMR1": [
+      "mouse"
+    ],
+    "FOSB": [
+      "mouse"
+    ],
+    "FOSL1": [
+      "mouse"
+    ],
+    "FOSL2": [
+      "mouse"
+    ],
+    "FOXA1": [
+      "human"
+    ],
+    "FOXA2": [
+      "human"
+    ],
+    "FOXA3": [
+      "mouse"
+    ],
+    "FOXC1": [
+      "mouse"
+    ],
+    "FOXC2": [
+      "mouse"
+    ],
+    "FOXD1": [
+      "mouse"
+    ],
+    "FOXD3": [
+      "mouse"
+    ],
+    "FOXE1": [
+      "human"
+    ],
+    "FOXF1": [
+      "human"
+    ],
+    "FOXF2": [
+      "human"
+    ],
+    "FOXG1": [
+      "mouse"
+    ],
+    "FOXH1": [
+      "mouse"
+    ],
+    "FOXI1": [
+      "mouse"
+    ],
+    "FOXJ1": [
+      "mouse"
+    ],
+    "FOXJ2": [
+      "human"
+    ],
+    "FOXJ3": [
+      "mouse"
+    ],
+    "FOXK2": [
+      "human"
+    ],
+    "FOXL1": [
+      "mouse"
+    ],
+    "FOXL2": [
+      "mouse"
+    ],
+    "FOXM1": [
+      "human"
+    ],
+    "FOXN1": [
+      "mouse"
+    ],
+    "FOXN4": [
+      "mouse"
+    ],
+    "FOXO1": [
+      "mouse"
+    ],
+    "FOXO3": [
+      "human"
+    ],
+    "FOXO4": [
+      "mouse"
+    ],
+    "FOXP1": [
+      "human"
+    ],
+    "FOXP2": [
+      "mouse"
+    ],
+    "FOXP3": [
+      "mouse"
+    ],
+    "FOXQ1": [
+      "mouse"
+    ],
+    "FUBP1": [
+      "human"
+    ],
+    "FUBP3": [
+      "human"
+    ],
+    "FUS": [
+      "mouse"
+    ],
+    "G3UW90": [
+      "mouse"
+    ],
+    "G3UYV8": [
+      "mouse"
+    ],
+    "G3X8Q7": [
+      "mouse"
+    ],
+    "GABPA": [
+      "mouse"
+    ],
+    "GABPB1": [
+      "mouse"
+    ],
+    "GABPB2": [
+      "human"
+    ],
+    "GATA1": [
+      "human"
+    ],
+    "GATA2": [
+      "human"
+    ],
+    "GATA4": [
+      "mouse"
+    ],
+    "GATA5": [
+      "human"
+    ],
+    "GATA6": [
+      "mouse"
+    ],
+    "GBX2": [
+      "mouse"
+    ],
+    "GCFC2": [
+      "mouse"
+    ],
+    "GCGR": [
+      "mouse"
+    ],
+    "GCM1": [
+      "human"
+    ],
+    "GCM2": [
+      "human"
+    ],
+    "GFI1": [
+      "human"
+    ],
+    "GFI1B": [
+      "mouse"
+    ],
+    "GLI1": [
+      "human"
+    ],
+    "GLI2": [
+      "mouse"
+    ],
+    "GLI3": [
+      "mouse"
+    ],
+    "GLIS2": [
+      "mouse"
+    ],
+    "GLIS3": [
+      "mouse"
+    ],
+    "GNRH1": [
+      "mouse"
+    ],
+    "GRHL1": [
+      "human"
+    ],
+    "GRHL2": [
+      "mouse"
+    ],
+    "GRIN1": [
+      "mouse"
+    ],
+    "GSC": [
+      "mouse"
+    ],
+    "GSX2": [
+      "mouse"
+    ],
+    "GTF2A1": [
+      "mouse"
+    ],
+    "GTF2A2": [
+      "mouse"
+    ],
+    "GTF2B": [
+      "mouse"
+    ],
+    "GTF2F1": [
+      "human"
+    ],
+    "GTF2H1": [
+      "mouse"
+    ],
+    "GTF2I": [
+      "mouse"
+    ],
+    "GTF2IRD1": [
+      "mouse"
+    ],
+    "GTF3A": [
+      "human"
+    ],
+    "GZF1": [
+      "mouse"
+    ],
+    "H3BJ24": [
+      "mouse"
+    ],
+    "H3BKM3": [
+      "mouse"
+    ],
+    "HAND2": [
+      "mouse"
+    ],
+    "HAVCR2": [
+      "mouse"
+    ],
+    "HAX1": [
+      "human"
+    ],
+    "HBP1": [
+      "human"
+    ],
+    "HCFC1": [
+      "human"
+    ],
+    "HCLS1": [
+      "mouse"
+    ],
+    "HDAC1": [
+      "human"
+    ],
+    "HDAC10": [
+      "human"
+    ],
+    "HDAC11": [
+      "mouse"
+    ],
+    "HDAC2": [
+      "human"
+    ],
+    "HDAC3": [
+      "human"
+    ],
+    "HDAC4": [
+      "human"
+    ],
+    "HDAC5": [
+      "human"
+    ],
+    "HDAC7": [
+      "human"
+    ],
+    "HDAC9": [
+      "human"
+    ],
+    "HDGF": [
+      "human"
+    ],
+    "HES1": [
+      "human"
+    ],
+    "HES6": [
+      "mouse"
+    ],
+    "HES7": [
+      "mouse"
+    ],
+    "HESX1": [
+      "mouse"
+    ],
+    "HEXIM1": [
+      "mouse"
+    ],
+    "HEY1": [
+      "human"
+    ],
+    "HEY2": [
+      "mouse"
+    ],
+    "HEYL": [
+      "mouse"
+    ],
+    "HGF": [
+      "mouse"
+    ],
+    "HHEX": [
+      "mouse"
+    ],
+    "HIC1": [
+      "mouse"
+    ],
+    "HIF3A": [
+      "human"
+    ],
+    "HINFP": [
+      "human"
+    ],
+    "HIPK2": [
+      "human"
+    ],
+    "HIRA": [
+      "human"
+    ],
+    "HIVEP2": [
+      "mouse"
+    ],
+    "HLF": [
+      "mouse"
+    ],
+    "HLTF": [
+      "mouse"
+    ],
+    "HLX": [
+      "mouse"
+    ],
+    "HMBOX1": [
+      "human"
+    ],
+    "HMG20B": [
+      "human"
+    ],
+    "HMGA1": [
+      "mouse"
+    ],
+    "HMGA2": [
+      "human"
+    ],
+    "HMGB2": [
+      "mouse"
+    ],
+    "HMGN1": [
+      "human"
+    ],
+    "HMGN3": [
+      "mouse"
+    ],
+    "HNF1A": [
+      "human"
+    ],
+    "HNF1B": [
+      "mouse"
+    ],
+    "HNF4G": [
+      "human"
+    ],
+    "HNRNPD": [
+      "mouse"
+    ],
+    "HNRNPK": [
+      "mouse"
+    ],
+    "HNRNPR": [
+      "human"
+    ],
+    "HOPX": [
+      "human"
+    ],
+    "HOXA1": [
+      "human"
+    ],
+    "HOXA10": [
+      "mouse"
+    ],
+    "HOXA11": [
+      "mouse"
+    ],
+    "HOXA2": [
+      "mouse"
+    ],
+    "HOXA3": [
+      "mouse"
+    ],
+    "HOXA4": [
+      "mouse"
+    ],
+    "HOXA5": [
+      "mouse"
+    ],
+    "HOXA7": [
+      "human"
+    ],
+    "HOXA9": [
+      "mouse"
+    ],
+    "HOXB1": [
+      "mouse"
+    ],
+    "HOXB13": [
+      "mouse"
+    ],
+    "HOXB2": [
+      "mouse"
+    ],
+    "HOXB3": [
+      "mouse"
+    ],
+    "HOXB4": [
+      "mouse"
+    ],
+    "HOXB5": [
+      "mouse"
+    ],
+    "HOXB7": [
+      "mouse"
+    ],
+    "HOXB8": [
+      "mouse"
+    ],
+    "HOXC10": [
+      "human"
+    ],
+    "HOXC11": [
+      "human"
+    ],
+    "HOXC13": [
+      "mouse"
+    ],
+    "HOXC6": [
+      "mouse"
+    ],
+    "HOXC8": [
+      "mouse"
+    ],
+    "HOXC9": [
+      "human"
+    ],
+    "HOXD1": [
+      "human"
+    ],
+    "HOXD13": [
+      "mouse"
+    ],
+    "HOXD3": [
+      "mouse"
+    ],
+    "HOXD9": [
+      "human"
+    ],
+    "HR": [
+      "mouse"
+    ],
+    "HSF1": [
+      "human"
+    ],
+    "HSF2": [
+      "human"
+    ],
+    "HSF4": [
+      "mouse"
+    ],
+    "HSPB1": [
+      "mouse"
+    ],
+    "HTATIP2": [
+      "human"
+    ],
+    "ID1": [
+      "mouse"
+    ],
+    "ID2": [
+      "mouse"
+    ],
+    "ID3": [
+      "mouse"
+    ],
+    "ID4": [
+      "human"
+    ],
+    "IFI16": [
+      "human"
+    ],
+    "IFI204": [
+      "mouse"
+    ],
+    "IFIH1": [
+      "mouse"
+    ],
+    "IKBKB": [
+      "mouse"
+    ],
+    "IKZF1": [
+      "mouse"
+    ],
+    "IKZF2": [
+      "mouse"
+    ],
+    "IKZF3": [
+      "mouse"
+    ],
+    "IL10": [
+      "mouse"
+    ],
+    "IL17A": [
+      "mouse"
+    ],
+    "IL4": [
+      "mouse"
+    ],
+    "ILF2": [
+      "mouse"
+    ],
+    "ILF3": [
+      "mouse"
+    ],
+    "ILK": [
+      "mouse"
+    ],
+    "ING1": [
+      "human"
+    ],
+    "ING2": [
+      "human"
+    ],
+    "ING4": [
+      "human"
+    ],
+    "INSM1": [
+      "mouse"
+    ],
+    "IRF2": [
+      "human"
+    ],
+    "IRF3": [
+      "mouse"
+    ],
+    "IRF4": [
+      "human"
+    ],
+    "IRF5": [
+      "mouse"
+    ],
+    "IRF6": [
+      "mouse"
+    ],
+    "IRF7": [
+      "human"
+    ],
+    "IRF8": [
+      "mouse"
+    ],
+    "IRF9": [
+      "human"
+    ],
+    "IRX3": [
+      "mouse"
+    ],
+    "IRX5": [
+      "mouse"
+    ],
+    "ISL1": [
+      "mouse"
+    ],
+    "JARID2": [
+      "mouse"
+    ],
+    "JAZF1": [
+      "mouse"
+    ],
+    "JDP2": [
+      "mouse"
+    ],
+    "JMJD1C": [
+      "mouse"
+    ],
+    "JUNB": [
+      "mouse"
+    ],
+    "JUND": [
+      "human"
+    ],
+    "KAT2B": [
+      "mouse"
+    ],
+    "KAT5": [
+      "mouse"
+    ],
+    "KAT6A": [
+      "human"
+    ],
+    "KCNIP3": [
+      "mouse"
+    ],
+    "KDM2A": [
+      "human"
+    ],
+    "KDM4B": [
+      "human"
+    ],
+    "KDM4C": [
+      "human"
+    ],
+    "KDM5B": [
+      "human"
+    ],
+    "KDM6B": [
+      "mouse"
+    ],
+    "KEAP1": [
+      "mouse"
+    ],
+    "KHDRBS1": [
+      "mouse"
+    ],
+    "KHSRP": [
+      "human"
+    ],
+    "KLF1": [
+      "human"
+    ],
+    "KLF10": [
+      "mouse"
+    ],
+    "KLF11": [
+      "mouse"
+    ],
+    "KLF12": [
+      "human"
+    ],
+    "KLF13": [
+      "mouse"
+    ],
+    "KLF14": [
+      "human"
+    ],
+    "KLF15": [
+      "mouse"
+    ],
+    "KLF16": [
+      "mouse"
+    ],
+    "KLF2": [
+      "mouse"
+    ],
+    "KLF3": [
+      "mouse"
+    ],
+    "KLF5": [
+      "mouse"
+    ],
+    "KLF6": [
+      "human"
+    ],
+    "KLF7": [
+      "mouse"
+    ],
+    "KLF8": [
+      "mouse"
+    ],
+    "KLF9": [
+      "mouse"
+    ],
+    "KMT2A": [
+      "human"
+    ],
+    "KPNA2": [
+      "mouse"
+    ],
+    "L3MBTL1": [
+      "human"
+    ],
+    "LBX1": [
+      "mouse"
+    ],
+    "LCOR": [
+      "human"
+    ],
+    "LDB1": [
+      "mouse"
+    ],
+    "LDB2": [
+      "mouse"
+    ],
+    "LEF1": [
+      "human"
+    ],
+    "LHX2": [
+      "mouse"
+    ],
+    "LHX3": [
+      "mouse"
+    ],
+    "LHX4": [
+      "mouse"
+    ],
+    "LHX9": [
+      "mouse"
+    ],
+    "LIMD1": [
+      "human"
+    ],
+    "LIN28A": [
+      "human"
+    ],
+    "LMO2": [
+      "mouse"
+    ],
+    "LMO3": [
+      "human"
+    ],
+    "LMO4": [
+      "human"
+    ],
+    "LMO7": [
+      "mouse"
+    ],
+    "LMX1B": [
+      "human"
+    ],
+    "LRF": [
+      "human"
+    ],
+    "LRRFIP1": [
+      "human"
+    ],
+    "LYL1": [
+      "mouse"
+    ],
+    "MAF": [
+      "mouse"
+    ],
+    "MAFA": [
+      "human"
+    ],
+    "MAFB": [
+      "mouse"
+    ],
+    "MAFF": [
+      "mouse"
+    ],
+    "MAFG": [
+      "mouse"
+    ],
+    "MAFK": [
+      "mouse"
+    ],
+    "MAL": [
+      "human"
+    ],
+    "MAML1": [
+      "human"
+    ],
+    "MAP3K7": [
+      "mouse"
+    ],
+    "MAPK1": [
+      "mouse"
+    ],
+    "MAPK14": [
+      "mouse"
+    ],
+    "MAX": [
+      "mouse"
+    ],
+    "MAZ": [
+      "human"
+    ],
+    "MBD1": [
+      "human"
+    ],
+    "MBD2": [
+      "human"
+    ],
+    "MBD3": [
+      "mouse"
+    ],
+    "MCM2": [
+      "human"
+    ],
+    "MCM3": [
+      "mouse"
+    ],
+    "MCM5": [
+      "human"
+    ],
+    "MCM6": [
+      "mouse"
+    ],
+    "MDM2": [
+      "mouse"
+    ],
+    "MDM4": [
+      "mouse"
+    ],
+    "MECP2": [
+      "mouse"
+    ],
+    "MED1": [
+      "mouse"
+    ],
+    "MED15": [
+      "human"
+    ],
+    "MED23": [
+      "mouse"
+    ],
+    "MED6": [
+      "mouse"
+    ],
+    "MED8": [
+      "mouse"
+    ],
+    "MEF2A": [
+      "human"
+    ],
+    "MEF2B": [
+      "human"
+    ],
+    "MEF2C": [
+      "human"
+    ],
+    "MEF2D": [
+      "human"
+    ],
+    "MEIS1": [
+      "human"
+    ],
+    "MEIS2": [
+      "mouse"
+    ],
+    "MEN1": [
+      "mouse"
+    ],
+    "MEOX1": [
+      "mouse"
+    ],
+    "MEOX2": [
+      "mouse"
+    ],
+    "MIXL1": [
+      "mouse"
+    ],
+    "MKL1": [
+      "mouse"
+    ],
+    "MKX": [
+      "mouse"
+    ],
+    "MLL2": [
+      "human"
+    ],
+    "MLL3": [
+      "human"
+    ],
+    "MLL4": [
+      "human"
+    ],
+    "MLLT10": [
+      "human"
+    ],
+    "MLLT3": [
+      "mouse"
+    ],
+    "MLX": [
+      "human"
+    ],
+    "MLXIPL": [
+      "mouse"
+    ],
+    "MMP9": [
+      "mouse"
+    ],
+    "MNT": [
+      "mouse"
+    ],
+    "MSC": [
+      "mouse"
+    ],
+    "MSX1": [
+      "mouse"
+    ],
+    "MSX2": [
+      "mouse"
+    ],
+    "MTA1": [
+      "human"
+    ],
+    "MTA2": [
+      "mouse"
+    ],
+    "MTA3": [
+      "human"
+    ],
+    "MTF1": [
+      "mouse"
+    ],
+    "MTF2": [
+      "mouse"
+    ],
+    "MXD1": [
+      "human"
+    ],
+    "MXD4": [
+      "human"
+    ],
+    "MXI1": [
+      "mouse"
+    ],
+    "MYB": [
+      "human"
+    ],
+    "MYBBP1A": [
+      "mouse"
+    ],
+    "MYBL1": [
+      "mouse"
+    ],
+    "MYBL2": [
+      "mouse"
+    ],
+    "MYCN": [
+      "human"
+    ],
+    "MYEF2": [
+      "mouse"
+    ],
+    "MYF5": [
+      "mouse"
+    ],
+    "MYF6": [
+      "mouse"
+    ],
+    "MYOCD": [
+      "mouse"
+    ],
+    "MYOD1": [
+      "mouse"
+    ],
+    "MYOG": [
+      "mouse"
+    ],
+    "MZF1": [
+      "human"
+    ],
+    "NAB1": [
+      "mouse"
+    ],
+    "NAB2": [
+      "mouse"
+    ],
+    "NANOG": [
+      "human"
+    ],
+    "NCOA1": [
+      "mouse"
+    ],
+    "NCOA2": [
+      "mouse"
+    ],
+    "NCOA3": [
+      "human"
+    ],
+    "NCOA4": [
+      "mouse"
+    ],
+    "NCOA5": [
+      "mouse"
+    ],
+    "NCOA6": [
+      "mouse"
+    ],
+    "NCOR1": [
+      "mouse"
+    ],
+    "NCOR2": [
+      "mouse"
+    ],
+    "NDN": [
+      "mouse"
+    ],
+    "NEAT1": [
+      "human"
+    ],
+    "NELFB": [
+      "human"
+    ],
+    "NELFCD": [
+      "human"
+    ],
+    "NEUROD1": [
+      "human"
+    ],
+    "NEUROD6": [
+      "mouse"
+    ],
+    "NEUROG1": [
+      "mouse"
+    ],
+    "NEUROG2": [
+      "mouse"
+    ],
+    "NEUROG3": [
+      "mouse"
+    ],
+    "NF1": [
+      "human"
+    ],
+    "NFAT5": [
+      "mouse"
+    ],
+    "NFATC1": [
+      "human"
+    ],
+    "NFATC2": [
+      "mouse"
+    ],
+    "NFATC2IP": [
+      "mouse"
+    ],
+    "NFATC3": [
+      "mouse"
+    ],
+    "NFATC4": [
+      "mouse"
+    ],
+    "NFE2": [
+      "human"
+    ],
+    "NFE2L1": [
+      "human"
+    ],
+    "NFE2L2": [
+      "mouse"
+    ],
+    "NFE2L3": [
+      "mouse"
+    ],
+    "NFIA": [
+      "mouse"
+    ],
+    "NFIB": [
+      "mouse"
+    ],
+    "NFIC": [
+      "mouse"
+    ],
+    "NFIL3": [
+      "mouse"
+    ],
+    "NFIX": [
+      "mouse"
+    ],
+    "NFKBIA": [
+      "human"
+    ],
+    "NFKBIB": [
+      "human"
+    ],
+    "NFKBIZ": [
+      "mouse"
+    ],
+    "NFRKB": [
+      "human"
+    ],
+    "NFYA": [
+      "mouse"
+    ],
+    "NFYB": [
+      "mouse"
+    ],
+    "NFYC": [
+      "mouse"
+    ],
+    "NHLH2": [
+      "mouse"
+    ],
+    "NKX2-1": [
+      "mouse"
+    ],
+    "NKX2-2": [
+      "mouse"
+    ],
+    "NKX2-3": [
+      "mouse"
+    ],
+    "NKX2-5": [
+      "mouse"
+    ],
+    "NKX2-9": [
+      "mouse"
+    ],
+    "NKX3-1": [
+      "mouse"
+    ],
+    "NKX3-2": [
+      "mouse"
+    ],
+    "NKX6-1": [
+      "mouse"
+    ],
+    "NME2": [
+      "mouse"
+    ],
+    "NONO": [
+      "mouse"
+    ],
+    "NOTCH1": [
+      "mouse"
+    ],
+    "NOTCH2": [
+      "mouse"
+    ],
+    "NOTCH3": [
+      "mouse"
+    ],
+    "NOTCH4": [
+      "mouse"
+    ],
+    "NPAS1": [
+      "mouse"
+    ],
+    "NPAS2": [
+      "human"
+    ],
+    "NPAS3": [
+      "human"
+    ],
+    "NPM1": [
+      "human"
+    ],
+    "NR0B1": [
+      "mouse"
+    ],
+    "NR0B2": [
+      "mouse"
+    ],
+    "NR1D1": [
+      "mouse"
+    ],
+    "NR1D2": [
+      "mouse"
+    ],
+    "NR1H2": [
+      "human"
+    ],
+    "NR1H3": [
+      "mouse"
+    ],
+    "NR1H4": [
+      "human"
+    ],
+    "NR1I2": [
+      "human"
+    ],
+    "NR1I3": [
+      "mouse"
+    ],
+    "NR2C1": [
+      "mouse"
+    ],
+    "NR2C2": [
+      "mouse"
+    ],
+    "NR2E1": [
+      "mouse"
+    ],
+    "NR2E3": [
+      "mouse"
+    ],
+    "NR2F1": [
+      "human"
+    ],
+    "NR2F2": [
+      "mouse"
+    ],
+    "NR2F6": [
+      "mouse"
+    ],
+    "NR3C1": [
+      "human"
+    ],
+    "NR3C2": [
+      "human"
+    ],
+    "NR4A1": [
+      "mouse"
+    ],
+    "NR4A2": [
+      "mouse"
+    ],
+    "NR4A3": [
+      "mouse"
+    ],
+    "NR5A1": [
+      "human"
+    ],
+    "NR5A2": [
+      "mouse"
+    ],
+    "NRF1": [
+      "mouse"
+    ],
+    "NRIP1": [
+      "mouse"
+    ],
+    "NRL": [
+      "mouse"
+    ],
+    "NUPR1": [
+      "mouse"
+    ],
+    "OLIG1": [
+      "mouse"
+    ],
+    "OLIG2": [
+      "mouse"
+    ],
+    "ONECUT1": [
+      "mouse"
+    ],
+    "ONECUT2": [
+      "human"
+    ],
+    "OTX1": [
+      "human"
+    ],
+    "OTX2": [
+      "human"
+    ],
+    "OVOL1": [
+      "mouse"
+    ],
+    "PA2G4": [
+      "human"
+    ],
+    "PARP1": [
+      "mouse"
+    ],
+    "PAWR": [
+      "human"
+    ],
+    "PAX1": [
+      "mouse"
+    ],
+    "PAX2": [
+      "human"
+    ],
+    "PAX3": [
+      "human"
+    ],
+    "PAX4": [
+      "human"
+    ],
+    "PAX5": [
+      "human"
+    ],
+    "PAX6": [
+      "human"
+    ],
+    "PAX7": [
+      "mouse"
+    ],
+    "PAX8": [
+      "human"
+    ],
+    "PAX9": [
+      "mouse"
+    ],
+    "PBRM1": [
+      "mouse"
+    ],
+    "PBX1": [
+      "mouse"
+    ],
+    "PBX2": [
+      "mouse"
+    ],
+    "PBX3": [
+      "human"
+    ],
+    "PBX4": [
+      "mouse"
+    ],
+    "PCBD1": [
+      "human"
+    ],
+    "PCBP2": [
+      "mouse"
+    ],
+    "PCGF2": [
+      "mouse"
+    ],
+    "PDCD11": [
+      "human"
+    ],
+    "PDX1": [
+      "human"
+    ],
+    "PEG3": [
+      "mouse"
+    ],
+    "PELP1": [
+      "mouse"
+    ],
+    "PER1": [
+      "mouse"
+    ],
+    "PER2": [
+      "mouse"
+    ],
+    "PGR": [
+      "human"
+    ],
+    "PHB2": [
+      "human"
+    ],
+    "PHF10": [
+      "human"
+    ],
+    "PHF12": [
+      "mouse"
+    ],
+    "PHF2": [
+      "mouse"
+    ],
+    "PHF8": [
+      "human"
+    ],
+    "PHOX2A": [
+      "mouse"
+    ],
+    "PHOX2B": [
+      "human"
+    ],
+    "PIAS1": [
+      "human"
+    ],
+    "PIAS2": [
+      "mouse"
+    ],
+    "PIAS3": [
+      "mouse"
+    ],
+    "PIAS4": [
+      "mouse"
+    ],
+    "PIR": [
+      "human"
+    ],
+    "PITX1": [
+      "mouse"
+    ],
+    "PITX2": [
+      "mouse"
+    ],
+    "PITX3": [
+      "mouse"
+    ],
+    "PKNOX1": [
+      "mouse"
+    ],
+    "PLAG1": [
+      "human"
+    ],
+    "PLAGL1": [
+      "human"
+    ],
+    "PLAGL2": [
+      "human"
+    ],
+    "PML": [
+      "human"
+    ],
+    "PNN": [
+      "mouse"
+    ],
+    "POLR1A": [
+      "human"
+    ],
+    "POU1F1": [
+      "human"
+    ],
+    "POU2AF1": [
+      "mouse"
+    ],
+    "POU2F1": [
+      "human"
+    ],
+    "POU2F2": [
+      "mouse"
+    ],
+    "POU2F3": [
+      "mouse"
+    ],
+    "POU3F1": [
+      "mouse"
+    ],
+    "POU3F2": [
+      "mouse"
+    ],
+    "POU3F3": [
+      "mouse"
+    ],
+    "POU3F4": [
+      "mouse"
+    ],
+    "POU4F1": [
+      "mouse"
+    ],
+    "POU4F2": [
+      "mouse"
+    ],
+    "POU4F3": [
+      "mouse"
+    ],
+    "POU5F1": [
+      "human"
+    ],
+    "PPARA": [
+      "mouse"
+    ],
+    "PPARD": [
+      "mouse"
+    ],
+    "PPARG": [
+      "human"
+    ],
+    "PPARGC1A": [
+      "mouse"
+    ],
+    "PPARGC1B": [
+      "mouse"
+    ],
+    "PRDM1": [
+      "mouse"
+    ],
+    "PRDM13": [
+      "mouse"
+    ],
+    "PRDM14": [
+      "human"
+    ],
+    "PRDM16": [
+      "mouse"
+    ],
+    "PRDM2": [
+      "human"
+    ],
+    "PRDM5": [
+      "mouse"
+    ],
+    "PRDM8": [
+      "mouse"
+    ],
+    "PREB": [
+      "human"
+    ],
+    "PRL": [
+      "mouse"
+    ],
+    "PROP1": [
+      "mouse"
+    ],
+    "PROX1": [
+      "mouse"
+    ],
+    "PRRX1": [
+      "mouse"
+    ],
+    "PRRX2": [
+      "mouse"
+    ],
+    "PTF1A": [
+      "mouse"
+    ],
+    "PTH": [
+      "mouse"
+    ],
+    "PTHLH": [
+      "mouse"
+    ],
+    "PTMA": [
+      "human"
+    ],
+    "PTTG1": [
+      "human"
+    ],
+    "PURA": [
+      "human"
+    ],
+    "PWP1": [
+      "mouse"
+    ],
+    "PYGO2": [
+      "mouse"
+    ],
+    "RAD51": [
+      "human"
+    ],
+    "RAF1": [
+      "mouse"
+    ],
+    "RALA": [
+      "mouse"
+    ],
+    "RARA": [
+      "human"
+    ],
+    "RARB": [
+      "mouse"
+    ],
+    "RARG": [
+      "mouse"
+    ],
+    "RAX": [
+      "mouse"
+    ],
+    "RB1": [
+      "human"
+    ],
+    "RB1CC1": [
+      "human"
+    ],
+    "RBBP7": [
+      "human"
+    ],
+    "RBL1": [
+      "human"
+    ],
+    "RBL2": [
+      "human"
+    ],
+    "RBMX": [
+      "mouse"
+    ],
+    "RBPJ": [
+      "human"
+    ],
+    "REL": [
+      "human"
+    ],
+    "RERE": [
+      "mouse"
+    ],
+    "REST": [
+      "human"
+    ],
+    "RFWD2": [
+      "human"
+    ],
+    "RFX1": [
+      "mouse"
+    ],
+    "RFX2": [
+      "human"
+    ],
+    "RFX3": [
+      "human"
+    ],
+    "RFX4": [
+      "mouse"
+    ],
+    "RFX5": [
+      "mouse"
+    ],
+    "RFXANK": [
+      "human"
+    ],
+    "RFXAP": [
+      "human"
+    ],
+    "RNF14": [
+      "human"
+    ],
+    "RNF2": [
+      "mouse"
+    ],
+    "RORA": [
+      "mouse"
+    ],
+    "RORC": [
+      "human"
+    ],
+    "RPS6KA5": [
+      "mouse"
+    ],
+    "RREB1": [
+      "human"
+    ],
+    "RUNX1T1": [
+      "mouse"
+    ],
+    "RUNX2": [
+      "human"
+    ],
+    "RUNX3": [
+      "human"
+    ],
+    "RUVBL1": [
+      "human"
+    ],
+    "RUVBL2": [
+      "mouse"
+    ],
+    "RXRA": [
+      "human"
+    ],
+    "RXRB": [
+      "mouse"
+    ],
+    "SALL1": [
+      "mouse"
+    ],
+    "SALL2": [
+      "mouse"
+    ],
+    "SALL3": [
+      "human"
+    ],
+    "SALL4": [
+      "human"
+    ],
+    "SALL4A": [
+      "human"
+    ],
+    "SATB1": [
+      "mouse"
+    ],
+    "SATB2": [
+      "mouse"
+    ],
+    "SCAND1": [
+      "human"
+    ],
+    "SCD5": [
+      "human"
+    ],
+    "SCX": [
+      "mouse"
+    ],
+    "SEC14L2": [
+      "human"
+    ],
+    "SERTAD1": [
+      "mouse"
+    ],
+    "SETBP1": [
+      "mouse"
+    ],
+    "SF1": [
+      "mouse"
+    ],
+    "SFPQ": [
+      "mouse"
+    ],
+    "SHH": [
+      "mouse"
+    ],
+    "SHOX": [
+      "human"
+    ],
+    "SHOX2": [
+      "mouse"
+    ],
+    "SIM1": [
+      "mouse"
+    ],
+    "SIM2": [
+      "mouse"
+    ],
+    "SIN3A": [
+      "mouse"
+    ],
+    "SIN3B": [
+      "mouse"
+    ],
+    "SIRT1": [
+      "mouse"
+    ],
+    "SIRT2": [
+      "human"
+    ],
+    "SIRT3": [
+      "human"
+    ],
+    "SIRT5": [
+      "mouse"
+    ],
+    "SIX1": [
+      "mouse"
+    ],
+    "SIX2": [
+      "mouse"
+    ],
+    "SIX3": [
+      "mouse"
+    ],
+    "SIX4": [
+      "mouse"
+    ],
+    "SIX5": [
+      "mouse"
+    ],
+    "SIX6": [
+      "mouse"
+    ],
+    "SKI": [
+      "human"
+    ],
+    "SKIL": [
+      "mouse"
+    ],
+    "SLA2": [
+      "mouse"
+    ],
+    "SLC2A4RG": [
+      "human"
+    ],
+    "SMAD1": [
+      "mouse"
+    ],
+    "SMAD2": [
+      "mouse"
+    ],
+    "SMAD5": [
+      "mouse"
+    ],
+    "SMAD6": [
+      "mouse"
+    ],
+    "SMAD7": [
+      "mouse"
+    ],
+    "SMAD9": [
+      "mouse"
+    ],
+    "SMARCA1": [
+      "human"
+    ],
+    "SMARCA2": [
+      "mouse"
+    ],
+    "SMARCA4": [
+      "mouse"
+    ],
+    "SMARCA5": [
+      "mouse"
+    ],
+    "SMARCB1": [
+      "human"
+    ],
+    "SMARCC1": [
+      "mouse"
+    ],
+    "SMARCD1": [
+      "mouse"
+    ],
+    "SMARCE1": [
+      "mouse"
+    ],
+    "SMG6": [
+      "human"
+    ],
+    "SMURF1": [
+      "mouse"
+    ],
+    "SMURF2": [
+      "mouse"
+    ],
+    "SMYD1": [
+      "mouse"
+    ],
+    "SNAI1": [
+      "mouse"
+    ],
+    "SNAI2": [
+      "human"
+    ],
+    "SND1": [
+      "mouse"
+    ],
+    "SNIP1": [
+      "human"
+    ],
+    "SNW1": [
+      "human"
+    ],
+    "SOX10": [
+      "human"
+    ],
+    "SOX11": [
+      "mouse"
+    ],
+    "SOX13": [
+      "mouse"
+    ],
+    "SOX14": [
+      "mouse"
+    ],
+    "SOX15": [
+      "mouse"
+    ],
+    "SOX17": [
+      "mouse"
+    ],
+    "SOX18": [
+      "mouse"
+    ],
+    "SOX2": [
+      "human"
+    ],
+    "SOX21": [
+      "mouse"
+    ],
+    "SOX4": [
+      "human"
+    ],
+    "SOX5": [
+      "mouse"
+    ],
+    "SOX6": [
+      "mouse"
+    ],
+    "SOX7": [
+      "mouse"
+    ],
+    "SOX8": [
+      "mouse"
+    ],
+    "SOX9": [
+      "human"
+    ],
+    "SP100": [
+      "human"
+    ],
+    "SP2": [
+      "mouse"
+    ],
+    "SP4": [
+      "human"
+    ],
+    "SP5": [
+      "mouse"
+    ],
+    "SP7": [
+      "mouse"
+    ],
+    "SP8": [
+      "mouse"
+    ],
+    "SP9": [
+      "mouse"
+    ],
+    "SPDEF": [
+      "human"
+    ],
+    "SPEN": [
+      "mouse"
+    ],
+    "SPIB": [
+      "mouse"
+    ],
+    "SPIC": [
+      "mouse"
+    ],
+    "SRCAP": [
+      "human"
+    ],
+    "SREBF1": [
+      "mouse"
+    ],
+    "SREBF2": [
+      "human"
+    ],
+    "SRF": [
+      "human"
+    ],
+    "SRRT": [
+      "mouse"
+    ],
+    "SRSF1": [
+      "human"
+    ],
+    "SRY": [
+      "human"
+    ],
+    "SSB": [
+      "mouse"
+    ],
+    "SSX2": [
+      "human"
+    ],
+    "STAT2": [
+      "human"
+    ],
+    "STAT4": [
+      "human"
+    ],
+    "STAT5": [
+      "human"
+    ],
+    "STAT5B": [
+      "human"
+    ],
+    "STAT6": [
+      "human"
+    ],
+    "SUFU": [
+      "mouse"
+    ],
+    "SUGP1": [
+      "human"
+    ],
+    "SUPT3H": [
+      "human"
+    ],
+    "SUZ12": [
+      "mouse"
+    ],
+    "SYT1": [
+      "mouse"
+    ],
+    "TAF1": [
+      "human"
+    ],
+    "TAF12": [
+      "mouse"
+    ],
+    "TAF4": [
+      "human"
+    ],
+    "TAF4B": [
+      "mouse"
+    ],
+    "TAF5": [
+      "human"
+    ],
+    "TAF9": [
+      "mouse"
+    ],
+    "TAL1": [
+      "human"
+    ],
+    "TARDBP": [
+      "mouse"
+    ],
+    "TAX1BP3": [
+      "mouse"
+    ],
+    "TBC1D22A": [
+      "human"
+    ],
+    "TBL1X": [
+      "human"
+    ],
+    "TBP": [
+      "mouse"
+    ],
+    "TBPL1": [
+      "mouse"
+    ],
+    "TBR1": [
+      "mouse"
+    ],
+    "TBX1": [
+      "mouse"
+    ],
+    "TBX18": [
+      "mouse"
+    ],
+    "TBX19": [
+      "mouse"
+    ],
+    "TBX2": [
+      "mouse"
+    ],
+    "TBX20": [
+      "mouse"
+    ],
+    "TBX21": [
+      "human"
+    ],
+    "TBX3": [
+      "mouse"
+    ],
+    "TBX4": [
+      "mouse"
+    ],
+    "TBX5": [
+      "mouse"
+    ],
+    "TBX6": [
+      "mouse"
+    ],
+    "TCF12": [
+      "mouse"
+    ],
+    "TCF19": [
+      "mouse"
+    ],
+    "TCF20": [
+      "mouse"
+    ],
+    "TCF21": [
+      "mouse"
+    ],
+    "TCF3": [
+      "mouse"
+    ],
+    "TCF4": [
+      "human"
+    ],
+    "TCF7": [
+      "human"
+    ],
+    "TCF7L2": [
+      "human"
+    ],
+    "TCFL5": [
+      "mouse"
+    ],
+    "TEAD1": [
+      "human"
+    ],
+    "TEAD2": [
+      "mouse"
+    ],
+    "TEAD4": [
+      "mouse"
+    ],
+    "TEF": [
+      "mouse"
+    ],
+    "TFAP2B": [
+      "mouse"
+    ],
+    "TFAP2C": [
+      "human"
+    ],
+    "TFAP2D": [
+      "mouse"
+    ],
+    "TFAP4": [
+      "human"
+    ],
+    "TFCP2": [
+      "human"
+    ],
+    "TFCP2L1": [
+      "human"
+    ],
+    "TFDP1": [
+      "mouse"
+    ],
+    "TFDP3": [
+      "human"
+    ],
+    "TFE3": [
+      "mouse"
+    ],
+    "TFEB": [
+      "human"
+    ],
+    "TFPT": [
+      "human"
+    ],
+    "TGFB1": [
+      "mouse"
+    ],
+    "TGFB1I1": [
+      "mouse"
+    ],
+    "TGIF1": [
+      "human"
+    ],
+    "THAP1": [
+      "mouse"
+    ],
+    "THAP11": [
+      "mouse"
+    ],
+    "THRA": [
+      "mouse"
+    ],
+    "THRAP3": [
+      "mouse"
+    ],
+    "THRB": [
+      "mouse"
+    ],
+    "TIAL1": [
+      "mouse"
+    ],
+    "TLE2": [
+      "mouse"
+    ],
+    "TLE3": [
+      "mouse"
+    ],
+    "TLR4": [
+      "mouse"
+    ],
+    "TLX1": [
+      "human"
+    ],
+    "TLX3": [
+      "mouse"
+    ],
+    "TNF": [
+      "mouse"
+    ],
+    "TNFAIP3": [
+      "mouse"
+    ],
+    "TOB1": [
+      "mouse"
+    ],
+    "TOP2B": [
+      "human"
+    ],
+    "TP53BP1": [
+      "human"
+    ],
+    "TP63": [
+      "human"
+    ],
+    "TP65": [
+      "human"
+    ],
+    "TP73": [
+      "human"
+    ],
+    "TRAF6": [
+      "human"
+    ],
+    "TRERF1": [
+      "human"
+    ],
+    "TRIB3": [
+      "human"
+    ],
+    "TRIM13": [
+      "mouse"
+    ],
+    "TRIM16": [
+      "human"
+    ],
+    "TRIM22": [
+      "human"
+    ],
+    "TRIM24": [
+      "mouse"
+    ],
+    "TRIM25": [
+      "human"
+    ],
+    "TRIM28": [
+      "mouse"
+    ],
+    "TRIM32": [
+      "mouse"
+    ],
+    "TRIP6": [
+      "human"
+    ],
+    "TRP53BP1": [
+      "mouse"
+    ],
+    "TRP63": [
+      "mouse"
+    ],
+    "TRP73": [
+      "mouse"
+    ],
+    "TRPS1": [
+      "human"
+    ],
+    "TRRAP": [
+      "mouse"
+    ],
+    "TSC22D1": [
+      "human"
+    ],
+    "TSC22D3": [
+      "human"
+    ],
+    "TSG101": [
+      "mouse"
+    ],
+    "TSHZ3": [
+      "mouse"
+    ],
+    "TTF1": [
+      "mouse"
+    ],
+    "TTF2": [
+      "mouse"
+    ],
+    "TWIST1": [
+      "human"
+    ],
+    "TWIST2": [
+      "human"
+    ],
+    "UBE2K": [
+      "mouse"
+    ],
+    "UBP1": [
+      "human"
+    ],
+    "UBTF": [
+      "human"
+    ],
+    "UHRF1": [
+      "human"
+    ],
+    "UPF1": [
+      "human"
+    ],
+    "UPF2": [
+      "human"
+    ],
+    "URI1": [
+      "human"
+    ],
+    "USF1": [
+      "human"
+    ],
+    "USF2": [
+      "human"
+    ],
+    "UTF1": [
+      "mouse"
+    ],
+    "VAX2": [
+      "mouse"
+    ],
+    "VEZF1": [
+      "mouse"
+    ],
+    "VHL": [
+      "human"
+    ],
+    "VSX2": [
+      "mouse"
+    ],
+    "WDR5": [
+      "human"
+    ],
+    "WHSC1": [
+      "human"
+    ],
+    "WHSC1L1": [
+      "mouse"
+    ],
+    "WNT1": [
+      "mouse"
+    ],
+    "WNT5A": [
+      "mouse"
+    ],
+    "WT1": [
+      "human"
+    ],
+    "WWP1": [
+      "mouse"
+    ],
+    "WWTR1": [
+      "mouse"
+    ],
+    "XBP1": [
+      "human"
+    ],
+    "XPC": [
+      "mouse"
+    ],
+    "XRCC5": [
+      "mouse"
+    ],
+    "XRCC6": [
+      "mouse"
+    ],
+    "YBX1": [
+      "mouse"
+    ],
+    "YEATS4": [
+      "human"
+    ],
+    "YY1": [
+      "human"
+    ],
+    "ZBTB14": [
+      "human"
+    ],
+    "ZBTB16": [
+      "human"
+    ],
+    "ZBTB17": [
+      "mouse"
+    ],
+    "ZBTB2": [
+      "mouse"
+    ],
+    "ZBTB20": [
+      "mouse"
+    ],
+    "ZBTB32": [
+      "mouse"
+    ],
+    "ZBTB33": [
+      "mouse"
+    ],
+    "ZBTB38": [
+      "mouse"
+    ],
+    "ZBTB5": [
+      "human"
+    ],
+    "ZBTB7A": [
+      "mouse"
+    ],
+    "ZEB1": [
+      "mouse"
+    ],
+    "ZEB2": [
+      "human"
+    ],
+    "ZFHX3": [
+      "human"
+    ],
+    "ZFP13": [
+      "mouse"
+    ],
+    "ZFP143": [
+      "mouse"
+    ],
+    "ZFP148": [
+      "mouse"
+    ],
+    "ZFP263": [
+      "mouse"
+    ],
+    "ZFP277": [
+      "mouse"
+    ],
+    "ZFP281": [
+      "mouse"
+    ],
+    "ZFP335": [
+      "mouse"
+    ],
+    "ZFP36": [
+      "human"
+    ],
+    "ZFP36L1": [
+      "human"
+    ],
+    "ZFP384": [
+      "mouse"
+    ],
+    "ZFP385A": [
+      "mouse"
+    ],
+    "ZFP410": [
+      "mouse"
+    ],
+    "ZFP42": [
+      "mouse"
+    ],
+    "ZFP423": [
+      "mouse"
+    ],
+    "ZFP488": [
+      "mouse"
+    ],
+    "ZFP513": [
+      "mouse"
+    ],
+    "ZFP523": [
+      "mouse"
+    ],
+    "ZFP64": [
+      "mouse"
+    ],
+    "ZFPM1": [
+      "mouse"
+    ],
+    "ZFPM2": [
+      "mouse"
+    ],
+    "ZHX2": [
+      "human"
+    ],
+    "ZHX3": [
+      "mouse"
+    ],
+    "ZIC1": [
+      "mouse"
+    ],
+    "ZIC2": [
+      "mouse"
+    ],
+    "ZIC3": [
+      "mouse"
+    ],
+    "ZMYND11": [
+      "human"
+    ],
+    "ZNF143": [
+      "human"
+    ],
+    "ZNF148": [
+      "human"
+    ],
+    "ZNF160": [
+      "human"
+    ],
+    "ZNF175": [
+      "human"
+    ],
+    "ZNF202": [
+      "human"
+    ],
+    "ZNF217": [
+      "human"
+    ],
+    "ZNF224": [
+      "human"
+    ],
+    "ZNF239": [
+      "human"
+    ],
+    "ZNF24": [
+      "human"
+    ],
+    "ZNF263": [
+      "mouse"
+    ],
+    "ZNF267": [
+      "human"
+    ],
+    "ZNF274": [
+      "human"
+    ],
+    "ZNF300": [
+      "human"
+    ],
+    "ZNF335": [
+      "human"
+    ],
+    "ZNF350": [
+      "human"
+    ],
+    "ZNF382": [
+      "human"
+    ],
+    "ZNF383": [
+      "human"
+    ],
+    "ZNF384": [
+      "human"
+    ],
+    "ZNF410": [
+      "human"
+    ],
+    "ZNF423": [
+      "human"
+    ],
+    "ZNF444": [
+      "human"
+    ],
+    "ZNF740": [
+      "mouse"
+    ],
+    "ZNF76": [
+      "human"
+    ],
+    "ZNRD1": [
+      "human"
+    ],
+    "ZSCAN10": [
+      "mouse"
+    ]
+  }
+}

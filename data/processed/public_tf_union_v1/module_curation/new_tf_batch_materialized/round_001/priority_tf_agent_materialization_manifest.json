@@ -1,0 +1,326 @@
+{
+  "boundary_audit_rows": 0,
+  "canonical_database_writes": false,
+  "decision_counts": {
+    "database_only_unverified": 94,
+    "promote_to_22B": 6
+  },
+  "decision_rows": 100,
+  "errors": [],
+  "frozen_release_modified": false,
+  "held_rows": 94,
+  "module_specific_review_rows": 23,
+  "policy": {
+    "cross_module_evidence": "retained in module_specific_review_queue.tsv; no citation-overlap-only promotion",
+    "independent_corroboration": "required for promoted rows with actual cross-module relevance",
+    "public_tf_default_module": "22B"
+  },
+  "promoted_rows": 6,
+  "promotion_module_counts": {
+    "22B": 6
+  },
+  "source_link_rows": 345,
+  "status": "pass",
+  "tf_species_coverage": {
+    "AHR": [
+      "human"
+    ],
+    "ARNT": [
+      "human"
+    ],
+    "ATF4": [
+      "human"
+    ],
+    "ATF6": [
+      "human"
+    ],
+    "BACH1": [
+      "human"
+    ],
+    "BMAL1": [
+      "human"
+    ],
+    "BRCA1": [
+      "human"
+    ],
+    "CDX2": [
+      "human"
+    ],
+    "CEBPD": [
+      "mouse"
+    ],
+    "CLOCK": [
+      "human"
+    ],
+    "CREM": [
+      "human"
+    ],
+    "CTNNB1": [
+      "human"
+    ],
+    "DDIT3": [
+      "human"
+    ],
+    "E2F4": [
+      "human"
+    ],
+    "EP300": [
+      "human"
+    ],
+    "EPAS1": [
+      "human"
+    ],
+    "ERG": [
+      "human"
+    ],
+    "ESR2": [
+      "human"
+    ],
+    "ETS2": [
+      "human"
+    ],
+    "ETV4": [
+      "human"
+    ],
+    "FOSL1": [
+      "mouse"
+    ],
+    "FOXA1": [
+      "human"
+    ],
+    "FOXA2": [
+      "human"
+    ],
+    "FOXM1": [
+      "human"
+    ],
+    "FOXO1": [
+      "mouse"
+    ],
+    "FOXO3": [
+      "human"
+    ],
+    "FOXP3": [
+      "mouse"
+    ],
+    "GATA1": [
+      "human"
+    ],
+    "GATA2": [
+      "human"
+    ],
+    "GATA4": [
+      "mouse"
+    ],
+    "GLI1": [
+      "human"
+    ],
+    "GLI2": [
+      "mouse"
+    ],
+    "HDAC1": [
+      "human"
+    ],
+    "HES1": [
+      "human"
+    ],
+    "HNF1A": [
+      "human"
+    ],
+    "HSF1": [
+      "human"
+    ],
+    "IRF3": [
+      "mouse"
+    ],
+    "IRF7": [
+      "human"
+    ],
+    "JUND": [
+      "human"
+    ],
+    "KLF1": [
+      "human"
+    ],
+    "KMT2A": [
+      "human"
+    ],
+    "LEF1": [
+      "human"
+    ],
+    "MAFA": [
+      "human"
+    ],
+    "MEF2A": [
+      "human"
+    ],
+    "MYB": [
+      "human"
+    ],
+    "MYCN": [
+      "human"
+    ],
+    "MYOD1": [
+      "mouse"
+    ],
+    "NANOG": [
+      "human"
+    ],
+    "NEUROD1": [
+      "human"
+    ],
+    "NFATC2": [
+      "mouse"
+    ],
+    "NFE2L2": [
+      "mouse"
+    ],
+    "NFKBIA": [
+      "human"
+    ],
+    "NR1H2": [
+      "human"
+    ],
+    "NR1H3": [
+      "mouse"
+    ],
+    "NR1H4": [
+      "human"
+    ],
+    "NR1I2": [
+      "human"
+    ],
+    "NR3C1": [
+      "human"
+    ],
+    "NR5A1": [
+      "human"
+    ],
+    "PAX5": [
+      "human"
+    ],
+    "PAX6": [
+      "human"
+    ],
+    "PAX8": [
+      "human"
+    ],
+    "PDX1": [
+      "human"
+    ],
+    "PGR": [
+      "human"
+    ],
+    "POU1F1": [
+      "human"
+    ],
+    "POU2F1": [
+      "human"
+    ],
+    "POU5F1": [
+      "human"
+    ],
+    "PPARA": [
+      "mouse"
+    ],
+    "PPARG": [
+      "human"
+    ],
+    "RARA": [
+      "human"
+    ],
+    "RBPJ": [
+      "human"
+    ],
+    "REL": [
+      "human"
+    ],
+    "REST": [
+      "human"
+    ],
+    "RUNX2": [
+      "human"
+    ],
+    "RXRA": [
+      "human"
+    ],
+    "SMAD2": [
+      "mouse"
+    ],
+    "SNAI1": [
+      "mouse"
+    ],
+    "SNAI2": [
+      "human"
+    ],
+    "SOX10": [
+      "human"
+    ],
+    "SOX2": [
+      "human"
+    ],
+    "SOX9": [
+      "human"
+    ],
+    "SREBF1": [
+      "mouse"
+    ],
+    "SREBF2": [
+      "human"
+    ],
+    "SRF": [
+      "human"
+    ],
+    "STAT4": [
+      "human"
+    ],
+    "STAT5B": [
+      "human"
+    ],
+    "STAT6": [
+      "human"
+    ],
+    "TAL1": [
+      "human"
+    ],
+    "TBX21": [
+      "human"
+    ],
+    "TCF4": [
+      "human"
+    ],
+    "TCF7L2": [
+      "human"
+    ],
+    "TFAP2C": [
+      "human"
+    ],
+    "TP63": [
+      "human"
+    ],
+    "TP73": [
+      "human"
+    ],
+    "TWIST1": [
+      "human"
+    ],
+    "USF1": [
+      "human"
+    ],
+    "USF2": [
+      "human"
+    ],
+    "WT1": [
+      "human"
+    ],
+    "YY1": [
+      "human"
+    ],
+    "ZEB1": [
+      "mouse"
+    ],
+    "ZEB2": [
+      "human"
+    ]
+  }
+}

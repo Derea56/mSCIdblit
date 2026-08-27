@@ -1,0 +1,27 @@
+species	tf_symbol	tf_key	source_labels	source_record_count	records_with_reference	unique_reference_pmids	source_registries	mapping_decision	frozen_entity_match_status	frozen_entity_ids	explicit_tf_role_present	default_module	existing_module_overlap_flags	both_species_present	priority_rank	review_status	notes
+human	TOB1	tob1	TOB1	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1001	new_candidate	
+mouse	Tob1	tob1	Tob1	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1001	new_candidate	
+human	UTF1	utf1	UTF1	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1001	new_candidate	
+mouse	Utf1	utf1	Utf1	1	1	1	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1001	new_candidate	
+human	GRHL2	grhl2	GRHL2	3	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		true	1000	new_candidate	no PMID parsed from imported source records
+mouse	Grhl2	grhl2	Grhl2	2	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		true	1000	new_candidate	no PMID parsed from imported source records
+human	SOX13	sox13	SOX13	2	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		true	1000	new_candidate	no PMID parsed from imported source records
+mouse	Sox13	sox13	Sox13	2	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		true	1000	new_candidate	no PMID parsed from imported source records
+human	THAP1	thap1	THAP1	1	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		true	1000	new_candidate	no PMID parsed from imported source records
+mouse	Thap1	thap1	Thap1	1	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		true	1000	new_candidate	no PMID parsed from imported source records
+human	ZNF740	znf740	ZNF740	2	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		true	1000	new_candidate	no PMID parsed from imported source records
+mouse	Znf740	znf740	Znf740	2	0	0	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		true	1000	new_candidate	no PMID parsed from imported source records
+mouse	F6Y2T6	f6y2t6	F6Y2T6	30	30	214	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		false	221	new_candidate	
+mouse	A4QPD3	a4qpd3	A4QPD3	18	18	182	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		false	186	new_candidate	
+mouse	E9QQ91	e9qq91	E9QQ91	19	19	106	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		false	110	new_candidate	
+mouse	Notch1	notch1	Notch1	24	24	21	TRRUST	normalized_exact	mapped_unique	12867	false	22B		false	77	new_candidate	
+mouse	A2A5C3	a2a5c3	A2A5C3	18	17	69	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		false	73	new_candidate	
+mouse	B5B2N2	b5b2n2	B5B2N2	9	5	56	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		false	58	new_candidate	
+mouse	Tgfb1	tgfb1	Tgfb1	5	5	5	TRRUST	normalized_exact	mapped_unique	13531	false	22B		false	56	new_candidate	
+mouse	Notch2	notch2	Notch2	4	4	4	TRRUST	normalized_exact	mapped_unique	12868	false	22B		false	55	new_candidate	
+mouse	Nfatc4	nfatc4	Nfatc4	4	4	3	TRRUST	normalized_exact	mapped_unique	12781	true	22B		false	54	new_candidate	
+mouse	Tnf	tnf	Tnf	2	2	2	TRRUST	normalized_exact	mapped_unique	13468	false	22B		false	52	new_candidate	
+mouse	Wnt1	wnt1	Wnt1	4	4	1	TRRUST	normalized_exact	mapped_unique	13683	false	22B		false	52	new_candidate	
+mouse	Bmp4	bmp4	Bmp4	1	1	1	TRRUST	normalized_exact	mapped_unique	11352	false	22B		false	51	new_candidate	
+mouse	Bmp6	bmp6	Bmp6	1	1	1	TRRUST	normalized_exact	mapped_unique	11354	false	22B		false	51	new_candidate	
+mouse	Ccnd1	ccnd1	Ccnd1	1	1	1	TRRUST	normalized_exact	mapped_unique	11567	false	22B		false	51	new_candidate	

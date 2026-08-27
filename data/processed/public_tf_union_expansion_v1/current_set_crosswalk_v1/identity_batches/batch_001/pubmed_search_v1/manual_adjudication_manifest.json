@@ -1,0 +1,13 @@
+{
+  "status": "staging_adjudication_only",
+  "search_hit_groups_reviewed": 7,
+  "promote_to_22B_staging": 1,
+  "do_not_promote_false_or_weak_matches": 6,
+  "module_evidence_promotions_performed": false,
+  "canonical_write_performed": false,
+  "notes": [
+    "The BHLHA15-RAB26 abstract is the only pilot hit that explicitly identifies the target relationship; it remains held pending full-text and independent exact-pair corroboration.",
+    "The automated screen overcalled short symbols such as PC and expression/inference papers; those rules should be tightened before larger searches."
+  ],
+  "output": "manual_adjudication.tsv"
+}

@@ -1,0 +1,45 @@
+{
+  "cross_module_shared_paper_records": 51,
+  "module_queue_counts": {
+    "20B": 25,
+    "21B": 3,
+    "22A/22B": 45795,
+    "23B": 20,
+    "24B": 3
+  },
+  "priority_tf_records": 10620,
+  "priority_tfs": [
+    "atf2",
+    "cebpb",
+    "egr1",
+    "ets1",
+    "fos",
+    "gata3",
+    "hif1a",
+    "irf1",
+    "jun",
+    "klf4",
+    "myc",
+    "nfkb2",
+    "runx1",
+    "sp1",
+    "stat1",
+    "tp53"
+  ],
+  "promotion_policy": {
+    "automatic_promotions": false,
+    "cross_module_paper_reuse": "requires independent corroboration before promotion",
+    "default_public_tf_route": "22A/22B",
+    "frozen_release_modified": false
+  },
+  "public_reference_reuse_records": 26223,
+  "reference_paper_reuse_audit_rows": 62102,
+  "source_records": 45795,
+  "status": "staged_for_curation",
+  "summary": {
+    "cross_module_shared_paper_records": 51,
+    "priority_tf_records": 10620,
+    "public_reference_reuse_records": 26223,
+    "same_module_shared_paper_records": 3
+  }
+}

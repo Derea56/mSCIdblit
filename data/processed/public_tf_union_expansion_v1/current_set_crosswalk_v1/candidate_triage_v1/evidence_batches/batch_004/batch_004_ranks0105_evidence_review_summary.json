@@ -1,0 +1,25 @@
+{
+  "batch_id": "public_tf_evidence_batch_004",
+  "canonical_writes_performed": false,
+  "decision": "Retain all 20 pairs as database-attributed search leads; TGIF2/ABCA1 is a TGIF1 paralog near match and no exact pair met the promotion threshold.",
+  "exact_pair_support_rows": 0,
+  "exportable_pair_rows": 0,
+  "general_regulator_evidence_rows": 5,
+  "module22b_promotions_performed": false,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_004/public_tf_evidence_review_batch004_ranks0105_pairs.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_004/public_tf_evidence_review_batch004_ranks0105_regulator_register.tsv"
+  ],
+  "pair_rows_reviewed": 20,
+  "partial_or_near_match_rows": 1,
+  "provenance_preserved": true,
+  "source_set_ranks_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "status": "staging_only",
+  "unique_regulators_reviewed": 5
+}

@@ -1,0 +1,21 @@
+species	tf_symbol	tf_key	source_labels	source_record_count	records_with_reference	unique_reference_pmids	source_registries	mapping_decision	frozen_entity_match_status	frozen_entity_ids	explicit_tf_role_present	default_module	existing_module_overlap_flags	both_species_present	priority_rank	review_status	notes
+human	UHRF1	uhrf1	UHRF1	5	5	5	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	6	new_candidate	
+human	ZFHX3	zfhx3	ZFHX3	5	5	5	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	6	new_candidate	
+mouse	Zfp148	zfp148	Zfp148	6	6	5	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	6	new_candidate	
+human	ZNF24	znf24	ZNF24	5	5	5	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	6	new_candidate	
+mouse	B1AUF1	b1auf1	B1AUF1	1	1	5	OmniPath_DoRothEA	normalized_exact	absent_from_frozen_graph		false	22B		false	5	new_candidate	
+human	CTBP1	ctbp1	CTBP1	4	4	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	5	new_candidate	
+human	DEK	dek	DEK	5	5	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	5	new_candidate	
+human	EAPP	eapp	EAPP	4	4	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	5	new_candidate	
+human	GCM1	gcm1	GCM1	4	4	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	5	new_candidate	
+human	GTF3A	gtf3a	GTF3A	5	5	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	5	new_candidate	
+mouse	Hoxa2	hoxa2	Hoxa2	4	4	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	5	new_candidate	
+human	IFI16	ifi16	IFI16	5	5	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	5	new_candidate	
+human	PA2G4	pa2g4	PA2G4	5	5	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	5	new_candidate	
+mouse	Prrx1	prrx1	Prrx1	4	4	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	5	new_candidate	
+mouse	Smarca2	smarca2	Smarca2	5	5	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	5	new_candidate	
+mouse	Sp8	sp8	Sp8	4	4	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	5	new_candidate	
+mouse	Tcf21	tcf21	Tcf21	6	6	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	5	new_candidate	
+mouse	Zfpm1	zfpm1	Zfpm1	5	5	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	5	new_candidate	
+human	ZNF224	znf224	ZNF224	3	3	5	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	5	new_candidate	
+human	ZNF350	znf350	ZNF350	4	4	4	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		false	5	new_candidate	

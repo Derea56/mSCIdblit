@@ -1,0 +1,81 @@
+{
+  "canonical_write_performed": false,
+  "clean_identity_candidates_available": 857,
+  "inputs": {
+    "human_gmt": {
+      "path": "data/raw/public_database_snapshots/tf_union_expansion_v1/tflink_human_v1.0.gmt",
+      "sha256": "4b253ad538edd311071b925213ef16647bef1ddb98aca8d36d6a74f63054e11d"
+    },
+    "mouse_gmt": {
+      "path": "data/raw/public_database_snapshots/tf_union_expansion_v1/tflink_mouse_v1.0.gmt",
+      "sha256": "b06c59dae999026247a1cd5d027688b6f5a46c7b83450e946f54c40103587e07"
+    },
+    "triage": "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/promote_identity_staging.tsv"
+  },
+  "limitations": [
+    "Identity staging is not Module 22B evidence promotion.",
+    "TFLink GMT targets are search leads, not independently verified TF-target assertions.",
+    "Human and mouse leads remain separate."
+  ],
+  "module_evidence_promotions_performed": false,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/identity_batches/batch_001/identity_staging_batch_001.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/identity_batches/batch_001/tflink_pair_search_leads.tsv"
+  ],
+  "pair_search_lead_rows": 490,
+  "ranking": "descending TFLink target-count, identity-source-count, normalized TF key",
+  "selected_identity_candidates": 100,
+  "selection_size_requested": 100,
+  "status": "staging_pilot_only",
+  "targets_per_species": 4,
+  "tf_species_without_tflink_leads": [
+    "mbd4|mouse",
+    "ebf2|human",
+    "isx|human",
+    "arid2|mouse",
+    "gatad2b|mouse",
+    "zbtb48|mouse",
+    "zfp57|human",
+    "zbtb26|mouse",
+    "mecom|mouse",
+    "zscan22|mouse",
+    "zhx1|mouse",
+    "sp140|mouse",
+    "cenpa|mouse",
+    "purb|human",
+    "mxd3|mouse",
+    "homez|mouse",
+    "ikzf5|mouse",
+    "prdm10|mouse",
+    "gmeb2|mouse",
+    "zbtb11|mouse",
+    "zfhx2|mouse",
+    "mynn|mouse",
+    "fezf2|human",
+    "myt1l|human",
+    "patz1|mouse",
+    "zbtb40|mouse",
+    "zbtb25|mouse",
+    "zkscan8|mouse",
+    "fezf1|mouse",
+    "zgpat|mouse",
+    "npas4|human",
+    "scrt1|mouse",
+    "hoxa6|mouse",
+    "zbtb42|mouse",
+    "rbak|mouse",
+    "hoxc5|mouse",
+    "myrf|mouse",
+    "zbtb6|mouse",
+    "osr2|mouse",
+    "zfp1|mouse",
+    "zbtb8a|mouse",
+    "hmg20a|mouse",
+    "gmeb1|mouse",
+    "tead3|mouse",
+    "son|mouse",
+    "zxdc|mouse",
+    "casz1|mouse",
+    "osr1|human"
+  ]
+}

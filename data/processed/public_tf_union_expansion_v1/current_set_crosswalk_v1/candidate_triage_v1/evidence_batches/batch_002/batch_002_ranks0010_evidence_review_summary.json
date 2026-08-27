@@ -1,0 +1,30 @@
+{
+  "batch_id": "public_tf_evidence_batch_002",
+  "canonical_writes_performed": false,
+  "decision": "Keep all 40 pairs as database-attributed search leads. PATZ1-to-ADAM17 is a co-expression-only near match and remains non-promotable.",
+  "exact_pair_support_rows": 0,
+  "exportable_pair_rows": 0,
+  "general_regulator_evidence_rows": 10,
+  "module22b_promotions_performed": false,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_002/public_tf_evidence_review_batch002_ranks0010_pairs.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_002/public_tf_evidence_review_batch002_ranks0010_regulator_register.tsv"
+  ],
+  "pair_rows_reviewed": 40,
+  "partial_or_near_match_rows": 1,
+  "provenance_preserved": true,
+  "source_set_ranks_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "status": "staging_only",
+  "unique_regulators_reviewed": 10
+}

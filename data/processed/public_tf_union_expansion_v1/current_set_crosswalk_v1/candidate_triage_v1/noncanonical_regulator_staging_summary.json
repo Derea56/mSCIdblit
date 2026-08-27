@@ -1,0 +1,48 @@
+{
+  "canonical_writes_performed": false,
+  "classification_confidence_counts": {
+    "high_signal_screen": 168,
+    "provisional_screen": 27
+  },
+  "duplicate_regulator_keys": 0,
+  "evidence_readiness_counts": {
+    "aggregated_target_lead_only": 139,
+    "identity_catalog_only": 12,
+    "identity_plus_aggregated_target_lead": 41,
+    "identity_plus_profile_only": 3
+  },
+  "input_rows": 2051,
+  "module22b_promotions_performed": false,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/noncanonical_regulator_staging.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/noncanonical_regulator_staging_summary.json"
+  ],
+  "policy": {
+    "module22b": "role staging does not create strict TF identity or TF-target evidence",
+    "provenance": "source registries and parent identity records remain authoritative",
+    "screen": "conservative exact-symbol and family-prefix role screen",
+    "species": "human/mouse evidence remains separate during later review"
+  },
+  "role_category_counts": {
+    "chromatin_modifier_or_reader": 72,
+    "chromatin_modifier_or_reader;chromatin_remodeler_or_architecture": 4,
+    "chromatin_modifier_or_reader;transcriptional_modifier_or_elongation_factor": 3,
+    "chromatin_remodeler_or_architecture": 38,
+    "transcriptional_coregulator_or_complex": 56,
+    "transcriptional_coregulator_or_complex;transcriptional_modifier_or_elongation_factor": 2,
+    "transcriptional_modifier_or_elongation_factor": 20
+  },
+  "source_registry_presence_counts": {
+    "AnimalTFDB3": 44,
+    "JASPAR_CORE": 4,
+    "Lambert_HumanTFs": 36,
+    "TFLink": 180
+  },
+  "staged_rows": 195,
+  "status": "staging_only",
+  "triage_bucket_counts": {
+    "manual_identity_review": 5,
+    "prioritize_target_evidence_search": 165,
+    "promote_identity_staging": 25
+  }
+}

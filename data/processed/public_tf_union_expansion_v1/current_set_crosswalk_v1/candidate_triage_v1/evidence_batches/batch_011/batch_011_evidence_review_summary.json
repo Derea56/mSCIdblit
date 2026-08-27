@@ -1,0 +1,59 @@
+{
+  "batch_id": "public_tf_evidence_batch_011",
+  "binding_dataset_only_not_promotable_rows": 87,
+  "bounded_negative_rows": 0,
+  "canonical_writes_performed": false,
+  "database_membership_only_not_promotable_rows": 13,
+  "exact_pair_status_counts": {
+    "binding_dataset_only_not_promotable": 87,
+    "database_membership_only_not_promotable": 13
+  },
+  "exact_pair_support_rows": 0,
+  "exportable_pair_rows": 0,
+  "limitations": [
+    "TFLink/GTRD/MSigDB membership is database/binding evidence, not causal regulation.",
+    "Some TFLink-only rows are retained separately from independently corroborated GTRD/MSigDB promoter occupancy.",
+    "Target-cell presence, downstream activation, and upstream relay remain unestablished for all queued pairs.",
+    "No canonical or Module 22B write was performed."
+  ],
+  "module22b_promotions_performed": false,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_011/public_tf_evidence_review_batch011_pairs.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_011/public_tf_evidence_review_batch011_regulator_register.tsv"
+  ],
+  "pair_rows_reviewed": 100,
+  "partial_or_near_match_rows": 0,
+  "promotion_candidate_rows": 0,
+  "provenance_preserved": true,
+  "regulator_register_rows": 25,
+  "source_set_ranks_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "status": "staging_only",
+  "unique_provenance_aware_pairs": 100,
+  "unique_regulators_reviewed": 25
+}

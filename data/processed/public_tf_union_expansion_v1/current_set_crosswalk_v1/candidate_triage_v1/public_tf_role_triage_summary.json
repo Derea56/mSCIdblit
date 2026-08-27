@@ -1,0 +1,51 @@
+{
+  "canonical_writes_performed": false,
+  "duplicate_regulator_keys": 0,
+  "input_rows": 2051,
+  "module22b_eligibility_counts": {
+    "not_ready_alias_or_artifact_review": 2,
+    "not_ready_identifier_unresolved": 16,
+    "not_ready_pending_identity_and_pair_review": 678,
+    "not_ready_pending_role_and_pair_review": 233,
+    "not_ready_profile_only": 4,
+    "not_strict_tf_pending_functional_review": 91,
+    "not_strict_tf_pending_role_and_pair_review": 195,
+    "strict_tf_candidate_pending_exact_pair_review": 832
+  },
+  "module22b_promotions_performed": false,
+  "original_triage_bucket_counts": {
+    "exclude_from_automatic_module_promotion_profile_only": 4,
+    "exclude_unresolved_identifier": 16,
+    "manual_identity_review": 684,
+    "prioritize_target_evidence_search": 478,
+    "promote_identity_staging": 869
+  },
+  "output_rows": 2051,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/public_tf_role_triage.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/public_tf_role_triage_summary.json"
+  ],
+  "policy": {
+    "evidence": "role classification does not establish exact TF-target evidence",
+    "primary_role": "mutually exclusive conservative staging category",
+    "provenance": "source registries and parent identity records are retained",
+    "species": "human and mouse remain separate during evidence review"
+  },
+  "primary_role_category_counts": {
+    "alias_or_ingestion_artifact_review": 2,
+    "binding_profile_only": 4,
+    "catalog_concordant_tf_candidate": 818,
+    "dna_repair_or_genome_maintenance": 18,
+    "dual_role_tf_chromatin_candidate": 14,
+    "identity_review_unclassified": 678,
+    "noncanonical_transcriptional_regulator": 195,
+    "nuclear_machinery_or_structural_not_regulatory": 8,
+    "nuclear_structure_or_transport": 7,
+    "provisional_nuclear_transcriptional_regulator": 3,
+    "regulon_lead_unclassified": 233,
+    "rna_binding_or_post_transcriptional": 26,
+    "signaling_metabolic_membrane_or_cell_cycle": 29,
+    "unresolved_identifier": 16
+  },
+  "status": "staging_only"
+}

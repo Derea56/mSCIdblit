@@ -1,0 +1,41 @@
+species	tf_symbol	tf_key	source_labels	source_record_count	records_with_reference	unique_reference_pmids	source_registries	mapping_decision	frozen_entity_match_status	frozen_entity_ids	explicit_tf_role_present	default_module	existing_module_overlap_flags	both_species_present	priority_rank	review_status	notes
+human	POU1F1	pou1f1	POU1F1	18	18	298	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1254	new_candidate	
+human	SNAI2	snai2	SNAI2	19	19	252	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1254	new_candidate	
+mouse	Pdx1	pdx1	Pdx1	13	13	265	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1253	new_candidate	
+mouse	Snai2	snai2	Snai2	15	15	251	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1253	new_candidate	
+human	STAT6	stat6	STAT6	52	52	189	OmniPath_DoRothEA;TRRUST	normalized_exact	mapped_unique	13290	true	22B		true	1252	new_candidate	
+human	PDX1	pdx1	PDX1	6	6	278	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1251	new_candidate	
+human	YY1	yy1	YY1	186	178	205	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1251	new_candidate	
+human	HNF1A	hnf1a	HNF1A	54	54	234	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1247	new_candidate	
+human	FOXM1	foxm1	FOXM1	55	48	233	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1246	new_candidate	
+mouse	Tbx21	tbx21	Tbx21	20	17	236	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1241	new_candidate	
+mouse	Runx2	runx2	Runx2	77	77	221	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1240	new_candidate	
+human	TBX21	tbx21	TBX21	23	20	233	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1238	new_candidate	
+human	USF1	usf1	USF1	138	137	200	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1234	new_candidate	
+human	TWIST1	twist1	TWIST1	55	53	210	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1223	new_candidate	
+mouse	Twist1	twist1	Twist1	46	44	210	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1221	new_candidate	
+mouse	Usf1	usf1	Usf1	86	85	198	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1219	new_candidate	
+human	STAT4	stat4	STAT4	21	20	136	OmniPath_DoRothEA;TRRUST	normalized_exact	mapped_unique	13286	true	22B	20B	true	1216	new_candidate	module overlap is a routing flag, not cross-module evidence
+human	REL	rel	REL	42	42	197	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1207	new_candidate	
+human	GATA1	gata1	GATA1	85	84	183	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1204	new_candidate	
+human	DDIT3	ddit3	DDIT3	28	28	186	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1193	new_candidate	
+mouse	Yy1	yy1	Yy1	106	100	163	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1189	new_candidate	
+human	RARA	rara	RARA	77	67	168	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1187	new_candidate	
+mouse	Irf7	irf7	Irf7	23	23	177	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1182	new_candidate	
+human	IRF7	irf7	IRF7	18	18	172	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1176	new_candidate	
+mouse	Nfatc2	nfatc2	Nfatc2	33	33	168	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1176	new_candidate	
+mouse	Pou1f1	pou1f1	Pou1f1	11	11	171	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1173	new_candidate	
+human	ATF6	atf6	ATF6	25	25	166	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1172	new_candidate	
+mouse	Bach1	bach1	Bach1	34	11	161	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1169	new_candidate	
+mouse	Ddit3	ddit3	Ddit3	8	8	167	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1169	new_candidate	
+human	BACH1	bach1	BACH1	32	9	159	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1167	new_candidate	
+mouse	Rara	rara	Rara	55	47	154	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1167	new_candidate	
+human	NFATC2	nfatc2	NFATC2	17	17	158	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1162	new_candidate	
+human	RUNX2	runx2	RUNX2	28	27	142	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1149	new_candidate	
+mouse	Atf6	atf6	Atf6	12	12	139	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1142	new_candidate	
+mouse	Gata1	gata1	Gata1	36	35	119	OmniPath_DoRothEA;TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1128	new_candidate	
+mouse	Stat4	stat4	Stat4	8	8	9	TRRUST	normalized_exact	mapped_unique	13286	true	22B	20B	true	1086	new_candidate	module overlap is a routing flag, not cross-module evidence
+mouse	Stat6	stat6	Stat6	17	17	18	TRRUST	normalized_exact	mapped_unique	13290	true	22B		true	1072	new_candidate	
+mouse	Rel	rel	Rel	36	36	39	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1048	new_candidate	
+mouse	Hnf1a	hnf1a	Hnf1a	30	30	19	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1026	new_candidate	
+mouse	Foxm1	foxm1	Foxm1	23	23	16	TRRUST	normalized_exact	absent_from_frozen_graph		false	22B		true	1021	new_candidate	

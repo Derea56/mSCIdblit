@@ -1,0 +1,60 @@
+{
+  "batch_id": "public_tf_evidence_batch_028",
+  "canonical_writes_performed": false,
+  "exact_pair_status_counts": {
+    "binding_profile_only_not_promotable": 21,
+    "cross_species_profile_near_match_not_promotable": 1,
+    "database_membership_only_not_promotable": 71,
+    "fusion_protein_near_match_not_promotable": 1,
+    "other_regulator_near_match_not_promotable": 3,
+    "paralog_or_other_regulator_near_match_not_promotable": 2,
+    "pharmacologic_cross_species_near_match_not_promotable": 1
+  },
+  "exportable_pair_rows": 0,
+  "limitations": [
+    "TFLink/profile resources are search leads, not causal regulation.",
+    "Exact-pair negatives are bounded search results, not global absence.",
+    "No row met the exact same-regulator, target, species, direct mechanism and direction standard. Other-regulator, fusion, pharmacologic, cross-species and profile near-matches were kept separate.",
+    "No canonical or Module 22B write was performed."
+  ],
+  "module22b_promotions_performed": false,
+  "noncanonical_exact_candidate_rows": 0,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_028/public_tf_evidence_review_batch028_pairs.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_028/public_tf_evidence_review_batch028_regulator_register.tsv"
+  ],
+  "pair_rows_reviewed": 100,
+  "provenance_preserved": true,
+  "regulator_register_rows": 25,
+  "source_set_ranks_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "status": "staging_only",
+  "strict_tf_promotion_candidate_rows": 0,
+  "unique_provenance_aware_pairs": 100,
+  "unique_regulators_reviewed": 25
+}

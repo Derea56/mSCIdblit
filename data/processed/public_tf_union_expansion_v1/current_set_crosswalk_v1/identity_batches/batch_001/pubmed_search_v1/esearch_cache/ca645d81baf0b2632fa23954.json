@@ -1,0 +1,1 @@
+{"count": "0", "error": "", "ids": [], "query": "\"ZBTB42\"[Title/Abstract] AND \"BLVRA\"[Title/Abstract] AND (regulat*[Title/Abstract] OR transcri*[Title/Abstract] OR promoter[Title/Abstract] OR binding[Title/Abstract] OR expression[Title/Abstract])", "query_variant": "species_unrestricted_fallback"}

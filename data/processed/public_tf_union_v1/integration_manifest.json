@@ -1,0 +1,75 @@
+{
+  "counts": {
+    "identity_mapping_rows": 16894,
+    "materialized_source_regulon_members": 44965,
+    "priority_tf_verification_rows": 117,
+    "source_records": 45795,
+    "source_references": 240805,
+    "source_registry_rows": 4,
+    "source_regulons": 2317
+  },
+  "frozen_graph_policy": "No frozen SignalingEntity, SignalingEntityRole, SignalingEdge, Regulon, RegulonMember, or bundle rows are modified by this importer.",
+  "integration_name": "public_tf_union_v1",
+  "integration_status": "additive_discovery_layer",
+  "normalization_policy": "Case-folded exact comparison key for simple symbols; no alias expansion; composite/accession-like values unresolved.",
+  "not_imported_public_snapshots": {
+    "omnipath_causal_human_mouse": "Retrieved for comparison context but intentionally excluded from v1 materialization; upstream paths use frozen SignalingEdge only."
+  },
+  "priority_tfs": [
+    "TP53",
+    "JUN",
+    "FOS",
+    "MYC",
+    "STAT1",
+    "HIF1A",
+    "SP1",
+    "ETS1",
+    "RUNX1",
+    "GATA3",
+    "CEBPB",
+    "IRF1",
+    "ATF2",
+    "EGR1",
+    "KLF4",
+    "NFKB2"
+  ],
+  "retrieval_date": "2026-08-25",
+  "snapshots": {
+    "OmniPath_DoRothEA:human": {
+      "line_count": 15268,
+      "path": "/private/tmp/omnipath_dorothea_human.tsv",
+      "retrieval_date": "2026-08-25",
+      "sha256": "2a35c1e70a0a547f9b3ff832c7263cbda45ef77c30dcc834bfe5ba525ea6a0d9",
+      "source_url": "https://omnipathdb.org/interactions?genesymbols=yes&datasets=dorothea&organisms=9606&fields=sources,references,curation_effort,dorothea_level",
+      "source_version": "OmniPath_DoRothEA_snapshot_2026-08-25"
+    },
+    "OmniPath_DoRothEA:mouse": {
+      "line_count": 14076,
+      "path": "/private/tmp/omnipath_dorothea_mouse.tsv",
+      "retrieval_date": "2026-08-25",
+      "sha256": "9c610e2fd12a073b73a6b6eae8c38eb80ae42eb736fbb0b48a99ac2af17157ab",
+      "source_url": "https://omnipathdb.org/interactions?genesymbols=yes&datasets=dorothea&organisms=10090&fields=sources,references,curation_effort,dorothea_level",
+      "source_version": "OmniPath_DoRothEA_snapshot_2026-08-25"
+    },
+    "TRRUST:human": {
+      "line_count": 9396,
+      "path": "/private/tmp/trrust_human.tsv",
+      "retrieval_date": "2026-08-25",
+      "sha256": "9b909319ccc8e36588b5a1bd3640e0dfba03936c6fc154cc4304d742bec11bed",
+      "source_url": "https://www.grnpedia.org/trrust/data/trrust_rawdata.human.tsv",
+      "source_version": "TRRUST_v2_snapshot_2026-08-25"
+    },
+    "TRRUST:mouse": {
+      "line_count": 7057,
+      "path": "/private/tmp/trrust_mouse.tsv",
+      "retrieval_date": "2026-08-25",
+      "sha256": "4847c960c7c2ce0173b056184137b1cc71e8d61d1b1edc825247504ad882dd55",
+      "source_url": "https://www.grnpedia.org/trrust/data/trrust_rawdata.mouse.tsv",
+      "source_version": "TRRUST_v2_snapshot_2026-08-25"
+    }
+  },
+  "source_registries": [
+    "OmniPath_DoRothEA",
+    "TRRUST"
+  ]
+}

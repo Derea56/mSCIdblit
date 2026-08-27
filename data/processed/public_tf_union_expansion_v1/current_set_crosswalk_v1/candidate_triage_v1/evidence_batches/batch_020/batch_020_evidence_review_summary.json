@@ -1,0 +1,59 @@
+{
+  "batch_id": "public_tf_evidence_batch_020",
+  "canonical_writes_performed": false,
+  "exact_pair_status_counts": {
+    "binding_profile_only_not_promotable": 2,
+    "contextual_complex_axis_near_match_not_promotable": 1,
+    "contextual_ortholog_near_match_not_promotable": 2,
+    "database_membership_only_not_promotable": 94,
+    "functional_noncanonical_chromatin_architecture_candidate_not_strict_tf": 1
+  },
+  "exportable_pair_rows": 0,
+  "limitations": [
+    "TFLink membership/profile resources are search leads, not causal regulation.",
+    "Exact-pair negatives are bounded search results, not global absence.",
+    "STAG2-to-ABCA1 is a provisional noncanonical cohesin candidate from an AACR abstract and same-study preprint, without independent corroboration or SCI-cell validation.",
+    "Ncapd3-to-Ackr3, Cdk9-to-Abca1, and Cdk9-to-Adam9 are contextual/indirect near-matches, not exact promoted edges.",
+    "No canonical or Module 22B write was performed."
+  ],
+  "module22b_promotions_performed": false,
+  "noncanonical_exact_candidate_rows": 1,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_020/public_tf_evidence_review_batch020_pairs.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_020/public_tf_evidence_review_batch020_regulator_register.tsv"
+  ],
+  "pair_rows_reviewed": 100,
+  "provenance_preserved": true,
+  "regulator_register_rows": 25,
+  "source_set_ranks_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "status": "staging_only",
+  "strict_tf_promotion_candidate_rows": 0,
+  "unique_provenance_aware_pairs": 100,
+  "unique_regulators_reviewed": 25
+}

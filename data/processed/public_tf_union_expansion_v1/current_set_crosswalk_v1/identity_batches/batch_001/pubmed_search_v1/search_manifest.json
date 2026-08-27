@@ -1,0 +1,26 @@
+{
+  "canonical_write_performed": false,
+  "direct_experiment_candidates": 3,
+  "fetched_article_records": 10,
+  "input_leads": 490,
+  "limitations": [
+    "Search hits are discovery candidates, not verified evidence.",
+    "Exact TF/target text matching is abstract-level and does not resolve aliases or complexes.",
+    "Species-restricted search is attempted first; unrestricted fallback is labeled."
+  ],
+  "module_evidence_promotions_performed": false,
+  "outputs": [
+    "pair_search_results.tsv",
+    "pubmed_candidate_hits.tsv",
+    "pair_evidence_search_summary.tsv"
+  ],
+  "primary_exact_pair_candidates": 7,
+  "search_rows": 490,
+  "status": "abstract_discovery_only",
+  "suggested_action_counts": {
+    "abstract_review_then_fulltext": 4,
+    "fulltext_exact_pair_review": 3,
+    "no_retrieved_abstract_candidate": 483
+  },
+  "unique_pmids": 10
+}

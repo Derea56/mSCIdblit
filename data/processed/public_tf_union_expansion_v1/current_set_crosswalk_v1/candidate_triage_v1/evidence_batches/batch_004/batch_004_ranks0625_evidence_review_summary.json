@@ -1,0 +1,40 @@
+{
+  "batch_id": "public_tf_evidence_batch_004",
+  "canonical_writes_performed": false,
+  "decision": "Retain all 80 pairs as database-attributed search leads; no exact pair met the promotion threshold in the bounded search.",
+  "exact_pair_support_rows": 0,
+  "exportable_pair_rows": 0,
+  "general_regulator_evidence_rows": 20,
+  "module22b_promotions_performed": false,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_004/public_tf_evidence_review_batch004_ranks0625_pairs.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_004/public_tf_evidence_review_batch004_ranks0625_regulator_register.tsv"
+  ],
+  "pair_rows_reviewed": 80,
+  "partial_or_near_match_rows": 0,
+  "provenance_preserved": true,
+  "source_set_ranks_reviewed": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "status": "staging_only",
+  "unique_regulators_reviewed": 20
+}

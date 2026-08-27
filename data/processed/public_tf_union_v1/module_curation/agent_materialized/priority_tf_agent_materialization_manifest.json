@@ -1,0 +1,92 @@
+{
+  "boundary_audit_rows": 49,
+  "canonical_database_writes": false,
+  "decision_counts": {
+    "database_only_unverified": 8893,
+    "hold_direction_conflict": 86,
+    "hold_exact_pair": 78,
+    "promote_to_22B": 37
+  },
+  "decision_rows": 9094,
+  "errors": [],
+  "frozen_release_modified": false,
+  "held_rows": 9057,
+  "module_specific_review_rows": 63,
+  "policy": {
+    "cross_module_evidence": "retained in module_specific_review_queue.tsv; no citation-overlap-only promotion",
+    "independent_corroboration": "required for promoted rows with actual cross-module relevance",
+    "public_tf_default_module": "22B"
+  },
+  "promoted_rows": 37,
+  "promotion_module_counts": {
+    "22B": 37
+  },
+  "source_link_rows": 10829,
+  "status": "pass",
+  "tf_species_coverage": {
+    "ATF2": [
+      "human",
+      "mouse"
+    ],
+    "CEBPB": [
+      "human",
+      "mouse"
+    ],
+    "EGR1": [
+      "human",
+      "mouse"
+    ],
+    "ETS1": [
+      "human",
+      "mouse"
+    ],
+    "FOS": [
+      "human",
+      "mouse"
+    ],
+    "GATA3": [
+      "human",
+      "mouse"
+    ],
+    "HIF1A": [
+      "human",
+      "mouse"
+    ],
+    "IRF1": [
+      "human",
+      "mouse"
+    ],
+    "JUN": [
+      "human",
+      "mouse"
+    ],
+    "KLF4": [
+      "human",
+      "mouse"
+    ],
+    "MYC": [
+      "human",
+      "mouse"
+    ],
+    "NFKB2": [
+      "human",
+      "mouse"
+    ],
+    "RUNX1": [
+      "human",
+      "mouse"
+    ],
+    "SP1": [
+      "human",
+      "mouse"
+    ],
+    "STAT1": [
+      "human",
+      "mouse"
+    ],
+    "TP53": [
+      "human",
+      "mouse"
+    ]
+  }
+}

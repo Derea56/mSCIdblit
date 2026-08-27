@@ -1,0 +1,59 @@
+{
+  "batch_id": "public_tf_evidence_batch_019",
+  "canonical_writes_performed": false,
+  "exact_pair_status_counts": {
+    "chromatin_or_transcriptional_machinery_database_only_not_promotable": 90,
+    "chromatin_resource_without_target_call_not_promotable": 2,
+    "database_membership_only_not_promotable": 6,
+    "functional_noncanonical_coregulator_promotion_candidate_not_strict_tf": 1,
+    "perturbation_association_without_regulator_specific_causality_not_promotable": 1
+  },
+  "exportable_pair_rows": 0,
+  "limitations": [
+    "TFLink membership is a search lead, not causal regulation.",
+    "Exact pair negatives are bounded-search results, not global absence.",
+    "TBL1XR1/TBLR1 is a coregulator, not a strict TF.",
+    "PRMT1-ABCA1 is a nonspecific inhibitor association without PRMT1-specific causality.",
+    "No canonical or Module 22B write was performed."
+  ],
+  "module22b_promotions_performed": false,
+  "noncanonical_exact_candidate_rows": 1,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_019/public_tf_evidence_review_batch019_pairs.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_019/public_tf_evidence_review_batch019_regulator_register.tsv"
+  ],
+  "pair_rows_reviewed": 100,
+  "provenance_preserved": true,
+  "regulator_register_rows": 25,
+  "source_set_ranks_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "status": "staging_only",
+  "strict_tf_promotion_candidate_rows": 0,
+  "unique_provenance_aware_pairs": 100,
+  "unique_regulators_reviewed": 25
+}

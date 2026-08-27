@@ -1,0 +1,61 @@
+{
+  "batch_id": "public_tf_evidence_batch_026",
+  "canonical_writes_performed": false,
+  "exact_pair_status_counts": {
+    "binding_profile_only_not_promotable": 44,
+    "complex_level_near_match_not_promotable": 1,
+    "complex_protein_association_near_match_not_promotable": 1,
+    "cross_species_protein_interaction_near_match_not_promotable": 1,
+    "database_membership_only_not_promotable": 43,
+    "functional_noncanonical_chromatin_regulator_candidate_not_strict_tf": 2,
+    "target_protein_complex_association_not_transcriptional": 1
+  },
+  "exportable_pair_rows": 0,
+  "limitations": [
+    "TFLink/profile resources are search leads, not causal regulation.",
+    "Exact-pair negatives are bounded search results, not global absence.",
+    "WIZ-to-CWH43 and WIZ-to-DIP2C are exact human noncanonical chromatin-regulator candidates without SCI-cell validation or strict TF mechanism.",
+    "IVNS1ABP-to-ACTR2 and CUL4A-to-ACVR1 are protein/complex associations and not transcriptional TF edges.",
+    "No canonical or Module 22B write was performed."
+  ],
+  "module22b_promotions_performed": false,
+  "noncanonical_exact_candidate_rows": 2,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_026/public_tf_evidence_review_batch026_pairs.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_026/public_tf_evidence_review_batch026_regulator_register.tsv"
+  ],
+  "pair_rows_reviewed": 93,
+  "provenance_preserved": true,
+  "regulator_register_rows": 25,
+  "source_set_ranks_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "status": "staging_only",
+  "strict_tf_promotion_candidate_rows": 0,
+  "unique_provenance_aware_pairs": 93,
+  "unique_regulators_reviewed": 25
+}

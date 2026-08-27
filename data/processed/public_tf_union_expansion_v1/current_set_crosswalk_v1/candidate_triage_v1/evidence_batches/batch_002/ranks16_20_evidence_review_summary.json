@@ -1,0 +1,29 @@
+{
+  "batch_id": "public_tf_evidence_batch_002",
+  "review_scope": "batch ranks 16-20",
+  "input": "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_002/public_tf_evidence_collection_batch_002.tsv",
+  "output": "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_002/public_tf_evidence_review_batch002_ranks16_20.tsv",
+  "regulator_register": "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_002/public_tf_evidence_review_batch002_ranks16_20_regulator_register.tsv",
+  "rows_reviewed": 20,
+  "unique_regulators": 5,
+  "unique_exact_pairs": 20,
+  "exact_pair_status_counts": {
+    "no_exact_pair_support_found_in_bounded_search": 20
+  },
+  "regulator_general_evidence_status_counts": {
+    "supported_general_regulator_evidence_not_exact_target": 12,
+    "limited_regulator_evidence_not_exact_target": 4,
+    "no_qualifying_regulator_literature_located": 4
+  },
+  "exact_primary_citations": 0,
+  "exact_corroborating_citations": 0,
+  "exportable_rows": 0,
+  "canonical_writes": 0,
+  "promotion_decision": "none",
+  "limitations": [
+    "No-exact-support is bounded to the PubMed/PMC primary-literature searches recorded per row; it is not a global absence claim.",
+    "Regulator-level evidence for a different target is retained separately and is not attached to any queued pair.",
+    "The ZBTB6 and OSR2 HEK293 ChIP datasets establish available regulator assays, but target-locus peak verification was not performed in this review.",
+    "Target-cell presence, downstream activation, and upstream relay remain unassessed for the exact pairs."
+  ]
+}
