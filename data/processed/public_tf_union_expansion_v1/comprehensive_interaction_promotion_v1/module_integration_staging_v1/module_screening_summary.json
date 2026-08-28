@@ -1,0 +1,44 @@
+{
+  "status": "pass",
+  "input_rows": 4174,
+  "decision_counts": {
+    "module_fit_candidate": 2821,
+    "retain_catalog_only": 564,
+    "retain_for_context_only": 49,
+    "screen_out_low_tier": 740
+  },
+  "module_owner_candidate_rows": 2821,
+  "candidate_module_counts": {
+    "20B": 2206,
+    "21B": 14,
+    "22B": 83,
+    "23B": 442,
+    "24B": 76
+  },
+  "candidate_tier_counts": {
+    "A_independent_literature_corroborated": 3,
+    "C_tflink_source_table_only": 2818
+  },
+  "low_tier_screen_out_counts": {
+    "D_database_only_no_pair_evidence": 613,
+    "E_reviewed_nonpromotable": 127
+  },
+  "noncanonical_context_counts": {
+    "A_independent_literature_corroborated": 24,
+    "B_independent_literature_single_source": 25
+  },
+  "canonical_materialization_allowed": false,
+  "all_candidate_approvals_pending": true,
+  "policy": [
+    "This is a deterministic screening overlay; it does not change source evidence packets.",
+    "D/E rows are screen-out_low_tier and retain_for_context_only; their exact evidence tiers remain unchanged.",
+    "Explicitly noncanonical role-specific A/B rows remain retain_for_context_only and are excluded from the candidate set.",
+    "A/B/C rows with an explicit module route form a provisional module-owner candidate set, pending approval.",
+    "Catalog-only rows are not assigned to modules without an explicit target_graph_modules route.",
+    "No canonical TF, Module 22B, module tracker, or mechanism-edge materialization is performed."
+  ],
+  "outputs": [
+    "module_integration_staging_v1/module_screening_decisions.tsv",
+    "module_integration_staging_v1/module_owner_candidate_set.tsv"
+  ]
+}
