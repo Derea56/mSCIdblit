@@ -1,0 +1,19 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q96ES7	O43432	112869	8672	SGF29	EIF4G3	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-	-	-
+Q96ES7	O00311	112869	8317	SGF29	CDC7	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-	Dm:Q9VJ90;Dm:Q9W3Y1;Mm:Q9Z0H0;Rn:D4A8S5	Dr:B0UYH8
+Q96ES7	O75200	112869	-	SGF29	NPIPB7	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-	-	-
+Q96ES7	Q8NEV9	112869	246778	SGF29	IL27	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-	Mm:Q8K3I6	Rn:D3ZPW3
+Q96ES7	P50226	112869	6799	SGF29	SULT1A2	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-	-	Dm:B7YZP4
+Q96ES7	Q13286	112869	1201	SGF29	CLN3	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-	-	-
+Q96ES7	Q8IZV5	112869	157506	SGF29	RDH10	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-	Dr:F1RES0;Mm:Q8VCH7;Rn:Q80ZF7	-
+Q96ES7	Q2NKX9	112869	388969	SGF29	C2orf68	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-	Dr:A3KQ58;Mm:Q149G0;Rn:D3Z8R8	-
+Q96ES7	Q0VD83	112869	55911	SGF29	APOBR	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-	Mm:Q8VBT6;Rn:A0A0G2K7M4	-
+Q96ES7	Q96B42	112869	129787	SGF29	TMEM18	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-	Dm:A1Z903;Dr:Q641M3;Mm:Q3TUD9;Rn:Q6DGF8	-
+Q96ES7	P62424	112869	6130	SGF29	RPL7A	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-	Ce:Q966C6;Dm:P46223;Dr:Q6PBZ1;Mm:P12970;Sc:P17076;Sc:P29453	Rn:D3ZU22;Rn:F1M013
+Q96ES7	Q9UBQ0	112869	51699	SGF29	VPS29	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-	Dm:Q9VPX5;Dr:Q7ZV68;Mm:Q9QZ88	Ce:Q86D99;Rn:A0A0G2JTS3
+Q96ES7	O60356	112869	26471	SGF29	NUPR1	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-	Mm:Q9WTK0	Rn:O54842
+Q96ES7	Q02978	112869	8402	SGF29	SLC25A11	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-	Ce:P90992;Dm:Q9VAJ9;Dr:F1R319;Mm:Q9CR62;Rn:G3V6H5	-
+Q96ES7	Q15528	112869	6837	SGF29	MED22	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-	Ce:Q23679;Dm:Q9V439;Dr:A5WUL3;Mm:Q62276	Rn:A0JPN6
+Q96ES7	P25205	112869	4172	SGF29	MCM3	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-	-	-
+Q96ES7	Q14498	112869	9584	SGF29	RBM39	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-	Dr:Q803H1;Mm:Q8VH51;Sc:Q99383	Rn:Q5BJP4
+Q96ES7	Q96ES7	112869	112869	SGF29	SGF29	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-	Dm:Q9W2I4;Dr:F1QQW7;Mm:Q9DA08;Rn:P0C606	-

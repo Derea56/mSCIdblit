@@ -1,11 +1,12 @@
 {
   "candidate_species_counts": {
     "human": 2381,
-    "mouse": 2172,
+    "mouse": 2171,
     "vertebrates": 883
   },
   "checks": {
     "candidate_rows_promoted": 0,
+    "candidate_rows_without_identity_trace": 0,
     "candidate_rows_without_source_registry": 0,
     "candidate_rows_without_tf_key": 0,
     "contributor_links_marked_independent": 0,
@@ -36,7 +37,7 @@
     "reported_contributor_links": 232964,
     "reported_contributor_registry_rows": 52,
     "source_registry_rows": 10,
-    "tf_candidate_union_rows": 5436,
+    "tf_candidate_union_rows": 5435,
     "tf_identity_records": 54511,
     "tf_pair_records": 45795,
     "tflink_human_tf_summary_rows": 1605,

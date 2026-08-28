@@ -1,0 +1,6 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9NWT8	Q4ZG55	54998	9687	AURKAIP1	GREB1	inferred by curator	21984905;29087512	Homo sapiens	TRRUST	Yes	Mm:Q9DCJ7	-	Dr:F1QAG4;Mm:Q3UHK3	Rn:F1LW89
+Q9NWT8	Q96T23	54998	51773	AURKAIP1	RSF1	inferred by curator	21984905;29087512	Homo sapiens	TRRUST	Yes	Mm:Q9DCJ7	-	Dr:F1Q6Y6;Mm:E9PWW9;Rn:D3ZGQ8	-
+Q9NWT8	P35869	54998	196	AURKAIP1	AHR	inferred by curator	11469723;29087512	Homo sapiens	TRRUST	Yes	Mm:Q9DCJ7	-	-	-
+Q9NWT8	P04155	54998	7031	AURKAIP1	TFF1	inferred by curator	21984905;29087512	Homo sapiens	TRRUST	Yes	Mm:Q9DCJ7	-	Mm:Q08423	Rn:Q63467
+Q9NWT8	Q00653	54998	4791	AURKAIP1	NFKB2	inferred by curator	21984905;29087512	Homo sapiens	TRRUST	Yes	Mm:Q9DCJ7	-	Dr:Q0II00;Mm:Q9WTK5;Rn:Q5U2Z4	-

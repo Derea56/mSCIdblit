@@ -1,0 +1,3 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q6NUN9	P35558	155061	5105	ZNF746	PCK1	inferred by curator	24234451;21376232	Homo sapiens	IntAct_via_DoRothEA	Yes	-	-	Mm:Q9Z2V4;Rn:P07379	-
+Q6NUN9	P35575	155061	2538	ZNF746	G6PC	inferred by curator	24234451;21376232	Homo sapiens	IntAct_via_DoRothEA	Yes	-	-	Mm:P35576;Rn:P43428	-

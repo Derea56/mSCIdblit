@@ -1,0 +1,2 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q86TG7	P04075	23089	226	PEG10	ALDOA	inferred by curator	18971253;26578589	Homo sapiens	ORegAnno;PAZAR	No	-	-	Ce:P46563;Dm:P07764;Dr:Q803Q7;Mm:P05064;Rn:P05065	Dr:Q6P043

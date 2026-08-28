@@ -1,0 +1,13 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P17023	P22626	7567	3181	ZNF19	HNRNPA2B1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A0A0G2L7C1	-	Ce:Q22037;Mm:O88569;Rn:F1LNF1	-
+P17023	Q92896	7567	2734	ZNF19	GLG1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A0A0G2L7C1	-	Ce:Q19459;Mm:Q61543;Rn:G3V8G5	Dm:Q9VP27
+P17023	Q6P4E1	7567	113201	ZNF19	GOLM2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A0A0G2L7C1	-	Dr:E7FBP9;Mm:Q6P2L7;Rn:D3ZW58	-
+P17023	Q92730	7567	27289	ZNF19	RND1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A0A0G2L7C1	-	Dr:Q52WX7;Mm:Q8BLR7;Rn:Q5FVG9	-
+P17023	Q99614	7567	7265	ZNF19	TTC1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A0A0G2L7C1	-	Dm:Q9VEV3;Dr:F1QZK4;Mm:Q91Z38;Rn:Q66H09	Ce:O44951
+P17023	P42226	7567	6778	ZNF19	STAT6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A0A0G2L7C1	-	-	-
+P17023	P42285	7567	23517	ZNF19	MTREX	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A0A0G2L7C1	-	Ce:Q23223;Dm:Q9Y134;Mm:Q9CZU3;Rn:D4AE49;Sc:P47047	-
+P17023	O15234	7567	22794	ZNF19	CASC3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A0A0G2L7C1	-	Dr:Q1ECZ4;Mm:Q8K3W3;Rn:G3V793	Dm:A0A0B4KH64
+P17023	Q8NEP7	7567	126823	ZNF19	KLHDC9	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A0A0G2L7C1	-	Mm:Q3USL1;Rn:D3ZDT0	-
+P17023	Q13185	7567	11335	ZNF19	CBX3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A0A0G2L7C1	-	Dr:F1QNF2;Rn:Q5RJK5	Mm:Q9DCC5
+P17023	Q7Z478	7567	54505	ZNF19	DHX29	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A0A0G2L7C1	-	Mm:Q6PGC1;Rn:D3ZHW0	-
+P17023	O43752	7567	10228	ZNF19	STX6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A0A0G2L7C1	-	Mm:Q9JKK1;Rn:Q63635	Dr:Q567Y3

@@ -1,0 +1,9 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9ER42	Q9CXV3	12022	12969	Barx1	Crygf	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:Q9HBU1;Dr:B2GRF3	Rn:D3ZA67	-	-
+Q9ER42	P09411	12022	18655	Barx1	Pgk1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:Q9HBU1;Dr:B2GRF3	Rn:D3ZA67	Hs:P00558;Rn:P16617	Dr:F1QXV8
+Q9ER42	E9Q8N6	12022	329738	Barx1	Aknad1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:Q9HBU1;Dr:B2GRF3	Rn:D3ZA67	Hs:Q5T1N1	Rn:F7FFB7
+Q9ER42	Q8K025	12022	212398	Barx1	Frat2	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:Q9HBU1;Dr:B2GRF3	Rn:D3ZA67	Rn:M0R5Z2	-
+Q9ER42	Q8CC35	12022	-	Barx1	Synpo	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:Q9HBU1;Dr:B2GRF3	Rn:D3ZA67	-	-
+Q9ER42	E9Q3L7	12022	-	Barx1	Gm20715	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:Q9HBU1;Dr:B2GRF3	Rn:D3ZA67	-	-
+Q9ER42	Q8BJQ2	12022	230484	Barx1	Usp1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:Q9HBU1;Dr:B2GRF3	Rn:D3ZA67	Hs:O94782;Dm:Q8I077;Rn:Q569C3	Dr:F1QNF4
+Q9ER42	P19785	12022	13982	Barx1	Esr1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:Q9HBU1;Dr:B2GRF3	Rn:D3ZA67	Hs:P03372;Dr:A5PMH3	Rn:A0A0G2K0D4

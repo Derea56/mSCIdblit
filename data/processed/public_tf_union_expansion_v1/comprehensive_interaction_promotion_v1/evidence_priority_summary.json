@@ -1,0 +1,45 @@
+{
+  "status": "pass",
+  "input_file_count": 56,
+  "input_row_count": 4404,
+  "unique_pair_count": 3684,
+  "already_promoted_pair_count": 3065,
+  "searched_pending_adjudication_pair_count": 478,
+  "active_search_pair_count": 0,
+  "priority_tier_counts": {
+    "D_direction_or_species_hold": 137,
+    "D_identity_hold": 4,
+    "Y_searched_pending_adjudication": 478,
+    "Z_already_promoted": 3065
+  },
+  "search_lane_counts": {
+    "direction_species_adjudication": 137,
+    "identity_resolution": 4,
+    "outcome_adjudication": 478,
+    "promoted_followup_queue": 3065
+  },
+  "evidence_confidence_tier_counts": {
+    "A_independent_literature_corroborated": 31,
+    "B_independent_literature_single_source": 30,
+    "C_tflink_source_table_only": 3004,
+    "D_database_only_no_pair_evidence": 508,
+    "E_reviewed_nonpromotable": 111
+  },
+  "review_status_counts": {
+    "reviewed": 3684
+  },
+  "top_active_pairs": [],
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/evidence_priority_queue.tsv",
+    "data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/evidence_search_batch_001.tsv",
+    "data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/evidence_search_outcomes.tsv"
+  ],
+  "policy": [
+    "This queue is for search prioritization and does not promote or materialize records.",
+    "Already promoted pairs are routed to the dedicated follow-up queue.",
+    "Unresolved, reverse-direction, cross-species, and database-only findings remain visible but are not active manual-search priorities.",
+    "All source registries, source record IDs, review IDs, statuses, citations, and module hints are retained.",
+    "Completed searches are read from evidence_search_outcomes.tsv and removed from the next active packet until adjudicated.",
+    "Evidence-confidence tiers are exhaustive: A/B/C are promoted tiers, D is database/profile-only without pair-specific evidence, E is reviewed but nonpromotable, and U is unreviewed."
+  ]
+}

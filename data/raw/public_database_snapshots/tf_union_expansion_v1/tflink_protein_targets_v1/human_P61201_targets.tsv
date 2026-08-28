@@ -1,0 +1,3 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P61201	Q15800	9318	6307	COPS2	MSMO1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:O01422;Dm:Q94899;Dr:Q6IQT4;Mm:P61202;Rn:P61203	-	Dr:F1QFS0;Mm:Q9CRA4;Rn:O35532;Sc:P53045	-
+P61201	Q12772	9318	6721	COPS2	SREBF2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:O01422;Dm:Q94899;Dr:Q6IQT4;Mm:P61202;Rn:P61203	-	Dr:F1RC21;Mm:Q3U1N2;Rn:F1MA23	-

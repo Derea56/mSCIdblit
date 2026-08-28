@@ -1,0 +1,5 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q13487	Q9BY77	6618	84271	SNAPC2	POLDIP3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:E7F685;Mm:Q91XA5;Rn:Q68FX5	-	Mm:Q8BG81;Rn:D4A2B0	Dr:A0A0R4ILC0
+Q13487	Q9H063	6618	84232	SNAPC2	MAF1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:E7F685;Mm:Q91XA5;Rn:Q68FX5	-	-	-
+Q13487	P07992	6618	2067	SNAPC2	ERCC1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:E7F685;Mm:Q91XA5;Rn:Q68FX5	-	Ce:Q93456;Dm:Q7KMG7;Mm:P07903;Rn:D3ZAQ9	-
+Q13487	Q7Z460	6618	23332	SNAPC2	CLASP1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:E7F685;Mm:Q91XA5;Rn:Q68FX5	-	Rn:A0A0G2JUI5	Mm:A0A087WQ31

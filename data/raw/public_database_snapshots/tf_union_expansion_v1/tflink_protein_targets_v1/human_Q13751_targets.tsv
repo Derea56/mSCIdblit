@@ -1,0 +1,8 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q13751	A0A1B0GTU1	3914	-	LAMB3	ZC3H11B	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q61087	Rn:F1LPI5	-	-
+Q13751	P02545	3914	4000	LAMB3	LMNA	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q61087	Rn:F1LPI5	Mm:P48678;Rn:G3V8L3	Dr:B3DKC5
+Q13751	Q9NVX7	3914	55709	LAMB3	KBTBD4	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q61087	Rn:F1LPI5	Mm:Q8R179;Rn:A0A0G2K102	Dr:Q1LUF9
+Q13751	Q8NG76	3914	391195	LAMB3	OR2T33	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q61087	Rn:F1LPI5	-	-
+Q13751	O75489	3914	4722	LAMB3	NDUFS3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q61087	Rn:F1LPI5	Dm:Q9VZU4;Dr:F1R4C8;Mm:Q9DCT2;Rn:D3ZG43	-
+Q13751	Q9NZ56	3914	56776	LAMB3	FMN2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q61087	Rn:F1LPI5	Mm:Q9JL04;Rn:A0A0G2JZ27	Dr:E7F517
+Q13751	P69892	3914	3048	LAMB3	HBG2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q61087	Rn:F1LPI5	-	-

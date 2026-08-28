@@ -1,0 +1,9 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P59923	M0QZ58	353274	-	ZNF445	-	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8R2V3	Rn:D3ZAK3	-	-
+P59923	Q7L5Y1	353274	55556	ZNF445	ENOSF1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8R2V3	Rn:D3ZAK3	Dr:F1Q510	-
+P59923	Q7L5D6	353274	51608	ZNF445	GET4	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8R2V3	Rn:D3ZAK3	Ce:Q19824;Dm:Q9VN19;Dr:F1R3Y3;Mm:Q9D1H7;Rn:F1LXF5;Sc:Q12125	-
+P59923	P62952	353274	10904	ZNF445	BLCAP	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8R2V3	Rn:D3ZAK3	Ce:G5EE03;Dm:Q9V3L0;Dr:Q9IB61;Mm:P62951;Rn:P62950	-
+P59923	P31943	353274	3187	ZNF445	HNRNPH1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8R2V3	Rn:D3ZAK3	-	-
+P59923	Q5JUK3	353274	57582	ZNF445	KCNT1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8R2V3	Rn:D3ZAK3	-	-
+P59923	P16455	353274	4255	ZNF445	MGMT	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8R2V3	Rn:D3ZAK3	-	-
+P59923	A2RUR9	353274	9720	ZNF445	CCDC144A	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8R2V3	Rn:D3ZAK3	-	-

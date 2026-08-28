@@ -1,0 +1,18 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q96BT3	Q08116	80152	5996	CENPT	RGS1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TJM4;Rn:Q561R1	-	Mm:Q9JL25	Ce:G5ECK9;Dr:F1R396;Rn:P97844
+Q96BT3	A0A0U1RR32	80152	-	CENPT	-	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TJM4;Rn:Q561R1	-	-	-
+Q96BT3	Q8N594	80152	84954	CENPT	MPND	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TJM4;Rn:Q561R1	-	-	-
+Q96BT3	P33778	80152	3018	CENPT	H2BC3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TJM4;Rn:Q561R1	-	Mm:Q64475;Rn:A0A0G2JXE0	-
+Q96BT3	P84243	80152	3020;3021	CENPT	H3-3A;H3-3B	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TJM4;Rn:Q561R1	-	-	-
+Q96BT3	Q99879	80152	8342	CENPT	H2BC14	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TJM4;Rn:Q561R1	-	-	-
+Q96BT3	Q5JWF2	80152	2778	CENPT	GNAS	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TJM4;Rn:Q561R1	-	-	-
+Q96BT3	Q99880	80152	8340	CENPT	H2BC13	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TJM4;Rn:Q561R1	-	-	-
+Q96BT3	P0C0S8	80152	8329;8330;8332;8336;8969	CENPT	H2AC11;H2AC13;H2AC15;H2AC16;H2AC17	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TJM4;Rn:Q561R1	-	-	-
+Q96BT3	Q9NVT9	80152	55156	CENPT	ARMC1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TJM4;Rn:Q561R1	-	Mm:Q9D7A8;Rn:B0BN83	Dr:Q5PR58
+Q96BT3	A0A0U1RRH7	80152	-	CENPT	-	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TJM4;Rn:Q561R1	-	-	-
+Q96BT3	P06493	80152	983	CENPT	CDK1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TJM4;Rn:Q561R1	-	Ce:P34556;Dm:P23572;Dr:Q7T3L7;Mm:P11440;Rn:P39951	-
+Q96BT3	P17023	80152	7567	CENPT	ZNF19	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TJM4;Rn:Q561R1	-	Dr:A0A0G2L7C1	-
+Q96BT3	Q9UGK3	80152	55620	CENPT	STAP2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TJM4;Rn:Q561R1	-	Dr:Q7T2F4;Mm:Q8R0L1;Rn:M0R887	-
+Q96BT3	P20671	80152	3013	CENPT	H2AC7	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TJM4;Rn:Q561R1	-	-	-
+Q96BT3	Q99878	80152	8331	CENPT	H2AC14	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TJM4;Rn:Q561R1	-	-	-
+Q96BT3	P62807	80152	3017;8339;8343;8344;8346;8347	CENPT	H2BC4;H2BC6;H2BC7;H2BC8;H2BC10	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TJM4;Rn:Q561R1	-	-	-

@@ -1,0 +1,2 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P17948	P43119	2321	5739	FLT1	PTGIR	chromatin immunoprecipitation assay;electrophoretic mobility shift assay	22900683;19118563	Homo sapiens	HTRI	Yes	Ce:Q21038;Mm:A0A0R4J0A4	Dr:B3DKP1;Rn:G3V633	Mm:P43252;Rn:P43253	Dr:E7FE45

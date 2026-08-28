@@ -1,0 +1,2 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+O94907	Q9H9S3	22943	55176	DKK1	SEC61A2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q9PWH3;Dr:F1RBK0;Mm:O54908	Rn:D3Z9J1	Mm:Q9JLR1;Rn:D3ZEH3	-

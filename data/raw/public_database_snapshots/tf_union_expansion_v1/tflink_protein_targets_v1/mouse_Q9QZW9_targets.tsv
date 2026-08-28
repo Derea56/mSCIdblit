@@ -1,0 +1,4 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9QZW9	O09100	-	14461	Mnx1	Gata2	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:P23769;Rn:Q924Y4	Dr:Q7T3G1
+Q9QZW9	Q65CL1	-	216033	Mnx1	Ctnna3	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:Q9UI47	-
+Q9QZW9	Q922D4	-	52036	Mnx1	Ppp6r3	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	-	-

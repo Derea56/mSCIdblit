@@ -1,0 +1,13 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+E9QAG8	Q6IQY5	69504	68121	Znf431	Cep70	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:Q8NHQ1;Dr:A5WUW9	Rn:A0A0G2K3U9
+E9QAG8	Q499E5	69504	71069	Znf431	Stox2	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:Q9P2F5;Rn:D4A001	Dr:F8W5K8
+E9QAG8	P97819	69504	53357	Znf431	Pla2g6	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:O60733;Ce:G5EGD6;Dr:F1QXU0;Rn:P97570	Dm:Q9VT60
+E9QAG8	P54615	69504	12095	Znf431	Bglap3	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	-	-
+E9QAG8	P0DMN7	69504	11702	Znf431	Amd1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	-	-
+E9QAG8	Q64676	69504	22239	Znf431	Ugt8	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:Q16880;Dr:E7FDZ0;Rn:Q09426	Dm:Q7K142
+E9QAG8	P62500	69504	21807	Znf431	Tsc22d1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	-	-
+E9QAG8	P54754	69504	13845	Znf431	Ephb3	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:P54753;Rn:D3ZH39	-
+E9QAG8	Q9CQE2	69504	66836	Znf431	Tmem223	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:A0PJW6;Dm:Q7JW07;Rn:D4AC93	Dr:Q6DC58;Rn:A0A0G2JXU9;Rn:M0RCL0
+E9QAG8	Q99JX7	69504	53319	Znf431	Nxf1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:Q9UBU9;Dr:F1Q7H6;Rn:F1MA52;Sc:Q99257	Dr:E7EYP0
+E9QAG8	A0A075B654	69504	-	Znf431	Trav3-4	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	-	-
+E9QAG8	Q61539	69504	26380	Znf431	Esrrb	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	-	-

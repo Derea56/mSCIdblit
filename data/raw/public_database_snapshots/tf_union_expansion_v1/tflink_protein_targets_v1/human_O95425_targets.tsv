@@ -1,0 +1,13 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+O95425	P61421	6840	9114	SVIL	ATP6V0D1	chromatin immunoprecipitation assay	29126285;27924024	Homo sapiens	GTRD;ReMap	No	Mm:Q8K4L3;Rn:F1M155	-	-	-
+O95425	Q8N594	6840	84954	SVIL	MPND	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8K4L3;Rn:F1M155	-	-	-
+O95425	P35638	6840	1649	SVIL	DDIT3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8K4L3;Rn:F1M155	-	Dr:F1Q964;Mm:P35639;Rn:Q496Y7	-
+O95425	Q6NXR4	6840	80185	SVIL	TTI2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8K4L3;Rn:F1M155	-	Dr:E7F592;Mm:Q8BGV4;Rn:Q66H56	-
+O95425	P26378	6840	1996	SVIL	ELAVL4	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8K4L3;Rn:F1M155	-	Mm:Q61701	Dr:F1R133;Rn:O09032
+O95425	Q8N328	6840	267004	SVIL	PGBD3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8K4L3;Rn:F1M155	-	-	-
+O95425	Q9H8U3	6840	60685	SVIL	ZFAND3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8K4L3;Rn:F1M155	-	Dr:Q4KMI6;Mm:Q497H0;Rn:A0A0G2JV07	-
+O95425	Q6UWE0	6840	90678	SVIL	LRSAM1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8K4L3;Rn:F1M155	-	Dr:A2CF42;Mm:Q80ZI6;Rn:D3ZI42	-
+O95425	P30050	6840	6136	SVIL	RPL12	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8K4L3;Rn:F1M155	-	Ce:P61866;Dm:Q9W1B9;Dr:Q6DRE6;Mm:P35979;Rn:A0A140TAC5;Sc:P0CX53	Rn:M0R4B6;Rn:P23358
+O95425	P01589	6840	3559	SVIL	IL2RA	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8K4L3;Rn:F1M155	-	Mm:P01590	Rn:P26897
+O95425	Q8NB59	6840	255928	SVIL	SYT14	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	Mm:Q8K4L3;Rn:F1M155	-	Rn:M0R7W7	Dr:F1RAD1;Mm:B7ZP31
+O95425	Q96DN6	6840	114785	SVIL	MBD6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8K4L3;Rn:F1M155	-	Dm:Q9VY31;Rn:D3ZCX1	Mm:E9Q572

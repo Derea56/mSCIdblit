@@ -1,0 +1,4 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q6NX49	Q8WUZ0	27300	9274	ZNF544	BCL7C	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:O08664;Rn:D3ZUL4	-
+Q6NX49	O60784	27300	10043	ZNF544	TOM1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:O88746;Rn:Q5XI21	-
+Q6NX49	Q9H4M3	27300	93611	ZNF544	FBXO44	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:A2A7H5;Rn:D4A6R1	-

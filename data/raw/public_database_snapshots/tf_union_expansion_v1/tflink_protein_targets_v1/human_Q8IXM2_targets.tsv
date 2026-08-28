@@ -1,0 +1,22 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q8IXM2	Q4KMG9	124944	120939	BAP18	TMEM52B	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	Mm:Q0VBF2;Rn:D4A424	-
+Q8IXM2	Q8WUU5	124944	57798	BAP18	GATAD1	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	Mm:Q920S3;Rn:D4A3T2	Dr:Q1L8G7
+Q8IXM2	Q8NCK7	124944	162515	BAP18	SLC16A11	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	-	-
+Q8IXM2	Q8IXM2	124944	124944	BAP18	BAP18	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	-	-
+Q8IXM2	Q6P5S7	124944	440400	BAP18	RNASEK	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	-	-
+Q8IXM2	Q9NQ89	124944	57102	BAP18	C12orf4	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	Dm:Q9VAU6;Dr:A0JMN9;Mm:Q91YN0;Rn:D4A770	-
+Q8IXM2	Q96B01	124944	10635	BAP18	RAD51AP1	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	Dr:Q1L8M2;Mm:A0A0R4J1G4;Rn:A1A5P3	-
+Q8IXM2	Q9H6R6	124944	64429	BAP18	ZDHHC6	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	Ce:G5EFD8;Dm:Q9VG80;Dr:E7F6D7;Mm:Q9CPV7;Rn:A0A0G2K7F3	Dm:Q9VSV3
+Q8IXM2	Q15291	124944	5929	BAP18	RBBP5	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	Ce:Q09309;Dm:Q9VPH8;Mm:Q8BX09;Rn:D3ZC01;Sc:P39706	Dr:F1QST7
+Q8IXM2	Q07960	124944	392	BAP18	ARHGAP1	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	Mm:Q5FWK3;Rn:D4A6C5	Dr:F1R2J2
+Q8IXM2	Q8N143	124944	255877	BAP18	BCL6B	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	Mm:O88282;Rn:D3ZTN3	-
+Q8IXM2	Q8N5F7	124944	79576	BAP18	NKAP	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	Ce:Q966L6;Dm:Q9VB74;Mm:Q9D0F4;Rn:A0A0G2K4P5	-
+Q8IXM2	Q9UQF0	124944	30816	BAP18	ERVW-1	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	-	-
+Q8IXM2	Q8N9N8	124944	84285	BAP18	EIF1AD	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	Ce:Q23646;Dm:Q8IQ13;Dr:F1QEM2;Mm:Q3THJ3;Rn:Q5RKI6	-
+Q8IXM2	Q96AJ9	124944	143187	BAP18	VTI1A	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	Ce:O18230;Dm:Q9W0N6;Mm:O89116;Rn:F1LT41	Dr:F1Q7S0
+Q8IXM2	Q8N122	124944	57521	BAP18	RPTOR	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	Dm:Q9W437;Mm:A2ACM0;Rn:D3ZDU2;Sc:P38873	Dr:A0A0R4IFI0
+Q8IXM2	Q7RTY0	124944	201232	BAP18	SLC16A13	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	Ce:Q93896;Dr:E7F9C2;Mm:Q8CE94;Rn:Q66HE2	-
+Q8IXM2	H0YIS7	124944	-	BAP18	RNASEK-C17orf49	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	-	-
+Q8IXM2	Q9H9D4	124944	79797	BAP18	ZNF408	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	-	Mm:Q3V1D8
+Q8IXM2	P18054	124944	239	BAP18	ALOX12	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	Mm:P39655;Rn:F1LQ70	-
+Q8IXM2	Q9BT22	124944	56052	BAP18	ALG1	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	Dm:Q9VEE9;Dr:F1Q8U9;Mm:Q921Q3;Rn:D4A5S6;Sc:P16661	Ce:Q22797

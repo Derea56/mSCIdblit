@@ -1,0 +1,12 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+A0A0B4J2D5	Q9UBU7	8209	10926	GATD3B	DBF4	inferred by curator	29087512;12420215	Homo sapiens	TRRUST	Yes	-	-	Mm:Q9QZ41	Rn:M0R8P0
+A0A0B4J2D5	P01730	8209	920	GATD3B	CD4	inferred by curator	29087512;11287612	Homo sapiens	TRRUST	Yes	-	-	Mm:P06332;Rn:P05540	-
+A0A0B4J2D5	P60484	8209	5728	GATD3B	PTEN	inferred by curator	29087512;18414037	Homo sapiens	TRRUST	Yes	-	-	Dr:Q7ZZ56;Dr:Q6TGR7;Mm:O08586;Rn:O54857	Dm:Q9Y0B6
+A0A0B4J2D5	P41222	8209	5730	GATD3B	PTGDS	inferred by curator	29087512;15743775	Homo sapiens	TRRUST	Yes	-	-	-	-
+A0A0B4J2D5	P08908	8209	3350	GATD3B	HTR1A	inferred by curator	29087512;18499474	Homo sapiens	TRRUST	Yes	-	-	Mm:Q64264	Dr:B0S6X1;Rn:G3V7B9
+A0A0B4J2D5	P11137	8209	4133	GATD3B	MAP2	inferred by curator	19880519;29087512	Homo sapiens	TRRUST	Yes	-	-	-	-
+A0A0B4J2D5	P50553	8209	429	GATD3B	ASCL1	inferred by curator	9144241;29087512;21573214;11054669	Homo sapiens	TRRUST	Yes	-	-	Dr:Q90259;Mm:Q02067;Rn:P19359	-
+A0A0B4J2D5	Q01094	8209	1869	GATD3B	E2F1	inferred by curator	29087512;15467735	Homo sapiens	TRRUST	Yes	-	-	Mm:Q61501;Rn:O09139	-
+A0A0B4J2D5	Q8NGR5	8209	254973	GATD3B	OR1L4	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	-	-
+A0A0B4J2D5	P59780	8209	10239	GATD3B	AP3S2	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	-	-
+A0A0B4J2D5	P49335	8209	5456	GATD3B	POU3F4	chromatin immunoprecipitation assay	29126285	Homo sapiens	ReMap	No	-	-	-	-

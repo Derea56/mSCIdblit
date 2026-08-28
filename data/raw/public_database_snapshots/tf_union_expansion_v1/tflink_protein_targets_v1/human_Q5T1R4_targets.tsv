@@ -1,0 +1,5 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q5T1R4	Q9NYF3	59269	51307	HIVEP3	FAM53C	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:A2A884;Rn:D3ZRB5	-	Mm:Q8BXQ8	Dr:A9JTF4;Rn:D3ZH55
+Q5T1R4	O15446	59269	10849	HIVEP3	POLR1G	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:A2A884;Rn:D3ZRB5	-	Mm:Q76KJ5;Rn:D4ADE7	-
+Q5T1R4	Q8WUF5	59269	10848	HIVEP3	PPP1R13L	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:A2A884;Rn:D3ZRB5	-	Dr:Q1L9A3;Mm:Q5I1X5	Rn:F1LW07
+Q5T1R4	Q12891	59269	8692	HIVEP3	HYAL2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:A2A884;Rn:D3ZRB5	-	Dr:E7F701;Mm:O35632;Rn:G3V7P9	Dr:Q1LXC3

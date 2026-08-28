@@ -1,0 +1,3 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q69Z61	P17439	70802	14466	Pwwp2a	Gba	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:Q96N64;Rn:B2RYP9	-	Hs:P04062;Ce:G5ECR8;Dm:Q9VCJ4;Dm:Q8IMY3;Dr:E7EZM1;Rn:B2RYC9	-
+Q69Z61	O89079	70802	59042	Pwwp2a	Cope	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:Q96N64;Rn:B2RYP9	-	Hs:O14579;Ce:O62246;Dm:Q9Y0Y5;Dr:F1R7S1;Rn:G3V8Q1	-

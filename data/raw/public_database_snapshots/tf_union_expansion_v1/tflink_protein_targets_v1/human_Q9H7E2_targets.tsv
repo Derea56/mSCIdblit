@@ -1,0 +1,4 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9H7E2	P23443	81550	6198	TDRD3	RPS6KB1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:Q965Q9;Mm:Q91W18	Dr:X1WG14;Rn:A0A096MIS7	Ce:Q21694;Dr:F1R3V1;Mm:Q8BSK8;Rn:P67999	-
+Q9H7E2	Q6AI08	81550	63897	TDRD3	HEATR6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:Q965Q9;Mm:Q91W18	Dr:X1WG14;Rn:A0A096MIS7	Mm:Q6P1G0;Rn:A1EC95	Dr:F1QS71
+Q9H7E2	Q9UJT1	81550	51174	TDRD3	TUBD1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:Q965Q9;Mm:Q91W18	Dr:X1WG14;Rn:A0A096MIS7	Dr:Q6IQ78;Mm:Q9R1K7	Rn:A0A0G2K6I6

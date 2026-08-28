@@ -1,0 +1,7 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q96I25	O94916	84991	10725	RBM17	NFAT5	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:Q20966;Dm:Q7PL83;Dr:Q7ZVN6;Mm:Q8JZX4;Rn:Q6AY02	-	Mm:Q9WV30	Rn:D3ZGB1
+Q96I25	Q8NBF6	84991	23080	RBM17	AVL9	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:Q20966;Dm:Q7PL83;Dr:Q7ZVN6;Mm:Q8JZX4;Rn:Q6AY02	-	Dm:Q9VYB2;Dr:A0A0R4IRC7;Mm:Q80U56;Rn:D3ZVU6;Sc:Q12500	Ce:Q22794
+Q96I25	Q03164	84991	4297	RBM17	KMT2A	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:Q20966;Dm:Q7PL83;Dr:Q7ZVN6;Mm:Q8JZX4;Rn:Q6AY02	-	Dr:F1QL52;Mm:P55200	Rn:F1M0L3
+Q96I25	Q15276	84991	9135	RBM17	RABEP1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:Q20966;Dm:Q7PL83;Dr:Q7ZVN6;Mm:Q8JZX4;Rn:Q6AY02	-	Dr:A2CEI3;Mm:O35551	Rn:G3V9J7
+Q96I25	Q53F19	84991	55421	RBM17	NCBP3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:Q20966;Dm:Q7PL83;Dr:Q7ZVN6;Mm:Q8JZX4;Rn:Q6AY02	-	Dr:F1QH50;Mm:Q8BZR9;Rn:D3ZXL5	-
+Q96I25	Q9UNZ2	84991	55968	RBM17	NSFL1C	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:Q20966;Dm:Q7PL83;Dr:Q7ZVN6;Mm:Q8JZX4;Rn:Q6AY02	-	Dm:Q7K3Z3;Dr:F1Q8D2;Mm:Q9CZ44;Rn:O35987	-

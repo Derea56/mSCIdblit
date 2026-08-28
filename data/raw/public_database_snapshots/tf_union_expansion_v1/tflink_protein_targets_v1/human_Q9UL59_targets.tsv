@@ -1,0 +1,14 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9UL59	Q6T310	7761	387496	ZNF214	RASL11A	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q6IMB1;Rn:Q6IMA3	-
+Q9UL59	Q96C23	7761	130589	ZNF214	GALM	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:Q9VRU1;Dr:B7ZDA2;Mm:Q8K157;Rn:Q66HG4;Sc:P38893;Sc:P53757	Ce:G5ECR6
+Q9UL59	P15018	7761	3976	ZNF214	LIF	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:P09056;Rn:O88211	-
+Q9UL59	Q8N584	7761	125488	ZNF214	TTC39C	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:Q1LXE6	Mm:A0A3Q4EGC9;Rn:A0A0G2JXC8
+Q9UL59	Q9HCM4	7761	57669	ZNF214	EPB41L5	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q8BGS1	Dr:F1QVV9;Rn:D3ZK45
+Q9UL59	P11474	7761	2101	ZNF214	ESRRA	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:O08580;Rn:Q5QJV7	Dr:F1QQS8
+Q9UL59	Q00839	7761	3192	ZNF214	HNRNPU	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:A8E6M1;Dr:Q5RHQ7;Mm:Q8VEK3	Rn:A0A0G2JZ52
+Q9UL59	P03923	7761	4541	ZNF214	MT-ND6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:Q9MIX9;Mm:P03925;Rn:P03926	-
+Q9UL59	Q9HB03	7761	83401	ZNF214	ELOVL3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:O35949;Rn:D3ZPX9	-
+Q9UL59	O43795	7761	4430	ZNF214	MYO1B	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:F1R617;Mm:P46735;Rn:Q05096	-
+Q9UL59	O00481	7761	11119	ZNF214	BTN3A1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	-
+Q9UL59	Q8WUM4	7761	10015	ZNF214	PDCD6IP	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:P34552;Dm:Q9VB05;Dr:B8JLR1;Mm:Q9WU78;Rn:A0A140TAA4;Sc:Q12033;Sc:P48582	-
+Q9UL59	P07947	7761	7525	ZNF214	YES1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	-

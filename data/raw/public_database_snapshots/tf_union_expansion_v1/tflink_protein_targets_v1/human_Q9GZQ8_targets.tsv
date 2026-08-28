@@ -1,0 +1,4 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9GZQ8	Q9NWB6	81631	55082	MAP1LC3B	ARGLU1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q7ZUD8;Mm:Q9CQV6;Rn:Q62625	Rn:A0A0G2K9Q7	Ce:P34433;Dm:Q9VL63;Dr:Q7ZVW9;Mm:Q3UL36;Rn:Q5BJT0	-
+Q9GZQ8	P14859	81631	5451	MAP1LC3B	POU2F1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q7ZUD8;Mm:Q9CQV6;Rn:Q62625	Rn:A0A0G2K9Q7	Rn:F1LRD7	Mm:A0A0R4J1Z4
+Q9GZQ8	Q92900	81631	5976	MAP1LC3B	UPF1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q7ZUD8;Mm:Q9CQV6;Rn:Q62625	Rn:A0A0G2K9Q7	Dm:Q9VYS3;Mm:Q9EPU0;Rn:A0A0U1RS25;Sc:P30771	Dr:F1RCY6

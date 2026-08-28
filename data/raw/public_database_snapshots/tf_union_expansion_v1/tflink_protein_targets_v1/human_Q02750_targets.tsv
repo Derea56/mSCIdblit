@@ -1,0 +1,7 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q02750	P31153	5604	4144	MAP2K1	MAT2A	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A5WWB4;Mm:P31938;Rn:A0A0H2UHI2	-	Dr:Q58EF9;Mm:Q3THS6;Rn:F1LRB8	-
+Q02750	P01100	5604	2353	MAP2K1	FOS	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A5WWB4;Mm:P31938;Rn:A0A0H2UHI2	-	Dr:Q6P0S4;Mm:P01101;Rn:P12841	-
+Q02750	Q96ED9	5604	29911	MAP2K1	HOOK2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A5WWB4;Mm:P31938;Rn:A0A0H2UHI2	-	Mm:Q7TMK6;Rn:E9PTX3	Dr:A0A0R4IRV0
+Q02750	P14618	5604	5315	MAP2K1	PKM	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A5WWB4;Mm:P31938;Rn:A0A0H2UHI2	-	Dr:Q7ZVT2;Mm:P52480;Rn:P11980	-
+Q02750	P06899	5604	8970	MAP2K1	H2BC11	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A5WWB4;Mm:P31938;Rn:A0A0H2UHI2	-	-	-
+Q02750	O00141	5604	6446	MAP2K1	SGK1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A5WWB4;Mm:P31938;Rn:A0A0H2UHI2	-	Dr:Q7ZTW4;Mm:Q9WVC6;Rn:A0A0G2JVM7	-

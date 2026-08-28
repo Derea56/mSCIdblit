@@ -1,0 +1,3 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9P1U0	P08183	30834	5243	POLR1H	ABCB1	inferred by curator	29087512;16373708	Homo sapiens	TRRUST	Yes	Ce:O17587;Dm:Q9VD81;Dr:Q1LWR1;Mm:Q791N7;Rn:Q6MFY5	-	Mm:P21447	-
+Q9P1U0	P10415	30834	596	POLR1H	BCL2	inferred by curator	29087512;16373708;16609701	Homo sapiens	TRRUST	Yes	Ce:O17587;Dm:Q9VD81;Dr:Q1LWR1;Mm:Q791N7;Rn:Q6MFY5	-	Dr:Q564A4;Mm:P10417;Rn:F1LNV0	Dr:F8W266

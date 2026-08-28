@@ -1,0 +1,4 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P42859	F6RUI8	-	-	Htt	Maskbp3	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	-	-
+P42859	E9PUR0	-	108857	Htt	Ankhd1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:Q8IWZ3	Rn:A0A0G2K916
+P42859	Q9D0Q7	-	67036	Htt	Mrpl45	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:A0A087X2D5;Dm:Q9VCX3;Dr:E9QEK4;Rn:D4A104	-

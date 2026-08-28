@@ -1,0 +1,10 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q00059	P00156	7019	4519	TFAM	MT-CYB	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QF85;Mm:P40630;Rn:Q91ZW1	Ce:Q94234;Dm:Q9VDL2	Dr:Q9MIX8;Mm:P00158;Rn:P00159;Sc:P00163	-
+Q00059	Q53QZ3	7019	55843	TFAM	ARHGAP15	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QF85;Mm:P40630;Rn:Q91ZW1	Ce:Q94234;Dm:Q9VDL2	Mm:Q811M1	Dr:B0S8J8;Rn:Q6AYC5
+Q00059	P03923	7019	4541	TFAM	MT-ND6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QF85;Mm:P40630;Rn:Q91ZW1	Ce:Q94234;Dm:Q9VDL2	Dr:Q9MIX9;Mm:P03925;Rn:P03926	-
+Q00059	P0DMP1	7019	-	TFAM	MTRNR2L12	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QF85;Mm:P40630;Rn:Q91ZW1	Ce:Q94234;Dm:Q9VDL2	-	-
+Q00059	P0CJ75	7019	100463486	TFAM	MTRNR2L8	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QF85;Mm:P40630;Rn:Q91ZW1	Ce:Q94234;Dm:Q9VDL2	-	-
+Q00059	Q9ULF5	7019	57181	TFAM	SLC39A10	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QF85;Mm:P40630;Rn:Q91ZW1	Ce:Q94234;Dm:Q9VDL2	Mm:Q6P5F6;Rn:D4A517	-
+Q00059	P0CJ68	7019	100462977	TFAM	MTRNR2L1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QF85;Mm:P40630;Rn:Q91ZW1	Ce:Q94234;Dm:Q9VDL2	-	-
+Q00059	P03915	7019	4540	TFAM	MT-ND5	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QF85;Mm:P40630;Rn:Q91ZW1	Ce:Q94234;Dm:Q9VDL2	Dr:Q9MIY0;Mm:P03921	Rn:P11661
+Q00059	P03891	7019	4536	TFAM	MT-ND2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QF85;Mm:P40630;Rn:Q91ZW1	Ce:Q94234;Dm:Q9VDL2	Dr:Q9MIY9;Mm:P03893;Rn:P11662	-

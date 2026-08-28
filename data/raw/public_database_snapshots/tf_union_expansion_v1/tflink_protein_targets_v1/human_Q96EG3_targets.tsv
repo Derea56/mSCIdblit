@@ -1,0 +1,9 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q96EG3	P0DP25	116412	801;805;808	ZNF837	CALM3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	-
+Q96EG3	Q5RKV6	116412	118460	ZNF837	EXOSC6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:Q6P0I8;Rn:D3ZW38	Mm:Q8BTW3
+Q96EG3	P0DP24	116412	801;805;808	ZNF837	CALM2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	-
+Q96EG3	P46937	116412	10413	ZNF837	YAP1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:Q1L8J7;Mm:P46938;Rn:Q2EJA0	-
+Q96EG3	Q9HCE9	116412	57719	ZNF837	ANO8	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:H2L2L3;Mm:Q6PB70;Rn:A0A0G2K5K1	Dr:E7F191
+Q96EG3	Q969Y2	116412	84705	ZNF837	GTPBP3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:Q9VC87;Dr:F1Q694;Mm:Q923K4;Rn:Q5PQQ1;Sc:P32559	Ce:Q9XTZ1
+Q96EG3	P0DP23	116412	801;805;808	ZNF837	CALM1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	-
+Q96EG3	Q14106	116412	10766	ZNF837	TOB2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q9JM55;Rn:Q5U4F2	-

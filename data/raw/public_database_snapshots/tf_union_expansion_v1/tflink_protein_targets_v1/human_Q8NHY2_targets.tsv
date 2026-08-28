@@ -1,0 +1,5 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q8NHY2	Q8NHY2	64326	64326	COP1	COP1	inferred by curator	20062082;29087512	Homo sapiens	TRRUST	Yes	Dr:B0UY40;Mm:Q9R1A8;Rn:A0A096UWG1	-	Dr:B0UY40;Mm:Q9R1A8;Rn:A0A096UWG1	-
+Q8NHY2	P00749	64326	5328	COP1	PLAU	inferred by curator	29087512;12615916	Homo sapiens	TRRUST	Yes	Dr:B0UY40;Mm:Q9R1A8;Rn:A0A096UWG1	-	-	-
+Q8NHY2	Q5EG05	64326	114769	COP1	CARD16	inferred by curator	20062082;29087512	Homo sapiens	TRRUST	Yes	Dr:B0UY40;Mm:Q9R1A8;Rn:A0A096UWG1	-	-	-
+Q8NHY2	P03956	64326	4312	COP1	MMP1	inferred by curator	29087512;12615916	Homo sapiens	TRRUST	Yes	Dr:B0UY40;Mm:Q9R1A8;Rn:A0A096UWG1	-	Mm:G5E8A9;Mm:E9QPT8	Rn:D3ZRZ2;Rn:B5DFD5

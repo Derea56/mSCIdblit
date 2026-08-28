@@ -1,0 +1,2 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q8WYH8	Q9UNL4	84289	51147	ING5	ING4	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A5WVS7;Mm:Q9D8Y8;Rn:B2RZ71	-	Dr:Q4VBS0;Mm:Q8C0D7;Rn:A1L130	-

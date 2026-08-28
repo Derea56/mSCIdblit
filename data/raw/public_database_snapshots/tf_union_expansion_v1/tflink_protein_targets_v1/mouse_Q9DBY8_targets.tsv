@@ -1,0 +1,2 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9DBY8	P07310	67459	12715	Nvl	Ckm	inferred by curator	15933209;26578589	Mus musculus	ORegAnno	Yes	Hs:O15381;Ce:Q9NAG4;Dr:B8A4A1;Rn:D3ZTY9;Sc:Q07844	-	Hs:P06732	Rn:A0A0G2JSP8

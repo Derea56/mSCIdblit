@@ -1,0 +1,9 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q7TPV2	Q2VPQ9	224170	70088	Dzip3	Meaf6	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:Q9HAF1;Dr:Q6AZD3;Rn:B0BNB4	-
+Q7TPV2	P58058	224170	192185	Dzip3	Nadk	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Rn:F7EXV6	Hs:A0A0A0MR98;Dr:E9QIJ4
+Q7TPV2	Q8C1Y8	224170	231874	Dzip3	Ccz1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:P86791;Hs:P86790;Ce:Q9XVL8;Dm:Q9VZL5;Dr:F1QVT9;Rn:A0A140UHX9	-
+Q7TPV2	P00158	224170	17711	Dzip3	Mt-Cyb	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:P00156;Dr:Q9MIX8;Rn:P00159;Sc:P00163	-
+Q7TPV2	P03925	224170	17722	Dzip3	Mtnd6	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:P03923;Dr:Q9MIX9;Rn:P03926	-
+Q7TPV2	A2A7Q9	224170	-	Dzip3	Rnf19b	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:Q6ZMZ0;Rn:A0A0G2K6H9	Dr:Q1L8L6
+Q7TPV2	P37040	224170	18984	Dzip3	Por	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Ce:Q09590;Dr:F8W4Z6;Rn:P00388;Sc:P16603	Hs:C9JQ78;Dm:Q8IPJ7
+Q7TPV2	Q6YCH2	224170	399675	Dzip3	Tdpoz4	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	-	-

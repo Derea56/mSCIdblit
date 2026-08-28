@@ -1,0 +1,2 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q8BLG0	P20263	228829	18999	Phf20	Pou5f1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:Q9BVI0;Rn:D3ZQB7	Dr:A8HAK1	Hs:Q01860;Hs:Q06416	Rn:Q6MG27

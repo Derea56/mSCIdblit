@@ -1,0 +1,6 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9UK13	Q96I25	7638	84991	ZNF221	RBM17	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:Q20966;Dm:Q7PL83;Dr:Q7ZVN6;Mm:Q8JZX4;Rn:Q6AY02	-
+Q9UK13	Q9BRY0	7638	29985	ZNF221	SLC39A3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q99K24;Rn:Q5U1X7	-
+Q9UK13	K7EQS6	7638	-	ZNF221	-	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	-
+Q9UK13	Q14919	7638	10589	ZNF221	DRAP1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:F1R8S0;Mm:Q9D6N5;Rn:A0JPP1	-
+Q9UK13	Q9H3H3	7638	83638	ZNF221	C11orf68	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	Dr:Q6NWH0;Mm:Q8VD62;Rn:Q566Q8

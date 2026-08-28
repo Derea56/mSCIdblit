@@ -1,0 +1,3 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q96E93	P11498	10219	5091	KLRG1	PC	inferred by curator	17149590;29087512	Homo sapiens	TRRUST	Yes	Mm:O88713;Rn:M0R4X2	Rn:Q64335	-	Dr:B0S5R6
+Q96E93	P01308	10219	3630	KLRG1	INS	inferred by curator	21830322;16461554;29087512	Homo sapiens	TRRUST	Yes	Mm:O88713;Rn:M0R4X2	Rn:Q64335	Dr:O73727;Mm:P01325;Mm:P01326;Rn:P01323	Rn:P01322

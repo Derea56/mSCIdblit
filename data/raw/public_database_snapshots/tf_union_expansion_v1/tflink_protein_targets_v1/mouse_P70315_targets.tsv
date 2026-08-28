@@ -1,0 +1,5 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P70315	Q9CQ44	22376	66279	Was	Tmem218	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P42768	Dr:B0S5G8;Rn:M0RBE8	Hs:A2RU14;Dr:Q7SZ56;Rn:Q5U3Y9	-
+P70315	Q80V94	22376	108011	Was	Ap4e1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P42768	Dr:B0S5G8;Rn:M0RBE8	Hs:Q9UPM8;Dr:A0A0R4IQI7;Rn:D3ZX21	-
+P70315	Q924A2	22376	71722	Was	Cic	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P42768	Dr:B0S5G8;Rn:M0RBE8	Dr:F1Q6M9;Rn:D4A853	Hs:I3L2J0
+P70315	P62855	22376	27370	Was	Rps26	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P42768	Dr:B0S5G8;Rn:M0RBE8	Hs:P62854;Ce:O45499;Dm:P13008;Sc:P39939;Sc:P39938	Dr:Q6P6E2;Dr:F1QHJ1;Rn:D3Z8D7

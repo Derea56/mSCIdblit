@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import io
 import json
 import subprocess
@@ -51,7 +52,13 @@ CURRENT_SET_FIELDS = [
 
 
 def read_tsv(path: Path) -> list[dict[str, str]]:
-    with path.open(newline="", encoding="utf-8") as handle:
+    if not path.is_file() and path.suffix == ".tsv":
+        compressed = path.with_suffix(path.suffix + ".gz")
+        if compressed.is_file():
+            path = compressed
+    opener = gzip.open if path.suffix == ".gz" else Path.open
+    mode = "rt" if path.suffix == ".gz" else "r"
+    with opener(path, mode, newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle, delimiter="\t"))
 
 

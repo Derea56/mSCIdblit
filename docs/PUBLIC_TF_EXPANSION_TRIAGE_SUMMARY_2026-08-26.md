@@ -1,7 +1,7 @@
 # Public TF expansion first-pass triage summary
 
 **Date:** 2026-08-26  
-**Status:** staging only; no canonical TF, Module 22B, or evidence-promotion writes
+**Status:** staging only; no canonical TF, Module 22B, or database materialization
 
 ## Scope
 
@@ -579,3 +579,299 @@ The triage manifest reports 2,051 input keys, 2,051 output rows, zero duplicate
 keys, zero missing source registries, zero missing source versions, and zero
 unexpected module-evidence promotions. No canonical data, source records, or
 provenance rows were modified by this summary pass.
+
+## Evidence collection batch 032
+
+Batch 032 reviewed the literal 100-pair queue across 25 additional TFLink
+source-set ranks and 24 normalized regulator keys. Five exact functional
+noncanonical candidates were staged: human MRTFA-to-COL1A1, MRTFA-to-MYL9, and
+MRTFA-to-MMP9; mouse Mrtfa-to-Id3; and human SRPK2-to-ACSS2. The MRTFA findings
+are routed to SRF-coactivator/transcriptional evidence, while SRPK2-to-ACSS2
+is routed to RNA-splicing and downstream-expression evidence. None is a strict
+standalone sequence-specific TF promotion, and none has SCI target-cell
+validation.
+
+One mouse Mrtfa-to-Tagln row was retained as binding/cofactor context without
+isolated Mrtfa perturbation. Mouse Mrtfa-to-Edn1 was retained as a reverse-
+direction near-match because ET-1/Edn1 signaling changes MRTF-A activity, not
+the reverse relationship. Human MRTFA-to-SCAI was retained as an interaction
+near-match because SCAI inhibits MRTF-A-dependent transcription rather than
+MRTFA regulating SCAI expression. The remaining 92 rows are
+database-membership-only leads. No profile-only or unresolved-identity rows
+were added in this batch.
+
+The Batch032 outputs are in
+`evidence_batches/batch_032`, including the pair register, regulator register,
+machine-readable summary, and `batch_032_validation.json`. Validation found
+100 reviewed rows, 100 unique provenance-aware keys, zero duplicate review IDs,
+zero malformed flags, zero exportable rows, and zero canonical writes. All
+literal TFLink source record IDs, raw symbols, species, target symbols, source
+snapshot paths, and raw record hashes were preserved.
+
+The consolidated registers now extend through
+`evidence_batches/batch_032`. Across all thirty-two batches, 3,090 exact
+provenance-aware pairs have been reviewed. The cumulative staging set now
+contains 25 exact noncanonical or strict-functional candidates; five were
+added in Batch032. No canonical TF, Module 22B, or other materialization write
+was performed. The next prepared batch is not present in the current
+workspace, so further sequential review requires a newly prepared queue.
+
+## Evidence collection batch 033
+
+Batch 033 was prepared from the next deterministic 25 TFLink source-set block
+after Batch 032. It contained 84 literal regulator-target-species pairs across
+24 normalized regulator keys; the short count reflects source sets with fewer
+than four imported targets. All 25 source records were new relative to
+Batches 001-032, and the literal raw symbols and species were retained.
+
+One exact noncanonical candidate was staged: human COP1/RFWD2-to-MMP1. A
+gastric-cancer perturbation study reported increased MMP1 expression after
+COP1 knockdown, while the direct ubiquitin/substrate mechanism remains
+unresolved. This is routed to noncanonical ubiquitin/protein regulation and
+downstream-expression evidence, not canonical TF or Module 22B evidence. The
+other 83 rows remain database-membership-only leads; no strict TF, profile-only,
+identity-hold, or near-match rows were added.
+
+Batch033 validation passed: 84 reviewed rows, 84 unique provenance-aware keys,
+zero duplicate review IDs, zero malformed flags, zero exportable rows, and
+zero canonical writes. No canonical TF, Module 22B, or other materialization
+write was performed. The batch artifacts are in
+`evidence_batches/batch_033`.
+
+The consolidated registers now extend through
+`evidence_batches/batch_033`. Across all thirty-three batches, 3,174 exact
+provenance-aware pairs have been reviewed. The cumulative staging set now
+contains 26 exact noncanonical or strict-functional candidates; one was added
+in Batch033. The next unreviewed source-set block begins at deterministic
+offset 825 and remains available for subsequent queue preparation.
+
+## Evidence collection batches 034-039: completion
+
+Batches 034-039 completed the remaining deterministic TFLink source-set
+queue. The six batches reviewed 510 literal regulator-target-species pairs
+from 144 additional source records: Batch034 had 98 pairs, Batch035 had 38,
+Batch036 had 100, Batch037 had 100, Batch038 had 100, and Batch039 had 74.
+The shorter batches reflect source sets with fewer than four imported targets;
+all literal symbols and species were retained without alias reconstruction.
+
+The final six batches produced no exact TF promotions and no additional exact
+noncanonical functional candidates. All 510 rows remain staged as
+database-membership-only leads after bounded exact-pair review. The Batch035
+literal `c-myc` rows were reviewed against their queued targets only; evidence
+for other c-MYC targets was not substituted. Regulators in the DNA-repair,
+nuclear-structure/transport, RNA-processing, nuclear-machinery, signaling,
+metabolic, membrane, and cell-cycle categories were routed according to the
+queue's role category and were not treated as sequence-specific TFs by
+inference. Alias/ingestion-artifact rows remain unresolved rather than being
+resolved by guessing.
+
+Each batch passed local validation with pair count equal to queue count,
+unique provenance-aware keys for every row, no malformed flags, zero
+exportable rows, zero canonical writes, and zero duplicate review IDs. The
+cumulative expansion validator and the public TF union validator also passed;
+no canonical TF, Module 22B, or other materialization write occurred.
+
+The consolidated registers and reports now extend through
+`evidence_batches/batch_039`. Across all thirty-nine batches, 3,684 exact
+provenance-aware pairs have been reviewed, covering all 969 eligible source
+records in the deterministic queue. The cumulative staging set contains 26
+exact noncanonical or strict-functional candidates, with no strict
+sequence-specific TF promotion in the batch-review files. There are no
+remaining prepared literal-pair queues in this expansion pass.
+
+## Comprehensive interaction promotion overlay
+
+Because the project goal is a comprehensive possible-interaction catalog,
+absence of SCI target-cell validation is retained as a context qualifier and
+is no longer a hard exclusion from catalog-level evidence promotion. A
+separate exportable overlay initially promoted 36 literature-supported
+regulator-target-species findings from the reviewed batches: four
+sequence-specific TF pairs, one broader functional sequence-specific TF pair,
+and 31 role-specific noncanonical or pathway/expression associations. The
+latter remain explicitly routed
+as chromatin, cofactor, RNA, kinase, receptor/relay, ligand, lipid, ubiquitin,
+or protein/PTM mechanisms and are not relabeled as canonical TF edges.
+
+The four exact TF pairs are mouse OVOL2-to-Cdh2, mouse MSGN1-to-Dll3, mouse
+NOBOX-to-Pou5f1, and human BHLHA15/MIST1-to-RAB26. The overlay routes the
+evidence-supported rows across 20B, 21B, 22B, 23B, 24B, and a general public
+interaction lane where no graph-module route is present. All 36 rows are
+exportable in the comprehensive catalog, but all retain
+`canonical_write_performed=false`; no canonical TF or Module 22B materialization
+was performed.
+
+The broadened literature gate added five held-pair promotions: human
+BHLHA15/MIST1-to-RAB3D, human BAHD1-to-IFNB1 as a complex-dependent
+expression association, mouse KDM1A-to-Abca1 as an indirect pathway
+association, and mouse ZNF385A/Hzf-to-Cebpa and -Tp53 as post-transcriptional
+RNA associations. These five are exportable catalog records, but they are not
+recast as direct canonical TF edges. The initial 36-row follow-up queue requests independent corroboration,
+orthogonal mechanism/perturbation, or additional model/context evidence. The
+overlay artifacts are in
+`data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1`.
+
+### TFLink source-table recovery for the database-only lane
+
+The 532 rows previously held as database-only were checked against the
+TFLink per-protein target tables rather than the GMT membership snapshot. All
+532 had an exact regulator-target-species row with the detection method,
+organism, source database, PubMed field, and small-scale-evidence flag
+preserved. The records are all large-scale chromatin-immunoprecipitation
+associations (`Small-scale.evidence=No`): 490 came from GTRD, 26 from ReMap,
+and 16 were represented by both source databases. The attached PubMed IDs are
+the peer-reviewed GTRD database paper (PMID 27924024) and ReMap database paper
+(PMID 29126285), not pair-specific primary experiment papers; therefore these
+rows are promoted only to the high-throughput binding/association tier. They
+are not interpreted as causal expression, activation, perturbation, canonical
+TF, or Module 22B evidence.
+
+The comprehensive overlay now contains 568 exportable rows, including the
+532 TFLink source-table associations. All retain
+`canonical_write_performed=false` and `module22b_write_performed=false`. Raw
+per-protein TFLink tables and the pair-level audit are staged in
+`data/raw/public_database_snapshots/tf_union_expansion_v1/tflink_protein_targets_v1`
+and
+`data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/tflink_database_only_source_audit.tsv`.
+
+Evidence weighting is now explicit in `promoted_interactions.tsv`: 26 rows
+have corroborated independent literature, 10 have a single independent
+literature source, and the 532 TFLink source-table rows have no independent
+pair-specific literature identified in the current review. The latter retain
+the lower `C_tflink_source_table_only` tier even though their TFLink records
+are exact ChIP-seq associations.
+
+### TFLink source-table recovery for the database/profile-only tranche
+
+The next 2,476 database/profile-only rows were checked against 690 unique
+TFLink per-protein target tables. A total of 2,472 rows had exact
+regulator-target-species source-table matches and four did not; the unmatched
+rows remain held. Among the exact matches, 2,393 are large-scale-only and 79
+are marked small-scale or curated. The source-table evidence includes 2,075
+GTRD rows, 193 ReMap rows, 98 GTRD+ReMap rows, 69 TRRUST rows, 17
+ORegAnno+PAZAR rows, 12 HTRI rows, five ORegAnno rows, two
+IntAct-via-DoRothEA rows, and one ReMap+TRRUST row.
+
+These 2,472 records are promoted as generic TFLink source-table associations,
+not sequence-specific TF claims, because this tranche includes chromatin
+factors, cofactors, machinery, and non-TF regulator candidates. Their exact
+assay/source metadata are preserved, but independent pair-specific literature
+outside TFLink has not yet been identified for this tranche. The overlay now
+contains 3,040 exportable records: 26 with corroborated independent
+literature, 10 with single-source independent literature, and 3,004 with
+TFLink source-table evidence only. The tranche audit is staged in
+`data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/tflink_database_profile_hold_source_audit.tsv`.
+
+## Follow-up evidence search
+
+The first follow-up search added an independent primary source for mouse
+MSGN1-to-Dll3 evidence (PMID 25371364), supplementing the original direct
+binding/loss-of-function record and the Reactome source locator. This moves
+that candidate's next gap from independent corroboration to orthogonal assay
+or additional context. The source was added to the promotion overlay without
+rewriting the historical Batch010 review file.
+
+The follow-up search log also records bounded negative and mechanism-specific
+results: MIST1/RAB26 gained independent mouse mechanism context but not
+same-species human corroboration; YAP1/ACTR2 gained an independent combined
+YAP/TAZ ACTR2 context but not a YAP1-only edge; GPS2/Abca1 gained a distinct
+corepressor/repression context but not independent corroboration of the
+promoted LPS-activation mechanism; STAG2/ABCA1 was confirmed in a same-study
+AACR/preprint record; ASH2L/ADAM17 and METTL3/ADAM10 still resolve to their
+already-used primary records; and Factor Xa/CCN1 yielded a separate
+protein-cleavage mechanism that is kept distinct from the promoted PAR1/
+downstream-RNA relay. These findings do not increase the batch-derived promoted-row count,
+but they define the remaining evidence gaps more precisely.
+
+## Evidence-priority search funnel
+
+To make continued searching more efficient, a reproducible pair-level priority
+queue was generated from all 3,684 reviewed pair groups. It retains the
+underlying provenance-aware source records while assigning search lanes and
+next actions. Three-thousand-forty already promoted pairs are routed to the dedicated
+follow-up queue, leaving no active bounded-review candidates after 494
+completed search outcomes were logged. The remaining groups are held as 146
+direction/species near-match or reverse-direction records and four
+identity-resolution holds. The former 532 database-only rows and the 2,472-row
+database/profile-only tranche are no longer in those holds after TFLink
+source-table recovery.
+
+No active bounded-review packet remains; the 494 pair-level outcomes from this
+round are held for adjudication. This funnel prioritized
+exact-pair binding, perturbation, and noncanonical functional leads for the
+next search round while keeping profile-only and database-membership findings
+out of the manual-search bottleneck. The queue artifacts are in
+`data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1`.
+Completed search outcomes are recorded in `evidence_search_outcomes.tsv` so
+the same pair is not searched again before adjudication.
+
+Three follow-up search outcomes met the comprehensive-catalog promotion gate:
+mouse GSK3B-to-Ccnd1, human PRMT5-to-EPHA2, and human DYRK1A-to-CCND1 are
+promoted as exact kinase-substrate/PTM mechanisms, routed to the Module
+22B/PTM-specific lane. They are exportable in the follow-up overlay, but
+`canonical_write_performed=false` and `module22b_write_performed=false`; see
+`followup_promoted_interactions.tsv` and `followup_promotion_validation.json`.
+
+### Second-pass adjudication of the 146 direction/species holds
+
+The 146 remaining direction/species-hold rows were re-evaluated using only
+evidence already recorded in their batch review files. Nine rows met the
+broadened comprehensive-catalog gate without requiring a new search or an
+identity/species inference: two mouse BRD4 indirect expression associations
+(A2M/A2m and Abca1), four mouse ZNF513 direct promoter-binding associations
+(Arr3, Pax6, Rbp3, and Sp4), one human HOXD10 promoter-reporter association
+(HOXD9), one mouse MRTF-A coactivator association (Tagln), and one human
+HMGB1–ACVR1 ligand/receptor-response association. The HMGB1–ACVR1 record is
+routed as a ligand/receptor response category and is not labeled as TF
+regulation; the ZNF513 and HOXD10 records retain binding/reporter limitations;
+the MRTF-A record retains its cofactor-dependence limitation.
+
+The comprehensive overlay now contains 3,049 exportable rows: 28 with
+corroborated independent literature, 17 with a single independent literature
+source, and 3,004 with TFLink source-table evidence only. All nine second-pass
+records remain `canonical_write_performed=false` and
+`module22b_write_performed=false`. The remaining 137 holds are unchanged in
+their staged categories: no exact pair support, cross-species/ortholog,
+identity/paralog/fusion, reverse-direction, or other contextual/database-only
+holds.
+
+### Evidence-confidence pass for the nonpromoted queue
+
+The nonpromoted queue was rechecked against the completed search outcomes and
+the historical pair-review citations. A new evidence-confidence field is
+separate from the search-priority field. `D_database_only_no_pair_evidence`
+means that no pair-specific literature or functional result was located beyond
+database, profile, membership, target-set, or untraceable-locator evidence;
+the underlying database provenance remains preserved. It does not mean that
+the regulator or target lacks biology in general.
+
+The current 3,684 pair groups are assigned 28 Tier A, 17 Tier B, 3,004 Tier C
+(`C_tflink_source_table_only`), 508 Tier D database/profile-only records, and
+127 Tier E (`E_reviewed_nonpromotable`) records with literature, functional,
+directional, species, identity, or other nonpromotable evidence. There are
+currently zero Tier U (`U_unreviewed`) records. The 508 D records are not
+promoted and are not treated as exact interactions. The 127 Tier E records
+remain separate so contextual or near-match literature is not mislabeled as
+evidence-free; Tier U is reserved for future rows added before review.
+
+### Adjudication of completed Tier E outcomes
+
+The 34 Tier E rows with completed search outcomes were adjudicated against the
+broadened comprehensive-catalog gate. Sixteen were promoted without new
+searching: three exact protein/PTM mechanisms (GSK3B-to-Ccnd1,
+DYRK1A-to-CCND1, and PRMT5-to-EPHA2), one AMH-to-ACVR1 ligand/receptor relay,
+one ADA2/CECR1-to-ANXA2 secreted-factor association, two CDYL direct
+chromatin-occupancy associations, one FXR2-to-ABCA1 RNA-binding association,
+one PRMT5-to-AXL indirect expression association, one TET1-to-IL5 expression
+association, one TET3-to-Agrn epigenetic-locus association, one
+SUPT16H/SPT16-to-CCND1 chromatin-expression association, one ZNF507-to-IGF2R
+perturbation-expression association, one ZNF580-to-ABCA1 perturbation-expression
+association, one U2AF2-to-APOA1 RNA-processing association, and one
+YAP1-to-ACKR2 pathway-expression association. The new records retain the
+completed search-outcome citations and explicit mechanism limitations; none
+are canonical TF or Module 22B materializations.
+
+The overlay now contains 3,065 exportable rows: 31 Tier A, 30 Tier B, and
+3,004 Tier C. The queue has 478 searched outcomes pending adjudication, 137
+direction/species holds, and four identity holds. Evidence-confidence tiers
+remain exhaustive: 508 Tier D database/profile-only rows, 111 Tier E reviewed
+but nonpromotable rows, and zero Tier U unreviewed rows.

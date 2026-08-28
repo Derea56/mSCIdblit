@@ -1,0 +1,2 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P12035	P01375	3850	7124	KRT3	TNF	inferred by curator	26578589;16027109	Homo sapiens	ORegAnno	Yes	-	-	Mm:P06804	Rn:P16599

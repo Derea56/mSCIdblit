@@ -1,0 +1,18 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q494X3	Q13503	342908	9412	ZNF404	MED21	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:Q9W5P1;Dr:Q7ZTI5;Mm:Q9CQ39;Rn:D4AA11	Ce:Q6BER6
+Q494X3	Q92730	342908	27289	ZNF404	RND1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:Q52WX7;Mm:Q8BLR7;Rn:Q5FVG9	-
+Q494X3	Q99614	342908	7265	ZNF404	TTC1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:Q9VEV3;Dr:F1QZK4;Mm:Q91Z38;Rn:Q66H09	Ce:O44951
+Q494X3	P07332	342908	2242	ZNF404	FES	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:P16879	Dr:F8W425;Rn:D4A584
+Q494X3	Q9H7Z6	342908	84148	ZNF404	KAT8	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:Q9VAV6;Mm:Q9D1P2;Rn:Q5XI06	Dr:F1QX50
+Q494X3	Q96ID5	342908	84966	ZNF404	IGSF21	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q7TNR6	Rn:A0A2U3UXS5
+Q494X3	P42226	342908	6778	ZNF404	STAT6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	-
+Q494X3	Q9Y5Z4	342908	23593	ZNF404	HEBP2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:Q5SPA1;Mm:Q9WU63;Rn:D3ZHC4	-
+Q494X3	O15067	342908	5198	ZNF404	PFAS	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:Q19311;Dm:P35421;Dr:Q5TZ72;Mm:Q5SUR0;Rn:A0A0G2JTN4;Sc:P38972	-
+Q494X3	P55160	342908	3071	ZNF404	NCKAP1L	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q8K1X4	Dr:F1Q6L5;Rn:A0A0G2JUF9
+Q494X3	Q8NEP7	342908	126823	ZNF404	KLHDC9	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q3USL1;Rn:D3ZDT0	-
+Q494X3	P04075	342908	226	ZNF404	ALDOA	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:P46563;Dm:P07764;Dr:Q803Q7;Mm:P05064;Rn:P05065	Dr:Q6P043
+Q494X3	Q9NUN7	342908	55331	ZNF404	ACER3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:E9QEA6;Mm:Q9D099;Rn:F1M6P3;Sc:P38298;Sc:Q02896	-
+Q494X3	Q96DP5	342908	123263	ZNF404	MTFMT	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:Q9V9Z0;Mm:Q9D799;Rn:Q5I0C5	Dr:F1QJ58
+Q494X3	Q9H6R4	342908	65083	ZNF404	NOL6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:Q8IH00;Dr:F1Q4S6;Mm:Q8R5K4;Rn:A0A0G2QC27;Sc:P53254	-
+Q494X3	Q9C019	342908	89870	ZNF404	TRIM15	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Rn:D3ZRI0	Mm:Q8R096
+Q494X3	Q9Y2Z2	342908	25821	ZNF404	MTO1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:Q20680;Dm:Q9W245;Dr:F1R509;Mm:G5E889;Rn:F1LYH3;Sc:P53070	-

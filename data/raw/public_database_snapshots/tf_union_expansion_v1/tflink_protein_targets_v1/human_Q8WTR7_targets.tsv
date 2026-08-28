@@ -1,0 +1,3 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q8WTR7	P42226	25888	6778	ZNF473	STAT6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8BI67	Rn:F1LTH0	-	-
+Q8WTR7	O15234	25888	22794	ZNF473	CASC3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q8BI67	Rn:F1LTH0	Dr:Q1ECZ4;Mm:Q8K3W3;Rn:G3V793	Dm:A0A0B4KH64

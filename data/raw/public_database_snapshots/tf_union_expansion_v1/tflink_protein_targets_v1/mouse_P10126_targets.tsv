@@ -1,0 +1,3 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P10126	P06880	13627	14599	Eef1a1	Gh1	inferred by curator	18971253;26578589	Mus musculus	ORegAnno;PAZAR	No	Hs:P68104;Dr:Q6P969;Dr:Q568F0;Rn:P62630	Rn:F1M6C2;Rn:M0R757	Hs:P0DML3;Hs:P01242;Hs:P0DML2;Hs:Q14406;Hs:P01241;Rn:P01244	Hs:A0A3B3ISS9;Dr:Q1JQ34
+P10126	Q02566	13627	17888	Eef1a1	Myh6	inferred by curator	18971253;26578589	Mus musculus	ORegAnno;PAZAR	No	Hs:P68104;Dr:Q6P969;Dr:Q568F0;Rn:P62630	Rn:F1M6C2;Rn:M0R757	Hs:P13533;Rn:G3V885	-

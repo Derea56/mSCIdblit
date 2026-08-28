@@ -1,0 +1,4 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P97798	Q7M6U3	-	83560	Neo1	Tex14	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:Q8IWB6;Rn:J3KTR9	-
+P97798	Q14B70	-	245596	Neo1	Hdx	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:Q7Z353;Dr:E7F5L7	Rn:D4A457
+P97798	Q5BU09	-	66266	Neo1	Eapp	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:Q56P03;Dr:F1QEZ7;Rn:B5DF09	-

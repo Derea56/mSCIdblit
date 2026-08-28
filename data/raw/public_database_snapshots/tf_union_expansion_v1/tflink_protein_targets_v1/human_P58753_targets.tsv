@@ -1,0 +1,3 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P58753	P14780	114609	4318	TIRAP	MMP9	inferred by curator	19724058;29087512	Homo sapiens	TRRUST	Yes	Mm:H3BKL1	Rn:D3ZXA5	Dr:F1QC76;Mm:P41245	Rn:D3ZYK8
+P58753	P24844	114609	10398	TIRAP	MYL9	inferred by curator	19724058;29087512	Homo sapiens	TRRUST	Yes	Mm:H3BKL1	Rn:D3ZXA5	Dr:F1QYK9;Mm:Q9CQ19;Rn:B0BMS8	Dr:Q6NVA6

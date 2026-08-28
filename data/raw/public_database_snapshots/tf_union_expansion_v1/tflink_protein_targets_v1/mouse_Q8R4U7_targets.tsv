@@ -1,0 +1,2 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q8R4U7	Q09M02	269593	231093	Luzp1	Agbl5	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:Q86V48	Dr:X1WFU1;Rn:G3V7L9	Hs:Q8NDL9;Dr:F1QNG5;Rn:B2GV17	-

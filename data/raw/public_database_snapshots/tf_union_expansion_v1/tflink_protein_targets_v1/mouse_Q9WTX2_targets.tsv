@@ -1,0 +1,2 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9WTX2	P80206	23992	-	Prkra	Otx2	inferred by curator	22090505;29087512	Mus musculus	TRRUST	Yes	Hs:O75569;Rn:G3V7J2	-	-	-

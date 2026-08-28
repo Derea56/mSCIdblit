@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import hashlib
 import json
 from collections import Counter
@@ -17,7 +18,13 @@ DEFAULT_EXISTING = ROOT / "data/processed/public_tf_union_v1"
 
 
 def read_tsv(path: Path) -> list[dict[str, str]]:
-    with path.open(newline="", encoding="utf-8") as handle:
+    if not path.is_file() and path.suffix == ".tsv":
+        compressed = path.with_suffix(path.suffix + ".gz")
+        if compressed.is_file():
+            path = compressed
+    opener = gzip.open if path.suffix == ".gz" else Path.open
+    mode = "rt" if path.suffix == ".gz" else "r"
+    with opener(path, mode, newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle, delimiter="\t"))
 
 
@@ -46,7 +53,11 @@ def main() -> None:
         "tflink_tf_summary.tsv", "tf_pair_records.tsv", "tf_candidate_union.tsv",
         "expansion_manifest.json",
     ]
-    missing = [name for name in required if not (args.input_dir / name).is_file()]
+    missing = [
+        name for name in required
+        if not (args.input_dir / name).is_file()
+        and not (args.input_dir / f"{name}.gz").is_file()
+    ]
     issue(checks, "missing_required_files", len(missing))
     if missing:
         result = {"status": "fail", "checks": checks, "missing": missing}

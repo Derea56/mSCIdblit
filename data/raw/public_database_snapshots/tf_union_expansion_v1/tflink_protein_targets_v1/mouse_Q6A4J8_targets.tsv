@@ -1,0 +1,4 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q6A4J8	Q60972	252870	19646	Usp7	Rbbp4	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:Q09028;Dm:Q24572;Dr:Q1LXD4;Rn:B5DFB2	-
+Q6A4J8	Q505B7	252870	67106	Usp7	Zbtb8os	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	-	-
+Q6A4J8	Q9DA21	252870	69371	Usp7	Smco2	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:A6NFE2	Rn:D3ZFT3

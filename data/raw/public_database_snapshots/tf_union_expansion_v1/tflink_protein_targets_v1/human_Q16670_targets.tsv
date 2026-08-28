@@ -1,0 +1,6 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q16670	Q99966	7741	4435	ZSCAN26	CITED1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q5RJ54;Rn:D3ZFY2	-	-	-
+Q16670	Q9Y265	7741	8607	ZSCAN26	RUVBL1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q5RJ54;Rn:D3ZFY2	-	Ce:O17607;Dm:Q9VH07;Dr:Q6IQT8;Mm:P60122;Sc:Q03940	Rn:P60123
+Q16670	Q8N2G4	7741	116372	ZSCAN26	LYPD1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q5RJ54;Rn:D3ZFY2	-	Mm:Q8BLC3	Rn:Q66H42
+Q16670	O15357	7741	3636	ZSCAN26	INPPL1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q5RJ54;Rn:D3ZFY2	-	Mm:Q6P549;Rn:V9GZ88	-
+Q16670	P62820	7741	5861	ZSCAN26	RAB1A	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q5RJ54;Rn:D3ZFY2	-	Dr:Q4V984;Dr:Q7ZSZ0;Dr:B8JLC8;Mm:P62821	-

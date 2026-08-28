@@ -1,0 +1,9 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9H668	Q969X2	79991	30815	STN1	ST6GALNAC6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:B8JKF4;Mm:Q8K2X3;Rn:A0A0H2UHR9	-	-	-
+Q9H668	Q96AP0	79991	65057	STN1	ACD	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:B8JKF4;Mm:Q8K2X3;Rn:A0A0H2UHR9	-	Mm:Q5EE38;Rn:Q4FZR5	Dr:A0A1D5NS58
+Q9H668	Q9H467	79991	79004	STN1	CUEDC2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:B8JKF4;Mm:Q8K2X3;Rn:A0A0H2UHR9	-	Dm:Q95T08;Dr:Q6TLH3;Mm:Q9CXX9;Rn:A1L131	-
+Q9H668	Q9NPB6	79991	50855	STN1	PARD6A	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:B8JKF4;Mm:Q8K2X3;Rn:A0A0H2UHR9	-	Dr:A5WW50;Mm:Q9Z101;Rn:A0A0G2JUC3	-
+Q9H668	P62826	79991	5901	STN1	RAN	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:B8JKF4;Mm:Q8K2X3;Rn:A0A0H2UHR9	-	Ce:O17915;Dm:Q9VZ23;Dr:P79735;Mm:P62827;Rn:P62828;Sc:P32835;Sc:P32836	-
+Q9H668	Q01658	79991	1810	STN1	DR1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:B8JKF4;Mm:Q8K2X3;Rn:A0A0H2UHR9	-	Ce:O45550;Dm:Q9VJQ5;Dr:Q08BR1;Mm:Q91WV0	Rn:Q5XI68
+Q9H668	P61204	79991	377	STN1	ARF3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:B8JKF4;Mm:Q8K2X3;Rn:A0A0H2UHR9	-	-	-
+Q9H668	P62937	79991	5478	STN1	PPIA	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:B8JKF4;Mm:Q8K2X3;Rn:A0A0H2UHR9	-	Mm:P17742;Rn:P10111	Rn:A0A0G2K1P0;Rn:A0A0G2K2E4

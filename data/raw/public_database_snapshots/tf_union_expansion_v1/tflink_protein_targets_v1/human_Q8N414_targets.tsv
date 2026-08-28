@@ -1,0 +1,16 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q8N414	Q6R2W3	79605	114821	PGBD5	ZBED9	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q6ZM83;Mm:D3YZI9;Rn:D3ZSZ4	-	-	-
+Q8N414	P34096	79605	6038	PGBD5	RNASE4	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q6ZM83;Mm:D3YZI9;Rn:D3ZSZ4	-	Mm:Q8C7E4;Rn:O55004	-
+Q8N414	P62273	79605	6235	PGBD5	RPS29	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q6ZM83;Mm:D3YZI9;Rn:D3ZSZ4	-	Ce:P90983;Dm:Q9VH69;Dr:Q6Q419;Mm:P62274;Rn:P62275;Sc:P41058;Sc:P41057	-
+Q8N414	Q5H9R7	79605	55291	PGBD5	PPP6R3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q6ZM83;Mm:D3YZI9;Rn:D3ZSZ4	-	Rn:F1MAH5	Dr:X1WD74;Mm:G5E8R4
+Q8N414	Q7M4L6	79605	-	PGBD5	SHF	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q6ZM83;Mm:D3YZI9;Rn:D3ZSZ4	-	-	-
+Q8N414	Q8WV24	79605	22822	PGBD5	PHLDA1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q6ZM83;Mm:D3YZI9;Rn:D3ZSZ4	-	Mm:Q62392;Rn:F1LNT5	-
+Q8N414	P03950	79605	283	PGBD5	ANG	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q6ZM83;Mm:D3YZI9;Rn:D3ZSZ4	-	Mm:P21570	Rn:Q5GAM5
+Q8N414	O15217	79605	2941	PGBD5	GSTA4	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q6ZM83;Mm:D3YZI9;Rn:D3ZSZ4	-	-	-
+Q8N414	Q9UGN5	79605	10038	PGBD5	PARP2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q6ZM83;Mm:D3YZI9;Rn:D3ZSZ4	-	Mm:O88554;Rn:G3V749	Ce:Q09525;Dr:F1QLV3
+Q8N414	O14744	79605	10419	PGBD5	PRMT5	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q6ZM83;Mm:D3YZI9;Rn:D3ZSZ4	-	Ce:P46580;Dm:Q9U6Y9;Dr:B0R026;Mm:A0A0R4J049;Rn:D4A0E8;Sc:P38274	-
+Q8N414	Q8WV44	79605	90933	PGBD5	TRIM41	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q6ZM83;Mm:D3YZI9;Rn:D3ZSZ4	-	Mm:Q5NCC3;Rn:F1LMK2	-
+Q8N414	O00479	79605	10473	PGBD5	HMGN4	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q6ZM83;Mm:D3YZI9;Rn:D3ZSZ4	-	-	-
+Q8N414	Q7Z460	79605	23332	PGBD5	CLASP1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q6ZM83;Mm:D3YZI9;Rn:D3ZSZ4	-	Rn:A0A0G2JUI5	Mm:A0A087WQ31
+Q8N414	Q6P1M0	79605	10999	PGBD5	SLC27A4	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q6ZM83;Mm:D3YZI9;Rn:D3ZSZ4	-	Mm:Q91VE0;Rn:G3V7V3	-
+Q8N414	O75074	79605	4037	PGBD5	LRP3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q6ZM83;Mm:D3YZI9;Rn:D3ZSZ4	-	Rn:O88204	Dr:A0A0G2KWX9;Mm:E9Q711

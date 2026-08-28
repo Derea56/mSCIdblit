@@ -1,0 +1,2 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P61375	P00158	16873	17711	Lhx5	Mt-Cyb	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:Q9H2C1;Dr:P52889	Rn:P61376	Hs:P00156;Dr:Q9MIX8;Rn:P00159;Sc:P00163	-

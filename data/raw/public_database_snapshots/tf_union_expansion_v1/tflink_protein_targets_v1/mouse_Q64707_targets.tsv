@@ -1,0 +1,10 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q64707	P41133	22183	15903	Zrsr1	Id3	inferred by curator	16216350;29087512	Mus musculus	TRRUST	Yes	Dm:Q9VR26;Rn:Q5RK33	-	Hs:Q02535;Rn:P41138	-
+Q64707	P28481	22183	12824	Zrsr1	Col2a1	inferred by curator	29087512;11447232	Mus musculus	TRRUST	Yes	Dm:Q9VR26;Rn:Q5RK33	-	Hs:P02458	Rn:F1LRM7
+Q64707	P70406	22183	22228	Zrsr1	Ucp2	inferred by curator	11150307;29087512	Mus musculus	TRRUST	Yes	Dm:Q9VR26;Rn:Q5RK33	-	Hs:P55851;Rn:P56500	-
+Q64707	P00375	22183	13361	Zrsr1	Dhfr	inferred by curator	29087512;14726517	Mus musculus	TRRUST	Yes	Dm:Q9VR26;Rn:Q5RK33	-	Hs:Q86XF0;Hs:P00374;Ce:Q93341;Dm:P17719;Dr:A2BGQ1;Rn:Q920D2	-
+Q64707	P19788	22183	17313	Zrsr1	Mgp	inferred by curator	29087512;19306294	Mus musculus	TRRUST	Yes	Dm:Q9VR26;Rn:Q5RK33	-	Hs:P08493;Rn:Q5RK05	-
+Q64707	Q09200	22183	14421	Zrsr1	B4galnt1	inferred by curator	29087512;24102378	Mus musculus	TRRUST	Yes	Dm:Q9VR26;Rn:Q5RK33	-	Hs:Q00973;Dr:X1WFC5;Rn:Q10468	-
+Q64707	P49586	22183	13026	Zrsr1	Pcyt1a	inferred by curator	10744779;29087512	Mus musculus	TRRUST	Yes	Dm:Q9VR26;Rn:Q5RK33	-	Hs:P49585;Dr:A8E7K4;Rn:P19836	-
+Q64707	O35936	22183	11688	Zrsr1	Alox8	inferred by curator	14711820;29087512	Mus musculus	TRRUST	Yes	Dm:Q9VR26;Rn:Q5RK33	-	Hs:O15296	Rn:G3V6Z8
+Q64707	P27577	22183	23871	Zrsr1	Ets1	inferred by curator	16300938;29087512	Mus musculus	TRRUST	Yes	Dm:Q9VR26;Rn:Q5RK33	-	Hs:P14921;Rn:P41156	-

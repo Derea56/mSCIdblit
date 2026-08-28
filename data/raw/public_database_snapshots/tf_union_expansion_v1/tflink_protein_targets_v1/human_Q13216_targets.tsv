@@ -1,0 +1,12 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q13216	P60893	1161	54329	ERCC8	GPR85	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A9C3R3;Mm:Q8CFD5;Rn:G3V7B8	-	Mm:P60894;Rn:P60895	Dr:A0A0R4I9E4
+Q13216	Q03164	1161	4297	ERCC8	KMT2A	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A9C3R3;Mm:Q8CFD5;Rn:G3V7B8	-	Dr:F1QL52;Mm:P55200	Rn:F1M0L3
+Q13216	P18847	1161	467	ERCC8	ATF3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A9C3R3;Mm:Q8CFD5;Rn:G3V7B8	-	Dr:Q7ZVX7;Mm:Q60765	Rn:P29596
+Q13216	Q9Y5B6	1161	94104	ERCC8	PAXBP1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A9C3R3;Mm:Q8CFD5;Rn:G3V7B8	-	Dm:Q9VI54;Mm:P58501;Rn:D4A8C8	-
+Q13216	P43320	1161	1415	ERCC8	CRYBB2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A9C3R3;Mm:Q8CFD5;Rn:G3V7B8	-	Dr:Q52JI4;Mm:P62696	Rn:P62697
+Q13216	Q14202	1161	9203	ERCC8	ZMYM3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A9C3R3;Mm:Q8CFD5;Rn:G3V7B8	-	Mm:Q9JLM4;Rn:E9PTE5	-
+Q13216	Q6P4E1	1161	113201	ERCC8	GOLM2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A9C3R3;Mm:Q8CFD5;Rn:G3V7B8	-	Dr:E7FBP9;Mm:Q6P2L7;Rn:D3ZW58	-
+Q13216	Q9UJX3	1161	51434	ERCC8	ANAPC7	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A9C3R3;Mm:Q8CFD5;Rn:G3V7B8	-	Dr:A9C3Q3;Mm:Q9WVM3;Rn:D3ZIT4	Dm:Q8IRQ6
+Q13216	Q6RI45	1161	254065	ERCC8	BRWD3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A9C3R3;Mm:Q8CFD5;Rn:G3V7B8	-	Mm:A2AHJ4;Rn:D3Z8C5	-
+Q13216	Q9BZ71	1161	83394	ERCC8	PITPNM3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A9C3R3;Mm:Q8CFD5;Rn:G3V7B8	-	Dr:E7F006;Mm:Q3UHE1	Rn:M0RDK4
+Q13216	A8MVA2	1161	100507608	ERCC8	KRTAP9-6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:A9C3R3;Mm:Q8CFD5;Rn:G3V7B8	-	-	-

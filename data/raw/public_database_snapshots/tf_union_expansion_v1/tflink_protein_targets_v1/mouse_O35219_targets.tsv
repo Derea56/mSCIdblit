@@ -1,0 +1,10 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+O35219	Q8CIZ8	16511	22371	Kcnh2	Vwf	inferred by curator	29087512;19359602	Mus musculus	TRRUST	Yes	-	-	-	-
+O35219	Q02085	16511	20613	Kcnh2	Snai1	inferred by curator	22932696;29087512	Mus musculus	TRRUST	Yes	-	-	Hs:O95863;Rn:Q6AY35	-
+O35219	P35330	16511	15896	Kcnh2	Icam2	inferred by curator	29087512;19359602	Mus musculus	TRRUST	Yes	-	-	Hs:P13598;Rn:Q6AXM6	Dr:X1WFG6
+O35219	O35219	16511	16511	Kcnh2	Kcnh2	inferred by curator	29087512;21536859	Mus musculus	TRRUST	Yes	-	-	-	-
+O35219	P55284	16511	12562	Kcnh2	Cdh5	inferred by curator	29087512;19359602	Mus musculus	TRRUST	Yes	-	-	Hs:P33151;Rn:F1M7E5	-
+O35219	P20152	16511	22352	Kcnh2	Vim	inferred by curator	8895512;29087512	Mus musculus	TRRUST	Yes	-	-	Hs:P08670;Rn:G3V8C3	Dr:F1QAM8;Dr:F1QT60
+O35219	P27792	16511	17095	Kcnh2	Lyl1	inferred by curator	29087512;17053063	Mus musculus	TRRUST	Yes	-	-	Hs:P12980	Rn:Q66HH3
+O35219	P97469	16511	20583	Kcnh2	Snai2	inferred by curator	22932696;29087512	Mus musculus	TRRUST	Yes	-	-	Hs:O43623;Dr:Q5PQY5;Rn:O08954	-
+O35219	P81270	16511	13876	Kcnh2	Erg	inferred by curator	29087512;21536859	Mus musculus	TRRUST	Yes	-	-	Hs:P11308	Dr:F1QK28;Rn:A0A0G2JWE9

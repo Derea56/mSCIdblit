@@ -1,0 +1,3 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q8ND82	P46059	55609	6564	ZNF280C	SLC15A1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q6P3Y5	Rn:D3ZZ25	Dm:P91679;Mm:Q9JIP7	Rn:F1LMZ1
+Q8ND82	Q96AK3	55609	-	ZNF280C	APOBEC3D	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q6P3Y5	Rn:D3ZZ25	-	-

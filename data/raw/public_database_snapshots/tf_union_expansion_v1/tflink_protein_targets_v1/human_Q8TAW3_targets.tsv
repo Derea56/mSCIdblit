@@ -1,0 +1,2 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q8TAW3	P42771	79891	1029	ZNF671	CDKN2A	chromatin immunoprecipitation assay;inferred by curator	19340300;22900683	Homo sapiens	HTRI	No	-	-	-	-

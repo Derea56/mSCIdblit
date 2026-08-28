@@ -1,0 +1,21 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P11586	P68104	4522	1915	MTHFD1	EEF1A1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:Q6P969;Dr:Q568F0;Mm:P10126;Rn:P62630;Sc:P02994	Rn:F1M6C2;Rn:M0R757
+P11586	P62805	4522	121504;554313;8294;8359;8360;8361;8362;8363;8364;8365;8366;8367;8368;8370	MTHFD1	H4C1;H4C2;H4C3;H4C4;H4C5;H4C6;H4C8;H4C9;H4C11;H4C12;H4C13;H4C14;H4C15;H4-16	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	-
+P11586	Q15365	4522	5093	MTHFD1	PCBP1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:P60335	-
+P11586	P50748	4522	9735	MTHFD1	KNTC1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:Q9V9W7;Dr:A0A0R4IHW6;Mm:Q8C3Y4;Rn:D3ZVJ3	-
+P11586	Q14145	4522	9817	MTHFD1	KEAP1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:A0A2R8Q1W5;Mm:Q9Z2X8;Rn:G3V8U2	-
+P11586	P68431	4522	8350;8351;8352;8353;8354;8355;8356;8357;8358;8968	MTHFD1	H3C1;H3C2;H3C3;H3C4;H3C6;H3C7;H3C8;H3C10;H3C11;H3C12	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	-
+P11586	P11586	4522	4522	MTHFD1	MTHFD1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	-
+P11586	Q9Y252	4522	6049	MTHFD1	RNF6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q9DBU5;Rn:D3ZRG6	-
+P11586	Q9H9A7	4522	80010	MTHFD1	RMI1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:G5EF82;Dr:F1R3F9;Mm:Q9D4G9	Rn:D3ZHX4
+P11586	Q7Z5Y7	4522	222658	MTHFD1	KCTD20	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q8CDD8;Rn:D3ZGN4	-
+P11586	Q86UU0	4522	283149	MTHFD1	BCL9L	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q67FY2;Rn:D4A0D9	Dr:F1Q7J8
+P11586	O75122	4522	23122	MTHFD1	CLASP2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	-
+P11586	Q6NZY4	4522	55596	MTHFD1	ZCCHC8	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:A2BIQ8;Mm:Q9CYA6;Rn:D3ZUL8	-
+P11586	Q8WX93	4522	23022	MTHFD1	PALLD	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:F8W315;Mm:Q9ET54;Rn:F1M265	-
+P11586	P61978	4522	3190	MTHFD1	HNRNPK	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:P91277;Mm:P61979	Rn:Q5D059
+P11586	Q16560	4522	11066	MTHFD1	SNRNP35	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:Q4KMD3;Mm:Q9D384;Rn:G3V639	-
+P11586	Q9BRA0	4522	84316	MTHFD1	NAA38	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	-
+P11586	P00558	4522	5230	MTHFD1	PGK1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:P09411;Rn:P16617	Dr:F1QXV8
+P11586	Q8NFP0	4522	222659	MTHFD1	PXT1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	Mm:A0A3B2WCX9
+P11586	Q01167	4522	3607	MTHFD1	FOXK2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:E7FFM9;Mm:Q3UCQ1	-

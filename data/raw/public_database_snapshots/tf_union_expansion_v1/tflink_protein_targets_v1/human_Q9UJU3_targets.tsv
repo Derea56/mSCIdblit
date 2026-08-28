@@ -1,0 +1,5 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9UJU3	Q9NUL5	7771	55337	ZNF112	SHFL	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q0VAW7;Rn:A0A0G2K9F8	-	Mm:Q8CAK3;Rn:A0A140TAE2	Dr:F1QZC8
+Q9UJU3	Q9C0B1	7771	79068	ZNF112	FTO	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q0VAW7;Rn:A0A0G2K9F8	-	Mm:Q8BGW1	Dr:F1R5T4;Rn:A0A0G2K675
+Q9UJU3	Q8TDX7	7771	140609	ZNF112	NEK7	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q0VAW7;Rn:A0A0G2K9F8	-	Ce:G5EFM9;Mm:Q9ES74	Rn:A0A0G2JUP0
+Q9UJU3	Q9UNK9	7771	23357	ZNF112	ANGEL1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q0VAW7;Rn:A0A0G2K9F8	-	Dr:E7F7F7;Mm:Q8VCU0	Rn:A0A0G2K3W9

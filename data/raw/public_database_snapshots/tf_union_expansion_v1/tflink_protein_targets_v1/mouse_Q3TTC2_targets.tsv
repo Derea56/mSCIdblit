@@ -1,0 +1,17 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q3TTC2	P03903	100073351	17720	Yy2	Mtnd4l	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:O15391	-	Hs:P03901;Dm:P18934;Dr:Q9MIY2	Rn:A0A0G2JWA4;Rn:P05507
+Q3TTC2	A0A0N4SUK1	100073351	-	Yy2	AW822073	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:O15391	-	-	-
+Q3TTC2	P03893	100073351	17717	Yy2	Mtnd2	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:O15391	-	Hs:P03891;Dr:Q9MIY9;Rn:P11662	-
+Q3TTC2	D3Z1I8	100073351	-	Yy2	Gm10717	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:O15391	-	-	-
+Q3TTC2	Q63886	100073351	394436	Yy2	Ugt1a1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:O15391	-	Hs:P22309;Dm:Q9W2J4	-
+Q3TTC2	E9Q7T3	100073351	-	Yy2	Gm10719	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:O15391	-	-	-
+Q3TTC2	Q3UZY0	100073351	78887	Yy2	Sfi1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:O15391	-	Hs:A8K8P3;Dr:F1QNA2;Rn:D3ZTG6	-
+Q3TTC2	P03911	100073351	17719	Yy2	Mtnd4	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:O15391	-	Hs:P03905	Dr:Q9MIY1;Rn:P05508
+Q3TTC2	D3Z1I5	100073351	-	Yy2	Gm10720	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:O15391	-	-	-
+Q3TTC2	F6VLK5	100073351	-	Yy2	Gm10722	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:O15391	-	-	-
+Q3TTC2	P00405	100073351	17709	Yy2	Mtco2	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:O15391	-	Hs:P00403;Dm:P00408;Rn:P00406;Sc:P00410	Dr:Q9MIY7
+Q3TTC2	J3QP72	100073351	-	Yy2	Gm21738	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:O15391	-	-	-
+Q3TTC2	P03899	100073351	17718;3338896	Yy2	Mtnd3	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:O15391	-	Hs:P03897;Dr:Q9MIY3;Rn:P05506	-
+Q3TTC2	J3QP74	100073351	-	Yy2	Gm10715	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:O15391	-	-	-
+Q3TTC2	J3QNI2	100073351	-	Yy2	Gm11168	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:O15391	-	-	-
+Q3TTC2	G5E8T2	100073351	22129	Yy2	Ttc3	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:O15391	-	Hs:P53804;Dr:E7EYR3;Rn:D3ZSP7	-

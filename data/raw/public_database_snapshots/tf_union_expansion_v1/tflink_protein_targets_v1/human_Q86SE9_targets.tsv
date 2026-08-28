@@ -1,0 +1,4 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q86SE9	Q9H7P9	84333	64857	PCGF5	PLEKHG2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q1JPS1;Mm:Q3UK78;Rn:A0A0G2K8R7	-	Mm:D3Z5N8;Rn:G3V9A0	-
+Q86SE9	P23508	84333	4163	PCGF5	MCC	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q1JPS1;Mm:Q3UK78;Rn:A0A0G2K8R7	-	Mm:E9PWI3	Rn:A0A0G2K098
+Q86SE9	Q8N1E6	84333	144699	PCGF5	FBXL14	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q1JPS1;Mm:Q3UK78;Rn:A0A0G2K8R7	-	Dr:Q5RH13;Mm:Q8BID8	Dm:Q9W214

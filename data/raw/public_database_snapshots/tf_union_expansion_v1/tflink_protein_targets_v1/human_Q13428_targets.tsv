@@ -1,0 +1,14 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q13428	Q96HA4	6949	54991	TCOF1	C1orf159	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Rn:D4A206	Mm:H3BL37	Mm:A2ASP7;Rn:Q5XIR1	Dr:X1WBI6
+Q13428	Q9GZT6	6949	60492	TCOF1	CCDC90B	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Rn:D4A206	Mm:H3BL37	Dr:F1QGC9;Mm:Q8C3X2;Rn:Q4V897;Sc:P43557	-
+Q13428	Q9BVI4	6949	79050	TCOF1	NOC4L	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Rn:D4A206	Mm:H3BL37	Mm:Q8BHY2;Rn:Q5I0I8	Dr:F1R1T1
+Q13428	Q8N8A6	6949	317781	TCOF1	DDX51	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Rn:D4A206	Mm:H3BL37	Dm:P26802;Mm:Q6P9R1	Dr:F1R9W2;Rn:A0A0G2K4S4
+Q13428	Q99618	6949	83461	TCOF1	CDCA3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Rn:D4A206	Mm:H3BL37	Mm:Q99M54;Rn:Q68FW2	-
+Q13428	Q13905	6949	2889	TCOF1	RAPGEF1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Rn:D4A206	Mm:H3BL37	Dr:E7F4B2;Rn:F1M8L9	Dr:F1QA44;Mm:Q91ZZ2
+Q13428	P51858	6949	3068	TCOF1	HDGF	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Rn:D4A206	Mm:H3BL37	Mm:P51859;Rn:F1LPC7	-
+Q13428	P15170	6949	2935	TCOF1	GSPT1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Rn:D4A206	Mm:H3BL37	Mm:Q8R050	Rn:Q6AYD5
+Q13428	Q92733	6949	5546	TCOF1	PRCC	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Rn:D4A206	Mm:H3BL37	Dm:Q9W0B6;Dr:A3KQS1;Mm:Q9EQC8;Rn:B2RYA6	-
+Q13428	Q9H6Q4	6949	64428	TCOF1	CIAO3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Rn:D4A206	Mm:H3BL37	Dm:Q8SYS7;Dr:G1K2S6;Mm:Q7TMW6;Rn:Q5BK18;Sc:P23503	-
+Q13428	Q96IK1	6949	91272	TCOF1	BOD1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Rn:D4A206	Mm:H3BL37	Mm:Q5SQY2;Rn:A0A0H2UHS5	-
+Q13428	Q9BYH1	6949	23544	TCOF1	SEZ6L	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Rn:D4A206	Mm:H3BL37	Rn:D4AD89	Mm:A0A0R4J0Y4
+Q13428	P43351	6949	5893	TCOF1	RAD52	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Rn:D4A206	Mm:H3BL37	-	Mm:G5E879;Rn:D3ZZL1

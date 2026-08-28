@@ -1,0 +1,42 @@
+{
+  "audit_rows": 532,
+  "canonical_write_performed": false,
+  "detection_method_counts": {
+    "chromatin immunoprecipitation assay": 532
+  },
+  "download_status_counts": {
+    "cached": 147
+  },
+  "exact_pair_queue_rows": 532,
+  "exact_rows_small_scale_evidence_yes": 0,
+  "exact_rows_with_pubmed_method_source": 532,
+  "exact_source_records": 532,
+  "module22b_write_performed": false,
+  "organism_counts": {
+    "Homo sapiens": 435,
+    "Mus musculus": 97
+  },
+  "outputs": {
+    "audit_tsv": "data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/tflink_database_only_source_audit.tsv",
+    "raw_target_tables": "data/raw/public_database_snapshots/tf_union_expansion_v1/tflink_protein_targets_v1",
+    "summary_json": "data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/tflink_database_only_source_audit_summary.json"
+  },
+  "policy": [
+    "TFLink GMT membership alone is not pair-level evidence.",
+    "TFLink target-table rows are retained with detection method, PubMed ID, source database, organism, small-scale flag, URL, and local snapshot hash.",
+    "TFLink high-throughput rows are staged as binding/association evidence and are not treated as perturbation or expression evidence without additional review.",
+    "No canonical TF or Module22B record was materialized."
+  ],
+  "queue_rows": 532,
+  "small_scale_flag_counts": {
+    "No": 532
+  },
+  "source_database_counts": {
+    "GTRD": 490,
+    "GTRD;ReMap": 16,
+    "ReMap": 26
+  },
+  "status": "audit_complete",
+  "unique_source_records": 147,
+  "unmatched_queue_rows": 0
+}
