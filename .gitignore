@@ -5,3 +5,8 @@ work/
 *.db
 __pycache__/
 *.py[cod]
+
+# The uncompressed contributor-link export exceeds GitHub's per-file limit;
+# keep the local convenience copy ignored while the lossless .tsv.gz artifact
+# is versioned in the public-TF expansion.
+data/processed/public_tf_union_expansion_v1/reported_contributor_links.tsv
