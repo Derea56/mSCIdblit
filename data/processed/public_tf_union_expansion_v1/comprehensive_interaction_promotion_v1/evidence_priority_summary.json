@@ -4,19 +4,23 @@
   "input_row_count": 4404,
   "unique_pair_count": 3684,
   "already_promoted_pair_count": 3065,
-  "searched_pending_adjudication_pair_count": 478,
+  "searched_pending_adjudication_pair_count": 0,
+  "adjudicated_database_only_pair_count": 460,
+  "adjudicated_nonpromotable_pair_count": 18,
+  "resolved_unverifiable_pair_count": 141,
+  "resolved_identity_pair_count": 4,
   "active_search_pair_count": 0,
   "priority_tier_counts": {
-    "D_direction_or_species_hold": 137,
-    "D_identity_hold": 4,
-    "Y_searched_pending_adjudication": 478,
-    "Z_already_promoted": 3065
+    "Z_adjudicated_database_only": 460,
+    "Z_adjudicated_nonpromotable": 18,
+    "Z_already_promoted": 3065,
+    "Z_resolved_unverifiable": 141
   },
   "search_lane_counts": {
-    "direction_species_adjudication": 137,
-    "identity_resolution": 4,
-    "outcome_adjudication": 478,
-    "promoted_followup_queue": 3065
+    "adjudicated_database_archive": 460,
+    "adjudicated_outcome_archive": 18,
+    "promoted_followup_queue": 3065,
+    "resolved_unverifiable_archive": 141
   },
   "evidence_confidence_tier_counts": {
     "A_independent_literature_corroborated": 31,
@@ -39,7 +43,8 @@
     "Already promoted pairs are routed to the dedicated follow-up queue.",
     "Unresolved, reverse-direction, cross-species, and database-only findings remain visible but are not active manual-search priorities.",
     "All source registries, source record IDs, review IDs, statuses, citations, and module hints are retained.",
-    "Completed searches are read from evidence_search_outcomes.tsv and removed from the next active packet until adjudicated.",
+    "Completed searches are read from evidence_search_outcomes.tsv and removed from the next active packet until adjudicated; adjudicated database-only and nonpromotable outcomes are archived with their provenance.",
+    "Direction/species holds may be finalized as resolved_unverifiable after bounded review; those rows are archived without promotion while identity holds remain blocked.",
     "Evidence-confidence tiers are exhaustive: A/B/C are promoted tiers, D is database/profile-only without pair-specific evidence, E is reviewed but nonpromotable, and U is unreviewed."
   ]
 }

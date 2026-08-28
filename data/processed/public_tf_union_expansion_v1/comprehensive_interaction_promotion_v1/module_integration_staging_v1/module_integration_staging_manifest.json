@@ -1,0 +1,93 @@
+{
+  "status": "pass",
+  "queue_path": "data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/evidence_priority_queue.tsv",
+  "promoted_overlay_path": "data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/promoted_interactions.tsv",
+  "reviewed_queue_rows": 3684,
+  "reviewed_tier_counts": {
+    "A_independent_literature_corroborated": 31,
+    "B_independent_literature_single_source": 30,
+    "C_tflink_source_table_only": 3004,
+    "D_database_only_no_pair_evidence": 508,
+    "E_reviewed_nonpromotable": 111
+  },
+  "module_staged_rows": 3555,
+  "catalog_only_rows": 619,
+  "module_assignment_counts": {
+    "20B": 2720,
+    "21B": 16,
+    "22B": 127,
+    "23B": 584,
+    "24B": 108
+  },
+  "evidence_weight_tier_counts_module_staged": {
+    "A_independent_literature_corroborated": 27,
+    "B_independent_literature_single_source": 25,
+    "C_tflink_source_table_only": 2818,
+    "D_database_only_no_pair_evidence": 575,
+    "E_reviewed_nonpromotable": 110
+  },
+  "module_evidence_weight_tier_counts": {
+    "20B": {
+      "A_independent_literature_corroborated": 17,
+      "B_independent_literature_single_source": 18,
+      "C_tflink_source_table_only": 2204,
+      "D_database_only_no_pair_evidence": 409,
+      "E_reviewed_nonpromotable": 72
+    },
+    "21B": {
+      "C_tflink_source_table_only": 14,
+      "D_database_only_no_pair_evidence": 1,
+      "E_reviewed_nonpromotable": 1
+    },
+    "22B": {
+      "A_independent_literature_corroborated": 4,
+      "B_independent_literature_single_source": 1,
+      "C_tflink_source_table_only": 83,
+      "D_database_only_no_pair_evidence": 23,
+      "E_reviewed_nonpromotable": 16
+    },
+    "23B": {
+      "A_independent_literature_corroborated": 6,
+      "B_independent_literature_single_source": 4,
+      "C_tflink_source_table_only": 441,
+      "D_database_only_no_pair_evidence": 115,
+      "E_reviewed_nonpromotable": 18
+    },
+    "24B": {
+      "B_independent_literature_single_source": 2,
+      "C_tflink_source_table_only": 76,
+      "D_database_only_no_pair_evidence": 27,
+      "E_reviewed_nonpromotable": 3
+    }
+  },
+  "catalog_only_evidence_weight_tier_counts": {
+    "A_independent_literature_corroborated": 10,
+    "B_independent_literature_single_source": 9,
+    "C_tflink_source_table_only": 545,
+    "D_database_only_no_pair_evidence": 38,
+    "E_reviewed_nonpromotable": 17
+  },
+  "promoted_rows_with_multiple_module_assignments": 341,
+  "reviewed_rows_with_multiple_module_assignments": 448,
+  "reviewed_rows_represented_once_or_more": 3684,
+  "canonical_tf_writes": false,
+  "module22b_writes": false,
+  "module_materialization_allowed": false,
+  "policy": [
+    "This is an additive module-evidence staging layer, not a canonical database materialization.",
+    "All reviewed A-E rows are retained for screening; U rows are excluded from module and catalog staging.",
+    "One staged row is emitted per explicit target_graph_modules assignment; multi-module rows are not collapsed.",
+    "The original textual evidence tier is preserved exactly; evidence_weight_rank is only a later-ranking aid (A=3, B=2, C=1, D=0, E=0).",
+    "D/E rows are screening-only with source_exportable=false and module_materialization_allowed=false.",
+    "Rows without explicit target_graph_modules remain catalog_only and are not silently assigned to a module.",
+    "No canonical TF, Module 22B, SignalingEdge, Regulon, or other database writes are performed."
+  ],
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/module_integration_staging_v1/module_20B_evidence_staging.tsv",
+    "data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/module_integration_staging_v1/module_21B_evidence_staging.tsv",
+    "data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/module_integration_staging_v1/module_22B_evidence_staging.tsv",
+    "data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/module_integration_staging_v1/module_23B_evidence_staging.tsv",
+    "data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/module_integration_staging_v1/module_24B_evidence_staging.tsv",
+    "data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/module_integration_staging_v1/catalog_only_evidence.tsv"
+  ]
+}

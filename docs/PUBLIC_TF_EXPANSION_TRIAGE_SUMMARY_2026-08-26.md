@@ -875,3 +875,97 @@ The overlay now contains 3,065 exportable rows: 31 Tier A, 30 Tier B, and
 direction/species holds, and four identity holds. Evidence-confidence tiers
 remain exhaustive: 508 Tier D database/profile-only rows, 111 Tier E reviewed
 but nonpromotable rows, and zero Tier U unreviewed rows.
+
+### Adjudication of the remaining 18 completed Tier E outcomes
+
+The remaining 18 completed Tier E outcomes were adjudicated on 2026-08-28
+against the broadened comprehensive-catalog gate. None was promoted. The
+exact queued pairs were retained with their source citations and limitations
+and marked `search_status=adjudicated` in
+`comprehensive_interaction_promotion_v1/evidence_search_outcomes.tsv`.
+
+The held set comprises: processed-fragment evidence for ESX1-to-KRAS;
+conflicting or non-specific expression/association evidence for AUTS2-to-CCND1,
+FXR1-to-AMH, PRMT1-to-ABCA1, DDX21-to-ADIPOR2, YAP1-to-Abca1,
+IVNS1ABP/NS1-BP-to-ACTR2, MBTPS2/S2P-to-ADIPOR1, MORC2-to-CTNNB1, and
+ZNF750-to-ADAM10; regulator-level evidence centered on different targets for
+ZNF133-to-ADAM9/ALCAM/AXL/CCN1 and ZBTB12-to-ACTR2/ACVR1/ADGRL1/APLP1.
+These records remain non-exportable because the evidence is fragment-specific,
+conflicting, non-specific, contextual, indirect, protein-complex-level,
+reverse/pathway-level, or directed to a different target.
+
+The priority queue now routes all 18 to
+`Z_adjudicated_nonpromotable` / `archive_or_hold`, leaving no searched
+outcomes pending adjudication and no active bounded-search packet. The
+comprehensive overlay remains at 3,065 exportable rows with 31 Tier A,
+30 Tier B, and 3,004 Tier C rows; Tier D remains 508, Tier E remains 111,
+and Tier U remains zero. No canonical TF, canonical regulon, Module 22B, or
+other materialization write was performed.
+
+The 460 completed outcomes that contained only database, profile, membership,
+or untraceable-locator evidence were separately marked
+`search_status=adjudicated` and routed to
+`Z_adjudicated_database_only` / `archive_or_hold`. They remain Tier D
+database/profile-only records and were not promoted or deleted; their source
+registries, record IDs, citations, and review provenance remain intact.
+
+### Bounded direction/species check: KDM1A, KANSL3, KDM4A, and KDM6A
+
+On 2026-08-28, a bounded literature check covered the highest-yield same-
+species or functional near-matches in the remaining direction/species-hold
+lane. Five exact queue keys were logged as adjudicated outcomes: human and
+mouse KDM1A/LSD1-to-ACKR3/Ackr3, mouse KANSL3-to-Adipor2, mouse KDM4A-to-Adam10,
+and mouse KDM6A/UTX-to-Abca1. None met the promotion gate.
+
+The KANSL3 liver study supports broad hepatocyte metabolic regulation and
+places Adipor2 in a fatty-acid-metabolism gene list, but does not provide an
+isolated KANSL3/Adipor2 locus call with target-specific direction. The KDM1A
+material remains an indirect mouse perturbation signature or contextual
+association, not a literal human edge or direct Ackr3 locus mechanism. The
+KDM4A result is a human colorectal near-match, with weaker ADAM10 than ADAM17
+promoter binding, and therefore does not transfer to mouse. KDM6A studies
+support broader liver/lipid chromatin context, but do not assign a Kdm6a-only
+Abca1 direction or establish KDM6A occupancy at the queued mouse locus.
+
+The five outcomes are retained in
+`comprehensive_interaction_promotion_v1/evidence_search_outcomes.tsv` with
+`search_status=adjudicated`. They were subsequently included in the final
+direction/species adjudication below.
+
+### Final disposition of the 137 direction/species holds
+
+The complete 137-row direction/species lane was reviewed against the existing
+bounded batch evidence. No literal regulator-target-species relationship was
+verified sufficiently for promotion. The 137 rows were therefore marked
+`resolved_unverifiable_without_promotion` in
+`comprehensive_interaction_promotion_v1/evidence_search_outcomes.tsv` and
+routed to `Z_resolved_unverifiable` / `resolved_unverifiable_archive`.
+
+The original distinction is preserved: 48 rows remain Tier D
+database/profile-only evidence, while 89 retain Tier E contextual, directional,
+species, identity, complex, or other nonpromotable evidence. No overlay row was
+added or removed, no interaction was promoted, and no canonical TF or Module
+22B write was performed. The four identity-held rows are finalized in the
+identity disposition below.
+
+### Final identity disposition: raw symbol ZA
+
+The four remaining identity-held pairs all used the literal raw regulator
+symbol `ZA`: ZA-to-CCN1, ZA-to-ITGA3, ZA-to-ITGB1, and ZA-to-JUND in human.
+HGNC/NCBI nomenclature review did not identify a confident approved human-gene
+mapping for `ZA`, so no alias or target evidence was inferred. All four were
+marked `resolved_unverifiable_without_promotion` and routed to
+`Z_resolved_unverifiable` / `resolved_unverifiable_archive`. The queue now has
+zero identity holds, zero active searches, and no canonical or Module 22B
+materialization.
+
+### Reviewed low-tier evidence in module screening
+
+All 3,684 reviewed A-E queue rows are now represented in the additive module
+screening layer. This produces 3,555 explicit module-assignment rows and 619
+catalog-only rows. D (508 reviewed pairs) and E (111 reviewed pairs) retain
+their exact evidence tiers, but receive ranking weight 0,
+`source_exportable=false`, and `module_materialization_allowed=false`, so they
+can be screened out without being mistaken for supported module evidence. U
+rows remain excluded. No canonical TF, Module 22B, or database materialization
+was performed.

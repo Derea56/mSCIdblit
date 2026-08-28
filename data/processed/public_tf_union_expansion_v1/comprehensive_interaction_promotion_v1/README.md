@@ -51,4 +51,23 @@ remain visible but are not active manual-search priorities.
 ranked queue. `evidence_priority_summary.json` records the counts and top
 active rows for reproducibility. `evidence_search_outcomes.tsv` records
 completed searches and prevents those pair groups from reappearing in the next
-active packet until they are adjudicated.
+active packet until they are adjudicated. Once a completed outcome is
+adjudicated as non-promotable, its pair is routed to the archive/hold lane and
+remains available with its original provenance.
+
+Direction/species holds may be finalized as `resolved_unverifiable` after the
+bounded evidence review fails to verify the literal pair. Those rows are
+routed to `Z_resolved_unverifiable` / `resolved_unverifiable_archive`, remain
+non-exportable, and retain their original evidence tier, source records,
+citations, review IDs, and explicit limitations. Identity holds remain blocked
+until the literal regulator identity is resolved or the bounded identity review
+is finalized as unverifiable under the same disposition.
+
+All reviewed A-E rows are staged for later module-owner screening in
+`module_integration_staging_v1/`. This emits one row per explicit module
+assignment and keeps unassigned rows in `catalog_only_evidence.tsv`. It copies
+the original A/B/C/D/E evidence tier unchanged and adds only a separate
+ranking aid (`evidence_weight_rank`, A=3, B=2, C=1, D=0, E=0). D/E rows are
+screening-only, non-exportable, and blocked from materialization; U rows are
+excluded. The staging layer does not write module trackers, canonical TF
+tables, Module 22B, or the frozen graph.

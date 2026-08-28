@@ -124,7 +124,14 @@ def evidence_confidence_tier(
     return "E_reviewed_nonpromotable", "held row has contextual, directional, species, identity, or other nonpromotable evidence"
 
 
-def score_and_route(rows: list[dict[str, str]], promoted: bool, searched: bool) -> dict[str, object]:
+def score_and_route(
+    rows: list[dict[str, str]],
+    promoted: bool,
+    searched: bool,
+    adjudicated: bool,
+    evidence_tier: str,
+    resolved_unverifiable: bool,
+) -> dict[str, object]:
     statuses = [row.get("exact_pair_status", "") for row in rows]
     dispositions = [row.get("disposition", "") for row in rows]
     binding = [row.get("binding_or_association_status", "") for row in rows]
@@ -143,16 +150,20 @@ def score_and_route(rows: list[dict[str, str]], promoted: bool, searched: bool) 
             "next_action": "Use the dedicated promotion follow-up queue; do not duplicate pair-level searching here.",
         }
 
-    if searched:
+    if adjudicated and resolved_unverifiable:
         return {
             "priority_score": 0,
-            "priority_tier": "Y_searched_pending_adjudication",
-            "search_lane": "outcome_adjudication",
+            "priority_tier": "Z_resolved_unverifiable",
+            "search_lane": "resolved_unverifiable_archive",
             "active_search_eligible": "false",
-            "queue_state": "searched_pending_adjudication",
-            "next_action": "Adjudicate the logged outcome; do not repeat the search until the review or promotion state changes.",
+            "queue_state": "archive_or_hold",
+            "next_action": "Retain the reviewed provenance and explicit limitation; do not promote or reopen unless new literal, source-backed evidence is found.",
         }
 
+    # An ordinary new search outcome does not resolve an existing identity or
+    # direction/species hold. Keep those rows in their guarded review lane
+    # unless the outcome explicitly carries the final resolved-unverifiable
+    # disposition above.
     if contains_any(all_text, ("identity_unresolved", "unresolved identity", "identity review hold")):
         return {
             "priority_score": 0,
@@ -171,6 +182,35 @@ def score_and_route(rows: list[dict[str, str]], promoted: bool, searched: bool) 
             "active_search_eligible": "false",
             "queue_state": "hold_near_match",
             "next_action": "Verify direction, species, paralog, and model before considering any exact-edge search.",
+        }
+
+    if adjudicated:
+        if evidence_tier == "D_database_only_no_pair_evidence":
+            return {
+                "priority_score": 0,
+                "priority_tier": "Z_adjudicated_database_only",
+                "search_lane": "adjudicated_database_archive",
+                "active_search_eligible": "false",
+                "queue_state": "archive_or_hold",
+                "next_action": "Retain the adjudicated database/profile-only provenance; do not promote or repeat the search unless a new traceable source is found.",
+            }
+        return {
+            "priority_score": 0,
+            "priority_tier": "Z_adjudicated_nonpromotable",
+            "search_lane": "adjudicated_outcome_archive",
+            "active_search_eligible": "false",
+            "queue_state": "archive_or_hold",
+            "next_action": "Retain the adjudicated nonpromotable outcome and provenance; do not promote or repeat the search unless new traceable evidence is found.",
+        }
+
+    if searched:
+        return {
+            "priority_score": 0,
+            "priority_tier": "Y_searched_pending_adjudication",
+            "search_lane": "outcome_adjudication",
+            "active_search_eligible": "false",
+            "queue_state": "searched_pending_adjudication",
+            "next_action": "Adjudicate the logged outcome; do not repeat the search until the review or promotion state changes.",
         }
 
     score = 18
@@ -245,15 +285,17 @@ def load_promoted(path: Path) -> set[tuple[str, str, str]]:
         }
 
 
-def load_searched(path: Path) -> set[tuple[str, str, str]]:
+def load_outcome_statuses(path: Path) -> dict[tuple[str, str, str], set[str]]:
     if not path.exists():
-        return set()
+        return {}
+    result: dict[tuple[str, str, str], set[str]] = {}
     with path.open(newline="") as handle:
-        return {
-            (norm(row.get("regulator_symbol", "")), norm(row.get("target_symbol", "")), norm(row.get("species_scope", "")))
-            for row in csv.DictReader(handle, delimiter="\t")
-            if norm(row.get("search_status", "")) in {"completed", "adjudicated"}
-        }
+        for row in csv.DictReader(handle, delimiter="\t"):
+            status = norm(row.get("search_status", ""))
+            if status in {"completed", "adjudicated"}:
+                key = (norm(row.get("regulator_symbol", "")), norm(row.get("target_symbol", "")), norm(row.get("species_scope", "")))
+                result.setdefault(key, set()).add(status)
+    return result
 
 
 def main() -> None:
@@ -270,14 +312,19 @@ def main() -> None:
 
     repo_root = args.repo_root.resolve()
     evidence_root = repo_root / "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches"
-    output_dir = args.output_dir or repo_root / "data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1"
+    output_dir = (args.output_dir or repo_root / "data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1").resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
 
     promoted_path = output_dir / "promoted_interactions.tsv"
     promoted_keys = load_promoted(promoted_path)
     promoted_tiers = load_promoted_tiers(promoted_path)
     outcome_path = output_dir / "evidence_search_outcomes.tsv"
-    searched_keys = load_searched(outcome_path)
+    outcome_statuses = load_outcome_statuses(outcome_path)
+    searched_keys = set(outcome_statuses)
+    adjudicated_keys = {
+        key for key, statuses in outcome_statuses.items()
+        if statuses and statuses <= {"adjudicated"}
+    }
     search_outcomes = load_search_outcomes(outcome_path)
 
     groups: dict[tuple[str, str, str], list[dict[str, str]]] = {}
@@ -296,8 +343,14 @@ def main() -> None:
         first = rows[0]
         promoted = key in promoted_keys
         searched = key in searched_keys
-        decision = score_and_route(rows, promoted, searched)
+        adjudicated = key in adjudicated_keys
         evidence_tier, evidence_tier_basis = evidence_confidence_tier(key, rows, promoted_tiers, search_outcomes)
+        resolved_unverifiable = any(
+            norm(outcome.get("search_status", "")) == "adjudicated"
+            and norm(outcome.get("disposition", "")) == "resolved_unverifiable_without_promotion"
+            for outcome in search_outcomes.get(key, [])
+        )
+        decision = score_and_route(rows, promoted, searched, adjudicated, evidence_tier, resolved_unverifiable)
         review_status = "reviewed" if all(row.get("review_id", "").strip() for row in rows) else "unreviewed"
         citations = split_values([row.get("primary_citation", "") for row in rows] + [row.get("corroborating_citation", "") for row in rows])
         queue_rows.append(
@@ -356,6 +409,18 @@ def main() -> None:
         "unique_pair_count": len(queue_rows),
         "already_promoted_pair_count": sum(row["queue_state"] == "already_promoted_followup" for row in queue_rows),
         "searched_pending_adjudication_pair_count": sum(row["queue_state"] == "searched_pending_adjudication" for row in queue_rows),
+        "adjudicated_database_only_pair_count": sum(row["priority_tier"] == "Z_adjudicated_database_only" for row in queue_rows),
+        "adjudicated_nonpromotable_pair_count": sum(row["priority_tier"] == "Z_adjudicated_nonpromotable" for row in queue_rows),
+        "resolved_unverifiable_pair_count": sum(row["priority_tier"] == "Z_resolved_unverifiable" for row in queue_rows),
+        "resolved_identity_pair_count": sum(
+            row["priority_tier"] == "Z_resolved_unverifiable"
+            and any(
+                norm(outcome.get("evidence_type", "")) == "identity_unverifiable"
+                and norm(outcome.get("search_status", "")) == "adjudicated"
+                for outcome in search_outcomes.get(tuple(norm(value) for value in row["queue_key"].split("|")), [])
+            )
+            for row in queue_rows
+        ),
         "active_search_pair_count": len(active_rows),
         "priority_tier_counts": dict(sorted(tier_counts.items())),
         "search_lane_counts": dict(sorted(lane_counts.items())),
@@ -371,7 +436,8 @@ def main() -> None:
             "Already promoted pairs are routed to the dedicated follow-up queue.",
             "Unresolved, reverse-direction, cross-species, and database-only findings remain visible but are not active manual-search priorities.",
             "All source registries, source record IDs, review IDs, statuses, citations, and module hints are retained.",
-            "Completed searches are read from evidence_search_outcomes.tsv and removed from the next active packet until adjudicated.",
+            "Completed searches are read from evidence_search_outcomes.tsv and removed from the next active packet until adjudicated; adjudicated database-only and nonpromotable outcomes are archived with their provenance.",
+            "Direction/species holds may be finalized as resolved_unverifiable after bounded review; those rows are archived without promotion while identity holds remain blocked.",
             "Evidence-confidence tiers are exhaustive: A/B/C are promoted tiers, D is database/profile-only without pair-specific evidence, E is reviewed but nonpromotable, and U is unreviewed.",
         ],
     }

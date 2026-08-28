@@ -33,11 +33,22 @@ database and source snapshot.
   - U unreviewed: 0
 - Queue disposition:
   - already promoted: 3,065
-  - searched and pending adjudication: 478
-  - direction/species hold: 137
-  - identity hold: 4
+  - searched and pending adjudication: 0
+  - adjudicated database-only outcomes: 460
+  - adjudicated nonpromotable outcomes: 18
+  - resolved unverifiable outcomes: 141 (137 direction/species; 4 identity)
+  - identity hold: 0
 - No canonical TF, canonical regulon, Module 22B, or other materialization write
   was performed by the public-TF overlay.
+
+The direction/species lane is now closed for this pass. All 137 exact queue
+keys were adjudicated against their bounded batch-review evidence; none was
+verified sufficiently for promotion. They are recorded as
+`resolved_unverifiable` and routed to the archive while retaining their
+original limitations and provenance. The four final identity keys used raw
+symbol `ZA`; no authoritative approved human-gene mapping was identified, so
+they were also finalized as `resolved_unverifiable` without transferring any
+target evidence.
 
 ## Authoritative files
 
@@ -50,18 +61,35 @@ database and source snapshot.
 - Batch reviews: `data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_001/` through `batch_039/`
 - TFLink source records: `data/raw/public_database_snapshots/tf_union_expansion_v1/tflink_protein_targets_v1/`
 
+## Module integration staging
+
+All reviewed public-TF evidence is now staged for module-level screening in
+`data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/module_integration_staging_v1/`.
+This is an additive evidence layer, not canonical materialization. It contains
+3,555 module-assignment rows from the 3,684 reviewed queue rows, plus 619 rows
+retained as catalog-only because they have no explicit module route. Multi-module
+assignments remain separate. The original A/B/C/D/E evidence tier is preserved
+exactly, with a separate reversible rank (A=3, B=2, C=1, D=0, E=0) for later
+weighting. D/E rows are included for screening only, are non-exportable, and
+remain blocked from materialization. U rows are excluded.
+
+Module-assignment counts are 2,720 for 20B, 16 for 21B, 127 for 22B, 584 for
+23B, and 108 for 24B. The staging manifest explicitly records
+`module_materialization_allowed=false`, `canonical_tf_writes=false`, and
+`module22b_writes=false`. The next step is module-owner review of these staged
+rows before any module tracker or database materialization.
+
 ## Best next work
 
 1. Read the triage summary and inspect the queue before editing anything.
-2. Adjudicate the 18 remaining E-tier rows from completed search outcomes. A
-   promotion is allowed when the paper directly supports the exact queued
-   regulator–target–species relationship or a clearly stated catalog-level
-   functional/biochemical relation. Retain the actual mechanism: DNA binding,
-   cofactor, chromatin, RNA binding/processing, kinase/PTM, ubiquitin, ligand,
-   receptor/relay, protein association, or downstream expression.
-3. Review the 137 direction/species holds and 4 identity holds only with exact
-   evidence. Do not resolve a paralog, fusion, fragment, cross-species pair, or
-   reverse-direction match by guessing.
+2. The 18 remaining E-tier rows from completed search outcomes have now been
+   adjudicated as non-promotable and routed to the archive/hold lane. Retain
+   their actual mechanisms and source limitations; do not repeat those
+   searches unless new traceable evidence is found.
+3. No identity or direction/species holds remain open in this pass. The 141
+   resolved-unverifiable rows should only be reopened if new literal,
+   source-backed identity or pair evidence is found; do not infer an alias,
+   paralog, fusion, fragment, cross-species pair, or reverse-direction match.
 4. Leave the 508 D-tier rows as reviewed database-only rows unless a new,
    traceable source is found. Do not bulk-promote them because a database
    membership or regulon label exists.
