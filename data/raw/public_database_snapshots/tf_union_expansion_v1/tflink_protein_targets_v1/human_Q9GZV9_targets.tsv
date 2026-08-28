@@ -1,0 +1,2 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9GZV9	P16220	8074	1385	FGF23	CREB1	inferred by curator	25752607;26578589	Homo sapiens	ORegAnno	Yes	Mm:Q9EPC2	Dr:Q1L8M3;Rn:Q8VI82	Dr:Q803K8;Mm:Q01147;Rn:P15337	Dr:E9QHG0

@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "canonical_write_true_rows": 0,
+    "duplicate_provenance_keys": 0,
+    "exportable_true_rows": 3065,
+    "followup_rows": 3065,
+    "module22b_write_true_rows": 0,
+    "promoted_rows": 3065,
+    "unique_provenance_keys": 3065
+  },
+  "status": "pass"
+}

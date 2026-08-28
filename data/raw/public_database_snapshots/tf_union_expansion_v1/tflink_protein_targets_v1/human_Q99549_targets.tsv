@@ -1,0 +1,9 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q99549	E7ENX8	54737	-	MPHOSPH8	-	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TYA6	-	-	-
+Q99549	Q71UM5	54737	51065	MPHOSPH8	RPS27L	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TYA6	-	-	-
+Q99549	Q8IZD4	54737	196513	MPHOSPH8	DCP1B	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TYA6	-	Rn:D3ZZJ7	Dr:F1RC83;Mm:B9EIX0
+Q99549	Q03519	54737	6891	MPHOSPH8	TAP2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TYA6	-	-	-
+Q99549	Q8IVU3	54737	55008	MPHOSPH8	HERC6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TYA6	-	Mm:F2Z461	Rn:F1LPM8
+Q99549	P98182	54737	7752	MPHOSPH8	ZNF200	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TYA6	-	Dm:Q9VI24;Dm:P07664	-
+Q99549	Q96PG8	54737	27113	MPHOSPH8	BBC3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TYA6	-	Ce:Q9NAR3	-
+Q99549	Q6P9A1	54737	348327	MPHOSPH8	ZNF530	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q3TYA6	-	-	-

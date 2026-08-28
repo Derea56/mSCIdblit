@@ -1,0 +1,8 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q96K75	Q13503	84874	9412	ZNF514	MED21	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:Q9W5P1;Dr:Q7ZTI5;Mm:Q9CQ39;Rn:D4AA11	Ce:Q6BER6
+Q96K75	P22792	84874	1370	ZNF514	CPN2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:Q9VT44;Mm:Q9DBB9;Rn:F1LQT4	Dr:A0JMK3
+Q96K75	Q92730	84874	27289	ZNF514	RND1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:Q52WX7;Mm:Q8BLR7;Rn:Q5FVG9	-
+Q96K75	P42226	84874	6778	ZNF514	STAT6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	-
+Q96K75	P06396	84874	2934	ZNF514	GSN	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	-
+Q96K75	Q9H6R4	84874	65083	ZNF514	NOL6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:Q8IH00;Dr:F1Q4S6;Mm:Q8R5K4;Rn:A0A0G2QC27;Sc:P53254	-
+Q96K75	Q9NXE8	84874	54883	ZNF514	CWC25	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:Q9VQF5;Dr:Q7ZVW8;Mm:Q9DBF7;Rn:G3V6I3	-

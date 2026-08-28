@@ -1,0 +1,3 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9P2J8	O75781	57547	5064	ZNF624	PALM	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:A0A087WSP8	-	Dr:E9QIM7;Mm:Q9Z0P4;Rn:Q920Q0	Dr:B0V0Y4
+Q9P2J8	Q8NDY3	57547	113622	ZNF624	ADPRHL1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:A0A087WSP8	-	-	-

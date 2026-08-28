@@ -1,0 +1,7 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q8BKT7	Q8BS54	107829	100177	Thoc5	Zmym6	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:O95789	Rn:A0A0G2K8U2
+Q8BKT7	Q9DC37	107829	66868	Thoc5	Mfsd1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:Q9H3U5;Dm:Q9VR34;Dm:Q9VS47;Rn:D3ZV75	-
+Q8BKT7	D3Z1I5	107829	-	Thoc5	Gm10720	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	-	-
+Q8BKT7	Q6PGL7	107829	28006	Thoc5	Washc2	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:Q641Q2;Dm:A1ZBW7;Rn:F1LPG9	Hs:A0A096LPC5;Dr:B8JKJ4
+Q8BKT7	F7C7Q0	107829	-	Thoc5	Gm10801	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	-	-
+Q8BKT7	Q8JZV7	107829	245847	Thoc5	Amdhd2	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	-	-	Hs:Q9Y303;Ce:P34480;Rn:Q5BJY6	Dm:E1JJR9;Dr:Q6P0U0

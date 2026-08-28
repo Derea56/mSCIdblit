@@ -1,0 +1,9 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P83917	P70170	12412	20928	Cbx1	Abcc9	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P83916;Dr:Q6IQ71;Rn:D4A3T3	-	Hs:O60706;Rn:F1M9Q2	-
+P83917	A0A0G2JFD5	12412	105242399	Cbx1	Gm21083	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P83916;Dr:Q6IQ71;Rn:D4A3T3	-	-	-
+P83917	Q8CGF6	12412	99512	Cbx1	Wdr47	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P83916;Dr:Q6IQ71;Rn:D4A3T3	-	Hs:O94967;Ce:H2KZG7;Dr:E7F4B9;Rn:G3V9M3	-
+P83917	A0A0N4SUK1	12412	-	Cbx1	AW822073	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P83916;Dr:Q6IQ71;Rn:D4A3T3	-	-	-
+P83917	Q8C0R9	12412	242838	Cbx1	Lrrd1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P83916;Dr:Q6IQ71;Rn:D4A3T3	-	Hs:A4D1F6	Rn:D4AD14
+P83917	A0A2I3BRL8	12412	-	Cbx1	Gm7324	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P83916;Dr:Q6IQ71;Rn:D4A3T3	-	-	-
+P83917	Q3UZY0	12412	78887	Cbx1	Sfi1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P83916;Dr:Q6IQ71;Rn:D4A3T3	-	Hs:A8K8P3;Dr:F1QNA2;Rn:D3ZTG6	-
+P83917	Q921M4	12412	99412	Cbx1	Golga2	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P83916;Dr:Q6IQ71;Rn:D4A3T3	-	-	-

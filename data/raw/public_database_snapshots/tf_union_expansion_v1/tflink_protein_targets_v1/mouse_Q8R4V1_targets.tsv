@@ -1,0 +1,6 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q8R4V1	P04351	74039	16183	Nfam1	Il2	inferred by curator	18971253;26578589	Mus musculus	ORegAnno;PAZAR	No	Hs:Q8NET5	Rn:F1M0C3	Hs:P60568	Rn:P17108
+Q8R4V1	P27548	74039	21947	Nfam1	Cd40lg	inferred by curator	18971253;26578589	Mus musculus	ORegAnno;PAZAR	No	Hs:Q8NET5	Rn:F1M0C3	Hs:P29965	Rn:A0SZW2
+Q8R4V1	P04401	74039	16191	Nfam1	Il5	inferred by curator	18971253;26578589	Mus musculus	ORegAnno;PAZAR	No	Hs:Q8NET5	Rn:F1M0C3	Hs:P05113	Rn:Q08125
+Q8R4V1	P01587	74039	12981	Nfam1	Csf2	inferred by curator	18971253;26578589	Mus musculus	ORegAnno;PAZAR	No	Hs:Q8NET5	Rn:F1M0C3	Hs:P04141	Rn:P48750
+Q8R4V1	P07750	74039	16189	Nfam1	Il4	inferred by curator	18971253;26578589	Mus musculus	ORegAnno;PAZAR	No	Hs:Q8NET5	Rn:F1M0C3	Hs:P05112	Rn:P20096

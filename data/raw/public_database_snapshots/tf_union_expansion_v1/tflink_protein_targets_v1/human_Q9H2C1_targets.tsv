@@ -1,0 +1,2 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9H2C1	Q9UBG7	64211	11317	LHX5	RBPJL	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:P52889;Mm:P61375	Rn:P61376	Mm:O08674;Rn:D4AEG0	Dr:X1WF08

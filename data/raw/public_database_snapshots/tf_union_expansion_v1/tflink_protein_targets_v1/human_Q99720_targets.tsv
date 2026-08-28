@@ -1,0 +1,11 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q99720	P68104	10280	1915	SIGMAR1	EEF1A1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QUF7;Mm:O55242;Rn:Q9R0C9	-	Dr:Q6P969;Dr:Q568F0;Mm:P10126;Rn:P62630;Sc:P02994	Rn:F1M6C2;Rn:M0R757
+Q99720	P17787	10280	1141	SIGMAR1	CHRNB2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QUF7;Mm:O55242;Rn:Q9R0C9	-	-	-
+Q99720	Q6F5E8	10280	146206	SIGMAR1	CARMIL2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QUF7;Mm:O55242;Rn:Q9R0C9	-	-	Mm:S0DHL8;Rn:D3ZC15
+Q99720	Q15287	10280	10921	SIGMAR1	RNPS1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QUF7;Mm:O55242;Rn:Q9R0C9	-	Ce:Q21155;Dm:Q9VHC0;Mm:Q99M28;Rn:Q6AYK1	Dr:Q6PG31;Dr:A0A0G2KGY0
+Q99720	Q9NRQ2	10280	57088	SIGMAR1	PLSCR4	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QUF7;Mm:O55242;Rn:Q9R0C9	-	Mm:P58196;Rn:G3V719	-
+Q99720	Q9BWW7	10280	83482	SIGMAR1	SCRT1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QUF7;Mm:O55242;Rn:Q9R0C9	-	-	-
+Q99720	Q13387	10280	23542	SIGMAR1	MAPK8IP2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QUF7;Mm:O55242;Rn:Q9R0C9	-	Dr:F1QF74;Mm:Q9ERE9;Rn:G3V9M2	-
+Q99720	P47898	10280	3361	SIGMAR1	HTR5A	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QUF7;Mm:O55242;Rn:Q9R0C9	-	Mm:P30966;Rn:P35364	Dr:A3KPY3;Dr:Q7ZZ32
+Q99720	Q09472	10280	2033	SIGMAR1	EP300	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QUF7;Mm:O55242;Rn:Q9R0C9	-	Dr:X1WG57;Mm:B2RWS6	-
+Q99720	P23415	10280	2741	SIGMAR1	GLRA1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QUF7;Mm:O55242;Rn:Q9R0C9	-	Mm:Q64018;Rn:P07727	-

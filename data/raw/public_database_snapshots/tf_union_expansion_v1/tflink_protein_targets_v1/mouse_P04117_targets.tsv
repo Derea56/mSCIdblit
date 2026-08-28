@@ -1,0 +1,2 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P04117	P07310	11770	12715	Fabp4	Ckm	inferred by curator	26578589;8474439	Mus musculus	ORegAnno	Yes	Hs:P15090;Rn:A0A0G2K586	-	Hs:P06732	Rn:A0A0G2JSP8

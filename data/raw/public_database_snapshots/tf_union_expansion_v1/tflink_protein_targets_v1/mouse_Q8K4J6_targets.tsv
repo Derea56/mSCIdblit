@@ -1,0 +1,5 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q8K4J6	Q9JM73	223701	20807	Mrtfa	Srf	inferred by curator	29087512;14565952	Mus musculus	TRRUST	Yes	-	-	Hs:P11831;Rn:D3ZHH8	-
+Q8K4J6	P37804	223701	21345	Mrtfa	Tagln	inferred by curator	14970199;29087512	Mus musculus	TRRUST	Yes	-	-	Hs:Q01995	Dr:Q0P4B4;Rn:A0A0G2JWK7
+Q8K4J6	P41133	223701	15903	Mrtfa	Id3	inferred by curator	29087512;18477564	Mus musculus	TRRUST	Yes	-	-	Hs:Q02535;Rn:P41138	-
+Q8K4J6	P22387	223701	13614	Mrtfa	Edn1	inferred by curator	25446178;29087512	Mus musculus	TRRUST	Yes	-	-	Hs:P05305;Rn:P22388	-

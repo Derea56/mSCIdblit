@@ -1,0 +1,2 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+O15381	P19237	4931	7135	NVL	TNNI1	inferred by curator	15933209;26578589	Homo sapiens	ORegAnno	Yes	Ce:Q9NAG4;Dr:B8A4A1;Mm:Q9DBY8;Rn:D3ZTY9;Sc:Q07844	-	Mm:Q9WUZ5	Dr:Q8AW33;Rn:A0A096MIZ5

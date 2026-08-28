@@ -1,0 +1,16 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P17027	Q9NWM3	7571	404093	ZNF23	CUEDC1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:Q8SZU6;Dr:F1QA38;Mm:Q8R3V6	Rn:Q5PQP8
+P17027	Q9UNE2	7571	9501	ZNF23	RPH3AL	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q768S4	Rn:O54880
+P17027	Q96AX2	7571	326624	ZNF23	RAB37	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Rn:D4A0G7	Dr:A0A0G2L7I2;Mm:Q8BQX0
+P17027	P00966	7571	445	ZNF23	ASS1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:O97069;Mm:P16460;Rn:P09034;Sc:P22768	-
+P17027	Q9BRX5	7571	64785	ZNF23	GINS3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:Q9BL54;Dm:Q9W2V7;Dr:F1QXM4;Mm:Q9CY94;Rn:D3Z9I4	-
+P17027	O95995	7571	2622	ZNF23	GAS8	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:Q18689;Dr:F1QNW4;Mm:Q60779;Rn:Q499U4	Dm:Q8MT08
+P17027	P18858	7571	3978	ZNF23	LIG1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:Q27474;Dm:Q9W1H4;Dr:B0S533;Mm:Q3U4X8;Rn:Q566D8;Sc:P04819	Rn:F1M8E6
+P17027	Q8IY17	7571	10908	ZNF23	PNPLA6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:F1R844;Mm:Q3TRM4;Rn:M0R715	-
+P17027	Q69YW2	7571	375057	ZNF23	STUM	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Rn:D4A4F9	Dr:G1K2X9;Mm:J3QP43
+P17027	O00445	7571	6861	ZNF23	SYT5	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q9R0N5	Rn:P47861
+P17027	Q7Z692	7571	56971	ZNF23	CEACAM19	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q3TQ88	Rn:D3ZE93
+P17027	P50570	7571	1785	ZNF23	DNM2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:P39054;Rn:P39052	Dr:Q4V8Z7
+P17027	P20701	7571	3683	ZNF23	ITGAL	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	Mm:E9Q5M7;Rn:F1LP44
+P17027	P22670	7571	5989	ZNF23	RFX1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:E7EZ03;Mm:P48377;Rn:D3ZQ82	-
+P17027	P42226	7571	6778	ZNF23	STAT6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	-

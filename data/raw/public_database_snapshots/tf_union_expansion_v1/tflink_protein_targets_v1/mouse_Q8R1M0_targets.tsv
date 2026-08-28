@@ -1,0 +1,6 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q8R1M0	J3QP74	232210	-	Hmces	Gm10715	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:Q96FZ2;Dm:Q9VHI3	Dr:A5PLB0	-	-
+Q8R1M0	D3Z1I8	232210	-	Hmces	Gm10717	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:Q96FZ2;Dm:Q9VHI3	Dr:A5PLB0	-	-
+Q8R1M0	E9Q7T3	232210	-	Hmces	Gm10719	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:Q96FZ2;Dm:Q9VHI3	Dr:A5PLB0	-	-
+Q8R1M0	D3Z1I5	232210	-	Hmces	Gm10720	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:Q96FZ2;Dm:Q9VHI3	Dr:A5PLB0	-	-
+Q8R1M0	F6VLK5	232210	-	Hmces	Gm10722	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:Q96FZ2;Dm:Q9VHI3	Dr:A5PLB0	-	-

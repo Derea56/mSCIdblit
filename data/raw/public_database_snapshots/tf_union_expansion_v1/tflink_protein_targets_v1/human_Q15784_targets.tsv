@@ -1,0 +1,7 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q15784	Q3KNV8	4761	10336	NEUROD2	PCGF3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q62414	-	Dm:Q9VV77;Mm:Q8BTQ0;Rn:B2RZ26	-
+Q15784	Q9NRZ7	4761	56894	NEUROD2	AGPAT3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q62414	-	Dr:Q7ZWC9;Mm:Q9D517;Rn:G3V648	-
+Q15784	Q13136	4761	8500	NEUROD2	PPFIA1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q62414	-	-	Mm:B2RXW8;Rn:A0A0G2K3L9
+Q15784	Q96L73	4761	64324	NEUROD2	NSD1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q62414	-	Mm:E9QAE4;Rn:D4AA06	-
+Q15784	P42226	4761	6778	NEUROD2	STAT6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q62414	-	-	-
+Q15784	P42771	4761	1029	NEUROD2	CDKN2A	chromatin immunoprecipitation assay;inferred by curator	19340300;22900683	Homo sapiens	HTRI	No	Mm:Q62414	-	-	-

@@ -1,0 +1,6 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9BWE0	Q04743	29803	2018	REPIN1	EMX2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:Q90264;Mm:Q04744;Rn:D3ZCK7	-
+Q9BWE0	Q70Z53	29803	118924	REPIN1	FRA10AC1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:B5BM26;Dr:A0A0R4IK46;Mm:Q8BP78;Rn:Q5FVF1	-
+Q9BWE0	P49802	29803	6000	REPIN1	RGS7	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	Dr:F1Q9W6;Mm:A0A0A6YW36;Rn:D3ZWG2
+Q9BWE0	Q12874	29803	10946	REPIN1	SF3A3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:Q22469;Dm:O46106;Dr:A0A0R4ILH7;Mm:Q9D554;Rn:Q4KLI7;Sc:P19736	-
+Q9BWE0	Q53HV7	29803	23583	REPIN1	SMUG1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:Q9VEM1;Mm:Q6P5C5	Rn:Q811Q1

@@ -1,0 +1,6 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9Y6Q3	A0A1B0GX95	7539	-	ZFP37	TRBV7-4	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:P17141	Rn:F1LQU1	-	-
+Q9Y6Q3	Q9UHC6	7539	26047	ZFP37	CNTNAP2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:P17141	Rn:F1LQU1	-	Dr:A0A286Y870;Mm:E9QNF7
+Q9Y6Q3	Q9H1J5	7539	7478	ZFP37	WNT8A	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:P17141	Rn:F1LQU1	-	-
+Q9Y6Q3	P21796	7539	7416	ZFP37	VDAC1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:P17141	Rn:F1LQU1	Dr:Q6NWC1;Mm:Q60932;Rn:Q9Z2L0	-
+Q9Y6Q3	Q9Y6X1	7539	27230	ZFP37	SERP1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:P17141	Rn:F1LQU1	Mm:Q9Z1W5;Rn:Q9R2C1	Dr:Q6DGW5

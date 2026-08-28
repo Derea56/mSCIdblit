@@ -1,0 +1,54 @@
+{
+  "audit_rows": 2476,
+  "canonical_write_performed": false,
+  "detection_method_counts": {
+    "chromatin immunoprecipitation assay": 2366,
+    "chromatin immunoprecipitation assay;electrophoretic mobility shift assay": 1,
+    "chromatin immunoprecipitation assay;inferred by curator": 11,
+    "electrophoretic mobility shift assay": 1,
+    "inferred by curator": 93
+  },
+  "download_status_counts": {
+    "cached": 690
+  },
+  "exact_pair_queue_rows": 2472,
+  "exact_rows_small_scale_evidence_yes": 79,
+  "exact_rows_with_pubmed_method_source": 2472,
+  "exact_source_records": 2472,
+  "module22b_write_performed": false,
+  "organism_counts": {
+    "Homo sapiens": 1738,
+    "Mus musculus": 734
+  },
+  "outputs": {
+    "audit_tsv": "data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/tflink_database_profile_hold_source_audit.tsv",
+    "raw_target_tables": "data/raw/public_database_snapshots/tf_union_expansion_v1/tflink_protein_targets_v1",
+    "summary_json": "data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/tflink_database_profile_hold_source_audit_summary.json"
+  },
+  "policy": [
+    "TFLink GMT membership alone is not pair-level evidence.",
+    "TFLink target-table rows are retained with detection method, PubMed ID, source database, organism, small-scale flag, URL, and local snapshot hash.",
+    "TFLink high-throughput rows are staged as binding/association evidence and are not treated as perturbation or expression evidence without additional review.",
+    "No canonical TF or Module22B record was materialized."
+  ],
+  "queue_rows": 2476,
+  "selection": "database_profile_hold",
+  "small_scale_flag_counts": {
+    "No": 2393,
+    "Yes": 79
+  },
+  "source_database_counts": {
+    "GTRD": 2075,
+    "GTRD;ReMap": 98,
+    "HTRI": 12,
+    "IntAct_via_DoRothEA": 2,
+    "ORegAnno": 5,
+    "ORegAnno;PAZAR": 17,
+    "ReMap": 193,
+    "ReMap;TRRUST": 1,
+    "TRRUST": 69
+  },
+  "status": "audit_complete",
+  "unique_source_records": 690,
+  "unmatched_queue_rows": 4
+}

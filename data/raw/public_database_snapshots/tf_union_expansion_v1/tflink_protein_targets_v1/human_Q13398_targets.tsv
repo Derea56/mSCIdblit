@@ -1,0 +1,3 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q13398	P43246	10520	4436	ZNF211	MSH2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:Q9TXR4;Dm:P43248;Dr:F1QEP5;Mm:P43247;Rn:B1WBQ7;Sc:P25847	-
+Q13398	Q15329	10520	1875	ZNF211	E2F5	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Rn:F1LRB5	Mm:E9Q011

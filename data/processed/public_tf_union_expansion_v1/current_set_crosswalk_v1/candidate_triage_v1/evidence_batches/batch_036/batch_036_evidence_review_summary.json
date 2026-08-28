@@ -1,0 +1,62 @@
+{
+  "batch_id": "public_tf_evidence_batch_036",
+  "canonical_writes_performed": false,
+  "database_only_rows": 100,
+  "exact_pair_status_counts": {
+    "database_membership_only_not_promotable": 100
+  },
+  "exportable_pair_rows": 0,
+  "identity_review_hold_rows": 0,
+  "limitations": [
+    "TFLink membership is a search lead, not causal regulation.",
+    "MRTFA/Mrtfa is retained as a signal-regulated SRF coactivator, not promoted as a standalone sequence-specific TF.",
+    "Exact functional findings are routed to their noncanonical coactivator, RNA-splicing, ubiquitin or downstream-expression categories and remain outside canonical and Module 22B materialization.",
+    "Near-matches retain their directionality and interaction limitations; they are not transferred to exact regulator-target evidence.",
+    "All models are outside the SCI target-cell context; exact-pair negatives are bounded-search results, not global absence.",
+    "No canonical TF or Module 22B write was performed."
+  ],
+  "module22b_promotions_performed": false,
+  "noncanonical_exact_candidate_rows": 0,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_036/public_tf_evidence_review_batch036_pairs.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_036/public_tf_evidence_review_batch036_regulator_register.tsv",
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_036/batch_036_validation.json"
+  ],
+  "pair_rows_reviewed": 100,
+  "partial_or_near_match_rows": 0,
+  "profile_only_rows": 0,
+  "provenance_preserved": true,
+  "regulator_register_rows": 24,
+  "source_set_ranks_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "status": "staging_only",
+  "strict_tf_promotion_candidate_rows": 0,
+  "unique_provenance_aware_pairs": 100,
+  "unique_regulators_reviewed": 24,
+  "validation": "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_036/batch_036_validation.json"
+}

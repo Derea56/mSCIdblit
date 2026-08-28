@@ -1,0 +1,24 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q6NX45	Q9H665	342132	79713	ZNF774	IGFLR1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q3U4N7	Dr:E7EXT5;Rn:D4A4X3
+Q6NX45	P04062	342132	2629	ZNF774	GBA	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:Q9UB00;Ce:G5ECR8;Dm:Q9VCJ4;Dm:Q8IMY3;Dr:E7EZM1;Mm:P17439;Rn:B2RYC9	-
+Q6NX45	Q9BYU1	342132	80714	ZNF774	PBX4	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q99NE9;Rn:D4AA41	-
+Q6NX45	Q9BWC9	342132	29903	ZNF774	CCDC106	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:Q5EB04;Dr:Q1LUD6;Rn:D4AAV8	Mm:A0A140LIV9
+Q6NX45	P78364	342132	1911	ZNF774	PHC1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:E7F4T8;Rn:D3ZVD1	Mm:Q7TT35
+Q6NX45	Q14667	342132	9703	ZNF774	KIAA0100	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:Q9VZS7;Dr:X1WB96;Mm:Q5SYL3;Rn:F1LSX1	Ce:O62191
+Q6NX45	O60259	342132	11202	ZNF774	KLK8	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q61955	Rn:G3V8E9
+Q6NX45	O95049	342132	27134	ZNF774	TJP3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q921G9;Rn:D3Z8G7	-
+Q6NX45	Q86SQ4	342132	57211	ZNF774	ADGRG6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q6F3F9;Rn:A0A0G2JST1	Dr:E7F1G3
+Q6NX45	Q13057	342132	80347	ZNF774	COASY	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:Q9BL56;Dm:Q9VRP4;Dr:Q66HW0;Mm:Q9DBL7;Rn:Q5XIA5	-
+Q6NX45	P23284	342132	5479	ZNF774	PPIB	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:P52013;Dm:Q9W227;Dr:F6NLI6;Mm:P24369;Rn:P24368	-
+Q6NX45	O60568	342132	8985	ZNF774	PLOD3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:A3KNH4;Mm:Q9R0E1;Rn:Q5U367	-
+Q6NX45	Q9P0T4	342132	51545	ZNF774	ZNF581	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	Dr:A0A0R4IJT0
+Q6NX45	Q9NYJ7	342132	10683	ZNF774	DLL3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:O88516;Rn:F1M9P5	-
+Q6NX45	P53350	342132	5347	ZNF774	PLK1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:Q9N2L7;Ce:P34331;Dm:P52304;Dr:Q6DRK7;Mm:Q07832;Rn:A0A140TAD2;Sc:P32562	-
+Q6NX45	Q96P50	342132	116983	ZNF774	ACAP3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q6NXL5;Rn:A0A0G2K5N8	Dr:A0A0R4IAC2;Dr:E7FEY6
+Q6NX45	O43257	342132	10467	ZNF774	ZNHIT1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:A9D699;Dm:Q9VMV7;Dr:Q561S5;Mm:Q8R331	Rn:A0A0G2K5F7
+Q6NX45	Q16099	342132	2900	ZNF774	GRIK4	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:E7F1P4;Mm:Q8BMF5	Rn:A0A140TAG0
+Q6NX45	Q9UK33	342132	51157	ZNF774	ZNF580	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q9DB38	Rn:D4A235
+Q6NX45	Q12809	342132	3757	ZNF774	KCNH2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q53Z09;Rn:F1LN86	-
+Q6NX45	P03923	342132	4541	ZNF774	MT-ND6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:Q9MIX9;Mm:P03925;Rn:P03926	-
+Q6NX45	Q96EP5	342132	26528	ZNF774	DAZAP1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q9JII5;Rn:Q4KLZ3	Dm:Q59DT6;Dr:A8E5B6
+Q6NX45	O95834	342132	24139	ZNF774	EML2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:Q7TNG5;Rn:Q6P6T4	Dr:X1WFN0

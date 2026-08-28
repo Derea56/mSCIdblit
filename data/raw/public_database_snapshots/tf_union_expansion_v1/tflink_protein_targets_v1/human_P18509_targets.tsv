@@ -1,0 +1,8 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P18509	Q14689	116	23181	ADCYAP1	DIP2A	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q98TU3;Mm:O70176;Rn:P13589	Dr:Q5XJ29	Dr:E7FAU4;Rn:F1LZ43	Mm:D3Z7D3
+P18509	Q9UIK5	116	23671	ADCYAP1	TMEFF2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q98TU3;Mm:O70176;Rn:P13589	Dr:Q5XJ29	Dr:F1Q8Z6;Dr:B0S6Y8;Mm:Q9QYM9;Rn:A0A0G2JZU6	-
+P18509	Q6JVE9	116	138307	ADCYAP1	LCN8	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q98TU3;Mm:O70176;Rn:P13589	Dr:Q5XJ29	Mm:Q924P3	Rn:B3EY82
+P18509	Q6UXN9	116	80335	ADCYAP1	WDR82	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q98TU3;Mm:O70176;Rn:P13589	Dr:Q5XJ29	Ce:Q18403;Dm:Q9VLN1;Dr:Q6NV31;Mm:Q8BFQ4;Rn:M0R565;Sc:P36104	-
+P18509	Q8IVS8	116	132158	ADCYAP1	GLYCTK	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q98TU3;Mm:O70176;Rn:P13589	Dr:Q5XJ29	Dm:Q9VQC4;Dr:F8W2P6;Mm:A0A0R4J1H2;Rn:Q0VGK3	Ce:Q09235
+P18509	Q8N3D4	116	254102	ADCYAP1	EHBP1L1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q98TU3;Mm:O70176;Rn:P13589	Dr:Q5XJ29	Mm:E9QP49;Rn:A0A0G2K6R8	-
+P18509	Q969F2	116	85409	ADCYAP1	NKD2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q98TU3;Mm:O70176;Rn:P13589	Dr:Q5XJ29	Dr:F1QI44;Mm:Q8VE28;Rn:D4A182	-

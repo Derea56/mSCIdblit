@@ -16,7 +16,8 @@ The expansion preserves three provenance levels:
    species scope, source version, and raw record key.
 2. **Reported contributor:** an underlying repository label reported inside an
    OmniPath/DoRothEA record. These links are preserved in
-   `reported_contributor_links.tsv` but are explicitly marked
+   `reported_contributor_links.tsv.gz` (lossless compressed; the uncompressed
+   `.tsv` form may be materialized locally) but are explicitly marked
    `reported_by_aggregator` and `independent_snapshot=false`.
 3. **Candidate identity/profile:** catalog or profile evidence that a symbol
    is a plausible TF. These records do not create TF-target edges.
@@ -68,8 +69,9 @@ per-record accounting is in `tf_candidate_union.tsv` and
   copied with their original external record key and raw hash.
 - `reported_contributor_registry.tsv` — the 52 contributor labels reported by
   OmniPath/DoRothEA, with aggregation layer and independent-snapshot status.
-- `reported_contributor_links.tsv` — record-level links from each aggregated
-  assertion to each reported contributor label.
+- `reported_contributor_links.tsv.gz` — lossless compressed record-level links
+  from each aggregated assertion to each reported contributor label. The
+  validators and crosswalk reader accept either `.tsv` or `.tsv.gz`.
 - `tflink_tf_summary.tsv` — TFLink TF-level target counts; not pair-level
   evidence.
 - `tf_candidate_union.tsv` — ranked-free union inventory for routing into

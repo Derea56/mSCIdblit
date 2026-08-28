@@ -1,0 +1,22 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q13242	Q9HAY2	8683	64110	SRSF9	MAGEF1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	-	-
+Q13242	Q7Z4I7	8683	55679	SRSF9	LIMS2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	Mm:Q91XD2;Rn:A0A0G2KAE1	-
+Q13242	Q96JD6	8683	83592	SRSF9	AKR1E2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	Mm:Q9DCT1;Rn:Q5U1Y4	-
+Q13242	Q12830	8683	2186	SRSF9	BPTF	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	Dm:Q9W0T1;Rn:A0A0G2K7N8	Mm:A2A654
+Q13242	Q8IY57	8683	10138	SRSF9	YAF2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	Dm:Q9W215;Mm:Q99LW6;Rn:D3ZII7	Dr:Q5SP49
+Q13242	Q75V66	8683	203859	SRSF9	ANO5	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	Dr:E7F4N6;Mm:Q75UR0	Rn:F1LZ77
+Q13242	P78357	8683	8506	SRSF9	CNTNAP1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	Mm:O54991;Rn:P97846	Dr:X1WGG7
+Q13242	P46199	8683	4528	SRSF9	MTIF2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	Ce:Q20447;Dm:Q9VAV2;Dr:F1QD40;Mm:Q91YJ5;Sc:P25038	-
+Q13242	Q70CQ2	8683	9736	SRSF9	USP34	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	Dm:Q9VC56;Dr:A0A0G2KYP4;Rn:A0A0G2JTF5	Mm:Z4YLQ1
+Q13242	A0JD32	8683	-	SRSF9	TRAV38-2DV8	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	-	-
+Q13242	Q53H76	8683	51365	SRSF9	PLA1A	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	Dm:Q9VQ96;Mm:Q8VI78;Rn:P97535	-
+Q13242	Q8N7B6	8683	133015	SRSF9	PACRGL	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	Mm:Q9D3X5;Rn:D3ZE96	-
+Q13242	Q9Y3Q7	8683	8749	SRSF9	ADAM18	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	Mm:Q9R157	Rn:F1LRY9
+Q13242	O15229	8683	8564	SRSF9	KMO	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	Ce:Q21795;Mm:Q91WN4;Rn:O88867;Sc:P38169	Dr:F1QHH6
+Q13242	P46092	8683	2826	SRSF9	CCR10	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	Mm:Q9JL21	Rn:D3ZJH1
+Q13242	Q5S007	8683	120892	SRSF9	LRRK2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	Dr:F8W598;Mm:Q5S006;Rn:F1LNJ1	-
+Q13242	O00555	8683	773	SRSF9	CACNA1A	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	Mm:P97445;Rn:A0A0G2JXK1	Dr:Q5RHB1
+Q13242	Q8NEM1	8683	340252	SRSF9	ZNF680	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	-	-
+Q13242	P48380	8683	5991	SRSF9	RFX3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	Mm:P48381	Rn:A0A0G2JYT9
+Q13242	Q96PH1	8683	79400	SRSF9	NOX5	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	-	Dr:E7F9M1
+Q13242	Q8N2C7	8683	285175	SRSF9	UNC80	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:F1QVC6;Mm:Q9D0B0;Rn:Q5PPI1	-	-	-

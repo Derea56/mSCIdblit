@@ -1,0 +1,9 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P50219	Q04671	3110	4948	MNX1	OCA2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:Q9U2Z0;Dr:Q6SYZ1	Mm:A2RSX2;Rn:M0R6D8	Mm:Q62052	Dm:Q9VU30;Rn:Q4LEV3
+P50219	O60667	3110	9214	MNX1	FCMR	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:Q9U2Z0;Dr:Q6SYZ1	Mm:A2RSX2;Rn:M0R6D8	Mm:A0A0G2LB91	Rn:A0A0H2UHV3
+P50219	P23743	3110	1606	MNX1	DGKA	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:Q9U2Z0;Dr:Q6SYZ1	Mm:A2RSX2;Rn:M0R6D8	Mm:O88673;Rn:P51556	Dr:Q1ECW5
+P50219	Q9NSD5	3110	6540	MNX1	SLC6A13	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:Q9U2Z0;Dr:Q6SYZ1	Mm:A2RSX2;Rn:M0R6D8	Mm:P31649;Rn:A0A0G2K0Z3	-
+P50219	Q9H4P4	3110	10193	MNX1	RNF41	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:Q9U2Z0;Dr:Q6SYZ1	Mm:A2RSX2;Rn:M0R6D8	Dm:Q9VUV7;Mm:Q8BH75;Rn:A0A0G2K4P8	Dr:F1QIM8
+P50219	Q8IZN3	3110	79683	MNX1	ZDHHC14	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:Q9U2Z0;Dr:Q6SYZ1	Mm:A2RSX2;Rn:M0R6D8	Mm:Q8BQQ1;Rn:Q2TGJ5	-
+P50219	Q86VI3	3110	128239	MNX1	IQGAP3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:Q9U2Z0;Dr:Q6SYZ1	Mm:A2RSX2;Rn:M0R6D8	Mm:F8VQ29;Rn:D3ZCS4	-
+P50219	Q8WV44	3110	90933	MNX1	TRIM41	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:Q9U2Z0;Dr:Q6SYZ1	Mm:A2RSX2;Rn:M0R6D8	Mm:Q5NCC3;Rn:F1LMK2	-

@@ -1,0 +1,5 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9BWM5	P42226	55659	6778	ZNF416	STAT6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Rn:D3ZVT0	-	-	-
+Q9BWM5	O75342	55659	242	ZNF416	ALOX12B	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Rn:D3ZVT0	-	Mm:O70582	Rn:A0A140TAE7
+Q9BWM5	O15234	55659	22794	ZNF416	CASC3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Rn:D3ZVT0	-	Dr:Q1ECZ4;Mm:Q8K3W3;Rn:G3V793	Dm:A0A0B4KH64
+Q9BWM5	P56645	55659	8863	ZNF416	PER3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Rn:D3ZVT0	-	Dr:F1RDZ4;Mm:O70361;Rn:G3V8D9	-

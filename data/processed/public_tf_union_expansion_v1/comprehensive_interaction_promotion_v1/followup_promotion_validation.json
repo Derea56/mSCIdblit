@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "promotion_scope": "comprehensive_public_interaction_catalog",
+  "promoted_rows": 3,
+  "unique_provenance_keys": 3,
+  "duplicate_provenance_keys": 0,
+  "exportable_true_rows": 3,
+  "canonical_write_true_rows": 0,
+  "module22b_write_true_rows": 0,
+  "policy": [
+    "The promoted relationship is an exact noncanonical kinase-substrate/PTM mechanism.",
+    "The row remains separate from canonical TF and Module 22B materialization.",
+    "Species, source registry, source record, primary citations, corroboration, and remaining context gap are retained."
+  ]
+}

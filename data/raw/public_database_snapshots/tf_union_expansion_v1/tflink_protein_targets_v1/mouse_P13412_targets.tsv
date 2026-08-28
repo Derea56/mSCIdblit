@@ -1,0 +1,13 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P13412	J3QP72	21953	-	Tnni2	Gm21738	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P48788;Dr:Q0D2W2;Dr:F1QCC0	Dr:Q5U3E9;Dr:Q6DHP2;Rn:P27768	-	-
+P13412	D3Z1I7	21953	-	Tnni2	Gm10718	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P48788;Dr:Q0D2W2;Dr:F1QCC0	Dr:Q5U3E9;Dr:Q6DHP2;Rn:P27768	-	-
+P13412	G3UW74	21953	216154	Tnni2	Med16	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P48788;Dr:Q0D2W2;Dr:F1QCC0	Dr:Q5U3E9;Dr:Q6DHP2;Rn:P27768	Hs:Q9Y2X0;Dm:Q9W278;Dr:E7F602	Rn:A0A0G2K2K5
+P13412	Q8K3V4	21953	242726	Tnni2	Padi6	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P48788;Dr:Q0D2W2;Dr:F1QCC0	Dr:Q5U3E9;Dr:Q6DHP2;Rn:P27768	Hs:Q6TGC4;Rn:D4ABN7	-
+P13412	J3QP74	21953	-	Tnni2	Gm10715	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P48788;Dr:Q0D2W2;Dr:F1QCC0	Dr:Q5U3E9;Dr:Q6DHP2;Rn:P27768	-	-
+P13412	J3QNI2	21953	-	Tnni2	Gm11168	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P48788;Dr:Q0D2W2;Dr:F1QCC0	Dr:Q5U3E9;Dr:Q6DHP2;Rn:P27768	-	-
+P13412	Q02357	21953	11733	Tnni2	Ank1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P48788;Dr:Q0D2W2;Dr:F1QCC0	Dr:Q5U3E9;Dr:Q6DHP2;Rn:P27768	-	-
+P13412	D3Z1I8	21953	-	Tnni2	Gm10717	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P48788;Dr:Q0D2W2;Dr:F1QCC0	Dr:Q5U3E9;Dr:Q6DHP2;Rn:P27768	-	-
+P13412	E9Q7T3	21953	-	Tnni2	Gm10719	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P48788;Dr:Q0D2W2;Dr:F1QCC0	Dr:Q5U3E9;Dr:Q6DHP2;Rn:P27768	-	-
+P13412	D3Z1I5	21953	-	Tnni2	Gm10720	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P48788;Dr:Q0D2W2;Dr:F1QCC0	Dr:Q5U3E9;Dr:Q6DHP2;Rn:P27768	-	-
+P13412	F6VLK5	21953	-	Tnni2	Gm10722	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P48788;Dr:Q0D2W2;Dr:F1QCC0	Dr:Q5U3E9;Dr:Q6DHP2;Rn:P27768	-	-
+P13412	Q9D9J7	21953	73456	Tnni2	Izumo1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Hs:P48788;Dr:Q0D2W2;Dr:F1QCC0	Dr:Q5U3E9;Dr:Q6DHP2;Rn:P27768	Hs:Q8IYV9;Rn:Q6AY06	-

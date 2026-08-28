@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "canonical_write_true_rows": 0,
+    "duplicate_provenance_keys": 0,
+    "duplicate_review_ids": 0,
+    "exportable_true_rows": 0,
+    "literal_queue_rows": 100,
+    "malformed_flags": 0,
+    "regulator_register_rows": 23,
+    "review_pair_rows": 100,
+    "unique_provenance_keys": 100
+  },
+  "status": "pass"
+}

@@ -1,0 +1,3 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9D1N2	P10085	68453	17927	Gpihbp1	Myod1	inferred by curator	9671483;29087512	Mus musculus	TRRUST	Yes	-	Rn:D3ZZL5	Hs:P15172;Dr:Q90477;Rn:A0JPK9	-
+Q9D1N2	P12979	68453	17928	Gpihbp1	Myog	inferred by curator	9671483;29087512	Mus musculus	TRRUST	Yes	-	Rn:D3ZZL5	Hs:P15173	Dr:B0S6I5

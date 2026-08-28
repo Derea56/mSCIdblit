@@ -1,0 +1,8 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P52737	O94952	7695	23014	ZNF136	FBXO21	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	Rn:F1M4E4	Mm:Q8VDH1;Rn:F1M5Q6	Dr:E9QEU7
+P52737	Q9H3J6	7695	91574	ZNF136	C12orf65	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	Rn:F1M4E4	Dm:A1ZAD7;Mm:Q80VP5;Rn:F1LWN5	-
+P52737	Q3MJ13	7695	256764	ZNF136	WDR72	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	Rn:F1M4E4	-	-
+P52737	P03886	7695	4535	ZNF136	MT-ND1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	Rn:F1M4E4	Dr:Q9MIZ0;Mm:P03888;Rn:P03889	Ce:G4XR16
+P52737	Q8N8J6	7695	284370	ZNF136	ZNF615	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	Rn:F1M4E4	-	-
+P52737	A6NED2	7695	91433	ZNF136	RCCD1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	Rn:F1M4E4	Mm:Q8BTU7;Rn:D3ZG92	-
+P52737	P38935	7695	3508	ZNF136	IGHMBP2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	Rn:F1M4E4	Dr:M9MM98;Mm:A0A0B4J1E3;Rn:F1LQE6;Sc:P34243	-

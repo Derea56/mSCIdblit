@@ -1,0 +1,7 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q14188	O75496	7029	51053	TFDP2	GMNN	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	Dr:F1QC48;Mm:A0A087WPU8;Rn:A0A0G2JXE8	Mm:O88513;Rn:D3ZWJ0	-
+Q14188	Q5SWX8	7029	54953	TFDP2	ODR4	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	Dr:F1QC48;Mm:A0A087WPU8;Rn:A0A0G2JXE8	Ce:Q8I7F8;Dm:Q9VTX8;Dr:E7EXN0;Mm:Q4PJX1;Rn:D3ZV63	-
+Q14188	O14569	7029	11068	TFDP2	CYB561D2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	Dr:F1QC48;Mm:A0A087WPU8;Rn:A0A0G2JXE8	Dr:Q1LXB7;Mm:Q9WUE3;Rn:Q641Y1	-
+Q14188	P12270	7029	7175	TFDP2	TPR	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	Dr:F1QC48;Mm:A0A087WPU8;Rn:A0A0G2JXE8	Dm:A1Z8P9;Dr:Q5RI09;Mm:F6ZDS4;Rn:F1MA98;Sc:Q02455	-
+Q14188	Q8WTW4	7029	10641	TFDP2	NPRL2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	Dr:F1QC48;Mm:A0A087WPU8;Rn:A0A0G2JXE8	Dm:Q9VXA0;Mm:Q9WUE4;Rn:D3ZPN1	Dr:Q0P403
+Q14188	U3KQU4	7029	-	TFDP2	-	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	Dr:F1QC48;Mm:A0A087WPU8;Rn:A0A0G2JXE8	-	-

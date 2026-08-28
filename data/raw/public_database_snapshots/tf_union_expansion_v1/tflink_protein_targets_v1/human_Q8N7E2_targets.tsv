@@ -1,0 +1,4 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q8N7E2	Q9Y5B6	158506	94104	CBLL2	PAXBP1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:Q9VI54;Mm:P58501;Rn:D4A8C8	-
+Q8N7E2	P42226	158506	6778	CBLL2	STAT6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	-
+Q8N7E2	O15234	158506	22794	CBLL2	CASC3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:Q1ECZ4;Mm:Q8K3W3;Rn:G3V793	Dm:A0A0B4KH64

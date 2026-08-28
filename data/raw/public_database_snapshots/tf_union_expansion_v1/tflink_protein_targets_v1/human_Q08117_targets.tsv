@@ -1,0 +1,4 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q08117	Q9UJU2	166	51176	TLE5	LEF1	inferred by curator	29087512;20676368	Homo sapiens	TRRUST	Yes	Dr:Q7T289;Dr:Q9PTS6;Mm:P63002;Rn:A0A0G2JZT6	-	Dr:Q9W7C0;Mm:P27782;Rn:G3V7C1	-
+Q08117	P61587	166	390	TLE5	RND3	inferred by curator	23546594;29087512	Homo sapiens	TRRUST	Yes	Dr:Q7T289;Dr:Q9PTS6;Mm:P63002;Rn:A0A0G2JZT6	-	Mm:P61588;Rn:Q6SA80	-
+Q08117	P29320	166	2042	TLE5	EPHA3	inferred by curator	29087512;20676368	Homo sapiens	TRRUST	Yes	Dr:Q7T289;Dr:Q9PTS6;Mm:P63002;Rn:A0A0G2JZT6	-	Mm:Q8BRB1;Rn:G3V9D5	-

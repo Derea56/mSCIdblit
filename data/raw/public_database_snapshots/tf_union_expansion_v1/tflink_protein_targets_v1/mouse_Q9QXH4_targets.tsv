@@ -1,0 +1,2 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q9QXH4	P20263	16411	18999	Itgax	Pou5f1	inferred by curator	18971253;26578589	Mus musculus	ORegAnno;PAZAR	No	Hs:P20702	Rn:D3ZWZ1	Hs:Q01860;Hs:Q06416	Rn:Q6MG27

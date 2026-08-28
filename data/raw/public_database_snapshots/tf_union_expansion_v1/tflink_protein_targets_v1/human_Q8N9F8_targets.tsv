@@ -1,0 +1,13 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q8N9F8	Q96CB8	285676	57117	ZNF454	INTS12	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q80Y34	Rn:F1MAM2	Dm:Q9VBB3;Dr:Q6IQU7;Mm:Q9D168	Rn:A0A0H2UHJ4
+Q8N9F8	Q8NEP7	285676	126823	ZNF454	KLHDC9	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q80Y34	Rn:F1MAM2	Mm:Q3USL1;Rn:D3ZDT0	-
+Q8N9F8	P28340	285676	5424	ZNF454	POLD1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q80Y34	Rn:F1MAM2	-	-
+Q8N9F8	Q8NEC7	285676	79807	ZNF454	GSTCD	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q80Y34	Rn:F1MAM2	Dm:Q9VJ34;Dr:B8A5G3;Mm:Q5RL51;Rn:A0A0G2K635	-
+Q8N9F8	P61927	285676	6167	ZNF454	RPL37	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q80Y34	Rn:F1MAM2	-	-
+Q8N9F8	Q02779	285676	4294	ZNF454	MAP3K10	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q80Y34	Rn:F1MAM2	Mm:Q66L42;Rn:D3ZG83	Dr:F1R5V1
+Q8N9F8	Q9HCE9	285676	57719	ZNF454	ANO8	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q80Y34	Rn:F1MAM2	Ce:H2L2L3;Mm:Q6PB70;Rn:A0A0G2K5K1	Dr:E7F191
+Q8N9F8	Q15291	285676	5929	ZNF454	RBBP5	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q80Y34	Rn:F1MAM2	Ce:Q09309;Dm:Q9VPH8;Mm:Q8BX09;Rn:D3ZC01;Sc:P39706	Dr:F1QST7
+Q8N9F8	P03923	285676	4541	ZNF454	MT-ND6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q80Y34	Rn:F1MAM2	Dr:Q9MIX9;Mm:P03925;Rn:P03926	-
+Q8N9F8	Q969Y2	285676	84705	ZNF454	GTPBP3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q80Y34	Rn:F1MAM2	Dm:Q9VC87;Dr:F1Q694;Mm:Q923K4;Rn:Q5PQQ1;Sc:P32559	Ce:Q9XTZ1
+Q8N9F8	Q9UNL4	285676	51147	ZNF454	ING4	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q80Y34	Rn:F1MAM2	Dr:Q4VBS0;Mm:Q8C0D7;Rn:A1L130	-
+Q8N9F8	Q6XUX3	285676	25778	ZNF454	DSTYK	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Mm:Q80Y34	Rn:F1MAM2	Dr:Q4VSN1;Mm:Q6XUX1;Rn:Q6XUX2	-

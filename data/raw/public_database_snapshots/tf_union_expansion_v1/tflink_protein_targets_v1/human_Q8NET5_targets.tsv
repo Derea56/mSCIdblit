@@ -1,0 +1,6 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q8NET5	P60568	150372	3558	NFAM1	IL2	inferred by curator	18971253;26578589	Homo sapiens	ORegAnno;PAZAR	No	Mm:Q8R4V1	Rn:F1M0C3	Mm:P04351	Rn:P17108
+Q8NET5	P05112	150372	3565	NFAM1	IL4	inferred by curator	18971253;26578589	Homo sapiens	ORegAnno;PAZAR	No	Mm:Q8R4V1	Rn:F1M0C3	Mm:P07750	Rn:P20096
+Q8NET5	P04141	150372	1437	NFAM1	CSF2	inferred by curator	18971253;26578589	Homo sapiens	ORegAnno;PAZAR	No	Mm:Q8R4V1	Rn:F1M0C3	Mm:P01587	Rn:P48750
+Q8NET5	P05113	150372	3567	NFAM1	IL5	inferred by curator	18971253;26578589	Homo sapiens	ORegAnno;PAZAR	No	Mm:Q8R4V1	Rn:F1M0C3	Mm:P04401	Rn:Q08125
+Q8NET5	P29965	150372	959	NFAM1	CD40LG	inferred by curator	18971253;26578589	Homo sapiens	ORegAnno;PAZAR	No	Mm:Q8R4V1	Rn:F1M0C3	Mm:P27548	Rn:A0SZW2

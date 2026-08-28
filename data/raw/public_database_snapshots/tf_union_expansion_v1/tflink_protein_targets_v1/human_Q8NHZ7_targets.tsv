@@ -1,0 +1,3 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q8NHZ7	Q8TC84	125997	92565	MBD3L2	FANK1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:A8JQS3;Mm:Q9DAM9;Rn:Q66H07	Dr:F6NQ86
+Q8NHZ7	Q9UMY1	125997	51406	MBD3L2	NOL7	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:F1QS46;Mm:Q9D7Z3	Rn:D3ZAQ6

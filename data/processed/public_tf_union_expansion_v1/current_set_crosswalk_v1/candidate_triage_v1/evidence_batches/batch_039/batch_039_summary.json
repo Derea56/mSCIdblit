@@ -1,0 +1,30 @@
+{
+  "canonical_writes_performed": false,
+  "downstream_activation_status": "not_assessed_for_all_rows",
+  "inputs": {
+    "mechanism_nodes": "data/processed/mechanism_graph_module20_24_v2026_08_25/mechanism_nodes.tsv",
+    "role_triage": "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/public_tf_role_triage.tsv",
+    "tflink_summary": "data/processed/public_tf_union_expansion_v1/tflink_tf_summary.tsv"
+  },
+  "module22b_promotions_performed": false,
+  "outputs": [
+    "data/processed/public_tf_union_expansion_v1/current_set_crosswalk_v1/candidate_triage_v1/evidence_batches/batch_039/public_tf_evidence_collection_batch_039.tsv"
+  ],
+  "pair_search_rows": 74,
+  "role_category_counts": {
+    "dna_repair_or_genome_maintenance": 2,
+    "nuclear_machinery_or_structural_not_regulatory": 2,
+    "nuclear_structure_or_transport": 3,
+    "rna_binding_or_post_transcriptional": 8,
+    "signaling_metabolic_membrane_or_cell_cycle": 4
+  },
+  "selection_policy": "canonical and dual-role candidates first, then noncanonical/provisional candidates; source sets ranked by overlap with current mechanism gene symbols and reported target count",
+  "source_sets_available_after_filters": 969,
+  "source_sets_selected": 19,
+  "status": "staging_only",
+  "target_cell_presence_status": "not_assessed_for_all_rows",
+  "target_graph_overlap_rows": 53,
+  "unique_regulators": 19,
+  "unique_source_records": 19,
+  "upstream_relay_status": "not_assessed_for_all_rows"
+}

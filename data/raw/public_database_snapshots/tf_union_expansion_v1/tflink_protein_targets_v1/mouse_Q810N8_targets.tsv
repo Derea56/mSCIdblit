@@ -1,0 +1,25 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q810N8	A2AA28	194738	74319	Rhox11	Mettl23	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:Q86XA0;Dm:Q9VEZ4;Dr:A0A0R4IMW2;Rn:Q5RJL2	Dr:A0A0G2L4U4
+Q810N8	Q8C7R4	194738	231380	Rhox11	Uba6	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:A0AVT1;Dr:E9QF30;Rn:D4A8H3	-
+Q810N8	Q9Z315	194738	20227	Rhox11	Sart1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:O43290;Ce:O01524;Dr:Q6DG11;Rn:Q5XIW8	Dm:Q9VKD8
+Q810N8	Q9DBE9	194738	56095	Rhox11	Ftsj3	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:Q8IY81;Ce:Q9N5N9;Dm:Q9VXK5;Rn:Q5RJT2;Sc:P25582	Dr:A0A286Y8W6
+Q810N8	Q9D554	194738	75062	Rhox11	Sf3a3	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:Q12874;Ce:Q22469;Dm:O46106;Dr:A0A0R4ILH7;Rn:Q4KLI7;Sc:P19736	-
+Q810N8	Q61210	194738	16801	Rhox11	Arhgef1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Dr:F1Q4Y0;Rn:A0A0G2K446	Hs:M0QZR4
+Q810N8	P58871	194738	228140	Rhox11	Tnks1bp1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:Q9C0C2;Dm:Q9VIQ9;Rn:D3ZF26	-
+Q810N8	P99028	194738	66576	Rhox11	Uqcrh	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:A0A096LP55;Hs:P07919;Ce:O45864;Dm:Q4QPY6;Dm:A8Y535;Dr:Q3B750;Rn:Q5M9I5	-
+Q810N8	Q8CGK3	194738	74142	Rhox11	Lonp1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:P36776;Ce:O44952;Dm:Q7KUT2;Rn:Q924S5;Sc:P36775	Dr:A0A0R4IH79
+Q810N8	P62320	194738	67332	Rhox11	Snrpd3	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:P62318;Ce:Q17348;Dm:O44437;Dr:Q7ZVB5;Dr:B0V1I0;Rn:M0R907;Sc:P43321	-
+Q810N8	Q3ULA2	194738	12234	Rhox11	Btrc	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:Q9Y297;Rn:F1LMH8	Dm:Q9VDE3
+Q810N8	Q9ERI5	194738	107817	Rhox11	Jmjd6	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:Q6NYC1;Dm:Q9VD28;Dr:Q6PFM0;Rn:Q6AYK2	Ce:U4PBL8
+Q810N8	Q8K1C9	194738	230654	Rhox11	Lrrc41	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:Q15345;Dr:I3IS54;Rn:Q5M9H1	-
+Q810N8	Q8C4M7	194738	71876	Rhox11	Cenpu	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:Q71F23;Dr:E7FCV0;Rn:Q4V8G7	-
+Q810N8	P62196	194738	19184	Rhox11	Psmc5	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:P62195;Ce:Q9XTT9;Dm:O18413;Dr:Q6AZC1;Rn:P62198;Sc:Q01939	-
+Q810N8	Q8BZI6	194738	68778	Rhox11	Gucd1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:Q96NT3;Dm:Q9W4Y0;Dr:Q08CN7	-
+Q810N8	Q8VC48	194738	103737	Rhox11	Pex12	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:O00623;Ce:Q19189;Dm:Q9VPT5;Sc:Q04370	Dr:B0R157;Rn:O88177
+Q810N8	Q99PT3	194738	70020	Rhox11	Ino80b	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	-	-
+Q810N8	Q99L27	194738	105446	Rhox11	Gmpr2	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Dr:Q1RLT1;Rn:A0A0G2JX25	Hs:H0YNJ6
+Q810N8	P29595	194738	18002	Rhox11	Nedd8	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:Q15843;Ce:Q93725;Dm:Q9VJ33;Dr:B0R023;Dr:F1QMF9	Hs:S4R3E9;Rn:A0A0G2K4G3
+Q810N8	Q8C689	194738	56314	Rhox11	Zfp113	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:P17036;Rn:D3ZI20	-
+Q810N8	P97819	194738	53357	Rhox11	Pla2g6	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:O60733;Ce:G5EGD6;Dr:F1QXU0;Rn:P97570	Dm:Q9VT60
+Q810N8	Q91VP7	194738	76547	Rhox11	Tmem101	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:Q96IK0;Dr:A0A2R8PYE5;Rn:G3V8U1	-
+Q810N8	Q9DBG3	194738	71770	Rhox11	Ap2b1	chromatin immunoprecipitation assay	27924024	Mus musculus	GTRD	No	Rn:Q4TU72	-	Hs:P63010	Dr:E9QC84;Rn:P62944

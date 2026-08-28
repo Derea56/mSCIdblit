@@ -1,0 +1,7 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P23258	Q16778	7283	8349	TUBG1	H2BC21	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q7ZVM5;Mm:P83887;Rn:P83888	-	-	-
+P23258	P68431	7283	8350;8351;8352;8353;8354;8355;8356;8357;8358;8968	TUBG1	H3C1;H3C2;H3C3;H3C4;H3C6;H3C7;H3C8;H3C10;H3C11;H3C12	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q7ZVM5;Mm:P83887;Rn:P83888	-	-	-
+P23258	P58876	7283	3017	TUBG1	H2BC5	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q7ZVM5;Mm:P83887;Rn:P83888	-	-	-
+P23258	O75955	7283	10211	TUBG1	FLOT1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q7ZVM5;Mm:P83887;Rn:P83888	-	Dm:O61491;Dr:Q6TH07;Mm:O08917;Rn:Q9Z1E1	Dr:F1QEW4
+P23258	Q2TAL8	7283	54870	TUBG1	QRICH1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q7ZVM5;Mm:P83887;Rn:P83888	-	Mm:G3X8R5;Rn:A0A0G2JX16	Dr:Q4V9P2
+P23258	Q9Y3E2	7283	51027	TUBG1	BOLA1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:Q7ZVM5;Mm:P83887;Rn:P83888	-	Ce:P91375;Dm:Q9VC53;Mm:Q9D8S9;Rn:Q06C60	Dr:F1R2T4

@@ -1,0 +1,7 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q6ZR52	Q9P273	284443	55714	ZNF493	TENM3	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Mm:G3X907	Rn:F1LV44
+Q6ZR52	Q9NVX2	284443	54475	ZNF493	NLE1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Ce:Q9TYV3;Dm:Q9VPR4;Dr:F1QDT3;Mm:Q8VEJ4;Rn:B2GV82;Sc:P25382	-
+Q6ZR52	Q92730	284443	27289	ZNF493	RND1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dr:Q52WX7;Mm:Q8BLR7;Rn:Q5FVG9	-
+Q6ZR52	Q99614	284443	7265	ZNF493	TTC1	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:Q9VEV3;Dr:F1QZK4;Mm:Q91Z38;Rn:Q66H09	Ce:O44951
+Q6ZR52	P42226	284443	6778	ZNF493	STAT6	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	-	-
+Q6ZR52	P22792	284443	1370	ZNF493	CPN2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	-	-	Dm:Q9VT44;Mm:Q9DBB9;Rn:F1LQT4	Dr:A0JMK3

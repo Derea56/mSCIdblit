@@ -1,0 +1,3 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P02774	Q9UMI9	2638	-	GC	MUC2	inferred by curator	18971253;26578589	Homo sapiens	ORegAnno;PAZAR	No	-	-	-	-
+P02774	P07996	2638	7057	GC	THBS1	inferred by curator	18971253;26578589	Homo sapiens	ORegAnno;PAZAR	No	-	-	Mm:Q80YQ1;Rn:A0A0G2JV24	Dr:F1QEE7

@@ -1,0 +1,2 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P52800	P04235	13642	12500	Efnb2	Cd3d	inferred by curator	12324448;29087512	Mus musculus	TRRUST	Yes	Hs:P52799;Dr:O73874;Rn:B2B9A9	-	Hs:P04234	Rn:P19377

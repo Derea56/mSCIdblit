@@ -1,0 +1,2 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+P15927	O43615	6118	10469	RPA2	TIMM44	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Ce:Q95Y97;Dr:Q504I6;Rn:Q63528	Mm:Q3TE40	Ce:O02161;Dr:Q1LUQ3;Mm:O35857;Rn:G3V640;Sc:Q01852	Dm:Q9VDZ8

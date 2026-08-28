@@ -1,0 +1,3 @@
+UniprotID.TF	UniprotID.Target	NCBI.GeneID.TF	NCBI.GeneID.Target	Name.TF	Name.Target	Detection.method	PubmedID	Organism	Source.database	Small-scale.evidence	TF.TFLink.ortho	TF.nonTFLink.ortho	Target.TFLink.ortho	Target.nonTFLink.ortho
+Q96A47	Q9HA77	64843	79587	ISL2	CARS2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:P53406;Dr:P53407;Mm:Q9CXV0;Rn:G3V7Z7	-	Dm:Q7K3P0;Mm:G3X975;Rn:B2GV57	Dr:E7FC09
+Q96A47	O15409	64843	93986	ISL2	FOXP2	chromatin immunoprecipitation assay	27924024	Homo sapiens	GTRD	No	Dr:P53406;Dr:P53407;Mm:Q9CXV0;Rn:G3V7Z7	-	Mm:P58463;Rn:P0CF24	Dr:H0WFE7
