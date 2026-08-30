@@ -1,0 +1,49 @@
+{
+  "status": "pass",
+  "source_rows": 3363,
+  "unique_regulator_target_species_relationships": 3004,
+  "module_routed_relationships": 2459,
+  "catalog_only_relationships": 545,
+  "deduplication_ratio": 1.12,
+  "module_counts": {
+    "": 545,
+    "20B": 1880,
+    "20B;21B": 6,
+    "20B;22B;23B": 1,
+    "20B;23B": 279,
+    "20B;23B;24B": 26,
+    "20B;24B": 12,
+    "21B": 1,
+    "21B;22B": 7,
+    "22B": 75,
+    "23B": 134,
+    "23B;24B": 1,
+    "24B": 37
+  },
+  "priority_band_counts": {
+    "C1_canonical_multi_module": 80,
+    "C2_canonical_single_module": 452,
+    "C3_unresolved_multi_module": 252,
+    "C4_unresolved_single_module": 1675,
+    "C5_catalog_only": 545
+  },
+  "canonical_role_counts": {
+    "canonical_tf": 532,
+    "unresolved": 2472
+  },
+  "evidence_tier": "C_tflink_source_table_only",
+  "context_assignments_performed": true,
+  "context_adjudicated_relationships": 3004,
+  "materialization_performed": false,
+  "outputs": [
+    "c_tier_context_review_queue.tsv",
+    "c_tier_context_review_slice_001.tsv"
+  ],
+  "policy": [
+    "C-tier source-table evidence remains C and is not promoted by queue construction.",
+    "Rows are deduplicated by regulator-target-species; all module assignments and source IDs are retained.",
+    "Catalog-only relationships remain in the queue with route_status=catalog_only and no inferred module assignment.",
+    "Context fields are populated from the adjudication registry; unresolved/unverifiable C records remain L0 and do not change their C tier.",
+    "No canonical TF, module, database, or release writes are performed."
+  ]
+}
