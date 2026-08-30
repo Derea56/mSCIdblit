@@ -92,3 +92,10 @@ direct pair mechanism or occupancy was verified. These decisions are recorded
 in `c_tier_context_search_round_242.tsv` and the cumulative ledger rows.
 The Round-242 PubMed exact-pair screen was not completed after transient NCBI
 resolver failures; failed requests were not treated as no-evidence outcomes.
+Round 243 closed the remaining ledger-coverage gap for 43 C-tier L0 rows that
+lacked an explicit literal-symbol exact-pair search record. A bounded PubMed
+web screen was recorded for each row; no direct species-matched pair mechanism
+or occupancy was found, and all 43 exact-pair levels remain L0. Same-article or
+component-only candidates were retained as rejected candidates, not promoted
+evidence. The rows and exact search locators are in
+`c_tier_context_search_round_243.tsv`.
