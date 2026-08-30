@@ -214,6 +214,14 @@ cumulative ledgers. A resumable PubMed exact-pair screen was started but not
 completed after transient NCBI resolver failures; failed requests were removed
 from the partial output and were not counted as negative evidence.
 
+Round 243 closed the remaining ledger-coverage gap for 43 C-tier L0 rows that
+lacked an explicit literal-symbol exact-pair search record. Each row received a
+bounded PubMed web exact-symbol screen with a traceable query locator; no direct
+species-matched pair mechanism or occupancy was found, and no exact-pair level
+changed. Same-article or component-only candidates were recorded as rejected
+candidates where applicable. The complete 43-row ledger is
+`module_integration_staging_v1/c_tier_context_search_round_243.tsv`.
+
 If source or adjudication inputs change, rebuild the derived staging outputs in
 this order:
 
