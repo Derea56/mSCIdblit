@@ -79,9 +79,159 @@ Module-assignment counts are 2,720 for 20B, 16 for 21B, 127 for 22B, 584 for
 `module22b_writes=false`. The next step is module-owner review of these staged
 rows before any module tracker or database materialization.
 
+The module screening overlay now separates explicitly noncanonical A/B
+module-context rows into
+`module_integration_staging_v1/noncanonical_gene_expression_regulators.tsv`.
+These rows retain their A/B evidence tiers and module routes. The vocabulary is
+now explicitly orthogonal:
+
+| Axis | Meaning |
+|---|---|
+| `regulator_role_class` / `canonical_role_status` | Biological role: canonical sequence-specific TF, noncanonical gene-expression regulator, non-transcriptional regulator, or unresolved |
+| `evidence_weight_tier` | Reviewed evidence strength: A/B/C/D/E; unchanged by this vocabulary update |
+| `sci_context_status` | SCI relevance: direct, indirect, non-SCI transferable, unresolved, not assessed, or not applicable |
+| `context_level_regulator` / `context_level_target` / `context_level_exact_pair` | Graded context specificity: L0 no context evidence, L1 non-CNS, L2 CNS, L3 spinal-cord tissue, or L4 SCI |
+| `context_evidence_scope` | Whether that context applies to the exact pair, regulator, target, only a pathway/component, or no qualifying context was found in the bounded screen |
+| `context_promotion_lane` | Context-aware promotion destination, kept separate from A–E evidence strength; current adjudications are recorded in `context_evidence_adjudications.tsv` |
+| `module_fit_status` | Whether an explicit module route exists and whether it still needs review |
+| `materialization_lane` | Canonical TF/regulon candidate, noncanonical module-context candidate, external context, or low-tier screen-out |
+| `mechanism_evidence_type` / `mechanism_evidence_definition` | The molecular bridge actually supported, stated in plain language; omitted intermediates and promoter occupancy are not implied |
+
+Thus, “canonical” describes regulator biology, not SCI evidence. A canonical
+TF can have `sci_context_status=not_assessed` or `unresolved_sci_context`,
+while a noncanonical cofactor or chromatin regulator can retain A/B evidence
+and, if later supported, direct SCI context. The legacy
+`canonical_tf_eligible` field remains only for compatibility and must not be
+read as an SCI-context result.
+
+Mechanism labels are intentionally explicit. For example,
+`indirect_extracellular_signal_to_target_rna` means an external
+ligand/protease/receptor relay is associated with a downstream target-RNA
+change; it does not claim that every intermediate step or target-promoter
+occupancy was demonstrated. This is an input-to-output relationship with a
+partial mechanistic bridge, not a canonical TF-to-promoter edge.
+
+The graded-context registry is now populated for the A/B promotion set and all
+3,004 C-tier relationships. It
+records non-CNS, CNS, spinal-cord-tissue, or SCI context only when the cited
+evidence supports that level, keeps exact-pair context separate from component
+context, and uses L0 for pairs with no context evidence. The adjudication
+registry is
+`data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/module_integration_staging_v1/context_evidence_adjudications.tsv`.
+`L1_non_CNS_context` captures evidence from non-CNS models or tissues;
+`L2_CNS_context` captures neural/CNS evidence outside spinal cord;
+`L3_spinal_cord_tissue_context` captures spinal-cord tissue or spinal-cord-cell
+evidence without an SCI model; and `L4_SCI_context` captures an SCI model,
+lesion tissue, or SCI patient material. A component can be L4 while the exact
+regulator-target pair remains L0, so component context must not be promoted as
+exact-pair SCI evidence.
+
+The fillable module-owner review packet is
+`module_integration_staging_v1/noncanonical_module_owner_review.tsv`; its
+controlled decision vocabulary and rubric are in
+`module_integration_staging_v1/noncanonical_module_owner_review_rubric.md`.
+All 49 rows begin as `pending_review`. An approved row would be materialized
+only in the separate noncanonical module-context layer, never as a canonical
+TF/regulon edge.
+
+The current mechanism-scope pre-triage is recorded in
+`module_integration_staging_v1/noncanonical_module_context_triage.tsv`:
+35 module-context rows (31 unique pair keys) remain candidates for focused
+module/SCI review, while 14 rows (9 unique pair keys) remain upstream or
+protein-level context only. This pre-triage does not constitute owner approval.
+
+The 35 candidate adjudications are recorded in
+`module_integration_staging_v1/noncanonical_module_context_adjudication.tsv`.
+All remain `needs_more_context`: the existing reviews support plausible
+noncanonical mechanisms, but the SCI target-cell/module-context or requested
+corroboration/occupancy gates are not yet satisfied. Their role class is
+noncanonical independently of that unresolved context gate, and no
+noncanonical or canonical materialization was performed.
+
+The C-tier context queue is
+`module_integration_staging_v1/c_tier_context_review_queue.tsv`. It contains
+3,004 unique regulator-target-species relationships: 2,459 module-routed and
+545 catalog-only. All retain `C_tflink_source_table_only`. The current packet
+has adjudications for all 3,004 C relationships. A bounded round-240 recheck
+covered the 16 relationships that previously had L0 for both components.
+Species-matched HPA, NCBI, MGI, and primary-literature evidence provided
+component context for all 16; their exact regulator-target pairs remain L0
+because no direct contextual mechanism or occupancy was verified. The
+remaining exact-pair L0 values are therefore not assertions that both
+components lack context. This is bounded to the reviewed evidence packet, not
+a claim of exhaustive literature absence. No materialization was performed.
+
+## Resume point
+
+The C-tier context pass is resumable for the current evidence packet. Start the
+next task by reading this handoff, then inspect:
+
+1. `module_integration_staging_v1/c_tier_context_review_queue.tsv` for the
+   complete 3,004-relationship C queue;
+2. `module_integration_staging_v1/context_evidence_adjudications.tsv` for the
+3,004 C adjudications plus the 61 A/B adjudications; and
+3. `module_integration_staging_v1/module_screening_summary.json` for the latest
+   derived screening counts.
+
+The next productive work is continued bounded search for new authoritative
+context evidence, followed by module-owner review of the 2,459 explicitly
+routed C relationships. Remaining exact-pair L0 records may be searched in
+ranked batches; each batch must log exact queries, species checks, sources, and
+no-upgrade outcomes. Component overlays are not exact-pair evidence and must
+remain separate from pair-level promotion. Round-240 recheck details are
+embedded in the updated ledger rows and identified by the `round_240_` marker.
+
+The targeted search ledgers are
+`module_integration_staging_v1/c_tier_context_search_round_001.tsv`,
+`module_integration_staging_v1/c_tier_context_search_round_002.tsv`,
+`module_integration_staging_v1/c_tier_context_search_round_003.tsv`, and
+`module_integration_staging_v1/c_tier_context_search_round_004.tsv`. They record
+the queue ranks searched, exact queries, species checks, source citations,
+upgrade decisions, and bounded no-upgrade outcomes. Round 240 covered queue
+ranks recorded in the updated ledger rows; all 16 are component-only upgrades
+and all 16 exact pairs remain L0. The updated rows are identifiable by the
+`round_240_` fields and retain their original ledger rows and prior search
+history.
+
+Round 241 then audited all 2,994 remaining C-tier exact-pair L0 records against
+their species-specific TFLink raw snapshots. All 2,994 had an existing snapshot,
+matching SHA-256, matching regulator and target rows, matching organism, and
+matching recorded source metadata. The detailed audit is
+`module_integration_staging_v1/c_tier_exact_pair_source_chain_audit.tsv`.
+This is provenance verification only: it does not upgrade an exact-pair context
+level or establish causal regulation. The `round_241_tflink_gtrd_source_chain`
+marker is attached to each corresponding ledger row.
+
+Round 242 added two component-only upgrades while preserving exact-pair L0.
+Allen Mouse Brain Atlas mouse spinal-cord ISH evidence for target
+`2610001J05Rik/Smim30` raised the target component to L3 for
+`public_tf_comprehensive_096` (`AHCY -> 2610001J05Rik`). Human Protein Atlas
+mouse-brain evidence for `Actr2` raised the target component to L2 for
+`public_tf_comprehensive_1246` (`MFSD11 -> Actr2`). Neither source established
+direct pair mechanism or occupancy. The decisions are recorded in
+`module_integration_staging_v1/c_tier_context_search_round_242.tsv` and the
+cumulative ledgers. A resumable PubMed exact-pair screen was started but not
+completed after transient NCBI resolver failures; failed requests were removed
+from the partial output and were not counted as negative evidence.
+
+If source or adjudication inputs change, rebuild the derived staging outputs in
+this order:
+
+```bash
+python3 scripts/build_public_tf_context_adjudications.py
+python3 scripts/screen_public_tf_module_integration.py
+python3 scripts/build_public_tf_c_context_review_queue.py
+```
+
+Then run the validation commands below. No canonical TF, regulon, Module 22B,
+module-tracker, or mechanism-edge materialization has been performed. This
+checkpoint is limited to public-TF evidence curation and provenance artifacts;
+unrelated module/release work must remain unstaged.
+
 ## Best next work
 
-1. Read the triage summary and inspect the queue before editing anything.
+1. Resume from the C queue and the Round-241 source-chain audit before editing
+   anything.
 2. The 18 remaining E-tier rows from completed search outcomes have now been
    adjudicated as non-promotable and routed to the archive/hold lane. Retain
    their actual mechanisms and source limitations; do not repeat those
