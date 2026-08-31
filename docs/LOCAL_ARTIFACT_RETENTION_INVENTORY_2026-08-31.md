@@ -73,3 +73,10 @@ The handoff-linked `scripts/curate_module20_external_recovery_batch19.py`
 was retained in the repository. The archived files were verified against the
 pre-move SHA-256 inventory, and their original relative `scripts/` names are
 preserved without flattening collisions.
+
+On 2026-08-31, the remaining 104 untracked historical Module 20A/20B
+search, audit, recovery, and batch-review scripts were moved to
+`/Users/derea/Documents/SCI/mSCIdblit_local_archive/historical_module20_workflows_2026-08-31/scripts/`.
+All 104 checksums passed. The current Module 20–24, noncanonical, and
+public-TF pipeline scripts remain tracked; raw evidence and processed staging
+artifacts were not moved.
