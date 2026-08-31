@@ -24,6 +24,17 @@ This preserves:
 - source-level provenance for mouse, human, or mixed support
 - release-level supported-pathway metadata for clean replacement in `mSCS`
 
+The bundle's `species_support` and `confidence_tier` fields use the controlled
+vocabularies enforced by the `mSCS` importer. Register-backed provenance may
+contain source-specific free text, so the exporter normalizes only values that
+cannot be represented in those vocabularies and preserves the exact raw value
+in the row's `notes`. Explicit `mouse; human comparator` and
+`mouse;human comparator` labels map to `mixed`; unsupported species labels
+(for example, `zebrafish`) remain blank rather than being assigned a false
+mouse or human category. Non-controlled confidence prose also remains blank
+with its raw value retained in `notes`. Canonical database fields are not
+modified by this export normalization.
+
 Apply `schema/mechanism_roles_layer.sql` and
 `schema/mechanism_register_layer.sql` after `schema/schema.sql` before using
 the database-native loader/exporter. `SignalingEntityRole` is the role authority;

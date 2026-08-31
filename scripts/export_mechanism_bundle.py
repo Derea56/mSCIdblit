@@ -25,6 +25,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT = ROOT / "data" / "processed" / "mechanism_bundle"
 PRIORITY_RANK = {"high": 3, "medium": 2, "low": 1, "exclude": 0}
+CONTROLLED_SPECIES_SUPPORT = {"mouse", "human", "both", "mixed", "not_applicable", ""}
+CONTROLLED_CONFIDENCE = {"high", "medium", "low", "uncertain", ""}
 
 
 def read_project_version() -> str:
@@ -212,6 +214,53 @@ def parse_tsv_string(text: str) -> list[dict[str, str]]:
     if not lines:
         return []
     return list(csv.DictReader(lines, delimiter="\t"))
+
+
+def normalize_register_source_value(
+    value: str,
+    allowed: set[str],
+    raw_field: str,
+    notes: str,
+) -> tuple[str, str]:
+    """Map free-text register metadata to the mSCS controlled vocabulary.
+
+    Register-backed rows intentionally allow source-specific prose.  The
+    simulator bundle does not.  Preserve any value that cannot be represented
+    exactly in the notes rather than silently coercing it to a stronger or
+    different category.
+    """
+
+    if value in allowed:
+        return value, notes
+    if not value:
+        return "", notes
+    raw_note = f"register_{raw_field}={value}"
+    if raw_field == "species_support_raw" and value in {
+        "mouse; human comparator",
+        "mouse;human comparator",
+    }:
+        # This is an explicit multi-species label used by register sources.
+        # Keep the exact source label in notes while using the bundle's
+        # controlled representation for multi-species support.
+        return "mixed", "; ".join(part for part in (notes, raw_note) if part)
+    return "", "; ".join(part for part in (notes, raw_note) if part)
+
+
+def normalize_register_source_row(row: dict[str, str]) -> dict[str, str]:
+    normalized = dict(row)
+    normalized["species_support"], normalized["notes"] = normalize_register_source_value(
+        row.get("species_support", ""),
+        CONTROLLED_SPECIES_SUPPORT,
+        "species_support_raw",
+        row.get("notes", ""),
+    )
+    normalized["confidence_tier"], normalized["notes"] = normalize_register_source_value(
+        row.get("confidence_tier", ""),
+        CONTROLLED_CONFIDENCE,
+        "confidence_tier_raw",
+        normalized["notes"],
+    )
+    return normalized
 
 
 def supported_pathway_summary(edges: list[dict[str, str]], edge_sources: list[dict[str, str]]) -> list[dict[str, object]]:
@@ -402,7 +451,14 @@ JOIN filtered_edges fe ON fe.edge_id = sers.edge_id
 WHERE {register_source_where}
 ORDER BY edge_source_id
 """
-    return parse_tsv_string(run_copy(database_url, sql))
+    rows = parse_tsv_string(run_copy(database_url, sql))
+    # The first SELECT contains normalized SignalingEdgeSource rows.  The
+    # UNION's register-backed rows may carry longer source-specific labels;
+    # normalize only those rows after export, retaining their raw values.
+    return [
+        normalize_register_source_row(row) if row["edge_source_id"].startswith("REGSRC") else row
+        for row in rows
+    ]
 
 
 def metadata(args: argparse.Namespace, nodes: list[dict[str, str]], node_roles: list[dict[str, str]], edges: list[dict[str, str]], edge_sources: list[dict[str, str]]) -> dict[str, object]:
