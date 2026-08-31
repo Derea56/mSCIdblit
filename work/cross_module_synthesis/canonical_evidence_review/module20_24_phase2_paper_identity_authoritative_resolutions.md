@@ -5,7 +5,7 @@ NCBI is used as the authoritative source. Only exact, unique, metadata-checked m
 The ledger is an input to the identity resolver; it does not overwrite source extraction keys.
 
 - Candidate identifier groups: 220
-- Candidate extraction rows: 511
+- Candidate extraction rows: 20
 - Resolved authoritative mappings: 213
 - Unresolved mappings: 7
 
