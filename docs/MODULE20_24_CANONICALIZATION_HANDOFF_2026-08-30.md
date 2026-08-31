@@ -662,3 +662,52 @@ release artifact.
 Canonicalization can now consume only resolver-approved rows with validated
 observation and claim routes. The 1,664 exception rows remain a bounded,
 reviewable queue for future authoritative source resolution.
+
+## Identity-exception triage Pass 1 — 2026-08-31
+
+The first exception pass targeted the highest-yield safe lane: unresolved
+groups with exactly one explicit PMCID or DOI in the canonical key. NCBI's
+PMC ID converter was used for PMCID-to-PMID mappings. PubMed's exact DOI-field
+search was used for DOI-to-PMID mappings, and each accepted DOI result was
+required to contain the same DOI in the returned PubMed article summary.
+Zero, multiple, failed, or identifier-mismatched results were not accepted.
+
+The reproducible batch resolver and outputs are:
+
+- `scripts/resolve_module20_24_identity_exception_batch.py`
+- `work/cross_module_synthesis/canonical_evidence_review/module20_24_phase2_paper_identity_authoritative_resolutions.tsv`
+- `work/cross_module_synthesis/canonical_evidence_review/module20_24_phase2_paper_identity_authoritative_resolutions.md`
+
+There were 220 unique identifier groups covering 511 extraction rows. The
+batch established 213 exact NCBI mappings. Those mappings were added as a
+separate authoritative ledger input to
+`resolve_module20_24_phase2_paper_identities.py`; the original source keys
+remain unchanged. The main resolver accepted 494 extraction-row mappings,
+because some rows were already resolved through other accepted routes. Seven
+DOIs remain unresolved:
+
+- `10.1083/jcb.200208081`
+- `10.1098/rsob.2020.0308`
+- `10.1101/2025.03.17.643633`
+- `10.1136/annrheumdis-2016-209676`
+- `10.1182/blood.v95.12.3788`
+- `10.21203/rs.3.rs-8747059/v1`
+- `10.4049/jimmunol.160.8.4057`
+
+After rerunning the resolver, the unresolved queue decreased from 1,664 to
+1,173 rows. The canonical promotion candidate set increased from 1,419 to
+1,459 rows: 20B 668, 21B 57, 22B 506, 23B 147, and 24B 81. The current
+Phase-2 edge-source distribution is B/L1 1,038, B/L2 56, B/L3 4, B/L4 18,
+D/L0 351, D/L2 4, E/L0 5, U/L0 2, and U/L1 1.
+
+The updated local database contains 1,459 current EvidenceLinks, 1,883
+current Phase-2 Experiments, 1,936 Phase-2 Observations, 1,883 AuthorClaims,
+and 1,479 current Phase-2 edge-source rows. The final isolated export audit
+passes with 3,065 nodes, 4,980 node roles, 3,399 edges, and 11,859
+edge-source rows. All database validators remain at zero issues.
+
+The remaining queue is now 585 ambiguous multiple-PMID rows, 519 missing-
+identity rows, and 69 no-authoritative-resolution rows. The next safe lane is
+to adjudicate ambiguous groups only where their source locator or cited
+artifact selects one exact paper; blank and unknown keys must be reviewed at
+the individual extraction/source level rather than treated as one paper.
