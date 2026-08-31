@@ -7,14 +7,14 @@ units when the original experiment number was not preserved. Explicit
 non-promotable claims are retained as boundary evidence and cannot
 support promotion of the requested exact edge.
 
-- Candidate extraction rows: 1,459
+- Candidate extraction rows: 1,463
 - Unique PMID papers used: 844
 - Explicit boundary-only extraction rows: 5
 
 | Module | Source-defined evidence units |
 |---|---:|
 | 20B | 668 |
-| 21B | 57 |
+| 21B | 61 |
 | 22B | 506 |
 | 23B | 147 |
 | 24B | 81 |
