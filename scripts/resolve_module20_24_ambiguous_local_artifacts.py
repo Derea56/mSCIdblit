@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Resolve ambiguous Phase-2 keys only from one metadata-bearing local record.
+"""Resolve ambiguous Phase-2 keys from an exact metadata-bearing local record.
 
 This pass is intentionally narrower than identifier lookup.  For each
-ambiguous canonical key, all cited local XML/HTML artifacts are combined.  A
-mapping is emitted only when the combined artifact set contains exactly one
+ambiguous canonical key, each cited local XML/HTML artifact is inspected. A
+mapping is emitted only when at least one cited artifact contains exactly one
 record, that record has a PMID and paper title, and the PMID is explicitly one
-of the PMIDs already present in the canonical key.  Identifier-only text/TSV
-artifacts and multi-record search packets remain unresolved.
+of the PMIDs already present in the canonical key. Multi-record search packets
+and identifier-only text/TSV artifacts are ignored rather than used to select
+a paper.
 """
 
 from __future__ import annotations
@@ -20,7 +21,7 @@ from resolve_module20_24_phase2_paper_identities import all_tokens, artifact_pat
 
 ROOT = Path(__file__).resolve().parents[1]
 REVIEW_ROOT = ROOT / "work" / "cross_module_synthesis" / "canonical_evidence_review"
-EXCEPTIONS = REVIEW_ROOT / "module20_24_phase2_paper_identity_exceptions.tsv"
+PHASE2 = REVIEW_ROOT / "module20_24_integrated_phase2_extractions.tsv"
 OUT = REVIEW_ROOT / "module20_24_phase2_paper_identity_local_artifact_resolutions.tsv"
 REPORT = REVIEW_ROOT / "module20_24_phase2_paper_identity_local_artifact_resolutions.md"
 
@@ -46,12 +47,18 @@ def write_tsv(rows: list[dict[str, str]]) -> None:
 
 
 def main() -> None:
+    prior = {
+        (row.get("module", ""), row.get("canonical_paper_key", "")): row
+        for row in read_tsv(OUT)
+        if row.get("resolution_status") == "resolved_authoritative_local_artifact"
+    }
     groups: dict[tuple[str, str], list[dict[str, str]]] = defaultdict(list)
-    for row in read_tsv(EXCEPTIONS):
-        if row.get("identity_resolution_status") == "unresolved_ambiguous_multiple_canonical_pmids":
+    for row in read_tsv(PHASE2):
+        key_pmids = {value for kind, value in all_tokens(row.get("canonical_paper_key", "")) if kind == "PMID"}
+        if len(key_pmids) > 1:
             groups[(row.get("module", ""), row.get("canonical_paper_key", ""))].append(row)
 
-    rows: list[dict[str, str]] = []
+    new_rows: list[dict[str, str]] = []
     inspected_groups = 0
     for (module, key), group in sorted(groups.items()):
         key_pmids = {value for kind, value in all_tokens(key) if kind == "PMID"}
@@ -60,20 +67,26 @@ def main() -> None:
             for path in artifact_paths(source.get("source_locator", "")):
                 if path.suffix.lower() in {".xml", ".xhtml", ".html", ".htm"} and path not in paths:
                     paths.append(path)
-        records = []
+        strong_records = []
         for path in paths:
-            records.extend(parse_artifact(path))
+            records = parse_artifact(path)
+            if len(records) != 1:
+                continue
+            record = records[0]
+            pmid = str(record.get("pmid", ""))
+            title = str(record.get("title", ""))
+            record_tokens = set(record.get("tokens", set()))
+            if pmid and title and pmid in key_pmids and (record_tokens & all_tokens(key)):
+                strong_records.append(record)
         inspected_groups += 1
-        if len(records) != 1:
+        strong_pmids = {str(record.get("pmid", "")) for record in strong_records}
+        if len(strong_pmids) != 1:
             continue
-        record = records[0]
+        record = sorted(strong_records, key=lambda item: str(item.get("source_file", "")))[0]
         pmid = str(record.get("pmid", ""))
         title = str(record.get("title", ""))
-        record_tokens = set(record.get("tokens", set()))
-        if not pmid or not title or pmid not in key_pmids or not (record_tokens & all_tokens(key)):
-            continue
         source_file = str(record.get("source_file", ""))
-        rows.append({
+        new_rows.append({
             "module": module,
             "canonical_paper_key": key,
             "resolved_pmid": pmid,
@@ -92,15 +105,19 @@ def main() -> None:
             "extraction_ids": ";".join(sorted(row.get("extraction_id", "") for row in group)),
         })
 
+    merged = prior.copy()
+    merged.update({(row["module"], row["canonical_paper_key"]): row for row in new_rows})
+    rows = [merged[key] for key in sorted(merged)]
     write_tsv(rows)
     report = [
         "# Phase-2 ambiguous local-artifact identity resolution",
         "",
-        "Only ambiguous keys with exactly one metadata-bearing local XML/HTML record were considered.",
-        "The record PMID had to be explicitly present in the canonical key; multi-record and identifier-only artifacts were excluded.",
+        "All Phase-2 keys with more than one explicit PMID were inspected for an exact single-record metadata-bearing local XML/HTML artifact.",
+        "The selected record PMID had to be explicitly present in the canonical key; multi-record and identifier-only artifacts were excluded.",
         "",
-        f"- Ambiguous groups inspected: {inspected_groups:,}",
-        f"- Exact local-artifact mappings accepted: {len(rows):,}",
+        f"- Multi-PMID Phase-2 groups inspected: {inspected_groups:,}",
+        f"- New exact local-artifact mappings accepted: {len(new_rows):,}",
+        f"- Retained plus new local-artifact mappings: {len(rows):,}",
         f"- Extraction rows covered: {sum(int(row['extraction_row_count']) for row in rows):,}",
         "",
         f"The resolver input ledger is {OUT.name}.",
@@ -108,7 +125,7 @@ def main() -> None:
         "",
     ]
     REPORT.write_text("\n".join(report))
-    print(f"ambiguous_groups={inspected_groups} resolved_groups={len(rows)} resolved_rows={sum(int(row['extraction_row_count']) for row in rows)}")
+    print(f"ambiguous_groups={inspected_groups} new_groups={len(new_rows)} total_groups={len(rows)} total_rows={sum(int(row['extraction_row_count']) for row in rows)}")
 
 
 if __name__ == "__main__":
