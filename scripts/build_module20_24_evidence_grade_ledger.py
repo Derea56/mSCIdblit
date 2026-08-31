@@ -62,6 +62,34 @@ def grade_rule(row: dict[str, str]) -> tuple[str, str, str]:
     return "", "review_required", "Existing fields do not safely distinguish A-E/U without paper-level adjudication."
 
 
+def phase2_primary_grade(linked: list[dict[str, str]]) -> tuple[str, str, str]:
+    """Use an exact validated Phase-2 paper route when the register label is blank."""
+    blocked = ("abstract", "metadata", "unresolved", "boundary", "not_required", "no_pair", "unknown")
+    for item in linked:
+        observation_status = item.get("observation_status", "").lower()
+        claim_status = item.get("claim_status", "").lower()
+        observation_text = item.get("observation_value_or_blocker", "").strip()
+        claim_text = item.get("claim_text_or_blocker", "").strip()
+        if not observation_status.startswith("validated") or not claim_status.startswith("validated"):
+            continue
+        if any(token in observation_status or token in claim_status for token in blocked):
+            continue
+        if len(observation_text) < 40 or len(claim_text) < 40:
+            continue
+        if "do_not_create" in observation_text.lower() or "do_not_create" in claim_text.lower():
+            continue
+        paper_anchor = stable_papers(item.get("canonical_paper_key", ""))
+        if not paper_anchor:
+            paper_anchor = stable_papers(item.get("source_locator", ""))
+        if paper_anchor:
+            return (
+                "B",
+                "phase2_primary_route",
+                "The exact Phase-2 row has a stable primary paper anchor plus validated observation and claim text; independent corroboration is not recorded on this row.",
+            )
+    return "", "review_required", "Existing register labels and linked Phase-2 rows do not safely support a final A-E/U grade."
+
+
 def context_rule(row: dict[str, str]) -> tuple[str, str, str]:
     # Limitations frequently say "no SCI model". They are retained in the
     # ledger but are not positive context evidence, so do not use them to
@@ -107,6 +135,8 @@ def main() -> None:
             key = (module, row["b_evidence_id"])
             linked = phase_index.get(key, [])
             grade, grade_status, grade_basis = grade_rule(row)
+            if not grade:
+                grade, grade_status, grade_basis = phase2_primary_grade(linked)
             context, context_status, context_basis = context_rule(row)
             status = "review_required" if grade_status == "review_required" or context_status == "review_required" else "rule_based_provisional"
             papers = sorted({paper for item in linked for paper in stable_papers(item.get("canonical_paper_key", ""))})
@@ -151,8 +181,9 @@ def main() -> None:
         "# Module 20B–24B evidence grade ledger",
         "",
         "This is staging/audit output. It does not write canonical database rows.",
-        "Rule-based provisional values are derived only from explicit existing",
-        "register labels; unassigned grades require paper-level adjudication.",
+        "Rule-based provisional values are derived from explicit register labels",
+        "or an exact validated Phase-2 primary-paper route; remaining unassigned",
+        "grades require paper-level adjudication.",
         "",
         f"- Evidence records: {len(output):,}",
         f"- Phase-2 linked rows available: {len(phase2):,}",
