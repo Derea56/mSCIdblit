@@ -63,9 +63,9 @@ python3 scripts/build_public_tf_mechanism_layer.py
 The builder is deterministic, preserves the source and screening fields, and
 does not perform database writes or alter the existing mechanism graph.
 
-## Graph-release candidate
+## Version 1.1.0 graph release
 
-The corresponding combined graph candidate is
+The corresponding combined graph release is
 `data/processed/mechanism_graph_module20_24_v2026_08_30/`. It copies the
 validated `2026-08-26` Module 20B–24B graph and adds only the three explicitly
 adjudicated public-TF module rows. The candidate validates with zero errors and
@@ -82,6 +82,6 @@ The three added rows are `Msgn1 → Dll3` in 20B and `Ovol2 ┤ Cdh2` in 20B and
 claims. The full candidate layer remains beside the graph, and all other
 public-TF rows remain non-traversable until individually adjudicated.
 
-The candidate is intentionally dated rather than assigned a new semantic
-project version. The root `VERSION` file and the frozen `1.0.0` tag remain
-unchanged.
+The root `VERSION` is now `1.1.0`; the frozen `1.0.0` tag remains immutable.
+The release metadata identifies this graph as
+`module20_24_mechanism_graph:v1.1.0`.

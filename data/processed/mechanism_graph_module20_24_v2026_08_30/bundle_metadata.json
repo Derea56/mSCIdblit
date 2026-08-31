@@ -1,8 +1,8 @@
 {
   "release_name": "mSCIdblit Module 20B-24B mechanism graph",
   "bundle_name": "module20_24_mechanism_graph",
-  "release_id": "module20_24_mechanism_graph:2026-08-30",
-  "release_status": "candidate_register_backed_graph_with_public_tf_validated_layer",
+  "release_id": "module20_24_mechanism_graph:v1.1.0",
+  "release_status": "released",
   "source_repo": "mSCIdblit",
   "target_repo": "mSCS",
   "source_scope": "validated Module 20B-24B registers plus explicitly adjudicated public-TF layer",
@@ -151,6 +151,7 @@
     "Non-exportable edges remain summarized as boundaries and are not traversable graph edges.",
     "Stable PMID/PMCID/DOI/URL locators are retained in edge-source rows where available; local paths are not released."
   ],
+  "graph_version": "1.1.0",
   "public_tf_layer": {
     "candidate_rows": 4174,
     "validated_edge_module_rows": 3,
