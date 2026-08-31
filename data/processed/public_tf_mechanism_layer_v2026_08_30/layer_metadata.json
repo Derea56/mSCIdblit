@@ -1,0 +1,45 @@
+{
+  "layer_name": "public_tf_mechanism_evidence_layer",
+  "release_status": "candidate_overlay_with_explicit_validated_edge_subset",
+  "source_scope": "reviewed public-TF module-screening staging packet",
+  "input_decision_rows": 4174,
+  "candidate_rows": 4174,
+  "validated_edge_candidate_rows": 3,
+  "validated_edge_candidate_unique_pairs": 2,
+  "validated_edge_candidate_module_rows_by_module": {
+    "20B": 2,
+    "23B": 1
+  },
+  "candidate_rows_by_evidence_tier": {
+    "A_independent_literature_corroborated": 37,
+    "B_independent_literature_single_source": 34,
+    "C_tflink_source_table_only": 3363,
+    "D_database_only_no_pair_evidence": 613,
+    "E_reviewed_nonpromotable": 127
+  },
+  "candidate_rows_by_layer_membership": {
+    "evidence_candidate": 4171,
+    "validated_mechanism_edge": 3
+  },
+  "validated_edge_gate": [
+    "A- or B-tier reviewed evidence",
+    "source_exportable=true",
+    "explicit target_graph_modules assignment",
+    "canonical_role_status=canonical_tf",
+    "mechanism_evidence_type=direct_sequence_specific_tf_binding",
+    "context_evidence_scope=exact_pair",
+    "manual literature adjudication with citations and limitations"
+  ],
+  "policy": [
+    "All reviewed rows are retained in the candidate layer regardless of tier.",
+    "D/E and unresolved rows remain non-traversable and retain their original evidence fields.",
+    "Evidence tier and context level remain independent axes.",
+    "No row is promoted by tier alone; validated rows require explicit adjudication.",
+    "The validated subset is a release candidate and does not itself perform database writes."
+  ],
+  "outputs": [
+    "public_tf_candidate_layer.tsv",
+    "public_tf_validated_edge_layer.tsv",
+    "layer_metadata.json"
+  ]
+}
