@@ -65,3 +65,11 @@ was not recoverable from the workspace or temporary directories; its original
 size and SHA-256 remain documented in the inventory for possible recovery from
 an external filesystem backup. No further cleanup will proceed using flat
 archive destinations.
+
+On 2026-08-31, 107 historical Module 20A/20B batch-specific scripts were
+moved to
+`/Users/derea/Documents/SCI/mSCIdblit_local_archive/historical_batch_scripts_2026-08-31/scripts/`.
+The handoff-linked `scripts/curate_module20_external_recovery_batch19.py`
+was retained in the repository. The archived files were verified against the
+pre-move SHA-256 inventory, and their original relative `scripts/` names are
+preserved without flattening collisions.
