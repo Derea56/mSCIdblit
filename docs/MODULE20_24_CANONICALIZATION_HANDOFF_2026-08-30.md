@@ -749,3 +749,73 @@ roles, 3,399 edges, and 11,877 edge-source rows.
 The remaining ambiguous queue is not eligible for automatic collapse: each
 future promotion requires a source-level discriminator selecting one exact
 paper. Blank/unknown-key cases remain individual source-resolution work.
+
+## Paper-level adjudication Pass 3 — 2026-08-31
+
+Pass 3 applied the deterministic local-artifact adjudication rule to every
+Phase-2 key containing more than one explicit PMID. A mapping was accepted
+only when a cited local XML/HTML artifact parsed to one metadata-bearing paper
+record, the record contained a PMID, and that PMID was explicitly present in
+the original ambiguous key. Identifier-only TSV records, multi-record packets,
+and inferred title/author matches were excluded. The original
+`canonical_paper_key` remains unchanged; the accepted PMID is recorded in the
+resolution ledger and exposed separately as `resolved_canonical_paper_key`.
+
+The reproducible resolver and ledgers are:
+
+- `scripts/resolve_module20_24_ambiguous_local_artifacts.py`
+- `work/cross_module_synthesis/canonical_evidence_review/module20_24_phase2_paper_identity_local_artifact_resolutions.tsv`
+- `work/cross_module_synthesis/canonical_evidence_review/module20_24_phase2_paper_identity_local_artifact_resolutions.md`
+- `scripts/resolve_module20_24_phase2_paper_identities.py`
+- `work/cross_module_synthesis/canonical_evidence_review/module20_24_phase2_paper_identity_resolution.tsv`
+
+The local-artifact ledger contains 47 exact mapping groups covering 57
+extraction rows. Thirty-four groups were already resolved through another
+accepted route; the conflict audit found zero PMID conflicts. The net resolver
+result is 3,569 of 4,722 Phase-2 rows with a resolved PMID and 1,153 rows
+remaining unresolved.
+
+| Current identity status | Rows |
+|---|---:|
+| `resolved_canonical_pmid` | 2,417 |
+| `resolved_authoritative_metadata_ledger` | 416 |
+| `resolved_authoritative_ncbi_exception_ledger` | 494 |
+| `resolved_authoritative_local_artifact` | 206 |
+| `resolved_authoritative_source_locator` | 36 |
+| `unresolved_ambiguous_multiple_canonical_pmids` | 565 |
+| `unresolved_missing_canonical_identity` | 519 |
+| `unresolved_no_authoritative_resolution` | 69 |
+
+The unresolved queue is retained losslessly and is not collapsed by inference:
+
+| Module | Ambiguous | Missing identity | No authoritative resolution |
+|---|---:|---:|---:|
+| 20B | 459 | 518 | 48 |
+| 21B | 8 | 0 | 0 |
+| 22B | 27 | 0 | 1 |
+| 23B | 44 | 1 | 20 |
+| 24B | 27 | 0 | 0 |
+
+The regenerated paper/evidence materialization was applied idempotently to
+`mscidblit_local`. Current Phase-2 canonical counts are 1,463 EvidenceLinks,
+1,883 Experiments, 1,936 Observations, 1,883 AuthorClaims, and 1,497
+SignalingEdgeSource rows. The current edge-source grade/context distribution
+is B/L1 1,056; B/L2 56; B/L3 4; B/L4 18; D/L0 351; D/L2 4; E/L0 5; U/L0 2;
+and U/L1 1. The ABC grade and L0–L4 context axes remain independent.
+
+The mechanism-role, mechanism-database-release, and regulon validators all
+returned zero issues. A fresh four-file export at
+`/private/tmp/mscitdb_phase2_identity_pass3_bundle` contains 3,065 nodes,
+4,980 node roles, 3,399 edges, and 11,877 edge sources. Its direct export
+audit passed metadata-count equality, unique node/edge/source IDs, endpoint
+resolution, source-edge resolution, complete source coverage, and zero
+self-loops. The older `validate_module20_24_mechanism_graph.py` expects the
+separate `mechanism_pathways.tsv` and `mechanism_boundary_summary.tsv` files
+produced by another exporter, so it is not used as the pass/fail validator for
+this four-file database export; its missing-file result is not a graph-data
+failure.
+
+Remaining work is genuine paper-level adjudication of the 1,153 unresolved
+rows: ambiguous rows require an exact source-level discriminator, while
+missing/no-resolution rows require a directly evidenced identifier. No
+placeholder PMID, DOI, PMCID, or inferred paper relationship was added.
