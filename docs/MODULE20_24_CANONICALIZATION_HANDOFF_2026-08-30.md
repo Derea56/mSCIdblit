@@ -327,3 +327,19 @@ values retained in `notes`; no canonical database field is changed. The
 normalized snapshot passed the `mSCS` importer and its isolated materialization
 completed successfully. This is an export-contract normalization, not a
 species or evidence-grade reassignment.
+
+## v1.2.0 frozen database-backed graph release — 2026-08-31
+
+The canonical database materialization is frozen as
+`data/processed/mechanism_bundle_module20_24_db_v1_2_0/` with release ID
+`module20_24_database_graph:v1.2.0`. It contains 3,065 nodes, 4,980 explicit
+node-role assignments, 3,399 edges, and 10,024 edge-source rows. This is the
+database-backed release artifact for the completed Module 20B–24B
+canonicalization. The additive public-TF staging/validated layer remains
+separately documented; it is not silently converted into canonical database
+edges by this release.
+
+The bundle passed the database release gates, structural reference audit, and
+isolated downstream `mSCS` import. The root `VERSION` is `1.2.0`. The nine
+unresolved 22B endpoint cases remain U/L0 in the evidence/register layer and
+are intentionally absent as traversable graph edges.
