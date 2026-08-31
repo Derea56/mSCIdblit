@@ -14,6 +14,7 @@ Only identifiers explicitly present in one of the following are accepted:
 * an explicit identifier in the Phase-2 source locator;
 * an identifier-bearing local XML, HTML, JSON, or TSV artifact whose
   identifier matches the canonical key.
+* an accepted exact mapping in the authoritative NCBI exception ledger.
 
 Filename tokens and search-query URLs are never treated as paper identity.
 Unresolved and ambiguous cases remain unresolved.  This is an audit manifest;
@@ -41,6 +42,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REVIEW_ROOT = ROOT / "work" / "cross_module_synthesis" / "canonical_evidence_review"
 PHASE2 = REVIEW_ROOT / "module20_24_integrated_phase2_extractions.tsv"
 METADATA = ROOT / "work" / "cross_module_synthesis" / "module20_24_canonical_paper_metadata.tsv"
+AUTHORITATIVE = REVIEW_ROOT / "module20_24_phase2_paper_identity_authoritative_resolutions.tsv"
 OUT = REVIEW_ROOT / "module20_24_phase2_paper_identity_resolution.tsv"
 REPORT = REVIEW_ROOT / "module20_24_phase2_paper_identity_resolution.md"
 EXCEPTIONS_OUT = REVIEW_ROOT / "module20_24_phase2_paper_identity_exceptions.tsv"
@@ -349,6 +351,21 @@ def metadata_record(row: dict[str, str]) -> dict[str, object]:
     }
 
 
+def authoritative_records(path: Path) -> dict[tuple[str, str], dict[str, str]]:
+    records: dict[tuple[str, str], dict[str, str]] = {}
+    for row in read_tsv(path):
+        if row.get("resolution_status") != "resolved_authoritative_ncbi" or not row.get("resolved_pmid"):
+            continue
+        key = (row.get("identifier_type", ""), row.get("identifier_value", ""))
+        if not all(key):
+            continue
+        prior = records.get(key)
+        if prior and prior.get("resolved_pmid") != row.get("resolved_pmid"):
+            raise ValueError(f"conflicting authoritative mappings for {key[0]}:{key[1]}")
+        records[key] = row
+    return records
+
+
 def output_row(row: dict[str, str]) -> dict[str, str]:
     return {field: row.get(field, "") for field in FIELDS}
 
@@ -363,6 +380,17 @@ def fill_from_record(result: dict[str, str], record: dict[str, object]) -> None:
     result["source_metadata_journal"] = str(record.get("journal", ""))
     result["source_metadata_abstract"] = str(record.get("abstract", ""))
     result["source_metadata_url"] = str(record.get("url", ""))
+
+
+def fill_from_authoritative(result: dict[str, str], record: dict[str, str]) -> None:
+    result["resolved_pmid"] = record.get("resolved_pmid", "")
+    result["resolved_pmcid"] = record.get("resolved_pmcid", "")
+    result["resolved_doi"] = record.get("resolved_doi", "")
+    result["source_metadata_title"] = record.get("source_metadata_title", "")
+    result["source_metadata_authors"] = record.get("source_metadata_authors", "")
+    result["source_metadata_year"] = record.get("source_metadata_year", "")
+    result["source_metadata_journal"] = record.get("source_metadata_journal", "")
+    result["source_metadata_url"] = record.get("source_metadata_url", "")
 
 
 def set_derived_canonical_key(result: dict[str, str]) -> None:
@@ -434,6 +462,7 @@ def main() -> None:
         for row in read_tsv(METADATA)
         if row.get("canonical_paper_key") and row.get("paper_ready") == "true" and row.get("pmid")
     }
+    authoritative = authoritative_records(AUTHORITATIVE)
     artifact_cache: dict[Path, list[dict[str, object]]] = {}
     rows: list[dict[str, str]] = []
     status_counts = Counter()
@@ -467,6 +496,12 @@ def main() -> None:
                 result["identity_resolution_status"] = "resolved_canonical_pmid"
                 result["resolution_basis"] = "single explicit PMID in canonical_paper_key"
                 result["authoritative_source"] = "canonical_paper_key"
+            elif len(key_ids) == 1 and next(iter(key_ids)) in authoritative:
+                record = authoritative[next(iter(key_ids))]
+                fill_from_authoritative(result, record)
+                result["identity_resolution_status"] = "resolved_authoritative_ncbi_exception_ledger"
+                result["resolution_basis"] = record.get("resolution_basis", "exact NCBI exception-ledger mapping")
+                result["authoritative_source"] = str(AUTHORITATIVE.relative_to(ROOT))
             else:
                 artifact_records: list[dict[str, object]] = []
                 for path in artifact_paths(locator):
@@ -542,6 +577,7 @@ def main() -> None:
         "It preserves the original canonical_paper_key and does not alter evidence",
         "grades, context levels, claims, observations, or the database schema.",
         "Filename tokens and search-query URLs are not accepted as paper identity.",
+        "Accepted NCBI exception-ledger mappings are limited to exact single-identifier keys with one PMID and a matching PubMed record.",
         "The derived resolved_canonical_paper_key is PMID:<id> only after an accepted single-PMID resolution; the original canonical_paper_key is preserved.",
         "",
         f"- Phase-2 extraction rows audited: {len(rows):,}",
