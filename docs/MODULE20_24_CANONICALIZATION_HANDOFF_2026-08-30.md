@@ -481,3 +481,40 @@ export still need to be rerun and recorded after this tranche. The next
 ordered step remains the strict 22B review: promote only rows with a distinct
 source-supported TF/program claim, while retaining pathway, receptor,
 functional, and contextual evidence without converting it into a TF edge.
+
+## Strict 22B TF/program first pass — 2026-08-31
+
+The strict 22B review was split into non-overlapping even- and odd-suffix
+evidence-ID lanes in the Child Tasks project. The permanent audit reports are:
+
+- `docs/MODULE20_24_22B_EVEN_TF_PROGRAM_REVIEW_2026-08-31.md`
+- `docs/MODULE20_24_22B_ODD_TF_PROGRAM_REVIEW_2026-08-31.md`
+
+The even lane reviewed 408 unique evidence IDs and emitted 38 exact integrated
+rows across 27 evidence IDs. The odd lane reviewed 451 unique evidence IDs and
+emitted 32 exact integrated rows across 27 evidence IDs. The combined 70-row
+candidate set is preserved in:
+
+- `work/cross_module_synthesis/canonical_evidence_review/phase2_H_22B_even_tf_program_overlay.tsv`
+- `work/cross_module_synthesis/canonical_evidence_review/phase2_I_22B_odd_tf_program_overlay.tsv`
+
+Every emitted row retains its existing extraction ID, module, B-layer edge and
+evidence IDs, evidence layer, paper key, ABC grade, and L0–L4 context. The gate
+required an atomic observation plus a separately supported TF or defined
+transcriptional-program claim with a local exact source locus, model/species,
+assay or perturbation, and limitations. Receptor/pathway-only,
+promoter/enhancer-only without a TF claim, expression/function-only,
+co-occurrence, abstract-only, unresolved, and missing-locus cases were
+documented but excluded.
+
+The integrated Phase-2 lane remains 4,722 rows and the materializer remains at
+1,780 eligible source-unit rows because the 70 22B rows were already covered by
+the generic validated observation/claim gate. Their strict TF/program status
+is now retained in the overlay and source-unit provenance without creating
+duplicate canonical records. The regenerated SQL was applied to the local
+`mscidblit_local` database. Post-write canonical totals remain 1,747 Papers,
+1,782 Experiments, 1,782 Observations, 1,782 AuthorClaims, 1,782 EvidenceLinks,
+and 5,142 SignalingEdgeSource rows. Database role, release, and regulon
+validators all returned zero issues, and the isolated mechanism-graph
+validator passed with the existing non-fatal warning about some evidence
+sources lacking stable locators.
