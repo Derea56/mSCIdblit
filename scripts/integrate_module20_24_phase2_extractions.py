@@ -25,6 +25,8 @@ INPUTS = {
 # extraction IDs; they never add a second row for the same extraction.
 OVERLAYS = {
     "phase2_E_21B_source_unit_overlay.tsv": {"21B"},
+    "phase2_F_23B_source_unit_overlay.tsv": {"23B"},
+    "phase2_G_24B_source_unit_overlay.tsv": {"24B"},
 }
 
 FIELDS = [
