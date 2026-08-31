@@ -382,3 +382,60 @@ source-unit review, then apply the existing stable-paper, validated
 observation/claim, A–E/U, and L0–L4 gates. Do not promote an artifact merely
 because its filename contains a PMID, PMCID, DOI, or other accession, and do
 not treat article reference-list identifiers as source assignments.
+
+## Ordered source-unit recovery checkpoint — 2026-08-31
+
+The first ordered recovery tranche is complete at the source-unit level. The
+review reports are retained in:
+
+- `docs/MODULE20_24_21B_SOURCE_UNIT_REVIEW_2026-08-31.md`
+- `docs/MODULE20_24_23B_RECOVERY_REVIEW_2026-08-31.md`
+- `docs/MODULE20_24_24B_RECOVERY_REVIEW_2026-08-31.md`
+
+### 20B and 21B
+
+The 20B anchor recovery review inspected 618 rows and found no immediate
+source-level promotion candidate. The 21B review inspected 25 exact
+full-text-artifact candidates: 20 passed both the atomic-observation and
+registered-claim gates, while five remain `needs_manual_source_review` because
+the source was a neighboring, correlational, or non-specific mechanism rather
+than the registered unit. All 25 retained their existing evidence grade and
+context values: B for every row, L1 except the two existing L2 rows.
+
+The 20 passing rows are preserved as the explicit overlay
+`work/cross_module_synthesis/canonical_evidence_review/phase2_E_21B_source_unit_overlay.tsv`.
+The integration script applies this overlay by exact `extraction_id`, replacing
+matching unresolved base rows without adding duplicate rows. The overlay has
+20 rows, the required 25 fields, unique extraction IDs, and no failed-case IDs.
+
+The materializer accepted 18 of those rows immediately because they had stable
+PMID anchors available to the canonical Paper table. Two remain in staging
+without a stable PMID in their canonical key; no PMID was inferred. The local
+database now contains 1,747 Papers, 1,781 Experiments, 1,781 Observations,
+1,781 AuthorClaims, 1,781 EvidenceLinks, and 5,141 SignalingEdgeSource rows.
+The overlay contributed 18 source-defined evidence units and 54 edge-source
+rows. The new source rows retain B/L1 except for one B/L2 source; no evidence
+or context grade was upgraded.
+
+### 23B and 24B review queue
+
+The 23B read-only recovery review identified 10 source-supported atomic rows,
+8 manual-review candidates, and a remaining unresolved population. The
+source-supported rows were already represented by validated Phase-2 routes;
+they were not duplicated or regraded in this tranche. The 24B review
+identified 18 source-supported atomic rows, 8 explicitly profiled manual-review
+leads, one profiled unresolved public-TF row, and 105 additional unresolved
+staging rows. These are review dispositions, not automatic TF/program
+promotions. Exact source loci, artifacts, models, assays, perturbations,
+limitations, and preserved B/L-context values are in the retained reports.
+
+The fresh isolated graph export from the updated database-side validation
+checkpoint passed structural validation: 3,151 exportable edges, 4,484 edge
+sources, 2,784 nodes, and 4,333 node roles. The only warning is the existing
+non-fatal warning that some evidence sources lack stable public locators.
+Database role, release, and regulon validators all returned zero issues.
+
+The next ordered step is to decide whether any 23B/24B manual-review rows can
+be converted into exact source-unit overlays; 22B remains last and retains its
+strict distinct-TF/program-claim gate. No public-TF staging row was converted
+into a canonical TF/program edge by this recovery pass.
