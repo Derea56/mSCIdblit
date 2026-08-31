@@ -29,3 +29,7 @@ snapshots through release freeze; review derived outputs and code
 for reproducibility; then archive or remove only explicitly approved
 superseded files. Local caches and configuration should not enter the
 public release.
+
+The repository now ignores local-only `.repowise/`, `.mcp.json`, `.vscode/`,
+and `AGENTS.md` paths. This changes Git visibility only; the files were not
+deleted or moved.

@@ -6,6 +6,13 @@ work/
 __pycache__/
 *.py[cod]
 
+# Local workspace state and generated repository-index data; never part of a
+# public release or mechanism-data provenance.
+.repowise/
+.mcp.json
+.vscode/
+AGENTS.md
+
 # The uncompressed contributor-link export exceeds GitHub's per-file limit;
 # keep the local convenience copy ignored while the lossless .tsv.gz artifact
 # is versioned in the public-TF expansion.
