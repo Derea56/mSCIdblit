@@ -439,3 +439,45 @@ The next ordered step is to decide whether any 23B/24B manual-review rows can
 be converted into exact source-unit overlays; 22B remains last and retains its
 strict distinct-TF/program-claim gate. No public-TF staging row was converted
 into a canonical TF/program edge by this recovery pass.
+
+## Manual source-unit promotion tranche — 2026-08-31
+
+The 23B and 24B manual-review tasks were completed in the Child Tasks project.
+The permanent reports are:
+
+- `docs/MODULE20_24_23B_MANUAL_REVIEW_2026-08-31.md`
+- `docs/MODULE20_24_24B_MANUAL_REVIEW_2026-08-31.md`
+
+Four of eight explicitly profiled 23B candidates passed both source-unit gates:
+`M23B-EVID-000002`, `M23B-EVID-000007`, `M23B-EVID-000250`, and
+`M23B-EVID-000878`. Four were excluded because the retained material was
+abstract-only or did not resolve the exact registered interaction. The overlay
+is `phase2_F_23B_source_unit_overlay.tsv`; the two existing phase-2 fallback
+extraction IDs were preserved for EVID-000250 and EVID-000878 after correcting
+the agent output's temporary IDs. Existing grades/context remain B/L1, B/L1,
+B/L4, and B/L2 respectively.
+
+Three of eight explicitly profiled 24B candidates passed both gates:
+`M24B-EVID-000006`, `M24B-EVID-000054`, and the bounded SCI component of
+`M24B-EVID-000078`. Five were excluded, and the public-TF rows remained
+unresolved; no TF/program claim was inferred. The overlay is
+`phase2_G_24B_source_unit_overlay.tsv`. Existing grades/context remain B/L4
+for all three; the APC/PAR1 record follows the exact phase-2/register identity
+`PMCID:PMC5266300; PMID:28122028`, not the conflicting recovery-note prose.
+
+The integrated Phase-2 lane remains 4,722 rows. The materializer produced 1,780
+candidate rows and the local database write increased the canonical totals to
+1,747 Papers, 1,782 Experiments, 1,782 Observations, 1,782 AuthorClaims,
+1,782 EvidenceLinks, and 5,142 SignalingEdgeSource rows. The seven overlays
+preserve the existing ABC and L0–L4 values; only one additional canonical
+source-defined unit was new at the database level because several exact papers
+were already canonical and three reviewed records lack a stable PMID in the
+materializer's accepted paper-anchor set. Those records remain represented in
+the Phase-2 overlay/staging layer rather than being forced into canonical
+tables.
+
+The generated materialization SQL, database validators, and isolated graph
+export still need to be rerun and recorded after this tranche. The next
+ordered step remains the strict 22B review: promote only rows with a distinct
+source-supported TF/program claim, while retaining pathway, receptor,
+functional, and contextual evidence without converting it into a TF edge.
