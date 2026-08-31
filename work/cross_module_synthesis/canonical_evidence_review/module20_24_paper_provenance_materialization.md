@@ -6,15 +6,15 @@ or claim/observation rows.
 
 - Unique PMID anchors in Phase-2: 1,687
 - Exact local/metadata Paper records: 1,441
-- Paper-anchored register-source links: 3,085
+- Paper-anchored register-source links: 3,105
 - Identity metadata conflicts retained unresolved: 1
 
 | Module | Paper-anchored source links |
 |---|---:|
-| 20B | 940 |
+| 20B | 956 |
 | 21B | 77 |
 | 22B | 771 |
-| 23B | 1,160 |
+| 23B | 1,164 |
 | 24B | 137 |
 
 Unresolved PMID anchors, DOI-only/PMCID-only cases without a resolved

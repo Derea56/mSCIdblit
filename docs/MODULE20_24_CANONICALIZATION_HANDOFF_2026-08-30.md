@@ -867,3 +867,31 @@ The three database validators remain at zero issues. A fresh export at
 4,980 node roles, 3,399 edges, and 11,960 edge sources. The direct export
 audit passed metadata counts, unique IDs, endpoint/source references, complete
 source coverage, and zero self-loops.
+
+## Paper-level adjudication Pass 5 — 2026-08-31
+
+The shared-identifier lane resolved 20 additional extraction rows. Each row
+had exactly one DOI or PMCID shared between `canonical_paper_key` and
+`source_locator`, and that identifier had one accepted exact mapping in the
+NCBI exception ledger. The original composite key remains preserved; the
+row-level resolution is recorded in:
+
+- `work/cross_module_synthesis/canonical_evidence_review/module20_24_phase2_paper_identity_shared_identifier_resolutions.tsv`
+- `work/cross_module_synthesis/canonical_evidence_review/module20_24_phase2_paper_identity_shared_identifier_resolutions.md`
+
+The resolver now reports 3,654 of 4,722 extraction rows with a resolved PMID.
+The unresolved queue is 1,068 rows: 546 ambiguous multiple-PMID rows, 456
+missing-identity rows, and 66 rows without an authoritative resolution.
+
+The canonical evidence-unit gate increased to 1,491 rows across 852 unique
+PMID papers. Five are explicit boundary-only E/L0 records, leaving 1,486
+positive evidence candidates. The exact Phase-2 database counts are 1,884
+Experiments, 1,952 Observations, 1,884 AuthorClaims, 1,491 EvidenceLinks,
+and 1,525 SignalingEdgeSource rows. All evidence grades and L0–L4 context
+levels remain preserved independently.
+
+The three database validators returned zero issues. A fresh export at
+`/private/tmp/mscitdb_paper_adjudication_pass6_bundle` contains 3,065 nodes,
+4,980 node roles, 3,399 edges, and 11,997 edge sources. The direct export
+audit passed metadata counts, unique IDs, endpoint/source references,
+complete source coverage, and zero self-loops.
