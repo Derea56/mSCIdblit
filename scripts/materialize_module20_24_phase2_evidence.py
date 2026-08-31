@@ -17,7 +17,7 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from materialize_module20_24_paper_provenance import sql, xml_records
+from materialize_module20_24_paper_provenance import bioc_records, html_records, sql, xml_records
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -180,6 +180,8 @@ def main() -> None:
     identities = identity_records()
     identity_manifest_present = IDENTITY.exists()
     available_pmids = set(xml_records())
+    available_pmids.update(html_records())
+    available_pmids.update(bioc_records())
     if METADATA.exists():
         available_pmids.update(row["pmid"] for row in read_tsv(METADATA) if row.get("paper_ready") == "true" and row.get("pmid"))
     # HTML/JSON/TSV source artifacts can carry exact bibliographic metadata

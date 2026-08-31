@@ -13,6 +13,7 @@ import csv
 import json
 import re
 from collections import defaultdict
+from html.parser import HTMLParser
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
@@ -95,6 +96,166 @@ def xml_records() -> dict[str, dict[str, str]]:
                     record["publication_year"] = candidate
                     break
             records[pmid] = record
+    return records
+
+
+def bioc_records() -> dict[str, dict[str, str]]:
+    """Read exact bibliographic metadata embedded in local BioC artifacts.
+
+    BioC exports are full-text source artifacts rather than filename-derived
+    metadata.  This reader accepts a PMID only when it is present in the
+    document or passage ``infons`` and accepts a title only when it is present
+    in a title passage.  Files without both values remain unavailable to the
+    Paper materializer.  Existing PubMed XML records take precedence when the
+    two formats contain the same PMID.
+    """
+
+    records: dict[str, dict[str, str]] = {}
+    for path in sorted(SOURCE_ROOT.rglob("*bioc.json")):
+        try:
+            payload = json.loads(path.read_text())
+        except (json.JSONDecodeError, OSError, UnicodeDecodeError):
+            continue
+
+        collections = payload if isinstance(payload, list) else [payload]
+        for collection in collections:
+            if not isinstance(collection, dict):
+                continue
+            for document in collection.get("documents", []) or []:
+                if not isinstance(document, dict):
+                    continue
+                document_infons = document.get("infons", {}) or {}
+                passages = [
+                    passage for passage in (document.get("passages", []) or [])
+                    if isinstance(passage, dict)
+                ]
+                pmid = str(
+                    document_infons.get("article-id_pmid")
+                    or document_infons.get("pmid")
+                    or ""
+                ).strip()
+                title = ""
+                abstract_parts: list[str] = []
+                journal = ""
+                volume = ""
+                issue = ""
+                publication_year = ""
+                authors: list[str] = []
+                doi = ""
+                pmcid = ""
+                for passage in passages:
+                    infons = passage.get("infons", {}) or {}
+                    text_value = str(passage.get("text") or "").strip()
+                    passage_pmid = str(
+                        infons.get("article-id_pmid")
+                        or infons.get("pmid")
+                        or ""
+                    ).strip()
+                    if not pmid and passage_pmid:
+                        pmid = passage_pmid
+                    if not doi:
+                        doi = str(infons.get("article-id_doi") or "").strip()
+                    if not pmcid:
+                        pmcid = str(infons.get("article-id_pmc") or "").strip()
+                    section_type = str(infons.get("section_type") or "").upper()
+                    passage_type = str(infons.get("type") or "").lower()
+                    if not title and section_type == "TITLE" and text_value:
+                        title = text_value
+                    if text_value and (section_type == "ABSTRACT" or passage_type == "abstract"):
+                        abstract_parts.append(text_value)
+                    journal = journal or str(infons.get("journal") or "").strip()
+                    volume = volume or str(infons.get("volume") or "").strip()
+                    issue = issue or str(infons.get("issue") or "").strip()
+                    publication_year = publication_year or str(infons.get("year") or "").strip()
+                    for key, value in infons.items():
+                        if not str(key).startswith("name_"):
+                            continue
+                        raw_name = str(value).strip()
+                        if raw_name and raw_name not in authors:
+                            authors.append(raw_name)
+
+                if not pmid.isdigit() or not title:
+                    continue
+                records.setdefault(
+                    pmid,
+                    {
+                        "pmid": pmid,
+                        "title": title,
+                        "authors": "; ".join(authors),
+                        "publication_year": publication_year,
+                        "journal": journal,
+                        "volume": volume,
+                        "issue": issue,
+                        "pages": "",
+                        "doi": doi,
+                        "pmcid": pmcid,
+                        "abstract": " ".join(abstract_parts),
+                        "source_url": f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
+                        "source_file": str(path.relative_to(ROOT)),
+                    },
+                )
+    return records
+
+
+class _CitationMetaParser(HTMLParser):
+    """Collect citation metadata without interpreting page text as identity."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.values: dict[str, list[str]] = defaultdict(list)
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag.lower() != "meta":
+            return
+        attributes = {key.lower(): (value or "").strip() for key, value in attrs}
+        name = attributes.get("name") or attributes.get("property")
+        content = attributes.get("content", "")
+        if name and content:
+            self.values[name.lower()].append(content)
+
+
+def html_records() -> dict[str, dict[str, str]]:
+    """Read exact citation metadata embedded in local HTML artifacts.
+
+    Only ``citation_pmid`` and ``citation_title`` meta values are used to
+    establish a Paper record.  Other fields are copied only when the same
+    page exposes the corresponding citation metadata.  Filenames and page
+    URLs are never used to infer identity.
+    """
+
+    records: dict[str, dict[str, str]] = {}
+    for path in sorted(SOURCE_ROOT.rglob("*.html")):
+        parser = _CitationMetaParser()
+        try:
+            parser.feed(path.read_text(errors="ignore"))
+            parser.close()
+        except (OSError, UnicodeError):
+            continue
+        values = parser.values
+        pmids = [value for value in values.get("citation_pmid", []) if value.isdigit()]
+        titles = values.get("citation_title", [])
+        if not pmids or not titles or not titles[0].strip():
+            continue
+        pmid = pmids[0]
+        year_match = re.search(r"\b(18\d{2}|19\d{2}|20\d{2})\b", " ".join(values.get("citation_publication_date", [])))
+        records.setdefault(
+            pmid,
+            {
+                "pmid": pmid,
+                "title": titles[0].strip(),
+                "authors": "; ".join(values.get("citation_author", [])),
+                "publication_year": year_match.group(1) if year_match else "",
+                "journal": " ".join(values.get("citation_journal_title", [])),
+                "volume": " ".join(values.get("citation_volume", [])),
+                "issue": " ".join(values.get("citation_issue", [])),
+                "pages": "-".join(values.get("citation_firstpage", []) + values.get("citation_lastpage", [])),
+                "doi": " ".join(values.get("citation_doi", [])),
+                "pmcid": " ".join(values.get("citation_pmcid", [])),
+                "abstract": "",
+                "source_url": f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
+                "source_file": str(path.relative_to(ROOT)),
+            },
+        )
     return records
 
 
@@ -231,12 +392,19 @@ def main() -> None:
             continue
         identity_by_pmid.setdefault(pmid, record)
 
+    # XML is the most structured local source, followed by metadata embedded
+    # in exact BioC full-text artifacts.  Neither route derives identity from
+    # filenames; the PMID must occur in the parsed source content.
+    html = html_records()
+    bioc = bioc_records()
     xml = xml_records()
     pmids = sorted({pmid for values in phase_by_evidence.values() for pmid in values})
     papers: dict[str, dict[str, str]] = {}
     for pmid in pmids:
         record = dict(metadata_by_pmid.get(pmid, {}))
         record.update({key: value for key, value in identity_by_pmid.get(pmid, {}).items() if value})
+        record.update({key: value for key, value in html.get(pmid, {}).items() if value})
+        record.update({key: value for key, value in bioc.get(pmid, {}).items() if value})
         record.update({key: value for key, value in xml.get(pmid, {}).items() if value})
         if not record.get("title"):
             continue

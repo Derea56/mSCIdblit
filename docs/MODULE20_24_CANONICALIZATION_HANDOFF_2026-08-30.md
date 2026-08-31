@@ -1044,3 +1044,52 @@ This checkpoint was committed and pushed on branch
 The working tree still contains 40 pre-existing modified tracked files and
 261 untracked data files from other module evidence/reference staging. They
 were not included in the archive commit and remain intentionally untouched.
+
+## v1.3.0 evidence-expanded release checkpoint — 2026-08-31
+
+The exact-content paper metadata recovery pass is complete for this release
+candidate. `scripts/materialize_module20_24_paper_provenance.py` now reads
+PMID/title metadata from local BioC and HTML citation records in addition to
+the existing PubMed XML and paper-metadata sources. A PMID is accepted only
+when it is present in parsed source content; filenames and inferred
+identifiers remain excluded. The Phase-2 materializer uses the same source
+availability rule.
+
+The generated paper-provenance and Phase-2 SQL were applied to the local
+`mscidblit_local` database. Relative to the pre-pass local counts, the write
+added 38 Paper rows, 65 source-defined Experiment rows, 65 Observation rows,
+65 AuthorClaim rows, 65 EvidenceLink rows, and 128 SignalingEdgeSource rows.
+The canonical database now contains 2,028 Papers, 1,966 Experiments, 2,047
+Observations, 1,966 AuthorClaims, 1,594 EvidenceLinks, 3,399 graph edges,
+7,276 direct edge-source rows, and 4,937 register-source rows.
+
+The frozen database export candidate is:
+
+`data/processed/mechanism_bundle_module20_24_db_v1_3_0/`
+
+It contains 3,065 nodes, 4,980 node roles, 3,399 graph edges, and 12,213
+exported edge-source rows. The companion public-TF layer is included as
+noncanonical sidecar data with 4,174 reviewed candidate rows and 3 explicitly
+adjudicated validated-edge candidates representing two unique pairs. Those
+rows are not silently inserted into the canonical database graph.
+
+The 136 novel `supporting_validated_claim` extraction IDs were rechecked
+against canonical source notes. Exact local metadata allowed 65 into the
+Phase-2 materializer; 71 remain staged because their Paper anchors cannot yet
+be materialized from exact local metadata. No identifiers were inferred for
+the unresolved group. All promoted rows retain their existing ABC grade and
+L0–L4 context level.
+
+The following gates returned zero issues:
+
+- `scripts/validate_mechanism_roles.sql`
+- `scripts/validate_mechanism_database_release.sql`
+- `scripts/validate_regulon_layer.sql`
+- `scripts/validate_nfkb1_core_regulon.sql`
+- the release-bundle node/role/edge/source reference audit
+
+The project version is now `1.3.0`, and the release documentation is
+`docs/RELEASE_v1.3.0.md`. The release has not been pushed in this checkpoint.
+Before pushing, review the staged release contents and the remaining
+pre-existing worktree paths; do not stage unrelated module or public-TF
+working changes.
