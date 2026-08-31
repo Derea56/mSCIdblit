@@ -306,3 +306,24 @@ underlying contextual literature but do not satisfy the exact endpoint and
 terminal-claim requirements for these nine submitted rows. The 22B register
 therefore remains complete for all resolvable exportable rows while these
 nine unresolved cases stay auditable and non-canonical.
+
+## Database-native release export audit — 2026-08-31
+
+The authoritative exporter `scripts/export_mechanism_bundle.py` was run
+against the local canonical PostgreSQL materialization with
+`--min-export-priority low --require-sources`. The isolated snapshot contained
+3,065 nodes, 4,980 node roles, 3,399 edges, and 10,024 edge-source rows; all
+metadata counts matched. The basic audit found unique node, edge, and source
+IDs, resolvable edge/source references, resolvable edge endpoint references,
+zero self-loops, and no source-less exported edges.
+
+The first downstream `mSCS` importer check exposed four free-text register
+metadata values outside its controlled vocabulary. The exporter now performs
+an output-only normalization for register-backed rows: the three explicit
+mouse-plus-human-comparator labels map to `mixed`, while the zebrafish-only
+label remains blank. The exact raw values are retained in `notes`. Two
+non-controlled confidence labels are likewise emitted blank with their raw
+values retained in `notes`; no canonical database field is changed. The
+normalized snapshot passed the `mSCS` importer and its isolated materialization
+completed successfully. This is an export-contract normalization, not a
+species or evidence-grade reassignment.
