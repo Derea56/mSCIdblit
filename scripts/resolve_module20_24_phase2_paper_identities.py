@@ -18,6 +18,12 @@ Only identifiers explicitly present in one of the following are accepted:
 Filename tokens and search-query URLs are never treated as paper identity.
 Unresolved and ambiguous cases remain unresolved.  This is an audit manifest;
 it does not write to the database or change the Phase-2 grading fields.
+
+The derived resolved_canonical_paper_key is populated only when an
+accepted resolution produced one PMID, using the explicit form PMID:<id>.
+The original canonical_paper_key is never overwritten.  A lossless
+row-level exception queue and a deduplicated triage summary are emitted for
+rows without a resolved PMID.
 """
 
 from __future__ import annotations
@@ -37,14 +43,29 @@ PHASE2 = REVIEW_ROOT / "module20_24_integrated_phase2_extractions.tsv"
 METADATA = ROOT / "work" / "cross_module_synthesis" / "module20_24_canonical_paper_metadata.tsv"
 OUT = REVIEW_ROOT / "module20_24_phase2_paper_identity_resolution.tsv"
 REPORT = REVIEW_ROOT / "module20_24_phase2_paper_identity_resolution.md"
+EXCEPTIONS_OUT = REVIEW_ROOT / "module20_24_phase2_paper_identity_exceptions.tsv"
+EXCEPTIONS_SUMMARY_OUT = REVIEW_ROOT / "module20_24_phase2_paper_identity_exceptions_summary.tsv"
 
 FIELDS = [
     "extraction_id", "module", "b_evidence_id", "canonical_paper_key",
+    "source_locator", "resolved_canonical_paper_key",
     "resolved_pmid", "resolved_pmcid", "resolved_doi",
     "identity_resolution_status", "resolution_basis", "authoritative_source",
     "source_metadata_title", "source_metadata_authors", "source_metadata_year",
     "source_metadata_journal", "source_metadata_abstract", "source_metadata_url",
     "unresolved_reason",
+]
+
+EXCEPTION_FIELDS = [
+    "extraction_id", "module", "b_evidence_id", "canonical_paper_key",
+    "source_locator", "identity_resolution_status", "unresolved_reason",
+    "authoritative_source",
+]
+
+EXCEPTION_SUMMARY_FIELDS = [
+    "module", "canonical_paper_key", "identity_resolution_status",
+    "unresolved_reason", "extraction_row_count", "source_locator_count",
+    "extraction_ids",
 ]
 
 ID_RE = re.compile(
@@ -344,6 +365,68 @@ def fill_from_record(result: dict[str, str], record: dict[str, object]) -> None:
     result["source_metadata_url"] = str(record.get("url", ""))
 
 
+def set_derived_canonical_key(result: dict[str, str]) -> None:
+    """Set the derived key only from an accepted, single resolved PMID."""
+    pmid = result.get("resolved_pmid", "").strip()
+    result["resolved_canonical_paper_key"] = f"PMID:{pmid}" if pmid else ""
+
+
+def exception_summary(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    grouped: dict[tuple[str, str, str, str], list[dict[str, str]]] = defaultdict(list)
+    for row in rows:
+        key = (
+            row["module"],
+            row["canonical_paper_key"],
+            row["identity_resolution_status"],
+            row["unresolved_reason"],
+        )
+        grouped[key].append(row)
+    summary = []
+    for key, group in sorted(grouped.items()):
+        source_locators = sorted({row["source_locator"] for row in group if row["source_locator"]})
+        summary.append({
+            "module": key[0],
+            "canonical_paper_key": key[1],
+            "identity_resolution_status": key[2],
+            "unresolved_reason": key[3],
+            "extraction_row_count": str(len(group)),
+            "source_locator_count": str(len(source_locators)),
+            "extraction_ids": ";".join(sorted(row["extraction_id"] for row in group)),
+        })
+    return summary
+
+
+def write_tsv(path: Path, fieldnames: list[str], rows: list[dict[str, str]]) -> None:
+    with path.open("w", newline="") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=fieldnames,
+            delimiter="\t",
+            quoting=csv.QUOTE_ALL,
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def validate_resolution_rows(rows: list[dict[str, str]], phase2: list[dict[str, str]]) -> None:
+    """Fail closed if the manifest loses rows or contradicts its derived key."""
+    phase2_ids = [row.get("extraction_id", "") for row in phase2]
+    result_ids = [row.get("extraction_id", "") for row in rows]
+    if result_ids != phase2_ids:
+        raise ValueError("identity manifest extraction IDs/order do not match Phase-2 input")
+    if len(result_ids) != len(set(result_ids)):
+        raise ValueError("identity manifest contains duplicate extraction IDs")
+    for row in rows:
+        pmid = row["resolved_pmid"]
+        derived = row["resolved_canonical_paper_key"]
+        expected = f"PMID:{pmid}" if pmid else ""
+        if derived != expected:
+            raise ValueError(f"derived canonical key mismatch for {row['extraction_id']}")
+        if row["identity_resolution_status"].startswith("unresolved_") and pmid:
+            raise ValueError(f"unresolved row has resolved PMID: {row['extraction_id']}")
+
+
 def main() -> None:
     phase2 = read_tsv(PHASE2)
     metadata = {
@@ -362,6 +445,7 @@ def main() -> None:
             "module": source.get("module", ""),
             "b_evidence_id": source.get("b_evidence_id", ""),
             "canonical_paper_key": source.get("canonical_paper_key", ""),
+            "source_locator": source.get("source_locator", ""),
         })
         key = source.get("canonical_paper_key", "")
         key_ids = all_tokens(key)
@@ -431,25 +515,26 @@ def main() -> None:
         if not result["identity_resolution_status"]:
             result["identity_resolution_status"] = "unresolved_no_authoritative_resolution"
             result["unresolved_reason"] = "resolver produced no accepted identity"
+        set_derived_canonical_key(result)
         rows.append(result)
         status_counts[result["identity_resolution_status"]] += 1
         basis_counts[result["resolution_basis"] or result["unresolved_reason"]] += 1
 
-    with OUT.open("w", newline="") as handle:
-        # Quote every field so rows with intentionally empty trailing fields
-        # do not become indistinguishable from whitespace-truncated records.
-        writer = csv.DictWriter(
-            handle,
-            fieldnames=FIELDS,
-            delimiter="\t",
-            quoting=csv.QUOTE_ALL,
-            lineterminator="\n",
-        )
-        writer.writeheader()
-        writer.writerows(rows)
+    validate_resolution_rows(rows, phase2)
+
+    # Quote every field so rows with intentionally empty trailing fields do
+    # not become indistinguishable from whitespace-truncated records.
+    write_tsv(OUT, FIELDS, rows)
 
     resolved = [row for row in rows if row["resolved_pmid"]]
     unresolved = [row for row in rows if not row["resolved_pmid"]]
+    exception_rows = [
+        {field: row.get(field, "") for field in EXCEPTION_FIELDS}
+        for row in unresolved
+    ]
+    write_tsv(EXCEPTIONS_OUT, EXCEPTION_FIELDS, exception_rows)
+    exception_groups = exception_summary(unresolved)
+    write_tsv(EXCEPTIONS_SUMMARY_OUT, EXCEPTION_SUMMARY_FIELDS, exception_groups)
     report = [
         "# Module 20B–24B Phase-2 paper identity resolution",
         "",
@@ -457,10 +542,13 @@ def main() -> None:
         "It preserves the original canonical_paper_key and does not alter evidence",
         "grades, context levels, claims, observations, or the database schema.",
         "Filename tokens and search-query URLs are not accepted as paper identity.",
+        "The derived resolved_canonical_paper_key is PMID:<id> only after an accepted single-PMID resolution; the original canonical_paper_key is preserved.",
         "",
         f"- Phase-2 extraction rows audited: {len(rows):,}",
         f"- Rows with resolved PMID: {len(resolved):,}",
         f"- Rows without resolved PMID: {len(unresolved):,}",
+        f"- Row-level unresolved exception queue: {len(exception_rows):,}",
+        f"- Deduplicated exception groups: {len(exception_groups):,}",
         f"- Local artifacts parsed (only when cited by a row): {len(artifact_cache):,}",
         "",
         "## Resolution status",
@@ -476,6 +564,7 @@ def main() -> None:
         "Rows without a single authoritative resolved PMID remain in the Phase-2 staging ledger.",
         "Ambiguous multiple-PMID keys and local artifacts are not collapsed by guessing.",
         "The original key and unresolved reason are retained for later adjudication.",
+        f"The lossless row-level queue is {EXCEPTIONS_OUT.name}; its deduplicated triage index is {EXCEPTIONS_SUMMARY_OUT.name}.",
         "",
     ])
     REPORT.write_text("\n".join(report))

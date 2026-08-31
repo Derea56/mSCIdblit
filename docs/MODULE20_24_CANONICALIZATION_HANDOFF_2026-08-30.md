@@ -619,3 +619,46 @@ The extraction bridge is complete. The next promotion work can proceed from
 the 1,419 deterministic source units; the 1,664 unresolved identity rows and
 the 424 retained historical-but-unlinked rows remain explicitly auditable and
 must not be promoted without new authoritative evidence.
+
+## Deterministic identity pre-materialization refinement — 2026-08-31
+
+The resolver boundary now emits a derived canonical paper key and explicit
+exception queues. This is an additive audit layer: it does not overwrite the
+source `canonical_paper_key`, change the database schema, or regrade ABC or
+L0–L4 evidence.
+
+The resolver manifest now includes `source_locator` and
+`resolved_canonical_paper_key`. The derived key is exactly `PMID:<id>` only
+when the resolver has accepted one directly supported PMID. Rows without an
+accepted PMID retain an empty derived key. A fail-closed invariant checks that
+manifest extraction IDs and order match the 4,722-row Phase-2 input, that IDs
+are unique, and that every derived key agrees with its resolved PMID.
+
+The unresolved queue outputs are:
+
+- `work/cross_module_synthesis/canonical_evidence_review/module20_24_phase2_paper_identity_exceptions.tsv` — one lossless row per unresolved extraction;
+- `work/cross_module_synthesis/canonical_evidence_review/module20_24_phase2_paper_identity_exceptions_summary.tsv` — deduplicated triage groups.
+
+The current queue contains 1,664 extraction rows represented by 750 groups.
+The module-level row counts are 20B 1,037, 21B 18, 22B 42, 23B 535, and 24B
+32. The queue preserves the original key, source locator, resolver status,
+reason, and authoritative-source field; it does not assert a replacement
+identifier.
+
+The rerun remained stable: 3,058 rows resolve to one PMID and the canonical
+promotion candidate set remains 1,419 rows (20B 657, 21B 53, 22B 496, 23B
+135, 24B 78). The local materializers were rerun and applied idempotently.
+The final local database counts remain Paper 1,808, Phase-2 Experiment 1,843,
+Observation 1,894, AuthorClaim 1,843, EvidenceLink 1,419, and
+SignalingEdgeSource 1,439.
+
+All database validators pass with zero issues. The final isolated export audit
+passes with 3,065 nodes, 4,980 node roles, 3,399 edges, and 11,360
+edge-source rows; counts, identifiers, endpoints, source references, source
+coverage, and self-loop checks all pass. The export was written to
+`/private/tmp/mscitdb_phase2_resolver_refined_bundle_final` and is not a
+release artifact.
+
+Canonicalization can now consume only resolver-approved rows with validated
+observation and claim routes. The 1,664 exception rows remain a bounded,
+reviewable queue for future authoritative source resolution.
