@@ -12,6 +12,7 @@ __pycache__/
 .mcp.json
 .vscode/
 AGENTS.md
+data/raw/evidence/module20_24_supervised_cli_phase2
 
 # The uncompressed contributor-link export exceeds GitHub's per-file limit;
 # keep the local convenience copy ignored while the lossless .tsv.gz artifact

@@ -123,18 +123,23 @@ def read_registers() -> list[dict[str, str]]:
 
 
 def build(root: Path, output: Path) -> dict[str, int]:
-    root = root.resolve()
-    if not root.is_dir():
+    # Preserve the logical repository-relative source path when the physical
+    # files are kept in the sibling local archive. This keeps database and
+    # release provenance stable while allowing the active tree to contain a
+    # small symlink instead of thousands of untracked source files.
+    logical_root = root
+    scan_root = root.resolve()
+    if not scan_root.is_dir():
         raise SystemExit(f"evidence root does not exist: {root}")
     try:
-        repository_relative_root = root.relative_to(ROOT).as_posix()
+        repository_relative_root = logical_root.relative_to(ROOT).as_posix()
     except ValueError as exc:
         raise SystemExit("evidence root must be inside the repository") from exc
 
     artifacts: list[dict[str, object]] = []
     identifiers: list[dict[str, str]] = []
-    for path in sorted(p for p in root.rglob("*") if p.is_file()):
-        relative_path = path.relative_to(ROOT).as_posix()
+    for path in sorted(p for p in scan_root.rglob("*") if p.is_file()):
+        relative_path = f"{repository_relative_root}/{path.relative_to(scan_root).as_posix()}"
         artifacts.append({
             "repository_root": repository_relative_root,
             "relative_path": relative_path,

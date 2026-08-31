@@ -18,6 +18,12 @@ for a later canonical evidence-source update. Candidate, unresolved,
 negative/boundary, metadata/search, and unmapped statuses remain queryable and
 must not be silently promoted.
 
+The physical source directory is retained in the sibling local archive
+`mSCIdblit_local_archive/module20_24_supervised_cli_phase2_2026-08-31/`.
+`data/raw/evidence/module20_24_supervised_cli_phase2` remains as a local-only
+symlink so the logical repository-relative provenance paths and rebuild scripts
+continue to work. The archive is not part of the public release.
+
 The materialization SQL requires the additive migration
 `schema/module20_24_evidence_artifacts.sql` and is idempotent. It does not
 modify existing graph rows or create `Paper`, `Experiment`, `Observation`,
