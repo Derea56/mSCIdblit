@@ -895,3 +895,70 @@ The three database validators returned zero issues. A fresh export at
 4,980 node roles, 3,399 edges, and 11,997 edge sources. The direct export
 audit passed metadata counts, unique IDs, endpoint/source references,
 complete source coverage, and zero self-loops.
+
+## Paper-level adjudication Pass 6 — 2026-08-31
+
+The exact-selector search was extended through two additional authoritative
+NCBI lanes and the existing local-identifier lanes. These lanes never used
+title similarity, filename inference, or a search-result URL as a paper
+identity. The original composite `canonical_paper_key` remains preserved;
+accepted row-level identities are recorded in the resolution ledgers.
+
+The completed lanes were:
+
+- The source-locator PMID/stable-URL lane inspected 46 new candidates,
+  accepted 26 new exact mappings, and retained 69 mappings in total.
+- The NCBI stable PubMed/PMC/DOI URL lane inspected 17 candidates and retains
+  11 accepted mappings in total; no additional mapping was accepted on the
+  final merged rerun. The Slit2/Robo1 correction URL was resolved to the
+  original PMID only because NCBI explicitly identifies the original article
+  in the correction relationship.
+- The local shared DOI/PMCID lane inspected 256 rows, accepted 10 new exact
+  row-level mappings, and retains 30 mappings in total.
+- The strict NCBI shared DOI/PMCID lane inspected 41 candidates and retains
+  four accepted mappings. A shared identifier was rejected when NCBI resolved
+  it to a PMID not explicitly present in the original ambiguous key; 37 such
+  candidates were rejected or left unresolved.
+
+The final deterministic resolver result is 3,705 of 4,722 Phase-2 extraction
+rows with a resolved PMID. The unresolved queue is 1,017 rows:
+
+| Current identity status | Rows |
+|---|---:|
+| Resolved | 3,705 |
+| `unresolved_ambiguous_multiple_canonical_pmids` | 499 |
+| `unresolved_missing_canonical_identity` | 456 |
+| `unresolved_no_authoritative_resolution` | 62 |
+
+The regenerated materialization contains 1,527 candidate extraction rows,
+1,474 exact local/metadata paper records, 3,157 paper-anchored source links,
+and 881 papers used in the experiment/observation/claim evidence gate. The
+current Phase-2 database rows are 1,527 EvidenceLinks, 1,980 Observations,
+1,899 Experiments, 1,899 AuthorClaims, and 1,561 Phase-2 edge-source rows.
+The grade/context distribution remains independent across the two axes:
+
+| Evidence grade | Context level | Rows |
+|---|---|---:|
+| B | L1 | 1,096 |
+| B | L2 | 62 |
+| B | L3 | 4 |
+| B | L4 | 19 |
+| D | L0 | 365 |
+| D | L2 | 4 |
+| E | L0 | 5 |
+| U | L0 | 5 |
+| U | L1 | 1 |
+
+The three database validators continue to return zero issues. The fresh
+four-file export at
+`/private/tmp/mscitdb_paper_adjudication_pass7_bundle` contains 3,065 nodes,
+4,980 node roles, 3,399 edges, and 12,085 edge sources. Its direct audit
+passed metadata-count equality, unique identifiers, endpoint resolution,
+source-edge resolution, complete source coverage, and zero self-loops.
+
+The remaining queue is not eligible for automatic collapse. Composite keys
+with competing exact identifiers remain unresolved unless an authoritative
+source-level discriminator selects one PMID already present in the key.
+Missing-key rows and search-query/manifests remain unresolved until a direct
+source record establishes the paper identity. No placeholder PMID, DOI, PMCID,
+or inferred paper relationship was added.
