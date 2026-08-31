@@ -518,3 +518,104 @@ and 5,142 SignalingEdgeSource rows. Database role, release, and regulon
 validators all returned zero issues, and the isolated mechanism-graph
 validator passed with the existing non-fatal warning about some evidence
 sources lacking stable locators.
+
+## Paper-identity extraction bridge completion — 2026-08-31
+
+The paper-identity bridge is now implemented and applied locally. It is the
+required boundary between the retained Phase-2 evidence packet and canonical
+promotion: it resolves a paper identifier per extraction row before the
+validated observation/claim gates are evaluated.
+
+The resolver is
+`scripts/resolve_module20_24_phase2_paper_identities.py`. Its reproducible
+outputs are:
+
+- `work/cross_module_synthesis/canonical_evidence_review/module20_24_phase2_paper_identity_resolution.tsv`
+- `work/cross_module_synthesis/canonical_evidence_review/module20_24_phase2_paper_identity_resolution.md`
+
+It accepts only identifiers explicitly present in the canonical paper key,
+the paper-ready metadata ledger, the source locator, or a cited local artifact
+whose content identifies the same paper. Filename tokens, search-query URLs,
+and reference-list identifiers are not accepted as paper identity. The
+original key is retained for every row, and unresolved/ambiguous rows remain
+outside the current promotion candidate set.
+
+| Resolver result | Rows |
+|---|---:|
+| Phase-2 extraction rows audited | 4,722 |
+| Rows with one resolved PMID | 3,058 |
+| Rows without resolved PMID | 1,664 |
+| Local artifacts parsed when explicitly cited | 530 |
+| Ambiguous multiple-canonical-PMID rows | 585 |
+| Missing canonical identity rows | 519 |
+| No authoritative resolution rows | 560 |
+
+The two materializers now consume the resolver manifest:
+
+- `scripts/materialize_module20_24_paper_provenance.py` materializes exact
+  paper anchors and register provenance only.
+- `scripts/materialize_module20_24_phase2_evidence.py` materializes a
+  source-defined Experiment/Observation/AuthorClaim/EvidenceLink unit only
+  when the resolved paper, validated observation, and validated claim gates
+  all pass.
+
+The corrected Phase-2 candidate set contains 1,419 extraction rows:
+
+| Module | Candidate source-defined units |
+|---|---:|
+| 20B | 657 |
+| 21B | 53 |
+| 22B | 496 |
+| 23B | 135 |
+| 24B | 78 |
+
+The existing ABC and L0–L4 fields are copied into canonical notes and edge
+source columns; identity resolution does not regrade evidence or context.
+The current Phase-2 edge-source distribution is B/L1 1,007, B/L2 55, B/L3
+4, B/L4 16, D/L0 345, D/L2 4, E/L0 5, U/L0 2, and U/L1 1.
+
+The first bridge run had already materialized 424 rows through a legacy PMID
+fallback even though the resolver later classified them as unresolved or
+ambiguous. The corrected generated SQL now prunes their promotable
+`EvidenceLink` and `SignalingEdgeSource` rows. The database deliberately
+protects `Observation` rows from deletion or update, so those 424 historical
+extraction records remain auditable but are no longer linked into the
+canonical mechanism graph. One overlapping duplicate Experiment was also
+removed; no duplicate extraction IDs remain among the Phase-2 Experiments.
+
+Fifty-one eligible rows had been written in the earlier run with a different
+paper PMID because the earlier XML parser could select a reference/journal
+token. For each, the bridge now updates the mutable Experiment, AuthorClaim,
+and edge-source paper anchors, inserts a corrected Observation, and rewires
+the EvidenceLink/edge source to that corrected observation. The immutable
+prior Observation is retained. The final audit found zero experiment PMID
+mismatches, zero edge-source PMID mismatches, and all 1,419 Phase-2
+EvidenceLinks point to the resolver-approved observation.
+
+Final local database counts for the Phase-2 batch are:
+
+| Item | Rows | Interpretation |
+|---|---:|---|
+| `Paper` | 1,808 | All local database papers, including the new bridge anchors |
+| Phase-2 `Experiment` | 1,843 | Current plus retained immutable historical source units |
+| Phase-2 `Observation` | 1,894 | Current plus 51 corrected observations and retained originals |
+| Phase-2 `AuthorClaim` | 1,843 | Current plus retained historical claims |
+| Phase-2 `EvidenceLink` | 1,419 | Current promotion links only |
+| Phase-2 `SignalingEdgeSource` | 1,439 | Current linked edge-source rows; 1,363 unique extraction IDs |
+
+The generated SQL artifacts are:
+
+- `work/cross_module_synthesis/canonical_evidence_review/module20_24_paper_provenance_materialization.sql`
+- `work/cross_module_synthesis/canonical_evidence_review/module20_24_phase2_evidence_materialization.sql`
+
+The database-native role, release, and regulon validators all pass with zero
+issues. An isolated database export passed the final reference audit with
+3,065 nodes, 4,980 node roles, 3,399 edges, and 11,360 edge-source rows; all
+metadata counts, IDs, endpoint references, source references, source coverage,
+and self-loop checks passed. The isolated export was written to
+`/private/tmp/mscitdb_phase2_bridge_bundle` and is not a release artifact.
+
+The extraction bridge is complete. The next promotion work can proceed from
+the 1,419 deterministic source units; the 1,664 unresolved identity rows and
+the 424 retained historical-but-unlinked rows remain explicitly auditable and
+must not be promoted without new authoritative evidence.
