@@ -28,6 +28,17 @@ OUT_SQL = REVIEW_ROOT / "module20_24_phase2_evidence_materialization.sql"
 REPORT = REVIEW_ROOT / "module20_24_phase2_evidence_materialization.md"
 METADATA = ROOT / "work" / "cross_module_synthesis" / "module20_24_canonical_paper_metadata.tsv"
 MODULES = ("20B", "21B", "22B", "23B", "24B")
+# These five reviewed records explicitly reject promotion of the queued exact
+# edge. Keep their evaluated observations and claims, but never treat them as
+# positive support for that edge. The IDs are taken from the Phase-2 review
+# packet; no text-only heuristic is used for this boundary classification.
+BOUNDARY_ONLY_EVIDENCE_IDS = frozenset({
+    "M20B-EVID-002177",
+    "M20B-EVID-002204",
+    "M20B-EVID-002899",
+    "M20B-EVID-003366",
+    "M24B-EVID-000105",
+})
 
 
 def read_tsv(path: Path) -> list[dict[str, str]]:
@@ -75,6 +86,11 @@ def valid_claim(row: dict[str, str]) -> bool:
     if value.strip().startswith("M21B-C-") or value.strip().startswith("M22B-C-"):
         return False
     return useful(value) and len(value.strip()) >= 40 and "do_not_create" not in value.lower()
+
+
+def boundary_only_claim(row: dict[str, str]) -> bool:
+    """Identify reviewed text that explicitly does not support the queued edge."""
+    return row.get("b_evidence_id", "") in BOUNDARY_ONLY_EVIDENCE_IDS
 
 
 def outcome_type(row: dict[str, str]) -> tuple[str, str]:
@@ -172,6 +188,15 @@ def main() -> None:
         candidate["source_scope"] = grading.get("source_scope", "")
         candidate["species_support"] = grading.get("species_support", "")
         candidate["outcome_type"], candidate["outcome_basis"] = outcome_type(row)
+        candidate["edge_support_status"] = "boundary_not_supporting_requested_edge" if boundary_only_claim(row) else "supports_requested_edge"
+        if candidate["edge_support_status"] == "boundary_not_supporting_requested_edge":
+            candidate["evidence_grade"] = "E"
+            candidate["context_level"] = "L0"
+            candidate["grading_basis"] = (
+                "The reviewed claim explicitly rejects promotion of the requested exact edge; "
+                "retain the source-defined observation as bounded negative/context evidence only."
+            )
+            candidate["context_basis"] = "The reviewed claim does not establish the requested exact relationship or SCI-context transfer."
         if not candidate["evidence_grade"]:
             candidate["evidence_grade"] = "U"
             candidate["grading_basis"] = "No final A-E grade is assigned in the current ledger; retained as U until source adjudication is complete."
@@ -251,13 +276,13 @@ def main() -> None:
             "context_level": row["context_level"],
         }
         observation_note = dict(experiment_note)
-        observation_note.update({"record_type": "canonical_observation", "context_basis": row["context_basis"], "full_observation_value": row["observation_value_or_blocker"]})
+        observation_note.update({"record_type": "canonical_boundary_observation" if row["edge_support_status"] == "boundary_not_supporting_requested_edge" else "canonical_observation", "context_basis": row["context_basis"], "full_observation_value": row["observation_value_or_blocker"]})
         claim_note = dict(experiment_note)
-        claim_note.update({"record_type": "canonical_author_claim", "context_basis": row["context_basis"]})
+        claim_note.update({"record_type": "canonical_boundary_claim" if row["edge_support_status"] == "boundary_not_supporting_requested_edge" else "canonical_author_claim", "context_basis": row["context_basis"]})
         link_note = dict(experiment_note)
         link_note.update({"record_type": "canonical_evidence_link"})
         source_note = dict(experiment_note)
-        source_note.update({"record_type": "canonical_edge_source", "register_source_locator": row["source_locator"]})
+        source_note.update({"record_type": "canonical_edge_boundary" if row["edge_support_status"] == "boundary_not_supporting_requested_edge" else "canonical_edge_source", "register_source_locator": row["source_locator"], "edge_support_status": row["edge_support_status"]})
         description = " | ".join(part for part in (
             "Source-defined evidence unit; original experiment number not separately preserved in Phase-2.",
             "model=" + row["observation_cell_or_model"],
@@ -297,9 +322,9 @@ def main() -> None:
             "context_level": row["context_level"],
         }
         obs_note = dict(experiment_note)
-        obs_note.update({"record_type": "canonical_observation", "context_basis": row["context_basis"]})
+        obs_note.update({"record_type": "canonical_boundary_observation" if row["edge_support_status"] == "boundary_not_supporting_requested_edge" else "canonical_observation", "context_basis": row["context_basis"]})
         claim_note = dict(experiment_note)
-        claim_note.update({"record_type": "canonical_claim", "claim_origin": "phase2_curated_evidence_assertion", "source_claim_status": row["claim_status"], "context_basis": row["context_basis"]})
+        claim_note.update({"record_type": "canonical_boundary_claim" if row["edge_support_status"] == "boundary_not_supporting_requested_edge" else "canonical_claim", "claim_origin": "phase2_curated_evidence_assertion", "source_claim_status": row["claim_status"], "context_basis": row["context_basis"]})
         lines.extend([
             "INSERT INTO m2024_phase2_experiments (extraction_id, experiment_id)",
             "SELECT " + sql(row["extraction_id"]) + ", experiment_id FROM Experiment WHERE " + note_match("notes", row["extraction_id"]) + " ON CONFLICT (extraction_id) DO NOTHING;",
@@ -320,6 +345,7 @@ def main() -> None:
             f"  {sql(row['claim_text_or_blocker'])}, {sql('curated_evidence_claim')}, {sql(normalize_confidence(row['confidence']))},",
             f"  {sql(db_text(row['claim_source_section'], 100))}, {sql(normalize_confidence(row['confidence']))}, {json_sql(claim_note)}",
             "FROM Paper p WHERE p.pmid=" + sql("PMID:" + row["pmid"]) + " AND NOT EXISTS (SELECT 1 FROM AuthorClaim ac WHERE " + note_match("ac.notes", row["extraction_id"]) + ");",
+            "UPDATE AuthorClaim SET claim_type=" + sql("curated_boundary_assertion" if row["edge_support_status"] == "boundary_not_supporting_requested_edge" else "curated_evidence_claim") + ", notes=replace(notes, '" + '"record_type": "canonical_author_claim"' + "', '" + ('"record_type": "canonical_boundary_claim"' if row["edge_support_status"] == "boundary_not_supporting_requested_edge" else '"record_type": "canonical_claim"') + "') WHERE " + note_match("notes", row["extraction_id"]) + ";",
             "INSERT INTO m2024_phase2_claims (extraction_id, claim_id)",
             "SELECT " + sql(row["extraction_id"]) + ", claim_id FROM AuthorClaim WHERE " + note_match("notes", row["extraction_id"]) + " ON CONFLICT (extraction_id) DO NOTHING;",
             "",
@@ -332,20 +358,22 @@ def main() -> None:
         ])
 
         source_note = dict(experiment_note)
-        source_note.update({"record_type": "canonical_edge_source", "register_source_locator": row["source_locator"]})
+        source_note.update({"record_type": "canonical_edge_boundary" if row["edge_support_status"] == "boundary_not_supporting_requested_edge" else "canonical_edge_source", "register_source_locator": row["source_locator"], "edge_support_status": row["edge_support_status"]})
         grading_basis = " ".join(part for part in (row["grading_basis"], row["context_basis"]) if part)
+        source_scope = "negative_evidence" if row["edge_support_status"] == "boundary_not_supporting_requested_edge" else normalize_scope(row["source_scope"])
+        grading_status = "phase2_boundary_not_support" if row["edge_support_status"] == "boundary_not_supporting_requested_edge" else "phase2_canonical_source_unit"
         lines.extend([
             "INSERT INTO SignalingEdgeSource (edge_id, paper_id, observation_id, claim_id, support_kind, species_support, source_scope, confidence_tier, citation_note, notes, evidence_grade, context_level, grading_basis, grading_status)",
             "SELECT s.edge_id, p.paper_id, o.observation_id, c.claim_id,",
-            f"  {sql(normalize_support(row['support_kind']))}, {sql(normalize_species(row['species_support'] or row['observation_species']))}, {sql(normalize_scope(row['source_scope']))}, {sql(normalize_confidence(row['confidence']))},",
-            f"  {sql(row['citation_note'])}, {json_sql(source_note)}, {sql(row['evidence_grade'])}, {sql(row['context_level'])}, {sql(grading_basis)}, {sql('phase2_canonical_source_unit')}",
+            f"  {sql(normalize_support(row['support_kind']))}, {sql(normalize_species(row['species_support'] or row['observation_species']))}, {sql(source_scope)}, {sql(normalize_confidence(row['confidence']))},",
+            f"  {sql(row['citation_note'])}, {json_sql(source_note)}, {sql(row['evidence_grade'])}, {sql(row['context_level'])}, {sql(grading_basis)}, {sql(grading_status)}",
             "FROM SignalingEdgeRegisterSource s",
             "JOIN Paper p ON p.pmid=" + sql("PMID:" + row["pmid"]),
             "JOIN m2024_phase2_observations o ON o.extraction_id=" + sql(row["extraction_id"]),
             "JOIN m2024_phase2_claims c ON c.extraction_id=" + sql(row["extraction_id"]),
             "WHERE s.module=" + sql(row["module"]) + " AND s.register_evidence_id=" + sql(row["b_evidence_id"]),
             "  AND NOT EXISTS (SELECT 1 FROM SignalingEdgeSource existing WHERE " + note_match("existing.notes", row["extraction_id"]) + ");",
-            "UPDATE SignalingEdgeSource SET evidence_grade=" + sql(row["evidence_grade"]) + ", context_level=" + sql(row["context_level"]) + ", grading_basis=" + sql(grading_basis) + ", grading_status='phase2_canonical_source_unit' WHERE " + note_match("notes", row["extraction_id"]) + ";",
+            "UPDATE SignalingEdgeSource SET source_scope=" + sql(source_scope) + ", evidence_grade=" + sql(row["evidence_grade"]) + ", context_level=" + sql(row["context_level"]) + ", grading_basis=" + sql(grading_basis) + ", grading_status=" + sql(grading_status) + ", notes=replace(notes, '" + '"record_type": "canonical_edge_source"' + "', '" + ('"record_type": "canonical_edge_boundary"' if row["edge_support_status"] == "boundary_not_supporting_requested_edge" else '"record_type": "canonical_edge_source"') + "') WHERE " + note_match("notes", row["extraction_id"]) + ";",
             "",
         ])
 
@@ -359,10 +387,13 @@ def main() -> None:
         "This generated SQL is conservative and idempotent. It materializes",
         "only stable-PMID rows with validated non-abstract observations and",
         "validated claim text. Experiments are labeled source-defined evidence",
-        "units when the original experiment number was not preserved.",
+        "units when the original experiment number was not preserved. Explicit",
+        "non-promotable claims are retained as boundary evidence and cannot",
+        "support promotion of the requested exact edge.",
         "",
         f"- Candidate extraction rows: {len(candidates):,}",
         f"- Unique PMID papers used: {len(papers):,}",
+        f"- Explicit boundary-only extraction rows: {sum(row['edge_support_status'] == 'boundary_not_supporting_requested_edge' for row in candidates):,}",
         "",
         "| Module | Source-defined evidence units |",
         "|---|---:|",
@@ -370,10 +401,12 @@ def main() -> None:
     report.extend(f"| {module} | {by_module[module]:,} |" for module in MODULES)
     report.extend([
         "",
-        "Rows with abstract-only, unresolved, metadata-only, boundary, missing",
-        "PMID, or action-token claim text remain in the staging ledger. The",
-        "generated SQL does not invent original experiment numbers, mechanisms,",
-        "or unsupported paper metadata.",
+        "Rows with abstract-only, unresolved, metadata-only, missing PMID, or",
+        "action-token claim text remain in the staging ledger. Boundary-only",
+        "rows are retained as explicit negative/context evidence (E/L0) and",
+        "are not treated as support for the requested exact edge. The generated",
+        "SQL does not invent original experiment numbers, mechanisms, or",
+        "unsupported paper metadata.",
         "",
     ])
     REPORT.write_text("\n".join(report))

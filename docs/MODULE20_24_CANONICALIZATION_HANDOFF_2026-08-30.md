@@ -147,7 +147,7 @@ mechanisms, or paper identifiers.
 | Module 20–24 curation paradigms | 985 | one per phase-2 PMID paper |
 | Phase-2 `Experiment` | 1,761 | source-defined evidence units |
 | Phase-2 `Observation` | 1,761 | validated source-unit observations |
-| Phase-2 `AuthorClaim` rows | 1,761 | curator-normalized assertions, typed `curated_evidence_claim` |
+| Phase-2 `AuthorClaim` rows | 1,761 | curator-normalized assertions; 1,756 `curated_evidence_claim` and 5 `curated_boundary_assertion` |
 | Phase-2 `EvidenceLink` | 1,761 | claim-to-observation `supports` links |
 | Phase-2 `SignalingEdgeSource` | 1,694 | 1,642 unique extraction IDs; repeated rows reflect one source unit attached to multiple existing register edges |
 
@@ -155,8 +155,9 @@ The phase-2 edge-source grade/context distribution is:
 
 | Evidence grade | Count | Context levels represented |
 |---|---:|---|
-| B | 1,254 | L0–L4 |
-| D | 435 | L0–L2 |
+| B | 1,253 | L0–L4 |
+| D | 431 | L0–L2 |
+| E | 5 | L0; explicit non-promotable boundary evidence |
 | U | 5 | L0 |
 
 Previously unassigned register grades were upgraded to `B` only where the
@@ -185,3 +186,27 @@ The mechanism-role, mechanism-database-release, and regulon validators all
 returned zero issues, and the mechanism-graph validator passed. Remaining
 work is to resolve the 119 edge-provenance gaps, review the still-staged
 Phase-2 rows, and then perform the final bundle/export audit.
+
+## Boundary-only evidence correction — 2026-08-31
+
+Five reviewed Phase-2 records were identified as explicit non-support for the
+queued exact edge rather than positive edge evidence. Their evaluated
+Paper/Experiment/Observation/Claim/Link records are retained for traceability,
+but their edge-source records are now classified as `negative_evidence`,
+`evidence_grade=E`, `context_level=L0`, and
+`grading_status=phase2_boundary_not_support`. The associated claims and
+observations are labelled as boundary assertions. No direct-edge promotion is
+supported by these records.
+
+| Module | Evidence ID | Boundary reason |
+|---|---|---|
+| 20B | `M20B-EVID-002177` | LAMB1–DAG1 exact-pair mismatch; support is for assembled laminin-511/alpha5 context |
+| 20B | `M20B-EVID-002204` | LAMC1–DAG1 exact-pair mismatch; support is for assembled laminin-511/alpha5 context |
+| 20B | `M20B-EVID-002899` | CD34–SELP cell binding does not establish CD34 as the protein ligand |
+| 20B | `M20B-EVID-003366` | PAR1-to-PAR2 transactivation/function does not establish a direct thrombin–PAR2 edge |
+| 24B | `M24B-EVID-000105` | RvD1/FPR2 structural model is bounded context, not definitive biochemical binding or SCI evidence |
+
+The unchanged schema supports the boundary status label within the existing
+40-character field. The local database audit confirms five boundary source
+rows, zero canonical evidence-unit orphans, and all display-column byte limits
+within schema constraints.
