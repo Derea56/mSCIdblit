@@ -29,6 +29,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--base-dir", type=Path, default=DEFAULT_BASE)
     parser.add_argument("--layer-dir", type=Path, default=DEFAULT_LAYER)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument("--graph-version", default="1.1.0")
+    parser.add_argument("--release-status", default="released")
     return parser.parse_args()
 
 
@@ -254,9 +256,10 @@ def main() -> int:
         shutil.copy2(layer / name, output / name)
 
     metadata = dict(base_metadata)
-    metadata["release_id"] = "module20_24_mechanism_graph:2026-08-30"
+    metadata["release_id"] = f"module20_24_mechanism_graph:v{args.graph_version}"
     metadata["generated_at"] = "2026-08-30"
-    metadata["release_status"] = "candidate_register_backed_graph_with_public_tf_validated_layer"
+    metadata["graph_version"] = args.graph_version
+    metadata["release_status"] = args.release_status
     metadata["source_scope"] = "validated Module 20B-24B registers plus explicitly adjudicated public-TF layer"
     metadata["counts"] = dict(metadata["counts"])
     metadata["counts"].update(
