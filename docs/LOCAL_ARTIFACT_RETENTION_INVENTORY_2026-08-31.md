@@ -56,3 +56,12 @@ They were moved, not deleted. The archive contains a README and the original
 inventory retains their pre-move sizes and SHA-256 values. Raw evidence,
 database-intake staging, and the current tracked mechanism graph were not
 moved.
+
+Preservation incident: two archived helper files shared the basename
+`_20a_tlrs_full.py`. Because the archive destination was initially flat, the
+second move overwrote the first. The surviving `modules/` copy was renamed in
+the archive to `modules__20a_tlrs_full.py`. The original repository-root copy
+was not recoverable from the workspace or temporary directories; its original
+size and SHA-256 remain documented in the inventory for possible recovery from
+an external filesystem backup. No further cleanup will proceed using flat
+archive destinations.
