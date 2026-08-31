@@ -80,3 +80,12 @@ search, audit, recovery, and batch-review scripts were moved to
 All 104 checksums passed. The current Module 20–24, noncanonical, and
 public-TF pipeline scripts remain tracked; raw evidence and processed staging
 artifacts were not moved.
+
+On 2026-08-31, the 2,753 Module 20–24 supervised evidence artifacts were
+moved to the sibling local archive
+`/Users/derea/Documents/SCI/mSCIdblit_local_archive/module20_24_supervised_cli_phase2_2026-08-31/`.
+All paths matched the tracked artifact manifest's byte sizes and SHA-256
+digests. The original logical repository path is now a local-only symlink, and
+the scanner preserves that logical path when rebuilding the manifest. The
+artifact-to-adjudication bridge remains loaded in the local database; the
+physical archive is not part of the public release.
