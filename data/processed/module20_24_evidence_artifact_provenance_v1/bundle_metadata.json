@@ -1,0 +1,9 @@
+{
+  "artifact_count": 2753,
+  "crosswalk_candidate_count": 4873,
+  "identifier_count": 1625,
+  "repository_root": "data/raw/evidence/module20_24_supervised_cli_phase2",
+  "scan_version": "module20_24_artifact_scan_v1",
+  "scope_note": "Filename identifiers and crosswalks are conservative provenance candidates; no canonical biological evidence is created by this layer.",
+  "unique_sha256_count": 2600
+}

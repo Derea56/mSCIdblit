@@ -343,3 +343,42 @@ The bundle passed the database release gates, structural reference audit, and
 isolated downstream `mSCS` import. The root `VERSION` is `1.2.0`. The nine
 unresolved 22B endpoint cases remain U/L0 in the evidence/register layer and
 are intentionally absent as traversable graph edges.
+
+## Retained raw-artifact provenance layer — 2026-08-31
+
+The retained phase-2 artifact directory was integrated into the local
+database as a separate provenance layer. The source files remain at
+`data/raw/evidence/module20_24_supervised_cli_phase2/`; they were not moved,
+rewritten, or converted into biological claims.
+
+The additive migration is
+`schema/module20_24_evidence_artifacts.sql`, and the reproducible generator is
+`scripts/materialize_module20_24_evidence_artifacts.py`. The generated bundle
+is under
+`data/processed/module20_24_evidence_artifact_provenance_v1/`.
+
+Observed inputs and local database results:
+
+| Provenance item | Count | Meaning |
+|---|---:|---|
+| Retained artifacts | 2,753 | One row per file, with repository-relative path, size, role, and SHA-256 |
+| Filename identifiers | 1,625 | Explicit identifiers found in filenames only; not content citation matches |
+| Unique SHA-256 digests | 2,600 | Exact-content duplicate detection signal |
+| Generated crosswalk candidates | 4,873 | Filename token intersects a register source locator |
+| Database crosswalk rows | 3,175 | Idempotently deduplicated links to existing register-source rows |
+
+The database tables are `EvidenceArtifact`, `EvidenceArtifactIdentifier`, and
+`EvidenceArtifactRegisterCrosswalk`. The crosswalk status is explicitly
+`filename_token_candidate`; it is not a canonical evidence assignment. No
+`Paper`, `Experiment`, `Observation`, `AuthorClaim`, `EvidenceLink`,
+`SignalingEdge`, or `SignalingEdgeSource` rows were created or changed by this
+integration. Post-load checks found zero orphan crosswalk rows, zero duplicate
+artifact paths, and zero invalid SHA-256 values. Existing canonical counts
+remain 1,747 Papers, 1,763 Experiments/Observations/AuthorClaims/EvidenceLinks,
+3,399 graph edges, and 5,087 `SignalingEdgeSource` rows.
+
+For future promotion, use the artifact crosswalk to select exact files for
+source-unit review, then apply the existing stable-paper, validated
+observation/claim, A–E/U, and L0–L4 gates. Do not promote an artifact merely
+because its filename contains a PMID, PMCID, DOI, or other accession, and do
+not treat article reference-list identifiers as source assignments.
