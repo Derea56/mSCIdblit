@@ -47,6 +47,8 @@ LOCAL_ARTIFACT = REVIEW_ROOT / "module20_24_phase2_paper_identity_local_artifact
 UNKEYED_LOCAL_ARTIFACT = REVIEW_ROOT / "module20_24_phase2_paper_identity_unkeyed_local_artifact_resolutions.tsv"
 SOURCE_LOCATOR_RESOLUTIONS = REVIEW_ROOT / "module20_24_phase2_paper_identity_source_locator_resolutions.tsv"
 SHARED_IDENTIFIER_RESOLUTIONS = REVIEW_ROOT / "module20_24_phase2_paper_identity_shared_identifier_resolutions.tsv"
+SOURCE_LOCATOR_NCBI_RESOLUTIONS = REVIEW_ROOT / "module20_24_phase2_paper_identity_source_locator_ncbi_resolutions.tsv"
+SHARED_IDENTIFIER_NCBI_RESOLUTIONS = REVIEW_ROOT / "module20_24_phase2_paper_identity_shared_identifier_ncbi_resolutions.tsv"
 OUT = REVIEW_ROOT / "module20_24_phase2_paper_identity_resolution.tsv"
 REPORT = REVIEW_ROOT / "module20_24_phase2_paper_identity_resolution.md"
 EXCEPTIONS_OUT = REVIEW_ROOT / "module20_24_phase2_paper_identity_exceptions.tsv"
@@ -418,7 +420,10 @@ def source_locator_records(path: Path) -> dict[str, dict[str, str]]:
 def shared_identifier_records(path: Path) -> dict[str, dict[str, str]]:
     records: dict[str, dict[str, str]] = {}
     for row in read_tsv(path):
-        if row.get("resolution_status") != "resolved_authoritative_shared_identifier" or not row.get("resolved_pmid"):
+        if row.get("resolution_status") not in {
+            "resolved_authoritative_shared_identifier",
+            "resolved_authoritative_shared_local_identifier",
+        } or not row.get("resolved_pmid"):
             continue
         extraction_id = row.get("extraction_id", "")
         if not extraction_id:
@@ -426,6 +431,36 @@ def shared_identifier_records(path: Path) -> dict[str, dict[str, str]]:
         prior = records.get(extraction_id)
         if prior and prior.get("resolved_pmid") != row.get("resolved_pmid"):
             raise ValueError(f"conflicting shared-identifier mappings for {extraction_id}")
+        records[extraction_id] = row
+    return records
+
+
+def source_locator_ncbi_records(path: Path) -> dict[str, dict[str, str]]:
+    records: dict[str, dict[str, str]] = {}
+    for row in read_tsv(path):
+        if row.get("resolution_status") != "resolved_authoritative_source_locator_ncbi" or not row.get("resolved_pmid"):
+            continue
+        extraction_id = row.get("extraction_id", "")
+        if not extraction_id:
+            continue
+        prior = records.get(extraction_id)
+        if prior and prior.get("resolved_pmid") != row.get("resolved_pmid"):
+            raise ValueError(f"conflicting NCBI source-locator mappings for {extraction_id}")
+        records[extraction_id] = row
+    return records
+
+
+def shared_identifier_ncbi_records(path: Path) -> dict[str, dict[str, str]]:
+    records: dict[str, dict[str, str]] = {}
+    for row in read_tsv(path):
+        if row.get("resolution_status") != "resolved_authoritative_shared_identifier_ncbi" or not row.get("resolved_pmid"):
+            continue
+        extraction_id = row.get("extraction_id", "")
+        if not extraction_id:
+            continue
+        prior = records.get(extraction_id)
+        if prior and prior.get("resolved_pmid") != row.get("resolved_pmid"):
+            raise ValueError(f"conflicting NCBI shared-identifier mappings for {extraction_id}")
         records[extraction_id] = row
     return records
 
@@ -531,6 +566,8 @@ def main() -> None:
     unkeyed_local_artifact = unkeyed_local_artifact_records(UNKEYED_LOCAL_ARTIFACT)
     source_locator_resolution = source_locator_records(SOURCE_LOCATOR_RESOLUTIONS)
     shared_identifier_resolution = shared_identifier_records(SHARED_IDENTIFIER_RESOLUTIONS)
+    source_locator_ncbi_resolution = source_locator_ncbi_records(SOURCE_LOCATOR_NCBI_RESOLUTIONS)
+    shared_identifier_ncbi_resolution = shared_identifier_ncbi_records(SHARED_IDENTIFIER_NCBI_RESOLUTIONS)
     artifact_cache: dict[Path, list[dict[str, object]]] = {}
     rows: list[dict[str, str]] = []
     status_counts = Counter()
@@ -591,8 +628,20 @@ def main() -> None:
             elif source.get("extraction_id", "") in shared_identifier_resolution:
                 record = shared_identifier_resolution[source.get("extraction_id", "")]
                 fill_from_authoritative(result, record)
-                result["identity_resolution_status"] = "resolved_authoritative_shared_identifier"
+                result["identity_resolution_status"] = record.get("resolution_status", "resolved_authoritative_shared_identifier")
                 result["resolution_basis"] = record.get("resolution_basis", "exact shared-identifier mapping")
+                result["authoritative_source"] = record.get("authoritative_source", "")
+            elif source.get("extraction_id", "") in source_locator_ncbi_resolution:
+                record = source_locator_ncbi_resolution[source.get("extraction_id", "")]
+                fill_from_authoritative(result, record)
+                result["identity_resolution_status"] = "resolved_authoritative_source_locator_ncbi"
+                result["resolution_basis"] = record.get("resolution_basis", "exact NCBI source-locator mapping")
+                result["authoritative_source"] = record.get("authoritative_source", "")
+            elif source.get("extraction_id", "") in shared_identifier_ncbi_resolution:
+                record = shared_identifier_ncbi_resolution[source.get("extraction_id", "")]
+                fill_from_authoritative(result, record)
+                result["identity_resolution_status"] = "resolved_authoritative_shared_identifier_ncbi"
+                result["resolution_basis"] = record.get("resolution_basis", "exact NCBI shared-identifier mapping")
                 result["authoritative_source"] = record.get("authoritative_source", "")
             else:
                 artifact_records: list[dict[str, object]] = []

@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Resolve unresolved rows with one exact PMID in the source locator.
+"""Resolve unresolved rows with one exact paper identifier in source_locator.
 
 The source locator is accepted only when it contains exactly one explicit
-``PMID:<id>`` and the local paper metadata contains that PMID with a title.
-For an ambiguous canonical key the locator PMID must also be one of the
-explicit PMIDs in that key. Non-PMID key identifiers, when present, must
+``PMID:<id>`` or exactly one stable PubMed/PMC/DOI article URL, and the local
+paper metadata contains the resulting paper with a title. For an ambiguous
+canonical key the selected identifier must also be one of the explicit
+identifiers in that key. Non-PMID key identifiers, when present, must
 co-occur in the local metadata record. Mappings are stored per extraction row.
 """
 
@@ -35,6 +36,7 @@ FIELDS = [
 ]
 
 PMID_RE = re.compile(r"(?i)\bPMID\s*:\s*(\d+)\b")
+URL_RE = re.compile(r"https?://[^;\s]+", re.IGNORECASE)
 
 
 def read_tsv(path: Path) -> list[dict[str, str]]:
@@ -65,9 +67,48 @@ def metadata_by_pmid() -> dict[str, dict[str, object]]:
     return records
 
 
+def record_tokens(record: dict[str, object]) -> set[tuple[str, str]]:
+    """Return normalized identifiers carried by one local metadata record."""
+    tokens: set[tuple[str, str]] = set()
+    pmid = str(record.get("pmid", "")).strip()
+    pmcid = str(record.get("pmcid", "")).strip().upper()
+    doi = str(record.get("doi", "")).strip().lower()
+    if pmid:
+        tokens.add(("PMID", pmid))
+    if pmcid:
+        tokens.add(("PMCID", pmcid.removeprefix("PMCID:")))
+    if doi:
+        tokens.add(("DOI", doi.removeprefix("doi:")))
+    return tokens
+
+
+def metadata_by_identifier(metadata: dict[str, dict[str, object]]) -> dict[tuple[str, str], list[dict[str, object]]]:
+    """Index local titled records by each exact PMID, PMCID, or DOI."""
+    index: dict[tuple[str, str], list[dict[str, object]]] = {}
+    for record in metadata.values():
+        for token in record_tokens(record):
+            index.setdefault(token, []).append(record)
+    return index
+
+
+def stable_locator_tokens(value: str) -> set[tuple[str, str]]:
+    """Return identifiers from stable article URLs only, not query URLs."""
+    return {
+        token
+        for url in URL_RE.findall(value or "")
+        for token in base.stable_url_tokens(url)
+    }
+
+
 def main() -> None:
     rows = read_tsv(INPUT)
     metadata = metadata_by_pmid()
+    metadata_index = metadata_by_identifier(metadata)
+    prior = {
+        row.get("extraction_id", ""): row
+        for row in read_tsv(OUT)
+        if row.get("extraction_id") and row.get("resolved_pmid")
+    }
     accepted: list[dict[str, str]] = []
     inspected = Counter()
     rejected = Counter()
@@ -77,22 +118,35 @@ def main() -> None:
         if status not in {"unresolved_missing_canonical_identity", "unresolved_no_authoritative_resolution", "unresolved_ambiguous_multiple_canonical_pmids"}:
             continue
         locator_pmids = sorted(set(PMID_RE.findall(row.get("source_locator", ""))))
-        if len(locator_pmids) != 1:
+        stable_tokens = stable_locator_tokens(row.get("source_locator", ""))
+        # A stable article URL is a paper-level selector even when the
+        # locator also repeats a composite list of candidate PMIDs. Accept
+        # only one distinct stable URL identifier; mixed URLs remain queued.
+        if len(stable_tokens) == 1:
+            locator_token = next(iter(stable_tokens))
+        elif len(locator_pmids) == 1:
+            locator_token = ("PMID", locator_pmids[0])
+        else:
             continue
         inspected[status] += 1
-        pmid = locator_pmids[0]
-        record = metadata.get(pmid)
-        if not record:
-            rejected["pmid_not_in_local_metadata"] += 1
+        candidate_records = metadata_index.get(locator_token, [])
+        candidate_pmids = sorted({str(candidate.get("pmid", "")) for candidate in candidate_records if candidate.get("pmid")})
+        if len(candidate_pmids) != 1:
+            rejected["identifier_not_in_unique_local_metadata"] += 1
             continue
+        pmid = candidate_pmids[0]
+        record = metadata[pmid]
         key_tokens = base.all_tokens(row.get("canonical_paper_key", ""))
         key_pmids = {value for kind, value in key_tokens if kind == "PMID"}
-        if status == "unresolved_ambiguous_multiple_canonical_pmids" and pmid not in key_pmids:
+        if locator_token not in key_tokens:
+            rejected["stable_locator_identifier_not_explicit_in_key"] += 1
+            continue
+        if status == "unresolved_ambiguous_multiple_canonical_pmids" and locator_token[0] == "PMID" and pmid not in key_pmids:
             rejected["ambiguous_locator_pmid_not_explicit_in_key"] += 1
             continue
         non_pmid_key_tokens = {token for token in key_tokens if token[0] != "PMID"}
-        record_tokens = base.all_tokens("; ".join(str(record.get(field, "")) for field in ("pmid", "pmcid", "doi")))
-        if non_pmid_key_tokens and not (non_pmid_key_tokens & record_tokens):
+        local_tokens = record_tokens(record)
+        if non_pmid_key_tokens and not (non_pmid_key_tokens & local_tokens):
             rejected["key_identifier_not_in_local_metadata"] += 1
             continue
         accepted.append({
@@ -105,7 +159,11 @@ def main() -> None:
             "resolved_pmcid": str(record.get("pmcid", "")),
             "resolved_doi": str(record.get("doi", "")),
             "resolution_status": "resolved_authoritative_source_locator_pmid",
-            "resolution_basis": "one explicit PMID in source_locator matched one titled local paper metadata record",
+            "resolution_basis": (
+                "one exact stable article URL identifier in source_locator matched one titled local paper metadata record"
+                if stable_tokens
+                else "one explicit PMID in source_locator matched one titled local paper metadata record"
+            ),
             "authoritative_source": str(record.get("source_file", "")),
             "source_metadata_title": str(record.get("title", "")),
             "source_metadata_authors": str(record.get("authors", "")),
@@ -117,6 +175,9 @@ def main() -> None:
 
     if len({row["extraction_id"] for row in accepted}) != len(accepted):
         raise ValueError("duplicate extraction IDs in source-locator ledger")
+    merged = prior.copy()
+    merged.update({row["extraction_id"]: row for row in accepted})
+    accepted = [merged[key] for key in sorted(merged)]
     with OUT.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=FIELDS, delimiter="\t", quoting=csv.QUOTE_ALL, lineterminator="\n")
         writer.writeheader()
@@ -125,11 +186,12 @@ def main() -> None:
     report = [
         "# Phase-2 source-locator PMID identity resolution",
         "",
-        "Only unresolved rows with exactly one explicit PMID in source_locator were inspected.",
-        "Each PMID had to match a titled local paper metadata record. Ambiguous keys additionally required the locator PMID to be explicit in the key.",
+        "Only unresolved rows with exactly one explicit PMID or one stable PubMed/PMC/DOI article URL identifier in source_locator were inspected.",
+        "Each identifier had to match a titled local paper metadata record. Ambiguous keys additionally required the selected identifier to be explicit in the key.",
         "",
-        f"- Rows with one explicit source-locator PMID inspected: {sum(inspected.values()):,}",
-        f"- Accepted exact row-level mappings: {len(accepted):,}",
+        f"- New rows with one explicit source-locator PMID or stable article URL inspected: {sum(inspected.values()):,}",
+        f"- New accepted exact row-level mappings: {sum(1 for row in accepted if row['extraction_id'] not in prior):,}",
+        f"- Total retained exact row-level mappings: {len(accepted):,}",
         f"- Rejected mappings: {sum(rejected.values()):,}",
         "",
         "| Module | Rows |",

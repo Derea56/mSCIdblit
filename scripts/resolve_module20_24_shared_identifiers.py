@@ -16,6 +16,7 @@ from pathlib import Path
 
 import resolve_module20_24_identity_exception_batch as ncbi
 import resolve_module20_24_phase2_paper_identities as base
+import resolve_module20_24_source_locator_pmids as local
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -44,6 +45,21 @@ def main() -> None:
         for row in read_tsv(ncbi.OUT)
         if row.get("resolution_status") == "resolved_authoritative_ncbi" and row.get("resolved_pmid")
     }
+    metadata = local.metadata_by_pmid()
+    local_index: dict[tuple[str, str], set[str]] = {}
+    for pmid, record in metadata.items():
+        tokens = {("PMID", pmid)}
+        if record.get("pmcid"):
+            tokens.add(("PMCID", str(record["pmcid"]).upper().removeprefix("PMCID:")))
+        if record.get("doi"):
+            tokens.add(("DOI", str(record["doi"]).lower().removeprefix("doi:")))
+        for token in tokens:
+            local_index.setdefault(token, set()).add(pmid)
+    prior = {
+        row.get("extraction_id", ""): row
+        for row in read_tsv(OUT)
+        if row.get("extraction_id") and row.get("resolved_pmid")
+    }
     accepted: list[dict[str, str]] = []
     inspected = Counter()
     rejected = Counter()
@@ -54,15 +70,67 @@ def main() -> None:
         locator_tokens = base.all_tokens(row.get("source_locator", ""))
         shared = sorted(
             token for token in key_tokens & locator_tokens
-            if token[0] in {"DOI", "PMCID"} and token in authoritative
+            if token[0] in {"DOI", "PMCID"}
         )
         if not shared:
             continue
         inspected[row["identity_resolution_status"]] += 1
         if len(shared) != 1:
-            rejected["multiple_shared_authoritative_identifiers"] += 1
+            local_pmids = [local_index.get(token, set()) for token in shared]
+            if not local_pmids or not all(len(pmids) == 1 for pmids in local_pmids) or len({next(iter(pmids)) for pmids in local_pmids}) != 1:
+                rejected["multiple_shared_identifiers_not_one_local_paper"] += 1
+                continue
+            pmid = next(iter(local_pmids[0]))
+            record = metadata[pmid]
+            token_text = ",".join(f"{kind}:{value}" for kind, value in shared)
+            accepted.append({
+                "extraction_id": row.get("extraction_id", ""),
+                "module": row.get("module", ""),
+                "b_evidence_id": row.get("b_evidence_id", ""),
+                "canonical_paper_key": row.get("canonical_paper_key", ""),
+                "source_locator": row.get("source_locator", ""),
+                "resolved_pmid": pmid,
+                "resolved_pmcid": str(record.get("pmcid", "")),
+                "resolved_doi": str(record.get("doi", "")),
+                "resolution_status": "resolved_authoritative_shared_local_identifier",
+                "resolution_basis": f"all shared identifiers ({token_text}) mapped to one titled local paper metadata record",
+                "authoritative_source": str(record.get("source_file", "")),
+                "source_metadata_title": str(record.get("title", "")),
+                "source_metadata_authors": str(record.get("authors", "")),
+                "source_metadata_year": str(record.get("publication_year", record.get("year", ""))),
+                "source_metadata_journal": str(record.get("journal", "")),
+                "source_metadata_abstract": str(record.get("abstract", "")),
+                "source_metadata_url": str(record.get("source_url", record.get("url", ""))),
+            })
             continue
         token = shared[0]
+        if token not in authoritative:
+            local_pmids = local_index.get(token, set())
+            if len(local_pmids) != 1:
+                rejected["shared_identifier_not_in_unique_local_paper"] += 1
+                continue
+            pmid = next(iter(local_pmids))
+            record = metadata[pmid]
+            accepted.append({
+                "extraction_id": row.get("extraction_id", ""),
+                "module": row.get("module", ""),
+                "b_evidence_id": row.get("b_evidence_id", ""),
+                "canonical_paper_key": row.get("canonical_paper_key", ""),
+                "source_locator": row.get("source_locator", ""),
+                "resolved_pmid": pmid,
+                "resolved_pmcid": str(record.get("pmcid", "")),
+                "resolved_doi": str(record.get("doi", "")),
+                "resolution_status": "resolved_authoritative_shared_local_identifier",
+                "resolution_basis": f"one shared local {token[0]} identifier in canonical_paper_key and source_locator mapped to one titled local paper metadata record",
+                "authoritative_source": str(record.get("source_file", "")),
+                "source_metadata_title": str(record.get("title", "")),
+                "source_metadata_authors": str(record.get("authors", "")),
+                "source_metadata_year": str(record.get("publication_year", record.get("year", ""))),
+                "source_metadata_journal": str(record.get("journal", "")),
+                "source_metadata_abstract": str(record.get("abstract", "")),
+                "source_metadata_url": str(record.get("source_url", record.get("url", ""))),
+            })
+            continue
         record = authoritative[token]
         accepted.append({
             "extraction_id": row.get("extraction_id", ""),
@@ -85,6 +153,9 @@ def main() -> None:
         })
     if len({row["extraction_id"] for row in accepted}) != len(accepted):
         raise ValueError("duplicate extraction IDs in shared-identifier ledger")
+    merged = prior.copy()
+    merged.update({row["extraction_id"]: row for row in accepted})
+    accepted = [merged[key] for key in sorted(merged)]
     with OUT.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=FIELDS, delimiter="\t", quoting=csv.QUOTE_ALL, lineterminator="\n")
         writer.writeheader()
@@ -92,11 +163,12 @@ def main() -> None:
     report = [
         "# Phase-2 shared DOI/PMCID identity resolution",
         "",
-        "Only unresolved rows with one shared authoritative DOI or PMCID in both canonical_paper_key and source_locator were accepted.",
-        "The shared identifier had to have one accepted exact NCBI mapping; rows with competing shared identifiers were rejected.",
+        "Only unresolved rows with shared exact DOI/PMCID identifiers in both canonical_paper_key and source_locator were accepted.",
+        "A row was accepted either through one accepted exact NCBI mapping or when all shared identifiers mapped to one titled local paper metadata record; competing papers were rejected.",
         "",
         f"- Rows with shared authoritative identifier inspected: {sum(inspected.values()):,}",
-        f"- Accepted exact row-level mappings: {len(accepted):,}",
+        f"- New accepted exact row-level mappings: {sum(1 for row in accepted if row['extraction_id'] not in prior):,}",
+        f"- Total retained exact row-level mappings: {len(accepted):,}",
         f"- Rejected competing mappings: {sum(rejected.values()):,}",
         "",
         "| Module | Rows |",
