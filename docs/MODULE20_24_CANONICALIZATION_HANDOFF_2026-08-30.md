@@ -276,3 +276,33 @@ curation paradigms, 1,763 Experiments, 1,763 Observations, 1,763 AuthorClaims,
 1,763 EvidenceLinks, and 1,700 Phase-2/full-text-linked SignalingEdgeSource
 rows representing 1,648 unique source-unit extraction IDs. The full-text SQL
 is rerunnable without duplicate rows.
+
+## 22B unresolved endpoint audit — 2026-08-31
+
+The completeness audit compares every exportable B-layer edge ID with the
+canonical register. The only remaining missing IDs are the nine 22B rows
+below. Each has `source_entity=none_identified`,
+`target_entity=none_identified`, `pathway_name=none_identified`, and
+`edge_status=unresolved` in the B-layer register. They remain explicitly in
+the staging/evidence ledgers with U/L0 rather than receiving invented graph
+endpoints or a derived terminal-TF edge.
+
+| B-layer edge / evidence | Exact source locator(s) | Current blocker preserved from review |
+|---|---|---|
+| `M22B-E000813` / `M22B-EVID-000416` | PMID `29518356`; PMCID `PMC5889092`; PMID `27477018` | APP-derived Aβ, TREM2, and TYROBP/microglial biology do not establish a direct full-length APP–TREM2 terminal-TF route |
+| `M22B-E000814` / `M22B-EVID-000401` | PMID `36789429`; PMCID `PMC9928040`; PMID `21354648` | GR/MR cooperation and aldosterone-responsive transcription do not establish the submitted Aldo–CYP11B2–NR3C1 exact edge |
+| `M22B-E000815` / `M22B-EVID-000410` | PMID `27477018`; PMCID `PMC4646257` | ApoA1/TREM2 binding does not establish an ApoA1-triggered TYROBP/SYK-to-TF cascade or named target |
+| `M22B-E000816` / `M22B-EVID-000411` | PMID `27477018` | Particle/composition-dependent apolipoprotein evidence does not establish isolated ApoA2 as the active ligand or a terminal TF claim |
+| `M22B-E000817` / `M22B-EVID-000413` | PMCID `PMC4646257`; PMID `27477018` | ApoB/TREM2 binding does not establish an ApoB-specific TYROBP/SYK-to-TF output |
+| `M22B-E000818` / `M22B-EVID-000414` | PMID `26374899`; PMCID `PMC4646257`; PMID `33314529` | ApoE binding/phagocytosis and TYROBP-associated expression do not constitute one ApoE-triggered route with TF occupancy at a named target |
+| `M22B-E000819` / `M22B-EVID-000418` | PMID `2993292`; PMID `3001726` | Beta-endorphin shows low kappa or mu-biased binding in the cited work; exact OPRK1 activation and terminal TF evidence are absent |
+| `M22B-E000856` / `M22B-EVID-000380` | PMID `24052900`; PMCID `PMC3774700`; PMID `35736809` | ALK7/SMAD2/3/PPARγ pathway evidence does not resolve the submitted Activin A–ACVR1C–ACVR2A/B complex or exact TF-target claim |
+| `M22B-E000908` / `M22B-EVID-000420` | PMID `24133212`; PMID `28782088`; PMID `37735270` | Human BAG6–NCR3 evidence does not establish the species-specific `Ncr3-ps` receptor branch or a terminal TF/program edge |
+
+The cached primary records were checked where available, including the
+aldosterone/GR/MR genome-wide binding and transcription paper and the
+TREM2/apolipoprotein and Aβ/TREM2 records. Those records strengthen the
+underlying contextual literature but do not satisfy the exact endpoint and
+terminal-claim requirements for these nine submitted rows. The 22B register
+therefore remains complete for all resolvable exportable rows while these
+nine unresolved cases stay auditable and non-canonical.
