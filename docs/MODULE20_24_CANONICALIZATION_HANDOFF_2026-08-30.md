@@ -24,10 +24,11 @@ Post-write database counts for the affected register modules are:
 
 | Module | Register edges | High-tier edges |
 |---|---:|---:|
-| 20B | 1,108 | 142 |
+| 20B | 1,110 | 143 |
 | 21B | 115 | 85 |
-| 23B | 1,069 | 242 |
-| 24B | 149 | 83 |
+| 22B | 934 | 89 |
+| 23B | 1,072 | 242 |
+| 24B | 151 | 85 |
 
 The mechanism-role, mechanism-database-release, and regulon validators all
 passed with zero issues.
@@ -149,14 +150,14 @@ mechanisms, or paper identifiers.
 | Phase-2 `Observation` | 1,761 | validated source-unit observations |
 | Phase-2 `AuthorClaim` rows | 1,761 | curator-normalized assertions; 1,756 `curated_evidence_claim` and 5 `curated_boundary_assertion` |
 | Phase-2 `EvidenceLink` | 1,761 | claim-to-observation `supports` links |
-| Phase-2 `SignalingEdgeSource` | 1,694 | 1,642 unique extraction IDs; repeated rows reflect one source unit attached to multiple existing register edges |
+| Phase-2 `SignalingEdgeSource` | 1,698 | 1,646 unique extraction IDs; repeated rows reflect one source unit attached to multiple register edges |
 
 The phase-2 edge-source grade/context distribution is:
 
 | Evidence grade | Count | Context levels represented |
 |---|---:|---|
-| B | 1,253 | L0–L4 |
-| D | 431 | L0–L2 |
+| B | 1,257 | L0–L4 |
+| D | 433 | L0–L2 |
 | E | 5 | L0; explicit non-promotable boundary evidence |
 | U | 5 | L0 |
 
@@ -166,13 +167,15 @@ and claim text. Remaining unassigned register records stay in staging for
 paper-level adjudication. The independent L0–L4 context values and written
 bases remain separate from the evidence grade.
 
-There are 119 candidate extraction rows with valid paper/observation/claim
-routes but no exact matching `SignalingEdgeRegisterSource` in the current
-canonical register. Their Paper/Experiment/Observation/claim/link records
-are retained, but no edge-source row was invented; these remain an explicit
-edge-provenance resolution queue. The exact IDs and source locators are
-recoverable from the Phase-2 extraction TSV and generated materialization
-report under `work/cross_module_synthesis/canonical_evidence_review/`.
+There are now 115 candidate extraction rows with valid
+paper/observation/claim routes but no exact matching
+`SignalingEdgeRegisterSource` in the current canonical register. All 115 are
+attached to non-exportable 20B B-layer edges. Their
+Paper/Experiment/Observation/claim/link records are retained, but no
+edge-source row was invented; these remain an explicit edge-provenance
+resolution queue. The exact IDs and source locators are recoverable from the
+Phase-2 extraction TSV and generated materialization report under
+`work/cross_module_synthesis/canonical_evidence_review/`.
 
 The claim records are intentionally not labelled as verbatim author claims:
 the Phase-2 `claim_text_or_blocker` field is a curator-normalized evidence
@@ -184,8 +187,8 @@ are byte-capped for the local SQL_ASCII database; full source text remains in
 The corrected materialization SQL is idempotent and was rerun successfully.
 The mechanism-role, mechanism-database-release, and regulon validators all
 returned zero issues, and the mechanism-graph validator passed. Remaining
-work is to resolve the 119 edge-provenance gaps, review the still-staged
-Phase-2 rows, and then perform the final bundle/export audit.
+work is to review the still-staged Phase-2 rows and perform the final
+bundle/export audit.
 
 ## Boundary-only evidence correction — 2026-08-31
 
@@ -210,3 +213,66 @@ The unchanged schema supports the boundary status label within the existing
 40-character field. The local database audit confirms five boundary source
 rows, zero canonical evidence-unit orphans, and all display-column byte limits
 within schema constraints.
+
+## Exportable homophilic-edge integration — 2026-08-31
+
+The targeted materializer
+`scripts/materialize_module20_24_missing_exportable_homophilic_edges.py`
+integrated five exportable B-layer self-interaction edges using the existing
+protein-to-homophilic-complex graph convention. The exact B-layer IDs remain
+the register authority; the complex node is only a non-self-loop graph
+representation required by the unchanged schema.
+
+| Module | B-layer edge | Canonical graph representation | Canonical source route |
+|---|---|---|---|
+| 20B | `M20B-E001498` | Pcdha4b -> Pcdha4b homophilic complex | Register source plus stable PMID-backed Phase-2 route |
+| 20B | `M20B-E002375` | Ncam1 -> NCAM1 homophilic complex | Register source plus stable PMID-backed Phase-2 route |
+| 23B | `M23B-E000490` | CADM3 -> CADM3 homophilic complex | Register source; Phase-2 row remains abstract-importable and is not yet an Observation/Claim route |
+| 24B | `M24B-E000087` | Flrt3 -> FLRT3 homophilic complex | Register source plus stable PMID-backed Phase-2 route |
+| 24B | `M24B-E000119` | PCDHGC5 -> PCDHGC5 homophilic complex | Register source plus stable PMID-backed Phase-2 route |
+
+The post-integration audit finds five homophilic register-source rows, zero
+orphan source edges, and all database release validators still pass. The two
+exportable 23B Claudin-2 rows (`M23B-E000343` and `M23B-E000344`) were
+initially held because their reviewed packet supplied only
+`PMCID:PMC3434516`; the local full-text route is now documented and
+materialized in the CLDN2 section below. The authoritative [PubMed record for
+PMID `22645303`](https://pubmed.ncbi.nlm.nih.gov/22645303/) identifies that
+paper. Nine 22B
+exportable rows remain unresolved because their source and target endpoints
+are both `none_identified`; no canonical endpoint can be created from those
+rows.
+
+## CLDN2 primary-full-text resolution — 2026-08-31
+
+The two previously held 23B rows were resolved from the repository's local NCBI
+full-text record:
+`data/raw/evidence/module20_24_supervised_cli_phase2/retry_C23B096_PMC3434516_ncbi.html`.
+The record identifies PMID `22645303`, PMCID `PMC3434516`, DOI
+`10.1128/MCB.00299-12`, and the paper title
+"Claudin-2 Promotes Breast Cancer Liver Metastasis by Facilitating Tumor Cell
+Interactions with Hepatocytes." The source reports trans-homotypic
+claudin-2–claudin-2 interactions, first-extracellular-loop dependence, and
+separate liver-metastasis functional outcomes.
+
+`scripts/materialize_module20_24_cldn2_fulltext.py` generated and applied an
+idempotent transaction for both exact B-layer rows:
+
+| B-layer row | Canonical layer | Verified source-unit result | Grade/context |
+|---|---|---|---|
+| `M23B-E000343` / `M23B-EVID-000501` | direct molecular | hepatocyte CLDN2 knockdown and first-loop chimera rescue support the CLDN2–CLDN2 trans-homotypic adhesion claim | B/L1 |
+| `M23B-E000344` / `M23B-EVID-000503` | downstream functional | claudin-2 knockdown reduces liver-metastatic burden and first-loop chimeras rescue the phenotype | B/L1 |
+
+Each row now has a Paper, source-defined Experiment, Observation,
+curator-labelled AuthorClaim, EvidenceLink, canonical graph edge, register
+mapping, and register-source provenance. The unchanged no-self-loop schema is
+handled with the existing `CLDN2 -> CLDN2 homophilic complex` representation.
+The B/L1 grade is preserved: this is a non-CNS breast-cancer liver-metastasis
+comparator, not CNS, spinal-cord tissue, or SCI evidence. The direct molecular
+and downstream functional routes remain separate.
+
+After this refinement, the local database contains 1,747 Paper rows, 986
+curation paradigms, 1,763 Experiments, 1,763 Observations, 1,763 AuthorClaims,
+1,763 EvidenceLinks, and 1,700 Phase-2/full-text-linked SignalingEdgeSource
+rows representing 1,648 unique source-unit extraction IDs. The full-text SQL
+is rerunnable without duplicate rows.
