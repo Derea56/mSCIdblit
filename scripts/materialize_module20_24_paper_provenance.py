@@ -21,12 +21,15 @@ ROOT = Path(__file__).resolve().parents[1]
 PHASE2 = ROOT / "work" / "cross_module_synthesis" / "canonical_evidence_review" / "module20_24_integrated_phase2_extractions.tsv"
 LEDGER = ROOT / "work" / "cross_module_synthesis" / "canonical_evidence_review" / "module20_24_evidence_grade_ledger.tsv"
 METADATA = ROOT / "work" / "cross_module_synthesis" / "module20_24_canonical_paper_metadata.tsv"
+IDENTITY = ROOT / "work" / "cross_module_synthesis" / "canonical_evidence_review" / "module20_24_phase2_paper_identity_resolution.tsv"
 SOURCE_ROOT = ROOT / "data" / "raw" / "evidence" / "module20_24_supervised_cli_phase2"
 OUT_SQL = ROOT / "work" / "cross_module_synthesis" / "canonical_evidence_review" / "module20_24_paper_provenance_materialization.sql"
 REPORT = ROOT / "work" / "cross_module_synthesis" / "canonical_evidence_review" / "module20_24_paper_provenance_materialization.md"
 
 
 def read_tsv(path: Path) -> list[dict[str, str]]:
+    if not path.exists():
+        return []
     with path.open(newline="") as handle:
         return list(csv.DictReader(handle, delimiter="\t"))
 
@@ -109,6 +112,24 @@ def stable_pmids(value: str) -> set[str]:
     return set(re.findall(r"\bPMID:(\d+)\b", value or "", flags=re.I))
 
 
+def identity_metadata_record(row: dict[str, str]) -> dict[str, str]:
+    """Convert exact resolver metadata to the Paper materializer shape."""
+    return {
+        "pmid": row.get("resolved_pmid", ""),
+        "pmcid": row.get("resolved_pmcid", ""),
+        "doi": row.get("resolved_doi", ""),
+        "title": row.get("source_metadata_title", ""),
+        "authors": row.get("source_metadata_authors", ""),
+        "publication_year": row.get("source_metadata_year", ""),
+        "journal": row.get("source_metadata_journal", ""),
+        "volume": "",
+        "issue": "",
+        "pages": "",
+        "abstract": row.get("source_metadata_abstract", ""),
+        "source_url": row.get("source_metadata_url", ""),
+    }
+
+
 def normalize_species(value: str) -> str:
     value = value.lower()
     has_mouse = "mouse" in value
@@ -155,13 +176,37 @@ def normalize_confidence(value: str) -> str:
     return "uncertain"
 
 
+def normalized_title(value: str) -> str:
+    """Compare titles without treating punctuation/case as identity conflicts."""
+    greek_names = {
+        "α": "alpha", "β": "beta", "γ": "gamma", "δ": "delta",
+        "ε": "epsilon", "θ": "theta", "κ": "kappa", "λ": "lambda",
+        "μ": "mu", "π": "pi", "ρ": "rho", "σ": "sigma", "τ": "tau",
+        "φ": "phi", "χ": "chi", "ψ": "psi", "ω": "omega",
+    }
+    lowered = (value or "").lower()
+    lowered = "".join(greek_names.get(char, char) for char in lowered)
+    return re.sub(r"[^a-z0-9]+", "", lowered)
+
+
 def main() -> None:
     phase2 = read_tsv(PHASE2)
     ledger = read_tsv(LEDGER)
     metadata = read_tsv(METADATA)
+    identities = read_tsv(IDENTITY)
+    identity_manifest_present = IDENTITY.exists()
+    identity_by_extraction = {
+        row["extraction_id"]: row for row in identities if row.get("extraction_id")
+    }
     phase_by_evidence: dict[str, set[str]] = defaultdict(set)
     for row in phase2:
-        phase_by_evidence[row["b_evidence_id"]].update(stable_pmids(row.get("canonical_paper_key", "")))
+        identity = identity_by_extraction.get(row.get("extraction_id", ""), {})
+        if identity.get("resolved_pmid"):
+            phase_by_evidence[row["b_evidence_id"]].add(identity["resolved_pmid"])
+        elif not identity_manifest_present:
+            # Preserve the pre-bridge route only when the resolver has not run.
+            # Once it exists, unresolved/ambiguous rows must remain unresolved.
+            phase_by_evidence[row["b_evidence_id"]].update(stable_pmids(row.get("canonical_paper_key", "")))
 
     metadata_by_pmid: dict[str, dict[str, str]] = {}
     for row in metadata:
@@ -169,11 +214,29 @@ def main() -> None:
             continue
         metadata_by_pmid[row["pmid"]] = row
 
+    identity_by_pmid: dict[str, dict[str, str]] = {}
+    identity_conflicts: set[str] = set()
+    for row in identities:
+        pmid = row.get("resolved_pmid", "")
+        title = row.get("source_metadata_title", "")
+        if not pmid or not title:
+            continue
+        if pmid in identity_conflicts:
+            continue
+        record = identity_metadata_record(row)
+        existing = identity_by_pmid.get(pmid)
+        if existing and existing.get("title") and normalized_title(existing["title"]) != normalized_title(title):
+            identity_conflicts.add(pmid)
+            identity_by_pmid.pop(pmid, None)
+            continue
+        identity_by_pmid.setdefault(pmid, record)
+
     xml = xml_records()
-    pmids = sorted({pmid for row in phase2 for pmid in stable_pmids(row.get("canonical_paper_key", ""))})
+    pmids = sorted({pmid for values in phase_by_evidence.values() for pmid in values})
     papers: dict[str, dict[str, str]] = {}
     for pmid in pmids:
         record = dict(metadata_by_pmid.get(pmid, {}))
+        record.update({key: value for key, value in identity_by_pmid.get(pmid, {}).items() if value})
         record.update({key: value for key, value in xml.get(pmid, {}).items() if value})
         if not record.get("title"):
             continue
@@ -194,7 +257,25 @@ def main() -> None:
         "-- It does not create Experiment, Observation, AuthorClaim, or EvidenceLink rows.",
         "BEGIN;",
         "",
+        "CREATE TEMP TABLE m2024_paper_source_pairs (register_evidence_id TEXT NOT NULL, pmid TEXT NOT NULL, PRIMARY KEY (register_evidence_id, pmid));",
+        "",
     ]
+    if source_rows:
+        pairs = sorted({(row["b_evidence_id"], pmid) for row, pmid in source_rows})
+        lines.extend([
+            "INSERT INTO m2024_paper_source_pairs (register_evidence_id, pmid) VALUES",
+            ",\n".join(f"  ({sql(evidence_id)}, {sql(pmid)})" for evidence_id, pmid in pairs) + ";",
+            "",
+            "-- Remove only stale paper-anchored provenance from prior resolver runs.",
+            "DELETE FROM SignalingEdgeSource s",
+            "WHERE s.notes LIKE '%\"materialization_status\": \"paper_anchored_register_provenance\"%'",
+            "  AND NOT EXISTS (",
+            "    SELECT 1 FROM m2024_paper_source_pairs keep",
+            "    WHERE keep.register_evidence_id=substring(s.notes FROM '\"module20_24_register_evidence_id\": \"([^\"]+)\"')",
+            "      AND keep.pmid=substring(s.notes FROM '\"paper_anchor\": \"PMID:([0-9]+)\"')",
+            "  );",
+            "",
+        ])
     for pmid in sorted(papers):
         row = papers[pmid]
         year = row.get("publication_year", "")
@@ -214,6 +295,7 @@ def main() -> None:
 
     for row, pmid in source_rows:
         note = {
+            "canonicalization_batch": "module20_24_paper_provenance",
             "module20_24_register_evidence_id": row["b_evidence_id"],
             "register_edge_ids": row["b_edge_id"],
             "register_source_locator": row["source_locator"],
@@ -259,6 +341,7 @@ def main() -> None:
         f"- Unique PMID anchors in Phase-2: {len(pmids):,}",
         f"- Exact local/metadata Paper records: {len(papers):,}",
         f"- Paper-anchored register-source links: {len(source_rows):,}",
+        f"- Identity metadata conflicts retained unresolved: {len(identity_conflicts):,}",
         "",
         "| Module | Paper-anchored source links |",
         "|---|---:|",

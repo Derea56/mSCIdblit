@@ -27,6 +27,7 @@ LEDGER = REVIEW_ROOT / "module20_24_evidence_grade_ledger.tsv"
 OUT_SQL = REVIEW_ROOT / "module20_24_phase2_evidence_materialization.sql"
 REPORT = REVIEW_ROOT / "module20_24_phase2_evidence_materialization.md"
 METADATA = ROOT / "work" / "cross_module_synthesis" / "module20_24_canonical_paper_metadata.tsv"
+IDENTITY = REVIEW_ROOT / "module20_24_phase2_paper_identity_resolution.tsv"
 MODULES = ("20B", "21B", "22B", "23B", "24B")
 # These five reviewed records explicitly reject promotion of the queued exact
 # edge. Keep their evaluated observations and claims, but never treat them as
@@ -44,6 +45,15 @@ BOUNDARY_ONLY_EVIDENCE_IDS = frozenset({
 def read_tsv(path: Path) -> list[dict[str, str]]:
     with path.open(newline="") as handle:
         return list(csv.DictReader(handle, delimiter="\t"))
+
+
+def identity_records() -> dict[str, dict[str, str]]:
+    """Load exact per-extraction paper identity resolutions."""
+    return {
+        row["extraction_id"]: row
+        for row in read_tsv(IDENTITY)
+        if row.get("extraction_id")
+    }
 
 
 def json_text(payload: dict[str, object]) -> str:
@@ -167,18 +177,42 @@ def note_match(column: str, extraction_id: str) -> str:
 def main() -> None:
     phase2 = read_tsv(PHASE2)
     ledger = {row["b_evidence_id"]: row for row in read_tsv(LEDGER)}
+    identities = identity_records()
+    identity_manifest_present = IDENTITY.exists()
     available_pmids = set(xml_records())
     if METADATA.exists():
         available_pmids.update(row["pmid"] for row in read_tsv(METADATA) if row.get("paper_ready") == "true" and row.get("pmid"))
+    # HTML/JSON/TSV source artifacts can carry exact bibliographic metadata
+    # without being PubMed XML. The identity manifest is allowed to extend
+    # the paper gate only when it contains both a resolved PMID and a title.
+    available_pmids.update(
+        row["resolved_pmid"]
+        for row in identities.values()
+        if row.get("resolved_pmid") and row.get("source_metadata_title")
+    )
 
     candidates: list[dict[str, str]] = []
     for row in phase2:
-        stable = [pmid for pmid in pmids(row.get("canonical_paper_key", "")) if pmid in available_pmids]
+        identity = identities.get(row.get("extraction_id", ""), {})
+        resolved = identity.get("resolved_pmid", "")
+        if resolved and resolved in available_pmids:
+            stable = [resolved]
+        elif not identity_manifest_present:
+            # Preserve the pre-bridge behavior only when the resolver has not
+            # been run. Once the manifest exists, an explicit unresolved or
+            # ambiguous result must remain staged rather than being silently
+            # re-admitted through a legacy PMID key.
+            stable = [pmid for pmid in pmids(row.get("canonical_paper_key", "")) if pmid in available_pmids]
+        else:
+            stable = []
         if not stable or not valid_observation(row) or not valid_claim(row):
             continue
         grading = ledger.get(row["b_evidence_id"], {})
         candidate = dict(row)
         candidate["pmid"] = stable[0]
+        candidate["identity_resolution_status"] = identity.get("identity_resolution_status", "legacy_canonical_key")
+        candidate["identity_resolution_basis"] = identity.get("resolution_basis", "legacy canonical PMID resolution")
+        candidate["identity_authoritative_source"] = identity.get("authoritative_source", "canonical_paper_key")
         candidate["evidence_grade"] = grading.get("evidence_grade", "")
         candidate["context_level"] = grading.get("context_level", "")
         candidate["grading_basis"] = grading.get("grading_basis", "")
@@ -212,12 +246,51 @@ def main() -> None:
         "-- gates remain in staging and are not silently synthesized.",
         "BEGIN;",
         "",
+        "CREATE TEMP TABLE m2024_phase2_candidates (extraction_id TEXT PRIMARY KEY);",
         "CREATE TEMP TABLE m2024_phase2_experiments (extraction_id TEXT PRIMARY KEY, experiment_id BIGINT NOT NULL);",
         "CREATE TEMP TABLE m2024_phase2_observations (extraction_id TEXT PRIMARY KEY, observation_id BIGINT NOT NULL);",
         "CREATE TEMP TABLE m2024_phase2_claims (extraction_id TEXT PRIMARY KEY, claim_id BIGINT NOT NULL);",
         "UPDATE AuthorClaim SET claim_type='curated_evidence_claim', notes=replace(notes, '\"record_type\": \"canonical_author_claim\"', '\"record_type\": \"canonical_claim\"') WHERE claim_type='source_author_claim' AND notes LIKE '%\"canonicalization_batch\": \"module20_24_phase2\"%';",
         "",
     ]
+
+    if candidates:
+        lines.extend([
+            "INSERT INTO m2024_phase2_candidates (extraction_id) VALUES",
+            ",\n".join(f"  ({sql(row['extraction_id'])})" for row in candidates) + ";",
+            "",
+            "-- Remove only stale rows previously created by this exact bridge batch.",
+            "DELETE FROM SignalingEdgeSource s",
+            "WHERE s.notes LIKE '%\"canonicalization_batch\": \"module20_24_phase2\"%'",
+            "  AND COALESCE(substring(s.notes FROM '\"extraction_id\": \"([^\"]+)\"'), '') NOT IN (SELECT extraction_id FROM m2024_phase2_candidates);",
+            "DELETE FROM EvidenceLink l",
+            "WHERE l.notes LIKE '%\"canonicalization_batch\": \"module20_24_phase2\"%'",
+            "  AND COALESCE(substring(l.notes FROM '\"extraction_id\": \"([^\"]+)\"'), '') NOT IN (SELECT extraction_id FROM m2024_phase2_candidates);",
+            "-- AuthorClaim and Observation rows are retained as immutable audit records.",
+            "-- Their EvidenceLink and SignalingEdgeSource rows are the promotion gate.",
+            "DELETE FROM Experiment e",
+            "WHERE e.notes LIKE '%\"canonicalization_batch\": \"module20_24_phase2\"%'",
+            "  AND COALESCE(substring(e.notes FROM '\"extraction_id\": \"([^\"]+)\"'), '') NOT IN (SELECT extraction_id FROM m2024_phase2_candidates)",
+            "  AND NOT EXISTS (SELECT 1 FROM Observation o WHERE o.experiment_id=e.experiment_id);",
+            "-- If an overlapping run left duplicate source-defined experiments, retain",
+            "-- the one with observations and then the lowest stable database ID.",
+            "WITH ranked AS (",
+            "  SELECT e.experiment_id,",
+            "         row_number() OVER (",
+            "           PARTITION BY substring(e.notes FROM '\"extraction_id\": \"([^\"]+)\"')",
+            "           ORDER BY (EXISTS (SELECT 1 FROM Observation o WHERE o.experiment_id=e.experiment_id)) DESC, e.experiment_id",
+            "         ) AS rn",
+            "  FROM Experiment e",
+            "  WHERE e.notes LIKE '%\"canonicalization_batch\": \"module20_24_phase2\"%'",
+            ")",
+            "DELETE FROM Experiment e USING ranked r",
+            "WHERE e.experiment_id=r.experiment_id AND r.rn>1",
+            "  AND NOT EXISTS (SELECT 1 FROM Observation o WHERE o.experiment_id=e.experiment_id);",
+            "DELETE FROM ExperimentalParadigm ep",
+            "WHERE ep.paradigm_name='Module 20-24 source-defined evidence extraction'",
+            "  AND NOT EXISTS (SELECT 1 FROM Experiment e WHERE e.paradigm_id=ep.paradigm_id);",
+            "",
+        ])
 
     for pmid in papers:
         lines.extend([
@@ -264,6 +337,9 @@ def main() -> None:
             "b_evidence_id": row["b_evidence_id"],
             "canonical_paper_key": row["canonical_paper_key"],
             "pmid": row["pmid"],
+            "identity_resolution_status": row.get("identity_resolution_status", "legacy_canonical_key"),
+            "identity_resolution_basis": row.get("identity_resolution_basis", "legacy canonical PMID resolution"),
+            "identity_authoritative_source": row.get("identity_authoritative_source", "canonical_paper_key"),
             "experiment_identity_status": "source_defined_evidence_unit; original_publication_experiment_number_not_separately_preserved",
             "source_locator": row["source_locator"],
             "source_section": row["observation_source_section"],
@@ -291,6 +367,12 @@ def main() -> None:
             "source_section=" + row["observation_source_section"],
         ) if part and part.split("=", 1)[-1].strip())
         lines.extend([
+            "UPDATE Experiment e",
+            "SET paper_id=p.paper_id,",
+            "    notes=regexp_replace(e.notes, '\"pmid\": \"[0-9]+\"', '\"pmid\": \"" + row["pmid"] + "\"')",
+            "FROM Paper p",
+            "WHERE p.pmid=" + sql("PMID:" + row["pmid"]) + " AND " + note_match("e.notes", row["extraction_id"]) + ";",
+            "",
             "INSERT INTO Experiment (paper_id, paradigm_id, experiment_number, figure_table_reference, title, description, notes)",
             "SELECT p.paper_id, ep.paradigm_id, NULL,",
             f"  {sql(db_text(row['observation_figure_or_table'], 100))}, {sql('Source-defined evidence unit ' + row['extraction_id'])},",
@@ -310,6 +392,9 @@ def main() -> None:
             "b_evidence_id": row["b_evidence_id"],
             "canonical_paper_key": row["canonical_paper_key"],
             "pmid": row["pmid"],
+            "identity_resolution_status": row.get("identity_resolution_status", "legacy_canonical_key"),
+            "identity_resolution_basis": row.get("identity_resolution_basis", "legacy canonical PMID resolution"),
+            "identity_authoritative_source": row.get("identity_authoritative_source", "canonical_paper_key"),
             "experiment_identity_status": "source_defined_evidence_unit; original_publication_experiment_number_not_separately_preserved",
             "source_locator": row["source_locator"],
             "source_section": row["observation_source_section"],
@@ -336,19 +421,21 @@ def main() -> None:
             "JOIN ControlledVocabulary_EvidenceType et ON et.evidence_type_name=" + sql(row["evidence_layer"]),
             "JOIN ControlledVocabulary_OutcomeType ot ON ot.outcome_type_name=" + sql(row["outcome_type"]),
             "WHERE e.extraction_id=" + sql(row["extraction_id"]),
-            "  AND NOT EXISTS (SELECT 1 FROM Observation existing WHERE " + note_match("existing.notes", row["extraction_id"]) + ");",
+            "  AND NOT EXISTS (SELECT 1 FROM Observation existing WHERE " + note_match("existing.notes", row["extraction_id"]) + " AND existing.notes LIKE '%\"pmid\": \"" + row["pmid"] + "\"%');",
             "INSERT INTO m2024_phase2_observations (extraction_id, observation_id)",
-            "SELECT " + sql(row["extraction_id"]) + ", o.observation_id FROM Observation o WHERE " + note_match("o.notes", row["extraction_id"]) + " ON CONFLICT (extraction_id) DO NOTHING;",
+            "SELECT " + sql(row["extraction_id"]) + ", o.observation_id FROM Observation o WHERE " + note_match("o.notes", row["extraction_id"]) + " AND o.notes LIKE '%\"pmid\": \"" + row["pmid"] + "\"%' ORDER BY o.observation_id DESC LIMIT 1 ON CONFLICT (extraction_id) DO UPDATE SET observation_id=EXCLUDED.observation_id;",
             "",
             "INSERT INTO AuthorClaim (paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes)",
             "SELECT p.paper_id,",
             f"  {sql(row['claim_text_or_blocker'])}, {sql('curated_evidence_claim')}, {sql(normalize_confidence(row['confidence']))},",
             f"  {sql(db_text(row['claim_source_section'], 100))}, {sql(normalize_confidence(row['confidence']))}, {json_sql(claim_note)}",
             "FROM Paper p WHERE p.pmid=" + sql("PMID:" + row["pmid"]) + " AND NOT EXISTS (SELECT 1 FROM AuthorClaim ac WHERE " + note_match("ac.notes", row["extraction_id"]) + ");",
+            "UPDATE AuthorClaim ac SET paper_id=p.paper_id, notes=regexp_replace(ac.notes, '\"pmid\": \"[0-9]+\"', '\"pmid\": \"" + row["pmid"] + "\"') FROM Paper p WHERE p.pmid=" + sql("PMID:" + row["pmid"]) + " AND " + note_match("ac.notes", row["extraction_id"]) + ";",
             "UPDATE AuthorClaim SET claim_type=" + sql("curated_boundary_assertion" if row["edge_support_status"] == "boundary_not_supporting_requested_edge" else "curated_evidence_claim") + ", notes=replace(notes, '" + '"record_type": "canonical_author_claim"' + "', '" + ('"record_type": "canonical_boundary_claim"' if row["edge_support_status"] == "boundary_not_supporting_requested_edge" else '"record_type": "canonical_claim"') + "') WHERE " + note_match("notes", row["extraction_id"]) + ";",
             "INSERT INTO m2024_phase2_claims (extraction_id, claim_id)",
             "SELECT " + sql(row["extraction_id"]) + ", claim_id FROM AuthorClaim WHERE " + note_match("notes", row["extraction_id"]) + " ON CONFLICT (extraction_id) DO NOTHING;",
             "",
+            "DELETE FROM EvidenceLink l WHERE " + note_match("l.notes", row["extraction_id"]) + " AND l.observation_id <> (SELECT observation_id FROM m2024_phase2_observations WHERE extraction_id=" + sql(row["extraction_id"]) + ");",
             "INSERT INTO EvidenceLink (claim_id, observation_id, link_type, notes)",
             "SELECT c.claim_id, o.observation_id, 'supports',",
             f"  {json_sql({'canonicalization_batch': 'module20_24_phase2', 'extraction_id': row['extraction_id'], 'b_evidence_id': row['b_evidence_id'], 'evidence_grade': row['evidence_grade'], 'context_level': row['context_level']})}",
@@ -373,7 +460,7 @@ def main() -> None:
             "JOIN m2024_phase2_claims c ON c.extraction_id=" + sql(row["extraction_id"]),
             "WHERE s.module=" + sql(row["module"]) + " AND s.register_evidence_id=" + sql(row["b_evidence_id"]),
             "  AND NOT EXISTS (SELECT 1 FROM SignalingEdgeSource existing WHERE " + note_match("existing.notes", row["extraction_id"]) + ");",
-            "UPDATE SignalingEdgeSource SET source_scope=" + sql(source_scope) + ", evidence_grade=" + sql(row["evidence_grade"]) + ", context_level=" + sql(row["context_level"]) + ", grading_basis=" + sql(grading_basis) + ", grading_status=" + sql(grading_status) + ", notes=replace(notes, '" + '"record_type": "canonical_edge_source"' + "', '" + ('"record_type": "canonical_edge_boundary"' if row["edge_support_status"] == "boundary_not_supporting_requested_edge" else '"record_type": "canonical_edge_source"') + "') WHERE " + note_match("notes", row["extraction_id"]) + ";",
+            "UPDATE SignalingEdgeSource SET paper_id=(SELECT paper_id FROM Paper WHERE pmid=" + sql("PMID:" + row["pmid"]) + "), observation_id=(SELECT observation_id FROM m2024_phase2_observations WHERE extraction_id=" + sql(row["extraction_id"]) + "), claim_id=(SELECT claim_id FROM m2024_phase2_claims WHERE extraction_id=" + sql(row["extraction_id"]) + "), source_scope=" + sql(source_scope) + ", evidence_grade=" + sql(row["evidence_grade"]) + ", context_level=" + sql(row["context_level"]) + ", grading_basis=" + sql(grading_basis) + ", grading_status=" + sql(grading_status) + ", notes=regexp_replace(notes, '\"pmid\": \"[0-9]+\"', '\"pmid\": \"" + row["pmid"] + "\"') WHERE " + note_match("notes", row["extraction_id"]) + ";",
             "",
         ])
 
@@ -406,7 +493,9 @@ def main() -> None:
         "rows are retained as explicit negative/context evidence (E/L0) and",
         "are not treated as support for the requested exact edge. The generated",
         "SQL does not invent original experiment numbers, mechanisms, or",
-        "unsupported paper metadata.",
+        "unsupported paper metadata. On rerun, stale promotable links and edge",
+        "sources from this batch are pruned; immutable historical extraction",
+        "records are retained for audit when the database rejects their deletion.",
         "",
     ])
     REPORT.write_text("\n".join(report))
