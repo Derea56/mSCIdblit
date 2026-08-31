@@ -47,3 +47,12 @@ bundles under `data/processed/` are derived snapshots. The tracked
 database exporter are the current graph path. The older snapshots are marked
 as archive candidates, not deletion candidates, until release history and
 reproducibility checks are complete.
+
+## Archive action completed
+
+On 2026-08-31, six exact superseded/comparison-only directories were moved to
+`/Users/derea/Documents/SCI/mSCIdblit_local_archive/derived_snapshots_2026-08-31/`.
+They were moved, not deleted. The archive contains a README and the original
+inventory retains their pre-move sizes and SHA-256 values. Raw evidence,
+database-intake staging, and the current tracked mechanism graph were not
+moved.
