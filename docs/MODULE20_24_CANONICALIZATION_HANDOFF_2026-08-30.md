@@ -962,3 +962,85 @@ source-level discriminator selects one PMID already present in the key.
 Missing-key rows and search-query/manifests remain unresolved until a direct
 source record establishes the paper identity. No placeholder PMID, DOI, PMCID,
 or inferred paper relationship was added.
+
+## Artifact extraction, adjudication, and archive checkpoint — 2026-08-31
+
+The retained Module 20–24 supervised evidence artifacts were brought into an
+explicit artifact-to-review layer. The new additive table
+`EvidenceArtifactAdjudication` records the artifact path, checksum-backed
+artifact identity, module/evidence-register links, Phase-2 extraction ID,
+paper-resolution state, candidate observation and claim text, ABC grade, and
+L0–L4 context level. It is an audit/review layer and does not independently
+promote mechanism edges.
+
+The generated bridge is in:
+
+- `data/processed/module20_24_evidence_artifact_provenance_v1/artifact_adjudication.tsv`
+- `data/processed/module20_24_evidence_artifact_provenance_v1/artifact_adjudication_materialization.sql`
+- `data/processed/module20_24_evidence_artifact_provenance_v1/artifact_adjudication_report.md`
+- `scripts/build_module20_24_artifact_adjudication.py`
+- `schema/module20_24_evidence_artifact_adjudication.sql`
+
+The bridge was loaded into the documented local PostgreSQL database
+`mscidblit_local` through `/private/tmp/mscidblit_pg_socket`:
+
+| Local database item | Rows |
+|---|---:|
+| `EvidenceArtifact` | 2,753 |
+| `EvidenceArtifactAdjudication` | 6,666 |
+| Artifacts represented by the adjudication layer | 2,753 |
+| `supporting_validated_claim` rows | 1,104 |
+
+The adjudication status counts are row counts; one artifact can have several
+register or extraction links:
+
+| Status | Rows |
+|---|---:|
+| `supporting_validated_claim` | 1,104 |
+| `candidate_requires_review` | 701 |
+| `linked_unresolved` | 3,320 |
+| `negative_or_boundary_evaluated` | 2 |
+| `metadata_or_search_only` | 359 |
+| `unmapped_source_artifact` | 1,180 |
+
+All supporting-valid rows have an extraction ID, canonical paper key, and one
+resolved PMID. No canonical graph edge was promoted by this bridge. The public
+database snapshots remain separate staged leads: the current intake contains
+28,169 database-candidate rows, each explicitly labeled as an unreviewed
+database lead rather than direct mechanism evidence.
+
+The 2,753 physical Module 20–24 artifacts were moved, not deleted, to:
+
+`/Users/derea/Documents/SCI/mSCIdblit_local_archive/module20_24_supervised_cli_phase2_2026-08-31/`
+
+All paths matched the tracked manifest's byte sizes and SHA-256 digests. The
+original logical path remains a local-only symlink, and
+`scripts/materialize_module20_24_evidence_artifacts.py` preserves the logical
+repository-relative paths when rebuilding from the archive. The archive is
+local working material and is not part of the public release.
+
+This checkpoint was committed and pushed on branch
+`codex/public-tf-module-screening`:
+
+`2617a63 archive module 20-24 raw artifacts`
+
+## Resumable next steps after the artifact checkpoint
+
+1. Materialize the 28,169 public-database intake leads into a queryable,
+   explicitly noncanonical database intake layer, preserving source record IDs,
+   release labels, species, linked PMIDs, and `unreviewed_database_lead`
+   status.
+2. Review the 701 candidate rows and 1,180 unmapped artifact rows using exact
+   source identity and source-unit gates. Resolve the 3,320 linked-unresolved
+   rows only when an authoritative paper/claim relationship is established.
+3. For the 1,104 supporting-valid rows, attach artifact provenance to the
+   corresponding canonical source units only after checking exact paper,
+   observation, claim, module, species, direction, and grade/context alignment.
+4. Preserve the two negative/boundary rows and all D/E/U or low-context results
+   as queryable evidence; do not collapse them into absence or positive support.
+5. Run the database validators, one-row-per-source audit, and fresh mechanism
+   graph export before preparing the next release.
+
+The working tree still contains 40 pre-existing modified tracked files and
+261 untracked data files from other module evidence/reference staging. They
+were not included in the archive commit and remain intentionally untouched.
