@@ -8,11 +8,11 @@ Accepted NCBI exception-ledger mappings are limited to exact single-identifier k
 The derived resolved_canonical_paper_key is PMID:<id> only after an accepted single-PMID resolution; the original canonical_paper_key is preserved.
 
 - Phase-2 extraction rows audited: 4,722
-- Rows with resolved PMID: 3,634
-- Rows without resolved PMID: 1,088
-- Row-level unresolved exception queue: 1,088
-- Deduplicated exception groups: 513
-- Local artifacts parsed (only when cited by a row): 415
+- Rows with resolved PMID: 3,654
+- Rows without resolved PMID: 1,068
+- Row-level unresolved exception queue: 1,068
+- Deduplicated exception groups: 499
+- Local artifacts parsed (only when cited by a row): 409
 
 ## Resolution status
 
@@ -21,13 +21,14 @@ The derived resolved_canonical_paper_key is PMID:<id> only after an accepted sin
 | resolved_authoritative_local_artifact | 206 |
 | resolved_authoritative_metadata_ledger | 416 |
 | resolved_authoritative_ncbi_exception_ledger | 494 |
+| resolved_authoritative_shared_identifier | 20 |
 | resolved_authoritative_source_locator | 36 |
 | resolved_authoritative_source_locator_pmid | 43 |
 | resolved_authoritative_unkeyed_local_artifact | 22 |
 | resolved_canonical_pmid | 2,417 |
-| unresolved_ambiguous_multiple_canonical_pmids | 565 |
+| unresolved_ambiguous_multiple_canonical_pmids | 546 |
 | unresolved_missing_canonical_identity | 456 |
-| unresolved_no_authoritative_resolution | 67 |
+| unresolved_no_authoritative_resolution | 66 |
 
 ## Unresolved policy
 
