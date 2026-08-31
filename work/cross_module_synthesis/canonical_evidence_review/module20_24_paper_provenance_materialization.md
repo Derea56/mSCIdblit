@@ -4,14 +4,14 @@ Generated SQL is limited to exact local PubMed paper records and
 paper-anchored register provenance. It does not create experiment-level
 or claim/observation rows.
 
-- Unique PMID anchors in Phase-2: 1,656
-- Exact local/metadata Paper records: 1,410
-- Paper-anchored register-source links: 3,020
+- Unique PMID anchors in Phase-2: 1,687
+- Exact local/metadata Paper records: 1,441
+- Paper-anchored register-source links: 3,085
 - Identity metadata conflicts retained unresolved: 1
 
 | Module | Paper-anchored source links |
 |---|---:|
-| 20B | 875 |
+| 20B | 940 |
 | 21B | 77 |
 | 22B | 771 |
 | 23B | 1,160 |

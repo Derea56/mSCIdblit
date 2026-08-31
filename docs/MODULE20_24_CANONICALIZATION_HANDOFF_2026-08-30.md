@@ -819,3 +819,51 @@ Remaining work is genuine paper-level adjudication of the 1,153 unresolved
 rows: ambiguous rows require an exact source-level discriminator, while
 missing/no-resolution rows require a directly evidenced identifier. No
 placeholder PMID, DOI, PMCID, or inferred paper relationship was added.
+
+## Paper-level adjudication Pass 4 — 2026-08-31
+
+Two additional exact-identity lanes were completed. First, 22 unresolved rows
+were resolved individually from cited local XML/HTML artifacts containing one
+metadata-bearing paper record with a unique PMID and title. Second, 43 rows
+with one explicit PMID in `source_locator` were resolved against a titled
+local paper metadata record. Ambiguous keys were accepted in the second lane
+only when the locator PMID was also explicit in the key; one otherwise unsafe
+ambiguous row was rejected.
+
+The row-level ledgers are:
+
+- `work/cross_module_synthesis/canonical_evidence_review/module20_24_phase2_paper_identity_unkeyed_local_artifact_resolutions.tsv`
+- `work/cross_module_synthesis/canonical_evidence_review/module20_24_phase2_paper_identity_source_locator_resolutions.tsv`
+
+The resolver now reports 3,634 of 4,722 extraction rows with a resolved PMID,
+up from 3,569. The remaining unresolved queue is 1,088 rows:
+
+| Status | Rows |
+|---|---:|
+| Ambiguous multiple-PMID key | 565 |
+| Missing canonical identity | 456 |
+| No authoritative resolution | 67 |
+
+These 65 new identity mappings add paper provenance but do not expand the
+1,474-row canonical evidence-unit gate, because the newly identified rows do
+not add valid observation/claim routes beyond that existing gate. The gate
+currently contains 1,474 rows across 848 unique PMID papers, of which five
+are explicit boundary-only E/L0 records and 1,469 support the requested edge.
+
+Current database counts for the Phase-2 batch are 1,883 Experiments, 1,945
+Observations, 1,883 AuthorClaims, 1,474 EvidenceLinks, and 1,508
+SignalingEdgeSource rows. The current grade/context distribution is B/L1
+1,063; B/L2 57; B/L3 4; B/L4 19; D/L0 353; D/L2 4; E/L0 5; U/L0 2; and
+U/L1 1. The ABC and L0–L4 axes remain independent.
+
+The NCBI exception resolver was also made merge-preserving after a rerun
+demonstrated that rebuilding from only the currently unresolved seven DOI
+groups would otherwise discard the prior 213 accepted mappings. The ledger
+now retains 220 identifier groups: 213 accepted mappings and seven unresolved
+DOIs. Future reruns merge new results with the existing ledger.
+
+The three database validators remain at zero issues. A fresh export at
+`/private/tmp/mscitdb_paper_adjudication_pass5_bundle` contains 3,065 nodes,
+4,980 node roles, 3,399 edges, and 11,960 edge sources. The direct export
+audit passed metadata counts, unique IDs, endpoint/source references, complete
+source coverage, and zero self-loops.

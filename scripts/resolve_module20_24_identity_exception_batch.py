@@ -194,6 +194,11 @@ def write_tsv(rows: list[dict[str, str]]) -> None:
 
 
 def main() -> None:
+    prior = {
+        (row.get("identifier_type", ""), row.get("identifier_value", "")): row
+        for row in read_tsv(OUT)
+        if row.get("identifier_type") and row.get("identifier_value")
+    }
     summary_rows = read_tsv(EXCEPTIONS)
     selected: dict[tuple[str, str], set[str]] = defaultdict(set)
     for row in summary_rows:
@@ -262,6 +267,9 @@ def main() -> None:
             row["authoritative_source"] = source
         rows.append(row)
 
+    merged = prior.copy()
+    merged.update({(row["identifier_type"], row["identifier_value"]): row for row in rows})
+    rows = [merged[key] for key in sorted(merged)]
     write_tsv(rows)
     counts = defaultdict(int)
     for row in rows:
