@@ -711,3 +711,41 @@ identity rows, and 69 no-authoritative-resolution rows. The next safe lane is
 to adjudicate ambiguous groups only where their source locator or cited
 artifact selects one exact paper; blank and unknown keys must be reviewed at
 the individual extraction/source level rather than treated as one paper.
+
+## Identity-exception triage Pass 2 — 2026-08-31
+
+Pass 2 examined the ambiguous queue for a stricter local-artifact pattern.
+Four groups were accepted because their cited artifact set contained exactly
+one metadata-bearing XML/HTML paper record, and that record's PMID was already
+explicitly listed in the ambiguous canonical key. Identifier-only TSV records
+and multi-record search packets were excluded.
+
+The reproducible resolver and ledger are:
+
+- `scripts/resolve_module20_24_ambiguous_local_artifacts.py`
+- `work/cross_module_synthesis/canonical_evidence_review/module20_24_phase2_paper_identity_local_artifact_resolutions.tsv`
+- `work/cross_module_synthesis/canonical_evidence_review/module20_24_phase2_paper_identity_local_artifact_resolutions.md`
+
+The four accepted mappings are:
+
+| Module | Original key | Resolved PMID | Cited artifact |
+|---|---|---:|---|
+| 21B | `PMCID:PMC1447428; PMID:16611992; PMID:8565075` | 16611992 | `retry_PMC1447428_article.html` |
+| 21B | `PMCID:PMC3236226; PMID:22174934; PMCID:PMC3382126; PMID:22745786` | 22174934 | `retry_PMC3236226_article.html` |
+| 21B | `PMCID:PMC37478; PMID:11447289; PMCID:PMC124463; PMID:11997436` | 11447289 | `retry_PMC37478_article.html` |
+| 21B | `PMCID:PMC87113; PMID:11416133; PMCID:PMC2193806; PMID:12538665; PMID:11518704` | 11416133 | `retry_PMC87113_article.html` |
+
+The main resolver now reports 3,553 resolved extraction rows and 1,169
+unresolved rows. The canonical promotion candidate set increased from 1,459
+to 1,463 rows. Current Phase-2 edge-source counts are B/L1 1,056, B/L2 56,
+B/L3 4, B/L4 18, D/L0 351, D/L2 4, E/L0 5, U/L0 2, and U/L1 1.
+
+The local database now contains 1,463 current EvidenceLinks, 1,883 current
+Phase-2 Experiments, 1,936 Phase-2 Observations, 1,883 AuthorClaims, and
+1,497 current Phase-2 edge-source rows. All database validators pass with zero
+issues. The final isolated export audit passes with 3,065 nodes, 4,980 node
+roles, 3,399 edges, and 11,877 edge-source rows.
+
+The remaining ambiguous queue is not eligible for automatic collapse: each
+future promotion requires a source-level discriminator selecting one exact
+paper. Blank/unknown-key cases remain individual source-resolution work.

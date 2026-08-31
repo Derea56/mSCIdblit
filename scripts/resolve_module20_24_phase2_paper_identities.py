@@ -43,6 +43,7 @@ REVIEW_ROOT = ROOT / "work" / "cross_module_synthesis" / "canonical_evidence_rev
 PHASE2 = REVIEW_ROOT / "module20_24_integrated_phase2_extractions.tsv"
 METADATA = ROOT / "work" / "cross_module_synthesis" / "module20_24_canonical_paper_metadata.tsv"
 AUTHORITATIVE = REVIEW_ROOT / "module20_24_phase2_paper_identity_authoritative_resolutions.tsv"
+LOCAL_ARTIFACT = REVIEW_ROOT / "module20_24_phase2_paper_identity_local_artifact_resolutions.tsv"
 OUT = REVIEW_ROOT / "module20_24_phase2_paper_identity_resolution.tsv"
 REPORT = REVIEW_ROOT / "module20_24_phase2_paper_identity_resolution.md"
 EXCEPTIONS_OUT = REVIEW_ROOT / "module20_24_phase2_paper_identity_exceptions.tsv"
@@ -366,6 +367,21 @@ def authoritative_records(path: Path) -> dict[tuple[str, str], dict[str, str]]:
     return records
 
 
+def local_artifact_records(path: Path) -> dict[tuple[str, str], dict[str, str]]:
+    records: dict[tuple[str, str], dict[str, str]] = {}
+    for row in read_tsv(path):
+        if row.get("resolution_status") != "resolved_authoritative_local_artifact" or not row.get("resolved_pmid"):
+            continue
+        key = (row.get("module", ""), row.get("canonical_paper_key", ""))
+        if not all(key):
+            continue
+        prior = records.get(key)
+        if prior and prior.get("resolved_pmid") != row.get("resolved_pmid"):
+            raise ValueError(f"conflicting local-artifact mappings for {key[0]}:{key[1]}")
+        records[key] = row
+    return records
+
+
 def output_row(row: dict[str, str]) -> dict[str, str]:
     return {field: row.get(field, "") for field in FIELDS}
 
@@ -463,6 +479,7 @@ def main() -> None:
         if row.get("canonical_paper_key") and row.get("paper_ready") == "true" and row.get("pmid")
     }
     authoritative = authoritative_records(AUTHORITATIVE)
+    local_artifact = local_artifact_records(LOCAL_ARTIFACT)
     artifact_cache: dict[Path, list[dict[str, object]]] = {}
     rows: list[dict[str, str]] = []
     status_counts = Counter()
@@ -502,6 +519,12 @@ def main() -> None:
                 result["identity_resolution_status"] = "resolved_authoritative_ncbi_exception_ledger"
                 result["resolution_basis"] = record.get("resolution_basis", "exact NCBI exception-ledger mapping")
                 result["authoritative_source"] = str(AUTHORITATIVE.relative_to(ROOT))
+            elif (source.get("module", ""), key) in local_artifact:
+                record = local_artifact[(source.get("module", ""), key)]
+                fill_from_authoritative(result, record)
+                result["identity_resolution_status"] = "resolved_authoritative_local_artifact"
+                result["resolution_basis"] = record.get("resolution_basis", "exact local-artifact mapping")
+                result["authoritative_source"] = record.get("authoritative_source", "")
             else:
                 artifact_records: list[dict[str, object]] = []
                 for path in artifact_paths(locator):
