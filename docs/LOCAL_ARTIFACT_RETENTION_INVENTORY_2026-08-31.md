@@ -33,3 +33,17 @@ public release.
 The repository now ignores local-only `.repowise/`, `.mcp.json`, `.vscode/`,
 and `AGENTS.md` paths. This changes Git visibility only; the files were not
 deleted or moved.
+
+## Derived-output review
+
+The 67 files under `data/processed/module20_24_database_intake_v1/` remain
+staging inputs and review provenance. Its README explicitly says that these
+records do not modify the frozen mechanism graph; they must be retained until
+their leads are either adjudicated into the database or formally closed.
+
+The older mechanism bundles, database-comparison outputs, and standalone seed
+bundles under `data/processed/` are derived snapshots. The tracked
+`data/processed/mechanism_graph_module20_24_v2026_08_30/` and the reproducible
+database exporter are the current graph path. The older snapshots are marked
+as archive candidates, not deletion candidates, until release history and
+reproducibility checks are complete.
