@@ -5,7 +5,7 @@ A scientifically rigorous, auditable knowledge base for synthesizing spinal cord
 
 ## Module Narrative Order
 
-Module numbers are stable identifiers, not the recommended reading order. For presentations and synthesis, use: model systems (Module 8), traumatic SCI-to-chronic-lesion pathobiology (Module 13), chronic lesion architecture (Module 1), human pathology/imaging (Module 6), immune/myeloid modulation (Module 3), innate immune conditioning/tolerance (Module 12), ischemic-conditioning comparators (Module 11), host fibroinflammatory conditioning (Module 7), peripheral nerve and DRG priming of CNS repair (Module 15), PNS electrical stimulation preconditioning (Module 16), in vitro/ex vivo validation systems (Module 9), biomaterials/scaffolds (Module 2), cell transplantation (Module 4), axon/remyelination/white matter repair (Module 5), CRISPR epigenome editing for neuroregeneration (Module 14), and clinical trials (Module 10).
+Module numbers are stable identifiers, not the recommended reading order. For presentations and synthesis, use: model systems (Module 8), traumatic SCI-to-chronic-lesion pathobiology (Module 13), chronic lesion architecture (Module 1), human pathology/imaging (Module 6), immune/myeloid modulation (Module 3), TLR signaling cascade architecture (Module 17), non-TLR DAMP sensing (Module 18), histone modification and chromatin-state regulation (Module 19), innate immune conditioning/tolerance (Module 12), ischemic-conditioning comparators (Module 11), host fibroinflammatory conditioning (Module 7), peripheral nerve and DRG priming of CNS repair (Module 15), PNS electrical stimulation preconditioning (Module 16), in vitro/ex vivo validation systems (Module 9), biomaterials/scaffolds (Module 2), cell transplantation (Module 4), axon/remyelination/white matter repair (Module 5), CRISPR epigenome editing for neuroregeneration (Module 14), and clinical trials (Module 10).
 
 ## 🎯 Core Principles
 
@@ -36,6 +36,43 @@ Module numbers are stable identifiers, not the recommended reading order. For pr
 | **SearchSession** | Reproducible search records |
 | **CurationPass / Status tables** | Paper and experiment extraction workflow |
 | **CuratorNote** | Ambiguities, blockers, vocabulary requests, quality flags |
+
+## Public TF/regulon evidence staging
+
+The public TF/regulon expansion is maintained as a separate, additive staging
+layer under
+`data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/module_integration_staging_v1/`.
+It is provenance-aware and review-only: it does not write canonical TF,
+regulon, Module 22B, mechanism-edge, or module-tracker records.
+
+The evidence-strength axis is preserved as A/B/C/D/E, independently from the
+graded context axis: L0 no context evidence, L1 non-CNS, L2 CNS, L3 spinal-cord
+tissue, and L4 spinal-cord-injury context. Component context never upgrades an
+exact regulator-target pair. The latest C-tier pass covers 3,004 unique
+regulator-target-species relationships: 2,459 module-routed and 545
+catalog-only. All retain `C_tflink_source_table_only`; 2,989 are explicitly
+resolved as context-unverifiable at L0 for the current evidence packet, while
+15 retain source-backed component-context overlays. All 15 exact pairs remain
+L0; component context is recorded independently.
+
+Resume from these artifacts:
+
+- [`context_evidence_adjudications.tsv`](/Users/derea/Documents/SCI/mSCIdblit/data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/module_integration_staging_v1/context_evidence_adjudications.tsv) — one context adjudication per promotion record.
+- [`c_tier_context_review_queue.tsv`](/Users/derea/Documents/SCI/mSCIdblit/data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/module_integration_staging_v1/c_tier_context_review_queue.tsv) — all C relationships, deduplicated by regulator-target-species.
+- [`c_tier_context_search_round_001.tsv`](/Users/derea/Documents/SCI/mSCIdblit/data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/module_integration_staging_v1/c_tier_context_search_round_001.tsv), [`c_tier_context_search_round_002.tsv`](/Users/derea/Documents/SCI/mSCIdblit/data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/module_integration_staging_v1/c_tier_context_search_round_002.tsv), [`c_tier_context_search_round_003.tsv`](/Users/derea/Documents/SCI/mSCIdblit/data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/module_integration_staging_v1/c_tier_context_search_round_003.tsv), and [`c_tier_context_search_round_004.tsv`](/Users/derea/Documents/SCI/mSCIdblit/data/processed/public_tf_union_expansion_v1/comprehensive_interaction_promotion_v1/module_integration_staging_v1/c_tier_context_search_round_004.tsv) — targeted search ledgers with upgrade and no-upgrade decisions.
+- [`docs/PUBLIC_TF_EVIDENCE_HANDOFF_2026-08-28.md`](/Users/derea/Documents/SCI/mSCIdblit/docs/PUBLIC_TF_EVIDENCE_HANDOFF_2026-08-28.md) — detailed counts, safeguards, and continuation instructions.
+
+Re-run the public-TF screening and queue builders only after changing the
+source or adjudication inputs:
+
+```bash
+python3 scripts/build_public_tf_context_adjudications.py
+python3 scripts/screen_public_tf_module_integration.py
+python3 scripts/build_public_tf_c_context_review_queue.py
+```
+
+Do not infer context from a TFLink citation or gene identity, and do not
+materialize or commit/push this staging work without an explicit review step.
 
 ## 🚀 Quick Start
 
@@ -86,6 +123,11 @@ mSCIdblit/
 │   ├── AIMS_EVIDENCE_MAP.md          # Specific aims to module evidence map
 │   ├── CONSENSUS_REVIEW_REGISTER.md  # Cross-module consensus review register
 │   ├── MATERIALIZED_INTEGRITY_AUDIT.md # Generated bundle/SQL integrity audit
+│   ├── MODULE_17_TLR_SIGNALING.md    # TLR pathway graph queries and interpretation rules
+│   ├── MODULE_18_NON_TLR_DAMPS.md    # Non-TLR DAMP pathway graph queries and interpretation rules
+│   ├── MODULE_19_HISTONE_MODIFICATION.md # Histone-modification graph queries and interpretation rules
+│   ├── MECHANISM_BUNDLE_EXPORT.md    # Export curated signaling graph bundles for mSCS
+│   ├── MODULE20_24_MECHANISM_GRAPH_RELEASE.md # Evidence-gated Module 20B–24B graph release
 │   └── VALIDATION_QUERIES.md         # Database hygiene checks
 ├── scripts/
 │   ├── export_tracker_evidence_bundle.py # Shared 1B/2B tracker audit + JSON export
@@ -97,6 +139,7 @@ mSCIdblit/
 │   ├── export_module_full_sql.py     # Generic B-module SQL materialization
 │   ├── export_consensus_review_register.py # Cross-module consensus review export
 │   ├── export_cross_module_synthesis.py # Aim-aligned synthesis export
+│   ├── export_mechanism_bundle.py    # Export mSCS-compatible mechanism bundle snapshots
 │   ├── ollama_chunk_extract.py       # Generate small Ollama extraction prompts
 │   ├── seed_controlled_vocab.sql     # Populate reference tables
 │   └── smoke_test.sql                # Toy workflow validation script
@@ -139,12 +182,47 @@ mSCIdblit/
 │   ├── Module_15A_TRACKER.md         # Peripheral nerve and DRG priming of CNS repair tracker
 │   ├── Module_15B_TRACKER.md         # Peripheral nerve and DRG priming evidence consolidation
 │   ├── Module_16A_TRACKER.md         # PNS electrical stimulation preconditioning tracker
-│   └── Module_16B_TRACKER.md         # PNS electrical stimulation preconditioning evidence consolidation
+│   ├── Module_16B_TRACKER.md         # PNS electrical stimulation preconditioning evidence consolidation
+│   ├── Module_17A_TRACKER.md         # TLR signaling cascade and innate receptor pathway architecture tracker
+│   ├── Module_17B_TRACKER.md         # TLR signaling graph evidence consolidation
+│   ├── Module_18A_TRACKER.md         # Non-TLR DAMP sensing and downstream danger signaling tracker
+│   ├── Module_18B_TRACKER.md         # Non-TLR DAMP evidence consolidation
+│   ├── Module_19A_TRACKER.md         # Histone modification and chromatin-state regulation tracker
+│   └── Module_19B_TRACKER.md         # Histone modification evidence consolidation
 ├── CONTRIBUTING.md                    # Scientific curation protocol
 └── README.md                          # This file
 ```
 
 ## 🔑 Key Features
+
+### Mechanism Export to `mSCS`
+
+Curated signaling pathway rows should move into the simulator through an explicit bundle export, not through ad hoc SQL in `mSCS`.
+
+```bash
+python3 /Users/derea/Documents/SCI/mSCIdblit/scripts/export_mechanism_bundle.py \
+  --database-url "$MSCIDBLIT_DATABASE_URL" \
+  --output-dir /Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_bundle_strict_mouse \
+  --species-support mouse \
+  --species-support both \
+  --cell-type-context astrocytes \
+  --min-export-priority medium \
+  --require-sources \
+  --bundle-name astro_strict_mouse_v1
+```
+
+That export produces the exact three-file contract that `mSCS` imports:
+
+- `mechanism_nodes.tsv`
+- `mechanism_edges.tsv`
+- `mechanism_edge_sources.tsv`
+
+See [`docs/MECHANISM_BUNDLE_EXPORT.md`](/Users/derea/Documents/SCI/mSCIdblit/docs/MECHANISM_BUNDLE_EXPORT.md) for the full filter and provenance rules.
+
+For the register-backed Module 20B–24B release snapshot, see
+[`docs/MODULE20_24_MECHANISM_GRAPH_RELEASE.md`](/Users/derea/Documents/SCI/mSCIdblit/docs/MODULE20_24_MECHANISM_GRAPH_RELEASE.md).
+It includes evidence-gated graph edges, source provenance, pathway summaries,
+boundary summaries, and a deterministic integrity validator.
 
 ### 1. Immutable Evidence
 ```sql
@@ -306,6 +384,7 @@ INSERT INTO Hypothesis (
 - **[IMPLEMENTATION_GUIDE.md](docs/IMPLEMENTATION_GUIDE.md)** — Step-by-step data entry with examples
 - **[EXPERIMENT_GRANULARITY.md](docs/EXPERIMENT_GRANULARITY.md)** — Rules for splitting studies into experiments and observations
 - **[VALIDATION_QUERIES.md](docs/VALIDATION_QUERIES.md)** — Quality-control checks after curation batches
+- **[MODULE20A_HANDOFF_2026-08-07.md](docs/MODULE20A_HANDOFF_2026-08-07.md)** — Current Module 20A curation state and resume instructions
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** — Scientific curation protocol
 
 ## 🔍 Key Queries

@@ -459,7 +459,8 @@ def render_materialization_sql(
             "  SELECT COUNT(*) INTO consensus_observation_count FROM Consensus_Observation;",
             "  IF paper_count <> " + str(len(paper_ids)) + " THEN RAISE EXCEPTION 'Expected " + str(len(paper_ids)) + " papers, found %', paper_count; END IF;",
             "  IF experiment_count <> " + str(len(experiment_rows)) + " THEN RAISE EXCEPTION 'Unexpected experiment count %', experiment_count; END IF;",
-            "  IF observation_count <> 50 THEN RAISE EXCEPTION 'Expected 50 observations, found %', observation_count; END IF;",
+            "  IF observation_count <> " + str(len(bundle["observations"])) + " THEN RAISE EXCEPTION 'Expected "
+            + str(len(bundle["observations"])) + " observations, found %', observation_count; END IF;",
             "  IF claim_count <> 36 THEN RAISE EXCEPTION 'Expected 36 claims, found %', claim_count; END IF;",
             "  IF link_count <> 56 THEN RAISE EXCEPTION 'Expected 56 evidence links, found %', link_count; END IF;",
             "  IF consensus_count <> 8 THEN RAISE EXCEPTION 'Expected 8 consensus rows, found %', consensus_count; END IF;",

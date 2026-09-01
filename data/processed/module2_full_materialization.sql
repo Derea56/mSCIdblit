@@ -39,7 +39,7 @@ WITH inserted AS (
     'Histological effects of combined therapy involving scar resection, decellularized scaffolds, and human iPSC-NS/PCs transplantation in chronic complete spinal cord injury', 'Ito K', 2024,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Chronic complete SCI scaffold/cell anchor", "module": "Module 2", "tracker_id": "M2A-P003"}'
+    NULL, '{"curator_notes": "Chronic complete SCI scaffold/cell anchor; upgraded here from M1A carryover with PMC full text and explicit no-functional-recovery boundary", "module": "Module 2", "tracker_id": "M2A-P003"}'
   )
   RETURNING paper_id
 )
@@ -51,7 +51,7 @@ WITH inserted AS (
     'Biomimetic 3D-printed scaffolds for spinal cord injury repair', 'Koffler J', 2019,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "High-yield scaffold architecture anchor", "module": "Module 2", "tracker_id": "M2A-P004"}'
+    NULL, '{"curator_notes": "High-yield scaffold architecture and NPC-relay anchor", "module": "Module 2", "tracker_id": "M2A-P004"}'
   )
   RETURNING paper_id
 )
@@ -63,7 +63,7 @@ WITH inserted AS (
     'Aligned hydrogel tubes guide regeneration following spinal cord injury', 'Dumont CM', 2019,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Alignment/guidance scaffold anchor", "module": "Module 2", "tracker_id": "M2A-P005"}'
+    NULL, '{"curator_notes": "Modular alignment/guidance scaffold anchor", "module": "Module 2", "tracker_id": "M2A-P005"}'
   )
   RETURNING paper_id
 )
@@ -75,7 +75,7 @@ WITH inserted AS (
     'Anisotropic Alginate Hydrogels Promote Axonal Growth across Chronic Spinal Cord Transections after Scar Removal', 'Huang L', 2020,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Chronic scar-removal scaffold bridge", "module": "Module 2", "tracker_id": "M2A-P006"}'
+    NULL, '{"curator_notes": "Chronic scar-removal scaffold bridge; anisotropic alginate channels improved conductivity, locomotion, host-cell infiltration, and raphaespinal/propriospinal/sensory axon growth after chronic scar resection", "module": "Module 2", "tracker_id": "M2A-P006"}'
   )
   RETURNING paper_id
 )
@@ -87,7 +87,7 @@ WITH inserted AS (
     'A functionalized collagen-I scaffold delivers microRNA 21-loaded exosomes for spinal cord injury repair', 'Liu X', 2022,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Scaffold cargo-delivery anchor", "module": "Module 2", "tracker_id": "M2A-P007"}'
+    NULL, '{"curator_notes": "Scaffold cargo-delivery anchor; collagen-I scaffold enriched with CBD-Lamp2b miR21 exosomes improved retention, sustained release, anti-apoptotic signaling, and rat transection repair", "module": "Module 2", "tracker_id": "M2A-P007"}'
   )
   RETURNING paper_id
 )
@@ -123,7 +123,7 @@ WITH inserted AS (
     'Multiple-channel scaffolds to promote spinal cord axon regeneration', 'Moore MJ', 2006,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Early synthetic channel-architecture scaffold anchor", "module": "Module 2", "tracker_id": "M2A-P010"}'
+    NULL, '{"curator_notes": "Early synthetic channel-architecture scaffold anchor; tunable 7-channel PLGA platform combined high wall porosity with sustained surrogate release and supported Schwann-cell-associated axon growth after transection", "module": "Module 2", "tracker_id": "M2A-P010"}'
   )
   RETURNING paper_id
 )
@@ -135,7 +135,7 @@ WITH inserted AS (
     'Reknitting the injured spinal cord by self-assembling peptide nanofiber scaffold', 'Guo J', 2007,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Peptide nanofiber bridge anchor", "module": "Module 2", "tracker_id": "M2A-P011"}'
+    NULL, '{"curator_notes": "Peptide nanofiber bridge anchor; SAPNS supported donor-cell delivery plus host-cell, vascular, and axonal ingrowth in transected dorsal column lesions", "module": "Module 2", "tracker_id": "M2A-P011"}'
   )
   RETURNING paper_id
 )
@@ -147,7 +147,7 @@ WITH inserted AS (
     'Tissue engineered regeneration of completely transected spinal cord using human mesenchymal stem cells', 'Kang KN', 2012,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Complete-transection PLGA/cell bridge anchor", "module": "Module 2", "tracker_id": "M2A-P012"}'
+    NULL, '{"curator_notes": "Complete-transection PLGA/cell bridge anchor; hMSC-loaded PLGA scaffolds improved BBB, MEP, donor persistence, and neural-marker outcomes versus scaffold alone", "module": "Module 2", "tracker_id": "M2A-P012"}'
   )
   RETURNING paper_id
 )
@@ -159,7 +159,7 @@ WITH inserted AS (
     'A Hydrogel Bridge Incorporating Immobilized Growth Factors and Neural Stem/Progenitor Cells to Treat Spinal Cord Injury', 'Li H', 2016,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Patterned growth-factor/cell bridge anchor", "module": "Module 2", "tracker_id": "M2A-P013"}'
+    NULL, '{"curator_notes": "Patterned growth-factor/cell bridge anchor; MAC/chitosan bridge reduced lesion area and increased tracing/differentiation readouts, but BBB differences were not significant", "module": "Module 2", "tracker_id": "M2A-P013"}'
   )
   RETURNING paper_id
 )
@@ -219,7 +219,7 @@ WITH inserted AS (
     'Aligned collagen scaffold combination with human spinal cord-derived neural stem cells to improve spinal cord injury repair', 'Zou Y', 2020,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Human spinal cord-derived NSPC plus aligned collagen anchor", "module": "Module 2", "tracker_id": "M2A-P018"}'
+    NULL, '{"curator_notes": "Human spinal cord-derived NSPC plus aligned collagen anchor; hSC-NSPCs outperformed hbNSPCs for survival, migration, inflammatory suppression, and recovery", "module": "Module 2", "tracker_id": "M2A-P018"}'
   )
   RETURNING paper_id
 )
@@ -231,7 +231,7 @@ WITH inserted AS (
     'A multi-modal delivery strategy for spinal cord regeneration using a composite hydrogel presenting biophysical and biochemical cues synergistically', 'Man W', 2021,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Multimodal biophysical/biochemical hydrogel anchor", "module": "Module 2", "tracker_id": "M2A-P019"}'
+    NULL, '{"curator_notes": "Multimodal biophysical/biochemical hydrogel anchor; AFG/fSAP improved BBB, CatWalk, MEP, cavitation, axon growth, remyelination, and angiogenesis versus AFG alone and saline after lateral hemisection", "module": "Module 2", "tracker_id": "M2A-P019"}'
   )
   RETURNING paper_id
 )
@@ -243,7 +243,7 @@ WITH inserted AS (
     'A decellularized spinal cord extracellular matrix-gel/GelMA hydrogel three-dimensional composite scaffold promotes recovery from spinal cord injury via synergism with human menstrual blood-derived stem cells', 'He W', 2022,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Spinal cord dECM/GelMA plus stem-cell anchor", "module": "Module 2", "tracker_id": "M2A-P020"}'
+    NULL, '{"curator_notes": "Spinal cord dECM/GelMA plus stem-cell anchor; 3D7G scaffold best supported MenSCs and combined implant outperformed component groups in transection repair", "module": "Module 2", "tracker_id": "M2A-P020"}'
   )
   RETURNING paper_id
 )
@@ -255,7 +255,7 @@ WITH inserted AS (
     'Magnetic alignment of injectable hydrogel scaffolds for spinal cord injury repair', 'Tran KA', 2022,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Injectable alignment strategy anchor", "module": "Module 2", "tracker_id": "M2A-P021"}'
+    NULL, '{"curator_notes": "Injectable alignment strategy anchor; 100-G magnetic alignment improved axon orientation and CGRP/GAP43 outcomes with short-endpoint boundaries", "module": "Module 2", "tracker_id": "M2A-P021"}'
   )
   RETURNING paper_id
 )
@@ -267,7 +267,7 @@ WITH inserted AS (
     'Multimodal therapy strategy based on a bioactive hydrogel for repair of spinal cord injury', 'Roh EJ', 2023,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Complex multimodal hydrogel/cell/EV strategy anchor", "module": "Module 2", "tracker_id": "M2A-P022"}'
+    NULL, '{"curator_notes": "Complex multimodal hydrogel/cell/EV strategy anchor; injectable DBM/PDRN/TI-EV/NPC hydrogel reduced inflammation and apoptosis while improving neurotrophin, remyelination, and BBB outcomes after complete transection", "module": "Module 2", "tracker_id": "M2A-P022"}'
   )
   RETURNING paper_id
 )
@@ -279,7 +279,7 @@ WITH inserted AS (
     'Enhanced spinal cord regeneration by gelatin/alginate hydrogel scaffolds containing human endometrial stem cells and curcumin-loaded PLGA nanoparticles in rat', 'Ai A', 2023,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Hydrogel plus stem cell plus anti-inflammatory nanoparticle anchor", "module": "Module 2", "tracker_id": "M2A-P023"}'
+    NULL, '{"curator_notes": "Hydrogel plus stem cell plus anti-inflammatory nanoparticle anchor; delayed hydrogel injection after contusion showed strongest BBB and histology in the combined hEnSC plus nanocurcumin condition", "module": "Module 2", "tracker_id": "M2A-P023"}'
   )
   RETURNING paper_id
 )
@@ -327,7 +327,7 @@ WITH inserted AS (
     'Spinal cord injury repair by implantation of structured hyaluronic acid scaffold with PLGA microspheres in the rat', 'Wen Y', 2016,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Longitudinal HA hydrogel plus multi-cargo microsphere anchor", "module": "Module 2", "tracker_id": "M2A-P027"}'
+    NULL, '{"curator_notes": "Longitudinal HA hydrogel plus multi-cargo microsphere anchor; structured HA+PLGA improved BBB, vascularization, axon growth, and scar/inflammation metrics after dorsal hemisection", "module": "Module 2", "tracker_id": "M2A-P027"}'
   )
   RETURNING paper_id
 )
@@ -339,7 +339,7 @@ WITH inserted AS (
     'Therapeutic Effect of Neurotrophin-3 Treatment in an Injectable Collagen Scaffold Following Rat Spinal Cord Hemisection Injury', 'Breen BA', 2017,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Injectable collagen/NT-3 repair and scar-response anchor", "module": "Module 2", "tracker_id": "M2A-P028"}'
+    NULL, '{"curator_notes": "Injectable collagen/NT-3 repair and scar-response anchor; collagen hydrogel improved BBB and scar indices, while NT-3 mainly added axonal and collagen-deposition benefits", "module": "Module 2", "tracker_id": "M2A-P028"}'
   )
   RETURNING paper_id
 )
@@ -351,7 +351,7 @@ WITH inserted AS (
     'Biodegradable scaffolds promote tissue remodeling and functional improvement in non-human primates with acute spinal cord injury', 'Slotkin JR', 2017,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Non-human primate translational scaffold anchor", "module": "Module 2", "tracker_id": "M2A-P029"}'
+    NULL, '{"curator_notes": "Non-human primate translational scaffold anchor; PLGA-PLL porous scaffold improved 12-week locomotor recovery and appositional tissue remodeling after T9-T10 lateral hemisection in African green monkeys", "module": "Module 2", "tracker_id": "M2A-P029"}'
   )
   RETURNING paper_id
 )
@@ -363,7 +363,7 @@ WITH inserted AS (
     'Neurotrophin-3 released from implant of tissue-engineered fibroin scaffolds inhibits inflammation, enhances nerve fiber regeneration, and improves motor function in canine spinal cord injury', 'Li G', 2018,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Large-animal sustained NT-3/fibroin scaffold anchor", "module": "Module 2", "tracker_id": "M2A-P030"}'
+    NULL, '{"curator_notes": "Large-animal sustained NT-3/fibroin scaffold anchor; NF-GS outperformed fibroin-only GS at 4 weeks in Olby score, CMEP, IBA1 burden, and NF-fiber density, while GFAP scar density was unchanged.", "module": "Module 2", "tracker_id": "M2A-P030"}'
   )
   RETURNING paper_id
 )
@@ -375,7 +375,7 @@ WITH inserted AS (
     'Polycaprolactone/polysialic acid hybrid, multifunctional nanofiber scaffolds for treatment of spinal cord injury', 'Zhang S', 2018,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Electrospun drug-loaded nanofiber scaffold anchor", "module": "Module 2", "tracker_id": "M2A-P031"}'
+    NULL, '{"curator_notes": "Electrospun drug-loaded nanofiber scaffold anchor; PCL/PSA/MP nanofibers reduced inflammatory and apoptotic markers while improving BBB, NF-200, and myelination after rat transection SCI", "module": "Module 2", "tracker_id": "M2A-P031"}'
   )
   RETURNING paper_id
 )
@@ -387,7 +387,7 @@ WITH inserted AS (
     'Effect of hyaluronic acid hydrogels containing astrocyte-derived extracellular matrix and/or V2a interneurons on histologic outcomes following spinal cord injury', 'Thompson RE', 2018,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Astrocyte-ECM and interneuron-supporting HA hydrogel anchor", "module": "Module 2", "tracker_id": "M2A-P032"}'
+    NULL, '{"curator_notes": "Astrocyte-ECM and interneuron-supporting HA hydrogel anchor; protoplasmic ECM, not fibrous ECM, reduced scar/immune staining and increased neurite penetration, while V2a aggregates increased neuronal-process staining without functional testing.", "module": "Module 2", "tracker_id": "M2A-P032"}'
   )
   RETURNING paper_id
 )
@@ -411,7 +411,7 @@ WITH inserted AS (
     'A Hyaluronic Acid Demilune Scaffold and Polypyrrole-Coated Fibers Carrying Embedded Human Neural Precursor Cells and Curcumin for Surface Capping of Spinal Cord Injuries', 'Elkhenany H', 2021,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Surface-capping conductive/combinatorial scaffold anchor", "module": "Module 2", "tracker_id": "M2A-P034"}'
+    NULL, '{"curator_notes": "Surface-capping conductive/combinatorial scaffold anchor; fully functionalized cap preserved beta-III-tubulin fibers and reduced GFAP-negative lesion area at 1 week, but did not reduce Iba1/ED1 neuroinflammation.", "module": "Module 2", "tracker_id": "M2A-P034"}'
   )
   RETURNING paper_id
 )
@@ -423,7 +423,7 @@ WITH inserted AS (
     'Therapeutic Effect of Biomimetic Scaffold Loaded with Human Amniotic Epithelial Cell-Derived Neural-like Cells for Spinal Cord Injury', 'Qiu C', 2022,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "GelMA microchannel scaffold plus hAEC-derived neural cells anchor", "module": "Module 2", "tracker_id": "M2A-P035"}'
+    NULL, '{"curator_notes": "GelMA microchannel scaffold plus hAEC-derived neural cells anchor; cell-loaded scaffolds improved BBB (5.667 vs 2.333 empty vs 0.667 transection control) and MEP at 8 weeks, but key analyses had N=3 because of postoperative deaths and cells were neural-like rather than demonstrated mature neurons.", "module": "Module 2", "tracker_id": "M2A-P035"}'
   )
   RETURNING paper_id
 )
@@ -435,7 +435,7 @@ WITH inserted AS (
     'Dual-phase SilMA hydrogel: a dynamic scaffold for sequential drug release and enhanced spinal cord repair via neural differentiation and immunomodulation', 'Zhang R', 2024,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Sequential release silk methacryloyl hydrogel anchor", "module": "Module 2", "tracker_id": "M2A-P036"}'
+    NULL, '{"curator_notes": "Sequential release silk methacryloyl hydrogel anchor; Ang-(1-7) released >40% by day 3 and nearly all by day 7, while NT-3 remained in delayed release through days 28-56; 4D-SilMA improved M2/M1 markers, neuronal markers, tissue structure, and 8-week BMS to 6 in mice (n=6/group).", "module": "Module 2", "tracker_id": "M2A-P036"}'
   )
   RETURNING paper_id
 )
@@ -447,7 +447,7 @@ WITH inserted AS (
     'Coaxial 3D printing of hierarchical structured hydrogel scaffolds for on-demand repair of spinal cord injury', 'Li Y', 2023,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Time-programmed 3D-printed hydrogel scaffold anchor", "module": "Module 2", "tracker_id": "M2A-P037"}'
+    NULL, '{"curator_notes": "Time-programmed 3D-printed hydrogel scaffold anchor; coaxial scaffold paired rapid MnTBAP antioxidant release with aligned N-cadherin hydrogel cues to improve endogenous NSC migration, neuronal differentiation, and motor recovery", "module": "Module 2", "tracker_id": "M2A-P037"}'
   )
   RETURNING paper_id
 )
@@ -459,7 +459,7 @@ WITH inserted AS (
     'Schwann Cell-Derived Exosomes and Methylprednisolone Composite Patch for Spinal Cord Injury Repair', 'Zhu B', 2023,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Surface patch/exosome/steroid hydrogel scaffold anchor", "module": "Module 2", "tracker_id": "M2A-P038"}'
+    NULL, '{"curator_notes": "Surface patch/exosome/steroid hydrogel scaffold anchor; noninvasive surface patch reduced acute inflammation and apoptosis and improved 28-day gait, MEP, and cavitation after T10 contusion", "module": "Module 2", "tracker_id": "M2A-P038"}'
   )
   RETURNING paper_id
 )
@@ -471,7 +471,7 @@ WITH inserted AS (
     'Axon-like aligned conductive CNT/GelMA hydrogel fibers combined with electrical stimulation for spinal cord injury recovery', 'Yao S', 2024,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Conductive aligned scaffold plus electrical stimulation anchor", "module": "Module 2", "tracker_id": "M2A-P039"}'
+    NULL, '{"curator_notes": "Conductive aligned scaffold plus electrical stimulation anchor; 2CNT/GelMA+ES improved inflammation, axon density, remyelination, tissue conductivity (1.50 x 10^-3 S/cm vs normal 2.13 x 10^-3), BBB, pain response, and MEP.", "module": "Module 2", "tracker_id": "M2A-P039"}'
   )
   RETURNING paper_id
 )
@@ -483,7 +483,7 @@ WITH inserted AS (
     'Time Controlled Protein Release from Layer-by-Layer Assembled Multilayer Functionalized Agarose Hydrogels', 'Mehrotra S', 2010,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Agarose channel/protein-release scaffold methods anchor", "module": "Module 2", "tracker_id": "M2A-P040"}'
+    NULL, '{"curator_notes": "Agarose channel/protein-release scaffold methods anchor; PEG/PAA/protein LbL films gave pH-triggered, active protein release for more than four weeks in vitro, with rate controlled by agarose porosity and film composition.", "module": "Module 2", "tracker_id": "M2A-P040"}'
   )
   RETURNING paper_id
 )
@@ -495,7 +495,7 @@ WITH inserted AS (
     'Graft of a tissue-engineered neural scaffold serves as a promising strategy to restore myelination after rat spinal cord transection', 'Lai BQ', 2014,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Myelination-focused NT-3/TrkC neural scaffold anchor", "module": "Module 2", "tracker_id": "M2A-P041"}'
+    NULL, '{"curator_notes": "Myelination-focused NT-3/TrkC neural scaffold anchor; after 8 weeks, GFP-positive graft cells, NSC-derived cells, and NT-3-Schwann cells formed MBP-positive myelin around host and graft axons, without a primary functional endpoint.", "module": "Module 2", "tracker_id": "M2A-P041"}'
   )
   RETURNING paper_id
 )
@@ -507,7 +507,7 @@ WITH inserted AS (
     'Three-dimensional bioprinting collagen/silk fibroin scaffold combined with neural stem cells promotes nerve regeneration after spinal cord injury', 'Sun Y', 2020,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "3D-bioprinted silk/collagen cell scaffold anchor", "module": "Module 2", "tracker_id": "M2A-P042"}'
+    NULL, '{"curator_notes": "3D-bioprinted silk/collagen cell scaffold anchor; scaffold plus NSCs increased NF-H and reduced GFAP relative to SCI/scaffold-only conditions, with n=10/group, while NSC tracing and objective neurological testing were identified limitations.", "module": "Module 2", "tracker_id": "M2A-P042"}'
   )
   RETURNING paper_id
 )
@@ -519,7 +519,7 @@ WITH inserted AS (
     'Functional recovery not correlated with axon regeneration through olfactory ensheathing cell-seeded scaffolds in a model of acute spinal cord injury', 'Führmann T', 2016,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "OEC-seeded scaffold boundary/negative-mechanism anchor", "module": "Module 2", "tracker_id": "M2A-P043"}'
+    NULL, '{"curator_notes": "OEC-seeded scaffold boundary/negative-mechanism anchor; seeded and non-seeded scaffolds improved skilled forelimb function despite only a trend in scaffold axon counts, directly separating functional recovery from simple axon bridging.", "module": "Module 2", "tracker_id": "M2A-P043"}'
   )
   RETURNING paper_id
 )
@@ -1220,10 +1220,10 @@ WITH inserted AS (
     1,
     'Abstract/source page',
     'Tracker experiment M2A-P003-E001',
-    'Histology assessed cavitary lesion filling, vascular endothelial cell migration, microenvironment changes, and tissue repair after scar resection plus kidney-derived dECM hydrogel scaffold.',
-    'Scar resection/scaffold comparisons',
-    'dECM scaffold after scar resection',
-    '{"observation_tracker_ids": ["M2B-O031", "M2B-O043"], "source_experiment": {"chronicity_dpi_wpi": "Chronic phase", "control_type": "Scar resection/scaffold comparisons", "experiment_extracted": "YES", "experiment_id": "M2A-P003-E001", "figure_ref": "Abstract/source page / M1A carried", "injury_device": "Surgical scar resection", "injury_model": "Chronic complete SCI with cavitary lesion", "injury_severity": "Complete chronic lesion", "intervention_type": "dECM scaffold after scar resection", "methods_summary": "Histology assessed cavitary lesion filling, vascular endothelial cell migration, microenvironment changes, and tissue repair after scar resection plus kidney-derived dECM hydrogel scaffold.", "paper_id": "M2A-P003", "sex": "UNKNOWN", "species": "Rodent chronic complete SCI model", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P003-E001", "source_paper_tracker_id": "M2A-P003", "tracker_key": "M2A-P003::M2A-P003-E001"}'
+    'The 8 mg/mL dECM formulation produced the longest DRG neurites (1107.40 +/- 39.96 micrometers vs 883.93 +/- 61.01 for collagen I and 963.80 +/- 29.99 for 16 mg/mL; p = 0.047). In vivo, scar resection shifted Arg1/Iba1 ratio from 0.39% +/- 0.09% to 8.00% +/- 1.47% and scaffold addition increased CD31-positive area to 0.114 +/- 0.011 mm2 versus 0.077 +/- 0.009 with resection alone.',
+    'Collagen I and scar-resection-only comparisons',
+    'Kidney-derived dECM hydrogel scaffold',
+    '{"observation_tracker_ids": ["M2B-O031", "M2B-O043"], "source_experiment": {"chronicity_dpi_wpi": "DRG screening and chronic post-resection interval", "control_type": "Collagen I and scar-resection-only comparisons", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P003-E001", "figure_ref": "PMC11682313; DRG assay, qPCR, and vascular/immune histology", "injury_device": "Three-month chronic SCI scar resection followed by 8 microL kidney-derived dECM hydrogel; 8 and 16 mg/mL formulations pre-screened in DRG assay", "injury_model": "Chronic complete SCI with cavitary lesion conditioning", "injury_severity": "Complete chronic lesion", "intervention_type": "Kidney-derived dECM hydrogel scaffold", "methods_summary": "The 8 mg/mL dECM formulation produced the longest DRG neurites (1107.40 +/- 39.96 micrometers vs 883.93 +/- 61.01 for collagen I and 963.80 +/- 29.99 for 16 mg/mL; p = 0.047). In vivo, scar resection shifted Arg1/Iba1 ratio from 0.39% +/- 0.09% to 8.00% +/- 1.47% and scaffold addition increased CD31-positive area to 0.114 +/- 0.011 mm2 versus 0.077 +/- 0.009 with resection alone.", "paper_id": "M2A-P003", "sex": "UNKNOWN", "species": "Rattus norvegicus / DRG explant plus chronic SCI model", "strain": "Adult rat host plus rat DRG explants", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P003-E001", "source_paper_tracker_id": "M2A-P003", "tracker_key": "M2A-P003::M2A-P003-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P003'
@@ -1240,10 +1240,10 @@ WITH inserted AS (
     2,
     'Abstract/source page / M1A carried',
     'Tracker experiment M2A-P003-E002',
-    'Human iPSC-derived NS/PC transplantation was combined with scaffold-supported scar resection to assess graft survival, host axon regeneration, histological repair, and lack of functional recovery.',
-    'Scaffold/no-cell comparisons',
-    'hNS/PC transplantation with scaffold support',
-    '{"observation_tracker_ids": ["M2B-O052"], "source_experiment": {"chronicity_dpi_wpi": "Chronic phase", "control_type": "Scaffold/no-cell comparisons", "experiment_extracted": "YES", "experiment_id": "M2A-P003-E002", "figure_ref": "Abstract/source page / M1A carried", "injury_device": "Surgical scar resection + transplantation", "injury_model": "Chronic complete SCI with cavitary lesion", "injury_severity": "Complete chronic lesion", "intervention_type": "hNS/PC transplantation with scaffold support", "methods_summary": "Human iPSC-derived NS/PC transplantation was combined with scaffold-supported scar resection to assess graft survival, host axon regeneration, histological repair, and lack of functional recovery.", "paper_id": "M2A-P003", "sex": "UNKNOWN", "species": "Rodent chronic complete SCI model", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P003-E002", "source_paper_tracker_id": "M2A-P003", "tracker_key": "M2A-P003::M2A-P003-E002"}'
+    'Without scar resection, transplanted cells did not survive in the lesion epicenter. TP plus scaffold increased grafted-cell volume and raised NF-H-positive area to 0.0186 +/- 0.0026 mm2 versus 0.0098 +/- 0.0027 with TP alone and 0.0073 +/- 0.0009 in controls, but the paper explicitly reports histologic improvement without functional recovery.',
+    'TP-only, scar-resection-only, and scaffold-only comparisons',
+    'hNS/PC transplantation with dECM scaffold support',
+    '{"observation_tracker_ids": ["M2B-O052"], "source_experiment": {"chronicity_dpi_wpi": "Chronic transplantation endpoint after 3 months SCI", "control_type": "TP-only, scar-resection-only, and scaffold-only comparisons", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P003-E002", "figure_ref": "PMC11682313; graft-volume and NF-H histology", "injury_device": "Scar resection plus scaffold-conditioned lesion followed by three-point hNS/PC transplantation", "injury_model": "Chronic complete SCI with scar resection and transplantation", "injury_severity": "Complete chronic lesion", "intervention_type": "hNS/PC transplantation with dECM scaffold support", "methods_summary": "Without scar resection, transplanted cells did not survive in the lesion epicenter. TP plus scaffold increased grafted-cell volume and raised NF-H-positive area to 0.0186 +/- 0.0026 mm2 versus 0.0098 +/- 0.0027 with TP alone and 0.0073 +/- 0.0009 in controls, but the paper explicitly reports histologic improvement without functional recovery.", "paper_id": "M2A-P003", "sex": "UNKNOWN", "species": "Rattus norvegicus / human iPSC-NS/PC xenograft", "strain": "Adult rat host plus human iPSC-derived NS/PCs", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P003-E002", "source_paper_tracker_id": "M2A-P003", "tracker_key": "M2A-P003::M2A-P003-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P003'
@@ -1258,12 +1258,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract',
+    'Figs. 1-2',
     'Tracker experiment M2A-P004-E001',
-    'Microscale continuous projection printing produced biomimetic CNS hydrogel scaffolds tailored to rodent spinal cord dimensions and scalable to human lesion geometries.',
-    'Native spinal cord geometry',
-    '3D-printed biomimetic hydrogel scaffold',
-    '{"observation_tracker_ids": ["M2B-O004"], "source_experiment": {"chronicity_dpi_wpi": "N/A", "control_type": "Native spinal cord geometry", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P004-E001", "figure_ref": "Abstract", "injury_device": "uCPP scaffold fabrication", "injury_model": "Complete SCI geometry modeling", "injury_severity": "Complete SCI scaffold design", "intervention_type": "3D-printed biomimetic hydrogel scaffold", "methods_summary": "Microscale continuous projection printing produced biomimetic CNS hydrogel scaffolds tailored to rodent spinal cord dimensions and scalable to human lesion geometries.", "paper_id": "M2A-P004", "sex": "N/A", "species": "Rodent model / scalable human geometry", "strain": "N/A", "vertebral_level": "Spinal cord"}, "source_experiment_tracker_id": "M2A-P004-E001", "source_paper_tracker_id": "M2A-P004", "tracker_key": "M2A-P004::M2A-P004-E001"}'
+    'The scaffold retained architecture, reduced reactive-cell layer thickness by 35% versus agarose, reduced GFAP-defined glial scarring, vascularized, and supported 97 +/- 8 NF200-positive axons per channel and 11 +/- 5 serotonergic axons reaching the caudal end; empty scaffolds did not produce distal host-axon extension.',
+    'Empty 3D-printed versus agarose, lesion-only controls',
+    '3D-printed PEGDA-GelMA biomimetic scaffold with 200-micrometer channels and 260-300 kPa elastic modulus',
+    '{"observation_tracker_ids": ["M2B-O004"], "source_experiment": {"chronicity_dpi_wpi": "4 weeks", "control_type": "Empty 3D-printed versus agarose, lesion-only controls", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P004-E001", "figure_ref": "Figs. 1-2; scaffold mechanics, histology, immunostaining", "injury_device": "2-mm PEGDA-GelMA scaffold; agarose, lesion-only, and no-scaffold controls", "injury_model": "Complete SCI geometry and empty-scaffold compatibility", "injury_severity": "1.8-mm tissue gap; 2-mm implant", "intervention_type": "3D-printed PEGDA-GelMA biomimetic scaffold with 200-micrometer channels and 260-300 kPa elastic modulus", "methods_summary": "The scaffold retained architecture, reduced reactive-cell layer thickness by 35% versus agarose, reduced GFAP-defined glial scarring, vascularized, and supported 97 +/- 8 NF200-positive axons per channel and 11 +/- 5 serotonergic axons reaching the caudal end; empty scaffolds did not produce distal host-axon extension.", "paper_id": "M2A-P004", "sex": "N/A", "species": "Fischer rats; T3 complete transection", "strain": "N/A", "vertebral_level": "T3"}, "source_experiment_tracker_id": "M2A-P004-E001", "source_paper_tracker_id": "M2A-P004", "tracker_key": "M2A-P004::M2A-P004-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P004'
@@ -1278,12 +1278,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Figs. 3-4',
     'Tracker experiment M2A-P004-E002',
-    'NPC-loaded biomimetic scaffolds were implanted into complete SCI sites to assess host axon regeneration into the device, NPC axon extension into host cord, synaptic relay formation, synaptic transmission, and functional improvement.',
-    'Injured scaffold/graft comparisons',
-    'NPC-loaded 3D-printed scaffold implantation',
-    '{"observation_tracker_ids": ["M2B-O053"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant repair interval UNKNOWN", "control_type": "Injured scaffold/graft comparisons", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P004-E002", "figure_ref": "Abstract", "injury_device": "Complete spinal cord injury", "injury_model": "Complete SCI", "injury_severity": "Complete SCI", "intervention_type": "NPC-loaded 3D-printed scaffold implantation", "methods_summary": "NPC-loaded biomimetic scaffolds were implanted into complete SCI sites to assess host axon regeneration into the device, NPC axon extension into host cord, synaptic relay formation, synaptic transmission, and functional improvement.", "paper_id": "M2A-P004", "sex": "UNKNOWN", "species": "Rodent", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P004-E002", "source_paper_tracker_id": "M2A-P004", "tracker_key": "M2A-P004::M2A-P004-E002"}'
+    'NPCs filled channels and differentiated into Hu1-positive neurons (47 +/- 2%), NeuN-positive cells (20 +/- 3%), GFAP-positive astrocytes (21 +/- 3%), and Olig2-positive oligodendrocytes (11 +/- 2%). At 6 months, NPC-loaded scaffolds supported 87 +/- 5 serotonergic axons beyond the scaffold, BBB 6.6 +/- 0.5 versus 0.3 +/- 0.2 empty scaffold and 1.6 +/- 0.8 NPC-only, MEP 270 +/- 5 versus 25.1 +/- 5.7 microV, and loss of MEPs after rostral retransection, supporting a scaffold-dependent relay rather than scaffold-only efficacy.',
+    'Empty scaffold and NPC graft without scaffold',
+    'NPC-loaded 3D-printed biomimetic scaffold',
+    '{"observation_tracker_ids": ["M2B-O053"], "source_experiment": {"chronicity_dpi_wpi": "4 weeks and 6 months", "control_type": "Empty scaffold and NPC graft without scaffold", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P004-E002", "figure_ref": "Figs. 3-4; NPC fate, synapses, BBB, MEP, retransection", "injury_device": "2-mm PEGDA-GelMA scaffold loaded with E14 rat spinal NPCs; empty scaffold and NPC-without-scaffold controls", "injury_model": "Acute complete SCI with 1.8-mm tissue removal", "injury_severity": "Complete transection", "intervention_type": "NPC-loaded 3D-printed biomimetic scaffold", "methods_summary": "NPCs filled channels and differentiated into Hu1-positive neurons (47 +/- 2%), NeuN-positive cells (20 +/- 3%), GFAP-positive astrocytes (21 +/- 3%), and Olig2-positive oligodendrocytes (11 +/- 2%). At 6 months, NPC-loaded scaffolds supported 87 +/- 5 serotonergic axons beyond the scaffold, BBB 6.6 +/- 0.5 versus 0.3 +/- 0.2 empty scaffold and 1.6 +/- 0.8 NPC-only, MEP 270 +/- 5 versus 25.1 +/- 5.7 microV, and loss of MEPs after rostral retransection, supporting a scaffold-dependent relay rather than scaffold-only efficacy.", "paper_id": "M2A-P004", "sex": "N/A", "species": "Fischer rats; T3 complete transection", "strain": "N/A", "vertebral_level": "T3"}, "source_experiment_tracker_id": "M2A-P004-E002", "source_paper_tracker_id": "M2A-P004", "tracker_key": "M2A-P004::M2A-P004-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P004'
@@ -1298,12 +1298,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract',
+    'Figs. 2-4',
     'Tracker experiment M2A-P005-E001',
-    'Modular porous hydrogel tubes were assembled to fill the injury, integrate with host tissue by cell infiltration, and compare immune infiltration and glial scar response against gelfoam.',
-    'Gelfoam control',
-    'Porous aligned hydrogel tube implantation',
-    '{"observation_tracker_ids": ["M2B-O005"], "source_experiment": {"chronicity_dpi_wpi": "1-2 WPI immune/scar assessment", "control_type": "Gelfoam control", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P005-E001", "figure_ref": "Abstract", "injury_device": "Experimental SCI", "injury_model": "SCI defect", "injury_severity": "Lesion defect filled with tubes", "intervention_type": "Porous aligned hydrogel tube implantation", "methods_summary": "Modular porous hydrogel tubes were assembled to fill the injury, integrate with host tissue by cell infiltration, and compare immune infiltration and glial scar response against gelfoam.", "paper_id": "M2A-P005", "sex": "UNKNOWN", "species": "Rodent model context", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P005-E001", "source_paper_tracker_id": "M2A-P005", "tracker_key": "M2A-P005::M2A-P005-E001"}'
+    'Porous PEG hydrogel tubes had 66.5% porosity with 250-micrometer inner and 450-micrometer outer diameter. One-week implants showed transient CD11c+ dendritic-cell and F4/80+ macrophage increases without increased bulk GFAP or CD45; by two weeks macrophage density differences resolved. Tube and bridge implants reduced glial scar thickness at two weeks to 127 +/- 73 and 124 +/- 44 micrometers versus 337 +/- 169 with gelfoam.',
+    'Gelfoam-only injury; 5-tube composite and bridge controls',
+    'PEG-MAL/YKND two-step tubes or bridges',
+    '{"observation_tracker_ids": ["M2B-O005"], "source_experiment": {"chronicity_dpi_wpi": "1, 2, and 8 weeks", "control_type": "Gelfoam-only injury; 5-tube composite and bridge controls", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P005-E001", "figure_ref": "Figs. 2-4; porosity, flow cytometry, histology", "injury_device": "T9-T10 lateral hemisection with 2.25-mm defect", "injury_model": "Lateral hemisection SCI", "injury_severity": "2.25-mm lateral hemisection defect", "intervention_type": "PEG-MAL/YKND two-step tubes or bridges", "methods_summary": "Porous PEG hydrogel tubes had 66.5% porosity with 250-micrometer inner and 450-micrometer outer diameter. One-week implants showed transient CD11c+ dendritic-cell and F4/80+ macrophage increases without increased bulk GFAP or CD45; by two weeks macrophage density differences resolved. Tube and bridge implants reduced glial scar thickness at two weeks to 127 +/- 73 and 124 +/- 44 micrometers versus 337 +/- 169 with gelfoam.", "paper_id": "M2A-P005", "sex": "Female", "species": "Mus musculus", "strain": "C57BL/6J", "vertebral_level": "T9-T10"}, "source_experiment_tracker_id": "M2A-P005-E001", "source_paper_tracker_id": "M2A-P005", "tracker_key": "M2A-P005::M2A-P005-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P005'
@@ -1318,12 +1318,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Figs. 5-7',
     'Tracker experiment M2A-P005-E002',
-    'Hydrogel tubes guided robust axon growth along inner and outer tube surfaces, increased axon density within tubes, supported myelination of a subset of axons, and enhanced functional recovery.',
-    'Gelfoam control',
-    'Hydrogel tube axon-guidance scaffold',
-    '{"observation_tracker_ids": ["M2B-O054"], "source_experiment": {"chronicity_dpi_wpi": "Recovery phase UNKNOWN", "control_type": "Gelfoam control", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P005-E002", "figure_ref": "Abstract", "injury_device": "Experimental SCI", "injury_model": "SCI defect", "injury_severity": "Lesion defect filled with tubes", "intervention_type": "Hydrogel tube axon-guidance scaffold", "methods_summary": "Hydrogel tubes guided robust axon growth along inner and outer tube surfaces, increased axon density within tubes, supported myelination of a subset of axons, and enhanced functional recovery.", "paper_id": "M2A-P005", "sex": "UNKNOWN", "species": "Rodent model context", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P005-E002", "source_paper_tracker_id": "M2A-P005", "tracker_key": "M2A-P005::M2A-P005-E002"}'
+    'Axon density in tubes reached 1744 +/- 920 axons/mm2 rostrally and 1436 +/- 567 caudally versus 456 +/- 113 axons/mm2 with gelfoam; approximately 30% of tube axons were myelinated, with a higher oligodendrocyte-derived fraction than gelfoam. PEG bridges and tubes improved BMS, reaching approximately 6 versus 3 with gelfoam; tube-versus-bridge superiority was not established.',
+    'Gelfoam and bridge comparisons',
+    'Aligned PEG hydrogel tube composite',
+    '{"observation_tracker_ids": ["M2B-O054"], "source_experiment": {"chronicity_dpi_wpi": "8 weeks", "control_type": "Gelfoam and bridge comparisons", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P005-E002", "figure_ref": "Figs. 5-7; axon/myelin quantification and BMS", "injury_device": "T9-T10 lateral hemisection with 2.25-mm defect", "injury_model": "Lateral hemisection SCI", "injury_severity": "2.25-mm lateral hemisection defect", "intervention_type": "Aligned PEG hydrogel tube composite", "methods_summary": "Axon density in tubes reached 1744 +/- 920 axons/mm2 rostrally and 1436 +/- 567 caudally versus 456 +/- 113 axons/mm2 with gelfoam; approximately 30% of tube axons were myelinated, with a higher oligodendrocyte-derived fraction than gelfoam. PEG bridges and tubes improved BMS, reaching approximately 6 versus 3 with gelfoam; tube-versus-bridge superiority was not established.", "paper_id": "M2A-P005", "sex": "Female", "species": "Mus musculus", "strain": "C57BL/6J", "vertebral_level": "T9-T10"}, "source_experiment_tracker_id": "M2A-P005-E002", "source_paper_tracker_id": "M2A-P005", "tracker_key": "M2A-P005::M2A-P005-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P005'
@@ -1340,10 +1340,10 @@ WITH inserted AS (
     1,
     'Abstract',
     'Tracker experiment M2A-P006-E001',
-    'After scar resection, anisotropic alginate hydrogels were implanted into the chronic transection cavity and assessed for electrophysiological conductivity and locomotor function.',
-    'Scar resection without hydrogel / pre-engraftment baseline',
+    'Fifty-seven rats were assigned to lesion-only, lesion+scar resection, or lesion+scar resection plus alginate hydrogel groups. The 2 x 2 x 3 mm scaffold restored sublesional electrophysiologic responses and improved BBB scores at 14-16 weeks post-injury relative to lesion and scar-resection controls.',
+    'Lesion-only and scar-resection-only controls',
     'Anisotropic alginate hydrogel engraftment',
-    '{"observation_tracker_ids": ["M2B-O017"], "source_experiment": {"chronicity_dpi_wpi": "Scar resection 4 WPI; outcomes up to 3 months after engraftment", "control_type": "Scar resection without hydrogel / pre-engraftment baseline", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P006-E001", "figure_ref": "Abstract", "injury_device": "Thoracic transection + scar resection", "injury_model": "Chronic complete thoracic transection SCI", "injury_severity": "Complete chronic transection", "intervention_type": "Anisotropic alginate hydrogel engraftment", "methods_summary": "After scar resection, anisotropic alginate hydrogels were implanted into the chronic transection cavity and assessed for electrophysiological conductivity and locomotor function.", "paper_id": "M2A-P006", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "Thoracic"}, "source_experiment_tracker_id": "M2A-P006-E001", "source_paper_tracker_id": "M2A-P006", "tracker_key": "M2A-P006::M2A-P006-E001"}'
+    '{"observation_tracker_ids": ["M2B-O017"], "source_experiment": {"chronicity_dpi_wpi": "4-week chronic scar resection; 12 weeks after engraftment", "control_type": "Lesion-only and scar-resection-only controls", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P006-E001", "figure_ref": "Publisher full-text snapshot", "injury_device": "T5 complete transection with 1-1.5 mm tissue removal followed by scar resection at 4 WPI", "injury_model": "Chronic complete thoracic transection SCI", "injury_severity": "Complete chronic transection", "intervention_type": "Anisotropic alginate hydrogel engraftment", "methods_summary": "Fifty-seven rats were assigned to lesion-only, lesion+scar resection, or lesion+scar resection plus alginate hydrogel groups. The 2 x 2 x 3 mm scaffold restored sublesional electrophysiologic responses and improved BBB scores at 14-16 weeks post-injury relative to lesion and scar-resection controls.", "paper_id": "M2A-P006", "sex": "Female", "species": "Rattus norvegicus", "strain": "Adult female Fischer 344, 140-160 g, n=19/group", "vertebral_level": "T5"}, "source_experiment_tracker_id": "M2A-P006-E001", "source_paper_tracker_id": "M2A-P006", "tracker_key": "M2A-P006::M2A-P006-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P006'
@@ -1360,10 +1360,10 @@ WITH inserted AS (
     2,
     'Abstract',
     'Tracker experiment M2A-P006-E002',
-    'Histology assessed host-cell migration, fibroglial scarring, and regeneration of corticospinal, raphaespinal, propriospinal, and ascending sensory axons through and beyond hydrogel channels.',
-    'Scar resection comparison',
+    'Histology showed numerous host cells within scaffold channels, reduced fibroglial scarring, and regeneration of raphaespinal, propriospinal, and ascending sensory axons into distal host tissue, whereas corticospinal axons did not traverse the graft.',
+    'Lesion-only and scar-resection controls',
     'Anisotropic alginate hydrogel channels',
-    '{"observation_tracker_ids": ["M2B-O055"], "source_experiment": {"chronicity_dpi_wpi": "Up to 3 months after engraftment", "control_type": "Scar resection comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P006-E002", "figure_ref": "Abstract", "injury_device": "Thoracic transection + scar resection", "injury_model": "Chronic complete thoracic transection SCI", "injury_severity": "Complete chronic transection", "intervention_type": "Anisotropic alginate hydrogel channels", "methods_summary": "Histology assessed host-cell migration, fibroglial scarring, and regeneration of corticospinal, raphaespinal, propriospinal, and ascending sensory axons through and beyond hydrogel channels.", "paper_id": "M2A-P006", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "Thoracic"}, "source_experiment_tracker_id": "M2A-P006-E002", "source_paper_tracker_id": "M2A-P006", "tracker_key": "M2A-P006::M2A-P006-E002"}'
+    '{"observation_tracker_ids": ["M2B-O055"], "source_experiment": {"chronicity_dpi_wpi": "Tract tracing 11-12 weeks after grafting", "control_type": "Lesion-only and scar-resection controls", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P006-E002", "figure_ref": "Publisher full-text snapshot", "injury_device": "T5 transection with delayed scar resection and scaffold placement", "injury_model": "Chronic complete thoracic transection SCI", "injury_severity": "Complete chronic transection", "intervention_type": "Anisotropic alginate hydrogel channels", "methods_summary": "Histology showed numerous host cells within scaffold channels, reduced fibroglial scarring, and regeneration of raphaespinal, propriospinal, and ascending sensory axons into distal host tissue, whereas corticospinal axons did not traverse the graft.", "paper_id": "M2A-P006", "sex": "Female", "species": "Rattus norvegicus", "strain": "Adult female Fischer 344", "vertebral_level": "T5"}, "source_experiment_tracker_id": "M2A-P006-E002", "source_paper_tracker_id": "M2A-P006", "tracker_key": "M2A-P006::M2A-P006-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P006'
@@ -1380,10 +1380,10 @@ WITH inserted AS (
     1,
     'Abstract',
     'Tracker experiment M2A-P007-E001',
-    'CBD-Lamp2b and miR21 were overexpressed in HEK293T cells to produce engineered exosomes that tether to collagen-I scaffold and support sustained miR21 release.',
-    'Untethered exosome/scaffold logic',
+    'Genetically engineered CBD-Lamp2b miR21-loaded exosomes were enriched into collagen-I scaffolds, where they showed stronger scaffold retention and sustained release than control exosomes while reducing apoptosis-related signaling in recipient cells.',
+    'CT-EXO, CBD-LP-EXO, and free-miR21 comparisons',
     'CBD-LP-miR21 exosome collagen tethering',
-    '{"observation_tracker_ids": ["M2B-O037"], "source_experiment": {"chronicity_dpi_wpi": "In vitro", "control_type": "Untethered exosome/scaffold logic", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P007-E001", "figure_ref": "Abstract", "injury_device": "N/A", "injury_model": "In vitro scaffold delivery model", "injury_severity": "N/A", "intervention_type": "CBD-LP-miR21 exosome collagen tethering", "methods_summary": "CBD-Lamp2b and miR21 were overexpressed in HEK293T cells to produce engineered exosomes that tether to collagen-I scaffold and support sustained miR21 release.", "paper_id": "M2A-P007", "sex": "N/A", "species": "HEK293T cells / scaffold system", "strain": "HEK293T", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P007-E001", "source_paper_tracker_id": "M2A-P007", "tracker_key": "M2A-P007::M2A-P007-E001"}'
+    '{"observation_tracker_ids": ["M2B-O037"], "source_experiment": {"chronicity_dpi_wpi": "In vitro plus 6-day release testing", "control_type": "CT-EXO, CBD-LP-EXO, and free-miR21 comparisons", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P007-E001", "figure_ref": "Publisher full-text snapshot", "injury_device": "Exosome engineering, collagen scaffold loading, and cell-challenge assays", "injury_model": "In vitro scaffold delivery model", "injury_severity": "N/A", "intervention_type": "CBD-LP-miR21 exosome collagen tethering", "methods_summary": "Genetically engineered CBD-Lamp2b miR21-loaded exosomes were enriched into collagen-I scaffolds, where they showed stronger scaffold retention and sustained release than control exosomes while reducing apoptosis-related signaling in recipient cells.", "paper_id": "M2A-P007", "sex": "N/A", "species": "HEK293T cells / scaffold system", "strain": "HEK293T, NSCs, PC12, and U118 cell assays", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P007-E001", "source_paper_tracker_id": "M2A-P007", "tracker_key": "M2A-P007::M2A-P007-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P007'
@@ -1400,10 +1400,10 @@ WITH inserted AS (
     2,
     'Abstract',
     'Tracker experiment M2A-P007-E002',
-    'A collagen-I scaffold enriched with CBD-LP-miR21 exosomes was applied to SCI repair to improve exosome retention, sustained release, and repair outcomes.',
-    'Nonfunctionalized scaffold/exosome comparisons',
-    'Functionalized collagen-I scaffold with miR21-loaded exosomes',
-    '{"observation_tracker_ids": ["M2B-O056"], "source_experiment": {"chronicity_dpi_wpi": "Post-injury repair interval UNKNOWN", "control_type": "Nonfunctionalized scaffold/exosome comparisons", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P007-E002", "figure_ref": "Abstract", "injury_device": "Experimental SCI", "injury_model": "SCI", "injury_severity": "UNKNOWN", "intervention_type": "Functionalized collagen-I scaffold with miR21-loaded exosomes", "methods_summary": "A collagen-I scaffold enriched with CBD-LP-miR21 exosomes was applied to SCI repair to improve exosome retention, sustained release, and repair outcomes.", "paper_id": "M2A-P007", "sex": "UNKNOWN", "species": "SCI model context", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P007-E002", "source_paper_tracker_id": "M2A-P007", "tracker_key": "M2A-P007::M2A-P007-E002"}'
+    'Eighty-five rats underwent complete transection and collagen-scaffold implantation. The CBD-LP-miR21-EXO-Col group improved BBB scores, reduced TUNEL and cleaved caspase-3, decreased CS56-positive scar burden, and increased MAP2, TUJ1, 5-HT, and ChAT-associated repair readouts versus comparator scaffolds.',
+    'SCI alone, collagen alone, CT-EXO-Col, and CBD-LP-EXO-Col controls',
+    'Functionalized collagen-I scaffold with CBD-LP-miR21 exosomes',
+    '{"observation_tracker_ids": ["M2B-O056"], "source_experiment": {"chronicity_dpi_wpi": "3 days, 1 week, 14 days, and 8 weeks", "control_type": "SCI alone, collagen alone, CT-EXO-Col, and CBD-LP-EXO-Col controls", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P007-E002", "figure_ref": "Publisher full-text snapshot", "injury_device": "T10 complete transection with 4 mm gap and immediate scaffold implantation", "injury_model": "Complete transection SCI", "injury_severity": "Complete transection", "intervention_type": "Functionalized collagen-I scaffold with CBD-LP-miR21 exosomes", "methods_summary": "Eighty-five rats underwent complete transection and collagen-scaffold implantation. The CBD-LP-miR21-EXO-Col group improved BBB scores, reduced TUNEL and cleaved caspase-3, decreased CS56-positive scar burden, and increased MAP2, TUJ1, 5-HT, and ChAT-associated repair readouts versus comparator scaffolds.", "paper_id": "M2A-P007", "sex": "Female", "species": "Rattus norvegicus", "strain": "Adult female Sprague-Dawley, 180-200 g", "vertebral_level": "T10"}, "source_experiment_tracker_id": "M2A-P007-E002", "source_paper_tracker_id": "M2A-P007", "tracker_key": "M2A-P007::M2A-P007-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P007'
@@ -1418,12 +1418,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract',
+    'Figs. 1-5',
     'Tracker experiment M2A-P008-E001',
-    'A 3D aligned nanofiber-hydrogel scaffold provided sustained nonviral delivery of proteins and small noncoding RNAs plus contact guidance after C5 hemi-incision, with aligned axon regeneration observed by 1 WPI.',
-    'Injury/scaffold comparison',
-    '3D aligned nanofiber-hydrogel scaffold with nonviral delivery',
-    '{"observation_tracker_ids": ["M2B-O024"], "source_experiment": {"chronicity_dpi_wpi": "1 WPI early axon assessment", "control_type": "Injury/scaffold comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P008-E001", "figure_ref": "Abstract", "injury_device": "Hemi-incision", "injury_model": "Cervical hemi-incision SCI", "injury_severity": "C5 hemi-incision", "intervention_type": "3D aligned nanofiber-hydrogel scaffold with nonviral delivery", "methods_summary": "A 3D aligned nanofiber-hydrogel scaffold provided sustained nonviral delivery of proteins and small noncoding RNAs plus contact guidance after C5 hemi-incision, with aligned axon regeneration observed by 1 WPI.", "paper_id": "M2A-P008", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "C5"}, "source_experiment_tracker_id": "M2A-P008-E001", "source_paper_tracker_id": "M2A-P008", "tracker_key": "M2A-P008::M2A-P008-E001"}'
+    'Scaffold mass loss was approximately 24.8%, 33.4%, and 51.6% at 1, 2, and 3 months in vitro. NT-3 loading was 54.6 ng/mg with 90.1% released in week 1 and 99.7 +/- 0.07% by 3 months. Aligned NF-positive axons were present at 1 week and MAG-positive structures co-localized with axons at 4 weeks; scaffold integration and no cyst formation were reported through 12 weeks.',
+    'Plain scaffold, negative-miR scaffold',
+    '1-mm PCLEEP nanofiber-collagen scaffold aligned longitudinally in cervical cord',
+    '{"observation_tracker_ids": ["M2B-O024"], "source_experiment": {"chronicity_dpi_wpi": "1, 2, and 4 weeks; release followed 3 months", "control_type": "Plain scaffold, negative-miR scaffold", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P008-E001", "figure_ref": "Figs. 1-5; release, degradation, axon and myelin assays", "injury_device": "Aligned PCLEEP nanofibers in 6 mg/mL collagen hydrogel; NT-3/heparin or miR-222 loading", "injury_model": "C5 right-sided one-third hemi-incision SCI", "injury_severity": "One-third hemi-incision cervical lesion", "intervention_type": "1-mm PCLEEP nanofiber-collagen scaffold aligned longitudinally in cervical cord", "methods_summary": "Scaffold mass loss was approximately 24.8%, 33.4%, and 51.6% at 1, 2, and 3 months in vitro. NT-3 loading was 54.6 ng/mg with 90.1% released in week 1 and 99.7 +/- 0.07% by 3 months. Aligned NF-positive axons were present at 1 week and MAG-positive structures co-localized with axons at 4 weeks; scaffold integration and no cyst formation were reported through 12 weeks.", "paper_id": "M2A-P008", "sex": "N/A", "species": "Rattus norvegicus", "strain": "Adult rats", "vertebral_level": "C5"}, "source_experiment_tracker_id": "M2A-P008-E001", "source_paper_tracker_id": "M2A-P008", "tracker_key": "M2A-P008::M2A-P008-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P008'
@@ -1438,12 +1438,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Fig. 6 and Supplementary Fig. 1',
     'Tracker experiment M2A-P008-E002',
-    'Inflammatory response and scar tissue formation were assessed after scaffold implantation, with no excessive inflammatory response or scar formation reported in the abstract.',
-    'Injury/scaffold comparison',
-    '3D aligned nanofiber-hydrogel scaffold',
-    '{"observation_tracker_ids": ["M2B-O057"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant response interval UNKNOWN", "control_type": "Injury/scaffold comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P008-E002", "figure_ref": "Abstract", "injury_device": "Hemi-incision", "injury_model": "Cervical hemi-incision SCI", "injury_severity": "C5 hemi-incision", "intervention_type": "3D aligned nanofiber-hydrogel scaffold", "methods_summary": "Inflammatory response and scar tissue formation were assessed after scaffold implantation, with no excessive inflammatory response or scar formation reported in the abstract.", "paper_id": "M2A-P008", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "C5"}, "source_experiment_tracker_id": "M2A-P008-E002", "source_paper_tracker_id": "M2A-P008", "tracker_key": "M2A-P008::M2A-P008-E002"}'
+    'miRNA loading was 0.5 microgram/mg with approximately 16% loading efficiency; 27.1 +/- 3.38% released during the first month and release remained detectable for at least two more months. miR-222 increased neurite ingrowth at 10 days without changing microglial or astrocyte reactions; Cy5-ODN spread approximately 300 micrometers from the scaffold edge at 14 days.',
+    'Plain and negative-miR scaffold controls',
+    'miR-222-loaded aligned nanofiber-hydrogel scaffold',
+    '{"observation_tracker_ids": ["M2B-O057"], "source_experiment": {"chronicity_dpi_wpi": "10 and 14 days; miRNA release followed 3 months", "control_type": "Plain and negative-miR scaffold controls", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P008-E002", "figure_ref": "Fig. 6 and Supplementary Fig. 1; miRNA delivery, neurite and glial response", "injury_device": "miR-222- or negative-miR-loaded PCLEEP-collagen scaffold; Cy5-ODN tracing", "injury_model": "C5 right-sided one-third hemi-incision SCI", "injury_severity": "One-third hemi-incision cervical lesion", "intervention_type": "miR-222-loaded aligned nanofiber-hydrogel scaffold", "methods_summary": "miRNA loading was 0.5 microgram/mg with approximately 16% loading efficiency; 27.1 +/- 3.38% released during the first month and release remained detectable for at least two more months. miR-222 increased neurite ingrowth at 10 days without changing microglial or astrocyte reactions; Cy5-ODN spread approximately 300 micrometers from the scaffold edge at 14 days.", "paper_id": "M2A-P008", "sex": "N/A", "species": "Rattus norvegicus", "strain": "Adult rats", "vertebral_level": "C5"}, "source_experiment_tracker_id": "M2A-P008-E002", "source_paper_tracker_id": "M2A-P008", "tracker_key": "M2A-P008::M2A-P008-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P008'
@@ -1458,12 +1458,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract',
+    'Figs. 1-2; Tables 1-2',
     'Tracker experiment M2A-P009-E001',
-    'Eight chronic complete SCI patients underwent neurophysiology-guided scar resection and implantation of hUCB-MSC-loaded NeuroRegen scaffold, with adverse events and neurological/electrophysiological outcomes tracked for 1 year.',
+    'Eight patients received scar resection and hUCB-MSC-loaded NeuroRegen. No infection, fever, allergic reaction, shock, perioperative complication, neurological aggravation, or cancer occurred over 1 year; sensation expanded in 5/8, MEP-responsive area expanded in 7/8, finger flexibility increased in 3 cervical patients, but no ASIA classification improved.',
     'Preoperative baseline / safety monitoring',
-    'NeuroRegen scaffold + hUCB-MSC implantation',
-    '{"observation_tracker_ids": ["M2B-O002", "M2B-O047"], "source_experiment": {"chronicity_dpi_wpi": "Chronic; 1-year follow-up", "control_type": "Preoperative baseline / safety monitoring", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P009-E001", "figure_ref": "Abstract", "injury_device": "Clinical SCI + surgical scar resection", "injury_model": "Chronic complete SCI", "injury_severity": "Chronic complete SCI", "intervention_type": "NeuroRegen scaffold + hUCB-MSC implantation", "methods_summary": "Eight chronic complete SCI patients underwent neurophysiology-guided scar resection and implantation of hUCB-MSC-loaded NeuroRegen scaffold, with adverse events and neurological/electrophysiological outcomes tracked for 1 year.", "paper_id": "M2A-P009", "sex": "Mixed/UNKNOWN", "species": "Homo sapiens", "strain": "N/A", "vertebral_level": "Variable"}, "source_experiment_tracker_id": "M2A-P009-E001", "source_paper_tracker_id": "M2A-P009", "tracker_key": "M2A-P009::M2A-P009-E001"}'
+    'NeuroRegen scaffold + 4 x 10^7 hUCB-MSC implantation',
+    '{"observation_tracker_ids": ["M2B-O002", "M2B-O047"], "source_experiment": {"chronicity_dpi_wpi": "1, 3, 6, and 12 months", "control_type": "Preoperative baseline / safety monitoring", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P009-E001", "figure_ref": "Figs. 1-2; Tables 1-2", "injury_device": "Clinical SCI + SSEP/MEP-guided scar resection", "injury_model": "Chronic complete SCI", "injury_severity": "ASIA A; cervical/thoracic C5-T12; 2-36 months post-injury", "intervention_type": "NeuroRegen scaffold + 4 x 10^7 hUCB-MSC implantation", "methods_summary": "Eight patients received scar resection and hUCB-MSC-loaded NeuroRegen. No infection, fever, allergic reaction, shock, perioperative complication, neurological aggravation, or cancer occurred over 1 year; sensation expanded in 5/8, MEP-responsive area expanded in 7/8, finger flexibility increased in 3 cervical patients, but no ASIA classification improved.", "paper_id": "M2A-P009", "sex": "7 male, 1 female", "species": "Homo sapiens", "strain": "N/A", "vertebral_level": "Variable"}, "source_experiment_tracker_id": "M2A-P009-E001", "source_paper_tracker_id": "M2A-P009", "tracker_key": "M2A-P009::M2A-P009-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P009'
@@ -1480,10 +1480,10 @@ WITH inserted AS (
     1,
     'Abstract',
     'Tracker experiment M2A-P010-E001',
-    'PLGA 85:15 was injection molded with rapid solvent evaporation to generate parallel-channel scaffolds for SCI repair experiments.',
-    'Architecture comparison',
+    'PLGA 85:15 scaffolds were molded as 3.0 mm-diameter, 15.0 mm-high cylinders using seven 0.50 mm wires, giving a void volume of 85.4 mm3 within a 106 mm3 mold. Across 30-70% w/v polymer conditions, wall void fraction reached 89% and accessible void fraction 90% through >=220 micrometer interconnections; molecular weight declined to 5% by 26 weeks, mass loss accelerated after 20 weeks, and FITC-dextran release showed a 48-hour burst followed by 4 weeks steady and 8 weeks slower sustained release.',
+    'Channel-geometry and polymer-concentration comparison',
     'PLGA multi-channel scaffold',
-    '{"observation_tracker_ids": ["M2B-O006"], "source_experiment": {"chronicity_dpi_wpi": "N/A", "control_type": "Architecture comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P010-E001", "figure_ref": "Abstract", "injury_device": "PLGA scaffold fabrication", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "PLGA multi-channel scaffold", "methods_summary": "PLGA 85:15 was injection molded with rapid solvent evaporation to generate parallel-channel scaffolds for SCI repair experiments.", "paper_id": "M2A-P010", "sex": "N/A", "species": "Scaffold system / rat SCI platform", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P010-E001", "source_paper_tracker_id": "M2A-P010", "tracker_key": "M2A-P010::M2A-P010-E001"}'
+    '{"observation_tracker_ids": ["M2B-O006"], "source_experiment": {"chronicity_dpi_wpi": "In vitro degradation through 30 weeks; release through 12 weeks", "control_type": "Channel-geometry and polymer-concentration comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P010-E001", "figure_ref": "Publisher full-text snapshot; fabrication, porosity, degradation, and release assays", "injury_device": "PLGA 85:15 injection-molded multi-channel scaffold fabrication", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "PLGA multi-channel scaffold", "methods_summary": "PLGA 85:15 scaffolds were molded as 3.0 mm-diameter, 15.0 mm-high cylinders using seven 0.50 mm wires, giving a void volume of 85.4 mm3 within a 106 mm3 mold. Across 30-70% w/v polymer conditions, wall void fraction reached 89% and accessible void fraction 90% through >=220 micrometer interconnections; molecular weight declined to 5% by 26 weeks, mass loss accelerated after 20 weeks, and FITC-dextran release showed a 48-hour burst followed by 4 weeks steady and 8 weeks slower sustained release.", "paper_id": "M2A-P010", "sex": "N/A", "species": "Scaffold system / rat SCI platform", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P010-E001", "source_paper_tracker_id": "M2A-P010", "tracker_key": "M2A-P010::M2A-P010-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P010'
@@ -1500,10 +1500,10 @@ WITH inserted AS (
     2,
     'Abstract',
     'Tracker experiment M2A-P010-E002',
-    'The scaffold was framed as a platform to test architecture, transplanted cells, and local molecular agents for axon regeneration.',
-    'Scaffold architecture/cell/molecule comparison',
+    'Primary neonatal Schwann-cell cultures were approximately 90% pure and populated all seven channels of the scaffold while remaining viable for at least 48 hours. After implantation into transected adult rat spinal cord, Schwann-cell-containing scaffolds contained regenerating axons at 1 month, supporting the scaffold as a platform for separating architectural, cellular, and molecular intervention effects.',
+    'Scaffold-only / cell-seeded platform feasibility',
     'Multi-channel biodegradable scaffold platform',
-    '{"observation_tracker_ids": ["M2B-O058"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Scaffold architecture/cell/molecule comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P010-E002", "figure_ref": "Abstract", "injury_device": "Experimental SCI", "injury_model": "SCI", "injury_severity": "UNKNOWN", "intervention_type": "Multi-channel biodegradable scaffold platform", "methods_summary": "The scaffold was framed as a platform to test architecture, transplanted cells, and local molecular agents for axon regeneration.", "paper_id": "M2A-P010", "sex": "UNKNOWN", "species": "Rodent SCI model context", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P010-E002", "source_paper_tracker_id": "M2A-P010", "tracker_key": "M2A-P010::M2A-P010-E002"}'
+    '{"observation_tracker_ids": ["M2B-O058"], "source_experiment": {"chronicity_dpi_wpi": "Schwann-cell viability 48 hours in culture; 1 month post-implant in vivo", "control_type": "Scaffold-only / cell-seeded platform feasibility", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P010-E002", "figure_ref": "Publisher full-text snapshot; Schwann-cell culture and transection implantation feasibility", "injury_device": "Experimental transection with scaffold implantation", "injury_model": "Transected spinal cord SCI", "injury_severity": "Transection", "intervention_type": "Multi-channel biodegradable scaffold platform", "methods_summary": "Primary neonatal Schwann-cell cultures were approximately 90% pure and populated all seven channels of the scaffold while remaining viable for at least 48 hours. After implantation into transected adult rat spinal cord, Schwann-cell-containing scaffolds contained regenerating axons at 1 month, supporting the scaffold as a platform for separating architectural, cellular, and molecular intervention effects.", "paper_id": "M2A-P010", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "Adult rat host; primary neonatal Schwann-cell coculture", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P010-E002", "source_paper_tracker_id": "M2A-P010", "tracker_key": "M2A-P010::M2A-P010-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P010'
@@ -1520,10 +1520,10 @@ WITH inserted AS (
     1,
     'Abstract',
     'Tracker experiment M2A-P011-E001',
-    'Neural progenitor cells and Schwann cells were cultured within self-assembling peptide nanofiber scaffold and transplanted into rat transected dorsal column injury.',
+    'Neural progenitor cells and Schwann cells isolated from GFP-transgenic rats were cultured within self-assembling peptide nanofiber scaffold and transplanted into transected rat dorsal column lesions to test whether the scaffold could bridge a cystic injury gap.',
     'Injury/graft comparison',
     'SAPNS + neural progenitor and Schwann cell graft',
-    '{"observation_tracker_ids": ["M2B-O007"], "source_experiment": {"chronicity_dpi_wpi": "Post-transplant interval UNKNOWN", "control_type": "Injury/graft comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P011-E001", "figure_ref": "Abstract", "injury_device": "Dorsal column transection", "injury_model": "Transected dorsal column SCI", "injury_severity": "Transection", "intervention_type": "SAPNS + neural progenitor and Schwann cell graft", "methods_summary": "Neural progenitor cells and Schwann cells were cultured within self-assembling peptide nanofiber scaffold and transplanted into rat transected dorsal column injury.", "paper_id": "M2A-P011", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "GFP-transgenic donor cells / rat host", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P011-E001", "source_paper_tracker_id": "M2A-P011", "tracker_key": "M2A-P011::M2A-P011-E001"}'
+    '{"observation_tracker_ids": ["M2B-O007"], "source_experiment": {"chronicity_dpi_wpi": "Post-transplant interval not clearly reported in captured text", "control_type": "Injury/graft comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P011-E001", "figure_ref": "Publisher full-text snapshot; donor-cell loading into SAPNS bridge", "injury_device": "Dorsal column transection", "injury_model": "Transected dorsal column SCI", "injury_severity": "Transection", "intervention_type": "SAPNS + neural progenitor and Schwann cell graft", "methods_summary": "Neural progenitor cells and Schwann cells isolated from GFP-transgenic rats were cultured within self-assembling peptide nanofiber scaffold and transplanted into transected rat dorsal column lesions to test whether the scaffold could bridge a cystic injury gap.", "paper_id": "M2A-P011", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "GFP-transgenic donor neural progenitors and Schwann cells / rat host", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P011-E001", "source_paper_tracker_id": "M2A-P011", "tracker_key": "M2A-P011::M2A-P011-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P011'
@@ -1540,10 +1540,10 @@ WITH inserted AS (
     2,
     'Abstract',
     'Tracker experiment M2A-P011-E002',
-    'Host-cell migration, blood-vessel growth, and axonal ingrowth into SAPNS were assessed as evidence of a 3D permissive environment.',
+    'The implanted SAPNS supported robust host-cell migration, blood-vessel growth, and axonal ingrowth into the scaffold, consistent with a true three-dimensional environment for living-cell migration and lesion bridging. Because the accessible capture is thinner than most other papers, this row should be read as verified histology-focused evidence rather than a deeply parameterized extraction.',
     'Scaffold/graft histology comparison',
     'SAPNS lesion bridge',
-    '{"observation_tracker_ids": ["M2B-O059"], "source_experiment": {"chronicity_dpi_wpi": "Post-transplant interval UNKNOWN", "control_type": "Scaffold/graft histology comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P011-E002", "figure_ref": "Abstract", "injury_device": "Dorsal column transection", "injury_model": "Transected dorsal column SCI", "injury_severity": "Transection", "intervention_type": "SAPNS lesion bridge", "methods_summary": "Host-cell migration, blood-vessel growth, and axonal ingrowth into SAPNS were assessed as evidence of a 3D permissive environment.", "paper_id": "M2A-P011", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P011-E002", "source_paper_tracker_id": "M2A-P011", "tracker_key": "M2A-P011::M2A-P011-E002"}'
+    '{"observation_tracker_ids": ["M2B-O059"], "source_experiment": {"chronicity_dpi_wpi": "Post-transplant interval not clearly reported in captured text", "control_type": "Scaffold/graft histology comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P011-E002", "figure_ref": "Publisher full-text snapshot; host ingrowth histology", "injury_device": "Dorsal column transection", "injury_model": "Transected dorsal column SCI", "injury_severity": "Transection", "intervention_type": "SAPNS lesion bridge", "methods_summary": "The implanted SAPNS supported robust host-cell migration, blood-vessel growth, and axonal ingrowth into the scaffold, consistent with a true three-dimensional environment for living-cell migration and lesion bridging. Because the accessible capture is thinner than most other papers, this row should be read as verified histology-focused evidence rather than a deeply parameterized extraction.", "paper_id": "M2A-P011", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "Rat host", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P011-E002", "source_paper_tracker_id": "M2A-P011", "tracker_key": "M2A-P011::M2A-P011-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P011'
@@ -1560,10 +1560,10 @@ WITH inserted AS (
     1,
     'Abstract',
     'Tracker experiment M2A-P012-E001',
-    'PLGA scaffolds with or without hMSCs were fitted into a 2-mm complete spinal cord defect.',
+    'Rats underwent complete T8-T9 transection with removal of a 2-mm cord segment and received scaffold-only control or PLGA scaffolds loaded with 1 x 10^5, 2 x 10^4, or 4 x 10^3 hMSCs. Control BBB reached 3 at 2 weeks but fell to about 2 by 6-8 weeks, whereas hMSC groups improved gradually to approximately 4.5-6 by 8 weeks; sham MEP amplitudes were 1757 +/- 333 microV at 4 weeks and 2076 +/- 622 microV at 8 weeks, versus 135 +/- 117 and 100 +/- 25 microV in scaffold-only controls.',
     'PLGA scaffold without hMSC',
     'PLGA scaffold + hMSC',
-    '{"observation_tracker_ids": ["M2B-O009"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "PLGA scaffold without hMSC", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P012-E001", "figure_ref": "Abstract", "injury_device": "Surgical complete transection/removal", "injury_model": "Complete transection SCI with 2-mm cord removal", "injury_severity": "Complete transection", "intervention_type": "PLGA scaffold + hMSC", "methods_summary": "PLGA scaffolds with or without hMSCs were fitted into a 2-mm complete spinal cord defect.", "paper_id": "M2A-P012", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "T8-T9"}, "source_experiment_tracker_id": "M2A-P012-E001", "source_paper_tracker_id": "M2A-P012", "tracker_key": "M2A-P012::M2A-P012-E001"}'
+    '{"observation_tracker_ids": ["M2B-O009"], "source_experiment": {"chronicity_dpi_wpi": "2, 4, 6, and 8 weeks", "control_type": "PLGA scaffold without hMSC", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P012-E001", "figure_ref": "Publisher full-text snapshot; complete transection repair groups and functional readouts", "injury_device": "Surgical complete transection/removal with scaffold implantation", "injury_model": "Complete transection SCI with 2-mm cord removal", "injury_severity": "Complete transection", "intervention_type": "PLGA scaffold + hMSC", "methods_summary": "Rats underwent complete T8-T9 transection with removal of a 2-mm cord segment and received scaffold-only control or PLGA scaffolds loaded with 1 x 10^5, 2 x 10^4, or 4 x 10^3 hMSCs. Control BBB reached 3 at 2 weeks but fell to about 2 by 6-8 weeks, whereas hMSC groups improved gradually to approximately 4.5-6 by 8 weeks; sham MEP amplitudes were 1757 +/- 333 microV at 4 weeks and 2076 +/- 622 microV at 8 weeks, versus 135 +/- 117 and 100 +/- 25 microV in scaffold-only controls.", "paper_id": "M2A-P012", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "Rat", "vertebral_level": "T8-T9"}, "source_experiment_tracker_id": "M2A-P012-E001", "source_paper_tracker_id": "M2A-P012", "tracker_key": "M2A-P012::M2A-P012-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P012'
@@ -1580,10 +1580,10 @@ WITH inserted AS (
     2,
     'Abstract',
     'Tracker experiment M2A-P012-E002',
-    'Different hMSC doses were compared for BBB locomotor scores, MEP amplitudes, cell survival, differentiation, and neurological repair.',
+    'PKH-labeled hMSCs remained detectable at approximately 8% at 4 weeks and 7% at 8 weeks; NSE-positive donor cells were approximately 11% at 4 weeks and 10% at 8 weeks. NF-positive cells were about 1% in scaffold-only controls but rose to approximately 5% at 4 weeks and 8% at 8 weeks in hMSC groups, supporting donor persistence with partial neural differentiation and enhanced repair.',
     'Scaffold-only / hMSC dose groups',
     'hMSC-seeded PLGA scaffold',
-    '{"observation_tracker_ids": ["M2B-O060"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Scaffold-only / hMSC dose groups", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P012-E002", "figure_ref": "Abstract", "injury_device": "Surgical complete transection/removal", "injury_model": "Complete transection SCI", "injury_severity": "Complete transection", "intervention_type": "hMSC-seeded PLGA scaffold", "methods_summary": "Different hMSC doses were compared for BBB locomotor scores, MEP amplitudes, cell survival, differentiation, and neurological repair.", "paper_id": "M2A-P012", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "T8-T9"}, "source_experiment_tracker_id": "M2A-P012-E002", "source_paper_tracker_id": "M2A-P012", "tracker_key": "M2A-P012::M2A-P012-E002"}'
+    '{"observation_tracker_ids": ["M2B-O060"], "source_experiment": {"chronicity_dpi_wpi": "4 and 8 weeks", "control_type": "Scaffold-only / hMSC dose groups", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P012-E002", "figure_ref": "Publisher full-text snapshot; donor persistence, differentiation, and axonal-marker outcomes", "injury_device": "Surgical complete transection/removal", "injury_model": "Complete transection SCI", "injury_severity": "Complete transection", "intervention_type": "hMSC-seeded PLGA scaffold", "methods_summary": "PKH-labeled hMSCs remained detectable at approximately 8% at 4 weeks and 7% at 8 weeks; NSE-positive donor cells were approximately 11% at 4 weeks and 10% at 8 weeks. NF-positive cells were about 1% in scaffold-only controls but rose to approximately 5% at 4 weeks and 8% at 8 weeks in hMSC groups, supporting donor persistence with partial neural differentiation and enhanced repair.", "paper_id": "M2A-P012", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "Rat with implanted hMSCs", "vertebral_level": "T8-T9"}, "source_experiment_tracker_id": "M2A-P012-E002", "source_paper_tracker_id": "M2A-P012", "tracker_key": "M2A-P012::M2A-P012-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P012'
@@ -1600,10 +1600,10 @@ WITH inserted AS (
     1,
     'Abstract',
     'Tracker experiment M2A-P013-E001',
-    'Adult NSPCs were placed in methacrylamide chitosan hydrogel and protected by a chitosan conduit to create a spinal cord bridge.',
-    'Bridge/cue comparisons',
+    'Adult rats received a 2-2.5 mm right-sided gap between T8 and T9 bridged with a chitosan conduit containing methacrylamide chitosan hydrogel and encapsulated NSPCs, sealed with fibrin glue. All conduit treatments reduced lesion area to about 0.39 +/- 0.08 mm2 versus 1.30 +/- 0.42 mm2 in untreated controls, and the iIFN-gamma + cells group had the smallest lesion at 0.33 +/- 0.06 mm2.',
+    'Untreated injury and conduit-condition comparisons',
     'MAC hydrogel + chitosan conduit + NSPCs',
-    '{"observation_tracker_ids": ["M2B-O032"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Bridge/cue comparisons", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P013-E001", "figure_ref": "Abstract", "injury_device": "Surgical hemisection", "injury_model": "Hemisection SCI", "injury_severity": "Hemisection", "intervention_type": "MAC hydrogel + chitosan conduit + NSPCs", "methods_summary": "Adult NSPCs were placed in methacrylamide chitosan hydrogel and protected by a chitosan conduit to create a spinal cord bridge.", "paper_id": "M2A-P013", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "T8-T9 region"}, "source_experiment_tracker_id": "M2A-P013-E001", "source_paper_tracker_id": "M2A-P013", "tracker_key": "M2A-P013::M2A-P013-E001"}'
+    '{"observation_tracker_ids": ["M2B-O032"], "source_experiment": {"chronicity_dpi_wpi": "8 weeks", "control_type": "Untreated injury and conduit-condition comparisons", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P013-E001", "figure_ref": "Publisher full-text snapshot; hemisection bridge construction and lesion-size effect", "injury_device": "Right lateral hemisection with conduit bridge implantation", "injury_model": "Hemisection SCI", "injury_severity": "Hemisection", "intervention_type": "MAC hydrogel + chitosan conduit + NSPCs", "methods_summary": "Adult rats received a 2-2.5 mm right-sided gap between T8 and T9 bridged with a chitosan conduit containing methacrylamide chitosan hydrogel and encapsulated NSPCs, sealed with fibrin glue. All conduit treatments reduced lesion area to about 0.39 +/- 0.08 mm2 versus 1.30 +/- 0.42 mm2 in untreated controls, and the iIFN-gamma + cells group had the smallest lesion at 0.33 +/- 0.06 mm2.", "paper_id": "M2A-P013", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "Rat", "vertebral_level": "T8-T9"}, "source_experiment_tracker_id": "M2A-P013-E001", "source_paper_tracker_id": "M2A-P013", "tracker_key": "M2A-P013::M2A-P013-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P013'
@@ -1620,10 +1620,10 @@ WITH inserted AS (
     2,
     'Abstract',
     'Tracker experiment M2A-P013-E002',
-    'Biotin-tagged IFN-gamma and PDGF-AA were immobilized to MAC hydrogel to cue neuronal or oligodendrocytic lineages within the bridge.',
-    'Uncued bridge comparison',
+    'Immobilized IFN-gamma or PDGF-AA roughly doubled Fluoro-Gold-traced neurons crossing the lesion in cue-plus-cell groups (n = 3). iIFN-gamma favored betaIII-tubulin-positive neuronal differentiation and iPDGF-AA + cells favored RIP-positive oligodendrocytic outcomes, while ED-1-positive macrophages remained sparse at the lesion edge and BBB scores stabilized around 13-15 without significant treatment differences.',
+    'Uncued MAC and MAC+cells bridge comparisons',
     'Immobilized IFN-gamma or PDGF-AA lineage cues',
-    '{"observation_tracker_ids": ["M2B-O061"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Uncued bridge comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P013-E002", "figure_ref": "Abstract", "injury_device": "Surgical hemisection", "injury_model": "Hemisection SCI", "injury_severity": "Hemisection", "intervention_type": "Immobilized IFN-gamma or PDGF-AA lineage cues", "methods_summary": "Biotin-tagged IFN-gamma and PDGF-AA were immobilized to MAC hydrogel to cue neuronal or oligodendrocytic lineages within the bridge.", "paper_id": "M2A-P013", "sex": "UNKNOWN", "species": "Rattus norvegicus / NSPC bridge", "strain": "UNKNOWN", "vertebral_level": "T8-T9 region"}, "source_experiment_tracker_id": "M2A-P013-E002", "source_paper_tracker_id": "M2A-P013", "tracker_key": "M2A-P013::M2A-P013-E002"}'
+    '{"observation_tracker_ids": ["M2B-O061"], "source_experiment": {"chronicity_dpi_wpi": "8 weeks", "control_type": "Uncued MAC and MAC+cells bridge comparisons", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P013-E002", "figure_ref": "Publisher full-text snapshot; lineage-cue, tracing, and functional outcomes", "injury_device": "Right lateral hemisection with lineage-cued bridge", "injury_model": "Hemisection SCI", "injury_severity": "Hemisection", "intervention_type": "Immobilized IFN-gamma or PDGF-AA lineage cues", "methods_summary": "Immobilized IFN-gamma or PDGF-AA roughly doubled Fluoro-Gold-traced neurons crossing the lesion in cue-plus-cell groups (n = 3). iIFN-gamma favored betaIII-tubulin-positive neuronal differentiation and iPDGF-AA + cells favored RIP-positive oligodendrocytic outcomes, while ED-1-positive macrophages remained sparse at the lesion edge and BBB scores stabilized around 13-15 without significant treatment differences.", "paper_id": "M2A-P013", "sex": "UNKNOWN", "species": "Rattus norvegicus / NSPC bridge", "strain": "Rat", "vertebral_level": "T8-T9"}, "source_experiment_tracker_id": "M2A-P013-E002", "source_paper_tracker_id": "M2A-P013", "tracker_key": "M2A-P013::M2A-P013-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P013'
@@ -1637,33 +1637,13 @@ WITH inserted AS (
     control_type, intervention_type, notes
   )
   SELECT p.paper_id, ep.paradigm_id,
-    1,
-    'Abstract',
-    'Tracker experiment M2A-P014-E001',
-    'Decellularized porcine spinal cord or urinary bladder ECM hydrogels were injected into hemisection cavities and assessed over 2-8 weeks.',
-    'Lesion/injection comparison',
-    'Spinal cord ECM hydrogel or urinary bladder ECM hydrogel injection',
-    '{"observation_tracker_ids": ["M2B-O015"], "source_experiment": {"chronicity_dpi_wpi": "2, 4, and 8 WPI", "control_type": "Lesion/injection comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P014-E001", "figure_ref": "Abstract", "injury_device": "Hemisection cavity", "injury_model": "Acute hemisection SCI", "injury_severity": "Hemisection", "intervention_type": "Spinal cord ECM hydrogel or urinary bladder ECM hydrogel injection", "methods_summary": "Decellularized porcine spinal cord or urinary bladder ECM hydrogels were injected into hemisection cavities and assessed over 2-8 weeks.", "paper_id": "M2A-P014", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P014-E001", "source_paper_tracker_id": "M2A-P014", "tracker_key": "M2A-P014::M2A-P014-E001"}'
-  FROM _m2_paper_map p
-  JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
-  WHERE p.tracker_id = 'M2A-P014'
-  RETURNING experiment_id
-)
-INSERT INTO _m2_experiment_map (tracker_id, experiment_id) SELECT 'M2A-P014::M2A-P014-E001', experiment_id FROM inserted;
-
-WITH inserted AS (
-  INSERT INTO Experiment (
-    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description,
-    control_type, intervention_type, notes
-  )
-  SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Figs. 2-7',
     'Tracker experiment M2A-P014-E002',
-    'Histology and qPCR assessed scaffold integration, neovascularization, axonal ingrowth, tissue response, and macrophage-related limitations.',
-    'ECM source comparison',
-    'Injectable ECM hydrogel lesion scaffold',
-    '{"observation_tracker_ids": ["M2B-O062"], "source_experiment": {"chronicity_dpi_wpi": "2, 4, and 8 WPI", "control_type": "ECM source comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P014-E002", "figure_ref": "Abstract", "injury_device": "Hemisection cavity", "injury_model": "Acute hemisection SCI", "injury_severity": "Hemisection", "intervention_type": "Injectable ECM hydrogel lesion scaffold", "methods_summary": "Histology and qPCR assessed scaffold integration, neovascularization, axonal ingrowth, tissue response, and macrophage-related limitations.", "paper_id": "M2A-P014", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P014-E002", "source_paper_tracker_id": "M2A-P014", "tracker_key": "M2A-P014::M2A-P014-E002"}'
+    'Both ECM hydrogels filled and integrated into lesions, increased NF160 axon ingrowth and RECA vascularization versus saline, and organized ingrowing axons longitudinally, but hydrogels mostly degraded by 2 weeks and fully by 8 weeks with progressive small cysts and massive macrophage infiltration. SC- versus UB-ECM did not differ; hWJ-MSCs did not further increase axon or vessel ingrowth, with few surviving cells at 4 weeks.',
+    'Saline lesion; SC-ECM versus UB-ECM; cell-seeded versus empty with immunosuppression',
+    'Injectable decellularized ECM hydrogel',
+    '{"observation_tracker_ids": ["M2B-O015", "M2B-O062"], "source_experiment": {"chronicity_dpi_wpi": "2, 4, and 8 weeks; BBB weeks 1-4", "control_type": "Saline lesion; SC-ECM versus UB-ECM; cell-seeded versus empty with immunosuppression", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P014-E002", "figure_ref": "Figs. 2-7; H&E, NF160, RECA, macrophage markers, qPCR", "injury_device": "8 mg/mL porcine SC-ECM or UB-ECM hydrogel injected in situ; saline control; SC-ECM plus approximately 15,000 hWJ-MSCs with immunosuppression", "injury_model": "Th8 hemisection with 2-mm segment removed", "injury_severity": "Acute 6 mm3 hemisection cavity", "intervention_type": "Injectable decellularized ECM hydrogel", "methods_summary": "Both ECM hydrogels filled and integrated into lesions, increased NF160 axon ingrowth and RECA vascularization versus saline, and organized ingrowing axons longitudinally, but hydrogels mostly degraded by 2 weeks and fully by 8 weeks with progressive small cysts and massive macrophage infiltration. SC- versus UB-ECM did not differ; hWJ-MSCs did not further increase axon or vessel ingrowth, with few surviving cells at 4 weeks.", "paper_id": "M2A-P014", "sex": "Male", "species": "Rattus norvegicus", "strain": "Male Wistar rats, 250-300 g", "vertebral_level": "Th8"}, "source_experiment_tracker_id": "M2A-P014-E002", "source_paper_tracker_id": "M2A-P014", "tracker_key": "M2A-P014::M2A-P014-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P014'
@@ -1678,12 +1658,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract',
+    'Figs. 1-7',
     'Tracker experiment M2A-P015-E001',
-    'Dogs underwent complete T8 transection, delayed scar removal, and implantation of hUC-MSC-loaded NeuroRegen scaffold into the chronic lesion.',
-    'Chronic scar resection baseline/control',
-    'NeuroRegen scaffold + hUC-MSC implantation',
-    '{"observation_tracker_ids": ["M2B-O018"], "source_experiment": {"chronicity_dpi_wpi": "2 months post-injury scar removal", "control_type": "Chronic scar resection baseline/control", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P015-E001", "figure_ref": "Abstract", "injury_device": "Complete T8 spinal cord segment removal + scar resection", "injury_model": "Chronic complete SCI", "injury_severity": "Complete transection", "intervention_type": "NeuroRegen scaffold + hUC-MSC implantation", "methods_summary": "Dogs underwent complete T8 transection, delayed scar removal, and implantation of hUC-MSC-loaded NeuroRegen scaffold into the chronic lesion.", "paper_id": "M2A-P015", "sex": "UNKNOWN", "species": "Canis familiaris", "strain": "UNKNOWN", "vertebral_level": "T8"}, "source_experiment_tracker_id": "M2A-P015-E001", "source_paper_tracker_id": "M2A-P015", "tracker_key": "M2A-P015::M2A-P015-E001"}'
+    'Eighteen beagles underwent complete T8 resection, then delayed scar removal and implantation. Scar removal did not reduce Olby scores; functionalized scaffolds reached approximately 6 versus 2-4.5 in controls/scaffold-only.',
+    'Control (n=6), scaffold-only (n=6), functionalized scaffold (n=6)',
+    'NeuroRegen scaffold +/- 10^7 hUC-MSCs',
+    '{"observation_tracker_ids": ["M2B-O018"], "source_experiment": {"chronicity_dpi_wpi": "2 months post-injury scar removal; 12 months post-treatment", "control_type": "Control (n=6), scaffold-only (n=6), functionalized scaffold (n=6)", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P015-E001", "figure_ref": "Fig. 1; Olby time course", "injury_device": "Complete T8 spinal cord segment removal + delayed scar resection", "injury_model": "Chronic complete SCI", "injury_severity": "Complete transection; 5-mm cord removal", "intervention_type": "NeuroRegen scaffold +/- 10^7 hUC-MSCs", "methods_summary": "Eighteen beagles underwent complete T8 resection, then delayed scar removal and implantation. Scar removal did not reduce Olby scores; functionalized scaffolds reached approximately 6 versus 2-4.5 in controls/scaffold-only.", "paper_id": "M2A-P015", "sex": "Female", "species": "Canis familiaris", "strain": "Adult female Beagle", "vertebral_level": "T8"}, "source_experiment_tracker_id": "M2A-P015-E001", "source_paper_tracker_id": "M2A-P015", "tracker_key": "M2A-P015::M2A-P015-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P015'
@@ -1698,12 +1678,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Figs. 2-7',
     'Tracker experiment M2A-P015-E002',
-    'Locomotor recovery, endogenous neurogenesis, and scar response were assessed after functionalized NeuroRegen implantation.',
-    'Scaffold/cell comparison',
-    'Functionalized NeuroRegen scaffold',
-    '{"observation_tracker_ids": ["M2B-O063"], "source_experiment": {"chronicity_dpi_wpi": "Chronic 2-month post-injury implantation", "control_type": "Scaffold/cell comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P015-E002", "figure_ref": "Abstract", "injury_device": "Complete transection + scaffold/cell implantation", "injury_model": "Chronic complete SCI", "injury_severity": "Complete transection", "intervention_type": "Functionalized NeuroRegen scaffold", "methods_summary": "Locomotor recovery, endogenous neurogenesis, and scar response were assessed after functionalized NeuroRegen implantation.", "paper_id": "M2A-P015", "sex": "UNKNOWN", "species": "Canis familiaris", "strain": "UNKNOWN", "vertebral_level": "T8"}, "source_experiment_tracker_id": "M2A-P015-E002", "source_paper_tracker_id": "M2A-P015", "tracker_key": "M2A-P015::M2A-P015-E002"}'
+    'Functionalized scaffolds increased Tuj-1/Map2 and 5-HT-positive neurons, remyelinated axons, and lesion-site synaptophysin while reducing CS-56/CSPG signal; human MSCs were absent at 6 months, leaving endogenous-cell mediation unresolved.',
+    'Control and non-functionalized NeuroRegen scaffold',
+    'Functionalized NeuroRegen scaffold + hUC-MSCs',
+    '{"observation_tracker_ids": ["M2B-O063"], "source_experiment": {"chronicity_dpi_wpi": "1 year post-implantation", "control_type": "Control and non-functionalized NeuroRegen scaffold", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P015-E002", "figure_ref": "Figs. 2-7; immunofluorescence/TEM", "injury_device": "Complete transection + scaffold/cell implantation", "injury_model": "Chronic complete SCI", "injury_severity": "Complete transection; chronic cavity", "intervention_type": "Functionalized NeuroRegen scaffold + hUC-MSCs", "methods_summary": "Functionalized scaffolds increased Tuj-1/Map2 and 5-HT-positive neurons, remyelinated axons, and lesion-site synaptophysin while reducing CS-56/CSPG signal; human MSCs were absent at 6 months, leaving endogenous-cell mediation unresolved.", "paper_id": "M2A-P015", "sex": "Female", "species": "Canis familiaris", "strain": "Adult female Beagle", "vertebral_level": "T8"}, "source_experiment_tracker_id": "M2A-P015-E002", "source_paper_tracker_id": "M2A-P015", "tracker_key": "M2A-P015::M2A-P015-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P015'
@@ -1718,12 +1698,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract',
+    'Figs. 3-8',
     'Tracker experiment M2A-P016-E001',
-    'Schwann cells were transplanted in acellular injectable peripheral nerve matrix into contusion lesions and compared with Matrigel and injury-only controls.',
-    'Injury-only and Matrigel graft comparisons',
+    'iPN groups had immune-cell numbers similar to injury-only at 14 days; Matrigel groups trended toward approximately 3-fold more leukocytes/T cells. SC grafts in iPN contained approximately 3-fold more SCs at 14 days.',
+    'Injury-only; Matrigel +/- SC',
     'Schwann cells in injectable decellularized peripheral nerve matrix',
-    '{"observation_tracker_ids": ["M2B-O010"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Injury-only and Matrigel graft comparisons", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P016-E001", "figure_ref": "Abstract", "injury_device": "Contusion", "injury_model": "Contusion SCI", "injury_severity": "Contusion", "intervention_type": "Schwann cells in injectable decellularized peripheral nerve matrix", "methods_summary": "Schwann cells were transplanted in acellular injectable peripheral nerve matrix into contusion lesions and compared with Matrigel and injury-only controls.", "paper_id": "M2A-P016", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P016-E001", "source_paper_tracker_id": "M2A-P016", "tracker_key": "M2A-P016::M2A-P016-E001"}'
+    '{"observation_tracker_ids": ["M2B-O010"], "source_experiment": {"chronicity_dpi_wpi": "3 and 14 days post-transplantation", "control_type": "Injury-only; Matrigel +/- SC", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P016-E001", "figure_ref": "Figs. 3-5; flow cytometry/histology", "injury_device": "Thoracic contusion", "injury_model": "Contusion SCI", "injury_severity": "Moderate contusion; BBB 0.9 +/- 0.5 at 1 day and 5.5 +/- 0.7 at 7 days", "intervention_type": "Schwann cells in injectable decellularized peripheral nerve matrix", "methods_summary": "iPN groups had immune-cell numbers similar to injury-only at 14 days; Matrigel groups trended toward approximately 3-fold more leukocytes/T cells. SC grafts in iPN contained approximately 3-fold more SCs at 14 days.", "paper_id": "M2A-P016", "sex": "Female", "species": "Rattus norvegicus", "strain": "Adult Fischer", "vertebral_level": "Thoracic; T7-T9 sampling"}, "source_experiment_tracker_id": "M2A-P016-E001", "source_paper_tracker_id": "M2A-P016", "tracker_key": "M2A-P016::M2A-P016-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P016'
@@ -1738,12 +1718,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Figs. 6-8',
     'Tracker experiment M2A-P016-E002',
-    'Implant size, immune infiltration, Schwann-cell myelinated axons, axon growth, and BBB locomotor performance were assessed.',
+    'At 8 weeks iPN graft volume was 0.95 +/- 0.28 versus 0.48 +/- 0.17 mm3 in Matrigel, SC-myelinated axons 6927 +/- 2429 versus 3259 +/- 475, and BBB was comparable. Grid-walk errors favored iPN at 4 weeks (6.1 +/- 1.1% vs 8.6 +/- 1.8%) but equalized by 8 weeks (3.5 +/- 1.6% vs 5.0 +/- 1.7%).',
     'SC/Matrigel comparison',
     'SC/iPN matrix graft',
-    '{"observation_tracker_ids": ["M2B-O064"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "SC/Matrigel comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P016-E002", "figure_ref": "Abstract", "injury_device": "Contusion", "injury_model": "Contusion SCI", "injury_severity": "Contusion", "intervention_type": "SC/iPN matrix graft", "methods_summary": "Implant size, immune infiltration, Schwann-cell myelinated axons, axon growth, and BBB locomotor performance were assessed.", "paper_id": "M2A-P016", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P016-E002", "source_paper_tracker_id": "M2A-P016", "tracker_key": "M2A-P016::M2A-P016-E002"}'
+    '{"observation_tracker_ids": ["M2B-O064"], "source_experiment": {"chronicity_dpi_wpi": "4 and 8 weeks post-transplantation", "control_type": "SC/Matrigel comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P016-E002", "figure_ref": "Figs. 6-8; graft, axon, BBB/grid-walk", "injury_device": "Thoracic contusion", "injury_model": "Contusion SCI", "injury_severity": "Moderate contusion", "intervention_type": "SC/iPN matrix graft", "methods_summary": "At 8 weeks iPN graft volume was 0.95 +/- 0.28 versus 0.48 +/- 0.17 mm3 in Matrigel, SC-myelinated axons 6927 +/- 2429 versus 3259 +/- 475, and BBB was comparable. Grid-walk errors favored iPN at 4 weeks (6.1 +/- 1.1% vs 8.6 +/- 1.8%) but equalized by 8 weeks (3.5 +/- 1.6% vs 5.0 +/- 1.7%).", "paper_id": "M2A-P016", "sex": "Female", "species": "Rattus norvegicus", "strain": "Adult Fischer", "vertebral_level": "Thoracic; T7-T9 sampling"}, "source_experiment_tracker_id": "M2A-P016-E002", "source_paper_tracker_id": "M2A-P016", "tracker_key": "M2A-P016::M2A-P016-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P016'
@@ -1758,12 +1738,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract',
+    'Figs. 1-5',
     'Tracker experiment M2A-P017-E001',
-    'Two acute complete SCI patients received NeuroRegen scaffold plus MSC transplantation and were followed for adverse events and neurological/electrophysiological change.',
-    'Preoperative baseline / safety monitoring',
-    'NeuroRegen scaffold + MSC implantation',
-    '{"observation_tracker_ids": ["M2B-O022"], "source_experiment": {"chronicity_dpi_wpi": "1-year follow-up", "control_type": "Preoperative baseline / safety monitoring", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P017-E001", "figure_ref": "Abstract", "injury_device": "Clinical traumatic SCI + scaffold implantation", "injury_model": "Acute complete SCI", "injury_severity": "Complete injury by ASIA/MRI/electrophysiology", "intervention_type": "NeuroRegen scaffold + MSC implantation", "methods_summary": "Two acute complete SCI patients received NeuroRegen scaffold plus MSC transplantation and were followed for adverse events and neurological/electrophysiological change.", "paper_id": "M2A-P017", "sex": "UNKNOWN", "species": "Homo sapiens", "strain": "N/A", "vertebral_level": "T11 and C4"}, "source_experiment_tracker_id": "M2A-P017-E001", "source_paper_tracker_id": "M2A-P017", "tracker_key": "M2A-P017::M2A-P017-E001"}'
+    'Two acute complete patients received 1.5-cm or 1.1-cm NeuroRegen implants. Both improved to ASIA C with sensory and motor recovery and recovered SSEP/MEP; thoracic WISCI rose 0 to 7 by 12 months. No obvious treatment-related adverse symptoms were reported.',
+    'Preoperative baseline / no-treatment comparator',
+    'NeuroRegen scaffold + approximately 4 x 10^7 umbilical-cord MSCs',
+    '{"observation_tracker_ids": ["M2B-O022"], "source_experiment": {"chronicity_dpi_wpi": "24 hours or 8 days post-injury; 1-24 months reported for thoracic follow-up", "control_type": "Preoperative baseline / no-treatment comparator", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P017-E001", "figure_ref": "Figs. 1-5; ASIA/SSEP/MEP follow-up", "injury_device": "Clinical traumatic SCI + scaffold implantation", "injury_model": "Acute complete SCI", "injury_severity": "ASIA A by combined ASIA/MRI/electrophysiology; T11 and C4", "intervention_type": "NeuroRegen scaffold + approximately 4 x 10^7 umbilical-cord MSCs", "methods_summary": "Two acute complete patients received 1.5-cm or 1.1-cm NeuroRegen implants. Both improved to ASIA C with sensory and motor recovery and recovered SSEP/MEP; thoracic WISCI rose 0 to 7 by 12 months. No obvious treatment-related adverse symptoms were reported.", "paper_id": "M2A-P017", "sex": "Male", "species": "Homo sapiens", "strain": "N/A", "vertebral_level": "T11 and C4"}, "source_experiment_tracker_id": "M2A-P017-E001", "source_paper_tracker_id": "M2A-P017", "tracker_key": "M2A-P017::M2A-P017-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P017'
@@ -1780,10 +1760,10 @@ WITH inserted AS (
     1,
     'Abstract',
     'Tracker experiment M2A-P018-E001',
-    'Human spinal cord-derived NSPCs or human brain-derived NSPCs were transplanted into complete transection SCI with aligned collagen scaffold support.',
-    'hbNSPC/scaffold comparison',
-    'hSC-NSPCs + aligned collagen sponge scaffold',
-    '{"observation_tracker_ids": ["M2B-O025"], "source_experiment": {"chronicity_dpi_wpi": "Post-transplant interval UNKNOWN", "control_type": "hbNSPC/scaffold comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P018-E001", "figure_ref": "Abstract", "injury_device": "Complete transection", "injury_model": "Complete transection SCI", "injury_severity": "Complete transection", "intervention_type": "hSC-NSPCs + aligned collagen sponge scaffold", "methods_summary": "Human spinal cord-derived NSPCs or human brain-derived NSPCs were transplanted into complete transection SCI with aligned collagen scaffold support.", "paper_id": "M2A-P018", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P018-E001", "source_paper_tracker_id": "M2A-P018", "tracker_key": "M2A-P018::M2A-P018-E001"}'
+    'The ACSS had 60 +/- 10 micrometer oriented pores in a 2 mm-thick, 3 mm-diameter scaffold. hSC-NSPC survival exceeded hbNSPC survival at 1, 4, and 8 weeks (69.0 +/- 4.1, 43.2 +/- 8.8, and 12.0 +/- 2.0 vs 22.0 +/- 6.7, 12.0 +/- 2.7, and 5.4 +/- 1.1 cells/field) and hSC-NSPCs distributed closer to the rostral and caudal host borders.',
+    'SCI control, ACSS-only, hbNSPC+ACSS, hSC-NSPC+ACSS (n = 24/group)',
+    'Aligned collagen sponge scaffold plus hbNSPC or hSC-NSPC',
+    '{"observation_tracker_ids": ["M2B-O025"], "source_experiment": {"chronicity_dpi_wpi": "1, 4, and 8 weeks", "control_type": "SCI control, ACSS-only, hbNSPC+ACSS, hSC-NSPC+ACSS (n = 24/group)", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P018-E001", "figure_ref": "Publisher full-text snapshot; group design and donor-cell tracking", "injury_device": "T9 transection with 2 mm cord removal followed by ACSS implantation seeded with GFP-labeled hbNSPCs or hSC-NSPCs at 2 x 10^6 cells/scaffold in 20 microL", "injury_model": "Complete transection SCI", "injury_severity": "Complete transection; 2 mm gap", "intervention_type": "Aligned collagen sponge scaffold plus hbNSPC or hSC-NSPC", "methods_summary": "The ACSS had 60 +/- 10 micrometer oriented pores in a 2 mm-thick, 3 mm-diameter scaffold. hSC-NSPC survival exceeded hbNSPC survival at 1, 4, and 8 weeks (69.0 +/- 4.1, 43.2 +/- 8.8, and 12.0 +/- 2.0 vs 22.0 +/- 6.7, 12.0 +/- 2.7, and 5.4 +/- 1.1 cells/field) and hSC-NSPCs distributed closer to the rostral and caudal host borders.", "paper_id": "M2A-P018", "sex": "Female", "species": "Rattus norvegicus", "strain": "Female Sprague-Dawley, 6-8 weeks", "vertebral_level": "T9"}, "source_experiment_tracker_id": "M2A-P018-E001", "source_paper_tracker_id": "M2A-P018", "tracker_key": "M2A-P018::M2A-P018-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P018'
@@ -1800,10 +1780,10 @@ WITH inserted AS (
     2,
     'Abstract',
     'Tracker experiment M2A-P018-E002',
-    'Outcomes addressed cell retention, axonal guidance, neuronal regeneration microenvironment, and functional recovery according to abstract.',
-    'Cell-source/scaffold comparison',
-    'Aligned collagen scaffold-guided NSPC repair',
-    '{"observation_tracker_ids": ["M2B-O065"], "source_experiment": {"chronicity_dpi_wpi": "Post-transplant interval UNKNOWN", "control_type": "Cell-source/scaffold comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P018-E002", "figure_ref": "Abstract", "injury_device": "Complete transection", "injury_model": "Complete transection SCI", "injury_severity": "Complete transection", "intervention_type": "Aligned collagen scaffold-guided NSPC repair", "methods_summary": "Outcomes addressed cell retention, axonal guidance, neuronal regeneration microenvironment, and functional recovery according to abstract.", "paper_id": "M2A-P018", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P018-E002", "source_paper_tracker_id": "M2A-P018", "tracker_key": "M2A-P018::M2A-P018-E002"}'
+    'Relative to hbNSPC-loaded or scaffold-only controls, hSC-NSPC constructs showed better migration into host tissue, stronger neuronal differentiation/maturation, reduced inflammatory response and glial scar, and improved locomotor recovery, making the benefit partly cell-source dependent rather than a scaffold-only effect.',
+    'hbNSPC+ACSS and ACSS-only comparisons',
+    'hSC-NSPC-loaded aligned collagen scaffold',
+    '{"observation_tracker_ids": ["M2B-O065"], "source_experiment": {"chronicity_dpi_wpi": "Up to 8 weeks after transplantation", "control_type": "hbNSPC+ACSS and ACSS-only comparisons", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P018-E002", "figure_ref": "Publisher full-text snapshot; host-response and recovery outcomes", "injury_device": "T9 complete transection with ACSS-supported donor-cell implantation", "injury_model": "Complete transection SCI", "injury_severity": "Complete transection; 2 mm gap", "intervention_type": "hSC-NSPC-loaded aligned collagen scaffold", "methods_summary": "Relative to hbNSPC-loaded or scaffold-only controls, hSC-NSPC constructs showed better migration into host tissue, stronger neuronal differentiation/maturation, reduced inflammatory response and glial scar, and improved locomotor recovery, making the benefit partly cell-source dependent rather than a scaffold-only effect.", "paper_id": "M2A-P018", "sex": "Female", "species": "Rattus norvegicus", "strain": "Female Sprague-Dawley, 6-8 weeks", "vertebral_level": "T9"}, "source_experiment_tracker_id": "M2A-P018-E002", "source_paper_tracker_id": "M2A-P018", "tracker_key": "M2A-P018::M2A-P018-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P018'
@@ -1820,10 +1800,10 @@ WITH inserted AS (
     1,
     'Abstract',
     'Tracker experiment M2A-P019-E001',
-    'AFG/fSAP composite hydrogel was constructed to present interpenetrating biophysical and biochemical cues.',
-    'Single-cue scaffold logic',
+    'AFG was electrospun into a 2 mm bundle and soaked with RAD:KLT:RGI peptides at 2:1:1 before transglutaminase crosslinking to create AFG/fSAP. The composite Young''s modulus was 2.72 +/- 0.29 kPa versus 3.11 +/- 0.34 kPa for AFG, and female 6-week SD rats (54 total) were assigned to saline, AFG, or AFG/fSAP after 5 mm right T9-T10 lateral hemisection.',
+    'AFG vs AFG/fSAP construction comparison',
     'Aligned fibrin hydrogel + functionalized self-assembling peptide composite',
-    '{"observation_tracker_ids": ["M2B-O048"], "source_experiment": {"chronicity_dpi_wpi": "N/A", "control_type": "Single-cue scaffold logic", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P019-E001", "figure_ref": "Abstract", "injury_device": "Hydrogel fabrication", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "Aligned fibrin hydrogel + functionalized self-assembling peptide composite", "methods_summary": "AFG/fSAP composite hydrogel was constructed to present interpenetrating biophysical and biochemical cues.", "paper_id": "M2A-P019", "sex": "N/A", "species": "Scaffold system / rodent SCI context", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P019-E001", "source_paper_tracker_id": "M2A-P019", "tracker_key": "M2A-P019::M2A-P019-E001"}'
+    '{"observation_tracker_ids": ["M2B-O048"], "source_experiment": {"chronicity_dpi_wpi": "In vitro mechanics plus 12-week in vivo timeline", "control_type": "AFG vs AFG/fSAP construction comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P019-E001", "figure_ref": "Publisher full-text snapshot; scaffold fabrication and animal-model design", "injury_device": "AFG fabricated by electrospinning and crosslinked with RAD/KLT/RGI peptides", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "Aligned fibrin hydrogel + functionalized self-assembling peptide composite", "methods_summary": "AFG was electrospun into a 2 mm bundle and soaked with RAD:KLT:RGI peptides at 2:1:1 before transglutaminase crosslinking to create AFG/fSAP. The composite Young''s modulus was 2.72 +/- 0.29 kPa versus 3.11 +/- 0.34 kPa for AFG, and female 6-week SD rats (54 total) were assigned to saline, AFG, or AFG/fSAP after 5 mm right T9-T10 lateral hemisection.", "paper_id": "M2A-P019", "sex": "N/A", "species": "Scaffold system / rat SCI context", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P019-E001", "source_paper_tracker_id": "M2A-P019", "tracker_key": "M2A-P019::M2A-P019-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P019'
@@ -1840,10 +1820,10 @@ WITH inserted AS (
     2,
     'Abstract',
     'Tracker experiment M2A-P019-E002',
-    'Regeneration outcomes were assessed to test whether combined guidance and biochemical cues improved spinal cord repair.',
-    'Single-cue / scaffold comparisons',
-    'Multimodal composite hydrogel',
-    '{"observation_tracker_ids": ["M2B-O066"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Single-cue / scaffold comparisons", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P019-E002", "figure_ref": "Abstract", "injury_device": "Experimental SCI", "injury_model": "SCI", "injury_severity": "UNKNOWN", "intervention_type": "Multimodal composite hydrogel", "methods_summary": "Regeneration outcomes were assessed to test whether combined guidance and biochemical cues improved spinal cord repair.", "paper_id": "M2A-P019", "sex": "UNKNOWN", "species": "Rodent model context", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P019-E002", "source_paper_tracker_id": "M2A-P019", "tracker_key": "M2A-P019::M2A-P019-E002"}'
+    'AFG/fSAP improved CatWalk regulatory index to 73.79 +/- 6.06% versus 61.13 +/- 10.74% for AFG and 22.43 +/- 12.70% for control, and reduced non-paw contact duration to 0.63 +/- 0.97% versus 16.75 +/- 9.65% and 92.21 +/- 10.07%. It also raised rostral and middle axon density, increased CD34 microvessel density to 3.55 +/- 0.55% versus 2.61 +/- 0.37% AFG and 1.50 +/- 0.47% control, promoted remyelination, and reduced syringomyelia through 12 weeks.',
+    'Saline and AFG scaffold controls',
+    'AFG/fSAP multifunctional aligned fibrin-peptide hydrogel',
+    '{"observation_tracker_ids": ["M2B-O066"], "source_experiment": {"chronicity_dpi_wpi": "1, 8, and 12 weeks; BBB weekly; CatWalk/MEP/MRI at 12 weeks", "control_type": "Saline and AFG scaffold controls", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P019-E002", "figure_ref": "Publisher full-text snapshot; multimodal repair outcomes after lateral hemisection", "injury_device": "T9-T10 laminectomy with 5 mm right hemisection bridged by saline, AFG, or AFG/fSAP", "injury_model": "Right lateral hemisection SCI", "injury_severity": "Hemisection; Brown-Sequard-type defect", "intervention_type": "AFG/fSAP multifunctional aligned fibrin-peptide hydrogel", "methods_summary": "AFG/fSAP improved CatWalk regulatory index to 73.79 +/- 6.06% versus 61.13 +/- 10.74% for AFG and 22.43 +/- 12.70% for control, and reduced non-paw contact duration to 0.63 +/- 0.97% versus 16.75 +/- 9.65% and 92.21 +/- 10.07%. It also raised rostral and middle axon density, increased CD34 microvessel density to 3.55 +/- 0.55% versus 2.61 +/- 0.37% AFG and 1.50 +/- 0.47% control, promoted remyelination, and reduced syringomyelia through 12 weeks.", "paper_id": "M2A-P019", "sex": "Female", "species": "Rattus norvegicus", "strain": "Female Sprague-Dawley, 6 weeks, 200-230 g", "vertebral_level": "T9-T10"}, "source_experiment_tracker_id": "M2A-P019-E002", "source_paper_tracker_id": "M2A-P019", "tracker_key": "M2A-P019::M2A-P019-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P019'
@@ -1860,10 +1840,10 @@ WITH inserted AS (
     1,
     'Abstract',
     'Tracker experiment M2A-P020-E001',
-    'Decellularized spinal cord matrix-gel and GelMA were combined and assessed for water retention, wettability, degradation, soft mechanics, bioactivity, and microstructure.',
-    'Material characterization',
+    'Decellularization reduced residual DNA to 46.78 +/- 6.33 ng/mg, a 96.42% reduction versus normal spinal cord. 4D6G failed to polymerize; 1D9G, 2D8G, and 3D7G had compression moduli of 6.04 +/- 0.68, 4.9 +/- 0.14, and 4.01 +/- 0.32 Pa, and MenSC viability after 3 days reached 85.96% +/- 2.7%, 87.17% +/- 1.79%, and 93.74% +/- 1.74%, supporting 3D7G as the preferred scaffold.',
+    'Ratio-comparison series',
     'dSCM/GelMA composite scaffold',
-    '{"observation_tracker_ids": ["M2B-O033", "M2B-O044"], "source_experiment": {"chronicity_dpi_wpi": "N/A", "control_type": "Material characterization", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P020-E001", "figure_ref": "Abstract", "injury_device": "dSCM/GelMA fabrication", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "dSCM/GelMA composite scaffold", "methods_summary": "Decellularized spinal cord matrix-gel and GelMA were combined and assessed for water retention, wettability, degradation, soft mechanics, bioactivity, and microstructure.", "paper_id": "M2A-P020", "sex": "N/A", "species": "Scaffold system / rat SCI context", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P020-E001", "source_paper_tracker_id": "M2A-P020", "tracker_key": "M2A-P020::M2A-P020-E001"}'
+    '{"observation_tracker_ids": ["M2B-O033", "M2B-O044"], "source_experiment": {"chronicity_dpi_wpi": "In vitro material and 3-day cell assays", "control_type": "Ratio-comparison series", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P020-E001", "figure_ref": "Publisher full-text snapshot; scaffold optimization and MenSC viability", "injury_device": "dSCM/GelMA fabrication with 1D9G, 2D8G, 3D7G, and 4D6G ratios", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "dSCM/GelMA composite scaffold", "methods_summary": "Decellularization reduced residual DNA to 46.78 +/- 6.33 ng/mg, a 96.42% reduction versus normal spinal cord. 4D6G failed to polymerize; 1D9G, 2D8G, and 3D7G had compression moduli of 6.04 +/- 0.68, 4.9 +/- 0.14, and 4.01 +/- 0.32 Pa, and MenSC viability after 3 days reached 85.96% +/- 2.7%, 87.17% +/- 1.79%, and 93.74% +/- 1.74%, supporting 3D7G as the preferred scaffold.", "paper_id": "M2A-P020", "sex": "N/A", "species": "Scaffold system / human MenSC culture", "strain": "Rat dSCM source plus human menstrual blood-derived stem cells", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P020-E001", "source_paper_tracker_id": "M2A-P020", "tracker_key": "M2A-P020::M2A-P020-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P020'
@@ -1880,10 +1860,10 @@ WITH inserted AS (
     2,
     'Abstract',
     'Tracker experiment M2A-P020-E002',
-    'In vitro and in vivo experiments evaluated whether the composite scaffold supported human menstrual blood-derived stem cells and improved functional reconstruction after SCI.',
-    'Scaffold/cell comparison',
-    'dSCM/GelMA scaffold + MenSC',
-    '{"observation_tracker_ids": ["M2B-O067"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Scaffold/cell comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P020-E002", "figure_ref": "Abstract", "injury_device": "Experimental SCI", "injury_model": "SCI", "injury_severity": "UNKNOWN", "intervention_type": "dSCM/GelMA scaffold + MenSC", "methods_summary": "In vitro and in vivo experiments evaluated whether the composite scaffold supported human menstrual blood-derived stem cells and improved functional reconstruction after SCI.", "paper_id": "M2A-P020", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P020-E002", "source_paper_tracker_id": "M2A-P020", "tracker_key": "M2A-P020::M2A-P020-E002"}'
+    'All five treatment groups improved relative to injury, but the MenSC-loaded DSCG/GelMA scaffold produced the strongest functional recovery, with significant group differences at 4 and 6 weeks and concurrent histologic evidence of enhanced repair versus scaffold-only or MenSC-only conditions.',
+    'GelMA, DSCG, DSCG-GelMA, MenSC, and MenSC-loaded DSCG/GelMA comparisons',
+    'MenSC-encapsulated dSCM/GelMA scaffold',
+    '{"observation_tracker_ids": ["M2B-O067"], "source_experiment": {"chronicity_dpi_wpi": "BBB weeks 1-8", "control_type": "GelMA, DSCG, DSCG-GelMA, MenSC, and MenSC-loaded DSCG/GelMA comparisons", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P020-E002", "figure_ref": "Publisher full-text snapshot; transection repair comparison", "injury_device": "T10 complete transection with 2 mm cord removal followed by material or cell implantation", "injury_model": "Complete transection SCI", "injury_severity": "Complete transection; 2 mm gap", "intervention_type": "MenSC-encapsulated dSCM/GelMA scaffold", "methods_summary": "All five treatment groups improved relative to injury, but the MenSC-loaded DSCG/GelMA scaffold produced the strongest functional recovery, with significant group differences at 4 and 6 weeks and concurrent histologic evidence of enhanced repair versus scaffold-only or MenSC-only conditions.", "paper_id": "M2A-P020", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "Rat", "vertebral_level": "T10"}, "source_experiment_tracker_id": "M2A-P020-E002", "source_paper_tracker_id": "M2A-P020", "tracker_key": "M2A-P020::M2A-P020-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P020'
@@ -1900,10 +1880,10 @@ WITH inserted AS (
     1,
     'Abstract',
     'Tracker experiment M2A-P021-E001',
-    'A 100-Gauss external magnetic field during polymerization aligned peptide hydrogel fibers, including in the presence of cells.',
-    'Unaligned hydrogel comparison',
-    'Magnetically responsive self-assembling peptide hydrogel',
-    '{"observation_tracker_ids": ["M2B-O026"], "source_experiment": {"chronicity_dpi_wpi": "In vitro", "control_type": "Unaligned hydrogel comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P021-E001", "figure_ref": "Abstract", "injury_device": "Magnetic hydrogel alignment", "injury_model": "Axon-infiltration model", "injury_severity": "N/A", "intervention_type": "Magnetically responsive self-assembling peptide hydrogel", "methods_summary": "A 100-Gauss external magnetic field during polymerization aligned peptide hydrogel fibers, including in the presence of cells.", "paper_id": "M2A-P021", "sex": "N/A", "species": "In vitro scaffold/NPC system", "strain": "NPC culture", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P021-E001", "source_paper_tracker_id": "M2A-P021", "tracker_key": "M2A-P021::M2A-P021-E001"}'
+    'A 100-G field aligned hydrogel fibers, with 0.10 wt% magnetic particles sufficient for consistent orientation. NPCs cultured on aligned hMSC-seeded hydrogels showed greater axon orientation and elongation after 4 days than on unaligned controls.',
+    'Unaligned and magnetic-particle dose comparisons',
+    'Magnetically aligned self-assembling peptide hydrogel',
+    '{"observation_tracker_ids": ["M2B-O026"], "source_experiment": {"chronicity_dpi_wpi": "Four-day in vitro neurite assay", "control_type": "Unaligned and magnetic-particle dose comparisons", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P021-E001", "figure_ref": "Publisher full-text snapshot; magnetic alignment and neurite-guidance assays", "injury_device": "RADA16I hydrogels in 2 x 2 x 2 mm chambers with 0.01, 0.05, or 0.10 wt% magnetic particles polymerized under a 100-G field; hMSCs at 7.5 x 10^6 cells/mL", "injury_model": "Axon-infiltration model", "injury_severity": "N/A", "intervention_type": "Magnetically aligned self-assembling peptide hydrogel", "methods_summary": "A 100-G field aligned hydrogel fibers, with 0.10 wt% magnetic particles sufficient for consistent orientation. NPCs cultured on aligned hMSC-seeded hydrogels showed greater axon orientation and elongation after 4 days than on unaligned controls.", "paper_id": "M2A-P021", "sex": "N/A", "species": "In vitro hydrogel/hMSC/NPC system", "strain": "hMSCs embedded in RADA16I plus surface NPCs", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P021-E001", "source_paper_tracker_id": "M2A-P021", "tracker_key": "M2A-P021::M2A-P021-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P021'
@@ -1920,10 +1900,10 @@ WITH inserted AS (
     2,
     'Abstract',
     'Tracker experiment M2A-P021-E002',
-    'In vivo validation assessed whether aligned injectable hydrogel promoted and oriented axon infiltration at the SCI site.',
-    'Unaligned/injury comparison',
-    'Injectable aligned peptide hydrogel scaffold',
-    '{"observation_tracker_ids": ["M2B-O068"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Unaligned/injury comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P021-E002", "figure_ref": "Abstract", "injury_device": "Experimental SCI", "injury_model": "SCI", "injury_severity": "UNKNOWN", "intervention_type": "Injectable aligned peptide hydrogel scaffold", "methods_summary": "In vivo validation assessed whether aligned injectable hydrogel promoted and oriented axon infiltration at the SCI site.", "paper_id": "M2A-P021", "sex": "UNKNOWN", "species": "Rat SCI model context", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P021-E002", "source_paper_tracker_id": "M2A-P021", "tracker_key": "M2A-P021::M2A-P021-E002"}'
+    'The aligned hMSC-seeded group increased Tuj-positive alignment, CGRP-positive regeneration, and GAP43 signal relative to comparison groups, while 5-HT differences were not significant. ED-1, GFAP, and injury-area measures were also quantified, so this is an early histology-focused rather than long-term functional endpoint.',
+    'Acellular aligned, hMSC unaligned, and hMSC aligned comparisons',
+    'Magnetically aligned hMSC-seeded injectable peptide hydrogel',
+    '{"observation_tracker_ids": ["M2B-O068"], "source_experiment": {"chronicity_dpi_wpi": "Two weeks post-injection", "control_type": "Acellular aligned, hMSC unaligned, and hMSC aligned comparisons", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P021-E002", "figure_ref": "Publisher full-text snapshot; cervical contusion histology", "injury_device": "Two weeks after cervical contusion, injectable hydrogel was delivered under rostral-caudal 100-G alignment as acellular plus field, hMSC without field, or hMSC plus field", "injury_model": "Cervical contusion SCI", "injury_severity": "Contusion SCI", "intervention_type": "Magnetically aligned hMSC-seeded injectable peptide hydrogel", "methods_summary": "The aligned hMSC-seeded group increased Tuj-positive alignment, CGRP-positive regeneration, and GAP43 signal relative to comparison groups, while 5-HT differences were not significant. ED-1, GFAP, and injury-area measures were also quantified, so this is an early histology-focused rather than long-term functional endpoint.", "paper_id": "M2A-P021", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "Rat", "vertebral_level": "Cervical"}, "source_experiment_tracker_id": "M2A-P021-E002", "source_paper_tracker_id": "M2A-P021", "tracker_key": "M2A-P021::M2A-P021-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P021'
@@ -1940,10 +1920,10 @@ WITH inserted AS (
     1,
     'Abstract',
     'Tracker experiment M2A-P022-E001',
-    'Hyaluronic-acid hydrogel, decellularized brain matrix, PDRN, primed MSC EVs, and NPCs were combined into a multimodal scaffold.',
-    'Component comparison',
+    'DBM decellularization reduced residual DNA to 17.501 ng/g, indicating 99.25% removal of cellular material. The optimized hydrogel used 5 mg DBM, 200 microgram PDRN, and 1 x 10^8 TI-EV particles with NPCs, and the full DBM/PDRN/TI-EV@Gel combination increased NPC neurite length by 203.1% over gel alone while increasing TUJ1/MAP2 double-positive differentiation.',
+    'Component-combination comparison',
     'DBM/PDRN/TI-EV/NPC@Gel composite scaffold',
-    '{"observation_tracker_ids": ["M2B-O034", "M2B-O045"], "source_experiment": {"chronicity_dpi_wpi": "N/A", "control_type": "Component comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P022-E001", "figure_ref": "Abstract", "injury_device": "Hydrogel fabrication", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "DBM/PDRN/TI-EV/NPC@Gel composite scaffold", "methods_summary": "Hyaluronic-acid hydrogel, decellularized brain matrix, PDRN, primed MSC EVs, and NPCs were combined into a multimodal scaffold.", "paper_id": "M2A-P022", "sex": "N/A", "species": "Scaffold system / rat SCI context", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P022-E001", "source_paper_tracker_id": "M2A-P022", "tracker_key": "M2A-P022::M2A-P022-E001"}'
+    '{"observation_tracker_ids": ["M2B-O034", "M2B-O045"], "source_experiment": {"chronicity_dpi_wpi": "In vitro viability and differentiation; 28-day in vivo design", "control_type": "Component-combination comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P022-E001", "figure_ref": "Publisher full-text snapshot; hydrogel bioactive-component optimization", "injury_device": "HA hydrogel with DBM, PDRN, TI-EVs, and NPCs", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "DBM/PDRN/TI-EV/NPC@Gel composite scaffold", "methods_summary": "DBM decellularization reduced residual DNA to 17.501 ng/g, indicating 99.25% removal of cellular material. The optimized hydrogel used 5 mg DBM, 200 microgram PDRN, and 1 x 10^8 TI-EV particles with NPCs, and the full DBM/PDRN/TI-EV@Gel combination increased NPC neurite length by 203.1% over gel alone while increasing TUJ1/MAP2 double-positive differentiation.", "paper_id": "M2A-P022", "sex": "N/A", "species": "Scaffold system / rat SCI context", "strain": "H9 hESC-derived NPCs in vitro", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P022-E001", "source_paper_tracker_id": "M2A-P022", "tracker_key": "M2A-P022::M2A-P022-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P022'
@@ -1960,10 +1940,10 @@ WITH inserted AS (
     2,
     'Abstract',
     'Tracker experiment M2A-P022-E002',
-    'Rat SCI testing assessed angiogenesis, anti-inflammatory and anti-apoptotic effects, neural differentiation, regeneration, and functional recovery.',
-    'Component/scaffold comparison',
-    'Bioactive multimodal hydrogel',
-    '{"observation_tracker_ids": ["M2B-O069"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Component/scaffold comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P022-E002", "figure_ref": "Abstract", "injury_device": "Experimental SCI", "injury_model": "SCI", "injury_severity": "UNKNOWN", "intervention_type": "Bioactive multimodal hydrogel", "methods_summary": "Rat SCI testing assessed angiogenesis, anti-inflammatory and anti-apoptotic effects, neural differentiation, regeneration, and functional recovery.", "paper_id": "M2A-P022", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P022-E002", "source_paper_tracker_id": "M2A-P022", "tracker_key": "M2A-P022::M2A-P022-E002"}'
+    'Rats were assigned to sham (n=6), SCI (n=22), DBM@Gel (n=15), DBM/PDRN@Gel (n=17), DBM/PDRN/TI-EV@Gel (n=14), and DBM/PDRN/TI-EV/NPC@Gel (n=12). The full combination most strongly reduced CD68, HMGB1, Iba-1, IL-1beta, and cleaved caspase-3, increased GDNF and NGF, and raised TUJ1, VGAT, NF, NeuN, NG2, MBP, and myelination at 28 days while producing the strongest BBB recovery.',
+    'SCI, DBM@Gel, DBM/PDRN@Gel, and DBM/PDRN/TI-EV@Gel comparisons',
+    'DBM/PDRN/TI-EV/NPC@Gel injectable bioactive hydrogel',
+    '{"observation_tracker_ids": ["M2B-O069"], "source_experiment": {"chronicity_dpi_wpi": "Days 1, 4, 7, 10, 14, 21, and 28", "control_type": "SCI, DBM@Gel, DBM/PDRN@Gel, and DBM/PDRN/TI-EV@Gel comparisons", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P022-E002", "figure_ref": "Publisher full-text snapshot; complete-transection multimodal repair outcomes", "injury_device": "1 mm T10 transection followed by 10 microL lesion injection plus 10 microL rostral and caudal support gel", "injury_model": "Complete transection SCI", "injury_severity": "Complete transection; 1 mm gap", "intervention_type": "DBM/PDRN/TI-EV/NPC@Gel injectable bioactive hydrogel", "methods_summary": "Rats were assigned to sham (n=6), SCI (n=22), DBM@Gel (n=15), DBM/PDRN@Gel (n=17), DBM/PDRN/TI-EV@Gel (n=14), and DBM/PDRN/TI-EV/NPC@Gel (n=12). The full combination most strongly reduced CD68, HMGB1, Iba-1, IL-1beta, and cleaved caspase-3, increased GDNF and NGF, and raised TUJ1, VGAT, NF, NeuN, NG2, MBP, and myelination at 28 days while producing the strongest BBB recovery.", "paper_id": "M2A-P022", "sex": "Female", "species": "Rattus norvegicus", "strain": "Female Sprague-Dawley, 10 weeks, 220-260 g", "vertebral_level": "T10"}, "source_experiment_tracker_id": "M2A-P022-E002", "source_paper_tracker_id": "M2A-P022", "tracker_key": "M2A-P022::M2A-P022-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P022'
@@ -1980,10 +1960,10 @@ WITH inserted AS (
     1,
     'Abstract',
     'Tracker experiment M2A-P023-E001',
-    'Curcumin-loaded PLGA nanoparticles were characterized and encapsulated in gelatin/alginate hydrogel scaffolds seeded with human endometrial stem cells.',
-    'Material/cell characterization',
+    'Curcumin-loaded PLGA nanoparticles achieved 80.3 +/- 4.2% encapsulation efficiency and 19.6 +/- 2.5% drug loading, with sustained release through 192 hours. Gelatin/alginate scaffolds showed slower degradation than gelatin after day 12, supported hEnSC adhesion, and nanocurcumin hydrogel increased hEnSC proliferation more than free-curcumin hydrogel by days 3 and 7.',
+    'Curcumin-loaded vs blank scaffold comparison',
     'Gelatin/alginate hydrogel + hEnSC + curcumin-loaded PLGA nanoparticles',
-    '{"observation_tracker_ids": ["M2B-O035"], "source_experiment": {"chronicity_dpi_wpi": "N/A", "control_type": "Material/cell characterization", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P023-E001", "figure_ref": "Abstract", "injury_device": "Hydrogel and nanoparticle fabrication", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "Gelatin/alginate hydrogel + hEnSC + curcumin-loaded PLGA nanoparticles", "methods_summary": "Curcumin-loaded PLGA nanoparticles were characterized and encapsulated in gelatin/alginate hydrogel scaffolds seeded with human endometrial stem cells.", "paper_id": "M2A-P023", "sex": "N/A", "species": "Scaffold system / rat SCI context", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P023-E001", "source_paper_tracker_id": "M2A-P023", "tracker_key": "M2A-P023::M2A-P023-E001"}'
+    '{"observation_tracker_ids": ["M2B-O035"], "source_experiment": {"chronicity_dpi_wpi": "In vitro release through 192 hours; scaffold degradation through 28 days", "control_type": "Curcumin-loaded vs blank scaffold comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P023-E001", "figure_ref": "Publisher full-text snapshot; nanoparticle and scaffold characterization with hEnSC viability", "injury_device": "Gelatin/alginate hydrogel with curcumin-loaded PLGA nanoparticles", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "Gelatin/alginate hydrogel + hEnSC + curcumin-loaded PLGA nanoparticles", "methods_summary": "Curcumin-loaded PLGA nanoparticles achieved 80.3 +/- 4.2% encapsulation efficiency and 19.6 +/- 2.5% drug loading, with sustained release through 192 hours. Gelatin/alginate scaffolds showed slower degradation than gelatin after day 12, supported hEnSC adhesion, and nanocurcumin hydrogel increased hEnSC proliferation more than free-curcumin hydrogel by days 3 and 7.", "paper_id": "M2A-P023", "sex": "N/A", "species": "Scaffold system / rat SCI context", "strain": "Human endometrial stem cells", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P023-E001", "source_paper_tracker_id": "M2A-P023", "tracker_key": "M2A-P023::M2A-P023-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P023'
@@ -2000,10 +1980,10 @@ WITH inserted AS (
     2,
     'Abstract',
     'Tracker experiment M2A-P023-E002',
-    'In vivo rat SCI experiments evaluated regeneration and anti-inflammatory repair effects of the combined scaffold strategy.',
-    'Scaffold/cell/drug comparison',
-    'hEnSC and curcumin-PLGA hydrogel scaffold',
-    '{"observation_tracker_ids": ["M2B-O070"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Scaffold/cell/drug comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P023-E002", "figure_ref": "Abstract", "injury_device": "Experimental SCI", "injury_model": "SCI", "injury_severity": "UNKNOWN", "intervention_type": "hEnSC and curcumin-PLGA hydrogel scaffold", "methods_summary": "In vivo rat SCI experiments evaluated regeneration and anti-inflammatory repair effects of the combined scaffold strategy.", "paper_id": "M2A-P023", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P023-E002", "source_paper_tracker_id": "M2A-P023", "tracker_key": "M2A-P023::M2A-P023-E002"}'
+    'Six groups were studied: sham, SCI, hydrogel, hEnSC/hydrogel, nanocurcumin/hydrogel, and hEnSC plus nanocurcumin/hydrogel. The combination group reached BBB 15.5 +/- 1.05 at week 7 versus 14.16 +/- 0.75 for nanocurcumin alone and remained highest through week 10, while also showing the best H&E white/gray matter preservation, Luxol fast blue myelinated-fiber recovery, and NF200-positive nerve-fiber regeneration.',
+    'SCI, hydrogel-only, hEnSC/hydrogel, and nanocurcumin/hydrogel controls',
+    'hEnSC plus nanocurcumin gelatin/alginate hydrogel',
+    '{"observation_tracker_ids": ["M2B-O070"], "source_experiment": {"chronicity_dpi_wpi": "Weekly BBB through 10 weeks; histology after terminal perfusion", "control_type": "SCI, hydrogel-only, hEnSC/hydrogel, and nanocurcumin/hydrogel controls", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P023-E002", "figure_ref": "Publisher full-text snapshot; delayed post-contusion hydrogel repair comparison", "injury_device": "10 g, 12.5 mm weight-drop contusion at T8-T9 followed by delayed 50 microL injection at 1 week", "injury_model": "Moderate contusion SCI", "injury_severity": "Contusion", "intervention_type": "hEnSC plus nanocurcumin gelatin/alginate hydrogel", "methods_summary": "Six groups were studied: sham, SCI, hydrogel, hEnSC/hydrogel, nanocurcumin/hydrogel, and hEnSC plus nanocurcumin/hydrogel. The combination group reached BBB 15.5 +/- 1.05 at week 7 versus 14.16 +/- 0.75 for nanocurcumin alone and remained highest through week 10, while also showing the best H&E white/gray matter preservation, Luxol fast blue myelinated-fiber recovery, and NF200-positive nerve-fiber regeneration.", "paper_id": "M2A-P023", "sex": "Male", "species": "Rattus norvegicus", "strain": "Adult male Wistar, 220-250 g, n=6/group", "vertebral_level": "T8-T9"}, "source_experiment_tracker_id": "M2A-P023-E002", "source_paper_tracker_id": "M2A-P023", "tracker_key": "M2A-P023::M2A-P023-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P023'
@@ -2018,12 +1998,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract',
+    'Figs. 3-6',
     'Tracker experiment M2A-P024-E001',
-    'SEM and neural-marker analyses assessed hAEC attachment, distribution, and neural differentiation on the conductive scaffold.',
+    'hAECs attached uniformly; scaffold and/or Noggin increased FOX3, Calca, and MBP expression, while scaffold increased GFAP. Chitosan loaded 22.6% Noggin with 75.3% entrapment efficiency; 28.5% of incorporated Noggin released over 12 days.',
     'Scaffold/cue comparison',
     'Noggin-loaded nanochitosan/polypyrrole-alginate conductive scaffold + hAEC',
-    '{"observation_tracker_ids": ["M2B-O036"], "source_experiment": {"chronicity_dpi_wpi": "In vitro", "control_type": "Scaffold/cue comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P024-E001", "figure_ref": "Abstract", "injury_device": "Conductive scaffold fabrication", "injury_model": "In vitro scaffold-cell differentiation model", "injury_severity": "N/A", "intervention_type": "Noggin-loaded nanochitosan/polypyrrole-alginate conductive scaffold + hAEC", "methods_summary": "SEM and neural-marker analyses assessed hAEC attachment, distribution, and neural differentiation on the conductive scaffold.", "paper_id": "M2A-P024", "sex": "N/A", "species": "hAEC culture / scaffold system", "strain": "Human amniotic epithelial cells", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P024-E001", "source_paper_tracker_id": "M2A-P024", "tracker_key": "M2A-P024::M2A-P024-E001"}'
+    '{"observation_tracker_ids": ["M2B-O036"], "source_experiment": {"chronicity_dpi_wpi": "1 and 3 weeks", "control_type": "Scaffold/cue comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P024-E001", "figure_ref": "Figs. 3-6; SEM/qPCR/release", "injury_device": "Conductive scaffold fabrication", "injury_model": "In vitro scaffold-cell differentiation model", "injury_severity": "N/A", "intervention_type": "Noggin-loaded nanochitosan/polypyrrole-alginate conductive scaffold + hAEC", "methods_summary": "hAECs attached uniformly; scaffold and/or Noggin increased FOX3, Calca, and MBP expression, while scaffold increased GFAP. Chitosan loaded 22.6% Noggin with 75.3% entrapment efficiency; 28.5% of incorporated Noggin released over 12 days.", "paper_id": "M2A-P024", "sex": "N/A", "species": "hAEC culture / scaffold system", "strain": "Human amniotic epithelial cells", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P024-E001", "source_paper_tracker_id": "M2A-P024", "tracker_key": "M2A-P024::M2A-P024-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P024'
@@ -2038,12 +2018,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Figs. 7-10',
     'Tracker experiment M2A-P024-E002',
-    'Animal-model testing assessed repair potential of hAECs on Noggin-loaded conductive nanochitosan/polypyrrole-alginate scaffold.',
-    'Scaffold/cell comparison',
-    'hAEC-loaded conductive chitosan scaffold',
-    '{"observation_tracker_ids": ["M2B-O071"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Scaffold/cell comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P024-E002", "figure_ref": "Abstract", "injury_device": "Experimental SCI", "injury_model": "SCI", "injury_severity": "UNKNOWN", "intervention_type": "hAEC-loaded conductive chitosan scaffold", "methods_summary": "Animal-model testing assessed repair potential of hAECs on Noggin-loaded conductive nanochitosan/polypyrrole-alginate scaffold.", "paper_id": "M2A-P024", "sex": "UNKNOWN", "species": "Animal SCI model context", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P024-E002", "source_paper_tracker_id": "M2A-P024", "tracker_key": "M2A-P024::M2A-P024-E002"}'
+    'Six groups (n=6) were followed for 4 weeks. Noggin+hAEC scaffold achieved BBB 14.0 +/- 1.43 versus 9.5 +/- 1.52 lesion control; scaffold+hAEC 13.5 +/- 0.7 and Noggin scaffold 12.5 +/- 0.51. hAEC-containing groups reduced Iba1/GFAP and increased beta-tubulin/MBP; DII-hAECs remained alive at 4 weeks.',
+    'Empty lesion; scaffold; hAEC; Noggin scaffold',
+    'Noggin-loaded conductive scaffold +/- DII-hAECs',
+    '{"observation_tracker_ids": ["M2B-O071"], "source_experiment": {"chronicity_dpi_wpi": "1 and 4 weeks", "control_type": "Empty lesion; scaffold; hAEC; Noggin scaffold", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P024-E002", "figure_ref": "Figs. 7-10; BBB/qPCR/IHC", "injury_device": "Surgical hemisection", "injury_model": "Right T10-T11 hemisection, 2 x 4 mm cavity", "injury_severity": "Right hemisection", "intervention_type": "Noggin-loaded conductive scaffold +/- DII-hAECs", "methods_summary": "Six groups (n=6) were followed for 4 weeks. Noggin+hAEC scaffold achieved BBB 14.0 +/- 1.43 versus 9.5 +/- 1.52 lesion control; scaffold+hAEC 13.5 +/- 0.7 and Noggin scaffold 12.5 +/- 0.51. hAEC-containing groups reduced Iba1/GFAP and increased beta-tubulin/MBP; DII-hAECs remained alive at 4 weeks.", "paper_id": "M2A-P024", "sex": "Male", "species": "Rattus norvegicus", "strain": "Wistar", "vertebral_level": "T10-T11"}, "source_experiment_tracker_id": "M2A-P024-E002", "source_paper_tracker_id": "M2A-P024", "tracker_key": "M2A-P024::M2A-P024-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P024'
@@ -2058,12 +2038,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract',
+    'Figs. 1-3',
     'Tracker experiment M2A-P025-E001',
-    'Fibrin scaffolds containing a controlled NT-3 delivery system were implanted in adult rat spinal cord lesions to assess short-term fiber sprouting.',
-    'Saline / control scaffold',
+    'Adult female rats received fibrin beads containing heparin-binding delivery system and NT-3. F-DS-NT3 1000 ng/mL produced 10.4% overall Tuj1 fiber density versus 3% saline and approximately 6-7% fibrin controls; white-matter-border GFAP was reduced by fibrin scaffolds.',
+    'Saline, fibrin-only, delivery-system-only, unmodified NT-3 fibrin',
     'Fibrin scaffold + controlled NT-3 delivery',
-    '{"observation_tracker_ids": ["M2B-O012"], "source_experiment": {"chronicity_dpi_wpi": "Immediate implantation; 9-day histology", "control_type": "Saline / control scaffold", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P025-E001", "figure_ref": "Abstract", "injury_device": "Surgical ablation", "injury_model": "2-mm spinal cord ablation lesion", "injury_severity": "2-mm ablation injury", "intervention_type": "Fibrin scaffold + controlled NT-3 delivery", "methods_summary": "Fibrin scaffolds containing a controlled NT-3 delivery system were implanted in adult rat spinal cord lesions to assess short-term fiber sprouting.", "paper_id": "M2A-P025", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "Adult rats", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P025-E001", "source_paper_tracker_id": "M2A-P025", "tracker_key": "M2A-P025::M2A-P025-E001"}'
+    '{"observation_tracker_ids": ["M2B-O012"], "source_experiment": {"chronicity_dpi_wpi": "Immediate implantation; 9-day histology", "control_type": "Saline, fibrin-only, delivery-system-only, unmodified NT-3 fibrin", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P025-E001", "figure_ref": "Figs. 1-3; Tuj1/GFAP quantification", "injury_device": "Surgical T9 ablation", "injury_model": "2-mm spinal cord ablation lesion", "injury_severity": "Complete 2-mm gap", "intervention_type": "Fibrin scaffold + controlled NT-3 delivery", "methods_summary": "Adult female rats received fibrin beads containing heparin-binding delivery system and NT-3. F-DS-NT3 1000 ng/mL produced 10.4% overall Tuj1 fiber density versus 3% saline and approximately 6-7% fibrin controls; white-matter-border GFAP was reduced by fibrin scaffolds.", "paper_id": "M2A-P025", "sex": "Female", "species": "Rattus norvegicus", "strain": "Long Evans", "vertebral_level": "T9"}, "source_experiment_tracker_id": "M2A-P025-E001", "source_paper_tracker_id": "M2A-P025", "tracker_key": "M2A-P025::M2A-P025-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P025'
@@ -2078,12 +2058,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Figs. 5-7',
     'Tracker experiment M2A-P025-E002',
-    'Neuronal fiber growth, glial scar formation, and hindlimb motor function were compared across NT-3 scaffold, control scaffold, and saline groups.',
-    'NT-3 scaffold vs control scaffold/saline',
+    'Controlled NT-3 enhanced early fiber sprouting and cell migration, but hindlimb BBB scores did not improve versus controls at 12 weeks; no treatment differences in macrophage/microglia density were observed.',
+    'TBS, fibrin+NT-3, fibrin+delivery system+NT-3',
     'Fibrin/NT-3 scaffold',
-    '{"observation_tracker_ids": ["M2B-O072"], "source_experiment": {"chronicity_dpi_wpi": "9 days and functional follow-up UNKNOWN", "control_type": "NT-3 scaffold vs control scaffold/saline", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P025-E002", "figure_ref": "Abstract", "injury_device": "Surgical ablation", "injury_model": "2-mm spinal cord ablation lesion", "injury_severity": "2-mm ablation injury", "intervention_type": "Fibrin/NT-3 scaffold", "methods_summary": "Neuronal fiber growth, glial scar formation, and hindlimb motor function were compared across NT-3 scaffold, control scaffold, and saline groups.", "paper_id": "M2A-P025", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "Adult rats", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P025-E002", "source_paper_tracker_id": "M2A-P025", "tracker_key": "M2A-P025::M2A-P025-E002"}'
+    '{"observation_tracker_ids": ["M2B-O072"], "source_experiment": {"chronicity_dpi_wpi": "12 weeks post-injury", "control_type": "TBS, fibrin+NT-3, fibrin+delivery system+NT-3", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P025-E002", "figure_ref": "Figs. 5-7; BBB/ED-1/subtype staining", "injury_device": "Surgical T9 ablation", "injury_model": "2-mm spinal cord ablation lesion", "injury_severity": "Complete 2-mm gap", "intervention_type": "Fibrin/NT-3 scaffold", "methods_summary": "Controlled NT-3 enhanced early fiber sprouting and cell migration, but hindlimb BBB scores did not improve versus controls at 12 weeks; no treatment differences in macrophage/microglia density were observed.", "paper_id": "M2A-P025", "sex": "Female", "species": "Rattus norvegicus", "strain": "Long Evans", "vertebral_level": "T9"}, "source_experiment_tracker_id": "M2A-P025-E002", "source_paper_tracker_id": "M2A-P025", "tracker_key": "M2A-P025::M2A-P025-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P025'
@@ -2098,12 +2078,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract',
+    'Figs. 1-7',
     'Tracker experiment M2A-P026-E001',
-    'Rats underwent T9 complete transection followed by delayed implantation of bFGF-incorporated hydrogel surrounded by acellular vascular matrix.',
-    'Transection/scaffold comparison',
+    'Forty rats received delayed implantation after T9 transection; HEMA-MOETACL had communicating 80-micrometer pores and was surrounded by decellularized vascular matrix.',
+    'Lesion control (n=8), bFGF alone (n=10), hydrogel alone (n=10), combined (n=12)',
     'bFGF/HEMA-MOETACL hydrogel + acellular vascular matrix',
-    '{"observation_tracker_ids": ["M2B-O038"], "source_experiment": {"chronicity_dpi_wpi": "Implantation 5 DPI; 8-week outcome", "control_type": "Transection/scaffold comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P026-E001", "figure_ref": "Abstract", "injury_device": "T9 complete transection", "injury_model": "Complete transection SCI", "injury_severity": "Complete transection", "intervention_type": "bFGF/HEMA-MOETACL hydrogel + acellular vascular matrix", "methods_summary": "Rats underwent T9 complete transection followed by delayed implantation of bFGF-incorporated hydrogel surrounded by acellular vascular matrix.", "paper_id": "M2A-P026", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "Sprague-Dawley", "vertebral_level": "T9"}, "source_experiment_tracker_id": "M2A-P026-E001", "source_paper_tracker_id": "M2A-P026", "tracker_key": "M2A-P026::M2A-P026-E001"}'
+    '{"observation_tracker_ids": ["M2B-O038"], "source_experiment": {"chronicity_dpi_wpi": "Implantation 5 DPI; 8-week outcome", "control_type": "Lesion control (n=8), bFGF alone (n=10), hydrogel alone (n=10), combined (n=12)", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P026-E001", "figure_ref": "Figs. 1-2; group design", "injury_device": "T9 complete transection with 2-mm removal", "injury_model": "Complete transection SCI", "injury_severity": "Complete transection", "intervention_type": "bFGF/HEMA-MOETACL hydrogel + acellular vascular matrix", "methods_summary": "Forty rats received delayed implantation after T9 transection; HEMA-MOETACL had communicating 80-micrometer pores and was surrounded by decellularized vascular matrix.", "paper_id": "M2A-P026", "sex": "Mixed/UNKNOWN", "species": "Rattus norvegicus", "strain": "Sprague-Dawley", "vertebral_level": "T9"}, "source_experiment_tracker_id": "M2A-P026-E001", "source_paper_tracker_id": "M2A-P026", "tracker_key": "M2A-P026::M2A-P026-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P026'
@@ -2118,12 +2098,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Figs. 3-7',
     'Tracker experiment M2A-P026-E002',
-    'Tissue ingrowth, nerve regeneration, and functional recovery were assessed after hydrogel implantation.',
-    'Hydrogel/control comparison',
-    'bFGF hydrogel scaffold',
-    '{"observation_tracker_ids": ["M2B-O073"], "source_experiment": {"chronicity_dpi_wpi": "8 WPI", "control_type": "Hydrogel/control comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P026-E002", "figure_ref": "Abstract", "injury_device": "T9 complete transection", "injury_model": "Complete transection SCI", "injury_severity": "Complete transection", "intervention_type": "bFGF hydrogel scaffold", "methods_summary": "Tissue ingrowth, nerve regeneration, and functional recovery were assessed after hydrogel implantation.", "paper_id": "M2A-P026", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "Sprague-Dawley", "vertebral_level": "T9"}, "source_experiment_tracker_id": "M2A-P026-E002", "source_paper_tracker_id": "M2A-P026", "tracker_key": "M2A-P026::M2A-P026-E002"}'
+    'Combined hydrogel reduced cavitation to 2.41 +/- 0.80 mm3 and 1.28% versus 25.00 +/- 3.33 mm3 and 16.00% lesion control; it increased axon and vessel ingrowth and SSEP/MEP amplitude while shortening latency. Hydrogel alone reduced cavitation but did not show clear behavioral recovery.',
+    'Lesion, bFGF-only, hydrogel-only',
+    'bFGF/HEMA-MOETACL hydrogel',
+    '{"observation_tracker_ids": ["M2B-O073"], "source_experiment": {"chronicity_dpi_wpi": "8 weeks post-implantation", "control_type": "Lesion, bFGF-only, hydrogel-only", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P026-E002", "figure_ref": "Figs. 3-7; BBB/SSEP/MEP/histology", "injury_device": "T9 complete transection", "injury_model": "Complete transection SCI", "injury_severity": "Complete transection", "intervention_type": "bFGF/HEMA-MOETACL hydrogel", "methods_summary": "Combined hydrogel reduced cavitation to 2.41 +/- 0.80 mm3 and 1.28% versus 25.00 +/- 3.33 mm3 and 16.00% lesion control; it increased axon and vessel ingrowth and SSEP/MEP amplitude while shortening latency. Hydrogel alone reduced cavitation but did not show clear behavioral recovery.", "paper_id": "M2A-P026", "sex": "Mixed/UNKNOWN", "species": "Rattus norvegicus", "strain": "Sprague-Dawley", "vertebral_level": "T9"}, "source_experiment_tracker_id": "M2A-P026-E002", "source_paper_tracker_id": "M2A-P026", "tracker_key": "M2A-P026::M2A-P026-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P026'
@@ -2140,10 +2120,10 @@ WITH inserted AS (
     1,
     'Abstract',
     'Tracker experiment M2A-P027-E001',
-    'Longitudinal multi-tubular HA scaffold was combined with anti-NgR and PLGA microspheres containing BDNF and VEGF.',
+    'Structured HA scaffolds had an outer diameter of about 3 mm and multiple long axially oriented channels about 50 micrometers wide. PLGA microspheres measuring 0.5-1.0 micrometers released BDNF or VEGF for at least 14 days, with peak levels of about 900 pg/mL BDNF and 500 pg/mL VEGF; day-14 in vivo factor levels were approximately 2-fold higher in scaffold+microsphere implants than in HA scaffold alone (P < 0.001, n = 6).',
     'Material/cargo comparison',
     'Structured HA hydrogel + anti-NgR + BDNF/VEGF PLGA microspheres',
-    '{"observation_tracker_ids": ["M2B-O013"], "source_experiment": {"chronicity_dpi_wpi": "N/A", "control_type": "Material/cargo comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P027-E001", "figure_ref": "Abstract", "injury_device": "HA scaffold fabrication", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "Structured HA hydrogel + anti-NgR + BDNF/VEGF PLGA microspheres", "methods_summary": "Longitudinal multi-tubular HA scaffold was combined with anti-NgR and PLGA microspheres containing BDNF and VEGF.", "paper_id": "M2A-P027", "sex": "N/A", "species": "Scaffold system / rat SCI context", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P027-E001", "source_paper_tracker_id": "M2A-P027", "tracker_key": "M2A-P027::M2A-P027-E001"}'
+    '{"observation_tracker_ids": ["M2B-O013"], "source_experiment": {"chronicity_dpi_wpi": "At least 14 days release; day-14 in vivo factor assay", "control_type": "Material/cargo comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P027-E001", "figure_ref": "Publisher full-text snapshot; scaffold geometry and microsphere release characterization", "injury_device": "HA scaffold fabrication", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "Structured HA hydrogel + anti-NgR + BDNF/VEGF PLGA microspheres", "methods_summary": "Structured HA scaffolds had an outer diameter of about 3 mm and multiple long axially oriented channels about 50 micrometers wide. PLGA microspheres measuring 0.5-1.0 micrometers released BDNF or VEGF for at least 14 days, with peak levels of about 900 pg/mL BDNF and 500 pg/mL VEGF; day-14 in vivo factor levels were approximately 2-fold higher in scaffold+microsphere implants than in HA scaffold alone (P < 0.001, n = 6).", "paper_id": "M2A-P027", "sex": "N/A", "species": "Scaffold system / rat SCI context", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P027-E001", "source_paper_tracker_id": "M2A-P027", "tracker_key": "M2A-P027::M2A-P027-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P027'
@@ -2160,10 +2140,10 @@ WITH inserted AS (
     2,
     'Abstract',
     'Tracker experiment M2A-P027-E002',
-    'Host integration, inflammation, gliosis, vascularization, regenerated nerve fibers, and locomotor recovery were assessed after implantation.',
-    'Injury/scaffold comparison',
+    'The HA+PLGA scaffold integrated without cyst formation, preserved longitudinal channels, and improved BBB scores from 2 weeks onward to about 13 by 10 weeks. At 8 weeks it reduced Iba1, GFAP, and CSPG burden while increasing vWF-positive vessel counts and NF-160-positive longitudinal axons relative to untreated injury, with CatWalk weight-distribution measures also shifting toward normal.',
+    'Untreated injury and HA-alone scaffold comparisons',
     'HA+PLGA multi-cargo scaffold',
-    '{"observation_tracker_ids": ["M2B-O074"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Injury/scaffold comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P027-E002", "figure_ref": "Abstract", "injury_device": "Dorsal hemisection", "injury_model": "Dorsal hemisection SCI", "injury_severity": "Hemisection", "intervention_type": "HA+PLGA multi-cargo scaffold", "methods_summary": "Host integration, inflammation, gliosis, vascularization, regenerated nerve fibers, and locomotor recovery were assessed after implantation.", "paper_id": "M2A-P027", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "T9-T10"}, "source_experiment_tracker_id": "M2A-P027-E002", "source_paper_tracker_id": "M2A-P027", "tracker_key": "M2A-P027::M2A-P027-E002"}'
+    '{"observation_tracker_ids": ["M2B-O074"], "source_experiment": {"chronicity_dpi_wpi": "2, 4, 8, and 10 weeks", "control_type": "Untreated injury and HA-alone scaffold comparisons", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P027-E002", "figure_ref": "Publisher full-text snapshot; dorsal hemisection repair outcomes", "injury_device": "Dorsal hemisection with scaffold implantation", "injury_model": "Dorsal hemisection SCI", "injury_severity": "Hemisection; 3.0 mm length and 1.5 mm depth removed", "intervention_type": "HA+PLGA multi-cargo scaffold", "methods_summary": "The HA+PLGA scaffold integrated without cyst formation, preserved longitudinal channels, and improved BBB scores from 2 weeks onward to about 13 by 10 weeks. At 8 weeks it reduced Iba1, GFAP, and CSPG burden while increasing vWF-positive vessel counts and NF-160-positive longitudinal axons relative to untreated injury, with CatWalk weight-distribution measures also shifting toward normal.", "paper_id": "M2A-P027", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "Rat", "vertebral_level": "T9-T10"}, "source_experiment_tracker_id": "M2A-P027-E002", "source_paper_tracker_id": "M2A-P027", "tracker_key": "M2A-P027::M2A-P027-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P027'
@@ -2180,10 +2160,10 @@ WITH inserted AS (
     1,
     'Abstract',
     'Tracker experiment M2A-P028-E001',
-    'Hydrogel-only and NT-3-loaded in situ forming collagen hydrogel were delivered after rat hemisection SCI.',
-    'Hydrogel-only / SCI comparison',
-    'Injectable collagen hydrogel + NT-3',
-    '{"observation_tracker_ids": ["M2B-O039"], "source_experiment": {"chronicity_dpi_wpi": "Immediate treatment; 1 and 6 WPI", "control_type": "Hydrogel-only / SCI comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P028-E001", "figure_ref": "Abstract", "injury_device": "Hemisection", "injury_model": "Hemisection SCI", "injury_severity": "Hemisection", "intervention_type": "Injectable collagen hydrogel + NT-3", "methods_summary": "Hydrogel-only and NT-3-loaded in situ forming collagen hydrogel were delivered after rat hemisection SCI.", "paper_id": "M2A-P028", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P028-E001", "source_paper_tracker_id": "M2A-P028", "tracker_key": "M2A-P028::M2A-P028-E001"}'
+    'Rats with postoperative day-1 BBB scores below 5 were assigned to hemisection alone, hydrogel + empty spheres, or hydrogel + NT-3 spheres. Both hydrogel groups showed significantly higher BBB scores than hemisection alone at 4 and 6 weeks (n = 9-10), but NT-3 did not clearly outperform hydrogel alone on locomotor recovery.',
+    'SCI alone and hydrogel-only comparison',
+    'Injectable collagen hydrogel +/- NT-3',
+    '{"observation_tracker_ids": ["M2B-O039"], "source_experiment": {"chronicity_dpi_wpi": "Postoperative day 1 screen; 4 and 6 weeks BBB", "control_type": "SCI alone and hydrogel-only comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P028-E001", "figure_ref": "Publisher full-text snapshot; hemisection treatment groups and BBB outcome", "injury_device": "Hemisection with immediate in situ hydrogel delivery", "injury_model": "Hemisection SCI", "injury_severity": "Hemisection", "intervention_type": "Injectable collagen hydrogel +/- NT-3", "methods_summary": "Rats with postoperative day-1 BBB scores below 5 were assigned to hemisection alone, hydrogel + empty spheres, or hydrogel + NT-3 spheres. Both hydrogel groups showed significantly higher BBB scores than hemisection alone at 4 and 6 weeks (n = 9-10), but NT-3 did not clearly outperform hydrogel alone on locomotor recovery.", "paper_id": "M2A-P028", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "Rat", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P028-E001", "source_paper_tracker_id": "M2A-P028", "tracker_key": "M2A-P028::M2A-P028-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P028'
@@ -2200,10 +2180,10 @@ WITH inserted AS (
     2,
     'Abstract',
     'Tracker experiment M2A-P028-E002',
-    'BBB locomotion, neuronal growth, glial scar formation, inflammation, and collagen deposition were assessed.',
-    'NT-3 vs hydrogel-only comparison',
+    'Both hydrogel groups reduced NG2-positive scar area at 1 and 6 weeks and lowered early Iba-1 burden, whereas GFAP differences were not significant. The NT-3-loaded group specifically increased betaIII-tubulin-positive axonal or neuronal staining and further reduced collagen deposition, indicating added local repair effects without a clear extra BBB benefit.',
+    'NT-3 scaffold versus hydrogel-only comparison',
     'NT-3 collagen scaffold',
-    '{"observation_tracker_ids": ["M2B-O075"], "source_experiment": {"chronicity_dpi_wpi": "1 and 6 WPI", "control_type": "NT-3 vs hydrogel-only comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P028-E002", "figure_ref": "Abstract", "injury_device": "Hemisection", "injury_model": "Hemisection SCI", "injury_severity": "Hemisection", "intervention_type": "NT-3 collagen scaffold", "methods_summary": "BBB locomotion, neuronal growth, glial scar formation, inflammation, and collagen deposition were assessed.", "paper_id": "M2A-P028", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P028-E002", "source_paper_tracker_id": "M2A-P028", "tracker_key": "M2A-P028::M2A-P028-E002"}'
+    '{"observation_tracker_ids": ["M2B-O075"], "source_experiment": {"chronicity_dpi_wpi": "1 and 6 weeks; early inflammatory window around 7 days", "control_type": "NT-3 scaffold versus hydrogel-only comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P028-E002", "figure_ref": "Publisher full-text snapshot; scar, inflammation, and axonal-marker outcomes", "injury_device": "Hemisection with immediate hydrogel treatment", "injury_model": "Hemisection SCI", "injury_severity": "Hemisection", "intervention_type": "NT-3 collagen scaffold", "methods_summary": "Both hydrogel groups reduced NG2-positive scar area at 1 and 6 weeks and lowered early Iba-1 burden, whereas GFAP differences were not significant. The NT-3-loaded group specifically increased betaIII-tubulin-positive axonal or neuronal staining and further reduced collagen deposition, indicating added local repair effects without a clear extra BBB benefit.", "paper_id": "M2A-P028", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "Rat", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P028-E002", "source_paper_tracker_id": "M2A-P028", "tracker_key": "M2A-P028::M2A-P028-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P028'
@@ -2220,10 +2200,10 @@ WITH inserted AS (
     1,
     'Abstract',
     'Tracker experiment M2A-P029-E001',
-    'Porous biodegradable scaffolds were implanted after partial or complete thoracic lateral hemisection in non-human primates.',
+    'Two primate studies compared 12 scaffold-implanted and 12 non-implanted monkeys after lateral hemisection. Porous PLGA-PLL scaffolds were engineered to resorb over 12 weeks and were inserted to fill the 8-10 mm lesion gap immediately after hemisection.',
     'Non-implanted control',
-    'PLGA/poly-l-lysine porous scaffold',
-    '{"observation_tracker_ids": ["M2B-O003"], "source_experiment": {"chronicity_dpi_wpi": "12 WPI", "control_type": "Non-implanted control", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P029-E001", "figure_ref": "Abstract", "injury_device": "Thoracic lateral hemisection", "injury_model": "Partial or complete lateral hemisection SCI", "injury_severity": "Partial/complete hemisection", "intervention_type": "PLGA/poly-l-lysine porous scaffold", "methods_summary": "Porous biodegradable scaffolds were implanted after partial or complete thoracic lateral hemisection in non-human primates.", "paper_id": "M2A-P029", "sex": "UNKNOWN", "species": "Chlorocebus sabaeus", "strain": "Old-World primate", "vertebral_level": "Thoracic"}, "source_experiment_tracker_id": "M2A-P029-E001", "source_paper_tracker_id": "M2A-P029", "tracker_key": "M2A-P029::M2A-P029-E001"}'
+    'Porous PLGA/poly-L-lysine biodegradable scaffold',
+    '{"observation_tracker_ids": ["M2B-O003"], "source_experiment": {"chronicity_dpi_wpi": "Two studies with weekly follow-up to 12 WPI", "control_type": "Non-implanted control", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P029-E001", "figure_ref": "Publisher full-text snapshot", "injury_device": "T9-T10 lateral hemisection with immediate scaffold implantation", "injury_model": "Partial or complete lateral thoracic hemisection SCI", "injury_severity": "Partial/complete hemisection", "intervention_type": "Porous PLGA/poly-L-lysine biodegradable scaffold", "methods_summary": "Two primate studies compared 12 scaffold-implanted and 12 non-implanted monkeys after lateral hemisection. Porous PLGA-PLL scaffolds were engineered to resorb over 12 weeks and were inserted to fill the 8-10 mm lesion gap immediately after hemisection.", "paper_id": "M2A-P029", "sex": "Male", "species": "Chlorocebus sabaeus", "strain": "Adult male African green monkeys, 5-10 years, 4.5-7.0 kg", "vertebral_level": "T9-T10"}, "source_experiment_tracker_id": "M2A-P029-E001", "source_paper_tracker_id": "M2A-P029", "tracker_key": "M2A-P029::M2A-P029-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P029'
@@ -2240,10 +2220,10 @@ WITH inserted AS (
     2,
     'Abstract',
     'Tracker experiment M2A-P029-E002',
-    'Locomotor kinematics, muscle activity, appositional healing, and spinal cord tissue remodeling were compared.',
+    'In the complete hemisection subgroup, scaffold-implanted monkeys showed significantly better kinematics recovery at 12 weeks together with appositional remodeling tissue, fewer inner-layer GFAP-positive astrocytes, and neurofilament, GAP43, and MBP-positive elements within the remodeled zone.',
     'Scaffold vs non-implanted control',
     'Porous biodegradable scaffold',
-    '{"observation_tracker_ids": ["M2B-O076"], "source_experiment": {"chronicity_dpi_wpi": "12 WPI", "control_type": "Scaffold vs non-implanted control", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P029-E002", "figure_ref": "Abstract", "injury_device": "Thoracic lateral hemisection", "injury_model": "Thoracic hemisection SCI", "injury_severity": "Complete hemisection subgroup emphasized", "intervention_type": "Porous biodegradable scaffold", "methods_summary": "Locomotor kinematics, muscle activity, appositional healing, and spinal cord tissue remodeling were compared.", "paper_id": "M2A-P029", "sex": "UNKNOWN", "species": "Chlorocebus sabaeus", "strain": "Old-World primate", "vertebral_level": "Thoracic"}, "source_experiment_tracker_id": "M2A-P029-E002", "source_paper_tracker_id": "M2A-P029", "tracker_key": "M2A-P029::M2A-P029-E002"}'
+    '{"observation_tracker_ids": ["M2B-O076"], "source_experiment": {"chronicity_dpi_wpi": "Weekly locomotor assessment through 12 WPI with terminal histology", "control_type": "Scaffold vs non-implanted control", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P029-E002", "figure_ref": "Publisher full-text snapshot", "injury_device": "T9-T10 lateral hemisection with treadmill kinematics and EMG follow-up", "injury_model": "Thoracic lateral hemisection SCI", "injury_severity": "Complete hemisection subgroup emphasized", "intervention_type": "Porous biodegradable scaffold", "methods_summary": "In the complete hemisection subgroup, scaffold-implanted monkeys showed significantly better kinematics recovery at 12 weeks together with appositional remodeling tissue, fewer inner-layer GFAP-positive astrocytes, and neurofilament, GAP43, and MBP-positive elements within the remodeled zone.", "paper_id": "M2A-P029", "sex": "Male", "species": "Chlorocebus sabaeus", "strain": "Adult male African green monkeys", "vertebral_level": "T9-T10"}, "source_experiment_tracker_id": "M2A-P029-E002", "source_paper_tracker_id": "M2A-P029", "tracker_key": "M2A-P029::M2A-P029-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P029'
@@ -2257,33 +2237,13 @@ WITH inserted AS (
     control_type, intervention_type, notes
   )
   SELECT p.paper_id, ep.paradigm_id,
-    1,
-    'Abstract',
-    'Tracker experiment M2A-P030-E001',
-    'Porous gelatin sponge scaffold was modified with NT-3/fibroin complex and assessed for sustained release.',
-    'Scaffold characterization',
-    'NT-3/fibroin-modified gelatin sponge scaffold',
-    '{"observation_tracker_ids": ["M2B-O040"], "source_experiment": {"chronicity_dpi_wpi": "In vitro release before implantation", "control_type": "Scaffold characterization", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P030-E001", "figure_ref": "Abstract", "injury_device": "Gelatin/fibroin scaffold fabrication", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "NT-3/fibroin-modified gelatin sponge scaffold", "methods_summary": "Porous gelatin sponge scaffold was modified with NT-3/fibroin complex and assessed for sustained release.", "paper_id": "M2A-P030", "sex": "N/A", "species": "Scaffold system / canine SCI context", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P030-E001", "source_paper_tracker_id": "M2A-P030", "tracker_key": "M2A-P030::M2A-P030-E001"}'
-  FROM _m2_paper_map p
-  JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
-  WHERE p.tracker_id = 'M2A-P030'
-  RETURNING experiment_id
-)
-INSERT INTO _m2_experiment_map (tracker_id, experiment_id) SELECT 'M2A-P030::M2A-P030-E001', experiment_id FROM inserted;
-
-WITH inserted AS (
-  INSERT INTO Experiment (
-    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description,
-    control_type, intervention_type, notes
-  )
-  SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Full text',
     'Tracker experiment M2A-P030-E002',
-    'Hindlimb movement, neural conduction, inflammation, new neurons, synaptic structures, vessels, and nerve fiber regeneration were assessed.',
-    'Injury/scaffold comparison',
+    'NF-GS improved Olby (11.85 +/- 0.64 vs 9.29 +/- 1.48), CMEP amplitude/latency, IBA1 burden, NF-fiber density, host-cell migration, vessel profiles, synapse-like structures, and occasional MBP+ fibers; GFAP scar density was not significantly different.',
+    'NF-GS vs F-GS',
     'NT-3/fibroin gelatin scaffold',
-    '{"observation_tracker_ids": ["M2B-O077"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Injury/scaffold comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P030-E002", "figure_ref": "Abstract", "injury_device": "Hemisection", "injury_model": "Hemisection SCI", "injury_severity": "Hemisection", "intervention_type": "NT-3/fibroin gelatin scaffold", "methods_summary": "Hindlimb movement, neural conduction, inflammation, new neurons, synaptic structures, vessels, and nerve fiber regeneration were assessed.", "paper_id": "M2A-P030", "sex": "UNKNOWN", "species": "Canis familiaris", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P030-E002", "source_paper_tracker_id": "M2A-P030", "tracker_key": "M2A-P030::M2A-P030-E002"}'
+    '{"observation_tracker_ids": ["M2B-O040", "M2B-O077"], "source_experiment": {"chronicity_dpi_wpi": "Four weeks after graft", "control_type": "NF-GS vs F-GS", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P030-E002", "figure_ref": "Full text (PMC6055812)", "injury_device": "Hemisection", "injury_model": "Hemisection SCI", "injury_severity": "Hemisection", "intervention_type": "NT-3/fibroin gelatin scaffold", "methods_summary": "NF-GS improved Olby (11.85 +/- 0.64 vs 9.29 +/- 1.48), CMEP amplitude/latency, IBA1 burden, NF-fiber density, host-cell migration, vessel profiles, synapse-like structures, and occasional MBP+ fibers; GFAP scar density was not significantly different.", "paper_id": "M2A-P030", "sex": "Right T10 hemisection, 4 mm removed", "species": "Canis familiaris", "strain": "Female Beagle, 7 months, n=7/group", "vertebral_level": "Acute"}, "source_experiment_tracker_id": "M2A-P030-E002", "source_paper_tracker_id": "M2A-P030", "tracker_key": "M2A-P030::M2A-P030-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P030'
@@ -2300,10 +2260,10 @@ WITH inserted AS (
     1,
     'Abstract',
     'Tracker experiment M2A-P031-E001',
-    'Polycaprolactone/polysialic acid hybrid nanofiber scaffold encapsulating methylprednisolone was developed.',
+    'Electrospun PCL/PSA/MP nanofibers combined PCL structural support, PSA surface chemistry, and methylprednisolone cargo; SEM and FTIR confirmed nanofiber morphology and incorporation of both PSA and drug-associated peaks.',
     'Material/drug characterization',
     'PCL/PSA/MP nanofiber scaffold',
-    '{"observation_tracker_ids": ["M2B-O041"], "source_experiment": {"chronicity_dpi_wpi": "N/A", "control_type": "Material/drug characterization", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P031-E001", "figure_ref": "Abstract", "injury_device": "Nanofiber scaffold fabrication", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "PCL/PSA/MP nanofiber scaffold", "methods_summary": "Polycaprolactone/polysialic acid hybrid nanofiber scaffold encapsulating methylprednisolone was developed.", "paper_id": "M2A-P031", "sex": "N/A", "species": "Scaffold system / rat SCI context", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P031-E001", "source_paper_tracker_id": "M2A-P031", "tracker_key": "M2A-P031::M2A-P031-E001"}'
+    '{"observation_tracker_ids": ["M2B-O041"], "source_experiment": {"chronicity_dpi_wpi": "Material characterization before implantation", "control_type": "Material/drug characterization", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P031-E001", "figure_ref": "Publisher full-text snapshot", "injury_device": "Electrospun PCL/PSA nanofiber scaffold fabrication with methylprednisolone loading", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "PCL/PSA/MP nanofiber scaffold", "methods_summary": "Electrospun PCL/PSA/MP nanofibers combined PCL structural support, PSA surface chemistry, and methylprednisolone cargo; SEM and FTIR confirmed nanofiber morphology and incorporation of both PSA and drug-associated peaks.", "paper_id": "M2A-P031", "sex": "N/A", "species": "Scaffold system / rat SCI context", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P031-E001", "source_paper_tracker_id": "M2A-P031", "tracker_key": "M2A-P031::M2A-P031-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P031'
@@ -2320,10 +2280,10 @@ WITH inserted AS (
     2,
     'Abstract',
     'Tracker experiment M2A-P031-E002',
-    'Inflammation, microglia/macrophage activation, apoptosis, axonal regeneration, and functional recovery were assessed after transplantation into transection lesions.',
+    'In rat transection SCI, the PCL/PSA/MP scaffold reduced TNF-alpha, IL-6, Iba1-positive microglia/macrophage activation, caspase-3-associated apoptosis, demyelination, and GFAP while increasing NF-200 staining and BBB locomotor recovery relative to comparator groups.',
     'Scaffold/drug comparison',
     'PCL/PSA/MP nanofiber scaffold',
-    '{"observation_tracker_ids": ["M2B-O078"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Scaffold/drug comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P031-E002", "figure_ref": "Abstract", "injury_device": "Transection", "injury_model": "Transection SCI", "injury_severity": "Transection", "intervention_type": "PCL/PSA/MP nanofiber scaffold", "methods_summary": "Inflammation, microglia/macrophage activation, apoptosis, axonal regeneration, and functional recovery were assessed after transplantation into transection lesions.", "paper_id": "M2A-P031", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P031-E002", "source_paper_tracker_id": "M2A-P031", "tracker_key": "M2A-P031::M2A-P031-E002"}'
+    '{"observation_tracker_ids": ["M2B-O078"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval in full text not yet normalized", "control_type": "Scaffold/drug comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P031-E002", "figure_ref": "Publisher full-text snapshot", "injury_device": "Transection with lesion-area scaffold transplantation", "injury_model": "Spinal cord transection SCI", "injury_severity": "Transection", "intervention_type": "PCL/PSA/MP nanofiber scaffold", "methods_summary": "In rat transection SCI, the PCL/PSA/MP scaffold reduced TNF-alpha, IL-6, Iba1-positive microglia/macrophage activation, caspase-3-associated apoptosis, demyelination, and GFAP while increasing NF-200 staining and BBB locomotor recovery relative to comparator groups.", "paper_id": "M2A-P031", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "Rat", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P031-E002", "source_paper_tracker_id": "M2A-P031", "tracker_key": "M2A-P031::M2A-P031-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P031'
@@ -2338,12 +2298,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract',
+    'Full text',
     'Tracker experiment M2A-P032-E001',
-    'HA hydrogels containing protoplasmic or fibrous astrocyte-derived ECM, with or without V2a interneurons, were implanted after SCI.',
-    'HA hydrogel component comparison',
+    'P-ECM:HA reduced CD11b, ED1, GFAP, and CSPG staining and increased Tuj1 area; F-ECM did not reproduce the benefit. V2a aggregates survived in HA and P-ECM:HA, but this histology study did not test locomotion or functional integration.',
+    'HA, F-ECM, P-ECM, V2a-cell combinations',
     'HA hydrogel + astrocyte ECM and/or V2a interneurons',
-    '{"observation_tracker_ids": ["M2B-O016"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "HA hydrogel component comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P032-E001", "figure_ref": "Abstract", "injury_device": "Experimental SCI", "injury_model": "SCI", "injury_severity": "UNKNOWN", "intervention_type": "HA hydrogel + astrocyte ECM and/or V2a interneurons", "methods_summary": "HA hydrogels containing protoplasmic or fibrous astrocyte-derived ECM, with or without V2a interneurons, were implanted after SCI.", "paper_id": "M2A-P032", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P032-E001", "source_paper_tracker_id": "M2A-P032", "tracker_key": "M2A-P032::M2A-P032-E001"}'
+    '{"observation_tracker_ids": ["M2B-O016"], "source_experiment": {"chronicity_dpi_wpi": "Two weeks after implantation (four weeks after injury)", "control_type": "HA, F-ECM, P-ECM, V2a-cell combinations", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P032-E001", "figure_ref": "Full text (PMC5851469)", "injury_device": "Experimental SCI", "injury_model": "SCI", "injury_severity": "Dorsal hemisection", "intervention_type": "HA hydrogel + astrocyte ECM and/or V2a interneurons", "methods_summary": "P-ECM:HA reduced CD11b, ED1, GFAP, and CSPG staining and increased Tuj1 area; F-ECM did not reproduce the benefit. V2a aggregates survived in HA and P-ECM:HA, but this histology study did not test locomotion or functional integration.", "paper_id": "M2A-P032", "sex": "T8 dorsal hemisection; treatment 2 weeks later", "species": "Rattus norvegicus", "strain": "Adult rats, acellular groups n=7-8; cell groups n=7-8", "vertebral_level": "Subacute"}, "source_experiment_tracker_id": "M2A-P032-E001", "source_paper_tracker_id": "M2A-P032", "tracker_key": "M2A-P032::M2A-P032-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P032'
@@ -2358,12 +2318,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Full text',
     'Tracker experiment M2A-P032-E002',
-    'Glial scar size, axon penetration, and histological response were assessed, with protoplasmic astrocyte ECM showing favorable effects in the abstract.',
+    'P-ECM reduced scar and immune burden and increased neuronal-process staining; P-ECM+V2a cells increased lesion and peri-lesion Tuj1 staining, with TdTomato+ cell area 6.4 +/- 1.3% vs 3.7 +/- 0.36% P-ECM alone. Functional integration was not established.',
     'ECM subtype / cell comparison',
     'HA/astrocyte ECM hydrogel',
-    '{"observation_tracker_ids": ["M2B-O079"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "ECM subtype / cell comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P032-E002", "figure_ref": "Abstract", "injury_device": "Experimental SCI", "injury_model": "SCI", "injury_severity": "UNKNOWN", "intervention_type": "HA/astrocyte ECM hydrogel", "methods_summary": "Glial scar size, axon penetration, and histological response were assessed, with protoplasmic astrocyte ECM showing favorable effects in the abstract.", "paper_id": "M2A-P032", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P032-E002", "source_paper_tracker_id": "M2A-P032", "tracker_key": "M2A-P032::M2A-P032-E002"}'
+    '{"observation_tracker_ids": ["M2B-O079"], "source_experiment": {"chronicity_dpi_wpi": "Two weeks after implantation", "control_type": "ECM subtype / cell comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P032-E002", "figure_ref": "Full text (PMC5851469)", "injury_device": "Experimental SCI", "injury_model": "SCI", "injury_severity": "Dorsal hemisection", "intervention_type": "HA/astrocyte ECM hydrogel", "methods_summary": "P-ECM reduced scar and immune burden and increased neuronal-process staining; P-ECM+V2a cells increased lesion and peri-lesion Tuj1 staining, with TdTomato+ cell area 6.4 +/- 1.3% vs 3.7 +/- 0.36% P-ECM alone. Functional integration was not established.", "paper_id": "M2A-P032", "sex": "T8 dorsal hemisection; treatment 2 weeks later", "species": "Rattus norvegicus", "strain": "Adult rats, n=7-8/group", "vertebral_level": "Subacute"}, "source_experiment_tracker_id": "M2A-P032-E002", "source_paper_tracker_id": "M2A-P032", "tracker_key": "M2A-P032::M2A-P032-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P032'
@@ -2378,12 +2338,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract',
+    'Figs. 1-5',
     'Tracker experiment M2A-P033-E001',
-    'hUC-MSCs were adsorbed onto collagen scaffolds and implanted into rat and canine complete SCI models.',
-    'Scaffold/cell comparison',
+    'Rats (n=10/group) and dogs (n=5/group) received scaffold with or without hUC-MSCs. Rat BBB was higher in the cell group at 4-8 weeks; rat MEP amplitude/latency improved versus scaffold alone; canine Olby scores improved in both scaffold groups versus SCI and further with cells at 3-6 months; canine MEP also improved with cells.',
+    'Sham, SCI, collagen scaffold',
     'Collagen scaffold + hUC-MSC',
-    '{"observation_tracker_ids": ["M2B-O023"], "source_experiment": {"chronicity_dpi_wpi": "1 week to 6 months", "control_type": "Scaffold/cell comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P033-E001", "figure_ref": "Abstract", "injury_device": "Microsurgical complete transection", "injury_model": "Complete transection SCI", "injury_severity": "Complete SCI", "intervention_type": "Collagen scaffold + hUC-MSC", "methods_summary": "hUC-MSCs were adsorbed onto collagen scaffolds and implanted into rat and canine complete SCI models.", "paper_id": "M2A-P033", "sex": "UNKNOWN", "species": "Rat and canine", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P033-E001", "source_paper_tracker_id": "M2A-P033", "tracker_key": "M2A-P033::M2A-P033-E001"}'
+    '{"observation_tracker_ids": ["M2B-O023"], "source_experiment": {"chronicity_dpi_wpi": "1 week to 8 weeks rats; 0.5-6 months dogs", "control_type": "Sham, SCI, collagen scaffold", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P033-E001", "figure_ref": "Figs. 1-5; BBB/Olby/MEP/MRI", "injury_device": "Rat T10 1.5-mm removal; canine T8-T11 3-mm removal", "injury_model": "Complete transection SCI", "injury_severity": "Complete transection", "intervention_type": "Collagen scaffold + hUC-MSC", "methods_summary": "Rats (n=10/group) and dogs (n=5/group) received scaffold with or without hUC-MSCs. Rat BBB was higher in the cell group at 4-8 weeks; rat MEP amplitude/latency improved versus scaffold alone; canine Olby scores improved in both scaffold groups versus SCI and further with cells at 3-6 months; canine MEP also improved with cells.", "paper_id": "M2A-P033", "sex": "Female", "species": "Rattus norvegicus and Canis familiaris", "strain": "Sprague-Dawley rats; Beagles", "vertebral_level": "T10 rats; T8-T11 dogs"}, "source_experiment_tracker_id": "M2A-P033-E001", "source_paper_tracker_id": "M2A-P033", "tracker_key": "M2A-P033::M2A-P033-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P033'
@@ -2398,12 +2358,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Tables 1-4; Figs. 6-8',
     'Tracker experiment M2A-P033-E002',
-    'Phase I clinical testing evaluated safety and possible repair after collagen scaffold plus hUC-MSC transplantation.',
-    'Phase I safety baseline',
-    'Collagen scaffold + hUC-MSC',
-    '{"observation_tracker_ids": ["M2B-O080"], "source_experiment": {"chronicity_dpi_wpi": "Clinical follow-up interval UNKNOWN", "control_type": "Phase I safety baseline", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P033-E002", "figure_ref": "Abstract", "injury_device": "Clinical acute complete SCI + implantation", "injury_model": "Acute complete SCI", "injury_severity": "Acute complete SCI", "intervention_type": "Collagen scaffold + hUC-MSC", "methods_summary": "Phase I clinical testing evaluated safety and possible repair after collagen scaffold plus hUC-MSC transplantation.", "paper_id": "M2A-P033", "sex": "UNKNOWN", "species": "Homo sapiens", "strain": "N/A", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P033-E002", "source_paper_tracker_id": "M2A-P033", "tracker_key": "M2A-P033::M2A-P033-E002"}'
+    'Forty patients were assigned to treatment (n=20) or control (n=20). Nine treatment patients improved ASIA A-to-B and two A-to-C; no controls improved ASIA grade. Two treatment patients gained MEP from absent baseline, 9/18 with baseline MEP improved latency/amplitude, 2/10 improved SSEP, residual urine decreased, MRI/DTI showed lesion filling/fiber continuity, and no serious treatment-associated adverse event was reported.',
+    'No-implant control (n=20)',
+    'Collagen scaffold + 4 x 10^7 hUC-MSC',
+    '{"observation_tracker_ids": ["M2B-O080"], "source_experiment": {"chronicity_dpi_wpi": "12-month follow-up", "control_type": "No-implant control (n=20)", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P033-E002", "figure_ref": "Tables 1-4; ASIA/ADL/MEP/SSEP/MRI/DTI", "injury_device": "Clinical acute complete SCI + implantation", "injury_model": "Acute complete cervical SCI", "injury_severity": "ASIA A; C4-C7; within 21 days", "intervention_type": "Collagen scaffold + 4 x 10^7 hUC-MSC", "methods_summary": "Forty patients were assigned to treatment (n=20) or control (n=20). Nine treatment patients improved ASIA A-to-B and two A-to-C; no controls improved ASIA grade. Two treatment patients gained MEP from absent baseline, 9/18 with baseline MEP improved latency/amplitude, 2/10 improved SSEP, residual urine decreased, MRI/DTI showed lesion filling/fiber continuity, and no serious treatment-associated adverse event was reported.", "paper_id": "M2A-P033", "sex": "Mixed", "species": "Homo sapiens", "strain": "N/A", "vertebral_level": "C4-C7"}, "source_experiment_tracker_id": "M2A-P033-E002", "source_paper_tracker_id": "M2A-P033", "tracker_key": "M2A-P033::M2A-P033-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P033'
@@ -2417,33 +2377,13 @@ WITH inserted AS (
     control_type, intervention_type, notes
   )
   SELECT p.paper_id, ep.paradigm_id,
-    1,
-    'Abstract',
-    'Tracker experiment M2A-P034-E001',
-    'In vitro and organotypic cultures assessed iNPC viability, neurite outgrowth, migration, and neuron-like morphology in the scaffold.',
-    'Component comparison',
-    'HA/PPY/RAD16/iNPC/curcumin scaffold',
-    '{"observation_tracker_ids": ["M2B-O019"], "source_experiment": {"chronicity_dpi_wpi": "In vitro", "control_type": "Component comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P034-E001", "figure_ref": "Abstract", "injury_device": "Surface-capping scaffold fabrication", "injury_model": "Scaffold/cell compatibility model", "injury_severity": "N/A", "intervention_type": "HA/PPY/RAD16/iNPC/curcumin scaffold", "methods_summary": "In vitro and organotypic cultures assessed iNPC viability, neurite outgrowth, migration, and neuron-like morphology in the scaffold.", "paper_id": "M2A-P034", "sex": "N/A", "species": "In vitro / organotypic SCI culture", "strain": "Human induced neural progenitor cells", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P034-E001", "source_paper_tracker_id": "M2A-P034", "tracker_key": "M2A-P034::M2A-P034-E001"}'
-  FROM _m2_paper_map p
-  JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
-  WHERE p.tracker_id = 'M2A-P034'
-  RETURNING experiment_id
-)
-INSERT INTO _m2_experiment_map (tracker_id, experiment_id) SELECT 'M2A-P034::M2A-P034-E001', experiment_id FROM inserted;
-
-WITH inserted AS (
-  INSERT INTO Experiment (
-    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description,
-    control_type, intervention_type, notes
-  )
-  SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Full text',
     'Tracker experiment M2A-P034-E002',
-    'Surface-capping scaffold was applied after subacute SCI and assessed for repair-associated outcomes.',
+    'Fully functionalized HA/PPY/PM-CURC-iNPC cap preserved beta-III-tubulin fibers, reduced GFAP-negative lesion area and PDGF expression, but iNPCs preferentially showed GFAP rather than neuronal colocalization and no treatment reduced Iba1/ED1 neuroinflammation at one week.',
     'Injury/scaffold comparison',
     'HA demilune surface-capping scaffold',
-    '{"observation_tracker_ids": ["M2B-O081"], "source_experiment": {"chronicity_dpi_wpi": "Subacute treatment interval", "control_type": "Injury/scaffold comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P034-E002", "figure_ref": "Abstract", "injury_device": "Experimental SCI", "injury_model": "Subacute SCI", "injury_severity": "Subacute SCI", "intervention_type": "HA demilune surface-capping scaffold", "methods_summary": "Surface-capping scaffold was applied after subacute SCI and assessed for repair-associated outcomes.", "paper_id": "M2A-P034", "sex": "UNKNOWN", "species": "Rat model context", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P034-E002", "source_paper_tracker_id": "M2A-P034", "tracker_key": "M2A-P034::M2A-P034-E002"}'
+    '{"observation_tracker_ids": ["M2B-O019", "M2B-O081"], "source_experiment": {"chronicity_dpi_wpi": "One week after implantation, two weeks after injury", "control_type": "Injury/scaffold comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P034-E002", "figure_ref": "Full text (PMC8698735)", "injury_device": "Experimental SCI", "injury_model": "Subacute SCI", "injury_severity": "Moderate contusion", "intervention_type": "HA demilune surface-capping scaffold", "methods_summary": "Fully functionalized HA/PPY/PM-CURC-iNPC cap preserved beta-III-tubulin fibers, reduced GFAP-negative lesion area and PDGF expression, but iNPCs preferentially showed GFAP rather than neuronal colocalization and no treatment reduced Iba1/ED1 neuroinflammation at one week.", "paper_id": "M2A-P034", "sex": "T8 moderate contusion, 200 kdyn", "species": "Rat model context", "strain": "Female Sprague-Dawley rats, n=3/group", "vertebral_level": "Subacute, 1 week post-injury"}, "source_experiment_tracker_id": "M2A-P034-E002", "source_paper_tracker_id": "M2A-P034", "tracker_key": "M2A-P034::M2A-P034-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P034'
@@ -2457,33 +2397,13 @@ WITH inserted AS (
     control_type, intervention_type, notes
   )
   SELECT p.paper_id, ep.paradigm_id,
-    1,
-    'Abstract',
-    'Tracker experiment M2A-P035-E001',
-    'hAECs were induced into neural-like cells and grown in 3D-printed GelMA biomimetic spinal cord microchannel scaffold.',
-    'Induction/scaffold comparison',
-    '3D-printed GelMA microchannel scaffold + hAEC-neural-like cells',
-    '{"observation_tracker_ids": ["M2B-O027"], "source_experiment": {"chronicity_dpi_wpi": "In vitro", "control_type": "Induction/scaffold comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P035-E001", "figure_ref": "Abstract", "injury_device": "GelMA scaffold fabrication", "injury_model": "In vitro scaffold-cell induction model", "injury_severity": "N/A", "intervention_type": "3D-printed GelMA microchannel scaffold + hAEC-neural-like cells", "methods_summary": "hAECs were induced into neural-like cells and grown in 3D-printed GelMA biomimetic spinal cord microchannel scaffold.", "paper_id": "M2A-P035", "sex": "N/A", "species": "hAEC culture / scaffold system", "strain": "Human amniotic epithelial cells", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P035-E001", "source_paper_tracker_id": "M2A-P035", "tracker_key": "M2A-P035::M2A-P035-E001"}'
-  FROM _m2_paper_map p
-  JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
-  WHERE p.tracker_id = 'M2A-P035'
-  RETURNING experiment_id
-)
-INSERT INTO _m2_experiment_map (tracker_id, experiment_id) SELECT 'M2A-P035::M2A-P035-E001', experiment_id FROM inserted;
-
-WITH inserted AS (
-  INSERT INTO Experiment (
-    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description,
-    control_type, intervention_type, notes
-  )
-  SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Full text',
     'Tracker experiment M2A-P035-E002',
-    'hAEC-neural-like cell scaffold was implanted into rat full transection SCI to assess neural circuit and hindlimb recovery.',
-    'Injury/scaffold/cell comparison',
+    'Cell-loaded scaffold BBB 5.667 vs empty scaffold 2.333 vs transection control 0.667; MEP amplitude reached 29.57% of normal; NF-H axons projected along channels, but inflammatory signal did not differ and mortality reduced key sample sizes.',
+    'Transection control vs empty scaffold vs cell-loaded scaffold',
     'GelMA scaffold + hAEC-derived neural-like cells',
-    '{"observation_tracker_ids": ["M2B-O082"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Injury/scaffold/cell comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P035-E002", "figure_ref": "Abstract", "injury_device": "Complete transection", "injury_model": "Full transection SCI", "injury_severity": "Full transection", "intervention_type": "GelMA scaffold + hAEC-derived neural-like cells", "methods_summary": "hAEC-neural-like cell scaffold was implanted into rat full transection SCI to assess neural circuit and hindlimb recovery.", "paper_id": "M2A-P035", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P035-E002", "source_paper_tracker_id": "M2A-P035", "tracker_key": "M2A-P035::M2A-P035-E002"}'
+    '{"observation_tracker_ids": ["M2B-O027", "M2B-O082"], "source_experiment": {"chronicity_dpi_wpi": "Eight weeks after implantation", "control_type": "Transection control vs empty scaffold vs cell-loaded scaffold", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P035-E002", "figure_ref": "Full text (PMC9598945)", "injury_device": "Complete transection", "injury_model": "Full transection SCI", "injury_severity": "Full transection", "intervention_type": "GelMA scaffold + hAEC-derived neural-like cells", "methods_summary": "Cell-loaded scaffold BBB 5.667 vs empty scaffold 2.333 vs transection control 0.667; MEP amplitude reached 29.57% of normal; NF-H axons projected along channels, but inflammatory signal did not differ and mortality reduced key sample sizes.", "paper_id": "M2A-P035", "sex": "T10 full transection with 2 mm segment removed", "species": "Rattus norvegicus", "strain": "SCI groups n=3 for BBB analyses; n=5 for MEP groups", "vertebral_level": "Acute"}, "source_experiment_tracker_id": "M2A-P035-E002", "source_paper_tracker_id": "M2A-P035", "tracker_key": "M2A-P035::M2A-P035-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P035'
@@ -2498,12 +2418,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract',
+    'Full text',
     'Tracker experiment M2A-P036-E001',
-    'Dual-phase SilMA hydrogel was characterized for porosity, mechanics, stability, and sequential release behavior.',
+    'Eight-percent SilMA with PLGA NT-3 microspheres and Ang-(1-7) was UV-crosslinked; Ang-(1-7) released >40% by day 3 and nearly all by day 7, while NT-3 release persisted through days 28-56.',
     'Release/component comparison',
     'Dual-phase SilMA hydrogel + NT-3/Ang-(1-7) PLGA microspheres',
-    '{"observation_tracker_ids": ["M2B-O014"], "source_experiment": {"chronicity_dpi_wpi": "In vitro characterization", "control_type": "Release/component comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P036-E001", "figure_ref": "Abstract", "injury_device": "SilMA hydrogel fabrication", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "Dual-phase SilMA hydrogel + NT-3/Ang-(1-7) PLGA microspheres", "methods_summary": "Dual-phase SilMA hydrogel was characterized for porosity, mechanics, stability, and sequential release behavior.", "paper_id": "M2A-P036", "sex": "N/A", "species": "Scaffold system / rodent SCI context", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P036-E001", "source_paper_tracker_id": "M2A-P036", "tracker_key": "M2A-P036::M2A-P036-E001"}'
+    '{"observation_tracker_ids": ["M2B-O014"], "source_experiment": {"chronicity_dpi_wpi": "In vitro release days 1-56", "control_type": "Release/component comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P036-E001", "figure_ref": "Full text (PMC11617199)", "injury_device": "SilMA hydrogel fabrication", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "Dual-phase SilMA hydrogel + NT-3/Ang-(1-7) PLGA microspheres", "methods_summary": "Eight-percent SilMA with PLGA NT-3 microspheres and Ang-(1-7) was UV-crosslinked; Ang-(1-7) released >40% by day 3 and nearly all by day 7, while NT-3 release persisted through days 28-56.", "paper_id": "M2A-P036", "sex": "N/A", "species": "Scaffold system / rodent SCI context", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P036-E001", "source_paper_tracker_id": "M2A-P036", "tracker_key": "M2A-P036::M2A-P036-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P036'
@@ -2518,12 +2438,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Full text',
     'Tracker experiment M2A-P036-E002',
-    'In vitro and in vivo outcomes assessed inflammation reduction, neuronal differentiation, axonal regeneration, and spinal cord repair.',
-    'Scaffold/drug comparison',
+    '4D-SilMA increased Arg-1 and Tuj1, reduced iNOS and GFAP, improved cavity/tissue structure, and reached BMS 6 versus SCI/SilMA; in-vitro Ang-(1-7) and NT-3 assays used LPS-stimulated BV2 cells and mouse NSCs, so combined in-vivo component attribution remains limited.',
+    'Sham vs SCI vs SilMA vs 4D-SilMA',
     'Sequential release SilMA scaffold',
-    '{"observation_tracker_ids": ["M2B-O083"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Scaffold/drug comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P036-E002", "figure_ref": "Abstract", "injury_device": "Experimental SCI", "injury_model": "SCI", "injury_severity": "UNKNOWN", "intervention_type": "Sequential release SilMA scaffold", "methods_summary": "In vitro and in vivo outcomes assessed inflammation reduction, neuronal differentiation, axonal regeneration, and spinal cord repair.", "paper_id": "M2A-P036", "sex": "UNKNOWN", "species": "Rodent model context", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P036-E002", "source_paper_tracker_id": "M2A-P036", "tracker_key": "M2A-P036::M2A-P036-E002"}'
+    '{"observation_tracker_ids": ["M2B-O083"], "source_experiment": {"chronicity_dpi_wpi": "Eight weeks post-SCI", "control_type": "Sham vs SCI vs SilMA vs 4D-SilMA", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P036-E002", "figure_ref": "Full text (PMC11617199)", "injury_device": "Complete transection", "injury_model": "SCI", "injury_severity": "Complete transection", "intervention_type": "Sequential release SilMA scaffold", "methods_summary": "4D-SilMA increased Arg-1 and Tuj1, reduced iNOS and GFAP, improved cavity/tissue structure, and reached BMS 6 versus SCI/SilMA; in-vitro Ang-(1-7) and NT-3 assays used LPS-stimulated BV2 cells and mouse NSCs, so combined in-vivo component attribution remains limited.", "paper_id": "M2A-P036", "sex": "T10 complete 2 mm transection", "species": "Rodent model context", "strain": "Mice, n=6/group", "vertebral_level": "Acute"}, "source_experiment_tracker_id": "M2A-P036-E002", "source_paper_tracker_id": "M2A-P036", "tracker_key": "M2A-P036::M2A-P036-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P036'
@@ -2540,10 +2460,10 @@ WITH inserted AS (
     1,
     'Abstract',
     'Tracker experiment M2A-P037-E001',
-    'Coaxial 3D printing generated time-programmed scaffold layers carrying antioxidant, migration, and differentiation cues.',
+    'The coaxial scaffold used a fast-degrading gelatin/cellulose nanofiber shell for rapid MnTBAP release and a slower dual-network HA/N-Cad-Alg core that supported NSC survival, migration, and neuronal differentiation with aligned topography.',
     'Scaffold/cue comparison',
     'Hierarchical HA/alginate/gelatin-cellulose hydrogel scaffold',
-    '{"observation_tracker_ids": ["M2B-O028"], "source_experiment": {"chronicity_dpi_wpi": "In vitro characterization", "control_type": "Scaffold/cue comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P037-E001", "figure_ref": "Abstract", "injury_device": "Coaxial 3D printing", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "Hierarchical HA/alginate/gelatin-cellulose hydrogel scaffold", "methods_summary": "Coaxial 3D printing generated time-programmed scaffold layers carrying antioxidant, migration, and differentiation cues.", "paper_id": "M2A-P037", "sex": "N/A", "species": "Scaffold system / rodent SCI context", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P037-E001", "source_paper_tracker_id": "M2A-P037", "tracker_key": "M2A-P037::M2A-P037-E001"}'
+    '{"observation_tracker_ids": ["M2B-O028"], "source_experiment": {"chronicity_dpi_wpi": "In vitro characterization and 60-day degradation testing", "control_type": "Scaffold/cue comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P037-E001", "figure_ref": "Publisher full-text snapshot", "injury_device": "Coaxial 3D printing of Gel/CNF-MnTBAP shell and HA/N-Cad-Alg core", "injury_model": "SCI repair scaffold design", "injury_severity": "N/A", "intervention_type": "Hierarchical HA/alginate/gelatin-cellulose hydrogel scaffold", "methods_summary": "The coaxial scaffold used a fast-degrading gelatin/cellulose nanofiber shell for rapid MnTBAP release and a slower dual-network HA/N-Cad-Alg core that supported NSC survival, migration, and neuronal differentiation with aligned topography.", "paper_id": "M2A-P037", "sex": "N/A", "species": "Scaffold system / rodent SCI context", "strain": "Postnatal rat NSCs and scaffold system", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P037-E001", "source_paper_tracker_id": "M2A-P037", "tracker_key": "M2A-P037::M2A-P037-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P037'
@@ -2560,10 +2480,10 @@ WITH inserted AS (
     2,
     'Abstract',
     'Tracker experiment M2A-P037-E002',
-    'SCI testing evaluated oxidative stress control, endogenous NSC migration/differentiation, and repair.',
+    'The implanted scaffold rapidly reduced oxidative stress while later supporting endogenous NSC recruitment and neuronal differentiation, leading to improved motor functional restoration in SCI rats together with favorable histologic repair outcomes.',
     'Scaffold/cue comparison',
     'On-demand hierarchical hydrogel scaffold',
-    '{"observation_tracker_ids": ["M2B-O084"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Scaffold/cue comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P037-E002", "figure_ref": "Abstract", "injury_device": "Experimental SCI", "injury_model": "SCI", "injury_severity": "UNKNOWN", "intervention_type": "On-demand hierarchical hydrogel scaffold", "methods_summary": "SCI testing evaluated oxidative stress control, endogenous NSC migration/differentiation, and repair.", "paper_id": "M2A-P037", "sex": "UNKNOWN", "species": "Rodent model context", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P037-E002", "source_paper_tracker_id": "M2A-P037", "tracker_key": "M2A-P037::M2A-P037-E002"}'
+    '{"observation_tracker_ids": ["M2B-O084"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval in full text not yet normalized", "control_type": "Scaffold/cue comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P037-E002", "figure_ref": "Publisher full-text snapshot", "injury_device": "Experimental SCI with scaffold implantation", "injury_model": "SCI", "injury_severity": "UNKNOWN in tracker pending deeper normalization", "intervention_type": "On-demand hierarchical hydrogel scaffold", "methods_summary": "The implanted scaffold rapidly reduced oxidative stress while later supporting endogenous NSC recruitment and neuronal differentiation, leading to improved motor functional restoration in SCI rats together with favorable histologic repair outcomes.", "paper_id": "M2A-P037", "sex": "Female", "species": "Rattus norvegicus", "strain": "Female Sprague-Dawley, 200-220 g", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P037-E002", "source_paper_tracker_id": "M2A-P037", "tracker_key": "M2A-P037::M2A-P037-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P037'
@@ -2580,10 +2500,10 @@ WITH inserted AS (
     1,
     'Abstract',
     'Tracker experiment M2A-P038-E001',
-    'Composite patch was tested for exosome stability, neural toxicity, macrophage polarization, and neuronal apoptosis in vitro.',
-    'Patch component comparison',
+    'Nanofibers were 500-700 nm in diameter and released more than 90% of exosomes over 14 days while preserving exosome markers. In LPS-treated cultures, NFs@MP-HAh@Exo most strongly reduced iNOS, cleaved caspase-3, and Bax while increasing Arg-1 and Bcl-2, indicating combined anti-inflammatory and anti-apoptotic activity.',
+    'NFs-HAh, NFs@MP-HAh, and NFs@MP-HAh@Exo comparisons',
     'Schwann exosome and methylprednisolone hydrogel patch',
-    '{"observation_tracker_ids": ["M2B-O020"], "source_experiment": {"chronicity_dpi_wpi": "In vitro", "control_type": "Patch component comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P038-E001", "figure_ref": "Abstract", "injury_device": "Nanofiber/HA patch fabrication", "injury_model": "Patch compatibility model", "injury_severity": "N/A", "intervention_type": "Schwann exosome and methylprednisolone hydrogel patch", "methods_summary": "Composite patch was tested for exosome stability, neural toxicity, macrophage polarization, and neuronal apoptosis in vitro.", "paper_id": "M2A-P038", "sex": "N/A", "species": "In vitro / scaffold system", "strain": "Neural cells / macrophage model", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P038-E001", "source_paper_tracker_id": "M2A-P038", "tracker_key": "M2A-P038::M2A-P038-E001"}'
+    '{"observation_tracker_ids": ["M2B-O020"], "source_experiment": {"chronicity_dpi_wpi": "Exosome release 14 days; cell assays at 1, 3, 7, and 14 days; macrophage/neuron challenge 24 hours", "control_type": "NFs-HAh, NFs@MP-HAh, and NFs@MP-HAh@Exo comparisons", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P038-E001", "figure_ref": "Publisher full-text snapshot; patch release, biocompatibility, macrophage-polarization, and neuron-apoptosis assays", "injury_device": "PLGA-PEO methylprednisolone nanofiber plus HA hydrogel with Schwann-cell exosomes", "injury_model": "Patch compatibility model", "injury_severity": "N/A", "intervention_type": "Schwann exosome and methylprednisolone hydrogel patch", "methods_summary": "Nanofibers were 500-700 nm in diameter and released more than 90% of exosomes over 14 days while preserving exosome markers. In LPS-treated cultures, NFs@MP-HAh@Exo most strongly reduced iNOS, cleaved caspase-3, and Bax while increasing Arg-1 and Bcl-2, indicating combined anti-inflammatory and anti-apoptotic activity.", "paper_id": "M2A-P038", "sex": "N/A", "species": "In vitro / scaffold system", "strain": "Primary cortical neurons and primary macrophages", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P038-E001", "source_paper_tracker_id": "M2A-P038", "tracker_key": "M2A-P038::M2A-P038-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P038'
@@ -2600,10 +2520,10 @@ WITH inserted AS (
     2,
     'Abstract',
     'Tracker experiment M2A-P038-E002',
-    'Patch covering the hematoma surface was assessed for functional, electrophysiological, inflammatory, and neuronal survival outcomes.',
-    'Injury/patch comparison',
-    'Exosome/steroid nanofiber hydrogel patch',
-    '{"observation_tracker_ids": ["M2B-O085"], "source_experiment": {"chronicity_dpi_wpi": "Post-injury patch interval UNKNOWN", "control_type": "Injury/patch comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P038-E002", "figure_ref": "Abstract", "injury_device": "Experimental SCI", "injury_model": "SCI with hematoma surface target", "injury_severity": "UNKNOWN", "intervention_type": "Exosome/steroid nanofiber hydrogel patch", "methods_summary": "Patch covering the hematoma surface was assessed for functional, electrophysiological, inflammatory, and neuronal survival outcomes.", "paper_id": "M2A-P038", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P038-E002", "source_paper_tracker_id": "M2A-P038", "tracker_key": "M2A-P038::M2A-P038-E002"}'
+    'The dual-cargo patch most strongly reduced day-3 CD68-positive infiltration, iNOS, and neuronal apoptosis while increasing Arg-1. By day 28 it produced the smallest cavitation, better NF200 and neuron survival, improved MEP latency and amplitude, enhanced CatWalk coordination and hindlimb support, and increased spinal-cord electrical activity relative to SCI and NFs@MP-HAh controls.',
+    'SCI and methylprednisolone-only patch controls',
+    'Exosome plus methylprednisolone composite surface patch',
+    '{"observation_tracker_ids": ["M2B-O085"], "source_experiment": {"chronicity_dpi_wpi": "Day 3 inflammation/apoptosis; days 3, 7, 14, 21, and 28 BBB; day 28 MEP/CatWalk/MEA/histology", "control_type": "SCI and methylprednisolone-only patch controls", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P038-E002", "figure_ref": "Publisher full-text snapshot; acute contusion surface-patch repair outcomes", "injury_device": "Immediate surface coverage of hematoma by SCI-only, NFs@MP-HAh, or NFs@MP-HAh@Exo patch", "injury_model": "T10 spinal cord contusion SCI with hematoma", "injury_severity": "Contusion", "intervention_type": "Exosome plus methylprednisolone composite surface patch", "methods_summary": "The dual-cargo patch most strongly reduced day-3 CD68-positive infiltration, iNOS, and neuronal apoptosis while increasing Arg-1. By day 28 it produced the smallest cavitation, better NF200 and neuron survival, improved MEP latency and amplitude, enhanced CatWalk coordination and hindlimb support, and increased spinal-cord electrical activity relative to SCI and NFs@MP-HAh controls.", "paper_id": "M2A-P038", "sex": "Female", "species": "Rattus norvegicus", "strain": "Female Wistar rats; figure analyses n=3/group", "vertebral_level": "T10"}, "source_experiment_tracker_id": "M2A-P038-E002", "source_paper_tracker_id": "M2A-P038", "tracker_key": "M2A-P038::M2A-P038-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P038'
@@ -2617,33 +2537,13 @@ WITH inserted AS (
     control_type, intervention_type, notes
   )
   SELECT p.paper_id, ep.paradigm_id,
-    1,
-    'Abstract',
-    'Tracker experiment M2A-P039-E001',
-    'Conductive aligned fibers were tested with electrical stimulation for PC12 and NSC alignment, differentiation, and neurite sprouting.',
-    'Electrical stimulation / scaffold comparison',
-    'Aligned conductive CNT/GelMA hydrogel fibers',
-    '{"observation_tracker_ids": ["M2B-O008"], "source_experiment": {"chronicity_dpi_wpi": "In vitro", "control_type": "Electrical stimulation / scaffold comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P039-E001", "figure_ref": "Abstract", "injury_device": "CNT/GelMA fiber fabrication", "injury_model": "Neural differentiation model", "injury_severity": "N/A", "intervention_type": "Aligned conductive CNT/GelMA hydrogel fibers", "methods_summary": "Conductive aligned fibers were tested with electrical stimulation for PC12 and NSC alignment, differentiation, and neurite sprouting.", "paper_id": "M2A-P039", "sex": "N/A", "species": "In vitro scaffold/cell system", "strain": "PC12 cells / NSCs", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P039-E001", "source_paper_tracker_id": "M2A-P039", "tracker_key": "M2A-P039::M2A-P039-E001"}'
-  FROM _m2_paper_map p
-  JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
-  WHERE p.tracker_id = 'M2A-P039'
-  RETURNING experiment_id
-)
-INSERT INTO _m2_experiment_map (tracker_id, experiment_id) SELECT 'M2A-P039::M2A-P039-E001', experiment_id FROM inserted;
-
-WITH inserted AS (
-  INSERT INTO Experiment (
-    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description,
-    control_type, intervention_type, notes
-  )
-  SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Full text',
     'Tracker experiment M2A-P039-E002',
-    'In vivo SCI testing assessed aligned conductive scaffold with electrical stimulation for axon regeneration and recovery.',
-    'Scaffold/electrical stimulation comparison',
+    '2CNT/GelMA+ES reduced Iba1/CS56, increased NF and beta-tubulin III fibers crossing the lesion and remyelination, reached tissue conductivity 1.50 x 10^-3 S/cm vs normal 2.13 x 10^-3, and produced the strongest BBB, pain, and MEP recovery; CNTs remained at lesion without detected rostral/caudal diffusion.',
+    'SCI vs GelMA vs 2CNT/GelMA vs 2CNT/GelMA+ES',
     'CNT/GelMA fibers + electrical stimulation',
-    '{"observation_tracker_ids": ["M2B-O086"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Scaffold/electrical stimulation comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P039-E002", "figure_ref": "Abstract", "injury_device": "Experimental SCI", "injury_model": "SCI", "injury_severity": "UNKNOWN", "intervention_type": "CNT/GelMA fibers + electrical stimulation", "methods_summary": "In vivo SCI testing assessed aligned conductive scaffold with electrical stimulation for axon regeneration and recovery.", "paper_id": "M2A-P039", "sex": "UNKNOWN", "species": "Rat SCI model context", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P039-E002", "source_paper_tracker_id": "M2A-P039", "tracker_key": "M2A-P039::M2A-P039-E002"}'
+    '{"observation_tracker_ids": ["M2B-O008", "M2B-O086"], "source_experiment": {"chronicity_dpi_wpi": "Eight weeks post-surgery", "control_type": "SCI vs GelMA vs 2CNT/GelMA vs 2CNT/GelMA+ES", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P039-E002", "figure_ref": "Full text (PMC10897856)", "injury_device": "Complete transection", "injury_model": "SCI", "injury_severity": "Complete transection", "intervention_type": "CNT/GelMA fibers + electrical stimulation", "methods_summary": "2CNT/GelMA+ES reduced Iba1/CS56, increased NF and beta-tubulin III fibers crossing the lesion and remyelination, reached tissue conductivity 1.50 x 10^-3 S/cm vs normal 2.13 x 10^-3, and produced the strongest BBB, pain, and MEP recovery; CNTs remained at lesion without detected rostral/caudal diffusion.", "paper_id": "M2A-P039", "sex": "T9 complete transection; 4 mm removed", "species": "Rat SCI model context", "strain": "Adult female Sprague-Dawley rats, 200-230 g", "vertebral_level": "Acute"}, "source_experiment_tracker_id": "M2A-P039-E002", "source_paper_tracker_id": "M2A-P039", "tracker_key": "M2A-P039::M2A-P039-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P039'
@@ -2658,12 +2558,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract',
+    'Full text',
     'Tracker experiment M2A-P040-E001',
-    'Layer-by-layer PEG/PAA/protein films over agarose were tested for timed protein release.',
+    'LbL PEG/PAA/protein films were assembled at pH <=3 and tested with lysozyme; film composition, agarose concentration/porosity, and H-bonding controlled release. Released lysozyme remained active at early time points.',
     'Release chemistry comparison',
     'PEG/PAA layer-by-layer agarose hydrogel',
-    '{"observation_tracker_ids": ["M2B-O042"], "source_experiment": {"chronicity_dpi_wpi": "In vitro", "control_type": "Release chemistry comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P040-E001", "figure_ref": "Abstract", "injury_device": "Agarose functionalization", "injury_model": "In vitro release model for SCI bridge", "injury_severity": "N/A", "intervention_type": "PEG/PAA layer-by-layer agarose hydrogel", "methods_summary": "Layer-by-layer PEG/PAA/protein films over agarose were tested for timed protein release.", "paper_id": "M2A-P040", "sex": "N/A", "species": "Scaffold system", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P040-E001", "source_paper_tracker_id": "M2A-P040", "tracker_key": "M2A-P040::M2A-P040-E001"}'
+    '{"observation_tracker_ids": ["M2B-O042"], "source_experiment": {"chronicity_dpi_wpi": "In vitro PBS/cell-medium release at 37 C", "control_type": "Release chemistry comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P040-E001", "figure_ref": "Full text (PMC2830720)", "injury_device": "Agarose functionalization", "injury_model": "In vitro release model for SCI bridge", "injury_severity": "N/A", "intervention_type": "PEG/PAA layer-by-layer agarose hydrogel", "methods_summary": "LbL PEG/PAA/protein films were assembled at pH <=3 and tested with lysozyme; film composition, agarose concentration/porosity, and H-bonding controlled release. Released lysozyme remained active at early time points.", "paper_id": "M2A-P040", "sex": "N/A", "species": "Scaffold system", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P040-E001", "source_paper_tracker_id": "M2A-P040", "tracker_key": "M2A-P040::M2A-P040-E001"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P040'
@@ -2678,12 +2578,12 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Full text',
     'Tracker experiment M2A-P040-E002',
-    'Protein-release agarose strategy was framed as an alternative to genetically engineered BDNF-secreting cells in templated channel bridges.',
+    'The method demonstrated pH-triggered protein release for more than four weeks in vitro and was proposed for BDNF release from templated agarose scaffolds; it did not test SCI animals.',
     'Cell-based BDNF delivery alternative',
     'Functionalized agarose channel bridge',
-    '{"observation_tracker_ids": ["M2B-O087"], "source_experiment": {"chronicity_dpi_wpi": "In vitro / bridge design context", "control_type": "Cell-based BDNF delivery alternative", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P040-E002", "figure_ref": "Abstract", "injury_device": "Agarose channel scaffold", "injury_model": "SCI channel bridge model", "injury_severity": "N/A", "intervention_type": "Functionalized agarose channel bridge", "methods_summary": "Protein-release agarose strategy was framed as an alternative to genetically engineered BDNF-secreting cells in templated channel bridges.", "paper_id": "M2A-P040", "sex": "N/A", "species": "Scaffold system / SCI bridge context", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P040-E002", "source_paper_tracker_id": "M2A-P040", "tracker_key": "M2A-P040::M2A-P040-E002"}'
+    '{"observation_tracker_ids": ["M2B-O087"], "source_experiment": {"chronicity_dpi_wpi": "In vitro; more than four weeks in selected configurations", "control_type": "Cell-based BDNF delivery alternative", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P040-E002", "figure_ref": "Full text (PMC2830720)", "injury_device": "Agarose channel scaffold", "injury_model": "SCI channel bridge model", "injury_severity": "N/A", "intervention_type": "Functionalized agarose channel bridge", "methods_summary": "The method demonstrated pH-triggered protein release for more than four weeks in vitro and was proposed for BDNF release from templated agarose scaffolds; it did not test SCI animals.", "paper_id": "M2A-P040", "sex": "N/A", "species": "Scaffold system / SCI bridge context", "strain": "N/A", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P040-E002", "source_paper_tracker_id": "M2A-P040", "tracker_key": "M2A-P040::M2A-P040-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P040'
@@ -2697,33 +2597,13 @@ WITH inserted AS (
     control_type, intervention_type, notes
   )
   SELECT p.paper_id, ep.paradigm_id,
-    1,
-    'Abstract',
-    'Tracker experiment M2A-P041-E001',
-    'NT-3-overexpressing Schwann cells and TrkC-overexpressing NSCs were co-cultured in gelatin sponge scaffold to generate a neural scaffold.',
-    'Cell/scaffold construction',
-    'NT-3-SC + TrkC-NSC gelatin sponge scaffold',
-    '{"observation_tracker_ids": ["M2B-O011"], "source_experiment": {"chronicity_dpi_wpi": "In vitro before transplantation", "control_type": "Cell/scaffold construction", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P041-E001", "figure_ref": "Abstract", "injury_device": "Gelatin sponge scaffold", "injury_model": "Neural scaffold construction", "injury_severity": "N/A", "intervention_type": "NT-3-SC + TrkC-NSC gelatin sponge scaffold", "methods_summary": "NT-3-overexpressing Schwann cells and TrkC-overexpressing NSCs were co-cultured in gelatin sponge scaffold to generate a neural scaffold.", "paper_id": "M2A-P041", "sex": "N/A", "species": "Scaffold/cell system", "strain": "NSCs / Schwann cells", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P041-E001", "source_paper_tracker_id": "M2A-P041", "tracker_key": "M2A-P041::M2A-P041-E001"}'
-  FROM _m2_paper_map p
-  JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
-  WHERE p.tracker_id = 'M2A-P041'
-  RETURNING experiment_id
-)
-INSERT INTO _m2_experiment_map (tracker_id, experiment_id) SELECT 'M2A-P041::M2A-P041-E001', experiment_id FROM inserted;
-
-WITH inserted AS (
-  INSERT INTO Experiment (
-    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description,
-    control_type, intervention_type, notes
-  )
-  SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Full text',
     'Tracker experiment M2A-P041-E002',
-    'Graft effects on myelination, NSC differentiation, axon regeneration, and functional recovery were assessed after complete transection.',
+    'Grafted NT-3-SCs+TrkC-NSCs survived in the injury area; GFP-positive NSC-derived and host NF+ axons were ensheathed by MBP+ myelin from NSC-derived myelinating cells and NT-3-SCs. Functional recovery was not the primary endpoint.',
     'Scaffold/cell comparison',
     'Tissue-engineered gelatin sponge neural scaffold',
-    '{"observation_tracker_ids": ["M2B-O088"], "source_experiment": {"chronicity_dpi_wpi": "Post-graft interval UNKNOWN", "control_type": "Scaffold/cell comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P041-E002", "figure_ref": "Abstract", "injury_device": "T10 complete transection", "injury_model": "Complete transection SCI", "injury_severity": "Complete transection", "intervention_type": "Tissue-engineered gelatin sponge neural scaffold", "methods_summary": "Graft effects on myelination, NSC differentiation, axon regeneration, and functional recovery were assessed after complete transection.", "paper_id": "M2A-P041", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "Adult rats", "vertebral_level": "T10"}, "source_experiment_tracker_id": "M2A-P041-E002", "source_paper_tracker_id": "M2A-P041", "tracker_key": "M2A-P041::M2A-P041-E002"}'
+    '{"observation_tracker_ids": ["M2B-O011", "M2B-O088"], "source_experiment": {"chronicity_dpi_wpi": "Eight weeks post-graft", "control_type": "Scaffold/cell comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P041-E002", "figure_ref": "Full text (PMC3992004)", "injury_device": "Complete transection", "injury_model": "Complete transection SCI", "injury_severity": "Complete transection", "intervention_type": "Tissue-engineered gelatin sponge neural scaffold", "methods_summary": "Grafted NT-3-SCs+TrkC-NSCs survived in the injury area; GFP-positive NSC-derived and host NF+ axons were ensheathed by MBP+ myelin from NSC-derived myelinating cells and NT-3-SCs. Functional recovery was not the primary endpoint.", "paper_id": "M2A-P041", "sex": "T10 complete transection; 2 mm removed", "species": "Rattus norvegicus", "strain": "Adult female SD rats, histology n=3/group", "vertebral_level": "T10"}, "source_experiment_tracker_id": "M2A-P041-E002", "source_paper_tracker_id": "M2A-P041", "tracker_key": "M2A-P041::M2A-P041-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P041'
@@ -2737,33 +2617,13 @@ WITH inserted AS (
     control_type, intervention_type, notes
   )
   SELECT p.paper_id, ep.paradigm_id,
-    1,
-    'Abstract',
-    'Tracker experiment M2A-P042-E001',
-    'Collagen/silk fibroin scaffold with spinal-cord-like cavities was fabricated by 3D bioprinting and combined with NSCs.',
-    'Scaffold/cell construction',
-    '3D collagen/silk fibroin scaffold + NSCs',
-    '{"observation_tracker_ids": ["M2B-O029"], "source_experiment": {"chronicity_dpi_wpi": "In vitro / fabrication", "control_type": "Scaffold/cell construction", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P042-E001", "figure_ref": "Abstract", "injury_device": "3D bioprinting", "injury_model": "Scaffold fabrication model", "injury_severity": "N/A", "intervention_type": "3D collagen/silk fibroin scaffold + NSCs", "methods_summary": "Collagen/silk fibroin scaffold with spinal-cord-like cavities was fabricated by 3D bioprinting and combined with NSCs.", "paper_id": "M2A-P042", "sex": "N/A", "species": "Scaffold/cell system", "strain": "Neural stem cells", "vertebral_level": "N/A"}, "source_experiment_tracker_id": "M2A-P042-E001", "source_paper_tracker_id": "M2A-P042", "tracker_key": "M2A-P042::M2A-P042-E001"}'
-  FROM _m2_paper_map p
-  JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
-  WHERE p.tracker_id = 'M2A-P042'
-  RETURNING experiment_id
-)
-INSERT INTO _m2_experiment_map (tracker_id, experiment_id) SELECT 'M2A-P042::M2A-P042-E001', experiment_id FROM inserted;
-
-WITH inserted AS (
-  INSERT INTO Experiment (
-    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description,
-    control_type, intervention_type, notes
-  )
-  SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Full text',
     'Tracker experiment M2A-P042-E002',
-    'In vivo testing assessed nerve regeneration and functional repair after scaffold/cell implantation.',
+    '3D-CF plus NSCs increased NF-H and reduced GFAP versus SCI/scaffold-only groups and improved reported limb function, but NSCs were not labeled/traced and the authors note objective neurological assessments were lacking.',
     'Scaffold/cell comparison',
     '3D-bioprinted collagen/silk scaffold + NSCs',
-    '{"observation_tracker_ids": ["M2B-O089"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Scaffold/cell comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P042-E002", "figure_ref": "Abstract", "injury_device": "Experimental SCI", "injury_model": "SCI", "injury_severity": "UNKNOWN", "intervention_type": "3D-bioprinted collagen/silk scaffold + NSCs", "methods_summary": "In vivo testing assessed nerve regeneration and functional repair after scaffold/cell implantation.", "paper_id": "M2A-P042", "sex": "UNKNOWN", "species": "Rat SCI model context", "strain": "UNKNOWN", "vertebral_level": "UNKNOWN"}, "source_experiment_tracker_id": "M2A-P042-E002", "source_paper_tracker_id": "M2A-P042", "tracker_key": "M2A-P042::M2A-P042-E002"}'
+    '{"observation_tracker_ids": ["M2B-O029", "M2B-O089"], "source_experiment": {"chronicity_dpi_wpi": "Post-implantation endpoint in Results", "control_type": "Scaffold/cell comparison", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P042-E002", "figure_ref": "Full text (PMC6990792)", "injury_device": "Experimental SCI", "injury_model": "SCI", "injury_severity": "SCI", "intervention_type": "3D-bioprinted collagen/silk scaffold + NSCs", "methods_summary": "3D-CF plus NSCs increased NF-H and reduced GFAP versus SCI/scaffold-only groups and improved reported limb function, but NSCs were not labeled/traced and the authors note objective neurological assessments were lacking.", "paper_id": "M2A-P042", "sex": "SCI model; scaffold/cell implantation", "species": "Rat SCI model context", "strain": "Rats, n=10/group", "vertebral_level": "Acute"}, "source_experiment_tracker_id": "M2A-P042-E002", "source_paper_tracker_id": "M2A-P042", "tracker_key": "M2A-P042::M2A-P042-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P042'
@@ -2777,33 +2637,13 @@ WITH inserted AS (
     control_type, intervention_type, notes
   )
   SELECT p.paper_id, ep.paradigm_id,
-    1,
-    'Abstract',
-    'Tracker experiment M2A-P043-E001',
-    'OEC-seeded scaffolds were implanted into lesion-induced gaps after acute SCI.',
-    'Scaffold without OEC / injury comparison',
-    'Longitudinal microstructured collagen scaffold + OECs',
-    '{"observation_tracker_ids": ["M2B-O021"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Scaffold without OEC / injury comparison", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P043-E001", "figure_ref": "Abstract", "injury_device": "Mid-cervical unilateral resection model", "injury_model": "Acute spinal cord resection/gap injury", "injury_severity": "Acute lesion-induced gap", "intervention_type": "Longitudinal microstructured collagen scaffold + OECs", "methods_summary": "OEC-seeded scaffolds were implanted into lesion-induced gaps after acute SCI.", "paper_id": "M2A-P043", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "Adult Lewis rats", "vertebral_level": "Mid-cervical"}, "source_experiment_tracker_id": "M2A-P043-E001", "source_paper_tracker_id": "M2A-P043", "tracker_key": "M2A-P043::M2A-P043-E001"}'
-  FROM _m2_paper_map p
-  JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
-  WHERE p.tracker_id = 'M2A-P043'
-  RETURNING experiment_id
-)
-INSERT INTO _m2_experiment_map (tracker_id, experiment_id) SELECT 'M2A-P043::M2A-P043-E001', experiment_id FROM inserted;
-
-WITH inserted AS (
-  INSERT INTO Experiment (
-    paper_id, paradigm_id, experiment_number, figure_table_reference, title, description,
-    control_type, intervention_type, notes
-  )
-  SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract',
+    'Full text',
     'Tracker experiment M2A-P043-E002',
-    'Functional improvement was evaluated against axon regeneration through the scaffold, with the abstract reporting lack of correlation.',
+    'NF+ axons followed OEC/host-cell trajectories, but only trended above non-seeded/untreated controls; seeded and non-seeded scaffolds both produced significant skilled forelimb recovery, not correlated with scaffold axon extent.',
     'Functional recovery vs axon regeneration relationship',
     'OEC-seeded collagen scaffold',
-    '{"observation_tracker_ids": ["M2B-O090"], "source_experiment": {"chronicity_dpi_wpi": "Post-implant interval UNKNOWN", "control_type": "Functional recovery vs axon regeneration relationship", "experiment_extracted": "YES (abstract-level)", "experiment_id": "M2A-P043-E002", "figure_ref": "Abstract", "injury_device": "Mid-cervical unilateral resection model", "injury_model": "Acute SCI", "injury_severity": "Acute lesion-induced gap", "intervention_type": "OEC-seeded collagen scaffold", "methods_summary": "Functional improvement was evaluated against axon regeneration through the scaffold, with the abstract reporting lack of correlation.", "paper_id": "M2A-P043", "sex": "UNKNOWN", "species": "Rattus norvegicus", "strain": "Adult Lewis rats", "vertebral_level": "Mid-cervical"}, "source_experiment_tracker_id": "M2A-P043-E002", "source_paper_tracker_id": "M2A-P043", "tracker_key": "M2A-P043::M2A-P043-E002"}'
+    '{"observation_tracker_ids": ["M2B-O021", "M2B-O090"], "source_experiment": {"chronicity_dpi_wpi": "Functional follow-up with skilled forelimb test", "control_type": "Functional recovery vs axon regeneration relationship", "experiment_extracted": "YES (full-text)", "experiment_id": "M2A-P043-E002", "figure_ref": "Full text (PMC6170848)", "injury_device": "Mid-cervical unilateral resection model", "injury_model": "Acute SCI", "injury_severity": "Acute lesion-induced gap", "intervention_type": "OEC-seeded collagen scaffold", "methods_summary": "NF+ axons followed OEC/host-cell trajectories, but only trended above non-seeded/untreated controls; seeded and non-seeded scaffolds both produced significant skilled forelimb recovery, not correlated with scaffold axon extent.", "paper_id": "M2A-P043", "sex": "Unilateral mid-cervical spinal cord resection producing lesion gap", "species": "Rattus norvegicus", "strain": "Adult Lewis rats", "vertebral_level": "Mid-cervical"}, "source_experiment_tracker_id": "M2A-P043-E002", "source_paper_tracker_id": "M2A-P043", "tracker_key": "M2A-P043::M2A-P043-E002"}'
   FROM _m2_paper_map p
   JOIN _m2_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M2A-P043'
@@ -2851,7 +2691,8 @@ WITH inserted AS (
 )
 INSERT INTO _m2_experiment_map (tracker_id, experiment_id) SELECT 'M2A-R005-M2A-R008::Review anchors', experiment_id FROM inserted;
 
-INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('3D printing / graft scaffold', 'Module 2 tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('3D printing / NPC graft scaffold', 'Module 2 tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('3D printing / empty scaffold', 'Module 2 tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('3D-bioprinted collagen/silk scaffold', 'Module 2 tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('3D-printed GelMA microchannel scaffold', 'Module 2 tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) VALUES ('AFG/fSAP composite hydrogel', 'Module 2 tracker-derived evidence type') ON CONFLICT (evidence_type_name) DO NOTHING;
@@ -2903,10 +2744,8 @@ INSERT INTO ControlledVocabulary_EvidenceType (evidence_type_name, description) 
 
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('A collagen-I scaffold enriched with CBD-LP-miR21 exosomes was applied to SCI repair to improve exosome retention, sustained release, and repair outcomes.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Angiogenesis / histology', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Animal-model testing assessed repair potential of hAECs on Noggin-loaded conductive nanochitosan/polypyrrole-alginate scaffold.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Axon growth / integration', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Axon guidance / relay formation', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Axon guidance / scar response', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Axon density, myelination, and locomotion', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Axon guidance, delivery, and remyelination', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Axon infiltration', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Axon regeneration / recovery', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Axonal sprouting / function', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
@@ -2915,63 +2754,64 @@ INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VA
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Biophysical and biochemical cues', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Biotin-tagged IFN-gamma and PDGF-AA were immobilized to MAC hydrogel to cue neuronal or oligodendrocytic lineages within the bridge.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Boundary condition', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Canine locomotion, conduction, immune burden, and tissue regeneration', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Cell retention / axon guidance', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Cell support / functional reconstruction', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Cell survival / repair response', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Channel architecture', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Circuit repair / function', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Compatibility, architecture, and axon guidance', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Conduction / inflammation / regeneration', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Conduction / locomotion / tract regrowth', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Different hMSC doses were compared for BBB locomotor scores, MEP amplitudes, cell survival, differentiation, and neurological repair.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Drug timing / scaffold characterization', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Early surface-cap repair and inflammation boundary', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Endogenous NSC recruitment / repair', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Endogenous neurons, remyelination, synapses, and secondary scar were assessed after functionalized NeuroRegen implantation.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Function / local healing', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Functional improvement was evaluated against axon regeneration through the scaffold, with the abstract reporting lack of correlation.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Glial scar size, axon penetration, and histological response were assessed, with protoplasmic astrocyte ECM showing favorable effects in the abstract.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Graft effects on myelination, NSC differentiation, axon regeneration, and functional recovery were assessed after complete transection.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Hindlimb movement, neural conduction, inflammation, new neurons, synaptic structures, vessels, and nerve fiber regeneration were assessed.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Functional recovery versus scaffold axon regeneration', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Histological repair / function boundary', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Histology and qPCR assessed scaffold integration, neovascularization, axonal ingrowth, tissue response, and macrophage-related limitations.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Histology assessed host-cell migration, fibroglial scarring, and regeneration of corticospinal, raphaespinal, propriospinal, and ascending sensory axons through and beyond hydrogel channels.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Host ingrowth', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Host integration, inflammation, gliosis, vascularization, regenerated nerve fibers, and locomotor recovery were assessed after implantation.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Host-cell migration, blood-vessel growth, and axonal ingrowth into SAPNS were assessed as evidence of a 3D permissive environment.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Human iPSC-derived NS/PC transplantation was combined with scaffold-supported scar resection to assess graft survival, host axon regeneration, histological repair, and lack of functional recovery.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Hydrogel and biomaterial reviews frame SCI scaffolds as bridges, delivery reservoirs, and cell carriers, but emphasize that material class, lesion geometry, and combination therapy determine interpretability.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Hydrogel tubes guided robust axon growth along inner and outer tube surfaces, increased axon density within tubes, supported myelination of a subset of axons, and enhanced functional recovery.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Immunomodulation / neural differentiation', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Immune integration and glial scar', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Implant size, immune infiltration, Schwann-cell myelinated axons, axon growth, and BBB locomotor performance were assessed.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('In vitro and in vivo experiments evaluated whether the composite scaffold supported human menstrual blood-derived stem cells and improved functional reconstruction after SCI.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('In vitro and in vivo outcomes assessed inflammation reduction, neuronal differentiation, axonal regeneration, and spinal cord repair.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('In vivo SCI testing assessed aligned conductive scaffold with electrical stimulation for axon regeneration and recovery.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('In vivo motor, neural-marker, inflammatory, and scar response were assessed after right T10-T11 hemisection.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('In vivo rat SCI experiments evaluated regeneration and anti-inflammatory repair effects of the combined scaffold strategy.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('In vivo testing assessed nerve regeneration and functional repair after scaffold/cell implantation.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('In vivo validation assessed whether aligned injectable hydrogel promoted and oriented axon infiltration at the SCI site.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('In-vivo immunomodulation, neural differentiation, tissue repair, and locomotion', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Inflammation / apoptosis / recovery', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Inflammation / electrophysiology / function', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Inflammation, microglia/macrophage activation, apoptosis, axonal regeneration, and functional recovery were assessed after transplantation into transection lesions.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Inflammatory response and scar tissue formation were assessed after scaffold implantation, with no excessive inflammatory response or scar formation reported in the abstract.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Integration / angiogenesis / axon ingrowth', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Integration, angiogenesis, axon ingrowth, and host response', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Lineage organization', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Locomotor / electrophysiology', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Locomotor / electrophysiology / histology', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Locomotor / scar response', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Locomotor kinematics, muscle activity, appositional healing, and spinal cord tissue remodeling were compared.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Locomotor recovery / tissue remodeling', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Locomotor recovery, endogenous neurogenesis, and scar response were assessed after functionalized NeuroRegen implantation.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Multimodal regeneration', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Multimodal repair', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Myelinated axons / locomotion', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Myelination / regeneration', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('NPC-loaded biomimetic scaffolds were implanted into complete SCI sites to assess host axon regeneration into the device, NPC axon extension into host cord, synaptic relay formation, synaptic transmission, and functional improvement.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Myelination and graft-cell survival', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('NPC survival, neural relay, and function', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Nerve regeneration', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Nerve regeneration and scar response', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Neural differentiation / repair', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('NeuroRegen collagen scaffold and hUC-MSCs implanted into the resected cavity were assessed by locomotion, motor/somatosensory evoked potentials, and histological repair outcomes.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Neuronal fiber growth, glial scar formation, and hindlimb motor function were compared across NT-3 scaffold, control scaffold, and saline groups.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Outcomes addressed cell retention, axonal guidance, neuronal regeneration microenvironment, and functional recovery according to abstract.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Patch covering the hematoma surface was assessed for functional, electrophysiological, inflammatory, and neuronal survival outcomes.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Phase I clinical testing evaluated safety and possible repair after collagen scaffold plus hUC-MSC transplantation.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Protein-release agarose strategy was framed as an alternative to genetically engineered BDNF-secreting cells in templated channel bridges.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Phase I clinical testing evaluated safety, neurological recovery, electrophysiology, and imaging after collagen scaffold plus hUC-MSC transplantation.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Protein-release agarose strategy', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Rat SCI testing assessed angiogenesis, anti-inflammatory and anti-apoptotic effects, neural differentiation, regeneration, and functional recovery.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Rat conduction, axon, remyelination, and function', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Rat full-transection locomotion and conduction', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Regeneration / inflammation', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Regeneration outcomes were assessed to test whether combined guidance and biochemical cues improved spinal cord repair.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Retention / sustained release', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
@@ -2982,15 +2822,16 @@ INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VA
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Safety / repair', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Safety / sensory recovery', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Scaffold-supported cell transplantation reviews emphasize that cells, scaffolds, growth factors, timing, and chronic lesion state interact, limiting simple causal claims.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Scar / axon penetration', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Scar / immune response / axon penetration', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Scar identity', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Surface-capping scaffold was applied after subacute SCI and assessed for repair-associated outcomes.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Scar, immune response, and neuronal processes', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('The scaffold was framed as a platform to test architecture, transplanted cells, and local molecular agents for axon regeneration.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Timed protein release', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Tissue bridging and material limitation', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Tissue ingrowth / function', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Tissue ingrowth, nerve regeneration, and functional recovery were assessed after hydrogel implantation.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Tissue ingrowth, nerve regeneration, electrophysiology, and functional recovery were assessed after hydrogel implantation.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('Vascularization / axon growth / locomotion', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
-INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('hAEC-neural-like cell scaffold was implanted into rat full transection SCI to assess neural circuit and hindlimb recovery.', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
+INSERT INTO ControlledVocabulary_OutcomeType (outcome_type_name, description) VALUES ('miRNA delivery and inflammatory boundary', 'Module 2 tracker-derived outcome type') ON CONFLICT (outcome_type_name) DO NOTHING;
 
 WITH inserted AS (
   INSERT INTO Observation (
@@ -3024,14 +2865,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Eight chronic complete SCI patients received hUCB-MSC-loaded NeuroRegen scaffold after neurophysiology-guided scar resection and were followed for one year.',
-    'patients / year',
-    'Eight chronic complete SCI patients received hUCB-MSC-loaded NeuroRegen scaffold after neurophysiology-guided scar resection and were followed for one year.',
-    'chronic complete human NeuroRegen/hUCB-MSC feasibility cohort',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Similar intervention family as M2A-P001 but different cell source.", "experiment_tracker_id": "M2A-P009-E001", "paper_tracker_id": "M2A-P009", "quantitative": "YES", "statistics_reported": "abstract-level; exact outcome statistics not yet extracted", "topic_id": "M2B-T006", "tracker_id": "M2B-O002"}'
+    'Eight chronic complete ASIA A SCI patients received 4 x 10^7 hUCB-MSCs on NeuroRegen after SSEP/MEP-guided scar resection. No treatment-related adverse events occurred over 1 year; sensation expanded in 5/8 and MEP-responsive area in 7/8, while ASIA grade did not improve.',
+    'patients / year; percent',
+    'Eight chronic complete ASIA A SCI patients received 4 x 10^7 hUCB-MSCs on NeuroRegen after SSEP/MEP-guided scar resection. No treatment-related adverse events occurred over 1 year; sensation expanded in 5/8 and MEP-responsive area in 7/8, while ASIA grade did not improve.',
+    'chronic complete human NeuroRegen/hUCB-MSC feasibility cohort with partial neurological signals',
+    'Full text Figs. 1-2 and Tables 1-2',
+    'Figs. 1-2; Tables 1-2',
+    'high',
+    '{"curator_notes": "Similar intervention family as M2A-P001 but different cell source; rehabilitation and uncontrolled baseline limit efficacy inference.", "experiment_tracker_id": "M2A-P009-E001", "paper_tracker_id": "M2A-P009", "quantitative": "YES", "statistics_reported": "5/8 sensation expansion; 7/8 MEP-area expansion; no ASIA grade improvement", "topic_id": "M2B-T006", "tracker_id": "M2B-O002"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3074,20 +2915,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Biomimetic 3D-printed scaffolds loaded with neural progenitor cells supported host axon entry, graft axon extension into host cord, synaptic relay formation, synaptic transmission, and functional improvement after complete SCI.',
-    'qualitative',
-    'Biomimetic 3D-printed scaffolds loaded with neural progenitor cells supported host axon entry, graft axon extension into host cord, synaptic relay formation, synaptic transmission, and functional improvement after complete SCI.',
-    '3D printed architecture plus NPCs supports bridge/relay repair',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Architecture and cell effects are bundled.", "experiment_tracker_id": "M2A-P004-E001", "paper_tracker_id": "M2A-P004", "quantitative": "YES", "statistics_reported": "statistics not extracted from abstract", "topic_id": "M2B-T001", "tracker_id": "M2B-O004"}'
+    'A 2-mm PEGDA-GelMA scaffold with 200-micrometer channels retained its structure for 4 weeks, reduced reactive-cell layer thickness by 35% versus agarose, reduced GFAP scarring, vascularized, and supported 97 +/- 8 NF200-positive axons per channel; empty scaffolds did not produce distal host-axon extension.',
+    'axons/channel; percent',
+    'A 2-mm PEGDA-GelMA scaffold with 200-micrometer channels retained its structure for 4 weeks, reduced reactive-cell layer thickness by 35% versus agarose, reduced GFAP scarring, vascularized, and supported 97 +/- 8 NF200-positive axons per channel; empty scaffolds did not produce distal host-axon extension.',
+    '3D architecture supports integration and host axon entry, but not complete relay by itself',
+    'Full text Figs. 1-2',
+    'Figs. 1-2',
+    'high',
+    '{"curator_notes": "Empty-scaffold result is separated from NPC-dependent functional relay.", "experiment_tracker_id": "M2A-P004-E001", "paper_tracker_id": "M2A-P004", "quantitative": "YES", "statistics_reported": "P < 0.0019 for reactive layer; P < 0.0001 for GFAP; n = 11-12", "topic_id": "M2B-T001", "tracker_id": "M2B-O004"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P004::M2A-P004-E001'
-    AND et.evidence_type_name = '3D printing / graft scaffold'
-    AND ot.outcome_type_name = 'Axon guidance / relay formation'
+    AND et.evidence_type_name = '3D printing / empty scaffold'
+    AND ot.outcome_type_name = 'Compatibility, architecture, and axon guidance'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O004', observation_id FROM inserted;
@@ -3099,20 +2940,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Porous aligned hydrogel tubes integrated with host tissue, reduced scarring relative to gelfoam, guided axon growth along tube surfaces, supported myelination of some axons, and enhanced functional recovery.',
-    'qualitative',
-    'Porous aligned hydrogel tubes integrated with host tissue, reduced scarring relative to gelfoam, guided axon growth along tube surfaces, supported myelination of some axons, and enhanced functional recovery.',
-    'aligned hydrogel tubes support tissue integration and axon guidance',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Important scaffold-only guidance anchor.", "experiment_tracker_id": "M2A-P005-E001", "paper_tracker_id": "M2A-P005", "quantitative": "YES", "statistics_reported": "abstract-level; exact values not extracted", "topic_id": "M2B-T001", "tracker_id": "M2B-O005"}'
+    'In adult female C57BL/6J T9-10 lateral hemisection, porous PEG tubes showed transient dendritic-cell/macrophage enrichment at 1 week that resolved by 2 weeks and reduced glial scar thickness to 127 +/- 73 micrometers versus 337 +/- 169 micrometers with gelfoam.',
+    'micrometers',
+    'In adult female C57BL/6J T9-10 lateral hemisection, porous PEG tubes showed transient dendritic-cell/macrophage enrichment at 1 week that resolved by 2 weeks and reduced glial scar thickness to 127 +/- 73 micrometers versus 337 +/- 169 micrometers with gelfoam.',
+    'modular PEG tubes integrate without prolonged inflammatory amplification and reduce peripheral scar thickness',
+    'Full text Figs. 2-4',
+    'Figs. 2-4',
+    'high',
+    '{"curator_notes": "Immune resolution and scar outcomes are distinct from later axon density.", "experiment_tracker_id": "M2A-P005-E001", "paper_tracker_id": "M2A-P005", "quantitative": "YES", "statistics_reported": "n = 3-5/timepoint; tube scar reduction reported in Fig. 4", "topic_id": "M2B-T001", "tracker_id": "M2B-O005"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P005::M2A-P005-E001'
     AND et.evidence_type_name = 'Aligned hydrogel scaffold'
-    AND ot.outcome_type_name = 'Axon growth / integration'
+    AND ot.outcome_type_name = 'Immune integration and glial scar'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O005', observation_id FROM inserted;
@@ -3174,18 +3015,18 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Aligned CNT/GelMA hydrogel fibers mimicked axon-like conductive aligned structure; combined with electrical stimulation they promoted neural-cell alignment/differentiation in vitro and were tested for SCI recovery in vivo.',
-    'qualitative',
-    'Aligned CNT/GelMA hydrogel fibers mimicked axon-like conductive aligned structure; combined with electrical stimulation they promoted neural-cell alignment/differentiation in vitro and were tested for SCI recovery in vivo.',
-    'conductive aligned scaffold plus ES promotes neural alignment and repair',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Advanced guidance/electrical interface anchor.", "experiment_tracker_id": "M2A-P039-E001", "paper_tracker_id": "M2A-P039", "quantitative": "YES", "statistics_reported": "exact values not extracted", "topic_id": "M2B-T001", "tracker_id": "M2B-O008"}'
+    'In T9 complete transection rats, aligned CNT/GelMA fibers plus ES reduced Iba1/CS56, increased NF/beta-tubulin III fibers and remyelination across the lesion, restored tissue conductivity to 1.50 x 10^-3 S/cm versus normal 2.13 x 10^-3, and produced the strongest BBB, pain, and MEP recovery.',
+    'quantitative',
+    'In T9 complete transection rats, aligned CNT/GelMA fibers plus ES reduced Iba1/CS56, increased NF/beta-tubulin III fibers and remyelination across the lesion, restored tissue conductivity to 1.50 x 10^-3 S/cm versus normal 2.13 x 10^-3, and produced the strongest BBB, pain, and MEP recovery.',
+    'conductive aligned scaffold plus ES promotes neural alignment, conduction, and repair',
+    'PMC10897856',
+    'Full text',
+    'high',
+    '{"curator_notes": "CNTs remained at the lesion; scaffold and ES effects are bundled.", "experiment_tracker_id": "M2A-P039-E002", "paper_tracker_id": "M2A-P039", "quantitative": "YES", "statistics_reported": "Exact conductivity and 8-week endpoint direction extracted; MEP n=3/group", "topic_id": "M2B-T001", "tracker_id": "M2B-O008"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M2A-P039::M2A-P039-E001'
+  WHERE e.tracker_id = 'M2A-P039::M2A-P039-E002'
     AND et.evidence_type_name = 'Conductive aligned hydrogel / electrical stimulation'
     AND ot.outcome_type_name = 'Axon regeneration / recovery'
   RETURNING observation_id
@@ -3224,14 +3065,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Schwann cells in injectable decellularized peripheral nerve matrix produced larger implants and about twice as many Schwann-cell-myelinated axons as Matrigel grafts while performing similarly in BBB locomotor testing.',
-    'relative axon count / BBB',
-    'Schwann cells in injectable decellularized peripheral nerve matrix produced larger implants and about twice as many Schwann-cell-myelinated axons as Matrigel grafts while performing similarly in BBB locomotor testing.',
-    'iPN improves graft/axon histology vs Matrigel without clear BBB superiority',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Separates histological benefit from locomotor equivalence.", "experiment_tracker_id": "M2A-P016-E001", "paper_tracker_id": "M2A-P016", "quantitative": "YES", "statistics_reported": "\"twice as many\" reported in abstract", "topic_id": "M2B-T002", "tracker_id": "M2B-O010"}'
+    'In adult female Fischer rat thoracic contusion, iPN supported approximately 3-fold more transplanted SCs at 14 days and twice as many SC-myelinated axons at 8 weeks versus Matrigel, with comparable BBB performance; grid-walk errors favored iPN at 4 weeks but equalized by 8 weeks.',
+    'relative cell/axon count; BBB; grid-walk error',
+    'In adult female Fischer rat thoracic contusion, iPN supported approximately 3-fold more transplanted SCs at 14 days and twice as many SC-myelinated axons at 8 weeks versus Matrigel, with comparable BBB performance; grid-walk errors favored iPN at 4 weeks but equalized by 8 weeks.',
+    'iPN improves graft survival and axon histology versus Matrigel without durable locomotor superiority',
+    'Full text Figs. 3-8',
+    'Figs. 3-8',
+    'high',
+    '{"curator_notes": "iPN immune-cell numbers resembled injury-only controls at 14 days; matrix was not visible at 8 weeks, consistent with degradation.", "experiment_tracker_id": "M2A-P016-E001", "paper_tracker_id": "M2A-P016", "quantitative": "YES", "statistics_reported": "iPN graft volume 0.95 +/- 0.28 vs 0.48 +/- 0.17 mm3; SC-myelinated axons 6927 +/- 2429 vs 3259 +/- 475", "topic_id": "M2B-T002", "tracker_id": "M2B-O010"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3249,18 +3090,18 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Gelatin sponge scaffold with NT-3-overexpressing Schwann cells and TrkC-overexpressing NSCs enhanced myelination and repair after rat T10 complete transection.',
-    'qualitative',
-    'Gelatin sponge scaffold with NT-3-overexpressing Schwann cells and TrkC-overexpressing NSCs enhanced myelination and repair after rat T10 complete transection.',
+    'In adult rat T10 complete transection, an NT-3-Schwann-cell/TrkC-NSC gelatin scaffold supported graft survival and MBP-positive myelin around GFP-positive graft-derived and host NF+ axons at 8 weeks; in vitro APC+ oligodendrocytic differentiation reached 12.98 +/- 5.33% in the dual-engineered group.',
+    'quantitative',
+    'In adult rat T10 complete transection, an NT-3-Schwann-cell/TrkC-NSC gelatin scaffold supported graft survival and MBP-positive myelin around GFP-positive graft-derived and host NF+ axons at 8 weeks; in vitro APC+ oligodendrocytic differentiation reached 12.98 +/- 5.33% in the dual-engineered group.',
     'engineered cell/scaffold network promotes myelination',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Combination mechanism is highly bundled.", "experiment_tracker_id": "M2A-P041-E001", "paper_tracker_id": "M2A-P041", "quantitative": "YES", "statistics_reported": "exact values not extracted", "topic_id": "M2B-T002", "tracker_id": "M2B-O011"}'
+    'PMC3992004',
+    'Full text',
+    'high',
+    '{"curator_notes": "Scaffold, engineered cells, NT-3, TrkC, and immunosuppression are bundled.", "experiment_tracker_id": "M2A-P041-E002", "paper_tracker_id": "M2A-P041", "quantitative": "YES", "statistics_reported": "MBP histology and APC value extracted; functional recovery was not the primary endpoint", "topic_id": "M2B-T002", "tracker_id": "M2B-O011"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M2A-P041::M2A-P041-E001'
+  WHERE e.tracker_id = 'M2A-P041::M2A-P041-E002'
     AND et.evidence_type_name = 'Gelatin scaffold plus engineered cells'
     AND ot.outcome_type_name = 'Myelination / regeneration'
   RETURNING observation_id
@@ -3274,14 +3115,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'NT-3 released from fibrin scaffolds increased neuronal fiber growth into adult rat spinal cord lesions by about 1.5- to 3-fold and reduced glial scar formation, but hindlimb motor function did not improve relative to controls.',
-    'fold-change',
-    'NT-3 released from fibrin scaffolds increased neuronal fiber growth into adult rat spinal cord lesions by about 1.5- to 3-fold and reduced glial scar formation, but hindlimb motor function did not improve relative to controls.',
-    'NT-3 fibrin scaffold improved histology without functional improvement',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Key positive-histology/negative-function boundary.", "experiment_tracker_id": "M2A-P025-E001", "paper_tracker_id": "M2A-P025", "quantitative": "YES", "statistics_reported": "1.5- to 3-fold fiber growth; function not improved", "topic_id": "M2B-T003", "tracker_id": "M2B-O012"}'
+    'In adult female Long Evans rats with complete 2-mm T9 ablation, fibrin with a heparin-binding delivery system and NT-3 (1000 ng/mL) increased overall Tuj1 fiber density to 10.4% versus 3% saline and approximately 6-7% fibrin controls, while fibrin reduced white-matter-border GFAP.',
+    'percent fiber density; GFAP',
+    'In adult female Long Evans rats with complete 2-mm T9 ablation, fibrin with a heparin-binding delivery system and NT-3 (1000 ng/mL) increased overall Tuj1 fiber density to 10.4% versus 3% saline and approximately 6-7% fibrin controls, while fibrin reduced white-matter-border GFAP.',
+    'NT-3 fibrin scaffold improved early histology without later functional improvement',
+    'Full text Figs. 1-3',
+    'Figs. 1-3',
+    'high',
+    '{"curator_notes": "Key positive-histology/negative-function boundary; no neuronal cell bodies were observed in the lesion.", "experiment_tracker_id": "M2A-P025-E001", "paper_tracker_id": "M2A-P025", "quantitative": "YES", "statistics_reported": "F-DS-NT3 1000 ng/mL; 9-day endpoint", "topic_id": "M2B-T003", "tracker_id": "M2B-O012"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3324,20 +3165,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Dual-phase SilMA hydrogel with PLGA microspheres was designed to release Ang-(1-7) early and NT-3 later, reducing inflammation and promoting neural differentiation/axonal regeneration in SCI repair assays.',
-    'qualitative',
-    'Dual-phase SilMA hydrogel with PLGA microspheres was designed to release Ang-(1-7) early and NT-3 later, reducing inflammation and promoting neural differentiation/axonal regeneration in SCI repair assays.',
-    'staged release scaffold targets inflammation then regeneration',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Strong design logic; needs full text for timing and effect sizes.", "experiment_tracker_id": "M2A-P036-E001", "paper_tracker_id": "M2A-P036", "quantitative": "YES", "statistics_reported": "exact values not extracted", "topic_id": "M2B-T003", "tracker_id": "M2B-O014"}'
+    'Eight-percent SilMA with PLGA microspheres released >40% of Ang-(1-7) within 3 days and nearly all by 7 days, while NT-3 release persisted through days 28-56 in PBS release testing.',
+    'quantitative',
+    'Eight-percent SilMA with PLGA microspheres released >40% of Ang-(1-7) within 3 days and nearly all by 7 days, while NT-3 release persisted through days 28-56 in PBS release testing.',
+    'staged release scaffold targets early inflammation then later neuroregeneration',
+    'PMC11617199',
+    'Full text',
+    'high',
+    '{"curator_notes": "In-vitro PBS release does not establish the same in-vivo kinetics.", "experiment_tracker_id": "M2A-P036-E001", "paper_tracker_id": "M2A-P036", "quantitative": "YES", "statistics_reported": "Ang-(1-7) >40% by day 3 and nearly complete by day 7; NT-3 remained in delayed release through days 28-56", "topic_id": "M2B-T003", "tracker_id": "M2B-O014"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P036::M2A-P036-E001'
     AND et.evidence_type_name = 'Sequential-release SilMA scaffold'
-    AND ot.outcome_type_name = 'Immunomodulation / neural differentiation'
+    AND ot.outcome_type_name = 'Drug timing / scaffold characterization'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O014', observation_id FROM inserted;
@@ -3349,20 +3190,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Porcine spinal cord and urinary bladder ECM hydrogels integrated into rat hemisection lesions and stimulated neovascularization and axonal ingrowth, while macrophage/mass response created limitations.',
-    'qualitative',
-    'Porcine spinal cord and urinary bladder ECM hydrogels integrated into rat hemisection lesions and stimulated neovascularization and axonal ingrowth, while macrophage/mass response created limitations.',
-    'injectable ECM supports ingrowth but immune/material response matters',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Important ECM benefit/boundary observation.", "experiment_tracker_id": "M2A-P014-E001", "paper_tracker_id": "M2A-P014", "quantitative": "YES", "statistics_reported": "qPCR/histology reported; exact values not extracted", "topic_id": "M2B-T004", "tracker_id": "M2B-O015"}'
+    'In male Wistar Th8 hemisection, 8 mg/mL porcine spinal-cord or urinary-bladder ECM hydrogels integrated into the lesion, increased NF160 axon ingrowth and RECA vascularization versus saline, and modulated early inflammatory gene expression, but massive macrophage infiltration, rapid degradation, and progressive small cysts limited reconstruction.',
+    'weeks',
+    'In male Wistar Th8 hemisection, 8 mg/mL porcine spinal-cord or urinary-bladder ECM hydrogels integrated into the lesion, increased NF160 axon ingrowth and RECA vascularization versus saline, and modulated early inflammatory gene expression, but massive macrophage infiltration, rapid degradation, and progressive small cysts limited reconstruction.',
+    'injectable ECM supports tissue bridging and ingrowth but rapid degradation and macrophage response limit durable repair',
+    'Full text Figs. 2-7',
+    'Figs. 2-7',
+    'high',
+    '{"curator_notes": "SC-ECM and UB-ECM were not significantly different; functional recovery was not established.", "experiment_tracker_id": "M2A-P014-E002", "paper_tracker_id": "M2A-P014", "quantitative": "YES", "statistics_reported": "n = 5/group/timepoint; qPCR at 2, 4, 8 weeks", "topic_id": "M2B-T004", "tracker_id": "M2B-O015"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M2A-P014::M2A-P014-E001'
+  WHERE e.tracker_id = 'M2A-P014::M2A-P014-E002'
     AND et.evidence_type_name = 'Injectable ECM hydrogel'
-    AND ot.outcome_type_name = 'Integration / angiogenesis / axon ingrowth'
+    AND ot.outcome_type_name = 'Integration, angiogenesis, axon ingrowth, and host response'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O015', observation_id FROM inserted;
@@ -3374,20 +3215,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'HA hydrogels containing protoplasmic astrocyte-derived ECM reduced glial scar size and increased axon penetration after SCI compared with other ECM conditions.',
-    'qualitative',
-    'HA hydrogels containing protoplasmic astrocyte-derived ECM reduced glial scar size and increased axon penetration after SCI compared with other ECM conditions.',
-    'astrocyte ECM subtype changes HA hydrogel histology',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "ECM source/subtype is a material boundary condition.", "experiment_tracker_id": "M2A-P032-E001", "paper_tracker_id": "M2A-P032", "quantitative": "YES", "statistics_reported": "exact values not extracted", "topic_id": "M2B-T004", "tracker_id": "M2B-O016"}'
+    'In adult rat T8 dorsal hemisection, protoplasmic astrocyte ECM in HA reduced GFAP area around the lesion (9.7 +/- 1.1% vs sham 16 +/- 3.3%), ED1 area around the lesion (5.5 +/- 0.97% vs sham 9.7 +/- 1.6%), and increased Tuj1 area in the lesion (14 +/- 1.0% vs sham 9.2 +/- 1.9%); fibrous ECM did not reproduce the benefit.',
+    'quantitative',
+    'In adult rat T8 dorsal hemisection, protoplasmic astrocyte ECM in HA reduced GFAP area around the lesion (9.7 +/- 1.1% vs sham 16 +/- 3.3%), ED1 area around the lesion (5.5 +/- 0.97% vs sham 9.7 +/- 1.6%), and increased Tuj1 area in the lesion (14 +/- 1.0% vs sham 9.2 +/- 1.9%); fibrous ECM did not reproduce the benefit.',
+    'astrocyte ECM subtype changes HA hydrogel histology and immune response',
+    'PMC5851469',
+    'Full text',
+    'high',
+    '{"curator_notes": "No functional locomotor test; ECM source and cell-loading effects remain separate boundaries.", "experiment_tracker_id": "M2A-P032-E001", "paper_tracker_id": "M2A-P032", "quantitative": "YES", "statistics_reported": "Exact values extracted; 2 weeks after implantation, 4 weeks after injury", "topic_id": "M2B-T004", "tracker_id": "M2B-O016"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P032::M2A-P032-E001'
     AND et.evidence_type_name = 'HA hydrogel plus astrocyte ECM'
-    AND ot.outcome_type_name = 'Scar / axon penetration'
+    AND ot.outcome_type_name = 'Scar / immune response / axon penetration'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O016', observation_id FROM inserted;
@@ -3424,14 +3265,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'In chronic canine complete T8 transection, delayed scar removal followed by hUC-MSC-loaded NeuroRegen scaffold promoted locomotor recovery, endogenous neurogenesis, and reduced scar response.',
-    'months post injury',
-    'In chronic canine complete T8 transection, delayed scar removal followed by hUC-MSC-loaded NeuroRegen scaffold promoted locomotor recovery, endogenous neurogenesis, and reduced scar response.',
-    'large-animal chronic NeuroRegen+hUC-MSC repair signal',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Translational large-animal chronic anchor.", "experiment_tracker_id": "M2A-P015-E001", "paper_tracker_id": "M2A-P015", "quantitative": "YES", "statistics_reported": "exact values not extracted", "topic_id": "M2B-T005", "tracker_id": "M2B-O018"}'
+    'In 18 adult female beagles with complete T8 resection, delayed scar removal and functionalized NeuroRegen implantation (n=6) produced Olby scores of approximately 6 versus 2-4.5 in control or scaffold-only groups by 12 months, with reduced CS-56/CSPG signal in both scaffold groups.',
+    'Olby score; histology',
+    'In 18 adult female beagles with complete T8 resection, delayed scar removal and functionalized NeuroRegen implantation (n=6) produced Olby scores of approximately 6 versus 2-4.5 in control or scaffold-only groups by 12 months, with reduced CS-56/CSPG signal in both scaffold groups.',
+    'large-animal chronic NeuroRegen+hUC-MSC repair signal with scaffold and cell contributions separated',
+    'Full text Figs. 1-7',
+    'Figs. 1-7',
+    'high',
+    '{"curator_notes": "Scar removal did not worsen locomotion; functional benefit is confounded by surgery, scaffold, cells, and rehabilitation.", "experiment_tracker_id": "M2A-P015-E001", "paper_tracker_id": "M2A-P015", "quantitative": "YES", "statistics_reported": "Functionalized scaffold reached approximately Olby 6; scaffold-only groups plateaued at 2-4.5; n=6/group", "topic_id": "M2B-T005", "tracker_id": "M2B-O018"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3449,18 +3290,18 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'HA demilune scaffold with PPY-coated fibers, RAD16 hydrogel, iNPCs, and curcumin preserved iNPC viability, increased neurite outgrowth/migration in vitro/organotypic culture, and was applied as a minimally invasive surface cap after subacute SCI.',
-    'qualitative',
-    'HA demilune scaffold with PPY-coated fibers, RAD16 hydrogel, iNPCs, and curcumin preserved iNPC viability, increased neurite outgrowth/migration in vitro/organotypic culture, and was applied as a minimally invasive surface cap after subacute SCI.',
-    'surface-capping conductive scaffold supports cells and repair-associated responses',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Surface-capping strategy differs from lesion-filling bridges.", "experiment_tracker_id": "M2A-P034-E001", "paper_tracker_id": "M2A-P034", "quantitative": "YES", "statistics_reported": "exact values not extracted", "topic_id": "M2B-T007", "tracker_id": "M2B-O019"}'
+    'In female SD rats with 200 kdyn T8 contusion, one-week post-injury surface capping with HA/PPY/PM-CURC-iNPC preserved beta-III-tubulin fibers, reduced GFAP-negative lesion area and PDGF expression, and did not worsen gross tissue structure; iNPCs mainly showed astroglial rather than neuronal colocalization and Iba1/ED1 inflammation did not differ at one week.',
+    'mixed qualitative/quantitative',
+    'In female SD rats with 200 kdyn T8 contusion, one-week post-injury surface capping with HA/PPY/PM-CURC-iNPC preserved beta-III-tubulin fibers, reduced GFAP-negative lesion area and PDGF expression, and did not worsen gross tissue structure; iNPCs mainly showed astroglial rather than neuronal colocalization and Iba1/ED1 inflammation did not differ at one week.',
+    'surface-capping conductive scaffold supports cells and early repair-associated responses',
+    'PMC8698735',
+    'Full text',
+    'high',
+    '{"curator_notes": "Early small-N study; no long-term function and no early anti-inflammatory benefit.", "experiment_tracker_id": "M2A-P034-E002", "paper_tracker_id": "M2A-P034", "quantitative": "YES", "statistics_reported": "n=3/group; one-week post-implant endpoint", "topic_id": "M2B-T007", "tracker_id": "M2B-O019"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M2A-P034::M2A-P034-E001'
+  WHERE e.tracker_id = 'M2A-P034::M2A-P034-E002'
     AND et.evidence_type_name = 'Conductive surface scaffold'
     AND ot.outcome_type_name = 'Cell survival / repair response'
   RETURNING observation_id
@@ -3499,18 +3340,18 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'OEC-seeded longitudinal collagen scaffold produced functional improvement in acute SCI, but recovery was not correlated with axon regeneration through the scaffold.',
+    'In acute unilateral cervical resection rats, NF+ axons followed OEC/host-cell trajectories but increased only as a trend over non-seeded or untreated lesions; both seeded and non-seeded microstructured collagen scaffolds improved skilled forelimb function, and function was not correlated with scaffold axon extent.',
     'qualitative',
-    'OEC-seeded longitudinal collagen scaffold produced functional improvement in acute SCI, but recovery was not correlated with axon regeneration through the scaffold.',
+    'In acute unilateral cervical resection rats, NF+ axons followed OEC/host-cell trajectories but increased only as a trend over non-seeded or untreated lesions; both seeded and non-seeded microstructured collagen scaffolds improved skilled forelimb function, and function was not correlated with scaffold axon extent.',
     'functional recovery can dissociate from scaffold-traversing axon regeneration',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Prevents overinterpreting all recovery as bridge-mediated axon regeneration.", "experiment_tracker_id": "M2A-P043-E001", "paper_tracker_id": "M2A-P043", "quantitative": "YES", "statistics_reported": "abstract-level; exact correlation metrics not extracted", "topic_id": "M2B-T008", "tracker_id": "M2B-O021"}'
+    'PMC6170848',
+    'Full text',
+    'high',
+    '{"curator_notes": "Strong negative-mechanism boundary; no single biomaterial/cell component explains recovery.", "experiment_tracker_id": "M2A-P043-E002", "paper_tracker_id": "M2A-P043", "quantitative": "YES", "statistics_reported": "Exact mechanistic direction extracted; source does not establish a simple bridge-mediated recovery mechanism", "topic_id": "M2B-T008", "tracker_id": "M2B-O021"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M2A-P043::M2A-P043-E001'
+  WHERE e.tracker_id = 'M2A-P043::M2A-P043-E002'
     AND et.evidence_type_name = 'OEC-seeded scaffold'
     AND ot.outcome_type_name = 'Boundary condition'
   RETURNING observation_id
@@ -3524,14 +3365,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Two strictly diagnosed acute complete SCI patients received NeuroRegen scaffold plus MSC transplantation and one-year monitoring.',
-    'patients / year',
-    'Two strictly diagnosed acute complete SCI patients received NeuroRegen scaffold plus MSC transplantation and one-year monitoring.',
+    'Two acute complete patients (T11 treated at approximately 24 hours; C4 at 8 days) received approximately 4 x 10^7 umbilical-cord MSCs on 1.5-cm or 1.1-cm NeuroRegen implants. Both improved from ASIA A to C with sensory/motor gains and recovered SSEP/MEP; the thoracic patient''s WISCI rose from 0 to 7 at 12 months.',
+    'ASIA; SSEP/MEP; WISCI',
+    'Two acute complete patients (T11 treated at approximately 24 hours; C4 at 8 days) received approximately 4 x 10^7 umbilical-cord MSCs on 1.5-cm or 1.1-cm NeuroRegen implants. Both improved from ASIA A to C with sensory/motor gains and recovered SSEP/MEP; the thoracic patient''s WISCI rose from 0 to 7 at 12 months.',
     'acute complete human scaffold/MSC feasibility signal',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Supports feasibility only because cohort is extremely small.", "experiment_tracker_id": "M2A-P017-E001", "paper_tracker_id": "M2A-P017", "quantitative": "YES", "statistics_reported": "n = 2; exact endpoints not extracted", "topic_id": "M2B-T006", "tracker_id": "M2B-O022"}'
+    'Full text Figs. 1-5',
+    'Figs. 1-5',
+    'high',
+    '{"curator_notes": "Supports feasibility and hypothesis generation only; not efficacy-grade evidence.", "experiment_tracker_id": "M2A-P017-E001", "paper_tracker_id": "M2A-P017", "quantitative": "YES", "statistics_reported": "n=2; uncontrolled; no obvious treatment-related adverse symptoms", "topic_id": "M2B-T006", "tracker_id": "M2B-O022"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3549,14 +3390,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Collagen scaffold plus hUC-MSC strategy was tested in rat/canine complete transection models and a phase I acute complete human SCI trial.',
-    'multi-species',
-    'Collagen scaffold plus hUC-MSC strategy was tested in rat/canine complete transection models and a phase I acute complete human SCI trial.',
-    'collagen+hUC-MSC tested across animal and human phase I settings',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Important translational bridge but cell/scaffold effects are bundled.", "experiment_tracker_id": "M2A-P033-E001", "paper_tracker_id": "M2A-P033", "quantitative": "YES", "statistics_reported": "exact human outcome values not extracted", "topic_id": "M2B-T006", "tracker_id": "M2B-O023"}'
+    'In rat and canine complete transection models, hUC-MSC-loaded collagen scaffolds improved locomotor and electrophysiological outcomes over SCI or scaffold-only groups: rat BBB improved at 4-8 weeks, while canine Olby scores and MEP improved more with cells at 3-6 months.',
+    'BBB; Olby; MEP',
+    'In rat and canine complete transection models, hUC-MSC-loaded collagen scaffolds improved locomotor and electrophysiological outcomes over SCI or scaffold-only groups: rat BBB improved at 4-8 weeks, while canine Olby scores and MEP improved more with cells at 3-6 months.',
+    'collagen+hUC-MSC preclinical scaffold/cell strategy shows species-spanning functional and conduction signals',
+    'Full text Figs. 1-5',
+    'Figs. 1-5',
+    'high',
+    '{"curator_notes": "Animal findings support translation but do not isolate scaffold, cell, and rehabilitation effects completely.", "experiment_tracker_id": "M2A-P033-E001", "paper_tracker_id": "M2A-P033", "quantitative": "YES", "statistics_reported": "Rat n=10/group; canine n=5/group", "topic_id": "M2B-T006", "tracker_id": "M2B-O023"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3574,20 +3415,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Aligned nanofiber-hydrogel scaffold after rat C5 hemi-incision provided nonviral delivery, contact guidance, early aligned axon regeneration, and no excessive inflammatory or scar response.',
-    '1 WPI early axon assessment',
-    'Aligned nanofiber-hydrogel scaffold after rat C5 hemi-incision provided nonviral delivery, contact guidance, early aligned axon regeneration, and no excessive inflammatory or scar response.',
-    'aligned nanofiber scaffold supports delivery/guidance without excessive scar',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Combines scaffold guidance with molecular delivery.", "experiment_tracker_id": "M2A-P008-E001", "paper_tracker_id": "M2A-P008", "quantitative": "YES", "statistics_reported": "exact values not extracted", "topic_id": "M2B-T001", "tracker_id": "M2B-O024"}'
+    'In adult rat C5 hemi-incision, a 1-mm PCLEEP-collagen scaffold aligned to the cord supported axon ingrowth by 1 week, sustained alignment through 4 weeks, and MAG-positive axon-associated structures at 4 weeks. NT-3 loading was 54.6 ng/mg with 90.1% released in week 1 and 99.7% by 3 months; scaffold degradation was 24.8%, 33.4%, and 51.6% at 1, 2, and 3 months in vitro.',
+    'ng/mg; percent',
+    'In adult rat C5 hemi-incision, a 1-mm PCLEEP-collagen scaffold aligned to the cord supported axon ingrowth by 1 week, sustained alignment through 4 weeks, and MAG-positive axon-associated structures at 4 weeks. NT-3 loading was 54.6 ng/mg with 90.1% released in week 1 and 99.7% by 3 months; scaffold degradation was 24.8%, 33.4%, and 51.6% at 1, 2, and 3 months in vitro.',
+    'aligned nanofibers combine contact guidance with prolonged local trophic delivery',
+    'Full text Figs. 1-5',
+    'Figs. 1-5',
+    'high',
+    '{"curator_notes": "Functional recovery was not tested in this paper; later work is needed for neuronal reconnection.", "experiment_tracker_id": "M2A-P008-E001", "paper_tracker_id": "M2A-P008", "quantitative": "YES", "statistics_reported": "release and degradation values reported in Results", "topic_id": "M2B-T001", "tracker_id": "M2B-O024"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P008::M2A-P008-E001'
     AND et.evidence_type_name = 'Aligned nanofiber-hydrogel scaffold'
-    AND ot.outcome_type_name = 'Axon guidance / scar response'
+    AND ot.outcome_type_name = 'Axon guidance, delivery, and remyelination'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O024', observation_id FROM inserted;
@@ -3649,18 +3490,18 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'GelMA microchannel scaffold loaded with hAEC-derived neural-like cells improved neural circuit and hindlimb recovery after rat full transection SCI.',
-    'qualitative',
-    'GelMA microchannel scaffold loaded with hAEC-derived neural-like cells improved neural circuit and hindlimb recovery after rat full transection SCI.',
-    'microchannel GelMA scaffold plus hAEC neural-like cells supports circuit repair',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Architecture and cell effects are bundled.", "experiment_tracker_id": "M2A-P035-E001", "paper_tracker_id": "M2A-P035", "quantitative": "YES", "statistics_reported": "exact values not extracted", "topic_id": "M2B-T001", "tracker_id": "M2B-O027"}'
+    'After acute 2 mm T10 full transection, hAEC-derived neural-like cell scaffolds improved 8-week BBB to 5.667 versus 2.333 for empty scaffold and 0.667 for transection control; MEP amplitude reached 29.57% of normal and NF-H axons projected along channels.',
+    'quantitative',
+    'After acute 2 mm T10 full transection, hAEC-derived neural-like cell scaffolds improved 8-week BBB to 5.667 versus 2.333 for empty scaffold and 0.667 for transection control; MEP amplitude reached 29.57% of normal and NF-H axons projected along channels.',
+    'microchannel GelMA scaffold plus hAEC neural-like cells supports partial circuit repair',
+    'PMC9598945',
+    'Full text',
+    'high',
+    '{"curator_notes": "The paper reports postoperative deaths, severe neuroinflammation, and neural-like rather than mature neuronal identity.", "experiment_tracker_id": "M2A-P035-E002", "paper_tracker_id": "M2A-P035", "quantitative": "YES", "statistics_reported": "BBB n=3/group; MEP n=5 for SCI groups; exact 8-week values extracted", "topic_id": "M2B-T001", "tracker_id": "M2B-O027"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M2A-P035::M2A-P035-E001'
+  WHERE e.tracker_id = 'M2A-P035::M2A-P035-E002'
     AND et.evidence_type_name = '3D-printed GelMA microchannel scaffold'
     AND ot.outcome_type_name = 'Circuit repair / function'
   RETURNING observation_id
@@ -3699,18 +3540,18 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    '3D-bioprinted collagen/silk fibroin scaffold with spinal-cord-like cavities plus NSCs promoted nerve regeneration after SCI.',
-    'qualitative',
-    '3D-bioprinted collagen/silk fibroin scaffold with spinal-cord-like cavities plus NSCs promoted nerve regeneration after SCI.',
+    '3D-CF plus NSCs increased NF-H-positive fibers and reduced GFAP versus SCI and scaffold-only groups in rat SCI (n=10/group), with reported limb-function improvement; authors noted lack of NSC tracing and limited objective neurological assessment.',
+    'quantitative direction',
+    '3D-CF plus NSCs increased NF-H-positive fibers and reduced GFAP versus SCI and scaffold-only groups in rat SCI (n=10/group), with reported limb-function improvement; authors noted lack of NSC tracing and limited objective neurological assessment.',
     'bioprinted silk/collagen scaffold plus NSCs supports regeneration',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Printed architecture and cell effect bundled.", "experiment_tracker_id": "M2A-P042-E001", "paper_tracker_id": "M2A-P042", "quantitative": "YES", "statistics_reported": "exact values not extracted", "topic_id": "M2B-T001", "tracker_id": "M2B-O029"}'
+    'PMC6990792',
+    'Full text',
+    'high',
+    '{"curator_notes": "Architecture and NSC effects remain bundled; the paper''s own tracing/function limitations are retained.", "experiment_tracker_id": "M2A-P042-E002", "paper_tracker_id": "M2A-P042", "quantitative": "YES", "statistics_reported": "n=10/group; exact figure values not transcribed", "topic_id": "M2B-T001", "tracker_id": "M2B-O029"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M2A-P042::M2A-P042-E001'
+  WHERE e.tracker_id = 'M2A-P042::M2A-P042-E002'
     AND et.evidence_type_name = '3D-bioprinted collagen/silk scaffold'
     AND ot.outcome_type_name = 'Nerve regeneration'
   RETURNING observation_id
@@ -3874,14 +3715,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Noggin-loaded nanochitosan/polypyrrole-alginate conductive scaffold supported hAEC attachment/neural differentiation and SCI repair-marker testing in an animal model.',
-    'qualitative',
-    'Noggin-loaded nanochitosan/polypyrrole-alginate conductive scaffold supported hAEC attachment/neural differentiation and SCI repair-marker testing in an animal model.',
-    'conductive chitosan scaffold supports hAEC differentiation and repair testing',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Conductive/cell/growth-factor combination.", "experiment_tracker_id": "M2A-P024-E001", "paper_tracker_id": "M2A-P024", "quantitative": "YES", "statistics_reported": "exact values not extracted", "topic_id": "M2B-T002", "tracker_id": "M2B-O036"}'
+    'hAECs attached uniformly to nanochitosan/polypyrrole-alginate; scaffold and/or Noggin increased FOX3, Calca, and MBP expression, while scaffold increased GFAP. Noggin loading was 22.6% with 75.3% entrapment efficiency, and 28.5% of incorporated Noggin was released over 12 days.',
+    'percent; gene expression',
+    'hAECs attached uniformly to nanochitosan/polypyrrole-alginate; scaffold and/or Noggin increased FOX3, Calca, and MBP expression, while scaffold increased GFAP. Noggin loading was 22.6% with 75.3% entrapment efficiency, and 28.5% of incorporated Noggin was released over 12 days.',
+    'conductive chitosan scaffold supports hAEC attachment and mixed neural/glial marker induction with measurable Noggin release',
+    'Full text Figs. 3-6',
+    'Figs. 3-6',
+    'high',
+    '{"curator_notes": "Marker induction is not equivalent to mature functional neural differentiation.", "experiment_tracker_id": "M2A-P024-E001", "paper_tracker_id": "M2A-P024", "quantitative": "YES", "statistics_reported": "In vitro 21-day differentiation and 12-day release assays", "topic_id": "M2B-T002", "tracker_id": "M2B-O036"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3924,14 +3765,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'bFGF-incorporated HEMA-MOETACL hydrogel implanted 5 days after T9 complete transection supported regenerating tissue ingrowth and functional recovery by 8 weeks.',
-    'weeks post injury',
-    'bFGF-incorporated HEMA-MOETACL hydrogel implanted 5 days after T9 complete transection supported regenerating tissue ingrowth and functional recovery by 8 weeks.',
-    'delayed bFGF hydrogel supports tissue and functional repair',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Growth-factor hydrogel anchor.", "experiment_tracker_id": "M2A-P026-E001", "paper_tracker_id": "M2A-P026", "quantitative": "YES", "statistics_reported": "exact values not extracted", "topic_id": "M2B-T003", "tracker_id": "M2B-O038"}'
+    'After delayed implantation 5 days after T9 complete transection, bFGF/HEMA-MOETACL with acellular vascular matrix formed a bridge and reduced cavitation, supported axon and vessel ingrowth, and increased SSEP/MEP amplitude while shortening latency versus lesion, bFGF-only, and hydrogel-only groups.',
+    'mm3; percent; SSEP/MEP',
+    'After delayed implantation 5 days after T9 complete transection, bFGF/HEMA-MOETACL with acellular vascular matrix formed a bridge and reduced cavitation, supported axon and vessel ingrowth, and increased SSEP/MEP amplitude while shortening latency versus lesion, bFGF-only, and hydrogel-only groups.',
+    'delayed bFGF hydrogel supports tissue, electrophysiological, and functional repair',
+    'Full text Figs. 1-7',
+    'Figs. 1-7',
+    'high',
+    '{"curator_notes": "bFGF and material effects remain partly inseparable; no clear astrocytic scar reduction versus lesion control.", "experiment_tracker_id": "M2A-P026-E001", "paper_tracker_id": "M2A-P026", "quantitative": "YES", "statistics_reported": "Combined cavity volume 2.41 +/- 0.80 versus 25.00 +/- 3.33 mm3 lesion control; hydrogel-alone did not show clear behavioral recovery", "topic_id": "M2B-T003", "tracker_id": "M2B-O038"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3974,18 +3815,18 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'NT-3/fibroin-modified gelatin sponge scaffold improved canine hindlimb movement, neural conduction, inflammation, vessel formation, synaptic structures, and nerve fiber regeneration.',
-    'qualitative',
-    'NT-3/fibroin-modified gelatin sponge scaffold improved canine hindlimb movement, neural conduction, inflammation, vessel formation, synaptic structures, and nerve fiber regeneration.',
+    'In 14 female Beagles with right T10 4 mm hemisection, NT-3/fibroin gelatin sponge (n=7) improved 4-week Olby score to 11.85 +/- 0.64 versus 9.29 +/- 1.48 fibroin-only control, produced detectable CMEP versus negligible control signal, reduced IBA1+ cells at the graft (74.11 +/- 5.85 vs 98.41 +/- 15.43 cells/0.09 mm2), and increased NF+ fiber density; GFAP scar density was not different. EM also showed host-cell migration, vessels, synapse-like structures, and occasional MBP+ fibers in the NF-GS graft.',
+    'quantitative',
+    'In 14 female Beagles with right T10 4 mm hemisection, NT-3/fibroin gelatin sponge (n=7) improved 4-week Olby score to 11.85 +/- 0.64 versus 9.29 +/- 1.48 fibroin-only control, produced detectable CMEP versus negligible control signal, reduced IBA1+ cells at the graft (74.11 +/- 5.85 vs 98.41 +/- 15.43 cells/0.09 mm2), and increased NF+ fiber density; GFAP scar density was not different. EM also showed host-cell migration, vessels, synapse-like structures, and occasional MBP+ fibers in the NF-GS graft.',
     'large-animal NT-3/fibroin scaffold improves conduction and repair profile',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Large-animal cargo-release anchor.", "experiment_tracker_id": "M2A-P030-E001", "paper_tracker_id": "M2A-P030", "quantitative": "YES", "statistics_reported": "exact values not extracted", "topic_id": "M2B-T003", "tracker_id": "M2B-O040"}'
+    'PMC6055812',
+    'Full text',
+    'high',
+    '{"curator_notes": "Large-animal, short-follow-up evidence; GFAP scar did not improve and CMEP did not prove a fully reconstructed pathway.", "experiment_tracker_id": "M2A-P030-E002", "paper_tracker_id": "M2A-P030", "quantitative": "YES", "statistics_reported": "Exact Olby, IBA1, and NF/GFAP values extracted at 4 weeks", "topic_id": "M2B-T003", "tracker_id": "M2B-O040"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
-  WHERE e.tracker_id = 'M2A-P030::M2A-P030-E001'
+  WHERE e.tracker_id = 'M2A-P030::M2A-P030-E002'
     AND et.evidence_type_name = 'NT-3/fibroin gelatin scaffold'
     AND ot.outcome_type_name = 'Conduction / inflammation / regeneration'
   RETURNING observation_id
@@ -4024,14 +3865,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'PEG/PAA/protein layer-by-layer films over agarose hydrogels provided a strategy for sustained BDNF release from templated SCI channel bridges.',
-    'qualitative',
-    'PEG/PAA/protein layer-by-layer films over agarose hydrogels provided a strategy for sustained BDNF release from templated SCI channel bridges.',
+    'PEG/PAA/protein layer-by-layer films over agarose provided pH-triggered sustained protein release for more than four weeks in vitro; release rate depended on agarose concentration/porosity, polymer/protein assembly, and film degradation, and released lysozyme remained active early.',
+    'quantitative direction',
+    'PEG/PAA/protein layer-by-layer films over agarose provided pH-triggered sustained protein release for more than four weeks in vitro; release rate depended on agarose concentration/porosity, polymer/protein assembly, and film degradation, and released lysozyme remained active early.',
     'agarose channel scaffold can support controlled protein release',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Methods anchor for release rather than in vivo efficacy.", "experiment_tracker_id": "M2A-P040-E001", "paper_tracker_id": "M2A-P040", "quantitative": "NO", "statistics_reported": "release details not extracted", "topic_id": "M2B-T003", "tracker_id": "M2B-O042"}'
+    'PMC2830720',
+    'Full text',
+    'high',
+    '{"curator_notes": "Protein-release method is translationally relevant but not an in-vivo SCI experiment.", "experiment_tracker_id": "M2A-P040-E001", "paper_tracker_id": "M2A-P040", "quantitative": "NO", "statistics_reported": "Full-text methods anchor; no SCI-animal efficacy test", "topic_id": "M2B-T003", "tracker_id": "M2B-O042"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4149,14 +3990,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Chronic complete SCI patients underwent scar resection and NeuroRegen/hUCB-MSC implantation with safety and neurological/electrophysiological follow-up.',
-    'patients / year',
-    'Chronic complete SCI patients underwent scar resection and NeuroRegen/hUCB-MSC implantation with safety and neurological/electrophysiological follow-up.',
-    'chronic human scar-resection scaffold strategy feasible',
-    'Abstract',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Human chronic strategy but efficacy remains cautious.", "experiment_tracker_id": "M2A-P009-E001", "paper_tracker_id": "M2A-P009", "quantitative": "YES", "statistics_reported": "exact values not extracted", "topic_id": "M2B-T005", "tracker_id": "M2B-O047"}'
+    'The chronic human cohort had no reported treatment-related adverse events over 1 year; 62.5% showed expanded sensation, 87.5% expanded MEP-responsive area, 3 cervical patients had increased finger flexibility, and 2 reported defecation sensation without sphincter control.',
+    'percent; patients / year',
+    'The chronic human cohort had no reported treatment-related adverse events over 1 year; 62.5% showed expanded sensation, 87.5% expanded MEP-responsive area, 3 cervical patients had increased finger flexibility, and 2 reported defecation sensation without sphincter control.',
+    'chronic human scar-resection scaffold strategy feasible with partial neurological signals',
+    'Full text Figs. 1-2 and Tables 1-2',
+    'Figs. 1-2; Tables 1-2',
+    'high',
+    '{"curator_notes": "Human chronic strategy remains a feasibility signal rather than controlled efficacy evidence.", "experiment_tracker_id": "M2A-P009-E001", "paper_tracker_id": "M2A-P009", "quantitative": "YES", "statistics_reported": "No ASIA classification improved; rehabilitation and no-treatment control limit efficacy inference", "topic_id": "M2B-T005", "tracker_id": "M2B-O047"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4299,20 +4140,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Koffler J 2019 M2A-P004-E002 preserves a distinct Rodent experiment testing NPC-loaded 3D-printed scaffold implantation with endpoint/readout: NPC-loaded biomimetic scaffolds were implanted into complete SCI sites to assess host axon regeneration into the device, NPC axon extension into host cord, synaptic relay formation, synaptic transmission, and functional improvement..',
-    'qualitative',
-    'Koffler J 2019 M2A-P004-E002 preserves a distinct Rodent experiment testing NPC-loaded 3D-printed scaffold implantation with endpoint/readout: NPC-loaded biomimetic scaffolds were implanted into complete SCI sites to assess host axon regeneration into the device, NPC axon extension into host cord, synaptic relay formation, synaptic transmission, and functional improvement..',
-    'M2A-P004-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Biomimetic 3D-printed scaffolds for spinal cord injury repair. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P004-E002", "paper_tracker_id": "M2A-P004", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T001", "tracker_id": "M2B-O053"}'
+    'In acute T3 complete transection, NPC-loaded scaffolds supported NPC differentiation, 87 +/- 5 serotonergic axons beyond the scaffold at 6 months, BBB 6.6 +/- 0.5 versus 0.3 +/- 0.2 empty scaffold and 1.6 +/- 0.8 NPC-only, and MEP 270 +/- 5 versus 25.1 +/- 5.7 microV. Retransection abolished MEPs, supporting a scaffold-dependent relay.',
+    'BBB; microV',
+    'In acute T3 complete transection, NPC-loaded scaffolds supported NPC differentiation, 87 +/- 5 serotonergic axons beyond the scaffold at 6 months, BBB 6.6 +/- 0.5 versus 0.3 +/- 0.2 empty scaffold and 1.6 +/- 0.8 NPC-only, and MEP 270 +/- 5 versus 25.1 +/- 5.7 microV. Retransection abolished MEPs, supporting a scaffold-dependent relay.',
+    'NPC-loaded architecture supports relay-associated functional recovery; NPCs without scaffold were insufficient',
+    'Full text Figs. 3-4',
+    'Figs. 3-4',
+    'high',
+    '{"curator_notes": "Combination therapy; scaffold-only functional effect is not claimed.", "experiment_tracker_id": "M2A-P004-E002", "paper_tracker_id": "M2A-P004", "quantitative": "YES", "statistics_reported": "P < 0.0001 for BBB/MEP comparisons; n = 10", "topic_id": "M2B-T001", "tracker_id": "M2B-O053"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P004::M2A-P004-E002'
-    AND et.evidence_type_name = '3D printing / graft scaffold'
-    AND ot.outcome_type_name = 'NPC-loaded biomimetic scaffolds were implanted into complete SCI sites to assess host axon regeneration into the device, NPC axon extension into host cord, synaptic relay formation, synaptic transmission, and functional improvement.'
+    AND et.evidence_type_name = '3D printing / NPC graft scaffold'
+    AND ot.outcome_type_name = 'NPC survival, neural relay, and function'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O053', observation_id FROM inserted;
@@ -4324,20 +4165,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Dumont CM 2019 M2A-P005-E002 preserves a distinct Rodent model context experiment testing Hydrogel tube axon-guidance scaffold with endpoint/readout: Hydrogel tubes guided robust axon growth along inner and outer tube surfaces, increased axon density within tubes, supported myelination of a subset of axons, and enhanced functional recovery..',
-    'qualitative',
-    'Dumont CM 2019 M2A-P005-E002 preserves a distinct Rodent model context experiment testing Hydrogel tube axon-guidance scaffold with endpoint/readout: Hydrogel tubes guided robust axon growth along inner and outer tube surfaces, increased axon density within tubes, supported myelination of a subset of axons, and enhanced functional recovery..',
-    'M2A-P005-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Aligned hydrogel tubes guide regeneration following spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P005-E002", "paper_tracker_id": "M2A-P005", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T001", "tracker_id": "M2B-O054"}'
+    'At 8 weeks, 5-tube composites reached 1744 +/- 920 axons/mm2 rostrally and 1436 +/- 567 caudally versus 456 +/- 113 with gelfoam; approximately 30% of tube axons were myelinated, and PEG tubes/bridges reached approximately BMS 6 versus 3 with gelfoam. Tube-versus-bridge superiority was not established.',
+    'axons/mm2; BMS',
+    'At 8 weeks, 5-tube composites reached 1744 +/- 920 axons/mm2 rostrally and 1436 +/- 567 caudally versus 456 +/- 113 with gelfoam; approximately 30% of tube axons were myelinated, and PEG tubes/bridges reached approximately BMS 6 versus 3 with gelfoam. Tube-versus-bridge superiority was not established.',
+    'aligned tubes improve axon density and locomotion in this hemisection model, with incomplete and comparator-limited myelination evidence',
+    'Full text Figs. 5-7',
+    'Figs. 5-7',
+    'high',
+    '{"curator_notes": "This is a proof-of-concept penetrating injury, not a contusion model.", "experiment_tracker_id": "M2A-P005-E002", "paper_tracker_id": "M2A-P005", "quantitative": "YES", "statistics_reported": "n = 6; P < 0.01 for key axon comparisons", "topic_id": "M2B-T001", "tracker_id": "M2B-O054"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P005::M2A-P005-E002'
     AND et.evidence_type_name = 'Aligned hydrogel scaffold'
-    AND ot.outcome_type_name = 'Hydrogel tubes guided robust axon growth along inner and outer tube surfaces, increased axon density within tubes, supported myelination of a subset of axons, and enhanced functional recovery.'
+    AND ot.outcome_type_name = 'Axon density, myelination, and locomotion'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O054', observation_id FROM inserted;
@@ -4399,20 +4240,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Nguyen LH 2017 M2A-P008-E002 preserves a distinct Rattus norvegicus experiment testing 3D aligned nanofiber-hydrogel scaffold with endpoint/readout: Inflammatory response and scar tissue formation were assessed after scaffold implantation, with no excessive inflammatory response or scar formation reported in the abstract..',
-    'qualitative',
-    'Nguyen LH 2017 M2A-P008-E002 preserves a distinct Rattus norvegicus experiment testing 3D aligned nanofiber-hydrogel scaffold with endpoint/readout: Inflammatory response and scar tissue formation were assessed after scaffold implantation, with no excessive inflammatory response or scar formation reported in the abstract..',
-    'M2A-P008-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Three-dimensional aligned nanofibers-hydrogel scaffold for controlled non-viral drug/gene delivery to direct axon regeneration in spinal cord injury treatment. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P008-E002", "paper_tracker_id": "M2A-P008", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T001", "tracker_id": "M2B-O057"}'
+    'miR-222-loaded scaffolds achieved 0.5 microgram/mg loading with approximately 16% efficiency; 27.1 +/- 3.38% released in the first month and release remained detectable for at least two more months. miR-222 increased neurite ingrowth at 10 days without changing microglial or astrocyte reactions; Cy5-ODN spread approximately 300 micrometers from the scaffold edge at 14 days.',
+    'microgram/mg; percent; micrometers',
+    'miR-222-loaded scaffolds achieved 0.5 microgram/mg loading with approximately 16% efficiency; 27.1 +/- 3.38% released in the first month and release remained detectable for at least two more months. miR-222 increased neurite ingrowth at 10 days without changing microglial or astrocyte reactions; Cy5-ODN spread approximately 300 micrometers from the scaffold edge at 14 days.',
+    'localized nonviral miRNA delivery enhances early neurite ingrowth without detectable glial reaction increase',
+    'Full text Fig. 6 and Supplementary Fig. 1',
+    'Fig. 6 and Supplementary Fig. 1',
+    'high',
+    '{"curator_notes": "This does not establish long-term functional recovery.", "experiment_tracker_id": "M2A-P008-E002", "paper_tracker_id": "M2A-P008", "quantitative": "YES", "statistics_reported": "values reported in Results", "topic_id": "M2B-T001", "tracker_id": "M2B-O057"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P008::M2A-P008-E002'
     AND et.evidence_type_name = 'Aligned nanofiber-hydrogel scaffold'
-    AND ot.outcome_type_name = 'Inflammatory response and scar tissue formation were assessed after scaffold implantation, with no excessive inflammatory response or scar formation reported in the abstract.'
+    AND ot.outcome_type_name = 'miRNA delivery and inflammatory boundary'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O057', observation_id FROM inserted;
@@ -4524,20 +4365,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Tukmachev D 2016 M2A-P014-E002 preserves a distinct Rattus norvegicus experiment testing Injectable ECM hydrogel lesion scaffold with endpoint/readout: Histology and qPCR assessed scaffold integration, neovascularization, axonal ingrowth, tissue response, and macrophage-related limitations..',
-    'qualitative',
-    'Tukmachev D 2016 M2A-P014-E002 preserves a distinct Rattus norvegicus experiment testing Injectable ECM hydrogel lesion scaffold with endpoint/readout: Histology and qPCR assessed scaffold integration, neovascularization, axonal ingrowth, tissue response, and macrophage-related limitations..',
-    'M2A-P014-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Injectable Extracellular Matrix Hydrogels as Scaffolds for Spinal Cord Injury Repair. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P014-E002", "paper_tracker_id": "M2A-P014", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T004", "tracker_id": "M2B-O062"}'
+    'In male Wistar Th8 hemisection, both 8 mg/mL porcine SC-ECM and UB-ECM hydrogels increased NF160 axon ingrowth and RECA vascularization versus saline, but macrophage infiltration, rapid degradation, progressive cysts, and absent demonstrated functional recovery constrained interpretation.',
+    'weeks',
+    'In male Wistar Th8 hemisection, both 8 mg/mL porcine SC-ECM and UB-ECM hydrogels increased NF160 axon ingrowth and RECA vascularization versus saline, but macrophage infiltration, rapid degradation, progressive cysts, and absent demonstrated functional recovery constrained interpretation.',
+    'ECM hydrogel provides a transient ingrowth/vascular substrate but is not yet a durable functional bridge',
+    'Full text Figs. 2-7',
+    'Figs. 2-7',
+    'high',
+    '{"curator_notes": "No significant SC- versus UB-ECM differences; cell-seeded SC-ECM did not improve axon/vessel ingrowth.", "experiment_tracker_id": "M2A-P014-E002", "paper_tracker_id": "M2A-P014", "quantitative": "YES", "statistics_reported": "n = 5/group/timepoint; qPCR at 2, 4, 8 weeks", "topic_id": "M2B-T004", "tracker_id": "M2B-O062"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P014::M2A-P014-E002'
     AND et.evidence_type_name = 'Injectable ECM hydrogel'
-    AND ot.outcome_type_name = 'Histology and qPCR assessed scaffold integration, neovascularization, axonal ingrowth, tissue response, and macrophage-related limitations.'
+    AND ot.outcome_type_name = 'Tissue bridging and material limitation'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O062', observation_id FROM inserted;
@@ -4549,20 +4390,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Li X 2017 M2A-P015-E002 preserves a distinct Canis familiaris experiment testing Functionalized NeuroRegen scaffold with endpoint/readout: Locomotor recovery, endogenous neurogenesis, and scar response were assessed after functionalized NeuroRegen implantation..',
-    'qualitative',
-    'Li X 2017 M2A-P015-E002 preserves a distinct Canis familiaris experiment testing Functionalized NeuroRegen scaffold with endpoint/readout: Locomotor recovery, endogenous neurogenesis, and scar response were assessed after functionalized NeuroRegen implantation..',
-    'M2A-P015-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Transplantation of hUC-MSCs seeded collagen scaffolds reduces scar formation and promotes functional recovery in canines with chronic spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P015-E002", "paper_tracker_id": "M2A-P015", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T005", "tracker_id": "M2B-O063"}'
+    'Functionalized NeuroRegen increased Tuj-1/Map2 and 5-HT-positive neurons, remyelinated axons, and lesion-site synaptophysin while reducing CS-56/CSPG signal at 1 year; human MSCs were not detected at 6 months.',
+    'neurons; myelin; synaptophysin; CSPG',
+    'Functionalized NeuroRegen increased Tuj-1/Map2 and 5-HT-positive neurons, remyelinated axons, and lesion-site synaptophysin while reducing CS-56/CSPG signal at 1 year; human MSCs were not detected at 6 months.',
+    'M2A-P015-E002 preserves distinct histological mechanism and source-cell boundary',
+    'Full text Figs. 2-7',
+    'Figs. 2-7',
+    'high',
+    '{"curator_notes": "New neurons were not proven to derive from transplanted MSCs; scaffold and scar-resection effects remain separable boundaries.", "experiment_tracker_id": "M2A-P015-E002", "paper_tracker_id": "M2A-P015", "quantitative": "YES", "statistics_reported": "Full text Figs. 2-7", "topic_id": "M2B-T005", "tracker_id": "M2B-O063"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P015::M2A-P015-E002'
     AND et.evidence_type_name = 'Chronic canine scar removal plus NeuroRegen/hUC-MSC'
-    AND ot.outcome_type_name = 'Locomotor recovery, endogenous neurogenesis, and scar response were assessed after functionalized NeuroRegen implantation.'
+    AND ot.outcome_type_name = 'Endogenous neurons, remyelination, synapses, and secondary scar were assessed after functionalized NeuroRegen implantation.'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O063', observation_id FROM inserted;
@@ -4574,14 +4415,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Cerqueira SR 2018 M2A-P016-E002 preserves a distinct Rattus norvegicus experiment testing SC/iPN matrix graft with endpoint/readout: Implant size, immune infiltration, Schwann-cell myelinated axons, axon growth, and BBB locomotor performance were assessed..',
-    'qualitative',
-    'Cerqueira SR 2018 M2A-P016-E002 preserves a distinct Rattus norvegicus experiment testing SC/iPN matrix graft with endpoint/readout: Implant size, immune infiltration, Schwann-cell myelinated axons, axon growth, and BBB locomotor performance were assessed..',
-    'M2A-P016-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Decellularized peripheral nerve supports Schwann cell transplants and axon growth following spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P016-E002", "paper_tracker_id": "M2A-P016", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T002", "tracker_id": "M2B-O064"}'
+    'At 8 weeks, SC/iPN grafts were larger and contained about twice as many SC-myelinated axons as SC/Matrigel grafts, while BBB scores were comparable and early grid-walk benefit did not persist.',
+    'graft volume; axon count; BBB; grid walk',
+    'At 8 weeks, SC/iPN grafts were larger and contained about twice as many SC-myelinated axons as SC/Matrigel grafts, while BBB scores were comparable and early grid-walk benefit did not persist.',
+    'iPN provides a histological/graft-survival advantage without durable behavioral superiority',
+    'Full text Figs. 6-8',
+    'Figs. 6-8',
+    'high',
+    '{"curator_notes": "Matrix degraded or was not visible by 8 weeks; immune response was not aggravated by iPN.", "experiment_tracker_id": "M2A-P016-E002", "paper_tracker_id": "M2A-P016", "quantitative": "YES", "statistics_reported": "Full text Figs. 6-8", "topic_id": "M2B-T002", "tracker_id": "M2B-O064"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4749,20 +4590,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Manzari-Tavakoli A 2024 M2A-P024-E002 preserves a distinct Animal SCI model context experiment testing hAEC-loaded conductive chitosan scaffold with endpoint/readout: Animal-model testing assessed repair potential of hAECs on Noggin-loaded conductive nanochitosan/polypyrrole-alginate scaffold..',
-    'qualitative',
-    'Manzari-Tavakoli A 2024 M2A-P024-E002 preserves a distinct Animal SCI model context experiment testing hAEC-loaded conductive chitosan scaffold with endpoint/readout: Animal-model testing assessed repair potential of hAECs on Noggin-loaded conductive nanochitosan/polypyrrole-alginate scaffold..',
-    'M2A-P024-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Therapeutic potential of placenta-derived stem cells cultivated on noggin-loaded nanochitosan/polypyrrole-alginate conductive scaffold to restore spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P024-E002", "paper_tracker_id": "M2A-P024", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T002", "tracker_id": "M2B-O071"}'
+    'Noggin+hAEC scaffold reached BBB 14.0 +/- 1.43 versus 9.5 +/- 1.52 lesion control at 4 weeks; scaffold+hAEC reached 13.5 +/- 0.7 and Noggin scaffold 12.5 +/- 0.51. hAEC groups reduced Iba1/GFAP and increased beta-tubulin/MBP, with labeled cells surviving at 4 weeks.',
+    'BBB; Iba1; GFAP; beta-tubulin; MBP',
+    'Noggin+hAEC scaffold reached BBB 14.0 +/- 1.43 versus 9.5 +/- 1.52 lesion control at 4 weeks; scaffold+hAEC reached 13.5 +/- 0.7 and Noggin scaffold 12.5 +/- 0.51. hAEC groups reduced Iba1/GFAP and increased beta-tubulin/MBP, with labeled cells surviving at 4 weeks.',
+    'M2A-P024-E002 preserves distinct in vivo combination-therapy evidence and marker/behavior boundary',
+    'Full text Figs. 7-10',
+    'Figs. 7-10',
+    'high',
+    '{"curator_notes": "Combined scaffold, hAEC, and Noggin performed best; marker and BBB results do not establish long-term functional connectivity.", "experiment_tracker_id": "M2A-P024-E002", "paper_tracker_id": "M2A-P024", "quantitative": "YES", "statistics_reported": "n=6/group; 4-week endpoint", "topic_id": "M2B-T002", "tracker_id": "M2B-O071"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P024::M2A-P024-E002'
     AND et.evidence_type_name = 'Conductive chitosan/alginate + hAEC + Noggin'
-    AND ot.outcome_type_name = 'Animal-model testing assessed repair potential of hAECs on Noggin-loaded conductive nanochitosan/polypyrrole-alginate scaffold.'
+    AND ot.outcome_type_name = 'In vivo motor, neural-marker, inflammatory, and scar response were assessed after right T10-T11 hemisection.'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O071', observation_id FROM inserted;
@@ -4774,14 +4615,14 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Taylor SJ 2006 M2A-P025-E002 preserves a distinct Rattus norvegicus experiment testing Fibrin/NT-3 scaffold with endpoint/readout: Neuronal fiber growth, glial scar formation, and hindlimb motor function were compared across NT-3 scaffold, control scaffold, and saline groups..',
-    'qualitative',
-    'Taylor SJ 2006 M2A-P025-E002 preserves a distinct Rattus norvegicus experiment testing Fibrin/NT-3 scaffold with endpoint/readout: Neuronal fiber growth, glial scar formation, and hindlimb motor function were compared across NT-3 scaffold, control scaffold, and saline groups..',
-    'M2A-P025-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Delivery of neurotrophin-3 from fibrin enhances neuronal fiber sprouting after spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P025-E002", "paper_tracker_id": "M2A-P025", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T003", "tracker_id": "M2B-O072"}'
+    'Controlled NT-3 release increased early neuronal fiber sprouting and fibrin reduced white-matter-border GFAP, but BBB hindlimb function did not improve relative to controls at 12 weeks and macrophage/microglia density did not differ.',
+    'BBB; Tuj1; GFAP; ED-1',
+    'Controlled NT-3 release increased early neuronal fiber sprouting and fibrin reduced white-matter-border GFAP, but BBB hindlimb function did not improve relative to controls at 12 weeks and macrophage/microglia density did not differ.',
+    'histology-positive/function-negative controlled-release boundary',
+    'Full text Figs. 5-7',
+    'Figs. 5-7',
+    'high',
+    '{"curator_notes": "Functional recovery was not observed despite early sprouting.", "experiment_tracker_id": "M2A-P025-E002", "paper_tracker_id": "M2A-P025", "quantitative": "YES", "statistics_reported": "9-day histology; 12-week BBB", "topic_id": "M2B-T003", "tracker_id": "M2B-O072"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4799,20 +4640,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Chen B 2015 M2A-P026-E002 preserves a distinct Rattus norvegicus experiment testing bFGF hydrogel scaffold with endpoint/readout: Tissue ingrowth, nerve regeneration, and functional recovery were assessed after hydrogel implantation..',
-    'qualitative',
-    'Chen B 2015 M2A-P026-E002 preserves a distinct Rattus norvegicus experiment testing bFGF hydrogel scaffold with endpoint/readout: Tissue ingrowth, nerve regeneration, and functional recovery were assessed after hydrogel implantation..',
-    'M2A-P026-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Repair of spinal cord injury by implantation of bFGF-incorporated HEMA-MOETACL hydrogel in rats. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P026-E002", "paper_tracker_id": "M2A-P026", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T003", "tracker_id": "M2B-O073"}'
+    'Combined bFGF/HEMA-MOETACL reduced cavitation to 2.41 +/- 0.80 mm3 and 1.28% versus 25.00 +/- 3.33 mm3 and 16.00% in lesion controls, increased axon and vessel ingrowth, and improved SSEP/MEP amplitude and latency; hydrogel alone reduced cavitation without clear behavioral recovery.',
+    'mm3; percent; SSEP/MEP',
+    'Combined bFGF/HEMA-MOETACL reduced cavitation to 2.41 +/- 0.80 mm3 and 1.28% versus 25.00 +/- 3.33 mm3 and 16.00% in lesion controls, increased axon and vessel ingrowth, and improved SSEP/MEP amplitude and latency; hydrogel alone reduced cavitation without clear behavioral recovery.',
+    'M2A-P026-E002 preserves distinct material-plus-cargo evidence and cavitation/electrophysiology boundary',
+    'Full text Figs. 3-7',
+    'Figs. 3-7',
+    'high',
+    '{"curator_notes": "Material effect is evident in cavitation; bFGF adds axon/vessel/electrophysiological signal.", "experiment_tracker_id": "M2A-P026-E002", "paper_tracker_id": "M2A-P026", "quantitative": "YES", "statistics_reported": "8-week endpoint; no foreign-body reaction observed", "topic_id": "M2B-T003", "tracker_id": "M2B-O073"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P026::M2A-P026-E002'
     AND et.evidence_type_name = 'bFGF hydrogel'
-    AND ot.outcome_type_name = 'Tissue ingrowth, nerve regeneration, and functional recovery were assessed after hydrogel implantation.'
+    AND ot.outcome_type_name = 'Tissue ingrowth, nerve regeneration, electrophysiology, and functional recovery were assessed after hydrogel implantation.'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O073', observation_id FROM inserted;
@@ -4899,20 +4740,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Li G 2018 M2A-P030-E002 preserves a distinct Canis familiaris experiment testing NT-3/fibroin gelatin scaffold with endpoint/readout: Hindlimb movement, neural conduction, inflammation, new neurons, synaptic structures, vessels, and nerve fiber regeneration were assessed..',
-    'qualitative',
-    'Li G 2018 M2A-P030-E002 preserves a distinct Canis familiaris experiment testing NT-3/fibroin gelatin scaffold with endpoint/readout: Hindlimb movement, neural conduction, inflammation, new neurons, synaptic structures, vessels, and nerve fiber regeneration were assessed..',
+    'Li G 2018 M2A-P030-E002: 14 female Beagles underwent right T10 4 mm hemisection; n=7/group. At 4 weeks NF-GS improved Olby (11.85 +/- 0.64 vs 9.29 +/- 1.48), produced stronger/shorter-latency CMEP, reduced IBA1+ cells at graft (74.11 +/- 5.85 vs 98.41 +/- 15.43 cells/0.09 mm2), and increased NF+ fiber density; GFAP scar density remained similar.',
+    'quantitative',
+    'Li G 2018 M2A-P030-E002: 14 female Beagles underwent right T10 4 mm hemisection; n=7/group. At 4 weeks NF-GS improved Olby (11.85 +/- 0.64 vs 9.29 +/- 1.48), produced stronger/shorter-latency CMEP, reduced IBA1+ cells at graft (74.11 +/- 5.85 vs 98.41 +/- 15.43 cells/0.09 mm2), and increased NF+ fiber density; GFAP scar density remained similar.',
     'M2A-P030-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Neurotrophin-3 released from implant of tissue-engineered fibroin scaffolds inhibits inflammation, enhances nerve fiber regeneration, and improves motor function in canine spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P030-E002", "paper_tracker_id": "M2A-P030", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T003", "tracker_id": "M2B-O077"}'
+    'PMC6055812',
+    'Full text',
+    'high',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; no independent consensus link added.", "experiment_tracker_id": "M2A-P030-E002", "paper_tracker_id": "M2A-P030", "quantitative": "NO", "statistics_reported": "Full-text duplicate/backfill now reconciled to exact values", "topic_id": "M2B-T003", "tracker_id": "M2B-O077"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P030::M2A-P030-E002'
     AND et.evidence_type_name = 'NT-3/fibroin gelatin scaffold'
-    AND ot.outcome_type_name = 'Hindlimb movement, neural conduction, inflammation, new neurons, synaptic structures, vessels, and nerve fiber regeneration were assessed.'
+    AND ot.outcome_type_name = 'Canine locomotion, conduction, immune burden, and tissue regeneration'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O077', observation_id FROM inserted;
@@ -4949,20 +4790,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Thompson RE 2018 M2A-P032-E002 preserves a distinct Rattus norvegicus experiment testing HA/astrocyte ECM hydrogel with endpoint/readout: Glial scar size, axon penetration, and histological response were assessed, with protoplasmic astrocyte ECM showing favorable effects in the abstract..',
-    'qualitative',
-    'Thompson RE 2018 M2A-P032-E002 preserves a distinct Rattus norvegicus experiment testing HA/astrocyte ECM hydrogel with endpoint/readout: Glial scar size, axon penetration, and histological response were assessed, with protoplasmic astrocyte ECM showing favorable effects in the abstract..',
+    'Thompson RE 2018 M2A-P032-E002: P-ECM:HA reduced GFAP area around lesion (9.7 +/- 1.1% vs sham 16 +/- 3.3%), ED1 around lesion (5.5 +/- 0.97% vs sham 9.7 +/- 1.6%), and increased Tuj1 area in lesion (14 +/- 1.0% vs sham 9.2 +/- 1.9%); V2a-cell groups showed persistence and increased neuronal-process staining, without a locomotor/integration endpoint.',
+    'quantitative',
+    'Thompson RE 2018 M2A-P032-E002: P-ECM:HA reduced GFAP area around lesion (9.7 +/- 1.1% vs sham 16 +/- 3.3%), ED1 around lesion (5.5 +/- 0.97% vs sham 9.7 +/- 1.6%), and increased Tuj1 area in lesion (14 +/- 1.0% vs sham 9.2 +/- 1.9%); V2a-cell groups showed persistence and increased neuronal-process staining, without a locomotor/integration endpoint.',
     'M2A-P032-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Effect of hyaluronic acid hydrogels containing astrocyte-derived extracellular matrix and/or V2a interneurons on histologic outcomes following spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P032-E002", "paper_tracker_id": "M2A-P032", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T004", "tracker_id": "M2B-O079"}'
+    'PMC5851469',
+    'Full text',
+    'high',
+    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; fibrous ECM was not equivalent to protoplasmic ECM.", "experiment_tracker_id": "M2A-P032-E002", "paper_tracker_id": "M2A-P032", "quantitative": "NO", "statistics_reported": "Full-text duplicate/backfill now reconciled to exact values", "topic_id": "M2B-T004", "tracker_id": "M2B-O079"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P032::M2A-P032-E002'
     AND et.evidence_type_name = 'HA hydrogel plus astrocyte ECM'
-    AND ot.outcome_type_name = 'Glial scar size, axon penetration, and histological response were assessed, with protoplasmic astrocyte ECM showing favorable effects in the abstract.'
+    AND ot.outcome_type_name = 'Scar, immune response, and neuronal processes'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O079', observation_id FROM inserted;
@@ -4974,20 +4815,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Deng WS 2020 M2A-P033-E002 preserves a distinct Homo sapiens experiment testing Collagen scaffold + hUC-MSC with endpoint/readout: Phase I clinical testing evaluated safety and possible repair after collagen scaffold plus hUC-MSC transplantation..',
-    'qualitative',
-    'Deng WS 2020 M2A-P033-E002 preserves a distinct Homo sapiens experiment testing Collagen scaffold + hUC-MSC with endpoint/readout: Phase I clinical testing evaluated safety and possible repair after collagen scaffold plus hUC-MSC transplantation..',
-    'M2A-P033-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Collagen scaffold combined with human umbilical cord-mesenchymal stem cells transplantation for acute complete spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P033-E002", "paper_tracker_id": "M2A-P033", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T006", "tracker_id": "M2B-O080"}'
+    'In 20 treatment versus 20 no-implant controls followed 12 months, 9 treatment patients improved ASIA A-to-B and 2 A-to-C while no controls improved ASIA grade; treatment also improved MEP/SSEP in subsets, reduced residual urine, and showed MRI/DTI fiber continuity without serious treatment-associated adverse events.',
+    'ASIA; MEP/SSEP; residual urine; DTI',
+    'In 20 treatment versus 20 no-implant controls followed 12 months, 9 treatment patients improved ASIA A-to-B and 2 A-to-C while no controls improved ASIA grade; treatment also improved MEP/SSEP in subsets, reduced residual urine, and showed MRI/DTI fiber continuity without serious treatment-associated adverse events.',
+    'M2A-P033-E002 preserves a controlled clinical boundary with stronger extraction than the earlier abstract row',
+    'Full text Tables 1-4 and Figs. 6-8',
+    'Tables 1-4; Figs. 6-8',
+    'high',
+    '{"curator_notes": "Phase I, non-randomized/limited sample; mild adverse events occurred and causality is uncertain.", "experiment_tracker_id": "M2A-P033-E002", "paper_tracker_id": "M2A-P033", "quantitative": "YES", "statistics_reported": "Forty acute complete cervical SCI patients; treatment n=20, control n=20", "topic_id": "M2B-T006", "tracker_id": "M2B-O080"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P033::M2A-P033-E002'
     AND et.evidence_type_name = 'Animal-to-clinical translation'
-    AND ot.outcome_type_name = 'Phase I clinical testing evaluated safety and possible repair after collagen scaffold plus hUC-MSC transplantation.'
+    AND ot.outcome_type_name = 'Phase I clinical testing evaluated safety, neurological recovery, electrophysiology, and imaging after collagen scaffold plus hUC-MSC transplantation.'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O080', observation_id FROM inserted;
@@ -4999,20 +4840,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Elkhenany H 2021 M2A-P034-E002 preserves a distinct Rat model context experiment testing HA demilune surface-capping scaffold with endpoint/readout: Surface-capping scaffold was applied after subacute SCI and assessed for repair-associated outcomes..',
-    'qualitative',
-    'Elkhenany H 2021 M2A-P034-E002 preserves a distinct Rat model context experiment testing HA demilune surface-capping scaffold with endpoint/readout: Surface-capping scaffold was applied after subacute SCI and assessed for repair-associated outcomes..',
+    'Elkhenany H 2021 M2A-P034-E002: n=3/group female SD rats received one-week post-injury T8 contusion surface caps; fully functionalized HA/PPY/PM-CURC-iNPC preserved beta-III-tubulin fibers and reduced GFAP-negative area/PDGF, but Iba1/ED1 inflammation was unchanged and iNPCs mainly showed astroglial identity.',
+    'quantitative direction',
+    'Elkhenany H 2021 M2A-P034-E002: n=3/group female SD rats received one-week post-injury T8 contusion surface caps; fully functionalized HA/PPY/PM-CURC-iNPC preserved beta-III-tubulin fibers and reduced GFAP-negative area/PDGF, but Iba1/ED1 inflammation was unchanged and iNPCs mainly showed astroglial identity.',
     'M2A-P034-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: A Hyaluronic Acid Demilune Scaffold and Polypyrrole-Coated Fibers Carrying Embedded Human Neural Precursor Cells and Curcumin for Surface Capping of Spinal Cord Injuries. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P034-E002", "paper_tracker_id": "M2A-P034", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T007", "tracker_id": "M2B-O081"}'
+    'PMC8698735',
+    'Full text',
+    'high',
+    '{"curator_notes": "Per-experiment atomization backfill; early endpoint and bundled intervention retained.", "experiment_tracker_id": "M2A-P034-E002", "paper_tracker_id": "M2A-P034", "quantitative": "NO", "statistics_reported": "Full-text duplicate/backfill now reconciled", "topic_id": "M2B-T007", "tracker_id": "M2B-O081"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P034::M2A-P034-E002'
     AND et.evidence_type_name = 'Conductive surface scaffold'
-    AND ot.outcome_type_name = 'Surface-capping scaffold was applied after subacute SCI and assessed for repair-associated outcomes.'
+    AND ot.outcome_type_name = 'Early surface-cap repair and inflammation boundary'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O081', observation_id FROM inserted;
@@ -5024,20 +4865,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Qiu C 2022 M2A-P035-E002 preserves a distinct Rattus norvegicus experiment testing GelMA scaffold + hAEC-derived neural-like cells with endpoint/readout: hAEC-neural-like cell scaffold was implanted into rat full transection SCI to assess neural circuit and hindlimb recovery..',
-    'qualitative',
-    'Qiu C 2022 M2A-P035-E002 preserves a distinct Rattus norvegicus experiment testing GelMA scaffold + hAEC-derived neural-like cells with endpoint/readout: hAEC-neural-like cell scaffold was implanted into rat full transection SCI to assess neural circuit and hindlimb recovery..',
+    'Qiu C 2022 M2A-P035-E002: acute T10 full transection with 2 mm segment removed; at 8 weeks cell-loaded scaffold BBB was 5.667 versus 2.333 empty scaffold and 0.667 transection control, with MEP amplitude 29.57% of normal and robust NF-H projection along channels.',
+    'quantitative',
+    'Qiu C 2022 M2A-P035-E002: acute T10 full transection with 2 mm segment removed; at 8 weeks cell-loaded scaffold BBB was 5.667 versus 2.333 empty scaffold and 0.667 transection control, with MEP amplitude 29.57% of normal and robust NF-H projection along channels.',
     'M2A-P035-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Therapeutic Effect of Biomimetic Scaffold Loaded with Human Amniotic Epithelial Cell-Derived Neural-like Cells for Spinal Cord Injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P035-E002", "paper_tracker_id": "M2A-P035", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T001", "tracker_id": "M2B-O082"}'
+    'PMC9598945',
+    'Full text',
+    'high',
+    '{"curator_notes": "Per-experiment atomization backfill; key BBB analyses n=3 because of postoperative deaths.", "experiment_tracker_id": "M2A-P035-E002", "paper_tracker_id": "M2A-P035", "quantitative": "NO", "statistics_reported": "Full-text duplicate/backfill now reconciled to exact values", "topic_id": "M2B-T001", "tracker_id": "M2B-O082"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P035::M2A-P035-E002'
     AND et.evidence_type_name = '3D-printed GelMA microchannel scaffold'
-    AND ot.outcome_type_name = 'hAEC-neural-like cell scaffold was implanted into rat full transection SCI to assess neural circuit and hindlimb recovery.'
+    AND ot.outcome_type_name = 'Rat full-transection locomotion and conduction'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O082', observation_id FROM inserted;
@@ -5049,20 +4890,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Zhang R 2024 M2A-P036-E002 preserves a distinct Rodent model context experiment testing Sequential release SilMA scaffold with endpoint/readout: In vitro and in vivo outcomes assessed inflammation reduction, neuronal differentiation, axonal regeneration, and spinal cord repair..',
-    'qualitative',
-    'Zhang R 2024 M2A-P036-E002 preserves a distinct Rodent model context experiment testing Sequential release SilMA scaffold with endpoint/readout: In vitro and in vivo outcomes assessed inflammation reduction, neuronal differentiation, axonal regeneration, and spinal cord repair..',
+    'Zhang R 2024 M2A-P036-E002: mice received sham, SCI, SilMA, or 4D-SilMA after 2 mm T10 complete transection (n=6/group). At 8 weeks 4D-SilMA reached BMS 6, increased Arg-1 and Tuj1, reduced iNOS and GFAP, and produced fewer cavities/inflammatory cells; in-vitro LPS/BV2 and NSC assays supported separate Ang-(1-7) and NT-3 effects.',
+    'quantitative',
+    'Zhang R 2024 M2A-P036-E002: mice received sham, SCI, SilMA, or 4D-SilMA after 2 mm T10 complete transection (n=6/group). At 8 weeks 4D-SilMA reached BMS 6, increased Arg-1 and Tuj1, reduced iNOS and GFAP, and produced fewer cavities/inflammatory cells; in-vitro LPS/BV2 and NSC assays supported separate Ang-(1-7) and NT-3 effects.',
     'M2A-P036-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Dual-phase SilMA hydrogel: a dynamic scaffold for sequential drug release and enhanced spinal cord repair via neural differentiation and immunomodulation. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P036-E002", "paper_tracker_id": "M2A-P036", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T003", "tracker_id": "M2B-O083"}'
+    'PMC11617199',
+    'Full text',
+    'high',
+    '{"curator_notes": "In-vivo combined treatment does not isolate each cargo; release was measured in PBS.", "experiment_tracker_id": "M2A-P036-E002", "paper_tracker_id": "M2A-P036", "quantitative": "NO", "statistics_reported": "Full-text duplicate/backfill now reconciled to exact values", "topic_id": "M2B-T003", "tracker_id": "M2B-O083"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P036::M2A-P036-E002'
     AND et.evidence_type_name = 'Sequential-release SilMA scaffold'
-    AND ot.outcome_type_name = 'In vitro and in vivo outcomes assessed inflammation reduction, neuronal differentiation, axonal regeneration, and spinal cord repair.'
+    AND ot.outcome_type_name = 'In-vivo immunomodulation, neural differentiation, tissue repair, and locomotion'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O083', observation_id FROM inserted;
@@ -5124,20 +4965,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Yao S 2024 M2A-P039-E002 preserves a distinct Rat SCI model context experiment testing CNT/GelMA fibers + electrical stimulation with endpoint/readout: In vivo SCI testing assessed aligned conductive scaffold with electrical stimulation for axon regeneration and recovery..',
-    'qualitative',
-    'Yao S 2024 M2A-P039-E002 preserves a distinct Rat SCI model context experiment testing CNT/GelMA fibers + electrical stimulation with endpoint/readout: In vivo SCI testing assessed aligned conductive scaffold with electrical stimulation for axon regeneration and recovery..',
+    'Yao S 2024 M2A-P039-E002: T9 4 mm complete transection rats received GelMA, 2CNT/GelMA, or 2CNT/GelMA+ES; at 8 weeks the combined group had tissue conductivity 1.50 x 10^-3 S/cm versus normal 2.13 x 10^-3, abundant NF/beta-tubulin III fibers, high remyelination, lower Iba1/CS56, and strongest BBB/MEP/pain recovery.',
+    'quantitative direction',
+    'Yao S 2024 M2A-P039-E002: T9 4 mm complete transection rats received GelMA, 2CNT/GelMA, or 2CNT/GelMA+ES; at 8 weeks the combined group had tissue conductivity 1.50 x 10^-3 S/cm versus normal 2.13 x 10^-3, abundant NF/beta-tubulin III fibers, high remyelination, lower Iba1/CS56, and strongest BBB/MEP/pain recovery.',
     'M2A-P039-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Axon-like aligned conductive CNT/GelMA hydrogel fibers combined with electrical stimulation for spinal cord injury recovery. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P039-E002", "paper_tracker_id": "M2A-P039", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T001", "tracker_id": "M2B-O086"}'
+    'PMC10897856',
+    'Full text',
+    'high',
+    '{"curator_notes": "Per-experiment atomization backfill; scaffold and ES effects remain bundled.", "experiment_tracker_id": "M2A-P039-E002", "paper_tracker_id": "M2A-P039", "quantitative": "NO", "statistics_reported": "Full-text duplicate/backfill now reconciled", "topic_id": "M2B-T001", "tracker_id": "M2B-O086"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P039::M2A-P039-E002'
     AND et.evidence_type_name = 'Conductive aligned hydrogel / electrical stimulation'
-    AND ot.outcome_type_name = 'In vivo SCI testing assessed aligned conductive scaffold with electrical stimulation for axon regeneration and recovery.'
+    AND ot.outcome_type_name = 'Rat conduction, axon, remyelination, and function'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O086', observation_id FROM inserted;
@@ -5149,20 +4990,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Mehrotra S 2010 M2A-P040-E002 preserves a distinct Scaffold system / SCI bridge context experiment testing Functionalized agarose channel bridge with endpoint/readout: Protein-release agarose strategy was framed as an alternative to genetically engineered BDNF-secreting cells in templated channel bridges..',
-    'qualitative',
-    'Mehrotra S 2010 M2A-P040-E002 preserves a distinct Scaffold system / SCI bridge context experiment testing Functionalized agarose channel bridge with endpoint/readout: Protein-release agarose strategy was framed as an alternative to genetically engineered BDNF-secreting cells in templated channel bridges..',
+    'Mehrotra S 2010 M2A-P040-E002: pH-triggered PEG/PAA/protein LbL films over agarose released active model protein for more than four weeks in vitro; no SCI animal was tested.',
+    'quantitative direction',
+    'Mehrotra S 2010 M2A-P040-E002: pH-triggered PEG/PAA/protein LbL films over agarose released active model protein for more than four weeks in vitro; no SCI animal was tested.',
     'M2A-P040-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Time Controlled Protein Release from Layer-by-Layer Assembled Multilayer Functionalized Agarose Hydrogels. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P040-E002", "paper_tracker_id": "M2A-P040", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T003", "tracker_id": "M2B-O087"}'
+    'PMC2830720',
+    'Full text',
+    'high',
+    '{"curator_notes": "Per-experiment atomization backfill; methods-only evidence.", "experiment_tracker_id": "M2A-P040-E002", "paper_tracker_id": "M2A-P040", "quantitative": "NO", "statistics_reported": "Full-text duplicate/backfill now reconciled", "topic_id": "M2B-T003", "tracker_id": "M2B-O087"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P040::M2A-P040-E002'
     AND et.evidence_type_name = 'Functionalized agarose hydrogel'
-    AND ot.outcome_type_name = 'Protein-release agarose strategy was framed as an alternative to genetically engineered BDNF-secreting cells in templated channel bridges.'
+    AND ot.outcome_type_name = 'Protein-release agarose strategy'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O087', observation_id FROM inserted;
@@ -5174,20 +5015,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Lai BQ 2014 M2A-P041-E002 preserves a distinct Rattus norvegicus experiment testing Tissue-engineered gelatin sponge neural scaffold with endpoint/readout: Graft effects on myelination, NSC differentiation, axon regeneration, and functional recovery were assessed after complete transection..',
-    'qualitative',
-    'Lai BQ 2014 M2A-P041-E002 preserves a distinct Rattus norvegicus experiment testing Tissue-engineered gelatin sponge neural scaffold with endpoint/readout: Graft effects on myelination, NSC differentiation, axon regeneration, and functional recovery were assessed after complete transection..',
+    'Lai BQ 2014 M2A-P041-E002: after T10 2 mm complete transection, NT-3-SCs+TrkC-NSCs in gelatin sponge survived to 8 weeks and MBP+ myelin ensheathed GFP-positive graft-derived and host NF+ axons; dual-engineered in-vitro cultures showed APC+ oligodendrocytic differentiation 12.98 +/- 5.33%.',
+    'quantitative',
+    'Lai BQ 2014 M2A-P041-E002: after T10 2 mm complete transection, NT-3-SCs+TrkC-NSCs in gelatin sponge survived to 8 weeks and MBP+ myelin ensheathed GFP-positive graft-derived and host NF+ axons; dual-engineered in-vitro cultures showed APC+ oligodendrocytic differentiation 12.98 +/- 5.33%.',
     'M2A-P041-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Graft of a tissue-engineered neural scaffold serves as a promising strategy to restore myelination after rat spinal cord transection. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P041-E002", "paper_tracker_id": "M2A-P041", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T002", "tracker_id": "M2B-O088"}'
+    'PMC3992004',
+    'Full text',
+    'high',
+    '{"curator_notes": "Per-experiment atomization backfill; no primary locomotor efficacy endpoint.", "experiment_tracker_id": "M2A-P041-E002", "paper_tracker_id": "M2A-P041", "quantitative": "NO", "statistics_reported": "Full-text duplicate/backfill now reconciled", "topic_id": "M2B-T002", "tracker_id": "M2B-O088"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P041::M2A-P041-E002'
     AND et.evidence_type_name = 'Gelatin scaffold plus engineered cells'
-    AND ot.outcome_type_name = 'Graft effects on myelination, NSC differentiation, axon regeneration, and functional recovery were assessed after complete transection.'
+    AND ot.outcome_type_name = 'Myelination and graft-cell survival'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O088', observation_id FROM inserted;
@@ -5199,20 +5040,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Sun Y 2020 M2A-P042-E002 preserves a distinct Rat SCI model context experiment testing 3D-bioprinted collagen/silk scaffold + NSCs with endpoint/readout: In vivo testing assessed nerve regeneration and functional repair after scaffold/cell implantation..',
-    'qualitative',
-    'Sun Y 2020 M2A-P042-E002 preserves a distinct Rat SCI model context experiment testing 3D-bioprinted collagen/silk scaffold + NSCs with endpoint/readout: In vivo testing assessed nerve regeneration and functional repair after scaffold/cell implantation..',
+    'Sun Y 2020 M2A-P042-E002: in rats (n=10/group), 3D-CF plus NSCs increased NF-H and reduced GFAP relative to SCI and scaffold-only groups and improved reported limb function; NSC tracing and objective neurological assessment were not completed.',
+    'quantitative direction',
+    'Sun Y 2020 M2A-P042-E002: in rats (n=10/group), 3D-CF plus NSCs increased NF-H and reduced GFAP relative to SCI and scaffold-only groups and improved reported limb function; NSC tracing and objective neurological assessment were not completed.',
     'M2A-P042-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Three-dimensional bioprinting collagen/silk fibroin scaffold combined with neural stem cells promotes nerve regeneration after spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P042-E002", "paper_tracker_id": "M2A-P042", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T001", "tracker_id": "M2B-O089"}'
+    'PMC6990792',
+    'Full text',
+    'high',
+    '{"curator_notes": "Per-experiment atomization backfill; architecture and NSC effects remain bundled.", "experiment_tracker_id": "M2A-P042-E002", "paper_tracker_id": "M2A-P042", "quantitative": "NO", "statistics_reported": "Full-text duplicate/backfill now reconciled", "topic_id": "M2B-T001", "tracker_id": "M2B-O089"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P042::M2A-P042-E002'
     AND et.evidence_type_name = '3D-bioprinted collagen/silk scaffold'
-    AND ot.outcome_type_name = 'In vivo testing assessed nerve regeneration and functional repair after scaffold/cell implantation.'
+    AND ot.outcome_type_name = 'Nerve regeneration and scar response'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O089', observation_id FROM inserted;
@@ -5224,20 +5065,20 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Führmann T 2016 M2A-P043-E002 preserves a distinct Rattus norvegicus experiment testing OEC-seeded collagen scaffold with endpoint/readout: Functional improvement was evaluated against axon regeneration through the scaffold, with the abstract reporting lack of correlation..',
+    'Führmann T 2016 M2A-P043-E002: NF+ axons followed OEC and host-cell trajectories but only trended above non-seeded/untreated lesions; seeded and non-seeded scaffolds both improved skilled forelimb function, and function was not correlated with scaffold axon extent.',
     'qualitative',
-    'Führmann T 2016 M2A-P043-E002 preserves a distinct Rattus norvegicus experiment testing OEC-seeded collagen scaffold with endpoint/readout: Functional improvement was evaluated against axon regeneration through the scaffold, with the abstract reporting lack of correlation..',
+    'Führmann T 2016 M2A-P043-E002: NF+ axons followed OEC and host-cell trajectories but only trended above non-seeded/untreated lesions; seeded and non-seeded scaffolds both improved skilled forelimb function, and function was not correlated with scaffold axon extent.',
     'M2A-P043-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Functional recovery not correlated with axon regeneration through olfactory ensheathing cell-seeded scaffolds in a model of acute spinal cord injury. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M2A-P043-E002", "paper_tracker_id": "M2A-P043", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M2B-T008", "tracker_id": "M2B-O090"}'
+    'PMC6170848',
+    'Full text',
+    'high',
+    '{"curator_notes": "Per-experiment atomization backfill; direct negative-mechanism boundary.", "experiment_tracker_id": "M2A-P043-E002", "paper_tracker_id": "M2A-P043", "quantitative": "NO", "statistics_reported": "Full-text duplicate/backfill now reconciled", "topic_id": "M2B-T008", "tracker_id": "M2B-O090"}'
   FROM _m2_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
   WHERE e.tracker_id = 'M2A-P043::M2A-P043-E002'
     AND et.evidence_type_name = 'OEC-seeded scaffold'
-    AND ot.outcome_type_name = 'Functional improvement was evaluated against axon regeneration through the scaffold, with the abstract reporting lack of correlation.'
+    AND ot.outcome_type_name = 'Functional recovery versus scaffold axon regeneration'
   RETURNING observation_id
 )
 INSERT INTO _m2_observation_map (tracker_id, observation_id) SELECT 'M2B-O090', observation_id FROM inserted;
@@ -5264,12 +5105,12 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'NeuroRegen scaffold plus hUCB-MSC implantation after scar resection is safe and potentially beneficial in chronic complete human SCI.',
-    'conclusion',
-    'medium',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "\"Potentially beneficial\" should be kept cautious until full clinical endpoints are extracted.", "source_paper_tracker_id": "M2A-P009", "topic_id": "M2B-T006", "tracker_id": "M2B-C002"}'
+    'NeuroRegen scaffold plus hUCB-MSC implantation after scar resection was safe in this small chronic complete human cohort and was associated with partial sensory/electrophysiological gains, but not ASIA grade improvement.',
+    'conclusion / boundary condition',
+    'high',
+    'Full text Figs. 1-2 and Tables 1-2',
+    'high',
+    '{"curator_notes": "Uncontrolled cohort with concurrent rehabilitation; no causal efficacy claim.", "source_paper_tracker_id": "M2A-P009", "topic_id": "M2B-T006", "tracker_id": "M2B-C002"}'
   FROM _m2_paper_map p
   WHERE p.tracker_id = 'M2A-P009'
   RETURNING claim_id
@@ -5298,12 +5139,12 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Aligned hydrogel tubes provide physical guidance that can integrate with SCI lesions, reduce scarring, guide axons, support some myelination, and improve function.',
+    'Aligned PEG hydrogel tubes provide modular physical guidance, transiently limit scar formation, support axon growth and partial myelination, and improve locomotion in a mouse lateral-hemisection model; tube-specific superiority over a PEG bridge was not established.',
     'conclusion',
-    'medium',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Scaffold-only comparator to gelfoam makes this high-value for architecture topic.", "source_paper_tracker_id": "M2A-P005", "topic_id": "M2B-T001", "tracker_id": "M2B-C004"}'
+    'high',
+    'Full text Figs. 2-7',
+    'high',
+    '{"curator_notes": "Scaffold-only gelfoam comparator and tube-versus-bridge boundary are now explicit.", "source_paper_tracker_id": "M2A-P005", "topic_id": "M2B-T001", "tracker_id": "M2B-C004"}'
   FROM _m2_paper_map p
   WHERE p.tracker_id = 'M2A-P005'
   RETURNING claim_id
@@ -5315,12 +5156,12 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Conductive aligned GelMA/CNT hydrogel fibers can combine regenerative scaffold guidance with electrical stimulation.',
-    'implication',
-    'medium',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Needs full-text extraction for in vivo effect sizes and ES protocol.", "source_paper_tracker_id": "M2A-P039", "topic_id": "M2B-T001", "tracker_id": "M2B-C005"}'
+    'Conductive aligned GelMA/CNT hydrogel fibers can combine regenerative scaffold guidance with electrical stimulation: in T9 transection rats the combined treatment improved inflammatory markers, axon density/remyelination, tissue conductivity, BBB, pain response, and MEP, but scaffold and stimulation contributions remain bundled.',
+    'conclusion / implication',
+    'high',
+    'Full text Figs. 7-9',
+    'high',
+    '{"curator_notes": "ES protocol was 2 V for 1 h at 1, 4, and 7 days in vitro; in-vivo functional effects were measured at 8 weeks.", "source_paper_tracker_id": "M2A-P039", "topic_id": "M2B-T001", "tracker_id": "M2B-C005"}'
   FROM _m2_paper_map p
   WHERE p.tracker_id = 'M2A-P039'
   RETURNING claim_id
@@ -5349,12 +5190,12 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Decellularized peripheral nerve matrix is a clinically oriented alternative to Matrigel for Schwann-cell transplantation after SCI.',
-    'implication',
-    'medium',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Histology benefit stronger than locomotor superiority.", "source_paper_tracker_id": "M2A-P016", "topic_id": "M2B-T002", "tracker_id": "M2B-C007"}'
+    'Injectable decellularized peripheral nerve matrix is a clinically oriented Schwann-cell carrier that improves graft survival and myelinated-axon counts relative to Matrigel, without durable BBB superiority.',
+    'implication / boundary condition',
+    'high',
+    'Full text Figs. 3-8',
+    'high',
+    '{"curator_notes": "Histology benefit is stronger than locomotor superiority; iPN did not aggravate early immune infiltration.", "source_paper_tracker_id": "M2A-P016", "topic_id": "M2B-T002", "tracker_id": "M2B-C007"}'
   FROM _m2_paper_map p
   WHERE p.tracker_id = 'M2A-P016'
   RETURNING claim_id
@@ -5366,12 +5207,12 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Scaffold-delivered NT-3 can improve axonal sprouting and scar histology without necessarily improving motor function.',
+    'Scaffold-delivered NT-3 can improve early axonal sprouting and reduce white-matter-border astroglial scar without improving motor function at 12 weeks in this ablation model.',
     'boundary condition',
     'high',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Important histology-function dissociation.", "source_paper_tracker_id": "M2A-P025", "topic_id": "M2B-T003", "tracker_id": "M2B-C008"}'
+    'Full text Figs. 1-7',
+    'high',
+    '{"curator_notes": "Important histology-function dissociation; no treatment difference in macrophage/microglia density.", "source_paper_tracker_id": "M2A-P025", "topic_id": "M2B-T003", "tracker_id": "M2B-C008"}'
   FROM _m2_paper_map p
   WHERE p.tracker_id = 'M2A-P025'
   RETURNING claim_id
@@ -5383,12 +5224,12 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Sequential release scaffolds are designed to match SCI temporal biology by reducing early inflammation and promoting later neuronal differentiation/regeneration.',
-    'mechanistic',
-    'medium',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Plausible design claim; full-text timing needed.", "source_paper_tracker_id": "M2A-P036", "topic_id": "M2B-T003", "tracker_id": "M2B-C009"}'
+    'Sequential release scaffolds can align an early anti-inflammatory cue with a later neurogenic cue: Ang-(1-7) was released rapidly (>40% by day 3; nearly complete by day 7), whereas NT-3 release persisted through days 28-56, and the combined scaffold improved inflammation, neuronal markers, tissue structure, and BMS after mouse complete transection.',
+    'mechanistic / conclusion',
+    'high',
+    'Full text, release assay and Figs. 3-6',
+    'high',
+    '{"curator_notes": "Timing is supported in vitro; combined in-vivo cargo attribution remains unresolved.", "source_paper_tracker_id": "M2A-P036", "topic_id": "M2B-T003", "tracker_id": "M2B-C009"}'
   FROM _m2_paper_map p
   WHERE p.tracker_id = 'M2A-P036'
   RETURNING claim_id
@@ -5400,12 +5241,12 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Injectable ECM-derived hydrogels can integrate into lesions and support ingrowth, but ECM source and host macrophage/material response are important constraints.',
+    'Injectable ECM-derived hydrogels can integrate into acute hemisection lesions and support axon and vessel ingrowth, but rapid degradation, cyst formation, macrophage infiltration, and poor cell survival constrain durable repair; spinal-cord and urinary-bladder ECM performed similarly.',
     'boundary condition',
-    'medium',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Useful for avoiding \"ECM is uniformly pro-regenerative\" overclaim.", "source_paper_tracker_id": "M2A-P014", "topic_id": "M2B-T004", "tracker_id": "M2B-C010"}'
+    'high',
+    'Full text Figs. 2-7',
+    'high',
+    '{"curator_notes": "Avoids treating ECM source as uniformly pro-regenerative or interchangeable with durable bridges.", "source_paper_tracker_id": "M2A-P014", "topic_id": "M2B-T004", "tracker_id": "M2B-C010"}'
   FROM _m2_paper_map p
   WHERE p.tracker_id = 'M2A-P014'
   RETURNING claim_id
@@ -5434,12 +5275,12 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Large-animal chronic NeuroRegen scaffold plus hUC-MSC implantation after scar removal supports translational feasibility of chronic cavity/scar scaffold repair.',
-    'implication',
-    'medium',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Needs full text for functional magnitude and scar-removal details.", "source_paper_tracker_id": "M2A-P015", "topic_id": "M2B-T005", "tracker_id": "M2B-C012"}'
+    'In a controlled chronic canine transection model, scar removal plus NeuroRegen/hUC-MSC implantation improved locomotor score and lesion-site neurogenesis, remyelination, synapse signal, and secondary CSPG burden relative to controls, but the intervention is multi-component.',
+    'conclusion / implication',
+    'high',
+    'Full text Figs. 1-7',
+    'high',
+    '{"curator_notes": "n=6/group; human MSC persistence was not demonstrated; rehabilitation and scar removal remain confounders.", "source_paper_tracker_id": "M2A-P015", "topic_id": "M2B-T005", "tracker_id": "M2B-C012"}'
   FROM _m2_paper_map p
   WHERE p.tracker_id = 'M2A-P015'
   RETURNING claim_id
@@ -5451,14 +5292,14 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Surface-applied scaffold patches can modulate the post-SCI inflammatory environment without requiring deep lesion-filling implantation.',
-    'implication',
-    'medium',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Distinct intervention geometry.", "source_paper_tracker_id": "M2A-P038", "topic_id": "M2B-T007", "tracker_id": "M2B-C013"}'
+    'Surface-applied HA demilune caps can combine conductive fibers, hydrogel cell support, and curcumin to preserve early neuronal fibers and reduce fibrotic/scar-associated signals after subacute contusion, but the one-week n=3 study did not reduce Iba1/ED1 inflammation or establish function.',
+    'implication / boundary condition',
+    'high',
+    'Full text Figs. 5-9',
+    'high',
+    '{"curator_notes": "Distinct intervention geometry; early endpoint and bundled components limit efficacy attribution.", "source_paper_tracker_id": "M2A-P034", "topic_id": "M2B-T007", "tracker_id": "M2B-C013"}'
   FROM _m2_paper_map p
-  WHERE p.tracker_id = 'M2A-P038'
+  WHERE p.tracker_id = 'M2A-P034'
   RETURNING claim_id
 )
 INSERT INTO _m2_claim_map (tracker_id, claim_id) SELECT 'M2B-C013', claim_id FROM inserted;
@@ -5468,12 +5309,12 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Functional improvement after scaffold/cell treatment should not be assumed to reflect axons regenerating through the scaffold.',
+    'Functional improvement after scaffold/cell treatment should not be assumed to reflect axons regenerating through the scaffold: seeded and non-seeded longitudinal collagen scaffolds both improved skilled forelimb function despite only a trend in axon counts and no correlation between function and scaffold axon extent.',
     'boundary condition',
     'high',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Directly based on negative correlation claim.", "source_paper_tracker_id": "M2A-P043", "topic_id": "M2B-T008", "tracker_id": "M2B-C014"}'
+    'Full text source Results',
+    'high',
+    '{"curator_notes": "Direct mechanistic boundary from the acute cervical OEC-seeded scaffold experiment.", "source_paper_tracker_id": "M2A-P043", "topic_id": "M2B-T008", "tracker_id": "M2B-C014"}'
   FROM _m2_paper_map p
   WHERE p.tracker_id = 'M2A-P043'
   RETURNING claim_id
@@ -5485,12 +5326,12 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Acute complete human NeuroRegen scaffold plus MSC implantation is feasible to test in carefully diagnosed complete SCI, but n = 2 is not efficacy-grade evidence.',
+    'Acute complete human NeuroRegen scaffold plus MSC implantation was feasible in two strictly diagnosed patients and coincided with ASIA A-to-C, sensory/motor, and SSEP/MEP recovery, but n = 2 and the uncontrolled design preclude efficacy attribution.',
     'boundary condition',
     'high',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Keeps acute clinical signal appropriately constrained.", "source_paper_tracker_id": "M2A-P017", "topic_id": "M2B-T006", "tracker_id": "M2B-C015"}'
+    'Full text Figs. 1-5',
+    'high',
+    '{"curator_notes": "Keeps the acute clinical signal appropriately constrained.", "source_paper_tracker_id": "M2A-P017", "topic_id": "M2B-T006", "tracker_id": "M2B-C015"}'
   FROM _m2_paper_map p
   WHERE p.tracker_id = 'M2A-P017'
   RETURNING claim_id
@@ -5502,12 +5343,12 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Collagen scaffold plus hUC-MSC repair has translational continuity across rodent, canine, and phase I human contexts.',
-    'implication',
-    'medium',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Strong as translational path, weaker as efficacy proof.", "source_paper_tracker_id": "M2A-P033", "topic_id": "M2B-T006", "tracker_id": "M2B-C016"}'
+    'Collagen scaffold plus hUC-MSC repair shows a continuous preclinical-to-clinical signal across rat, canine, and acute complete human contexts, including control-separated clinical neurological gains, but remains a bundled multi-component strategy.',
+    'implication / translational boundary',
+    'high',
+    'Full text Figs. 1-8 and Tables 1-4',
+    'high',
+    '{"curator_notes": "Strong translational path, weaker as isolated scaffold or cell efficacy proof.", "source_paper_tracker_id": "M2A-P033", "topic_id": "M2B-T006", "tracker_id": "M2B-C016"}'
   FROM _m2_paper_map p
   WHERE p.tracker_id = 'M2A-P033'
   RETURNING claim_id
@@ -5519,12 +5360,12 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Biomimetic 3D-printed spinal cord scaffolds can impose lesion-scale architecture that supports host-graft axonal relay formation.',
+    'Biomimetic 3D-printed PEGDA-GelMA scaffolds can impose lesion-scale architecture that supports host-graft axonal relay formation and functional recovery when loaded with NPCs; empty scaffolds support host axon entry but not distal host-axon extension or MEP recovery.',
     'conclusion',
-    'medium',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Confounded by NPC graft but central to architecture topic.", "source_paper_tracker_id": "M2A-P004", "topic_id": "M2B-T001", "tracker_id": "M2B-C017"}'
+    'high',
+    'Full text Figs. 1-4',
+    'high',
+    '{"curator_notes": "NPC and scaffold contributions are separated by empty-scaffold, NPC-only, and retransection controls.", "source_paper_tracker_id": "M2A-P004", "topic_id": "M2B-T001", "tracker_id": "M2B-C017"}'
   FROM _m2_paper_map p
   WHERE p.tracker_id = 'M2A-P004'
   RETURNING claim_id
@@ -5570,12 +5411,12 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Microchannel GelMA scaffolds can pair geometry with neural-like cell placement to improve repair after complete transection.',
-    'conclusion',
-    'medium',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Cell and architecture effects not separable.", "source_paper_tracker_id": "M2A-P035", "topic_id": "M2B-T001", "tracker_id": "M2B-C020"}'
+    'Microchannel GelMA scaffolds can pair geometry with hAEC-derived neural-like cell placement to support partial repair after complete transection, with 8-week BBB 5.667 versus 2.333 for empty scaffold and 0.667 for transection control and MEP 29.57% of normal.',
+    'conclusion / boundary condition',
+    'high',
+    'Full text Figs. 5-6',
+    'high',
+    '{"curator_notes": "Architecture and cell effects remain bundled; BBB analyses were small and mortality-limited, and cells were not shown to be mature neurons.", "source_paper_tracker_id": "M2A-P035", "topic_id": "M2B-T001", "tracker_id": "M2B-C020"}'
   FROM _m2_paper_map p
   WHERE p.tracker_id = 'M2A-P035'
   RETURNING claim_id
@@ -5672,12 +5513,12 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Growth-factor-loaded hydrogels can support tissue ingrowth and functional recovery after complete transection, but material and trophic effects are inseparable.',
-    'conclusion',
-    'medium',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Applies to bFGF/HEMA-MOETACL system.", "source_paper_tracker_id": "M2A-P026", "topic_id": "M2B-T003", "tracker_id": "M2B-C026"}'
+    'Delayed bFGF/HEMA-MOETACL implantation can reduce cavitation, support axon and vessel ingrowth, and improve SSEP/MEP recovery after complete transection, while hydrogel-only effects show that material and trophic contributions are partly separable but not fully independent.',
+    'conclusion / boundary condition',
+    'high',
+    'Full text Figs. 1-7',
+    'high',
+    '{"curator_notes": "Combined group had the strongest axon, vessel, and electrophysiology outcomes; hydrogel alone reduced cavitation without clear behavioral recovery.", "source_paper_tracker_id": "M2A-P026", "topic_id": "M2B-T003", "tracker_id": "M2B-C026"}'
   FROM _m2_paper_map p
   WHERE p.tracker_id = 'M2A-P026'
   RETURNING claim_id
@@ -5706,12 +5547,12 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Protein-release scaffold methods matter because they can replace cell-based trophic delivery in channel-bridge strategies.',
-    'implication',
-    'medium',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Methods anchor, not efficacy anchor.", "source_paper_tracker_id": "M2A-P040", "topic_id": "M2B-T003", "tracker_id": "M2B-C028"}'
+    'Layer-by-layer PEG/PAA/protein films over agarose can provide active, pH-triggered protein release for more than four weeks in vitro, supporting a non-cell-based trophic-delivery method for future channel bridges but not proving SCI efficacy.',
+    'implication / methods boundary',
+    'high',
+    'Full text release experiments',
+    'high',
+    '{"curator_notes": "Lysozyme model protein; BDNF was proposed for subsequent scaffold testing.", "source_paper_tracker_id": "M2A-P040", "topic_id": "M2B-T003", "tracker_id": "M2B-C028"}'
   FROM _m2_paper_map p
   WHERE p.tracker_id = 'M2A-P040'
   RETURNING claim_id
@@ -5723,12 +5564,12 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'HA hydrogels can be made more or less permissive by the biological identity of incorporated ECM.',
-    'conclusion',
-    'medium',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "Protoplasmic versus fibrous astrocyte ECM distinction.", "source_paper_tracker_id": "M2A-P032", "topic_id": "M2B-T004", "tracker_id": "M2B-C029"}'
+    'HA hydrogel permissiveness is conditional on astrocyte-ECM identity: protoplasmic ECM reduced GFAP, ED1, and CSPG burden and increased Tuj1 penetration, whereas fibrous ECM did not reproduce the benefit and could negate HA-associated CSPG reduction; V2a aggregates increased neuronal-process staining but were not tested for functional integration.',
+    'conclusion / boundary condition',
+    'high',
+    'Full text Figs. 3-7',
+    'high',
+    '{"curator_notes": "No locomotor endpoint; this is a histology and cell-persistence study.", "source_paper_tracker_id": "M2A-P032", "topic_id": "M2B-T004", "tracker_id": "M2B-C029"}'
   FROM _m2_paper_map p
   WHERE p.tracker_id = 'M2A-P032'
   RETURNING claim_id
@@ -5808,12 +5649,12 @@ WITH inserted AS (
     paper_id, claim_text, claim_type, confidence_level, source_section, extraction_confidence, notes
   )
   SELECT p.paper_id,
-    'Surface-capping scaffolds are a distinct repair geometry from implanted lesion bridges and may be useful for modulating exposed injury environments.',
-    'implication',
-    'medium',
-    'Abstract',
-    'medium',
-    '{"curator_notes": "HA demilune scaffold anchor.", "source_paper_tracker_id": "M2A-P034", "topic_id": "M2B-T007", "tracker_id": "M2B-C034"}'
+    'Surface-capping scaffolds are a distinct repair geometry from implanted lesion bridges and can preserve early neuronal fibers while reducing scar/fibrotic signals in a bundled HA/PPY/PM-CURC-iNPC strategy.',
+    'implication / boundary condition',
+    'high',
+    'Full text Figs. 5-9',
+    'high',
+    '{"curator_notes": "HA demilune cap; one-week n=3 study did not reduce Iba1/ED1 inflammation or establish function.", "source_paper_tracker_id": "M2A-P034", "topic_id": "M2B-T007", "tracker_id": "M2B-C034"}'
   FROM _m2_paper_map p
   WHERE p.tracker_id = 'M2A-P034'
   RETURNING claim_id
@@ -5865,7 +5706,7 @@ WHERE c.tracker_id = 'M2B-C001';
 INSERT INTO EvidenceLink (claim_id, observation_id, link_type, notes)
 SELECT c.claim_id, o.observation_id,
   'supports',
-  '{"notes": "Abstract-level clinical support", "strength": "medium", "tracker_id": "M2B-L002"}'
+  '{"notes": "Full-text chronic human clinical support with no ASIA-grade improvement", "strength": "high", "tracker_id": "M2B-L002"}'
 FROM _m2_claim_map c
 JOIN _m2_observation_map o ON o.tracker_id = 'M2B-O002'
 WHERE c.tracker_id = 'M2B-C002';
@@ -5905,7 +5746,7 @@ WHERE c.tracker_id = 'M2B-C006';
 INSERT INTO EvidenceLink (claim_id, observation_id, link_type, notes)
 SELECT c.claim_id, o.observation_id,
   'supports',
-  '{"notes": "Histological superiority vs Matrigel; BBB similar", "strength": "medium", "tracker_id": "M2B-L007"}'
+  '{"notes": "Full-text histological superiority vs Matrigel; BBB similar", "strength": "high", "tracker_id": "M2B-L007"}'
 FROM _m2_claim_map c
 JOIN _m2_observation_map o ON o.tracker_id = 'M2B-O010'
 WHERE c.tracker_id = 'M2B-C007';
@@ -5945,7 +5786,7 @@ WHERE c.tracker_id = 'M2B-C011';
 INSERT INTO EvidenceLink (claim_id, observation_id, link_type, notes)
 SELECT c.claim_id, o.observation_id,
   'supports',
-  '{"notes": "Canine chronic scaffold/cell evidence", "strength": "medium", "tracker_id": "M2B-L012"}'
+  '{"notes": "Full-text canine chronic scaffold/cell evidence", "strength": "high", "tracker_id": "M2B-L012"}'
 FROM _m2_claim_map c
 JOIN _m2_observation_map o ON o.tracker_id = 'M2B-O018'
 WHERE c.tracker_id = 'M2B-C012';
@@ -5985,7 +5826,7 @@ WHERE c.tracker_id = 'M2B-C006';
 INSERT INTO EvidenceLink (claim_id, observation_id, link_type, notes)
 SELECT c.claim_id, o.observation_id,
   'supports',
-  '{"notes": "n = 2 clinical boundary", "strength": "high", "tracker_id": "M2B-L017"}'
+  '{"notes": "Full-text n = 2 clinical boundary", "strength": "high", "tracker_id": "M2B-L017"}'
 FROM _m2_claim_map c
 JOIN _m2_observation_map o ON o.tracker_id = 'M2B-O022'
 WHERE c.tracker_id = 'M2B-C015';
@@ -5993,7 +5834,7 @@ WHERE c.tracker_id = 'M2B-C015';
 INSERT INTO EvidenceLink (claim_id, observation_id, link_type, notes)
 SELECT c.claim_id, o.observation_id,
   'supports',
-  '{"notes": "Multi-species translational continuity", "strength": "medium", "tracker_id": "M2B-L018"}'
+  '{"notes": "Full-text multi-species translational continuity", "strength": "high", "tracker_id": "M2B-L018"}'
 FROM _m2_claim_map c
 JOIN _m2_observation_map o ON o.tracker_id = 'M2B-O023'
 WHERE c.tracker_id = 'M2B-C016';
@@ -6081,7 +5922,7 @@ WHERE c.tracker_id = 'M2B-C025';
 INSERT INTO EvidenceLink (claim_id, observation_id, link_type, notes)
 SELECT c.claim_id, o.observation_id,
   'supports',
-  '{"notes": "bFGF hydrogel complete transection observation", "strength": "medium", "tracker_id": "M2B-L029"}'
+  '{"notes": "Full-text bFGF hydrogel complete transection observation", "strength": "high", "tracker_id": "M2B-L029"}'
 FROM _m2_claim_map c
 JOIN _m2_observation_map o ON o.tracker_id = 'M2B-O038'
 WHERE c.tracker_id = 'M2B-C026';
@@ -6748,8 +6589,8 @@ BEGIN
   SELECT COUNT(*) INTO consensus_count FROM _m2_consensus_map;
   SELECT COUNT(*) INTO consensus_observation_count FROM Consensus_Observation;
   IF paper_count <> 51 THEN RAISE EXCEPTION 'Expected 51 papers, found %', paper_count; END IF;
-  IF experiment_count <> 86 THEN RAISE EXCEPTION 'Unexpected experiment count %', experiment_count; END IF;
-  IF observation_count <> 50 THEN RAISE EXCEPTION 'Expected 50 observations, found %', observation_count; END IF;
+  IF experiment_count <> 78 THEN RAISE EXCEPTION 'Unexpected experiment count %', experiment_count; END IF;
+  IF observation_count <> 90 THEN RAISE EXCEPTION 'Expected 90 observations, found %', observation_count; END IF;
   IF claim_count <> 36 THEN RAISE EXCEPTION 'Expected 36 claims, found %', claim_count; END IF;
   IF link_count <> 56 THEN RAISE EXCEPTION 'Expected 56 evidence links, found %', link_count; END IF;
   IF consensus_count <> 8 THEN RAISE EXCEPTION 'Expected 8 consensus rows, found %', consensus_count; END IF;

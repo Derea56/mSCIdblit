@@ -196,7 +196,7 @@ WITH inserted AS (
     'Alpha 1-antitrypsin reduces inflammation and enhances mouse pancreatic islet transplant survival', 'Koulmanda M', 2012,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Mouse graft survival anchor", "module": "Module 7B", "tracker_id": "M7A-P016"}'
+    NULL, '{"curator_notes": "PMCID PMC3458386; DOI 10.1073/pnas.1018366109", "module": "Module 7B", "tracker_id": "M7A-P016"}'
   )
   RETURNING paper_id
 )
@@ -208,7 +208,7 @@ WITH inserted AS (
     'Alpha-1 antitrypsin suppresses macrophage activation and promotes islet graft survival after intrahepatic islet transplantation', 'Gou W', 2021,
     NULL, NULL, NULL,
     NULL, NULL, NULL,
-    NULL, '{"curator_notes": "Macrophage-host response link", "module": "Module 7B", "tracker_id": "M7A-P017"}'
+    NULL, '{"curator_notes": "PMID 33047509; PMCID PMC8082666; DOI 10.1111/ajt.16342", "module": "Module 7B", "tracker_id": "M7A-P017"}'
   )
   RETURNING paper_id
 )
@@ -1075,7 +1075,7 @@ WITH inserted AS (
     'Abstract',
     'Tracker experiment M7A-P001-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O001"], "source_experiment_tracker_id": "M7A-P001-E001", "source_paper_tracker_id": "M7A-P001", "tracker_key": "M7A-P001::M7A-P001-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O001"], "sex": null, "source_experiment_tracker_id": "M7A-P001-E001", "source_paper_tracker_id": "M7A-P001", "species": null, "strain": null, "tracker_key": "M7A-P001::M7A-P001-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P001'
@@ -1092,7 +1092,7 @@ WITH inserted AS (
     'Abstract',
     'Tracker experiment M7A-P002-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O002"], "source_experiment_tracker_id": "M7A-P002-E001", "source_paper_tracker_id": "M7A-P002", "tracker_key": "M7A-P002::M7A-P002-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O002"], "sex": null, "source_experiment_tracker_id": "M7A-P002-E001", "source_paper_tracker_id": "M7A-P002", "species": null, "strain": null, "tracker_key": "M7A-P002::M7A-P002-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P002'
@@ -1109,7 +1109,7 @@ WITH inserted AS (
     'Abstract',
     'Tracker experiment M7A-P003-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O003"], "source_experiment_tracker_id": "M7A-P003-E001", "source_paper_tracker_id": "M7A-P003", "tracker_key": "M7A-P003::M7A-P003-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O003"], "sex": null, "source_experiment_tracker_id": "M7A-P003-E001", "source_paper_tracker_id": "M7A-P003", "species": null, "strain": null, "tracker_key": "M7A-P003::M7A-P003-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P003'
@@ -1126,7 +1126,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P004-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O004"], "source_experiment_tracker_id": "M7A-P004-E001", "source_paper_tracker_id": "M7A-P004", "tracker_key": "M7A-P004::M7A-P004-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O004"], "sex": null, "source_experiment_tracker_id": "M7A-P004-E001", "source_paper_tracker_id": "M7A-P004", "species": null, "strain": null, "tracker_key": "M7A-P004::M7A-P004-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P004'
@@ -1143,7 +1143,7 @@ WITH inserted AS (
     'Source page',
     'Tracker experiment M7A-P005-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O005"], "source_experiment_tracker_id": "M7A-P005-E001", "source_paper_tracker_id": "M7A-P005", "tracker_key": "M7A-P005::M7A-P005-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O005"], "sex": null, "source_experiment_tracker_id": "M7A-P005-E001", "source_paper_tracker_id": "M7A-P005", "species": null, "strain": null, "tracker_key": "M7A-P005::M7A-P005-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P005'
@@ -1160,7 +1160,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P006-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O006"], "source_experiment_tracker_id": "M7A-P006-E001", "source_paper_tracker_id": "M7A-P006", "tracker_key": "M7A-P006::M7A-P006-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O006"], "sex": null, "source_experiment_tracker_id": "M7A-P006-E001", "source_paper_tracker_id": "M7A-P006", "species": null, "strain": null, "tracker_key": "M7A-P006::M7A-P006-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P006'
@@ -1177,7 +1177,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P007-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O007"], "source_experiment_tracker_id": "M7A-P007-E001", "source_paper_tracker_id": "M7A-P007", "tracker_key": "M7A-P007::M7A-P007-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O007"], "sex": null, "source_experiment_tracker_id": "M7A-P007-E001", "source_paper_tracker_id": "M7A-P007", "species": null, "strain": null, "tracker_key": "M7A-P007::M7A-P007-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P007'
@@ -1194,7 +1194,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P008-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O008"], "source_experiment_tracker_id": "M7A-P008-E001", "source_paper_tracker_id": "M7A-P008", "tracker_key": "M7A-P008::M7A-P008-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O008"], "sex": null, "source_experiment_tracker_id": "M7A-P008-E001", "source_paper_tracker_id": "M7A-P008", "species": null, "strain": null, "tracker_key": "M7A-P008::M7A-P008-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P008'
@@ -1211,7 +1211,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P009-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O009"], "source_experiment_tracker_id": "M7A-P009-E001", "source_paper_tracker_id": "M7A-P009", "tracker_key": "M7A-P009::M7A-P009-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O009"], "sex": null, "source_experiment_tracker_id": "M7A-P009-E001", "source_paper_tracker_id": "M7A-P009", "species": null, "strain": null, "tracker_key": "M7A-P009::M7A-P009-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P009'
@@ -1228,7 +1228,7 @@ WITH inserted AS (
     'Abstract',
     'Tracker experiment M7A-P010-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O010"], "source_experiment_tracker_id": "M7A-P010-E001", "source_paper_tracker_id": "M7A-P010", "tracker_key": "M7A-P010::M7A-P010-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O010"], "sex": null, "source_experiment_tracker_id": "M7A-P010-E001", "source_paper_tracker_id": "M7A-P010", "species": null, "strain": null, "tracker_key": "M7A-P010::M7A-P010-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P010'
@@ -1245,7 +1245,7 @@ WITH inserted AS (
     'Abstract',
     'Tracker experiment M7A-P011-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O011"], "source_experiment_tracker_id": "M7A-P011-E001", "source_paper_tracker_id": "M7A-P011", "tracker_key": "M7A-P011::M7A-P011-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O011"], "sex": null, "source_experiment_tracker_id": "M7A-P011-E001", "source_paper_tracker_id": "M7A-P011", "species": null, "strain": null, "tracker_key": "M7A-P011::M7A-P011-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P011'
@@ -1262,7 +1262,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P012-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O012"], "source_experiment_tracker_id": "M7A-P012-E001", "source_paper_tracker_id": "M7A-P012", "tracker_key": "M7A-P012::M7A-P012-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O012"], "sex": null, "source_experiment_tracker_id": "M7A-P012-E001", "source_paper_tracker_id": "M7A-P012", "species": null, "strain": null, "tracker_key": "M7A-P012::M7A-P012-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P012'
@@ -1279,7 +1279,7 @@ WITH inserted AS (
     'Abstract',
     'Tracker experiment M7A-P013-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O013"], "source_experiment_tracker_id": "M7A-P013-E001", "source_paper_tracker_id": "M7A-P013", "tracker_key": "M7A-P013::M7A-P013-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O013"], "sex": null, "source_experiment_tracker_id": "M7A-P013-E001", "source_paper_tracker_id": "M7A-P013", "species": null, "strain": null, "tracker_key": "M7A-P013::M7A-P013-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P013'
@@ -1296,7 +1296,7 @@ WITH inserted AS (
     'Abstract',
     'Tracker experiment M7A-P014-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O014"], "source_experiment_tracker_id": "M7A-P014-E001", "source_paper_tracker_id": "M7A-P014", "tracker_key": "M7A-P014::M7A-P014-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O014"], "sex": null, "source_experiment_tracker_id": "M7A-P014-E001", "source_paper_tracker_id": "M7A-P014", "species": null, "strain": null, "tracker_key": "M7A-P014::M7A-P014-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P014'
@@ -1313,7 +1313,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P015-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O015"], "source_experiment_tracker_id": "M7A-P015-E001", "source_paper_tracker_id": "M7A-P015", "tracker_key": "M7A-P015::M7A-P015-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O015"], "sex": null, "source_experiment_tracker_id": "M7A-P015-E001", "source_paper_tracker_id": "M7A-P015", "species": null, "strain": null, "tracker_key": "M7A-P015::M7A-P015-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P015'
@@ -1327,10 +1327,10 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract',
+    'Full text PMC3458386; Results; Figs. 1-3',
     'Tracker experiment M7A-P016-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O016"], "source_experiment_tracker_id": "M7A-P016-E001", "source_paper_tracker_id": "M7A-P016", "tracker_key": "M7A-P016::M7A-P016-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O016"], "sex": null, "source_experiment_tracker_id": "M7A-P016-E001", "source_paper_tracker_id": "M7A-P016", "species": null, "strain": null, "tracker_key": "M7A-P016::M7A-P016-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P016'
@@ -1344,10 +1344,10 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract/source page',
+    'Full text PMC8082666; Results; Figs. 1-6',
     'Tracker experiment M7A-P017-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O017"], "source_experiment_tracker_id": "M7A-P017-E001", "source_paper_tracker_id": "M7A-P017", "tracker_key": "M7A-P017::M7A-P017-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O017"], "sex": null, "source_experiment_tracker_id": "M7A-P017-E001", "source_paper_tracker_id": "M7A-P017", "species": null, "strain": null, "tracker_key": "M7A-P017::M7A-P017-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P017'
@@ -1364,7 +1364,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P018-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O018"], "source_experiment_tracker_id": "M7A-P018-E001", "source_paper_tracker_id": "M7A-P018", "tracker_key": "M7A-P018::M7A-P018-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O018"], "sex": null, "source_experiment_tracker_id": "M7A-P018-E001", "source_paper_tracker_id": "M7A-P018", "species": null, "strain": null, "tracker_key": "M7A-P018::M7A-P018-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P018'
@@ -1381,7 +1381,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P019-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O019"], "source_experiment_tracker_id": "M7A-P019-E001", "source_paper_tracker_id": "M7A-P019", "tracker_key": "M7A-P019::M7A-P019-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O019"], "sex": null, "source_experiment_tracker_id": "M7A-P019-E001", "source_paper_tracker_id": "M7A-P019", "species": null, "strain": null, "tracker_key": "M7A-P019::M7A-P019-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P019'
@@ -1398,7 +1398,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P020-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O020"], "source_experiment_tracker_id": "M7A-P020-E001", "source_paper_tracker_id": "M7A-P020", "tracker_key": "M7A-P020::M7A-P020-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O020"], "sex": null, "source_experiment_tracker_id": "M7A-P020-E001", "source_paper_tracker_id": "M7A-P020", "species": null, "strain": null, "tracker_key": "M7A-P020::M7A-P020-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P020'
@@ -1415,7 +1415,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P021-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O021"], "source_experiment_tracker_id": "M7A-P021-E001", "source_paper_tracker_id": "M7A-P021", "tracker_key": "M7A-P021::M7A-P021-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O021"], "sex": null, "source_experiment_tracker_id": "M7A-P021-E001", "source_paper_tracker_id": "M7A-P021", "species": null, "strain": null, "tracker_key": "M7A-P021::M7A-P021-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P021'
@@ -1432,7 +1432,7 @@ WITH inserted AS (
     'Abstract',
     'Tracker experiment M7A-P022-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O022"], "source_experiment_tracker_id": "M7A-P022-E001", "source_paper_tracker_id": "M7A-P022", "tracker_key": "M7A-P022::M7A-P022-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O022"], "sex": null, "source_experiment_tracker_id": "M7A-P022-E001", "source_paper_tracker_id": "M7A-P022", "species": null, "strain": null, "tracker_key": "M7A-P022::M7A-P022-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P022'
@@ -1449,7 +1449,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P023-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O023"], "source_experiment_tracker_id": "M7A-P023-E001", "source_paper_tracker_id": "M7A-P023", "tracker_key": "M7A-P023::M7A-P023-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O023"], "sex": null, "source_experiment_tracker_id": "M7A-P023-E001", "source_paper_tracker_id": "M7A-P023", "species": null, "strain": null, "tracker_key": "M7A-P023::M7A-P023-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P023'
@@ -1466,7 +1466,7 @@ WITH inserted AS (
     'Abstract',
     'Tracker experiment M7A-P024-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O024"], "source_experiment_tracker_id": "M7A-P024-E001", "source_paper_tracker_id": "M7A-P024", "tracker_key": "M7A-P024::M7A-P024-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O024"], "sex": null, "source_experiment_tracker_id": "M7A-P024-E001", "source_paper_tracker_id": "M7A-P024", "species": null, "strain": null, "tracker_key": "M7A-P024::M7A-P024-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P024'
@@ -1483,7 +1483,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P025-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O025"], "source_experiment_tracker_id": "M7A-P025-E001", "source_paper_tracker_id": "M7A-P025", "tracker_key": "M7A-P025::M7A-P025-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O025"], "sex": null, "source_experiment_tracker_id": "M7A-P025-E001", "source_paper_tracker_id": "M7A-P025", "species": null, "strain": null, "tracker_key": "M7A-P025::M7A-P025-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P025'
@@ -1500,7 +1500,7 @@ WITH inserted AS (
     'Abstract',
     'Tracker experiment M7A-P026-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O026"], "source_experiment_tracker_id": "M7A-P026-E001", "source_paper_tracker_id": "M7A-P026", "tracker_key": "M7A-P026::M7A-P026-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O026"], "sex": null, "source_experiment_tracker_id": "M7A-P026-E001", "source_paper_tracker_id": "M7A-P026", "species": null, "strain": null, "tracker_key": "M7A-P026::M7A-P026-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P026'
@@ -1517,7 +1517,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P027-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O027"], "source_experiment_tracker_id": "M7A-P027-E001", "source_paper_tracker_id": "M7A-P027", "tracker_key": "M7A-P027::M7A-P027-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O027"], "sex": null, "source_experiment_tracker_id": "M7A-P027-E001", "source_paper_tracker_id": "M7A-P027", "species": null, "strain": null, "tracker_key": "M7A-P027::M7A-P027-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P027'
@@ -1534,7 +1534,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P028-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O028"], "source_experiment_tracker_id": "M7A-P028-E001", "source_paper_tracker_id": "M7A-P028", "tracker_key": "M7A-P028::M7A-P028-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O028"], "sex": null, "source_experiment_tracker_id": "M7A-P028-E001", "source_paper_tracker_id": "M7A-P028", "species": null, "strain": null, "tracker_key": "M7A-P028::M7A-P028-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P028'
@@ -1551,7 +1551,7 @@ WITH inserted AS (
     'Abstract',
     'Tracker experiment M7A-P029-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O029"], "source_experiment_tracker_id": "M7A-P029-E001", "source_paper_tracker_id": "M7A-P029", "tracker_key": "M7A-P029::M7A-P029-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O029"], "sex": null, "source_experiment_tracker_id": "M7A-P029-E001", "source_paper_tracker_id": "M7A-P029", "species": null, "strain": null, "tracker_key": "M7A-P029::M7A-P029-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P029'
@@ -1568,7 +1568,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P030-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O030"], "source_experiment_tracker_id": "M7A-P030-E001", "source_paper_tracker_id": "M7A-P030", "tracker_key": "M7A-P030::M7A-P030-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O030"], "sex": null, "source_experiment_tracker_id": "M7A-P030-E001", "source_paper_tracker_id": "M7A-P030", "species": null, "strain": null, "tracker_key": "M7A-P030::M7A-P030-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P030'
@@ -1585,7 +1585,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P031-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O031"], "source_experiment_tracker_id": "M7A-P031-E001", "source_paper_tracker_id": "M7A-P031", "tracker_key": "M7A-P031::M7A-P031-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O031"], "sex": null, "source_experiment_tracker_id": "M7A-P031-E001", "source_paper_tracker_id": "M7A-P031", "species": null, "strain": null, "tracker_key": "M7A-P031::M7A-P031-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P031'
@@ -1602,7 +1602,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P032-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O032"], "source_experiment_tracker_id": "M7A-P032-E001", "source_paper_tracker_id": "M7A-P032", "tracker_key": "M7A-P032::M7A-P032-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O032"], "sex": null, "source_experiment_tracker_id": "M7A-P032-E001", "source_paper_tracker_id": "M7A-P032", "species": null, "strain": null, "tracker_key": "M7A-P032::M7A-P032-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P032'
@@ -1619,7 +1619,7 @@ WITH inserted AS (
     'Abstract',
     'Tracker experiment M7A-P033-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O033"], "source_experiment_tracker_id": "M7A-P033-E001", "source_paper_tracker_id": "M7A-P033", "tracker_key": "M7A-P033::M7A-P033-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O033"], "sex": null, "source_experiment_tracker_id": "M7A-P033-E001", "source_paper_tracker_id": "M7A-P033", "species": null, "strain": null, "tracker_key": "M7A-P033::M7A-P033-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P033'
@@ -1636,7 +1636,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P034-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O034"], "source_experiment_tracker_id": "M7A-P034-E001", "source_paper_tracker_id": "M7A-P034", "tracker_key": "M7A-P034::M7A-P034-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O034"], "sex": null, "source_experiment_tracker_id": "M7A-P034-E001", "source_paper_tracker_id": "M7A-P034", "species": null, "strain": null, "tracker_key": "M7A-P034::M7A-P034-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P034'
@@ -1653,7 +1653,7 @@ WITH inserted AS (
     'Abstract/source page',
     'Tracker experiment M7A-P035-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O035"], "source_experiment_tracker_id": "M7A-P035-E001", "source_paper_tracker_id": "M7A-P035", "tracker_key": "M7A-P035::M7A-P035-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O035"], "sex": null, "source_experiment_tracker_id": "M7A-P035-E001", "source_paper_tracker_id": "M7A-P035", "species": null, "strain": null, "tracker_key": "M7A-P035::M7A-P035-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P035'
@@ -1670,7 +1670,7 @@ WITH inserted AS (
     'Abstract',
     'Tracker experiment M7A-P036-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O036"], "source_experiment_tracker_id": "M7A-P036-E001", "source_paper_tracker_id": "M7A-P036", "tracker_key": "M7A-P036::M7A-P036-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O036"], "sex": null, "source_experiment_tracker_id": "M7A-P036-E001", "source_paper_tracker_id": "M7A-P036", "species": null, "strain": null, "tracker_key": "M7A-P036::M7A-P036-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P036'
@@ -1687,7 +1687,7 @@ WITH inserted AS (
     'Abstract',
     'Tracker experiment M7A-P037-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O037"], "source_experiment_tracker_id": "M7A-P037-E001", "source_paper_tracker_id": "M7A-P037", "tracker_key": "M7A-P037::M7A-P037-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O037"], "sex": null, "source_experiment_tracker_id": "M7A-P037-E001", "source_paper_tracker_id": "M7A-P037", "species": null, "strain": null, "tracker_key": "M7A-P037::M7A-P037-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P037'
@@ -1704,7 +1704,7 @@ WITH inserted AS (
     'Review/source',
     'Tracker experiment M7A-P038-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O038"], "source_experiment_tracker_id": "M7A-P038-E001", "source_paper_tracker_id": "M7A-P038", "tracker_key": "M7A-P038::M7A-P038-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O038"], "sex": null, "source_experiment_tracker_id": "M7A-P038-E001", "source_paper_tracker_id": "M7A-P038", "species": null, "strain": null, "tracker_key": "M7A-P038::M7A-P038-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P038'
@@ -1721,7 +1721,7 @@ WITH inserted AS (
     'Review/source',
     'Tracker experiment M7A-P039-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O039"], "source_experiment_tracker_id": "M7A-P039-E001", "source_paper_tracker_id": "M7A-P039", "tracker_key": "M7A-P039::M7A-P039-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O039"], "sex": null, "source_experiment_tracker_id": "M7A-P039-E001", "source_paper_tracker_id": "M7A-P039", "species": null, "strain": null, "tracker_key": "M7A-P039::M7A-P039-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P039'
@@ -1738,7 +1738,7 @@ WITH inserted AS (
     'Review/source',
     'Tracker experiment M7A-P040-E001',
     'Module 7B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M7B-O040"], "source_experiment_tracker_id": "M7A-P040-E001", "source_paper_tracker_id": "M7A-P040", "tracker_key": "M7A-P040::M7A-P040-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M7B-O040"], "sex": null, "source_experiment_tracker_id": "M7A-P040-E001", "source_paper_tracker_id": "M7A-P040", "species": null, "strain": null, "tracker_key": "M7A-P040::M7A-P040-E001", "vertebral_level": null}'
   FROM _m7_paper_map p
   JOIN _m7_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M7A-P040'
@@ -2217,15 +2217,15 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Alpha-1 antitrypsin reduced inflammation and enhanced mouse pancreatic islet transplant survival.',
-    'graft survival',
+    'In male C57BL/6 diabetic mice receiving marginal-mass syngeneic islet grafts, systemic AAT treatment improved early and long-term graft-function measures and reduced inflammatory-response signals versus vehicle controls.',
+    'graft function/inflammation',
     NULL,
-    'Alpha-1 antitrypsin reduced inflammation and enhanced mouse pancreatic islet transplant survival.',
-    'A1AT improves islet survival through inflammation reduction',
-    'Abstract',
-    'Abstract',
-    'low',
-    '{"curator_notes": "Mouse graft survival.", "experiment_tracker_id": "M7A-P016-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P016", "quantitative": "YES", "statistics_reported": "abstract-level", "topic_id": "M7B-T003", "tracker_id": "M7B-O016"}'
+    'In male C57BL/6 diabetic mice receiving marginal-mass syngeneic islet grafts, systemic AAT treatment improved early and long-term graft-function measures and reduced inflammatory-response signals versus vehicle controls.',
+    'in male c57bl/6 diabetic mice receiving marginal-mass syngeneic islet grafts, systemic aat treatment improved early and long-term graft-function measures and reduced inflammatory-response signals versus vehicle controls.',
+    'Module 7A full text; PMCID PMC3458386; Results/Figs. 1-3',
+    'Full text PMC3458386; Results; Figs. 1-3',
+    'high',
+    '{"curator_notes": "Direct primary mouse evidence; source-localized.", "experiment_tracker_id": "M7A-P016-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P016", "quantitative": "YES", "statistics_reported": "The evidence is an islet-transplant host-conditioning model; it should not be generalized to SCI or implant fibrosis.", "topic_id": "M7B-T003", "tracker_id": "M7B-O016"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -2243,15 +2243,15 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Alpha-1 antitrypsin suppressed macrophage activation and promoted islet graft survival after intrahepatic transplantation.',
-    'macrophage/graft survival',
+    'In a marginal intrahepatic human-islet model, AAT improved graft function and reduced inflammatory/M1 macrophage activation; macrophage-depletion experiments supported a role for hepatic M1 macrophages in graft dysfunction.',
+    'macrophage/graft function',
     NULL,
-    'Alpha-1 antitrypsin suppressed macrophage activation and promoted islet graft survival after intrahepatic transplantation.',
-    'A1AT suppresses macrophage activation and promotes islet survival',
-    'Abstract/source page',
-    'Abstract/source page',
-    'medium',
-    '{"curator_notes": "Immune-stromal transition anchor.", "experiment_tracker_id": "M7A-P017-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P017", "quantitative": "YES", "statistics_reported": "source-page level", "topic_id": "M7B-T003", "tracker_id": "M7B-O017"}'
+    'In a marginal intrahepatic human-islet model, AAT improved graft function and reduced inflammatory/M1 macrophage activation; macrophage-depletion experiments supported a role for hepatic M1 macrophages in graft dysfunction.',
+    'in a marginal intrahepatic human-islet model, aat improved graft function and reduced inflammatory/m1 macrophage activation; macrophage-depletion experiments supported a role for hepatic m1 macrophages in graft dysfunction.',
+    'Module 7A full text; PMID 33047509 / PMCID PMC8082666; Results/Figs. 1-6',
+    'Full text PMC8082666; Results; Figs. 1-6',
+    'high',
+    '{"curator_notes": "Direct primary islet-transplant evidence; source-localized.", "experiment_tracker_id": "M7A-P017-E001", "measurement_method_inference": null, "paper_tracker_id": "M7A-P017", "quantitative": "YES", "statistics_reported": "The source supports macrophage and graft-function effects, not a direct anti-fibrotic reconstruction claim.", "topic_id": "M7B-T003", "tracker_id": "M7B-O017"}'
   FROM _m7_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
