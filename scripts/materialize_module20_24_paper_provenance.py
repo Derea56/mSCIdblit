@@ -96,6 +96,117 @@ def xml_records() -> dict[str, dict[str, str]]:
                     record["publication_year"] = candidate
                     break
             records[pmid] = record
+
+        # Some supervised source artifacts are exact Europe PMC CORE XML
+        # responses rather than PubMedArticle records.  Accept a Paper only
+        # when the PMID and title occur together in the parsed result; never
+        # derive either value from the filename or request URL.
+        for result in root.findall(".//result"):
+            pmid = child(result, "./pmid")
+            title = child(result, "./title")
+            if not pmid.isdigit() or not title:
+                continue
+            journal_info = result.find("./journalInfo")
+            journal = journal_info.find("./journal") if journal_info is not None else None
+            year = child(journal_info, "./yearOfPublication") if journal_info is not None else ""
+            if not year:
+                year = child(result, "./pubYear")
+            if not year:
+                match = re.search(r"\b(18\d{2}|19\d{2}|20\d{2})\b", child(journal_info, "./dateOfPublication") if journal_info is not None else "")
+                year = match.group(1) if match else ""
+            records.setdefault(
+                pmid,
+                {
+                    "pmid": pmid,
+                    "title": title,
+                    "authors": child(result, "./authorString"),
+                    "journal": child(journal, "./title") if journal is not None else "",
+                    "volume": child(journal_info, "./volume") if journal_info is not None else "",
+                    "issue": child(journal_info, "./issue") if journal_info is not None else "",
+                    "pages": child(result, "./pageInfo"),
+                    "doi": child(result, "./doi"),
+                    "pmcid": child(result, "./pmcid"),
+                    "publication_year": year,
+                    "abstract": child(result, "./abstractText"),
+                    "source_url": f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
+                    "source_file": str(path.relative_to(ROOT)),
+                },
+            )
+
+        # A small supervised subset uses a local primary-source record
+        # wrapper.  It is admissible only when that record itself contains a
+        # numeric PMID and title; the wrapper name and filename are not used
+        # as identity evidence.
+        primary_records = list(root.findall(".//primary_source_record"))
+        if root.tag.rsplit("}", 1)[-1] == "primary_source_record":
+            primary_records.insert(0, root)
+        for primary in primary_records:
+            pmid = child(primary, "./pmid")
+            title = child(primary, "./title")
+            if not pmid.isdigit() or not title:
+                continue
+            records.setdefault(
+                pmid,
+                {
+                    "pmid": pmid,
+                    "title": title,
+                    "authors": child(primary, "./authors"),
+                    "journal": child(primary, "./source"),
+                    "volume": "",
+                    "issue": "",
+                    "pages": "",
+                    "doi": child(primary, "./doi"),
+                    "pmcid": child(primary, "./pmcid"),
+                    "publication_year": child(primary, "./year"),
+                    "abstract": child(primary, "./abstract"),
+                    "source_url": f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
+                    "source_file": str(path.relative_to(ROOT)),
+                },
+            )
+
+        # Some PMC full-text artifacts are JATS ``article`` documents.  Use
+        # only article-meta identifiers and title text from the document
+        # itself.  This intentionally rejects files whose filename/locator
+        # names one PMID while the embedded article carries another PMID.
+        for article_meta in root.findall(".//article-meta"):
+            identifiers = {
+                item.attrib.get("pub-id-type", "").lower(): text(item)
+                for item in article_meta.findall("./article-id")
+            }
+            pmid = identifiers.get("pmid", "")
+            title = child(article_meta, "./title-group/article-title")
+            if not pmid.isdigit() or not title:
+                continue
+            authors = []
+            for contrib in article_meta.findall("./contrib-group/contrib"):
+                name = contrib.find("./name")
+                if name is None:
+                    continue
+                surname = child(name, "./surname")
+                given = child(name, "./given-names")
+                author = " ".join(part for part in (given, surname) if part)
+                if author:
+                    authors.append(author)
+            pub_date = article_meta.find("./pub-date")
+            abstract = article_meta.find("./abstract")
+            records.setdefault(
+                pmid,
+                {
+                    "pmid": pmid,
+                    "title": title,
+                    "authors": "; ".join(authors),
+                    "journal": child(root, ".//journal-meta/journal-title-group/journal-title"),
+                    "volume": child(article_meta, "./volume"),
+                    "issue": child(article_meta, "./issue"),
+                    "pages": child(article_meta, "./fpage") or child(article_meta, "./page-range"),
+                    "doi": identifiers.get("doi", ""),
+                    "pmcid": identifiers.get("pmcid", ""),
+                    "publication_year": child(pub_date, "./year") if pub_date is not None else "",
+                    "abstract": text(abstract),
+                    "source_url": f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
+                    "source_file": str(path.relative_to(ROOT)),
+                },
+            )
     return records
 
 
@@ -224,7 +335,14 @@ def html_records() -> dict[str, dict[str, str]]:
     """
 
     records: dict[str, dict[str, str]] = {}
-    for path in sorted(SOURCE_ROOT.rglob("*.html")):
+    # A subset of NCBI full-text pages was preserved with an .xml suffix.
+    # HTMLParser safely reads their citation meta tags, while the same pass
+    # remains identity-gated by explicit citation_pmid and citation_title.
+    paths = sorted(
+        path for suffix in ("*.html", "*.xml")
+        for path in SOURCE_ROOT.rglob(suffix)
+    )
+    for path in paths:
         parser = _CitationMetaParser()
         try:
             parser.feed(path.read_text(errors="ignore"))
