@@ -50,6 +50,29 @@ For a single read-only pathway/entity retrieval across these layers, use
 [`scripts/query_pathway.py`](/Users/derea/Documents/SCI/mSCIdblit/scripts/query_pathway.py)
 and see the [release query contract](/Users/derea/Documents/SCI/mSCIdblit/docs/RELEASE_QUERY.md).
 
+## Current release checkpoint — 2026-09-01
+
+The v1.4.0 database materialization and layered pathway query utility are
+pushed on `main`. The utility executes one read-only SQL statement against the
+PostgreSQL release and keeps canonical mechanism edges, register provenance,
+modality observations, method-resource membership, and public-TF staging
+records in separate result layers. Five focused tests pass, and the utility
+was integration-tested against a temporary restore of the v1.4.0 dump.
+
+For the IL1B test query, the release returned 7 canonical edges, 8 register
+evidence rows, 8 method-resource communications, and 10 native method
+records. It also found 60 public-TF staging rows and 56 matching rows in the
+exact local modality-import snapshots. The v1.4.0 database contains the
+modality schema but currently has zero materialized modality rows; the utility
+reports that boundary explicitly rather than merging local snapshots into the
+database result.
+
+Next steps are to use the query utility for pathway-level review, decide and
+validate whether the modality import rows belong in the next database release,
+and then rerun the release integrity, provenance, and cross-layer validation
+gates before versioning the next release. No evidence is promoted by the
+query utility itself.
+
 ## mSCS method-resource intake
 
 The frozen LIANA, CellChatDB, and NicheNet resources used by mSCS can be
