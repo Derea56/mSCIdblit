@@ -13,11 +13,11 @@ Every manifest artifact receives at least one explicit status row.
 
 | Status | Rows |
 |---|---:|
-| `candidate_requires_review` | 683 |
+| `candidate_requires_review` | 667 |
 | `linked_unresolved` | 3,320 |
 | `metadata_or_search_only` | 359 |
 | `negative_or_boundary_evaluated` | 2 |
-| `supporting_validated_claim` | 1,122 |
+| `supporting_validated_claim` | 1,138 |
 | `unmapped_source_artifact` | 1,180 |
 
 ## Module routing
