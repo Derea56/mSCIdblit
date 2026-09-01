@@ -1238,3 +1238,24 @@ promotion batch: no canonical Paper, Observation, AuthorClaim, EvidenceLink,
 SignalingEdgeSource, or register row was changed. Reviewers must confirm exact
 source identity, claim scope, mechanism layer, evidence grade, and L-context
 before any promotion is considered.
+
+## Exact duplicate queue adjudication — 2026-09-01
+
+The first queue audit applied a conservative exact-reuse rule to all 426
+review units. A unit was resolved only when an artifact with the same register
+evidence ID, resolved PMID, and exact artifact path already had a
+`supporting_validated_claim` adjudication. This resolved 12 batch-001 units as
+part of 23 exact-reuse units overall. It created no duplicate Paper, Observation,
+AuthorClaim, EvidenceLink, SignalingEdgeSource, or register row. Evidence
+grade and L0–L4 context were copied unchanged into the decision ledger.
+
+The reproducible audit is `scripts/adjudicate_module20_24_review_queue.py`.
+Its outputs are:
+
+- `data/processed/module20_24_database_intake_v1/module20_24_review_adjudications.tsv`
+- `data/processed/module20_24_database_intake_v1/module20_24_review_adjudications_summary.json`
+
+The remaining 403 units stay pending manual source review or authoritative
+identity resolution; 88 of the 100 batch-001 units remain pending. The
+exact-reuse decisions are queue dispositions only;
+the canonical database was not changed by this pass.
