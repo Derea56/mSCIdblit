@@ -119,6 +119,9 @@ The recommended role vocabulary for the next pass is:
 Each role should have an independent `module22b_eligibility` field. This keeps
 strong chromatin evidence useful without allowing ChIP occupancy or broad
 database labeling to silently promote a protein into the strict TF set.
+Canonical role and SCI-context evidence are separate axes: `canonical` means
+sequence-specific TF biology, while SCI context must be recorded independently
+as direct, indirect, unresolved, not assessed, or not applicable.
 
 ## Noncanonical regulator staging overlay
 
@@ -969,3 +972,14 @@ their exact evidence tiers, but receive ranking weight 0,
 can be screened out without being mistaken for supported module evidence. U
 rows remain excluded. No canonical TF, Module 22B, or database materialization
 was performed.
+
+The 49 explicitly noncanonical A/B module-assignment rows are now separated in
+`module_integration_staging_v1/noncanonical_gene_expression_regulators.tsv`.
+This group includes transcriptional cofactors, chromatin regulators, RNA/PTM
+regulators, and upstream relay/context relationships. The rows remain routed
+to their relevant modules and retain A/B evidence. Their role class, SCI
+context status, module fit, and materialization lane are now recorded as
+separate axes. In particular, `canonical` denotes sequence-specific TF biology,
+not SCI evidence; unresolved SCI context does not make a regulator canonical
+or noncanonical. The legacy `canonical_tf_eligible=false` field remains only
+for compatibility, and these rows were not treated as false or deleted.
