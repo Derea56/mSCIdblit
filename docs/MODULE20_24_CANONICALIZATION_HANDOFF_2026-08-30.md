@@ -1176,3 +1176,39 @@ was not regenerated. The next productive work is either to obtain exact
 authoritative source records for the eight identity-conflict rows or to
 adjudicate/register the nine edge gaps as new canonical register entries;
 neither action should be performed from the current mismatched artifacts.
+
+## Promotion queue review checkpoint — 2026-08-31
+
+The 18 remaining supporting-valid adjudication rows were reviewed as a
+promotion-preparation pass and recorded in
+`docs/MODULE20_24_PROMOTION_QUEUE_REVIEW_2026-08-31.md`. The review made no
+canonical database writes and preserved every submitted identifier and source
+locator.
+
+The queue is now operationally partitioned into:
+
+- eight 20B rows with exact Paper support but absent
+  `SignalingEdgeRegisterSource` records: two LRRC4B/NGL-3–PTPRS rows and six
+  MIA–alpha4beta1 rows;
+- one 23B row (`M23B-P2-R-000642`) with an exact Paper and bounded
+  receptor-proximal evidence but a blank `b_edge_id` and no canonical register
+  edge;
+- one exact-Paper/registry row (`M22B-P2-R-000266`) that remains
+  paper-provenance-only because its observation and claim are explicitly
+  `validated_primary_abstract`;
+- eight identity-correction candidates: one BMP8A/PMC10409762 row, one
+  LRP1/TIMP1 row, three Fzd7 rows, and three mixed-anchor E-cadherin/IGF1R
+  rows.
+
+The eight 20B rows and the 23B EphrinB3 row are the highest-yield next
+promotion targets because their source content is already exact enough for
+mechanistic review; their blockers are register structure and edge-key
+adjudication. The identity-correction groups remain held until exact
+PMID/PMCID/DOI relationships are established. No PMID, Paper relationship,
+register edge, or mechanistic direction was inferred. Evidence grade and
+context level remain independent and unchanged.
+
+The static mechanism bundle was not regenerated in this checkpoint. Before a
+release, re-run the materializers and all four database validators after any
+approved register or identity corrections, then reconcile the static bundle
+against the local database.
