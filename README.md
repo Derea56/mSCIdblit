@@ -37,6 +37,12 @@ Module numbers are stable identifiers, not the recommended reading order. For pr
 | **CurationPass / Status tables** | Paper and experiment extraction workflow |
 | **CuratorNote** | Ambiguities, blockers, vocabulary requests, quality flags |
 
+The additive `EvidenceSourceRecord` and `ModuleEvidenceLink` layer connects
+external modality evidence—such as mSCS protein, spatial, and epigenetic
+records—to modules, pathways, entities, or existing edges without flattening
+source measurements or changing graph semantics. See
+[`docs/MODULE_EVIDENCE_CROSSWALK.md`](/Users/derea/Documents/SCI/mSCIdblit/docs/MODULE_EVIDENCE_CROSSWALK.md).
+
 ## Public TF/regulon evidence staging
 
 The public TF/regulon expansion is maintained as a separate, additive staging
@@ -90,6 +96,7 @@ materialize or commit/push this staging work without an explicit review step.
 2. **Initialize schema:**
    ```bash
    psql -U <username> -d mscidbl -f schema/schema.sql
+   psql -U <username> -d mscidbl -f schema/module_evidence_crosswalk.sql
    ```
 
 3. **Seed controlled vocabulary:**
@@ -105,6 +112,7 @@ materialize or commit/push this staging work without an explicit review step.
 5. **Run smoke test (optional but recommended before curation):**
    ```bash
    psql -v ON_ERROR_STOP=1 -U <username> -d mscidbl -f scripts/smoke_test.sql
+   psql -v ON_ERROR_STOP=1 -U <username> -d mscidbl -f scripts/validate_module_evidence_crosswalk.sql
    ```
 
 ## 📁 Repository Structure
@@ -112,7 +120,8 @@ materialize or commit/push this staging work without an explicit review step.
 ```
 mSCIdblit/
 ├── schema/
-│   └── schema.sql                    # Complete schema definition
+│   ├── schema.sql                    # Complete schema definition
+│   └── module_evidence_crosswalk.sql # External evidence ↔ module/edge bridge
 ├── docs/
 │   ├── SCHEMA_DOCUMENTATION.md       # Detailed entity documentation
 │   ├── IMPLEMENTATION_GUIDE.md       # Data entry examples
@@ -128,6 +137,7 @@ mSCIdblit/
 │   ├── MODULE_19_HISTONE_MODIFICATION.md # Histone-modification graph queries and interpretation rules
 │   ├── MECHANISM_BUNDLE_EXPORT.md    # Export curated signaling graph bundles for mSCS
 │   ├── MODULE20_24_MECHANISM_GRAPH_RELEASE.md # Evidence-gated Module 20B–24B graph release
+│   ├── MODULE_EVIDENCE_CROSSWALK.md  # Cross-cutting modality evidence bridge
 │   └── VALIDATION_QUERIES.md         # Database hygiene checks
 ├── scripts/
 │   ├── export_tracker_evidence_bundle.py # Shared 1B/2B tracker audit + JSON export
@@ -142,6 +152,7 @@ mSCIdblit/
 │   ├── export_mechanism_bundle.py    # Export mSCS-compatible mechanism bundle snapshots
 │   ├── ollama_chunk_extract.py       # Generate small Ollama extraction prompts
 │   ├── seed_controlled_vocab.sql     # Populate reference tables
+│   ├── validate_module_evidence_crosswalk.sql # Crosswalk integrity gate
 │   └── smoke_test.sql                # Toy workflow validation script
 ├── templates/
 │   ├── paper_extraction_template.md
