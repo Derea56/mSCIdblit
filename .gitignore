@@ -18,3 +18,20 @@ data/raw/evidence/module20_24_supervised_cli_phase2
 # keep the local convenience copy ignored while the lossless .tsv.gz artifact
 # is versioned in the public-TF expansion.
 data/processed/public_tf_union_expansion_v1/reported_contributor_links.tsv
+
+# Local promotion inputs retained outside the public Git history. Their
+# repository-relative paths, sizes, and SHA-256 digests are recorded in
+# data/processed/local_artifact_inventory_v1.tsv and the current handoffs.
+# Do not delete these inputs while the corresponding promotion/extraction lane
+# remains open.
+data/processed/module20_24_database_intake_v1/
+data/raw/evidence/module2_fulltext_upgrade/
+data/raw/evidence/module4_fulltext_upgrade/
+data/raw/evidence/module6_7_fulltext_upgrade/
+data/raw/evidence/module_fulltext_queue_20260731/
+data/raw/public_database_snapshots/module20_24_intake_v1/
+data/raw/public_database_snapshots/tf_identity_intake_v1/
+
+# Rebuildable source-anchor audit derived from historical local work inputs.
+# The companion human-readable audit is tracked; this large TSV remains local.
+data/processed/module20_24_source_anchor_registry.tsv

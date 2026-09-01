@@ -1,0 +1,38 @@
+{
+  "status": "pass",
+  "input_candidate_rows": 35,
+  "adjudicated_rows": 35,
+  "recommendation_counts": {
+    "needs_more_context": 35
+  },
+  "tier_counts": {
+    "A_independent_literature_corroborated": 16,
+    "B_independent_literature_single_source": 19
+  },
+  "module_counts": {
+    "20B": 26,
+    "22B": 3,
+    "23B": 5,
+    "24B": 1
+  },
+  "owner_approval_status": "pending_module_owner_approval",
+  "canonical_tf_eligible": false,
+  "role_context_separated": true,
+  "regulator_role_class_counts": {
+    "noncanonical_gene_expression_regulator": 35
+  },
+  "sci_context_status_counts": {
+    "indirect_sci_context": 2,
+    "non_sci_context_limited": 31,
+    "non_sci_transferable_context": 2
+  },
+  "materialization_performed": false,
+  "policy": [
+    "This adjudication uses the existing source-backed review notes and recorded next actions; it is not a new literature promotion pass.",
+    "All 35 candidates remain needs_more_context because SCI target-cell/module context or explicitly requested corroboration/occupancy is not yet satisfied.",
+    "Original evidence tiers and provenance are unchanged.",
+    "Regulator role class and SCI context status are separate; unresolved SCI context does not imply canonical or noncanonical identity.",
+    "No canonical TF, Module 22B, module tracker, or noncanonical materialization is performed."
+  ],
+  "output": "noncanonical_module_context_adjudication.tsv"
+}

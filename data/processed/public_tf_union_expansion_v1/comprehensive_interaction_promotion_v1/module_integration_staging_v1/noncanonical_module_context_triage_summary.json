@@ -1,0 +1,47 @@
+{
+  "status": "pass",
+  "input_rows": 49,
+  "output_rows": 49,
+  "decision_counts": {
+    "needs_more_context": 35,
+    "retain_context_only": 14
+  },
+  "mechanism_scope_counts": {
+    "other_noncanonical_gene_expression_regulator": 12,
+    "rna_gene_expression_regulator": 7,
+    "transcriptional_chromatin_regulator": 16,
+    "upstream_or_protein_context": 14
+  },
+  "candidate_module_context_rows": 35,
+  "candidate_tier_counts": {
+    "A_independent_literature_corroborated": 16,
+    "B_independent_literature_single_source": 19
+  },
+  "module_counts": {
+    "20B": 26,
+    "22B": 3,
+    "23B": 5,
+    "24B": 1
+  },
+  "owner_decisions_changed": false,
+  "canonical_tf_eligible": false,
+  "role_context_separated": true,
+  "regulator_role_class_counts": {
+    "non_transcriptional_regulator": 14,
+    "noncanonical_gene_expression_regulator": 35
+  },
+  "sci_context_status_counts": {
+    "indirect_sci_context": 3,
+    "non_sci_context_limited": 39,
+    "non_sci_transferable_context": 7
+  },
+  "materialization_status": "pending_owner_review",
+  "policy": [
+    "This is a mechanism-scope triage based only on existing reviewed dispositions; it is not a new literature search or module-owner approval.",
+    "Direct chromatin/cofactor/RNA-regulatory rows remain module-context candidates pending module-specific SCI context.",
+    "Relay, receptor, kinase, protein/PTM, and cytoskeletal rows remain context-only for this regulator group.",
+    "Evidence tiers, provenance, owner decision fields, and legacy canonical eligibility are unchanged.",
+    "Regulator role class and SCI context status are recorded as separate axes; unresolved SCI context does not make a row noncanonical."
+  ],
+  "output": "noncanonical_module_context_triage.tsv"
+}

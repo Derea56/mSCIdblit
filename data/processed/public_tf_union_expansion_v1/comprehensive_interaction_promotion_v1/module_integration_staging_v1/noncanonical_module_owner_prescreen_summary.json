@@ -1,0 +1,34 @@
+{
+  "status": "pass",
+  "input_rows": 49,
+  "prescreen_rows": 49,
+  "decision_counts": {
+    "needs_more_context": 27,
+    "retain_context_only": 22
+  },
+  "candidate_for_module_context_counts": {
+    "false": 22,
+    "true": 27
+  },
+  "tier_counts": {
+    "A_independent_literature_corroborated": 24,
+    "B_independent_literature_single_source": 25
+  },
+  "owner_decisions_changed": false,
+  "canonical_tf_eligible": false,
+  "role_context_separated": true,
+  "regulator_role_class": "noncanonical_gene_expression_regulator",
+  "sci_context_status_counts": {
+    "indirect_sci_context": 3,
+    "non_sci_context_limited": 39,
+    "non_sci_transferable_context": 7
+  },
+  "noncanonical_materialization_status": "pending_owner_review",
+  "policy": [
+    "This is an AI pre-screen based only on existing reviewed dispositions; it is not module-owner approval or a new literature adjudication.",
+    "Rows marked needs_more_context remain candidates for owner review but are not promoted.",
+    "Rows marked retain_context_only remain visible as noncanonical context and are not promoted.",
+    "Evidence tiers, source provenance, module routes, and owner decision fields are preserved."
+  ],
+  "output": "noncanonical_module_owner_prescreen.tsv"
+}
