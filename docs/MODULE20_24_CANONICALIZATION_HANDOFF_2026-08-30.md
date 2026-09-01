@@ -1292,3 +1292,32 @@ units, then the 141 exact-identity/source-review units. Composite keys with
 multiple PMIDs remain held unless an exact source-level disambiguator is
 found; no PMID or paper relationship should be inferred from filenames,
 search URLs, or neighboring rows.
+
+## Artifact-bridge convergence checkpoint — 2026-09-01
+
+The artifact adjudication bridge and promotion queue were regenerated against
+the updated identity manifest. Fourteen of the 16 queue-artifact identity
+mappings now satisfy the existing exact-identifier plus validated-observation
+and validated-claim gates, changing their artifact status to
+`supporting_validated_claim`. The two remaining mappings retain resolved paper
+identity but remain candidate review items because their evidence gates are
+not sufficient for canonical support. The retained identity ledger continues
+to preserve all 16 mappings.
+
+The candidate artifact population decreased from 701 to 683 rows, and the
+deterministic review-unit population decreased from 426 to 412. The current
+queue contains 85 pending identity-resolution units, 141 pending source-review
+units, 161 pending manual-adjudication units, and 23 exact-reuse units. The
+updated bridge report records 1,122 `supporting_validated_claim` rows. These
+changes affect staging/adjudication provenance only; no canonical database
+write, evidence-grade change, context-level change, or schema change was
+performed.
+
+The two identity-resolved candidates should be reviewed with the same claim
+and observation gates as the rest of the queue. The 88 remaining batch-001
+manual units are mostly abstract-bounded or explicitly context-only and
+should not be promoted merely because a paper identity is exact. The next
+promotion-oriented pass should therefore prioritize source-level review of
+the exact-identity cases whose retained observation and claim are not
+abstract-bounded, while keeping negative, context-only, and unresolved rows
+available for screening.

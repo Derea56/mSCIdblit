@@ -84,6 +84,26 @@ def source_record_identifiers(path: Path, role: str) -> set[tuple[str, str]]:
     return content_self_identifiers(path, role)
 
 
+def validate_retained_identity(row: dict[str, str]) -> None:
+    """Fail closed if a retained identity mapping no longer matches its source."""
+    source = row.get("authoritative_source", "")
+    path = ROOT / source
+    records = identity.parse_artifact(path) if source and path.exists() else []
+    if len(records) != 1:
+        raise ValueError(
+            "retained queue identity does not have one source record: "
+            f"{row.get('extraction_id', '')} -> {source}"
+        )
+    record = records[0]
+    pmid = row.get("resolved_pmid", "")
+    key_pmids = {value for kind, value in identity.identifier_tokens(row.get("canonical_paper_key", "")) if kind == "PMID"}
+    if record.get("pmid") != pmid or not record.get("title") or pmid not in key_pmids:
+        raise ValueError(
+            "retained queue identity no longer matches source metadata or canonical key: "
+            f"{row.get('extraction_id', '')}"
+        )
+
+
 def main() -> None:
     args = parse_args()
     queue_rows = read_tsv(args.queue)
@@ -106,7 +126,18 @@ def main() -> None:
             existing_support[key].add(row.get("extraction_id", ""))
 
     decisions: list[dict[str, str]] = []
-    identity_ledger: list[dict[str, str]] = []
+    identity_ledger_by_extraction: dict[str, dict[str, str]] = {}
+    for prior in read_tsv(args.identity_ledger):
+        extraction_id = prior.get("extraction_id", "")
+        if not extraction_id:
+            continue
+        if prior.get("resolution_status") != "resolved_authoritative_queue_local_artifact":
+            continue
+        validate_retained_identity(prior)
+        existing = identity_ledger_by_extraction.get(extraction_id)
+        if existing and existing.get("resolved_pmid") != prior.get("resolved_pmid"):
+            raise ValueError(f"conflicting retained queue-artifact mappings for {extraction_id}")
+        identity_ledger_by_extraction[extraction_id] = prior
     for unit_key, rows in units.items():
         first = rows[0]
         evidence_id = first.get("register_evidence_id", "")
@@ -145,14 +176,30 @@ def main() -> None:
             and len(artifact_resolution_pmids) == 1
             and not ambiguous_identity_paths
         )
+        retained_identity = identity_ledger_by_extraction.get(first.get("extraction_id", ""))
+        if retained_identity:
+            for field in ("module", "b_evidence_id", "canonical_paper_key"):
+                if retained_identity.get(field, "") != first.get(
+                    "register_evidence_id" if field == "b_evidence_id" else field, ""
+                ):
+                    raise ValueError(
+                        f"retained queue identity conflicts with current queue row: {unit_key}"
+                    )
+            if retained_identity.get("authoritative_source", "") in artifact_paths:
+                artifact_identity_resolution = True
         resolved_from_artifact = ""
         resolution_artifact_path = ""
         resolution_artifact_identifiers = ""
         if artifact_identity_resolution:
-            resolved_from_artifact = next(iter(artifact_resolution_pmids))
-            selected = next(item for item in artifact_resolution_options if item[0] == resolved_from_artifact)
-            resolution_artifact_path = selected[1]
-            resolution_artifact_identifiers = selected[2]
+            if retained_identity:
+                resolved_from_artifact = retained_identity["resolved_pmid"]
+                resolution_artifact_path = retained_identity["authoritative_source"]
+                resolution_artifact_identifiers = f"PMID:{resolved_from_artifact}"
+            else:
+                resolved_from_artifact = next(iter(artifact_resolution_pmids))
+                selected = next(item for item in artifact_resolution_options if item[0] == resolved_from_artifact)
+                resolution_artifact_path = selected[1]
+                resolution_artifact_identifiers = selected[2]
             selected_path = ROOT / resolution_artifact_path
             selected_records = identity.parse_artifact(selected_path)
             selected_records = [
@@ -165,7 +212,7 @@ def main() -> None:
                     f"{unit_key} -> {resolution_artifact_path}"
                 )
             record = selected_records[0]
-            identity_ledger.append({
+            identity_row = {
                 "extraction_id": first.get("extraction_id", ""),
                 "module": first.get("module", ""),
                 "b_evidence_id": first.get("register_evidence_id", ""),
@@ -187,7 +234,11 @@ def main() -> None:
                 "source_metadata_journal": str(record.get("journal", "")),
                 "source_metadata_abstract": str(record.get("abstract", "")),
                 "source_metadata_url": str(record.get("url", "")),
-            })
+            }
+            existing = identity_ledger_by_extraction.get(identity_row["extraction_id"])
+            if existing and existing.get("resolved_pmid") != identity_row["resolved_pmid"]:
+                raise ValueError(f"conflicting queue-artifact mappings for {identity_row['extraction_id']}")
+            identity_ledger_by_extraction[identity_row["extraction_id"]] = identity_row
         if support_ids:
             decision = "resolved_reuse_existing_support"
             basis = (
@@ -242,7 +293,7 @@ def main() -> None:
         writer.writeheader()
         writer.writerows(decisions)
 
-    identity_ledger.sort(key=lambda row: row["extraction_id"])
+    identity_ledger = sorted(identity_ledger_by_extraction.values(), key=lambda row: row["extraction_id"])
     args.identity_ledger.parent.mkdir(parents=True, exist_ok=True)
     with args.identity_ledger.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(
