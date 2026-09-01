@@ -20,7 +20,8 @@ The crosswalk is additive and lossless with respect to source provenance:
 
 ## Tables
 
-Apply `schema/module_evidence_crosswalk.sql` after `schema/schema.sql`.
+Apply `schema/module_evidence_crosswalk.sql` after `schema/schema.sql`, then
+apply `schema/evidence_observation_detail.sql`.
 
 ### `EvidenceSourceRecord`
 
@@ -53,6 +54,19 @@ target:
 `edge_support`, `pathway_state`, `spatial_context`, `regulatory_context`,
 `contradictory_or_negative`, or `unresolved`.
 
+### `EvidenceObservationDetail`
+
+This table is the queryable measurement projection. It keeps the native value
+and any transcribed value in separate columns, along with units, direction,
+error bounds, replicate counts, timepoint, assay, cell/tissue context, source
+locator, and a native source-row snapshot. It does not replace the mSCS record.
+
+`reported_value_numeric` is populated from the native source value when one is
+present; otherwise it is explicitly transcribed or digitized and its origin is
+recorded in `reported_value_kind` and `measurement_status`. Rows without a
+reported scalar remain qualitative or unreported rather than receiving an
+inferred number.
+
 ## Modality rules
 
 - **Protein:** link exact activation, abundance, phosphorylation, or cleavage
@@ -80,6 +94,27 @@ target:
    local `Paper`, `Observation`, or `AuthorClaim` anchor is present.
 6. Promote an existing edge only through the existing edge/source gates. A
    module-evidence link alone never changes graph traversal.
+
+The reproducible mSCS import currently reads the three local mSCS stores and
+writes an idempotent SQL bundle plus TSV audit manifests:
+
+```bash
+python3 scripts/import_mscs_modality_evidence.py \
+  --mscs-root /Users/derea/Documents/SCI/mSCS \
+  --output data/processed/mscs_modality_evidence_import_v1
+```
+
+The generated import contains protein and epigenetic observation details and
+the available GSE269377 spatial pilot metrics. It creates no module links,
+local paper/observation/claim anchors, or canonical edge promotions until
+those mappings are separately adjudicated.
+
+The current snapshot contains 1,287 source records and 1,420 detail rows:
+1,259 protein observations, 17 epigenetic observations, and 144 spatial pilot
+metric rows. Protein ABC values are mapped only from explicit mSCS grade
+prefixes (`A`, `B`, or `C`); all context levels remain unassigned pending
+explicit L0-L4 adjudication. The spatial rows remain `derived_pilot` and use
+provisional cluster labels.
 
 Validate with:
 
