@@ -255,6 +255,12 @@ def referenced_experiment_rows(bundle: dict[str, Any]) -> list[dict[str, str]]:
     return [rows[key] for key in sorted(rows)]
 
 
+def parse_experiments(path: Path) -> dict[str, dict[str, str]]:
+    """Index A-layer extracted experiments for richer SQL materialization."""
+    rows = extract_table(path.read_text(), "## Extracted Experiments")
+    return {experiment_key(row): row for row in rows}
+
+
 def experiment_number(experiment_id: str) -> str:
     match = re.search(r"-E(\d{3})", experiment_id)
     return str(int(match.group(1))) if match else "NULL"
@@ -301,6 +307,7 @@ def render_materialization_sql(
     config: ModuleConfig,
     bundle: dict[str, Any],
     papers: dict[str, dict[str, str | None]],
+    experiments: dict[str, dict[str, str]],
 ) -> str:
     module_num = config.key.removesuffix("b")
     module_label = config.label
@@ -365,11 +372,34 @@ def render_materialization_sql(
     for row in experiment_rows:
         key = experiment_key(row)
         paper_id = canonical_paper_id(row["paper_id"], config)
+        extracted = experiments.get(key, {})
+        description = " ".join(
+            part
+            for part in (
+                f"Extracted details: {extracted.get('methods_summary', '').strip()}" if extracted.get("methods_summary") else "",
+                f"Extraction status: {extracted.get('experiment_extracted', '').strip()}" if extracted.get("experiment_extracted") else "",
+            )
+            if part
+        )
+        if not description:
+            description = module_label + " tracker-derived experiment placeholder for SQL materialization."
         notes = json_note(
             {
                 "tracker_key": key,
                 "source_paper_tracker_id": row["paper_id"],
                 "source_experiment_tracker_id": row["experiment_id"],
+                "species": extracted.get("species"),
+                "strain": extracted.get("strain"),
+                "sex": extracted.get("sex"),
+                "injury_model": extracted.get("injury_model"),
+                "injury_device": extracted.get("injury_device"),
+                "injury_severity": extracted.get("injury_severity"),
+                "vertebral_level": extracted.get("vertebral_level"),
+                "chronicity_dpi_wpi": extracted.get("chronicity_dpi_wpi"),
+                "control_type": extracted.get("control_type"),
+                "intervention_type": extracted.get("intervention_type"),
+                "methods_summary": extracted.get("methods_summary"),
+                "experiment_extracted": extracted.get("experiment_extracted"),
                 "observation_tracker_ids": [
                     obs["tracker_id"] for obs in bundle["observations"] if experiment_key(obs) == key
                 ],
@@ -385,7 +415,7 @@ def render_materialization_sql(
                 f"    {experiment_number(row['experiment_id'])},",
                 f"    {sql_literal(row['figure_ref'])},",
                 f"    {sql_literal('Tracker experiment ' + row['experiment_id'])},",
-                f"    {sql_literal(module_label + ' tracker-derived experiment placeholder for SQL materialization.')},",
+                f"    {sql_literal(description)},",
                 f"    {sql_literal(notes)}",
                 f"  FROM {table_prefix}_paper_map p",
                 f"  JOIN {table_prefix}_paradigm_map ep ON ep.tracker_id = p.tracker_id",
@@ -648,7 +678,8 @@ def main(argv: list[str] | None = None) -> int:
                 print(f"FAIL {config.label}: {error}", file=sys.stderr)
             continue
         papers = parse_papers(MODULE_A_TRACKERS[module_key])
-        sql = render_materialization_sql(config, bundle, papers)
+        experiments = parse_experiments(MODULE_A_TRACKERS[module_key])
+        sql = render_materialization_sql(config, bundle, papers, experiments)
         output = default_output(config)
         if args.check:
             print(

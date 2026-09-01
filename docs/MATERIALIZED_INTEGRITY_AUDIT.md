@@ -5,7 +5,7 @@ Generated from `scripts/audit_materialized_integrity.py`.
 | Module | A Experiments Covered | SQL Experiments | Observations | Claims | Links | Consensus | Consensus-Observation Links |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Module 1 | N/A | 87 | 93 | 50 | 107 | 8 | 84 |
-| Module 2 | N/A | 86 | 90 | 36 | 56 | 8 | 54 |
+| Module 2 | N/A | 78 | 90 | 36 | 56 | 8 | 54 |
 | Module 3 | N/A | 94 | 94 | 36 | 60 | 8 | 103 |
 | Module 4 | N/A | 98 | 98 | 40 | 72 | 8 | 139 |
 | Module 5 | N/A | 94 | 94 | 36 | 60 | 8 | 108 |
@@ -25,7 +25,7 @@ Generated from `scripts/audit_materialized_integrity.py`.
 
 - Module 1 has 10 observations not linked to author claims (expected for per-experiment backfill rows)
 - Module 2 has 48 observations not linked to author claims (expected for per-experiment backfill rows)
-- Module 2 has 84 exact B experiments not in parsed A table
+- Module 2 has 76 exact B experiments not in parsed A table
 - Module 3 has 59 observations not linked to author claims (expected for per-experiment backfill rows)
 - Module 3 has 94 exact B experiments not in parsed A table
 - Module 4 has 47 observations not linked to author claims (expected for per-experiment backfill rows)

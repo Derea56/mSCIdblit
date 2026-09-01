@@ -232,7 +232,7 @@ WITH inserted AS (
     'Human iPSC-derived spinal neural progenitors enhance sensorimotor recovery in spinal cord-injured NOD-SCID mice via differentiation and microenvironment regulation.', 'Yao X', 2025,
     NULL, NULL, NULL,
     NULL, NULL, '40846836',
-    NULL, '{"curator_notes": "iPSC spinal progenitor differentiation and microenvironment regulation", "module": "Module 4B", "tracker_id": "M4A-P019"}'
+    NULL, '{"curator_notes": "iPSC spinal progenitor differentiation and microenvironment regulation; PMCID PMC12373886", "module": "Module 4B", "tracker_id": "M4A-P019"}'
   )
   RETURNING paper_id
 )
@@ -244,7 +244,7 @@ WITH inserted AS (
     'Functional Recovery by Transplantation of Human iPSC-Derived A2B5 Positive Neural Progenitor Cell After Spinal Cord Injury in Mice.', 'Zheng Y', 2025,
     NULL, NULL, NULL,
     NULL, NULL, '41009511',
-    NULL, '{"curator_notes": "A2B5+ iPSC progenitor functional recovery anchor", "module": "Module 4B", "tracker_id": "M4A-P020"}'
+    NULL, '{"curator_notes": "A2B5+ iPSC progenitor functional recovery anchor; PMCID PMC12469384", "module": "Module 4B", "tracker_id": "M4A-P020"}'
   )
   RETURNING paper_id
 )
@@ -280,7 +280,7 @@ WITH inserted AS (
     'Hepatocyte growth factor pretreatment boosts functional recovery after spinal cord injury through human iPSC-derived neural stem/progenitor cell transplantation.', 'Suematsu Y', 2023,
     NULL, NULL, NULL,
     NULL, NULL, '37845736',
-    NULL, '{"curator_notes": "Microenvironment/growth-factor pretreatment combination", "module": "Module 4B", "tracker_id": "M4A-P023"}'
+    NULL, '{"curator_notes": "Microenvironment/growth-factor pretreatment combination; PMCID PMC10577910; DOI 10.1186/s41232-023-00298-y", "module": "Module 4B", "tracker_id": "M4A-P023"}'
   )
   RETURNING paper_id
 )
@@ -1339,7 +1339,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P001-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O001"], "source_experiment_tracker_id": "M4A-P001-E001", "source_paper_tracker_id": "M4A-P001", "tracker_key": "M4A-P001::M4A-P001-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O001"], "sex": null, "source_experiment_tracker_id": "M4A-P001-E001", "source_paper_tracker_id": "M4A-P001", "species": null, "strain": null, "tracker_key": "M4A-P001::M4A-P001-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P001'
@@ -1356,7 +1356,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P001-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O061"], "source_experiment_tracker_id": "M4A-P001-E002", "source_paper_tracker_id": "M4A-P001", "tracker_key": "M4A-P001::M4A-P001-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O061"], "sex": null, "source_experiment_tracker_id": "M4A-P001-E002", "source_paper_tracker_id": "M4A-P001", "species": null, "strain": null, "tracker_key": "M4A-P001::M4A-P001-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P001'
@@ -1373,7 +1373,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P002-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O002"], "source_experiment_tracker_id": "M4A-P002-E001", "source_paper_tracker_id": "M4A-P002", "tracker_key": "M4A-P002::M4A-P002-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O002"], "sex": null, "source_experiment_tracker_id": "M4A-P002-E001", "source_paper_tracker_id": "M4A-P002", "species": null, "strain": null, "tracker_key": "M4A-P002::M4A-P002-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P002'
@@ -1390,7 +1390,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P003-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O003"], "source_experiment_tracker_id": "M4A-P003-E001", "source_paper_tracker_id": "M4A-P003", "tracker_key": "M4A-P003::M4A-P003-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O003"], "sex": null, "source_experiment_tracker_id": "M4A-P003-E001", "source_paper_tracker_id": "M4A-P003", "species": null, "strain": null, "tracker_key": "M4A-P003::M4A-P003-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P003'
@@ -1407,7 +1407,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P003-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O062"], "source_experiment_tracker_id": "M4A-P003-E002", "source_paper_tracker_id": "M4A-P003", "tracker_key": "M4A-P003::M4A-P003-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O062"], "sex": null, "source_experiment_tracker_id": "M4A-P003-E002", "source_paper_tracker_id": "M4A-P003", "species": null, "strain": null, "tracker_key": "M4A-P003::M4A-P003-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P003'
@@ -1424,7 +1424,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P004-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O004"], "source_experiment_tracker_id": "M4A-P004-E001", "source_paper_tracker_id": "M4A-P004", "tracker_key": "M4A-P004::M4A-P004-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O004"], "sex": null, "source_experiment_tracker_id": "M4A-P004-E001", "source_paper_tracker_id": "M4A-P004", "species": null, "strain": null, "tracker_key": "M4A-P004::M4A-P004-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P004'
@@ -1441,7 +1441,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P004-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O063"], "source_experiment_tracker_id": "M4A-P004-E002", "source_paper_tracker_id": "M4A-P004", "tracker_key": "M4A-P004::M4A-P004-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O063"], "sex": null, "source_experiment_tracker_id": "M4A-P004-E002", "source_paper_tracker_id": "M4A-P004", "species": null, "strain": null, "tracker_key": "M4A-P004::M4A-P004-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P004'
@@ -1458,7 +1458,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P005-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O005"], "source_experiment_tracker_id": "M4A-P005-E001", "source_paper_tracker_id": "M4A-P005", "tracker_key": "M4A-P005::M4A-P005-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O005"], "sex": null, "source_experiment_tracker_id": "M4A-P005-E001", "source_paper_tracker_id": "M4A-P005", "species": null, "strain": null, "tracker_key": "M4A-P005::M4A-P005-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P005'
@@ -1475,7 +1475,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P005-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O064"], "source_experiment_tracker_id": "M4A-P005-E002", "source_paper_tracker_id": "M4A-P005", "tracker_key": "M4A-P005::M4A-P005-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O064"], "sex": null, "source_experiment_tracker_id": "M4A-P005-E002", "source_paper_tracker_id": "M4A-P005", "species": null, "strain": null, "tracker_key": "M4A-P005::M4A-P005-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P005'
@@ -1492,7 +1492,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P006-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O006"], "source_experiment_tracker_id": "M4A-P006-E001", "source_paper_tracker_id": "M4A-P006", "tracker_key": "M4A-P006::M4A-P006-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O006"], "sex": null, "source_experiment_tracker_id": "M4A-P006-E001", "source_paper_tracker_id": "M4A-P006", "species": null, "strain": null, "tracker_key": "M4A-P006::M4A-P006-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P006'
@@ -1509,7 +1509,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P006-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O065"], "source_experiment_tracker_id": "M4A-P006-E002", "source_paper_tracker_id": "M4A-P006", "tracker_key": "M4A-P006::M4A-P006-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O065"], "sex": null, "source_experiment_tracker_id": "M4A-P006-E002", "source_paper_tracker_id": "M4A-P006", "species": null, "strain": null, "tracker_key": "M4A-P006::M4A-P006-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P006'
@@ -1526,7 +1526,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P007-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O007"], "source_experiment_tracker_id": "M4A-P007-E001", "source_paper_tracker_id": "M4A-P007", "tracker_key": "M4A-P007::M4A-P007-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O007"], "sex": null, "source_experiment_tracker_id": "M4A-P007-E001", "source_paper_tracker_id": "M4A-P007", "species": null, "strain": null, "tracker_key": "M4A-P007::M4A-P007-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P007'
@@ -1543,7 +1543,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P007-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O066"], "source_experiment_tracker_id": "M4A-P007-E002", "source_paper_tracker_id": "M4A-P007", "tracker_key": "M4A-P007::M4A-P007-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O066"], "sex": null, "source_experiment_tracker_id": "M4A-P007-E002", "source_paper_tracker_id": "M4A-P007", "species": null, "strain": null, "tracker_key": "M4A-P007::M4A-P007-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P007'
@@ -1560,7 +1560,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P008-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O008"], "source_experiment_tracker_id": "M4A-P008-E001", "source_paper_tracker_id": "M4A-P008", "tracker_key": "M4A-P008::M4A-P008-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O008"], "sex": null, "source_experiment_tracker_id": "M4A-P008-E001", "source_paper_tracker_id": "M4A-P008", "species": null, "strain": null, "tracker_key": "M4A-P008::M4A-P008-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P008'
@@ -1577,7 +1577,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P008-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O067"], "source_experiment_tracker_id": "M4A-P008-E002", "source_paper_tracker_id": "M4A-P008", "tracker_key": "M4A-P008::M4A-P008-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O067"], "sex": null, "source_experiment_tracker_id": "M4A-P008-E002", "source_paper_tracker_id": "M4A-P008", "species": null, "strain": null, "tracker_key": "M4A-P008::M4A-P008-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P008'
@@ -1594,7 +1594,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P009-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O009"], "source_experiment_tracker_id": "M4A-P009-E001", "source_paper_tracker_id": "M4A-P009", "tracker_key": "M4A-P009::M4A-P009-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O009"], "sex": null, "source_experiment_tracker_id": "M4A-P009-E001", "source_paper_tracker_id": "M4A-P009", "species": null, "strain": null, "tracker_key": "M4A-P009::M4A-P009-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P009'
@@ -1611,7 +1611,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P009-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O068"], "source_experiment_tracker_id": "M4A-P009-E002", "source_paper_tracker_id": "M4A-P009", "tracker_key": "M4A-P009::M4A-P009-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O068"], "sex": null, "source_experiment_tracker_id": "M4A-P009-E002", "source_paper_tracker_id": "M4A-P009", "species": null, "strain": null, "tracker_key": "M4A-P009::M4A-P009-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P009'
@@ -1628,7 +1628,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P010-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O010"], "source_experiment_tracker_id": "M4A-P010-E001", "source_paper_tracker_id": "M4A-P010", "tracker_key": "M4A-P010::M4A-P010-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O010"], "sex": null, "source_experiment_tracker_id": "M4A-P010-E001", "source_paper_tracker_id": "M4A-P010", "species": null, "strain": null, "tracker_key": "M4A-P010::M4A-P010-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P010'
@@ -1645,7 +1645,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P011-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O011"], "source_experiment_tracker_id": "M4A-P011-E001", "source_paper_tracker_id": "M4A-P011", "tracker_key": "M4A-P011::M4A-P011-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O011"], "sex": null, "source_experiment_tracker_id": "M4A-P011-E001", "source_paper_tracker_id": "M4A-P011", "species": null, "strain": null, "tracker_key": "M4A-P011::M4A-P011-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P011'
@@ -1662,7 +1662,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P011-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O069"], "source_experiment_tracker_id": "M4A-P011-E002", "source_paper_tracker_id": "M4A-P011", "tracker_key": "M4A-P011::M4A-P011-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O069"], "sex": null, "source_experiment_tracker_id": "M4A-P011-E002", "source_paper_tracker_id": "M4A-P011", "species": null, "strain": null, "tracker_key": "M4A-P011::M4A-P011-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P011'
@@ -1679,7 +1679,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P012-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O012"], "source_experiment_tracker_id": "M4A-P012-E001", "source_paper_tracker_id": "M4A-P012", "tracker_key": "M4A-P012::M4A-P012-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O012"], "sex": null, "source_experiment_tracker_id": "M4A-P012-E001", "source_paper_tracker_id": "M4A-P012", "species": null, "strain": null, "tracker_key": "M4A-P012::M4A-P012-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P012'
@@ -1696,7 +1696,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P012-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O070"], "source_experiment_tracker_id": "M4A-P012-E002", "source_paper_tracker_id": "M4A-P012", "tracker_key": "M4A-P012::M4A-P012-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O070"], "sex": null, "source_experiment_tracker_id": "M4A-P012-E002", "source_paper_tracker_id": "M4A-P012", "species": null, "strain": null, "tracker_key": "M4A-P012::M4A-P012-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P012'
@@ -1713,7 +1713,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P013-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O013"], "source_experiment_tracker_id": "M4A-P013-E001", "source_paper_tracker_id": "M4A-P013", "tracker_key": "M4A-P013::M4A-P013-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O013"], "sex": null, "source_experiment_tracker_id": "M4A-P013-E001", "source_paper_tracker_id": "M4A-P013", "species": null, "strain": null, "tracker_key": "M4A-P013::M4A-P013-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P013'
@@ -1730,7 +1730,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P013-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O071"], "source_experiment_tracker_id": "M4A-P013-E002", "source_paper_tracker_id": "M4A-P013", "tracker_key": "M4A-P013::M4A-P013-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O071"], "sex": null, "source_experiment_tracker_id": "M4A-P013-E002", "source_paper_tracker_id": "M4A-P013", "species": null, "strain": null, "tracker_key": "M4A-P013::M4A-P013-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P013'
@@ -1747,7 +1747,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P014-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O014"], "source_experiment_tracker_id": "M4A-P014-E001", "source_paper_tracker_id": "M4A-P014", "tracker_key": "M4A-P014::M4A-P014-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O014"], "sex": null, "source_experiment_tracker_id": "M4A-P014-E001", "source_paper_tracker_id": "M4A-P014", "species": null, "strain": null, "tracker_key": "M4A-P014::M4A-P014-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P014'
@@ -1764,7 +1764,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P014-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O072"], "source_experiment_tracker_id": "M4A-P014-E002", "source_paper_tracker_id": "M4A-P014", "tracker_key": "M4A-P014::M4A-P014-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O072"], "sex": null, "source_experiment_tracker_id": "M4A-P014-E002", "source_paper_tracker_id": "M4A-P014", "species": null, "strain": null, "tracker_key": "M4A-P014::M4A-P014-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P014'
@@ -1781,7 +1781,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P015-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O015"], "source_experiment_tracker_id": "M4A-P015-E001", "source_paper_tracker_id": "M4A-P015", "tracker_key": "M4A-P015::M4A-P015-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O015"], "sex": null, "source_experiment_tracker_id": "M4A-P015-E001", "source_paper_tracker_id": "M4A-P015", "species": null, "strain": null, "tracker_key": "M4A-P015::M4A-P015-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P015'
@@ -1798,7 +1798,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P016-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O016"], "source_experiment_tracker_id": "M4A-P016-E001", "source_paper_tracker_id": "M4A-P016", "tracker_key": "M4A-P016::M4A-P016-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O016"], "sex": null, "source_experiment_tracker_id": "M4A-P016-E001", "source_paper_tracker_id": "M4A-P016", "species": null, "strain": null, "tracker_key": "M4A-P016::M4A-P016-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P016'
@@ -1815,7 +1815,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P016-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O073"], "source_experiment_tracker_id": "M4A-P016-E002", "source_paper_tracker_id": "M4A-P016", "tracker_key": "M4A-P016::M4A-P016-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O073"], "sex": null, "source_experiment_tracker_id": "M4A-P016-E002", "source_paper_tracker_id": "M4A-P016", "species": null, "strain": null, "tracker_key": "M4A-P016::M4A-P016-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P016'
@@ -1832,7 +1832,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P017-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O017"], "source_experiment_tracker_id": "M4A-P017-E001", "source_paper_tracker_id": "M4A-P017", "tracker_key": "M4A-P017::M4A-P017-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O017"], "sex": null, "source_experiment_tracker_id": "M4A-P017-E001", "source_paper_tracker_id": "M4A-P017", "species": null, "strain": null, "tracker_key": "M4A-P017::M4A-P017-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P017'
@@ -1849,7 +1849,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P018-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O018"], "source_experiment_tracker_id": "M4A-P018-E001", "source_paper_tracker_id": "M4A-P018", "tracker_key": "M4A-P018::M4A-P018-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O018"], "sex": null, "source_experiment_tracker_id": "M4A-P018-E001", "source_paper_tracker_id": "M4A-P018", "species": null, "strain": null, "tracker_key": "M4A-P018::M4A-P018-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P018'
@@ -1866,7 +1866,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P018-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O074"], "source_experiment_tracker_id": "M4A-P018-E002", "source_paper_tracker_id": "M4A-P018", "tracker_key": "M4A-P018::M4A-P018-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O074"], "sex": null, "source_experiment_tracker_id": "M4A-P018-E002", "source_paper_tracker_id": "M4A-P018", "species": null, "strain": null, "tracker_key": "M4A-P018::M4A-P018-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P018'
@@ -1880,10 +1880,10 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract / carried',
+    'Full text PMC12373886; Fig. 3; Methods',
     'Tracker experiment M4A-P019-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O019"], "source_experiment_tracker_id": "M4A-P019-E001", "source_paper_tracker_id": "M4A-P019", "tracker_key": "M4A-P019::M4A-P019-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O019"], "sex": null, "source_experiment_tracker_id": "M4A-P019-E001", "source_paper_tracker_id": "M4A-P019", "species": null, "strain": null, "tracker_key": "M4A-P019::M4A-P019-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P019'
@@ -1897,10 +1897,10 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract / PubMed metadata',
+    'Full text PMC12373886; Fig. 4-7; Results',
     'Tracker experiment M4A-P019-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O075"], "source_experiment_tracker_id": "M4A-P019-E002", "source_paper_tracker_id": "M4A-P019", "tracker_key": "M4A-P019::M4A-P019-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O075"], "sex": null, "source_experiment_tracker_id": "M4A-P019-E002", "source_paper_tracker_id": "M4A-P019", "species": null, "strain": null, "tracker_key": "M4A-P019::M4A-P019-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P019'
@@ -1914,10 +1914,10 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract / carried',
+    'Full text PMC12469384; Fig. 3-4; Results',
     'Tracker experiment M4A-P020-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O020"], "source_experiment_tracker_id": "M4A-P020-E001", "source_paper_tracker_id": "M4A-P020", "tracker_key": "M4A-P020::M4A-P020-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O020"], "sex": null, "source_experiment_tracker_id": "M4A-P020-E001", "source_paper_tracker_id": "M4A-P020", "species": null, "strain": null, "tracker_key": "M4A-P020::M4A-P020-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P020'
@@ -1931,10 +1931,10 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract / PubMed metadata',
+    'Full text PMC12469384; Fig. 5-6; Results',
     'Tracker experiment M4A-P020-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O076"], "source_experiment_tracker_id": "M4A-P020-E002", "source_paper_tracker_id": "M4A-P020", "tracker_key": "M4A-P020::M4A-P020-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O076"], "sex": null, "source_experiment_tracker_id": "M4A-P020-E002", "source_paper_tracker_id": "M4A-P020", "species": null, "strain": null, "tracker_key": "M4A-P020::M4A-P020-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P020'
@@ -1951,7 +1951,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P021-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O021"], "source_experiment_tracker_id": "M4A-P021-E001", "source_paper_tracker_id": "M4A-P021", "tracker_key": "M4A-P021::M4A-P021-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O021"], "sex": null, "source_experiment_tracker_id": "M4A-P021-E001", "source_paper_tracker_id": "M4A-P021", "species": null, "strain": null, "tracker_key": "M4A-P021::M4A-P021-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P021'
@@ -1968,7 +1968,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P021-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O077"], "source_experiment_tracker_id": "M4A-P021-E002", "source_paper_tracker_id": "M4A-P021", "tracker_key": "M4A-P021::M4A-P021-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O077"], "sex": null, "source_experiment_tracker_id": "M4A-P021-E002", "source_paper_tracker_id": "M4A-P021", "species": null, "strain": null, "tracker_key": "M4A-P021::M4A-P021-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P021'
@@ -1985,7 +1985,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P022-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O022"], "source_experiment_tracker_id": "M4A-P022-E001", "source_paper_tracker_id": "M4A-P022", "tracker_key": "M4A-P022::M4A-P022-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O022"], "sex": null, "source_experiment_tracker_id": "M4A-P022-E001", "source_paper_tracker_id": "M4A-P022", "species": null, "strain": null, "tracker_key": "M4A-P022::M4A-P022-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P022'
@@ -2002,7 +2002,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P022-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O078"], "source_experiment_tracker_id": "M4A-P022-E002", "source_paper_tracker_id": "M4A-P022", "tracker_key": "M4A-P022::M4A-P022-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O078"], "sex": null, "source_experiment_tracker_id": "M4A-P022-E002", "source_paper_tracker_id": "M4A-P022", "species": null, "strain": null, "tracker_key": "M4A-P022::M4A-P022-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P022'
@@ -2016,10 +2016,10 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     1,
-    'Abstract / carried',
+    'Full text PMC10577910; Fig. 1; Methods/Results',
     'Tracker experiment M4A-P023-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O023"], "source_experiment_tracker_id": "M4A-P023-E001", "source_paper_tracker_id": "M4A-P023", "tracker_key": "M4A-P023::M4A-P023-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O023"], "sex": null, "source_experiment_tracker_id": "M4A-P023-E001", "source_paper_tracker_id": "M4A-P023", "species": null, "strain": null, "tracker_key": "M4A-P023::M4A-P023-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P023'
@@ -2033,10 +2033,10 @@ WITH inserted AS (
   )
   SELECT p.paper_id, ep.paradigm_id,
     2,
-    'Abstract / PubMed metadata',
+    'Full text PMC10577910; Fig. 7; Results/Methods',
     'Tracker experiment M4A-P023-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O079"], "source_experiment_tracker_id": "M4A-P023-E002", "source_paper_tracker_id": "M4A-P023", "tracker_key": "M4A-P023::M4A-P023-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O079"], "sex": null, "source_experiment_tracker_id": "M4A-P023-E002", "source_paper_tracker_id": "M4A-P023", "species": null, "strain": null, "tracker_key": "M4A-P023::M4A-P023-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P023'
@@ -2053,7 +2053,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P024-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O024"], "source_experiment_tracker_id": "M4A-P024-E001", "source_paper_tracker_id": "M4A-P024", "tracker_key": "M4A-P024::M4A-P024-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O024"], "sex": null, "source_experiment_tracker_id": "M4A-P024-E001", "source_paper_tracker_id": "M4A-P024", "species": null, "strain": null, "tracker_key": "M4A-P024::M4A-P024-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P024'
@@ -2070,7 +2070,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P025-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O025"], "source_experiment_tracker_id": "M4A-P025-E001", "source_paper_tracker_id": "M4A-P025", "tracker_key": "M4A-P025::M4A-P025-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O025"], "sex": null, "source_experiment_tracker_id": "M4A-P025-E001", "source_paper_tracker_id": "M4A-P025", "species": null, "strain": null, "tracker_key": "M4A-P025::M4A-P025-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P025'
@@ -2087,7 +2087,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P025-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O080"], "source_experiment_tracker_id": "M4A-P025-E002", "source_paper_tracker_id": "M4A-P025", "tracker_key": "M4A-P025::M4A-P025-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O080"], "sex": null, "source_experiment_tracker_id": "M4A-P025-E002", "source_paper_tracker_id": "M4A-P025", "species": null, "strain": null, "tracker_key": "M4A-P025::M4A-P025-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P025'
@@ -2104,7 +2104,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P026-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O026"], "source_experiment_tracker_id": "M4A-P026-E001", "source_paper_tracker_id": "M4A-P026", "tracker_key": "M4A-P026::M4A-P026-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O026"], "sex": null, "source_experiment_tracker_id": "M4A-P026-E001", "source_paper_tracker_id": "M4A-P026", "species": null, "strain": null, "tracker_key": "M4A-P026::M4A-P026-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P026'
@@ -2121,7 +2121,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P027-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O027"], "source_experiment_tracker_id": "M4A-P027-E001", "source_paper_tracker_id": "M4A-P027", "tracker_key": "M4A-P027::M4A-P027-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O027"], "sex": null, "source_experiment_tracker_id": "M4A-P027-E001", "source_paper_tracker_id": "M4A-P027", "species": null, "strain": null, "tracker_key": "M4A-P027::M4A-P027-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P027'
@@ -2138,7 +2138,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P027-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O081"], "source_experiment_tracker_id": "M4A-P027-E002", "source_paper_tracker_id": "M4A-P027", "tracker_key": "M4A-P027::M4A-P027-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O081"], "sex": null, "source_experiment_tracker_id": "M4A-P027-E002", "source_paper_tracker_id": "M4A-P027", "species": null, "strain": null, "tracker_key": "M4A-P027::M4A-P027-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P027'
@@ -2155,7 +2155,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P028-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O028"], "source_experiment_tracker_id": "M4A-P028-E001", "source_paper_tracker_id": "M4A-P028", "tracker_key": "M4A-P028::M4A-P028-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O028"], "sex": null, "source_experiment_tracker_id": "M4A-P028-E001", "source_paper_tracker_id": "M4A-P028", "species": null, "strain": null, "tracker_key": "M4A-P028::M4A-P028-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P028'
@@ -2172,7 +2172,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P028-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O082"], "source_experiment_tracker_id": "M4A-P028-E002", "source_paper_tracker_id": "M4A-P028", "tracker_key": "M4A-P028::M4A-P028-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O082"], "sex": null, "source_experiment_tracker_id": "M4A-P028-E002", "source_paper_tracker_id": "M4A-P028", "species": null, "strain": null, "tracker_key": "M4A-P028::M4A-P028-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P028'
@@ -2189,7 +2189,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P029-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O029"], "source_experiment_tracker_id": "M4A-P029-E001", "source_paper_tracker_id": "M4A-P029", "tracker_key": "M4A-P029::M4A-P029-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O029"], "sex": null, "source_experiment_tracker_id": "M4A-P029-E001", "source_paper_tracker_id": "M4A-P029", "species": null, "strain": null, "tracker_key": "M4A-P029::M4A-P029-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P029'
@@ -2206,7 +2206,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P030-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O030"], "source_experiment_tracker_id": "M4A-P030-E001", "source_paper_tracker_id": "M4A-P030", "tracker_key": "M4A-P030::M4A-P030-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O030"], "sex": null, "source_experiment_tracker_id": "M4A-P030-E001", "source_paper_tracker_id": "M4A-P030", "species": null, "strain": null, "tracker_key": "M4A-P030::M4A-P030-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P030'
@@ -2223,7 +2223,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P030-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O083"], "source_experiment_tracker_id": "M4A-P030-E002", "source_paper_tracker_id": "M4A-P030", "tracker_key": "M4A-P030::M4A-P030-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O083"], "sex": null, "source_experiment_tracker_id": "M4A-P030-E002", "source_paper_tracker_id": "M4A-P030", "species": null, "strain": null, "tracker_key": "M4A-P030::M4A-P030-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P030'
@@ -2240,7 +2240,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P031-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O031"], "source_experiment_tracker_id": "M4A-P031-E001", "source_paper_tracker_id": "M4A-P031", "tracker_key": "M4A-P031::M4A-P031-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O031"], "sex": null, "source_experiment_tracker_id": "M4A-P031-E001", "source_paper_tracker_id": "M4A-P031", "species": null, "strain": null, "tracker_key": "M4A-P031::M4A-P031-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P031'
@@ -2257,7 +2257,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P031-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O084"], "source_experiment_tracker_id": "M4A-P031-E002", "source_paper_tracker_id": "M4A-P031", "tracker_key": "M4A-P031::M4A-P031-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O084"], "sex": null, "source_experiment_tracker_id": "M4A-P031-E002", "source_paper_tracker_id": "M4A-P031", "species": null, "strain": null, "tracker_key": "M4A-P031::M4A-P031-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P031'
@@ -2274,7 +2274,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P032-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O032"], "source_experiment_tracker_id": "M4A-P032-E001", "source_paper_tracker_id": "M4A-P032", "tracker_key": "M4A-P032::M4A-P032-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O032"], "sex": null, "source_experiment_tracker_id": "M4A-P032-E001", "source_paper_tracker_id": "M4A-P032", "species": null, "strain": null, "tracker_key": "M4A-P032::M4A-P032-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P032'
@@ -2291,7 +2291,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P032-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O085"], "source_experiment_tracker_id": "M4A-P032-E002", "source_paper_tracker_id": "M4A-P032", "tracker_key": "M4A-P032::M4A-P032-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O085"], "sex": null, "source_experiment_tracker_id": "M4A-P032-E002", "source_paper_tracker_id": "M4A-P032", "species": null, "strain": null, "tracker_key": "M4A-P032::M4A-P032-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P032'
@@ -2308,7 +2308,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P033-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O033"], "source_experiment_tracker_id": "M4A-P033-E001", "source_paper_tracker_id": "M4A-P033", "tracker_key": "M4A-P033::M4A-P033-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O033"], "sex": null, "source_experiment_tracker_id": "M4A-P033-E001", "source_paper_tracker_id": "M4A-P033", "species": null, "strain": null, "tracker_key": "M4A-P033::M4A-P033-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P033'
@@ -2325,7 +2325,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P033-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O086"], "source_experiment_tracker_id": "M4A-P033-E002", "source_paper_tracker_id": "M4A-P033", "tracker_key": "M4A-P033::M4A-P033-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O086"], "sex": null, "source_experiment_tracker_id": "M4A-P033-E002", "source_paper_tracker_id": "M4A-P033", "species": null, "strain": null, "tracker_key": "M4A-P033::M4A-P033-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P033'
@@ -2342,7 +2342,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P034-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O034"], "source_experiment_tracker_id": "M4A-P034-E001", "source_paper_tracker_id": "M4A-P034", "tracker_key": "M4A-P034::M4A-P034-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O034"], "sex": null, "source_experiment_tracker_id": "M4A-P034-E001", "source_paper_tracker_id": "M4A-P034", "species": null, "strain": null, "tracker_key": "M4A-P034::M4A-P034-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P034'
@@ -2359,7 +2359,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P034-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O087"], "source_experiment_tracker_id": "M4A-P034-E002", "source_paper_tracker_id": "M4A-P034", "tracker_key": "M4A-P034::M4A-P034-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O087"], "sex": null, "source_experiment_tracker_id": "M4A-P034-E002", "source_paper_tracker_id": "M4A-P034", "species": null, "strain": null, "tracker_key": "M4A-P034::M4A-P034-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P034'
@@ -2376,7 +2376,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P035-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O035"], "source_experiment_tracker_id": "M4A-P035-E001", "source_paper_tracker_id": "M4A-P035", "tracker_key": "M4A-P035::M4A-P035-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O035"], "sex": null, "source_experiment_tracker_id": "M4A-P035-E001", "source_paper_tracker_id": "M4A-P035", "species": null, "strain": null, "tracker_key": "M4A-P035::M4A-P035-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P035'
@@ -2393,7 +2393,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P035-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O088"], "source_experiment_tracker_id": "M4A-P035-E002", "source_paper_tracker_id": "M4A-P035", "tracker_key": "M4A-P035::M4A-P035-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O088"], "sex": null, "source_experiment_tracker_id": "M4A-P035-E002", "source_paper_tracker_id": "M4A-P035", "species": null, "strain": null, "tracker_key": "M4A-P035::M4A-P035-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P035'
@@ -2410,7 +2410,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P036-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O036"], "source_experiment_tracker_id": "M4A-P036-E001", "source_paper_tracker_id": "M4A-P036", "tracker_key": "M4A-P036::M4A-P036-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O036"], "sex": null, "source_experiment_tracker_id": "M4A-P036-E001", "source_paper_tracker_id": "M4A-P036", "species": null, "strain": null, "tracker_key": "M4A-P036::M4A-P036-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P036'
@@ -2427,7 +2427,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P036-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O089"], "source_experiment_tracker_id": "M4A-P036-E002", "source_paper_tracker_id": "M4A-P036", "tracker_key": "M4A-P036::M4A-P036-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O089"], "sex": null, "source_experiment_tracker_id": "M4A-P036-E002", "source_paper_tracker_id": "M4A-P036", "species": null, "strain": null, "tracker_key": "M4A-P036::M4A-P036-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P036'
@@ -2444,7 +2444,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P037-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O037"], "source_experiment_tracker_id": "M4A-P037-E001", "source_paper_tracker_id": "M4A-P037", "tracker_key": "M4A-P037::M4A-P037-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O037"], "sex": null, "source_experiment_tracker_id": "M4A-P037-E001", "source_paper_tracker_id": "M4A-P037", "species": null, "strain": null, "tracker_key": "M4A-P037::M4A-P037-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P037'
@@ -2461,7 +2461,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P037-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O090"], "source_experiment_tracker_id": "M4A-P037-E002", "source_paper_tracker_id": "M4A-P037", "tracker_key": "M4A-P037::M4A-P037-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O090"], "sex": null, "source_experiment_tracker_id": "M4A-P037-E002", "source_paper_tracker_id": "M4A-P037", "species": null, "strain": null, "tracker_key": "M4A-P037::M4A-P037-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P037'
@@ -2478,7 +2478,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P038-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O038"], "source_experiment_tracker_id": "M4A-P038-E001", "source_paper_tracker_id": "M4A-P038", "tracker_key": "M4A-P038::M4A-P038-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O038"], "sex": null, "source_experiment_tracker_id": "M4A-P038-E001", "source_paper_tracker_id": "M4A-P038", "species": null, "strain": null, "tracker_key": "M4A-P038::M4A-P038-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P038'
@@ -2495,7 +2495,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P038-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O091"], "source_experiment_tracker_id": "M4A-P038-E002", "source_paper_tracker_id": "M4A-P038", "tracker_key": "M4A-P038::M4A-P038-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O091"], "sex": null, "source_experiment_tracker_id": "M4A-P038-E002", "source_paper_tracker_id": "M4A-P038", "species": null, "strain": null, "tracker_key": "M4A-P038::M4A-P038-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P038'
@@ -2512,7 +2512,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P039-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O039"], "source_experiment_tracker_id": "M4A-P039-E001", "source_paper_tracker_id": "M4A-P039", "tracker_key": "M4A-P039::M4A-P039-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O039"], "sex": null, "source_experiment_tracker_id": "M4A-P039-E001", "source_paper_tracker_id": "M4A-P039", "species": null, "strain": null, "tracker_key": "M4A-P039::M4A-P039-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P039'
@@ -2529,7 +2529,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P039-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O092"], "source_experiment_tracker_id": "M4A-P039-E002", "source_paper_tracker_id": "M4A-P039", "tracker_key": "M4A-P039::M4A-P039-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O092"], "sex": null, "source_experiment_tracker_id": "M4A-P039-E002", "source_paper_tracker_id": "M4A-P039", "species": null, "strain": null, "tracker_key": "M4A-P039::M4A-P039-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P039'
@@ -2546,7 +2546,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P040-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O040"], "source_experiment_tracker_id": "M4A-P040-E001", "source_paper_tracker_id": "M4A-P040", "tracker_key": "M4A-P040::M4A-P040-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O040"], "sex": null, "source_experiment_tracker_id": "M4A-P040-E001", "source_paper_tracker_id": "M4A-P040", "species": null, "strain": null, "tracker_key": "M4A-P040::M4A-P040-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P040'
@@ -2563,7 +2563,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P040-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O093"], "source_experiment_tracker_id": "M4A-P040-E002", "source_paper_tracker_id": "M4A-P040", "tracker_key": "M4A-P040::M4A-P040-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O093"], "sex": null, "source_experiment_tracker_id": "M4A-P040-E002", "source_paper_tracker_id": "M4A-P040", "species": null, "strain": null, "tracker_key": "M4A-P040::M4A-P040-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P040'
@@ -2580,7 +2580,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P041-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O041"], "source_experiment_tracker_id": "M4A-P041-E001", "source_paper_tracker_id": "M4A-P041", "tracker_key": "M4A-P041::M4A-P041-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O041"], "sex": null, "source_experiment_tracker_id": "M4A-P041-E001", "source_paper_tracker_id": "M4A-P041", "species": null, "strain": null, "tracker_key": "M4A-P041::M4A-P041-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P041'
@@ -2597,7 +2597,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P041-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O094"], "source_experiment_tracker_id": "M4A-P041-E002", "source_paper_tracker_id": "M4A-P041", "tracker_key": "M4A-P041::M4A-P041-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O094"], "sex": null, "source_experiment_tracker_id": "M4A-P041-E002", "source_paper_tracker_id": "M4A-P041", "species": null, "strain": null, "tracker_key": "M4A-P041::M4A-P041-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P041'
@@ -2614,7 +2614,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P042-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O042"], "source_experiment_tracker_id": "M4A-P042-E001", "source_paper_tracker_id": "M4A-P042", "tracker_key": "M4A-P042::M4A-P042-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O042"], "sex": null, "source_experiment_tracker_id": "M4A-P042-E001", "source_paper_tracker_id": "M4A-P042", "species": null, "strain": null, "tracker_key": "M4A-P042::M4A-P042-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P042'
@@ -2631,7 +2631,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P042-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O095"], "source_experiment_tracker_id": "M4A-P042-E002", "source_paper_tracker_id": "M4A-P042", "tracker_key": "M4A-P042::M4A-P042-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O095"], "sex": null, "source_experiment_tracker_id": "M4A-P042-E002", "source_paper_tracker_id": "M4A-P042", "species": null, "strain": null, "tracker_key": "M4A-P042::M4A-P042-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P042'
@@ -2648,7 +2648,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P043-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O043"], "source_experiment_tracker_id": "M4A-P043-E001", "source_paper_tracker_id": "M4A-P043", "tracker_key": "M4A-P043::M4A-P043-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O043"], "sex": null, "source_experiment_tracker_id": "M4A-P043-E001", "source_paper_tracker_id": "M4A-P043", "species": null, "strain": null, "tracker_key": "M4A-P043::M4A-P043-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P043'
@@ -2665,7 +2665,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P043-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O096"], "source_experiment_tracker_id": "M4A-P043-E002", "source_paper_tracker_id": "M4A-P043", "tracker_key": "M4A-P043::M4A-P043-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O096"], "sex": null, "source_experiment_tracker_id": "M4A-P043-E002", "source_paper_tracker_id": "M4A-P043", "species": null, "strain": null, "tracker_key": "M4A-P043::M4A-P043-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P043'
@@ -2682,7 +2682,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P044-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O044"], "source_experiment_tracker_id": "M4A-P044-E001", "source_paper_tracker_id": "M4A-P044", "tracker_key": "M4A-P044::M4A-P044-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O044"], "sex": null, "source_experiment_tracker_id": "M4A-P044-E001", "source_paper_tracker_id": "M4A-P044", "species": null, "strain": null, "tracker_key": "M4A-P044::M4A-P044-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P044'
@@ -2699,7 +2699,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P044-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O097"], "source_experiment_tracker_id": "M4A-P044-E002", "source_paper_tracker_id": "M4A-P044", "tracker_key": "M4A-P044::M4A-P044-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O097"], "sex": null, "source_experiment_tracker_id": "M4A-P044-E002", "source_paper_tracker_id": "M4A-P044", "species": null, "strain": null, "tracker_key": "M4A-P044::M4A-P044-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P044'
@@ -2716,7 +2716,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P045-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O045"], "source_experiment_tracker_id": "M4A-P045-E001", "source_paper_tracker_id": "M4A-P045", "tracker_key": "M4A-P045::M4A-P045-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O045"], "sex": null, "source_experiment_tracker_id": "M4A-P045-E001", "source_paper_tracker_id": "M4A-P045", "species": null, "strain": null, "tracker_key": "M4A-P045::M4A-P045-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P045'
@@ -2733,7 +2733,7 @@ WITH inserted AS (
     'Abstract / PubMed metadata',
     'Tracker experiment M4A-P045-E002',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O098"], "source_experiment_tracker_id": "M4A-P045-E002", "source_paper_tracker_id": "M4A-P045", "tracker_key": "M4A-P045::M4A-P045-E002"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O098"], "sex": null, "source_experiment_tracker_id": "M4A-P045-E002", "source_paper_tracker_id": "M4A-P045", "species": null, "strain": null, "tracker_key": "M4A-P045::M4A-P045-E002", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P045'
@@ -2750,7 +2750,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P046-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O046"], "source_experiment_tracker_id": "M4A-P046-E001", "source_paper_tracker_id": "M4A-P046", "tracker_key": "M4A-P046::M4A-P046-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O046"], "sex": null, "source_experiment_tracker_id": "M4A-P046-E001", "source_paper_tracker_id": "M4A-P046", "species": null, "strain": null, "tracker_key": "M4A-P046::M4A-P046-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P046'
@@ -2767,7 +2767,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P047-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O047"], "source_experiment_tracker_id": "M4A-P047-E001", "source_paper_tracker_id": "M4A-P047", "tracker_key": "M4A-P047::M4A-P047-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O047"], "sex": null, "source_experiment_tracker_id": "M4A-P047-E001", "source_paper_tracker_id": "M4A-P047", "species": null, "strain": null, "tracker_key": "M4A-P047::M4A-P047-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P047'
@@ -2784,7 +2784,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P048-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O048"], "source_experiment_tracker_id": "M4A-P048-E001", "source_paper_tracker_id": "M4A-P048", "tracker_key": "M4A-P048::M4A-P048-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O048"], "sex": null, "source_experiment_tracker_id": "M4A-P048-E001", "source_paper_tracker_id": "M4A-P048", "species": null, "strain": null, "tracker_key": "M4A-P048::M4A-P048-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P048'
@@ -2801,7 +2801,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P049-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O049"], "source_experiment_tracker_id": "M4A-P049-E001", "source_paper_tracker_id": "M4A-P049", "tracker_key": "M4A-P049::M4A-P049-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O049"], "sex": null, "source_experiment_tracker_id": "M4A-P049-E001", "source_paper_tracker_id": "M4A-P049", "species": null, "strain": null, "tracker_key": "M4A-P049::M4A-P049-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P049'
@@ -2818,7 +2818,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P050-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O050"], "source_experiment_tracker_id": "M4A-P050-E001", "source_paper_tracker_id": "M4A-P050", "tracker_key": "M4A-P050::M4A-P050-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O050"], "sex": null, "source_experiment_tracker_id": "M4A-P050-E001", "source_paper_tracker_id": "M4A-P050", "species": null, "strain": null, "tracker_key": "M4A-P050::M4A-P050-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P050'
@@ -2835,7 +2835,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P051-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O051"], "source_experiment_tracker_id": "M4A-P051-E001", "source_paper_tracker_id": "M4A-P051", "tracker_key": "M4A-P051::M4A-P051-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O051"], "sex": null, "source_experiment_tracker_id": "M4A-P051-E001", "source_paper_tracker_id": "M4A-P051", "species": null, "strain": null, "tracker_key": "M4A-P051::M4A-P051-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P051'
@@ -2852,7 +2852,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P052-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O052"], "source_experiment_tracker_id": "M4A-P052-E001", "source_paper_tracker_id": "M4A-P052", "tracker_key": "M4A-P052::M4A-P052-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O052"], "sex": null, "source_experiment_tracker_id": "M4A-P052-E001", "source_paper_tracker_id": "M4A-P052", "species": null, "strain": null, "tracker_key": "M4A-P052::M4A-P052-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P052'
@@ -2869,7 +2869,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P053-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O053"], "source_experiment_tracker_id": "M4A-P053-E001", "source_paper_tracker_id": "M4A-P053", "tracker_key": "M4A-P053::M4A-P053-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O053"], "sex": null, "source_experiment_tracker_id": "M4A-P053-E001", "source_paper_tracker_id": "M4A-P053", "species": null, "strain": null, "tracker_key": "M4A-P053::M4A-P053-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P053'
@@ -2886,7 +2886,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P054-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O054"], "source_experiment_tracker_id": "M4A-P054-E001", "source_paper_tracker_id": "M4A-P054", "tracker_key": "M4A-P054::M4A-P054-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O054"], "sex": null, "source_experiment_tracker_id": "M4A-P054-E001", "source_paper_tracker_id": "M4A-P054", "species": null, "strain": null, "tracker_key": "M4A-P054::M4A-P054-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P054'
@@ -2903,7 +2903,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P055-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O055"], "source_experiment_tracker_id": "M4A-P055-E001", "source_paper_tracker_id": "M4A-P055", "tracker_key": "M4A-P055::M4A-P055-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O055"], "sex": null, "source_experiment_tracker_id": "M4A-P055-E001", "source_paper_tracker_id": "M4A-P055", "species": null, "strain": null, "tracker_key": "M4A-P055::M4A-P055-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P055'
@@ -2920,7 +2920,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P056-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O056"], "source_experiment_tracker_id": "M4A-P056-E001", "source_paper_tracker_id": "M4A-P056", "tracker_key": "M4A-P056::M4A-P056-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O056"], "sex": null, "source_experiment_tracker_id": "M4A-P056-E001", "source_paper_tracker_id": "M4A-P056", "species": null, "strain": null, "tracker_key": "M4A-P056::M4A-P056-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P056'
@@ -2937,7 +2937,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P057-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O057"], "source_experiment_tracker_id": "M4A-P057-E001", "source_paper_tracker_id": "M4A-P057", "tracker_key": "M4A-P057::M4A-P057-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O057"], "sex": null, "source_experiment_tracker_id": "M4A-P057-E001", "source_paper_tracker_id": "M4A-P057", "species": null, "strain": null, "tracker_key": "M4A-P057::M4A-P057-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P057'
@@ -2954,7 +2954,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P058-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O058"], "source_experiment_tracker_id": "M4A-P058-E001", "source_paper_tracker_id": "M4A-P058", "tracker_key": "M4A-P058::M4A-P058-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O058"], "sex": null, "source_experiment_tracker_id": "M4A-P058-E001", "source_paper_tracker_id": "M4A-P058", "species": null, "strain": null, "tracker_key": "M4A-P058::M4A-P058-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P058'
@@ -2971,7 +2971,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P059-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O059"], "source_experiment_tracker_id": "M4A-P059-E001", "source_paper_tracker_id": "M4A-P059", "tracker_key": "M4A-P059::M4A-P059-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O059"], "sex": null, "source_experiment_tracker_id": "M4A-P059-E001", "source_paper_tracker_id": "M4A-P059", "species": null, "strain": null, "tracker_key": "M4A-P059::M4A-P059-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P059'
@@ -2988,7 +2988,7 @@ WITH inserted AS (
     'Abstract / carried',
     'Tracker experiment M4A-P060-E001',
     'Module 4B tracker-derived experiment placeholder for SQL materialization.',
-    '{"observation_tracker_ids": ["M4B-O060"], "source_experiment_tracker_id": "M4A-P060-E001", "source_paper_tracker_id": "M4A-P060", "tracker_key": "M4A-P060::M4A-P060-E001"}'
+    '{"chronicity_dpi_wpi": null, "control_type": null, "experiment_extracted": null, "injury_device": null, "injury_model": null, "injury_severity": null, "intervention_type": null, "methods_summary": null, "observation_tracker_ids": ["M4B-O060"], "sex": null, "source_experiment_tracker_id": "M4A-P060-E001", "source_paper_tracker_id": "M4A-P060", "species": null, "strain": null, "tracker_key": "M4A-P060::M4A-P060-E001", "vertebral_level": null}'
   FROM _m4_paper_map p
   JOIN _m4_paradigm_map ep ON ep.tracker_id = p.tracker_id
   WHERE p.tracker_id = 'M4A-P060'
@@ -3526,15 +3526,15 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Yao X 2025 evaluated Human iPSC-derived spinal neural progenitors in NOD-SCID mouse contusion, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
+    'Full-text source localization for M4A-P019-E001: Grafted cells survived to 5 weeks and were associated with improved BMS scores from 3-5 weeks and improved ladder/grid-climbing measures versus SCI controls. Fig. 3 reports significant behavioral comparisons and correlations with luciferase signal for correct steps (R=0.7525, p=0.0013) and grasp times (R=0.6277, p=0.0052).',
     'qualitative',
     'behavioral / functional recovery assay',
-    'Yao X 2025 evaluated Human iPSC-derived spinal neural progenitors in NOD-SCID mouse contusion, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
-    'yao x 2025 evaluated human ipsc-derived spinal neural progenitors in nod-scid mouse contusion, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after sci.',
-    'Module 4A tracker / PubMed metadata',
-    'Abstract / carried',
-    'low',
-    '{"curator_notes": "Primary title: Human iPSC-derived spinal neural progenitors enhance sensorimotor recovery in spinal cord-injured NOD-SCID mice via differentiation and microenvironment regulation.. Note: iPSC spinal progenitor differentiation and microenvironment regulation.", "experiment_tracker_id": "M4A-P019-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P019", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O019"}'
+    'Full-text source localization for M4A-P019-E001: Grafted cells survived to 5 weeks and were associated with improved BMS scores from 3-5 weeks and improved ladder/grid-climbing measures versus SCI controls. Fig. 3 reports significant behavioral comparisons and correlations with luciferase signal for correct steps (R=0.7525, p=0.0013) and grasp times (R=0.6277, p=0.0052).',
+    'full-text source localization for m4a-p019-e001: grafted cells survived to 5 weeks and were associated with improved bms scores from 3-5 weeks and improved ladder/grid-climbing measures versus sci controls. fig. 3 reports significant behavioral comparisons and correlations with luciferase signal for correct steps (r=0.7525, p=0.0013) and grasp times (r=0.6277, p=0.0052).',
+    'Module 4A full text; Full text PMC12373886; Fig. 3; Methods',
+    'Full text PMC12373886; Fig. 3; Methods',
+    'high',
+    '{"curator_notes": "PMID/PMCID provenance: M4A-P019 / PMC12373886; source-backed upgrade.", "experiment_tracker_id": "M4A-P019-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P019", "quantitative": "NO", "statistics_reported": "No statistics promoted beyond the cited full-text result; exact source details are retained in Module 4A.", "topic_id": "M4B-T002", "tracker_id": "M4B-O019"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3552,15 +3552,15 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Zheng Y 2025 evaluated Human iPSC-derived A2B5+ neural progenitors in Mouse SCI, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
+    'Full-text source localization for M4A-P020-E001: Human nuclei/GFP labeling showed graft survival at 1 week and 2 months; cells showed progressive β-tubulin III, DCX and NeuN expression, with graft-derived processes extending into spared tissue.',
     'qualitative',
     'behavioral / functional recovery assay',
-    'Zheng Y 2025 evaluated Human iPSC-derived A2B5+ neural progenitors in Mouse SCI, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after SCI.',
-    'zheng y 2025 evaluated human ipsc-derived a2b5+ neural progenitors in mouse sci, supporting the neural-graft evidence stream for integration, differentiation, or functional recovery after sci.',
-    'Module 4A tracker / PubMed metadata',
-    'Abstract / carried',
-    'low',
-    '{"curator_notes": "Primary title: Functional Recovery by Transplantation of Human iPSC-Derived A2B5 Positive Neural Progenitor Cell After Spinal Cord Injury in Mice.. Note: A2B5+ iPSC progenitor functional recovery anchor.", "experiment_tracker_id": "M4A-P020-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P020", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O020"}'
+    'Full-text source localization for M4A-P020-E001: Human nuclei/GFP labeling showed graft survival at 1 week and 2 months; cells showed progressive β-tubulin III, DCX and NeuN expression, with graft-derived processes extending into spared tissue.',
+    'full-text source localization for m4a-p020-e001: human nuclei/gfp labeling showed graft survival at 1 week and 2 months; cells showed progressive β-tubulin iii, dcx and neun expression, with graft-derived processes extending into spared tissue.',
+    'Module 4A full text; Full text PMC12469384; Fig. 3-4; Results',
+    'Full text PMC12469384; Fig. 3-4; Results',
+    'high',
+    '{"curator_notes": "PMID/PMCID provenance: M4A-P020 / PMC12469384; source-backed upgrade.", "experiment_tracker_id": "M4A-P020-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P020", "quantitative": "NO", "statistics_reported": "No statistics promoted beyond the cited full-text result; exact source details are retained in Module 4A.", "topic_id": "M4B-T002", "tracker_id": "M4B-O020"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -3630,15 +3630,15 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Suematsu Y 2023 links neural graft effects to rehabilitation, synaptic organizer, trophic pretreatment, or axon-guidance enhancement rather than grafting alone.',
+    'Full-text source localization for M4A-P023-E001: HGF increased p-c-Met-positive cells and RECA1-positive vascular area around the lesion; the article reports vascularization and anti-inflammatory/regenerative changes in the acute phase.',
     'qualitative',
-    'behavioral / functional recovery assay',
-    'Suematsu Y 2023 links neural graft effects to rehabilitation, synaptic organizer, trophic pretreatment, or axon-guidance enhancement rather than grafting alone.',
-    'suematsu y 2023 links neural graft effects to rehabilitation, synaptic organizer, trophic pretreatment, or axon-guidance enhancement rather than grafting alone.',
-    'Module 4A tracker / PubMed metadata',
-    'Abstract / carried',
-    'low',
-    '{"curator_notes": "Primary title: Hepatocyte growth factor pretreatment boosts functional recovery after spinal cord injury through human iPSC-derived neural stem/progenitor cell transplantation.. Note: Microenvironment/growth-factor pretreatment combination.", "experiment_tracker_id": "M4A-P023-E001", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P023", "quantitative": "NO", "statistics_reported": "Abstract-level first pass; exact statistics not extracted", "topic_id": "M4B-T002", "tracker_id": "M4B-O023"}'
+    NULL,
+    'Full-text source localization for M4A-P023-E001: HGF increased p-c-Met-positive cells and RECA1-positive vascular area around the lesion; the article reports vascularization and anti-inflammatory/regenerative changes in the acute phase.',
+    'full-text source localization for m4a-p023-e001: hgf increased p-c-met-positive cells and reca1-positive vascular area around the lesion; the article reports vascularization and anti-inflammatory/regenerative changes in the acute phase.',
+    'Module 4A full text; Full text PMC10577910; Fig. 1; Methods/Results',
+    'Full text PMC10577910; Fig. 1; Methods/Results',
+    'high',
+    '{"curator_notes": "PMID/PMCID provenance: M4A-P023 / PMC10577910; source-backed upgrade.", "experiment_tracker_id": "M4A-P023-E001", "measurement_method_inference": null, "paper_tracker_id": "M4A-P023", "quantitative": "NO", "statistics_reported": "No statistics promoted beyond the cited full-text result; exact source details are retained in Module 4A.", "topic_id": "M4B-T002", "tracker_id": "M4B-O023"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -4982,15 +4982,15 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Yao X 2025 M4A-P019-E002 preserves a distinct NOD-SCID mouse contusion experiment testing Mechanistic outcome assessment after Human iPSC-derived spinal neural progenitors transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for iPSC spinal progenitors: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
+    'Full-text source localization for M4A-P019-E002: Full text reports human graft survival/differentiation, MAP2-hSyn-HNA synaptic-marker colocalization, altered Arg1/iNOS and C3/S100A10 patterns, and increased NFH/MBP-associated repair signals. These findings support integration and repair-associated biology, not proof of complete circuit restoration.',
     'qualitative',
-    'behavioral / functional recovery assay',
-    'Yao X 2025 M4A-P019-E002 preserves a distinct NOD-SCID mouse contusion experiment testing Mechanistic outcome assessment after Human iPSC-derived spinal neural progenitors transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for iPSC spinal progenitors: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
-    'M4A-P019-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract / PubMed metadata',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Human iPSC-derived spinal neural progenitors enhance sensorimotor recovery in spinal cord-injured NOD-SCID mice via differentiation and microenvironment regulation.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P019-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P019", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O075"}'
+    NULL,
+    'Full-text source localization for M4A-P019-E002: Full text reports human graft survival/differentiation, MAP2-hSyn-HNA synaptic-marker colocalization, altered Arg1/iNOS and C3/S100A10 patterns, and increased NFH/MBP-associated repair signals. These findings support integration and repair-associated biology, not proof of complete circuit restoration.',
+    'full-text source localization for m4a-p019-e002: full text reports human graft survival/differentiation, map2-hsyn-hna synaptic-marker colocalization, altered arg1/inos and c3/s100a10 patterns, and increased nfh/mbp-associated repair signals. these findings support integration and repair-associated biology, not proof of complete circuit restoration.',
+    'Module 4A full text; Full text PMC12373886; Fig. 4-7; Results',
+    'Full text PMC12373886; Fig. 4-7; Results',
+    'high',
+    '{"curator_notes": "PMID/PMCID provenance: M4A-P019 / PMC12373886; source-backed upgrade.", "experiment_tracker_id": "M4A-P019-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P019", "quantitative": "NO", "statistics_reported": "No statistics promoted beyond the cited full-text result; exact source details are retained in Module 4A.", "topic_id": "M4B-T002", "tracker_id": "M4B-O075"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5008,15 +5008,15 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Zheng Y 2025 M4A-P020-E002 preserves a distinct Mouse SCI experiment testing Mechanistic outcome assessment after Human iPSC-derived A2B5+ neural progenitors transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for iPSC A2B5 progenitors: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
+    'Full-text source localization for M4A-P020-E002: NPC grafts were associated with greater spared white-matter area/volume and higher BMS, BMS subscores and beam-walking scores than controls; the article reports no teratoma formation in the study.',
     'qualitative',
-    'behavioral / functional recovery assay',
-    'Zheng Y 2025 M4A-P020-E002 preserves a distinct Mouse SCI experiment testing Mechanistic outcome assessment after Human iPSC-derived A2B5+ neural progenitors transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for iPSC A2B5 progenitors: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
-    'M4A-P020-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract / PubMed metadata',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Functional Recovery by Transplantation of Human iPSC-Derived A2B5 Positive Neural Progenitor Cell After Spinal Cord Injury in Mice.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P020-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P020", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O076"}'
+    NULL,
+    'Full-text source localization for M4A-P020-E002: NPC grafts were associated with greater spared white-matter area/volume and higher BMS, BMS subscores and beam-walking scores than controls; the article reports no teratoma formation in the study.',
+    'full-text source localization for m4a-p020-e002: npc grafts were associated with greater spared white-matter area/volume and higher bms, bms subscores and beam-walking scores than controls; the article reports no teratoma formation in the study.',
+    'Module 4A full text; Full text PMC12469384; Fig. 5-6; Results',
+    'Full text PMC12469384; Fig. 5-6; Results',
+    'high',
+    '{"curator_notes": "PMID/PMCID provenance: M4A-P020 / PMC12469384; source-backed upgrade.", "experiment_tracker_id": "M4A-P020-E002", "measurement_method_inference": null, "paper_tracker_id": "M4A-P020", "quantitative": "NO", "statistics_reported": "No statistics promoted beyond the cited full-text result; exact source details are retained in Module 4A.", "topic_id": "M4B-T002", "tracker_id": "M4B-O076"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
@@ -5086,15 +5086,15 @@ WITH inserted AS (
     figure_panel_reference, extraction_confidence, notes
   )
   SELECT e.experiment_id, et.evidence_type_id, ot.outcome_type_id,
-    'Suematsu Y 2023 M4A-P023-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after HGF-pretreated hiPSC-NS/PC strategy transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for iPSC HGF pretreatment: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
+    'Full-text source localization for M4A-P023-E002: The combination group showed improved BBB/locomotor outcomes relative to single-treatment groups, with the article describing enhanced graft survival, remyelination and neuronal regeneration. Attribution remains combined-therapy evidence; it does not isolate the cell product from HGF pretreatment.',
     'qualitative',
-    'behavioral / functional recovery assay',
-    'Suematsu Y 2023 M4A-P023-E002 preserves a distinct Rodent SCI experiment testing Mechanistic outcome assessment after HGF-pretreated hiPSC-NS/PC strategy transplantation with endpoint/readout: Second abstract-level experiment row isolates the primary mechanistic endpoint for iPSC HGF pretreatment: host-graft connectivity, differentiation, immunomodulation, remyelination, microenvironment conditioning, or functional readout..',
-    'M4A-P023-E002 preserves distinct model/timing/intervention/endpoint boundary',
-    'Module A tracker',
-    'Abstract / PubMed metadata',
-    'medium',
-    '{"curator_notes": "Per-experiment atomization backfill from A-layer row; source title: Hepatocyte growth factor pretreatment boosts functional recovery after spinal cord injury through human iPSC-derived neural stem/progenitor cell transplantation.. Existing consensus links remain on original curated observations.", "experiment_tracker_id": "M4A-P023-E002", "measurement_method_inference": "behavioral / functional recovery assay", "paper_tracker_id": "M4A-P023", "quantitative": "NO", "statistics_reported": "Not separately extracted; row added to ensure exact observation-per-experiment coverage.", "topic_id": "M4B-T002", "tracker_id": "M4B-O079"}'
+    'barrier / permeability / endothelial assay; behavioral / functional recovery assay',
+    'Full-text source localization for M4A-P023-E002: The combination group showed improved BBB/locomotor outcomes relative to single-treatment groups, with the article describing enhanced graft survival, remyelination and neuronal regeneration. Attribution remains combined-therapy evidence; it does not isolate the cell product from HGF pretreatment.',
+    'full-text source localization for m4a-p023-e002: the combination group showed improved bbb/locomotor outcomes relative to single-treatment groups, with the article describing enhanced graft survival, remyelination and neuronal regeneration. attribution remains combined-therapy evidence; it does not isolate the cell product from hgf pretreatment.',
+    'Module 4A full text; Full text PMC10577910; Fig. 7; Results/Methods',
+    'Full text PMC10577910; Fig. 7; Results/Methods',
+    'high',
+    '{"curator_notes": "PMID/PMCID provenance: M4A-P023 / PMC10577910; source-backed upgrade.", "experiment_tracker_id": "M4A-P023-E002", "measurement_method_inference": "barrier / permeability / endothelial assay; behavioral / functional recovery assay", "paper_tracker_id": "M4A-P023", "quantitative": "NO", "statistics_reported": "No statistics promoted beyond the cited full-text result; exact source details are retained in Module 4A.", "topic_id": "M4B-T002", "tracker_id": "M4B-O079"}'
   FROM _m4_experiment_map e
   CROSS JOIN ControlledVocabulary_EvidenceType et
   CROSS JOIN ControlledVocabulary_OutcomeType ot
