@@ -1,0 +1,11 @@
+{
+  "generated_utc": "2026-09-01T16:23:01+00:00",
+  "batch_id": "module20a_staged_high_reconciliation_2026_09_01",
+  "rows_reconciled": 44,
+  "rows_promoted_to_high_in_module20a_queue": 44,
+  "module20b_edges_changed": 0,
+  "module20b_frozen_lr_evidence_promoted": 44,
+  "signaling_edges_created": 0,
+  "source_staging": "work/module_b_consolidation/staging_round_2026_08_26/module20b/module20b_promoted_edge_candidates.tsv",
+  "policy": "Prior staged high decisions were reconciled only; no new pair or downstream claim was inferred."
+}
