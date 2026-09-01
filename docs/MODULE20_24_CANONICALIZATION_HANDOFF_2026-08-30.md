@@ -1349,3 +1349,25 @@ claim remains an action placeholder. Claims should be added only after the
 paper's Results/Discussion or equivalent author interpretation is verified;
 abstract-bounded, context-only, negative, and unresolved rows remain staging
 evidence rather than promotion support.
+
+## v1.4.0 high-LR mechanism-graph checkpoint — 2026-09-01
+
+The 310 Module 20A rows with `confidence_decision=high` were reconciled
+against the Module 20B edge register. All 310 have
+`confidence_tier=high` and `exportable=true`; no additional evidence claim,
+relay, TF/program, cellular-output, or SCI-context inference was made in this
+release pass. The corresponding release graph is
+`data/processed/mechanism_graph_module20_24_v2026_09_01/`.
+
+The graph contains 3,161 register-backed traversable edges, 4,494 linked
+evidence-source rows, 2,787 nodes, 4,340 node roles, and 945 pathway
+summaries. Of the 310 high LR rows, 309 are traversable. The sole excluded
+row is `M20A-EXT-0600` / `M20B-E002375` (`Ncam1`–`Ncam1`), which remains in
+the register but is excluded as a self-loop under the graph contract.
+
+The graph validator passed with zero errors, and the mSCS importer completed
+successfully in a temporary directory. An attempted combined public-TF
+overlay import was rejected because its three source rows lack importer-
+required paper/observation/claim anchors; those public-TF rows remain a
+separate non-traversable evidence layer rather than weakening the provenance
+gate. The release note is `docs/RELEASE_v1.4.0.md`.

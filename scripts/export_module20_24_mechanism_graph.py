@@ -52,7 +52,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=ROOT / "data" / "processed" / "mechanism_graph_module20_24_v2026_08_25",
+        default=ROOT / "data" / "processed" / "mechanism_graph_module20_24_v2026_09_01",
         help="Directory for the release bundle.",
     )
     parser.add_argument(

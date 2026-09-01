@@ -34,7 +34,7 @@ CANONICAL_ROLE_RELATIONS = {
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_BUNDLE = ROOT / "data" / "processed" / "mechanism_graph_module20_24_v2026_08_25"
+DEFAULT_BUNDLE = ROOT / "data" / "processed" / "mechanism_graph_module20_24_v2026_09_01"
 
 
 def parse_args() -> argparse.Namespace:
