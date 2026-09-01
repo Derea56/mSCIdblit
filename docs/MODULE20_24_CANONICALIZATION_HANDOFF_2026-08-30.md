@@ -1321,3 +1321,31 @@ promotion-oriented pass should therefore prioritize source-level review of
 the exact-identity cases whose retained observation and claim are not
 abstract-bounded, while keeping negative, context-only, and unresolved rows
 available for screening.
+
+## Source-level claim overlay checkpoint — 2026-09-01
+
+The first manual source-review overlay was added at
+`work/cross_module_synthesis/canonical_evidence_review/phase2_J_20B_source_unit_overlay.tsv`
+and registered in `scripts/integrate_module20_24_phase2_extractions.py`. It
+contains six exact local full-text rows: IGFL3–IGFLR1 direct binding,
+Ihh–BOC direct binding, Ihh–CDO direct binding, two bounded Ihh pathway
+outputs, and Sema5A–Plexin-B3/Met-complex functional signaling. Each row was
+given an explicit source-bounded AuthorClaim and source section; none adds a
+terminal TF, SCI context, or direct interaction that the cited paper did not
+report.
+
+The integrated Phase-2 packet remains 4,722 unique extraction rows. After
+regeneration, the canonical evidence materializer reports 1,678 source-defined
+evidence units across 976 unique PMID papers, compared with 1,675 units in the
+prior checkpoint. The six overlay rows are now `supporting_validated_claim` in
+the artifact bridge where their observation/claim gates pass; the increase in
+materialized units is smaller because some rows share existing source-defined
+paper/evidence structure. No canonical database write or mechanism-graph
+release was performed.
+
+The next work should review the remaining non-abstract exact-identity rows,
+starting with the 20B rows whose observation is already validated but whose
+claim remains an action placeholder. Claims should be added only after the
+paper's Results/Discussion or equivalent author interpretation is verified;
+abstract-bounded, context-only, negative, and unresolved rows remain staging
+evidence rather than promotion support.

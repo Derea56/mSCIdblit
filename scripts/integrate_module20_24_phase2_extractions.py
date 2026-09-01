@@ -29,6 +29,7 @@ OVERLAYS = {
     "phase2_G_24B_source_unit_overlay.tsv": {"24B"},
     "phase2_H_22B_even_tf_program_overlay.tsv": {"22B"},
     "phase2_I_22B_odd_tf_program_overlay.tsv": {"22B"},
+    "phase2_J_20B_source_unit_overlay.tsv": {"20B"},
 }
 
 FIELDS = [
