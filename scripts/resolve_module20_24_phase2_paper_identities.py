@@ -14,6 +14,8 @@ Only identifiers explicitly present in one of the following are accepted:
 * an explicit identifier in the Phase-2 source locator;
 * an identifier-bearing local XML, HTML, JSON, or TSV artifact whose
   identifier matches the canonical key.
+* an exact row-level mapping from the review queue to a cited local source
+  artifact with one metadata-bearing paper record.
 * an accepted exact mapping in the authoritative NCBI exception ledger.
 
 Filename tokens and search-query URLs are never treated as paper identity.
@@ -49,6 +51,7 @@ SOURCE_LOCATOR_RESOLUTIONS = REVIEW_ROOT / "module20_24_phase2_paper_identity_so
 SHARED_IDENTIFIER_RESOLUTIONS = REVIEW_ROOT / "module20_24_phase2_paper_identity_shared_identifier_resolutions.tsv"
 SOURCE_LOCATOR_NCBI_RESOLUTIONS = REVIEW_ROOT / "module20_24_phase2_paper_identity_source_locator_ncbi_resolutions.tsv"
 SHARED_IDENTIFIER_NCBI_RESOLUTIONS = REVIEW_ROOT / "module20_24_phase2_paper_identity_shared_identifier_ncbi_resolutions.tsv"
+QUEUE_LOCAL_ARTIFACT_RESOLUTIONS = REVIEW_ROOT / "module20_24_phase2_paper_identity_queue_artifact_resolutions.tsv"
 OUT = REVIEW_ROOT / "module20_24_phase2_paper_identity_resolution.tsv"
 REPORT = REVIEW_ROOT / "module20_24_phase2_paper_identity_resolution.md"
 EXCEPTIONS_OUT = REVIEW_ROOT / "module20_24_phase2_paper_identity_exceptions.tsv"
@@ -240,6 +243,55 @@ def article_record(node: ET.Element, source_file: str) -> dict[str, object]:
     }
 
 
+def europepmc_record(node: ET.Element, source_file: str) -> dict[str, object]:
+    """Parse one Europe PMC REST ``result`` record.
+
+    These records are authoritative source metadata when the cited local file
+    is an exact Europe PMC response. Identifiers are read from XML elements,
+    never from the request query string or filename.
+    """
+    def child_value(name: str) -> str:
+        child = direct_child(node, name)
+        return text(child)
+
+    tokens: set[tuple[str, str]] = set()
+    pmid = child_value("pmid")
+    if pmid.isdigit():
+        tokens.add(("PMID", pmid))
+    for child in list(node):
+        if local_name(child.tag) in {"doi", "pmcid"}:
+            value = text(child)
+            if local_name(child.tag) == "doi" and value:
+                tokens.add(("DOI", normalize_doi(value)))
+            elif local_name(child.tag) == "pmcid" and value.upper().startswith("PMC"):
+                tokens.add(("PMCID", value.upper()))
+    title = child_value("title")
+    authors = child_value("authorString")
+    year = child_value("yearOfPublication") or child_value("pubYear")
+    journal_node = direct_child(direct_child(node, "journalInfo"), "journal")
+    journal = first_descendant_text(journal_node, ("title",))
+    abstract = child_value("abstractText")
+    url = ""
+    for candidate in descendants(node, "url"):
+        value = text(candidate)
+        if value:
+            url = value
+            break
+    return {
+        "tokens": tokens,
+        "pmid": next((value for kind, value in sorted(tokens) if kind == "PMID"), ""),
+        "pmcid": next((value for kind, value in sorted(tokens) if kind == "PMCID"), ""),
+        "doi": next((value for kind, value in sorted(tokens) if kind == "DOI"), ""),
+        "title": title,
+        "authors": authors,
+        "year": year,
+        "journal": journal,
+        "abstract": abstract,
+        "url": url,
+        "source_file": source_file,
+    }
+
+
 def html_record(raw: str, source_file: str) -> dict[str, object]:
     values: dict[str, list[str]] = defaultdict(list)
     for match in re.finditer(
@@ -331,6 +383,9 @@ def parse_artifact(path: Path) -> list[dict[str, object]]:
         articles = descendants(root, "PubmedArticle")
         if articles:
             return [article_record(article, relative) for article in articles]
+        europepmc_results = descendants(root, "result")
+        if europepmc_results:
+            return [europepmc_record(result, relative) for result in europepmc_results]
         return [article_record(root, relative)]
     try:
         raw = path.read_text(errors="replace")
@@ -398,6 +453,21 @@ def unkeyed_local_artifact_records(path: Path) -> dict[str, dict[str, str]]:
         prior = records.get(extraction_id)
         if prior and prior.get("resolved_pmid") != row.get("resolved_pmid"):
             raise ValueError(f"conflicting unkeyed local-artifact mappings for {extraction_id}")
+        records[extraction_id] = row
+    return records
+
+
+def queue_local_artifact_records(path: Path) -> dict[str, dict[str, str]]:
+    records: dict[str, dict[str, str]] = {}
+    for row in read_tsv(path):
+        if row.get("resolution_status") != "resolved_authoritative_queue_local_artifact" or not row.get("resolved_pmid"):
+            continue
+        extraction_id = row.get("extraction_id", "")
+        if not extraction_id:
+            continue
+        prior = records.get(extraction_id)
+        if prior and prior.get("resolved_pmid") != row.get("resolved_pmid"):
+            raise ValueError(f"conflicting queue-artifact mappings for {extraction_id}")
         records[extraction_id] = row
     return records
 
@@ -489,6 +559,7 @@ def fill_from_authoritative(result: dict[str, str], record: dict[str, str]) -> N
     result["source_metadata_authors"] = record.get("source_metadata_authors", "")
     result["source_metadata_year"] = record.get("source_metadata_year", "")
     result["source_metadata_journal"] = record.get("source_metadata_journal", "")
+    result["source_metadata_abstract"] = record.get("source_metadata_abstract", "")
     result["source_metadata_url"] = record.get("source_metadata_url", "")
 
 
@@ -568,6 +639,7 @@ def main() -> None:
     shared_identifier_resolution = shared_identifier_records(SHARED_IDENTIFIER_RESOLUTIONS)
     source_locator_ncbi_resolution = source_locator_ncbi_records(SOURCE_LOCATOR_NCBI_RESOLUTIONS)
     shared_identifier_ncbi_resolution = shared_identifier_ncbi_records(SHARED_IDENTIFIER_NCBI_RESOLUTIONS)
+    queue_local_artifact_resolution = queue_local_artifact_records(QUEUE_LOCAL_ARTIFACT_RESOLUTIONS)
     artifact_cache: dict[Path, list[dict[str, object]]] = {}
     rows: list[dict[str, str]] = []
     status_counts = Counter()
@@ -618,6 +690,12 @@ def main() -> None:
                 fill_from_authoritative(result, record)
                 result["identity_resolution_status"] = "resolved_authoritative_unkeyed_local_artifact"
                 result["resolution_basis"] = record.get("resolution_basis", "exact unkeyed local-artifact mapping")
+                result["authoritative_source"] = record.get("authoritative_source", "")
+            elif source.get("extraction_id", "") in queue_local_artifact_resolution:
+                record = queue_local_artifact_resolution[source.get("extraction_id", "")]
+                fill_from_authoritative(result, record)
+                result["identity_resolution_status"] = "resolved_authoritative_queue_local_artifact"
+                result["resolution_basis"] = record.get("resolution_basis", "exact queue-artifact mapping")
                 result["authoritative_source"] = record.get("authoritative_source", "")
             elif source.get("extraction_id", "") in source_locator_resolution:
                 record = source_locator_resolution[source.get("extraction_id", "")]
@@ -719,6 +797,7 @@ def main() -> None:
         "grades, context levels, claims, observations, or the database schema.",
         "Filename tokens and search-query URLs are not accepted as paper identity.",
         "Accepted NCBI exception-ledger mappings are limited to exact single-identifier keys with one PMID and a matching PubMed record.",
+        "Queue-artifact mappings are limited to cited local source records with one PMID-bearing paper record and an exact PMID already present in the original composite key.",
         "The derived resolved_canonical_paper_key is PMID:<id> only after an accepted single-PMID resolution; the original canonical_paper_key is preserved.",
         "",
         f"- Phase-2 extraction rows audited: {len(rows):,}",
