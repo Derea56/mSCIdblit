@@ -1093,3 +1093,47 @@ The project version is now `1.3.0`, and the release documentation is
 Before pushing, review the staged release contents and the remaining
 pre-existing worktree paths; do not stage unrelated module or public-TF
 working changes.
+
+## Continued promotion checkpoint — 2026-08-31
+
+Promotion resumed from the v1.3.0 local database checkpoint. The existing
+conservative Phase-2 materializer identified 1,592 exact source-defined
+evidence units. A read-only reconciliation found 80 source-verified
+adjudications whose downstream canonical links were absent because their
+paper or register prerequisites had not yet been materialized.
+
+The paper-provenance reader was repaired without changing the schema or
+deriving identifiers. It now accepts only PMID/title pairs explicitly
+co-occurring in exact local source content from Europe PMC CORE XML,
+supervised `primary_source_record` XML, JATS full-text XML, and citation meta
+tags in HTML-like XML files. PubMed records retain precedence, and artifacts
+whose embedded PMID differs from the requested locator remain unresolved.
+
+The regenerated paper bridge produced 1,576 exact local/metadata Paper
+records and 3,309 paper-anchored register-source candidates. The regenerated
+Phase-2 bridge admitted 1,663 source-defined evidence units across the five
+modules: 739 in 20B, 65 in 21B, 562 in 22B, 208 in 23B, and 89 in 24B. Five
+explicit boundary-only rows remain E/L0 and are retained as non-supporting
+evidence.
+
+After applying both idempotent SQL bridges to `mscidblit_local`, the database
+contains 2,092 Papers, 2,037 Experiments, 2,118 Observations, 2,037
+AuthorClaims, 1,665 EvidenceLinks, 3,399 SignalingEdges, 7,430
+SignalingEdgeSources, and 4,937 SignalingEdgeRegisterSources. Relative to
+the v1.3.0 checkpoint, 71 additional source-defined evidence units were
+materialized, each preserving its existing ABC grade and L0–L4 context level.
+The phase-2 source layer now contains 1,606 distinct extraction identifiers;
+duplicate source rows are retained where the schema represents multiple
+source relationships.
+
+Eighteen source-verified adjudications remain intentionally unpromoted. Nine
+have no exact local Paper row because the available artifact is mismatched or
+does not contain sufficient embedded paper metadata; nine lack an exact
+`SignalingEdgeRegisterSource` mapping. These cases remain in the adjudication
+queue, and no PMID, paper identity, edge mapping, or mechanism was inferred.
+
+The next promotion pass should resolve only these two explicit queues if new
+authoritative source evidence becomes available. The public-TF validated
+sidecar remains noncanonical and owner-gated; no public-TF row was promoted
+by this pass. A fresh static mechanism-bundle export has not yet been made
+from this updated local database.
