@@ -1,0 +1,47 @@
+{
+  "by_modality": {
+    "epigenomics": {
+      "database": "epigenetic",
+      "database_path": "mSCS/data/epigenetic/epigenetic.sqlite",
+      "database_sha256": "73428f81f278965f81bcccde112ec7037ea62c64ce03e4e0b86ad71a07b64739",
+      "detail_count": 17,
+      "source_count": 17
+    },
+    "protein": {
+      "database": "flow_protein",
+      "database_path": "mSCS/data/flow_protein/flow_protein.sqlite",
+      "database_sha256": "db992d208fd37ed1483ff711ad05dc45ebf8254638f54b0a752d374c219e2aaf",
+      "detail_count": 1259,
+      "source_count": 1259
+    },
+    "spatial": {
+      "database": "spatial_catalog",
+      "database_path": "mSCS/data/spatial/spatial_catalog.sqlite",
+      "database_sha256": "6ee4dffadc00001f2f6b52c3450c819a48d780bed012b698acbacf17530e6567",
+      "detail_count": 144,
+      "pilot_path": "mSCS/data/spatial/pilot_all_studies/gse269377_cluster_proxy/spatial_pair_percentages_all_samples.tsv",
+      "pilot_sha256": "520a2314b4b44bd68ada05136a35e9031575c4a9d4052a8c8c7e23d3cba029b5",
+      "source_count": 11,
+      "spatial_evidence_table_rows": 0
+    }
+  },
+  "canonical_edge_promotions": 0,
+  "import_version": "mscs_modality_evidence_import_v1",
+  "local_paper_observation_claim_anchors_created": 0,
+  "module_links_created": 0,
+  "notes": [
+    "Protein and epigenetic records retain exact source observation IDs.",
+    "Spatial pilot metrics use source-field locators and remain derived_pilot; mSCS spatial_evidence currently has zero rows.",
+    "ABC mappings are only emitted for explicit mSCS protein grade prefixes; context_level remains NULL pending explicit adjudication.",
+    "No mSCS files or SQLite databases were modified by this importer."
+  ],
+  "observation_details": 1420,
+  "outputs": [
+    "evidence_source_records.tsv",
+    "evidence_observation_details.tsv",
+    "mscs_modality_evidence_materialization.sql"
+  ],
+  "source_records": 1287,
+  "source_repository": "mSCS",
+  "source_root": "/Users/derea/Documents/SCI/mSCS"
+}

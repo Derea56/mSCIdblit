@@ -42,6 +42,9 @@ external modality evidence—such as mSCS protein, spatial, and epigenetic
 records—to modules, pathways, entities, or existing edges without flattening
 source measurements or changing graph semantics. See
 [`docs/MODULE_EVIDENCE_CROSSWALK.md`](/Users/derea/Documents/SCI/mSCIdblit/docs/MODULE_EVIDENCE_CROSSWALK.md).
+The linked `EvidenceObservationDetail` layer preserves queryable reported and
+transcribed values while retaining the native mSCS row snapshot and source
+artifact hash.
 
 ## Public TF/regulon evidence staging
 
@@ -97,6 +100,7 @@ materialize or commit/push this staging work without an explicit review step.
    ```bash
    psql -U <username> -d mscidbl -f schema/schema.sql
    psql -U <username> -d mscidbl -f schema/module_evidence_crosswalk.sql
+   psql -U <username> -d mscidbl -f schema/evidence_observation_detail.sql
    ```
 
 3. **Seed controlled vocabulary:**
@@ -121,7 +125,8 @@ materialize or commit/push this staging work without an explicit review step.
 mSCIdblit/
 ├── schema/
 │   ├── schema.sql                    # Complete schema definition
-│   └── module_evidence_crosswalk.sql # External evidence ↔ module/edge bridge
+│   ├── module_evidence_crosswalk.sql # External evidence ↔ module/edge bridge
+│   └── evidence_observation_detail.sql # Queryable external measurements
 ├── docs/
 │   ├── SCHEMA_DOCUMENTATION.md       # Detailed entity documentation
 │   ├── IMPLEMENTATION_GUIDE.md       # Data entry examples
@@ -150,6 +155,7 @@ mSCIdblit/
 │   ├── export_consensus_review_register.py # Cross-module consensus review export
 │   ├── export_cross_module_synthesis.py # Aim-aligned synthesis export
 │   ├── export_mechanism_bundle.py    # Export mSCS-compatible mechanism bundle snapshots
+│   ├── import_mscs_modality_evidence.py # Build mSCS evidence bridge materialization
 │   ├── ollama_chunk_extract.py       # Generate small Ollama extraction prompts
 │   ├── seed_controlled_vocab.sql     # Populate reference tables
 │   ├── validate_module_evidence_crosswalk.sql # Crosswalk integrity gate
