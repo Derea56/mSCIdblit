@@ -35,3 +35,6 @@ data/raw/public_database_snapshots/tf_identity_intake_v1/
 # Rebuildable source-anchor audit derived from historical local work inputs.
 # The companion human-readable audit is tracked; this large TSV remains local.
 data/processed/module20_24_source_anchor_registry.tsv
+
+# Rebuildable validation output for the superseded v1.2.0 bundle.
+data/processed/mechanism_bundle_module20_24_db_v1_2_0/validation_report.json
