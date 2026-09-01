@@ -59,12 +59,17 @@
       "docs/RELEASE_v1.0.0.md": true
     },
     "snapshot_hashes_match_registry": {
-      "OmniPath_DoRothEA:human": true,
-      "OmniPath_DoRothEA:mouse": true,
-      "TRRUST:human": true,
-      "TRRUST:mouse": true
+      "OmniPath_DoRothEA:human": false,
+      "OmniPath_DoRothEA:mouse": false,
+      "TRRUST:human": false,
+      "TRRUST:mouse": false
     }
   },
-  "errors": [],
-  "status": "pass"
+  "errors": [
+    "snapshot digest mismatch or missing: /private/tmp/omnipath_dorothea_human.tsv",
+    "snapshot digest mismatch or missing: /private/tmp/omnipath_dorothea_mouse.tsv",
+    "snapshot digest mismatch or missing: /private/tmp/trrust_human.tsv",
+    "snapshot digest mismatch or missing: /private/tmp/trrust_mouse.tsv"
+  ],
+  "status": "fail"
 }

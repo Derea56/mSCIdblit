@@ -38,9 +38,10 @@ adjudication and C-tier queue builders also pass in temporary output locations.
 
 ### Public-TF snapshot validation
 
-`data/processed/public_tf_union_v1/public_tf_union_validation.json` remains
-held. It currently fails because the four exact registered snapshots are
-missing from `/private/tmp`:
+`data/processed/public_tf_union_v1/public_tf_union_validation.json` is
+preserved as an explicit failing validation record, not as release-passing
+evidence. It fails because the four exact registered snapshots are missing
+from `/private/tmp`:
 
 - `omnipath_dorothea_human.tsv`
 - `omnipath_dorothea_mouse.tsv`
@@ -52,11 +53,14 @@ exact source snapshots and their registered SHA-256 digests.
 
 ### Schema and schema documentation
 
-`schema/schema.sql` and `docs/SCHEMA_DOCUMENTATION.md` are held for a separate
-schema/migration change. The added signaling tables are not present in the
-current local PostgreSQL database, so they should not be mixed into an
-evidence-only release. Applying them requires a deliberate migration and
-fresh-load validation.
+`schema/schema.sql` and `docs/SCHEMA_DOCUMENTATION.md` were validated as a
+fresh-load schema/documentation pair in an isolated rolled-back PostgreSQL
+schema. The live database already contains the signaling layer and its
+evidence-grade/context-level extensions: 3,399 edges, 3,399 register edges,
+4,937 register-source records, and 7,432 canonical edge-source records. The
+fresh-load definition and documentation are therefore integrated in the
+current follow-up commit. The separate additive grading migration remains the
+authoritative path for upgrading an existing database.
 
 ### Module 22B tracker status
 
@@ -84,5 +88,6 @@ untouched and uncommitted pending a dedicated Module 12 review.
 
 No canonical schema migration or public-TF snapshot repair was performed by
 this review. The remaining held files are intentionally preserved for their
-respective follow-up tasks; the Module 22B tracker and path-linkage cleanup are
-now integrated in the current review commit.
+respective follow-up tasks; the Module 22B tracker, path-linkage cleanup, and
+fresh-load schema/documentation pair are now integrated in the current review
+commit.

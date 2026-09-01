@@ -358,6 +358,205 @@ CREATE TABLE IF NOT EXISTS Experiment_SurgicalProcedure (
 );
 
 -- ============================================================================
+-- SIGNALING PATHWAY GRAPH (TLR AND OTHER RECEPTOR CASCADES)
+-- ============================================================================
+
+CREATE TABLE IF NOT EXISTS SignalingPathway (
+  pathway_id SERIAL PRIMARY KEY,
+  pathway_name VARCHAR(255) NOT NULL UNIQUE,
+  pathway_class VARCHAR(100),
+  description TEXT,
+  source_registry VARCHAR(255),
+  notes TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS SignalingEntity (
+  entity_id SERIAL PRIMARY KEY,
+  canonical_name VARCHAR(255) NOT NULL UNIQUE,
+  entity_type VARCHAR(100) NOT NULL,
+  entity_subtype VARCHAR(100),
+  gene_symbol VARCHAR(100),
+  organism_scope VARCHAR(255),
+  compartment VARCHAR(255),
+  aliases TEXT,
+  notes TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_signaling_entity_type ON SignalingEntity(entity_type);
+CREATE INDEX idx_signaling_entity_gene ON SignalingEntity(gene_symbol);
+
+CREATE TABLE IF NOT EXISTS SignalingPathwayMember (
+  pathway_id INTEGER NOT NULL,
+  entity_id INTEGER NOT NULL,
+  member_role VARCHAR(100) NOT NULL,
+  ordinal INTEGER,
+  membership_status VARCHAR(50),
+  notes TEXT,
+  PRIMARY KEY (pathway_id, entity_id, member_role),
+  UNIQUE (pathway_id, entity_id),
+  FOREIGN KEY (pathway_id) REFERENCES SignalingPathway(pathway_id) ON DELETE CASCADE,
+  FOREIGN KEY (entity_id) REFERENCES SignalingEntity(entity_id) ON DELETE CASCADE
+);
+
+CREATE INDEX idx_pathway_member_entity ON SignalingPathwayMember(entity_id);
+
+CREATE TABLE IF NOT EXISTS SignalingEdge (
+  edge_id SERIAL PRIMARY KEY,
+  source_entity_id INTEGER NOT NULL,
+  target_entity_id INTEGER NOT NULL,
+  pathway_id INTEGER,
+  relation_type VARCHAR(100) NOT NULL,
+  effect_polarity VARCHAR(50),
+  directionality VARCHAR(50) DEFAULT 'directed',
+  ligand_context VARCHAR(255),
+  cell_type_context VARCHAR(255),
+  compartment_context VARCHAR(255),
+  species_context VARCHAR(255),
+  injury_context VARCHAR(255),
+  evidence_status VARCHAR(50),
+  context_scope VARCHAR(255),
+  export_priority VARCHAR(50),
+  notes TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (source_entity_id) REFERENCES SignalingEntity(entity_id) ON DELETE CASCADE,
+  FOREIGN KEY (target_entity_id) REFERENCES SignalingEntity(entity_id) ON DELETE CASCADE,
+  FOREIGN KEY (pathway_id) REFERENCES SignalingPathway(pathway_id) ON DELETE SET NULL,
+  CONSTRAINT signaling_edge_distinct_nodes CHECK (source_entity_id <> target_entity_id),
+  CONSTRAINT signaling_edge_effect_polarity CHECK (
+    effect_polarity IS NULL OR effect_polarity IN ('activating', 'inhibitory', 'permissive', 'context_dependent', 'unknown')
+  ),
+  CONSTRAINT signaling_edge_export_priority CHECK (
+    export_priority IS NULL OR export_priority IN ('high', 'medium', 'low', 'exclude')
+  )
+);
+
+CREATE INDEX idx_signaling_edge_source ON SignalingEdge(source_entity_id);
+CREATE INDEX idx_signaling_edge_target ON SignalingEdge(target_entity_id);
+CREATE INDEX idx_signaling_edge_relation ON SignalingEdge(relation_type);
+CREATE INDEX idx_signaling_edge_species_context ON SignalingEdge(species_context);
+CREATE INDEX idx_signaling_edge_export_priority ON SignalingEdge(export_priority);
+
+CREATE TABLE IF NOT EXISTS SignalingEdgeSource (
+  edge_source_id SERIAL PRIMARY KEY,
+  edge_id INTEGER NOT NULL,
+  paper_id INTEGER,
+  observation_id INTEGER,
+  claim_id INTEGER,
+  support_kind VARCHAR(100) NOT NULL,
+  species_support VARCHAR(50),
+  source_scope VARCHAR(100),
+  confidence_tier VARCHAR(50),
+  citation_note TEXT,
+  notes TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (edge_id) REFERENCES SignalingEdge(edge_id) ON DELETE CASCADE,
+  FOREIGN KEY (paper_id) REFERENCES Paper(paper_id) ON DELETE SET NULL,
+  FOREIGN KEY (observation_id) REFERENCES Observation(observation_id) ON DELETE SET NULL,
+  FOREIGN KEY (claim_id) REFERENCES AuthorClaim(claim_id) ON DELETE SET NULL,
+  CONSTRAINT signaling_edge_source_support_kind CHECK (
+    support_kind IN ('primary_experiment', 'review_statement', 'database_curated', 'consensus_summary', 'manual_background')
+  ),
+  CONSTRAINT signaling_edge_source_species_support CHECK (
+    species_support IS NULL OR species_support IN ('mouse', 'human', 'both', 'mixed', 'not_applicable')
+  ),
+  CONSTRAINT signaling_edge_source_scope CHECK (
+    source_scope IS NULL OR source_scope IN ('direct_edge', 'pathway_membership', 'contextual_support', 'negative_evidence')
+  ),
+  CONSTRAINT signaling_edge_source_confidence CHECK (
+    confidence_tier IS NULL OR confidence_tier IN ('high', 'medium', 'low', 'uncertain')
+  ),
+  CONSTRAINT signaling_edge_source_anchor CHECK (
+    paper_id IS NOT NULL OR observation_id IS NOT NULL OR claim_id IS NOT NULL
+  )
+);
+
+CREATE INDEX idx_signaling_edge_source_edge ON SignalingEdgeSource(edge_id);
+CREATE INDEX idx_signaling_edge_source_paper ON SignalingEdgeSource(paper_id);
+CREATE INDEX idx_signaling_edge_source_observation ON SignalingEdgeSource(observation_id);
+CREATE INDEX idx_signaling_edge_source_claim ON SignalingEdgeSource(claim_id);
+CREATE INDEX idx_signaling_edge_source_species_support ON SignalingEdgeSource(species_support);
+CREATE INDEX idx_signaling_edge_source_support_kind ON SignalingEdgeSource(support_kind);
+
+CREATE TABLE IF NOT EXISTS Experiment_SignalingPerturbation (
+  perturbation_id SERIAL PRIMARY KEY,
+  experiment_id INTEGER NOT NULL,
+  entity_id INTEGER NOT NULL,
+  perturbation_type VARCHAR(100) NOT NULL,
+  perturbation_scope VARCHAR(100),
+  genotype_or_construct VARCHAR(255),
+  zygosity VARCHAR(50),
+  dose TEXT,
+  duration TEXT,
+  timing TEXT,
+  target_specificity VARCHAR(100),
+  notes TEXT,
+  FOREIGN KEY (experiment_id) REFERENCES Experiment(experiment_id) ON DELETE CASCADE,
+  FOREIGN KEY (entity_id) REFERENCES SignalingEntity(entity_id) ON DELETE CASCADE
+);
+
+CREATE INDEX idx_signaling_perturbation_experiment ON Experiment_SignalingPerturbation(experiment_id);
+CREATE INDEX idx_signaling_perturbation_entity ON Experiment_SignalingPerturbation(entity_id);
+
+CREATE TABLE IF NOT EXISTS SignalingPhenotype (
+  phenotype_id SERIAL PRIMARY KEY,
+  canonical_name VARCHAR(255) NOT NULL UNIQUE,
+  phenotype_domain VARCHAR(100),
+  ontology_id VARCHAR(100),
+  description TEXT,
+  notes TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS Experiment_SignalingPhenotype (
+  experiment_signaling_phenotype_id SERIAL PRIMARY KEY,
+  experiment_id INTEGER NOT NULL,
+  phenotype_id INTEGER NOT NULL,
+  observation_id INTEGER,
+  effect_direction VARCHAR(50),
+  comparison TEXT,
+  timepoint TEXT,
+  notes TEXT,
+  UNIQUE (experiment_id, phenotype_id, observation_id),
+  FOREIGN KEY (experiment_id) REFERENCES Experiment(experiment_id) ON DELETE CASCADE,
+  FOREIGN KEY (phenotype_id) REFERENCES SignalingPhenotype(phenotype_id) ON DELETE CASCADE,
+  FOREIGN KEY (observation_id) REFERENCES Observation(observation_id) ON DELETE SET NULL
+);
+
+CREATE INDEX idx_signaling_phenotype_phenotype ON Experiment_SignalingPhenotype(phenotype_id);
+CREATE INDEX idx_signaling_phenotype_observation ON Experiment_SignalingPhenotype(observation_id);
+
+CREATE TABLE IF NOT EXISTS Observation_SignalingEdge (
+  observation_id INTEGER NOT NULL,
+  edge_id INTEGER NOT NULL,
+  support_type VARCHAR(50) NOT NULL,
+  notes TEXT,
+  PRIMARY KEY (observation_id, edge_id),
+  FOREIGN KEY (observation_id) REFERENCES Observation(observation_id) ON DELETE CASCADE,
+  FOREIGN KEY (edge_id) REFERENCES SignalingEdge(edge_id) ON DELETE CASCADE
+);
+
+CREATE INDEX idx_observation_signaling_edge_edge ON Observation_SignalingEdge(edge_id);
+
+CREATE TABLE IF NOT EXISTS Observation_SignalingPathwayMember (
+  observation_id INTEGER NOT NULL,
+  pathway_id INTEGER NOT NULL,
+  entity_id INTEGER NOT NULL,
+  support_type VARCHAR(50) NOT NULL,
+  notes TEXT,
+  PRIMARY KEY (observation_id, pathway_id, entity_id),
+  FOREIGN KEY (observation_id) REFERENCES Observation(observation_id) ON DELETE CASCADE,
+  FOREIGN KEY (pathway_id, entity_id) REFERENCES SignalingPathwayMember(pathway_id, entity_id) ON DELETE CASCADE
+);
+
+CREATE INDEX idx_observation_signaling_member_entity ON Observation_SignalingPathwayMember(entity_id);
+
+-- ============================================================================
 -- VERSIONED INTERPRETATION: CONSENSUS
 -- ============================================================================
 
