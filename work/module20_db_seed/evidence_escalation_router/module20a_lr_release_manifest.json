@@ -1,7 +1,7 @@
 {
   "manifest_version": "module20a-lr-release-2026-08-14",
-  "generated_utc": "2026-09-01T16:20:03+00:00",
-  "source_git_commit": "f4025ddeeab27ff35ac42306944ec815b7733bda",
+  "generated_utc": "2026-09-01T16:23:18+00:00",
+  "source_git_commit": "228f5520fd561414fac22c1fbabd98b35cf1a828",
   "pair_universe": {
     "comparison_total": 6116,
     "source_union_total": 5906,
@@ -11,9 +11,9 @@
   },
   "classification_counts": {
     "source_union": {
-      "high": 141,
+      "high": 185,
       "low_evidence": 1715,
-      "medium": 985,
+      "medium": 941,
       "no_evidence": 2157,
       "non_ligand_receptor": 725,
       "uncertain": 183
@@ -22,17 +22,17 @@
       "unclassified": 210
     },
     "cellchat_full": {
-      "high": 111,
+      "high": 152,
       "low_evidence": 1494,
-      "medium": 482,
+      "medium": 441,
       "no_evidence": 995,
       "non_ligand_receptor": 134,
       "uncertain": 163
     },
     "liana_consensus": {
-      "high": 131,
+      "high": 167,
       "low_evidence": 464,
-      "medium": 914,
+      "medium": 878,
       "no_evidence": 1817,
       "non_ligand_receptor": 615,
       "uncertain": 48
@@ -50,8 +50,8 @@
       "bytes": 761065
     },
     "work/module20_db_seed/evidence_escalation_router/module20a_external_review_queue.tsv": {
-      "sha256": "b29743f37cb6423e4861665da69ce2b3b373244e9f6fc723bc54da9d7b2c6718",
-      "bytes": 2274026
+      "sha256": "8bf1a8d2ae73557bedae1b4dd904e447eb88597ee0b0d5896853af4118536786",
+      "bytes": 2281198
     },
     "work/module20_db_seed/evidence_escalation_router/module20a_low_evidence_registry.tsv": {
       "sha256": "684850062709b95ecdf6f9213585e25cdd5b78885a722691c806c45645f8d835",
