@@ -1,0 +1,12 @@
+{
+  "promotion_id": "module20a-high-lr-2026-09-01",
+  "queue": "work/module20_db_seed/evidence_escalation_router/module20a_external_review_queue.tsv",
+  "edge_register": "work/module_b_consolidation/module20b/module20b_edge_register.tsv",
+  "evidence_register": "work/module_b_consolidation/module20b/module20b_evidence_register.tsv",
+  "high_queue_rows": 109,
+  "changed_edges": 10,
+  "changed_frozen_evidence_rows": 10,
+  "all_high_rows_exportable": true,
+  "evidence_boundary": "High-confidence Module 20A LR promotion 2026-09-01; direct ligand-receptor evidence only; no relay, TF/program, cellular-output, or SCI-context inference.",
+  "canonical_sql_materialization": false
+}
