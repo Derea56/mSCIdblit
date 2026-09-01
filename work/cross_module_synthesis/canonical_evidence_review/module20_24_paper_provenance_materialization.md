@@ -5,16 +5,16 @@ paper-anchored register provenance. It does not create experiment-level
 or claim/observation rows.
 
 - Unique PMID anchors in Phase-2: 1,718
-- Exact local/metadata Paper records: 1,512
-- Paper-anchored register-source links: 3,221
+- Exact local/metadata Paper records: 1,576
+- Paper-anchored register-source links: 3,309
 - Identity metadata conflicts retained unresolved: 1
 
 | Module | Paper-anchored source links |
 |---|---:|
-| 20B | 988 |
+| 20B | 1,015 |
 | 21B | 79 |
-| 22B | 796 |
-| 23B | 1,203 |
+| 22B | 840 |
+| 23B | 1,220 |
 | 24B | 155 |
 
 Unresolved PMID anchors, DOI-only/PMCID-only cases without a resolved
