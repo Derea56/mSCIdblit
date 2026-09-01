@@ -1,7 +1,7 @@
 {
   "manifest_version": "module20a-lr-release-2026-08-14",
-  "generated_utc": "2026-09-01T16:23:18+00:00",
-  "source_git_commit": "228f5520fd561414fac22c1fbabd98b35cf1a828",
+  "generated_utc": "2026-09-01T16:24:57+00:00",
+  "source_git_commit": "5ce87a2c0d4e029741a70a0ce6484af40fbb739c",
   "pair_universe": {
     "comparison_total": 6116,
     "source_union_total": 5906,
