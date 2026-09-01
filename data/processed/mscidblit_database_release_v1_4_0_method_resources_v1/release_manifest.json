@@ -1,0 +1,48 @@
+{
+  "schema_version": "mscidblit_database_release_v1",
+  "release_id": "mscidblit_database_release_v1_4_0_method_resources_v1",
+  "project": "mSCIdblit",
+  "project_version": "1.4.0",
+  "release_date": "2026-09-01",
+  "source_commit": "e37f4942fe3f8245f2a6a5a3cefb894d1c6c2af1",
+  "branch": "main",
+  "database_materialization": {
+    "engine": "PostgreSQL 16.14",
+    "schema_unchanged": true,
+    "fresh_load": true,
+    "custom_dump": "mscidblit_release.dump",
+    "custom_dump_sha256": "f1e2d7ec8fd012e95ffe6a81444bb0f9b5e69dc1ec07e7515765f53d8ce0e27b",
+    "plain_sql_dump": "mscidblit_release.sql",
+    "plain_sql_dump_sha256": "23d46f12265cefea1e9fc1a953b083cb23c6943b04f8d71913a1e7aa055ad600",
+    "independent_custom_dump_restore_verified": true
+  },
+  "materialized_counts": {
+    "SignalingEntity": 2787,
+    "SignalingEdge": 3161,
+    "SignalingEdgeRegister": 3161,
+    "SignalingEdgeRegisterSource": 4494,
+    "SignalingEntityRole": 4340,
+    "SignalingPathway": 958,
+    "MethodResource": 14,
+    "CanonicalCommunicationRecord": 9099,
+    "MethodResourceRecord": 13036,
+    "MethodResourceComplexComponent": 9296,
+    "MethodResourceAnnotation": 11810,
+    "MethodResourceProjection": 14,
+    "MethodResourceNumericArtifact": 1
+  },
+  "release_inputs": {
+    "mechanism_graph_release": "data/processed/mechanism_graph_module20_24_v2026_09_01",
+    "combined_mscs_bundle": "data/processed/mscs_release_bundle_v1_4_0_method_resources_v1",
+    "method_resource_migration": "data/processed/method_resource_migration_v1"
+  },
+  "validation": {
+    "mechanism_graph": "pass",
+    "combined_mscs_bundle": "pass",
+    "materialized_integrity": "pass_with_10_non_blocking_notes",
+    "method_resource_equivalence": "pass",
+    "smoke_test": "pass",
+    "module_evidence_crosswalk": "pass"
+  },
+  "interpretation_boundary": "Method-resource membership remains tool-input provenance and does not create biological mechanism evidence or graph edges."
+}

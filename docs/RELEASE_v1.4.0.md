@@ -16,8 +16,9 @@ context annotations used for later weighting.
 - Prior mechanism-graph snapshot: `data/processed/mechanism_graph_module20_24_v2026_08_30/`
 
 This is a register-backed mechanism-graph release. It does not claim that
-every graph edge is SCI-specific and does not replace the separate canonical
-database release without a database materialization pass.
+every graph edge is SCI-specific. A fresh PostgreSQL companion materialization
+and release dump are now provided separately under
+`data/processed/mscidblit_database_release_v1_4_0_method_resources_v1/`.
 
 ## High-confidence LR promotion audit
 
@@ -77,6 +78,21 @@ evidence anchors for traversable graph sources.
 The Module 20B stratification layer is recorded in
 `data/processed/module20b_pathway_family_layer_v1/` and its SHA-256 is stored
 in `bundle_metadata.json`. The source Module 20B register remains unchanged.
+
+## PostgreSQL companion release
+
+The graph and additive method-resource layers were loaded into a fresh
+PostgreSQL 16.14 database without changing the repository schema. The release
+directory contains both a portable plain SQL dump and a custom PostgreSQL dump,
+plus an exact manifest with row counts and checksums:
+
+`data/processed/mscidblit_database_release_v1_4_0_method_resources_v1/`
+
+The custom dump was restored into an independent temporary database and the
+key graph and method-resource counts matched the source materialization. The
+database release preserves the same boundary as the combined mSCS bundle:
+method-resource membership is retained as tool-input provenance and is not
+biological mechanism evidence.
 
 The previously reviewed public-TF candidate and validated-edge files remain a
 separate evidence layer. They were not added as traversable edges in this
