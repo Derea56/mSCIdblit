@@ -19,6 +19,25 @@
     "A_independent_literature_corroborated": 3,
     "C_tflink_source_table_only": 2818
   },
+  "noncanonical_module_context_rows": 49,
+  "noncanonical_module_counts": {
+    "20B": 33,
+    "22B": 5,
+    "23B": 9,
+    "24B": 2
+  },
+  "noncanonical_subcategory_counts": {
+    "chromatin_modifier_or_reader": 3,
+    "noncanonical_exact_gene_expression_regulator": 33,
+    "protein_ptm_regulator": 4,
+    "rna_post_transcriptional_regulator": 2,
+    "transcriptional_cofactor_or_coregulator": 1,
+    "upstream_signaling_or_relay": 6
+  },
+  "noncanonical_tier_counts": {
+    "A_independent_literature_corroborated": 24,
+    "B_independent_literature_single_source": 25
+  },
   "low_tier_screen_out_counts": {
     "D_database_only_no_pair_evidence": 613,
     "E_reviewed_nonpromotable": 127
@@ -32,13 +51,19 @@
   "policy": [
     "This is a deterministic screening overlay; it does not change source evidence packets.",
     "D/E rows are screen-out_low_tier and retain_for_context_only; their exact evidence tiers remain unchanged.",
-    "Explicitly noncanonical role-specific A/B rows remain retain_for_context_only and are excluded from the candidate set.",
+    "Regulator role, SCI context, evidence tier, module fit, and materialization lane are independent fields.",
+    "Mechanism evidence type states what molecular bridge is actually supported; it does not imply that omitted intermediate steps or promoter occupancy were demonstrated.",
+    "Rows without a context adjudication remain conservatively at L0_no_context_evidence with context_evidence_scope=not_assessed; reviewed overlays record non-CNS, CNS, spinal-cord-tissue, SCI, or explicitly unresolved/unverifiable context and its scope.",
+    "3065 promotion-level context adjudications are applied from context_evidence_adjudications.tsv; component-level context never upgrades an exact pair.",
+    "Explicitly noncanonical role-specific A/B rows are routed to noncanonical_gene_expression_regulators.tsv with regulator_role_class=noncanonical_gene_expression_regulator; canonical_tf_eligible=false is a role field and is not an SCI-context result.",
+    "SCI context remains unresolved when the reviewed record cannot verify a higher context level; this is separate from the L0 context grade and from evidence tier.",
     "A/B/C rows with an explicit module route form a provisional module-owner candidate set, pending approval.",
     "Catalog-only rows are not assigned to modules without an explicit target_graph_modules route.",
     "No canonical TF, Module 22B, module tracker, or mechanism-edge materialization is performed."
   ],
   "outputs": [
     "module_integration_staging_v1/module_screening_decisions.tsv",
-    "module_integration_staging_v1/module_owner_candidate_set.tsv"
+    "module_integration_staging_v1/module_owner_candidate_set.tsv",
+    "module_integration_staging_v1/noncanonical_gene_expression_regulators.tsv"
   ]
 }

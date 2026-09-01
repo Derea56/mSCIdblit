@@ -1,0 +1,46 @@
+{
+  "status": "pass",
+  "input_rows": 49,
+  "review_packet_rows": 49,
+  "module_counts": {
+    "20B": 33,
+    "22B": 5,
+    "23B": 9,
+    "24B": 2
+  },
+  "tier_counts": {
+    "A_independent_literature_corroborated": 24,
+    "B_independent_literature_single_source": 25
+  },
+  "subcategory_counts": {
+    "chromatin_modifier_or_reader": 3,
+    "noncanonical_exact_gene_expression_regulator": 33,
+    "protein_ptm_regulator": 4,
+    "rna_post_transcriptional_regulator": 2,
+    "transcriptional_cofactor_or_coregulator": 1,
+    "upstream_signaling_or_relay": 6
+  },
+  "all_decisions_start_as": "pending_review",
+  "allowed_decisions": [
+    "needs_more_context",
+    "promote_to_noncanonical_module_layer",
+    "retain_context_only",
+    "screen_out"
+  ],
+  "canonical_tf_eligible": false,
+  "role_context_separated": true,
+  "regulator_role_class_counts": {
+    "non_transcriptional_regulator": 10,
+    "noncanonical_gene_expression_regulator": 39
+  },
+  "sci_context_status_counts": {
+    "indirect_sci_context": 3,
+    "non_sci_context_limited": 39,
+    "non_sci_transferable_context": 7
+  },
+  "module_context_eligible": true,
+  "outputs": [
+    "noncanonical_module_owner_review.tsv",
+    "noncanonical_module_owner_review_rubric.md"
+  ]
+}
