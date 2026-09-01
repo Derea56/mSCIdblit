@@ -46,6 +46,10 @@ The linked `EvidenceObservationDetail` layer preserves queryable reported and
 transcribed values while retaining the native mSCS row snapshot and source
 artifact hash.
 
+For a single read-only pathway/entity retrieval across these layers, use
+[`scripts/query_pathway.py`](/Users/derea/Documents/SCI/mSCIdblit/scripts/query_pathway.py)
+and see the [release query contract](/Users/derea/Documents/SCI/mSCIdblit/docs/RELEASE_QUERY.md).
+
 ## mSCS method-resource intake
 
 The frozen LIANA, CellChatDB, and NicheNet resources used by mSCS can be
