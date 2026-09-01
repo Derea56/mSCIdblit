@@ -39,6 +39,7 @@ extraction or promotion lanes:
 | `data/raw/public_database_snapshots/module20_24_intake_v1/` | 9 source snapshots | Retain with the processed source registry and SHA-256 inventory |
 | `data/raw/public_database_snapshots/tf_identity_intake_v1/` | 2 identity snapshots | Retain for reproducible public-TF identity rebuilding |
 | `data/processed/module20_24_source_anchor_registry.tsv` | 32,232 derived anchor rows, about 5.2 MB | Retain locally as an audit derivative; rebuild only from the corresponding source registers |
+| `data/processed/mechanism_bundle_module20_24_db_v1_2_0/validation_report.json` | Superseded-bundle validation output | Retain locally if needed for historical checks; it is not a promotion input |
 
 The raw full-text files are not copied into the public release bundle. Their
 local retention is necessary because the derived claims and evidence links do
