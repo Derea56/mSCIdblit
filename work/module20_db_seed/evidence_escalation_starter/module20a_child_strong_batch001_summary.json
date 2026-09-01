@@ -1,0 +1,27 @@
+{
+  "generated_utc": "2026-09-01T15:52:53+00:00",
+  "batch_id": "module20a_child_strong_batch001",
+  "rows_reviewed": 10,
+  "rows_promoted_to_high": 10,
+  "rows_promoted_to_medium": 0,
+  "rows_removed_from_low_evidence_registry": 10,
+  "signaling_edges_created": 0,
+  "selected_review_ids": [
+    "M20A-CELLCHAT-REMAINING-0450",
+    "M20A-CELLCHAT-REMAINING-0452",
+    "M20A-CELLCHAT-REMAINING-1250",
+    "M20A-CELLCHAT-REMAINING-1251",
+    "M20A-LIANA-REMAINING-0046",
+    "M20A-LIANA-REMAINING-0057",
+    "M20A-LIANA-REMAINING-0058",
+    "M20A-LIANA-REMAINING-0059",
+    "M20A-LIANA-REMAINING-0080",
+    "M20A-LIANA-REMAINING-0093"
+  ],
+  "policy": "Child high labels were accepted only when exact primary locators and pre-existing approve_candidate status were present; high is limited to the ligand/receptor evidence claim.",
+  "child_artifacts": [
+    "work/module20_db_seed/evidence_search_agents/child_task_slice1_adjudication.tsv",
+    "work/module20_db_seed/evidence_search_agents/child_task_slice2_adjudication.tsv",
+    "work/module20_db_seed/evidence_search_agents/child_task_slice3_adjudication.tsv"
+  ]
+}

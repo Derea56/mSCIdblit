@@ -1,7 +1,7 @@
 {
   "manifest_version": "module20a-lr-release-2026-08-14",
-  "generated_utc": "2026-09-01T15:39:25+00:00",
-  "source_git_commit": "3f496d1800a2ae1b2f210f95ca2a9691f3a04aba",
+  "generated_utc": "2026-09-01T15:52:53+00:00",
+  "source_git_commit": "d6ee0d6f600b7c809d692a6ca66d52c51151fa94",
   "pair_universe": {
     "comparison_total": 6116,
     "source_union_total": 5906,
@@ -11,8 +11,8 @@
   },
   "classification_counts": {
     "source_union": {
-      "high": 99,
-      "low_evidence": 1725,
+      "high": 109,
+      "low_evidence": 1715,
       "medium": 1017,
       "no_evidence": 2157,
       "non_ligand_receptor": 725,
@@ -22,16 +22,16 @@
       "unclassified": 210
     },
     "cellchat_full": {
-      "high": 69,
-      "low_evidence": 1504,
+      "high": 79,
+      "low_evidence": 1494,
       "medium": 514,
       "no_evidence": 995,
       "non_ligand_receptor": 134,
       "uncertain": 163
     },
     "liana_consensus": {
-      "high": 93,
-      "low_evidence": 470,
+      "high": 99,
+      "low_evidence": 464,
       "medium": 946,
       "no_evidence": 1817,
       "non_ligand_receptor": 615,
@@ -39,7 +39,7 @@
     }
   },
   "ledger_row_counts": {
-    "low_evidence": 1725,
+    "low_evidence": 1715,
     "no_evidence": 2157,
     "non_ligand_receptor": 725
   },
@@ -50,12 +50,12 @@
       "bytes": 761065
     },
     "work/module20_db_seed/evidence_escalation_router/module20a_external_review_queue.tsv": {
-      "sha256": "435a8505f21f5d16ebc71691159751a67a2900b8a02bf24f93dd20485fc1016b",
-      "bytes": 2266524
+      "sha256": "f954864b46f9130ffb6ef709609fdc382422e22d9ccf749018c2e1b61f824f79",
+      "bytes": 2267914
     },
     "work/module20_db_seed/evidence_escalation_router/module20a_low_evidence_registry.tsv": {
-      "sha256": "967d5b36febaf9f92d91d85a17e9eba3fb0e967bad5f9c86386e449bee3373cf",
-      "bytes": 1753412
+      "sha256": "684850062709b95ecdf6f9213585e25cdd5b78885a722691c806c45645f8d835",
+      "bytes": 1746639
     },
     "work/module20_db_seed/evidence_escalation_router/module20a_no_evidence_registry.tsv": {
       "sha256": "9bc6c5ebf719fc7904cda60d37648e99ea2ba30b7472f001a72e0c635486e12a",
