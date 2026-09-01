@@ -1,7 +1,7 @@
 {
   "manifest_version": "module20a-lr-release-2026-08-14",
-  "generated_utc": "2026-09-01T16:35:37+00:00",
-  "source_git_commit": "722018733f4d641e6382dc241445681d7d1ea6fa",
+  "generated_utc": "2026-09-01T16:37:24+00:00",
+  "source_git_commit": "241b20065166be6b891e1dad386238cd913b9fb7",
   "pair_universe": {
     "comparison_total": 6116,
     "source_union_total": 5906,
@@ -11,9 +11,9 @@
   },
   "classification_counts": {
     "source_union": {
-      "high": 303,
+      "high": 310,
       "low_evidence": 1715,
-      "medium": 823,
+      "medium": 816,
       "no_evidence": 2157,
       "non_ligand_receptor": 725,
       "uncertain": 183
@@ -30,9 +30,9 @@
       "uncertain": 163
     },
     "liana_consensus": {
-      "high": 285,
+      "high": 292,
       "low_evidence": 464,
-      "medium": 760,
+      "medium": 753,
       "no_evidence": 1817,
       "non_ligand_receptor": 615,
       "uncertain": 48
@@ -50,8 +50,8 @@
       "bytes": 761065
     },
     "work/module20_db_seed/evidence_escalation_router/module20a_external_review_queue.tsv": {
-      "sha256": "7490ac99623fd71d53270450816e8be38d46e3eb14d313bcb2fe5c1370661cad",
-      "bytes": 2305130
+      "sha256": "36e6a550d890c10b346ea331f48f38c1847116e9aeb8f6268274c30f6d23b2b9",
+      "bytes": 2306544
     },
     "work/module20_db_seed/evidence_escalation_router/module20a_low_evidence_registry.tsv": {
       "sha256": "684850062709b95ecdf6f9213585e25cdd5b78885a722691c806c45645f8d835",
