@@ -19,10 +19,10 @@ experiments, and 128 consensus statements, with ten documented non-blocking
 warnings about expected claim-link gaps and B rows not represented in parsed A
 tables.
 
-## Safe next integration group
+## Integrated public-TF workflow group
 
 The following remaining changes are coherent public-TF workflow/design changes
-and can be committed separately after this review:
+and were committed as `907b8cf` (`integrate public TF workflow updates`):
 
 - `scripts/screen_public_tf_module_integration.py`
 - `docs/PUBLIC_TF_EXPANSION_TRIAGE_SUMMARY_2026-08-26.md`
@@ -60,21 +60,19 @@ fresh-load validation.
 
 ### Module 22B tracker status
 
-`modules/Module_22B_TRACKER.md` is held for reconciliation. It states that 221
-public TF-target pairs are canonicalized and links
-`data/processed/module22b_database_comparison_v1/`, but that comparison
-directory was not found in the repository file inventory during this review.
-The tracker should be integrated only after the linked comparison artifact and
-the current local database counts agree.
+`modules/Module_22B_TRACKER.md` states that 221 public TF-target pairs are
+canonicalized across 198 species-qualified TF entries. The linked
+`data/processed/module22b_database_comparison_v1/` directory was not found in
+the repository file inventory, so the tracker has been corrected to report the
+independent local-database count reconciliation without claiming that missing
+comparison artifact.
 
 ### Path-linkage batch
 
 `work/cross_module_synthesis/path_linkage_batches/module20_24_path_linkage_batch09_matrix_adhesion_yap_fak.tsv`
-is held for a focused provenance cleanup. Its SEMA7A row adds the M20B relay
-and functional evidence IDs, but repeats several source locators in the
-resulting semicolon-delimited field. The added IDs are potentially useful; the
-locator field should be normalized and rechecked against the source registers
-before integration.
+was normalized in its SEMA7A row. The M20B relay and functional evidence IDs
+are preserved, and the duplicate source locators were reduced to their exact
+union and rechecked against the source registers.
 
 ### Module 12B
 
@@ -84,7 +82,7 @@ untouched and uncommitted pending a dedicated Module 12 review.
 
 ## Current status
 
-No canonical schema migration, public-TF snapshot repair, Module 22B tracker
-reconciliation, or path-linkage cleanup was performed by this review. The
-remaining held files are intentionally preserved for their respective follow-up
-tasks.
+No canonical schema migration or public-TF snapshot repair was performed by
+this review. The remaining held files are intentionally preserved for their
+respective follow-up tasks; the Module 22B tracker and path-linkage cleanup are
+now integrated in the current review commit.
