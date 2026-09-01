@@ -258,6 +258,187 @@ This enables structured queries: "Find all experiments using OPC transplantation
 
 ---
 
+## Signaling Graph Layer
+
+The signaling graph layer is the mechanism-focused extension that supports receptor, pathway, transcription-factor, and perturbation reasoning. It is intended to be evidence-linked and exportable to downstream systems such as `mSCS`, while remaining grounded in the same paper → experiment → observation framework as the rest of `mSCIdblit`.
+
+### **SignalingPathway**
+Canonical pathway registry.
+
+```sql
+pathway_id (PK)
+pathway_name — UNIQUE canonical pathway label
+pathway_class — broad grouping, e.g. innate receptor signaling, cytokine signaling
+description
+source_registry — optional upstream registry or naming source
+notes
+created_at, updated_at
+```
+
+Use this for pathway identities such as `TLR4-MyD88-NFkB`, `BMP-SMAD`, or `IL6-JAK-STAT`.
+
+### **SignalingEntity**
+Canonical signaling node registry.
+
+```sql
+entity_id (PK)
+canonical_name — UNIQUE node label
+entity_type — broad type, e.g. receptor, ligand, adapter, kinase, transcription_factor
+entity_subtype — optional finer role, e.g. co_receptor, secreted_ligand, canonical_smad
+gene_symbol
+organism_scope
+compartment
+aliases
+notes
+created_at, updated_at
+```
+
+This table should be used for nodes that appear in mechanism graphs. The broad `entity_type` supports export to simulation and graph tooling, while `entity_subtype` preserves finer biological role without forcing it into the top-level type field.
+
+### **SignalingPathwayMember**
+Maps signaling entities into pathways.
+
+```sql
+pathway_id (FK)
+entity_id (FK)
+member_role — e.g. receptor, adapter, transcription_factor
+ordinal — optional coarse order along pathway
+membership_status — curated, inferred, tentative
+notes
+```
+
+This encodes pathway membership, not direct causality. Shared pathway membership must not be interpreted as proof of a direct edge.
+
+### **SignalingEdge**
+Directed or context-dependent mechanistic relation between two signaling entities.
+
+```sql
+edge_id (PK)
+source_entity_id (FK)
+target_entity_id (FK)
+pathway_id (FK, optional)
+relation_type — curated mechanistic relation label
+effect_polarity — activating, inhibitory, permissive, context_dependent, unknown
+directionality — directed or other graph semantics
+ligand_context
+cell_type_context
+compartment_context
+species_context
+injury_context
+evidence_status
+context_scope — concise summary of when the edge should be considered valid
+export_priority — high, medium, low, exclude
+notes
+created_at, updated_at
+```
+
+`SignalingEdge` is the graph backbone for simulator exports. It should carry the best current normalized statement of a mechanism edge, but it is not sufficient by itself for provenance. Provenance belongs in `SignalingEdgeSource`.
+
+### **SignalingEdgeSource**
+Edge-level provenance table.
+
+```sql
+edge_source_id (PK)
+edge_id (FK)
+paper_id (FK, optional)
+observation_id (FK, optional)
+claim_id (FK, optional)
+support_kind — primary_experiment, review_statement, database_curated, consensus_summary, manual_background
+species_support — mouse, human, both, mixed, not_applicable
+source_scope — direct_edge, pathway_membership, contextual_support, negative_evidence
+confidence_tier — high, medium, low, uncertain
+evidence_grade — independent A, B, C, D, E, or U evidence axis
+context_level — independent L0, L1, L2, L3, or L4 biological-context axis
+grading_basis — concise basis for the evidence/context assignment
+grading_status — adjudication state for the assignment
+citation_note
+notes
+created_at
+```
+
+At least one anchor must be present among `paper_id`, `observation_id`, or `claim_id`.
+
+This table is the key addition for simulator-facing mechanism curation because it lets one edge carry multiple supporting sources while keeping:
+
+- primary versus review support explicit
+- mouse versus human support explicit
+- negative or contextual evidence separate from direct edge evidence
+
+### **Observation_SignalingEdge**
+Links atomic observations to signaling edges.
+
+```sql
+observation_id (FK)
+edge_id (FK)
+support_type — how the observation bears on the edge
+notes
+```
+
+Use this when an observation directly supports or weakens a curated edge.
+
+### **Observation_SignalingPathwayMember**
+Links atomic observations to pathway membership records.
+
+```sql
+observation_id (FK)
+pathway_id (FK)
+entity_id (FK)
+support_type
+notes
+```
+
+Use this when an observation supports that a node belongs to a pathway without proving a direct causal edge.
+
+### **Experiment_SignalingPerturbation**
+Records perturbations targeting signaling nodes.
+
+```sql
+perturbation_id (PK)
+experiment_id (FK)
+entity_id (FK)
+perturbation_type
+perturbation_scope
+genotype_or_construct
+zygosity
+dose
+duration
+timing
+target_specificity
+notes
+```
+
+This table is especially useful for later necessity/sufficiency analysis, but should remain separate from purely observational graph curation.
+
+### **SignalingPhenotype** and **Experiment_SignalingPhenotype**
+Phenotype layer for perturbation outcomes and signaling-state consequences.
+
+These tables provide a normalized way to record what happens when signaling nodes are perturbed.
+
+## Recommended Signaling Curation Rules
+
+- Use `SignalingEdge` only for mechanistic relations you are willing to treat as a graph edge.
+- Use `SignalingPathwayMember` for pathway inclusion that does not imply a direct edge.
+- Attach at least one `SignalingEdgeSource` row to every signaling edge intended for downstream use.
+- Distinguish `primary_experiment` from `review_statement` explicitly.
+- Record mouse versus human support at the source row level, not only in free-text notes.
+- Preserve `evidence_grade` separately from graph confidence: A/B/C/D/E/U records evidence strength and review state, not biological context.
+- Preserve `context_level` separately from graph confidence: L0/L1/L2/L3/L4 records no evidence through spinal-cord-injury context.
+- Use `export_priority = 'exclude'` for edges that are retained for knowledge tracking but should not be exported to simulation.
+
+## Why This Matters For `mSCS`
+
+`mSCS` should consume signaling mechanisms from curated exports, not from prior exploratory pathway summaries. The signaling graph layer in `mSCIdblit` is the right place to store:
+
+- ligand-receptor edges
+- receptor-pathway edges
+- pathway-TF edges
+- TF-target-program edges
+- edge-level provenance and species support
+
+That keeps the mechanism side auditable and keeps the simulator side lightweight.
+
+---
+
 ### **Versioned Interpretation: Consensus**
 
 ### **Consensus**
