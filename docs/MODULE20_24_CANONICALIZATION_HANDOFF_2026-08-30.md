@@ -1212,3 +1212,29 @@ The static mechanism bundle was not regenerated in this checkpoint. Before a
 release, re-run the materializers and all four database validators after any
 approved register or identity corrections, then reconcile the static bundle
 against the local database.
+
+## Large-queue preparation checkpoint — 2026-09-01
+
+The next review funnel has been prepared from the artifact-backed
+`candidate_requires_review` population. The 701 candidate rows collapse to 426
+deterministic review units when duplicate artifact rows for the same extraction
+are grouped. The units are partitioned into 173 identity-resolved,
+non-unresolved evidence candidates; 152 identity-resolved source-review cases;
+and 101 cases still requiring source-identity resolution. The original A–E
+evidence grade and L0–L4 context level are copied unchanged into the review
+queue.
+
+The deterministic queue generator is
+`scripts/build_module20_24_promotion_review_queue.py`. Its local-only outputs
+are:
+
+- `data/processed/module20_24_database_intake_v1/module20_24_promotion_review_queue.tsv`
+- `data/processed/module20_24_database_intake_v1/module20_24_promotion_review_queue_summary.json`
+
+The first balanced review batch contains 100 review units and 150 artifact
+rows: 17 from 20B, 6 from 21B, 47 from 22B, 37 from 23B, and 43 from 24B.
+All 150 selected artifact paths exist locally. This is a review batch, not a
+promotion batch: no canonical Paper, Observation, AuthorClaim, EvidenceLink,
+SignalingEdgeSource, or register row was changed. Reviewers must confirm exact
+source identity, claim scope, mechanism layer, evidence grade, and L-context
+before any promotion is considered.
