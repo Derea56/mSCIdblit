@@ -1,0 +1,31 @@
+{
+  "annotation_count": 11810,
+  "biological_validation_created": false,
+  "canonical_communication_count": 9099,
+  "complex_component_count": 9296,
+  "copied_source_files": 12,
+  "master_registry_matches_canonical_union": true,
+  "master_registry_pair_count": 9099,
+  "mechanism_edges_created": false,
+  "method_resource_record_count": 13036,
+  "method_resource_record_counts": {
+    "mscs_phase2:cellchat_mouse.tsv": 3379,
+    "mscs_phase2:liana_mouseconsensus.tsv": 3989,
+    "mscs_phase2:nichenet_neutral_v1/lr_network.tsv": 5668
+  },
+  "migration_gaps": [
+    "The large NicheNet v2 ligand-target RDS file and the 221 MiB neutral ligand-target matrix remain checksum-pinned references rather than Git-copied binaries.",
+    "No local Paper, Observation, AuthorClaim, or SignalingEdge rows are created by this resource import.",
+    "LIANA source URL/citation is not present in the frozen mSCS manifest and remains null.",
+    "No frozen Tensor-cell2cell resource was present in the inspected mSCS method-resource directory; no Tensor projection was created."
+  ],
+  "numeric_artifact_count": 1,
+  "projection_count": 14,
+  "reference_only_source_files": 2,
+  "schema_version": "method_resource_migration_v1",
+  "source_files": 14,
+  "source_repository": "mSCS",
+  "source_repository_commit": "d5943ad8fc854f0dad58128b2100a3e0ef2fb4cb",
+  "source_root": "mSCS/data/external/method_resources/phase2_external_snapshot_2026-08-05",
+  "source_snapshot_id": "phase2_external_snapshot_2026-08-05"
+}

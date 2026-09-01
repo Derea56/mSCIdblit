@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "bundle_dir": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_01",
+  "errors": [],
+  "warnings": [
+    "some evidence sources have no stable locator; inspect evidence_exportable and limitations"
+  ],
+  "counts": {
+    "nodes": 2787,
+    "edges": 3161,
+    "edge_sources": 4494,
+    "node_roles": 4340,
+    "pathways": 958,
+    "boundary_groups": 16
+  },
+  "checks": {
+    "unique_node_ids": true,
+    "unique_edge_ids": true,
+    "unique_source_ids": true,
+    "node_roles_resolve": true,
+    "all_nodes_have_signaling_cascade_role": true,
+    "required_specialized_roles_present": true,
+    "canonical_role_relations_have_matching_roles": true,
+    "edge_node_references_resolve": true,
+    "source_edge_references_resolve": true,
+    "all_graph_edges_exportable": true,
+    "no_self_loop_edges": true,
+    "all_graph_edges_have_evidence": true,
+    "pathway_summaries_resolve": true,
+    "metadata_counts_match": true
+  }
+}

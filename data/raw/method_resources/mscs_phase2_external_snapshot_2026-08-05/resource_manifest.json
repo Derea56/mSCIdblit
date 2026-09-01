@@ -1,0 +1,61 @@
+{
+  "created_at_utc": "2026-08-05T23:33:31+00:00",
+  "liana": {
+    "package_version": "1.8.1",
+    "resource": "mouseconsensus",
+    "row_count": 3989,
+    "source_table": "data/external/method_resources/phase2_external_snapshot_2026-08-05/liana_mouseconsensus.tsv",
+    "source_table_sha256": "0b9e2307fcbd482bb608f118d7e03bdbfc93e58d2c2032c844b648e3cca86f71"
+  },
+  "nichenet": {
+    "files": [
+      {
+        "bytes": 191048057,
+        "file": "data/external/method_resources/phase2_external_snapshot_2026-08-05/nichenet_v2_mouse/ligand_target_matrix_nsga2r_final_mouse.rds",
+        "sha256": "622df69272ded29fe32ff60d581527be59d01184ed17c86c8103aa4ee9d978d6",
+        "source": "/Users/derea/.local/share/mscs/nichenet_v2_mouse/ligand_target_matrix_nsga2r_final_mouse.rds"
+      },
+      {
+        "bytes": 32993,
+        "file": "data/external/method_resources/phase2_external_snapshot_2026-08-05/nichenet_v2_mouse/lr_network_mouse_21122021.rds",
+        "sha256": "a6f9528e567a39a3a335560bfe5440873a0c08446a422cd92f5bc9617164061e",
+        "source": "/Users/derea/.local/share/mscs/nichenet_v2_mouse/lr_network_mouse_21122021.rds"
+      }
+    ],
+    "model": "NicheNet v2 mouse",
+    "resource_id": "Zenodo 7074291"
+  },
+  "nichenet_neutral_model": {
+    "directory": "data/external/method_resources/phase2_external_snapshot_2026-08-05/nichenet_neutral_v1",
+    "manifest": "data/external/method_resources/phase2_external_snapshot_2026-08-05/nichenet_neutral_v1/neutral_model_manifest.json",
+    "manifest_sha256": "44370631b52f3101b4a12fb6128f3b407cf5d030743de8871f56f2fcc91b90e5",
+    "matrix_sha256": "7311a7dc6bb245bdebcd97ee5f0e6974788170f8b86cea987708577c832aa0c0",
+    "matrix_bytes": 231876216,
+    "source_rds_hashes": [
+      "622df69272ded29fe32ff60d581527be59d01184ed17c86c8103aa4ee9d978d6",
+      "a6f9528e567a39a3a335560bfe5440873a0c08446a422cd92f5bc9617164061e"
+    ],
+    "schema_version": "nichenet_neutral_model_v1"
+  },
+  "cellchat": {
+    "database": "CellChatDB.mouse",
+    "source_commit": "75253cd0c9e68410e6e721a6d3a0419a1d7e358f",
+    "source_url": "https://github.com/jinworks/CellChat/blob/75253cd0c9e68410e6e721a6d3a0419a1d7e358f/data/CellChatDB.mouse.rda",
+    "rda_file": "data/external/method_resources/phase2_external_snapshot_2026-08-05/CellChatDB.mouse.rda",
+    "rda_sha256": "dd59b19646e546b3ed41f394ad2cf64cf44f3d3fcfbb58ac176f0fe1322f9413",
+    "exported_table": "data/external/method_resources/phase2_external_snapshot_2026-08-05/cellchat_mouse.tsv",
+    "exported_row_count": 3379,
+    "exporter": "mSCS/scripts/export_cellchatdb_mouse.R"
+  },
+  "master_lr_registry": {
+    "file": "data/external/method_resources/phase2_external_snapshot_2026-08-05/master_lr_registry.tsv",
+    "manifest": "data/external/method_resources/phase2_external_snapshot_2026-08-05/master_lr_registry.manifest.json",
+    "unique_pair_count": 9099,
+    "source_methods": ["cellchat", "liana", "nichenet"]
+  },
+  "policy": "Frozen resource snapshot; future upstream updates require an explicit new snapshot and comparison run.",
+  "runtime_dependency_boundary": "mSCS core consumes the frozen tables/files and does not import LIANA, NicheNetR, or cell2cell.",
+  "runtime_used_only_for_snapshot": "/Users/derea/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/bin/python3.11",
+  "schema_version": "method_resource_snapshot_v1",
+  "snapshot_id": "phase2_external_resources_2026-08-05"
+}

@@ -1,0 +1,279 @@
+{
+  "comparisons": [
+    {
+      "checksum_match": true,
+      "column_correspondence": true,
+      "duplicate_projection_records": 0,
+      "duplicate_source_records": 0,
+      "projection_columns": [
+        "ligand",
+        "receptor"
+      ],
+      "projection_exists": true,
+      "projection_path": "data/processed/method_resource_migration_v1/method_native/liana_mouseconsensus.tsv",
+      "projection_row_count": 3989,
+      "projection_sha256": "0b9e2307fcbd482bb608f118d7e03bdbfc93e58d2c2032c844b648e3cca86f71",
+      "records_only_in_projection": 0,
+      "records_only_in_source": 0,
+      "records_present_in_both": 3989,
+      "source_columns": [
+        "ligand",
+        "receptor"
+      ],
+      "source_path": "mSCS/data/external/method_resources/phase2_external_snapshot_2026-08-05/liana_mouseconsensus.tsv",
+      "source_row_count": 3989,
+      "source_sha256": "0b9e2307fcbd482bb608f118d7e03bdbfc93e58d2c2032c844b648e3cca86f71",
+      "status": "lossless"
+    },
+    {
+      "checksum_match": true,
+      "column_correspondence": true,
+      "duplicate_projection_records": 0,
+      "duplicate_source_records": 0,
+      "projection_columns": [
+        "ligand",
+        "receptor",
+        "ligand_components",
+        "receptor_components",
+        "resource",
+        "source_record_id",
+        "pathway_name",
+        "annotation",
+        "evidence",
+        "cofactor_annotations",
+        "version",
+        "direct_lr_candidate"
+      ],
+      "projection_exists": true,
+      "projection_path": "data/processed/method_resource_migration_v1/method_native/cellchat_mouse.tsv",
+      "projection_row_count": 3379,
+      "projection_sha256": "585340219264f0d44b9d1f228ee097301b0af86da6a823c7eabffb60f3cdffa7",
+      "records_only_in_projection": 0,
+      "records_only_in_source": 0,
+      "records_present_in_both": 3379,
+      "source_columns": [
+        "ligand",
+        "receptor",
+        "ligand_components",
+        "receptor_components",
+        "resource",
+        "source_record_id",
+        "pathway_name",
+        "annotation",
+        "evidence",
+        "cofactor_annotations",
+        "version",
+        "direct_lr_candidate"
+      ],
+      "source_path": "mSCS/data/external/method_resources/phase2_external_snapshot_2026-08-05/cellchat_mouse.tsv",
+      "source_row_count": 3379,
+      "source_sha256": "585340219264f0d44b9d1f228ee097301b0af86da6a823c7eabffb60f3cdffa7",
+      "status": "lossless"
+    },
+    {
+      "checksum_match": true,
+      "projection_exists": true,
+      "projection_path": "data/processed/method_resource_migration_v1/method_native/CellChatDB.mouse.rda",
+      "projection_sha256": "dd59b19646e546b3ed41f394ad2cf64cf44f3d3fcfbb58ac176f0fe1322f9413",
+      "source_path": "mSCS/data/external/method_resources/phase2_external_snapshot_2026-08-05/CellChatDB.mouse.rda",
+      "source_sha256": "dd59b19646e546b3ed41f394ad2cf64cf44f3d3fcfbb58ac176f0fe1322f9413",
+      "status": "lossless"
+    },
+    {
+      "checksum_match": true,
+      "projection_exists": true,
+      "projection_path": "data/processed/method_resource_migration_v1/method_native/CellChatDB.mouse.standalone.json",
+      "projection_sha256": "777878377aa926bdf8200edb76bba14661a403b870c798f40c3fb9dd03b3b0ae",
+      "source_path": "mSCS/data/external/method_resources/phase2_external_snapshot_2026-08-05/CellChatDB.mouse.standalone.json",
+      "source_sha256": "777878377aa926bdf8200edb76bba14661a403b870c798f40c3fb9dd03b3b0ae",
+      "status": "lossless"
+    },
+    {
+      "checksum_match": true,
+      "column_correspondence": true,
+      "duplicate_projection_records": 0,
+      "duplicate_source_records": 0,
+      "projection_columns": [
+        "registry_id",
+        "ligand",
+        "receptor",
+        "ligand_entity_type",
+        "receptor_entity_type",
+        "ligand_components",
+        "receptor_components",
+        "source_methods",
+        "source_resources",
+        "source_databases",
+        "source_record_ids",
+        "pathway_labels",
+        "interaction_annotations",
+        "evidence_notes",
+        "cofactor_annotations",
+        "species_scope",
+        "direct_lr_candidate"
+      ],
+      "projection_exists": true,
+      "projection_path": "data/processed/method_resource_migration_v1/method_native/master_lr_registry.tsv",
+      "projection_row_count": 9099,
+      "projection_sha256": "d176eb074427f3ff0f8f38572799e22d22980846315c964bee5380480c42573f",
+      "records_only_in_projection": 0,
+      "records_only_in_source": 0,
+      "records_present_in_both": 9099,
+      "source_columns": [
+        "registry_id",
+        "ligand",
+        "receptor",
+        "ligand_entity_type",
+        "receptor_entity_type",
+        "ligand_components",
+        "receptor_components",
+        "source_methods",
+        "source_resources",
+        "source_databases",
+        "source_record_ids",
+        "pathway_labels",
+        "interaction_annotations",
+        "evidence_notes",
+        "cofactor_annotations",
+        "species_scope",
+        "direct_lr_candidate"
+      ],
+      "source_path": "mSCS/data/external/method_resources/phase2_external_snapshot_2026-08-05/master_lr_registry.tsv",
+      "source_row_count": 9099,
+      "source_sha256": "d176eb074427f3ff0f8f38572799e22d22980846315c964bee5380480c42573f",
+      "status": "lossless"
+    },
+    {
+      "checksum_match": true,
+      "column_correspondence": true,
+      "duplicate_projection_records": 0,
+      "duplicate_source_records": 0,
+      "projection_columns": [
+        "ligand_id"
+      ],
+      "projection_exists": true,
+      "projection_path": "data/processed/method_resource_migration_v1/method_native/nichenet_neutral_v1/ligands.tsv",
+      "projection_row_count": 1287,
+      "projection_sha256": "8d7ed03d765cb6444d3b472eb079dc6b54c20978c24d9f24d6bcc88df1fa3760",
+      "records_only_in_projection": 0,
+      "records_only_in_source": 0,
+      "records_present_in_both": 1287,
+      "source_columns": [
+        "ligand_id"
+      ],
+      "source_path": "mSCS/data/external/method_resources/phase2_external_snapshot_2026-08-05/nichenet_neutral_v1/ligands.tsv",
+      "source_row_count": 1287,
+      "source_sha256": "8d7ed03d765cb6444d3b472eb079dc6b54c20978c24d9f24d6bcc88df1fa3760",
+      "status": "lossless"
+    },
+    {
+      "checksum_match": true,
+      "column_correspondence": true,
+      "duplicate_projection_records": 0,
+      "duplicate_source_records": 0,
+      "projection_columns": [
+        "target_id"
+      ],
+      "projection_exists": true,
+      "projection_path": "data/processed/method_resource_migration_v1/method_native/nichenet_neutral_v1/target_genes.tsv",
+      "projection_row_count": 22521,
+      "projection_sha256": "045a4033173eb5cbd7ff02446cf9c5080de12eb1af1a1546a1aba35be517b6ee",
+      "records_only_in_projection": 0,
+      "records_only_in_source": 0,
+      "records_present_in_both": 22521,
+      "source_columns": [
+        "target_id"
+      ],
+      "source_path": "mSCS/data/external/method_resources/phase2_external_snapshot_2026-08-05/nichenet_neutral_v1/target_genes.tsv",
+      "source_row_count": 22521,
+      "source_sha256": "045a4033173eb5cbd7ff02446cf9c5080de12eb1af1a1546a1aba35be517b6ee",
+      "status": "lossless"
+    },
+    {
+      "checksum_match": true,
+      "column_correspondence": true,
+      "duplicate_projection_records": 0,
+      "duplicate_source_records": 0,
+      "projection_columns": [
+        "from",
+        "to",
+        "database",
+        "source"
+      ],
+      "projection_exists": true,
+      "projection_path": "data/processed/method_resource_migration_v1/method_native/nichenet_neutral_v1/lr_network.tsv",
+      "projection_row_count": 5668,
+      "projection_sha256": "22279374620ff3a2ecb388107cfd7c03770e9c7c67a920ad44033179e511b282",
+      "records_only_in_projection": 0,
+      "records_only_in_source": 0,
+      "records_present_in_both": 5668,
+      "source_columns": [
+        "from",
+        "to",
+        "database",
+        "source"
+      ],
+      "source_path": "mSCS/data/external/method_resources/phase2_external_snapshot_2026-08-05/nichenet_neutral_v1/lr_network.tsv",
+      "source_row_count": 5668,
+      "source_sha256": "22279374620ff3a2ecb388107cfd7c03770e9c7c67a920ad44033179e511b282",
+      "status": "lossless"
+    },
+    {
+      "checksum_match": true,
+      "projection_exists": true,
+      "projection_path": "data/processed/method_resource_migration_v1/method_native/nichenet_neutral_v1/neutral_model_manifest.json",
+      "projection_sha256": "44370631b52f3101b4a12fb6128f3b407cf5d030743de8871f56f2fcc91b90e5",
+      "source_path": "mSCS/data/external/method_resources/phase2_external_snapshot_2026-08-05/nichenet_neutral_v1/neutral_model_manifest.json",
+      "source_sha256": "44370631b52f3101b4a12fb6128f3b407cf5d030743de8871f56f2fcc91b90e5",
+      "status": "lossless"
+    },
+    {
+      "checksum_match": false,
+      "projection_exists": false,
+      "projection_path": "mSCS/data/external/method_resources/phase2_external_snapshot_2026-08-05/nichenet_v2_mouse/ligand_target_matrix_nsga2r_final_mouse.rds",
+      "projection_sha256": null,
+      "source_path": "mSCS/data/external/method_resources/phase2_external_snapshot_2026-08-05/nichenet_v2_mouse/ligand_target_matrix_nsga2r_final_mouse.rds",
+      "source_sha256": "622df69272ded29fe32ff60d581527be59d01184ed17c86c8103aa4ee9d978d6",
+      "status": "reference_only"
+    },
+    {
+      "checksum_match": true,
+      "projection_exists": true,
+      "projection_path": "data/processed/method_resource_migration_v1/method_native/nichenet_v2_mouse/lr_network_mouse_21122021.rds",
+      "projection_sha256": "a6f9528e567a39a3a335560bfe5440873a0c08446a422cd92f5bc9617164061e",
+      "source_path": "mSCS/data/external/method_resources/phase2_external_snapshot_2026-08-05/nichenet_v2_mouse/lr_network_mouse_21122021.rds",
+      "source_sha256": "a6f9528e567a39a3a335560bfe5440873a0c08446a422cd92f5bc9617164061e",
+      "status": "lossless"
+    },
+    {
+      "checksum_match": false,
+      "projection_exists": false,
+      "projection_path": "mSCS/data/external/method_resources/phase2_external_snapshot_2026-08-05/nichenet_neutral_v1/ligand_target_matrix.f64le.bin",
+      "projection_sha256": null,
+      "source_path": "mSCS/data/external/method_resources/phase2_external_snapshot_2026-08-05/nichenet_neutral_v1/ligand_target_matrix.f64le.bin",
+      "source_sha256": "7311a7dc6bb245bdebcd97ee5f0e6974788170f8b86cea987708577c832aa0c0",
+      "status": "reference_only"
+    }
+  ],
+  "interpretation": {
+    "analytical_equivalence": "Not claimed. Method-output parity requires matching software, resource, parameters, and input data and is outside this resource-level benchmark.",
+    "complex_representation": "Explicit CellChat component fields are preserved in method_resource_complex_components.tsv; no complexes are inferred from punctuation in names.",
+    "numeric_prior": "The dense NicheNet matrix is checked by exact source checksum and represented by axis/layout metadata; it is not expanded into 28.9 million relational rows.",
+    "resource_membership_is_not_biological_validation": true
+  },
+  "migration_dir": "data/processed/method_resource_migration_v1",
+  "schema_version": "method_resource_equivalence_benchmark_v1",
+  "source_root": "mSCS/data/external/method_resources/phase2_external_snapshot_2026-08-05",
+  "summary": {
+    "all_lossless_projection_comparisons_exact": true,
+    "annotation_row_count": 11810,
+    "comparison_count": 12,
+    "complex_component_row_count": 9296,
+    "lossless_checksum_matches": 10,
+    "normalization_changed_record_count": 0,
+    "projection_manifest_row_count": 14,
+    "projection_only_record_total": 0,
+    "reference_only_comparisons": 2,
+    "source_only_record_total": 0
+  }
+}

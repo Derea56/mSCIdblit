@@ -46,6 +46,28 @@ The linked `EvidenceObservationDetail` layer preserves queryable reported and
 transcribed values while retaining the native mSCS row snapshot and source
 artifact hash.
 
+## mSCS method-resource intake
+
+The frozen LIANA, CellChatDB, and NicheNet resources used by mSCS can be
+imported into an additive mSCIdblit method-resource layer. This preserves one
+canonical communication identity while retaining exact native fields,
+complex components, pathway/cofactor annotations, NicheNet ligand-target
+matrix metadata, source checksums, and method-specific projections. Method
+resource membership is not biological validation and does not create mechanism
+edges. See
+[`docs/METHOD_RESOURCE_MIGRATION.md`](/Users/derea/Documents/SCI/mSCIdblit/docs/METHOD_RESOURCE_MIGRATION.md).
+
+Apply the layer after the base schema when loading the generated intake SQL:
+
+```bash
+psql -U <username> -d mscidbl -f schema/method_resource_layer.sql
+python3 scripts/import_method_resources.py
+psql -U <username> -d mscidbl -f data/processed/method_resource_migration_v1/method_resource_materialization.sql
+psql -U <username> -d mscidbl -f scripts/validate_method_resource_layer.sql
+python3 scripts/benchmark_method_resource_equivalence.py
+python3 scripts/build_mscs_release_bundle.py
+```
+
 ## Public TF/regulon evidence staging
 
 The public TF/regulon expansion is maintained as a separate, additive staging
@@ -126,7 +148,8 @@ mSCIdblit/
 ├── schema/
 │   ├── schema.sql                    # Complete schema definition
 │   ├── module_evidence_crosswalk.sql # External evidence ↔ module/edge bridge
-│   └── evidence_observation_detail.sql # Queryable external measurements
+│   ├── evidence_observation_detail.sql # Queryable external measurements
+│   └── method_resource_layer.sql     # Canonical method-resource intake layer
 ├── docs/
 │   ├── SCHEMA_DOCUMENTATION.md       # Detailed entity documentation
 │   ├── IMPLEMENTATION_GUIDE.md       # Data entry examples
@@ -141,6 +164,7 @@ mSCIdblit/
 │   ├── MODULE_18_NON_TLR_DAMPS.md    # Non-TLR DAMP pathway graph queries and interpretation rules
 │   ├── MODULE_19_HISTONE_MODIFICATION.md # Histone-modification graph queries and interpretation rules
 │   ├── MECHANISM_BUNDLE_EXPORT.md    # Export curated signaling graph bundles for mSCS
+│   ├── METHOD_RESOURCE_MIGRATION.md  # Frozen method-resource intake and equivalence contract
 │   ├── MODULE20_24_MECHANISM_GRAPH_RELEASE.md # Evidence-gated Module 20B–24B graph release
 │   ├── MODULE_EVIDENCE_CROSSWALK.md  # Cross-cutting modality evidence bridge
 │   └── VALIDATION_QUERIES.md         # Database hygiene checks
@@ -155,6 +179,10 @@ mSCIdblit/
 │   ├── export_consensus_review_register.py # Cross-module consensus review export
 │   ├── export_cross_module_synthesis.py # Aim-aligned synthesis export
 │   ├── export_mechanism_bundle.py    # Export mSCS-compatible mechanism bundle snapshots
+│   ├── import_method_resources.py    # Import frozen LIANA/CellChat/NicheNet resources
+│   ├── benchmark_method_resource_equivalence.py # Resource-level equivalence benchmark
+│   ├── build_mscs_release_bundle.py  # Combine graph and method-resource release layers
+│   ├── validate_mscs_release_bundle.py # Check combined release checksums and contents
 │   ├── import_mscs_modality_evidence.py # Build mSCS evidence bridge materialization
 │   ├── ollama_chunk_extract.py       # Generate small Ollama extraction prompts
 │   ├── seed_controlled_vocab.sql     # Populate reference tables
