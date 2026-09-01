@@ -22,6 +22,7 @@ from build_module20_24_artifact_adjudication import (  # noqa: E402
     content_self_identifiers,
     stable_paper_tokens,
 )
+import resolve_module20_24_phase2_paper_identities as identity  # noqa: E402
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -29,6 +30,7 @@ DEFAULT_QUEUE = ROOT / "data/processed/module20_24_database_intake_v1/module20_2
 DEFAULT_ARTIFACTS = ROOT / "data/processed/module20_24_evidence_artifact_provenance_v1/artifact_adjudication.tsv"
 DEFAULT_OUTPUT = ROOT / "data/processed/module20_24_database_intake_v1/module20_24_review_adjudications.tsv"
 DEFAULT_SUMMARY = ROOT / "data/processed/module20_24_database_intake_v1/module20_24_review_adjudications_summary.json"
+DEFAULT_IDENTITY_LEDGER = ROOT / "work/cross_module_synthesis/canonical_evidence_review/module20_24_phase2_paper_identity_queue_artifact_resolutions.tsv"
 
 
 FIELDS = [
@@ -38,6 +40,14 @@ FIELDS = [
     "decision", "existing_support_extraction_ids", "existing_support_artifact_paths",
     "resolved_pmid_from_artifact", "resolution_artifact_path",
     "resolution_artifact_identifiers", "decision_basis",
+]
+
+IDENTITY_LEDGER_FIELDS = [
+    "extraction_id", "module", "b_evidence_id", "canonical_paper_key",
+    "source_locator", "resolved_pmid", "resolved_pmcid", "resolved_doi",
+    "resolution_status", "resolution_basis", "authoritative_source",
+    "source_metadata_title", "source_metadata_authors", "source_metadata_year",
+    "source_metadata_journal", "source_metadata_abstract", "source_metadata_url",
 ]
 
 
@@ -52,6 +62,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--artifacts", type=Path, default=DEFAULT_ARTIFACTS)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--summary", type=Path, default=DEFAULT_SUMMARY)
+    parser.add_argument("--identity-ledger", type=Path, default=DEFAULT_IDENTITY_LEDGER)
     return parser.parse_args()
 
 
@@ -77,6 +88,7 @@ def main() -> None:
             existing_support[key].add(row.get("extraction_id", ""))
 
     decisions: list[dict[str, str]] = []
+    identity_ledger: list[dict[str, str]] = []
     for unit_key, rows in units.items():
         first = rows[0]
         evidence_id = first.get("register_evidence_id", "")
@@ -123,6 +135,41 @@ def main() -> None:
             selected = next(item for item in artifact_resolution_options if item[0] == resolved_from_artifact)
             resolution_artifact_path = selected[1]
             resolution_artifact_identifiers = selected[2]
+            selected_path = ROOT / resolution_artifact_path
+            selected_records = identity.parse_artifact(selected_path)
+            selected_records = [
+                record for record in selected_records
+                if str(record.get("pmid", "")) == resolved_from_artifact
+            ]
+            if len(selected_records) != 1 or not str(selected_records[0].get("title", "")):
+                raise ValueError(
+                    "exact queue identity decision lacks one metadata-bearing source record: "
+                    f"{unit_key} -> {resolution_artifact_path}"
+                )
+            record = selected_records[0]
+            identity_ledger.append({
+                "extraction_id": first.get("extraction_id", ""),
+                "module": first.get("module", ""),
+                "b_evidence_id": first.get("register_evidence_id", ""),
+                "canonical_paper_key": first.get("canonical_paper_key", ""),
+                "source_locator": first.get("source_locator", ""),
+                "resolved_pmid": resolved_from_artifact,
+                "resolved_pmcid": str(record.get("pmcid", "")),
+                "resolved_doi": str(record.get("doi", "")),
+                "resolution_status": "resolved_authoritative_queue_local_artifact",
+                "resolution_basis": (
+                    "one cited local source-record artifact contains exactly one PMID-bearing "
+                    "paper record; that PMID is explicitly present in the original composite "
+                    "canonical_paper_key and no competing key PMID is selected"
+                ),
+                "authoritative_source": str(record.get("source_file", "")),
+                "source_metadata_title": str(record.get("title", "")),
+                "source_metadata_authors": str(record.get("authors", "")),
+                "source_metadata_year": str(record.get("year", "")),
+                "source_metadata_journal": str(record.get("journal", "")),
+                "source_metadata_abstract": str(record.get("abstract", "")),
+                "source_metadata_url": str(record.get("url", "")),
+            })
         if support_ids:
             decision = "resolved_reuse_existing_support"
             basis = (
@@ -177,6 +224,19 @@ def main() -> None:
         writer.writeheader()
         writer.writerows(decisions)
 
+    identity_ledger.sort(key=lambda row: row["extraction_id"])
+    args.identity_ledger.parent.mkdir(parents=True, exist_ok=True)
+    with args.identity_ledger.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=IDENTITY_LEDGER_FIELDS,
+            delimiter="\t",
+            quoting=csv.QUOTE_ALL,
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows(identity_ledger)
+
     by_decision = Counter(row["decision"] for row in decisions)
     by_batch = Counter(row["review_batch"] or "unassigned" for row in decisions)
     batch_one = [row for row in decisions if row["review_batch"] == "batch_001"]
@@ -185,6 +245,7 @@ def main() -> None:
         "queue": str(args.queue),
         "artifacts": str(args.artifacts),
         "output": str(args.output),
+        "identity_ledger": str(args.identity_ledger),
         "review_units": len(decisions),
         "queue_rows": len(queue_rows),
         "decisions_by_status": dict(sorted(by_decision.items())),
@@ -194,6 +255,7 @@ def main() -> None:
             row["decision"] == "resolved_reuse_existing_support" for row in batch_one
         ),
         "exact_source_artifact_identity_units": len(exact_identity),
+        "identity_ledger_rows": len(identity_ledger),
         "evidence_grade_preserved": True,
         "context_level_preserved": True,
         "canonical_database_write_performed": False,
