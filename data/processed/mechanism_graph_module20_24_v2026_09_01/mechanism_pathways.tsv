@@ -1,5 +1,18 @@
 module	pathway_name	edge_count	node_count	evidence_count
-20B	module20a_frozen_ligand_receptor	1118	973	2129
+20B	Axon-guidance/adhesion receptor family	82	92	145
+20B	Cytokine receptor family	27	42	56
+20B	ECM/integrin adhesion receptor family	252	151	341
+20B	GPCR receptor family	82	90	185
+20B	Hedgehog receptor family	8	7	21
+20B	Innate-immune receptor family	10	13	25
+20B	Notch receptor family	10	11	17
+20B	Pathway not established	332	445	734
+20B	Purinergic/neuroreceptor family	2	3	8
+20B	RTK growth-factor receptor family	109	74	198
+20B	Scavenger/uptake-associated receptor family	38	41	78
+20B	Synaptic/cell-adhesion receptor family	40	39	89
+20B	TGF-beta/BMP receptor family	79	58	114
+20B	WNT/Frizzled receptor family	47	35	118
 21B	BMP-SMAD	2	4	1
 21B	BMP-SMAD-glial	1	2	1
 21B	BMP-glial-scar-function	1	2	1

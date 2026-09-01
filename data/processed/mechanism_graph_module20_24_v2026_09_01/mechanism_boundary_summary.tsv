@@ -1,9 +1,9 @@
 module	pathway_name	evidence_layer	edge_status	export_priority	nonexportable_edge_count
-20B	module20a_frozen_ligand_receptor	boundary	low_evidence	exclude	1721
-20B	module20a_frozen_ligand_receptor	boundary	no_evidence	exclude	2157
-20B	module20a_frozen_ligand_receptor	boundary	non_ligand_receptor	exclude	725
-20B	module20a_frozen_ligand_receptor	ligand_receptor_or_direct_molecular	frozen_lr_supported	exclude	183
-20B	module20a_frozen_ligand_receptor	ligand_receptor_or_direct_molecular	frozen_lr_supported	high	2
+20B	Pathway not established	boundary	low_evidence	exclude	1721
+20B	Pathway not established	boundary	no_evidence	exclude	2157
+20B	Pathway not established	boundary	non_ligand_receptor	exclude	725
+20B	Pathway not established	ligand_receptor_or_direct_molecular	frozen_lr_supported	exclude	183
+20B	Pathway not established	ligand_receptor_or_direct_molecular	frozen_lr_supported	high	2
 22B	none_identified	boundary	no_evidence_boundary	medium	34
 22B	none_identified	downstream_or_functional	no_evidence_boundary	medium	4976
 22B	none_identified	downstream_or_functional	unresolved	medium	9

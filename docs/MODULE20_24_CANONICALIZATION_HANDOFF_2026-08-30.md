@@ -1371,3 +1371,21 @@ overlay import was rejected because its three source rows lack importer-
 required paper/observation/claim anchors; those public-TF rows remain a
 separate non-traversable evidence layer rather than weakening the provenance
 gate. The release note is `docs/RELEASE_v1.4.0.md`.
+
+## Module 20B pathway-family stratification checkpoint — 2026-09-01
+
+Before further promotion work, Module 20B was assigned a reviewable pathway-
+family layer by `scripts/stratify_module20b_pathway_families.py`. The layer
+contains all 5,906 register edges, preserves the original
+`module20a_frozen_ligand_receptor` label, and adds a conservative family
+label only for medium/high direct-molecular rows with explicit receptor-family
+nomenclature. The remaining rows are labeled `pathway_not_established`.
+
+The v1.4.0 graph export now uses these family labels for the 20B
+`pathway_name` field, increasing the total pathway summaries from 945 to 958
+and 20B from one broad grouping to 14 organizational groupings. This changes
+organization only: the 20B edge count, evidence counts, confidence tiers,
+ABC grades, L0–L4 context fields, exportability, and provenance are unchanged.
+The graph validator and mSCS importer both pass. No downstream relay,
+transcription-factor/program, cellular-output, or SCI-context claim was
+inferred from a family label.

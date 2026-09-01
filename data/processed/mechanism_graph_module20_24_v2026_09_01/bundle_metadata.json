@@ -78,7 +78,7 @@
     "nodes_with_receptor_role": 708,
     "nodes_with_transcription_factor_role": 51,
     "nodes_with_target_gene_role": 67,
-    "pathways": 945,
+    "pathways": 958,
     "boundary_groups": 16,
     "nonexportable_edges": 9815
   },
@@ -93,7 +93,7 @@
       "edge_count": 5906,
       "exportable_edge_count": 1118,
       "evidence_count": 7630,
-      "pathway_count": 1,
+      "pathway_count": 14,
       "nonexportable_edge_count": 4788
     },
     {
@@ -147,5 +147,12 @@
     "Self-loop register rows are retained as boundaries and are not inserted into the normalized graph.",
     "Non-exportable edges remain summarized as boundaries and are not traversable graph edges.",
     "Stable PMID/PMCID/DOI/URL locators are retained in edge-source rows where available; local paths are not released."
-  ]
+  ],
+  "module20b_pathway_family_layer": {
+    "file": "data/processed/module20b_pathway_family_layer_v1/module20b_pathway_family_layer.tsv",
+    "assignment_type": "conservative_receptor_family_grouping",
+    "downstream_pathway_claim": false,
+    "register_unchanged": true,
+    "sha256": "6b85ff4708cab88f00195202c6b3f45805f4472931a381e40054cfcc706621c2"
+  }
 }

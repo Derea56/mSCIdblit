@@ -1,0 +1,46 @@
+{
+  "input": "/Users/derea/Documents/SCI/mSCIdblit/work/module_b_consolidation/module20b/module20b_edge_register.tsv",
+  "row_count": 5906,
+  "family_counts": {
+    "axon_guidance_adhesion_family": 82,
+    "cytokine_receptor_family": 27,
+    "ecm_integrin_adhesion_family": 252,
+    "gpcr_receptor_family": 82,
+    "hedgehog_receptor_family": 8,
+    "innate_immune_receptor_family": 10,
+    "notch_receptor_family": 10,
+    "pathway_not_established": 5120,
+    "purinergic_neuroreceptor_family": 2,
+    "rtk_growth_factor_receptor_family": 109,
+    "scavenger_uptake_receptor_family": 38,
+    "synaptic_cell_adhesion_family": 40,
+    "tgfb_bmp_receptor_family": 79,
+    "wnt_frizzled_receptor_family": 47
+  },
+  "assignment_status_counts": {
+    "family_group_assigned": 786,
+    "not_established": 5120
+  },
+  "exportable_family_counts": {
+    "axon_guidance_adhesion_family": 82,
+    "cytokine_receptor_family": 27,
+    "ecm_integrin_adhesion_family": 252,
+    "gpcr_receptor_family": 82,
+    "hedgehog_receptor_family": 8,
+    "innate_immune_receptor_family": 10,
+    "notch_receptor_family": 10,
+    "pathway_not_established": 334,
+    "purinergic_neuroreceptor_family": 2,
+    "rtk_growth_factor_receptor_family": 109,
+    "scavenger_uptake_receptor_family": 38,
+    "synaptic_cell_adhesion_family": 40,
+    "tgfb_bmp_receptor_family": 79,
+    "wnt_frizzled_receptor_family": 47
+  },
+  "policy": {
+    "register_unchanged": true,
+    "family_labels_are_not_downstream_pathway_claims": true,
+    "direct_medium_or_high_required_for_family_assignment": true,
+    "unassigned_rows_use_pathway_not_established": true
+  }
+}
