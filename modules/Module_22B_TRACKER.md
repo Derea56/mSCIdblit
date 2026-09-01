@@ -4,7 +4,17 @@
 
 This module converts Module 22A curation into exportable receiver-program logic.
 
-**Status**: AUDIT LAYER GENERATED / SQL MATERIALIZATION PENDING.
+**Status**: CANONICAL POST-CURATION MATERIALIZED / DATABASE COUNTS RECONCILED.
+
+The evidence-backed public TF-target review set is now materialized in the
+local canonical database as supported `RegulonMember` records and typed
+`regulates_target_gene` edges. The write covers 221 deduplicated pairs across
+198 species-qualified TF entries. See
+`docs/MODULE22B_CANONICAL_MATERIALIZATION_2026-08-26.md` for the write audit.
+The previously referenced initial-database comparison directory is not present
+in this checkout. An independent local PostgreSQL reconciliation on
+2026-09-01 confirmed the 221 deduplicated pairs across 198 species-qualified
+TF entries; no comparison result from the missing artifact is claimed here.
 
 ## Consolidation Goals
 
