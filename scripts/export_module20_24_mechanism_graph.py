@@ -61,6 +61,12 @@ def parse_args() -> argparse.Namespace:
         default=ROOT / "work" / "module_b_consolidation",
         help="Directory containing module20b–module24b register directories.",
     )
+    parser.add_argument(
+        "--module20b-family-layer",
+        type=Path,
+        default=ROOT / "data" / "processed" / "module20b_pathway_family_layer_v1" / "module20b_pathway_family_layer.tsv",
+        help="Optional conservative Module 20B receptor-family grouping layer.",
+    )
     return parser.parse_args()
 
 
@@ -285,11 +291,18 @@ def file_sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def build_release(source_root: Path) -> dict[str, object]:
+def build_release(source_root: Path, module20b_family_layer: Path | None = None) -> dict[str, object]:
     all_edges: list[dict[str, str]] = []
     exportable_edges: list[dict[str, str]] = []
     evidence_rows: list[dict[str, str]] = []
     module_stats: list[dict[str, object]] = []
+    family_by_edge: dict[str, str] = {}
+    if module20b_family_layer and module20b_family_layer.exists():
+        family_by_edge = {
+            row["b_edge_id"]: row["family_label"]
+            for row in read_tsv(module20b_family_layer)
+            if row.get("b_edge_id") and row.get("family_label")
+        }
 
     for module in MODULES:
         edge_path, evidence_path = source_files(source_root, module)
@@ -298,6 +311,9 @@ def build_release(source_root: Path) -> dict[str, object]:
         for row in edges:
             row = dict(row)
             row["module"] = f"{module}B"
+            if row["module"] == "20B" and row["b_edge_id"] in family_by_edge:
+                row["register_pathway_name"] = row.get("pathway_name", "")
+                row["pathway_name"] = family_by_edge[row["b_edge_id"]]
             all_edges.append(row)
             if row.get("exportable") == "true" and not is_self_loop(row):
                 exportable_edges.append(row)
@@ -305,17 +321,18 @@ def build_release(source_root: Path) -> dict[str, object]:
             row = dict(row)
             row["module"] = f"{module}B"
             evidence_rows.append(row)
+        module_rows = [row for row in all_edges if row["module"] == f"{module}B"]
         module_stats.append(
             {
                 "module": f"{module}B",
-                "edge_count": len(edges),
+                "edge_count": len(module_rows),
                 "exportable_edge_count": sum(
-                    row.get("exportable") == "true" and not is_self_loop(row) for row in edges
+                    row.get("exportable") == "true" and not is_self_loop(row) for row in module_rows
                 ),
                 "evidence_count": len(evidence),
-                "pathway_count": len({row.get("pathway_name", "") for row in edges}),
+                "pathway_count": len({row.get("pathway_name", "") for row in module_rows}),
                 "nonexportable_edge_count": sum(
-                    row.get("exportable") != "true" or is_self_loop(row) for row in edges
+                    row.get("exportable") != "true" or is_self_loop(row) for row in module_rows
                 ),
             }
         )
@@ -669,7 +686,16 @@ def build_release(source_root: Path) -> dict[str, object]:
 
 def main() -> None:
     args = parse_args()
-    release = build_release(args.source_root.resolve())
+    family_layer = args.module20b_family_layer.resolve()
+    release = build_release(args.source_root.resolve(), family_layer if family_layer.exists() else None)
+    if family_layer.exists():
+        release["metadata"]["module20b_pathway_family_layer"] = {
+            "file": str(family_layer.relative_to(ROOT)),
+            "assignment_type": "conservative_receptor_family_grouping",
+            "downstream_pathway_claim": False,
+            "register_unchanged": True,
+            "sha256": file_sha256(family_layer),
+        }
     output_dir = args.output_dir.resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
 
