@@ -1,0 +1,25 @@
+{
+  "generated_utc": "2026-09-01T15:39:25+00:00",
+  "batch_id": "module20a_stronger_candidates_batch001",
+  "rows_reviewed": 6,
+  "rows_promoted_to_medium": 6,
+  "rows_promoted_to_high": 0,
+  "rows_removed_from_low_evidence_registry": 6,
+  "signaling_edges_created": 0,
+  "selected_review_ids": [
+    "M20A-EXT-1505",
+    "M20A-EXT-1536",
+    "M20A-EXT-1934",
+    "M20A-EXT-2528",
+    "M20A-EXT-3071",
+    "M20A-EXT-3086"
+  ],
+  "support_kind_counts": {
+    "direct_binding_and_receptor_activation": 1,
+    "direct_binding_and_receptor_dependent_function": 2,
+    "direct_binding_interface_and_receptor_activation": 1,
+    "direct_processed_ligand_binding_and_receptor_function": 1,
+    "structural_and_biophysical_direct_binding": 1
+  },
+  "policy": "Exact primary-pair evidence is required; medium is the ceiling for this batch; SCI context and intracellular relay claims remain unasserted."
+}
