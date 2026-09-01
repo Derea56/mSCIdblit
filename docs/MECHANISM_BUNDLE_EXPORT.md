@@ -62,6 +62,28 @@ Use:
 python3 /Users/derea/Documents/SCI/mSCIdblit/scripts/export_mechanism_bundle.py --database-url "$MSCIDBLIT_DATABASE_URL"
 ```
 
+## Combined method-resource release
+
+`export_mechanism_bundle.py` remains the database-backed graph exporter. To
+package that graph with the canonical method-resource intake and native
+projections, first run the method-resource importer and then use:
+
+```bash
+python3 /Users/derea/Documents/SCI/mSCIdblit/scripts/build_mscs_release_bundle.py \
+  --graph-bundle-dir /Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_01 \
+  --method-migration-dir /Users/derea/Documents/SCI/mSCIdblit/data/processed/method_resource_migration_v1 \
+  --output-dir /Users/derea/Documents/SCI/mSCIdblit/data/processed/mscs_release_bundle_v1_4_0_method_resources_v1
+python3 /Users/derea/Documents/SCI/mSCIdblit/scripts/validate_mscs_release_bundle.py
+```
+
+The combined bundle contains the graph snapshot and method-resource tables,
+native projections, checksums, crosswalks, and migration reports. Configure an
+mSCS transition run to read native resources from its
+`method_resources/method_native/` directory after the resource-level benchmark
+passes. The current bundle still records the large NicheNet RDS and neutral
+matrix as exact source references; it is not yet a self-contained replacement
+for the mSCS NicheNet scoring resource.
+
 ## Recommended Strict Mouse-First Export
 
 For the first `mSCS` astrocyte transition build, start with a conservative bundle:

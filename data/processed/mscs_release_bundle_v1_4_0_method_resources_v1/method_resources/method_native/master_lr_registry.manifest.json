@@ -1,0 +1,36 @@
+{
+  "registry_file": "data/external/method_resources/phase2_external_snapshot_2026-08-05/master_lr_registry.tsv",
+  "registry_id": "master_mouse_lr_union_v1",
+  "scoring_policy": "candidate_union_only; method scores remain separate evidence columns",
+  "source_files": {
+    "cellchat": {
+      "path": "data/external/method_resources/phase2_external_snapshot_2026-08-05/cellchat_mouse.tsv",
+      "sha256": "585340219264f0d44b9d1f228ee097301b0af86da6a823c7eabffb60f3cdffa7",
+      "source_rda": {
+        "path": "data/external/method_resources/phase2_external_snapshot_2026-08-05/CellChatDB.mouse.rda",
+        "sha256": "dd59b19646e546b3ed41f394ad2cf64cf44f3d3fcfbb58ac176f0fe1322f9413"
+      },
+      "source_url": "https://github.com/jinworks/CellChat/blob/75253cd0c9e68410e6e721a6d3a0419a1d7e358f/data/CellChatDB.mouse.rda"
+    },
+    "liana": {
+      "path": "data/external/method_resources/phase2_external_snapshot_2026-08-05/liana_mouseconsensus.tsv",
+      "row_count": 3989,
+      "sha256": "0b9e2307fcbd482bb608f118d7e03bdbfc93e58d2c2032c844b648e3cca86f71"
+    },
+    "nichenet_lr": {
+      "path": "data/external/method_resources/phase2_external_snapshot_2026-08-05/nichenet_neutral_v1/lr_network.tsv",
+      "row_count": 5668,
+      "sha256": "22279374620ff3a2ecb388107cfd7c03770e9c7c67a920ad44033179e511b282"
+    }
+  },
+  "summary": {
+    "complex_pair_count": 2107,
+    "pair_count": 9099,
+    "row_count": 9099,
+    "source_methods": [
+      "cellchat",
+      "liana",
+      "nichenet"
+    ]
+  }
+}
