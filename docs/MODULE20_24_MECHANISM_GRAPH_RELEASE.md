@@ -1,4 +1,8 @@
-# Module 20B–24B mechanism graph release
+# Module 20B–24B mechanism graph release reference
+
+The current release is documented in
+[`RELEASE_v1.4.0.md`](RELEASE_v1.4.0.md). The original snapshot below is
+retained as the implementation and historical baseline reference.
 
 Release identifier: `module20_24_mechanism_graph:2026-08-25`
 
