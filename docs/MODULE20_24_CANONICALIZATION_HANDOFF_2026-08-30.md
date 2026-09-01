@@ -1389,3 +1389,51 @@ ABC grades, L0–L4 context fields, exportability, and provenance are unchanged.
 The graph validator and mSCS importer both pass. No downstream relay,
 transcription-factor/program, cellular-output, or SCI-context claim was
 inferred from a family label.
+
+## Layered release query checkpoint — 2026-09-01
+
+The v1.4.0 database materialization and the read-only pathway query utility
+were completed and pushed to `origin/main`. The utility is
+[`scripts/query_pathway.py`](../scripts/query_pathway.py), documented in
+[`docs/RELEASE_QUERY.md`](RELEASE_QUERY.md), and committed as
+`1ee564b` (`add layered release pathway query utility`). It executes one
+read-only SQL statement against a PostgreSQL release and returns separate
+layers for canonical graph rows, edge/register provenance, cross-cutting
+external evidence, modality observations, and method-resource records.
+
+The utility also scans only the known public-TF staging files and exact local
+mSCS modality-import snapshots. These are explicitly labeled as staging or
+local-import records; they are never promoted or silently merged into the
+canonical database result.
+
+Validation completed:
+
+- five focused query-utility tests passed;
+- a temporary restore of the v1.4.0 custom PostgreSQL dump passed the query
+  integration test;
+- the IL1B test query returned 7 canonical mechanism edges, 8 register-
+  evidence rows, 8 method-resource communications, and 10 native method
+  records;
+- the same query returned 60 public-TF staging rows and 56 matching rows from
+  the local modality snapshots (17 source-record rows and 39 observation-
+  detail rows in the bounded result).
+
+The v1.4.0 dump includes the modality tables but currently contains zero
+materialized rows in those tables. The local import snapshots remain the exact
+source for those 56 matches. This is a release-materialization boundary, not
+an evidence upgrade, and must be resolved explicitly before claiming that the
+database release contains the modality layer.
+
+## Resumable next steps after the query checkpoint
+
+1. Run `query_pathway.py` for additional pathway/entity terms and review the
+   layer-specific counts and provenance boundaries.
+2. Decide whether the mSCS modality import rows should be materialized into the
+   next database release; if so, load the existing generated materialization,
+   rerun the crosswalk and integrity gates, and preserve native values.
+3. Keep public-TF rows and method-resource memberships separate from
+   canonical mechanism claims unless their existing evidence and anchor gates
+   are satisfied.
+4. Before the next version, rerun the release export, independent dump-restore
+   check, graph validation, method-resource equivalence check, modality
+   provenance audit, and one-row-per-source-observation audit.
