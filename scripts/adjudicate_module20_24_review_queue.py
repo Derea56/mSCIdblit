@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Adjudicate exact duplicates in the Module 20–24 review queue.
+"""Adjudicate exact duplicates and source identities in the Module 20–24 queue.
 
-This is a conservative queue-cleanup step. A review unit is resolved only
+This is a conservative queue-cleanup step. A review unit is resolved either
 when an artifact with the same register evidence ID, resolved PMID, and exact
-artifact path already has a ``supporting_validated_claim`` adjudication. The
-result reuses the existing source unit; it does not create a new claim,
-observation, edge, paper relationship, or canonical database row.
+artifact path already has a ``supporting_validated_claim`` adjudication, or
+when a cited source-record artifact provides one exact paper identity already
+present in the row's composite key. The result reuses existing support or
+resolves paper identity only; it does not create a new claim, observation,
+edge, paper relationship, or canonical database row.
 """
 
 from __future__ import annotations
@@ -66,6 +68,22 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def source_record_identifiers(path: Path, role: str) -> set[tuple[str, str]]:
+    """Read identifiers from source-record metadata using the format parser.
+
+    XML and HTML are parsed by the identity resolver, which understands
+    PubMed, Europe PMC, JATS, and citation-meta records. JSON keeps the
+    artifact-role parser's keyed-identifier restriction so identifiers in
+    arbitrary full-text/reference content are not treated as identity.
+    """
+    if path.suffix.lower() in {".xml", ".xhtml", ".html", ".htm"}:
+        identifiers: set[tuple[str, str]] = set()
+        for record in identity.parse_artifact(path):
+            identifiers.update(record.get("tokens", set()))
+        return identifiers
+    return content_self_identifiers(path, role)
+
+
 def main() -> None:
     args = parse_args()
     queue_rows = read_tsv(args.queue)
@@ -111,7 +129,7 @@ def main() -> None:
             roles = {row.get("artifact_role", "") for row in rows if row.get("artifact_path") == path}
             identifiers = set()
             for role in roles:
-                identifiers.update(content_self_identifiers(artifact_path, role))
+                identifiers.update(source_record_identifiers(artifact_path, role))
             self_pmids = {value for kind, value in identifiers if kind == "PMID"}
             overlap = self_pmids & key_pmids
             if len(self_pmids) == 1 and len(overlap) == 1:
