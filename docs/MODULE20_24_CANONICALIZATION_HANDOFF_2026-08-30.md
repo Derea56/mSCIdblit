@@ -1137,3 +1137,42 @@ authoritative source evidence becomes available. The public-TF validated
 sidecar remains noncanonical and owner-gated; no public-TF row was promoted
 by this pass. A fresh static mechanism-bundle export has not yet been made
 from this updated local database.
+
+## Exact-paper recovery checkpoint — 2026-08-31
+
+The paper bridge was reapplied after the final parser pass, and the Phase-2
+materializer was rerun. The bridge now recognizes 1,577 exact local/metadata
+Paper records and 3,311 paper-anchored register-source candidates. The
+Phase-2 source-defined layer remains 1,698 source rows representing 1,606
+distinct extraction identifiers; no Phase-2 observation or claim was admitted
+from an abstract-only record by this pass.
+
+One additional exact Paper record was recovered from the authoritative NCBI
+PubMed summary for PMID:30826495. Its DOI (10.1016/j.lfs.2019.01.060), title,
+authors, journal, year, volume, and pages agree in that record. The associated
+M22B row remains paper-provenance-only because its observation and claim are
+explicitly `validated_primary_abstract`, which the Phase-2 materializer does
+not promote to a full source-defined evidence unit.
+
+The local database totals after the rerun are 2,093 Papers, 2,037
+Experiments, 2,118 Observations, 2,037 AuthorClaims, 1,665 EvidenceLinks,
+3,399 SignalingEdges, 7,432 SignalingEdgeSources, and 4,937
+SignalingEdgeRegisterSources. All four database integrity validators returned
+zero issues; the NFKB1 core-target check remains 17 of 17.
+
+The remaining 18 supporting-valid adjudication rows are now partitioned as
+follows: eight 20B rows have no corresponding canonical register entry, one
+23B row has no register edge key (`M23B-P2-R-000642`), eight rows have
+source-identifier conflicts or insufficient exact Paper metadata, and one
+M22B abstract-only row has Paper and register metadata but is intentionally
+held outside the Phase-2 source-unit layer. The conflicting source groups are
+preserved unresolved: the local PMC artifacts embed PMID 37553521 instead of
+31940275, PMID 25075518 instead of 24932026, PMID 32894152 instead of 31907106,
+and PMIDs 22479204/29941485 instead of 11518717. No identifier or register
+mapping was inferred.
+
+The generated reports were refreshed, but the frozen static mechanism bundle
+was not regenerated. The next productive work is either to obtain exact
+authoritative source records for the eight identity-conflict rows or to
+adjudicate/register the nine edge gaps as new canonical register entries;
+neither action should be performed from the current mismatched artifacts.
