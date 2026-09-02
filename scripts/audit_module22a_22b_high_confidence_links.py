@@ -87,6 +87,15 @@ LINK_SPECS = [
         "phase2_extraction_id": "M22B-P2-R-RECOVERY-STAT3-SOCS3-000001",
         "basis": "IL-6/sIL-6R, STAT3 promoter binding, and endogenous Socs3 induction with promoter-site controls in mouse comparator systems.",
     },
+    {
+        "link_id": "M22A22B-LINK-007",
+        "handoff_id": "M22A-HANDOFF-001802",
+        "edge_id": "M22B-E000036",
+        "evidence_id": "M22B-EVID-000137",
+        "expected_tf": "CREB",
+        "phase2_extraction_id": "M22B-P2-R-000137-R094",
+        "basis": "BDNF-TrkB/CREB promoter-IV occupancy, promoter-element mutation, and CREB-family perturbation support in rat cortical neurons.",
+    },
 ]
 
 

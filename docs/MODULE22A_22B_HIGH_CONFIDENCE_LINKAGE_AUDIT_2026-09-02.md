@@ -14,8 +14,8 @@ exportable 22B edge already marked `high`, and exportable evidence marked
 - Total 22A handoffs: 5,906
 - Pending TF-program candidates: 274
 - No-terminal-TF handoffs: 5,632
-- Promotion-ready bounded links: 6
-- Candidate handoffs without an exact reusable high-confidence link: 271
+- Promotion-ready bounded links: 7
+- Candidate handoffs without an exact reusable high-confidence link: 270
 
 ## Promotion-ready bounded links
 
@@ -27,6 +27,7 @@ exportable 22B edge already marked `high`, and exportable evidence marked
 | M22A22B-LINK-004 | M22A-HANDOFF-001307 | il4 il4r_il13ra1 | STAT6 | M22B-E000459 | Arg1 | M22B-EVID-000010 |
 | M22A22B-LINK-005 | M22A-HANDOFF-001307 | il4 il4r_il13ra1 | STAT6 | M22B-E000460 | Chil3 (Ym1) | M22B-EVID-000009 |
 | M22A22B-LINK-006 | M22A-HANDOFF-001312 | il6 il6r_il6st | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-007 | M22A-HANDOFF-001802 | bdnf ntrk2 | CREB | M22B-E000036 | Bdnf promoter IV | M22B-EVID-000137 |
 
 ## Interpretation boundary
 
