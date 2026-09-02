@@ -1,0 +1,16 @@
+{
+  "promotion_id": "module21a-mia-mmp-mstn-relay-batch091-2026-09-02",
+  "records_promoted": 5,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-3384",
+    "M21A-PAIR-EVID-3396",
+    "M21A-PAIR-EVID-3403",
+    "M21A-PAIR-EVID-3406",
+    "M21A-PAIR-EVID-3408"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch091 (2026-09-02): exact pair-associated receptor-proximal relay is raised to high at the validated layer. MIA/beta1-integrin heterodimer, MMP7/SDC1 shedding and integrin-output, MMP9/Neu1/NMBR/TLR9 platform, MSTN type-II/type-I receptor redundancy, processing/source-form, complex, species/model, assay, pathway, and no-direct-binding boundaries where recorded remain explicit. Existing Module 22A terminal-TF or pending-handoff metadata is preserved unchanged; no new terminal-TF or SCI claim is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
