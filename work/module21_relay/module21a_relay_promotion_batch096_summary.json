@@ -1,0 +1,17 @@
+{
+  "promotion_id": "module21a-pth-ptn-ptpn6-peptidase-batch096-2026-09-02",
+  "records_promoted": 6,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-3662",
+    "M21A-PAIR-EVID-3690",
+    "M21A-PAIR-EVID-3696",
+    "M21A-PAIR-EVID-3698",
+    "M21A-PAIR-EVID-3699",
+    "M21A-PAIR-EVID-3703"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch096 (2026-09-02): exact pair-associated receptor-complex binding, receptor-proximal regulator relay, peptidase processing, or bounded downstream function is raised to high at the validated layer. PTH/ADRB2 cross-talk, PTN/NCL and PTN/SDC3 association, CD300LF/CLEC12A ITIM-to-PTPN6/SHP-1 regulator edges, FAP/PYY processing, direction, receptor-complex, co-receptor, substrate, isoform, species/model, assay, pathway, and no-direct-binding boundaries where recorded remain explicit. Existing Module 22A terminal-TF metadata is preserved unchanged; no new terminal-TF or SCI claim is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
