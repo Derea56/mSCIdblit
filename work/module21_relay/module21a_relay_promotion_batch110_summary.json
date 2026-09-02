@@ -1,0 +1,28 @@
+{
+  "promotion_id": "module21a-local-register-exact-pair-batch110-2026-09-02",
+  "records_promoted": 17,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-4724",
+    "M21A-PAIR-EVID-4725",
+    "M21A-PAIR-EVID-4726",
+    "M21A-PAIR-EVID-4730",
+    "M21A-PAIR-EVID-4766",
+    "M21A-PAIR-EVID-4767",
+    "M21A-PAIR-EVID-4768",
+    "M21A-PAIR-EVID-4771",
+    "M21A-PAIR-EVID-4772",
+    "M21A-PAIR-EVID-4781",
+    "M21A-PAIR-EVID-4782",
+    "M21A-PAIR-EVID-4785",
+    "M21A-PAIR-EVID-4796",
+    "M21A-PAIR-EVID-4798",
+    "M21A-PAIR-EVID-4803",
+    "M21A-PAIR-EVID-4805",
+    "M21A-PAIR-EVID-4809"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch110 (2026-09-02): exact ErbB, BMP/activin, neurotrophin, checkpoint/adhesion, chemokine, VEGF, and WNT5B receptor or adhesion evidence is raised to high only at the recorded supported layer. Ligand processing, receptor-complex, co-receptor, isoform, partial-agonist, glycoform/GAG, membrane geometry, heterologous-model, species, assay, and no-SCI boundaries remain explicit; no terminal-TF claim or SQL signaling edge is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
