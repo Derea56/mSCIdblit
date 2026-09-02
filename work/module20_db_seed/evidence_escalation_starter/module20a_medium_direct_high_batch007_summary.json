@@ -1,0 +1,31 @@
+{
+  "generated_utc": "2026-09-02T02:12:28+00:00",
+  "batch_id": "module20a_medium_direct_high_batch007",
+  "rows_reviewed": 15,
+  "rows_promoted_to_high": 15,
+  "module20b_edges_promoted": 15,
+  "module20b_frozen_lr_evidence_promoted": 15,
+  "signaling_edges_created": 0,
+  "excluded_known_provenance_collisions": [
+    "M20A-EXT-2329",
+    "M20A-EXT-2648"
+  ],
+  "policy": "Exact pair-specific primary direct-molecular or explicitly preserved receptor-complex evidence was validated at high tier in Module 20B. High applies only to the tested molecular interaction; atypical receptor or receptor-complex topology, ligand form, isoform, species, assay, and non-SCI limitations remain explicit. No relay, TF/program, cellular-output, or SCI context is inferred.",
+  "selected_review_ids": [
+    "M20A-EXT-0005",
+    "M20A-EXT-0067",
+    "M20A-EXT-0068",
+    "M20A-EXT-0069",
+    "M20A-EXT-0109",
+    "M20A-EXT-0115",
+    "M20A-EXT-0116",
+    "M20A-EXT-1062",
+    "M20A-EXT-2332",
+    "M20A-EXT-2349",
+    "M20A-EXT-2351",
+    "M20A-EXT-2648",
+    "M20A-EXT-2746",
+    "M20A-EXT-3336",
+    "M20A-EXT-3434"
+  ]
+}
