@@ -1,0 +1,12 @@
+{
+  "promotion_id": "module21a-local-register-purified-wnt3a-fzd8-lrp6-batch108-2026-09-02",
+  "records_promoted": 1,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-4577"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch108 (2026-09-02): direct purified WNT3A-FZD8 CRD-LRP6 E1E4 ternary-complex formation and receptor-proximal canonical signaling context is raised to high at the exact supported layer. Soluble-fragment, construct, full-length stoichiometry, ligand-presentation, species/model, and no-SCI boundaries remain explicit; no terminal-TF claim is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}

@@ -1,0 +1,2 @@
+evidence_id	review_id	pair_key	pathway_reuse_key	previous_tier	new_tier	source_locators	decision_basis	upstream_lr_confidence_unchanged	terminal_tf_status_unchanged	sql_materialization
+M21A-PAIR-EVID-4577	M20A-LIANA-REMAINING-0427	wnt3a fzd8_lrp6	M21A-REUSE-2114	low-medium	high	PMID:20093360; PMCID:PMC2838336; DOI:10.1074/jbc.M109.092130	Local-register revalidation supports direct purified ternary-complex formation and exact receptor-proximal function at the recorded layer; topology and TF metadata remain unchanged.	true	true	false
