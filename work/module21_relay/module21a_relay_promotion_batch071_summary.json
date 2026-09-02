@@ -1,0 +1,13 @@
+{
+  "promotion_id": "module21a-mhc1b-cd8-batch071-2026-09-02",
+  "records_promoted": 2,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-1673",
+    "M21A-PAIR-EVID-1683"
+  ],
+  "promotion_note": "Module 21A MHC-Ib/CD8 promotion batch071 (2026-09-02): exact ligand binding and receptor-proximal function are raised to high at the validated complex layer. The complete receptor complex, peptide/ligand presentation, cell-state, species, and assay boundaries remain explicit; no standalone subunit, terminal-TF, or SCI claim is made.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
