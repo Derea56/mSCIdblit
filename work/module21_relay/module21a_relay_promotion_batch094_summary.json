@@ -1,0 +1,31 @@
+{
+  "promotion_id": "module21a-protease-integrin-melanocortin-batch094-2026-09-02",
+  "records_promoted": 20,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-3563",
+    "M21A-PAIR-EVID-3565",
+    "M21A-PAIR-EVID-3566",
+    "M21A-PAIR-EVID-3567",
+    "M21A-PAIR-EVID-3569",
+    "M21A-PAIR-EVID-3570",
+    "M21A-PAIR-EVID-3571",
+    "M21A-PAIR-EVID-3573",
+    "M21A-PAIR-EVID-3574",
+    "M21A-PAIR-EVID-3576",
+    "M21A-PAIR-EVID-3577",
+    "M21A-PAIR-EVID-3582",
+    "M21A-PAIR-EVID-3585",
+    "M21A-PAIR-EVID-3586",
+    "M21A-PAIR-EVID-3587",
+    "M21A-PAIR-EVID-3606",
+    "M21A-PAIR-EVID-3607",
+    "M21A-PAIR-EVID-3608",
+    "M21A-PAIR-EVID-3609",
+    "M21A-PAIR-EVID-3610"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch094 (2026-09-02): exact pair-associated receptor-complex binding, receptor-proximal relay, or bounded downstream function is raised to high at the validated layer. PIP/AQP5 and CD44/PKM2 intracellular functions, tPA/uPA protease and LRP1/integrin complexes, plasminogen and tissue-factor/integrin binding, processed POMC-product melanocortin receptor activation, precursor-versus-processed ligand, complex, isoform, species/model, assay, pathway, and no-direct-binding boundaries where recorded remain explicit. Existing Module 22A terminal-TF metadata is preserved unchanged; no new terminal-TF or SCI claim is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
