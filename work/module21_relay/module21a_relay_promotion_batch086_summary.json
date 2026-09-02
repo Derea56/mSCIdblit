@@ -1,0 +1,19 @@
+{
+  "promotion_id": "module21a-gnai2-relay-batch086-2026-09-02",
+  "records_promoted": 8,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-2929",
+    "M21A-PAIR-EVID-2932",
+    "M21A-PAIR-EVID-2936",
+    "M21A-PAIR-EVID-2937",
+    "M21A-PAIR-EVID-2944",
+    "M21A-PAIR-EVID-2949",
+    "M21A-PAIR-EVID-2950",
+    "M21A-PAIR-EVID-2960"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch086 (2026-09-02): exact GNAI2 receptor-proximal coupling or bounded functional relay is raised to high at the validated layer. ADRA2A/C5AR1/CNR1/CXCR1/F2R/MTNR1A/MTNR1B/TSHR subtype, G-protein branch, promiscuous coupling, heterologous/native model, assay, no-purified-interface, pathway, and no-terminal-TF/SCI boundaries remain explicit; no universal or dominant GNAI2 branch is claimed.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
