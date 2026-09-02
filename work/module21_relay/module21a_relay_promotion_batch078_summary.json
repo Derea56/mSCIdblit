@@ -1,0 +1,29 @@
+{
+  "promotion_id": "module21a-receptor-complex-batch078-2026-09-02",
+  "records_promoted": 18,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-2162",
+    "M21A-PAIR-EVID-2163",
+    "M21A-PAIR-EVID-2164",
+    "M21A-PAIR-EVID-2165",
+    "M21A-PAIR-EVID-2166",
+    "M21A-PAIR-EVID-2167",
+    "M21A-PAIR-EVID-2168",
+    "M21A-PAIR-EVID-2173",
+    "M21A-PAIR-EVID-2174",
+    "M21A-PAIR-EVID-2175",
+    "M21A-PAIR-EVID-2176",
+    "M21A-PAIR-EVID-2177",
+    "M21A-PAIR-EVID-2178",
+    "M21A-PAIR-EVID-2180",
+    "M21A-PAIR-EVID-2187",
+    "M21A-PAIR-EVID-2188",
+    "M21A-PAIR-EVID-2189",
+    "M21A-PAIR-EVID-2192"
+  ],
+  "promotion_note": "Module 21A receptor-complex promotion batch078 (2026-09-02): exact processing, cofactor, receptor-complex, and qualified receptor-proximal relay/function are raised to high at the validated layer. Protease-versus-ligand, substrate/cofactor, complex topology, species, model, assay, and adaptor boundaries remain explicit; no standalone subunit, terminal-TF, or SCI claim is made.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
