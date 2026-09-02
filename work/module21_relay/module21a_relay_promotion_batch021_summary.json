@@ -1,0 +1,19 @@
+{
+  "promotion_id": "module21a-relay-function-batch021-2026-09-02",
+  "records_promoted": 7,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-5101",
+    "M21A-PAIR-EVID-5104",
+    "M21A-PAIR-EVID-5105",
+    "M21A-PAIR-EVID-5108",
+    "M21A-PAIR-EVID-5113",
+    "M21A-PAIR-EVID-5115",
+    "M21A-PAIR-EVID-5118"
+  ],
+  "promotion_note": "Module 21A relay/function promotion batch021 (2026-09-02): evidence tier raised to high for the exact, context-bounded packet; evidence-layer scope, upstream Module 20A LR confidence, terminal-TF status, and SCI transfer remain unchanged.",
+  "provenance_correction": "M21A-PAIR-EVID-5118 corrected from PMID:23314808 to PMID:26481148 for PMCID:PMC4643364 before promotion.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
