@@ -1,0 +1,17 @@
+{
+  "generated_utc": "2026-09-02T02:49:52+00:00",
+  "batch_id": "module20a_low_direct_high_batch014",
+  "rows_reviewed": 5,
+  "rows_promoted_to_high": 5,
+  "module20b_edges_promoted": 5,
+  "module20b_frozen_lr_evidence_promoted": 5,
+  "signaling_edges_created": 0,
+  "policy": "Exact pair-specific primary direct or preserved receptor-complex evidence was adjudicated high for the tested molecular interaction. High remains limited to the cited topology, splice/domain, species, ligand form, and assay; no universal pathway, downstream, TF, or SCI inference is made.",
+  "selected_b_edge_ids": [
+    "M20B-E004286",
+    "M20B-E004315",
+    "M20B-E004317",
+    "M20B-E004334",
+    "M20B-E004350"
+  ]
+}
