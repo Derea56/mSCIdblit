@@ -129,6 +129,11 @@ def validate_candidate(row: dict[str, str]) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--batch-output", type=Path, default=BATCH)
+    parser.add_argument(
+        "--promotion-id",
+        default="module21b-discovery-materialization-batch002-2026-09-02",
+    )
     args = parser.parse_args()
 
     discoveries = read_tsv(DISCOVERY)
@@ -169,7 +174,7 @@ def main() -> int:
 
     edge_number = next_numeric_id(edges, "b_edge_id", r"M21B-E(\d+)")
     evidence_number = next_numeric_id(evidence, "b_evidence_id", r"M21B-EVID-(\d+)")
-    promotion_id = "module21b-discovery-materialization-batch002-2026-09-02"
+    promotion_id = args.promotion_id
     new_edges = []
     new_evidence = []
     batch_rows = []
@@ -252,7 +257,7 @@ def main() -> int:
     evidence.extend(new_evidence)
     write_tsv(EDGES, edges, EDGE_FIELDS)
     write_tsv(EVIDENCE, evidence, EVIDENCE_FIELDS)
-    write_tsv(BATCH, batch_rows, BATCH_FIELDS)
+    write_tsv(args.batch_output, batch_rows, BATCH_FIELDS)
     for row, _triple in candidates:
         row["disposition"] = "MATERIALIZED_REVIEWED_PRIMARY"
     write_tsv(DISCOVERY, discoveries, list(discoveries[0]))
