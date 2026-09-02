@@ -1,0 +1,27 @@
+{
+  "promotion_id": "module21a-local-revalidated-fas-fgf-gdf-integrin-batch104-2026-09-02",
+  "records_promoted": 16,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-4262",
+    "M21A-PAIR-EVID-4268",
+    "M21A-PAIR-EVID-4269",
+    "M21A-PAIR-EVID-4270",
+    "M21A-PAIR-EVID-4271",
+    "M21A-PAIR-EVID-4272",
+    "M21A-PAIR-EVID-4277",
+    "M21A-PAIR-EVID-4278",
+    "M21A-PAIR-EVID-4284",
+    "M21A-PAIR-EVID-4285",
+    "M21A-PAIR-EVID-4286",
+    "M21A-PAIR-EVID-4287",
+    "M21A-PAIR-EVID-4290",
+    "M21A-PAIR-EVID-4292",
+    "M21A-PAIR-EVID-4296",
+    "M21A-PAIR-EVID-4298"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch104 (2026-09-02): exact pair-associated Fas death-receptor activation, FGFR ligand-receptor signaling, processed irisin/integrin function, or GDF receptor-complex relay is raised to high at the validated layer. Membrane presentation, oligomerization, heparan-sulfate, splice form, processed ligand, integrin heterodimer, receptor stoichiometry, co-ligand, species/model, assay, and no-SCI boundaries remain explicit. Existing Module 22A metadata is preserved unchanged; no new terminal-TF or SCI claim is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
