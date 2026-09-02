@@ -1,0 +1,14 @@
+{
+  "promotion_id": "module21a-bounded-relay-batch081-2026-09-02",
+  "records_promoted": 3,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-2328",
+    "M21A-PAIR-EVID-2344",
+    "M21A-PAIR-EVID-2354"
+  ],
+  "promotion_note": "Module 21A bounded-relay promotion batch081 (2026-09-02): exact pair interaction or receptor-associated relay/function is raised to high at the validated layer. The intracellular effector, noncanonical circuit, complex/cofactor, species/model, assay, and pathway-versus-terminal-TF boundaries remain explicit; no unsupported canonical ligand/receptor, terminal-TF, or SCI claim is made.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
