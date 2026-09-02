@@ -1,0 +1,15 @@
+{
+  "promotion_id": "module21a-worker-validated-wnt1-receptor-complex-batch107-2026-09-02",
+  "records_promoted": 4,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-4418",
+    "M21A-PAIR-EVID-4420",
+    "M21A-PAIR-EVID-4426",
+    "M21A-PAIR-EVID-4429"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch107 (2026-09-02): worker-validated WNT1 FZD/LRP or RYK receptor-complex activation/function is raised to high at the exact recorded layer. Cell-based cotransfection, ectodomain/construct, Frizzled-coupling, stoichiometry, cross-species, developmental, and no-SCI boundaries remain explicit; no purified full-complex or terminal-TF claim is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
