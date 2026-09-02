@@ -15,9 +15,9 @@ exportable 22B edge already marked `high`, and exportable evidence marked
 - Total 22A handoffs: 5,906
 - Pending TF-program candidates: 274
 - No-terminal-TF handoffs: 5,632
-- Promotion-ready bounded links: 14
+- Promotion-ready bounded links: 16
 - Links adding an evidence-backed terminal-TF assignment: 2
-- Candidate handoffs without an exact reusable high-confidence link: 265
+- Candidate handoffs without an exact reusable high-confidence link: 263
 
 ## Promotion-ready bounded links
 
@@ -37,6 +37,8 @@ exportable 22B edge already marked `high`, and exportable evidence marked
 | M22A22B-LINK-012 | M22A-HANDOFF-003978 | il4 il13_il13ra1_il4ra | STAT6 | M22B-E000459 | Arg1 | M22B-EVID-000054 |
 | M22A22B-LINK-013 | M22A-HANDOFF-003979 | il4 il13ra1_il4ra | STAT6 | M22B-E000459 | Arg1 | M22B-EVID-000054 |
 | M22A22B-LINK-014 | M22A-HANDOFF-005070 | thpo mpl | STAT5A;STAT5B | M22B-E000455 | Ccnd1 | M22B-EVID-000077 |
+| M22A22B-LINK-015 | M22A-HANDOFF-003039 | col1a1 ddr2 | PEA3 | M22B-E000299 | DDR1 promoter | M22B-EVID-000198 |
+| M22A22B-LINK-016 | M22A-HANDOFF-003267 | ebi3_il12a il12rb2_il6st | STAT1;STAT4 | M22B-E000417 | IL-35-induced iTr35 suppressor program | M22B-EVID-000030 |
 
 ## Interpretation boundary
 
@@ -48,9 +50,12 @@ receptor/soluble-receptor and macrophage-comparator limits; EDA/EDAR and
 EGF/EGFR retain skin and PC3 cancer-cell limits; and BDNF/TrkB retains
 cortical-neuron limits. Estradiol/ESR1 retains a hypothalamic-neuron
 limit, TPO/MPL retains a UT7-mpl hematopoietic limit, and the IL-4
-rows retain an infected macrophage and alpha7nAChR co-stimulus limit.
+rows retain an infected macrophage and alpha7nAChR co-stimulus limit. The
+COL1A1/DDR2 row retains its human lung-fibroblast and receptor-feedback
+limits. IL-35 retains an activated-T-cell and partial-receptor-signaling
+limit, and its link is restricted to the Il12a/Ebi3 promoter module.
 
-The remaining 265 candidate handoffs require new
+The remaining 263 candidate handoffs require new
 exact-ligand/source review or a bounded program-level assignment. The two
 new terminal-TF assignments are RELB for EDA-EDAR and ELK1 for EGF-EGFR;
 the IL-10 row extends an existing STAT3 assignment to an evidence-backed
