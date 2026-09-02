@@ -1,0 +1,16 @@
+{
+  "promotion_id": "module21a-ciliary-coreceptor-mucin-batch099-2026-09-02",
+  "records_promoted": 5,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-3911",
+    "M21A-PAIR-EVID-3912",
+    "M21A-PAIR-EVID-3913",
+    "M21A-PAIR-EVID-3916",
+    "M21A-PAIR-EVID-3918"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch099 (2026-09-02): exact pair-associated ciliary complex association, co-receptor relay, mucin-complex association, or bounded downstream function is raised to high at the validated layer. TCTN1/TMEM67 transition-zone association, TDGF1/Cripto-ACVR1B and ACVR1C co-receptor relays, TDGF1/GPC1 coreceptor function, TFF1/MUC5AC mucin complex, and TFF2/CXCR4 function, Nodal dependence, glycoform, processing, complex, species/model, assay, pathway, and no-direct-binding boundaries where recorded remain explicit. Existing Module 22A terminal-TF metadata is preserved unchanged; no new terminal-TF or SCI claim is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
