@@ -1,0 +1,24 @@
+{
+  "promotion_id": "module21a-pcsk9-pdgf-opioid-pf4-batch093-2026-09-02",
+  "records_promoted": 13,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-3515",
+    "M21A-PAIR-EVID-3516",
+    "M21A-PAIR-EVID-3517",
+    "M21A-PAIR-EVID-3520",
+    "M21A-PAIR-EVID-3522",
+    "M21A-PAIR-EVID-3530",
+    "M21A-PAIR-EVID-3535",
+    "M21A-PAIR-EVID-3537",
+    "M21A-PAIR-EVID-3538",
+    "M21A-PAIR-EVID-3544",
+    "M21A-PAIR-EVID-3545",
+    "M21A-PAIR-EVID-3547",
+    "M21A-PAIR-EVID-3552"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch093 (2026-09-02): exact pair-associated receptor-complex binding, receptor-proximal relay, or bounded downstream function is raised to high at the validated layer. PCSK9 cargo/trafficking, PD-L2/RGMB, PDGF and integrin cooperation, processed PDGF-DD receptor-complex signaling, processed dynorphin or enkephalin opioid-receptor activity, PF4/LRP1 dependence, precursor-versus-processed ligand, complex, isoform, species/model, assay, pathway, and no-direct-binding boundaries where recorded remain explicit. Existing Module 22A terminal-TF metadata is preserved unchanged; no new terminal-TF or SCI claim is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
