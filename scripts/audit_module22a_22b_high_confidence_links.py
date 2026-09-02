@@ -159,6 +159,24 @@ LINK_SPECS = [
         "phase2_extraction_id": "M22B-P2-R-000077-R091",
         "basis": "TPO/MPL-associated STAT5A/STAT5B recruitment and cyclin D1 promoter activation in UT7-mpl cells.",
     },
+    {
+        "link_id": "M22A22B-LINK-015",
+        "handoff_id": "M22A-HANDOFF-003039",
+        "edge_id": "M22B-E000299",
+        "evidence_id": "M22B-EVID-000198",
+        "expected_tf": "PEA3",
+        "phase2_extraction_id": "M22B-P2-B090-003",
+        "basis": "Collagen-I/DDR2-associated PEA3 recruitment and functional regulation of the DDR1 promoter in human lung-fibroblast systems.",
+    },
+    {
+        "link_id": "M22A22B-LINK-016",
+        "handoff_id": "M22A-HANDOFF-003267",
+        "edge_id": "M22B-E000417",
+        "evidence_id": "M22B-EVID-000030",
+        "expected_tf": "STAT1",
+        "phase2_extraction_id": "M22B-P2-R-000028C",
+        "basis": "IL-35-associated STAT1:STAT4 co-occupancy and perturbation-supported regulation of the Il12a/Ebi3 promoter module in activated mouse T cells.",
+    },
 ]
 
 
@@ -315,7 +333,10 @@ def main() -> None:
         "EGF/EGFR retain skin and PC3 cancer-cell limits; and BDNF/TrkB retains",
         "cortical-neuron limits. Estradiol/ESR1 retains a hypothalamic-neuron",
         "limit, TPO/MPL retains a UT7-mpl hematopoietic limit, and the IL-4",
-        "rows retain an infected macrophage and alpha7nAChR co-stimulus limit.",
+        "rows retain an infected macrophage and alpha7nAChR co-stimulus limit. The",
+        "COL1A1/DDR2 row retains its human lung-fibroblast and receptor-feedback",
+        "limits. IL-35 retains an activated-T-cell and partial-receptor-signaling",
+        "limit, and its link is restricted to the Il12a/Ebi3 promoter module.",
         "",
         f"The remaining {unlinked_candidates:,} candidate handoffs require new",
         "exact-ligand/source review or a bounded program-level assignment. The two",
