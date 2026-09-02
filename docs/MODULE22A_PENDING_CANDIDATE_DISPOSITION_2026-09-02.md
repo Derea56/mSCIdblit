@@ -12,6 +12,8 @@ silently broadening the evidence gate.
 - Pending handoffs before linkage: 274
 - Handoffs represented by the linkage audit: 32 (30 were pending handoffs)
 - Unlinked pending handoffs reviewed here: 244
+- Distinct local evidence packets represented: 224
+- Evidence-packet mapping completeness: 100% (no candidate lacked a local packet)
 - Disposition for every row: `not_promoted_under_current_strict_gate`
 
 The strict gate requires an exact handoff-to-22B match, an exportable
@@ -31,6 +33,20 @@ boundary/limitation text; multiple tags may apply to one row.
 | `program_or_function_level_boundary` | 53 |
 | `receptor_or_composite_boundary` | 109 |
 | `tf_or_target_assignment_unresolved` | 89 |
+
+## Source-packet confidence counts
+
+These counts summarize the confidence field already recorded in the
+Module 21A evidence-detail register; they are not new confidence calls.
+
+| Recorded source confidence | Rows |
+|---|---:|
+| `high` | 139 |
+| `low` | 18 |
+| `low-medium` | 1 |
+| `medium` | 54 |
+| `medium-high` | 24 |
+| `moderate` | 8 |
 
 ## Candidate ledger
 
