@@ -1,0 +1,26 @@
+{
+  "promotion_id": "module21a-pomc-protease-function-batch095-2026-09-02",
+  "records_promoted": 15,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-3616",
+    "M21A-PAIR-EVID-3622",
+    "M21A-PAIR-EVID-3623",
+    "M21A-PAIR-EVID-3632",
+    "M21A-PAIR-EVID-3633",
+    "M21A-PAIR-EVID-3634",
+    "M21A-PAIR-EVID-3637",
+    "M21A-PAIR-EVID-3638",
+    "M21A-PAIR-EVID-3639",
+    "M21A-PAIR-EVID-3643",
+    "M21A-PAIR-EVID-3645",
+    "M21A-PAIR-EVID-3646",
+    "M21A-PAIR-EVID-3647",
+    "M21A-PAIR-EVID-3658",
+    "M21A-PAIR-EVID-3659"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch095 (2026-09-02): exact pair-associated receptor-complex binding, receptor-proximal relay, enzyme/substrate processing, or bounded downstream function is raised to high at the validated layer. Processed POMC beta-endorphin, POSTN integrin complexes, PRL/PRLR-ERBB2 transactivation, PrP/Doppel-RPSA physical association, thrombin-THBD-PROC cofactor activation, PRSS2/PAR cleavage, PSAP uptake/function, PSEN1 gamma-secretase processing/assembly, PTGS2/ALOX5 pathway cross-talk, PTGS2/CAV1 association, precursor-versus-processed ligand, complex, isoform, species/model, assay, pathway, and no-direct-binding boundaries where recorded remain explicit. Existing Module 22A terminal-TF metadata is preserved unchanged; no new terminal-TF or SCI claim is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
