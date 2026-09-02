@@ -1,0 +1,24 @@
+{
+  "promotion_id": "module21a-local-register-exact-pair-batch114-2026-09-02",
+  "records_promoted": 13,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-5216",
+    "M21A-PAIR-EVID-5249",
+    "M21A-PAIR-EVID-5252",
+    "M21A-PAIR-EVID-5253",
+    "M21A-PAIR-EVID-5262",
+    "M21A-PAIR-EVID-5270",
+    "M21A-PAIR-EVID-5271",
+    "M21A-PAIR-EVID-5276",
+    "M21A-PAIR-EVID-5289",
+    "M21A-PAIR-EVID-5296",
+    "M21A-PAIR-EVID-5297",
+    "M21A-PAIR-EVID-5303",
+    "M21A-PAIR-EVID-5308"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch114 (2026-09-02): exact FSHR, megalin/LRP2 uptake, Activin/Nodal receptor-complex, GDF5 receptor-complex, GH/PRLR, GPC3/UNC5C recognition, progranulin/sortilin trafficking, and MHC-II/CD4 coreceptor evidence is raised to high only at the recorded supported layer. Ligand-form, receptor-complex, adaptor, scavenging, species/model, assay, and no-SCI boundaries remain explicit; no terminal-TF claim or SQL signaling edge is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
