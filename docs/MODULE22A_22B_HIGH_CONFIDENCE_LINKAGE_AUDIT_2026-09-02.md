@@ -15,9 +15,9 @@ exportable 22B edge already marked `high`, and exportable evidence marked
 - Total 22A handoffs: 5,906
 - Pending TF-program candidates: 274
 - No-terminal-TF handoffs: 5,632
-- Promotion-ready bounded links: 32
+- Promotion-ready bounded links: 35
 - Links adding an evidence-backed terminal-TF assignment: 2
-- Candidate handoffs without an exact reusable high-confidence link: 247
+- Candidate handoffs without an exact reusable high-confidence link: 244
 
 ## Promotion-ready bounded links
 
@@ -55,6 +55,9 @@ exportable 22B edge already marked `high`, and exportable evidence marked
 | M22A22B-LINK-030 | M22A-HANDOFF-003349 | epo epor | STAT5 | M22B-E000449 | Cish | M22B-EVID-000006 |
 | M22A22B-LINK-031 | M22A-HANDOFF-003988 | il6 il6ra_il6st | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000057 |
 | M22A22B-LINK-032 | M22A-HANDOFF-005380 | edil3 itgav | HOXD3 | M22B-E000207 | EDIL3-alphaVbeta5 angiogenic HOXD3 program | M22B-EVID-000207 |
+| M22A22B-LINK-033 | M22A-HANDOFF-001315 | inhba acvr1b_acvr2a | SMAD2/3 | M22B-E000378 | Fst | M22B-EVID-000378 |
+| M22A22B-LINK-034 | M22A-HANDOFF-001316 | inhba acvr1b_acvr2b | SMAD2/3 | M22B-E000378 | Fst | M22B-EVID-000378 |
+| M22A22B-LINK-035 | M22A-HANDOFF-005094 | tnf fas | RELA | M22B-E000310 | FAS target gene | M22B-EVID-000271 |
 
 ## Interpretation boundary
 
@@ -70,6 +73,11 @@ rows retain an infected macrophage and alpha7nAChR co-stimulus limit. The
 COL1A1/DDR2 row retains its human lung-fibroblast and receptor-feedback
 limits. IL-35 retains an activated-T-cell and partial-receptor-signaling
 limit, and its link is restricted to the Il12a/Ebi3 promoter module. The
+Activin A links retain the ACVR1B/ALK4 gonadotrope context and the
+unresolved ACVR2A-versus-ACVR2B composition; they reuse the Fst enhancer
+edge as a bounded receptor-complex branch. The TNF/FAS link is an
+indirect TNF-induced RELA-to-FAS transcription chain and does not claim
+TNF-FAS binding or a TNF receptor-proximal interaction.
 BMP2 links retain the tested Id1-promoter and comparator-cell limits; the
 primary paper does not test every submitted type-II receptor complex,
 BMP-family ligand transfer, or an SCI receiver cell.
@@ -81,7 +89,7 @@ mammary epithelial and glucocorticoid-cofactor context; and A2M/CREB and
 EDIL3/HOXD3 are explicitly bounded program-level links, with activated-A2M
 or alphaVbeta5 heterodimer requirements respectively.
 
-The remaining 247 candidate handoffs require new
+The remaining 244 candidate handoffs require new
 exact-ligand/source review or a bounded program-level assignment. The new
 terminal-TF assignments are RELB for EDA-EDAR and ELK1 for EGF-EGFR;
 the IL-10 row extends an existing STAT3 assignment to an evidence-backed
