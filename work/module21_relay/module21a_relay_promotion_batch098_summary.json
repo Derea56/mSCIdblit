@@ -1,0 +1,21 @@
+{
+  "promotion_id": "module21a-semaphorin-adhesion-regulator-batch098-2026-09-02",
+  "records_promoted": 10,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-3824",
+    "M21A-PAIR-EVID-3829",
+    "M21A-PAIR-EVID-3830",
+    "M21A-PAIR-EVID-3835",
+    "M21A-PAIR-EVID-3836",
+    "M21A-PAIR-EVID-3848",
+    "M21A-PAIR-EVID-3851",
+    "M21A-PAIR-EVID-3854",
+    "M21A-PAIR-EVID-3857",
+    "M21A-PAIR-EVID-3859"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch098 (2026-09-02): exact pair-associated receptor-complex binding, adhesion/recruitment relay, intracellular regulator relay, or bounded downstream function is raised to high at the validated layer. Sema3G/NRP2/Plexin-A4, Sema4A/Plexin-D1, Sema4B/DCBLD2, Sema6D receptor complexes, SerpinE2/LRP1-associated function, SERTAD1/AR co-regulation, SP-D/LAIR1 inhibition, Shank2/CFTR scaffolding, SHBG/GPRC6A engagement, complex, co-receptor, glycoform, processing, isoform, species/model, assay, pathway, and no-direct-binding boundaries where recorded remain explicit. Existing Module 22A terminal-TF metadata, including any pre-existing entries, is preserved unchanged; no new terminal-TF or SCI claim is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
