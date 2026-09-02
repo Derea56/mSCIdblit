@@ -1,0 +1,23 @@
+{
+  "promotion_id": "module21a-cytokine-adhesion-protease-batch072-2026-09-02",
+  "records_promoted": 12,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-1732",
+    "M21A-PAIR-EVID-1733",
+    "M21A-PAIR-EVID-1734",
+    "M21A-PAIR-EVID-1739",
+    "M21A-PAIR-EVID-1740",
+    "M21A-PAIR-EVID-1742",
+    "M21A-PAIR-EVID-1744",
+    "M21A-PAIR-EVID-1747",
+    "M21A-PAIR-EVID-1756",
+    "M21A-PAIR-EVID-1758",
+    "M21A-PAIR-EVID-1759",
+    "M21A-PAIR-EVID-1760"
+  ],
+  "promotion_note": "Module 21A cytokine/adhesion/protease promotion batch072 (2026-09-02): exact ligand\u2013receptor complex binding and receptor-proximal or bounded functional relay are raised to high at the validated layer. Exact complex orientation, cofactor, processed-ligand, species, model, assay, and context boundaries remain explicit; no terminal-TF or SCI claim is made.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
