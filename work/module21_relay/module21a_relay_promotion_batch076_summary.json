@@ -1,0 +1,21 @@
+{
+  "promotion_id": "module21a-receptor-complex-batch076-2026-09-02",
+  "records_promoted": 10,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-2061",
+    "M21A-PAIR-EVID-2073",
+    "M21A-PAIR-EVID-2074",
+    "M21A-PAIR-EVID-2075",
+    "M21A-PAIR-EVID-2076",
+    "M21A-PAIR-EVID-2095",
+    "M21A-PAIR-EVID-2096",
+    "M21A-PAIR-EVID-2099",
+    "M21A-PAIR-EVID-2102",
+    "M21A-PAIR-EVID-2110"
+  ],
+  "promotion_note": "Module 21A receptor-complex promotion batch076 (2026-09-02): exact ligand/receptor complex binding and qualified receptor-proximal relay/function are raised to high at the validated layer. Complex topology, processed-ligand or source-context, species, model, assay, subunit, co-receptor, and adaptor boundaries remain explicit; no standalone subunit, terminal-TF, or SCI claim is made.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
