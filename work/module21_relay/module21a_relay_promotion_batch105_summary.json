@@ -1,0 +1,31 @@
+{
+  "promotion_id": "module21a-worker-validated-cytokine-notch-gpcr-pdgf-reelin-batch105-2026-09-02",
+  "records_promoted": 20,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-4311",
+    "M21A-PAIR-EVID-4313",
+    "M21A-PAIR-EVID-4316",
+    "M21A-PAIR-EVID-4317",
+    "M21A-PAIR-EVID-4327",
+    "M21A-PAIR-EVID-4329",
+    "M21A-PAIR-EVID-4330",
+    "M21A-PAIR-EVID-4331",
+    "M21A-PAIR-EVID-4332",
+    "M21A-PAIR-EVID-4333",
+    "M21A-PAIR-EVID-4334",
+    "M21A-PAIR-EVID-4336",
+    "M21A-PAIR-EVID-4337",
+    "M21A-PAIR-EVID-4338",
+    "M21A-PAIR-EVID-4339",
+    "M21A-PAIR-EVID-4341",
+    "M21A-PAIR-EVID-4346",
+    "M21A-PAIR-EVID-4348",
+    "M21A-PAIR-EVID-4352",
+    "M21A-PAIR-EVID-4353"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch105 (2026-09-02): exact cytokine, Notch, GPCR, TNFR, neurotrophin, PDGF, and Reelin receptor-complex/function evidence is raised to high at the validated layer. Receptor stoichiometry, ligand presentation, processing, co-receptor, isoform, oligomerization, species/model, assay, developmental, and no-SCI boundaries remain explicit. Existing Module 22A metadata is preserved unchanged; no new terminal-TF or SCI claim is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
