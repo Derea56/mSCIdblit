@@ -96,6 +96,69 @@ LINK_SPECS = [
         "phase2_extraction_id": "M22B-P2-R-000137-R094",
         "basis": "BDNF-TrkB/CREB promoter-IV occupancy, promoter-element mutation, and CREB-family perturbation support in rat cortical neurons.",
     },
+    {
+        "link_id": "M22A22B-LINK-008",
+        "handoff_id": "M22A-HANDOFF-000449",
+        "edge_id": "M22B-E000336",
+        "evidence_id": "M22B-EVID-000620",
+        "expected_tf": "RELB",
+        "phase2_extraction_id": "M22B-P2-R-000338",
+        "basis": "EDA-A1/EDAR/RelB promoter occupancy and RelB-dependent Ltb transcription in the validated skin-cell models.",
+    },
+    {
+        "link_id": "M22A22B-LINK-009",
+        "handoff_id": "M22A-HANDOFF-000450",
+        "edge_id": "M22B-E000158",
+        "evidence_id": "M22B-EVID-000622",
+        "expected_tf": "ELK1",
+        "phase2_extraction_id": "M22B-P2-R-000340",
+        "basis": "EGF/EGFR/ERK-dependent ELK1 occupancy and promoter perturbation at EGR1 in human PC3 cells.",
+    },
+    {
+        "link_id": "M22A22B-LINK-010",
+        "handoff_id": "M22A-HANDOFF-005464",
+        "edge_id": "M22B-E000432",
+        "evidence_id": "M22B-EVID-000083",
+        "expected_tf": "STAT3",
+        "phase2_extraction_id": "M22B-P2-R-000083-R092",
+        "basis": "IL-10/STAT3 recruitment and transcriptional activation at the Ttp/Zfp36 promoter in activated mouse macrophages.",
+    },
+    {
+        "link_id": "M22A22B-LINK-011",
+        "handoff_id": "M22A-HANDOFF-000440",
+        "edge_id": "M22B-E000167",
+        "evidence_id": "M22B-EVID-000105",
+        "expected_tf": "ESR1",
+        "phase2_extraction_id": "M22B-P2-R-000105-R093",
+        "basis": "Estradiol-ESR1/JUN occupancy and functional promoter regulation at Cyp19a1 promoter I.f in mouse hypothalamic neuronal models.",
+    },
+    {
+        "link_id": "M22A22B-LINK-012",
+        "handoff_id": "M22A-HANDOFF-003978",
+        "edge_id": "M22B-E000459",
+        "evidence_id": "M22B-EVID-000054",
+        "expected_tf": "STAT6",
+        "phase2_extraction_id": "M22B-P2-R-000054-R100",
+        "basis": "IL-4/IL4RA-IL13RA1 type-II receptor-complex handoff linked to bounded STAT6 occupancy and Arg1 regulation in infected mouse macrophages.",
+    },
+    {
+        "link_id": "M22A22B-LINK-013",
+        "handoff_id": "M22A-HANDOFF-003979",
+        "edge_id": "M22B-E000459",
+        "evidence_id": "M22B-EVID-000054",
+        "expected_tf": "STAT6",
+        "phase2_extraction_id": "M22B-P2-R-000054-R100",
+        "basis": "IL-4/IL4RA-IL13RA1 type-II receptor-complex handoff linked to bounded STAT6 occupancy and Arg1 regulation in infected mouse macrophages.",
+    },
+    {
+        "link_id": "M22A22B-LINK-014",
+        "handoff_id": "M22A-HANDOFF-005070",
+        "edge_id": "M22B-E000455",
+        "evidence_id": "M22B-EVID-000077",
+        "expected_tf": "STAT5",
+        "phase2_extraction_id": "M22B-P2-R-000077-R091",
+        "basis": "TPO/MPL-associated STAT5A/STAT5B recruitment and cyclin D1 promoter activation in UT7-mpl cells.",
+    },
 ]
 
 
@@ -148,7 +211,8 @@ def main() -> None:
         if source is None:
             errors.append(f"missing evidence {spec['evidence_id']}")
             continue
-        if spec["expected_tf"].upper() not in handoff["terminal_tf_entities"].upper():
+        observed_terminal_tf = handoff["terminal_tf_entities"].upper()
+        if observed_terminal_tf and spec["expected_tf"].upper() not in observed_terminal_tf:
             errors.append(f"{spec['link_id']}: handoff terminal TF mismatch")
         if edge["confidence_tier"].lower() != "high" or edge["exportable"] != "true":
             errors.append(f"{spec['link_id']}: edge is not high and exportable")
@@ -161,6 +225,7 @@ def main() -> None:
             errors.append(f"{spec['link_id']}: Phase-2 confidence is not high")
         if source["confidence_tier"].lower() != "high" and phase2 is None:
             errors.append(f"{spec['link_id']}: no high-confidence evidence source")
+        new_terminal_tf = not observed_terminal_tf or observed_terminal_tf == "NONE_FOUND"
         output_rows.append({
             "link_id": spec["link_id"],
             "handoff_id": spec["handoff_id"],
@@ -175,7 +240,11 @@ def main() -> None:
             "evidence_confidence_tier": source["confidence_tier"],
             "phase2_extraction_id": spec["phase2_extraction_id"],
             "phase2_confidence": phase2["confidence"] if phase2 else "",
-            "link_status": "promote_existing_high_tf_target_bounded_handoff",
+            "link_status": (
+                "promote_existing_high_tf_target_with_new_terminal_tf_bounded_handoff"
+                if new_terminal_tf
+                else "promote_existing_high_tf_target_bounded_handoff"
+            ),
             "basis": spec["basis"],
             "handoff_limitations": handoff["limitations"],
             "edge_limitations": edge["consolidation_note"],
@@ -198,6 +267,10 @@ def main() -> None:
     candidate_rows = [row for row in handoffs.values() if row["handoff_status"] == "pending_tf_program_review"]
     linked_handoffs = {row["handoff_id"] for row in output_rows}
     unlinked_candidates = len(candidate_rows) - len(linked_handoffs & {row["module22a_handoff_id"] for row in candidate_rows})
+    new_terminal_tf_links = sum(
+        row["link_status"] == "promote_existing_high_tf_target_with_new_terminal_tf_bounded_handoff"
+        for row in output_rows
+    )
     lines = [
         "# Module 22A-to-22B High-Confidence Linkage Audit",
         "",
@@ -208,7 +281,8 @@ def main() -> None:
         "",
         "## Gate",
         "",
-        "A link requires an exact handoff ID with the expected terminal TF, an",
+        "A link requires an exact handoff ID with the expected terminal TF, or an",
+        "explicit bounded terminal-TF assignment when the handoff has no TF, an",
         "exportable 22B edge already marked `high`, and exportable evidence marked",
         "`high` or covered by a strict Phase-2 extraction marked `High`.",
         "",
@@ -216,6 +290,7 @@ def main() -> None:
         f"- Pending TF-program candidates: {len(candidate_rows):,}",
         f"- No-terminal-TF handoffs: {terminal_status.get('none_found', 0):,}",
         f"- Promotion-ready bounded links: {len(output_rows):,}",
+        f"- Links adding an evidence-backed terminal-TF assignment: {new_terminal_tf_links:,}",
         f"- Candidate handoffs without an exact reusable high-confidence link: {unlinked_candidates:,}",
         "",
         "## Promotion-ready bounded links",
@@ -234,14 +309,22 @@ def main() -> None:
         "",
         "The `high` label applies to the tested direct TF-target evidence in the",
         "cited comparator systems. It does not mean that the same receptor complex",
-        "produces the same target in an SCI receiver cell. In particular, the IL-3",
-        "and IL-4 rows retain hematopoietic/macrophage model limits, while the IL-6",
-        "row retains its soluble-IL-6-receptor and comparator-cell limits.",
+        "produces the same target in an SCI receiver cell. IL-3 and IL-4 retain",
+        "hematopoietic/macrophage model limits; IL-6 and IL-10 retain cytokine",
+        "receptor/soluble-receptor and macrophage-comparator limits; EDA/EDAR and",
+        "EGF/EGFR retain skin and PC3 cancer-cell limits; and BDNF/TrkB retains",
+        "cortical-neuron limits. Estradiol/ESR1 retains a hypothalamic-neuron",
+        "limit, TPO/MPL retains a UT7-mpl hematopoietic limit, and the IL-4",
+        "rows retain an infected macrophage and alpha7nAChR co-stimulus limit.",
         "",
-        "The remaining 271 candidate handoffs require new exact-ligand/source review",
-        "or a bounded program-level assignment. The 5,632 no-terminal-TF handoffs",
-        "remain the broader Module 22A search-expansion pool and were not force-filled",
-        "from pathway plausibility.",
+        f"The remaining {unlinked_candidates:,} candidate handoffs require new",
+        "exact-ligand/source review or a bounded program-level assignment. The two",
+        "new terminal-TF assignments are RELB for EDA-EDAR and ELK1 for EGF-EGFR;",
+        "the IL-10 row extends an existing STAT3 assignment to an evidence-backed",
+        "target. The related IL-13 receptor-family row is not included because the",
+        "strict Arg1 extraction is IL-4-specific. The 5,632 no-terminal-TF handoffs",
+        "remain the broader Module 22A search-expansion pool and were not",
+        "force-filled from pathway plausibility.",
         "",
         "Generated by `scripts/audit_module22a_22b_high_confidence_links.py`.",
         "",
