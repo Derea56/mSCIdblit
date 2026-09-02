@@ -1,0 +1,29 @@
+{
+  "promotion_id": "module21a-local-register-exact-pair-batch111-2026-09-02",
+  "records_promoted": 18,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-4815",
+    "M21A-PAIR-EVID-4828",
+    "M21A-PAIR-EVID-4832",
+    "M21A-PAIR-EVID-4839",
+    "M21A-PAIR-EVID-4845",
+    "M21A-PAIR-EVID-4849",
+    "M21A-PAIR-EVID-4857",
+    "M21A-PAIR-EVID-4861",
+    "M21A-PAIR-EVID-4862",
+    "M21A-PAIR-EVID-4868",
+    "M21A-PAIR-EVID-4870",
+    "M21A-PAIR-EVID-4874",
+    "M21A-PAIR-EVID-4877",
+    "M21A-PAIR-EVID-4880",
+    "M21A-PAIR-EVID-4890",
+    "M21A-PAIR-EVID-4901",
+    "M21A-PAIR-EVID-4903",
+    "M21A-PAIR-EVID-4907"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch111 (2026-09-02): exact adhesion, adipokine/GPCR, ErbB-associated, chemokine, integrin, neurotrophin, BMP, and CCK receptor-complex evidence is raised to high only at the recorded supported layer. Ligand processing, receptor-complex, co-receptor, isoform, partial-agonist, species, model, assay, and no-SCI boundaries remain explicit; no terminal-TF claim or SQL signaling edge is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
