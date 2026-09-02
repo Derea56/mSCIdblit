@@ -1,0 +1,32 @@
+{
+  "promotion_id": "module21a-local-revalidated-chemokine-notch-ephrin-batch103-2026-09-02",
+  "records_promoted": 21,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-4211",
+    "M21A-PAIR-EVID-4212",
+    "M21A-PAIR-EVID-4213",
+    "M21A-PAIR-EVID-4215",
+    "M21A-PAIR-EVID-4217",
+    "M21A-PAIR-EVID-4218",
+    "M21A-PAIR-EVID-4219",
+    "M21A-PAIR-EVID-4220",
+    "M21A-PAIR-EVID-4221",
+    "M21A-PAIR-EVID-4222",
+    "M21A-PAIR-EVID-4223",
+    "M21A-PAIR-EVID-4226",
+    "M21A-PAIR-EVID-4230",
+    "M21A-PAIR-EVID-4236",
+    "M21A-PAIR-EVID-4243",
+    "M21A-PAIR-EVID-4244",
+    "M21A-PAIR-EVID-4247",
+    "M21A-PAIR-EVID-4248",
+    "M21A-PAIR-EVID-4249",
+    "M21A-PAIR-EVID-4255",
+    "M21A-PAIR-EVID-4257"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch103 (2026-09-02): exact pair-associated chemokine GPCR activation, Notch ligand interaction, TLR/co-receptor function, or Eph/ephrin receptor-complex binding/function is raised to high at the validated layer. Chemokine species and receptor context, processed domains, membrane presentation, force/clustering, bidirectional signaling, complex stoichiometry, assay, model, and no-SCI boundaries remain explicit. Existing Module 22A metadata is preserved unchanged; no new terminal-TF or SCI claim is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
