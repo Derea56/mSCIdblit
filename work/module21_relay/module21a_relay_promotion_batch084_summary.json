@@ -1,0 +1,13 @@
+{
+  "promotion_id": "module21a-cx3cl1-integrin-batch084-2026-09-02",
+  "records_promoted": 2,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-2700",
+    "M21A-PAIR-EVID-2701"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch084 (2026-09-02): exact CX3CL1-associated alphaVbeta3 receptor-complex binding/activation and bounded relay/function are raised to high at the validated layer. The alphaVbeta3 heterodimer and CX3CR1 ternary context, integrin-subunit boundary, species/model, assay, pathway, and no-terminal-TF/SCI limits remain explicit; no isolated ITGAV/ITGB3 or universal complex claim is made.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
