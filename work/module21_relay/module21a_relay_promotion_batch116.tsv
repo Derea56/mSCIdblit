@@ -1,0 +1,2 @@
+evidence_id	review_id	pair_key	pathway_reuse_key	previous_tier	new_tier	source_locators	decision_basis	upstream_lr_confidence_unchanged	terminal_tf_status_unchanged	sql_materialization
+M21A-PAIR-EVID-5342	M20A-EXT-2103	igf1 insr	M21A-REUSE-2499	low-medium	high	PMID:19443570; PMID:16239300; PMID:1311720	Low-affinity IGF-I activation of insulin receptor is supported primarily for IR-A with IRS-1/Akt/ERK outputs; promote only the IR-A receptor-isoform branch, not generic INSR or IR-B.	true	true	false
