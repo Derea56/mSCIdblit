@@ -10,8 +10,8 @@ silently broadening the evidence gate.
 ## Review scope
 
 - Pending handoffs before linkage: 274
-- Handoffs represented by the linkage audit: 29 (27 were pending handoffs)
-- Unlinked pending handoffs reviewed here: 247
+- Handoffs represented by the linkage audit: 32 (30 were pending handoffs)
+- Unlinked pending handoffs reviewed here: 244
 - Disposition for every row: `not_promoted_under_current_strict_gate`
 
 The strict gate requires an exact handoff-to-22B match, an exportable
@@ -24,12 +24,12 @@ boundary/limitation text; multiple tags may apply to one row.
 
 | Tag | Rows |
 |---|---:|
-| `exact_pair_or_family_review_required` | 212 |
-| `ligand_or_family_specificity_boundary` | 65 |
-| `model_or_context_boundary` | 152 |
+| `exact_pair_or_family_review_required` | 209 |
+| `ligand_or_family_specificity_boundary` | 64 |
+| `model_or_context_boundary` | 150 |
 | `molecular_form_boundary` | 1 |
 | `program_or_function_level_boundary` | 53 |
-| `receptor_or_composite_boundary` | 110 |
+| `receptor_or_composite_boundary` | 109 |
 | `tf_or_target_assignment_unresolved` | 89 |
 
 ## Candidate ledger
@@ -94,8 +94,6 @@ The complete machine-readable ledger is [the TSV disposition file](../work/modul
 | M22A-HANDOFF-001311 | Il5 Il5ra_csf2rb | STAT5 | `model_or_context_boundary`; `exact_pair_or_family_review_required` |
 | M22A-HANDOFF-001313 | Il7 IL7R_IL2RG | STAT5 | `receptor_or_composite_boundary`; `model_or_context_boundary`; `exact_pair_or_family_review_required` |
 | M22A-HANDOFF-001314 | Il9 IL9R_IL2RG | STAT1;STAT3;STAT5 | `model_or_context_boundary`; `exact_pair_or_family_review_required` |
-| M22A-HANDOFF-001315 | Inhba Acvr1b_acvr2a | SMAD2;SMAD3 | `receptor_or_composite_boundary`; `model_or_context_boundary`; `exact_pair_or_family_review_required` |
-| M22A-HANDOFF-001316 | Inhba Acvr1b_acvr2b | SMAD2;SMAD3 | `exact_pair_or_family_review_required` |
 | M22A-HANDOFF-001317 | Inhbb Acvr1b_acvr2a | SMAD2;SMAD3 | `exact_pair_or_family_review_required` |
 | M22A-HANDOFF-001318 | Inhbb Acvr1b_acvr2b | SMAD2;SMAD3 | `receptor_or_composite_boundary`; `exact_pair_or_family_review_required` |
 | M22A-HANDOFF-001319 | Inhbb Acvr1c_acvr2a | SMAD2;SMAD3 | `model_or_context_boundary`; `exact_pair_or_family_review_required` |
@@ -262,7 +260,6 @@ The complete machine-readable ledger is [the TSV disposition file](../work/modul
 | M22A-HANDOFF-004966 | Spon2 Itgam | RELA (provisional) | `receptor_or_composite_boundary`; `program_or_function_level_boundary`; `model_or_context_boundary`; `exact_pair_or_family_review_required` |
 | M22A-HANDOFF-004967 | Spon2 Itgb2 | RELA (provisional) | `receptor_or_composite_boundary`; `program_or_function_level_boundary`; `model_or_context_boundary`; `exact_pair_or_family_review_required` |
 | M22A-HANDOFF-005068 | Thbs2 Notch3 | HES1;HES5 (provisional) | `ligand_or_family_specificity_boundary`; `program_or_function_level_boundary`; `model_or_context_boundary`; `exact_pair_or_family_review_required` |
-| M22A-HANDOFF-005094 | Tnf Fas | RELA | `ligand_or_family_specificity_boundary`; `model_or_context_boundary`; `exact_pair_or_family_review_required` |
 | M22A-HANDOFF-005098 | Tnf Notch1 | RELA | `ligand_or_family_specificity_boundary`; `model_or_context_boundary`; `exact_pair_or_family_review_required` |
 | M22A-HANDOFF-005130 | Tpsb2 F2rl1 | BCL6 | `exact_pair_or_family_review_required` |
 | M22A-HANDOFF-005137 | Trh Trhr | CREB (provisional) | `tf_or_target_assignment_unresolved`; `program_or_function_level_boundary`; `model_or_context_boundary`; `exact_pair_or_family_review_required` |
