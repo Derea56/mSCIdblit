@@ -1,0 +1,19 @@
+{
+  "promotion_id": "module21a-wnt-adhesion-receptor-complex-batch101-2026-09-02",
+  "records_promoted": 8,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-4115",
+    "M21A-PAIR-EVID-4117",
+    "M21A-PAIR-EVID-4118",
+    "M21A-PAIR-EVID-4129",
+    "M21A-PAIR-EVID-4153",
+    "M21A-PAIR-EVID-4156",
+    "M21A-PAIR-EVID-4159",
+    "M21A-PAIR-EVID-4160"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch101 (2026-09-02): exact pair-associated Wnt-dependent function, extracellular inhibitor association, adaptor/co-receptor function, proteolytic receptor activation, syntaxin association, adhesion, or bounded receptor-complex function is raised to high at the validated layer. WNT1/CD36, WNT3A/APCDD1 and ATP6AP2, WNT5A/FZD5-LRP5, ZP3/CHRNA7, ALCAM/NRP1, ANXA2/TLR2, and APOE/LRP1 topology, processing, complex, isoform, species/model, assay, pathway, and no-SCI boundaries remain explicit. No new terminal-TF or SCI claim is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
