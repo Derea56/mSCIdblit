@@ -1,0 +1,26 @@
+{
+  "promotion_id": "module21a-local-register-exact-pair-batch113-2026-09-02",
+  "records_promoted": 15,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-5030",
+    "M21A-PAIR-EVID-5033",
+    "M21A-PAIR-EVID-5059",
+    "M21A-PAIR-EVID-5060",
+    "M21A-PAIR-EVID-5067",
+    "M21A-PAIR-EVID-5071",
+    "M21A-PAIR-EVID-5087",
+    "M21A-PAIR-EVID-5122",
+    "M21A-PAIR-EVID-5152",
+    "M21A-PAIR-EVID-5153",
+    "M21A-PAIR-EVID-5182",
+    "M21A-PAIR-EVID-5193",
+    "M21A-PAIR-EVID-5194",
+    "M21A-PAIR-EVID-5197",
+    "M21A-PAIR-EVID-5206"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch113 (2026-09-02): exact adhesion, checkpoint, Hedgehog-complex, endothelin, coagulation, apoptotic-complex, FGF, LAG3, FLT3, and fibronectin-associated evidence is raised to high only at the recorded supported layer. Binding-only, coreceptor, ligand-form, complex, species/model, assay, and no-SCI boundaries remain explicit; no terminal-TF claim or SQL signaling edge is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
