@@ -1,0 +1,24 @@
+{
+  "generated_utc": "2026-09-02T02:26:47+00:00",
+  "batch_id": "module20a_non_direct_high_batch002",
+  "rows_reviewed": 11,
+  "rows_promoted_to_high": 11,
+  "module20b_edges_promoted": 11,
+  "module20b_frozen_lr_evidence_promoted": 0,
+  "signaling_edges_created": 0,
+  "direct_binding_upgraded": 0,
+  "policy": "Exact pair-specific primary receptor-proximal relay or downstream/function evidence was adjudicated high in Module 20B. High applies only to the preserved non-direct evidence layer; it does not establish binary binding, a terminal TF, SCI relevance, or an outcome beyond the cited record. Species, complex, isoform, ligand-form, assay, and model limitations remain explicit.",
+  "selected_b_edge_ids": [
+    "M20B-E001874",
+    "M20B-E001881",
+    "M20B-E001885",
+    "M20B-E001901",
+    "M20B-E002537",
+    "M20B-E002887",
+    "M20B-E004404",
+    "M20B-E004422",
+    "M20B-E004423",
+    "M20B-E004442",
+    "M20B-E004443"
+  ]
+}

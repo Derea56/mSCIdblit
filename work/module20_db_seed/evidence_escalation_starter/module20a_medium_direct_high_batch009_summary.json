@@ -1,0 +1,20 @@
+{
+  "generated_utc": "2026-09-02T02:23:53+00:00",
+  "batch_id": "module20a_medium_direct_high_batch009",
+  "rows_reviewed": 8,
+  "rows_promoted_to_high": 8,
+  "module20b_edges_promoted": 8,
+  "module20b_frozen_lr_evidence_promoted": 8,
+  "signaling_edges_created": 0,
+  "policy": "Exact pair-specific primary direct-molecular or explicitly preserved receptor-complex evidence was adjudicated high in Module 20B. High applies only to the tested molecular engagement or preserved complex; ligand form, domain, receptor topology, isoform, species, assay, and non-SCI limitations remain explicit. No relay, TF/program, cellular-output, or SCI context is inferred.",
+  "selected_b_edge_ids": [
+    "M20B-E004816",
+    "M20B-E004866",
+    "M20B-E004867",
+    "M20B-E004888",
+    "M20B-E004903",
+    "M20B-E004904",
+    "M20B-E005079",
+    "M20B-E005179"
+  ]
+}

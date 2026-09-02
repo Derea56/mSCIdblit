@@ -41,7 +41,7 @@ EDGE_TO_REVIEW = {
     "M20B-E004107": "M20A-EXT-2332",
     "M20B-E004124": "M20A-EXT-2349",
     "M20B-E004126": "M20A-EXT-2351",
-    "M20B-E004440": "M20A-EXT-2648",
+    "M20B-E004440": "M20A-EXT-2665",
     "M20B-E004521": "M20A-EXT-2746",
     "M20B-E005111": "M20A-EXT-3336",
     "M20B-E005209": "M20A-EXT-3434",
@@ -121,6 +121,8 @@ def main() -> None:
         q = queue[aid]
         edge_id = next(edge_id for edge_id, review_id in EDGE_TO_REVIEW.items() if review_id == aid)
         edge = edges[edge_id]
+        if edge["source_a_edge_id"] != aid:
+            raise SystemExit(f"source A edge mapping mismatch for {edge_id}: {aid} != {edge['source_a_edge_id']}")
         primary = direct[edge_id]
         frozen_row = frozen[aid]
         evidence_id = f"M20A-MEDHIGH007-EVID-{index:04d}"
