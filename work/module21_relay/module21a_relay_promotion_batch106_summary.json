@@ -1,0 +1,26 @@
+{
+  "promotion_id": "module21a-local-register-semaphorin-tnfsf-vegfa-wnt-batch106-2026-09-02",
+  "records_promoted": 15,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-4364",
+    "M21A-PAIR-EVID-4365",
+    "M21A-PAIR-EVID-4366",
+    "M21A-PAIR-EVID-4370",
+    "M21A-PAIR-EVID-4372",
+    "M21A-PAIR-EVID-4388",
+    "M21A-PAIR-EVID-4389",
+    "M21A-PAIR-EVID-4390",
+    "M21A-PAIR-EVID-4391",
+    "M21A-PAIR-EVID-4395",
+    "M21A-PAIR-EVID-4396",
+    "M21A-PAIR-EVID-4397",
+    "M21A-PAIR-EVID-4399",
+    "M21A-PAIR-EVID-4407",
+    "M21A-PAIR-EVID-4410"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch106 (2026-09-02): exact semaphorin, TNF/TNFSF, VEGFA, and WNT receptor-complex/function evidence is raised to high at the validated layer. Membrane presentation, oligomerization, cis/trans geometry, receptor avidity, co-receptor/complex, isoform, species/model, assay, developmental, and no-SCI boundaries remain explicit. Existing Module 22A metadata is preserved unchanged; no new terminal-TF or SCI claim is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
