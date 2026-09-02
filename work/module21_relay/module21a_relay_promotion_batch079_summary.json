@@ -1,0 +1,12 @@
+{
+  "promotion_id": "module21a-co-receptor-batch079-2026-09-02",
+  "records_promoted": 1,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-2248"
+  ],
+  "promotion_note": "Module 21A co-receptor promotion batch079 (2026-09-02): exact mature-ligand co-receptor facilitation and qualified receptor-proximal relay/function are raised to high at the validated layer. The AgRP-heparan-sulfate/syndecan-3 facilitation of MC4R antagonism, species/model, assay, and no-purified-binary-interaction boundaries remain explicit; no standalone SDC3 receptor, terminal-TF, or SCI claim is made.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
