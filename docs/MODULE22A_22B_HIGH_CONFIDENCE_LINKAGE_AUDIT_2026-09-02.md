@@ -37,7 +37,7 @@ produces the same target in an SCI receiver cell. In particular, the IL-3
 and IL-4 rows retain hematopoietic/macrophage model limits, while the IL-6
 row retains its soluble-IL-6-receptor and comparator-cell limits.
 
-The remaining 271 candidate handoffs require new exact-ligand/source review
+The remaining 270 candidate handoffs require new exact-ligand/source review
 or a bounded program-level assignment. The 5,632 no-terminal-TF handoffs
 remain the broader Module 22A search-expansion pool and were not force-filled
 from pathway plausibility.
