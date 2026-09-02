@@ -1,0 +1,14 @@
+{
+  "promotion_id": "module21a-bounded-relay-batch083-2026-09-02",
+  "records_promoted": 3,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-2532",
+    "M21A-PAIR-EVID-2533",
+    "M21A-PAIR-EVID-2535"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch083 (2026-09-02): exact pair-associated function or receptor-proximal relay is raised to high at the validated layer. CD14 cofactor/accessory, TLR1:TLR2 or TLR6-containing complex, Fas/TRIF/RIPK1 death-complex, ligand-form, species/model, assay, pathway-versus-terminal-TF, and no-SCI boundaries remain explicit; no unsupported standalone CD14 binding or universal complex claim is made.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
