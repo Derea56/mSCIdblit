@@ -1,0 +1,24 @@
+{
+  "promotion_id": "module21a-integrin-processing-relay-batch089-2026-09-02",
+  "records_promoted": 13,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-3221",
+    "M21A-PAIR-EVID-3223",
+    "M21A-PAIR-EVID-3224",
+    "M21A-PAIR-EVID-3225",
+    "M21A-PAIR-EVID-3227",
+    "M21A-PAIR-EVID-3229",
+    "M21A-PAIR-EVID-3231",
+    "M21A-PAIR-EVID-3233",
+    "M21A-PAIR-EVID-3236",
+    "M21A-PAIR-EVID-3240",
+    "M21A-PAIR-EVID-3241",
+    "M21A-PAIR-EVID-3246",
+    "M21A-PAIR-EVID-3247"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch089 (2026-09-02): exact pair-associated receptor-complex relay or bounded processing/function is raised to high at the validated layer. Integrin heterodimer, adhesion/cofactor, intracellular-adaptor, JUNO/IZUMO1, protease-processing, Klotho/FGFR1/FGF23, processed-kinin, HKa/Mac-1, ligand/material form, species/model, assay, pathway, and no-terminal-TF/SCI boundaries remain explicit; no unsupported isolated-subunit or universal ligand-receptor claim is made.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
