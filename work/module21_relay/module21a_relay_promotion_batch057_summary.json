@@ -1,0 +1,26 @@
+{
+  "promotion_id": "module21a-relay-function-batch057-2026-09-02",
+  "records_promoted": 15,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-711",
+    "M21A-PAIR-EVID-713",
+    "M21A-PAIR-EVID-714",
+    "M21A-PAIR-EVID-715",
+    "M21A-PAIR-EVID-721",
+    "M21A-PAIR-EVID-724",
+    "M21A-PAIR-EVID-725",
+    "M21A-PAIR-EVID-728",
+    "M21A-PAIR-EVID-730",
+    "M21A-PAIR-EVID-731",
+    "M21A-PAIR-EVID-733",
+    "M21A-PAIR-EVID-735",
+    "M21A-PAIR-EVID-739",
+    "M21A-PAIR-EVID-740",
+    "M21A-PAIR-EVID-741"
+  ],
+  "promotion_note": "Module 21A relay/function promotion batch057 (2026-09-02): evidence tier raised to high for the exact, context-bounded receptor, uptake, trafficking, or adhesion packet; upstream Module 20A confidence, evidence-layer scope, terminal-TF status, and SCI transfer remain unchanged.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
