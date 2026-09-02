@@ -1,0 +1,16 @@
+{
+  "generated_utc": "2026-09-02T02:34:51+00:00",
+  "batch_id": "module20a_medium_direct_high_batch011",
+  "rows_reviewed": 4,
+  "rows_promoted_to_high": 4,
+  "module20b_edges_promoted": 4,
+  "module20b_frozen_lr_evidence_promoted": 4,
+  "signaling_edges_created": 0,
+  "policy": "Exact pair-specific primary direct or explicitly qualified molecular evidence was adjudicated high for the tested ligand/receptor topology. High is limited to the tested ligand form, domain or receptor family assignment, species, and assay; no universal pathway, downstream, TF, or SCI inference is made.",
+  "selected_b_edge_ids": [
+    "M20B-E004690",
+    "M20B-E004750",
+    "M20B-E004751",
+    "M20B-E004752"
+  ]
+}

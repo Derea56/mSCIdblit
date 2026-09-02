@@ -1,0 +1,14 @@
+{
+  "generated_utc": "2026-09-02T02:29:54+00:00",
+  "batch_id": "module20a_non_direct_high_batch003",
+  "rows_reviewed": 1,
+  "rows_promoted_to_high": 1,
+  "module20b_edges_promoted": 1,
+  "module20b_frozen_lr_evidence_promoted": 0,
+  "signaling_edges_created": 0,
+  "direct_binding_upgraded": 0,
+  "policy": "Exact pair-specific primary alpha5beta1-associated receptor-proximal relay evidence was adjudicated high for the preserved non-direct L1CAM-alpha5beta1 complex layer. High does not establish isolated binary binding, a ligand-to-kinase interaction, SCI relevance, or terminal TF occupancy; integrin-complex and model limits remain explicit.",
+  "selected_b_edge_ids": [
+    "M20B-E004095"
+  ]
+}

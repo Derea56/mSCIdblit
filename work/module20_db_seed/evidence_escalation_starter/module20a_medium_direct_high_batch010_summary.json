@@ -1,0 +1,13 @@
+{
+  "generated_utc": "2026-09-02T02:29:12+00:00",
+  "batch_id": "module20a_medium_direct_high_batch010",
+  "rows_reviewed": 1,
+  "rows_promoted_to_high": 1,
+  "module20b_edges_promoted": 1,
+  "module20b_frozen_lr_evidence_promoted": 1,
+  "signaling_edges_created": 0,
+  "policy": "Exact pair-specific primary cell-surface direct association was adjudicated high for the tested LGI4-ADAM23 interaction. High does not imply purified affinity, complete receptor-complex stoichiometry, the stronger ADAM22 partner, a downstream relay, or SCI relevance; assay, domain, species, and topology limits remain explicit.",
+  "selected_b_edge_ids": [
+    "M20B-E004144"
+  ]
+}
