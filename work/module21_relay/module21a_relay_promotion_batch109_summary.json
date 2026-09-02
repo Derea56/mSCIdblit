@@ -1,0 +1,27 @@
+{
+  "promotion_id": "module21a-local-register-exact-pair-batch109-2026-09-02",
+  "records_promoted": 16,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-4630",
+    "M21A-PAIR-EVID-4631",
+    "M21A-PAIR-EVID-4652",
+    "M21A-PAIR-EVID-4663",
+    "M21A-PAIR-EVID-4669",
+    "M21A-PAIR-EVID-4670",
+    "M21A-PAIR-EVID-4678",
+    "M21A-PAIR-EVID-4679",
+    "M21A-PAIR-EVID-4684",
+    "M21A-PAIR-EVID-4687",
+    "M21A-PAIR-EVID-4695",
+    "M21A-PAIR-EVID-4697",
+    "M21A-PAIR-EVID-4701",
+    "M21A-PAIR-EVID-4703",
+    "M21A-PAIR-EVID-4707",
+    "M21A-PAIR-EVID-4708"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch109 (2026-09-02): exact SST receptor, TGF-beta latent-complex/co-receptor, chemokine-GPCR, checkpoint, mucin, and adhesion evidence is raised to high only at the recorded supported layer. Ligand processing, co-receptor, glycoform, GAG, partial-agonist, isoform, heterologous-model, membrane geometry, species, assay, and no-SCI boundaries remain explicit; no terminal-TF claim or SQL signaling edge is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
