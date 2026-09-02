@@ -1,0 +1,28 @@
+{
+  "promotion_id": "module21a-glutamate-receptor-batch069-2026-09-02",
+  "records_promoted": 17,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-1511",
+    "M21A-PAIR-EVID-1512",
+    "M21A-PAIR-EVID-1513",
+    "M21A-PAIR-EVID-1514",
+    "M21A-PAIR-EVID-1515",
+    "M21A-PAIR-EVID-1516",
+    "M21A-PAIR-EVID-1517",
+    "M21A-PAIR-EVID-1518",
+    "M21A-PAIR-EVID-1519",
+    "M21A-PAIR-EVID-1520",
+    "M21A-PAIR-EVID-1521",
+    "M21A-PAIR-EVID-1522",
+    "M21A-PAIR-EVID-1524",
+    "M21A-PAIR-EVID-1536",
+    "M21A-PAIR-EVID-1537",
+    "M21A-PAIR-EVID-1538",
+    "M21A-PAIR-EVID-1539"
+  ],
+  "promotion_note": "Module 21A glutamate-receptor promotion batch069 (2026-09-02): exact mature glutamate activation of the specified NMDA, metabotropic, or AMPA receptor row is raised to high at the validated receptor-proximal relay layer. Source-processing labels remain context only; exact receptor composition, model, species, assembly, and electrophysiology boundaries remain explicit, with no terminal-TF or SCI claim.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
