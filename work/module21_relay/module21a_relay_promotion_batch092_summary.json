@@ -1,0 +1,18 @@
+{
+  "promotion_id": "module21a-neuro-axon-receptor-complex-batch092-2026-09-02",
+  "records_promoted": 7,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-3486",
+    "M21A-PAIR-EVID-3492",
+    "M21A-PAIR-EVID-3495",
+    "M21A-PAIR-EVID-3496",
+    "M21A-PAIR-EVID-3499",
+    "M21A-PAIR-EVID-3506",
+    "M21A-PAIR-EVID-3507"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch092 (2026-09-02): exact pair-associated receptor-complex binding, receptor-proximal relay, or bounded downstream function is raised to high at the validated layer. NRG3/ERBB4-containing complex, NT-3/TrkA, Ntn3/CDON-neogenin, NTN4/UNC5A-DCC, NTRK3/PTPRS adhesion, and OMgp/NgR1-LINGO1-p75 or NGFR topology, directness, co-receptor, isoform, species/model, assay, pathway, and no-direct-binding boundaries where recorded remain explicit. Existing Module 22A terminal-TF or pending-handoff metadata is preserved unchanged; no new terminal-TF or SCI claim is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
