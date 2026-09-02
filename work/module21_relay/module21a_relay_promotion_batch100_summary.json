@@ -1,0 +1,21 @@
+{
+  "promotion_id": "module21a-protease-receptor-complex-adaptor-batch100-2026-09-02",
+  "records_promoted": 10,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-4019",
+    "M21A-PAIR-EVID-4023",
+    "M21A-PAIR-EVID-4030",
+    "M21A-PAIR-EVID-4049",
+    "M21A-PAIR-EVID-4051",
+    "M21A-PAIR-EVID-4052",
+    "M21A-PAIR-EVID-4053",
+    "M21A-PAIR-EVID-4058",
+    "M21A-PAIR-EVID-4059",
+    "M21A-PAIR-EVID-4060"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch100 (2026-09-02): exact pair-associated proteolytic receptor activation, endocytic receptor/coreceptor function, syntaxin association, adaptor/adhesion relay, or bounded receptor-complex function is raised to high at the validated layer. Tpsb2/PAR2, Trf/Cubn-Lrp2, Try4/PAR2, TSLP/CRLF2-IL7R, TXLNA/syntaxin, VASP/CXCR2, VCAM1/alpha9beta1, and VCAN/EGFR topology, processing, complex, isoform, species/model, assay, pathway, and no-SCI boundaries remain explicit. Existing Module 22A terminal-TF metadata is preserved unchanged; no new terminal-TF or SCI claim is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
