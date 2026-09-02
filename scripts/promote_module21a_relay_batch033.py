@@ -37,7 +37,9 @@ def read_tsv(path):
 
 def write_tsv(path, fields, rows):
     with path.open("w", encoding="utf-8", newline="") as handle:
-        csv.DictWriter(handle, fieldnames=fields, delimiter="\t", lineterminator="\n").writerows(rows)
+        writer = csv.DictWriter(handle, fieldnames=fields, delimiter="\t", lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
 
 
 def index(rows, key):
