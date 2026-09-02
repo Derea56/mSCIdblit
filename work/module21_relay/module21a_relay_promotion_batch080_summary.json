@@ -1,0 +1,13 @@
+{
+  "promotion_id": "module21a-surface-enzyme-batch080-2026-09-02",
+  "records_promoted": 2,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-2286",
+    "M21A-PAIR-EVID-2307"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch080 (2026-09-02): exact pair interaction and bounded receptor-like or receptor-proximal relay/function are raised to high at the validated layer. Surface-enzyme, intracellular-domain, complex topology, ligand versus cofactor, species/model, assay, pathway, and no-terminal-TF/SCI boundaries remain explicit; no unsupported canonical receptor or ligand claim is made.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
