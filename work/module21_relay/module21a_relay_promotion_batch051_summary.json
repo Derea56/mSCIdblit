@@ -1,0 +1,22 @@
+{
+  "promotion_id": "module21a-relay-function-batch051-2026-09-02",
+  "records_promoted": 8,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-5721",
+    "M21A-PAIR-EVID-5723",
+    "M21A-PAIR-EVID-5724",
+    "M21A-PAIR-EVID-5725",
+    "M21A-PAIR-EVID-5726",
+    "M21A-PAIR-EVID-5727",
+    "M21A-PAIR-EVID-5728",
+    "M21A-PAIR-EVID-5732"
+  ],
+  "promotion_note": "Module 21A relay/function promotion batch051 (2026-09-02): evidence tier raised to high for the exact, context-bounded packet; evidence-layer scope, upstream Module 20A LR confidence, terminal-TF status, and SCI transfer remain unchanged.",
+  "register_lineage_notes": {
+    "M21A-PAIR-EVID-5732": "Child audit listed M21A-LIANA-REMAINING-0066; local review and coverage registers both resolve the observed review ID as M20A-LIANA-REMAINING-0066."
+  },
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
