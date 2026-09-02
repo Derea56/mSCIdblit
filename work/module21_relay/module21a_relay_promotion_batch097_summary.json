@@ -1,0 +1,18 @@
+{
+  "promotion_id": "module21a-selectin-semaphorin-batch097-2026-09-02",
+  "records_promoted": 7,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-3783",
+    "M21A-PAIR-EVID-3784",
+    "M21A-PAIR-EVID-3785",
+    "M21A-PAIR-EVID-3788",
+    "M21A-PAIR-EVID-3790",
+    "M21A-PAIR-EVID-3791",
+    "M21A-PAIR-EVID-3805"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch097 (2026-09-02): exact pair-associated receptor-complex binding, adhesion/recruitment relay, or bounded downstream function is raised to high at the validated layer. SCGB3A2/MARCO recognition, SDC2/PTPRJ phosphatase regulation, glycosylated CD44/HCELL and GLG1/ESL-1 selectin adhesion, selectin/PSGL-1 Mac-1 coupling, and Sema3C/NRP2/Plexin-A1 complex signaling remain bounded by glycoform, complex, co-receptor, furin-processing, species/model, assay, and no-direct-binding limitations where recorded. Existing Module 22A terminal-TF metadata is preserved unchanged; no new terminal-TF or SCI claim is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
