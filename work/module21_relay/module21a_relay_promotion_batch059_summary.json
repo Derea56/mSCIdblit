@@ -1,0 +1,17 @@
+{
+  "promotion_id": "module21a-relay-function-batch059-2026-09-02",
+  "records_promoted": 6,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-863",
+    "M21A-PAIR-EVID-864",
+    "M21A-PAIR-EVID-904",
+    "M21A-PAIR-EVID-905",
+    "M21A-PAIR-EVID-906",
+    "M21A-PAIR-EVID-908"
+  ],
+  "promotion_note": "Module 21A relay/function promotion batch059 (2026-09-02): evidence tier raised to high for the exact, context-bounded proteolytic GPCR or mature-ligand receptor packet; biosynthetic enzyme context, terminal-TF status, evidence-layer scope, upstream Module 20A confidence, and SCI transfer remain unchanged.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
