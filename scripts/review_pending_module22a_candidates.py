@@ -17,6 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 HANDOFF = ROOT / "work/module21_relay/module22a_ligand_tf_handoff.tsv"
 LINKS = ROOT / "work/module22a_22b_promotion_audit/module22a_22b_high_confidence_links.tsv"
+EVIDENCE_DETAIL = ROOT / "work/module21_relay/module21a_pair_relay_evidence_detail.tsv"
 OUT_TSV = ROOT / "work/module22a_22b_promotion_audit/module22a_pending_candidate_dispositions.tsv"
 OUT_MD = ROOT / "docs/MODULE22A_PENDING_CANDIDATE_DISPOSITION_2026-09-02.md"
 
@@ -121,6 +122,7 @@ def blocker_tags(row: dict[str, str]) -> list[str]:
 def main() -> None:
     handoffs = read_tsv(HANDOFF)
     links = read_tsv(LINKS)
+    evidence_detail = {row["evidence_id"]: row for row in read_tsv(EVIDENCE_DETAIL)}
     linked = {row["handoff_id"] for row in links}
     linked_pending = {
         row["handoff_id"]
@@ -138,12 +140,29 @@ def main() -> None:
         and row["module22a_handoff_id"] not in linked
     ]
     candidates.sort(key=lambda row: row["module22a_handoff_id"])
+    missing_evidence = [
+        row["module21a_evidence_ids"]
+        for row in candidates
+        if row["module21a_evidence_ids"] not in evidence_detail
+    ]
+    if missing_evidence:
+        raise ValueError(f"Missing local evidence packets: {missing_evidence}")
 
     fields = [
         "module22a_handoff_id",
         "pair_label_canonical",
         "terminal_tf_entities",
         "module21a_evidence_ids",
+        "source_locators",
+        "source_species",
+        "source_cell_type_model",
+        "source_assay_or_perturbation",
+        "source_relation_type",
+        "source_evidence_layer",
+        "source_confidence_tier",
+        "source_evidence_summary",
+        "source_limitations",
+        "source_review_status",
         "search_boundary",
         "limitations",
         "disposition",
@@ -155,12 +174,23 @@ def main() -> None:
         writer.writeheader()
         for row in candidates:
             tags = blocker_tags(row)
+            source = evidence_detail[row["module21a_evidence_ids"]]
             writer.writerow(
                 {
                     "module22a_handoff_id": row["module22a_handoff_id"],
                     "pair_label_canonical": row["pair_label_canonical"],
                     "terminal_tf_entities": row["terminal_tf_entities"],
                     "module21a_evidence_ids": row["module21a_evidence_ids"],
+                    "source_locators": source["source_locators"],
+                    "source_species": source["species"],
+                    "source_cell_type_model": source["cell_type_model"],
+                    "source_assay_or_perturbation": source["assay_or_perturbation"],
+                    "source_relation_type": source["relation_type"],
+                    "source_evidence_layer": source["evidence_layer"],
+                    "source_confidence_tier": source["confidence_tier"],
+                    "source_evidence_summary": source["evidence_summary"],
+                    "source_limitations": source["limitations"],
+                    "source_review_status": "mapped_to_local_primary_source_packet",
                     "search_boundary": row["search_boundary"],
                     "limitations": row["limitations"],
                     "disposition": "not_promoted_under_current_strict_gate",
@@ -169,6 +199,10 @@ def main() -> None:
             )
 
     tag_counts = Counter(tag for row in candidates for tag in blocker_tags(row))
+    source_confidence_counts = Counter(
+        evidence_detail[row["module21a_evidence_ids"]]["confidence_tier"].strip() or "unreported"
+        for row in candidates
+    )
     lines = [
         "# Module 22A Pending Candidate Disposition",
         "",
@@ -184,6 +218,8 @@ def main() -> None:
         f"- Pending handoffs before linkage: {sum(row['handoff_status'] == 'pending_tf_program_review' for row in handoffs)}",
         f"- Handoffs represented by the linkage audit: {len(linked)} ({len(linked_pending)} were pending handoffs)",
         f"- Unlinked pending handoffs reviewed here: {len(candidates)}",
+        f"- Distinct local evidence packets represented: {len({row['module21a_evidence_ids'] for row in candidates})}",
+        "- Evidence-packet mapping completeness: 100% (no candidate lacked a local packet)",
         "- Disposition for every row: `not_promoted_under_current_strict_gate`",
         "",
         "The strict gate requires an exact handoff-to-22B match, an exportable",
@@ -199,6 +235,20 @@ def main() -> None:
     ]
     for tag, count in sorted(tag_counts.items()):
         lines.append(f"| `{tag}` | {count} |")
+    lines.extend(
+        [
+            "",
+            "## Source-packet confidence counts",
+            "",
+            "These counts summarize the confidence field already recorded in the",
+            "Module 21A evidence-detail register; they are not new confidence calls.",
+            "",
+            "| Recorded source confidence | Rows |",
+            "|---|---:|",
+        ]
+    )
+    for confidence, count in sorted(source_confidence_counts.items()):
+        lines.append(f"| `{confidence}` | {count} |")
     lines.extend(
         [
             "",
