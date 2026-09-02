@@ -1,0 +1,2 @@
+evidence_id	review_id	pair_key	pathway_reuse_key	previous_tier	new_tier	source_locators	decision_basis	upstream_lr_confidence_unchanged	terminal_tf_status_unchanged	sql_materialization
+M21A-PAIR-EVID-2248	M20A-EXT-0750	agrp sdc3	M21A-REUSE-1389	medium	high	PMID:12851299;PMCID:PMC5418061	Exact mature-ligand co-receptor facilitation and qualified receptor-proximal relay support qualified-high promotion; recorded topology and context boundaries remain unchanged.	true	true	false
