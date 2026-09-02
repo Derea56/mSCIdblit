@@ -1,0 +1,14 @@
+{
+  "promotion_id": "module21a-worker-confirmed-exact-pair-batch112-2026-09-02",
+  "records_promoted": 3,
+  "evidence_ids": [
+    "M21A-PAIR-EVID-4727",
+    "M21A-PAIR-EVID-4733",
+    "M21A-PAIR-EVID-4744"
+  ],
+  "promotion_note": "Module 21A qualified-relay promotion batch112 (2026-09-02): worker-confirmed exact FLRT3-UNC5B adhesion/guidance, GDF5-BMPR1A/ACVR2B receptor-complex, and IL-17A/F heterodimer receptor-relay evidence is raised to high at the recorded supported layer. Subtype, stoichiometry, ligand-form, species/model, assay, and no-SCI boundaries remain explicit; pending terminal-TF rows remain untouched and no SQL edge is created.",
+  "upstream_module20a_lr_confidence_changed": false,
+  "terminal_tf_assignments_created": false,
+  "sql_signaling_edges_created": false,
+  "malformed_legacy_rows_touched": false
+}
