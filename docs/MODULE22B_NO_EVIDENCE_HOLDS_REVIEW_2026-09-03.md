@@ -36,11 +36,34 @@ and signed queue. This overlap does not promote the hold: a generic TF→target
 assertion does not establish that the particular Module 22A ligand/receptor
 route activated that TF, and the hold itself contains no target gene to export.
 
-Therefore this pass made zero edge or evidence-register promotions. The
+Therefore the hold audit itself made zero upgrades to the held handoff rows. The
 appropriate next work is a separately scoped regulon curation pass for the
 named TFs and a manual decomposition pass for composite/family labels. The
-4,863 rows without a terminal TF cannot be promoted to a TF→target edge without
-new pair-specific evidence and a defined terminal target.
+4,812 rows without any recognizable TF mention cannot be promoted to a
+TF→target edge without new pair-specific evidence and a defined terminal
+target; the 51 narrative-text TF leads require terminal assignment first.
+
+## First target-gene recovery tranche
+
+The follow-up search recovered eight standalone general TF→target-gene edges
+from primary studies while reviewing the narrative leads. These edges were
+added separately to Module 22B; none of the upstream handoff rows was upgraded.
+
+| TF | target gene | primary source |
+| --- | --- | --- |
+| STAT1 | IRF1 | PMID:8621447 |
+| NR1I2/PXR | CYP3A4 | PMID:12781341 |
+| AR | KLK3 | PMID:12651911 |
+| AR | KLK2 | PMID:22597536 |
+| RORC/RORγt | IL17A | PMID:30214937 |
+| SMAD1 | ID1 | PMID:12296825 |
+| SMAD2 | RORC | PMID:26194464 |
+| SMAD2 | IL17A | PMID:26194464 |
+
+These rows are general regulatory evidence from non-SCI models, with model and
+cofactor limitations retained. They increase the high-confidence register
+count by eight and the exportable target-gene count by eight, but they do not
+claim that any corresponding Module 22A handoff activates the TF.
 
 ## Reproducibility
 
