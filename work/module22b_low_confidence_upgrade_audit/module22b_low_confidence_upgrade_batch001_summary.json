@@ -1,0 +1,13 @@
+{
+  "batch_id": "module22b-low-confidence-upgrade-batch001-2026-09-02",
+  "records_upgraded": 13,
+  "high_edge_upgrades": 3,
+  "medium_edge_upgrades": 10,
+  "low_edges_before": 5069,
+  "low_edges_after": 5056,
+  "high_edges_after": 92,
+  "medium_edges_after": 433,
+  "exportable_edges_after": 723,
+  "canonical_sql_materialization": false,
+  "audit": "/private/tmp/mscidblit-module22a/work/module22b_low_confidence_upgrade_audit/module22b_low_confidence_upgrade_batch001.tsv"
+}
