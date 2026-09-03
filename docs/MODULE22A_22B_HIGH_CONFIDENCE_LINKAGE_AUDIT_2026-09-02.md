@@ -15,9 +15,9 @@ exportable 22B edge already marked `high`, and exportable evidence marked
 - Total 22A handoffs: 5,906
 - Pending TF-program candidates: 274
 - No-terminal-TF handoffs: 5,632
-- Promotion-ready bounded links: 35
+- Promotion-ready bounded links: 95
 - Links adding an evidence-backed terminal-TF assignment: 2
-- Candidate handoffs without an exact reusable high-confidence link: 244
+- Candidate handoffs without an exact reusable high-confidence link: 190
 
 ## Promotion-ready bounded links
 
@@ -58,6 +58,66 @@ exportable 22B edge already marked `high`, and exportable evidence marked
 | M22A22B-LINK-033 | M22A-HANDOFF-001315 | inhba acvr1b_acvr2a | SMAD2/3 | M22B-E000378 | Fst | M22B-EVID-000378 |
 | M22A22B-LINK-034 | M22A-HANDOFF-001316 | inhba acvr1b_acvr2b | SMAD2/3 | M22B-E000378 | Fst | M22B-EVID-000378 |
 | M22A22B-LINK-035 | M22A-HANDOFF-005094 | tnf fas | RELA | M22B-E000310 | FAS target gene | M22B-EVID-000271 |
+| M22A22B-LINK-036 | M22A-HANDOFF-002935 | cfc1 acvr1b | FOXH1 | M22B-E000181 | Foxh1-bound Nodal direct-target module including gsc,nodal1,cer1,hhex,and lefty | M22B-EVID-000158 |
+| M22A22B-LINK-037 | M22A-HANDOFF-002936 | cfc1 acvr2a | FOXH1 | M22B-E000181 | Foxh1-bound Nodal direct-target module including gsc,nodal1,cer1,hhex,and lefty | M22B-EVID-000158 |
+| M22A22B-LINK-038 | M22A-HANDOFF-004332 | nodal acvr1b_acvr2a_cfc1 | FOXH1 | M22B-E000181 | Foxh1-bound Nodal direct-target module including gsc,nodal1,cer1,hhex,and lefty | M22B-EVID-000158 |
+| M22A22B-LINK-039 | M22A-HANDOFF-004334 | nodal acvr1b_acvr2b_cfc1 | FOXH1 | M22B-E000181 | Foxh1-bound Nodal direct-target module including gsc,nodal1,cer1,hhex,and lefty | M22B-EVID-000158 |
+| M22A22B-LINK-040 | M22A-HANDOFF-004336 | nodal acvr1c_acvr2a | FOXH1 | M22B-E000181 | Foxh1-bound Nodal direct-target module including gsc,nodal1,cer1,hhex,and lefty | M22B-EVID-000158 |
+| M22A22B-LINK-041 | M22A-HANDOFF-004910 | shh boc | NKX2-2;OLIG2 | M22B-E000284 | NKX2-2/OLIG2-bound neural-progenitor fate determinant and Shh-feedback target module | M22B-EVID-000254 |
+| M22A22B-LINK-042 | M22A-HANDOFF-004912 | shh gas1 | NKX2-2;OLIG2 | M22B-E000284 | NKX2-2/OLIG2-bound neural-progenitor fate determinant and Shh-feedback target module | M22B-EVID-000254 |
+| M22A22B-LINK-043 | M22A-HANDOFF-001287 | il13 il4r_il13ra1 | STAT6 | M22B-E000459 | Arg1 | M22B-EVID-000054 |
+| M22A22B-LINK-044 | M22A-HANDOFF-003913 | il13 il13_il13ra1_il4ra | STAT6 | M22B-E000459 | Arg1 | M22B-EVID-000054 |
+| M22A22B-LINK-045 | M22A-HANDOFF-003918 | il15 il15ra_il2rb_il2rg | STAT5 | M22B-E000449 | Cish | M22B-EVID-000006 |
+| M22A22B-LINK-046 | M22A-HANDOFF-003960 | il2 il2ra_il2rb_il2rg | STAT5 | M22B-E000449 | Cish | M22B-EVID-000006 |
+| M22A22B-LINK-047 | M22A-HANDOFF-003961 | il2 il2rb_il2rg | STAT5 | M22B-E000449 | Cish | M22B-EVID-000006 |
+| M22A22B-LINK-048 | M22A-HANDOFF-003990 | il7 il2rg_il7r | STAT5 | M22B-E000449 | Cish | M22B-EVID-000006 |
+| M22A22B-LINK-049 | M22A-HANDOFF-003964 | il21 il21r_il2rg | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-050 | M22A-HANDOFF-001296 | il22 il22ra1_il10rb | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-051 | M22A-HANDOFF-001301 | il31 il31ra_osmr | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-052 | M22A-HANDOFF-001360 | lif lifr_il6st | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-053 | M22A-HANDOFF-004156 | lif il6st_lifr | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-054 | M22A-HANDOFF-001489 | osm osmr_il6st | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-055 | M22A-HANDOFF-000382 | ctf1 lifr_il6st | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-056 | M22A-HANDOFF-000368 | cntf cntfr_lifr | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-057 | M22A-HANDOFF-001311 | il5 il5ra_csf2rb | STAT5 | M22B-E000449 | Cish | M22B-EVID-000006 |
+| M22A22B-LINK-058 | M22A-HANDOFF-003984 | il5 csf2rb_il5ra | STAT5 | M22B-E000449 | Cish | M22B-EVID-000006 |
+| M22A22B-LINK-059 | M22A-HANDOFF-001313 | il7 il7r_il2rg | STAT5 | M22B-E000449 | Cish | M22B-EVID-000006 |
+| M22A22B-LINK-060 | M22A-HANDOFF-001282 | il11 il11r complex 1 | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-061 | M22A-HANDOFF-003904 | il11 il11ra1_il6st | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-062 | M22A-HANDOFF-001299 | il27 complex il27ra_il6st | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-063 | M22A-HANDOFF-003268 | ebi3_il27 il27ra_il6st | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-064 | M22A-HANDOFF-003581 | gh ghr | STAT5 | M22B-E000449 | Cish | M22B-EVID-000006 |
+| M22A22B-LINK-065 | M22A-HANDOFF-001375 | lta1b2 ltbr | RELB | M22B-E000336 | Ltb;Tnfrsf9 | M22B-EVID-000620 |
+| M22A22B-LINK-066 | M22A-HANDOFF-003178 | ctf1 il6st_lifr | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-067 | M22A-HANDOFF-001747 | tslp il7r_crlf2 | STAT5 | M22B-E000449 | Cish | M22B-EVID-000006 |
+| M22A22B-LINK-068 | M22A-HANDOFF-005163 | tslp crlf2_il7r | STAT5 | M22B-E000449 | Cish | M22B-EVID-000006 |
+| M22A22B-LINK-069 | M22A-HANDOFF-001854 | csf2 csf2ra_csf2rb | STAT5 | M22B-E000449 | Cish | M22B-EVID-000006 |
+| M22A22B-LINK-070 | M22A-HANDOFF-003349 | epo epor | STAT5 | M22B-E000449 | Cish | M22B-EVID-000006 |
+| M22A22B-LINK-071 | M22A-HANDOFF-001314 | il9 il9r_il2rg | STAT5 | M22B-E000449 | Cish | M22B-EVID-000006 |
+| M22A22B-LINK-072 | M22A-HANDOFF-003991 | il9 il2rg_il9r | STAT5 | M22B-E000449 | Cish | M22B-EVID-000006 |
+| M22A22B-LINK-079 | M22A-HANDOFF-001908 | ifnb1 ifnar1_ifnar2 | STAT1;STAT2;IRF9 | M22B-E000414 | ISRE-containing interferon-stimulated antiviral gene program | M22B-EVID-000011 |
+| M22A22B-LINK-080 | M22A-HANDOFF-001279 | ifnl2 ifnlr1_il10rb | STAT1;STAT2;IRF9 | M22B-E000414 | ISRE-containing interferon-stimulated antiviral gene program | M22B-EVID-000011 |
+| M22A22B-LINK-081 | M22A-HANDOFF-001280 | ifnl3 ifnlr1_il10rb | STAT1;STAT2;IRF9 | M22B-E000414 | ISRE-containing interferon-stimulated antiviral gene program | M22B-EVID-000011 |
+| M22A22B-LINK-082 | M22A-HANDOFF-001269 | ifna1 ifnar1_ifnar2 | STAT1;STAT2;IRF9 | M22B-E000414 | ISRE-containing interferon-stimulated antiviral gene program | M22B-EVID-000011 |
+| M22A22B-LINK-083 | M22A-HANDOFF-001274 | ifna2 ifnar1_ifnar2 | STAT1;STAT2;IRF9 | M22B-E000414 | ISRE-containing interferon-stimulated antiviral gene program | M22B-EVID-000011 |
+| M22A22B-LINK-084 | M22A-HANDOFF-001275 | ifna4 ifnar1_ifnar2 | STAT1;STAT2;IRF9 | M22B-E000414 | ISRE-containing interferon-stimulated antiviral gene program | M22B-EVID-000011 |
+| M22A22B-LINK-085 | M22A-HANDOFF-001276 | ifna5 ifnar1_ifnar2 | STAT1;STAT2;IRF9 | M22B-E000414 | ISRE-containing interferon-stimulated antiviral gene program | M22B-EVID-000011 |
+| M22A22B-LINK-086 | M22A-HANDOFF-001277 | ifna6 ifnar1_ifnar2 | STAT1;STAT2;IRF9 | M22B-E000414 | ISRE-containing interferon-stimulated antiviral gene program | M22B-EVID-000011 |
+| M22A22B-LINK-087 | M22A-HANDOFF-001278 | ifna7 ifnar1_ifnar2 | STAT1;STAT2;IRF9 | M22B-E000414 | ISRE-containing interferon-stimulated antiviral gene program | M22B-EVID-000011 |
+| M22A22B-LINK-088 | M22A-HANDOFF-001908 | ifnb1 ifnar1_ifnar2 | STAT1;STAT2;IRF9 | M22B-E000414 | ISRE-containing interferon-stimulated antiviral gene program | M22B-EVID-000011 |
+| M22A22B-LINK-089 | M22A-HANDOFF-001279 | ifnl2 ifnlr1_il10rb | STAT1;STAT2;IRF9 | M22B-E000414 | ISRE-containing interferon-stimulated antiviral gene program | M22B-EVID-000011 |
+| M22A22B-LINK-090 | M22A-HANDOFF-001280 | ifnl3 ifnlr1_il10rb | STAT1;STAT2;IRF9 | M22B-E000414 | ISRE-containing interferon-stimulated antiviral gene program | M22B-EVID-000011 |
+| M22A22B-LINK-091 | M22A-HANDOFF-001314 | il9 il9r_il2rg | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-092 | M22A-HANDOFF-003991 | il9 il2rg_il9r | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-093 | M22A-HANDOFF-001488 | osm lifr_il6st | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-094 | M22A-HANDOFF-004439 | osm il6st_lifr | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-095 | M22A-HANDOFF-003973 | il24 il20rb_il22ra1 | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-101 | M22A-HANDOFF-000204 | areg egfr | ELK1 | M22B-E000158 | EGR1 promoter | M22B-EVID-000622 |
+| M22A22B-LINK-102 | M22A-HANDOFF-003150 | crh crhr1 | CREB | M22B-E000108 | cFos | M22B-EVID-000332 |
+| M22A22B-LINK-103 | M22A-HANDOFF-001905 | gdnf gfra1_ret | CREB | M22B-E000108 | cFos | M22B-EVID-000332 |
+| M22A22B-LINK-104 | M22A-HANDOFF-005137 | trh trhr | CREB | M22B-E000108 | cFos | M22B-EVID-000332 |
+| M22A22B-LINK-105 | M22A-HANDOFF-001323 | ins1 insr | CREB;FOXO1 | M22B-E000135 | Ndn (necdin) promoter | M22B-EVID-000129 |
+| M22A22B-LINK-106 | M22A-HANDOFF-004689 | rbp4 stra6 | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
 
 ## Interpretation boundary
 
@@ -87,9 +147,15 @@ limits; GIP/CREB retains the human adipocyte insulin co-treatment limit;
 leptin/STAT3 retains the hypothalamic LEPR context; PRL/STAT5 retains the
 mammary epithelial and glucocorticoid-cofactor context; and A2M/CREB and
 EDIL3/HOXD3 are explicitly bounded program-level links, with activated-A2M
-or alphaVbeta5 heterodimer requirements respectively.
+or alphaVbeta5 heterodimer requirements respectively. The CRH/CRHR1,
+GDNF/GFRA1-RET, and TRH/TRHR additions reuse the existing CREB-cFOS edge
+as bounded comparator programs without direct ligand-specific CREB
+occupancy at c-fos. Ins1/InsR is bounded to the insulin/IGF-I CREB/FOXO1
+recruitment study at the Ndn promoter, and RBP4/STRA6 is bounded to the
+holo-RBP-retinol/JAK2/STAT/SOCS3 comparator program; neither is an SCI
+receiver-cell claim or an isoform-specific molecular assignment.
 
-The remaining 244 candidate handoffs require new
+The remaining 190 candidate handoffs require new
 exact-ligand/source review or a bounded program-level assignment. The new
 terminal-TF assignments are RELB for EDA-EDAR and ELK1 for EGF-EGFR;
 the IL-10 row extends an existing STAT3 assignment to an evidence-backed

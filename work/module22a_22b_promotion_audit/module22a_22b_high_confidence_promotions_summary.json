@@ -1,8 +1,8 @@
 {
   "promotion_id": "module22a-22b-high-confidence-bounded-2026-09-02",
-  "records_promoted": 35,
-  "distinct_handoffs": 32,
-  "distinct_22b_edges": 26,
+  "records_promoted": 95,
+  "distinct_handoffs": 86,
+  "distinct_22b_edges": 30,
   "new_terminal_tf_assignments": 2,
   "module21a_handoff_changed": false,
   "module22b_register_changed": false,
