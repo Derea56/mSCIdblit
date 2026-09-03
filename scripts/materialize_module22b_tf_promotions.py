@@ -3,21 +3,23 @@
 
 This is the write step for the normalized 22B promotion stage.  It adds or
 reuses canonical TF/target entities, assigns explicit roles, creates
-evidence-backed target-gene edges, and records the same memberships in the
-Regulon layer.  It never infers ligand-to-TF activation and does not import
-the unverified public TF database rows as supported evidence.
+  evidence-backed target-gene edges, and records the same memberships in the
+  Regulon layer. It consumes only rows present in the current register-backed
+  stage, preserves database-curated provenance, and never infers ligand-to-TF
+  activation.
 """
 
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import subprocess
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_STAGE = ROOT / "work/module22b_consolidation/materialization_round_2026_08_26"
+DEFAULT_STAGE = ROOT / "work/module22b_consolidation/materialization_round_register_2026_09_03"
 
 
 def parse_args() -> argparse.Namespace:
@@ -29,6 +31,11 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--stage-root", type=Path, default=DEFAULT_STAGE)
     parser.add_argument("--psql", default="psql")
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Validate the stage manifest and generate SQL without connecting to PostgreSQL.",
+    )
     return parser.parse_args()
 
 
@@ -36,8 +43,11 @@ def sql_literal(path: Path) -> str:
     return "'" + str(path.resolve()).replace("'", "''") + "'"
 
 
-def build_sql(stage_root: Path) -> str:
+def build_sql(stage_root: Path, expected_rows: int, materialization_version: str) -> str:
     stage_path = sql_literal(stage_root / "module22b_promoted_pairs.tsv")
+    pathway_name = f"Module22B-register-TF-target-evidence-{materialization_version}"
+    source_registry = "module22b_register_materialization"
+    source_version = materialization_version
     return f"""\
 BEGIN;
 
@@ -79,8 +89,8 @@ DECLARE
   bad INTEGER;
 BEGIN
   SELECT count(*) INTO n FROM stage_22b_promotions;
-  IF n <> 221 THEN
-    RAISE EXCEPTION 'Expected 221 normalized Module 22B promotions, found %', n;
+  IF n <> {expected_rows} THEN
+    RAISE EXCEPTION 'Expected {expected_rows} normalized Module 22B promotions, found %', n;
   END IF;
   SELECT count(*) INTO bad
   FROM stage_22b_promotions
@@ -92,7 +102,7 @@ BEGIN
      OR btrim(species) NOT IN ('human', 'mouse')
      OR btrim(tf_symbol) = ''
      OR btrim(target_symbol) = ''
-     OR btrim(primary_pmids) = ''
+     OR (btrim(primary_pmids) = '' AND btrim(external_record_keys) = '')
      OR lower(btrim(tf_symbol)) = lower(btrim(target_symbol));
   IF bad <> 0 THEN
     RAISE EXCEPTION 'Invalid normalized 22B promotion rows: %', bad;
@@ -184,12 +194,12 @@ SELECT DISTINCT
   map.entity_id,
   map.endpoint_role,
   'curated',
-  'public_tf_pair_review',
+  '{source_registry}',
   'Exact Module 22B TF-target pair identity; primary PMIDs: '
     || string_agg(DISTINCT stage.primary_pmids, '; ' ORDER BY stage.primary_pmids)
     || '. Role assignment does not assert upstream ligand activation.',
-  'public_tf_pair_review',
-  '2026-08-26',
+  '{source_registry}',
+  '{source_version}',
   'medium'
 FROM stage_22b_entity_map AS map
 JOIN stage_22b_promotions AS stage
@@ -213,9 +223,9 @@ ON CONFLICT (entity_id, role) DO UPDATE SET
     ELSE SignalingEntityRole.role_source
   END,
   role_evidence = CASE
-    WHEN position('public_tf_pair_review' in SignalingEntityRole.role_source) > 0
+    WHEN position('{source_registry}' in SignalingEntityRole.role_source) > 0
       THEN SignalingEntityRole.role_evidence
-    ELSE SignalingEntityRole.role_evidence || ' Additional evidence-backed Module 22B pair review recorded 2026-08-26.'
+    ELSE SignalingEntityRole.role_evidence || ' Additional evidence-backed Module 22B register materialization recorded {source_version}.'
   END,
   source_registry = CASE
     WHEN SignalingEntityRole.export_priority = 'exclude' THEN EXCLUDED.source_registry
@@ -235,10 +245,10 @@ INSERT INTO SignalingPathway (
   pathway_name, pathway_class, description, source_registry, notes
 )
 VALUES (
-  'Module22B-public-TF-target-evidence-2026-08-26',
+  '{pathway_name}',
   'transcriptional_regulon',
   'Evidence-backed public TF-target memberships reviewed for Module 22B.',
-  'public_tf_pair_review',
+  '{source_registry}',
   'This pathway groups reviewed TF-target edges for queryability; it does not '
     || 'infer upstream ligand-to-TF activation or claim an exhaustive regulon.'
 )
@@ -266,7 +276,7 @@ DECLARE
 BEGIN
   SELECT pathway_id INTO pathway_id_value
   FROM SignalingPathway
-  WHERE pathway_name = 'Module22B-public-TF-target-evidence-2026-08-26';
+  WHERE pathway_name = '{pathway_name}';
 
   FOR stage IN SELECT * FROM stage_22b_promotions ORDER BY materialization_id LOOP
     SELECT entity_id INTO source_id
@@ -325,7 +335,7 @@ BEGIN
         NULLIF(stage.cell_type_context, ''),
         'nucleus',
         stage.species,
-        'evidence_backed_public_tf_pair_review',
+        'evidence_backed_module22b_register_materialization',
         'Module 22B TF-target membership; abstract/context limitations retained; '
           || 'no upstream ligand activation inferred.',
         'medium',
@@ -345,6 +355,10 @@ BEGIN
       SELECT register_id_value || '-C-' || btrim(pmid) AS evidence_id
       FROM regexp_split_to_table(stage.corroborating_pmids, ';') AS pmid
       WHERE btrim(pmid) <> ''
+      UNION
+      SELECT register_id_value || '-X-' || btrim(record_key) AS evidence_id
+      FROM regexp_split_to_table(stage.external_record_keys, ';') AS record_key
+      WHERE btrim(record_key) <> ''
     ) AS evidence_ids;
 
     IF existing_register_id IS NULL THEN
@@ -356,7 +370,7 @@ BEGIN
       ) VALUES (
         edge_id_value, register_id_value, '22B', stage.tf_symbol, stage.target_symbol,
         'regulates_target_gene', 'regulates_target_gene',
-        'Module22B-public-TF-target-evidence-2026-08-26',
+        '{pathway_name}',
         'target_gene', 'supported', 'medium', evidence_id_list,
         'Evidence-backed exact-pair public TF review; canonical confidence is medium '
           || 'because abstract/context limitations remain explicit.'
@@ -380,7 +394,7 @@ BEGIN
             ) AS tokens
           ),
           consolidation_note = concat_ws(' ', register.consolidation_note,
-            'Additional reviewed public TF evidence materialized 2026-08-26.')
+            'Additional reviewed Module 22B register evidence materialized {source_version}.')
       WHERE register.register_edge_id = register_id_value;
     END IF;
 
@@ -402,7 +416,7 @@ SELECT DISTINCT
   'supported', 'Reviewed Module 22B endpoint; membership does not imply TF activation.'
 FROM stage_22b_entity_map AS map
 JOIN SignalingPathway AS pathway
-  ON pathway.pathway_name = 'Module22B-public-TF-target-evidence-2026-08-26'
+  ON pathway.pathway_name = '{pathway_name}'
 WHERE map.endpoint_role = 'transcription_factor'
 ON CONFLICT (pathway_id, entity_id) DO UPDATE SET
   member_role = 'transcription_factor',
@@ -415,7 +429,7 @@ SELECT DISTINCT
   'supported', 'Reviewed Module 22B target endpoint; membership does not imply TF activation.'
 FROM stage_22b_entity_map AS map
 JOIN SignalingPathway AS pathway
-  ON pathway.pathway_name = 'Module22B-public-TF-target-evidence-2026-08-26'
+  ON pathway.pathway_name = '{pathway_name}'
 WHERE map.endpoint_role = 'target_gene'
 ON CONFLICT DO NOTHING;
 
@@ -430,8 +444,8 @@ SELECT DISTINCT
   stage.species,
   'unspecified',
   'nucleus',
-  'public_tf_pair_review',
-  '2026-08-26',
+  '{source_registry}',
+  '{source_version}',
   'curated',
   'target_gene_membership',
   'Reviewed public TF-target set; primary literature and corroboration are '
@@ -479,8 +493,8 @@ JOIN Regulon AS regulon
  AND regulon.species_context = stage.species
  AND regulon.cell_type_context = 'unspecified'
  AND regulon.compartment_context = 'nucleus'
- AND regulon.source_registry = 'public_tf_pair_review'
- AND regulon.source_version = '2026-08-26'
+ AND regulon.source_registry = '{source_registry}'
+ AND regulon.source_version = '{source_version}'
 ON CONFLICT (regulon_id, target_entity_id)
 DO UPDATE SET
   membership_basis = EXCLUDED.membership_basis,
@@ -501,16 +515,19 @@ INSERT INTO RegulonMemberSource (
 )
 SELECT DISTINCT
   member.regulon_member_id,
-  'manual_pair_review',
-  'public_tf_pair_evidence_2026-08-26',
+  CASE WHEN stage.support_kind = 'database_curated' THEN 'public_tf_union_record' ELSE 'manual_pair_review' END,
+  '{source_version}',
   stage.materialization_id || ':primary:' || btrim(pmid),
   'https://pubmed.ncbi.nlm.nih.gov/' || btrim(pmid) || '/',
-  'primary_experiment',
+  CASE WHEN stage.support_kind = 'database_curated' THEN 'database_curated' ELSE 'primary_experiment' END,
   'inferred_regulatory',
   'supporting',
   stage.species,
   'medium',
-  'Primary pair-level literature source for Module 22B promotion ' || stage.materialization_id || '.',
+  CASE WHEN stage.support_kind = 'database_curated'
+    THEN 'Public TF database reference PMID for Module 22B promotion ' || stage.materialization_id || '.'
+    ELSE 'Primary pair-level literature source for Module 22B promotion ' || stage.materialization_id || '.'
+  END,
   stage.limitations
 FROM stage_22b_promotions AS stage
 JOIN stage_22b_entity_map AS tf_map
@@ -524,8 +541,8 @@ JOIN stage_22b_entity_map AS target_map
 JOIN Regulon AS regulon
   ON regulon.tf_entity_id = tf_map.entity_id
  AND regulon.species_context = stage.species
- AND regulon.source_registry = 'public_tf_pair_review'
- AND regulon.source_version = '2026-08-26'
+ AND regulon.source_registry = '{source_registry}'
+ AND regulon.source_version = '{source_version}'
 JOIN RegulonMember AS member
   ON member.regulon_id = regulon.regulon_id
  AND member.target_entity_id = target_map.entity_id
@@ -540,16 +557,19 @@ INSERT INTO RegulonMemberSource (
 )
 SELECT DISTINCT
   member.regulon_member_id,
-  'manual_pair_review',
-  'public_tf_pair_evidence_2026-08-26',
+  CASE WHEN stage.support_kind = 'database_curated' THEN 'public_tf_union_record' ELSE 'manual_pair_review' END,
+  '{source_version}',
   stage.materialization_id || ':corroborating:' || btrim(pmid),
   'https://pubmed.ncbi.nlm.nih.gov/' || btrim(pmid) || '/',
-  'primary_experiment',
+  CASE WHEN stage.support_kind = 'database_curated' THEN 'database_curated' ELSE 'primary_experiment' END,
   'inferred_regulatory',
   'supporting',
   stage.species,
   'medium',
-  'Independent corroborating pair-level literature source for Module 22B promotion ' || stage.materialization_id || '.',
+  CASE WHEN stage.support_kind = 'database_curated'
+    THEN 'Additional public TF database reference PMID for Module 22B promotion ' || stage.materialization_id || '.'
+    ELSE 'Independent corroborating pair-level literature source for Module 22B promotion ' || stage.materialization_id || '.'
+  END,
   stage.limitations
 FROM stage_22b_promotions AS stage
 JOIN stage_22b_entity_map AS tf_map
@@ -563,13 +583,55 @@ JOIN stage_22b_entity_map AS target_map
 JOIN Regulon AS regulon
   ON regulon.tf_entity_id = tf_map.entity_id
  AND regulon.species_context = stage.species
- AND regulon.source_registry = 'public_tf_pair_review'
- AND regulon.source_version = '2026-08-26'
+ AND regulon.source_registry = '{source_registry}'
+ AND regulon.source_version = '{source_version}'
 JOIN RegulonMember AS member
   ON member.regulon_id = regulon.regulon_id
  AND member.target_entity_id = target_map.entity_id
 CROSS JOIN LATERAL regexp_split_to_table(stage.corroborating_pmids, ';') AS pmid
 WHERE btrim(pmid) <> ''
+ON CONFLICT DO NOTHING;
+
+-- Database-curated rows may have no PMID. Preserve their signed public
+-- record keys as first-class provenance instead of manufacturing a PubMed
+-- locator or silently dropping the row.
+INSERT INTO RegulonMemberSource (
+  regulon_member_id, source_registry, source_version, external_record_id,
+  source_locator, support_kind, evidence_scope, evidence_status,
+  species_support, confidence_tier, citation_note, limitations
+)
+SELECT DISTINCT
+  member.regulon_member_id,
+  'public_tf_union_record',
+  '{source_version}',
+  stage.materialization_id || ':external:' || btrim(record_key),
+  'public_record:' || btrim(record_key),
+  'database_curated',
+  'inferred_regulatory',
+  'supporting',
+  stage.species,
+  'medium',
+  'Signed public TF record retained for Module 22B promotion ' || stage.materialization_id || '.',
+  stage.limitations
+FROM stage_22b_promotions AS stage
+JOIN stage_22b_entity_map AS tf_map
+  ON tf_map.species = stage.species
+ AND tf_map.endpoint_role = 'transcription_factor'
+ AND tf_map.symbol = stage.tf_symbol
+JOIN stage_22b_entity_map AS target_map
+  ON target_map.species = stage.species
+ AND target_map.endpoint_role = 'target_gene'
+ AND target_map.symbol = stage.target_symbol
+JOIN Regulon AS regulon
+  ON regulon.tf_entity_id = tf_map.entity_id
+ AND regulon.species_context = stage.species
+ AND regulon.source_registry = '{source_registry}'
+ AND regulon.source_version = '{source_version}'
+JOIN RegulonMember AS member
+  ON member.regulon_id = regulon.regulon_id
+ AND member.target_entity_id = target_map.entity_id
+CROSS JOIN LATERAL regexp_split_to_table(stage.external_record_keys, ';') AS record_key
+WHERE btrim(record_key) <> ''
 ON CONFLICT DO NOTHING;
 
 INSERT INTO SignalingEdgeRegisterSource (
@@ -584,14 +646,17 @@ SELECT DISTINCT
   edge_map.register_edge_id,
   edge_map.register_edge_id || '-P-' || btrim(pmid),
   '22B',
-  'primary_experiment',
+  CASE WHEN stage.support_kind = 'database_curated' THEN 'database_curated' ELSE 'primary_experiment' END,
   stage.species,
-  'contextual_support',
+  CASE WHEN stage.support_kind = 'database_curated' THEN 'inferred_regulatory' ELSE 'contextual_support' END,
   'medium',
-  'Primary literature PMID ' || btrim(pmid) || ' for reviewed TF-target pair.',
+  CASE WHEN stage.support_kind = 'database_curated'
+    THEN 'Public TF database reference PMID ' || btrim(pmid) || ' for reviewed TF-target pair.'
+    ELSE 'Primary literature PMID ' || btrim(pmid) || ' for reviewed TF-target pair.'
+  END,
   'Materialized from normalized Module 22B promotion staging; no canonical '
     || 'Paper/Observation/AuthorClaim FK inferred.',
-  'primary_literature',
+  CASE WHEN stage.support_kind = 'database_curated' THEN 'database_curated' ELSE 'primary_literature' END,
   'https://pubmed.ncbi.nlm.nih.gov/' || btrim(pmid) || '/',
   'pubmed_locator',
   'Exact pair-level primary literature support; public database membership is '
@@ -599,7 +664,7 @@ SELECT DISTINCT
   stage.limitations,
   'target_gene',
   TRUE,
-  'Canonical Module 22B TF-target evidence materialized 2026-08-26.'
+  'Canonical Module 22B register TF-target evidence materialized {source_version}.'
 FROM stage_22b_promotions AS stage
 JOIN stage_22b_edge_map AS edge_map
   ON edge_map.materialization_id = stage.materialization_id
@@ -619,25 +684,61 @@ SELECT DISTINCT
   edge_map.register_edge_id,
   edge_map.register_edge_id || '-C-' || btrim(pmid),
   '22B',
-  'primary_experiment',
+  CASE WHEN stage.support_kind = 'database_curated' THEN 'database_curated' ELSE 'primary_experiment' END,
   stage.species,
-  'contextual_support',
+  CASE WHEN stage.support_kind = 'database_curated' THEN 'inferred_regulatory' ELSE 'contextual_support' END,
   'medium',
-  'Independent corroborating literature PMID ' || btrim(pmid) || ' for reviewed TF-target pair.',
+  CASE WHEN stage.support_kind = 'database_curated'
+    THEN 'Additional public TF database reference PMID ' || btrim(pmid) || ' for reviewed TF-target pair.'
+    ELSE 'Independent corroborating literature PMID ' || btrim(pmid) || ' for reviewed TF-target pair.'
+  END,
   'Corroborating source retained separately from the primary pair source.',
-  'primary_literature',
+  CASE WHEN stage.support_kind = 'database_curated' THEN 'database_curated' ELSE 'primary_literature' END,
   'https://pubmed.ncbi.nlm.nih.gov/' || btrim(pmid) || '/',
   'pubmed_locator',
   'Independent corroborating pair-level literature support.',
   stage.limitations,
   'target_gene',
   TRUE,
-  'Canonical Module 22B TF-target evidence materialized 2026-08-26.'
+  'Canonical Module 22B register TF-target evidence materialized {source_version}.'
 FROM stage_22b_promotions AS stage
 JOIN stage_22b_edge_map AS edge_map
   ON edge_map.materialization_id = stage.materialization_id
 CROSS JOIN LATERAL regexp_split_to_table(stage.corroborating_pmids, ';') AS pmid
 WHERE btrim(pmid) <> ''
+ON CONFLICT (edge_id, register_evidence_id) DO NOTHING;
+
+INSERT INTO SignalingEdgeRegisterSource (
+  edge_id, register_edge_id, register_evidence_id, module,
+  support_kind, species_support, source_scope, confidence_tier,
+  citation_note, notes, source_kind, source_locator,
+  source_locator_status, evidence_summary, limitations,
+  evidence_layer, evidence_exportable, consolidation_note
+)
+SELECT DISTINCT
+  edge_map.edge_id,
+  edge_map.register_edge_id,
+  edge_map.register_edge_id || '-X-' || btrim(record_key),
+  '22B',
+  'database_curated',
+  stage.species,
+  'inferred_regulatory',
+  'medium',
+  'Signed public TF record ' || btrim(record_key) || ' retained for reviewed TF-target pair.',
+  'Materialized from the current Module 22B register-backed stage; database support does not prove direct DNA binding.',
+  'database_curated',
+  'public_record:' || btrim(record_key),
+  'public_record_locator',
+  'Signed public TF database record supports the normalized TF-target membership.',
+  stage.limitations,
+  'target_gene',
+  TRUE,
+  'Canonical Module 22B register TF-target evidence materialized {source_version}.'
+FROM stage_22b_promotions AS stage
+JOIN stage_22b_edge_map AS edge_map
+  ON edge_map.materialization_id = stage.materialization_id
+CROSS JOIN LATERAL regexp_split_to_table(stage.external_record_keys, ';') AS record_key
+WHERE btrim(record_key) <> ''
 ON CONFLICT (edge_id, register_evidence_id) DO NOTHING;
 
 DO $$
@@ -647,8 +748,8 @@ DECLARE
   missing_sources INTEGER;
 BEGIN
   SELECT count(*) INTO n FROM stage_22b_edge_map;
-  IF n <> 221 THEN
-    RAISE EXCEPTION 'Expected 221 canonical 22B edge mappings, found %', n;
+  IF n <> {expected_rows} THEN
+    RAISE EXCEPTION 'Expected {expected_rows} canonical 22B edge mappings, found %', n;
   END IF;
   SELECT count(*) INTO missing_roles
   FROM stage_22b_edge_map AS mapped
@@ -673,7 +774,10 @@ BEGIN
     SELECT 1 FROM SignalingEdgeRegisterSource AS source
     WHERE source.edge_id = mapped.edge_id
       AND source.evidence_exportable
-      AND source.source_locator LIKE 'https://pubmed.ncbi.nlm.nih.gov/%'
+      AND (
+        source.source_locator LIKE 'https://pubmed.ncbi.nlm.nih.gov/%'
+        OR source.source_locator LIKE 'public_record:%'
+      )
   );
   IF missing_roles <> 0 OR missing_sources <> 0 THEN
     RAISE EXCEPTION '22B materialization validation failed: missing_roles=%, missing_sources=%', missing_roles, missing_sources;
@@ -687,8 +791,8 @@ UNION ALL
 SELECT '22B_supported_regulon_members', count(*)
 FROM RegulonMember AS member
 JOIN Regulon AS regulon ON regulon.regulon_id = member.regulon_id
-WHERE regulon.source_registry = 'public_tf_pair_review'
-  AND regulon.source_version = '2026-08-26'
+WHERE regulon.source_registry = '{source_registry}'
+  AND regulon.source_version = '{source_version}'
   AND member.membership_status = 'supported'
   AND member.export_priority = 'medium';
 
@@ -698,13 +802,29 @@ COMMIT;
 
 def main() -> int:
     args = parse_args()
-    if not args.database_url:
-        raise SystemExit("Provide --database-url or set MSCIDBLIT_DATABASE_URL/DATABASE_URL.")
     stage_file = args.stage_root / "module22b_promoted_pairs.tsv"
     if not stage_file.is_file():
         raise SystemExit(f"Missing staging input: {stage_file}")
+    manifest_file = args.stage_root / "module22b_materialization_manifest.json"
+    if not manifest_file.is_file():
+        raise SystemExit(f"Missing staging manifest: {manifest_file}")
+    manifest = json.loads(manifest_file.read_text(encoding="utf-8"))
+    expected_rows = int(manifest["unique_promoted_pairs"])
+    materialization_version = str(manifest["materialization_version"])
+    sql = build_sql(args.stage_root, expected_rows, materialization_version)
+    if args.dry_run:
+        print(json.dumps({
+            "stage_root": str(args.stage_root),
+            "expected_rows": expected_rows,
+            "materialization_version": materialization_version,
+            "sql_bytes": len(sql.encode("utf-8")),
+            "database_write_performed": False,
+        }, indent=2))
+        return 0
+    if not args.database_url:
+        raise SystemExit("Provide --database-url or set MSCIDBLIT_DATABASE_URL/DATABASE_URL.")
     command = [args.psql, "-X", "-v", "ON_ERROR_STOP=1", "-d", args.database_url, "-f", "-"]
-    result = subprocess.run(command, input=build_sql(args.stage_root), text=True, check=False)
+    result = subprocess.run(command, input=sql, text=True, check=False)
     return result.returncode
 
 
