@@ -1024,6 +1024,33 @@ LINK_SPECS = [
         "phase2_extraction_id": "M22B-P2-R-000105-R093",
         "basis": "The high-confidence E2-generating HSD17B1 context is linked to the existing high ESR1/JUN-to-CYP19A1 promoter record tested with estradiol; HSD17B1 is retained as an upstream enzyme controlling E2 availability, not as an ESR1 subunit or direct receptor complex.",
     },
+    {
+        "link_id": "M22A22B-LINK-122",
+        "handoff_id": "M22A-HANDOFF-001408",
+        "edge_id": "M22B-E000394",
+        "evidence_id": "M22B-EVID-000019",
+        "expected_tf": "SMAD3",
+        "phase2_extraction_id": "M22A-P2-NEW-MSTN-SMAD3-PAI1-20260902",
+        "basis": "The high-confidence MSTN-ACVR2B/TGFBR1 relay is linked to a bounded mouse skeletal-muscle SMAD3-to-PAI-1 promoter program; the target experiment used ectopic SMAD3 rather than receptor-specific MSTN stimulation, so this does not claim direct MSTN-dependent promoter occupancy.",
+    },
+    {
+        "link_id": "M22A22B-LINK-123",
+        "handoff_id": "M22A-HANDOFF-004274",
+        "edge_id": "M22B-E000394",
+        "evidence_id": "M22B-EVID-000019",
+        "expected_tf": "SMAD3",
+        "phase2_extraction_id": "M22A-P2-NEW-MSTN-SMAD3-PAI1-20260902",
+        "basis": "The high-confidence MSTN-ACVR2A/ACVR1B relay is linked to a bounded mouse skeletal-muscle SMAD3-to-PAI-1 promoter program; the target experiment used ectopic SMAD3 rather than receptor-specific MSTN stimulation, so this does not claim direct MSTN-dependent promoter occupancy.",
+    },
+    {
+        "link_id": "M22A22B-LINK-124",
+        "handoff_id": "M22A-HANDOFF-004276",
+        "edge_id": "M22B-E000394",
+        "evidence_id": "M22B-EVID-000019",
+        "expected_tf": "SMAD3",
+        "phase2_extraction_id": "M22A-P2-NEW-MSTN-SMAD3-PAI1-20260902",
+        "basis": "The high-confidence MSTN-ACVR2A/TGFBR1 relay is linked to a bounded mouse skeletal-muscle SMAD3-to-PAI-1 promoter program; the target experiment used ectopic SMAD3 rather than receptor-specific MSTN stimulation, so this does not claim direct MSTN-dependent promoter occupancy.",
+    },
 ]
 
 

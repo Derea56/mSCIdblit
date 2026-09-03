@@ -15,9 +15,9 @@ exportable 22B edge already marked `high`, and exportable evidence marked
 - Total 22A handoffs: 5,906
 - Pending TF-program candidates: 274
 - No-terminal-TF handoffs: 5,632
-- Promotion-ready bounded links: 110
+- Promotion-ready bounded links: 113
 - Links adding an evidence-backed terminal-TF assignment: 2
-- Candidate handoffs without an exact reusable high-confidence link: 175
+- Candidate handoffs without an exact reusable high-confidence link: 172
 
 ## Promotion-ready bounded links
 
@@ -133,6 +133,9 @@ exportable 22B edge already marked `high`, and exportable evidence marked
 | M22A22B-LINK-119 | M22A-HANDOFF-001309 | il4 il4r_il2rg | STAT6 | M22B-E000459 | Arg1 | M22B-EVID-000010 |
 | M22A22B-LINK-120 | M22A-HANDOFF-003982 | il4 il2rg_il4ra | STAT6 | M22B-E000459 | Arg1 | M22B-EVID-000010 |
 | M22A22B-LINK-121 | M22A-HANDOFF-000444 | e2-hsd17b1 esr1 | ESR1 | M22B-E000167 | CYP19A1 | M22B-EVID-000105 |
+| M22A22B-LINK-122 | M22A-HANDOFF-001408 | mstn tgfbr1_acvr2b | SMAD3;SMAD4 | M22B-E000394 | SERPINE1/PAI-1 | M22B-EVID-000019 |
+| M22A22B-LINK-123 | M22A-HANDOFF-004274 | mstn acvr1b_acvr2a | SMAD3;SMAD4 | M22B-E000394 | SERPINE1/PAI-1 | M22B-EVID-000019 |
+| M22A22B-LINK-124 | M22A-HANDOFF-004276 | mstn acvr2a_tgfbr1 | SMAD3;SMAD4 | M22B-E000394 | SERPINE1/PAI-1 | M22B-EVID-000019 |
 
 ## Interpretation boundary
 
@@ -170,7 +173,7 @@ recruitment study at the Ndn promoter, and RBP4/STRA6 is bounded to the
 holo-RBP-retinol/JAK2/STAT/SOCS3 comparator program; neither is an SCI
 receiver-cell claim or an isoform-specific molecular assignment.
 
-The remaining 175 candidate handoffs require new
+The remaining 172 candidate handoffs require new
 exact-ligand/source review or a bounded program-level assignment. The new
 terminal-TF assignments are RELB for EDA-EDAR and ELK1 for EGF-EGFR;
 the IL-10 row extends an existing STAT3 assignment to an evidence-backed
