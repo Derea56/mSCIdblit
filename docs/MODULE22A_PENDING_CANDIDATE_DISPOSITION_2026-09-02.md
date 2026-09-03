@@ -10,8 +10,8 @@ silently broadening the evidence gate.
 ## Review scope
 
 - Pending handoffs before linkage: 274
-- Handoffs represented by the linkage audit: 104 (102 were pending handoffs)
-- Unlinked pending handoffs reviewed here: 172
+- Handoffs represented by the linkage audit: 105 (103 were pending handoffs)
+- Unlinked pending handoffs reviewed here: 171
 - Distinct local evidence packets represented: 156
 - Evidence-packet mapping completeness: 100% (no candidate lacked a local packet)
 - Disposition for every row: `not_promoted_under_current_strict_gate`
@@ -32,7 +32,7 @@ boundary/limitation text; multiple tags may apply to one row.
 | `molecular_form_boundary` | 1 |
 | `program_or_function_level_boundary` | 36 |
 | `receptor_or_composite_boundary` | 77 |
-| `tf_or_target_assignment_unresolved` | 62 |
+| `tf_or_target_assignment_unresolved` | 61 |
 
 ## Source-packet confidence counts
 
@@ -44,7 +44,7 @@ Module 21A evidence-detail register; they are not new confidence calls.
 | `high` | 93 |
 | `low` | 16 |
 | `low-medium` | 1 |
-| `medium` | 41 |
+| `medium` | 40 |
 | `medium-high` | 21 |
 
 ## Candidate ledger
@@ -57,7 +57,6 @@ The complete machine-readable ledger is [the TSV disposition file](../work/modul
 | M22A-HANDOFF-000184 | Aldo-CYP11B2 Nr3c2 | NR3C2 | `receptor_or_composite_boundary`; `exact_pair_or_family_review_required` |
 | M22A-HANDOFF-000185 | Amh AMHR2_ACVR1 | SMAD1;SMAD5;SMAD8 | `receptor_or_composite_boundary`; `model_or_context_boundary`; `exact_pair_or_family_review_required` |
 | M22A-HANDOFF-000186 | Androstenedione-CYP17A1 Ar | AR | `exact_pair_or_family_review_required` |
-| M22A-HANDOFF-000213 | Bmp8a Bmpr1a_acvr2a | SMAD1/5/8;SMAD4 candidates | `tf_or_target_assignment_unresolved` |
 | M22A-HANDOFF-000215 | Bmp8a Bmpr1b_acvr2a | SMAD1/5/8;SMAD4 candidates | `tf_or_target_assignment_unresolved` |
 | M22A-HANDOFF-000217 | Bmp8b Acvr1_acvr2a | SMAD1/5/8;SMAD2/3 candidates | `receptor_or_composite_boundary`; `ligand_or_family_specificity_boundary`; `tf_or_target_assignment_unresolved`; `exact_pair_or_family_review_required` |
 | M22A-HANDOFF-000219 | Bmp8b Acvr1_bmpr2 | SMAD1/5/8;SMAD2/3 candidates | `receptor_or_composite_boundary`; `ligand_or_family_specificity_boundary`; `tf_or_target_assignment_unresolved`; `exact_pair_or_family_review_required` |
