@@ -15,9 +15,9 @@ exportable 22B edge already marked `high`, and exportable evidence marked
 - Total 22A handoffs: 5,906
 - Pending TF-program candidates: 274
 - No-terminal-TF handoffs: 5,632
-- Promotion-ready bounded links: 95
+- Promotion-ready bounded links: 110
 - Links adding an evidence-backed terminal-TF assignment: 2
-- Candidate handoffs without an exact reusable high-confidence link: 190
+- Candidate handoffs without an exact reusable high-confidence link: 175
 
 ## Promotion-ready bounded links
 
@@ -118,6 +118,21 @@ exportable 22B edge already marked `high`, and exportable evidence marked
 | M22A22B-LINK-104 | M22A-HANDOFF-005137 | trh trhr | CREB | M22B-E000108 | cFos | M22B-EVID-000332 |
 | M22A22B-LINK-105 | M22A-HANDOFF-001323 | ins1 insr | CREB;FOXO1 | M22B-E000135 | Ndn (necdin) promoter | M22B-EVID-000129 |
 | M22A22B-LINK-106 | M22A-HANDOFF-004689 | rbp4 stra6 | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-107 | M22A-HANDOFF-001814 | bmp4 bmpr1a_bmpr2 | SMAD1/5/8 | M22B-E000346 | ID1 | M22B-EVID-000016 |
+| M22A22B-LINK-108 | M22A-HANDOFF-001827 | bmp6 acvr1_acvr2a | SMAD1/5/8 | M22B-E000346 | ID1 | M22B-EVID-000016 |
+| M22A22B-LINK-109 | M22A-HANDOFF-001829 | bmp6 acvr1_bmpr2 | SMAD1/5/8 | M22B-E000346 | ID1 | M22B-EVID-000016 |
+| M22A22B-LINK-110 | M22A-HANDOFF-001830 | bmp6 bmpr1a_acvr2a | SMAD1/5/8 | M22B-E000346 | ID1 | M22B-EVID-000016 |
+| M22A22B-LINK-111 | M22A-HANDOFF-001832 | bmp6 bmpr1a_bmpr2 | SMAD1/5/8 | M22B-E000346 | ID1 | M22B-EVID-000016 |
+| M22A22B-LINK-112 | M22A-HANDOFF-000209 | bmp7 bmpr1a_acvr2a | SMAD1/5/8 | M22B-E000346 | ID1 | M22B-EVID-000016 |
+| M22A22B-LINK-113 | M22A-HANDOFF-000211 | bmp7 bmpr1b_acvr2a | SMAD1/5/8 | M22B-E000346 | ID1 | M22B-EVID-000016 |
+| M22A22B-LINK-114 | M22A-HANDOFF-002971 | cntf cntfr_il6st | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-115 | M22A-HANDOFF-002975 | cntf il6st_lifr | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-116 | M22A-HANDOFF-001799 | areg egfr_erbb2 | ELK1 | M22B-E000158 | EGR1 promoter | M22B-EVID-000622 |
+| M22A22B-LINK-117 | M22A-HANDOFF-000004 | 22hc-cyp3a4 nr1h4 | NR1H4 | M22B-E000288 | CYP3A4 | M22B-EVID-000096 |
+| M22A22B-LINK-118 | M22A-HANDOFF-002586 | apoa1 abca1 | STAT3 | M22B-E000431 | Socs3 | M22B-EVID-000001 |
+| M22A22B-LINK-119 | M22A-HANDOFF-001309 | il4 il4r_il2rg | STAT6 | M22B-E000459 | Arg1 | M22B-EVID-000010 |
+| M22A22B-LINK-120 | M22A-HANDOFF-003982 | il4 il2rg_il4ra | STAT6 | M22B-E000459 | Arg1 | M22B-EVID-000010 |
+| M22A22B-LINK-121 | M22A-HANDOFF-000444 | e2-hsd17b1 esr1 | ESR1 | M22B-E000167 | CYP19A1 | M22B-EVID-000105 |
 
 ## Interpretation boundary
 
@@ -155,7 +170,7 @@ recruitment study at the Ndn promoter, and RBP4/STRA6 is bounded to the
 holo-RBP-retinol/JAK2/STAT/SOCS3 comparator program; neither is an SCI
 receiver-cell claim or an isoform-specific molecular assignment.
 
-The remaining 190 candidate handoffs require new
+The remaining 175 candidate handoffs require new
 exact-ligand/source review or a bounded program-level assignment. The new
 terminal-TF assignments are RELB for EDA-EDAR and ELK1 for EGF-EGFR;
 the IL-10 row extends an existing STAT3 assignment to an evidence-backed
