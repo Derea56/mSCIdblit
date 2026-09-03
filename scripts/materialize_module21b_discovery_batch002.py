@@ -78,14 +78,14 @@ def next_numeric_id(rows: list[dict[str, str]], field: str, pattern: str) -> int
 def species_scope(model: str) -> str:
     text = model.lower()
     labels = [
-        ("human", "human"), ("mouse", "mouse"), ("rat", "rat"),
-        ("xenopus", "Xenopus"), ("zebrafish", "zebrafish"),
-        ("chick", "chick"), ("chicken", "chicken"), ("porcine", "pig"),
-        ("pig", "pig"),
+        (r"\bhuman\b", "human"), (r"\b(?:mouse|murine)\b", "mouse"),
+        (r"\brat\b", "rat"), (r"\bxenopus\b", "Xenopus"),
+        (r"\bzebrafish\b", "zebrafish"), (r"\bchick(?:en)?\b", "chick"),
+        (r"\bporcine\b", "pig"), (r"\bpig\b", "pig"),
     ]
     found = []
-    for token, label in labels:
-        if token in text and label not in found:
+    for pattern, label in labels:
+        if re.search(pattern, text) and label not in found:
             found.append(label)
     return "; ".join(found) if found else "as stated in primary model/assay"
 
