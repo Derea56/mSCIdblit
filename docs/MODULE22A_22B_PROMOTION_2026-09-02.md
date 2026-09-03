@@ -7,11 +7,11 @@ artifact, not a new canonical SignalingEdge or evidence-unit write.
 
 ## Result
 
-- Promotion records: 35
-- Distinct 22A handoffs represented: 32
-- Handoffs with an existing terminal-TF assignment: 30
+- Promotion records: 95
+- Distinct 22A handoffs represented: 86
+- Handoffs with an existing terminal-TF assignment: 84
 - Evidence-backed terminal-TF assignments added in the linkage layer: 2
-- Distinct reused 22B edges: 26
+- Distinct reused 22B edges: 30
 - Module 21A handoff register changed: false
 - Module 22B edge/evidence registers changed: false
 - PostgreSQL/canonical materialization performed: false
