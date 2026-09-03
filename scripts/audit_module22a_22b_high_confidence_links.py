@@ -1051,6 +1051,15 @@ LINK_SPECS = [
         "phase2_extraction_id": "M22A-P2-NEW-MSTN-SMAD3-PAI1-20260902",
         "basis": "The high-confidence MSTN-ACVR2A/TGFBR1 relay is linked to a bounded mouse skeletal-muscle SMAD3-to-PAI-1 promoter program; the target experiment used ectopic SMAD3 rather than receptor-specific MSTN stimulation, so this does not claim direct MSTN-dependent promoter occupancy.",
     },
+    {
+        "link_id": "M22A22B-LINK-125",
+        "handoff_id": "M22A-HANDOFF-000213",
+        "edge_id": "M22B-E000346",
+        "evidence_id": "M22B-EVID-000016",
+        "expected_tf": "SMAD1",
+        "phase2_extraction_id": "M22A-P2-NEW-BMP8A-ID1-20260902",
+        "basis": "BMP8A-induced SMAD1/5/8 activation and Id1 expression, combined with BMPR1A/ALK3-ACVR2A receptor-reconstitution evidence, support a bounded BMP8A-SMAD1/5/8-ID1 pathway-program reuse for the submitted BMPR1A/ACVR2A branch; exact-pair promoter occupancy is not claimed.",
+    },
 ]
 
 
@@ -1216,7 +1225,9 @@ def main() -> None:
         "edge as a bounded receptor-complex branch. The TNF/FAS link is an",
         "indirect TNF-induced RELA-to-FAS transcription chain and does not claim",
         "TNF-FAS binding or a TNF receptor-proximal interaction.",
-        "BMP2 links retain the tested Id1-promoter and comparator-cell limits; the",
+        "BMP2 links retain the tested Id1-promoter and comparator-cell limits; BMP8A",
+        "retains its rat-granulosa Id1 and BMPR1A/ACVR2A receptor-reconstitution",
+        "boundaries; the",
         "primary paper does not test every submitted type-II receptor complex,",
         "BMP-family ligand transfer, or an SCI receiver cell.",
         "IL12/STAT4 retains the CD8 T-cell and enhancer-specific limit; Nodal/FOXH1",

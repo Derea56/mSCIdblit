@@ -7,9 +7,9 @@ artifact, not a new canonical SignalingEdge or evidence-unit write.
 
 ## Result
 
-- Promotion records: 113
-- Distinct 22A handoffs represented: 104
-- Handoffs with an existing terminal-TF assignment: 102
+- Promotion records: 114
+- Distinct 22A handoffs represented: 105
+- Handoffs with an existing terminal-TF assignment: 103
 - Evidence-backed terminal-TF assignments added in the linkage layer: 2
 - Distinct reused 22B edges: 33
 - Module 21A handoff register changed: false

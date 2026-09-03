@@ -15,9 +15,9 @@ exportable 22B edge already marked `high`, and exportable evidence marked
 - Total 22A handoffs: 5,906
 - Pending TF-program candidates: 274
 - No-terminal-TF handoffs: 5,632
-- Promotion-ready bounded links: 113
+- Promotion-ready bounded links: 114
 - Links adding an evidence-backed terminal-TF assignment: 2
-- Candidate handoffs without an exact reusable high-confidence link: 172
+- Candidate handoffs without an exact reusable high-confidence link: 171
 
 ## Promotion-ready bounded links
 
@@ -136,6 +136,7 @@ exportable 22B edge already marked `high`, and exportable evidence marked
 | M22A22B-LINK-122 | M22A-HANDOFF-001408 | mstn tgfbr1_acvr2b | SMAD3;SMAD4 | M22B-E000394 | SERPINE1/PAI-1 | M22B-EVID-000019 |
 | M22A22B-LINK-123 | M22A-HANDOFF-004274 | mstn acvr1b_acvr2a | SMAD3;SMAD4 | M22B-E000394 | SERPINE1/PAI-1 | M22B-EVID-000019 |
 | M22A22B-LINK-124 | M22A-HANDOFF-004276 | mstn acvr2a_tgfbr1 | SMAD3;SMAD4 | M22B-E000394 | SERPINE1/PAI-1 | M22B-EVID-000019 |
+| M22A22B-LINK-125 | M22A-HANDOFF-000213 | bmp8a bmpr1a_acvr2a | SMAD1/5/8 | M22B-E000346 | ID1 | M22B-EVID-000016 |
 
 ## Interpretation boundary
 
@@ -156,7 +157,9 @@ unresolved ACVR2A-versus-ACVR2B composition; they reuse the Fst enhancer
 edge as a bounded receptor-complex branch. The TNF/FAS link is an
 indirect TNF-induced RELA-to-FAS transcription chain and does not claim
 TNF-FAS binding or a TNF receptor-proximal interaction.
-BMP2 links retain the tested Id1-promoter and comparator-cell limits; the
+BMP2 links retain the tested Id1-promoter and comparator-cell limits; BMP8A
+retains its rat-granulosa Id1 and BMPR1A/ACVR2A receptor-reconstitution
+boundaries; the
 primary paper does not test every submitted type-II receptor complex,
 BMP-family ligand transfer, or an SCI receiver cell.
 IL12/STAT4 retains the CD8 T-cell and enhancer-specific limit; Nodal/FOXH1
@@ -173,7 +176,7 @@ recruitment study at the Ndn promoter, and RBP4/STRA6 is bounded to the
 holo-RBP-retinol/JAK2/STAT/SOCS3 comparator program; neither is an SCI
 receiver-cell claim or an isoform-specific molecular assignment.
 
-The remaining 172 candidate handoffs require new
+The remaining 171 candidate handoffs require new
 exact-ligand/source review or a bounded program-level assignment. The new
 terminal-TF assignments are RELB for EDA-EDAR and ELK1 for EGF-EGFR;
 the IL-10 row extends an existing STAT3 assignment to an evidence-backed
