@@ -3727,3 +3727,17 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1900
 rows through M22B-IND-1900.
+## Individual hold-search tranche 1901–1908
+
+Five of eight rows retained reusable activating-target capacity: RUNX1→GP1BA,
+GATA3→GRM7, GABP/PU.1→ITGAM, HIF1A→ITGB2, and the multi-TF
+EGR1/FOS/HIF1A/JUN/SP1→PLAUR context. GPR135, MTNR1A, and RXFP4 remained
+holds because the reviewed evidence addressed receptor discovery, signaling,
+or ligand/receptor biology without establishing a named activating
+TF-to-target relationship.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1908
+rows through M22B-IND-1908.
