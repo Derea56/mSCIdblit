@@ -1829,6 +1829,20 @@ the upstream handoffs remain separate holds.
 Register counts are unchanged; the individual search log now contains 716
 rows through M22B-IND-0716.
 
+## Individual hold-search tranche 0717–0724
+
+Eight FGF ligand/receptor rows were searched individually. The rat
+ELK1→Ier2/pip92 lane was reused as general bFGF/FGF2 target context for
+FGF2→FGFR2, FGF2→FGFR3, and FGF2→FGFR4. No qualifying named TF-target lane
+was established for FGF20→FGFR3, FGF20→FGFR4, FGF21→FGFR3, FGF22→FGFR2, or
+FGF23→FGFR3. The FGF23 evidence instead distinguished its canonical
+α-Klotho/FGFR1 branch from the submitted FGFR3 boundary. These are non-SCI
+neuronal, developmental, skeletal, or endocrine-comparator observations; the
+exact upstream handoffs remain separate holds.
+
+Register counts are unchanged; the individual search log now contains 724
+rows through M22B-IND-0724.
+
 ## Reproducibility
 
 Run:
