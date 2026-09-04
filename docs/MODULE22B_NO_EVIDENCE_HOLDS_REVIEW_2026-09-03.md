@@ -2422,6 +2422,18 @@ source composite. None of the exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1084
 rows through M22B-IND-1084.
 
+## Individual hold-search tranche 1085–1092
+
+Two kainate rows retained separate human JUN→MMP9 target context, two
+GluN1/GluN2C/D rows retained bounded CREB/BDNF context, and one GluK3 row
+retained the same separate JUN/MMP9 context. Three group-III mGluR6/7/8 rows
+remained explicit no-target holds, while an additional GluA1 row retained
+general CREB/BDNF/FOS context. None of the exact upstream handoffs was
+promoted.
+
+Register counts are unchanged; the individual search log now contains 1092
+rows through M22B-IND-1092.
+
 ## Individual hold-search tranche 1013–1020
 
 Four ghrelin receptor rows, one canonical GHSR row, and three GIP receptor
