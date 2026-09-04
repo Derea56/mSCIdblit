@@ -1787,6 +1787,17 @@ medium-high rows. The current evidence register contains 454 records with
 `support_kind=primary_experiment`. The individual search log now contains 692
 rows through M22B-IND-0692.
 
+## Individual hold-search tranche 0693–0700
+
+Eight ectoenzyme/receptor, adhesion, scaffold, and binding-boundary rows were
+searched individually. No qualifying named downstream TF-target lane was
+established for ENTPD1→TMIGD3, EPGN→EGFR, EREG→EGFR/ERBB2,
+EREG→ERBB2/ERBB4, ESAM→ESAM, F11R→F11R, F2→PARD3, or FCER2A→CR2. The
+review specifically kept TMIGD3/NF-κB activity, F11R promoter regulation,
+PARD3 polarity biology, and receptor-family pathway findings separate from
+downstream TF-target evidence. Register counts are unchanged; the individual
+search log now contains 700 rows through M22B-IND-0700.
+
 ## Reproducibility
 
 Run:
