@@ -105,6 +105,18 @@ materialized rows use primary-experiment support. The 4,957 reviewed handoff
 rows themselves remain unchanged: no upstream handoff was promoted because no
 row contains a demonstrated target gene for that exact route.
 
+A ninth tranche added three member-resolved LEF1 edges to SNAI1, SNAI2, and
+TWIST1 from human hepatocellular-carcinoma ChIP and promoter-reporter studies.
+These are non-SCI comparator findings and do not upgrade the broader TCF/LEF
+family handoffs.
+
+Across the nine recovery tranches, 69 standalone target-gene edges have now
+been added. The register contains 4,327 exportable target-gene rows, of which
+4,247 explicit-species pairs materialize in the current stage; 106 of those
+materialized rows use primary-experiment support. The 4,957 reviewed handoff
+rows themselves remain unchanged: no upstream handoff was promoted because no
+row contains a demonstrated target gene for that exact route.
+
 An eighth tranche added four cooperative retinoid-receptor edges: RARG/RXRA
 to ABCA1 and RARA/RXRA, RARB/RXRA, and RARB/RXRB to POU5F1. These promoter
 activation claims come from macrophage or embryonal-carcinoma comparator
