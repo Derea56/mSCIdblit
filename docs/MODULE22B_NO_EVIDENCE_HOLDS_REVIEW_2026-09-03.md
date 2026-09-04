@@ -4071,3 +4071,17 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 2116
 rows through M22B-IND-2116.
+
+## Individual hold-search tranche 2117–2124
+
+All eight rows remained bounded holds. The reviewed records cover
+receptor-family/coreceptor or endocytic biology for ACVR1B, ACVR2A, ACVR2B,
+ISLR2, and LRP2, but no named activating TF-to-target-gene relationship was
+established.
+
+These records remain separate from any general pathway or developmental
+program evidence and from the submitted upstream handoffs. None of the eight
+exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 2124
+rows through M22B-IND-2124.
