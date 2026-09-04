@@ -597,6 +597,25 @@ rows, 425 medium-high rows, and 253 primary-experiment-supported rows. One
 hundred sixteen named or composite holds have now been searched individually
 and are logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0117–0124
+
+Eight additional holds were searched individually. Adenosine A1/A3 studies
+provided receptor-linked c-fos-promoter responses in engineered CHO cells, and
+the beta2-adrenergic search recovered the existing shared beta1/beta2 CREB/PAX6
+to Sst lane; none established an exact source-branch-specific terminal TF
+occupancy claim. The ADRB3 search did not recover a named terminal TF target.
+FPR2/ALX studies reported receptor-dependent SGPP2, JAG1, and JAM3 expression,
+but without terminal TF attribution, so those genes were not promoted as TF
+targets. FPR3 and the mouse Fpr-rs paralog searches did not establish
+receptor-specific TF targets. None of the eight submitted upstream handoffs was
+upgraded.
+
+The working register remains at 4,478 exportable target-gene rows and 4,394
+explicit-species materialization rows, including 4,065 high-source-confidence
+rows, 425 medium-high rows, and 253 primary-experiment-supported rows. One
+hundred twenty-four named or composite holds have now been searched individually
+and are logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
