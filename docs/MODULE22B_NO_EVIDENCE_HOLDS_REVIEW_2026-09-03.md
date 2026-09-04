@@ -3236,3 +3236,15 @@ upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1588
 rows through M22B-IND-1588.
+## Individual hold-search tranche 1589–1596
+
+Five of eight rows retained reusable activating-target capacity: TLR9, TLR4
+for both HSPA1A and HSPA4, ADRB2, and LDLR. TLR7 remained a hold because
+available activator assignments were motif/pathway predictions without
+validated named occupancy and perturbation. No qualifying activating context
+was found for GRIN2D or LRP2, and LRP2 evidence was basal or repressive rather
+than positive. These target contexts remain separate from the submitted
+upstream handoffs. None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1596
+rows through M22B-IND-1596.
