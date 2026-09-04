@@ -1815,6 +1815,20 @@ medium-high rows. The current evidence register contains 455 records with
 `support_kind=primary_experiment`. The individual search log now contains 708
 rows through M22B-IND-0708.
 
+## Individual hold-search tranche 0709–0716
+
+Eight additional FGF ligand/receptor rows were searched individually. No
+pair-specific terminal TF-target evidence was established for FGF16→FGFR1,
+FGFR2, FGFR3, or FGFR4, or for FGF17→FGFR3/FGFR4 or FGF18→FGFR1. The
+previously added rat ELK1→Ier2/pip92 lane was reused as general FGF-response
+context for all eight rows, with the limitation that its bFGF/FGF2 neuronal
+model did not resolve any of these exact ligands or receptors. These are
+non-SCI cardiac, developmental, neuronal, or cancer-comparator observations;
+the upstream handoffs remain separate holds.
+
+Register counts are unchanged; the individual search log now contains 716
+rows through M22B-IND-0716.
+
 ## Reproducibility
 
 Run:
