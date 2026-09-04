@@ -1573,6 +1573,21 @@ medium-high rows. The current evidence register contains 387 records with
 `support_kind=primary_experiment`. The individual search log now contains 588
 rows through M22B-IND-0588.
 
+## Individual hold-search tranche 0589–0596
+
+Eight composite or receptor-family rows were searched individually. Existing
+standalone target lanes were reused for SDC4, CD36/Cd36, ITGAV/Itgav, and SDC1.
+New direct target lanes were added for human NRF1→CD47, mouse Sp3→Itga3, human
+SPI1→CSF1R, mouse Spi1→Csf1r, and mouse Ets2→Csf1r. These are general
+TF-to-target observations from non-SCI primary studies; the composite or ligand
+handoffs remain separate holds and were not upgraded by inference.
+
+Register counts are now 5,254 exportable target-gene rows and 4,478
+explicit-species rows, including 4,136 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 392 records with
+`support_kind=primary_experiment`. The individual search log now contains 596
+rows through M22B-IND-0596.
+
 ## Reproducibility
 
 Run:
