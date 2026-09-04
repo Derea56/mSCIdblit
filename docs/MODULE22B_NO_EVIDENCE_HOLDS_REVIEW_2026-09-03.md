@@ -3701,3 +3701,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1884
 rows through M22B-IND-1884.
+## Individual hold-search tranche 1885–1892
+
+Six of eight rows retained reusable activating-target capacity: JUN→BDKRB1,
+TP53/KLF4/Tp53→BDKRB2, RUNX1→GP1BA, GATA3→GRM7, GABP/PU.1→ITGAM, and
+HIF1A→ITGB2. CD93 and GPR135 remained holds because the reviewed records
+addressed ligand/receptor biology or receptor-proximal signaling without
+establishing a named activating TF-to-target relationship.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1892
+rows through M22B-IND-1892.
