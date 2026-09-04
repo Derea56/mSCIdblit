@@ -2889,6 +2889,21 @@ handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1388
 rows through M22B-IND-1388.
 
+## Individual hold-search tranche 1389–1396
+
+Six rows retained reusable target-gene capacity: HIF1A/HIF2A→IGF1R,
+SP1→LRP1, HIF2A→Tnfrsf11b, SATB2-associated induction of Unc5c,
+TP53→UNC5D, and HOXA13→Epha6. LRP2 remained a hold because the recovered
+study showed estrogen responsiveness and promoter ERE/Sp1 candidate
+architecture without sufficiently direct named-TF occupancy or perturbation.
+VSIG10L also remained a hold because only motif/database predictions were
+recovered. The Unc5c gain-of-function result is explicitly retained as
+positive target context without upgrading it to a direct SATB2 promoter edge.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1396
+rows through M22B-IND-1396.
+
 Run:
 
 ```text
