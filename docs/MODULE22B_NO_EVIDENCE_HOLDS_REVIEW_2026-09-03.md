@@ -3755,3 +3755,17 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1916
 rows through M22B-IND-1916.
+## Individual hold-search tranche 1917–1924
+
+All eight rows retained reusable activating-target capacity: ETS1→ITGA4,
+SP1/ETS1→ITGAV, multi-TF→ITGA5, Slug/beta-catenin-associated regulation of
+L1CAM, Egr1→PTPRZ1, IRF1/STAT1→CD40, HIF-1alpha→ACKR2, and SP1→ADRA2A.
+The ACKR2 context is non-SCI hypoxic tumor evidence, while the L1CAM context
+is from human carcinoma promoter studies; the remaining contexts are general
+human, mouse, or rat regulatory evidence as noted in the individual log.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1924
+rows through M22B-IND-1924.
