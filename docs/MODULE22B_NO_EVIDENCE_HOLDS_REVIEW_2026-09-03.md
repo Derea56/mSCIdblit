@@ -3834,3 +3834,15 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1964
 rows through M22B-IND-1964.
+## Individual hold-search tranche 1965–1972
+
+Five of eight rows retained reusable activating-target capacity: SP1→ITGA9,
+SP1/ETS1→ITGAV, MYC→ITGA1, HIF1A→NT5E, and HIF1A/SMAD3/KLF5/RELA→SDC4.
+RPSA and SV2A remained without qualifying named TF-target evidence, and SDC2
+remained unresolved after targeted promoter searching.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1972
+rows through M22B-IND-1972.
