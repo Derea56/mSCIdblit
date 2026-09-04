@@ -2742,6 +2742,17 @@ promoted.
 Register counts are unchanged; the individual search log now contains 1308
 rows through M22B-IND-1308.
 
+## Individual hold-search tranche 1309–1316
+
+The ACKR2, ACKR4, ADRA2A, CCR10, and CCRL2 rows remained ligand/receptor
+binding holds without a qualifying target-gene lane. The CCR7, CXCR3, and
+GRM7 rows retained separate target context from SP1→CCR7, STAT1→Cxcr3, and
+GATA3→GRM7, respectively, without assigning those TFs to the unresolved
+Gm2023 source branches. None of the exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1316
+rows through M22B-IND-1316.
+
 ## Individual hold-search tranche 1013–1020
 
 Four ghrelin receptor rows, one canonical GHSR row, and three GIP receptor
