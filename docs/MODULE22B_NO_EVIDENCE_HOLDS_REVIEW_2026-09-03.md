@@ -394,6 +394,24 @@ rows. Fifty-two named or composite holds have now been searched individually
 and are logged. All four submitted upstream handoffs remain holds; no SCI-
 specific target-gene evidence was identified in this tranche.
 
+## Individual hold-search tranche 0053–0056
+
+Four additional holds were searched individually. The RARG/RXRG–ALDH1A3
+search did not resolve an RXRG-specific target route, so the RARG target lanes
+PTGES, CYP26B1, and DHRS3 were reused as component-level evidence. The three
+RELA searches did not establish route-specific target loci for the laminin-
+integrin, MMP9–TLR9, or PROS1–AXL handoffs. They did recover six reusable
+mouse RELA target lanes (TNFAIP3, NFKBIA, PTGS2, CXCL2, CSF2, and TNF) from a
+primary RelA-null fibroblast reconstitution study with TNFalpha stimulation.
+All four submitted upstream handoffs remain bounded holds.
+
+The current working register contains 4,442 exportable target-gene rows and
+4,358 explicit-species materialization rows, including 4,037 high-source-
+confidence rows, 417 medium-high rows, and 217 primary-experiment-supported
+rows. Fifty-six named or composite holds have now been searched individually
+and are logged. No SCI-specific target-gene evidence was identified in this
+tranche.
+
 ## Reproducibility
 
 Run:
