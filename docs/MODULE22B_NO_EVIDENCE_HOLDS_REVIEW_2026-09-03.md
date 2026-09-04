@@ -823,6 +823,22 @@ rows, 433 medium-high rows, and 255 primary-experiment-supported rows. Two
 hundred twenty-four named or composite holds have now been searched
 individually and are logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0221–0228
+
+Eight additional CGRP-family receptor and adhesion rows were searched
+individually. CALCA/CALCRL-RAMP3 and the CALCB receptor-composite variants
+remained at peptide/receptor pharmacology, cAMP, kinase, or CREB-reporter
+boundaries without a named endogenous target gene. The CALCB-specific rows did
+not inherit alpha-CGRP or canonical CALCA/CALCRL-RAMP1 evidence. CADM3/NECTIN3
+remained at neural adhesion-complex recognition without a terminal TF target.
+No new lane was added and none of the eight upstream handoffs was upgraded.
+
+The working register remains at 4,486 exportable target-gene rows and 4,402
+explicit-species materialization rows, including 4,065 high-source-confidence
+rows, 433 medium-high rows, and 255 primary-experiment-supported rows. Two
+hundred thirty-two named or composite holds have now been searched individually
+and are logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
