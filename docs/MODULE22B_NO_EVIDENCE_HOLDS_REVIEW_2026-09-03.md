@@ -2328,6 +2328,19 @@ was promoted.
 Register counts are unchanged; the individual search log now contains 1012
 rows through M22B-IND-1012.
 
+## Individual hold-search tranche 1013–1020
+
+Four ghrelin receptor rows, one canonical GHSR row, and three GIP receptor
+rows were searched individually. Mouse ghrelin-GHSR studies supplied c-Fos
+immediate-early context, while GIPR studies supplied a human adipocyte
+CREB/TORC2-to-LPL target lane. These canonical ligand/receptor contexts were
+not transferred to the noncanonical GPR39, PTGER3, PTGIR, TBXA2R, ADCYAP1R1,
+ADRB2, or ADRB3 submissions. None of the eight exact upstream handoffs was
+promoted.
+
+Register counts are unchanged; the individual search log now contains 1020
+rows through M22B-IND-1020.
+
 ## Reproducibility
 
 Run:
