@@ -3795,3 +3795,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1940
 rows through M22B-IND-1940.
+## Individual hold-search tranche 1941–1948
+
+One of eight rows retained reusable activating-target capacity: the explicit
+Fpr2 row can reuse primary human IRF1/OCT1/SP1→FPR2/ALX promoter evidence.
+The Fpr-rs3, Fpr-rs4, Fpr-rs6, Fpr-rs7, and FPR3 tokens were kept separate
+from human FPR1/FPR2 evidence because they are distinct receptor genes or
+mouse paralog tokens. The remaining rows therefore stayed bounded holds.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1948
+rows through M22B-IND-1948.
