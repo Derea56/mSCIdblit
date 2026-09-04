@@ -1883,6 +1883,19 @@ skeletal-comparator observations; all exact upstream handoffs remain holds.
 Register counts are unchanged; the individual search log now contains 748
 rows through M22B-IND-0748.
 
+## Individual hold-search tranche 0749–0756
+
+Eight FLRT1/FLRT2 adhesion-guidance rows were searched individually:
+FLRT1→FLRT1, FLRT1→UNC5A/B/C/D, FLRT2→ADGRL1/ADGRL2, and FLRT2→ADGRL3.
+No qualifying named TF-target lane was found. The primary studies establish
+ectodomain binding, repulsion, cell sorting, or synapse phenotypes, but do
+not identify an intracellular terminal TF or direct target locus for these
+exact pairs. These are non-SCI developmental and neuronal-comparator
+observations; all eight upstream handoffs remain holds.
+
+Register counts are unchanged; the individual search log now contains 756
+rows through M22B-IND-0756.
+
 ## Reproducibility
 
 Run:
