@@ -3175,6 +3175,18 @@ upstream handoffs. None of the eight exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1548
 rows through M22B-IND-1548.
 
+## Individual hold-search tranche 1549–1556
+
+Two of eight rows retained reusable activating-target capacity: MECP2→GRM7
+and PITX1→MTNR1A. Both are non-SCI neuronal/endocrine contexts. No
+qualifying activating TF-target context was found for NPFFR2 or HRH1–HRH4.
+ADRA2A again produced only direct FOXO1 repression, which was not counted as
+positive activation. These target contexts remain separate from the submitted
+upstream handoffs. None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1556
+rows through M22B-IND-1556.
+
 Run:
 
 ```text
