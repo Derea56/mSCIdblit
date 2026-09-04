@@ -2288,6 +2288,20 @@ receiver-cell limitations remain recorded per row.
 Register counts are unchanged; the individual search log now contains 988
 rows through M22B-IND-0988.
 
+## Individual hold-search tranche 0989–0996
+
+Six GDF-family receptor/comparator rows and two GDNF receptor rows were
+searched individually. GDF3, GDF1, and GDF10 rows retained separate SMAD2/3
+target context, including FSTL3, SERPINE1, Nodal, Lefty1, Lefty2, and Pitx2;
+GDF5 retained SMAD1/5/8 target context for ID1 and ID3 while preserving the
+ROR2 branch-direction limitation. GDNF-GFRA2 and GDNF-GFRA3 rows retained
+c-Fos immediate-early context, including rat spinal dorsal-horn evidence for
+SCI relevance, without transferring GFRalpha-subtype specificity. The eight
+exact upstream handoffs remain holds.
+
+Register counts are unchanged; the individual search log now contains 996
+rows through M22B-IND-0996.
+
 ## Reproducibility
 
 Run:
