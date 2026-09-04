@@ -3769,3 +3769,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1924
 rows through M22B-IND-1924.
+## Individual hold-search tranche 1925–1932
+
+Six of eight rows retained reusable activating-target capacity: NFAT/POU2F1/C/EBP
+contexts for CCR2, GATA1→CCR3, GATA3→GRM7, PITX1→MTNR1A, SP1→LTB4R1, and
+STAT6→CYSLTR1. CCR10 remained unresolved. LTB4R2 evidence addressed
+receptor-driven YAP1/CTNNB1 signaling, promoter architecture, or predicted
+motifs without establishing a qualifying named activating TF-to-target record.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1932
+rows through M22B-IND-1932.
