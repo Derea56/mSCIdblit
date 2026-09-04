@@ -4684,3 +4684,10 @@ The retained contexts remain separate from the submitted Pcdhb and Pcdhga homoph
 All eight rows retained reusable target capacity. PCDHGA3, PCDHGA4, PCDHGA5, PCDHGA6, PCDHGA7, PCDHGA8, and PCDHGA9, together with PCDHGB1, gained CTCF-linked gamma-cluster promoter regulatory support.
 
 The retained contexts remain separate from the submitted Pcdhga and Pcdhgb homophilic-adhesion handoffs and do not establish source-to-TF activation. These are non-SCI mouse/human neuronal-development comparators. The PCDHG records are explicitly gamma-cluster regulatory support rather than isolated isoform-specific activation assays. The individual search log contains 2636 rows through M22B-IND-2636. This tranche added eight standalone target edges and retained target contexts for all eight rows.
+
+
+## Individual review 2637-2644
+
+Seven of the eight rows retained reusable target capacity. PCDHGB2, PCDHGB4, PCDHGB5, PCDHGB6, PCDHGB7, PCDHGB8, and PCDHGC3 gained CTCF-linked gamma-cluster promoter regulatory support. PCDHGC4 remained a bounded hold because the reviewed primary study reports that its promoter lacks the CTCF conserved sequence element and cannot bind CTCF.
+
+The retained contexts remain separate from the submitted Pcdhgb/Pcdhgc homophilic-adhesion handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI mouse/human neuronal-development comparators. PCDHGC4 has non-SCI mouse spinal-cord neuronal-survival evidence, but that functional result is not a qualifying activating TF-to-target relationship. The individual search log contains 2644 rows through M22B-IND-2644. This tranche added seven standalone target edges, retained target contexts for those seven rows, and kept PCDHGC4 on hold.
