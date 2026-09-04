@@ -324,6 +324,22 @@ confidence rows, 417 medium-high rows, and 187 primary-experiment-supported
 rows. Thirty-six named or composite holds have now been searched individually
 and are logged.
 
+## Individual hold-search tranche 0037–0040
+
+Four additional holds were searched individually. The HOXD3 search recovered
+direct HOXD3→CCR6 promoter evidence from a human liver-cancer model. The BDNF-
+NGFR search recovered a composite Jun/Fos AP-1→BDNF promoter lane in rat
+neurons. The DMP1-integrin search recovered human JUN recruitment at the MMP9
+promoter in a dynamic AP-1/NF-κB context. The MIF-EGFR search reused those
+standalone lanes without claiming that either submitted upstream route was
+established. All four submitted upstream handoffs remain holds.
+
+The current working register contains 4,415 exportable target-gene rows and
+4,331 explicit-species materialization rows, including 4,010 high-source-
+confidence rows, 417 medium-high rows, and 190 primary-experiment-supported
+rows. Forty named or composite holds have now been searched individually and
+are logged.
+
 ## Reproducibility
 
 Run:
