@@ -1735,6 +1735,24 @@ medium-high rows. The current evidence register contains 448 records with
 `support_kind=primary_experiment`. The individual search log now contains 668
 rows through M22B-IND-0668.
 
+## Individual hold-search tranche 0669–0676
+
+Eight estrogen/xenobiotic, EDA2R, and Eph-receptor rows were searched
+individually. Existing ESR1→CYP19A1, NR1I2→CYP3A4, TP53→EDA2R, and
+CTNNB1→MYC lanes were reused as general target context. A new mouse
+Smad2→Hsd17b1 lane was added from activin-responsive promoter mapping, and a
+new functional mouse Stat3→Ache lane was added from EphA4/Jak2/Stat3
+experiments. No qualifying named downstream target lane was established for
+EphA6, EphA7, or EphA8. These are non-SCI metabolic, epithelial, cancer, or
+neuromuscular observations; the submitted upstream handoffs remain separate
+holds and were not upgraded by inference.
+
+Register counts are now 5,312 exportable target-gene rows and 4,538
+explicit-species rows, including 4,194 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 450 records with
+`support_kind=primary_experiment`. The individual search log now contains 676
+rows through M22B-IND-0676.
+
 ## Reproducibility
 
 Run:
