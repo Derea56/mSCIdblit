@@ -240,6 +240,20 @@ confidence rows, 417 medium-high rows, and 166 primary-experiment-supported
 rows. Sixteen named holds have now been searched individually and are logged;
 none of the 4,957 original handoff rows has been promoted.
 
+## Individual hold-search tranche 0017–0020
+
+Four additional named/composite holds were searched individually. The DRD1
+search recovered CREB→GADD45B in primary rat striatal neurons. The GDNF search
+recovered a composite CREB1/ATF1/CREM1→FOS lane in mouse spermatogonial stem
+cells. The two GABA-related searches recovered ATF4→DDIT3 and ATF4→GABBR1
+from separate promoter studies. These are standalone TF-regulon lanes; the
+four submitted receptor/ligand-to-TF handoffs remain unpromoted.
+
+The current working register contains 4,394 exportable target-gene rows and
+4,310 explicit-species materialization rows, including 3,893 high-source-
+confidence rows, 417 medium-high rows, and 169 primary-experiment-supported
+rows. Twenty named holds have now been searched individually and are logged.
+
 ## Reproducibility
 
 Run:
