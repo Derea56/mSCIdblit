@@ -2872,6 +2872,23 @@ promoted.
 Register counts are unchanged; the individual search log now contains 1380
 rows through M22B-IND-1380.
 
+## Individual hold-search tranche 1381–1388
+
+Six rows retained reusable target-gene capacity from independent evidence:
+TTF-1→TSHR, androgen receptor→GABBR2, LHX3→Gnrhr, SRF→Itgam/Itgb2,
+ETS2→LAIR1, and E2F1/ETV2/VEZF1→FLT1. VIPR1 remained a hold because the
+reviewed resources supplied promoter architecture, motif candidates, and
+repression-direction evidence without a qualifying named activating TF-to-
+VIPR1 experiment. TGFBR1 also remained a hold because the recovered FOXA1 /
+TSPYL1 evidence was repression-direction or partner binding rather than
+activation. The Itgam/Itgb2 result is component-level integrin context, and
+the FLT1 results are non-SCI vascular contexts; neither establishes its
+submitted receptor or ligand handoff. None of the eight exact upstream
+handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1388
+rows through M22B-IND-1388.
+
 Run:
 
 ```text
