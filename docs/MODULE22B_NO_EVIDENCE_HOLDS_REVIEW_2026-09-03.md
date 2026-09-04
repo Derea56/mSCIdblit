@@ -4221,3 +4221,26 @@ None of the eight exact upstream handoffs was promoted.
 Register counts now include four additional standalone target edges and four
 evidence records; the individual search log contains 2204 rows through
 M22B-IND-2204.
+
+## Individual review 2205-2212
+
+The next eight holds were reviewed against targeted primary-literature searches
+for the submitted receiver genes, without requiring SCI-specific context. Four
+rows retained reusable activating-target capacity, representing eight
+TF-to-target contexts: CEBPA and CEBPB to TNFRSF1A; KLF5, NKX2-1, and NFIB to
+AGER; TBX21 and STAT4 to IL1RL1; and YAP1 to LRP1. The TNFRSF1A evidence used
+human promoter-reporter, ChIP, and depletion experiments. The AGER evidence
+used cooperative promoter assays in human alveolar epithelial cells. The
+IL1RL1 evidence used mouse Th1 differentiation and viral-infection experiments
+with promoter-binding context, and the LRP1 evidence used human melanoma
+knockdown and promoter-reporter assays.
+
+The LTBP1-to-ITGB5, LTBP3-to-ITGB5, LTF-to-BOC, and LTF-to-IGDCC4 rows remained
+bounded holds because no named activating TF-to-target result meeting the
+reusable-target standard was verified. These target contexts remain separate
+from the submitted upstream handoffs. None of the eight exact upstream
+handoffs was promoted.
+
+Register counts now include eight additional standalone target edges and eight
+evidence records; the individual search log contains 2212 rows through
+M22B-IND-2212.
