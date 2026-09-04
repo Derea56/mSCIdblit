@@ -928,6 +928,25 @@ rows, 566 medium-high rows, and 266 primary-experiment-supported rows. The
 individual search log now contains 268 rows through M22B-IND-0268. All four
 submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0269–0276
+
+Eight additional Ccl3-Ccl6 chemokine and atypical-receptor rows were searched
+individually. The Ccl3-Ccr5, Ccl6-Ccr1, and Ccl6-Ccr1l1 branches remained at
+receptor-specificity, pathway, ligand-exclusion, or orthology boundaries. Four
+reusable standalone target lanes were recovered while reviewing Ccl4 and Ccl5:
+CEBPB→CCL4 in human chondrocytes, SP1→CCL5 in human NK cells, FLI1→Ccl5 in
+mouse inflammatory comparator systems, and RELA→Ccl5 in mouse tumor cells.
+These are general primary-study TF–target relationships, not evidence that
+ACKR2, CCR3, ACKR1, or CCR1L1 activates the corresponding TF, and none is
+SCI-specific. The upstream handoff rows remain holds.
+
+The working register now contains 4,501 exportable target-gene rows and 4,421
+explicit-species rows, including 4,077 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 333 records with
+`support_kind=primary_experiment`. The individual search log now contains 276
+rows through M22B-IND-0276. All eight submitted upstream handoffs remain
+holds.
+
 ## Reproducibility
 
 Run:
