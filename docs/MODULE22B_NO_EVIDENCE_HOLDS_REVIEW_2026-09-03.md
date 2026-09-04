@@ -716,6 +716,25 @@ rows, 427 medium-high rows, and 255 primary-experiment-supported rows. One
 hundred seventy-two named or composite holds have now been searched individually
 and are logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0173–0180
+
+Eight additional adhesion, adrenergic, angiotensin, AMH, and APP/LRP6 holds
+were searched individually. ADAM2/ITGB1, ADAM2/ITGB7, and ADAM23/ITGA4
+remained at reproductive or neural adhesion boundaries. The ADRA1B/ADRA1D
+search did not establish an alpha1-subtype-specific terminal TF target, while
+angiotensin II-induced Egr1 and c-fos expression was retained as immediate-
+early context without terminal TF attribution. The AMH search reused the
+existing SMAD1/5-Id3 lane as context only, and ANGPT1/ITGB1 remained at
+FAK/PI3K-AKT neurite-outgrowth signaling. APP/LRP6 reused the existing
+TCF/LEF-Axin2 lane as general Wnt context only. No new standalone target lane
+was added, and none of the eight submitted upstream handoffs was upgraded.
+
+The working register remains at 4,480 exportable target-gene rows and 4,396
+explicit-species materialization rows, including 4,065 high-source-confidence
+rows, 427 medium-high rows, and 255 primary-experiment-supported rows. One
+hundred eighty named or composite holds have now been searched individually and
+are logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
