@@ -4346,3 +4346,22 @@ activating TF-to-ITGB5 result. These target contexts remain separate from the
 submitted upstream handoffs. None of the eight exact upstream handoffs was
 promoted. The individual search log contains 2252 rows through
 M22B-IND-2252.
+
+## Individual review 2253-2260
+
+All eight rows retained reusable target capacity, covering 22 standalone or
+component-limited contexts. The NOTCH1 rows reused KLF4, NFE2L2, and RELA
+promoter contexts. NOTCH2 gained primary SP1 promoter ChIP/reporter evidence
+from mouse ovarian pregranulosa cells and LEF1/TCF7L2 promoter binding and
+activation evidence from human colorectal-cancer cells. The CDH7 row gained
+FOXD3-dependent Cad7 induction in chick neural tube; this is a
+SCI-adjacent developmental spinal-cord regulatory-support record, not direct
+FOXD3 promoter-occupancy evidence. ITGA4 reused RUNX3, ITGA5 reused ETS1,
+FOS, SP1, and JUN contexts, and ITGB1 reused HIF1A.
+
+For the two MIF composite-receptor rows, CD44 contexts were reused for
+CD74_CD44 and CXCR2 contexts were reused for CD74_CXCR2. These are explicitly
+component-level contexts and do not establish either composite as a single TF
+target. The target contexts remain separate from the submitted upstream
+handoffs; none of the eight exact upstream handoffs was promoted. The
+individual search log contains 2260 rows through M22B-IND-2260.
