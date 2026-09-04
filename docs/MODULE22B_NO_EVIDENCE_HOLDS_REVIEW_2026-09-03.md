@@ -521,6 +521,24 @@ rows, 421 medium-high rows, and 240 primary-experiment-supported rows. Eighty-
 four named or composite holds have now been searched individually and are
 logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0085–0092
+
+Eight additional holds were searched individually. The OSM/STAT3 search
+recovered a direct Socs3 promoter lane in primary astrocytes, and the IL-23/
+STAT4 search recovered an IFNG promoter lane from primary human T cells. The
+TSLP/STAT5 search recovered Il4, Il5, Il13, and Il9 locus-associated lanes in
+primary mouse CD4 T cells. The TAZ-TEAD search recovered direct CTGF and CYR61
+promoter lanes, and the TCF/LEF search recovered a direct Axin2 lane. The
+TBX21/GATA3/RORC composite was retained as component-level context because a
+joint target was not demonstrated. None of the eight submitted upstream
+handoffs was upgraded.
+
+The working register now contains 4,474 exportable target-gene rows and 4,390
+explicit-species materialization rows, including 4,061 high-source-confidence
+rows, 425 medium-high rows, and 249 primary-experiment-supported rows. Ninety-
+two named or composite holds have now been searched individually and are
+logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
