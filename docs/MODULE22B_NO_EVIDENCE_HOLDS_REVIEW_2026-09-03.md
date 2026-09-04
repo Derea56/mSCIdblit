@@ -3869,3 +3869,15 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1988
 rows through M22B-IND-1988.
+## Individual hold-search tranche 1989–1996
+
+Six of eight rows retained reusable activating-target capacity: EGR1/FOS/JUN/
+SP1/STAT1→CD44, SP1→DAG1, MYC→ITGA1, SP1/RUNX1→ITGA2, Sp3→ITGA3, and
+SP1→ITGA6. SV2B and SV2C remained holds; the available SV2C evidence was
+repressive NRSF/REST regulation rather than activation.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1996
+rows through M22B-IND-1996.
