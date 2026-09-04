@@ -2352,6 +2352,18 @@ Those six rows remain explicit holds.
 Register counts are unchanged; the individual search log now contains 1036
 rows through M22B-IND-1036.
 
+## Individual hold-search tranche 1037–1044
+
+Eight additional connexin channel-pair rows were searched individually,
+covering Cx46/Cx45, Cx40/Cx40, Cx33/Cx40, Cx33/Cx33, Cx45/Cx43, Cx45/Cx40,
+Cx45/Cx33, and Cx45/Cx45 combinations. The available evidence remained at
+channel compatibility, expression, or gap-junction function and did not
+establish a terminal TF-to-target gene. No exact upstream handoff was
+promoted.
+
+Register counts are unchanged; the individual search log now contains 1044
+rows through M22B-IND-1044.
+
 ## Individual hold-search tranche 1013–1020
 
 Four ghrelin receptor rows, one canonical GHSR row, and three GIP receptor
