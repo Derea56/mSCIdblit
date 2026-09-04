@@ -4328,3 +4328,21 @@ Sdc4, Sorl1, and the Megf10-to-Abca1 target contexts remain separate from their
 submitted upstream routes; the melatonin-ASMT row is additionally bounded
 because ASMT is not treated as the melatonin ligand. The individual search log
 contains 2244 rows through M22B-IND-2244.
+
+## Individual review 2245-2252
+
+Five of the next eight rows retained reusable target capacity, covering eight
+contexts: KLF4, NFE2L2, and RELA to NOTCH1 for both NOTCH1 rows, ETS1 to Itgav,
+Ets1 to Itgb3, and Tp53 to Pdgfrb. The NOTCH1 evidence used promoter mapping,
+ChIP, reporter, DNA-binding, and perturbation experiments across epithelial,
+tissue-regeneration, and gastric-cancer models. The Itgav, Itgb3, and Pdgfrb
+contexts were reused from existing primary or signed public target records.
+
+The melatonin-ASMT-to-MTNR1B, MEPE-to-PHEX, and MFGE8-to-ITGB5 rows remained
+bounded holds. The MTNR1B search did not establish a named activating TF, the
+PHEX material remained a protease/mineralization boundary, and the ITGB5
+material resolved an alphaVbeta5 receptor-complex function without a direct
+activating TF-to-ITGB5 result. These target contexts remain separate from the
+submitted upstream handoffs. None of the eight exact upstream handoffs was
+promoted. The individual search log contains 2252 rows through
+M22B-IND-2252.
