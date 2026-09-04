@@ -209,6 +209,21 @@ rows, 417 medium-high rows, and 161 primary-experiment-supported rows. The
 4,957 original handoff holds remain intact; five new target lanes were added
 without changing any hold status.
 
+## Individual hold-search tranche 0009–0012
+
+The next literal one-by-one search tranche covered four additional named holds
+and is appended to the individual search log. Two standalone CREB lanes were
+recovered: CREB→FOS from CRHR1-activated mouse hippocampal neuronal cells and
+CREB→GABBR1 from human hippocampal promoter experiments. The BCL6/TPSB2–F2RL1
+and CREB/PRLH–PRLHR searches produced no qualifying activating target-gene
+evidence and remain holds.
+
+The current working register therefore contains 4,385 exportable target-gene
+rows and 4,304 explicit-species materialization rows, including 3,887
+high-source-confidence rows, 417 medium-high rows, and 163
+primary-experiment-supported rows. The original 4,957 handoff holds remain
+intact and no upstream handoff was upgraded.
+
 ## Reproducibility
 
 Run:
