@@ -1843,6 +1843,19 @@ exact upstream handoffs remain separate holds.
 Register counts are unchanged; the individual search log now contains 724
 rows through M22B-IND-0724.
 
+## Individual hold-search tranche 0725–0732
+
+Eight FGF3/4/5 ligand/receptor rows were searched individually. No
+ligand/receptor-specific terminal TF assay was established, but the rat
+ELK1→Ier2/pip92 promoter lane was reused as general FGF-response context for
+all eight rows. Its bFGF/FGF2 neuronal model does not resolve FGF3, FGF4, or
+FGF5, nor the submitted FGFR paralogs, so the exact upstream handoffs remain
+separate holds. These are non-SCI epithelial, developmental, cardiac, or
+neuronal-comparator observations.
+
+Register counts are unchanged; the individual search log now contains 732
+rows through M22B-IND-0732.
+
 ## Reproducibility
 
 Run:
