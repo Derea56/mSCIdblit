@@ -3098,6 +3098,23 @@ the eight exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1508
 rows through M22B-IND-1508.
 
+## Individual hold-search tranche 1509–1516
+
+All eight rows retained reusable target-gene capacity: RUNX3/CBFβ-associated
+Cd8b1 for H2-T23, H2-T24, H2-T25, and H2-T26; separate Klrd1/KLRC1
+contexts for the H2-T23 Qa-1b branch; separate Klrd1/Klrc2 contexts for
+the H2-T23 Qa-1b branch; and RUNX3→Cd8a for H2-T24 and H2-T25. The
+Klrd1 injury evidence is mouse liver ischemia-reperfusion, the KLRC1
+evidence is human NK-cell promoter regulation, and the Klrc2 evidence is
+mouse NK-cell maturation; none is SCI. The Klrc2 result is an
+EOMES-associated expression/requirement context rather than demonstrated
+promoter binding. These target contexts remain separate from the submitted
+MHC upstream handoffs. None of the eight exact upstream handoffs was
+promoted.
+
+Register counts are unchanged; the individual search log now contains 1516
+rows through M22B-IND-1516.
+
 Run:
 
 ```text
