@@ -4655,3 +4655,8 @@ The retained contexts remain separate from the submitted Pcdha/Pcdhb homophilic 
 All eight rows retained reusable target capacity. Seven rows reused the established CTCF-linked clustered-beta target contexts for PCDHB10, PCDHB11, PCDHB6, and PCDHB8, while PCDHB12 gained a new CTCF-linked beta-cluster regulatory-support edge.
 
 The retained contexts remain separate from the submitted Pcdhb homophilic or heterophilic adhesion handoffs and do not establish source-to-TF activation. These are non-SCI mouse brain/neuronal comparators, and the PCDHB records are explicitly cluster-level regulatory support rather than isolated isoform-specific activation assays. The individual search log contains 2596 rows through M22B-IND-2596. This tranche added one standalone target edge, reused seven existing target contexts, and retained target contexts for all eight rows.
+## Individual review 2597-2604
+
+All eight rows retained reusable target capacity. PCDHB13, PCDHB15, PCDHB16, PCDHB17, PCDHB18, PCDHB19, PCDHB21, and PCDHB2 gained CTCF-linked clustered-beta promoter regulatory support.
+
+The retained contexts remain separate from the submitted Pcdhb homophilic adhesion handoffs and do not establish source-to-TF activation. These are non-SCI mouse brain/neuronal comparators, and the PCDHB records are explicitly cluster-level regulatory support rather than isolated isoform-specific activation assays. The individual search log contains 2604 rows through M22B-IND-2604. This tranche added eight standalone target edges and one expanded evidence record; all eight rows retained target contexts.
