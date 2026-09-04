@@ -685,6 +685,22 @@ rows, 427 medium-high rows, and 255 primary-experiment-supported rows. One
 hundred fifty-six named or composite holds have now been searched individually
 and are logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0157–0164
+
+Eight additional ADAM12/ADAM15/ADAM17 rows were searched individually. The
+ADAM12 and ADAM15 integrin or syndecan rows remained at adhesion, spreading,
+ERK, PKC, or RhoA signaling boundaries without terminal TF targets. ADAM17
+ErbB4 processing remained a receptor-cleavage boundary, while ADAM17 IL6RA
+shedding was retained with the existing STAT3/SOCS3 lane as cytokine context
+only. No new standalone target lane was added, and none of the eight submitted
+upstream handoffs was upgraded.
+
+The working register remains at 4,480 exportable target-gene rows and 4,396
+explicit-species materialization rows, including 4,065 high-source-confidence
+rows, 427 medium-high rows, and 255 primary-experiment-supported rows. One
+hundred sixty-four named or composite holds have now been searched individually
+and are logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
