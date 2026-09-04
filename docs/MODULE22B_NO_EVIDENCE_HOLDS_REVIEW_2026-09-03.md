@@ -3983,3 +3983,15 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 2060
 rows through M22B-IND-2060.
+
+## Individual hold-search tranche 2061–2068
+
+All eight rows retained reusable activating-target capacity: SP1→DAG1,
+MYC→ITGA1, SP1/RUNX1→ITGA2, Sp3→ITGA3, SP1→ITGA6, EGR1→ITGA7,
+SP1→ITGA9, and SP1/ETS1→ITGAV.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 2068
+rows through M22B-IND-2068.
