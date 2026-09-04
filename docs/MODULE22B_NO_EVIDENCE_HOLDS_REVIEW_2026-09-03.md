@@ -4384,3 +4384,24 @@ assignments are explicitly component-level, and the target contexts remain
 separate from the submitted upstream handoffs; none of the eight exact
 upstream handoffs was promoted. The individual search log contains 2268 rows
 through M22B-IND-2268.
+
+## Individual review 2269-2276
+
+All eight rows retained reusable target capacity, covering nine standalone or
+component-limited contexts. FGFR1 gained primary YY1 promoter binding and
+activation evidence from papillary thyroid carcinoma. The
+MMP14_ITGAV_ITGB3 composite reused SP1 and ETS1 activation contexts for ITGAV
+and ETS1 activation context for ITGB3. PECAM1 gained primary MEF2C
+ChIP-qPCR, promoter-reporter, overexpression, and knockdown evidence from
+rat dental-pulp and human dental-pulp-fibroblast inflammatory models. CD151
+reused SP1, and both CD44 rows reused the seven existing CD44 contexts.
+ERBB4 gained primary ESR1/ERBB4 promoter cooperation evidence from human
+breast-cancer cells, while SDC1 reused NR1H4 promoter activation evidence.
+
+The eight target assignments remain standalone or component-level contexts and
+do not establish any of the submitted Mmp2, Mmp7, or Mmp9 handoffs as an
+upstream route to the TF. The PECAM1 result is a non-SCI inflammatory injury
+comparator; the other contexts are non-SCI cancer, general regulatory, or
+hepatic comparators. The individual search log contains 2276 rows through
+M22B-IND-2276. This tranche added three standalone target edges and three
+evidence records; none of the eight exact upstream handoffs was promoted.
