@@ -1924,6 +1924,20 @@ the exact upstream handoffs remain holds.
 Register counts are unchanged; the individual search log now contains 772
 rows through M22B-IND-0772.
 
+## Individual hold-search tranche 0773–0780
+
+Eight fibronectin–integrin rows were searched individually. No qualifying
+named TF-target lane was established for FN1→ITGA4/ITGB1, FN1→ITGA4/ITGB7,
+FN1→ITGA8/ITGB1, FN1→ITGAV/ITGB6, or FN1→ITGAV/ITGB8. Existing
+YAP→CTGF/CYR61 lanes were reused as general adhesion/mechanotransduction
+context for FN1→ITGA5/ITGB1 and FN1→ITGAV/ITGB1/ITGB3, while preserving the
+exact receptor and matrix limitations. These are non-SCI immune, epithelial,
+vascular, platelet, or mechanotransduction comparators; the upstream
+integrin handoffs remain separate holds.
+
+Register counts are unchanged; the individual search log now contains 780
+rows through M22B-IND-0780.
+
 ## Reproducibility
 
 Run:
