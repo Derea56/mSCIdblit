@@ -3260,3 +3260,15 @@ upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1604
 rows through M22B-IND-1604.
+## Individual hold-search tranche 1605–1612
+
+Seven of eight rows retained reusable activating-target capacity. VCAM1 was
+supported by JUN and direct human endothelial NF-κB/IRF1 promoter studies;
+ADGRE5 was supported by SP1, ADGRB1 by TP53, and ADCYAP1R1 by Sp1. ADGRA2
+remained a hold because the available evidence concerned receptor-complex,
+Rho-GTPase, Wnt/β-catenin, or expression biology rather than named TF-to-
+promoter activation. These target contexts remain separate from the submitted
+upstream handoffs. None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1612
+rows through M22B-IND-1612.
