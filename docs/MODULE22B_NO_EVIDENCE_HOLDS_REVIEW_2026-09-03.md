@@ -3573,3 +3573,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1804
 rows through M22B-IND-1804.
+## Individual hold-search tranche 1805–1812
+
+One of eight rows retained reusable activating-target capacity: the prior
+ACVR1 promoter evidence was reusable for the exact ACVR1 target in the INHBC
+row. CFC1 and the six ACVR1B/ACVR2A/ACVR2B or ACVR1C/ACVR2A/ACVR2B composite
+rows remained holds because no qualifying named activating TF-to-exact-target
+relationship was established.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1812
+rows through M22B-IND-1812.
