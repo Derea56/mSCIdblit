@@ -668,6 +668,23 @@ rows, 427 medium-high rows, and 255 primary-experiment-supported rows. One
 hundred forty-eight named or composite holds have now been searched individually
 and are logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0149–0156
+
+Eight additional protease-complex and adhesion holds were searched individually.
+TSPAN12, TSPAN15, and TSPAN17 searches remained at ADAM10 association,
+maturation, or substrate-shedding boundaries. TSPAN14 and TSPAN5 were retained
+with the existing RBPJ/CSL-to-Hes1 lane as Notch-processing context only; the
+tetraspanin-specific route to RBPJ activation was not established. ADAM11 and
+ADAM12 integrin searches remained at adhesion, spreading, or myogenic-fusion
+outputs without terminal TF targets. No new standalone target lane was added,
+and none of the eight submitted upstream handoffs was upgraded.
+
+The working register remains at 4,480 exportable target-gene rows and 4,396
+explicit-species materialization rows, including 4,065 high-source-confidence
+rows, 427 medium-high rows, and 255 primary-experiment-supported rows. One
+hundred fifty-six named or composite holds have now been searched individually
+and are logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
