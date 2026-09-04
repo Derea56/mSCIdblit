@@ -1753,6 +1753,23 @@ medium-high rows. The current evidence register contains 450 records with
 `support_kind=primary_experiment`. The individual search log now contains 676
 rows through M22B-IND-0676.
 
+## Individual hold-search tranche 0677–0684
+
+Eight EphA/B receptor-boundary rows were searched individually. A reusable
+mouse Stat3→Ache lane was applied as context to the exact EphA4 receptor row,
+while no qualifying named downstream TF-target lane was established for
+EphA3, EphA5, EphA6, EphA7, or EphA8. Human HOXA9→EPHB4 direct promoter
+evidence and human SP1→EPHB4 promoter-regulatory support were added while
+reviewing the unresolved EFNB1→EPHB4 row. These are non-SCI placental,
+vascular, cancer, or neuromuscular observations; the submitted receptor
+handoffs remain separate holds and were not upgraded by inference.
+
+Register counts are now 5,314 exportable target-gene rows and 4,540
+explicit-species rows, including 4,196 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 452 records with
+`support_kind=primary_experiment`. The individual search log now contains 684
+rows through M22B-IND-0684.
+
 ## Reproducibility
 
 Run:
