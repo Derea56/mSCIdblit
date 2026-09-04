@@ -947,6 +947,26 @@ medium-high rows. The current evidence register contains 333 records with
 rows through M22B-IND-0276. All eight submitted upstream handoffs remain
 holds.
 
+## Individual hold-search tranche 0277–0284
+
+Eight additional Ccl6-Ccl8 chemokine and atypical-receptor rows were searched
+individually. Five reusable standalone target lanes were recovered: RXRA→Ccl6
+and MYCL→Ccl6 in mouse, STAT1→CCL7 in human, STAT1→Ccl7 in mouse, and IRF1→Ccl8
+in mouse. The Ccl6 receptor branches remain unresolved at receptor-specific
+signaling boundaries; the Ccl7 branches remain unresolved because interferon
+STAT1 promoter evidence does not establish ACKR1, CCR1L1, CCR2, or CCR3
+activation; and the Ccl8 branches remain at atypical-receptor transport or
+presentation boundaries. These standalone relationships are general or
+non-SCI comparator evidence, and none of the upstream handoff rows was
+upgraded.
+
+The working register now contains 4,506 exportable target-gene rows and 4,426
+explicit-species rows, including 4,082 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 338 records with
+`support_kind=primary_experiment`. The individual search log now contains 284
+rows through M22B-IND-0284. All eight submitted upstream handoffs remain
+holds.
+
 ## Reproducibility
 
 Run:
