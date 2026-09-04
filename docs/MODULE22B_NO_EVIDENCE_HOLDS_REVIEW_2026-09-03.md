@@ -2904,6 +2904,21 @@ None of the eight exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1396
 rows through M22B-IND-1396.
 
+## Individual hold-search tranche 1397–1404
+
+Seven rows retained reusable target-gene capacity: TTF-1→TSHR was reused for
+both GPHA2/GPHB5 receptor-subunit rows; HIF1A→NTRK1/Ntrk1 was reused for the
+GPI1 and GRN branches; ETS1→Kdr was reused for GREM1→KDR; ETS1→CD209 was
+reused as a human comparator for the mouse Cd209a row; and EGR1→EGFR was
+reused for GRN→EGFR. AMFR remained a hold because its promoter study did not
+identify the DNA-binding proteins by name. The NTRK1 entries are general
+hypoxia/neuroblastoma target contexts, and the CD209 entry is explicitly a
+human CD209 comparator rather than direct evidence for mouse Cd209a. None of
+the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1404
+rows through M22B-IND-1404.
+
 Run:
 
 ```text
