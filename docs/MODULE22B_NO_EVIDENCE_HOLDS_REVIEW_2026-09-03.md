@@ -3663,3 +3663,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1860
 rows through M22B-IND-1860.
+## Individual hold-search tranche 1861–1868
+
+Four of eight rows retained reusable activating-target capacity: GABP/PU.1→ITGAM,
+HIF1A/Hif1a→ITGB1, GATA3/Gata3→EPOR, and SP1→KIT. JAM3, KISS1R, MMP24, and
+LRRN3 remained holds because the reviewed records addressed adhesion,
+receptor signaling, ligand-gene regulation, protease function, or repression
+without establishing a qualifying named activating TF-to-target relationship.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1868
+rows through M22B-IND-1868.
