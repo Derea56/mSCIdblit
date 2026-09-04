@@ -4191,3 +4191,17 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 2188
 rows through M22B-IND-2188.
+
+## Individual hold-search tranche 2189–2196
+
+Seven of eight rows retained reusable activating-target capacity:
+HNF4A→LRP2, MYC→LRP8, FOXP1→SORL1, CEBPA-family→SORT1, PPARA→VLDLR,
+NR4A2→NTNG2, and PPARG→PTPRF. The LRRC4B→PTPRD row remained a hold because
+the reviewed evidence established adhesion and presynaptic function without a
+named activating TF-to-PTPRD relationship.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts now include seven standalone target edges and seven evidence
+records; the individual search log contains 2196 rows through M22B-IND-2196.
