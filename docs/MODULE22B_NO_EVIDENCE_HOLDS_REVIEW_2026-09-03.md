@@ -1208,6 +1208,26 @@ medium-high rows. The current evidence register contains 376 records with
 `support_kind=primary_experiment`. The individual search log now contains 388
 rows through M22B-IND-0388.
 
+## Individual hold-search tranche 0389–0396
+
+Eight collagen-integrin or syndecan/CD44 rows were searched individually.
+Direct standalone target lanes were added for human MYC→ITGA1, human
+SP1→ITGA9, mouse SP1→Itgav, mouse ETS1→Itgav, human HIF1A→SDC4, human
+SMAD3→SDC4, human KLF5→SDC4, human RELA→SDC4, and human ZEB1→SDC1. The
+SDC4 lanes are retained as usable general regulon context; the HIF1A lane was
+found while reviewing an SDC1 hold and is not assigned to SDC1. ZEB1 is
+supported as a repressor of SDC1, while the other direct lanes are activation
+or positive-regulation claims. Existing human SP1→ITGA2 and EGR1→CD44 lanes
+were reused as context for two additional holds. No exact standalone target
+lane was established for ITGA3. All eight collagen/syndecan upstream handoffs
+remain separate holds and were not upgraded by these target-gene findings.
+
+The working register now contains 5,247 exportable target-gene rows and 4,471
+explicit-species rows, including 4,129 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 385 records with
+`support_kind=primary_experiment`. The individual search log now contains 396
+rows through M22B-IND-0396.
+
 ## Reproducibility
 
 Run:
