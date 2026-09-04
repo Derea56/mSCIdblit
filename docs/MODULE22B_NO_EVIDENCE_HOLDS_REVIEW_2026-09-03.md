@@ -412,6 +412,24 @@ rows. Fifty-six named or composite holds have now been searched individually
 and are logged. No SCI-specific target-gene evidence was identified in this
 tranche.
 
+## Individual hold-search tranche 0057–0060
+
+Four additional holds were searched individually. The three RELA searches for
+S100A1–TLR4, SLURP1–CHRNA7, and SPON2–integrin signaling did not establish
+route-specific target loci; the existing RELA target lanes, including PLPP3,
+were reused. The LTa1b2–LTBR composite search also did not resolve a terminal
+route-specific target, but it yielded reusable RELB evidence: PLPP3, LTB, and
+TNFRSF9 from primary promoter/ChIP and perturbation studies. The RELA lanes
+from the preceding tranche were retained as component-level context. None of
+these findings upgrades the submitted upstream handoffs.
+
+The current working register contains 4,446 exportable target-gene rows and
+4,362 explicit-species materialization rows, including 4,041 high-source-
+confidence rows, 417 medium-high rows, and 221 primary-experiment-supported
+rows. Sixty named or composite holds have now been searched individually and
+are logged. No SCI-specific target-gene evidence was identified in this
+tranche.
+
 ## Reproducibility
 
 Run:
