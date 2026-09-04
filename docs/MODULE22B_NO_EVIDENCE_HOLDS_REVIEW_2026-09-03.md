@@ -3448,3 +3448,17 @@ upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1732
 rows through M22B-IND-1732.
+## Individual hold-search tranche 1733–1740
+
+Three of eight rows retained reusable activating-target capacity: existing
+STAT1→IL18BP, E2F1→ADRB2, and SP1→SIGIRR evidence. The IL1RAPL1, IL1RL2,
+IL1R2_IL1RAP composite, and IL1R1 rows remained holds because the reviewed
+records did not establish qualifying named activating TF-to-target results;
+promoter motifs, basal promoter architecture, repression, and receptor-family
+or complex signaling evidence were not promoted.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1740
+rows through M22B-IND-1740.
