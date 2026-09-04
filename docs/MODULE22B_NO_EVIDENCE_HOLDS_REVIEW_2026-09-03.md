@@ -340,6 +340,22 @@ confidence rows, 417 medium-high rows, and 190 primary-experiment-supported
 rows. Forty named or composite holds have now been searched individually and
 are logged.
 
+## Individual hold-search tranche 0041–0044
+
+Four additional holds were searched individually. The WNT5A–MCAM search
+reused the JUN-associated lanes already established for MMP9 and BDNF without
+asserting the submitted upstream route. The FGF6–FGFR4 search recovered
+MyoD→TEAD2 evidence from a muscle-regeneration study. The EFNA4–EPHA10 search
+recovered Nanog→Foxm1 evidence from neural stem cells. The FGF23–FGFR4/NFAT
+search recovered NFATC3→SFTPB and NFATC3→ABCA3 lung-promoter lanes. All four
+submitted upstream handoffs remain holds.
+
+The current working register contains 4,419 exportable target-gene rows and
+4,335 explicit-species materialization rows, including 4,014 high-source-
+confidence rows, 417 medium-high rows, and 194 primary-experiment-supported
+rows. Forty-four named or composite holds have now been searched individually
+and are logged.
+
 ## Reproducibility
 
 Run:
