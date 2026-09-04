@@ -2768,6 +2768,18 @@ rows through M22B-IND-1020.
 
 ## Reproducibility
 
+## Individual hold-search tranche 1317–1324
+
+The MTNR1A, ACKR2, ADRA2A, CCR10, CCR2, and second MTNR1A rows remained
+ligand/receptor-binding holds without a qualifying downstream target-gene
+lane. The CCR3 row retained separate human GATA1→CCR3 target context, and the
+GRM7 row retained separate human GATA3→GRM7 target context; neither context
+was assigned to the unresolved Gm2506 source branch or used to infer an
+upstream TF relay. None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1324
+rows through M22B-IND-1324.
+
 Run:
 
 ```text
