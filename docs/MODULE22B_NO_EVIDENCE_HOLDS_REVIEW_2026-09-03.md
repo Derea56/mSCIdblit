@@ -3476,3 +3476,18 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1748
 rows through M22B-IND-1748.
+## Individual hold-search tranche 1749–1756
+
+One of eight rows retained reusable activating-target capacity: existing
+ETS1/Ets1→CD53/Cd53 evidence. The IFNAR1, IFNAR2, IL1RL2, PTPRF, and PTPRS
+rows remained holds because the reviewed material addressed receptor
+signaling, promoter architecture, cell-surface interaction, or adhesion
+outputs without establishing qualifying named activating TF-to-target
+relationships. Individual IL2RA and IL2RB evidence was not transferred to the
+submitted IL2RA_IL2RB composite.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1756
+rows through M22B-IND-1756.
