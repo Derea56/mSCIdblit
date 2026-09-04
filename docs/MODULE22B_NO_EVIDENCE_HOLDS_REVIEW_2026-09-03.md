@@ -1291,6 +1291,22 @@ medium-high rows. The current evidence register contains 386 records with
 `support_kind=primary_experiment`. The individual search log now contains 428
 rows through M22B-IND-0428.
 
+## Individual hold-search tranche 0429–0436
+
+Eight COL4A1 or COL4A2-linked rows were searched individually. Existing
+standalone target lanes were reused for SDC4, CD44, GP6/Gp6, ITGA10, ITGA1,
+and ITGA2. A new mouse SOX9→Adgrg6 lane was added from a primary spinal-
+stability/intervertebral-disc study; it is SCI-adjacent context but not a
+traumatic-SCI result, and the source is a preprint. No exact standalone target
+lane was established for ITGA11. The collagen-to-receptor handoffs remain
+separate holds.
+
+The working register now contains 5,249 exportable target-gene rows and 4,473
+explicit-species rows, including 4,131 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 387 records with
+`support_kind=primary_experiment`. The individual search log now contains 436
+rows through M22B-IND-0436.
+
 ## Reproducibility
 
 Run:
