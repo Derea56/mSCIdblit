@@ -2846,6 +2846,19 @@ eight exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1364
 rows through M22B-IND-1364.
 
+## Individual hold-search tranche 1365–1372
+
+Seven GNAS/GNAI2 branches retained reusable target-gene capacity from
+independent evidence: TTF-1→TSHR, Notch/RBPJ-linked UNC5B regulation,
+HIF1A-linked ADCY7 regulation, CREB→Adcy8, MYC/Myc→ADCY9, ZFP91→Adora1,
+and E2F1→ADRB2. The ADCY1 row remained a hold because its neural/pineal
+promoter study did not identify a named activating TF. These target contexts
+are not assigned to the unresolved GNAS/GNAI2 handoffs, and none of the eight
+exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1372
+rows through M22B-IND-1372.
+
 Run:
 
 ```text
