@@ -308,6 +308,22 @@ confidence rows, 417 medium-high rows, and 181 primary-experiment-supported
 rows. Thirty-two named or composite holds have now been searched individually
 and are logged.
 
+## Individual hold-search tranche 0033–0036
+
+Four additional holds were searched individually. The two GLI1 searches
+recovered standalone GLI1→CRABP1 and GLI1→REG4 lanes; the CRABP1 result came
+from motor-neuron differentiation experiments with neural disease context,
+but not SCI. The HHEX search recovered direct HHEX→SLC10A1 and HHEX→SST
+promoter lanes. The HIF1A search recovered HIF1A→P4HA1 and HIF1A→ZFHX3
+promoter-occupancy/perturbation lanes. These findings add six standalone
+target-gene lanes; the four submitted upstream handoffs remain holds.
+
+The current working register contains 4,412 exportable target-gene rows and
+4,328 explicit-species materialization rows, including 4,007 high-source-
+confidence rows, 417 medium-high rows, and 187 primary-experiment-supported
+rows. Thirty-six named or composite holds have now been searched individually
+and are logged.
+
 ## Reproducibility
 
 Run:
