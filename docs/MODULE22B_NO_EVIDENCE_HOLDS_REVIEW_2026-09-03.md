@@ -1717,6 +1717,24 @@ medium-high rows. The current evidence register contains 442 records with
 `support_kind=primary_experiment`. The individual search log now contains 660
 rows through M22B-IND-0660.
 
+## Individual hold-search tranche 0661–0668
+
+Eight Notch, desmosomal, and dentin-matrix rows were searched individually.
+Existing RBPJ/NICD target lanes were reused as context for DLL4→NOTCH3 and
+DLL4→NOTCH4. Human TP63→DSG1 and TP53→DSC3 lanes provided reusable
+desmosomal target context, although the exact DSC/DSG pair handoffs were not
+established. New primary-study lanes were added for mouse Dlx5→Dspp,
+Msx2→Dspp, Runx2→Dspp, and Sp7→Dspp; the Msx2 lane is explicitly a
+repressive regulatory relationship. These are general non-SCI epithelial and
+odontoblast observations; the submitted receptor/adhesion handoffs remain
+separate holds and were not upgraded by inference.
+
+Register counts are now 5,310 exportable target-gene rows and 4,536
+explicit-species rows, including 4,192 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 448 records with
+`support_kind=primary_experiment`. The individual search log now contains 668
+rows through M22B-IND-0668.
+
 ## Reproducibility
 
 Run:
