@@ -3437,3 +3437,14 @@ handoffs. None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1724
 rows through M22B-IND-1724.
+## Individual hold-search tranche 1725–1732
+
+No rows in this eight-row tranche yielded a reusable activating-target
+context. The KCNJ15/KCNJ4 rows lacked named activating TF-to-promoter evidence,
+and the IL17RA/IL17RC and IL18 receptor-complex rows remained at ligand/receptor
+signaling boundaries; individual subunit or downstream cytokine-promoter
+evidence was not transferred to the composites. None of the eight exact
+upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1732
+rows through M22B-IND-1732.
