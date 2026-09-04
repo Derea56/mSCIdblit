@@ -1960,6 +1960,19 @@ handoffs.
 Register counts are unchanged; the individual search log now contains 788
 rows through M22B-IND-0788.
 
+## Individual hold-search tranche 0789–0796
+
+Eight additional GABA-GAD1/SLC32A1→GABAA-subtype rows were searched
+individually, including epsilon- and theta-containing assemblies. The
+developing-neuron GABAA→CREB/BDNF evidence was retained as reusable context
+through the existing GABAA-CREB/BDNF program and CREB→BDNF target lanes for
+all eight rows. It does not resolve the submitted subunit assembly, the
+GAD1/SLC32A1 source composite, mature-neuron behavior, or SCI activity, so the
+exact upstream handoffs remain holds.
+
+Register counts are unchanged; the individual search log now contains 796
+rows through M22B-IND-0796.
+
 ## Reproducibility
 
 Run:
