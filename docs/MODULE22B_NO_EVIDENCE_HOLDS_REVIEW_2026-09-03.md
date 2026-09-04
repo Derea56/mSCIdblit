@@ -2302,6 +2302,19 @@ exact upstream handoffs remain holds.
 Register counts are unchanged; the individual search log now contains 996
 rows through M22B-IND-0996.
 
+## Individual hold-search tranche 0997–1004
+
+Eight GHRH receptor/processing rows were searched individually. Primary
+pituitary evidence supports GHRH/GRF-induced c-Fos expression, and the
+canonical GHRHR branch provides cAMP/PKA/CREB-linked GH transcription context;
+the existing CREB-to-FOS lane was reused as a separate target-gene record.
+Noncanonical PRLR, ADCYAP1R1, ADRB2, ADRB3, DPP4, GHSR, and GPR20 rows were
+not assigned canonical GHRHR evidence as exact receptor activation. None of
+the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1004
+rows through M22B-IND-1004.
+
 ## Reproducibility
 
 Run:
