@@ -4266,3 +4266,24 @@ upstream handoffs. None of the eight exact upstream handoffs was promoted.
 Register counts now include eight additional standalone target edges and eight
 evidence records; the individual search log contains 2220 rows through
 M22B-IND-2220.
+
+## Individual review 2221-2228
+
+Five of the next eight rows retained reusable activating-target capacity,
+covering six TF-to-target contexts: RUNX3 to ITGAL for Lyz2, RUNX3 to ITGA4
+for the ITGA4_ITGB7 composite receiver, MYC to ITGA1, HIF1A to ITGB1, and
+SPI1 and IRF8 to C1QB. The ITGAL, ITGA4, and ITGA1 evidence used promoter,
+binding, and reporter experiments in immune-cell or colorectal-cancer models.
+The ITGB1 result used hypoxia-responsive promoter mutation and ChIP evidence,
+and the C1QB result used macrophage/dendritic-cell promoter, ChIP, and
+knockdown experiments.
+
+The MAG-to-MAG, MBL2-to-CALCR, and MBL2-to-CD93 rows remained bounded holds
+because no named activating TF-to-target result meeting the reusable-target
+standard was verified. For the composite ITGA4_ITGB7 row, the reusable context
+is explicitly limited to its experimentally supported ITGA4 component. These
+target contexts remain separate from the submitted upstream handoffs. None of
+the eight exact upstream handoffs was promoted.
+
+This tranche added four standalone target edges and four evidence records; the
+individual search log contains 2228 rows through M22B-IND-2228.
