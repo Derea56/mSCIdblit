@@ -2992,6 +2992,20 @@ upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1444
 rows through M22B-IND-1444.
 
+## Individual hold-search tranche 1445–1452
+
+Seven rows retained reusable target-gene capacity: RUNX3→Cd8a for three
+MHC-I branches, RUNX3/CBFβ-associated Cd8b1 context for two branches,
+SP1→ERBB2, and E2F1→KIR3DL1. The generic Klra row remained a hold because
+the recovered evidence addressed named Ly49 members or shared family
+elements rather than the unspecified Klra entity. These are non-SCI mouse
+T-cell/NK-cell and human breast-cancer/NK-cell leukemia contexts; none
+establishes the submitted MHC-I upstream handoff. None of the eight exact
+upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1452
+rows through M22B-IND-1452.
+
 Run:
 
 ```text
