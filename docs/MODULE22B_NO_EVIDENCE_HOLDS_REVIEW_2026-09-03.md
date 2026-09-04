@@ -2859,6 +2859,19 @@ exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1372
 rows through M22B-IND-1372.
 
+## Individual hold-search tranche 1373–1380
+
+Seven GNAS branches retained reusable target-gene capacity from independent
+evidence: CEBPα→Adrb3, PAX2→Avpr2, HIF-1α/NF-κB→Crhr1, ChREBP→Gcgr,
+E2F1→Glp1r, SP1→LHCGR, and RARα/RARβ→PTGDR. The HTR6 row remained a hold
+because the reviewed resources supplied promoter/TF-binding annotation and
+expression or methylation associations without a qualifying named activating
+TF-to-HTR6 experiment. None of the eight exact upstream GNAS handoffs was
+promoted.
+
+Register counts are unchanged; the individual search log now contains 1380
+rows through M22B-IND-1380.
+
 Run:
 
 ```text
