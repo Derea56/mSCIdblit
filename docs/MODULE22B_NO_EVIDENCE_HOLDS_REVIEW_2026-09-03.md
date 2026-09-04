@@ -2626,6 +2626,18 @@ JUN→MMP9 context. None of the exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1228
 rows through M22B-IND-1228.
 
+## Individual hold-search tranche 1229–1236
+
+The GluK3/GluK5 row retained separate human JUN→MMP9 target context. The
+GluN1/GluN2C/D rows retained bounded CREB→BDNF context. The GluA1/2/3 rows
+retained general ionotropic-glutamate CREB/c-FOS and BDNF context, while the
+GluA4 row retained direct non-SCI oligodendroglial NF-YB→Gria4
+regulatory-region evidence as a near-match. The GluK1 row retained BDNF/FOS
+context. None of the exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1236
+rows through M22B-IND-1236.
+
 ## Individual hold-search tranche 1013–1020
 
 Four ghrelin receptor rows, one canonical GHSR row, and three GIP receptor
