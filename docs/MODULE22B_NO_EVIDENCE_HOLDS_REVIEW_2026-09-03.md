@@ -1190,6 +1190,24 @@ medium-high rows. The current evidence register remains at 366 records with
 `support_kind=primary_experiment`. The individual search log now contains 380
 rows through M22B-IND-0380.
 
+## Individual hold-search tranche 0381–0388
+
+Eight contactin, GP6, or integrin rows were searched individually. Direct
+standalone target lanes were added for mouse EBF2→Cntn1; human and mouse
+FOXP2→CNTNAP2/Cntnap2; human GATA1, FLI1, and SP1→GP6; mouse TAL1 and
+FLI1→Gp6; and human TFAP2E and ETS1→ITGA10. These lanes are supported by
+promoter ChIP/EMSA, promoter-reporter, perturbation, or expression evidence
+in neural, megakaryocytic, or cartilage comparator systems. An existing
+RBPJ/CSL→Hes1 lane was reused as context for the Notch2 row. None of these
+standalone target lanes establishes the submitted Cntn1/Cntn2/collagen
+upstream handoff, and all eight upstream handoffs remain holds.
+
+The working register now contains 4,544 exportable target-gene rows and 4,462
+explicit-species rows, including 4,120 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 376 records with
+`support_kind=primary_experiment`. The individual search log now contains 388
+rows through M22B-IND-0388.
+
 ## Reproducibility
 
 Run:
