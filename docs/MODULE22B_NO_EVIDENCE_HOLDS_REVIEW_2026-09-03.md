@@ -2794,6 +2794,20 @@ None of the eight exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1332
 rows through M22B-IND-1332.
 
+## Individual hold-search tranche 1333–1340
+
+Seven GNAI2 receptor branches retained reusable target-gene capacity from
+independent evidence: ZFP91→Adora1, SP1-associated ADRA2A promoter
+regulation, SP1→ADRA2B, CEBPB/HOXA10→AGTR2, NF-kB-dependent C5AR1 promoter
+activation, Tp53→Cav1, and STAT1→CCR5. These contexts are not assigned to
+the unresolved GNAI2 source branches. CHRM1 remained a hold because its
+available promoter studies identified motifs and reporter activity but did
+not establish named-TF activation strongly enough for reuse. None of the
+eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1340
+rows through M22B-IND-1340.
+
 Run:
 
 ```text
