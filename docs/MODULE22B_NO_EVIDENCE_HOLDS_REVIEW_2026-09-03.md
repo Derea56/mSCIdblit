@@ -4111,3 +4111,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 2140
 rows through M22B-IND-2140.
+
+## Individual hold-search tranche 2141–2148
+
+Three of eight rows retained reusable activating-target capacity:
+SP1→ADAM23 for the Lgi2, Lgi3, and Lgi4 branches. ADAM22, FLOT1, and STX1A
+remained holds because no named activating TF-to-target-gene relationship was
+established for those genes.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 2148
+rows through M22B-IND-2148.
