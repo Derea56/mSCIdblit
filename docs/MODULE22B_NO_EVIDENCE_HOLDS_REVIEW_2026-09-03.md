@@ -1228,6 +1228,23 @@ medium-high rows. The current evidence register contains 385 records with
 `support_kind=primary_experiment`. The individual search log now contains 396
 rows through M22B-IND-0396.
 
+## Individual hold-search tranche 0397–0404
+
+Eight COL1A2 collagen-integrin rows were searched individually. Existing
+species-resolved standalone lanes were reused for GP6/Gp6, ITGA10, ITGA1,
+ITGA2, ITGA9, and Itgav: the corresponding human or mouse target evidence is
+usable as general regulon context, but it does not establish the COL1A2
+upstream handoff. No exact standalone target lane was established for ITGA11
+or ITGA3. These eight searches therefore added no new register rows, while
+preserving the distinction between target-gene evidence and collagen-receptor
+causality. All eight COL1A2 handoffs remain holds.
+
+Register counts are unchanged at 5,247 exportable target-gene rows and 4,471
+explicit-species rows, including 4,129 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 385 records with
+`support_kind=primary_experiment`. The individual search log now contains 404
+rows through M22B-IND-0404.
+
 ## Reproducibility
 
 Run:
