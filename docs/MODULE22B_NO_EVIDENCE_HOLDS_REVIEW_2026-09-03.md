@@ -3030,6 +3030,19 @@ upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1468
 rows through M22B-IND-1468.
 
+## Individual hold-search tranche 1469–1476
+
+All eight rows retained reusable target-gene capacity: RUNX3/CBFβ-associated
+Cd8b1 for H2-M2, H2-M3, and H2-M5; TCF7/β-catenin→Cd4; RUNX3→Cd8a for
+H2-M3 and H2-M5; GATA3→KLRC1; and FOXO1-associated Klrd1 induction. The
+Klrd1 evidence is from mouse liver ischemia-reperfusion injury, not SCI;
+the KLRC1 evidence is human. These target contexts remain separate from
+the submitted MHC upstream handoffs. None of the eight exact upstream
+handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1476
+rows through M22B-IND-1476.
+
 Run:
 
 ```text
