@@ -3906,3 +3906,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 2012
 rows through M22B-IND-2012.
+
+## Individual hold-search tranche 2013–2020
+
+Four of eight rows retained reusable activating-target capacity: SP1/ETS1→ITGAV,
+EGR1/FOS/JUN/SP1/STAT1→CD44, SP1→DAG1, and MYC→ITGA1. SV2A, SV2B, SV2C,
+and BCAM remained holds; the available SV2C evidence was repressive NRSF/REST
+regulation rather than activation.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 2020
+rows through M22B-IND-2020.
