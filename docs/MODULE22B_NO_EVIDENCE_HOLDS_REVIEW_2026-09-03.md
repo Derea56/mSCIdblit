@@ -2504,6 +2504,16 @@ handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1140
 rows through M22B-IND-1140.
 
+## Individual hold-search tranche 1141–1148
+
+The mGluR8 row remained an explicit no-target hold. The seven kainate-family
+rows retained separate human JUN→MMP9 target context alongside receptor
+assembly or JNK3/c-Jun boundaries; the exact heteromer/source handoffs remain
+unresolved. None of the exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1148
+rows through M22B-IND-1148.
+
 ## Individual hold-search tranche 1013–1020
 
 Four ghrelin receptor rows, one canonical GHSR row, and three GIP receptor
