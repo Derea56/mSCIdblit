@@ -3414,3 +3414,15 @@ promoted.
 
 Register counts are unchanged; the individual search log now contains 1708
 rows through M22B-IND-1708.
+## Individual hold-search tranche 1709–1716
+
+Five of eight rows retained reusable activating-target capacity: existing
+IL2RA, STAT1→CCR5, ETS1→CD4, EGR1/SP1→CD9, and AP-1/Sp1/KLF5-associated
+activation of AXL. IL2RG, TMEM219, and the IL15RA/IL2RB composite remained
+holds because no qualifying named activating TF-to-target relationship was
+established; the positive AXL evidence was retained despite the prior
+repressive-only lane. These target contexts remain separate from the submitted
+upstream handoffs. None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1716
+rows through M22B-IND-1716.
