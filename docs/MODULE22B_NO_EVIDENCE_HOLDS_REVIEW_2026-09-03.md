@@ -875,6 +875,24 @@ hundred forty-eight named or composite holds have now been searched
 individually and are logged. All four submitted upstream handoffs remain
 holds.
 
+## Individual hold-search tranche 0245–0252
+
+Eight additional Ccl21 paralog rows were searched individually. The exact
+Ccl21b/d/e branches with ACKR4, CCR7, or CXCR3 remained at scavenging,
+paralog-specificity, or receptor-specificity boundaries. For the Ccl21a
+rows, two reusable standalone lanes were recovered: RelB→Ccl21a from a
+murine renal tubular-cell injury study, and SP1/SP3→CCR7 from human mature
+dendritic-cell promoter ChIP and transfection experiments. These lanes are
+general TF–target evidence, not evidence that any submitted Ccl21 paralog
+activates the TF or that the branch is SCI-specific. None of the eight
+upstream handoffs was upgraded.
+
+The working register now contains 4,490 exportable target-gene rows and 4,406
+explicit-species materialization rows, including 4,067 high-source-confidence
+rows, 435 medium-high rows, and 259 primary-experiment-supported rows. The
+individual search log now contains 252 rows through M22B-IND-0252. All four
+submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
