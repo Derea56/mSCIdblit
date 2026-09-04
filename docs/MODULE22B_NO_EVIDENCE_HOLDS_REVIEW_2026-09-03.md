@@ -3636,3 +3636,17 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1844
 rows through M22B-IND-1844.
+## Individual hold-search tranche 1845–1852
+
+All eight rows retained reusable activating-target capacity. The reviewed
+contexts were AP-1→CD226, Sp1/CP1→THY1, Ets1→ITGB3, Sp1/Sp3→ITGB5,
+GATA-1/Elf-1/USF1-USF2→FCER1A, SP1/Egr1→CD9, STAT3→CD46, and
+MYC/Myc→NOTCH4. These records include general immune, adhesion, matrix,
+promoter, and cancer-cell contexts rather than a direct demonstration of the
+submitted upstream handoffs in SCI.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1852
+rows through M22B-IND-1852.
