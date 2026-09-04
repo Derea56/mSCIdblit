@@ -90,9 +90,32 @@ CREB. The TCF4 label is explicitly retained as the TCF7L2 alias where that is
 what the cited study tested. These edges also remain separate from their
 upstream handoffs and do not imply SCI activation.
 
-Across the four recovery tranches, 41 standalone target-gene edges have now
-been added. The register contains 4,299 exportable target-gene rows, of which
-4,219 explicit-species pairs materialize in the current stage; 78 of those
+A fifth tranche added nine further general edges from primary chromatin-
+occupancy, promoter, reporter, perturbation, or enhancer studies: CTNNB1 and
+TCF4/TCF7L2 alias to MYC and CCND1; ETV4 to TNF and MAPK11; SMAD3 to SERPINE1;
+and MYOD1 and MYOG to Ckm. The beta-catenin/TCF4, ETV4, SMAD3, and myogenic
+edges are cooperative or context-dependent where indicated in the evidence
+register, and all are non-SCI comparators. They remain separate from their
+upstream handoffs and do not imply SCI activation.
+
+Across the five recovery tranches, 50 standalone target-gene edges have now
+been added. The register contains 4,308 exportable target-gene rows, of which
+4,228 explicit-species pairs materialize in the current stage; 87 of those
+materialized rows use primary-experiment support. The 4,957 reviewed handoff
+rows themselves remain unchanged: no upstream handoff was promoted because no
+row contains a demonstrated target gene for that exact route.
+
+A sixth tranche added eleven more edges for previously uncovered named or
+composite TF lanes: AP-1→CXCL8 and MMP1; HHEX→CDKN1A; NFATC3→CCL5;
+cooperative RARA/RXRA→RARB; and THRB→LDLR, BCL3, NCOR2, ADSSL1, SOX7, and
+ADM. These are general primary-study regulatory claims from inflammatory,
+developmental, cancer, or hepatic comparator systems, with family/cofactor
+and context limitations retained in the evidence register. They remain
+separate from their upstream handoffs and do not imply SCI activation.
+
+Across the six recovery tranches, 61 standalone target-gene edges have now
+been added. The register contains 4,319 exportable target-gene rows, of which
+4,239 explicit-species pairs materialize in the current stage; 98 of those
 materialized rows use primary-experiment support. The 4,957 reviewed handoff
 rows themselves remain unchanged: no upstream handoff was promoted because no
 row contains a demonstrated target gene for that exact route.
