@@ -105,6 +105,19 @@ materialized rows use primary-experiment support. The 4,957 reviewed handoff
 rows themselves remain unchanged: no upstream handoff was promoted because no
 row contains a demonstrated target gene for that exact route.
 
+A seventh tranche added one cooperative CREB1/ATF1→IL10 edge from primary
+promoter-binding and mutation-dependent transactivation experiments in human
+monocytic cells. The composite factor assignment and cAMP-dependent,
+non-SCI context are retained in the evidence register; the upstream CREB
+family handoff remains separate.
+
+Across the seven recovery tranches, 62 standalone target-gene edges have now
+been added. The register contains 4,320 exportable target-gene rows, of which
+4,240 explicit-species pairs materialize in the current stage; 99 of those
+materialized rows use primary-experiment support. The 4,957 reviewed handoff
+rows themselves remain unchanged: no upstream handoff was promoted because no
+row contains a demonstrated target gene for that exact route.
+
 A sixth tranche added eleven more edges for previously uncovered named or
 composite TF lanes: AP-1→CXCL8 and MMP1; HHEX→CDKN1A; NFATC3→CCL5;
 cooperative RARA/RXRA→RARB; and THRB→LDLR, BCL3, NCOR2, ADSSL1, SOX7, and
