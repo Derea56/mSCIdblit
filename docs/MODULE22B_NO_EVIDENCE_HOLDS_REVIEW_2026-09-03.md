@@ -2328,6 +2328,18 @@ was promoted.
 Register counts are unchanged; the individual search log now contains 1012
 rows through M22B-IND-1012.
 
+## Individual hold-search tranche 1021–1028
+
+Two GIP peptide-processing rows and six alternate receptor/accessory-protein
+rows were searched individually. DPP4 and FAP evidence was kept at the
+peptide-processing layer. The separate canonical GIPR→CREB/TORC2→LPL lane was
+retained as reusable human adipocyte context for these rows, without assigning
+GIP signaling to GPR20, GPR84, INSR, PTH1R, RAMP2, or RAMP3. None of the eight
+exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1028
+rows through M22B-IND-1028.
+
 ## Individual hold-search tranche 1013–1020
 
 Four ghrelin receptor rows, one canonical GHSR row, and three GIP receptor
