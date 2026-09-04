@@ -3586,3 +3586,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1812
 rows through M22B-IND-1812.
+## Individual hold-search tranche 1813–1820
+
+Four of eight rows retained reusable activating-target capacity: Gli2/Gli3→ACVR2B,
+SP1→IGF1R, CEBPB/SP1/MYC→INSR, and SP1→ADCYAP1R1. The two ACVR1C composite
+rows, ACVR2A, and LRP2 remained holds because the reviewed evidence was
+receptor/signaling, expression-only, or repressive rather than a qualifying
+activating TF-to-exact-target relationship.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1820
+rows through M22B-IND-1820.
