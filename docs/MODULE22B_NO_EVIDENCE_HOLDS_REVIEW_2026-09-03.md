@@ -3272,3 +3272,14 @@ upstream handoffs. None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1612
 rows through M22B-IND-1612.
+## Individual hold-search tranche 1613–1620
+
+Two of eight rows retained reusable activating-target capacity: E2F1→ADRB2
+and SP1→ADRB3. The six CALCRL/RAMP1–3 rows remained holds because the
+available evidence addressed receptor-complex pharmacology and cAMP signaling
+without resolving named activating TF-to-target-gene relationships. These
+target contexts remain separate from the submitted upstream handoffs. None
+of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1620
+rows through M22B-IND-1620.
