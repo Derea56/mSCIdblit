@@ -3147,6 +3147,20 @@ upstream handoffs. None of the eight exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1532
 rows through M22B-IND-1532.
 
+## Individual hold-search tranche 1533–1540
+
+Seven of eight rows retained reusable target-gene capacity. Has2 and Hbegf
+rows gained AP-1/c-Jun→Cd44, CHOP→HMMR, ΔNp63α/TP63→CD82,
+Sp1-associated CD9 promoter, EGR1→Egfr, and ESR1/ERBB4-promoter contexts.
+The CD44, HMMR, CD82, CD9, EGFR, and ERBB4 results are non-SCI comparator
+contexts. TREML2 remained without a qualifying target context because the
+direct regulatory studies located were for the paralog TREM2, which was not
+transferred. These target contexts remain separate from the submitted
+upstream handoffs. None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1540
+rows through M22B-IND-1540.
+
 Run:
 
 ```text
