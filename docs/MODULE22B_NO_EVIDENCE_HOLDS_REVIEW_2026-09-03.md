@@ -4137,3 +4137,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 2156
 rows through M22B-IND-2156.
+
+## Individual hold-search tranche 2157–2164
+
+Two of eight rows retained reusable activating-target capacity: MYC→LAIR1
+and HIF1A/SP1/RARG/RXRA/NR1H2/NR1H3→ABCA1. RAMP3, TSHR, VIPR1, HTR2C,
+KCNJ4, and LRP1 remained holds; the available TP53→LRP1 evidence was
+repressive rather than activating.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 2164
+rows through M22B-IND-2164.
