@@ -3505,3 +3505,17 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1764
 rows through M22B-IND-1764.
+## Individual hold-search tranche 1765–1772
+
+Four of eight rows retained reusable activating-target capacity: GATA1/FLI1/
+SP1→GP6, STAT1→IL12RB2, RELA/TFEB-associated activation of NOTCH2, and
+myeloid SPI1/Ets/RUNX1/JUN/SP1→CSF1R evidence. The IL10RB and IL22RA1_IL20RB
+rows, along with the IL1RAP_IL1RL1 composites, remained holds because
+receptor-complex signaling and individual subunit evidence do not establish
+the submitted composite target relationships.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1772
+rows through M22B-IND-1772.
