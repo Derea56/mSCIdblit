@@ -4705,3 +4705,10 @@ The retained contexts remain separate from the submitted Pcsk9 and Pcdhgc5 hando
 Seven of the eight rows retained reusable target capacity. SORT1, VLDLR, PDGFRB, and PDGFB reused existing target contexts; Pdcd1 gained direct NFATC1 promoter-binding and activation evidence; and Rgmb gained direct DRG11 promoter-binding and reporter evidence in embryonic sensory neurons and spinal cord. Pdcd2 remained a bounded hold because the reviewed named TF evidence was direct BCL6 repression rather than activation.
 
 The retained contexts remain separate from the submitted Pcsk9, Pdap1, Pdgfa, Pdgfb, and Pdcd1lg2 handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI hepatic, general signed-regulatory, mouse T-cell, and embryonic dorsal-root-ganglion/spinal-cord developmental comparators. The individual search log contains 2660 rows through M22B-IND-2660. This tranche added two standalone direct target edges, reused five existing target contexts, and kept Pdcd2 on hold.
+
+
+## Individual review 2661-2668
+
+Seven of the eight rows retained reusable target capacity. Itgav, LRP1, Pdgfrb, S1pr1, and FLT1 reused existing contexts; Pdgfra gained direct FOXO1/FOXO3 promoter-binding and reporter evidence; and Flt4 gained direct Notch/CSL promoter-transactivation evidence. The composite Pdgfra_Pdgfrb row remained a bounded hold because component-gene regulation does not establish a single TF-to-receptor-complex target edge.
+
+The retained contexts remain separate from the submitted Pdgfb/Pdgfc handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI mouse melanoma, human melanoma, mouse/human hepatic or vascular, mouse T-cell, human signed-regulatory, neuroblastoma, and endothelial-development comparators. The individual search log contains 2668 rows through M22B-IND-2668. This tranche added three standalone direct target edges, reused five existing target contexts, and kept the composite Pdgfra_Pdgfrb row on hold.
