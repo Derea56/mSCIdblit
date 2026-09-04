@@ -2780,6 +2780,20 @@ upstream TF relay. None of the eight exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1324
 rows through M22B-IND-1324.
 
+## Individual hold-search tranche 1325–1332
+
+The EGFR, CD8A, CD8B1, ADCY8, and ADCY9 rows retained reusable target-gene
+capacity from independent evidence: GATA3→EGFR, GATA3→Cd8a, GATA3→Cd8b,
+CREB→Adcy8, and Myc→Adcy9. The TRAF2 row also retained primary human
+ZNF300→TRAF2 promoter evidence. These contexts are not assigned to the
+unresolved Gm3934, Gm7030, or GNAI2 source branches. The ADCY1 row remained
+without a named activating TF target lane, and the ADCY7 paper supported
+ADCY7 as a cofactor for CEBPA at CCL5 rather than CEBPA activation of ADCY7.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1332
+rows through M22B-IND-1332.
+
 Run:
 
 ```text
