@@ -65,6 +65,17 @@ cofactor limitations retained. They increase the high-confidence register
 count by eight and the exportable target-gene count by eight, but they do not
 claim that any corresponding Module 22A handoff activates the TF.
 
+A second search tranche added two more standalone edges, also explicitly
+non-SCI:
+
+| TF | target gene | primary source | SCI context |
+| --- | --- | --- | --- |
+| STAT5 | CISH | PMID:9129017; PMID:9742102 | no; cytokine/promoter comparator systems |
+| ELK1 | FOS | PMID:18374651; PMCID:PMC3574235 | no; human HeLa-cell MAPK system |
+
+The combined recovery is therefore ten standalone target-gene edges. The
+upstream 22A handoff rows remain low/no-evidence-boundary rows.
+
 ## Reproducibility
 
 Run:
