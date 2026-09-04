@@ -273,6 +273,23 @@ confidence rows, 417 medium-high rows, and 170 primary-experiment-supported
 rows. Twenty-four named or composite holds have now been searched individually
 and are logged.
 
+## Individual hold-search tranche 0025–0028
+
+Four additional holds were searched individually. The 5-HT2A search recovered
+direct EGR1 regulation of the mouse Grm2 promoter. The FGF21 search recovered
+pathway-level EGR1/c-FOS induction but no new direct target for the submitted
+handoff; existing EGR1→SOX9 and ELK1→FOS lanes were reused as separate
+regulon context. The DSPP/DPP-integrin and ARTN/GFRA3_RET searches recovered
+five standalone ELK1 lanes: TBP, DUSP16, LRG1, and CLDND1, with the latter
+two supported by promoter occupancy and reporter/perturbation experiments.
+All four submitted upstream handoffs remain holds.
+
+The current working register contains 4,400 exportable target-gene rows and
+4,316 explicit-species materialization rows, including 3,899 high-source-
+confidence rows, 417 medium-high rows, and 175 primary-experiment-supported
+rows. Twenty-eight named or composite holds have now been searched individually
+and are logged.
+
 ## Reproducibility
 
 Run:
