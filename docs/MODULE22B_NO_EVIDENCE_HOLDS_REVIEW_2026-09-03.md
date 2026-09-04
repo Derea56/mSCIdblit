@@ -2935,6 +2935,21 @@ upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1412
 rows through M22B-IND-1412.
 
+## Individual hold-search tranche 1413–1420
+
+Eight rows retained reusable target-gene capacity: ZNF300→TRAF2 was
+reused for both GSTP/TRAF2 branches; existing EGR1→EGFR context was reused
+for GSTP2→EGFR; CDX2→GUCY2C was reused for both guanylin branches;
+CRX→GUCY2D was retained as a documented human-ortholog comparator for
+mouse Gucy2e; existing SP1→F2R context was reused; and IRX3→F2RL1 was
+identified in a 2026 human hepatocellular-carcinoma study. These are
+non-SCI HeLa/cancer, intestinal, photoreceptor, general human TF-target,
+and hepatocellular-carcinoma comparator contexts, respectively. None of
+the eight exact GSTP/GUCA/GZMA upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1420
+rows through M22B-IND-1420.
+
 Run:
 
 ```text
