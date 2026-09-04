@@ -701,6 +701,21 @@ rows, 427 medium-high rows, and 255 primary-experiment-supported rows. One
 hundred sixty-four named or composite holds have now been searched individually
 and are logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0165–0172
+
+Eight additional protease, integrin, and reproductive-adhesion holds were
+searched individually. ADAM17/integrin-alpha5beta1, ADAM17/MET, ADAM17/Notch1,
+ADAM17/RHBDF2, and all three ADAM2 adhesion rows remained at binding,
+shedding, maturation, or adhesion boundaries without terminal TF targets. No
+new standalone target lane was added, and none of the eight submitted upstream
+handoffs was upgraded.
+
+The working register remains at 4,480 exportable target-gene rows and 4,396
+explicit-species materialization rows, including 4,065 high-source-confidence
+rows, 427 medium-high rows, and 255 primary-experiment-supported rows. One
+hundred seventy-two named or composite holds have now been searched individually
+and are logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
