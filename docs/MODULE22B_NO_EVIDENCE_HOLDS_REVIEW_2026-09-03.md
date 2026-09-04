@@ -634,6 +634,23 @@ rows, 427 medium-high rows, and 255 primary-experiment-supported rows. One
 hundred thirty-two named or composite holds have now been searched individually
 and are logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0133–0140
+
+Eight additional holds were searched individually. The Actr2/ADRB2, Actr2/LDLR,
+and Actr2/LRP2 searches did not identify a named terminal TF target. ADA-DPP4
+was retained as an ectoenzyme binding boundary without an intracellular TF
+relay. ADAM10 searches for AXL, CADM1, CD44, and EphA3 recovered proteolytic
+shedding or receptor-complex processing, including beta-catenin/cyclin-D1
+context for CD44, but no exact terminal TF-to-target assignment. No target
+genes were promoted from this tranche, and none of the eight submitted
+upstream handoffs was upgraded.
+
+The working register remains at 4,480 exportable target-gene rows and 4,396
+explicit-species materialization rows, including 4,065 high-source-confidence
+rows, 427 medium-high rows, and 255 primary-experiment-supported rows. One
+hundred forty named or composite holds have now been searched individually and
+are logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
