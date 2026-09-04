@@ -3283,3 +3283,15 @@ of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1620
 rows through M22B-IND-1620.
+## Individual hold-search tranche 1621–1628
+
+One of eight rows retained reusable activating-target capacity: XBP1s→PTH1R.
+The CALCR, CALCRL, GPR20, GPR84, and RAMP1–3 rows remained holds because
+the available studies addressed receptor structure, complex pharmacology,
+expression, or downstream function without establishing named activating
+TF-to-promoter relationships. These target contexts remain separate from the
+submitted upstream handoffs. None of the eight exact upstream handoffs was
+promoted.
+
+Register counts are unchanged; the individual search log now contains 1628
+rows through M22B-IND-1628.
