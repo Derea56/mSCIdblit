@@ -3623,3 +3623,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1836
 rows through M22B-IND-1836.
+## Individual hold-search tranche 1837–1844
+
+Two of eight rows retained reusable activating-target capacity: HIF1A/Hif1a or
+Ets1→TLR4 and HIF1A→TLR6. The four relaxin-family receptor rows, TLR7, and
+THY1 remained holds because the reviewed evidence addressed receptor binding,
+innate signaling, or adhesion without establishing a qualifying named
+activating TF-to-target relationship.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1844
+rows through M22B-IND-1844.
