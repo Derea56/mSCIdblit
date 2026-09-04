@@ -3402,3 +3402,15 @@ promoted.
 
 Register counts are unchanged; the individual search log now contains 1700
 rows through M22B-IND-1700.
+## Individual hold-search tranche 1701–1708
+
+Two of eight rows retained reusable activating-target capacity: existing
+EGR1/SP1→CD28 evidence and STAT6/AP1/NFAT/CREB-associated activation of
+IL13RA2. The remaining cytokine-receptor and Hedgehog rows remained holds;
+individual IL13RA2 or IL12RB2 evidence was not transferred to the submitted
+multi-subunit complexes. These target contexts remain separate from the
+submitted upstream handoffs. None of the eight exact upstream handoffs was
+promoted.
+
+Register counts are unchanged; the individual search log now contains 1708
+rows through M22B-IND-1708.
