@@ -3307,3 +3307,15 @@ eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1636
 rows through M22B-IND-1636.
+## Individual hold-search tranche 1637–1644
+
+Three of eight rows retained reusable activating-target capacity: existing
+IL2RA activation evidence, RUNX3:CBFB regulation of ITGAL, and existing SP1
+activation of SPN. The five integrin-complex rows remained holds because
+subunit evidence was not transferred to composite receptors, and IL2RG lacked
+a qualifying named activating TF-to-promoter result. These target contexts
+remain separate from the submitted upstream handoffs. None of the eight exact
+upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1644
+rows through M22B-IND-1644.
