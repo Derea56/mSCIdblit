@@ -3650,3 +3650,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1852
 rows through M22B-IND-1852.
+## Individual hold-search tranche 1853–1860
+
+Seven of eight rows retained reusable activating-target capacity: HOXD11→F11R,
+Sp3→ITGA3, Sp1/Ets1→ITGAV, ETS1→ITGA4, Elk1/Sp-family→JAM2, and
+GABP/PU.1→ITGAM. JAM3 remained a hold because the reviewed records addressed
+adhesion or promoter methylation/silencing without establishing a named
+activating TF-to-JAM3 relationship.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1860
+rows through M22B-IND-1860.
