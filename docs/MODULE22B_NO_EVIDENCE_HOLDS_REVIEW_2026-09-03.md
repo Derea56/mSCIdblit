@@ -2717,6 +2717,19 @@ upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1292
 rows through M22B-IND-1292.
 
+## Individual hold-search tranche 1293–1300
+
+The four glycine-receptor rows remained explicit no-target holds: receptor
+assembly, clustering, spinal-neuronal physiology, and developmental
+TF→receptor regulation did not establish reverse receptor→TF target evidence.
+The Gm10499/CD8B1, Gm11127/CD8A, Gm11127/CD8B1, and Gm13305/CD40 rows retained
+separate signed mouse TF-target context (Gata3→Cd8b, Gata3→Cd8a, Gata3→Cd8b,
+and Irf1→Cd40, respectively), without assigning those TFs to the unresolved
+ligand/receptor branches. None of the exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1300
+rows through M22B-IND-1300.
+
 ## Individual hold-search tranche 1013–1020
 
 Four ghrelin receptor rows, one canonical GHSR row, and three GIP receptor
