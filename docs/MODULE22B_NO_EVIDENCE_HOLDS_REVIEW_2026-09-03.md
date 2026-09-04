@@ -3945,3 +3945,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 2036
 rows through M22B-IND-2036.
+
+## Individual hold-search tranche 2037–2044
+
+Five of eight rows retained reusable activating-target capacity:
+SP1→ITGA6, EGR1→ITGA7, SP1→ITGA9, SP1/ETS1→ITGAV, and MYC→ITGA1. SV2A,
+SV2B, and SV2C remained holds; the available SV2C evidence was repressive
+NRSF/REST regulation rather than activation.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 2044
+rows through M22B-IND-2044.
