@@ -1987,6 +1987,20 @@ remain separate holds.
 Register counts are unchanged; the individual search log now contains 804
 rows through M22B-IND-0804.
 
+## Individual hold-search tranche 0805–0812
+
+Eight GABA-related rows were searched individually: six GAD1/SLC6A12→GABAA
+subtype rows, one GAD1/SLC6A12→GABAB-receptor branch, and one
+GAD1/SLC6A13→GABAA-subtype row. The GABAA rows retain the existing
+GABAA→CREB/BDNF program and CREB→BDNF target lanes as reusable context. The
+unspecified GABAB branch retains the existing GABAB-ERK/CREB program and
+CREB→BDNF target context. SCI astrocyte evidence for GABA-associated BDNF
+expression was recorded as context, but it does not resolve CREB, receptor
+subtype, transporter coupling, or the exact upstream handoff.
+
+Register counts are unchanged; the individual search log now contains 812
+rows through M22B-IND-0812.
+
 ## Reproducibility
 
 Run:
