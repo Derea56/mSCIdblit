@@ -3599,3 +3599,15 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1820
 rows through M22B-IND-1820.
+## Individual hold-search tranche 1821–1828
+
+One of eight rows retained reusable activating-target capacity: SP1→ADRB3.
+ADRB2, GPR20, GPR84, PTH1R, RAMP2, RAMP3, and RXFP1 remained holds because
+the reviewed evidence addressed receptor or ligand-function biology without
+establishing a qualifying named activating TF-to-target relationship.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1828
+rows through M22B-IND-1828.
