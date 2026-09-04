@@ -108,3 +108,12 @@ review helpers, one Module 20B repair helper, and one Module 22B comparison
 helper. Their contents were checksum-verified against the repository `HEAD`
 before this cleanup. Generic controllers and reusable/current canonicalization,
 materialization, export, and validation entrypoints remain tracked.
+
+On 2026-09-04, a further 33 legacy or completed public-TF construction and
+intake helpers were moved to the sibling local archive
+`/Users/derea/Documents/SCI/mSCIdblit_local_archive/historical_legacy_and_public_tf_workflows_2026-09-04/scripts/`:
+11 Module 1/12B and legacy export utilities plus 22 public-TF candidate,
+batching, identity, merge, and expansion helpers. Their contents were
+checksum-verified against the repository `HEAD` before this cleanup. Current
+release, audit, validation, shared-library, and active curation entrypoints
+remain tracked.

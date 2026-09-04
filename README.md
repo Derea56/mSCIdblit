@@ -152,19 +152,13 @@ materialize or commit/push this staging work without an explicit review step.
    psql -U <username> -d mscidbl -f schema/evidence_observation_detail.sql
    ```
 
-3. **Seed controlled vocabulary:**
-   ```bash
-   psql -U <username> -d mscidbl -f scripts/seed_controlled_vocab.sql
-   ```
-
-4. **Verify:**
+3. **Verify:**
    ```bash
    psql -U <username> -d mscidbl -c "SELECT table_name FROM information_schema.tables WHERE table_schema='public';"
    ```
 
-5. **Run smoke test (optional but recommended before curation):**
+4. **Run the evidence crosswalk validation (optional):**
    ```bash
-   psql -v ON_ERROR_STOP=1 -U <username> -d mscidbl -f scripts/smoke_test.sql
    psql -v ON_ERROR_STOP=1 -U <username> -d mscidbl -f scripts/validate_module_evidence_crosswalk.sql
    ```
 
@@ -197,14 +191,9 @@ mSCIdblit/
 │   └── VALIDATION_QUERIES.md         # Database hygiene checks
 ├── scripts/
 │   ├── export_tracker_evidence_bundle.py # Shared 1B/2B tracker audit + JSON export
-│   ├── backfill_observation_per_experiment.py # Ensure exact B observations per A experiment
 │   ├── audit_materialized_integrity.py # Bundle/SQL integrity gate
-│   ├── export_module1_full_sql.py    # Module 1 SQL materialization
-│   ├── export_module1_evidence_bundle.py # Module 1 SQL-oriented evidence JSON
 │   ├── export_module2_full_sql.py    # Module 2 SQL materialization
 │   ├── export_module_full_sql.py     # Generic B-module SQL materialization
-│   ├── export_consensus_review_register.py # Cross-module consensus review export
-│   ├── export_cross_module_synthesis.py # Aim-aligned synthesis export
 │   ├── export_mechanism_bundle.py    # Export mSCS-compatible mechanism bundle snapshots
 │   ├── import_method_resources.py    # Import frozen LIANA/CellChat/NicheNet resources
 │   ├── benchmark_method_resource_equivalence.py # Resource-level equivalence benchmark
@@ -212,9 +201,7 @@ mSCIdblit/
 │   ├── validate_mscs_release_bundle.py # Check combined release checksums and contents
 │   ├── import_mscs_modality_evidence.py # Build mSCS evidence bridge materialization
 │   ├── ollama_chunk_extract.py       # Generate small Ollama extraction prompts
-│   ├── seed_controlled_vocab.sql     # Populate reference tables
-│   ├── validate_module_evidence_crosswalk.sql # Crosswalk integrity gate
-│   └── smoke_test.sql                # Toy workflow validation script
+│   └── validate_module_evidence_crosswalk.sql # Crosswalk integrity gate
 ├── templates/
 │   ├── paper_extraction_template.md
 │   ├── experiment_extraction_template.md
