@@ -2950,6 +2950,20 @@ the eight exact GSTP/GUCA/GZMA upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1420
 rows through M22B-IND-1420.
 
+## Individual hold-search tranche 1421–1428
+
+Seven rows retained reusable target-gene capacity: NRF2→F2RL2, SP1→PARD3,
+TCF7/β-catenin→Cd4 for both MHC-II branches, NFATC2→Lag3 for both MHC-II
+branches, and RUNX3/CBFβ→Cd8a. F2RL3 remained a hold because the recovered
+RUNX1/AML1 occupancy study used AML1-MTG16 repression and did not establish a
+clean activating edge. These are non-SCI neural-progenitor, breast-cancer,
+T-cell developmental/exhaustion, and T-cell activation contexts; the immune
+contexts are biologically relevant but none establishes its submitted GZMA or
+MHC upstream handoff. None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1428
+rows through M22B-IND-1428.
+
 Run:
 
 ```text
