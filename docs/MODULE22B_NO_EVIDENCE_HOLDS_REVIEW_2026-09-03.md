@@ -1896,6 +1896,19 @@ observations; all eight upstream handoffs remain holds.
 Register counts are unchanged; the individual search log now contains 756
 rows through M22B-IND-0756.
 
+## Individual hold-search tranche 0757–0764
+
+Eight FLRT2/FLRT3 adhesion-guidance rows were searched individually:
+FLRT2→FLRT2, FLRT2→UNC5A/B/C/D, and FLRT3→ADGRL1/ADGRL2/ADGRL3. Exact
+ectodomain binding and some dendrite or synapse phenotypes were reported, but
+none of the studies identified an intracellular terminal TF or direct target
+locus for the exact pair. RhoA, actin, adhesion, and synapse outputs were not
+promoted to TF-target edges. These are non-SCI developmental and neuronal
+comparators; all eight upstream handoffs remain holds.
+
+Register counts are unchanged; the individual search log now contains 764
+rows through M22B-IND-0764.
+
 ## Reproducibility
 
 Run:
