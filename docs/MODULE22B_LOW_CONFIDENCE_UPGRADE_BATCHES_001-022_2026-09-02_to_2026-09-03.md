@@ -15,30 +15,30 @@ SCI-specific mechanism, or a canonical SQL write.
 
 ## Batch index
 
-| Batch | Date | Rows described | Main outcome | Original note |
-|---:|---|---:|---|---|
-| 001 | 2026-09-02 | 13 | 3 high and 10 medium upgrades | [batch 001](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH001_2026-09-02.md) |
-| 002 | 2026-09-02 | 1 | WNT5A–FZD7 bounded functional relay to medium | [batch 002](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH002_2026-09-02.md) |
-| 003 | 2026-09-02 | 6 | Five GDF/BMP or GDF1/Nodal rows to medium; one WNT3A ternary-complex row to medium-high | [batch 003](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH003_2026-09-02.md) |
-| 004 | 2026-09-02 | 2 | CD30L–CD30 and OX40L–OX40 receptor-pair anchors to medium | [batch 004](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH004_2026-09-02.md) |
-| 005 | 2026-09-02 | 1 | SPON2/Mindin–α4β1 integrin complex to medium | [batch 005](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH005_2026-09-02.md) |
-| 006 | 2026-09-03 | 1 | WNT10B-dependent FZD6–LRP6 receptor-complex function to medium | [batch 006](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH006_2026-09-03.md) |
-| 007 | 2026-09-03 | 2 | S100A8–RAGE and TGF-beta–integrin-αVβ5 functional dependence to medium | [batch 007](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH007_2026-09-03.md) |
-| 008 | 2026-09-03 | 1 | Inverse YBX1–NOTCH1 functional relationship to medium | [batch 008](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH008_2026-09-03.md) |
-| 009 | 2026-09-03 | 1 | TGF-beta1-induced integrin-β1/αβ1 matrix-adhesion branch to medium | [batch 009](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH009_2026-09-03.md) |
-| 010 | 2026-09-03 | 1 | TFF3-induced epithelial-migration branch to medium | [batch 010](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH010_2026-09-03.md) |
-| 011 | 2026-09-03 | 1 | GABA-A agonist/antagonist-sensitive MAPK–CREB–BDNF/TrkB function to medium | [batch 011](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH011_2026-09-03.md) |
-| 012 | 2026-09-03 | 3 | 5-HT receptor subtype–PKA/CREB program associations to medium | [batch 012](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH012_2026-09-03.md) |
-| 013 | 2026-09-03 | 2 | AREG–EGFR-family and BTC–EGFR/ERBB4 signaling to medium | [batch 013](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH013_2026-09-03.md) |
-| 014 | 2026-09-03 | 7 | BTLA/HVEM, CD70/CD27, FGF, GDF15, JAG1/NOTCH1, and PDGF-C receptor functions to medium | [batch 014](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH014_2026-09-03.md) |
-| 015 | 2026-09-03 | 8 | CXCL12, EFNB2, FGF17b, GDF2, LEAP2, SHH, and VEGF-C receptor functions to medium | [batch 015](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH015_2026-09-03.md) |
-| 016 | 2026-09-03 | 8 | CCL28, CD40L, FGF21, GLG1, JAG1, and C3d/C3dg receptor functions to medium | [batch 016](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH016_2026-09-03.md) |
-| 017 | 2026-09-03 | 5 | SEMA4D, PEDF, and TGFB1/2/3–TGFBR1/TGFBR2-complex functions to medium | [batch 017](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH017_2026-09-03.md) |
-| 018 | 2026-09-03 | 4 | SEMA4A–plexin and PEDF–PLXDC2 receptor functions to medium | [batch 018](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH018_2026-09-03.md) |
-| 019 | 2026-09-03 | 8 | SHH, Sema3B, TIMP2, UCN1, UTS2, and VEGF165 receptor functions to medium | [batch 019](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH019_2026-09-03.md) |
-| 020 | 2026-09-03 | 6 | SFTPD, SHBG, VEGF-B, and VIP receptor functions to medium | [batch 020](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH020_2026-09-03.md) |
-| 021 | 2026-09-03 | 5 | SPARC, TDGF1, LPS/TLR, SLPI, and SERPINE1 bounded associations to medium | [batch 021](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH021_2026-09-03.md) |
-| 022 | 2026-09-03 | 4 | BMP6/7, TNF-alpha/WNT, and WNT7A–FZD9/ERK5 program associations to medium | [batch 022](MODULE22B_LOW_CONFIDENCE_UPGRADE_BATCH022_2026-09-03.md) |
+| Batch | Date | Rows described | Main outcome |
+|---:|---|---:|---|
+| 001 | 2026-09-02 | 13 | 3 high and 10 medium upgrades |
+| 002 | 2026-09-02 | 1 | WNT5A–FZD7 bounded functional relay to medium |
+| 003 | 2026-09-02 | 6 | Five GDF/BMP or GDF1/Nodal rows to medium; one WNT3A ternary-complex row to medium-high |
+| 004 | 2026-09-02 | 2 | CD30L–CD30 and OX40L–OX40 receptor-pair anchors to medium |
+| 005 | 2026-09-02 | 1 | SPON2/Mindin–α4β1 integrin complex to medium |
+| 006 | 2026-09-03 | 1 | WNT10B-dependent FZD6–LRP6 receptor-complex function to medium |
+| 007 | 2026-09-03 | 2 | S100A8–RAGE and TGF-beta–integrin-αVβ5 functional dependence to medium |
+| 008 | 2026-09-03 | 1 | Inverse YBX1–NOTCH1 functional relationship to medium |
+| 009 | 2026-09-03 | 1 | TGF-beta1-induced integrin-β1/αβ1 matrix-adhesion branch to medium |
+| 010 | 2026-09-03 | 1 | TFF3-induced epithelial-migration branch to medium |
+| 011 | 2026-09-03 | 1 | GABA-A agonist/antagonist-sensitive MAPK–CREB–BDNF/TrkB function to medium |
+| 012 | 2026-09-03 | 3 | 5-HT receptor subtype–PKA/CREB program associations to medium |
+| 013 | 2026-09-03 | 2 | AREG–EGFR-family and BTC–EGFR/ERBB4 signaling to medium |
+| 014 | 2026-09-03 | 7 | BTLA/HVEM, CD70/CD27, FGF, GDF15, JAG1/NOTCH1, and PDGF-C receptor functions to medium |
+| 015 | 2026-09-03 | 8 | CXCL12, EFNB2, FGF17b, GDF2, LEAP2, SHH, and VEGF-C receptor functions to medium |
+| 016 | 2026-09-03 | 8 | CCL28, CD40L, FGF21, GLG1, JAG1, and C3d/C3dg receptor functions to medium |
+| 017 | 2026-09-03 | 5 | SEMA4D, PEDF, and TGFB1/2/3–TGFBR1/TGFBR2-complex functions to medium |
+| 018 | 2026-09-03 | 4 | SEMA4A–plexin and PEDF–PLXDC2 receptor functions to medium |
+| 019 | 2026-09-03 | 8 | SHH, Sema3B, TIMP2, UCN1, UTS2, and VEGF165 receptor functions to medium |
+| 020 | 2026-09-03 | 6 | SFTPD, SHBG, VEGF-B, and VIP receptor functions to medium |
+| 021 | 2026-09-03 | 5 | SPARC, TDGF1, LPS/TLR, SLPI, and SERPINE1 bounded associations to medium |
+| 022 | 2026-09-03 | 4 | BMP6/7, TNF-alpha/WNT, and WNT7A–FZD9/ERK5 program associations to medium |
 
 ## Consolidated evidence policy
 
@@ -71,9 +71,9 @@ edges after the batch. The batch explicitly kept receptor-complex
 substitutions, model/species/SCI transfer, negative evidence, disputed
 binding, non-native constructs, and rows without terminal TF evidence bounded.
 
-Historical batch-specific generator scripts were moved to the local archive
-described in the repository retention inventory; the original batch notes
-retain the generator names used at the time of each run.
+Historical batch-specific generator scripts and individual notes were moved to
+the local archive described in the repository retention inventory. The
+machine-readable batch ledgers remain in the working audit directory.
 Audit ledger: `work/module22b_low_confidence_upgrade_audit/module22b_low_confidence_upgrade_batch001.tsv`
 
 ### Batch 002 — WNT5A–FZD7

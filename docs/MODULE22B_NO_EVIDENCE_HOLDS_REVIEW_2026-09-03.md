@@ -188,8 +188,8 @@ than being converted into unsupported targets.
 ## Individual hold-search tranche 0001–0008
 
 The first literal one-by-one search tranche covered eight named holds and is
-recorded in
-`docs/MODULE22B_INDIVIDUAL_HOLD_SEARCH_LOG_2026-09-03.tsv`. Five standalone
+recorded in the machine-readable hold-search audit under
+`work/module22b_low_confidence_upgrade_audit/`. Five standalone
 ATF2 target-gene edges were recovered while reviewing holds 0007–0008:
 ATF2→PLOD2, HADH, LCOR, and REEP1 from a Wnt5a/b-associated human colon-cancer
 program, plus ATF2→DDIT3/CHOP from amino-acid-response promoter experiments.
