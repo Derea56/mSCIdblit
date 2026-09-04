@@ -159,6 +159,32 @@ materialized rows use primary-experiment support. The 4,957 reviewed handoff
 rows themselves remain unchanged: no upstream handoff was promoted because no
 row contains a demonstrated target gene for that exact route.
 
+## Latest continuation pass
+
+The continuation pass reviewed the remaining named and narrative TF leads for
+recoverable target-gene evidence, including non-SCI and SCI-adjacent models.
+Fourteen additional search tranches added 51 standalone target-gene edges from
+primary promoter, enhancer, ChIP, reporter, perturbation, or locus-regulation
+studies. The recovered lanes include TCF4→CD36, HOXD3→TGFB1, STAT4→GZMB,
+NFATC1→NADK/MDM2, multiple RORA neural targets, SMAD1→HOXD3, RORB→HBP1 and
+Ptf1a, RELA→BIRC2/XIAP/IL8, STAT3→MYC/LCN2, YAP/TAZ–TEAD targets,
+FOXO1→IGFBP1/PDK4, TBX21/RORA immune targets, GLI1→SNAI1/HHIP, and
+NR3C2→Scnn1a. One RORA lane uses EAE spinal-cord T-cell evidence, and the
+RORA neural-target tranche uses human neuronal cells; neither is traumatic SCI.
+
+The current register contains 4,378 exportable target-gene rows and 4,297
+explicit human/mouse materialization rows. Of those materialized rows, 3,880
+carry high source confidence, 417 carry medium-high source confidence, and 156
+use primary-experiment support. The materialization stage remains a staging
+artifact only: it does not write the canonical database and does not infer
+upstream ligand/receptor activation from standalone TF-target evidence.
+
+The full 4,957 handoff holds remain intact and linked. No upstream handoff was
+promoted in this pass because the recovered studies establish general TF→gene
+regulation, not the exact submitted ligand/receptor→TF→gene route. Remaining
+source-none rows therefore remain bounded `no_evidence_boundary` records rather
+than being converted into unsupported targets.
+
 ## Reproducibility
 
 Run:
