@@ -3493,8 +3493,8 @@ Register counts are unchanged; the individual search log now contains 1756
 rows through M22B-IND-1756.
 ## Individual hold-search tranche 1757–1764
 
-Two of eight rows retained reusable activating-target capacity: Egr1→Ngfr
-and STAT5-associated activation of Il4ra. The IL20RA/IL20RB/IL2RG and
+Three of eight rows retained reusable activating-target capacity: Egr1→Ngfr,
+STAT5-associated activation of Il4ra, and Sp1→IL21R. The IL20RA/IL20RB/IL2RG and
 IL22RA1/IL20RB composites, IL10RA, IL20RA, IL21R, and soluble IL22RA2 rows
 remained holds because the reviewed records addressed receptor identity,
 complex signaling, or antagonist function without establishing qualifying
@@ -3521,8 +3521,8 @@ Register counts are unchanged; the individual search log now contains 1772
 rows through M22B-IND-1772.
 ## Individual hold-search tranche 1773–1780
 
-Three of eight rows retained reusable activating-target capacity: Egr1→Ptprz1,
-ETS1/Ets1→CD53/Cd53, and STAT5-associated activation of Il4ra. The
+Four of eight rows retained reusable activating-target capacity: Egr1→Ptprz1,
+ETS1/Ets1→CD53/Cd53, STAT5-associated activation of Il4ra, and Sp1→IL21R. The
 IL1RL2_IL1RAP composites, IL4R_IL13RA2, and IL21R rows remained holds because
 the reviewed records addressed receptor-complex or receptor-family biology
 without establishing qualifying named activating TF-to-target relationships
@@ -3533,3 +3533,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1780
 rows through M22B-IND-1780.
+## Individual hold-search tranche 1781–1788
+
+Four of eight rows retained reusable activating-target capacity: PU.1→CSF2RA,
+EGR1/JUN/SP1→F3, GABP-associated activation of MUSK, and Sp1→IL21R. The
+FCGR4, HRH1, IL10RA, and IL20RA rows remained holds because the reviewed
+records addressed receptor or pathway biology without establishing qualifying
+named activating TF-to-target relationships.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1788
+rows through M22B-IND-1788.
