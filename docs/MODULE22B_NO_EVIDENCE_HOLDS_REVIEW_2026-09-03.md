@@ -430,6 +430,23 @@ rows. Sixty named or composite holds have now been searched individually and
 are logged. No SCI-specific target-gene evidence was identified in this
 tranche.
 
+## Individual hold-search tranche 0061–0064
+
+Four additional holds were searched individually. The RORA searches did not
+establish CEL or DHCR7 regulation, but reused existing RORA target lanes for
+CYP19A1, Il17a, SOX4, and Pcp4. The RORB search did not assign the
+RA-responsive ALDH1A3 keratinocyte result to RORB; existing RORB→HBP1 and
+RORB→Ptf1a lanes were reused. The RORC search did not establish CEL
+regulation, so existing RORC→IL17A and RORC→CYP2C8 lanes were reused. No new
+rows were added in this tranche because the relevant target-gene evidence was
+already present and the exact submitted targets remained unassigned.
+
+The working-register totals are unchanged at 4,446 exportable target-gene
+rows, 4,362 explicit-species materialization rows, 4,041 high-source-
+confidence rows, 417 medium-high rows, and 221 primary-experiment-supported
+rows. Sixty-four named or composite holds have now been searched individually
+and are logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
