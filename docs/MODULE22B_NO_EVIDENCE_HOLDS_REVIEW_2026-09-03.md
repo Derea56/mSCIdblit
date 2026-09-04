@@ -3084,6 +3084,20 @@ upstream handoffs. None of the eight exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1500
 rows through M22B-IND-1500.
 
+## Individual hold-search tranche 1501–1508
+
+All eight rows retained reusable target-gene capacity: RUNX3→Cd8a for
+H2-T-ps, H2-T10, H2-T18, H2-T22, and H2-T23, plus RUNX3/CBFβ-associated
+Cd8b1 for H2-T-ps, H2-T10, H2-T18, and H2-T22. These target contexts are
+non-SCI mouse T-cell development/activation evidence. The H2-T-ps row has
+a transcript/pseudogene boundary, while the T10/T18/T22 rows remain
+gamma-delta-TCR or CD8alphaalpha receptor-function boundaries. These target
+contexts remain separate from the submitted MHC upstream handoffs. None of
+the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1508
+rows through M22B-IND-1508.
+
 Run:
 
 ```text
