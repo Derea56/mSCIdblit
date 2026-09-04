@@ -1,0 +1,3 @@
+source_id	primary_locator	full_text_format	local_path	retrieval_date_utc	sha256	acquisition_note
+EXPAND23A-SRC-001	PMID:28671670; PMCID:PMC5671938	NCBI BioC JSON	data/raw/evidence/module23a_second_pass_20260904/PMC5671938_bioc.json	2026-09-04	5d5b12e8f45f10ea6ad825731e39e135f0aafd21065c82d0667e5218635c5c32	Open-access primary full text acquired from the NCBI BioC endpoint; hash verified after download.
+EXPAND23A-SRC-002	PMID:23217742; PMCID:PMC3526105	NCBI BioC JSON	data/raw/evidence/module23a_second_pass_20260904/PMC3526105_bioc.json	2026-09-04	af27f857285d9042771ecf05a54382b9976f4313a337c0ef6ee726f1ca12bd64	Open-access primary full text acquired from the NCBI BioC endpoint; hash verified after download.

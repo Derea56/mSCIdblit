@@ -21,3 +21,4 @@ M23A-B019	M23A-Q0901	M23A-Q0950	50	P2=50	reviewed_first_pass	23A queue/audit fil
 M23A-B020	M23A-Q0951	M23A-Q1000	50	P2=50	reviewed_first_pass	23A queue/audit files only
 M23A-B021	M23A-Q1001	M23A-Q1050	50	P2=9;P3=41	reviewed_first_pass	23A queue/audit files only
 M23A-B022	M23A-Q1051	M23A-Q1092	42	P3=42	reviewed_first_pass	23A queue/audit files only
+M23A-B023	M23A-Q1093	M23A-Q1095	3	P1=3	second_pass_primary_review	23A queue/audit files only; no canonical DB writes
