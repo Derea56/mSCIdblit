@@ -4442,3 +4442,8 @@ Mpz, Mrc1, Muc2, Myl9, or Myoc handoff as an upstream route to the TF; none of
 the eight exact upstream handoffs was promoted. The individual search log
 contains 2292 rows through M22B-IND-2292. This tranche added seven standalone
 target edges and seven evidence records.
+## Individual review 2293-2300
+
+Six of the next eight rows retained reusable target capacity, covering seven standalone TF-to-target contexts. Fzd3 gained ZMIZ1 promoter-binding and perturbation evidence from a cerebral ischemia-reperfusion endothelial study, providing the closest injury comparator in this tranche. Fzd4 gained direct SMAD4 promoter evidence from porcine granulosa cells. Fzd7 gained direct SOX9 promoter evidence and DeltaNp63/TP63 enhancer evidence from non-SCI epithelial and mammary systems. Adra1a, Adra1b, and Adra1d gained SP1 promoter-binding and activation evidence from neuroblastoma or smooth-muscle models.
+
+Adra2a and Adra2b remained bounded holds: the reviewed material established receptor signaling and downstream kinase relays but did not identify a named activating TF-to-gene relationship. These assignments remain standalone target contexts and do not establish any submitted Myoc or NE-DBH_SLC18A1 handoff as an upstream route to the TF; none of the eight exact upstream handoffs was promoted. The individual search log contains 2300 rows through M22B-IND-2300. This tranche added seven standalone target edges and seven evidence records.
