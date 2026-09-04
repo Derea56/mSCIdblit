@@ -3295,3 +3295,15 @@ promoted.
 
 Register counts are unchanged; the individual search log now contains 1628
 rows through M22B-IND-1628.
+## Individual hold-search tranche 1629–1636
+
+Two of eight rows retained reusable activating-target capacity: TTF1→TSHR
+and SP1/TP53→CAV1. VIPR1 had AP-2α repression rather than activation, and
+the remaining integrin-complex rows retained adhesion/function evidence
+without named activating TF-target relationships. Individual integrin-subunit
+evidence was not transferred to composite receptor rows. These target
+contexts remain separate from the submitted upstream handoffs. None of the
+eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1636
+rows through M22B-IND-1636.
