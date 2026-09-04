@@ -3319,3 +3319,16 @@ upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1644
 rows through M22B-IND-1644.
+## Individual hold-search tranche 1645–1652
+
+Five of eight rows retained reusable activating-target capacity: RUNX1→ITGA2B,
+ETS1→ITGA4, RUNX3:CBFB→ITGAL, a STAT3/PU.1-dependent ITGAM activation
+program, and HIF-dependent ITGB1 activation. The two composite ITGAM/ITGB2
+rows remained holds because individual subunit evidence was not transferred;
+ITGAV remained a hold because the available positive promoter result was
+lncRNA-mediated and the signed TF result was repressive. These target contexts
+remain separate from the submitted upstream handoffs. None of the eight exact
+upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1652
+rows through M22B-IND-1652.
