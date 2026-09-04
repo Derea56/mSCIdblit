@@ -3043,6 +3043,20 @@ handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1476
 rows through M22B-IND-1476.
 
+## Individual hold-search tranche 1477–1484
+
+All eight rows retained reusable target-gene capacity: RUNX3→Cd8a for
+H2-M9, H2-Q1, and H2-Q2; RUNX3/CBFβ-associated Cd8b1 for H2-M9 and H2-Q1;
+TCF7/β-catenin→Cd4 for H2-Ob; and E2F1→human KIR3DL1 for H2-Q1 and H2-Q10.
+The KIR3DL1 evidence is human and has a ligand/species boundary with the
+mouse H2-Q branches. All other target contexts are non-SCI mouse T-cell
+development/activation evidence. These target contexts remain separate from
+the submitted MHC upstream handoffs. None of the eight exact upstream
+handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1484
+rows through M22B-IND-1484.
+
 Run:
 
 ```text
