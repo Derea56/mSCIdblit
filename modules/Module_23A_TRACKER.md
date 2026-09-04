@@ -10,6 +10,8 @@ This module curates matrix, adhesion, and mechanosensing relay logic relevant to
 
 B023 adds three newly searched primary-literature candidates and five new audit-layer edges. Acquired open-access full text supports direct MMRN2 binding to CD93 and correctly folded CD248 CTLD/ECD-Fc constructs, and supports direct binding of the SLIT2 C-terminal LG domain to glycosylated DAG1/dystroglycan. The SLIT2-DAG1 record is layer-separated into direct binding, DAG1-dependent Slit localization at the developing spinal-cord floor plate, and developmental commissural axon-guidance function. The existing MMRN2-CLEC14A direct and functional edges are promoted from staged review to supported review. These records remain non-SCI vascular or developmental neural comparators; glycosylation, domain, receptor-complex, and model limits are retained, and no Module 20A–22A ledger is modified.
 
+The follow-on source-backed promotion gate reviewed the remaining staged mappings against the existing A evidence register. Of 702 staged A edges, 701 had a one-to-one B mapping, a primary-research-paper evidence row, a stable source locator, a non-boundary support type, and populated evidence summary/limitations; those 701 A and B edges are now `reviewed_supported`. The EFNA3–EPHA2 candidate remains staged because its source supports pathway/function context but not exportable direct binary binding, and its B edge remains `held_unresolved_exact_directness` with `exportable=false`.
+
 ## Priority Signaling Axes
 
 - integrins and focal adhesion signaling
