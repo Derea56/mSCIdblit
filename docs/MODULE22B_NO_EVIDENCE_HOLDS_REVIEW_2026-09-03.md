@@ -224,6 +224,22 @@ high-source-confidence rows, 417 medium-high rows, and 163
 primary-experiment-supported rows. The original 4,957 handoff holds remain
 intact and no upstream handoff was upgraded.
 
+## Individual hold-search tranche 0013–0016
+
+Four more named holds were searched individually. The WNT5A–ROR1 review
+recovered three human CREB-associated target lanes (CCNB1, BCL2, and CCND1),
+and the dopamine D2-like receptor search recovered rat CREB-associated FOS and
+PDYN regulatory lanes. The RLN1/RXFP1 and A2M/LRP1 searches did not recover a
+qualifying named activating target gene. The WNT5A–ROR1 and dopamine receptor
+handoffs remain holds because the standalone CREB lanes do not prove either
+submitted upstream route.
+
+The current working register contains 4,390 exportable target-gene rows and
+4,307 explicit-species materialization rows, including 3,890 high-source-
+confidence rows, 417 medium-high rows, and 166 primary-experiment-supported
+rows. Sixteen named holds have now been searched individually and are logged;
+none of the 4,957 original handoff rows has been promoted.
+
 ## Reproducibility
 
 Run:
