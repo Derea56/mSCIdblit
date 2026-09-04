@@ -2550,6 +2550,17 @@ the exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1172
 rows through M22B-IND-1172.
 
+## Individual hold-search tranche 1173–1180
+
+The mGluR8 row remained an explicit no-target hold. The GluK1/GluK4 and
+GluK1/GluK5 rows retained bounded CREB/c-FOS and BDNF context, while the
+GluK2/GluK4, GluK2/GluK5, GluK3, GluK3/GluK4, and GluK3/GluK5 rows retained
+separate human JUN→MMP9 context. None of the exact upstream handoffs was
+promoted.
+
+Register counts are unchanged; the individual search log now contains 1180
+rows through M22B-IND-1180.
+
 ## Individual hold-search tranche 1013–1020
 
 Four ghrelin receptor rows, one canonical GHSR row, and three GIP receptor
