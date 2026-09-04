@@ -2833,6 +2833,19 @@ upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1356
 rows through M22B-IND-1356.
 
+## Individual hold-search tranche 1357–1364
+
+Five GNAI2 branches retained reusable target-gene capacity from independent
+evidence: SP1→OPRM1, Klf2→S1pr1, SMAD3→S1PR3, TBX21/T-bet→S1pr5, and
+Egr1→Tbxa2r. The P2RY12 screen provided microglial TF-perturbation context
+but not a named direct activating TF-to-P2ry12 edge. PTPRU evidence was
+repression-direction TAL1 regulation, and S1PR4 evidence was motif/TFBS
+annotation without experimental activation; both remained holds. None of the
+eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1364
+rows through M22B-IND-1364.
+
 Run:
 
 ```text
