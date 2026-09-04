@@ -4423,3 +4423,22 @@ standard. These assignments remain separate from the submitted Mmp9 or Mmrn2
 upstream handoffs; none of the eight exact upstream handoffs was promoted.
 The individual search log contains 2284 rows through M22B-IND-2284. This
 tranche added five standalone target edges and five evidence records.
+## Individual review 2285-2292
+
+Six of the next eight rows retained reusable target capacity, covering ten
+standalone TF-to-target contexts. Mpz gained direct EGR2 and SOX10 regulatory
+evidence from peripheral-myelin studies. Ptprc/CD45 gained direct PU.1/SPI1
+regulatory evidence from mouse myeloid studies. Agr2 reused the existing FOXA1,
+ESR1, and FOXM1 contexts. Cd69 gained Jun/AP-1 promoter evidence from human
+Jurkat cells. Fzd1 gained direct SP1 and E2F1 promoter evidence from human
+osteoblast models, and Fzd10 gained direct SP1 promoter evidence from human
+breast-cancer cells.
+
+Mpzl1 remained a bounded hold in both rows: the reviewed material described
+protein binding or extracellular self-association, not a named activating
+TF-to-gene relationship meeting the reusable-target standard. All six retained
+assignments are standalone target contexts and do not establish any submitted
+Mpz, Mrc1, Muc2, Myl9, or Myoc handoff as an upstream route to the TF; none of
+the eight exact upstream handoffs was promoted. The individual search log
+contains 2292 rows through M22B-IND-2292. This tranche added seven standalone
+target edges and seven evidence records.
