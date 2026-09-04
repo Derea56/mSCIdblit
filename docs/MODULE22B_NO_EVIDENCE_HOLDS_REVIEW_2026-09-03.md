@@ -3808,3 +3808,17 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1948
 rows through M22B-IND-1948.
+## Individual hold-search tranche 1949–1956
+
+Two of eight rows retained reusable activating-target capacity: the mouse Fpr2
+row reused human FPR2/ALX promoter evidence for OCT1, SP1, and IRF1, and the
+Lama1→Cd44 row reused primary and signed-public EGR1/FOS/JUN/SP1/STAT1→CD44
+contexts. Human FPR1/FPR2 evidence was not transferred to the distinct
+Fpr-rs3, Fpr-rs4, Fpr-rs6, Fpr-rs7, or FPR3 receptor genes. LILRB4A and PIRA2
+remained receptor/receptor-boundary holds without qualifying TF-target data.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1956
+rows through M22B-IND-1956.
