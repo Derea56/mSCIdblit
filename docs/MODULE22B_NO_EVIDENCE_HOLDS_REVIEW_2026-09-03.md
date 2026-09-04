@@ -893,6 +893,24 @@ rows, 435 medium-high rows, and 259 primary-experiment-supported rows. The
 individual search log now contains 252 rows through M22B-IND-0252. All four
 submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0253–0260
+
+Eight additional chemokine and atypical-receptor rows were searched
+individually. The Ccl21f branches remained unresolved paralog boundaries, and
+the Ccl24-Ackr2 branch remained at a scavenging/availability boundary. Six
+standalone target lanes were recovered from the surrounding Ccl22, Ccl25,
+Ccl26, and Ccl27a review: PU.1→Ccl22 in mouse and human, Cdx1/Cdx2→Ccl25 in
+mouse, STAT6→CCL26 in human, and RELA-associated regulation of human CCL27.
+These are general TF–target relationships from non-SCI immune, epithelial,
+and skin-inflammation systems; none establishes activation of the submitted
+ACKR/CCR handoff or upgrades an upstream row.
+
+The working register now contains 4,496 exportable target-gene rows and 4,412
+explicit-species materialization rows, including 4,072 high-source-confidence
+rows, 566 medium-high rows, and 265 primary-experiment-supported rows. The
+individual search log now contains 260 rows through M22B-IND-0260. All four
+submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
