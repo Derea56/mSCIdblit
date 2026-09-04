@@ -76,6 +76,27 @@ non-SCI:
 The combined recovery is therefore ten standalone target-gene edges. The
 upstream 22A handoff rows remain low/no-evidence-boundary rows.
 
+A third search tranche added fifteen further standalone edges from primary
+promoter, ChIP, perturbation, or reporter studies. These included AR→TMPRSS2
+and AR→NKX3-1; NR1I2/PXR→CYP2B6 and mouse Cd36; NR3C2/MR→ATP1B1;
+RORA/RORC→CYP2C8 and mouse Il17a; ETV5→RET, TERT, and TWIST1; TCF4/TCF7L2
+alias→CDX1; and Jun→CCND1. The RORA/RORC→Il17a evidence is from an EAE/Th17
+comparator, not SCI. All other edges in this tranche are likewise non-SCI
+comparators, and every row records that limitation.
+
+A fourth tranche added sixteen more general edges for FOXO1, RELA, RUNX2,
+GLI1, NFAT/NFATC1, NANOG, SOX2, TBX21, YAP, TEAD, TCF4/TCF7L2 alias, and
+CREB. The TCF4 label is explicitly retained as the TCF7L2 alias where that is
+what the cited study tested. These edges also remain separate from their
+upstream handoffs and do not imply SCI activation.
+
+Across the four recovery tranches, 41 standalone target-gene edges have now
+been added. The register contains 4,299 exportable target-gene rows, of which
+4,219 explicit-species pairs materialize in the current stage; 78 of those
+materialized rows use primary-experiment support. The 4,957 reviewed handoff
+rows themselves remain unchanged: no upstream handoff was promoted because no
+row contains a demonstrated target gene for that exact route.
+
 ## Reproducibility
 
 Run:
