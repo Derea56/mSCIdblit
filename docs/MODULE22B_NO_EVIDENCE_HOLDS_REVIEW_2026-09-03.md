@@ -3714,3 +3714,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1892
 rows through M22B-IND-1892.
+## Individual hold-search tranche 1893–1900
+
+Four of eight rows retained reusable activating-target capacity: EGR1/FOS/
+HIF1A/JUN/SP1→PLAUR, SP1→ADRA2A, JUN→BDKRB1, and TP53/KLF4/Tp53→BDKRB2.
+MTNR1A, RXFP4, SDC2, and CD93 remained holds because the reviewed evidence
+addressed ligand/receptor or adhesion biology without establishing a named
+activating TF-to-target relationship.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1900
+rows through M22B-IND-1900.
