@@ -185,6 +185,30 @@ regulation, not the exact submitted ligand/receptor→TF→gene route. Remaining
 source-none rows therefore remain bounded `no_evidence_boundary` records rather
 than being converted into unsupported targets.
 
+## Individual hold-search tranche 0001–0008
+
+The first literal one-by-one search tranche covered eight named holds and is
+recorded in
+`docs/MODULE22B_INDIVIDUAL_HOLD_SEARCH_LOG_2026-09-03.tsv`. Five standalone
+ATF2 target-gene edges were recovered while reviewing holds 0007–0008:
+ATF2→PLOD2, HADH, LCOR, and REEP1 from a Wnt5a/b-associated human colon-cancer
+program, plus ATF2→DDIT3/CHOP from amino-acid-response promoter experiments.
+These are general TF-regulon lanes; neither WNT5B-FZD3→ATF2 nor
+CGA-TSHB-TSHR→ATF2 was upgraded.
+
+The other six search outcomes were retained as holds: AR→CYP17A1 had direct
+mouse promoter binding evidence but the cited study demonstrated repression,
+not activation; AR→AKR1D1 and AR→HSD17B12 had no exact qualifying target result;
+and the AP-1/WNT5A-PTK7 and AP-1/2-AG-CB1/CB2 searches recovered no qualifying
+target gene. A reporter readout, a near-match, or repressive regulation was
+not converted into an activating target lane.
+
+After this tranche, the working register contains 4,383 exportable target-gene
+rows, 4,302 explicit-species materialization rows, 3,885 high-source-confidence
+rows, 417 medium-high rows, and 161 primary-experiment-supported rows. The
+4,957 original handoff holds remain intact; five new target lanes were added
+without changing any hold status.
+
 ## Reproducibility
 
 Run:
