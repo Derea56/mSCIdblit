@@ -2538,6 +2538,18 @@ promoted.
 Register counts are unchanged; the individual search log now contains 1164
 rows through M22B-IND-1164.
 
+## Individual hold-search tranche 1165–1172
+
+The GluN2D row retained bounded CREB→BDNF context. The GluA1/2/3 rows
+retained general ionotropic-glutamate CREB/c-FOS and BDNF context, and the
+GluA4 row retained direct non-SCI oligodendroglial NF-YB→Gria4
+regulatory-region evidence as a near-match. The GluK3 row retained separate
+human JUN→MMP9 context. The mGluR6/7 rows remained no-target holds. None of
+the exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1172
+rows through M22B-IND-1172.
+
 ## Individual hold-search tranche 1013–1020
 
 Four ghrelin receptor rows, one canonical GHSR row, and three GIP receptor
