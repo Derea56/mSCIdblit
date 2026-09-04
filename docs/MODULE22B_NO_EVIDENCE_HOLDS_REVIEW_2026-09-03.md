@@ -1770,6 +1770,23 @@ medium-high rows. The current evidence register contains 452 records with
 `support_kind=primary_experiment`. The individual search log now contains 684
 rows through M22B-IND-0684.
 
+## Individual hold-search tranche 0685–0692
+
+Eight ephrin/receptor-boundary rows were searched individually. No qualifying
+named downstream TF-target lane was established for EFNB2→EPHA4,
+EFNB2→EPHB2, EFNB2→EPHB6, EFNB3→EPHB1, EFNB3→EPHB2, or EFNB3→EPHB3. The
+EFNB3→EPHB4 specificity boundary also remained unresolved. For the
+EGF→EGFR/ERBB2 row, standalone human STAT3→STAT1 and STAT3→PTGS2 lanes were
+added from EGFR/HER2-associated primary promoter studies. These are non-SCI
+neural, vascular, placental, or cancer observations; the exact upstream
+receptor handoffs remain separate holds and were not upgraded by inference.
+
+Register counts are now 5,316 exportable target-gene rows and 4,540
+explicit-species rows, including 4,198 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 454 records with
+`support_kind=primary_experiment`. The individual search log now contains 692
+rows through M22B-IND-0692.
+
 ## Reproducibility
 
 Run:
