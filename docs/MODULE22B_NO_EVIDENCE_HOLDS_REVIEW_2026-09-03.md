@@ -4287,3 +4287,26 @@ the eight exact upstream handoffs was promoted.
 
 This tranche added four standalone target edges and four evidence records; the
 individual search log contains 2228 rows through M22B-IND-2228.
+
+## Individual review 2229-2236
+
+Six of the next eight rows retained reusable activating-target capacity,
+covering ten component-resolved contexts: YAP1 to LRP1 for both LRP1 rows,
+MYCN and MYC to ALK, MYCN to GPC2, RUNX3 to ITGA4 and HIF1A to ITGB1 for the
+ITGA4_ITGB1 composite, and HIF1A and HIF2A to ITGA6 plus HIF1A to ITGB1 for
+the ITGA6_ITGB1 composite. The ALK evidence used neuroblastoma promoter,
+ChIP, reporter, and E-box deletion experiments. The GPC2 evidence used
+neuroblastoma MYCN ChIP, promoter-reporter, inducible activation, and
+depletion experiments. The ITGA6 evidence used hypoxia-response-element ChIP
+and promoter-reporter experiments; the HIF2A record is bounded to promoter
+occupancy and compensatory transcription after HIF1A knockdown because the
+strongest reporter validation used HIF1A.
+
+The Mdk-to-LRP2 and Mdk-to-NCL rows remained bounded holds. LRP2 material was
+repression- or indirect-regulation-oriented, while the NCL material did not
+establish direct activating TF-to-promoter evidence. These target contexts
+remain separate from the submitted upstream handoffs. None of the eight exact
+upstream handoffs was promoted.
+
+This tranche added five standalone target edges and five evidence records; the
+individual search log contains 2236 rows through M22B-IND-2236.
