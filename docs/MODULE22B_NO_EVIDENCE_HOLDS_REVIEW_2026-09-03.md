@@ -1684,6 +1684,24 @@ medium-high rows. The current evidence register contains 423 records with
 `support_kind=primary_experiment`. The individual search log now contains 644
 rows through M22B-IND-0644.
 
+## Individual hold-search tranche 0645–0652
+
+Eight dopamine, sterol, and Notch rows were searched individually. No
+qualifying named TF target lane was established for DRD3 or DRD5. Existing
+rat KLF11→Drd4 evidence was reused as standalone target context for the two
+DRD4 holds, without inferring either upstream DOPA handoff. New primary-study
+target lanes were added for mouse Nr1h2→Srebf1, mouse Nr1h3→Srebf1, human
+NR1H2→ABCA1, human NR1H3→ABCA1, rat Nr1h3→Srebf1, mouse Rbpj→Hes1, and
+mouse Rbpj→Gata2. The LXR and RBPJ lanes are general non-SCI target-gene
+observations; the desmosterol-DHCR7 and DLK1-Notch2/3 handoffs remain
+separate holds and were not upgraded by inference.
+
+Register counts are now 5,292 exportable target-gene rows and 4,518
+explicit-species rows, including 4,174 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 430 records with
+`support_kind=primary_experiment`. The individual search log now contains 652
+rows through M22B-IND-0652.
+
 ## Reproducibility
 
 Run:
