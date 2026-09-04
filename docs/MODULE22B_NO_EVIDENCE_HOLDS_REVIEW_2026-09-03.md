@@ -4098,3 +4098,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 2132
 rows through M22B-IND-2132.
+
+## Individual hold-search tranche 2133–2140
+
+Two of eight rows retained reusable activating-target capacity:
+EGR1/FOS/JUN/NFKB2/RUNX1/SP1/STAT1→CD44 and SP1→ADAM23. HAVCR2, IGHM,
+P4HB, PTPRC, ADAM22, and RTN4R remained holds because no named activating
+TF-to-target-gene relationship was established for those genes.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 2140
+rows through M22B-IND-2140.
