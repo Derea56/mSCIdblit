@@ -1261,6 +1261,21 @@ medium-high rows. The current evidence register contains 385 records with
 `support_kind=primary_experiment`. The individual search log now contains 412
 rows through M22B-IND-0412.
 
+## Individual hold-search tranche 0413–0420
+
+Eight COL2A1, COL3A1, or COL4A1 rows were searched individually. Existing
+standalone lanes were reused for ITGA9, Itgav, SDC1, SDC4, CD44, and GP6/Gp6.
+One new direct lane was added for mouse HAND1→Adgrg1 from a primary trophoblast
+study with promoter-binding and activation evidence. No exact standalone target
+lane was established for ITGA3. These target-gene findings do not establish
+the collagen-to-receptor handoffs, which remain separate holds.
+
+The working register now contains 5,248 exportable target-gene rows and 4,472
+explicit-species rows, including 4,130 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 386 records with
+`support_kind=primary_experiment`. The individual search log now contains 420
+rows through M22B-IND-0420.
+
 ## Reproducibility
 
 Run:
