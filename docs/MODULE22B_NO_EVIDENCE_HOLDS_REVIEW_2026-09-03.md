@@ -1909,6 +1909,21 @@ comparators; all eight upstream handoffs remain holds.
 Register counts are unchanged; the individual search log now contains 764
 rows through M22B-IND-0764.
 
+## Individual hold-search tranche 0765–0772
+
+Eight FLRT3/UNC5 and fibronectin-adhesion rows were searched individually.
+FLRT3→FLRT3 and FLRT3→UNC5A/B/C/D remained unresolved because the evidence
+provides binding or guidance phenotypes without a terminal TF-target assay.
+For FN1→CD44 and FN1→ITGA3/ITGB1, existing YAP→CTGF/CYR61 target lanes were
+reused as general adhesion/mechanotransduction context from primary studies;
+the FN1→ITGA2B/ITGB3 platelet row did not receive that reuse because its
+receptor and activation context were not comparable. These are non-SCI
+developmental, neuronal, epithelial, or platelet-comparator observations;
+the exact upstream handoffs remain holds.
+
+Register counts are unchanged; the individual search log now contains 772
+rows through M22B-IND-0772.
+
 ## Reproducibility
 
 Run:
