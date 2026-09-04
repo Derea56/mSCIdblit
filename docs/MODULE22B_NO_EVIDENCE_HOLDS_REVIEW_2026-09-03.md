@@ -3689,3 +3689,15 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1876
 rows through M22B-IND-1876.
+## Individual hold-search tranche 1877–1884
+
+Four of eight rows retained reusable activating-target capacity: SP1→F2R (for
+three F2R rows) and SP1→ADRA2A. The four F2RL1 rows remained holds because
+their evidence addressed proteolytic receptor activation and downstream
+signaling without establishing a named activating TF-to-F2RL1 relationship.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1884
+rows through M22B-IND-1884.
