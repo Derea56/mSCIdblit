@@ -3676,3 +3676,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1868
 rows through M22B-IND-1868.
+## Individual hold-search tranche 1869–1876
+
+Seven of eight rows retained reusable activating-target capacity: Sp1→FGFR1,
+SP1→F2R (for both F2R rows), Egr1→NGFR, HIF1A/Hif1a→NTRK1 (for both NTRK1
+rows), and GATA3/Gata3→EPOR. F2RL1 remained a hold because its records
+addressed PAR2 signaling and downstream outputs rather than a named activating
+TF-to-F2RL1 relationship.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1876
+rows through M22B-IND-1876.
