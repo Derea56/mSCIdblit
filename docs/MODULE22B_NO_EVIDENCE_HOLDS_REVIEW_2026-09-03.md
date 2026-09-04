@@ -482,6 +482,25 @@ rows, 419 medium-high rows, and 230 primary-experiment-supported rows. Seventy-
 two named or composite holds have now been searched individually and are
 logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0073–0076
+
+Four additional holds were searched individually. The AMH search recovered a
+mouse Id3 lane from BMPR1A-dependent Smad1/5 signaling in primary immature
+granulosa cells, while the GDF1 search recovered Nodal, Lefty1, Lefty2, and
+Pitx2 as direct early Smad2/3 targets in mouse embryonic stem cells. The FBN1-
+ITGB6 search recovered a human ITGB6 promoter lane with direct Smad3/4 binding
+and promoter perturbation evidence in lung-fibrosis models. The BMP8A search
+resolved SMAD pathway activation and spermatogonial differentiation but did
+not identify a named SMAD1/5/9 target gene in the reviewed evidence, so no
+target was assigned. None of the four submitted upstream handoffs was
+upgraded.
+
+The working register now contains 4,461 exportable target-gene rows and 4,377
+explicit-species materialization rows, including 4,053 high-source-confidence
+rows, 420 medium-high rows, and 236 primary-experiment-supported rows. Seventy-
+six named or composite holds have now been searched individually and are
+logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
