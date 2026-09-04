@@ -4691,3 +4691,10 @@ The retained contexts remain separate from the submitted Pcdhga and Pcdhgb homop
 Seven of the eight rows retained reusable target capacity. PCDHGB2, PCDHGB4, PCDHGB5, PCDHGB6, PCDHGB7, PCDHGB8, and PCDHGC3 gained CTCF-linked gamma-cluster promoter regulatory support. PCDHGC4 remained a bounded hold because the reviewed primary study reports that its promoter lacks the CTCF conserved sequence element and cannot bind CTCF.
 
 The retained contexts remain separate from the submitted Pcdhgb/Pcdhgc homophilic-adhesion handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI mouse/human neuronal-development comparators. PCDHGC4 has non-SCI mouse spinal-cord neuronal-survival evidence, but that functional result is not a qualifying activating TF-to-target relationship. The individual search log contains 2644 rows through M22B-IND-2644. This tranche added seven standalone target edges, retained target contexts for those seven rows, and kept PCDHGC4 on hold.
+
+
+## Individual review 2645-2652
+
+Five of the eight rows retained reusable target capacity. CD81 gained a direct PAX5 promoter-binding and perturbation context; CD36, LDLR, LRP1, and LRP8 reused existing target contexts. PCDHGC5, GPR171, and APLP2 remained bounded holds: the reviewed γC5 promoter lacks the CTCF conserved sequence element, GPR171 literature did not identify a named activating TF-to-target relationship, and APLP2 promoter characterization did not identify a named activating TF or direct TF occupancy.
+
+The retained contexts remain separate from the submitted Pcsk9 and Pcdhgc5 handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI human epithelial/B-cell, mouse hepatic, human hepatic, human melanoma, and human cancer-cell comparators. PCDHGC5 has clustered-protocadherin neuronal evidence but the specific reviewed promoter mechanism excludes CTCF for γC5; GPR171 and APLP2 remain on hold pending qualifying TF evidence. The individual search log contains 2652 rows through M22B-IND-2652. This tranche added one standalone direct target edge, reused four existing target contexts, and kept three rows on hold.
