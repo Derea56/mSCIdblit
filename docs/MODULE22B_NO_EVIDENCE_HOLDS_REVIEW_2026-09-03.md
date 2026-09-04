@@ -2808,6 +2808,18 @@ eight exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1340
 rows through M22B-IND-1340.
 
+## Individual hold-search tranche 1341–1348
+
+All eight GNAI2 receptor branches retained reusable target-gene capacity from
+independent evidence: SF1→Cnr1, SPI1→CXCR1, Stat3→Cxcr2, Stat1→Cxcr3,
+Rara→Drd2, Gata2→Ednra, Hif1a→Ednrb, and GATA3→EGFR. These contexts are not
+assigned to the unresolved GNAI2 source branches and do not establish the
+submitted GNAI2 handoffs. None of the eight exact upstream handoffs was
+promoted.
+
+Register counts are unchanged; the individual search log now contains 1348
+rows through M22B-IND-1348.
+
 Run:
 
 ```text
