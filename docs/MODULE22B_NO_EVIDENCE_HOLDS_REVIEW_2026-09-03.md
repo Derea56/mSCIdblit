@@ -4365,3 +4365,22 @@ component-level contexts and do not establish either composite as a single TF
 target. The target contexts remain separate from the submitted upstream
 handoffs; none of the eight exact upstream handoffs was promoted. The
 individual search log contains 2260 rows through M22B-IND-2260.
+
+## Individual review 2261-2268
+
+All eight rows retained reusable target capacity, covering 32 standalone or
+component-limited contexts. The MIF composite rows reused IRF8-to-CD74 plus
+ETS1, HIF1A, and MYC-to-CXCR4 contexts for CD74_CXCR4, and IRF8-to-CD74 plus
+seven CD44 contexts for Cd44_Cd74. The TNFRSF14 row reused MITF, the PLAUR
+row reused EGR1, FOS, HIF1A, JUN, and SP1, the LRP1 row reused YAP1, and the
+CD44 row reused the seven existing CD44 contexts. ITGA2 reused SP1 and RUNX1.
+
+CCR2 gained four primary target contexts: LZIP promoter binding in human
+THP-1 monocytes, NFAT-dependent promoter activation in DRG-neuron models,
+FOXO1 response-element and ChIP evidence in mouse macrophages, and POU2F1/
+Oct-1 promoter evidence in human THP-1 cells. The NFAT result is
+SCI-adjacent neuronal pain evidence, not an SCI injury model. All composite
+assignments are explicitly component-level, and the target contexts remain
+separate from the submitted upstream handoffs; none of the eight exact
+upstream handoffs was promoted. The individual search log contains 2268 rows
+through M22B-IND-2268.
