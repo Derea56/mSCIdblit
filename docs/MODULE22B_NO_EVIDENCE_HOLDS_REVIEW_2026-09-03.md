@@ -1067,6 +1067,24 @@ medium-high rows. The current evidence register contains 354 records with
 rows through M22B-IND-0324. All eight submitted upstream handoffs remain
 holds.
 
+## Individual hold-search tranche 0325–0332
+
+Eight additional CEACAM1/2 interaction rows were searched individually. Four
+CEACAM1 rows reused the standalone SOX9, ETS1, SOX10, USF1, and IRF1 target
+lanes as separate source-gene context, but no CD8A-, CEACAM5-, or PSG20-specific
+terminal target was established. The CEACAM1–CEACAM2 row and all three CEACAM2
+rows remained at receptor interaction, immune-signaling, platelet, or metabolic
+phenotype boundaries; no direct activating TF→Ceacam2 target-gene evidence was
+identified. No new target-gene lane was added and none of the eight submitted
+upstream handoffs was upgraded.
+
+The working register remains at 4,522 exportable target-gene rows and 4,442
+explicit-species rows, including 4,098 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 354 records with
+`support_kind=primary_experiment`. The individual search log now contains 332
+rows through M22B-IND-0332. All eight submitted upstream handoffs remain
+holds.
+
 ## Reproducibility
 
 Run:
