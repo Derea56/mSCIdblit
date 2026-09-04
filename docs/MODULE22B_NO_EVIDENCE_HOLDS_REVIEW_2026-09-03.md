@@ -3560,3 +3560,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1796
 rows through M22B-IND-1796.
+## Individual hold-search tranche 1797–1804
+
+One of eight rows retained reusable activating-target capacity: HIF1A/Hif1a
+and SP1→ENG. The TGFBR3 row remained a hold because available evidence was
+repressive or addressed receptor-family biology. The six activin receptor-
+complex rows remained holds because individual receptor evidence and pathway
+outputs were not transferred to the submitted multi-chain composites.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1804
+rows through M22B-IND-1804.
