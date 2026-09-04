@@ -3115,6 +3115,20 @@ promoted.
 Register counts are unchanged; the individual search log now contains 1516
 rows through M22B-IND-1516.
 
+## Individual hold-search tranche 1517–1524
+
+All eight rows retained reusable target-gene capacity: RUNX3→Cd8a for
+H2-T26, H2-T27, H2-T3, and H2-T9; RUNX3/CBFβ-associated Cd8b1 for H2-T27,
+H2-T3, and H2-T9; and Runx3-associated Klrk1 for H60a. These are non-SCI
+mouse T-cell or cytotoxic-lymphocyte contexts. The T-family rows remain
+receptor-proximal binding/function boundaries, and the H60a row remains an
+NKG2D receptor-engagement boundary. These target contexts remain separate
+from the submitted upstream handoffs. None of the eight exact upstream
+handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1524
+rows through M22B-IND-1524.
+
 Run:
 
 ```text
