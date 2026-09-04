@@ -1702,6 +1702,21 @@ medium-high rows. The current evidence register contains 430 records with
 `support_kind=primary_experiment`. The individual search log now contains 652
 rows through M22B-IND-0652.
 
+## Individual hold-search tranche 0653–0660
+
+Eight Notch ligand–receptor rows were searched individually. Primary
+RBPJ/NICD ChIP-seq, promoter, and in-vivo studies provided reusable mouse
+Rbpj target lanes for Hey1, Hes5, Sox9, Sox2, Pax6, Tlx, Id4, Tcf4, Gli2,
+Gli3, Yap1, and Tead2. These are general non-SCI developmental, neural, and
+myogenic target-gene observations; the DLL1/3/4-to-Notch1/2/3/4 handoffs
+remain separate holds and were not upgraded by inference.
+
+Register counts are now 5,304 exportable target-gene rows and 4,530
+explicit-species rows, including 4,186 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 442 records with
+`support_kind=primary_experiment`. The individual search log now contains 660
+rows through M22B-IND-0660.
+
 ## Reproducibility
 
 Run:
