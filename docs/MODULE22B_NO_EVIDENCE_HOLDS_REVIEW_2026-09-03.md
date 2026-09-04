@@ -4822,3 +4822,9 @@ The retained contexts remain separate from the submitted Prss3l and Psap handoff
 Four of the eight rows retained reusable target capacity. Lrp1, Sort1, Cd44, and Gfra1 reused existing YAP1, CEBPA-family, JUN, and NF-kappaB-complex/NFKB1 target contexts. Gpr37l1, Ncstn, Gfra2, and Gfra3 remained bounded holds because the reviewed material addressed receptor biology, promoter characterization, or GDNF-family signaling without establishing a qualifying named activating TF-to-target relationship.
 
 The retained contexts remain separate from the submitted Psap and Pspn handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI melanoma, hepatic lipid-metabolism, human inferred-regulatory, and fibroblast/pancreatic-cancer/neuronal comparators. The individual search log contains 2836 rows through M22B-IND-2836. This tranche added no new edges or evidence records, reused target contexts for four rows, and kept four rows on hold.
+
+## Individual review 2837-2844
+
+Six of the eight rows retained reusable target capacity. Jmjd6 gained direct MYC and MYCN promoter-occupancy and expression-regulation contexts from human neuroblastoma; Scarb1, Alox5, Cav1, Adcyap1r1, and Adrb2 reused existing signed or primary target contexts. Sdc3 and Gpr44 remained bounded holds because the reviewed material addressed expression or prostaglandin-receptor biology without establishing a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted Pspn, Ptdss1, Ptgs2, and Pth handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI neuroblastoma, signed public human/mouse, oxidative-stress neuroblastoma, porcine, and pulmonary-epithelial comparators. The individual search log contains 2844 rows through M22B-IND-2844. This tranche added two standalone target edges and one evidence record, reused target contexts for five rows, and kept two rows on hold.
