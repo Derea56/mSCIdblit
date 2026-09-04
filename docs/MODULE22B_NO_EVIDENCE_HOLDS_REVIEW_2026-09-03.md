@@ -3426,3 +3426,14 @@ upstream handoffs. None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1716
 rows through M22B-IND-1716.
+## Individual hold-search tranche 1717–1724
+
+Two of eight rows retained reusable activating-target capacity: TBR1/CREB-
+associated GRIN2B regulation and ZIC1/2→GRIN2C enhancer regulation in mouse
+neuronal systems. GRIN2A, GRIN2D, and the four potassium-channel rows remained
+holds because no qualifying named activating TF-to-target result was
+established. These target contexts remain separate from the submitted upstream
+handoffs. None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1724
+rows through M22B-IND-1724.
