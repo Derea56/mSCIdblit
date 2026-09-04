@@ -735,6 +735,24 @@ rows, 427 medium-high rows, and 255 primary-experiment-supported rows. One
 hundred eighty named or composite holds have now been searched individually and
 are logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0181–0188
+
+Eight additional ligand-receptor and receptor-composite holds were searched
+individually. APP/DR6, ARTN/GFRA1-RET, BAG6/NKp30, and BDNF/SORT1 remained at
+binding, receptor-complex, trafficking, kinase, or cytokine-output boundaries
+without a qualifying terminal TF target. The BST2/PIR-A2 review recovered
+standalone IRF1-, IRF3-, and IRF7-to-BST2 regulatory lanes from a primary BST2
+promoter study. The three BMP2 receptor-composite reviews recovered standalone
+SMAD1-to-Id1, SMAD1-to-Id2, and SMAD1-to-Id3 regulatory lanes from mouse
+neuroblastoma experiments. These six target lanes are general regulatory
+evidence; they do not upgrade the submitted upstream handoffs.
+
+The working register remains at 4,486 exportable target-gene rows and 4,402
+explicit-species materialization rows, including 4,065 high-source-confidence
+rows, 433 medium-high rows, and 255 primary-experiment-supported rows. One
+hundred eighty-eight named or composite holds have now been searched
+individually and are logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
