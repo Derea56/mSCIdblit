@@ -539,6 +539,24 @@ rows, 425 medium-high rows, and 249 primary-experiment-supported rows. Ninety-
 two named or composite holds have now been searched individually and are
 logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0093–0100
+
+Eight additional holds were searched individually. The YAP search recovered
+mouse Cyr61 as a direct target with promoter occupancy and TEAD dependence in
+skin keratinocytes. The THRB-to-DIO3 search did not establish a TRbeta-specific
+assignment; the reviewed DIO3 evidence was TRalpha-specific or indirect. The
+APP/SORL1, H2-Q10/CD8, dopamine-receptor, and estrogen/GPER1 rows did not
+resolve a named terminal TF and target locus. The ELK1 search retained existing
+FOS/TBP and other ELK1 lanes as component-level context without assigning the
+EREG-EGFR/ERBB4 handoff. None of the eight submitted upstream handoffs was
+upgraded.
+
+The working register now contains 4,475 exportable target-gene rows and 4,391
+explicit-species materialization rows, including 4,062 high-source-confidence
+rows, 425 medium-high rows, and 250 primary-experiment-supported rows. One
+hundred named or composite holds have now been searched individually and are
+logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
