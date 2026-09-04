@@ -4177,3 +4177,17 @@ eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 2180
 rows through M22B-IND-2180.
+
+## Individual hold-search tranche 2181–2188
+
+Five of eight rows retained reusable activating-target capacity:
+EGR1/GATA3/JUN/STAT1/TP53/NR3C2→EGFR across both EGFR rows,
+ETS1/FOS/HIF1A/JUN/MYC/STAT1→MET, EGR1/FOS/HIF1A/JUN/SP1→PLAUR, and
+EGR1/SP1/THRB→LDLR. PTPRF, PTPRS, and LRP1 remained holds; the available
+TP53→LRP1 evidence was repressive rather than activating.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 2188
+rows through M22B-IND-2188.
