@@ -1085,6 +1085,25 @@ medium-high rows. The current evidence register contains 354 records with
 rows through M22B-IND-0332. All eight submitted upstream handoffs remain
 holds.
 
+## Individual hold-search tranche 0333–0340
+
+Eight Ceacam2 interaction rows were searched individually. Three reusable
+standalone target lanes were added: mouse RUNX3→Cd8a from activated CD8-positive
+T-cell enhancer and loss-of-function experiments, human RELA/NF-kappaB→SELE
+from cytokine-inducible endothelial promoter-site experiments, and human
+ETS1→CD209 from a THP-1 CD209 promoter reporter study. The human CD209 lane is
+explicitly limited to CD209 and is not transferred to the distinct mouse
+Cd209b, Cd209c, Cd209d, or Cd209e paralogs. The Ceacam2–Ceacam2 and
+Ceacam2–Psg20 rows remained at interaction or paralog-specific promoter
+boundaries; no upstream handoff was promoted.
+
+The working register now contains 4,525 exportable target-gene rows and 4,445
+explicit-species rows, including 4,101 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 357 records with
+`support_kind=primary_experiment`. The individual search log now contains 340
+rows through M22B-IND-0340. All eight submitted upstream handoffs remain
+holds.
+
 ## Reproducibility
 
 Run:
