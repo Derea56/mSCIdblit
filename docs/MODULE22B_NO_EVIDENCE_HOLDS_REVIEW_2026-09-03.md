@@ -2730,6 +2730,18 @@ ligand/receptor branches. None of the exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1300
 rows through M22B-IND-1300.
 
+## Individual hold-search tranche 1301–1308
+
+The ACKR2, ADRA2A, CCR10, and CCR2 rows remained ligand/receptor-binding
+holds without a qualifying downstream target gene. The CCR3, GRM7, and CD40
+rows retained separate general TF-target context—GATA1→CCR3, GATA3→GRM7,
+and IRF1→Cd40, respectively—without assigning those TFs to the unresolved
+Gm13306 or Gm2002 source branches. None of the exact upstream handoffs was
+promoted.
+
+Register counts are unchanged; the individual search log now contains 1308
+rows through M22B-IND-1308.
+
 ## Individual hold-search tranche 1013–1020
 
 Four ghrelin receptor rows, one canonical GHSR row, and three GIP receptor
