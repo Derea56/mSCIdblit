@@ -1438,6 +1438,21 @@ medium-high rows. The current evidence register contains 387 records with
 `support_kind=primary_experiment`. The individual search log now contains 516
 rows through M22B-IND-0516.
 
+## Individual hold-search tranche 0517–0524
+
+Eight COL6A3 or COL6A4-linked collagen-integrin or syndecan/CD44 rows were
+searched individually. Existing standalone target lanes were reused for ITGA1,
+ITGA2, ITGA9, Itgav, SDC1, SDC4, and CD44. No exact standalone target lane
+was established for ITGA3. The reused target evidence remains general regulon
+context and does not establish the collagen-to-receptor handoffs; no new
+register rows were added.
+
+Register counts remain 5,249 exportable target-gene rows and 4,473
+explicit-species rows, including 4,131 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 387 records with
+`support_kind=primary_experiment`. The individual search log now contains 524
+rows through M22B-IND-0524.
+
 ## Reproducibility
 
 Run:
