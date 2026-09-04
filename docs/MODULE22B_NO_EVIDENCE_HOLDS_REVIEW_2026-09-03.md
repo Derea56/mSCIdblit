@@ -1665,6 +1665,25 @@ medium-high rows. The current evidence register contains 416 records with
 `support_kind=primary_experiment`. The individual search log now contains 636
 rows through M22B-IND-0636.
 
+## Individual hold-search tranche 0637–0644
+
+Eight dopamine/monoamine rows were searched individually. New target lanes
+were added for rat Rara→Drd2, rat Klf11→Drd2, human KLF11→DRD2, rat
+Klf11→Drd4, human FEV→DDC, mouse Fev→Ddc, and mouse Lmx1b→Slc18a2. The
+Lmx1b lane is explicitly functional rather than direct-promoter evidence: an
+adult raphe-specific knockout reduced Slc18a2/Vmat2 expression, but direct
+Lmx1b occupancy was not claimed. No qualifying named TF target lane was
+established for DRD3 or DRD5. These are general neuronal or serotonergic
+TF-to-target observations from non-SCI primary studies; the dopamine
+precursor, transporter, and receptor handoffs remain separate holds and were
+not upgraded by inference.
+
+Register counts are now 5,285 exportable target-gene rows and 4,511
+explicit-species rows, including 4,167 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 423 records with
+`support_kind=primary_experiment`. The individual search log now contains 644
+rows through M22B-IND-0644.
+
 ## Reproducibility
 
 Run:
