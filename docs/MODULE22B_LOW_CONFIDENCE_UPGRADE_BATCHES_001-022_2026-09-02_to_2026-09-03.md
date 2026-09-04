@@ -71,7 +71,9 @@ edges after the batch. The batch explicitly kept receptor-complex
 substitutions, model/species/SCI transfer, negative evidence, disputed
 binding, non-native constructs, and rows without terminal TF evidence bounded.
 
-Generator: `scripts/promote_module22b_low_confidence_batch001.py`
+Historical batch-specific generator scripts were moved to the local archive
+described in the repository retention inventory; the original batch notes
+retain the generator names used at the time of each run.
 Audit ledger: `work/module22b_low_confidence_upgrade_audit/module22b_low_confidence_upgrade_batch001.tsv`
 
 ### Batch 002 — WNT5A–FZD7
