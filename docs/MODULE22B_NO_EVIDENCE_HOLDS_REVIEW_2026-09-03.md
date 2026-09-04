@@ -4551,6 +4551,12 @@ Seven of the next eight rows retained reusable target capacity. FGFRL1 gained a 
 
 The retained target contexts remain separate from the submitted NRG1 handoffs and do not establish source-to-TF activation. The ERBB2/ERBB3 and KLF5 records are non-SCI cancer comparators; the SOX10/ERBB3 record is a developmental neural-crest comparator; the ITGA6 contexts are non-SCI hypoxia comparators; and the ITGB3 context is general signed-public human regulatory evidence. The individual search log contains 2444 rows through M22B-IND-2444. This tranche added eight standalone target edges and eight evidence records; existing ERBB2, ERBB4, ITGA6, and ITGB3 contexts were reused for component-level coverage.
 
+## Individual review 2453-2460
+
+Seven of the next eight rows retained reusable target capacity. EGFR contexts were reused for the NRG3 and NRG4 EGFR rows; ERBB3 contexts were reused for NRG3-ERBB3; ERBB4 contexts were reused for NRG3-ERBB4 and NRG4-ERBB4; and ERBB2/ERBB4 component contexts were reused for the NRG4 and NRG3 receptor-complex rows. GFRA1 reused the existing NFKB1/p50 promoter context. GFRA3 remained a bounded hold because the reviewed literature established developmental expression and receptor-family characterization but not a validated activating TF-to-GFRA3 target relationship.
+
+The retained target contexts remain separate from the submitted NRG3/NRG4/NRTN handoffs and do not establish source-to-TF activation. The EGFR and ERBB receptor contexts are non-SCI cancer, inflammatory, or receptor-hormone comparators; GFRA1 is a non-SCI fibroblast, pancreatic-cancer, and neuronal comparator; and GFRA3 had no qualifying target context. The individual search log contains 2460 rows through M22B-IND-2460. No new standalone edge or evidence record was needed in this tranche; seven rows reused existing target contexts and one remained a bounded hold.
+
 ## Individual review 2445-2452
 
 All eight rows retained reusable target capacity. ERBB2/ERBB3, ERBB2/ERBB4, ERBB3, ERBB4, and NRP2 reused existing or newly reviewed component-level target contexts. LRRTM2 gained a direct CREB promoter/CRE-reporter context. MOG gained CREB promoter-occupancy/perturbation support and PPARbeta/delta promoter-occupancy/perturbation support from oligodendrocyte and demyelination studies. The NRG2 and NRG3 receptor or receptor-complex handoffs themselves were not promoted, and no exact LRRTM2 or MOG upstream handoff was promoted.
