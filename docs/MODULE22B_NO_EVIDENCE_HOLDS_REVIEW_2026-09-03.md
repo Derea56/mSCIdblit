@@ -501,6 +501,26 @@ rows, 420 medium-high rows, and 236 primary-experiment-supported rows. Seventy-
 six named or composite holds have now been searched individually and are
 logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0077–0084
+
+Eight additional holds were searched individually. The SOX2 search recovered a
+direct Sox6 lane from developing chicken neural tube and a functional Socs3
+regulatory lane from mouse neural stem cells, including CNS/spinal-cord
+developmental context. The STAT1 searches recovered Jmjd3 as a direct target
+from primary rat microglial ChIP and perturbation experiments; the STAT3
+search recovered the same target as a separate STAT3 lane. These microglial
+experiments are CNS inflammatory comparators and include an ischemic-brain
+comparison, but they are not traumatic SCI. The remaining STAT1/RELA and
+STAT1/STAT5 composites were not assigned a joint target because the component
+factors were not shown to act as the submitted composite. None of the eight
+submitted upstream handoffs was upgraded.
+
+The working register now contains 4,465 exportable target-gene rows and 4,381
+explicit-species materialization rows, including 4,056 high-source-confidence
+rows, 421 medium-high rows, and 240 primary-experiment-supported rows. Eighty-
+four named or composite holds have now been searched individually and are
+logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
