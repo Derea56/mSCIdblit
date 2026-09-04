@@ -4205,3 +4205,19 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts now include seven standalone target edges and seven evidence
 records; the individual search log contains 2196 rows through M22B-IND-2196.
+
+## Individual hold-search tranche 2197–2204
+
+Four of eight rows retained reusable activating-target capacity, representing
+five TF-to-target contexts: PPARG→PTPRF, MITF→TNFRSF14, CREB1→LTBR, and
+RELA/STAT1→CD40. PTPRS (two rows), NTNG1, and RIPK1 remained holds because
+the reviewed records did not establish a qualifying named activating
+TF-to-target relationship; cis-element, adhesion, or indirect/repressive
+evidence was not promoted.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts now include four additional standalone target edges and four
+evidence records; the individual search log contains 2204 rows through
+M22B-IND-2204.
