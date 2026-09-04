@@ -4164,3 +4164,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 2172
 rows through M22B-IND-2172.
+
+## Individual hold-search tranche 2173–2180
+
+All eight rows remained bounded holds. LRP1 and SDC1 had only repressive
+TP53- or ZEB1-associated records, respectively, while LRP2, VLDLR, PTPRD,
+PTPRF, and PTPRS lacked named activating TF-to-target-gene evidence.
+
+These records remain separate from uptake, adhesion, and trans-synaptic
+function evidence and from the submitted upstream handoffs. None of the
+eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 2180
+rows through M22B-IND-2180.
