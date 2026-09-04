@@ -1140,6 +1140,39 @@ medium-high rows. The current evidence register contains 366 records with
 rows through M22B-IND-0356. All eight submitted upstream handoffs remain
 holds.
 
+## Individual hold-search tranche 0357–0364
+
+Eight CLEC2E/F-to-KLRB1-family rows were searched individually. The existing
+human RARA→KLRB1 lane was reused as standalone family context because
+ATRA-associated RARA occupancy and CD161 induction support that direct human
+target relationship. This evidence does not establish the distinct mouse
+Klrb1a, Klrb1b, Klrb1c, or Klrb1f paralog targets, nor does it establish the
+Clec2e/Clec2f upstream relay. No new exact mouse target lane was added, and all
+eight upstream handoffs remain holds.
+
+The working register remains at 4,534 exportable target-gene rows and 4,454
+explicit-species rows, including 4,110 high-source-confidence rows and 566
+medium-high rows. The current evidence register remains at 366 records with
+`support_kind=primary_experiment`. The individual search log now contains 364
+rows through M22B-IND-0364.
+
+## Individual hold-search tranche 0365–0372
+
+Eight CLEC2F/G/H-to-KLRB1-family rows were searched individually. The human
+RARA→KLRB1 lane remains the only directly supported target context for this
+family in the reviewed sources: ATRA-associated RARA occupancy and CD161
+induction support the human lane. The searches did not establish exact mouse
+Klrb1a, Klrb1b, Klrb1c, or Klrb1f promoter regulation, species-resolved
+Klrb1 regulation for the unsuffixed rows, or any CLEC2F/G/H upstream relay.
+The human lane was recorded as context only; no new exact target lane was
+added, and all eight upstream handoffs remain holds.
+
+The working register remains at 4,534 exportable target-gene rows and 4,454
+explicit-species rows, including 4,110 high-source-confidence rows and 566
+medium-high rows. The current evidence register remains at 366 records with
+`support_kind=primary_experiment`. The individual search log now contains 372
+rows through M22B-IND-0372.
+
 ## Reproducibility
 
 Run:
