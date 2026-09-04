@@ -3741,3 +3741,17 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1908
 rows through M22B-IND-1908.
+## Individual hold-search tranche 1909–1916
+
+Six of eight rows retained reusable activating-target capacity: SP1/Egr1→CD9,
+EBF2→CNTN1, the multi-TF EGR1/GATA3/JUN/STAT1/TP53/NR3C2→EGFR context,
+SP1→ERBB2, ZNF217→ERBB3, and NF-Y→FGFR2. SDC2 and EPHB2 remained holds
+because the reviewed records addressed adhesion, receptor signaling, or
+promoter biology without establishing a qualifying named activating
+TF-to-target relationship.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1916
+rows through M22B-IND-1916.
