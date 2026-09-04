@@ -3344,3 +3344,15 @@ eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1660
 rows through M22B-IND-1660.
+## Individual hold-search tranche 1661–1668
+
+Three of eight rows retained reusable activating-target capacity: TCF/LEF and
+NFAT regulation of CTLA4, IKZF2→ICOS, and existing ETS1→MPL evidence. The
+four type-I-interferon receptor-complex rows and the ITGA6/ITGB4 composite
+remained holds because no qualifying named activating TF-to-composite-target
+relationship was established; individual subunit evidence was not transferred.
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1668
+rows through M22B-IND-1668.
