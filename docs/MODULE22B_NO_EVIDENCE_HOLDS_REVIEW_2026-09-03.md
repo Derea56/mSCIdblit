@@ -1047,6 +1047,26 @@ medium-high rows. The current evidence register contains 349 records with
 rows through M22B-IND-0316. All eight submitted upstream handoffs remain
 holds.
 
+## Individual hold-search tranche 0317–0324
+
+Eight additional cadherin and CEACAM1 interaction rows were searched
+individually. The Cdh4–Cdh4 row remained unresolved because Pax6-associated
+developmental expression did not provide direct activating promoter evidence.
+The Cdh5–Cdh5 review yielded ERG→CDH5 from human endothelial promoter ChIP,
+transactivation, and knockdown experiments. The six CEACAM1 interaction rows
+reused existing IRF1→CEACAM1 context and four new standalone lanes: SOX9 and
+ETS1 in human epithelial/melanoma systems, SOX10 in mouse melanoma, and USF1
+in human breast epithelial cells. These are general or non-SCI comparator
+relationships and do not establish any submitted cadherin or CEACAM1
+interaction-to-TF handoff.
+
+The working register now contains 4,522 exportable target-gene rows and 4,442
+explicit-species rows, including 4,098 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 354 records with
+`support_kind=primary_experiment`. The individual search log now contains 324
+rows through M22B-IND-0324. All eight submitted upstream handoffs remain
+holds.
+
 ## Reproducibility
 
 Run:
