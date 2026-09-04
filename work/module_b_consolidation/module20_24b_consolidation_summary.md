@@ -1,5 +1,9 @@
 # Module 20B–24B consolidation batch 001 — reviewed
 
+## Module 23B second-pass expansion (2026-09-04)
+
+The B023 second-pass expansion promotes the existing MMRN2-CLEC14A direct and functional edges and adds five source-linked B edges for MMRN2-CD93, MMRN2-CD248, and the direct, localization-relay, and developmental-function layers of SLIT2 C-terminal LG-domain–glycosylated DAG1. The Module 23B audit register now contains 1,080 edges and 1,506 evidence rows; its 289 boundary rows are unchanged. The acquired primary records are retained under `data/raw/evidence/module23a_second_pass_20260904/`. These are audit-layer only and do not modify canonical signaling tables or simulator outputs.
+
 The shared B-layer generation pass is complete and has passed structural and
 layer-separation review. It produced edge,
 evidence, boundary, and consolidation-matrix registers for Modules 20B–24B
