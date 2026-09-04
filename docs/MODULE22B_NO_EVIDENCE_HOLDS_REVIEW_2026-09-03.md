@@ -105,6 +105,20 @@ materialized rows use primary-experiment support. The 4,957 reviewed handoff
 rows themselves remain unchanged: no upstream handoff was promoted because no
 row contains a demonstrated target gene for that exact route.
 
+An eighth tranche added four cooperative retinoid-receptor edges: RARG/RXRA
+to ABCA1 and RARA/RXRA, RARB/RXRA, and RARB/RXRB to POU5F1. These promoter
+activation claims come from macrophage or embryonal-carcinoma comparator
+systems, with receptor-pair and retinoid-context limitations retained; they
+remain separate from the upstream CRABP2 handoffs and do not imply SCI
+activation.
+
+Across the eight recovery tranches, 66 standalone target-gene edges have now
+been added. The register contains 4,324 exportable target-gene rows, of which
+4,244 explicit-species pairs materialize in the current stage; 103 of those
+materialized rows use primary-experiment support. The 4,957 reviewed handoff
+rows themselves remain unchanged: no upstream handoff was promoted because no
+row contains a demonstrated target gene for that exact route.
+
 A seventh tranche added one cooperative CREB1/ATF1→IL10 edge from primary
 promoter-binding and mutation-dependent transactivation experiments in human
 monocytic cells. The composite factor assignment and cAMP-dependent,
