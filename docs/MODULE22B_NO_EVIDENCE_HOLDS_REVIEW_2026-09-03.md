@@ -971,16 +971,17 @@ holds.
 
 Eight additional Ccl8, Ccl9, CD160, and CD1D1 interaction rows were searched
 individually. Four Ccl8 receptor branches reused the standalone IRF1→Ccl8
-lane recovered in the prior tranche. A new standalone RXRA→Ccl9 lane was
-recovered from mouse macrophage knockout, ligand, promoter-mutation, ChIP, and
-sequence-specific binding experiments. The CD160–TNFRSF14 and
+lane recovered in the prior tranche. Two new standalone lanes were recovered:
+RXRA→Ccl9 from mouse macrophage knockout, ligand, promoter-mutation, ChIP, and
+sequence-specific binding experiments, and STAT3→Cd48 from mouse macrophage
+promoter-reporter and ChIP/perturbation evidence. The CD160–TNFRSF14 and
 CD1D1–CEACAM5 rows remained at receptor-family or adhesion/interaction
 boundaries without a named terminal TF target. No upstream handoff was
 upgraded, and the reusable lanes are general or non-SCI comparator evidence.
 
-The working register now contains 4,507 exportable target-gene rows and 4,427
-explicit-species rows, including 4,083 high-source-confidence rows and 566
-medium-high rows. The current evidence register contains 339 records with
+The working register now contains 4,511 exportable target-gene rows and 4,431
+explicit-species rows, including 4,087 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 343 records with
 `support_kind=primary_experiment`. The individual search log now contains 292
 rows through M22B-IND-0292. All eight submitted upstream handoffs remain
 holds.
