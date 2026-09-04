@@ -139,6 +139,7 @@ def main() -> int:
     discoveries = read_tsv(DISCOVERY)
     edges = read_tsv(EDGES)
     evidence = read_tsv(EVIDENCE)
+    existing_batch = read_tsv(args.batch_output) if args.batch_output.exists() else []
     existing_triples = {
         (norm(row["source_entity"]), norm(row["relation_type"]), norm(row["target_entity"]))
         for row in edges
@@ -257,7 +258,8 @@ def main() -> int:
     evidence.extend(new_evidence)
     write_tsv(EDGES, edges, EDGE_FIELDS)
     write_tsv(EVIDENCE, evidence, EVIDENCE_FIELDS)
-    write_tsv(args.batch_output, batch_rows, BATCH_FIELDS)
+    existing_batch.extend(batch_rows)
+    write_tsv(args.batch_output, existing_batch, BATCH_FIELDS)
     for row, _triple in candidates:
         row["disposition"] = "MATERIALIZED_REVIEWED_PRIMARY"
     write_tsv(DISCOVERY, discoveries, list(discoveries[0]))
