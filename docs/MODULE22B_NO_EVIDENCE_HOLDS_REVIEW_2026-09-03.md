@@ -4310,3 +4310,21 @@ upstream handoffs was promoted.
 
 This tranche added five standalone target edges and five evidence records; the
 individual search log contains 2236 rows through M22B-IND-2236.
+
+## Individual review 2237-2244
+
+All eight rows retained reusable target or regulatory-support capacity, covering
+eight contexts: EGR1 to Ptprz1, NR1H4 to SDC1, YAP1 to SDC2, HIF1A to SDC3,
+HIF1A to SDC4, FOXP1 to SORL1, Hif1a to Abca1, and PITX1 to MTNR1A. The SDC1
+and MTNR1A results used primary promoter activation and direct-binding evidence.
+The SDC2 result used YAP perturbation and SDC2 reporter activation, while the
+SDC3 result used HIF1A knockout, hypoxia/DMOG induction, and predicted promoter
+HREs. These two records are explicitly retained as regulatory support without
+claiming direct promoter occupancy. Existing high-confidence target contexts
+were reused for Ptprz1, SDC4, SORL1, and Abca1.
+
+No exact upstream handoff was promoted. The Mdk-to-Ptprz1, Sdc1, Sdc2, Sdc3,
+Sdc4, Sorl1, and the Megf10-to-Abca1 target contexts remain separate from their
+submitted upstream routes; the melatonin-ASMT row is additionally bounded
+because ASMT is not treated as the melatonin ligand. The individual search log
+contains 2244 rows through M22B-IND-2244.
