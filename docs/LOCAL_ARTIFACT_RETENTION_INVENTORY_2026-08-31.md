@@ -98,3 +98,13 @@ Module 22B narrative TF-target batches, and three additional Module 22B
 general/signed/TRRUST batches. Their contents were checksum-verified against
 the repository `HEAD` before this cleanup. Reusable materialization, export,
 validation, and current public-TF entrypoints remain tracked in `scripts/`.
+
+On 2026-09-04, a further 96 completed or run-specific helpers were moved to
+the sibling local archive
+`/Users/derea/Documents/SCI/mSCIdblit_local_archive/historical_completed_batch_workflows_2026-09-04/scripts/`:
+30 Module 20A batch/date helpers, 11 Module 21A pair-review helpers, one
+Module 21B discovery-batch materializer, 52 completed public-TF batch/search/
+review helpers, one Module 20B repair helper, and one Module 22B comparison
+helper. Their contents were checksum-verified against the repository `HEAD`
+before this cleanup. Generic controllers and reusable/current canonicalization,
+materialization, export, and validation entrypoints remain tracked.
