@@ -577,6 +577,26 @@ rows, 425 medium-high rows, and 251 primary-experiment-supported rows. One
 hundred eight named or composite holds have now been searched individually and
 are logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0109–0116
+
+Eight additional holds were searched individually. The 5alphaP/PGR search
+recovered direct Fkbp5/FKBP5 target lanes in mouse and human regulatory
+contexts, supported by progestin induction, PR occupancy, and intronic
+response-element assays. The serotonin searches found receptor-associated
+c-Fos induction or signaling context for Htr2c and HTR3, but not
+receptor-subtype-specific terminal TF occupancy; Htr5a, Htr1d, Htr1e, and
+Htr1f searches likewise did not recover a subtype-specific target assignment.
+The ADM search found c-fos induction and AP-1 activity in cardiovascular cells
+without a direct AP-1-to-c-Fos target demonstration. Existing CREB/cFos
+evidence was retained as context only. None of the eight submitted upstream
+handoffs was upgraded.
+
+The working register now contains 4,478 exportable target-gene rows and 4,394
+explicit-species materialization rows, including 4,065 high-source-confidence
+rows, 425 medium-high rows, and 253 primary-experiment-supported rows. One
+hundred sixteen named or composite holds have now been searched individually
+and are logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
