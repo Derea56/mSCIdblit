@@ -839,6 +839,22 @@ rows, 433 medium-high rows, and 255 primary-experiment-supported rows. Two
 hundred thirty-two named or composite holds have now been searched individually
 and are logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0229–0236
+
+Eight additional atypical-chemokine and CCR5 rows were searched individually.
+The CCL1/ACKR1, CCL1/ACKR4, CCL11/ACKR1, CCL11/ACKR2, CCL17/ACKR1,
+CCL17/ACKR2, and CCL19/ACKR4 rows remained at transport, scavenging,
+internalization, or gradient-control boundaries. The CCL11/CCR5 review found
+macrophage transcriptomic and NF-kB-enrichment context, but not a named
+terminal TF binding or causal TF-to-target mechanism. No new lane was added and
+none of the eight upstream handoffs was upgraded.
+
+The working register remains at 4,486 exportable target-gene rows and 4,402
+explicit-species materialization rows, including 4,065 high-source-confidence
+rows, 433 medium-high rows, and 255 primary-experiment-supported rows. Two
+hundred forty named or composite holds have now been searched individually and
+are logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
