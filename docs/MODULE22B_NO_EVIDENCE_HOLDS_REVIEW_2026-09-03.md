@@ -1869,6 +1869,20 @@ handoffs remain separate holds.
 Register counts are unchanged; the individual search log now contains 740
 rows through M22B-IND-0740.
 
+## Individual hold-search tranche 0741–0748
+
+Eight FGF8/9 and FLRT1 adhesion-receptor rows were searched individually. The
+rat ELK1→Ier2/pip92 promoter lane was reused as general FGF-response context
+for FGF8→FGFR4 and FGF9→FGFR1/2/3/4, while no ligand/receptor-specific
+terminal TF assay was established. FLRT1→ADGRL1, FLRT1→ADGRL2, and
+FLRT1→ADGRL3 remained unresolved because the primary evidence concerns
+ectodomain adhesion, repulsion, or synapse outputs without an intracellular
+TF-target readout. These are non-SCI developmental, epithelial, neuronal, or
+skeletal-comparator observations; all exact upstream handoffs remain holds.
+
+Register counts are unchanged; the individual search log now contains 748
+rows through M22B-IND-0748.
+
 ## Reproducibility
 
 Run:
