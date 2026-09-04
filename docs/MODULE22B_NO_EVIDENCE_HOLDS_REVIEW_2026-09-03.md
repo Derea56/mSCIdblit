@@ -3462,3 +3462,17 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1740
 rows through M22B-IND-1740.
+## Individual hold-search tranche 1741–1748
+
+One of eight rows retained reusable activating-target capacity: existing
+SP1→SIGIRR evidence, supported by an intestinal epithelial promoter study.
+The IL1RAP/IL1RL2 composites, IL1RAPL1, and IL1RAPL2 remained holds because
+the reviewed records addressed receptor binding, antagonist activity,
+enhancer annotation, or downstream pathway outputs without establishing a
+qualifying named activating TF-to-target relationship.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1748
+rows through M22B-IND-1748.
