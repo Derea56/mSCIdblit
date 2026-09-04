@@ -3822,3 +3822,15 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1956
 rows through M22B-IND-1956.
+## Individual hold-search tranche 1957–1964
+
+Seven of eight rows retained reusable activating-target capacity: SP1→DAG1,
+MYC→ITGA1, SP1/RUNX1→ITGA2, Sp3→ITGA3, SP1→ITGA6 (for both ITGA6 rows),
+and Egr1→ITGA7. GPC1 remained a hold because its promoter study reported
+predicted motifs and promoter activity without named functional TF activation.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1964
+rows through M22B-IND-1964.
