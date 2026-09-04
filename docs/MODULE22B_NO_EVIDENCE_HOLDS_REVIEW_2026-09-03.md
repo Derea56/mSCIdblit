@@ -356,6 +356,26 @@ confidence rows, 417 medium-high rows, and 194 primary-experiment-supported
 rows. Forty-four named or composite holds have now been searched individually
 and are logged.
 
+## Individual hold-search tranche 0045–0048
+
+Four additional holds were searched individually. The SEMA6A–PLXNA2/NFATC1
+search recovered five direct NFATC1 target lanes (Ltbp3, Clcn7, Ctsk, Mmp9,
+and Src) from a primary RANKL-induced osteoclast study. The SFRP2–FZD5/NFATC3
+search confirmed NFATC3 pathway activation but did not identify a new target
+locus, so the previously established Sftpb and Abca3 lanes were reused. The
+PXR/CYP11A1 search recovered UGT1A1 and ABCB1 from primary human hepatocyte
+ChIP and perturbation experiments. The MR/CYP11B1 search recovered five
+aldosterone-responsive renal epithelial targets (Sgk1, Fkbp5, Rasl12, Tns1,
+and Tsc22d3) plus the human EGFR promoter lane. These target-gene lanes are
+general regulon evidence and do not upgrade the submitted upstream handoffs.
+
+The current working register contains 4,432 exportable target-gene rows and
+4,348 explicit-species materialization rows, including 4,027 high-source-
+confidence rows, 417 medium-high rows, and 207 primary-experiment-supported
+rows. Forty-eight named or composite holds have now been searched individually
+and are logged. All four submitted upstream handoffs remain holds; no SCI-
+specific target-gene evidence was identified in this tranche.
+
 ## Reproducibility
 
 Run:
