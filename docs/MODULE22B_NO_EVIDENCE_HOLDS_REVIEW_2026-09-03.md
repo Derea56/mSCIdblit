@@ -4442,6 +4442,11 @@ Mpz, Mrc1, Muc2, Myl9, or Myoc handoff as an upstream route to the TF; none of
 the eight exact upstream handoffs was promoted. The individual search log
 contains 2292 rows through M22B-IND-2292. This tranche added seven standalone
 target edges and seven evidence records.
+## Individual review 2301-2308
+
+Seven of the next eight rows retained reusable target capacity, covering four new and three reused standalone contexts. Adrb1 gained direct SP1 promoter evidence from rat beta1-adrenergic-receptor studies. Adrb2 gained direct SP1 promoter evidence from porcine receptor studies and E2F1 promoter/perturbation evidence from human pulmonary epithelial models. Adrb3 gained direct CEBPA promoter-binding and site-mutation evidence from mouse adipocyte differentiation. The Adra1a, Adra1b, and Adra1d rows reused the directly evidenced SP1 contexts established in the preceding tranche.
+
+Adra2c remained a bounded hold because its reviewed material established promoter architecture and putative GC-rich motifs without a verified named activating TF assignment. Adra2a likewise remained a hold because its reviewed material established receptor signaling rather than a direct activating TF-to-gene relationship. These assignments remain standalone target contexts and do not establish any submitted NE-DBH_SLC18A1 handoff as an upstream route to the TF; none of the eight exact upstream handoffs was promoted. The individual search log contains 2308 rows through M22B-IND-2308. This tranche added four standalone target edges and four evidence records; three rows reused prior target contexts.
 ## Individual review 2293-2300
 
 Six of the next eight rows retained reusable target capacity, covering seven standalone TF-to-target contexts. Fzd3 gained ZMIZ1 promoter-binding and perturbation evidence from a cerebral ischemia-reperfusion endothelial study, providing the closest injury comparator in this tranche. Fzd4 gained direct SMAD4 promoter evidence from porcine granulosa cells. Fzd7 gained direct SOX9 promoter evidence and DeltaNp63/TP63 enhancer evidence from non-SCI epithelial and mammary systems. Adra1a, Adra1b, and Adra1d gained SP1 promoter-binding and activation evidence from neuroblastoma or smooth-muscle models.
