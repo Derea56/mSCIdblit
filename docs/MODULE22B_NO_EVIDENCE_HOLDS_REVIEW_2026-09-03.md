@@ -557,6 +557,26 @@ rows, 425 medium-high rows, and 250 primary-experiment-supported rows. One
 hundred named or composite holds have now been searched individually and are
 logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0101–0108
+
+Eight additional holds were searched individually. The EDA/EDA2R search
+recovered a direct TP53-to-EDA2R target lane from primary human fibroblast and
+cancer-cell experiments, including intronic p53 occupancy and site-mutant
+reporter evidence. This is a reverse regulatory direction relative to the
+EDA2R receptor hold, so it was added as a standalone usable target without
+upgrading the receptor handoff. The seven serotonin-receptor searches did not
+identify receptor-subtype-specific terminal TF targets. Existing CREB/cFos
+evidence was retained as general receptor-response context only; the Htr1d
+search additionally found spinal motor-circuit receptor expression without a
+downstream target-gene assignment. None of the eight submitted upstream
+handoffs was upgraded.
+
+The working register now contains 4,476 exportable target-gene rows and 4,392
+explicit-species materialization rows, including 4,063 high-source-confidence
+rows, 425 medium-high rows, and 251 primary-experiment-supported rows. One
+hundred eight named or composite holds have now been searched individually and
+are logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
