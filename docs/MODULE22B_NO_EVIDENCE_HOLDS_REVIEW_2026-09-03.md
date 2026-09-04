@@ -2376,6 +2376,18 @@ retain reusable context, while the mGluR6/7/8 rows remain explicit holds.
 Register counts are unchanged; the individual search log now contains 1052
 rows through M22B-IND-1052.
 
+## Individual hold-search tranche 1053–1060
+
+Eight additional ionotropic glutamate rows were searched individually. The
+GluA1–3 and GluK1/GluK3 rows retained general CREB/c-Fos and BDNF context
+subject to calcium/NMDA-relay limitations. The GluA4 row also retained the
+direct NF-YB→Gria4 near-match, while GluK1/GluK4 and GluK1/GluK5 remained
+heteromer boundaries. None of the exact SLC17A6_GLS2 receptor-complex
+handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1060
+rows through M22B-IND-1060.
+
 ## Individual hold-search tranche 1013–1020
 
 Four ghrelin receptor rows, one canonical GHSR row, and three GIP receptor
