@@ -3519,3 +3519,17 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1772
 rows through M22B-IND-1772.
+## Individual hold-search tranche 1773–1780
+
+Three of eight rows retained reusable activating-target capacity: Egr1→Ptprz1,
+ETS1/Ets1→CD53/Cd53, and STAT5-associated activation of Il4ra. The
+IL1RL2_IL1RAP composites, IL4R_IL13RA2, and IL21R rows remained holds because
+the reviewed records addressed receptor-complex or receptor-family biology
+without establishing qualifying named activating TF-to-target relationships
+for the submitted targets.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1780
+rows through M22B-IND-1780.
