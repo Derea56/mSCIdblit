@@ -2340,6 +2340,18 @@ exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1028
 rows through M22B-IND-1028.
 
+## Individual hold-search tranche 1029–1036
+
+Two additional GIP receptor rows retained the separate canonical GIPR→CREB/
+TORC2→LPL target context without assigning GIP signaling to TSHR or VIPR1.
+Six connexin channel-pair rows were also searched individually. Their evidence
+remained at channel compatibility, expression, or gap-junction function; SCI
+Cx43 context did not resolve a terminal TF-to-target gene for any exact pair.
+Those six rows remain explicit holds.
+
+Register counts are unchanged; the individual search log now contains 1036
+rows through M22B-IND-1036.
+
 ## Individual hold-search tranche 1013–1020
 
 Four ghrelin receptor rows, one canonical GHSR row, and three GIP receptor
