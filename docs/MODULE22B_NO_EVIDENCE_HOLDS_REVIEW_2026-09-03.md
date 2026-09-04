@@ -447,6 +447,24 @@ confidence rows, 417 medium-high rows, and 221 primary-experiment-supported
 rows. Sixty-four named or composite holds have now been searched individually
 and are logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0065–0068
+
+Four additional holds were searched individually. The EDIL3-integrin-to-RUNX2
+search did not establish route-specific activation, but primary osteoblast
+studies recovered reusable RUNX2 target lanes for Ibsp and Galnt3. The generic
+BMP-SMAD hold recovered a human ID3 enhancer lane with Smad1/5 and Smad4
+occupancy. The GDF2/BMP9 hold recovered a mouse Hey1 promoter lane with
+Smad1/5/8 and Smad4 occupancy, and the GDF5 hold recovered a mouse Hes5
+SMAD-dependent promoter lane in hippocampal neurons. These are standalone
+regulon records; none upgrades the submitted ligand/receptor handoff, and all
+four contexts are non-SCI comparators.
+
+The working register now contains 4,451 exportable target-gene rows and 4,367
+explicit-species materialization rows, including 4,046 high-source-confidence
+rows, 417 medium-high rows, and 226 primary-experiment-supported rows. Sixty-
+eight named or composite holds have now been searched individually and are
+logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
