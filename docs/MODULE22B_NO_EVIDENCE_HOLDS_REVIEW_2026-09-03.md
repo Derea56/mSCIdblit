@@ -4150,3 +4150,17 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 2164
 rows through M22B-IND-2164.
+
+## Individual hold-search tranche 2165–2172
+
+Four of eight rows retained reusable activating-target capacity:
+SP1→ADGRE5 across the LPAR1, LPAR2, and LPAR3 rows, and
+EGR1/FOS/JUN/NFKB2/RUNX1/SP1/STAT1→CD44. LPAR1, LPAR2, LPAR4, and MCFD2
+remained holds because no named activating TF-to-target-gene relationship was
+established for those genes.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 2172
+rows through M22B-IND-2172.
