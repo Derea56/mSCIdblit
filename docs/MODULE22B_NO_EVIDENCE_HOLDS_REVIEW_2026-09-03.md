@@ -2388,6 +2388,18 @@ handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1060
 rows through M22B-IND-1060.
 
+## Individual hold-search tranche 1061–1068
+
+Two GluK3 heteromer rows, two GluN1/GluN2C/D rows, three mGluR6/7/8 rows,
+and one additional GluA1 row were searched individually. The kainate,
+NMDAR, and AMPA rows retained bounded CREB/BDNF/FOS context subject to
+subunit and calcium-relay limitations. The group-III mGluR rows remained
+explicit holds because no terminal TF target was established. None of the
+exact SLC17A6_GLS2 or SLC17A7_GLS handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1068
+rows through M22B-IND-1068.
+
 ## Individual hold-search tranche 1013–1020
 
 Four ghrelin receptor rows, one canonical GHSR row, and three GIP receptor
