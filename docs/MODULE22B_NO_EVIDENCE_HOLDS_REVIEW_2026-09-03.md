@@ -465,6 +465,23 @@ rows, 417 medium-high rows, and 226 primary-experiment-supported rows. Sixty-
 eight named or composite holds have now been searched individually and are
 logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0069–0072
+
+Four additional holds were searched individually. The GDF6 search recovered
+human ID1 and ID3 lanes from GDF6-dependent pSMAD1/5/8 occupancy and
+transcriptional regulation in melanoma cells. The GDF7 search recovered Lhx2
+and Lhx9 as medium-high regulatory-support lanes from primary developing
+spinal-cord experiments showing Gdf7-associated pSMAD1/5/8 activity and
+dorsal-interneuron identity. The two additional GDF7 receptor-complex holds
+reused those lanes only as context; their receptor-subtype-specific routes
+remain unresolved. None of the four submitted handoffs was upgraded.
+
+The working register now contains 4,455 exportable target-gene rows and 4,371
+explicit-species materialization rows, including 4,048 high-source-confidence
+rows, 419 medium-high rows, and 230 primary-experiment-supported rows. Seventy-
+two named or composite holds have now been searched individually and are
+logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
