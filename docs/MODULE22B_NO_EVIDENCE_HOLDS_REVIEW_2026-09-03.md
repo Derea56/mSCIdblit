@@ -1027,6 +1027,26 @@ medium-high rows. The current evidence register contains 345 records with
 rows through M22B-IND-0308. All eight submitted upstream handoffs remain
 holds.
 
+## Individual hold-search tranche 0309–0316
+
+Eight additional CD99/PILR and cadherin interaction rows were searched
+individually. The three CD99/PILR rows and the CDH12–integrin row remained at
+receptor binding, adaptor/signaling, adhesion, or neurite-outgrowth boundaries
+without a qualifying named activating TF target. The CDH1 homophilic row
+reused the existing high-confidence KLF4→CDH1 lane as separate regulon context.
+Four new standalone lanes were added: PAX3→Cdh15 in mouse myotome development,
+SMAD4→CDH2 in human pancreatic ductal epithelium, and CEBPB→CDH3 plus
+HOXA9→CDH3 in human cancer-cell promoter/perturbation studies. These are
+general or non-SCI comparator relationships and do not establish any submitted
+CD99/PILR or cadherin handoff.
+
+The working register now contains 4,517 exportable target-gene rows and 4,437
+explicit-species rows, including 4,093 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 349 records with
+`support_kind=primary_experiment`. The individual search log now contains 316
+rows through M22B-IND-0316. All eight submitted upstream handoffs remain
+holds.
+
 ## Reproducibility
 
 Run:
