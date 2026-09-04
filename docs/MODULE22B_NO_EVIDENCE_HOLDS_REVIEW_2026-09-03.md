@@ -376,6 +376,24 @@ rows. Forty-eight named or composite holds have now been searched individually
 and are logged. All four submitted upstream handoffs remain holds; no SCI-
 specific target-gene evidence was identified in this tranche.
 
+## Individual hold-search tranche 0049–0052
+
+Four additional holds were searched individually. The exact ALDH1A3 route was
+not established: a related RARalpha promoter study concerned ALDH1 rather than
+ALDH1A3. The RARA/RXRA and RARB/RXRB searches therefore reused compatible
+primary-study target lanes already in the register, including RARB, POU5F1,
+and SALL4A. A separate human RARB study recovered CYP26A1, while a human RARG
+CUT&RUN/knockout and agonist-response study recovered PTGES, CYP26B1, and
+DHRS3. These general receptor-target lanes do not upgrade the submitted
+CRABP2-to-ALDH1A3 handoffs.
+
+The current working register contains 4,436 exportable target-gene rows and
+4,352 explicit-species materialization rows, including 4,031 high-source-
+confidence rows, 417 medium-high rows, and 211 primary-experiment-supported
+rows. Fifty-two named or composite holds have now been searched individually
+and are logged. All four submitted upstream handoffs remain holds; no SCI-
+specific target-gene evidence was identified in this tranche.
+
 ## Reproducibility
 
 Run:
