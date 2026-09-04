@@ -4085,3 +4085,16 @@ exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 2124
 rows through M22B-IND-2124.
+
+## Individual hold-search tranche 2125–2132
+
+Five of eight rows retained reusable activating-target capacity: FOS→CD69,
+HIF1A→ITGB1 across both ITGB1 rows, HIF1A/SP1→ENG, and EGR1/RUNX1→BCR plus
+STAT1→CD22 for the composite receptor row. PTPRC, LAG3, and MCAM remained
+holds.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 2132
+rows through M22B-IND-2132.
