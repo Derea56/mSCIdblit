@@ -1124,6 +1124,22 @@ medium-high rows. The current evidence register contains 363 records with
 rows through M22B-IND-0348. All eight submitted upstream handoffs remain
 holds.
 
+## Individual hold-search tranche 0349–0356
+
+Eight claudin or CLEC2D/E–KLRB1-family rows were searched individually. Two
+new direct target lanes were added for the claudin rows: human VDR→CLDN2 and
+human JUN→CLDN3. A human RARA→KLRB1 lane was added for the KLRB1 row and
+retained as separate family context for the distinct mouse Klrb1a, Klrb1b,
+Klrb1c, and Klrb1f rows; it is not treated as paralog-specific evidence. The
+claudin homophilic and CLEC2D/E handoffs were not promoted.
+
+The working register now contains 4,534 exportable target-gene rows and 4,454
+explicit-species rows, including 4,110 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 366 records with
+`support_kind=primary_experiment`. The individual search log now contains 356
+rows through M22B-IND-0356. All eight submitted upstream handoffs remain
+holds.
+
 ## Reproducibility
 
 Run:
