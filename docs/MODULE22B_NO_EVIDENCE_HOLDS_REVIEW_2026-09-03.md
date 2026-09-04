@@ -3356,3 +3356,15 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1668
 rows through M22B-IND-1668.
+## Individual hold-search tranche 1669–1676
+
+Four of eight rows retained reusable activating-target capacity: SP1→IGF1R,
+USF2→IGF2R, CEBPB/MYC/SP1→INSR, and SP1→IGF1R again. The three integrin
+composites remained holds because individual subunit evidence was not
+transferred, and GPR152 remained a hold because no named activating
+TF-to-promoter result was established. These target contexts remain separate
+from the submitted upstream handoffs. None of the eight exact upstream
+handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1676
+rows through M22B-IND-1676.
