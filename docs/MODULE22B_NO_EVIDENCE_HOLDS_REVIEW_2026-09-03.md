@@ -3919,3 +3919,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 2020
 rows through M22B-IND-2020.
+
+## Individual hold-search tranche 2021–2028
+
+Six of eight rows retained reusable activating-target capacity:
+SP1/RUNX1→ITGA2, Sp3→ITGA3, SP1→ITGA6, EGR1→ITGA7, SP1→ITGA9, and
+SP1/ETS1→ITGAV. SDC1 and SV2A remained holds; the available SDC1 evidence
+was ZEB1-associated repression rather than activation.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 2028
+rows through M22B-IND-2028.
