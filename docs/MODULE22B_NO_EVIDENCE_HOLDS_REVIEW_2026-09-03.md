@@ -855,6 +855,26 @@ rows, 433 medium-high rows, and 255 primary-experiment-supported rows. Two
 hundred forty named or composite holds have now been searched individually and
 are logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0237–0244
+
+Eight additional chemokine and atypical-receptor rows were searched
+individually. CCL2/ACKR1, CCL2/ACKR2, CCL2/CCR2, CCL2/CCR5, CCL21/ACKR4,
+CCL21/CCR7, and CCL21a/ACKR4 remained at transport, scavenging,
+ligand-specificity, or pathway/function boundaries. The CCL19/CCR7 search
+identified reusable mouse Klf2→S1pr1 regulatory evidence: primary T-cell and
+thymocyte studies support KLF2-dependent S1P1 expression and promoter
+activation, while CCL19 stimulation preceded EDG1/S1PR1 expression through
+KLF2 in a separate T-cell study. This standalone target lane was added, but
+the original CCL19/CCR7 handoff remains a hold because upstream ligand-to-TF
+activation was not established and the evidence is not SCI-specific.
+
+The working register now contains 4,487 exportable target-gene rows and 4,403
+explicit-species materialization rows, including 4,065 high-source-confidence
+rows, 434 medium-high rows, and 255 primary-experiment-supported rows. Two
+hundred forty-eight named or composite holds have now been searched
+individually and are logged. All four submitted upstream handoffs remain
+holds.
+
 ## Reproducibility
 
 Run:
