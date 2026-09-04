@@ -4244,3 +4244,25 @@ handoffs was promoted.
 Register counts now include eight additional standalone target edges and eight
 evidence records; the individual search log contains 2212 rows through
 M22B-IND-2212.
+
+## Individual review 2213-2220
+
+The next eight holds were reviewed with the same general target-gene standard,
+including non-SCI evidence where the target mechanism was experimentally
+supported. Six rows retained reusable activating-target capacity, representing
+nine TF-to-target contexts: MYC to TFRC; HIF2A to TNFRSF11B; HIF1A to ITGB1;
+IKZF1 to CD180; FOXA1, ESR1, and FOXM1 to AGR2; and RUNX3 to ITGAL. The
+evidence included promoter binding, reporter activation, depletion or
+loss-of-function effects, and site-specific promoter tests across lymphoma,
+bone, intestinal wound, myeloma, breast-cancer, lung-cancer, and immune-cell
+models.
+
+The LTF-to-LRP11 and LTF-to-TREML2 rows remained bounded holds. A reported
+MAZ/LRP11 lead was not retained because the verified source record available in
+this pass did not unambiguously establish the promoter-level claim needed for a
+reusable edge. These target contexts remain separate from the submitted
+upstream handoffs. None of the eight exact upstream handoffs was promoted.
+
+Register counts now include eight additional standalone target edges and eight
+evidence records; the individual search log contains 2220 rows through
+M22B-IND-2220.
