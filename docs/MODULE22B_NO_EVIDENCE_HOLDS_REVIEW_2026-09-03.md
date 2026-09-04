@@ -3390,3 +3390,15 @@ upstream handoffs. None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1692
 rows through M22B-IND-1692.
+## Individual hold-search tranche 1693–1700
+
+Five of eight rows retained reusable activating-target capacity: NFKB2→CD70,
+STAT1→IFNLR1, GATA3→IL6RA, and IRF1/STAT1→CD40 twice. PTCH2/SMO and the
+IL11 receptor-complex rows remained composite holds, and CD27 remained a hold
+because its available evidence did not establish a named activating
+TF-to-promoter relationship. These target contexts remain separate from the
+submitted upstream handoffs. None of the eight exact upstream handoffs was
+promoted.
+
+Register counts are unchanged; the individual search log now contains 1700
+rows through M22B-IND-1700.
