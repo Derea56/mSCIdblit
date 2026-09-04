@@ -911,6 +911,23 @@ rows, 566 medium-high rows, and 265 primary-experiment-supported rows. The
 individual search log now contains 260 rows through M22B-IND-0260. All four
 submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0261–0268
+
+Eight additional chemokine rows were searched individually. The Ccl27a/b
+branches remained ligand/receptor-specificity or paralog boundaries, and the
+Ccl3-Ackr2 and Ccl3-Ccr1l1 branches remained scavenging or ligand-exclusion
+boundaries. One reusable standalone lane was recovered: CEBPB→CCL3 from
+human chondrocyte promoter-binding, mutation, overexpression, and siRNA
+experiments. The Ccl3-Ccr1 handoff remains a hold because this is general
+cartilage-inflammation evidence, not evidence that CCR1 activates CEBPB in
+SCI.
+
+The working register now contains 4,497 exportable target-gene rows and 4,413
+explicit-species materialization rows, including 4,073 high-source-confidence
+rows, 566 medium-high rows, and 266 primary-experiment-supported rows. The
+individual search log now contains 268 rows through M22B-IND-0268. All four
+submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
