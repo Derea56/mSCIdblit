@@ -789,6 +789,22 @@ rows, 433 medium-high rows, and 255 primary-experiment-supported rows. Two
 hundred eight named or composite holds have now been searched individually and
 are logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0205–0212
+
+Eight additional adhesion and complement rows were searched individually. The
+C1QL1–4/ADGRB3 searches remained at synaptic adhesion, receptor-complex, or
+CREB-readout boundaries; the existing CREB-to-cFos lane was retained as general
+context only for C1QL4. The intact-C3/CR3-CR4 and C4a/C3AR1 searches remained
+at processed-complement-fragment recognition and phagocyte or inflammatory
+outputs, without an exact terminal TF target. No new lane was added and none of
+the eight upstream handoffs was upgraded.
+
+The working register remains at 4,486 exportable target-gene rows and 4,402
+explicit-species materialization rows, including 4,065 high-source-confidence
+rows, 433 medium-high rows, and 255 primary-experiment-supported rows. Two
+hundred sixteen named or composite holds have now been searched individually
+and are logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
