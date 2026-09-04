@@ -3187,6 +3187,20 @@ upstream handoffs. None of the eight exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1556
 rows through M22B-IND-1556.
 
+## Individual hold-search tranche 1557–1564
+
+Four of eight rows retained reusable activating-target capacity: HGF/CD44,
+HIF1A→ITGB1, ETS1→NRP1, and AP-1/ETS1→HRH1. The HGF/CD44 result is a
+non-SCI human melanocyte study; the other target contexts are human/mouse or
+human receptor-regulation evidence. SDC1 was not counted because the
+available ZEB1 result was repressive. No qualifying activating context was
+found for SDC2, ST14, or HRH2. These target contexts remain separate from the
+submitted upstream handoffs. None of the eight exact upstream handoffs was
+promoted.
+
+Register counts are unchanged; the individual search log now contains 1564
+rows through M22B-IND-1564.
+
 Run:
 
 ```text
