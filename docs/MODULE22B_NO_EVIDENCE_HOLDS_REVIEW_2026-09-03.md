@@ -2118,6 +2118,19 @@ CREB-mediated handoff. All eight exact upstream rows remain holds.
 Register counts are unchanged; the individual search log now contains 884
 rows through M22B-IND-0884.
 
+## Individual hold-search tranche 0885–0892
+
+Eight GAD2-linked GABA-A branches were searched individually, covering
+alpha1-, alpha2-, alpha3-, alpha4-, alpha5-, and alpha6-containing assemblies,
+with one SLC6A1-associated source branch. The existing GABAA→CREB/BDNF
+program and CREB→BDNF target lanes were retained as reusable context for
+every row. SCI astrocyte GABA/BDNF evidence was recorded, but it does not
+resolve the receptor assemblies, source coupling, or direct CREB-mediated
+handoff. All eight exact upstream rows remain holds.
+
+Register counts are unchanged; the individual search log now contains 892
+rows through M22B-IND-0892.
+
 ## Reproducibility
 
 Run:
