@@ -2411,6 +2411,17 @@ boundaries. None of the exact SLC17A7_GLS handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1076
 rows through M22B-IND-1076.
 
+## Individual hold-search tranche 1077–1084
+
+Two additional NMDAR rows retained bounded CREB/BDNF context, while three
+group-III mGluR rows remained explicit no-target holds. Three kainate
+heteromer rows retained separate JNK3/c-Jun-family and human JUN→MMP9 target
+context without assigning that terminal lane to the exact heteromers or
+source composite. None of the exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1084
+rows through M22B-IND-1084.
+
 ## Individual hold-search tranche 1013–1020
 
 Four ghrelin receptor rows, one canonical GHSR row, and three GIP receptor
