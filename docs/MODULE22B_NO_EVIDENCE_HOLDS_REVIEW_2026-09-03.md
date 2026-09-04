@@ -2220,6 +2220,19 @@ or a direct CREB-mediated handoff. All eight exact upstream rows remain holds.
 Register counts are unchanged; the individual search log now contains 948
 rows through M22B-IND-0948.
 
+## Individual hold-search tranche 0949–0956
+
+Five GAD2/SLC6A13-linked GABA-A subtype rows, two GAD2/SLC6A6-linked
+GABAB1/2 rows, and one additional GABA-A row were searched individually. The
+GABA-A rows retain the existing GABAA→CREB/BDNF program and CREB→BDNF target
+lanes as reusable context. The GABAB subunit rows retain the existing
+GABAB-ERK/CREB program and CREB→BDNF target context. SCI astrocyte
+GABA/BDNF evidence was recorded, but it does not resolve subunit-specific
+activation, transporter coupling, or direct CREB-mediated handoff.
+
+Register counts are unchanged; the individual search log now contains 956
+rows through M22B-IND-0956.
+
 ## Reproducibility
 
 Run:
