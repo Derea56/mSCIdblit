@@ -1856,6 +1856,19 @@ neuronal-comparator observations.
 Register counts are unchanged; the individual search log now contains 732
 rows through M22B-IND-0732.
 
+## Individual hold-search tranche 0733–0740
+
+Eight FGF5/6/7/8 ligand/receptor rows were searched individually. No exact
+ligand/receptor terminal TF assay was established. The rat ELK1→Ier2/pip92
+promoter lane was reused as general FGF-response context for all eight, while
+the FGF8→NR2F1 expression readout was kept separate because it did not
+establish direct TF activation. These are non-SCI epithelial, developmental,
+cardiac, neuronal, or skeletal-comparator observations; the upstream
+handoffs remain separate holds.
+
+Register counts are unchanged; the individual search log now contains 740
+rows through M22B-IND-0740.
+
 ## Reproducibility
 
 Run:
