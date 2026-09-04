@@ -1647,6 +1647,24 @@ medium-high rows. The current evidence register contains 408 records with
 `support_kind=primary_experiment`. The individual search log now contains 628
 rows through M22B-IND-0628.
 
+## Individual hold-search tranche 0629–0636
+
+Eight steroid and adrenal-metabolism rows were searched individually. New
+direct or functionally anchored target lanes were added for human
+NR1H3→SULT2A1, human SP1→SULT2B1, human VDR→SULT2B1, mouse Srebf2→Srd5a2,
+human AR→SRD5A3, human NR3C2→SCNN1A, mouse NR4A1→Cyp21a1, and human
+NR5A1→CYP21A2. The AR→SRD5A1 literature was retained as unresolved at the
+direct-target level because the reviewed study established AR-dependent
+transcriptional regulation but not direct AR occupancy for SRD5A1. These are
+general TF-to-target observations from non-SCI primary studies; the steroid
+and adrenal handoffs remain separate holds and were not upgraded by inference.
+
+Register counts are now 5,278 exportable target-gene rows and 4,504
+explicit-species rows, including 4,160 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 416 records with
+`support_kind=primary_experiment`. The individual search log now contains 636
+rows through M22B-IND-0636.
+
 ## Reproducibility
 
 Run:
