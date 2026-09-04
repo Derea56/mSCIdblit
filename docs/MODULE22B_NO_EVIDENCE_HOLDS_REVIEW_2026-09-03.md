@@ -1632,6 +1632,21 @@ medium-high rows. The current evidence register contains 402 records with
 `support_kind=primary_experiment`. The individual search log now contains 620
 rows through M22B-IND-0620.
 
+## Individual hold-search tranche 0621–0628
+
+Eight steroid-metabolism rows were searched individually. New direct target
+lanes were added for human ESR1→SULT2A1, human CEBPA→SULT2A1, human
+NR1I2→SULT1E1, mouse HNF4A→Ppara, human PPARA→NR1I2, and mouse Rora→Sult1e1.
+No exact PPARD→SULT1E1 or PPARG→SULT1E1 lane was established. These are
+general TF-to-target observations from non-SCI primary studies; the steroid or
+enzyme handoffs remain separate holds and were not upgraded by inference.
+
+Register counts are now 5,276 exportable target-gene rows and 4,502
+explicit-species rows, including 4,152 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 408 records with
+`support_kind=primary_experiment`. The individual search log now contains 628
+rows through M22B-IND-0628.
+
 ## Reproducibility
 
 Run:
