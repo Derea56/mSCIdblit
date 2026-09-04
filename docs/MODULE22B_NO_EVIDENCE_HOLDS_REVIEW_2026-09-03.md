@@ -971,19 +971,60 @@ holds.
 
 Eight additional Ccl8, Ccl9, CD160, and CD1D1 interaction rows were searched
 individually. Four Ccl8 receptor branches reused the standalone IRF1→Ccl8
-lane recovered in the prior tranche. Two new standalone lanes were recovered:
+lane recovered in the prior tranche. One new standalone lane was recovered:
 RXRA→Ccl9 from mouse macrophage knockout, ligand, promoter-mutation, ChIP, and
-sequence-specific binding experiments, and STAT3→Cd48 from mouse macrophage
-promoter-reporter and ChIP/perturbation evidence. The CD160–TNFRSF14 and
-CD1D1–CEACAM5 rows remained at receptor-family or adhesion/interaction
-boundaries without a named terminal TF target. No upstream handoff was
-upgraded, and the reusable lanes are general or non-SCI comparator evidence.
+sequence-specific binding experiments. The CD160–TNFRSF14 and CD1D1–CEACAM5
+rows remained at receptor-family or adhesion/interaction boundaries without a
+named terminal TF target. No upstream handoff was upgraded, and the reusable
+lane is general or non-SCI comparator evidence.
+
+The working register now contains 4,507 exportable target-gene rows and 4,427
+explicit-species rows, including 4,083 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 339 records with
+`support_kind=primary_experiment`. The individual search log now contains 292
+rows through M22B-IND-0292. All eight submitted upstream handoffs remain
+holds.
+
+## Individual hold-search tranche 0293–0300
+
+Eight additional CD200, CD1D2, CD209A, CD276, CD40, CD46, and CD48 interaction
+rows were searched individually. The Cd1d2–Pira2, Cd209a–Ceacam1,
+Cd276–Treml2, and Cd46–Jag1 rows remained at antigen-presentation,
+checkpoint, adhesion, or receptor-family boundaries without a qualifying named
+terminal target. Two Cd200 branches yielded reusable CD200R1 target lanes:
+CEBPB→Cd200r1 from primary mouse microglial qChIP and perturbation experiments
+and NFKB1→CD200R1 from human promoter-binding and perturbation experiments. The
+Cd40lg–Cd40 review yielded RELA→Icam1 from CD40L-stimulated mouse neuronal
+promoter ChIP and p65 perturbation evidence. The Cd48–Cd244a review yielded
+STAT3→Cd48 from primary mouse macrophage promoter-reporter, ChIP, and
+perturbation evidence. These standalone lanes are reusable general or
+non-SCI comparator evidence; none establishes the submitted upstream handoff.
 
 The working register now contains 4,511 exportable target-gene rows and 4,431
 explicit-species rows, including 4,087 high-source-confidence rows and 566
 medium-high rows. The current evidence register contains 343 records with
-`support_kind=primary_experiment`. The individual search log now contains 292
-rows through M22B-IND-0292. All eight submitted upstream handoffs remain
+`support_kind=primary_experiment`. The individual search log now contains 300
+rows through M22B-IND-0300. All eight submitted upstream handoffs remain
+holds.
+
+## Individual hold-search tranche 0301–0308
+
+Eight additional CD52, CD55, CD55B, CD6, CD80, CD8A, CD96, and CD99
+interaction rows were searched individually. The Cd52–Siglecg, Cd55–Adgre5,
+Cd55b–Adgre5, Cd8a–Ceacam5, Cd96–Pvr, and Cd99–Cd99 rows remained at
+receptor-signaling, mechanosensing, checkpoint, adhesion, or phenotype
+boundaries without a qualifying named terminal target. Two reusable standalone
+lanes were recovered: SP1→ALCAM from human promoter mutagenesis, ChIP, and
+overexpression experiments, and RELA→CD274 from primary human monocyte
+promoter ChIP, knockdown, and promoter-mutation experiments. These lanes are
+general non-SCI comparator evidence and do not establish the CD6–ALCAM or
+CD80–CD274 upstream handoffs.
+
+The working register now contains 4,513 exportable target-gene rows and 4,433
+explicit-species rows, including 4,089 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 345 records with
+`support_kind=primary_experiment`. The individual search log now contains 308
+rows through M22B-IND-0308. All eight submitted upstream handoffs remain
 holds.
 
 ## Reproducibility
