@@ -3161,6 +3161,20 @@ upstream handoffs. None of the eight exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1540
 rows through M22B-IND-1540.
 
+## Individual hold-search tranche 1541–1548
+
+Five of eight rows retained reusable activating-target capacity: HNF4 and
+ERα/SP1/C/EBPβ contexts for PRLR; NF-κB/RELA→C5AR1; MECP2→GRM7;
+PITX1→MTNR1A; and CREB/GATA2→HCRTR2. These are non-SCI rat, ovine, human,
+or human/mouse-comparator endocrine, neuronal, hepatoma, or receptor-
+regulation contexts. ADRA2A gained only direct FOXO1 repression, while no
+qualifying activating context was found for C5AR2 or HCRTR1; those three
+rows remain holds. These target contexts remain separate from the submitted
+upstream handoffs. None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1548
+rows through M22B-IND-1548.
+
 Run:
 
 ```text
