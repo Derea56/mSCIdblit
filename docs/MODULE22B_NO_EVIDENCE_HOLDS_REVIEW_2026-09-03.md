@@ -2272,6 +2272,22 @@ handoff. All eight exact upstream rows remain holds.
 Register counts are unchanged; the individual search log now contains 980
 rows through M22B-IND-0980.
 
+## Individual hold-search tranche 0981–0988
+
+Seven GAD2/SLC6A8-linked GABA-A subtype rows were searched individually,
+covering alpha3-, alpha4-, alpha5-, and alpha6-containing assemblies with
+beta2, beta3, delta, gamma2, or theta components. The existing GABAA→CREB/BDNF
+program and CREB→BDNF target lanes were retained as reusable context for each
+row. A GDF11-TGFBR1-ACVR2A receptor-composite row was also searched: primary
+receptor-reconstitution evidence implicated TGFBR1/ALK5 and Smad3 reporter
+signaling, while existing SMAD2/3→FSTL3 and SMAD2/3→SERPINE1 lanes supplied
+separate target-gene context. None of the eight exact upstream handoffs was
+promoted; subtype, transporter, receptor-branch, terminal-target, and SCI
+receiver-cell limitations remain recorded per row.
+
+Register counts are unchanged; the individual search log now contains 988
+rows through M22B-IND-0988.
+
 ## Reproducibility
 
 Run:
