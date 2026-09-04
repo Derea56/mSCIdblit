@@ -2055,6 +2055,18 @@ remain holds.
 Register counts are unchanged; the individual search log now contains 844
 rows through M22B-IND-0844.
 
+## Individual hold-search tranche 0845–0852
+
+Eight SLC6A6-linked GABA-A subtype rows were searched individually, spanning
+alpha1-, alpha2-, alpha3-, and alpha4-containing assemblies. The existing
+GABAA→CREB/BDNF program and CREB→BDNF target lanes were retained as reusable
+context for each row. SCI astrocyte GABA/BDNF evidence was recorded, but it
+does not resolve the receptor assemblies, transporter coupling, or a direct
+CREB-mediated handoff. All eight exact upstream rows remain holds.
+
+Register counts are unchanged; the individual search log now contains 852
+rows through M22B-IND-0852.
+
 ## Reproducibility
 
 Run:
