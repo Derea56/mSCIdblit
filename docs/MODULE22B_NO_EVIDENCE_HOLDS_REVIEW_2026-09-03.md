@@ -2820,6 +2820,19 @@ promoted.
 Register counts are unchanged; the individual search log now contains 1348
 rows through M22B-IND-1348.
 
+## Individual hold-search tranche 1349–1356
+
+All eight GNAI2 branches retained reusable target-gene capacity from
+independent evidence: SP1→F2R, SPI1→FPR1, SP1→IGF1R, SP1→LHCGR,
+TEAD4→LPAR3, PITX1→MTNR1A, BMAL1/CLOCK→MTNR1B, and ETS1→OPRD1. The
+MTNR1A evidence comes from renal injury biology, but it is not SCI-specific;
+the remaining contexts are also non-SCI. None of these separate target
+contexts was assigned to a GNAI2 source branch, and none of the eight exact
+upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1356
+rows through M22B-IND-1356.
+
 Run:
 
 ```text
