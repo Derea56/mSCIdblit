@@ -1603,6 +1603,21 @@ medium-high rows. The current evidence register contains 396 records with
 `support_kind=primary_experiment`. The individual search log now contains 604
 rows through M22B-IND-0604.
 
+## Individual hold-search tranche 0605–0612
+
+Eight chemokine/receptor rows were searched individually. Existing standalone
+target lanes were reused for ACKR1 and CXCR1. New direct target lanes were
+added for human GATA1→CCR3, human HIC1→ACKR3/CXCR7, human IRF3→CXCR3, and
+mouse Stat1→Cxcr3. These are general TF-to-target observations from non-SCI
+primary studies; the chemokine-to-receptor handoffs remain separate holds and
+were not upgraded by inference.
+
+Register counts are now 5,262 exportable target-gene rows and 4,486
+explicit-species rows, including 4,144 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 400 records with
+`support_kind=primary_experiment`. The individual search log now contains 612
+rows through M22B-IND-0612.
+
 ## Reproducibility
 
 Run:
