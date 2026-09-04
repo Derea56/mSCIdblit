@@ -2400,6 +2400,17 @@ exact SLC17A6_GLS2 or SLC17A7_GLS handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1068
 rows through M22B-IND-1068.
 
+## Individual hold-search tranche 1069–1076
+
+Eight additional AMPA/kainate rows were searched individually. GluA2 and
+GluA3 retained general CREB/c-Fos and BDNF context with RNA-editing and
+calcium-relay limitations; GluK1/GluK3 rows retained the same bounded
+ionotropic context, while GluK1/GluK4 and GluK1/GluK5 remained heteromer
+boundaries. None of the exact SLC17A7_GLS handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1076
+rows through M22B-IND-1076.
+
 ## Individual hold-search tranche 1013–1020
 
 Four ghrelin receptor rows, one canonical GHSR row, and three GIP receptor
