@@ -2364,6 +2364,18 @@ promoted.
 Register counts are unchanged; the individual search log now contains 1044
 rows through M22B-IND-1044.
 
+## Individual hold-search tranche 1045–1052
+
+Three kainate/NMDAR-associated rows were searched individually, retaining
+general CREB/c-Fos and BDNF target context while preserving NMDA-relay and
+subunit-specificity limitations. Three mGluR6/7/8 rows were also searched;
+their evidence remained at group-III Gi/o signaling, expression, or neural
+physiology and did not establish a terminal TF target. The ionotropic rows
+retain reusable context, while the mGluR6/7/8 rows remain explicit holds.
+
+Register counts are unchanged; the individual search log now contains 1052
+rows through M22B-IND-1052.
+
 ## Individual hold-search tranche 1013–1020
 
 Four ghrelin receptor rows, one canonical GHSR row, and three GIP receptor
