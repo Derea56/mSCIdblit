@@ -254,6 +254,25 @@ The current working register contains 4,394 exportable target-gene rows and
 confidence rows, 417 medium-high rows, and 169 primary-experiment-supported
 rows. Twenty named holds have now been searched individually and are logged.
 
+## Individual hold-search tranche 0021–0024
+
+Four additional holds were searched individually. The GABAB2 search recovered
+receptor interaction with CREB2/ATFx and reporter activation but no
+receptor-specific target gene; the existing standalone ATF4→DDIT3 lane was
+reused without changing the handoff. The Wnt5A/FZD6 search likewise did not
+establish the submitted CTNNB1 route, while existing CTNNB1→MYC and
+CTNNB1→CCND1 lanes were reused as separate regulon context. The EGR1 search
+recovered a primary mouse renal-injury study supporting direct EGR1→SOX9
+activation, which was added as a standalone target lane. The SAA2/FPR2 search
+did not recover a qualifying EGR1 target-gene result. All four submitted
+upstream handoffs remain holds.
+
+The current working register contains 4,395 exportable target-gene rows and
+4,311 explicit-species materialization rows, including 3,894 high-source-
+confidence rows, 417 medium-high rows, and 170 primary-experiment-supported
+rows. Twenty-four named or composite holds have now been searched individually
+and are logged.
+
 ## Reproducibility
 
 Run:
