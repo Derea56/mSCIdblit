@@ -3129,6 +3129,24 @@ handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1524
 rows through M22B-IND-1524.
 
+## Individual hold-search tranche 1525–1532
+
+Seven of eight rows retained reusable target-gene capacity. H60a, H60b,
+and H60c each gained separate Klrk1 and HCST/DAP10 contexts from mouse
+cytotoxic lymphocytes and human NK/CD8 T cells; Hapln1→AGER gained an
+NF-kB/RELA promoter context; Hapln1→Il1rl1 gained TBX21/STAT4 promoter
+context; Hapln1→Prtg gained ZEB1 promoter context; and Hapln1→Tnfrsf11b
+reused HIF2A promoter evidence. The IL1RL1 evidence is from non-SCI
+antiviral type-1 T cells, the AGER evidence from non-SCI human endothelial
+metabolic inflammation, and the PRTG/TNFRSF11B contexts are non-SCI cancer
+or bone comparator models. IGDCC4 remained without a qualifying named
+TF-target activation result because the available hits were motif/database
+predictions only. These target contexts remain separate from the submitted
+upstream handoffs. None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1532
+rows through M22B-IND-1532.
+
 Run:
 
 ```text
