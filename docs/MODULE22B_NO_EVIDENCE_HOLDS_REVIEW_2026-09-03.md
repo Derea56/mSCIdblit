@@ -1798,6 +1798,23 @@ PARD3 polarity biology, and receptor-family pathway findings separate from
 downstream TF-target evidence. Register counts are unchanged; the individual
 search log now contains 700 rows through M22B-IND-0700.
 
+## Individual hold-search tranche 0701–0708
+
+Eight fibrinogen and FGF ligand/receptor rows were searched individually. No
+qualifying named downstream TF-target lane was established for FGB→ITGA2B,
+FGB→ITGB3, or the exact FGF10/FGF15 receptor pairs. A primary rat
+ELK1→Ier2/pip92 promoter lane was added from bFGF-responsive neuronal cells
+and reused as general FGF target context for the six FGF rows; the source did
+not isolate the submitted ligand or FGFR paralog. These are non-SCI platelet,
+neuronal, developmental, or cancer-comparator observations, and none of the
+upstream receptor handoffs was upgraded by inference.
+
+Register counts are now 5,317 exportable target-gene rows and 4,543
+explicit-species rows, including 4,199 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 455 records with
+`support_kind=primary_experiment`. The individual search log now contains 708
+rows through M22B-IND-0708.
+
 ## Reproducibility
 
 Run:
