@@ -4385,6 +4385,7 @@ separate from the submitted upstream handoffs; none of the eight exact
 upstream handoffs was promoted. The individual search log contains 2268 rows
 through M22B-IND-2268.
 
+
 ## Individual review 2269-2276
 
 All eight rows retained reusable target capacity, covering nine standalone or
@@ -4405,3 +4406,20 @@ comparator; the other contexts are non-SCI cancer, general regulatory, or
 hepatic comparators. The individual search log contains 2276 rows through
 M22B-IND-2276. This tranche added three standalone target edges and three
 evidence records; none of the eight exact upstream handoffs was promoted.
+## Individual review 2277-2284
+
+Six of the next eight rows retained reusable target or regulatory-support
+capacity, covering seven standalone contexts. EPHB2 gained direct RELA/p65
+promoter-binding and site-mutagenesis evidence in human primary fetal neurons
+after TNF exposure and scratch injury. Itgam gained functional SPI1/PU.1
+induction evidence in mouse myeloid differentiation. LRP1 reused YAP1 and RECK
+reused SP1. CD248 gained direct HIF2A and ETS1 promoter contexts from human
+endosialin studies, and CLEC14A gained an SMAD1/5 promoter-occupancy context
+from BMP-stimulated endothelial data.
+
+IFNAR1 and CD93 remained bounded holds: the reviewed material did not identify
+a named activating TF-to-gene relationship meeting the reusable-target
+standard. These assignments remain separate from the submitted Mmp9 or Mmrn2
+upstream handoffs; none of the eight exact upstream handoffs was promoted.
+The individual search log contains 2284 rows through M22B-IND-2284. This
+tranche added five standalone target edges and five evidence records.
