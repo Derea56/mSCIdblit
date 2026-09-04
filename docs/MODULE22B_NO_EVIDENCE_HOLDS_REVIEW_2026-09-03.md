@@ -3332,3 +3332,15 @@ upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1652
 rows through M22B-IND-1652.
+## Individual hold-search tranche 1653–1660
+
+Six of eight rows retained reusable activating-target capacity: HIF1A→ITGB2,
+ETS1→ITGB3, Ets1-associated activation of CD209A, RUNX3:CBFB→ITGAL,
+HIF1A→ITGB2 again, and EGR1/SP1→CD28. RHAG and CD209F remained holds because
+no qualifying named activating TF-to-target result was established; CD209A
+evidence was not transferred to the distinct CD209F gene. These target
+contexts remain separate from the submitted upstream handoffs. None of the
+eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1660
+rows through M22B-IND-1660.
