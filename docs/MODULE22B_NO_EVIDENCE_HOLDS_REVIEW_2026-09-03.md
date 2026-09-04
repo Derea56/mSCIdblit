@@ -1245,6 +1245,22 @@ medium-high rows. The current evidence register contains 385 records with
 `support_kind=primary_experiment`. The individual search log now contains 404
 rows through M22B-IND-0404.
 
+## Individual hold-search tranche 0405–0412
+
+Eight COL2A1 collagen-integrin or syndecan/CD44 rows were searched
+individually. Existing standalone target lanes were reused for SDC1, SDC4,
+CD44, GP6/Gp6, ITGA10, ITGA1, and ITGA2. These lanes provide general,
+species-resolved TF-to-target context, but none establishes the COL2A1
+upstream handoff. No exact standalone target lane was established for ITGA11.
+The reviewed COL2A1 handoffs therefore remain holds, with no new register rows
+added in this tranche.
+
+Register counts remain 5,247 exportable target-gene rows and 4,471
+explicit-species rows, including 4,129 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 385 records with
+`support_kind=primary_experiment`. The individual search log now contains 412
+rows through M22B-IND-0412.
+
 ## Reproducibility
 
 Run:
