@@ -3546,3 +3546,17 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1788
 rows through M22B-IND-1788.
+## Individual hold-search tranche 1789–1796
+
+Three of eight rows retained reusable activating-target capacity: STAT5A/B or
+HNF4→PRLR, EGR1/EGR2/ZBTB7A/HEY1/SP1→ACVR1, and Smad-associated activation of
+BAMBI. IL22RA2, TGFBR3, ACVR2A, ACVR2B, and ACTR2 remained holds because the
+reviewed records addressed soluble-antagonist, receptor-complex, or
+repressive biology without establishing qualifying activating TF-to-target
+relationships.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1796
+rows through M22B-IND-1796.
