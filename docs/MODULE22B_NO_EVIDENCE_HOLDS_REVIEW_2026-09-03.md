@@ -3368,3 +3368,14 @@ handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1676
 rows through M22B-IND-1676.
+## Individual hold-search tranche 1677–1684
+
+Five of eight rows retained reusable activating-target capacity: USF2→IGF2R,
+CEBPB/MYC/SP1→INSR, JUND/αNAC-dependent LRP6 transcription, TP53→DCC, and
+STAT1→IGFLR1. TMEM219, FZD8, and ACVR1B remained holds because the available
+evidence did not establish named activating TF-to-promoter relationships.
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1684
+rows through M22B-IND-1684.
