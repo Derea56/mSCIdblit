@@ -1,0 +1,158 @@
+{
+  "release_name": "mSCIdblit Module 20B-24B mechanism graph",
+  "bundle_name": "module20_24_mechanism_graph",
+  "release_id": "module20_24_mechanism_graph:2026-09-04",
+  "release_status": "conservative_register_backed_snapshot",
+  "source_repo": "mSCIdblit",
+  "target_repo": "mSCS",
+  "source_scope": "validated Module 20B-24B edge and evidence registers",
+  "generated_at": "2026-09-04",
+  "canonical_database_materialization": false,
+  "authoritative_pathway_snapshot": true,
+  "replacement_policy": "Importing this bundle replaces the selected active mechanism release in mSCS; it does not alter atlas-derived tables.",
+  "input_registers": [
+    {
+      "module": "20B",
+      "file": "module20b_edge_register.tsv",
+      "sha256": "786887546e777b0207b2250eb120ecc71b69e36092a965381f584f57c12672c6"
+    },
+    {
+      "module": "20B",
+      "file": "module20b_evidence_register.tsv",
+      "sha256": "778ab10e0535bda0f38bd658ef4accc58e8e1fabdfb734a472534670d7ac6602"
+    },
+    {
+      "module": "21B",
+      "file": "module21b_edge_register.tsv",
+      "sha256": "52b0543feb576177be72c92b324de6aa60c2d16a7d09160f8ddc5cf6a9ebb973"
+    },
+    {
+      "module": "21B",
+      "file": "module21b_evidence_register.tsv",
+      "sha256": "2be33b6001d0aede5348695e1507b74c5dc8f08c244b9029f741bdbd253f132b"
+    },
+    {
+      "module": "22B",
+      "file": "module22b_edge_register.tsv",
+      "sha256": "dca5e462e9e8d3142e4f46db24580a8a7ed89d402eac2b43ee1d044c20639508"
+    },
+    {
+      "module": "22B",
+      "file": "module22b_evidence_register.tsv",
+      "sha256": "54ed5c98a12a371e50af820d12f7b4a0d31b0e5e1c7bbee60ae1671bcb3af301"
+    },
+    {
+      "module": "23B",
+      "file": "module23b_edge_register.tsv",
+      "sha256": "672825a3712697f4ee2d101ce439889c0aa52d549075f48a52d3991a4762798f"
+    },
+    {
+      "module": "23B",
+      "file": "module23b_evidence_register.tsv",
+      "sha256": "a14ea648319acb61bec2ee8c942ae438a8d317376154b20063ed17cb67537e1f"
+    },
+    {
+      "module": "24B",
+      "file": "module24b_edge_register.tsv",
+      "sha256": "740e1aba293c332c928b26d641562533ea3f787db17d8080155dde73d48e2406"
+    },
+    {
+      "module": "24B",
+      "file": "module24b_evidence_register.tsv",
+      "sha256": "6c5a3432f7786d3c9c1cb3e3c7208341eef27ce1896eb037f8dac9154326f2f5"
+    }
+  ],
+  "graph_policy": {
+    "exportable_edges_only": true,
+    "composite_labels_preserved": true,
+    "unresolved_and_nonexportable_edges_excluded_from_graph": true,
+    "evidence_rows_retained_for_exported_edges": true,
+    "self_loops_excluded_from_traversable_graph": true
+  },
+  "counts": {
+    "nodes": 6667,
+    "edges": 10410,
+    "edge_sources": 11824,
+    "node_roles": 10546,
+    "nodes_with_ligand_role": 727,
+    "nodes_with_receptor_role": 708,
+    "nodes_with_transcription_factor_role": 202,
+    "nodes_with_target_gene_role": 2242,
+    "pathways": 3449,
+    "boundary_groups": 37,
+    "nonexportable_edges": 9759
+  },
+  "source_locator_status_counts": {
+    "local_only_or_unresolved": 1449,
+    "stable": 9186,
+    "stable_plus_local": 1189
+  },
+  "module_counts": [
+    {
+      "module": "20B",
+      "edge_count": 5906,
+      "exportable_edge_count": 1145,
+      "evidence_count": 7630,
+      "pathway_count": 14,
+      "nonexportable_edge_count": 4761
+    },
+    {
+      "module": "21B",
+      "edge_count": 2646,
+      "exportable_edge_count": 2626,
+      "evidence_count": 2595,
+      "pathway_count": 2573,
+      "nonexportable_edge_count": 20
+    },
+    {
+      "module": "22B",
+      "edge_count": 10391,
+      "exportable_edge_count": 5421,
+      "evidence_count": 10564,
+      "pathway_count": 5,
+      "nonexportable_edge_count": 4970
+    },
+    {
+      "module": "23B",
+      "edge_count": 1075,
+      "exportable_edge_count": 1069,
+      "evidence_count": 1501,
+      "pathway_count": 738,
+      "nonexportable_edge_count": 6
+    },
+    {
+      "module": "24B",
+      "edge_count": 151,
+      "exportable_edge_count": 149,
+      "evidence_count": 224,
+      "pathway_count": 145,
+      "nonexportable_edge_count": 2
+    }
+  ],
+  "files": {
+    "nodes": "mechanism_nodes.tsv",
+    "node_roles": "mechanism_node_roles.tsv",
+    "edges": "mechanism_edges.tsv",
+    "edge_sources": "mechanism_edge_sources.tsv",
+    "pathways": "mechanism_pathways.tsv",
+    "boundaries": "mechanism_boundary_summary.tsv",
+    "validation": "validation_report.json"
+  },
+  "accuracy_contract": [
+    "Every exported edge must reference existing source and target nodes.",
+    "Every exported node must have a signaling_cascade role; specialized roles are only added from explicit register layers or curated role hints.",
+    "Every exported edge must retain at least one evidence-register source row.",
+    "Every exported edge must belong to a pathway row.",
+    "Role-aware edges use canonical binds_receptor or target-gene relation types with matching endpoint roles; original register relations remain audit fields.",
+    "Self-loop register rows are retained as boundaries and are not inserted into the normalized graph.",
+    "Non-exportable edges remain summarized as boundaries and are not traversable graph edges.",
+    "Stable PMID/PMCID/DOI/URL locators are retained in edge-source rows where available; local paths are not released."
+  ],
+  "module20b_pathway_family_layer": {
+    "file": "data/processed/module20b_pathway_family_layer_v1/module20b_pathway_family_layer.tsv",
+    "assignment_type": "conservative_receptor_family_grouping",
+    "downstream_pathway_claim": false,
+    "register_unchanged": true,
+    "sha256": "6b85ff4708cab88f00195202c6b3f45805f4472931a381e40054cfcc706621c2"
+  }
+}

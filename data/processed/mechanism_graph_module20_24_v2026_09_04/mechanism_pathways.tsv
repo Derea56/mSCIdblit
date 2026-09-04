@@ -1,0 +1,3450 @@
+module	pathway_name	edge_count	node_count	evidence_count
+20B	Axon-guidance/adhesion receptor family	82	92	145
+20B	Cytokine receptor family	27	42	56
+20B	ECM/integrin adhesion receptor family	252	151	341
+20B	GPCR receptor family	82	90	185
+20B	Hedgehog receptor family	8	7	21
+20B	Innate-immune receptor family	10	13	25
+20B	Notch receptor family	10	11	17
+20B	Pathway not established	359	475	842
+20B	Purinergic/neuroreceptor family	2	3	8
+20B	RTK growth-factor receptor family	109	74	198
+20B	Scavenger/uptake-associated receptor family	38	41	78
+20B	Synaptic/cell-adhesion receptor family	40	39	89
+20B	TGF-beta/BMP receptor family	79	58	114
+20B	WNT/Frizzled receptor family	47	35	118
+21B	2AG-CB1-GPCR	1	2	1
+21B	2AG-CB2-GPCR	1	2	1
+21B	2APB-TRPV3-ion-channel	1	2	1
+21B	4-1BB-QEED-EEEE-TRAF1-costimulation	1	2	1
+21B	4-1BB-QEED-EEEE-TRAF2-costimulation	1	2	1
+21B	4-1BB-TRAF-adaptor-recruitment	2	3	2
+21B	4-1BBL-4-1BB-costimulation	1	2	1
+21B	5-oxo-ETE-OXER1-GPCR	1	2	1
+21B	5HT-HTR1E-GPCR	1	2	1
+21B	5HT-HTR1F-GPCR	1	2	1
+21B	5HT-HTR3AB-heteromer	1	2	1
+21B	5HT-HTR5A-GPCR	1	2	1
+21B	7alpha25OHC-GPR183-GPCR	1	2	1
+21B	ABHD6-GluA1-AMPAR-endocytic-trafficking	1	2	1
+21B	ACP1-LAT-negative-FcgammaRIIA-relay	1	2	1
+21B	ACP1-STAT5-negative-megakaryocyte-relay	1	2	1
+21B	ACP1-ZAP70-Y292-positive-TCR-relay	1	2	1
+21B	ACT1-TRAF6-IL17-relay	1	2	1
+21B	ACTH-MC2R-MRAP1-GPCR	1	2	1
+21B	ACTN-ASIC1a-cytoskeletal-complex	2	3	2
+21B	ADGRG1-GNA12-coupling	1	2	1
+21B	ADGRG1-GNA13-coupling	1	2	1
+21B	ADIPOQ-LAIR1-T-cell-inhibition	1	2	1
+21B	ADIPOR1-APPL1-adiponectin-signaling	1	2	1
+21B	ADIPOR2-APPL1-adiponectin-signaling	1	2	1
+21B	ADM-CALCRL-RAMP2-Gs	1	2	1
+21B	ADORA1-Gi-coupling	1	2	1
+21B	ADORA2A-Gs-coupling	1	2	1
+21B	ADORA2B-Gs-coupling	1	2	1
+21B	ADORA3-Gi-coupling	1	2	1
+21B	ADP-P2RY1-GPCR-binding	1	2	1
+21B	ADP-P2RY13-GPCR	1	2	1
+21B	ADP-P2Y12-GPCR	1	2	1
+21B	ADRA1A-Gq-coupling	1	2	1
+21B	ADRA1B-Gq/11-coupling	1	2	1
+21B	ADRA1D-Gq/11-coupling	1	2	1
+21B	ADRA2A-Gi-coupling	1	2	1
+21B	ADRA2B-Gi-coupling	1	2	1
+21B	ADRA2C-Gi-coupling	1	2	1
+21B	ADRB1-Gi/o-coupling	1	2	1
+21B	ADRB1-Gs-coupling	1	2	1
+21B	ADRB2-Gi/o-coupling	1	2	1
+21B	ADRB2-Gs-coupling	1	2	1
+21B	ADRB3-Gi-coupling	1	2	1
+21B	ADRB3-Gs-coupling	1	2	1
+21B	AGG-32mer-TLR2-DAMP-signaling	1	2	1
+21B	AIM2-ASC-inflammasome-assembly	1	2	1
+21B	AJAP1-GABBR1a-presynaptic-trafficking	1	2	1
+21B	AKAP5-GABRB1-PKA-targeting	1	2	1
+21B	AKAP5-GABRB3-PKA-targeting	1	2	1
+21B	AKAP5-TRPV1-inflammatory-sensitization-complex	1	2	1
+21B	ALCAM-CD6-adhesion-costimulation	1	2	1
+21B	ALK-pY1507-SHC1	1	2	1
+21B	AMN-ARH-cubam-endocytosis	1	2	1
+21B	AMN-DAB2-cubam-endocytosis	1	2	1
+21B	ANG-PLXNB2-receptor-growth-survival	1	2	1
+21B	ANGPT1-TIE2-RTK	1	2	1
+21B	ANGPT1-alpha5beta1-adhesion	1	2	1
+21B	ANGPT1-alphaVbeta3-binding	1	2	1
+21B	ANGPT1-alphaVbeta5-guided-angiogenesis	1	2	1
+21B	ANGPT2-TIE2-contextual-antagonism	1	2	1
+21B	ANGPT2-Tie2-context-dependent-agonism	1	2	1
+21B	ANGPT2-alpha5beta1-integrin-signaling	1	2	1
+21B	ANGPTL2-alpha5beta1-inflammatory-signaling	1	2	1
+21B	ANGPTL3-alphaVbeta3-angiogenesis	1	2	1
+21B	ANGPTL4-alphaVbeta3-endothelial-junction-protection	1	2	1
+21B	ANGPTL4-alphaVbeta5-glomerular-endothelial-protection	1	2	1
+21B	ANK3-KCNQ2-axon-initial-segment-targeting	1	2	1
+21B	ANK3-KCNQ3-axon-initial-segment-targeting	1	2	1
+21B	ANP-NPR1-guanylyl-cyclase	1	2	1
+21B	ANP-NPR3-clearance-binding	1	2	1
+21B	ANXA1-FPR2-proresolution-GPCR	1	2	1
+21B	AP2M1-GABRG2-YECL-endocytosis	1	2	1
+21B	APLNR-Gi-coupling	1	2	1
+21B	APOE-LDLR-binding	1	2	1
+21B	APOE-LRP1-binding	1	2	1
+21B	APOE-TREM2-myeloid-binding	1	2	1
+21B	APOE-VLDLR-binding	1	2	1
+21B	APP-GABBR1a-presynaptic-trafficking	1	2	1
+21B	APRIL-BCMA	1	2	1
+21B	APRIL-BCMA-activation	1	2	1
+21B	APRIL-TACI	1	2	1
+21B	APRIL-TACI-MyD88-activation	1	2	1
+21B	AREG-EGFR-ERBB-RTK	1	2	1
+21B	ARTN-GFRA3-RET	1	2	1
+21B	AT1R-Gi-coupling	1	2	1
+21B	AT1R-Gq-coupling	1	2	1
+21B	ATF4-GABBR1-neuronal-transcription-coupling	1	2	1
+21B	ATF4-GABBR2-neuronal-transcription-coupling	1	2	1
+21B	ATP-ADP-P2Y-microglial-chemotaxis	1	2	1
+21B	ATP-Kir6.2-KATP-inhibition	1	2	1
+21B	ATP-P2RX1-P2RX2-heteromer	1	2	1
+21B	ATP-P2RX1-P2RX4-heteromer	1	2	1
+21B	ATP-P2RX1-P2RX5-heteromer	1	2	1
+21B	ATP-P2RX2-P2RX3-heteromer	1	2	1
+21B	ATP-P2RX2-P2RX5-heteromer	1	2	1
+21B	ATP-P2RX2-P2RX6-heteromer	1	2	1
+21B	ATP-P2RX4-P2RX6-heteromer	1	2	1
+21B	ATP-P2RX7-purinergic-channel	1	2	1
+21B	ATP-P2RY1-GPCR	1	2	1
+21B	ATP-P2RY11-GPCR	1	2	1
+21B	ATP-P2X1-ion-channel	1	2	1
+21B	ATP-P2X2-ion-channel	1	2	1
+21B	ATP-P2X3-ion-channel	1	2	1
+21B	ATP-P2X4-ion-channel	1	2	1
+21B	ATP-P2X5-ion-channel	1	2	1
+21B	ATP-P2X7-IL1B-release	1	2	1
+21B	ATP-P2Y2-GPCR	1	2	1
+21B	ATP-P2Y4-GPCR-rat	1	2	1
+21B	AVP-AVPR1A-GPCR	1	2	1
+21B	AVP-AVPR1B-GPCR	1	2	1
+21B	AVP-AVPR2-GPCR	1	2	1
+21B	AVP-V2R-GPCR	1	2	1
+21B	AVPR1A-Gq-coupling	1	2	1
+21B	AVPR1B-Gq/11-coupling	1	2	1
+21B	AVPR2-Gs-coupling	1	2	1
+21B	AXL-pY779-PIK3R1	1	2	1
+21B	AXL-pY821-GRB2	1	2	1
+21B	AXL-pY821-LCK	1	2	1
+21B	AXL-pY821-PIK3R1	1	2	1
+21B	AXL-pY821-SRC	1	2	1
+21B	AXL-pY866-PLCG1	1	2	1
+21B	Acetylcholine-CHRM1-GPCR	1	2	1
+21B	Acetylcholine-CHRM3-muscarinic-GPCR	1	2	1
+21B	Acetylcholine-CHRM5-muscarinic-GPCR	1	2	1
+21B	Acetylcholine-CHRNA7-nicotinic-channel	1	2	1
+21B	Acetylcholine-M2-muscarinic	1	2	1
+21B	Acetylcholine-M4-muscarinic	1	2	1
+21B	Acetylcholine-alpha2beta2-nAChR	1	2	1
+21B	Acetylcholine-alpha2beta4-nAChR	1	2	1
+21B	Acetylcholine-alpha3alpha5beta2-nAChR	1	2	1
+21B	Acetylcholine-alpha3alpha5beta4-nAChR	1	2	1
+21B	Acetylcholine-alpha3alpha6beta2-nAChR	1	2	1
+21B	Acetylcholine-alpha3beta2-nAChR	1	2	1
+21B	Acetylcholine-alpha3beta3beta4-nAChR	1	2	1
+21B	Acetylcholine-alpha3beta4-nAChR	1	2	1
+21B	Acetylcholine-alpha4alpha6beta2-nAChR	1	2	1
+21B	Acetylcholine-alpha4beta2-nAChR	1	2	1
+21B	Acetylcholine-alpha4beta4-nAChR	1	2	1
+21B	Acetylcholine-alpha6beta4beta3-nAChR	1	2	1
+21B	Acetylcholine-nicotinic-AChR	1	2	1
+21B	ActivinA-ACVR1B-ACVR2A-assembly	1	2	1
+21B	ActivinA-ACVR1B-ACVR2B	1	2	1
+21B	ActivinA-ACVR2A-binding	1	2	1
+21B	ActivinA-ACVR2B-binding	1	2	1
+21B	ActivinA-CRIPTO-ACVR2B-antagonism	1	2	1
+21B	Adenosine-A2A-GPCR	1	2	1
+21B	Adenosine-A2B-GPCR	1	2	1
+21B	Adenosine-ADORA1-GPCR	1	2	1
+21B	Adenosine-ADORA3-GPCR	1	2	1
+21B	Adiponectin-ADIPOR1-metabolic-receptor	1	2	1
+21B	Adiponectin-ADIPOR2-metabolic-receptor	1	2	1
+21B	Adrenomedullin-AM2-CALCRL-RAMP3	1	2	1
+21B	Agrin-LRP4-MuSK-NMJ	1	2	1
+21B	Alpha4Vcollagen-GPC1-Schwann-myelination	1	2	1
+21B	Alpha5beta1-CD97-endothelial-adhesion	1	2	1
+21B	AlphaKG-OXGR1-GPCR	1	2	1
+21B	AlphaMSH-MC3R-GPCR	1	2	1
+21B	Alphavbeta3-CD97-endothelial-adhesion	1	2	1
+21B	Amylin-AMY1R-GPCR-complex	1	2	1
+21B	Amylin-AMY3R-GPCR-complex	1	2	1
+21B	Anandamide-CNR1-Cannabinoid-GPCR	1	2	1
+21B	Anandamide-CNR2-Cannabinoid-GPCR	1	2	1
+21B	Ang1-7-MAS1-GPCR-PLA2-AA	1	2	1
+21B	AngII-AGTR1-GPCR	1	2	1
+21B	AngII-AT2-GPCR-PTPase	1	2	1
+21B	Apelin-APLNR-GPCR	1	2	1
+21B	Arachidonic-acid-TRAAK-channel	1	2	1
+21B	Arachidonic-acid-TREK1-channel	1	2	1
+21B	Aristolochic-acid-hTAS2R14-bitter-GPCR	1	2	1
+21B	Aristolochic-acid-hTAS2R43-bitter-GPCR	1	2	1
+21B	Azurocidin-Mac1-binding	1	2	1
+21B	Aβ-CD36-microglial-migration	1	2	1
+21B	Aβ-TREM2-DAP12-SYK-PI3K-AKT	1	2	1
+21B	Aβfibril-CD36-CD47-alpha6beta1-tyrosine-kinase	1	2	1
+21B	BAFF-BAFFR	1	2	1
+21B	BAFF-BCMA-binding-function	1	2	1
+21B	BAFF-TACI-binding-function	1	2	1
+21B	BAFFR-PVPAT-TRAF3-noncanonical	1	2	1
+21B	BAFFR-TRAF2-proximal	1	2	1
+21B	BAFFR-TRAF3-proximal	1	2	1
+21B	BAFFR-TRAF6-proximal	1	2	1
+21B	BAI1-ELMO1-Dock180-Rac-efferocytosis	1	2	1
+21B	BAI1-RTN4R-transsynaptic-neuronal-development	1	2	1
+21B	BAI1-RTN4RL1-transsynaptic-neuronal-development	1	2	1
+21B	BAI1-RTN4RL2-transsynaptic-neuronal-development	1	2	1
+21B	BAI1-TIAM1-Par3-synaptogenesis	2	3	2
+21B	BAI3-ELMO1-myoblast-fusion	1	2	1
+21B	BAI3-ELMO2-myoblast-fusion	1	2	1
+21B	BAI3-RTN4R-transsynaptic-neuronal-development	1	2	1
+21B	BAI3-RTN4RL1-transsynaptic-neuronal-development	1	2	1
+21B	BAI3-RTN4RL2-transsynaptic-neuronal-development	1	2	1
+21B	BCMA-119-143-TRAF1-association	1	2	1
+21B	BCMA-119-143-TRAF2-association	1	2	1
+21B	BCMA-119-143-TRAF3-association	1	2	1
+21B	BCMA-TRAF-adaptor-association	3	4	3
+21B	BDCA2-FcRgamma-pDC-complex-assembly	1	2	1
+21B	BDKRB2-G12-coupling	1	2	1
+21B	BDKRB2-Gq-coupling	1	2	1
+21B	BDNF-TrkB-GluN1-neuroprotection	1	2	1
+21B	BDNF-TrkB-RTK	1	2	1
+21B	BDNF-alpha9beta1-adhesion	1	2	1
+21B	BGN-BMP4-Chordin-modulation	1	2	1
+21B	BGN-TLR2-inflammatory-signaling	1	2	1
+21B	BGN-TLR4-inflammatory-signaling	1	2	1
+21B	BIG2-GABRB2-3-GABAergic-Golgi-trafficking	1	2	1
+21B	BLNK-BTK-BCR-scaffold-relay	1	2	1
+21B	BLNK-HPK1-negative-BCR-relay	1	2	1
+21B	BLNK-NCK1-BCR-scaffold-relay	1	2	1
+21B	BLNK-PLCG2-BCR-scaffold-relay	1	2	1
+21B	BLNK-VAV1-BCR-scaffold-relay	1	2	1
+21B	BMP-SMAD	2	4	1
+21B	BMP-SMAD-glial	1	2	1
+21B	BMP-glial-scar-function	1	2	1
+21B	BMP-noncanonical-LIMK1	1	2	2
+21B	BMP10-ACVRL1-BMPR2	1	2	1
+21B	BMP10-ENG-endoglin	1	2	1
+21B	BMP2-ACVR1-BMPR2-complex	1	2	1
+21B	BMP2-BMPR1A-ACVR2A	1	2	1
+21B	BMP2-BMPR1A-BMPR2-assembly	1	2	1
+21B	BMP2-BMPR1A-binding	1	2	1
+21B	BMP2-BMPR2-binding	1	2	1
+21B	BMP4-BMPR1A-BMPR2-assembly	1	2	1
+21B	BMP4-BMPR1A-specificity	1	2	1
+21B	BMP4-BMPR1B-binding	1	2	1
+21B	BMP4-BMPR2-binding	1	2	1
+21B	BMP6-ACVR1-ALK2-binding-activation	1	2	1
+21B	BMP6-BMPR1A-ALK3-binding	1	2	1
+21B	BMP6-BMPR1B-ALK6-binding	1	2	1
+21B	BMP6-BMPR2-binding	1	2	1
+21B	BMP7-ACVR1-BMPR2-complex	1	2	1
+21B	BMP7-ACVR1-binding	1	2	1
+21B	BMP7-ACVR2A-binding	1	2	1
+21B	BMP7-ACVR2B-binding	1	2	1
+21B	BMP7-BMPR1A-ALK3-binding	1	2	1
+21B	BMP7-BMPR1B-binding	1	2	1
+21B	BMP7-BMPR2-binding	1	2	1
+21B	BMP9-ACVR1-ALK2-context-activation	1	2	1
+21B	BMP9-ACVRL1-ACVR2B	1	2	1
+21B	BMP9-ENG-endoglin	1	2	1
+21B	BMPER-BMP4-endothelial-modulation	1	2	1
+21B	BMPR1A-XIAP-TAB1-TAK1-p38	1	2	1
+21B	BNP-NPR1-guanylyl-cyclase	1	2	1
+21B	BNP-NPR3-clearance-binding	1	2	1
+21B	BST2-ILT7-pDC-regulatory-interaction	1	2	1
+21B	BTC-EGFR-ERBB-RTK	1	2	1
+21B	BTC-ERBB4-ERBB-RTK	1	2	1
+21B	BTLA-pY257-pY282-SHP1-inhibitory-site-set	1	2	1
+21B	BTLA-pY257-pY282-SHP2-inhibitory-site-set	1	2	1
+21B	Beta-endorphin-OPRM1-GPCR	1	2	1
+21B	Bile-acid-GPBAR1-GPCR	1	2	1
+21B	Bitter-ligand-panel-hTAS2R7-GPCR	1	2	1
+21B	Bradykinin-BDKRB2-GPCR	1	2	1
+21B	C1QL1-BAI3-synaptic-connectivity	1	2	1
+21B	C1QL2-BAI3-synaptic-binding	1	2	1
+21B	C1QL3-BAI3-neuronal-adhesion	1	2	1
+21B	C1QL4-BAI3-synaptic-binding	1	2	1
+21B	C1q-CALR-CD91-apoptotic-clearance	1	2	1
+21B	C1q-CD33-LAIR1-inhibitory-crosslink	1	2	1
+21B	C1q-CD91-LRP1-clearance	1	2	1
+21B	C1q-LAIR1-immune-tolerance	1	2	1
+21B	C1q-MEGF10-astrocyte-efferocytosis	1	2	1
+21B	C1q-SCARF1-efferocytosis	1	2	1
+21B	C1q-TREM2-complement-suppression	1	2	1
+21B	C3AR1-Gi-coupling	1	2	1
+21B	C3a-C3AR1-GPCR	1	2	1
+21B	C3b-CD46-complement-regulation	1	2	1
+21B	C3b-CR1-complement-regulation	1	2	1
+21B	C3b-CRIg-complement-clearance	1	2	1
+21B	C3d-CR2-complement-binding	1	2	1
+21B	C4b-CD46-complement-regulation	1	2	1
+21B	C4b-CR1-complement-regulation	1	2	1
+21B	C5AR1-Gi-coupling	1	2	1
+21B	C5a-C5AR1-GPCR	1	2	1
+21B	C5a-C5AR2-arrestin-GPCR	1	2	1
+21B	C8A-CD59-MAC-inhibition	1	2	1
+21B	C9-CD59-MAC-inhibition	1	2	1
+21B	CA10-pan-neurexin-cis-binding-and-surface-transport	1	2	1
+21B	CACNA1D-GABBR2-CaV1.3-functional-coupling	1	2	1
+21B	CACNA2D1-CACNA1B-CaV2.2-auxiliary-complex	1	2	1
+21B	CACNA2D2-CACNA1A-CaV2.1-auxiliary-complex	1	2	1
+21B	CACNA2D4-CACNA1F-CaV1.4-photoreceptor-complex	1	2	1
+21B	CACNB2-CACNA1C-CaV1.2-auxiliary-complex	1	2	1
+21B	CACNB2-CACNA1F-CaV1.4-photoreceptor-complex	1	2	1
+21B	CACNG2-stargazin-AMPA-receptor-trafficking-gating	1	2	1
+21B	CALM1-HTR2A-calcium-dependent-regulation	1	2	1
+21B	CALM1-SCN8A-Nav1.6-C-terminal-calcium-regulation	1	2	1
+21B	CAML-GABRG2-GABAergic-recycling	1	2	1
+21B	CASPR1-4.1B-paranodal-adaptor	1	2	1
+21B	CASR-GABBR1-classC-GPCR-heteromer	1	2	1
+21B	CASR-GABBR2-classC-GPCR-heteromer	1	2	1
+21B	CASR-NALCN-UNC80-calcium-inhibition	1	2	1
+21B	CAV1-HTR2A-caveolar-signaling-complex	1	2	1
+21B	CB2-Gi/Go-coupling	1	2	1
+21B	CBLN1-GRID2-GluD2-triad	1	2	1
+21B	CBLN1-NRXN1-GluD2-triad	1	2	1
+21B	CBLN2-GRID1-GluD1-synapse-properties	1	2	1
+21B	CBLN2-GRID2-GluD2-synaptic-organizer	1	2	1
+21B	CBLN2-NRXN-GluD1-triad	1	2	1
+21B	CBLN4-DCC-extracellular-binding	1	2	1
+21B	CBLN4-NEO1-neurexin-LTP	1	2	1
+21B	CCK-CCK1R-GPCR	1	2	1
+21B	CCK-CCK2R-GPCR	1	2	1
+21B	CCK1R-G12-coupling	1	2	1
+21B	CCK1R-Gq/11-coupling	1	2	1
+21B	CCK1R-Gs-coupling	1	2	1
+21B	CCK2R-Gi/Go-coupling	1	2	1
+21B	CCK2R-Gq/11-coupling	1	2	1
+21B	CCL1-CCR8-GPCR	1	2	1
+21B	CCL1-GPR182-binding	1	2	1
+21B	CCL11-CCR2-GPCR-partial-agonism	1	2	1
+21B	CCL11-CCR3-GPCR	1	2	1
+21B	CCL11-GPR182-binding	1	2	1
+21B	CCL13-CCR2-GPCR	1	2	1
+21B	CCL13-CCR3-GPCR	1	2	1
+21B	CCL15-CCR1-GPCR	1	2	1
+21B	CCL15-CCR3-GPCR	1	2	1
+21B	CCL16-CCR1-GPCR	1	2	1
+21B	CCL16-CCR2-GPCR	1	2	1
+21B	CCL16-CCR5-GPCR	1	2	1
+21B	CCL17-CCR4-GPCR	1	2	1
+21B	CCL19-ACKR4-scavenging	1	2	1
+21B	CCL19-CCR7-GPCR	1	2	1
+21B	CCL19-GPR182-binding	1	2	1
+21B	CCL2-ACKR1-binding	1	2	1
+21B	CCL2-CCR2-GPCR	1	2	1
+21B	CCL20-ACKR4-scavenging	1	2	1
+21B	CCL20-CCR6-GPCR	1	2	1
+21B	CCL21-ACKR4-scavenging	1	2	1
+21B	CCL21-CCR7-GPCR	1	2	1
+21B	CCL22-ACKR4-partial-agonism	1	2	1
+21B	CCL22-CCR4-GPCR	1	2	1
+21B	CCL22-GPR182-binding	1	2	1
+21B	CCL24-CCR3-GPCR	1	2	1
+21B	CCL24-GPR182-binding	1	2	1
+21B	CCL25-ACKR4-scavenging	1	2	1
+21B	CCL25-CCR9-GPCR	1	2	1
+21B	CCL25-GPR182-binding	1	2	1
+21B	CCL26-CCR1-antagonism	1	2	1
+21B	CCL26-CCR2-antagonism	1	2	1
+21B	CCL26-CCR3-GPCR	1	2	1
+21B	CCL26-CCR5-antagonism	1	2	1
+21B	CCL26-CX3CR1-GPCR	1	2	1
+21B	CCL26-GPR182-binding	1	2	1
+21B	CCL27-CCR10-GPCR	1	2	1
+21B	CCL27-GPR182-binding	1	2	1
+21B	CCL28-CCR10-GPCR	1	2	1
+21B	CCL28-CCR3-GPCR	1	2	1
+21B	CCL28-GPR182-scavenging	1	2	1
+21B	CCL3-CCR1-GPCR	1	2	1
+21B	CCL3-CCR5-GPCR	1	2	1
+21B	CCL4-CCR5-GPCR	1	2	1
+21B	CCL5-ACKR1-binding	1	2	1
+21B	CCL5-CCR1-GPCR	1	2	1
+21B	CCL5-CCR3-GPCR	1	2	1
+21B	CCL5-CCR5-GPCR	1	2	1
+21B	CCL5-alphaIIbbeta3-allosteric-activation	1	2	1
+21B	CCL5-alphaVbeta3-allosteric-activation	1	2	1
+21B	CCL7-ACKR1-binding	1	2	1
+21B	CCL7-CCR1-GPCR	1	2	1
+21B	CCL7-CCR2-GPCR	1	2	1
+21B	CCL7-CCR3-GPCR	1	2	1
+21B	CCL7-CCR5-antagonism	1	2	1
+21B	CCL8-CCR1-GPCR	1	2	1
+21B	CCL8-CCR2-GPCR	1	2	1
+21B	CCL8-CCR3-GPCR	1	2	1
+21B	CCL8-CCR5-GPCR	1	2	1
+21B	CCR2-Gi-coupling	1	2	1
+21B	CCR3-Gi-coupling	1	2	1
+21B	CCR5-Gi-coupling	1	2	1
+21B	CCR6-Go-coupling	1	2	1
+21B	CD160-HVEM-immune-checkpoint	1	2	1
+21B	CD200-CD200R1-inhibitory	1	2	1
+21B	CD200R1-DOK1-inhibitory-relay	1	2	1
+21B	CD200R1-DOK2-inhibitory-relay	1	2	1
+21B	CD200R3-DAP12-mast-cell-adaptor-assembly	1	2	1
+21B	CD22-PLCG1-BCR-association	1	2	1
+21B	CD22-SHP1-inhibitory-recruitment	1	2	1
+21B	CD229-LY9-AP2M1-trafficking	1	2	1
+21B	CD229-LY9-ITSM-SAP-relay	1	2	1
+21B	CD229-LY9-pY606-GRB2-endocytic-relay	1	2	1
+21B	CD229-Y470EKL-AP2-endocytosis	1	2	1
+21B	CD24-SIGLEC10-DAMP-immune-checkpoint	1	2	1
+21B	CD244-ITSM-EAT2	1	2	1
+21B	CD244-ITSM-SAP-activating-relay	1	2	1
+21B	CD244-ITSM3-SHIP1-inhibitory-relay	1	2	1
+21B	CD244-ITSM3-SHP1-inhibitory-relay	1	2	1
+21B	CD244-ITSM3-SHP2-inhibitory-relay	1	2	1
+21B	CD244-phosphorylated-tail-FYN-association	1	2	1
+21B	CD27-PIQED-TRAF2-NFkB	1	2	1
+21B	CD27-PIQED-TRAF3-modulatory-branch	1	2	1
+21B	CD27-PIQED-TRAF5-costimulation	1	2	1
+21B	CD27-TRAF-adaptor-recruitment	2	3	2
+21B	CD28-pYMNM-GRB2-costimulation	1	2	1
+21B	CD28-pYMNM-PI3K-costimulation	1	2	1
+21B	CD3-ITAM-ZAP70-TCR-relay	1	2	1
+21B	CD30-EEEGKED-TRAF1-NFkB	1	2	1
+21B	CD30-EEEGKED-TRAF2-NFkB	1	2	1
+21B	CD30-PEQET-TRAF2-NFkB	1	2	1
+21B	CD30-PEQET-TRAF3-modulatory-branch	1	2	1
+21B	CD30-TRAF-adaptor-recruitment	3	4	3
+21B	CD300A-ITIM-SHP1-inhibition	1	2	1
+21B	CD300A-ITIM-SHP1-inhibitory-relay	1	2	1
+21B	CD300A-ITIM-SHP2-association	1	2	1
+21B	CD300B-DAP12-efferocytosis-assembly	1	2	1
+21B	CD300C-FcRgamma-activating-adaptor-assembly	1	2	1
+21B	CD300D-FcRgamma-trafficking-adaptor-assembly	1	2	1
+21B	CD300E-dual-DAP12-myeloid-adaptor-assembly	1	2	1
+21B	CD300E-dual-FcRgamma-myeloid-adaptor-assembly	1	2	1
+21B	CD300F-ITIM-SHP1-inhibitory-efferocytosis	1	2	1
+21B	CD300F-pY276-p85-PI3K-efferocytosis	1	2	1
+21B	CD300H-DAP10-myeloid-adaptor-assembly	1	2	1
+21B	CD300H-DAP12-myeloid-adaptor-assembly	1	2	1
+21B	CD30L-CD30-costimulation	1	2	1
+21B	CD33-pY340-SHP1-inhibitory-ITIM	1	2	1
+21B	CD33-pY340-SHP2-inhibitory-ITIM	1	2	1
+21B	CD33-pY358-SHP2-inhibitory-ITIM	1	2	1
+21B	CD36-ATP1A1-LYN-oxLDL-complex	1	2	1
+21B	CD36-FcRgamma-Syk-internalization	2	3	2
+21B	CD36-tail-LYN-scavenger-complex	1	2	1
+21B	CD40-PVQET-TRAF1-costimulation	1	2	1
+21B	CD40-PVQET-TRAF2-NFkB	1	2	1
+21B	CD40-PVQET-TRAF3-modulatory-branch	1	2	1
+21B	CD40-QEPQEINF-TRAF6-NFkB	1	2	1
+21B	CD40-TRAF1-proximal	1	2	1
+21B	CD40-TRAF2-proximal	1	2	1
+21B	CD40-TRAF3-proximal	1	2	1
+21B	CD40-TRAF6-proximal	1	2	1
+21B	CD40L-CD40-costimulation	1	2	1
+21B	CD40L-alphaIIbbeta3-platelet-activation	1	2	1
+21B	CD40LG-Mac1-adhesion	1	2	1
+21B	CD44-ezrin-adhesion	1	2	1
+21B	CD46-Cyt1-GOPC-autophagy	1	2	1
+21B	CD47-SIRPA-dont-eat-me	1	2	1
+21B	CD48-CD244-2B4-immune-regulation	1	2	1
+21B	CD55-CD97-cell-adhesion	1	2	1
+21B	CD58-CD2-T-cell-adhesion-costimulation	1	2	1
+21B	CD6-pY629-GADS-bivalent-adaptor-relay	1	2	1
+21B	CD6-pY662-SLP76-costimulatory-relay	1	2	1
+21B	CD70-CD27-costimulation	1	2	1
+21B	CD72-CBLB-B-cell-tolerance-association	1	2	1
+21B	CD72-pY39-GRB2-BCR-modulation	1	2	1
+21B	CD72-pY7-SHP1-BCR-inhibition	1	2	1
+21B	CD79-ITAM-SYK-BCR-relay	1	2	1
+21B	CD80-CD28-costimulation	1	2	1
+21B	CD80-CTLA4-immune-checkpoint	1	2	1
+21B	CD84-EAT2-memory-B-cell-relay	1	2	1
+21B	CD84-SAP-memory-B-cell-relay	1	2	1
+21B	CD84-pY299-SHP2-mast-cell-inhibitory-relay	1	2	1
+21B	CD86-CD28-costimulation	1	2	1
+21B	CD86-CTLA4-immune-checkpoint	1	2	1
+21B	CD93-alphaXbeta2-apoptotic-cell-opsonin	1	2	1
+21B	CD99-CD99L2-trafficking	1	2	1
+21B	CDH1-beta-catenin-cadherin-scaffold	1	2	1
+21B	CDH1-p120-cadherin-stability	1	2	1
+21B	CDH23-PCDH15-tip-link-adhesion	1	2	1
+21B	CDH26-alpha4beta7-mucosal-leukocyte-adhesion	1	2	1
+21B	CDH26-alphaE-integrin-associated-binding	1	2	1
+21B	CDH5-p120-endothelial-adhesion	1	2	1
+21B	CEACAM1-TIM3-immune-checkpoint	1	2	1
+21B	CEACAM1L-ITIM-SHP1-TCR-inhibition	1	2	1
+21B	CEACAM1L-ITIM-SHP2-inhibitory-relay	1	2	1
+21B	CER1-BMP4-antagonism	1	2	1
+21B	CGRP-CALCRL-RAMP1-Gs	1	2	1
+21B	CGRP-CALCRL-RAMP1-Gs-coupling	1	2	1
+21B	CHOP-GABBR2-ER-stress-trafficking	1	2	1
+21B	CHRD-BMP4-antagonism	1	2	1
+21B	CHRM1-Gi/o-coupling	1	2	1
+21B	CHRM1-Gq-coupling	1	2	1
+21B	CHRM2-GABBR2-neuronal-heteromer	1	2	1
+21B	CHRM2-Gi-coupling	1	2	1
+21B	CHRM3-Gq-coupling	1	2	1
+21B	CHRM3-NALCN-SFK-cation-current	1	2	1
+21B	CHRM4-Gi-coupling	1	2	1
+21B	CHRM5-Gq-coupling	1	2	1
+21B	CIB2-TMC1-hair-cell-mechanotransduction	1	2	1
+21B	CIB2-TMC2-hair-cell-mechanotransduction	1	2	1
+21B	CIPP-ASIC3-sensory-neuron-scaffold	1	2	1
+21B	CIPP-HTR2A-PDZ-receptor-complex	1	2	1
+21B	CIPP-HTR2B-PDZ-neuronal-signaling-platform	1	2	1
+21B	CLEC12B-MAH-ITIM-SHP1-inhibitory-relay	1	2	1
+21B	CLEC12B-MAH-ITIM-SHP2-inhibitory-relay	1	2	1
+21B	CLEC2-SYK-hemITAM	1	2	1
+21B	CLEC4A-DCIR-ITIM-SHP1-inhibitory-relay	1	2	1
+21B	CLEC4A-DCIR-ITIM-SHP2-inhibitory-relay	1	2	1
+21B	CLEC9A-DNGR1-hemITAM-SYK-cross-presentation	1	2	1
+21B	CLPTM1-GABRG2-GABAergic-trafficking	1	2	1
+21B	CLSTN3-NRXN1alpha-synapse-development	1	2	1
+21B	CLU-ApoER2-endocytic-Dab1-relay	1	2	1
+21B	CLU-VLDLR-endocytic-Dab1-relay	1	2	1
+21B	CNIH2-GluA1-TARP-gamma8-AMPAR-assembly	1	2	1
+21B	CNIH3-GluA2-AMPA-receptor-complex	1	2	1
+21B	CNP-NPR2-guanylyl-cyclase	1	2	1
+21B	CNP-NPR3-clearance-binding	1	2	1
+21B	CNR1-Gi-coupling	1	2	1
+21B	CNTF-CNTFR-gp130-LIFR-activation	1	2	1
+21B	CNTF-astrocyte-JAK-STAT	1	2	1
+21B	CNTF-astrocyte-neurotrophic-support	1	2	1
+21B	CNTF-astrocyte-receptor-context	1	2	1
+21B	CNTF-gp130-JAK-STAT3	3	5	2
+21B	CNTN1-CASPR1-cis-complex	1	2	1
+21B	CNTN1-NF155-adhesion-complex	1	2	1
+21B	CNTN3-PTPRG-binding-retinal-cis-complex	1	2	1
+21B	CNTN4-PTPRG-binding	1	2	1
+21B	CNTN5-PTPRG-binding	1	2	1
+21B	CNTN6-ADGRL1-cis-complex-neuronal-modulation	1	2	1
+21B	CNTN6-PTPRG-binding	1	2	1
+21B	COL1A1-DDR1-collagen-RTK	1	2	1
+21B	COL1A1-DDR2-collagen-RTK	1	2	1
+21B	CPT1C-AMPAR-intracellular-trafficking	1	2	1
+21B	CRH-CRHR1-GPCR	1	2	1
+21B	CRH-CRHR2-GPCR	1	2	1
+21B	CRHR1-Gi-coupling	1	2	1
+21B	CRHR1-Gs-coupling	1	2	1
+21B	CSF1-CSF1R-binary-binding	1	2	1
+21B	CSF1-CSF1R-complex	1	2	1
+21B	CSF1-astrocyte-microglia-SCI	1	2	1
+21B	CSF1R-CBL-trafficking	1	2	1
+21B	CSF1R-CBLB-macropinosome-trafficking	1	2	1
+21B	CSF1R-DAP12-SYK	1	2	1
+21B	CSF1R-DAP12-SYK-PYK2	1	2	1
+21B	CSF1R-DAP12-SYK-PYK2-beta-catenin	1	2	1
+21B	CSF1R-PI3K-AKT/ERK	1	2	1
+21B	CSF1R-PI3K-WASP-cytoskeleton	1	2	1
+21B	CSF1R-RAS-PI3K-ERK	1	2	1
+21B	CSF1R-SFK-PI3K/ERK	1	2	1
+21B	CSF1R-Y721-PI3K-p85-motility	1	2	1
+21B	CSF1R-pY559-SFK	1	2	1
+21B	CSF1R-pY697-GRB2	1	2	1
+21B	CSF1R-proximal-ERK	1	2	1
+21B	CSF2-CSF2RA-CSF2RB	1	2	1
+21B	CSF2RB-pY577-SHC1	1	2	1
+21B	CSF2RB-pY612-PTPN11	1	2	1
+21B	CSF2RB-site-set-STAT5	1	2	1
+21B	CSF3R-pY704-STAT3	1	2	1
+21B	CSF3R-pY729-SOCS3	1	2	1
+21B	CSF3R-pY744-STAT3	1	2	1
+21B	CSK-FYN-C-terminal-negative-SFK-relay	1	2	1
+21B	CSK-LCK-Y505-negative-TCR-relay	1	2	1
+21B	CSK-LYN-C-terminal-negative-BCR-relay	1	2	1
+21B	CSK-SRC-Y527-negative-SFK-relay	1	2	1
+21B	CSPG5-ERBB3-ERBB-RTK	1	2	1
+21B	CTLA4-YVKM-AP2M1-endocytosis	1	2	1
+21B	CTLA4-pYVKM-PI3K-association	1	2	1
+21B	CTLA4-pYVKM-SHP2-association	1	2	1
+21B	CUBN-AMN-cubam-assembly	1	2	1
+21B	CX3CL1-CX3CR1-adhesion-GPCR	1	2	1
+21B	CX3CL1-CX3CR1-adhesion-migration	1	2	1
+21B	CX3CL1-alpha4beta1-CX3CR1-coreceptor	1	2	1
+21B	CX3CL1-alphaIIbbeta3-allosteric-activation	1	2	1
+21B	CX3CL1-alphaVbeta3-CX3CR1-coreceptor	1	2	1
+21B	CXADR-TJP1-tight-junction-scaffold	1	2	1
+21B	CXCL1-ACKR1-binding	1	2	1
+21B	CXCL1-CXCR2-GPCR	1	2	1
+21B	CXCL10-ACKR2-scavenging	1	2	1
+21B	CXCL10-CXCR3-GPCR	1	2	1
+21B	CXCL10-GPR182-scavenging	1	2	1
+21B	CXCL11-ACKR3-scavenging	1	2	1
+21B	CXCL11-CXCR3-GPCR	1	2	1
+21B	CXCL11-GPR182-binding	1	2	1
+21B	CXCL12-ACKR3-scavenging	1	2	1
+21B	CXCL12-CXCR4-GPCR	5	8	2
+21B	CXCL12-GPR182-scavenging	1	2	1
+21B	CXCL12-alphaIIbbeta3-allosteric-activation	1	2	1
+21B	CXCL12-alphaVbeta3-allosteric-activation	1	2	1
+21B	CXCL12-dimer-ACKR1-scavenging	1	2	1
+21B	CXCL13-CXCR5-GPCR	1	2	1
+21B	CXCL13-GPR182-scavenging	1	2	1
+21B	CXCL14-GPR182-binding	1	2	1
+21B	CXCL16-CXCR6-GPCR	1	2	1
+21B	CXCL2-CXCR2-GPCR	1	2	1
+21B	CXCL3-CXCR2-GPCR	1	2	1
+21B	CXCL4-CCR1-GPCR	1	2	1
+21B	CXCL5-ACKR1-binding	1	2	1
+21B	CXCL5-CXCR2-GPCR	1	2	1
+21B	CXCL6-CXCR1-GPCR	1	2	1
+21B	CXCL6-CXCR2-GPCR	1	2	1
+21B	CXCL7-CXCR2-GPCR	1	2	1
+21B	CXCL8-ACKR1-binding	1	2	1
+21B	CXCL8-CXCR1-GPCR	1	2	1
+21B	CXCL8-CXCR2-GPCR	1	2	1
+21B	CXCL9-CXCR3-GPCR	1	2	1
+21B	CXCL9-GPR182-binding	1	2	1
+21B	CXCR1-Gi-coupling	1	2	1
+21B	CXCR2-Gi/o-coupling	1	2	1
+21B	Calcitonin-CALCR-GPCR	1	2	1
+21B	Calcium-CASR-GPCR	1	2	1
+21B	Capsaicin-TRPV1-ion-channel	1	2	1
+21B	Carbachol-CHRM2-muscarinic-GPCR	1	2	1
+21B	Carbachol-CHRM3-muscarinic-GPCR	1	2	1
+21B	Carbachol-CHRM4-muscarinic-GPCR	1	2	1
+21B	Carbachol-CHRM5-muscarinic-GPCR	1	2	1
+21B	Chemokine-CCR-biased-signaling	2	4	1
+21B	Chemokine-CXCR3-biased-signaling	2	4	1
+21B	Chondroitin-sulfate-CD97-cell-attachment	1	2	1
+21B	Chondroitin-sulfate-EMR2-cell-attachment	1	2	1
+21B	Collagen-MRC1-endocytic-uptake	1	2	1
+21B	Collagen-MRC2-endocytic-uptake	1	2	1
+21B	CollagenI-LAIR1-binding	1	2	1
+21B	CollagenI-LILRB4-binding	1	2	1
+21B	CollagenI-OSCAR-binding	1	2	1
+21B	CollagenI-alpha1beta1-adhesion	1	2	1
+21B	CollagenI-alpha2beta1-adhesion	1	2	1
+21B	CollagenII-OSCAR-binding	1	2	1
+21B	CollagenIII-GPR56-RhoA-neural-migration	1	2	1
+21B	CollagenIII-GPVI-platelet-activation	1	2	1
+21B	CollagenIII-OSCAR-binding	1	2	1
+21B	CollagenIV-GPR126-cAMP-Schwann-myelination	1	2	1
+21B	CollagenIV-alpha1beta1-adhesion	1	2	1
+21B	CollagenIV-alpha2beta1-adhesion	1	2	1
+21B	CollagenIV-alpha3NC1-alphaVbeta3	1	2	1
+21B	CollagenVI-GPR126-Gi-biased-signaling	1	2	1
+21B	Cycloheximide-mTAS2R5-bitter-GPCR	1	2	1
+21B	CysLT-CysLT2-GPCR	1	2	1
+21B	DADLE-OPRD1-GPCR	1	2	1
+21B	DAG1-MAGI2-inhibitory-postsynaptic-scaffold	1	2	1
+21B	DAG1-NRXN1alpha-LNS2-LNS6-binding	1	2	1
+21B	DAP10-YINM-GRB2-VAV1-NK-relay	1	2	1
+21B	DAP10-YINM-p85-PI3K-NKG2D	1	2	1
+21B	DAP12-DOK3-inhibitory-macrophage-relay	1	2	1
+21B	DAP12-pY65-INPP5D-inhibitory-relay	1	2	1
+21B	DCAR-FcRgamma-activating-receptor-assembly	1	2	1
+21B	DDT-CD74-CD44-ERK-receptor-complex	1	2	1
+21B	DECORIN-EGFR-interaction	1	2	1
+21B	DECORIN-MET-antagonism	1	2	1
+21B	DECORIN-TGFB1-context-dependent-modulation	1	2	1
+21B	DECORIN-TLR2-DAMP-signaling	1	2	1
+21B	DECORIN-TLR4-MD2-DAMP-signaling	1	2	1
+21B	DHA-EPA-FFAR4-GPCR	1	2	1
+21B	DHT-alphaVbeta3-ERK-breast-cancer-proliferation	1	2	1
+21B	DKK1-LRP6-WNT-antagonism	1	2	1
+21B	DLG4-HTR2A-PDZ-trafficking-signaling	1	2	1
+21B	DLG4-HTR2C-PDZ-synaptic-complex	1	2	1
+21B	DLL1-NOTCH1-canonical-Notch	1	2	1
+21B	DLL1-NOTCH2-canonical-Notch	1	2	1
+21B	DLL1-NOTCH3-binding	1	2	1
+21B	DLL4-NOTCH1-IL6-STAT3	2	4	1
+21B	DLL4-NOTCH1-RND1-endothelial-migration	1	2	1
+21B	DLL4-NOTCH4-endothelial-Notch	1	2	1
+21B	DOK1-RasGAP-inhibitory-relay	1	2	1
+21B	DOK1-SHIP1-inhibitory-relay	1	2	1
+21B	DOK2-RasGAP-inhibitory-relay	1	2	1
+21B	DOR-Gi-coupling	1	2	1
+21B	DPP10-KCNA4-Kv1-inactivation-modulation	1	2	1
+21B	DPP10-KCND2-Kv4-auxiliary-complex	1	2	1
+21B	DPP10-KCND3-Kv4-auxiliary-modulation	1	2	1
+21B	DPP6-KCND2-Kv4-auxiliary-complex	1	2	1
+21B	DR3-TRADD-proximal	1	2	1
+21B	DRD1-Gs-coupling	1	2	1
+21B	DRD2-Gi-coupling	1	2	1
+21B	DRD3-Gi-coupling	1	2	1
+21B	DRD4-Gi/Go-coupling	1	2	1
+21B	DRD5-GABRG2-direct-cross-talk	1	2	1
+21B	DRD5-Gq/11-PLC-coupling	1	2	1
+21B	DUSP10-MAPK14-p38alpha-negative-MAPK-relay	1	2	1
+21B	DUSP10-MAPK8-JNK-negative-MAPK-relay	1	2	1
+21B	DUSP16-MAPK14-p38alpha-negative-MAPK-relay	1	2	1
+21B	DUSP16-MAPK8-JNK-negative-MAPK-relay	1	2	1
+21B	DUSP22-LCK-Y394-negative-TCR-relay	1	2	1
+21B	DUSP22-STAT3-Y705-negative-IL6-relay	1	2	1
+21B	DUSP22-UBR2-S1694-negative-TCR-relay	1	2	1
+21B	DUSP22-UBR2-Y1697-negative-TCR-relay	1	2	1
+21B	DUSP3-STAT3-Y705-negative-IL6-relay	1	2	1
+21B	DUSP3-STAT5-Y694-Y699-negative-IFN-relay	1	2	1
+21B	DUSP4-STAT5-Y694-Y699-negative-IL2-relay	1	2	1
+21B	DUSP5-MAPK1-ERK2-negative-MAPK-relay	1	2	1
+21B	DUSP6-MAPK1-ERK2-negative-MAPK-relay	1	2	1
+21B	DYNLL1-GPHN-inhibitory-transport	1	2	1
+21B	DYNLL2-GPHN-inhibitory-transport	1	2	1
+21B	Dectin1-pY15-PKCdelta-relay	1	2	1
+21B	Dectin1-pY15-SHIP1-negative-relay	1	2	1
+21B	Dectin1-pY15-SYK-activation	1	2	1
+21B	Dectin2-FCER1G-adaptor	1	2	1
+21B	Denatonium-hTAS2R10-bitter-GPCR	1	2	1
+21B	Denatonium-hTAS2R13-bitter-GPCR	1	2	1
+21B	Denatonium-hTAS2R39-bitter-GPCR	1	2	1
+21B	Denatonium-hTAS2R4-bitter-GPCR	1	2	1
+21B	Denatonium-hTAS2R43-bitter-GPCR	1	2	1
+21B	Denatonium-hTAS2R46-bitter-GPCR	1	2	1
+21B	Denatonium-hTAS2R47-bitter-GPCR	1	2	1
+21B	Denatonium-hTAS2R8-bitter-GPCR	1	2	1
+21B	DesArgKallidin-BDKRB1-GPCR	1	2	1
+21B	Dopamine-DRD1-GPCR	1	2	1
+21B	Dopamine-DRD2-GPCR	1	2	1
+21B	Dopamine-DRD3-GPCR-binding	1	2	1
+21B	Dopamine-DRD4-GPCR	1	2	1
+21B	Dopamine-DRD5-GPCR	1	2	1
+21B	Draxin-DCC-guidance	1	2	1
+21B	Draxin-DSCAM-binding	1	2	1
+21B	Draxin-Neogenin-binding	1	2	1
+21B	DynA-Mac1-neuroimmune-response	1	2	1
+21B	Dynorphin-OPRK1-GPCR	1	2	1
+21B	E-cadherin-alpha2beta1-heterotypic-adhesion	1	2	1
+21B	E-cadherin-alphaEbeta7-epithelial-lymphocyte-adhesion	1	2	1
+21B	E-selectin-CD13-breast-cancer-adhesion	1	2	1
+21B	E-selectin-CD24-breast-cancer-rolling	1	2	1
+21B	E-selectin-CD34-hematopoietic-adhesion	1	2	1
+21B	E-selectin-CD43-leukocyte-adhesion	1	2	1
+21B	E-selectin-CD44-leukocyte-adhesion	1	2	1
+21B	E-selectin-CEA-colon-cancer-adhesion	1	2	1
+21B	E-selectin-DR3-colon-cancer-signaling	1	2	1
+21B	E-selectin-ESL1-leukocyte-adhesion	1	2	1
+21B	E-selectin-GlyCAM1-binding	1	2	1
+21B	E-selectin-L-selectin-human-neutrophil-adhesion	1	2	1
+21B	E-selectin-L1CAM-colon-cancer-adhesion	1	2	1
+21B	E-selectin-LAMP1-colon-cancer-adhesion	1	2	1
+21B	E-selectin-LAMP2-colon-cancer-adhesion	1	2	1
+21B	E-selectin-MUC16-tumor-adhesion	1	2	1
+21B	E-selectin-Mac-2BP-breast-cancer-adhesion	1	2	1
+21B	E-selectin-PODXL-tumor-adhesion	1	2	1
+21B	E-selectin-PSGL1-leukocyte-adhesion	1	2	1
+21B	E-selectin-endoglycan-leukocyte-adhesion	1	2	1
+21B	E-selectin-uMUC1-tumor-adhesion	1	2	1
+21B	EDA-EDAR-ectodermal-development	1	2	1
+21B	EDA-FN-TLR4-MD2-DAMP-signaling	1	2	1
+21B	EDIL3-integrin-Mac1-inhibitory-phagocytosis	1	2	1
+21B	EDIL3-integrin-alphaVbeta3-adhesion	1	2	1
+21B	EDIL3-integrin-alphaVbeta5-adhesion	1	2	1
+21B	EDIL3-integrin-alphaVbeta6-TGFbeta-modulation	1	2	1
+21B	EFNA1-EPHA1-receptor-binding	1	2	1
+21B	EFNA1-EPHA2	1	2	1
+21B	EFNA5-EPHB2-cross-class-guidance	1	2	1
+21B	EFNB1-EPHB1-membrane-contact-signaling	1	2	1
+21B	EFNB1-EPHB2	1	2	1
+21B	EFNB2-EPHA4-cross-class-binding	1	2	1
+21B	EFNB2-EPHB4-vascular	1	2	1
+21B	EFNB3-EPHB3-guidance	1	2	1
+21B	EGF-EGFR-RTK-assembly	1	2	1
+21B	EGF-RTK-PI3K-AKT	1	2	1
+21B	EGF-RTK-RAS-ERK	4	5	1
+21B	EGFR-pY1045-CBL-attenuation	1	2	1
+21B	EGFR-pY1068-GRB2-RAS	1	2	1
+21B	EGFR-pY1086-GRB2-RAS	1	2	1
+21B	EGFR-pY1148-DOK1	1	2	1
+21B	EGFR-pY1148-PTPN1	1	2	1
+21B	EGFR-pY1148-SHC1	1	2	1
+21B	EGFR-pY1173-SHC-RAS	1	2	1
+21B	EGFR-pY992-PLCG1	1	2	1
+21B	EGFR-pY992-PTPN1	1	2	1
+21B	EGFR-pY992-PTPN11	1	2	1
+21B	EGFR-pY992-PTPN6	1	2	1
+21B	EGFR-pY992-SHC-RAS	1	2	1
+21B	ELANE-Mac1-adhesion-modulation	1	2	1
+21B	ELFN1-GRM6-rod-bipolar-synapse	1	2	1
+21B	ELFN1-GRM7-transsynaptic-recruitment	1	2	1
+21B	ELFN2-GRM7-transsynaptic-recruitment	1	2	1
+21B	ENAH-GPHN-Mena-VASP-microfilament-scaffold	1	2	1
+21B	EP1-Gq-coupling	1	2	1
+21B	EP2-Gs-coupling	1	2	1
+21B	EP3-Gi-coupling	1	2	1
+21B	EP4-Gs-coupling	1	2	1
+21B	EPCR-Mac1-counter-receptor-adhesion	1	2	1
+21B	EPGN-EGFR-ERBB-RTK	1	2	1
+21B	EPHA2-pY587-pY593-VAV2-VAV3	1	2	1
+21B	EPHA2-pY734-PIK3R1	1	2	1
+21B	EPHA2-pY921-GRB7	1	2	1
+21B	EPHA2-pY930-NCK1	1	2	1
+21B	EPHA4-pY602-FYN	1	2	1
+21B	EPHB1-pY594-NCK1	1	2	1
+21B	EPHB2-GluN1-NMDAR-synaptic-stabilization	1	2	1
+21B	EPHB2-pY611-SRC	1	2	1
+21B	EPHB3-pY614-CRK	1	2	1
+21B	EPHB3-pY614-FYN	1	2	1
+21B	EPO-EPOR-receptor-signaling	1	2	1
+21B	EPOR-JAK2-proximal	1	2	1
+21B	EPOR-pY343-STAT5	1	2	1
+21B	EPOR-pY401-STAT5	1	2	1
+21B	EPOR-pY429-SHP1	1	2	1
+21B	EPOR-pY429-Y431-p85-trafficking	1	2	1
+21B	EPOR-pY479-PIK3R1	1	2	1
+21B	EREG-EGFR-ERBB-RTK	1	2	1
+21B	EREG-ERBB4-ERBB-RTK	1	2	1
+21B	EROS-P2X7-ER-chaperone-assembly	1	2	1
+21B	ESAM-NHERF1-cytoplasmic-association	1	2	1
+21B	ET1-EDNRA-GPCR	1	2	1
+21B	ET1-EDNRB-GPCR	1	2	1
+21B	Endomorphin1-OPRM1-GPCR	1	2	1
+21B	Endorepellin-VEGFR1-angiostasis	1	2	1
+21B	Endorepellin-VEGFR2-alpha2beta1-dual-antagonism	1	2	1
+21B	Endorepellin-alpha2beta1-angiostasis	1	2	1
+21B	Endostatin-VEGFR2-angiostasis	1	2	1
+21B	Endostatin-alpha5beta1-angiostasis	1	2	1
+21B	FAM19A1-pan-neurexin-cis-regulation	1	2	1
+21B	FAM19A2-pan-neurexin-cis-regulation	1	2	1
+21B	FAM19A3-pan-neurexin-cis-regulation	1	2	1
+21B	FAM19A4-pan-neurexin-cis-regulation	1	2	1
+21B	FBLN2-GABBR1a-neuropathic-pain-inhibition	1	2	1
+21B	FCAR-FcRgamma-complex-assembly	1	2	1
+21B	FCER1G-pITAM-SYK-activating-relay	1	2	1
+21B	FCGR1A-FCER1G-adaptor-assembly	1	2	1
+21B	FCGR2A-SYK-ITAM	1	2	1
+21B	FCGR2B-pY292-SHIP1-inhibitory-ITIM	1	2	1
+21B	FCGR3A-FCER1G-adaptor-assembly	1	2	1
+21B	FCRL5-ITIM-SHP1-inhibitory-relay	1	2	1
+21B	FFA-FFAR1-GPCR	1	2	1
+21B	FGF-RHOA-YAP-SCI	1	2	1
+21B	FGF-RTK-FRS2-ERK-AKT	3	5	1
+21B	FGF1-FGFR1-structural-complex	1	2	1
+21B	FGF1-FGFR2-structural-complex	1	2	1
+21B	FGF1-FGFR3-specificity	1	2	1
+21B	FGF1-FGFR4-specificity	1	2	1
+21B	FGF1-alphaVbeta3-direct-binding	1	2	1
+21B	FGF10-FGFR1b-specificity	1	2	1
+21B	FGF10-FGFR2-PI3K-AKT-SCI	1	2	1
+21B	FGF10-FGFR2b-pY734-PI3K-recycling	1	2	1
+21B	FGF10-FGFR2b-pY734-SH3BP4-recycling	1	2	1
+21B	FGF10-FGFR2b-structural-complex	1	2	1
+21B	FGF10-FGFRL1-binding	1	2	1
+21B	FGF13-SCN5A-Nav1.5-auxiliary-complex	1	2	1
+21B	FGF14-SCN8A-Nav1.6-auxiliary-complex	1	2	1
+21B	FGF16-FGFR1c-receptor-activation	1	2	1
+21B	FGF16-FGFR2c-receptor-activation	1	2	1
+21B	FGF16-FGFR3c-receptor-activation	1	2	1
+21B	FGF16-FGFR4-receptor-activation	1	2	1
+21B	FGF17b-FGFR1c-binding	1	2	1
+21B	FGF17b-FGFR2c-binding	1	2	1
+21B	FGF17b-FGFR3c-binding	1	2	1
+21B	FGF17b-FGFR4-binding	1	2	1
+21B	FGF18-FGFR1c-binding	1	2	1
+21B	FGF18-FGFR2c-selectivity	1	2	1
+21B	FGF18-FGFR3c-selectivity	1	2	1
+21B	FGF18-FGFR4-specificity	1	2	1
+21B	FGF19-beta-Klotho-binding	1	2	1
+21B	FGF19-betaKlotho-FGFR1c-endocrine-signaling	1	2	1
+21B	FGF19-betaKlotho-FGFR2c-endocrine-signaling	1	2	1
+21B	FGF19-betaKlotho-FGFR3c-endocrine-signaling	1	2	1
+21B	FGF19-betaKlotho-FGFR4-endocrine-signaling	1	2	1
+21B	FGF2-CD44v3-HS-presentation	1	2	1
+21B	FGF2-FGFR1-structural-complex	1	2	1
+21B	FGF2-FGFR2-structural-complex	1	2	1
+21B	FGF2-FGFR3c-binding-activation	1	2	1
+21B	FGF2-FGFR4-specificity	1	2	1
+21B	FGF2-FGFRL1-binding	1	2	1
+21B	FGF2-alphaVbeta3-direct-binding	1	2	1
+21B	FGF20-FGFR1c-receptor-activation	1	2	1
+21B	FGF20-FGFR2c-receptor-activation	1	2	1
+21B	FGF20-FGFR3c-receptor-activation	1	2	1
+21B	FGF20-FGFR4-receptor-activation	1	2	1
+21B	FGF21-FGFR2c-beta-Klotho-receptor-activation	1	2	1
+21B	FGF21-beta-Klotho-binding	1	2	1
+21B	FGF21-betaKlotho-FGFR1c-endocrine-signaling	1	2	1
+21B	FGF21-betaKlotho-FGFR3c-endocrine-signaling	1	2	1
+21B	FGF22-FGFR1b-synapse-function	1	2	1
+21B	FGF22-FGFR2b-synapse-function	1	2	1
+21B	FGF22-FGFRL1-binding	1	2	1
+21B	FGF23-alpha-Klotho-binding	1	2	1
+21B	FGF23-alphaKlotho-FGFR1c-endocrine-signaling	1	2	1
+21B	FGF23-heparin-FGFR4-binding	1	2	1
+21B	FGF23-sKL-FGFR3c-binding	1	2	1
+21B	FGF3-FGFR1b-specificity	1	2	1
+21B	FGF3-FGFR2b-specificity	1	2	1
+21B	FGF3-FGFR2c-specificity	1	2	1
+21B	FGF3-FGFRL1-binding	1	2	1
+21B	FGF4-FGFR1c-binding-activation	1	2	1
+21B	FGF4-FGFR2c-binding-activation	1	2	1
+21B	FGF4-FGFR3c-binding-activation	1	2	1
+21B	FGF4-FGFRL1-binding	1	2	1
+21B	FGF5-FGFR2c-binding	1	2	1
+21B	FGF6-FGFR1c-binding	1	2	1
+21B	FGF6-FGFR2c-binding	1	2	1
+21B	FGF7-FGFR2b-specificity	1	2	1
+21B	FGF8-FGFRL1-binding	1	2	1
+21B	FGF8b-FGFR1c-specificity	1	2	1
+21B	FGF8b-FGFR2c-structural-complex	1	2	1
+21B	FGF8b-FGFR3c-specificity	1	2	1
+21B	FGF9-FGFR1c-receptor-activation	1	2	1
+21B	FGF9-FGFR2-binding	1	2	1
+21B	FGF9-FGFR2c-receptor-activation	1	2	1
+21B	FGF9-FGFR3-binding	1	2	1
+21B	FGF9-FGFR3c-receptor-activation	1	2	1
+21B	FGF9-FGFR4-receptor-activation	1	2	1
+21B	FGFR-FRS2-Grb2-Cbl-trafficking	1	2	1
+21B	FGFR1-PLCγ1	1	2	1
+21B	FGFR1-pY766-PLCG1	1	2	1
+21B	FGFR3-pY724-pY760-SH2B1-STAT5	1	2	1
+21B	FGFR3-pY760-PLCG1	1	2	1
+21B	FGFRL1-pY471-pY475-SHP1	1	2	1
+21B	FGL1-LAG3-immune-checkpoint	1	2	1
+21B	FLRT1-Latrophilin1-binding	1	2	1
+21B	FLRT1-Latrophilin3-binding	1	2	1
+21B	FLRT2-Latrophilin1-binding	1	2	1
+21B	FLRT2-Latrophilin2-endothelial-adhesion-barrier	1	2	1
+21B	FLRT2-Latrophilin3-binding	1	2	1
+21B	FLRT3-Latrophilin1-binding	1	2	1
+21B	FLRT3-Latrophilin3-synapse-adhesion	1	2	1
+21B	FLT3-ITD-pY591-SRC-STAT5	1	2	1
+21B	FLT3-pY572-GRB10	1	2	1
+21B	FLT3-pY572-LNK-negative-adaptor	1	2	1
+21B	FLT3-pY589-SFK	1	2	1
+21B	FLT3-pY591-LNK-negative-adaptor	1	2	1
+21B	FLT3-pY591-SOCS6-negative-feedback	1	2	1
+21B	FLT3-pY599-SFK-site-relay	1	2	1
+21B	FLT3-pY599-SHP2	1	2	1
+21B	FLT3-pY768-GRB2	1	2	1
+21B	FLT3-pY793-GRB10	1	2	1
+21B	FLT3-pY919-LNK-negative-adaptor	1	2	1
+21B	FLT3-pY919-SOCS6-negative-feedback	1	2	1
+21B	FLT3-pY955-GADS	1	2	1
+21B	FLT3-pY955-GRB2	1	2	1
+21B	FLT3-pY969-GADS	1	2	1
+21B	FLT3-pY969-GRB2	1	2	1
+21B	FLT3L-FLT3-complex	1	2	1
+21B	FPR1-Gi-coupling	1	2	1
+21B	FPR2-Gi-coupling	1	2	1
+21B	FRRS1L-AMPAR-ER-biogenesis-complex	1	2	1
+21B	FSH-FSHR-GPCR	1	2	1
+21B	FSHR-Gi-coupling	1	2	1
+21B	FSHR-Gs-coupling	1	2	1
+21B	FST-ActivinA-antagonism	1	2	1
+21B	FSTL3-Activin-A-antagonism	1	2	1
+21B	FYN-GABRG2-Y365-367-phospho-regulation	1	2	1
+21B	FactorX-Mac1-procoagulant-receptor	1	2	1
+21B	FactorXa-PAR2-proteolytic-GPCR	1	2	1
+21B	Fas-FADD-death-domain-DISC	1	2	1
+21B	FasL-Fas-apoptosis	1	2	1
+21B	FetuinA-TLR4-lipid-inflammation	1	2	1
+21B	Fibrinogen-Mac1-cryptic-epitope	1	2	1
+21B	Fibrinogen-TLR4-macrophage-activation	1	2	1
+21B	Fibronectin-alpha4beta1-adhesion	1	2	1
+21B	Fibronectin-alpha4beta7-adhesion	1	2	1
+21B	Fibronectin-alpha5beta1-adhesion	1	2	1
+21B	Fibronectin-alpha8beta1-adhesion	1	2	1
+21B	Fibronectin-alphaVbeta3-adhesion	1	2	1
+21B	G6B-B-ITIM-ITSM-SHP1-platelet-inhibition	1	2	1
+21B	G6B-B-ITIM-ITSM-SHP2-platelet-inhibition	1	2	1
+21B	GABA-GABAA-alpha1beta1gamma2	1	2	1
+21B	GABA-GABAB-heterodimeric-GPCR	1	2	1
+21B	GABA-GABRR1-GABAC-ion-channel	1	2	1
+21B	GABA-GABRR1-GABRR2-GABAC-heteromer	1	2	1
+21B	GABA-GABRR2-GABAC-ion-channel	1	2	1
+21B	GABA-GABRR2-GABRR3-GABAC-heteromer	1	2	1
+21B	GABA-GABRR3-GABAC-ion-channel	1	2	1
+21B	GABA-alpha1beta1gamma3	1	2	1
+21B	GABA-alpha1beta2delta	1	2	1
+21B	GABA-alpha1beta2gamma1	1	2	1
+21B	GABA-alpha1beta2gamma2	1	2	1
+21B	GABA-alpha1beta3delta	1	2	1
+21B	GABA-alpha1beta3gamma2	1	2	1
+21B	GABA-alpha2beta2gamma2	1	2	1
+21B	GABA-alpha2beta3gamma2	1	2	1
+21B	GABA-alpha3beta1gamma2	1	2	1
+21B	GABA-alpha3beta2gamma2	1	2	1
+21B	GABA-alpha3beta3gamma2	1	2	1
+21B	GABA-alpha4beta2delta	1	2	1
+21B	GABA-alpha4beta3delta	1	2	1
+21B	GABA-alpha4beta3gamma2	1	2	1
+21B	GABA-alpha5beta1gamma2	1	2	1
+21B	GABA-alpha5beta2gamma2	1	2	1
+21B	GABA-alpha5beta3gamma2	1	2	1
+21B	GABA-alpha6beta2delta	1	2	1
+21B	GABA-alpha6beta2gamma1	1	2	1
+21B	GABA-alpha6beta2gamma2	1	2	1
+21B	GABA-alpha6beta3delta	1	2	1
+21B	GABA-alpha6beta3gamma2	1	2	1
+21B	GABARAP-GABARAPL1-GABRG2-structural-trafficking	1	2	1
+21B	GABARAP-GRIP1-inhibitory-synapse-trafficking	1	2	1
+21B	GABARAP-gephyrin-receptor-sorting	1	2	1
+21B	GABRA1-gephyrin-inhibitory-postsynapse	1	2	1
+21B	GABRA2-collybistin-gephyrin-inhibitory-postsynapse	1	2	1
+21B	GABRA2-gephyrin-collybistin-inhibitory-postsynapse	1	2	1
+21B	GABRA3-gephyrin-inhibitory-postsynapse	1	2	1
+21B	GABRA5-gephyrin-inhibitory-postsynapse	1	2	1
+21B	GABRB2-gephyrin-inhibitory-postsynapse	1	2	1
+21B	GABRB3-gephyrin-inhibitory-postsynapse	1	2	1
+21B	GAPT-GRB2-constitutive-association	1	2	1
+21B	GAS6-AXL-RTK	1	2	1
+21B	GAS6-MERTK-TAM-signaling	1	2	1
+21B	GCGR-Gi-coupling	1	2	1
+21B	GCGR-Gs-coupling	1	2	1
+21B	GCSF-CSF3R-dimerization	1	2	1
+21B	GDF15-GFRAL-RET	1	2	1
+21B	GDF5-BMPR1B-ACVR2A-activation	1	2	1
+21B	GDF5-BMPR1B-BMPR2-activation	1	2	1
+21B	GDF5-BMPR1B-specificity	1	2	1
+21B	GDNF-GFRA1-RET	1	2	1
+21B	GHR-JAK2-proximal	1	2	1
+21B	GHR-STAT5-proximal	1	2	1
+21B	GHR-pY487-SOCS2	1	2	1
+21B	GHR-pY487-STAT5	1	2	1
+21B	GHR-pY534-STAT5	1	2	1
+21B	GHR-pY566-STAT5	1	2	1
+21B	GHR-pY595-SOCS2	1	2	1
+21B	GHR-pY627-STAT5	1	2	1
+21B	GHRH-GHRHR-GPCR	1	2	1
+21B	GHRHR-Gs-coupling	1	2	1
+21B	GHSR1A-G13-coupling	1	2	1
+21B	GHSR1A-Gq11-coupling	1	2	1
+21B	GIP-GIPR-GPCR	1	2	1
+21B	GIPR-Gs-coupling	1	2	1
+21B	GISP-GABBR1-forward-trafficking	1	2	1
+21B	GITRL-GITR-assembly	1	2	1
+21B	GLP1-GLP1R-GPCR	1	2	1
+21B	GLP1R-Gq-coupling	1	2	1
+21B	GLP1R-Gs-coupling	1	2	1
+21B	GLP2-GLP2R-GPCR	1	2	1
+21B	GLRA1-collybistin-glycinergic-postsynapse	1	2	1
+21B	GLRB-gephyrin-glycinergic-postsynapse	1	2	1
+21B	GM-CSF-CSF2R-JAK2-proximal	1	2	1
+21B	GM-CSF-CSF2R-STAT5-relay	1	2	1
+21B	GNRHR-Gi-coupling	1	2	1
+21B	GNRHR-Gq-coupling	1	2	1
+21B	GODZ-ZDHHC3-GABRG2-palmitoylation-trafficking	1	2	1
+21B	GP96-TLR2-DAMP-signaling	1	2	1
+21B	GP96-TLR4-MD2-DAMP-signaling	1	2	1
+21B	GPC4-GPR158-mossy-fiber-synapse	1	2	1
+21B	GPC4-PTPRS-LRRTM4-synapse	1	2	1
+21B	GPIBA-Mac1-counter-receptor-adhesion	1	2	1
+21B	GPNMB-alpha5beta1-breast-cancer-metastasis	1	2	1
+21B	GPR56-CD81-cis-NK-checkpoint	1	2	1
+21B	GREM1-BMP2-antagonism	1	2	1
+21B	GREM1-BMP4-antagonism	1	2	1
+21B	GREM1-BMP7-antagonism	1	2	1
+21B	GREM2-BMP2-antagonism	1	2	1
+21B	GREM2-BMP4-antagonism	1	2	1
+21B	GREM2-BMP7-antagonism	1	2	1
+21B	GRIF1-GABRB2-GABAergic-transport	1	2	1
+21B	GRIP1a-b-gephyrin-GABAergic-postsynapse	1	2	1
+21B	GRIP1c4-7-gephyrin-GABAergic-postsynapse	1	2	1
+21B	GRK4-GABAB-agonist-desensitization	1	2	1
+21B	GRM1-Gq-coupling	1	2	1
+21B	GRM2-Gi-coupling	1	2	1
+21B	GRM3-Gi-coupling	1	2	1
+21B	GRM4-Gi-coupling	1	2	1
+21B	GRM5-Gq-coupling	1	2	1
+21B	GRM6-Gi-coupling	1	2	1
+21B	GRM7-Gi-coupling	1	2	1
+21B	GRM8-Gi-coupling	1	2	1
+21B	GRP-GRPR-GPCR	1	2	1
+21B	GSG1L-GluA2-AMPA-gating-modulation	1	2	1
+21B	Galanin-GALR1-GPCR	1	2	1
+21B	Galanin-GALR2-GPCR	1	2	1
+21B	Galanin-GALR3-GPCR	1	2	1
+21B	Gas6-Tyro3-neuronal-activation	1	2	1
+21B	Gastrin-CCK2R-GPCR	1	2	1
+21B	Glucagon-GCGR-GPCR	1	2	1
+21B	Glutamate-GRIA1-GRIA2-heteromer	1	2	1
+21B	Glutamate-GRIA2-GRIA3-heteromer	1	2	1
+21B	Glutamate-GRIA2-GRIA4-heteromer	1	2	1
+21B	Glutamate-GRIN1A-GRIN2C-NMDA	1	2	1
+21B	Glutamate-GRM1-mGluR-GPCR	1	2	1
+21B	Glutamate-GRM2-mGluR-GPCR	1	2	1
+21B	Glutamate-GRM3-mGluR-GPCR	1	2	1
+21B	Glutamate-GRM4-mGluR-GPCR	1	2	1
+21B	Glutamate-GRM5-mGluR-GPCR	1	2	1
+21B	Glutamate-GRM6-mGluR-GPCR	1	2	1
+21B	Glutamate-GRM7-mGluR-GPCR	1	2	1
+21B	Glutamate-GRM8-mGluR-GPCR	1	2	1
+21B	Glutamate-GluA1-AMPA	1	2	1
+21B	Glutamate-GluA2-AMPA	1	2	1
+21B	Glutamate-GluA3-AMPA	1	2	1
+21B	Glutamate-GluA4-AMPA	1	2	1
+21B	Glutamate-GluK1-GluK4-heteromer	1	2	1
+21B	Glutamate-GluK1-GluK5-heteromer	1	2	1
+21B	Glutamate-GluK2-kainate	1	2	1
+21B	Glutamate-GluK2GluK4-kainate	1	2	1
+21B	Glutamate-GluK2GluK5-kainate	1	2	1
+21B	Glutamate-GluK3-GluK5-heteromer	1	2	1
+21B	Glutamate-GluN1GluN2A-NMDA	1	2	1
+21B	Glutamate-GluN1GluN2AGluN2B-triheteromer	1	2	1
+21B	Glutamate-GluN1GluN2AGluN2C-triheteromer	1	2	1
+21B	Glutamate-GluN1GluN2B-NMDA	1	2	1
+21B	Glutamate-GluN1GluN2BGluN2D-triheteromer	1	2	1
+21B	Glutamate-GluN1GluN2D-NMDA	1	2	1
+21B	Glycine-GLRA1-GLRB-heteromer	1	2	1
+21B	Glycine-GLRA1-ion-channel	1	2	1
+21B	Glycine-GLRA2-GLRB-heteromer	1	2	1
+21B	Glycine-GLRA2-ion-channel	1	2	1
+21B	Glycine-GLRA3-GLRB-heteromer	1	2	1
+21B	Glycine-GRIN1A-GRIN2C-NMDA	1	2	1
+21B	Glycine-GluN1GluN2A-NMDA	1	2	1
+21B	Glycine-GluN1GluN2AGluN2B-triheteromer	1	2	1
+21B	Glycine-GluN1GluN2AGluN2C-triheteromer	1	2	1
+21B	Glycine-GluN1GluN2AGluN3A-endothelial-NMDAR	1	2	1
+21B	Glycine-GluN1GluN2B-NMDA	1	2	1
+21B	Glycine-GluN1GluN2BGluN2D-triheteromer	1	2	1
+21B	Glycine-GluN1GluN2D-NMDA	1	2	1
+21B	Glycine-GluN1GluN3A-eGlyR	1	2	1
+21B	Glycine-GluN1GluN3B-eGlyR	1	2	1
+21B	Glycine-GlyRalpha3	1	2	1
+21B	Glycine-GlyRalpha4	1	2	1
+21B	GnRH-GNRHR-GPCR	1	2	1
+21B	Growth-hormone-GHR-cytokine-receptor	1	2	1
+21B	Guanylin-GUCY2C-GC-C	1	2	1
+21B	H-ferritin-TFRC-uptake	1	2	1
+21B	H4-TLR2-DAMP-signaling	1	2	1
+21B	H4-TLR4-MD2-DAMP-signaling	1	2	1
+21B	HAP1-GABAAR-beta-subunits-trafficking	1	2	1
+21B	HBD3-CXCR4-endocytosis-antagonism	1	2	1
+21B	HBEGF-CD44v3-HS-presentation	1	2	1
+21B	HBEGF-EGFR-ERBB-RTK	1	2	1
+21B	HBEGF-ERBB4-ERBB-RTK	1	2	1
+21B	HFE-TFRC-competitive-regulation	1	2	1
+21B	HGF-CD44v6-binding	1	2	1
+21B	HGF-MET-RTK	1	2	1
+21B	HHLA2-KIR3DL3-immune-checkpoint	1	2	1
+21B	HHLA2-TMIGD2-costimulation	1	2	1
+21B	HLA-G1-LILRB1-inhibitory-checkpoint	1	2	1
+21B	HLA-G1-LILRB2-inhibitory-checkpoint	1	2	1
+21B	HLAE-peptide-CD94-NKG2A-NK-inhibition	1	2	1
+21B	HMGB1-CXCL12-CXCR4-injury-chemotaxis	1	2	1
+21B	HMGB1-MD2-TLR4-NFKB	1	2	1
+21B	HMGB1-RAGE-HS-migration	1	2	1
+21B	HMGB1-TLR4-MD2-redox	1	2	1
+21B	HRH1-Gq-coupling	1	2	1
+21B	HRH2-Gs-coupling	1	2	1
+21B	HRH3-Gi/Go-coupling	1	2	1
+21B	HRH4-Gi-coupling	1	2	1
+21B	HSP60-TLR2-DAMP-signaling	1	2	1
+21B	HSP60-TLR4-MD2-DAMP-signaling	1	2	1
+21B	HSP70-CD40-p38-peptide-uptake	1	2	1
+21B	HSP70-FEEL1-antigen-uptake	1	2	1
+21B	HSP70-LOX1-antigen-uptake	1	2	1
+21B	HSP70-SREC1-antigen-uptake	1	2	1
+21B	HSP70-TLR2-CD14-inflammatory-signaling	1	2	1
+21B	HSP70-TLR4-inflammatory-signaling	1	2	1
+21B	HSP90-P2X1-trafficking-and-gating	1	2	1
+21B	HSP90-P2X7-complex-negative-regulation	1	2	1
+21B	HSP90-SREC1-cross-presentation	1	2	1
+21B	HSP90alpha-LRP1-AKT-migration	1	2	1
+21B	HSP90alpha-TLR4-EGFR-transactivation	1	2	1
+21B	HSP90alpha-TLR4-dependent-signaling	1	2	1
+21B	HTR1A-Gi-coupling	1	2	1
+21B	HTR2A-Gq-coupling	1	2	1
+21B	HTR4-Gs-coupling	1	2	1
+21B	HTR7-Gs-coupling	1	2	1
+21B	HVEM-TRAF-adaptor-recruitment	4	5	4
+21B	Heparin-GPR56-shedding-adhesion	1	2	1
+21B	Hevin-NRXN1alpha-NLGN1B-bridge	2	3	2
+21B	Histamine-HRH1-GPCR	1	2	1
+21B	Histamine-HRH2-GPCR	1	2	1
+21B	Histamine-HRH3-GPCR	1	2	1
+21B	Histamine-HRH4-GPCR	1	2	1
+21B	Homer1-IP3R1-mGluR-calcium-tether	1	2	1
+21B	Homer1-TRPC1-IP3R-calcium-complex	1	2	1
+21B	Homer1-mGluR1a-C-terminal-calcium-scaffold	1	2	1
+21B	Homer1-mGluR5-C-terminal-trafficking-scaffold	1	2	1
+21B	Hp-Hb-CD163-scavenging	1	2	1
+21B	Hpx-heme-LRP1-scavenging	1	2	1
+21B	Hyaluronan-CD44-binding	1	2	1
+21B	Hyaluronan-CD44-form-specific-ERK-Rac	1	2	1
+21B	Hyaluronan-HMMR-binding	1	2	1
+21B	Hyaluronan-LAYN-adhesion	1	2	1
+21B	Hyaluronan-LYVE1-binding	1	2	1
+21B	Hyaluronan-STAB2-scavenging	1	2	1
+21B	ICAM1-LFA1-direct-adhesion	1	2	1
+21B	ICAM1-Mac1-counter-receptor-adhesion	1	2	1
+21B	ICAM3-LFA1-adhesion	1	2	1
+21B	ICAM4-LFA1-adhesion	1	2	1
+21B	ICAM4-Mac1-adhesion	1	2	1
+21B	ICOS-pYMFM-PI3K-costimulation	1	2	1
+21B	ICOSL-ICOS-costimulation	1	2	1
+21B	IFN-lambda-JAK-STAT	1	2	2
+21B	IFN-lambda-JAK-STAT-IRF	1	2	1
+21B	IFN-lambda-astrocyte-antiviral	1	2	1
+21B	IFN-type-I-IFNAR-activation	1	2	1
+21B	IFN-type-I-JAK-STAT-IRF	6	8	2
+21B	IFN-type-II-IFNGR-activation	1	2	1
+21B	IFN-type-II-JAK-STAT	4	5	2
+21B	IFN-type-II-noncanonical	1	2	1
+21B	IFNAR1-YVFF-AP2M1-trafficking	1	2	1
+21B	IFNAR1-pY466-PTPN1-trafficking	1	2	1
+21B	IFNAR1-pY466-STAT2	1	2	1
+21B	IFNGR1-pY440-STAT1	1	2	1
+21B	IFNL1-IFNLR1	1	2	1
+21B	IFNL3-IFNLR1-IL10RB-activation	1	2	1
+21B	IFNL3-type-III-receptor	1	2	1
+21B	IFNbeta-IFNAR-astrocyte-SCI	1	2	1
+21B	IGF1-IGF1R-dimer-activation	1	2	1
+21B	IGF1-alpha6beta4-IGF1R-crosstalk	1	2	1
+21B	IGF1-alphaVbeta3-IGF1R-crosstalk	1	2	1
+21B	IGF1R-pY950-IRS1	1	2	1
+21B	IGF1R-pY950-SHC1	1	2	1
+21B	IGF2-alpha6beta4-IGF1R-crosstalk	1	2	1
+21B	IGF2-alphaVbeta3-IGF1R-crosstalk	1	2	1
+21B	IGSF11-PSD95-synaptic-scaffold-association	1	2	1
+21B	IGSF21-NRXN2alpha-inhibitory-synapse-organization	1	2	1
+21B	IGSF9B-MAGI2-NLGN2-inhibitory-subdomain-organization	1	2	1
+21B	IL1-MyD88-NF-kappaB-MAPK	7	8	4
+21B	IL1-SCI-astrocyte	1	2	1
+21B	IL10-IL10R-JAK-STAT3	1	2	1
+21B	IL10-IL10R-JAK1	1	2	1
+21B	IL10-IL10R-STAT1	1	2	1
+21B	IL10-IL10R-TYK2	1	2	1
+21B	IL10-IL10R-complex	1	2	1
+21B	IL10-IL10RA-IL10RB-activation	1	2	1
+21B	IL10-IL10RA-binary-binding	1	2	1
+21B	IL10-IL10RB-site2-assembly	1	2	1
+21B	IL10RA-site-set-STAT3	1	2	1
+21B	IL11-IL11R-gp130	1	2	1
+21B	IL11-IL11R-gp130-activation	1	2	1
+21B	IL11-IL11RA-binary-binding	1	2	1
+21B	IL11-STAT3	1	2	1
+21B	IL12-IL12RB1-IL12RB2-activation	1	2	1
+21B	IL12-IL12RB1-binding	1	2	1
+21B	IL12-IL12RB2-binding	1	2	1
+21B	IL12RB2-pY800-SOCS3	1	2	1
+21B	IL12RB2-pY800-STAT4	1	2	1
+21B	IL13-IL13RA1-binary-binding	1	2	1
+21B	IL13-IL13RA2-decoy-binding	1	2	1
+21B	IL13-type-II-receptor-complex	1	2	1
+21B	IL13RA1-site-set-STAT3	1	2	1
+21B	IL15-IL15RA	1	2	1
+21B	IL15-IL2RB-IL2RG-activation	1	2	1
+21B	IL15-IL2RB-site-I-binding	1	2	1
+21B	IL15-IL2RG-site-II-binding	1	2	1
+21B	IL15-quaternary-receptor-complex	1	2	1
+21B	IL17A-IL17RA-IL17RC	1	2	1
+21B	IL17AF-IL17RA-IL17RC	1	2	1
+21B	IL17B-IL17RB-receptor	1	2	1
+21B	IL17C-IL17RA-IL17RE	1	2	1
+21B	IL17F-IL17RA-IL17RC	1	2	1
+21B	IL17R-ACT1-proximal	1	2	1
+21B	IL18-IL18BP-decoy-binding	1	2	1
+21B	IL18-IL18R-IRAK1	1	2	1
+21B	IL18-IL18R-MyD88	1	2	1
+21B	IL18-IL18R1-IL18RAP	1	2	1
+21B	IL18-IL18R1-IL18RAP-activation	1	2	1
+21B	IL18-IL18R1-binary-binding	1	2	1
+21B	IL18-IL18RAP-co-receptor-binding	1	2	1
+21B	IL19-IL20RA-IL20RB	1	2	1
+21B	IL1A-IL1R1-IL1RAP-activation	1	2	1
+21B	IL1A-IL1R1-binary-binding	1	2	1
+21B	IL1A-sIL1R2-sIL1RAP-decoy	1	2	1
+21B	IL1B-IL1R1-IL1RAP-activation	1	2	1
+21B	IL1B-IL1R1-binary-binding	1	2	1
+21B	IL1B-sIL1R2-sIL1RAP-decoy	1	2	1
+21B	IL1R2-decoy	2	4	2
+21B	IL1R2-soluble-decoy	2	3	2
+21B	IL1RAP-PTPRD-excitatory-synapse	1	2	1
+21B	IL1RAPL1-PTPRD-excitatory-synapse	1	2	1
+21B	IL1RN-IL1R1-antagonist-binding	1	2	1
+21B	IL2-IL2RB-low-affinity-binding	1	2	1
+21B	IL2-IL2RG-low-affinity-binding	1	2	1
+21B	IL2-JAK1-JAK3	1	2	1
+21B	IL2-STAT5	1	2	1
+21B	IL2-common-gamma-receptor	1	2	1
+21B	IL2-intermediate-affinity-receptor-complex	1	2	1
+21B	IL2-quaternary-receptor-assembly	1	2	1
+21B	IL20-type-I-receptor-complex	1	2	1
+21B	IL20-type-II-receptor-complex	1	2	1
+21B	IL21-IL21R-IL2RG-activation	1	2	1
+21B	IL21-IL21R-common-gamma-receptor	1	2	1
+21B	IL21-IL2RG-binding	1	2	1
+21B	IL21-JAK1-JAK3	1	2	1
+21B	IL21-STAT3	1	2	1
+21B	IL21-common-gamma-receptor	1	2	1
+21B	IL21R-pY510-STAT1	1	2	1
+21B	IL21R-pY510-STAT3	1	2	1
+21B	IL22-IL22BP-decoy	1	2	1
+21B	IL22-IL22RA1-binary	1	2	1
+21B	IL22-STAT3	1	2	1
+21B	IL22-type-II-receptor	1	2	1
+21B	IL23-IL12RB1-IL23R-activation	1	2	1
+21B	IL23-IL23R-binary-binding	1	2	1
+21B	IL23-p40-IL12RB1-binding	1	2	1
+21B	IL23-receptor-JAK2-proximal	1	2	1
+21B	IL23-receptor-TYK2-proximal	1	2	1
+21B	IL23R-site-set-STAT3	1	2	1
+21B	IL24-type-I-receptor-complex	1	2	1
+21B	IL24-type-II-receptor-complex	1	2	1
+21B	IL25-IL17RA-IL17RB	1	2	1
+21B	IL27-IL27R-STAT1	1	2	1
+21B	IL27-IL27R-STAT3	1	2	1
+21B	IL27-IL27RA-gp130	1	2	1
+21B	IL27-STAT1-STAT3	1	2	1
+21B	IL27-WSX1-gp130-activation	1	2	1
+21B	IL27-p28-IL27RA-interface	1	2	1
+21B	IL27-p28-gp130-interface	1	2	1
+21B	IL27RA-pY613-STAT1	1	2	1
+21B	IL2RB-STAT5-redundant-site-set	1	2	1
+21B	IL2RB-pY338-SHC1	1	2	1
+21B	IL2RB-pY510-SHB	1	2	1
+21B	IL3-IL3R-JAK2-proximal	1	2	1
+21B	IL3-IL3R-STAT5-relay	1	2	1
+21B	IL3-common-beta-receptor	1	2	1
+21B	IL31-IL31RA-OSMR-receptor	1	2	1
+21B	IL31-receptor-JAK1	1	2	1
+21B	IL31-receptor-STAT3	1	2	1
+21B	IL33-ST2-IL1RAP	1	2	1
+21B	IL33-ST2-binary-binding	1	2	1
+21B	IL33-sST2-decoy-binding	1	2	1
+21B	IL34-CSF1R-binary-binding	1	2	1
+21B	IL34-CSF1R-complex	1	2	1
+21B	IL34-CSF1R-microglia	1	2	1
+21B	IL34-PTPRZ1-alternative-receptor	1	2	1
+21B	IL34-SDC1-co-receptor-modulation	1	2	1
+21B	IL36A-IL36R-IL1RAP-activation	1	2	1
+21B	IL36A-IL36R-IL1RAP-assembly	1	2	1
+21B	IL36A-IL36R-binary-binding	1	2	1
+21B	IL36B-IL36R-binary-binding	1	2	1
+21B	IL36G-IL36R-binary-binding	1	2	1
+21B	IL36Ra-IL36R-antagonist	1	2	1
+21B	IL37-IL18R1-SIGIRR	1	2	1
+21B	IL37-IL1R8-decoy	1	2	1
+21B	IL4-IL2RG-type-I-receptor-binding	1	2	1
+21B	IL4-IL4RA-IL2RG-activation	1	2	1
+21B	IL4-common-gamma-receptor	2	3	2
+21B	IL4-type-I-receptor-JAK1-proximal	1	2	1
+21B	IL4-type-I-receptor-JAK3-proximal	1	2	1
+21B	IL4-type-I-receptor-STAT6-relay	1	2	1
+21B	IL4-type-II-receptor	1	2	1
+21B	IL4R-STAT6-redundant-site-set	1	2	1
+21B	IL4R-pY497-IRS1	1	2	1
+21B	IL4R-pY713-SHIP1-inhibitory	1	2	1
+21B	IL4R-pY713-SHP1-inhibitory	1	2	1
+21B	IL4R-pY713-SHP2-association	1	2	1
+21B	IL5-IL5R-JAK2-proximal	1	2	1
+21B	IL5-IL5R-STAT5-relay	1	2	1
+21B	IL5-common-beta-receptor	1	2	1
+21B	IL6-IL6Ralpha-binary-binding	1	2	1
+21B	IL6-gp130-receptor-complex	1	2	1
+21B	IL6-gp130-receptor-complex-activation	1	2	1
+21B	IL6R-gp130-JAK1-proximal	1	2	1
+21B	IL6R-gp130-JAK2-proximal	1	2	1
+21B	IL6R-gp130-STAT1-proximal	1	2	1
+21B	IL6R-gp130-STAT3-proximal	1	2	1
+21B	IL6R-gp130-TYK2-proximal	1	2	1
+21B	IL7-IL2RG-component-binding	1	2	1
+21B	IL7-IL7R-JAK1-JAK3	1	2	1
+21B	IL7-IL7R-STAT5	1	2	1
+21B	IL7-IL7R-gamma-c	1	2	1
+21B	IL7-common-gamma-receptor	1	2	1
+21B	IL7RA-pY449-STAT5	1	2	1
+21B	IL9-IL2RG-component-contact	1	2	1
+21B	IL9-IL9R-gamma-c	1	2	1
+21B	IL9-common-gamma-JAK-STAT	1	2	1
+21B	IL9R-site-STAT1	1	2	1
+21B	IL9R-site-STAT3	1	2	1
+21B	IL9R-site-STAT5	1	2	1
+21B	ILT7-FcRgamma-pDC-adaptor-assembly	1	2	1
+21B	INSL3-RXFP2-GPCR	1	2	1
+21B	IQSEC3-gephyrin-inhibitory-synapse	1	2	1
+21B	ITGA2B-CIB1-platelet-tail	1	2	1
+21B	ITGA4-paxillin-tail-migration	1	2	1
+21B	ITGB1-kindlin1-tail-binding	1	2	1
+21B	ITGB1-kindlin2-tail-binding	1	2	1
+21B	ITGB1-tail-talin1-adhesion	1	2	1
+21B	ITGB2-kindlin3-tail-binding	1	2	1
+21B	ITGB3-kindlin2-phosphosite-regulation	1	2	1
+21B	ITGB3-pY747-DOK1-inhibitory-switch	1	2	1
+21B	ITGB3-talin1-tail-activation	1	2	1
+21B	ITGB4-PLEC-hemidesmosome	1	2	1
+21B	Insulin-INSR-receptor-binding	1	2	1
+21B	JAG1-NOTCH2-canonical-Notch	1	2	1
+21B	JAG1-NOTCH3-binding	1	2	1
+21B	JAG2-NOTCH1-binding	1	2	1
+21B	JAG2-NOTCH2-canonical-Notch	1	2	1
+21B	JAG2-NOTCH3-binding	1	2	1
+21B	JAKMIP1-GABBR1-cytoskeletal-transport	1	2	1
+21B	JAM-A-LFA1-leukocyte-transmigration	1	2	1
+21B	JAM-C-Mac1-leukocyte-adhesion	1	2	1
+21B	JAM-C-alphaXbeta2-adhesion	1	2	1
+21B	JAM2-JAM3-alpha4beta1-rolling-adhesion	1	2	1
+21B	JAMB-JAMC-heterophilic-junctional-adhesion	1	2	1
+21B	JAML-CAR-tight-junction-neutrophil-transmigration	1	2	1
+21B	Jagged1-Notch-SCI	1	2	1
+21B	Jagged1-Notch-SCI-function	1	2	1
+21B	KCNE1-KCNQ1-IKs-auxiliary-complex	1	2	1
+21B	KCNE2-KCNQ1-auxiliary-complex	1	2	1
+21B	KCNIP1-KCND2-Kv4-auxiliary-complex	1	2	1
+21B	KCNIP1-KCND3-Kv4-auxiliary-complex	1	2	1
+21B	KCNIP2-CACNA1C-CaV1.2-cardiac-current-complex	1	2	1
+21B	KCNIP2-KCND2-Kv4-auxiliary-complex	1	2	1
+21B	KCTD12-GABBR2-auxiliary-GABAB	1	2	1
+21B	KCTD16-GABBR2-auxiliary-GABAB	1	2	1
+21B	KCTD8-CaV2.3-presynaptic-calcium-complex	1	2	1
+21B	KCTD8-GABBR2-auxiliary-receptor-complex	1	2	1
+21B	KIF21B-GABRG2-GABAergic-delivery	1	2	1
+21B	KIF5-GABAB-cytoskeletal-transport	1	2	1
+21B	KIF5-GPHN-GlyR-transport	1	2	1
+21B	KIR-ITIM-SHP1-inhibitory-NK-relay	1	2	1
+21B	KIR2DL4-FcRgamma-NK-adaptor-assembly	1	2	1
+21B	KIR2DL4-ITIM-SHP2-inhibitory-NK-relay	1	2	1
+21B	KIR2DS1-DAP12-trafficking-adaptor-assembly	1	2	1
+21B	KIR2DS2-DAP12-activating-receptor-assembly	1	2	1
+21B	KIR2DS4-DAP12-trafficking-adaptor-assembly	1	2	1
+21B	KIR2DS5-DAP12-activating-receptor-assembly	1	2	1
+21B	KIR3DS1-DAP12-activating-receptor-assembly	1	2	1
+21B	KIRREL3-CASK-synaptic-scaffold-association	1	2	1
+21B	KISS1R-Gq11-coupling	1	2	1
+21B	KIT-pY568-CBL	1	2	1
+21B	KIT-pY568-SOCS6	1	2	1
+21B	KIT-pY569-PTPN6	1	2	1
+21B	KIT-pY703-GRB2	1	2	1
+21B	KIT-pY719-PI3K	1	2	1
+21B	KIT-pY900-CRKII	1	2	1
+21B	KIT-pY936-GRB2	1	2	1
+21B	KIT-pY936-GRB7	1	2	1
+21B	KLRG1-ITIM-SHIP1-inhibitory-relay	1	2	1
+21B	KLRG1-ITIM-SHP2-inhibitory-relay	1	2	1
+21B	KNG1-Mac1-antiadhesive-binding	1	2	1
+21B	KOR-Gi-coupling	1	2	1
+21B	Kainate-GluK1-GluK2-heteromer	1	2	1
+21B	Kainate-GluK1-GluK3-heteromer	1	2	1
+21B	Kainate-GluK1-ion-channel	1	2	1
+21B	Kainate-GluK2-GluK3-heteromer	1	2	1
+21B	Kainate-GluK3-kainate	1	2	1
+21B	Kisspeptin-KISS1R-GPCR	1	2	1
+21B	L-selectin-CD34-HEV-adhesion	1	2	1
+21B	L-selectin-CEA-colon-cancer-adhesion	1	2	1
+21B	L-selectin-Factor-H-binding	1	2	1
+21B	L-selectin-GlyCAM1-HEV-adhesion	1	2	1
+21B	L-selectin-MAdCAM1-lymphocyte-rolling	1	2	1
+21B	L-selectin-MUC16-tumor-adhesion	1	2	1
+21B	L-selectin-PSGL1-leukocyte-adhesion	1	2	1
+21B	L-selectin-endoglycan-leukocyte-adhesion	1	2	1
+21B	L-selectin-endomucin-HEV-adhesion	1	2	1
+21B	L-selectin-nepmucin-HEV-adhesion	1	2	1
+21B	L-selectin-nucleolin-binding	1	2	1
+21B	L-selectin-podocalyxin-HEV-adhesion	1	2	1
+21B	L-selectin-versican-extravascular-binding	1	2	1
+21B	L1CAM-AP2M1-endocytosis	1	2	1
+21B	L1CAM-alphaVbeta3-adhesion-migration	1	2	1
+21B	L1CAM-ankyrinB-cytoskeletal-coupling	1	2	1
+21B	LAB-NTAL-GRB2-adaptor-association	1	2	1
+21B	LAB-NTAL-VAV1-adaptor-complex	1	2	1
+21B	LAIR1-SHP1-inhibitory-receptor-association	1	2	1
+21B	LAIR1-mouse-SHP2-inhibitory-receptor-association	1	2	1
+21B	LAIR1-pY251-CSK-inhibitory-adaptor	1	2	1
+21B	LAP-TGFB1-alphaVbeta1-binding	1	2	1
+21B	LAP-TGFB1-alphaVbeta3-binding	1	2	1
+21B	LAP-TGFB1-alphaVbeta6-activation	1	2	1
+21B	LAP-TGFB1-alphaVbeta8-astrocyte-activation	1	2	1
+21B	LAT-distal-phosphotyrosine-GRB2-relay	1	2	1
+21B	LAT-pY132-PLCG1-calcium-relay	1	2	1
+21B	LAT-pY171-pY191-GADS-adaptor-relay	1	2	1
+21B	LAX1-GRAP2-GADS-association	1	2	1
+21B	LAX1-GRB2-association	1	2	1
+21B	LAX1-PIK3R1-PI3K-association	1	2	1
+21B	LDLR-NPVY-ARH-endocytosis	1	2	1
+21B	LEAP2-GHSR1A-antagonism	1	2	1
+21B	LEFTY-CRIPTO-coreceptor-antagonism	1	2	1
+21B	LEFTY-NODAL-antagonism	1	2	1
+21B	LEP-LEPR-receptor-signaling	1	2	1
+21B	LEPRb-pY1077-STAT5	1	2	1
+21B	LEPRb-pY1138-STAT3	1	2	1
+21B	LEPRb-pY1138-STAT5	1	2	1
+21B	LEPRb-pY985-SHP2	1	2	1
+21B	LEPRb-pY985-SOCS3	1	2	1
+21B	LGALS3-TLR4-neuroinflammatory-DAMP	1	2	1
+21B	LGALS3-TREM2-microglial-binding-function	1	2	1
+21B	LGI1-ADAM11-binding	1	2	1
+21B	LGI1-ADAM22-excitatory-synapse	1	2	1
+21B	LGI1-ADAM23-transsynaptic-synaptic-organization	1	2	1
+21B	LGI2-ADAM11-binding	1	2	1
+21B	LGI3-ADAM22-binding	1	2	1
+21B	LGI4-ADAM11-binding	1	2	1
+21B	LGI4-ADAM22-peripheral-neural-binding	1	2	1
+21B	LGI4-ADAM23-binding	1	2	1
+21B	LH-LHCGR-GPCR	1	2	1
+21B	LHCGR-Gs-coupling	1	2	1
+21B	LHFPL4-GABRA1-GABAergic-postsynapse	1	2	1
+21B	LHFPL4-NLGN2-GABAergic-postsynapse	1	2	1
+21B	LIF-LIFR	1	2	1
+21B	LIF-LIFR-gp130-activation	1	2	1
+21B	LIF-gp130-JAK-STAT	2	3	1
+21B	LIGHT-HVEM-costimulation	1	2	1
+21B	LIGHT-LTBR-costimulation	1	2	1
+21B	LILRB1-ITIM-SHP1-inhibitory-relay	1	2	1
+21B	LILRB1-pY562-CSK-inhibitory-adaptor	1	2	1
+21B	LILRB4-Gp49B-ITIM-SHP1-inhibitory-relay	1	2	1
+21B	LILRB4-ITIM-SHP2-inhibitory-relay	1	2	1
+21B	LIME1-GRAP2-GADS-association	1	2	1
+21B	LIME1-GRB2-association	1	2	1
+21B	LIME1-LCK-membrane-proximal-association	1	2	1
+21B	LIME1-PIK3R1-PI3K-association	1	2	1
+21B	LIME1-SHP2-inhibitory-association	1	2	1
+21B	LL37-Mac1-phagocytosis	1	2	1
+21B	LMW-HA-TLR2-DAMP-signaling	1	2	1
+21B	LMW-HA-TLR4-MD2-CD44-DAMP-signaling	1	2	1
+21B	LPA-LPAR1-GPCR	1	2	1
+21B	LPA-LPAR2-GPCR	1	2	1
+21B	LPA-LPAR3-GPCR	1	2	1
+21B	LPA-LPAR4-GPCR	1	2	1
+21B	LPA-LPAR5-GPCR	1	2	1
+21B	LPA-LPAR6-GPCR	1	2	1
+21B	LPAR1-G13-coupling	1	2	1
+21B	LPAR1-Gi-coupling	1	2	1
+21B	LPI-GPR55-GPCR	1	2	1
+21B	LRP1-FE65-tail-docking	1	2	1
+21B	LRP1-SNX17-recycling	1	2	1
+21B	LRP2-ARH-endocytic-recycling	1	2	1
+21B	LRP2-DAB2-endocytic-sorting	1	2	1
+21B	LRP4-MuSK-receptor-complex	1	2	1
+21B	LRRTM1-NRXN1-SS4-excitatory-synapse	1	2	1
+21B	LRRTM2-NRXN1-excitatory-synapse	1	2	1
+21B	LRRTM4-GPC4-excitatory-synapse	1	2	1
+21B	LSECtin-LAG3-melanoma-immune-checkpoint	1	2	1
+21B	LTB4-BLT1-GPCR	1	2	1
+21B	LTB4-BLT2-GPCR	1	2	1
+21B	LTD4-CysLT1-GPCR	1	2	1
+21B	LTE4-OXGR1-GPCR	1	2	1
+21B	LTbetaR-TRAF-adaptor-recruitment	3	4	3
+21B	LUM-CD14-LPS-presentation-phagocytosis	1	2	1
+21B	LUM-alpha2beta1-migration-inhibition	1	2	1
+21B	LUM-alphaL-integrin-neutrophil-migration	1	2	1
+21B	LUM-alphaM-integrin-neutrophil-migration	1	2	1
+21B	LUM-beta2-integrin-neutrophil-migration	1	2	1
+21B	LYNX1-CHRNA7-allosteric-modulation	1	2	1
+21B	LYNX2-CHRNA4-CHRNB2-nAChR-modulation	1	2	1
+21B	LYNX2-CHRNA7-nAChR-modulation	1	2	1
+21B	Lactate-HCAR1-GPCR	1	2	1
+21B	Laminin211-GPR126-Schwann-myelination	1	2	1
+21B	Laminin332-LG3-alpha3beta1-adhesion	1	2	1
+21B	Laminin332-galectin3-keratinocyte-motility	1	2	1
+21B	Laminin411-MCAM-adhesion	1	2	1
+21B	Laminin411-alpha6beta1-adhesion	1	2	1
+21B	Laminin411-alpha7beta1-adhesion	1	2	1
+21B	Laminin421-MCAM-adhesion	1	2	1
+21B	Laminin421-alpha6beta1-adhesion	1	2	1
+21B	Laminin421-alpha7beta1-adhesion	1	2	1
+21B	Laminin511-BCAM-binding	1	2	1
+21B	Laminin511-alpha3beta1-adhesion	1	2	1
+21B	Laminin511-alpha6beta1-adhesion	1	2	1
+21B	Laminin511-alpha6beta4-binding	1	2	1
+21B	Laminin511-alpha7beta1-binding	1	2	1
+21B	Laminin511-dystroglycan-binding	1	2	1
+21B	Leu-enkephalin-OPRD1-GPCR-binding	1	2	1
+21B	Ly49A-ITIM-SHP1-inhibitory-relay	1	2	1
+21B	Ly49A-ITIM-SHP2-inhibitory-association	1	2	1
+21B	Ly49D-DAP12-activating-receptor-assembly	1	2	1
+21B	Ly49H-DAP12-activating-receptor-assembly	1	2	1
+21B	Ly49P-DAP12-activating-receptor-assembly	1	2	1
+21B	LysoPS-GPR174-GPCR	1	2	1
+21B	LysoPS-GPR34-GPCR	1	2	1
+21B	LysoPS-P2Y10-GPCR	1	2	1
+21B	MACOCO-GABRB3-GABAergic-trafficking	1	2	1
+21B	MACOCO-GABRG2-GABAergic-trafficking	1	2	1
+21B	MAIR-II-dual-FcRgamma-adaptor-assembly	1	2	1
+21B	MAIR-II-dual-ITAM-adaptor-assembly	1	2	1
+21B	MAP1B-SCN8A-Nav1.6-trafficking-complex	1	2	1
+21B	MATK-LYN-Y508-negative-SFK-relay	1	2	1
+21B	MATN2-TLR4-neuroinflammatory-DAMP	1	2	1
+21B	MAdCAM1-alpha4beta7-lymphocyte-homing	1	2	1
+21B	MC2R-MRAP1-Gs-coupling	1	2	1
+21B	MCFA-GPR84-GPCR	1	2	1
+21B	MCH-MCHR1-GPCR	1	2	1
+21B	MCH-MCHR2-GPCR	1	2	1
+21B	MDA5-MAVS-antiviral-CARD-assembly	1	2	1
+21B	MDGA1-NLGN2-inhibitory-synapse-modulation	1	2	1
+21B	MDGA2-NLGN1-excitatory-synapse-modulation	1	2	1
+21B	MDK-LRP1-endocytic-survival	1	2	1
+21B	MDK-PTPRZ1-phosphatase-inhibition	1	2	1
+21B	MDL1-TYROBP-adaptor	1	2	1
+21B	MERTK-PIK3R1-phagocytic-relay	1	2	1
+21B	MERTK-SRC-phagocytic-relay	1	2	1
+21B	MERTK-VAV3-phagocytic-relay	1	2	1
+21B	MERTK-pY867-GRB2	1	2	1
+21B	MET-pY1003-CBL-downregulation	1	2	1
+21B	MET-pY1349-GAB1	1	2	1
+21B	MET-pY1356-GRB2	1	2	1
+21B	MET-pY1356-SHIP1-negative-morphogenesis	1	2	1
+21B	MET-pY1356-SHIP2-morphogenesis	1	2	1
+21B	MFG-E8-alphaVbeta3-phagocytosis	1	2	1
+21B	MFG-E8-alphaVbeta5-phagocytosis	1	2	1
+21B	MHCII-LAG3-immune-checkpoint	1	2	1
+21B	MICL-PTPN11-inhibitory	1	2	1
+21B	MICL-PTPN6-inhibitory	1	2	1
+21B	MIF-ACKR3-biased-chemotaxis	1	2	1
+21B	MIF-CD74-CD44-ERK-receptor-complex	1	2	1
+21B	MIF-CXCR2-GPCR-arrest-chemotaxis	1	2	1
+21B	MIF-CXCR4-GPCR-chemotaxis	1	2	1
+21B	MPL-JAK2-proximal	1	2	1
+21B	MPL-STAT5-proximal	1	2	1
+21B	MPL-TYK2-proximal	1	2	1
+21B	MPL-Y591RRL-AP2M1-trafficking	1	2	1
+21B	MPL-pY112-SHC1-TPO-Ras-relay	1	2	1
+21B	MPL-pY591-BTK	1	2	1
+21B	MPL-pY591-SHP1	1	2	1
+21B	MPL-pY591-SYK	1	2	1
+21B	MPO-Mac1-adhesion	1	2	1
+21B	MPP3-HTR2C-PDZ-trafficking-desensitization	1	2	1
+21B	MSP-MST1R-RON-activation	1	2	1
+21B	MST1R-pY1353-GAB1	1	2	1
+21B	MST1R-pY1360-GRB2	1	2	1
+21B	MT1-Gi-coupling	1	2	1
+21B	MT2-Gi-coupling	1	2	1
+21B	MUPP1-GABBR2-PDZ-stability	1	2	1
+21B	MUPP1-HTR2C-PDZ-phosphoregulated-association	1	2	1
+21B	Mechanical-PIEZO1-ion-channel	1	2	1
+21B	Mechanical-PIEZO2-ion-channel	1	2	1
+21B	Melatonin-MTNR1A-GPCR	1	2	1
+21B	Melatonin-MTNR1B-GPCR	1	2	1
+21B	Menthol-TRPM8-ion-channel	1	2	1
+21B	Met-enkephalin-OPRD1-GPCR-binding	1	2	1
+21B	Met-enkephalin-OPRM1-GPCR	1	2	1
+21B	Mincle-CLEC4D-heteromer	1	2	1
+21B	Mincle-FCER1G-adaptor	1	2	1
+21B	Morphine-OPRM1-GPCR	1	2	1
+21B	Mustard-oil-TRPA1-ion-channel	1	2	1
+21B	NACHO-CHRNA4-CHRNB2-neuronal-ER-assembly	1	2	1
+21B	NACHO-CHRNA7-neuronal-ER-assembly	1	2	1
+21B	NALCN-FAM155A-channelosome	1	2	1
+21B	NALCN-UNC80-channelosome	1	2	1
+21B	NBEA-GLRB-glycinergic-trafficking	1	2	1
+21B	NBEA-GPHN-GABAergic-postsynapse	1	2	1
+21B	NBL1-BMP2-antagonism	1	2	1
+21B	NBL1-BMP7-antagonism	1	2	1
+21B	NCAD-FGFR1-neurite-relay	1	2	1
+21B	NCAD-GluA2-extracellular-synaptic-complex	1	2	1
+21B	NCAM-FGFR1-direct-binding-activation	1	2	1
+21B	NCAM140-FYN-neuronal-relay	1	2	1
+21B	NCAM140-PTPRA-FYN-neurite-relay	1	2	1
+21B	NECL2-CRTAM-immune-adhesion	1	2	1
+21B	NECL2-ERBB3-inhibitory-cis-complex	1	2	1
+21B	NECL2-PTPN13-ERBB3-inhibitory-relay	1	2	1
+21B	NECTIN1-FGFR1-neuronal-relay	1	2	1
+21B	NECTIN1-MLLT4-PDZ-junction	1	2	1
+21B	NECTIN2-CD112-CD226-NK-activation	1	2	1
+21B	NECTIN2-PVRIG-CD112R-checkpoint	1	2	1
+21B	NEDD4L-SCN8A-Nav1.6-ubiquitin-trafficking	1	2	1
+21B	NELL2-ROBO3-guidance	1	2	1
+21B	NETO1-GluK2-kainate-receptor-auxiliary-complex	1	2	1
+21B	NETO2-GluK2-kainate-receptor-auxiliary-modulation	1	2	1
+21B	NGF-TrkA-RTK	1	2	1
+21B	NGF-alpha9beta1-neurotrophin-signaling	1	2	1
+21B	NGF-p75NTR-binding	1	2	1
+21B	NGL3-PTPRD-excitatory-synapse	1	2	1
+21B	NGL3-PTPRF-excitatory-synapse	1	2	1
+21B	NGL3-PTPRS-excitatory-synapse	1	2	1
+21B	NHERF1-ASIC3-PKC-cytoskeletal-complex	1	2	1
+21B	NHERF1-HTR4A-PDZ-microvilli-targeting	1	2	1
+21B	NK1R-Gq11-coupling	1	2	1
+21B	NKA-TACR2-GPCR	1	2	1
+21B	NKB-TACR3-GPCR	1	2	1
+21B	NKG2A-ITIM-SHP1-inhibitory-relay	1	2	1
+21B	NKG2A-ITIM-SHP2-inhibitory-relay	1	2	1
+21B	NKG2C-CD94-DAP12-activating-receptor-assembly	1	2	1
+21B	NKG2E-CD94-DAP12-intracellular-assembly	1	2	1
+21B	NKR-P1C-FcRgamma-activating-receptor-assembly	1	2	1
+21B	NKp44-DAP12-activating-receptor-assembly	1	2	1
+21B	NKp46-CD3zeta-complex-assembly	1	2	1
+21B	NKp46-FcRgamma-complex-assembly	1	2	1
+21B	NLGN1-NRXN1B-synaptic-adhesion	1	2	1
+21B	NLGN2-MAGI2-inhibitory-postsynaptic-scaffold	1	2	1
+21B	NLGN2-NRXN1B-SS4-inhibitory-synaptic-adhesion	1	2	1
+21B	NLGN2-collybistin-gephyrin-inhibitory-postsynapse	1	2	1
+21B	NLGN2-gephyrin-collybistin-inhibitory-postsynapse	1	2	1
+21B	NLGN3-NRXN1B-SS4-synaptic-adhesion	1	2	1
+21B	NLGN3-PTPRD-noncanonical-transsynaptic-adhesion	1	2	1
+21B	NLGN4-collybistin-gephyrin-glycinergic-postsynapse	1	2	1
+21B	NLGN4-gephyrin-glycinergic-postsynapse	1	2	1
+21B	NLRP1-ASC-inflammasome-assembly	1	2	1
+21B	NLRP3-ASC-inflammasome-assembly	1	2	1
+21B	NLRP3-NEK7-inflammasome-licensing	1	2	1
+21B	NLRP6-ASC-inflammasome-assembly	1	2	1
+21B	NMU-NMUR1-GPCR	1	2	1
+21B	NMU-NMUR2-GPCR	1	2	1
+21B	NOD1-RIPK2-CARD	1	2	1
+21B	NOD2-RIPK2-CARD	1	2	1
+21B	NODAL-ACVR1C-ACVR2B	1	2	1
+21B	NODAL-ACVR1C-binding	1	2	1
+21B	NODAL-ACVR2B-binding	1	2	1
+21B	NODAL-CRIPTO-ACVR1B-ACVR2B	1	2	1
+21B	NODAL-CRIPTO-binding	1	2	1
+21B	NOG-BMP4-antagonism	1	2	1
+21B	NPM-ALK-pY664-PLCG1-mitogenicity	1	2	1
+21B	NPTN65-GluA1-AMPAR-LTP	1	2	1
+21B	NPTX1-GluA4-synaptic-recruitment	1	2	1
+21B	NPTX2-AMPAR-extracellular-clustering	1	2	1
+21B	NPTXR-AMPAR-transsynaptic-organization	1	2	1
+21B	NPY-NPY4R-GPCR-binding	1	2	1
+21B	NPY-Y1R-GPCR	1	2	1
+21B	NPY-Y2R-GPCR	1	2	1
+21B	NPY-Y5R-GPCR	1	2	1
+21B	NPY1R-Gi/Go-coupling	1	2	1
+21B	NPY2R-Gi/Go-coupling	1	2	1
+21B	NRG1-ERBB2-ERBB3-activation	1	2	1
+21B	NRG1-ERBB2-ERBB3-complex	1	2	1
+21B	NRG1-ERBB3	1	2	1
+21B	NRG1-ERBB4-RTK	1	2	1
+21B	NRG1-alpha6beta4-ErbB-crosstalk	1	2	1
+21B	NRG1-alphaVbeta3-ErbB-crosstalk	1	2	1
+21B	NRG2-ERBB3	1	2	1
+21B	NRG2-ERBB4	1	2	1
+21B	NRG3-ERBB4	1	2	1
+21B	NRG4-ERBB4	1	2	1
+21B	NRP2-PLXNA3-GluA1-homeostatic-scaling	1	2	1
+21B	NRTN-GFRA2-RET	1	2	1
+21B	NRXN1-ADGRL1-transsynaptic-adhesion	1	2	1
+21B	NRXN2beta-GABRA1beta2gamma2-cis-binding-modulation	1	2	1
+21B	NSF-GABAB-heterodimer-desensitization	1	2	1
+21B	NSF-GABRB3-GABAergic-trafficking	1	2	1
+21B	NT3-TrkC-PLCG1	1	2	1
+21B	NT3-TrkC-RTK	1	2	1
+21B	NT3-alpha9beta1-adhesion	1	2	1
+21B	NT3-p75NTR-binding	1	2	1
+21B	NT4-TrkB-RTK	1	2	1
+21B	NT4-p75NTR-binding	1	2	1
+21B	NTN1-DCC-guidance	1	2	1
+21B	NTN1-NEO1-guidance	1	2	1
+21B	NTN1-UNC5C-guidance	1	2	1
+21B	NTN4-NEO1-UNC5B-composite-receptor	1	2	1
+21B	NTN4-NEO1-antiangiogenic-function	1	2	1
+21B	NTN4-alpha6beta1-endothelial-migration	1	2	1
+21B	NTNG1-NGL1-pathway-specific-synapse	1	2	1
+21B	NTNG2-NGL2-Schaffer-collateral-synapse	1	2	1
+21B	NTRK3-PTPRS-excitatory-synapse	1	2	1
+21B	NXPH1-NRXN1alpha-LNS2-binding	1	2	1
+21B	NXPH1-NRXN2alpha-LNS2-binding	1	2	1
+21B	NXPH1-NRXN3alpha-LNS2-binding	1	2	1
+21B	NXPH3-NRXN1alpha-LNS2-binding	1	2	1
+21B	NXPH3-NRXN2alpha-LNS2-binding	1	2	1
+21B	NXPH3-NRXN3alpha-LNS2-binding	1	2	1
+21B	Nectin1-Nectin3-trans-adhesion	1	2	1
+21B	Nectin1-Nectin4-trans-adhesion	1	2	1
+21B	Nectin2-Nectin3-trans-adhesion	1	2	1
+21B	Nephrin-NEPH1-heterophilic-slit-diaphragm-complex	1	2	1
+21B	Netrin-1-UNC5B-BBB	1	2	1
+21B	Netrin-4-DCC-binding	1	2	1
+21B	Netrin-4-UNC5A-binding	1	2	1
+21B	Netrin-DCC-FAK-Src-axon-attraction	1	2	1
+21B	Netrin-DCC-RhoGTPase-growth-cone	1	2	1
+21B	Netrin-UNC5B-PIKE-L-PI3K-survival	1	2	1
+21B	Netrin1-CD146-angiogenesis	1	2	1
+21B	Netrin1-DSCAM-guidance	1	2	1
+21B	Netrin1-UNC5A-repulsion	1	2	1
+21B	Neurotensin-NTSR2-GPCR	1	2	1
+21B	Nicotinic-acid-HCAR2-GPCR	1	2	1
+21B	Nociceptin-OPRL1-GPCR	1	2	1
+21B	Noelin1-AMPAR-extracellular-anchoring	1	2	1
+21B	Norepinephrine-ADRA1A-GPCR	1	2	1
+21B	Norepinephrine-ADRA1B-GPCR	1	2	1
+21B	Norepinephrine-ADRA1D-GPCR	1	2	1
+21B	Norepinephrine-ADRA2A-GPCR	1	2	1
+21B	Norepinephrine-ADRA2B-GPCR	1	2	1
+21B	Norepinephrine-ADRA2C-GPCR	1	2	1
+21B	Norepinephrine-ADRB1-GPCR	1	2	1
+21B	Norepinephrine-ADRB2-GPCR	1	2	1
+21B	Norepinephrine-ADRB3-GPCR	1	2	1
+21B	Notch-NICD-RBPJ	4	6	1
+21B	Notch-ligand-selectivity	1	2	1
+21B	Notch1-STAT3-ETBR	1	2	1
+21B	Notch1-STAT3-astrocyte	1	2	1
+21B	OEA-GPR119-GPCR	1	2	1
+21B	OPRM1-Gi-coupling	1	2	1
+21B	ORL1-Gi-coupling	1	2	1
+21B	OSCAR-FcRgamma-osteoclast-relay	1	2	1
+21B	OSM-LIFR-conditional-binding	1	2	1
+21B	OSM-OSMR-conditional-binding	1	2	1
+21B	OSM-gp130-JAK-STAT	5	6	1
+21B	OSM-gp130-LIFR	1	2	1
+21B	OSM-gp130-OSMR	1	2	1
+21B	OSM-gp130-low-affinity-binding	1	2	1
+21B	OX40-QEE-TRAF1-costimulation	1	2	1
+21B	OX40-QEE-TRAF2-NFkB	1	2	1
+21B	OX40-QEE-TRAF3-modulatory-branch	1	2	1
+21B	OX40-QEE-TRAF5-NFkB	1	2	1
+21B	OX40-TRAF-adaptor-recruitment	4	5	4
+21B	OX40L-OX40-costimulation	1	2	1
+21B	OXTR-Gi3-coupling	1	2	1
+21B	OXTR-Gq-coupling	1	2	1
+21B	Orexin-OX1R-GPCR	1	2	1
+21B	Orexin-OX2R-GPCR	1	2	1
+21B	Osteopontin-CD44-binding-chemotaxis	1	2	1
+21B	Osteopontin-alphaVbeta1-adhesion	1	2	1
+21B	Osteopontin-alphaVbeta5-adhesion	1	2	1
+21B	Osteopontin-alphaVbeta6-adhesion	1	2	1
+21B	OxPS-CD36-apoptotic-phagocytosis	1	2	1
+21B	Oxytocin-OXTR-GPCR	1	2	1
+21B	P-selectin-GlyCAM1-binding	1	2	1
+21B	P-selectin-PSGL1-leukocyte-adhesion	1	2	1
+21B	P-selectin-endoglycan-leukocyte-adhesion	1	2	1
+21B	P-selectin-nucleolin-tumor-signaling	1	2	1
+21B	P-selectin-uMUC1-tumor-tethering	1	2	1
+21B	P2X2-FE65-excitatory-synapse-complex	1	2	1
+21B	P2X2-GABAA-alpha1beta2gamma2-dynamic-complex	1	2	1
+21B	P2X2-VILIP1-neuronal-calcium-sensor-complex	1	2	1
+21B	P2X2-alpha4beta2-nAChR-molecular-partnership	1	2	1
+21B	P2X2-tubulin-cytoskeletal-complex	1	2	1
+21B	P2X7-ASC-NLRP1-neuronal-inflammasome-complex	1	2	1
+21B	P2X7-EMP1-C-terminal-blebbing-complex	1	2	1
+21B	P2X7-EMP2-C-terminal-blebbing-complex	1	2	1
+21B	P2X7-EMP3-C-terminal-blebbing-complex	1	2	1
+21B	P2X7-MYH9-pore-phagocytosis-complex	1	2	1
+21B	P2X7-NLRP1-neuronal-inflammasome-complex	1	2	1
+21B	P2X7-NLRP2-astrocytic-inflammasome-complex	1	2	1
+21B	P2X7-NLRP3-subplasmalemmal-inflammasome-complex	1	2	1
+21B	P2X7-PANX1-large-pore-complex	1	2	1
+21B	P2X7-PMP22-C-terminal-blebbing-complex	1	2	1
+21B	P2X7-PXN-NLRP3-inflammasome-complex	1	2	1
+21B	P2X7-RPTPbeta-phosphorylation-feedback-complex	1	2	1
+21B	P2Y1-A1-adenosine-heteromer	1	2	1
+21B	P2Y1-A2A-platelet-purinergic-heteromer	1	2	1
+21B	P2Y1-Gq-coupling	1	2	1
+21B	P2Y1-NHERF2-PDZ-PLCbeta-scaffold	1	2	1
+21B	P2Y1-P2Y11-heteromer-internalization	1	2	1
+21B	P2Y1-P2Y2-heteromer-granulocyte-signaling	1	2	1
+21B	P2Y1-P2Y4-heteromer-granulocyte-signaling	1	2	1
+21B	P2Y11-Gq-coupling	1	2	1
+21B	P2Y11-Gs-coupling	1	2	1
+21B	P2Y12-A2A-platelet-purinergic-heteromer	1	2	1
+21B	P2Y12-Gi-coupling	1	2	1
+21B	P2Y12-NHERF1-PDZ-internalization-scaffold	1	2	1
+21B	P2Y12-PAR4-heteromer-endosomal-Akt	1	2	1
+21B	P2Y13-Gi-coupling	1	2	1
+21B	P2Y14-Gi-coupling	1	2	1
+21B	P2Y2-A1-adenosine-heteromer	1	2	1
+21B	P2Y2-Gq-coupling	1	2	1
+21B	P2Y2-alphaVbeta3-RGD-GPCR-complex	1	2	1
+21B	P2Y2-alphaVbeta5-RGD-GPCR-complex	1	2	1
+21B	P2Y4-Gq-coupling	1	2	1
+21B	P2Y4-P2Y6-heteromer-neuronal-architecture	1	2	1
+21B	P2Y6-AT1-heteromer-vascular-hypertrophy	1	2	1
+21B	P2Y6-Gq-coupling	1	2	1
+21B	PAC1-Gq11-coupling	1	2	1
+21B	PAC1-Gs-coupling	1	2	1
+21B	PACAP-PAC1-GPCR	1	2	1
+21B	PACAP-VPAC1-GPCR	1	2	1
+21B	PACAP-VPAC2-GPCR	1	2	1
+21B	PACSIN1-GLRA1-glycinergic-trafficking	1	2	1
+21B	PACSIN1-GLRB-glycinergic-trafficking	1	2	1
+21B	PACSIN3-TRPV4-proline-rich-domain-trafficking	1	2	1
+21B	PAF-PTAFR-GPCR	1	2	1
+21B	PAFR-Gi/Go-coupling	1	2	1
+21B	PAFR-Gq/11-coupling	1	2	1
+21B	PAG1-pY314-pY317-CSK-negative-SFK-regulation	1	2	1
+21B	PCDH15-CD3-TMC1-mechanotransduction	1	2	1
+21B	PCDH15-CD3-TMC2-mechanotransduction	1	2	1
+21B	PCDH15-LHFPL5-tip-link-complex	1	2	1
+21B	PDCD1-pY223-ITIM-SHP2-activation	1	2	1
+21B	PDCD1-pY248-SHP2-inhibitory-ITSM	1	2	1
+21B	PDGF-OPC-ERK-function	1	2	1
+21B	PDGF-RTK-ERK	1	2	1
+21B	PDGF-RTK-PI3K-AKT	1	2	1
+21B	PDGF-RTK-SRC-ERK	1	2	1
+21B	PDGFAA-PDGFRA-dimer	1	2	1
+21B	PDGFB-PDGFRB-RTK	1	2	1
+21B	PDGFBB-PDGFRA-dimer	1	2	1
+21B	PDGFCC-PDGFRA-PDGFRB-RTK	1	2	1
+21B	PDGFCC-PDGFRAA-RTK	1	2	1
+21B	PDGFDD-PDGFRB-RTK	1	2	1
+21B	PDGFR-beta-fibrotic-scar-SCI	1	2	1
+21B	PDGFRB-JAK-STAT	1	2	1
+21B	PDGFRB-PLCG1-IP3-mitogenesis	1	2	1
+21B	PDGFRB-SHP2-FAK-migration	1	2	1
+21B	PDGFRB-pY1009-PTPN11	1	2	1
+21B	PDGFRB-pY1021-CBLB-trafficking	1	2	1
+21B	PDGFRB-pY1021-PLCG1	1	2	1
+21B	PDGFRB-pY579-SRC-family	1	2	1
+21B	PDGFRB-pY581-SRC-family	1	2	1
+21B	PDGFRB-pY716-GRB2	1	2	1
+21B	PDGFRB-pY740-PI3K	1	2	1
+21B	PDGFRB-pY751-PI3K	1	2	1
+21B	PDGFRB-pY763-PTPN11	1	2	1
+21B	PDGFRB-pY771-ABL2	1	2	1
+21B	PDGFRB-pY771-RasGAP	1	2	1
+21B	PDL1-PD1-immune-checkpoint	1	2	1
+21B	PDL2-PD1-immune-checkpoint	1	2	1
+21B	PECAM1-pY663-pY686-PLCG1-site-set	1	2	1
+21B	PECAM1-pY663-pY686-SHIP1-site-set	1	2	1
+21B	PECAM1-pY663-pY686-SHP1-site-set	1	2	1
+21B	PECAM1-pY663-pY686-SHP2-site-set	1	2	1
+21B	PF4-Mac1-functional-receptor	1	2	1
+21B	PFN1-GPHN-microfilament-scaffold	1	2	1
+21B	PFN2-GPHN-microfilament-scaffold	1	2	1
+21B	PGD2-CRTH2-GPCR	1	2	1
+21B	PGD2-DP1-GPCR	1	2	1
+21B	PGE2-EP1-GPCR-Ca2+	1	2	1
+21B	PGE2-EP2-GPCR	1	2	1
+21B	PGE2-EP3-GPCR-Gi-cAMP	1	2	1
+21B	PGE2-EP4-GPCR-Gs-cAMP	1	2	1
+21B	PGF2alpha-FP-GPCR-Ca2+	1	2	1
+21B	PGI2-PTGIR-GPCR	1	2	1
+21B	PGLYRP1-PGN-TREM1-activation	1	2	1
+21B	PIANP-GABBR1a-presynaptic-trafficking	1	2	1
+21B	PICK1-ASIC1-C-terminal-PKA-trafficking	1	2	1
+21B	PICK1-GRIA2-Ca2+-endocytosis	1	2	1
+21B	PILRA-pY269-SHP1-inhibitory-receptor	1	2	1
+21B	PILRB-DAP12-activating-myeloid-receptor-assembly	1	2	1
+21B	PIPs-CD14-efferocytosis	1	2	1
+21B	PIR-B-pY794-pY824-SHP1-inhibitory-ITIM	1	2	1
+21B	PIRA-FcRgamma-activating-receptor-assembly	1	2	1
+21B	PLIC1-GABRB3-ER-stability-trafficking	1	2	1
+21B	PLXNA4-GluA2-retrograde-dendritic-trafficking	1	2	1
+21B	POSTN-alphaVbeta3-FAK-migration	1	2	1
+21B	POSTN-alphaVbeta5-FAK-migration	1	2	1
+21B	PP-Y4R-GPCR	1	2	1
+21B	PP2A-B55alpha-GABBR1-dephosphorylation	1	2	1
+21B	PRAF2-GABBR1-ER-gatekeeper	1	2	1
+21B	PRIP-GABRB2-3-GABAergic-trafficking	1	2	1
+21B	PRLR-JAK2-proximal	1	2	1
+21B	PRLR-STAT5-proximal	1	2	1
+21B	PRLR-pY473-STAT5	1	2	1
+21B	PRLR-pY479-STAT5	1	2	1
+21B	PRLR-pY580-STAT5	1	2	1
+21B	PROS1-MERTK-TAM-signaling	1	2	1
+21B	PROS1-TYRO3-ERK-signaling	1	2	1
+21B	PRRT1-SynDIG4-AMPAR-extrasynaptic-trafficking	1	2	1
+21B	PRRT2-GluA1-AMPAR-association	1	2	1
+21B	PSD95-ASIC2a-synaptic-targeting-complex	1	2	1
+21B	PSD95-KCNA4-Kv1.4-clustering-trafficking	1	2	1
+21B	PSPN-GFRA4-RET-neuron-survival	1	2	1
+21B	PTC-PROP-TAS2R38-bitter-GPCR	1	2	1
+21B	PTH1R-ECD-ligand-binding	1	2	1
+21B	PTH1R-Gi-coupling	1	2	1
+21B	PTH1R-Gq-coupling	1	2	1
+21B	PTH1R-Gs-coupling	1	2	1
+21B	PTH1R-PTH1-34-GPCR-activation	1	2	1
+21B	PTH2R-Gs-coupling	1	2	1
+21B	PTHLH-PTH1R-ECD-binding	1	2	1
+21B	PTHLH-PTH1R-GPCR-activation	1	2	1
+21B	PTN-Mac1-ligand-response	1	2	1
+21B	PTN-PTPRZ1-phosphatase-inhibition	1	2	1
+21B	PTPN1-CTTN-cortactin-Y446-negative-adhesion-relay	1	2	1
+21B	PTPN1-EPHA3-negative-ephrin-relay	1	2	1
+21B	PTPN1-IRS1-negative-insulin-relay	1	2	1
+21B	PTPN1-JAK2-negative-leptin-relay	1	2	1
+21B	PTPN1-LAT-negative-FcgammaRIIA-relay	1	2	1
+21B	PTPN1-PTK6-BRK-Y342-negative-kinase-relay	1	2	1
+21B	PTPN1-STAM2-ESCRT0-negative-trafficking-relay	1	2	1
+21B	PTPN1-STAT6-Y641-negative-IL4-relay	1	2	1
+21B	PTPN1-TYK2-Y1054-Y1055-negative-IFN-relay	1	2	1
+21B	PTPN11-ARHGAP5-RhoA-myogenesis-relay	1	2	1
+21B	PTPN11-GAB1-BTAM-negative-EGF-ERK-relay	1	2	1
+21B	PTPN11-GAB1-Y317-negative-RasGAP-relay	1	2	1
+21B	PTPN11-GRIN2B-Y1252-negative-NMDAR-relay	1	2	1
+21B	PTPN11-IRS1-Y612-negative-IR-endocytosis	1	2	1
+21B	PTPN11-LYN-Y507-positive-mast-cell-relay	1	2	1
+21B	PTPN11-PTK2-FAK-Y397-negative-adhesion-relay	1	2	1
+21B	PTPN11-PTK2-FAK-Y576-Y577-negative-adhesion-relay	1	2	1
+21B	PTPN11-PXN-negative-Src-ERK-relay	1	2	1
+21B	PTPN11-SPRY1-tyrosine-negative-RTK-relay	1	2	1
+21B	PTPN11-SPRY2-Y55-negative-RTK-relay	1	2	1
+21B	PTPN11-STAT1-Y701-negative-IFN-relay	1	2	1
+21B	PTPN11-STAT5-Y694-Y699-negative-IL2-relay	1	2	1
+21B	PTPN12-BCAR1-p130Cas-focal-adhesion-dephosphorylation	1	2	1
+21B	PTPN12-PSTPIP1-WASP-negative-actin-relay	1	2	1
+21B	PTPN12-PTK2-FAK-Y397-negative-adhesion-relay	1	2	1
+21B	PTPN12-PTK2B-Y402-focal-adhesion-dephosphorylation	1	2	1
+21B	PTPN12-PTK2B-Y579-focal-adhesion-dephosphorylation	1	2	1
+21B	PTPN12-PTK2B-Y580-focal-adhesion-dephosphorylation	1	2	1
+21B	PTPN12-PXN-focal-adhesion-dephosphorylation	1	2	1
+21B	PTPN13-IRS1-negative-IGF1-relay	1	2	1
+21B	PTPN13-STAT4-Y693-negative-IL12-relay	1	2	1
+21B	PTPN13-STAT6-negative-IL4-relay	1	2	1
+21B	PTPN2-INSR-Y1162-Y1163-negative-insulin-relay	1	2	1
+21B	PTPN2-JAK1-Y1022-Y1023-negative-cytokine-relay	1	2	1
+21B	PTPN2-JAK3-negative-cytokine-relay	1	2	1
+21B	PTPN2-LCK-Y394-negative-TCR-relay	1	2	1
+21B	PTPN2-STAT6-Y641-negative-IL4-relay	1	2	1
+21B	PTPN2-TC45-STAT1-Y701-negative-IFN-relay	1	2	1
+21B	PTPN2-TC45-STAT3-Y705-negative-cytokine-relay	1	2	1
+21B	PTPN22-FYN-Y420-negative-TCR-relay	1	2	1
+21B	PTPN22-LCK-Y394-negative-TCR-relay	1	2	1
+21B	PTPN22-TCRZ-CD247-negative-TCR-relay	1	2	1
+21B	PTPN22-ZAP70-Y493-negative-TCR-relay	1	2	1
+21B	PTPN23-FYN-Y420-negative-SFK-relay	1	2	1
+21B	PTPN3-TCRZ-CD247-negative-TCR-relay	1	2	1
+21B	PTPN4-TCRZ-CD247-negative-TCR-relay	1	2	1
+21B	PTPN5-FYN-Y420-negative-neuronal-relay	1	2	1
+21B	PTPN5-GRIA2-tyrosine-site-set-negative-AMPAR-trafficking	1	2	1
+21B	PTPN5-GRIN2B-Y1472-negative-NMDAR-trafficking	1	2	1
+21B	PTPN5-MAPK1-Y204-negative-neuronal-relay	1	2	1
+21B	PTPN5-MAPK14-Y182-negative-neuronal-relay	1	2	1
+21B	PTPN5-PTK2B-Y402-negative-neuronal-relay	1	2	1
+21B	PTPN6-JAK2-negative-cytokine-relay	1	2	1
+21B	PTPN6-LCK-Y394-negative-TCR-relay	1	2	1
+21B	PTPN6-LYN-Y397-negative-BCR-relay	1	2	1
+21B	PTPN6-PIK3R1-negative-PI3K-relay	1	2	1
+21B	PTPN6-SRC-Y527-negative-SFK-relay	1	2	1
+21B	PTPN6-STAT3-negative-cytokine-relay	1	2	1
+21B	PTPN6-STAT6-Y641-negative-IL4-relay	1	2	1
+21B	PTPN6-ZAP70-negative-TCR-relay	1	2	1
+21B	PTPN7-HePTP-MAPK1-Y204-negative-T-cell-relay	1	2	1
+21B	PTPN7-HePTP-MAPK14-Y182-negative-hematopoietic-relay	1	2	1
+21B	PTPN9-NTRK1-Y490-negative-neurotrophin-relay	1	2	1
+21B	PTPN9-NTRK1-Y674-Y675-negative-neurotrophin-relay	1	2	1
+21B	PTPN9-STAT3-Y705-negative-erythroid-relay	1	2	1
+21B	PTPN9-VEGFR2-Y1175-negative-VEGF-relay	1	2	1
+21B	PTPRA-FYN-C-terminal-site-neuronal-relay	1	2	1
+21B	PTPRA-SRC-Y527-negative-SFK-relay	1	2	1
+21B	PTPRA-Y789-BCAR3-BCAR1-integrin-relay	1	2	1
+21B	PTPRA-Y789-GRB2-adaptor-association	1	2	1
+21B	PTPRB-TEK-Y992-negative-angiopoietin-relay	1	2	1
+21B	PTPRC-CD247-negative-TCR-relay	1	2	1
+21B	PTPRC-FYN-C-terminal-site-activation-relay	1	2	1
+21B	PTPRC-LCK-Y394-negative-TCR-relay	1	2	1
+21B	PTPRC-LCK-Y505-positive-TCR-priming-relay	1	2	1
+21B	PTPRC-LYN-Y397-activation-loop-relay	1	2	1
+21B	PTPRC-LYN-Y508-negative-BCR-relay	1	2	1
+21B	PTPRD-STAT3-Y705-dephosphorylation	1	2	1
+21B	PTPRG-PKD1-Y4237-dephosphorylation	1	2	1
+21B	PTPRH-LCK-Y394-negative-TCR-relay	1	2	1
+21B	PTPRJ-FYN-Y530-platelet-relay	1	2	1
+21B	PTPRJ-LAT-negative-TCR-relay	1	2	1
+21B	PTPRJ-LCK-Y394-negative-TCR-relay	1	2	1
+21B	PTPRJ-LCK-Y505-TCR-priming-relay	1	2	1
+21B	PTPRJ-LYN-Y507-platelet-relay	1	2	1
+21B	PTPRJ-OCLN-tight-junction-dephosphorylation	1	2	1
+21B	PTPRJ-SRC-Y529-platelet-relay	1	2	1
+21B	PTPRJ-TJP1-tight-junction-dephosphorylation	1	2	1
+21B	PTPRJ-VEGFR2-negative-endothelial-relay	1	2	1
+21B	PTPRK-PARD3-junctional-dephosphorylation	1	2	1
+21B	PTPRK-PKP3-junctional-dephosphorylation	1	2	1
+21B	PTPRK-PKP4-junctional-dephosphorylation	1	2	1
+21B	PTPRK-afadin-junctional-dephosphorylation	1	2	1
+21B	PTPRK-p120-catenin-junctional-dephosphorylation	1	2	1
+21B	PTPRM-p120-catenin-junctional-dephosphorylation	1	2	1
+21B	PTPRR-CTNNB1-Y142-WNT-modulation	1	2	1
+21B	PTPRS-CTTN-cortactin-axon-regeneration	1	2	1
+21B	PTPRT-BCR-Y177-dendritic-arborization	1	2	1
+21B	PTPRT-PXN-pY88-adhesion-tumor-suppression	1	2	1
+21B	PTPRT-STAT3-Y705-negative-cancer-relay	1	2	1
+21B	PTPRT-STXBP1-synaptic-vesicle-fusion	1	2	1
+21B	PTPRU-AFAD-substrate-sequestration	1	2	1
+21B	PTPRU-CTNND1-substrate-sequestration	1	2	1
+21B	PVR-CD155-CD226-NK-activation	1	2	1
+21B	PVR-CD155-CD96-NK-adhesion	1	2	1
+21B	PVR-CD155-TIGIT-checkpoint	1	2	1
+21B	PVRIG-pY233-SHIP1-inhibitory-relay	1	2	1
+21B	PX-RICS-GABARAP-GABAergic-transport	1	2	1
+21B	PYY-NPY4R-GPCR-binding	1	2	1
+21B	PYY3-36-Y2R-GPCR	1	2	1
+21B	Pikachurin-DAG1-ribbon-synapse	1	2	1
+21B	Pikachurin-GPR179-DAG1-ribbon-synapse	1	2	1
+21B	PlGF-FLT1-binding-activation	1	2	1
+21B	PlGF2-NRP1-binding	1	2	1
+21B	PlGF2-NRP2-binding	1	2	1
+21B	PrPC-GPR126-cAMP-myelin-homeostasis	1	2	1
+21B	Progastrin-GPR56-colonic-proliferation	1	2	1
+21B	Prokineticin-1-PROKR1-GPCR	1	2	1
+21B	Prokineticin-1-PROKR2-GPCR	1	2	1
+21B	Prokineticin-2-PROKR1-GPCR	1	2	1
+21B	Prokineticin-2-PROKR2-GPCR	1	2	1
+21B	Prokineticin-2beta-PROKR1-GPCR	1	2	1
+21B	Prokineticin-2beta-PROKR2-GPCR	1	2	1
+21B	Prolactin-PRLR-cytokine-receptor	1	2	1
+21B	Proton-ASIC1-ion-channel	1	2	1
+21B	Proton-ASIC3-channel	1	2	1
+21B	Proton-GPR65-GPCR	1	2	1
+21B	Proton-GPR68-GPCR	1	2	1
+21B	Proton-TASK2-channel-inhibition	1	2	1
+21B	PtdSer-BAI1-ELMO-DOCK180-Rac-efferocytosis	1	2	1
+21B	PtdSer-CD300A-inhibitory-efferocytosis	1	2	1
+21B	PtdSer-CD300B-DAP12-efferocytosis	1	2	1
+21B	PtdSer-CD300F-efferocytosis	1	2	1
+21B	PtdSer-GPR56-S4-microglial-pruning	1	2	1
+21B	PtdSer-LOX1-apoptotic-body-recognition	1	2	1
+21B	PtdSer-RAGE-efferocytosis	1	2	1
+21B	PtdSer-STAB2-efferocytosis	1	2	1
+21B	PtdSer-TIM1-efferocytosis	1	2	1
+21B	PtdSer-TIM3-apoptotic-cell-recognition	1	2	1
+21B	PtdSer-TIM4-efferocytosis	1	2	1
+21B	PtdSer-TREM2-DAP12-phagocytosis	1	2	1
+21B	RACK1-GABRB1-PKC-modulation	1	2	1
+21B	RAGE-DIAPH1-actin-migration	1	2	1
+21B	RAGE-Mac1-counter-receptor-adhesion	1	2	1
+21B	RAGE-alphaXbeta2-counter-receptor-adhesion	1	2	1
+21B	RANK-TRAF6-osteoclastogenesis	1	2	1
+21B	RANKL-OPG-decoy	1	2	1
+21B	RANKL-RANK-osteoclastogenesis	1	2	1
+21B	RDX-GABRA5-extrasynaptic-anchoring	1	2	1
+21B	RELN-ApoER2-Dab1-signaling	1	2	1
+21B	RELN-EPHB2-forward-signaling	1	2	1
+21B	RELN-VLDLR-Dab1-signaling	1	2	1
+21B	RET-pY1015-PLCG1	1	2	1
+21B	RET-pY1062-DOK4	1	2	1
+21B	RET-pY1062-DOK5	1	2	1
+21B	RET-pY1062-FRS2A	1	2	1
+21B	RET-pY1062-IRS1	1	2	1
+21B	RET-pY1062-SHC1	1	2	1
+21B	RET-pY1096-GRB2	1	2	1
+21B	RET-pY687-PTPN11	1	2	1
+21B	RET-pY981-SRC	1	2	1
+21B	RET51-pY1096-GRB2	1	2	1
+21B	RGMB-BMP2-binding	1	2	1
+21B	RGMB-NEO1-signaling-hub	1	2	1
+21B	RGMC-HJV-BMP2-binding	1	2	1
+21B	RGMC-HJV-BMP4-binding	1	2	1
+21B	RGMC-HJV-BMP5-binding	1	2	1
+21B	RGMC-HJV-BMP6-binding	1	2	1
+21B	RGMC-HJV-BMP7-binding	1	2	1
+21B	RGMC-HJV-NEO1-binding	1	2	1
+21B	RGMa-neogenin-guidance	1	2	1
+21B	RGS7-GABAB-GIRK-regulation	1	2	1
+21B	RIC3-CHRNA7-ER-folding-assembly	1	2	1
+21B	RIC3-HTR3A-ER-chaperone-trafficking	1	2	1
+21B	RIG-I-MAVS-CARD-assembly	1	2	1
+21B	RNF34-GABRG2-ubiquitin-trafficking	1	2	1
+21B	ROBO4-UNC5B-vascular-guidance	1	2	1
+21B	ROS1-pY2267-PTPN6	1	2	1
+21B	RPS6KA3-HTR2A-receptor-phosphorylation-brake	1	2	1
+21B	Relaxin-RXFP1-GPCR	1	2	1
+21B	Relaxin3-RXFP3-GPCR	1	2	1
+21B	RvD2-GPR18-proresolving-GPCR	1	2	1
+21B	S100A10-AHNAK-ANXA2-membrane-cytoarchitecture	1	2	1
+21B	S100A10-ASIC1A-trafficking	1	2	1
+21B	S100A10-BAD-apoptosis-inhibition	1	2	1
+21B	S100A10-CDK16-PCTAIRE1-kinase-association	1	2	1
+21B	S100A10-CFTR-ANXA2-epithelial-channel-complex	1	2	1
+21B	S100A10-CTSB-procathepsinB-surface-complex	1	2	1
+21B	S100A10-DLC1-competitive-stability	1	2	1
+21B	S100A10-GRM5-surface-trafficking	1	2	1
+21B	S100A10-HTR1B-surface-trafficking	1	2	1
+21B	S100A10-HTR1D-receptor-association	1	2	1
+21B	S100A10-HTR4-surface-trafficking	1	2	1
+21B	S100A10-KCNK3-TASK1-trafficking	1	2	1
+21B	S100A10-PLA2G4A-cPLA2-inhibition	1	2	1
+21B	S100A10-PLAT-tPA-plasmin-generation	1	2	1
+21B	S100A10-PLG-plasmin-generation	1	2	1
+21B	S100A10-SCN10A-Nav1.8-trafficking	1	2	1
+21B	S100A10-SCNN1A-ENaC-trafficking	1	2	1
+21B	S100A10-SCNN1B-ENaC-trafficking	1	2	1
+21B	S100A10-SCNN1G-ENaC-trafficking	1	2	1
+21B	S100A10-TRPV5-annexin2-trafficking	1	2	1
+21B	S100A10-TRPV6-annexin2-trafficking	1	2	1
+21B	S100A12-RAGE-DAMP-signaling	1	2	1
+21B	S100A4-RAGE-migration-signaling	1	2	1
+21B	S100A8-TLR4-MD2-DAMP-signaling	1	2	1
+21B	S100A8A9-RAGE-DAMP-signaling	1	2	1
+21B	S100A9-TLR4-MD2-DAMP-signaling	1	2	1
+21B	S100B-RAGE-neurotrophic-signaling	1	2	1
+21B	S1P-EDG1-GPCR	1	2	1
+21B	S1P-S1PR2-GPCR	1	2	1
+21B	S1P-S1PR3-GPCR	1	2	1
+21B	S1P-S1PR4-GPCR	1	2	1
+21B	S1P-S1PR5-GPCR	1	2	1
+21B	S1P-TREM2-DAP12-phagocytosis	1	2	1
+21B	S1PR1-Gi-coupling	1	2	1
+21B	S1PR2-G13-coupling	1	2	1
+21B	S1PR2-Gq-coupling	1	2	1
+21B	S1PR3-G13-coupling	1	2	1
+21B	S1PR3-Gi-coupling	1	2	1
+21B	S1PR3-Gq/11-coupling	1	2	1
+21B	S1PR4-G13-coupling	1	2	1
+21B	S1PR4-Gi/o-coupling	1	2	1
+21B	S1PR5-Gi/o-coupling	1	2	1
+21B	SALM5-PTPRD-excitatory-synapse	1	2	1
+21B	SALM5-PTPRF-excitatory-synapse	1	2	1
+21B	SALM5-PTPRS-excitatory-synapse	1	2	1
+21B	SAP97-GluA1-early-secretory-trafficking	1	2	1
+21B	SCARB1-GULP1-efferocytosis	1	2	1
+21B	SCF-KIT-receptor-signaling	1	2	1
+21B	SCFA-FFAR2-GPCR	1	2	1
+21B	SCFA-FFAR3-GPCR	1	2	1
+21B	SCIMP-pY107-CSK-negative-loop	1	2	1
+21B	SCIMP-pY131-SLP65-MHCII-relay	1	2	1
+21B	SCIMP-pY131-SLP76-MHCII-relay	1	2	1
+21B	SCIMP-pY69-GRB2-MHCII-relay	1	2	1
+21B	SCN1B-SCN8A-Nav1.6-auxiliary-complex	1	2	1
+21B	SCTR-Gs-coupling	1	2	1
+21B	SDC1-syntenin1-PDZ-binding	1	2	1
+21B	SDC4-ACTN1-cytoskeletal-association	1	2	1
+21B	SDC4-GIPC1-migration-association	1	2	1
+21B	SDC4-PRKCA-PIP2-adhesion	1	2	1
+21B	SDC4-syntenin1-PDZ-binding	1	2	1
+21B	SELL-AP1M1-trafficking	1	2	1
+21B	SELL-CALM1-shedding	1	2	1
+21B	SELL-EZR-ERM-tail	1	2	1
+21B	SELL-MSN-ERM-tail	1	2	1
+21B	SEMA3A-NRP1	1	2	1
+21B	SEMA3A-NRP1-PLXNA1	1	2	1
+21B	SEMA3A-NRP1-PLXNA2	1	2	1
+21B	SEMA3A-NRP1-PLXNA4	1	2	1
+21B	SEMA3A-PlexinA2-Fyn-Cdk5-dendrite	1	2	1
+21B	SEMA3B-NRP1-tumor-suppression	1	2	1
+21B	SEMA3B-NRP2-neural-guidance	1	2	1
+21B	SEMA3C-NRP1-PlexinD1-signaling	1	2	1
+21B	SEMA3C-PlexinB1-receptor	1	2	1
+21B	SEMA3C-neuropilin-binding	2	3	2
+21B	SEMA3E-PLXND1-vascular-guidance	1	2	1
+21B	SEMA3F-NRP2-PlexinA3-homeostatic-scaling	1	2	1
+21B	SEMA3F-NRP2-guidance	1	2	1
+21B	SEMA3G-NRP2-PlexinA4-hippocampal-synapse	1	2	1
+21B	SEMA3G-NRP2-PlexinD1-lymphatic-guidance	1	2	1
+21B	SEMA3G-NRP2-binding	1	2	1
+21B	SEMA4A-PLXNB1-direct-binding-Treg	1	2	1
+21B	SEMA4A-PLXND1-angiogenesis-inhibition	1	2	1
+21B	SEMA4C-PLXNB2-cerebellar-development	1	2	1
+21B	SEMA4D-CD72-immune-activation	1	2	1
+21B	SEMA4D-PLXNB1	1	2	1
+21B	SEMA4D-PLXNB2-guidance	1	2	1
+21B	SEMA4D-PlexinB1-RhoGEF-RhoA	1	2	1
+21B	SEMA4G-PLXNB2-cerebellar-development	1	2	1
+21B	SEMA5A-PLXNA1-neuronal-guidance	1	2	1
+21B	SEMA5A-PLXNA2-neuronal-guidance	1	2	1
+21B	SEMA5A-PLXNB3-receptor-guidance	1	2	1
+21B	SEMA6A-PLXNA2	1	2	1
+21B	SEMA6D-PLXNA1-cardiac-guidance	1	2	1
+21B	SEMA7A-ITGB1-integrin-guidance	1	2	1
+21B	SEMA7A-PLXNC1-guidance-immune	1	2	1
+21B	SEMA7A-alpha1beta1-immune-inflammation	1	2	1
+21B	SEMA7A-alphaVbeta1-macrophage-IL10	1	2	1
+21B	SFTPA-SIRPA-collectin-checkpoint	1	2	1
+21B	SFTPA-TLR2-PGN-antagonism	1	2	1
+21B	SFTPA-TLR4-MD2-LPS-antagonism	1	2	1
+21B	SFTPD-EGFR-signaling-inhibition	1	2	1
+21B	SFTPD-LAIR1-anti-inflammatory	1	2	1
+21B	SFTPD-MD2-TLR4-LPS-antagonism	1	2	1
+21B	SFTPD-OSCAR-myeloid-activation	1	2	1
+21B	SFTPD-SIRPA-collectin-checkpoint	1	2	1
+21B	SFTPD-SIRPB-collectin-binding	1	2	1
+21B	SHH-BOC-coreceptor	1	2	1
+21B	SHH-CDON-coreceptor	1	2	1
+21B	SHH-GAS1-coreceptor	1	2	1
+21B	SHH-PTCH1-reception	1	2	1
+21B	SHISA6-GluA2-postsynaptic-AMPA-trapping	1	2	1
+21B	SHISA7-GABRA1-GABAergic-postsynapse	1	2	1
+21B	SHISA7-GABRA2-GABAergic-postsynapse	1	2	1
+21B	SHISA7-GABRG2-GABAergic-postsynapse	1	2	1
+21B	SHISA9-CKAMP44-AMPAR-short-term-plasticity	1	2	1
+21B	SHRM4-GABBR1-dynein-trafficking	1	2	1
+21B	SIGLEC-H-DAP12-adaptor-assembly	1	2	1
+21B	SIGLEC10-pY667-SHP1-inhibitory-ITIM	1	2	1
+21B	SIGLEC10-pY667-SHP2-inhibitory-ITIM	1	2	1
+21B	SIGLEC14-DAP12-paired-receptor-assembly	1	2	1
+21B	SIGLEC15-DAP12-osteoclast-assembly	1	2	1
+21B	SIGLEC16-DAP12-paired-receptor-assembly	1	2	1
+21B	SIGLEC7-ITIM-SHP1-inhibitory-relay	1	2	1
+21B	SIGLEC7-ITIM-SHP2-inhibitory-relay	1	2	1
+21B	SIGLEC9-ITIM-SHP1-inhibitory-relay	1	2	1
+21B	SIGLEC9-ITIM-SHP2-inhibitory-relay	1	2	1
+21B	SIRPA-Mac1-counter-receptor-adhesion	1	2	1
+21B	SIRPA-SHP1-inhibitory-ITIM	1	2	1
+21B	SIRPA-SHP2-inhibitory-ITIM	1	2	1
+21B	SIRPB1-DAP12-myeloid-receptor-assembly	1	2	1
+21B	SIT-ITIM-SHP2-inhibitory-association	1	2	1
+21B	SIT-YxN-GRB2-adaptor-association	1	2	1
+21B	SLAMF1-CD150-ITSM-SAP-costimulatory-relay	1	2	1
+21B	SLAMF1-CD150-ITSM-SHP2-inhibitory-competition	1	2	1
+21B	SLAMF6-EAT2-B-cell-relay	1	2	1
+21B	SLAMF7-pY304-EAT2-activating-relay	1	2	1
+21B	SLIT1-ROBO1-axon-guidance	1	2	1
+21B	SLIT1-ROBO2-neural-guidance	1	2	1
+21B	SLIT2-ROBO1-guidance	1	2	1
+21B	SLIT2-ROBO2-guidance	1	2	1
+21B	SLIT3-ROBO1-binding	1	2	1
+21B	SLIT3-ROBO4-angiogenic-guidance	1	2	1
+21B	SLITRK1-PTPRD-inhibitory-synapse	1	2	1
+21B	SLITRK1-PTPRF-synapse	1	2	1
+21B	SLITRK1-PTPRS-excitatory-synapse	1	2	1
+21B	SLITRK2-PTPRD-inhibitory-synapse	1	2	1
+21B	SLITRK2-PTPRF-synapse	1	2	1
+21B	SLITRK2-PTPRS-excitatory-synapse	1	2	1
+21B	SLITRK3-PTPRD-inhibitory-synapse	1	2	1
+21B	SLITRK3-PTPRF-synapse	1	2	1
+21B	SLITRK3-PTPRS-excitatory-synapse	1	2	1
+21B	SLP76-ADAP-integrin-costimulation	1	2	1
+21B	SLP76-HPK1-negative-TCR-relay	1	2	1
+21B	SLP76-PLCG1-SH3-scaffold-relay	1	2	1
+21B	SLP76-pY145-ITK-relay	1	2	1
+21B	SLP76-phosphotyrosine-NCK1-relay	1	2	1
+21B	SLP76-phosphotyrosine-VAV1-relay	1	2	1
+21B	SNTA1-SCN5A-Nav1.5-membrane-density-complex	1	2	1
+21B	SNX27-HTR4A-PDZ-endosomal-trafficking	1	2	1
+21B	SORT1-GGA2-sorting	1	2	1
+21B	SOST-BMP6-antagonism	1	2	1
+21B	SOST-BMP7-antagonism	1	2	1
+21B	SPARC-neurexin-binding-antagonist-context	1	2	1
+21B	SPARC-neuroligin-binding-antagonist-context	1	2	1
+21B	SPON2-Mac1-phagocytosis	1	2	1
+21B	SPP1-alphaVbeta3-adhesion	1	2	1
+21B	SRBI-PDZK1-tail-scaffold	1	2	1
+21B	SST-SSTR3-GPCR	1	2	1
+21B	SST-SSTR4-GPCR	1	2	1
+21B	SST-SSTR5-GPCR	1	2	1
+21B	SST14-SSTR1-GPCR	1	2	1
+21B	SST14-SSTR2-GPCR	1	2	1
+21B	SSTR1-Gi-coupling	1	2	1
+21B	SSTR2-Gi-coupling	1	2	1
+21B	SSTR3-Gi-coupling	1	2	1
+21B	SSTR4-Gi-coupling	1	2	1
+21B	SSTR5-Gi-coupling	1	2	1
+21B	STAB1-GGA-sorting	1	2	1
+21B	STAB1-GULP1-efferocytosis	1	2	1
+21B	STAB2-GULP1-efferocytosis	1	2	1
+21B	STIM1-TRPV4-S824-trafficking-complex	1	2	1
+21B	STING-TBK1-antiviral-relay	1	2	1
+21B	STOM-ASIC3-gating-inhibition-complex	1	2	1
+21B	STOML3-PIEZO1-mechanosensitivity	1	2	1
+21B	STOML3-PIEZO2-mechanosensitivity	1	2	1
+21B	Salicin-TAS2R16-bitter-GPCR	1	2	1
+21B	Secretin-SCTR-GPCR	1	2	1
+21B	Serotonin-HTR1A-GPCR	1	2	1
+21B	Serotonin-HTR1B-Gi-cAMP	1	2	1
+21B	Serotonin-HTR1D-Gi-cAMP	1	2	1
+21B	Serotonin-HTR2A-GPCR	1	2	1
+21B	Serotonin-HTR2B-Gq-phosphoinositide	1	2	1
+21B	Serotonin-HTR2C-GPCR	1	2	1
+21B	Serotonin-HTR3A-ion-channel	1	2	1
+21B	Serotonin-HTR4-Gs-cAMP	1	2	1
+21B	Serotonin-HTR6-Gs-cAMP	1	2	1
+21B	Serotonin-HTR7-Gs-cAMP	1	2	1
+21B	Slit-Robo-srGAP1-Cdc42-repulsion	1	2	1
+21B	Stretch-TRAAK-mechanogating	1	2	1
+21B	Stretch-TREK1-mechanogating	1	2	1
+21B	Succinate-SUCNR1-GPCR	1	2	1
+21B	Sweet-TAS1R2-TAS1R3-GPCR	1	2	1
+21B	SynCAM1-SynCAM2-transsynaptic-adhesion	1	2	1
+21B	SynCAM3-SynCAM4-transsynaptic-adhesion	1	2	1
+21B	Synaptamide-GPR110-cAMP-neurodevelopment	1	2	1
+21B	T3-alphaVbeta3-Src-PI3K-MAPK	1	2	1
+21B	T4-alphaVbeta3-MAPK-angiogenesis	1	2	1
+21B	TAB1-TAK1-BMP-p38	1	2	1
+21B	TACI-220-253-TRAF6-recruitment	1	2	1
+21B	TACI-231-253-TRAF2-recruitment	1	2	1
+21B	TACI-231-253-TRAF5-recruitment	1	2	1
+21B	TACI-MyD88-recruitment	1	2	1
+21B	TACI-TRAF6-recruitment	1	2	1
+21B	TACR1-NALCN-UNC80-SFK-neuronal-excitation	1	2	1
+21B	TDM-MARCO-TLR2-CD14-tethering	1	2	1
+21B	TEK-pY1101-GRB14	1	2	1
+21B	TFR2-transferrin-transport	1	2	1
+21B	TFRC-transferrin-endocytosis-iron-delivery	1	2	1
+21B	TG2-GPR56-direct-binding	1	2	1
+21B	TGF-beta-CNS-scar-function	1	2	1
+21B	TGF-beta-SMAD	3	5	1
+21B	TGF-beta-TRAF6-TAK1-noncanonical	2	4	1
+21B	TGFA-EGFR-ERBB-RTK	1	2	1
+21B	TGFA-EGFR-activation	1	2	1
+21B	TGFB1-TGFBR1-TGFBR2	1	2	1
+21B	TGFB1-TGFBR2-binary	1	2	1
+21B	TGFB1-betaglycan-binding	1	2	1
+21B	TGFB2-TGFBR1-TGFBR2	1	2	1
+21B	TGFB2-TGFBR2-binary	1	2	1
+21B	TGFB2-TGFBR3-betaglycan	1	2	1
+21B	TGFB3-TGFBR1-TGFBR2	1	2	1
+21B	TGFB3-TGFBR2-binary	1	2	1
+21B	TGFB3-betaglycan-binding	1	2	1
+21B	THY1-Mac1-leukocyte-adhesion	1	2	1
+21B	THY1-alphaVbeta3-trans-adhesion	1	2	1
+21B	THY1-alphaXbeta2-binding	1	2	1
+21B	TICAM2-TICAM1-endosomal-bridge	1	2	1
+21B	TIP39-PTH2R-GPCR	1	2	1
+21B	TIRAP-TRAF6-TLR-bridge	1	2	1
+21B	TL1A-DR3-costimulation	1	2	1
+21B	TLR2-MYD88-TIR	1	2	1
+21B	TLR2-TIRAP-TIR	1	2	1
+21B	TLR2-TOLLIP-inhibitory-association	1	2	1
+21B	TLR3-TICAM1-TIR	1	2	1
+21B	TLR4-MYD88-TIR	1	2	1
+21B	TLR4-TICAM2-TRAM	1	2	1
+21B	TLR4-TIRAP-TIR	1	2	1
+21B	TLR4-TOLLIP-inhibitory-association	1	2	1
+21B	TLR5-MYD88-TIR	1	2	1
+21B	TLR7-MYD88-TIR	1	2	1
+21B	TLR8-MYD88-TIR	1	2	1
+21B	TLR9-MYD88-TIR	1	2	1
+21B	TLT1-pY281-SHP2-platelet-costimulation	1	2	1
+21B	TMIE-LHFPL5-PCDH15-tip-link-complex	1	2	1
+21B	TMIE-PCDH15-LHFPL5-tip-link-complex	1	2	1
+21B	TNC-CNTN1-PLC-neurite-outgrowth	1	2	1
+21B	TNC-CSPG5-CALEB-neural-adhesion	1	2	1
+21B	TNC-TLR4-sterile-inflammation	1	2	1
+21B	TNC-alpha2beta1-adhesion	1	2	1
+21B	TNC-alpha9beta1-adhesion	1	2	1
+21B	TNC-alphaVbeta1-binding	1	2	1
+21B	TNC-alphaVbeta3-adhesion	1	2	1
+21B	TNC-alphaVbeta6-binding	1	2	1
+21B	TNF-NF-kappaB	1	2	1
+21B	TNF-NF-kappaB-MAPK-death	5	8	2
+21B	TNF-TNFR2-activation	1	2	1
+21B	TNF-cell-death	1	2	1
+21B	TNFR2-NF-kappaB-JNK	1	2	1
+21B	TNFR2-PI3Kgamma-neuroprotection	1	2	1
+21B	TNFR2-SCI-repair	1	2	1
+21B	TNFR2-TRAF1-TRAF2-cIAP	2	4	2
+21B	TNFR2-TRAF2-NF-kappaB	2	3	3
+21B	TNFR2-alternative-NF-kappaB	1	2	1
+21B	TNFR2-astrocyte-CXCL12-CXCR4	1	2	1
+21B	TNR-CNTN1-neurite-adhesion	1	2	1
+21B	TNR-CSPG5-CALEB-neural-adhesion	1	2	1
+21B	TNR-TLR4-sterile-inflammation	1	2	1
+21B	TNW-TLR4-sterile-inflammation	1	2	1
+21B	TOLLIP-IRAK1-inhibitory-relay	1	2	1
+21B	TOMT-TMC1-hair-cell-assembly	1	2	1
+21B	TOMT-TMC2-hair-cell-trafficking	1	2	1
+21B	TPO-MPL-receptor-signaling	1	2	1
+21B	TRAIL-DR4-FADD-DISC	1	2	1
+21B	TRAIL-DR4-death-receptor	1	2	1
+21B	TRAIL-DR5-FADD-DISC	1	2	1
+21B	TRAIL-DR5-death-receptor	1	2	1
+21B	TREM1-DAP12-complex-relay	1	2	1
+21B	TREM2-DAP12-receptor-complex	1	2	1
+21B	TREML4-DAP12-adaptor-assembly	1	2	1
+21B	TRH-TRHR-GPCR	1	2	1
+21B	TRIP8B-HCN1-auxiliary-trafficking-gating	1	2	1
+21B	TRIP8B-HCN2-auxiliary-cAMP-gating	1	2	1
+21B	TRIP8B-HCN4-auxiliary-cAMP-gating	1	2	1
+21B	TRIP8B-clathrin-endocytic-trafficking	1	2	1
+21B	TSH-TSHR-GPCR	1	2	1
+21B	TSHR-Gq11-coupling	1	2	1
+21B	TSHR-Gs-coupling	1	2	1
+21B	TSKU-BMP4-antagonism	1	2	1
+21B	TSLP-TSLPR-IL7RA	1	2	1
+21B	TSLP-TSLPR-IL7RA-JAK1-proximal	1	2	1
+21B	TSLP-TSLPR-IL7RA-JAK2-proximal	1	2	1
+21B	TSLP-TSLPR-IL7RA-STAT5-relay	1	2	1
+21B	TSLP-TSLPR-binary-binding	1	2	1
+21B	TSP1-CACNA2D1-excitatory-synaptogenesis	1	2	1
+21B	TSP1-CD36-antiangiogenic	1	2	1
+21B	TSP1-CD47-inhibitory-signaling	1	2	1
+21B	TSP1-alphaVbeta3-binding	1	2	1
+21B	TSP2-CACNA2D1-excitatory-synaptogenesis	1	2	1
+21B	TUBB-GPHN-microtubule-scaffold	1	2	1
+21B	TWEAK-Fn14-TRAF2-cIAP-adaptor	1	2	1
+21B	TWEAK-Fn14-juxtacrine	1	2	1
+21B	TWSG1-BMP2-binding	1	2	1
+21B	TWSG1-BMP2-signaling-inhibition	1	2	1
+21B	TWSG1-BMP4-binding	1	2	1
+21B	TWSG1-BMP4-signaling-inhibition	1	2	1
+21B	TYRO3-GRB2-neuronal-relay	1	2	1
+21B	Teneurin2-Latrophilin1-transcellular-adhesion	1	2	1
+21B	Teneurin2-Latrophilin2-transcellular-adhesion	1	2	1
+21B	Teneurin2-Latrophilin3-transcellular-adhesion	1	2	1
+21B	Teneurin4-Latrophilin1-transcellular-adhesion	1	2	1
+21B	Teneurin4-Latrophilin2-transcellular-adhesion	1	2	1
+21B	Teneurin4-Latrophilin3-transcellular-adhesion	1	2	1
+21B	Thrombin-PAR1-GPCR	1	2	1
+21B	Thrombin-PAR3-GPCR	1	2	1
+21B	Thrombin-PAR4-GPCR	1	2	1
+21B	Thrombospondin1-LRP1-endocytic-clearance	1	2	1
+21B	Tie2-pY1101-GRB2	1	2	1
+21B	Tie2-pY1101-GRB7	1	2	1
+21B	Tie2-pY1101-PI3K	1	2	1
+21B	Tie2-pY1106-DokR	1	2	1
+21B	Tie2-pY1112-SHP2	1	2	1
+21B	TrkA-pY490-FRS2A	1	2	1
+21B	TrkA-pY490-SHC1	1	2	1
+21B	TrkA-pY785-PLCG1	1	2	1
+21B	TrkB-pY515-FRS2A	1	2	1
+21B	TrkB-pY515-SHC1	1	2	1
+21B	TrkB-pY816-PLCG1	1	2	1
+21B	U46619-TP-GPCR-Ca2+	1	2	1
+21B	UBASH3A-ZAP70-Y319-negative-TCR-relay	1	2	1
+21B	UBASH3B-SYK-Y323-negative-immune-relay	1	2	1
+21B	UBASH3B-SYK-Y346-negative-platelet-relay	1	2	1
+21B	UBASH3B-SYK-Y352-negative-immune-relay	1	2	1
+21B	UBASH3B-SYK-Y525-526-negative-platelet-relay	1	2	1
+21B	UBASH3B-ZAP70-Y319-negative-TCR-relay	1	2	1
+21B	UBQLN1-GABRA1-ER-stability-trafficking	1	2	1
+21B	UBQLN1-GABRA2-ER-stability-trafficking	1	2	1
+21B	UBQLN1-GABRA3-ER-stability-trafficking	1	2	1
+21B	UBQLN1-GABRA6-ER-stability-trafficking	1	2	1
+21B	UBQLN1-GABRB1-ER-stability-trafficking	1	2	1
+21B	UBQLN1-GABRB2-ER-stability-trafficking	1	2	1
+21B	UDP-P2Y6-GPCR	1	2	1
+21B	UDPglucose-P2Y14-GPCR	1	2	1
+21B	UMOD-SREC1-scavenger-receptor-uptake	1	2	1
+21B	UMOD-TLR4-dendritic-cell-activation	1	2	1
+21B	UNC79-UNC80-channelosome	1	2	1
+21B	USAG1-BMP7-antagonism	1	2	1
+21B	UTP-P2Y2-GPCR	1	2	1
+21B	UTP-P2Y4-GPCR	1	2	1
+21B	Umami-TAS1R1-TAS1R3-GPCR	1	2	1
+21B	Urocortin1-CRHR1-GPCR	1	2	1
+21B	Urocortin1-CRHR2-GPCR	1	2	1
+21B	Urocortin2-CRHR2-GPCR	2	2	2
+21B	Urocortin3-CRHR2-GPCR	1	2	1
+21B	Uroguanylin-GUCY2C-GC-C	1	2	1
+21B	UrotensinII-UTS2R-GPCR	1	2	1
+21B	VASP-GPHN-Mena-VASP-microfilament-scaffold	1	2	1
+21B	VCAM1-alpha4beta1-adhesion	1	2	1
+21B	VCAM1-alpha4beta7-adhesion	1	2	1
+21B	VCAM1-alpha9beta1-neutrophil-adhesion	1	2	1
+21B	VCAM1-alphaDbeta2-eosinophil-adhesion	1	2	1
+21B	VEGF-EGFR-NSC-SCI	2	3	1
+21B	VEGF-RTK-PI3K-AKT	1	2	1
+21B	VEGF-RTK-PLC-ERK	1	2	1
+21B	VEGF165-CD44v6-binding	1	2	1
+21B	VEGF165-NRP1-KDR	1	2	1
+21B	VEGF165-NRP1-direct-binding	1	2	1
+21B	VEGF165-NRP2-direct-binding	1	2	1
+21B	VEGF165-alpha3beta1-adhesion-survival	1	2	1
+21B	VEGF165-alphaVbeta3-adhesion-survival	1	2	1
+21B	VEGFA-FLT1-binding	1	2	1
+21B	VEGFA-KDR-RTK	1	2	1
+21B	VEGFA-alpha9beta1-angiogenesis	1	2	1
+21B	VEGFB-FLT1-receptor-signaling	1	2	1
+21B	VEGFB-NRP1-binding	1	2	1
+21B	VEGFC-FLT4-VEGFR3	1	2	1
+21B	VEGFC-KDR-VEGFR2	1	2	1
+21B	VEGFC-NRP2-binding	1	2	1
+21B	VEGFC-alpha9beta1-adhesion	1	2	1
+21B	VEGFD-FLT4-VEGFR3	1	2	1
+21B	VEGFD-KDR-VEGFR2	1	2	1
+21B	VEGFD-NRP2-binding	1	2	1
+21B	VEGFD-alpha9beta1-adhesion	1	2	1
+21B	VEGFR2-PLCγ1-PKC-ERK	1	2	1
+21B	VEGFR2-c-Cbl-PLCG1-angiogenesis	1	2	1
+21B	VEGFR2-pY1214-NCK-FYN-p38-migration	1	2	1
+21B	VEGFR2-pY951-TSAd-cSrc-migration	1	2	1
+21B	VERSICAN-TLR2-TLR6-CD14-DAMP-signaling	1	2	1
+21B	VIP-VIPR1-GPCR	1	2	1
+21B	VIP-VIPR2-GPCR	1	2	1
+21B	VISTA-PSGL1-acidic-checkpoint	1	2	1
+21B	VPAC1-Gs-coupling	1	2	1
+21B	VPAC2-Gs-coupling	1	2	1
+21B	VPS35-GLRB-glycinergic-trafficking	1	2	1
+21B	VSTM1-SIRL1-ITIM-SHP1-inhibitory-relay	1	2	1
+21B	VSTM1-SIRL1-ITIM-SHP2-inhibitory-relay	1	2	1
+21B	Versican-CD44-binding	1	2	1
+21B	Vitronectin-alphaVbeta3-adhesion	1	2	1
+21B	Vitronectin-alphaVbeta5-adhesion	1	2	1
+21B	WNT-RYK-SCI-astrocyte-function	1	2	1
+21B	WNT-beta-catenin	4	7	1
+21B	WNT3A-FZD8-LRP6-assembly	1	2	1
+21B	WNT3A-LRP6-E3E4-binding	1	2	1
+21B	WNT5A-FZD3-PI3K-AKT-adhesion	1	2	1
+21B	WNT5A-JNK-NSC-function	1	2	1
+21B	WNT5A-ROR2-FZD7-DVL2-RAC1-AP1	1	2	1
+21B	WNT5A-ROR2-neurodegeneration	1	2	1
+21B	WNT5A-ROR2-noncanonical	1	2	1
+21B	WNT5A-ROR2-receptor	1	2	1
+21B	WNT7A-GPR124-RECK-LRP5/6-coreceptor	1	2	1
+21B	WNT7A-RECK-ligand-stabilization	1	2	1
+21B	WNT7B-GPR124-RECK-LRP5/6-coreceptor	1	2	1
+21B	WNT7B-RECK-ligand-stabilization	1	2	1
+21B	WNT9B-LRP6-E1E2-binding	1	2	1
+21B	Warm-temperature-TRPV4-ion-channel	1	2	1
+21B	XCL1-GPR182-binding	1	2	1
+21B	XCL1-XCR1-GPCR	1	2	1
+21B	XCL2-XCR1-GPCR	1	2	1
+21B	XIAP-TAB1-TAK1-complex	1	2	1
+21B	YWHAZ-GABBR1-heterodimer-disruption	1	2	1
+21B	alpha-MSH-MC1R-Gs-cAMP	1	2	1
+21B	alpha-MSH-MC4R-Gs-cAMP	1	2	1
+21B	beta-dystroglycan-GRB2-adaptor	1	2	1
+21B	beta-dystroglycan-caveolin3-scaffold	1	2	1
+21B	beta-dystroglycan-dystrophin-cytoskeletal-anchor	1	2	1
+21B	cGAMP-STING-second-messenger-activation	1	2	1
+21B	collagen-II-DDR2-RTK	1	2	1
+21B	collagen-II-alpha10beta1-binding	1	2	1
+21B	collagen-III-DDR2-RTK	1	2	1
+21B	collagen-X-DDR2-RTK	1	2	1
+21B	eCIRP-TLR4-MD2-inflammatory-activation	1	2	1
+21B	eCIRP-TREM1-inflammatory-activation	1	2	1
+21B	eUb-CXCR4-noncognate-GPCR-activation	1	2	1
+21B	ephrin-A1-EphA4-binding	1	2	1
+21B	ephrin-A5-EphA3-binding	1	2	1
+21B	ephrinA1-EphA4-Ephexin1-RhoA-collapse	1	2	1
+21B	fMLF-FPR1-GPCR	1	2	1
+21B	ghrelin-GHSR1A-GPCR	1	2	1
+21B	gp130-pY759-SHP2	1	2	1
+21B	gp130-pY759-SOCS3	1	2	1
+21B	gp130-pY767-STAT3	1	2	1
+21B	gp130-pY814-STAT3	1	2	1
+21B	gp130-pY905-STAT1	1	2	1
+21B	gp130-pY905-STAT3	1	2	1
+21B	gp130-pY915-STAT1	1	2	1
+21B	gp130-pY915-STAT3	1	2	1
+21B	iC3b-CR4-complement-recognition	1	2	1
+21B	iC3b-CRIg-complement-clearance	1	2	1
+21B	iC3b-Mac1-complement-recognition	1	2	1
+21B	motilin-MLNR-GPCR	1	2	1
+21B	msec7-1-GABBR1-LL-motif-trafficking	1	2	1
+21B	netrin-1-UNC5D-dependence-receptor-survival	1	2	1
+21B	neurotensin-NTSR1-GPCR	1	2	1
+21B	proBDNF-p75NTR-binding	1	2	1
+21B	substance-P-NK1R-GPCR	1	2	1
+21B	trans-resveratrol-alphaVbeta3-ERK-p53-angiostasis	1	2	1
+21B	vMIP-II-CXCR4-viral-antagonism	1	2	1
+22B	cell_state_program	400	512	481
+22B	none_identified	7	6	7
+22B	phenotype	270	311	275
+22B	target_gene	4736	2344	4786
+22B	target_module	8	16	8
+23B	 ephrB axon/OPC relay	1	2	1
+23B	 tPA receptor-complex function	1	2	1
+23B	 tPA-Mac1 receptor-complex relay	1	2	1
+23B	 with downstream αVβ3	3	2	3
+23B	ADAM10-CADM1 shedding	1	2	1
+23B	ADAM10-CADM1 shedding-adhesion	1	2	1
+23B	ADAM10-CD44 shedding	1	2	1
+23B	ADAM10-CD44 shedding output	1	2	1
+23B	ADAM10-NrCAM function	1	2	1
+23B	ADAM10-NrCAM processing	1	2	1
+23B	ADAM12-SDC4 proteoglycan association	1	2	1
+23B	ADAM12-SDC4-PKCalpha-RhoA	1	2	1
+23B	ADAM12-alpha9beta1 adhesion	1	2	1
+23B	ADAM12-alpha9beta1-PI3K	1	2	1
+23B	ADAM15-alpha5beta1-ERK motility	1	2	1
+23B	ADAM17-alpha5beta1 localization	1	2	1
+23B	ADAM2-alpha6beta1-CD9 membrane adhesion	1	2	1
+23B	ADGRE5-CD97-RGD-alphaVbeta3-adhesion/angiogenesis branch	2	2	2
+23B	ALCAM-NRP1 trans-adhesion	1	2	1
+23B	ALCAM-NRP1-neural function	1	2	1
+23B	ANGPT1-Tie2 PI3K-AKT barrier and survival signaling	3	2	3
+23B	ANGPTL1 integrin inhibition	1	2	1
+23B	ANGPTL2-alpha5beta1	1	2	1
+23B	ANGPTL2-alpha5beta1 function	1	2	1
+23B	ANGPTL2-alpha5beta1 signaling	1	2	1
+23B	ANGPTL3 integrin engagement	1	2	1
+23B	ANGPTL3-alpha5 vascular complex	1	2	1
+23B	ANGPTL3-alpha5 vascular function	1	2	1
+23B	ANGPTL4 integrin engagement	1	2	1
+23B	ANXA2-ROBO4-ARF6 barrier function	1	2	1
+23B	ANXA2-ROBO4-paxillin complex	1	2	1
+23B	Agrin-dystroglycan adhesion	1	2	1
+23B	Agrin-dystroglycan synaptic function	1	2	1
+23B	AngII GPCR activation	1	2	1
+23B	ApoC3-LDLR/LRP1 hepatic triglyceride-rich-lipoprotein clearance axis	1	2	1
+23B	ApoE-LRP1 endosomal trafficking	1	2	1
+23B	ApoE-LRP1 lipoprotein receptor recognition	1	2	1
+23B	ApoE-LRP1 recycling/clearance function	1	2	1
+23B	CADM1-CRTAM immune function	1	2	1
+23B	CADM1-CRTAM trans-adhesion	1	2	1
+23B	CADM1-nectin3 adhesion function	1	2	1
+23B	CADM1-nectin3 trans-adhesion	1	2	1
+23B	CADM3 adhesion-proliferation	1	2	1
+23B	CADM3-CADM4 axon-Schwann adhesion	1	2	1
+23B	CADM3-CADM4 myelination	1	2	1
+23B	CALR-LRP1 coreceptor complex	1	2	1
+23B	CALR-LRP1 focal-adhesion disassembly relay	1	2	1
+23B	CALR-LRP1 focal-adhesion function	1	2	1
+23B	CALR-alpha3 integrin function	1	2	1
+23B	CALR-alpha3 intracellular association	1	2	1
+23B	CCL28 chemokine activation	1	2	1
+23B	CCN4-alpha5beta1 cellular function	1	2	1
+23B	CCN4-alpha5beta1 focal-adhesion relay	1	2	1
+23B	CCN4-alpha5beta1 wound/osteogenesis branch	1	2	1
+23B	CD23-alphaVbeta3/CD47 -> integrin-associated signaling -> inflammatory cytokines	3	2	3
+23B	CD23-alphaXbeta2 MAPK inflammatory activation	2	2	2
+23B	CD40LG-Mac-1 adhesion function	1	2	1
+23B	CD40LG-Mac-1 leukocyte recruitment branch	1	2	1
+23B	CD40LG-alpha5beta1 MAPK/ERK and platelet activation	3	2	3
+23B	CD44–LCK/T-cell activation relay	1	2	1
+23B	CD47–SIRPα ITIM–SHP1/2 self-recognition checkpoint	3	2	3
+23B	CD53 co-stimulation and IL-2-dependent lymphocyte proliferation/adhesion	1	2	1
+23B	CD9-L1CAM-alpha6beta1 membrane organization and Ca2+/adhesion signaling	3	2	3
+23B	CD96–PVR immune-synapse adhesion and NK cytotoxicity	2	2	2
+23B	CD99 homophilic transendothelial migration	3	2	3
+23B	CEACAM1 adhesion/oligomerization	1	2	1
+23B	CHAD-alpha2beta1 adhesion and MAPK	1	2	1
+23B	CLEC11A-integrin osteogenic WNT/beta-catenin signaling	2	2	2
+23B	CLEC11A–α11β1 integrin–Wnt osteogenic branch	3	2	3
+23B	CLEC2 hemITAM signaling	1	2	2
+23B	CNTN2-L1CAM cis neurite outgrowth and fasciculation	2	2	2
+23B	COL15A1 matrix migration	1	2	1
+23B	COL2A1 SCI scar function	1	2	1
+23B	COL4A3 NC1-CD47-cAMP anti-proliferative signaling	2	2	2
+23B	COL4A3–α2β1 renal matrix maturation/fibrosis	1	2	1
+23B	COL4A6 NC1 adhesion boundary	1	2	1
+23B	COMP RGD–αVβ3 adhesion branch	2	2	2
+23B	COMP–CD47 cytoskeletal adhesion branch	2	2	2
+23B	CSPG4/NG2–galectin-3–α3β1 endothelial motility branch	3	2	3
+23B	CX3CL1–CX3CR1 Gi/o–PI3K/Ca/MAPK chemotaxis and adhesion	3	2	3
+23B	CXCL12 CXCR4-independent αVβ3 allosteric activation	3	2	3
+23B	CXCL12 activation of β1-containing integrin heterodimers	2	2	2
+23B	CXCL12 β3-containing integrin activation and CXCR4–Btk platelet branch	3	2	3
+23B	CXCL12–α4β1 activation via Vav1/Rac and CXCR4 context	3	2	3
+23B	CXCL12–α5β1 allosteric activation and stromal migration	3	2	3
+23B	CXCL16–CXCR6 chemotaxis/adhesion and immune recruitment	2	2	2
+23B	DAG1/DGC–actin and neuromuscular-basement-membrane function	1	2	1
+23B	DAG1–DLL4/Notch endothelial relay	1	2	1
+23B	DLL1-NOTCH1 ligand-triggered proteolysis and canonical Notch program	3	2	3
+23B	DLL1-NOTCH2 canonical NICD/RBPJ signaling	3	2	3
+23B	DMP1 integrin signaling	1	2	1
+23B	DPP RGD integrin adhesion/signaling	1	2	1
+23B	DSP-beta6 developmental function	1	2	1
+23B	DSP-beta6 integrin binding	1	2	1
+23B	DSP-beta6 integrin intracellular signaling	1	2	1
+23B	Dab1–Src-family–PI3K/Akt	2	4	2
+23B	Del-1 integrin branches	1	2	1
+23B	E-cadherin–EGFR association and context-dependent ERK/Rac crosstalk	3	2	3
+23B	E-cadherin–IGF1R availability/adhesion–PI3K-AKT branch	3	2	3
+23B	E-cadherin–αEβ7 outside-in synapse and CTL killing	3	2	3
+23B	ECM1 receptor complex	1	2	1
+23B	EDIL3-LFA1 inflammatory adhesion interference	1	2	1
+23B	EDIL3-alphaVbeta5 angiogenic switch and neovascularization	2	2	2
+23B	EFNA1-EPHA1 Eph signaling	1	2	3
+23B	EFNA1-EPHA4 Rho/actin neuronal branch	1	2	4
+23B	EFNA1-EPHA5 binding survey	1	2	1
+23B	EFNA1-EPHA6 binding survey	1	2	1
+23B	EFNA1-EPHA8 activation	1	2	1
+23B	EFNA2-EPHA2 binding survey	1	2	1
+23B	EFNA2-EPHA5 binding survey	1	2	1
+23B	EFNA2-EPHA6 binding survey	1	2	1
+23B	EFNA2-EPHA7 neural branch	1	2	4
+23B	EFNA2-EPHA8 activation	1	2	1
+23B	EFNB1 -> EPHB3 -> kinase-dependent adhesion inhibition and kinase-independent Rac1/Cdc42 decrease with relative RhoA increase -> altered adhesion/migration	2	2	2
+23B	EFNB1-EPHB6 trans co-clustering -> double-membrane tubular contacts and stabilized cell-cell adhesion -> reduced cancer-cell invasion	2	2	2
+23B	EGF migration crosstalk	1	2	1
+23B	EGFL7-alphaVbeta3 angiogenic branch	1	2	1
+23B	EGFL7-alphaVbeta3 angiogenic function	1	2	1
+23B	EGFL7-alphaVbeta3 focal-adhesion signaling	1	2	1
+23B	EGFR phosphorylation of CEACAM1 and RAS-MAPK feedback	2	2	2
+23B	EPHA3-ephrin-A2 reverse signaling	1	2	3
+23B	Eph-ephrin axon guidance/repulsion	1	2	1
+23B	Eph-ephrin axon organization	1	2	1
+23B	Eph-ephrin bidirectional adhesion	1	2	1
+23B	Eph-ephrin cross-class ligand binding	2	3	2
+23B	Eph-ephrin cytoskeletal relay	1	2	1
+23B	Eph-ephrin endocytosis and cytoskeletal relay	1	2	1
+23B	Eph-ephrin immune signaling	1	2	1
+23B	Eph-ephrin inflammatory pathway	1	2	1
+23B	Eph-ephrin ligand-receptor binding	10	11	10
+23B	Eph-ephrin ligand-receptor relay	1	2	1
+23B	Eph-ephrin neural crest guidance	1	2	1
+23B	Eph-ephrin neural/metabolic function	1	2	1
+23B	Eph-ephrin tissue separation	1	2	1
+23B	Eph-ephrin tumor-cell relay	1	2	1
+23B	Eph-ephrin vascular development	1	2	1
+23B	EphA10–ephrin-A5 association and E-cadherin/β-catenin invasion phenotype	2	2	2
+23B	EphA2–ephrin-A3 adhesion and hypoxia-sensitive SREBP1/ACLY output	2	2	2
+23B	EphA3–ephrin-A2 binding and ephrin reverse signaling to β1 adhesion	3	2	3
+23B	EphB-ephrin-B subclass signaling	1	2	1
+23B	EphB2 phosphotyrosine/adaptor signaling	1	2	1
+23B	EphB2-ephrin-B1 / adhesion and migration	1	2	1
+23B	EphB4-ephrin-B2	1	2	1
+23B	EphB6-ephrin-B1 / JNK-Rac1	1	2	1
+23B	EphB6-ephrin-B2	1	2	1
+23B	EphB6/ephrin-B3 forward signaling; myelin repulsion and integrin-beta1 migration branch	2	2	2
+23B	F11R-LFA-1 -> junctional adhesion and leukocyte transendothelial migration; cytoplasmic relay not uniquely resolved	2	2	2
+23B	FAT4-DCHS1 Hippo adhesion	1	2	1
+23B	FBLN2 matrix adhesion -> beta3-integrin-dependent cell attachment; intracellular relay and terminal output unresolved	1	2	1
+23B	FGA-420 alpha(E)C-alphaMbeta2 -> leukocyte adhesion/migration	2	2	2
+23B	FGA-420 alpha(E)C/alpha-chain motif-alphaXbeta2 -> leukocyte adhesion	2	2	2
+23B	FGA-RGD-alphaIIbbeta3 platelet recognition	1	2	1
+23B	FGB betaN domain -> VE-cadherin -> endothelial barrier/angiogenesis modulation	2	2	2
+23B	FGF18-FGFR3 ERK/AKT proliferation and invasion	3	2	3
+23B	FGF2-alpha-v-beta-3-FGFR1 adhesion, ERK/angiogenesis branch	3	2	3
+23B	FGF23-FGFR2 -> PKA -> Rap1 inhibition -> beta2-integrin deactivation and impaired neutrophil recruitment	3	2	3
+23B	FGG-gammaC-alphaIIbbeta3 platelet recognition	1	2	1
+23B	FGL1/hepassocin-EGFR -> NOX1/ROS and p38 -> endothelial injury and monocyte adhesion	2	2	2
+23B	FLRT2 -> UNC5D cell-recognition/adhesion antagonism -> elimination of mistargeted dendrites and inappropriate synapses	2	2	2
+23B	FLRT3 -> ADGRL3 adhesion-GPCR context -> G-protein/actin-associated synapse organization and excitatory connectivity	2	2	2
+23B	FLRT3 -> UNC5B cell-adhesion/guidance interface -> context-dependent embryonic cell positioning and morphogenesis	2	2	2
+23B	FLT1 signaling	1	2	1
+23B	FN1 EIIIA-alpha9beta1 lymphatic valve morphogenesis	2	2	2
+23B	FN1-CD44 adhesion/cytoskeletal branch	2	2	2
+23B	FN1-CS1-alpha4beta1 leukocyte adhesion branch	2	2	2
+23B	FN1-CS1-alpha4beta7 lymphocyte adhesion branch	2	2	2
+23B	FN1-RGD-alpha8beta1 adhesion/neurite branch	2	2	2
+23B	FN1-RGD-alphaVbeta6-PKC adhesion/migration branch	3	2	3
+23B	FN1-alphaVbeta1 adhesion branch	2	2	2
+23B	FN1-alphaVbeta3-RGD/RhoA focal adhesion branch	3	2	3
+23B	FnEDA SCI scar function	1	2	1
+23B	GPCR activation	1	2	1
+23B	GPIb-IX-V platelet function	1	2	1
+23B	GPIb-IX-V-Src-Syk-PLCgamma2 relay	1	2	1
+23B	GPR126 Gs–cAMP/PKA relay	1	2	1
+23B	GPR126–cAMP/PKA–Schwann-cell myelination	1	2	1
+23B	GPVI dimer-FcRgamma / ITAM-Syk-PLCgamma2	1	2	1
+23B	GPVI–FcRγ ITAM/Syk/PLCγ2 platelet branch	3	2	3
+23B	GalNAcPTase -> cadherin/catenin and Fer-associated cross-talk -> N-cadherin adhesion and neurite outgrowth	1	2	1
+23B	GnRH receptor relay	1	2	1
+23B	HGF integrin crosstalk	1	2	1
+23B	HKa–Mac-1 adhesion blockade and JNK/ERK/p38/NF-kappaB inflammatory branch	3	2	6
+23B	HSP90 client receptor complex	1	2	1
+23B	HSP90alpha-LRP1-Akt motility relay	1	2	1
+23B	HSP90alpha-LRP1-Akt wound-healing function	1	2	1
+23B	HSP90alpha-LRP1/CD91 binding	1	2	1
+23B	Hsp70-LRP1/CD91 antigen-uptake recognition	1	2	1
+23B	Hsp70-LRP1/CD91 immune function	1	2	1
+23B	Hsp70-LRP1/CD91 innate signaling	1	2	1
+23B	IBSP integrin adhesion	2	3	2
+23B	IBSP-RGD-alphaVbeta5 cancer-cell adhesion branch	2	2	2
+23B	ICAM1 -> Mac-1/ITGAM-ITGB2 -> integrin outside-in cytoskeletal/phagocytic and migration branch	3	2	3
+23B	ICAM1-LFA1 adhesion	1	2	3
+23B	ICAM1-Mac1 adhesion	1	2	2
+23B	ICAM2 -> LFA-1/ITGAL-ITGB2 -> integrin avidity, actin remodeling, and leukocyte transmigration	3	2	6
+23B	ICAM5-alpha5beta1 neuronal function	1	2	1
+23B	ICAM5-alpha5beta1 synaptic adhesion relay	1	2	1
+23B	ICAM5-alpha5beta1 trans-adhesion	1	2	1
+23B	IGF1R-alpha6beta4 PI3K-AKT/ERK crosstalk	2	2	2
+23B	IGF1R-alphaVbeta3 PI3K-AKT/ERK crosstalk	2	2	2
+23B	IGF2-IGF1R-alpha6beta4 PI3K-AKT/ERK crosstalk	2	2	2
+23B	IGF2-IGF1R-alphaVbeta3 PI3K-AKT/ERK crosstalk	2	2	2
+23B	IL34-PTPRZ1 CS-dependent binding	1	2	1
+23B	IL34-PTPRZ1 neural/myeloid cellular function	1	2	1
+23B	IL34-PTPRZ1 signaling	1	2	1
+23B	INSL5-RXFP4 endocrine function	1	2	1
+23B	ISG15-LFA-1 cytokine function	1	2	1
+23B	ISG15-LFA-1 receptor recognition	1	2	1
+23B	ISG15-LFA-1-SFK cytokine relay	1	2	1
+23B	ITGB3 inside-out activation and adhesion-complex regulation	3	2	3
+23B	IZUMO1–JUNO adhesion followed by CD9-dependent sperm-oocyte fusion and membrane remodeling	1	2	1
+23B	JAM2–JAM3–alpha4beta1 leukocyte rolling, firm adhesion, and extravasation	2	2	2
+23B	JAM3-Mac-1 platelet-leukocyte adhesion recognition	1	2	1
+23B	JAM3-Mac-1 vascular adhesion function	1	2	1
+23B	JAM3–Mac-1 adhesion and junctional-complex control of leukocyte recruitment	2	2	2
+23B	KGD-dependent αIIbβ3 outside-in platelet branch	3	2	3
+23B	KIT RTK signaling	1	2	1
+23B	KIT proximal signaling	1	2	1
+23B	KITL-KIT hematopoietic output	1	2	1
+23B	L1/NCAM adhesion and neurite-outgrowth branch	1	2	1
+23B	L1CAM-CNTN1 cis complex and axon-guidance/adhesion signaling	2	2	2
+23B	L1CAM-EGFR-cis/trans interaction-RTK phosphorylation-MAPK/neurite-adhesion branch	3	2	3
+23B	LAMA1/laminin-111-DAG1/DGC branch	2	2	2
+23B	LAMA2 domain-VI–alpha2beta1 recognition	1	2	1
+23B	LAR-RPTP–presynaptic differentiation	5	5	5
+23B	LFA-1; talin/kindlin-integrin activation, actin polymerization and leukocyte adhesion	3	2	3
+23B	LFA1 outside-in signaling	1	2	2
+23B	LGALS1-integrin binding	1	2	1
+23B	LGALS3BP–beta1-integrin adhesion context	1	2	1
+23B	LGI1-ADAM22 synaptic MAGUK-Kv1/AMPA complex	3	2	3
+23B	LGI3-ADAM22 signaling	1	2	1
+23B	LRRC4/NGL-2–netrin-G2 trans-synaptic adhesion	1	2	1
+23B	LRRC4B/NGL-3-PTPRS trans-synaptic adhesion	2	2	2
+23B	LRRC4B/NGL-3–PTPRF/LAR trans-synaptic adhesion	1	2	1
+23B	LRRC4C/NGL-1–netrin-G1 trans-synaptic adhesion	1	2	1
+23B	Laminin-211–ADGRG6 NTF/CTF adhesion-GPCR branch	1	2	1
+23B	Laminin–dystroglycan basement-membrane anchorage	1	2	1
+23B	MAdCAM1-alpha4beta7 adhesion	1	2	2
+23B	MDK-ALK PI3K/ERK-MAPK survival and angiogenic signaling	3	2	3
+23B	MDK-integrin receptor-complex relay	1	2	1
+23B	MDK–GPC2–neuronal adhesion/neurite outgrowth	1	2	1
+23B	MDK–SDC3–neuronal adhesion/neurite outgrowth	1	2	1
+23B	MFGE8 focal-adhesion relay	1	2	1
+23B	MFGE8-alpha8beta1 gastrointestinal function	1	2	1
+23B	MFGE8-alpha8beta1 gastrointestinal smooth-muscle recognition	1	2	1
+23B	MFGE8-alpha8beta1 smooth-muscle signaling	1	2	1
+23B	MFGE8-alphaVbeta5 apoptotic-cell recognition	1	2	1
+23B	MFGE8-alphaVbeta5 efferocytic signaling	1	2	1
+23B	MFGE8-alphaVbeta5 phagocytic function	1	2	1
+23B	MIA -> alpha4beta1/alpha5beta1 -> reduced integrin activity/MAPK-ERK -> detachment and migration	2	2	2
+23B	MIA–alpha4beta1 integrin inhibitory branch	1	2	1
+23B	MIF receptor-complex binding	1	2	1
+23B	MIF-CD74-CD44 signaling	1	2	1
+23B	MIF-CD74/CXCR2-Gi/integrin/Ca2+ branch	2	2	2
+23B	MMP7 -> SDC1 shedding -> alpha2beta1 integrin activation-state change -> re-epithelialization and wound closure	2	2	2
+23B	MMP9-EphB2 cleavage signaling	1	2	1
+23B	MMP9-PEX-LRP1 Schwann-cell function	1	2	1
+23B	MMP9-PEX-LRP1 Schwann-cell injury recognition	1	2	1
+23B	MMP9-PEX-LRP1 Schwann-cell signaling	1	2	1
+23B	MMRN2-CLEC14A -> endothelial adhesion/angiogenesis branch	2	2	2
+23B	MST1R RTK activation	1	2	1
+23B	MST1R/RON signaling	1	2	1
+23B	MYL9-CD69 inflammatory adhesion/recruitment platform -> airway inflammation	2	2	2
+23B	Mac1 outside-in signaling	1	2	1
+23B	NAMPT/NAD salvage -> integrin expression and adhesion -> tumor-cell dissemination	1	2	1
+23B	NCAM-Robo guidance machinery and dopaminergic axon growth	2	2	2
+23B	NCAM1 homophilic adhesion	1	2	1
+23B	NCAM1 homophilic signaling	1	2	2
+23B	NCAM1-FGFR1 signaling	1	2	1
+23B	NCAM1-GDNF receptor signaling	1	2	1
+23B	NCAM140-RPTPalpha signaling	1	2	1
+23B	NF155 -> CNTN1-CNTNAP1/Caspr1 paranodal adhesion complex -> axoglial junction organization	3	2	3
+23B	NGF-TrkA-TRPV1 output	1	2	1
+23B	NID1 -> alphaVbeta3 integrin -> survival, angiogenesis, and tissue regeneration	2	2	4
+23B	NID1 G2 domain -> alpha3beta1 integrin -> cell adhesion and pericellular matrix deposition	3	2	6
+23B	NLGN1-NRXN1 synaptic adhesion -> pre/post-synaptic specialization and excitatory transmission	4	3	4
+23B	NLGN1-NRXN2 synaptic adhesion and GABAergic receptor-complex branch	2	2	2
+23B	NLGN1-NRXN2beta trans-synaptic adhesion -> GABAergic receptor organization and synaptic function	2	2	2
+23B	NLGN2-NRXN1beta trans-synaptic adhesion -> inhibitory postsynaptic differentiation and synaptic transmission	4	3	4
+23B	NLGN3-NRXN1beta trans-synaptic adhesion -> excitatory/inhibitory synapse differentiation	2	2	2
+23B	NLGN3-NRXN1beta trans-synaptic adhesion -> excitatory/inhibitory synapse differentiation branch	2	2	2
+23B	NPNT integrin function	1	2	2
+23B	NPNT-alpha8beta1 GDNF kidney-development branch	1	2	2
+23B	NPNT-alpha8beta1 binding	1	2	3
+23B	NRCAM/Plexin-A1 guidance relay	1	2	1
+23B	NRG1–ITGA6/ITGB4 → ternary integrin/NRG1/ERBB3 complex → AKT and ERK1/2	3	2	3
+23B	NRG1–ITGAV/ITGB3 → integrin/NRG1/ERBB3 cross-talk → AKT and ERK1/2	3	2	3
+23B	NRP1/Plexin-A1 with L1CAM cis modulation	1	2	1
+23B	NRXN1 SS4-negative -> ADGRL1/CIRL1 transsynaptic adhesion -> synaptic cell-adhesion organization; GPCR signaling remains unresolved	2	2	2
+23B	NRXN2 SS4-negative -> ADGRL1/CIRL1 transsynaptic adhesion -> synaptic organization; no direct GPCR relay or terminal TF assigned	2	2	2
+23B	NTN1-neogenin recognition	1	2	2
+23B	NTN3 myogenic receptor-complex relay	1	2	1
+23B	NTN3-NEO1-CDON/BOC myogenic cellular function	1	2	1
+23B	NTN4 guidance/vascular complex	1	2	1
+23B	NTN4-NEO1-UNC5B signaling	1	2	1
+23B	NTNG1-LRRC4C/NGL-1 trans-synaptic adhesion -> lamina-specific connectivity and excitatory synapse organization	2	2	2
+23B	NTNG2-LRRC4/NGL-2 trans-synaptic adhesion -> lamina-specific connectivity and excitatory synapse organization	2	2	2
+23B	P2RY12 -> Gi2 -> adenylyl-cyclase inhibition and Gβγ-PI3K/Rap1b/Akt -> integrin activation	2	2	2
+23B	PAC1 intracellular signaling	1	2	1
+23B	PAC1 neuronal output	1	2	1
+23B	PACAP VPAC1 signaling	1	2	1
+23B	PACAP VPAC2 output	1	2	1
+23B	PACAP receptor activation	1	2	1
+23B	PACAP secretin-receptor cross-reactivity	1	2	1
+23B	PDGFB co-receptor trafficking	1	2	1
+23B	PDGFB-LRP1-PDGFRB signaling	1	2	1
+23B	PDGFB-PDGFRB-integrin cooperation	1	2	1
+23B	PDPN-CLEC2 recognition	1	2	2
+23B	PECAM1-alphaVbeta3 adhesion	1	2	1
+23B	PI3K–AKT	1	2	1
+23B	PKCtheta–TAP20–alphaVbeta5 adhesion, focal-adhesion, migration, and angiogenic branch	3	2	3
+23B	PLAU -> PLAUR/uPAR -> ITGA5-ITGB1 conformation/function -> fibronectin adhesion and migration	2	2	2
+23B	PLAU -> PLAUR/uPAR -> Mac-1 (ITGAM-ITGB2) -> adhesion, chemotaxis, and matrix/fibrin handling	2	2	2
+23B	PLG-PLGRKT -> cell-surface plasmin activation -> extracellular-matrix degradation -> monocyte/macrophage migration and recruitment	2	2	2
+23B	POSTN SCI scar function	1	2	1
+23B	POSTN-integrin scar relay	1	2	1
+23B	PROCR-HSP90AA1 chaperone complex	1	2	1
+23B	PROK1-PROKR1 GPCR signaling	1	2	3
+23B	PSGL1-P-selectin tethering, rolling, inflammatory recruitment	3	2	3
+23B	PTN-PTPRZ1 phosphatase branch	1	2	4
+23B	PTN-SDC3 proteoglycan branch	1	2	4
+23B	PTN-integrin/PTPRZ1 adhesion branch	1	2	4
+23B	PTPRD–presynaptic differentiation and excitatory synaptic strength	1	2	1
+23B	PTPRF/LAR–presynaptic differentiation	1	2	1
+23B	PTPRS-NTRK3 transsynaptic adhesion and non-catalytic synapse-organizing signaling	3	2	3
+23B	PTPμ–E-cadherin/catenin tyrosine-phosphorylation control	2	2	2
+23B	PYY-NPY1R GPCR branch	1	2	3
+23B	PlGF-FLT1 activation	1	2	1
+23B	PlGF2-NRP1 binding	1	2	1
+23B	PlGF2-NRP1 co-receptor signaling	1	2	1
+23B	Plexin-D1 -> Rac suppression and integrin-dependent endothelial adhesion/migration; separate CD4+ T-cell branch changes TBX21/GATA3/RORC	2	2	2
+23B	RELN-LRP8-DAB1 branch	1	2	6
+23B	RELN-VLDLR-DAB1 branch	1	2	6
+23B	RGC midline crossing	1	2	1
+23B	RGMA-NEO1-Unc5B/LARG-FAK-RhoA or BMP/Smad	1	2	4
+23B	RTN4R-ADGRB1/BAI1 adhesion-GPCR axis -> dendritic arborization, axonal elongation, synapse formation, and network activity	2	2	2
+23B	RXFP4 downstream signaling	1	2	1
+23B	Reelin integrin adhesion relay	1	2	1
+23B	Reelin lipoprotein-receptor recognition	2	4	2
+23B	Reelin-alpha3beta1-Dab1 neuronal migration	1	2	1
+23B	Reelin-integrin adhesion	1	2	2
+23B	Reelin/ephrin-B-dependent neuronal migration and lamination	1	2	1
+23B	Reelin–ephrin-B3 co-receptor recognition	1	2	1
+23B	S100A8/A9 -> Mac-1 (ITGAM/ITGB2) activation -> Ca2+-linked adhesion and chemotaxis	2	3	2
+23B	SAA/SCARB1 -> receptor-dependent uptake and lipid handling, with IL-6/IL-8 and endothelial-adhesion inflammatory branch	3	2	3
+23B	SALM3/LRFN4–LAR-RPTP trans-synaptic adhesion complex	1	2	1
+23B	SALM3/LRFN4–PTPRF trans-synaptic adhesion complex	1	2	1
+23B	SALM3/LRFN4–PTPRS trans-synaptic adhesion complex	1	2	1
+23B	SALM5/LRFN5–PTPRD trans-synaptic adhesion complex	1	2	1
+23B	SALM5/LRFN5–PTPRF trans-synaptic adhesion complex	1	2	1
+23B	SALM5/LRFN5–PTPRS trans-synaptic adhesion complex	1	2	1
+23B	SCI mechanotransduction context	1	2	1
+23B	SDC2-PTPRJ-PI3K/Src-beta1 integrin	1	2	4
+23B	SELE -> glycosylated CD44/HCELL -> p38 and adhesion-receptor redistribution -> beta2-integrin-supported slow rolling/firm arrest	3	2	3
+23B	SELE-GLG1 leukocyte rolling	1	2	4
+23B	SEMA3A-NRP1:PLXNA1-Rho/Rac/FAK/CRMP	1	2	4
+23B	SEMA3C -> NRP1/PlexinD1 and NRP2 semaphorin-guidance complexes -> cytoskeletal/adhesion signaling and axon/angiogenic guidance	3	2	3
+23B	SEMA3G-NRP2:PLXNA1-YAP or Cdc42-WWP2	1	2	4
+23B	SEMA4A–TIM-2 recognition	1	2	1
+23B	SEMA4D-PLXNB2 -> SEMA4D intracellular-domain or PLXNB2-associated Rac1 regulation -> NET/oxidative-burst suppression or monocyte-endothelial adhesion	3	2	3
+23B	SEMA7A-alpha1beta1 integrin	1	2	4
+23B	SFTPD-SIRPA SHP1-RhoA-ROCK inhibitory phagocytosis	3	2	3
+23B	SLIT1-ROBO2 -> N-cadherin/cytoskeletal adhesion and guidance -> ganglion assembly and olfactory axon patterning	3	2	3
+23B	SLIT3-ROBO1 -> cardiac neural-crest adhesion/migration/survival -> pericardial and systemic venous development	3	2	3
+23B	SLITRK-PTPRS synaptogenic adhesion/scaffold branch	1	2	1
+23B	SLITRK3-PTPRD inhibitory synaptic-adhesion branch	2	2	2
+23B	SLITRK4-PTPRS excitatory synaptic-adhesion branch	2	2	2
+23B	SLITRK5-PTPRS excitatory synaptic-adhesion branch	2	2	2
+23B	SPON2-mindin -> ITGAM-ITGB2/Mac-1 -> Syk/MAPK -> adhesion and phagocytosis with nuclear NF-kB p65	3	2	6
+23B	SPP1 / IGF1R-AKT-mTOR / axon regeneration	1	2	1
+23B	SPP1 SCI function	1	2	1
+23B	SPP1-CD44v adhesion/Src branch	1	2	4
+23B	SPP1-alpha8beta1 adhesion	1	2	1
+23B	SPP1/OPN -> ITGA4-ITGB1 -> leukocyte and hematopoietic-stem-cell adhesion/migration; unique intracellular relay unresolved	2	2	2
+23B	SPP1/OPN -> ITGA5-ITGB1 -> RGD-dependent adhesion and context-specific integrin activation; downstream relay unresolved	2	2	2
+23B	SPP1/OPN -> ITGA8-ITGB1 -> cell adhesion and kidney morphogenesis; unique intracellular relay unresolved	2	2	2
+23B	SPP1/OPN -> ITGA9-ITGB1 -> hematopoietic-stem-cell migration and retention; unique intracellular relay unresolved	2	2	2
+23B	SPP1/OPN -> ITGAV-ITGB1 -> integrin-dependent adhesion and migration; unique intracellular relay unresolved	2	2	2
+23B	Sema3A / NRP1-Plexin-A relay	1	2	1
+23B	Sema3A / NRP1-Plexin-A1	1	2	1
+23B	Sema3A / NRP1-Plexin-A4	1	2	1
+23B	Sema3B / PI3K-AKT	1	2	1
+23B	Sema3C / NRP1-Plexin-D1 / angiogenesis	1	2	1
+23B	Sema3E-PLXND1 -> RhoA/actin and focal-adhesion signaling -> vascular patterning, thymocyte migration and synapse formation	3	2	3
+23B	Sema3E-Plexin-D1	1	2	1
+23B	Sema3F / NRP2-Plexin-A1 / cytoskeleton	1	2	1
+23B	Sema3F / NRP2-Plexin-A3 / cytoskeleton	1	2	1
+23B	Sema3G / vascular and axon guidance	1	2	1
+23B	Sema4A-NRP1 / immune regulation	1	2	1
+23B	Sema4A-Plexin-B1 / Rho-family signaling	1	2	1
+23B	Sema4A-Plexin-B2 / Rho-family signaling	1	2	1
+23B	Sema4B-Plexin-B2 / microglial activation	1	2	1
+23B	Sema4C/G-Plexin-B2 / cerebellar development	1	2	1
+23B	Sema5A-Plexin-A1 / retinal lamination	1	2	1
+23B	Sema5A-Plexin-B3 / Met and cytoskeletal signaling	1	2	1
+23B	Sema6A-Plexin-A2 / axon guidance	1	2	1
+23B	Sema6A/B-Plexin-A4 / axon guidance	1	2	1
+23B	Sema6C/D-Plexin-A1 / spinal axon guidance	1	2	1
+23B	Sema6D–NRCAM–Plexin-A1 complex	1	2	1
+23B	Sema7A integrin neural guidance	1	2	1
+23B	Src/Syk–PLCgamma2/PKC/Ca2+; ADAP–alphaIIbbeta3	1	2	1
+23B	T-cell activation/differentiation	1	2	1
+23B	TDGF1-GPC1 epithelial growth	1	2	3
+23B	TENM2-ADGRL1 transsynaptic adhesion and synapse/axonal-guidance branch	2	2	2
+23B	TENM2-ADGRL2 transsynaptic adhesion and perforant-path synapse-specification branch	2	2	2
+23B	TENM2-ADGRL3 transsynaptic adhesion plus FLRT-coincident excitatory-synapse branch	2	2	2
+23B	TENM3-ADGRL2 trans-cellular recognition and sensory maps	2	2	2
+23B	TG2 + MFG-E8 -> integrin beta3 phagocytic cup -> phagocytic signaling and apoptotic-cell clearance	2	2	2
+23B	TG2-ADGRG1 RhoA-ROCK-ADAM17-EGFR transactivation	3	2	3
+23B	TG2-FN matrix -> SDC4/SDC2-beta1 integrin/PKCalpha co-signaling -> focal adhesion and FN deposition	2	2	2
+23B	TGFB1 -> TGFBR/SMAD -> ITGB1/alpha-beta1 expression and matrix-adhesion remodeling	1	2	1
+23B	TGFB1 -> TGFBR2/TGFBR1 -> receptor kinase -> SMAD2/3-SMAD4 and non-SMAD MAPK branches -> growth inhibition, matrix, EMT, and context-dependent repair outputs	3	2	3
+23B	TGFB1 -> TGFBR2/TGFBR1 complex -> receptor kinase signaling -> SMAD2/3-associated growth and matrix responses	3	2	3
+23B	TGFB1-SDC2 binding/uptake -> betaglycan/TGFBR trafficking -> SMAD signaling and matrix/fibrosis outputs	3	2	3
+23B	TGFB3 -> TGFBR2/TGFBR1 complex -> receptor kinase signaling -> SMAD2/3-associated growth and matrix responses	3	2	3
+23B	TGM2-SDC4-PKC/FAK-integrin	1	2	4
+23B	TGM2-beta1-integrin-ILK	1	2	2
+23B	THBS1 -> endothelial SCARB1-associated inflammatory/fibrotic and EndoMT-like program in pressure-overload heart failure	1	2	1
+23B	THBS1 N-terminal HBD -> LRP1 binding -> endocytosis/degradation; TSP1-calreticulin-LRP1 -> PI3K/survival and focal-adhesion output	3	2	3
+23B	THBS1 RGD-alphaVbeta3 adhesion relay	1	2	1
+23B	THBS1 type-1 repeat -> PTPRJ/CD148 binding -> CD148 phosphatase-dependent growth inhibition	2	2	2
+23B	THBS1-CD36 antiangiogenic endothelial branch	2	2	3
+23B	THBS1-CD36-Fyn/Syk-VEGFR2 angiogenic relay	1	2	1
+23B	THBS1-CD47 endothelial motility/NO branch	2	2	2
+23B	THBS1-CD47 recognition	1	2	1
+23B	THBS1-CD47-CD14 inflammation	1	2	1
+23B	THBS1-CD47-sGC inhibitory relay	1	2	1
+23B	THBS1-CD47/IAP-alphaIIbbeta3 platelet branch	1	2	2
+23B	THBS1-RGD-alphaVbeta3	1	2	1
+23B	THBS1-SDC1 heparan-sulfate adhesion relay	1	2	1
+23B	THBS1-SDC1-GAG matrix spreading branch	1	2	1
+23B	THBS1-SDC4 PKC/Akt relay	1	2	1
+23B	THBS1-SDC4-GAG/PKC-AKT angiogenesis branch	1	2	2
+23B	THBS1-alpha3beta1 adhesion and chemotaxis relay	1	2	1
+23B	THBS1-alpha3beta1 matrix adhesion	1	2	1
+23B	THBS1-alpha3beta1 matrix adhesion branch	1	2	1
+23B	THBS2 -> NOTCH3/JAG1 extracellular complex -> Notch cleavage/NICD-RBPJ -> HES1/HES5 transcription and proliferation control	3	2	3
+23B	THBS2 N-terminal module -> alpha6beta1 -> endothelial adhesion/chemotaxis	2	2	2
+23B	THBS2-CD36 antiangiogenic branch	2	2	4
+23B	THBS2-SDC4 EMT and tumor-progression branch	1	2	1
+23B	THBS2-alphaVbeta3 adhesion relay	1	2	1
+23B	THBS2-alphaVbeta3 vascular function	1	2	2
+23B	THBS4 inflammatory adhesion	1	2	1
+23B	THBS4-alphaVbeta3 integrin adhesion/remodeling branch	2	2	2
+23B	THY1 RLD motif -> alphaVbeta3/syndecan-4 -> PKCalpha/RhoA and adhesion-complex signaling -> astrocyte adhesion or fibroblast mechanotransduction	3	2	3
+23B	THY1 integrin adhesion	1	2	2
+23B	THY1 integrin cytoskeletal signaling	1	2	2
+23B	THY1–alphaMbeta2/Mac-1 adhesion and integrin outside-in cytoskeletal signaling	3	2	3
+23B	TIMP1 -> CD63/beta1-integrin complex -> PI3K and ERK survival signaling -> anoikis resistance and tumor-cell function	3	2	3
+23B	TIMP1-LRP1 binding and uptake	1	2	1
+23B	TIMP1-LRP1 neuronal function	1	2	1
+23B	TIMP2-alpha3beta1 SHP1/Csk-cAMP/Rap1-MAPK inhibition	3	2	3
+23B	TIMP2-alpha3beta1 complex relay; ITGB1 subunit boundary	2	2	2
+23B	TIMP3-KDR extracellular antagonism and VEGF angiogenesis inhibition	2	2	2
+23B	TNC -> alpha2beta1 -> endothelial adhesion/spreading; intracellular kinase relay unresolved	2	2	2
+23B	TNC -> fibronectin/syndecan-4 -> alpha5beta1 adhesion and cytoskeletal signaling	1	2	1
+23B	TNC EGF-like repeats -> EGFR -> EGFR autophosphorylation/ERK-MAPK -> mitogenesis and EGFR-dependent adhesion	3	2	3
+23B	TNC FNIII domains -> CNTN1/contactin -> neuronal adhesion and neurite outgrowth	2	2	2
+23B	TNC cryptic peptide adhesion	1	2	1
+23B	TNC smooth-muscle growth	1	2	1
+23B	TNC-SDC4 cryptic-peptide/GAG adhesion branch	1	2	1
+23B	TNC-alpha7beta1 neurite extension	2	2	2
+23B	TNC-alpha8beta1 adhesion	1	2	2
+23B	TNC-alpha8beta1 cryptic-fragment adhesion/migration branch	1	2	1
+23B	TNC-alpha9beta1 adhesion	1	2	1
+23B	TNC-alpha9beta1 adhesion/migration branch	2	2	2
+23B	TNC-alphaVbeta3 RGD adhesion/migration branch	2	2	2
+23B	TNC-alphaVbeta3 adhesion	1	2	1
+23B	TNC-alphaVbeta6 adhesion	1	2	2
+23B	TNC-alphaVbeta6 cellular output	1	2	1
+23B	TNC-alphaVbeta6 matrix-adhesion/invasion branch	1	2	1
+23B	TNX cryptic RGD adhesion	1	2	1
+23B	TSP1 N-terminal LDVP motif -> alpha4beta1 -> adhesion/chemotaxis and MMP response	2	2	2
+23B	TSP2 N-terminal LDVP fragment -> alpha4-beta1 -> T-cell adhesion/chemotaxis and MMP expression	2	2	2
+23B	Talin1-alphaVbeta5 inside-out adhesion versus talin-independent phagocytic activation	2	2	2
+23B	Thy-1–ADGRE5 adhesion and inflammatory leukocyte trafficking	2	2	2
+23B	Tim-2-associated T-cell activation	1	2	1
+23B	Tspan15-ADAM10 substrate selection	1	2	1
+23B	TspanC8-ADAM10 scissor complex	1	2	1
+23B	VCAM1 -> alpha9beta1 -> endothelial adhesion and transendothelial neutrophil migration	2	2	2
+23B	VCAM1-alpha4beta1-VLA4-paxillin/talin-adhesion-strengthening branch	3	2	3
+23B	VCAM1-alpha9beta1 adhesion	1	2	2
+23B	VCAM1-alphaD/beta2 integrin adhesion/inflammatory branch	2	2	2
+23B	VCAN C-terminal G3-beta1 integrin	1	2	4
+23B	VCAN-TLR2/TLR6-CD14-MyD88-RelB inflammatory program	3	2	3
+23B	VCAN-domain/ADAMTS1-EGFR transactivation ERK invasion	2	2	2
+23B	VEGF165 HBD-alphaVbeta3	1	2	3
+23B	VEGFA -> alpha9beta1 plus VEGFR2 -> endothelial adhesion/migration and angiogenesis	3	2	3
+23B	VEGFA -> alpha9beta1/ITGB1 plus VEGFR2 -> endothelial adhesion, migration and angiogenesis	3	2	3
+23B	VEGFA-FLT1 vascular branch	1	2	3
+23B	VEGFA-VEGFR2-NR2B neuronal branch	1	2	2
+23B	VEGFC -> alpha9beta1 -> Erk1/2/paxillin and adhesion/migration; VEGFR3 co-expression is a separate cooperating branch	3	2	3
+23B	VEGFC -> alpha9beta1 -> Erk1/2/paxillin and adhesion/migration; VEGFR3 cooperation remains distinct	3	2	3
+23B	VIP-PAC1-Gs-cAMP	1	2	3
+23B	VTN alphaIIbbeta3 adhesion	1	2	1
+23B	VTN beta3-tail relay	1	2	1
+23B	VTN-alpha8beta1 adhesion	1	2	1
+23B	VTN-alphaVbeta1 function	1	2	1
+23B	VTN-alphaVbeta3 adhesion	1	2	1
+23B	VTN-alphaVbeta5 function	1	2	1
+23B	VTN-alphaVbeta8 adhesion	1	2	1
+23B	VTN-uPAR-integrin adhesion and migration	2	2	2
+23B	VTN–alpha8beta1 RGD recognition	1	2	1
+23B	VTN–alphaVbeta5 matrix recognition	1	2	1
+23B	VWF platelet arrest	1	2	1
+23B	VWF platelet binding	1	2	1
+23B	VWF platelet tethering and alphaIIbbeta3 stabilization	1	2	1
+23B	VWF-GPIb-IX-V initial adhesion	1	2	1
+23B	VWF-P-selectin endothelial VWF-string anchoring	2	2	2
+23B	VWF-alphaVbeta3 adhesion	1	2	1
+23B	VWF–GPIb-IX-V complex	1	2	1
+23B	VWF–alphaVbeta3 RGD adhesion	1	2	1
+23B	WNT5A–FZD3 CRD recognition	1	2	1
+23B	WNT5B-FZD7 noncanonical Wnt	1	2	3
+23B	activated A2M neural function	1	2	1
+23B	activated A2M neural relay	1	2	1
+23B	activated A2M-LRP1 binding	1	2	1
+23B	adiponectin receptor signaling	2	3	2
+23B	agrin-Na+/K+-ATPase tyrosine-phosphorylation and pump signaling	3	2	3
+23B	agrin-alphaVbeta1 adhesion	1	2	1
+23B	agrin-integrin synaptic function	1	2	1
+23B	alpha1beta1-mediated chondrocyte/fibroblast adhesion and spreading	1	2	1
+23B	alpha2beta1-mediated adhesion and neurite outgrowth	1	2	1
+23B	alpha2beta1–epithelial adhesion/migration	1	2	1
+23B	alpha3beta1–ERK/Akt–epithelial proliferation	1	2	1
+23B	alpha3beta1–FAK/ERK–epithelial migration	1	2	1
+23B	alpha3beta1–STAT1 phosphorylation/apoptosis relay	1	2	1
+23B	alpha4beta1 inactivation–MAPK/ERK reduction	1	2	1
+23B	alpha4beta1–MAPK/ERK–matrix detachment and migration	1	2	1
+23B	alpha4beta7 outside-in signaling	1	2	2
+23B	alpha6beta1 matrix mechanotransduction	1	2	1
+23B	alpha6beta1–Schwann-cell adhesion/myelination context	1	2	1
+23B	alpha6beta4 hemidesmosome–EGFR/FAK/ERK–NF-kB context	1	2	1
+23B	alpha7beta1–Schwann/peripheral-nerve adhesion	1	2	1
+23B	alpha9 integrin sensory regeneration	1	2	1
+23B	alpha9beta1 outside-in signaling	1	2	2
+23B	alphaIIb/beta3 platelet adhesion and thrombus-related erythrocyte contact	2	2	2
+23B	alphaMbeta2 activation–ICAM2 adhesion and chemokine-dependent migration/extravasation	2	2	4
+23B	alphaVbeta1-dependent beta-cell motility	1	2	1
+23B	alphaVbeta3-dependent adhesion	1	2	1
+23B	alphaVbeta5-zyxin-vinculin adhesome organization	1	2	1
+23B	alphaVbeta6–PKC motility output	1	2	1
+23B	alphaVbeta8-dependent adhesion/migration context	1	2	1
+23B	alphaXbeta2 activation–adhesion/transmigration and antigen-presenting-cell recruitment	2	2	2
+23B	alternative EPO receptor signaling	1	2	1
+23B	ameloblast matrix adhesion	1	2	1
+23B	amelogenin-CD63 endocytic output	1	2	1
+23B	amelogenin-CD63 trafficking	1	2	1
+23B	amelogenin-LAMP1 trafficking	1	2	1
+23B	amelogenin-LAMP2 trafficking	1	2	1
+23B	angiopoietin Tie2 signaling	1	2	1
+23B	angiopoietin integrin engagement	1	2	1
+23B	angiopoietin matrix crosstalk	1	2	1
+23B	angiopoietin neural adhesion	1	2	1
+23B	astrocyte mechanotransduction	1	2	1
+23B	beta1-integrin–FAK/TGF-beta–SMAD2 EMT-associated relay	1	2	1
+23B	beta1-laminin–alpha3beta1 recognition	1	2	1
+23B	beta2-integrin adhesion, erythrocyte clearance, and phagocytic-cell contact	2	2	2
+23B	beta2-laminin–alpha3beta1 enhanced recognition	1	2	1
+23B	beta2-laminin–alpha7X2beta1 recognition	1	2	1
+23B	cANGPTL4-CDH11 cadherin complex	1	2	1
+23B	cANGPTL4-CDH11-beta-catenin	1	2	1
+23B	cANGPTL4-alpha5beta1 junction function	1	2	1
+23B	cANGPTL4-alpha5beta1 vascular relay	1	2	1
+23B	canstatin alphaVbeta3 binding	1	2	1
+23B	canstatin alphaVbeta5 binding	1	2	1
+23B	chondroadherin–α2β1 adhesion/MAPK branch	2	2	2
+23B	chronic SCI scar mechanics	1	2	1
+23B	chronic hemisection scar mechanics	1	2	1
+23B	chronic lesion mechanics	1	2	1
+23B	chronic lesion mechanics / ECM-GAG branch	1	2	1
+23B	clustered ephrin-A5–EphA2 signaling to MEK/ERK or AKT and cytoskeletal output	3	2	3
+23B	collagen I-GPVI / platelet ITAM signaling	1	2	1
+23B	collagen IX neural guidance	1	2	1
+23B	collagen XI alpha2beta1 binding	1	2	1
+23B	collagen XI fibroblast program	1	2	1
+23B	collagen-I astrocytic scar	1	2	1
+23B	collagen-I-DDR2 JAK2/ERK/MMP10 and PEA3 response	3	2	3
+23B	collagen-III-ADGRG1 G-alpha12/13-RhoA cortical migration	3	2	3
+23B	collagen-III-DDR1 receptor autophosphorylation	1	2	1
+23B	collagen-III-DDR2 receptor autophosphorylation	1	2	1
+23B	collagen-II–GPVI/FcRγ platelet activation	3	2	3
+23B	collagen-II–α10β1 cartilage adhesion	2	2	2
+23B	collagen-II–α1β1 cartilage adhesion	2	2	2
+23B	collagen-II–α2β1 cartilage adhesion	2	2	2
+23B	collagen-IV NC1–α3β1 adhesion/angiogenesis	2	2	2
+23B	collagen-IV migration relay	1	2	1
+23B	collagen-IV neural adhesion	1	2	1
+23B	collagen-IV scaffold function	1	2	1
+23B	collagen-IV–GPVI matrix recognition	1	2	1
+23B	collagen-I–DDR1 activation	3	2	3
+23B	collagen-I–syndecan-1 heparan-sulfate adhesion branch	3	2	3
+23B	collagen-I–α11β1 adhesion/remodeling	2	2	2
+23B	collagen-I–α2β1 adhesion and collagen-response signaling	3	2	3
+23B	collagen-V NTD–syndecan-3 cytoskeletal/ERK branch	3	2	3
+23B	collagen-VI alpha10 binding	1	2	1
+23B	collagen-VI chain boundary	1	2	1
+23B	collagen-VI family adhesion	1	2	1
+23B	collagen-VI integrin relay	1	2	2
+23B	collagen-VI peripheral-nerve function	1	2	1
+23B	collagen-V–DDR1 dimer/RTK phosphorylation and Shc/MAPK	3	2	3
+23B	collagen-XI fibril–DDR1 dimer–Shc/MAPK matrix response	3	2	3
+23B	collagen-XIII–α11β1 adhesion and bone-homeostasis branch	3	2	3
+23B	collagen-XIII–α1β1 adhesion/transmigration and renal inflammation	3	2	3
+23B	contactin–NrCAM neuronal adhesion and RPTPβ-associated differentiation	2	2	2
+23B	endostatin growth-factor receptor antagonism	1	2	1
+23B	endostatin integrin binding	1	2	1
+23B	endostatin-alpha3beta1 cerebellar synapse organization	2	2	2
+23B	endostatin–α2β1 endothelial adhesion and anti-angiogenic function	1	2	1
+23B	endothelial THY1 -> alphaMbeta2/Mac-1 -> leukocyte adhesion and transendothelial migration	2	2	2
+23B	ephrin contact signaling	1	2	1
+23B	ephrin-A5–EphA4 clustering/RTK signaling and context-dependent guidance/adhesion	3	2	3
+23B	ephrin-B–ApoER2/VLDLR–Dab1	1	2	1
+23B	factor-H glycosaminoglycan-tethered Mac-1 adhesion and oxidative activation	3	2	3
+23B	fibrillar collagen-I–CD36 platelet/macrophage adhesion branch	2	2	2
+23B	fibrillar collagen-I–CD36 platelet/macrophage adhesion branch (COL1A2 alias)	2	2	2
+23B	fibrinogen alpha5beta1 relay	1	2	1
+23B	fibrinogen beta1-context relay	1	2	1
+23B	fibronectin SCI scar relay	1	2	1
+23B	fibronectin alpha5beta1 binding	1	2	1
+23B	fibronectin barrier crosstalk	1	2	1
+23B	fibronectin coreceptor binding	1	2	1
+23B	fibronectin neural guidance	1	2	1
+23B	fibronectin uPAR crosstalk	1	2	1
+23B	fibronectin-EDA chronic fibrotic scar	1	2	1
+23B	fractalkine–αVβ3/CX3CR1 integrin activation and adhesion	3	2	3
+23B	fractalkine–αVβ3/CX3CR1 integrin activation and adhesion (ITGB3 alias)	3	2	3
+23B	galectin-3-alpha3beta1 epithelial function	1	2	1
+23B	galectin-3-alpha3beta1 glycan recognition	1	2	1
+23B	galectin-3-alpha3beta1 lamellipodia relay	1	2	1
+23B	galectin-8–alpha3beta1 lectin/integrin context	1	2	1
+23B	galectin-8–integrin–apoptosis/adhesion loss	1	2	1
+23B	galectin-9–CD44 glycan-dependent immune receptor context	1	2	1
+23B	galectin-integrin outside-in signaling	1	2	1
+23B	glycan-sulfation SCI matrix program	1	2	1
+23B	gp96-LRP1/CD91 antigen-uptake recognition	1	2	1
+23B	gp96-LRP1/CD91 immune function	1	2	1
+23B	gp96-LRP1/CD91 innate signaling	1	2	1
+23B	growth-cone collapse/chemorepulsion	1	2	1
+23B	heparan-sulfate-dependent MDK–GPC2 clustering	1	2	1
+23B	heparan/chondroitin-sulfate-dependent MDK–SDC3 clustering	1	2	1
+23B	heterophilic E-cadherin/N-cadherin adhesion and force transmission	3	2	3
+23B	integrin alphaVbeta6 -> latent TGF-beta1 activation -> TGFBR/SMAD3	3	2	3
+23B	integrin-ILK mechanosensing	1	2	1
+23B	integrin-activated sensory regeneration	1	2	1
+23B	integrin-cadherin astrocyte scar recruitment	1	2	1
+23B	integrin-mediated adhesion	1	2	1
+23B	integrin-mediated adhesion/focal contacts	1	2	1
+23B	irisin complex hold	1	2	1
+23B	irisin integrin binding	1	2	1
+23B	lamina-specific excitatory synapse development/function	1	2	1
+23B	lamina-specific excitatory synapse organization	1	2	1
+23B	laminin gamma1-containing isoform–alpha3beta1 recognition	1	2	1
+23B	laminin gamma1-containing isoform–alpha6beta1 recognition	1	2	1
+23B	laminin neural adhesion	1	2	1
+23B	laminin neural guidance	2	3	2
+23B	laminin neural regeneration	1	2	1
+23B	laminin-2 Schwann-cell function	1	2	1
+23B	laminin-2 axon-sorting relay	1	2	1
+23B	laminin-2 neural guidance	1	2	1
+23B	laminin-2-dystroglycan matrix association	2	2	2
+23B	laminin-2/211–alpha6beta1 adhesion	1	2	1
+23B	laminin-2–alpha3beta1–EGFR/Src–ERK relay	1	2	1
+23B	laminin-332 adhesion	2	3	6
+23B	laminin-332 adhesion signaling	1	2	1
+23B	laminin-332 focal-contact signaling	1	2	2
+23B	laminin-332 gamma2 signaling	1	2	1
+23B	laminin-332 hemidesmosome adhesion	1	2	3
+23B	laminin-332 stable matrix adhesion	1	2	2
+23B	laminin-332-alpha3beta1 basement-membrane recognition	1	2	1
+23B	laminin-332-alpha3beta1 epithelial function	1	2	1
+23B	laminin-332-alpha3beta1 focal-adhesion signaling	1	2	1
+23B	laminin-332–alpha2beta1 epithelial adhesion	1	2	1
+23B	laminin-332–alpha2beta1 epithelial branch	1	2	1
+23B	laminin-332–alpha2beta1 epithelial migration	1	2	2
+23B	laminin-332–alpha3beta1 branch	1	2	1
+23B	laminin-332–alpha3beta1 focal adhesion	1	2	1
+23B	laminin-332–alpha3beta1 focal-adhesion branch	1	2	1
+23B	laminin-332–alpha6beta1 branch	1	2	1
+23B	laminin-332–alpha6beta4 hemidesmosome branch	2	3	2
+23B	laminin-332–alpha6beta4 hemidesmosome complex	1	2	1
+23B	laminin-411 adhesion	2	3	3
+23B	laminin-411–alpha3beta1 endothelial/epithelial adhesion	1	2	1
+23B	laminin-411–alpha6beta1 adhesion	1	2	1
+23B	laminin-411–alpha7beta1 laminin recognition	1	2	1
+23B	laminin-511 cell survival	1	2	1
+23B	laminin-511 dystroglycan adhesion	1	2	1
+23B	laminin-511 hiPSC signaling	1	2	1
+23B	laminin-511 molecular interface	1	2	2
+23B	laminin-511/521 adhesion	3	4	6
+23B	laminin-511/521–alpha3beta1 recognition	1	2	1
+23B	laminin-511/521–alpha6beta4 recognition	2	3	2
+23B	laminin-511–alpha6beta1 recognition	1	2	1
+23B	laminin-511–dystroglycan anchorage	1	2	1
+23B	laminin-521–alpha6beta4 recognition	1	2	1
+23B	laminin-gamma3–DAG1–DLL4/Notch–retinal arteriogenesis	1	2	1
+23B	laminin-gamma3–dystroglycan retinal vascular branch	1	2	1
+23B	laminin-integrin Schwann-cell radial sorting	1	2	1
+23B	latent TGF-beta1-alphaVbeta6 activation and TGFBR-SMAD	3	2	3
+23B	latent TGFB1-LAP -> alphaVbeta8 -> MT1-MMP-mediated release -> autocrine/paracrine growth and matrix responses	3	2	3
+23B	matrilin-1–alpha1beta1 cartilage adhesion	1	2	1
+23B	melatonin receptor G-protein branch	1	2	1
+23B	netrin-1-MCAM G-alpha-i/Gab1-AKT-mTOR and ERK	3	2	3
+23B	neuronal migration/cytoskeletal function	2	4	2
+23B	neutrophil endothelial adhesion	1	2	1
+23B	periostin / fibrotic scar / inflammatory macrophages	1	2	1
+23B	periostin alphaVbeta5 context	1	2	1
+23B	periostin-alphaVbeta3 vascular output	1	2	1
+23B	perivascular fibroblast / ECM scar	1	2	1
+23B	perlecan alpha2beta1 binding	1	2	1
+23B	perlecan-dystroglycan node organization	1	2	1
+23B	perlecan-integrin-PDGFRB pericyte relay	1	2	1
+23B	perlecan-integrin-PDGFRB relay	1	2	1
+23B	platelet adhesion/aggregation	1	2	1
+23B	podoplanin platelet activation	1	2	1
+23B	selectin-PSGL1-Mac-1 firm adhesion	1	2	1
+23B	selectin-PSGL1-beta2 avidity	1	2	1
+23B	sulfated glycan / collagen-fibronectin / neuroinflammation	1	2	1
+23B	talin-beta3 inside-out activation	1	2	2
+23B	tumstatin alphaVbeta3 binding	1	2	1
+23B	type IX collagen adhesion	4	5	4
+23B	type IX collagen function	3	4	3
+23B	type-A pericyte / fibrotic scar / regeneration	1	2	1
+23B	uPA-alphaMbeta2 plasminogen activation	1	2	1
+23B	uPA-uPAR transactivation	1	2	1
+23B	uPA-uPAR-alpha3beta1 cis complex	1	2	2
+23B	uPA-uPAR-beta1 relay	1	2	1
+23B	uPA/uPAR -> ITGB5 turnover and beta1-integrin activity -> TGF-beta-associated myofibroblast phenotype	1	2	1
+23B	vasopressin V1A signaling	1	2	1
+23B	vasopressin V2 signaling	1	2	1
+23B	vitronectin-alphaIIbbeta3 platelet adhesion	1	2	1
+23B	vitronectin-alphaVbeta3 vascular adhesion	1	2	1
+23B	vitronectin-dependent attachment	1	2	1
+23B	vitronectin-uPAR-integrin adhesion	1	2	1
+24B	ANGPTL2-TLR4-associated inflammatory branch	1	2	1
+24B	ANXA2-TLR2 dendritic inflammatory relay	1	2	1
+24B	APC-PAR1 biased cytoprotective program	1	2	1
+24B	ApoC3-LDLR/LRP1 lipoprotein clearance axis	1	2	1
+24B	BDKRB2-PLC/IP3-Ca2+-GDNF relay	1	2	2
+24B	C1QL2-NRXN3 synaptic branch	1	2	1
+24B	C1QL2-NRXN3-GluK2/GluK4 synaptic complex	1	2	1
+24B	C1QTNF5-MFRP RPE adhesion complex	1	2	1
+24B	C3-CR3-NR2B neuropathic-pain branch	1	2	1
+24B	C3a-C3aR1-NF-kB p65-Nrf2- UCHL1 downstream relay	1	2	1
+24B	C3a-C3aR1-NF-kB p65-Nrf2-UCHL1-proteasome functional output	1	2	1
+24B	C3aR1-PTEN antagonism of CXCR2/PI3K-AKT	1	2	2
+24B	C3d-CR2 complement co-receptor binding	1	2	1
+24B	C5L2/C5aR2 ligand-clearance branch	1	2	1
+24B	C5a-C5L2/C5aR2 decoy and internalization branch	1	2	1
+24B	C5aR1 acute inflammation and post-acute astrocyte relay	1	2	2
+24B	CCL11-CCR2 weak chemotaxis branch	1	2	1
+24B	CCL11-CCR3 eosinophil chemotaxis branch	1	2	1
+24B	CCL24-CCR3 eosinophil branch	1	2	1
+24B	CCL27-CCR10 skin T-cell recruitment branch	1	2	2
+24B	CCL28-CCR3 eosinophil migration branch	1	2	2
+24B	CCL3-CCR1 chemokine receptor branch	1	2	1
+24B	CCL5-CCR1 chemotaxis branch	1	2	1
+24B	CCL5-CCR3 eosinophil branch	1	2	1
+24B	CCL7-MCP-3/CCR1 branch	1	2	2
+24B	CCL7-MCP-3/CCR2 branch	1	2	2
+24B	CCL7-MCP-3/CCR3 branch	1	2	2
+24B	CCL8/MCP-2-CCR1 chemotaxis branch	1	2	1
+24B	CCN1-SDC4 debris-buffering repair	1	2	1
+24B	CCN1-SDC4 repair relay	1	2	1
+24B	CIRP-TLR4 inflammatory relay	1	2	2
+24B	CX3CL1-CX3CR1 SCI repair	1	2	1
+24B	CXCL1-CXCR2-C3aR1/PTEN relay	1	2	1
+24B	CXCL10-CXCR3 injury relay	1	2	2
+24B	CXCL2-CXCR2 inflammatory context	1	2	1
+24B	CXCL3-CXCR2 scar relay	1	2	2
+24B	CXCL5-CXCR2 comparator pain relay	1	2	1
+24B	CYTL1-CCR2-Gi/ERK chemotaxis relay	1	2	1
+24B	Cripto-ACVR1B/ALK4 coreceptor branch	1	2	1
+24B	Cripto-Nodal-ALK7/ActRIIB coreceptor branch	1	2	1
+24B	DAMP/TLR boundary relay	2	4	2
+24B	DEFB2-TLR4 dendritic maturation relay	1	2	2
+24B	ECM-DAMP/TLR boundary relay	1	2	1
+24B	EPCR-beta-arrestin-Dvl2-Rac1 barrier relay	1	2	1
+24B	FAM3D-FPR1-Gi/beta-arrestin-ERK/p38 relay	1	2	1
+24B	FAM3D-FPR2-Gi/beta-arrestin-ERK/p38 relay	1	2	1
+24B	FLRT3 homophilic adhesion/migration branch	1	2	1
+24B	FPR2-Gi-ERK/Akt migration relay	1	2	1
+24B	Gal-9-TIM-3 checkpoint output	1	2	1
+24B	Gal-9-TIM-3 immune checkpoint relay	1	2	1
+24B	HMGB1-TIM-3 nucleic-acid sensing suppression	1	2	1
+24B	HMGB1-TLR2 inflammatory relay	1	2	1
+24B	IL-1 receptor-complex activation	2	3	2
+24B	IL-36 inflammatory output	1	2	1
+24B	IL-36 receptor-complex activation	3	4	3
+24B	IL-36 receptor-complex proximal relay	1	2	1
+24B	IL17D-CD93 ILC3 homeostasis relay	1	2	1
+24B	IL17D-CD93-IL22 homeostatic branch	1	2	1
+24B	Klk6-PAR1/PAR2-PI3K/MEK-ERK neurotoxicity relay	1	2	1
+24B	Klk6-PAR2-MEK/ERK-STAT3 astrocyte relay	1	2	1
+24B	Klk6-PAR2-MEK/ERK-STAT3 inflammatory astrocyte output	1	2	1
+24B	LEAP2-GHSR central appetite output	1	2	1
+24B	LEAP2-GHSR ghrelin antagonism	1	2	2
+24B	LGALS9-TLR4 glycan-dependent modulation branch	1	2	1
+24B	LTB4 release-PMN infiltration branch	1	2	1
+24B	LTB4-BLT1 neutrophil recruitment	1	2	1
+24B	MMP2/MMP9 ECM-vascular injury branch	1	2	1
+24B	NKA-NK1 GPCR/PLC-Ca2+ relay	1	2	2
+24B	NKA-NK2 GPCR/PLC-Ca2+ relay	1	2	2
+24B	NKA-NK3 weak cross-reactivity	1	2	2
+24B	NKB-NK1 weak cross-reactivity	1	2	2
+24B	NKB-NK2 weak cross-reactivity	1	2	2
+24B	NKB-NK3 GPCR relay	1	2	2
+24B	NPgamma-NK1 binding branch	1	2	2
+24B	NPgamma-NK2 native-tissue relay	1	2	1
+24B	P2Y14-Gi/ERK/RhoA chemotaxis relay	1	2	1
+24B	P2Y14-Gi/PI3K-RhoA relay	1	2	2
+24B	P2Y14-Gi/Rho relay	1	2	2
+24B	P2Y14-Gi/RhoA-Rho-kinase relay	1	2	2
+24B	PANP-PILRA glycosylation-dependent neural relay	1	2	1
+24B	PAR1-Rho/ERK/MAPK-NF-kB/JAK2-STAT3 relay	1	2	2
+24B	PCDHGC3 junctional barrier branch	1	2	1
+24B	PGE2-EP2-ERK/cAMP spinal pain relay	1	2	1
+24B	PGE2-EP4 anti-inflammatory spinal feedback	1	2	2
+24B	PTPdelta-IL1RAP trans-synaptic adhesion complex	1	2	1
+24B	Resistin-TLR4 inflammatory function	1	2	1
+24B	Resistin-TLR4 proximal inflammatory relay	1	2	2
+24B	Resistin-TLR4-MyD88/MAPK/NFkB relay	1	2	1
+24B	RvD1-FPR2 resolution relay	1	2	1
+24B	RvD1-FPR2/ALX spinal resolution branch	1	2	1
+24B	RvD1-GPR32 proresolution GPCR relay	1	2	1
+24B	RvD1-GPR32 proresolution cellular output	1	2	1
+24B	S100B-RAGE-Src/ERK/NFkB relay	1	2	1
+24B	S1P-S1PR1-NLRP3-IL1beta relay	1	2	1
+24B	S1P-S1PR2-ERK/ACSL4 ferroptosis relay	1	2	1
+24B	S1P-S1PR3-p38-NF-kB relay	1	2	1
+24B	SAA1-TLR2 inflammatory branch	1	2	1
+24B	SAA1-TLR4-MyD88/NFkB branch	1	2	2
+24B	SAA3-TLR4 inflammatory branch	1	2	2
+24B	SP-NK1-PLC-Ca2+/ERK-p38 relay	1	2	1
+24B	SP-NK2 GPCR relay	1	2	1
+24B	SP-NK3 weak GPCR cross-reactivity	1	2	1
+24B	TF-FVIIa-Xa-PAR2 protease relay	1	2	1
+24B	TNC-FBG-C-TLR4 alarmin relay	1	2	1
+24B	Tac1-NKA-NK2 branch	1	2	1
+24B	Tac1-SP-NK1-ERK/p38 branch	1	2	1
+24B	Tac4-HK1-NK1 GPCR relay	1	2	1
+24B	VCAN-TLR2/TLR6 inflammatory relay	1	2	2
+24B	WNT5A-ROR2-VANGL2 planar-cell-polarity branch	1	2	1
+24B	XCL1-XCR1 comparator context	1	2	1
+24B	bradykinin-B2R-NF-kB neuroprotection relay	1	2	2
+24B	bradykinin-B2R-NF-kB neuroprotective output	1	2	1
+24B	chemokine receptor comparator pharmacology	2	3	2
+24B	chemokine receptor context	1	2	1
+24B	chemokine receptor functional boundary	2	4	2
+24B	coagulation-linked protease danger adjacency	1	2	2
+24B	complement fragment targeting and SCI protection	1	2	1
+24B	complement receptor-associated synaptic function	1	2	1
+24B	complement-linked synaptic loss	1	2	2
+24B	debris-sensor PI3K-AKT/DAM relay	1	2	2
+24B	decorin-TLR2-MAPK/NFkB inflammatory relay	1	2	1
+24B	extracellular protease adjacency	1	2	1
+24B	ficolin-A-TLR4 macrophage polarization branch	1	2	1
+24B	hemokinin-1-NK1 GPCR relay	1	2	2
+24B	hemokinin-1-NK2 GPCR relay	1	2	2
+24B	hemokinin-1-NK3 GPCR relay	1	2	2
+24B	iC3b-CR3 opsonin binding	1	2	1
+24B	iC3b-CR4 opsonin binding	1	2	1
+24B	kinin-B1 receptor SCI bladder relay	1	2	2
+24B	kinin-B1 receptor bladder hyperexcitability output	1	2	1
+24B	kinin-system receptor induction context	1	2	1
+24B	leukotriene/eicosanoid pharmacology	1	2	1
+24B	lipid-debris-complement signaling	1	2	2
+24B	pro-resolving lipid mediator co-therapy	1	2	2
+24B	pro-resolving lipid mediator function	1	2	1
+24B	purinergic excitotoxicity	1	2	3
+24B	purinergic mitochondrial repair	1	2	1
+24B	purinergic pain relay	1	2	2
+24B	purinergic repair relay	1	2	2
+24B	purinergic secondary injury	1	2	1
+24B	reverse-direction DAMP-ECM pathway context	1	2	1
+24B	thrombin-cleavage and PAR3-assisted-PAR4 relay	1	2	1
+24B	trap-mediated purinergic inflammation	1	2	2
