@@ -2978,6 +2978,20 @@ exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1436
 rows through M22B-IND-1436.
 
+## Individual hold-search tranche 1437–1444
+
+Seven rows retained reusable target-gene capacity: TCF7/β-catenin→Cd4 for
+the H2-Ea, H2-Ea-ps, and H2-Eb1 branches; NFATC2→Lag3 for both Lag3
+branches; Ets-family→Cd3d; and SP1/NFATC1→CD3G. APLP2 remained a hold
+because the recovered promoter study did not identify a named activating
+TF-to-APLP2 edge. These are non-SCI mouse T-cell, human T-cell, and mouse
+neural/promoter contexts; the immune contexts are relevant, but none
+establishes the submitted MHC upstream handoff. None of the eight exact
+upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1444
+rows through M22B-IND-1444.
+
 Run:
 
 ```text
