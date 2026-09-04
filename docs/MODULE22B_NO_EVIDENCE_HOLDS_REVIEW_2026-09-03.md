@@ -290,6 +290,24 @@ confidence rows, 417 medium-high rows, and 175 primary-experiment-supported
 rows. Twenty-eight named or composite holds have now been searched individually
 and are logged.
 
+## Individual hold-search tranche 0029–0032
+
+Four additional holds were searched individually. The PTN/PTPRZ1–ERF search
+did not recover a qualifying ERF target-gene locus and remains on hold. The
+ESR2 search recovered standalone HSD17B1 and KCNMB1 lanes, with the former
+supported by integrated mouse ovarian cistrome/transcriptome evidence and the
+latter by human smooth-muscle promoter and chromatin experiments. The ETV4/
+ETV5 search recovered ETV4→CCND1, ETV5→MMP2, and a composite ETV4/ETV5→SHH
+enhancer lane. The FOXO1 search recovered direct FOXO1→CYP7A1 evidence from a
+mouse liver study. These findings add six standalone target-gene lanes; the
+four submitted upstream handoffs remain holds.
+
+The current working register contains 4,406 exportable target-gene rows and
+4,322 explicit-species materialization rows, including 4,001 high-source-
+confidence rows, 417 medium-high rows, and 181 primary-experiment-supported
+rows. Thirty-two named or composite holds have now been searched individually
+and are logged.
+
 ## Reproducibility
 
 Run:
