@@ -1938,6 +1938,28 @@ integrin handoffs remain separate holds.
 Register counts are unchanged; the individual search log now contains 780
 rows through M22B-IND-0780.
 
+## Individual hold-search tranche 0781–0788
+
+The FN1→SDC1 row remained unresolved: SDC1 promoter studies identified
+reverse-direction WT1 or Sp1 regulation, but no downstream FN1-SDC1 terminal
+TF-target relay. For FN1→SDC4, a primary mechanotransduction study in mouse
+fibroblasts on fibronectin linked SDC4 tension to YAP activity and expression
+of the established YAP target genes Ctgf and Ankrd1; existing YAP→CTGF and
+YAP/TEAD→ANKRD1 lanes were therefore retained as reusable target context while
+the exact upstream handoff remains a hold.
+
+The six GABA-GAD1/SLC32A1→GABAA-subtype rows were also searched individually.
+Developing-neuron studies showed GABAA-receptor activation, CREB
+phosphorylation, and increased BDNF expression, so the existing GABAA-CREB/BDNF
+program and CREB→BDNF target lanes were retained as reusable context for all
+six subtype rows. The studies did not isolate the submitted alpha/beta/
+delta-or-gamma receptor assemblies or the GAD1/SLC32A1 source composite, and
+none was SCI-specific. These context links do not upgrade the exact upstream
+handoffs.
+
+Register counts are unchanged; the individual search log now contains 788
+rows through M22B-IND-0788.
+
 ## Reproducibility
 
 Run:
