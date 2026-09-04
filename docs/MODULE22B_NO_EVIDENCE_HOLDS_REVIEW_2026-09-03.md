@@ -753,6 +753,24 @@ rows, 433 medium-high rows, and 255 primary-experiment-supported rows. One
 hundred eighty-eight named or composite holds have now been searched
 individually and are logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0189–0196
+
+Eight additional BMP receptor-composite holds were searched individually. The
+four BMP4 rows yielded BMP4/SMAD1/5 occupancy and BMP4/Smad1 spinal-cord injury
+axon-regeneration context, but no receptor-composite-specific terminal target;
+the existing human SMAD1/5/8-to-ID1 lane was reused as context only. The three
+BMP5 rows remained at developmental spinal-cord signaling and receptor-family
+boundaries without a qualifying terminal target. The BMP6 row yielded human
+BMP6-induced SMAD1/5 occupancy at the ID1 promoter, matching an existing
+standalone lane; the exact ACVR1-ACVR2B handoff remained separate. No new lane
+was added and none of the eight upstream handoffs was upgraded.
+
+The working register remains at 4,486 exportable target-gene rows and 4,402
+explicit-species materialization rows, including 4,065 high-source-confidence
+rows, 433 medium-high rows, and 255 primary-experiment-supported rows. Two
+hundred named or composite holds have now been searched individually and are
+logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
