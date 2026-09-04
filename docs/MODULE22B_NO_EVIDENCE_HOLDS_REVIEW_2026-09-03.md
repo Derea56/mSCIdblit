@@ -2315,6 +2315,19 @@ the eight exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1004
 rows through M22B-IND-1004.
 
+## Individual hold-search tranche 1005–1012
+
+Eight additional GHRH-family receptor and processing rows were searched
+individually. Primary pituitary GHRH/GRF c-Fos evidence was retained as
+standalone context for the noncanonical receptor rows. GHRHR-RAMP2 and
+GHRHR-RAMP3 complex formation was recorded without inferring a terminal TF or
+target gene, and ghrelin-GHSR c-Fos context was kept separate from the
+submitted ghrelin-GHRHR mismatch. None of the eight exact upstream handoffs
+was promoted.
+
+Register counts are unchanged; the individual search log now contains 1012
+rows through M22B-IND-1012.
+
 ## Reproducibility
 
 Run:
