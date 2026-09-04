@@ -1173,6 +1173,23 @@ medium-high rows. The current evidence register remains at 366 records with
 `support_kind=primary_experiment`. The individual search log now contains 372
 rows through M22B-IND-0372.
 
+## Individual hold-search tranche 0373–0380
+
+Eight CLEC2H/I-to-KLRB1-family rows were searched individually. The human
+RARA→KLRB1 lane remains the only directly supported target context for this
+family in the reviewed sources: ATRA-associated RARA occupancy and CD161
+induction support the human lane. The searches did not establish exact mouse
+Klrb1a, Klrb1b, Klrb1c, or Klrb1f promoter regulation, species-resolved
+Klrb1 regulation for the unsuffixed rows, or any CLEC2H/CLEC2I upstream relay.
+The human lane was recorded as context only; no new exact target lane was
+added, and all eight upstream handoffs remain holds.
+
+The working register remains at 4,534 exportable target-gene rows and 4,454
+explicit-species rows, including 4,110 high-source-confidence rows and 566
+medium-high rows. The current evidence register remains at 366 records with
+`support_kind=primary_experiment`. The individual search log now contains 380
+rows through M22B-IND-0380.
+
 ## Reproducibility
 
 Run:
