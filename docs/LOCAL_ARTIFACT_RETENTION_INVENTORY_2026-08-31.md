@@ -89,3 +89,12 @@ digests. The original logical repository path is now a local-only symlink, and
 the scanner preserves that logical path when rebuilding the manifest. The
 artifact-to-adjudication bridge remains loaded in the local database; the
 physical archive is not part of the public release.
+
+On 2026-09-04, 223 completed, batch-specific Module 21A/22B promotion
+scripts were moved to the sibling local archive
+`/Users/derea/Documents/SCI/mSCIdblit_local_archive/historical_module21_22_promotion_scripts_2026-09-04/scripts/`:
+117 Module 21A relay batches, 22 Module 22B low-confidence batches, 81
+Module 22B narrative TF-target batches, and three additional Module 22B
+general/signed/TRRUST batches. Their contents were checksum-verified against
+the repository `HEAD` before this cleanup. Reusable materialization, export,
+validation, and current public-TF entrypoints remain tracked in `scripts/`.
