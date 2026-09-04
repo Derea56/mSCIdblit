@@ -3379,3 +3379,14 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1684
 rows through M22B-IND-1684.
+## Individual hold-search tranche 1685–1692
+
+Two of eight rows retained reusable activating-target capacity: RNF10→MAG and
+GLI1→HHIP. CD200R2, CD200R4, SLAMF9, BOC, and CDON remained holds because no
+qualifying named activating TF-to-target result was established. Existing
+individual PTCH1 and SMO target lanes were not transferred to the submitted
+PTCH1/SMO composite. These target contexts remain separate from the submitted
+upstream handoffs. None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1692
+rows through M22B-IND-1692.
