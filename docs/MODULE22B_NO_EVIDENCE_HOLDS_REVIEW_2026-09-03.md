@@ -3782,3 +3782,16 @@ None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1932
 rows through M22B-IND-1932.
+## Individual hold-search tranche 1933–1940
+
+All eight rows retained reusable activating-target capacity by reusing two
+primary receptor-promoter contexts: STAT6→CYSLTR1 and IRF7→CYSLTR2. The
+CYSLTR1 study used a STAT6 response element and measured receptor induction in
+human leukocytes; the CYSLTR2 study linked an IRF7 site to IFN-alpha-induced
+promoter-reporter activity in human intestinal/colon-cancer models.
+
+These target contexts remain separate from the submitted upstream handoffs.
+None of the eight exact upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1940
+rows through M22B-IND-1940.
