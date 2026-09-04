@@ -3006,6 +3006,18 @@ upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1452
 rows through M22B-IND-1452.
 
+## Individual hold-search tranche 1453–1460
+
+All eight rows retained reusable target-gene capacity: RUNX3→Cd8a for the
+H2-M10.1, H2-M10.2, H2-M10.3, and H2-M10.4 branches, and RUNX3/CBFβ-
+associated Cd8b1 context for the corresponding four branches. These are
+non-SCI mouse T-cell developmental/activation contexts; none establishes an
+exact H2-M1/H2-M10-to-CD8 upstream handoff. None of the eight exact upstream
+handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1460
+rows through M22B-IND-1460.
+
 Run:
 
 ```text
