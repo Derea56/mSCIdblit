@@ -1104,6 +1104,26 @@ medium-high rows. The current evidence register contains 357 records with
 rows through M22B-IND-0340. All eight submitted upstream handoffs remain
 holds.
 
+## Individual hold-search tranche 0341–0348
+
+Eight rows spanning a Chad–ITGA2/ITGB1 branch, cholesterol-associated RORA or
+RORC branches, and claudin homophilic branches were searched individually. The
+existing RORA→Rorc, RORA→Il17a, and RORC→IL17A/Il17a lanes were reused as
+standalone regulon context; they do not establish DHCR24, DHCR7, or LIPA
+signaling to either nuclear receptor. Six new standalone lanes were added:
+human RUNX1→ITGA2, human CDX2→CLDN1, mouse Trp63→Cldn1, mouse
+GATA1→Cldn11, mouse CREB1→Cldn11, and human GATA2→CLDN11. The claudin lanes
+come from epithelial, developmental, or seminiferous-tissue comparator models
+and do not establish homophilic claudin signaling to the TFs. No upstream
+handoff was promoted.
+
+The working register now contains 4,531 exportable target-gene rows and 4,451
+explicit-species rows, including 4,107 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 363 records with
+`support_kind=primary_experiment`. The individual search log now contains 348
+rows through M22B-IND-0348. All eight submitted upstream handoffs remain
+holds.
+
 ## Reproducibility
 
 Run:
