@@ -805,6 +805,24 @@ rows, 433 medium-high rows, and 255 primary-experiment-supported rows. Two
 hundred sixteen named or composite holds have now been searched individually
 and are logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0213–0220
+
+Eight additional adhesion, complement, and CGRP-receptor rows were searched
+individually. CADM1/NECTIN3 and CADM3/CADM4 remained at cell-adhesion,
+myelination, or polarity outputs. C4b/CR2 remained at processed-complement or
+viral-promoter signaling, without a host terminal target. The noncanonical
+CALCA/CALCR-RAMP rows and CALCA/CALCRL-RAMP2 remained at receptor-pharmacology
+or CREB/kinase boundaries. The canonical CALCA/CALCRL-RAMP1 row reused the
+existing CREB-to-cFos lane as primary-afferent context, but its source study
+used a CRE reporter rather than a named endogenous target. No new lane was
+added and none of the eight upstream handoffs was upgraded.
+
+The working register remains at 4,486 exportable target-gene rows and 4,402
+explicit-species materialization rows, including 4,065 high-source-confidence
+rows, 433 medium-high rows, and 255 primary-experiment-supported rows. Two
+hundred twenty-four named or composite holds have now been searched
+individually and are logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
