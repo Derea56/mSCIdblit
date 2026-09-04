@@ -2704,6 +2704,19 @@ promoted.
 Register counts are unchanged; the individual search log now contains 1284
 rows through M22B-IND-1284.
 
+## Individual hold-search tranche 1285–1292
+
+The GluK3 row retained separate human JUN→MMP9 target context, and the
+mGluR6/7/8 rows remained explicit no-target holds. The four glycine-receptor
+rows were reviewed against receptor assembly, clustering, spinal-neuronal
+physiology, and developmental expression evidence; none established a
+downstream terminal TF-to-target gene edge, and TF→receptor developmental
+regulation was not reversed into receptor→TF evidence. None of the exact
+upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1292
+rows through M22B-IND-1292.
+
 ## Individual hold-search tranche 1013–1020
 
 Four ghrelin receptor rows, one canonical GHSR row, and three GIP receptor
