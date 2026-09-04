@@ -2919,6 +2919,22 @@ the eight exact upstream handoffs was promoted.
 Register counts are unchanged; the individual search log now contains 1404
 rows through M22B-IND-1404.
 
+## Individual hold-search tranche 1405–1412
+
+Six rows retained reusable target-gene capacity: PPARA/TFAP2A→BRS3,
+EGR1→FAP/Fap, CREB→GRPR, HIF1A→NMBR, SP1→Ryr2, and the existing
+EGR1→EGFR context. SORT1 remained a hold because HNF1B evidence was
+repression-direction. RYR1 remained a hold because the promoter study
+identified only unnamed RYREF-1/2 factors and did not validate MEF2 as a
+sufficient activator. The BRS3, FAP, GRPR, NMBR, RYR2, and EGFR contexts
+are non-SCI airway, fibroblast/stroma, gastrointestinal cancer, hypoxia/
+cancer, cardiac, and epidermal/cancer comparators respectively; none
+establishes its submitted GRP/GST/GRN handoff. None of the eight exact
+upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1412
+rows through M22B-IND-1412.
+
 Run:
 
 ```text
