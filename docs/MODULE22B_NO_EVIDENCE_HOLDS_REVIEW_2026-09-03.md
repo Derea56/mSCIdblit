@@ -1588,6 +1588,21 @@ medium-high rows. The current evidence register contains 392 records with
 `support_kind=primary_experiment`. The individual search log now contains 596
 rows through M22B-IND-0596.
 
+## Individual hold-search tranche 0597–0604
+
+Eight protease/receptor rows were searched individually. New direct target
+lanes were added for human SPI1→FPR1, human SPI1→CXCR1, human SNAI1→PARD3,
+and human GATA1→ACKR1. No exact named TF-to-F2R, F2RL1, F2RL2, or F2RL3 lane
+was established in this pass. These are general TF-to-target observations from
+non-SCI primary studies; the CTSG/CXCL1 handoffs remain separate holds and
+were not upgraded by inference.
+
+Register counts are now 5,258 exportable target-gene rows and 4,482
+explicit-species rows, including 4,140 high-source-confidence rows and 566
+medium-high rows. The current evidence register contains 396 records with
+`support_kind=primary_experiment`. The individual search log now contains 604
+rows through M22B-IND-0604.
+
 ## Reproducibility
 
 Run:
