@@ -3210,3 +3210,29 @@ python3 scripts/audit_module22b_no_evidence_holds.py
 The script requires exactly 4,957 qualifying holds, verifies that each has
 linked evidence, and emits a TSV disposition for every hold plus a JSON
 summary. It does not modify either Module 22B register.
+## Individual hold-search tranche 1565–1580
+
+Nine of these sixteen rows retained reusable activating-target capacity. The
+contexts included CD163, CD22, TLR4, AGTR1A, CAV1, INSR, TLR9, CFTR, and
+EGFR, with direct promoter evidence for several receptor targets and
+signed/TRRUST evidence for the remainder. HRH3, HRH4, ASGR1, ASGR2, ITGAM,
+ITGB2, and LRP1 remained holds because no qualifying activation was found or
+the available evidence was repressive. These target contexts remain separate
+from the submitted upstream handoffs. None of the exact upstream handoffs was
+promoted.
+
+Register counts are unchanged; the individual search log now contains 1580
+rows through M22B-IND-1580.
+
+## Individual hold-search tranche 1581–1588
+
+Six of eight rows retained reusable activating-target capacity: SP1→ERBB2,
+ETS1→ITGB3, AP-1→TLR1, HIF1A/SP1→TLR2, and HIF1A/Ets1→TLR4, with ERBB2
+appearing for both HSP90AA1 and HSP90B1 source rows. ASGR1 remained a hold
+because no qualifying named activator was identified, and LRP1 remained a
+hold because the available TP53 result was repressive. These target contexts
+remain separate from the submitted upstream handoffs. None of the eight exact
+upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1588
+rows through M22B-IND-1588.
