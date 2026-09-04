@@ -3248,3 +3248,15 @@ upstream handoffs. None of the eight exact upstream handoffs was promoted.
 
 Register counts are unchanged; the individual search log now contains 1596
 rows through M22B-IND-1596.
+## Individual hold-search tranche 1597–1604
+
+Four of eight rows retained reusable activating-target capacity: E2F1→FGFR1,
+SP1/RUNX1→ITGA2, HIF1A→ITGB1, and HIF1A→SDC1. These contexts came from
+non-SCI human, mouse, or human/mouse comparator studies. DAG1, LRP1, LRP2,
+and PTPRS remained holds because no qualifying activation was found or the
+available evidence was basal or repressive. These target contexts remain
+separate from the submitted upstream handoffs. None of the eight exact
+upstream handoffs was promoted.
+
+Register counts are unchanged; the individual search log now contains 1604
+rows through M22B-IND-1604.
