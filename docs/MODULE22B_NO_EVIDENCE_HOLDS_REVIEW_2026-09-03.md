@@ -616,6 +616,24 @@ rows, 425 medium-high rows, and 253 primary-experiment-supported rows. One
 hundred twenty-four named or composite holds have now been searched individually
 and are logged. All four submitted upstream handoffs remain holds.
 
+## Individual hold-search tranche 0125–0132
+
+Eight additional holds were searched individually. The APELA/APLNR,
+APOA1-CUBN/AMN, APOB/APOBR, ACE/AGTR2, and ACE/BDKRB2 searches did not recover
+a named terminal TF target. Melatonin-receptor searches retained circadian
+gene-response context but did not establish a terminal TF target for either
+the AANAT/MTNR1A or AANAT/MTNR1B enzyme-to-receptor edge. The Activin A search
+recovered FSTL3 and SERPINE1 as SMAD2/3 regulatory-support lanes in human
+hiPSC-derived cardiomyocytes; these lanes do not establish direct SMAD
+occupancy or either submitted ACVR1C/type-II receptor composite. None of the
+eight submitted upstream handoffs was upgraded.
+
+The working register now contains 4,480 exportable target-gene rows and 4,396
+explicit-species materialization rows, including 4,065 high-source-confidence
+rows, 427 medium-high rows, and 255 primary-experiment-supported rows. One
+hundred thirty-two named or composite holds have now been searched individually
+and are logged. All four submitted upstream handoffs remain holds.
+
 ## Reproducibility
 
 Run:
