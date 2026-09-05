@@ -270,3 +270,7 @@ B073 adds a new medium-high-confidence EFNB1 ligand-side reverse-signaling relay
 ## Review-led expansion: B074 (2026-09-05)
 
 B074 adds a new medium-high-confidence EPHB6/ephrin-B1 reverse-signaling function edge using a primary mouse adrenal chromaffin study. Ephb6 deletion reduces epinephrine and tyrosine hydroxylase, and the study identifies an EPHB6-associated RAC1/MKK7/JNK-c-Jun/AP1/EGR1 route reported to act through reverse signaling via ephrin-B1. The edge is bounded to the dead-kinase receptor and mouse adrenal comparator; direct binary affinity, complete biochemical ordering, universal EGR1 promoter occupancy, neural or traumatic-SCI transfer, and function beyond the stated model are not asserted.
+
+## Review-led expansion: B075 (2026-09-05)
+
+B075 adds three medium-high-confidence EFNB1/EFNB2–IL-7Rα edges using a primary mouse immune-cell study. Cellular FRET and immunoprecipitation support separate EFNB1–IL-7Rα and EFNB2–IL-7Rα associations, while combined T-cell-specific Efnb1/Efnb2 knockout and overexpression assays support IL-7Rα surface stabilization, delayed internalization, STAT5 activation, and homeostatic proliferation. The function edge is intentionally assigned to the combined ligand perturbation rather than either ligand alone. Cellular association is not purified affinity, and immune-model, overexpression/crosslinking, no-terminal-TF, neural, and traumatic-SCI boundaries remain explicit.
