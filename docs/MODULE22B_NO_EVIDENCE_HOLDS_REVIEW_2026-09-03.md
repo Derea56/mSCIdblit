@@ -4840,3 +4840,9 @@ The retained contexts remain separate from the submitted Pth handoffs and do not
 Five of the eight rows retained reusable target capacity. Vipr1 gained direct SP1 promoter-binding evidence; Adcyap1r1, Adrb2, Adrb3, and Pth1r reused existing target contexts. Gpr20, Gpr84, and Ramp2 remained bounded holds because the reviewed material addressed receptor structure, ligand/inflammatory expression, or accessory-receptor biology without establishing a qualifying named activating TF-to-target relationship.
 
 The retained contexts remain separate from the submitted Pth and Pth2 handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI rat lung epithelial, oxidative-stress neuroblastoma, porcine, pulmonary-epithelial, adipocyte, and bone/osteoblast comparators. The individual search log contains 2860 rows through M22B-IND-2860. This tranche added one standalone target edge and one evidence record, reused target contexts for four rows, and kept three rows on hold.
+
+## Individual review 2861-2868
+
+Six of the eight rows retained reusable target capacity. Ramp3, Tshr, Vipr1, Adcyap1r1, Adrb2, and Adrb3 reused existing target contexts. Gpr20 and Gpr84 remained bounded holds because the reviewed material addressed receptor structure, ligand/inflammatory expression, or orphan-receptor biology without establishing a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted Pth2 and Pthlh handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI reproductive, thyroid, rat lung epithelial, oxidative-stress neuroblastoma, porcine, pulmonary-epithelial, and adipocyte comparators. The individual search log contains 2868 rows through M22B-IND-2868. This tranche added no new edges or evidence records, reused target contexts for six rows, and kept two rows on hold.
