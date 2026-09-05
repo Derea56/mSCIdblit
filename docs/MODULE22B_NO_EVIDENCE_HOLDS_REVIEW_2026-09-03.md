@@ -4969,6 +4969,12 @@ These contexts remain separate from the submitted ligand/receptor handoffs and d
 Seven of the eight rows retained reusable target capacity. Sema3f-NRP1, Sema3g-Fcgr3, Sema3g-Gp6, Sema3g-NRP2_PLXNA2, Sema4a-Timd2, Sema5a-Plxna1, and Sema5b-Plxna1 reused or gained target contexts. Sema3g-Fcgr3 gained a standalone direct cooperative SPI1/TFE3/USF-to-FCGR3 promoter context from a primary mouse macrophage study, while Sema4a-Timd2 gained bounded HNF4A/CEBPB/RXRA alternative-promoter regulatory support from mouse developmental-liver data. The Sema3g-NRP2_PLXNA3 row remained a bounded hold because no qualifying activating TF-to-PLXNA3 target record was verified.
 
 These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human general-regulon/receptor-regulation, mouse macrophage/platelet, developmental-liver, and neural systems. The individual search log contains 3052 rows through M22B-IND-3052. This tranche added two standalone target edges and two evidence records, reused target contexts for five rows, and kept one row on hold.
+
+## Individual review 3069-3076
+
+All eight rows retained reusable target capacity. Sema6b-Plxna4, Sema6d-NRP1_KDR, Sema6d-Plxna1, Sema7a-ITGB1_ITGA1, Serpina1a-Lrp1, and Serpina1b-Lrp1 reused registered target contexts. Sema6d-NRP1_TREM2 gained a standalone direct ZEB2-to-TREM2 context from primary human microglial/myeloid studies. Sema7a-Plxnc1 gained bounded OTX2-to-PLXNC1 regulatory support from primary mouse midbrain dopaminergic studies.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human microglial/myeloid and mouse midbrain dopaminergic systems. The individual search log contains 3060 rows through M22B-IND-3060. This tranche added two standalone target edges and two evidence records, reused target contexts for six rows, and kept no rows on hold.
 ## Individual review 2973-2980
 
 All eight rows retained reusable target capacity. Rln3-Vipr1 reused the direct SP1-to-VIPR1 promoter context. Rps19-C5ar1 gained a standalone RELA/NF-kappaB-to-C5AR1 promoter context from a primary human hepatoma study. The four RSPO receptor rows reused the direct TCF/LEF-to-Axin2 Wnt target context, with the Rspo3 rows also checked against independent AXIN2/LRP5/6 pathway work. Rspo3-Sdc4 reused HIF1A, SMAD3, KLF5, and RELA SDC4 target contexts, and Rspo4-Lgr4_Lrp5 reused the signed SP1-to-LRP5 context.
