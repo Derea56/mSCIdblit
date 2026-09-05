@@ -176,3 +176,7 @@ B049 adds one review-led VTN–alphaVbeta8 direct-binding edge: primary affinity
 ## Review-led expansion: B050 (2026-09-05)
 
 B050 promotes the existing Sema4A–Plexin-B2 receptor-proximal edge using primary activated mouse CD8+ T-cell evidence: Sema4A-Fc surface binding is reduced by Plexin-B2 blocking antibody, and Plexin-B2 knockdown reduces IFN-gamma output. The edge is promoted to medium-high with explicit cell-surface, blocking/knockdown, non-SCI immune-comparator, no-purified-affinity, and no-complete-relay limits. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B051 (2026-09-05)
+
+B051 promotes the existing EFNA2–EPHA5 binding edge using primary EphA5-AP affinity-probe labeling of ephrin-A2-expressing fibroblasts and complementary retinal binding/guidance evidence. The edge is promoted to medium-high with explicit cell-associated probe, shared-ephrin, developmental visual-system, no-purified-affinity, no-receptor-exclusive-causality, and no-traumatic-SCI limits. No Module 20A–22A ledger is modified.
