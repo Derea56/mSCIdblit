@@ -180,3 +180,7 @@ B063 promotes the existing paired 23B HGF–β1-integrin/ILK repair-function edg
 ## Review-led expansion: B064 (2026-09-05)
 
 B064 promotes the existing paired 23B COL4A3/α3(IV) collagen–α2β1 edge at the downstream renal-function layer using an acquired primary PubMed snapshot. Primary COL4A3/ITGA2 knockout phenotyping supports altered glomerular-basement-membrane maturation and renal fibrosis, while the older collagen-IV adhesion study remains a broader comparator. The edge is consolidated at medium confidence with layer-separation, broader-comparator, no-direct-chain-specific-binding, incomplete-ordering, no-terminal-TF, and no-traumatic-SCI limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B065 (2026-09-05)
+
+B065 promotes the existing paired 23B FN1–uPAR/β1-integrin/CAV1/Src relay using acquired primary PMC and PubMed snapshots. Primary human receptor-complex and migration assays support uPAR stabilization of β1-integrin/CAV1 complexes, Src association, focal-adhesion signaling, adhesion, and migration on fibronectin. The edge is consolidated at medium confidence with complex/function resolution, no-purified-FN1–uPAR binding, no-defined-α partner, incomplete-ordering, no-terminal-TF, and no-traumatic-SCI limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
