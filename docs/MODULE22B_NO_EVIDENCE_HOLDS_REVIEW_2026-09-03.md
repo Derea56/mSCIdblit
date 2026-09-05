@@ -5235,6 +5235,23 @@ handoffs and do not establish source-to-TF activation or SCI-specific
 activity. The FOXO1→VIPR2 record is a direct promoter context from a
 non-SCI intestinal neuroimmune comparator.
 
+## Individual review 3389-3396
+
+Six of the eight holds gained reusable target capacity. Vip→ADRB3 reused
+CEBPA→ADRB3; Vip→AVPR1A gained allele-dependent NF-kB/AVPR1A promoter
+context; Vip→GPR20 gained direct ETV1→GPR20 enhancer and perturbation context;
+Vip→NPR3 gained POU2F1→NPR3 promoter context; Vip→PTH1R reused the existing
+NF-kB1→PTH1R and NFE2L2→PTH1R lanes; and Vip→RAMP1 gained direct
+NKX3.1→RAMP1 occupancy and repression context. Vip→GPR84 and Vip→RAMP2
+remained on hold because no qualifying named TF-to-target relationship was
+verified.
+
+The reusable target lanes remain separate from the submitted Vip handoffs and
+do not establish source-to-TF activation or SCI-specific activity. The
+NKX3.1→RAMP1 record is a direct repressive target context, not an activating
+lane; the AVPR1A and NPR3 records are promoter-regulatory contexts whose
+direction and mechanism remain cell-type dependent.
+
 Six of the eight holds gained reusable target capacity. Try4→F2R and
 Try5→F2R reused EGR1→F2R and SP1→F2R; Try4→F2RL2 and Try5→F2RL2 reused
 NRF2→F2RL2; Try5→F2RL1 reused IRX3→F2RL1; and Try4→PARD3 reused
