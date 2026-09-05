@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='utf-8'?>
+<PubmedArticle><MedlineCitation Status="MEDLINE" Owner="NLM" IndexingMethod="Manual"><PMID Version="1">19398782</PMID><DateCompleted><Year>2009</Year><Month>10</Month><Day>27</Day></DateCompleted><DateRevised><Year>2026</Year><Month>01</Month><Day>28</Day></DateRevised><Article PubModel="Print-Electronic"><Journal><ISSN IssnType="Electronic">1083-351X</ISSN><JournalIssue CitedMedium="Internet"><Volume>284</Volume><Issue>27</Issue><PubDate><Year>2009</Year><Month>Jul</Month><Day>03</Day></PubDate></JournalIssue><Title>The Journal of biological chemistry</Title><ISOAbbreviation>J Biol Chem</ISOAbbreviation></Journal><ArticleTitle>Heparan sulfate proteoglycans are receptors for the cell-surface trafficking and biological activity of transglutaminase-2.</ArticleTitle><Pagination><StartPage>18411</StartPage><EndPage>18423</EndPage><MedlinePgn>18411-23</MedlinePgn></Pagination><ELocationID EIdType="doi" ValidYN="Y">10.1074/jbc.M109.012948</ELocationID><Abstract><AbstractText>Transglutaminase type 2 (TG2) is both a protein cross-linking enzyme and a cell adhesion molecule with an elusive unconventional secretion pathway. In normal conditions, TG2-mediated modification of the extracellular matrix modulates cell motility, proliferation and tissue repair, but under continuous cell insult, higher expression and elevated extracellular trafficking of TG2 contribute to the pathogenesis of tissue scarring. In search of TG2 ligands that could contribute to its regulation, we characterized the affinity of TG2 for heparan sulfate (HS) and heparin, an analogue of the chains of HS proteoglycans (HSPGs). By using heparin/HS solid-binding assays and surface plasmon resonance we showed that purified TG2 has high affinity for heparin/HS, comparable to that for fibronectin, and that cell-surface TG2 interacts with heparin/HS. We demonstrated that cell-surface TG2 directly associates with the HS chains of syndecan-4 without the mediation of fibronectin, which has affinity for both syndecan-4 and TG2. Functional inhibition of the cell-surface HS chains of wild-type and syndecan-4-null fibroblasts revealed that the extracellular cross-linking activity of TG2 depends on the HS of HSPG and that syndecan-4 plays a major but not exclusive role. We found that heparin binding did not alter TG2 activity per se. Conversely, fibroblasts deprived of syndecan-4 were unable to effectively externalize TG2, resulting in its cytosolic accumulation. We propose that the membrane trafficking of TG2, and hence its extracellular activity, is linked to TG2 binding to cell-surface HSPG.</AbstractText></Abstract><AuthorList CompleteYN="Y"><Author ValidYN="Y"><LastName>Scarpellini</LastName><ForeName>Alessandra</ForeName><Initials>A</Initials><AffiliationInfo><Affiliation>School of Science and Technology, Nottingham Trent University, Clifton Lane, Nottingham NG11 8NS, United Kingdom.</Affiliation></AffiliationInfo></Author><Author ValidYN="Y"><LastName>Germack</LastName><ForeName>Renée</ForeName><Initials>R</Initials></Author><Author ValidYN="Y"><LastName>Lortat-Jacob</LastName><ForeName>Hugues</ForeName><Initials>H</Initials></Author><Author ValidYN="Y"><LastName>Muramatsu</LastName><ForeName>Takashi</ForeName><Initials>T</Initials></Author><Author ValidYN="Y"><LastName>Billett</LastName><ForeName>Ellen</ForeName><Initials>E</Initials></Author><Author ValidYN="Y"><LastName>Johnson</LastName><ForeName>Timothy</ForeName><Initials>T</Initials></Author><Author ValidYN="Y"><LastName>Verderio</LastName><ForeName>Elisabetta A M</ForeName><Initials>EA</Initials></Author></AuthorList><Language>eng</Language><PublicationTypeList><PublicationType UI="D016428">Journal Article</PublicationType></PublicationTypeList><ArticleDate DateType="Electronic"><Year>2009</Year><Month>04</Month><Day>27</Day></ArticleDate></Article><MedlineJournalInfo><Country>United States</Country><MedlineTA>J Biol Chem</MedlineTA><NlmUniqueID>2985121R</NlmUniqueID><ISSNLinking>0021-9258</ISSNLinking></MedlineJournalInfo><ChemicalList><Chemical><RegistryNumber>EC 3.6.1.-</RegistryNumber><NameOfSubstance UI="D019204">GTP-Binding Proteins</NameOfSubstance></Chemical><Chemical><RegistryNumber>0</RegistryNumber><NameOfSubstance UI="D019812">Heparan Sulfate Proteoglycans</NameOfSubstance></Chemical><Chemical><RegistryNumber>9005-49-6</RegistryNumber><NameOfSubstance UI="D006493">Heparin</NameOfSubstance></Chemical><Chemical><RegistryNumber>9050-30-0</RegistryNumber><NameOfSubstance UI="D006497">Heparan Sulfate</NameOfSubstance></Chemical><Chemical><RegistryNumber>EC 2.3.2.13</RegistryNumber><NameOfSubstance UI="D000091345">Protein Glutamine gamma Glutamyltransferase 2</NameOfSubstance></Chemical><Chemical><RegistryNumber>0</RegistryNumber><NameOfSubstance UI="D011956">Receptors, Cell Surface</NameOfSubstance></Chemical><Chemical><RegistryNumber>0</RegistryNumber><NameOfSubstance UI="D053671">Syndecan-4</NameOfSubstance></Chemical><Chemical><RegistryNumber>EC 2.3.2.13</RegistryNumber><NameOfSubstance UI="D011503">Transglutaminases</NameOfSubstance></Chemical><Chemical><RegistryNumber>0</RegistryNumber><NameOfSubstance UI="C508306">Sdc4 protein, mouse</NameOfSubstance></Chemical></ChemicalList><CitationSubset>IM</CitationSubset><MeshHeadingList><MeshHeading><DescriptorName UI="D000818" MajorTopicYN="N">Animals</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D020405" MajorTopicYN="N">Dermis</DescriptorName><QualifierName UI="Q000166" MajorTopicYN="N">cytology</QualifierName></MeshHeading><MeshHeading><DescriptorName UI="D005110" MajorTopicYN="N">Extracellular Space</DescriptorName><QualifierName UI="Q000378" MajorTopicYN="N">metabolism</QualifierName></MeshHeading><MeshHeading><DescriptorName UI="D005347" MajorTopicYN="N">Fibroblasts</DescriptorName><QualifierName UI="Q000166" MajorTopicYN="N">cytology</QualifierName><QualifierName UI="Q000201" MajorTopicYN="Y">enzymology</QualifierName></MeshHeading><MeshHeading><DescriptorName UI="D019204" MajorTopicYN="N">GTP-Binding Proteins</DescriptorName><QualifierName UI="Q000378" MajorTopicYN="Y">metabolism</QualifierName></MeshHeading><MeshHeading><DescriptorName UI="D019812" MajorTopicYN="N">Heparan Sulfate Proteoglycans</DescriptorName><QualifierName UI="Q000378" MajorTopicYN="Y">metabolism</QualifierName></MeshHeading><MeshHeading><DescriptorName UI="D006493" MajorTopicYN="N">Heparin</DescriptorName><QualifierName UI="Q000378" MajorTopicYN="N">metabolism</QualifierName></MeshHeading><MeshHeading><DescriptorName UI="D006497" MajorTopicYN="N">Heparan Sulfate</DescriptorName><QualifierName UI="Q000378" MajorTopicYN="N">metabolism</QualifierName></MeshHeading><MeshHeading><DescriptorName UI="D051379" MajorTopicYN="N">Mice</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D008810" MajorTopicYN="N">Mice, Inbred C57BL</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D008817" MajorTopicYN="N">Mice, Mutant Strains</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D000091345" MajorTopicYN="N">Protein Glutamine gamma Glutamyltransferase 2</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D021381" MajorTopicYN="N">Protein Transport</DescriptorName><QualifierName UI="Q000502" MajorTopicYN="Y">physiology</QualifierName></MeshHeading><MeshHeading><DescriptorName UI="D011956" MajorTopicYN="N">Receptors, Cell Surface</DescriptorName><QualifierName UI="Q000235" MajorTopicYN="N">genetics</QualifierName><QualifierName UI="Q000378" MajorTopicYN="N">metabolism</QualifierName></MeshHeading><MeshHeading><DescriptorName UI="D053671" MajorTopicYN="N">Syndecan-4</DescriptorName><QualifierName UI="Q000235" MajorTopicYN="N">genetics</QualifierName><QualifierName UI="Q000378" MajorTopicYN="Y">metabolism</QualifierName></MeshHeading><MeshHeading><DescriptorName UI="D014162" MajorTopicYN="N">Transfection</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D011503" MajorTopicYN="N">Transglutaminases</DescriptorName><QualifierName UI="Q000378" MajorTopicYN="Y">metabolism</QualifierName></MeshHeading></MeshHeadingList></MedlineCitation><PubmedData><History><PubMedPubDate PubStatus="entrez"><Year>2009</Year><Month>4</Month><Day>29</Day><Hour>9</Hour><Minute>0</Minute></PubMedPubDate><PubMedPubDate PubStatus="pubmed"><Year>2009</Year><Month>4</Month><Day>29</Day><Hour>9</Hour><Minute>0</Minute></PubMedPubDate><PubMedPubDate PubStatus="medline"><Year>2009</Year><Month>10</Month><Day>29</Day><Hour>6</Hour><Minute>0</Minute></PubMedPubDate><PubMedPubDate PubStatus="pmc-release"><Year>2010</Year><Month>7</Month><Day>3</Day></PubMedPubDate></History><PublicationStatus>ppublish</PublicationStatus><ArticleIdList><ArticleId IdType="pubmed">19398782</ArticleId><ArticleId IdType="pmc">PMC2709370</ArticleId><ArticleId IdType="doi">10.1074/jbc.M109.012948</ArticleId><ArticleId IdType="pii">S0021-9258(20)55601-9</ArticleId></ArticleIdList><ReferenceList><Reference><Citation>Aeschlimann D., Thomazy V. (
+2000)
+<i>Connect. Tissue Res.</i> 41,
+1–
+27</Citation><ArticleIdList><ArticleId IdType="pubmed">10826705</ArticleId></ArticleIdList></Reference><Reference><Citation>Lorand L., Graham R. M. (
+2003)
+<i>Nat. Rev. Mol. Cell Biol.</i> 4,
+140–
+156</Citation><ArticleIdList><ArticleId IdType="pubmed">12563291</ArticleId></ArticleIdList></Reference><Reference><Citation>Smethurst P. A., Griffin M. (
+1996)
+<i>Biochem. J.</i> 313,
+803–
+808</Citation><ArticleIdList><ArticleId IdType="pmc">PMC1216981</ArticleId><ArticleId IdType="pubmed">8611158</ArticleId></ArticleIdList></Reference><Reference><Citation>Nakaoka H., Perez D. M., Baek K. J., Das T., Husain A., Misono K., Im M. J., Graham R. M. (
+1994)
+<i>Science</i> 264,
+1593–
+1596</Citation><ArticleIdList><ArticleId IdType="pubmed">7911253</ArticleId></ArticleIdList></Reference><Reference><Citation>Liu S., Cerione R. A., Clardy J. (
+2002)
+<i>Proc. Natl. Acad. Sci. U.S.A.</i> 99,
+2743–
+2747</Citation><ArticleIdList><ArticleId IdType="pmc">PMC122418</ArticleId><ArticleId IdType="pubmed">11867708</ArticleId></ArticleIdList></Reference><Reference><Citation>Feng J. F., Rhee S. G., Im M. J. (
+1996)
+<i>J. Biol. Chem.</i> 271,
+16451–
+16454</Citation><ArticleIdList><ArticleId IdType="pubmed">8663582</ArticleId></ArticleIdList></Reference><Reference><Citation>Verderio E., Nicholas B., Gross S., Griffin M. (
+1998)
+<i>Exp. Cell Res.</i> 239,
+119–
+138</Citation><ArticleIdList><ArticleId IdType="pubmed">9511731</ArticleId></ArticleIdList></Reference><Reference><Citation>Akimov S. S., Krylov D., Fleischman L. F., Belkin A. M. (
+2000)
+<i>J. Cell Biol.</i> 148,
+825–
+838</Citation><ArticleIdList><ArticleId IdType="pmc">PMC2169362</ArticleId><ArticleId IdType="pubmed">10684262</ArticleId></ArticleIdList></Reference><Reference><Citation>Balklava Z., Verderio E., Collighan R., Gross S., Adams J., Griffin M. (
+2002)
+<i>J. Biol. Chem.</i> 277,
+16567–
+16575</Citation><ArticleIdList><ArticleId IdType="pubmed">11867617</ArticleId></ArticleIdList></Reference><Reference><Citation>Zemskov E. A., Mikhailenko I., Strickland D. K., Belkin A. M. (
+2007)
+<i>J. Cell Sci.</i> 120,
+3188–
+3199</Citation><ArticleIdList><ArticleId IdType="pubmed">17711877</ArticleId></ArticleIdList></Reference><Reference><Citation>Martinez J., Chalupowicz D. G., Roush R. K., Sheth A., Barsigian C. (
+1994)
+<i>Biochemistry</i> 33,
+2538–
+2545</Citation><ArticleIdList><ArticleId IdType="pubmed">7906954</ArticleId></ArticleIdList></Reference><Reference><Citation>Chau D. Y., Collighan R. J., Verderio E. A., Addy V. L., Griffin M. (
+2005)
+<i>Biomaterials</i> 26,
+6518–
+6529</Citation><ArticleIdList><ArticleId IdType="pubmed">15927250</ArticleId></ArticleIdList></Reference><Reference><Citation>Verderio E. A., Telci D., Okoye A., Melino G., Griffin M. (
+2003)
+<i>J. Biol. Chem.</i> 278,
+42604–
+42614</Citation><ArticleIdList><ArticleId IdType="pubmed">12732629</ArticleId></ArticleIdList></Reference><Reference><Citation>Telci D., Wang Z., Li X., Verderio E. A., Humphries M. J., Baccarini M., Basaga H., Griffin M. (
+2008)
+<i>J. Biol. Chem.</i> 283,
+20937–
+20947</Citation><ArticleIdList><ArticleId IdType="pmc">PMC3258940</ArticleId><ArticleId IdType="pubmed">18499669</ArticleId></ArticleIdList></Reference><Reference><Citation>Verderio E. A., Johnson T., Griffin M. (
+2004)
+<i>Amino. Acids</i> 26,
+387–
+404</Citation><ArticleIdList><ArticleId IdType="pubmed">15290345</ArticleId></ArticleIdList></Reference><Reference><Citation>Haroon Z. A., Hettasch J. M., Lai T. S., Dewhirst M. W., Greenberg C. S. (
+1999)
+<i>FASEB J.</i> 13,
+1787–
+1795</Citation><ArticleIdList><ArticleId IdType="pubmed">10506581</ArticleId></ArticleIdList></Reference><Reference><Citation>Johnson T. S., El-Koraie A. F., Skill N. J., Baddour N. M., El Nahas A. M., Njloma M., Adam A. G., Griffin M. (
+2003)
+<i>J. Am. Soc. Nephrol.</i> 14,
+2052–
+2062</Citation><ArticleIdList><ArticleId IdType="pubmed">12874459</ArticleId></ArticleIdList></Reference><Reference><Citation>Grenard P., Bresson-Hadni S., El, Alaoui S., Chevallier M., Vuitton D. A., Ricard-Blum S. (
+2001)
+<i>J. Hepatol.</i> 35,
+367–
+375</Citation><ArticleIdList><ArticleId IdType="pubmed">11592598</ArticleId></ArticleIdList></Reference><Reference><Citation>Griffin M., Smith L. L., Wynne J. (
+1979)
+<i>Br. J. Exp. Pathol.</i> 60,
+653–
+661</Citation><ArticleIdList><ArticleId IdType="pmc">PMC2041575</ArticleId><ArticleId IdType="pubmed">44202</ArticleId></ArticleIdList></Reference><Reference><Citation>Richards R. J., Masek L. C., Brown R. F. (
+1991)
+<i>Toxicol. Pathol.</i> 19,
+526–
+539</Citation><ArticleIdList><ArticleId IdType="pubmed">1687625</ArticleId></ArticleIdList></Reference><Reference><Citation>Thomázy V., Fésüs L. (
+1989)
+<i>Cell Tissue Res.</i> 255,
+215–
+224</Citation><ArticleIdList><ArticleId IdType="pubmed">2567625</ArticleId></ArticleIdList></Reference><Reference><Citation>Nicholas B., Smethurst P., Verderio E., Jones R., Griffin M. (
+2003)
+<i>Biochem. J.</i> 371,
+413–
+422</Citation><ArticleIdList><ArticleId IdType="pmc">PMC1223304</ArticleId><ArticleId IdType="pubmed">12533191</ArticleId></ArticleIdList></Reference><Reference><Citation>Skill N. J., Johnson T. S., Coutts I. G., Saint R. E., Fisher M., Huang L., El Nahas A. M., Collighan R. J., Griffin M. (
+2004)
+<i>J. Biol. Chem.</i> 279,
+47754–
+47762</Citation><ArticleIdList><ArticleId IdType="pubmed">15326185</ArticleId></ArticleIdList></Reference><Reference><Citation>Ikura K., Yokota H., Sasaki R., Chiba H. (
+1989)
+<i>Biochemistry</i> 28,
+2344–
+2348</Citation><ArticleIdList><ArticleId IdType="pubmed">2566328</ArticleId></ArticleIdList></Reference><Reference><Citation>Muesch A., Hartmann E., Rohde K., Rubartelli A., Sitia R., Rapoport T. A. (
+1990)
+<i>Trends Biochem. Sci.</i> 15,
+86–
+88</Citation><ArticleIdList><ArticleId IdType="pubmed">2139259</ArticleId></ArticleIdList></Reference><Reference><Citation>Gaudry C. A., Verderio E., Aeschlimann D., Cox A., Smith C., Griffin M. (
+1999)
+<i>J. Biol. Chem.</i> 274,
+30707–
+30714</Citation><ArticleIdList><ArticleId IdType="pubmed">10521459</ArticleId></ArticleIdList></Reference><Reference><Citation>Signorini M., Bortolotti F., Poltronieri L., Bergamini C. M. (
+1988)
+<i>Biol. Chem. Hoppe Seyler</i> 369,
+275–
+281</Citation><ArticleIdList><ArticleId IdType="pubmed">2900016</ArticleId></ArticleIdList></Reference><Reference><Citation>Gambetti S., Dondi A., Cervellati C., Squerzanti M., Pansini F. S., Bergamini C. M. (
+2005)
+<i>Biochimie. (Paris)</i> 87,
+551–
+555</Citation><ArticleIdList><ArticleId IdType="pubmed">15935280</ArticleId></ArticleIdList></Reference><Reference><Citation>Bishop J. R., Schuksz M., Esko J. D. (
+2007)
+<i>Nature</i> 446,
+1030–
+1037</Citation><ArticleIdList><ArticleId IdType="pubmed">17460664</ArticleId></ArticleIdList></Reference><Reference><Citation>Morgan M. R., Humphries M. J., Bass M. D. (
+2007)
+<i>Nat. Rev. Mol. Cell Biol.</i> 8,
+957–
+969</Citation><ArticleIdList><ArticleId IdType="pmc">PMC3329926</ArticleId><ArticleId IdType="pubmed">17971838</ArticleId></ArticleIdList></Reference><Reference><Citation>Verderio E. A., Scarpellini A., Johnson T. S. (
+2008)
+<i>Amino. Acids</i> 36,
+671–
+677</Citation><ArticleIdList><ArticleId IdType="pubmed">18607676</ArticleId></ArticleIdList></Reference><Reference><Citation>Echtermeyer F., Streit M., Wilcox-Adelman S., Saoncella S., Denhez F., Detmar M., Goetinck P. (
+2001)
+<i>J. Clin. Invest.</i> 107,
+R9–
+R14</Citation><ArticleIdList><ArticleId IdType="pmc">PMC199172</ArticleId><ArticleId IdType="pubmed">11160142</ArticleId></ArticleIdList></Reference><Reference><Citation>Ishiguro K., Kadomatsu K., Kojima T., Muramatsu H., Tsuzuki S., Nakamura E., Kusugami K., Saito H., Muramatsu T. (
+2000)
+<i>J. Biol. Chem.</i> 275,
+5249–
+5252</Citation><ArticleIdList><ArticleId IdType="pubmed">10681494</ArticleId></ArticleIdList></Reference><Reference><Citation>De Laurenzi V., Melino G. (
+2001)
+<i>Mol. Cell Biol.</i> 21,
+148–
+155</Citation><ArticleIdList><ArticleId IdType="pmc">PMC88788</ArticleId><ArticleId IdType="pubmed">11113189</ArticleId></ArticleIdList></Reference><Reference><Citation>Scotchford C. A., Cascone M. G., Downes S., Giusti P. (
+1998)
+<i>Biomaterials</i> 19,
+1–
+11</Citation><ArticleIdList><ArticleId IdType="pubmed">9678844</ArticleId></ArticleIdList></Reference><Reference><Citation>Verderio E., Coombes A., Jones R. A., Li X., Heath D., Downes S., Griffin M. (
+2001)
+<i>J. Biomed. Mater. Res.</i> 54,
+294–
+304</Citation><ArticleIdList><ArticleId IdType="pubmed">11093190</ArticleId></ArticleIdList></Reference><Reference><Citation>Mahoney D. J., Whittle J. D., Milner C. M., Clark S. J., Mulloy B., Buttle D. J., Jones G. C., Day A. J., Short R. D. (
+2004)
+<i>Anal. Biochem.</i> 330,
+123–
+129</Citation><ArticleIdList><ArticleId IdType="pubmed">15183770</ArticleId></ArticleIdList></Reference><Reference><Citation>Germack R., Dickenson J. M. (
+2006)
+<i>J. Pharmacol. Exp. Ther.</i> 316,
+392–
+402</Citation><ArticleIdList><ArticleId IdType="pubmed">16183708</ArticleId></ArticleIdList></Reference><Reference><Citation>Jones R. A., Nicholas B., Mian S., Davies P. J., Griffin M. (
+1997)
+<i>J. Cell Sci.</i> 110,
+2461–
+2472</Citation><ArticleIdList><ArticleId IdType="pubmed">9410884</ArticleId></ArticleIdList></Reference><Reference><Citation>Hang J., Zemskov E. A., Lorand L., Belkin A. M. (
+2005)
+<i>J. Biol. Chem.</i> 280,
+23675–
+23683</Citation><ArticleIdList><ArticleId IdType="pubmed">15849356</ArticleId></ArticleIdList></Reference><Reference><Citation>Radek J. T., Jeong J. M., Murthy S. N., Ingham K. C., Lorand L. (
+1993)
+<i>Proc. Natl. Acad. Sci. U.S.A.</i> 90,
+3152–
+3156</Citation><ArticleIdList><ArticleId IdType="pmc">PMC46257</ArticleId><ArticleId IdType="pubmed">8097314</ArticleId></ArticleIdList></Reference><Reference><Citation>Rudd T. R., Guimond S. E., Skidmore M. A., Duchesne L., Guerrini M., Torri G., Cosentino C., Brown A., Clarke D. T., Turnbull J. E., Fernig D. G., Yates E. A. (
+2007)
+<i>Glycobiology</i> 17,
+983–
+993</Citation><ArticleIdList><ArticleId IdType="pubmed">17580314</ArticleId></ArticleIdList></Reference><Reference><Citation>Gronthos S., Stewart K., Graves S. E., Hay S., Simmons P. J. (
+1997)
+<i>J. Bone Miner. Res.</i> 12,
+1189–
+1197</Citation><ArticleIdList><ArticleId IdType="pubmed">9258748</ArticleId></ArticleIdList></Reference><Reference><Citation>Heath D. J., Downes S., Verderio E., Griffin M. (
+2001)
+<i>J. Bone Miner. Res.</i> 16,
+1477–
+1485</Citation><ArticleIdList><ArticleId IdType="pubmed">11499870</ArticleId></ArticleIdList></Reference><Reference><Citation>Ott V. L., Rapraeger A. C. (
+1998)
+<i>J. Biol. Chem.</i> 273,
+35291–
+35298</Citation><ArticleIdList><ArticleId IdType="pubmed">9857070</ArticleId></ArticleIdList></Reference><Reference><Citation>Longley R. L., Woods A., Fleetwood A., Cowling G. J., Gallagher J. T., Couchman J. R. (
+1999)
+<i>J. Cell Sci.</i> 112,
+3421–
+3431</Citation><ArticleIdList><ArticleId IdType="pubmed">10504291</ArticleId></ArticleIdList></Reference><Reference><Citation>Echtermeyer F., Baciu P. C., Saoncella S., Ge Y., Goetinck P. F. (
+1999)
+<i>J. Cell Sci.</i> 112,
+3433–
+3441</Citation><ArticleIdList><ArticleId IdType="pubmed">10504292</ArticleId></ArticleIdList></Reference><Reference><Citation>Greene D. K., Tumova S., Couchman J. R., Woods A. (
+2003)
+<i>J. Biol. Chem.</i> 278,
+7617–
+7623</Citation><ArticleIdList><ArticleId IdType="pubmed">12493766</ArticleId></ArticleIdList></Reference><Reference><Citation>Johnson T. S., Skill N. J., El Nahas A. M., Oldroyd S. D., Thomas G. L., Douthwaite J. A., Haylor J. L., Griffin M. (
+1999)
+<i>J. Am. Soc Nephrol.</i> 10,
+2146–
+2157</Citation><ArticleIdList><ArticleId IdType="pubmed">10505691</ArticleId></ArticleIdList></Reference><Reference><Citation>Rock M. J., Cain S. A., Freeman L. J., Morgan A., Mellody K., Marson A., Shuttleworth C. A., Weiss A. S., Kielty C. M. (
+2004)
+<i>J. Biol. Chem.</i> 279,
+23748–
+23758</Citation><ArticleIdList><ArticleId IdType="pubmed">15039439</ArticleId></ArticleIdList></Reference><Reference><Citation>Schuksz M., Fuster M. M., Brown J. R., Crawford B. E., Ditto D. P., Lawrence R., Glass C. A., Wang L., Tor Y., Esko J. D. (
+2008)
+<i>Proc. Natl. Acad. Sci. U.S.A.</i> 105,
+13075–
+13080</Citation><ArticleIdList><ArticleId IdType="pmc">PMC2529023</ArticleId><ArticleId IdType="pubmed">18725627</ArticleId></ArticleIdList></Reference><Reference><Citation>Stephens P., Grenard P., Aeschlimann P., Langley M., Blain E., Errington R., Kipling D., Thomas D., Aeschlimann D. (
+2004)
+<i>J. Cell Sci.</i> 117,
+3389–
+3403</Citation><ArticleIdList><ArticleId IdType="pubmed">15199098</ArticleId></ArticleIdList></Reference><Reference><Citation>Zamir E., Geiger B. (
+2001)
+<i>J. Cell Sci.</i> 114,
+3577–
+3579</Citation><ArticleIdList><ArticleId IdType="pubmed">11707509</ArticleId></ArticleIdList></Reference><Reference><Citation>Begg G. E., Holman S. R., Stokes P. H., Matthews J. M., Graham R. M., Iismaa S. E. (
+2006)
+<i>J. Biol. Chem.</i> 281,
+12603–
+12609</Citation><ArticleIdList><ArticleId IdType="pubmed">16522628</ArticleId></ArticleIdList></Reference><Reference><Citation>Baciu P. C., Goetinck P. F. (
+1995)
+<i>Mol. Biol. Cell</i> 6,
+1503–
+1513</Citation><ArticleIdList><ArticleId IdType="pmc">PMC301307</ArticleId><ArticleId IdType="pubmed">8589452</ArticleId></ArticleIdList></Reference><Reference><Citation>MacArthur J. M., Bishop J. R., Stanford K. I., Wang L., Bensadoun A., Witztum J. L., Esko J. D. (
+2007)
+<i>J. Clin. Invest.</i> 117,
+153–
+164</Citation><ArticleIdList><ArticleId IdType="pmc">PMC1716206</ArticleId><ArticleId IdType="pubmed">17200715</ArticleId></ArticleIdList></Reference><Reference><Citation>Mahley R. W., Ji Z. S. (
+1999)
+<i>J. Lipid Res.</i> 40,
+1–
+16</Citation><ArticleIdList><ArticleId IdType="pubmed">9869645</ArticleId></ArticleIdList></Reference><Reference><Citation>Nickel W. (
+2007)
+<i>J. Cell Sci.</i> 120,
+2295–
+2299</Citation><ArticleIdList><ArticleId IdType="pubmed">17606984</ArticleId></ArticleIdList></Reference><Reference><Citation>Seelenmeyer C., Wegehingel S., Tews I., Künzler M., Aebi M., Nickel W. (
+2005)
+<i>J. Cell Biol.</i> 171,
+373–
+381</Citation><ArticleIdList><ArticleId IdType="pmc">PMC2171196</ArticleId><ArticleId IdType="pubmed">16247033</ArticleId></ArticleIdList></Reference><Reference><Citation>Backhaus R., Zehe C., Wegehingel S., Kehlenbach A., Schwappach B., Nickel W. (
+2004)
+<i>J. Cell Sci.</i> 117,
+1727–
+1736</Citation><ArticleIdList><ArticleId IdType="pubmed">15075234</ArticleId></ArticleIdList></Reference><Reference><Citation>Zehe C., Engling A., Wegehingel S., Schäfer T., Nickel W. (
+2006)
+<i>Proc. Natl. Acad. Sci. U.S.A.</i> 103,
+15479–
+15484</Citation><ArticleIdList><ArticleId IdType="pmc">PMC1622848</ArticleId><ArticleId IdType="pubmed">17030799</ArticleId></ArticleIdList></Reference></ReferenceList></PubmedData></PubmedArticle>
