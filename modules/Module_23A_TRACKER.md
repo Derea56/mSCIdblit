@@ -222,3 +222,7 @@ B061 adds two paired COL15A1/COLXV–DDR1 edges using acquired primary PMC and P
 ## Review-led expansion: B062 (2026-09-05)
 
 B062 promotes the existing EGF–EGFR-Src-CAV1/Grb7 relay using acquired primary PubMed and PMC snapshots. The primary studies support EGF/growth-factor-associated CAV1 Tyr14 phosphorylation, Grb7 binding, and migration, together with CAV1–EGFR association and ligand-independent EGFR activation under hypoxia. The edge is promoted to medium with distinct cell and perturbation contexts, downstream-scaffold, no-direct-EGF-CAV1, incomplete-linear-ordering, no-terminal-TF, and no-traumatic-SCI limits explicit. No Module 20A–22A ledger was modified.
+
+## Review-led expansion: B063 (2026-09-05)
+
+B063 promotes the existing HGF–β1-integrin/ILK repair-function edge using an acquired primary PMC and PubMed snapshot. The primary rat study reports HGF-enhanced wound reepithelialization and β1-integrin/ILK induction, while ILK silencing reduces β1-integrin, c-MET, proliferation, migration, and invasion. The edge is promoted to medium with canonical-MET, functional-dependence, no-direct-HGF–ITGB1, preliminary-dedifferentiation, non-SCI wound, no-terminal-TF, and no-traumatic-SCI limits explicit. No Module 20A–22A ledger was modified.
