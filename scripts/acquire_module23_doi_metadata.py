@@ -86,10 +86,9 @@ def build(inventory: Path, output_root: Path, manifest: Path, sleep_seconds: flo
         requested = requested[:limit]
     output_root.mkdir(parents=True, exist_ok=True)
     existing = {row["doi"]: row for row in read_tsv(manifest)} if manifest.exists() else {}
-    records: dict[str, dict[str, str]] = {
-        doi: row for doi, row in existing.items()
-        if (output_root / Path(row.get("local_path", "")).name).is_file()
-    }
+    # Preserve prior successes and failures so bounded retries do not erase
+    # acquisition history for records outside the current request set.
+    records: dict[str, dict[str, str]] = dict(existing)
     for doi in requested:
         existing_paths = [
             output_root / safe_name(doi),
