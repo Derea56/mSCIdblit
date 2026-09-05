@@ -28,3 +28,7 @@ B024 promotes six new 23B edges paired one-to-one with Module 23A: decorin-to-EG
 ## Review-led expansion: B025 (2026-09-04)
 
 B025 promotes seven new 23B edges paired one-to-one with Module 23A: three tenascin-C FBG/TLR4 layers covering direct binding, TLR4-dependent NF-kappaB/proximal signaling, and macrophage/microglial inflammatory function; and four low-molecular-weight hyaluronan layers covering TLR4-MyD88, TLR4-TRIF/TBK1/IRF3, cPLA2alpha/COX2-eicosanoid, and IFN-beta outputs. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. FBG-domain and fragment-size specificity, adaptor separation, endotoxin controls, non-SCI comparator scope, and the absence of direct HA-TLR4 binding or terminal-TF transfer remain explicit; canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B026 (2026-09-04)
+
+B026 promotes three new 23B edges paired one-to-one with Module 23A for FN-EDA: TLR4-MD2 engagement, TLR4-dependent proximal signaling, and measured fibroblast/myofibroblast and macrophage inflammatory-fibrotic output. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. EDA-domain and MD-2 requirements, comparator-only scope, no structural DAMP-receptor claim, and the absence of traumatic-SCI or terminal-TF transfer remain explicit; alpha4beta1 cooperation was identified but not promoted without locally acquired full text. Canonical signaling tables and simulator outputs remain untouched.
