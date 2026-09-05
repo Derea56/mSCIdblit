@@ -94,3 +94,7 @@ B028 adds one review-led galectin-3 candidate and four source-backed A/B edges: 
 ## Review-led expansion: B029 (2026-09-04)
 
 B029 adds one review-led HMGB1 candidate and five source-backed A/B edges: direct TLR4/MD2 binding, a TLR4-NF-kappaB/MAPK relay, astrocytic CCL5 with myeloid recruitment/M1 output, SCI pro-inflammatory cytokine and microglial NF-kappaB output, and secondary-injury/motor-function output. Primary records were acquired locally and linked through the source manifest. HMGB1 redox state, endotoxin controls, TLR2/RAGE/TLR4 cell-context differences, human biomarker non-causality, and the absence of a universal receptor or adaptor ordering remain explicit.
+
+## Review-led expansion: B030 (2026-09-04)
+
+B030 adds one review-led S100A8/A9 calprotectin-dimer candidate and four source-backed A/B edges: direct TLR4/MD2 binding, the TLR4-MyD88-IRAK-1/NF-kappaB/MAPK relay, TNF/IL-8 phagocyte output, and an SCI-associated myeloid context edge. Primary records were acquired locally and linked through the source manifest. Dimer-versus-tetramer state, calcium/zinc and preparation requirements, RAGE/Mac-1 separation, and the observational/non-causal status of SCI abundance are retained explicitly.

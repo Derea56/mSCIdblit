@@ -44,3 +44,7 @@ B028 promotes four new 23B edges paired one-to-one with Module 23A for galectin-
 ## Review-led expansion: B029 (2026-09-04)
 
 B029 promotes five new 23B edges paired one-to-one with Module 23A for HMGB1: direct TLR4/MD2 binding, a TLR4-NF-kappaB/MAPK relay, astrocytic CCL5 with myeloid recruitment/M1 output, SCI pro-inflammatory cytokine and microglial NF-kappaB output, and secondary-injury/motor-function output. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Redox, endotoxin, alternate receptor usage, cell-context, human biomarker non-causality, and the absence of a universal adaptor order remain explicit; canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B030 (2026-09-04)
+
+B030 promotes four new 23B edges paired one-to-one with Module 23A for S100A8/A9 calprotectin dimers: direct TLR4/MD2 binding, the TLR4-MyD88-IRAK-1/NF-kappaB/MAPK relay, TNF/IL-8 phagocyte output, and an SCI-associated myeloid context edge. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Dimer/tetramer state, calcium/zinc and protein-preparation limits, RAGE/Mac-1 separation, and the medium-confidence observational/non-causal SCI context remain explicit; canonical signaling tables and simulator outputs remain untouched.
