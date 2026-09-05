@@ -160,3 +160,7 @@ B058 promotes one existing 23B direct-binding edge paired one-to-one with Module
 ## Review-led expansion: B059 (2026-09-05)
 
 B059 promotes the existing 23B PLAU/uPA–PLAUR/uPAR–β1-integrin complex edge paired one-to-one with Module 23A using acquired primary PubMed and PMC snapshots. The complex-level relay is consolidated at medium confidence; purified direct uPA–β1 binding, a single α-integrin partner, complete relay ordering, native neural context, and traumatic-SCI transfer remain unasserted. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B060 (2026-09-05)
+
+B060 promotes the existing paired 23B EFNA5/ephrin-A5–EPHA10 edges using acquired primary PMC and PubMed snapshots. EphA10s/ephrin-A5 cellular association and isoform-specific β-catenin/invasion function are consolidated at medium confidence, while secreted EphA10s versus membrane pseudo-kinase EphA10, possible EphA2 contribution, no canonical full-length activation, and no-traumatic-SCI limits remain explicit. Canonical signaling tables and simulator outputs remain untouched.
