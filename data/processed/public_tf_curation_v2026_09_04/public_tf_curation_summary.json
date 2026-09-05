@@ -7305,6 +7305,13 @@
     "row_count": 112,
     "source": "mouse_canonical_tf_direct_binding_rows_not_in_validated_overlay"
   },
+  "new_evidence_reconciliation": {
+    "exact_structured_queue_pair_overlap": 0,
+    "promotion_candidates_identified": 0,
+    "queue_rows_rechecked": 112,
+    "queue_unique_pairs_rechecked": 97,
+    "result_file": "data/processed/public_tf_curation_v2026_09_04/public_tf_new_evidence_reconciliation.json"
+  },
   "promotion_scope": "existing_v1.1.0_validated_overlay_plus_expanded_queue_adjudication_no_new_literature_promotions",
   "queue_adjudication": {
     "ledger": "data/processed/public_tf_curation_v2026_09_04/public_tf_queue_adjudication.tsv",
