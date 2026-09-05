@@ -200,3 +200,6 @@ B055 promotes the existing EFNA1–EPHA6 and EFNA2–EPHA6 binding edges using t
 ## Review-led expansion: B056 (2026-09-05)
 
 B056 adds a separate EFNB1–EPHB6 receptor-proximal edge from the primary study reporting ephrin-B1-induced EphB6 tyrosine phosphorylation, EphB1-dependent transphosphorylation, ligand dependence, and stable EphB1–EphB6 heterocomplex formation. The new edge is recorded at medium-high confidence with explicit engineered receptor-complex, species-not-resolved-in-abstract, no-direct-binary-affinity, no-JNK/Rac1, no-native-neural, and no-traumatic-SCI limits. The existing low/conflicted EphB6 JNK/Rac1 edge remains unchanged. No Module 20A–22A ledger is modified.
+## Review-led expansion: B057 (2026-09-05)
+
+B057 promotes the existing EFNB3–EPHB1 functional-context edge using the primary BALB/c LPS intestinal-injury study. In mouse colon and primary enteric neuronal/glial cultures, LPS reduced EphB1/ephrin-B3-associated signaling markers, while stable ephrin-B3 overexpression partially rescued cell injury, inflammatory cytokines, Akt/Src/NF-κB activation, and β-catenin nuclear translocation. The edge is promoted to medium with explicit functional-context, overexpression, no-purified-binding, no-receptor-proximal-relay, incomplete-ordering, and no-traumatic-SCI limits. No Module 20A–22A ledger is modified.
