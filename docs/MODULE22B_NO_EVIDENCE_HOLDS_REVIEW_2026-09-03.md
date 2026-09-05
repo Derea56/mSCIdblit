@@ -5059,6 +5059,18 @@ adhesion, receptor, glycan, and storage-complex handoffs. They do not
 establish the original pathway/function-boundary rows or any SCI-specific
 upstream relay.
 
+## Individual review 3245-3252
+
+Audits 3245-3252 covered THBS2 handoffs to CD36, CD47, ITGA3/ITGB1,
+ITGAV/ITGB3, NOTCH4, SDC1, and SDC4, plus the THBS3-CD36 handoff. All eight
+rows gained reusable target capacity from independently registered HIF1A-CD36,
+NRF1-CD47, HIF1A-ITGB1, HOXD3-ITGB3, MYC-NOTCH4, NR1H4-SDC1, and RELA-SDC4
+contexts. These are general regulatory target contexts, including human/mouse
+melanoma, wound-healing, vascular, platelet, epithelial, and inflammatory
+comparators, and remain separate from the submitted matricellular, receptor,
+and integrin handoffs. They do not establish the original pathway/function-
+boundary rows or any SCI-specific upstream relay.
+
 ## Individual review 3221-3228
 
 Audits 3221-3228 covered TGFB2/TGFBR3 and TGFB3 handoffs to ACVR1,
