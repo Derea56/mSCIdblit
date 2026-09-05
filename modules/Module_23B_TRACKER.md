@@ -156,3 +156,7 @@ B057 promotes one existing 23B functional-context edge paired one-to-one with Mo
 ## Review-led expansion: B058 (2026-09-05)
 
 B058 promotes one existing 23B direct-binding edge paired one-to-one with Module 23A for EFNA2–EPHA2. Primary Figure 1 all-pair dimeric Fc-fusion ELISA supports weak mEphrin-A2 binding to hEphA2 with apparent K_D >50 nM. The direct-binding layer is consolidated at medium confidence with explicit weak comparative-affinity, Fc-avidity, no-receptor-proximal, no-downstream, and non-SCI biochemical limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B059 (2026-09-05)
+
+B059 promotes the existing 23B PLAU/uPA–PLAUR/uPAR–β1-integrin complex edge paired one-to-one with Module 23A using acquired primary PubMed and PMC snapshots. The complex-level relay is consolidated at medium confidence; purified direct uPA–β1 binding, a single α-integrin partner, complete relay ordering, native neural context, and traumatic-SCI transfer remain unasserted. Canonical signaling tables and simulator outputs remain untouched.
