@@ -1,0 +1,2409 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+    <head >
+
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        
+        
+
+        
+        
+  <link  rel="stylesheet" href="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/assets/base_style-BxRs1iOp.css" />
+<script type="module" crossorigin="" src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/assets/base_style-D-jH62-1.js"></script>
+
+  <link  rel="stylesheet" href="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/assets/article_style-B67IZFds.css" />
+<link  rel="stylesheet" href="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/assets/style-D77LS1kY.css" />
+<script type="module" crossorigin="" src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/assets/article_style-CTAd1LmM.js"></script>
+
+  
+  
+    <style>
+  
+  
+  @media screen and (min-width: 64em) {
+    div.pmc-wm {
+      background: repeat-y;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='350' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cfilter x='-.02' y='0' width='1.05' height='1' id='c'%3E%3CfeFlood flood-color='%23FFF'/%3E%3CfeComposite in='SourceGraphic'/%3E%3C/filter%3E%3Ctext id='b' font-family='Helvetica' font-size='11pt' style='opacity:1;fill:%23005ea2;stroke:none;text-anchor:middle' x='175' y='14'%3E%3C/text%3E%3Cpath id='a' style='fill:%23005ea2' d='M0 8h350v3H0z'/%3E%3C/defs%3E%3Cuse xlink:href='%23a' transform='rotate(90 10 10)'/%3E%3Cuse xlink:href='%23b' transform='rotate(90 10 10)' filter='url(%23c)'/%3E%3C/svg%3E");
+      padding-left: 3rem;
+    }
+  }
+</style>
+
+  
+
+
+
+        
+            <link rel="apple-touch-icon"
+                  sizes="180x180"
+                  href="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/favicons/apple-touch-icon.png" />
+            <link rel="icon"
+                  type="image/png"
+                  sizes="48x48"
+                  href="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/favicons/favicon-48x48.png" />
+            <link rel="icon"
+                  type="image/png"
+                  sizes="32x32"
+                  href="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/favicons/favicon-32x32.png" />
+            <link rel="icon"
+                  type="image/png"
+                  sizes="16x16"
+                  href="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/favicons/favicon-16x16.png" />
+            <link rel="manifest" href="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/favicons/site.webmanifest" />
+            <link rel="mask-icon"
+                  href="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/favicons/safari-pinned-tab.svg"
+                  color="#0071bc" />
+            <meta name="msapplication-config"
+                  content="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/favicons/browserconfig.xml" />
+            <meta name="theme-color" content="#ffffff" />
+        
+
+        <title>
+            Characterization of functional domains of the tenascin-R (restrictin) polypeptide: cell attachment site, binding with F11, and enhancement of F11-mediated neurite outgrowth by tenascin-R - PMC
+        </title>
+
+        
+        
+  
+  <!-- Logging params: Pinger defaults -->
+<meta name="ncbi_app" content="cloudpmc-viewer" />
+<meta name="ncbi_db" content="pmc" />
+<meta name="ncbi_phid" content="C1ED788FA9B97BF302788F000E5C1C96.m_1" />
+<meta name="ncbi_pinger_stat_url" content="https://pmc.ncbi.nlm.nih.gov/stat" />
+<!-- Logging params: Pinger custom -->
+<meta name="ncbi_pdid" content="article" />
+  
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+
+    
+        <link rel="preconnect" href="https://cdn.ncbi.nlm.nih.gov" />
+    
+
+    <!-- Include USWDS Init Script -->
+    <script src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/assets/uswds-init.js"></script>
+
+
+    <meta name="ncbi_domain" content="jcellbiol">
+<meta name="ncbi_type" content="fulltext">
+<meta name="ncbi_pcid" content="journal">
+<link rel="canonical" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2199939/">
+<meta name="robots" content="INDEX,NOFOLLOW,NOARCHIVE">
+<meta name="citation_journal_title" content="The Journal of Cell Biology">
+<meta name="citation_title" content="Characterization of functional domains of the tenascin-R (restrictin) polypeptide: cell attachment site, binding with F11, and enhancement of F11-mediated neurite outgrowth by tenascin-R">
+<meta name="citation_publication_date" content="1995 Jul 2">
+<meta name="citation_volume" content="130">
+<meta name="citation_issue" content="2">
+<meta name="citation_firstpage" content="473">
+<meta name="citation_doi" content="10.1083/jcb.130.2.473">
+<meta name="citation_pmid" content="7615642">
+<meta name="citation_abstract_html_url" content="https://pmc.ncbi.nlm.nih.gov/articles/PMC2199939/">
+<meta name="citation_fulltext_html_url" content="https://pmc.ncbi.nlm.nih.gov/articles/PMC2199939/">
+<meta name="citation_pdf_url" content="https://pmc.ncbi.nlm.nih.gov/articles/PMC2199939/pdf/jc1302473.pdf">
+<meta name="description" content="The extracellular matrix glycoprotein tenascin-R (TN-R) is a multidomain protein implicated in neural cell adhesion. To analyze the structure-function relationship of the different domains of TN-R, several recombinant TN-R fragments were expressed ...">
+<meta name="og:title" content="Characterization of functional domains of the tenascin-R (restrictin) polypeptide: cell attachment site, binding with F11, and enhancement of F11-mediated neurite outgrowth by tenascin-R">
+<meta name="og:type" content="article">
+<meta name="og:site_name" content="PubMed Central (PMC)">
+<meta name="og:description" content="The extracellular matrix glycoprotein tenascin-R (TN-R) is a multidomain protein implicated in neural cell adhesion. To analyze the structure-function relationship of the different domains of TN-R, several recombinant TN-R fragments were expressed ...">
+<meta name="og:url" content="https://pmc.ncbi.nlm.nih.gov/articles/PMC2199939/">
+<meta name="og:image" content="https://cdn.ncbi.nlm.nih.gov/pmc/cms/images/pmc-card-share.jpg?_=0">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ncbi">
+    
+    
+
+    </head>
+    <body >
+        
+    <a class="usa-skipnav " href="#main-content">
+      Skip to main content
+    </a>
+
+
+        
+            
+
+<section class="usa-banner " aria-label="Official website of the United States government" >
+    <div class="usa-accordion">
+        <header class="usa-banner__header">
+            <div class="usa-banner__inner">
+                <div class="grid-col-auto">
+                    <img aria-hidden="true"
+                         class="usa-banner__header-flag"
+                         src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/us_flag.svg"
+                         alt="" />
+                </div>
+
+                <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+                    <p class="usa-banner__header-text">
+                        An official website of the United States government
+                    </p>
+                    <span class="usa-banner__header-action">Here's how you know</span>
+                </div>
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <button
+            type="button"
+        
+    
+    class="usa-accordion__button usa-banner__button
+           
+
+           
+               
+               
+               
+               
+            
+
+           
+           
+           
+           "
+    aria-expanded="false"
+    aria-controls="gov-banner-default"
+    
+    data-testid="storybook-django-banner"
+    
+    >
+    
+        
+
+        
+                    <span class="usa-banner__button-text">Here's how you know</span>
+                
+
+        
+    
+        
+            </button>
+        
+
+
+            </div>
+        </header>
+
+        <div class="usa-banner__content usa-accordion__content"
+             id="gov-banner-default"
+             hidden>
+            <div class="grid-row grid-gap-lg">
+                <div class="usa-banner__guidance tablet:grid-col-6">
+                    <img class="usa-banner__icon usa-media-block__img"
+                         src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/icon-dot-gov.svg"
+                         alt=""
+                         aria-hidden="true" />
+                    <div class="usa-media-block__body">
+                        <p>
+                            <strong>Official websites use .gov</strong>
+                            <br />
+                            A
+                            <strong>.gov</strong> website belongs to an official
+                            government organization in the United States.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="usa-banner__guidance tablet:grid-col-6">
+                    <img class="usa-banner__icon usa-media-block__img"
+                         src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/icon-https.svg"
+                         alt=""
+                         aria-hidden="true" />
+
+                    <div class="usa-media-block__body">
+                        <p>
+                            <strong>Secure .gov websites use HTTPS</strong>
+                            <br />
+                            A <strong>lock</strong> (
+                            <span class="icon-lock">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     width="52"
+                                     height="64"
+                                     viewBox="0 0 52 64"
+                                     class="usa-banner__lock-image"
+                                     role="graphics-symbol"
+                                     aria-labelledby="banner-lock-description"
+                                     focusable="false">
+                                    <title id="banner-lock-title">Lock</title>
+                                    <desc id="banner-lock-description">
+                                    Locked padlock icon
+                                    </desc>
+                                    <path fill="#000000"
+                                          fill-rule="evenodd"
+                                          d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z" />
+                                </svg>
+</span>) or <strong>https://</strong> means you've safely
+                                connected to the .gov website. Share sensitive
+                                information only on official, secure websites.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        
+
+        
+    
+    
+    
+
+<div class="usa-overlay">
+</div>
+
+
+
+<header class="usa-header usa-header--extended usa-header--wide" data-header data-testid="header"    >
+    <div class="ncbi-header">
+        <div class="ncbi-header__container">
+            <a class="ncbi-header__logo-container"
+               href="https://www.ncbi.nlm.nih.gov/">
+                <img alt="NCBI home page"
+                     class="ncbi-header__logo-image"
+                     src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/ncbi-logos/nih-nlm-ncbi--white.svg"
+                     width="410"
+                     height="100" />
+            </a>
+
+            <!-- Mobile menu hamburger button -->
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <button
+            type="button"
+        
+    
+    class="usa-menu-btn ncbi-header__hamburger-button
+           
+
+           
+               
+               
+               
+               
+            
+
+           
+           
+           
+           "
+    
+    
+    aria-label="Show menu"
+    data-testid="navMenuButton"
+    
+    >
+    
+        
+
+        
+                <svg aria-hidden="true"
+                     class="ncbi-hamburger-icon"
+                     fill="none"
+                     focusable="false"
+                     height="21"
+                     viewBox="0 0 31 21"
+                     width="31"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path clip-rule="evenodd"
+                          d="M0.125 20.75H30.875V17.3333H0.125V20.75ZM0.125 12.2083H30.875V8.79167H0.125V12.2083ZM0.125 0.25V3.66667H30.875V0.25H0.125Z"
+                          fill="#F1F1F1"
+                          fill-rule="evenodd" />
+                </svg>
+            
+
+        
+    
+        
+            </button>
+        
+
+
+
+            
+                <!-- Desktop buttons-->
+                <div class="ncbi-header__desktop-buttons">
+                    
+                        <!-- Desktop search button -->
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <button
+            type="button"
+        
+    
+    class="usa-button
+           
+
+           
+               
+               
+               
+               
+            
+
+           
+           
+           usa-button--unstyled ncbi-header__desktop-button
+           "
+    aria-expanded="false"
+    aria-controls="search-field-desktop-navigation"
+    aria-label="Show search overlay"
+    data-testid="toggleSearchPanelButton"
+    data-toggle-search-panel-button
+    >
+    
+        
+
+        
+                            
+
+
+
+    <img
+        src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/search.svg"
+        class="usa-icon "
+        aria-hidden="true"
+        
+        
+    />
+
+
+                            Search
+                        
+
+        
+    
+        
+            </button>
+        
+
+
+                    
+
+                    <!-- Desktop login dropdown -->
+                    
+                        <div class="ncbi-header__login-dropdown">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <button
+            type="button"
+        
+    
+    class="usa-button
+           
+
+           
+               
+               
+               
+               
+            
+
+           
+           
+           usa-button--unstyled ncbi-header__desktop-button ncbi-header__login-dropdown-button
+           "
+    aria-expanded="false"
+    aria-controls="login-dropdown-menu"
+    aria-label="Show login menu"
+    data-testid="toggleLoginMenuDropdown"
+    data-desktop-login-button
+    >
+    
+        
+
+        
+                                
+
+
+
+    <img
+        src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/person.svg"
+        class="usa-icon "
+        aria-hidden="true"
+        
+        
+    />
+
+
+
+                                <span data-login-dropdown-text>Log in</span>
+
+                                <!-- Dropdown icon pointing up -->
+                                
+
+
+
+    <img
+        src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/expand_less.svg"
+        class="usa-icon ncbi-header__login-dropdown-icon ncbi-header__login-dropdown-icon--expand-less ncbi-header__login-dropdown-icon--hidden"
+        aria-hidden="true"
+        data-login-dropdown-up-arrow
+        
+    />
+
+
+
+                                <!-- Dropdown icon pointing down -->
+                                
+
+
+
+    <img
+        src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/expand_more.svg"
+        class="usa-icon ncbi-header__login-dropdown-icon ncbi-header__login-dropdown-icon--expand-more ncbi-header__login-dropdown-icon--hidden"
+        aria-hidden="true"
+        data-login-dropdown-down-arrow
+        
+    />
+
+
+                            
+
+        
+    
+        
+            </button>
+        
+
+
+
+                            <!-- Login dropdown menu -->
+                            <ul class="usa-nav__submenu ncbi-header__login-dropdown-menu"
+                                id="login-dropdown-menu"
+                                data-desktop-login-menu-dropdown
+                                hidden>
+                                
+                                    <li class="usa-nav__submenu-item">
+                                        <!-- Uses custom style overrides to render external and document links. -->
+                                        
+
+
+
+
+
+
+
+
+
+    <a href="https://www.ncbi.nlm.nih.gov/myncbi/" class="usa-link  "  >
+        
+
+        
+            Dashboard
+        
+
+        
+    </a>
+
+
+                                    </li>
+                                
+                                    <li class="usa-nav__submenu-item">
+                                        <!-- Uses custom style overrides to render external and document links. -->
+                                        
+
+
+
+
+
+
+
+
+
+    <a href="https://www.ncbi.nlm.nih.gov/myncbi/collections/bibliography/" class="usa-link  "  >
+        
+
+        
+            Publications
+        
+
+        
+    </a>
+
+
+                                    </li>
+                                
+                                    <li class="usa-nav__submenu-item">
+                                        <!-- Uses custom style overrides to render external and document links. -->
+                                        
+
+
+
+
+
+
+
+
+
+    <a href="https://www.ncbi.nlm.nih.gov/account/settings/" class="usa-link  "  >
+        
+
+        
+            Account settings
+        
+
+        
+    </a>
+
+
+                                    </li>
+                                
+                                <li class="usa-nav__submenu-item">
+                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <button
+            type="button"
+        
+    
+    class="usa-button
+           
+
+           
+               
+               
+               
+               
+            
+
+           
+           
+           usa-button--outline ncbi-header__login-dropdown-logout-button
+           "
+    
+    
+    
+    data-testid="desktopLogoutButton"
+    data-desktop-logout-button
+    >
+    
+        
+
+        Log out
+
+        
+    
+        
+            </button>
+        
+
+
+                                </li>
+                            </ul>
+                        </div>
+                    
+                </div>
+            
+        </div>
+    </div>
+
+    <!-- Search panel -->
+    
+        <div class="ncbi-search-panel ncbi--show-only-at-desktop"
+             data-header-search-panel
+             hidden>
+            <div class="ncbi-search-panel__container">
+                <form action="https://www.ncbi.nlm.nih.gov/search/all/"
+                      
+                      autocomplete="off"
+                      class="usa-search usa-search--big ncbi-search-panel__form"
+                      data-testid="desktop-navigation-search-form"
+                      method="GET"
+                      role="search">
+                    <label class="usa-sr-only" for="search-field-desktop-navigation">
+                        Search…
+                    </label>
+                    <input class="usa-input"
+                           id="search-field-desktop-navigation"
+                           name="term"
+                           
+                               placeholder="Search NCBI"
+                           
+                           type="search"
+                           value="" />
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <button
+            type="submit"
+        
+    
+    class="usa-button
+           
+
+           
+               
+               
+               
+               
+            
+
+           
+           
+           
+           "
+    
+    
+    
+    
+    
+    >
+    
+        
+
+        
+                        <span class="usa-search__submit-text">
+                            Search NCBI
+                        </span>
+                    
+
+        
+    
+        
+            </button>
+        
+
+
+                </form>
+
+                
+            </div>
+        </div>
+    
+
+    <nav aria-label="Primary navigation" class="usa-nav">
+        <p class="usa-sr-only" id="primary-navigation-sr-only-title">
+            Primary site navigation
+        </p>
+
+        <!-- Mobile menu close button -->
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <button
+            type="button"
+        
+    
+    class="usa-nav__close ncbi-nav__close-button
+           
+
+           
+               
+               
+               
+               
+            
+
+           
+           
+           
+           "
+    
+    
+    aria-label="Close navigation menu"
+    data-testid="navCloseButton"
+    
+    >
+    
+        
+
+        
+            <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/close.svg" alt="Close" />
+        
+
+        
+    
+        
+            </button>
+        
+
+
+
+        
+            <!-- Mobile search component -->
+            <form class="usa-search usa-search--small ncbi--hide-at-desktop"
+                  action="https://www.ncbi.nlm.nih.gov/search/all/"
+                  
+                  autocomplete="off"
+                  data-testid="mobile-navigation-search-form"
+                  method="GET"
+                  role="search">
+                <label class="usa-sr-only" for="search-field-mobile-navigation">
+                    Search
+                </label>
+
+                <input class="usa-input"
+                       id="search-field-mobile-navigation"
+                       type="search"
+                       
+                           placeholder="Search NCBI"
+                       
+                       name="term" />
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <button
+            type="submit"
+        
+    
+    class="usa-button
+           
+
+           
+               
+               
+               
+               
+            
+
+           
+           
+           
+           "
+    
+    
+    
+    
+    
+    >
+    
+        
+
+        
+                    <!-- This SVG should be kept inline and not replaced with a link to the icon as otherwise it will render in the wrong color -->
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE1LjUgMTRoLS43OWwtLjI4LS4yN0E2LjQ3MSA2LjQ3MSAwIDAgMCAxNiA5LjUgNi41IDYuNSAwIDEgMCA5LjUgMTZjMS42MSAwIDMuMDktLjU5IDQuMjMtMS41N2wuMjcuMjh2Ljc5bDUgNC45OUwyMC40OSAxOWwtNC45OS01em0tNiAwQzcuMDEgMTQgNSAxMS45OSA1IDkuNVM3LjAxIDUgOS41IDUgMTQgNy4wMSAxNCA5LjUgMTEuOTkgMTQgOS41IDE0eiIvPjwvc3ZnPg=="
+                         class="usa-search__submit-icon"
+                         alt="Search" />
+                
+
+        
+    
+        
+            </button>
+        
+
+
+            </form>
+
+            
+        
+
+        <!-- Primary navigation menu items -->
+        <!-- This usa-nav__inner wrapper is required to correctly style the navigation items on Desktop -->
+        
+
+        
+            <div class="ncbi-nav__mobile-login-menu ncbi--hide-at-desktop"
+                 data-mobile-login-menu
+                 hidden>
+                <p class="ncbi-nav__mobile-login-menu-status">
+                    Logged in as:
+                    <strong class="ncbi-nav__mobile-login-menu-email"
+                            data-mobile-login-email-text></strong>
+                </p>
+                <ul class="usa-nav__primary usa-accordion">
+                    
+                        <li class="usa-nav__primary-item">
+                            
+
+
+
+
+
+
+
+
+
+    <a href="https://www.ncbi.nlm.nih.gov/myncbi/" class="usa-link  "  >
+        
+
+        
+            Dashboard
+        
+
+        
+    </a>
+
+
+                        </li>
+                    
+                        <li class="usa-nav__primary-item">
+                            
+
+
+
+
+
+
+
+
+
+    <a href="https://www.ncbi.nlm.nih.gov/myncbi/collections/bibliography/" class="usa-link  "  >
+        
+
+        
+            Publications
+        
+
+        
+    </a>
+
+
+                        </li>
+                    
+                        <li class="usa-nav__primary-item">
+                            
+
+
+
+
+
+
+
+
+
+    <a href="https://www.ncbi.nlm.nih.gov/account/settings/" class="usa-link  "  >
+        
+
+        
+            Account settings
+        
+
+        
+    </a>
+
+
+                        </li>
+                    
+                </ul>
+            </div>
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <button
+            type="button"
+        
+    
+    class="usa-button
+           
+
+           
+               
+               
+               
+               
+            
+
+           
+           
+           ncbi-nav__mobile-login-button ncbi--hide-at-desktop
+           "
+    
+    
+    
+    data-testid="mobileLoginButton"
+    data-mobile-login-button
+    >
+    
+        
+
+        Log in
+
+        
+    
+        
+            </button>
+        
+
+
+    </nav>
+</header>
+
+    
+    
+        
+
+<section class="pmc-header pmc-header--basic" aria-label="PMC Header with search box">
+    <div class="pmc-nav-container">
+        <div class="pmc-header__bar">
+           <div class="pmc-header__logo">
+               <a href="/" title="Home" aria-label="PMC Home"></a>
+           </div>
+            <button
+                    type="button"
+                    class="usa-button usa-button--unstyled pmc-header__search__button"
+                    aria-label="Open search"
+                    data-ga-category="search"
+                    data-ga-action="PMC"
+                    data-ga-label="pmc_search_panel_mobile"
+            >
+                <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/search.svg" alt="PMC search open icon" aria-hidden="true" class="usa-icon usa-icon--size-4 pmc-icon__open" />
+                <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/close.svg" alt="PMC search close ison" aria-hidden="true" class="usa-icon usa-icon--size-4 pmc-icon__close" />
+            </button>
+        </div>
+        <div class="pmc-header__search">
+            
+
+
+<form class="usa-search usa-search--extra usa-search--article-right-column  pmc-header__search__form" id="pmc-search-form" autocomplete="off" role="search">
+<label class="usa-sr-only" for="pmc-search">Search PMC Full-Text Archive</label>
+<span class="autoComplete_wrapper flex-1">
+<input class="usa-input width-full maxw-none" required="required" placeholder="Search PMC Full-Text Archive" id="pmc-search"  type="search" name="term" data-autocomplete-url="https://pmc.ncbi.nlm.nih.gov/autocomp/search/autocomp/"/>
+</span>
+<button
+class="usa-button"
+type="submit"
+formaction="https://pmc.ncbi.nlm.nih.gov/search/"
+data-ga-category="search"
+data-ga-action="PMC"
+data-ga-label="PMC_search_button"
+>
+<span class="usa-search__submit-text">Search in PMC</span>
+<img
+src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons-bg/search--white.svg"
+class="usa-search__submit-icon"
+alt="Search"
+/>
+</button>
+</form>
+            <div class="display-flex flex-column tablet:flex-row tablet:flex-justify flex-justify-center flex-align-center width-full desktop:maxw-44">
+                <ul class="pmc-header__search__menu">
+                    <li>
+                        
+                            <a class="usa-link" href="/journals/" data-ga-action="featured_link" data-ga-label="journal list">
+                                Journal List
+                            </a>
+                        
+                    </li>
+                    <li>
+                        
+                            <a class="usa-link" href="/about/userguide/" data-ga-action="featured_link"
+                            data-ga-label="user guide">
+                                User Guide
+                            </a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+
+
+        
+        
+
+       
+  <div class="usa-section padding-top-0 desktop:padding-top-6 pmc-article-section" data-article-db="pmc" data-article-id="2199939">
+
+    
+
+   
+
+
+
+<div class="grid-container pmc-actions-bar" aria-label="Actions bar" role="complementary">
+    <div class="grid-row">
+        <div class="grid-col-fill display-flex">
+             <div class="display-flex">
+                <ul class="usa-list usa-list--unstyled usa-list--horizontal">
+                    <li class="margin-right-2 mobile-lg:margin-right-4 display-flex mob">
+                        <button
+                                type="button"
+                                class="usa-button pmc-sidenav__container__open usa-button--unstyled width-auto display-flex"
+                                aria-label="Open resources"
+                                data-extra-class="is-visible-resources"
+                                data-ga-category="resources_accordion"
+                                data-ga-action="click"
+                                data-ga-label="mobile_icon"
+                        >
+                            <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/more_vert.svg" alt="Open resources icon" class="usa-icon usa-icon--size-4 usa-icon--link" />
+                        </button>
+                    </li>
+                    
+                    <li class="margin-right-2 mobile-lg:margin-right-4 display-flex mob">
+                        <a
+                                href="https://doi.org/10.1083/jcb.130.2.473"
+                                class="usa-link display-flex usa-tooltip"
+                                role="button"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                title="View on publisher site"
+                                data-position="bottom"
+                                aria-label="View on publisher site"
+                                data-ga-category="actions"
+                                data-ga-action="click"
+                                data-ga-label="publisher_link_mobile"
+                        >
+                                <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/launch.svg" alt="View on publisher site icon" class="usa-icon usa-icon--size-4 usa-icon--link" />
+                        </a>
+                    </li>
+                    
+                    
+                        <li class="margin-right-2 mobile-lg:margin-right-4 display-flex">
+                             <a
+                                     href="pdf/jc1302473.pdf"
+                                     class="usa-link display-flex usa-tooltip"
+                                     role="button"
+                                     title="Download PDF"
+                                     data-position="bottom"
+                                     aria-label="Download PDF"
+                                     data-ga-category="actions"
+                                     data-ga-action="click"
+                                     data-ga-label="pdf_download_mobile"
+                             >
+
+                                 <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/file_download.svg" alt="Download PDF icon" aria-hidden="true" class="usa-icon usa-icon--size-4 usa-icon--link" />
+                            </a>
+                        </li>
+                    
+                    <li class="margin-right-2 mobile-lg:margin-right-4 display-flex">
+                        <button
+                            class="usa-button usa-button--unstyled  usa-tooltip collections-dialog-trigger collections-button display-flex collections-button-empty"
+                            title="Add to Collections"
+                            data-position="bottom"
+                            aria-label="Save article in MyNCBI collections."
+                            data-ga-category="actions"
+                            data-ga-action="click"
+                            data-ga-label="collections_button_mobile"
+                            data-collections-open-dialog-enabled="false"
+                            data-collections-open-dialog-url="https://account.ncbi.nlm.nih.gov/?back_url=https%3A%2F%2Fpmc.ncbi.nlm.nih.gov%2Farticles%2FPMC2199939%2F%3Freport%3Dxml%23open-collections-dialog"
+                            data-in-collections="false"
+                        >
+                            <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/action-bookmark-full.svg" alt="Collections icon" aria-hidden="true" class="usa-icon usa-icon--size-4 usa-icon--link usa-icon--bookmark-full" />
+                            <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/action-bookmark-empty.svg" alt="Collections icon" aria-hidden="true" class="usa-icon usa-icon--size-4 usa-icon--link usa-icon--bookmark-empty" />
+                        </button>
+                    </li>
+                    
+                    <li class="margin-right-2 mobile-lg:margin-right-4 display-flex">
+                        <button role="button" class="usa-button usa-button--unstyled usa-tooltip citation-dialog-trigger display-flex"
+                            aria-label="Open dialog with citation text in different styles"
+                            title="Cite"
+                            data-position="bottom"
+                            data-ga-category="actions"
+                            data-ga-action="open"
+                            data-ga-label="cite_mobile"
+                            data-all-citations-url="/resources/citations/2199939/"
+                            data-citation-style="nlm"
+                            data-download-format-link="/resources/citations/2199939/export/"
+                        >
+                            <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/format_quote.svg" alt="Cite icon" aria-hidden="true" class="usa-icon usa-icon--size-4 usa-icon--link" />
+                        </button>
+                    </li>
+                    
+                    <li class="pmc-permalink display-flex" >
+                         <button
+                                 type="button"
+                                 title="Permalink"
+                                 data-position="bottom"
+                                 class="usa-button usa-button--unstyled display-flex usa-tooltip"
+                                 aria-label="Show article permalink"
+                                 aria-expanded="false"
+                                 aria-haspopup="true"
+                                 data-ga-category="actions"
+                                 data-ga-action="open"
+                                 data-ga-label="permalink_mobile"
+                         >
+                            <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/share.svg" alt="Show article permalink icon" aria-hidden="true" class="usa-icon usa-icon--size-4 usa-icon--link" />
+                        </button>
+                        
+
+<div class="pmc-permalink__dropdown" hidden>
+    <div class="pmc-permalink__dropdown__container">
+          <h2 class="usa-modal__heading margin-top-0 margin-bottom-2 text-uppercase font-sans-xs">PERMALINK</h2>
+          <div class="pmc-permalink__dropdown__content">
+              <input type="text" class="usa-input" value="https://pmc.ncbi.nlm.nih.gov/articles/PMC2199939/" aria-label="Article permalink">
+              <button class="usa-button display-inline-flex pmc-permalink__dropdown__copy__btn margin-right-0" title="Copy article permalink" data-ga-category="save_share" data-ga-action="link" data-ga-label="copy_link">
+                  <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/content_copy.svg" alt="Copy icon" aria-hidden="true" class="usa-icon usa-icon--white" />
+                  <span class="margin-left-1">Copy</span>
+              </button>
+          </div>
+    </div>
+</div>
+                    </li>
+                </ul>
+            </div>
+            <button
+                    type="button"
+                    class="usa-button pmc-sidenav__container__open usa-button--unstyled width-auto display-flex"
+                    aria-label="Open article navigation"
+                    data-extra-class="is-visible-in-page"
+                    data-ga-category="actions"
+                    data-ga-action="open"
+                    data-ga-label="article_nav_mobile"
+            >
+                <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/list.svg" alt="Open article navigation icon" aria-hidden="true" class="usa-icon usa-icon--size-4 usa-icon--link" />
+            </button>
+        </div>
+    </div>
+</div>
+    <div class="grid-container desktop:padding-left-6">
+      <div id="article-container" class="grid-row grid-gap">
+        <div class="grid-col-12 desktop:grid-col-8 order-2 pmc-layout__content">
+            <div class="grid-container padding-left-0 padding-right-0">
+                <div class="grid-row desktop:margin-left-neg-6">
+                    <div class="grid-col-12">
+                        <div class="pmc-layout__disclaimer" role="complementary" aria-label="Disclaimer note">
+    As a library, NLM provides access to scientific literature. Inclusion in an NLM database does not imply endorsement of, or agreement with,
+    the contents by NLM or the National Institutes of Health.<br/>
+    Learn more:
+    <a class="usa-link" data-ga-category="Link click" data-ga-action="Disclaimer" data-ga-label="New disclaimer box" href="/about/disclaimer/">PMC Disclaimer</a>
+    |
+    <a class="usa-link" data-ga-category="Link click" data-ga-action="PMC Copyright Notice" data-ga-label="New disclaimer box" href="/about/copyright/">
+        PMC Copyright Notice
+    </a>
+</div>
+                    </div>
+                </div>
+                <div class="grid-row pmc-wm desktop:margin-left-neg-6">
+                    <!-- Main content -->
+                    <main
+                      id="main-content"
+                      class="usa-layout-docs__main usa-layout-docs grid-col-12 pmc-layout pmc-prose padding-0"
+                    >
+
+                      
+                        <section class="pmc-journal-banner text-center line-height-none" aria-label="Journal banner"><img src="https://cdn.ncbi.nlm.nih.gov/pmc/banners/logo-jcellbiol.png" alt="The Journal of Cell Biology logo" usemap="#pmc-banner-imagemap" width="500" height="75"><map name="pmc-banner-imagemap"><area alt="Link to The Journal of Cell Biology" title="Link to The Journal of Cell Biology" shape="default" href="https://doi.org/10.1083/jcb.130.2.473" target="_blank" rel="noopener noreferrer"></map></section><article lang="en"><section aria-label="Article citation and metadata"><section class="pmc-layout__citation font-secondary font-xs"><div>
+<div class="display-inline-block"><button type="button" class="cursor-pointer text-no-underline bg-transparent border-0 padding-0 text-left margin-0 text-normal text-primary" aria-controls="journal_context_menu">J Cell Biol</button></div>. 1995 Jul 2;130(2):473–484. doi: <a href="https://doi.org/10.1083/jcb.130.2.473" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">10.1083/jcb.130.2.473</a>
+</div>
+<nav id="journal_context_menu" hidden="hidden"><ul class="menu-list font-family-ui" role="menu">
+<li role="presentation"><a href='https://pmc.ncbi.nlm.nih.gov/search/?term="J%20Cell%20Biol"[jour]' class="usa-link" role="menuitem">Search in PMC</a></li>
+<li role="presentation"><a href='https://pubmed.ncbi.nlm.nih.gov/?term="J%20Cell%20Biol"[jour]' lang="en" class="usa-link" role="menuitem">Search in PubMed</a></li>
+<li role="presentation"><a href='https://www.ncbi.nlm.nih.gov/nlmcatalog?term="J%20Cell%20Biol"[Title%20Abbreviation]' class="usa-link" role="menuitem">View in NLM Catalog</a></li>
+<li role="presentation"><a href='?term="J%20Cell%20Biol"[jour]' class="usa-link" role="menuitem" data-add-to-search="true">Add to search</a></li>
+</ul></nav></section><section class="front-matter"><div class="ameta p font-secondary font-xs">
+<hgroup><h1>Characterization of functional domains of the tenascin-R (restrictin) polypeptide: cell attachment site, binding with F11, and enhancement of F11-mediated neurite outgrowth by tenascin-R</h1></hgroup><ul class="d-buttons inline-list"><li><button class="d-button" aria-controls="clp_a" aria-expanded="false">Copyright and License information</button></li></ul>
+<div class="d-panels font-secondary-light"><div id="clp_a" class="d-panel p" style="display: none">
+<p>This article is distributed under the terms of an Attribution–Noncommercial–Share Alike–No Mirror Sites license for the first six months after the publication date (see <a href="http://www.rupress.org/terms" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">http://www.rupress.org/terms</a>). After six months it is available under a Creative Commons License (Attribution–Noncommercial–Share Alike 4.0 Unported license, as described at <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">http://creativecommons.org/licenses/by-nc-sa/4.0/</a>).</p>
+<div class="p"><a href="/about/copyright/" class="usa-link">PMC Copyright notice</a></div>
+</div></div>
+<div>PMCID: PMC2199939  PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/7615642/" class="usa-link">7615642</a>
+</div>
+</div></section></section><section aria-label="Article content"><section class="body main-article-body"><section class="abstract" id="abstract1"><h2>Abstract</h2>
+<p>The extracellular matrix glycoprotein tenascin-R (TN-R) is a multidomain protein implicated in neural cell adhesion. To analyze the structure-function relationship of the different domains of TN-R, several recombinant TN-R fragments were expressed in bacterial cells. Two distinct binding regions were localized on the TN-R polypeptide: a region binding the axon-associated immunoglobulin (Ig)-like F11 protein and a cell attachment site. The binding region of the glycosylphosphatidylinositol (GPI)-anchored F11 was allocated to the second and third fibronectin type III (FNIII)-like domain within TN-R. By using a mutant polypeptide of F11 containing only Ig-like domains, a direct interaction between the Ig-like domains of F11 and FNIII-like domains 2-3 of TN-R was demonstrated. The interaction of TN-R with F11 in in vitro cultures enhanced F11-mediated neurite outgrowth, suggesting that the combined action of F11 and TN-R might be of regulatory influence on axon extension. A cell attachment region was identified in the FNIII-like domain eight of TN-R by domain-specific antibodies and fusion constructs. This site is distinct from the F11 binding site within TN-R.</p></section><section id="_pon93_" lang="en" class="pdf-only-notice"><h2 class="pmc_sec_title">Full Text</h2>
+<p>The Full Text of this article is available as a <a href="/articles/instance/2199939/pdf/jc1302473.pdf" class="usa-link">PDF</a> (1.6 MB).</p></section><section id="ref-list1" class="ref-list"><h2 class="pmc_sec_title">Selected References</h2>
+<p>These references are in PubMed. This may not be the complete list of references from this article.</p>
+<section id="ref-list1_sec2"><ol class="ref-list font-sm">
+<li id="PDF_01109">
+<cite>Aukhil I., Joshi P., Yan Y., Erickson H. P. Cell- and heparin-binding domains of the hexabrachion arm identified by tenascin expression proteins. J Biol Chem. 1993 Feb 5;268(4):2542–2553.</cite> [<a href="https://pubmed.ncbi.nlm.nih.gov/7679097/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Biol%20Chem&amp;title=Cell-%20and%20heparin-binding%20domains%20of%20the%20hexabrachion%20arm%20identified%20by%20tenascin%20expression%20proteins.&amp;author=I.%20Aukhil&amp;author=P.%20Joshi&amp;author=Y.%20Yan&amp;author=H.%20P.%20Erickson&amp;volume=268&amp;issue=4&amp;publication_year=1993&amp;pages=2542-2553&amp;pmid=7679097&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01112">
+<cite>Barnea G., Grumet M., Milev P., Silvennoinen O., Levy J. B., Sap J., Schlessinger J. Receptor tyrosine phosphatase beta is expressed in the form of proteoglycan and binds to the extracellular matrix protein tenascin. J Biol Chem. 1994 May 20;269(20):14349–14352.</cite> [<a href="https://pubmed.ncbi.nlm.nih.gov/7514167/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Biol%20Chem&amp;title=Receptor%20tyrosine%20phosphatase%20beta%20is%20expressed%20in%20the%20form%20of%20proteoglycan%20and%20binds%20to%20the%20extracellular%20matrix%20protein%20tenascin.&amp;author=G.%20Barnea&amp;author=M.%20Grumet&amp;author=P.%20Milev&amp;author=O.%20Silvennoinen&amp;author=J.%20B.%20Levy&amp;volume=269&amp;issue=20&amp;publication_year=1994&amp;pages=14349-14352&amp;pmid=7514167&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01116">
+<cite>Baron M., Main A. L., Driscoll P. C., Mardon H. J., Boyd J., Campbell I. D. 1H NMR assignment and secondary structure of the cell adhesion type III module of fibronectin. Biochemistry. 1992 Feb 25;31(7):2068–2073. doi: 10.1021/bi00122a025.</cite> [<a href="https://doi.org/10.1021/bi00122a025" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/1311202/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Biochemistry&amp;title=1H%20NMR%20assignment%20and%20secondary%20structure%20of%20the%20cell%20adhesion%20type%20III%20module%20of%20fibronectin.&amp;author=M.%20Baron&amp;author=A.%20L.%20Main&amp;author=P.%20C.%20Driscoll&amp;author=H.%20J.%20Mardon&amp;author=J.%20Boyd&amp;volume=31&amp;issue=7&amp;publication_year=1992&amp;pages=2068-2073&amp;pmid=1311202&amp;doi=10.1021/bi00122a025&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01119">
+<cite>Bartsch U., Pesheva P., Raff M., Schachner M. Expression of janusin (J1-160/180) in the retina and optic nerve of the developing and adult mouse. Glia. 1993 Sep;9(1):57–69. doi: 10.1002/glia.440090108.</cite> [<a href="https://doi.org/10.1002/glia.440090108" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/8244531/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Glia&amp;title=Expression%20of%20janusin%20(J1-160/180)%20in%20the%20retina%20and%20optic%20nerve%20of%20the%20developing%20and%20adult%20mouse.&amp;author=U.%20Bartsch&amp;author=P.%20Pesheva&amp;author=M.%20Raff&amp;author=M.%20Schachner&amp;volume=9&amp;issue=1&amp;publication_year=1993&amp;pages=57-69&amp;pmid=8244531&amp;doi=10.1002/glia.440090108&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01122">
+<cite>Beisker W. A new combined integral-light and slit-scan data analysis system (DAS) for flow cytometry. Comput Methods Programs Biomed. 1994 Feb 1;42(1):15–26. doi: 10.1016/0169-2607(94)90134-1.</cite> [<a href="https://doi.org/10.1016/0169-2607(94)90134-1" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/8194305/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Comput%20Methods%20Programs%20Biomed&amp;title=A%20new%20combined%20integral-light%20and%20slit-scan%20data%20analysis%20system%20(DAS)%20for%20flow%20cytometry.&amp;author=W.%20Beisker&amp;volume=42&amp;issue=1&amp;publication_year=1994&amp;pages=15-26&amp;pmid=8194305&amp;doi=10.1016/0169-2607(94)90134-1&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01125">
+<cite>Brady R. L., Dodson E. J., Dodson G. G., Lange G., Davis S. J., Williams A. F., Barclay A. N. Crystal structure of domains 3 and 4 of rat CD4: relation to the NH2-terminal domains. Science. 1993 May 14;260(5110):979–983. doi: 10.1126/science.8493535.</cite> [<a href="https://doi.org/10.1126/science.8493535" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/8493535/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Science&amp;title=Crystal%20structure%20of%20domains%203%20and%204%20of%20rat%20CD4:%20relation%20to%20the%20NH2-terminal%20domains.&amp;author=R.%20L.%20Brady&amp;author=E.%20J.%20Dodson&amp;author=G.%20G.%20Dodson&amp;author=G.%20Lange&amp;author=S.%20J.%20Davis&amp;volume=260&amp;issue=5110&amp;publication_year=1993&amp;pages=979-983&amp;pmid=8493535&amp;doi=10.1126/science.8493535&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01128">
+<cite>Bristow J., Tee M. K., Gitelman S. E., Mellon S. H., Miller W. L. Tenascin-X: a novel extracellular matrix protein encoded by the human XB gene overlapping P450c21B. J Cell Biol. 1993 Jul;122(1):265–278. doi: 10.1083/jcb.122.1.265.</cite> [<a href="https://doi.org/10.1083/jcb.122.1.265" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC2119596/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/7686164/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Cell%20Biol&amp;title=Tenascin-X:%20a%20novel%20extracellular%20matrix%20protein%20encoded%20by%20the%20human%20XB%20gene%20overlapping%20P450c21B.&amp;author=J.%20Bristow&amp;author=M.%20K.%20Tee&amp;author=S.%20E.%20Gitelman&amp;author=S.%20H.%20Mellon&amp;author=W.%20L.%20Miller&amp;volume=122&amp;issue=1&amp;publication_year=1993&amp;pages=265-278&amp;pmid=7686164&amp;doi=10.1083/jcb.122.1.265&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01140">
+<cite>Brümmendorf T., Hubert M., Treubert U., Leuschner R., Tárnok A., Rathjen F. G. The axonal recognition molecule F11 is a multifunctional protein: specific domains mediate interactions with Ng-CAM and restrictin. Neuron. 1993 Apr;10(4):711–727. doi: 10.1016/0896-6273(93)90172-n.</cite> [<a href="https://doi.org/10.1016/0896-6273(93)90172-n" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/7682821/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Neuron&amp;title=The%20axonal%20recognition%20molecule%20F11%20is%20a%20multifunctional%20protein:%20specific%20domains%20mediate%20interactions%20with%20Ng-CAM%20and%20restrictin.&amp;author=T.%20Br%C3%BCmmendorf&amp;author=M.%20Hubert&amp;author=U.%20Treubert&amp;author=R.%20Leuschner&amp;author=A.%20T%C3%A1rnok&amp;volume=10&amp;issue=4&amp;publication_year=1993&amp;pages=711-727&amp;pmid=7682821&amp;doi=10.1016/0896-6273(93)90172-n&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01131">
+<cite>Brümmendorf T., Rathjen F. G. Axonal glycoproteins with immunoglobulin- and fibronectin type III-related domains in vertebrates: structural features, binding activities, and signal transduction. J Neurochem. 1993 Oct;61(4):1207–1219. doi: 10.1111/j.1471-4159.1993.tb13611.x.</cite> [<a href="https://doi.org/10.1111/j.1471-4159.1993.tb13611.x" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/8376980/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Neurochem&amp;title=Axonal%20glycoproteins%20with%20immunoglobulin-%20and%20fibronectin%20type%20III-related%20domains%20in%20vertebrates:%20structural%20features,%20binding%20activities,%20and%20signal%20transduction.&amp;author=T.%20Br%C3%BCmmendorf&amp;author=F.%20G.%20Rathjen&amp;volume=61&amp;issue=4&amp;publication_year=1993&amp;pages=1207-1219&amp;pmid=8376980&amp;doi=10.1111/j.1471-4159.1993.tb13611.x&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01135">
+<cite>Brümmendorf T., Rathjen F. G. Cell adhesion molecules. 1: immunoglobulin superfamily. Protein Profile. 1994;1(9):951–1058.</cite> [<a href="https://pubmed.ncbi.nlm.nih.gov/8528906/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Protein%20Profile&amp;title=Cell%20adhesion%20molecules.%201:%20immunoglobulin%20superfamily.&amp;author=T.%20Br%C3%BCmmendorf&amp;author=F.%20G.%20Rathjen&amp;volume=1&amp;issue=9&amp;publication_year=1994&amp;pages=951-1058&amp;pmid=8528906&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01137">
+<cite>Brümmendorf T., Wolff J. M., Frank R., Rathjen F. G. Neural cell recognition molecule F11: homology with fibronectin type III and immunoglobulin type C domains. Neuron. 1989 Apr;2(4):1351–1361. doi: 10.1016/0896-6273(89)90073-1.</cite> [<a href="https://doi.org/10.1016/0896-6273(89)90073-1" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/2627374/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Neuron&amp;title=Neural%20cell%20recognition%20molecule%20F11:%20homology%20with%20fibronectin%20type%20III%20and%20immunoglobulin%20type%20C%20domains.&amp;author=T.%20Br%C3%BCmmendorf&amp;author=J.%20M.%20Wolff&amp;author=R.%20Frank&amp;author=F.%20G.%20Rathjen&amp;volume=2&amp;issue=4&amp;publication_year=1989&amp;pages=1351-1361&amp;pmid=2627374&amp;doi=10.1016/0896-6273(89)90073-1&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01144">
+<cite>Burgoon M. P., Grumet M., Mauro V., Edelman G. M., Cunningham B. A. Structure of the chicken neuron-glia cell adhesion molecule, Ng-CAM: origin of the polypeptides and relation to the Ig superfamily. J Cell Biol. 1991 Mar;112(5):1017–1029. doi: 10.1083/jcb.112.5.1017.</cite> [<a href="https://doi.org/10.1083/jcb.112.5.1017" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC2288873/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/1705558/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Cell%20Biol&amp;title=Structure%20of%20the%20chicken%20neuron-glia%20cell%20adhesion%20molecule,%20Ng-CAM:%20origin%20of%20the%20polypeptides%20and%20relation%20to%20the%20Ig%20superfamily.&amp;author=M.%20P.%20Burgoon&amp;author=M.%20Grumet&amp;author=V.%20Mauro&amp;author=G.%20M.%20Edelman&amp;author=B.%20A.%20Cunningham&amp;volume=112&amp;issue=5&amp;publication_year=1991&amp;pages=1017-1029&amp;pmid=1705558&amp;doi=10.1083/jcb.112.5.1017&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01148">
+<cite>Carnemolla B., Leprini A., Allemanni G., Saginati M., Zardi L. The inclusion of the type III repeat ED-B in the fibronectin molecule generates conformational modifications that unmask a cryptic sequence. J Biol Chem. 1992 Dec 5;267(34):24689–24692.</cite> [<a href="https://pubmed.ncbi.nlm.nih.gov/1280266/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Biol%20Chem&amp;title=The%20inclusion%20of%20the%20type%20III%20repeat%20ED-B%20in%20the%20fibronectin%20molecule%20generates%20conformational%20modifications%20that%20unmask%20a%20cryptic%20sequence.&amp;author=B.%20Carnemolla&amp;author=A.%20Leprini&amp;author=G.%20Allemanni&amp;author=M.%20Saginati&amp;author=L.%20Zardi&amp;volume=267&amp;issue=34&amp;publication_year=1992&amp;pages=24689-24692&amp;pmid=1280266&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01152">
+<cite>Chang S., Rathjen F. G., Raper J. A. Extension of neurites on axons is impaired by antibodies against specific neural cell surface glycoproteins. J Cell Biol. 1987 Feb;104(2):355–362. doi: 10.1083/jcb.104.2.355.</cite> [<a href="https://doi.org/10.1083/jcb.104.2.355" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC2114414/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/3543026/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Cell%20Biol&amp;title=Extension%20of%20neurites%20on%20axons%20is%20impaired%20by%20antibodies%20against%20specific%20neural%20cell%20surface%20glycoproteins.&amp;author=S.%20Chang&amp;author=F.%20G.%20Rathjen&amp;author=J.%20A.%20Raper&amp;volume=104&amp;issue=2&amp;publication_year=1987&amp;pages=355-362&amp;pmid=3543026&amp;doi=10.1083/jcb.104.2.355&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01155">
+<cite>Chiquet M., Fambrough D. M. Chick myotendinous antigen. II. A novel extracellular glycoprotein complex consisting of large disulfide-linked subunits. J Cell Biol. 1984 Jun;98(6):1937–1946. doi: 10.1083/jcb.98.6.1937.</cite> [<a href="https://doi.org/10.1083/jcb.98.6.1937" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC2113072/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/6202699/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Cell%20Biol&amp;title=Chick%20myotendinous%20antigen.%20II.%20A%20novel%20extracellular%20glycoprotein%20complex%20consisting%20of%20large%20disulfide-linked%20subunits.&amp;author=M.%20Chiquet&amp;author=D.%20M.%20Fambrough&amp;volume=98&amp;issue=6&amp;publication_year=1984&amp;pages=1937-1946&amp;pmid=6202699&amp;doi=10.1083/jcb.98.6.1937&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01158">
+<cite>Chiquet M., Vrucinić-Filipi N., Schenk S., Beck K., Chiquet-Ehrismann R. Isolation of chick tenascin variants and fragments. A C-terminal heparin-binding fragment produced by cleavage of the extra domain from the largest subunit splicing variant. Eur J Biochem. 1991 Jul 15;199(2):379–388. doi: 10.1111/j.1432-1033.1991.tb16134.x.</cite> [<a href="https://doi.org/10.1111/j.1432-1033.1991.tb16134.x" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/1712728/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Eur%20J%20Biochem&amp;title=Isolation%20of%20chick%20tenascin%20variants%20and%20fragments.%20A%20C-terminal%20heparin-binding%20fragment%20produced%20by%20cleavage%20of%20the%20extra%20domain%20from%20the%20largest%20subunit%20splicing%20variant.&amp;author=M.%20Chiquet&amp;author=N.%20Vrucini%C4%87-Filipi&amp;author=S.%20Schenk&amp;author=K.%20Beck&amp;author=R.%20Chiquet-Ehrismann&amp;volume=199&amp;issue=2&amp;publication_year=1991&amp;pages=379-388&amp;pmid=1712728&amp;doi=10.1111/j.1432-1033.1991.tb16134.x&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01163">
+<cite>Chung C. Y., Erickson H. P. Cell surface annexin II is a high affinity receptor for the alternatively spliced segment of tenascin-C. J Cell Biol. 1994 Jul;126(2):539–548. doi: 10.1083/jcb.126.2.539.</cite> [<a href="https://doi.org/10.1083/jcb.126.2.539" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC2200039/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/7518469/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Cell%20Biol&amp;title=Cell%20surface%20annexin%20II%20is%20a%20high%20affinity%20receptor%20for%20the%20alternatively%20spliced%20segment%20of%20tenascin-C.&amp;author=C.%20Y.%20Chung&amp;author=H.%20P.%20Erickson&amp;volume=126&amp;issue=2&amp;publication_year=1994&amp;pages=539-548&amp;pmid=7518469&amp;doi=10.1083/jcb.126.2.539&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01168">
+<cite>Erickson H. P., Inglesias J. L. A six-armed oligomer isolated from cell surface fibronectin preparations. Nature. 1984 Sep 20;311(5983):267–269. doi: 10.1038/311267a0.</cite> [<a href="https://doi.org/10.1038/311267a0" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/6482952/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Nature&amp;title=A%20six-armed%20oligomer%20isolated%20from%20cell%20surface%20fibronectin%20preparations.&amp;author=H.%20P.%20Erickson&amp;author=J.%20L.%20Inglesias&amp;volume=311&amp;issue=5983&amp;publication_year=1984&amp;pages=267-269&amp;pmid=6482952&amp;doi=10.1038/311267a0&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01166">
+<cite>Erickson H. P. Tenascin-C, tenascin-R and tenascin-X: a family of talented proteins in search of functions. Curr Opin Cell Biol. 1993 Oct;5(5):869–876. doi: 10.1016/0955-0674(93)90037-q.</cite> [<a href="https://doi.org/10.1016/0955-0674(93)90037-q" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/7694605/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Curr%20Opin%20Cell%20Biol&amp;title=Tenascin-C,%20tenascin-R%20and%20tenascin-X:%20a%20family%20of%20talented%20proteins%20in%20search%20of%20functions.&amp;author=H.%20P.%20Erickson&amp;volume=5&amp;issue=5&amp;publication_year=1993&amp;pages=869-876&amp;pmid=7694605&amp;doi=10.1016/0955-0674(93)90037-q&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01170">
+<cite>Faissner A., Scholze A., Götz B. Tenascin glycoproteins in developing neural tissues: only decoration? Perspect Dev Neurobiol. 1994;2(1):53–66.</cite> [<a href="https://pubmed.ncbi.nlm.nih.gov/7530144/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Perspect%20Dev%20Neurobiol&amp;title=Tenascin%20glycoproteins%20in%20developing%20neural%20tissues:%20only%20decoration?&amp;author=A.%20Faissner&amp;author=A.%20Scholze&amp;author=B.%20G%C3%B6tz&amp;volume=2&amp;issue=1&amp;publication_year=1994&amp;pages=53-66&amp;pmid=7530144&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01172">
+<cite>Friedlander D. R., Hoffman S., Edelman G. M. Functional mapping of cytotactin: proteolytic fragments active in cell-substrate adhesion. J Cell Biol. 1988 Dec;107(6 Pt 1):2329–2340. doi: 10.1083/jcb.107.6.2329.</cite> [<a href="https://doi.org/10.1083/jcb.107.6.2329" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC2115667/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/2461950/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Cell%20Biol&amp;title=Functional%20mapping%20of%20cytotactin:%20proteolytic%20fragments%20active%20in%20cell-substrate%20adhesion.&amp;author=D.%20R.%20Friedlander&amp;author=S.%20Hoffman&amp;author=G.%20M.%20Edelman&amp;volume=107&amp;issue=6%20Pt%201&amp;publication_year=1988&amp;pages=2329-2340&amp;pmid=2461950&amp;doi=10.1083/jcb.107.6.2329&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01175">
+<cite>Fuss B., Wintergerst E. S., Bartsch U., Schachner M. Molecular characterization and in situ mRNA localization of the neural recognition molecule J1-160/180: a modular structure similar to tenascin. J Cell Biol. 1993 Mar;120(5):1237–1249. doi: 10.1083/jcb.120.5.1237.</cite> [<a href="https://doi.org/10.1083/jcb.120.5.1237" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC2119727/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/7679676/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Cell%20Biol&amp;title=Molecular%20characterization%20and%20in%20situ%20mRNA%20localization%20of%20the%20neural%20recognition%20molecule%20J1-160/180:%20a%20modular%20structure%20similar%20to%20tenascin.&amp;author=B.%20Fuss&amp;author=E.%20S.%20Wintergerst&amp;author=U.%20Bartsch&amp;author=M.%20Schachner&amp;volume=120&amp;issue=5&amp;publication_year=1993&amp;pages=1237-1249&amp;pmid=7679676&amp;doi=10.1083/jcb.120.5.1237&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01179">
+<cite>Grumet M., Mauro V., Burgoon M. P., Edelman G. M., Cunningham B. A. Structure of a new nervous system glycoprotein, Nr-CAM, and its relationship to subgroups of neural cell adhesion molecules. J Cell Biol. 1991 Jun;113(6):1399–1412. doi: 10.1083/jcb.113.6.1399.</cite> [<a href="https://doi.org/10.1083/jcb.113.6.1399" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC2289038/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/2045418/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Cell%20Biol&amp;title=Structure%20of%20a%20new%20nervous%20system%20glycoprotein,%20Nr-CAM,%20and%20its%20relationship%20to%20subgroups%20of%20neural%20cell%20adhesion%20molecules.&amp;author=M.%20Grumet&amp;author=V.%20Mauro&amp;author=M.%20P.%20Burgoon&amp;author=G.%20M.%20Edelman&amp;author=B.%20A.%20Cunningham&amp;volume=113&amp;issue=6&amp;publication_year=1991&amp;pages=1399-1412&amp;pmid=2045418&amp;doi=10.1083/jcb.113.6.1399&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01183">
+<cite>Grumet M., Milev P., Sakurai T., Karthikeyan L., Bourdon M., Margolis R. K., Margolis R. U. Interactions with tenascin and differential effects on cell adhesion of neurocan and phosphacan, two major chondroitin sulfate proteoglycans of nervous tissue. J Biol Chem. 1994 Apr 22;269(16):12142–12146.</cite> [<a href="https://pubmed.ncbi.nlm.nih.gov/7512960/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Biol%20Chem&amp;title=Interactions%20with%20tenascin%20and%20differential%20effects%20on%20cell%20adhesion%20of%20neurocan%20and%20phosphacan,%20two%20major%20chondroitin%20sulfate%20proteoglycans%20of%20nervous%20tissue.&amp;author=M.%20Grumet&amp;author=P.%20Milev&amp;author=T.%20Sakurai&amp;author=L.%20Karthikeyan&amp;author=M.%20Bourdon&amp;volume=269&amp;issue=16&amp;publication_year=1994&amp;pages=12142-12146&amp;pmid=7512960&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01187">
+<cite>Huber A. H., Wang Y. M., Bieber A. J., Bjorkman P. J. Crystal structure of tandem type III fibronectin domains from Drosophila neuroglian at 2.0 A. Neuron. 1994 Apr;12(4):717–731. doi: 10.1016/0896-6273(94)90326-3.</cite> [<a href="https://doi.org/10.1016/0896-6273(94)90326-3" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/7512815/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Neuron&amp;title=Crystal%20structure%20of%20tandem%20type%20III%20fibronectin%20domains%20from%20Drosophila%20neuroglian%20at%202.0%20A.&amp;author=A.%20H.%20Huber&amp;author=Y.%20M.%20Wang&amp;author=A.%20J.%20Bieber&amp;author=P.%20J.%20Bjorkman&amp;volume=12&amp;issue=4&amp;publication_year=1994&amp;pages=717-731&amp;pmid=7512815&amp;doi=10.1016/0896-6273(94)90326-3&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01190">
+<cite>Ingham K. C., Brew S. A., Migliorini M. M., Busby T. F. Binding of heparin by type III domains and peptides from the carboxy terminal hep-2 region of fibronectin. Biochemistry. 1993 Nov 23;32(46):12548–12553. doi: 10.1021/bi00097a035.</cite> [<a href="https://doi.org/10.1021/bi00097a035" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/8241146/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Biochemistry&amp;title=Binding%20of%20heparin%20by%20type%20III%20domains%20and%20peptides%20from%20the%20carboxy%20terminal%20hep-2%20region%20of%20fibronectin.&amp;author=K.%20C.%20Ingham&amp;author=S.%20A.%20Brew&amp;author=M.%20M.%20Migliorini&amp;author=T.%20F.%20Busby&amp;volume=32&amp;issue=46&amp;publication_year=1993&amp;pages=12548-12553&amp;pmid=8241146&amp;doi=10.1021/bi00097a035&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01193">
+<cite>Jones E. Y., Davis S. J., Williams A. F., Harlos K., Stuart D. I. Crystal structure at 2.8 A resolution of a soluble form of the cell adhesion molecule CD2. Nature. 1992 Nov 19;360(6401):232–239. doi: 10.1038/360232a0.</cite> [<a href="https://doi.org/10.1038/360232a0" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/1279440/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Nature&amp;title=Crystal%20structure%20at%202.8%20A%20resolution%20of%20a%20soluble%20form%20of%20the%20cell%20adhesion%20molecule%20CD2.&amp;author=E.%20Y.%20Jones&amp;author=S.%20J.%20Davis&amp;author=A.%20F.%20Williams&amp;author=K.%20Harlos&amp;author=D.%20I.%20Stuart&amp;volume=360&amp;issue=6401&amp;publication_year=1992&amp;pages=232-239&amp;pmid=1279440&amp;doi=10.1038/360232a0&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01196">
+<cite>Jung M., Pesheva P., Schachner M., Trotter J. Astrocytes and neurons regulate the expression of the neural recognition molecule janusin by cultured oligodendrocytes. Glia. 1993 Nov;9(3):163–175. doi: 10.1002/glia.440090302.</cite> [<a href="https://doi.org/10.1002/glia.440090302" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/8294147/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Glia&amp;title=Astrocytes%20and%20neurons%20regulate%20the%20expression%20of%20the%20neural%20recognition%20molecule%20janusin%20by%20cultured%20oligodendrocytes.&amp;author=M.%20Jung&amp;author=P.%20Pesheva&amp;author=M.%20Schachner&amp;author=J.%20Trotter&amp;volume=9&amp;issue=3&amp;publication_year=1993&amp;pages=163-175&amp;pmid=8294147&amp;doi=10.1002/glia.440090302&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01199">
+<cite>Kapfhammer J. P., Raper J. A. Collapse of growth cone structure on contact with specific neurites in culture. J Neurosci. 1987 Jan;7(1):201–212. doi: 10.1523/JNEUROSCI.07-01-00201.1987.</cite> [<a href="https://doi.org/10.1523/JNEUROSCI.07-01-00201.1987" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC6568850/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/3543248/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Neurosci&amp;title=Collapse%20of%20growth%20cone%20structure%20on%20contact%20with%20specific%20neurites%20in%20culture.&amp;author=J.%20P.%20Kapfhammer&amp;author=J.%20A.%20Raper&amp;volume=7&amp;issue=1&amp;publication_year=1987&amp;pages=201-212&amp;pmid=3543248&amp;doi=10.1523/JNEUROSCI.07-01-00201.1987&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01201">
+<cite>Kuhn T. B., Stoeckli E. T., Condrau M. A., Rathjen F. G., Sonderegger P. Neurite outgrowth on immobilized axonin-1 is mediated by a heterophilic interaction with L1(G4). J Cell Biol. 1991 Nov;115(4):1113–1126. doi: 10.1083/jcb.115.4.1113.</cite> [<a href="https://doi.org/10.1083/jcb.115.4.1113" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC2289947/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/1720120/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Cell%20Biol&amp;title=Neurite%20outgrowth%20on%20immobilized%20axonin-1%20is%20mediated%20by%20a%20heterophilic%20interaction%20with%20L1(G4).&amp;author=T.%20B.%20Kuhn&amp;author=E.%20T.%20Stoeckli&amp;author=M.%20A.%20Condrau&amp;author=F.%20G.%20Rathjen&amp;author=P.%20Sonderegger&amp;volume=115&amp;issue=4&amp;publication_year=1991&amp;pages=1113-1126&amp;pmid=1720120&amp;doi=10.1083/jcb.115.4.1113&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01204">
+<cite>Laemmli U. K. Cleavage of structural proteins during the assembly of the head of bacteriophage T4. Nature. 1970 Aug 15;227(5259):680–685. doi: 10.1038/227680a0.</cite> [<a href="https://doi.org/10.1038/227680a0" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/5432063/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Nature&amp;title=Cleavage%20of%20structural%20proteins%20during%20the%20assembly%20of%20the%20head%20of%20bacteriophage%20T4.&amp;author=U.%20K.%20Laemmli&amp;volume=227&amp;issue=5259&amp;publication_year=1970&amp;pages=680-685&amp;pmid=5432063&amp;doi=10.1038/227680a0&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01206">
+<cite>Lagenaur C., Lemmon V. An L1-like molecule, the 8D9 antigen, is a potent substrate for neurite extension. Proc Natl Acad Sci U S A. 1987 Nov;84(21):7753–7757. doi: 10.1073/pnas.84.21.7753.</cite> [<a href="https://doi.org/10.1073/pnas.84.21.7753" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC299379/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/3478724/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Proc%20Natl%20Acad%20Sci%20U%20S%20A&amp;title=An%20L1-like%20molecule,%20the%208D9%20antigen,%20is%20a%20potent%20substrate%20for%20neurite%20extension.&amp;author=C.%20Lagenaur&amp;author=V.%20Lemmon&amp;volume=84&amp;issue=21&amp;publication_year=1987&amp;pages=7753-7757&amp;pmid=3478724&amp;doi=10.1073/pnas.84.21.7753&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01209">
+<cite>Leahy D. J., Hendrickson W. A., Aukhil I., Erickson H. P. Structure of a fibronectin type III domain from tenascin phased by MAD analysis of the selenomethionyl protein. Science. 1992 Nov 6;258(5084):987–991. doi: 10.1126/science.1279805.</cite> [<a href="https://doi.org/10.1126/science.1279805" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/1279805/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Science&amp;title=Structure%20of%20a%20fibronectin%20type%20III%20domain%20from%20tenascin%20phased%20by%20MAD%20analysis%20of%20the%20selenomethionyl%20protein.&amp;author=D.%20J.%20Leahy&amp;author=W.%20A.%20Hendrickson&amp;author=I.%20Aukhil&amp;author=H.%20P.%20Erickson&amp;volume=258&amp;issue=5084&amp;publication_year=1992&amp;pages=987-991&amp;pmid=1279805&amp;doi=10.1126/science.1279805&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01212">
+<cite>Lochter A., Taylor J., Fuss B., Schachner M. The extracellular matrix molecule janusin regulates neuronal morphology in a substrate- and culture time-dependent manner. Eur J Neurosci. 1994 Apr 1;6(4):597–606. doi: 10.1111/j.1460-9568.1994.tb00304.x.</cite> [<a href="https://doi.org/10.1111/j.1460-9568.1994.tb00304.x" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/7517770/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Eur%20J%20Neurosci&amp;title=The%20extracellular%20matrix%20molecule%20janusin%20regulates%20neuronal%20morphology%20in%20a%20substrate-%20and%20culture%20time-dependent%20manner.&amp;author=A.%20Lochter&amp;author=J.%20Taylor&amp;author=B.%20Fuss&amp;author=M.%20Schachner&amp;volume=6&amp;issue=4&amp;publication_year=1994&amp;pages=597-606&amp;pmid=7517770&amp;doi=10.1111/j.1460-9568.1994.tb00304.x&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01217">
+<cite>Luo Y., Raible D., Raper J. A. Collapsin: a protein in brain that induces the collapse and paralysis of neuronal growth cones. Cell. 1993 Oct 22;75(2):217–227. doi: 10.1016/0092-8674(93)80064-l.</cite> [<a href="https://doi.org/10.1016/0092-8674(93)80064-l" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/8402908/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Cell&amp;title=Collapsin:%20a%20protein%20in%20brain%20that%20induces%20the%20collapse%20and%20paralysis%20of%20neuronal%20growth%20cones.&amp;author=Y.%20Luo&amp;author=D.%20Raible&amp;author=J.%20A.%20Raper&amp;volume=75&amp;issue=2&amp;publication_year=1993&amp;pages=217-227&amp;pmid=8402908&amp;doi=10.1016/0092-8674(93)80064-l&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01215">
+<cite>Luo Y., Raper J. A. Inhibitory factors controlling growth cone motility and guidance. Curr Opin Neurobiol. 1994 Oct;4(5):648–654. doi: 10.1016/0959-4388(94)90005-1.</cite> [<a href="https://doi.org/10.1016/0959-4388(94)90005-1" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/7849520/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Curr%20Opin%20Neurobiol&amp;title=Inhibitory%20factors%20controlling%20growth%20cone%20motility%20and%20guidance.&amp;author=Y.%20Luo&amp;author=J.%20A.%20Raper&amp;volume=4&amp;issue=5&amp;publication_year=1994&amp;pages=648-654&amp;pmid=7849520&amp;doi=10.1016/0959-4388(94)90005-1&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01219">
+<cite>Main A. L., Harvey T. S., Baron M., Boyd J., Campbell I. D. The three-dimensional structure of the tenth type III module of fibronectin: an insight into RGD-mediated interactions. Cell. 1992 Nov 13;71(4):671–678. doi: 10.1016/0092-8674(92)90600-h.</cite> [<a href="https://doi.org/10.1016/0092-8674(92)90600-h" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/1423622/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Cell&amp;title=The%20three-dimensional%20structure%20of%20the%20tenth%20type%20III%20module%20of%20fibronectin:%20an%20insight%20into%20RGD-mediated%20interactions.&amp;author=A.%20L.%20Main&amp;author=T.%20S.%20Harvey&amp;author=M.%20Baron&amp;author=J.%20Boyd&amp;author=I.%20D.%20Campbell&amp;volume=71&amp;issue=4&amp;publication_year=1992&amp;pages=671-678&amp;pmid=1423622&amp;doi=10.1016/0092-8674(92)90600-h&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01222">
+<cite>Matsumoto K., Saga Y., Ikemura T., Sakakura T., Chiquet-Ehrismann R. The distribution of tenascin-X is distinct and often reciprocal to that of tenascin-C. J Cell Biol. 1994 Apr;125(2):483–493. doi: 10.1083/jcb.125.2.483.</cite> [<a href="https://doi.org/10.1083/jcb.125.2.483" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC2120029/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/7512972/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Cell%20Biol&amp;title=The%20distribution%20of%20tenascin-X%20is%20distinct%20and%20often%20reciprocal%20to%20that%20of%20tenascin-C.&amp;author=K.%20Matsumoto&amp;author=Y.%20Saga&amp;author=T.%20Ikemura&amp;author=T.%20Sakakura&amp;author=R.%20Chiquet-Ehrismann&amp;volume=125&amp;issue=2&amp;publication_year=1994&amp;pages=483-493&amp;pmid=7512972&amp;doi=10.1083/jcb.125.2.483&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01225">
+<cite>Maurel P., Rauch U., Flad M., Margolis R. K., Margolis R. U. Phosphacan, a chondroitin sulfate proteoglycan of brain that interacts with neurons and neural cell-adhesion molecules, is an extracellular variant of a receptor-type protein tyrosine phosphatase. Proc Natl Acad Sci U S A. 1994 Mar 29;91(7):2512–2516. doi: 10.1073/pnas.91.7.2512.</cite> [<a href="https://doi.org/10.1073/pnas.91.7.2512" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC43399/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/7511813/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Proc%20Natl%20Acad%20Sci%20U%20S%20A&amp;title=Phosphacan,%20a%20chondroitin%20sulfate%20proteoglycan%20of%20brain%20that%20interacts%20with%20neurons%20and%20neural%20cell-adhesion%20molecules,%20is%20an%20extracellular%20variant%20of%20a%20receptor-type%20protein%20tyrosine%20phosphatase.&amp;author=P.%20Maurel&amp;author=U.%20Rauch&amp;author=M.%20Flad&amp;author=R.%20K.%20Margolis&amp;author=R.%20U.%20Margolis&amp;volume=91&amp;issue=7&amp;publication_year=1994&amp;pages=2512-2516&amp;pmid=7511813&amp;doi=10.1073/pnas.91.7.2512&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01230">
+<cite>Moos M., Tacke R., Scherer H., Teplow D., Früh K., Schachner M. Neural adhesion molecule L1 as a member of the immunoglobulin superfamily with binding domains similar to fibronectin. Nature. 1988 Aug 25;334(6184):701–703. doi: 10.1038/334701a0.</cite> [<a href="https://doi.org/10.1038/334701a0" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/3412448/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Nature&amp;title=Neural%20adhesion%20molecule%20L1%20as%20a%20member%20of%20the%20immunoglobulin%20superfamily%20with%20binding%20domains%20similar%20to%20fibronectin.&amp;author=M.%20Moos&amp;author=R.%20Tacke&amp;author=H.%20Scherer&amp;author=D.%20Teplow&amp;author=K.%20Fr%C3%BCh&amp;volume=334&amp;issue=6184&amp;publication_year=1988&amp;pages=701-703&amp;pmid=3412448&amp;doi=10.1038/334701a0&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01234">
+<cite>Morales G., Hubert M., Brümmendorf T., Treubert U., Tárnok A., Schwarz U., Rathjen F. G. Induction of axonal growth by heterophilic interactions between the cell surface recognition proteins F11 and Nr-CAM/Bravo. Neuron. 1993 Dec;11(6):1113–1122. doi: 10.1016/0896-6273(93)90224-f.</cite> [<a href="https://doi.org/10.1016/0896-6273(93)90224-f" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/8274278/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Neuron&amp;title=Induction%20of%20axonal%20growth%20by%20heterophilic%20interactions%20between%20the%20cell%20surface%20recognition%20proteins%20F11%20and%20Nr-CAM/Bravo.&amp;author=G.%20Morales&amp;author=M.%20Hubert&amp;author=T.%20Br%C3%BCmmendorf&amp;author=U.%20Treubert&amp;author=A.%20T%C3%A1rnok&amp;volume=11&amp;issue=6&amp;publication_year=1993&amp;pages=1113-1122&amp;pmid=8274278&amp;doi=10.1016/0896-6273(93)90224-f&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01239">
+<cite>Nörenberg U., Wille H., Wolff J. M., Frank R., Rathjen F. G. The chicken neural extracellular matrix molecule restrictin: similarity with EGF-, fibronectin type III-, and fibrinogen-like motifs. Neuron. 1992 May;8(5):849–863. doi: 10.1016/0896-6273(92)90199-n.</cite> [<a href="https://doi.org/10.1016/0896-6273(92)90199-n" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/1375037/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Neuron&amp;title=The%20chicken%20neural%20extracellular%20matrix%20molecule%20restrictin:%20similarity%20with%20EGF-,%20fibronectin%20type%20III-,%20and%20fibrinogen-like%20motifs.&amp;author=U.%20N%C3%B6renberg&amp;author=H.%20Wille&amp;author=J.%20M.%20Wolff&amp;author=R.%20Frank&amp;author=F.%20G.%20Rathjen&amp;volume=8&amp;issue=5&amp;publication_year=1992&amp;pages=849-863&amp;pmid=1375037&amp;doi=10.1016/0896-6273(92)90199-n&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01242">
+<cite>Pesheva P., Spiess E., Schachner M. J1-160 and J1-180 are oligodendrocyte-secreted nonpermissive substrates for cell adhesion. J Cell Biol. 1989 Oct;109(4 Pt 1):1765–1778. doi: 10.1083/jcb.109.4.1765.</cite> [<a href="https://doi.org/10.1083/jcb.109.4.1765" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC2115782/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/2477380/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Cell%20Biol&amp;title=J1-160%20and%20J1-180%20are%20oligodendrocyte-secreted%20nonpermissive%20substrates%20for%20cell%20adhesion.&amp;author=P.%20Pesheva&amp;author=E.%20Spiess&amp;author=M.%20Schachner&amp;volume=109&amp;issue=4%20Pt%201&amp;publication_year=1989&amp;pages=1765-1778&amp;pmid=2477380&amp;doi=10.1083/jcb.109.4.1765&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01248">
+<cite>Peterson G. L. A simplification of the protein assay method of Lowry et al. which is more generally applicable. Anal Biochem. 1977 Dec;83(2):346–356. doi: 10.1016/0003-2697(77)90043-4.</cite> [<a href="https://doi.org/10.1016/0003-2697(77)90043-4" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/603028/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Anal%20Biochem&amp;title=A%20simplification%20of%20the%20protein%20assay%20method%20of%20Lowry%20et%20al.%20which%20is%20more%20generally%20applicable.&amp;author=G.%20L.%20Peterson&amp;volume=83&amp;issue=2&amp;publication_year=1977&amp;pages=346-356&amp;pmid=603028&amp;doi=10.1016/0003-2697(77)90043-4&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01250">
+<cite>Prieto A. L., Andersson-Fisone C., Crossin K. L. Characterization of multiple adhesive and counteradhesive domains in the extracellular matrix protein cytotactin. J Cell Biol. 1992 Nov;119(3):663–678. doi: 10.1083/jcb.119.3.663.</cite> [<a href="https://doi.org/10.1083/jcb.119.3.663" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC2289676/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/1383239/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Cell%20Biol&amp;title=Characterization%20of%20multiple%20adhesive%20and%20counteradhesive%20domains%20in%20the%20extracellular%20matrix%20protein%20cytotactin.&amp;author=A.%20L.%20Prieto&amp;author=C.%20Andersson-Fisone&amp;author=K.%20L.%20Crossin&amp;volume=119&amp;issue=3&amp;publication_year=1992&amp;pages=663-678&amp;pmid=1383239&amp;doi=10.1083/jcb.119.3.663&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01253">
+<cite>Prieto A. L., Edelman G. M., Crossin K. L. Multiple integrins mediate cell attachment to cytotactin/tenascin. Proc Natl Acad Sci U S A. 1993 Nov 1;90(21):10154–10158. doi: 10.1073/pnas.90.21.10154.</cite> [<a href="https://doi.org/10.1073/pnas.90.21.10154" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC47732/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/7694284/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Proc%20Natl%20Acad%20Sci%20U%20S%20A&amp;title=Multiple%20integrins%20mediate%20cell%20attachment%20to%20cytotactin/tenascin.&amp;author=A.%20L.%20Prieto&amp;author=G.%20M.%20Edelman&amp;author=K.%20L.%20Crossin&amp;volume=90&amp;issue=21&amp;publication_year=1993&amp;pages=10154-10158&amp;pmid=7694284&amp;doi=10.1073/pnas.90.21.10154&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01259">
+<cite>Rathjen F. G., Wolff J. M., Chiquet-Ehrismann R. Restrictin: a chick neural extracellular matrix protein involved in cell attachment co-purifies with the cell recognition molecule F11. Development. 1991 Sep;113(1):151–164. doi: 10.1242/dev.113.1.151.</cite> [<a href="https://doi.org/10.1242/dev.113.1.151" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/1764992/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Development&amp;title=Restrictin:%20a%20chick%20neural%20extracellular%20matrix%20protein%20involved%20in%20cell%20attachment%20co-purifies%20with%20the%20cell%20recognition%20molecule%20F11.&amp;author=F.%20G.%20Rathjen&amp;author=J.%20M.%20Wolff&amp;author=R.%20Chiquet-Ehrismann&amp;volume=113&amp;issue=1&amp;publication_year=1991&amp;pages=151-164&amp;pmid=1764992&amp;doi=10.1242/dev.113.1.151&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01256">
+<cite>Rathjen F. G., Wolff J. M., Frank R., Bonhoeffer F., Rutishauser U. Membrane glycoproteins involved in neurite fasciculation. J Cell Biol. 1987 Feb;104(2):343–353. doi: 10.1083/jcb.104.2.343.</cite> [<a href="https://doi.org/10.1083/jcb.104.2.343" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC2114423/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/3805123/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Cell%20Biol&amp;title=Membrane%20glycoproteins%20involved%20in%20neurite%20fasciculation.&amp;author=F.%20G.%20Rathjen&amp;author=J.%20M.%20Wolff&amp;author=R.%20Frank&amp;author=F.%20Bonhoeffer&amp;author=U.%20Rutishauser&amp;volume=104&amp;issue=2&amp;publication_year=1987&amp;pages=343-353&amp;pmid=3805123&amp;doi=10.1083/jcb.104.2.343&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01262">
+<cite>Ryu S. E., Kwong P. D., Truneh A., Porter T. G., Arthos J., Rosenberg M., Dai X. P., Xuong N. H., Axel R., Sweet R. W. Crystal structure of an HIV-binding recombinant fragment of human CD4. Nature. 1990 Nov 29;348(6300):419–426. doi: 10.1038/348419a0.</cite> [<a href="https://doi.org/10.1038/348419a0" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC5638305/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/2247146/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Nature&amp;title=Crystal%20structure%20of%20an%20HIV-binding%20recombinant%20fragment%20of%20human%20CD4.&amp;author=S.%20E.%20Ryu&amp;author=P.%20D.%20Kwong&amp;author=A.%20Truneh&amp;author=T.%20G.%20Porter&amp;author=J.%20Arthos&amp;volume=348&amp;issue=6300&amp;publication_year=1990&amp;pages=419-426&amp;pmid=2247146&amp;doi=10.1038/348419a0&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01266">
+<cite>Salmivirta M., Elenius K., Vainio S., Hofer U., Chiquet-Ehrismann R., Thesleff I., Jalkanen M. Syndecan from embryonic tooth mesenchyme binds tenascin. J Biol Chem. 1991 Apr 25;266(12):7733–7739.</cite> [<a href="https://pubmed.ncbi.nlm.nih.gov/1708391/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Biol%20Chem&amp;title=Syndecan%20from%20embryonic%20tooth%20mesenchyme%20binds%20tenascin.&amp;author=M.%20Salmivirta&amp;author=K.%20Elenius&amp;author=S.%20Vainio&amp;author=U.%20Hofer&amp;author=R.%20Chiquet-Ehrismann&amp;volume=266&amp;issue=12&amp;publication_year=1991&amp;pages=7733-7739&amp;pmid=1708391&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01269">
+<cite>Schachner M., Taylor J., Bartsch U., Pesheva P. The perplexing multifunctionality of janusin, a tenascin-related molecule. Perspect Dev Neurobiol. 1994;2(1):33–41.</cite> [<a href="https://pubmed.ncbi.nlm.nih.gov/7530142/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Perspect%20Dev%20Neurobiol&amp;title=The%20perplexing%20multifunctionality%20of%20janusin,%20a%20tenascin-related%20molecule.&amp;author=M.%20Schachner&amp;author=J.%20Taylor&amp;author=U.%20Bartsch&amp;author=P.%20Pesheva&amp;volume=2&amp;issue=1&amp;publication_year=1994&amp;pages=33-41&amp;pmid=7530142&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01272">
+<cite>Schwab M. E., Kapfhammer J. P., Bandtlow C. E. Inhibitors of neurite growth. Annu Rev Neurosci. 1993;16:565–595. doi: 10.1146/annurev.ne.16.030193.003025.</cite> [<a href="https://doi.org/10.1146/annurev.ne.16.030193.003025" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/7681638/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Annu%20Rev%20Neurosci&amp;title=Inhibitors%20of%20neurite%20growth.&amp;author=M.%20E.%20Schwab&amp;author=J.%20P.%20Kapfhammer&amp;author=C.%20E.%20Bandtlow&amp;volume=16&amp;publication_year=1993&amp;pages=565-595&amp;pmid=7681638&amp;doi=10.1146/annurev.ne.16.030193.003025&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01274">
+<cite>Smith D. B., Johnson K. S. Single-step purification of polypeptides expressed in Escherichia coli as fusions with glutathione S-transferase. Gene. 1988 Jul 15;67(1):31–40. doi: 10.1016/0378-1119(88)90005-4.</cite> [<a href="https://doi.org/10.1016/0378-1119(88)90005-4" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/3047011/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Gene&amp;title=Single-step%20purification%20of%20polypeptides%20expressed%20in%20Escherichia%20coli%20as%20fusions%20with%20glutathione%20S-transferase.&amp;author=D.%20B.%20Smith&amp;author=K.%20S.%20Johnson&amp;volume=67&amp;issue=1&amp;publication_year=1988&amp;pages=31-40&amp;pmid=3047011&amp;doi=10.1016/0378-1119(88)90005-4&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01277">
+<cite>Spring J., Beck K., Chiquet-Ehrismann R. Two contrary functions of tenascin: dissection of the active sites by recombinant tenascin fragments. Cell. 1989 Oct 20;59(2):325–334. doi: 10.1016/0092-8674(89)90294-8.</cite> [<a href="https://doi.org/10.1016/0092-8674(89)90294-8" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/2478295/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Cell&amp;title=Two%20contrary%20functions%20of%20tenascin:%20dissection%20of%20the%20active%20sites%20by%20recombinant%20tenascin%20fragments.&amp;author=J.%20Spring&amp;author=K.%20Beck&amp;author=R.%20Chiquet-Ehrismann&amp;volume=59&amp;issue=2&amp;publication_year=1989&amp;pages=325-334&amp;pmid=2478295&amp;doi=10.1016/0092-8674(89)90294-8&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01280">
+<cite>Taylor J., Pesheva P., Schachner M. Influence of janusin and tenascin on growth cone behavior in vitro. J Neurosci Res. 1993 Jul 1;35(4):347–362. doi: 10.1002/jnr.490350402.</cite> [<a href="https://doi.org/10.1002/jnr.490350402" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/7689656/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Neurosci%20Res&amp;title=Influence%20of%20janusin%20and%20tenascin%20on%20growth%20cone%20behavior%20in%20vitro.&amp;author=J.%20Taylor&amp;author=P.%20Pesheva&amp;author=M.%20Schachner&amp;volume=35&amp;issue=4&amp;publication_year=1993&amp;pages=347-362&amp;pmid=7689656&amp;doi=10.1002/jnr.490350402&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01282">
+<cite>Walter J., Allsopp T. E., Bonhoeffer F. A common denominator of growth cone guidance and collapse? Trends Neurosci. 1990 Nov;13(11):447–452. doi: 10.1016/0166-2236(90)90097-t.</cite> [<a href="https://doi.org/10.1016/0166-2236(90)90097-t" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/1701577/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Trends%20Neurosci&amp;title=A%20common%20denominator%20of%20growth%20cone%20guidance%20and%20collapse?&amp;author=J.%20Walter&amp;author=T.%20E.%20Allsopp&amp;author=F.%20Bonhoeffer&amp;volume=13&amp;issue=11&amp;publication_year=1990&amp;pages=447-452&amp;pmid=1701577&amp;doi=10.1016/0166-2236(90)90097-t&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01284">
+<cite>Wang J. H., Yan Y. W., Garrett T. P., Liu J. H., Rodgers D. W., Garlick R. L., Tarr G. E., Husain Y., Reinherz E. L., Harrison S. C. Atomic structure of a fragment of human CD4 containing two immunoglobulin-like domains. Nature. 1990 Nov 29;348(6300):411–418. doi: 10.1038/348411a0.</cite> [<a href="https://doi.org/10.1038/348411a0" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/1701030/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Nature&amp;title=Atomic%20structure%20of%20a%20fragment%20of%20human%20CD4%20containing%20two%20immunoglobulin-like%20domains.&amp;author=J.%20H.%20Wang&amp;author=Y.%20W.%20Yan&amp;author=T.%20P.%20Garrett&amp;author=J.%20H.%20Liu&amp;author=D.%20W.%20Rodgers&amp;volume=348&amp;issue=6300&amp;publication_year=1990&amp;pages=411-418&amp;pmid=1701030&amp;doi=10.1038/348411a0&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01288">
+<cite>Wehrle-Haller B., Chiquet M. Dual function of tenascin: simultaneous promotion of neurite growth and inhibition of glial migration. J Cell Sci. 1993 Oct;106(Pt 2):597–610. doi: 10.1242/jcs.106.2.597.</cite> [<a href="https://doi.org/10.1242/jcs.106.2.597" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/7506709/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Cell%20Sci&amp;title=Dual%20function%20of%20tenascin:%20simultaneous%20promotion%20of%20neurite%20growth%20and%20inhibition%20of%20glial%20migration.&amp;author=B.%20Wehrle-Haller&amp;author=M.%20Chiquet&amp;volume=106&amp;issue=Pt%202&amp;publication_year=1993&amp;pages=597-610&amp;pmid=7506709&amp;doi=10.1242/jcs.106.2.597&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01291">
+<cite>Wintergerst E. S., Fuss B., Bartsch U. Localization of janusin mRNA in the central nervous system of the developing and adult mouse. Eur J Neurosci. 1993 Apr 1;5(4):299–310. doi: 10.1111/j.1460-9568.1993.tb00497.x.</cite> [<a href="https://doi.org/10.1111/j.1460-9568.1993.tb00497.x" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/8261110/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=Eur%20J%20Neurosci&amp;title=Localization%20of%20janusin%20mRNA%20in%20the%20central%20nervous%20system%20of%20the%20developing%20and%20adult%20mouse.&amp;author=E.%20S.%20Wintergerst&amp;author=B.%20Fuss&amp;author=U.%20Bartsch&amp;volume=5&amp;issue=4&amp;publication_year=1993&amp;pages=299-310&amp;pmid=8261110&amp;doi=10.1111/j.1460-9568.1993.tb00497.x&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+<li id="PDF_01294">
+<cite>Zisch A. H., D'Alessandri L., Ranscht B., Falchetto R., Winterhalter K. H., Vaughan L. Neuronal cell adhesion molecule contactin/F11 binds to tenascin via its immunoglobulin-like domains. J Cell Biol. 1992 Oct;119(1):203–213. doi: 10.1083/jcb.119.1.203.</cite> [<a href="https://doi.org/10.1083/jcb.119.1.203" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">DOI</a>] [<a href="/articles/PMC2289633/" class="usa-link">PMC free article</a>] [<a href="https://pubmed.ncbi.nlm.nih.gov/1382076/" class="usa-link">PubMed</a>] [<a href="https://scholar.google.com/scholar_lookup?journal=J%20Cell%20Biol&amp;title=Neuronal%20cell%20adhesion%20molecule%20contactin/F11%20binds%20to%20tenascin%20via%20its%20immunoglobulin-like%20domains.&amp;author=A.%20H.%20Zisch&amp;author=L.%20D'Alessandri&amp;author=B.%20Ranscht&amp;author=R.%20Falchetto&amp;author=K.%20H.%20Winterhalter&amp;volume=119&amp;issue=1&amp;publication_year=1992&amp;pages=203-213&amp;pmid=1382076&amp;doi=10.1083/jcb.119.1.203&amp;" class="usa-link usa-link--external" data-ga-action="click_feat_suppl" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</li>
+</ol></section></section></section><footer class="p courtesy-note font-secondary font-sm text-center"><hr class="headless">
+<p>Articles from The Journal of Cell Biology are provided here courtesy of <strong>The Rockefeller University Press</strong></p></footer></section></article>
+
+                      
+
+                    </main>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+<!-- Secondary navigation placeholder -->
+<div class="pmc-sidenav desktop:grid-col-4 display-flex">
+    <section class="pmc-sidenav__container" aria-label="Article resources and navigation">
+        <button type="button" class="pmc-sidenav__container__close">
+            <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/close.svg" role="img" alt="Close" />
+        </button>
+    <div class="display-none desktop:display-block">
+       <section class="margin-top-4 desktop:margin-top-0">
+              <h2 class="margin-top-0">ACTIONS</h2>
+           <ul class="usa-list usa-list--unstyled usa-list--actions">
+               
+               <li>
+                     <a
+                             href="https://doi.org/10.1083/jcb.130.2.473"
+                             class="usa-button usa-button--outline width-24 font-xs display-inline-flex flex-align-center flex-justify-start padding-left-1"
+                             target="_blank"
+                             rel="noreferrer noopener"
+                             data-ga-category="actions"
+                             data-ga-action="click"
+                             data-ga-label="publisher_link_desktop"
+                     >
+                         <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/launch.svg" alt="View on publisher site icon" class="usa-icon usa-icon--size-3 usa-icon--link"/>
+                         <span class="display-inline-flex flex-justify-center flex-1 padding-right-2">View on publisher site</span>
+                     </a>
+               </li>
+               
+               
+               <li>
+                    <a
+                            href="pdf/jc1302473.pdf"
+                            class="usa-button usa-button--outline width-24 display-inline-flex flex-align-center flex-justify-start padding-left-1"
+                            data-ga-category="actions"
+                            data-ga-action="click"
+                            data-ga-label="pdf_download_desktop"
+                    >
+                         <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/file_download.svg" alt="Download PDF icon" class="usa-icon usa-icon--size-3 usa-icon--link"/>
+                        <span class="display-inline-flex flex-justify-center flex-1">PDF (1.6 MB)</span>
+                    </a>
+               </li>
+               
+                
+               <li>
+                   <button role="button" class="usa-button width-24 citation-dialog-trigger display-inline-flex flex-align-center flex-justify-start padding-left-1"
+                        aria-label="Open dialog with citation text in different styles"
+                        data-ga-category="actions"
+                        data-ga-action="open"
+                        data-ga-label="cite_desktop"
+                        data-all-citations-url="/resources/citations/2199939/"
+                        data-citation-style="nlm"
+                        data-download-format-link="/resources/citations/2199939/export/"
+                    >
+                       <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/format_quote.svg" alt="Cite icon" class="usa-icon usa-icon--size-3 usa-icon--white"/>
+                       <span class="display-inline-flex flex-justify-center flex-1 button-label">Cite</span>
+                    </button>
+               </li>
+                
+               <li>
+
+                        <button class="usa-button width-24 collections-dialog-trigger collections-button display-inline-flex flex-align-center flex-justify-start padding-left-1 collections-button-empty"
+                              aria-label="Save article in MyNCBI collections."
+                              data-ga-category="actions"
+                              data-ga-action="click"
+                              data-ga-label="collections_button_desktop"
+                              data-collections-open-dialog-enabled="false"
+                              data-collections-open-dialog-url="https://account.ncbi.nlm.nih.gov/?back_url=https%3A%2F%2Fpmc.ncbi.nlm.nih.gov%2Farticles%2FPMC2199939%2F%3Freport%3Dxml%23open-collections-dialog"
+                              data-in-collections="false">
+                            <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/action-bookmark-full.svg" alt="Collections icon" class="usa-icon usa-icon--size-3 usa-icon--white usa-icon--bookmark-full" hidden />
+                            <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/action-bookmark-empty.svg" alt="Collections icon" class="usa-icon usa-icon--size-3 usa-icon--white usa-icon--bookmark-empty" hidden />
+                            <span class="display-inline-flex flex-justify-center flex-1">Collections</span>
+                       </button>
+               </li>
+               <li class="pmc-permalink">
+                    <button
+                            type="button"
+                            class="usa-button width-24 display-inline-flex flex-align-center flex-justify padding-left-1 shadow-none"
+                            aria-label="Show article permalink"
+                            aria-expanded="false"
+                            aria-haspopup="true"
+                            data-ga-category="actions"
+                            data-ga-action="open"
+                            data-ga-label="permalink_desktop"
+                    >
+                        <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/share.svg" alt="Permalink icon" class="usa-icon usa-icon--size-3 usa-icon--white"/>
+                        <span class="display-inline-flex flex-justify-center flex-1 button-label">Permalink</span>
+                    </button>
+                   
+
+<div class="pmc-permalink__dropdown" hidden>
+    <div class="pmc-permalink__dropdown__container">
+          <h2 class="usa-modal__heading margin-top-0 margin-bottom-2 text-uppercase font-sans-xs">PERMALINK</h2>
+          <div class="pmc-permalink__dropdown__content">
+              <input type="text" class="usa-input" value="https://pmc.ncbi.nlm.nih.gov/articles/PMC2199939/" aria-label="Article permalink">
+              <button class="usa-button display-inline-flex pmc-permalink__dropdown__copy__btn margin-right-0" title="Copy article permalink" data-ga-category="save_share" data-ga-action="link" data-ga-label="copy_link">
+                  <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/content_copy.svg" alt="Copy icon" aria-hidden="true" class="usa-icon usa-icon--white" />
+                  <span class="margin-left-1">Copy</span>
+              </button>
+          </div>
+    </div>
+</div>
+               </li>
+           </ul>
+       </section>
+     </div>
+
+        <section class="pmc-resources margin-top-6 desktop:margin-top-4" data-page-path="/articles/PMC2199939/">
+            <h2 class="margin-top-0">RESOURCES</h2>
+            
+                <div class="usa-accordion usa-accordion--multiselectable" data-allow-multiple>
+                    <h3 class="usa-accordion__heading">
+                        <button
+                        type="button"
+                        class="usa-accordion__button"
+                        aria-expanded="false"
+                        aria-controls="resources-similar-articles"
+                        data-ga-category="resources_accordion"
+                        data-ga-action="open_similar_articles"
+                        data-ga-label="/articles/PMC2199939/"
+                        data-action-open="open_similar_articles"
+                        data-action-close="close_similar_articles"
+                        >
+                            Similar articles
+                        </button>
+                    </h3>
+                    <div
+                            id="resources-similar-articles"
+                            class="usa-accordion__content usa-prose"
+                            
+                                data-source-url="/resources/similar-article-links/7615642/"
+                            
+                    >
+                        
+                    </div>
+                    <h3 class="usa-accordion__heading">
+                        <button
+                        type="button"
+                        class="usa-accordion__button"
+                        aria-expanded="false"
+                        aria-controls="resources-cited-by-other-articles"
+                        data-ga-category="resources_accordion"
+                        data-ga-action="open_cited_by"
+                        data-ga-label="/articles/PMC2199939/"
+                        data-action-open="open_cited_by"
+                        data-action-close="close_cited_by"
+                        >
+                             Cited by other articles
+                        </button>
+                    </h3>
+                    <div
+                            id="resources-cited-by-other-articles"
+                            class="usa-accordion__content usa-prose"
+                            
+                                data-source-url="/resources/cited-by-links/7615642/"
+                            
+                    >
+                          
+                    </div>
+                    
+                        <h3 class="usa-accordion__heading">
+                            <button
+                            type="button"
+                            class="usa-accordion__button"
+                            aria-expanded="false"
+                            aria-controls="resources-links-to-ncbi-databases"
+                            data-ga-category="resources_accordion"
+                            data-ga-action="open_NCBI_links"
+                            data-ga-label="/articles/PMC2199939/"
+                            data-action-open="open_NCBI_links"
+                            data-action-close="close_NCBI_link"
+                            >
+                                 Links to NCBI Databases
+                            </button>
+                        </h3>
+                        <div
+                                id="resources-links-to-ncbi-databases"
+                                class="usa-accordion__content usa-prose"
+                                data-source-url="/resources/db-links/2199939/"
+                        >
+                        </div>
+                    
+                    
+                </div>
+            
+        </section>
+
+
+        <section
+        class="usa-in-page-nav usa-in-page-nav--wide margin-top-6 desktop:margin-top-4"
+        data-title-text="On this page"
+        data-title-heading-level="h2"
+        data-scroll-offset="0"
+        data-root-margin="-10% 0px -80% 0px"
+        data-main-content-selector="main"
+        data-threshold="1"
+        hidden
+        ></section>
+    </section>
+</div>
+
+        
+
+<div class="overlay" role="dialog" aria-label="Citation Dialog" hidden>
+    <div class="dialog citation-dialog" aria-hidden="true">
+        <div class="display-inline-flex flex-align-center flex-justify width-full margin-bottom-2">
+            <h2 class="usa-modal__heading margin-0">Cite</h2>
+             <button type="button" class="usa-button usa-button--unstyled close-overlay text-black width-auto"  tabindex="1">
+                 <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/close.svg" alt="Close icon" class="usa-icon usa-icon--size-3 usa-icon--button" />
+             </button>
+        </div>
+
+        
+
+<div class="citation-text-block">
+  <div class="citation-text margin-bottom-2"></div>
+  <ul class="usa-list usa-list--unstyled display-inline-flex flex-justify width-full flex-align-center">
+      <li>
+        <button
+          class="usa-button usa-button--unstyled text-no-underline display-flex flex-align-center copy-button dialog-focus"
+          data-ga-category="save_share"
+          data-ga-action="cite"
+          data-ga-label="copy"
+          tabindex="2">
+            <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/content_copy.svg" alt="Copy icon" class="usa-icon usa-icon--size-3 usa-icon--link" />
+            <span>Copy</span>
+        </button>
+      </li>
+      <li>
+          <a
+              href="#"
+              role="button"
+              class="usa-button usa-button--unstyled text-no-underline display-flex flex-align-center export-button"
+              data-ga-category="save_share"
+              data-ga-action="cite"
+              data-ga-label="download"
+              title="Download a file for external citation management software"
+              tabindex="3">
+                <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/file_download.svg" alt="Download icon" aria-hidden="true" class="usa-icon usa-icon--size-3 usa-icon--link" />
+                <span class="display-none mobile-lg:display-inline">Download .nbib</span>
+                <span class="display-inline mobile-lg:display-none">.nbib</span>
+            </a>
+      </li>
+      <li>
+          
+
+<div class="display-inline-flex flex-align-center">
+  <label class="usa-label margin-top-0">Format:</label>
+  <select aria-label="Format" class="usa-select citation-style-selector padding-1 margin-top-0 border-0 padding-right-4" tabindex="4" >
+    
+      <option data-style-url-name="ama"
+              value="AMA"
+              >
+        AMA
+      </option>
+    
+      <option data-style-url-name="apa"
+              value="APA"
+              >
+        APA
+      </option>
+    
+      <option data-style-url-name="mla"
+              value="MLA"
+              >
+        MLA
+      </option>
+    
+      <option data-style-url-name="nlm"
+              value="NLM"
+              selected="selected">
+        NLM
+      </option>
+    
+  </select>
+</div>
+      </li>
+  </ul>
+</div>
+    </div>
+</div>
+
+        <div class="overlay" role="dialog" hidden>
+  <div id="collections-action-dialog" class="dialog collections-dialog" aria-hidden="true">
+   <div class="display-inline-flex flex-align-center flex-justify width-full margin-bottom-2">
+        <h2 class="usa-modal__heading margin-0">Add to Collections</h2>
+    </div>
+    <div class="collections-action-panel action-panel">
+      
+
+
+<form id="collections-action-dialog-form"
+      class="usa-form maxw-full collections-action-panel-form action-panel-content action-form action-panel-smaller-selectors"
+      data-existing-collections-url="/list-existing-collections/"
+      data-add-to-existing-collection-url="/add-to-existing-collection/"
+      data-create-and-add-to-new-collection-url="/create-and-add-to-new-collection/"
+      data-myncbi-max-collection-name-length="100"
+      data-collections-root-url="https://www.ncbi.nlm.nih.gov/myncbi/collections/">
+
+    <input type="hidden" name="csrfmiddlewaretoken" value="W3id9j89w2JeCRp1zgKzzyfpEXqEss8WczuDJ3v5lKYTwckP7PleM9gB9kKdpSS0">
+
+    <fieldset class="usa-fieldset margin-bottom-2">
+        <div class="usa-radio">
+            <input type="radio"
+            id="collections-action-dialog-new"
+            class="usa-radio__input usa-radio__input--tile collections-new  margin-top-0"
+            name="collections"
+            value="new"
+            data-ga-category="collections_button"
+            data-ga-action="click"
+            data-ga-label="collections_radio_new" />
+            <label class="usa-radio__label" for="collections-action-dialog-new">Create a new collection</label>
+        </div>
+        <div class="usa-radio">
+            <input type="radio"
+            id="collections-action-dialog-existing"
+            class="usa-radio__input usa-radio__input--tile collections-existing"
+            name="collections"
+            value="existing"
+            checked="true"
+            data-ga-category="collections_button"
+            data-ga-action="click"
+            data-ga-label="collections_radio_existing" />
+            <label class="usa-radio__label" for="collections-action-dialog-existing">Add to an existing collection</label>
+        </div>
+    </fieldset>
+
+    <fieldset class="usa-fieldset margin-bottom-2">
+        <div class="action-panel-control-wrap new-collections-controls">
+           <label for="collections-action-dialog-add-to-new" class="usa-label margin-top-0">
+                Name your collection
+               <abbr title="required" class="usa-hint usa-hint--required text-no-underline">*</abbr>
+          </label>
+          <input
+            type="text"
+            name="add-to-new-collection"
+            id="collections-action-dialog-add-to-new"
+            class="usa-input collections-action-add-to-new"
+            pattern="[^&quot;&amp;=&lt;&gt;/]*" title="The following characters are not allowed in the Name field: &quot;&amp;=&lt;&gt;/"
+            maxlength=""
+            data-ga-category="collections_button"
+            data-ga-action="create_collection"
+            data-ga-label="non_favorties_collection"
+            required
+          />
+        </div>
+        <div class="action-panel-control-wrap existing-collections-controls">
+             <label for="collections-action-dialog-add-to-existing" class="usa-label margin-top-0">
+                Choose a collection
+              </label>
+              <select id="collections-action-dialog-add-to-existing"
+                      class="usa-select collections-action-add-to-existing"
+                      data-ga-category="collections_button"
+                      data-ga-action="select_collection"
+                      data-ga-label="($('.collections-action-add-to-existing').val() === 'Favorites') ? 'Favorites' : 'non_favorites_collection'">
+              </select>
+              <div class="collections-retry-load-on-error usa-input-error-message selection-validation-message">
+                Unable to load your collection due to an error<br>
+                <a href="#">Please try again</a>
+              </div>
+        </div>
+    </fieldset>
+
+    <div class="display-inline-flex">
+        <button class="usa-button margin-top-0 action-panel-submit"
+            type="submit"
+            data-loading-label="Adding..."
+            data-pinger-ignore
+            data-ga-category="collections_button"
+            data-ga-action="click"
+            data-ga-label="add">
+          Add
+        </button>
+        <button class="usa-button usa-button--outline margin-top-0 action-panel-cancel"
+                aria-label="Close 'Add to Collections' panel"
+                ref="linksrc=close_collections_panel"
+                data-ga-category="collections_button"
+                data-ga-action="click"
+                data-ga-label="cancel">
+          Cancel
+        </button>
+    </div>
+</form>
+    </div>
+  </div>
+</div>
+
+        
+
+      </div>
+    </div>
+  </div>
+
+
+
+        
+    
+    
+
+<footer class="ncbi-footer ncbi-dark-background " >
+    
+        <div class="ncbi-footer__icon-section">
+            <div class="ncbi-footer__social-header">
+                Follow NCBI
+            </div>
+
+            <div class="grid-container ncbi-footer__ncbi-social-icons-container">
+                
+                    <a href="https://twitter.com/ncbi"
+                       class="ncbi-footer__social-icon ncbi-footer__social-icon--gray"
+                       target="_blank"
+                       rel="noreferrer noopener">
+                        <svg width="40"
+                             height="40"
+                             viewBox="0 0 40 40"
+                             fill="none"
+                             xmlns="http://www.w3.org/2000/svg"
+                             focusable="false"
+                             aria-hidden="true">
+                            <path d="m6.067 8 10.81 13.9L6 33.2h4.2l8.4-9.1 7.068 9.1H34L22.8 18.5 31.9 8h-3.5l-7.7 8.4L14.401 8H6.067Zm3.6 1.734h3.266l16.8 21.732H26.57L9.668 9.734Z">
+                            </path>
+                        </svg>
+                        <span class="usa-sr-only">NCBI on X (formerly known as Twitter)</span>
+                    </a>
+                
+
+                
+                    <a href="https://www.facebook.com/ncbi.nlm"
+                       class="ncbi-footer__social-icon ncbi-footer__social-icon--gray"
+                       target="_blank"
+                       rel="noreferrer noopener">
+                        <svg width="16"
+                             height="29"
+                             focusable="false"
+                             aria-hidden="true"
+                             viewBox="0 0 16 29"
+                             fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.8809 21.4002C3.8809 19.0932 3.8809 16.7876 3.8809 14.478C3.8809 14.2117 3.80103 14.1452 3.54278 14.1492C2.53372 14.1638 1.52334 14.1492 0.514288 14.1598C0.302626 14.1598 0.248047 14.0972 0.248047 13.8936C0.256034 12.4585 0.256034 11.0239 0.248047 9.58978C0.248047 9.37013 0.302626 9.30224 0.528931 9.3049C1.53798 9.31688 2.54837 9.3049 3.55742 9.31555C3.80103 9.31555 3.8809 9.26097 3.87957 9.00272C3.87158 8.00565 3.85428 7.00592 3.90753 6.00884C3.97142 4.83339 4.31487 3.73115 5.04437 2.78467C5.93095 1.63318 7.15699 1.09005 8.56141 0.967577C10.5582 0.79319 12.555 0.982221 14.5518 0.927641C14.7102 0.927641 14.7462 0.99287 14.7449 1.13664C14.7449 2.581 14.7449 4.02668 14.7449 5.47104C14.7449 5.67604 14.6517 5.68669 14.4946 5.68669C13.4523 5.68669 12.4113 5.68669 11.3703 5.68669C10.3506 5.68669 9.92057 6.10868 9.90593 7.13904C9.89661 7.7647 9.91525 8.39303 9.89794 9.01869C9.88995 9.26364 9.96583 9.31822 10.2015 9.31688C11.7204 9.30623 13.2393 9.31688 14.7595 9.3049C15.0257 9.3049 15.0723 9.3728 15.0444 9.62439C14.89 10.9849 14.7515 12.3467 14.6144 13.7085C14.5691 14.1571 14.5785 14.1585 14.1458 14.1585C12.8386 14.1585 11.5313 14.1665 10.2254 14.1518C9.95119 14.1518 9.89794 14.2317 9.89794 14.4899C9.90593 19.0799 9.89794 23.6752 9.91125 28.2612C9.91125 28.5674 9.8407 28.646 9.53186 28.6433C7.77866 28.6273 6.02414 28.6366 4.27094 28.634C3.82499 28.634 3.87158 28.6992 3.87158 28.22C3.87602 25.9472 3.87913 23.6739 3.8809 21.4002Z">
+                            </path>
+                        </svg>
+                        <span class="usa-sr-only">NCBI on Facebook</span>
+                    </a>
+                
+
+                
+                    <a href="https://www.linkedin.com/company/ncbinlm"
+                       class="ncbi-footer__social-icon ncbi-footer__social-icon--gray"
+                       target="_blank"
+                       rel="noreferrer noopener">
+                        <svg width="25"
+                             height="23"
+                             viewBox="0 0 26 24"
+                             fill="none"
+                             xmlns="http://www.w3.org/2000/svg"
+                             focusable="false"
+                             aria-hidden="true">
+                            <path d="M14.6983 9.98423C15.6302 9.24808 16.5926 8.74754 17.6762 8.51991C19.673 8.09126 21.554 8.30824 23.1262 9.7526C24.2351 10.7723 24.7529 12.1115 25.0165 13.5612C25.1486 14.3363 25.2105 15.1218 25.2015 15.9081C25.2015 18.3043 25.2015 20.6898 25.2082 23.0806C25.2082 23.3468 25.1549 23.444 24.8621 23.4414C23.1297 23.4272 21.3992 23.4272 19.6704 23.4414C19.4041 23.4414 19.3429 23.3588 19.3442 23.1019C19.3535 20.5194 19.3442 17.9368 19.3442 15.3543C19.3442 14.0005 18.3258 12.9448 17.0266 12.9488C15.7273 12.9528 14.6983 14.0071 14.6983 15.361C14.6983 17.9328 14.6917 20.5047 14.6983 23.0753C14.6983 23.3708 14.6198 23.444 14.3296 23.4427C12.6185 23.4294 10.9079 23.4294 9.19779 23.4427C8.93155 23.4427 8.86099 23.3735 8.86232 23.1086C8.8783 19.7619 8.88628 16.4144 8.88628 13.066C8.88628 11.5688 8.87874 10.0708 8.86365 8.57182C8.86365 8.3575 8.90758 8.27896 9.14054 8.28029C10.9048 8.29094 12.6687 8.29094 14.4321 8.28029C14.6464 8.28029 14.6983 8.34818 14.6983 8.54653C14.6903 9.00047 14.6983 9.45441 14.6983 9.98423Z">
+                            </path>
+                            <path d="M6.55316 15.8443C6.55316 18.2564 6.55316 20.6699 6.55316 23.082C6.55316 23.3629 6.48127 23.4388 6.19906 23.4374C4.47737 23.4241 2.75568 23.4241 1.03399 23.4374C0.767751 23.4374 0.69986 23.3629 0.701191 23.1006C0.709178 18.2648 0.709178 13.4281 0.701191 8.59053C0.701191 8.34026 0.765089 8.27237 1.01669 8.2737C2.74991 8.28435 4.48048 8.28435 6.20838 8.2737C6.47462 8.2737 6.5465 8.33627 6.54517 8.6065C6.54783 11.0186 6.55316 13.4308 6.55316 15.8443Z">
+                            </path>
+                            <path d="M3.65878 0.243898C5.36804 0.243898 6.58743 1.45529 6.58743 3.1406C6.58743 4.75801 5.32145 5.95742 3.60819 5.96807C3.22177 5.97614 2.83768 5.90639 2.47877 5.76299C2.11985 5.61959 1.79344 5.40546 1.51897 5.13334C1.24449 4.86123 1.02755 4.53668 0.881058 4.17902C0.734563 3.82136 0.661505 3.43788 0.666231 3.05141C0.67555 1.42601 1.9362 0.242566 3.65878 0.243898Z">
+                            </path>
+                        </svg>
+                        <span class="usa-sr-only">NCBI on LinkedIn</span>
+                    </a>
+                
+
+                
+                    <a href="https://github.com/ncbi"
+                       class="ncbi-footer__social-icon ncbi-footer__social-icon--gray"
+                       target="_blank"
+                       rel="noreferrer noopener">
+                        <svg width="28"
+                             height="27"
+                             viewBox="0 0 28 28"
+                             fill="none"
+                             xmlns="http://www.w3.org/2000/svg"
+                             focusable="false"
+                             aria-hidden="true">
+                            <path d="M16.7228 20.6334C17.5057 20.5527 18.2786 20.3944 19.0301 20.1608C21.3108 19.4193 22.5822 17.8259 22.963 15.4909C23.1228 14.5112 23.1814 13.5287 22.9883 12.5437C22.8106 11.6423 22.4013 10.8028 21.8007 10.1076C21.7526 10.0605 21.7197 10 21.7064 9.934C21.6931 9.86799 21.7 9.79952 21.7262 9.73748C22.0856 8.6206 21.9711 7.51969 21.601 6.42677C21.582 6.3497 21.5345 6.2827 21.468 6.23923C21.4016 6.19577 21.3211 6.17906 21.2429 6.19248C20.7329 6.21649 20.2313 6.33051 19.7611 6.52928C19.1103 6.7908 18.4899 7.12198 17.9104 7.51703C17.84 7.56996 17.7581 7.60551 17.6713 7.62078C17.5846 7.63605 17.4954 7.6306 17.4112 7.60489C15.2596 7.05882 13.0054 7.06203 10.8554 7.61421C10.7806 7.63586 10.7018 7.63967 10.6253 7.62534C10.5487 7.611 10.4766 7.57892 10.4148 7.53167C9.64788 7.03247 8.85171 6.58918 7.96368 6.33359C7.65781 6.24338 7.34123 6.19458 7.02239 6.18849C6.94879 6.17986 6.87462 6.19893 6.81432 6.242C6.75402 6.28507 6.71191 6.34904 6.69621 6.42145C6.32342 7.51437 6.2209 8.61527 6.56307 9.73348C6.59635 9.84264 6.64694 9.93316 6.54177 10.0516C5.47666 11.2604 5.09988 12.6834 5.19574 14.2676C5.2663 15.4244 5.46201 16.5466 6.01454 17.5769C6.84399 19.1171 8.21664 19.9119 9.85158 20.3352C10.3938 20.4706 10.9444 20.5698 11.4998 20.632C11.5384 20.7492 11.4506 20.7798 11.408 20.8291C11.1734 21.1179 10.9894 21.4441 10.8634 21.7942C10.7622 22.0458 10.8315 22.4039 10.6065 22.5516C10.263 22.7766 9.83827 22.8485 9.42421 22.8871C8.17936 23.0056 7.26471 22.4877 6.6283 21.4348C6.25552 20.8184 5.76956 20.3325 5.08523 20.0663C4.76981 19.9325 4.42139 19.8967 4.08537 19.9638C3.7898 20.029 3.73788 20.1901 3.93891 20.4111C4.03639 20.5234 4.14989 20.6207 4.27575 20.6999C4.9796 21.1318 5.51717 21.7884 5.80152 22.5636C6.37002 23.9973 7.48039 24.5697 8.93825 24.6323C9.43741 24.6575 9.93768 24.615 10.4254 24.5058C10.5892 24.4672 10.6531 24.4872 10.6517 24.6762C10.6451 25.4936 10.6637 26.3123 10.6517 27.131C10.6517 27.6635 10.1684 27.9297 9.58663 27.7393C8.17396 27.2671 6.84977 26.5631 5.66838 25.656C2.59555 23.2891 0.720966 20.1861 0.217704 16.3376C-0.357453 11.9127 0.911353 8.00824 3.98551 4.73881C6.11909 2.42656 8.99932 0.939975 12.1203 0.540191C16.5351 -0.0601815 20.4347 1.14323 23.7232 4.16373C26.2449 6.47869 27.724 9.37672 28.1048 12.7726C28.5828 17.0325 27.3686 20.7945 24.4768 23.9827C22.9762 25.6323 21.0956 26.8908 18.9982 27.6488C18.8783 27.6927 18.7585 27.738 18.636 27.7726C18.0356 27.9404 17.6189 27.6395 17.6189 27.0098C17.6189 25.7452 17.6308 24.4806 17.6295 23.2159C17.6329 22.9506 17.6128 22.6856 17.5696 22.4238C17.4325 21.6664 17.3419 21.484 16.7228 20.6334Z">
+                            </path>
+                        </svg>
+                        <span class="usa-sr-only">NCBI on GitHub</span>
+                    </a>
+                
+
+                
+                    <a href="https://ncbiinsights.ncbi.nlm.nih.gov/"
+                       class="ncbi-footer__social-icon ncbi-footer__social-icon--gray"
+                       target="_blank"
+                       rel="noreferrer noopener">
+                        <svg width="26"
+                             height="26"
+                             viewBox="0 0 27 27"
+                             fill="none"
+                             xmlns="http://www.w3.org/2000/svg"
+                             focusable="false"
+                             aria-hidden="true">
+                            <path d="M23.7778 26.4574C23.1354 26.3913 22.0856 26.8024 21.636 26.3087C21.212 25.8444 21.4359 24.8111 21.324 24.0347C19.9933 14.8323 14.8727 8.80132 6.09057 5.85008C4.37689 5.28406 2.58381 4.99533 0.779072 4.99481C0.202773 4.99481 -0.0229751 4.83146 0.00455514 4.21479C0.0660406 3.08627 0.0660406 1.95525 0.00455514 0.826734C-0.0413285 0.0815827 0.259669 -0.0193618 0.896534 0.00266238C6.96236 0.222904 12.3693 2.24179 16.9889 6.16209C22.9794 11.2478 26.1271 17.7688 26.4372 25.648C26.4629 26.294 26.3179 26.5271 25.6609 26.4684C25.0827 26.417 24.4991 26.4574 23.7778 26.4574Z">
+                            </path>
+                            <path d="M14.8265 26.441C14.0924 26.441 13.2371 26.6795 12.6626 26.3786C12.0092 26.0372 12.3781 25.0644 12.246 24.378C11.1154 18.5324 6.6849 14.5497 0.74755 14.1001C0.217135 14.0615 -0.0104482 13.9422 0.0134113 13.3659C0.0519536 12.1454 0.0482829 10.9213 0.0134113 9.69524C-0.00127145 9.14464 0.196946 9.03268 0.703502 9.04736C9.21217 9.27128 16.5994 16.2511 17.2804 24.7231C17.418 26.4446 17.418 26.4446 15.6579 26.4446H14.832L14.8265 26.441Z">
+                            </path>
+                            <path d="M3.58928 26.4555C2.64447 26.4618 1.73584 26.0925 1.06329 25.4289C0.39073 24.7653 0.00933763 23.8617 0.0030097 22.9169C-0.00331824 21.9721 0.365937 21.0635 1.02954 20.3909C1.69315 19.7184 2.59675 19.337 3.54156 19.3306C4.48637 19.3243 5.39499 19.6936 6.06755 20.3572C6.7401 21.0208 7.1215 21.9244 7.12782 22.8692C7.13415 23.814 6.7649 24.7226 6.10129 25.3952C5.43768 26.0677 4.53409 26.4491 3.58928 26.4555Z">
+                            </path>
+                        </svg>
+                        <span class="usa-sr-only">NCBI RSS feed</span>
+                    </a>
+                
+            </div>
+        </div>
+    
+
+    <div data-testid="gridContainer"
+         class="grid-container ncbi-footer__container">
+        <div class="grid-row ncbi-footer__main-content-container"
+             data-testid="grid">
+            
+                <div class="ncbi-footer__column">
+                    
+                        <p class="ncbi-footer__circled-icons-heading">
+                            Connect with NLM
+                        </p>
+                    
+
+                    <div class="ncbi-footer__circled-icons-list">
+                        
+                            <a href=https://twitter.com/nlm_nih class="ncbi-footer__social-icon ncbi-footer__social-icon--circled" target="_blank" rel="noreferrer noopener">
+                                <svg width="32"
+                                     height="32"
+                                     viewBox="0 0 40 40"
+                                     fill="none"
+                                     xmlns="http://www.w3.org/2000/svg"
+                                     focusable="false"
+                                     aria-hidden="true">
+                                    <path d="m6.067 8 10.81 13.9L6 33.2h4.2l8.4-9.1 7.068 9.1H34L22.8 18.5 31.9 8h-3.5l-7.7 8.4L14.401 8H6.067Zm3.6 1.734h3.266l16.8 21.732H26.57L9.668 9.734Z">
+                                    </path>
+                                </svg>
+                                <span class="usa-sr-only">NLM on X (formerly known as Twitter)</span>
+                            </a>
+                        
+
+                        
+                            <a href=https://www.facebook.com/nationallibraryofmedicine class="ncbi-footer__social-icon ncbi-footer__social-icon--circled" target="_blank" rel="noreferrer noopener">
+                                <svg width="13"
+                                     height="24"
+                                     viewBox="0 0 13 24"
+                                     fill="none"
+                                     xmlns="http://www.w3.org/2000/svg"
+                                     focusable="false"
+                                     aria-hidden="true">
+                                    <path d="M4.11371 23.1369C4.11371 23.082 4.11371 23.0294 4.11371 22.9745V12.9411H0.817305C0.6709 12.9411 0.670898 12.9411 0.670898 12.8016C0.670898 11.564 0.670898 10.3287 0.670898 9.09341C0.670898 8.97903 0.705213 8.95158 0.815017 8.95158C1.8673 8.95158 2.91959 8.95158 3.97417 8.95158H4.12057V8.83263C4.12057 7.8055 4.12057 6.7738 4.12057 5.74897C4.1264 4.92595 4.31387 4.11437 4.66959 3.37217C5.12916 2.38246 5.94651 1.60353 6.95717 1.1921C7.64827 0.905008 8.3913 0.764035 9.13953 0.778051C10.0019 0.791777 10.8644 0.830666 11.7268 0.860404C11.8869 0.860404 12.047 0.894717 12.2072 0.90158C12.2964 0.90158 12.3261 0.940469 12.3261 1.02968C12.3261 1.5421 12.3261 2.05452 12.3261 2.56465C12.3261 3.16857 12.3261 3.7725 12.3261 4.37642C12.3261 4.48165 12.2964 4.51367 12.1912 4.51138C11.5369 4.51138 10.8804 4.51138 10.2261 4.51138C9.92772 4.51814 9.63058 4.5526 9.33855 4.61433C9.08125 4.6617 8.84537 4.78881 8.66431 4.97766C8.48326 5.16652 8.3662 5.40755 8.32972 5.66661C8.28476 5.89271 8.26027 6.1224 8.25652 6.35289C8.25652 7.19014 8.25652 8.02969 8.25652 8.86923C8.25652 8.89439 8.25652 8.91955 8.25652 8.95615H12.0219C12.1797 8.95615 12.182 8.95616 12.1614 9.10714C12.0768 9.76596 11.9876 10.4248 11.9029 11.0813C11.8312 11.6319 11.7626 12.1824 11.697 12.733C11.6719 12.9434 11.6787 12.9434 11.4683 12.9434H8.26338V22.899C8.26338 22.979 8.26338 23.0591 8.26338 23.1392L4.11371 23.1369Z">
+                                    </path>
+                                </svg>
+                                <span class="usa-sr-only">NLM on Facebook</span>
+                            </a>
+                        
+
+                        
+                            <a href=https://www.youtube.com/user/NLMNIH class="ncbi-footer__social-icon ncbi-footer__social-icon--circled" target="_blank" rel="noreferrer noopener">
+                                <svg width="21"
+                                     height="15"
+                                     viewBox="0 0 21 15"
+                                     fill="none"
+                                     xmlns="http://www.w3.org/2000/svg"
+                                     focusable="false"
+                                     aria-hidden="true">
+                                    <path d="M19.2561 1.47914C18.9016 1.15888 18.5699 0.957569 17.2271 0.834039C15.5503 0.678484 13.2787 0.655608 11.563 0.65332H9.43556C7.71987 0.65332 5.4483 0.678484 3.77151 0.834039C2.43098 0.957569 2.097 1.15888 1.74242 1.47914C0.813665 2.32097 0.619221 4.62685 0.598633 6.89384C0.598633 7.31781 0.598633 7.74101 0.598633 8.16345C0.626084 10.4121 0.827391 12.686 1.74242 13.521C2.097 13.8412 2.4287 14.0425 3.77151 14.1661C5.4483 14.3216 7.71987 14.3445 9.43556 14.3468H11.563C13.2787 14.3468 15.5503 14.3216 17.2271 14.1661C18.5676 14.0425 18.9016 13.8412 19.2561 13.521C20.1712 12.6929 20.3725 10.451 20.3999 8.22064C20.3999 7.74025 20.3999 7.25986 20.3999 6.77946C20.3725 4.54907 20.1689 2.30724 19.2561 1.47914ZM8.55942 10.5311V4.65201L13.5601 7.50005L8.55942 10.5311Z"
+                                          fill="white" />
+                                </svg>
+                                <span class="usa-sr-only">NLM on YouTube</span>
+                            </a>
+                        
+                    </div>
+                </div>
+            
+
+            
+                <address class="ncbi-footer__address ncbi-footer__column">
+                    
+        <p>
+            <a class="usa-link usa-link--external"
+            href="https://www.google.com/maps/place/8600+Rockville+Pike,+Bethesda,+MD+20894/%4038.9959508,
+            -77.101021,17z/data%3D!3m1!4b1!4m5!3m4!1s0x89b7c95e25765ddb%3A0x19156f88b27635b8!8m2!3d38.9959508!
+            4d-77.0988323"
+            rel="noopener noreferrer" target="_blank">National Library of Medicine
+            <br/> 8600 Rockville Pike<br/> Bethesda, MD 20894</a>
+        </p>
+    
+                </address>
+            
+
+            
+                <ul class="usa-list usa-list--unstyled ncbi-footer__vertical-list ncbi-footer__column">
+                    
+                        <li class="ncbi-footer__vertical-list-item">
+                            
+
+
+
+
+
+
+
+
+
+    <a href="https://www.nlm.nih.gov/web_policies.html" class="usa-link  usa-link--alt ncbi-footer__link"  >
+        
+
+        
+            Web Policies
+        
+
+        
+    </a>
+
+
+                        </li>
+                    
+                        <li class="ncbi-footer__vertical-list-item">
+                            
+
+
+
+
+
+
+
+
+
+    <a href="https://www.nih.gov/institutes-nih/nih-office-director/office-communications-public-liaison/freedom-information-act-office" class="usa-link  usa-link--alt ncbi-footer__link"  >
+        
+
+        
+            FOIA
+        
+
+        
+    </a>
+
+
+                        </li>
+                    
+                        <li class="ncbi-footer__vertical-list-item">
+                            
+
+
+
+
+
+
+
+
+
+    <a href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html" class="usa-link usa-link--external usa-link--alt ncbi-footer__link" rel="noreferrer noopener" target='_blank' >
+        
+
+        
+            HHS Vulnerability Disclosure
+        
+
+        
+    </a>
+
+
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <ul class="usa-list usa-list--unstyled ncbi-footer__vertical-list ncbi-footer__column">
+                    
+                        <li class="ncbi-footer__vertical-list-item">
+                            
+
+
+
+
+
+
+
+
+
+    <a href="https://support.nlm.nih.gov/" class="usa-link  usa-link--alt ncbi-footer__link"  >
+        
+
+        
+            Help
+        
+
+        
+    </a>
+
+
+                        </li>
+                    
+                        <li class="ncbi-footer__vertical-list-item">
+                            
+
+
+
+
+
+
+
+
+
+    <a href="https://www.nlm.nih.gov/accessibility.html" class="usa-link  usa-link--alt ncbi-footer__link"  >
+        
+
+        
+            Accessibility
+        
+
+        
+    </a>
+
+
+                        </li>
+                    
+                        <li class="ncbi-footer__vertical-list-item">
+                            
+
+
+
+
+
+
+
+
+
+    <a href="https://www.nlm.nih.gov/careers/careers.html" class="usa-link  usa-link--alt ncbi-footer__link"  >
+        
+
+        
+            Careers
+        
+
+        
+    </a>
+
+
+                        </li>
+                    
+                </ul>
+            
+        </div>
+
+        
+            <div class="grid-row grid-col-12" data-testid="grid">
+                <ul class="ncbi-footer__bottom-links-list">
+                    
+                        <li class="ncbi-footer__bottom-list-item">
+                            
+
+
+
+
+
+
+
+
+
+    <a href="https://www.nlm.nih.gov/" class="usa-link  usa-link--alt ncbi-footer__link"  >
+        
+
+        
+            NLM
+        
+
+        
+    </a>
+
+
+                        </li>
+                    
+                        <li class="ncbi-footer__bottom-list-item">
+                            
+
+
+
+
+
+
+
+
+
+    <a href="https://www.nih.gov/" class="usa-link  usa-link--alt ncbi-footer__link"  >
+        
+
+        
+            NIH
+        
+
+        
+    </a>
+
+
+                        </li>
+                    
+                        <li class="ncbi-footer__bottom-list-item">
+                            
+
+
+
+
+
+
+
+
+
+    <a href="https://www.hhs.gov/" class="usa-link usa-link--external usa-link--alt ncbi-footer__link" rel="noreferrer noopener" target='_blank' >
+        
+
+        
+            HHS
+        
+
+        
+    </a>
+
+
+                        </li>
+                    
+                        <li class="ncbi-footer__bottom-list-item">
+                            
+
+
+
+
+
+
+
+
+
+    <a href="https://www.usa.gov/" class="usa-link usa-link--external usa-link--alt ncbi-footer__link" rel="noreferrer noopener" target='_blank' >
+        
+
+        
+            USA.gov
+        
+
+        
+    </a>
+
+
+                        </li>
+                    
+                </ul>
+            </div>
+        
+    </div>
+</footer>
+
+    
+
+
+        
+        
+    
+  <script  type="text/javascript" src="https://cdn.ncbi.nlm.nih.gov/core/pinger/pinger.js"> </script>
+
+
+    
+        
+
+<button class="back-to-top" data-ga-category="pagination" data-ga-action="back_to_top">
+    <label>Back to Top</label>
+    <img src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/img/usa-icons/arrow_upward.svg" alt="back to top icon" class="usa-icon usa-icon--size-3 order-0 usa-icon--white" />
+</button>
+    
+
+
+        
+    
+    <div id="icon-container" style="display: none;"></div>
+    
+    
+        
+    <script type="application/javascript">
+    window.ncbi = window.ncbi || {};
+    window.ncbi.pmc = window.ncbi.pmc || {};
+    window.ncbi.pmc.options = {
+        logLevel: 'INFO',
+        
+        staticEndpoint: 'https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/',
+        
+        citeCookieName: 'pmc-cf',
+    };
+</script>
+    <script type="module" crossorigin="" src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/assets/base-Cp_Il6gk.js"></script>
+<link href="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/assets/vendor-Co8Vdmw2.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+    
+    <script type="text/javascript" src="https://cdn.ncbi.nlm.nih.gov/core/jquery/jquery-3.6.0.min.js">&#xA0;</script>
+    <script type="text/javascript">
+        jQuery.getScript("https://cdn.ncbi.nlm.nih.gov/core/alerts/alerts.js", function () {
+            galert(['div.nav_and_browser', 'div.header', '#universal_header', '.usa-banner', 'body > *:nth-child(1)'])
+        });
+    </script>
+
+
+    <script type="text/javascript">var exports = {};</script>
+     <script src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/CACHE/js/output.4e25b6297b38.js"></script>
+
+    <script type="module" crossorigin="" src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/assets/article-D47MIn9n.js"></script>
+<link href="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/assets/vendor-Co8Vdmw2.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+<link href="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/assets/index-DXSA0fsx.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+<link href="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/assets/secure-cookie-Br6x5jtB.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+    
+    
+
+    </body>
+</html>
