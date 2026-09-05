@@ -86,3 +86,7 @@ B039 promotes two new 23B edges paired one-to-one with Module 23A for tenascin-R
 ## Review-led expansion: B040 (2026-09-05)
 
 B040 promotes one new 23B edge paired one-to-one with Module 23A for the tenascin-R/RPTPζ perineuronal-net structural interface: ectodomain association and interface-mutagenesis effects support a contribution to PNN architecture. Extracellular interface, mouse neuronal-culture, cytoplasmic-relay boundary, and no-traumatic-SCI-transfer limits remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B041 (2026-09-05)
+
+B041 promotes one new 23B edge paired one-to-one with Module 23A for tenascin-R optic-nerve conduction function: TNR-deficient mice show reduced compound-action-potential conduction velocity despite preserved nodal Na+-channel distribution. In-vivo mouse electrophysiology, non-SCI comparator, and no-channel-organization-transfer limits remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
