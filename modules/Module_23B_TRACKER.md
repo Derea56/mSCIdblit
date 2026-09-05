@@ -216,3 +216,7 @@ B072 adds a new paired 23B medium-high-confidence VPAC2 -> PKA-dependent cortica
 ## Review-led expansion: B073 (2026-09-05)
 
 B073 adds a new paired 23B medium-high-confidence EFNB1 ligand-side reverse-signaling relay using a primary HEK293 transfection study. Ephrin-B1 expression activates JNK through TAK1/MKK4/MKK7, requires the cytoplasmic domain, persists after removal of all six intracellular tyrosines, and is blocked by JNK inhibition but not Src inhibition. The edge is deliberately receptor-unassigned: no EphB receptor, direct binary interaction, exact relay ordering, terminal TF, native tissue mechanism, or traumatic-SCI transfer is asserted; the existing low/conflicted EFNB1-to-EphB6 JNK/Rac1 edge remains separate. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B074 (2026-09-05)
+
+B074 adds a new paired 23B medium-high-confidence EPHB6/ephrin-B1 reverse-signaling function edge using a primary mouse adrenal chromaffin study. Ephb6 deletion reduces epinephrine and tyrosine hydroxylase, and the study identifies an EPHB6-associated RAC1/MKK7/JNK-c-Jun/AP1/EGR1 route reported to act through reverse signaling via ephrin-B1. The edge is bounded to the dead-kinase receptor and mouse adrenal comparator; direct binary affinity, complete biochemical ordering, universal EGR1 promoter occupancy, neural or traumatic-SCI transfer, and function beyond the stated model are not asserted. Canonical signaling tables and simulator outputs remain untouched.
