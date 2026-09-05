@@ -5012,6 +5012,19 @@ Seven of the eight rows retained reusable target capacity. Slitrk6-Ptprs reused 
 
 These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human/mouse adipose, liver, neuronal, inner-ear, and promoter-haplotype systems, plus chicken/quail muscle. The individual search log contains 3108 rows through M22B-IND-3108. This tranche added seven standalone TF-to-target edges and seven evidence records covering six distinct CHRNA targets, reused a registered PTPRS target context for one row, and kept one row on hold.
 
+## Individual review 3157-3164
+
+Audits 3157-3164 covered the eight Spp1/Sptan1/Sptbn2/Sst handoffs to S1PR1,
+PTPRA, PTPRA, ADRA2A, GRM7, MTNR1A, SSTR1, and SSTR4. Five rows retained
+reusable target capacity: S1PR1, ADRA2A, GRM7, and MTNR1A reused registered
+target contexts, while SSTR1 gained a new direct POU1F1/Pit-1 promoter context
+from rat anterior-pituitary studies. PTPRA remained on hold because TFLink/GTRD
+occupancy memberships and promoter predictions did not establish activation
+direction or target-specific perturbation. SSTR4 remained on hold because its
+promoter study identified potential factor sites but left their regulatory role
+under investigation. These contexts remain separate from the submitted
+handoffs and do not promote the original pathway/function-boundary rows.
+
 ## Individual review 3149-3156
 
 Audits 3149-3156 covered the eight Snx14/Sorbs1/Sostdc1/Spink3/Spon2/Spp1
