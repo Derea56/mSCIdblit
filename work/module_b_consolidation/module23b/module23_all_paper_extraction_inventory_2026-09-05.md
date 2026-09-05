@@ -12,9 +12,9 @@ matches only; no canonical database rows or promotions are created.
 - Register rows without a stable paper anchor: 82
 - Source-review IDs represented in manifest: 72
 - Private phase-2 archive fallback used: yes
-- Archive filename-token crosswalks used: 269
+- Archive filename-token crosswalks used: 263
 - Additional-root filename-token crosswalks used: 0
-- Additional-root manifest crosswalks used: 962
+- Additional-root manifest crosswalks used: 968
 
 ## Extraction status
 
@@ -22,8 +22,8 @@ matches only; no canonical database rows or promotions are created.
 |---|---:|
 | awaiting_local_source_acquisition | 12 |
 | candidate_extracted_from_abstract_or_metadata | 1,003 |
-| candidate_extracted_from_full_text | 469 |
-| local_artifact_present_excerpt_not_matched | 27 |
+| candidate_extracted_from_full_text | 474 |
+| local_artifact_present_excerpt_not_matched | 22 |
 
 ## Module coverage
 

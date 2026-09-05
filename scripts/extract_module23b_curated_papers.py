@@ -127,6 +127,24 @@ def plain_text(path: Path) -> str:
     return re.sub(r"\s+", " ", raw).strip()
 
 
+def is_usable_artifact(path: Path) -> bool:
+    """Reject cached HTTP/error payloads that are not paper source material."""
+    if not path.is_file() or not path.stat().st_size:
+        return False
+    if path.suffix.lower() == ".pdf":
+        return True
+    sample = path.read_bytes()[:16_384].decode("utf-8", errors="replace")
+    lowered = sample.casefold()
+    if any(marker in lowered for marker in ("too many requests", "no result can be found", "preparing to download")):
+        return False
+    if path.suffix.lower() == ".json":
+        try:
+            json.loads(path.read_bytes())
+        except (json.JSONDecodeError, UnicodeDecodeError):
+            return False
+    return bool(sample.strip())
+
+
 def sentences(text: str) -> list[str]:
     # Figure citations commonly contain a period followed by a numeral; do
     # not split a candidate excerpt in the middle of "Fig. 2" or "Fig. 3f".
@@ -153,7 +171,7 @@ def match_excerpt(text: str, summary: str, scope: str) -> tuple[str, int, str]:
 
 
 def choose_artifact(paths: list[Path]) -> tuple[Path | None, str, str]:
-    existing = [path for path in paths if path.is_file()]
+    existing = [path for path in paths if is_usable_artifact(path)]
     if not existing:
         return None, "missing", "no_local_artifact"
     full_text = sorted(

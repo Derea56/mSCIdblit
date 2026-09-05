@@ -7,6 +7,7 @@ import argparse
 import csv
 import hashlib
 import json
+import re
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -65,6 +66,21 @@ def build(inventory: Path, output_root: Path, manifest: Path, sleep_seconds: flo
     output_root.mkdir(parents=True, exist_ok=True)
     existing = {row["pmcid"]: row for row in read_tsv(manifest)} if manifest.exists() else {}
     records: dict[str, dict[str, str]] = {}
+    for path in output_root.iterdir():
+        match = re.match(r"(PMC\d{3,10})_(?:bioc\.json|full\.xml)$", path.name, flags=re.I)
+        if not match or not path.is_file() or not path.stat().st_size:
+            continue
+        pmcid = match.group(1).upper()
+        method = "ncbi_bioc_json" if path.name.endswith("_bioc.json") else "ncbi_pmc_xml"
+        prior = existing.get(pmcid, {})
+        records[pmcid] = {
+            "pmcid": pmcid,
+            "local_path": f"data/raw/evidence/module23_pmc_fulltext_20260905/{path.name}",
+            "retrieval_status": "cached",
+            "retrieval_method": prior.get("retrieval_method", method),
+            "retrieved_at_utc": prior.get("retrieved_at_utc", datetime.now(timezone.utc).isoformat()),
+            "sha256": sha256(path),
+        }
     for pmcid in requested:
         existing_paths = [
             output_root / f"{pmcid}_bioc.json",
