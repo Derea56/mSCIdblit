@@ -82,3 +82,7 @@ B038 promotes six new 23B edges paired one-to-one with Module 23A for tenascin-R
 ## Review-led expansion: B039 (2026-09-05)
 
 B039 promotes two new 23B edges paired one-to-one with Module 23A for tenascin-R perineuronal-net organization: TNR-dependent perineuronal-net formation/stabilization and aggrecan clustering as the reported extracellular mechanism. Mouse loss-of-function, organotypic/dissociated-culture, add-back/rescue, and no-traumatic-SCI-transfer limits remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B040 (2026-09-05)
+
+B040 promotes one new 23B edge paired one-to-one with Module 23A for the tenascin-R/RPTPζ perineuronal-net structural interface: ectodomain association and interface-mutagenesis effects support a contribution to PNN architecture. Extracellular interface, mouse neuronal-culture, cytoplasmic-relay boundary, and no-traumatic-SCI-transfer limits remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
