@@ -254,3 +254,7 @@ B069 promotes the existing S100A9-containing preparation → Mac-1 function edge
 ## Review-led expansion: B070 (2026-09-05)
 
 B070 adds two new PACAP receptor-proximal pathway edges at medium confidence from a primary PAC1-negative MCF-7 study. The paper assigns PACAP-induced Src/Raf/ERK and PI3K/AKT signaling to a VPAC1-dependent branch and PLC/PKA/cAMP-p38 signaling to a VPAC2-dependent branch. The assignment is bounded to a single pharmacologic cancer-cell study; purified receptor reconstitution, the older broad E132/E133 cAMP/ERK or neuronal claims, native neural/SCI transfer, and terminal TFs remain separate.
+
+## Review-led expansion: B071 (2026-09-05)
+
+B071 promotes the existing S100A8-containing preparation -> Mac-1 function edge to medium confidence using the primary neutrophil study that separately tests S100A8, S100A9, and S100A8/A9 preparations. S100A8-associated Mac-1 up-regulation/activation, Mac-1-neutralization-sensitive fibrinogen adhesion, calcium increase, and chemotaxis are retained at preparation-level functional resolution. Mixed-preparation, no-direct-binding, no-isolated-ITGB2, no-complete-relay, non-SCI comparator, no-terminal-TF, and no-traumatic-SCI-transfer limits remain explicit.
