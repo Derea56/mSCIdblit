@@ -82,3 +82,7 @@ B025 adds two review-led matrix danger-signal candidates and seven source-backed
 ## Review-led expansion: B026 (2026-09-04)
 
 B026 adds one review-led FN-EDA danger-signal candidate and three source-backed A/B edges: EDA-domain engagement of the TLR4-MD2 receptor context, a TLR4-dependent proximal inflammatory/profibrotic relay, and measured fibroblast/myofibroblast and macrophage inflammatory-fibrotic outputs. Primary records were acquired locally and linked through the source manifest. EDA-domain and MD-2 requirements, non-SCI tissue-injury/fibrosis comparator scope, the absence of a structural DAMP-receptor complex, and the absence of traumatic-SCI or terminal-TF transfer remain explicit. The identified alpha4beta1 cooperation paper was not used for promotion because its local full text was not acquired.
+
+## Review-led expansion: B027 (2026-09-04)
+
+B027 adds one review-led SPARC danger-signal candidate and four source-backed A/B edges: direct TLR4 binding, the TLR4-TBK1-IRF3 proximal relay, the IFN-beta-IFNAR-STAT1 relay, and measured IRF3/IRF7-dependent macrophage interferon/inflammatory output. Primary records were acquired locally and linked through the source manifest, while SCI proteomics supplies extracellular-abundance context. Mouse aging/obesity macrophage comparator scope, the absence of an MD-2 requirement or structural receptor-complex claim, and the absence of traumatic-SCI causal transfer remain explicit.

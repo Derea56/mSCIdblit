@@ -32,3 +32,7 @@ B025 promotes seven new 23B edges paired one-to-one with Module 23A: three tenas
 ## Review-led expansion: B026 (2026-09-04)
 
 B026 promotes three new 23B edges paired one-to-one with Module 23A for FN-EDA: TLR4-MD2 engagement, TLR4-dependent proximal signaling, and measured fibroblast/myofibroblast and macrophage inflammatory-fibrotic output. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. EDA-domain and MD-2 requirements, comparator-only scope, no structural DAMP-receptor claim, and the absence of traumatic-SCI or terminal-TF transfer remain explicit; alpha4beta1 cooperation was identified but not promoted without locally acquired full text. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B027 (2026-09-04)
+
+B027 promotes four new 23B edges paired one-to-one with Module 23A for SPARC: direct TLR4 binding, TLR4-TBK1-IRF3 proximal signaling, the IFN-beta-IFNAR-STAT1 relay, and measured IRF3/IRF7-dependent macrophage interferon/inflammatory output. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. SCI extracellular-proteome abundance is retained as context, while aging/obesity macrophage comparator scope, no MD-2 or structural receptor-complex claim, and the absence of traumatic-SCI causal transfer remain explicit. Canonical signaling tables and simulator outputs remain untouched.
