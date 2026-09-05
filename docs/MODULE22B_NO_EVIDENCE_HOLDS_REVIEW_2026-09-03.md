@@ -5083,6 +5083,19 @@ and bone-related comparators, and remain separate from the submitted
 matricellular and integrin handoffs. They do not establish the original
 pathway/function-boundary rows or any SCI-specific upstream relay.
 
+## Individual review 3261-3268
+
+Audits 3261-3268 covered THBS4 handoffs to ITGAV/ITGB3, SDC1, and SDC4,
+THY1 handoffs to ADGRE5 and ITGAX/ITGB2, and TIMP1/TIMP3 handoffs to FGFR2,
+AGTR2, and CD44. All eight rows gained reusable target capacity from
+independently registered HOXD3-ITGB3, NR1H4-SDC1, RELA-SDC4, SP1-ADGRE5,
+RUNX1-ITGAX, NF-Y-FGFR2, and EGR1-CD44 contexts. Targeted AGTR2 promoter
+material was not treated as an activating TF-target edge; the CD44 context
+for the TIMP3-AGTR2 row is explicitly general and separate. These contexts
+remain distinct from the submitted matricellular, adhesion, protease, and
+receptor handoffs. They do not establish the original pathway/function-
+boundary rows or any SCI-specific upstream relay.
+
 ## Individual review 3221-3228
 
 Audits 3221-3228 covered TGFB2/TGFBR3 and TGFB3 handoffs to ACVR1,
