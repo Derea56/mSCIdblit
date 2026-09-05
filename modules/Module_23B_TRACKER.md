@@ -204,3 +204,7 @@ B069 promotes the existing paired 23B S100A9-containing preparation → Mac-1 fu
 ## Review-led expansion: B070 (2026-09-05)
 
 B070 adds two new paired 23B PACAP receptor-proximal pathway edges at medium confidence from a primary PAC1-negative MCF-7 study. The paper assigns PACAP-induced Src/Raf/ERK and PI3K/AKT signaling to a VPAC1-dependent branch and PLC/PKA/cAMP-p38 signaling to a VPAC2-dependent branch. The assignment is bounded to a single pharmacologic cancer-cell study; purified receptor reconstitution, the older broad E132/E133 cAMP/ERK or neuronal claims, native neural/SCI transfer, and terminal TFs remain separate. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B071 (2026-09-05)
+
+B071 promotes the existing paired 23B S100A8-containing preparation -> Mac-1 function edge to medium confidence using primary neutrophil and murine air-pouch assays. The study separately tests S100A8 and reports Mac-1 up-regulation/activation, Mac-1-neutralization-sensitive fibrinogen adhesion, calcium increase, and chemotaxis. Preparation-level material, mixed S100A9/heterocomplex comparators, no direct binary binding, no isolated ITGB2 mechanism, no complete relay, non-SCI comparator scope, no terminal TF, and no traumatic-SCI transfer remain explicit. Canonical signaling tables and simulator outputs remain untouched.
