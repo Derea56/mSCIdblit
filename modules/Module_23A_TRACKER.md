@@ -246,3 +246,7 @@ B067 promotes the existing VTN–αVβ8 function edge from medium-low to medium 
 ## Review-led expansion: B068 (2026-09-05)
 
 B068 adds a new dimer-level S100A8/A9–Mac-1 cellular-binding edge at medium-high confidence using a primary CR3-transfectant study. Recombinant S100A8/A9 binds more strongly to CR3-transfected CHO cells than vector controls, while CD11b/CD18 inhibition reduces only part of the associated neutrophil-survival effect. The record is bounded to cell-based receptor-complex binding, dimer state, alternate receptors, non-SCI comparator models, and no complete downstream relay or traumatic-SCI transfer.
+
+## Review-led expansion: B069 (2026-09-05)
+
+B069 promotes the existing S100A9-containing preparation → Mac-1 function edge to medium confidence using a primary human neutrophil study of MRP-14/S100A9. The study reports Mac-1-mediated adhesion and affinity activation through a distinct upstream receptor and explicitly excludes direct MRP-14–Mac-1 binding. Upstream-receptor identity, MRP-8 heterodimer inhibition, complete relay, terminal TF, non-SCI comparator scope, and traumatic-SCI transfer remain bounded.
