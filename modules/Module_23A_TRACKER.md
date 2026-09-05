@@ -274,3 +274,7 @@ B074 adds a new medium-high-confidence EPHB6/ephrin-B1 reverse-signaling functio
 ## Review-led expansion: B075 (2026-09-05)
 
 B075 adds three medium-high-confidence EFNB1/EFNB2–IL-7Rα edges using a primary mouse immune-cell study. Cellular FRET and immunoprecipitation support separate EFNB1–IL-7Rα and EFNB2–IL-7Rα associations, while combined T-cell-specific Efnb1/Efnb2 knockout and overexpression assays support IL-7Rα surface stabilization, delayed internalization, STAT5 activation, and homeostatic proliferation. The function edge is intentionally assigned to the combined ligand perturbation rather than either ligand alone. Cellular association is not purified affinity, and immune-model, overexpression/crosslinking, no-terminal-TF, neural, and traumatic-SCI boundaries remain explicit.
+
+## Review-led expansion: B076 (2026-09-05)
+
+B076 adds two medium-high-confidence EFNB2–EphB2 SCI-context edges using a primary adult rat thoracic-transection study. Ephrin-B2 is localized to reactive astrocytes and EphB2 to invading meningeal fibroblasts; early lesion-interface cell intermingling is accompanied by reciprocal phosphorylation, followed by astrocyte-fibroblast segregation and glial-fibrotic scar-boundary formation. The receptor-proximal edge and downstream function edge are kept separate, and the function record remains observational because the study did not perform pair-specific perturbation. No purified affinity, complete intracellular ordering, exclusion of other Eph/ephrin members, or transfer beyond adult rat SCI is asserted.
