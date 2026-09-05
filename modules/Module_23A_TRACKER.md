@@ -86,3 +86,7 @@ B026 adds one review-led FN-EDA danger-signal candidate and three source-backed 
 ## Review-led expansion: B027 (2026-09-04)
 
 B027 adds one review-led SPARC danger-signal candidate and four source-backed A/B edges: direct TLR4 binding, the TLR4-TBK1-IRF3 proximal relay, the IFN-beta-IFNAR-STAT1 relay, and measured IRF3/IRF7-dependent macrophage interferon/inflammatory output. Primary records were acquired locally and linked through the source manifest, while SCI proteomics supplies extracellular-abundance context. Mouse aging/obesity macrophage comparator scope, the absence of an MD-2 requirement or structural receptor-complex claim, and the absence of traumatic-SCI causal transfer remain explicit.
+
+## Review-led expansion: B028 (2026-09-04)
+
+B028 adds one review-led galectin-3 candidate and four source-backed A/B edges: Gal3-TLR4 ligand activity, comparator-specific TLR4-dependent microglial activation, rat SCI ROS/TXNIP/NLRP3/IL-1beta inflammatory output, and mouse SCI Gal3/PDGFRbeta+ fibroblast fibrotic-scar function. Primary records were acquired locally and linked through the source manifest. Neuroinflammation comparator scope, the separation of TLR4 ligand evidence from SCI inflammasome and scar-function evidence, and the absence of a universal TLR4-to-NLRP3 relay remain explicit.
