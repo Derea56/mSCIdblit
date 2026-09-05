@@ -4853,12 +4853,6 @@ Five of the eight rows retained reusable target capacity. The ITGAV_ITGB3 row re
 
 The retained contexts remain separate from the submitted Ptn handoff and do not establish source-to-TF activation. The reusable contexts are non-SCI melanoma, signed human, inflammatory fibroblast, hepatic-lipid, and colorectal/colon-epithelial comparators. The individual search log contains 2884 rows through M22B-IND-2884. This tranche added no new edges or evidence records, reused target contexts for five rows, and kept three rows on hold.
 
-## Individual review 2877-2884
-
-Five of the eight rows retained reusable target capacity. The ITGAV_ITGB3 row reused separate component contexts for Itgav and Itgb3 without asserting an intact-complex-specific target; Ncl, Ptprs, Sdc1, and Sdc2 reused existing target contexts. Cdh10, Plxnb2, and Ptprb remained bounded holds because the reviewed material addressed adhesion, receptor/signaling, or endothelial expression without establishing a qualifying named activating TF-to-target relationship.
-
-The retained contexts remain separate from the submitted Ptn handoff and do not establish source-to-TF activation. The reusable contexts are non-SCI melanoma, signed human, inflammatory fibroblast, hepatic-lipid, and colorectal/colon-epithelial comparators. The individual search log contains 2884 rows through M22B-IND-2884. This tranche added no new edges or evidence records, reused target contexts for five rows, and kept three rows on hold.
-
 ## Individual review 2861-2868
 
 Six of the eight rows retained reusable target capacity. Ramp3, Tshr, Vipr1, Adcyap1r1, Adrb2, and Adrb3 reused existing target contexts. Gpr20 and Gpr84 remained bounded holds because the reviewed material addressed receptor structure, ligand/inflammatory expression, or orphan-receptor biology without establishing a qualifying named activating TF-to-target relationship.
