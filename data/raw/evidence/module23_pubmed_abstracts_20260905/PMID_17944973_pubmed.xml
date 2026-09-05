@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='utf-8'?>
+<PubmedArticle><MedlineCitation Status="MEDLINE" Owner="NLM" IndexingMethod="Manual"><PMID Version="1">17944973</PMID><DateCompleted><Year>2008</Year><Month>02</Month><Day>15</Day></DateCompleted><DateRevised><Year>2026</Year><Month>01</Month><Day>28</Day></DateRevised><Article PubModel="Print-Electronic"><Journal><ISSN IssnType="Electronic">1349-7006</ISSN><JournalIssue CitedMedium="Internet"><Volume>99</Volume><Issue>1</Issue><PubDate><Year>2008</Year><Month>Jan</Month></PubDate></JournalIssue><Title>Cancer science</Title><ISOAbbreviation>Cancer Sci</ISOAbbreviation></Journal><ArticleTitle>Molecular analysis of the pathophysiological binding of the platelet aggregation-inducing factor podoplanin to the C-type lectin-like receptor CLEC-2.</ArticleTitle><Pagination><StartPage>54</StartPage><EndPage>61</EndPage><MedlinePgn>54-61</MedlinePgn></Pagination><Abstract><AbstractText>The mucin-type sialoglycoprotein podoplanin (aggrus) is involved in tumor cell-induced platelet aggregation and tumor metastasis. C-type lectin-like receptor-2 (CLEC-2) was recently identified as an endogenous receptor of podoplanin on platelets. However, the pathophysiological importance and function of CLEC-2 have not been elucidated. Here we clarified the pathophysiological interaction between podoplanin and CLEC-2 in vitro and in vivo. Using several deletion mutants of CLEC-2 expressed as Fc chimeras, we first identified an important podoplanin-recognition domain in CLEC-2. Furthermore, the podoplanin-CLEC-2 interaction was confirmed using several deletion mutants of podoplanin expressed as Fc chimeras. Not only the disialyl-core1-attached glycopeptide but also the stereostructure of the podoplanin protein was found to be critical for the CLEC-2-binding activity of podoplanin. We next synthesized various glycopeptides of podoplanin that included both the platelet aggregation-stimulating domain and O-glycan on Thr52. Interestingly, a disialyl-core1-attached glycopeptide was recognized specifically by CLEC-2. Moreover, the anti-podoplanin monoclonal antibody NZ-1 suppressed both the podoplanin-CLEC-2 interaction and podoplanin-induced pulmonary metastasis, suggesting that CLEC-2 is the first pathophysiological receptor of podoplanin to be identified. In summary, we clarified the molecular interaction in vitro and in vivo between a platelet aggregation-inducing factor, podoplanin, and its specific pathophysiological receptor on platelets, CLEC-2. Podoplanin and CLEC-2 might represent promising therapeutic targets in cancer metastasis.</AbstractText></Abstract><AuthorList CompleteYN="Y"><Author ValidYN="Y"><LastName>Kato</LastName><ForeName>Yukinari</ForeName><Initials>Y</Initials><AffiliationInfo><Affiliation>Research Center for Medical Glycoscience, National Institute of Advanced Industrial Science and Technology, Open Space Laboratory C-2, 1-1-1 Umezono, Tsukuba, Ibaraki 305-8568, Japan.</Affiliation></AffiliationInfo></Author><Author ValidYN="Y"><LastName>Kaneko</LastName><ForeName>Mika Kato</ForeName><Initials>MK</Initials></Author><Author ValidYN="Y"><LastName>Kunita</LastName><ForeName>Akiko</ForeName><Initials>A</Initials></Author><Author ValidYN="Y"><LastName>Ito</LastName><ForeName>Hiromi</ForeName><Initials>H</Initials></Author><Author ValidYN="Y"><LastName>Kameyama</LastName><ForeName>Akihiko</ForeName><Initials>A</Initials></Author><Author ValidYN="Y"><LastName>Ogasawara</LastName><ForeName>Satoshi</ForeName><Initials>S</Initials></Author><Author ValidYN="Y"><LastName>Matsuura</LastName><ForeName>Nana</ForeName><Initials>N</Initials></Author><Author ValidYN="Y"><LastName>Hasegawa</LastName><ForeName>Yasushi</ForeName><Initials>Y</Initials></Author><Author ValidYN="Y"><LastName>Suzuki-Inoue</LastName><ForeName>Katsue</ForeName><Initials>K</Initials></Author><Author ValidYN="Y"><LastName>Inoue</LastName><ForeName>Osamu</ForeName><Initials>O</Initials></Author><Author ValidYN="Y"><LastName>Ozaki</LastName><ForeName>Yukio</ForeName><Initials>Y</Initials></Author><Author ValidYN="Y"><LastName>Narimatsu</LastName><ForeName>Hisashi</ForeName><Initials>H</Initials></Author></AuthorList><Language>eng</Language><PublicationTypeList><PublicationType UI="D016428">Journal Article</PublicationType><PublicationType UI="D013485">Research Support, Non-U.S. Gov't</PublicationType></PublicationTypeList><ArticleDate DateType="Electronic"><Year>2007</Year><Month>10</Month><Day>18</Day></ArticleDate></Article><MedlineJournalInfo><Country>England</Country><MedlineTA>Cancer Sci</MedlineTA><NlmUniqueID>101168776</NlmUniqueID><ISSNLinking>1347-9032</ISSNLinking></MedlineJournalInfo><ChemicalList><Chemical><RegistryNumber>0</RegistryNumber><NameOfSubstance UI="D006020">Glycopeptides</NameOfSubstance></Chemical><Chemical><RegistryNumber>0</RegistryNumber><NameOfSubstance UI="D007141">Immunoglobulin Fc Fragments</NameOfSubstance></Chemical><Chemical><RegistryNumber>0</RegistryNumber><NameOfSubstance UI="D037181">Lectins, C-Type</NameOfSubstance></Chemical><Chemical><RegistryNumber>0</RegistryNumber><NameOfSubstance UI="D008562">Membrane Glycoproteins</NameOfSubstance></Chemical><Chemical><RegistryNumber>0</RegistryNumber><NameOfSubstance UI="D011993">Recombinant Fusion Proteins</NameOfSubstance></Chemical><Chemical><RegistryNumber>0</RegistryNumber><NameOfSubstance UI="C104778">CLEC2B protein, human</NameOfSubstance></Chemical><Chemical><RegistryNumber>0</RegistryNumber><NameOfSubstance UI="C117468">PDPN protein, human</NameOfSubstance></Chemical><Chemical><RegistryNumber>0</RegistryNumber><NameOfSubstance UI="D000098853">Podoplanin</NameOfSubstance></Chemical></ChemicalList><CitationSubset>IM</CitationSubset><MeshHeadingList><MeshHeading><DescriptorName UI="D000818" MajorTopicYN="N">Animals</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D016466" MajorTopicYN="N">CHO Cells</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D045744" MajorTopicYN="N">Cell Line, Tumor</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D002678" MajorTopicYN="N">Chimera</DescriptorName><QualifierName UI="Q000378" MajorTopicYN="N">metabolism</QualifierName></MeshHeading><MeshHeading><DescriptorName UI="D006224" MajorTopicYN="N">Cricetinae</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D003412" MajorTopicYN="N">Cricetulus</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D005260" MajorTopicYN="N">Female</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D005909" MajorTopicYN="N">Glioblastoma</DescriptorName><QualifierName UI="Q000235" MajorTopicYN="N">genetics</QualifierName><QualifierName UI="Q000378" MajorTopicYN="N">metabolism</QualifierName><QualifierName UI="Q000556" MajorTopicYN="Y">secondary</QualifierName></MeshHeading><MeshHeading><DescriptorName UI="D006020" MajorTopicYN="N">Glycopeptides</DescriptorName><QualifierName UI="Q000378" MajorTopicYN="N">metabolism</QualifierName></MeshHeading><MeshHeading><DescriptorName UI="D006801" MajorTopicYN="N">Humans</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D007141" MajorTopicYN="N">Immunoglobulin Fc Fragments</DescriptorName><QualifierName UI="Q000235" MajorTopicYN="N">genetics</QualifierName><QualifierName UI="Q000378" MajorTopicYN="N">metabolism</QualifierName></MeshHeading><MeshHeading><DescriptorName UI="D037181" MajorTopicYN="N">Lectins, C-Type</DescriptorName><QualifierName UI="Q000235" MajorTopicYN="Y">genetics</QualifierName><QualifierName UI="Q000378" MajorTopicYN="Y">metabolism</QualifierName></MeshHeading><MeshHeading><DescriptorName UI="D008175" MajorTopicYN="N">Lung Neoplasms</DescriptorName><QualifierName UI="Q000235" MajorTopicYN="N">genetics</QualifierName><QualifierName UI="Q000378" MajorTopicYN="N">metabolism</QualifierName><QualifierName UI="Q000556" MajorTopicYN="Y">secondary</QualifierName></MeshHeading><MeshHeading><DescriptorName UI="D008562" MajorTopicYN="N">Membrane Glycoproteins</DescriptorName><QualifierName UI="Q000037" MajorTopicYN="N">antagonists &amp; inhibitors</QualifierName><QualifierName UI="Q000235" MajorTopicYN="Y">genetics</QualifierName><QualifierName UI="Q000378" MajorTopicYN="Y">metabolism</QualifierName></MeshHeading><MeshHeading><DescriptorName UI="D051379" MajorTopicYN="N">Mice</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D008807" MajorTopicYN="N">Mice, Inbred BALB C</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D010974" MajorTopicYN="N">Platelet Aggregation</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D011485" MajorTopicYN="N">Protein Binding</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D011993" MajorTopicYN="N">Recombinant Fusion Proteins</DescriptorName><QualifierName UI="Q000235" MajorTopicYN="N">genetics</QualifierName><QualifierName UI="Q000378" MajorTopicYN="N">metabolism</QualifierName></MeshHeading><MeshHeading><DescriptorName UI="D017384" MajorTopicYN="N">Sequence Deletion</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D014162" MajorTopicYN="N">Transfection</DescriptorName></MeshHeading><MeshHeading><DescriptorName UI="D000098853" MajorTopicYN="N" AutoHM="Y">Podoplanin</DescriptorName></MeshHeading></MeshHeadingList></MedlineCitation><PubmedData><History><PubMedPubDate PubStatus="pubmed"><Year>2007</Year><Month>10</Month><Day>20</Day><Hour>9</Hour><Minute>0</Minute></PubMedPubDate><PubMedPubDate PubStatus="medline"><Year>2008</Year><Month>2</Month><Day>19</Day><Hour>9</Hour><Minute>0</Minute></PubMedPubDate><PubMedPubDate PubStatus="entrez"><Year>2007</Year><Month>10</Month><Day>20</Day><Hour>9</Hour><Minute>0</Minute></PubMedPubDate><PubMedPubDate PubStatus="pmc-release"><Year>2007</Year><Month>10</Month><Day>18</Day></PubMedPubDate></History><PublicationStatus>ppublish</PublicationStatus><ArticleIdList><ArticleId IdType="pubmed">17944973</ArticleId><ArticleId IdType="pmc">PMC11159596</ArticleId><ArticleId IdType="doi">10.1111/j.1349-7006.2007.00634.x</ArticleId><ArticleId IdType="pii">CAS634</ArticleId></ArticleIdList><ReferenceList><Reference><Citation>Gupta GP, Massague J. Platelets and metastasis revisited: a novel fatty link. J Clin Invest 2004; 114: 1691–3.</Citation><ArticleIdList><ArticleId IdType="pmc">PMC535073</ArticleId><ArticleId IdType="pubmed">15599391</ArticleId></ArticleIdList></Reference><Reference><Citation>
+Kato Y, 
+Fujita N, 
+Kunita A
+<i>
+et al
+</i>. Molecular identification of Aggrus/T1α as a platelet aggregation‐inducing factor expressed in colorectal tumors. 
+J Biol Chem
+2003; 278: 51 599–605.
+</Citation><ArticleIdList><ArticleId IdType="pubmed">14522983</ArticleId></ArticleIdList></Reference><Reference><Citation>
+Breiteneder‐Geleff S, 
+Soleiman A, 
+Kowalski H
+<i>
+et al
+</i>. Angiosarcomas express mixed endothelial phenotypes of blood and lymphatic capillaries: podoplanin as a specific marker for lymphatic endothelium. 
+Am J Pathol
+1999; 154: 385–94.
+
+</Citation><ArticleIdList><ArticleId IdType="pmc">PMC1849992</ArticleId><ArticleId IdType="pubmed">10027397</ArticleId></ArticleIdList></Reference><Reference><Citation>Kato Y, Kaneko M, Sata M, Fujita N, Tsuruo T, Osawa M. Enhanced expression of Aggrus (T1α/podoplanin), a platelet‐aggregation‐inducing factor in lung squamous cell carcinoma. Tumor Biol 2005; 26: 195–200.</Citation><ArticleIdList><ArticleId IdType="pubmed">16006773</ArticleId></ArticleIdList></Reference><Reference><Citation>
+Martin‐Villar E, 
+Scholl FG, 
+Gamallo C
+<i>
+et al
+</i>. Characterization of human PA2.26 antigen (T1α‐2, podoplanin), a small membrane mucin induced in oral squamous cell carcinomas. 
+Int J Cancer
+2005; 113: 899–910.
+
+</Citation><ArticleIdList><ArticleId IdType="pubmed">15515019</ArticleId></ArticleIdList></Reference><Reference><Citation>Wicki A, Lehembre F, Wick N, Hantusch B, Kerjaschki D, Christofori G. Tumor invasion in the absence of epithelial–mesenchymal transition: podoplanin‐mediated remodeling of the actin cytoskeleton. Cancer Cell 2006; 9: 261–72.</Citation><ArticleIdList><ArticleId IdType="pubmed">16616332</ArticleId></ArticleIdList></Reference><Reference><Citation>Kimura N, Kimura I. Podoplanin as a marker for mesothelioma. Pathol Int 2005; 55: 83–6.</Citation><ArticleIdList><ArticleId IdType="pubmed">15693854</ArticleId></ArticleIdList></Reference><Reference><Citation>Kato Y, Sasagawa I, Kaneko M, Osawa M, Fujita N, Tsuruo T. Aggrus: a diagnostic marker that distinguishes seminoma from embryonal carcinoma in testicular germ cell tumors. Oncogene 2004; 23: 8552–6.</Citation><ArticleIdList><ArticleId IdType="pubmed">15361850</ArticleId></ArticleIdList></Reference><Reference><Citation>
+Mishima K, 
+Kato Y, 
+Kaneko MK
+<i>
+et al
+</i>. Podoplanin expression in primary central nervous system germ cell tumors: a useful histological marker for the diagnosis of germinoma. 
+Acta Neuropathol
+2006; 111: 563–8.
+
+</Citation><ArticleIdList><ArticleId IdType="pubmed">16718353</ArticleId></ArticleIdList></Reference><Reference><Citation>Mishima K, Kato Y, Kaneko MK, Nishikawa R, Hirose T, Matsutani M. Increased expression of podoplanin in malignant astrocytic tumors as a novel molecular marker of malignant progression. Acta Neuropathol 2006; 111: 483–8.</Citation><ArticleIdList><ArticleId IdType="pubmed">16596424</ArticleId></ArticleIdList></Reference><Reference><Citation>
+Kunita A, 
+Kashima TG, 
+Morishita Y
+<i>
+et al
+</i>. The platelet aggregation‐inducing factor aggrus/podoplanin promotes pulmonary metastasis. 
+Am J Pathol
+2007; 170: 1337–47.
+
+</Citation><ArticleIdList><ArticleId IdType="pmc">PMC1829466</ArticleId><ArticleId IdType="pubmed">17392172</ArticleId></ArticleIdList></Reference><Reference><Citation>Kaneko MK, Kato Y, Kitano T, Osawa M. Conservation of a platelet activating domain of Aggrus/podoplanin as a platelet aggregation‐inducing factor. Gene 2006; 378: 52–7.</Citation><ArticleIdList><ArticleId IdType="pubmed">16766141</ArticleId></ArticleIdList></Reference><Reference><Citation>Kaneko M, Kato Y, Kunita A, Fujita N, Tsuruo T, Osawa M. Functional sialylated O‐glycan to platelet aggregation on Aggrus (T1α/podoplanin) molecules expressed in Chinese Hamster Ovary cells. J Biol Chem 2004; 279: 38 838–43.</Citation><ArticleIdList><ArticleId IdType="pubmed">15231832</ArticleId></ArticleIdList></Reference><Reference><Citation>
+Kaneko MK, 
+Kato Y, 
+Kameyama A
+<i>
+et al
+</i>. Functional glycosylation of human podoplanin: glycan structure of platelet aggregation‐inducing factor. 
+FEBS Lett
+2007; 581: 331–6.
+
+</Citation><ArticleIdList><ArticleId IdType="pubmed">17222411</ArticleId></ArticleIdList></Reference><Reference><Citation>
+Schacht V, 
+Ramirez MI, 
+Hong YK
+<i>
+et al
+</i>. T1α/podoplanin deficiency disrupts normal lymphatic vasculature formation and causes lymphedema. 
+EMBO J
+2003; 22: 3546–56.
+
+</Citation><ArticleIdList><ArticleId IdType="pmc">PMC165612</ArticleId><ArticleId IdType="pubmed">12853470</ArticleId></ArticleIdList></Reference><Reference><Citation>Colonna M, Samaridis J, Angman L. Molecular characterization of two novel C‐type lectin‐like receptors, one of which is selectively expressed in human dendritic cells. Eur J Immunol 2000; 30: 697–704.</Citation><ArticleIdList><ArticleId IdType="pubmed">10671229</ArticleId></ArticleIdList></Reference><Reference><Citation>
+Suzuki‐Inoue K, 
+Fuller GL, 
+Garcia A
+<i>
+et al
+</i>. A novel Syk‐dependent mechanism of platelet activation by the C‐type lectin receptor CLEC‐2. 
+Blood
+2006; 107: 542–9.
+
+</Citation><ArticleIdList><ArticleId IdType="pubmed">16174766</ArticleId></ArticleIdList></Reference><Reference><Citation>
+Suzuki‐Inoue K, 
+Kato Y, 
+Inoue O
+<i>
+et al
+</i>. Involvement of the snake toxin receptor CLEC‐2 in podoplanin‐mediated platelet activation by cancer cells. 
+J Biol Chem
+2007; 282: 25 993–6001.
+</Citation><ArticleIdList><ArticleId IdType="pubmed">17616532</ArticleId></ArticleIdList></Reference><Reference><Citation>
+Kato Y, 
+Kaneko MK, 
+Kuno A
+<i>
+et al
+</i>. Inhibition of tumor cell‐induced platelet aggregation using a novel anti‐podoplanin antibody reacting with its platelet‐aggregation‐stimulating domain. 
+Biochem Biophys Res Commun
+2006; 349: 1301–7.
+
+</Citation><ArticleIdList><ArticleId IdType="pubmed">16979138</ArticleId></ArticleIdList></Reference><Reference><Citation>
+Pohlmann S, 
+Zhang J, 
+Baribaud F
+<i>
+et al
+</i>. Hepatitis C virus glycoproteins interact with DC‐SIGN and DC‐SIGNR. 
+J Virol
+2003; 77: 4070–80.
+
+</Citation><ArticleIdList><ArticleId IdType="pmc">PMC150620</ArticleId><ArticleId IdType="pubmed">12634366</ArticleId></ArticleIdList></Reference><Reference><Citation>
+Kariyazono H, 
+Nakamura K, 
+Arima J
+<i>
+et al
+</i>. Evaluation of anti‐platelet aggregatory effects of aspirin, cilostazol and ramatroban on platelet‐rich plasma and whole blood. 
+Blood Coagul Fibrinolysis
+2004; 15: 157–67.
+
+</Citation><ArticleIdList><ArticleId IdType="pubmed">15091003</ArticleId></ArticleIdList></Reference><Reference><Citation>
+Fuller GL, 
+Williams JA, 
+Tomlinson MG
+<i>
+et al
+</i>. The C‐type lectin receptors CLEC‐2 and Dectin‐1, but not DC‐SIGN, signal via a novel YXXL‐dependent signaling cascade. 
+J Biol Chem
+2007; 282: 12 397–409.
+</Citation><ArticleIdList><ArticleId IdType="pmc">PMC1997429</ArticleId><ArticleId IdType="pubmed">17339324</ArticleId></ArticleIdList></Reference><Reference><Citation>Robinson MJ, Sancho D, Slack EC, LeibundGut‐Landmann S, Reis e Sousa C. Myeloid C‐type lectins in innate immunity. Nat Immunol 2006; 7: 1258–65.</Citation><ArticleIdList><ArticleId IdType="pubmed">17110942</ArticleId></ArticleIdList></Reference><Reference><Citation>Watson AA, Brown J, Harlos K, Eble JA, Walter TS, O’Callaghan CA. The crystal structure and mutational binding analysis of the extracellular domain of the platelet‐activating receptor CLEC‐2. J Biol Chem 2007; 282: 3165–72.</Citation><ArticleIdList><ArticleId IdType="pubmed">17132623</ArticleId></ArticleIdList></Reference><Reference><Citation>Tsuruo T, Yamori T, Naganuma K, Tsukagoshi S, Sakurai Y. Characterization of metastatic clones derived from a metastatic variant of mouse colon adenocarcinoma 26. Cancer Res 1983; 43: 5437–42.</Citation><ArticleIdList><ArticleId IdType="pubmed">6616476</ArticleId></ArticleIdList></Reference><Reference><Citation>Sugimoto Y, Watanabe M, Oh‐hara T, Sato S, Isoe T, Tsuruo T. Suppression of experimental lung colonization of a metastatic variant of murine colon adenocarcinoma 26 by a monoclonal antibody 8F11 inhibiting tumor cell‐induced platelet aggregation. Cancer Res 1991; 51: 921–5.</Citation><ArticleIdList><ArticleId IdType="pubmed">1988132</ArticleId></ArticleIdList></Reference></ReferenceList></PubmedData></PubmedArticle>
