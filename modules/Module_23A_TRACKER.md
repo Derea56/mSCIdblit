@@ -109,3 +109,6 @@ B030 adds one review-led S100A8/A9 calprotectin-dimer candidate and four source-
 ## Review-led expansion: B033 (2026-09-05)
 
 B033 adds one review-led tenascin-R candidate and four source-backed A-layer edges: isolated FBG-R direct TLR4 binding, TLR4-dependent NF-kB activity, macrophage IL-6/IL-8/TNF output, and whole-TNR restriction of selected posttraumatic SCI locomotor recovery with altered synaptic remodeling. The FBG-R findings are non-SCI comparator evidence, while the SCI finding is an adult mouse genotype study; no traumatic-SCI TLR4 mechanism, full-length presentation equivalence, axonal-regrowth mechanism, or terminal TF is asserted. No Module 20A–22A ledger is modified.
+## Review-led expansion: B034 (2026-09-05)
+
+B034 adds one review-led tenascin-R axon-associated candidate and five source-backed A-layer edges: direct TNR-MAG binding, MAG-cell repulsion, direct TNR-F11/CNTN1 domain interaction, enhanced F11-mediated neurite outgrowth, and TNR substrate inhibition of retinal axon growth. MAG/F11 domain resolution, substrate presentation, non-SCI comparator scope, amphibian injury model, and absence of a defined cytoplasmic relay or terminal TF remain explicit. No Module 20A–22A ledger is modified.
