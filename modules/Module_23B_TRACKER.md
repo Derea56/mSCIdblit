@@ -200,3 +200,7 @@ B068 adds a new paired 23B dimer-level S100A8/A9–Mac-1 cellular-binding edge a
 ## Review-led expansion: B069 (2026-09-05)
 
 B069 promotes the existing paired 23B S100A9-containing preparation → Mac-1 function edge to medium confidence using a primary human neutrophil study of MRP-14/S100A9. The study reports Mac-1-mediated adhesion and affinity activation through a distinct upstream receptor and explicitly excludes direct MRP-14–Mac-1 binding. Upstream-receptor identity, MRP-8 heterodimer inhibition, complete relay, terminal TF, non-SCI comparator scope, and traumatic-SCI transfer remain bounded. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B070 (2026-09-05)
+
+B070 adds two new paired 23B PACAP receptor-proximal pathway edges at medium confidence from a primary PAC1-negative MCF-7 study. The paper assigns PACAP-induced Src/Raf/ERK and PI3K/AKT signaling to a VPAC1-dependent branch and PLC/PKA/cAMP-p38 signaling to a VPAC2-dependent branch. The assignment is bounded to a single pharmacologic cancer-cell study; purified receptor reconstitution, the older broad E132/E133 cAMP/ERK or neuronal claims, native neural/SCI transfer, and terminal TFs remain separate. Canonical signaling tables and simulator outputs remain untouched.
