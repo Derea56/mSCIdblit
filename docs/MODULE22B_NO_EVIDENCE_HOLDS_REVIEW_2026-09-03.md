@@ -5022,6 +5022,17 @@ prostate/bladder-cancer comparators and remain separate from the teneurin-
 latrophilin adhesion handoffs; they do not establish a teneurin-to-AR relay or
 promote the original pathway/function-boundary rows.
 
+## Individual review 3197-3204
+
+Audits 3197-3204 covered TENM3/TENM4 handoffs to ADGRL1, ADGRL2, and ADGRL3,
+TFPI-SDC4, TG-TPO, and TGFA-EGFR/ERBB2. All eight rows gained reusable target
+capacity from independently registered ADGRL AR, RELA-SDC4, EGR1-TPO, and
+EGR1-EGFR contexts. These are general regulatory target contexts, including
+human cancer or signed public TF comparator evidence, and remain separate
+from the submitted adhesion, protease/matrix, thyroid, and growth-factor
+handoffs. They do not establish the original pathway/function-boundary rows
+or any SCI-specific upstream relay.
+
 ## Individual review 3181-3188
 
 Audits 3181-3188 covered the Tac2/TACR3, Tac4/TACR1, TAFA4/FPR1,
