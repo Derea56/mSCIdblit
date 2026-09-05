@@ -5012,6 +5012,20 @@ Seven of the eight rows retained reusable target capacity. Slitrk6-Ptprs reused 
 
 These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human/mouse adipose, liver, neuronal, inner-ear, and promoter-haplotype systems, plus chicken/quail muscle. The individual search log contains 3108 rows through M22B-IND-3108. This tranche added seven standalone TF-to-target edges and seven evidence records covering six distinct CHRNA targets, reused a registered PTPRS target context for one row, and kept one row on hold.
 
+## Individual review 3133-3140
+
+Audits 3133-3140 covered the eight Slurp2 handoffs to CHRNA1, CHRNA10,
+CHRNA2, CHRNA3, CHRNA4, CHRNA5, CHRNA6, and CHRNA7. All eight rows gained
+reusable target capacity: seven rows reused existing independently curated
+TF-to-subunit contexts, while the CHRNA6 review added one new POU4F2/BRN3B
+regulatory context from a peer-reviewed mouse ipRGC study. The CHRNA2 row
+retains two distinct target contexts, PPARG and POU4F2. The CHRNA6 evidence
+supports target-gene designation and BRN3B perturbation-dependent expression,
+but the article text does not provide a CHRNA6-specific BRN3B occupancy assay;
+it is therefore recorded as contextual regulatory support rather than a direct
+binding claim. These additions remain separate from the Slurp2 handoffs and do
+not promote the held ligand/receptor rows.
+
 ## Individual review 3125-3132
 
 Seven of the eight rows gained reusable TF-target capacity. Slurp1-Chrna9 gained a direct TBX3-to-Chrna9 context from mouse pluripotent-stem-cell promoter ChIP, reporter, and knockdown evidence. Slurp1-Chrnb1 reused existing signed MYC-to-CHRNB1 contexts in human and mouse. Slurp1-Chrnb3 gained a bounded POU2F1/OCT1-linked promoter context from human allele-sensitive binding and activity assays. Slurp1-Chrnb4 gained a direct rat SP1 promoter context. Slurp1-Chrnd gained direct FUS promoter occupancy and perturbation evidence, while Slurp1-Chrne gained both direct FUS evidence and a GABPA/GABPB1 N-box regulatory context. Slurp1-Chrng gained direct NOTCH1/NICD promoter occupancy and muscle gain-of-function evidence. Slurp1-Chrnb2 remained on hold because the targeted review located promoter-variant studies and ischemia-associated REST repression, but no qualifying named activating TF-to-CHRNB2 relationship.
