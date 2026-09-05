@@ -4933,6 +4933,12 @@ These contexts remain separate from the submitted ligand/receptor or channel han
 Seven of the eight rows retained reusable target capacity. Rtn4r-Adgrb1 reused TP53-to-ADGRB1; S100a1-Trpm3 was the only row in this tranche without qualifying target capacity after the targeted search. S100a4-Ccr5 reused STAT1-to-CCR5, S100a4-Erbb2 reused SP1-to-ERBB2, S100a8-Cd36 and S100a9-Cd36 reused HIF1A/STAT1-to-CD36, S100a8-Cd68 reused ELF1-to-CD68, and S100a8-Cd69 reused FOS/JUN-to-CD69 contexts.
 
 These contexts remain separate from the submitted ligand/receptor or channel handoffs and do not establish source-to-TF activation. The comparators are non-SCI human regulon, channel-signaling, inflammatory, epithelial/cancer, hypoxia, myeloid, macrophage, and general immune systems. The individual search log contains 3004 rows through M22B-IND-3004. This tranche added no new edge or evidence records, reused target contexts for seven rows, and kept one row on hold.
+
+## Individual review 3021-3028
+
+Five of the eight rows retained reusable target capacity. Sct-Sctr reused the signed SP1-to-SCTR context; Sele-Ceacam2 reused signed IRF1-to-CEACAM2; and Sell-Cd34 reused the signed RUNX1-to-CD34 context. Sell-Glycam1 and Sell-Madcam1 gained standalone direct target contexts from primary promoter and endogenous-regulation studies. Sdc1-Adgra2, Sdc2-Adgra2, and Sectm1a-Cd7 remained bounded holds because targeted searches did not verify qualifying named activating TF-to-target relationships.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human general-regulatory, mouse inflammatory/platelet, hematopoietic, mammary epithelial, and mucosal-endothelial systems. The individual search log contains 3012 rows through M22B-IND-3012. This tranche added two standalone direct target edges and two evidence records, reused target contexts for three rows, and kept three rows on hold.
 ## Individual review 2973-2980
 
 All eight rows retained reusable target capacity. Rln3-Vipr1 reused the direct SP1-to-VIPR1 promoter context. Rps19-C5ar1 gained a standalone RELA/NF-kappaB-to-C5AR1 promoter context from a primary human hepatoma study. The four RSPO receptor rows reused the direct TCF/LEF-to-Axin2 Wnt target context, with the Rspo3 rows also checked against independent AXIN2/LRP5/6 pathway work. Rspo3-Sdc4 reused HIF1A, SMAD3, KLF5, and RELA SDC4 target contexts, and Rspo4-Lgr4_Lrp5 reused the signed SP1-to-LRP5 context.
