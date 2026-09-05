@@ -5012,6 +5012,18 @@ Seven of the eight rows retained reusable target capacity. Slitrk6-Ptprs reused 
 
 These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human/mouse adipose, liver, neuronal, inner-ear, and promoter-haplotype systems, plus chicken/quail muscle. The individual search log contains 3108 rows through M22B-IND-3108. This tranche added seven standalone TF-to-target edges and seven evidence records covering six distinct CHRNA targets, reused a registered PTPRS target context for one row, and kept one row on hold.
 
+## Individual review 3173-3180
+
+Audits 3173-3180 covered the eight TPH2/HTR1B, TXA2/TBXAS1/TBXA2R, TAC1/DPP4,
+TAC1/FAP, and TAC1/TACR1-3 handoffs. Two rows gained reusable downstream target
+contexts: NFKB2-to-EGFR from TBXA2R-dependent NSCLC signaling and NF-kB-to-IL8
+from substance-P/TACR1 signaling in lung epithelial cells. The remaining six
+rows retained holds because their evidence stopped at immediate-early-gene
+expression, peptide processing, receptor-associated signaling, or candidate
+promoter/enhancer occupancy without a qualifying named TF-to-target result.
+These contexts remain separate from the submitted handoffs and do not promote
+the original pathway/function-boundary rows.
+
 ## Individual review 3165-3172
 
 Audits 3165-3172 covered the eight Sst and TENM/FLRT composite handoffs to
