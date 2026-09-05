@@ -137,6 +137,11 @@ def main() -> None:
             grade, grade_status, grade_basis = grade_rule(row)
             if not grade:
                 grade, grade_status, grade_basis = phase2_primary_grade(linked)
+            if not grade:
+                # The rubric includes U for records that cannot yet support
+                # a defensible A-E call. Do not leave the independent grade
+                # axis blank; preserve the review-required status and basis.
+                grade = "U"
             context, context_status, context_basis = context_rule(row)
             status = "review_required" if grade_status == "review_required" or context_status == "review_required" else "rule_based_provisional"
             papers = sorted({paper for item in linked for paper in stable_papers(item.get("canonical_paper_key", ""))})
@@ -165,7 +170,7 @@ def main() -> None:
                 "observation_statuses": "; ".join(observations),
                 "claim_statuses": "; ".join(claims),
                 "context_basis": context_basis,
-                "limitations": row.get("limitations", ""),
+                "limitations": row.get("limitations", "") or "Not separately recorded in source register.",
             })
             output.append(record)
             grade_counts[(module, grade or "UNASSIGNED")] += 1
@@ -173,7 +178,12 @@ def main() -> None:
             status_counts[(module, status)] += 1
 
     with OUT.open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=FIELDS, delimiter="\t")
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=FIELDS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(output)
 
@@ -182,19 +192,19 @@ def main() -> None:
         "",
         "This is staging/audit output. It does not write canonical database rows.",
         "Rule-based provisional values are derived from explicit register labels",
-        "or an exact validated Phase-2 primary-paper route; remaining unassigned",
-        "grades require paper-level adjudication.",
+        "or an exact validated Phase-2 primary-paper route; U grades retain",
+        "review-required bases for later paper-level adjudication.",
         "",
         f"- Evidence records: {len(output):,}",
         f"- Phase-2 linked rows available: {len(phase2):,}",
         "",
         "## Grade counts",
         "",
-        "| Module | A | B | C | D | E | U | Unassigned |",
-        "|---|---:|---:|---:|---:|---:|---:|---:|",
+        "| Module | A | B | C | D | E | U |",
+        "|---|---:|---:|---:|---:|---:|---:|",
     ]
     for module in MODULES:
-        values = [grade_counts[(module, grade)] for grade in ("A", "B", "C", "D", "E", "U", "UNASSIGNED")]
+        values = [grade_counts[(module, grade)] for grade in ("A", "B", "C", "D", "E", "U")]
         lines.append(f"| {module} | " + " | ".join(f"{value:,}" for value in values) + " |")
     lines.extend([
         "",
@@ -211,7 +221,7 @@ def main() -> None:
         "## Use",
         "",
         "- `evidence_grade` and `context_level` are independent and must be retained together with the written bases.",
-        "- `grading_status=review_required` means the register fields do not safely support a final grade.",
+        "- `grading_status=review_required` rows receive rubric grade `U`; the written basis identifies what must be resolved before an A-E call.",
         "- A stable paper anchor, experiment-level source locator, exact claim/observation, and scope match remain required before canonical materialization.",
         "",
     ])

@@ -4544,3 +4544,1335 @@ The retained target contexts remain separate from the submitted NPY handoffs and
 Four of the next eight rows retained reusable target capacity. MTNR1A reused the PITX1 promoter/ChIP context; NPY1R and NPY5R gained HIF1A-dependent hypoxia induction and upstream-region ChIP support; and NPY2R gained FOXI1-dependent promoter reporter and siRNA perturbation evidence. NPFFR2, NPY4R, NPY6R, and PGR15L remained bounded holds because the reviewed material did not establish a named activating TF-to-target relationship or, for NPY6R/PGR15L, did not resolve the exact ligand assignment.
 
 The retained target contexts remain separate from the submitted NPY handoffs and do not establish source-to-TF activation. The NPY1R/NPY5R records are non-SCI breast-cancer hypoxia comparators and explicitly preserve the possibility of indirect HIF-regulated networks; the NPY2R record is a non-SCI neuroendocrine/cardiometabolic comparator. None of the eight exact upstream handoffs was promoted. The individual search log contains 2436 rows through M22B-IND-2436. This tranche added three standalone target edges and three evidence records; MTNR1A reused one prior target context.
+
+## Individual review 2437-2444
+
+Seven of the next eight rows retained reusable target capacity. FGFRL1 gained a direct HIF1A promoter/ChIP/reporter context. ERBB2 gained YY1 cooperative AP-2 support, TFAP2A promoter support, and ELF1 Ets-site support, while its existing SP1 context was reused. ERBB3 gained SOX10 enhancer, RELA promoter, ZNF217 promoter, and KLF5 promoter contexts. ERBB4 reused the existing ESR1 promoter context. The two NRG1-integrin composite rows reused only component-specific ITGA6 or ITGB3 contexts; neither full composite was promoted. PRLHR remained a bounded hold because promoter cloning reported putative sites and basal activity without qualifying named activating TF perturbation, and REST evidence was repressive.
+
+The retained target contexts remain separate from the submitted NRG1 handoffs and do not establish source-to-TF activation. The ERBB2/ERBB3 and KLF5 records are non-SCI cancer comparators; the SOX10/ERBB3 record is a developmental neural-crest comparator; the ITGA6 contexts are non-SCI hypoxia comparators; and the ITGB3 context is general signed-public human regulatory evidence. The individual search log contains 2444 rows through M22B-IND-2444. This tranche added eight standalone target edges and eight evidence records; existing ERBB2, ERBB4, ITGA6, and ITGB3 contexts were reused for component-level coverage.
+
+## Individual review 2453-2460
+
+Seven of the next eight rows retained reusable target capacity. EGFR contexts were reused for the NRG3 and NRG4 EGFR rows; ERBB3 contexts were reused for NRG3-ERBB3; ERBB4 contexts were reused for NRG3-ERBB4 and NRG4-ERBB4; and ERBB2/ERBB4 component contexts were reused for the NRG4 and NRG3 receptor-complex rows. GFRA1 reused the existing NFKB1/p50 promoter context. GFRA3 remained a bounded hold because the reviewed literature established developmental expression and receptor-family characterization but not a validated activating TF-to-GFRA3 target relationship.
+
+The retained target contexts remain separate from the submitted NRG3/NRG4/NRTN handoffs and do not establish source-to-TF activation. The EGFR and ERBB receptor contexts are non-SCI cancer, inflammatory, or receptor-hormone comparators; GFRA1 is a non-SCI fibroblast, pancreatic-cancer, and neuronal comparator; and GFRA3 had no qualifying target context. The individual search log contains 2460 rows through M22B-IND-2460. No new standalone edge or evidence record was needed in this tranche; seven rows reused existing target contexts and one remained a bounded hold.
+
+## Individual review 2445-2452
+
+All eight rows retained reusable target capacity. ERBB2/ERBB3, ERBB2/ERBB4, ERBB3, ERBB4, and NRP2 reused existing or newly reviewed component-level target contexts. LRRTM2 gained a direct CREB promoter/CRE-reporter context. MOG gained CREB promoter-occupancy/perturbation support and PPARbeta/delta promoter-occupancy/perturbation support from oligodendrocyte and demyelination studies. The NRG2 and NRG3 receptor or receptor-complex handoffs themselves were not promoted, and no exact LRRTM2 or MOG upstream handoff was promoted.
+
+The retained target contexts remain separate from the submitted NRG2/NRG3 handoffs and do not establish source-to-TF activation. The ERBB2/ERBB3/ERBB4 records are non-SCI cancer or developmental comparators; LRRTM2 is a non-SCI synaptic-neuronal comparator; MOG is a non-SCI oligodendrocyte/demyelination comparator; and NRP2 is general signed-public human regulatory evidence. The individual search log contains 2452 rows through M22B-IND-2452. This tranche added three standalone target edges and three evidence records; existing ERBB2, ERBB3, ERBB4, and NRP2 contexts were reused for component-level coverage.
+
+## Individual review 2461-2468
+
+Three of the next eight rows retained reusable target capacity. ADGRL1 gained AR/AR-V7 promoter-occupancy and androgen-induction support. DAG1 gained a direct SP1 promoter/ChIP/perturbation context. LRRTM2 reused the existing CREB promoter/CRE-reporter context. CLSTN1, CLSTN2, CLSTN3, LRRTM1, and LRRTM3 remained bounded holds because the reviewed material established synaptic adhesion, expression, or family biology without a qualifying named activating TF-to-target relationship.
+
+The retained target contexts remain separate from the submitted NRXN1 handoffs and do not establish source-to-TF activation. ADGRL1 is a non-SCI prostate-cancer comparator; DAG1 is a non-SCI myoblast comparator; and LRRTM2 is a non-SCI synaptic-neuronal comparator. The individual search log contains 2468 rows through M22B-IND-2468. This tranche added two standalone target edges and two evidence records; LRRTM2 reused one prior target context.
+
+## Individual review 2469-2476
+
+Four of the next eight rows retained reusable target capacity. NLGN1 reused the existing RORA context, NLGN2 gained CLOCK/BMAL1 promoter-reporter support, NLGN3 gained beta-catenin/Wnt promoter occupancy, reporter, and site-mutation support, and ADGRL1 reused the AR/AR-V7 promoter-occupancy context. LRRTM4, CLSTN1, CLSTN2, and CLSTN3 remained bounded holds because the reviewed material established synaptic adhesion, expression, or family biology without a qualifying named activating TF-to-target relationship.
+
+The retained target contexts remain separate from the submitted NRXN1/NRXN2 handoffs and do not establish source-to-TF activation. NLGN1 is a non-SCI neuronal/circadian comparator; NLGN2 is a non-SCI circadian/synaptic comparator; NLGN3 is a non-SCI hippocampal neuronal/ASD comparator; and ADGRL1 is a non-SCI prostate-cancer comparator. The individual search log contains 2476 rows through M22B-IND-2476. This tranche added two standalone target edges and two evidence records; NLGN1 and ADGRL1 reused prior target contexts.
+
+## Individual review 2477-2484
+
+Five of the next eight rows retained reusable target capacity. DAG1, LRRTM2, NLGN1, NLGN2, and NLGN3 reused established standalone target contexts. LRRTM1, LRRTM3, and LRRTM4 remained bounded holds because the reviewed material established synaptic adhesion or family biology without a qualifying named activating TF-to-target relationship; CREB occupancy was specifically not detected at the LRRTM1 regulatory region.
+
+The retained target contexts remain separate from the submitted NRXN2 handoffs and do not establish source-to-TF activation. DAG1 is a non-SCI myoblast comparator; LRRTM2 is a non-SCI hippocampal neuronal comparator; NLGN1 is a non-SCI neuronal comparator; NLGN2 is a non-SCI circadian/synaptic comparator; and NLGN3 is a non-SCI hippocampal neuronal/ASD comparator. The individual search log contains 2484 rows through M22B-IND-2484. No new standalone edge or evidence record was needed in this tranche; five rows reused prior target contexts and three remained bounded holds.
+
+## Individual review 2485-2492
+
+Five of the next eight rows retained reusable target capacity. ADGRL1, LRRTM2, NLGN1, NLGN2, and NLGN3 reused established standalone target contexts. LRRTM1, LRRTM3, and LRRTM4 remained bounded holds because the reviewed material established synaptic adhesion or family biology without a qualifying named activating TF-to-target relationship; CREB occupancy was specifically not detected at the LRRTM1 regulatory region.
+
+The retained target contexts remain separate from the submitted NRXN3 handoffs and do not establish source-to-TF activation. ADGRL1 is a non-SCI prostate-cancer comparator; LRRTM2 is a non-SCI hippocampal neuronal comparator; NLGN1 is a non-SCI neuronal comparator; NLGN2 is a non-SCI circadian/synaptic comparator; and NLGN3 is a non-SCI hippocampal neuronal/ASD comparator. The individual search log contains 2492 rows through M22B-IND-2492. No new standalone edge or evidence record was needed in this tranche; five rows reused prior target contexts and three remained bounded holds.
+
+## Individual review 2493-2500
+
+All eight rows retained reusable target capacity. NGFR gained direct EGR1 and EGR3 promoter/perturbation contexts, NTRK3 gained RUNX3-dependent developmental expression support, and NTRK1, NTRK2, and ADORA2B reused existing target contexts. The individual search log contains 2500 rows through M22B-IND-2500. This tranche added three standalone target edges and three evidence records; the retained contexts remain separate from the submitted NTF3/NTF5/NTN1 handoffs and do not establish source-to-TF activation.
+
+The new NGFR contexts are peripheral nervous-system, muscle-spindle, and Schwann-cell development/regeneration comparators rather than SCI-specific evidence. The NTRK3 context is embryonic dorsal-root-ganglion/spinal sensory development rather than SCI, while the NTRK1, NTRK2, and ADORA2B contexts remain non-SCI hypoxia, neuronal, inflammatory, or lung-injury comparators.
+
+## Individual review 2501-2508
+
+Four of the next eight rows retained reusable target capacity. DCC reused signed-public TP53 support; MCAM gained MRTF-SRF promoter/reporting and SRF-perturbation support; NEO1 gained c-JUN promoter CUT&RUN and MAPK/AP-1 perturbation support; and UNC5D gained direct TP53-responsive-element, reporter, ChIP, and expression-perturbation support. DSCAM, UNC5A, UNC5B, and UNC5C remained bounded holds because the reviewed material was descriptive, epigenetic, pathway-level, or repressive rather than a qualifying activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted NTN1 handoffs and do not establish source-to-TF activation. DCC is a signed-public human comparator; MCAM is a non-SCI vascular smooth-muscle comparator; NEO1 is a non-SCI pancreatic-tumor comparator; and UNC5D is a non-SCI neuroblastoma/osteosarcoma DNA-damage comparator. The individual search log contains 2508 rows through M22B-IND-2508. This tranche added three standalone target edges and three evidence records; DCC reused one prior target context.
+
+## Individual review 2509-2516
+
+Seven of the next eight rows retained reusable target capacity. CDON gained an LHX2 retinal-progenitor regulatory context; NEO1, DCC, and NTRK2 reused established JUN, TP53, and RORA contexts; UNC5A gained an ESR1/ER-alpha context; and UNC5B gained both HLX and activated-NOTCH1 endothelial contexts. LRRC4C remained a bounded hold because the reviewed neuronal adhesion and expression studies did not provide a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted NTN3, NTN4, and NTNG1 handoffs and do not establish source-to-TF activation. CDON is a non-SCI mouse retinal-development comparator; NEO1 is a non-SCI pancreatic-tumor comparator; DCC is a signed-public human comparator; NTRK2 is a non-SCI human neuronal comparator; UNC5A is a non-SCI breast-cancer comparator; and UNC5B is supported by non-SCI endothelial/vascular comparators. The individual search log contains 2516 rows through M22B-IND-2516. This tranche added four standalone target edges and four evidence records; three rows reused prior target contexts, including two target contexts for UNC5B.
+
+## Individual review 2517-2524
+
+Five of the next eight rows retained reusable target capacity. PTPRF, NGFR, and SORT1 reused established PPARG, EGR, and CEBPA contexts; PTPRS gained a USF2 promoter/knockdown context; and NTSR1 gained a TOX4 promoter ChIP/luciferase context. LRRC4, LRRC4C, and NTSR2 remained bounded holds because the reviewed material was descriptive, pathway-level, or motif-level without qualifying named activating TF evidence.
+
+The retained contexts remain separate from the submitted NTNG2, NTRK3, and NTS handoffs and do not establish source-to-TF activation. PTPRF is a non-SCI cancer comparator; NGFR is a non-SCI peripheral nervous-system/muscle comparator; PTPRS is a non-SCI rheumatoid-arthritis fibroblast comparator; NTSR1 is a non-SCI lung-cancer comparator; and SORT1 is a non-SCI liver/lipid-metabolism comparator. The individual search log contains 2524 rows through M22B-IND-2524. This tranche added two standalone target edges and two evidence records; five rows retained reusable target contexts.
+## Individual review 2525-2532
+
+Six of the next eight rows retained reusable target capacity. ERAP1 gained a TP53 response-element and perturbation context; NRXN1 reused an established context-specific TCF4 regulatory record for three upstream hold rows; OCLN gained both NKX2-1/TTF-1 and FOXO1 contexts; and FPR1 reused the established SPI1 promoter-binding and mutagenesis context. The two NRXN2 rows remained bounded holds because the reviewed TCF4 material reported context-dependent expression but did not provide qualifying direct activating promoter evidence for NRXN2.
+
+The retained contexts remain separate from the submitted Nucb2, Nxph1, Nxph2, Nxph3, Ocln, and Oit1 handoffs and do not establish source-to-TF activation. ERAP1 is a non-SCI human epithelial/influenza comparator; NRXN1 is a non-SCI mouse neural-progenitor/neuron comparator with context-specific directionality; OCLN is supported by non-SCI lung-epithelial and diabetes/vascular comparators; and FPR1 is a non-SCI human myeloid-differentiation comparator. The individual search log contains 2532 rows through M22B-IND-2532. This tranche added three standalone target edges and three evidence records; four rows reused prior target contexts.
+## Individual review 2533-2540
+
+Six of the next eight rows retained reusable target capacity. FPR2 gained POU2F1/OCT1 and SP1 promoter-transactivation contexts; ROBO2 gained HB9 and NKX6 developmental regulatory-support contexts; LINGO1 gained a USF1 promoter-reporter context; NGFR reused established EGR1/EGR3 contexts; TNFRSF1B reused the established JUN signed-regulatory context; and the OSM receptor pair reused STAT1-to-IL6ST support while adding a direct SP1-to-OSMR context. RTN4R and RTN4RL1 remained bounded holds because the reviewed material did not provide qualifying named activating TF-to-target relationships.
+
+The retained contexts remain separate from the submitted Oit1, Olfm2, Omg, and Osm handoffs and do not establish source-to-TF activation. FPR2 is a non-SCI human myeloid comparator; ROBO2 is supported by non-SCI Drosophila embryonic neural-development evidence and is regulatory support rather than direct promoter binding; LINGO1 is a non-SCI human colorectal-cancer comparator; NGFR is a non-SCI peripheral nervous-system/muscle comparator; TNFRSF1B is a non-SCI human general-regulatory comparator; and OSMR is a non-SCI human pancreatic-cancer comparator while IL6ST support is signed general regulatory evidence. The individual search log contains 2540 rows through M22B-IND-2540. This tranche added six standalone target edges and four evidence records; three rows reused prior target contexts.
+## Individual review 2541-2548
+
+Four of the next eight rows retained reusable target capacity. OXTR reused JUN, SP1, and CEBPB signed-regulatory contexts; MTTP gained direct FOXO1 and HNF4A promoter-regulation contexts; PTGDR2/CRTH2 gained PPARγ regulatory-support evidence; and PTGFR reused the existing STAT1 signed-regulatory context. NPR3 and AVPR1A/1B/2 remained bounded holds because the reviewed material did not provide qualifying named activating TF-to-target relationships.
+
+The retained contexts remain separate from the submitted Ostn, Oxt, P4hb, and PGD2-AKR1C3 handoffs and do not establish source-to-TF activation. OXTR is supported by non-SCI human general-regulatory evidence; MTTP by non-SCI human/mouse liver-metabolic comparators; PTGDR2 by non-SCI human T-cell/inflammatory evidence without direct promoter occupancy; and PTGFR by signed general regulatory evidence. The individual search log contains 2548 rows through M22B-IND-2548. This tranche added three standalone target edges and three evidence records; two rows reused prior target contexts.
+## Individual review 2549-2556
+
+Seven of the next eight rows retained reusable target capacity. PTGDR gained a direct RARA promoter context; PTGDR2 gained direct GATA3 promoter evidence in addition to the existing PPARγ regulatory-support context; PTGER1 gained HIF1A-dependent hypoxia expression support; PTGER2 reused the signed-public MYC context; and PTGER4 gained direct SP1 promoter and perturbation evidence. PTGER3 remained a bounded hold because the reviewed studies established receptor expression, receptor signaling, or receptor effects on downstream genes without a qualifying activating TF-to-PTGER3 relationship.
+
+The retained contexts remain separate from the submitted PGD2-PTGDS and PGE2-PTGES/PTGES2 handoffs and do not establish source-enzyme-to-TF activation. RARA/PTGDR is a non-SCI human allergic-inflammation comparator; GATA3/PTGDR2 is a non-SCI human T-cell/Th2 comparator; HIF1A/PTGER1 is a non-SCI mouse osteoblast/hypoxia and bone-repair comparator; MYC/PTGER2 is signed general human regulatory evidence; and SP1/PTGER4 is a non-SCI human glioblastoma comparator. The individual search log contains 2556 rows through M22B-IND-2556. This tranche added four standalone target edges and four evidence records; four rows reused prior target contexts, including the new PTGER1 context reused once.
+## Individual review 2557-2564
+
+Six of the next eight rows reused established target capacity. PTGER4 reused the SP1 promoter and perturbation context; PTGER1 reused the HIF1A hypoxia-expression context; PTGER2 reused the signed-public MYC context; and PTGFR reused the signed-public STAT1 context. The two PTGER3 rows remained bounded holds because the reviewed studies established receptor expression, receptor signaling, or receptor effects on downstream genes without a qualifying activating TF-to-PTGER3 relationship.
+
+The reused contexts remain separate from the submitted PGE2-PTGES2, PGE2-PTGES3, and PGF2α-CBR1/PRXL2B handoffs and do not establish source-enzyme-to-TF activation. PTGER4 is supported by a non-SCI human glioblastoma comparator; PTGER1 by a non-SCI mouse osteoblast/hypoxia and bone-repair comparator; PTGER2 and PTGFR by signed general human regulatory evidence. The individual search log contains 2564 rows through M22B-IND-2564. No new standalone edge or evidence record was needed in this tranche; six rows reused prior target contexts and two remained bounded holds.
+## Individual review 2565-2572
+
+All eight rows retained reusable target capacity. PTGIR gained direct promoter contexts for SP1, SPI1/PU.1, and POU2F1/Oct-1, plus an independent direct AR promoter context; DPP4 gained direct USF1 and USF2 promoter contexts; FAP gained direct EGR1 promoter evidence; and PCDHA1, PCDHA2, PCDHA10, PCDHA11, and PCDHA12 gained CTCF/cohesin-dependent clustered-promoter regulatory support.
+
+The retained contexts remain separate from the submitted PGI2-PTGIS, Pam-DPP4/FAP, and clustered Pcdha homophilic-adhesion handoffs and do not establish source-to-TF activation. PTGIR is supported by non-SCI human vascular/megakaryoblastic comparators; DPP4 by non-SCI human epithelial comparators; FAP by non-SCI tumor-stroma/wound-healing comparators; and the PCDHA contexts by non-SCI human/mouse neuronal-development evidence. The PCDHA records are explicitly cluster-level regulatory support rather than isolated isoform-specific activation assays. The individual search log contains 2572 rows through M22B-IND-2572. This tranche added twelve standalone target edges and five evidence records; all eight rows retained target contexts.
+## Individual review 2573-2580
+
+All eight rows retained reusable target capacity. The PCDHA3, PCDHA4, PCDHA5, PCDHA6, PCDHA7, and PCDHA8 rows gained CTCF/cohesin-dependent clustered-promoter regulatory support; the Pcdha4b rows gained the same context, with the current mouse annotation linking Pcdha4b to the Pcdha4/PCDHA4 orthology record.
+
+The retained contexts remain separate from the submitted Pcdha homophilic-adhesion handoffs and do not establish source-to-TF activation. These are non-SCI mouse neuronal-development comparators, and the PCDHA records are explicitly cluster-level regulatory support rather than isolated isoform-specific activation assays. The Pcdha4b context is annotation-linked and should not be read as an isolated Pcdha4b activation experiment. The individual search log contains 2580 rows through M22B-IND-2580. This tranche added seven standalone target edges and one evidence record; all eight rows retained target contexts.
+## Individual review 2581-2588
+
+All eight rows retained reusable target capacity. PCDHA9 and PCDHAC1 gained CTCF-linked clustered-promoter regulatory support; PCDHAC2 gained a distinct RAD21/cohesin-dependent C-type context; and PCDHB1, PCDHB10, PCDHB11, PCDHB6, and PCDHB8 gained CTCF-linked beta-cluster regulatory support.
+
+The retained contexts remain separate from the submitted Pcdha/Pcdhb homophilic or heterophilic adhesion handoffs and do not establish source-to-TF activation. These are non-SCI mouse neuronal-development comparators. The PCDHA and PCDHB records are explicitly cluster-level regulatory support rather than isolated isoform-specific activation assays, and PCDHAC2 is not presented as a CTCF-to-target claim. The individual search log contains 2588 rows through M22B-IND-2588. This tranche added eight standalone target edges and three evidence records; all eight rows retained target contexts.
+## Individual review 2589-2596
+
+All eight rows retained reusable target capacity. Seven rows reused the established CTCF-linked clustered-beta target contexts for PCDHB10, PCDHB11, PCDHB6, and PCDHB8, while PCDHB12 gained a new CTCF-linked beta-cluster regulatory-support edge.
+
+The retained contexts remain separate from the submitted Pcdhb homophilic or heterophilic adhesion handoffs and do not establish source-to-TF activation. These are non-SCI mouse brain/neuronal comparators, and the PCDHB records are explicitly cluster-level regulatory support rather than isolated isoform-specific activation assays. The individual search log contains 2596 rows through M22B-IND-2596. This tranche added one standalone target edge, reused seven existing target contexts, and retained target contexts for all eight rows.
+## Individual review 2597-2604
+
+All eight rows retained reusable target capacity. PCDHB13, PCDHB15, PCDHB16, PCDHB17, PCDHB18, PCDHB19, PCDHB21, and PCDHB2 gained CTCF-linked clustered-beta promoter regulatory support.
+
+The retained contexts remain separate from the submitted Pcdhb homophilic adhesion handoffs and do not establish source-to-TF activation. These are non-SCI mouse brain/neuronal comparators, and the PCDHB records are explicitly cluster-level regulatory support rather than isolated isoform-specific activation assays. The individual search log contains 2604 rows through M22B-IND-2604. This tranche added eight standalone target edges and one expanded evidence record; all eight rows retained target contexts.
+## Individual review 2605-2612
+
+All eight rows retained reusable target capacity. PCDHB20, PCDHB21, PCDHB22, PCDHB3, and PCDHB4 gained CTCF-linked clustered-beta promoter regulatory support; the PCDHB10, PCDHB11, and PCDHB12 rows reused existing beta-cluster contexts.
+
+The retained contexts remain separate from the submitted Pcdhb homophilic or heterophilic adhesion handoffs and do not establish source-to-TF activation. These are non-SCI mouse brain/neuronal comparators, and the PCDHB records are explicitly cluster-level regulatory support rather than isolated isoform-specific activation assays. The individual search log contains 2612 rows through M22B-IND-2612. This tranche added five standalone target edges, reused three existing target contexts, and retained target contexts for all eight rows.
+## Individual review 2613-2620
+
+All eight rows retained reusable target capacity. PCDHB5, PCDHB7, and PCDHB9 gained CTCF-linked clustered-beta promoter regulatory support; the PCDHB6 and PCDHB8 rows reused established beta-cluster contexts.
+
+The retained contexts remain separate from the submitted Pcdhb homophilic or heterophilic adhesion handoffs and do not establish source-to-TF activation. These are non-SCI mouse brain/neuronal comparators, and the PCDHB records are explicitly cluster-level regulatory support rather than isolated isoform-specific activation assays. The individual search log contains 2620 rows through M22B-IND-2620. This tranche added three standalone target edges, reused five existing target contexts, and retained target contexts for all eight rows.
+
+
+## Individual review 2621-2628
+
+All eight rows retained reusable target capacity. The PCDHB8–PCDHB6, PCDHB8–PCDHB8, and PCDHB9–PCDHB9 rows reused established beta-cluster contexts; PCDHGA1, PCDHGA10, PCDHGA11, PCDHGA12, and PCDHGA2 gained CTCF-linked gamma-cluster promoter regulatory support.
+
+The retained contexts remain separate from the submitted Pcdhb and Pcdhga homophilic-adhesion handoffs and do not establish source-to-TF activation. These are non-SCI mouse/human neuronal-development comparators. The PCDHG records are explicitly gamma-cluster regulatory support rather than isolated isoform-specific activation assays. The individual search log contains 2628 rows through M22B-IND-2628. This tranche added five standalone target edges, reused three existing target contexts, and retained target contexts for all eight rows.
+
+
+## Individual review 2629-2636
+
+All eight rows retained reusable target capacity. PCDHGA3, PCDHGA4, PCDHGA5, PCDHGA6, PCDHGA7, PCDHGA8, and PCDHGA9, together with PCDHGB1, gained CTCF-linked gamma-cluster promoter regulatory support.
+
+The retained contexts remain separate from the submitted Pcdhga and Pcdhgb homophilic-adhesion handoffs and do not establish source-to-TF activation. These are non-SCI mouse/human neuronal-development comparators. The PCDHG records are explicitly gamma-cluster regulatory support rather than isolated isoform-specific activation assays. The individual search log contains 2636 rows through M22B-IND-2636. This tranche added eight standalone target edges and retained target contexts for all eight rows.
+
+
+## Individual review 2637-2644
+
+Seven of the eight rows retained reusable target capacity. PCDHGB2, PCDHGB4, PCDHGB5, PCDHGB6, PCDHGB7, PCDHGB8, and PCDHGC3 gained CTCF-linked gamma-cluster promoter regulatory support. PCDHGC4 remained a bounded hold because the reviewed primary study reports that its promoter lacks the CTCF conserved sequence element and cannot bind CTCF.
+
+The retained contexts remain separate from the submitted Pcdhgb/Pcdhgc homophilic-adhesion handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI mouse/human neuronal-development comparators. PCDHGC4 has non-SCI mouse spinal-cord neuronal-survival evidence, but that functional result is not a qualifying activating TF-to-target relationship. The individual search log contains 2644 rows through M22B-IND-2644. This tranche added seven standalone target edges, retained target contexts for those seven rows, and kept PCDHGC4 on hold.
+
+
+## Individual review 2645-2652
+
+Five of the eight rows retained reusable target capacity. CD81 gained a direct PAX5 promoter-binding and perturbation context; CD36, LDLR, LRP1, and LRP8 reused existing target contexts. PCDHGC5, GPR171, and APLP2 remained bounded holds: the reviewed γC5 promoter lacks the CTCF conserved sequence element, GPR171 literature did not identify a named activating TF-to-target relationship, and APLP2 promoter characterization did not identify a named activating TF or direct TF occupancy.
+
+The retained contexts remain separate from the submitted Pcsk9 and Pcdhgc5 handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI human epithelial/B-cell, mouse hepatic, human hepatic, human melanoma, and human cancer-cell comparators. PCDHGC5 has clustered-protocadherin neuronal evidence but the specific reviewed promoter mechanism excludes CTCF for γC5; GPR171 and APLP2 remain on hold pending qualifying TF evidence. The individual search log contains 2652 rows through M22B-IND-2652. This tranche added one standalone direct target edge, reused four existing target contexts, and kept three rows on hold.
+
+
+## Individual review 2653-2660
+
+Seven of the eight rows retained reusable target capacity. SORT1, VLDLR, PDGFRB, and PDGFB reused existing target contexts; Pdcd1 gained direct NFATC1 promoter-binding and activation evidence; and Rgmb gained direct DRG11 promoter-binding and reporter evidence in embryonic sensory neurons and spinal cord. Pdcd2 remained a bounded hold because the reviewed named TF evidence was direct BCL6 repression rather than activation.
+
+The retained contexts remain separate from the submitted Pcsk9, Pdap1, Pdgfa, Pdgfb, and Pdcd1lg2 handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI hepatic, general signed-regulatory, mouse T-cell, and embryonic dorsal-root-ganglion/spinal-cord developmental comparators. The individual search log contains 2660 rows through M22B-IND-2660. This tranche added two standalone direct target edges, reused five existing target contexts, and kept Pdcd2 on hold.
+
+
+## Individual review 2661-2668
+
+Seven of the eight rows retained reusable target capacity. Itgav, LRP1, Pdgfrb, S1pr1, and FLT1 reused existing contexts; Pdgfra gained direct FOXO1/FOXO3 promoter-binding and reporter evidence; and Flt4 gained direct Notch/CSL promoter-transactivation evidence. The composite Pdgfra_Pdgfrb row remained a bounded hold because component-gene regulation does not establish a single TF-to-receptor-complex target edge.
+
+The retained contexts remain separate from the submitted Pdgfb/Pdgfc handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI mouse melanoma, human melanoma, mouse/human hepatic or vascular, mouse T-cell, human signed-regulatory, neuroblastoma, and endothelial-development comparators. The individual search log contains 2668 rows through M22B-IND-2668. This tranche added three standalone direct target edges, reused five existing target contexts, and kept the composite Pdgfra_Pdgfrb row on hold.
+## Individual review 2669-2676
+
+Five of the eight rows retained reusable target capacity. Kdr and Pdgfrb reused existing signed regulatory contexts; Pdpn gained direct SP1, SP3, and FOS promoter evidence; and Slc2a2 gained direct HNF4A, HNF1A, and FOXA2 promoter-regulatory contexts. The composite Pdgfra_Pdgfrb row remained a bounded hold because component-gene regulation does not establish a single TF-to-receptor-complex target edge. The submitted Pdx1-to-Slc2a2 handoff also remains on hold: the new Slc2a2 contexts expand general target capacity but do not override the reviewed primary caution about that specific PDX1 relationship. Adra2a and Grm7 remained holds after bounded searches.
+
+The retained contexts remain separate from the submitted Pdgfc, Pdgfd, Pdpn, Pdx1, and Pdyn handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI signed-regulatory, osteoblast-like, skin-tumor, hepatic, pancreatic beta-cell, and heterologous-reporter comparators. The individual search log contains 2676 rows through M22B-IND-2676. This tranche added six standalone target edges, reused three existing target contexts, and kept four rows on hold.
+## Individual review 2677-2684
+
+Seven of the eight rows retained reusable target capacity. Mtnr1a gained direct PITX1 promoter evidence; Oprk1 gained LMO4-associated promoter regulation; Cd177 gained JUN/FOS AP-1 promoter-regulatory evidence; and Oprd1, Oprm1, Cd38, and Pecam1 reused existing signed or primary target contexts. Oprl1 remained a bounded hold because the primary promoter study mapped alternate promoters and cell-type-specific transcription without establishing a qualifying named activating TF.
+
+The retained contexts remain separate from the submitted Pdyn and Pecam1 handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI renal-injury, addiction-neurobiology, hematopoietic, signed-regulatory, and inflammatory dental-pulp comparators. The individual search log contains 2684 rows through M22B-IND-2684. This tranche added four standalone target edges, reused four existing target contexts, and kept one row on hold.
+## Individual review 2685-2692
+
+Four of the eight rows retained reusable target capacity. Grm7 gained direct MECP2 promoter-reporter and brain-expression evidence; Mtnr1a reused the PITX1 context; Oprd1 reused signed Ets1 and Sp1 contexts; and Oprk1 reused the LMO4-associated promoter context. Adra2a, Mrgprb2, Ogfr, and Oprl1 remained bounded holds because the reviewed promoter or receptor literature did not establish a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted Penk handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI Rett-syndrome/neurodevelopmental, renal-injury, signed-regulatory, addiction-neurobiology, mast-cell, cancer-biology, and ORL1 promoter comparators. The individual search log contains 2692 rows through M22B-IND-2692. This tranche added one standalone direct target edge and one evidence record, reused three existing target-context rows, and kept four rows on hold.
+## Individual review 2693-2700
+
+Seven of the eight rows retained reusable target capacity. OPRM1 reused signed SP1 and STAT1 contexts; CXCR3 reused primary IRF3 and STAT1 contexts; FGFR2 reused the primary NF-Y promoter context; GRM7 reused signed GATA3 and primary MECP2 contexts; LDLR reused signed EGR1/SP1 and primary THRB contexts; LRP1 reused primary YAP1 promoter evidence; and MTNR1A reused the PITX1 promoter context. ADRA2A remained a bounded hold because the reviewed promoter studies did not establish a qualifying named activating TF.
+
+The retained contexts remain separate from the submitted Penk and Pf4 handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI signed-regulatory, inflammatory, osteoblast, Rett-syndrome/neurodevelopmental, hepatic, melanoma, and renal-injury comparators. The individual search log contains 2700 rows through M22B-IND-2700. This tranche added no new edge or evidence records, reused target contexts for seven rows, and kept ADRA2A on hold.
+## Individual review 2701-2708
+
+Six of the eight rows retained reusable target capacity. Procr gained NFAT- and YAP1/TEAD4-associated promoter evidence; Sdc2 reused primary YAP1 regulatory evidence; Thbd reused signed KLF4/SP1 contexts; Flt1 reused signed EGR1/ETS1/HIF1A/TP53 contexts; Nrp1 reused signed ETS1 and Sp1 contexts; and Nrp2 reused signed STAT1 and TP53 contexts. The composite Flt1_Kdr endpoint and Mfap3l remained bounded holds because component-gene or predicted promoter evidence did not establish a single qualifying TF-to-composite target edge.
+
+The retained contexts remain separate from the submitted Pf4 and Pgf handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI vascular-injury, ovarian epithelial-repair, colorectal-cancer, signed-regulatory, and hepatic comparator contexts. The individual search log contains 2708 rows through M22B-IND-2708. This tranche added two standalone target edges and two evidence records, reused five existing target-context rows, and kept two rows on hold.
+## Individual review 2709-2716
+
+Six of the eight rows retained reusable target capacity. Pigr gained direct USF1 and USF2 promoter evidence; Flt1 reused signed EGR1/ETS1/HIF1A/TP53 contexts; Aqp5 gained NMP4 and NFAT1 promoter-regulatory evidence; Cd4 reused signed ETS1 contexts; Cd44 reused signed EGR1 and JUN contexts; and Itgam reused primary SPI1 functional evidence. Tnfrsf21 and Pla2r1 remained bounded holds because the reviewed receptor and promoter literature did not establish qualifying named activating TF-to-target relationships.
+
+The retained contexts remain separate from the submitted Pi16, Piga, Pigf, Pip, Pkm, Pla2g10, and Plat handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI intestinal-epithelial, vascular, alveolar/salivary epithelial, signed-regulatory, hematopoietic, and renal-disease comparators. The individual search log contains 2716 rows through M22B-IND-2716. This tranche added four standalone target edges and three evidence records, reused four existing target-context rows, and kept two rows on hold.
+## Individual review 2717-2724
+
+All eight rows retained reusable target capacity. Igf2r gained direct USF2 promoter-binding and perturbation evidence; Itgb5 gained cooperative SP1, SMAD3, and SMAD4 promoter-regulatory contexts; and Lrp1, Itga3, Itga5, Itgam, and Itgb1 reused existing primary or signed target contexts. The retained contexts remain separate from the submitted Plat and Plau handoffs and do not establish source-to-TF activation.
+
+The reusable contexts are non-SCI human melanoma, mammary-epithelial, mouse carcinoma-cell, signed human/mouse, hematopoietic, intestinal-fibroblast, wound-healing, and osteoblast comparators. The Itgb5 evidence is explicitly cooperative: the study supports an Sp1/Sp3-Smad promoter complex and perturbation of Smad3/4, rather than isolated single-factor sufficiency. The individual search log contains 2724 rows through M22B-IND-2724. This tranche added four standalone target edges and two evidence records, reused target contexts for six rows, and kept no rows on hold.
+## Individual review 2725-2732
+
+Seven of the eight rows retained reusable target capacity. Lrp2, Plaur, Vldlr, and F2r reused existing primary or signed target contexts; St14 gained context-dependent CDX2 enhancer evidence; F2rl1 gained direct IRX3 promoter evidence; and F2rl2 gained direct NRF2 promoter evidence. F2rl3 remained a bounded hold because the reviewed material addressed methylation, regulatory-region association, or platelet expression without establishing a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted Plau and Plg handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI renal epithelial, signed human/mouse, intestinal epithelial, hepatic, human carcinoma, and neural-progenitor comparators. The individual search log contains 2732 rows through M22B-IND-2732. This tranche added three standalone target edges and three evidence records, reused target contexts for four rows, and kept one row on hold.
+
+## Individual review 2797-2804
+
+All eight rows retained reusable target capacity. The PROCR_F2R, PROCR_HSP90AA1, and Procr rows reused NFAT or YAP1/TEAD4-to-Procr contexts; Tek gained ETS2 and ETS1 endothelial promoter contexts; Thbd reused signed KLF4 target evidence; and the CatSper composite rows gained SOX5/SOX9-to-Catsper1 and CTCF/CREM-to-Catsper2 component-gene contexts. These component contexts do not establish a single TF-to-intact-complex edge.
+
+The retained contexts remain separate from the submitted Proc and progesterone-HSD3B1 handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI vascular-injury, epithelial-repair, endothelial-development, signed mouse, and spermatogenic comparators. The individual search log contains 2804 rows through M22B-IND-2804. This tranche added six standalone target edges and three evidence records, reused target contexts for four rows, supplied component-gene contexts for three composite rows, and kept no rows on evidence hold at the target-capacity layer.
+## Individual review 2765-2772
+
+Five of the eight rows retained reusable target capacity. Mc5r, Mrap, and Pth1r remained bounded holds: the reviewed Mc5r evidence was C/EBPβ repression, while the targeted Mrap and Pth1r searches did not identify a qualifying named activating TF-to-target result. Mtnr1a, Oprd1, Oprk1, and Oprl1 reused existing positive target contexts, and Oprm1 gained direct STAT3 promoter-regulatory evidence from neuronal models.
+
+The retained contexts remain separate from the submitted Pomc handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI adipocyte, renal-injury, signed mouse, basolateral-amygdala, hepatocellular-carcinoma, and neuronal comparators. The individual search log contains 2772 rows through M22B-IND-2772. This tranche added one standalone target edge and one evidence record, reused target contexts for four rows, and kept Mc5r, Mrap, and Pth1r on hold.
+## Individual review 2773-2780
+
+Five of the eight rows retained reusable target capacity. Tshr gained cooperative CREB1/NKX2-1 promoter-regulatory contexts; Ptk7 gained direct FOXP4 promoter evidence; and the Itgav_Itgb3, Itgav_Itgb5, and Cxcr2 rows reused existing component or target-gene contexts. Ramp2, Ramp3, and Vipr1 remained bounded holds because the targeted material did not establish qualifying activating TF-to-target evidence; the Vipr1 result supported repression by AP-2alpha.
+
+The retained contexts remain separate from the submitted Pomc and Ppbp handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI thyroid-promoter, ovarian-cancer, melanoma, signed mouse, primary human, and myeloid inflammatory comparators. Component-gene reuse for the integrin-complex rows is explicitly not a claim that a single TF activates the intact complex. The individual search log contains 2780 rows through M22B-IND-2780. This tranche added three standalone target edges and two evidence records, reused target contexts for three rows, and kept Ramp2, Ramp3, and Vipr1 on hold.
+## Individual review 2781-2788
+
+Six of the eight rows retained reusable target capacity. Bsg, Adra2a, Grm7, and Mtnr1a reused existing target contexts; Npy2r gained IRF1 and FOXI1 promoter-regulatory contexts from allele-sensitive promoter perturbation and TF-specific manipulation; and Npy1r gained follow-up HIF1A/EPAS1 regulatory context. Gpr83 and Npy4r remained bounded holds because the targeted material provided expression, receptor-signaling, or pathway evidence without establishing a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted Ppia and Ppy handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI signed mouse, TRRUST, rat endocrine/colonic, neuronal, renal-injury, hypoxic human breast-cancer, and human/rat neuroendocrine comparators. The individual search log contains 2788 rows through M22B-IND-2788. This tranche added six standalone target edges and two evidence records, reused target contexts for four rows, and kept Gpr83 and Npy4r on hold; Npy1r was upgraded on follow-up review with bounded HIF regulatory support.
+## Individual review 2789-2796
+
+Four of the eight rows retained reusable target capacity. Npy5r gained bounded HIF1A/EPAS1 regulatory contexts from hypoxia-dependent expression and upstream chromatin occupancy; Erbb2 reused existing SP1, YY1, TFAP2A, and ELF1 target contexts; and Adgrg6 and Itgam reused existing target contexts. Npy6r, Pgr15l, and both Rpsa rows remained bounded holds because the targeted material did not establish qualifying named activating TF-to-target evidence.
+
+The retained contexts remain separate from the submitted Ppy, Prl, Prn, Prnd, Prnp, and Proc handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI hypoxic breast-cancer, mammary-cancer, intervertebral-disc/scoliosis, and hematopoietic-differentiation comparators. The HIF evidence explicitly permits indirect regulation, and the individual search log contains 2796 rows through M22B-IND-2796. This tranche added four standalone target edges and one evidence record, reused target contexts for three rows, and kept Npy6r, Pgr15l, Rpsa, and Rpsa on hold.
+## Individual review 2757-2764
+
+Five of the eight rows retained reusable target capacity. Adrb3 and Grm7 reused existing direct target contexts; Mc2r gained cooperative FOXL2/NR5A1 promoter regulation; Mc3r gained AP-1 and ATF4 promoter-regulatory contexts; and Mc4r gained SP1, SP3, and NHLH2 promoter-regulatory contexts. Gpr20 remained a bounded hold because the primary study found NF-kB/p65 repression of its promoter, while Gpr84 and Mc1r remained holds because the targeted searches did not establish a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted Pomc handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI mouse adipocyte, neuronal, adrenal/ovarian endocrine, anterior-pituitary, and hypothalamic/heterologous comparators. The individual search log contains 2764 rows through M22B-IND-2764. This tranche added seven standalone target edges and four evidence records, reused target contexts for two rows, and kept Gpr20, Gpr84, and Mc1r on hold.
+## Individual review 2749-2756
+
+All eight rows retained reusable target capacity. Adra2a gained context-dependent SP1 promoter-regulatory evidence; Oprl1 gained direct E2F1 promoter-regulatory evidence in hepatocellular carcinoma; and Grm7, Mtnr1a, Sell, Adcyap1r1, and Adrb2 reused existing positive target contexts. The new Adra2a evidence is explicitly context dependent because the promoter region contains both positive and negative regulatory activity. The retained contexts remain separate from the submitted Pnoc, Podxl2, and Pomc handoffs and do not establish source-to-TF activation.
+
+The reusable contexts are non-SCI rat insulinoma/colonic, human hepatocellular-carcinoma, signed human/mouse, renal-injury, and pulmonary-epithelial/cancer comparators. The individual search log contains 2756 rows through M22B-IND-2756. This tranche added two standalone target edges and two evidence records and reused target contexts for all six remaining rows.
+## Individual review 2741-2748
+
+Five of the eight rows retained reusable target capacity. Plaur, Abca1, Grm7, and Mtnr1a reused existing signed or primary target contexts; Mertk gained direct KLF4 promoter/perturbation evidence from trained alveolar macrophages. Plgrkt, Adra2a, and Mchr1 remained bounded holds because the reviewed material addressed receptor biology, promoter prediction or characterization, repression, or expression association without establishing qualifying activating TF-to-target evidence.
+
+The retained contexts remain separate from the submitted Plg and Pmch handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI human/mouse signed-regulatory, macrophage, neurodevelopmental, renal-injury, inflammatory lung-injury, mammary, and receptor-biology comparators. The individual search log contains 2748 rows through M22B-IND-2748. This tranche added one standalone target edge and one evidence record, reused target contexts for four rows, and kept three rows on hold.
+## Individual review 2725-2732
+
+Seven of the eight rows retained reusable target capacity. Lrp2, Plaur, Vldlr, and F2r reused existing primary or signed target contexts; St14 gained context-dependent CDX2 enhancer evidence; F2rl1 gained direct IRX3 promoter evidence; and F2rl2 gained direct NRF2 promoter evidence. F2rl3 remained a bounded hold because the reviewed material addressed methylation, regulatory-region association, or platelet expression without establishing a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted Plau and Plg handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI renal epithelial, signed human/mouse, intestinal epithelial, hepatic, human carcinoma, and neural-progenitor comparators. The individual search log contains 2732 rows through M22B-IND-2732. This tranche added three standalone target edges and three evidence records, reused target contexts for four rows, and kept one row on hold.
+
+## Individual review 2805-2812
+
+Five of the eight rows retained reusable target capacity. Catsper2 contexts were reused for the CatSper2-CatSper-delta component branch; Catsper3 gained direct CREB1 and CREM-tau promoter evidence; and Catsper4 gained direct CREB1 and CREM-tau promoter evidence with isoform- and developmental-stage caveats. Prokr1 and Prokr2 remained bounded holds because the reviewed material addressed receptor pharmacology, receptor-proximal signaling, or pathway function without establishing a qualifying named activating TF-to-Prokr target-gene relationship.
+
+The retained contexts remain separate from the submitted Progesterone-HSD3B1 and Prok handoffs and do not establish source-to-TF activation or activation of intact CatSper complexes. The reusable contexts are non-SCI reproductive/spermatogenic promoter studies. The individual search log contains 2812 rows through M22B-IND-2812. This tranche added four standalone target edges and two evidence records, reused target contexts for three rows, and kept three rows on hold.
+
+## Individual review 2813-2820
+
+Six of the eight rows retained reusable target capacity. Prokr2 gained direct ZBTB20 promoter-binding and activation evidence; Mertk reused KLF4 evidence and gained direct SP1/SP3 promoter evidence; F2r gained direct EGR1 promoter evidence; and F2rl1, F2rl2, and PARD3 reused existing IRX3, NRF2, and SP1 target contexts. Tyro3 and F2rl3 remained bounded holds because the reviewed material addressed receptor signaling, expression association, or methylation without establishing a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted Prok, Pros1, and Prss2 handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI circadian-neuroendocrine, Sertoli-cell/reproductive, prostate-cancer, hepatocellular-carcinoma, neural-progenitor/toxicant, and breast-cancer comparators. The individual search log contains 2820 rows through M22B-IND-2820. This tranche added four standalone target edges and three evidence records, reused target contexts for four rows, and kept two rows on hold.
+
+## Individual review 2821-2828
+
+Six of the eight rows retained reusable target capacity. F2r, F2rl1, F2rl2, and PARD3 reused existing EGR1, IRX3, NRF2, and SP1 target contexts; Ar gained direct SP1 promoter evidence; and Gpr37 gained direct ZNF750 promoter evidence. F2rl3 and Celsr1 remained bounded holds because the reviewed material addressed protease/receptor biology, adhesion, expression association, or methylation without establishing a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted Prss3l and Psap handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI prostate-cancer, hepatocellular-carcinoma, neural-progenitor/toxicant, breast-cancer, endocrine/prostate, and esophageal-squamous-carcinoma comparators. The individual search log contains 2828 rows through M22B-IND-2828. This tranche added two standalone target edges and two evidence records, reused target contexts for four rows, and kept two rows on hold.
+
+## Individual review 2829-2836
+
+Four of the eight rows retained reusable target capacity. Lrp1, Sort1, Cd44, and Gfra1 reused existing YAP1, CEBPA-family, JUN, and NF-kappaB-complex/NFKB1 target contexts. Gpr37l1, Ncstn, Gfra2, and Gfra3 remained bounded holds because the reviewed material addressed receptor biology, promoter characterization, or GDNF-family signaling without establishing a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted Psap and Pspn handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI melanoma, hepatic lipid-metabolism, human inferred-regulatory, and fibroblast/pancreatic-cancer/neuronal comparators. The individual search log contains 2836 rows through M22B-IND-2836. This tranche added no new edges or evidence records, reused target contexts for four rows, and kept four rows on hold.
+
+## Individual review 2837-2844
+
+Six of the eight rows retained reusable target capacity. Jmjd6 gained direct MYC and MYCN promoter-occupancy and expression-regulation contexts from human neuroblastoma; Scarb1, Alox5, Cav1, Adcyap1r1, and Adrb2 reused existing signed or primary target contexts. Sdc3 and Gpr44 remained bounded holds because the reviewed material addressed expression or prostaglandin-receptor biology without establishing a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted Pspn, Ptdss1, Ptgs2, and Pth handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI neuroblastoma, signed public human/mouse, oxidative-stress neuroblastoma, porcine, and pulmonary-epithelial comparators. The individual search log contains 2844 rows through M22B-IND-2844. This tranche added two standalone target edges and one evidence record, reused target contexts for five rows, and kept two rows on hold.
+
+## Individual review 2845-2852
+
+Five of the eight rows retained reusable target capacity. Adrb3 reused direct CEBPA promoter evidence; Pth1r reused NFKB1 and NFE2L2 contexts; PTH2R gained a FOXJ2-bound enhancer context; Ramp3 gained direct ESR1-dependent regulatory evidence; and Tshr reused cooperative CREB1/NKX2-1 promoter evidence. Gpr20, Gpr84, and Ramp2 remained bounded holds because the reviewed material addressed receptor structure, ligand/inflammatory expression, or accessory-receptor biology without establishing a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted Pth handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI adipocyte, bone/osteoblast, lung, reproductive, and thyroid comparators. The individual search log contains 2852 rows through M22B-IND-2852. This tranche added two standalone target edges and two evidence records, reused target contexts for three rows, and kept three rows on hold.
+
+## Individual review 2853-2860
+
+Five of the eight rows retained reusable target capacity. Vipr1 gained direct SP1 promoter-binding evidence; Adcyap1r1, Adrb2, Adrb3, and Pth1r reused existing target contexts. Gpr20, Gpr84, and Ramp2 remained bounded holds because the reviewed material addressed receptor structure, ligand/inflammatory expression, or accessory-receptor biology without establishing a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted Pth and Pth2 handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI rat lung epithelial, oxidative-stress neuroblastoma, porcine, pulmonary-epithelial, adipocyte, and bone/osteoblast comparators. The individual search log contains 2860 rows through M22B-IND-2860. This tranche added one standalone target edge and one evidence record, reused target contexts for four rows, and kept three rows on hold.
+
+## Individual review 2869-2876
+
+Six of the eight rows retained reusable target capacity. Pth1r, PTH2R, Ramp3, Tshr, Vipr1, and Alk reused existing target contexts. Prlhr and Ramp2 remained bounded holds because the reviewed material addressed promoter repression/characterization or accessory-receptor biology without establishing a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted Pthlh and Ptn handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI bone/osteoblast, lung, reproductive, thyroid, rat lung epithelial, and neuroblastoma/cancer comparators. The individual search log contains 2876 rows through M22B-IND-2876. This tranche added no new edges or evidence records, reused target contexts for six rows, and kept two rows on hold.
+
+## Individual review 2877-2884
+
+Five of the eight rows retained reusable target capacity. The ITGAV_ITGB3 row reused separate component contexts for Itgav and Itgb3 without asserting an intact-complex-specific target; Ncl, Ptprs, Sdc1, and Sdc2 reused existing target contexts. Cdh10, Plxnb2, and Ptprb remained bounded holds because the reviewed material addressed adhesion, receptor/signaling, or endothelial expression without establishing a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted Ptn handoff and do not establish source-to-TF activation. The reusable contexts are non-SCI melanoma, signed human, inflammatory fibroblast, hepatic-lipid, and colorectal/colon-epithelial comparators. The individual search log contains 2884 rows through M22B-IND-2884. This tranche added no new edges or evidence records, reused target contexts for five rows, and kept three rows on hold.
+
+## Individual review 2861-2868
+
+Six of the eight rows retained reusable target capacity. Ramp3, Tshr, Vipr1, Adcyap1r1, Adrb2, and Adrb3 reused existing target contexts. Gpr20 and Gpr84 remained bounded holds because the reviewed material addressed receptor structure, ligand/inflammatory expression, or orphan-receptor biology without establishing a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted Pth2 and Pthlh handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI reproductive, thyroid, rat lung epithelial, oxidative-stress neuroblastoma, porcine, pulmonary-epithelial, and adipocyte comparators. The individual search log contains 2868 rows through M22B-IND-2868. This tranche added no new edges or evidence records, reused target contexts for six rows, and kept two rows on hold.
+
+## Individual review 2885-2892
+
+Six of the eight rows retained reusable target capacity. Sdc3 reused the existing HIF1A-dependent target context; Sdc4 reused the existing HIF1A promoter context; Egfr reused signed EGR1 regulatory evidence; Cd22 reused signed TRRUST STAT1 regulatory evidence; and Cd300lf and Mrc1 gained new primary promoter contexts for SPIB/EHF and SPI1/PU.1, respectively. Clec12a remained a bounded hold because GTRD-derived promoter binding membership did not establish activation direction or functional perturbation, and Ptprm remained a hold because p53 binding and androgen-responsive expression were not sufficient to resolve an activating TF relationship.
+
+The retained contexts remain separate from the submitted Ptn, Ptpn6, and Ptprc handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI tumor-microenvironment, intervertebral-disc, human intestinal epithelial, signed human regulatory, and human myeloid comparators. The individual search log contains 2892 rows through M22B-IND-2892. This tranche added three standalone target edges and two evidence records, reused target contexts for four rows, and kept two rows on hold.
+
+## Individual review 2893-2900
+
+Five of the eight rows retained reusable target capacity. Mtnr1a reused the existing PITX1 promoter context; Npy1r reused HIF1A/EPAS1 regulatory contexts; Npy2r reused IRF1/FOXI1 promoter-regulatory contexts; Npy5r reused HIF1A/EPAS1 contexts; and Dysf gained a new bounded TEAD4 regulatory context from distal MCAT-site occupancy and TEAD4-knockdown expression response in mouse C2C12 myoblasts. Npy4r, Npy6r, and Pgr15l remained bounded holds because the targeted material provided receptor pharmacology, ligand-binding/resource annotations, or orphan-receptor information without a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted Pyy and Qdpr handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI renal-injury, hypoxic breast-cancer, neuroendocrine, and mouse muscle-development comparators. The DYSF context is medium-high regulatory support rather than a minimal-promoter sufficiency claim because the occupancy is distal and the reviewed paper does not provide a DYSF motif-mutant reporter. The individual search log contains 2900 rows through M22B-IND-2900. This tranche added one standalone target edge and one evidence record, reused target contexts for four rows, and kept three rows on hold.
+
+## Individual review 2901-2908
+
+Six of the eight rows retained reusable target capacity. A direct RARA/RXRA-to-CRABP2 promoter context was identified for the RARA-containing complexes; RARB-to-CYP26A1 and RARG-to-PTGES contexts were reused for the corresponding RARB- and RARG-containing complexes. P2ry14 and Qrfpr remained bounded holds because the targeted material supported distinct receptor pharmacology, promoter-resource predictions, or ligand/receptor biology without a qualifying named activating TF-to-target relationship.
+
+The retained contexts remain separate from the submitted Qrfp and RA-ALDH1A1 handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI human skin/heterologous retinoid, hepatocellular-carcinoma retinoid, and squamous-epithelial-carcinoma retinoid comparators. The individual search log contains 2908 rows through M22B-IND-2908. This tranche adds one standalone target edge and one evidence record after the provenance-first register update, reuses target contexts for five rows, and keeps two rows on hold.
+
+## Individual review 2909-2916
+
+Seven of the eight rows retained reusable target capacity. RXRA reused the direct Ccl6 promoter/occupancy context; the RXRB-containing and RARB/RXRB-containing rows reused the cooperative POU5F1 promoter context; RORB reused HBP1; and the RARA/RXRA and RARB rows reused CRABP2 and CYP26A1 contexts, respectively. RXRG remained a bounded hold because the targeted review did not verify a qualifying named activating RXRG-to-target relationship.
+
+The retained contexts remain separate from the submitted RA-ALDH1A1 and RA-ALDH1A2 handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI mouse macrophage/inflammation, embryonal-carcinoma retinoid, colorectal-cancer, human skin-fibroblast/heterologous retinoid, and hepatocellular-carcinoma retinoid comparators. The individual search log contains 2916 rows through M22B-IND-2916. This tranche added no new edge or evidence records, reused target contexts for seven rows, and kept one row on hold.
+
+## Individual review 2917-2924
+
+Seven of the eight rows retained reusable target capacity. RARG and the RARG/RXRG-containing row reused PTGES; RXRA reused Ccl6; the RXRB-containing row reused the cooperative RARB/RXRB-to-POU5F1 context; RORB reused HBP1; RARA reused CRABP2; and the second RXRA row reused Ccl6. RXRG remained a bounded hold because the targeted review did not verify a qualifying named activating RXRG-to-target relationship.
+
+The retained contexts remain separate from the submitted RA-ALDH1A2 and RA-ALDH1A3 handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI human squamous-epithelial-carcinoma retinoid, mouse macrophage/inflammation, embryonal-carcinoma retinoid, colorectal-cancer, and human skin-fibroblast/heterologous retinoid comparators. The individual search log contains 2924 rows through M22B-IND-2924. This tranche added no new edge or evidence records, reused target contexts for seven rows, and kept one row on hold.
+## Individual review 2925-2932
+
+Seven of the eight rows retained reusable target capacity. The RXRB-containing row reused the cooperative RARB/RXRB-to-POU5F1 context, and the six RAE-1/NKG2D rows reused a new bounded STAT4/TBX21-to-Klrk1 regulatory context, with Klrk1 treated as the receptor component for the composite NKG2D_HCST rows. RXRG remained a bounded hold because the targeted review did not verify a qualifying named activating RXRG-to-target relationship.
+
+The retained contexts remain separate from the submitted RA-ALDH1A3, Raet1a, Raet1b, Raet1c, Raet1d, and Raet1e handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI retinoid and inflammatory T-cell comparators. The Klrk1 context is medium-high regulatory support based on ChIP-seq proximity and perturbation-associated expression, not a minimal-promoter sufficiency claim; it does not establish HCST regulation. The individual search log contains 2932 rows through M22B-IND-2932. This tranche added one standalone regulatory-support edge and one evidence record, reused target contexts for seven rows, and kept one row on hold.
+## Individual review 2933-2940
+
+Three of the eight rows retained reusable target capacity. The NRP2 row reused signed STAT1 regulatory evidence; the NOTCH1 row reused direct KLF4 promoter evidence; and the Reln-to-ITGA3_ITGB1 row reused direct component contexts for ITGA3 and ITGB1. CMKLR1, CMKLR2, ATP6AP2, CAP1, and GPR25 remained bounded holds because the targeted reviews did not verify qualifying named activating TF-to-target relationships.
+
+The retained contexts remain separate from the submitted Rarres1, Rarres2, Rbp3, Reln, Ren1, and Retn handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI general human regulation, mammary epithelial/cancer, carcinoma, and inflammatory wound/colitis comparators. The individual search log contains 2940 rows through M22B-IND-2940. This tranche added no new edge or evidence records, reused target contexts for three rows, and kept five rows on hold.
+## Individual review 2941-2948
+
+All eight rows retained reusable target capacity. New direct promoter contexts were added for BMPR1B through SMAD4, BMPR2 through SRY, HFE through SP1, and TFR2 through GATA1; NEO1 reused the existing JUN promoter context. These contexts support the named target genes independently of the RGMA/RGMB handoffs.
+
+The retained contexts remain separate from the submitted Rgma and Rgmb handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI ovine granulosa-cell, pulmonary-vascular, liver/erythropoietic iron-homeostasis, and mouse pancreatic-tumor comparators. The individual search log contains 2948 rows through M22B-IND-2948. This tranche added four standalone direct target edges and four evidence records and kept no rows on hold.
+## Individual review 2949-2956
+
+Three of the eight rows retained reusable target capacity. CACNA1C reused an existing NR3C2 promoter-activation context; SLC18A2 reused a functional Lmx1b-dependent context; and ABCA1 reused direct NR1H2/LXRbeta-RXR promoter evidence. SLC17A7, SLC18A3, and RXFP2/3/4 remained bounded holds because the targeted reviews did not verify qualifying named activating TF-to-target relationships.
+
+The retained contexts remain separate from the submitted Rims1, Rims2, and Rln1 handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI rat cardiac/vascular, mouse raphe-neuronal, and human macrophage/sterol-response comparators. The individual search log contains 2956 rows through M22B-IND-2956. This tranche added no new edge or evidence records, reused target contexts for three rows, and kept five rows on hold.
+## Individual review 2957-2964
+
+Six of the eight rows retained reusable target capacity. ADCYAP1R1, ADRA2A, ADRB2, ADRB3, GRM7, and MTNR1A reused existing TF-to-target contexts. GPR20 and GPR84 remained bounded holds because the targeted reviews did not verify qualifying named activating TF-to-target relationships.
+
+The retained contexts remain separate from the submitted Rln3 handoff and do not establish source-to-TF activation. The reusable contexts are non-SCI oxidative-stress neuroblastoma, rat insulinoma/colonic, human pulmonary-epithelial, mouse adipocyte, human/mouse neurodevelopmental, and renal-injury comparators. The individual search log contains 2964 rows through M22B-IND-2964. This tranche added no new edge or evidence records, reused target contexts for six rows, and kept two rows on hold.
+## Individual review 2965-2972
+
+Three of the eight rows retained reusable target capacity. PTH1R, RAMP3, and TSHR reused existing TF-to-target contexts. RAMP2 and RXFP1/2/3/4 remained bounded holds because the targeted reviews did not verify qualifying named activating TF-to-target relationships.
+
+The retained contexts remain separate from the submitted Rln3 handoff and do not establish source-to-TF activation. The reusable contexts are non-SCI mouse osteogenic/bone-mass, uterine/reproductive, and human thyroid-promoter comparators. The individual search log contains 2972 rows through M22B-IND-2972. This tranche added no new edge or evidence records, reused target contexts for three rows, and kept five rows on hold.
+## Individual review 2981-2988
+
+Six of the eight rows retained reusable target capacity. The three RSPO4 receptor-composite rows reused direct TCF/LEF-to-Axin2 context, with the LGR5/LRP5 row also reusing the signed SP1-to-LRP5 context. Rtn4-Gjb2 gained a standalone SP1/TFAP2A-to-GJB2 promoter context, Rtn4-Lingo1 reused the existing USF1-to-LINGO1 promoter context, and Rtn4-Tnfrsf19 gained a standalone beta-catenin/TCF4-responsive TNFRSF19 promoter context. Rtn4-Cntnap1 and Rtn4-Rtn4rl1 remained holds after targeted searches found no qualifying named activating TF-to-target record.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI mouse developmental Wnt, human regulon, rat epididymal epithelial, human colorectal-cancer, and human mesenchymal-stem-cell systems. The individual search log contains 2988 rows through M22B-IND-2988. This tranche added two standalone target edges and two evidence records, reused target contexts for four rows, and kept two rows on hold.
+## Individual review 2989-2996
+
+Seven of the eight rows retained reusable target capacity. Rtn4r-Adgrb1 reused the signed TP53-to-ADGRB1 context; S100a4-Ccr5 reused STAT1-to-CCR5; S100a4-Erbb2 reused SP1-to-ERBB2; S100a8-Cd36 and S100a9-Cd36 reused HIF1A/STAT1-to-CD36; and S100a8-Cd69 reused FOS/JUN-to-CD69. S100a8-Cd68 gained a standalone ELF1-to-CD68 promoter context from primary macrophage work. S100a1-Trpm3 remained on hold because the reviewed TRPM3 studies described channel-induced AP-1 target transcription rather than a TF activating the TRPM3 gene.
+
+These contexts remain separate from the submitted ligand/receptor or channel handoffs and do not establish source-to-TF activation. The comparators are non-SCI human regulon, channel-signaling, inflammatory, epithelial/cancer, hypoxia, immune, and macrophage systems. The individual search log contains 2996 rows through M22B-IND-2996. This tranche added one standalone target edge and one evidence record, reused target contexts for six rows, and kept one row on hold.
+## Individual review 2997-3004
+
+Seven of the eight rows retained reusable target capacity. Rtn4r-Adgrb1 reused TP53-to-ADGRB1; S100a1-Trpm3 was the only row in this tranche without qualifying target capacity after the targeted search. S100a4-Ccr5 reused STAT1-to-CCR5, S100a4-Erbb2 reused SP1-to-ERBB2, S100a8-Cd36 and S100a9-Cd36 reused HIF1A/STAT1-to-CD36, S100a8-Cd68 reused ELF1-to-CD68, and S100a8-Cd69 reused FOS/JUN-to-CD69 contexts.
+
+These contexts remain separate from the submitted ligand/receptor or channel handoffs and do not establish source-to-TF activation. The comparators are non-SCI human regulon, channel-signaling, inflammatory, epithelial/cancer, hypoxia, myeloid, macrophage, and general immune systems. The individual search log contains 3004 rows through M22B-IND-3004. This tranche added no new edge or evidence records, reused target contexts for seven rows, and kept one row on hold.
+
+## Individual review 3021-3028
+
+Five of the eight rows retained reusable target capacity. Sct-Sctr reused the signed SP1-to-SCTR context; Sele-Ceacam2 reused signed IRF1-to-CEACAM2; and Sell-Cd34 reused the signed RUNX1-to-CD34 context. Sell-Glycam1 and Sell-Madcam1 gained standalone direct target contexts from primary promoter and endogenous-regulation studies. Sdc1-Adgra2, Sdc2-Adgra2, and Sectm1a-Cd7 remained bounded holds because targeted searches did not verify qualifying named activating TF-to-target relationships.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human general-regulatory, mouse inflammatory/platelet, hematopoietic, mammary epithelial, and mucosal-endothelial systems. The individual search log contains 3012 rows through M22B-IND-3012. This tranche added two standalone direct target edges and two evidence records, reused target contexts for three rows, and kept three rows on hold.
+
+## Individual review 3029-3036
+
+Seven of the eight rows retained reusable target capacity. Sell-Podxl and Selplg-Esam gained standalone direct target contexts from primary promoter and endogenous-regulation studies. Selplg-Itgam, Selplg-Itgb2, and Selplg-Sele reused registered SPI1, HIF1A, JUN, and RELA target contexts. The Sema3b-NRP1_PLXNA1 and Sema3b-NRP1_PLXNA2 rows reused registered contexts for both receptor components. Sema3b-NRP1_PLXNA3 remained a bounded hold: a targeted expression/knockdown screen did not establish qualifying activating TF occupancy or perturbation at the PLXNA3 locus.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human epithelial/tumor, breast-cancer/BCSC, mouse myeloid, human hypoxia/inflammatory, endothelial/inflammatory, general-regulatory, and receptor-regulation systems. The individual search log contains 3020 rows through M22B-IND-3020. This tranche added two standalone direct target edges and two evidence records, reused target contexts for five rows, and kept one row on hold.
+
+## Individual review 3037-3044
+
+Six of the eight rows retained reusable target capacity. Sema3b-NRP1_PLXNA4 and Sema3b-NRP2_PLXNA4 reused the registered NRP1 or NRP2 component context together with a new primary FoxO6-to-PLXNA4 promoter context from mouse cortical development. Sema3b-NRP2_PLXNA2, Sema3c-NRP1_NRP2, Sema3c-NRP1_PLXNA1, and Sema3c-NRP1_PLXNA2 reused registered component contexts. The Sema3b-NRP2_PLXNA3 and Sema3c-NRP1_PLXNA3 rows remained bounded holds because the targeted Plxna3 review did not verify qualifying activating TF occupancy or perturbation at the PLXNA3 locus.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human general-regulon/receptor-regulation and mouse cortical-development/neural systems. The individual search log contains 3028 rows through M22B-IND-3028. This tranche added one standalone direct target edge and one evidence record, reused target contexts for four rows, and kept two rows on hold.
+
+## Individual review 3045-3052
+
+Six of the eight rows retained reusable target capacity. Sema3c-NRP1_PLXNA4, Sema3c-NRP2_PLXNA2, Sema3c-NRP2_PLXNA4, Sema3d-NRP1_PLXNA1, and Sema3d-NRP1_PLXNA2 reused registered component contexts. Sema3c-Plxnd1 gained a standalone RBPJ-dependent PLXND1 promoter context from a primary human Notch study. The Sema3c-NRP2_PLXNA3 and Sema3d-NRP1_PLXNA3 rows remained bounded holds because the targeted Plxna3 review did not verify qualifying activating TF occupancy or perturbation at the PLXNA3 locus.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human general-regulon/receptor-regulation, endothelial/cancer, and neural systems. The individual search log contains 3036 rows through M22B-IND-3036. This tranche added one standalone direct target edge and one evidence record, reused target contexts for five rows, and kept two rows on hold.
+
+## Individual review 3053-3060
+
+Seven of the eight rows retained reusable target capacity. Sema3d-NRP1_PLXNA4, Sema3d-NRP2_PLXNA1, Sema3d-NRP2_PLXNA2, Sema3d-NRP2_PLXNA4, Sema3e-NRP1, Sema3e-NRP2, and Sema3f-NRP2_PLXNA4 reused registered target contexts. The Sema3d-NRP2_PLXNA3 row remained a bounded hold because the targeted Plxna3 review did not verify qualifying activating TF occupancy or perturbation at the PLXNA3 locus.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human general-regulon/receptor-regulation and mouse cortical-development/neural systems. The individual search log contains 3044 rows through M22B-IND-3044. This tranche added no new edge or evidence records, reused target contexts for seven rows, and kept one row on hold.
+
+## Individual review 3061-3068
+
+Seven of the eight rows retained reusable target capacity. Sema3f-NRP1, Sema3g-Fcgr3, Sema3g-Gp6, Sema3g-NRP2_PLXNA2, Sema4a-Timd2, Sema5a-Plxna1, and Sema5b-Plxna1 reused or gained target contexts. Sema3g-Fcgr3 gained a standalone direct cooperative SPI1/TFE3/USF-to-FCGR3 promoter context from a primary mouse macrophage study, while Sema4a-Timd2 gained bounded HNF4A/CEBPB/RXRA alternative-promoter regulatory support from mouse developmental-liver data. The Sema3g-NRP2_PLXNA3 row remained a bounded hold because no qualifying activating TF-to-PLXNA3 target record was verified.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human general-regulon/receptor-regulation, mouse macrophage/platelet, developmental-liver, and neural systems. The individual search log contains 3052 rows through M22B-IND-3052. This tranche added two standalone target edges and two evidence records, reused target contexts for five rows, and kept one row on hold.
+
+## Individual review 3069-3076
+
+All eight rows retained reusable target capacity. Sema6b-Plxna4, Sema6d-NRP1_KDR, Sema6d-Plxna1, Sema7a-ITGB1_ITGA1, Serpina1a-Lrp1, and Serpina1b-Lrp1 reused registered target contexts. Sema6d-NRP1_TREM2 gained a standalone direct ZEB2-to-TREM2 context from primary human microglial/myeloid studies. Sema7a-Plxnc1 gained bounded OTX2-to-PLXNC1 regulatory support from primary mouse midbrain dopaminergic studies.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human microglial/myeloid and mouse midbrain dopaminergic systems. The individual search log contains 3060 rows through M22B-IND-3060. This tranche added two standalone target edges and two evidence records, reused target contexts for six rows, and kept no rows on hold.
+
+## Individual review 3077-3084
+
+Seven of the eight rows retained reusable target capacity. Serpina1c-Lrp1, Serpina1d-Lrp1, Serpina1e-Lrp1, Serpinc1-Lrp1, Serpine1-Lrp2, and Serpine1-Plaur reused registered target contexts. Serpina7-Slc16a2 gained a standalone direct RARA/RXRA-to-SLC16A2 context from primary mouse embryonal-carcinoma work showing retinoic-acid response, distal RARE reporter dependence, RARE mutation, and receptor occupancy. Serpinc1-Gpc1 remained a bounded hold: the rat GPC1 promoter study reported putative Sp1, NF-kappaB, and MyoD motifs and basal reporter activity, but did not verify named-factor binding or activation.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human melanoma, renal epithelial, general-regulatory, and mouse embryonal-carcinoma systems. The individual search log contains 3068 rows through M22B-IND-3068. This tranche added one standalone direct target edge and one evidence record, reused target contexts for six rows, and kept one row on hold.
+
+## Individual review 3085-3092
+
+Seven of the eight rows retained reusable target capacity. Serping1-Lrp1, Serping1-Selp, Sftpa1-Tlr2, Sftpd-Adgre5, Sftpd-Ly96, and Shank1-Sstr2 reused registered target contexts. Sfrp1-Fzd2 gained a standalone direct GATA6-to-FZD2 promoter context from primary mouse lung epithelial studies showing dose-dependent reporter transactivation, endogenous promoter ChIP association, and reduced Fzd2 expression after epithelial Gata6 loss. Sfrp1-Fzd6 remained a bounded hold: the targeted literature identified lncRNA/BRG1-mediated FZD6 activation and HOXC10 repression, but no qualifying named activating TF-to-FZD6 relationship.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human melanoma, inflammatory, endothelial, general-regulatory, and mouse lung epithelial, myeloid, and neuroendocrine systems. The individual search log contains 3076 rows through M22B-IND-3076. This tranche added one standalone direct target edge and one evidence record, reused target contexts for six rows, and kept one row on hold.
+
+## Individual review 3093-3100
+
+Five of the eight rows retained reusable target capacity. Shbg-Cldn4 gained a standalone direct GRHL2-to-CLDN4 epithelial promoter context from primary mouse developmental studies. Siglec1-Spn and the three Sirpb1-Cd47 rows reused registered target contexts. Shbg-Slc37a1, Slc6a8-Lifr, and Slit1-Gpc1 remained bounded holds because targeted searches did not verify qualifying named activating TF-to-target relationships; promoter architecture, receptor signaling, and GPC1 motif annotations were not substituted.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI mouse epithelial-development, human/mouse myeloid, general-regulatory, and receptor/transporter systems. The individual search log contains 3084 rows through M22B-IND-3084. This tranche added one standalone direct target edge and one evidence record, reused target contexts for four rows, and kept three rows on hold.
+
+## Individual review 3101-3108
+
+Seven of the eight rows retained reusable target capacity. Slit1-Robo1, Slit1-Sdc1, Slit2-Plxna1, Slit2-Robo1, Slit2-Robo2, Slit2-Sdc1, and Slitrk1-Enpep reused or gained registered target contexts. Slitrk1-Enpep gained a standalone direct AR-to-ENPEP promoter context from primary human prostate-cell studies showing androgen-responsive elements, AR-associated DNA binding, and androgen-dependent reporter activation. Slit1-Gpc1 remained a bounded hold because the reviewed GPC1 promoter study reported only putative motifs and basal reporter activity without named-factor binding or activation.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human epithelial/cancer and mouse/Drosophila neural-development systems. The individual search log contains 3092 rows through M22B-IND-3092. This tranche added one standalone direct target edge and one evidence record, reused target contexts for six rows, and kept one row on hold.
+
+## Individual review 3109-3116
+
+Five of the eight rows retained reusable target capacity. Slitrk1-Ptprs, Slitrk1-Tnfrsf11b, Slitrk2-Ptprs, Slitrk4-Ptprs, and Slitrk5-Ptprs reused registered target contexts. Slitrk1-Ptprd, Slitrk2-Ptprd, and Slitrk3-Ptprd remained bounded holds because targeted searches did not verify qualifying named activating TF-to-PTPRD relationships; direct Slitrk domain-binding/function evidence and PTPRD expression or promoter-silencing material were not substituted.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human neuronal/general-regulatory, human/mouse cancer and hypoxia, and neural expression/epigenetic systems. The individual search log contains 3100 rows through M22B-IND-3100. This tranche added no standalone target edges or evidence records, reused target contexts for five rows, and kept three rows on hold.
+
+## Individual review 3117-3124
+
+Seven of the eight rows retained reusable target capacity. Slitrk6-Ptprs reused the registered USF2-to-PTPRS context. The Slurp1 rows for Chrna1, Chrna2, Chrna3, Chrna4, Chrna5, and Chrna10 gained or reused general TF-to-target contexts: cooperative MYOD1/MYOG/SP1 regulation for CHRNA1, PPARG and POU4F2 promoter activation for CHRNA2, POU4F1 promoter activation for CHRNA3, HNF4A/RXRA liver regulatory occupancy for CHRNA4, SP1-linked promoter regulation for CHRNA5, and direct ATOH1 binding at Chrna10 regulatory DNA. Slurp1-Chrna6 remained a bounded hold because the targeted CHRNA6 promoter review identified repression elements but no qualifying named activating TF relationship.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human/mouse adipose, liver, neuronal, inner-ear, and promoter-haplotype systems, plus chicken/quail muscle. The individual search log contains 3108 rows through M22B-IND-3108. This tranche added seven standalone TF-to-target edges and seven evidence records covering six distinct CHRNA targets, reused a registered PTPRS target context for one row, and kept one row on hold.
+
+## Individual review 3189-3196
+
+Audits 3189-3196 covered eight TENM1, TENM2, and TENM3 handoffs to ADGRL1,
+ADGRL2, and ADGRL3. All eight rows gained reusable target capacity from the
+independently registered AR promoter-occupancy and androgen-induction contexts
+for these three ADGRL genes. The target contexts are general human
+prostate/bladder-cancer comparators and remain separate from the teneurin-
+latrophilin adhesion handoffs; they do not establish a teneurin-to-AR relay or
+promote the original pathway/function-boundary rows.
+
+## Individual review 3213-3220
+
+Audits 3213-3220 covered TGFB1/TGFBR3 and TGFB2 handoffs to ACVR1,
+ACVR1B, ACVR1C, ENG, and TGFBR1/TGFBR2 composite branches. All eight rows
+gained reusable target capacity from independently registered SMAD3/4-CTGF,
+SMAD1/5/8-ID1, SMAD2/3-FST, and HIF1A-ENG contexts. These are general
+regulatory target contexts, including mouse osteoblast/gonadotrope and human
+signed public TF comparators, and remain separate from the submitted
+receptor/coreceptor composites. They do not establish the original
+pathway/function-boundary rows or any SCI-specific upstream relay.
+
+## Individual review 3229-3236
+
+Audits 3229-3236 covered TGFB3 integrin and TGFBR1/TGFBR3 handoffs,
+TGM2-ADGRG1/TBXA2R, TGS1-RXRA, and THBS1-CD36. Two rows gained new target
+contexts: HIF2A-to-ITGB5 from promoter binding/activation evidence and
+HAND1-to-ADGRG1 from an NCBI/GEO trophoblast study record. The other six
+rows reused independently registered HOXD3-ITGB3, SMAD3/4-CTGF,
+EGR1-TBXA2R, RXRA-Ccl6, and HIF1A-CD36 contexts. These are general
+regulatory target contexts and remain separate from the submitted
+receptor, integrin, scaffold, and RNA-processing handoffs. They do not
+establish the original pathway/function-boundary rows or any SCI-specific
+upstream relay.
+
+## Individual review 3237-3244
+
+Audits 3237-3244 covered THBS1 handoffs to CD47, ITGA3/ITGB1,
+ITGAV/ITGB3, ITGA2B/ITGB3, LRP5, SDC1, SDC4, and TNFRSF11B. All eight rows
+gained reusable target capacity from independently registered NRF1-CD47,
+HIF1A-ITGB1, HOXD3-ITGB3, RUNX1-ITGA2B, SP1-LRP5, NR1H4-SDC1,
+RELA-SDC4, and HIF2A-TNFRSF11B contexts. These are general regulatory
+target contexts, including human/mouse vascular, platelet, epithelial,
+myeloid, and bone comparators, and remain separate from the submitted
+adhesion, receptor, glycan, and storage-complex handoffs. They do not
+establish the original pathway/function-boundary rows or any SCI-specific
+upstream relay.
+
+## Individual review 3245-3252
+
+Audits 3245-3252 covered THBS2 handoffs to CD36, CD47, ITGA3/ITGB1,
+ITGAV/ITGB3, NOTCH4, SDC1, and SDC4, plus the THBS3-CD36 handoff. All eight
+rows gained reusable target capacity from independently registered HIF1A-CD36,
+NRF1-CD47, HIF1A-ITGB1, HOXD3-ITGB3, MYC-NOTCH4, NR1H4-SDC1, and RELA-SDC4
+contexts. These are general regulatory target contexts, including human/mouse
+melanoma, wound-healing, vascular, platelet, epithelial, and inflammatory
+comparators, and remain separate from the submitted matricellular, receptor,
+and integrin handoffs. They do not establish the original pathway/function-
+boundary rows or any SCI-specific upstream relay.
+
+## Individual review 3253-3260
+
+Audits 3253-3260 covered THBS3 handoffs to CD47, ITGA3/ITGB1,
+ITGAV/ITGB3, SDC1, and SDC4, plus THBS4 handoffs to CD36, CD47, and
+ITGA3/ITGB1. All eight rows gained reusable target capacity from independently
+registered NRF1-CD47, HIF1A-ITGB1, HOXD3-ITGB3, NR1H4-SDC1, RELA-SDC4, and
+HIF1A-CD36 contexts. These are general regulatory target contexts, including
+human/mouse melanoma, wound-healing, vascular, epithelial, inflammatory,
+and bone-related comparators, and remain separate from the submitted
+matricellular and integrin handoffs. They do not establish the original
+pathway/function-boundary rows or any SCI-specific upstream relay.
+
+## Individual review 3261-3268
+
+Audits 3261-3268 covered THBS4 handoffs to ITGAV/ITGB3, SDC1, and SDC4,
+THY1 handoffs to ADGRE5 and ITGAX/ITGB2, and TIMP1/TIMP3 handoffs to FGFR2,
+AGTR2, and CD44. All eight rows gained reusable target capacity from
+independently registered HOXD3-ITGB3, NR1H4-SDC1, RELA-SDC4, SP1-ADGRE5,
+RUNX1-ITGAX, NF-Y-FGFR2, and EGR1-CD44 contexts. Targeted AGTR2 promoter
+material was not treated as an activating TF-target edge; the CD44 context
+for the TIMP3-AGTR2 row is explicitly general and separate. These contexts
+remain distinct from the submitted matricellular, adhesion, protease, and
+receptor handoffs. They do not establish the original pathway/function-
+boundary rows or any SCI-specific upstream relay.
+
+## Individual review 3269-3276
+
+Audits 3269-3276 covered TIMP3-DDR1/MET, TNC handoffs to ITGA2B/ITGB3,
+ITGA8/ITGB1, ITGA9/ITGB1, ITGAV/ITGB3, ITGAV/ITGB6, and PTPRB. Seven rows
+gained reusable target capacity from independently registered TP53-DDR1,
+ETS1-MET, RUNX1-ITGA2B, HIF1A-ITGB1, HOXD3-ITGB3, and SMAD3/4-ITGB6
+contexts. The TNC-PTPRB search did not verify a qualifying activating
+TF-to-PTPRB lane and remains on hold. These contexts remain separate from
+the submitted protease, extracellular-matrix, integrin, and phosphatase
+handoffs. They do not establish the original pathway/function-boundary
+rows or any SCI-specific upstream relay.
+
+## Individual review 3285-3292
+
+All eight holds were searched individually. All eight rows gained reusable
+target capacity from independently registered contexts: TNFSF10→CCR6 reused
+HOXD3, TNFSF13→TNFRSF11B reused HIF2A, TNFSF13→TNFRSF14 reused MITF,
+TNFSF13→TNFRSF1A reused CEBPA, TNFSF13B→TFRC reused MYC, TNFSF9→TNFRSF9
+reused RELB, TNN→ITGA2B/ITGB3 reused RUNX1, and TNN→ITGA8/ITGB1 reused
+HIF1A. The underlying contexts include human hepatocellular-carcinoma,
+mouse osteoblast, human reproductive-stromal, human HeLa, human/mouse
+B-cell, human epithelial, human platelet/hematopoietic, and human/mouse
+hypoxia or wound-healing comparator systems.
+
+These are reusable target-gene lanes rather than evidence that any submitted
+TNFSF or tenascin handoff activates the corresponding TF. The original
+pathway/function-boundary rows remain separate and no SCI-specific upstream
+relay was inferred.
+
+## Individual review 3301-3308
+
+All eight holds were searched individually. All eight rows gained reusable
+target capacity: TNR→ITGAV/ITGB3 and TNXB→ITGAV/ITGB3 reused HOXD3→ITGB3,
+TNR→ITGAV/ITGB6 reused SMAD3/4→ITGB6, TNR→SDC1 and TNR→SDC4 reused
+NR1H4→SDC1 and RELA→SDC4, TNXB→ITGA2B/ITGB3 reused RUNX1→ITGA2B, and
+TNXB→ITGA8/ITGB1 and TNXB→ITGA9/ITGB1 reused HIF1A→ITGB1. These are non-SCI
+human, mouse, or human/mouse comparator contexts spanning angiogenic
+endothelium, pulmonary fibrosis, hepatic lipid regulation, inflammatory
+tumor, platelet/hematopoietic, and hypoxia or wound-healing systems.
+
+These are reusable target-gene lanes rather than evidence that any submitted
+TNR or TNXB handoff activates the corresponding TF. The original
+pathway/function-boundary rows remain separate and no SCI-specific upstream
+relay was inferred.
+
+## Individual review 3333-3340
+
+## Individual review 3341-3348
+
+Five of the eight holds gained reusable target capacity. Try5→PARD3 reused
+SP1→PARD3; Tshb→ADCYAP1R1 reused a condition-specific SP1-dependent promoter
+context; Tshb→ADRB2 reused SP1 and E2F1 promoter contexts; Tshb→ADRB3 reused
+CEBPA→ADRB3; and Tshb→PTH1R reused NFKB1 regulatory-support and NFE2L2
+direct-target contexts. GPR20, GPR84, and RAMP2 remained on hold: targeted
+review located receptor/function, inflammatory-expression, receptor-complex,
+or promoter-methylation/prediction material without a qualifying named
+activating TF-to-target relationship.
+
+The reusable target lanes remain separate from the submitted Try5 or Tshb
+handoffs and do not establish source-to-TF activation or SCI-specific
+activity. The ADCYAP1R1 and NFKB1 records are bounded regulatory-support
+contexts rather than isolated direct-occupancy claims.
+
+## Individual review 3349-3356
+
+Seven of the eight holds gained reusable target capacity. Tshb→TSHR reused
+the cooperative NKX2-1/CREB1 promoter context; Tshb→VIPR1 reused SP1→VIPR1;
+Ttr→NGFR reused EGR1/EGR3→NGFR; Tub→MERTK and Tulp1→MERTK reused the new
+PPARG→MERTK promoter context; Tulp1→AXL gained an AP-1 promoter context; and
+Tulp1→TYRO3 gained a STAT3 promoter context. Tshb→RAMP3 remained on hold:
+the targeted review located receptor-complex and promoter-prediction material
+without a qualifying named activating TF-to-RAMP3 relationship.
+
+The reusable target lanes remain separate from the submitted Tshb, Ttr, Tub,
+and Tulp1 handoffs and do not establish source-to-TF activation or
+SCI-specific activity. The TSHR, VIPR1, and NGFR lanes were independently
+registered before this tranche; the PPARG→MERTK, AP-1→AXL, and STAT3→TYRO3
+lanes were added from primary non-SCI comparator studies.
+
+## Individual review 3357-3364
+
+Two of the eight holds gained reusable target capacity. Txlna→STX1A gained
+direct SP1→STX1A promoter capacity from a primary rat syntaxin-1A study, and
+Ulbp1→KLRK1_HCST reused the existing bounded STAT4/TBX21→KLRK1 regulatory
+context for the KLRK1 receptor component. Txlna→STX3, Txlna→STX4A, both
+Ucn2/Ucn3→CRHR1 rows, and both Ucn2/Ucn3→IL10RB rows remained on hold.
+
+The STX3 review located a soluble STX3 nuclear co-regulator result rather than
+activation of the STX3 gene; the CRHR1 results were downstream CRHR1 signaling
+or weak-binding comparisons, and IL10RB results were receptor-family or
+promoter-prediction material. The reusable target lanes remain separate from
+the submitted Txlna, Ucn2, Ucn3, and Ulbp1 handoffs and do not establish
+source-to-TF activation or SCI-specific activity.
+
+## Individual review 3365-3372
+
+Seven of the eight holds gained reusable target capacity. Ulbp1→KLRK1 reused
+STAT4/TBX21→KLRK1; Unc5a→ADGRL3 reused AR→ADGRL3; Vcam1→ITGAD_ITGB2 reused
+existing SP1→ITGAD and HIF1A→ITGB2 component lanes; Vcan→TLR1 gained a
+bounded AP-1-family promoter context; Vcl→ALK gained direct MYCN/MYC promoter
+context; and Vegfa→EGFR and Vegfa→FLT1 reused existing STAT1→EGFR and
+HIF1A→FLT1 regulatory lanes. Uts2b→SSTR5 remained on hold: promoter
+mapping and consensus AP-1/SP1 elements did not establish a named activating
+TF-to-SSTR5 relationship with direct factor perturbation.
+
+The reusable target lanes remain separate from the submitted Ulbp1, Unc5a,
+Uts2b, Vcam1, Vcan, Vcl, and Vegfa handoffs and do not establish
+source-to-TF activation or SCI-specific activity. The TLR1 lane is
+regulatory-support rather than a single-subunit direct-occupancy claim.
+
+## Individual review 3373-3380
+
+Seven of the eight holds gained reusable target capacity. Vegfa→KDR reused
+Ets1→KDR; Vegfa→SIRPA gained direct ELK1→SIRPA promoter context; Vegfa→TYRO3
+reused STAT3→TYRO3; Vegfb→ADRB2 reused SP1→ADRB2 and E2F1→ADRB2; Vegfb→FLT1
+reused HIF1A→FLT1; Vegfb→FLT1_KDR reused HIF1A→FLT1 and Ets1→KDR component
+lanes; and Vegfb→RET reused direct ETV5→RET promoter context. Vegfa→GPC1
+remained on hold because promoter motifs and reporter activity did not verify
+a named activating TF-to-GPC1 relationship.
+
+The reusable target lanes remain separate from the submitted Vegfa and Vegfb
+handoffs and do not establish source-to-TF activation or SCI-specific
+activity. The ELK1→SIRPA record is a direct promoter context from a
+non-SCI macrophage comparator.
+
+## Individual review 3381-3388
+
+All eight holds gained reusable target capacity. Vegfc→FLT1 reused HIF1A→FLT1;
+Vegfc→FLT4 reused direct RBPJ/CSL→FLT4; the Vegfc→FLT4_KDR composite reused
+RBPJ/CSL→FLT4 and Ets1→KDR component lanes; Vegfc→KDR reused Ets1→KDR;
+Vegfc→VIPR2 gained direct FOXO1→VIPR2 promoter context; Vegfd→FLT4 reused
+RBPJ/CSL→FLT4; the Vegfd→FLT4_KDR composite reused the same FLT4/KDR
+component lanes; and Vegfd→KDR reused Ets1→KDR.
+
+The reusable target lanes remain separate from the submitted Vegfc and Vegfd
+handoffs and do not establish source-to-TF activation or SCI-specific
+activity. The FOXO1→VIPR2 record is a direct promoter context from a
+non-SCI intestinal neuroimmune comparator.
+
+## Individual review 3389-3396
+
+Six of the eight holds gained reusable target capacity. Vip→ADRB3 reused
+CEBPA→ADRB3; Vip→AVPR1A gained allele-dependent NF-kB/AVPR1A promoter
+context; Vip→GPR20 gained direct ETV1→GPR20 enhancer and perturbation context;
+Vip→NPR3 gained POU2F1→NPR3 promoter context; Vip→PTH1R reused the existing
+NF-kB1→PTH1R and NFE2L2→PTH1R lanes; and Vip→RAMP1 gained direct
+NKX3.1→RAMP1 occupancy and repression context. Vip→GPR84 and Vip→RAMP2
+remained on hold because no qualifying named TF-to-target relationship was
+verified.
+
+The reusable target lanes remain separate from the submitted Vip handoffs and
+do not establish source-to-TF activation or SCI-specific activity. The
+NKX3.1→RAMP1 record is a direct repressive target context, not an activating
+lane; the AVPR1A and NPR3 records are promoter-regulatory contexts whose
+direction and mechanism remain cell-type dependent.
+
+## Individual review 3397-3404
+
+Seven of the eight holds gained reusable target capacity. Vip→RAMP3 reused
+ESR1→RAMP3; Vip→SCTR reused signed SP1→SCTR support; Vip→TSHR reused the
+cooperative CREB1→TSHR and NKX2-1→TSHR promoter lanes; Vtn→CD47 reused
+NRF1→CD47; Vtn→ITGA2B_ITGB3 reused RUNX1→ITGA2B and ETS1→ITGB3 component
+lanes; Vtn→ITGA8_ITGB1 reused HIF1A→ITGB1 for the beta-1 component; and
+Vtn→ITGAV_ITGB1 reused SP1→ITGAV and HIF1A→ITGB1 component lanes. The
+Vsir→IGSF11 row remained on hold because promoter and ChIP-site predictions
+did not establish a qualifying named TF-to-IGSF11 relationship.
+
+The reused component and target lanes remain separate from the submitted VIP,
+vitronectin, or VSIR handoffs and do not establish source-to-TF activation or
+SCI-specific activity. The integrin composite records reuse component capacity
+only; they do not establish native composite-receptor stoichiometry or a
+vitronectin-to-integrin transcriptional relay.
+
+## Individual review 3405-3412
+
+All eight holds gained reusable target capacity. Vtn→ITGAV_ITGB3 reused
+SP1→ITGAV and ETS1→ITGB3; Vtn→ITGAV_ITGB5 reused SP1→ITGAV and direct
+HIF2A→ITGB5; Vtn→ITGAV_ITGB8 reused SP1→ITGAV only, with no ITGA8/ITGB8
+lane transferred; Vtn→ITGA3 gained a direct ZEB1/YAP1-co-activated ITGA3
+promoter context; Vtn→ITGA5 reused ETS1→ITGA5; Vtn→PLAUR reused EGR1→PLAUR;
+Vtn→TNFRSF11B reused direct HIF2A→TNFRSF11B; and Vwf→the GP complex reused
+ETS1→GP5 and ETS1→GP9 component lanes.
+
+These reusable target and component lanes remain separate from the submitted
+vitronectin or VWF handoffs and do not establish source-to-TF activation or
+SCI-specific activity. The ITGA3 record is a non-SCI pancreatic-cancer
+comparator; the composite integrin and GP-complex records do not establish
+native receptor stoichiometry or transfer unrepresented subunits.
+
+## Individual review 3413-3420
+
+Five of the eight holds gained reusable target capacity. Vwf→ITGA2B_ITGB3
+reused RUNX1→ITGA2B and ETS1→ITGB3; Vwf→ITGAV_ITGB3 reused SP1→ITGAV and
+ETS1→ITGB3; Vwf→ITGA9 reused direct SP1→ITGA9 promoter evidence; Vwf→SIRPA
+reused direct ELK1→SIRPA promoter evidence; and Wfikkn2→PRTG gained direct
+ZEB1→PRTG promoter, ChIP-qPCR, and reporter-site evidence. The IGDCC3,
+IGDCC4, and RYK rows remained on hold because their searches produced
+expression, interaction, computational, or receptor-signaling material but no
+qualifying named activating TF-to-target relationship.
+
+The reusable target and component lanes remain separate from the submitted
+VWF or WFIKKN2 handoffs and do not establish source-to-TF activation or
+SCI-specific activity. The integrin records reuse component capacity only;
+the PRTG record is a non-SCI gastric-cancer comparator, and none of these
+records establishes the unresolved ligand-to-receptor assignment.
+
+## Individual review 3421-3428
+
+All eight holds gained reusable target capacity. Wnt1→CD36 reused the direct
+Wnt1-stimulated TCF4→CD36 macrophage target context; Wnt1→FZD1_LRP5 reused
+SP1→FZD1 and SP1→LRP5 component lanes; Wnt1→FZD1_LRP6 reused SP1→FZD1;
+Wnt1→FZD2_LRP5 reused GATA6→FZD2 and SP1→LRP5; Wnt1→FZD2_LRP6 reused
+GATA6→FZD2; Wnt1→FZD3_LRP5 reused ZMIZ1→FZD3 and SP1→LRP5;
+Wnt1→FZD3_LRP6 reused ZMIZ1→FZD3; and Wnt1→FZD4_LRP5 reused SMAD4→FZD4
+and SP1→LRP5. No LRP6 target lane was transferred.
+
+These reusable target and component lanes remain separate from the submitted
+Wnt1 receptor-complex handoffs and do not establish source-to-TF activation,
+exact ternary-complex stoichiometry, or SCI-specific activity. The FZD3
+context is SCI-adjacent cerebral ischemia-reperfusion/endothelial OGD/R, not
+spinal-cord injury evidence; the other component contexts are non-SCI.
+
+## Individual review 3429-3436
+
+All eight holds gained reusable target capacity. Wnt1→FZD5_LRP5 gained direct
+EHF→FZD5 enhancer and perturbation evidence and reused SP1→LRP5; Wnt1→FZD6_LRP5
+and Wnt1→FZD6_LRP6 gained direct GATA4→FZD6 enhancer and loss-of-function
+evidence, with SP1→LRP5 reused only for the LRP5 row. Wnt1→FZD7_LRP5 and
+Wnt1→FZD7_LRP6 reused the existing SOX9→FZD7 and DeltaNp63/TP63→FZD7 lanes,
+with SP1→LRP5 added for the LRP5 row. Wnt1→FZD8_LRP5 gained direct YY1→FZD8
+promoter evidence and reused SP1→LRP5. Wnt1→FZD9_LRP5 and Wnt1→FZD9_LRP6
+gained direct PPARG→FZD9 promoter and expression evidence, with SP1→LRP5
+reused for the LRP5 row. No LRP6 target lane was transferred.
+
+These reusable target and component lanes remain separate from the submitted
+Wnt1 receptor-complex handoffs and do not establish source-to-TF activation,
+exact ternary-complex stoichiometry, or SCI-specific activity. The FZD5,
+FZD8, and FZD9 contexts are human cancer or bronchial-epithelial comparators;
+the FZD6 context is mouse mesenchymal-stem-cell evidence; the FZD7 and LRP5
+lanes are non-SCI cancer, developmental, or inferred-regulatory comparators.
+
+## Individual review 3437-3444
+
+All eight holds gained reusable component target capacity. Wnt10a→FZD10_LRP5
+and Wnt10a→FZD10_LRP6 reused SP1→FZD10, with SP1→LRP5 added only for the
+LRP5 row. Wnt10a→FZD1_LRP5 and Wnt10a→FZD1_LRP6 reused the existing SP1→FZD1
+and E2F1→FZD1 lanes, with SP1→LRP5 added for the LRP5 row. Wnt10a→FZD2_LRP5
+and Wnt10a→FZD2_LRP6 reused GATA6→FZD2, with SP1→LRP5 added for the LRP5
+row. Wnt10a→FZD3_LRP5 and Wnt10a→FZD3_LRP6 reused ZMIZ1→FZD3, with
+SP1→LRP5 added for the LRP5 row. No LRP6 target lane was transferred.
+
+These reusable target and component lanes remain separate from the submitted
+Wnt10a receptor-complex handoffs and do not establish source-to-TF activation,
+exact ternary-complex stoichiometry, or SCI-specific activity. The FZD3 target
+context is SCI-adjacent cerebral ischemia-reperfusion/endothelial OGD/R, not
+spinal-cord injury evidence; the other FZD and LRP5 contexts are non-SCI or
+inferred-regulatory comparators.
+
+## Individual review 3445-3454
+
+All ten holds gained reusable component target capacity. Wnt10a→FZD4_LRP5
+and Wnt10a→FZD4_LRP6 reused SMAD4→FZD4, with SP1→LRP5 added only for the
+LRP5 row. Wnt10a→FZD5_LRP5 and Wnt10a→FZD5_LRP6 reused EHF→FZD5, with
+SP1→LRP5 added for the LRP5 row. Wnt10a→FZD6_LRP5 and Wnt10a→FZD6_LRP6
+reused GATA4→FZD6, with SP1→LRP5 added for the LRP5 row. Wnt10a→FZD7_LRP5
+and Wnt10a→FZD7_LRP6 reused SOX9→FZD7 and DeltaNp63/TP63→FZD7, with
+SP1→LRP5 added for the LRP5 row. Wnt10a→FZD8_LRP5 and Wnt10a→FZD8_LRP6
+reused YY1→FZD8, with SP1→LRP5 added for the LRP5 row. No LRP6 target lane
+was transferred.
+
+These reusable target and component lanes remain separate from the submitted
+Wnt10a receptor-complex handoffs and do not establish source-to-TF activation,
+exact ternary-complex stoichiometry, or SCI-specific activity. The FZD and
+LRP5 target lanes in this block are non-SCI or inferred-regulatory
+comparators.
+
+## Individual review 3455-3464
+
+All ten holds gained reusable component target capacity. Wnt10a→FZD9_LRP5
+and Wnt10a→FZD9_LRP6 reused PPARG→FZD9, with SP1→LRP5 added only for the
+LRP5 row. Wnt10b→FZD10_LRP5 and Wnt10b→FZD10_LRP6 reused SP1→FZD10, with
+SP1→LRP5 added for the LRP5 row. Wnt10b→FZD1_LRP5 and Wnt10b→FZD1_LRP6
+reused SP1/E2F1→FZD1, with SP1→LRP5 added for the LRP5 row. Wnt10b→FZD2_LRP5
+and Wnt10b→FZD2_LRP6 reused GATA6→FZD2, with SP1→LRP5 added for the LRP5
+row. Wnt10b→FZD3_LRP5 and Wnt10b→FZD3_LRP6 reused ZMIZ1→FZD3, with
+SP1→LRP5 added for the LRP5 row. No LRP6 target lane was transferred.
+
+These reusable target and component lanes remain separate from the submitted
+Wnt10a or Wnt10b receptor-complex handoffs and do not establish source-to-TF
+activation, exact ternary-complex stoichiometry, or SCI-specific activity.
+The FZD3 target context is SCI-adjacent cerebral ischemia-reperfusion and
+endothelial OGD/R, not spinal-cord injury evidence; the other FZD and LRP5
+contexts are non-SCI or inferred-regulatory comparators.
+
+## Individual review 3465-3474
+
+All ten holds gained reusable component target capacity. Wnt10b→FZD4_LRP5
+and Wnt10b→FZD4_LRP6 reused SMAD4→FZD4, with SP1→LRP5 added only for the
+LRP5 row. Wnt10b→FZD5_LRP5 and Wnt10b→FZD5_LRP6 reused EHF→FZD5, with
+SP1→LRP5 added for the LRP5 row. Wnt10b→FZD6_LRP5 reused GATA4→FZD6,
+with SP1→LRP5 added for the LRP5 row. Wnt10b→FZD7_LRP5 and
+Wnt10b→FZD7_LRP6 reused SOX9→FZD7 and DeltaNp63/TP63→FZD7, with SP1→LRP5
+added for the LRP5 row. Wnt10b→FZD8_LRP5 and Wnt10b→FZD8_LRP6 reused
+YY1→FZD8, with SP1→LRP5 added for the LRP5 row. Wnt10b→FZD9_LRP5
+reused PPARG→FZD9 and SP1→LRP5. No LRP6 target lane was transferred.
+
+Targeted searches returned Wnt10b/FZD/LRP pathway, receptor-complex, and
+expression findings but did not establish a new Wnt10b-specific activating
+TF-to-FZD handoff for these exact rows. The reusable component lanes remain
+separate from the submitted Wnt10b receptor-complex assignments and do not
+establish source-to-TF activation, exact ternary-complex stoichiometry, or
+SCI-specific activity. The component contexts in this block are non-SCI or
+inferred-regulatory comparators.
+
+## Individual review 3475-3484
+
+Nine of these ten holds gained reusable component target capacity. The
+Wnt10b→FZD9_LRP6 row reused PPARG→FZD9, without transferring an LRP6 lane.
+Wnt11→FZD1, FZD2, FZD3, FZD5, FZD6, FZD8, and FZD9 reused the existing
+SP1/E2F1→FZD1, GATA6→FZD2, ZMIZ1→FZD3, EHF→FZD5, GATA4→FZD6, YY1→FZD8,
+and PPARG→FZD9 component lanes, respectively. Wnt11→FZD10 reused
+SP1→FZD10. The Wnt11→KLRG2 row remained on hold: targeted review found
+promoter TFBS predictions but no verified named activating TF-to-KLRG2
+relationship meeting the reusable-target standard.
+
+The targeted Wnt11 searches did not establish new source-to-TF activation or
+replace the submitted ligand-receptor handoffs. A rat neurogenic-bladder
+fibrosis study reported FZD10/Vangl2 candidate-receptor expression in SCI
+groups, and a prostate-cancer study supported Wnt11 signaling through FZD8;
+these findings are contextual rather than direct proof of the submitted
+terminal TF-to-target edges. The reusable component lanes remain separate
+from exact receptor assignment and do not establish ternary-complex
+stoichiometry or SCI-specific molecular activation. The FZD3 lane remains
+SCI-adjacent cerebral-ischemia/reperfusion evidence, not spinal-cord injury
+evidence.
+
+## Individual review 3485-3494
+
+Nine of these ten holds gained reusable component target capacity. The
+Wnt16→FZD10_LRP5 and Wnt16→FZD10_LRP6 rows reused SP1→FZD10, with SP1→LRP5
+added only for the LRP5 row. Wnt16→FZD1_LRP5 and Wnt16→FZD1_LRP6 reused
+SP1/E2F1→FZD1, with SP1→LRP5 added for the LRP5 row. Wnt16→FZD2_LRP5 and
+Wnt16→FZD2_LRP6 reused GATA6→FZD2, with SP1→LRP5 added for the LRP5 row.
+Wnt16→FZD3_LRP5 and Wnt16→FZD3_LRP6 reused ZMIZ1→FZD3, with SP1→LRP5
+added for the LRP5 row. Wnt16→FZD4_LRP5 reused SMAD4→FZD4 and SP1→LRP5.
+No LRP6 target lane was transferred. The Wnt11r→MuSK row remained on hold
+after targeted review found synaptic/axon-guidance signaling but no verified
+named activating TF-to-MuSK target relationship.
+
+The targeted Wnt16 searches found receptor, pathway, and expression results
+but did not establish new Wnt16-specific source-to-TF activation or the exact
+submitted ternary-complex assignments. The reusable FZD and LRP5 lanes remain
+component capacity only; these contexts do not establish exact stoichiometry
+or SCI-specific molecular activation. The component contexts are non-SCI or
+inferred-regulatory comparators.
+
+## Individual review 3505-3514
+
+All ten holds gained reusable FZD component target capacity. The
+Wnt16→FZD9_LRP6 row reused PPARG→FZD9 without transferring an LRP6 lane.
+Wnt2→FZD10_LRP5 and Wnt2→FZD10_LRP6 reused SP1→FZD10, with SP1→LRP5 added
+only for the LRP5 row. Wnt2→FZD1_LRP5 and Wnt2→FZD1_LRP6 reused
+SP1/E2F1→FZD1, with SP1→LRP5 added for the LRP5 row. Wnt2→FZD2_LRP5 and
+Wnt2→FZD2_LRP6 reused GATA6→FZD2, with SP1→LRP5 added for the LRP5 row.
+Wnt2→FZD3_LRP5 and Wnt2→FZD3_LRP6 reused ZMIZ1→FZD3, with SP1→LRP5
+added for the LRP5 row. Wnt2→FZD4_LRP5 reused SMAD4→FZD4 and SP1→LRP5.
+No LRP6 target lane was transferred.
+
+The targeted searches returned Wnt16/Wnt2 receptor, pathway, expression, and
+component results but did not establish new ligand-specific source-to-TF
+activation or exact ternary-complex assignments. The reusable FZD and LRP5
+lanes remain component capacity only and do not establish exact stoichiometry
+or SCI-specific molecular activation. The FZD3 comparator is
+SCI-adjacent cerebral-ischemia/reperfusion evidence, not spinal-cord injury
+evidence; the other component contexts are non-SCI or inferred-regulatory
+comparators.
+
+## Individual review 3515-3524
+
+All ten holds gained reusable FZD component target capacity. The
+Wnt2→FZD4_LRP6 row reused SMAD4→FZD4 without transferring an LRP6 lane.
+Wnt2→FZD5_LRP5 and Wnt2→FZD5_LRP6 reused EHF→FZD5, with SP1→LRP5 added
+only for the LRP5 row. Wnt2→FZD6_LRP5 and Wnt2→FZD6_LRP6 reused GATA4→FZD6,
+with SP1→LRP5 added for the LRP5 row. Wnt2→FZD7_LRP5 and Wnt2→FZD7_LRP6
+reused SOX9→FZD7 and DeltaNp63/TP63→FZD7, with SP1→LRP5 added for the
+LRP5 row. Wnt2→FZD8_LRP5 and Wnt2→FZD8_LRP6 reused YY1→FZD8, with
+SP1→LRP5 added for the LRP5 row. Wnt2→FZD9_LRP5 reused PPARG→FZD9 and
+SP1→LRP5. No LRP6 target lane was transferred.
+
+The targeted searches returned Wnt2/FZD/LRP receptor, pathway, and
+expression material but did not establish new Wnt2-specific source-to-TF
+activation or exact ternary-complex assignments. The reusable FZD and LRP5
+lanes remain component capacity only and do not establish exact stoichiometry
+or SCI-specific molecular activation. The FZD component contexts are non-SCI
+or inferred-regulatory comparators.
+
+## Individual review 3525-3534
+
+All ten holds gained reusable receptor-component target capacity. The
+Wnt2→FZD9_LRP6 row reused PPARG→FZD9 and the new MYC→LRP6
+expression-regulatory lane. Wnt2b→FZD10_LRP5 and Wnt2b→FZD10_LRP6 reused
+SP1→FZD10, with SP1→LRP5 added for the LRP5 row; Wnt2b→FZD1_LRP5 and
+Wnt2b→FZD1_LRP6 reused SP1/E2F1→FZD1, with SP1→LRP5 added for the LRP5
+row. Wnt2b→FZD2_LRP5 and Wnt2b→FZD2_LRP6 reused GATA6→FZD2 and the new
+MYC→FZD2 expression-regulatory lane, with MYC→LRP6 added to the LRP6 row
+and SP1→LRP5 to the LRP5 row. Wnt2b→FZD3_LRP5 and Wnt2b→FZD3_LRP6
+reused ZMIZ1→FZD3, with SP1→LRP5 added for the LRP5 row and MYC→LRP6
+for the LRP6 row. Wnt2b→FZD4_LRP5 reused SMAD4→FZD4 and SP1→LRP5.
+
+The MYC→FZD2 and MYC→LRP6 lanes are primary expression-regulatory
+component evidence, not direct promoter-occupancy evidence. The targeted
+Wnt2/Wnt2b searches did not establish ligand-specific source-to-TF
+activation or exact ternary-complex assignments. These component lanes are
+reusable capacity only; exact stoichiometry, Wnt2/Wnt2b handoff, and SCI
+activity remain unresolved. The FZD3 comparator is SCI-adjacent
+cerebral-ischemia/reperfusion evidence rather than spinal-cord-injury
+evidence; the other component contexts are non-SCI or inferred-regulatory
+comparators.
+
+## Individual review 3535-3544
+
+All ten holds gained reusable receptor-component target capacity. The
+Wnt2b→FZD4_LRP6 row reused SMAD4→FZD4 and MYC/SOX9→LRP6
+expression-regulatory lanes. Wnt2b→FZD5_LRP5 and Wnt2b→FZD5_LRP6 reused
+EHF→FZD5, with SP1→LRP5 added for the LRP5 row and MYC/SOX9→LRP6 for the
+LRP6 row. Wnt2b→FZD6_LRP5 and Wnt2b→FZD6_LRP6 reused GATA4→FZD6, with
+SP1→LRP5 added for the LRP5 row and MYC/SOX9→LRP6 for the LRP6 row.
+Wnt2b→FZD7_LRP5 and Wnt2b→FZD7_LRP6 reused SOX9/TP63→FZD7, with
+SP1→LRP5 added for the LRP5 row and MYC/SOX9→LRP6 for the LRP6 row.
+Wnt2b→FZD8_LRP5 and Wnt2b→FZD8_LRP6 reused YY1→FZD8, with SP1→LRP5
+added for the LRP5 row and MYC/SOX9→LRP6 for the LRP6 row. Wnt2b→FZD9_LRP5
+reused PPARG→FZD9 and SP1→LRP5.
+
+The MYC→LRP6 and SOX9→LRP6 lanes are primary expression-regulatory
+component evidence, not direct LRP6 promoter-occupancy evidence. The
+targeted Wnt2b searches did not establish ligand-specific source-to-TF
+activation or exact ternary-complex assignments. These component lanes are
+reusable capacity only; exact stoichiometry, Wnt2b handoff, and SCI activity
+remain unresolved. The FZD contexts are non-SCI or inferred-regulatory
+comparators.
+
+## Individual review 3545-3554
+
+All ten holds gained reusable receptor-component target capacity. The
+Wnt2b→FZD9_LRP6 row reused PPARG→FZD9 and MYC/SOX9→LRP6
+expression-regulatory lanes. Wnt3→FZD10_LRP5 reused SP1→FZD10 and
+SP1→LRP5; Wnt3→FZD10_LRP6 reused SP1→FZD10 and MYC/SOX9→LRP6.
+Wnt3→FZD1_LRP5 and Wnt3→FZD1_LRP6 reused SP1/E2F1→FZD1 plus the matching
+LRP5 or LRP6 component lanes. Wnt3→FZD2_LRP5 and Wnt3→FZD2_LRP6 reused
+GATA6→FZD2 plus the matching LRP5 or LRP6 component lanes.
+Wnt3→FZD3_LRP5 and Wnt3→FZD3_LRP6 reused ZMIZ1→FZD3 plus the matching
+LRP5 or LRP6 component lanes. Wnt3→FZD4_LRP5 reused SMAD4→FZD4 and
+SP1→LRP5.
+
+The MYC→LRP6 and SOX9→LRP6 lanes are primary expression-regulatory
+component evidence, not direct LRP6 promoter-occupancy evidence. The
+targeted Wnt2b/Wnt3 searches did not establish ligand-specific source-to-TF
+activation or exact ternary-complex assignments. Wnt3a/FZD10/LRP6
+developing-spinal-cord findings and Wnt3/FZD3/LRP6 reporter findings were
+retained as receptor/pathway comparators, not terminal TF-target evidence;
+Wnt3a is a different ligand from Wnt3. These component lanes are reusable
+capacity only; exact stoichiometry, source-to-TF handoff, and SCI activity
+remain unresolved.
+
+## Individual review 3555-3564
+
+All ten holds gained reusable receptor-component target capacity. The
+Wnt3→FZD4_LRP6 row reused SMAD4→FZD4 and MYC/SOX9→LRP6
+expression-regulatory lanes. Wnt3→FZD5_LRP5 and Wnt3→FZD5_LRP6 reused
+EHF→FZD5, with SP1→LRP5 added for the LRP5 row and MYC/SOX9→LRP6 for the
+LRP6 row. Wnt3→FZD6_LRP5 and Wnt3→FZD6_LRP6 reused GATA4→FZD6, with
+SP1→LRP5 added for the LRP5 row and MYC/SOX9→LRP6 for the LRP6 row.
+Wnt3→FZD7_LRP5 and Wnt3→FZD7_LRP6 reused SOX9/TP63→FZD7, with SP1→LRP5
+added for the LRP5 row and MYC/SOX9→LRP6 for the LRP6 row. Wnt3→FZD8_LRP5
+and Wnt3→FZD8_LRP6 reused YY1→FZD8, with SP1→LRP5 added for the LRP5 row
+and MYC/SOX9→LRP6 for the LRP6 row. Wnt3→FZD9_LRP5 reused PPARG→FZD9
+and SP1→LRP5.
+
+The MYC→LRP6 and SOX9→LRP6 lanes are primary expression-regulatory
+component evidence, not direct LRP6 promoter-occupancy evidence. The primary
+Wnt3/FZD8/LRP6 structure was retained as exact receptor-level comparator
+evidence, not terminal TF-target evidence. The targeted Wnt3 searches did
+not establish ligand-specific source-to-TF activation or exact ternary-
+complex assignments. These component lanes are reusable capacity only;
+exact stoichiometry, source-to-TF handoff, and SCI activity remain unresolved.
+
+## Individual review 3585-3594
+
+Nine of the ten holds gained reusable target capacity. Wnt3a→LGR5 gained
+the new direct GATA6→LGR5 promoter and expression context from human
+colorectal-adenoma studies. Wnt3a→LRP1 reused the existing YAP1→LRP1
+promoter-regulation context. Wnt3a→ROR1 gained a new RARA/RAR-alpha→ROR1
+promoter-occupancy and expression context from human neuroblastoma studies;
+the study is neural and differentiation-relevant but is not traumatic SCI.
+Wnt4→FZD10_LRP5 and Wnt4→FZD10_LRP6 reused SP1→FZD10 plus the matching
+LRP5 or LRP6 lanes. Wnt4→FZD1_LRP5 and Wnt4→FZD1_LRP6 reused SP1/E2F1→FZD1
+plus the matching LRP5 or LRP6 lanes, and Wnt4→FZD2_LRP5 and
+Wnt4→FZD2_LRP6 reused GATA6→FZD2 plus the matching LRP5 or LRP6 lanes.
+
+Wnt3a→RYK remained on hold. The targeted RYK search found receptor-level
+and Ryk-ICD/Smek chromatin-regulation material, but no qualifying named
+activating TF→RYK target-gene relationship. The Wnt4 receptor-pair searches
+found Wnt4/FZD/LRP pathway and promoter-regulatory material but did not
+establish the exact source-to-TF handoff or ternary-complex assignment.
+All reused and newly added target lanes are component or standalone capacity;
+they do not establish Wnt3a/Wnt4 activation of the corresponding TF or SCI
+activity.
+
+## Individual review 3565-3574
+
+All ten holds gained reusable receptor-component target capacity. The
+Wnt3→FZD9_LRP6 row reused PPARG→FZD9 and MYC/SOX9→LRP6
+expression-regulatory lanes. Wnt3a→FZD10_LRP5 and Wnt3a→FZD10_LRP6
+reused SP1→FZD10, with SP1→LRP5 added for the LRP5 row and MYC/SOX9→LRP6
+for the LRP6 row. Wnt3a→FZD1_LRP5 and Wnt3a→FZD1_LRP6 reused
+SP1/E2F1→FZD1 plus the matching LRP5 or LRP6 component lanes.
+Wnt3a→FZD2_LRP5 and Wnt3a→FZD2_LRP6 reused GATA6→FZD2 plus the matching
+LRP5 or LRP6 component lanes. Wnt3a→FZD3_LRP5 and Wnt3a→FZD3_LRP6
+reused ZMIZ1→FZD3 plus the matching LRP5 or LRP6 component lanes.
+Wnt3a→FZD4_LRP5 reused SMAD4→FZD4 and SP1→LRP5.
+
+The chick developing-spinal-cord Wnt3a/FZD10/LRP6 result was retained as
+SCI-context receptor evidence, not terminal TF-target evidence. The
+Wnt3a/FZD2/LRP6 perturbation and Wnt3a/FZD4/LRP6 recruitment findings were
+also receptor/pathway-level comparators and do not establish the corresponding
+LRP5 rows. The MYC→LRP6 and SOX9→LRP6 lanes are primary
+expression-regulatory component evidence, not direct LRP6 promoter-occupancy
+evidence. The targeted Wnt3/Wnt3a searches did not establish
+ligand-specific source-to-TF activation or exact ternary-complex assignments.
+These component lanes are reusable capacity only; exact stoichiometry,
+source-to-TF handoff, and SCI activity remain unresolved.
+
+## Individual review 3565-3574
+
+All ten holds gained reusable receptor-component target capacity. The
+Wnt3→FZD9_LRP6 row reused PPARG→FZD9 and MYC/SOX9→LRP6
+expression-regulatory lanes. Wnt3a→FZD10_LRP5 and Wnt3a→FZD10_LRP6
+reused SP1→FZD10, with SP1→LRP5 added for the LRP5 row and MYC/SOX9→LRP6
+for the LRP6 row. Wnt3a→FZD1_LRP5 and Wnt3a→FZD1_LRP6 reused
+SP1/E2F1→FZD1 plus the matching LRP5 or LRP6 component lanes.
+Wnt3a→FZD2_LRP5 and Wnt3a→FZD2_LRP6 reused GATA6→FZD2 plus the matching
+LRP5 or LRP6 component lanes. Wnt3a→FZD3_LRP5 and Wnt3a→FZD3_LRP6
+reused ZMIZ1→FZD3 plus the matching LRP5 or LRP6 component lanes.
+Wnt3a→FZD4_LRP5 reused SMAD4→FZD4 and SP1→LRP5.
+
+The chick developing-spinal-cord Wnt3a/FZD10/LRP6 result was retained as
+SCI-context receptor evidence, not terminal TF-target evidence. The
+Wnt3a/FZD2/LRP6 perturbation and Wnt3a/FZD4/LRP6 recruitment findings were
+also receptor/pathway-level comparators and do not establish the corresponding
+LRP5 rows. The MYC→LRP6 and SOX9→LRP6 lanes are primary
+expression-regulatory component evidence, not direct LRP6 promoter-occupancy
+evidence. The targeted Wnt3/Wnt3a searches did not establish
+ligand-specific source-to-TF activation or exact ternary-complex assignments.
+These component lanes are reusable capacity only; exact stoichiometry,
+source-to-TF handoff, and SCI activity remain unresolved.
+
+Six of the eight holds gained reusable target capacity. Try4→F2R and
+Try5→F2R reused EGR1→F2R and SP1→F2R; Try4→F2RL2 and Try5→F2RL2 reused
+NRF2→F2RL2; Try5→F2RL1 reused IRX3→F2RL1; and Try4→PARD3 reused
+SP1→PARD3. The two F2RL3 rows remained on hold after targeted review: no
+qualifying named activating TF-to-F2RL3 relationship was verified, and
+receptor-family or promoter-prediction findings were not transferred.
+
+The reused target lanes remain separate from the submitted Try4 or Try5
+protease handoffs and do not establish source-to-TF activation or
+SCI-specific activity.
+
+## Individual review 3325-3332
+
+Six of the eight holds gained reusable target capacity. Transferrin→LDLR
+reused existing THRB, EGR1, and SP1 target contexts; transferrin→LRP2 reused
+HNF4A→LRP2; Try10→F2R reused EGR1→F2R and SP1→F2R; Try10→F2RL1,
+Try10→F2RL2, and Try10→PARD3 reused existing IRX3, NRF2, and SP1 target
+contexts, respectively.
+
+TRH→TRHR2 and Try10→F2RL3 remained on hold after targeted review. The
+TRHR2 search encountered a human TR2/NR2C1 promoter study that is a
+nomenclature collision rather than evidence for the rodent Trhr2 receptor,
+and the F2RL3 search located receptor-family and promoter-prediction material
+without a qualifying named activating TF-to-F2RL3 relationship. The reused
+target lanes remain separate from the submitted ligand/protease handoffs and
+do not establish source-to-TF activation or SCI-specific activity.
+
+## Individual review 3317-3324
+
+Five of the eight holds gained reusable target capacity. TPH1→HTR2B gained
+direct NFIA and NFIB promoter-activation contexts plus a bounded STAT-family
+promoter-regulation context from human uveal-melanoma studies. TPH1→HTR4
+gained an NKX2-5-like enhancer-regulatory context from human promoter and
+5-prime-UTR assays, and TPH1→HTR7 gained direct SP1 and SP3 promoter-binding
+and activity contexts. The transferrin→ADRB2 and transferrin→HFE rows reused
+existing ADRB2 and HFE target contexts.
+
+TPH1→HTR2C, TPH1→HTR5A, and TPH1→HTR6 remained on hold after targeted
+review. HTR2C promoter architecture and allele-dependent reporter studies did
+not identify a qualifying named activating TF; HTR5A allele-sensitive nuclear
+protein binding did not identify a named activating TF in the peer-reviewed
+record; and HTR6 promoter predictions and receptor-pathway or
+glucocorticoid-family findings did not establish a reusable named activating
+TF-to-HTR6 relationship. These target lanes remain separate from the
+submitted TPH1 or transferrin handoffs and do not establish source-to-TF
+activation or SCI-specific activity.
+
+## Individual review 3309-3316
+
+Five of the eight holds gained reusable target capacity. TNXB→ITGAV/ITGB6
+reused SMAD3/4→ITGB6, TNXB→SDC1 and TNXB→SDC4 reused NR1H4→SDC1 and
+RELA→SDC4, TPH1→HTR1A reused SP1→HTR1A, and TPH1→HTR2A gained a new
+EGR3 promoter-binding and reporter-activation context. The HTR2A study
+demonstrated EGR3-dependent receptor induction in mouse frontal cortex,
+in-vivo promoter occupancy, and activation of Htr2a reporter constructs.
+
+HTR1B, HTR1D, and HTR1F remained on hold after targeted review. HTR1B
+promoter-variant and PHF8-occupancy findings did not establish a qualifying
+activating TF-to-HTR1B relationship, and no reusable activating TF-to-HTR1D
+or TF-to-HTR1F context was verified. The new and reused target lanes remain
+separate from the submitted TNXB or TPH1 handoffs and do not establish
+source-to-TF activation or SCI-specific activity.
+
+## Individual review 3293-3300
+
+All eight holds were searched individually. All eight rows gained reusable
+target capacity from independently registered contexts: TNN→ITGA9/ITGB1 and
+TNR→ITGA8/ITGB1 reused HIF1A→ITGB1, TNN→ITGAV/ITGB3 reused HOXD3→ITGB3,
+TNN→ITGAV/ITGB6 reused SMAD3/4→ITGB6, TNN→SDC1 and TNN→SDC4 reused
+NR1H4→SDC1 and RELA→SDC4, TNR→ITGA2B/ITGB3 reused RUNX1→ITGA2B, and
+TNR→ITGA9/ITGB1 reused HIF1A→ITGB1. These are non-SCI human, mouse, or
+human/mouse comparator contexts spanning hypoxia and wound healing,
+angiogenic endothelium, pulmonary fibrosis, hepatic lipid regulation,
+inflammatory tumor, and platelet/hematopoietic systems.
+
+These are reusable target-gene lanes rather than evidence that any submitted
+TNN or TNR handoff activates the corresponding TF. The original
+pathway/function-boundary rows remain separate and no SCI-specific upstream
+relay was inferred.
+
+## Individual review 3277-3284
+
+All eight holds were searched individually. Four rows gained reusable target
+capacity: TNC→PTPRZ1 gained a new HIF2A/ELK1 cooperative promoter context,
+TNC→SDC1 reused the NR1H4 promoter context, TNC→SDC4 reused the RELA
+promoter context, and TNF→ICOS gained a FOXO1 promoter-occupancy and
+perturbation context. The PTPRZ1 study used human HEK293T and Hep3B hypoxia
+and tumor comparator systems and demonstrated HIF-2alpha promoter activation,
+ELK1 dependence, site-mutational effects, and HIF/ELK1 chromatin occupancy.
+The ICOS study used mouse CD4 T cells and showed FOXO1 occupancy at the Icos
+promoter together with reduced ICOS induction after Foxo1 loss.
+
+CELSR2, FFAR2, SEMA4C, and TNFRSF21 remained on hold after targeted review.
+The CELSR2 search located an NR3C1-containing enhancer reporter experiment,
+but the indexed record did not verify direct NR3C1 occupancy or a qualifying
+activating TF-to-CELSR2 target relationship. The other three searches did not
+verify a reusable activating TF-to-target context. All four new or reused
+target lanes remain separate from the submitted ligand/receptor handoffs and
+do not establish source-to-TF activation or promote the original holds.
+
+## Individual review 3221-3228
+
+Audits 3221-3228 covered TGFB2/TGFBR3 and TGFB3 handoffs to ACVR1,
+ACVR1B, ACVR1C, ENG, and ITGB1 composite branches. All eight rows gained
+reusable target capacity from independently registered SMAD3/4-CTGF,
+SMAD1/5/8-ID1, SMAD2/3-FST, HIF1A-ENG, and HIF1A-ITGB1 contexts. These are
+general regulatory target contexts, including mouse osteoblast/gonadotrope,
+human signed public TF, and wound-healing comparators, and remain separate
+from the submitted receptor/coreceptor and integrin handoffs. They do not
+establish the original pathway/function-boundary rows or any SCI-specific
+upstream relay.
+
+## Individual review 3197-3204
+
+Audits 3197-3204 covered TENM3/TENM4 handoffs to ADGRL1, ADGRL2, and ADGRL3,
+TFPI-SDC4, TG-TPO, and TGFA-EGFR/ERBB2. All eight rows gained reusable target
+capacity from independently registered ADGRL AR, RELA-SDC4, EGR1-TPO, and
+EGR1-EGFR contexts. These are general regulatory target contexts, including
+human cancer or signed public TF comparator evidence, and remain separate
+from the submitted adhesion, protease/matrix, thyroid, and growth-factor
+handoffs. They do not establish the original pathway/function-boundary rows
+or any SCI-specific upstream relay.
+
+## Individual review 3181-3188
+
+Audits 3181-3188 covered the Tac2/TACR3, Tac4/TACR1, TAFA4/FPR1,
+TAX1BP3/ADGRB1-2, TCN2/CNR1, and TDGF1/ACVR1C-ACVR2A handoffs. Three rows
+gained reusable target capacity: the TCN2/CNR1 search reused the registered
+CTNNB1-to-CCND1 context from an endocannabinoid hepatic-progenitor study, and
+both TDGF1 receptor rows reused the registered SMAD2/3-to-Lefty1 Nodal/Activin
+context. The other five rows retained holds because the evidence stopped at
+receptor pharmacology, inflammatory or spinal-cord function, unresolved
+extracellular pairing, or non-TF pathway output. These contexts remain separate
+from the submitted handoffs and do not promote the original pathway/function-
+boundary rows.
+
+## Individual review 3173-3180
+
+Audits 3173-3180 covered the eight TPH2/HTR1B, TXA2/TBXAS1/TBXA2R, TAC1/DPP4,
+TAC1/FAP, and TAC1/TACR1-3 handoffs. Two rows gained reusable downstream target
+contexts: NFKB2-to-EGFR from TBXA2R-dependent NSCLC signaling and NF-kB-to-IL8
+from substance-P/TACR1 signaling in lung epithelial cells. The remaining six
+rows retained holds because their evidence stopped at immediate-early-gene
+expression, peptide processing, receptor-associated signaling, or candidate
+promoter/enhancer occupancy without a qualifying named TF-to-target result.
+These contexts remain separate from the submitted handoffs and do not promote
+the original pathway/function-boundary rows.
+
+## Individual review 3165-3172
+
+Audits 3165-3172 covered the eight Sst and TENM/FLRT composite handoffs to
+SSTR5, ADGRL1, ADGRL1, ADGRL2, ADGRL3, ADGRL3, ADGRL1, and ADGRL1. Seven
+rows retained reusable target capacity: the four ADGRL1 rows reused the
+registered AR target context, while ADGRL2 and ADGRL3 gained new AR promoter-
+occupancy/androgen-induction contexts from primary human prostate-cancer
+studies. SSTR5 remained on hold because its promoter studies showed promoter
+activity and candidate response elements but did not establish a qualifying
+named activating TF relationship. These contexts remain separate from the
+submitted composite or receptor handoffs and do not promote the original
+pathway/function-boundary rows.
+
+## Individual review 3157-3164
+
+Audits 3157-3164 covered the eight Spp1/Sptan1/Sptbn2/Sst handoffs to S1PR1,
+PTPRA, PTPRA, ADRA2A, GRM7, MTNR1A, SSTR1, and SSTR4. Five rows retained
+reusable target capacity: S1PR1, ADRA2A, GRM7, and MTNR1A reused registered
+target contexts, while SSTR1 gained a new direct POU1F1/Pit-1 promoter context
+from rat anterior-pituitary studies. PTPRA remained on hold because TFLink/GTRD
+occupancy memberships and promoter predictions did not establish activation
+direction or target-specific perturbation. SSTR4 remained on hold because its
+promoter study identified potential factor sites but left their regulatory role
+under investigation. These contexts remain separate from the submitted
+handoffs and do not promote the original pathway/function-boundary rows.
+
+## Individual review 3149-3156
+
+Audits 3149-3156 covered the eight Snx14/Sorbs1/Sostdc1/Spink3/Spon2/Spp1
+handoffs to HTR6, ITGA1, ITGB5, LRP5, NRSN1, ITGA5, CCR8, and PTGER4. Seven
+rows gained reusable target capacity: ITGA1, ITGB5, LRP5, ITGA5, and PTGER4
+reused existing target contexts; NRSN1 gained an ASCL1/NEUROD1-linked context
+from primary SCLC ChIP-seq and perturbation data; and CCR8 gained BATF and
+cooperative FOXP3/RELA contexts. HTR6 remained on hold because the targeted
+evidence supported SINE methylation and NR5A2/DNMT1-associated epigenetic
+control rather than an activating TF-to-HTR6 relationship. These target lanes
+remain separate from the submitted handoffs and do not promote the original
+pathway/function-boundary rows.
+
+## Individual review 3141-3148
+
+Audits 3141-3148 covered the eight Slurp2 handoffs to CHRNA9, CHRNB1,
+CHRNB2, CHRNB3, CHRNB4, CHRND, CHRNE, and CHRNG. Seven rows gained reusable
+target capacity by reusing independently curated TF-to-subunit contexts for
+CHRNB1, CHRNB3, CHRNB4, CHRND, CHRNE, and CHRNG, with the CHRNA9 context also
+reused from the preceding tranche. CHRNB2 remained on hold: targeted review
+found promoter-variant and ischemia-associated REST repression/occupancy
+evidence, but no qualifying named activating TF-to-CHRNB2 relationship. These
+contexts remain separate from the Slurp2 handoffs and do not promote the
+original pathway/function-boundary rows.
+
+## Individual review 3133-3140
+
+Audits 3133-3140 covered the eight Slurp2 handoffs to CHRNA1, CHRNA10,
+CHRNA2, CHRNA3, CHRNA4, CHRNA5, CHRNA6, and CHRNA7. All eight rows gained
+reusable target capacity: seven rows reused existing independently curated
+TF-to-subunit contexts, while the CHRNA6 review added one new POU4F2/BRN3B
+regulatory context from a peer-reviewed mouse ipRGC study. The CHRNA2 row
+retains two distinct target contexts, PPARG and POU4F2. The CHRNA6 evidence
+supports target-gene designation and BRN3B perturbation-dependent expression,
+but the article text does not provide a CHRNA6-specific BRN3B occupancy assay;
+it is therefore recorded as contextual regulatory support rather than a direct
+binding claim. These additions remain separate from the Slurp2 handoffs and do
+not promote the held ligand/receptor rows.
+
+## Individual review 3125-3132
+
+Seven of the eight rows gained reusable TF-target capacity. Slurp1-Chrna9 gained a direct TBX3-to-Chrna9 context from mouse pluripotent-stem-cell promoter ChIP, reporter, and knockdown evidence. Slurp1-Chrnb1 reused existing signed MYC-to-CHRNB1 contexts in human and mouse. Slurp1-Chrnb3 gained a bounded POU2F1/OCT1-linked promoter context from human allele-sensitive binding and activity assays. Slurp1-Chrnb4 gained a direct rat SP1 promoter context. Slurp1-Chrnd gained direct FUS promoter occupancy and perturbation evidence, while Slurp1-Chrne gained both direct FUS evidence and a GABPA/GABPB1 N-box regulatory context. Slurp1-Chrng gained direct NOTCH1/NICD promoter occupancy and muscle gain-of-function evidence. Slurp1-Chrnb2 remained on hold because the targeted review located promoter-variant studies and ischemia-associated REST repression, but no qualifying named activating TF-to-CHRNB2 relationship.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI mouse pluripotent-stem-cell, human lymphoblast/Parkinson-disease, rat and human neuronal, and mouse/human/rat neuromuscular-junction systems. The individual search log contains 3116 rows through M22B-IND-3116. This tranche added seven standalone TF-target edges and seven evidence records covering six distinct target genes, reused two registered MYC-to-CHRNB1 contexts, and kept one row on hold.
+
+## Individual review 2973-2980
+
+All eight rows retained reusable target capacity. Rln3-Vipr1 reused the direct SP1-to-VIPR1 promoter context. Rps19-C5ar1 gained a standalone RELA/NF-kappaB-to-C5AR1 promoter context from a primary human hepatoma study. The four RSPO receptor rows reused the direct TCF/LEF-to-Axin2 Wnt target context, with the Rspo3 rows also checked against independent AXIN2/LRP5/6 pathway work. Rspo3-Sdc4 reused HIF1A, SMAD3, KLF5, and RELA SDC4 target contexts, and Rspo4-Lgr4_Lrp5 reused the signed SP1-to-LRP5 context.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI rat lung epithelial, human hepatoma/inflammatory, mouse developmental Wnt, human adipose progenitor, human disc/osteosarcoma/colorectal/inflammatory, and general human regulon systems. The individual search log contains 2980 rows through M22B-IND-2980. This tranche added one standalone target edge and one evidence record, reused target contexts for seven rows, and kept the exact upstream handoffs unpromoted.
