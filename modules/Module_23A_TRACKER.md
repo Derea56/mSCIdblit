@@ -168,3 +168,7 @@ B047 adds one review-led EFNA2–EPHA5 candidate and one source-backed A-layer e
 ## Review-led expansion: B048 (2026-09-05)
 
 B048 promotes the existing EFNA2–EPHA8 binding/activation edge using primary mouse-brain ligand and NIH3T3 receptor-system evidence: the historical Elf-1/Cek7-L ligand represented in the local register by EFNA2 binds and activates Eek/EphA8 and Eek-TrkB. Historical nomenclature, recombinant/heterologous context, no-downstream-program, no-native-neural, and no-traumatic-SCI-transfer limits remain explicit. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B049 (2026-09-05)
+
+B049 adds one review-led VTN–alphaVbeta8 direct-binding edge: primary affinity-chromatography assays support exact alphaVbeta8 binding to vitronectin in recombinant secreted and intact beta8-expressing cell systems. The existing function-only edge remains separate because intact alphaVbeta8 did not promote adhesion on vitronectin-coated substrate. No beta8 cytoplasmic relay, neural, or traumatic-SCI transfer is established. No Module 20A–22A ledger is modified.
