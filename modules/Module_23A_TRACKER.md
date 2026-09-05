@@ -78,3 +78,7 @@ B024 adds two review-led ECM candidates and three candidate branches: decorin-to
 ## Review-led expansion: B025 (2026-09-04)
 
 B025 adds two review-led matrix danger-signal candidates and seven source-backed A/B edges: tenascin-C FBG-domain binding to TLR4, its TLR4-dependent NF-kappaB/proximal relay, and macrophage/microglial inflammatory function; plus low-molecular-weight hyaluronan TLR4-MyD88 and TLR4-TRIF/TBK1/IRF3 relays, cPLA2alpha/COX2-eicosanoid output, and IFN-beta output. Primary records were acquired locally and linked through the source manifest. Exact FBG-domain, HA fragment-size, receptor/adaptor, cell-model, endotoxin-control, and non-SCI comparator limits remain explicit; direct HA-TLR4 binding and universal MyD88 or terminal-TF assignments are not inferred, and no Module 20A–22A ledger is modified.
+
+## Review-led expansion: B026 (2026-09-04)
+
+B026 adds one review-led FN-EDA danger-signal candidate and three source-backed A/B edges: EDA-domain engagement of the TLR4-MD2 receptor context, a TLR4-dependent proximal inflammatory/profibrotic relay, and measured fibroblast/myofibroblast and macrophage inflammatory-fibrotic outputs. Primary records were acquired locally and linked through the source manifest. EDA-domain and MD-2 requirements, non-SCI tissue-injury/fibrosis comparator scope, the absence of a structural DAMP-receptor complex, and the absence of traumatic-SCI or terminal-TF transfer remain explicit. The identified alpha4beta1 cooperation paper was not used for promotion because its local full text was not acquired.
