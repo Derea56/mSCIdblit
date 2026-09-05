@@ -5582,6 +5582,28 @@ not establish ligand-specific source-to-TF activation or exact ternary-
 complex assignments. These component lanes are reusable capacity only;
 exact stoichiometry, source-to-TF handoff, and SCI activity remain unresolved.
 
+## Individual review 3585-3594
+
+Nine of the ten holds gained reusable target capacity. Wnt3a→LGR5 gained
+the new direct GATA6→LGR5 promoter and expression context from human
+colorectal-adenoma studies. Wnt3a→LRP1 reused the existing YAP1→LRP1
+promoter-regulation context. Wnt3a→ROR1 gained a new RARA/RAR-alpha→ROR1
+promoter-occupancy and expression context from human neuroblastoma studies;
+the study is neural and differentiation-relevant but is not traumatic SCI.
+Wnt4→FZD10_LRP5 and Wnt4→FZD10_LRP6 reused SP1→FZD10 plus the matching
+LRP5 or LRP6 lanes. Wnt4→FZD1_LRP5 and Wnt4→FZD1_LRP6 reused SP1/E2F1→FZD1
+plus the matching LRP5 or LRP6 lanes, and Wnt4→FZD2_LRP5 and
+Wnt4→FZD2_LRP6 reused GATA6→FZD2 plus the matching LRP5 or LRP6 lanes.
+
+Wnt3a→RYK remained on hold. The targeted RYK search found receptor-level
+and Ryk-ICD/Smek chromatin-regulation material, but no qualifying named
+activating TF→RYK target-gene relationship. The Wnt4 receptor-pair searches
+found Wnt4/FZD/LRP pathway and promoter-regulatory material but did not
+establish the exact source-to-TF handoff or ternary-complex assignment.
+All reused and newly added target lanes are component or standalone capacity;
+they do not establish Wnt3a/Wnt4 activation of the corresponding TF or SCI
+activity.
+
 ## Individual review 3565-3574
 
 All ten holds gained reusable receptor-component target capacity. The
