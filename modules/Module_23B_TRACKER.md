@@ -192,3 +192,7 @@ B066 promotes the existing paired 23B broader COL15A1-associated matrix → α2�
 ## Review-led expansion: B067 (2026-09-05)
 
 B067 promotes the existing paired 23B VTN–αVβ8 adhesion/migration function edge from medium-low to medium using primary mouse renal and microglia studies. The renal study reports β8-dependent migration on vitronectin matrices, and the microglia study identifies αVβ8 as a functional vitronectin receptor. Direct recombinant VTN–αVβ8 binding remains separate from this function edge; non-SCI model, no-single-relay, no-terminal-TF, and no-traumatic-SCI limits are preserved. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B068 (2026-09-05)
+
+B068 adds a new paired 23B dimer-level S100A8/A9–Mac-1 cellular-binding edge at medium-high confidence using primary CR3-transfectant binding assays. Recombinant S100A8/A9 binds more strongly to CR3-transfected CHO cells than vector controls, while CD11b/CD18 inhibition reduces only part of the associated neutrophil-survival effect. The record is bounded to cell-based receptor-complex binding, dimer state, alternate receptors, non-SCI comparator models, and no complete downstream relay or traumatic-SCI transfer. Canonical signaling tables and simulator outputs remain untouched.

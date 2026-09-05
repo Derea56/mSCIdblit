@@ -242,3 +242,7 @@ B066 promotes the existing broader COL15A1-associated matrix → α2β1/DDR1/Pyk
 ## Review-led expansion: B067 (2026-09-05)
 
 B067 promotes the existing VTN–αVβ8 function edge from medium-low to medium using acquired primary mouse renal and microglia studies. The renal study reports β8-dependent migration on vitronectin matrices, and the microglia study identifies αVβ8 as a functional vitronectin receptor; recombinant binding evidence remains represented on the separate direct edge. Non-SCI model limits, no-single-relay, no-terminal-TF, and no-traumatic-SCI boundaries remain explicit.
+
+## Review-led expansion: B068 (2026-09-05)
+
+B068 adds a new dimer-level S100A8/A9–Mac-1 cellular-binding edge at medium-high confidence using a primary CR3-transfectant study. Recombinant S100A8/A9 binds more strongly to CR3-transfected CHO cells than vector controls, while CD11b/CD18 inhibition reduces only part of the associated neutrophil-survival effect. The record is bounded to cell-based receptor-complex binding, dimer state, alternate receptors, non-SCI comparator models, and no complete downstream relay or traumatic-SCI transfer.
