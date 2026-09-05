@@ -5012,6 +5012,19 @@ Seven of the eight rows retained reusable target capacity. Slitrk6-Ptprs reused 
 
 These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human/mouse adipose, liver, neuronal, inner-ear, and promoter-haplotype systems, plus chicken/quail muscle. The individual search log contains 3108 rows through M22B-IND-3108. This tranche added seven standalone TF-to-target edges and seven evidence records covering six distinct CHRNA targets, reused a registered PTPRS target context for one row, and kept one row on hold.
 
+## Individual review 3149-3156
+
+Audits 3149-3156 covered the eight Snx14/Sorbs1/Sostdc1/Spink3/Spon2/Spp1
+handoffs to HTR6, ITGA1, ITGB5, LRP5, NRSN1, ITGA5, CCR8, and PTGER4. Seven
+rows gained reusable target capacity: ITGA1, ITGB5, LRP5, ITGA5, and PTGER4
+reused existing target contexts; NRSN1 gained an ASCL1/NEUROD1-linked context
+from primary SCLC ChIP-seq and perturbation data; and CCR8 gained BATF and
+cooperative FOXP3/RELA contexts. HTR6 remained on hold because the targeted
+evidence supported SINE methylation and NR5A2/DNMT1-associated epigenetic
+control rather than an activating TF-to-HTR6 relationship. These target lanes
+remain separate from the submitted handoffs and do not promote the original
+pathway/function-boundary rows.
+
 ## Individual review 3141-3148
 
 Audits 3141-3148 covered the eight Slurp2 handoffs to CHRNA9, CHRNB1,
