@@ -5125,6 +5125,22 @@ TNFSF or tenascin handoff activates the corresponding TF. The original
 pathway/function-boundary rows remain separate and no SCI-specific upstream
 relay was inferred.
 
+## Individual review 3301-3308
+
+All eight holds were searched individually. All eight rows gained reusable
+target capacity: TNR→ITGAV/ITGB3 and TNXB→ITGAV/ITGB3 reused HOXD3→ITGB3,
+TNR→ITGAV/ITGB6 reused SMAD3/4→ITGB6, TNR→SDC1 and TNR→SDC4 reused
+NR1H4→SDC1 and RELA→SDC4, TNXB→ITGA2B/ITGB3 reused RUNX1→ITGA2B, and
+TNXB→ITGA8/ITGB1 and TNXB→ITGA9/ITGB1 reused HIF1A→ITGB1. These are non-SCI
+human, mouse, or human/mouse comparator contexts spanning angiogenic
+endothelium, pulmonary fibrosis, hepatic lipid regulation, inflammatory
+tumor, platelet/hematopoietic, and hypoxia or wound-healing systems.
+
+These are reusable target-gene lanes rather than evidence that any submitted
+TNR or TNXB handoff activates the corresponding TF. The original
+pathway/function-boundary rows remain separate and no SCI-specific upstream
+relay was inferred.
+
 ## Individual review 3293-3300
 
 All eight holds were searched individually. All eight rows gained reusable
