@@ -118,3 +118,7 @@ B047 promotes one new 23B edge paired one-to-one with Module 23A for the EFNA2�
 ## Review-led expansion: B048 (2026-09-05)
 
 B048 promotes the existing EFNA2–EPHA8 binding/activation edge using primary mouse-brain ligand and NIH3T3 receptor-system evidence: the historical Elf-1/Cek7-L ligand represented in the local register by EFNA2 binds and activates Eek/EphA8 and Eek-TrkB. The evidence is retained at the direct-binding and receptor-proximal activation layers with explicit historical-alias, recombinant/heterologous, no-downstream-program, no-native-neural, and no-traumatic-SCI-transfer limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B049 (2026-09-05)
+
+B049 promotes one new 23B edge paired one-to-one with Module 23A for VTN–alphaVbeta8 direct binding. Primary affinity-chromatography assays support exact alphaVbeta8 binding to vitronectin in recombinant secreted and intact beta8-expressing cell systems; the direct-binding edge is retained separately from the existing function-only edge because intact alphaVbeta8 did not promote adhesion. The evidence is non-SCI recombinant/heterologous, with no receptor-proximal signaling, neural, or traumatic-SCI transfer asserted. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
