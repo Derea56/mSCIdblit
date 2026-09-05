@@ -144,3 +144,7 @@ B041 adds one review-led tenascin-R conduction candidate and one source-backed A
 ## Review-led expansion: B042 (2026-09-05)
 
 B042 adds one review-led PACAP receptor candidate and four source-backed A-layer edges: direct PACAP association with recombinant VPAC1/VIPR1 and VPAC2/VIPR2 systems, plus VPAC1- and VPAC2-linked Gs/adenylate-cyclase/cAMP activation. Historical VIP1/VIP2 nomenclature, shared PACAP/VIP pharmacology, receptor-state and heterologous-system limits, and no-native-SCI or subtype-exclusive downstream transfer remain explicit. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B043 (2026-09-05)
+
+B043 adds one review-led S100A8/A9 candidate and two source-backed A-layer edges: Mac-1 (ITGAM:ITGB2) up-regulation/activation and Mac-1-dependent neutrophil adhesion/chemotaxis. The primary study’s mixed S100A8, S100A9, and S100A8/A9 preparations, antibody-sensitive Mac-1 function, non-SCI inflammatory models, no-direct-binding boundary, and no-native-SCI-transfer limit remain explicit. No Module 20A–22A ledger is modified.

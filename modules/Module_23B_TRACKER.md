@@ -94,3 +94,7 @@ B041 promotes one new 23B edge paired one-to-one with Module 23A for tenascin-R 
 ## Review-led expansion: B042 (2026-09-05)
 
 B042 promotes four new 23B edges paired one-to-one with Module 23A for PACAP signaling through the shared VPAC receptor family: direct PACAP association with recombinant VPAC1/VIPR1 and VPAC2/VIPR2, plus VPAC1- and VPAC2-linked Gs/adenylate-cyclase/cAMP relay edges. Historical VIP1/VIP2 nomenclature, shared PACAP/VIP pharmacology, recombinant-system and receptor-state limits, and no-native-SCI or subtype-exclusive downstream transfer remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B043 (2026-09-05)
+
+B043 promotes two new 23B edges paired one-to-one with Module 23A for the S100A8/A9–Mac-1 branch: exact tested-preparation-level Mac-1 activation and Mac-1-dependent neutrophil adhesion/chemotaxis. The primary study’s mixed S100 preparations, antibody-sensitive Mac-1 function, non-SCI inflammatory models, no-direct-binding boundary, and no-native-SCI-transfer limit remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
