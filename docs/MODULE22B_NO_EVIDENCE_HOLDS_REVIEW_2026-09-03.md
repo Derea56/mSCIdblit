@@ -5033,6 +5033,19 @@ signed public TF comparators, and remain separate from the submitted
 receptor/coreceptor composites. They do not establish the original
 pathway/function-boundary rows or any SCI-specific upstream relay.
 
+## Individual review 3229-3236
+
+Audits 3229-3236 covered TGFB3 integrin and TGFBR1/TGFBR3 handoffs,
+TGM2-ADGRG1/TBXA2R, TGS1-RXRA, and THBS1-CD36. Two rows gained new target
+contexts: HIF2A-to-ITGB5 from promoter binding/activation evidence and
+HAND1-to-ADGRG1 from an NCBI/GEO trophoblast study record. The other six
+rows reused independently registered HOXD3-ITGB3, SMAD3/4-CTGF,
+EGR1-TBXA2R, RXRA-Ccl6, and HIF1A-CD36 contexts. These are general
+regulatory target contexts and remain separate from the submitted
+receptor, integrin, scaffold, and RNA-processing handoffs. They do not
+establish the original pathway/function-boundary rows or any SCI-specific
+upstream relay.
+
 ## Individual review 3221-3228
 
 Audits 3221-3228 covered TGFB2/TGFBR3 and TGFB3 handoffs to ACVR1,
