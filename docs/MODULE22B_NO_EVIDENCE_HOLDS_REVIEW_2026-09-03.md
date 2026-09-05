@@ -5206,6 +5206,21 @@ Uts2b, Vcam1, Vcan, Vcl, and Vegfa handoffs and do not establish
 source-to-TF activation or SCI-specific activity. The TLR1 lane is
 regulatory-support rather than a single-subunit direct-occupancy claim.
 
+## Individual review 3373-3380
+
+Seven of the eight holds gained reusable target capacity. Vegfa→KDR reused
+Ets1→KDR; Vegfa→SIRPA gained direct ELK1→SIRPA promoter context; Vegfa→TYRO3
+reused STAT3→TYRO3; Vegfb→ADRB2 reused SP1→ADRB2 and E2F1→ADRB2; Vegfb→FLT1
+reused HIF1A→FLT1; Vegfb→FLT1_KDR reused HIF1A→FLT1 and Ets1→KDR component
+lanes; and Vegfb→RET reused direct ETV5→RET promoter context. Vegfa→GPC1
+remained on hold because promoter motifs and reporter activity did not verify
+a named activating TF-to-GPC1 relationship.
+
+The reusable target lanes remain separate from the submitted Vegfa and Vegfb
+handoffs and do not establish source-to-TF activation or SCI-specific
+activity. The ELK1→SIRPA record is a direct promoter context from a
+non-SCI macrophage comparator.
+
 Six of the eight holds gained reusable target capacity. Try4→F2R and
 Try5→F2R reused EGR1→F2R and SP1→F2R; Try4→F2RL2 and Try5→F2RL2 reused
 NRF2→F2RL2; Try5→F2RL1 reused IRX3→F2RL1; and Try4→PARD3 reused
