@@ -184,3 +184,7 @@ B064 promotes the existing paired 23B COL4A3/α3(IV) collagen–α2β1 edge at t
 ## Review-led expansion: B065 (2026-09-05)
 
 B065 promotes the existing paired 23B FN1–uPAR/β1-integrin/CAV1/Src relay using acquired primary PMC and PubMed snapshots. Primary human receptor-complex and migration assays support uPAR stabilization of β1-integrin/CAV1 complexes, Src association, focal-adhesion signaling, adhesion, and migration on fibronectin. The edge is consolidated at medium confidence with complex/function resolution, no-purified-FN1–uPAR binding, no-defined-α partner, incomplete-ordering, no-terminal-TF, and no-traumatic-SCI limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B066 (2026-09-05)
+
+B066 promotes the existing paired 23B broader COL15A1-associated matrix → α2β1/DDR1/Pyk2 function edge using the already acquired primary COLXV/DDR1 PMC and PubMed snapshots. Primary COLXV exposure and DDR1/Pyk2/EMT assays support reduced pancreatic-cell scatter and invasion and suppression of DDR1 signaling and Pyk2 phosphorylation. The edge is consolidated at medium confidence with downstream-function, no-direct-COL15A1–α2β1, incomplete-ordering, matrix/model, no-terminal-TF, and no-traumatic-SCI limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
