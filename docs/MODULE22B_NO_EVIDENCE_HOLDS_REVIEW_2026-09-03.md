@@ -5252,6 +5252,23 @@ NKX3.1→RAMP1 record is a direct repressive target context, not an activating
 lane; the AVPR1A and NPR3 records are promoter-regulatory contexts whose
 direction and mechanism remain cell-type dependent.
 
+## Individual review 3397-3404
+
+Seven of the eight holds gained reusable target capacity. Vip→RAMP3 reused
+ESR1→RAMP3; Vip→SCTR reused signed SP1→SCTR support; Vip→TSHR reused the
+cooperative CREB1→TSHR and NKX2-1→TSHR promoter lanes; Vtn→CD47 reused
+NRF1→CD47; Vtn→ITGA2B_ITGB3 reused RUNX1→ITGA2B and ETS1→ITGB3 component
+lanes; Vtn→ITGA8_ITGB1 reused HIF1A→ITGB1 for the beta-1 component; and
+Vtn→ITGAV_ITGB1 reused SP1→ITGAV and HIF1A→ITGB1 component lanes. The
+Vsir→IGSF11 row remained on hold because promoter and ChIP-site predictions
+did not establish a qualifying named TF-to-IGSF11 relationship.
+
+The reused component and target lanes remain separate from the submitted VIP,
+vitronectin, or VSIR handoffs and do not establish source-to-TF activation or
+SCI-specific activity. The integrin composite records reuse component capacity
+only; they do not establish native composite-receptor stoichiometry or a
+vitronectin-to-integrin transcriptional relay.
+
 Six of the eight holds gained reusable target capacity. Try4→F2R and
 Try5→F2R reused EGR1→F2R and SP1→F2R; Try4→F2RL2 and Try5→F2RL2 reused
 NRF2→F2RL2; Try5→F2RL1 reused IRX3→F2RL1; and Try4→PARD3 reused
