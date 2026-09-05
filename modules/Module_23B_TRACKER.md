@@ -78,3 +78,7 @@ B037 promotes three new 23B edges paired one-to-one with Module 23A for tenascin
 ## Review-led expansion: B038 (2026-09-05)
 
 B038 promotes six new 23B edges paired one-to-one with Module 23A for tenascin-R microglial interactions and reverse expression feedback: activated-microglia antiadhesion, EGF-like/FNIII6-8 domain-specific microglial adhesion/migration effects, domain-specific neurotrophic-factor secretion, and microglia/TNF-alpha-associated oligodendrocyte TNR downregulation. PKA/PKC dependence, peripheral-nerve injury, primary-microglia, in-vitro comparator, reverse-feedback, and no-relay limits remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B039 (2026-09-05)
+
+B039 promotes two new 23B edges paired one-to-one with Module 23A for tenascin-R perineuronal-net organization: TNR-dependent perineuronal-net formation/stabilization and aggrecan clustering as the reported extracellular mechanism. Mouse loss-of-function, organotypic/dissociated-culture, add-back/rescue, and no-traumatic-SCI-transfer limits remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
