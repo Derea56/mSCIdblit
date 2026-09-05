@@ -3638,6 +3638,12 @@
   ],
   "distinct_pairs": 3591,
   "distinct_source_rows": 4174,
+  "expanded_search": {
+    "manifest": "data/processed/public_tf_curation_v2026_09_04/public_tf_expanded_search_manifest.json",
+    "primary_evidence_leads": 8,
+    "rows_promoted": 0,
+    "status": "expanded_alias_and_primary_source_search_completed_no_exact_primary_evidence_identified"
+  },
   "input_checksums": {
     "active_edges": "c1b665e3c23714b3ea86d879419fae5275c02418cdc5a30985d24d56fab58db5",
     "active_nodes": "ba35b23271c01888ad2d1b5b89a74a6e07bf18e8ed3a24d80fab0bbbd2d8655e",
@@ -7299,13 +7305,14 @@
     "row_count": 112,
     "source": "mouse_canonical_tf_direct_binding_rows_not_in_validated_overlay"
   },
-  "promotion_scope": "existing_v1.1.0_validated_overlay_plus_bounded_queue_adjudication_no_new_literature_promotions",
+  "promotion_scope": "existing_v1.1.0_validated_overlay_plus_expanded_queue_adjudication_no_new_literature_promotions",
   "queue_adjudication": {
     "ledger": "data/processed/public_tf_curation_v2026_09_04/public_tf_queue_adjudication.tsv",
     "promoted_rows": 0,
     "retained_candidate_rows": 112,
     "rows_reviewed": 112,
-    "status": "bounded_exact_pair_search_completed_no_promotions"
+    "search_manifest": "data/processed/public_tf_curation_v2026_09_04/public_tf_expanded_search_manifest.json",
+    "status": "expanded alias/full-name and primary-source literature search; no automatic promotion"
   },
   "reconciliation": {
     "active_graph_edge_count": 3154,

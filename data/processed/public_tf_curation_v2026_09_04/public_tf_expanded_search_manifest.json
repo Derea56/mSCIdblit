@@ -1,0 +1,94 @@
+{
+  "schema_version": "mscidblit_public_tf_expanded_search_manifest_v1",
+  "manifest_id": "public_tf_queue_expanded_search_2026-09-04",
+  "release_id": "module20_24_mechanism_graph:v1.1.0",
+  "review_date": "2026-09-04",
+  "queue_rows": 112,
+  "method": "expanded alias/full-name and primary-source literature search; no automatic promotion",
+  "search_status": "expanded_alias_and_primary_source_search_completed_no_exact_primary_evidence_identified",
+  "search_scope": "All 112 mouse canonical-TF/direct-binding queue rows were covered by grouped searches using regulator aliases, target aliases/full names, mouse, ChIP-seq/ChIP-qPCR, promoter, reporter, knockdown, knockout, loss-of-function, and direct-target terms; surfaced primary papers and local source provenance were checked for exact regulator-target support.",
+  "search_layers": [
+    {
+      "name": "local_tflink_gtrd_provenance",
+      "scope": "Per-protein TFLink mouse target tables and the imported graph source rows",
+      "finding": "Rows preserve mouse TF/target identifiers, GTRD as source database, PMID 27924024, TFLink source record IDs, and raw snapshot paths; no underlying GTRD experiment accession was present in the local snapshot."
+    },
+    {
+      "name": "gtrd_resource_review",
+      "scope": "Official GTRD documentation and integrated ChIP-seq resource description",
+      "source": "https://gtrd20-06.biouml.org/",
+      "finding": "GTRD is a uniformly processed TF-binding resource; its source-table membership does not establish functional target response or exact-pair biological direction."
+    },
+    {
+      "name": "grouped_exact_pair_search",
+      "scope": "ARNT2, ASCL2, BHLHA15/MIST1, DMRTB1, EBF2, FEZF2, FOXK1, GRHL3, HES5, HIVEP3/ZAS3, HOXA13, HOXC12, ISX, MYT1L, NEUROD2, NPAS4, PRDM15, PURB, RBPJL, RFX6, SOX3, ZFAT, ZFP319, ZFP652, ZFX, and ZNF281/ZFP281 with all queued targets and aliases",
+      "finding": "No exact queued pair met the promotion contract of mouse compatibility, direct sequence-specific binding, functional target response, stable primary citation, and supported direction."
+    },
+    {
+      "name": "near_match_primary_paper_review",
+      "scope": "Primary mouse papers surfaced by the grouped and exact-pair searches",
+      "finding": "Several papers validate different pairs or programs: ARNT2/NPAS4 activity-dependent neuronal regulation; GRHL3/RhoGEF19 wound repair; PRDM15 developmental targets; SOX3/Ngn3; NEUROD2/Ulip1 or Stim1; NPAS4/Bdnf/c-Fos; RFX6 pancreatic programs; and ZFAT adipocyte targets. None is an exact queued pair with the required functional evidence."
+    },
+    {
+      "name": "exact_alias_followups",
+      "scope": "Selected difficult pairs including FEZF2-Acvr1, HOXC12-Angptl4, HES5-Adam22, NEUROD2-Adam10, NPAS4-Adam22, PRDM15-Adgrl1/Adgrl2, SOX3-Adcyap1r1/Adgrl2, ZFX-Adam17/Adam22, and ZFP319-Cap1/ZFP652-Adam17",
+      "finding": "Searches produced near matches, pathway or expression records, or non-mouse/non-exact results, but no promotion-grade exact pair."
+    }
+  ],
+  "primary_evidence_leads": [
+    {
+      "pair_scope": "ARNT2 neuronal program, not queued targets",
+      "citation": "https://pubmed.ncbi.nlm.nih.gov/30846309/",
+      "finding": "Mouse neuronal ARNT2/NCoR2/NPAS4 ChIP-seq and RNA-seq study; it does not establish ARNT2->A2m, ARNT2->Abca1, ARNT2->Ackr3, or ARNT2->Actr2."
+    },
+    {
+      "pair_scope": "GRHL3 wound-repair target, not queued targets",
+      "citation": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2965174/",
+      "finding": "Mouse GRHL3 direct target RhoGEF19 with occupancy and functional evidence; the queued GRHL3 targets are different."
+    },
+    {
+      "pair_scope": "PRDM15 developmental targets, not queued targets",
+      "citation": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6954057/",
+      "finding": "Mouse embryonic PRDM15 ChIP-seq/ChIP-qPCR and expression evidence for targets including Rbpj, Notch3, Maml3, Vangl2, Wnt5b, and others; no queued PRDM15 pair was established."
+    },
+    {
+      "pair_scope": "SOX3 neural/testis target, not queued targets",
+      "citation": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7174399/",
+      "finding": "Mouse SOX3 binding and functional regulation of Ngn3 in postnatal testis; no queued SOX3 target was established."
+    },
+    {
+      "pair_scope": "NEUROD2 neuronal targets, not queued targets",
+      "citation": "https://pubmed.ncbi.nlm.nih.gov/16203979/",
+      "finding": "Mouse neuronal progenitor evidence supports direct NeuroD2 regulation of Ulip1; it does not establish the queued Adam10, Actr2, Acvr1, or Acvr1c pairs."
+    },
+    {
+      "pair_scope": "NPAS4 neuronal targets, not queued targets",
+      "citation": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4038289/",
+      "finding": "Mouse hippocampal NPAS4 occupancy and functional regulation include Bdnf and c-Fos; no queued NPAS4 target was established."
+    },
+    {
+      "pair_scope": "RFX6 pancreatic targets, not queued targets",
+      "citation": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2896718/",
+      "finding": "Mouse RFX6 developmental evidence concerns pancreatic/islet programs and does not establish the queued Adm, Crhr2, Cx3cl1, or Cxcr4 pairs."
+    },
+    {
+      "pair_scope": "ZFAT adipocyte targets, not queued targets",
+      "citation": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8248092/",
+      "finding": "Mouse Zfat evidence identifies Atg13, Brf1, Psmc3, and Timm22 as targets; it does not establish the queued pairs."
+    }
+  ],
+  "promotion_decision": {
+    "rows_promoted": 0,
+    "rows_retained_candidate_only": 112,
+    "candidate_rows_remain_non_traversable": true,
+    "effect_direction_for_queue": "unknown",
+    "neural_or_sci_context_promoted": 0
+  },
+  "limitations": [
+    "Search results do not establish absence from all literature.",
+    "The search did not recover underlying GTRD experiment accessions from the local TFLink snapshot.",
+    "A binding-only result, database membership, expression association, pathway relation, or related-target paper is insufficient for exact-pair functional promotion.",
+    "No spinal-cord or SCI context was inferred from general mouse or neural papers.",
+    "Full-text supplements and non-indexed records may still contain evidence requiring manual retrieval and review."
+  ]
+}
