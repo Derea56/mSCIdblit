@@ -5012,6 +5012,16 @@ Seven of the eight rows retained reusable target capacity. Slitrk6-Ptprs reused 
 
 These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human/mouse adipose, liver, neuronal, inner-ear, and promoter-haplotype systems, plus chicken/quail muscle. The individual search log contains 3108 rows through M22B-IND-3108. This tranche added seven standalone TF-to-target edges and seven evidence records covering six distinct CHRNA targets, reused a registered PTPRS target context for one row, and kept one row on hold.
 
+## Individual review 3189-3196
+
+Audits 3189-3196 covered eight TENM1, TENM2, and TENM3 handoffs to ADGRL1,
+ADGRL2, and ADGRL3. All eight rows gained reusable target capacity from the
+independently registered AR promoter-occupancy and androgen-induction contexts
+for these three ADGRL genes. The target contexts are general human
+prostate/bladder-cancer comparators and remain separate from the teneurin-
+latrophilin adhesion handoffs; they do not establish a teneurin-to-AR relay or
+promote the original pathway/function-boundary rows.
+
 ## Individual review 3181-3188
 
 Audits 3181-3188 covered the Tac2/TACR3, Tac4/TACR1, TAFA4/FPR1,
