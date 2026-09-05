@@ -5269,6 +5269,22 @@ SCI-specific activity. The integrin composite records reuse component capacity
 only; they do not establish native composite-receptor stoichiometry or a
 vitronectin-to-integrin transcriptional relay.
 
+## Individual review 3405-3412
+
+All eight holds gained reusable target capacity. Vtn→ITGAV_ITGB3 reused
+SP1→ITGAV and ETS1→ITGB3; Vtn→ITGAV_ITGB5 reused SP1→ITGAV and direct
+HIF2A→ITGB5; Vtn→ITGAV_ITGB8 reused SP1→ITGAV only, with no ITGA8/ITGB8
+lane transferred; Vtn→ITGA3 gained a direct ZEB1/YAP1-co-activated ITGA3
+promoter context; Vtn→ITGA5 reused ETS1→ITGA5; Vtn→PLAUR reused EGR1→PLAUR;
+Vtn→TNFRSF11B reused direct HIF2A→TNFRSF11B; and Vwf→the GP complex reused
+ETS1→GP5 and ETS1→GP9 component lanes.
+
+These reusable target and component lanes remain separate from the submitted
+vitronectin or VWF handoffs and do not establish source-to-TF activation or
+SCI-specific activity. The ITGA3 record is a non-SCI pancreatic-cancer
+comparator; the composite integrin and GP-complex records do not establish
+native receptor stoichiometry or transfer unrepresented subunits.
+
 Six of the eight holds gained reusable target capacity. Try4→F2R and
 Try5→F2R reused EGR1→F2R and SP1→F2R; Try4→F2RL2 and Try5→F2RL2 reused
 NRF2→F2RL2; Try5→F2RL1 reused IRX3→F2RL1; and Try4→PARD3 reused
