@@ -5012,6 +5012,18 @@ Seven of the eight rows retained reusable target capacity. Slitrk6-Ptprs reused 
 
 These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human/mouse adipose, liver, neuronal, inner-ear, and promoter-haplotype systems, plus chicken/quail muscle. The individual search log contains 3108 rows through M22B-IND-3108. This tranche added seven standalone TF-to-target edges and seven evidence records covering six distinct CHRNA targets, reused a registered PTPRS target context for one row, and kept one row on hold.
 
+## Individual review 3141-3148
+
+Audits 3141-3148 covered the eight Slurp2 handoffs to CHRNA9, CHRNB1,
+CHRNB2, CHRNB3, CHRNB4, CHRND, CHRNE, and CHRNG. Seven rows gained reusable
+target capacity by reusing independently curated TF-to-subunit contexts for
+CHRNB1, CHRNB3, CHRNB4, CHRND, CHRNE, and CHRNG, with the CHRNA9 context also
+reused from the preceding tranche. CHRNB2 remained on hold: targeted review
+found promoter-variant and ischemia-associated REST repression/occupancy
+evidence, but no qualifying named activating TF-to-CHRNB2 relationship. These
+contexts remain separate from the Slurp2 handoffs and do not promote the
+original pathway/function-boundary rows.
+
 ## Individual review 3133-3140
 
 Audits 3133-3140 covered the eight Slurp2 handoffs to CHRNA1, CHRNA10,
