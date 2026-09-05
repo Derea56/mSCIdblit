@@ -106,3 +106,6 @@ B029 adds one review-led HMGB1 candidate and five source-backed A/B edges: direc
 ## Review-led expansion: B030 (2026-09-04)
 
 B030 adds one review-led S100A8/A9 calprotectin-dimer candidate and four source-backed A/B edges: direct TLR4/MD2 binding, the TLR4-MyD88-IRAK-1/NF-kappaB/MAPK relay, TNF/IL-8 phagocyte output, and an SCI-associated myeloid context edge. Primary records were acquired locally and linked through the source manifest. Dimer-versus-tetramer state, calcium/zinc and preparation requirements, RAGE/Mac-1 separation, and the observational/non-causal status of SCI abundance are retained explicitly.
+## Review-led expansion: B033 (2026-09-05)
+
+B033 adds one review-led tenascin-R candidate and four source-backed A-layer edges: isolated FBG-R direct TLR4 binding, TLR4-dependent NF-kB activity, macrophage IL-6/IL-8/TNF output, and whole-TNR restriction of selected posttraumatic SCI locomotor recovery with altered synaptic remodeling. The FBG-R findings are non-SCI comparator evidence, while the SCI finding is an adult mouse genotype study; no traumatic-SCI TLR4 mechanism, full-length presentation equivalence, axonal-regrowth mechanism, or terminal TF is asserted. No Module 20A–22A ledger is modified.
