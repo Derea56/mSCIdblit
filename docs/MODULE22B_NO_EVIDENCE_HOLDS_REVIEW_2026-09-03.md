@@ -5560,6 +5560,28 @@ Wnt3a is a different ligand from Wnt3. These component lanes are reusable
 capacity only; exact stoichiometry, source-to-TF handoff, and SCI activity
 remain unresolved.
 
+## Individual review 3555-3564
+
+All ten holds gained reusable receptor-component target capacity. The
+Wnt3→FZD4_LRP6 row reused SMAD4→FZD4 and MYC/SOX9→LRP6
+expression-regulatory lanes. Wnt3→FZD5_LRP5 and Wnt3→FZD5_LRP6 reused
+EHF→FZD5, with SP1→LRP5 added for the LRP5 row and MYC/SOX9→LRP6 for the
+LRP6 row. Wnt3→FZD6_LRP5 and Wnt3→FZD6_LRP6 reused GATA4→FZD6, with
+SP1→LRP5 added for the LRP5 row and MYC/SOX9→LRP6 for the LRP6 row.
+Wnt3→FZD7_LRP5 and Wnt3→FZD7_LRP6 reused SOX9/TP63→FZD7, with SP1→LRP5
+added for the LRP5 row and MYC/SOX9→LRP6 for the LRP6 row. Wnt3→FZD8_LRP5
+and Wnt3→FZD8_LRP6 reused YY1→FZD8, with SP1→LRP5 added for the LRP5 row
+and MYC/SOX9→LRP6 for the LRP6 row. Wnt3→FZD9_LRP5 reused PPARG→FZD9
+and SP1→LRP5.
+
+The MYC→LRP6 and SOX9→LRP6 lanes are primary expression-regulatory
+component evidence, not direct LRP6 promoter-occupancy evidence. The primary
+Wnt3/FZD8/LRP6 structure was retained as exact receptor-level comparator
+evidence, not terminal TF-target evidence. The targeted Wnt3 searches did
+not establish ligand-specific source-to-TF activation or exact ternary-
+complex assignments. These component lanes are reusable capacity only;
+exact stoichiometry, source-to-TF handoff, and SCI activity remain unresolved.
+
 Six of the eight holds gained reusable target capacity. Try4→F2R and
 Try5→F2R reused EGR1→F2R and SP1→F2R; Try4→F2RL2 and Try5→F2RL2 reused
 NRF2→F2RL2; Try5→F2RL1 reused IRX3→F2RL1; and Try4→PARD3 reused
