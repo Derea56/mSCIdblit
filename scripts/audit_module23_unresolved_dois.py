@@ -70,7 +70,7 @@ def build(output: Path) -> None:
     acquisition = {row["doi"]: row for row in read_tsv(DOI_MANIFEST)} if DOI_MANIFEST.exists() else {}
     rows: list[dict[str, str]] = []
     for record in inventory:
-        if record["paper_extraction_status"] != "awaiting_local_source_acquisition" or record["anchor_type"] != "DOI":
+        if record["paper_extraction_status"] not in {"awaiting_local_source_acquisition", "identifier_requires_manual_correction"} or record["anchor_type"] != "DOI":
             continue
         doi = record["paper_anchor"].split(":", 1)[1]
         locator = source_locator(doi, register_rows)
