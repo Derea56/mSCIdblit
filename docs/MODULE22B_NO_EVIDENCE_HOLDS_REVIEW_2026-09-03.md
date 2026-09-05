@@ -5492,6 +5492,29 @@ lanes remain component capacity only and do not establish exact stoichiometry
 or SCI-specific molecular activation. The FZD component contexts are non-SCI
 or inferred-regulatory comparators.
 
+## Individual review 3525-3534
+
+All ten holds gained reusable receptor-component target capacity. The
+Wnt2→FZD9_LRP6 row reused PPARG→FZD9 and the new MYC→LRP6
+expression-regulatory lane. Wnt2b→FZD10_LRP5 and Wnt2b→FZD10_LRP6 reused
+SP1→FZD10, with SP1→LRP5 added for the LRP5 row; Wnt2b→FZD1_LRP5 and
+Wnt2b→FZD1_LRP6 reused SP1/E2F1→FZD1, with SP1→LRP5 added for the LRP5
+row. Wnt2b→FZD2_LRP5 and Wnt2b→FZD2_LRP6 reused GATA6→FZD2 and the new
+MYC→FZD2 expression-regulatory lane, with MYC→LRP6 added to the LRP6 row
+and SP1→LRP5 to the LRP5 row. Wnt2b→FZD3_LRP5 and Wnt2b→FZD3_LRP6
+reused ZMIZ1→FZD3, with SP1→LRP5 added for the LRP5 row and MYC→LRP6
+for the LRP6 row. Wnt2b→FZD4_LRP5 reused SMAD4→FZD4 and SP1→LRP5.
+
+The MYC→FZD2 and MYC→LRP6 lanes are primary expression-regulatory
+component evidence, not direct promoter-occupancy evidence. The targeted
+Wnt2/Wnt2b searches did not establish ligand-specific source-to-TF
+activation or exact ternary-complex assignments. These component lanes are
+reusable capacity only; exact stoichiometry, Wnt2/Wnt2b handoff, and SCI
+activity remain unresolved. The FZD3 comparator is SCI-adjacent
+cerebral-ischemia/reperfusion evidence rather than spinal-cord-injury
+evidence; the other component contexts are non-SCI or inferred-regulatory
+comparators.
+
 Six of the eight holds gained reusable target capacity. Try4→F2R and
 Try5→F2R reused EGR1→F2R and SP1→F2R; Try4→F2RL2 and Try5→F2RL2 reused
 NRF2→F2RL2; Try5→F2RL1 reused IRX3→F2RL1; and Try4→PARD3 reused
