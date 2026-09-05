@@ -5432,6 +5432,26 @@ stoichiometry or SCI-specific molecular activation. The FZD3 lane remains
 SCI-adjacent cerebral-ischemia/reperfusion evidence, not spinal-cord injury
 evidence.
 
+## Individual review 3485-3494
+
+Nine of these ten holds gained reusable component target capacity. The
+Wnt16→FZD10_LRP5 and Wnt16→FZD10_LRP6 rows reused SP1→FZD10, with SP1→LRP5
+added only for the LRP5 row. Wnt16→FZD1_LRP5 and Wnt16→FZD1_LRP6 reused
+SP1/E2F1→FZD1, with SP1→LRP5 added for the LRP5 row. Wnt16→FZD2_LRP5 and
+Wnt16→FZD2_LRP6 reused GATA6→FZD2, with SP1→LRP5 added for the LRP5 row.
+Wnt16→FZD3_LRP5 and Wnt16→FZD3_LRP6 reused ZMIZ1→FZD3, with SP1→LRP5
+added for the LRP5 row. Wnt16→FZD4_LRP5 reused SMAD4→FZD4 and SP1→LRP5.
+No LRP6 target lane was transferred. The Wnt11r→MuSK row remained on hold
+after targeted review found synaptic/axon-guidance signaling but no verified
+named activating TF-to-MuSK target relationship.
+
+The targeted Wnt16 searches found receptor, pathway, and expression results
+but did not establish new Wnt16-specific source-to-TF activation or the exact
+submitted ternary-complex assignments. The reusable FZD and LRP5 lanes remain
+component capacity only; these contexts do not establish exact stoichiometry
+or SCI-specific molecular activation. The component contexts are non-SCI or
+inferred-regulatory comparators.
+
 Six of the eight holds gained reusable target capacity. Try4→F2R and
 Try5→F2R reused EGR1→F2R and SP1→F2R; Try4→F2RL2 and Try5→F2RL2 reused
 NRF2→F2RL2; Try5→F2RL1 reused IRX3→F2RL1; and Try4→PARD3 reused
