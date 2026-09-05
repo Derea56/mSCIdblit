@@ -226,3 +226,7 @@ B062 promotes the existing EGF–EGFR-Src-CAV1/Grb7 relay using acquired primary
 ## Review-led expansion: B063 (2026-09-05)
 
 B063 promotes the existing HGF–β1-integrin/ILK repair-function edge using an acquired primary PMC and PubMed snapshot. The primary rat study reports HGF-enhanced wound reepithelialization and β1-integrin/ILK induction, while ILK silencing reduces β1-integrin, c-MET, proliferation, migration, and invasion. The edge is promoted to medium with canonical-MET, functional-dependence, no-direct-HGF–ITGB1, preliminary-dedifferentiation, non-SCI wound, no-terminal-TF, and no-traumatic-SCI limits explicit. No Module 20A–22A ledger was modified.
+
+## Review-led expansion: B064 (2026-09-05)
+
+B064 promotes the existing COL4A3/α3(IV) collagen–α2β1 edge at the downstream renal-function layer using an acquired primary PubMed snapshot. The exact COL4A3/ITGA2 knockout study supports altered glomerular-basement-membrane maturation and renal fibrosis phenotypes; a broader collagen-IV adhesion study is retained as comparator evidence without assigning COL4A3-chain-specific binding. The edge is promoted to medium with layer separation, broader-comparator, no-direct-chain-specific-binding, incomplete-ordering, no-terminal-TF, and no-traumatic-SCI limits explicit. No Module 20A–22A ledger was modified.

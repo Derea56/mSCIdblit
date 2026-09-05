@@ -176,3 +176,7 @@ B062 promotes the existing paired 23B EGF–EGFR-Src-CAV1/Grb7 relay using acqui
 ## Review-led expansion: B063 (2026-09-05)
 
 B063 promotes the existing paired 23B HGF–β1-integrin/ILK repair-function edge using an acquired primary PMC and PubMed snapshot. Primary rat wound and epidermal-cell assays support HGF-enhanced reepithelialization, β1-integrin/ILK induction, and ILK-dependent proliferation, migration, and invasion. The edge is consolidated at medium confidence with canonical-MET, functional-dependence, no-direct-HGF–ITGB1, preliminary-dedifferentiation, non-SCI wound, no-terminal-TF, and no-traumatic-SCI limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B064 (2026-09-05)
+
+B064 promotes the existing paired 23B COL4A3/α3(IV) collagen–α2β1 edge at the downstream renal-function layer using an acquired primary PubMed snapshot. Primary COL4A3/ITGA2 knockout phenotyping supports altered glomerular-basement-membrane maturation and renal fibrosis, while the older collagen-IV adhesion study remains a broader comparator. The edge is consolidated at medium confidence with layer-separation, broader-comparator, no-direct-chain-specific-binding, incomplete-ordering, no-terminal-TF, and no-traumatic-SCI limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
