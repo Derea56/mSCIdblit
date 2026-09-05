@@ -208,3 +208,7 @@ B070 adds two new paired 23B PACAP receptor-proximal pathway edges at medium con
 ## Review-led expansion: B071 (2026-09-05)
 
 B071 promotes the existing paired 23B S100A8-containing preparation -> Mac-1 function edge to medium confidence using primary neutrophil and murine air-pouch assays. The study separately tests S100A8 and reports Mac-1 up-regulation/activation, Mac-1-neutralization-sensitive fibrinogen adhesion, calcium increase, and chemotaxis. Preparation-level material, mixed S100A9/heterocomplex comparators, no direct binary binding, no isolated ITGB2 mechanism, no complete relay, non-SCI comparator scope, no terminal TF, and no traumatic-SCI transfer remain explicit. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B072 (2026-09-05)
+
+B072 adds a new paired 23B medium-high-confidence VPAC2 -> PKA-dependent cortical neurite-maturation function edge using primary mouse cortical neurons. A selective VPAC2 agonist reduces axon and dendrite outgrowth and branching, and the effect is blocked by VPAC2 antagonism or receptor loss and by PKA inhibition. The edge is receptor-to-function evidence rather than a PACAP ligand claim: PACAP38 effects in the same study are not assigned exclusively to VPAC2, and direct ligand binding, terminal TF, and traumatic-SCI transfer remain separate. Canonical signaling tables and simulator outputs remain untouched.

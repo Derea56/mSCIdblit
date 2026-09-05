@@ -258,3 +258,7 @@ B070 adds two new PACAP receptor-proximal pathway edges at medium confidence fro
 ## Review-led expansion: B071 (2026-09-05)
 
 B071 promotes the existing S100A8-containing preparation -> Mac-1 function edge to medium confidence using the primary neutrophil study that separately tests S100A8, S100A9, and S100A8/A9 preparations. S100A8-associated Mac-1 up-regulation/activation, Mac-1-neutralization-sensitive fibrinogen adhesion, calcium increase, and chemotaxis are retained at preparation-level functional resolution. Mixed-preparation, no-direct-binding, no-isolated-ITGB2, no-complete-relay, non-SCI comparator, no-terminal-TF, and no-traumatic-SCI-transfer limits remain explicit.
+
+## Review-led expansion: B072 (2026-09-05)
+
+B072 adds a new medium-high-confidence VPAC2 -> PKA-dependent cortical neurite-maturation function edge using primary mouse cortical neurons. A selective VPAC2 agonist reduces axon and dendrite outgrowth and branching, and the effect is blocked by VPAC2 antagonism or receptor loss and by PKA inhibition. The edge is receptor-to-function evidence rather than a PACAP ligand claim: PACAP38 effects in the same study are not assigned exclusively to VPAC2, and direct ligand binding, terminal TF, and traumatic-SCI transfer remain separate.
