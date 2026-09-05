@@ -214,3 +214,7 @@ B059 promotes the existing PLAU/uPA–PLAUR/uPAR–β1-integrin complex relay us
 ## Review-led expansion: B060 (2026-09-05)
 
 B060 promotes the existing EFNA5/ephrin-A5–EPHA10 edges using acquired primary PMC and PubMed snapshots. The study supports EphA10s/ephrin-A5 cellular association by co-immunoprecipitation and isoform-specific effects on β-catenin localization, migration/invasion, and xenograft outcomes; the result is recorded at medium confidence with secreted EphA10s versus membrane pseudo-kinase EphA10, possible EphA2 contribution, no canonical full-length activation, and no-traumatic-SCI limits explicit. No Module 20A–22A ledger was modified.
+
+## Review-led expansion: B061 (2026-09-05)
+
+B061 adds two paired COL15A1/COLXV–DDR1 edges using acquired primary PMC and PubMed snapshots. The primary pancreatic-adenocarcinoma study supports cellular COLXV–DDR1 association by co-immunoprecipitation and separately supports COLXV-associated suppression of DDR1 signaling, Pyk2 phosphorylation, pancreatic-cell scatter, and invasion. The edges are recorded at medium and medium-high confidence, respectively, with no purified COLXV–DDR1 affinity, no direct COLXV–α2β1 binding or linear α2β1→DDR1 ordering, no terminal TF, and no-traumatic-SCI limits explicit. No Module 20A–22A ledger was modified.
