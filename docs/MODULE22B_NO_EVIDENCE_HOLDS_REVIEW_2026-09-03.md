@@ -5159,6 +5159,22 @@ handoffs and do not establish source-to-TF activation or SCI-specific
 activity. The ADCYAP1R1 and NFKB1 records are bounded regulatory-support
 contexts rather than isolated direct-occupancy claims.
 
+## Individual review 3349-3356
+
+Seven of the eight holds gained reusable target capacity. Tshb→TSHR reused
+the cooperative NKX2-1/CREB1 promoter context; Tshb→VIPR1 reused SP1→VIPR1;
+Ttr→NGFR reused EGR1/EGR3→NGFR; Tub→MERTK and Tulp1→MERTK reused the new
+PPARG→MERTK promoter context; Tulp1→AXL gained an AP-1 promoter context; and
+Tulp1→TYRO3 gained a STAT3 promoter context. Tshb→RAMP3 remained on hold:
+the targeted review located receptor-complex and promoter-prediction material
+without a qualifying named activating TF-to-RAMP3 relationship.
+
+The reusable target lanes remain separate from the submitted Tshb, Ttr, Tub,
+and Tulp1 handoffs and do not establish source-to-TF activation or
+SCI-specific activity. The TSHR, VIPR1, and NGFR lanes were independently
+registered before this tranche; the PPARG→MERTK, AP-1→AXL, and STAT3→TYRO3
+lanes were added from primary non-SCI comparator studies.
+
 Six of the eight holds gained reusable target capacity. Try4→F2R and
 Try5→F2R reused EGR1→F2R and SP1→F2R; Try4→F2RL2 and Try5→F2RL2 reused
 NRF2→F2RL2; Try5→F2RL1 reused IRX3→F2RL1; and Try4→PARD3 reused
