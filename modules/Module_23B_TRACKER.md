@@ -138,3 +138,7 @@ B052 promotes the existing 23B EFNA1–EPHA5 binding edge paired one-to-one with
 ## Review-led expansion: B053 (2026-09-05)
 
 B053 promotes the existing 23B EFNA1–EPHA8 binding edge paired one-to-one with Module 23A. The primary NIH3T3 study reports ephrin-A1-Fc binding and ligand-dependent EphA8/EphA8-TrkB tyrosine phosphorylation, supporting the direct-binding and receptor-proximal branch at medium-high confidence. Recombinant-fusion, heterologous-fibroblast, receptor-proximal-only, no-downstream-program, no-native-neural, and no-traumatic-SCI-transfer limits remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B054 (2026-09-05)
+
+B054 adds two new 23B functional edges paired one-to-one with Module 23A for the EFNA2–EPHA2 branch. Primary mouse bone-remodeling assays support EFNA2/EphA2-associated enhancement of osteoclast differentiation and EphA2-associated suppression of osteoblast differentiation. The downstream function is promoted at medium-high confidence with explicit reverse/forward directional limits, mouse comparator context, no-purified-binding, incomplete-ordering, and no-traumatic-SCI-transfer boundaries. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.

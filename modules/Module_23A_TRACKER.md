@@ -188,3 +188,7 @@ B052 promotes the existing EFNA1–EPHA5 binding edge using primary exact-pair e
 ## Review-led expansion: B053 (2026-09-05)
 
 B053 promotes the existing EFNA1–EPHA8 binding edge using the primary NIH3T3 study reporting ephrin-A1-Fc binding and ligand-dependent EphA8/EphA8-TrkB tyrosine phosphorylation. The edge is promoted to medium-high with explicit recombinant-fusion, heterologous-fibroblast, receptor-proximal-only, no-downstream-program, no-native-neural, and no-traumatic-SCI limits. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B054 (2026-09-05)
+
+B054 adds two review-led EFNA2–EPHA2 functional edges from a primary mouse bone-remodeling study: ephrin-A2 reverse signaling and EphA2 forward signaling enhance osteoclast differentiation, while EphA2-associated signaling suppresses osteoblast differentiation. The two downstream branches are recorded separately with explicit mouse bone-remodeling, directionality, no-purified-binding, incomplete-ordering, and no-traumatic-SCI limits; the existing low-tier direct-binding edge remains unchanged. No Module 20A–22A ledger is modified.
