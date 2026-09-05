@@ -5302,6 +5302,22 @@ SCI-specific activity. The integrin records reuse component capacity only;
 the PRTG record is a non-SCI gastric-cancer comparator, and none of these
 records establishes the unresolved ligand-to-receptor assignment.
 
+## Individual review 3421-3428
+
+All eight holds gained reusable target capacity. Wnt1→CD36 reused the direct
+Wnt1-stimulated TCF4→CD36 macrophage target context; Wnt1→FZD1_LRP5 reused
+SP1→FZD1 and SP1→LRP5 component lanes; Wnt1→FZD1_LRP6 reused SP1→FZD1;
+Wnt1→FZD2_LRP5 reused GATA6→FZD2 and SP1→LRP5; Wnt1→FZD2_LRP6 reused
+GATA6→FZD2; Wnt1→FZD3_LRP5 reused ZMIZ1→FZD3 and SP1→LRP5;
+Wnt1→FZD3_LRP6 reused ZMIZ1→FZD3; and Wnt1→FZD4_LRP5 reused SMAD4→FZD4
+and SP1→LRP5. No LRP6 target lane was transferred.
+
+These reusable target and component lanes remain separate from the submitted
+Wnt1 receptor-complex handoffs and do not establish source-to-TF activation,
+exact ternary-complex stoichiometry, or SCI-specific activity. The FZD3
+context is SCI-adjacent cerebral ischemia-reperfusion/endothelial OGD/R, not
+spinal-cord injury evidence; the other component contexts are non-SCI.
+
 Six of the eight holds gained reusable target capacity. Try4→F2R and
 Try5→F2R reused EGR1→F2R and SP1→F2R; Try4→F2RL2 and Try5→F2RL2 reused
 NRF2→F2RL2; Try5→F2RL1 reused IRX3→F2RL1; and Try4→PARD3 reused
