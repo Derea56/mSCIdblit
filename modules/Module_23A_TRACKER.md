@@ -196,3 +196,7 @@ B054 adds two review-led EFNA2–EPHA2 functional edges from a primary mouse bon
 ## Review-led expansion: B055 (2026-09-05)
 
 B055 promotes the existing EFNA1–EPHA6 and EFNA2–EPHA6 binding edges using the primary all-pair dimeric Fc-fusion ELISA: mEphrin-A1–mEphA6 apparent K_D 5.2 ± 1.1 nM and mEphrin-A2–mEphA6 apparent K_D 3.6 ± 0.74 nM. The exact mouse binding layer is promoted to medium-high while comparative apparent-K_D, Fc-avidity, no-receptor-proximal, and non-SCI biochemical limits remain explicit. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B056 (2026-09-05)
+
+B056 adds a separate EFNB1–EPHB6 receptor-proximal edge from the primary study reporting ephrin-B1-induced EphB6 tyrosine phosphorylation, EphB1-dependent transphosphorylation, ligand dependence, and stable EphB1–EphB6 heterocomplex formation. The new edge is recorded at medium-high confidence with explicit engineered receptor-complex, species-not-resolved-in-abstract, no-direct-binary-affinity, no-JNK/Rac1, no-native-neural, and no-traumatic-SCI limits. The existing low/conflicted EphB6 JNK/Rac1 edge remains unchanged. No Module 20A–22A ledger is modified.
