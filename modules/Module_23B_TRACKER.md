@@ -62,3 +62,7 @@ B033 promotes four new 23B edges paired one-to-one with Module 23A for tenascin-
 ## Review-led expansion: B034 (2026-09-05)
 
 B034 promotes five new 23B edges paired one-to-one with Module 23A for tenascin-R axon-associated interactions: direct TNR-MAG binding, MAG-cell repulsion, direct TNR-F11/CNTN1 domain interaction, enhanced F11-mediated neurite outgrowth, and TNR substrate inhibition of retinal axon growth. MAG/F11 domain resolution, substrate presentation, non-SCI comparator scope, amphibian injury model, and absence of a defined cytoplasmic relay or terminal TF remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B035 (2026-09-05)
+
+B035 promotes six new 23B edges paired one-to-one with Module 23A for tenascin-R lectican/CSPG interactions: direct TNR FNIII3-5 binding to aggrecan, versican, neurocan, and brevican C-type lectin domains, plus full-length TNR binding to neurocan and phosphacan/PTPRZ1 through core-protein interactions. Lectican-domain versus full-length extracellular-domain resolution, rat/recombinant non-SCI CNS comparator scope, and the absence of a downstream relay or traumatic-SCI transfer remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.

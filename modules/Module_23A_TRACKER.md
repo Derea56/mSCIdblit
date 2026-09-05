@@ -112,3 +112,7 @@ B033 adds one review-led tenascin-R candidate and four source-backed A-layer edg
 ## Review-led expansion: B034 (2026-09-05)
 
 B034 adds one review-led tenascin-R axon-associated candidate and five source-backed A-layer edges: direct TNR-MAG binding, MAG-cell repulsion, direct TNR-F11/CNTN1 domain interaction, enhanced F11-mediated neurite outgrowth, and TNR substrate inhibition of retinal axon growth. MAG/F11 domain resolution, substrate presentation, non-SCI comparator scope, amphibian injury model, and absence of a defined cytoplasmic relay or terminal TF remain explicit. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B035 (2026-09-05)
+
+B035 adds one review-led tenascin-R lectican/CSPG candidate and six source-backed A-layer edges: direct TNR FNIII3-5 binding to the C-type lectin domains of aggrecan, versican, neurocan, and brevican, plus saturable full-length TNR binding to neurocan and phosphacan/PTPRZ1 through proteoglycan core-protein interactions. Lectican-domain versus full-length core-protein resolution, rat/recombinant non-SCI CNS comparator scope, and the absence of a downstream relay or traumatic-SCI transfer remain explicit. No Module 20A–22A ledger is modified.
