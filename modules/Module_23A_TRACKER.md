@@ -203,3 +203,6 @@ B056 adds a separate EFNB1–EPHB6 receptor-proximal edge from the primary study
 ## Review-led expansion: B057 (2026-09-05)
 
 B057 promotes the existing EFNB3–EPHB1 functional-context edge using the primary BALB/c LPS intestinal-injury study. In mouse colon and primary enteric neuronal/glial cultures, LPS reduced EphB1/ephrin-B3-associated signaling markers, while stable ephrin-B3 overexpression partially rescued cell injury, inflammatory cytokines, Akt/Src/NF-κB activation, and β-catenin nuclear translocation. The edge is promoted to medium with explicit functional-context, overexpression, no-purified-binding, no-receptor-proximal-relay, incomplete-ordering, and no-traumatic-SCI limits. No Module 20A–22A ledger is modified.
+## Review-led expansion: B058 (2026-09-05)
+
+B058 promotes the existing EFNA2–EPHA2 direct-binding edge using the primary all-pair dimeric Fc-fusion ELISA. Figure 1 reports weak mEphrin-A2 binding to hEphA2 with apparent K_D >50 nM. The edge is promoted to medium with explicit weak comparative-affinity, Fc-avidity, no-receptor-proximal, no-downstream, and non-SCI biochemical limits. No Module 20A–22A ledger is modified.
