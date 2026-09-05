@@ -5175,6 +5175,21 @@ SCI-specific activity. The TSHR, VIPR1, and NGFR lanes were independently
 registered before this tranche; the PPARG→MERTK, AP-1→AXL, and STAT3→TYRO3
 lanes were added from primary non-SCI comparator studies.
 
+## Individual review 3357-3364
+
+Two of the eight holds gained reusable target capacity. Txlna→STX1A gained
+direct SP1→STX1A promoter capacity from a primary rat syntaxin-1A study, and
+Ulbp1→KLRK1_HCST reused the existing bounded STAT4/TBX21→KLRK1 regulatory
+context for the KLRK1 receptor component. Txlna→STX3, Txlna→STX4A, both
+Ucn2/Ucn3→CRHR1 rows, and both Ucn2/Ucn3→IL10RB rows remained on hold.
+
+The STX3 review located a soluble STX3 nuclear co-regulator result rather than
+activation of the STX3 gene; the CRHR1 results were downstream CRHR1 signaling
+or weak-binding comparisons, and IL10RB results were receptor-family or
+promoter-prediction material. The reusable target lanes remain separate from
+the submitted Txlna, Ucn2, Ucn3, and Ulbp1 handoffs and do not establish
+source-to-TF activation or SCI-specific activity.
+
 Six of the eight holds gained reusable target capacity. Try4→F2R and
 Try5→F2R reused EGR1→F2R and SP1→F2R; Try4→F2RL2 and Try5→F2RL2 reused
 NRF2→F2RL2; Try5→F2RL1 reused IRX3→F2RL1; and Try4→PARD3 reused
