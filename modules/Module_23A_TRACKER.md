@@ -234,3 +234,7 @@ B064 promotes the existing COL4A3/α3(IV) collagen–α2β1 edge at the downstre
 ## Review-led expansion: B065 (2026-09-05)
 
 B065 promotes the existing FN1–uPAR/β1-integrin/CAV1/Src relay using acquired primary PMC and PubMed snapshots. The primary human study reports uPAR stabilization of β1-integrin/CAV1 complexes, Src association, focal-adhesion signaling, adhesion, and migration on fibronectin, with functional disruption after caveolin depletion or uPAR-peptide treatment. The edge is promoted to medium with complex/function resolution, no-purified-FN1–uPAR binding, no-defined-α partner, incomplete-ordering, no-terminal-TF, and no-traumatic-SCI limits explicit. No Module 20A–22A ledger was modified.
+
+## Review-led expansion: B066 (2026-09-05)
+
+B066 promotes the existing broader COL15A1-associated matrix → α2β1/DDR1/Pyk2 function edge using the already acquired primary COLXV/DDR1 PMC and PubMed snapshots. The primary study supports COLXV-associated suppression of DDR1 signaling and Pyk2 phosphorylation with reduced pancreatic-cell scatter and invasion, supporting the matrix-function edge at medium confidence. Direct COL15A1–α2β1 binding, linear α2β1→DDR1 ordering, matrix specificity, terminal TF, and traumatic-SCI transfer remain explicit limits. No Module 20A–22A ledger was modified.
