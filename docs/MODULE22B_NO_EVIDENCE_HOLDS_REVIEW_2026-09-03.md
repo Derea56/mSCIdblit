@@ -5221,6 +5221,20 @@ handoffs and do not establish source-to-TF activation or SCI-specific
 activity. The ELK1→SIRPA record is a direct promoter context from a
 non-SCI macrophage comparator.
 
+## Individual review 3381-3388
+
+All eight holds gained reusable target capacity. Vegfc→FLT1 reused HIF1A→FLT1;
+Vegfc→FLT4 reused direct RBPJ/CSL→FLT4; the Vegfc→FLT4_KDR composite reused
+RBPJ/CSL→FLT4 and Ets1→KDR component lanes; Vegfc→KDR reused Ets1→KDR;
+Vegfc→VIPR2 gained direct FOXO1→VIPR2 promoter context; Vegfd→FLT4 reused
+RBPJ/CSL→FLT4; the Vegfd→FLT4_KDR composite reused the same FLT4/KDR
+component lanes; and Vegfd→KDR reused Ets1→KDR.
+
+The reusable target lanes remain separate from the submitted Vegfc and Vegfd
+handoffs and do not establish source-to-TF activation or SCI-specific
+activity. The FOXO1→VIPR2 record is a direct promoter context from a
+non-SCI intestinal neuroimmune comparator.
+
 Six of the eight holds gained reusable target capacity. Try4→F2R and
 Try5→F2R reused EGR1→F2R and SP1→F2R; Try4→F2RL2 and Try5→F2RL2 reused
 NRF2→F2RL2; Try5→F2RL1 reused IRX3→F2RL1; and Try4→PARD3 reused
