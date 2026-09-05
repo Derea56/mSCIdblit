@@ -5071,6 +5071,18 @@ comparators, and remain separate from the submitted matricellular, receptor,
 and integrin handoffs. They do not establish the original pathway/function-
 boundary rows or any SCI-specific upstream relay.
 
+## Individual review 3253-3260
+
+Audits 3253-3260 covered THBS3 handoffs to CD47, ITGA3/ITGB1,
+ITGAV/ITGB3, SDC1, and SDC4, plus THBS4 handoffs to CD36, CD47, and
+ITGA3/ITGB1. All eight rows gained reusable target capacity from independently
+registered NRF1-CD47, HIF1A-ITGB1, HOXD3-ITGB3, NR1H4-SDC1, RELA-SDC4, and
+HIF1A-CD36 contexts. These are general regulatory target contexts, including
+human/mouse melanoma, wound-healing, vascular, epithelial, inflammatory,
+and bone-related comparators, and remain separate from the submitted
+matricellular and integrin handoffs. They do not establish the original
+pathway/function-boundary rows or any SCI-specific upstream relay.
+
 ## Individual review 3221-3228
 
 Audits 3221-3228 covered TGFB2/TGFBR3 and TGFB3 handoffs to ACVR1,
