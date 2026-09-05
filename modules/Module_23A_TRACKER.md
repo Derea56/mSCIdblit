@@ -128,3 +128,7 @@ B037 adds one review-led tenascin-R oligodendrocyte candidate and three source-b
 ## Review-led expansion: B038 (2026-09-05)
 
 B038 adds one review-led tenascin-R microglial candidate and six source-backed A-layer edges: activated-microglia antiadhesion, opposing EGF-like/FNIII6-8 domain effects on primary microglial adhesion and migration, domain-specific microglial BDNF/TGF-beta and NGF/TGF-beta secretion, and microglia/TNF-alpha-associated TNR downregulation in oligodendrocytes. PKA/PKC dependence, peripheral-nerve injury, primary-microglia, in-vitro comparator, reverse-feedback, and no-relay limits remain explicit. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B039 (2026-09-05)
+
+B039 adds one review-led tenascin-R perineuronal-net candidate and two source-backed A-layer edges: TNR-dependent perineuronal-net formation/stabilization and aggrecan clustering as the reported extracellular organization mechanism. Mouse loss-of-function, organotypic/dissociated-culture, add-back/rescue, and no-traumatic-SCI-transfer limits remain explicit. No Module 20A–22A ledger is modified.
