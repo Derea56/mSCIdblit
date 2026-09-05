@@ -40,3 +40,7 @@ B027 promotes four new 23B edges paired one-to-one with Module 23A for SPARC: di
 ## Review-led expansion: B028 (2026-09-04)
 
 B028 promotes four new 23B edges paired one-to-one with Module 23A for galectin-3: TLR4 ligand activity, comparator-specific TLR4-dependent microglial activation, rat SCI ROS/TXNIP/NLRP3/IL-1beta inflammatory output, and mouse SCI Gal3/PDGFRbeta+ fibroblast fibrotic-scar function. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Neuroinflammation comparator scope, separate SCI inflammasome and scar-function evidence, no universal TLR4-to-NLRP3 relay, and no TLR4 mechanism transfer into the SCI scar edge remain explicit. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B029 (2026-09-04)
+
+B029 promotes five new 23B edges paired one-to-one with Module 23A for HMGB1: direct TLR4/MD2 binding, a TLR4-NF-kappaB/MAPK relay, astrocytic CCL5 with myeloid recruitment/M1 output, SCI pro-inflammatory cytokine and microglial NF-kappaB output, and secondary-injury/motor-function output. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Redox, endotoxin, alternate receptor usage, cell-context, human biomarker non-causality, and the absence of a universal adaptor order remain explicit; canonical signaling tables and simulator outputs remain untouched.
