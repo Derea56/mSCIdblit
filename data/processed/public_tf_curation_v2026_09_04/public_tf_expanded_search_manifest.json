@@ -77,6 +77,19 @@
       "finding": "Mouse Zfat evidence identifies Atg13, Brf1, Psmc3, and Timm22 as targets; it does not establish the queued pairs."
     }
   ],
+  "new_module_evidence_reconciliation": {
+    "result_file": "data/processed/public_tf_curation_v2026_09_04/public_tf_new_evidence_reconciliation.json",
+    "source_revisions": {
+      "v1.3_release": "mSCIdblit:07a7c920",
+      "module22_evidence_pass": "mSCIdblit:586420ba",
+      "module23_evidence_pass": "mSCIdblit:0d3883ab"
+    },
+    "finding": "The newly graded Module 22B/23B edge and evidence registers were scanned against the queued public-TF pairs. No exact structured queue-pair overlap was identified; the graded mechanism evidence therefore did not support a new public-TF promotion.",
+    "queue_rows_rechecked": 112,
+    "queue_unique_pairs_rechecked": 97,
+    "exact_structured_queue_pair_overlap": 0,
+    "promotion_candidates_identified": 0
+  },
   "promotion_decision": {
     "rows_promoted": 0,
     "rows_retained_candidate_only": 112,

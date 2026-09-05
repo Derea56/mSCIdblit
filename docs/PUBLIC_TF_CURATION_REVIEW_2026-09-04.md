@@ -19,6 +19,7 @@ The exportable curation overlay contains **3** context-gated rows representing *
 The next review queue contains **112** unpromoted mouse canonical-TF/direct-binding rows from Modules 20B–24B.
 The expanded queue adjudication reviewed **112** rows: **0** promoted and **112** retained as candidate-only.
 Expanded search status: **expanded_alias_and_primary_source_search_completed_no_exact_primary_evidence_identified**; no exact queued pair met the mouse direct-binding, functional-response, provenance, and direction contract. Search layers and primary near-match citations are listed in `data/processed/public_tf_curation_v2026_09_04/public_tf_expanded_search_manifest.json`.
+New Module 22B/23B evidence reconciliation: **0** exact structured queue-pair overlaps and **0** promotion candidates; the detailed audit is `data/processed/public_tf_curation_v2026_09_04/public_tf_new_evidence_reconciliation.json`.
 
 ## Context-mode eligibility
 

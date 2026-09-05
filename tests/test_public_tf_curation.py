@@ -1,4 +1,5 @@
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -16,6 +17,7 @@ from public_tf_curation import (  # noqa: E402
     validate_promotable_overlay_row,
 )
 from adjudicate_public_tf_queue import adjudicate  # noqa: E402
+from reconcile_public_tf_new_evidence import inspect_input  # noqa: E402
 
 
 def candidate(**overrides):
@@ -165,6 +167,22 @@ class PublicTFCurationTests(unittest.TestCase):
         self.assertEqual(rows[0]["search_layers"], "exact_alias_followups")
         self.assertEqual(rows[0]["curation_status"], "candidate_only")
         self.assertEqual(rows[0]["traversal_eligibility"], "not_traversable")
+
+    def test_new_evidence_reconciliation_requires_exact_structured_pair_fields(self):
+        queue = {
+            ("prdm15", "adgrl1"): {
+                "source_row_id": "PTF-QUEUE-3",
+                "module": "23B",
+                "regulator": "PRDM15",
+                "target": "Adgrl1",
+            }
+        }
+        with tempfile.TemporaryDirectory() as temp_dir:
+            path = Path(temp_dir) / "evidence.tsv"
+            path.write_text("b_evidence_id\tevidence_grade\nE1\tB\n", encoding="utf-8")
+            result = inspect_input("synthetic", path, queue)
+        self.assertFalse(result["structured_pair_fields_present"])
+        self.assertEqual(result["exact_queue_pair_count"], 0)
 
 
 if __name__ == "__main__":

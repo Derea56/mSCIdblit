@@ -177,6 +177,7 @@ def markdown_summary(payload: Mapping[str, object]) -> str:
         f"The next review queue contains **{payload['mouse_direct_binding_review_queue']['row_count']}** unpromoted mouse canonical-TF/direct-binding rows from Modules 20B–24B.",
         f"The expanded queue adjudication reviewed **{payload['queue_adjudication']['rows_reviewed']}** rows: **{payload['queue_adjudication']['promoted_rows']}** promoted and **{payload['queue_adjudication']['retained_candidate_rows']}** retained as candidate-only.",
         f"Expanded search status: **{payload['expanded_search']['status']}**; no exact queued pair met the mouse direct-binding, functional-response, provenance, and direction contract. Search layers and primary near-match citations are listed in `{payload['expanded_search']['manifest']}`.",
+        f"New Module 22B/23B evidence reconciliation: **{payload['new_evidence_reconciliation']['exact_structured_queue_pair_overlap']}** exact structured queue-pair overlaps and **{payload['new_evidence_reconciliation']['promotion_candidates_identified']}** promotion candidates; the detailed audit is `{payload['new_evidence_reconciliation']['result_file']}`.",
         "",
         "## Context-mode eligibility",
         "",
@@ -277,6 +278,12 @@ def main() -> int:
         if search_manifest_path.exists()
         else {}
     )
+    new_evidence_reconciliation_path = output_dir / "public_tf_new_evidence_reconciliation.json"
+    new_evidence_reconciliation = (
+        json.loads(new_evidence_reconciliation_path.read_text(encoding="utf-8"))
+        if new_evidence_reconciliation_path.exists()
+        else {}
+    )
     payload = {
         "schema_version": "mscidblit_public_tf_curation_summary_v1",
         "release_id": "module20_24_mechanism_graph:v1.1.0",
@@ -326,6 +333,19 @@ def main() -> int:
             "primary_evidence_leads": len(
                 search_manifest.get("primary_evidence_leads", [])
             ),
+        },
+        "new_evidence_reconciliation": {
+            "result_file": "data/processed/public_tf_curation_v2026_09_04/public_tf_new_evidence_reconciliation.json",
+            "queue_rows_rechecked": new_evidence_reconciliation.get("queue_rows", "unknown"),
+            "queue_unique_pairs_rechecked": new_evidence_reconciliation.get(
+                "queue_unique_pairs", "unknown"
+            ),
+            "exact_structured_queue_pair_overlap": new_evidence_reconciliation.get(
+                "result", {}
+            ).get("exact_structured_queue_pair_overlap", "unknown"),
+            "promotion_candidates_identified": new_evidence_reconciliation.get(
+                "result", {}
+            ).get("promotion_candidates_identified", "unknown"),
         },
         "reconciliation": {
             "active_graph_pair_status": curation["active_graph_pair_status"],
