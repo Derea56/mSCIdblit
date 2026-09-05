@@ -4903,3 +4903,8 @@ The retained contexts remain separate from the submitted Rarres1, Rarres2, Rbp3,
 All eight rows retained reusable target capacity. New direct promoter contexts were added for BMPR1B through SMAD4, BMPR2 through SRY, HFE through SP1, and TFR2 through GATA1; NEO1 reused the existing JUN promoter context. These contexts support the named target genes independently of the RGMA/RGMB handoffs.
 
 The retained contexts remain separate from the submitted Rgma and Rgmb handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI ovine granulosa-cell, pulmonary-vascular, liver/erythropoietic iron-homeostasis, and mouse pancreatic-tumor comparators. The individual search log contains 2948 rows through M22B-IND-2948. This tranche added four standalone direct target edges and four evidence records and kept no rows on hold.
+## Individual review 2949-2956
+
+Three of the eight rows retained reusable target capacity. CACNA1C reused an existing NR3C2 promoter-activation context; SLC18A2 reused a functional Lmx1b-dependent context; and ABCA1 reused direct NR1H2/LXRbeta-RXR promoter evidence. SLC17A7, SLC18A3, and RXFP2/3/4 remained bounded holds because the targeted reviews did not verify qualifying named activating TF-to-target relationships.
+
+The retained contexts remain separate from the submitted Rims1, Rims2, and Rln1 handoffs and do not establish source-to-TF activation. The reusable contexts are non-SCI rat cardiac/vascular, mouse raphe-neuronal, and human macrophage/sterol-response comparators. The individual search log contains 2956 rows through M22B-IND-2956. This tranche added no new edge or evidence records, reused target contexts for three rows, and kept five rows on hold.
