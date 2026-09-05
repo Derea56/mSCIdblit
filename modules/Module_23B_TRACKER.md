@@ -102,3 +102,7 @@ B043 promotes two new 23B edges paired one-to-one with Module 23A for the S100A8
 ## Review-led expansion: B044 (2026-09-05)
 
 B044 promotes two new 23B edges paired one-to-one with Module 23A for the Sema4A–Plexin-B2 branch: receptor-dependent synaptogenic relay and Plexin-B2-dependent glutamatergic synapse development in rat hippocampal cultures. Plexin-B2 knockdown, soluble mouse Sema4A-Fc, rodent-culture, no-direct-binding, complete-relay, and no-traumatic-SCI-transfer limits remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B045 (2026-09-05)
+
+B045 promotes one new 23B edge paired one-to-one with Module 23A for the EFNA1–EPHA5 branch: ephrin-A1 recombinant-fusion stimulation produces time-dependent EPHA5 tyrosine phosphorylation in human U-118 MG glioblastoma cells. The evidence is retained at the receptor-proximal layer with explicit recombinant-fusion, glioblastoma-cell-line, no-direct-binding, no-neural, and no-traumatic-SCI-transfer limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.

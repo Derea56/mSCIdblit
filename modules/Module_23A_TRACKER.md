@@ -152,3 +152,7 @@ B043 adds one review-led S100A8/A9 candidate and two source-backed A-layer edges
 ## Review-led expansion: B044 (2026-09-05)
 
 B044 adds one review-led Sema4A receptor candidate and two source-backed A-layer edges: Plexin-B2-dependent synaptogenic relay and glutamatergic synapse development in rat hippocampal cultures. Plexin-B2 knockdown, soluble mouse Sema4A-Fc, rodent-culture, no-direct-binding, complete-relay, and no-traumatic-SCI-transfer limits remain explicit. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B045 (2026-09-05)
+
+B045 adds one review-led EFNA1–EPHA5 candidate and one source-backed A-layer edge: ephrin-A1 recombinant-fusion stimulation produces time-dependent EPHA5 tyrosine phosphorylation in human U-118 MG glioblastoma cells. The receptor-proximal phosphorylation layer is promoted without inferring direct binary binding, a downstream program, neural context, or traumatic-SCI transfer. No Module 20A–22A ledger is modified.
