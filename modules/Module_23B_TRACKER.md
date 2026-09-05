@@ -126,3 +126,7 @@ B049 promotes one new 23B edge paired one-to-one with Module 23A for VTN–alpha
 ## Review-led expansion: B050 (2026-09-05)
 
 B050 promotes the existing 23B Sema4A–Plexin-B2 receptor-proximal edge paired one-to-one with Module 23A. Primary activated mouse CD8+ T-cell assays show Sema4A-Fc surface binding reduced by Plexin-B2 blockade and reduced IFN-gamma after Plexin-B2 knockdown. The evidence supports receptor assignment and proximal function at medium-high confidence, without purified binary affinity, a complete Rho-family/mTOR relay, native neural context, or traumatic-SCI transfer. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B051 (2026-09-05)
+
+B051 promotes the existing 23B EFNA2–EPHA5 binding edge paired one-to-one with Module 23A. Primary EphA5-AP affinity-probe labeling of ephrin-A2-expressing fibroblasts and complementary retinal EphA5/ephrin-A2 binding/guidance evidence support the cell-associated direct-binding layer at medium-high confidence. Purified affinity, receptor-exclusive guidance causality, complete intracellular relay, and traumatic-SCI transfer remain unasserted. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
