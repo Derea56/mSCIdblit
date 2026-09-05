@@ -5108,6 +5108,23 @@ the submitted protease, extracellular-matrix, integrin, and phosphatase
 handoffs. They do not establish the original pathway/function-boundary
 rows or any SCI-specific upstream relay.
 
+## Individual review 3285-3292
+
+All eight holds were searched individually. All eight rows gained reusable
+target capacity from independently registered contexts: TNFSF10→CCR6 reused
+HOXD3, TNFSF13→TNFRSF11B reused HIF2A, TNFSF13→TNFRSF14 reused MITF,
+TNFSF13→TNFRSF1A reused CEBPA, TNFSF13B→TFRC reused MYC, TNFSF9→TNFRSF9
+reused RELB, TNN→ITGA2B/ITGB3 reused RUNX1, and TNN→ITGA8/ITGB1 reused
+HIF1A. The underlying contexts include human hepatocellular-carcinoma,
+mouse osteoblast, human reproductive-stromal, human HeLa, human/mouse
+B-cell, human epithelial, human platelet/hematopoietic, and human/mouse
+hypoxia or wound-healing comparator systems.
+
+These are reusable target-gene lanes rather than evidence that any submitted
+TNFSF or tenascin handoff activates the corresponding TF. The original
+pathway/function-boundary rows remain separate and no SCI-specific upstream
+relay was inferred.
+
 ## Individual review 3277-3284
 
 All eight holds were searched individually. Four rows gained reusable target
