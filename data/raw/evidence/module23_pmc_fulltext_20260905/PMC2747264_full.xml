@@ -1,0 +1,870 @@
+<?xml version="1.0"  ?><!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd"><pmc-articleset><article article-type="research-article" xml:lang="en" dtd-version="1.4"><front><journal-meta><journal-id journal-id-type="nlm-ta">Dev Cell</journal-id><journal-id journal-id-type="iso-abbrev">Dev. Cell</journal-id><journal-id journal-id-type="pmc-domain-id">319</journal-id><journal-id journal-id-type="pmc-domain">nihpa</journal-id><journal-id journal-id-type="nlm-id">101120028</journal-id><journal-title-group><journal-title>Developmental cell</journal-title></journal-title-group><issn pub-type="ppub">1534-5807</issn><issn pub-type="epub">1878-1551</issn><custom-meta-group><custom-meta><meta-name>pmc-is-collection-domain</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-collection-title</meta-name><meta-value>NIHPA Author Manuscripts</meta-value></custom-meta></custom-meta-group></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC2747264</article-id><article-id pub-id-type="pmcid-ver">PMC2747264.1</article-id><article-id pub-id-type="pmcaid">2747264</article-id><article-id pub-id-type="pmcaiid">2747264</article-id><article-id pub-id-type="manuscript-id">NIHMS141065</article-id><article-id pub-id-type="pmid">19686679</article-id><article-id pub-id-type="doi">10.1016/j.devcel.2009.06.017</article-id><article-id pub-id-type="manuscript-id-alternative">NIHMS141065</article-id><article-id pub-id-type="manuscript-id-alternative">NIHPA141065</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="heading"><subject>Article</subject></subj-group></article-categories><title-group><article-title>Integrin-α9 is required for fibronectin matrix assembly
+during lymphatic valve morphogenesis</article-title></title-group><contrib-group><contrib contrib-type="author"><name name-style="western"><surname>Bazigou</surname><given-names initials="E">Eleni</given-names></name><xref ref-type="aff" rid="A1">1</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Xie</surname><given-names initials="S">Sherry</given-names></name><xref ref-type="aff" rid="A1">1</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Chen</surname><given-names initials="C">Chun</given-names></name><xref ref-type="aff" rid="A2">2</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Weston</surname><given-names initials="A">Anne</given-names></name><xref ref-type="aff" rid="A3">3</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Miura</surname><given-names initials="N">Naoyuki</given-names></name><xref ref-type="aff" rid="A4">4</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Sorokin</surname><given-names initials="L">Lydia</given-names></name><xref ref-type="aff" rid="A5">5</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Adams</surname><given-names initials="R">Ralf</given-names></name><xref ref-type="aff" rid="A6">6</xref><xref ref-type="aff" rid="A7">7</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Muro</surname><given-names initials="AF">Andrés F.</given-names></name><xref ref-type="aff" rid="A8">8</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Sheppard</surname><given-names initials="D">Dean</given-names></name><xref ref-type="aff" rid="A2">2</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Makinen</surname><given-names initials="T">Taija</given-names></name><xref ref-type="aff" rid="A1">1</xref><xref rid="FN1" ref-type="author-notes">*</xref></contrib></contrib-group><aff id="A1"><label>1</label> Lymphatic Development Laboratory, Cancer Research UK London
+Research Institute, 44 Lincoln's Inn Fields, London WC2A 3PX, United
+Kingdom</aff><aff id="A2"><label>2</label> Lung Biology Center, UCSF, San Francisco CA 94143-2922, USA</aff><aff id="A3"><label>3</label> Electron Microscopy Unit, Cancer Research UK London Research
+Institute, 44 Lincoln's Inn Fields, London WC2A 3PX, United Kingdom</aff><aff id="A4"><label>4</label> Department of Biochemistry, Hamamatsu University School of
+Medicine, Hamamatsu 431-3192, Japan</aff><aff id="A5"><label>5</label> Institute for Physiological Chemistry and Pathobiochemistry,
+Münster University, 48149 Münster, Germany</aff><aff id="A6"><label>6</label> Vascular Development Laboratory, Cancer Research UK London Research
+Institute, 44 Lincoln's Inn Fields, London WC2A 3PX, United Kingdom</aff><aff id="A7"><label>7</label> Max–Planck–Institute for Molecular Biomedicine,
+Department of Tissue Morphogenesis, and University of Münster, Faculty of
+Medicine, 48149 Münster, Germany</aff><aff id="A8"><label>8</label> International Centre for Genetic Engineering and Biotechnology,
+34012 Trieste, Italy</aff><author-notes><corresp id="FN1"><label>*</label> Corresponding author:
+<email>taija.makinen@cancer.org.uk</email>, Phone: +44 207 269 3459,
+Fax: +44 207 269 3417</corresp></author-notes><pub-date pub-type="ppub"><month>8</month><year>2009</year></pub-date><volume>17</volume><issue>2</issue><issue-id pub-id-type="pmc-issue-id">181735</issue-id><fpage>175</fpage><lpage>186</lpage><pub-history><event event-type="nihms-submitted"><date><day>10</day><month>09</month><year>2009</year></date></event><event event-type="pmc-release"><date><day>01</day><month>08</month><year>2010</year></date></event><event event-type="pmc-live"><date><day>01</day><month>08</month><year>2010</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2024-06-06 10:48:32.067"><day>06</day><month>06</month><year>2024</year></date></event></pub-history><permissions><license xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://creativecommons.org/licenses/by-nc-nd/3.0/"><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbyncndlicense">https://creativecommons.org/licenses/by-nc-nd/3.0/</ali:license_ref><license-p>Open Access under <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by-nc-nd/3.0/">CC BY-NC-ND 3.0</ext-link> license.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="nihms141065.pdf"/><abstract><title>Summary</title><p id="P1">Dysfunction of lymphatic valves underlies human lymphedema, yet the
+process of valve morphogenesis is poorly understood. Here, we show that during
+embryogenesis lymphatic valve leaflet formation is initiated by upregulation of
+integrin-α9 expression and deposition of its ligand, fibronectin-EIIIA
+(FN-EIIIA), in the extracellular matrix. Endothelial cell specific deletion of
+<italic toggle="yes">Itga9</italic> (encoding integrin-α9) in mouse embryos
+results in the development of rudimentary valve leaflets, characterized by
+disorganized FN matrix, short cusps and retrograde lymphatic flow. Similar
+morphological and functional defects are observed in mice lacking the EIIIA
+domain of FN. Mechanistically, we demonstrate that in primary human lymphatic
+endothelial cells the integrin-α9-EIIIA interaction directly regulates
+FN fibril assembly, which is essential for the formation of the extracellular
+matrix core of valve leaflets. Our findings reveal an important role for
+integrin-α9 signaling during lymphatic valve morphogenesis and implicate
+it as a candidate gene for primary lymphedema caused by valve defects.</p></abstract><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-manuscript</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY-NC-ND</meta-value></custom-meta></custom-meta-group></article-meta></front><body><sec sec-type="intro" id="S1"><title>Introduction</title><p id="P2">The lymphatic vasculature forms a network of blind-ended capillaries that
+collect protein rich fluid from the interstitial space and drain it via collecting
+vessels first into lymph nodes and then to larger lymphatic ducts, which connect to
+the venous system (<xref rid="R1" ref-type="bibr">Alitalo et al., 2005</xref>; <xref rid="R17" ref-type="bibr">Jurisic and Detmar, 2009</xref>). The major functions
+of the lymphatic vasculature are to maintain tissue fluid balance, provide immune
+surveillance through transport of leukocytes and antigen-presenting dendritic cells
+and participate in fat absorption (<xref rid="R1" ref-type="bibr">Alitalo et al.,
+2005</xref>; <xref rid="R17" ref-type="bibr">Jurisic and Detmar,
+2009</xref>).</p><p id="P3">Congenital malformation of the lymphatic system such as vessel hypoplasia and
+valve defects cause primary lymphedema, which is usually a progressive and lifelong
+condition, characterized by gross swelling of the affected limb accompanied by
+fibrosis and susceptibility to infections (<xref rid="R1" ref-type="bibr">Alitalo et
+al., 2005</xref>; <xref rid="R17" ref-type="bibr">Jurisic and Detmar,
+2009</xref>). The management of symptoms is based on physiotherapy and
+compression garments as at present no effective treatment for lymphedema exists.
+Several genes, including <italic toggle="yes">Vegfr3</italic>, <italic toggle="yes">Foxc2 and Sox18</italic>,
+which were shown to regulate developmental lymphangiogenesis in mice (<xref rid="R11" ref-type="bibr">Francois et al., 2008</xref>; <xref rid="R19" ref-type="bibr">Karkkainen et al., 2001</xref>; <xref rid="R33" ref-type="bibr">Petrova et al., 2004</xref>), have been implicated in human lymphedema. Kinase
+inactivating mutations in the <italic toggle="yes">VEGFR-3</italic> gene lead to Milroy's
+disease (<xref rid="R7" ref-type="bibr">Ferrell et al., 1998</xref>), while
+mutations in the transcription factors <italic toggle="yes">FOXC2</italic> and
+<italic toggle="yes">SOX18</italic> are the underlying genetic causes of
+lymphedema-distichiasis and hypotrichosis-lymphedema-telangiectasia, respectively
+(<xref rid="R8" ref-type="bibr">Finegold et al., 2001</xref>; <xref rid="R16" ref-type="bibr">Irrthum et al., 2003</xref>). Interestingly, defective luminal
+valves observed as a consequence of loss of <italic toggle="yes">FOXC2</italic> function (<xref rid="R33" ref-type="bibr">Petrova et al., 2004</xref>) highlights the critical
+role of valves in maintaining unidirectional lymphatic flow. While the mechanisms of
+lymphatic valve morphogenesis remain poorly characterized, it has been well
+established that the interactions between the blood endothelial cells and their
+surrounding extracellular matrix (ECM), organized to facilitate valve function, are
+of key importance in regulating heart valve development and cardiac function, and
+consequently, heart valve disease (<xref rid="R2" ref-type="bibr">Armstrong and
+Bischoff, 2004</xref>; <xref rid="R25" ref-type="bibr">Lincoln et al.,
+2006</xref>). Similarly, ultrastructural analyses of lymphatic valves have
+demonstrated a close association between ECM and lymphatic endothelial cells in the
+valve leaflets (<xref rid="R21" ref-type="bibr">Lauweryns and Boussauw, 1973</xref>;
+<xref rid="R30" ref-type="bibr">Navas et al., 1991</xref>). These findings
+suggest that the ECM has important functions in controlling endothelial cell
+signalling and could also provide structural integrity during lymphatic valve
+morphogenesis.</p><p id="P4">Cell-matrix adhesion receptors, such as integrins, play essential roles in
+developmental processes that involve close interactions between the cells and their
+surrounding ECM. Integrins are heterodimeric transmembrane receptors composed of
+α and β subunits. Their extracellular domains bind to the ECM
+molecules while the cytoplasmic domains associate with the actin cytoskeleton and
+affiliated proteins, thereby providing a link between the external and internal
+environment of the cell (<xref rid="R12" ref-type="bibr">Geiger et al.,
+2001</xref>). In addition to mediating attachment to their respective ECM ligand(s),
+integrins have specialized signaling functions and they can regulate gene expression
+as well as cell shape, migration, proliferation and survival. Furthermore, integrin
+binding to ECM is not only required for transducing signals from the matrix to cells
+but this interaction also initiates responses that allow the cells to organize and
+remodel the matrix (<xref rid="R22" ref-type="bibr">Leiss et al., 2008</xref>).
+Despite an apparent redundancy in their ligand-binding specificities, with several
+ECM molecules being ligands for more than one integrin, genetic studies have
+demonstrated distinct functions for individual integrins. Fibronectin (FN) receptors
+integrin-α5β1 and -α4β1, as well as components of
+the ECM, such as FN, play critical roles in the development of the blood vasculature
+(<xref rid="R15" ref-type="bibr">Hynes, 2007</xref>). However, knowledge of the
+expression and function of integrins and the ECM in the lymphatic vasculature is
+limited (<xref rid="R4" ref-type="bibr">Avraamides et al., 2008</xref>).</p><p id="P5">Here we show that a member of the integrin-family, integrin-α9
+(encoded by <italic toggle="yes">Itga9</italic>), was predominantly expressed in the endothelial
+cells of the lymphatic valve. Interestingly, <italic toggle="yes">Itga9</italic> deficiency in
+mice led to specific defects in the formation of luminal valves, which resulted in
+retrograde lymphatic flow and impaired fluid transport. We provide <italic toggle="yes">in
+vivo</italic> and <italic toggle="yes">in vitro</italic> evidence for the requirement of
+integrin-α9 interaction with its specific ligand, fibronectin-EIIIA
+(FN-EIIIA, also called EDA), in regulating FN matrix assembly and thereby identify
+an unexpected <italic toggle="yes">in vivo</italic> function for an integrin-EIIIA interaction.
+Collectively, our findings demonstrate an important role for integrin signaling in
+lymphatic valve development and provide novel insight into the previously
+undescribed morphogenetic process of lymphatic valve morphogenesis. As lymphatic
+valve defects manifested in adults are likely to have origins in valve development,
+integrin-α9 is a candidate gene for primary human lymphedema caused by
+lymphatic valve defects.</p></sec><sec sec-type="results" id="S2"><title>Results</title><sec id="S3"><title>Integrin-α9 is expressed in mature and developing lymphatic
+valves</title><p id="P6">We surveyed expression of several integrins by immunofluorescence to
+determine which of these molecules might function during lymphatic valve
+formation. Whole-mount staining of adult skin using antibodies against specific
+α-subunits revealed low levels of integrin-α5 and -α6
+expression in lymphatic endothelia and in the valve, while no apparent staining
+was detected using antibodies against integrin-α1, -α2 or
+-α4 (data not shown). In contrast, staining with integrin-α9
+antibodies strongly highlighted the cells constituting the luminal valve (<xref rid="F1" ref-type="fig">Figures 1A and 1B</xref>). In agreement with
+previous studies (<xref rid="R14" ref-type="bibr">Huang et al., 2000</xref>), no
+integrin-α9 expression was detected in the blood vessel endothelia (data
+not shown).</p><p id="P7">Since integrin-α9 appeared to be the predominant
+α-subunit expressed in lymphatic endothelia and valves, we further
+characterized its expression pattern in developing vessels and aimed our study
+at determining its function in valve morphogenesis. During mouse development,
+the formation of valved collecting vessels occurs in late embryonic and early
+postnatal life through remodelling of a primitive lymphatic capillary network
+(<xref rid="F1" ref-type="fig">Figures 1C-1E</xref>; (<xref rid="R27" ref-type="bibr">Makinen et al., 2005</xref>; <xref rid="R31" ref-type="bibr">Norrmen et al., 2009</xref>)). At embryonic day (E)16, mesenteric lymphatic
+vessels form a vascular plexus that is LYVE-1 positive and does not contain
+valves (<xref rid="F1" ref-type="fig">Figures 1C and 1F</xref>). However,
+defined clusters of cells expressing high levels of Prox1 (<xref rid="F1" ref-type="fig">Figure 1F</xref>) and FoxC2 (data not shown) transcription
+factors are indicative of initiation of valve formation (<xref rid="R31" ref-type="bibr">Norrmen et al., 2009</xref>). At this stage
+integrin-α9 expression was low in lymphatic endothelia (<xref rid="F1" ref-type="fig">Figures 1F and 1G</xref>), while higher expression was
+detected in scattered cells in the surrounding tissue (data not shown) and in
+vascular SMCs around the blood vessels (<xref rid="F1" ref-type="fig">Figures 1F
+and 1G</xref>, arrowheads). At E17, the lymphatic vessels formed
+constrictions that showed elevated <italic toggle="yes">Vegfr3</italic>-lacZ reporter
+activity (<xref rid="F1" ref-type="fig">Figure 1D</xref>) and contained
+endothelial cells expressing high levels of FoxC2 (<xref rid="F1" ref-type="fig">Figure 1H</xref>), Prox1 (data not shown) and integrin-α9 (<xref rid="F1" ref-type="fig">Figures 1H and 1I</xref>). At E18,
+integrin-α9 was present in the endothelial cells of developed valve
+leaflets (<xref rid="F1" ref-type="fig">Figures 1J and 1K</xref>). Taken
+together, these expression data suggest that integrin-α9 upregulation in
+lymphatic endothelia correlated with the initiation of valve leaflet
+formation.</p></sec><sec id="S4"><title><italic toggle="yes">Itga9</italic> deficient mice display abnormal lymphatic
+valves</title><p id="P8">To investigate the physiological function of integrin-α9 in
+lymphatic valves we analysed <italic toggle="yes">Itga9</italic> deficient mice. These mice
+were reported to die perinatally of respiratory failure, caused by the presence
+of bilateral chylothorax (<xref rid="R14" ref-type="bibr">Huang et al.,
+2000</xref>), however the potential lymphatic vascular defects remained
+unknown. Analysis of chyle-filled mesenteric collecting vessels revealed
+characteristic V-shaped valves in wild-type neonates (<xref rid="F2" ref-type="fig">Figures 2A and 2A</xref>′). In contrast,
+<italic toggle="yes">Itga9</italic> mutant mice displayed fewer and morphologically
+abnormal valves (<xref rid="F2" ref-type="fig">Figures 2B and
+2B</xref>′). Staining with an antibody against PECAM-1, which is
+strongly expressed in endothelial cells forming the valve leaflets (<xref rid="F2" ref-type="fig">Figure 2C</xref>), demonstrated that most of the
+mutant valves appeared as horizontal constrictions rather than V-shaped
+structures (<xref rid="F2" ref-type="fig">Figures 2D, 2E and 2F</xref>). Leakage
+of chylous fluid from the mesenteric vessels further indicated that they were
+dysfunctional (arrowhead in <xref rid="F2" ref-type="fig">Figure 2B</xref>). The
+defects in <italic toggle="yes">Itga9</italic> deficient mice were specific to lymphatic
+valves since we observed apparently normal development and gross morphology of
+the lymphatic vasculature in all tissues that were examined (<xref rid="SD1" ref-type="supplementary-material">Figures S1A-S2H</xref>).</p><p id="P9">Examination of longitudinal transmission electron microscopy sections of
+the valves of mesenteric lymphatic vessels revealed leaflets consisting of two
+endothelial layers with a central connective tissue core (<xref rid="F2" ref-type="fig">Figures 2G, 2I, 2K</xref>; (<xref rid="R21" ref-type="bibr">Lauweryns and Boussauw, 1973</xref>; <xref rid="R30" ref-type="bibr">Navas
+et al., 1991</xref>)). The endothelial cells of the wild-type valve leaflets
+formed long, overlapping cell-cell junctions, and they were tightly attached to
+the matrix core (<xref rid="F2" ref-type="fig">Figures 2G and 2I</xref>). In the
+<italic toggle="yes">Itga9<sup>-/-</sup></italic> vessels the cusps of the valves
+were shorter with fewer endothelial cells (<xref rid="F2" ref-type="fig">Figures
+2H and 2K</xref>). The disorganized or absent matrix core in between the
+basal sides of the endothelial cells was associated with the separation of the
+opposite endothelial surfaces (<xref rid="F2" ref-type="fig">Figure 2J</xref>).
+These results suggest that integrin-α9 function is essential for the
+formation of the defined ECM core of a valve leaflet.</p></sec><sec id="S5"><title>Retrograde lymph flow and impaired fluid transport in
+<italic toggle="yes">Itga9<sup>-/-</sup></italic> mice</title><p id="P10">Luminal valves have an important role in establishing unidirectional
+lymphatic flow. To evaluate if lymphatic function is compromised in the
+<italic toggle="yes">Itga9<sup>-/-</sup></italic> mice, we investigated uptake and
+transport of subcutaneously injected large-molecular-weight fluorescent dextran.
+In wild-type mice the FITC-dextran injected into the forelimb footpad was
+rapidly drained into the valved dermal collecting lymphatic vessels, which were
+visualized proximal to the injection site (<xref rid="F3" ref-type="fig">Figure
+3A</xref>). In contrast, in the <italic toggle="yes">Itga9</italic> mutant skin the dye
+labeled a vessel network (<xref rid="F3" ref-type="fig">Figure 3B</xref>),
+suggesting retrograde lymphatic flow from the collecting vessels to the
+pre-collector vessel branches (<xref rid="R27" ref-type="bibr">Makinen et al.,
+2005</xref>; <xref rid="R33" ref-type="bibr">Petrova et al., 2004</xref>).
+In addition, the dye showed leakage into the surrounding tissue and the
+transport from the injection site to the lymph nodes and the thoracic duct was
+impaired (<xref rid="SD1" ref-type="supplementary-material">Figures
+S2A-S2D</xref>). We also analyzed the lymphatic drainage after subcutaneous
+injection of FITC-conjugated <italic toggle="yes">Lycopersicum Esculentum</italic> lectin
+(LEL), which binds to the surface of lymphatic endothelial cells, in particular
+in the valves (<xref rid="R42" ref-type="bibr">Tammela et al., 2007</xref>)
+(<xref rid="F3" ref-type="fig">Figure 3C</xref>). In the
+<italic toggle="yes">Itga9</italic> mutants valve regions were identified by stronger
+lectin staining, however, the valves were abnormal and often lacked obvious
+leaflets (<xref rid="F3" ref-type="fig">Figures 3D and 3E</xref>). Together, the
+above data show that <italic toggle="yes">Itga9</italic> deficient mice display specific
+defects in valve morphogenesis, which result in retrograde lymphatic flow and
+impaired fluid transport.</p></sec><sec id="S6"><title>Integrin-α9 is required tissue-autonomously in endothelia for
+lymphatic valve development</title><p id="P11">To examine if integrin-α9 has a tissue-autonomous function in
+lymphatic endothelia during valve development we deleted its expression
+specifically in endothelial cells by crossing the floxed
+<italic toggle="yes">Itga9<sup>lx</sup></italic> mice (<xref rid="R37" ref-type="bibr">Singh et al., 2008</xref>) with <italic toggle="yes">Tie2-Cre</italic>
+animals (<xref rid="R20" ref-type="bibr">Koni et al., 2001</xref>). The
+homozygous <italic toggle="yes">Tie2-Cre;Itga9<sup>lx/lx</sup></italic> mice displayed
+chylothorax (data not shown) and reduced number of lymphatic valves (<xref rid="SD1" ref-type="supplementary-material">Figures S3A and S3B</xref>). The
+few valves that were detected displayed abnormal leaflets, as visualized by
+staining for an ECM molecule Laminin-α5 (<xref rid="F4" ref-type="fig">Figures 4A-4D</xref>).</p><p id="P12">We next asked whether integrin-α9 is also essential for the
+maintenance of the valves. We used
+<italic toggle="yes">VE-cadherin-CreER<sup>T2</sup></italic> mice, which allow
+tamoxifen-regulated activation of Cre in both blood and lymphatic endothelia (R.
+Adams, unpublished; <xref rid="SD1" ref-type="supplementary-material">Figures
+S3C and S3D</xref>). To induce <italic toggle="yes">Itga9</italic> gene deletion in
+mature valves, 4-hydroxytamoxifen (4-OHT) was injected into control
+<italic toggle="yes">Itga9<sup>lx/</sup></italic><sup>+</sup> (<xref rid="F4" ref-type="fig">Figures 4E-4H</xref>) and
+<italic toggle="yes">VE-cadherin-CreER<sup>T2</sup></italic>;<italic toggle="yes">Itga9<sup>lx/lx</sup></italic>
+(<xref rid="F4" ref-type="fig">Figures 4I-4L</xref>) mice at P1, when most
+of the valves are fully developed, and the vessels were analysed at P7. In 4-OHT
+treated
+<italic toggle="yes">VE-cadherin-CreER<sup>T2</sup></italic>;<italic toggle="yes">Itga9<sup>lx/lx</sup></italic>
+vessels integrin-α9 expression was lost from lymphatic endothelia (<xref rid="F4" ref-type="fig">Figure 4K</xref>). However, the valve leaflets
+appeared normal (<xref rid="F4" ref-type="fig">Figures 4I and 4J</xref>), and
+integrin-α9 negative endothelial cells remained attached to the matrix
+core (<xref rid="F4" ref-type="fig">Figures 4I, 4K and 4L</xref>), suggesting
+that integrin-α9 is dispensable for stable adhesion of endothelial cells
+in fully developed valves. Together, these results suggest that
+integrin-α9 is required tissue-autonomously in endothelia for the
+development of lymphatic valve leaflets, while it is not essential for
+maintaining valve structure and endothelial cell adhesion in mature valves.</p></sec><sec id="S7"><title>Integrin-α9 ligand, fibronectin-EIIIA, is expressed in the developing
+lymphatic valves</title><p id="P13">To examine the function of integrin-α9 in the formation of valve
+leaflets we investigated the expression and localization of its ligands,
+including Tenascin-C (TNC), Osteopontin (OPN) and fibronectin containing the
+EIIIA domain (FN-EIIIA) (<xref rid="R23" ref-type="bibr">Liao et al.,
+2002</xref>; <xref rid="R47" ref-type="bibr">Yokosaki et al., 1998</xref>;
+<xref rid="R48" ref-type="bibr">Yokosaki et al., 1999</xref>) in the
+developing lymphatic vessels. Confocal longitudinal cross section of a valve
+from E18.5 mesenteric vessels revealed expression of integrin-α9 and its
+ligand TNC on both luminal and abluminal sides of the valve endothelial cells
+(<xref rid="SD1" ref-type="supplementary-material">Figures S4A-S4C</xref>),
+while no staining was seen for OPN (data not shown). Interestingly, unlike FN,
+which was detected in all lymphatic vessel basement membrane (<xref rid="SD1" ref-type="supplementary-material">Figures S4D-S4F</xref>), FN-EIIIA showed
+localization restricted to the valve matrix core (<xref rid="SD1" ref-type="supplementary-material">Figures S4G-S4I</xref>).</p><p id="P14">To gain further insight into the role of FN-EIIIA we analysed its
+expression during different stages of lymphatic valve development so as to
+determine the relationship between integrin-α9 expression and ECM
+deposition. At E16, prior to upregulation of integrin-α9 expression
+(<xref rid="F5" ref-type="fig">Figure 5A</xref>), Laminin-α5 was
+found deposited at specific sites along the vessel (<xref rid="F5" ref-type="fig">Figures 5A</xref>), whereas no fibrous staining for FN-EIIIA
+was detected (data not shown). Induction of integrin-α9 expression
+correlated with appearance of continuous FN-EIIIA fibers at sites of developing
+valves (<xref rid="F5" ref-type="fig">Figures 5B</xref>), which were identified
+by Laminin-α5 positive matrix (<xref rid="F5" ref-type="fig">Figure
+5C</xref>) and the presence of cells expressing high levels of Prox1 (<xref rid="F5" ref-type="fig">Figure 5D</xref>). During initial steps of valve
+development FN-EIIIA and Laminin-α5 showed a similar localization (<xref rid="F5" ref-type="fig">Figure 5C</xref>). However, during leaflet
+elongation Laminin-α5 was found in the entire valve matrix core while
+FN-EIIIA fibers were concentrated on the free edges of the leaflets (<xref rid="F5" ref-type="fig">Figures 5E and 5E</xref>′). Similar to what
+has been reported for other tissues (<xref rid="R32" ref-type="bibr">Pagani et
+al., 1991</xref>), FN-EIIIA expression was progressively down-regulated in
+postnatal lymphatic vasculature. While prominent FN-EIIIA fibers were detected
+in mesenteric lymphatic valves at P3 (data not shown), only weak staining was
+observed at P9 (<xref rid="SD1" ref-type="supplementary-material">Figures
+S4J-S4L</xref>) and no fibers were seen in adult valves (see <xref rid="F6" ref-type="fig">Figure 6D</xref>). These expression data suggest that
+FN-EIIIA is primarily involved during embryogenesis and that it has a role in
+the formation and extension of the valve leaflets.</p></sec><sec id="S8"><title>Defective FN-EIIIA matrix assembly and valve leaflet formation in
+<italic toggle="yes">Itga9<sup>-/-</sup></italic> mice</title><p id="P15">We next examined valve morphogenesis in
+<italic toggle="yes">Itga9<sup>-/-</sup></italic> embryos. X-Gal staining of mesenteric
+lymphatic vessels in E16
+<italic toggle="yes">Itga9<sup>-/-</sup>;Vegfr3<sup>lz/</sup></italic><sup>+</sup>
+embryos revealed normal vascular networks (<xref rid="SD1" ref-type="supplementary-material">Figure S5A</xref>). Consistent with the
+reduced number of valves observed in postnatal
+<italic toggle="yes">Itga9<sup>-/-</sup></italic> vessels, at E17 the number of
+<italic toggle="yes">Vegfr3</italic>-lacZ positive constrictions (<xref rid="SD1" ref-type="supplementary-material">Figures S5B-S5E</xref>), that contained
+clusters of cells expressing high levels of Prox1 and FoxC2 was reduced when
+compared to the wild-type (<xref rid="SD1" ref-type="supplementary-material">Figures S5F and S5G</xref> and data not shown). In addition, staining of
+mutant valves for FN-EIIIA revealed only few short fibers (<xref rid="F5" ref-type="fig">Figures 5F-5G</xref>′). Cross section view through
+the valve showed a fibrous matrix in wild-type vessels (<xref rid="F5" ref-type="fig">Figure 5H</xref>). In contrast, the underdeveloped leaflets
+in <italic toggle="yes">Itga9</italic> deficient vessels displayed predominantly a disrupted
+punctuate and discontinuous pattern (<xref rid="F5" ref-type="fig">Figures
+5I</xref>), suggesting that FN-EIIIA failed to assemble into continuous
+fibers. Taken together, the disorganized FN-EIIIA matrix in
+<italic toggle="yes">Itga9</italic> deficient vessels and the subsequent arrest in valve
+development suggest that the defect in valve formation in
+<italic toggle="yes">Itga9<sup>-/-</sup></italic> mice is due to interaction between
+integrin-α9 and its specific ligand (<xref rid="F5" ref-type="fig">Figure 5J</xref>).</p></sec><sec id="S9"><title>Fibronectin-EIIIA is required for normal development of lymphatic valve
+leaflets</title><p id="P16">To test directly if FN-EIIIA, or the other integrin-α9 binding
+ECM molecules, has a function in valve formation, we analyzed the lymphatic
+vessels in <italic toggle="yes">Tnc, Opn</italic> and <italic toggle="yes">Fn-EIIIA</italic> deficient
+mice (<xref rid="R10" ref-type="bibr">Forsberg et al., 1996</xref>; <xref rid="R24" ref-type="bibr">Liaw et al., 1998</xref>; <xref rid="R29" ref-type="bibr">Muro et al., 2003</xref>). Both <italic toggle="yes">Tnc</italic> and
+<italic toggle="yes">Opn</italic> deficient mice displayed apparently normal lymphatic
+vasculature and lymphatic valves (<xref rid="SD1" ref-type="supplementary-material">Figures S6A-S6F</xref>), however, mice
+deficient for <italic toggle="yes">Fn-EIIIA</italic> partially recapitulated the
+integrin-α9 mutant phenotype. Quantification of Laminin-α5
+positive valve structures in mesenteric lymphatic vessels of newborn mice showed
+a 1.5-fold reduction in the number of valves in
+<italic toggle="yes">Fn-EIIIA<sup>-/-</sup></italic> mice when compared to the wild-type
+(p = 0.0026 (Mann-Whitney test), <xref rid="F6" ref-type="fig">Figure
+6A</xref>; <xref rid="SD1" ref-type="supplementary-material">Table
+S1</xref>). Notably, 76% of the valves in
+<italic toggle="yes">Fn-EIIIA<sup>-/-</sup></italic> mice displayed abnormal matrix ring
+appearance or underdeveloped leaflets and disorganized Laminin-α5 matrix
+(<xref rid="F6" ref-type="fig">Figures 6B and 6C</xref>; <xref rid="SD1" ref-type="supplementary-material">Table S1</xref>), similar to the valves
+observed in <italic toggle="yes">Itga9</italic> mutants. In wild-type controls at this
+developmental stage only a minor proportion of immature valves with rudimentary
+leaflets were observed, while in <italic toggle="yes">Itga9<sup>-/-</sup></italic> mice
+approximately 90% of the valves were abnormal (<xref rid="F6" ref-type="fig">Figure 6A</xref>; <xref rid="SD1" ref-type="supplementary-material">Table S1</xref>). While lymphatic valve
+defects were pronounced in the <italic toggle="yes">Fn-EIIIA<sup>-/-</sup></italic> mice
+during early postnatal life, they diminished during progression into adulthood,
+coinciding with when the expression of FN-EIIIA is down-regulated. In the ear
+skin of three weeks old wild-type animal, punctuate staining, but no FN-EIIIA
+fibers, were detected in the lymphatic vessels and the valves (<xref rid="F6" ref-type="fig">Figure 6D</xref>). At the same age the majority of the valves
+in <italic toggle="yes">Fn-EIIIA</italic> mutant animals had apparently normal leaflets when
+compared to the control (<xref rid="F6" ref-type="fig">Figures 6E and
+6F</xref>). The mice also exhibited otherwise normal lymphatic vasculature,
+including vessel diameter and smooth muscle cell coverage (<xref rid="F6" ref-type="fig">Figures 6E and 6F</xref>). However, subcutaneous injection of
+FITC-dextran revealed reflux of dye from the collecting vessels, suggesting mild
+valve defects, and some morphologically abnormal valves in
+<italic toggle="yes">Fn-EIIIA</italic> deficient mice (<xref rid="F6" ref-type="fig">Figures 6G-6I</xref>, 4/4 mice analyzed). These results suggest that
+<italic toggle="yes">Fn-EIIIA</italic> deficiency leads to lymphatic valve defects during
+embryonic and early postnatal life.</p></sec><sec id="S10"><title>Integrin-α9-EIIIA interaction regulates FN assembly in lymphatic
+endothelial cells</title><p id="P17">The defective FN matrix observed in the
+<italic toggle="yes">Itga9<sup>-/-</sup></italic> valves prompted us to examine the
+possibility that integrin-α9-EIIIA interaction contributes to FN
+assembly in lymphatic endothelial cells (LECs), despite the previous findings
+suggesting that the EIIIA domain is dispensable for matrix assembly in
+fibroblasts (<xref rid="R43" ref-type="bibr">Tan et al., 2004</xref>). We
+therefore tested whether primary human LECs are able to assemble their
+endogenously produced FN, which contains the EIIIA domain (<xref rid="F7" ref-type="fig">Figure 7A</xref>). To avoid exogenous plasma FN lacking the
+EIIIA domain, the cells were grown in the presence of FN-depleted serum and
+fibril assembly was assessed by immunofluorescence for the EIIIA. After 24h in
+culture, a fibrillar FN-EIIIA network was detected on the surface of the LECs
+(<xref rid="F7" ref-type="fig">Figure 7A</xref>). Inhibition of
+integrin-α9 function, or integrin-α9-EIIIA interaction, using
+blocking antibodies against integrin-α9 (Y9A2) or EIIIA (IST-9) (<xref rid="F7" ref-type="fig">Figures 7A and 7B</xref>), or a blocking EIIIA
+peptide EDGIHEL (<xref rid="R23" ref-type="bibr">Liao et al., 2002</xref>)(data
+not shown), led to a significant decrease in FN-EIIIA fibril formation.
+<italic toggle="yes">FN-EIIIA</italic> levels were not reduced (<xref rid="F7" ref-type="fig">Figures 7C</xref>), indicating that the defect was not due to
+impaired mRNA synthesis. A similar effect was seen when integrin-α9
+expression was silenced using siRNA oligos (<xref rid="F7" ref-type="fig">Figures 7A-7D</xref>). In contrast, inhibition of RGD-dependent integrin
+interactions, which have been considered essential for FN assembly via
+α5β1 and αv integrins, had no effect (<xref rid="F7" ref-type="fig">Figure 7B</xref>), while siRNA-mediated knock-down of
+integrin-α5 (<xref rid="F7" ref-type="fig">Figure 7D</xref>) partially
+blocked LEC mediated FN-EIIIA assembly (<xref rid="F7" ref-type="fig">Figure 7A
+and 7B</xref>). Deoxycholate (DOC) differential solubilization assay and
+Western blot analysis were further used to analyse the conversion of DOC-soluble
+fibrils into insoluble stable matrix containing high molecular mass FN
+multimers. No DOC-insoluble material was associated with the LECs in which
+integrin-α9 expression or the integrin-α9-EIIIA interaction was
+blocked (<xref rid="F7" ref-type="fig">Figure 7E</xref>, upper panel). Instead,
+similar quantities of DOC-soluble FN matrices were found in all cells (<xref rid="F7" ref-type="fig">Figure 7E</xref>, lower panel). Consistent with the
+immunofluorescence data, silencing of integrin-α5 expression partially
+blocked the formation of DOC-insoluble FN-EIIIA matrix (<xref rid="F7" ref-type="fig">Figure 7E</xref>). These results suggest that although
+integrin-α5 cannot functionally compensate for the loss of
+integrin-α9, it contributes to FN fibrillogenesis in the LECs. However,
+the low levels of integrin-α5 detected in the developing lymphatic
+vessels (<xref rid="F7" ref-type="fig">Figure 7F</xref>) suggest that it does
+not play a major role during valve morphogenesis. The above results demonstrate
+that integrin-α9-EIIIA interaction can directly regulate FN matrix
+assembly, suggesting a functionally indispensable, integrin-specific mechanism
+for FN fibrillogenesis in the LECs.</p></sec></sec><sec sec-type="discussion" id="S11"><title>Discussion</title><p id="P18">The present study establishes integrin-α9 as an essential regulator
+of the morphogenetic process controlling the formation of lymphatic valve leaflets,
+which allow opening and closing of the valve in response to pressure changes. This
+action of the valve is critical for the maintenance of unidirectional lymphatic flow
+and the functionality of the entire lymphatic vascular system, highlighted by the
+lack or insufficient function of lymphatic valves as an underlying cause of human
+lymphedema (<xref rid="R1" ref-type="bibr">Alitalo et al., 2005</xref>).</p><p id="P19">The leaflets of a mature valve consist of a well-defined matrix in between
+two sheets of lymphatic endothelial cells, which forms a strong but elastic
+connective tissue core (<xref rid="F1" ref-type="fig">Figure 1</xref>). During
+embryogenesis, the formation of the lymphatic valve is initiated by upregulation of
+FoxC2 and Prox1 transcription factors in distinct clusters of endothelial cells,
+which define the positions of future valves ((<xref rid="R31" ref-type="bibr">Norrmen et al., 2009</xref>), see <xref rid="F5" ref-type="fig">Figure
+5J</xref>). We found that the development of the valve leaflet is subsequently
+initiated by upregulation of integrin-α9 expression and deposition of ECM
+containing its ligand, the EIIIA splice isoform of FN. The localization of FN-EIIIA
+at the distal tip of the developing valve suggested its function in regulating valve
+leaflet elongation. However, from previous studies the precise function of FN-EIIIA
+has remained elusive. Despite strong expression in the angiogenic blood vessels, no
+vascular phenotypes were reported in <italic toggle="yes">Fn-EIIIA</italic> deficient mice (<xref rid="R3" ref-type="bibr">Astrof et al., 2004</xref>). <italic toggle="yes">In vitro</italic>
+studies demonstrated that inclusion of the EIIIA segment enhanced the ability of FN
+to incorporate into existing matrix (<xref rid="R13" ref-type="bibr">Guan et al.,
+1990</xref>). This suggests that FN-EIIIA may participate in FN fibrillogenesis,
+which is a highly regulated, multistep process initiated by binding of integrins to
+specific sites in the FN molecule (<xref rid="R22" ref-type="bibr">Leiss et al.,
+2008</xref>; <xref rid="R46" ref-type="bibr">Wierzbicka-Patynowski and
+Schwarzbauer, 2003</xref>). Studies in cultured cells have revealed that
+generation of cytoskeletal tension through integrin-mediated cell attachment and
+anchoring via focal adhesions causes a change in integrin-bound FN conformation that
+exposes cryptic self-association sites to allow FN fiber assembly (<xref rid="R22" ref-type="bibr">Leiss et al., 2008</xref>; <xref rid="R46" ref-type="bibr">Wierzbicka-Patynowski and Schwarzbauer, 2003</xref>). The small GTPases,
+including Rho and Rac, play critical roles in cytoskeletal tension generation via
+regulation of actin polymerization and myosin phosphorylation (<xref rid="R6" ref-type="bibr">Dzamba et al., 2009</xref>; <xref rid="R49" ref-type="bibr">Zhong et al., 1998</xref>). <italic toggle="yes">In vivo</italic>, tissue tension and FN
+fibrillogenesis can also be generated by cell-cell adhesion and cohesivity (<xref rid="R6" ref-type="bibr">Dzamba et al., 2009</xref>). The observation that FN
+assembly proceeded normally in <italic toggle="yes">Fn-EIIIA</italic> deficient fibroblasts
+(<xref rid="R43" ref-type="bibr">Tan et al., 2004</xref>) led to the conclusion
+that EIIIA domain is not required for matrix assembly (<xref rid="R22" ref-type="bibr">Leiss et al., 2008</xref>). Instead, fibril formation in these
+cells was most likely mediated through binding of the major FN receptor,
+integrin-α5β1, to the Arg-Gly-Asp (RGD) motif located in the type
+III-10 module of FN (<xref rid="R9" ref-type="bibr">Fogerty et al., 1990</xref>),
+which has been considered the most important mechanism of FN assembly (<xref rid="R22" ref-type="bibr">Leiss et al., 2008</xref>).</p><p id="P20">Surprisingly, we found that in lymphatic endothelial cells the
+integrin-α9-EIIIA interaction directly regulated FN fibril assembly, while
+RGD-dependent interactions appeared dispensable for matrix formation. Although the
+EIIIA domain has not been previously implicated in FN fibrillogenesis, other
+RGD-independent mechanisms for FN assembly have been observed. In fact, the
+requirement of the RGD motif for the formation of a functional fibrillar FN network
+<italic toggle="yes">in vivo</italic> was recently challenged as it was found that mice
+expressing FN with a non-functional RGD motif assembled an apparently normal FN
+matrix (<xref rid="R41" ref-type="bibr">Takahashi et al., 2007</xref>). The assembly
+of the RGD-deficient FN was mediated via integrin-αvβ3 binding to
+NGR sequence in the fifth N-terminal type I module of FN, which is converted to a
+high affinity binding site through deamidation (<xref rid="R41" ref-type="bibr">Takahashi et al., 2007</xref>). In addition, binding of Mn<sup>2+</sup>
+activated integrin-α4β1 to the CS-1 site of the alternatively
+spliced V region was shown to promote FN assembly <italic toggle="yes">in vitro</italic> (<xref rid="R36" ref-type="bibr">Sechler et al., 2000</xref>).</p><p id="P21">Our findings suggest that the defective FN matrix organization in
+<italic toggle="yes">Itga9</italic> mutant valves is a direct consequence of the lack of a
+specific integrin-matrix interaction and contributes to the observed defects in
+valve leaflet formation. In agreement, we found that a large proportion of lymphatic
+valves in neonatal <italic toggle="yes">Fn-EIIIA</italic> deficient mice displayed defective
+leaflets similar to those observed in the <italic toggle="yes">Itga9</italic> mutants. However,
+the absence of chylothorax and only partial recapitulation of the
+<italic toggle="yes">Itga9<sup>-/-</sup></italic> phenotype suggest that the defect in
+lymphatic development in mice deficient of <italic toggle="yes">Itga9</italic> cannot be solely
+explained by a defect in EIIIA-containing FN matrix assembly. In particular, the
+observation that the valve defect in <italic toggle="yes">Fn-EIIIA<sup>-/-</sup></italic> mice
+diminished in adulthood suggests that the animals can eventually overcome the
+requirement of FN-EIIIA, coinciding with when its expression is down-regulated. This
+may imply that during postnatal development other integrin-α9 ligand(s)
+become involved, or that FN fibrillogenesis can be mediated via alternative
+integrin-FN interactions. In agreement, we found that acute deletion of
+integrin-α9 postnatally in mature valves did not lead to degeneration of the
+leaflets within the one-week period investigated, suggesting that once the stable
+matrix fibrils are assembled, integrin-α9-EIIIA interaction is not required
+to maintain ECM organization and valve structure. However, our results do not
+exclude that integrin-α9-EIIIA is required for long-term maintenance of
+valves. Notably, although not normally present in adult tissues, FN-EIIIA is
+upregulated in various pathological situations, such as cancer, atherosclerosis and
+thrombosis (<xref rid="R29" ref-type="bibr">Muro et al., 2003</xref>; <xref rid="R43" ref-type="bibr">Tan et al., 2004</xref>; <xref rid="R44" ref-type="bibr">Villa et al., 2008</xref>). It is therefore likely that it is
+reactivated and plays a role also in adult lymphatic vessels under specific
+circumstances, for example during repair processes or when the vasculature is
+challenged by inflammation.</p><p id="P22">Why is integrin-α9 important specifically in valves? Unlike other
+parts of the lymphatic vasculature, which have thin or absent basement membranes,
+the discrete architecture of the connective tissue of a valve leaflet suggests
+specific requirement for highly regulated mechanism of matrix organization. Indeed,
+the development of a related structure, the heart valve, is known to rely on the
+formation of a highly organized ECM, and consequently, dysregulation of ECM, often
+caused by genetic defects in matrix protein structure or expression, is linked to
+heart valve disease (<xref rid="R2" ref-type="bibr">Armstrong and Bischoff,
+2004</xref>; <xref rid="R25" ref-type="bibr">Lincoln et al., 2006</xref>). FN
+assembly is likely to play a key role in coordinating the formation of complex
+matrices as it has been shown to initiate the organization of other ECM proteins,
+such as collagens, and control the stability of matrix fibers (<xref rid="R18" ref-type="bibr">Kadler et al., 2008</xref>; <xref rid="R39" ref-type="bibr">Sottile and Hocking, 2002</xref>). Our observations demonstrate that
+integrin-α9 is the predominant alpha subunit in lymphatic endothelia.
+Although the major FN receptor, integrin-α5, appeared to contribute to FN
+fibrillogenesis in the LECs <italic toggle="yes">in vitro</italic>, it was not able to
+functionally compensate for the loss of integrin-α9 either in cultured cells
+or <italic toggle="yes">in vivo</italic>. Low expression levels of integrin-α5 in the
+developing valves may provide one explanation for the dependency of these cells on
+alternative FN assembly pathways.</p><p id="P23">FN matrix assembly, as well as integrin-α9 signaling, promote
+adhesion-dependent cell growth and migration (<xref rid="R22" ref-type="bibr">Leiss
+et al., 2008</xref>; <xref rid="R23" ref-type="bibr">Liao et al., 2002</xref>;
+<xref rid="R37" ref-type="bibr">Singh et al., 2008</xref>; <xref rid="R40" ref-type="bibr">Sottile et al., 1998</xref>) and defects in these processes may
+therefore underlie the disrupted valve leaflet formation in
+<italic toggle="yes">Itga9<sup>-/-</sup></italic> and
+<italic toggle="yes">Fn-EIIIA<sup>-/-</sup></italic> mice. Although we cannot exclude a
+contribution of integrin-α9-mediated adhesion during the early events of
+valve formation, the observation that acute deletion of integrin-α9 in
+postnatal valves did not lead to cell detachment and degeneration of the valves
+argue against a role of integrin-α9 in mediating stable adhesion of valve
+endothelial cells <italic toggle="yes">in vivo</italic>. Furthermore, an <italic toggle="yes">in vivo</italic>
+BrdU incorporation assay showed that the valve endothelial cells expressing high
+levels of FoxC2, Prox1 and integrin-α9 do not proliferate during leaflet
+formation (E.B. and T.M., unpublished). These results suggest that endothelial cell
+adhesion and proliferation are unlikely to be controlled by integrin-α9 or
+involved in valve leaflet formation, respectively. Finally, the observed defect in
+valve leaflet elongation may be caused by failure in morphogenetic cell movements,
+which were shown to rely on proper organization of FN matrices in other
+developmental processes (<xref rid="R6" ref-type="bibr">Dzamba et al., 2009</xref>;
+<xref rid="R35" ref-type="bibr">Rozario et al., 2009</xref>). Therefore, we
+propose that the key function of the integrin-α9-EIIIA interaction is to
+provide an integrin-specific mechanism of FN matrix assembly and thereby coordinate
+ECM organization to allow formation of a leaflet of necessary length and strength,
+capable of supporting valve function.</p><p id="P24">In summary, we demonstrate that integrin-α9 and its ligand,
+FN-EIIIA, play specific roles in lymphatic valve development and remodeling into
+functional leaflets. To our knowledge, the only other mouse mutants identified
+to-date, which show a failure of valve formation, show additional lymphatic defects;
+mice lacking the C-terminal PDZ binding domain of ephrinB2 display vessel
+hyperplasia (<xref rid="R27" ref-type="bibr">Makinen et al., 2005</xref>) while
+<italic toggle="yes">FoxC2</italic> deficient mice have patterning defects (<xref rid="R31" ref-type="bibr">Norrmen et al., 2009</xref>; <xref rid="R33" ref-type="bibr">Petrova et al., 2004</xref>). The specific valve defects observed in the
+<italic toggle="yes">Itga9</italic> mutant mice therefore reveal a previously undescribed
+morphogenetic process and provide potential insights into the development of valves
+in other parts of the vascular system, such as in the veins and the heart, which are
+likely to be regulated by similar molecular mechanisms. Lack of integrin-α9
+signaling in mice results ultimately in chylothorax and postnatal death (<xref rid="R14" ref-type="bibr">Huang et al., 2000</xref>). Recent identification of
+mutations in the <italic toggle="yes">ITGA9</italic> gene in fetuses with congenital chylothorax
+(<xref rid="R26" ref-type="bibr">Ma et al., 2008</xref>) suggests conservation
+of the signaling pathway from mice to human, making integrin-α9 a candidate
+gene for primary lymphedema caused by valve defects.</p></sec><sec sec-type="methods" id="S12"><title>Experimental Procedures</title><sec id="S13"><title>Antibodies</title><p id="P25">The antibodies were rat antibodies to mouse PECAM-1 (MEC3.1, BD
+Biosciences), Tenascin-C (MTn-12, Abcam) and FoxC2 (<xref rid="R33" ref-type="bibr">Petrova et al., 2004</xref>); rabbit antibodies to mouse
+Fibronectin (Millipore), Laminin-α5 (<xref rid="R34" ref-type="bibr">Ringelmann et al., 1999</xref>) and LYVE-1 (Reliatch); rabbit antibodies to
+human Prox1 (Reliatech) and Fibronectin (Abcam); mouse antibodies to human
+cellular Fibronectin recognizing the EIIIA domain ((<xref rid="R23" ref-type="bibr">Liao et al., 2002</xref>), FN-3E2, Sigma and IST-9, Abcam),
+hamster antibody to mouse PECAM-1, goat antibodies to mouse integrin-α9
+and Osteopontin (R&amp;D Systems) and Cy3-conjugated mouse antibody against
+α-smooth muscle actin (Sigma). The monoclonal hamster antibody to mouse
+Podoplanin (8.1.1) developed by Andrew Farr was obtained from the Developmental
+Studies Hybridoma Bank. Secondary antibodies conjugated to Cy2, Cy3 or Cy5 were
+obtained from Jackson ImmunoResearch.</p></sec><sec id="S14"><title>Mouse lines</title><p id="P26"><italic toggle="yes">Itga9<sup>-/-</sup></italic> (<xref rid="R14" ref-type="bibr">Huang et al., 2000</xref>), <italic toggle="yes">Itga9<sup>lx</sup></italic> (<xref rid="R37" ref-type="bibr">Singh et al., 2008</xref>),
+<italic toggle="yes">Vegfr3<sup>lz/</sup></italic><sup>+</sup> (<xref rid="R5" ref-type="bibr">Dumont et al., 1998</xref>),
+<italic toggle="yes">Fn-EIIIA<sup>-/-</sup></italic> (<xref rid="R29" ref-type="bibr">Muro et al., 2003</xref>), <italic toggle="yes">Tnc<sup>-/-</sup></italic> (<xref rid="R10" ref-type="bibr">Forsberg et al., 1996</xref>),
+<italic toggle="yes">Opn<sup>-/-</sup></italic> (<xref rid="R24" ref-type="bibr">Liaw
+et al., 1998</xref>), <italic toggle="yes">Tie2-Cre</italic> (<xref rid="R20" ref-type="bibr">Koni et al., 2001</xref>) and <italic toggle="yes">Rosa26R</italic>
+(<xref rid="R38" ref-type="bibr">Soriano, 1999</xref>) mice have been
+described previously. <italic toggle="yes">VE-cadherin-CreER<sup>T2</sup></italic> mice will
+be described elsewhere (R. Adams, unpublished). For the induction of Cre
+mediated recombination in newborn
+<italic toggle="yes">VE-cadherin-CreER<sup>T2</sup></italic> mice, 4-hydroxytamoxifen
+(4-OHT; 2 μl of 10 mg/ml dissolved in ethanol) was injected i.p. at P1
+and P2 and the vessels were analyzed at P7-8. All animal experiments were
+performed in accordance with UK Home Office and institutional guidelines.</p></sec><sec id="S15"><title>Immunostaining and X-Gal staining</title><p id="P27">For whole-mount staining, the tissue was fixed in 4%
+paraformaldehyde (PFA), permeabilized in 0.3% Triton-X100 in PBS (PBSTx)
+and blocked in 5% milk or serum. Primary antibodies were added to the
+blocking buffer and incubated with the tissue overnight at 4°C. After
+washes in PBSTx, the tissue was incubated with fluorochrome-conjugated secondary
+antibodies in the blocking buffer for 2h at RT, followed by washing in PBSTx and
+mounting in Mowiol. The samples were analyzed using Zeiss LSM 510 laser scanning
+confocal microscope. All confocal images, except <xref rid="F5" ref-type="fig">Figures 5H, 5I</xref> and <xref rid="SD1" ref-type="supplementary-material">S4A-S4I</xref>, represent 2D projections of Z-stacks. Alternatively,
+biotin-conjugated secondary antibodies and ABC staining kit (Vector
+Laboratories) were used and the bound antibodies were visualized using
+diaminobenzidine (DAB) as a substrate. For histological analyses, skin biopsies
+were fixed in 4% PFA overnight, dehydrated and embedded in paraffin.
+Sections (5μm) were stained after heat-induced epitope retrieval using
+Tyramide Signal Amplification kit (TSA, NEN Life Sciences) and
+3-Amino-9-Ethylcarbazole (AEC) as a substrate. For the visualization of
+lymphatic vessels in <italic toggle="yes">Vegfr3<sup>lz/</sup></italic><sup>+</sup>
+reporter mice, the tissues were fixed with 0.2% glutaraldehyde and
+stained by the β-galactosidase substrate X-gal (Promega).</p></sec><sec id="S16"><title>Visualization of lymphatic vessel function</title><p id="P28">FITC-dextran (Sigma, 8 mg/mL in PBS) or FITC-conjugated
+<italic toggle="yes">Lycopersicum Esculentum</italic> lectin (Vector Laboratories, 1
+mg/ml in PBS) was injected subcutaneously into an anesthetized mouse and the
+lymphatic vessels were analyzed by fluorescence microscopy.</p></sec><sec id="S17"><title>Electron microscopy</title><p id="P29">The intestines were dissected from P5 mice and immediately fixed in
+4% PFA/2.5% glutaraldehyde in 0.1M phosphate buffer pH 7.4. The
+samples were post fixed in reduced osmium tetroxide for 1 hour followed by
+1% tannic acid in 0.05M sodium cacodylate for 45 minutes. Samples were
+then dehydrated through a graded series of ethanol and embedded in Araldite
+(Agar Scientific). Semi-thin sections were cut on a UCT ultramicrotome (Leica
+Microsystems UK), stained with 1% Toluidine Blue in 1% Borax and
+viewed under a III RS light microscope (Carl Zeiss UK) to locate the area of
+interest. Ultra-thin sections were cut and stained with lead citrate before
+being examined in a JEOL 1010 microscope and imaged with a Bioscan CCD (Gatan
+UK).</p></sec><sec id="S18"><title>Cell culture</title><p id="P30">Human lymphatic endothelial cells (LEC) were isolated from primary
+dermal microvascular endothelial cell cultures (PromoCell) using rat antibody to
+human Podoplanin (NZ-1, Angiobio) and Mini/MidiMACS magnetic separation system
+(Miltenyi Biotech), as previously described (<xref rid="R28" ref-type="bibr">Makinen et al., 2001</xref>). The cells were cultured on fibronectin
+(Sigma) coated plates in the presence of 10 ng/ml VEGF-C (R&amp;D Systems)
+and used at passages 4-6. For siRNA mediated knock-down, LECs were transfected
+twice during 48h using calcium phosphate (Dharmacon) in DMEM, supplemented with
+20% FBS, followed by recovery in Endothelial Cell Medium (PromoCell) for
+24h before the cells were used for experiments. ON-TARGETplus siRNAs were
+obtained from Dharmacon. The following targeting sequences were used:
+<italic toggle="yes">ITGA9</italic>_1: GAAGAAAGUCGUACUAUAG, <italic toggle="yes">ITGA9</italic>_2
+GUGCAGAGAUGUUUCAUGU and <italic toggle="yes">ITGA5</italic>: UCACAUCGCUCUCAACUUC. Control
+transfections were carried out using ON-TARGETplus siControl Non-targeting siRNA
+from Dharmacon.</p></sec><sec id="S19"><title>Analysis of FN fibril assembly</title><p id="P31">LECs in 5% FN-depleted serum were plated on glass coverslips.
+Similar results were obtained when the coverslips were coated with 0.2%
+gelatin (no exogenous FN) or with extracellular matrices extracted from
+<italic toggle="yes">FN-EIIIA</italic><sup>+</sup><italic toggle="yes"><sup>/</sup></italic><sup>+</sup>
+(<xref rid="R29" ref-type="bibr">Muro et al., 2003</xref>) embryonic
+fibroblasts (containing small quantities of exogenous FN, all of which contains
+the EIIIA domain). The function-blocking antibodies (mouse anti-human
+integrin-α9 (Y9A2; Millipore) and EIIIA (IST-9; Abcam)) and the blocking
+peptides were used at a concentration of 10 μg/ml. 24 hours after
+plating the cells were fixed in 4% PFA and FN fibril assembly was
+examined using immunofluorescence. Images from five randomly chosen view fields
+from two independent experiments were acquired. Image processing and analysis
+was performed using MetaMorph Imaging software (Molecular Devices). Scaled
+images were thresholded and filtered so that only FN-EIIIA-specific fibers
+greater than 4 pixels (1.8 μm) were recorded. The total fiber length per
+cell was calculated by dividing the total value recorded with the number of
+cells present in each image. Isolation of DOC-soluble and – insoluble
+matrix was done as previously described (<xref rid="R45" ref-type="bibr">Wierzbicka-Patynowski et al., 2004</xref>). Equal amounts of total protein
+were separated by non-reducing 5% SDS-PAGE, transferred to
+nitrocellulose and probed with anti-EIIIA antibody (FN-3E2).</p></sec><sec id="S20"><title>Western blot analysis</title><p id="P32">The cells were lysed in Triton-X100 lysis buffer (50 mM Tris pH 7.5, 120
+mM NaCl, 10% glycerol, 1% TritonX-100) supplemented with
+Complete Protease Inhibitors (Roche). Lysates were clarified by centrifugation
+and subjected to immunoprecipitation and/or Western blot analysis using standard
+protocols. The antibodies were mouse antibody to human integrin-α5
+(GBS5; Millipore) and human integrin-α9 (Y9A2; Millipore, for IP),
+chicken antibody to human integrin-α9 (GenWay, for WB) and mouse
+antibody to human α-tubulin (TAT-1). The bound antibodies were detected
+using HRP-conjugated secondary antibodies (Jackson ImmunoResearch) and ECL
+chemiluminescence.</p></sec><sec id="S21"><title>Relative quantitative PCR</title><p id="P33">RNA from LECs was reverse transcribed using random hexamers and an avian
+myeloblastosis virus reverse transcriptase (Promega). cDNA was amplified by
+quantitative real-time PCR (ABI 7900HT) using SYBR Green PCR master mix reagent
+(Qiagen). Each primer was used at a concentration of 0.5 μM. Cycling
+conditions were as follows: step 1, 15 min at 95°C; step 2, 20 s at
+94°C; step 3, 20 s at 60°C; step 4, 20 s at 72°C, with
+repeat from step 2 to step 4 35 times. Data from the reaction were collected and
+analyzed by the complementary computer software. Relative quantitations of gene
+expression were normalized to the endogenous control (<italic toggle="yes">GAPDH</italic>).
+The primers were <italic toggle="yes">ITGA9</italic>:
+5′-CGGAATCATGTCTCCAACCT-3′ and
+5′-TCTCTGCACCACCAGATGAG-3′, <italic toggle="yes">EIIIA</italic>:
+5′-TTGATCGCCCTAAAGGACTG-3′ and
+5′-ACCATCAGGTGCAGGGAATA-3′ and <italic toggle="yes">GAPDH</italic>:
+5′-GAAGATGGTGATGGGATTTC-3′ and
+5′-GAAGGTGAAGGTCGGAGT-3′.</p></sec><sec id="S22"><title>Statistical analysis</title><p id="P34">P values were calculated using the non-parametric Mann-Whitney test,
+unpaired two-tailed Student T-test or χ<sup>2</sup> test as
+indicated.</p></sec></sec><sec sec-type="supplementary-material" id="S23"><title>Supplementary Material</title><supplementary-material content-type="local-data" id="SD1" position="float" orientation="portrait"><label>01</label><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="NIHMS141065-supplement-01.doc" mimetype="application" mime-subtype="msword" id="d37e1268" position="anchor" orientation="portrait"/></supplementary-material></sec></body><back><ack id="S25"><p>We are grateful to K. Alitalo for the
+<italic toggle="yes">Vegfr3<sup>lz/</sup></italic><sup>+</sup> mice and R.
+Fässler, A. Faissner and T. Czopka for the <italic toggle="yes">Tnc</italic> mice and
+tissues. We thank I. Rosewell for help with the establishment of mouse colonies; H.
+Chapman, A. Horwood, E. Murray, S. Lighterness and C. Watkins for animal husbandry;
+and E. Nye for assistance with the histological analyses. We would like to thank M.
+Way, N. Hogg, M. Graupera and I. Ferby for helpful discussions and critical comments
+on the manuscript. This work has been supported by Cancer Research UK (E.B., S.X.,
+A.W., R.A., T.M.) and by grant HL64353 from the National Heart Lung and Blood
+Institute (USA) (D.S.). The authors declare no financial conflict of interest.</p></ack><fn-group><fn id="FN2" fn-type="con"><p>Author contributions: E.B. and T.M. designed research; E.B., S.X., C.C. and A.W.
+performed research; N.M., L.S., R.A., A.M. and D.S. contributed reagents; E.B.,
+S.X., C.C., A.W. and T.M. analysed data; and E.B. and T.M. wrote the paper.</p></fn><fn id="FN3"><p content-type="publisher-disclaimer">This is a PDF file of an unedited manuscript
+that has been accepted for publication. As a service to our customers we are
+providing this early version of the manuscript. The manuscript will undergo
+copyediting, typesetting, and review of the resulting proof before it is
+published in its final citable form. Please note that during the production
+process errors may be discovered which could affect the content, and all legal
+disclaimers that apply to the journal pertain.</p></fn></fn-group><ref-list><ref id="R1"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Alitalo</surname><given-names>K</given-names></name><name name-style="western"><surname>Tammela</surname><given-names>T</given-names></name><name name-style="western"><surname>Petrova</surname><given-names>TV</given-names></name></person-group><year>2005</year><article-title>Lymphangiogenesis in development
+and human
+disease</article-title><source>Nature</source><volume>438</volume><fpage>946</fpage><lpage>953</lpage><pub-id pub-id-type="pmid">16355212</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nature04480</pub-id></element-citation></ref><ref id="R2"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Armstrong</surname><given-names>EJ</given-names></name><name name-style="western"><surname>Bischoff</surname><given-names>J</given-names></name></person-group><year>2004</year><article-title>Heart valve development:
+endothelial cell signaling and differentiation</article-title><source>Circ
+Res</source><volume>95</volume><fpage>459</fpage><lpage>470</lpage><pub-id pub-id-type="pmid">15345668</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/01.RES.0000141146.95728.da</pub-id><pub-id pub-id-type="pmcid">PMC2810618</pub-id></element-citation></ref><ref id="R3"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Astrof</surname><given-names>S</given-names></name><name name-style="western"><surname>Crowley</surname><given-names>D</given-names></name><name name-style="western"><surname>George</surname><given-names>EL</given-names></name><name name-style="western"><surname>Fukuda</surname><given-names>T</given-names></name><name name-style="western"><surname>Sekiguchi</surname><given-names>K</given-names></name><name name-style="western"><surname>Hanahan</surname><given-names>D</given-names></name><name name-style="western"><surname>Hynes</surname><given-names>RO</given-names></name></person-group><year>2004</year><article-title>Direct test of potential roles of
+EIIIA and EIIIB alternatively spliced segments of fibronectin in
+physiological and tumor angiogenesis</article-title><source>Mol Cell
+Biol</source><volume>24</volume><fpage>8662</fpage><lpage>8670</lpage><pub-id pub-id-type="pmid">15367684</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1128/MCB.24.19.8662-8670.2004</pub-id><pub-id pub-id-type="pmcid">PMC516752</pub-id></element-citation></ref><ref id="R4"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Avraamides</surname><given-names>CJ</given-names></name><name name-style="western"><surname>Garmy-Susini</surname><given-names>B</given-names></name><name name-style="western"><surname>Varner</surname><given-names>JA</given-names></name></person-group><year>2008</year><article-title>Integrins in angiogenesis and
+lymphangiogenesis</article-title><source>Nat Rev
+Cancer</source><volume>8</volume><fpage>604</fpage><lpage>617</lpage><pub-id pub-id-type="pmid">18497750</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nrc2353</pub-id><pub-id pub-id-type="pmcid">PMC2577722</pub-id></element-citation></ref><ref id="R5"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Dumont</surname><given-names>DJ</given-names></name><name name-style="western"><surname>Jussila</surname><given-names>L</given-names></name><name name-style="western"><surname>Taipale</surname><given-names>J</given-names></name><name name-style="western"><surname>Lymboussaki</surname><given-names>A</given-names></name><name name-style="western"><surname>Mustonen</surname><given-names>T</given-names></name><name name-style="western"><surname>Pajusola</surname><given-names>K</given-names></name><name name-style="western"><surname>Breitman</surname><given-names>M</given-names></name><name name-style="western"><surname>Alitalo</surname><given-names>K</given-names></name></person-group><year>1998</year><article-title>Cardiovascular failure in mouse
+embryos deficient in VEGF
+receptor-3</article-title><source>Science</source><volume>282</volume><fpage>946</fpage><lpage>949</lpage><pub-id pub-id-type="pmid">9794766</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/science.282.5390.946</pub-id></element-citation></ref><ref id="R6"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Dzamba</surname><given-names>BJ</given-names></name><name name-style="western"><surname>Jakab</surname><given-names>KR</given-names></name><name name-style="western"><surname>Marsden</surname><given-names>M</given-names></name><name name-style="western"><surname>Schwartz</surname><given-names>MA</given-names></name><name name-style="western"><surname>DeSimone</surname><given-names>DW</given-names></name></person-group><year>2009</year><article-title>Cadherin adhesion, tissue
+tension, and noncanonical Wnt signaling regulate fibronectin matrix
+organization</article-title><source>Dev
+Cell</source><volume>16</volume><fpage>421</fpage><lpage>432</lpage><pub-id pub-id-type="pmid">19289087</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.devcel.2009.01.008</pub-id><pub-id pub-id-type="pmcid">PMC2682918</pub-id></element-citation></ref><ref id="R7"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Ferrell</surname><given-names>RE</given-names></name><name name-style="western"><surname>Levinson</surname><given-names>KL</given-names></name><name name-style="western"><surname>Esman</surname><given-names>JH</given-names></name><name name-style="western"><surname>Kimak</surname><given-names>MA</given-names></name><name name-style="western"><surname>Lawrence</surname><given-names>EC</given-names></name><name name-style="western"><surname>Barmada</surname><given-names>MM</given-names></name><name name-style="western"><surname>Finegold</surname><given-names>DN</given-names></name></person-group><year>1998</year><article-title>Hereditary lymphedema: evidence
+for linkage and genetic heterogeneity</article-title><source>Hum Mol
+Genet</source><volume>7</volume><fpage>2073</fpage><lpage>2078</lpage><pub-id pub-id-type="pmid">9817924</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/hmg/7.13.2073</pub-id></element-citation></ref><ref id="R8"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Finegold</surname><given-names>DN</given-names></name><name name-style="western"><surname>Kimak</surname><given-names>MA</given-names></name><name name-style="western"><surname>Lawrence</surname><given-names>EC</given-names></name><name name-style="western"><surname>Levinson</surname><given-names>KL</given-names></name><name name-style="western"><surname>Cherniske</surname><given-names>EM</given-names></name><name name-style="western"><surname>Pober</surname><given-names>BR</given-names></name><name name-style="western"><surname>Dunlap</surname><given-names>JW</given-names></name><name name-style="western"><surname>Ferrell</surname><given-names>RE</given-names></name></person-group><year>2001</year><article-title>Truncating mutations in FOXC2
+cause multiple lymphedema syndromes</article-title><source>Hum Mol
+Genet</source><volume>10</volume><fpage>1185</fpage><lpage>1189</lpage><pub-id pub-id-type="pmid">11371511</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/hmg/10.11.1185</pub-id></element-citation></ref><ref id="R9"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Fogerty</surname><given-names>FJ</given-names></name><name name-style="western"><surname>Akiyama</surname><given-names>SK</given-names></name><name name-style="western"><surname>Yamada</surname><given-names>KM</given-names></name><name name-style="western"><surname>Mosher</surname><given-names>DF</given-names></name></person-group><year>1990</year><article-title>Inhibition of binding of
+fibronectin to matrix assembly sites by anti-integrin (alpha 5 beta 1)
+antibodies</article-title><source>J Cell
+Biol</source><volume>111</volume><fpage>699</fpage><lpage>708</lpage><pub-id pub-id-type="pmid">2380248</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.111.2.699</pub-id><pub-id pub-id-type="pmcid">PMC2116209</pub-id></element-citation></ref><ref id="R10"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Forsberg</surname><given-names>E</given-names></name><name name-style="western"><surname>Hirsch</surname><given-names>E</given-names></name><name name-style="western"><surname>Frohlich</surname><given-names>L</given-names></name><name name-style="western"><surname>Meyer</surname><given-names>M</given-names></name><name name-style="western"><surname>Ekblom</surname><given-names>P</given-names></name><name name-style="western"><surname>Aszodi</surname><given-names>A</given-names></name><name name-style="western"><surname>Werner</surname><given-names>S</given-names></name><name name-style="western"><surname>Fassler</surname><given-names>R</given-names></name></person-group><year>1996</year><article-title>Skin wounds and severed nerves
+heal normally in mice lacking tenascin-C</article-title><source>Proc Natl
+Acad Sci U S
+A</source><volume>93</volume><fpage>6594</fpage><lpage>6599</lpage><pub-id pub-id-type="pmid">8692862</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.93.13.6594</pub-id><pub-id pub-id-type="pmcid">PMC39070</pub-id></element-citation></ref><ref id="R11"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Francois</surname><given-names>M</given-names></name><name name-style="western"><surname>Caprini</surname><given-names>A</given-names></name><name name-style="western"><surname>Hosking</surname><given-names>B</given-names></name><name name-style="western"><surname>Orsenigo</surname><given-names>F</given-names></name><name name-style="western"><surname>Wilhelm</surname><given-names>D</given-names></name><name name-style="western"><surname>Browne</surname><given-names>C</given-names></name><name name-style="western"><surname>Paavonen</surname><given-names>K</given-names></name><name name-style="western"><surname>Karnezis</surname><given-names>T</given-names></name><name name-style="western"><surname>Shayan</surname><given-names>R</given-names></name><name name-style="western"><surname>Downes</surname><given-names>M</given-names></name><etal/></person-group><year>2008</year><article-title>Sox18 induces development of the
+lymphatic vasculature in
+mice</article-title><source>Nature</source><volume>456</volume><fpage>643</fpage><lpage>647</lpage><pub-id pub-id-type="pmid">18931657</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nature07391</pub-id></element-citation></ref><ref id="R12"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Geiger</surname><given-names>B</given-names></name><name name-style="western"><surname>Bershadsky</surname><given-names>A</given-names></name><name name-style="western"><surname>Pankov</surname><given-names>R</given-names></name><name name-style="western"><surname>Yamada</surname><given-names>KM</given-names></name></person-group><year>2001</year><article-title>Transmembrane crosstalk between
+the extracellular matrix--cytoskeleton crosstalk</article-title><source>Nat
+Rev Mol Cell
+Biol</source><volume>2</volume><fpage>793</fpage><lpage>805</lpage><pub-id pub-id-type="pmid">11715046</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/35099066</pub-id></element-citation></ref><ref id="R13"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Guan</surname><given-names>JL</given-names></name><name name-style="western"><surname>Trevithick</surname><given-names>JE</given-names></name><name name-style="western"><surname>Hynes</surname><given-names>RO</given-names></name></person-group><year>1990</year><article-title>Retroviral expression of
+alternatively spliced forms of rat fibronectin</article-title><source>J Cell
+Biol</source><volume>110</volume><fpage>833</fpage><lpage>847</lpage><pub-id pub-id-type="pmid">2307710</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.110.3.833</pub-id><pub-id pub-id-type="pmcid">PMC2116055</pub-id></element-citation></ref><ref id="R14"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Huang</surname><given-names>XZ</given-names></name><name name-style="western"><surname>Wu</surname><given-names>JF</given-names></name><name name-style="western"><surname>Ferrando</surname><given-names>R</given-names></name><name name-style="western"><surname>Lee</surname><given-names>JH</given-names></name><name name-style="western"><surname>Wang</surname><given-names>YL</given-names></name><name name-style="western"><surname>Farese</surname><given-names>RV</given-names><suffix>Jr</suffix></name><name name-style="western"><surname>Sheppard</surname><given-names>D</given-names></name></person-group><year>2000</year><article-title>Fatal bilateral chylothorax in
+mice lacking the integrin alpha9beta1</article-title><source>Mol Cell
+Biol</source><volume>20</volume><fpage>5208</fpage><lpage>5215</lpage><pub-id pub-id-type="pmid">10866676</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1128/mcb.20.14.5208-5215.2000</pub-id><pub-id pub-id-type="pmcid">PMC85969</pub-id></element-citation></ref><ref id="R15"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Hynes</surname><given-names>RO</given-names></name></person-group><year>2007</year><article-title>Cell-matrix adhesion in vascular
+development</article-title><source>J Thromb
+Haemost</source><volume>5</volume><issue>1</issue><fpage>32</fpage><lpage>40</lpage><pub-id pub-id-type="pmid">17635706</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/j.1538-7836.2007.02569.x</pub-id></element-citation></ref><ref id="R16"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Irrthum</surname><given-names>A</given-names></name><name name-style="western"><surname>Devriendt</surname><given-names>K</given-names></name><name name-style="western"><surname>Chitayat</surname><given-names>D</given-names></name><name name-style="western"><surname>Matthijs</surname><given-names>G</given-names></name><name name-style="western"><surname>Glade</surname><given-names>C</given-names></name><name name-style="western"><surname>Steijlen</surname><given-names>PM</given-names></name><name name-style="western"><surname>Fryns</surname><given-names>JP</given-names></name><name name-style="western"><surname>Van Steensel</surname><given-names>MA</given-names></name><name name-style="western"><surname>Vikkula</surname><given-names>M</given-names></name></person-group><year>2003</year><article-title>Mutations in the transcription
+factor gene SOX18 underlie recessive and dominant forms of
+hypotrichosis-lymphedema-telangiectasia</article-title><source>Am J Hum
+Genet</source><volume>72</volume><fpage>1470</fpage><lpage>1478</lpage><pub-id pub-id-type="pmid">12740761</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1086/375614</pub-id><pub-id pub-id-type="pmcid">PMC1180307</pub-id></element-citation></ref><ref id="R17"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Jurisic</surname><given-names>G</given-names></name><name name-style="western"><surname>Detmar</surname><given-names>M</given-names></name></person-group><year>2009</year><article-title>Lymphatic endothelium in health
+and disease</article-title><source>Cell Tissue
+Res</source><volume>335</volume><fpage>97</fpage><lpage>108</lpage><pub-id pub-id-type="pmid">18648856</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s00441-008-0644-2</pub-id></element-citation></ref><ref id="R18"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Kadler</surname><given-names>KE</given-names></name><name name-style="western"><surname>Hill</surname><given-names>A</given-names></name><name name-style="western"><surname>Canty-Laird</surname><given-names>EG</given-names></name></person-group><year>2008</year><article-title>Collagen fibrillogenesis:
+fibronectin, integrins, and minor collagens as organizers and
+nucleators</article-title><source>Curr Opin Cell
+Biol</source><volume>20</volume><fpage>495</fpage><lpage>501</lpage><pub-id pub-id-type="pmid">18640274</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.ceb.2008.06.008</pub-id><pub-id pub-id-type="pmcid">PMC2577133</pub-id></element-citation></ref><ref id="R19"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Karkkainen</surname><given-names>MJ</given-names></name><name name-style="western"><surname>Saaristo</surname><given-names>A</given-names></name><name name-style="western"><surname>Jussila</surname><given-names>L</given-names></name><name name-style="western"><surname>Karila</surname><given-names>KA</given-names></name><name name-style="western"><surname>Lawrence</surname><given-names>EC</given-names></name><name name-style="western"><surname>Pajusola</surname><given-names>K</given-names></name><name name-style="western"><surname>Bueler</surname><given-names>H</given-names></name><name name-style="western"><surname>Eichmann</surname><given-names>A</given-names></name><name name-style="western"><surname>Kauppinen</surname><given-names>R</given-names></name><name name-style="western"><surname>Kettunen</surname><given-names>MI</given-names></name><etal/></person-group><year>2001</year><article-title>A model for gene therapy of human
+hereditary lymphedema</article-title><source>Proc Natl Acad Sci U S
+A</source><volume>98</volume><fpage>12677</fpage><lpage>12682</lpage><pub-id pub-id-type="pmid">11592985</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.221449198</pub-id><pub-id pub-id-type="pmcid">PMC60113</pub-id></element-citation></ref><ref id="R20"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Koni</surname><given-names>PA</given-names></name><name name-style="western"><surname>Joshi</surname><given-names>SK</given-names></name><name name-style="western"><surname>Temann</surname><given-names>UA</given-names></name><name name-style="western"><surname>Olson</surname><given-names>D</given-names></name><name name-style="western"><surname>Burkly</surname><given-names>L</given-names></name><name name-style="western"><surname>Flavell</surname><given-names>RA</given-names></name></person-group><year>2001</year><article-title>Conditional vascular cell
+adhesion molecule 1 deletion in mice: impaired lymphocyte migration to bone
+marrow</article-title><source>J Exp
+Med</source><volume>193</volume><fpage>741</fpage><lpage>754</lpage><pub-id pub-id-type="pmid">11257140</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1084/jem.193.6.741</pub-id><pub-id pub-id-type="pmcid">PMC2193418</pub-id></element-citation></ref><ref id="R21"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Lauweryns</surname><given-names>JM</given-names></name><name name-style="western"><surname>Boussauw</surname><given-names>L</given-names></name></person-group><year>1973</year><article-title>The ultrastructure of lymphatic
+valves in the adult rabbit lung</article-title><source>Z Zellforsch Mikrosk
+Anat</source><volume>143</volume><fpage>149</fpage><lpage>168</lpage><pub-id pub-id-type="pmid">4761509</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/BF00307476</pub-id></element-citation></ref><ref id="R22"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Leiss</surname><given-names>M</given-names></name><name name-style="western"><surname>Beckmann</surname><given-names>K</given-names></name><name name-style="western"><surname>Giros</surname><given-names>A</given-names></name><name name-style="western"><surname>Costell</surname><given-names>M</given-names></name><name name-style="western"><surname>Fassler</surname><given-names>R</given-names></name></person-group><year>2008</year><article-title>The role of integrin binding
+sites in fibronectin matrix assembly in vivo</article-title><source>Curr
+Opin Cell
+Biol</source><volume>20</volume><fpage>502</fpage><lpage>507</lpage><pub-id pub-id-type="pmid">18586094</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.ceb.2008.06.001</pub-id></element-citation></ref><ref id="R23"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Liao</surname><given-names>YF</given-names></name><name name-style="western"><surname>Gotwals</surname><given-names>PJ</given-names></name><name name-style="western"><surname>Koteliansky</surname><given-names>VE</given-names></name><name name-style="western"><surname>Sheppard</surname><given-names>D</given-names></name><name name-style="western"><surname>Van De Water</surname><given-names>L</given-names></name></person-group><year>2002</year><article-title>The EIIIA segment of fibronectin
+is a ligand for integrins alpha 9beta 1 and alpha 4beta 1 providing a novel
+mechanism for regulating cell adhesion by alternative
+splicing</article-title><source>J Biol
+Chem</source><volume>277</volume><fpage>14467</fpage><lpage>14474</lpage><pub-id pub-id-type="pmid">11839764</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1074/jbc.M201100200</pub-id></element-citation></ref><ref id="R24"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Liaw</surname><given-names>L</given-names></name><name name-style="western"><surname>Birk</surname><given-names>DE</given-names></name><name name-style="western"><surname>Ballas</surname><given-names>CB</given-names></name><name name-style="western"><surname>Whitsitt</surname><given-names>JS</given-names></name><name name-style="western"><surname>Davidson</surname><given-names>JM</given-names></name><name name-style="western"><surname>Hogan</surname><given-names>BL</given-names></name></person-group><year>1998</year><article-title>Altered wound healing in mice
+lacking a functional osteopontin gene (spp1)</article-title><source>J Clin
+Invest</source><volume>101</volume><fpage>1468</fpage><lpage>1478</lpage><pub-id pub-id-type="pmid">9525990</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1172/JCI1122</pub-id><pub-id pub-id-type="pmcid">PMC508725</pub-id></element-citation></ref><ref id="R25"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Lincoln</surname><given-names>J</given-names></name><name name-style="western"><surname>Lange</surname><given-names>AW</given-names></name><name name-style="western"><surname>Yutzey</surname><given-names>KE</given-names></name></person-group><year>2006</year><article-title>Hearts and bones: shared
+regulatory mechanisms in heart valve, cartilage, tendon, and bone
+development</article-title><source>Dev
+Biol</source><volume>294</volume><fpage>292</fpage><lpage>302</lpage><pub-id pub-id-type="pmid">16643886</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.ydbio.2006.03.027</pub-id></element-citation></ref><ref id="R26"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Ma</surname><given-names>GC</given-names></name><name name-style="western"><surname>Liu</surname><given-names>CS</given-names></name><name name-style="western"><surname>Chang</surname><given-names>SP</given-names></name><name name-style="western"><surname>Yeh</surname><given-names>KT</given-names></name><name name-style="western"><surname>Ke</surname><given-names>YY</given-names></name><name name-style="western"><surname>Chen</surname><given-names>TH</given-names></name><name name-style="western"><surname>Wang</surname><given-names>BB</given-names></name><name name-style="western"><surname>Kuo</surname><given-names>SJ</given-names></name><name name-style="western"><surname>Shih</surname><given-names>JC</given-names></name><name name-style="western"><surname>Chen</surname><given-names>M</given-names></name></person-group><year>2008</year><article-title>A recurrent ITGA9 missense
+mutation in human fetuses with severe chylothorax: possible correlation with
+poor response to fetal therapy</article-title><source>Prenat
+Diagn</source><volume>28</volume><fpage>1057</fpage><lpage>1063</lpage><pub-id pub-id-type="pmid">18973153</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/pd.2130</pub-id></element-citation></ref><ref id="R27"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Makinen</surname><given-names>T</given-names></name><name name-style="western"><surname>Adams</surname><given-names>RH</given-names></name><name name-style="western"><surname>Bailey</surname><given-names>J</given-names></name><name name-style="western"><surname>Lu</surname><given-names>Q</given-names></name><name name-style="western"><surname>Ziemiecki</surname><given-names>A</given-names></name><name name-style="western"><surname>Alitalo</surname><given-names>K</given-names></name><name name-style="western"><surname>Klein</surname><given-names>R</given-names></name><name name-style="western"><surname>Wilkinson</surname><given-names>GA</given-names></name></person-group><year>2005</year><article-title>PDZ interaction site in ephrinB2
+is required for the remodeling of lymphatic
+vasculature</article-title><source>Genes
+Dev</source><volume>19</volume><fpage>397</fpage><lpage>410</lpage><pub-id pub-id-type="pmid">15687262</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1101/gad.330105</pub-id><pub-id pub-id-type="pmcid">PMC546518</pub-id></element-citation></ref><ref id="R28"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Makinen</surname><given-names>T</given-names></name><name name-style="western"><surname>Veikkola</surname><given-names>T</given-names></name><name name-style="western"><surname>Mustjoki</surname><given-names>S</given-names></name><name name-style="western"><surname>Karpanen</surname><given-names>T</given-names></name><name name-style="western"><surname>Catimel</surname><given-names>B</given-names></name><name name-style="western"><surname>Nice</surname><given-names>EC</given-names></name><name name-style="western"><surname>Wise</surname><given-names>L</given-names></name><name name-style="western"><surname>Mercer</surname><given-names>A</given-names></name><name name-style="western"><surname>Kowalski</surname><given-names>H</given-names></name><name name-style="western"><surname>Kerjaschki</surname><given-names>D</given-names></name><etal/></person-group><year>2001</year><article-title>Isolated lymphatic endothelial
+cells transduce growth, survival and migratory signals via the VEGF-C/D
+receptor VEGFR-3</article-title><source>Embo
+J</source><volume>20</volume><fpage>4762</fpage><lpage>4773</lpage><pub-id pub-id-type="pmid">11532940</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/emboj/20.17.4762</pub-id><pub-id pub-id-type="pmcid">PMC125596</pub-id></element-citation></ref><ref id="R29"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Muro</surname><given-names>AF</given-names></name><name name-style="western"><surname>Chauhan</surname><given-names>AK</given-names></name><name name-style="western"><surname>Gajovic</surname><given-names>S</given-names></name><name name-style="western"><surname>Iaconcig</surname><given-names>A</given-names></name><name name-style="western"><surname>Porro</surname><given-names>F</given-names></name><name name-style="western"><surname>Stanta</surname><given-names>G</given-names></name><name name-style="western"><surname>Baralle</surname><given-names>FE</given-names></name></person-group><year>2003</year><article-title>Regulated splicing of the
+fibronectin EDA exon is essential for proper skin wound healing and normal
+lifespan</article-title><source>J Cell
+Biol</source><volume>162</volume><fpage>149</fpage><lpage>160</lpage><pub-id pub-id-type="pmid">12847088</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.200212079</pub-id><pub-id pub-id-type="pmcid">PMC2172721</pub-id></element-citation></ref><ref id="R30"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Navas</surname><given-names>V</given-names></name><name name-style="western"><surname>O'Morchoe</surname><given-names>PJ</given-names></name><name name-style="western"><surname>O'Morchoe</surname><given-names>CC</given-names></name></person-group><year>1991</year><article-title>Lymphatic valves of the rat
+pancreas</article-title><source>Lymphology</source><volume>24</volume><fpage>146</fpage><lpage>154</lpage><pub-id pub-id-type="pmid">1791725</pub-id></element-citation></ref><ref id="R31"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Norrmen</surname><given-names>C</given-names></name><name name-style="western"><surname>Ivanov</surname><given-names>KI</given-names></name><name name-style="western"><surname>Cheng</surname><given-names>J</given-names></name><name name-style="western"><surname>Zangger</surname><given-names>N</given-names></name><name name-style="western"><surname>Delorenzi</surname><given-names>M</given-names></name><name name-style="western"><surname>Jaquet</surname><given-names>M</given-names></name><name name-style="western"><surname>Miura</surname><given-names>N</given-names></name><name name-style="western"><surname>Puolakkainen</surname><given-names>P</given-names></name><name name-style="western"><surname>Horsley</surname><given-names>V</given-names></name><name name-style="western"><surname>Hu</surname><given-names>J</given-names></name><etal/></person-group><year>2009</year><article-title>FOXC2 controls formation and
+maturation of lymphatic collecting vessels through cooperation with
+NFATc1</article-title><source>J Cell
+Biol</source><volume>185</volume><fpage>439</fpage><lpage>457</lpage><pub-id pub-id-type="pmid">19398761</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.200901104</pub-id><pub-id pub-id-type="pmcid">PMC2700385</pub-id></element-citation></ref><ref id="R32"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Pagani</surname><given-names>F</given-names></name><name name-style="western"><surname>Zagato</surname><given-names>L</given-names></name><name name-style="western"><surname>Vergani</surname><given-names>C</given-names></name><name name-style="western"><surname>Casari</surname><given-names>G</given-names></name><name name-style="western"><surname>Sidoli</surname><given-names>A</given-names></name><name name-style="western"><surname>Baralle</surname><given-names>FE</given-names></name></person-group><year>1991</year><article-title>Tissue-specific splicing pattern
+of fibronectin messenger RNA precursor during development and aging in
+rat</article-title><source>J Cell
+Biol</source><volume>113</volume><fpage>1223</fpage><lpage>1229</lpage><pub-id pub-id-type="pmid">2040649</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.113.5.1223</pub-id><pub-id pub-id-type="pmcid">PMC2289010</pub-id></element-citation></ref><ref id="R33"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Petrova</surname><given-names>TV</given-names></name><name name-style="western"><surname>Karpanen</surname><given-names>T</given-names></name><name name-style="western"><surname>Norrmen</surname><given-names>C</given-names></name><name name-style="western"><surname>Mellor</surname><given-names>R</given-names></name><name name-style="western"><surname>Tamakoshi</surname><given-names>T</given-names></name><name name-style="western"><surname>Finegold</surname><given-names>D</given-names></name><name name-style="western"><surname>Ferrell</surname><given-names>R</given-names></name><name name-style="western"><surname>Kerjaschki</surname><given-names>D</given-names></name><name name-style="western"><surname>Mortimer</surname><given-names>P</given-names></name><name name-style="western"><surname>Yla-Herttuala</surname><given-names>S</given-names></name><etal/></person-group><year>2004</year><article-title>Defective valves and abnormal
+mural cell recruitment underlie lymphatic vascular failure in lymphedema
+distichiasis</article-title><source>Nat
+Med</source><volume>10</volume><fpage>974</fpage><lpage>981</lpage><pub-id pub-id-type="pmid">15322537</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nm1094</pub-id></element-citation></ref><ref id="R34"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Ringelmann</surname><given-names>B</given-names></name><name name-style="western"><surname>Roder</surname><given-names>C</given-names></name><name name-style="western"><surname>Hallmann</surname><given-names>R</given-names></name><name name-style="western"><surname>Maley</surname><given-names>M</given-names></name><name name-style="western"><surname>Davies</surname><given-names>M</given-names></name><name name-style="western"><surname>Grounds</surname><given-names>M</given-names></name><name name-style="western"><surname>Sorokin</surname><given-names>L</given-names></name></person-group><year>1999</year><article-title>Expression of laminin alpha1,
+alpha2, alpha4, and alpha5 chains, fibronectin, and tenascin-C in skeletal
+muscle of dystrophic 129ReJ dy/dy mice</article-title><source>Exp Cell
+Res</source><volume>246</volume><fpage>165</fpage><lpage>182</lpage><pub-id pub-id-type="pmid">9882526</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1006/excr.1998.4244</pub-id></element-citation></ref><ref id="R35"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Rozario</surname><given-names>T</given-names></name><name name-style="western"><surname>Dzamba</surname><given-names>B</given-names></name><name name-style="western"><surname>Weber</surname><given-names>GF</given-names></name><name name-style="western"><surname>Davidson</surname><given-names>LA</given-names></name><name name-style="western"><surname>DeSimone</surname><given-names>DW</given-names></name></person-group><year>2009</year><article-title>The physical state of fibronectin
+matrix differentially regulates morphogenetic movements in
+vivo</article-title><source>Dev
+Biol</source><volume>327</volume><fpage>386</fpage><lpage>398</lpage><pub-id pub-id-type="pmid">19138684</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.ydbio.2008.12.025</pub-id><pub-id pub-id-type="pmcid">PMC2829434</pub-id></element-citation></ref><ref id="R36"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Sechler</surname><given-names>JL</given-names></name><name name-style="western"><surname>Cumiskey</surname><given-names>AM</given-names></name><name name-style="western"><surname>Gazzola</surname><given-names>DM</given-names></name><name name-style="western"><surname>Schwarzbauer</surname><given-names>JE</given-names></name></person-group><year>2000</year><article-title>A novel RGD-independent
+fibronectin assembly pathway initiated by alpha4beta1 integrin binding to
+the alternatively spliced V region</article-title><source>J Cell
+Sci</source><volume>113</volume><issue>Pt
+8</issue><fpage>1491</fpage><lpage>1498</lpage><pub-id pub-id-type="pmid">10725231</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1242/jcs.113.8.1491</pub-id></element-citation></ref><ref id="R37"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Singh</surname><given-names>P</given-names></name><name name-style="western"><surname>Chen</surname><given-names>C</given-names></name><name name-style="western"><surname>Pal-Ghosh</surname><given-names>S</given-names></name><name name-style="western"><surname>Stepp</surname><given-names>MA</given-names></name><name name-style="western"><surname>Sheppard</surname><given-names>D</given-names></name><name name-style="western"><surname>Van De Water</surname><given-names>L</given-names></name></person-group><year>2008</year><article-title>Loss of Integrin alpha9beta1
+Results in Defects in Proliferation, Causing Poor Re-Epithelialization
+during Cutaneous Wound Healing</article-title><source>J Invest
+Dermatol</source><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/jid.2008.201</pub-id><pub-id pub-id-type="pmcid">PMC3681306</pub-id><pub-id pub-id-type="pmid">18633440</pub-id></element-citation></ref><ref id="R38"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Soriano</surname><given-names>P</given-names></name></person-group><year>1999</year><article-title>Generalized lacZ expression with
+the ROSA26 Cre reporter strain</article-title><source>Nat
+Genet</source><volume>21</volume><fpage>70</fpage><lpage>71</lpage><pub-id pub-id-type="pmid">9916792</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/5007</pub-id></element-citation></ref><ref id="R39"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Sottile</surname><given-names>J</given-names></name><name name-style="western"><surname>Hocking</surname><given-names>DC</given-names></name></person-group><year>2002</year><article-title>Fibronectin polymerization
+regulates the composition and stability of extracellular matrix fibrils and
+cell-matrix adhesions</article-title><source>Mol Biol
+Cell</source><volume>13</volume><fpage>3546</fpage><lpage>3559</lpage><pub-id pub-id-type="pmid">12388756</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1091/mbc.E02-01-0048</pub-id><pub-id pub-id-type="pmcid">PMC129965</pub-id></element-citation></ref><ref id="R40"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Sottile</surname><given-names>J</given-names></name><name name-style="western"><surname>Hocking</surname><given-names>DC</given-names></name><name name-style="western"><surname>Swiatek</surname><given-names>PJ</given-names></name></person-group><year>1998</year><article-title>Fibronectin matrix assembly
+enhances adhesion-dependent cell growth</article-title><source>J Cell
+Sci</source><volume>111</volume><issue>Pt
+19</issue><fpage>2933</fpage><lpage>2943</lpage><pub-id pub-id-type="pmid">9730985</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1242/jcs.111.19.2933</pub-id></element-citation></ref><ref id="R41"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Takahashi</surname><given-names>S</given-names></name><name name-style="western"><surname>Leiss</surname><given-names>M</given-names></name><name name-style="western"><surname>Moser</surname><given-names>M</given-names></name><name name-style="western"><surname>Ohashi</surname><given-names>T</given-names></name><name name-style="western"><surname>Kitao</surname><given-names>T</given-names></name><name name-style="western"><surname>Heckmann</surname><given-names>D</given-names></name><name name-style="western"><surname>Pfeifer</surname><given-names>A</given-names></name><name name-style="western"><surname>Kessler</surname><given-names>H</given-names></name><name name-style="western"><surname>Takagi</surname><given-names>J</given-names></name><name name-style="western"><surname>Erickson</surname><given-names>HP</given-names></name><etal/></person-group><year>2007</year><article-title>The RGD motif in fibronectin is
+essential for development but dispensable for fibril
+assembly</article-title><source>J Cell
+Biol</source><volume>178</volume><fpage>167</fpage><lpage>178</lpage><pub-id pub-id-type="pmid">17591922</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.200703021</pub-id><pub-id pub-id-type="pmcid">PMC2064432</pub-id></element-citation></ref><ref id="R42"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Tammela</surname><given-names>T</given-names></name><name name-style="western"><surname>Saaristo</surname><given-names>A</given-names></name><name name-style="western"><surname>Holopainen</surname><given-names>T</given-names></name><name name-style="western"><surname>Lyytikka</surname><given-names>J</given-names></name><name name-style="western"><surname>Kotronen</surname><given-names>A</given-names></name><name name-style="western"><surname>Pitkonen</surname><given-names>M</given-names></name><name name-style="western"><surname>Abo-Ramadan</surname><given-names>U</given-names></name><name name-style="western"><surname>Yla-Herttuala</surname><given-names>S</given-names></name><name name-style="western"><surname>Petrova</surname><given-names>TV</given-names></name><name name-style="western"><surname>Alitalo</surname><given-names>K</given-names></name></person-group><year>2007</year><article-title>Therapeutic differentiation and
+maturation of lymphatic vessels after lymph node dissection and
+transplantation</article-title><source>Nat
+Med</source><volume>13</volume><fpage>1458</fpage><lpage>1466</lpage><pub-id pub-id-type="pmid">18059280</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nm1689</pub-id></element-citation></ref><ref id="R43"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Tan</surname><given-names>MH</given-names></name><name name-style="western"><surname>Sun</surname><given-names>Z</given-names></name><name name-style="western"><surname>Opitz</surname><given-names>SL</given-names></name><name name-style="western"><surname>Schmidt</surname><given-names>TE</given-names></name><name name-style="western"><surname>Peters</surname><given-names>JH</given-names></name><name name-style="western"><surname>George</surname><given-names>EL</given-names></name></person-group><year>2004</year><article-title>Deletion of the alternatively
+spliced fibronectin EIIIA domain in mice reduces
+atherosclerosis</article-title><source>Blood</source><volume>104</volume><fpage>11</fpage><lpage>18</lpage><pub-id pub-id-type="pmid">14976060</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1182/blood-2003-09-3363</pub-id></element-citation></ref><ref id="R44"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Villa</surname><given-names>A</given-names></name><name name-style="western"><surname>Trachsel</surname><given-names>E</given-names></name><name name-style="western"><surname>Kaspar</surname><given-names>M</given-names></name><name name-style="western"><surname>Schliemann</surname><given-names>C</given-names></name><name name-style="western"><surname>Sommavilla</surname><given-names>R</given-names></name><name name-style="western"><surname>Rybak</surname><given-names>JN</given-names></name><name name-style="western"><surname>Rosli</surname><given-names>C</given-names></name><name name-style="western"><surname>Borsi</surname><given-names>L</given-names></name><name name-style="western"><surname>Neri</surname><given-names>D</given-names></name></person-group><year>2008</year><article-title>A high-affinity human monoclonal
+antibody specific to the alternatively spliced EDA domain of fibronectin
+efficiently targets tumor neo-vasculature in vivo</article-title><source>Int
+J
+Cancer</source><volume>122</volume><fpage>2405</fpage><lpage>2413</lpage><pub-id pub-id-type="pmid">18271006</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/ijc.23408</pub-id></element-citation></ref><ref id="R45"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Wierzbicka-Patynowski</surname><given-names>I</given-names></name><name name-style="western"><surname>Mao</surname><given-names>Y</given-names></name><name name-style="western"><surname>Schwarzbauer</surname><given-names>JE</given-names></name></person-group><year>2004</year><article-title>Analysis of fibronectin matrix
+assembly</article-title><source>Curr Protoc Cell
+Biol</source><volume>Chapter 10</volume><comment>Unit 10
+12</comment><pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/0471143030.cb1012s25</pub-id><pub-id pub-id-type="pmid">18228438</pub-id></element-citation></ref><ref id="R46"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Wierzbicka-Patynowski</surname><given-names>I</given-names></name><name name-style="western"><surname>Schwarzbauer</surname><given-names>JE</given-names></name></person-group><year>2003</year><article-title>The ins and outs of fibronectin
+matrix assembly</article-title><source>J Cell
+Sci</source><volume>116</volume><fpage>3269</fpage><lpage>3276</lpage><pub-id pub-id-type="pmid">12857786</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1242/jcs.00670</pub-id></element-citation></ref><ref id="R47"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Yokosaki</surname><given-names>Y</given-names></name><name name-style="western"><surname>Matsuura</surname><given-names>N</given-names></name><name name-style="western"><surname>Higashiyama</surname><given-names>S</given-names></name><name name-style="western"><surname>Murakami</surname><given-names>I</given-names></name><name name-style="western"><surname>Obara</surname><given-names>M</given-names></name><name name-style="western"><surname>Yamakido</surname><given-names>M</given-names></name><name name-style="western"><surname>Shigeto</surname><given-names>N</given-names></name><name name-style="western"><surname>Chen</surname><given-names>J</given-names></name><name name-style="western"><surname>Sheppard</surname><given-names>D</given-names></name></person-group><year>1998</year><article-title>Identification of the ligand
+binding site for the integrin alpha9 beta1 in the third fibronectin type III
+repeat of tenascin-C</article-title><source>J Biol
+Chem</source><volume>273</volume><fpage>11423</fpage><lpage>11428</lpage><pub-id pub-id-type="pmid">9565552</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1074/jbc.273.19.11423</pub-id></element-citation></ref><ref id="R48"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Yokosaki</surname><given-names>Y</given-names></name><name name-style="western"><surname>Matsuura</surname><given-names>N</given-names></name><name name-style="western"><surname>Sasaki</surname><given-names>T</given-names></name><name name-style="western"><surname>Murakami</surname><given-names>I</given-names></name><name name-style="western"><surname>Schneider</surname><given-names>H</given-names></name><name name-style="western"><surname>Higashiyama</surname><given-names>S</given-names></name><name name-style="western"><surname>Saitoh</surname><given-names>Y</given-names></name><name name-style="western"><surname>Yamakido</surname><given-names>M</given-names></name><name name-style="western"><surname>Taooka</surname><given-names>Y</given-names></name><name name-style="western"><surname>Sheppard</surname><given-names>D</given-names></name></person-group><year>1999</year><article-title>The integrin alpha(9)beta(1)
+binds to a novel recognition sequence (SVVYGLR) in the thrombin-cleaved
+amino-terminal fragment of osteopontin</article-title><source>J Biol
+Chem</source><volume>274</volume><fpage>36328</fpage><lpage>36334</lpage><pub-id pub-id-type="pmid">10593924</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1074/jbc.274.51.36328</pub-id></element-citation></ref><ref id="R49"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Zhong</surname><given-names>C</given-names></name><name name-style="western"><surname>Chrzanowska-Wodnicka</surname><given-names>M</given-names></name><name name-style="western"><surname>Brown</surname><given-names>J</given-names></name><name name-style="western"><surname>Shaub</surname><given-names>A</given-names></name><name name-style="western"><surname>Belkin</surname><given-names>AM</given-names></name><name name-style="western"><surname>Burridge</surname><given-names>K</given-names></name></person-group><year>1998</year><article-title>Rho-mediated contractility
+exposes a cryptic site in fibronectin and induces fibronectin matrix
+assembly</article-title><source>J Cell
+Biol</source><volume>141</volume><fpage>539</fpage><lpage>551</lpage><pub-id pub-id-type="pmid">9548730</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.141.2.539</pub-id><pub-id pub-id-type="pmcid">PMC2148448</pub-id></element-citation></ref></ref-list></back><floats-group><fig id="F1" position="float" orientation="portrait"><label>Figure 1</label><caption><title>Expression of integrin-α9 in mature and developing lymphatic
+valves</title><p>(A, B) Immunofluorescence staining of adult ear skin with antibodies against
+integrin-α9 (green), FoxC2 (red) and α-smooth muscle actin
+(α-SMA, blue). Arrow in (B) points to a luminal valve. (C-E)
+Development of mesenteric lymphatic vessels. Whole-mount X-Gal staining of
+mesenteric lymphatic vessels from
+<italic toggle="yes">Vegfr3<sup>lz/</sup></italic><sup>+</sup> embryos. The
+tissues were taken from embryos at the indicated ages (E16.5-E18.5).</p><p>(F-K) Immunofluorescence staining of developing mesenteric lymphatic vessels
+of E16.5 (F, G), E17.5 (H, I) and E18.5 (J, K) with antibodies against
+integrin-α9 (green), Prox1 (F, red) or FoxC2 (H, J, red) and LYVE-1
+(F, H, J, blue). Arrowhead in (F, G) points to a blood vessel, the smooth
+muscle coverage of which is positive for integrin-α9 staining.
+Arrows point to clusters of cells expressing high levels of Prox1 and
+FoxC2.</p><p>Scale bars; A, B, H-K: 50 μm, C-G: 1 mm.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms141065f1.jpg"/></fig><fig id="F2" position="float" orientation="portrait"><label>Figure 2</label><caption><title>Abnormal valves in <italic toggle="yes">Itga9</italic> deficient mice</title><p>(A-B′) Luminal valves in chyle-filled mesenteric lymphatic vessels of
+wild-type (A, A′) and <italic toggle="yes">Itga9</italic> mutant mice (B,
+B′). Note the difference in the shape of a wild-type in comparison
+to a mutant valve (A′, B′, arrows in A, B) and leakage of
+chyle from the mutant vessels (arrowhead in B). BF = bright
+field.</p><p>(C, D) PECAM-1 immunohistochemistry of P5 mesenteric vessels and luminal
+valves (arrow) in wild-type (C) and <italic toggle="yes">Itga9<sup>-/-</sup></italic> (D)
+mice.</p><p>(E) Quantification of the number of luminal valves in P5 wild-type and
+<italic toggle="yes">Itga9<sup>-/-</sup></italic> mesenteric lymphatic vessels
+(mean ± s.d., n = 4 animals per genotype, 3 vessels each).
+Black bar = normal V-shaped valves; white bar = abnormal
+valves with ring appearance. *** p &lt; 0.0001
+(Mann-Whitney test).</p><p>(F) Schematic representation of luminal valves (arrows) in the collecting
+lymphatic vessels of
+<italic toggle="yes">Itga9</italic><sup>+</sup><italic toggle="yes"><sup>/</sup></italic><sup>+</sup>
+and <italic toggle="yes">Itga9<sup>-/-</sup></italic> mice.</p><p>(G-J) Transmission electron micrographs of wild-type (G, I) and
+<italic toggle="yes">Itga9<sup>-/-</sup></italic> (H, J) valves in mesenteric
+lymphatic vessels of P6 mice. Arrows in (G, H) point to the matrix core
+(red) anchored into the vessels wall, arrowheads mark the free edges of the
+valve leaflets. (I) shows the valve leaflet with a connective tissue core
+(red). Note the rudimentary (arrows in H) or absent (J) matrix core in the
+mutant valves and the gaps in between the two endothelial sheets (red
+asterisks in J).</p><p>(K) Schematic representation of luminal valves in the
+<italic toggle="yes">Itga9</italic><sup>+</sup><italic toggle="yes"><sup>/</sup></italic><sup>+</sup>
+and <italic toggle="yes">Itga9<sup>-/-</sup></italic> mice. Matrix core is indicated in
+red.</p><p>Scale bars; A, B: 100 μm, C, D: 50 μm, G, H: 10 μm,
+I, J: 1 μm.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms141065f2.jpg"/></fig><fig id="F3" position="float" orientation="portrait"><label>Figure 3</label><caption><title>Defective lymphatic drainage in <italic toggle="yes">Itga9</italic> deficient
+mice</title><p>(A, B) Visualisation of dermal collecting vessels following injection of
+FITC-dextran into the footpads of P6 wild-type (A) and
+<italic toggle="yes">Itga9<sup>-/-</sup></italic> mice (B). Note the presence of
+an abnormal vessel network (arrowheads in B) and a valve in a vessel branch
+point in the <italic toggle="yes">Itga9</italic> mutants (arrow in B).</p><p>(C, D) FITC-lectin (LEL) staining of the valves in dermal lymphatic vessels
+following footpad injection. No valve leaflets are seen in the
+<italic toggle="yes">Itga9</italic> mutant (D). Arrows in (C) point to the two valve
+leaflets seen from the 90° angle when compared to <xref rid="F2" ref-type="fig">Figure 2A, D</xref>.</p><p>(E) Schematic representation of a side view of luminal valves as visualized
+by FITC-LEL staining in the collecting lymphatic vessels of
+<italic toggle="yes">Itga9</italic><sup>+</sup><italic toggle="yes"><sup>/</sup></italic><sup>+</sup>
+(left) and <italic toggle="yes">Itga9<sup>-/-</sup></italic> (right) mice. Arrows
+indicate the direction of the flow.</p><p>Scale bars; A, B: 100 μm, C, D: 50 μm.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms141065f3.jpg"/></fig><fig id="F4" position="float" orientation="portrait"><label>Figure 4</label><caption><title>Endothelial cell specific deletion of <italic toggle="yes">Itga9</italic> during
+development and in mature valves</title><p>Lymphatic vessels of <italic toggle="yes">Tie2-Cre;Itga9<sup>lx/lx</sup></italic> mouse
+(A-D), and of 4-OHT treated
+<italic toggle="yes">Itga9<sup>lx/</sup></italic><sup>+</sup> (E-H) and
+<italic toggle="yes">VEcad-CreER<sup>T2</sup>; Itga9<sup>lx/lx</sup></italic>
+(I-L) mice stained with antibodies against Laminin-α5 (red),
+integrin-α9 (green) and PECAM-1 (blue). Expression of
+integrin-α9 is detected in the vascular SMC (arrowhead in A, C, E,
+G, I, K) but is lost from the endothelial cells in
+<italic toggle="yes">Tie2-Cre;Itga9<sup>lx/lx</sup></italic> (C) and from most
+endothelial cells of the valves of <italic toggle="yes">VEcad-CreER<sup>T2</sup>;
+Itga9<sup>lx/lx</sup></italic> mutant animals (I, K, open arrowhead
+points to a single integrin-α9 expressing cell). Note the abnormal
+valve in <italic toggle="yes">Tie2-Cre;Itga9<sup>lx/lx</sup></italic> mouse (arrow in B),
+which has undergone embryonic deletion of <italic toggle="yes">Itga9</italic> allele, but
+intact valve leaflets (arrow in J) and the attachment of LECs on the
+leaflets in the <italic toggle="yes">VEcad-CreER<sup>T2</sup>;
+Itga9<sup>lx/lx</sup></italic> mutant (arrow in L), which has undergone
+postnatal deletion of <italic toggle="yes">Itga9</italic> allele, as compared to a
+control (arrows in F, G).</p><p>Scale bars; A-L: 20 μm.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms141065f4.jpg"/></fig><fig id="F5" position="float" orientation="portrait"><label>Figure 5</label><caption><title>Development of lymphatic valve leaflets in wild-type and
+<italic toggle="yes">Itga9<sup>-/-</sup></italic> mice</title><p>(A-C) Immunofluorescence staining of developing mesenteric lymphatic vessels
+of E16 (A) and E17 (B, C) wild-type embryo using antibodies against
+Laminin-α5, integrin-α9 and FN-EIIIA (colors as indicated).
+The dotted lines outline the vessels.</p><p>(D-G) Immunolabeling of lymphatic valves in wild-type (D-E′) and
+<italic toggle="yes">Itga9<sup>-/-</sup></italic> (F-G′) mesenteric
+vessels for Prox1 (green) and FN-EIIIA (red; E, F; at E17) or for
+Laminin-α5 (red), FN-EIIIA (green) and the endothelial marker
+PECAM-1 (blue; E, G; at P2). The arrows in (D, E′, F, G′)
+point to FN-EIIIA fibers.</p><p>(H, I) View through the opening of the valve in P0 wild-type (H) and
+<italic toggle="yes">Itga9<sup>-/-</sup></italic> (I) vessels, labelled for FN
+(red) and FN-EIIIA (green). Note the punctuate localization of FN-EIIIA in
+the <italic toggle="yes">Itga9<sup>-/-</sup></italic> valve (arrow in I) compared to the
+fibrous staining in the wild-type (arrow in H).</p><p>(J) Schematic model of lymphatic valve formation. Upregulation of Prox1 and
+FoxC2 transcription factors (blue nuclei) in lymphatic vessels define the
+positions of future valves. Deposition of extracellular matrix (red)
+containing Laminin-α5 and FN-EIIIA and re-orientation of cells
+expressing high levels of Prox1 and FoxC2 perpendicular to the vessel wall
+is followed by upregulation of integrin-α9 (green) on the outflow
+side of the future valve. <italic toggle="yes">Itga9<sup>-/-</sup></italic> mice (below)
+display defective organization of the extracellular matrix and failure of
+leaflet formation.</p><p>Scale bars; A-G: 50 μm, H, I: 10 μm.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms141065f5.jpg"/></fig><fig id="F6" position="float" orientation="portrait"><label>Figure 6</label><caption><title>Abnormal lymphatic valves in mice lacking the integrin-α9 ligand,
+FN-EIIIA</title><p>(A) Luminal valve numbers in newborn wild-type,
+<italic toggle="yes">Fn-EIIIA<sup>-/-</sup></italic> and
+<italic toggle="yes">Itga9<sup>-/-</sup></italic> mesenteric lymphatic vessels
+(mean ± s.d., n ≥ 4 animals per genotype, ≥ 2
+vessels each, see <xref rid="SD1" ref-type="supplementary-material">Suppl.
+Table 1</xref>). The percentage of abnormal valves is indicated:
+*** p &lt; 0.0001 (χ<sup>2</sup>
+test).</p><p>(B, C) Visualization of lymphatic valves in P1 wild-type (B) and
+<italic toggle="yes">Fn-EIIIA<sup>-/-</sup></italic> (C) mesenteric vessels using
+antibodies against Laminin-α5. Note the incomplete development of
+the valve as evident by lack of leaflets (arrow in C) in the
+<italic toggle="yes">Fn-EIIIA<sup>-/-</sup></italic> vessels.</p><p>(D) Immunofluorescence staining of three weeks old ear skin for
+integrin-α9 (green) and EIIIA (red).</p><p>(E, F) Dermal lymphatic vessels in the ears of three weeks old wild-type (E)
+and <italic toggle="yes">Fn-EIIIA<sup>-/-</sup></italic> (F) mice labeled for
+Laminin-α5 (green), podoplanin (blue) and α-SMA (red).</p><p>(G-I) FITC-dextran assay in three weeks old wild-type (G) and
+<italic toggle="yes">Fn-EIIIA<sup>-/-</sup></italic> mice (H, I). Note the reflux
+of dye (arrows in H) and an abnormal valve (arrow in I) in the mutant
+skin.</p><p>Scale bars; B, C: 20 μm, D:50μm, E, F, I: 100 μm, G,
+H: 400 μm.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms141065f6.jpg"/></fig><fig id="F7" position="float" orientation="portrait"><label>Figure 7</label><caption><title>Integrin-α9-EIIIA interaction regulates FN fibril assembly in
+primary human lymphatic endothelial cells</title><p>(A) FN fibrils in primary human lymphatic endothelial cells (LECs).
+Integrin-α9-EIIIA interaction was blocked using antibodies against
+EIIIA (IST-9) or integrin-α9β1 (Y9A2), or siRNA against
+integrin-α9 or -α5, and stained with EIIIA antibodies.</p><p>(B) Quantification of FN fibrillogenesis in the LECs, in which
+integrin-α9-EIIIA interaction (IST-9, Y9A2, α9 siRNA) or
+integrin-α5/RGD-dependent integrin interactions (RGDSP peptide,
+α5 siRNA) were inhibited, in comparison to the control cells
+(untreated, ctrl siRNA or RGESP peptide). Data represent mean FN-EIIIA fiber
+length per cell (± s.d) from five randomly chosen view fields in two
+independent experiments. *** p&lt; 0.003,
+n.s.= non-significant, p = 0.881 (Student T-test).</p><p>(C) qPCR of <italic toggle="yes">ITGA9</italic> and <italic toggle="yes">FN-EIIIA</italic> in human
+LECs. Data represent mean ± s.d. of triplicates.</p><p>(D) siRNA mediated knock-down of integrin expression in primary human LECs.
+Western blot analysis of immunoprecipitated (IP) cell lysates using
+integrin-α9 or -α5 antibodies (upper panels). For the
+loading control, the total cell lysates (TCL) were blotted against
+α-tubulin and EIIIA.</p><p>(E) Conversion of DOC-soluble FN fibrils into insoluble stable matrix.
+DOC-insoluble (upper panel) and -soluble matrix (lower panel) isolated from
+the LECs were separated in non-reducing SDS-PAGE and probed for EIIIA.</p><p>(F) Immunofluorescent staining of wild type E18 mesenteric vessels using
+antibodies against integrin-α9 (left panel) and integrin-α5
+(right panel). Note low levels of integrin-α5 expression in the
+valve (arrows) in comparison to strong staining in the blood vessel
+endothelia (arrowhead).</p><p>Scale bar = 20 μm.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nihms141065f7.jpg"/></fig></floats-group></article></pmc-articleset>
