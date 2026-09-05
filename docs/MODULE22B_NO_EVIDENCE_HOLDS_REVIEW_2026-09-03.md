@@ -5318,6 +5318,25 @@ exact ternary-complex stoichiometry, or SCI-specific activity. The FZD3
 context is SCI-adjacent cerebral ischemia-reperfusion/endothelial OGD/R, not
 spinal-cord injury evidence; the other component contexts are non-SCI.
 
+## Individual review 3429-3436
+
+All eight holds gained reusable target capacity. Wnt1→FZD5_LRP5 gained direct
+EHF→FZD5 enhancer and perturbation evidence and reused SP1→LRP5; Wnt1→FZD6_LRP5
+and Wnt1→FZD6_LRP6 gained direct GATA4→FZD6 enhancer and loss-of-function
+evidence, with SP1→LRP5 reused only for the LRP5 row. Wnt1→FZD7_LRP5 and
+Wnt1→FZD7_LRP6 reused the existing SOX9→FZD7 and DeltaNp63/TP63→FZD7 lanes,
+with SP1→LRP5 added for the LRP5 row. Wnt1→FZD8_LRP5 gained direct YY1→FZD8
+promoter evidence and reused SP1→LRP5. Wnt1→FZD9_LRP5 and Wnt1→FZD9_LRP6
+gained direct PPARG→FZD9 promoter and expression evidence, with SP1→LRP5
+reused for the LRP5 row. No LRP6 target lane was transferred.
+
+These reusable target and component lanes remain separate from the submitted
+Wnt1 receptor-complex handoffs and do not establish source-to-TF activation,
+exact ternary-complex stoichiometry, or SCI-specific activity. The FZD5,
+FZD8, and FZD9 contexts are human cancer or bronchial-epithelial comparators;
+the FZD6 context is mouse mesenchymal-stem-cell evidence; the FZD7 and LRP5
+lanes are non-SCI cancer, developmental, or inferred-regulatory comparators.
+
 Six of the eight holds gained reusable target capacity. Try4→F2R and
 Try5→F2R reused EGR1→F2R and SP1→F2R; Try4→F2RL2 and Try5→F2RL2 reused
 NRF2→F2RL2; Try5→F2RL1 reused IRX3→F2RL1; and Try4→PARD3 reused
