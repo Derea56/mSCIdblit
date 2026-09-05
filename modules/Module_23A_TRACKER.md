@@ -90,3 +90,7 @@ B027 adds one review-led SPARC danger-signal candidate and four source-backed A/
 ## Review-led expansion: B028 (2026-09-04)
 
 B028 adds one review-led galectin-3 candidate and four source-backed A/B edges: Gal3-TLR4 ligand activity, comparator-specific TLR4-dependent microglial activation, rat SCI ROS/TXNIP/NLRP3/IL-1beta inflammatory output, and mouse SCI Gal3/PDGFRbeta+ fibroblast fibrotic-scar function. Primary records were acquired locally and linked through the source manifest. Neuroinflammation comparator scope, the separation of TLR4 ligand evidence from SCI inflammasome and scar-function evidence, and the absence of a universal TLR4-to-NLRP3 relay remain explicit.
+
+## Review-led expansion: B029 (2026-09-04)
+
+B029 adds one review-led HMGB1 candidate and five source-backed A/B edges: direct TLR4/MD2 binding, a TLR4-NF-kappaB/MAPK relay, astrocytic CCL5 with myeloid recruitment/M1 output, SCI pro-inflammatory cytokine and microglial NF-kappaB output, and secondary-injury/motor-function output. Primary records were acquired locally and linked through the source manifest. HMGB1 redox state, endotoxin controls, TLR2/RAGE/TLR4 cell-context differences, human biomarker non-causality, and the absence of a universal receptor or adaptor ordering remain explicit.
