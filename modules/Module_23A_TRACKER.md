@@ -184,3 +184,7 @@ B051 promotes the existing EFNA2–EPHA5 binding edge using primary EphA5-AP aff
 ## Review-led expansion: B052 (2026-09-05)
 
 B052 promotes the existing EFNA1–EPHA5 binding edge using primary exact-pair ephrin-A1-Fc/EphA5-Fc ELISA binding and independent human U-118 MG-cell EPHA5 phosphorylation evidence. The edge is promoted to medium-high with explicit Fc-avidity, EphA-class promiscuity, receptor-proximal-only, non-neural cell-line, no-purified-monovalent-affinity, no-downstream-program, and no-traumatic-SCI limits. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B053 (2026-09-05)
+
+B053 promotes the existing EFNA1–EPHA8 binding edge using the primary NIH3T3 study reporting ephrin-A1-Fc binding and ligand-dependent EphA8/EphA8-TrkB tyrosine phosphorylation. The edge is promoted to medium-high with explicit recombinant-fusion, heterologous-fibroblast, receptor-proximal-only, no-downstream-program, no-native-neural, and no-traumatic-SCI limits. No Module 20A–22A ledger is modified.

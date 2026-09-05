@@ -134,3 +134,7 @@ B051 promotes the existing 23B EFNA2–EPHA5 binding edge paired one-to-one with
 ## Review-led expansion: B052 (2026-09-05)
 
 B052 promotes the existing 23B EFNA1–EPHA5 binding edge paired one-to-one with Module 23A. Primary exact-pair ephrin-A1-Fc/EphA5-Fc ELISA binding and independent human U-118 MG-cell EPHA5 phosphorylation evidence support the direct-binding and receptor-proximal branch at medium-high confidence. Fc avidity, EphA-class promiscuity, receptor-proximal-only activation, non-neural cell-line context, no-purified-monovalent-affinity, no-downstream-program, and no-traumatic-SCI-transfer limits remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B053 (2026-09-05)
+
+B053 promotes the existing 23B EFNA1–EPHA8 binding edge paired one-to-one with Module 23A. The primary NIH3T3 study reports ephrin-A1-Fc binding and ligand-dependent EphA8/EphA8-TrkB tyrosine phosphorylation, supporting the direct-binding and receptor-proximal branch at medium-high confidence. Recombinant-fusion, heterologous-fibroblast, receptor-proximal-only, no-downstream-program, no-native-neural, and no-traumatic-SCI-transfer limits remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
