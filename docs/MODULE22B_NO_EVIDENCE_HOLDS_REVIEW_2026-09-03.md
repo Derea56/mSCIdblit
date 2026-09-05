@@ -5410,6 +5410,28 @@ establish source-to-TF activation, exact ternary-complex stoichiometry, or
 SCI-specific activity. The component contexts in this block are non-SCI or
 inferred-regulatory comparators.
 
+## Individual review 3475-3484
+
+Nine of these ten holds gained reusable component target capacity. The
+Wnt10b→FZD9_LRP6 row reused PPARG→FZD9, without transferring an LRP6 lane.
+Wnt11→FZD1, FZD2, FZD3, FZD5, FZD6, FZD8, and FZD9 reused the existing
+SP1/E2F1→FZD1, GATA6→FZD2, ZMIZ1→FZD3, EHF→FZD5, GATA4→FZD6, YY1→FZD8,
+and PPARG→FZD9 component lanes, respectively. Wnt11→FZD10 reused
+SP1→FZD10. The Wnt11→KLRG2 row remained on hold: targeted review found
+promoter TFBS predictions but no verified named activating TF-to-KLRG2
+relationship meeting the reusable-target standard.
+
+The targeted Wnt11 searches did not establish new source-to-TF activation or
+replace the submitted ligand-receptor handoffs. A rat neurogenic-bladder
+fibrosis study reported FZD10/Vangl2 candidate-receptor expression in SCI
+groups, and a prostate-cancer study supported Wnt11 signaling through FZD8;
+these findings are contextual rather than direct proof of the submitted
+terminal TF-to-target edges. The reusable component lanes remain separate
+from exact receptor assignment and do not establish ternary-complex
+stoichiometry or SCI-specific molecular activation. The FZD3 lane remains
+SCI-adjacent cerebral-ischemia/reperfusion evidence, not spinal-cord injury
+evidence.
+
 Six of the eight holds gained reusable target capacity. Try4→F2R and
 Try5→F2R reused EGR1→F2R and SP1→F2R; Try4→F2RL2 and Try5→F2RL2 reused
 NRF2→F2RL2; Try5→F2RL1 reused IRX3→F2RL1; and Try4→PARD3 reused
