@@ -124,3 +124,7 @@ B036 adds one review-led tenascin-R sodium-channel candidate and two source-back
 ## Review-led expansion: B037 (2026-09-05)
 
 B037 adds one review-led tenascin-R oligodendrocyte candidate and three source-backed A-layer edges: direct TNR binding to membrane sulfatide, TNR-substrate adhesion of O4-positive oligodendrocytes, and TNR-induced myelin-gene expression/terminal differentiation of O4-positive progenitors. Isoform, cell-stage, glycolipid, in-vitro, non-SCI myelination, and no-relay limits remain explicit. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B038 (2026-09-05)
+
+B038 adds one review-led tenascin-R microglial candidate and six source-backed A-layer edges: activated-microglia antiadhesion, opposing EGF-like/FNIII6-8 domain effects on primary microglial adhesion and migration, domain-specific microglial BDNF/TGF-beta and NGF/TGF-beta secretion, and microglia/TNF-alpha-associated TNR downregulation in oligodendrocytes. PKA/PKC dependence, peripheral-nerve injury, primary-microglia, in-vitro comparator, reverse-feedback, and no-relay limits remain explicit. No Module 20A–22A ledger is modified.
