@@ -5143,6 +5143,22 @@ relay was inferred.
 
 ## Individual review 3333-3340
 
+## Individual review 3341-3348
+
+Five of the eight holds gained reusable target capacity. Try5→PARD3 reused
+SP1→PARD3; Tshb→ADCYAP1R1 reused a condition-specific SP1-dependent promoter
+context; Tshb→ADRB2 reused SP1 and E2F1 promoter contexts; Tshb→ADRB3 reused
+CEBPA→ADRB3; and Tshb→PTH1R reused NFKB1 regulatory-support and NFE2L2
+direct-target contexts. GPR20, GPR84, and RAMP2 remained on hold: targeted
+review located receptor/function, inflammatory-expression, receptor-complex,
+or promoter-methylation/prediction material without a qualifying named
+activating TF-to-target relationship.
+
+The reusable target lanes remain separate from the submitted Try5 or Tshb
+handoffs and do not establish source-to-TF activation or SCI-specific
+activity. The ADCYAP1R1 and NFKB1 records are bounded regulatory-support
+contexts rather than isolated direct-occupancy claims.
+
 Six of the eight holds gained reusable target capacity. Try4→F2R and
 Try5→F2R reused EGR1→F2R and SP1→F2R; Try4→F2RL2 and Try5→F2RL2 reused
 NRF2→F2RL2; Try5→F2RL1 reused IRX3→F2RL1; and Try4→PARD3 reused
