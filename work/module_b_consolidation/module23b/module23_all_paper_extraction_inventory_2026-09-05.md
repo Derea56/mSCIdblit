@@ -20,9 +20,9 @@ matches only; no canonical database rows or promotions are created.
 
 | Status | Anchors |
 |---|---:|
-| awaiting_local_source_acquisition | 11 |
 | candidate_extracted_from_abstract_or_metadata | 1,023 |
 | candidate_extracted_from_full_text | 477 |
+| identifier_requires_manual_correction | 11 |
 
 ## Module coverage
 

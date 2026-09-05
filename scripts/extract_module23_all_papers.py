@@ -120,6 +120,17 @@ def acquisition_manifest_index(additional_roots: list[Path]) -> dict[str, set[Pa
     return index
 
 
+def failed_doi_index(additional_roots: list[Path]) -> set[str]:
+    failed: set[str] = set()
+    for root in additional_roots:
+        for manifest in root.glob("*manifest.tsv"):
+            for row in read_tsv(manifest):
+                doi = row.get("doi", "").strip()
+                if doi and row.get("retrieval_status", "").startswith("fetch_failed"):
+                    failed.add("DOI:" + doi.lower())
+    return failed
+
+
 def filename_tokens(paths: list[Path]) -> set[str]:
     tokens: set[str] = set()
     for path in paths:
@@ -164,6 +175,7 @@ def build(output: Path, report: Path, archive_root: Path | None, additional_root
     archive_roots = [root for root in [archive_root, *additional_roots] if root is not None]
     archive_files = archive_index(archive_roots)
     manifest_files = acquisition_manifest_index(additional_roots)
+    failed_dois = failed_doi_index(additional_roots)
     rows: list[dict[str, str]] = []
     status_counts: Counter[str] = Counter()
     module_counts: Counter[str] = Counter()
@@ -197,7 +209,11 @@ def build(output: Path, report: Path, archive_root: Path | None, additional_root
             else:
                 extraction_method = "deterministic_sentence_match_against_local_artifact"
         if artifact is None:
-            extraction_status = "awaiting_local_source_acquisition"
+            extraction_status = (
+                "identifier_requires_manual_correction"
+                if anchor in failed_dois
+                else "awaiting_local_source_acquisition"
+            )
         elif artifact_status == "local_full_text_artifact" and excerpt:
             extraction_status = "candidate_extracted_from_full_text"
         elif excerpt:
