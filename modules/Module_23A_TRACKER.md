@@ -148,3 +148,7 @@ B042 adds one review-led PACAP receptor candidate and four source-backed A-layer
 ## Review-led expansion: B043 (2026-09-05)
 
 B043 adds one review-led S100A8/A9 candidate and two source-backed A-layer edges: Mac-1 (ITGAM:ITGB2) up-regulation/activation and Mac-1-dependent neutrophil adhesion/chemotaxis. The primary study’s mixed S100A8, S100A9, and S100A8/A9 preparations, antibody-sensitive Mac-1 function, non-SCI inflammatory models, no-direct-binding boundary, and no-native-SCI-transfer limit remain explicit. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B044 (2026-09-05)
+
+B044 adds one review-led Sema4A receptor candidate and two source-backed A-layer edges: Plexin-B2-dependent synaptogenic relay and glutamatergic synapse development in rat hippocampal cultures. Plexin-B2 knockdown, soluble mouse Sema4A-Fc, rodent-culture, no-direct-binding, complete-relay, and no-traumatic-SCI-transfer limits remain explicit. No Module 20A–22A ledger is modified.

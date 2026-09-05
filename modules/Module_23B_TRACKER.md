@@ -98,3 +98,7 @@ B042 promotes four new 23B edges paired one-to-one with Module 23A for PACAP sig
 ## Review-led expansion: B043 (2026-09-05)
 
 B043 promotes two new 23B edges paired one-to-one with Module 23A for the S100A8/A9–Mac-1 branch: exact tested-preparation-level Mac-1 activation and Mac-1-dependent neutrophil adhesion/chemotaxis. The primary study’s mixed S100 preparations, antibody-sensitive Mac-1 function, non-SCI inflammatory models, no-direct-binding boundary, and no-native-SCI-transfer limit remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B044 (2026-09-05)
+
+B044 promotes two new 23B edges paired one-to-one with Module 23A for the Sema4A–Plexin-B2 branch: receptor-dependent synaptogenic relay and Plexin-B2-dependent glutamatergic synapse development in rat hippocampal cultures. Plexin-B2 knockdown, soluble mouse Sema4A-Fc, rodent-culture, no-direct-binding, complete-relay, and no-traumatic-SCI-transfer limits remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
