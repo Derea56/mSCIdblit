@@ -5108,6 +5108,26 @@ the submitted protease, extracellular-matrix, integrin, and phosphatase
 handoffs. They do not establish the original pathway/function-boundary
 rows or any SCI-specific upstream relay.
 
+## Individual review 3277-3284
+
+All eight holds were searched individually. Four rows gained reusable target
+capacity: TNC→PTPRZ1 gained a new HIF2A/ELK1 cooperative promoter context,
+TNC→SDC1 reused the NR1H4 promoter context, TNC→SDC4 reused the RELA
+promoter context, and TNF→ICOS gained a FOXO1 promoter-occupancy and
+perturbation context. The PTPRZ1 study used human HEK293T and Hep3B hypoxia
+and tumor comparator systems and demonstrated HIF-2alpha promoter activation,
+ELK1 dependence, site-mutational effects, and HIF/ELK1 chromatin occupancy.
+The ICOS study used mouse CD4 T cells and showed FOXO1 occupancy at the Icos
+promoter together with reduced ICOS induction after Foxo1 loss.
+
+CELSR2, FFAR2, SEMA4C, and TNFRSF21 remained on hold after targeted review.
+The CELSR2 search located an NR3C1-containing enhancer reporter experiment,
+but the indexed record did not verify direct NR3C1 occupancy or a qualifying
+activating TF-to-CELSR2 target relationship. The other three searches did not
+verify a reusable activating TF-to-target context. All four new or reused
+target lanes remain separate from the submitted ligand/receptor handoffs and
+do not establish source-to-TF activation or promote the original holds.
+
 ## Individual review 3221-3228
 
 Audits 3221-3228 covered TGFB2/TGFBR3 and TGFB3 handoffs to ACVR1,
