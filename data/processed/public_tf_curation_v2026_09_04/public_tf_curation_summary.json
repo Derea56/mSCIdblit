@@ -7299,7 +7299,14 @@
     "row_count": 112,
     "source": "mouse_canonical_tf_direct_binding_rows_not_in_validated_overlay"
   },
-  "promotion_scope": "existing_v1.1.0_validated_overlay_only_no_new_literature_promotions",
+  "promotion_scope": "existing_v1.1.0_validated_overlay_plus_bounded_queue_adjudication_no_new_literature_promotions",
+  "queue_adjudication": {
+    "ledger": "data/processed/public_tf_curation_v2026_09_04/public_tf_queue_adjudication.tsv",
+    "promoted_rows": 0,
+    "retained_candidate_rows": 112,
+    "rows_reviewed": 112,
+    "status": "bounded_exact_pair_search_completed_no_promotions"
+  },
   "reconciliation": {
     "active_graph_edge_count": 3154,
     "active_graph_node_count": 2786,

@@ -15,6 +15,7 @@ from public_tf_curation import (  # noqa: E402
     traversal_flags,
     validate_promotable_overlay_row,
 )
+from adjudicate_public_tf_queue import adjudicate  # noqa: E402
 
 
 def candidate(**overrides):
@@ -119,6 +120,26 @@ class PublicTFCurationTests(unittest.TestCase):
         )
         self.assertEqual([row["source_row_id"] for row in queue], ["PTF-1"])
         self.assertTrue(queue[0]["missing_evidence"])
+
+    def test_bounded_queue_adjudication_preserves_candidate_gate(self):
+        rows = adjudicate(
+            [
+                {
+                    "source_row_id": "PTF-QUEUE-1",
+                    "module": "20B",
+                    "regulator": "FEZF2",
+                    "target": "Acvr1",
+                    "species": "mouse",
+                    "source_record_id": "tflink:mouse:1",
+                    "tflink_pubmed_id": "27924024",
+                }
+            ]
+        )
+        self.assertEqual(rows[0]["curation_status"], "candidate_only")
+        self.assertEqual(rows[0]["traversal_eligibility"], "not_traversable")
+        self.assertEqual(rows[0]["primary_citation"], "unknown")
+        self.assertEqual(rows[0]["effect_direction"], "unknown")
+        self.assertIn("Acvr1c", rows[0]["reviewer_notes"])
 
 
 if __name__ == "__main__":

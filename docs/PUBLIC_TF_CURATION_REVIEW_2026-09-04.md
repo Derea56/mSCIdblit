@@ -2,7 +2,7 @@
 
 Source release: `module20_24_mechanism_graph:v1.1.0`.
 Rows reviewed: **4174**; distinct regulator-target pairs: **3591**.
-Promotion scope: this repeat audit evaluates the existing v1.1.0 validated overlay; it makes no new literature promotions.
+Promotion scope: this audit evaluates the existing v1.1.0 validated overlay and records a bounded review of the unpromoted mouse/direct-binding queue; it makes no new literature promotions.
 
 ## Curation outcomes
 
@@ -17,6 +17,7 @@ Promotion scope: this repeat audit evaluates the existing v1.1.0 validated overl
 Candidate-only and unresolved rows are non-traversable. Validated rows are context-gated.
 The exportable curation overlay contains **3** context-gated rows representing **2** pairs.
 The next review queue contains **112** unpromoted mouse canonical-TF/direct-binding rows from Modules 20B–24B.
+The bounded queue adjudication reviewed **112** rows: **0** promoted and **112** retained as candidate-only.
 
 ## Context-mode eligibility
 
