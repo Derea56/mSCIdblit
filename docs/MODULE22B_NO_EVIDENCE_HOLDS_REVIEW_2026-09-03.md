@@ -5285,6 +5285,23 @@ SCI-specific activity. The ITGA3 record is a non-SCI pancreatic-cancer
 comparator; the composite integrin and GP-complex records do not establish
 native receptor stoichiometry or transfer unrepresented subunits.
 
+## Individual review 3413-3420
+
+Five of the eight holds gained reusable target capacity. Vwf→ITGA2B_ITGB3
+reused RUNX1→ITGA2B and ETS1→ITGB3; Vwf→ITGAV_ITGB3 reused SP1→ITGAV and
+ETS1→ITGB3; Vwf→ITGA9 reused direct SP1→ITGA9 promoter evidence; Vwf→SIRPA
+reused direct ELK1→SIRPA promoter evidence; and Wfikkn2→PRTG gained direct
+ZEB1→PRTG promoter, ChIP-qPCR, and reporter-site evidence. The IGDCC3,
+IGDCC4, and RYK rows remained on hold because their searches produced
+expression, interaction, computational, or receptor-signaling material but no
+qualifying named activating TF-to-target relationship.
+
+The reusable target and component lanes remain separate from the submitted
+VWF or WFIKKN2 handoffs and do not establish source-to-TF activation or
+SCI-specific activity. The integrin records reuse component capacity only;
+the PRTG record is a non-SCI gastric-cancer comparator, and none of these
+records establishes the unresolved ligand-to-receptor assignment.
+
 Six of the eight holds gained reusable target capacity. Try4→F2R and
 Try5→F2R reused EGR1→F2R and SP1→F2R; Try4→F2RL2 and Try5→F2RL2 reused
 NRF2→F2RL2; Try5→F2RL1 reused IRX3→F2RL1; and Try4→PARD3 reused
