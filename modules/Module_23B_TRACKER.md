@@ -188,3 +188,7 @@ B065 promotes the existing paired 23B FN1–uPAR/β1-integrin/CAV1/Src relay usi
 ## Review-led expansion: B066 (2026-09-05)
 
 B066 promotes the existing paired 23B broader COL15A1-associated matrix → α2β1/DDR1/Pyk2 function edge using the already acquired primary COLXV/DDR1 PMC and PubMed snapshots. Primary COLXV exposure and DDR1/Pyk2/EMT assays support reduced pancreatic-cell scatter and invasion and suppression of DDR1 signaling and Pyk2 phosphorylation. The edge is consolidated at medium confidence with downstream-function, no-direct-COL15A1–α2β1, incomplete-ordering, matrix/model, no-terminal-TF, and no-traumatic-SCI limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B067 (2026-09-05)
+
+B067 promotes the existing paired 23B VTN–αVβ8 adhesion/migration function edge from medium-low to medium using primary mouse renal and microglia studies. The renal study reports β8-dependent migration on vitronectin matrices, and the microglia study identifies αVβ8 as a functional vitronectin receptor. Direct recombinant VTN–αVβ8 binding remains separate from this function edge; non-SCI model, no-single-relay, no-terminal-TF, and no-traumatic-SCI limits are preserved. Canonical signaling tables and simulator outputs remain untouched.

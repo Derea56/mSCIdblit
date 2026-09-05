@@ -238,3 +238,7 @@ B065 promotes the existing FN1–uPAR/β1-integrin/CAV1/Src relay using acquired
 ## Review-led expansion: B066 (2026-09-05)
 
 B066 promotes the existing broader COL15A1-associated matrix → α2β1/DDR1/Pyk2 function edge using the already acquired primary COLXV/DDR1 PMC and PubMed snapshots. The primary study supports COLXV-associated suppression of DDR1 signaling and Pyk2 phosphorylation with reduced pancreatic-cell scatter and invasion, supporting the matrix-function edge at medium confidence. Direct COL15A1–α2β1 binding, linear α2β1→DDR1 ordering, matrix specificity, terminal TF, and traumatic-SCI transfer remain explicit limits. No Module 20A–22A ledger was modified.
+
+## Review-led expansion: B067 (2026-09-05)
+
+B067 promotes the existing VTN–αVβ8 function edge from medium-low to medium using acquired primary mouse renal and microglia studies. The renal study reports β8-dependent migration on vitronectin matrices, and the microglia study identifies αVβ8 as a functional vitronectin receptor; recombinant binding evidence remains represented on the separate direct edge. Non-SCI model limits, no-single-relay, no-terminal-TF, and no-traumatic-SCI boundaries remain explicit.
