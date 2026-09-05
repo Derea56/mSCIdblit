@@ -11,7 +11,13 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Iterable, Mapping
 
-from public_tf_curation import build_ledger_rows, graph_indexes, pair_key, summarize_ledger
+from public_tf_curation import (
+    build_ledger_rows,
+    build_mouse_direct_binding_queue,
+    graph_indexes,
+    pair_key,
+    summarize_ledger,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -168,6 +174,7 @@ def markdown_summary(payload: Mapping[str, object]) -> str:
         "",
         "Candidate-only and unresolved rows are non-traversable. Validated rows are context-gated.",
         f"The exportable curation overlay contains **{payload['traversable_overlay']['row_count']}** context-gated rows representing **{payload['traversable_overlay']['unique_pair_count']}** pairs.",
+        f"The next review queue contains **{payload['mouse_direct_binding_review_queue']['row_count']}** unpromoted mouse canonical-TF/direct-binding rows from Modules 20B–24B.",
         "",
         "## Context-mode eligibility",
         "",
@@ -189,7 +196,7 @@ def markdown_summary(payload: Mapping[str, object]) -> str:
         f"Unavailable citation rows: **{payload['unavailable_citation_rows']}**; missing local inputs: **{len(payload['missing_local_inputs'])}**.",
         f"Sensitivity smoke benchmark: **{payload['sensitivity_smoke']['status']}** — {payload['sensitivity_smoke']['reason']}.",
         "",
-        "The machine-readable ledger, traversable-edge overlay, summary, and old/new semantic crosswalk are stored under `data/processed/public_tf_curation_v2026_09_04/`.",
+        "The machine-readable ledger, mouse direct-binding review queue, traversable-edge overlay, summary, and old/new semantic crosswalk are stored under `data/processed/public_tf_curation_v2026_09_04/`.",
         "",
     ]
     return "\n".join(lines)
@@ -227,6 +234,7 @@ def main() -> int:
         active_pair_edges=active_pairs,
         active_node_symbols=active_nodes,
     )
+    mouse_queue = build_mouse_direct_binding_queue(candidate_rows, validated_rows)
     curation = summarize_ledger(ledger)
     crosswalk, crosswalk_summary = semantic_crosswalk(previous_dir, active_dir)
     optional_inputs = [
@@ -277,6 +285,11 @@ def main() -> int:
             "unique_pair_count": len({pair_key(str(row["regulator"]), str(row["target"])) for row in traversable}),
             "source": "validated_v1.1.0_overlay_only",
         },
+        "mouse_direct_binding_review_queue": {
+            "row_count": len(mouse_queue),
+            "source": "mouse_canonical_tf_direct_binding_rows_not_in_validated_overlay",
+            "all_rows_non_traversable": True,
+        },
         "reconciliation": {
             "active_graph_pair_status": curation["active_graph_pair_status"],
             "active_graph_node_count": len(nodes),
@@ -310,6 +323,7 @@ def main() -> int:
     output_dir.mkdir(parents=True, exist_ok=True)
     write_tsv(output_dir / "public_tf_curation_ledger.tsv", ledger)
     write_tsv(output_dir / "public_tf_traversable_edge_overlay.tsv", traversable)
+    write_tsv(output_dir / "public_tf_mouse_direct_binding_review_queue.tsv", mouse_queue)
     write_tsv(output_dir / "public_tf_old_new_semantic_crosswalk.tsv", crosswalk)
     (output_dir / "public_tf_curation_summary.json").write_text(
         json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8"

@@ -16,6 +16,7 @@ Promotion scope: this repeat audit evaluates the existing v1.1.0 validated overl
 
 Candidate-only and unresolved rows are non-traversable. Validated rows are context-gated.
 The exportable curation overlay contains **3** context-gated rows representing **2** pairs.
+The next review queue contains **112** unpromoted mouse canonical-TF/direct-binding rows from Modules 20B–24B.
 
 ## Context-mode eligibility
 
@@ -35,4 +36,4 @@ The candidate layer lacks structured tissue and cell-type fields; the ledger pre
 Unavailable citation rows: **0**; missing local inputs: **4**.
 Sensitivity smoke benchmark: **not_run** — route_candidates.tsv and route_steps.tsv are absent; identical calibration and evaluation artifacts are unavailable.
 
-The machine-readable ledger, traversable-edge overlay, summary, and old/new semantic crosswalk are stored under `data/processed/public_tf_curation_v2026_09_04/`.
+The machine-readable ledger, mouse direct-binding review queue, traversable-edge overlay, summary, and old/new semantic crosswalk are stored under `data/processed/public_tf_curation_v2026_09_04/`.

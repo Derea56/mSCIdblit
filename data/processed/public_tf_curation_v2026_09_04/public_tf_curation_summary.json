@@ -7294,6 +7294,11 @@
     "data/processed/mechanism_graph_module20_24_v2026_08_30/perturbation_model/feature_registry.tsv",
     "data/processed/calibration_matrices"
   ],
+  "mouse_direct_binding_review_queue": {
+    "all_rows_non_traversable": true,
+    "row_count": 112,
+    "source": "mouse_canonical_tf_direct_binding_rows_not_in_validated_overlay"
+  },
   "promotion_scope": "existing_v1.1.0_validated_overlay_only_no_new_literature_promotions",
   "reconciliation": {
     "active_graph_edge_count": 3154,

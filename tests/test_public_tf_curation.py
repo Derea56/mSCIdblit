@@ -7,6 +7,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from public_tf_curation import (  # noqa: E402
     build_ledger_rows,
+    build_mouse_direct_binding_queue,
     classify_row,
     duplicate_metadata,
     eligible_for_mode,
@@ -103,6 +104,21 @@ class PublicTFCurationTests(unittest.TestCase):
         self.assertEqual(row["source_record_id"], "source-42")
         self.assertEqual(source_locator_status(source), "citation_and_source_record")
         self.assertEqual(row["traversal_eligibility"], "not_traversable")
+
+    def test_mouse_direct_binding_queue_filters_scope_and_validated_rows(self):
+        eligible = candidate(
+            evidence_confidence_tier="C_tflink_source_table_only",
+            canonical_role_status="canonical_tf",
+            mechanism_evidence_type="direct_sequence_specific_tf_binding",
+        )
+        validated_row = validated(layer_record_id="PTF-2")
+        excluded_catalog = dict(eligible, layer_record_id="PTF-3", module="catalog_only")
+        excluded_human = dict(eligible, layer_record_id="PTF-4", species_scope="human")
+        queue = build_mouse_direct_binding_queue(
+            [eligible, validated_row, excluded_catalog, excluded_human], [validated_row]
+        )
+        self.assertEqual([row["source_row_id"] for row in queue], ["PTF-1"])
+        self.assertTrue(queue[0]["missing_evidence"])
 
 
 if __name__ == "__main__":
