@@ -5190,6 +5190,22 @@ promoter-prediction material. The reusable target lanes remain separate from
 the submitted Txlna, Ucn2, Ucn3, and Ulbp1 handoffs and do not establish
 source-to-TF activation or SCI-specific activity.
 
+## Individual review 3365-3372
+
+Seven of the eight holds gained reusable target capacity. Ulbp1→KLRK1 reused
+STAT4/TBX21→KLRK1; Unc5a→ADGRL3 reused AR→ADGRL3; Vcam1→ITGAD_ITGB2 reused
+existing SP1→ITGAD and HIF1A→ITGB2 component lanes; Vcan→TLR1 gained a
+bounded AP-1-family promoter context; Vcl→ALK gained direct MYCN/MYC promoter
+context; and Vegfa→EGFR and Vegfa→FLT1 reused existing STAT1→EGFR and
+HIF1A→FLT1 regulatory lanes. Uts2b→SSTR5 remained on hold: promoter
+mapping and consensus AP-1/SP1 elements did not establish a named activating
+TF-to-SSTR5 relationship with direct factor perturbation.
+
+The reusable target lanes remain separate from the submitted Ulbp1, Unc5a,
+Uts2b, Vcam1, Vcan, Vcl, and Vegfa handoffs and do not establish
+source-to-TF activation or SCI-specific activity. The TLR1 lane is
+regulatory-support rather than a single-subunit direct-occupancy claim.
+
 Six of the eight holds gained reusable target capacity. Try4→F2R and
 Try5→F2R reused EGR1→F2R and SP1→F2R; Try4→F2RL2 and Try5→F2RL2 reused
 NRF2→F2RL2; Try5→F2RL1 reused IRX3→F2RL1; and Try4→PARD3 reused
