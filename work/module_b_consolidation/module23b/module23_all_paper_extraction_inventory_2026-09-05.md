@@ -11,14 +11,16 @@ matches only; no canonical database rows or promotions are created.
 - Distinct stable paper anchors: 1,511
 - Register rows without a stable paper anchor: 82
 - Source-review IDs represented in manifest: 72
+- Private phase-2 archive fallback used: yes
+- Archive filename-token crosswalks used: 5
 
 ## Extraction status
 
 | Status | Anchors |
 |---|---:|
-| awaiting_local_source_acquisition | 1,218 |
-| candidate_extracted_from_abstract_or_metadata | 207 |
-| candidate_extracted_from_full_text | 86 |
+| awaiting_local_source_acquisition | 1,213 |
+| candidate_extracted_from_abstract_or_metadata | 112 |
+| candidate_extracted_from_full_text | 186 |
 
 ## Module coverage
 

@@ -80,7 +80,10 @@ def local_paths(locator: str) -> list[Path]:
     paths: list[Path] = []
     for token in locator.split(";"):
         token = token.strip()
-        if token.startswith("local:"):
+        labeled = re.search(r"local(?:\s+full\s+text)?\s*[:=]\s*(data/\S+|work/\S+)", token, flags=re.I)
+        if labeled:
+            token = labeled.group(1)
+        elif token.lower().startswith("local:"):
             token = token.removeprefix("local:")
         if token.startswith("data/") or token.startswith("work/"):
             path = ROOT / token
@@ -131,11 +134,39 @@ def choose_artifact(paths: list[Path]) -> tuple[Path | None, str, str]:
     existing = [path for path in paths if path.is_file()]
     if not existing:
         return None, "missing", "no_local_artifact"
-    full_text = [path for path in existing if "fulltext" in path.name.lower()]
+    full_text = sorted(
+        [path for path in existing if (
+            "fulltext" in path.name.lower()
+            or path.suffix.lower() == ".pdf"
+            or "_full." in path.name.lower()
+            or "_bioc." in path.name.lower()
+            or (path.suffix.lower() in {".html", ".htm"} and ("pmc" in path.name.lower() or "article" in path.name.lower()))
+        )],
+        key=lambda path: (
+            path.suffix.lower() == ".pdf",
+            path.suffix.lower() not in {".html", ".htm", ".xml", ".json"},
+        ),
+    )
     path = full_text[0] if full_text else existing[0]
     suffix = path.suffix.lower()
-    source_format = "html_full_text" if suffix in {".html", ".htm"} else "xml_or_metadata"
-    if "fulltext" in path.name.lower() and suffix in {".html", ".htm"}:
+    full_text_artifact = (
+        suffix == ".pdf"
+        or "fulltext" in path.name.lower()
+        or "_full." in path.name.lower()
+        or "_bioc." in path.name.lower()
+        or (suffix in {".html", ".htm"} and ("pmc" in path.name.lower() or "article" in path.name.lower()))
+    )
+    if suffix == ".pdf":
+        source_format = "pdf_full_text"
+    elif suffix in {".html", ".htm"}:
+        source_format = "html_full_text" if full_text_artifact else "html_or_metadata"
+    elif suffix == ".json" and full_text_artifact:
+        source_format = "bioc_full_text"
+    elif suffix == ".xml" and full_text_artifact:
+        source_format = "xml_full_text"
+    else:
+        source_format = "xml_or_metadata"
+    if full_text_artifact:
         status = "local_full_text_artifact"
     else:
         status = "local_abstract_or_metadata_artifact"
