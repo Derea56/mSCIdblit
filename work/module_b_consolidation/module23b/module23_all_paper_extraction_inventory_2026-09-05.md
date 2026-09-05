@@ -14,14 +14,14 @@ matches only; no canonical database rows or promotions are created.
 - Private phase-2 archive fallback used: yes
 - Archive filename-token crosswalks used: 263
 - Additional-root filename-token crosswalks used: 0
-- Additional-root manifest crosswalks used: 968
+- Additional-root manifest crosswalks used: 969
 
 ## Extraction status
 
 | Status | Anchors |
 |---|---:|
-| awaiting_local_source_acquisition | 12 |
-| candidate_extracted_from_abstract_or_metadata | 1,022 |
+| awaiting_local_source_acquisition | 11 |
+| candidate_extracted_from_abstract_or_metadata | 1,023 |
 | candidate_extracted_from_full_text | 477 |
 
 ## Module coverage

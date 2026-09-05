@@ -47,7 +47,7 @@ def stable_anchors(value: str) -> list[str]:
         found.add("PMCID:" + match.group(1).upper())
     for match in re.finditer(r"(?i)\bPMID\s*[:_-]?\s*(\d{4,9})\b", value or ""):
         found.add("PMID:" + match.group(1))
-    for match in re.finditer(r"(?i)\bDOI\s*:\s*(10\.\d{4,9}/[^;\s]+)", value or ""):
+    for match in re.finditer(r"(?i)\bDOI\s*:\s*(10\.\d{4,9}/[^;\s]+(?:;[0-9A-Za-z]+(?:-[0-9A-Za-z]+)?)?)", value or ""):
         doi = match.group(1).rstrip(".,)]}'\"").lower().replace("_", "/")
         found.add("DOI:" + doi)
     for match in re.finditer(r"(?i)pubmed\.ncbi\.nlm\.nih\.gov/(\d{4,9})", value or ""):
