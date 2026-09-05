@@ -5012,6 +5012,19 @@ Seven of the eight rows retained reusable target capacity. Slitrk6-Ptprs reused 
 
 These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human/mouse adipose, liver, neuronal, inner-ear, and promoter-haplotype systems, plus chicken/quail muscle. The individual search log contains 3108 rows through M22B-IND-3108. This tranche added seven standalone TF-to-target edges and seven evidence records covering six distinct CHRNA targets, reused a registered PTPRS target context for one row, and kept one row on hold.
 
+## Individual review 3181-3188
+
+Audits 3181-3188 covered the Tac2/TACR3, Tac4/TACR1, TAFA4/FPR1,
+TAX1BP3/ADGRB1-2, TCN2/CNR1, and TDGF1/ACVR1C-ACVR2A handoffs. Three rows
+gained reusable target capacity: the TCN2/CNR1 search reused the registered
+CTNNB1-to-CCND1 context from an endocannabinoid hepatic-progenitor study, and
+both TDGF1 receptor rows reused the registered SMAD2/3-to-Lefty1 Nodal/Activin
+context. The other five rows retained holds because the evidence stopped at
+receptor pharmacology, inflammatory or spinal-cord function, unresolved
+extracellular pairing, or non-TF pathway output. These contexts remain separate
+from the submitted handoffs and do not promote the original pathway/function-
+boundary rows.
+
 ## Individual review 3173-3180
 
 Audits 3173-3180 covered the eight TPH2/HTR1B, TXA2/TBXAS1/TBXA2R, TAC1/DPP4,
