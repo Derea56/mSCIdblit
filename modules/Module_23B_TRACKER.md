@@ -164,3 +164,7 @@ B059 promotes the existing 23B PLAU/uPA–PLAUR/uPAR–β1-integrin complex edge
 ## Review-led expansion: B060 (2026-09-05)
 
 B060 promotes the existing paired 23B EFNA5/ephrin-A5–EPHA10 edges using acquired primary PMC and PubMed snapshots. EphA10s/ephrin-A5 cellular association and isoform-specific β-catenin/invasion function are consolidated at medium confidence, while secreted EphA10s versus membrane pseudo-kinase EphA10, possible EphA2 contribution, no canonical full-length activation, and no-traumatic-SCI limits remain explicit. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B061 (2026-09-05)
+
+B061 adds two new paired 23B COL15A1/COLXV–DDR1 edges. Primary pancreatic-adenocarcinoma assays support COLXV–DDR1 cellular complex association by co-immunoprecipitation and COLXV-associated suppression of DDR1/Pyk2 signaling with reduced cell scatter and invasion. The two edges are consolidated at medium and medium-high confidence with explicit no-purified-affinity, no-direct-α2β1-binding, no-linear-ordering, no-terminal-TF, and no-traumatic-SCI limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
