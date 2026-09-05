@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Record bounded exact-pair literature adjudication for the mouse TF queue.
+"""Record expanded exact-pair literature adjudication for the mouse TF queue.
 
 This is an audit ledger, not an automatic promotion mechanism.  A queue row
 is promoted only after a reviewer supplies an exact-pair primary citation and
@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_QUEUE = ROOT / "data/processed/public_tf_curation_v2026_09_04/public_tf_mouse_direct_binding_review_queue.tsv"
 DEFAULT_OUTPUT = ROOT / "data/processed/public_tf_curation_v2026_09_04/public_tf_queue_adjudication.tsv"
 DEFAULT_SUMMARY = ROOT / "data/processed/public_tf_curation_v2026_09_04/public_tf_queue_adjudication_summary.json"
+DEFAULT_MANIFEST = ROOT / "data/processed/public_tf_curation_v2026_09_04/public_tf_expanded_search_manifest.json"
 
 
 def read_tsv(path: Path) -> list[dict[str, str]]:
@@ -78,7 +79,28 @@ def near_match_note(regulator: str, target: str) -> str:
     return notes.get(pair, "")
 
 
-def adjudicate(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+def adjudicate(
+    rows: list[dict[str, str]], manifest: Mapping[str, object] | None = None
+) -> list[dict[str, str]]:
+    manifest = manifest or {}
+    search_status = str(
+        manifest.get(
+            "search_status",
+            "bounded_exact_pair_search_completed_no_exact_primary_evidence_identified",
+        )
+    )
+    search_scope = str(
+        manifest.get(
+            "search_scope",
+            "PubMed/web searches using regulator, target, mouse, direct-binding/functional-target terms; related primary papers checked when surfaced",
+        )
+    )
+    manifest_id = str(manifest.get("manifest_id", "unknown"))
+    search_layers = ";".join(
+        str(layer.get("name", "unknown"))
+        for layer in manifest.get("search_layers", [])
+        if isinstance(layer, Mapping)
+    ) or "unknown"
     output: list[dict[str, str]] = []
     for row in rows:
         regulator = value(row, "regulator")
@@ -93,8 +115,10 @@ def adjudicate(rows: list[dict[str, str]]) -> list[dict[str, str]]:
                 "curation_status": "candidate_only",
                 "traversal_eligibility": "not_traversable",
                 "review_disposition": "retain_candidate_only_no_exact_pair_promotion",
-                "search_status": "bounded_exact_pair_search_completed_no_exact_primary_evidence_identified",
-                "search_scope": "PubMed/web searches using regulator, target, mouse, direct-binding/functional-target terms; related primary papers checked when surfaced",
+                "search_status": search_status,
+                "search_scope": search_scope,
+                "search_manifest_id": manifest_id,
+                "search_layers": search_layers,
                 "search_terms": f'"{regulator}" "{target}" mouse direct binding functional target',
                 "exact_pair_evidence": "not_identified",
                 "binding_evidence": "TFLink/GTRD source-table association only; underlying primary occupancy record not identified",
@@ -103,7 +127,7 @@ def adjudicate(rows: list[dict[str, str]]) -> list[dict[str, str]]:
                 "tissue_cell_context": "unknown",
                 "sci_context": "unknown",
                 "effect_direction": "unknown",
-                "confidence": "low_bounded_search_only",
+                "confidence": "low_expanded_search_only",
                 "primary_citation": "unknown",
                 "source_record_id": value(row, "source_record_id") or "unknown",
                 "source_provenance": (
@@ -113,7 +137,7 @@ def adjudicate(rows: list[dict[str, str]]) -> list[dict[str, str]]:
                 ),
                 "limitations": (
                     "No exact-pair primary citation with direct sequence-specific binding "
-                    "and functional target response was identified in this bounded pass; "
+                    "and functional target response was identified in the expanded pass; "
                     "full-text review, additional databases, and underlying GTRD experiment "
                     "accession remain possible follow-up work."
                 ),
@@ -129,11 +153,13 @@ def main() -> int:
     parser.add_argument("--queue", type=Path, default=DEFAULT_QUEUE)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--summary", type=Path, default=DEFAULT_SUMMARY)
+    parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
     args = parser.parse_args()
     rows = read_tsv(args.queue)
     if len(rows) != 112:
         raise ValueError(f"Expected 112 queue rows; observed {len(rows)}")
-    adjudicated = adjudicate(rows)
+    manifest = json.loads(args.manifest.read_text(encoding="utf-8")) if args.manifest.exists() else {}
+    adjudicated = adjudicate(rows, manifest)
     write_tsv(args.output, adjudicated)
     summary = {
         "schema_version": "mscidblit_public_tf_queue_adjudication_summary_v1",
@@ -142,7 +168,11 @@ def main() -> int:
         "exact_pair_evidence": dict(Counter(row["exact_pair_evidence"] for row in adjudicated)),
         "traversable_rows_added": 0,
         "primary_citations_added": 0,
-        "method": "bounded exact-pair literature search; no automatic promotion",
+        "method": manifest.get(
+            "method",
+            "expanded exact-pair literature search; no automatic promotion",
+        ),
+        "search_manifest": str(args.manifest),
         "limitations": [
             "Search results do not establish absence from all literature.",
             "TFLink/GTRD source-table metadata do not substitute for the underlying exact-pair primary record.",

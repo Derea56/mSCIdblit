@@ -155,7 +155,7 @@ def markdown_summary(payload: Mapping[str, object]) -> str:
         "",
         f"Source release: `{payload['release_id']}`.",
         f"Rows reviewed: **{payload['rows_reviewed']}**; distinct regulator-target pairs: **{payload['distinct_pairs']}**.",
-        "Promotion scope: this audit evaluates the existing v1.1.0 validated overlay and records a bounded review of the unpromoted mouse/direct-binding queue; it makes no new literature promotions.",
+        "Promotion scope: this audit evaluates the existing v1.1.0 validated overlay and records an expanded review of the unpromoted mouse/direct-binding queue; it makes no new literature promotions.",
         "",
         "## Curation outcomes",
         "",
@@ -175,7 +175,8 @@ def markdown_summary(payload: Mapping[str, object]) -> str:
         "Candidate-only and unresolved rows are non-traversable. Validated rows are context-gated.",
         f"The exportable curation overlay contains **{payload['traversable_overlay']['row_count']}** context-gated rows representing **{payload['traversable_overlay']['unique_pair_count']}** pairs.",
         f"The next review queue contains **{payload['mouse_direct_binding_review_queue']['row_count']}** unpromoted mouse canonical-TF/direct-binding rows from Modules 20B–24B.",
-        f"The bounded queue adjudication reviewed **{payload['queue_adjudication']['rows_reviewed']}** rows: **{payload['queue_adjudication']['promoted_rows']}** promoted and **{payload['queue_adjudication']['retained_candidate_rows']}** retained as candidate-only.",
+        f"The expanded queue adjudication reviewed **{payload['queue_adjudication']['rows_reviewed']}** rows: **{payload['queue_adjudication']['promoted_rows']}** promoted and **{payload['queue_adjudication']['retained_candidate_rows']}** retained as candidate-only.",
+        f"Expanded search status: **{payload['expanded_search']['status']}**; no exact queued pair met the mouse direct-binding, functional-response, provenance, and direction contract. Search layers and primary near-match citations are listed in `{payload['expanded_search']['manifest']}`.",
         "",
         "## Context-mode eligibility",
         "",
@@ -197,7 +198,7 @@ def markdown_summary(payload: Mapping[str, object]) -> str:
         f"Unavailable citation rows: **{payload['unavailable_citation_rows']}**; missing local inputs: **{len(payload['missing_local_inputs'])}**.",
         f"Sensitivity smoke benchmark: **{payload['sensitivity_smoke']['status']}** — {payload['sensitivity_smoke']['reason']}.",
         "",
-        "The machine-readable ledger, mouse direct-binding review queue, traversable-edge overlay, summary, and old/new semantic crosswalk are stored under `data/processed/public_tf_curation_v2026_09_04/`.",
+        "The machine-readable ledger, mouse direct-binding review queue, expanded search manifest, traversable-edge overlay, summary, and old/new semantic crosswalk are stored under `data/processed/public_tf_curation_v2026_09_04/`.",
         "",
     ]
     return "\n".join(lines)
@@ -214,6 +215,7 @@ def main() -> int:
     active_dir = (args.active_dir or source_dir).resolve()
     previous_dir = args.previous_dir.resolve()
     output_dir = args.output_dir.resolve()
+    queue_adjudication_summary_path = output_dir / "public_tf_queue_adjudication_summary.json"
 
     candidates_path = source_dir / "public_tf_candidate_layer.tsv"
     validated_path = source_dir / "public_tf_validated_edge_layer.tsv"
@@ -264,10 +266,21 @@ def main() -> int:
         if int(row["duplicate_module_count"]) > 1
     }
     traversable = [row for row in ledger if row["traversal_eligibility"] == "context_gated"]
+    queue_adjudication_summary = (
+        json.loads(queue_adjudication_summary_path.read_text(encoding="utf-8"))
+        if queue_adjudication_summary_path.exists()
+        else {}
+    )
+    search_manifest_path = output_dir / "public_tf_expanded_search_manifest.json"
+    search_manifest = (
+        json.loads(search_manifest_path.read_text(encoding="utf-8"))
+        if search_manifest_path.exists()
+        else {}
+    )
     payload = {
         "schema_version": "mscidblit_public_tf_curation_summary_v1",
         "release_id": "module20_24_mechanism_graph:v1.1.0",
-        "promotion_scope": "existing_v1.1.0_validated_overlay_plus_bounded_queue_adjudication_no_new_literature_promotions",
+        "promotion_scope": "existing_v1.1.0_validated_overlay_plus_expanded_queue_adjudication_no_new_literature_promotions",
         "source_dir": relative(source_dir),
         "active_dir": relative(active_dir),
         "rows_reviewed": len(candidate_rows),
@@ -293,10 +306,26 @@ def main() -> int:
         },
         "queue_adjudication": {
             "rows_reviewed": len(mouse_queue),
-            "promoted_rows": 0,
-            "retained_candidate_rows": len(mouse_queue),
-            "status": "bounded_exact_pair_search_completed_no_promotions",
+            "promoted_rows": queue_adjudication_summary.get("traversable_rows_added", 0),
+            "retained_candidate_rows": len(mouse_queue) - queue_adjudication_summary.get("traversable_rows_added", 0),
+            "status": queue_adjudication_summary.get(
+                "method", "expanded_exact_pair_search_completed_no_promotions"
+            ),
             "ledger": "data/processed/public_tf_curation_v2026_09_04/public_tf_queue_adjudication.tsv",
+            "search_manifest": "data/processed/public_tf_curation_v2026_09_04/public_tf_expanded_search_manifest.json",
+        },
+        "expanded_search": {
+            "status": search_manifest.get(
+                "search_status",
+                "not_recorded",
+            ),
+            "manifest": "data/processed/public_tf_curation_v2026_09_04/public_tf_expanded_search_manifest.json",
+            "rows_promoted": search_manifest.get("promotion_decision", {}).get(
+                "rows_promoted", 0
+            ),
+            "primary_evidence_leads": len(
+                search_manifest.get("primary_evidence_leads", [])
+            ),
         },
         "reconciliation": {
             "active_graph_pair_status": curation["active_graph_pair_status"],

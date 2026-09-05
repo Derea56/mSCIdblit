@@ -141,6 +141,31 @@ class PublicTFCurationTests(unittest.TestCase):
         self.assertEqual(rows[0]["effect_direction"], "unknown")
         self.assertIn("Acvr1c", rows[0]["reviewer_notes"])
 
+    def test_expanded_search_manifest_is_retained_without_promotion(self):
+        rows = adjudicate(
+            [
+                {
+                    "source_row_id": "PTF-QUEUE-2",
+                    "module": "20B",
+                    "regulator": "PRDM15",
+                    "target": "Adgrl1",
+                    "species": "mouse",
+                    "source_record_id": "tflink:mouse:2",
+                    "tflink_pubmed_id": "27924024",
+                }
+            ],
+            {
+                "manifest_id": "expanded-test",
+                "search_status": "expanded_alias_and_primary_source_search_completed_no_exact_primary_evidence_identified",
+                "search_scope": "aliases and primary source follow-up",
+                "search_layers": [{"name": "exact_alias_followups"}],
+            },
+        )
+        self.assertEqual(rows[0]["search_manifest_id"], "expanded-test")
+        self.assertEqual(rows[0]["search_layers"], "exact_alias_followups")
+        self.assertEqual(rows[0]["curation_status"], "candidate_only")
+        self.assertEqual(rows[0]["traversal_eligibility"], "not_traversable")
+
 
 if __name__ == "__main__":
     unittest.main()
