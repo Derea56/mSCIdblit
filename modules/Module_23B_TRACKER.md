@@ -172,3 +172,7 @@ B061 adds two new paired 23B COL15A1/COLXV–DDR1 edges. Primary pancreatic-aden
 ## Review-led expansion: B062 (2026-09-05)
 
 B062 promotes the existing paired 23B EGF–EGFR-Src-CAV1/Grb7 relay using acquired primary PubMed and PMC snapshots. EGF/growth-factor assays support CAV1 Tyr14 phosphorylation, Grb7 binding, and migration, while hypoxia/CAV1 perturbation assays support CAV1–EGFR association, dimerization, and ligand-independent EGFR phosphorylation. The edge is consolidated at medium confidence with distinct-context, downstream-scaffold, no-direct-EGF-CAV1, incomplete-linear-ordering, no-terminal-TF, and no-traumatic-SCI limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B063 (2026-09-05)
+
+B063 promotes the existing paired 23B HGF–β1-integrin/ILK repair-function edge using an acquired primary PMC and PubMed snapshot. Primary rat wound and epidermal-cell assays support HGF-enhanced reepithelialization, β1-integrin/ILK induction, and ILK-dependent proliferation, migration, and invasion. The edge is consolidated at medium confidence with canonical-MET, functional-dependence, no-direct-HGF–ITGB1, preliminary-dedifferentiation, non-SCI wound, no-terminal-TF, and no-traumatic-SCI limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
