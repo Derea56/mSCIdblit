@@ -48,3 +48,7 @@ B029 promotes five new 23B edges paired one-to-one with Module 23A for HMGB1: di
 ## Review-led expansion: B030 (2026-09-04)
 
 B030 promotes four new 23B edges paired one-to-one with Module 23A for S100A8/A9 calprotectin dimers: direct TLR4/MD2 binding, the TLR4-MyD88-IRAK-1/NF-kappaB/MAPK relay, TNF/IL-8 phagocyte output, and an SCI-associated myeloid context edge. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Dimer/tetramer state, calcium/zinc and protein-preparation limits, RAGE/Mac-1 separation, and the medium-confidence observational/non-causal SCI context remain explicit; canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B031 (2026-09-04)
+
+B031 promotes four new 23B edges paired one-to-one with Module 23A for extracellular histone H3/H4: non-SCI histone H4 direct TLR4/MD2 binding, SCI histone TLR2-YB-1 retrograde relay, SCI neurite/axon-growth inhibition, and observational histone H3 accumulation in injured CNS. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. The TLR4/MD2 result remains a non-SCI histone-H4 comparator; SCI causal evidence is separated at TLR2/YB-1 and neurite-inhibition layers, and the medium-confidence accumulation edge remains observational. Histone subtype, mixed-preparation, cleavage, and injury-model limits remain explicit; canonical signaling tables and simulator outputs remain untouched.
