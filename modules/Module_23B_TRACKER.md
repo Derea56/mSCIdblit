@@ -212,3 +212,7 @@ B071 promotes the existing paired 23B S100A8-containing preparation -> Mac-1 fun
 ## Review-led expansion: B072 (2026-09-05)
 
 B072 adds a new paired 23B medium-high-confidence VPAC2 -> PKA-dependent cortical neurite-maturation function edge using primary mouse cortical neurons. A selective VPAC2 agonist reduces axon and dendrite outgrowth and branching, and the effect is blocked by VPAC2 antagonism or receptor loss and by PKA inhibition. The edge is receptor-to-function evidence rather than a PACAP ligand claim: PACAP38 effects in the same study are not assigned exclusively to VPAC2, and direct ligand binding, terminal TF, and traumatic-SCI transfer remain separate. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B073 (2026-09-05)
+
+B073 adds a new paired 23B medium-high-confidence EFNB1 ligand-side reverse-signaling relay using a primary HEK293 transfection study. Ephrin-B1 expression activates JNK through TAK1/MKK4/MKK7, requires the cytoplasmic domain, persists after removal of all six intracellular tyrosines, and is blocked by JNK inhibition but not Src inhibition. The edge is deliberately receptor-unassigned: no EphB receptor, direct binary interaction, exact relay ordering, terminal TF, native tissue mechanism, or traumatic-SCI transfer is asserted; the existing low/conflicted EFNB1-to-EphB6 JNK/Rac1 edge remains separate. Canonical signaling tables and simulator outputs remain untouched.
