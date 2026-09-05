@@ -164,3 +164,7 @@ B046 adds one review-led EFNA1–EPHA8 candidate and one source-backed A-layer e
 ## Review-led expansion: B047 (2026-09-05)
 
 B047 adds one review-led EFNA2–EPHA5 candidate and one source-backed A-layer edge: EphA5/ephrin-A2 binding context is associated with topographically selective retinal axon repulsion in vitro and normal dLGN mapping in vivo. The retinal guidance function is promoted with explicit receptor-association rather than receptor-exclusive causality, non-SCI visual-system, and no-complete-relay limits. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B048 (2026-09-05)
+
+B048 promotes the existing EFNA2–EPHA8 binding/activation edge using primary mouse-brain ligand and NIH3T3 receptor-system evidence: the historical Elf-1/Cek7-L ligand represented in the local register by EFNA2 binds and activates Eek/EphA8 and Eek-TrkB. Historical nomenclature, recombinant/heterologous context, no-downstream-program, no-native-neural, and no-traumatic-SCI-transfer limits remain explicit. No Module 20A–22A ledger is modified.
