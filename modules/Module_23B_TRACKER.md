@@ -168,3 +168,7 @@ B060 promotes the existing paired 23B EFNA5/ephrin-A5–EPHA10 edges using acqui
 ## Review-led expansion: B061 (2026-09-05)
 
 B061 adds two new paired 23B COL15A1/COLXV–DDR1 edges. Primary pancreatic-adenocarcinoma assays support COLXV–DDR1 cellular complex association by co-immunoprecipitation and COLXV-associated suppression of DDR1/Pyk2 signaling with reduced cell scatter and invasion. The two edges are consolidated at medium and medium-high confidence with explicit no-purified-affinity, no-direct-α2β1-binding, no-linear-ordering, no-terminal-TF, and no-traumatic-SCI limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B062 (2026-09-05)
+
+B062 promotes the existing paired 23B EGF–EGFR-Src-CAV1/Grb7 relay using acquired primary PubMed and PMC snapshots. EGF/growth-factor assays support CAV1 Tyr14 phosphorylation, Grb7 binding, and migration, while hypoxia/CAV1 perturbation assays support CAV1–EGFR association, dimerization, and ligand-independent EGFR phosphorylation. The edge is consolidated at medium confidence with distinct-context, downstream-scaffold, no-direct-EGF-CAV1, incomplete-linear-ordering, no-terminal-TF, and no-traumatic-SCI limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.

@@ -218,3 +218,7 @@ B060 promotes the existing EFNA5/ephrin-A5–EPHA10 edges using acquired primary
 ## Review-led expansion: B061 (2026-09-05)
 
 B061 adds two paired COL15A1/COLXV–DDR1 edges using acquired primary PMC and PubMed snapshots. The primary pancreatic-adenocarcinoma study supports cellular COLXV–DDR1 association by co-immunoprecipitation and separately supports COLXV-associated suppression of DDR1 signaling, Pyk2 phosphorylation, pancreatic-cell scatter, and invasion. The edges are recorded at medium and medium-high confidence, respectively, with no purified COLXV–DDR1 affinity, no direct COLXV–α2β1 binding or linear α2β1→DDR1 ordering, no terminal TF, and no-traumatic-SCI limits explicit. No Module 20A–22A ledger was modified.
+
+## Review-led expansion: B062 (2026-09-05)
+
+B062 promotes the existing EGF–EGFR-Src-CAV1/Grb7 relay using acquired primary PubMed and PMC snapshots. The primary studies support EGF/growth-factor-associated CAV1 Tyr14 phosphorylation, Grb7 binding, and migration, together with CAV1–EGFR association and ligand-independent EGFR activation under hypoxia. The edge is promoted to medium with distinct cell and perturbation contexts, downstream-scaffold, no-direct-EGF-CAV1, incomplete-linear-ordering, no-terminal-TF, and no-traumatic-SCI limits explicit. No Module 20A–22A ledger was modified.
