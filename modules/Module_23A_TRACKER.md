@@ -160,3 +160,7 @@ B045 adds one review-led EFNA1–EPHA5 candidate and one source-backed A-layer e
 ## Review-led expansion: B046 (2026-09-05)
 
 B046 adds one review-led EFNA1–EPHA8 candidate and one source-backed A-layer edge: ephrin-A1-Fc binds EphA8 and induces EphA8/EphA8-TrkB tyrosine phosphorylation in NIH3T3 fibroblast receptor systems. The receptor-proximal activation layer is promoted with explicit recombinant-fusion and heterologous-fibroblast limits; no downstream cellular program, native neural context, or traumatic-SCI transfer is inferred. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B047 (2026-09-05)
+
+B047 adds one review-led EFNA2–EPHA5 candidate and one source-backed A-layer edge: EphA5/ephrin-A2 binding context is associated with topographically selective retinal axon repulsion in vitro and normal dLGN mapping in vivo. The retinal guidance function is promoted with explicit receptor-association rather than receptor-exclusive causality, non-SCI visual-system, and no-complete-relay limits. No Module 20A–22A ledger is modified.
