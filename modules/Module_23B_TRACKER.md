@@ -70,3 +70,7 @@ B035 promotes six new 23B edges paired one-to-one with Module 23A for tenascin-R
 ## Review-led expansion: B036 (2026-09-05)
 
 B036 promotes two new 23B edges paired one-to-one with Module 23A for tenascin-R sodium-channel interactions: direct TNR FNIII1-2/6-8 binding to the purified type-IIA rat brain sodium-channel complex and to the beta2 extracellular domain. Exact domain and subunit resolution, proposed channel clustering/localization/activity interpretation, native-complex beta2 mediation, non-SCI comparator scope, and the absence of a downstream relay or traumatic-SCI transfer remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B037 (2026-09-05)
+
+B037 promotes three new 23B edges paired one-to-one with Module 23A for tenascin-R oligodendrocyte interactions: direct TNR-sulfatide binding, TNR-substrate adhesion of O4-positive oligodendrocytes, and TNR-induced myelin-gene expression/terminal differentiation of O4-positive progenitors. Isoform, cell-stage, glycolipid, in-vitro, non-SCI myelination, and no-relay limits remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.

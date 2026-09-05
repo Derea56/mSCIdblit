@@ -120,3 +120,7 @@ B035 adds one review-led tenascin-R lectican/CSPG candidate and six source-backe
 ## Review-led expansion: B036 (2026-09-05)
 
 B036 adds one review-led tenascin-R sodium-channel candidate and two source-backed A-layer edges: direct TNR FNIII1-2/6-8 binding to the purified type-IIA rat brain sodium-channel complex and to the beta2 extracellular domain. Proposed channel clustering, localization, activity effects, native-complex beta2 mediation, non-SCI comparator scope, and the absence of a downstream relay or traumatic-SCI transfer remain explicit. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B037 (2026-09-05)
+
+B037 adds one review-led tenascin-R oligodendrocyte candidate and three source-backed A-layer edges: direct TNR binding to membrane sulfatide, TNR-substrate adhesion of O4-positive oligodendrocytes, and TNR-induced myelin-gene expression/terminal differentiation of O4-positive progenitors. Isoform, cell-stage, glycolipid, in-vitro, non-SCI myelination, and no-relay limits remain explicit. No Module 20A–22A ledger is modified.
