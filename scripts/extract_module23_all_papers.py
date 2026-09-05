@@ -27,12 +27,14 @@ REGISTER_PATHS = {
 MANIFEST = ROOT / "work/module23a/module23a_second_pass_source_manifest.tsv"
 DEFAULT_OUTPUT = ROOT / "work/module_b_consolidation/module23b/module23_all_paper_extraction_inventory_2026-09-05.tsv"
 DEFAULT_REPORT = ROOT / "work/module_b_consolidation/module23b/module23_all_paper_extraction_inventory_2026-09-05.md"
+DEFAULT_ARCHIVE = ROOT.parent / "mSCIdblit_local_archive/module20_24_supervised_cli_phase2_2026-08-31"
 
 FIELDS = [
     "paper_anchor", "anchor_type", "module_coverage", "source_review_ids",
     "associated_evidence_count", "associated_edge_count", "associated_evidence_ids",
     "associated_edge_ids", "local_source_paths", "source_artifact_status",
-    "source_format", "candidate_excerpt", "excerpt_sentence_index",
+    "selected_artifact_path", "artifact_resolution_method", "source_format",
+    "candidate_excerpt", "excerpt_sentence_index",
     "excerpt_match_terms", "extraction_method", "paper_extraction_status",
     "human_validation_status", "promotion_status",
 ]
@@ -74,7 +76,37 @@ def add_anchor(records: dict[str, dict[str, object]], anchor: str, module: str, 
         record["summaries"].append(summary)
 
 
-def build(output: Path, report: Path) -> None:
+def physical_path(logical: Path, archive_root: Path | None) -> Path:
+    """Resolve a known private phase-2 archive path without copying it."""
+    if logical.is_file():
+        return logical
+    phase2_root = ROOT / "data/raw/evidence/module20_24_supervised_cli_phase2"
+    if archive_root is not None and logical.is_relative_to(phase2_root):
+        return archive_root / logical.relative_to(phase2_root)
+    return logical
+
+
+def archive_index(archive_root: Path | None) -> dict[str, set[Path]]:
+    """Index filename PMID/PMCID tokens for conservative artifact crosswalks."""
+    index: dict[str, set[Path]] = defaultdict(set)
+    if archive_root is None or not archive_root.is_dir():
+        return index
+    for path in archive_root.iterdir():
+        if not path.is_file():
+            continue
+        for token in re.findall(r"(?i)PMC\d{3,10}|\b\d{6,9}\b", path.name):
+            index[token.upper()].add(path)
+    return index
+
+
+def filename_tokens(paths: list[Path]) -> set[str]:
+    tokens: set[str] = set()
+    for path in paths:
+        tokens.update(token.upper() for token in re.findall(r"(?i)PMC\d{3,10}|\b\d{6,9}\b", path.name))
+    return tokens
+
+
+def build(output: Path, report: Path, archive_root: Path | None) -> None:
     records: dict[str, dict[str, object]] = {}
     unanchored: Counter[str] = Counter()
     register_rows = 0
@@ -106,13 +138,21 @@ def build(output: Path, report: Path) -> None:
         for anchor in anchors:
             add_anchor(records, anchor, "23A", synthetic, paths, [review_id] if review_id else [])
 
+    archive_files = archive_index(archive_root)
     rows: list[dict[str, str]] = []
     status_counts: Counter[str] = Counter()
     module_counts: Counter[str] = Counter()
     for anchor in sorted(records):
         record = records[anchor]
-        paths = sorted(path for path in record["paths"] if path.is_file())
-        artifact, source_format, artifact_status = choose_artifact(paths)
+        logical_paths = sorted(record["paths"])
+        declared_pairs = [(path, physical_path(path, archive_root)) for path in logical_paths]
+        physical_paths = [physical for _, physical in declared_pairs if physical.is_file()]
+        alternate_paths = sorted({
+            path for token in filename_tokens(logical_paths)
+            for path in archive_files.get(token, set())
+        })
+        existing_physical_paths = list(dict.fromkeys(physical_paths + alternate_paths))
+        artifact, source_format, artifact_status = choose_artifact(existing_physical_paths)
         combined_summary = " ".join(record["summaries"])
         excerpt = ""
         sentence_index = 0
@@ -130,6 +170,23 @@ def build(output: Path, report: Path) -> None:
         modules = ";".join(sorted(record["modules"]))
         module_counts[modules] += 1
         status_counts[extraction_status] += 1
+        selected_logical = ""
+        resolution_method = "no_artifact"
+        if artifact is not None:
+            for logical, physical in declared_pairs:
+                if physical == artifact:
+                    selected_logical = str(logical.relative_to(ROOT))
+                    resolution_method = "register_declared_path"
+                    break
+            if not selected_logical and archive_root is not None and artifact.is_relative_to(archive_root):
+                selected_logical = str((
+                    ROOT / "data/raw/evidence/module20_24_supervised_cli_phase2"
+                    / artifact.relative_to(archive_root)
+                ).relative_to(ROOT))
+                resolution_method = "archive_filename_token_crosswalk"
+            if not selected_logical:
+                selected_logical = str(artifact)
+                resolution_method = "resolved_path"
         rows.append({
             "paper_anchor": anchor,
             "anchor_type": anchor.split(":", 1)[0],
@@ -139,8 +196,10 @@ def build(output: Path, report: Path) -> None:
             "associated_edge_count": str(len(record["edge_ids"])),
             "associated_evidence_ids": ";".join(sorted(record["evidence_ids"])),
             "associated_edge_ids": ";".join(sorted(record["edge_ids"])),
-            "local_source_paths": "; ".join(str(path.relative_to(ROOT)) for path in paths),
+            "local_source_paths": "; ".join(str(path.relative_to(ROOT)) for path in logical_paths),
             "source_artifact_status": artifact_status if artifact is not None else "no_local_artifact",
+            "selected_artifact_path": selected_logical,
+            "artifact_resolution_method": resolution_method,
             "source_format": source_format if artifact is not None else "not_acquired",
             "candidate_excerpt": excerpt,
             "excerpt_sentence_index": str(sentence_index),
@@ -171,6 +230,8 @@ def build(output: Path, report: Path) -> None:
         f"- Distinct stable paper anchors: {len(rows):,}",
         f"- Register rows without a stable paper anchor: {sum(unanchored.values()):,}",
         f"- Source-review IDs represented in manifest: {len(manifest_review_ids):,}",
+        f"- Private phase-2 archive fallback used: {'yes' if archive_root and archive_root.is_dir() else 'no'}",
+        f"- Archive filename-token crosswalks used: {sum(row['artifact_resolution_method'] == 'archive_filename_token_crosswalk' for row in rows):,}",
         "",
         "## Extraction status",
         "",
@@ -210,8 +271,14 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--report", type=Path, default=DEFAULT_REPORT)
+    parser.add_argument(
+        "--archive-root",
+        type=Path,
+        default=DEFAULT_ARCHIVE if DEFAULT_ARCHIVE.is_dir() else None,
+        help="Optional private phase-2 artifact archive used read-only for known logical paths.",
+    )
     args = parser.parse_args()
-    build(args.output, args.report)
+    build(args.output, args.report, args.archive_root)
 
 
 if __name__ == "__main__":
