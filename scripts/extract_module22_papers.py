@@ -13,6 +13,7 @@ fetched by this script.
 from __future__ import annotations
 
 import csv
+import glob
 import re
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -88,10 +89,83 @@ INPUTS = [
         "handoff_field": "handoff_id",
         "context_fields": ("decision_basis", "handoff_limitations", "edge_limitations", "evidence_limitations"),
     },
+    {
+        "lane": "module22a_handoff_source_evidence",
+        "path": ROOT / "work" / "module21_relay" / "module21a_pair_relay_evidence_detail.tsv",
+        "locator_field": "source_locators",
+        "record_field": "evidence_id",
+        "edge_field": "",
+        "evidence_field": "evidence_id",
+        "handoff_field": "__handoff_ids",
+        "context_fields": ("evidence_summary", "limitations"),
+        "only_referenced_by_module22a": True,
+    },
+]
+
+# These audit ledgers are part of the Module 22 paper-generation trail even
+# when a citation has not yet been copied into the canonical evidence table.
+# They are discovered by their fixed Module 22 directories so new numbered
+# batches are included on the next run without manually editing this list.
+for _path in sorted(glob.glob(str(ROOT / "work" / "module22b_low_confidence_upgrade_audit" / "*.tsv"))):
+    INPUTS.append({
+        "lane": Path(_path).stem,
+        "path": Path(_path),
+        "locator_field": "source_locator",
+        "record_field": "b_evidence_id",
+        "edge_field": "b_edge_id",
+        "evidence_field": "b_evidence_id",
+        "handoff_field": "",
+        "context_fields": ("decision_basis",),
+    })
+for _path in sorted(glob.glob(str(ROOT / "work" / "module22b_tf_regulon_promotion_audit" / "*.tsv"))):
+    _name = Path(_path).name
+    if _name == "module22b_general_tf_regulon_promotion_batch001.tsv":
+        INPUTS.append({
+            "lane": Path(_path).stem,
+            "path": Path(_path),
+            "locator_fields": ("primary_pmids", "corroborating_pmids"),
+            "record_field": "curation_id",
+            "edge_field": "b_edge_id",
+            "evidence_field": "b_evidence_id",
+            "handoff_field": "",
+            "context_fields": ("cell_type_context", "upstream_sci_activation_claim"),
+        })
+    else:
+        INPUTS.append({
+            "lane": Path(_path).stem,
+            "path": Path(_path),
+            "locator_field": "source_locator",
+            "record_field": "b_evidence_id" if "repair" not in _name else "row_id",
+            "edge_field": "b_edge_id",
+            "evidence_field": "b_evidence_id" if "repair" not in _name else "evidence_id",
+            "handoff_field": "",
+            "context_fields": ("decision_basis", "upstream_sci_activation_claim"),
+        })
+INPUTS.append({
+    "lane": "module22b_individual_hold_search_log",
+    "path": ROOT / "docs" / "MODULE22B_INDIVIDUAL_HOLD_SEARCH_LOG_2026-09-03.tsv",
+    "locator_field": "source_locator",
+    "record_field": "search_id",
+    "edge_field": "b_edge_id",
+    "evidence_field": "",
+    "handoff_field": "",
+    "context_fields": ("relation_text", "evidence_basis", "decision", "sci_context_note"),
+})
+
+HEADERLESS_LOW_CONFIDENCE_FIELDS = [
+    "batch_id", "b_edge_id", "b_evidence_id", "old_edge_confidence",
+    "new_edge_confidence", "old_evidence_confidence", "new_evidence_confidence",
+    "old_target", "new_target", "old_edge_status", "new_edge_status",
+    "decision_basis", "source_locator", "module22b_register_changed",
+    "canonical_sql_materialization",
 ]
 
 
 def read_tsv(path: Path) -> list[dict[str, str]]:
+    if path.name == "module22b_low_confidence_upgrade_batch015.tsv":
+        with path.open(newline="") as handle:
+            rows = list(csv.reader(handle, delimiter="\t"))
+        return [dict(zip(HEADERLESS_LOW_CONFIDENCE_FIELDS, row)) for row in rows if row]
     with path.open(newline="") as handle:
         return list(csv.DictReader(handle, delimiter="\t"))
 
@@ -133,6 +207,19 @@ def canonical_url(kind: str, value: str) -> str:
 
 def split_components(value: str) -> list[str]:
     return [part.strip() for part in (value or "").split(";") if part.strip()]
+
+
+def locator_value(spec: dict[str, object], row: dict[str, str]) -> str:
+    if spec.get("locator_fields"):
+        parts: list[str] = []
+        for field in spec["locator_fields"]:
+            value = row.get(str(field), "") or ""
+            if str(field).endswith("_pmids"):
+                parts.extend(f"PMID:{item}" for item in re.split(r"[;,\s]+", value) if item.isdigit())
+            elif value:
+                parts.append(value)
+        return "; ".join(parts)
+    return row.get(str(spec["locator_field"]), "") or ""
 
 
 def classify_nonpaper(component: str) -> tuple[str, str]:
@@ -195,14 +282,27 @@ def main() -> None:
     records: dict[tuple[str, str], dict[str, object]] = {}
     nonpaper: dict[tuple[str, str, str], dict[str, str]] = {}
     input_counts: Counter[str] = Counter()
+    module22a_handoff_refs: dict[str, set[str]] = defaultdict(set)
+    handoff_path = ROOT / "work" / "module21_relay" / "module22a_ligand_tf_handoff.tsv"
+    handoff_rows = read_tsv(handoff_path)
+    for handoff in handoff_rows:
+        handoff_id = handoff.get("module22a_handoff_id", "")
+        for evidence_id in (handoff.get("module21a_evidence_ids", "") or "").split(";"):
+            if evidence_id.strip() and handoff_id:
+                module22a_handoff_refs[evidence_id.strip()].add(handoff_id)
 
     for spec in INPUTS:
         rows = read_tsv(spec["path"])
+        if spec.get("only_referenced_by_module22a"):
+            rows = [row for row in rows if row.get(spec["record_field"], "") in module22a_handoff_refs]
         input_counts[spec["lane"]] = len(rows)
         for row in rows:
-            locator = row.get(spec["locator_field"], "") or ""
+            locator = locator_value(spec, row)
             record_id = row.get(spec["record_field"], "") or ""
             record_key = f"{spec['lane']}:{record_id}"
+            if spec.get("only_referenced_by_module22a"):
+                row = dict(row)
+                row["__handoff_ids"] = ";".join(sorted(module22a_handoff_refs[record_id]))
             ids = identifier_tokens(locator)
             context = " ".join(row.get(field, "") or "" for field in spec["context_fields"])
             for kind, value in ids:
@@ -287,10 +387,26 @@ def main() -> None:
     metadata_count = sum(bool(metadata.get(key, {}).get("title")) for key in records)
     sci_count = sum(bool(entry["sci"]) for entry in records.values())
     locator_classes = Counter(row["locator_class"] for row in nonpaper.values())
+    handoff_reference_values = [
+        handoff.get("module21a_evidence_ids", "")
+        for handoff in handoff_rows
+        if handoff.get("module21a_evidence_ids", "")
+    ]
+    handoff_reference_ids = {
+        item.strip()
+        for value in handoff_reference_values
+        for item in value.split(";")
+        if item.strip()
+    }
+    detail_ids = {
+        row.get("evidence_id", "")
+        for row in read_tsv(ROOT / "work" / "module21_relay" / "module21a_pair_relay_evidence_detail.tsv")
+        if row.get("evidence_id", "")
+    }
     report = [
         "# Module 22 Paper Extraction",
         "",
-        "Generated 2026-09-05 from explicit source locators in the four Module 22 source lanes below.",
+        "Generated 2026-09-05 from explicit paper locators in the Module 22 source lanes below, including all discovered numbered audit batches.",
         "",
         "## Result",
         "",
@@ -298,6 +414,7 @@ def main() -> None:
         f"- Identifiers matched to an existing local title/metadata record: **{metadata_count}**.",
         f"- Identifiers whose associated Module 22 text mentions SCI/spinal cord/spinal injury: **{sci_count}**; this is a text-presence flag, not paper-level SCI validation.",
         f"- Non-paper or unresolved locator components retained separately: **{len(nonpaper)}**.",
+        f"- Module 22A handoff coverage: **{len(handoff_rows)}** handoffs inspected; {len(handoff_reference_values)} had evidence references, covering {len(handoff_reference_ids)} unique detail packets; missing detail IDs: {len(handoff_reference_ids - detail_ids)}.",
         "",
         "The main TSV is identifier-level. A paper with PMID, PMCID, and DOI can therefore occur as three identifiers until a validated cross-identifier mapping is available; this avoids falsely merging multiple papers cited in one source record.",
         "",
