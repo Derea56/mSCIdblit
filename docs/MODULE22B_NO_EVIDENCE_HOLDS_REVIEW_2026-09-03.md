@@ -4957,6 +4957,12 @@ These contexts remain separate from the submitted ligand/receptor handoffs and d
 Six of the eight rows retained reusable target capacity. Sema3c-NRP1_PLXNA4, Sema3c-NRP2_PLXNA2, Sema3c-NRP2_PLXNA4, Sema3d-NRP1_PLXNA1, and Sema3d-NRP1_PLXNA2 reused registered component contexts. Sema3c-Plxnd1 gained a standalone RBPJ-dependent PLXND1 promoter context from a primary human Notch study. The Sema3c-NRP2_PLXNA3 and Sema3d-NRP1_PLXNA3 rows remained bounded holds because the targeted Plxna3 review did not verify qualifying activating TF occupancy or perturbation at the PLXNA3 locus.
 
 These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human general-regulon/receptor-regulation, endothelial/cancer, and neural systems. The individual search log contains 3036 rows through M22B-IND-3036. This tranche added one standalone direct target edge and one evidence record, reused target contexts for five rows, and kept two rows on hold.
+
+## Individual review 3053-3060
+
+Seven of the eight rows retained reusable target capacity. Sema3d-NRP1_PLXNA4, Sema3d-NRP2_PLXNA1, Sema3d-NRP2_PLXNA2, Sema3d-NRP2_PLXNA4, Sema3e-NRP1, Sema3e-NRP2, and Sema3f-NRP2_PLXNA4 reused registered target contexts. The Sema3d-NRP2_PLXNA3 row remained a bounded hold because the targeted Plxna3 review did not verify qualifying activating TF occupancy or perturbation at the PLXNA3 locus.
+
+These contexts remain separate from the submitted ligand/receptor handoffs and do not establish source-to-TF activation. The comparators are non-SCI human general-regulon/receptor-regulation and mouse cortical-development/neural systems. The individual search log contains 3044 rows through M22B-IND-3044. This tranche added no new edge or evidence records, reused target contexts for seven rows, and kept one row on hold.
 ## Individual review 2973-2980
 
 All eight rows retained reusable target capacity. Rln3-Vipr1 reused the direct SP1-to-VIPR1 promoter context. Rps19-C5ar1 gained a standalone RELA/NF-kappaB-to-C5AR1 promoter context from a primary human hepatoma study. The four RSPO receptor rows reused the direct TCF/LEF-to-Axin2 Wnt target context, with the Rspo3 rows also checked against independent AXIN2/LRP5/6 pathway work. Rspo3-Sdc4 reused HIF1A, SMAD3, KLF5, and RELA SDC4 target contexts, and Rspo4-Lgr4_Lrp5 reused the signed SP1-to-LRP5 context.
