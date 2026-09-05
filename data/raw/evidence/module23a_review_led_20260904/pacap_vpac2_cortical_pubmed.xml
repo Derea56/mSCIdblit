@@ -1,0 +1,266 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PubmedArticleSet PUBLIC "-//NLM//DTD PubMedArticle, 1st January 2025//EN" "https://dtd.nlm.nih.gov/ncbi/pubmed/out/pubmed_250101.dtd">
+<PubmedArticleSet>
+<PubmedArticle><MedlineCitation Status="PubMed-not-MEDLINE" Owner="NLM"><PMID Version="1">32581681</PMID><DateRevised><Year>2020</Year><Month>09</Month><Day>28</Day></DateRevised><Article PubModel="Electronic-eCollection"><Journal><ISSN IssnType="Print">1662-4548</ISSN><JournalIssue CitedMedium="Print"><Volume>14</Volume><PubDate><Year>2020</Year></PubDate></JournalIssue><Title>Frontiers in neuroscience</Title><ISOAbbreviation>Front Neurosci</ISOAbbreviation></Journal><ArticleTitle>Activation of the VPAC2 Receptor Impairs Axon Outgrowth and Decreases Dendritic Arborization in Mouse Cortical Neurons by a PKA-Dependent Mechanism.</ArticleTitle><Pagination><StartPage>521</StartPage><MedlinePgn>521</MedlinePgn></Pagination><ELocationID EIdType="pii" ValidYN="Y">521</ELocationID><ELocationID EIdType="doi" ValidYN="Y">10.3389/fnins.2020.00521</ELocationID><Abstract><AbstractText>Clinical studies have shown that microduplications at 7q36.3, containing <i>VIPR2</i>, confer significant risk for schizophrenia and autism spectrum disorder (ASD). <i>VIPR2</i> gene encodes the VPAC2 receptor for vasoactive intestinal peptide (VIP) and pituitary adenylate cyclase-activating polypeptide (PACAP). Lymphocytes from patients with these mutations exhibited higher <i>VIPR2</i> gene expression and VIP-induced cAMP responsiveness, but mechanisms by which overactive VPAC2 signaling may lead to these psychiatric disorders are unknown. We have previously found that repeated administration of a selective VPAC2 receptor agonist Ro25-1553 in the mouse during early postnatal development caused synaptic alterations in the prefrontal cortex and sensorimotor gating deficits. In this study, we aimed to clarify the effects of VPAC2 receptor activation on neurite outgrowth in cultured primary mouse cortical neurons. Ro25-1553 and VIP caused reductions in total numbers and lengths of both neuronal dendrites and axons, while PACAP38 facilitated elongation of dendrites, but not axons. These effects of Ro25-1553 and VIP were blocked by a VPAC2 receptor antagonist PG99-465 and abolished in VPAC2 receptor-deficient mice. Additionally, Ro25-1553-induced decreases in axon and dendritic outgrowth in wild-type mice were blocked by a protein kinase A (PKA) inhibitor H89, but not by a PKC inhibitor GF109203X or a mitogen-activated protein kinase (MAPK) kinase (MEK) inhibitor U0126. PACAP38- induced facilitation of dendritic outgrowth was blocked by U0126. These results suggest that activation of the VPAC2 receptor impairs neurite outgrowth and decreases branching of cortical neurons by a PKA-dependent mechanism. These findings also imply that the <i>VIPR2</i>-linkage to mental health disorders may be due in part to deficits in neuronal maturation induced by VPAC2 receptor overactivation.</AbstractText><CopyrightInformation>Copyright &#xa9; 2020 Takeuchi, Kawanai, Yamauchi, Chen, Miyaoka, Yamada, Asano, Hayata-Takano, Nakazawa, Yano, Horiguchi, Nakagawa, Takuma, Waschek, Hashimoto and Ago.</CopyrightInformation></Abstract><AuthorList CompleteYN="Y"><Author ValidYN="Y"><LastName>Takeuchi</LastName><ForeName>Shuto</ForeName><Initials>S</Initials><AffiliationInfo><Affiliation>Laboratory of Molecular Neuropharmacology, Graduate School of Pharmaceutical Sciences, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo></Author><Author ValidYN="Y"><LastName>Kawanai</LastName><ForeName>Takuya</ForeName><Initials>T</Initials><AffiliationInfo><Affiliation>Laboratory of Molecular Neuropharmacology, Graduate School of Pharmaceutical Sciences, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo></Author><Author ValidYN="Y"><LastName>Yamauchi</LastName><ForeName>Ryosuke</ForeName><Initials>R</Initials><AffiliationInfo><Affiliation>Laboratory of Molecular Neuropharmacology, Graduate School of Pharmaceutical Sciences, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo></Author><Author ValidYN="Y"><LastName>Chen</LastName><ForeName>Lu</ForeName><Initials>L</Initials><AffiliationInfo><Affiliation>Laboratory of Biopharmaceutics, Graduate School of Pharmaceutical Sciences, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo></Author><Author ValidYN="Y"><LastName>Miyaoka</LastName><ForeName>Tatsunori</ForeName><Initials>T</Initials><AffiliationInfo><Affiliation>Laboratory of Biopharmaceutics, Graduate School of Pharmaceutical Sciences, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo></Author><Author ValidYN="Y"><LastName>Yamada</LastName><ForeName>Mei</ForeName><Initials>M</Initials><AffiliationInfo><Affiliation>Laboratory of Biopharmaceutics, Graduate School of Pharmaceutical Sciences, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo></Author><Author ValidYN="Y"><LastName>Asano</LastName><ForeName>Satoshi</ForeName><Initials>S</Initials><AffiliationInfo><Affiliation>Department of Cellular and Molecular Pharmacology, Graduate School of Biomedical and Health Sciences, Hiroshima University, Hiroshima, Japan.</Affiliation></AffiliationInfo></Author><Author ValidYN="Y"><LastName>Hayata-Takano</LastName><ForeName>Atsuko</ForeName><Initials>A</Initials><AffiliationInfo><Affiliation>Laboratory of Molecular Neuropharmacology, Graduate School of Pharmaceutical Sciences, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo><AffiliationInfo><Affiliation>Molecular Research Center for Children's Mental Development, United Graduate School of Child Development, Osaka University, Kanazawa University, Hamamatsu University School of Medicine, Chiba University and University of Fukui, Suita, Japan.</Affiliation></AffiliationInfo></Author><Author ValidYN="Y"><LastName>Nakazawa</LastName><ForeName>Takanobu</ForeName><Initials>T</Initials><AffiliationInfo><Affiliation>Laboratory of Molecular Neuropharmacology, Graduate School of Pharmaceutical Sciences, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo><AffiliationInfo><Affiliation>Department of Pharmacology, Graduate School of Dentistry, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo></Author><Author ValidYN="Y"><LastName>Yano</LastName><ForeName>Koji</ForeName><Initials>K</Initials><AffiliationInfo><Affiliation>Neuroscience Department, Drug Discovery and Disease Research Laboratory, Shionogi Pharmaceutical Research Center, Shionogi &amp; Co., Ltd., Toyonaka, Japan.</Affiliation></AffiliationInfo></Author><Author ValidYN="Y"><LastName>Horiguchi</LastName><ForeName>Naotaka</ForeName><Initials>N</Initials><AffiliationInfo><Affiliation>Neuroscience Department, Drug Discovery and Disease Research Laboratory, Shionogi Pharmaceutical Research Center, Shionogi &amp; Co., Ltd., Toyonaka, Japan.</Affiliation></AffiliationInfo></Author><Author ValidYN="Y"><LastName>Nakagawa</LastName><ForeName>Shinsaku</ForeName><Initials>S</Initials><AffiliationInfo><Affiliation>Laboratory of Biopharmaceutics, Graduate School of Pharmaceutical Sciences, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo><AffiliationInfo><Affiliation>Laboratory of Innovative Food Science, Graduate School of Pharmaceutical Sciences, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo><AffiliationInfo><Affiliation>Global Center for Medical Engineering and Informatics, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo></Author><Author ValidYN="Y"><LastName>Takuma</LastName><ForeName>Kazuhiro</ForeName><Initials>K</Initials><AffiliationInfo><Affiliation>Molecular Research Center for Children's Mental Development, United Graduate School of Child Development, Osaka University, Kanazawa University, Hamamatsu University School of Medicine, Chiba University and University of Fukui, Suita, Japan.</Affiliation></AffiliationInfo><AffiliationInfo><Affiliation>Department of Pharmacology, Graduate School of Dentistry, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo></Author><Author ValidYN="Y"><LastName>Waschek</LastName><ForeName>James A</ForeName><Initials>JA</Initials><AffiliationInfo><Affiliation>Department of Psychiatry and Biobehavioral Sciences, David Geffen School of Medicine, Semel Institute for Neuroscience and Human Behavior, University of California, Los Angeles, Los Angeles, CA, United States.</Affiliation></AffiliationInfo></Author><Author ValidYN="Y"><LastName>Hashimoto</LastName><ForeName>Hitoshi</ForeName><Initials>H</Initials><AffiliationInfo><Affiliation>Laboratory of Molecular Neuropharmacology, Graduate School of Pharmaceutical Sciences, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo><AffiliationInfo><Affiliation>Molecular Research Center for Children's Mental Development, United Graduate School of Child Development, Osaka University, Kanazawa University, Hamamatsu University School of Medicine, Chiba University and University of Fukui, Suita, Japan.</Affiliation></AffiliationInfo><AffiliationInfo><Affiliation>Division of Bioscience, Institute for Datability Science, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo><AffiliationInfo><Affiliation>Transdimensional Life Imaging Division, Institute for Open and Transdisciplinary Research Initiatives, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo><AffiliationInfo><Affiliation>Department of Molecular Pharmaceutical Science, Graduate School of Medicine, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo></Author><Author ValidYN="Y"><LastName>Ago</LastName><ForeName>Yukio</ForeName><Initials>Y</Initials><AffiliationInfo><Affiliation>Laboratory of Biopharmaceutics, Graduate School of Pharmaceutical Sciences, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo><AffiliationInfo><Affiliation>Department of Cellular and Molecular Pharmacology, Graduate School of Biomedical and Health Sciences, Hiroshima University, Hiroshima, Japan.</Affiliation></AffiliationInfo><AffiliationInfo><Affiliation>Laboratory of Innovative Food Science, Graduate School of Pharmaceutical Sciences, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo><AffiliationInfo><Affiliation>Global Center for Medical Engineering and Informatics, Osaka University, Suita, Japan.</Affiliation></AffiliationInfo></Author></AuthorList><Language>eng</Language><GrantList CompleteYN="Y"><Grant><GrantID>P30 HD004612</GrantID><Acronym>HD</Acronym><Agency>NICHD NIH HHS</Agency><Country>United States</Country></Grant><Grant><GrantID>R21 MH098506</GrantID><Acronym>MH</Acronym><Agency>NIMH NIH HHS</Agency><Country>United States</Country></Grant></GrantList><PublicationTypeList><PublicationType UI="D016428">Journal Article</PublicationType></PublicationTypeList><ArticleDate DateType="Electronic"><Year>2020</Year><Month>06</Month><Day>04</Day></ArticleDate></Article><MedlineJournalInfo><Country>Switzerland</Country><MedlineTA>Front Neurosci</MedlineTA><NlmUniqueID>101478481</NlmUniqueID><ISSNLinking>1662-453X</ISSNLinking></MedlineJournalInfo><KeywordList Owner="NOTNLM"><Keyword MajorTopicYN="N">VPAC2 receptor</Keyword><Keyword MajorTopicYN="N">axon</Keyword><Keyword MajorTopicYN="N">cortical neurons</Keyword><Keyword MajorTopicYN="N">dendrite</Keyword><Keyword MajorTopicYN="N">psychiatric disorders</Keyword></KeywordList></MedlineCitation><PubmedData><History><PubMedPubDate PubStatus="received"><Year>2020</Year><Month>1</Month><Day>10</Day></PubMedPubDate><PubMedPubDate PubStatus="accepted"><Year>2020</Year><Month>4</Month><Day>27</Day></PubMedPubDate><PubMedPubDate PubStatus="entrez"><Year>2020</Year><Month>6</Month><Day>26</Day><Hour>6</Hour><Minute>0</Minute></PubMedPubDate><PubMedPubDate PubStatus="pubmed"><Year>2020</Year><Month>6</Month><Day>26</Day><Hour>6</Hour><Minute>0</Minute></PubMedPubDate><PubMedPubDate PubStatus="medline"><Year>2020</Year><Month>6</Month><Day>26</Day><Hour>6</Hour><Minute>1</Minute></PubMedPubDate><PubMedPubDate PubStatus="pmc-release"><Year>2020</Year><Month>1</Month><Day>1</Day></PubMedPubDate></History><PublicationStatus>epublish</PublicationStatus><ArticleIdList><ArticleId IdType="pubmed">32581681</ArticleId><ArticleId IdType="pmc">PMC7287155</ArticleId><ArticleId IdType="doi">10.3389/fnins.2020.00521</ArticleId></ArticleIdList><ReferenceList><Reference><Citation>Ago Y., Condro M. C., Tan Y. V., Ghiani C. A., Colwell C. S., Cushman J. D., et al.  (2015). Reductions in synaptic proteins and selective alteration of prepulse inhibition in male C57BL/6 mice after postnatal administration of a VIP receptor (<i>VIPR2</i>) agonist.
+<i>Psychopharmacology (Berl.)</i>
+232
+2181&#x2013;2189. 10.1007/s00213-014-3848-z
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1007/s00213-014-3848-z</ArticleId><ArticleId IdType="pmc">PMC4433594</ArticleId><ArticleId IdType="pubmed">25575489</ArticleId></ArticleIdList></Reference><Reference><Citation>Ago Y., Hayata-Takano A., Kawanai T., Yamauchi R., Takeuchi S., Cushman J. D., et al.  (2017). Impaired extinction of cued fear memory and abnormal dendritic morphology in the prelimbic and infralimbic cortices in VPAC2 receptor (<i>VIPR2</i>)-deficient mice.
+<i>Neurobiol. Learn. Mem.</i>
+145
+222&#x2013;231. 10.1016/j.nlm.2017.10.010
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/j.nlm.2017.10.010</ArticleId><ArticleId IdType="pmc">PMC5698124</ArticleId><ArticleId IdType="pubmed">29030297</ArticleId></ArticleIdList></Reference><Reference><Citation>Black J. E., Kodish I. M., Grossman A. W., Klintsova A. Y., Orlovskaya D., Vostrikov V., et al.  (2004). Pathology of layer V pyramidal neurons in the prefrontal cortex of patients with schizophrenia.
+<i>Am. J. Psychiatry</i>
+161
+742&#x2013;744. 10.1176/appi.ajp.161.4.742
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1176/appi.ajp.161.4.742</ArticleId><ArticleId IdType="pubmed">15056523</ArticleId></ArticleIdList></Reference><Reference><Citation>Bokaei P. B., Ma X. Z., Byczynski B., Keller J., Sakac D., Fahim S., et al.  (2006). Identification and characterization of five-transmembrane isoforms of human vasoactive intestinal peptide and pituitary adenylate cyclase-activating polypeptide receptors.
+<i>Genomics</i>
+88
+791&#x2013;800. 10.1016/j.ygeno.2006.07.008
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/j.ygeno.2006.07.008</ArticleId><ArticleId IdType="pubmed">16934434</ArticleId></ArticleIdList></Reference><Reference><Citation>Broadbelt K., Byne W., Jones L. B. (2002). Evidence for a decrease in basilar dendrites of pyramidal cells in schizophrenic medial prefrontal cortex.
+<i>Schizophr. Res.</i>
+58
+75&#x2013;81. 10.1016/s0920-9964(02)00201-3
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/s0920-9964(02)00201-3</ArticleId><ArticleId IdType="pubmed">12363393</ArticleId></ArticleIdList></Reference><Reference><Citation>Deshpande A., Weiss L. A. (2018). Recurrent reciprocal copy number variants: roles and rules in neurodevelopmental disorders.
+<i>Dev. Neurobiol.</i>
+78
+519&#x2013;530. 10.1002/dneu.22587
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1002/dneu.22587</ArticleId><ArticleId IdType="pubmed">29575775</ArticleId></ArticleIdList></Reference><Reference><Citation>Deutsch P. J., Schadlow V. C., Barzilai N. (1993). 38-Amino acid form of pituitary adenylate cyclase activating peptide induces process outgrowth in human neuroblastoma cells.
+<i>J. Neurosci. Res.</i>
+35
+312&#x2013;320. 10.1002/jnr.490350311
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1002/jnr.490350311</ArticleId><ArticleId IdType="pubmed">8102409</ArticleId></ArticleIdList></Reference><Reference><Citation>Deutsch P. J., Sun Y. (1992). The 38-amino acid form of pituitary adenylate cyclase-activating polypeptide stimulates dual signaling cascades in PC12 cells and promotes neurite outgrowth.
+<i>J. Biol. Chem.</i>
+267
+5108&#x2013;5113. </Citation><ArticleIdList><ArticleId IdType="pubmed">1312085</ArticleId></ArticleIdList></Reference><Reference><Citation>DiCicco-Bloom E., Deutsch P. J., Maltzman J., Zhang J., Pintar J. E., Zheng J., et al.  (2000). Autocrine expression and ontogenetic functions of the PACAP ligand/receptor system during sympathetic development.
+<i>Dev. Biol.</i>
+219
+197&#x2013;213. 10.1006/dbio.2000.9604
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1006/dbio.2000.9604</ArticleId><ArticleId IdType="pubmed">10694416</ArticleId></ArticleIdList></Reference><Reference><Citation>Dickson L., Finlayson K. (2009). VPAC and PAC receptors: from ligands to function.
+<i>Pharmacol. Ther.</i>
+121
+294&#x2013;316. 10.1016/j.pharmthera.2008.11.006
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/j.pharmthera.2008.11.006</ArticleId><ArticleId IdType="pubmed">19109992</ArticleId></ArticleIdList></Reference><Reference><Citation>Drahushuk K., Connell T. D., Higgins D. (2002). Pituitary adenylate cyclase-activating polypeptide and vasoactive intestinal peptide inhibit dendritic growth in cultured sympathetic neurons.
+<i>J. Neurosci.</i>
+22
+6560&#x2013;6569. 10.1523/JNEUROSCI.22-15-06560.2002
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1523/JNEUROSCI.22-15-06560.2002</ArticleId><ArticleId IdType="pmc">PMC6758139</ArticleId><ArticleId IdType="pubmed">12151535</ArticleId></ArticleIdList></Reference><Reference><Citation>Emery A. C., Eiden L. E. (2012). Signaling through the neuropeptide GPCR PAC<sub>1</sub> induces neuritogenesis via a single linear cAMP- and ERK-dependent pathway using a novel cAMP sensor.
+<i>FASEB J.</i>
+26
+3199&#x2013;3211. 10.1096/fj.11-203042
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1096/fj.11-203042</ArticleId><ArticleId IdType="pmc">PMC3405272</ArticleId><ArticleId IdType="pubmed">22532442</ArticleId></ArticleIdList></Reference><Reference><Citation>Falluel-Morel A., Chafai M., Vaudry D., Basille M., Cazillis M., Aubert N., et al.  (2007). The neuropeptide pituitary adenylate cyclase-activating polypeptide exerts anti-apoptotic and differentiating effects during neurogenesis: focus on cerebellar granule neurones and embryonic stem cells.
+<i>J. Neuroendocrinol.</i>
+19
+321&#x2013;327. 10.1111/j.1365-2826.2007.01537.x
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1111/j.1365-2826.2007.01537.x</ArticleId><ArticleId IdType="pubmed">17425606</ArticleId></ArticleIdList></Reference><Reference><Citation>Falluel-Morel A., Vaudry D., Aubert N., Galas L., Benard M., Basille M., et al.  (2005). Pituitary adenylate cyclase-activating polypeptide prevents the effects of ceramides on migration, neurite outgrowth, and cytoskeleton remodeling.
+<i>Proc. Natl. Acad. Sci. U.S.A.</i>
+102
+2637&#x2013;2642. 10.1073/pnas.0409681102
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1073/pnas.0409681102</ArticleId><ArticleId IdType="pmc">PMC549011</ArticleId><ArticleId IdType="pubmed">15695581</ArticleId></ArticleIdList></Reference><Reference><Citation>Firouzabadi S. G., Kariminejad R., Vameghi R., Darvish H., Ghaedi H., Banihashemi S., et al.  (2017). Copy number variants in patients with autism and additional clinical features: report of VIPR2 duplication and a novel microduplication syndrome.
+<i>Mol. Neurobiol.</i>
+54
+7019&#x2013;7027. 10.1007/s12035-016-0202-y
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1007/s12035-016-0202-y</ArticleId><ArticleId IdType="pubmed">27796743</ArticleId></ArticleIdList></Reference><Reference><Citation>Foley C., Corvin A., Nakagome S. (2017). Genetics of schizophrenia: ready to translate?
+<i>Curr. Psychiatry Rep.</i>
+19:61. 10.1007/s11920-017-0807-5
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1007/s11920-017-0807-5</ArticleId><ArticleId IdType="pubmed">28741255</ArticleId></ArticleIdList></Reference><Reference><Citation>Fukiage C., Nakajima T., Takayama Y., Minagawa Y., Shearer T. R., Azuma M. (2007). PACAP induces neurite outgrowth in cultured trigeminal ganglion cells and recovery of corneal sensitivity after flap surgery in rabbits.
+<i>Am. J. Ophthalmol.</i>
+143
+255&#x2013;262. 10.1016/j.ajo.2006.10.034
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/j.ajo.2006.10.034</ArticleId><ArticleId IdType="pubmed">17173850</ArticleId></ArticleIdList></Reference><Reference><Citation>Glantz L. A., Lewis D. A. (2000). Decreased dendritic spine density on prefrontal cortical pyramidal neurons in schizophrenia.
+<i>Arch. Gen. Psychiatry</i>
+57
+65&#x2013;73. 10.1001/archpsyc.57.1.65
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1001/archpsyc.57.1.65</ArticleId><ArticleId IdType="pubmed">10632234</ArticleId></ArticleIdList></Reference><Reference><Citation>Gonzalez B. J., Basille M., Vaudry D., Fournier A., Vaudry H. (1997). Pituitary adenylate cyclase-activating polypeptide promotes cell survival and neurite outgrowth in rat cerebellar neuroblasts.
+<i>Neuroscience</i>
+78
+419&#x2013;430. 10.1016/s0306-4522(96)00617-3
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/s0306-4522(96)00617-3</ArticleId><ArticleId IdType="pubmed">9145799</ArticleId></ArticleIdList></Reference><Reference><Citation>Grinninger C., Wang W., Oskoui K. B., Voice J. K., Goetzl E. J. (2004). A natural variant type II G protein-coupled receptor for vasoactive intestinal peptide with altered function.
+<i>J. Biol. Chem.</i>
+279
+40259&#x2013;40262. 10.1074/jbc.C400332200
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1074/jbc.C400332200</ArticleId><ArticleId IdType="pubmed">15302876</ArticleId></ArticleIdList></Reference><Reference><Citation>Gourlet P., Vertongen P., Vandermeers A., Vandermeers-Piret M.-C., Rathe J., De Neef P., et al.  (1997). The long-acting vasoactive intestinal polypeptide agonist RO 25-1553 is highly selective of the VIP<sub>2</sub> receptor subclass.
+<i>Peptides</i>
+18, 403&#x2013;408. 10.1016/s0196-9781(96)00322-1</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/s0196-9781(96)00322-1</ArticleId><ArticleId IdType="pubmed">9145428</ArticleId></ArticleIdList></Reference><Reference><Citation>Harmar A. J., Fahrenkrug J., Gozes I., Laburthe M., May V., Pisegna J. R., et al.  (2012). Pharmacology and functions of receptors for vasoactive intestinal peptide and pituitary adenylate cyclase-activating polypeptide: IUPHAR review 1.
+<i>Br. J. Pharmacol.</i>
+166
+4&#x2013;17. 10.1111/j.1476-5381.2012.01871.x
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1111/j.1476-5381.2012.01871.x</ArticleId><ArticleId IdType="pmc">PMC3415633</ArticleId><ArticleId IdType="pubmed">22289055</ArticleId></ArticleIdList></Reference><Reference><Citation>Harmar A. J., Marston H. M., Shen S., Spratt C., West K. M., Sheward W. J., et al.  (2002). The VPAC<sub>2</sub> receptor is essential for circadian function in the mouse suprachiasmatic nuclei.
+<i>Cell</i>
+109
+497&#x2013;508. 10.1016/s0092-8674(02)00736-5
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/s0092-8674(02)00736-5</ArticleId><ArticleId IdType="pubmed">12086606</ArticleId></ArticleIdList></Reference><Reference><Citation>H&#xe9;raud C., Hilairet S., Muller J. M., Leterrier J. F., Chad&#xe9;neau C. (2004). Neuritogenesis induced by vasoactive intestinal peptide, pituitary adenylate cyclase-activating polypeptide, and peptide histidine methionine in SH-SY5y cells is associated with regulated expression of cytoskeleton mRNAs and proteins.
+<i>J. Neurosci. Res.</i>
+75
+320&#x2013;329. 10.1002/jnr.10866
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1002/jnr.10866</ArticleId><ArticleId IdType="pubmed">14743445</ArticleId></ArticleIdList></Reference><Reference><Citation>Hernandez A., Kimball B., Romanchuk G., Mulholland M. W. (1995). Pituitary adenylate cyclase-activating peptide stimulates neurite growth in PC12 cells.
+<i>Peptides</i>
+16
+927&#x2013;932. 10.1016/0196-9781(95)00059-s
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/0196-9781(95)00059-s</ArticleId><ArticleId IdType="pubmed">7479337</ArticleId></ArticleIdList></Reference><Reference><Citation>Hill J. M. (2007). Vasoactive intestinal peptide in neurodevelopmental disorders: therapeutic potential.
+<i>Curr. Pharm. Des.</i>
+13
+1079&#x2013;1089. 10.2174/138161207780618975
+</Citation><ArticleIdList><ArticleId IdType="doi">10.2174/138161207780618975</ArticleId><ArticleId IdType="pubmed">17430171</ArticleId></ArticleIdList></Reference><Reference><Citation>Hirabayashi T., Nakamachi T., Shioda S. (2018). Discovery of PACAP and its receptors in the brain.
+<i>J. Headache Pain</i>
+19:28. 10.1186/s10194-018-0855-1
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1186/s10194-018-0855-1</ArticleId><ArticleId IdType="pmc">PMC5884755</ArticleId><ArticleId IdType="pubmed">29619773</ArticleId></ArticleIdList></Reference><Reference><Citation>Huang M. C., Miller A. L., Wang W., Kong Y., Paul S., Goetzl E. J. (2006). Differential signaling of T cell generation of IL-4 by wild-type and short-deletion variant of type 2 G protein-coupled receptor for vasoactive intestinal peptide (VPAC2).
+<i>J. Immunol.</i>
+176
+6640&#x2013;6646. 10.4049/jimmunol.176.11.6640
+</Citation><ArticleIdList><ArticleId IdType="doi">10.4049/jimmunol.176.11.6640</ArticleId><ArticleId IdType="pmc">PMC1551935</ArticleId><ArticleId IdType="pubmed">16709822</ArticleId></ArticleIdList></Reference><Reference><Citation>Joo K. M., Chung Y. H., Kim M. K., Nam R. H., Lee B. L., Lee K. H., et al.  (2004). Distribution of vasoactive intestinal peptide and pituitary adenylate cyclase-activating polypeptide receptors (VPAC1. VPAC2, and PAC1 receptor) in the rat brain.
+<i>J. Comp. Neurol.</i>
+476
+388&#x2013;413. 10.1002/cne.20231
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1002/cne.20231</ArticleId><ArticleId IdType="pubmed">15282712</ArticleId></ArticleIdList></Reference><Reference><Citation>Kall&#xf3; I., Kalamatianos T., Piggins H. D., Coen C. W. (2004). Ageing and the diurnal expression of mRNAs for vasoactive intestinal peptide and for the VPAC2 and PAC1 receptors in the suprachiasmatic nucleus of male rats.
+<i>J. Neuroendocrinol.</i>
+16
+758&#x2013;766. 10.1111/j.1365-2826.2004.01232.x
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1111/j.1365-2826.2004.01232.x</ArticleId><ArticleId IdType="pubmed">15344914</ArticleId></ArticleIdList></Reference><Reference><Citation>Kalus P., M&#xfc;ller T. J., Zuschratter W., Senitz D. (2000). The dendritic architecture of prefrontal pyramidal neurons in schizophrenic patients.
+<i>Neuroreport</i>
+11
+3621&#x2013;3625. 10.1097/00001756-200011090-00044
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1097/00001756-200011090-00044</ArticleId><ArticleId IdType="pubmed">11095531</ArticleId></ArticleIdList></Reference><Reference><Citation>Kambe Y., Miyata A. (2012). Role of mitochondrial activation in PACAP dependent neurite outgrowth.
+<i>J. Mol. Neurosci.</i>
+48
+550&#x2013;557. 10.1007/s12031-012-9754-0
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1007/s12031-012-9754-0</ArticleId><ArticleId IdType="pubmed">22460784</ArticleId></ArticleIdList></Reference><Reference><Citation>Kawanai T., Ago Y., Watanabe R., Inoue A., Taruta A., Onaka Y., et al.  (2016). Prenatal exposure to histone deacetylase inhibitors affects gene expression of autism-related molecules and delays neuronal maturation.
+<i>Neurochem. Res.</i>
+41
+2574&#x2013;2584. 10.1007/s11064-016-1969-y
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1007/s11064-016-1969-y</ArticleId><ArticleId IdType="pubmed">27300699</ArticleId></ArticleIdList></Reference><Reference><Citation>Konopaske G. T., Lange N., Coyle J. T., Benes F. M. (2014). Prefrontal cortical dendritic spine pathology in schizophrenia and bipolar disorder.
+<i>JAMA Psychiatry</i>
+71
+1323&#x2013;1331. 10.1001/jamapsychiatry.2014.1582
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1001/jamapsychiatry.2014.1582</ArticleId><ArticleId IdType="pmc">PMC5510541</ArticleId><ArticleId IdType="pubmed">25271938</ArticleId></ArticleIdList></Reference><Reference><Citation>Lazarovici P., Jiang H., Fink D., Jr. (1998). The 38-amino-acid form of pituitary adenylate cyclase-activating polypeptide induces neurite outgrowth in PC12 cells that is dependent on protein kinase C and extracellular signal-regulated kinase but not on protein kinase A, nerve growth factor receptor tyrosine kinase, p21(ras) G protein, and pp60(c-src) cytoplasmic tyrosine kinase.
+<i>Mol. Pharmacol.</i>
+54
+547&#x2013;558. 10.1124/mol.54.3.547
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1124/mol.54.3.547</ArticleId><ArticleId IdType="pubmed">9730914</ArticleId></ArticleIdList></Reference><Reference><Citation>Leemhuis J., Henle F., Meyer D. K. (2007). VIP induces the elongation of dendrites and axons in cultured hippocampal neurons: role of microtubules.
+<i>Peptides</i>
+28
+1700&#x2013;1705. 10.1016/j.peptides.2007.06.026
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/j.peptides.2007.06.026</ArticleId><ArticleId IdType="pubmed">17681403</ArticleId></ArticleIdList></Reference><Reference><Citation>Levinson D. F., Duan J., Oh S., Wang K., Sanders A. R., Shi J., et al.  (2011). Copy number variants in schizophrenia: confirmation of five previous findings and new evidence for 3q29 microdeletions and VIPR2 duplications.
+<i>Am. J. Psychiatry</i>
+168
+302&#x2013;316. 10.1176/appi.ajp.2010.10060876
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1176/appi.ajp.2010.10060876</ArticleId><ArticleId IdType="pmc">PMC4441324</ArticleId><ArticleId IdType="pubmed">21285140</ArticleId></ArticleIdList></Reference><Reference><Citation>Li Z., Chen J., Xu Y., Yi Q., Ji W., Wang P., et al.  (2016). Genome-wide analysis of the role of copy number variation in schizophrenia risk in Chinese.
+<i>Biol. Psychiatry</i>
+80
+331&#x2013;337. 10.1016/j.biopsych.2015.11.012
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/j.biopsych.2015.11.012</ArticleId><ArticleId IdType="pubmed">26795442</ArticleId></ArticleIdList></Reference><Reference><Citation>Lu N., Zhou R., DiCicco-Bloom E. (1998). Opposing mitogenic regulation by PACAP in sympathetic and cerebral cortical precursors correlates with differential expression of PACAP receptor (PAC1-R) isoforms.
+<i>J. Neurosci. Res.</i>
+53
+651&#x2013;662. 10.1002/(SICI)1097-4547(19980915)53:6&amp;lt;651::AID-JNR3&amp;gt;3.0.CO;2-4
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1002/(SICI)1097-4547(19980915)53:6&amp;lt;651::AID-JNR3&amp;gt;3.0.CO;2-4</ArticleId><ArticleId IdType="pubmed">9753193</ArticleId></ArticleIdList></Reference><Reference><Citation>Manecka D. L., Mahmood S. F., Grumolato L., Lihrmann I., Anouar Y. (2013). Pituitary adenylate cyclase-activating polypeptide (PACAP) promotes both survival and neuritogenesis in PC12 cells through activation of nuclear factor &#x3ba;B (NF-&#x3ba;B) pathway: involvement of extracellular signal-regulated kinase (ERK), calcium, and c-REL.
+<i>J. Biol. Chem.</i>
+288
+14936&#x2013;14948. 10.1074/jbc.M112.434597
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1074/jbc.M112.434597</ArticleId><ArticleId IdType="pmc">PMC3663515</ArticleId><ArticleId IdType="pubmed">23564451</ArticleId></ArticleIdList></Reference><Reference><Citation>Marshall C. R., Howrigan D. P., Merico D., Thiruvahindrapuram B., Wu W., Greer D. S., et al.  (2017). Contribution of copy number variants to schizophrenia from a genome-wide study of 41,321 subjects.
+<i>Nat. Genet.</i>
+49
+27&#x2013;35. 10.1038/ng.3725
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1038/ng.3725</ArticleId><ArticleId IdType="pmc">PMC5737772</ArticleId><ArticleId IdType="pubmed">27869829</ArticleId></ArticleIdList></Reference><Reference><Citation>Marzagalli R., Leggio G. M., Bucolo C., Pricoco E., Keay K. A., Cardile V., et al.  (2016). Genetic blockade of the dopamine D3 receptor enhances hippocampal expression of PACAP and receptors and alters their cortical distribution.
+<i>Neuroscience</i>
+316
+279&#x2013;295. 10.1016/j.neuroscience.2015.12.034
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/j.neuroscience.2015.12.034</ArticleId><ArticleId IdType="pubmed">26718601</ArticleId></ArticleIdList></Reference><Reference><Citation>Miller A. L., Verma D., Grinninger C., Huang M. C., Goetzl E. J. (2006). Functional splice variants of the type II G protein-coupled receptor (VPAC2) for vasoactive intestinal peptide in mouse and human lymphocytes.
+<i>Ann. N. Y. Acad. Sci.</i>
+1070
+422&#x2013;426. 10.1196/annals.1317.055
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1196/annals.1317.055</ArticleId><ArticleId IdType="pmc">PMC1557659</ArticleId><ArticleId IdType="pubmed">16888203</ArticleId></ArticleIdList></Reference><Reference><Citation>Monaghan T. K., Mackenzie C. J., Plevin R., Lutz E. M. (2008). PACAP-38 induces neuronal differentiation of human SH-SY5Y neuroblastoma cells via cAMP-mediated activation of ERK and p38 MAP kinases.
+<i>J. Neurochem.</i>
+104
+74&#x2013;88. 10.1111/j.1471-4159.2007.05018.x
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1111/j.1471-4159.2007.05018.x</ArticleId><ArticleId IdType="pmc">PMC2230095</ArticleId><ArticleId IdType="pubmed">17995938</ArticleId></ArticleIdList></Reference><Reference><Citation>Moyer C. E., Shelton M. A., Sweet R. A. (2015). Dendritic spine alterations in schizophrenia.
+<i>Neurosci. Lett.</i>
+601
+46&#x2013;53. 10.1016/j.neulet.2014.11.042
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/j.neulet.2014.11.042</ArticleId><ArticleId IdType="pmc">PMC4454616</ArticleId><ArticleId IdType="pubmed">25478958</ArticleId></ArticleIdList></Reference><Reference><Citation>Muller J. M., Philippe M., Chevrier L., H&#xe9;raud C., Alleaume C., Chad&#xe9;neau C. (2006). The VIP-receptor system in neuroblastoma cells.
+<i>Regul. Pept.</i>
+137
+34&#x2013;41. 10.1016/j.regpep.2006.06.014
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/j.regpep.2006.06.014</ArticleId><ArticleId IdType="pubmed">16989911</ArticleId></ArticleIdList></Reference><Reference><Citation>National Research Council (1996). <i>Guide for the Care and Use of Laboratory Animals.</i>
+Washington, DC: National Academy Press, 10.17226/5140
+</Citation><ArticleIdList><ArticleId IdType="doi">10.17226/5140</ArticleId></ArticleIdList></Reference><Reference><Citation>Nelson K. B., Grether J. K., Croen L. A., Dambrosia J. M., Dickens B. F., Jelliffe L. L., et al.  (2001). Neuropeptides and neurotrophins in neonatal blood of children with autism or mental retardation.
+<i>Ann. Neurol.</i>
+49
+597&#x2013;606. 10.1002/ana.1024
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1002/ana.1024</ArticleId><ArticleId IdType="pubmed">11357950</ArticleId></ArticleIdList></Reference><Reference><Citation>Nicot A., DiCicco-Bloom E. (2001). Regulation of neuroblast mitosis is determined by PACAP receptor isoform expression.
+<i>Proc. Natl. Acad. Sci. U.S.A.</i>
+98
+4758&#x2013;4763. 10.1073/pnas.071465398
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1073/pnas.071465398</ArticleId><ArticleId IdType="pmc">PMC31907</ArticleId><ArticleId IdType="pubmed">11296303</ArticleId></ArticleIdList></Reference><Reference><Citation>Ogata K., Shintani N., Hayata-Takano A., Kamo T., Higashi S., Seiriki K., et al.  (2015). PACAP enhances axon outgrowth in cultured hippocampal neurons to a comparable extent as BDNF.
+<i>PLoS One</i>
+10:e0120526. 10.1371/journal.pone.0120526
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1371/journal.pone.0120526</ArticleId><ArticleId IdType="pmc">PMC4373823</ArticleId><ArticleId IdType="pubmed">25807538</ArticleId></ArticleIdList></Reference><Reference><Citation>Pillai A. G., de Jong D., Kanatsou S., Krugers H., Knapman A., Heinzmann J. M., et al.  (2012). Dendritic morphology of hippocampal and amygdalar neurons in adolescent mice is resilient to genetic differences in stress reactivity.
+<i>PLoS One</i>
+7:e38971. 10.1371/journal.pone.0038971
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1371/journal.pone.0038971</ArticleId><ArticleId IdType="pmc">PMC3373517</ArticleId><ArticleId IdType="pubmed">22701737</ArticleId></ArticleIdList></Reference><Reference><Citation>Sakai Y., Hashimoto H., Shintani N., Katoh H., Negishi M., Kawaguchi C., et al.  (2004). PACAP activates Rac1 and synergizes with NGF to activate ERK1/2, thereby inducing neurite outgrowth in PC12 cells.
+<i>Brain Res. Mol. Brain Res.</i>
+123
+18&#x2013;26. 10.1016/j.molbrainres.2003.12.013
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/j.molbrainres.2003.12.013</ArticleId><ArticleId IdType="pubmed">15046862</ArticleId></ArticleIdList></Reference><Reference><Citation>Sheward W. J., Lutz E. M., Harmar A. J. (1995). The distribution of vasoactive intestinal peptide2 receptor messenger RNA in the rat brain and pituitary gland as assessed by in situ hybridization.
+<i>Neuroscience</i>
+67
+409&#x2013;418. 10.1016/0306-4522(95)00048-n
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/0306-4522(95)00048-n</ArticleId><ArticleId IdType="pubmed">7675176</ArticleId></ArticleIdList></Reference><Reference><Citation>Suh J., Lu N., Nicot A., Tatsuno I., DiCicco-Bloom E. (2001). PACAP is an anti-mitogenic signal in developing cerebral cortex.
+<i>Nat. Neurosci.</i>
+4
+123&#x2013;124. 10.1038/83936
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1038/83936</ArticleId><ArticleId IdType="pubmed">11175869</ArticleId></ArticleIdList></Reference><Reference><Citation>Sullivan P. F., Daly M. J., O&#x2019;Donovan M. (2012). Genetic architectures of psychiatric disorders: the emerging picture and its implications.
+<i>Nat. Rev. Genet.</i>
+13
+537&#x2013;551. 10.1038/nrg3240
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1038/nrg3240</ArticleId><ArticleId IdType="pmc">PMC4110909</ArticleId><ArticleId IdType="pubmed">22777127</ArticleId></ArticleIdList></Reference><Reference><Citation>Takuma K., Fang F., Zhang W., Yan S., Fukuzaki E., Du H. (2009). RAGE-mediated signaling contributes to intraneuronal transport of amyloid-&#x3b2; and neuronal dysfunction.
+<i>Proc. Natl. Acad. Sci. U.S.A.</i>
+106
+20021&#x2013;20026. 10.1073/pnas.0905686106
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1073/pnas.0905686106</ArticleId><ArticleId IdType="pmc">PMC2785285</ArticleId><ArticleId IdType="pubmed">19901339</ArticleId></ArticleIdList></Reference><Reference><Citation>Tian X., Richard A., El-Saadi M. W., Bhandari A., Latimer B., Van Savage I., et al.  (2019). Dosage sensitivity intolerance of VIPR2 microduplication is disease causative to manifest schizophrenia-like phenotypes in a novel BAC transgenic mouse model.
+<i>Mol. Psychiatry</i>
+24
+1884&#x2013;1901. 10.1038/s41380-019-0492-3
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1038/s41380-019-0492-3</ArticleId><ArticleId IdType="pubmed">31444475</ArticleId></ArticleIdList></Reference><Reference><Citation>Tremblay R., Lee S., Rudy B. (2016). GABAergic interneurons in the neocortex: from cellular properties to circuits.
+<i>Neuron</i>
+91
+260&#x2013;292. 10.1016/j.neuron.2016.06.033
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/j.neuron.2016.06.033</ArticleId><ArticleId IdType="pmc">PMC4980915</ArticleId><ArticleId IdType="pubmed">27477017</ArticleId></ArticleIdList></Reference><Reference><Citation>Vacic V., McCarthy S., Malhotra D., Murray F., Chou H. H., Peoples A., et al.  (2011). Duplications of the neuropeptide receptor gene VIPR2 confer significant risk for schizophrenia.
+<i>Nature</i>
+471
+499&#x2013;503. 10.1038/nature09884
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1038/nature09884</ArticleId><ArticleId IdType="pmc">PMC3351382</ArticleId><ArticleId IdType="pubmed">21346763</ArticleId></ArticleIdList></Reference><Reference><Citation>Vaudry D., Falluel-Morel A., Bourgault S., Basille M., Burel D., Wurtz O., et al.  (2009). Pituitary adenylate cyclase-activating polypeptide and its receptors: 20 years after the discovery.
+<i>Pharmacol. Rev.</i>
+61
+283&#x2013;357. 10.1124/pr.109.001370
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1124/pr.109.001370</ArticleId><ArticleId IdType="pubmed">19805477</ArticleId></ArticleIdList></Reference><Reference><Citation>Vaudry D., Stork P. J., Lazarovici P., Eiden L. E. (2002). Signaling pathways for PC12 cell differentiation: making the right connections.
+<i>Science</i>
+296
+1648&#x2013;1649. 10.1126/science.1071552
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1126/science.1071552</ArticleId><ArticleId IdType="pubmed">12040181</ArticleId></ArticleIdList></Reference><Reference><Citation>Vertongen P., Schiffmann S. N., Gourlet P., Robberecht P. (1997). Autoradiographic visualization of the receptor subclasses for vasoactive intestinal polypeptide (VIP) in rat brain.
+<i>Peptides</i>
+18
+1547&#x2013;1554. 10.1016/s0196-9781(97)00229-5</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/s0196-9781(97)00229-5</ArticleId><ArticleId IdType="pubmed">9437715</ArticleId></ArticleIdList></Reference><Reference><Citation>Vicari S., Napoli E., Cordeddu V., Menghini D., Alesi V., Loddo S., et al.  (2019). Copy number variants in autism spectrum disorders.
+<i>Prog. Neuropsychopharmacol. Biol. Psychiatry</i>
+92
+421&#x2013;427. 10.1016/j.pnpbp.2019.02.012
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/j.pnpbp.2019.02.012</ArticleId><ArticleId IdType="pubmed">30797015</ArticleId></ArticleIdList></Reference><Reference><Citation>Waschek J. A. (1996). VIP and PACAP receptor-mediated actions on cell proliferation and survival.
+<i>Ann. N. Y. Acad. Sci.</i>
+805
+290&#x2013;300. 10.1111/j.1749-6632.1996.tb17491.x
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1111/j.1749-6632.1996.tb17491.x</ArticleId><ArticleId IdType="pubmed">8993411</ArticleId></ArticleIdList></Reference><Reference><Citation>Waschek J. A. (2002). Multiple actions of pituitary adenylyl cyclase activating peptide in nervous system development and regeneration.
+<i>Dev. Neurosci.</i>
+24
+14&#x2013;23. 10.1159/000064942
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1159/000064942</ArticleId><ArticleId IdType="pubmed">12145407</ArticleId></ArticleIdList></Reference><Reference><Citation>White D. M., Mansfield K. (1996). Vasoactive intestinal polypeptide and neuropeptide Y act indirectly to increase neurite outgrowth of dissociated dorsal root ganglion cells.
+<i>Neuroscience</i>
+73
+881&#x2013;887. 10.1016/0306-4522(96)00055-3
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/0306-4522(96)00055-3</ArticleId><ArticleId IdType="pubmed">8809806</ArticleId></ArticleIdList></Reference><Reference><Citation>White D. M., Walker S., Brenneman D. E., Gozes I. (2000). CREB contributes to the increased neurite outgrowth of sensory neurons induced by vasoactive intestinal polypeptide and activity-dependent neurotrophic factor.
+<i>Brain Res.</i>
+868
+31&#x2013;38. 10.1016/s0006-8993(00)02259-9
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/s0006-8993(00)02259-9</ArticleId><ArticleId IdType="pubmed">10841885</ArticleId></ArticleIdList></Reference><Reference><Citation>Yuan J., Jin C., Sha W., Zhou Z., Zhang F., Wang M., et al.  (2014). A competitive PCR assay confirms the association of a copy number variation in the VIPR2 gene with schizophrenia in Han Chinese.
+<i>Schizophr. Res.</i>
+156
+66&#x2013;70. 10.1016/j.schres.2014.04.004
+</Citation><ArticleIdList><ArticleId IdType="doi">10.1016/j.schres.2014.04.004</ArticleId><ArticleId IdType="pubmed">24794882</ArticleId></ArticleIdList></Reference></ReferenceList></PubmedData></PubmedArticle></PubmedArticleSet>
