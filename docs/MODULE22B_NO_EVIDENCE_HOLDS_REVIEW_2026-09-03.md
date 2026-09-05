@@ -4913,3 +4913,8 @@ The retained contexts remain separate from the submitted Rims1, Rims2, and Rln1 
 Six of the eight rows retained reusable target capacity. ADCYAP1R1, ADRA2A, ADRB2, ADRB3, GRM7, and MTNR1A reused existing TF-to-target contexts. GPR20 and GPR84 remained bounded holds because the targeted reviews did not verify qualifying named activating TF-to-target relationships.
 
 The retained contexts remain separate from the submitted Rln3 handoff and do not establish source-to-TF activation. The reusable contexts are non-SCI oxidative-stress neuroblastoma, rat insulinoma/colonic, human pulmonary-epithelial, mouse adipocyte, human/mouse neurodevelopmental, and renal-injury comparators. The individual search log contains 2964 rows through M22B-IND-2964. This tranche added no new edge or evidence records, reused target contexts for six rows, and kept two rows on hold.
+## Individual review 2965-2972
+
+Three of the eight rows retained reusable target capacity. PTH1R, RAMP3, and TSHR reused existing TF-to-target contexts. RAMP2 and RXFP1/2/3/4 remained bounded holds because the targeted reviews did not verify qualifying named activating TF-to-target relationships.
+
+The retained contexts remain separate from the submitted Rln3 handoff and do not establish source-to-TF activation. The reusable contexts are non-SCI mouse osteogenic/bone-mass, uterine/reproductive, and human thyroid-promoter comparators. The individual search log contains 2972 rows through M22B-IND-2972. This tranche added no new edge or evidence records, reused target contexts for three rows, and kept five rows on hold.
