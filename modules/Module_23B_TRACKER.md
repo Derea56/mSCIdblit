@@ -142,3 +142,7 @@ B053 promotes the existing 23B EFNA1–EPHA8 binding edge paired one-to-one with
 ## Review-led expansion: B054 (2026-09-05)
 
 B054 adds two new 23B functional edges paired one-to-one with Module 23A for the EFNA2–EPHA2 branch. Primary mouse bone-remodeling assays support EFNA2/EphA2-associated enhancement of osteoclast differentiation and EphA2-associated suppression of osteoblast differentiation. The downstream function is promoted at medium-high confidence with explicit reverse/forward directional limits, mouse comparator context, no-purified-binding, incomplete-ordering, and no-traumatic-SCI-transfer boundaries. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B055 (2026-09-05)
+
+B055 promotes two existing 23B binding edges paired one-to-one with Module 23A for EFNA1–EPHA6 and EFNA2–EPHA6. Primary Figure 1 all-pair dimeric Fc-fusion ELISA supports exact mouse mEphrin-A1–mEphA6 and mEphrin-A2–mEphA6 binding with comparative apparent K_D values of 5.2 ± 1.1 nM and 3.6 ± 0.74 nM, respectively. The direct-binding layer is promoted to medium-high while Fc-avidity, comparative apparent-K_D, no-receptor-proximal, and non-SCI biochemical limits remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
