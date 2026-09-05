@@ -140,3 +140,7 @@ B040 adds one review-led tenascin-R/RPTPζ candidate and one source-backed A-lay
 ## Review-led expansion: B041 (2026-09-05)
 
 B041 adds one review-led tenascin-R conduction candidate and one source-backed A-layer edge: TNR promotes normal optic-nerve compound-action-potential conduction velocity in mice. The TNR-deficient genotype, in-vivo electrophysiology, preserved nodal Na+-channel distribution, non-SCI comparator, and no-traumatic-SCI-transfer limits remain explicit. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B042 (2026-09-05)
+
+B042 adds one review-led PACAP receptor candidate and four source-backed A-layer edges: direct PACAP association with recombinant VPAC1/VIPR1 and VPAC2/VIPR2 systems, plus VPAC1- and VPAC2-linked Gs/adenylate-cyclase/cAMP activation. Historical VIP1/VIP2 nomenclature, shared PACAP/VIP pharmacology, receptor-state and heterologous-system limits, and no-native-SCI or subtype-exclusive downstream transfer remain explicit. No Module 20A–22A ledger is modified.
