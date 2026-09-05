@@ -206,3 +206,7 @@ B057 promotes the existing EFNB3–EPHB1 functional-context edge using the prima
 ## Review-led expansion: B058 (2026-09-05)
 
 B058 promotes the existing EFNA2–EPHA2 direct-binding edge using the primary all-pair dimeric Fc-fusion ELISA. Figure 1 reports weak mEphrin-A2 binding to hEphA2 with apparent K_D >50 nM. The edge is promoted to medium with explicit weak comparative-affinity, Fc-avidity, no-receptor-proximal, no-downstream, and non-SCI biochemical limits. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B059 (2026-09-05)
+
+B059 promotes the existing PLAU/uPA–PLAUR/uPAR–β1-integrin complex relay using acquired primary PubMed and PMC snapshots. Human lung-fibroblast and related beta1-integrin/uPAR studies support uPAR–β1 complex association and uPA-dependent adhesion/migration signaling at medium confidence; purified direct uPA–β1 binding, a single α-integrin partner, complete relay ordering, native neural context, and traumatic-SCI transfer remain unasserted. No Module 20A–22A ledger was modified.
