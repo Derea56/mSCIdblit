@@ -156,3 +156,7 @@ B044 adds one review-led Sema4A receptor candidate and two source-backed A-layer
 ## Review-led expansion: B045 (2026-09-05)
 
 B045 adds one review-led EFNA1–EPHA5 candidate and one source-backed A-layer edge: ephrin-A1 recombinant-fusion stimulation produces time-dependent EPHA5 tyrosine phosphorylation in human U-118 MG glioblastoma cells. The receptor-proximal phosphorylation layer is promoted without inferring direct binary binding, a downstream program, neural context, or traumatic-SCI transfer. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B046 (2026-09-05)
+
+B046 adds one review-led EFNA1–EPHA8 candidate and one source-backed A-layer edge: ephrin-A1-Fc binds EphA8 and induces EphA8/EphA8-TrkB tyrosine phosphorylation in NIH3T3 fibroblast receptor systems. The receptor-proximal activation layer is promoted with explicit recombinant-fusion and heterologous-fibroblast limits; no downstream cellular program, native neural context, or traumatic-SCI transfer is inferred. No Module 20A–22A ledger is modified.
