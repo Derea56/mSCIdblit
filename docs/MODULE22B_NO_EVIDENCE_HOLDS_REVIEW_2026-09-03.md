@@ -5141,6 +5141,22 @@ TNR or TNXB handoff activates the corresponding TF. The original
 pathway/function-boundary rows remain separate and no SCI-specific upstream
 relay was inferred.
 
+## Individual review 3309-3316
+
+Five of the eight holds gained reusable target capacity. TNXB→ITGAV/ITGB6
+reused SMAD3/4→ITGB6, TNXB→SDC1 and TNXB→SDC4 reused NR1H4→SDC1 and
+RELA→SDC4, TPH1→HTR1A reused SP1→HTR1A, and TPH1→HTR2A gained a new
+EGR3 promoter-binding and reporter-activation context. The HTR2A study
+demonstrated EGR3-dependent receptor induction in mouse frontal cortex,
+in-vivo promoter occupancy, and activation of Htr2a reporter constructs.
+
+HTR1B, HTR1D, and HTR1F remained on hold after targeted review. HTR1B
+promoter-variant and PHF8-occupancy findings did not establish a qualifying
+activating TF-to-HTR1B relationship, and no reusable activating TF-to-HTR1D
+or TF-to-HTR1F context was verified. The new and reused target lanes remain
+separate from the submitted TNXB or TPH1 handoffs and do not establish
+source-to-TF activation or SCI-specific activity.
+
 ## Individual review 3293-3300
 
 All eight holds were searched individually. All eight rows gained reusable
