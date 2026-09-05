@@ -5537,6 +5537,29 @@ reusable capacity only; exact stoichiometry, Wnt2b handoff, and SCI activity
 remain unresolved. The FZD contexts are non-SCI or inferred-regulatory
 comparators.
 
+## Individual review 3545-3554
+
+All ten holds gained reusable receptor-component target capacity. The
+Wnt2b→FZD9_LRP6 row reused PPARG→FZD9 and MYC/SOX9→LRP6
+expression-regulatory lanes. Wnt3→FZD10_LRP5 reused SP1→FZD10 and
+SP1→LRP5; Wnt3→FZD10_LRP6 reused SP1→FZD10 and MYC/SOX9→LRP6.
+Wnt3→FZD1_LRP5 and Wnt3→FZD1_LRP6 reused SP1/E2F1→FZD1 plus the matching
+LRP5 or LRP6 component lanes. Wnt3→FZD2_LRP5 and Wnt3→FZD2_LRP6 reused
+GATA6→FZD2 plus the matching LRP5 or LRP6 component lanes.
+Wnt3→FZD3_LRP5 and Wnt3→FZD3_LRP6 reused ZMIZ1→FZD3 plus the matching
+LRP5 or LRP6 component lanes. Wnt3→FZD4_LRP5 reused SMAD4→FZD4 and
+SP1→LRP5.
+
+The MYC→LRP6 and SOX9→LRP6 lanes are primary expression-regulatory
+component evidence, not direct LRP6 promoter-occupancy evidence. The
+targeted Wnt2b/Wnt3 searches did not establish ligand-specific source-to-TF
+activation or exact ternary-complex assignments. Wnt3a/FZD10/LRP6
+developing-spinal-cord findings and Wnt3/FZD3/LRP6 reporter findings were
+retained as receptor/pathway comparators, not terminal TF-target evidence;
+Wnt3a is a different ligand from Wnt3. These component lanes are reusable
+capacity only; exact stoichiometry, source-to-TF handoff, and SCI activity
+remain unresolved.
+
 Six of the eight holds gained reusable target capacity. Try4→F2R and
 Try5→F2R reused EGR1→F2R and SP1→F2R; Try4→F2RL2 and Try5→F2RL2 reused
 NRF2→F2RL2; Try5→F2RL1 reused IRX3→F2RL1; and Try4→PARD3 reused
