@@ -86,27 +86,50 @@ def physical_path(logical: Path, archive_root: Path | None) -> Path:
     return logical
 
 
-def archive_index(archive_root: Path | None) -> dict[str, set[Path]]:
+def archive_index(archive_roots: list[Path]) -> dict[str, set[Path]]:
     """Index filename PMID/PMCID tokens for conservative artifact crosswalks."""
     index: dict[str, set[Path]] = defaultdict(set)
-    if archive_root is None or not archive_root.is_dir():
-        return index
-    for path in archive_root.iterdir():
-        if not path.is_file():
+    for archive_root in archive_roots:
+        if not archive_root.is_dir():
             continue
-        for token in re.findall(r"(?i)PMC\d{3,10}|\b\d{6,9}\b", path.name):
-            index[token.upper()].add(path)
+        for path in archive_root.iterdir():
+            if not path.is_file():
+                continue
+            for token in re.findall(r"(?i)PMC\d{3,10}|(?<!\d)\d{6,9}(?!\d)", path.name):
+                index[token.upper()].add(path)
+    return index
+
+
+def acquisition_manifest_index(additional_roots: list[Path]) -> dict[str, set[Path]]:
+    """Link acquired artifacts to exact identifiers recorded in their manifests."""
+    index: dict[str, set[Path]] = defaultdict(set)
+    for root in additional_roots:
+        for manifest in root.glob("*manifest.tsv"):
+            for row in read_tsv(manifest):
+                local_path = row.get("local_path", "")
+                if not local_path:
+                    continue
+                artifact = ROOT / local_path if local_path.startswith(("data/", "work/")) else root / Path(local_path).name
+                if not artifact.is_file():
+                    continue
+                for key, prefix in (("pmid", "PMID:"), ("pmcid", "PMCID:"), ("doi", "DOI:")):
+                    value = row.get(key, "").strip()
+                    if value:
+                        normalized = value.lower() if prefix == "DOI:" else value.upper() if prefix == "PMCID:" else value
+                        index[prefix + normalized].add(artifact)
     return index
 
 
 def filename_tokens(paths: list[Path]) -> set[str]:
     tokens: set[str] = set()
     for path in paths:
-        tokens.update(token.upper() for token in re.findall(r"(?i)PMC\d{3,10}|\b\d{6,9}\b", path.name))
+        tokens.update(token.upper() for token in re.findall(r"(?i)PMC\d{3,10}|(?<!\d)\d{6,9}(?!\d)", path.name))
     return tokens
 
 
-def build(output: Path, report: Path, archive_root: Path | None) -> None:
+def build(output: Path, report: Path, archive_root: Path | None, additional_roots: list[Path]) -> None:
+    archive_root = archive_root.resolve() if archive_root is not None else None
+    additional_roots = [root.resolve() for root in additional_roots]
     records: dict[str, dict[str, object]] = {}
     unanchored: Counter[str] = Counter()
     register_rows = 0
@@ -138,7 +161,9 @@ def build(output: Path, report: Path, archive_root: Path | None) -> None:
         for anchor in anchors:
             add_anchor(records, anchor, "23A", synthetic, paths, [review_id] if review_id else [])
 
-    archive_files = archive_index(archive_root)
+    archive_roots = [root for root in [archive_root, *additional_roots] if root is not None]
+    archive_files = archive_index(archive_roots)
+    manifest_files = acquisition_manifest_index(additional_roots)
     rows: list[dict[str, str]] = []
     status_counts: Counter[str] = Counter()
     module_counts: Counter[str] = Counter()
@@ -147,11 +172,17 @@ def build(output: Path, report: Path, archive_root: Path | None) -> None:
         logical_paths = sorted(record["paths"])
         declared_pairs = [(path, physical_path(path, archive_root)) for path in logical_paths]
         physical_paths = [physical for _, physical in declared_pairs if physical.is_file()]
+        crosswalk_tokens = filename_tokens(logical_paths)
+        # A paper anchor may be present in the private archive even when the
+        # register row did not preserve the artifact path. This remains a
+        # filename-token candidate link, never biological validation.
+        crosswalk_tokens.add(anchor.split(":", 1)[1].upper())
         alternate_paths = sorted({
-            path for token in filename_tokens(logical_paths)
+            path for token in crosswalk_tokens
             for path in archive_files.get(token, set())
         })
-        existing_physical_paths = list(dict.fromkeys(physical_paths + alternate_paths))
+        manifest_paths = sorted(manifest_files.get(anchor, set()))
+        existing_physical_paths = list(dict.fromkeys(physical_paths + manifest_paths + alternate_paths))
         artifact, source_format, artifact_status = choose_artifact(existing_physical_paths)
         combined_summary = " ".join(record["summaries"])
         excerpt = ""
@@ -184,6 +215,16 @@ def build(output: Path, report: Path, archive_root: Path | None) -> None:
                     / artifact.relative_to(archive_root)
                 ).relative_to(ROOT))
                 resolution_method = "archive_filename_token_crosswalk"
+            if not selected_logical:
+                for additional_root in additional_roots:
+                    if artifact.is_relative_to(additional_root):
+                        selected_logical = str(artifact.relative_to(ROOT)) if artifact.is_relative_to(ROOT) else str(artifact)
+                        resolution_method = (
+                            "additional_root_manifest_crosswalk"
+                            if artifact in manifest_files.get(anchor, set())
+                            else "additional_root_filename_token_crosswalk"
+                        )
+                        break
             if not selected_logical:
                 selected_logical = str(artifact)
                 resolution_method = "resolved_path"
@@ -232,6 +273,8 @@ def build(output: Path, report: Path, archive_root: Path | None) -> None:
         f"- Source-review IDs represented in manifest: {len(manifest_review_ids):,}",
         f"- Private phase-2 archive fallback used: {'yes' if archive_root and archive_root.is_dir() else 'no'}",
         f"- Archive filename-token crosswalks used: {sum(row['artifact_resolution_method'] == 'archive_filename_token_crosswalk' for row in rows):,}",
+        f"- Additional-root filename-token crosswalks used: {sum(row['artifact_resolution_method'] == 'additional_root_filename_token_crosswalk' for row in rows):,}",
+        f"- Additional-root manifest crosswalks used: {sum(row['artifact_resolution_method'] == 'additional_root_manifest_crosswalk' for row in rows):,}",
         "",
         "## Extraction status",
         "",
@@ -277,8 +320,15 @@ def main() -> None:
         default=DEFAULT_ARCHIVE if DEFAULT_ARCHIVE.is_dir() else None,
         help="Optional private phase-2 artifact archive used read-only for known logical paths.",
     )
+    parser.add_argument(
+        "--additional-root",
+        type=Path,
+        action="append",
+        default=[],
+        help="Additional local artifact root indexed by PMID/PMCID filename tokens; may be repeated.",
+    )
     args = parser.parse_args()
-    build(args.output, args.report, args.archive_root)
+    build(args.output, args.report, args.archive_root, args.additional_root)
 
 
 if __name__ == "__main__":

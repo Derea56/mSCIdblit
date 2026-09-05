@@ -1,0 +1,1183 @@
+<?xml version="1.0"  ?><!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd"><pmc-articleset><article article-type="research-article" xml:lang="en" dtd-version="1.4"><front><journal-meta><journal-id journal-id-type="nlm-ta">J Cell Biol</journal-id><journal-id journal-id-type="iso-abbrev">J. Cell Biol</journal-id><journal-id journal-id-type="pmc-domain-id">482</journal-id><journal-id journal-id-type="pmc-domain">jcellbiol</journal-id><journal-id journal-id-type="nlm-id">0375356</journal-id><journal-title-group><journal-title>The Journal of Cell Biology</journal-title></journal-title-group><issn pub-type="ppub">0021-9525</issn><issn pub-type="epub">1540-8140</issn><publisher><publisher-name>The Rockefeller University Press</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC2119998</article-id><article-id pub-id-type="pmcid-ver">PMC2119998.1</article-id><article-id pub-id-type="pmcaid">2119998</article-id><article-id pub-id-type="pmcaiid">2119998</article-id><article-id pub-id-type="pmid">7513709</article-id><article-id pub-id-type="doi">10.1083/jcb.125.3.669</article-id><article-id pub-id-type="publisher-id">94230574</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="heading"><subject>Articles</subject></subj-group></article-categories><title-group><article-title>The neuronal chondroitin sulfate proteoglycan neurocan binds to the neural cell adhesion molecules Ng-CAM/L1/NILE and N-CAM, and inhibits neuronal adhesion and neurite outgrowth</article-title></title-group><pub-date pub-type="ppub"><day>1</day><month>5</month><year>1994</year></pub-date><volume>125</volume><issue>3</issue><issue-id pub-id-type="pmc-issue-id">155663</issue-id><fpage>669</fpage><lpage>680</lpage><pub-history><event event-type="pmc-release"><date><day>01</day><month>11</month><year>1994</year></date></event><event event-type="pmc-live"><date><day>01</day><month>05</month><year>2008</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2019-10-21 16:56:11.387"><day>21</day><month>10</month><year>2019</year></date></event></pub-history><permissions><license license-type="openaccess"><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbyncsalicense">https://creativecommons.org/licenses/by-nc-sa/4.0/</ali:license_ref><license-p>This article is distributed under the terms of an Attribution–Noncommercial–Share Alike–No Mirror Sites license for the first six months after the publication date (see <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://www.rupress.org/terms">http://www.rupress.org/terms</ext-link>). After six months it is available under a Creative Commons License (Attribution–Noncommercial–Share Alike 4.0 Unported license, as described at <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</ext-link>).</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="jc1253669.pdf"/><abstract><p>We have previously shown that aggregation of microbeads coated with N- CAM and Ng-CAM is inhibited by incubation with soluble neurocan, a chondroitin sulfate proteoglycan of brain, suggesting that neurocan binds to these cell adhesion molecules (Grumet, M., A. Flaccus, and R. U. Margolis. 1993. J. Cell Biol. 120:815). To investigate these interactions more directly, we have tested binding of soluble 125I- neurocan to microwells coated with different glycoproteins. Neurocan bound at high levels to Ng-CAM and N-CAM, but little or no binding was detected to myelin-associated glycoprotein, EGF receptor, fibronectin, laminin, and collagen IV. The binding to Ng-CAM and N-CAM was saturable and in each case Scatchard plots indicated a high affinity binding site with a dissociation constant of approximately 1 nM. Binding was significantly reduced after treatment of neurocan with chondroitinase, and free chondroitin sulfate inhibited binding of neurocan to Ng-CAM and N-CAM. These results indicate a role for chondroitin sulfate in this process, although the core glycoprotein also has binding activity. The COOH-terminal half of neurocan was shown to have binding properties essentially identical to those of the full-length proteoglycan. To study the potential biological functions of neurocan, its effects on neuronal adhesion and neurite growth were analyzed. When neurons were incubated on dishes coated with different combinations of neurocan and Ng-CAM, neuronal adhesion and neurite extension were inhibited. Experiments using anti-Ng-CAM antibodies as a substrate also indicate that neurocan has a direct inhibitory effect on neuronal adhesion and neurite growth. Immunoperoxidase staining of tissue sections showed that neurocan, Ng-CAM, and N-CAM are all present at highest concentration in the molecular layer and fiber tracts of developing cerebellum. The overlapping localization in vivo, the molecular binding studies, and the striking effects on neuronal adhesion and neurite growth support the view that neurocan may modulate neuronal adhesion and neurite growth during development by binding to neural cell adhesion molecules.</p></abstract><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY-NC-SA</meta-value></custom-meta></custom-meta-group></article-meta></front><body><preformat preformat-type="pmc-pdf-text" xml:space="preserve" position="float" orientation="portrait">
+					The Neuronal Chondroitin Sulfate Proteoglycan Neurocan Binds
+to the Neural Cell Adhesion Molecules Ng-CAM/L1/NILE and
+N-CAM, and Inhibits Neuronal Adhesion and Neurite Outgrowth
+David R. Friedlander,** Peter Mflev,* Laina Karthikeyan,* Renbe K. Margolis,~ Richard U. Margolis,*
+and Martin Grumet*
+Departments of* Pharmacology and *Neurology, NewYorkUniversity Medical Center, New York10016;and ~Department of
+Pharmacology, State University ofNew YorkHealth Science Center, Brooklyn, New York11203
+Abstract. We have previously shown that aggregation
+of microbeads coated with N-CAM and Ng-CAM is
+inhibited by incubation with soluble neurocan, a chow
+droitin sulfate proteoglycan of brain, suggesting that
+neurocan binds to these cell adhesion molecules (Gru-
+met, M., A. Flaccus, and R. U. Margolis. 1993. J.
+Cell Biol. 120:815). To investigate these interactions
+more directly, we have tested binding of soluble 125I-
+neurocan to microwells coated with different glycopro-
+teins. Neurocan bound at high levels to Ng-CAM and
+N-CAM, but little or no binding was detected to
+myelin-associated glycoprotein, EGF receptor,
+fibronectin, laminin, and collagen IV. The binding to
+Ng-CAM and N-CAM was saturable and in each case
+Scatchard plots indicated a high affinity binding site
+with a dissociation constant of ~1 nM. Binding was
+significantly reduced after treatment of neurocan with
+chondroitinase, and free chondroitin sulfate inhibited
+binding of neurocan to Ng-CAM and N-CAM. These
+results indicate a role for chondroitin sulfate in this
+process, although the core glycoprotein also has
+binding activity. The COOH-terminal half of neurocan
+was shown to have binding properties essentially iden-
+tical to those of the full-length proteoglycan.
+To study the potential biological functions of neuro-
+can, its effects on neuronal adhesion and neurite
+growth were analyzed. When neurons were incubated
+on dishes coated with different combinations of neuro-
+can and Ng-CAM, neuronal adhesion and neurite
+extension were inhibited. Experiments using anti-Ng-
+CAM antibodies as a substrate also indicate that neu-
+rocan has a direct inhibitory effect on neuronal adhe-
+sion and neurite growth, lmmunoperoxidase staining
+of tissue sections showed that neurocan, Ng-CAM,
+and N-CAM are all present at highest concentration in
+the molecular layer and fiber tracts of developing cere-
+bellum. The overlapping localization in vivo, the mo-
+lecular binding studies, and the striking effects on neu-
+ronal adhesion and neurite growth support the view
+that neurocan may modulate neuronal adhesion and
+neurite growth during development by binding to neu-
+ral cell adhesion molecules.
+I
+NTERACTIONSof cells with proteins in the extracellular
+matrix and on the surfaces of other cells are important
+for cell adhesion, cell migration, and transmembrane
+signalling. These processes are mediated by plasma mem-
+brane proteins that include cell adhesion molecules (CAMs)I
+and receptors for other proteins such as extracellular matrix
+(ECM) proteins and growth factors. Whereas CAMs have
+been found to promote cell adhesion and cell migration,
+Address all correspondence to Dr. D. R. Friedlander, Department of Phar-
+macology, New York University Medical Center, 550 First Avenue, New
+York, NY 10016.
+1. Abbreviations used in this paper: CAM, cell adhesion molecule; ECM,
+extracellularmatrix; MAG, myelin-associated glycoprotein; N-CAM, neu-
+ral cell adhesionmolecule; Ng-CAM, neuron gllal cell adhesion molecule;
+NILE, nerve growth factor-inducible large external glycoprotein.
+different ECM proteins may either promote or inhibit these
+processes in different situations (Hynes and Lander, 1992;
+Edelman and Crossin, 1991; Reichardt and Tomaselli, 1991;
+Schwab et al., 1993). For example, whereas fibronectin pro-
+motes adhesion and migration of many types of cells, tenas-
+cirdcytotactin can either support or inhibit neurite growth in
+culture, depending on the conditions (Crossin et al., 1990;
+Lochter et al., 1991).
+Chondroitin sulfate proteoglyeans have been found to be
+potent inhibitors ofcell adhesion, cell migration, and neurite
+growth (Ruoslahti, 1989; Wight et al., 1992; Margolis and
+Margolis, 1993). They are found predominantly in the ECM
+of various tissues and their expression during development
+in regions such as neural crest cell pathways and the spinal
+cord is consistent with the concept that they may act as bar-
+tiers for cell migration (Perris et al., 1991; Oakley and Tos-
+hey, 1991; Snow et al., 1990a,b; Pindzola et al., 1993). Ini-
+(c) The Rockefeller University Press, 0021-9525/94/05/669/12 $2.00
+TheJournal of CellBiology, Volume 125, Number 3, May 1994669-680 669
+tial investigations of potential functions of proteoglycans in
+the central nervous system were performed using proteogly-
+cans isolated from other tissues from which they could be
+purified more easily than from brain (Snow et al., 1990a,
+1991). Although the observed effects have been attributed
+primarily to the chondroitin sulfate component, our recent
+studies (Grumet et al., 1993) indicate that the core glycopro-
+teins of neurocan and phosphacan (Maurel et al., 1994; pre-
+viously designated the 3F8 proteogiycan) are potent inhibi-
+tors of neuronal adhesion. This emphasizes the importance
+of determining the primary structures of brain proteogiy-
+cans, since this structural information will facilitate more
+detailed investigations of their molecular mechanisms of
+action.
+Neurocan (previously designated 1D1) is an ,~500-kD
+chondroitin sulfate proteogiycan of rat brain which is de-
+velopmentally regulated with respect to its molecular size,
+concentration, carbohydrate composition, sulfatlon, and
+immunocytochemical localization (Ranch et al., 1991). A
+5.2-kb composite sequence of overlapping cDNA clones
+contains an open reading frame of 1,257 amino acids which
+encodes a 136-kD protein (Rauch et al., 1992). The deduced
+amino acid sequence reveals a signal peptide followedby an
+Ig domain, tandem repeats characteristic of the hyaluronic
+acid-binding region of aggregating proteoglycans, and an
+RGDS sequence. The COOH-terminal portion has ,'-60%
+identity to regions in the COOH termini of two other pro-
+teoglycans, versican and aggrecan, whereas the central
+595-amino acid portion of neurocan has no homology with
+other reported protein sequences. The proteoglycan isolated
+from adult brain with the 11)1 monoclonal antibody rep-
+resents the COOH-terminal half of neurocan and is therefore
+designated neurocan-C. A probe corresponding to a region
+of neurocan having no homology with versican or aggrecan
+hybridized specifically with a single band at 7.5 kh on North-
+ern blots of mRNA from both 4-d and adult rat brain. This
+indicates that neurocan-C of adult brain, containing a 68-kD
+core protein, is generated by a developmentally regulated in
+vivo proteolytic processing of the 136-kD species which is
+predominant in early postnatal brain (Ranch et al., 1992).
+We have recently investigated interactions of neurocan
+with neurons and the neural CAMs, Ng-CAM, and N-CAM
+(Grumetet al., 1993). Both of these CAMs have been impli-
+cated in developmental processes in nervous tissue, includ-
+ing cell adhesion, neuronal migration, and axonal growth
+(Edelman and Crossin, 1991; Grumet, 1992; Doherty and
+Walsh, 1992). Ng-CAM and N-CAM show some structural
+similarities in that they are ,~25 % identical in amino acid se-
+quence, they both contain extracellular regions with Ig-like
+and fibronectin-like domains, and they share at least one
+carbohydrate determinant that is recognized by monoclonal
+antibodies HNK-1 and NC-1 (Burgoon et al., 1991; Grumet
+et al., 1984b; Kruse et al., 1984). Each CAM can bind
+homophilically, as demonstrated by the ability of CAM-
+coated fluorescent beads (Covaspheres) to self-aggregate
+(Grumet and Edelman, 1988; Hoffmanand Edelman, 1983).
+It was found that the aggregation of Covaspheres coated with
+either Ng-CAM or N-CAM was strongly inhibited by intact
+neurocan, and by the core glycoproteins resulting from
+chondroitinase treatment of both neurocan and neurocan-C
+(Grumet et al., 1993). Neurocan also inhibited adhesion of
+neurons to Ng-CAM when mixtures of these proteins were
+adsorbed to polystyrenedishes. On the other hand, in a short
+term binding assay that allows one to detect interactions of
+cells with proteins that inhibit cell spreading (Friedlander et
+al., 1988), direct adhesion of neurons to neurocan core pro-
+tein could be demonstrated (Grumet et al., 1993).
+These results indicate that neurocan can bind to neurons,
+and raise the possibility that Ng-CAM and N-CAM may be
+heterophilic ligands for neurocan. The ability of chondroitin
+sulfate proteogiycans of brain to inhibit cell adhesion to
+CAMs may be an important mechanism for modulating cell
+adhesion and migration in the nervous system. We have
+therefore directly studied neurocan binding to CAMs and
+other cell surface or ECM molecules, as well as its effects
+on neuronal adhesion and neurite outgrowth. Neurocan was
+chosen for these studies because it is one of the most abun-
+dant chondroitin sulfate proteogiycans of developing brain
+(Ranch et al., 1991) and its primary structure has recently
+been determined (Rauch et al., 1992).
+Materials and Methods
+ProteinsandAntibodies
+Ng-CAM and N-CAM were purified from 14-dembryonic chicken braim
+by immuneaflinity chromatography using monoclonal antibodies 10F6 and
+3(32 that specifically recognize Ng-CAM, and monoclonal anti-N-CAM
+No. 1, respectively (Grumet and Edelman, 1988). Nerve growth factor-
+inducible large external glycoprotein (NILE)/L1 was purified from 7-1post-
+natal rat brain using a combination ofother anti-Ng-CAMmonocional anti-
+bodies (2C2 and 19H3) that recognize the cytoplasmic region of Ng~.AM,
+which is highly conserved between chicken Ng-CAM (Burgoon et al.,
+1991), mouse L1 (Moos et al., 1988), and rat NILE (Prince et al., 1991).
+Because of extensive similarities between these proteins in structure, ex-
+pression pe~erus, and function (Gnun~, 1992; Sonderegger and Rathjen,
+1992), we refer to them generally as Ng-CAM/L1/NILE, and we refer to
+Ng-CAM and LI/NILE when discussing experiments using the particular
+protelm from chick and rat, respectively.
+The L1/NILE protein purified from detergent extracts of rat brain mem-
+branes contains on SDS-PAGEtwo major components of Mr 200,000 and
+140,000 and small amounts of a componetu of Mr 80000. PolycloMI anti-
+bodies aeainst human LI (kindly provided by Dr. John Hemperly, Becton
+Dickinson, Research Triangle Park, North Carolina) recognized the Mr
+200000 and 140,000 species on immtmoblots, confirmin8 that it is
+NILE/L1. The 5B8 monoclonal antibody used to purify N-CAM from 7-d
+postnatal rat brain and for immuno~oc~ WaS~ from the
+Developmental Studies HybridomaBank (maintained by the Del~Unent of
+Pharmacology and Molecular Science, Johns Hopkins University School of
+Medicine, Baltimore, MD, and the Department of Biology, University of
+Iowa,IowaCity,IA,undercontractNOI-HD-6-2915fromtheN/H). This
+antibody recognizes cytoplasmic regions of N-CAM. When the rat N-CAM
+was resolved on SDS-PAGEand stained with Coomassie blue, the charac-
+teristic heterodisperse pattern of polysialylated N-CAM was observed.
+Neurocan was isolated aud analyzed as described previously (Ranch et
+al., 1991; Grumet et al., 1993). Briefly, brains of 7-d or 2- to 3-too-old
+Sprague-Dawley rats were extracted with PBS, and protvoglyr,aus were
+purified by ion exchange chromatography and gel filtration (Kiang et al.,
+1981). Neurocan was purified by immqnoa~nity chromatography using the
+1D1monoclonal antibody (Rauch et al., 1991). Rat chondrosarcoma chow
+droitin sulfate proteoglycan (aggrecan) was isolated by CsCI density gra-
+dient centrifugafion (Faltz et al., 1979). For studies of the core proteins,
+proteoglycans were digested for45-60 rain at 37C withprotease-free chon-
+droJ~nase ABC (scikagaku AmericaInc., Rockville, MD) in 100mM Tris-
+HCI buffer (pH 8.0 at 37C) conta|nlng 30 mM sodium acetate, and com-
+pleteness of digestion was confirmed by SDS-PAGE (Ranch et al., 1991);
+control treatments were performed at 37C in the absence of enzyme.
+Myelin-associated giycoprotein (M~J3) (a recombinant form including
+the ectudomain; Pedraza et al., 1990) and epidermal growth factor receptor
+(a recombinant, soluble, extracellular, ligand-bi~ina form; Lax et el.,
+1991)were kind gifts from Drs. J. L. Salzer and L Schiessinget (New York
+University Medical Center, New York), respectively. Commercial reagents
+included laminin and type I and IV collagens (Collaborative Research, Bed-
+The Journal of Cell Biology, Volume 125, 1994 670
+ford, MA), flbmnectin(New YorkBlood Center, New York, NY), and BSA
+(ICN Biomedical, Lisle, IL). Sturgeon notochord chondroitin sulfate, con-
+sistingof 80% chondroitin4-sulfateand 20% chondroitin6-sulfate, was ob-
+tained from Seikagaku America Inc. (P~ckville, MD).
+MonoclonniantibodiesagainstchickenNg-CAM (C,-rumetandEdelman,
+1984) and the 1D1 monoclonal antibody to neurocan (Ranch et al., 1991)
+have been described previously. A monoclonal antibody (CL-300) to
+calbindin-D was obtained from Sigma Chemical Co. (St. Louis, MO).
+When IgG was used, it was precipitated from ascites fluid with ammonium
+sulfate and fiu'ther purified on DE-52 columns.
+RadioligandBindingAssay
+Proteoglycans were labeled to a specific activity of 2.5-6 x 10TM cpm/
+mole with 1251by the lactopemxidase/glucuse oxidase method using En-
+zymobeads (BioRad Laboratories, Richmond, CA). Typically, 50/~gofpro-
+rein were labeled per reaction, and free iodine was removed by gel filtration
+on a PD-10 column (Pharmacia Fine Chemicals, Piscataway, NJ). Binding
+assays were performed essentially as described by Zisch et al. (1992). 1-30
+#g/ml of soluble proteins in binding buffer (16 mM Tris, pH 7.2, 50 mM
+NaCI, 2 mM CaCI2, 2 mM MgCI2, 0.02% NAN3)were adsorbed to remov-
+able Immunlon-2 wells (Dynatech, Chantilly, VA) by overnight incubation
+at room temperature. Unbound proteins were removed with three washes
+in bindingbuffer/0.02 % Tween20, and the wells wereblockedby incubation
+with I mg/ml heat*treated BSA in binding buffer. Wells were then emptied
+and 50/~l/well of labeled proteins or mixtures of labeled and unlabeledpro-
+teins (in binding buffer containing 1 mg BSMml) were incubated for 2 h
+at room temperature. Unbound proteoglycan was removed by four washes
+with TBS (50 mM Tris, pH 7.2, 150 mM NaCI)/0.02 % Tween 20, and radio-
+activityboundto wells was determinedwitha gamma counter. Some experi-
+ments were also performed in isotonic buffer (50 mM Tris, pH 7.2, 150 mM
+NaCI, 2 mM CaCI2, 2 mM MgCI2, 0.02% NAN3). Scatcbard plots were
+generated and dissociationconstants were determined using the Macintosh
+version of the Ligand program (Munson and Rodbard, 1980).
+CellAdhesionAssays
+250 p.1of DMEtITS+ containing 6 x 105 cells were deposited in the cen-
+tral region of 35 mm polystyrene dishes that had been coated with proteins.
+Following incubation for 80 rain at 37C, unattached cells were removed
+by washing with PBS and the remaining cells were fixed with 3.5% forma-
+lin. Attached cells were counted under a microscope at 200x mag-
+nification.
+NeuriteGrowth
+105 brain cells were incubated for 2 d under the same conditions used for
+cell adhesion assays, and were fixed with formalin. Neurite length was
+defined as the distance between the furthestremoved neurite tip and the cell
+body. Quantitationwas done under phase contrast microscopy with the help
+of a measuring eyepiece.
+lmmunocytochemistry
+The immunocytochemicallocalization of neurocan, NILE/LI, and N-CAM
+was performed on sagiRal Vibratome sections of 7-d rat cerebellum using
+the 1D1,2C2, and 5B8 monoclonal antibodies, respectively. Rats were per-
+fusion fixed with picric acid-paraformaldehyde-glutaraldeh~xie, and sec-
+tions were stained withperoxidase-conjugated secondantibodyas described
+previously (Rauch et al., 1991).
+AnalyticalMethods
+Proteins were resolved on SDS-PAGE (Laemmfi, 1970) and were either
+transferred to nitrocellulose and detected using antibodies (Grumet et al.,
+1984/7;Towbin et al., 1979), or stained with Coomassie blue. Radiolabeled
+proteins were detected by autoradiography, and proteinconcen~tlionswere
+determined using either the Lowry (for neurocan) or the Bradford protein
+assay (Bio-Rad Laboratories). The concentration of aggrecan was deter-
+mined gravimetrically.
+Cells
+Dissociated cells were prepared essentially as described previously (Brack-
+enbury et al., 1981). In brief, 9-d chick embryo brains were treated with
+trypsin/EIYl'A (GIBCO BRL, Gaithersburg, MD) followed by trimration in
+DME (GIBCO BRL) containing 10% fetal calf serum and 50 ~g/mi DNase
+I (Worthin~on Biochem. Corp., Freehold, NJ). The cells were washed
+twice with DME/YfS+ (Collaborative Research Inc., Waltham, MA) and
+once by centrifugation through a 3.5% BSA/PBS step gradient.
+Substrates
+Substrates for cell adhesion and neurite growth assays were arranged in a
+circular array (,'-l-cm diam) of 8 to 12 small circular regions of polystyrene
+dishes (Falcon 1007 and 1008; Becton Dickinson, Lincoln Park, NJ) that
+were coated with adsorbed proteins. Coated regions were prepared by in-
+cubating 1.5-/d droplets of protein solutions in a humidified chamber for
+30 vain (Friedlander et al., 1988). After removing the droplets by suction,
+the dishes were washed three times with PBS and blocked with 1% BSA.
+For double coats, the first solution was applied and washed as described
+above, except that no blocking step was performed. Following the third
+wash, the second solution was applied as described above, including the
+blocking step. Thus, protein in the second solution could bind both to the
+plastic and to the first adsorbed protein. For quantitative determination of
+protein binding to the substrate, radiolabeled proteins were incubated with
+dishes using the same materials and procedures used for the cell assays. Af-
+ter the final wash, the dishes were dried, their walls removed with pliers,
+and the bottoms of the dishes were exposed to a Phosphorimnger screen
+(Molecular Dynamics, Inc., Sunnyvale, CA) to determine the relative
+amounts of radioactivity in the central region of each spot by using interac-
+tive software (L,nageQuant; Molecular Dynamics, Inc.). Absolute values of
+bound protein were obtained by comparing the relative values with the total
+radioactivity adsorbed to a similar set of spots that were dried completely,
+without prior washing. For measuring total radioactivity, this method
+yielded results similar to those obtained with a gamma counter. However,
+for measuring the surface density of a second adsorbed protein, the Phos-
+pbo~anager method is more accurate because it allows one to specifically
+measure the radioactivity confined to precoated areas.
+Results
+Binding ofNeurocan to Ng-CAM and N-CAM
+Binding of neurocan to various cell surface proteins includ-
+ing neural CAMs and ECM proteins was determined using
+a radioligand binding assay (Fig. 1). Both rat neurocan and
+neurocan-C bound to chicken Ng-CAM and to its presumed
+rodent homologue NILE/L1 (Grumet, 1992; Sonderegger
+and Rathjen, 1992). Neurocan also bound to N-CAMs from
+chicken and rat. These results suggest that the proteoglycan
+binding domains in Ng-CAM and N-CAM have been con-
+served during the evolution of avian and mammalian species.
+Toanalyze the specificity of the binding, we tested whether
+neurocan binds to other coil surface proteins that were avail-
+able to us including MAG and the:epidermal growth factor
+receptor, as well as extracollular matrix components that can
+modulate neuronal adhesion or neurite outgrowth. Neurocan
+bound weakly to collagen I and not at all to MAG, collagen
+IV, or EGF receptor. Under our standard assay conditions
+(wells coated with proteins at a concentration of 1,25 #g/ml)
+neurocan did not bind to laminin but binding (9% of total
+counts) was detected when a higher laminin concentration
+(10/~g/ml) was used. The fraction of neurocan that bound
+specifically to Ng-CAM was consistently ,020-25 %, with a
+signal to background ratio as high as 65:1. The percent of
+neurocan bound to N-CAM was usually lower and varied
+to a greater extent between experiments, ranging from
+,08-15% bound with a signal to background ratio of 18-
+20:1. By comparison, lz~I-labeled aggrecan, a chondroitin
+sulfate proteoglycan isolated from rat chondrosarcoma,
+bound very weakly to Ng-CAM and N-CAM (Fig. 1), sug-
+Friedlanter ~ al. Bincng of Neurocan ~o,CAMs and~ffeo~s~onNeurons 671
+25
+* Neurocan
+20 [] Neurocan-C
+_~] Aggrecan
+I I
+0 I I I I I al I
+oo!o. i-.
+*~ re rr 0
+0
+Figure 1. Binding of neurocan and aggrecan to CAMs and extracel-
+lular matrix proteins. Removable wells of 96-well plates were
+coated with unlabeled proteins (1.25 #g/ml) and incubated with
+nq-labeled proteins ('~160,000 cpm). The fraction of the input
+bound to the different substrates is given as a percentage. Non-
+specific binding to BSA was also determined, and specific binding
+(percent bound) is calculated as total minus nonspecific binding.
+Specific activities in the experiments shown here were 2.5-2.9 x
+10~scpm/mole. All values are means of duplicate determinations
++SEM. EGF-R, epidermal growth factor receptor.
+gesting that the interactions between neurocan and these
+neural CAMs depend upon structural domains in neurocan
+that are not present in this related proteoglycan, or are
+masked by its much larger number of chondroitin sulfate
+chains.
+The radioligand binding assays described above were per-
+formed in buffers containing 50 mM NaC1. This hypotonic
+buffer yielded higher signal to background ratios than incu-
+bation in buffer with 150 mM NaCI. At physiological salt
+concentration, binding of neurocan to Ng-CAM and N-CAM
+was diminished by 35-60%, and the binding to collagen I
+was reduced to baseline levels (Fig. 2). These results suggest
+that in vivo neurocan may not bind to collagen I but that it
+could bind to the neural CAMs. Because the amounts of neu-
+rocan that we can isolate from rat brain are limited, we chose
+to perform most saturation and inhibition experiments using
+the hypotonic conditions.
+To investigate the reversibility of binding of neurocan to
+Ng-CAM, a kinetic analysis of the dissociation of neurocan
+was performed. Labeled neurocan or neurocan-C were al-
+lowed to bind to Ng-CAM, free labeled molecules were re-
+moved, and the amount of bound proteoglycan was deter-
+mined as a function of time under two conditions. Wells were
+incubated either in the presence of 5 ~g/ml of unlabeled pro-
+teoglycan (Fig. 3 A) or in large amounts of buffer (Fig. 3 B).
+Binding was reversible under both conditions, although the
+time required to reduce the binding to half the initial value
+was shorter in the presence of unlabeled proteoglycan
+(tl/2 - 20-30 rain) than in the presence of excess buffer (ti,2
+4 h). Similar results were observed for the binding of neu-
+rocan to N-CAM (data not shown).
+Figure 2. Binding of neurocan to CAMs and collagen I under hypo-
+tonic and isotonic conditions. The hypotonic and isotonic buffers
+were as described in Materials and Methods. Labeled proteogly-
+cans were applied at an average of 160000 cpm/well. Values are
+means ofduplicate determinations; error bars represent mean devi-
+ations.
+12
+10!
+8-
+4-
+2-
+0
+0
+12,]
+10-
+"O
+.-, eJ
+2-
+l l
+1 2 3
+Time of Incubation [hours]
+B
+I I I l I I I i I I
+0 2 4 6 8 10 12 14 16 18 20
+Time of incubation [hours]
+Figure 3. Reversibility of binding ofneurocan to Ng-CAM. Binding
+of 125I-neurocan and nq-neurocan-C to Ng-CAM-coated wells
+was performed as described in Materials and Methods. Following
+the removal of free proteoglycan, wells were incubated with 5
+/~g/mlunlabeled neurocan or neurocan-C in 100/tl ofisotonic bind-
+ing buffer (A), or in 40 ml of isotonic binding buffer without added
+proteoglycan (B). At the indicated times, the amounts of labeled
+pmteoglycan remaining in the wells were determined, Experimen-
+tal points correspond to specific binding and are averages (n = 2).
+Bars represent mean deviations.
+TheJournalof CellBiology,Volume125, 1994 672
+A Neurocan I Ng-CAM
+240
+0 4ooo 12~0 16000
+Frae [pM]
+I.
+1~10 281)
+Bound [pM]
+S Nnurocan-C I Ng-CAM
+o ~ 4obo solo o
+Free [pM]
+1.7
+4~ 800
+Bound [pM]
+Figure 4. Saturation curves and Scatchard plot analysis of 125I-
+labeled neurocan (A) and neurocan-C (B) binding to Ng-CAM.
+Binding values represent specific binding (total cpm bound minus
+cpm bound to BSA). Neurocan was tested at 0.5-50 rig/well (6.8
+x 10Is cpm/mole), and neurocan-C at 0.2-37 ng/well (4.8 x 10Is
+cpm/mole). Pointsin the saturation curve are averagesofduplicate
+determinations, and the error bars represent mean deviations.
+To analyze further the binding of neurocan to Ng-CAM
+and N-CAM, saturation experiments were performed with
+increasing amounts of labeled proteoglycan. Binding of neu-
+rocan and neurocan-C to both Ng-CAM (Fig. 4) and N-CAM
+(Fig. 5) was saturable in butters containing 50 mM NaC1,
+indicating the presence of a limited number of neurocan
+binding sites on Ng-CAM and N-CAM. Scatchard analysis
+of these data (Scatchard, 1949) yielded linear plots for bind-
+ing to Ng-CAM and N-CAM, indicating a single class of
+binding sites for both neurocan and neurocan-C. In all cases,
+the dissociation constants derived from the plots were quite
+similar (ranging from 0.42 to 0.84 nM), indicating high
+affinity binding that is compatible with specific receptor
+binding (Schlessinger, 1988). Comparable values were ob-
+tained for the binding of neurocan and neurocan-C to Ng-
+CAM in the presence of isotonic buffer (1.8 and 5.3 nM,
+A Neurocnn I N-CAM
+1 .:{
+Frm [p~
+0.4
+0
+B Neurocmn-C I N-CAM
+400
+o
+"*i
+10
+.
+t~0 2no
+Bound [pM]
+16000
+Free [pM]
+0.3
+~0.1
+Bound [pM]
+400
+Figure 5. Saturation curves and Scatchard analysis of t~I-labeled
+neurocan (A) and neurocan-C (B) binding to N-CAM. Binding
+values represent specific binding (total pm bound minus cpm
+bound to BSA). Neurocan was tested at 0.4-40 ng/well and
+neurocan-C at 1-60 rig/well. Points in the saturation curve are the
+averages of duplicate determinations, and the error bars represent
+mean deviations.
+respectively). For both Ng-CAM and N-CAM, the maxi-
+mum number of binding sites (B~,J corresponded to ,~1/5
+the number of CAM molecules coating the wells, which was
+determined independently. The differencebetween these val-
+ues may be related to the observation that both of these neu-
+ral CAMs behave as supramolecular complexes of &gt;~10 ~D,
+as determined by density gradient sedimentation of the de-
+tergent solub'dized proteins (Becker et al., 1989; Grumet,
+1992). It is possible that these complexes may constitute uni-
+tary binding sites.
+The specificity of binding of neurocan to these neural
+CAMs was also investigated in inhibition expe"runents. Sub-
+strate-bound CAMs and labeled ligands were first incubated
+with increasing concentrations of unlabeled molecules in-
+cluding neurocan, aggrecan, chondroitin sulfate, chondroi-
+tin sulfate disaccharides (resulting from chondroitinase
+treaunent of the pmteoglycans) and fibronectin, and binding
+of ~2~I-neurocanwas then measured. In these experiments,
+binding of nSI-neurocan to Ng-CAM was inhibited by solu-
+ble neurocan in a concentration-dependent manner (Fig. 6).
+Significant concentration-dependent inhibition of neurocan
+binding to Ng-CAM and N-CAM was also produced by
+aggrecan, a rat cartilage proteoglycan having a high concen-
+tration of chondroitin sulfate, and by free chondroitin sulfate
+chains (Fig. 6). The disaccharide composition of the stur-
+geon notochord chondroitin sulfate used in these inhibition
+experiments (80% chondroitin 4-sulfate and 20% chondroi-
+tin 6-sulfate) is identical to that of neurocan in early postna-
+tal brain (Rauch et al., 1991). However, sulfated disaccha-
+rides had very little effect on the binding of neurocan,
+demonstrating that intact chondroitin sulfate chains are re-
+quired to inhibit proteoglycanbinding to CAMs. In the same
+assay, fibronectin also had very little effect. Using the same
+100
+80-
+"~ 60-
+40-
+E
+20-
+0 1 I I I I
+0 1 2 3 4 5
+Concentration [p.g/ml]
+Figure 6. Binding of nSI-labeledneurocan to Ng-CAMin the pres-
+ence ofother soluble molecules. Wells coated with Ng-CAM were
+incubated with n5Llabeled ne~ (160,000 cpm/well) in the
+presence of unlabeledneurocan (.), aggrecan(.), cbondroitin sul-
+fate (0), chondroitin sulfatedisaccbarides (~), and fibmneotin (o)
+atthe concentrations indicated. Specificbinding ofneurocan to Ng-
+CAM in the absence of soluble molecules corresponds to 0% inhi-
+bition; background levelofneurocan binding to BSAdefines 100%
+inhibition. Valuesare the averagesofduplicate determinations; er-
+ror bars represent mean deviations. It should be noted that in terms
+of moles of chondroitin sulfate, neurocan (which contains only
+20% by weight of chondroitin sulfate) is a much better inhibitor
+than aggrecan ('~,80%chondroitin sulfate) or freechondroitin sul-
+fate chains.
+Friedlander et al. Binding of Neurocan to CAMs and Effects on Neurons 673
+set of soluble molecules as inhibitors, we observed similar
+patterns of inhibition for binding of neurocan to N-CAM
+and for binding of neurocan-C to Ng-CAM and to N-CAM
+(data not shown). The results suggestthat chondroitin sulfate
+chains, which constitute ,~20% by weight of neurocan, are
+important in the binding of neurocan to the neural CAMs.
+To analyze more directly the role of chondroitin sulfate
+chains in interactions of neurocan with neural CAMs, we
+compared the binding of native and chondroitinase-trcated
+neurocan to Ng-CAM (Fig. 7 A) and N-CAM (Fig. 7 B).
+Chondroitinase treatment reduced binding of neurocan and
+neurocan-C to Ng-CAM by '~70%, and to N-CAM by
+,,o80%, in both hypotonic (Fig. 7) and isotonic buffers (data
+not shown). Heat-treated proteoglycans retained the ability
+to bind to the CAMs, although at levels that were lower than
+those of controls. However, chondroitinase treatment fol-
+lowed by heat treatment further reduced the binding to
+nearly background levels. Since it is known that glycosyla-
+t.ion can protect proteins from denaturation (Oh-eda et al.,
+1990), the modest effectof heat treatment on the binding ac-
+tivity of the intact proteoglycanmay be due to this phenome-
+non. These results are consistent with the involvement of
+chondroitln sulfate chains on neurocan in binding to Ng-
+CAM and N-CAM. Nevertheless, the data also indicate that
+the core protein of neurocan retains binding for Ng-CAM
+and N-CAM even in the absence of chondroitin sulfate
+chains.
+OverlappingLocalizationofNeurocan, Ng-CAM,
+and N-CAMin DevelopingBrain
+If the interactions between neurocan and neuronal CAMs are
+biologicallysignificant, one would expect these molecules to
+appear in close proximity at certain times during develop-
+ment. The ability to isolate by immunoaffinitychromatogra-
+phy significantamounts ofneurocan (using mAb ID1)as well
+as NILE/L1 (using anti-Ng-cAM mAbs 2C2 and 19H3) and
+N-CAM (using mAb 5B8) from 7-d postnatal rat brain is evi-
+dence that all these proteins are present at this stage of devel-
+opment (see Materials and Methods). To determine the his-
+tological localization of these proteins, specific monoclonal
+antibodies were used for immunoperoxidase staining of sec-
+tions of early postnatal rat cerebellum. The staining with
+monoclonal antibodies against these three molecules was
+similar insofar as it was strongest in the molecular layer and
+in the deeper layers of the cerebellum (Fig. 8). Examination
+at higher magnification (Fig. 9) confirmed that strong stain-
+ing was associated with regions containing bundles of axons
+such as in the molecular layer and fiber tracts. This pattern
+of staining is in sharp contrast to that observed with other
+antibodies such as to calbindin, which specifically labeled
+Purkinje ceils and their dendrites projecting into the molecu-
+lar layer (Fig. 9). This general staining pattern for neurocan,
+Ng-CAM, and N-CAM was also observed in 4-, I0-, and
+14-d postnatal brain (data not shown), and is characteristic
+of several neural cell adhesion molecules (Rathjen and
+Schachner, 1984; Rathjen et al., 1987a, b; Pollerberg et al.,
+1985). Overlapping staining of these CAMs and neurocan
+was also seen prenatally (in E13 and E16 brain and spinal
+cord), whereas quite different staining patterns were ob-
+served using monoclonal antibodies against unrelated pro-
+teins such as glial fibrillary acidic protein (Flad, M., and
+R. K. Margolis, unpublished results).
+Figure7. Effectsofchondroitinaseand heat treatmenton the bind-
+ing of neurocan to Ng-CAM and N-CAM. Control treated pro-
+teoglycanswere incubatedat 37C for2 h in chondroitlna~ buffer,
+and heat treatment was for 15 rain at 95C. Chondroitinasetreat-
+ment (Ch-ase) and the radioligandbinding assaywere performed
+as described in Materials and Methods. nSI-labeledneurocan was
+used at 55,000cpm/well. Valuesare averagesofduplicatedetermi-
+nations, and error bars are mean deviations.
+EffectsofNeurocanon NeuronalAdhesion to Ng-CAM
+We previously showed, using a short-term (,,ol min) cen-
+trifugation adhesion assay, that neurons attach to plastic
+coated with neurocan, whereas using a medinm-term assay
+(,~1 h) under the force of gravity, neurons do not attach to
+a neurocan substrate or to substrates containing both neuro-
+can and Ng-CAM (Grurnet et al., 1993). Although rat neuro-
+can contains an RGDS sequence (Rauch et al., 1991), this
+sequence may not be functionallyactive insofaras a GRGDSP
+peptide (at 100 ttg/ml) does not inhibit the binding of chick
+neurons to neurocan in the centrifugation assay (Flad, M.,
+and R. K. Margolis, unpublished results).
+Based on our finding that neurocan binds to Ng-CAM, we
+sequentially adsorbed two different proteins to polystyrene
+dishes and then tested the substrate for neuronal adhesion.
+To help interpret the results, we also determined the amounts
+of protein adsorbed to the dish for the various combinations
+of protein concentrations and coating orders used (see
+Materials and Methods). When individual proteins were ad-
+sorbed to the dish, neurons attached strongly to Ng-CAM
+and anti-Ng-CAM Ig, weakly to N-CAM, negligibly to
+BSA, and not at all to neurocan. Because of the weak neu-
+ronal adhesion to N-CAM, it was omitted from the double
+coating experiments. To analyze direct effects of neurocan on
+neurons, we used a monoclonal anti-Ng-CAM Ig as a per-
+The Journalof CellBiology,Volume 125, 1994 674
+Figure 8. Immunoperoxidase staining of 7-d postnatal rat cerebellum with antibodies to Ng-CAM, neurocan, and N-CAM. (A) mAb 2C2,
+which recognizes a cytoplasmic region that is highly conserved between avian Ng-CAM and mammalianNILE/LI; (B) mAb 1131to neuro-
+can; (C) mAb 5B8 to N-CAM. No staining was seen with supernatant from a hybridoma that does not produce antibodies to brain antigens.
+Whereas all three antibodies stained long processes in the fiber tracts, antibodies against neurocan also intensely stained some regions
+(B, parallel arrows) surrounding the fiber tracts which were strongly stained with anti-Ng-CAM mAb 2C2. The anti-N-CAM monoclonal
+antibody recognizes the cytoplasmic region of N-CAM, and therefore revealed only the larger N-CAM species whose expression pattern
+in developing cerebellum parallels that of Ng-CAM/L1/NILE (Pollerberg et al., 1985). EGL, external granule cell layer; ML, molecular
+layer; F~, fiber tract. Bar, 200 #m.
+missive substrate that does not interact with neurocan. Neu-
+rons bound well to dishes coated with anti-Ng-CAM Ig
+(Table I) even after blocking with a large excess of BSA
+(Materials and Methods). Dishes coated first (protein 1) with
+BSA and then (protein 2) with anti-Ng-CAM Ig were also
+able to support neuronal attachment. Coating first with
+anti-Ng-CAM Ig and then with neurocan inhibited neuronal
+adhesion. The inhibition was most apparent at lower den-
+sities of bound anti-Ng-CAM Ig. In addition, substrates
+coated first with neurocan and then with anti-Ng-CAM Ig
+did not support neuronal adhesion. Inhibition occurred even
+though anti-Ng-CAM Ig was present at densities that sup-
+ported significant levels of neuronal attachment in the ab-
+sence of neurocan. For example, neurons adhered to anti-
+Ng-CAM (0.25 rig/ram2) when it was coated following BSA,
+but no adhesion was detected when even greater amounts of
+anti-Ng-CAM (0.42 ng/mm2) were coated following neuro-
+Figure 9. High magnification views of immunoperoxidase staining
+of 7-d postnatal rat cerebellum. Staining was performed as de-
+scribed in Fig. 8 and photographed at high magnification to com-
+pare staining in different lamina ofthe cerebellum using antibodies
+to Ng-CAM/NILE/LI (2C2), neurocan (1D1), N-CAM (5B8), and
+calbindin (CL-300). The staining for Ng-CAM/NILE/LI, neuro-
+can, and N-CAM is most intense in the axon-rich molecular layer
+and fiber tract (the developing white matter). Purkinje cell bodies
+and their dendritic trees and axonal projections are labeled by anti-
+bodies to calhindin. IGL, internal granule cell layer; PC, Purkinje
+cells. Bar, 10/~m.
+Friedlanderet al. Bindingof Neurocanto CAMsandEffectson Neurons 675
+Table L Adhesion of Cells to Dishes Coated with Neurocan and anti-Ng-CAM Ig
+Protein 1 Concentration1 Density 1 Protein2 Concentration
+2 Density2 Attachedcells
+itg/ml ng/mnf ~t
+g/ml n&amp;/mm
+z cells~ram2
+Anti-Ng-CAM 30 1.50  0.22 BSA 33 ND 535  32
+Anti-Ng-CAM 10 0.73  0.00 BSA 33 ND 286  53
+BSA 33 ND Anti-Ng-CAM 30 0.55  0.06 305  73
+BSA 33 ND Anti-Ng-CAM 10 0.25  0.01 221  52
+Anti-Ng-CAM 30 1.50  0.22 Neurocan 33 0.41  0.00 386  0
+Anti-Ng-CAM 10 0.73  0.00 Neurocan 33 0.76  0.06 0  0
+Neurocan 33 1.20 + 0.04 -Anti-Ng-CAM 30 0.42  0.01 1  1
+Neurocan 33 1.20  0.04 Anti-Ng-CAM 10 0.17  0.03 0 + 0
+Celladhesionassayswereperformedusingsubstratesconsistingof sequentiallyincubatedsolubleproteins 1and2 at concentrations1and2, respectively.The
+resultingsurfacedensitiesofadsorbedprotein(densitiesI and2)weredeterminedinparallelexperimentsusingthesamesabstrate,proteins,proteinconfutations
+and liquidvolumeas in the celladhesionassays.To determinedensity1, duplicatesamplesof differentconcentrationsof labeledprotein 1 (anti-Ng-CAMand
+neurecam)werespottedonthedish,andboundradioactivitywasmeasuredasdescribed.inMaterialsandMethods.Identicalvaluesofdensity1appearinthetable
+whentheywerebasedonthe sameexperimentalpoint.Datanotincludedinthetableindicatedthattheamountofboundradioactivityofprotein1wasnotlowered
+byapplyinga secondcoatwithunlabeledprotein.To determinedensity2, duplicatespotsofunlabeledprotein1werepreparedfirst,afterwhichlabeledprotein
+2 wasaddedendtheboundradioativitywasmeasured.Intheparallelcelladhesionassayswithunlabeledproteins,dissociatedbraincellsfrom9-dchickembryos
+wereaddedto substrates,andthenumbersofattachedcellsafteran80-minincubationperiodweredeterminedas indicatedinMaterialsandMethods.Thenumber
+of cellsthatattachedto theBSA-coatedbackgroundwas 13 + 8. Datarepresentaverages(n = 2) + meandeviations.
+can (Table I). Because neurocan does not bind to anti-
+Ng-CAM (data not shown), these results suggest that neuro-
+can interacts directly with the cell surface.
+These experiments also indicated that the surface density
+of 12~I-neurocan on dishes coated with different proteins in-
+cluding anti-Ng-CAM Ig (Table I)and BSA (data not shown)
+was inversely related to the amount of protein already ad-
+sorbed onto the dish. In contrast, the level of binding of
+125I-neurocan to dishes coated first with Ng-CAM was
+higher and did not vary much from the level of adsorption
+to untreated dishes (Table ID, consistent with the interpreta-
+tion that neurocan binds to Ng-CAM but not to BSA and
+anti-Ng-CAM Ig.
+When similar substrates were tested for neuronal adhe-
+sion, strong inhibitionwas found with those that were coated
+first with Ng-CAM and then with high concentrationsof neu-
+rocan (Table H). In contrast to the results with anti-Ng-CAM
+substrates, changing the order of the adsorptions (adding
+Ng-CAM after neurocan) allowed for high levels of neuronal
+binding (Table H). This occurred even though the surface
+density of Ng-CAM was relatively low. QuaLitatively similar
+results were obtained for both neurocan and neurocan-C, al-
+though neurocan was a somewhat more potent inhibitor.
+F_~ects of Neurocan on Neurite Outgrowth
+A critical aspect of neuronal development is the growth of
+processes. We therefore studied the effects of neurocan on
+neurite growth in culture using double-coated substrates pre-
+pared essentially as described above for the neuronal adhe-
+sion experiments. A major difference in these experiments
+was that the non-adherentcells were not removed by washing
+after 80 min of incubationand many cells eventuallyadhered
+to substrates even in the presence of neurocan. Neurons ex-
+tended numerous processes on surfaces coated with either
+Ng-CAM or anti-Ng-CAM Ig followed by BSA, whereas
+neurite extension was dramatically diminished on surfaces
+coated with either Ng-CAM or anti-Ng-CAM Ig followed by
+Table II. Adhesion of Cells to Dishes Coated with Neurocan and Ng-CAM
+Protein 1 Concentration1 Density 1 Protein2 Concentration
+2 Density2 Attachedcells
+~t
+g/ml ng/mm2 ~t
+g/ml ng/mm2 cells/mm2
+Ng-CAM 50 2.69 + 0.23 BSA 33 ND 395 + 9
+Ng-CAM 17 0.75 + 0.04 BSA 33 ND 474 + 3
+BSA 33 ND Ng-CAM 50 2.54 + 0.18 427 + 11
+BSA 33 ND Ng-CAM 17 0.87 + 0.00 392 + 20
+Ng-CAM 50 2.69 + 0.23 Neurocan 33 1.22 + 0.03 89 + 2
+Ng-CAM 17 0.75 + 0.04 Neurocan 33 1.23~+ 0.02 37 + 19
+Neurocan 33 1.2  0.04 Ng-CAM 50 1.26 -I- 0.18 460 + 2
+Neurocan 33 1.2 + 0.04 Ng-CAM 17 0.38 + 0.01 393 + 7
+Ng-CAM 50 2.69  0.23 Neurocan-C 33 1.18 + 0.02 183 + 15
+Ng-CAM 17 0.75 + 0.04 Neurocan-C 33 1.21 + 0.03 95 -I- 15
+Neurocan-C 33 1.15 + 0.02 Ng-CAM 50 1.05  0.01 475  26
+Neurocan-C 33 1.15  0.02 Ng-CAM 17 0.25 -4-0.03 529 + 14
+The number of ceUs adhering to the BSA-coated background was 20 + 3. Data represent averages (n = 2) + mean deviations. See Table I for methods.
+The Journal of Cell Biology, Volume 125, 1994 676
+Figure10. Effectsof neurocan on neurite growthon Ng-CAMand anti-Ng-CAM antibodies. Substrateswereprepared by incubationfirst
+with 50 t~g/miNg-CAM (a and b) or 10/~g/rrdmonoclonal anti-Ng-CAM IgG (c and d), followedby incubation with either 30/~g/ml
+BSA (a and c) or neurocan (b and d), as described in Materials and Methods. Brain cells from 9-d chick embryos were added to the
+substrates, and the cells were fixed after 2 d in culture and photographed under phase microscopy.Bar, 50 ~m.
+neurocan (Fig. 10). In quantitative experiments, the neurite
+length histograms for both Ng-CAM and anti-Ng-cAM sub-
+strates showed a significant fraction of neurites longer than
+20 t~mand a decreasing proportion of neurites with greater
+lengths (Fig. 11). In contrast, neurons grown on neurocan
+plus either Ng-CAM or anti-Ng-CAM had neurites mostly
+in the 0--20-t~mrange, with only relatively small numbers of
+longer neurites. These results demonstrate that neurocan is
+a potent inhibitor ofneurite growth both on proteins to which
+it can bind (e.g., Ng-CAM) and on those to which it does
+not bind (e.g., anti-Ng-CAM Ig).
+Discussion
+We have characterized several functional properties of neu-
+rocan, which accounts for &gt;20% of the soluble chondroitin
+sulfate proteoglycans in developing rat brain. The major ob-
+servations of the present study are: (a) that neurocan binds
+with high affinityto Ng-CAM and N-CAM, two of the most
+prevalent neural CAMs that play key roles in cell adhesion,
+neuronal migration, and axonal growth during development;
+(b) that these three molecules are coexpressed during critical
+stages of cerebeUar histogenesis; and (c) that neurocan in-
+hibits neuronal adhesion and neurite growth.
+Binding ofNeurocan to Neural CAMs
+Neurocan bound with high affinityto Ng-CAM and N-CAM,
+but not to other cell surface proteins except for laminin,
+which bound much more weakly. The potential biological
+relevance ofthis lower affinityinteraction is unclear because,
+in contrast to Ng-CAM and N-CAM which axe prevalent
+during brain development, there is very little lamh~ in
+brain (Jacobson, 1991). However, one must also consider the
+potential relevance of such interactions in the peripheral
+nervous system, where certain ECM proteins are more
+abundant.
+The observation that the apparent dissociation constant of
+binding of neurocan-C to Ng-CAM and N-CAM is compara-
+ble to that obtained using the full-length proteoglycan sug-
+gests that neurocan-C (which represents the COOH-terminal
+half of neurocan) contains at least one binding site for these
+neural CAMs. This region of neurocan contains several do-
+mains, some of which have been implicated in binding of
+other proteins, including two EGF-like repeats, a lectin-like
+domain, and a complementary regulatory protein-like se-
+quence fRauch et al., 1992). Neurocan-C contains a single
+32-kD chondroitin 4-sulfate chain that is linked at serine-
+944, whereas three additional potential chondroitin sulfate
+Friedlander et al. Binding of Neurocan to CAMs and Effects on Neurons 677
+Figure1]. Effects of neurocan on neurite outgrowth. Brain cells
+from 9-d chick embryos were plated on substratescoated with 50
+t~g/ndNg-CAM (a) or I0 ~g/ralmonoclonalanti-Ng-CAM IgG
+(b), and either 30/~g/ml BSA or 11/~g/mlneurocan, as described
+in Materials and Methods. After 2 d in vitro cultures were fixed,
+and for each bound cell the lengthofthe longestneurite wasdeter-
+mined as described in Materials and Methods. The histograms
+were obtainedby countingthenumber ofneuritcswith lengthsfall-
+ing withinthe indicatedranges. The valuesofmean neuritelengths
++SEM expressed in ~m were: Ng-CAM, 19.3  1.8 (n = 148);
+Ng-CAM + neurocan, 6.7  1.1 (n -- 66); anti-Ng-CAM, 19.4 +
+1.7 (n = 89); anti-Ng-CAM + neurocan, 6.3 + 0.9 (n -- 152).
+attachment sites (only two of which are used) are present in
+the NH2-terminal portion of neurocan. The observation that
+the binding atfmity of neurocan for Ng-CAM and N-CAM
+are quite similar raises the possibility that there may be a
+binding site that is shared by these two CAMs, which contain
+multiple Ig and fibronectin type 1II domains as well as im-
+munologically similar N-linked carbohydrate epitopes (Bur-
+goon et al., 1991; Grumet et al., 1984b). With respect to
+carbohydrates, it is interesting that neurocan-C contains a
+lectin-like domain and its potential role in binding to oligo-
+saccharides on neural CAMs needs to be investigated.
+Expression and Function of Chondroitin Sulfate
+Proteoglycans in Brain
+In agreement with evidence for a functionalrole ofchondroi-
+tin sulfate in proteogiycans during neural development (Snow
+et al., 1990a, 1991; Brittis et al., 1992; Margolis et al.,
+1991), our studies also suggest a role for chondroitin sulfate
+in the function of neurocan (Figs. 6 and 7). Although little
+is known regarding the mechanism of inhibition by these
+chondroitin sulfate proteoglycans, our findings suggest that
+Ng-CAM and N-CAM may be specific neuronal receptors
+for neumcan. In furore studies it will be important to analyze
+the fimctionsofdifferentdomains that are present in nervous
+tissue proteoglycam (Margolis and Margolis, 1993), and the
+molecular cloning of cDNAs for neurocan, phosphacan
+(Maurel et al., 1994), and other chondroitin sulfate pro-
+teoglycans of brain will facilitate such studies.
+Proteoglycans that have previously been identified in non-
+neural tissues may also be present in the brain. For example,
+aggrecan, which was first identified in cartilage, is present
+in rat brain (Mflev, P., R. U. Margolis and R. K. Margolis,
+unpublished results) and the primary structure of its core
+protein has regions that are homologous to domains in neu-
+rocan (Ranch et al., 1992). However, the giycosylation of
+cartilage aggrecan, which has been found to inhibit neurite
+growth (Snow et al., 1990a, 1991), differsconsiderably from
+that of neurocan (Rauch et al., 1991), and there are also
+significant differences between aggrecan from chick brain
+and cartilage (Krueger et al., 1992). In contrast to reports
+that aggrecan has effectson neurons (Snow and Letourneau,
+1993), our (Grumet et al., 1993) and other (Katoh-Semba
+and Oohira, 1993) studies indicate little or no effectof carti-
+lage aggrecan. One important difference is that significant
+inhibition of neurite growth required levels of aggrecan that
+are at least an order of magnitude greater than those used in
+our experiments (Grumet et al., 1993; and "fitbleH). The de-
+pendenee of the effects of cartilage aggrecan on the presence
+of chondroitin sulfate chains may be due to the involvement
+of these charged glycans in proteogiycan binding, as we
+showed here for neurocan. Moreover, in contrast to neuro-
+can-C and neurocan, which contain only 1-3 chondroitin
+sulfate chains, cartilage aggrecan contains up to 100 of these
+chains per molecule. In view of structural similarities and
+differences between proteoglycans from different tissues,
+and the potential functions of chondroitin sulfate, it will be
+interestingto examinethe effectsof brain aggrecan on neural
+cells.
+The immunolocalization studies in cerebellum demon-
+strate that neurocan, Ng-CAM/L1/NILE, and N-CAM are
+prevalent during brain development and have extensively
+overlapping distributions. Developing cerebellar neurons ex-
+press Ng-CAM/L1/NILE and N-CAM in vitro (Grumet et
+al., 1984a; Rathjen and Rutishauser, 1984; Stallcup and
+Beasley, 1985), and in situ hybridizationstudies demonstrate
+that neurocan mRNA is present in cerebellar granule cells
+(Milev et al., 1993; and Engel, M., R. U. Margolis, and
+R. K. Margolis, unpublished results). Granule cells may
+therefore be major contributors to the high levels of neuro-
+can that appear in the molecular layer of developing cere-
+bellum.
+Effects of Neurocan on Neurons
+The cellular assays employed in this study were designed to
+investigate potential mechanisms by which neurocan influ-
+ences neuronal behavior in the presence of proteins that
+promote neuronal adhesion and neurite outgrowth. When
+anti-Ng-CAM antibodies were used as a permissive sub-
+strate, neurocan inhibited neuronal adhesion and neurite
+growth. Because neurocan does not bind to anti-Ng-CAM,
+TheJournalofCellBiology,Volume125,1994 678
+the results imply that neurocan inhibited neuronal adhesion
+and neurite growth by interacting directly with the cell sur-
+face. The interpretation of the effects of neurocan on the
+adhesion of neurons to Ng-CAM itself is more complex due
+to potential interactions of neurocan with both substrate-
+bound Ng-CAM and the neuronal plasma membrane. When
+Ng-CAM was used as a permissive substrate, inhibition oc-
+curred only when neurocan was added after Ng-CAM, and
+not when neurocan was coated before Ng-CAM. This effect
+was seen even when the amounts of adsorbed neurocan were
+essentially the same in both cases (Table H).
+Neurocan is also a potent inhibitor of neurite outgrowth.
+It was important to perform such experiments because in
+contrast to cell adhesion, which is usually defined in terms
+of various in vitro assays, neurite growth is a fundamental
+cellular process that can be analyzed directly both in culture
+and in situ. In the future, it will be important to determine
+how various "inhibitory" proteins (Schwab et al., 1993) in-
+teract with cells and modulate different aspects of neuronal
+behavior. These modulations may also include growth con-
+trol, insofar as a mixture of chondroitin sulfateproteoglycans
+from brain was recentlyreported to inhibitprogression ofthe
+cell cycle in PC12 cells (Katoh-Semba and Oohira, 1993).
+The overlapping localization of neurocan with Ng-CAM/
+L1/NILE and N-CAM, together with the effects of mixtures
+of neurocan and Ng-CAM on cells, raise the possibility of
+at least two opposing but not exclusive modes of action that
+may occur in vivo: (a) binding of neurocan to CAMs and
+other cell surface proteins results in inhibition of neuronal
+adhesion and axonai migration, consistent with the hypothe-
+sis that proteoglycans act as barriers to neuronal penetration
+(Snow et al., 1990a,b; Perris et al., 1991; Oakley and Tos-
+hey, 1991; Pindzola et al., 1993); and (b) CAMs neutralize
+the inhibitory effects of neurocan by directly binding to it
+and/or directly by promoting neuronal adhesion and axonal
+migration. Inasmuch as there is no direct relationship be-
+tween the ability of particular proteins to promote neuronal
+adhesion and neurite growth (Lemmon et ai., 1992; Calof
+and Lander, 1991), it is possible that the ability of axons to
+migrate may depend on the balance between adhesive effects
+of CAMs and the inhibitory effects of molecules such as neu-
+rocan. For example, cytotactin/tenascin, which inhibits neu-
+rite outgrowth from dorsal root ganglia on fibronectin and
+laminin substrates (Crossin et al., 1990), is able to enhance
+neurite growth when neurons are cultured on polylysine
+(Lochter et al., 1991). Hence, a'repulsive" protein could re-
+duce neurite outgrowth on a moderately adhesive substrate
+(e.g., fibronectin or laminin) by lowering the adhesivity, yet
+it could enhance outgrowth on a strongly adhesive substrate
+(e.g., polylysine) by lowering adbesivity to a level that is
+more permissive for migration. This raises the possibility
+that various patterns of cell migration may be differentially
+affected as a result of local differences in the composition of
+cell surface receptors. A classical example of differences in
+the migratory behavior of differentparts of the same neuron
+can be found in the developing cerebellum, where granule
+cells extend axons (parallel fibers) that fasciculate along the
+growth surface of the molecular layer (rieh in neurocan and
+tenascin), but only their cell bodies migrate radially across
+this layer (Jacobson, 1991).
+Although it is possible that neurocan inhibits the function
+of CAMs by proteolytically inactivating them, we have not
+detected any change in the electrophoretic mobility of Ng-
+CAM followingincubation in physiologicalbuffers with neu-
+rocan (Grumet et ai., 1993). A more likely mechanism of
+action is that neurocan binds to the cell surface either to
+block an adhesion molecule and/or to generate a signal to
+the cell. In support of this possibility is the finding that 125I-
+neurocan binds to neurons, and FalYfragments of antibodies
+against Ng-CAM and N-CAM inhibit this binding (Milev, P.,
+D. R. Friedlander, M. Grnmet, and R. U. Margolis, unpub-
+lished observations). Moreover, recent studies indicate that
+increases in intracellular calcium levels follow binding of
+ligands to these CAMs at the surface of neurons (Schuch et
+al., 1989; Von Bohien und Halbach et al., 1992; Doherty
+and Walsh, 1992) as well as binding of chondroitin sulfate
+proteoglycans to growth cones (Snow, D. M., P. Atkinson,
+T. Hassinger, S. B. Kater, and P. C. Letourneau. 1993. Soc.
+Neurosci. Abstr. 19:876), and suggest that binding of neuro-
+can to neural CAMs may generate signals that influence ceLl
+behavior.
+It is clear that additional studies are needed to define more
+precisely the molecular mechanisms of action of neurocan
+and other chondroitin sulfate proteoglycans in the nervous
+system. Nevertheless, our results indicate that whether a par-
+ticular region of tissue will or will not be favorable for cell
+adhesion and axonal growth will depend not only on the rela-
+tive amounts of the CAMs and proteoglycans, but also on
+their sequences of expression and organization during devel-
+opment.
+We thank Drs. J. Schiessinger and I. Lax for providing EGF receptor, Dr.
+J. L. Salzer for his gift of myelin-nssociated protein, Dr. J. Hemperly for
+antibodies to human LI, and Manuela Flad and Irene Zimmer for technical
+assistance.
+This work was supported by NIH research grants NS-09348, NS-13876,
+NS-21629, and a National Institute of Mental Health Research Scientist
+Award to R. U. Margolis.
+Received for publication 8 October 1993 and in revised form 2 February
+1994.
+References
+Becker, J. W., H. P. Erickson, S. Hoffman, B. A. Cunningham, and G. M.
+Edelman. 1989. Topology of cell adhesionmolecules. Proc. Natl. Acad. Sci.
+USA. 86:1088-1092.
+Brackenbury, R., U. Rutishauser, and G. M. Edelman. 1981. Distinctcalcium-
+independent and calcium-dependent adhesion systems of chicken embryo
+cells. Proc. Natl. Acad. Sci. USA. 78:387-391.
+Brittis, P. A., D. R. Canning, andJ. Silver. 1992. Chondroitinsulfateas a regu-
+lator of neuronal patterning in the retina. Science (Wash. DC). 225:733-736.
+Burgoon, M. P., M. G-mn~, V. Mauro, G. M. Edelman, and B. A. Cunning-
+ham. 1991. Structure of the chicken neuron-gliacell adhesionmolecule, Ng-
+CAM: origin of polypeptides and relation to Ig supeffamily. J. Cell Biol.
+112:1017-1029.
+Calof, A. L., and A. D. Lander. 1991. Relationship between neuronal migra-
+tion and ceil-substratum adhesion: laminin and merosin promote olfactory
+neuronal migration but arc anti-adhesive. J. Cell Biol. 115:779-794.
+Crossin, K. L., A. L. Prieto, S. Hoffrnan, F. S. Jones, and D. R. Friedlander.
+1990. Expressionof adhesionmolecules and the establishmentof boundaries
+during embryonic and neural development. Exp. Neurol. 109:6-18.
+Doherty, P., and F. S. Welsh. 1992. CAMs, second messengers and axonel
+growth. Curr. Opin. Neurobiol. 2:595-601.
+Edelman, G. M., and K. L. Crossin. 1991. Cell adhesion molecules: implica-
+tions for a molecular histology. Ann Rev. Biochem. 60:155-190.
+Faltz, L. L., A. H. Rcddi, G. K. Hascall, D. Martin, J. C. Pita, and V. C.
+Hascall. 1979. Characteristics of proteoglycans extracted from the Swarm
+rat chondrosarcoma with associative solvents. J. Biol. Chem. 254:1375-
+1380.
+Friedlander, D. R., S. Hoffman, and G. M. Edelman~ 1988. Functional map-
+ping of cytotactin: Proteolytic fragments active in cell-substrate adhesion.
+J. Cell Biol. 107:2329-2340.
+Friedlander et al. Binding of Neurocan to CAMs and Effects on Neurons 679
+Grumet, M. 1992. Stsucmre, expression and function of Ng-CAM, a member
+of the immunoglobulinsuperfamily involved in neuron-neuron and neuron-
+glia adhesion. J. Neurosci. Res. 31:1-13.
+Grumet, M., and G. M. Edelman. 1984. Heterotypic binding between neuronal
+membranevesiclesand glia] cells is mediated by a specific cell adhesionmol-
+ecule. J. Cell Biol. 98:1746-1756.
+Grumet, M., and G. M. Edelman. 1988. Neurowglia cell adhesion molecule
+interacts with neuronsand astrogliavia differentbinding mechalfisms. J. Cell
+Biol. 106:487-503.
+Gtumet, M., A. Flaccos, and R. U. Margolis. 1993. Functional characteriza-
+tion of cbundroitin sulfate proteoglycans of bra]n: interactions with neurons
+and neural cell adhesion molecules. J. Cell Biol. 120:815-824.
+Grumet, MI, S. Hoffman, C.-M. Chuong, and G. M. Edelman. 1984a. Poly-
+peptide componentsand binding functionsof neuron-gliacell adhesionmole-
+cules. Proc. Natl. Acad. Sci. USA. 81:7989-7993.
+Grumet, M., S. Hoffman, and G. M. Edelman. 1984/7. Two antigenica]ly
+related neuronal CAMs of different specificities mediate neuron-neuronand
+neuron-glia adhesion. Proc. Natl. Acad. Sci. USA. 81:267-271.
+Hoffman, S., and G. M. Eda]man. 1983. Kinetics of homophilic binding by E
+and A forms of the ueumi cell adhesion molecule. Proc. Natl. Acad. Scl.
+USA. 80:5762-5766.
+Hynes, R. O., and A. D. Lander. 1992. Contact and adhesive specificities in
+the associations, migrations and targeting of cells and axons. Cell. 68:
+303-322.
+Jacobson, M. J. DevelopmentalNeurobiology. 3rd edition. PlenumPress, New
+York. 1991. 1-776.
+Katoh-semba, R., and A. Oohira. 1993. Core proteins of soluble chondroitin
+sulfate proteoslycans purified from the rat brain block the cell cycle of
+PCI2D cells. J. Ceil. Physiol. 156:17-23.
+Klan8, W.-L., R. U. Margolis, and R. K. Margofis. 1981. Fractionation and
+properties of a chondroitin sulfate proteoglycan and the soluble glycopro-
+teins of brain. J. Biol. Chem. 256:10529-10537.
+Krueger, R. C. Jr., A. K. Henpig, and N. B. Schwartz. 1992. Two immunologi-
+ca]ly and developmentally distinct chondroitln sulfate proteoglycans in em-
+bryonic chick bra]n. J. Biol. Chem. 267:12149-12161.
+Kruse, J., R. Mailhammer, H. Weroecke, A. Faissuer, I. Soimmer, C. Goridis,
+and M. Sehachner. 1984. Neural cell adhesion molecules and myelin-
+associatedglycoprotein share a commoncarbohydrate moiety recognized by
+monoclonal antibodies L2 and HNK-I. Nature (Lond.). 311:153-155.
+Laemm]~ U. K. 1970. Cleavage of sU'uctora] proteins during the assembly of
+the head of bacteriophage T4. Nature (Lond.). 227:680-685.
+Lax, I., A. K. Mitra, C. Ravera, D. R. Hurwitz, M. Rubinstein, A. Ullrich,
+R. M. Stroud, and J. Schlessinger. 1991. Epidermal growth factor (EGF)
+induces ollgumerization of soluble, extracellular, ligand binding domain of
+EGF receptor. J. Biol. Chem. 266:13828-13833.
+Lemmon, V., S. M. Burden, H. R. Payne, G. J. Elmslie, and M. L. Hlavin.
+1992. Neurite growth on different substrates: permissive versus instructive
+influence and the role of adhesive strength. J. Neurosci. 12:818-826.
+Lochter, A., L. Vaughan, A. Kaplony, A. Prochlantz, M. Schachner, and A.
+Faissner. 1991. Jl/tennscin in substrate-bound and soluble form displays
+contrary effects on neurite outgrowth. J. Cell Biol. 113:1159-1171.
+Margolis, R. K., B. Goossen, H. Tekotte, L. Hilgenberg, and R. U. Margulis.
+1991. Effects of/~-xylosides on proteoglycan biosynthesisand morphology
+of PC12 pheochromocytoma cells and primary cultures of rat cerebellum.
+J. Cell Sci. 99:237-246.
+Margolis, R. K., and R. U. Margolis. 1993. Nervous tissue proteoglycans. Ex-
+perienn'a. 49:429-446.
+Maurel, P., U. Rauch, M. Flad, R. K. Margolis, and R. U. Margulis. 1994.
+Phosphacan, a chondroitin sulfate proteoglycan of brain that interacts with
+neurons and neural cell adhesion molecules, is an extrecellular variant of a
+recoptor-type protein tyrosine phosphatnse. Proc. Natl. Acad. Sci. USA. 91:
+2512-2516.
+Milev, P., D. Friedlander, M. Grumet, R. K. Margolis, and R. U. Margolis.
+1993. Interactions and cellular sites of synthesisof chondroitin sulfate pro-
+teuglycans of brain. J. Neurochem. 61 Suppl.: SI10.
+Moos, M., R. Tacke, H. Scherer, D. Teplow, K. Fruh, and M. Schachner.
+1988. Neural adhesion molecule L1 as a member of the immunoglobulin
+superfamily with binding domains similar to fibronectin. Nature (Lond.).
+334:701-703.
+Munson, P. J., and D. Rodbard. 1980. A versatile computerized approach for
+characterization of ligand-binding systems. Anal. Biochem. 107:220-239.
+Oaldey, R. A., and K. W. Tosney. 1991. Peanut agglufiulnand choudroit]n-6-
+sulfate are molecularmarkers for tissuesthat act as barriers to axon advance
+in the avian embryo. Dev. Biol. 147:187-206.
+Oh-eda, M., M. Hasegawa, K. Hattori, H. Kuboniwa, T. Kojima, T. Orite,
+K. Tomonou, T. yamazaki, and N. Ochi. 1990. O-linked sugarchain ofhu-
+man granulocytecolony stimulatingfactor protects it againstdenaturation al-
+lowing it to retain its biological activity. J. BioL Chem. 265:11432-11435.
+Pedraza, L., G. C. Owens, L. A. D. Green, andJ. L. Sa]zer. 1990. The myelin-
+associated glycoproteins: membrane disposition, evidence of a novel di-
+sulfide linkasebetween immnnogIobitlin-likedomains, ~ posttranslationa]
+pulmitylation. J. Cell Biol. 111:2651-2661.
+Pert'is, R., D. Krotoski, T. Lallier, C. Domingo, J. M. Smell, and M. Bronner-
+Fraser. 1991. Spatial and temporal changes in the distribution of proteogly-
+cans during avian neural crest development. Deve/opment. 111:583-599.
+Pindzola, R. R., C. Do~er, and J. Silver. 1993. Putativeinhibitory extracellular
+matrixmoleculesat the dorsal root entry zoneof the spinalcord during devel-
+opment and after root and sciatic nerve lesions. Dev. Biol. 156:34-48.
+Pollerber8, E. G., R. Sedoul, C. Goridis, and M. Schac,hner. 1985. Selective
+expression of the 180-kD component of the neural cell adhesion molecule
+N-CAM during development. J. Cell Biol. 101:1921-1929.
+Prince, J. T., L. Alberti, P. A. Hea]y, S. J. Nauman, and W. B. Stsllcup. 1991.
+Molecular cloning of NILE glycoprotein and evidence for its continued ex-
+pression in mature rat CNS. J. Neurosci. Bes. 30:567-581.
+Rathjen, F. G., and U. Rutishausor. 1984. Comparisonof two cell surfacemol-
+ecules involved in neural cell adhesion. EMBO (Fur. Mol. Biol. Organ.) J.
+3:461--465.
+Rauch, U., P. Gao, A. Janetzko, A. Fleccus, L. Hilgenberg, H. Tekotte. R. K.
+Margolis, and R. U. Margolis. 1991. Isolation and characterization of de-
+velopmenta]ly regulated chondroitin sulfate and chondroitin/keratan sulfate
+proteoglycansof bra]n identified with monoclona]antibodies. J. Biol. Chem.
+266:14785-14801.
+Rauch, U., L. Karthikeyan, P. Manrel, R. U. Margolis, and R. K. Margulis.
+1992. Cloning and primary structure of neurocan, a developmentally regu-
+lated, aggregatingchondroitin sulfateproteoglycan of bra]n. J. Biol. Chem.
+267:19536-19547.
+Reichardt, L. F., and K. J. Tomaselli. 1991. Extracellular matrix molecules
+and their receptors: Functions in neural development. Annu. Bey. Neurosci.
+14:531-570.
+Ruoslahti, E. 1989. Proteoglycans in ce]l regulation. J. Biol. Chem. 264:
+13369-13372.
+Scatchard, G. 1949. The attractions of proteins for small molecules and ions.
+Ann. NY Acad. Sci. 51:660-672.
+Schlessinger, J. 1988. The epidermal growth factor receptor as a multifunc-
+tiona] a]losteric protein. Biochem/stry. 27:3119-3123.
+Schuch, U., M. J. Lohse, and M. Schechner. 1989. Neural cell adhesion mole-
+cules influence second messenger systems. Neuron. 3:13-20.
+Schwab, M. E., J. P. Kapfl~mmer, and C. E. Bandtiow. 1993. Inbibitors of
+neurite growth. Annu. Bey. Neurosci. 16:565-595.
+Snow, D. M., V. Lemmon, D. A. Carrino, A. I. Caplan, andJ. Silver. 1990a.
+Sulfated proteoglycans in astroglia] barriers inhibit neurite outgrowth in
+vitro. F_~p.Neurol. 109:111-130.
+Snow, D. M., D. A. Steindler, and J. Silver. 1990b. Molecular and cellular
+characterization of glia] roof plate of the spinal cord and optic t~ctum: a pos-
+sible role of proteoglycan in the development of an axon barrier. Dev. Biol.
+138:359-376.
+Snow, D. M., and P. C. Letourneau. 1993. Neurite outgrowth on a step
+gradient of chondroitin sulfate proteoglycan (CS-PG). J. Neurobiol. 23:
+322-336.
+Snow, D. M., M. Watsnabe, P. C. Letouroeuu, and J. Silver. 1991. A chow
+droitin sulfate proteoglycan may influence the direction of retinal gangfion
+cell outgrowth. Development. 113:1473-1485.
+Sonderegger, P., and F. G. Rathjeu. 1992. Regulation of axona] growth in the
+vertebrate nervous systemby interactionsbetween glycoporoteinsbelonging
+to two subgroups of the immunoglobulin superfamily. J. Cell Biol. 119:
+1387-1394.
+Sta]lcop, W. B., and L. L. Beusley. 1985. Involvement of the nerve growth
+factor-inducible large external glycoprotein (NILE) in neurite fasciculatiou
+in primary cultures of ratbrain. Proc. Natl. Acad. Sci. USA. 82:1276-1280.
+Towbin, H., H. Staehelin, and T. Gordon. 1979. Electrophoretic transfer of
+proteins from polyacrylamide gels to nitrocellulose sheets: procedure and
+some application. Proc. Natl. Acad. Scl. USA. 76:4350-4354.
+von Bohleu und Ha]bech, F., J. Taylor, and M. Sehachner. 1992. Cell type-
+specific effects of the neural adhesion molecules LI and N-CAM on diverse
+second messenger systems. Fur. J. Neurosci. 4:896-909.
+Wight, T. N., M. G. Kinsella, andE. E. Qwarnstrom. 1992. The role of pro-
+teoglycens in cell adhesion, migration, and proliferation. Curr. Opin. Cell
+Biol. 4:793-801.
+Zisch, A. H., L. D'Alessundri, B. Ranscht, R. Falchetto, K. H. Winterhalter,
+and L. Vaughan. 1992. Neuronal ceil adhesionmoleculecontactin/F11 binds
+to tennscin via its immunoglobulin-likedomain. J. CellBiol. 119:203-213.
+The Journal of Cell Biology, Volume 125, 1994 680
+
+				</preformat></body><back><ref-list content-type="selected-references"><ref id="PDF_00990"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Becker</surname><given-names>J. W.</given-names></name><name name-style="western"><surname>Erickson</surname><given-names>H. P.</given-names></name><name name-style="western"><surname>Hoffman</surname><given-names>S.</given-names></name><name name-style="western"><surname>Cunningham</surname><given-names>B. A.</given-names></name><name name-style="western"><surname>Edelman</surname><given-names>G. M.</given-names></name></person-group><article-title>Topology of cell adhesion molecules.</article-title><volume>86</volume><issue>3</issue><month>2</month><year>1989</year><fpage>1088</fpage><lpage>1092</lpage><source>Proc Natl Acad Sci U S A</source><pub-id pub-id-type="pmcid">PMC286627</pub-id><pub-id pub-id-type="pmid">2915974</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.86.3.1088</pub-id></element-citation></ref><ref id="PDF_00993"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Brackenbury</surname><given-names>R.</given-names></name><name name-style="western"><surname>Rutishauser</surname><given-names>U.</given-names></name><name name-style="western"><surname>Edelman</surname><given-names>G. M.</given-names></name></person-group><article-title>Distinct calcium-independent and calcium-dependent adhesion systems of chicken embryo cells.</article-title><volume>78</volume><issue>1</issue><month>1</month><year>1981</year><fpage>387</fpage><lpage>391</lpage><source>Proc Natl Acad Sci U S A</source><pub-id pub-id-type="pmcid">PMC319058</pub-id><pub-id pub-id-type="pmid">6165990</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.78.1.387</pub-id></element-citation></ref><ref id="PDF_00996"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Brittis</surname><given-names>P. A.</given-names></name><name name-style="western"><surname>Canning</surname><given-names>D. R.</given-names></name><name name-style="western"><surname>Silver</surname><given-names>J.</given-names></name></person-group><article-title>Chondroitin sulfate as a regulator of neuronal patterning in the retina.</article-title><volume>255</volume><issue>5045</issue><day>7</day><month>2</month><year>1992</year><fpage>733</fpage><lpage>736</lpage><source>Science</source><pub-id pub-id-type="pmid">1738848</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/science.1738848</pub-id></element-citation></ref><ref id="PDF_00998"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Burgoon</surname><given-names>M. P.</given-names></name><name name-style="western"><surname>Grumet</surname><given-names>M.</given-names></name><name name-style="western"><surname>Mauro</surname><given-names>V.</given-names></name><name name-style="western"><surname>Edelman</surname><given-names>G. M.</given-names></name><name name-style="western"><surname>Cunningham</surname><given-names>B. A.</given-names></name></person-group><article-title>Structure of the chicken neuron-glia cell adhesion molecule, Ng-CAM: origin of the polypeptides and relation to the Ig superfamily.</article-title><volume>112</volume><issue>5</issue><month>3</month><year>1991</year><fpage>1017</fpage><lpage>1029</lpage><source>J Cell Biol</source><pub-id pub-id-type="pmcid">PMC2288873</pub-id><pub-id pub-id-type="pmid">1705558</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.112.5.1017</pub-id></element-citation></ref><ref id="PDF_01002"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Calof</surname><given-names>A. L.</given-names></name><name name-style="western"><surname>Lander</surname><given-names>A. D.</given-names></name></person-group><article-title>Relationship between neuronal migration and cell-substratum adhesion: laminin and merosin promote olfactory neuronal migration but are anti-adhesive.</article-title><volume>115</volume><issue>3</issue><month>11</month><year>1991</year><fpage>779</fpage><lpage>794</lpage><source>J Cell Biol</source><pub-id pub-id-type="pmcid">PMC2289183</pub-id><pub-id pub-id-type="pmid">1918163</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.115.3.779</pub-id></element-citation></ref><ref id="PDF_01005"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Crossin</surname><given-names>K. L.</given-names></name><name name-style="western"><surname>Prieto</surname><given-names>A. L.</given-names></name><name name-style="western"><surname>Hoffman</surname><given-names>S.</given-names></name><name name-style="western"><surname>Jones</surname><given-names>F. S.</given-names></name><name name-style="western"><surname>Friedlander</surname><given-names>D. R.</given-names></name></person-group><article-title>Expression of adhesion molecules and the establishment of boundaries during embryonic and neural development.</article-title><volume>109</volume><issue>1</issue><month>7</month><year>1990</year><fpage>6</fpage><lpage>18</lpage><source>Exp Neurol</source><pub-id pub-id-type="pmid">2192909</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/s0014-4886(05)80004-4</pub-id></element-citation></ref><ref id="PDF_01008"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Doherty</surname><given-names>P.</given-names></name><name name-style="western"><surname>Walsh</surname><given-names>F. S.</given-names></name></person-group><article-title>Cell adhesion molecules, second messengers and axonal growth.</article-title><volume>2</volume><issue>5</issue><month>10</month><year>1992</year><fpage>595</fpage><lpage>601</lpage><source>Curr Opin Neurobiol</source><pub-id pub-id-type="pmid">1422115</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/0959-4388(92)90024-f</pub-id></element-citation></ref><ref id="PDF_01010"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Edelman</surname><given-names>G. M.</given-names></name><name name-style="western"><surname>Crossin</surname><given-names>K. L.</given-names></name></person-group><article-title>Cell adhesion molecules: implications for a molecular histology.</article-title><volume>60</volume><year>1991</year><fpage>155</fpage><lpage>190</lpage><source>Annu Rev Biochem</source><pub-id pub-id-type="pmid">1883195</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1146/annurev.bi.60.070191.001103</pub-id></element-citation></ref><ref id="PDF_01012"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Faltz</surname><given-names>L. L.</given-names></name><name name-style="western"><surname>Reddi</surname><given-names>A. H.</given-names></name><name name-style="western"><surname>Hascall</surname><given-names>G. K.</given-names></name><name name-style="western"><surname>Martin</surname><given-names>D.</given-names></name><name name-style="western"><surname>Pita</surname><given-names>J. C.</given-names></name><name name-style="western"><surname>Hascall</surname><given-names>V. C.</given-names></name></person-group><article-title>Characteristics of proteoglycans extracted from the Swarm rat chondrosarcoma with associative solvents.</article-title><volume>254</volume><issue>4</issue><day>25</day><month>2</month><year>1979</year><fpage>1375</fpage><lpage>1380</lpage><source>J Biol Chem</source><pub-id pub-id-type="pmid">762133</pub-id></element-citation></ref><ref id="PDF_01016"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Friedlander</surname><given-names>D. R.</given-names></name><name name-style="western"><surname>Hoffman</surname><given-names>S.</given-names></name><name name-style="western"><surname>Edelman</surname><given-names>G. M.</given-names></name></person-group><article-title>Functional mapping of cytotactin: proteolytic fragments active in cell-substrate adhesion.</article-title><volume>107</volume><issue>6 Pt 1</issue><month>12</month><year>1988</year><fpage>2329</fpage><lpage>2340</lpage><source>J Cell Biol</source><pub-id pub-id-type="pmcid">PMC2115667</pub-id><pub-id pub-id-type="pmid">2461950</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.107.6.2329</pub-id></element-citation></ref><ref id="PDF_01023"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Grumet</surname><given-names>M.</given-names></name><name name-style="western"><surname>Edelman</surname><given-names>G. M.</given-names></name></person-group><article-title>Heterotypic binding between neuronal membrane vesicles and glial cells is mediated by a specific cell adhesion molecule.</article-title><volume>98</volume><issue>5</issue><month>5</month><year>1984</year><fpage>1746</fpage><lpage>1756</lpage><source>J Cell Biol</source><pub-id pub-id-type="pmcid">PMC2113171</pub-id><pub-id pub-id-type="pmid">6725397</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.98.5.1746</pub-id></element-citation></ref><ref id="PDF_01026"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Grumet</surname><given-names>M.</given-names></name><name name-style="western"><surname>Edelman</surname><given-names>G. M.</given-names></name></person-group><article-title>Neuron-glia cell adhesion molecule interacts with neurons and astroglia via different binding mechanisms.</article-title><volume>106</volume><issue>2</issue><month>2</month><year>1988</year><fpage>487</fpage><lpage>503</lpage><source>J Cell Biol</source><pub-id pub-id-type="pmcid">PMC2114985</pub-id><pub-id pub-id-type="pmid">2448316</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.106.2.487</pub-id></element-citation></ref><ref id="PDF_01029"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Grumet</surname><given-names>M.</given-names></name><name name-style="western"><surname>Flaccus</surname><given-names>A.</given-names></name><name name-style="western"><surname>Margolis</surname><given-names>R. U.</given-names></name></person-group><article-title>Functional characterization of chondroitin sulfate proteoglycans of brain: interactions with neurons and neural cell adhesion molecules.</article-title><volume>120</volume><issue>3</issue><month>2</month><year>1993</year><fpage>815</fpage><lpage>824</lpage><source>J Cell Biol</source><pub-id pub-id-type="pmcid">PMC2119543</pub-id><pub-id pub-id-type="pmid">8425902</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.120.3.815</pub-id></element-citation></ref><ref id="PDF_01032"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Grumet</surname><given-names>M.</given-names></name><name name-style="western"><surname>Hoffman</surname><given-names>S.</given-names></name><name name-style="western"><surname>Chuong</surname><given-names>C. M.</given-names></name><name name-style="western"><surname>Edelman</surname><given-names>G. M.</given-names></name></person-group><article-title>Polypeptide components and binding functions of neuron-glia cell adhesion molecules.</article-title><volume>81</volume><issue>24</issue><month>12</month><year>1984</year><fpage>7989</fpage><lpage>7993</lpage><source>Proc Natl Acad Sci U S A</source><pub-id pub-id-type="pmcid">PMC392279</pub-id><pub-id pub-id-type="pmid">6393132</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.81.24.7989</pub-id></element-citation></ref><ref id="PDF_01035"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Grumet</surname><given-names>M.</given-names></name><name name-style="western"><surname>Hoffman</surname><given-names>S.</given-names></name><name name-style="western"><surname>Edelman</surname><given-names>G. M.</given-names></name></person-group><article-title>Two antigenically related neuronal cell adhesion molecules of different specificities mediate neuron-neuron and neuron-glia adhesion.</article-title><volume>81</volume><issue>1</issue><month>1</month><year>1984</year><fpage>267</fpage><lpage>271</lpage><source>Proc Natl Acad Sci U S A</source><pub-id pub-id-type="pmcid">PMC344653</pub-id><pub-id pub-id-type="pmid">6364137</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.81.1.267</pub-id></element-citation></ref><ref id="PDF_01020"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Grumet</surname><given-names>M.</given-names></name></person-group><article-title>Structure, expression, and function of Ng-CAM, a member of the immunoglobulin superfamily involved in neuron-neuron and neuron-glia adhesion.</article-title><volume>31</volume><issue>1</issue><month>1</month><year>1992</year><fpage>1</fpage><lpage>13</lpage><source>J Neurosci Res</source><pub-id pub-id-type="pmid">1377280</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/jnr.490310102</pub-id></element-citation></ref><ref id="PDF_01038"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Hoffman</surname><given-names>S.</given-names></name><name name-style="western"><surname>Edelman</surname><given-names>G. M.</given-names></name></person-group><article-title>Kinetics of homophilic binding by embryonic and adult forms of the neural cell adhesion molecule.</article-title><volume>80</volume><issue>18</issue><month>9</month><year>1983</year><fpage>5762</fpage><lpage>5766</lpage><source>Proc Natl Acad Sci U S A</source><pub-id pub-id-type="pmcid">PMC384339</pub-id><pub-id pub-id-type="pmid">6577452</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.80.18.5762</pub-id></element-citation></ref><ref id="PDF_01041"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Hynes</surname><given-names>R. O.</given-names></name><name name-style="western"><surname>Lander</surname><given-names>A. D.</given-names></name></person-group><article-title>Contact and adhesive specificities in the associations, migrations, and targeting of cells and axons.</article-title><volume>68</volume><issue>2</issue><day>24</day><month>1</month><year>1992</year><fpage>303</fpage><lpage>322</lpage><source>Cell</source><pub-id pub-id-type="pmid">1733501</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/0092-8674(92)90472-o</pub-id></element-citation></ref><ref id="PDF_01046"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Katoh-Semba</surname><given-names>R.</given-names></name><name name-style="western"><surname>Oohira</surname><given-names>A.</given-names></name></person-group><article-title>Core proteins of soluble chondroitin sulfate proteoglycans purified from the rat brain block the cell cycle of PC12D cells.</article-title><volume>156</volume><issue>1</issue><month>7</month><year>1993</year><fpage>17</fpage><lpage>23</lpage><source>J Cell Physiol</source><pub-id pub-id-type="pmid">8314855</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/jcp.1041560104</pub-id></element-citation></ref><ref id="PDF_01049"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Kiang</surname><given-names>W. L.</given-names></name><name name-style="western"><surname>Margolis</surname><given-names>R. U.</given-names></name><name name-style="western"><surname>Margolis</surname><given-names>R. K.</given-names></name></person-group><article-title>Fractionation and properties of a chondroitin sulfate proteoglycan and the soluble glycoproteins of brain.</article-title><volume>256</volume><issue>20</issue><day>25</day><month>10</month><year>1981</year><fpage>10529</fpage><lpage>10537</lpage><source>J Biol Chem</source><pub-id pub-id-type="pmid">6793583</pub-id></element-citation></ref><ref id="PDF_01052"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Krueger</surname><given-names>R. C.</given-names><suffix>Jr</suffix></name><name name-style="western"><surname>Hennig</surname><given-names>A. K.</given-names></name><name name-style="western"><surname>Schwartz</surname><given-names>N. B.</given-names></name></person-group><article-title>Two immunologically and developmentally distinct chondroitin sulfate proteolglycans in embryonic chick brain.</article-title><volume>267</volume><issue>17</issue><day>15</day><month>6</month><year>1992</year><fpage>12149</fpage><lpage>12161</lpage><source>J Biol Chem</source><pub-id pub-id-type="pmid">1601881</pub-id></element-citation></ref><ref id="PDF_01055"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Kruse</surname><given-names>J.</given-names></name><name name-style="western"><surname>Mailhammer</surname><given-names>R.</given-names></name><name name-style="western"><surname>Wernecke</surname><given-names>H.</given-names></name><name name-style="western"><surname>Faissner</surname><given-names>A.</given-names></name><name name-style="western"><surname>Sommer</surname><given-names>I.</given-names></name><name name-style="western"><surname>Goridis</surname><given-names>C.</given-names></name><name name-style="western"><surname>Schachner</surname><given-names>M.</given-names></name></person-group><article-title>Neural cell adhesion molecules and myelin-associated glycoprotein share a common carbohydrate moiety recognized by monoclonal antibodies L2 and HNK-1.</article-title><volume>311</volume><issue>5982</issue><day>13</day><month>9</month><year>1984</year><fpage>153</fpage><lpage>155</lpage><source>Nature</source><pub-id pub-id-type="pmid">6206400</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/311153a0</pub-id></element-citation></ref><ref id="PDF_01061"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Lax</surname><given-names>I.</given-names></name><name name-style="western"><surname>Mitra</surname><given-names>A. K.</given-names></name><name name-style="western"><surname>Ravera</surname><given-names>C.</given-names></name><name name-style="western"><surname>Hurwitz</surname><given-names>D. R.</given-names></name><name name-style="western"><surname>Rubinstein</surname><given-names>M.</given-names></name><name name-style="western"><surname>Ullrich</surname><given-names>A.</given-names></name><name name-style="western"><surname>Stroud</surname><given-names>R. M.</given-names></name><name name-style="western"><surname>Schlessinger</surname><given-names>J.</given-names></name></person-group><article-title>Epidermal growth factor (EGF) induces oligomerization of soluble, extracellular, ligand-binding domain of EGF receptor. A low resolution projection structure of the ligand-binding domain.</article-title><volume>266</volume><issue>21</issue><day>25</day><month>7</month><year>1991</year><fpage>13828</fpage><lpage>13833</lpage><source>J Biol Chem</source><pub-id pub-id-type="pmid">1856216</pub-id></element-citation></ref><ref id="PDF_01065"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Lemmon</surname><given-names>V.</given-names></name><name name-style="western"><surname>Burden</surname><given-names>S. M.</given-names></name><name name-style="western"><surname>Payne</surname><given-names>H. R.</given-names></name><name name-style="western"><surname>Elmslie</surname><given-names>G. J.</given-names></name><name name-style="western"><surname>Hlavin</surname><given-names>M. L.</given-names></name></person-group><article-title>Neurite growth on different substrates: permissive versus instructive influences and the role of adhesive strength.</article-title><volume>12</volume><issue>3</issue><month>3</month><year>1992</year><fpage>818</fpage><lpage>826</lpage><source>J Neurosci</source><pub-id pub-id-type="pmcid">PMC6576038</pub-id><pub-id pub-id-type="pmid">1545241</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1523/JNEUROSCI.12-03-00818.1992</pub-id></element-citation></ref><ref id="PDF_01068"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Lochter</surname><given-names>A.</given-names></name><name name-style="western"><surname>Vaughan</surname><given-names>L.</given-names></name><name name-style="western"><surname>Kaplony</surname><given-names>A.</given-names></name><name name-style="western"><surname>Prochiantz</surname><given-names>A.</given-names></name><name name-style="western"><surname>Schachner</surname><given-names>M.</given-names></name><name name-style="western"><surname>Faissner</surname><given-names>A.</given-names></name></person-group><article-title>J1/tenascin in substrate-bound and soluble form displays contrary effects on neurite outgrowth.</article-title><volume>113</volume><issue>5</issue><month>6</month><year>1991</year><fpage>1159</fpage><lpage>1171</lpage><source>J Cell Biol</source><pub-id pub-id-type="pmcid">PMC2289012</pub-id><pub-id pub-id-type="pmid">1710226</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.113.5.1159</pub-id></element-citation></ref><ref id="PDF_01071"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Margolis</surname><given-names>R. K.</given-names></name><name name-style="western"><surname>Goossen</surname><given-names>B.</given-names></name><name name-style="western"><surname>Tekotte</surname><given-names>H.</given-names></name><name name-style="western"><surname>Hilgenberg</surname><given-names>L.</given-names></name><name name-style="western"><surname>Margolis</surname><given-names>R. U.</given-names></name></person-group><article-title>Effects of beta-xylosides on proteoglycan biosynthesis and morphology of PC12 pheochromocytoma cells and primary cultures of rat cerebellum.</article-title><volume>99</volume><issue>Pt 2</issue><month>6</month><year>1991</year><fpage>237</fpage><lpage>246</lpage><source>J Cell Sci</source><pub-id pub-id-type="pmid">1909336</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1242/jcs.99.2.237</pub-id></element-citation></ref><ref id="PDF_01075"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Margolis</surname><given-names>R. K.</given-names></name><name name-style="western"><surname>Margolis</surname><given-names>R. U.</given-names></name></person-group><article-title>Nervous tissue proteoglycans.</article-title><volume>49</volume><issue>5</issue><day>15</day><month>5</month><year>1993</year><fpage>429</fpage><lpage>446</lpage><source>Experientia</source><pub-id pub-id-type="pmid">8500598</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/BF01923587</pub-id></element-citation></ref><ref id="PDF_01077"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Maurel</surname><given-names>P.</given-names></name><name name-style="western"><surname>Rauch</surname><given-names>U.</given-names></name><name name-style="western"><surname>Flad</surname><given-names>M.</given-names></name><name name-style="western"><surname>Margolis</surname><given-names>R. K.</given-names></name><name name-style="western"><surname>Margolis</surname><given-names>R. U.</given-names></name></person-group><article-title>Phosphacan, a chondroitin sulfate proteoglycan of brain that interacts with neurons and neural cell-adhesion molecules, is an extracellular variant of a receptor-type protein tyrosine phosphatase.</article-title><volume>91</volume><issue>7</issue><day>29</day><month>3</month><year>1994</year><fpage>2512</fpage><lpage>2516</lpage><source>Proc Natl Acad Sci U S A</source><pub-id pub-id-type="pmcid">PMC43399</pub-id><pub-id pub-id-type="pmid">7511813</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.91.7.2512</pub-id></element-citation></ref><ref id="PDF_01085"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Moos</surname><given-names>M.</given-names></name><name name-style="western"><surname>Tacke</surname><given-names>R.</given-names></name><name name-style="western"><surname>Scherer</surname><given-names>H.</given-names></name><name name-style="western"><surname>Teplow</surname><given-names>D.</given-names></name><name name-style="western"><surname>Früh</surname><given-names>K.</given-names></name><name name-style="western"><surname>Schachner</surname><given-names>M.</given-names></name></person-group><article-title>Neural adhesion molecule L1 as a member of the immunoglobulin superfamily with binding domains similar to fibronectin.</article-title><volume>334</volume><issue>6184</issue><day>25</day><month>8</month><year>1988</year><fpage>701</fpage><lpage>703</lpage><source>Nature</source><pub-id pub-id-type="pmid">3412448</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/334701a0</pub-id></element-citation></ref><ref id="PDF_01089"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Munson</surname><given-names>P. J.</given-names></name><name name-style="western"><surname>Rodbard</surname><given-names>D.</given-names></name></person-group><article-title>Ligand: a versatile computerized approach for characterization of ligand-binding systems.</article-title><volume>107</volume><issue>1</issue><day>1</day><month>9</month><year>1980</year><fpage>220</fpage><lpage>239</lpage><source>Anal Biochem</source><pub-id pub-id-type="pmid">6254391</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/0003-2697(80)90515-1</pub-id></element-citation></ref><ref id="PDF_01091"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Oakley</surname><given-names>R. A.</given-names></name><name name-style="western"><surname>Tosney</surname><given-names>K. W.</given-names></name></person-group><article-title>Peanut agglutinin and chondroitin-6-sulfate are molecular markers for tissues that act as barriers to axon advance in the avian embryo.</article-title><volume>147</volume><issue>1</issue><month>9</month><year>1991</year><fpage>187</fpage><lpage>206</lpage><source>Dev Biol</source><pub-id pub-id-type="pmid">1908800</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/s0012-1606(05)80017-x</pub-id></element-citation></ref><ref id="PDF_01094"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Oh-eda</surname><given-names>M.</given-names></name><name name-style="western"><surname>Hasegawa</surname><given-names>M.</given-names></name><name name-style="western"><surname>Hattori</surname><given-names>K.</given-names></name><name name-style="western"><surname>Kuboniwa</surname><given-names>H.</given-names></name><name name-style="western"><surname>Kojima</surname><given-names>T.</given-names></name><name name-style="western"><surname>Orita</surname><given-names>T.</given-names></name><name name-style="western"><surname>Tomonou</surname><given-names>K.</given-names></name><name name-style="western"><surname>Yamazaki</surname><given-names>T.</given-names></name><name name-style="western"><surname>Ochi</surname><given-names>N.</given-names></name></person-group><article-title>O-linked sugar chain of human granulocyte colony-stimulating factor protects it against polymerization and denaturation allowing it to retain its biological activity.</article-title><volume>265</volume><issue>20</issue><day>15</day><month>7</month><year>1990</year><fpage>11432</fpage><lpage>11435</lpage><source>J Biol Chem</source><pub-id pub-id-type="pmid">1694845</pub-id></element-citation></ref><ref id="PDF_01098"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Pedraza</surname><given-names>L.</given-names></name><name name-style="western"><surname>Owens</surname><given-names>G. C.</given-names></name><name name-style="western"><surname>Green</surname><given-names>L. A.</given-names></name><name name-style="western"><surname>Salzer</surname><given-names>J. L.</given-names></name></person-group><article-title>The myelin-associated glycoproteins: membrane disposition, evidence of a novel disulfide linkage between immunoglobulin-like domains, and posttranslational palmitylation.</article-title><volume>111</volume><issue>6 Pt 1</issue><month>12</month><year>1990</year><fpage>2651</fpage><lpage>2661</lpage><source>J Cell Biol</source><pub-id pub-id-type="pmcid">PMC2116432</pub-id><pub-id pub-id-type="pmid">1703542</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.111.6.2651</pub-id></element-citation></ref><ref id="PDF_01102"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Perris</surname><given-names>R.</given-names></name><name name-style="western"><surname>Krotoski</surname><given-names>D.</given-names></name><name name-style="western"><surname>Lallier</surname><given-names>T.</given-names></name><name name-style="western"><surname>Domingo</surname><given-names>C.</given-names></name><name name-style="western"><surname>Sorrell</surname><given-names>J. M.</given-names></name><name name-style="western"><surname>Bronner-Fraser</surname><given-names>M.</given-names></name></person-group><article-title>Spatial and temporal changes in the distribution of proteoglycans during avian neural crest development.</article-title><volume>111</volume><issue>2</issue><month>2</month><year>1991</year><fpage>583</fpage><lpage>599</lpage><source>Development</source><pub-id pub-id-type="pmid">1893876</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1242/dev.111.2.583</pub-id></element-citation></ref><ref id="PDF_01105"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Pindzola</surname><given-names>R. R.</given-names></name><name name-style="western"><surname>Doller</surname><given-names>C.</given-names></name><name name-style="western"><surname>Silver</surname><given-names>J.</given-names></name></person-group><article-title>Putative inhibitory extracellular matrix molecules at the dorsal root entry zone of the spinal cord during development and after root and sciatic nerve lesions.</article-title><volume>156</volume><issue>1</issue><month>3</month><year>1993</year><fpage>34</fpage><lpage>48</lpage><source>Dev Biol</source><pub-id pub-id-type="pmid">7680631</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1006/dbio.1993.1057</pub-id></element-citation></ref><ref id="PDF_01108"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Pollerberg</surname><given-names>E. G.</given-names></name><name name-style="western"><surname>Sadoul</surname><given-names>R.</given-names></name><name name-style="western"><surname>Goridis</surname><given-names>C.</given-names></name><name name-style="western"><surname>Schachner</surname><given-names>M.</given-names></name></person-group><article-title>Selective expression of the 180-kD component of the neural cell adhesion molecule N-CAM during development.</article-title><volume>101</volume><issue>5 Pt 1</issue><month>11</month><year>1985</year><fpage>1921</fpage><lpage>1929</lpage><source>J Cell Biol</source><pub-id pub-id-type="pmcid">PMC2113974</pub-id><pub-id pub-id-type="pmid">3902857</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.101.5.1921</pub-id></element-citation></ref><ref id="PDF_01111"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Prince</surname><given-names>J. T.</given-names></name><name name-style="western"><surname>Alberti</surname><given-names>L.</given-names></name><name name-style="western"><surname>Healy</surname><given-names>P. A.</given-names></name><name name-style="western"><surname>Nauman</surname><given-names>S. J.</given-names></name><name name-style="western"><surname>Stallcup</surname><given-names>W. B.</given-names></name></person-group><article-title>Molecular cloning of NILE glycoprotein and evidence for its continued expression in mature rat CNS.</article-title><volume>30</volume><issue>3</issue><month>11</month><year>1991</year><fpage>567</fpage><lpage>581</lpage><source>J Neurosci Res</source><pub-id pub-id-type="pmid">1800773</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/jnr.490300315</pub-id></element-citation></ref><ref id="PDF_01114"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Rathjen</surname><given-names>F. G.</given-names></name><name name-style="western"><surname>Rutishauser</surname><given-names>U.</given-names></name></person-group><article-title>Comparison of two cell surface molecules involved in neural cell adhesion.</article-title><volume>3</volume><issue>2</issue><month>2</month><year>1984</year><fpage>461</fpage><lpage>465</lpage><source>EMBO J</source><pub-id pub-id-type="pmcid">PMC557366</pub-id><pub-id pub-id-type="pmid">6201360</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/j.1460-2075.1984.tb01828.x</pub-id></element-citation></ref><ref id="PDF_01117"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Rauch</surname><given-names>U.</given-names></name><name name-style="western"><surname>Gao</surname><given-names>P.</given-names></name><name name-style="western"><surname>Janetzko</surname><given-names>A.</given-names></name><name name-style="western"><surname>Flaccus</surname><given-names>A.</given-names></name><name name-style="western"><surname>Hilgenberg</surname><given-names>L.</given-names></name><name name-style="western"><surname>Tekotte</surname><given-names>H.</given-names></name><name name-style="western"><surname>Margolis</surname><given-names>R. K.</given-names></name><name name-style="western"><surname>Margolis</surname><given-names>R. U.</given-names></name></person-group><article-title>Isolation and characterization of developmentally regulated chondroitin sulfate and chondroitin/keratan sulfate proteoglycans of brain identified with monoclonal antibodies.</article-title><volume>266</volume><issue>22</issue><day>5</day><month>8</month><year>1991</year><fpage>14785</fpage><lpage>14801</lpage><source>J Biol Chem</source><pub-id pub-id-type="pmid">1907283</pub-id></element-citation></ref><ref id="PDF_01122"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Rauch</surname><given-names>U.</given-names></name><name name-style="western"><surname>Karthikeyan</surname><given-names>L.</given-names></name><name name-style="western"><surname>Maurel</surname><given-names>P.</given-names></name><name name-style="western"><surname>Margolis</surname><given-names>R. U.</given-names></name><name name-style="western"><surname>Margolis</surname><given-names>R. K.</given-names></name></person-group><article-title>Cloning and primary structure of neurocan, a developmentally regulated, aggregating chondroitin sulfate proteoglycan of brain.</article-title><volume>267</volume><issue>27</issue><day>25</day><month>9</month><year>1992</year><fpage>19536</fpage><lpage>19547</lpage><source>J Biol Chem</source><pub-id pub-id-type="pmid">1326557</pub-id></element-citation></ref><ref id="PDF_01126"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Reichardt</surname><given-names>L. F.</given-names></name><name name-style="western"><surname>Tomaselli</surname><given-names>K. J.</given-names></name></person-group><article-title>Extracellular matrix molecules and their receptors: functions in neural development.</article-title><volume>14</volume><year>1991</year><fpage>531</fpage><lpage>570</lpage><source>Annu Rev Neurosci</source><pub-id pub-id-type="pmcid">PMC2758225</pub-id><pub-id pub-id-type="pmid">1851608</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1146/annurev.ne.14.030191.002531</pub-id></element-citation></ref><ref id="PDF_01129"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Ruoslahti</surname><given-names>E.</given-names></name></person-group><article-title>Proteoglycans in cell regulation.</article-title><volume>264</volume><issue>23</issue><day>15</day><month>8</month><year>1989</year><fpage>13369</fpage><lpage>13372</lpage><source>J Biol Chem</source><pub-id pub-id-type="pmid">2668264</pub-id></element-citation></ref><ref id="PDF_01133"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Schlessinger</surname><given-names>J.</given-names></name></person-group><article-title>The epidermal growth factor receptor as a multifunctional allosteric protein.</article-title><volume>27</volume><issue>9</issue><day>3</day><month>5</month><year>1988</year><fpage>3119</fpage><lpage>3123</lpage><source>Biochemistry</source><pub-id pub-id-type="pmid">3291943</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1021/bi00409a002</pub-id></element-citation></ref><ref id="PDF_01135"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Schuch</surname><given-names>U.</given-names></name><name name-style="western"><surname>Lohse</surname><given-names>M. J.</given-names></name><name name-style="western"><surname>Schachner</surname><given-names>M.</given-names></name></person-group><article-title>Neural cell adhesion molecules influence second messenger systems.</article-title><volume>3</volume><issue>1</issue><month>7</month><year>1989</year><fpage>13</fpage><lpage>20</lpage><source>Neuron</source><pub-id pub-id-type="pmid">2559759</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/0896-6273(89)90111-6</pub-id></element-citation></ref><ref id="PDF_01137"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Schwab</surname><given-names>M. E.</given-names></name><name name-style="western"><surname>Kapfhammer</surname><given-names>J. P.</given-names></name><name name-style="western"><surname>Bandtlow</surname><given-names>C. E.</given-names></name></person-group><article-title>Inhibitors of neurite growth.</article-title><volume>16</volume><year>1993</year><fpage>565</fpage><lpage>595</lpage><source>Annu Rev Neurosci</source><pub-id pub-id-type="pmid">7681638</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1146/annurev.ne.16.030193.003025</pub-id></element-citation></ref><ref id="PDF_01139"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Snow</surname><given-names>D. M.</given-names></name><name name-style="western"><surname>Lemmon</surname><given-names>V.</given-names></name><name name-style="western"><surname>Carrino</surname><given-names>D. A.</given-names></name><name name-style="western"><surname>Caplan</surname><given-names>A. I.</given-names></name><name name-style="western"><surname>Silver</surname><given-names>J.</given-names></name></person-group><article-title>Sulfated proteoglycans in astroglial barriers inhibit neurite outgrowth in vitro.</article-title><volume>109</volume><issue>1</issue><month>7</month><year>1990</year><fpage>111</fpage><lpage>130</lpage><source>Exp Neurol</source><pub-id pub-id-type="pmid">2141574</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/s0014-4886(05)80013-5</pub-id></element-citation></ref><ref id="PDF_01146"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Snow</surname><given-names>D. M.</given-names></name><name name-style="western"><surname>Letourneau</surname><given-names>P. C.</given-names></name></person-group><article-title>Neurite outgrowth on a step gradient of chondroitin sulfate proteoglycan (CS-PG).</article-title><volume>23</volume><issue>3</issue><month>4</month><year>1992</year><fpage>322</fpage><lpage>336</lpage><source>J Neurobiol</source><pub-id pub-id-type="pmid">1624935</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/neu.480230311</pub-id></element-citation></ref><ref id="PDF_01142"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Snow</surname><given-names>D. M.</given-names></name><name name-style="western"><surname>Steindler</surname><given-names>D. A.</given-names></name><name name-style="western"><surname>Silver</surname><given-names>J.</given-names></name></person-group><article-title>Molecular and cellular characterization of the glial roof plate of the spinal cord and optic tectum: a possible role for a proteoglycan in the development of an axon barrier.</article-title><volume>138</volume><issue>2</issue><month>4</month><year>1990</year><fpage>359</fpage><lpage>376</lpage><source>Dev Biol</source><pub-id pub-id-type="pmid">1690673</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/0012-1606(90)90203-u</pub-id></element-citation></ref><ref id="PDF_01149"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Snow</surname><given-names>D. M.</given-names></name><name name-style="western"><surname>Watanabe</surname><given-names>M.</given-names></name><name name-style="western"><surname>Letourneau</surname><given-names>P. C.</given-names></name><name name-style="western"><surname>Silver</surname><given-names>J.</given-names></name></person-group><article-title>A chondroitin sulfate proteoglycan may influence the direction of retinal ganglion cell outgrowth.</article-title><volume>113</volume><issue>4</issue><month>12</month><year>1991</year><fpage>1473</fpage><lpage>1485</lpage><source>Development</source><pub-id pub-id-type="pmid">1811954</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1242/dev.113.4.1473</pub-id></element-citation></ref><ref id="PDF_01152"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Sonderegger</surname><given-names>P.</given-names></name><name name-style="western"><surname>Rathjen</surname><given-names>F. G.</given-names></name></person-group><article-title>Regulation of axonal growth in the vertebrate nervous system by interactions between glycoproteins belonging to two subgroups of the immunoglobulin superfamily.</article-title><volume>119</volume><issue>6</issue><month>12</month><year>1992</year><fpage>1387</fpage><lpage>1394</lpage><source>J Cell Biol</source><pub-id pub-id-type="pmcid">PMC2289751</pub-id><pub-id pub-id-type="pmid">1469039</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.119.6.1387</pub-id></element-citation></ref><ref id="PDF_01159"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Towbin</surname><given-names>H.</given-names></name><name name-style="western"><surname>Staehelin</surname><given-names>T.</given-names></name><name name-style="western"><surname>Gordon</surname><given-names>J.</given-names></name></person-group><article-title>Electrophoretic transfer of proteins from polyacrylamide gels to nitrocellulose sheets: procedure and some applications.</article-title><volume>76</volume><issue>9</issue><month>9</month><year>1979</year><fpage>4350</fpage><lpage>4354</lpage><source>Proc Natl Acad Sci U S A</source><pub-id pub-id-type="pmcid">PMC411572</pub-id><pub-id pub-id-type="pmid">388439</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.76.9.4350</pub-id></element-citation></ref><ref id="PDF_01162"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Von Bohlen Und Halbach</surname><given-names>Friedrich</given-names></name><name name-style="western"><surname>Taylor</surname><given-names>Joanne</given-names></name><name name-style="western"><surname>Schachner</surname><given-names>Melitta</given-names></name></person-group><article-title>Cell Type-specific Effects of the Neural Adhesion Molecules L1 and N-CAM on Diverse Second Messenger Systems.</article-title><volume>4</volume><issue>10</issue><year>1992</year><fpage>896</fpage><lpage>909</lpage><source>Eur J Neurosci</source><pub-id pub-id-type="pmid">12106425</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/j.1460-9568.1992.tb00116.x</pub-id></element-citation></ref><ref id="PDF_01165"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Wight</surname><given-names>T. N.</given-names></name><name name-style="western"><surname>Kinsella</surname><given-names>M. G.</given-names></name><name name-style="western"><surname>Qwarnström</surname><given-names>E. E.</given-names></name></person-group><article-title>The role of proteoglycans in cell adhesion, migration and proliferation.</article-title><volume>4</volume><issue>5</issue><month>10</month><year>1992</year><fpage>793</fpage><lpage>801</lpage><source>Curr Opin Cell Biol</source><pub-id pub-id-type="pmid">1419056</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/0955-0674(92)90102-i</pub-id></element-citation></ref><ref id="PDF_01168"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Zisch</surname><given-names>A. H.</given-names></name><name name-style="western"><surname>D'Alessandri</surname><given-names>L.</given-names></name><name name-style="western"><surname>Ranscht</surname><given-names>B.</given-names></name><name name-style="western"><surname>Falchetto</surname><given-names>R.</given-names></name><name name-style="western"><surname>Winterhalter</surname><given-names>K. H.</given-names></name><name name-style="western"><surname>Vaughan</surname><given-names>L.</given-names></name></person-group><article-title>Neuronal cell adhesion molecule contactin/F11 binds to tenascin via its immunoglobulin-like domains.</article-title><volume>119</volume><issue>1</issue><month>10</month><year>1992</year><fpage>203</fpage><lpage>213</lpage><source>J Cell Biol</source><pub-id pub-id-type="pmcid">PMC2289633</pub-id><pub-id pub-id-type="pmid">1382076</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.119.1.203</pub-id></element-citation></ref></ref-list></back></article></pmc-articleset>

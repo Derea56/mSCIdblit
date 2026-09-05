@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import csv
 import html
+import json
 import re
 from collections import Counter
 from html.parser import HTMLParser
@@ -98,6 +99,27 @@ def plain_text(path: Path) -> str:
         parser = VisibleTextParser()
         parser.feed(raw)
         raw = "\n".join(parser.parts)
+    elif path.suffix.lower() == ".json":
+        try:
+            payload = json.loads(raw)
+        except json.JSONDecodeError:
+            pass
+        else:
+            strings: list[str] = []
+
+            def collect(value: object) -> None:
+                if isinstance(value, str):
+                    if value.strip():
+                        strings.append(value.strip())
+                elif isinstance(value, dict):
+                    for child in value.values():
+                        collect(child)
+                elif isinstance(value, list):
+                    for child in value:
+                        collect(child)
+
+            collect(payload)
+            raw = "\n".join(strings)
     else:
         raw = re.sub(r"<[^>]+>", " ", raw)
     raw = html.unescape(raw)
