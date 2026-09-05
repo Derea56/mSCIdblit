@@ -5141,6 +5141,26 @@ TNR or TNXB handoff activates the corresponding TF. The original
 pathway/function-boundary rows remain separate and no SCI-specific upstream
 relay was inferred.
 
+## Individual review 3317-3324
+
+Five of the eight holds gained reusable target capacity. TPH1→HTR2B gained
+direct NFIA and NFIB promoter-activation contexts plus a bounded STAT-family
+promoter-regulation context from human uveal-melanoma studies. TPH1→HTR4
+gained an NKX2-5-like enhancer-regulatory context from human promoter and
+5-prime-UTR assays, and TPH1→HTR7 gained direct SP1 and SP3 promoter-binding
+and activity contexts. The transferrin→ADRB2 and transferrin→HFE rows reused
+existing ADRB2 and HFE target contexts.
+
+TPH1→HTR2C, TPH1→HTR5A, and TPH1→HTR6 remained on hold after targeted
+review. HTR2C promoter architecture and allele-dependent reporter studies did
+not identify a qualifying named activating TF; HTR5A allele-sensitive nuclear
+protein binding did not identify a named activating TF in the peer-reviewed
+record; and HTR6 promoter predictions and receptor-pathway or
+glucocorticoid-family findings did not establish a reusable named activating
+TF-to-HTR6 relationship. These target lanes remain separate from the
+submitted TPH1 or transferrin handoffs and do not establish source-to-TF
+activation or SCI-specific activity.
+
 ## Individual review 3309-3316
 
 Five of the eight holds gained reusable target capacity. TNXB→ITGAV/ITGB6
