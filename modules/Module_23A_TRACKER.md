@@ -210,3 +210,7 @@ B058 promotes the existing EFNA2–EPHA2 direct-binding edge using the primary a
 ## Review-led expansion: B059 (2026-09-05)
 
 B059 promotes the existing PLAU/uPA–PLAUR/uPAR–β1-integrin complex relay using acquired primary PubMed and PMC snapshots. Human lung-fibroblast and related beta1-integrin/uPAR studies support uPAR–β1 complex association and uPA-dependent adhesion/migration signaling at medium confidence; purified direct uPA–β1 binding, a single α-integrin partner, complete relay ordering, native neural context, and traumatic-SCI transfer remain unasserted. No Module 20A–22A ledger was modified.
+
+## Review-led expansion: B060 (2026-09-05)
+
+B060 promotes the existing EFNA5/ephrin-A5–EPHA10 edges using acquired primary PMC and PubMed snapshots. The study supports EphA10s/ephrin-A5 cellular association by co-immunoprecipitation and isoform-specific effects on β-catenin localization, migration/invasion, and xenograft outcomes; the result is recorded at medium confidence with secreted EphA10s versus membrane pseudo-kinase EphA10, possible EphA2 contribution, no canonical full-length activation, and no-traumatic-SCI limits explicit. No Module 20A–22A ledger was modified.
