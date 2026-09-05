@@ -114,3 +114,7 @@ B046 promotes one new 23B edge paired one-to-one with Module 23A for the EFNA1�
 ## Review-led expansion: B047 (2026-09-05)
 
 B047 promotes one new 23B edge paired one-to-one with Module 23A for the EFNA2–EPHA5 branch: EphA5/ephrin-A2 binding context is associated with topographically selective retinal axon repulsion in vitro and normal dLGN mapping in vivo. The evidence is retained at the retinal guidance-function layer with explicit receptor-association rather than receptor-exclusive causality, non-SCI visual-system, no-complete-relay, and no-traumatic-SCI-transfer limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B048 (2026-09-05)
+
+B048 promotes the existing EFNA2–EPHA8 binding/activation edge using primary mouse-brain ligand and NIH3T3 receptor-system evidence: the historical Elf-1/Cek7-L ligand represented in the local register by EFNA2 binds and activates Eek/EphA8 and Eek-TrkB. The evidence is retained at the direct-binding and receptor-proximal activation layers with explicit historical-alias, recombinant/heterologous, no-downstream-program, no-native-neural, and no-traumatic-SCI-transfer limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
