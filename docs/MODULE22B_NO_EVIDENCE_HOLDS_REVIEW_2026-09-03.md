@@ -5022,6 +5022,17 @@ prostate/bladder-cancer comparators and remain separate from the teneurin-
 latrophilin adhesion handoffs; they do not establish a teneurin-to-AR relay or
 promote the original pathway/function-boundary rows.
 
+## Individual review 3213-3220
+
+Audits 3213-3220 covered TGFB1/TGFBR3 and TGFB2 handoffs to ACVR1,
+ACVR1B, ACVR1C, ENG, and TGFBR1/TGFBR2 composite branches. All eight rows
+gained reusable target capacity from independently registered SMAD3/4-CTGF,
+SMAD1/5/8-ID1, SMAD2/3-FST, and HIF1A-ENG contexts. These are general
+regulatory target contexts, including mouse osteoblast/gonadotrope and human
+signed public TF comparators, and remain separate from the submitted
+receptor/coreceptor composites. They do not establish the original
+pathway/function-boundary rows or any SCI-specific upstream relay.
+
 ## Individual review 3197-3204
 
 Audits 3197-3204 covered TENM3/TENM4 handoffs to ADGRL1, ADGRL2, and ADGRL3,
