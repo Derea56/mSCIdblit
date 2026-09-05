@@ -5096,6 +5096,18 @@ remain distinct from the submitted matricellular, adhesion, protease, and
 receptor handoffs. They do not establish the original pathway/function-
 boundary rows or any SCI-specific upstream relay.
 
+## Individual review 3269-3276
+
+Audits 3269-3276 covered TIMP3-DDR1/MET, TNC handoffs to ITGA2B/ITGB3,
+ITGA8/ITGB1, ITGA9/ITGB1, ITGAV/ITGB3, ITGAV/ITGB6, and PTPRB. Seven rows
+gained reusable target capacity from independently registered TP53-DDR1,
+ETS1-MET, RUNX1-ITGA2B, HIF1A-ITGB1, HOXD3-ITGB3, and SMAD3/4-ITGB6
+contexts. The TNC-PTPRB search did not verify a qualifying activating
+TF-to-PTPRB lane and remains on hold. These contexts remain separate from
+the submitted protease, extracellular-matrix, integrin, and phosphatase
+handoffs. They do not establish the original pathway/function-boundary
+rows or any SCI-specific upstream relay.
+
 ## Individual review 3221-3228
 
 Audits 3221-3228 covered TGFB2/TGFBR3 and TGFB3 handoffs to ACVR1,
