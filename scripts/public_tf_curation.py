@@ -357,6 +357,56 @@ def build_ledger_rows(
     return ledger
 
 
+def build_mouse_direct_binding_queue(
+    candidate_rows: Iterable[Mapping[str, object]],
+    validated_rows: Iterable[Mapping[str, object]],
+) -> list[dict[str, object]]:
+    """Build an unpromoted queue for mouse, canonical-TF, direct-binding rows."""
+
+    validated_ids = {text(row, "layer_record_id") for row in validated_rows}
+    queue: list[dict[str, object]] = []
+    for source in candidate_rows:
+        if text(source, "layer_record_id") in validated_ids:
+            continue
+        if text(source, "module") == "catalog_only":
+            continue
+        if text(source, "species_scope") != "mouse":
+            continue
+        if text(source, "canonical_role_status") != "canonical_tf":
+            continue
+        if text(source, "mechanism_evidence_type") != "direct_sequence_specific_tf_binding":
+            continue
+        queue.append(
+            {
+                "source_row_id": text(source, "layer_record_id") or "unknown",
+                "module": text(source, "module") or "unknown",
+                "module_route": text(source, "module_route") or "unknown",
+                "regulator": text(source, "regulator_symbol") or "unknown",
+                "raw_regulator": text(source, "raw_tf_symbol") or "unknown",
+                "target": text(source, "target_symbol") or "unknown",
+                "species": text(source, "species_scope") or "unknown",
+                "review_status": "candidate_only",
+                "traversal_eligibility": "not_traversable",
+                "evidence_confidence_tier": text(source, "evidence_confidence_tier") or "unknown",
+                "exact_pair_status": text(source, "exact_pair_status") or "unknown",
+                "binding_or_association_status": text(source, "binding_or_association_status") or "unknown",
+                "assay_type": text(source, "tflink_detection_method") or "unknown",
+                "tflink_source_database": text(source, "tflink_source_database") or "unknown",
+                "tflink_pubmed_id": text(source, "tflink_pubmed_id") or "unknown",
+                "primary_citation": text(source, "primary_citation") or "unknown",
+                "source_record_id": text(source, "source_record_id") or "unknown",
+                "source_record_ids": text(source, "source_record_ids") or "unknown",
+                "tflink_raw_snapshot_path": text(source, "tflink_raw_snapshot_path") or "unknown",
+                "context_level_exact_pair": text(source, "context_level_exact_pair") or "unknown",
+                "sci_context_status": text(source, "sci_context_status") or "unknown",
+                "effect_direction": text(source, "effect_polarity") or "unknown",
+                "missing_evidence": "underlying primary exact-pair citation; functional perturbation or target-expression response; supported effect direction; neural/SCI context if required",
+                "review_notes": text(source, "review_notes") or "unknown",
+            }
+        )
+    return sorted(queue, key=lambda row: (str(row["module"]), str(row["regulator"]).casefold(), str(row["target"]).casefold(), str(row["source_row_id"])))
+
+
 def summarize_ledger(ledger: Iterable[Mapping[str, object]]) -> dict[str, object]:
     rows = list(ledger)
     summary: dict[str, object] = {
