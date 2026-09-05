@@ -5033,6 +5033,18 @@ signed public TF comparators, and remain separate from the submitted
 receptor/coreceptor composites. They do not establish the original
 pathway/function-boundary rows or any SCI-specific upstream relay.
 
+## Individual review 3221-3228
+
+Audits 3221-3228 covered TGFB2/TGFBR3 and TGFB3 handoffs to ACVR1,
+ACVR1B, ACVR1C, ENG, and ITGB1 composite branches. All eight rows gained
+reusable target capacity from independently registered SMAD3/4-CTGF,
+SMAD1/5/8-ID1, SMAD2/3-FST, HIF1A-ENG, and HIF1A-ITGB1 contexts. These are
+general regulatory target contexts, including mouse osteoblast/gonadotrope,
+human signed public TF, and wound-healing comparators, and remain separate
+from the submitted receptor/coreceptor and integrin handoffs. They do not
+establish the original pathway/function-boundary rows or any SCI-specific
+upstream relay.
+
 ## Individual review 3197-3204
 
 Audits 3197-3204 covered TENM3/TENM4 handoffs to ADGRL1, ADGRL2, and ADGRL3,
