@@ -5046,6 +5046,19 @@ receptor, integrin, scaffold, and RNA-processing handoffs. They do not
 establish the original pathway/function-boundary rows or any SCI-specific
 upstream relay.
 
+## Individual review 3237-3244
+
+Audits 3237-3244 covered THBS1 handoffs to CD47, ITGA3/ITGB1,
+ITGAV/ITGB3, ITGA2B/ITGB3, LRP5, SDC1, SDC4, and TNFRSF11B. All eight rows
+gained reusable target capacity from independently registered NRF1-CD47,
+HIF1A-ITGB1, HOXD3-ITGB3, RUNX1-ITGA2B, SP1-LRP5, NR1H4-SDC1,
+RELA-SDC4, and HIF2A-TNFRSF11B contexts. These are general regulatory
+target contexts, including human/mouse vascular, platelet, epithelial,
+myeloid, and bone comparators, and remain separate from the submitted
+adhesion, receptor, glycan, and storage-complex handoffs. They do not
+establish the original pathway/function-boundary rows or any SCI-specific
+upstream relay.
+
 ## Individual review 3221-3228
 
 Audits 3221-3228 covered TGFB2/TGFBR3 and TGFB3 handoffs to ACVR1,
