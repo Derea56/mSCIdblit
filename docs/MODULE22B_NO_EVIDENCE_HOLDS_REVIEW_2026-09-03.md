@@ -5141,6 +5141,22 @@ TNR or TNXB handoff activates the corresponding TF. The original
 pathway/function-boundary rows remain separate and no SCI-specific upstream
 relay was inferred.
 
+## Individual review 3325-3332
+
+Six of the eight holds gained reusable target capacity. Transferrin→LDLR
+reused existing THRB, EGR1, and SP1 target contexts; transferrin→LRP2 reused
+HNF4A→LRP2; Try10→F2R reused EGR1→F2R and SP1→F2R; Try10→F2RL1,
+Try10→F2RL2, and Try10→PARD3 reused existing IRX3, NRF2, and SP1 target
+contexts, respectively.
+
+TRH→TRHR2 and Try10→F2RL3 remained on hold after targeted review. The
+TRHR2 search encountered a human TR2/NR2C1 promoter study that is a
+nomenclature collision rather than evidence for the rodent Trhr2 receptor,
+and the F2RL3 search located receptor-family and promoter-prediction material
+without a qualifying named activating TF-to-F2RL3 relationship. The reused
+target lanes remain separate from the submitted ligand/protease handoffs and
+do not establish source-to-TF activation or SCI-specific activity.
+
 ## Individual review 3317-3324
 
 Five of the eight holds gained reusable target capacity. TPH1→HTR2B gained
