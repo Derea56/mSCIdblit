@@ -24,3 +24,7 @@ Provide exportable edges for matrix-sensitive receiver-state transitions in astr
 ## Review-led expansion: B024 (2026-09-04)
 
 B024 promotes six new 23B edges paired one-to-one with Module 23A: decorin-to-EGFR binding/activation, decorin anti-scarring and axon-growth function in acute rat SCI, and biglycan CD14 binding, TLR2/TLR4/MyD88 relay, TLR2/TLR4–P2X4/P2X7–NLRP3 inflammasome relay, and macrophage inflammatory output. These are audit-layer promotions with review and primary-source lineage; non-SCI comparator scope, intact soluble biglycan, receptor-complex context, and function-only versus receptor-proximal distinctions are retained. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B025 (2026-09-04)
+
+B025 promotes seven new 23B edges paired one-to-one with Module 23A: three tenascin-C FBG/TLR4 layers covering direct binding, TLR4-dependent NF-kappaB/proximal signaling, and macrophage/microglial inflammatory function; and four low-molecular-weight hyaluronan layers covering TLR4-MyD88, TLR4-TRIF/TBK1/IRF3, cPLA2alpha/COX2-eicosanoid, and IFN-beta outputs. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. FBG-domain and fragment-size specificity, adaptor separation, endotoxin controls, non-SCI comparator scope, and the absence of direct HA-TLR4 binding or terminal-TF transfer remain explicit; canonical signaling tables and simulator outputs remain untouched.
