@@ -130,3 +130,7 @@ B050 promotes the existing 23B Sema4A–Plexin-B2 receptor-proximal edge paired 
 ## Review-led expansion: B051 (2026-09-05)
 
 B051 promotes the existing 23B EFNA2–EPHA5 binding edge paired one-to-one with Module 23A. Primary EphA5-AP affinity-probe labeling of ephrin-A2-expressing fibroblasts and complementary retinal EphA5/ephrin-A2 binding/guidance evidence support the cell-associated direct-binding layer at medium-high confidence. Purified affinity, receptor-exclusive guidance causality, complete intracellular relay, and traumatic-SCI transfer remain unasserted. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B052 (2026-09-05)
+
+B052 promotes the existing 23B EFNA1–EPHA5 binding edge paired one-to-one with Module 23A. Primary exact-pair ephrin-A1-Fc/EphA5-Fc ELISA binding and independent human U-118 MG-cell EPHA5 phosphorylation evidence support the direct-binding and receptor-proximal branch at medium-high confidence. Fc avidity, EphA-class promiscuity, receptor-proximal-only activation, non-neural cell-line context, no-purified-monovalent-affinity, no-downstream-program, and no-traumatic-SCI-transfer limits remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.

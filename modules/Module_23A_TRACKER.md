@@ -180,3 +180,7 @@ B050 promotes the existing Sema4A–Plexin-B2 receptor-proximal edge using prima
 ## Review-led expansion: B051 (2026-09-05)
 
 B051 promotes the existing EFNA2–EPHA5 binding edge using primary EphA5-AP affinity-probe labeling of ephrin-A2-expressing fibroblasts and complementary retinal binding/guidance evidence. The edge is promoted to medium-high with explicit cell-associated probe, shared-ephrin, developmental visual-system, no-purified-affinity, no-receptor-exclusive-causality, and no-traumatic-SCI limits. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B052 (2026-09-05)
+
+B052 promotes the existing EFNA1–EPHA5 binding edge using primary exact-pair ephrin-A1-Fc/EphA5-Fc ELISA binding and independent human U-118 MG-cell EPHA5 phosphorylation evidence. The edge is promoted to medium-high with explicit Fc-avidity, EphA-class promiscuity, receptor-proximal-only, non-neural cell-line, no-purified-monovalent-affinity, no-downstream-program, and no-traumatic-SCI limits. No Module 20A–22A ledger is modified.
