@@ -1,0 +1,18 @@
+{
+  "exact_pair_evidence": {
+    "not_identified": 112
+  },
+  "limitations": [
+    "Search results do not establish absence from all literature.",
+    "TFLink/GTRD source-table metadata do not substitute for the underlying exact-pair primary record.",
+    "Rows require a new exact-pair adjudication record before validated-overlay promotion."
+  ],
+  "method": "bounded exact-pair literature search; no automatic promotion",
+  "primary_citations_added": 0,
+  "promotion_decisions": {
+    "retain_candidate_only_no_exact_pair_promotion": 112
+  },
+  "queue_rows_reviewed": 112,
+  "schema_version": "mscidblit_public_tf_queue_adjudication_summary_v1",
+  "traversable_rows_added": 0
+}
