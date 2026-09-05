@@ -136,3 +136,7 @@ B039 adds one review-led tenascin-R perineuronal-net candidate and two source-ba
 ## Review-led expansion: B040 (2026-09-05)
 
 B040 adds one review-led tenascin-R/RPTPζ candidate and one source-backed A-layer edge: the TNR–RPTPζ/phosphacan extracellular interface contributes to perineuronal-net architecture, supported by ectodomain binding and interface-mutagenesis effects in mouse neuronal cultures. Cytoplasmic phosphatase-relay, neuronal-culture, and no-traumatic-SCI-transfer limits remain explicit. No Module 20A–22A ledger is modified.
+
+## Review-led expansion: B041 (2026-09-05)
+
+B041 adds one review-led tenascin-R conduction candidate and one source-backed A-layer edge: TNR promotes normal optic-nerve compound-action-potential conduction velocity in mice. The TNR-deficient genotype, in-vivo electrophysiology, preserved nodal Na+-channel distribution, non-SCI comparator, and no-traumatic-SCI-transfer limits remain explicit. No Module 20A–22A ledger is modified.
