@@ -110,3 +110,7 @@ B045 promotes one new 23B edge paired one-to-one with Module 23A for the EFNA1�
 ## Review-led expansion: B046 (2026-09-05)
 
 B046 promotes one new 23B edge paired one-to-one with Module 23A for the EFNA1–EPHA8 branch: ephrin-A1-Fc binds EphA8 and induces EphA8/EphA8-TrkB tyrosine phosphorylation in NIH3T3 fibroblast receptor systems. The evidence is retained at the receptor-proximal layer with explicit recombinant-fusion, heterologous-fibroblast, no-downstream-program, no-native-neural, and no-traumatic-SCI-transfer limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B047 (2026-09-05)
+
+B047 promotes one new 23B edge paired one-to-one with Module 23A for the EFNA2–EPHA5 branch: EphA5/ephrin-A2 binding context is associated with topographically selective retinal axon repulsion in vitro and normal dLGN mapping in vivo. The evidence is retained at the retinal guidance-function layer with explicit receptor-association rather than receptor-exclusive causality, non-SCI visual-system, no-complete-relay, and no-traumatic-SCI-transfer limits. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
