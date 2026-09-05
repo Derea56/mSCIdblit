@@ -66,3 +66,7 @@ B034 promotes five new 23B edges paired one-to-one with Module 23A for tenascin-
 ## Review-led expansion: B035 (2026-09-05)
 
 B035 promotes six new 23B edges paired one-to-one with Module 23A for tenascin-R lectican/CSPG interactions: direct TNR FNIII3-5 binding to aggrecan, versican, neurocan, and brevican C-type lectin domains, plus full-length TNR binding to neurocan and phosphacan/PTPRZ1 through core-protein interactions. Lectican-domain versus full-length extracellular-domain resolution, rat/recombinant non-SCI CNS comparator scope, and the absence of a downstream relay or traumatic-SCI transfer remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
+
+## Review-led expansion: B036 (2026-09-05)
+
+B036 promotes two new 23B edges paired one-to-one with Module 23A for tenascin-R sodium-channel interactions: direct TNR FNIII1-2/6-8 binding to the purified type-IIA rat brain sodium-channel complex and to the beta2 extracellular domain. Exact domain and subunit resolution, proposed channel clustering/localization/activity interpretation, native-complex beta2 mediation, non-SCI comparator scope, and the absence of a downstream relay or traumatic-SCI transfer remain explicit. Review-led primary evidence and local-source lineage are recorded in the B evidence and promotion registers. Canonical signaling tables and simulator outputs remain untouched.
