@@ -21,9 +21,8 @@ matches only; no canonical database rows or promotions are created.
 | Status | Anchors |
 |---|---:|
 | awaiting_local_source_acquisition | 12 |
-| candidate_extracted_from_abstract_or_metadata | 1,003 |
-| candidate_extracted_from_full_text | 474 |
-| local_artifact_present_excerpt_not_matched | 22 |
+| candidate_extracted_from_abstract_or_metadata | 1,022 |
+| candidate_extracted_from_full_text | 477 |
 
 ## Module coverage
 

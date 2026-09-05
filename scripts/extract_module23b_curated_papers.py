@@ -14,6 +14,7 @@ import csv
 import html
 import json
 import re
+import xml.etree.ElementTree as ET
 from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
@@ -95,7 +96,8 @@ def local_paths(locator: str) -> list[Path]:
 
 def plain_text(path: Path) -> str:
     raw = path.read_bytes().decode("utf-8", errors="replace")
-    if path.suffix.lower() in {".html", ".htm"}:
+    looks_like_html = path.suffix.lower() in {".html", ".htm"} or bool(re.search(r"<!doctype\s+html|<html(?:\s|>)", raw[:4096], flags=re.I))
+    if looks_like_html:
         parser = VisibleTextParser()
         parser.feed(raw)
         raw = "\n".join(parser.parts)
@@ -125,6 +127,47 @@ def plain_text(path: Path) -> str:
     raw = html.unescape(raw)
     raw = raw.replace("\r", "\n")
     return re.sub(r"\s+", " ", raw).strip()
+
+
+def source_lead(path: Path) -> str:
+    """Return a source-derived title/abstract or lead sentence for audit fallback."""
+    raw = path.read_bytes().decode("utf-8", errors="replace")
+    suffix = path.suffix.lower()
+    if suffix == ".json":
+        try:
+            payload = json.loads(raw)
+        except json.JSONDecodeError:
+            payload = None
+        if isinstance(payload, dict):
+            message = payload.get("message", payload)
+            if isinstance(message, dict):
+                title = message.get("title", [])
+                abstract = message.get("abstract", "")
+                title_text = " ".join(title) if isinstance(title, list) else str(title)
+                abstract_text = re.sub(r"<[^>]+>", " ", str(abstract))
+                lead = re.sub(r"\s+", " ", html.unescape(f"{title_text} {abstract_text}")).strip()
+                if lead:
+                    return lead[:900]
+    if suffix in {".xml", ".html", ".htm"}:
+        try:
+            root = ET.fromstring(raw)
+        except ET.ParseError:
+            root = None
+        if root is not None:
+            title_parts: list[str] = []
+            abstract_parts: list[str] = []
+            for element in root.iter():
+                tag = element.tag.rsplit("}", 1)[-1].casefold() if isinstance(element.tag, str) else ""
+                text = " ".join("".join(element.itertext()).split())
+                if tag in {"articletitle", "article-title"} and text and not title_parts:
+                    title_parts.append(text)
+                elif tag in {"abstracttext", "abstract"} and text:
+                    abstract_parts.append(text)
+            lead = re.sub(r"\s+", " ", " ".join(title_parts + abstract_parts)).strip()
+            if lead:
+                return lead[:900]
+    candidate_sentences = sentences(plain_text(path))
+    return candidate_sentences[0][:900] if candidate_sentences else ""
 
 
 def is_usable_artifact(path: Path) -> bool:

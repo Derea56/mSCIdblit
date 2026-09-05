@@ -16,7 +16,7 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from extract_module23b_curated_papers import choose_artifact, local_paths, match_excerpt, plain_text, read_tsv
+from extract_module23b_curated_papers import choose_artifact, local_paths, match_excerpt, plain_text, read_tsv, source_lead
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -188,8 +188,14 @@ def build(output: Path, report: Path, archive_root: Path | None, additional_root
         excerpt = ""
         sentence_index = 0
         terms = ""
+        extraction_method = "paper_anchor_inventory"
         if artifact is not None:
             excerpt, sentence_index, terms = match_excerpt(plain_text(artifact), combined_summary, "")
+            if not excerpt:
+                excerpt = source_lead(artifact)
+                extraction_method = "source_lead_fallback" if excerpt else "local_artifact_inspection"
+            else:
+                extraction_method = "deterministic_sentence_match_against_local_artifact"
         if artifact is None:
             extraction_status = "awaiting_local_source_acquisition"
         elif artifact_status == "local_full_text_artifact" and excerpt:
@@ -245,7 +251,7 @@ def build(output: Path, report: Path, archive_root: Path | None, additional_root
             "candidate_excerpt": excerpt,
             "excerpt_sentence_index": str(sentence_index),
             "excerpt_match_terms": terms,
-            "extraction_method": "deterministic_sentence_match_against_local_artifact" if artifact is not None else "paper_anchor_inventory",
+            "extraction_method": extraction_method,
             "paper_extraction_status": extraction_status,
             "human_validation_status": "required",
             "promotion_status": "not_promoted",
