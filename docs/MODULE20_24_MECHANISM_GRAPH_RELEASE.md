@@ -1,10 +1,10 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.5.0.md`](RELEASE_v1.5.0.md). The v1.4.0 snapshot below is
+[`RELEASE_v1.6.0.md`](RELEASE_v1.6.0.md). The v1.5.0 snapshot below is
 retained as the implementation and historical baseline reference.
 
-Release identifier: `module20_24_mechanism_graph:2026-08-25`
+Release identifier: `module20_24_mechanism_graph:2026-09-10`
 
 This is a conservative, register-backed mechanism graph snapshot for mSCIdblit
 Modules 20B–24B. It is designed for inspection and simulator import while
@@ -18,7 +18,7 @@ release directory. The mSCS checkout was not modified by that verification.
 ## Release contents
 
 The bundle is at
-`data/processed/mechanism_graph_module20_24_v2026_08_25/`.
+`data/processed/mechanism_graph_module20_24_v2026_09_10/`.
 
 | Artifact | Purpose |
 |---|---|
@@ -35,23 +35,21 @@ The bundle is at
 
 | Module | Register edges | Exported edges | Evidence rows | Non-exportable edges |
 |---|---:|---:|---:|---:|
-| 20B | 5,906 | 1,108 | 7,586 | 4,798 |
-| 21B | 111 | 111 | 54 | 0 |
-| 22B | 5,733 | 714 | 5,906 | 5,019 |
-| 23B | 1,075 | 1,069 | 1,467 | 6 |
-| 24B | 151 | 149 | 200 | 2 |
-| **Total graph** | — | **3,151** | **4,377 linked source rows** | **9,825** |
+| 20B | 5,906 | 1,145 | 7,630 | 4,761 |
+| 21B | 8,171 | 8,089 | 8,120 | 82 |
+| 22B | 10,694 | 5,726 | 10,784 | 4,968 |
+| 23B | 1,230 | 1,224 | 1,674 | 6 |
+| 24B | 151 | 149 | 224 | 2 |
+| **Total graph** | — | **16,333** | **17,765 linked source rows** | **9,819** |
 
-The graph contains 2,784 node labels and 945 pathway labels. Sixteen
-self-loop register rows are retained as non-exportable boundaries because the
-normalized database requires distinct source and target entities. Of the 4,377
-linked evidence-source rows, 3,242 retain stable PMID, PMCID, DOI, or HTTP
-locators in the release bundle; 1,135 are marked local-only or unresolved and
+The graph contains 10,656 node labels and 8,891 pathway labels. Of the 17,765
+linked evidence-source rows, 14,739 retain stable PMID, PMCID, DOI, or HTTP
+locators in the release bundle; 1,450 are marked local-only or unresolved and
 retain their evidence summaries and limitations without exposing local paths.
 
-The role table contains 4,333 assignments: 2,784 baseline
-`signaling_cascade` assignments, 725 `ligand`, 706 `receptor`, 51
-`transcription_factor`, and 67 `target_gene` assignments. Role assignments are
+The role table contains 14,856 assignments: 10,656 baseline
+`signaling_cascade` assignments, 742 `ligand`, 729 `receptor`, 288
+`transcription_factor`, and 2,441 `target_gene` assignments. Role assignments are
 many-to-many; a node can therefore be both a signaling-cascade participant and
 a specialized endpoint. `node_type` remains the legacy single-valued mSCS
 field and uses `signaling_effector` for generic relay, complex, and program
@@ -91,7 +89,7 @@ rm -rf /private/tmp/mscs_module20_24_import_check
 PYTHONPATH=/Users/derea/Documents/SCI/mSCS/src \
   /Users/derea/Documents/SCI/mSCS/.venv/bin/python \
   /Users/derea/Documents/SCI/mSCS/src/mscs/import_mechanism_bundle.py \
-  data/processed/mechanism_graph_module20_24_v2026_08_25 \
+  data/processed/mechanism_graph_module20_24_v2026_09_10 \
   --mechanism-dir /private/tmp/mscs_module20_24_import_check --export-tsv
 ```
 
