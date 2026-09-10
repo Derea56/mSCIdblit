@@ -46,6 +46,28 @@ CURATED_ROLE_HINTS = {
     "tgfbr1-tgfbr2 receptor complex": ("receptor", "Module 21B TGF-beta-SMAD receptor-proximal relay."),
 }
 
+# Explicit, chain-critical label aliases. These aliases normalize formatting or
+# an unambiguous synonym for the same intact receptor complex; they do not
+# split composite entities or merge distinct receptor subunits/configurations.
+# Keys and values are the exact whitespace-normalized/case-folded forms used by
+# node_key(). Keep this list narrow and auditable.
+CANONICAL_NODE_ALIASES = {
+    "tgfbr1-tgfbr2 receptor complex": "tgfbr1-tgfbr2 receptor complex",
+    "tgfbr1:tgfbr2 receptor complex": "tgfbr1-tgfbr2 receptor complex",
+    "tgfbr1:tgfbr2": "tgfbr1-tgfbr2 receptor complex",
+    "tgfbr1_tgfbr2": "tgfbr1-tgfbr2 receptor complex",
+    "cntfr-alpha-gp130-lifr receptor complex": "cntfr-alpha-gp130-lifr receptor complex",
+    "cntf:cntfra:gp130:lifr receptor complex": "cntfr-alpha-gp130-lifr receptor complex",
+    "ifnlr1-il10rb receptor complex": "ifnlr1-il10rb receptor complex",
+    "ifnlr1:il10rb receptor complex": "ifnlr1-il10rb receptor complex",
+}
+
+CANONICAL_NODE_LABELS = {
+    "tgfbr1-tgfbr2 receptor complex": "TGFBR1-TGFBR2 receptor complex",
+    "cntfr-alpha-gp130-lifr receptor complex": "CNTFR-alpha-gp130-LIFR receptor complex",
+    "ifnlr1-il10rb receptor complex": "IFNLR1-IL10RB receptor complex",
+}
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -95,7 +117,21 @@ def split_ids(value: str) -> list[str]:
 
 def node_key(label: str) -> str:
     normalized = unicodedata.normalize("NFKC", label).strip()
-    return " ".join(normalized.split()).casefold()
+    key = " ".join(normalized.split()).casefold()
+    return CANONICAL_NODE_ALIASES.get(key, key)
+
+
+def canonical_node_label(label: str) -> str:
+    """Return the stable display label for an explicit node alias group."""
+    return CANONICAL_NODE_LABELS.get(node_key(label), label.strip())
+
+
+def node_alias_metadata() -> dict[str, list[str]]:
+    """Return display-label aliases for release provenance."""
+    grouped: dict[str, list[str]] = defaultdict(list)
+    for alias, canonical in CANONICAL_NODE_ALIASES.items():
+        grouped[CANONICAL_NODE_LABELS.get(canonical, canonical)].append(alias)
+    return {canonical: sorted(aliases) for canonical, aliases in sorted(grouped.items())}
 
 
 def is_self_loop(edge: dict[str, str]) -> bool:
@@ -354,7 +390,7 @@ def build_release(source_root: Path, module20b_family_layer: Path | None = None)
             record = node_records.setdefault(
                 key,
                 {
-                    "label": label,
+                    "label": canonical_node_label(label),
                     "labels": set(),
                     "modules": set(),
                     "pathways": set(),
@@ -629,6 +665,8 @@ def build_release(source_root: Path, module20b_family_layer: Path | None = None)
         "graph_policy": {
             "exportable_edges_only": True,
             "composite_labels_preserved": True,
+            "explicit_node_aliases_applied": True,
+            "node_aliases": node_alias_metadata(),
             "unresolved_and_nonexportable_edges_excluded_from_graph": True,
             "evidence_rows_retained_for_exported_edges": True,
             "self_loops_excluded_from_traversable_graph": True,
