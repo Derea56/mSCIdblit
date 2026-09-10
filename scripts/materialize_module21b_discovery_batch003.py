@@ -76,7 +76,7 @@ def compartment(layer: str) -> str:
     if "ligand_receptor_binding_or_activation" in layer:
         return "extracellular ligand to plasma-membrane receptor or receptor complex"
     if "receptor_proximal_or_pathway" in layer:
-        return "plasma-membrane receptor or complex to cytoplasmic signaling"
+        return "intracellular protein or organelle-membrane complex to cytoplasmic signaling or trafficking"
     return "receptor/pathway to cellular or functional output"
 
 
@@ -148,7 +148,10 @@ def main() -> int:
             "b_evidence_id": evidence_id, "source_a_evidence_id": "", "b_edge_ids": edge_id,
             "source_kind": "review_guided_primary_validation", "source_locator": row["primary_locator"],
             "support_kind": "primary_experiment", "species_support": sp,
-            "source_scope": "direct_edge" if "ligand_receptor_binding_or_activation" in layer else "pathway_membership",
+            "source_scope": "direct_edge" if (
+                "ligand_receptor_binding_or_activation" in layer
+                or row["relation_type"].strip() in {"binds", "associates_with", "recruits"}
+            ) else "pathway_membership",
             "confidence_tier": "high", "citation_note": citation, "evidence_summary": summary,
             "limitations": row["boundary_notes"], "evidence_layer": layer, "exportable": "true", "consolidation_note": note,
         })
