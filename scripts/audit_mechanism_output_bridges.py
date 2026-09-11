@@ -79,7 +79,8 @@ KNOWN_PRODUCT_TOKENS = {
     "cxcl12", "fgf2", "gaba", "glutamate", "ifna", "ifnb1", "ifng",
     "il1a", "il1b", "il6", "il8", "il10", "il12", "il15", "il22", "lif",
     "mif", "ngf", "pge2", "shh", "tgfb", "timp1", "tnf", "vegfa", "opg",
-    "tslp", "nodal", "gdf1", "wnt5a",
+    "tslp", "nodal", "gdf1", "wnt5a", "adenosine", "nitricoxide", "ros",
+    "reactiveoxygenspecies", "prongf",
 }
 PRODUCT_PATTERNS = (
     ("Adp", re.compile(r"\bADP\b", re.I)),
@@ -123,6 +124,10 @@ PRODUCT_PATTERNS = (
     ("Steroid", re.compile(r"\bsteroid(?:s)?\b|\bsteroidogenesis\b", re.I)),
     ("Testosterone", re.compile(r"\btestosterone\b", re.I)),
     ("Hormone", re.compile(r"\bhormone(?:s)?\b", re.I)),
+    ("Adenosine", re.compile(r"\badenosine\b", re.I)),
+    ("NitricOxide", re.compile(r"\bnitric\s+oxide\b|\bNO\b", re.I)),
+    ("ReactiveOxygenSpecies", re.compile(r"\breactive\s+oxygen\s+species\b|\bROS\b", re.I)),
+    ("ProNgf", re.compile(r"\bpro-?NGF\b", re.I)),
 )
 
 

@@ -103,6 +103,42 @@ EXPLICIT_GENE_PRODUCT_MAPPINGS = (
             "transcription, translation, secretion, transport, or receptor activation."
         ),
     },
+    {
+        "gene_key": "bdnf promoter iv",
+        "protein_key": "bdnf",
+        "notes": (
+            "Explicit mapping from the Bdnf promoter-IV target-gene label to "
+            "the BDNF ligand form; this does not assert expression, translation, "
+            "secretion, transport, or receptor activation."
+        ),
+    },
+    {
+        "gene_key": "il1b (pro-il-1β)",
+        "protein_key": "il1b",
+        "notes": (
+            "Explicit mapping from the IL1B/pro-IL-1β target-gene label to "
+            "the IL-1β ligand form; maturation, secretion, transport, and "
+            "receptor activation remain conditional on output evidence."
+        ),
+    },
+    {
+        "gene_key": "tgfb1 promoter",
+        "protein_key": "tgfb1",
+        "notes": (
+            "Explicit mapping from the Tgfb1 promoter target-gene label to "
+            "the TGFB1 ligand form; this does not assert expression, latent "
+            "complex processing, secretion, activation, or receptor binding."
+        ),
+    },
+    {
+        "gene_key": "shh macs1 long-range enhancer",
+        "protein_key": "shh",
+        "notes": (
+            "Explicit mapping from the Shh MACS1 enhancer target-gene label "
+            "to the SHH ligand form; this does not assert expression, processing, "
+            "secretion, transport, or receptor activation."
+        ),
+    },
 )
 
 
