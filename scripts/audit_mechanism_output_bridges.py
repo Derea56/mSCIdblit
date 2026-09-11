@@ -91,6 +91,12 @@ KNOWN_PRODUCT_TOKENS = {
     "reactiveoxygenspecies", "prongf",
     "adamts1", "adamts9", "cspg", "histone", "insulin", "tgfb3",
 }
+# Only include aliases where the output token identifies one intact, already
+# typed ligand form. Generic cytokine, matrix, danger-signal, and hormone
+# labels remain unresolved when multiple molecular forms are possible.
+OUTPUT_PRODUCT_FORM_ALIASES = {
+    "pge2": "pge2/prostaglandin e2",
+}
 PRODUCT_PATTERNS = (
     ("Adp", re.compile(r"\bADP\b", re.I)),
     ("Atp", re.compile(r"\bATP\b", re.I)),
@@ -402,6 +408,16 @@ def load_typed_forms(
     return by_label, by_source
 
 
+def forms_for_product_label(
+    product_label: str,
+    forms_by_label: dict[str, list[dict[str, str]]],
+) -> list[dict[str, str]]:
+    """Resolve a product token only to an exact or explicitly safe alias."""
+    key = normalized_label(product_label)
+    alias_key = normalized_label(OUTPUT_PRODUCT_FORM_ALIASES.get(key, product_label))
+    return forms_by_label.get(alias_key, [])
+
+
 def load_source_edge_map(bundle: Path | None) -> dict[tuple[str, str], list[str]]:
     if bundle is None:
         return {}
@@ -580,7 +596,7 @@ def audit(review_root: Path, graph_bundle: Path | None) -> list[dict[str, object
                 named_product_forms = [
                     form
                     for product_label in output_products
-                    for form in forms_by_label.get(normalized_label(product_label), [])
+                    for form in forms_for_product_label(product_label, forms_by_label)
                     if form["form_type"] == "protein_ligand"
                 ]
                 if named_product_forms:
@@ -588,7 +604,7 @@ def audit(review_root: Path, graph_bundle: Path | None) -> list[dict[str, object
             product_form_ids = ";".join(dict.fromkeys(
                 form["entity_form_id"]
                 for product_label in output_products
-                for form in forms_by_label.get(normalized_label(product_label), [])
+                for form in forms_for_product_label(product_label, forms_by_label)
                 if form["form_type"] == "protein_ligand"
             ))
             if product_form_ids:
@@ -702,7 +718,7 @@ def audit_edge_register_outputs(
                 dict.fromkeys(
                     form["entity_form_id"]
                     for product_label in output_products
-                    for form in forms_by_label.get(normalized_label(product_label), [])
+                    for form in forms_for_product_label(product_label, forms_by_label)
                     if form["form_type"] == "protein_ligand"
                 )
             )
