@@ -37,6 +37,15 @@ OUTPUT_BRIDGE_FIELDS = [
     "traversal_status", "causal_status", "candidate_status", "context_limitations",
 ]
 PRIMARY_ROLE_ORDER = ("ligand", "receptor", "transcription_factor", "target_gene")
+LIGAND_RECEPTOR_LAYER_TOKENS = {
+    "ligand_receptor_or_direct_molecular",
+    "ligand_receptor_binding_or_activation",
+}
+
+
+def has_evidence_layer(layer_value: str, token: str) -> bool:
+    """Match one layer token without flattening composite layer values."""
+    return any(part.strip().casefold() == token for part in layer_value.split(";"))
 
 # These are deliberately narrow role hints for labels whose role is explicit
 # in the Module 20B–24B evidence handoff. Composite labels remain composite;
@@ -417,8 +426,11 @@ def effect_polarity(value: str) -> str:
 def canonical_relation_type(edge: dict[str, str], target_gene_edge: bool) -> str:
     """Emit the exact relation names used by mSCS while preserving the register relation."""
     relation = edge["relation_type"].casefold()
-    layer = edge["evidence_layer"].casefold()
-    if layer == "ligand_receptor_or_direct_molecular" and edge["module"] != "22B" and not target_gene_edge:
+    if (
+        any(has_evidence_layer(edge["evidence_layer"], token) for token in LIGAND_RECEPTOR_LAYER_TOKENS)
+        and edge["module"] != "22B"
+        and not target_gene_edge
+    ):
         return "binds_receptor"
     if target_gene_edge:
         if any(token in relation for token in ("repress", "inhibit", "suppress", "decrease")):
@@ -663,7 +675,9 @@ def build_release(source_root: Path, module20b_family_layer: Path | None = None)
         role_evidence = f"edge={edge_id}; evidence={';'.join(evidence_ids) or 'none'}"
         pathway_lower = pathway.casefold()
         layer_lower = edge["evidence_layer"].casefold()
-        target_gene_edge = "target_gene" in pathway_lower or layer_lower == "target_gene"
+        target_gene_edge = "target_gene" in pathway_lower or has_evidence_layer(
+            edge["evidence_layer"], "target_gene"
+        )
         if target_gene_edge:
             add_role(
                 role_map,
@@ -679,7 +693,10 @@ def build_release(source_root: Path, module20b_family_layer: Path | None = None)
                 "register_target_gene_layer",
                 role_evidence,
             )
-        elif layer_lower == "ligand_receptor_or_direct_molecular" and edge["module"] != "22B":
+        elif (
+            any(has_evidence_layer(edge["evidence_layer"], token) for token in LIGAND_RECEPTOR_LAYER_TOKENS)
+            and edge["module"] != "22B"
+        ):
             # Modules 20B, 21B, 23B, and 24B use this layer for their
             # receptor-facing molecular handoffs. Module 22B also uses the
             # layer for TF-target rows, so those are handled above instead of
