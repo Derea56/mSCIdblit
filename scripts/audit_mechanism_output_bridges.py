@@ -74,6 +74,10 @@ VALIDATED_OUTPUT_FIELDS = [
     "product_form_ids", "transition_ids", "validation_status", "causal_status",
     "traversal_status", "context_limitations",
 ]
+PRIMARY_VALIDATION_OVERLAY = (
+    ROOT / "work" / "cross_module_synthesis"
+    / "mechanism_output_bridge_primary_validations.tsv"
+)
 OUTPUT_PATTERNS = (
     ("target_proximal_conditioned_medium_language", re.compile(r"conditioned\s+medium", re.I)),
     ("target_proximal_supernatant_language", re.compile(r"supernatant", re.I)),
@@ -883,6 +887,19 @@ def audit_validated_output_bridges(
                 "context_limitations": limitations,
             }
         )
+    # These rows are manually reviewed output observations whose review lead
+    # and cited primary paper were checked outside the edge-register evidence
+    # schema. They remain conditional output continuations and never become
+    # ordinary mechanism edges. Keep the overlay schema identical so the
+    # release validator can audit it like register-derived rows.
+    if PRIMARY_VALIDATION_OVERLAY.exists():
+        overlay_fields, overlay_rows = read_tsv(PRIMARY_VALIDATION_OVERLAY)
+        if overlay_fields != VALIDATED_OUTPUT_FIELDS:
+            raise ValueError(
+                "primary validation overlay header mismatch: "
+                f"expected {VALIDATED_OUTPUT_FIELDS}, got {overlay_fields}"
+            )
+        rows.extend(overlay_rows)
     rows.sort(key=lambda row: (str(row["source_namespace"]), str(row["source_edge_ids"]), str(row["output_label"])))
     for index, row in enumerate(rows, start=1):
         row["bridge_id"] = f"BRIDGE:{index:05d}"
