@@ -18,7 +18,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-EDGE_REGISTER_MODULES = ("21b", "23b", "24b")
+EDGE_REGISTER_MODULES = ("21b", "22b", "23b", "24b")
 REVIEW_FIELDS = [
     "module22a_evidence_id",
     "module22a_handoff_ids",
@@ -89,6 +89,7 @@ KNOWN_PRODUCT_TOKENS = {
     "mif", "ngf", "pge2", "shh", "tgfb", "timp1", "tnf", "vegfa", "opg",
     "tslp", "nodal", "gdf1", "wnt5a", "adenosine", "nitricoxide", "ros",
     "reactiveoxygenspecies", "prongf",
+    "adamts1", "adamts9", "cspg", "histone", "insulin", "tgfb3",
 }
 PRODUCT_PATTERNS = (
     ("Adp", re.compile(r"\bADP\b", re.I)),
@@ -121,6 +122,7 @@ PRODUCT_PATTERNS = (
     ("Pge2", re.compile(r"\bPGE2\b|\bPGE-?2\b|\bprostaglandin\s+E2\b", re.I)),
     ("Shh", re.compile(r"\bSHH\b|\bsonic hedgehog\b", re.I)),
     ("Tgfb", re.compile(r"\bTGF-?(?:beta|β|b)\b", re.I)),
+    ("Tgfb3", re.compile(r"\bTGFB3\b|\bTGF-?β3\b|\bTGF-?beta3\b", re.I)),
     ("Timp1", re.compile(r"\bTIMP-?1\b|\bTIMP1\b", re.I)),
     ("Tnf", re.compile(r"\bTNF(?:-?(?:alpha|α))?\b", re.I)),
     ("Vegfa", re.compile(r"\bVEGF(?:-?A)?\b", re.I)),
@@ -136,6 +138,11 @@ PRODUCT_PATTERNS = (
     ("NitricOxide", re.compile(r"\bnitric[\s-]+oxide\b|\bNO\b", re.I)),
     ("ReactiveOxygenSpecies", re.compile(r"\breactive\s+oxygen\s+species\b|\bROS\b", re.I)),
     ("ProNgf", re.compile(r"\bpro-?NGF\b", re.I)),
+    ("Adamts1", re.compile(r"\bADAMTS-?1\b", re.I)),
+    ("Adamts9", re.compile(r"\bADAMTS-?9\b", re.I)),
+    ("Cspg", re.compile(r"\bCSPG(?:s)?\b", re.I)),
+    ("Histone", re.compile(r"\bhistone(?:s)?\b", re.I)),
+    ("Insulin", re.compile(r"\binsulin\b", re.I)),
 )
 
 
@@ -803,10 +810,10 @@ def audit_validated_output_bridges(
         primary_linked = [
             row for row in linked
             if row.get("exportable") == "true"
+            and row.get("support_kind", "") != "review_statement"
             and (
                 "primary" in row.get("support_kind", "").casefold()
                 or "primary" in row.get("source_kind", "").casefold()
-                or any(locator in row.get("source_locator", "") for locator in ("PMID:", "PMCID:", "DOI:"))
             )
         ]
         if not primary_linked:
