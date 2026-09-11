@@ -101,6 +101,23 @@ KNOWN_PRODUCT_TOKENS = {
 OUTPUT_PRODUCT_FORM_ALIASES = {
     "pge2": "pge2/prostaglandin e2",
 }
+# These outputs can be real extracellular mediators, but they are not
+# translated protein products.  Do not use their ligand-role form records as
+# evidence for a gene-to-protein transition.
+NON_PROTEIN_PRODUCT_KEYS = {
+    "adenosine",
+    "adp",
+    "atp",
+    "gaba",
+    "glutamate",
+    "insulin",
+    "nitricoxide",
+    "pge2",
+    "reactiveoxygenspecies",
+    "ros",
+    "steroid",
+    "testosterone",
+}
 PRODUCT_PATTERNS = (
     ("Adp", re.compile(r"\bADP\b", re.I)),
     ("Atp", re.compile(r"\bATP\b", re.I)),
@@ -422,6 +439,93 @@ def forms_for_product_label(
     return forms_by_label.get(alias_key, [])
 
 
+def product_form_ids_for_labels(
+    output_product_labels: str,
+    forms_by_label: dict[str, list[dict[str, str]]],
+    existing_form_ids: str = "",
+) -> str:
+    """Resolve only unambiguous translated-product forms.
+
+    Output bridges may name small molecules, matrix material, or generic
+    cytokine classes.  A unique typed ligand form is useful for continuation,
+    but it does not by itself justify a gene/product transition.  The
+    transition field is therefore intentionally not populated here.
+    """
+    form_ids = [value for value in existing_form_ids.split(";") if value]
+    for label in output_product_labels.split(";"):
+        key = normalized_label(label)
+        if not key or key in NON_PROTEIN_PRODUCT_KEYS:
+            continue
+        forms = [
+            form for form in forms_for_product_label(label, forms_by_label)
+            if form["form_type"] == "protein_ligand"
+        ]
+        unique_ids = list(dict.fromkeys(form["entity_form_id"] for form in forms))
+        if len(unique_ids) == 1:
+            form_ids.append(unique_ids[0])
+    return ";".join(dict.fromkeys(form_ids))
+
+
+def enrich_validated_product_forms(
+    row: dict[str, str],
+    forms_by_label: dict[str, list[dict[str, str]]],
+) -> None:
+    """Fill typed product forms without inferring gene expression or secretion."""
+    form_ids = product_form_ids_for_labels(
+        row.get("output_product_labels", ""),
+        forms_by_label,
+        row.get("product_form_ids", ""),
+    )
+    if form_ids:
+        row["product_form_ids"] = form_ids
+
+
+GENE_LEVEL_OUTPUT_MARKERS = re.compile(
+    r"\b(?:mRNA|transcript|promoter|enhancer|gene\s+expression|transcription|expression)\b",
+    re.I,
+)
+
+
+def filter_output_transition_ids(
+    row: dict[str, str],
+    transitions_by_source: dict[str, list[dict[str, str]]],
+) -> None:
+    """Retain gene/product transitions only when this output names both levels.
+
+    A measured secreted protein is already a valid conditional product
+    continuation.  A gene-product transition additionally requires local
+    gene-level evidence (for example mRNA, promoter, or expression) in the
+    same bridge.  This prevents an unrelated BDNF-release observation from
+    inheriting the Bdnf promoter-IV mapping merely because both end at BDNF.
+    """
+    transition_by_id = {
+        transition["transition_id"]: transition
+        for transitions in transitions_by_source.values()
+        for transition in transitions
+    }
+    output_keys = {
+        normalized_label(label)
+        for label in row.get("output_product_labels", "").split(";")
+        if label
+    }
+    # Keep this test on the assay/perturbation description.  The observation
+    # can mention expression in a downstream receiver (for example AQP4),
+    # which must not be mistaken for expression of the named output product.
+    evidence_text = row.get("assay_or_perturbation", "")
+    if not output_keys or not GENE_LEVEL_OUTPUT_MARKERS.search(evidence_text):
+        row["transition_ids"] = ""
+        return
+    retained: list[str] = []
+    for transition_id in row.get("transition_ids", "").split(";"):
+        transition = transition_by_id.get(transition_id)
+        if not transition:
+            continue
+        target_key = normalized_label(transition.get("target_label", ""))
+        if target_key and target_key in output_keys:
+            retained.append(transition_id)
+    row["transition_ids"] = ";".join(dict.fromkeys(retained))
+
+
 def load_source_edge_map(bundle: Path | None) -> dict[tuple[str, str], list[str]]:
     if bundle is None:
         return {}
@@ -605,23 +709,13 @@ def audit(review_root: Path, graph_bundle: Path | None) -> list[dict[str, object
                 ]
                 if named_product_forms:
                     product_form = named_product_forms[0]["entity_form_id"]
-            product_form_ids = ";".join(dict.fromkeys(
-                form["entity_form_id"]
-                for product_label in output_products
-                for form in forms_for_product_label(product_label, forms_by_label)
-                if form["form_type"] == "protein_ligand"
-            ))
+            product_form_ids = product_form_ids_for_labels(
+                ";".join(output_products),
+                forms_by_label,
+            )
             if product_form_ids:
                 product_form = product_form_ids.split(";", 1)[0]
-                output_transition_ids = transition_ids_for_products(
-                    product_form_ids, transitions_by_source
-                )
-                transition_ids = transition_id
-                if output_transition_ids:
-                    transition_ids = merge_id_values(transition_id, output_transition_ids)
-                    transition_id = transition_ids.split(";", 1)[0]
-            else:
-                transition_ids = transition_id
+            transition_ids = transition_id
             candidate = {
                 "candidate_id": "",
                 "review_record_path": relative_path,
@@ -652,6 +746,11 @@ def audit(review_root: Path, graph_bundle: Path | None) -> list[dict[str, object
                 "candidate_status": "review_required",
                 "context_limitations": context_limitations,
             }
+            filter_output_transition_ids(candidate, transitions_by_source)
+            candidate["transition_id"] = (
+                candidate["transition_ids"].split(";", 1)[0]
+                if candidate["transition_ids"] else ""
+            )
             existing = candidate_by_key.get(key)
             if existing is None:
                 candidate_by_key[key] = candidate
@@ -718,15 +817,15 @@ def audit_edge_register_outputs(
             )
             if not stable_citations:
                 continue
-            product_form_ids = ";".join(
-                dict.fromkeys(
-                    form["entity_form_id"]
-                    for product_label in output_products
-                    for form in forms_for_product_label(product_label, forms_by_label)
-                    if form["form_type"] == "protein_ligand"
-                )
+            product_form_ids = product_form_ids_for_labels(
+                ";".join(output_products),
+                forms_by_label,
             )
-            transition_ids = transition_ids_for_products(product_form_ids, transitions_by_source)
+            # A product-form match is not evidence that the upstream edge
+            # measured transcription, translation, or secretion from a gene.
+            # Keep gene/product transitions empty unless the source label is
+            # itself resolved to a supported transition.
+            transition_ids = ""
             species = edge.get("species_context", "")
             cell_type_model = edge.get("cell_type_context", "")
             context_limitations = "; ".join(
@@ -810,6 +909,7 @@ def audit_validated_output_bridges(
     gene-to-product, secretion, transport, or receiver-cell steps needed for a
     traversable intercellular path.
     """
+    forms_by_label, transitions_by_source = load_typed_forms(graph_bundle)
     candidates = audit_edge_register_outputs(source_root, graph_bundle)
     evidence_by_id: dict[str, dict[str, str]] = {}
     edge_by_id: dict[str, dict[str, str]] = {}
@@ -899,6 +999,9 @@ def audit_validated_output_bridges(
                 "primary validation overlay header mismatch: "
                 f"expected {VALIDATED_OUTPUT_FIELDS}, got {overlay_fields}"
             )
+        for row in overlay_rows:
+            enrich_validated_product_forms(row, forms_by_label)
+            filter_output_transition_ids(row, transitions_by_source)
         rows.extend(overlay_rows)
     rows.sort(key=lambda row: (str(row["source_namespace"]), str(row["source_edge_ids"]), str(row["output_label"])))
     for index, row in enumerate(rows, start=1):
