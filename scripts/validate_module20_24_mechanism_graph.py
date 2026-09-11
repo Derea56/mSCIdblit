@@ -363,7 +363,7 @@ def validate(bundle_dir: Path) -> dict[str, object]:
                 if not row.get(field, "").strip()
                 and not (
                     field == "source_edge_ids"
-                    and row.get("source_namespace") == "module22a_review_primary_validated"
+                    and row.get("source_namespace", "").endswith("_review_primary_validated")
                 )
             }
         )
