@@ -38,7 +38,9 @@ REVIEW_FIELDS = [
 OUTPUT_FIELDS = [
     "candidate_id",
     "review_record_path",
+    "review_source_namespace",
     "review_evidence_id",
+    "source_edge_ids",
     "review_handoff_ids",
     "review_status",
     "tf_entity",
@@ -329,6 +331,44 @@ def load_typed_forms(
     return by_label, by_source
 
 
+def load_source_edge_map(bundle: Path | None) -> dict[tuple[str, str], list[str]]:
+    if bundle is None:
+        return {}
+    edges_path = bundle / "mechanism_edges.tsv"
+    if not edges_path.exists():
+        return {}
+    _, edges = read_tsv(edges_path)
+    edge_map: dict[tuple[str, str], list[str]] = {}
+    for edge in edges:
+        source_label = edge.get("source_label", "")
+        target_label = edge.get("target_label", "")
+        for source_key in label_lookup_keys(source_label):
+            for target_key in label_lookup_keys(target_label):
+                edge_map.setdefault((source_key, target_key), []).append(edge["edge_id"])
+    return edge_map
+
+
+def label_lookup_keys(label: str) -> list[str]:
+    """Return conservative exact keys for common register label variants."""
+    label = label.strip()
+    if not label:
+        return []
+    keys = {normalized_label(label.split()[0])}
+    keys.add(normalized_label(label))
+    for part in re.split(r"[/;|]", label):
+        normalized = normalized_label(part)
+        if normalized:
+            keys.add(normalized)
+    return sorted(keys)
+
+
+def resolve_source_edges(target: str, edge_map: dict[tuple[str, str], list[str]]) -> str:
+    parts = target.split(None, 1)
+    if len(parts) != 2:
+        return ""
+    return ";".join(edge_map.get((normalized_label(parts[0]), normalized_label(parts[1])), []))
+
+
 def resolve_forms(
     target: str,
     forms_by_label: dict[str, list[dict[str, str]]],
@@ -385,27 +425,62 @@ def resolve_forms(
 
 def audit(review_root: Path, graph_bundle: Path | None) -> list[dict[str, object]]:
     forms_by_label, transitions_by_source = load_typed_forms(graph_bundle)
+    source_edge_map = load_source_edge_map(graph_bundle)
     candidate_by_key: dict[tuple[str, str, str, str, str, str], dict[str, object]] = {}
-    review_paths = sorted(review_root.glob("module22a_batch*_review.tsv"))
+    review_paths = sorted(review_root.glob("*_review.tsv"))
     for review_path in review_paths:
         fields, records = read_tsv(review_path)
-        if fields != REVIEW_FIELDS:
+        if fields == REVIEW_FIELDS:
+            namespace = "module22a"
+        elif {"review_id", "pair", "assay_or_perturbation"}.issubset(fields):
+            namespace = "module21a"
+        else:
             continue
         relative_path = str(review_path.relative_to(ROOT)) if review_path.is_relative_to(ROOT) else str(review_path)
-        for record in records:
-            if record.get("review_status", "").casefold() in {"no_evidence_boundary", "unresolved"}:
+        for raw_record in records:
+            if namespace == "module22a":
+                record = raw_record
+                review_status = record.get("review_status", "")
+                target = record.get("target_or_program", "").strip()
+                target_class = record.get("target_class", "")
+                review_evidence_id = record.get("module22a_evidence_id", "")
+                review_handoff_ids = record.get("module22a_handoff_ids", "")
+                tf_entity = record.get("tf_entity", "")
+                stable_citations = record.get("stable_citations", "")
+                species = record.get("species", "")
+                cell_type_model = record.get("cell_type_model", "")
+                context_limitations = record.get("context_limitations", "")
+            else:
+                record = raw_record
+                review_status = record.get("status", "")
+                target = (
+                    record.get("pair_label_canonical", "")
+                    or record.get("pair", "")
+                    or record.get("pair_key", "")
+                ).strip()
+                target_class = "source_edge_output"
+                review_evidence_id = record.get("review_id", "")
+                review_handoff_ids = record.get("evidence_id", "")
+                tf_entity = record.get("terminal_TF", "")
+                stable_citations = record.get("stable_citations", "") or record.get("source_locators", "")
+                species = record.get("species", "")
+                cell_type_model = record.get("cell_type_model", "")
+                context_limitations = record.get("limitations", "")
+            review_status_normalized = review_status.casefold()
+            if "no_evidence" in review_status_normalized or "unresolved" in review_status_normalized:
                 continue
-            target = record.get("target_or_program", "").strip()
             if not target or target.casefold() in {"null", "none_identified"}:
                 continue
             output_class, output_language, output_products = output_matches(
                 target, record.get("assay_or_perturbation", "")
             )
+            if namespace == "module21a" and output_class == "target_proximal_extracellular_language":
+                continue
             if not output_class:
                 continue
             key = (
                 normalized_label(target),
-                record.get("tf_entity", ""),
+                tf_entity,
                 output_class,
                 record.get("assay_or_perturbation", ""),
                 ";".join(output_products),
@@ -433,17 +508,19 @@ def audit(review_root: Path, graph_bundle: Path | None) -> list[dict[str, object
             candidate = {
                 "candidate_id": "",
                 "review_record_path": relative_path,
-                "review_evidence_id": record.get("module22a_evidence_id", ""),
-                "review_handoff_ids": record.get("module22a_handoff_ids", ""),
-                "review_status": record.get("review_status", ""),
-                "tf_entity": record.get("tf_entity", ""),
+                "review_source_namespace": namespace,
+                "review_evidence_id": review_evidence_id,
+                "source_edge_ids": resolve_source_edges(target, source_edge_map),
+                "review_handoff_ids": review_handoff_ids,
+                "review_status": review_status,
+                "tf_entity": tf_entity,
                 "target_or_program_label": target,
-                "target_class": record.get("target_class", ""),
+                "target_class": target_class,
                 "relation_type": record.get("relation_type", ""),
                 "evidence_layer": record.get("evidence_layer", ""),
-                "stable_citations": record.get("stable_citations", ""),
-                "species": record.get("species", ""),
-                "cell_type_model": record.get("cell_type_model", ""),
+                "stable_citations": stable_citations,
+                "species": species,
+                "cell_type_model": cell_type_model,
                 "assay_or_perturbation": record.get("assay_or_perturbation", ""),
                 "output_evidence_class": output_class,
                 "output_language": output_language,
@@ -456,14 +533,14 @@ def audit(review_root: Path, graph_bundle: Path | None) -> list[dict[str, object
                 "traversal_status": traversal_status,
                 "causal_status": "not_asserted",
                 "candidate_status": "review_required",
-                "context_limitations": record.get("context_limitations", ""),
+                "context_limitations": context_limitations,
             }
             existing = candidate_by_key.get(key)
             if existing is None:
                 candidate_by_key[key] = candidate
             else:
                 for field in (
-                    "review_record_path", "review_evidence_id", "review_handoff_ids",
+                    "review_record_path", "review_source_namespace", "review_evidence_id", "source_edge_ids", "review_handoff_ids",
                     "stable_citations", "species", "cell_type_model", "context_limitations",
                     "output_language", "product_form_ids", "transition_ids",
                 ):
