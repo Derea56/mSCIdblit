@@ -254,7 +254,10 @@ def validate(bundle_dir: Path) -> dict[str, object]:
             {
                 row["review_source_namespace"]
                 for row in output_bridge_candidates
-                if row["review_source_namespace"] not in {"module21a", "module22a"}
+                if row["review_source_namespace"] not in {
+                    "module21a", "module22a", "module21b_edge_register",
+                    "module23b_edge_register", "module24b_edge_register",
+                }
             }
         )
         if invalid_namespaces:

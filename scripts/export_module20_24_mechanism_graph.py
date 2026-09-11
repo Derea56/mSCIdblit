@@ -974,12 +974,18 @@ def main() -> None:
     # graph edges. They preserve review records, stable citations, and links
     # back to existing source edges while keeping causal/traversal status
     # explicitly gated until primary evidence is manually validated.
-    from audit_mechanism_output_bridges import audit as audit_output_bridges
+    from audit_mechanism_output_bridges import (
+        audit as audit_output_bridges,
+        audit_edge_register_outputs,
+    )
 
     output_bridge_rows: list[dict[str, object]] = []
     for review_root in (ROOT / "work" / "module22a", ROOT / "work" / "module21_relay"):
         if review_root.exists():
             output_bridge_rows.extend(audit_output_bridges(review_root, output_dir))
+    output_bridge_rows.extend(
+        audit_edge_register_outputs(ROOT / "work" / "module_b_consolidation", output_dir)
+    )
     output_bridge_rows.sort(
         key=lambda row: (
             str(row.get("review_source_namespace", "")),
