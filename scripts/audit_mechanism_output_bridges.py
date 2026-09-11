@@ -75,17 +75,28 @@ OUTPUT_PATTERNS = (
     ("target_proximal_production_language", re.compile(r"production|produced", re.I)),
 )
 KNOWN_PRODUCT_TOKENS = {
-    "bdnf", "ccl2", "ccl3", "ccl5", "cxcl10", "cxcl12", "il1a", "il1b",
-    "il6", "il8", "il10", "il12", "il15", "lif", "mif", "ngf", "shh",
-    "tgfb", "tnf", "vegfa", "opg", "tslp", "nodal", "gdf1", "wnt5a",
+    "adp", "atp", "bdnf", "ccl2", "ccl3", "ccl5", "csf2", "cxcl10",
+    "cxcl12", "fgf2", "gaba", "glutamate", "ifna", "ifnb1", "ifng",
+    "il1a", "il1b", "il6", "il8", "il10", "il12", "il15", "il22", "lif",
+    "mif", "ngf", "pge2", "shh", "tgfb", "timp1", "tnf", "vegfa", "opg",
+    "tslp", "nodal", "gdf1", "wnt5a",
 }
 PRODUCT_PATTERNS = (
+    ("Adp", re.compile(r"\bADP\b", re.I)),
+    ("Atp", re.compile(r"\bATP\b", re.I)),
     ("Bdnf", re.compile(r"\bBDNF\b", re.I)),
     ("Ccl2", re.compile(r"\bCCL2\b|\bMCP-?1\b", re.I)),
     ("Ccl3", re.compile(r"\bCCL3\b|\bMIP-?1(?:alpha|α)\b", re.I)),
     ("Ccl5", re.compile(r"\bCCL5\b|\bRANTES\b", re.I)),
+    ("Csf2", re.compile(r"\bCSF-?2\b|\bGM-?CSF\b", re.I)),
     ("Cxcl10", re.compile(r"\bCXCL10\b|\bIP-?10\b", re.I)),
     ("Cxcl12", re.compile(r"\bCXCL12\b|\bSDF-?1\b", re.I)),
+    ("Fgf2", re.compile(r"\bFGF-?2\b", re.I)),
+    ("Gaba", re.compile(r"\bGABA\b", re.I)),
+    ("Glutamate", re.compile(r"\bglutamate\b", re.I)),
+    ("Ifna", re.compile(r"\bIFN-?alpha\b|\bIFNA\b", re.I)),
+    ("Ifnb1", re.compile(r"\bIFN-?beta\b|\bIFNB1?\b", re.I)),
+    ("Ifng", re.compile(r"\bIFN-?gamma\b|\bIFNG\b", re.I)),
     ("Il1a", re.compile(r"\bIL-?1(?:alpha|α|a)\b", re.I)),
     ("Il1b", re.compile(r"\bIL-?1(?:beta|β|b)\b", re.I)),
     ("Il6", re.compile(r"\bIL-?6\b|\bIL6\b", re.I)),
@@ -93,12 +104,15 @@ PRODUCT_PATTERNS = (
     ("Il10", re.compile(r"\bIL-?10\b|\bIL10\b", re.I)),
     ("Il12", re.compile(r"\bIL-?12(?:p70)?\b|\bIL12\b", re.I)),
     ("Il15", re.compile(r"\bIL-?15\b|\bIL15\b", re.I)),
+    ("Il22", re.compile(r"\bIL-?22\b|\bIL22\b", re.I)),
     ("Lif", re.compile(r"\bLIF\b", re.I)),
     ("Mif", re.compile(r"\bMIF\b", re.I)),
     ("Ngf", re.compile(r"\bNGF\b", re.I)),
     ("Opg", re.compile(r"\bOPG\b|\bosteoprotegerin\b", re.I)),
+    ("Pge2", re.compile(r"\bPGE2\b|\bPGE-?2\b|\bprostaglandin\s+E2\b", re.I)),
     ("Shh", re.compile(r"\bSHH\b|\bsonic hedgehog\b", re.I)),
     ("Tgfb", re.compile(r"\bTGF-?(?:beta|β|b)\b", re.I)),
+    ("Timp1", re.compile(r"\bTIMP-?1\b|\bTIMP1\b", re.I)),
     ("Tnf", re.compile(r"\bTNF(?:-?(?:alpha|α))?\b", re.I)),
     ("Vegfa", re.compile(r"\bVEGF(?:-?A)?\b", re.I)),
     ("Tslp", re.compile(r"\bTSLP\b", re.I)),
@@ -164,6 +178,18 @@ def normalized_label(value: str) -> str:
     return re.sub(r"[^a-z0-9]", "", normalized)
 
 
+def merge_id_values(*values: str) -> str:
+    """Merge semicolon-delimited identifiers without retaining duplicates."""
+    return ";".join(
+        dict.fromkeys(
+            part.strip()
+            for value in values
+            for part in value.split(";")
+            if part.strip()
+        )
+    )
+
+
 def target_tokens(target: str) -> list[str]:
     """Extract likely gene symbols without treating prose as a gene."""
     tokens: list[str] = []
@@ -215,7 +241,7 @@ def output_matches(target: str, assay: str) -> tuple[str, str, list[str]]:
                 re.I,
             )
             or re.match(
-                r"\s*(?:-|/)?(?:receptor|receptor-deficient|stimulation|stimulated|treatment|treated|priming|primed|conditioned\s+medium|supernatant)\b",
+                r"\s*(?:-|/)?(?:dependent|receptor|receptor-deficient|stimulation|stimulated|treatment|treated|priming|primed|conditioned\s+medium|supernatant)\b",
                 text[product_match.end():product_match.end() + 35],
                 re.I,
             )
@@ -434,6 +460,23 @@ def resolve_forms(
     return gene["entity_form_id"] if gene else "", product["entity_form_id"] if product else "", "", "requires_output_evidence"
 
 
+def transition_ids_for_products(
+    product_form_ids: str,
+    transitions_by_source: dict[str, list[dict[str, str]]],
+) -> str:
+    """Link named output forms to conditional gene-product transitions."""
+    product_ids = {value for value in product_form_ids.split(";") if value}
+    if not product_ids:
+        return ""
+    transition_ids = [
+        transition["transition_id"]
+        for rows in transitions_by_source.values()
+        for transition in rows
+        if transition["target_form_id"] in product_ids
+    ]
+    return ";".join(dict.fromkeys(transition_ids))
+
+
 def audit(review_root: Path, graph_bundle: Path | None) -> list[dict[str, object]]:
     forms_by_label, transitions_by_source = load_typed_forms(graph_bundle)
     source_edge_map = load_source_edge_map(graph_bundle)
@@ -516,6 +559,15 @@ def audit(review_root: Path, graph_bundle: Path | None) -> list[dict[str, object
             ))
             if product_form_ids:
                 product_form = product_form_ids.split(";", 1)[0]
+                output_transition_ids = transition_ids_for_products(
+                    product_form_ids, transitions_by_source
+                )
+                transition_ids = transition_id
+                if output_transition_ids:
+                    transition_ids = merge_id_values(transition_id, output_transition_ids)
+                    transition_id = transition_ids.split(";", 1)[0]
+            else:
+                transition_ids = transition_id
             candidate = {
                 "candidate_id": "",
                 "review_record_path": relative_path,
@@ -539,8 +591,8 @@ def audit(review_root: Path, graph_bundle: Path | None) -> list[dict[str, object
                 "gene_form_id": gene_form,
                 "product_form_id": product_form,
                 "product_form_ids": product_form_ids,
-                "transition_id": transition_id,
-                "transition_ids": transition_id,
+                    "transition_id": transition_id,
+                "transition_ids": transition_ids,
                 "traversal_status": traversal_status,
                 "causal_status": "not_asserted",
                 "candidate_status": "review_required",
@@ -559,6 +611,7 @@ def audit(review_root: Path, graph_bundle: Path | None) -> list[dict[str, object
                     existing[field] = ";".join(dict.fromkeys(value for value in values if value))
                 if existing["product_form_ids"]:
                     existing["product_form_id"] = existing["product_form_ids"].split(";", 1)[0]
+                existing["transition_ids"] = merge_id_values(existing["transition_ids"])
                 if existing["transition_ids"]:
                     existing["transition_id"] = existing["transition_ids"].split(";", 1)[0]
     rows = list(candidate_by_key.values())
@@ -578,7 +631,7 @@ def audit_edge_register_outputs(
     does not by itself prove a gene-to-protein transition. The resulting rows
     therefore remain review-required and non-causal.
     """
-    forms_by_label, _ = load_typed_forms(graph_bundle)
+    forms_by_label, transitions_by_source = load_typed_forms(graph_bundle)
     rows: list[dict[str, object]] = []
     for module in EDGE_REGISTER_MODULES:
         module_dir = source_root / f"module{module}"
@@ -619,6 +672,7 @@ def audit_edge_register_outputs(
                     if form["form_type"] == "protein_ligand"
                 )
             )
+            transition_ids = transition_ids_for_products(product_form_ids, transitions_by_source)
             species = edge.get("species_context", "")
             cell_type_model = edge.get("cell_type_context", "")
             context_limitations = "; ".join(
@@ -672,8 +726,8 @@ def audit_edge_register_outputs(
                     "gene_form_id": "",
                     "product_form_id": product_form_ids.split(";", 1)[0] if product_form_ids else "",
                     "product_form_ids": product_form_ids,
-                    "transition_id": "",
-                    "transition_ids": "",
+                    "transition_id": transition_ids.split(";", 1)[0] if transition_ids else "",
+                    "transition_ids": transition_ids,
                     "traversal_status": "requires_output_evidence",
                     "causal_status": "not_asserted",
                     "candidate_status": "review_required",
