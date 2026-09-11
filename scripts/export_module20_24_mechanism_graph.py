@@ -27,6 +27,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MODULES = ("20", "21", "22", "23", "24")
 ROLE_NAMES = ("ligand", "receptor", "transcription_factor", "target_gene", "signaling_cascade")
+OUTPUT_BRIDGE_FIELDS = [
+    "candidate_id", "review_record_path", "review_source_namespace", "review_evidence_id",
+    "source_edge_ids", "review_handoff_ids", "review_status", "tf_entity",
+    "target_or_program_label", "target_class", "relation_type", "evidence_layer",
+    "stable_citations", "species", "cell_type_model", "assay_or_perturbation",
+    "output_evidence_class", "output_language", "output_product_labels", "gene_form_id",
+    "product_form_id", "product_form_ids", "transition_id", "transition_ids",
+    "traversal_status", "causal_status", "candidate_status", "context_limitations",
+]
 PRIMARY_ROLE_ORDER = ("ligand", "receptor", "transcription_factor", "target_gene")
 
 # These are deliberately narrow role hints for labels whose role is explicit
@@ -961,6 +970,35 @@ def main() -> None:
         ],
         release["entity_transitions"],
     )
+    # Output bridges are intentionally exported as a review queue rather than
+    # graph edges. They preserve review records, stable citations, and links
+    # back to existing source edges while keeping causal/traversal status
+    # explicitly gated until primary evidence is manually validated.
+    from audit_mechanism_output_bridges import audit as audit_output_bridges
+
+    output_bridge_rows: list[dict[str, object]] = []
+    for review_root in (ROOT / "work" / "module22a", ROOT / "work" / "module21_relay"):
+        if review_root.exists():
+            output_bridge_rows.extend(audit_output_bridges(review_root, output_dir))
+    output_bridge_rows.sort(
+        key=lambda row: (
+            str(row.get("review_source_namespace", "")),
+            str(row.get("target_or_program_label", "")),
+            str(row.get("output_product_labels", "")),
+            str(row.get("review_record_path", "")),
+        )
+    )
+    for index, row in enumerate(output_bridge_rows, start=1):
+        row["candidate_id"] = f"OUT:{index:05d}"
+    write_tsv(
+        output_dir / "mechanism_output_bridge_candidates.tsv",
+        OUTPUT_BRIDGE_FIELDS,
+        output_bridge_rows,
+    )
+    release["metadata"]["counts"]["output_bridge_candidates"] = len(output_bridge_rows)
+    release["metadata"]["files"]["output_bridge_candidates"] = "mechanism_output_bridge_candidates.tsv"
+    release["metadata"]["graph_policy"]["output_bridge_candidates_are_review_only"] = True
+    release["metadata"]["graph_policy"]["output_bridge_candidates_are_not_graph_edges"] = True
     (output_dir / "bundle_metadata.json").write_text(json.dumps(release["metadata"], indent=2) + "\n")
     print(json.dumps(release["metadata"]["counts"], sort_keys=True))
 

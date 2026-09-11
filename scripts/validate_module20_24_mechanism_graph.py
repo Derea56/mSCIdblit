@@ -97,6 +97,11 @@ def validate(bundle_dir: Path) -> dict[str, object]:
     if entity_forms_path.exists() and entity_transitions_path.exists():
         entity_form_fields, entity_forms = read_tsv(entity_forms_path)
         entity_transition_fields, entity_transitions = read_tsv(entity_transitions_path)
+    output_bridge_path = bundle_dir / "mechanism_output_bridge_candidates.tsv"
+    output_bridge_fields: list[str] = []
+    output_bridge_candidates: list[dict[str, str]] = []
+    if output_bridge_path.exists():
+        output_bridge_fields, output_bridge_candidates = read_tsv(output_bridge_path)
     metadata = json.loads((bundle_dir / "bundle_metadata.json").read_text())
 
     expected_fields = {
@@ -135,6 +140,15 @@ def validate(bundle_dir: Path) -> dict[str, object]:
             "target_node_id", "source_form_type", "target_form_type", "transition_type",
             "relation_type", "traversal_status", "causal_status", "evidence_status",
             "source_label", "target_label", "evidence_ids", "notes",
+        ],
+        "output_bridge_candidates": [
+            "candidate_id", "review_record_path", "review_source_namespace", "review_evidence_id",
+            "source_edge_ids", "review_handoff_ids", "review_status", "tf_entity",
+            "target_or_program_label", "target_class", "relation_type", "evidence_layer",
+            "stable_citations", "species", "cell_type_model", "assay_or_perturbation",
+            "output_evidence_class", "output_language", "output_product_labels", "gene_form_id",
+            "product_form_id", "product_form_ids", "transition_id", "transition_ids",
+            "traversal_status", "causal_status", "candidate_status", "context_limitations",
         ],
     }
     for label, actual, expected in (
@@ -226,6 +240,81 @@ def validate(bundle_dir: Path) -> dict[str, object]:
                 transition_errors.append(f"{row['transition_id']} node references disagree with forms")
         if transition_errors:
             errors.extend(transition_errors[:10])
+
+    if output_bridge_path.exists():
+        if output_bridge_fields != expected_fields["output_bridge_candidates"]:
+            errors.append(
+                "output_bridge_candidates header mismatch: "
+                f"expected {expected_fields['output_bridge_candidates']}, got {output_bridge_fields}"
+            )
+        candidate_ids = [row["candidate_id"] for row in output_bridge_candidates]
+        if duplicates(candidate_ids):
+            errors.append(f"duplicate output bridge candidate IDs: {duplicates(candidate_ids)[:5]}")
+        invalid_namespaces = sorted(
+            {
+                row["review_source_namespace"]
+                for row in output_bridge_candidates
+                if row["review_source_namespace"] not in {"module21a", "module22a"}
+            }
+        )
+        if invalid_namespaces:
+            errors.append(f"invalid output bridge source namespaces: {invalid_namespaces[:5]}")
+        invalid_statuses = sorted(
+            {
+                (row["causal_status"], row["candidate_status"])
+                for row in output_bridge_candidates
+                if row["causal_status"] != "not_asserted"
+                or row["candidate_status"] != "review_required"
+            }
+        )
+        if invalid_statuses:
+            errors.append(f"output bridge candidates are not gated: {invalid_statuses[:5]}")
+        missing_candidate_fields = sorted(
+            {
+                field
+                for row in output_bridge_candidates
+                for field in ("review_record_path", "review_evidence_id", "stable_citations", "target_or_program_label")
+                if not row[field].strip()
+            }
+        )
+        if missing_candidate_fields:
+            errors.append(f"output bridge candidates missing audit fields: {missing_candidate_fields}")
+        missing_candidate_edges = sorted(
+            {
+                edge_id
+                for row in output_bridge_candidates
+                for edge_id in row["source_edge_ids"].split(";")
+                if edge_id and edge_id not in edge_id_set
+            }
+        )
+        if missing_candidate_edges:
+            errors.append(f"output bridge candidates reference missing edges: {missing_candidate_edges[:5]}")
+        known_form_ids = {row["entity_form_id"] for row in entity_forms}
+        missing_candidate_forms = sorted(
+            {
+                form_id
+                for row in output_bridge_candidates
+                for field in ("gene_form_id", "product_form_ids", "transition_ids")
+                for form_id in row[field].split(";")
+                if form_id and field != "transition_ids" and form_id not in known_form_ids
+            }
+        )
+        if missing_candidate_forms:
+            errors.append(f"output bridge candidates reference missing forms: {missing_candidate_forms[:5]}")
+        known_transition_ids = {row["transition_id"] for row in entity_transitions}
+        missing_candidate_transitions = sorted(
+            {
+                transition_id
+                for row in output_bridge_candidates
+                for transition_id in row["transition_ids"].split(";")
+                if transition_id and transition_id not in known_transition_ids
+            }
+        )
+        if missing_candidate_transitions:
+            errors.append(
+                "output bridge candidates reference missing transitions: "
+                f"{missing_candidate_transitions[:5]}"
+            )
 
     missing_role_nodes = sorted({row["node_id"] for row in node_roles if row["node_id"] not in node_id_set})
     if missing_role_nodes:
@@ -332,6 +421,8 @@ def validate(bundle_dir: Path) -> dict[str, object]:
     if entity_forms_path.exists() and entity_transitions_path.exists():
         actual_counts["entity_forms"] = len(entity_forms)
         actual_counts["entity_transitions"] = len(entity_transitions)
+    if output_bridge_path.exists():
+        actual_counts["output_bridge_candidates"] = len(output_bridge_candidates)
     for key, actual in actual_counts.items():
         if metadata_counts.get(key) != actual:
             errors.append(f"metadata count mismatch for {key}: metadata={metadata_counts.get(key)} actual={actual}")
@@ -364,6 +455,9 @@ def validate(bundle_dir: Path) -> dict[str, object]:
             "all_graph_edges_have_evidence": not no_sources,
             "pathway_summaries_resolve": not missing_pathways,
             "metadata_counts_match": not any("metadata count mismatch" in error for error in errors),
+            "output_bridge_candidates_are_gated": not any(
+                "output bridge candidates are not gated" in error for error in errors
+            ),
         },
     }
     return report
