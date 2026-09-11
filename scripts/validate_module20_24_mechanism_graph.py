@@ -25,6 +25,9 @@ ALLOWED_NODE_TYPES = {
     "signaling_effector",
     "tf",
 }
+ALLOWED_ENTITY_FORM_TYPES = {"gene", "protein_ligand"}
+ALLOWED_TRANSITION_TYPES = {"gene_product_correspondence"}
+ALLOWED_TRANSITION_RELATIONS = {"gene_to_ligand_identity"}
 CANONICAL_ROLE_RELATIONS = {
     "binds_receptor",
     "regulates_target_gene",
@@ -83,6 +86,17 @@ def validate(bundle_dir: Path) -> dict[str, object]:
     source_fields, sources = read_tsv(bundle_dir / "mechanism_edge_sources.tsv")
     pathway_fields, pathways = read_tsv(bundle_dir / "mechanism_pathways.tsv")
     boundary_fields, boundaries = read_tsv(bundle_dir / "mechanism_boundary_summary.tsv")
+    entity_forms_path = bundle_dir / "mechanism_entity_forms.tsv"
+    entity_transitions_path = bundle_dir / "mechanism_entity_transitions.tsv"
+    entity_form_fields: list[str] = []
+    entity_forms: list[dict[str, str]] = []
+    entity_transition_fields: list[str] = []
+    entity_transitions: list[dict[str, str]] = []
+    if entity_forms_path.exists() != entity_transitions_path.exists():
+        errors.append("entity form and transition files must be present together")
+    if entity_forms_path.exists() and entity_transitions_path.exists():
+        entity_form_fields, entity_forms = read_tsv(entity_forms_path)
+        entity_transition_fields, entity_transitions = read_tsv(entity_transitions_path)
     metadata = json.loads((bundle_dir / "bundle_metadata.json").read_text())
 
     expected_fields = {
@@ -112,6 +126,16 @@ def validate(bundle_dir: Path) -> dict[str, object]:
             "module", "pathway_name", "evidence_layer", "edge_status", "export_priority",
             "nonexportable_edge_count",
         ],
+        "entity_forms": [
+            "entity_form_id", "node_id", "form_type", "canonical_name", "source_role",
+            "form_status", "notes",
+        ],
+        "entity_transitions": [
+            "transition_id", "source_form_id", "target_form_id", "source_node_id",
+            "target_node_id", "source_form_type", "target_form_type", "transition_type",
+            "relation_type", "traversal_status", "causal_status", "evidence_status",
+            "source_label", "target_label", "evidence_ids", "notes",
+        ],
     }
     for label, actual, expected in (
         ("nodes", node_fields, expected_fields["nodes"]),
@@ -123,6 +147,15 @@ def validate(bundle_dir: Path) -> dict[str, object]:
     ):
         if actual != expected:
             errors.append(f"{label} header mismatch: expected {expected}, got {actual}")
+    if entity_forms_path.exists() and entity_transitions_path.exists():
+        if entity_form_fields != expected_fields["entity_forms"]:
+            errors.append(
+                f"entity_forms header mismatch: expected {expected_fields['entity_forms']}, got {entity_form_fields}"
+            )
+        if entity_transition_fields != expected_fields["entity_transitions"]:
+            errors.append(
+                f"entity_transitions header mismatch: expected {expected_fields['entity_transitions']}, got {entity_transition_fields}"
+            )
 
     node_ids = [row["node_id"] for row in nodes]
     role_keys = [(row["node_id"], row["role"]) for row in node_roles]
@@ -157,6 +190,42 @@ def validate(bundle_dir: Path) -> dict[str, object]:
     )
     if missing_nodes:
         errors.append(f"edges reference missing nodes: {missing_nodes[:5]}")
+
+    if entity_forms_path.exists() and entity_transitions_path.exists():
+        form_ids = [row["entity_form_id"] for row in entity_forms]
+        transition_ids = [row["transition_id"] for row in entity_transitions]
+        if duplicates(form_ids):
+            errors.append(f"duplicate entity form IDs: {duplicates(form_ids)[:5]}")
+        if duplicates(transition_ids):
+            errors.append(f"duplicate entity transition IDs: {duplicates(transition_ids)[:5]}")
+        form_by_id = {row["entity_form_id"]: row for row in entity_forms}
+        invalid_forms = sorted({row["form_type"] for row in entity_forms if row["form_type"] not in ALLOWED_ENTITY_FORM_TYPES})
+        if invalid_forms:
+            errors.append(f"invalid entity form types: {invalid_forms[:5]}")
+        missing_form_nodes = sorted({row["node_id"] for row in entity_forms if row["node_id"] not in node_id_set})
+        if missing_form_nodes:
+            errors.append(f"entity forms reference missing nodes: {missing_form_nodes[:5]}")
+        transition_errors: list[str] = []
+        for row in entity_transitions:
+            source = form_by_id.get(row["source_form_id"])
+            target = form_by_id.get(row["target_form_id"])
+            if source is None or target is None:
+                transition_errors.append(f"{row['transition_id']} references missing entity form")
+                continue
+            if row["transition_type"] not in ALLOWED_TRANSITION_TYPES:
+                transition_errors.append(f"{row['transition_id']} has unsupported transition type")
+            if row["relation_type"] not in ALLOWED_TRANSITION_RELATIONS:
+                transition_errors.append(f"{row['transition_id']} has unsupported transition relation")
+            if source["form_type"] != "gene" or target["form_type"] != "protein_ligand":
+                transition_errors.append(f"{row['transition_id']} must run gene -> protein_ligand")
+            if row["source_form_type"] != source["form_type"] or row["target_form_type"] != target["form_type"]:
+                transition_errors.append(f"{row['transition_id']} form type fields disagree")
+            if row["causal_status"] != "not_asserted":
+                transition_errors.append(f"{row['transition_id']} asserts causal status")
+            if row["source_node_id"] != source["node_id"] or row["target_node_id"] != target["node_id"]:
+                transition_errors.append(f"{row['transition_id']} node references disagree with forms")
+        if transition_errors:
+            errors.extend(transition_errors[:10])
 
     missing_role_nodes = sorted({row["node_id"] for row in node_roles if row["node_id"] not in node_id_set})
     if missing_role_nodes:
@@ -260,6 +329,9 @@ def validate(bundle_dir: Path) -> dict[str, object]:
         "pathways": len(pathways),
         "boundary_groups": len(boundaries),
     }
+    if entity_forms_path.exists() and entity_transitions_path.exists():
+        actual_counts["entity_forms"] = len(entity_forms)
+        actual_counts["entity_transitions"] = len(entity_transitions)
     for key, actual in actual_counts.items():
         if metadata_counts.get(key) != actual:
             errors.append(f"metadata count mismatch for {key}: metadata={metadata_counts.get(key)} actual={actual}")

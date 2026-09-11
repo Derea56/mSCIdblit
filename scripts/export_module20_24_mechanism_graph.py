@@ -3,9 +3,12 @@
 
 The local Module 20B–24B registers are the source for this release artifact.
 Only edge-register rows marked ``exportable=true`` become graph edges. Every
-node label is preserved as curated; composite labels are not silently split or
-aliased. Evidence rows for exported edges remain attached as source records,
-including non-exportable boundary evidence so the graph stays auditable.
+node label is preserved as curated; composite labels are not silently split.
+Narrow, explicit aliases are applied only where they identify the same intact
+receptor-complex label. Evidence rows for exported edges remain attached as
+source records, including non-exportable boundary evidence so the graph stays
+auditable. Gene/product forms and conditional role transitions are exported as
+an auxiliary layer; they are not causal graph edges.
 """
 
 from __future__ import annotations
@@ -67,6 +70,31 @@ CANONICAL_NODE_LABELS = {
     "cntfr-alpha-gp130-lifr receptor complex": "CNTFR-alpha-gp130-LIFR receptor complex",
     "ifnlr1-il10rb receptor complex": "IFNLR1-IL10RB receptor complex",
 }
+
+# This is intentionally a label-level mapping, not a causal or secretion
+# assertion. The current registers use both ``Il6`` for a target-gene/role
+# label and ``IL-6`` for a ligand label. They must remain separate graph nodes
+# while still being available for a manually validated intercellular bridge.
+EXPLICIT_GENE_PRODUCT_MAPPINGS = (
+    {
+        "gene_key": "il6",
+        "protein_key": "il-6",
+        "notes": (
+            "Explicit register-label mapping between the IL6 target-gene form "
+            "and the IL-6 ligand form; this does not assert transcription, "
+            "translation, secretion, transport, or receptor activation."
+        ),
+    },
+    {
+        "gene_key": "il6 inflammatory target gene",
+        "protein_key": "il-6",
+        "notes": (
+            "Explicit register-label mapping from the IL6 inflammatory "
+            "target-gene label to the IL-6 ligand form; this does not assert "
+            "transcription, translation, secretion, transport, or receptor activation."
+        ),
+    },
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -178,6 +206,124 @@ def safe_gene_symbol(label: str, roles: set[str]) -> str:
     if re.fullmatch(r"[A-Za-z][A-Za-z0-9-]{1,31}", normalized):
         return normalized
     return ""
+
+
+def build_entity_forms(
+    node_rows: list[dict[str, object]],
+    role_map: dict[str, dict[str, dict[str, set[str]]]],
+) -> tuple[list[dict[str, object]], list[dict[str, object]]]:
+    """Export typed gene/product forms without changing canonical graph nodes.
+
+    A canonical node may legitimately carry both ``target_gene`` and
+    ``ligand`` roles. Those roles are represented as distinct forms so a
+    target-gene observation does not silently become a secreted ligand. The
+    transitions are conditional metadata and never enter ``mechanism_edges``.
+    """
+    labels_by_node = {str(row["node_id"]): str(row["canonical_name"]) for row in node_rows}
+    forms: list[dict[str, object]] = []
+    form_by_node_and_type: dict[tuple[str, str], str] = {}
+    for node_id in sorted(role_map):
+        roles = set(role_map[node_id])
+        label = labels_by_node[node_id]
+        if "target_gene" in roles:
+            form_id = f"GENE:{node_id}"
+            form_by_node_and_type[(node_id, "gene")] = form_id
+            forms.append(
+                {
+                    "entity_form_id": form_id,
+                    "node_id": node_id,
+                    "form_type": "gene",
+                    "canonical_name": label,
+                    "source_role": "target_gene",
+                    "form_status": "role_derived",
+                    "notes": "Target-gene form derived from an exported target_gene role; expression is not asserted by this form record.",
+                }
+            )
+        if "ligand" in roles:
+            form_id = f"PROTEIN:{node_id}"
+            form_by_node_and_type[(node_id, "protein_ligand")] = form_id
+            forms.append(
+                {
+                    "entity_form_id": form_id,
+                    "node_id": node_id,
+                    "form_type": "protein_ligand",
+                    "canonical_name": label,
+                    "source_role": "ligand",
+                    "form_status": "role_derived",
+                    "notes": "Ligand/protein form derived from an exported ligand role; secretion is not asserted by this form record.",
+                }
+            )
+
+    transitions: list[dict[str, object]] = []
+
+    # Same-node role co-occurrence is the safest correspondence available from
+    # the graph alone. It is explicitly conditional on output/secretion
+    # evidence and therefore cannot create an intercellular path by itself.
+    for node_id in sorted(role_map):
+        if "target_gene" not in role_map[node_id] or "ligand" not in role_map[node_id]:
+            continue
+        gene_form = form_by_node_and_type[(node_id, "gene")]
+        protein_form = form_by_node_and_type[(node_id, "protein_ligand")]
+        transitions.append(
+            {
+                "transition_id": f"TRN:{len(transitions) + 1:05d}",
+                "source_form_id": gene_form,
+                "target_form_id": protein_form,
+                "source_node_id": node_id,
+                "target_node_id": node_id,
+                "source_form_type": "gene",
+                "target_form_type": "protein_ligand",
+                "transition_type": "gene_product_correspondence",
+                "relation_type": "gene_to_ligand_identity",
+                "traversal_status": "requires_output_evidence",
+                "causal_status": "not_asserted",
+                "evidence_status": "role_cooccurrence_only",
+                "source_label": labels_by_node[node_id],
+                "target_label": labels_by_node[node_id],
+                "evidence_ids": "",
+                "notes": "Same canonical node has both roles; this transition does not assert transcription, translation, secretion, transport, or receptor activation.",
+            }
+        )
+
+    # Keep known punctuation/formatting differences separate in the graph and
+    # expose only an auditable identity candidate for later manual review.
+    transition_count = len(transitions)
+    node_id_by_key = {
+        " ".join(unicoded.split()).casefold(): str(row["node_id"])
+        for row in node_rows
+        for unicoded in [str(row["canonical_name"])]
+    }
+    for mapping in EXPLICIT_GENE_PRODUCT_MAPPINGS:
+        gene_node_id = node_id_by_key.get(mapping["gene_key"])
+        protein_node_id = node_id_by_key.get(mapping["protein_key"])
+        if not gene_node_id or not protein_node_id:
+            continue
+        gene_form = form_by_node_and_type.get((gene_node_id, "gene"))
+        protein_form = form_by_node_and_type.get((protein_node_id, "protein_ligand"))
+        if not gene_form or not protein_form:
+            continue
+        transition_count += 1
+        transitions.append(
+            {
+                "transition_id": f"TRN:{transition_count:05d}",
+                "source_form_id": gene_form,
+                "target_form_id": protein_form,
+                "source_node_id": gene_node_id,
+                "target_node_id": protein_node_id,
+                "source_form_type": "gene",
+                "target_form_type": "protein_ligand",
+                "transition_type": "gene_product_correspondence",
+                "relation_type": "gene_to_ligand_identity",
+                "traversal_status": "requires_secretion_evidence",
+                "causal_status": "not_asserted",
+                "evidence_status": "explicit_label_mapping",
+                "source_label": labels_by_node[gene_node_id],
+                "target_label": labels_by_node[protein_node_id],
+                "evidence_ids": "",
+                "notes": mapping["notes"],
+            }
+        )
+    return forms, transitions
 
 
 def source_files(source_root: Path, module: str) -> tuple[Path, Path]:
@@ -599,6 +745,8 @@ def build_release(source_root: Path, module20b_family_layer: Path | None = None)
                 }
             )
 
+    entity_forms, entity_transitions = build_entity_forms(node_rows, role_map)
+
     pathway_rows = [
         {
             "module": module,
@@ -676,6 +824,8 @@ def build_release(source_root: Path, module20b_family_layer: Path | None = None)
             "edges": len(edge_rows),
             "edge_sources": len(source_rows),
             "node_roles": len(role_rows),
+            "entity_forms": len(entity_forms),
+            "entity_transitions": len(entity_transitions),
             "nodes_with_ligand_role": sum("ligand" in role_map[node_id] for node_id in role_map),
             "nodes_with_receptor_role": sum("receptor" in role_map[node_id] for node_id in role_map),
             "nodes_with_transcription_factor_role": sum(
@@ -697,6 +847,8 @@ def build_release(source_root: Path, module20b_family_layer: Path | None = None)
             "edge_sources": "mechanism_edge_sources.tsv",
             "pathways": "mechanism_pathways.tsv",
             "boundaries": "mechanism_boundary_summary.tsv",
+            "entity_forms": "mechanism_entity_forms.tsv",
+            "entity_transitions": "mechanism_entity_transitions.tsv",
             "validation": "validation_report.json",
         },
         "accuracy_contract": [
@@ -708,6 +860,8 @@ def build_release(source_root: Path, module20b_family_layer: Path | None = None)
             "Self-loop register rows are retained as boundaries and are not inserted into the normalized graph.",
             "Non-exportable edges remain summarized as boundaries and are not traversable graph edges.",
             "Stable PMID/PMCID/DOI/URL locators are retained in edge-source rows where available; local paths are not released.",
+            "Gene and protein/ligand forms are typed auxiliary records; a shared label or role co-occurrence does not assert transcription, translation, secretion, or transport.",
+            "Entity transitions are conditional metadata, never causal graph edges; intercellular continuation requires explicit output/secretion evidence or a separately validated bridge.",
         ],
     }
 
@@ -719,6 +873,8 @@ def build_release(source_root: Path, module20b_family_layer: Path | None = None)
         "sources": source_rows,
         "pathways": pathway_rows,
         "boundaries": boundary_rows,
+        "entity_forms": entity_forms,
+        "entity_transitions": entity_transitions,
     }
 
 
@@ -786,6 +942,24 @@ def main() -> None:
             "nonexportable_edge_count",
         ],
         release["boundaries"],
+    )
+    write_tsv(
+        output_dir / "mechanism_entity_forms.tsv",
+        [
+            "entity_form_id", "node_id", "form_type", "canonical_name", "source_role",
+            "form_status", "notes",
+        ],
+        release["entity_forms"],
+    )
+    write_tsv(
+        output_dir / "mechanism_entity_transitions.tsv",
+        [
+            "transition_id", "source_form_id", "target_form_id", "source_node_id",
+            "target_node_id", "source_form_type", "target_form_type", "transition_type",
+            "relation_type", "traversal_status", "causal_status", "evidence_status",
+            "source_label", "target_label", "evidence_ids", "notes",
+        ],
+        release["entity_transitions"],
     )
     (output_dir / "bundle_metadata.json").write_text(json.dumps(release["metadata"], indent=2) + "\n")
     print(json.dumps(release["metadata"]["counts"], sort_keys=True))
