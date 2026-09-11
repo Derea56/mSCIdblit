@@ -102,6 +102,10 @@ PRODUCT_PATTERNS = (
     ("Nodal", re.compile(r"\bNODAL\b", re.I)),
     ("Gdf1", re.compile(r"\bGDF1\b", re.I)),
     ("Wnt5a", re.compile(r"\bWNT5A\b", re.I)),
+    ("Immunoglobulin", re.compile(r"\bimmunoglobulin(?:s)?\b|\bIg[AGMDE]\b", re.I)),
+    ("Steroid", re.compile(r"\bsteroid(?:s)?\b|\bsteroidogenesis\b", re.I)),
+    ("Testosterone", re.compile(r"\btestosterone\b", re.I)),
+    ("Hormone", re.compile(r"\bhormone(?:s)?\b", re.I)),
 )
 
 
