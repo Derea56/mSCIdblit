@@ -10,10 +10,10 @@ Canonical materialization status: **blocked_pending_canonical_schema_and_source_
 
 | Module | Edges | Evidence | Boundaries | Exportable edges | Non-exportable edges |
 |---|---:|---:|---:|---:|---:|
-| 20B | 5,906 | 7,586 | 4,796 | 1,110 | 4,796 |
-| 21B | 111 | 54 | 0 | 111 | 0 |
+| 20B | 5,906 | 5,906 | 4,780 | 1,126 | 4,780 |
+| 21B | 8,171 | 8,120 | 0 | 8,171 | 0 |
 | 22B | 5,733 | 5,906 | 5,047 | 723 | 5,010 |
-| 23B | 1,075 | 1,467 | 289 | 1,072 | 3 |
+| 23B | 1,230 | 1,630 | 289 | 1,229 | 1 |
 | 24B | 151 | 200 | 31 | 151 | 0 |
 
 Boundary counts are evidence-register boundary records; they are not
@@ -24,9 +24,9 @@ covers multiple edges or when an edge has non-boundary context.
 
 The following entities occur as targets in 21B and as source TF entities in 22B:
 
-`CSL`, `HES1`, `HEY1`, `RBPJ`, `SMAD1`, `SMAD2`, `SMAD3`, `SMAD4`, `SMAD5`, `SMAD8`, `STAT1`, `STAT2`, `STAT3`, `STAT5B`
+`BETA-CATENIN`, `CREB1`, `CSL`, `CTNNB1`, `FOXH1`, `FOXO1`, `GLI1`, `HES1`, `HEY1`, `HIF1A`, `IRF3`, `IRF7`, `JUN`, `LEF1`, `NFATC1`, `NFATC4`, `NFKB2`, `NRF2`, `P65`, `RBPJ`, `RELA`, `RELB`, `SMAD1`, `SMAD2`, `SMAD3`, `SMAD4`, `SMAD5`, `SMAD8`, `STAT1`, `STAT2`, `STAT3`, `STAT4`, `STAT5`, `STAT5B`, `STAT6`
 
-The strict token overlap contains **14** labels. An alias/composite-aware audit expands this to **19** candidate groups:
+The strict token overlap contains **35** labels. An alias/composite-aware audit expands this to **19** candidate groups:
 
 | Candidate group | 21B relay edges | 22B TF/program edges | Normalization basis | Status |
 |---|---:|---:|---|---|
@@ -35,18 +35,18 @@ The strict token overlap contains **14** labels. An alias/composite-aware audit 
 | `HES1` | 1/1 | 3/3 | exact token overlap | candidate_convergence_only |
 | `HES5` | 1/1 | 3/3 | exact token overlap | candidate_convergence_only |
 | `HEY1` | 1/1 | 2/2 | exact token overlap | candidate_convergence_only |
-| `NFKB2` | 1/1 | 1/1 | explicit token in NFKB2-p100/p52 and NFKB2;RELB labels | candidate_convergence_only |
-| `RELA / NF-kB p65` | 2/2 | 34/42 | curated alias group with bounded RELA matching | candidate_convergence_only |
-| `SMAD1` | 2/2 | 21/31 | exact token plus composite-branch match | candidate_convergence_only |
-| `SMAD2` | 1/1 | 12/14 | exact token overlap | candidate_convergence_only |
-| `SMAD3` | 1/1 | 13/15 | exact token overlap | candidate_convergence_only |
-| `SMAD4` | 2/2 | 10/12 | exact token overlap | candidate_convergence_only |
+| `NFKB2` | 2/2 | 1/1 | explicit token in NFKB2-p100/p52 and NFKB2;RELB labels | candidate_convergence_only |
+| `RELA / NF-kB p65` | 7/7 | 34/42 | curated alias group with bounded RELA matching | candidate_convergence_only |
+| `SMAD1` | 4/4 | 21/31 | exact token plus composite-branch match | candidate_convergence_only |
+| `SMAD2` | 8/8 | 12/14 | exact token overlap | candidate_convergence_only |
+| `SMAD3` | 8/8 | 13/15 | exact token overlap | candidate_convergence_only |
+| `SMAD4` | 5/5 | 10/12 | exact token overlap | candidate_convergence_only |
 | `SMAD5` | 2/2 | 14/22 | exact token plus composite-branch match | candidate_convergence_only |
 | `SMAD8` | 2/2 | 11/18 | exact token plus composite-branch match | candidate_convergence_only |
 | `SMAD9` | 2/2 | 4/5 | explicit compact composite-branch match | candidate_convergence_only |
-| `STAT1` | 2/2 | 8/14 | exact token overlap | candidate_convergence_only |
-| `STAT2` | 1/1 | 2/3 | exact token overlap | candidate_convergence_only |
-| `STAT3` | 6/6 | 21/25 | exact token overlap | candidate_convergence_only |
+| `STAT1` | 20/20 | 8/14 | exact token overlap | candidate_convergence_only |
+| `STAT2` | 2/2 | 2/3 | exact token overlap | candidate_convergence_only |
+| `STAT3` | 38/38 | 21/25 | exact token overlap | candidate_convergence_only |
 | `STAT5B` | 1/1 | 4/5 | exact token overlap | candidate_convergence_only |
 | `YAP` | 1/1 | 1/2 | exact token overlap | candidate_convergence_only |
 
