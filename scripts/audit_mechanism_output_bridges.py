@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Find review-record candidates for target-gene-to-secreted-product bridges.
+"""Find review-record candidates for gene/program-to-secreted-product bridges.
 
 This is a discovery/audit tool, not a promotion tool. It scans Module 22A
-review records for target-gene entries whose assay text explicitly mentions a
-measured or transferred extracellular output. It preserves the local review
-record and its cited locators so a reviewer can validate the primary paper.
-No causal graph edge is written by this script.
+review records for target-gene, program, or phenotype entries whose assay text
+places a named candidate product near explicit secretion/release language. It
+preserves the local review record and its cited locators so a reviewer can
+validate the primary paper. No causal graph edge is written by this script.
 """
 
 from __future__ import annotations
@@ -42,7 +42,7 @@ OUTPUT_FIELDS = [
     "review_handoff_ids",
     "review_status",
     "tf_entity",
-    "target_gene_label",
+    "target_or_program_label",
     "target_class",
     "relation_type",
     "evidence_layer",
@@ -67,6 +67,11 @@ OUTPUT_PATTERNS = (
     ("target_proximal_release_language", re.compile(r"release|released", re.I)),
     ("target_proximal_extracellular_language", re.compile(r"extracellular", re.I)),
 )
+KNOWN_PRODUCT_TOKENS = {
+    "bdnf", "ccl2", "ccl3", "ccl5", "cxcl10", "cxcl12", "il1a", "il1b",
+    "il6", "il8", "il10", "il12", "il15", "lif", "mif", "ngf", "shh",
+    "tgfb", "tnf", "vegfa",
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -113,11 +118,12 @@ def normalized_label(value: str) -> str:
 
 def target_tokens(target: str) -> list[str]:
     """Extract likely gene symbols without treating prose as a gene."""
-    return [
-        token
-        for token in re.findall(r"[A-Za-z][A-Za-z0-9-]{1,31}", target)
-        if any(character.isdigit() for character in token) or token.casefold() in {"il6", "il10", "il1b", "ngf"}
-    ]
+    tokens: list[str] = []
+    for token in re.findall(r"[A-Za-z][A-Za-z0-9-]{1,31}", target):
+        compact = token.casefold().replace("-", "")
+        if compact in KNOWN_PRODUCT_TOKENS:
+            tokens.append(token)
+    return tokens
 
 
 def output_matches(target: str, assay: str) -> tuple[str, str]:
@@ -144,6 +150,14 @@ def output_matches(target: str, assay: str) -> tuple[str, str]:
         for name, match in output_matches
         if any(abs(match.start() - target_match.start()) <= 40 for target_match in target_matches)
     ]
+    # ``secreted X binding`` describes an input ligand, not target-product
+    # output. Keep it out of this queue even when X is named in the program.
+    if re.search(r"(?:secretion|secreted|release|released)\b[^.;]{0,40}\b(binding|competition|association)", text, re.I):
+        matches = [
+            (name, phrase)
+            for name, phrase in matches
+            if not re.search(r"(?:secretion|secreted|release|released)\b[^.;]{0,40}\b(binding|competition|association)", text, re.I)
+        ]
     if not matches:
         return "", ""
     # The most specific terms make the queue easier to triage while preserving
@@ -226,8 +240,7 @@ def resolve_forms(
 
 def audit(review_root: Path, graph_bundle: Path | None) -> list[dict[str, object]]:
     forms_by_label, transitions_by_source = load_typed_forms(graph_bundle)
-    rows: list[dict[str, object]] = []
-    seen: set[tuple[str, str, str]] = set()
+    candidate_by_key: dict[tuple[str, str, str, str, str], dict[str, object]] = {}
     review_paths = sorted(review_root.glob("module22a_batch*_review.tsv"))
     for review_path in review_paths:
         fields, records = read_tsv(review_path)
@@ -235,8 +248,6 @@ def audit(review_root: Path, graph_bundle: Path | None) -> list[dict[str, object
             continue
         relative_path = str(review_path.relative_to(ROOT)) if review_path.is_relative_to(ROOT) else str(review_path)
         for record in records:
-            if record.get("target_class", "").casefold() != "target_gene":
-                continue
             if record.get("review_status", "").casefold() in {"no_evidence_boundary", "unresolved"}:
                 continue
             target = record.get("target_or_program", "").strip()
@@ -245,40 +256,51 @@ def audit(review_root: Path, graph_bundle: Path | None) -> list[dict[str, object
             output_class, output_language = output_matches(target, record.get("assay_or_perturbation", ""))
             if not output_class:
                 continue
-            key = (record.get("module22a_evidence_id", ""), normalized_label(target), output_class)
-            if key in seen:
-                continue
-            seen.add(key)
+            key = (
+                normalized_label(target),
+                record.get("tf_entity", ""),
+                output_class,
+                record.get("assay_or_perturbation", ""),
+                record.get("stable_citations", ""),
+            )
             gene_form, product_form, transition_id, traversal_status = resolve_forms(
                 target, forms_by_label, transitions_by_source
             )
-            rows.append(
-                {
-                    "candidate_id": f"OUT:{len(rows) + 1:05d}",
-                    "review_record_path": relative_path,
-                    "review_evidence_id": record.get("module22a_evidence_id", ""),
-                    "review_handoff_ids": record.get("module22a_handoff_ids", ""),
-                    "review_status": record.get("review_status", ""),
-                    "tf_entity": record.get("tf_entity", ""),
-                    "target_gene_label": target,
-                    "target_class": record.get("target_class", ""),
-                    "relation_type": record.get("relation_type", ""),
-                    "evidence_layer": record.get("evidence_layer", ""),
-                    "stable_citations": record.get("stable_citations", ""),
-                    "species": record.get("species", ""),
-                    "cell_type_model": record.get("cell_type_model", ""),
-                    "assay_or_perturbation": record.get("assay_or_perturbation", ""),
-                    "output_evidence_class": output_class,
-                    "output_language": output_language,
-                    "gene_form_id": gene_form,
-                    "product_form_id": product_form,
-                    "transition_id": transition_id,
-                    "traversal_status": traversal_status,
-                    "causal_status": "not_asserted",
-                    "candidate_status": "review_required",
-                    "context_limitations": record.get("context_limitations", ""),
-                }
-            )
+            candidate = {
+                "candidate_id": "",
+                "review_record_path": relative_path,
+                "review_evidence_id": record.get("module22a_evidence_id", ""),
+                "review_handoff_ids": record.get("module22a_handoff_ids", ""),
+                "review_status": record.get("review_status", ""),
+                "tf_entity": record.get("tf_entity", ""),
+                "target_or_program_label": target,
+                "target_class": record.get("target_class", ""),
+                "relation_type": record.get("relation_type", ""),
+                "evidence_layer": record.get("evidence_layer", ""),
+                "stable_citations": record.get("stable_citations", ""),
+                "species": record.get("species", ""),
+                "cell_type_model": record.get("cell_type_model", ""),
+                "assay_or_perturbation": record.get("assay_or_perturbation", ""),
+                "output_evidence_class": output_class,
+                "output_language": output_language,
+                "gene_form_id": gene_form,
+                "product_form_id": product_form,
+                "transition_id": transition_id,
+                "traversal_status": traversal_status,
+                "causal_status": "not_asserted",
+                "candidate_status": "review_required",
+                "context_limitations": record.get("context_limitations", ""),
+            }
+            existing = candidate_by_key.get(key)
+            if existing is None:
+                candidate_by_key[key] = candidate
+            else:
+                for field in ("review_record_path", "review_evidence_id", "review_handoff_ids"):
+                    values = [existing[field], candidate[field]]
+                    existing[field] = ";".join(dict.fromkeys(value for value in values if value))
+    rows = list(candidate_by_key.values())
+    for index, row in enumerate(rows, start=1):
+        row["candidate_id"] = f"OUT:{index:05d}"
     return rows
 
 
