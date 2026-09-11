@@ -18,6 +18,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+EDGE_REGISTER_MODULES = ("21b", "23b", "24b")
 REVIEW_FIELDS = [
     "module22a_evidence_id",
     "module22a_handoff_ids",
@@ -146,6 +147,16 @@ def write_tsv(path: Path, rows: list[dict[str, object]]) -> None:
         writer = csv.DictWriter(handle, fieldnames=OUTPUT_FIELDS, delimiter="\t", lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
+
+
+def public_stable_locators(value: str) -> str:
+    """Keep public citations while excluding local repository paths."""
+    stable = []
+    for token in value.split(";"):
+        token = token.strip()
+        if token.startswith(("PMID:", "PMCID:", "DOI:", "http://", "https://")):
+            stable.append(token)
+    return "; ".join(dict.fromkeys(stable))
 
 
 def normalized_label(value: str) -> str:
@@ -556,9 +567,128 @@ def audit(review_root: Path, graph_bundle: Path | None) -> list[dict[str, object
     return rows
 
 
+def audit_edge_register_outputs(
+    source_root: Path,
+    graph_bundle: Path | None,
+) -> list[dict[str, object]]:
+    """Find named secreted/released products in validated downstream edges.
+
+    These are compressed output bridges: the edge register already records a
+    source mechanism and its downstream product output, but the output label
+    does not by itself prove a gene-to-protein transition. The resulting rows
+    therefore remain review-required and non-causal.
+    """
+    forms_by_label, _ = load_typed_forms(graph_bundle)
+    rows: list[dict[str, object]] = []
+    for module in EDGE_REGISTER_MODULES:
+        module_dir = source_root / f"module{module}"
+        edge_path = module_dir / f"module{module}_edge_register.tsv"
+        evidence_path = module_dir / f"module{module}_evidence_register.tsv"
+        if not edge_path.exists() or not evidence_path.exists():
+            continue
+        _, edges = read_tsv(edge_path)
+        _, evidence = read_tsv(evidence_path)
+        evidence_by_edge: dict[str, list[dict[str, str]]] = {}
+        for record in evidence:
+            for edge_id in record.get("b_edge_ids", "").split(";"):
+                if edge_id.strip():
+                    evidence_by_edge.setdefault(edge_id.strip(), []).append(record)
+        for edge in edges:
+            if edge.get("exportable") != "true":
+                continue
+            target = edge.get("target_entity", "").strip()
+            output_class, output_language, output_products = output_matches(target, target)
+            if not output_class or not output_products:
+                continue
+            linked_evidence = evidence_by_edge.get(edge.get("b_edge_id", ""), [])
+            stable_citations = "; ".join(
+                dict.fromkeys(
+                    citation
+                    for record in linked_evidence
+                    for citation in [public_stable_locators(record.get("source_locator", ""))]
+                    if citation
+                )
+            )
+            if not stable_citations:
+                continue
+            product_form_ids = ";".join(
+                dict.fromkeys(
+                    form["entity_form_id"]
+                    for product_label in output_products
+                    for form in forms_by_label.get(normalized_label(product_label), [])
+                    if form["form_type"] == "protein_ligand"
+                )
+            )
+            species = edge.get("species_context", "")
+            cell_type_model = edge.get("cell_type_context", "")
+            context_limitations = "; ".join(
+                dict.fromkeys(
+                    value
+                    for value in (
+                        edge.get("context_scope", ""),
+                        edge.get("compartment_context", ""),
+                        edge.get("injury_context", ""),
+                        *(record.get("limitations", "") for record in linked_evidence),
+                    )
+                    if value
+                )
+            )
+            evidence_summary = "; ".join(
+                dict.fromkeys(
+                    record.get("evidence_summary", "")
+                    for record in linked_evidence
+                    if record.get("evidence_summary", "")
+                )
+            )
+            rows.append(
+                {
+                    "candidate_id": "",
+                    "review_record_path": str(edge_path.relative_to(ROOT)),
+                    "review_source_namespace": f"module{module}_edge_register",
+                    "review_evidence_id": ";".join(
+                        record.get("b_evidence_id", "")
+                        for record in linked_evidence
+                        if record.get("b_evidence_id", "")
+                    ),
+                    "source_edge_ids": edge.get("b_edge_id", ""),
+                    "review_handoff_ids": ";".join(
+                        record.get("source_a_evidence_id", "")
+                        for record in linked_evidence
+                        if record.get("source_a_evidence_id", "")
+                    ),
+                    "review_status": "edge_register_output_candidate",
+                    "tf_entity": "",
+                    "target_or_program_label": target,
+                    "target_class": "edge_register_output",
+                    "relation_type": edge.get("relation_type", ""),
+                    "evidence_layer": edge.get("evidence_layer", ""),
+                    "stable_citations": stable_citations,
+                    "species": species,
+                    "cell_type_model": cell_type_model,
+                    "assay_or_perturbation": evidence_summary,
+                    "output_evidence_class": output_class,
+                    "output_language": output_language,
+                    "output_product_labels": ";".join(output_products),
+                    "gene_form_id": "",
+                    "product_form_id": product_form_ids.split(";", 1)[0] if product_form_ids else "",
+                    "product_form_ids": product_form_ids,
+                    "transition_id": "",
+                    "transition_ids": "",
+                    "traversal_status": "requires_output_evidence",
+                    "causal_status": "not_asserted",
+                    "candidate_status": "review_required",
+                    "context_limitations": context_limitations,
+                }
+            )
+    for index, row in enumerate(rows, start=1):
+        row["candidate_id"] = f"EDGEOUT:{index:05d}"
+    return rows
+
+
 def main() -> None:
     args = parse_args()
-    rows = audit(args.review_root.resolve(), args.graph_bundle.resolve() if args.graph_bundle else None)
+    graph_bundle = args.graph_bundle.resolve() if args.graph_bundle else None
+    rows = audit(args.review_root.resolve(), graph_bundle)
     write_tsv(args.output.resolve(), rows)
     print(f"review_required_output_candidates={len(rows)}")
 
