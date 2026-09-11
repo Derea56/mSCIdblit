@@ -1013,6 +1013,8 @@ def main() -> None:
     from audit_mechanism_output_bridges import (
         audit as audit_output_bridges,
         audit_edge_register_outputs,
+        audit_validated_output_bridges,
+        VALIDATED_OUTPUT_FIELDS,
     )
 
     output_bridge_rows: list[dict[str, object]] = []
@@ -1039,8 +1041,19 @@ def main() -> None:
     )
     release["metadata"]["counts"]["output_bridge_candidates"] = len(output_bridge_rows)
     release["metadata"]["files"]["output_bridge_candidates"] = "mechanism_output_bridge_candidates.tsv"
+    validated_output_bridge_rows = audit_validated_output_bridges(
+        ROOT / "work" / "module_b_consolidation", output_dir
+    )
+    write_tsv(
+        output_dir / "mechanism_output_bridges_validated.tsv",
+        VALIDATED_OUTPUT_FIELDS,
+        validated_output_bridge_rows,
+    )
+    release["metadata"]["counts"]["output_bridges_validated"] = len(validated_output_bridge_rows)
+    release["metadata"]["files"]["output_bridges_validated"] = "mechanism_output_bridges_validated.tsv"
     release["metadata"]["graph_policy"]["output_bridge_candidates_are_review_only"] = True
     release["metadata"]["graph_policy"]["output_bridge_candidates_are_not_graph_edges"] = True
+    release["metadata"]["graph_policy"]["validated_output_bridges_are_not_graph_edges"] = True
     (output_dir / "bundle_metadata.json").write_text(json.dumps(release["metadata"], indent=2) + "\n")
     print(json.dumps(release["metadata"]["counts"], sort_keys=True))
 

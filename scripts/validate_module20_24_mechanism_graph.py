@@ -102,6 +102,11 @@ def validate(bundle_dir: Path) -> dict[str, object]:
     output_bridge_candidates: list[dict[str, str]] = []
     if output_bridge_path.exists():
         output_bridge_fields, output_bridge_candidates = read_tsv(output_bridge_path)
+    validated_output_path = bundle_dir / "mechanism_output_bridges_validated.tsv"
+    validated_output_fields: list[str] = []
+    validated_output_bridges: list[dict[str, str]] = []
+    if validated_output_path.exists():
+        validated_output_fields, validated_output_bridges = read_tsv(validated_output_path)
     metadata = json.loads((bundle_dir / "bundle_metadata.json").read_text())
 
     expected_fields = {
@@ -149,6 +154,14 @@ def validate(bundle_dir: Path) -> dict[str, object]:
             "output_evidence_class", "output_language", "output_product_labels", "gene_form_id",
             "product_form_id", "product_form_ids", "transition_id", "transition_ids",
             "traversal_status", "causal_status", "candidate_status", "context_limitations",
+        ],
+        "validated_output_bridges": [
+            "bridge_id", "source_edge_ids", "review_evidence_ids", "discovery_ids",
+            "source_namespace", "source_label", "output_label", "output_product_labels",
+            "relation_type", "evidence_layer", "review_trace", "primary_citations",
+            "species", "cell_type_model", "assay_or_perturbation", "output_observation",
+            "product_form_ids", "transition_ids", "validation_status", "causal_status",
+            "traversal_status", "context_limitations",
         ],
     }
     for label, actual, expected in (
@@ -319,6 +332,75 @@ def validate(bundle_dir: Path) -> dict[str, object]:
                 f"{missing_candidate_transitions[:5]}"
             )
 
+    if validated_output_path.exists():
+        if validated_output_fields != expected_fields["validated_output_bridges"]:
+            errors.append(
+                "validated_output_bridges header mismatch: "
+                f"expected {expected_fields['validated_output_bridges']}, got {validated_output_fields}"
+            )
+        bridge_ids = [row["bridge_id"] for row in validated_output_bridges]
+        if duplicates(bridge_ids):
+            errors.append(f"duplicate validated output bridge IDs: {duplicates(bridge_ids)[:5]}")
+        invalid_validated_rows = sorted(
+            {
+                (row.get("validation_status", ""), row.get("causal_status", ""), row.get("traversal_status", ""))
+                for row in validated_output_bridges
+                if row.get("validation_status") != "validated_primary_output"
+                or row.get("causal_status") != "bounded_output_only"
+                or row.get("traversal_status") != "conditional_product_continuation"
+            }
+        )
+        if invalid_validated_rows:
+            errors.append(f"validated output bridges are not gated: {invalid_validated_rows[:5]}")
+        missing_validated_fields = sorted(
+            {
+                field
+                for row in validated_output_bridges
+                for field in (
+                    "source_edge_ids", "review_evidence_ids", "source_namespace", "output_label",
+                    "primary_citations", "output_observation", "context_limitations",
+                )
+                if not row.get(field, "").strip()
+            }
+        )
+        if missing_validated_fields:
+            errors.append(f"validated output bridges missing audit fields: {missing_validated_fields}")
+        missing_validated_edges = sorted(
+            {
+                edge_id
+                for row in validated_output_bridges
+                for edge_id in row["source_edge_ids"].split(";")
+                if edge_id and edge_id not in edge_id_set
+            }
+        )
+        if missing_validated_edges:
+            errors.append(f"validated output bridges reference missing edges: {missing_validated_edges[:5]}")
+        known_form_ids = {row["entity_form_id"] for row in entity_forms}
+        missing_validated_forms = sorted(
+            {
+                form_id
+                for row in validated_output_bridges
+                for form_id in row["product_form_ids"].split(";")
+                if form_id and form_id not in known_form_ids
+            }
+        )
+        if missing_validated_forms:
+            errors.append(f"validated output bridges reference missing forms: {missing_validated_forms[:5]}")
+        known_transition_ids = {row["transition_id"] for row in entity_transitions}
+        missing_validated_transitions = sorted(
+            {
+                transition_id
+                for row in validated_output_bridges
+                for transition_id in row["transition_ids"].split(";")
+                if transition_id and transition_id not in known_transition_ids
+            }
+        )
+        if missing_validated_transitions:
+            errors.append(
+                "validated output bridges reference missing transitions: "
+                f"{missing_validated_transitions[:5]}"
+            )
+
     missing_role_nodes = sorted({row["node_id"] for row in node_roles if row["node_id"] not in node_id_set})
     if missing_role_nodes:
         errors.append(f"node roles reference missing nodes: {missing_role_nodes[:5]}")
@@ -426,6 +508,8 @@ def validate(bundle_dir: Path) -> dict[str, object]:
         actual_counts["entity_transitions"] = len(entity_transitions)
     if output_bridge_path.exists():
         actual_counts["output_bridge_candidates"] = len(output_bridge_candidates)
+    if validated_output_path.exists():
+        actual_counts["output_bridges_validated"] = len(validated_output_bridges)
     for key, actual in actual_counts.items():
         if metadata_counts.get(key) != actual:
             errors.append(f"metadata count mismatch for {key}: metadata={metadata_counts.get(key)} actual={actual}")
@@ -460,6 +544,9 @@ def validate(bundle_dir: Path) -> dict[str, object]:
             "metadata_counts_match": not any("metadata count mismatch" in error for error in errors),
             "output_bridge_candidates_are_gated": not any(
                 "output bridge candidates are not gated" in error for error in errors
+            ),
+            "validated_output_bridges_are_gated": not any(
+                "validated output bridges are not gated" in error for error in errors
             ),
         },
     }
