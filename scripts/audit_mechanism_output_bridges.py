@@ -66,6 +66,14 @@ OUTPUT_FIELDS = [
     "candidate_status",
     "context_limitations",
 ]
+VALIDATED_OUTPUT_FIELDS = [
+    "bridge_id", "source_edge_ids", "review_evidence_ids", "discovery_ids",
+    "source_namespace", "source_label", "output_label", "output_product_labels",
+    "relation_type", "evidence_layer", "review_trace", "primary_citations",
+    "species", "cell_type_model", "assay_or_perturbation", "output_observation",
+    "product_form_ids", "transition_ids", "validation_status", "causal_status",
+    "traversal_status", "context_limitations",
+]
 OUTPUT_PATTERNS = (
     ("target_proximal_conditioned_medium_language", re.compile(r"conditioned\s+medium", re.I)),
     ("target_proximal_supernatant_language", re.compile(r"supernatant", re.I)),
@@ -125,7 +133,7 @@ PRODUCT_PATTERNS = (
     ("Testosterone", re.compile(r"\btestosterone\b", re.I)),
     ("Hormone", re.compile(r"\bhormone(?:s)?\b", re.I)),
     ("Adenosine", re.compile(r"\badenosine\b", re.I)),
-    ("NitricOxide", re.compile(r"\bnitric\s+oxide\b|\bNO\b", re.I)),
+    ("NitricOxide", re.compile(r"\bnitric[\s-]+oxide\b|\bNO\b", re.I)),
     ("ReactiveOxygenSpecies", re.compile(r"\breactive\s+oxygen\s+species\b|\bROS\b", re.I)),
     ("ProNgf", re.compile(r"\bpro-?NGF\b", re.I)),
 )
@@ -164,6 +172,14 @@ def write_tsv(path: Path, rows: list[dict[str, object]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=OUTPUT_FIELDS, delimiter="\t", lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def write_rows(path: Path, fields: list[str], rows: list[dict[str, object]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fields, delimiter="\t", lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -317,6 +333,11 @@ def output_matches(target: str, assay: str) -> tuple[str, str, list[str]]:
     selected = min(matches, key=lambda item: priority[item[0]])[0]
     language = "; ".join(f"{name}:{phrase}" for name, phrase in matches)
     products_by_key: dict[str, str] = {}
+    product_aliases = {
+        "ros": "ReactiveOxygenSpecies",
+        "reactiveoxygenspecies": "ReactiveOxygenSpecies",
+        "nitricoxide": "NitricOxide",
+    }
     for label, product_match in product_matches:
         if any(
             abs(product_match.start() - output_match.start()) <= 60
@@ -345,7 +366,8 @@ def output_matches(target: str, assay: str) -> tuple[str, str, list[str]]:
         ):
             # Prefer the canonical spelling from PRODUCT_PATTERNS over the
             # capitalization used in a free-text target label.
-            products_by_key.setdefault(normalized_label(label), label)
+            canonical_label = product_aliases.get(normalized_label(label), label)
+            products_by_key.setdefault(normalized_label(canonical_label), canonical_label)
     products = sorted(products_by_key.values())
     return selected, language, products
 
@@ -741,6 +763,106 @@ def audit_edge_register_outputs(
             )
     for index, row in enumerate(rows, start=1):
         row["candidate_id"] = f"EDGEOUT:{index:05d}"
+    return rows
+
+
+def _extract_trace(value: str, prefix: str) -> str:
+    match = re.search(rf"(?:^|;\s*){re.escape(prefix)}=(.*?)(?=;\s*(?:review|primary|no SCI|discovery_id)=|$)", value)
+    return match.group(1).strip() if match else ""
+
+
+def audit_validated_output_bridges(
+    source_root: Path,
+    graph_bundle: Path | None,
+) -> list[dict[str, object]]:
+    """Export registered primary-validated output observations as gated bridges.
+
+    This is deliberately separate from ``mechanism_edges.tsv``. A registered
+    output observation can support a conditional continuation from an upstream
+    mechanism to a named extracellular product, but it does not prove the
+    gene-to-product, secretion, transport, or receiver-cell steps needed for a
+    traversable intercellular path.
+    """
+    candidates = audit_edge_register_outputs(source_root, graph_bundle)
+    evidence_by_id: dict[str, dict[str, str]] = {}
+    edge_by_id: dict[str, dict[str, str]] = {}
+    for module in EDGE_REGISTER_MODULES:
+        edge_path = source_root / f"module{module}" / f"module{module}_edge_register.tsv"
+        evidence_path = source_root / f"module{module}" / f"module{module}_evidence_register.tsv"
+        if not evidence_path.exists() or not edge_path.exists():
+            continue
+        _, edge_rows = read_tsv(edge_path)
+        edge_by_id.update({row.get("b_edge_id", ""): row for row in edge_rows})
+        _, evidence_rows = read_tsv(evidence_path)
+        evidence_by_id.update({row.get("b_evidence_id", ""): row for row in evidence_rows})
+
+    rows: list[dict[str, object]] = []
+    for candidate in candidates:
+        evidence_ids = [value for value in candidate["review_evidence_id"].split(";") if value]
+        linked = [evidence_by_id[evidence_id] for evidence_id in evidence_ids if evidence_id in evidence_by_id]
+        primary_linked = [
+            row for row in linked
+            if row.get("exportable") == "true"
+            and (
+                "primary" in row.get("support_kind", "").casefold()
+                or "primary" in row.get("source_kind", "").casefold()
+                or any(locator in row.get("source_locator", "") for locator in ("PMID:", "PMCID:", "DOI:"))
+            )
+        ]
+        if not primary_linked:
+            continue
+        review_traces: list[str] = []
+        for row in primary_linked:
+            extracted_review = _extract_trace(row.get("consolidation_note", ""), "review")
+            if extracted_review:
+                review_traces.append(extracted_review)
+            elif "review" in row.get("source_kind", "").casefold():
+                review_traces.append(row.get("citation_note", ""))
+        review_trace = "; ".join(dict.fromkeys(trace for trace in review_traces if trace))
+        discovery_ids = ";".join(dict.fromkeys(
+            match.group(1)
+            for row in primary_linked
+            for match in [re.search(r"discovery_id=([^;\s]+)", row.get("consolidation_note", ""))]
+            if match
+        ))
+        output_observation = "; ".join(dict.fromkeys(
+            row.get("evidence_summary", "") for row in primary_linked if row.get("evidence_summary", "")
+        ))
+        limitations = "; ".join(dict.fromkeys(
+            value for value in (
+                candidate.get("context_limitations", ""),
+                *(row.get("limitations", "") for row in primary_linked),
+            ) if value
+        ))
+        rows.append(
+            {
+                "bridge_id": "",
+                "source_edge_ids": candidate["source_edge_ids"],
+                "review_evidence_ids": candidate["review_evidence_id"],
+                "discovery_ids": discovery_ids,
+                "source_namespace": candidate["review_source_namespace"],
+                "source_label": edge_by_id.get(candidate["source_edge_ids"].split(";", 1)[0], {}).get("source_entity", ""),
+                "output_label": candidate["target_or_program_label"],
+                "output_product_labels": candidate["output_product_labels"],
+                "relation_type": candidate["relation_type"],
+                "evidence_layer": candidate["evidence_layer"],
+                "review_trace": review_trace,
+                "primary_citations": candidate["stable_citations"],
+                "species": candidate["species"],
+                "cell_type_model": candidate["cell_type_model"],
+                "assay_or_perturbation": candidate["assay_or_perturbation"],
+                "output_observation": output_observation,
+                "product_form_ids": candidate["product_form_ids"],
+                "transition_ids": candidate["transition_ids"],
+                "validation_status": "validated_primary_output",
+                "causal_status": "bounded_output_only",
+                "traversal_status": "conditional_product_continuation",
+                "context_limitations": limitations,
+            }
+        )
+    rows.sort(key=lambda row: (str(row["source_namespace"]), str(row["source_edge_ids"]), str(row["output_label"])))
+    for index, row in enumerate(rows, start=1):
+        row["bridge_id"] = f"BRIDGE:{index:05d}"
     return rows
 
 
