@@ -104,6 +104,10 @@ OUTPUT_PRODUCT_FORM_ALIASES = {
     "hmox1ho1": "hmox1/ho1",
     "uchl1": "uchl1/uchl1",
     "gja1": "gja1/cx43",
+    "sdc1syndecan1": "sdc1 ectodomain; itga2:itgb1 context",
+    "mmp9": "mmp9/matrix metalloproteinase-9",
+    "acan": "acan/aggrecan",
+    "ncan": "ncan/neurocan",
 }
 # These outputs can be real extracellular mediators, but they are not
 # translated protein products.  Do not use their ligand-role form records as
