@@ -422,6 +422,56 @@ CURATED_OUTPUT_PRODUCT_FORMS = (
         "notes": "Curated output-protein form for primary-backed measured IL-18 release; preserve precursor processing/inflammasome context and do not assert transcription or receptor activation.",
     },
     {
+        "node_id": "NODE03586",
+        "canonical_name": "Hgf",
+        "notes": "Curated output-protein form for primary-backed measured microglial HGF secretion; this form does not assert the upstream TGF-β-to-HGF transcriptional step or MET activation.",
+    },
+    {
+        "node_id": "NODE02652",
+        "canonical_name": "Fgf10",
+        "notes": "Curated output-protein form for primary-backed release of pre-existing matrix-bound FGF10; preserve perlecan-heparan-sulfate presentation and heparanase dependence, without asserting de novo synthesis or receptor activation.",
+    },
+    {
+        "node_id": "NODE07871",
+        "canonical_name": "Tgfb3",
+        "notes": "Curated output-protein form for primary-backed activation/release of latent TGFB3; preserve the LAP3-containing latent complex and alphaVbeta6 requirement, without asserting TGFB3 transcription or de novo secretion.",
+    },
+    {
+        "node_id": "NODE07330",
+        "canonical_name": "Shh",
+        "notes": "Curated output-protein form for primary-backed SHH release or receptor handoff; this form does not assert SHH processing, transport, or receptor activation.",
+    },
+    {
+        "node_id": "NODE00089",
+        "canonical_name": "ACTH",
+        "notes": "Curated output-protein/peptide form for primary-backed ACTH release; this form does not assert POMC processing details or receptor activation.",
+    },
+    {
+        "node_id": "NODE06589",
+        "canonical_name": "Prolactin",
+        "notes": "Curated output-protein form for primary-backed prolactin secretion; this form does not assert transcriptional control or prolactin-receptor activation.",
+    },
+    {
+        "node_id": "NODE04102",
+        "canonical_name": "Insulin",
+        "notes": "Curated output-protein form for primary-backed insulin secretion; preserve precursor processing and glucose-dependent secretory context, without asserting receptor activation.",
+    },
+    {
+        "node_id": "NODE01179",
+        "canonical_name": "CCN3/NOV",
+        "notes": "Curated output-protein form for primary-backed CCN3/NOV protein in Treg-conditioned medium and depletion/rescue assays; this form does not assert a receptor identity or universal secretion mechanism.",
+    },
+    {
+        "node_id": "NODE04561",
+        "canonical_name": "KPI-containing secreted APP/APPs770",
+        "notes": "Curated output-protein form for primary-backed secreted KPI-containing APPs770 uptake/clearance; preserve the APP isoform and LRP1/RAP-sensitive endocytic context, without asserting kinase signaling.",
+    },
+    {
+        "node_id": "NODE06675",
+        "canonical_name": "Ptn",
+        "notes": "Curated output-protein form for primary-backed pericyte PTN protein abundance and rescue measurements; this form does not assert a secretion mechanism or identify the neuronal receptor.",
+    },
+    {
         "node_id": "NODE06184",
         "canonical_name": "PCB/pyruvate carboxylase",
         "notes": "Curated output-protein form for primary-backed PCB/pyruvate-carboxylase mRNA and protein measurements; this form does not assert secretion or a new ligand role.",
