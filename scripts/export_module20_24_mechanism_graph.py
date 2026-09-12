@@ -272,6 +272,11 @@ CURATED_OUTPUT_PRODUCT_FORMS = (
         "notes": "Curated output-protein form for primary-backed lysosomal cathepsin-B release after MLKL-associated permeabilization; this form does not assert Ctsb transcription or de novo protein production.",
     },
     {
+        "node_id": "NODE01950",
+        "canonical_name": "CYCS/cytochrome c",
+        "notes": "Curated output-protein form for primary-backed mitochondrial intermembrane-space cytochrome-c release downstream of BAX/BAK pore formation; this form does not assert secretion or receptor activity.",
+    },
+    {
         "node_id": "NODE06184",
         "canonical_name": "PCB/pyruvate carboxylase",
         "notes": "Curated output-protein form for primary-backed PCB/pyruvate-carboxylase mRNA and protein measurements; this form does not assert secretion or a new ligand role.",
