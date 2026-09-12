@@ -297,6 +297,36 @@ CURATED_OUTPUT_PRODUCT_FORMS = (
         "notes": "Curated output-protein form for primary-backed CSPG4/NG2 protein or immunohistochemical measurements in glial-scar and extracellular-matrix contexts; this form does not assert shedding, secretion, receptor activity, or a complete transcript-to-proteoglycan mechanism.",
     },
     {
+        "node_id": "NODE01956",
+        "canonical_name": "CYP19A1",
+        "notes": "Curated output-protein form for primary-backed CYP19A1/aromatase protein measurements; this form does not assert transcription-to-translation order, secretion, or steroid-product release.",
+    },
+    {
+        "node_id": "NODE03778",
+        "canonical_name": "ID3",
+        "notes": "Curated output-protein form for primary-backed ID3 protein measurements; this form does not assert secretion or a universal upstream transcriptional mechanism.",
+    },
+    {
+        "node_id": "NODE03404",
+        "canonical_name": "GRIA4",
+        "notes": "Curated output-protein form for primary-backed GRIA4/GluA4 protein measurements; this form does not assert secretion, receptor assembly, or synaptic trafficking.",
+    },
+    {
+        "node_id": "NODE01849",
+        "canonical_name": "CTGF",
+        "notes": "Curated output-protein form for primary-backed CTGF protein measurements; this form does not assert secretion, matrix incorporation, or a direct upstream transcription-factor binding event.",
+    },
+    {
+        "node_id": "NODE08294",
+        "canonical_name": "TXNIP",
+        "notes": "Curated output-protein form for primary-backed TXNIP protein measurements; this form does not assert extracellular release, inflammasome assembly, or a direct upstream receptor mechanism.",
+    },
+    {
+        "node_id": "NODE02810",
+        "canonical_name": "FOS",
+        "notes": "Curated output-protein form for primary-backed FOS/c-FOS protein or immunostaining measurements; this form does not assert secretion or a universal terminal-transcription mechanism.",
+    },
+    {
         "node_id": "NODE03873",
         "canonical_name": "IL-6",
         "notes": "Curated output-protein form for primary-backed measured IL-6 release in cytokine-output and cross-cell conditioned-medium contexts; this form does not assert IL6 transcription, secretion mechanism, or receptor activation.",

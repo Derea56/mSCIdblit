@@ -114,6 +114,7 @@ OUTPUT_PRODUCT_FORM_ALIASES = {
     "dll4dll4": "dll4deltalikeligand4",
     "neurocan": "ncan/neurocan",
     "ng2": "cspg4/ng2",
+    "cfos": "fos",
     "acsl4": "acsl4",
     "cyp11b2": "cyp11b2",
     "nlrp3": "nlrp3",
@@ -133,6 +134,19 @@ NON_PROTEIN_PRODUCT_KEYS = {
     "ros",
     "steroid",
     "testosterone",
+}
+# These newly curated intracellular products require the assay itself to
+# mention the named product near a protein-level or release measurement.  A
+# global release term in an output observation (for example, release of an
+# upstream intermediate) must not type the named target as protein.
+CURATED_OUTPUT_PRODUCT_PATTERNS = {
+    "cyp19a1": r"\bcyp19a1\b",
+    "id3": r"\bid3\b",
+    "gria4": r"\bgria4\b",
+    "ctgf": r"\bctgf\b",
+    "txnip": r"\btxnip\b",
+    "fos": r"\b(?:c[- ]?fos|fos)\b",
+    "cfos": r"\b(?:c[- ]?fos|fos)\b",
 }
 PRODUCT_PATTERNS = (
     ("Adp", re.compile(r"\bADP\b", re.I)),
@@ -458,17 +472,39 @@ def forms_for_product_label(
     return forms_by_label.get(alias_key, [])
 
 
+def curated_product_has_assay_evidence(
+    product_label: str,
+    assay_text: str,
+    signal_pattern: re.Pattern[str],
+) -> bool:
+    """Require named-product assay evidence for selected curated outputs."""
+    product_pattern = CURATED_OUTPUT_PRODUCT_PATTERNS.get(
+        normalized_label(product_label)
+    )
+    if not product_pattern:
+        return True
+    for product_match in re.finditer(product_pattern, assay_text, re.I):
+        window = assay_text[
+            max(0, product_match.start() - 100):
+            min(len(assay_text), product_match.end() + 100)
+        ]
+        if signal_pattern.search(window):
+            return True
+    return False
+
+
 def product_form_ids_for_labels(
     output_product_labels: str,
     forms_by_label: dict[str, list[dict[str, str]]],
     existing_form_ids: str = "",
 ) -> str:
-    """Resolve only unambiguous translated-product forms.
+    """Resolve only unambiguous ligand-role forms before evidence gating.
 
     Output bridges may name small molecules, matrix material, or generic
-    cytokine classes.  A unique typed ligand form is useful for continuation,
-    but it does not by itself justify a gene/product transition.  The
-    transition field is therefore intentionally not populated here.
+    cytokine classes.  Protein-output forms are attached later by
+    ``enrich_validated_product_forms`` only after explicit protein/release
+    evidence is detected; this prevents transcript-only rows from inheriting
+    a protein form merely because the output label matches.
     """
     form_ids = [value for value in existing_form_ids.split(";") if value]
     for label in output_product_labels.split(";"):
@@ -477,7 +513,7 @@ def product_form_ids_for_labels(
             continue
         forms = [
             form for form in forms_for_product_label(label, forms_by_label)
-            if form["form_type"] in {"protein_ligand", "protein_output"}
+            if form["form_type"] == "protein_ligand"
         ]
         unique_ids = list(dict.fromkeys(form["entity_form_id"] for form in forms))
         if len(unique_ids) == 1:
@@ -567,8 +603,11 @@ def enrich_validated_product_forms(
     )
     release_or_protein = re.compile(
         r"release|released|secretion|secreted|supernatant|protein\s+(?:output|measurement|level)|"
-        r"protein\s+assays?|ELISA|immunoblot|western\s+blot|immunofluorescence|"
-        r"immunohistochemistry|mature\s+IL[- ]?1\s*(?:beta|β|b)\s+output",
+        r"protein\s+(?:assays?|readouts?|expression|levels?)|"
+        r"(?:qPCR/|[,;]\s*|\band\s+)protein\b|"
+        r"\b(?:c[- ]?fos|fos)\s+protein\b|"
+        r"ELISA|immunoblot|western\s+blot|immunofluorescence|"
+        r"immunohistochemistry|immunostain(?:ing)?|mature\s+IL[- ]?1\s*(?:beta|β|b)\s+output",
         re.I,
     )
     evidence_text = " ".join(
@@ -597,7 +636,15 @@ def enrich_validated_product_forms(
                 if form["form_type"] == "protein_output"
             ]
             output_ids = list(dict.fromkeys(form["entity_form_id"] for form in output_forms))
-            if len(output_ids) == 1 and output_ids[0] not in form_ids:
+            if (
+                len(output_ids) == 1
+                and output_ids[0] not in form_ids
+                and curated_product_has_assay_evidence(
+                    product_label,
+                    row.get("assay_or_perturbation", ""),
+                    release_or_protein,
+                )
+            ):
                 form_ids.append(output_ids[0])
     if form_ids:
         row["product_form_ids"] = ";".join(dict.fromkeys(form_ids))
