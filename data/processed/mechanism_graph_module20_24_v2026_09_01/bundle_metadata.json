@@ -104,7 +104,7 @@
     "boundary_groups": 96,
     "nonexportable_edges": 9889,
     "output_bridge_candidates": 110,
-    "output_bridges_validated": 628
+    "output_bridges_validated": 629
   },
   "source_locator_status_counts": {
     "local_only_or_unresolved": 1124,
