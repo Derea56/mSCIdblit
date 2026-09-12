@@ -89,7 +89,7 @@ OUTPUT_PATTERNS = (
 KNOWN_PRODUCT_TOKENS = {
     "adp", "atp", "bdnf", "ccl2", "ccl3", "ccl5", "csf2", "cxcl10",
     "cxcl12", "fgf2", "gaba", "glutamate", "ifna", "ifnb1", "ifng",
-    "il1a", "il1b", "il6", "il8", "il10", "il12", "il15", "il22", "lif",
+    "il1a", "il1b", "il2", "il6", "il8", "il9", "il10", "il12", "il15", "il17a", "il22", "lif",
     "mif", "ngf", "pge2", "shh", "tgfb", "timp1", "tnf", "vegfa", "opg",
     "tslp", "nodal", "gdf1", "wnt5a", "adenosine", "nitricoxide", "ros",
     "reactiveoxygenspecies", "prongf",
@@ -146,11 +146,14 @@ PRODUCT_PATTERNS = (
     ("Ifng", re.compile(r"\bIFN-?gamma\b|\bIFNG\b", re.I)),
     ("Il1a", re.compile(r"\bIL-?1(?:alpha|α|a)\b", re.I)),
     ("Il1b", re.compile(r"\bIL-?1(?:beta|β|b)\b", re.I)),
+    ("Il2", re.compile(r"\bIL-?2\b|\bIL2\b", re.I)),
     ("Il6", re.compile(r"\bIL-?6\b|\bIL6\b", re.I)),
     ("Il8", re.compile(r"\bIL-?8\b|\bIL8\b|\bCXCL8\b", re.I)),
+    ("Il9", re.compile(r"\bIL-?9\b|\bIL9\b", re.I)),
     ("Il10", re.compile(r"\bIL-?10\b|\bIL10\b", re.I)),
     ("Il12", re.compile(r"\bIL-?12(?:p70)?\b|\bIL12\b", re.I)),
     ("Il15", re.compile(r"\bIL-?15\b|\bIL15\b", re.I)),
+    ("Il17a", re.compile(r"\bIL-?17A\b|\bIL17A\b", re.I)),
     ("Il22", re.compile(r"\bIL-?22\b|\bIL22\b", re.I)),
     ("Lif", re.compile(r"\bLIF\b", re.I)),
     ("Mif", re.compile(r"\bMIF\b", re.I)),
@@ -569,6 +572,22 @@ def enrich_validated_product_forms(
                 and re.search(product_pattern, row.get("output_product_labels", ""), re.I)
             ):
                 form_ids.append(output_form_id)
+        # An output bridge may have an exact curated product form without a
+        # ligand-role form on the same row (for example a measured FGF2 or
+        # BDNF release observation).  In that case, attach the output form
+        # only when the output token resolves to one and only one curated
+        # protein_output form.  This records the measured product identity;
+        # it does not infer a gene transition, secretion mechanism, or
+        # receptor activity.
+        for product_label in row.get("output_product_labels", "").split(";"):
+            output_forms = [
+                form
+                for form in forms_for_product_label(product_label, forms_by_label)
+                if form["form_type"] == "protein_output"
+            ]
+            output_ids = list(dict.fromkeys(form["entity_form_id"] for form in output_forms))
+            if len(output_ids) == 1 and output_ids[0] not in form_ids:
+                form_ids.append(output_ids[0])
     if form_ids:
         row["product_form_ids"] = ";".join(dict.fromkeys(form_ids))
 
@@ -1031,6 +1050,12 @@ def audit_validated_output_bridges(
         ]
         if not primary_linked:
             continue
+        # Apply the same explicit-output gate used by the manual validation
+        # overlay to register-derived candidates.  This permits an exact
+        # curated output form (for example FGF2 or BDNF) to be retained when
+        # the linked primary evidence names release/protein measurement,
+        # without asserting a gene transition or receptor activity.
+        enrich_validated_product_forms(candidate, forms_by_label)
         review_traces: list[str] = []
         for row in primary_linked:
             extracted_review = _extract_trace(row.get("consolidation_note", ""), "review")
