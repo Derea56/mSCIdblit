@@ -147,6 +147,9 @@ CURATED_OUTPUT_PRODUCT_PATTERNS = {
     "txnip": r"\btxnip\b",
     "fos": r"\b(?:c[- ]?fos|fos)\b",
     "cfos": r"\b(?:c[- ]?fos|fos)\b",
+    "nedd4lshort": r"\bnedd4l[- ]?short\b",
+    "itgb3": r"\b(?:itgb3|integrin[- ]?beta[- ]?3)\b",
+    "ccnd1": r"\b(?:ccnd1|cyclin[- ]?d1)\b",
 }
 PRODUCT_PATTERNS = (
     ("Adp", re.compile(r"\bADP\b", re.I)),
@@ -604,7 +607,7 @@ def enrich_validated_product_forms(
     release_or_protein = re.compile(
         r"release|released|secretion|secreted|supernatant|protein\s+(?:output|measurement|level)|"
         r"protein\s+(?:assays?|readouts?|expression|levels?)|"
-        r"(?:qPCR/|[,;]\s*|\band\s+)protein\b|"
+        r"(?:qPCR/|(?:mRNA|RNA)\s*/\s*|[,;]\s*|\band\s+)protein\b|"
         r"\b(?:c[- ]?fos|fos)\s+protein\b|"
         r"ELISA|immunoblot|western\s+blot|immunofluorescence|"
         r"immunohistochemistry|immunostain(?:ing)?|mature\s+IL[- ]?1\s*(?:beta|β|b)\s+output",

@@ -327,6 +327,21 @@ CURATED_OUTPUT_PRODUCT_FORMS = (
         "notes": "Curated output-protein form for primary-backed FOS/c-FOS protein or immunostaining measurements; this form does not assert secretion or a universal terminal-transcription mechanism.",
     },
     {
+        "node_id": "NODE05511",
+        "canonical_name": "NEDD4L-short",
+        "notes": "Curated output-protein form for primary-backed NEDD4L-short protein measurements; this form does not assert secretion, ubiquitin-ligase activity, or a complete promoter-to-protein mechanism.",
+    },
+    {
+        "node_id": "NODE04378",
+        "canonical_name": "ITGB3",
+        "notes": "Curated output-protein form for primary-backed ITGB3/integrin-beta-3 protein measurements; this form does not assert autonomous receptor activity, heterodimer composition, or secretion.",
+    },
+    {
+        "node_id": "NODE01181",
+        "canonical_name": "CCND1",
+        "notes": "Curated output-protein form for primary-backed CCND1/cyclin-D1 protein measurements; this form does not assert secretion or a universal upstream transcriptional mechanism.",
+    },
+    {
         "node_id": "NODE03873",
         "canonical_name": "IL-6",
         "notes": "Curated output-protein form for primary-backed measured IL-6 release in cytokine-output and cross-cell conditioned-medium contexts; this form does not assert IL6 transcription, secretion mechanism, or receptor activation.",
