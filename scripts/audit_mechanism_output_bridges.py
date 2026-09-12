@@ -155,6 +155,7 @@ CURATED_OUTPUT_PRODUCT_PATTERNS = {
     "fmr1": r"\b(?:fmr1|fmrp)\b",
     "trem2trem2": r"\btrem2\b",
     "zmat3": r"\b(?:zmat3|wig[- ]?1)\b",
+    "irf5": r"\birf5\b",
 }
 PRODUCT_PATTERNS = (
     ("Adp", re.compile(r"\bADP\b", re.I)),
