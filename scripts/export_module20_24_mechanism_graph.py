@@ -241,6 +241,16 @@ CURATED_OUTPUT_PRODUCT_FORMS = (
         "canonical_name": "CYP11B2",
         "notes": "Curated output-protein form for primary-backed CYP11B2 protein-localization measurements; this form does not assert Cyp11b2 transcription, secretion, or direct mineralocorticoid-receptor binding.",
     },
+    {
+        "node_key": "nlrp3",
+        "canonical_name": "NLRP3",
+        "notes": "Curated output-protein form for primary-backed NLRP3 mRNA/protein output measurements; this form does not assert extracellular NLRP3 secretion, inflammasome assembly, or a direct upstream receptor mechanism.",
+    },
+    {
+        "node_key": "prommp2:timp2 complex",
+        "canonical_name": "proMMP2:TIMP2 complex",
+        "notes": "Curated output-protein form for primary-backed proMMP2:TIMP2 secretion/activation measurements; this preserves the precursor/inhibitor complex and does not assert free mature MMP2 release.",
+    },
 )
 
 
