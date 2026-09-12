@@ -100,6 +100,10 @@ KNOWN_PRODUCT_TOKENS = {
 # labels remain unresolved when multiple molecular forms are possible.
 OUTPUT_PRODUCT_FORM_ALIASES = {
     "pge2": "pge2/prostaglandin e2",
+    "opg": "opg/tnfrsf11b",
+    "hmox1ho1": "hmox1/ho1",
+    "uchl1": "uchl1/uchl1",
+    "gja1": "gja1/cx43",
 }
 # These outputs can be real extracellular mediators, but they are not
 # translated protein products.  Do not use their ligand-role form records as
@@ -458,7 +462,7 @@ def product_form_ids_for_labels(
             continue
         forms = [
             form for form in forms_for_product_label(label, forms_by_label)
-            if form["form_type"] == "protein_ligand"
+            if form["form_type"] in {"protein_ligand", "protein_output"}
         ]
         unique_ids = list(dict.fromkeys(form["entity_form_id"] for form in forms))
         if len(unique_ids) == 1:
@@ -705,7 +709,7 @@ def audit(review_root: Path, graph_bundle: Path | None) -> list[dict[str, object
                     form
                     for product_label in output_products
                     for form in forms_for_product_label(product_label, forms_by_label)
-                    if form["form_type"] == "protein_ligand"
+                    if form["form_type"] in {"protein_ligand", "protein_output"}
                 ]
                 if named_product_forms:
                     product_form = named_product_forms[0]["entity_form_id"]

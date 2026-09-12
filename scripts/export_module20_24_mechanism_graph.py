@@ -150,6 +150,49 @@ EXPLICIT_GENE_PRODUCT_MAPPINGS = (
     },
 )
 
+# These are measured protein products that are not exported as ligand-role
+# nodes.  They receive a separate form type so an output observation can be
+# traversed as a protein product without silently making the canonical node a
+# ligand or asserting receptor activity.  Each form is useful only when a
+# validated output bridge supplies the corresponding protein-level evidence.
+CURATED_OUTPUT_PRODUCT_FORMS = (
+    {
+        "node_key": "adamts9",
+        "canonical_name": "ADAMTS9",
+        "notes": "Curated output-protein form for primary-backed ADAMTS9 release measurements; this form does not assert a ligand role or receptor activity.",
+    },
+    {
+        "node_key": "reg3g",
+        "canonical_name": "Reg3gamma",
+        "notes": "Curated output-protein form for primary-backed Reg3gamma production measurements; this form does not assert a ligand role or receptor activity.",
+    },
+    {
+        "node_key": "opg/tnfrsf11b",
+        "canonical_name": "OPG/TNFRSF11B",
+        "notes": "Curated output-protein form for primary-backed soluble OPG secretion measurements; this form does not assert a receptor role or intracellular signaling.",
+    },
+    {
+        "node_key": "neural-progenitor-derived 4931414p19rik/p19",
+        "canonical_name": "P19",
+        "notes": "Curated output-protein form for primary-backed neural-progenitor P19 secretion measurements; this form does not assert a receptor identity.",
+    },
+    {
+        "node_key": "gja1/cx43",
+        "canonical_name": "GJA1/Cx43",
+        "notes": "Curated output-protein form for primary-backed GJA1/Cx43 protein measurements; this form does not assert secretion or ligand activity.",
+    },
+    {
+        "node_key": "hmox1",
+        "canonical_name": "HMOX1/HO-1",
+        "notes": "Curated output-protein form for primary-backed HMOX1/HO-1 protein measurements; this form does not assert secretion or ligand activity.",
+    },
+    {
+        "node_key": "uchl1/uch-l1",
+        "canonical_name": "UCHL1/UCH-L1",
+        "notes": "Curated output-protein form for primary-backed UCHL1 protein measurements; this form does not assert secretion or ligand activity.",
+    },
+)
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -274,6 +317,7 @@ def build_entity_forms(
     transitions are conditional metadata and never enter ``mechanism_edges``.
     """
     labels_by_node = {str(row["node_id"]): str(row["canonical_name"]) for row in node_rows}
+    node_id_by_key = {node_key(label): node_id for node_id, label in labels_by_node.items()}
     forms: list[dict[str, object]] = []
     form_by_node_and_type: dict[tuple[str, str], str] = {}
     for node_id in sorted(role_map):
@@ -307,6 +351,22 @@ def build_entity_forms(
                     "notes": "Ligand/protein form derived from an exported ligand role; secretion is not asserted by this form record.",
                 }
             )
+
+    for mapping in CURATED_OUTPUT_PRODUCT_FORMS:
+        node_id = node_id_by_key.get(node_key(mapping["node_key"]))
+        if not node_id:
+            continue
+        forms.append(
+            {
+                "entity_form_id": f"OUTPUT_PROTEIN:{node_id}",
+                "node_id": node_id,
+                "form_type": "protein_output",
+                "canonical_name": mapping["canonical_name"],
+                "source_role": "validated_output_product",
+                "form_status": "curated_output_product",
+                "notes": mapping["notes"],
+            }
+        )
 
     transitions: list[dict[str, object]] = []
 
