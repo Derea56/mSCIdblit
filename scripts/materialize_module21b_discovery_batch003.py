@@ -98,13 +98,19 @@ def validate(row: dict[str, str]) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument(
+        "--batch-path",
+        type=Path,
+        default=BATCH,
+        help="Promotion-batch TSV to append; defaults to the historical batch file.",
+    )
     parser.add_argument("--promotion-id", default="module21b-discovery-materialization-batch002-2026-09-04-ecm-par3-001")
     args = parser.parse_args()
 
     discoveries = read_tsv(DISCOVERY)
     edges = read_tsv(EDGES)
     evidence = read_tsv(EVIDENCE)
-    batch = read_tsv(BATCH) if BATCH.exists() else []
+    batch = read_tsv(args.batch_path) if args.batch_path.exists() else []
     triples = {(norm(r["source_entity"]), norm(r["relation_type"]), norm(r["target_entity"])) for r in edges}
     materialized = {r.get("discovery_id", "") for r in discoveries if r.get("disposition") == "MATERIALIZED_REVIEWED_PRIMARY"}
     candidates = []
@@ -151,6 +157,7 @@ def main() -> int:
             "source_scope": "direct_edge" if (
                 "ligand_receptor_binding_or_activation" in layer
                 or row["relation_type"].strip() in {"binds", "associates_with", "recruits"}
+                or "binds" in row["relation_type"].strip().lower()
             ) else "pathway_membership",
             "confidence_tier": "high", "citation_note": citation, "evidence_summary": summary,
             "limitations": row["boundary_notes"], "evidence_layer": layer, "exportable": "true", "consolidation_note": note,
@@ -173,7 +180,7 @@ def main() -> int:
     batch.extend(new_batch)
     write_tsv(EDGES, edges, EDGE_FIELDS)
     write_tsv(EVIDENCE, evidence, EVIDENCE_FIELDS)
-    write_tsv(BATCH, batch, BATCH_FIELDS)
+    write_tsv(args.batch_path, batch, BATCH_FIELDS)
     for row in candidates:
         row["disposition"] = "MATERIALIZED_REVIEWED_PRIMARY"
     write_tsv(DISCOVERY, discoveries, list(discoveries[0]))
