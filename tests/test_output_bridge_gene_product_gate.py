@@ -45,3 +45,47 @@ def test_transition_gate_requires_gene_level_output_evidence():
 
     assert protein_only["transition_ids"] == ""
     assert gene_and_protein["transition_ids"] == "TRN:00010"
+
+
+def test_explicit_microglial_il6_release_resolves_target_gene_product_form():
+    forms = {
+        "il6": [
+            {"entity_form_id": "PROTEIN:NODE03873", "form_type": "protein_ligand"},
+            {"entity_form_id": "PROTEIN:NODE04051", "form_type": "protein_ligand"},
+            {"entity_form_id": "OUTPUT_PROTEIN:NODE03873", "form_type": "protein_output"},
+            {"entity_form_id": "OUTPUT_PROTEIN:NODE04051", "form_type": "protein_output"},
+        ]
+    }
+    row = {
+        "output_product_labels": "Il6",
+        "output_label": "microglial IL-6 release",
+        "assay_or_perturbation": "IL-6 release and inflammatory readouts",
+        "output_observation": "Microglial IL-6 release followed neuronal HMGB1 exposure.",
+        "product_form_ids": "",
+    }
+
+    audit_bridges.enrich_validated_product_forms(row, forms)
+
+    assert row["product_form_ids"] == "OUTPUT_PROTEIN:NODE04051"
+
+
+def test_generic_il6_production_remains_untyped_when_label_is_ambiguous():
+    forms = {
+        "il6": [
+            {"entity_form_id": "PROTEIN:NODE03873", "form_type": "protein_ligand"},
+            {"entity_form_id": "PROTEIN:NODE04051", "form_type": "protein_ligand"},
+            {"entity_form_id": "OUTPUT_PROTEIN:NODE03873", "form_type": "protein_output"},
+            {"entity_form_id": "OUTPUT_PROTEIN:NODE04051", "form_type": "protein_output"},
+        ]
+    }
+    row = {
+        "output_product_labels": "Il6",
+        "output_label": "IL6 production",
+        "assay_or_perturbation": "IL-6 production and mRNA readouts",
+        "output_observation": "P2Y12 stimulation altered Il6 production.",
+        "product_form_ids": "",
+    }
+
+    audit_bridges.enrich_validated_product_forms(row, forms)
+
+    assert row["product_form_ids"] == ""
