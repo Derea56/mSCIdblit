@@ -112,6 +112,8 @@ OUTPUT_PRODUCT_FORM_ALIASES = {
     "mifmif": "mif",
     "mifmacrophagemigrationinhibitoryfactor": "mif",
     "dll4dll4": "dll4deltalikeligand4",
+    "neurocan": "ncan/neurocan",
+    "ng2": "cspg4/ng2",
     "acsl4": "acsl4",
     "cyp11b2": "cyp11b2",
     "nlrp3": "nlrp3",
@@ -561,6 +563,7 @@ def enrich_validated_product_forms(
         ("PROTEIN:NODE05282", "OUTPUT_PROTEIN:NODE05282", r"\bMIF\b|\bmacrophage\s+migration\s+inhibitory\s+factor\b"),
         ("PROTEIN:NODE01421", "OUTPUT_PROTEIN:NODE01421", r"\bCDH2\b|N[- ]cadherin|cadherin-2"),
         ("PROTEIN:NODE02091", "OUTPUT_PROTEIN:NODE02091", r"\bDLL4\b|\bDelta[- ]like\s+ligand\s+4\b"),
+        ("PROTEIN:NODE01843", "OUTPUT_PROTEIN:NODE01843", r"\bCSPG4\b|\bNG2\b"),
     )
     release_or_protein = re.compile(
         r"release|released|secretion|secreted|supernatant|protein\s+(?:output|measurement|level)|"
