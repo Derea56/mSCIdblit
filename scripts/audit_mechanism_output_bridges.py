@@ -108,6 +108,7 @@ OUTPUT_PRODUCT_FORM_ALIASES = {
     "mmp9": "mmp9/matrix metalloproteinase-9",
     "acan": "acan/aggrecan",
     "ncan": "ncan/neurocan",
+    "magmag": "mag/myelin-associated glycoprotein",
     "acsl4": "acsl4",
     "cyp11b2": "cyp11b2",
     "nlrp3": "nlrp3",
