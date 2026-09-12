@@ -307,6 +307,121 @@ CURATED_OUTPUT_PRODUCT_FORMS = (
         "notes": "Curated output-protein form for primary-backed measured IFN-γ release or secretion; this form does not assert IFNG transcription, antiviral mechanism, or receptor activation.",
     },
     {
+        "node_id": "NODE00767",
+        "canonical_name": "Bdnf",
+        "notes": "Curated output-protein form for primary-backed measured BDNF release or secretion; this form does not assert Bdnf transcription, processing, or TrkB activation.",
+    },
+    {
+        "node_id": "NODE05632",
+        "canonical_name": "Ngf",
+        "notes": "Curated output-protein form for primary-backed measured NGF production/release; this form does not assert NGF maturation, secretion mechanism, or receptor activation.",
+    },
+    {
+        "node_id": "NODE01164",
+        "canonical_name": "Ccl5",
+        "notes": "Curated output-protein form for primary-backed measured CCL5/RANTES release or secretion; this form does not assert transcription or receptor activation.",
+    },
+    {
+        "node_id": "NODE01157",
+        "canonical_name": "Ccl3",
+        "notes": "Curated output-protein form for primary-backed measured CCL3/MIP-1α release or secretion; this form does not assert transcription or receptor activation.",
+    },
+    {
+        "node_id": "NODE03893",
+        "canonical_name": "IL12A/IL12B",
+        "notes": "Curated output-protein form for primary-backed measured IL-12 heterodimer/p70 release or secretion; preserve the IL12A/IL12B product composition and do not assert either subunit alone as the secreted cytokine.",
+    },
+    {
+        "node_id": "NODE03894",
+        "canonical_name": "Il12a_Il12b",
+        "notes": "Curated output-protein form for primary-backed measured IL-12A/IL-12B heterodimer output; this form preserves the composite cytokine topology and does not assert independent subunit secretion.",
+    },
+    {
+        "node_id": "NODE03798",
+        "canonical_name": "Ifnb1",
+        "notes": "Curated output-protein form for primary-backed measured IFN-β production or secretion; this form does not assert IFNB1 transcription, antiviral mechanism, or receptor activation.",
+    },
+    {
+        "node_id": "NODE03863",
+        "canonical_name": "IL-1alpha",
+        "notes": "Curated output-protein form for primary-backed measured IL-1α release; this form preserves injury/inflammasome context and does not assert transcription or receptor activation.",
+    },
+    {
+        "node_id": "NODE03944",
+        "canonical_name": "Il1a",
+        "notes": "Curated output-protein form for primary-backed measured Il1a/IL-1α release; this form does not assert transcription, processing, or receptor activation.",
+    },
+    {
+        "node_id": "NODE01883",
+        "canonical_name": "CXCL1",
+        "notes": "Curated output-protein form for primary-backed measured CXCL1/GRO/CINC-1 release or secretion; this form does not assert transcription or receptor activation.",
+    },
+    {
+        "node_id": "NODE01908",
+        "canonical_name": "Cxcl2",
+        "notes": "Curated output-protein form for primary-backed measured CXCL2/MIP-2 release or secretion; this form does not assert transcription or receptor activation.",
+    },
+    {
+        "node_id": "NODE04038",
+        "canonical_name": "Il4",
+        "notes": "Curated output-protein form for primary-backed measured IL-4 cytokine output or secretion; this form does not assert transcription or receptor activation.",
+    },
+    {
+        "node_id": "NODE04049",
+        "canonical_name": "Il5",
+        "notes": "Curated output-protein form for primary-backed measured IL-5 cytokine output or secretion; this form does not assert transcription or receptor activation.",
+    },
+    {
+        "node_id": "NODE03907",
+        "canonical_name": "Il13",
+        "notes": "Curated output-protein form for primary-backed measured IL-13 cytokine output or secretion; this form does not assert transcription or receptor activation.",
+    },
+    {
+        "node_id": "NODE08457",
+        "canonical_name": "Vegfa",
+        "notes": "Curated output-protein form for primary-backed measured VEGF-A secretion; this form does not assert VEGFA transcription, isoform identity, or receptor activation.",
+    },
+    {
+        "node_id": "NODE01923",
+        "canonical_name": "CXCL9",
+        "notes": "Curated output-protein form for primary-backed measured CXCL9/MIG release; this form does not assert transcription or receptor activation.",
+    },
+    {
+        "node_id": "NODE01924",
+        "canonical_name": "CXCL9/MIG",
+        "notes": "Curated output-protein form for primary-backed measured CXCL9/MIG release; this form preserves the recorded chemokine label and does not assert transcription or receptor activation.",
+    },
+    {
+        "node_id": "NODE02673",
+        "canonical_name": "Fgf2",
+        "notes": "Curated output-protein form for primary-backed measured astrocytic FGF2 production/release; this form does not assert a CNTF receptor-to-FGF2 transcription or secretion mechanism.",
+    },
+    {
+        "node_id": "NODE07860",
+        "canonical_name": "Tgfb1",
+        "notes": "Curated output-protein form for primary-backed measured TGF-β1 release; preserve latent-complex/activation uncertainty and do not assert mature active ligand availability or receptor activation.",
+    },
+    {
+        "node_id": "NODE00176",
+        "canonical_name": "ADAMTS1",
+        "notes": "Curated output-protein form for primary-backed measured ADAMTS1 release; this form does not assert protease maturation, substrate cleavage, or receptor activity.",
+    },
+    {
+        "node_id": "NODE08531",
+        "canonical_name": "Vwf",
+        "notes": "Curated output-protein form for primary-backed measured VWF secretion; this form does not assert multimerization or downstream receptor activity.",
+    },
+    {
+        "node_id": "NODE05790",
+        "canonical_name": "Nptx1",
+        "notes": "Curated output-protein form for primary-backed measured NPTX1/NP1 release; this form does not assert processing, receptor activity, or synaptic sufficiency.",
+    },
+    {
+        "node_id": "NODE03934",
+        "canonical_name": "Il18",
+        "notes": "Curated output-protein form for primary-backed measured IL-18 release; preserve precursor processing/inflammasome context and do not assert transcription or receptor activation.",
+    },
+    {
         "node_id": "NODE06184",
         "canonical_name": "PCB/pyruvate carboxylase",
         "notes": "Curated output-protein form for primary-backed PCB/pyruvate-carboxylase mRNA and protein measurements; this form does not assert secretion or a new ligand role.",
