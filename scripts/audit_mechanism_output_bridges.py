@@ -117,6 +117,7 @@ OUTPUT_PRODUCT_FORM_ALIASES = {
     "cfos": "fos",
     "fmr1": "fmrp",
     "trem2trem2": "trem2",
+    "pcb": "pcb/pyruvate carboxylase",
     "acsl4": "acsl4",
     "cyp11b2": "cyp11b2",
     "nlrp3": "nlrp3",
@@ -156,6 +157,7 @@ CURATED_OUTPUT_PRODUCT_PATTERNS = {
     "trem2trem2": r"\btrem2\b",
     "zmat3": r"\b(?:zmat3|wig[- ]?1)\b",
     "irf5": r"\birf5\b",
+    "pcb": r"\bpcb\b",
 }
 PRODUCT_PATTERNS = (
     ("Adp", re.compile(r"\bADP\b", re.I)),
