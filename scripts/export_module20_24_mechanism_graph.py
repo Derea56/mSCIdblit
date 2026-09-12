@@ -277,6 +277,11 @@ CURATED_OUTPUT_PRODUCT_FORMS = (
         "notes": "Curated output-protein form for primary-backed mitochondrial intermembrane-space cytochrome-c release downstream of BAX/BAK pore formation; this form does not assert secretion or receptor activity.",
     },
     {
+        "node_id": "NODE05282",
+        "canonical_name": "MIF",
+        "notes": "Curated output-protein form for primary-backed measured MIF protein production in astrocyte and other cellular-output contexts; this form does not assert transcription, secretion mechanism, receptor activation, or a universal intracellular route.",
+    },
+    {
         "node_id": "NODE03873",
         "canonical_name": "IL-6",
         "notes": "Curated output-protein form for primary-backed measured IL-6 release in cytokine-output and cross-cell conditioned-medium contexts; this form does not assert IL6 transcription, secretion mechanism, or receptor activation.",
