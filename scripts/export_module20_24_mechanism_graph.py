@@ -277,6 +277,11 @@ CURATED_OUTPUT_PRODUCT_FORMS = (
         "notes": "Curated output-protein form for primary-backed mitochondrial intermembrane-space cytochrome-c release downstream of BAX/BAK pore formation; this form does not assert secretion or receptor activity.",
     },
     {
+        "node_id": "NODE03873",
+        "canonical_name": "IL-6",
+        "notes": "Curated output-protein form for primary-backed measured IL-6 release in cytokine-output and cross-cell conditioned-medium contexts; this form does not assert IL6 transcription, secretion mechanism, or receptor activation.",
+    },
+    {
         "node_id": "NODE06184",
         "canonical_name": "PCB/pyruvate carboxylase",
         "notes": "Curated output-protein form for primary-backed PCB/pyruvate-carboxylase mRNA and protein measurements; this form does not assert secretion or a new ligand role.",

@@ -482,13 +482,28 @@ def enrich_validated_product_forms(
     forms_by_label: dict[str, list[dict[str, str]]],
 ) -> None:
     """Fill typed product forms without inferring gene expression or secretion."""
-    form_ids = product_form_ids_for_labels(
-        row.get("output_product_labels", ""),
-        forms_by_label,
-        row.get("product_form_ids", ""),
-    )
+    form_ids = [
+        value for value in product_form_ids_for_labels(
+            row.get("output_product_labels", ""),
+            forms_by_label,
+            row.get("product_form_ids", ""),
+        ).split(";")
+        if value
+    ]
+    # Some validated overlays already carry the ligand-role form for a
+    # measured IL-6 release observation.  Keep that identity and add the
+    # distinct output form so a cross-cell continuation can distinguish
+    # released protein from the canonical ligand node.  Require the existing
+    # explicit IL-6 form: this must not relabel rows where IL-6 is only an
+    # upstream mediator or appears in a downstream expression label.
+    if (
+        "PROTEIN:NODE03873" in form_ids
+        and "OUTPUT_PROTEIN:NODE03873" not in form_ids
+        and re.search(r"\bIL[- ]?6\b|\bIL6\b", row.get("output_product_labels", ""), re.I)
+    ):
+        form_ids.append("OUTPUT_PROTEIN:NODE03873")
     if form_ids:
-        row["product_form_ids"] = form_ids
+        row["product_form_ids"] = ";".join(dict.fromkeys(form_ids))
 
 
 GENE_LEVEL_OUTPUT_MARKERS = re.compile(
