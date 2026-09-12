@@ -251,6 +251,26 @@ CURATED_OUTPUT_PRODUCT_FORMS = (
         "canonical_name": "proMMP2:TIMP2 complex",
         "notes": "Curated output-protein form for primary-backed proMMP2:TIMP2 secretion/activation measurements; this preserves the precursor/inhibitor complex and does not assert free mature MMP2 release.",
     },
+    {
+        "node_id": "NODE01123",
+        "canonical_name": "CCL2",
+        "notes": "Curated output-protein form for primary-backed CCL2 cargo in astrocyte-derived extracellular-vesicle release; this form does not assert free chemokine secretion, transcription, or purified receptor binding.",
+    },
+    {
+        "node_key": "fth1/h-ferritin",
+        "canonical_name": "FTH1/H-ferritin",
+        "notes": "Curated output-protein form for primary-backed H-ferritin-containing exosome export; this form does not assert FTH1 transcription, direct PROM2 binding, or free extracellular ferritin.",
+    },
+    {
+        "node_key": "ftl/l-ferritin",
+        "canonical_name": "FTL/L-ferritin",
+        "notes": "Curated output-protein form for primary-backed L-ferritin-containing exosome export; this form does not assert FTL transcription, direct PROM2 binding, or free extracellular ferritin.",
+    },
+    {
+        "node_key": "ctsb/cathepsin b",
+        "canonical_name": "CTSB/cathepsin B",
+        "notes": "Curated output-protein form for primary-backed lysosomal cathepsin-B release after MLKL-associated permeabilization; this form does not assert Ctsb transcription or de novo protein production.",
+    },
 )
 
 
@@ -413,7 +433,7 @@ def build_entity_forms(
             )
 
     for mapping in CURATED_OUTPUT_PRODUCT_FORMS:
-        node_id = node_id_by_key.get(node_key(mapping["node_key"]))
+        node_id = mapping.get("node_id") or node_id_by_key.get(node_key(mapping.get("node_key", "")))
         if not node_id:
             continue
         forms.append(
