@@ -271,6 +271,16 @@ CURATED_OUTPUT_PRODUCT_FORMS = (
         "canonical_name": "CTSB/cathepsin B",
         "notes": "Curated output-protein form for primary-backed lysosomal cathepsin-B release after MLKL-associated permeabilization; this form does not assert Ctsb transcription or de novo protein production.",
     },
+    {
+        "node_id": "NODE06184",
+        "canonical_name": "PCB/pyruvate carboxylase",
+        "notes": "Curated output-protein form for primary-backed PCB/pyruvate-carboxylase mRNA and protein measurements; this form does not assert secretion or a new ligand role.",
+    },
+    {
+        "node_id": "NODE04960",
+        "canonical_name": "MAG/myelin-associated glycoprotein",
+        "notes": "Curated output-protein form for primary-backed MAG protein measurements downstream of TNR-associated oligodendrocyte differentiation; this form does not assert secretion or receptor activity.",
+    },
 )
 
 
