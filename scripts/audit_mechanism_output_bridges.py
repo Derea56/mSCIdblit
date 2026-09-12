@@ -110,6 +110,7 @@ OUTPUT_PRODUCT_FORM_ALIASES = {
     "ncan": "ncan/neurocan",
     "acsl4": "acsl4",
     "cyp11b2": "cyp11b2",
+    "nlrp3": "nlrp3",
 }
 # These outputs can be real extracellular mediators, but they are not
 # translated protein products.  Do not use their ligand-role form records as
