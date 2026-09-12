@@ -558,6 +558,7 @@ def enrich_validated_product_forms(
         ("PROTEIN:NODE04561", "OUTPUT_PROTEIN:NODE04561", r"\bAPPs?770\b|\bsecreted\s+APP\b"),
         ("PROTEIN:NODE06675", "OUTPUT_PROTEIN:NODE06675", r"\bPTN\b|\bpleiotrophin\b"),
         ("PROTEIN:NODE05282", "OUTPUT_PROTEIN:NODE05282", r"\bMIF\b|\bmacrophage\s+migration\s+inhibitory\s+factor\b"),
+        ("PROTEIN:NODE01421", "OUTPUT_PROTEIN:NODE01421", r"\bCDH2\b|N[- ]cadherin|cadherin-2"),
     )
     release_or_protein = re.compile(
         r"release|released|secretion|secreted|supernatant|protein\s+(?:output|measurement|level)|"
