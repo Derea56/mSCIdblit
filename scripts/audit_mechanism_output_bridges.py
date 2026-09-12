@@ -502,6 +502,34 @@ def enrich_validated_product_forms(
         and re.search(r"\bIL[- ]?6\b|\bIL6\b", row.get("output_product_labels", ""), re.I)
     ):
         form_ids.append("OUTPUT_PROTEIN:NODE03873")
+    # Prefer a distinct output form for cytokines when the bridge already has
+    # an explicit ligand form and the evidence names release/secretion or a
+    # protein assay.  This gate intentionally excludes transcript-only,
+    # generic conditioned-medium, and phenotype-only rows.
+    cytokine_rules = (
+        ("PROTEIN:NODE04051", "OUTPUT_PROTEIN:NODE04051", r"\bIL[- ]?6\b|\bIL6\b"),
+        ("PROTEIN:NODE03948", "OUTPUT_PROTEIN:NODE03948", r"\bIL[- ]?1\s*(?:beta|β|b)\b|\bIL1B\b"),
+        ("PROTEIN:NODE08072", "OUTPUT_PROTEIN:NODE08072", r"\bTNF(?:[- ]?(?:alpha|α))?\b"),
+        ("PROTEIN:NODE01922", "OUTPUT_PROTEIN:NODE01922", r"\b(?:CXCL8|IL[- ]?8)\b"),
+        ("PROTEIN:NODE03802", "OUTPUT_PROTEIN:NODE03802", r"\bIFN[- ]?(?:gamma|γ)\b|\bIFNG\b"),
+    )
+    release_or_protein = re.compile(
+        r"release|released|secretion|secreted|supernatant|protein\s+(?:output|measurement|level)|"
+        r"ELISA|immunoblot|western\s+blot|mature\s+IL[- ]?1\s*(?:beta|β|b)\s+output",
+        re.I,
+    )
+    evidence_text = " ".join(
+        row.get(field, "")
+        for field in ("output_label", "output_observation", "assay_or_perturbation")
+    )
+    if release_or_protein.search(evidence_text):
+        for ligand_form_id, output_form_id, product_pattern in cytokine_rules:
+            if (
+                ligand_form_id in form_ids
+                and output_form_id not in form_ids
+                and re.search(product_pattern, row.get("output_product_labels", ""), re.I)
+            ):
+                form_ids.append(output_form_id)
     if form_ids:
         row["product_form_ids"] = ";".join(dict.fromkeys(form_ids))
 

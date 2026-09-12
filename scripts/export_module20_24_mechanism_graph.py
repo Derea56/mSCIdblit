@@ -282,6 +282,31 @@ CURATED_OUTPUT_PRODUCT_FORMS = (
         "notes": "Curated output-protein form for primary-backed measured IL-6 release in cytokine-output and cross-cell conditioned-medium contexts; this form does not assert IL6 transcription, secretion mechanism, or receptor activation.",
     },
     {
+        "node_id": "NODE04051",
+        "canonical_name": "Il6",
+        "notes": "Curated output-protein form for primary-backed measured Il6/IL-6 protein release or secretion on the target-gene/ligand node; this form does not assert transcription-to-translation order or receptor activation.",
+    },
+    {
+        "node_id": "NODE03948",
+        "canonical_name": "Il1b",
+        "notes": "Curated output-protein form for primary-backed measured IL-1β release, secretion, or mature-cytokine output; this form preserves pro-IL-1β processing/inflammasome context and does not assert a direct receptor-to-cytokine mechanism.",
+    },
+    {
+        "node_id": "NODE08072",
+        "canonical_name": "TNF",
+        "notes": "Curated output-protein form for primary-backed measured TNF release or secretion; this form does not assert TNF transcription, processing mechanism, or receptor activation.",
+    },
+    {
+        "node_id": "NODE01922",
+        "canonical_name": "CXCL8/IL-8",
+        "notes": "Curated output-protein form for primary-backed measured CXCL8/IL-8 release or secretion; this form does not assert transcription, processing, or receptor activation.",
+    },
+    {
+        "node_id": "NODE03802",
+        "canonical_name": "Ifng",
+        "notes": "Curated output-protein form for primary-backed measured IFN-γ release or secretion; this form does not assert IFNG transcription, antiviral mechanism, or receptor activation.",
+    },
+    {
         "node_id": "NODE06184",
         "canonical_name": "PCB/pyruvate carboxylase",
         "notes": "Curated output-protein form for primary-backed PCB/pyruvate-carboxylase mRNA and protein measurements; this form does not assert secretion or a new ligand role.",
