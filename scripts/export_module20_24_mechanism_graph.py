@@ -231,6 +231,16 @@ CURATED_OUTPUT_PRODUCT_FORMS = (
         "canonical_name": "NCAN/neurocan",
         "notes": "Curated output-protein form for primary-backed neurocan/ECM output measurements; this form does not assert a complete transcript-to-proteoglycan-processing or secretion sequence.",
     },
+    {
+        "node_key": "acsl4",
+        "canonical_name": "ACSL4",
+        "notes": "Curated output-protein form for primary-backed ACSL4 protein/pathway output measurements; this form does not assert S1PR2-to-ACSL4 direct binding, transcription, or secretion.",
+    },
+    {
+        "node_key": "cyp11b2",
+        "canonical_name": "CYP11B2",
+        "notes": "Curated output-protein form for primary-backed CYP11B2 protein-localization measurements; this form does not assert Cyp11b2 transcription, secretion, or direct mineralocorticoid-receptor binding.",
+    },
 )
 
 
