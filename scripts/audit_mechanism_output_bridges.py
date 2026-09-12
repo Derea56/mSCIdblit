@@ -642,6 +642,27 @@ def enrich_validated_product_forms(
         and "OUTPUT_PROTEIN:NODE04051" not in form_ids
     ):
         form_ids.append("OUTPUT_PROTEIN:NODE04051")
+    # AQP4 is recorded on two distinct context nodes.  Resolve these only
+    # when the output label identifies the matching microglial cytokine/TBI
+    # context and the assay explicitly measures AQP4 mRNA/protein; a generic
+    # AQP4 expression label must remain ambiguous.
+    aqp4_context_rules = (
+        (
+            "OUTPUT_PROTEIN:NODE00611",
+            r"Microglia-derived IL-1beta-associated astrocytic AQP4 expression",
+        ),
+        (
+            "OUTPUT_PROTEIN:NODE00612",
+            r"Microglia-derived IL-6-associated astrocytic AQP4 expression",
+        ),
+    )
+    if (
+        re.fullmatch(r"AQP4", row.get("output_product_labels", "").strip(), re.I)
+        and re.search(r"AQP4\s+mRNA/protein", evidence_text, re.I)
+    ):
+        for output_form_id, label_pattern in aqp4_context_rules:
+            if re.fullmatch(label_pattern, output_label, re.I) and output_form_id not in form_ids:
+                form_ids.append(output_form_id)
     if release_or_protein.search(evidence_text):
         for ligand_form_id, output_form_id, product_pattern in cytokine_rules:
             if (

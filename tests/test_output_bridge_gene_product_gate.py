@@ -89,3 +89,17 @@ def test_generic_il6_production_remains_untyped_when_label_is_ambiguous():
     audit_bridges.enrich_validated_product_forms(row, forms)
 
     assert row["product_form_ids"] == ""
+
+
+def test_context_specific_aqp4_protein_outputs_do_not_collapse_context_nodes():
+    row = {
+        "output_product_labels": "Aqp4",
+        "output_label": "Microglia-derived IL-6-associated astrocytic AQP4 expression",
+        "assay_or_perturbation": "Astrocytic AQP4 mRNA/protein; edema readouts",
+        "output_observation": "Microglial IL-6 context altered astrocytic AQP4.",
+        "product_form_ids": "",
+    }
+
+    audit_bridges.enrich_validated_product_forms(row, {})
+
+    assert row["product_form_ids"] == "OUTPUT_PROTEIN:NODE00612"
