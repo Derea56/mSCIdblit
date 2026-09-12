@@ -25,7 +25,7 @@ ALLOWED_NODE_TYPES = {
     "signaling_effector",
     "tf",
 }
-ALLOWED_ENTITY_FORM_TYPES = {"gene", "protein_ligand"}
+ALLOWED_ENTITY_FORM_TYPES = {"gene", "protein_ligand", "protein_output"}
 ALLOWED_TRANSITION_TYPES = {"gene_product_correspondence"}
 ALLOWED_TRANSITION_RELATIONS = {"gene_to_ligand_identity"}
 CANONICAL_ROLE_RELATIONS = {
