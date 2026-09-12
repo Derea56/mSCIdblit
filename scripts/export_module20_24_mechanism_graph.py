@@ -357,6 +357,16 @@ CURATED_OUTPUT_PRODUCT_FORMS = (
         "notes": "Curated output-protein form for primary-backed IRF5 mRNA/protein measurements in the ischemia-reperfusion microglial polarization context; this form does not assert secretion or a universal upstream mechanism.",
     },
     {
+        "node_id": "NODE00752",
+        "canonical_name": "BCL2L11/BIM",
+        "notes": "Curated output-protein form for primary-backed BIM protein measurements in neuronal-injury assays; this form does not assert secretion or a complete apoptotic mechanism.",
+    },
+    {
+        "node_id": "NODE06180",
+        "canonical_name": "PARP1/PARP-1",
+        "notes": "Curated output-protein form for primary-backed PARP1 cleavage measurements in neuronal-injury assays; this form does not assert secretion or a complete caspase mechanism.",
+    },
+    {
         "node_id": "NODE03873",
         "canonical_name": "IL-6",
         "notes": "Curated output-protein form for primary-backed measured IL-6 release in cytokine-output and cross-cell conditioned-medium contexts; this form does not assert IL6 transcription, secretion mechanism, or receptor activation.",

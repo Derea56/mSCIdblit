@@ -118,6 +118,7 @@ OUTPUT_PRODUCT_FORM_ALIASES = {
     "fmr1": "fmrp",
     "trem2trem2": "trem2",
     "pcb": "pcb/pyruvate carboxylase",
+    "parp1cleavage": "parp1/parp-1",
     "acsl4": "acsl4",
     "cyp11b2": "cyp11b2",
     "nlrp3": "nlrp3",
@@ -158,6 +159,8 @@ CURATED_OUTPUT_PRODUCT_PATTERNS = {
     "zmat3": r"\b(?:zmat3|wig[- ]?1)\b",
     "irf5": r"\birf5\b",
     "pcb": r"\bpcb\b",
+    "bcl2l11bim": r"\b(?:bcl2l11|bim)\b",
+    "parp1cleavage": r"\b(?:parp1|parp)\b.*\bcleavage\b|\bcleaved\s+parp\b",
 }
 PRODUCT_PATTERNS = (
     ("Adp", re.compile(r"\bADP\b", re.I)),
@@ -618,7 +621,8 @@ def enrich_validated_product_forms(
         r"(?:qPCR/|(?:mRNA|RNA|transcript)\s*/\s*|[,;]\s*|\band\s+)protein\b|"
         r"\b(?:c[- ]?fos|fos)\s+protein\b|"
         r"ELISA|immunoblot|western\s+blot|immunofluorescence|"
-        r"immunohistochemistry|immunostain(?:ing)?|mature\s+IL[- ]?1\s*(?:beta|β|b)\s+output",
+        r"immunohistochemistry|immunostain(?:ing)?|cleav(?:age|ed)|"
+        r"mature\s+IL[- ]?1\s*(?:beta|β|b)\s+output",
         re.I,
     )
     evidence_text = " ".join(
