@@ -302,9 +302,44 @@ CURATED_OUTPUT_PRODUCT_FORMS = (
         "notes": "Curated output-protein form for primary-backed measured CXCL8/IL-8 release or secretion; this form does not assert transcription, processing, or receptor activation.",
     },
     {
+        "node_id": "NODE01886",
+        "canonical_name": "Cxcl10",
+        "notes": "Curated output-protein form for primary-backed measured CXCL10 release; this form does not assert transcription, processing, or receptor activation and preserves the exact Cxcl10 node identity.",
+    },
+    {
+        "node_id": "NODE01889",
+        "canonical_name": "CXCL10/IP-10",
+        "notes": "Curated output-protein form for primary-backed measured CXCL10/IP-10 release; this form preserves the recorded chemokine nomenclature and does not assert transcription or receptor activation.",
+    },
+    {
+        "node_id": "NODE01893",
+        "canonical_name": "Cxcl12",
+        "notes": "Curated output-protein form for primary-backed measured CXCL12 release; this form does not assert transcription, chemokine oligomer state, or receptor activation.",
+    },
+    {
+        "node_id": "NODE01811",
+        "canonical_name": "Csf2",
+        "notes": "Curated output-protein form for primary-backed measured GM-CSF/CSF2 secreted-mediator output; this form does not assert transcription, processing, or receptor activation.",
+    },
+    {
         "node_id": "NODE03802",
         "canonical_name": "Ifng",
         "notes": "Curated output-protein form for primary-backed measured IFN-γ release or secretion; this form does not assert IFNG transcription, antiviral mechanism, or receptor activation.",
+    },
+    {
+        "node_id": "NODE03919",
+        "canonical_name": "IL17A",
+        "notes": "Curated output-protein form for primary-backed measured IL-17A cytokine output or secretion; this form does not assert transcription, processing, receptor activation, or assignment to a particular producing-cell program.",
+    },
+    {
+        "node_id": "NODE03977",
+        "canonical_name": "Il2",
+        "notes": "Curated output-protein form for primary-backed measured IL-2 secretion or cytokine output; this form does not assert transcription, receptor activation, or a universal T-cell costimulation route.",
+    },
+    {
+        "node_id": "NODE04063",
+        "canonical_name": "Il9",
+        "notes": "Curated output-protein form for primary-backed measured IL-9 cytokine output; this form does not assert transcription, receptor activation, or a universal Th9/ILC2 source.",
     },
     {
         "node_id": "NODE00767",
