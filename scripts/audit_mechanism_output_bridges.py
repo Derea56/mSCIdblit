@@ -108,6 +108,8 @@ OUTPUT_PRODUCT_FORM_ALIASES = {
     "mmp9": "mmp9/matrix metalloproteinase-9",
     "acan": "acan/aggrecan",
     "ncan": "ncan/neurocan",
+    "acsl4": "acsl4",
+    "cyp11b2": "cyp11b2",
 }
 # These outputs can be real extracellular mediators, but they are not
 # translated protein products.  Do not use their ligand-role form records as
