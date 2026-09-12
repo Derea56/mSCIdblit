@@ -281,6 +281,11 @@ CURATED_OUTPUT_PRODUCT_FORMS = (
         "canonical_name": "MAG/myelin-associated glycoprotein",
         "notes": "Curated output-protein form for primary-backed MAG protein measurements downstream of TNR-associated oligodendrocyte differentiation; this form does not assert secretion or receptor activity.",
     },
+    {
+        "node_id": "NODE02793",
+        "canonical_name": "FMRP",
+        "notes": "Curated output-protein form for primary-backed FMRP immunoblot measurements downstream of GABA-B/CREB-associated Fmr1 regulation; this form does not assert secretion or a receptor role.",
+    },
 )
 
 
