@@ -342,6 +342,16 @@ CURATED_OUTPUT_PRODUCT_FORMS = (
         "notes": "Curated output-protein form for primary-backed CCND1/cyclin-D1 protein measurements; this form does not assert secretion or a universal upstream transcriptional mechanism.",
     },
     {
+        "node_id": "NODE08673",
+        "canonical_name": "ZMAT3",
+        "notes": "Curated output-protein form for primary-backed ZMAT3/Wig-1 protein induction measurements; this form does not assert secretion or a complete p53-to-protein mechanism.",
+    },
+    {
+        "node_id": "NODE08190",
+        "canonical_name": "TREM2",
+        "notes": "Curated output-protein form for primary-backed TREM2 protein immunostaining or quantification; this form does not assert secretion, ligand binding, or a complete receptor-signaling mechanism.",
+    },
+    {
         "node_id": "NODE03873",
         "canonical_name": "IL-6",
         "notes": "Curated output-protein form for primary-backed measured IL-6 release in cytokine-output and cross-cell conditioned-medium contexts; this form does not assert IL6 transcription, secretion mechanism, or receptor activation.",

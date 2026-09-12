@@ -115,6 +115,8 @@ OUTPUT_PRODUCT_FORM_ALIASES = {
     "neurocan": "ncan/neurocan",
     "ng2": "cspg4/ng2",
     "cfos": "fos",
+    "fmr1": "fmrp",
+    "trem2trem2": "trem2",
     "acsl4": "acsl4",
     "cyp11b2": "cyp11b2",
     "nlrp3": "nlrp3",
@@ -150,6 +152,9 @@ CURATED_OUTPUT_PRODUCT_PATTERNS = {
     "nedd4lshort": r"\bnedd4l[- ]?short\b",
     "itgb3": r"\b(?:itgb3|integrin[- ]?beta[- ]?3)\b",
     "ccnd1": r"\b(?:ccnd1|cyclin[- ]?d1)\b",
+    "fmr1": r"\b(?:fmr1|fmrp)\b",
+    "trem2trem2": r"\btrem2\b",
+    "zmat3": r"\b(?:zmat3|wig[- ]?1)\b",
 }
 PRODUCT_PATTERNS = (
     ("Adp", re.compile(r"\bADP\b", re.I)),
@@ -607,7 +612,7 @@ def enrich_validated_product_forms(
     release_or_protein = re.compile(
         r"release|released|secretion|secreted|supernatant|protein\s+(?:output|measurement|level)|"
         r"protein\s+(?:assays?|readouts?|expression|levels?)|"
-        r"(?:qPCR/|(?:mRNA|RNA)\s*/\s*|[,;]\s*|\band\s+)protein\b|"
+        r"(?:qPCR/|(?:mRNA|RNA|transcript)\s*/\s*|[,;]\s*|\band\s+)protein\b|"
         r"\b(?:c[- ]?fos|fos)\s+protein\b|"
         r"ELISA|immunoblot|western\s+blot|immunofluorescence|"
         r"immunohistochemistry|immunostain(?:ing)?|mature\s+IL[- ]?1\s*(?:beta|β|b)\s+output",
