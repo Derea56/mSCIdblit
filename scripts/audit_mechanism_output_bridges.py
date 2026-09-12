@@ -109,6 +109,8 @@ OUTPUT_PRODUCT_FORM_ALIASES = {
     "acan": "acan/aggrecan",
     "ncan": "ncan/neurocan",
     "magmag": "mag/myelin-associated glycoprotein",
+    "mifmif": "mif",
+    "mifmacrophagemigrationinhibitoryfactor": "mif",
     "acsl4": "acsl4",
     "cyp11b2": "cyp11b2",
     "nlrp3": "nlrp3",
@@ -555,10 +557,11 @@ def enrich_validated_product_forms(
         ("PROTEIN:NODE01179", "OUTPUT_PROTEIN:NODE01179", r"\bCCN3\b|\bNOV\b"),
         ("PROTEIN:NODE04561", "OUTPUT_PROTEIN:NODE04561", r"\bAPPs?770\b|\bsecreted\s+APP\b"),
         ("PROTEIN:NODE06675", "OUTPUT_PROTEIN:NODE06675", r"\bPTN\b|\bpleiotrophin\b"),
+        ("PROTEIN:NODE05282", "OUTPUT_PROTEIN:NODE05282", r"\bMIF\b|\bmacrophage\s+migration\s+inhibitory\s+factor\b"),
     )
     release_or_protein = re.compile(
         r"release|released|secretion|secreted|supernatant|protein\s+(?:output|measurement|level)|"
-        r"ELISA|immunoblot|western\s+blot|mature\s+IL[- ]?1\s*(?:beta|β|b)\s+output",
+        r"protein\s+assays?|ELISA|immunoblot|western\s+blot|mature\s+IL[- ]?1\s*(?:beta|β|b)\s+output",
         re.I,
     )
     evidence_text = " ".join(
