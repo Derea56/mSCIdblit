@@ -282,6 +282,11 @@ CURATED_OUTPUT_PRODUCT_FORMS = (
         "notes": "Curated output-protein form for primary-backed measured MIF protein production in astrocyte and other cellular-output contexts; this form does not assert transcription, secretion mechanism, receptor activation, or a universal intracellular route.",
     },
     {
+        "node_id": "NODE01421",
+        "canonical_name": "CDH2/N-cadherin",
+        "notes": "Curated output-protein form for primary-backed N-cadherin protein or histologic marker measurements in adhesion and astrocyte-state contexts; this form does not assert secretion, a unidirectional ligand role, or a complete transcriptional mechanism.",
+    },
+    {
         "node_id": "NODE03873",
         "canonical_name": "IL-6",
         "notes": "Curated output-protein form for primary-backed measured IL-6 release in cytokine-output and cross-cell conditioned-medium contexts; this form does not assert IL6 transcription, secretion mechanism, or receptor activation.",
