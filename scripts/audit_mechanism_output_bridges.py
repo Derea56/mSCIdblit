@@ -629,6 +629,19 @@ def enrich_validated_product_forms(
         row.get(field, "")
         for field in ("output_label", "output_observation", "assay_or_perturbation")
     )
+    output_label = row.get("output_label", "") or row.get("target_or_program_label", "")
+    # The target-gene/ligand node ``Il6`` shares its label with the canonical
+    # ``IL-6`` ligand node.  Resolve only the explicit microglial release
+    # observation to the target-gene node's measured protein form; a generic
+    # ``IL6 production`` row may be transcript-only or otherwise ambiguous
+    # and must remain untyped.
+    if (
+        row.get("output_product_labels", "").strip() == "Il6"
+        and re.search(r"\bmicroglial\s+IL[- ]?6\s+release\b", output_label, re.I)
+        and re.search(r"\bIL[- ]?6\s+release\b", evidence_text, re.I)
+        and "OUTPUT_PROTEIN:NODE04051" not in form_ids
+    ):
+        form_ids.append("OUTPUT_PROTEIN:NODE04051")
     if release_or_protein.search(evidence_text):
         for ligand_form_id, output_form_id, product_pattern in cytokine_rules:
             if (
