@@ -191,6 +191,46 @@ CURATED_OUTPUT_PRODUCT_FORMS = (
         "canonical_name": "UCHL1/UCH-L1",
         "notes": "Curated output-protein form for primary-backed UCHL1 protein measurements; this form does not assert secretion or ligand activity.",
     },
+    {
+        "node_key": "lama5",
+        "canonical_name": "LAMA5",
+        "notes": "Curated output-protein form for primary-backed LAMA5 RNA/protein output measurements; this form does not assert secretion or ligand activity.",
+    },
+    {
+        "node_key": "col1a2",
+        "canonical_name": "COL1A2",
+        "notes": "Curated output-protein form for primary-backed collagen-I production/expression measurements; this form does not assert mature fibril assembly or secretion.",
+    },
+    {
+        "node_key": "col3a1",
+        "canonical_name": "COL3A1",
+        "notes": "Curated output-protein form for primary-backed collagen-III production/expression measurements; this form does not assert mature fibril assembly or secretion.",
+    },
+    {
+        "node_key": "mmp2",
+        "canonical_name": "MMP2",
+        "notes": "Curated output-protein form for primary-backed MMP2 activity/expression measurements; this form does not assert a particular precursor-processing or secretion step.",
+    },
+    {
+        "node_key": "mmp9/matrix metalloproteinase-9",
+        "canonical_name": "MMP9",
+        "notes": "Curated output-protein form for primary-backed MMP9 activity/expression measurements; this form does not assert a particular precursor-processing or secretion step.",
+    },
+    {
+        "node_key": "sdc1 ectodomain; itga2:itgb1 context",
+        "canonical_name": "SDC1 ectodomain",
+        "notes": "Curated output-protein form for primary-backed shed SDC1 ectodomain measurements; this is a cleavage/shedding product, not de novo SDC1 synthesis or a ligand-role assertion.",
+    },
+    {
+        "node_key": "acan/aggrecan",
+        "canonical_name": "ACAN/aggrecan",
+        "notes": "Curated output-protein form for primary-backed aggrecan/ECM output measurements; this form does not assert a complete transcript-to-proteoglycan-processing or secretion sequence.",
+    },
+    {
+        "node_key": "ncan",
+        "canonical_name": "NCAN/neurocan",
+        "notes": "Curated output-protein form for primary-backed neurocan/ECM output measurements; this form does not assert a complete transcript-to-proteoglycan-processing or secretion sequence.",
+    },
 )
 
 
