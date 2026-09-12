@@ -121,7 +121,6 @@ NON_PROTEIN_PRODUCT_KEYS = {
     "atp",
     "gaba",
     "glutamate",
-    "insulin",
     "nitricoxide",
     "pge2",
     "reactiveoxygenspecies",
@@ -535,6 +534,16 @@ def enrich_validated_product_forms(
         ("PROTEIN:NODE08531", "OUTPUT_PROTEIN:NODE08531", r"\bVWF\b|\bvWF\b"),
         ("PROTEIN:NODE05790", "OUTPUT_PROTEIN:NODE05790", r"\bNPTX1\b|\bNP1\b"),
         ("PROTEIN:NODE03934", "OUTPUT_PROTEIN:NODE03934", r"\bIL[- ]?18\b|\bIL18\b"),
+        ("PROTEIN:NODE03586", "OUTPUT_PROTEIN:NODE03586", r"\bHGF\b|\bHepatocyte\s+growth\s+factor\b"),
+        ("PROTEIN:NODE02652", "OUTPUT_PROTEIN:NODE02652", r"\bFGF[- ]?10\b|\bFGF10\b"),
+        ("PROTEIN:NODE07871", "OUTPUT_PROTEIN:NODE07871", r"\bTGF[- ]?beta3\b|\bTGFB3\b"),
+        ("PROTEIN:NODE07330", "OUTPUT_PROTEIN:NODE07330", r"\bSHH\b|\bSonic\s+hedgehog\b"),
+        ("PROTEIN:NODE00089", "OUTPUT_PROTEIN:NODE00089", r"\bACTH\b|\badrenocorticotropic\b"),
+        ("PROTEIN:NODE06589", "OUTPUT_PROTEIN:NODE06589", r"\bprolactin\b"),
+        ("PROTEIN:NODE04102", "OUTPUT_PROTEIN:NODE04102", r"\binsulin\b"),
+        ("PROTEIN:NODE01179", "OUTPUT_PROTEIN:NODE01179", r"\bCCN3\b|\bNOV\b"),
+        ("PROTEIN:NODE04561", "OUTPUT_PROTEIN:NODE04561", r"\bAPPs?770\b|\bsecreted\s+APP\b"),
+        ("PROTEIN:NODE06675", "OUTPUT_PROTEIN:NODE06675", r"\bPTN\b|\bpleiotrophin\b"),
     )
     release_or_protein = re.compile(
         r"release|released|secretion|secreted|supernatant|protein\s+(?:output|measurement|level)|"
