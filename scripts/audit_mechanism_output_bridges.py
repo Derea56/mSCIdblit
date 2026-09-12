@@ -657,6 +657,18 @@ def enrich_validated_product_forms(
                 )
             ):
                 form_ids.append(output_ids[0])
+        # Some ECM bridges retain a broad CSPG label while the primary
+        # observation names a specific secreted product.  Preserve the broad
+        # label and add only the already-curated neurocan output form when
+        # neurocan is explicitly described as secreted; do not infer a
+        # transcript-to-protein transition from generic CSPG expression.
+        if (
+            "OUTPUT_PROTEIN:NODE05473" not in form_ids
+            and re.search(r"\bcspg\b", row.get("output_product_labels", ""), re.I)
+            and re.search(r"\bneurocan\b", evidence_text, re.I)
+            and re.search(r"secret(?:ed|ion|e)\b", evidence_text, re.I)
+        ):
+            form_ids.append("OUTPUT_PROTEIN:NODE05473")
     if form_ids:
         row["product_form_ids"] = ";".join(dict.fromkeys(form_ids))
 
