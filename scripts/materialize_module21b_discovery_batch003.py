@@ -72,7 +72,9 @@ def species(model: str) -> str:
     return "; ".join(found) if found else "as stated in primary model/assay"
 
 
-def compartment(layer: str) -> str:
+def compartment(layer: str, target_entity: str = "") -> str:
+    if re.search(r"\bgene\b", target_entity.lower()):
+        return "nucleus; gene promoter/enhancer regulatory region"
     if "ligand_receptor_binding_or_activation" in layer:
         return "extracellular ligand to plasma-membrane receptor or receptor complex"
     if "receptor_proximal_or_pathway" in layer:
@@ -146,7 +148,7 @@ def main() -> int:
             "target_entity": row["candidate_target_entity"], "pathway_name": row["pathway_name"], "evidence_layer": layer,
             "source_a_edge_id": "", "edge_status": "validated_primary_exact_layer",
             "context_scope": "review-guided primary evidence; exact topology/layer bounded",
-            "cell_type_context": row["primary_model_assay"], "compartment_context": compartment(layer),
+            "cell_type_context": row["primary_model_assay"], "compartment_context": compartment(layer, row["candidate_target_entity"]),
             "species_context": sp, "injury_context": "no SCI transfer inferred; primary model context only",
             "confidence_tier": "high", "export_priority": "medium", "exportable": "true", "consolidation_note": note,
         })
