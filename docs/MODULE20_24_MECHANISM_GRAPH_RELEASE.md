@@ -13,8 +13,10 @@ It contains the machine-readable full-chain audit in
 The current bundle has 10,381 nodes, 13,085 traversable edges, 13,361 linked
 source rows, 15,712 node-role assignments, 10,500 pathway summaries, and 96
 boundary groups. The full-chain audit reports 90 evidence-backed edge-chain
-instances and 57 unique four-node topologies. See the v1.7.0 release note for
-the complete counts and interpretation boundaries.
+instances and 57 unique four-node topologies, while retaining 5,947
+evidence-backed partial path fragments with explicit missing-link annotations.
+See the v1.7.0 release note for the complete counts and interpretation
+boundaries.
 
 Historical v1.6.0 release identifier: `module20_24_mechanism_graph:2026-09-10`
 

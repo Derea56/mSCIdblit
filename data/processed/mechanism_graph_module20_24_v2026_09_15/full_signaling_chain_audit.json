@@ -22,8 +22,14 @@
     "unique_four_node_topologies": 57,
     "same_pathway_edge_chain_instances": 0
   },
-  "distinct_receptor_transcription_factor_pairs": 14,
-  "distinct_ligand_receptor_transcription_factor_routes": 18,
+  "partial_chain_counts": {
+    "ligand_to_receptor;receptor_to_transcription_factor": 64,
+    "receptor_to_transcription_factor;transcription_factor_to_target_gene": 5863,
+    "transcription_factor_to_target_gene": 20
+  },
+  "retained_chain_record_count": 6037,
+  "distinct_receptor_transcription_factor_pairs": 2386,
+  "distinct_ligand_receptor_transcription_factor_routes": 5726,
   "module_sequences": {
     "21B>21B>22B": 90
   },
@@ -40,11 +46,24 @@
       "unique_four_node_topologies": 1041,
       "same_pathway_edge_chain_instances": 0
     },
+    "prior_partial_chain_counts": {
+      "ligand_to_receptor;receptor_to_transcription_factor": 4662,
+      "ligand_to_receptor": 12,
+      "receptor_to_transcription_factor;transcription_factor_to_target_gene": 1607
+    },
+    "prior_retained_chain_record_count": 7336,
     "delta": {
       "edge_chain_instances": -965,
       "unique_edge_chains": -965,
       "unique_four_node_topologies": -984,
       "same_pathway_edge_chain_instances": 0
-    }
+    },
+    "partial_delta": {
+      "ligand_to_receptor;receptor_to_transcription_factor": -4598,
+      "transcription_factor_to_target_gene": 20,
+      "receptor_to_transcription_factor;transcription_factor_to_target_gene": 4256,
+      "ligand_to_receptor": -12
+    },
+    "retained_chain_record_delta": -1299
   }
 }
