@@ -46,6 +46,26 @@ CHAIN_FIELDS = [
     "module_sequence",
     "evidence_ids",
 ]
+POSSIBLE_PATH_FIELDS = [
+    "possible_path_id",
+    "path_status",
+    "path_expression",
+    "missing_link",
+    "ligand_node_id",
+    "ligand_label",
+    "ligand_receptor_edge_id",
+    "receptor_node_id",
+    "receptor_label",
+    "unknown_relay_label",
+    "target_gene_node_id",
+    "target_gene_label",
+    "target_output_form_id",
+    "bridge_id",
+    "pathway_name",
+    "evidence_ids",
+    "causal_status",
+    "traversal_status",
+]
 
 
 def parse_args() -> argparse.Namespace:
@@ -71,6 +91,19 @@ def write_tsv(path: Path, rows: list[dict[str, object]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=CHAIN_FIELDS, delimiter="\t", lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def write_possible_paths(path: Path, rows: list[dict[str, object]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=POSSIBLE_PATH_FIELDS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(rows)
 
@@ -264,12 +297,132 @@ def audit(bundle_dir: Path) -> tuple[list[dict[str, object]], dict[str, object]]
     return chain_rows, summary
 
 
+def audit_possible_paths(bundle_dir: Path) -> tuple[list[dict[str, object]], dict[str, object]]:
+    """Retain conservative ligand-to-target hypotheses with an unknown relay."""
+    roles: dict[str, set[str]] = defaultdict(set)
+    for row in read_tsv(bundle_dir / "mechanism_node_roles.tsv"):
+        roles[row["node_id"]].add(row["role"])
+    nodes = {
+        row["node_id"]: row
+        for row in read_tsv(bundle_dir / "mechanism_nodes.tsv")
+    }
+    edges = {
+        row["edge_id"]: row
+        for row in read_tsv(bundle_dir / "mechanism_edges.tsv")
+    }
+    validated_path = bundle_dir / "mechanism_output_bridges_validated.tsv"
+    if not validated_path.exists():
+        return [], {
+            "possible_missing_relay_instances": 0,
+            "unique_possible_ligand_receptor_target_paths": 0,
+        }
+
+    rows: list[dict[str, object]] = []
+    for bridge in read_tsv(validated_path):
+        target_forms = []
+        for form_id in bridge.get("product_form_ids", "").split(";"):
+            if not form_id.startswith("OUTPUT_PROTEIN:"):
+                continue
+            target_node_id = form_id.split(":", 1)[1]
+            if "target_gene" in roles[target_node_id]:
+                target_forms.append((form_id, target_node_id))
+        for edge_id in bridge.get("source_edge_ids", "").split(";"):
+            edge = edges.get(edge_id)
+            if not edge:
+                continue
+            if (
+                edge["relation_type"] != "binds_receptor"
+                or "ligand" not in roles[edge["source_node_id"]]
+                or "receptor" not in roles[edge["target_node_id"]]
+            ):
+                continue
+            for form_id, target_node_id in target_forms:
+                evidence_ids = ";".join(dict.fromkeys(
+                    value
+                    for value in (
+                        edge.get("evidence_ids", ""),
+                        bridge.get("review_evidence_ids", ""),
+                    )
+                    for value in value.split(";")
+                    if value
+                ))
+                rows.append(
+                    {
+                        "possible_path_id": "",
+                        "path_status": "possible_missing_relay",
+                        "path_expression": "ligand>receptor>????>target_gene_expression",
+                        "missing_link": "receptor_to_transcription_factor_or_internal_relay",
+                        "ligand_node_id": edge["source_node_id"],
+                        "ligand_label": edge["source_label"],
+                        "ligand_receptor_edge_id": edge_id,
+                        "receptor_node_id": edge["target_node_id"],
+                        "receptor_label": edge["target_label"],
+                        "unknown_relay_label": "????",
+                        "target_gene_node_id": target_node_id,
+                        "target_gene_label": nodes[target_node_id]["canonical_name"],
+                        "target_output_form_id": form_id,
+                        "bridge_id": bridge["bridge_id"],
+                        "pathway_name": edge["pathway_name"],
+                        "evidence_ids": evidence_ids,
+                        "causal_status": "not_asserted",
+                        "traversal_status": "possible_path_not_traversable",
+                    }
+                )
+
+    rows.sort(key=lambda row: (
+        row["ligand_receptor_edge_id"],
+        row["target_gene_node_id"],
+        row["bridge_id"],
+    ))
+    for index, row in enumerate(rows, start=1):
+        row["possible_path_id"] = f"POSSIBLE:{index:05d}"
+    summary = {
+        "possible_missing_relay_instances": len(rows),
+        "unique_possible_ligand_receptor_target_paths": len({
+            (
+                row["ligand_receptor_edge_id"],
+                row["target_gene_node_id"],
+            )
+            for row in rows
+        }),
+    }
+    return rows, summary
+
+
+def update_bundle_metadata(
+    bundle_dir: Path,
+    possible_path: Path,
+    possible_count: int,
+) -> None:
+    """Register the hypothesis artifact without changing graph-edge counts."""
+    metadata_path = bundle_dir / "bundle_metadata.json"
+    if not metadata_path.exists():
+        return
+    metadata = json.loads(metadata_path.read_text())
+    metadata.setdefault("files", {})["possible_signaling_paths"] = possible_path.name
+    metadata.setdefault("counts", {})["possible_signaling_paths"] = possible_count
+    policy = metadata.setdefault("graph_policy", {})
+    policy["possible_signaling_paths_are_hypotheses_only"] = True
+    policy["possible_signaling_paths_are_not_graph_edges"] = True
+    contract = metadata.setdefault("accuracy_contract", [])
+    statement = (
+        "Possible signaling paths retain validated ligand-receptor and target-output "
+        "evidence with unknown relays; they are hypotheses, not causal graph edges."
+    )
+    if statement not in contract:
+        contract.append(statement)
+    metadata_path.write_text(json.dumps(metadata, indent=2) + "\n")
+
+
 def main() -> None:
     args = parse_args()
     bundle_dir = args.bundle_dir.resolve()
     output = (args.output or bundle_dir / "full_signaling_chain_audit.tsv").resolve()
     summary_path = (args.summary or bundle_dir / "full_signaling_chain_audit.json").resolve()
+    possible_output = bundle_dir / "mechanism_possible_signaling_paths.tsv"
     rows, summary = audit(bundle_dir)
+    possible_rows, possible_summary = audit_possible_paths(bundle_dir)
+    summary["possible_path_counts"] = possible_summary
     if args.compare_bundle:
         _, previous = audit(args.compare_bundle.resolve())
         current_counts = summary["full_chain_counts"]
@@ -294,6 +447,8 @@ def main() -> None:
             ),
         }
     write_tsv(output, rows)
+    write_possible_paths(possible_output, possible_rows)
+    update_bundle_metadata(bundle_dir, possible_output, len(possible_rows))
     summary_path.parent.mkdir(parents=True, exist_ok=True)
     summary_path.write_text(json.dumps(summary, indent=2) + "\n")
     print(json.dumps(summary["full_chain_counts"], sort_keys=True))

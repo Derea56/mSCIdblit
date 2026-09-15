@@ -8,13 +8,16 @@ Current release identifier: `module20_24_mechanism_graph:2026-09-15`
 
 Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_15/`.
 It contains the machine-readable full-chain audit in
-`full_signaling_chain_audit.tsv` and `full_signaling_chain_audit.json`.
+`full_signaling_chain_audit.tsv` and `full_signaling_chain_audit.json`, plus
+the possible-path layer in `mechanism_possible_signaling_paths.tsv`.
 
 The current bundle has 10,381 nodes, 13,085 traversable edges, 13,361 linked
 source rows, 15,712 node-role assignments, 10,500 pathway summaries, and 96
 boundary groups. The full-chain audit reports 90 evidence-backed edge-chain
 instances and 57 unique four-node topologies, while retaining 5,947
 evidence-backed partial path fragments with explicit missing-link annotations.
+Two strict possible missing-relay paths are also retained as non-causal
+hypotheses: `Ado>Adora2b>????>Vegfa`.
 See the v1.7.0 release note for the complete counts and interpretation
 boundaries.
 
