@@ -74,8 +74,18 @@ composition and role projection (including 51 transcription-factor-role and
 67 target-gene-role nodes versus 288 and 2,441 in v1.6.0). It should not be
 interpreted as a biological loss without first harmonizing those inputs.
 
+The audit retains incomplete, evidence-backed path fragments instead of
+dropping them. It contains 6,037 direct path records in total: 90 complete and
+5,947 partial. The partial records comprise 5,863 ligand–receptor fragments
+without a downstream receptor-to-TF link, 20 ligand–receptor-to-TF fragments
+without a TF-to-target-gene link, and 64 TF-to-target-gene fragments without
+the upstream ligand-to-receptor and receptor-to-TF links. Each partial row
+records its `chain_status=partial` and explicit `missing_steps`; it does not
+infer the missing mechanism.
+
 The machine-readable outputs are `full_signaling_chain_audit.tsv` and
-`full_signaling_chain_audit.json` in the release bundle.
+`full_signaling_chain_audit.json` in the release bundle. The TSV therefore
+contains both complete chains and retained partial fragments.
 
 ## Validation and reproducibility
 

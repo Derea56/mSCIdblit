@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit complete ligand-to-target signaling chains in a graph bundle.
+"""Audit complete and incomplete ligand-to-target signaling paths.
 
 The audit is deliberately narrower than generic graph reachability. A full
 chain is one exported, evidence-gated sequence with these role-compatible
@@ -26,6 +26,8 @@ TARGET_RELATIONS = {"induces_target_gene", "represses_target_gene", "regulates_t
 
 CHAIN_FIELDS = [
     "chain_id",
+    "chain_status",
+    "missing_steps",
     "ligand_node_id",
     "ligand_label",
     "ligand_receptor_edge_id",
@@ -112,46 +114,99 @@ def audit(bundle_dir: Path) -> tuple[list[dict[str, object]], dict[str, object]]
     for row in tf_target:
         tf_target_by_source[row["source_node_id"]].append(row)
 
-    raw_chains: list[tuple[dict[str, str], dict[str, str], dict[str, str]]] = []
-    for first in ligand_receptor:
-        for second in receptor_tf_by_source[first["target_node_id"]]:
-            for third in tf_target_by_source[second["target_node_id"]]:
-                raw_chains.append((first, second, third))
+    ligand_receptor_by_target: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in ligand_receptor:
+        ligand_receptor_by_target[row["target_node_id"]].append(row)
 
-    raw_chains.sort(key=lambda chain: tuple(edge["edge_id"] for edge in chain))
+    # Retain evidence-backed path fragments as well as complete chains.  A
+    # fragment is only emitted when an adjacent graph edge is absent; this
+    # does not infer a missing mechanism or turn the fragment into a causal
+    # edge.
+    raw_chains: list[tuple[dict[str, str] | None, dict[str, str] | None, dict[str, str] | None]] = []
+    for first in ligand_receptor:
+        seconds = receptor_tf_by_source[first["target_node_id"]]
+        if not seconds:
+            raw_chains.append((first, None, None))
+            continue
+        for second in seconds:
+            thirds = tf_target_by_source[second["target_node_id"]]
+            if thirds:
+                raw_chains.extend((first, second, third) for third in thirds)
+            else:
+                raw_chains.append((first, second, None))
+
+    receptor_nodes_with_ligand = set(ligand_receptor_by_target)
+    tf_nodes_with_receptor = {
+        row["target_node_id"] for row in receptor_tf
+    }
+    for second in receptor_tf:
+        if second["source_node_id"] not in receptor_nodes_with_ligand:
+            thirds = tf_target_by_source[second["target_node_id"]]
+            if thirds:
+                raw_chains.extend((None, second, third) for third in thirds)
+            else:
+                raw_chains.append((None, second, None))
+    for third in tf_target:
+        if third["source_node_id"] not in tf_nodes_with_receptor:
+            raw_chains.append((None, None, third))
+
+    def edge_sort_key(edge: dict[str, str] | None) -> str:
+        return edge["edge_id"] if edge else ""
+
+    raw_chains = list({
+        tuple(edge["edge_id"] if edge else "" for edge in chain): chain
+        for chain in raw_chains
+    }.values())
+    raw_chains.sort(key=lambda chain: tuple(edge_sort_key(edge) for edge in chain))
     chain_rows: list[dict[str, object]] = []
     for index, (first, second, third) in enumerate(raw_chains, start=1):
+        missing_steps = []
+        if first is None:
+            missing_steps.append("ligand_to_receptor")
+        if second is None:
+            missing_steps.append("receptor_to_transcription_factor")
+        if third is None:
+            missing_steps.append("transcription_factor_to_target_gene")
         evidence_ids = ";".join(
             dict.fromkeys(
                 value
                 for edge in (first, second, third)
+                if edge is not None
                 for value in edge.get("evidence_ids", "").split(";")
                 if value
             )
         )
+        first = first or {}
+        second = second or {}
+        third = third or {}
         chain_rows.append(
             {
                 "chain_id": f"CHAIN:{index:05d}",
-                "ligand_node_id": first["source_node_id"],
-                "ligand_label": first["source_label"],
-                "ligand_receptor_edge_id": first["edge_id"],
-                "ligand_receptor_pathway": first["pathway_name"],
-                "receptor_node_id": first["target_node_id"],
-                "receptor_label": first["target_label"],
-                "receptor_tf_edge_id": second["edge_id"],
-                "receptor_tf_pathway": second["pathway_name"],
-                "transcription_factor_node_id": second["target_node_id"],
-                "transcription_factor_label": second["target_label"],
-                "tf_target_edge_id": third["edge_id"],
-                "tf_target_pathway": third["pathway_name"],
-                "target_gene_node_id": third["target_node_id"],
-                "target_gene_label": third["target_label"],
-                "target_relation": third["relation_type"],
-                "module_sequence": ">".join(edge["module"] for edge in (first, second, third)),
+                "chain_status": "complete" if not missing_steps else "partial",
+                "missing_steps": ";".join(missing_steps),
+                "ligand_node_id": first.get("source_node_id", ""),
+                "ligand_label": first.get("source_label", ""),
+                "ligand_receptor_edge_id": first.get("edge_id", ""),
+                "ligand_receptor_pathway": first.get("pathway_name", ""),
+                "receptor_node_id": first.get("target_node_id", ""),
+                "receptor_label": first.get("target_label", ""),
+                "receptor_tf_edge_id": second.get("edge_id", ""),
+                "receptor_tf_pathway": second.get("pathway_name", ""),
+                "transcription_factor_node_id": second.get("target_node_id", ""),
+                "transcription_factor_label": second.get("target_label", ""),
+                "tf_target_edge_id": third.get("edge_id", ""),
+                "tf_target_pathway": third.get("pathway_name", ""),
+                "target_gene_node_id": third.get("target_node_id", ""),
+                "target_gene_label": third.get("target_label", ""),
+                "target_relation": third.get("relation_type", ""),
+                "module_sequence": ">".join(
+                    edge["module"] for edge in (first, second, third) if edge
+                ),
                 "evidence_ids": evidence_ids,
             }
         )
 
+    complete_rows = [row for row in chain_rows if row["chain_status"] == "complete"]
     unique_node_chains = {
         (
             row["ligand_node_id"],
@@ -159,14 +214,14 @@ def audit(bundle_dir: Path) -> tuple[list[dict[str, object]], dict[str, object]]
             row["transcription_factor_node_id"],
             row["target_gene_node_id"],
         )
-        for row in chain_rows
+        for row in complete_rows
     }
     unique_edge_chains = {
         (row["ligand_receptor_edge_id"], row["receptor_tf_edge_id"], row["tf_target_edge_id"])
-        for row in chain_rows
+        for row in complete_rows
     }
     same_pathway = [
-        row for row in chain_rows
+        row for row in complete_rows
         if row["ligand_receptor_pathway"] == row["receptor_tf_pathway"] == row["tf_target_pathway"]
     ]
     summary: dict[str, object] = {
@@ -184,11 +239,17 @@ def audit(bundle_dir: Path) -> tuple[list[dict[str, object]], dict[str, object]]
             "transcription_factor_target_gene": len(tf_target),
         },
         "full_chain_counts": {
-            "edge_chain_instances": len(chain_rows),
+            "edge_chain_instances": len(complete_rows),
             "unique_edge_chains": len(unique_edge_chains),
             "unique_four_node_topologies": len(unique_node_chains),
             "same_pathway_edge_chain_instances": len(same_pathway),
         },
+        "partial_chain_counts": dict(Counter(
+            row["missing_steps"]
+            for row in chain_rows
+            if row["chain_status"] == "partial"
+        )),
+        "retained_chain_record_count": len(chain_rows),
         "distinct_receptor_transcription_factor_pairs": len({
             (row["receptor_node_id"], row["transcription_factor_node_id"])
             for row in chain_rows
@@ -197,8 +258,8 @@ def audit(bundle_dir: Path) -> tuple[list[dict[str, object]], dict[str, object]]
             (row["ligand_node_id"], row["receptor_node_id"], row["transcription_factor_node_id"])
             for row in chain_rows
         }),
-        "module_sequences": dict(Counter(row["module_sequence"] for row in chain_rows)),
-        "target_relations_in_full_chains": dict(Counter(row["target_relation"] for row in chain_rows)),
+        "module_sequences": dict(Counter(row["module_sequence"] for row in complete_rows)),
+        "target_relations_in_full_chains": dict(Counter(row["target_relation"] for row in complete_rows)),
     }
     return chain_rows, summary
 
@@ -216,11 +277,21 @@ def main() -> None:
         summary["comparison"] = {
             "prior_bundle_dir": release_path(args.compare_bundle.resolve()),
             "prior_full_chain_counts": previous_counts,
+            "prior_partial_chain_counts": previous["partial_chain_counts"],
+            "prior_retained_chain_record_count": previous["retained_chain_record_count"],
             "delta": {
                 key: current_counts[key] - previous_counts[key]
                 for key in current_counts
                 if key in previous_counts
             },
+            "partial_delta": {
+                key: summary["partial_chain_counts"].get(key, 0) - previous["partial_chain_counts"].get(key, 0)
+                for key in set(summary["partial_chain_counts"]) | set(previous["partial_chain_counts"])
+            },
+            "retained_chain_record_delta": (
+                summary["retained_chain_record_count"]
+                - previous["retained_chain_record_count"]
+            ),
         }
     write_tsv(output, rows)
     summary_path.parent.mkdir(parents=True, exist_ok=True)
