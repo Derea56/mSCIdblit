@@ -87,6 +87,13 @@ The machine-readable outputs are `full_signaling_chain_audit.tsv` and
 `full_signaling_chain_audit.json` in the release bundle. The TSV therefore
 contains both complete chains and retained partial fragments.
 
+The bundle also contains `mechanism_possible_signaling_paths.tsv`. This
+hypothesis layer currently retains two strict
+`ligand>receptor>????>target_gene_expression` paths: Ado→Adora2b→????→Vegfa.
+Both have role-compatible ligand–receptor evidence and a validated target-gene
+output bridge. The unknown relay is explicitly not asserted and is not
+traversable as a causal edge.
+
 ## Validation and reproducibility
 
 The graph validator passed with zero errors for identifier uniqueness, node and
@@ -105,6 +112,10 @@ python3 scripts/audit_full_signaling_chains.py \
   --bundle-dir data/processed/mechanism_graph_module20_24_v2026_09_15 \
   --compare-bundle data/processed/mechanism_graph_module20_24_v2026_09_10
 ```
+
+The audit command writes both chain reports and updates the bundle manifest
+with the possible-path artifact and its count; it does not increase the
+traversable edge count.
 
 The bundle remains a conservative snapshot. Canonical database materialization,
 stable source-anchor resolution, and explicit intercellular continuation remain

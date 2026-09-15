@@ -15,7 +15,8 @@
     "entity_forms": 2990,
     "entity_transitions": 13,
     "output_bridge_candidates": 250,
-    "output_bridges_validated": 1074
+    "output_bridges_validated": 1074,
+    "possible_signaling_paths": 2
   },
   "checks": {
     "unique_node_ids": true,

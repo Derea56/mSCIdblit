@@ -107,6 +107,11 @@ def validate(bundle_dir: Path) -> dict[str, object]:
     validated_output_bridges: list[dict[str, str]] = []
     if validated_output_path.exists():
         validated_output_fields, validated_output_bridges = read_tsv(validated_output_path)
+    possible_path = bundle_dir / "mechanism_possible_signaling_paths.tsv"
+    possible_fields: list[str] = []
+    possible_paths: list[dict[str, str]] = []
+    if possible_path.exists():
+        possible_fields, possible_paths = read_tsv(possible_path)
     metadata = json.loads((bundle_dir / "bundle_metadata.json").read_text())
 
     expected_fields = {
@@ -163,6 +168,14 @@ def validate(bundle_dir: Path) -> dict[str, object]:
             "product_form_ids", "transition_ids", "validation_status", "causal_status",
             "traversal_status", "context_limitations",
         ],
+        "possible_signaling_paths": [
+            "possible_path_id", "path_status", "path_expression", "missing_link",
+            "ligand_node_id", "ligand_label", "ligand_receptor_edge_id",
+            "receptor_node_id", "receptor_label", "unknown_relay_label",
+            "target_gene_node_id", "target_gene_label", "target_output_form_id",
+            "bridge_id", "pathway_name", "evidence_ids", "causal_status",
+            "traversal_status",
+        ],
     }
     for label, actual, expected in (
         ("nodes", node_fields, expected_fields["nodes"]),
@@ -183,6 +196,11 @@ def validate(bundle_dir: Path) -> dict[str, object]:
             errors.append(
                 f"entity_transitions header mismatch: expected {expected_fields['entity_transitions']}, got {entity_transition_fields}"
             )
+    if possible_path.exists() and possible_fields != expected_fields["possible_signaling_paths"]:
+        errors.append(
+            "possible_signaling_paths header mismatch: "
+            f"expected {expected_fields['possible_signaling_paths']}, got {possible_fields}"
+        )
 
     node_ids = [row["node_id"] for row in nodes]
     role_keys = [(row["node_id"], row["role"]) for row in node_roles]
@@ -207,6 +225,9 @@ def validate(bundle_dir: Path) -> dict[str, object]:
 
     node_id_set = set(node_ids)
     edge_id_set = set(edge_ids)
+    roles_by_node: dict[str, set[str]] = defaultdict(set)
+    for row in node_roles:
+        roles_by_node[row["node_id"]].add(row["role"])
     missing_nodes = sorted(
         {
             node_id
@@ -217,6 +238,50 @@ def validate(bundle_dir: Path) -> dict[str, object]:
     )
     if missing_nodes:
         errors.append(f"edges reference missing nodes: {missing_nodes[:5]}")
+
+    if possible_path.exists():
+        possible_ids = [row["possible_path_id"] for row in possible_paths]
+        if duplicates(possible_ids):
+            errors.append(f"duplicate possible signaling path IDs: {duplicates(possible_ids)[:5]}")
+        missing_possible_edges = sorted({
+            row["ligand_receptor_edge_id"]
+            for row in possible_paths
+            if row["ligand_receptor_edge_id"] not in edge_id_set
+        })
+        if missing_possible_edges:
+            errors.append(f"possible paths reference missing edges: {missing_possible_edges[:5]}")
+        missing_possible_nodes = sorted({
+            node_id
+            for row in possible_paths
+            for node_id in (
+                row["ligand_node_id"],
+                row["receptor_node_id"],
+                row["target_gene_node_id"],
+            )
+            if node_id not in node_id_set
+        })
+        if missing_possible_nodes:
+            errors.append(f"possible paths reference missing nodes: {missing_possible_nodes[:5]}")
+        invalid_possible_targets = sorted({
+            row["target_gene_node_id"]
+            for row in possible_paths
+            if "target_gene" not in roles_by_node.get(row["target_gene_node_id"], set())
+        })
+        if invalid_possible_targets:
+            errors.append(
+                "possible paths target nodes lack target_gene roles: "
+                f"{invalid_possible_targets[:5]}"
+            )
+        invalid_possible_status = [
+            row["possible_path_id"]
+            for row in possible_paths
+            if row["path_status"] != "possible_missing_relay"
+            or row["unknown_relay_label"] != "????"
+            or row["causal_status"] != "not_asserted"
+            or row["traversal_status"] != "possible_path_not_traversable"
+        ]
+        if invalid_possible_status:
+            errors.append(f"possible paths are not explicitly non-causal: {invalid_possible_status[:5]}")
 
     if entity_forms_path.exists() and entity_transitions_path.exists():
         form_ids = [row["entity_form_id"] for row in entity_forms]
@@ -269,7 +334,7 @@ def validate(bundle_dir: Path) -> dict[str, object]:
                 for row in output_bridge_candidates
                 if row["review_source_namespace"] not in {
                     "module21a", "module22a", "module21b_edge_register",
-                    "module23b_edge_register", "module24b_edge_register",
+                    "module22b_edge_register", "module23b_edge_register", "module24b_edge_register",
                 }
             }
         )
@@ -514,6 +579,8 @@ def validate(bundle_dir: Path) -> dict[str, object]:
         actual_counts["output_bridge_candidates"] = len(output_bridge_candidates)
     if validated_output_path.exists():
         actual_counts["output_bridges_validated"] = len(validated_output_bridges)
+    if possible_path.exists():
+        actual_counts["possible_signaling_paths"] = len(possible_paths)
     for key, actual in actual_counts.items():
         if metadata_counts.get(key) != actual:
             errors.append(f"metadata count mismatch for {key}: metadata={metadata_counts.get(key)} actual={actual}")

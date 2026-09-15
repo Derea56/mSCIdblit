@@ -38,6 +38,10 @@
     "represses_target_gene": 9,
     "regulates_target_gene": 16
   },
+  "possible_path_counts": {
+    "possible_missing_relay_instances": 2,
+    "unique_possible_ligand_receptor_target_paths": 1
+  },
   "comparison": {
     "prior_bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_10",
     "prior_full_chain_counts": {
@@ -59,10 +63,10 @@
       "same_pathway_edge_chain_instances": 0
     },
     "partial_delta": {
-      "ligand_to_receptor;receptor_to_transcription_factor": -4598,
       "transcription_factor_to_target_gene": 20,
-      "receptor_to_transcription_factor;transcription_factor_to_target_gene": 4256,
-      "ligand_to_receptor": -12
+      "ligand_to_receptor": -12,
+      "ligand_to_receptor;receptor_to_transcription_factor": -4598,
+      "receptor_to_transcription_factor;transcription_factor_to_target_gene": 4256
     },
     "retained_chain_record_delta": -1299
   }
