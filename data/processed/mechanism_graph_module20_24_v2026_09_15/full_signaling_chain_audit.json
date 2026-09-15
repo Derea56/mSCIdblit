@@ -1,0 +1,50 @@
+{
+  "bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_15",
+  "definition": {
+    "step_1": "ligand-role source --binds_receptor--> receptor-role target",
+    "step_2": "receptor-role source --any exported relay--> transcription_factor-role target",
+    "step_3": "transcription_factor-role source --induces/represses/regulates_target_gene--> target_gene-role target",
+    "pathway_label_requirement": "none; pathway labels may differ across module namespaces",
+    "excluded": [
+      "mechanism_output_bridge_candidates.tsv",
+      "mechanism_output_bridges_validated.tsv",
+      "mechanism_entity_transitions.tsv"
+    ]
+  },
+  "step_edge_counts": {
+    "ligand_receptor": 5894,
+    "receptor_transcription_factor": 17,
+    "transcription_factor_target_gene": 78
+  },
+  "full_chain_counts": {
+    "edge_chain_instances": 90,
+    "unique_edge_chains": 90,
+    "unique_four_node_topologies": 57,
+    "same_pathway_edge_chain_instances": 0
+  },
+  "distinct_receptor_transcription_factor_pairs": 14,
+  "distinct_ligand_receptor_transcription_factor_routes": 18,
+  "module_sequences": {
+    "21B>21B>22B": 90
+  },
+  "target_relations_in_full_chains": {
+    "induces_target_gene": 65,
+    "represses_target_gene": 9,
+    "regulates_target_gene": 16
+  },
+  "comparison": {
+    "prior_bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_10",
+    "prior_full_chain_counts": {
+      "edge_chain_instances": 1055,
+      "unique_edge_chains": 1055,
+      "unique_four_node_topologies": 1041,
+      "same_pathway_edge_chain_instances": 0
+    },
+    "delta": {
+      "edge_chain_instances": -965,
+      "unique_edge_chains": -965,
+      "unique_four_node_topologies": -984,
+      "same_pathway_edge_chain_instances": 0
+    }
+  }
+}
