@@ -1,17 +1,31 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.6.0.md`](RELEASE_v1.6.0.md). The v1.5.0 snapshot below is
-retained as the implementation and historical baseline reference.
+[`RELEASE_v1.7.0.md`](RELEASE_v1.7.0.md). The v1.6.0 and v1.5.0 snapshots below
+are retained as implementation and historical baseline references.
 
-Release identifier: `module20_24_mechanism_graph:2026-09-10`
+Current release identifier: `module20_24_mechanism_graph:2026-09-15`
+
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_15/`.
+It contains the machine-readable full-chain audit in
+`full_signaling_chain_audit.tsv` and `full_signaling_chain_audit.json`.
+
+The current bundle has 10,381 nodes, 13,085 traversable edges, 13,361 linked
+source rows, 15,712 node-role assignments, 10,500 pathway summaries, and 96
+boundary groups. The full-chain audit reports 90 evidence-backed edge-chain
+instances and 57 unique four-node topologies. See the v1.7.0 release note for
+the complete counts and interpretation boundaries.
+
+Historical v1.6.0 release identifier: `module20_24_mechanism_graph:2026-09-10`
+
+## Historical v1.6.0 reference
 
 This is a conservative, register-backed mechanism graph snapshot for mSCIdblit
 Modules 20B–24B. It is designed for inspection and simulator import while
 preserving the evidence gate: only rows marked `exportable=true` in the
 validated edge registers become traversable graph edges.
 
-The release now emits the required mSCS mechanism-bundle columns and has been
+The v1.6.0 release emitted the required mSCS mechanism-bundle columns and was
 validated by running mSCS's `import_mechanism_bundle.py` into a temporary active
 release directory. The mSCS checkout was not modified by that verification.
 
@@ -77,7 +91,7 @@ The validator checks:
 - canonical role-edge compatibility (`binds_receptor` for ligand-receptor
   edges and the three target-gene relation types for TF-target edges).
 
-The current release passes with zero errors; the validator reports the
+The historical v1.6.0 release passed with zero errors; the validator reported the
 local-only/unresolved locator count as a warning, not as a graph-integrity
 failure.
 

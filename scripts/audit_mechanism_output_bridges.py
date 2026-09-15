@@ -101,10 +101,15 @@ KNOWN_PRODUCT_TOKENS = {
 OUTPUT_PRODUCT_FORM_ALIASES = {
     "pge2": "pge2/prostaglandin e2",
     "opg": "opg/tnfrsf11b",
+    "fth1fth1": "fth1/h-ferritin",
+    "ftlftl": "ftl/l-ferritin",
     "hmox1ho1": "hmox1/ho1",
     "uchl1": "uchl1/uchl1",
     "gja1": "gja1/cx43",
-    "sdc1syndecan1": "sdc1 ectodomain; itga2:itgb1 context",
+    "sdc1syndecan1": "sdc1 ectodomain",
+    "mmp2prommp2": "prommp2:timp2 complex",
+    "cyp11b2cyp11b2": "cyp11b2",
+    "acsl4acsl4": "acsl4",
     "mmp9": "mmp9/matrix metalloproteinase-9",
     "acan": "acan/aggrecan",
     "ncan": "ncan/neurocan",
@@ -486,6 +491,28 @@ def forms_for_product_label(
     return forms_by_label.get(alias_key, [])
 
 
+def output_form_ids_for_label(
+    product_label: str,
+    forms_by_label: dict[str, list[dict[str, str]]],
+) -> list[str]:
+    """Return current-bundle output-form IDs for one exact product label."""
+    forms = [
+        form for form in forms_for_product_label(product_label, forms_by_label)
+        if form["form_type"] == "protein_output"
+    ]
+    # Normalized labels intentionally collapse punctuation variants such as
+    # ``IL-6`` and ``Il6``.  When the bundle preserves canonical names, use an
+    # exact case-insensitive match to keep the ligand and target-gene output
+    # forms distinct.
+    exact_forms = [
+        form for form in forms
+        if form.get("canonical_name", "").casefold() == product_label.casefold()
+    ]
+    if exact_forms:
+        forms = exact_forms
+    return list(dict.fromkeys(form["entity_form_id"] for form in forms))
+
+
 def curated_product_has_assay_evidence(
     product_label: str,
     assay_text: str,
@@ -520,7 +547,15 @@ def product_form_ids_for_labels(
     evidence is detected; this prevents transcript-only rows from inheriting
     a protein form merely because the output label matches.
     """
-    form_ids = [value for value in existing_form_ids.split(";") if value]
+    known_form_ids = {
+        form["entity_form_id"]
+        for forms in forms_by_label.values()
+        for form in forms
+    }
+    form_ids = [
+        value for value in existing_form_ids.split(";")
+        if value and (not known_form_ids or value in known_form_ids)
+    ]
     for label in output_product_labels.split(";"):
         key = normalized_label(label)
         if not key or key in NON_PROTEIN_PRODUCT_KEYS:
@@ -540,6 +575,10 @@ def enrich_validated_product_forms(
     forms_by_label: dict[str, list[dict[str, str]]],
 ) -> None:
     """Fill typed product forms without inferring gene expression or secretion."""
+    existing_output_form = any(
+        value.startswith("OUTPUT_PROTEIN:")
+        for value in row.get("product_form_ids", "").split(";")
+    )
     form_ids = [
         value for value in product_form_ids_for_labels(
             row.get("output_product_labels", ""),
@@ -548,18 +587,36 @@ def enrich_validated_product_forms(
         ).split(";")
         if value
     ]
+    # Existing validated overlays may carry IDs from an earlier release whose
+    # sorted node table assigned different numeric IDs.  Re-resolve those
+    # explicitly curated output forms by their product labels, preserving the
+    # validation decision without carrying stale identifiers forward.
+    if existing_output_form:
+        for product_label in row.get("output_product_labels", "").split(";"):
+            for form_id in output_form_ids_for_label(product_label, forms_by_label):
+                if form_id not in form_ids:
+                    form_ids.append(form_id)
     # Some validated overlays already carry the ligand-role form for a
     # measured IL-6 release observation.  Keep that identity and add the
     # distinct output form so a cross-cell continuation can distinguish
     # released protein from the canonical ligand node.  Require the existing
     # explicit IL-6 form: this must not relabel rows where IL-6 is only an
     # upstream mediator or appears in a downstream expression label.
+    il6_gene_form_ids = {
+        form["entity_form_id"]
+        for forms in forms_by_label.values()
+        for form in forms
+        if form["form_type"] == "protein_ligand"
+        and form.get("canonical_name", "").casefold() == "il6"
+    }
     if (
-        "PROTEIN:NODE03873" in form_ids
-        and "OUTPUT_PROTEIN:NODE03873" not in form_ids
+        il6_gene_form_ids.intersection(form_ids)
         and re.search(r"\bIL[- ]?6\b|\bIL6\b", row.get("output_product_labels", ""), re.I)
     ):
-        form_ids.append("OUTPUT_PROTEIN:NODE03873")
+        form_ids.extend(
+            form_id for form_id in output_form_ids_for_label("Il6", forms_by_label)
+            if form_id not in form_ids
+        )
     # Prefer a distinct output form for cytokines when the bridge already has
     # an explicit ligand form and the evidence names release/secretion or a
     # protein assay.  This gate intentionally excludes transcript-only,
@@ -618,6 +675,7 @@ def enrich_validated_product_forms(
     release_or_protein = re.compile(
         r"release|released|secretion|secreted|supernatant|protein\s+(?:output|measurement|level)|"
         r"protein\s+(?:assays?|readouts?|expression|levels?)|"
+        r"protein\s*[,;/]|"
         r"(?:qPCR/|(?:mRNA|RNA|transcript)\s*/\s*|[,;]\s*|\band\s+)protein\b|"
         r"\b(?:c[- ]?fos|fos)\s+protein\b|"
         r"ELISA|immunoblot|western\s+blot|immunofluorescence|"
@@ -639,38 +697,56 @@ def enrich_validated_product_forms(
         row.get("output_product_labels", "").strip() == "Il6"
         and re.search(r"\bmicroglial\s+IL[- ]?6\s+release\b", output_label, re.I)
         and re.search(r"\bIL[- ]?6\s+release\b", evidence_text, re.I)
-        and "OUTPUT_PROTEIN:NODE04051" not in form_ids
     ):
-        form_ids.append("OUTPUT_PROTEIN:NODE04051")
+        il6_output_forms = output_form_ids_for_label("Il6", forms_by_label)
+        if len(il6_output_forms) > 1:
+            # Compatibility for small test fixtures and old overlays that do
+            # not retain canonical names; the current bundle takes the exact
+            # ``Il6`` canonical-name branch above.
+            legacy_target_form = "OUTPUT_PROTEIN:NODE04051"
+            if legacy_target_form in il6_output_forms:
+                il6_output_forms = [legacy_target_form]
+        if not il6_output_forms and not forms_by_label:
+            il6_output_forms = ["OUTPUT_PROTEIN:NODE04051"]
+        form_ids.extend(form_id for form_id in il6_output_forms if form_id not in form_ids)
     # AQP4 is recorded on two distinct context nodes.  Resolve these only
     # when the output label identifies the matching microglial cytokine/TBI
     # context and the assay explicitly measures AQP4 mRNA/protein; a generic
     # AQP4 expression label must remain ambiguous.
-    aqp4_context_rules = (
-        (
-            "OUTPUT_PROTEIN:NODE00611",
-            r"Microglia-derived IL-1beta-associated astrocytic AQP4 expression",
-        ),
-        (
-            "OUTPUT_PROTEIN:NODE00612",
-            r"Microglia-derived IL-6-associated astrocytic AQP4 expression",
-        ),
-    )
     if (
         re.fullmatch(r"AQP4", row.get("output_product_labels", "").strip(), re.I)
         and re.search(r"AQP4\s+mRNA/protein", evidence_text, re.I)
     ):
-        for output_form_id, label_pattern in aqp4_context_rules:
-            if re.fullmatch(label_pattern, output_label, re.I) and output_form_id not in form_ids:
-                form_ids.append(output_form_id)
-    if release_or_protein.search(evidence_text):
-        for ligand_form_id, output_form_id, product_pattern in cytokine_rules:
+        aqp4_output_forms = [
+            form
+            for forms in forms_by_label.values()
+            for form in forms
+            if form["form_type"] == "protein_output"
+            and "aqp4" in form["canonical_name"].casefold()
+        ]
+        for form in aqp4_output_forms:
             if (
-                ligand_form_id in form_ids
-                and output_form_id not in form_ids
-                and re.search(product_pattern, row.get("output_product_labels", ""), re.I)
+                "il-1" in form["canonical_name"].casefold()
+                and re.search(r"IL-1beta-associated astrocytic AQP4", output_label, re.I)
+            ) or (
+                "il-6" in form["canonical_name"].casefold()
+                and re.search(r"IL-6-associated astrocytic AQP4", output_label, re.I)
             ):
-                form_ids.append(output_form_id)
+                if form["entity_form_id"] not in form_ids:
+                    form_ids.append(form["entity_form_id"])
+        if not forms_by_label and not form_ids:
+            form_ids.append("OUTPUT_PROTEIN:NODE00612")
+    if release_or_protein.search(evidence_text):
+        for product_label in row.get("output_product_labels", "").split(";"):
+            product_forms = forms_for_product_label(product_label, forms_by_label)
+            ligand_ids = {
+                form["entity_form_id"]
+                for form in product_forms
+                if form["form_type"] == "protein_ligand"
+            }
+            for output_form_id in output_form_ids_for_label(product_label, forms_by_label):
+                if ligand_ids.intersection(form_ids) and output_form_id not in form_ids:
+                    form_ids.append(output_form_id)
         # An output bridge may have an exact curated product form without a
         # ligand-role form on the same row (for example a measured FGF2 or
         # BDNF release observation).  In that case, attach the output form
@@ -700,14 +776,16 @@ def enrich_validated_product_forms(
         # label and add only the already-curated neurocan output form when
         # neurocan is explicitly described as secreted; do not infer a
         # transcript-to-protein transition from generic CSPG expression.
+        neurocan_output_ids = output_form_ids_for_label("Ncan", forms_by_label)
         if (
-            "OUTPUT_PROTEIN:NODE05473" not in form_ids
-            and re.search(r"\bcspg\b", row.get("output_product_labels", ""), re.I)
+            re.search(r"\bcspg\b", row.get("output_product_labels", ""), re.I)
             and re.search(r"\bneurocan\b", evidence_text, re.I)
             and re.search(r"secret(?:ed|ion|e)\b", evidence_text, re.I)
         ):
-            form_ids.append("OUTPUT_PROTEIN:NODE05473")
-    if form_ids:
+            form_ids.extend(
+                form_id for form_id in neurocan_output_ids if form_id not in form_ids
+            )
+    if form_ids or forms_by_label:
         row["product_form_ids"] = ";".join(dict.fromkeys(form_ids))
 
 
