@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -81,6 +82,39 @@ ROUTE_EVIDENCE_FIELDS = [
     "output_evidence_type", "evidence_ids", "causal_status", "traversal_status",
     "source_chain_id",
 ]
+DOWNSTREAM_CURATION_FIELDS = [
+    "queue_id", "module", "edge_id", "source_node_id", "source_label",
+    "target_node_id", "target_label", "graph_relation_type",
+    "register_relation_type", "pathway_name", "edge_semantic_class",
+    "lr_entry_assessment", "evidence_scope", "evidence_status",
+    "evidence_layer", "confidence_tier", "source_locator", "citation_note",
+    "evidence_summary", "limitations", "candidate_intracellular_node_id",
+    "candidate_intracellular_label", "text_matched_tf_node_ids",
+    "text_matched_tf_labels", "text_matched_target_gene_node_ids",
+    "text_matched_target_gene_labels", "candidate_output_terms",
+    "missing_layers", "curation_priority", "curation_status",
+    "do_not_infer_reason",
+]
+
+RECEPTOR_LABEL_MARKERS = (
+    "receptor", "gpcr", "frizzled", "integrin", "channel", "sensor",
+    "tlr", "fzd", "p2x", "p2y", "pdgfr", "vegfr", "csf1r", "csf3r",
+    "fgfr", "tgfbr", "bmpr", "epor", "prlr", "il17ra", "il17rc",
+    "notch", "plexin", "ntrk", "egfr", "igf1r", "insr", "robo",
+    "unc5", "eph", "nrp",
+)
+LIGAND_BINDING_MARKERS = ("bind", "engage", "agonist", "antagon", "use as")
+OUTPUT_TERM_PATTERNS = {
+    "reporter_readout": r"\breporter\b",
+    "gene_expression_or_transcription": r"\b(?:gene|mrna|transcription|expression)\b",
+    "protein_secretion_or_release": r"\b(?:secretion|secreted|release|released)\b",
+    "cellular_function_assay": r"\b(?:proliferation|migration|adhesion|outgrowth|survival|invasion)\b",
+    "phagocytosis_or_engulfment": r"\b(?:phagocytosis|engulfment|efferocytosis)\b",
+    "phosphorylation_or_activation_readout": r"\b(?:phosphorylation|phosphorylated|activation|activated)\b",
+    "translocation_or_localization_readout": r"\b(?:translocation|localization|localisation|nuclear)\b",
+    "cleavage_or_processing_readout": r"\b(?:cleavage|cleaved|processing)\b",
+    "second_messenger_readout": r"\b(?:camp|pip3|calcium|rac1|mapk|akt|erk)\b",
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -142,6 +176,186 @@ def release_path(path: Path) -> str:
         return str(path.relative_to(ROOT))
     except ValueError:
         return str(path)
+
+
+def has_layer(value: str, token: str) -> bool:
+    """Match one semicolon-delimited evidence layer without flattening it."""
+    return token.casefold() in {part.strip().casefold() for part in value.split(";")}
+
+
+def label_is_receptor_like(label: str) -> bool:
+    normalized = label.casefold()
+    return any(marker in normalized for marker in RECEPTOR_LABEL_MARKERS)
+
+
+def classify_lr_candidate(edge: dict[str, str], roles: dict[str, set[str]]) -> tuple[str, str]:
+    """Classify a role-derived LR row without rewriting the graph edge.
+
+    The normalized graph intentionally preserves a many-to-many role layer.
+    Consequently, a receptor can also appear as the source of a downstream
+    edge and be re-labeled as a ligand by the legacy canonical relation. This
+    classifier is conservative and exposes those topology conflicts for
+    curation instead of treating every ``binds_receptor`` row as an LR input.
+    """
+    source = edge.get("source_label", "")
+    target = edge.get("target_label", "")
+    relation = edge.get("register_relation_type", "") or edge.get("relation_type", "")
+    source_receptor_like = label_is_receptor_like(source) or "receptor" in roles.get(edge.get("source_node_id", ""), set())
+    target_receptor_like = label_is_receptor_like(target)
+    relation_lower = relation.casefold()
+    binding_like = any(marker in relation_lower for marker in LIGAND_BINDING_MARKERS)
+    downstream_layer = has_layer(edge.get("evidence_layer", ""), "downstream_or_functional")
+    proximal_layer = has_layer(edge.get("evidence_layer", ""), "receptor_proximal_or_pathway")
+
+    if source_receptor_like and not target_receptor_like and (downstream_layer or proximal_layer or not binding_like):
+        return "receptor_proximal_or_intracellular", "not_a_direct_ligand_receptor_pair"
+    if target_receptor_like and binding_like and not source_receptor_like:
+        return "likely_ligand_receptor", "explicit_binding_or_activation_to_receptor_like_target"
+    if binding_like and edge.get("compartment_context", "").casefold().startswith("extracellular") and not source_receptor_like:
+        return "likely_ligand_receptor", "extracellular_binding_or_activation_with_nonreceptor_source_label"
+    return "ambiguous_role_or_topology", "role-derived_relation_needs_manual_pair_resolution"
+
+
+def matched_role_nodes(
+    text: str,
+    nodes: dict[str, dict[str, str]],
+    roles: dict[str, set[str]],
+    role: str,
+) -> list[tuple[str, str]]:
+    """Return exact label/gene-symbol mentions already present in the bundle."""
+    normalized_text = text.casefold()
+    matches: list[tuple[str, str]] = []
+    aliases: list[tuple[str, str, str]] = []
+    for node_id, node in nodes.items():
+        if role not in roles.get(node_id, set()):
+            continue
+        for alias in (node.get("canonical_name", ""), node.get("canonical_label", ""), node.get("gene_symbol", "")):
+            alias = alias.strip()
+            if len(alias) < 4 or alias.casefold() in {"gene", "protein", "complex"}:
+                continue
+            aliases.append((alias.casefold(), node_id, node.get("canonical_name", alias)))
+    for alias, node_id, label in sorted(set(aliases), key=lambda item: (-len(item[0]), item[0], item[1])):
+        if re.search(rf"(?<![a-z0-9]){re.escape(alias)}(?![a-z0-9])", normalized_text):
+            matches.append((node_id, label))
+    return list(dict.fromkeys(matches))
+
+
+def extract_output_terms(text: str) -> list[str]:
+    normalized_text = text.casefold()
+    return [name for name, pattern in OUTPUT_TERM_PATTERNS.items() if re.search(pattern, normalized_text)]
+
+
+def build_downstream_curation_queue(
+    bundle_dir: Path,
+) -> tuple[list[dict[str, object]], dict[str, object]]:
+    """Index Module 21B downstream claims that lack a linked output route.
+
+    This is a curation queue, not a causal edge or a completed signaling
+    route. It retains the source evidence packet and records only exact node
+    mentions or the observed assay/readout vocabulary. Unknown links remain
+    explicit in ``missing_layers``.
+    """
+    roles: dict[str, set[str]] = defaultdict(set)
+    for row in read_tsv(bundle_dir / "mechanism_node_roles.tsv"):
+        roles[row["node_id"]].add(row["role"])
+    nodes = {row["node_id"]: row for row in read_tsv(bundle_dir / "mechanism_nodes.tsv")}
+    edges = {
+        row["edge_id"]: row
+        for row in read_tsv(bundle_dir / "mechanism_edges.tsv")
+        if row.get("module") == "21B"
+        and row.get("relation_type") == "binds_receptor"
+    }
+    sources_by_edge: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in read_tsv(bundle_dir / "mechanism_edge_sources.tsv"):
+        if row.get("edge_id") in edges:
+            sources_by_edge[row["edge_id"]].append(row)
+
+    queue: list[dict[str, object]] = []
+    for edge_id, edge in edges.items():
+        source_rows = [row for row in sources_by_edge[edge_id] if has_layer(row.get("evidence_layer", ""), "downstream_or_functional")]
+        if not source_rows:
+            continue
+        semantic_class, assessment = classify_lr_candidate(edge, roles)
+        evidence_text = " ".join(
+            value
+            for source in source_rows
+            for value in (source.get("evidence_summary", ""),)
+            if value
+        )
+        tf_matches = matched_role_nodes(evidence_text, nodes, roles, "transcription_factor")
+        target_matches = matched_role_nodes(evidence_text, nodes, roles, "target_gene")
+        output_terms = extract_output_terms(evidence_text)
+        candidate_intracellular = ""
+        candidate_intracellular_label = ""
+        if semantic_class == "receptor_proximal_or_intracellular":
+            candidate_intracellular = edge.get("target_node_id", "")
+            candidate_intracellular_label = edge.get("target_label", "")
+        if semantic_class == "likely_ligand_receptor":
+            missing_layers = "intracellular_continuation|transcription_factor|target_gene_expression_or_output"
+            queue_type = "ligand_receptor_edge_with_unlinked_downstream_claim"
+        elif semantic_class == "receptor_proximal_or_intracellular":
+            missing_layers = "ligand_receptor_input_pair|transcription_factor|target_gene_expression_or_output"
+            queue_type = "receptor_proximal_edge_needing_lr_pair_resolution"
+        else:
+            missing_layers = "ligand_receptor_pair_validation|intracellular_continuation|transcription_factor|target_gene_expression_or_output"
+            queue_type = "ambiguous_edge_needing_manual_topology_review"
+        direct_edge = any(row.get("source_scope") == "direct_edge" for row in source_rows)
+        stable_locator = any(row.get("source_locator_status") == "stable" for row in source_rows)
+        priority = "P1" if direct_edge and stable_locator and (tf_matches or target_matches or output_terms) else "P2" if direct_edge else "P3"
+        source = source_rows[0]
+        queue.append({
+            "queue_id": "",
+            "module": edge.get("module", "21B"),
+            "edge_id": edge_id,
+            "source_node_id": edge.get("source_node_id", ""),
+            "source_label": edge.get("source_label", ""),
+            "target_node_id": edge.get("target_node_id", ""),
+            "target_label": edge.get("target_label", ""),
+            "graph_relation_type": edge.get("relation_type", ""),
+            "register_relation_type": edge.get("register_relation_type", ""),
+            "pathway_name": edge.get("pathway_name", ""),
+            "edge_semantic_class": queue_type,
+            "lr_entry_assessment": assessment,
+            "evidence_scope": ";".join(dict.fromkeys(row.get("source_scope", "") for row in source_rows if row.get("source_scope", ""))),
+            "evidence_status": edge.get("evidence_status", ""),
+            "evidence_layer": ";".join(dict.fromkeys(row.get("evidence_layer", "") for row in source_rows if row.get("evidence_layer", ""))),
+            "confidence_tier": source.get("confidence_tier", ""),
+            "source_locator": ";".join(dict.fromkeys(row.get("source_locator", "") for row in source_rows if row.get("source_locator", ""))),
+            "citation_note": "; ".join(dict.fromkeys(row.get("citation_note", "") for row in source_rows if row.get("citation_note", ""))),
+            "evidence_summary": " || ".join(dict.fromkeys(row.get("evidence_summary", "") for row in source_rows if row.get("evidence_summary", ""))),
+            "limitations": " || ".join(dict.fromkeys(row.get("limitations", "") for row in source_rows if row.get("limitations", ""))),
+            "candidate_intracellular_node_id": candidate_intracellular,
+            "candidate_intracellular_label": candidate_intracellular_label,
+            "text_matched_tf_node_ids": ";".join(node_id for node_id, _ in tf_matches),
+            "text_matched_tf_labels": ";".join(label for _, label in tf_matches),
+            "text_matched_target_gene_node_ids": ";".join(node_id for node_id, _ in target_matches),
+            "text_matched_target_gene_labels": ";".join(label for _, label in target_matches),
+            "candidate_output_terms": ";".join(output_terms),
+            "missing_layers": missing_layers,
+            "curation_priority": priority,
+            "curation_status": "pending_manual_curation",
+            "do_not_infer_reason": "Text-level downstream or functional evidence is retained, but missing route links are not promoted to causal graph edges.",
+        })
+    queue.sort(key=lambda row: (str(row["curation_priority"]), str(row["edge_id"])))
+    for index, row in enumerate(queue, start=1):
+        row["queue_id"] = f"M21B-DOWNSTREAM:{index:05d}"
+    summary = {
+        "queue_record_count": len(queue),
+        "queue_semantic_class_counts": dict(Counter(str(row["edge_semantic_class"]) for row in queue)),
+        "queue_priority_counts": dict(Counter(str(row["curation_priority"]) for row in queue)),
+        "queue_records_with_text_matched_tf": sum(bool(row["text_matched_tf_node_ids"]) for row in queue),
+        "queue_records_with_text_matched_target_gene": sum(bool(row["text_matched_target_gene_node_ids"]) for row in queue),
+        "queue_records_with_output_terms": sum(bool(row["candidate_output_terms"]) for row in queue),
+    }
+    return queue, summary
+
+
+def write_downstream_curation_queue(path: Path, rows: list[dict[str, object]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=DOWNSTREAM_CURATION_FIELDS, delimiter="\t", lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
 
 
 def audit(bundle_dir: Path) -> tuple[list[dict[str, object]], dict[str, object]]:
@@ -750,6 +964,8 @@ def update_bundle_metadata(
     possible_count: int,
     route_evidence_path: Path,
     route_evidence_count: int,
+    downstream_queue_path: Path,
+    downstream_queue_count: int,
 ) -> None:
     """Register the hypothesis artifact without changing graph-edge counts."""
     metadata_path = bundle_dir / "bundle_metadata.json"
@@ -758,8 +974,10 @@ def update_bundle_metadata(
     metadata = json.loads(metadata_path.read_text())
     metadata.setdefault("files", {})["possible_signaling_paths"] = possible_path.name
     metadata.setdefault("files", {})["signaling_route_evidence"] = route_evidence_path.name
+    metadata.setdefault("files", {})["downstream_curation_queue"] = downstream_queue_path.name
     metadata.setdefault("counts", {})["possible_signaling_paths"] = possible_count
     metadata.setdefault("counts", {})["signaling_route_evidence"] = route_evidence_count
+    metadata.setdefault("counts", {})["downstream_curation_queue"] = downstream_queue_count
     policy = metadata.setdefault("graph_policy", {})
     policy["possible_signaling_paths_are_hypotheses_only"] = True
     policy["possible_signaling_paths_are_not_graph_edges"] = True
@@ -778,6 +996,12 @@ def update_bundle_metadata(
     )
     if route_statement not in contract:
         contract.append(route_statement)
+    queue_statement = (
+        "The Module 21B downstream curation queue retains text-level functional claims "
+        "and exact node mentions for manual route-link curation; it is not a causal edge layer."
+    )
+    if queue_statement not in contract:
+        contract.append(queue_statement)
     metadata_path.write_text(json.dumps(metadata, indent=2) + "\n")
 
 
@@ -788,6 +1012,7 @@ def main() -> None:
     summary_path = (args.summary or bundle_dir / "full_signaling_chain_audit.json").resolve()
     possible_output = bundle_dir / "mechanism_possible_signaling_paths.tsv"
     route_evidence_output = bundle_dir / "mechanism_signaling_route_evidence.tsv"
+    downstream_queue_output = bundle_dir / "mechanism_downstream_curation_queue.tsv"
     rows, summary = audit(bundle_dir)
     possible_rows, possible_summary = audit_possible_paths(bundle_dir)
     route_evidence_rows, route_evidence_summary = build_route_evidence(
@@ -795,8 +1020,10 @@ def main() -> None:
         rows,
         possible_rows,
     )
+    downstream_queue_rows, downstream_queue_summary = build_downstream_curation_queue(bundle_dir)
     summary["possible_path_counts"] = possible_summary
     summary["signaling_route_evidence_counts"] = route_evidence_summary
+    summary["downstream_curation_queue_counts"] = downstream_queue_summary
     if args.compare_bundle:
         _, previous = audit(args.compare_bundle.resolve())
         current_counts = summary["full_chain_counts"]
@@ -823,12 +1050,15 @@ def main() -> None:
     write_tsv(output, rows)
     write_possible_paths(possible_output, possible_rows)
     write_route_evidence(route_evidence_output, route_evidence_rows)
+    write_downstream_curation_queue(downstream_queue_output, downstream_queue_rows)
     update_bundle_metadata(
         bundle_dir,
         possible_output,
         len(possible_rows),
         route_evidence_output,
         len(route_evidence_rows),
+        downstream_queue_output,
+        len(downstream_queue_rows),
     )
     summary_path.parent.mkdir(parents=True, exist_ok=True)
     summary_path.write_text(json.dumps(summary, indent=2) + "\n")

@@ -55,6 +55,22 @@
     "route_evidence_unique_target_genes": 67,
     "route_evidence_unique_outputs": 239
   },
+  "downstream_curation_queue_counts": {
+    "queue_record_count": 3298,
+    "queue_semantic_class_counts": {
+      "receptor_proximal_edge_needing_lr_pair_resolution": 331,
+      "ligand_receptor_edge_with_unlinked_downstream_claim": 2187,
+      "ambiguous_edge_needing_manual_topology_review": 780
+    },
+    "queue_priority_counts": {
+      "P1": 2260,
+      "P2": 986,
+      "P3": 52
+    },
+    "queue_records_with_text_matched_tf": 85,
+    "queue_records_with_text_matched_target_gene": 20,
+    "queue_records_with_output_terms": 2275
+  },
   "comparison": {
     "prior_bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_10",
     "prior_full_chain_counts": {
@@ -76,10 +92,10 @@
       "same_pathway_edge_chain_instances": 0
     },
     "partial_delta": {
-      "ligand_to_receptor;receptor_to_transcription_factor": -4598,
-      "receptor_to_transcription_factor;transcription_factor_to_target_gene": 4256,
       "ligand_to_receptor": -12,
-      "transcription_factor_to_target_gene": 20
+      "transcription_factor_to_target_gene": 20,
+      "receptor_to_transcription_factor;transcription_factor_to_target_gene": 4256,
+      "ligand_to_receptor;receptor_to_transcription_factor": -4598
     },
     "retained_chain_record_delta": -1299
   }

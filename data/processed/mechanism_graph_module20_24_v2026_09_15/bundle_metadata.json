@@ -110,7 +110,8 @@
     "output_bridge_candidates": 250,
     "output_bridges_validated": 1074,
     "possible_signaling_paths": 2,
-    "signaling_route_evidence": 6294
+    "signaling_route_evidence": 6294,
+    "downstream_curation_queue": 3298
   },
   "source_locator_status_counts": {
     "local_only_or_unresolved": 1124,
@@ -172,7 +173,8 @@
     "output_bridge_candidates": "mechanism_output_bridge_candidates.tsv",
     "output_bridges_validated": "mechanism_output_bridges_validated.tsv",
     "possible_signaling_paths": "mechanism_possible_signaling_paths.tsv",
-    "signaling_route_evidence": "mechanism_signaling_route_evidence.tsv"
+    "signaling_route_evidence": "mechanism_signaling_route_evidence.tsv",
+    "downstream_curation_queue": "mechanism_downstream_curation_queue.tsv"
   },
   "accuracy_contract": [
     "Every exported edge must reference existing source and target nodes.",
@@ -186,7 +188,8 @@
     "Gene and protein/ligand forms are typed auxiliary records; a shared label or role co-occurrence does not assert transcription, translation, secretion, or transport.",
     "Entity transitions are conditional metadata, never causal graph edges; intercellular continuation requires explicit output/secretion evidence or a separately validated bridge.",
     "Possible signaling paths retain validated ligand-receptor and target-output evidence with unknown relays; they are hypotheses, not causal graph edges.",
-    "Signaling route evidence retains ligand, receptor, intracellular, TF, and output evidence at different completeness tiers for downstream plausibility scoring."
+    "Signaling route evidence retains ligand, receptor, intracellular, TF, and output evidence at different completeness tiers for downstream plausibility scoring.",
+    "The Module 21B downstream curation queue retains text-level functional claims and exact node mentions for manual route-link curation; it is not a causal edge layer."
   ],
   "module20b_pathway_family_layer": {
     "file": "data/processed/module20b_pathway_family_layer_v1/module20b_pathway_family_layer.tsv",
