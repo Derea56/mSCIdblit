@@ -1,0 +1,132 @@
+{
+  "bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_16",
+  "definition": {
+    "step_1": "ligand-role source --binds_receptor--> receptor-role target",
+    "step_2": "receptor-role source --any exported relay--> transcription_factor-role target",
+    "step_3": "transcription_factor-role source --induces/represses/regulates_target_gene--> target_gene-role target",
+    "pathway_label_requirement": "none; pathway labels may differ across module namespaces",
+    "excluded": [
+      "mechanism_output_bridge_candidates.tsv",
+      "mechanism_output_bridges_validated.tsv",
+      "mechanism_entity_transitions.tsv"
+    ]
+  },
+  "step_edge_counts": {
+    "ligand_receptor": 5894,
+    "receptor_transcription_factor": 17,
+    "transcription_factor_target_gene": 78
+  },
+  "full_chain_counts": {
+    "edge_chain_instances": 90,
+    "unique_edge_chains": 90,
+    "unique_four_node_topologies": 57,
+    "same_pathway_edge_chain_instances": 0
+  },
+  "partial_chain_counts": {
+    "ligand_to_receptor;receptor_to_transcription_factor": 64,
+    "receptor_to_transcription_factor;transcription_factor_to_target_gene": 5863,
+    "transcription_factor_to_target_gene": 20
+  },
+  "retained_chain_record_count": 6037,
+  "distinct_receptor_transcription_factor_pairs": 2386,
+  "distinct_ligand_receptor_transcription_factor_routes": 5726,
+  "module_sequences": {
+    "21B>21B>22B": 90
+  },
+  "target_relations_in_full_chains": {
+    "induces_target_gene": 65,
+    "represses_target_gene": 9,
+    "regulates_target_gene": 16
+  },
+  "possible_path_counts": {
+    "possible_missing_relay_instances": 2,
+    "unique_possible_ligand_receptor_target_paths": 1
+  },
+  "signaling_route_evidence_counts": {
+    "route_evidence_record_count": 10986,
+    "route_evidence_tier_counts": {
+      "downstream_claim_unresolved_topology": 212,
+      "downstream_output_annotation_unlinked_topology": 813,
+      "downstream_tf_annotation_unlinked_topology": 91,
+      "ligand_receptor_downstream_claim_unresolved": 717,
+      "ligand_receptor_entry_only": 5894,
+      "ligand_receptor_output_annotation_missing_intracellular_and_tf": 2044,
+      "ligand_receptor_output_missing_intracellular_and_tf": 226,
+      "ligand_receptor_tf_annotation_missing_intracellular_and_output": 38,
+      "ligand_receptor_tf_missing_intracellular_and_output": 20,
+      "ligand_receptor_tf_output_annotation_missing_intracellular": 44,
+      "ligand_receptor_tf_target_annotation_missing_intracellular": 11,
+      "ligand_receptor_tf_target_missing_intracellular": 90,
+      "receptor_intracellular_claim_unresolved": 320,
+      "receptor_intracellular_output_annotation_missing_ligand_receptor_and_tf": 361,
+      "receptor_intracellular_tf_annotation_missing_ligand_receptor_and_output": 41,
+      "tf_target_output_only": 64
+    },
+    "route_evidence_unique_ligands": 2830,
+    "route_evidence_unique_target_genes": 67,
+    "route_evidence_unique_outputs": 253,
+    "downstream_route_linked_record_count": 4692,
+    "downstream_route_linked_queue_count": 3298,
+    "route_linkage_status_counts": {
+      "topology_unresolved_pending_manual_curation": 1116,
+      "candidate_lr_edge_pending_manual_curation": 2854,
+      "graph_edge_linked": 6294,
+      "receptor_proximal_missing_upstream_lr_pair": 722
+    }
+  },
+  "downstream_curation_queue_counts": {
+    "queue_record_count": 3298,
+    "queue_semantic_class_counts": {
+      "receptor_proximal_edge_needing_lr_pair_resolution": 331,
+      "ligand_receptor_edge_with_unlinked_downstream_claim": 2187,
+      "ambiguous_edge_needing_manual_topology_review": 780
+    },
+    "queue_priority_counts": {
+      "P1": 2260,
+      "P2": 986,
+      "P3": 52
+    },
+    "queue_records_with_text_matched_tf": 85,
+    "queue_records_with_text_matched_target_gene": 20,
+    "queue_records_with_output_terms": 2275
+  },
+  "downstream_evidence_record_counts": {
+    "record_count": 4692,
+    "record_type_counts": {
+      "generic_output_evidence": 3318,
+      "intracellular_cascade_evidence": 331,
+      "transcription_factor_evidence": 94,
+      "target_gene_output_evidence": 20,
+      "unresolved_downstream_claim": 929
+    },
+    "records_with_explicit_node": 445,
+    "records_with_generic_output_term": 3318
+  },
+  "comparison": {
+    "prior_bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_15",
+    "prior_full_chain_counts": {
+      "edge_chain_instances": 90,
+      "unique_edge_chains": 90,
+      "unique_four_node_topologies": 57,
+      "same_pathway_edge_chain_instances": 0
+    },
+    "prior_partial_chain_counts": {
+      "ligand_to_receptor;receptor_to_transcription_factor": 64,
+      "receptor_to_transcription_factor;transcription_factor_to_target_gene": 5863,
+      "transcription_factor_to_target_gene": 20
+    },
+    "prior_retained_chain_record_count": 6037,
+    "delta": {
+      "edge_chain_instances": 0,
+      "unique_edge_chains": 0,
+      "unique_four_node_topologies": 0,
+      "same_pathway_edge_chain_instances": 0
+    },
+    "partial_delta": {
+      "receptor_to_transcription_factor;transcription_factor_to_target_gene": 0,
+      "transcription_factor_to_target_gene": 0,
+      "ligand_to_receptor;receptor_to_transcription_factor": 0
+    },
+    "retained_chain_record_delta": 0
+  }
+}
