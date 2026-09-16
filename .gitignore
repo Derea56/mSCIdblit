@@ -1,4 +1,5 @@
 work/
+\.DS_Store
 *.pdf
 *.sqlite
 *.sqlite3
