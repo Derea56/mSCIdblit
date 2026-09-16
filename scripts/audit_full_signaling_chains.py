@@ -355,7 +355,7 @@ def write_downstream_curation_queue(path: Path, rows: list[dict[str, object]]) -
     with path.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=DOWNSTREAM_CURATION_FIELDS, delimiter="\t", lineterminator="\n")
         writer.writeheader()
-        writer.writerows(rows)
+        writer.writerows({key: str(value).rstrip() for key, value in row.items()} for row in rows)
 
 
 def audit(bundle_dir: Path) -> tuple[list[dict[str, object]], dict[str, object]]:
