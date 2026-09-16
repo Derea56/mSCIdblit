@@ -34,6 +34,25 @@ CANONICAL_ROLE_RELATIONS = {
     "induces_target_gene",
     "represses_target_gene",
 }
+ROUTE_EVIDENCE_FIELDS = [
+    "route_evidence_id", "route_status", "route_tier", "path_expression", "known_layers",
+    "missing_layers", "intracellular_status", "ligand_node_id", "ligand_label",
+    "ligand_receptor_edge_id", "receptor_node_id", "receptor_label",
+    "receptor_intracellular_edge_id", "intracellular_continuation_node_id",
+    "intracellular_continuation_label", "intracellular_tf_edge_id",
+    "transcription_factor_node_id", "transcription_factor_label", "tf_target_edge_id",
+    "target_gene_node_id", "target_gene_label", "target_output_form_id", "bridge_id",
+    "pathway_name", "input_evidence_type", "output_evidence_type", "evidence_ids",
+    "causal_status", "traversal_status", "source_chain_id",
+]
+ALLOWED_ROUTE_TIERS = {
+    "ligand_receptor_entry_only",
+    "ligand_receptor_tf_target_missing_intracellular",
+    "ligand_receptor_tf_missing_intracellular_and_output",
+    "tf_target_output_only",
+    "ligand_receptor_output_missing_intracellular_and_tf",
+    "explicit_ligand_receptor_intracellular_tf_target",
+}
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -112,6 +131,11 @@ def validate(bundle_dir: Path) -> dict[str, object]:
     possible_paths: list[dict[str, str]] = []
     if possible_path.exists():
         possible_fields, possible_paths = read_tsv(possible_path)
+    route_evidence_path = bundle_dir / "mechanism_signaling_route_evidence.tsv"
+    route_evidence_fields: list[str] = []
+    route_evidence: list[dict[str, str]] = []
+    if route_evidence_path.exists():
+        route_evidence_fields, route_evidence = read_tsv(route_evidence_path)
     metadata = json.loads((bundle_dir / "bundle_metadata.json").read_text())
 
     expected_fields = {
@@ -176,6 +200,7 @@ def validate(bundle_dir: Path) -> dict[str, object]:
             "bridge_id", "pathway_name", "evidence_ids", "causal_status",
             "traversal_status",
         ],
+        "signaling_route_evidence": ROUTE_EVIDENCE_FIELDS,
     }
     for label, actual, expected in (
         ("nodes", node_fields, expected_fields["nodes"]),
@@ -201,6 +226,11 @@ def validate(bundle_dir: Path) -> dict[str, object]:
             "possible_signaling_paths header mismatch: "
             f"expected {expected_fields['possible_signaling_paths']}, got {possible_fields}"
         )
+    if route_evidence_path.exists() and route_evidence_fields != ROUTE_EVIDENCE_FIELDS:
+        errors.append(
+            "signaling_route_evidence header mismatch: "
+            f"expected {ROUTE_EVIDENCE_FIELDS}, got {route_evidence_fields}"
+        )
 
     node_ids = [row["node_id"] for row in nodes]
     role_keys = [(row["node_id"], row["role"]) for row in node_roles]
@@ -225,6 +255,7 @@ def validate(bundle_dir: Path) -> dict[str, object]:
 
     node_id_set = set(node_ids)
     edge_id_set = set(edge_ids)
+    edges_by_id = {row["edge_id"]: row for row in edges}
     roles_by_node: dict[str, set[str]] = defaultdict(set)
     for row in node_roles:
         roles_by_node[row["node_id"]].add(row["role"])
@@ -282,6 +313,63 @@ def validate(bundle_dir: Path) -> dict[str, object]:
         ]
         if invalid_possible_status:
             errors.append(f"possible paths are not explicitly non-causal: {invalid_possible_status[:5]}")
+
+    if route_evidence_path.exists():
+        route_ids = [row["route_evidence_id"] for row in route_evidence]
+        if duplicates(route_ids):
+            errors.append(f"duplicate signaling route evidence IDs: {duplicates(route_ids)[:5]}")
+        invalid_route_tiers = sorted({row["route_tier"] for row in route_evidence} - ALLOWED_ROUTE_TIERS)
+        if invalid_route_tiers:
+            errors.append(f"invalid signaling route evidence tiers: {invalid_route_tiers[:5]}")
+        invalid_route_status = sorted({
+            (row["route_status"], row["causal_status"], row["traversal_status"])
+            for row in route_evidence
+            if row["route_status"] != "retained_evidence_route"
+            or row["causal_status"] != "not_asserted"
+            or row["traversal_status"] != "evidence_route_not_causal"
+        })
+        if invalid_route_status:
+            errors.append(f"signaling route evidence is not explicitly non-causal: {invalid_route_status[:5]}")
+        route_node_fields = (
+            "ligand_node_id", "receptor_node_id", "intracellular_continuation_node_id",
+            "transcription_factor_node_id", "target_gene_node_id",
+        )
+        missing_route_nodes = sorted({
+            row[field]
+            for row in route_evidence
+            for field in route_node_fields
+            if row[field] and row[field] not in node_id_set
+        })
+        if missing_route_nodes:
+            errors.append(f"signaling route evidence references missing nodes: {missing_route_nodes[:5]}")
+        route_edge_fields = (
+            "ligand_receptor_edge_id", "receptor_intracellular_edge_id",
+            "intracellular_tf_edge_id", "tf_target_edge_id",
+        )
+        missing_route_edges = sorted({
+            row[field]
+            for row in route_evidence
+            for field in route_edge_fields
+            if row[field] and row[field] not in edge_id_set
+        })
+        if missing_route_edges:
+            errors.append(f"signaling route evidence references missing edges: {missing_route_edges[:5]}")
+        route_endpoint_errors: list[str] = []
+        for row in route_evidence:
+            lr_edge = edges_by_id.get(row["ligand_receptor_edge_id"]) if row["ligand_receptor_edge_id"] else None
+            if lr_edge and (
+                lr_edge["source_node_id"] != row["ligand_node_id"]
+                or lr_edge["target_node_id"] != row["receptor_node_id"]
+            ):
+                route_endpoint_errors.append(f"{row['route_evidence_id']} ligand-receptor endpoints disagree")
+            tf_edge = edges_by_id.get(row["tf_target_edge_id"]) if row["tf_target_edge_id"] else None
+            if tf_edge and (
+                tf_edge["source_node_id"] != row["transcription_factor_node_id"]
+                or tf_edge["target_node_id"] != row["target_gene_node_id"]
+            ):
+                route_endpoint_errors.append(f"{row['route_evidence_id']} TF-target endpoints disagree")
+        if route_endpoint_errors:
+            errors.extend(route_endpoint_errors[:10])
 
     if entity_forms_path.exists() and entity_transitions_path.exists():
         form_ids = [row["entity_form_id"] for row in entity_forms]
@@ -581,6 +669,8 @@ def validate(bundle_dir: Path) -> dict[str, object]:
         actual_counts["output_bridges_validated"] = len(validated_output_bridges)
     if possible_path.exists():
         actual_counts["possible_signaling_paths"] = len(possible_paths)
+    if route_evidence_path.exists():
+        actual_counts["signaling_route_evidence"] = len(route_evidence)
     for key, actual in actual_counts.items():
         if metadata_counts.get(key) != actual:
             errors.append(f"metadata count mismatch for {key}: metadata={metadata_counts.get(key)} actual={actual}")
