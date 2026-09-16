@@ -5,7 +5,9 @@ The audit is deliberately narrower than generic graph reachability. A full
 chain is one exported, evidence-gated sequence with these role-compatible
 steps: ligand --binds_receptor--> receptor --(any exported relay)-->
 transcription factor --(induces/represses/regulates_target_gene)--> target
-gene. The three edges may have different pathway labels because the current
+gene. The intracellular continuation may be explicitly represented, summarized
+by a receptor-to-TF edge, or absent from the evidence packet. The four layers
+may have different pathway labels because the current
 release stores receptor-proximal and target-gene evidence in separate module
 pathway namespaces. Output bridges and typed-form transitions are excluded;
 the graph release contract marks them as conditional or non-causal.
@@ -66,6 +68,18 @@ POSSIBLE_PATH_FIELDS = [
     "causal_status",
     "traversal_status",
 ]
+ROUTE_EVIDENCE_FIELDS = [
+    "route_evidence_id", "route_status", "route_tier", "path_expression",
+    "known_layers", "missing_layers", "intracellular_status", "ligand_node_id", "ligand_label",
+    "ligand_receptor_edge_id", "receptor_node_id", "receptor_label",
+    "receptor_intracellular_edge_id", "intracellular_continuation_node_id",
+    "intracellular_continuation_label", "intracellular_tf_edge_id",
+    "transcription_factor_node_id", "transcription_factor_label",
+    "tf_target_edge_id", "target_gene_node_id", "target_gene_label",
+    "target_output_form_id", "bridge_id", "pathway_name", "input_evidence_type",
+    "output_evidence_type", "evidence_ids", "causal_status", "traversal_status",
+    "source_chain_id",
+]
 
 
 def parse_args() -> argparse.Namespace:
@@ -101,6 +115,19 @@ def write_possible_paths(path: Path, rows: list[dict[str, object]]) -> None:
         writer = csv.DictWriter(
             handle,
             fieldnames=POSSIBLE_PATH_FIELDS,
+            delimiter="\t",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def write_route_evidence(path: Path, rows: list[dict[str, object]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=ROUTE_EVIDENCE_FIELDS,
             delimiter="\t",
             lineterminator="\n",
         )
@@ -350,8 +377,8 @@ def audit_possible_paths(bundle_dir: Path) -> tuple[list[dict[str, object]], dic
                     {
                         "possible_path_id": "",
                         "path_status": "possible_missing_relay",
-                        "path_expression": "ligand>receptor>????>target_gene_expression",
-                        "missing_link": "receptor_to_transcription_factor_or_internal_relay",
+                        "path_expression": "ligand>receptor>????>????>target_gene_expression",
+                        "missing_link": "receptor_to_intracellular_continuation_and_transcription_factor",
                         "ligand_node_id": edge["source_node_id"],
                         "ligand_label": edge["source_label"],
                         "ligand_receptor_edge_id": edge_id,
@@ -389,10 +416,269 @@ def audit_possible_paths(bundle_dir: Path) -> tuple[list[dict[str, object]], dic
     return rows, summary
 
 
+def build_route_evidence(
+    bundle_dir: Path,
+    chain_rows: list[dict[str, object]],
+    possible_rows: list[dict[str, object]],
+) -> tuple[list[dict[str, object]], dict[str, object]]:
+    """Build a reusable evidence route index without asserting causal paths."""
+    roles: dict[str, set[str]] = defaultdict(set)
+    for row in read_tsv(bundle_dir / "mechanism_node_roles.tsv"):
+        roles[row["node_id"]].add(row["role"])
+    edges = read_tsv(bundle_dir / "mechanism_edges.tsv")
+    edge_by_id = {row["edge_id"]: row for row in edges}
+    route_rows: list[dict[str, object]] = []
+    seen: set[tuple[str, ...]] = set()
+
+    def add(key: tuple[str, ...], row: dict[str, object]) -> None:
+        if key in seen:
+            return
+        seen.add(key)
+        route_rows.append(row)
+
+    def base_row(
+        *,
+        tier: str,
+        expression: str,
+        known_layers: str,
+        missing_layers: str,
+        ligand_node_id: str = "",
+        ligand_label: str = "",
+        ligand_receptor_edge_id: str = "",
+        receptor_node_id: str = "",
+        receptor_label: str = "",
+        receptor_intracellular_edge_id: str = "",
+        intracellular_continuation_node_id: str = "",
+        intracellular_continuation_label: str = "",
+        intracellular_tf_edge_id: str = "",
+        transcription_factor_node_id: str = "",
+        transcription_factor_label: str = "",
+        tf_target_edge_id: str = "",
+        target_gene_node_id: str = "",
+        target_gene_label: str = "",
+        target_output_form_id: str = "",
+        bridge_id: str = "",
+        pathway_name: str = "",
+        input_evidence_type: str = "",
+        output_evidence_type: str = "",
+        evidence_ids: str = "",
+        source_chain_id: str = "",
+        intracellular_status: str = "not_assessed",
+    ) -> dict[str, object]:
+        return {
+            "route_evidence_id": "",
+            "route_status": "retained_evidence_route",
+            "route_tier": tier,
+            "path_expression": expression,
+            "known_layers": known_layers,
+            "missing_layers": missing_layers,
+            "intracellular_status": intracellular_status,
+            "ligand_node_id": ligand_node_id,
+            "ligand_label": ligand_label,
+            "ligand_receptor_edge_id": ligand_receptor_edge_id,
+            "receptor_node_id": receptor_node_id,
+            "receptor_label": receptor_label,
+            "receptor_intracellular_edge_id": receptor_intracellular_edge_id,
+            "intracellular_continuation_node_id": intracellular_continuation_node_id,
+            "intracellular_continuation_label": intracellular_continuation_label,
+            "intracellular_tf_edge_id": intracellular_tf_edge_id,
+            "transcription_factor_node_id": transcription_factor_node_id,
+            "transcription_factor_label": transcription_factor_label,
+            "tf_target_edge_id": tf_target_edge_id,
+            "target_gene_node_id": target_gene_node_id,
+            "target_gene_label": target_gene_label,
+            "target_output_form_id": target_output_form_id,
+            "bridge_id": bridge_id,
+            "pathway_name": pathway_name,
+            "input_evidence_type": input_evidence_type,
+            "output_evidence_type": output_evidence_type,
+            "evidence_ids": evidence_ids,
+            "causal_status": "not_asserted",
+            "traversal_status": "evidence_route_not_causal",
+            "source_chain_id": source_chain_id,
+        }
+
+    for edge in edges:
+        if (
+            edge["relation_type"] != "binds_receptor"
+            or "ligand" not in roles[edge["source_node_id"]]
+            or "receptor" not in roles[edge["target_node_id"]]
+        ):
+            continue
+        add(
+            ("lr_entry", edge["edge_id"]),
+            base_row(
+                tier="ligand_receptor_entry_only",
+                expression="ligand>receptor",
+                known_layers="ligand|receptor",
+                missing_layers="intracellular_continuation|transcription_factor|target_gene_expression",
+                ligand_node_id=edge["source_node_id"],
+                ligand_label=edge.get("source_label", ""),
+                ligand_receptor_edge_id=edge["edge_id"],
+                receptor_node_id=edge["target_node_id"],
+                receptor_label=edge.get("target_label", ""),
+                pathway_name=edge.get("pathway_name", ""),
+                input_evidence_type="ligand_receptor_edge",
+                evidence_ids=edge.get("evidence_ids", ""),
+            ),
+        )
+
+    for row in chain_rows:
+        first_id = str(row.get("ligand_receptor_edge_id", ""))
+        second_id = str(row.get("receptor_tf_edge_id", ""))
+        third_id = str(row.get("tf_target_edge_id", ""))
+        if first_id and second_id and third_id:
+            add(
+                ("lr_tf_target", first_id, second_id, third_id),
+                base_row(
+                    tier="ligand_receptor_tf_target_missing_intracellular",
+                    expression="ligand>receptor>????>TF>target_gene_expression",
+                    known_layers="ligand|receptor|transcription_factor|target_gene",
+                    missing_layers="intracellular_continuation",
+                    intracellular_status="collapsed_in_receptor_tf_edge",
+                    ligand_node_id=str(row["ligand_node_id"]),
+                    ligand_label=str(row["ligand_label"]),
+                    ligand_receptor_edge_id=first_id,
+                    receptor_node_id=str(row["receptor_node_id"]),
+                    receptor_label=str(row["receptor_label"]),
+                    intracellular_tf_edge_id=second_id,
+                    transcription_factor_node_id=str(row["transcription_factor_node_id"]),
+                    transcription_factor_label=str(row["transcription_factor_label"]),
+                    tf_target_edge_id=third_id,
+                    target_gene_node_id=str(row["target_gene_node_id"]),
+                    target_gene_label=str(row["target_gene_label"]),
+                    pathway_name="|".join(
+                        value for value in (
+                            str(row["ligand_receptor_pathway"]),
+                            str(row["receptor_tf_pathway"]),
+                            str(row["tf_target_pathway"]),
+                        ) if value
+                    ),
+                    input_evidence_type="ligand_receptor_edge",
+                    output_evidence_type="tf_target_edge",
+                    evidence_ids=str(row["evidence_ids"]),
+                    source_chain_id=str(row["chain_id"]),
+                ),
+            )
+        elif first_id and second_id:
+            add(
+                ("lr_tf", first_id, second_id),
+                base_row(
+                    tier="ligand_receptor_tf_missing_intracellular_and_output",
+                    expression="ligand>receptor>????>TF>????",
+                    known_layers="ligand|receptor|transcription_factor",
+                    missing_layers="intracellular_continuation|target_gene_expression",
+                    intracellular_status="collapsed_in_receptor_tf_edge",
+                    ligand_node_id=str(row["ligand_node_id"]),
+                    ligand_label=str(row["ligand_label"]),
+                    ligand_receptor_edge_id=first_id,
+                    receptor_node_id=str(row["receptor_node_id"]),
+                    receptor_label=str(row["receptor_label"]),
+                    intracellular_tf_edge_id=second_id,
+                    transcription_factor_node_id=str(row["transcription_factor_node_id"]),
+                    transcription_factor_label=str(row["transcription_factor_label"]),
+                    pathway_name="|".join(
+                        value for value in (
+                            str(row["ligand_receptor_pathway"]),
+                            str(row["receptor_tf_pathway"]),
+                        ) if value
+                    ),
+                    input_evidence_type="ligand_receptor_edge",
+                    evidence_ids=str(row["evidence_ids"]),
+                    source_chain_id=str(row["chain_id"]),
+                ),
+            )
+        elif third_id:
+            third_edge = edge_by_id.get(third_id, {})
+            tf_node_id = str(row.get("transcription_factor_node_id", "")) or str(third_edge.get("source_node_id", ""))
+            tf_label = str(row.get("transcription_factor_label", "")) or str(third_edge.get("source_label", ""))
+            target_node_id = str(row.get("target_gene_node_id", "")) or str(third_edge.get("target_node_id", ""))
+            target_label = str(row.get("target_gene_label", "")) or str(third_edge.get("target_label", ""))
+            add(
+                ("tf_target", third_id),
+                base_row(
+                    tier="tf_target_output_only",
+                    expression="????>TF>target_gene_expression",
+                    known_layers="transcription_factor|target_gene",
+                    missing_layers="ligand|receptor|intracellular_continuation",
+                    intracellular_status="not_assessed",
+                    intracellular_tf_edge_id=second_id,
+                    transcription_factor_node_id=tf_node_id,
+                    transcription_factor_label=tf_label,
+                    tf_target_edge_id=third_id,
+                    target_gene_node_id=target_node_id,
+                    target_gene_label=target_label,
+                    pathway_name="|".join(
+                        value for value in (
+                            str(row["receptor_tf_pathway"]),
+                            str(row["tf_target_pathway"]),
+                        ) if value
+                    ),
+                    output_evidence_type="tf_target_edge",
+                    evidence_ids=str(row["evidence_ids"]),
+                    source_chain_id=str(row["chain_id"]),
+                ),
+            )
+
+    for row in possible_rows:
+        edge = edge_by_id.get(str(row["ligand_receptor_edge_id"]), {})
+        add(
+            ("bridge_output", str(row["possible_path_id"])),
+            base_row(
+                tier="ligand_receptor_output_missing_intracellular_and_tf",
+                expression=str(row["path_expression"]),
+                known_layers="ligand|receptor|target_gene",
+                missing_layers="intracellular_continuation|transcription_factor",
+                intracellular_status="not_mapped",
+                ligand_node_id=str(row["ligand_node_id"]),
+                ligand_label=str(row["ligand_label"]),
+                ligand_receptor_edge_id=str(row["ligand_receptor_edge_id"]),
+                receptor_node_id=str(row["receptor_node_id"]),
+                receptor_label=str(row["receptor_label"]),
+                target_gene_node_id=str(row["target_gene_node_id"]),
+                target_gene_label=str(row["target_gene_label"]),
+                target_output_form_id=str(row["target_output_form_id"]),
+                bridge_id=str(row["bridge_id"]),
+                pathway_name=str(row["pathway_name"]),
+                input_evidence_type="ligand_receptor_edge",
+                output_evidence_type="output_bridge",
+                evidence_ids=str(row["evidence_ids"] or edge.get("evidence_ids", "")),
+                source_chain_id=str(row["bridge_id"]),
+            ),
+        )
+
+    route_rows.sort(key=lambda row: (
+        str(row["route_tier"]),
+        str(row["ligand_receptor_edge_id"]),
+        str(row["intracellular_tf_edge_id"]),
+        str(row["tf_target_edge_id"]),
+        str(row["bridge_id"]),
+    ))
+    for index, row in enumerate(route_rows, start=1):
+        row["route_evidence_id"] = f"ROUTE:{index:05d}"
+    summary = {
+        "route_evidence_record_count": len(route_rows),
+        "route_evidence_tier_counts": dict(Counter(str(row["route_tier"]) for row in route_rows)),
+        "route_evidence_unique_ligands": len({
+            str(row["ligand_node_id"])
+            for row in route_rows
+            if str(row["ligand_node_id"])
+        }),
+        "route_evidence_unique_target_genes": len({
+            str(row["target_gene_node_id"])
+            for row in route_rows
+            if str(row["target_gene_node_id"])
+        }),
+    }
+    return route_rows, summary
+
+
 def update_bundle_metadata(
     bundle_dir: Path,
     possible_path: Path,
     possible_count: int,
+    route_evidence_path: Path,
+    route_evidence_count: int,
 ) -> None:
     """Register the hypothesis artifact without changing graph-edge counts."""
     metadata_path = bundle_dir / "bundle_metadata.json"
@@ -400,10 +686,14 @@ def update_bundle_metadata(
         return
     metadata = json.loads(metadata_path.read_text())
     metadata.setdefault("files", {})["possible_signaling_paths"] = possible_path.name
+    metadata.setdefault("files", {})["signaling_route_evidence"] = route_evidence_path.name
     metadata.setdefault("counts", {})["possible_signaling_paths"] = possible_count
+    metadata.setdefault("counts", {})["signaling_route_evidence"] = route_evidence_count
     policy = metadata.setdefault("graph_policy", {})
     policy["possible_signaling_paths_are_hypotheses_only"] = True
     policy["possible_signaling_paths_are_not_graph_edges"] = True
+    policy["signaling_route_evidence_is_hypothesis_layer_only"] = True
+    policy["signaling_route_evidence_is_not_graph_edges"] = True
     contract = metadata.setdefault("accuracy_contract", [])
     statement = (
         "Possible signaling paths retain validated ligand-receptor and target-output "
@@ -411,6 +701,12 @@ def update_bundle_metadata(
     )
     if statement not in contract:
         contract.append(statement)
+    route_statement = (
+        "Signaling route evidence retains ligand, receptor, intracellular, TF, and output "
+        "evidence at different completeness tiers for downstream plausibility scoring."
+    )
+    if route_statement not in contract:
+        contract.append(route_statement)
     metadata_path.write_text(json.dumps(metadata, indent=2) + "\n")
 
 
@@ -420,9 +716,16 @@ def main() -> None:
     output = (args.output or bundle_dir / "full_signaling_chain_audit.tsv").resolve()
     summary_path = (args.summary or bundle_dir / "full_signaling_chain_audit.json").resolve()
     possible_output = bundle_dir / "mechanism_possible_signaling_paths.tsv"
+    route_evidence_output = bundle_dir / "mechanism_signaling_route_evidence.tsv"
     rows, summary = audit(bundle_dir)
     possible_rows, possible_summary = audit_possible_paths(bundle_dir)
+    route_evidence_rows, route_evidence_summary = build_route_evidence(
+        bundle_dir,
+        rows,
+        possible_rows,
+    )
     summary["possible_path_counts"] = possible_summary
+    summary["signaling_route_evidence_counts"] = route_evidence_summary
     if args.compare_bundle:
         _, previous = audit(args.compare_bundle.resolve())
         current_counts = summary["full_chain_counts"]
@@ -448,7 +751,14 @@ def main() -> None:
         }
     write_tsv(output, rows)
     write_possible_paths(possible_output, possible_rows)
-    update_bundle_metadata(bundle_dir, possible_output, len(possible_rows))
+    write_route_evidence(route_evidence_output, route_evidence_rows)
+    update_bundle_metadata(
+        bundle_dir,
+        possible_output,
+        len(possible_rows),
+        route_evidence_output,
+        len(route_evidence_rows),
+    )
     summary_path.parent.mkdir(parents=True, exist_ok=True)
     summary_path.write_text(json.dumps(summary, indent=2) + "\n")
     print(json.dumps(summary["full_chain_counts"], sort_keys=True))

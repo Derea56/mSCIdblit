@@ -89,10 +89,20 @@ contains both complete chains and retained partial fragments.
 
 The bundle also contains `mechanism_possible_signaling_paths.tsv`. This
 hypothesis layer currently retains two strict
-`ligand>receptor>????>target_gene_expression` paths: Ado→Adora2b→????→Vegfa.
-Both have role-compatible ligand–receptor evidence and a validated target-gene
-output bridge. The unknown relay is explicitly not asserted and is not
-traversable as a causal edge.
+`ligand>receptor>????>????>target_gene_expression` paths:
+Ado→Adora2b→????→????→Vegfa. Both have role-compatible ligand–receptor
+evidence and a validated target-gene output bridge. The unknown intracellular
+continuation and TF are explicitly not asserted and are not traversable as
+causal edges.
+
+The generalized `mechanism_signaling_route_evidence.tsv` artifact retains
+6,070 non-causal evidence routes for downstream plausibility scoring. It
+contains 5,894 ligand–receptor entry routes, 90 ligand–receptor–TF–target
+routes whose intracellular continuation is collapsed or unresolved, 20
+ligand–receptor–TF fragments without a target output, 64 TF–target output
+fragments without an upstream ligand route, and the 2 output-bridge routes
+above. These tiers preserve known evidence and explicit missing layers without
+turning unknown links into graph edges.
 
 ## Validation and reproducibility
 
