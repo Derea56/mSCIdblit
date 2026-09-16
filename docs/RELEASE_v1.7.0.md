@@ -117,6 +117,11 @@ downstream claim, 331 as receptor-proximal/intracellular rows needing an
 upstream LR pair, and 780 as topology-ambiguous. This classification is a
 manual-curation priority signal, not an automatic causal inference; all rows
 remain pending and missing layers are explicit.
+The companion `mechanism_downstream_evidence_records.tsv` materializes 4,692
+non-causal records from that queue: 3,318 generic output/readout records, 331
+intracellular-cascade records, 94 TF records, 20 target-gene output records,
+and 929 unresolved claims where no explicit node or readout term could be
+extracted. These records are evidence candidates, not completed causal routes.
 
 ## Validation and reproducibility
 
@@ -138,8 +143,9 @@ python3 scripts/audit_full_signaling_chains.py \
 ```
 
 The audit command writes the chain reports, the downstream curation queue, and
-updates the bundle manifest with these non-causal audit artifacts and their
-counts; it does not increase the traversable edge count.
+the explicit downstream evidence records, and updates the bundle manifest with
+these non-causal audit artifacts and their counts; it does not increase the
+traversable edge count.
 
 The bundle remains a conservative snapshot. Canonical database materialization,
 stable source-anchor resolution, and explicit intercellular continuation remain

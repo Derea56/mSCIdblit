@@ -71,6 +71,18 @@
     "queue_records_with_text_matched_target_gene": 20,
     "queue_records_with_output_terms": 2275
   },
+  "downstream_evidence_record_counts": {
+    "record_count": 4692,
+    "record_type_counts": {
+      "generic_output_evidence": 3318,
+      "intracellular_cascade_evidence": 331,
+      "transcription_factor_evidence": 94,
+      "target_gene_output_evidence": 20,
+      "unresolved_downstream_claim": 929
+    },
+    "records_with_explicit_node": 445,
+    "records_with_generic_output_term": 3318
+  },
   "comparison": {
     "prior_bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_10",
     "prior_full_chain_counts": {
@@ -92,10 +104,10 @@
       "same_pathway_edge_chain_instances": 0
     },
     "partial_delta": {
-      "ligand_to_receptor;receptor_to_transcription_factor": -4598,
       "ligand_to_receptor": -12,
+      "transcription_factor_to_target_gene": 20,
       "receptor_to_transcription_factor;transcription_factor_to_target_gene": 4256,
-      "transcription_factor_to_target_gene": 20
+      "ligand_to_receptor;receptor_to_transcription_factor": -4598
     },
     "retained_chain_record_delta": -1299
   }

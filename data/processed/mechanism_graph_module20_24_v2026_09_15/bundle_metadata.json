@@ -111,7 +111,8 @@
     "output_bridges_validated": 1074,
     "possible_signaling_paths": 2,
     "signaling_route_evidence": 6294,
-    "downstream_curation_queue": 3298
+    "downstream_curation_queue": 3298,
+    "downstream_evidence_records": 4692
   },
   "source_locator_status_counts": {
     "local_only_or_unresolved": 1124,
@@ -174,7 +175,8 @@
     "output_bridges_validated": "mechanism_output_bridges_validated.tsv",
     "possible_signaling_paths": "mechanism_possible_signaling_paths.tsv",
     "signaling_route_evidence": "mechanism_signaling_route_evidence.tsv",
-    "downstream_curation_queue": "mechanism_downstream_curation_queue.tsv"
+    "downstream_curation_queue": "mechanism_downstream_curation_queue.tsv",
+    "downstream_evidence_records": "mechanism_downstream_evidence_records.tsv"
   },
   "accuracy_contract": [
     "Every exported edge must reference existing source and target nodes.",
