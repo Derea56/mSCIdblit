@@ -103,12 +103,37 @@ DOWNSTREAM_EVIDENCE_RECORD_FIELDS = [
     "limitations", "missing_layers", "causal_status", "traversal_status",
 ]
 
-RECEPTOR_LABEL_MARKERS = (
-    "receptor", "gpcr", "frizzled", "integrin", "channel", "sensor",
-    "tlr", "fzd", "p2x", "p2y", "pdgfr", "vegfr", "csf1r", "csf3r",
-    "fgfr", "tgfbr", "bmpr", "epor", "prlr", "il17ra", "il17rc",
-    "notch", "plexin", "ntrk", "egfr", "igf1r", "insr", "robo",
-    "unc5", "eph", "nrp",
+RECEPTOR_LABEL_PATTERNS = (
+    r"(?<![a-z0-9])receptor(?![a-z0-9])",
+    r"(?<![a-z0-9])gpcr(?![a-z0-9])",
+    r"(?<![a-z0-9])frizzled(?![a-z0-9])",
+    r"(?<![a-z0-9])integrin(?![a-z0-9])",
+    r"(?<![a-z0-9])channel(?![a-z0-9])",
+    r"(?<![a-z0-9])sensor(?![a-z0-9])",
+    r"(?<![a-z0-9])tlr[0-9]+(?![a-z0-9])",
+    r"(?<![a-z0-9])fzd[0-9]+(?![a-z0-9])",
+    r"(?<![a-z0-9])p2x[0-9]+(?![a-z0-9])",
+    r"(?<![a-z0-9])p2y[0-9]+(?![a-z0-9])",
+    r"(?<![a-z0-9])pdgfr[ab](?:beta|alpha)?(?![a-z0-9])",
+    r"(?<![a-z0-9])vegfr[123](?![a-z0-9])",
+    r"(?<![a-z0-9])csf1r(?![a-z0-9])",
+    r"(?<![a-z0-9])csf3r(?![a-z0-9])",
+    r"(?<![a-z0-9])fgfr[1-5](?![a-z0-9])",
+    r"(?<![a-z0-9])tgfbr[12](?![a-z0-9])",
+    r"(?<![a-z0-9])bmpr[12](?![a-z0-9])",
+    r"(?<![a-z0-9])epor(?![a-z0-9])",
+    r"(?<![a-z0-9])prlr(?![a-z0-9])",
+    r"(?<![a-z0-9])il17r[ac](?![a-z0-9])",
+    r"(?<![a-z0-9])notch[1-4]?(?![a-z0-9])",
+    r"(?<![a-z0-9])plexin(?:-?a|b)[1-4](?![a-z0-9])",
+    r"(?<![a-z0-9])ntrk[1-3](?![a-z0-9])",
+    r"(?<![a-z0-9])egfr(?![a-z0-9])",
+    r"(?<![a-z0-9])igf1r(?![a-z0-9])",
+    r"(?<![a-z0-9])insr(?![a-z0-9])",
+    r"(?<![a-z0-9])robo[1-4](?![a-z0-9])",
+    r"(?<![a-z0-9])unc5[abc](?![a-z0-9])",
+    r"(?<![a-z0-9])eph[ab][1-8](?![a-z0-9])",
+    r"(?<![a-z0-9])nrp[12](?![a-z0-9])",
 )
 # These aliases are used only to link a receptor-proximal evidence label to
 # already-exported ligand--receptor edges.  They do not create edges and they
@@ -126,16 +151,19 @@ RECEPTOR_IDENTITY_ALIAS_GROUPS = (
     ("PLXNA2", (("plexin-a2",), ("plxna2",)), (("plexin-a2",), ("plxna2",))),
     ("ITGA5/ITGB1", (("itga5", "itgb1"), ("alpha5beta1",)), (("itga5", "itgb1"), ("alpha5beta1",))),
     ("ITGAV/ITGB3", (("itgav", "itgb3"), ("alphavbeta3",)), (("itgav", "itgb3"), ("alphavbeta3",))),
-    ("PDGFRB", (("pdgfr-beta",), ("pdgfrbeta",), ("pdgfrb",)), (("pdgfr-beta",), ("pdgfrbeta",), ("pdgfrb",))),
+    ("PDGFRB", (("pdgfr-beta",), ("pdgfrβ",), ("pdgfrbeta",), ("pdgfrb",)), (("pdgfr-beta",), ("pdgfrβ",), ("pdgfrbeta",), ("pdgfrb",))),
     ("IL2RB/IL2RG", (("il2rbeta", "il2rg"),), (("il2rb", "il2rg"), ("il2rbeta", "il2rg"))),
     ("IL9RA/IL2RG", (("il9ralpha", "il2rg"),), (("il9ra", "il2rg"), ("il9ralpha", "il2rg"))),
     ("EPOR", (("epor",), ("epo receptor",)), (("epor",), ("epo receptor",))),
     ("NTRK2/TrkB", (("ntrk2",), ("trkb",)), (("ntrk2",), ("trkb",))),
+    ("EGFR", (("egfr",),), (("egfr",),)),
     ("EPHA2", (("epha2",),), (("epha2",),)),
+    ("EPHA4", (("epha4",),), (("epha4",),)),
     ("EPHB1", (("ephb1",),), (("ephb1",),)),
     ("EPHB2", (("ephb2",),), (("ephb2",),)),
     ("FGFR1", (("fgfr1",),), (("fgfr1",),)),
     ("FGFR3", (("fgfr3",),), (("fgfr3",),)),
+    ("FGFRL1/FGFR5", (("fgfrl1",),), (("fgfrl1",), ("fgfr5",))),
     ("CD36", (("cd36",),), (("cd36",),)),
     ("MPL", (("mpl",), ("tpo receptor",)), (("mpl",), ("tpo receptor",))),
     ("LAIR1", (("lair1",),), (("lair1",),)),
@@ -150,6 +178,9 @@ RECEPTOR_IDENTITY_ALIAS_GROUPS = (
     ("LILRB1", (("lilrb1",), ("cd85j",)), (("lilrb1",), ("cd85j",))),
 )
 LIGAND_BINDING_MARKERS = ("bind", "engage", "agonist", "antagon", "use as")
+EXPLICIT_LIGAND_RECEPTOR_RELATION_MARKERS = (
+    "bind", "activat", "assembl", "acts_through", "entry receptor",
+)
 OUTPUT_TERM_PATTERNS = {
     "reporter_readout": r"\breporter\b",
     "gene_expression_or_transcription": r"\b(?:gene|mrna|transcription|expression)\b",
@@ -231,7 +262,7 @@ def has_layer(value: str, token: str) -> bool:
 
 def label_is_receptor_like(label: str) -> bool:
     normalized = label.casefold()
-    return any(marker in normalized for marker in RECEPTOR_LABEL_MARKERS)
+    return any(re.search(pattern, normalized) for pattern in RECEPTOR_LABEL_PATTERNS)
 
 
 def label_matches_alias_patterns(label: str, patterns: tuple[tuple[str, ...], ...]) -> bool:
@@ -258,7 +289,8 @@ def classify_lr_candidate(edge: dict[str, str], roles: dict[str, set[str]]) -> t
     source = edge.get("source_label", "")
     target = edge.get("target_label", "")
     relation = edge.get("register_relation_type", "") or edge.get("relation_type", "")
-    source_receptor_like = label_is_receptor_like(source) or "receptor" in roles.get(edge.get("source_node_id", ""), set())
+    source_label_receptor_like = label_is_receptor_like(source)
+    source_receptor_like = source_label_receptor_like or "receptor" in roles.get(edge.get("source_node_id", ""), set())
     target_receptor_like = label_is_receptor_like(target)
     relation_lower = relation.casefold()
     binding_like = any(marker in relation_lower for marker in LIGAND_BINDING_MARKERS)
@@ -269,6 +301,22 @@ def classify_lr_candidate(edge: dict[str, str], roles: dict[str, set[str]]) -> t
         return "receptor_proximal_or_intracellular", "not_a_direct_ligand_receptor_pair"
     if target_receptor_like and binding_like and not source_receptor_like:
         return "likely_ligand_receptor", "explicit_binding_or_activation_to_receptor_like_target"
+    # Some curated LR rows were canonicalized to binds_receptor while their
+    # register relation is ``activates``, ``assembles``, or ``acts_through``.
+    # Preserve those as likely LR entries when the evidence layer and endpoint
+    # roles agree, but do not reinterpret receptor-like source labels as
+    # ligands merely because a legacy node has a ligand role too.
+    canonical_lr_relation = edge.get("relation_type", "") == "binds_receptor"
+    role_supported_lr = (
+        canonical_lr_relation
+        and "ligand" in roles.get(edge.get("source_node_id", ""), set())
+        and "receptor" in roles.get(edge.get("target_node_id", ""), set())
+        and not source_label_receptor_like
+        and has_layer(edge.get("evidence_layer", ""), "ligand_receptor_binding_or_activation")
+        and any(marker in relation_lower for marker in EXPLICIT_LIGAND_RECEPTOR_RELATION_MARKERS)
+    )
+    if role_supported_lr:
+        return "likely_ligand_receptor", "canonical_lr_edge_with_explicit_binding_activation_layer"
     if binding_like and edge.get("compartment_context", "").casefold().startswith("extracellular") and not source_receptor_like:
         return "likely_ligand_receptor", "extracellular_binding_or_activation_with_nonreceptor_source_label"
     return "ambiguous_role_or_topology", "role-derived_relation_needs_manual_pair_resolution"
@@ -1197,11 +1245,15 @@ def build_route_evidence(
     # explicit target-gene record is present.
     for queue_id, queue_records in records_by_queue.items():
         queue = queue_by_id.get(queue_id)
-        if not queue or queue.get("edge_semantic_class") != "receptor_proximal_edge_needing_lr_pair_resolution":
+        if not queue or queue.get("edge_semantic_class") not in {
+            "ligand_receptor_edge_with_unlinked_downstream_claim",
+            "receptor_proximal_edge_needing_lr_pair_resolution",
+        }:
             continue
         edge = edge_by_id.get(str(queue.get("edge_id", "")))
         if not edge:
             continue
+        receptor_proximal_queue = queue.get("edge_semantic_class") == "receptor_proximal_edge_needing_lr_pair_resolution"
         tf_records = [record for record in queue_records if record.get("record_type") == "transcription_factor_evidence"]
         output_records = [
             record for record in queue_records
@@ -1209,7 +1261,12 @@ def build_route_evidence(
         ]
         if not tf_records or not output_records:
             continue
-        for lr_edge, linkage_kind in resolved_proximal_links(edge):
+        resolved_links = (
+            resolved_proximal_links(edge)
+            if receptor_proximal_queue
+            else [(edge, "direct_canonical_lr_edge")]
+        )
+        for lr_edge, linkage_kind in resolved_links:
             for tf_record in tf_records:
                 tf_id = str(tf_record.get("evidence_node_id", ""))
                 tf_label = str(tf_record.get("evidence_node_label", ""))
@@ -1220,14 +1277,24 @@ def build_route_evidence(
                     output_id = str(output_record.get("evidence_node_id", "")) if is_target_gene else ""
                     output_label = str(output_record.get("evidence_node_label", "") or output_record.get("output_term", ""))
                     if is_target_gene and output_id:
-                        tier = "explicit_ligand_receptor_intracellular_tf_target"
-                        expression = "ligand>receptor>intracellular>TF>target_gene_expression"
-                        known_layers = "ligand|receptor|intracellular_continuation|transcription_factor|target_gene"
-                        missing_layers = ""
+                        if receptor_proximal_queue:
+                            tier = "explicit_ligand_receptor_intracellular_tf_target"
+                            expression = "ligand>receptor>intracellular>TF>target_gene_expression"
+                            known_layers = "ligand|receptor|intracellular_continuation|transcription_factor|target_gene"
+                        else:
+                            tier = "ligand_receptor_tf_target_missing_intracellular"
+                            expression = "ligand>receptor>????>TF>target_gene_expression"
+                            known_layers = "ligand|receptor|transcription_factor|target_gene"
+                        missing_layers = "" if receptor_proximal_queue else "intracellular_continuation"
                     else:
-                        tier = "ligand_receptor_intracellular_tf_output_missing_target_gene"
-                        expression = "ligand>receptor>intracellular>TF>output"
-                        known_layers = "ligand|receptor|intracellular_continuation|transcription_factor|output"
+                        if receptor_proximal_queue:
+                            tier = "ligand_receptor_intracellular_tf_output_missing_target_gene"
+                            expression = "ligand>receptor>intracellular>TF>output"
+                            known_layers = "ligand|receptor|intracellular_continuation|transcription_factor|output"
+                        else:
+                            tier = "ligand_receptor_tf_output_missing_target_gene"
+                            expression = "ligand>receptor>????>TF>output"
+                            known_layers = "ligand|receptor|transcription_factor|output"
                         missing_layers = "target_gene_expression"
                     evidence_ids = ";".join(dict.fromkeys(
                         value
@@ -1252,15 +1319,15 @@ def build_route_evidence(
                             expression=expression,
                             known_layers=known_layers,
                             missing_layers=missing_layers,
-                            intracellular_status="explicit_receptor_proximal_edge",
+                            intracellular_status="explicit_receptor_proximal_edge" if receptor_proximal_queue else "not_mapped",
                             ligand_node_id=lr_edge["source_node_id"],
                             ligand_label=lr_edge.get("source_label", ""),
                             ligand_receptor_edge_id=lr_edge["edge_id"],
                             receptor_node_id=lr_edge["target_node_id"],
                             receptor_label=lr_edge.get("target_label", ""),
-                            receptor_intracellular_edge_id=edge["edge_id"],
-                            intracellular_continuation_node_id=edge["target_node_id"],
-                            intracellular_continuation_label=edge.get("target_label", ""),
+                            receptor_intracellular_edge_id=edge["edge_id"] if receptor_proximal_queue else "",
+                            intracellular_continuation_node_id=edge["target_node_id"] if receptor_proximal_queue else "",
+                            intracellular_continuation_label=edge.get("target_label", "") if receptor_proximal_queue else "",
                             transcription_factor_node_id=tf_id,
                             transcription_factor_label=tf_label,
                             target_gene_node_id=output_id if is_target_gene else "",
@@ -1281,7 +1348,11 @@ def build_route_evidence(
                             route_linkage_status=(
                                 f"lr_pair_resolved_by_{linkage_kind};"
                                 "queue_level_tf_output_evidence_coobserved;"
-                                "receptor_proximal_evidence_remains_context_bound"
+                                + (
+                                    "receptor_proximal_evidence_remains_context_bound"
+                                    if receptor_proximal_queue
+                                    else "direct_lr_evidence_remains_context_bound"
+                                )
                             ),
                             source_chain_id=queue_id,
                         ),
