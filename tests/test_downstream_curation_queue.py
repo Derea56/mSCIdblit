@@ -3,6 +3,7 @@ from pathlib import Path
 from scripts.audit_full_signaling_chains import (
     build_downstream_evidence_records,
     build_downstream_curation_queue,
+    build_route_evidence,
     classify_lr_candidate,
 )
 
@@ -42,3 +43,7 @@ def test_module21b_downstream_queue_is_evidence_backed():
     }
     assert all(row["source_evidence_ids"] for row in records)
     assert {row["causal_status"] for row in records} == {"not_asserted"}
+    route_rows, route_summary = build_route_evidence(bundle, [], [], rows, records)
+    assert len({row["source_evidence_record_id"] for row in route_rows if row["source_evidence_record_id"]}) == len(records)
+    assert route_summary["route_evidence_record_count"] == 10812
+    assert all(row["traversal_status"] == "evidence_route_not_causal" for row in route_rows)

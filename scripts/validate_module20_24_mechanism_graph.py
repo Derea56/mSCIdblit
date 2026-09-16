@@ -44,6 +44,7 @@ ROUTE_EVIDENCE_FIELDS = [
     "target_gene_node_id", "target_gene_label", "target_output_form_id",
     "output_node_id", "output_label", "output_form_id", "bridge_id",
     "pathway_name", "input_evidence_type", "output_evidence_type", "evidence_ids",
+    "source_queue_id", "source_evidence_record_id", "route_linkage_status",
     "causal_status", "traversal_status", "source_chain_id",
 ]
 DOWNSTREAM_CURATION_FIELDS = [
@@ -73,6 +74,17 @@ ALLOWED_ROUTE_TIERS = {
     "tf_target_output_only",
     "ligand_receptor_output_missing_intracellular_and_tf",
     "explicit_ligand_receptor_intracellular_tf_target",
+    "ligand_receptor_output_annotation_missing_intracellular_and_tf",
+    "ligand_receptor_tf_annotation_missing_intracellular_and_output",
+    "ligand_receptor_tf_output_annotation_missing_intracellular",
+    "ligand_receptor_tf_target_annotation_missing_intracellular",
+    "ligand_receptor_downstream_claim_unresolved",
+    "receptor_intracellular_output_annotation_missing_ligand_receptor_and_tf",
+    "receptor_intracellular_tf_annotation_missing_ligand_receptor_and_output",
+    "receptor_intracellular_claim_unresolved",
+    "downstream_output_annotation_unlinked_topology",
+    "downstream_tf_annotation_unlinked_topology",
+    "downstream_claim_unresolved_topology",
 }
 
 
@@ -413,6 +425,40 @@ def validate(bundle_dir: Path) -> dict[str, object]:
                 route_endpoint_errors.append(f"{row['route_evidence_id']} TF-target endpoints disagree")
         if route_endpoint_errors:
             errors.extend(route_endpoint_errors[:10])
+        if downstream_queue_path.exists() and downstream_evidence_path.exists():
+            queue_id_set = {row["queue_id"] for row in downstream_queue}
+            downstream_record_id_set = {row["record_id"] for row in downstream_evidence}
+            missing_route_queue_refs = sorted({
+                row["source_queue_id"]
+                for row in route_evidence
+                if row["source_queue_id"] and row["source_queue_id"] not in queue_id_set
+            })
+            missing_route_record_refs = sorted({
+                row["source_evidence_record_id"]
+                for row in route_evidence
+                if row["source_evidence_record_id"] and row["source_evidence_record_id"] not in downstream_record_id_set
+            })
+            if missing_route_queue_refs:
+                errors.append(
+                    "signaling route evidence references missing downstream queue IDs: "
+                    f"{missing_route_queue_refs[:5]}"
+                )
+            if missing_route_record_refs:
+                errors.append(
+                    "signaling route evidence references missing downstream evidence record IDs: "
+                    f"{missing_route_record_refs[:5]}"
+                )
+            linked_record_ids = {
+                row["source_evidence_record_id"]
+                for row in route_evidence
+                if row["source_evidence_record_id"]
+            }
+            missing_linked_records = sorted(downstream_record_id_set - linked_record_ids)
+            if missing_linked_records:
+                errors.append(
+                    "downstream evidence records missing route links: "
+                    f"{missing_linked_records[:5]}"
+                )
 
     if downstream_queue_path.exists():
         queue_ids = [row["queue_id"] for row in downstream_queue]
