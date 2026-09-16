@@ -22,6 +22,11 @@ hypotheses: `Ado>Adora2b>????>????>Vegfa`. The generalized route-evidence
 table retains 6,294 tiered records, including generic ligand–receptor/output
 routes whose output is not yet assigned a `target_gene` role, so mSCS can score
 entry, intracellular, TF, and output evidence independently.
+The Module 21B downstream curation queue retains 3,298 evidence-backed rows
+with downstream/functional annotations but no linked output route. It preserves
+exact source evidence and separates likely LR entries, receptor-proximal
+intracellular claims, and topology-ambiguous rows for manual conversion into
+explicit route evidence.
 See the v1.7.0 release note for the complete counts and interpretation
 boundaries.
 

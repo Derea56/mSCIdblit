@@ -107,6 +107,17 @@ the remaining generic outputs remain reportable through `output_label` and
 their available form/evidence IDs. These tiers preserve known evidence and
 explicit missing layers without turning unknown links into graph edges.
 
+The bundle also contains `mechanism_downstream_curation_queue.tsv`, a
+Module 21B queue of 3,298 exported rows whose linked evidence includes a
+`downstream_or_functional` annotation but has no linked output route. The
+queue preserves the cited evidence summary, locator, assay/readout vocabulary,
+and exact TF or target-gene mentions already represented in the bundle. It
+classifies 2,187 rows as likely ligand–receptor entries with an unlinked
+downstream claim, 331 as receptor-proximal/intracellular rows needing an
+upstream LR pair, and 780 as topology-ambiguous. This classification is a
+manual-curation priority signal, not an automatic causal inference; all rows
+remain pending and missing layers are explicit.
+
 ## Validation and reproducibility
 
 The graph validator passed with zero errors for identifier uniqueness, node and
@@ -126,9 +137,9 @@ python3 scripts/audit_full_signaling_chains.py \
   --compare-bundle data/processed/mechanism_graph_module20_24_v2026_09_10
 ```
 
-The audit command writes both chain reports and updates the bundle manifest
-with the possible-path artifact and its count; it does not increase the
-traversable edge count.
+The audit command writes the chain reports, the downstream curation queue, and
+updates the bundle manifest with these non-causal audit artifacts and their
+counts; it does not increase the traversable edge count.
 
 The bundle remains a conservative snapshot. Canonical database materialization,
 stable source-anchor resolution, and explicit intercellular continuation remain

@@ -46,6 +46,19 @@ ROUTE_EVIDENCE_FIELDS = [
     "pathway_name", "input_evidence_type", "output_evidence_type", "evidence_ids",
     "causal_status", "traversal_status", "source_chain_id",
 ]
+DOWNSTREAM_CURATION_FIELDS = [
+    "queue_id", "module", "edge_id", "source_node_id", "source_label",
+    "target_node_id", "target_label", "graph_relation_type",
+    "register_relation_type", "pathway_name", "edge_semantic_class",
+    "lr_entry_assessment", "evidence_scope", "evidence_status",
+    "evidence_layer", "confidence_tier", "source_locator", "citation_note",
+    "evidence_summary", "limitations", "candidate_intracellular_node_id",
+    "candidate_intracellular_label", "text_matched_tf_node_ids",
+    "text_matched_tf_labels", "text_matched_target_gene_node_ids",
+    "text_matched_target_gene_labels", "candidate_output_terms",
+    "missing_layers", "curation_priority", "curation_status",
+    "do_not_infer_reason",
+]
 ALLOWED_ROUTE_TIERS = {
     "ligand_receptor_entry_only",
     "ligand_receptor_tf_target_missing_intracellular",
@@ -137,6 +150,11 @@ def validate(bundle_dir: Path) -> dict[str, object]:
     route_evidence: list[dict[str, str]] = []
     if route_evidence_path.exists():
         route_evidence_fields, route_evidence = read_tsv(route_evidence_path)
+    downstream_queue_path = bundle_dir / "mechanism_downstream_curation_queue.tsv"
+    downstream_queue_fields: list[str] = []
+    downstream_queue: list[dict[str, str]] = []
+    if downstream_queue_path.exists():
+        downstream_queue_fields, downstream_queue = read_tsv(downstream_queue_path)
     metadata = json.loads((bundle_dir / "bundle_metadata.json").read_text())
 
     expected_fields = {
@@ -202,6 +220,7 @@ def validate(bundle_dir: Path) -> dict[str, object]:
             "traversal_status",
         ],
         "signaling_route_evidence": ROUTE_EVIDENCE_FIELDS,
+        "downstream_curation_queue": DOWNSTREAM_CURATION_FIELDS,
     }
     for label, actual, expected in (
         ("nodes", node_fields, expected_fields["nodes"]),
@@ -231,6 +250,11 @@ def validate(bundle_dir: Path) -> dict[str, object]:
         errors.append(
             "signaling_route_evidence header mismatch: "
             f"expected {ROUTE_EVIDENCE_FIELDS}, got {route_evidence_fields}"
+        )
+    if downstream_queue_path.exists() and downstream_queue_fields != DOWNSTREAM_CURATION_FIELDS:
+        errors.append(
+            "downstream_curation_queue header mismatch: "
+            f"expected {DOWNSTREAM_CURATION_FIELDS}, got {downstream_queue_fields}"
         )
 
     node_ids = [row["node_id"] for row in nodes]
@@ -371,6 +395,20 @@ def validate(bundle_dir: Path) -> dict[str, object]:
                 route_endpoint_errors.append(f"{row['route_evidence_id']} TF-target endpoints disagree")
         if route_endpoint_errors:
             errors.extend(route_endpoint_errors[:10])
+
+    if downstream_queue_path.exists():
+        queue_ids = [row["queue_id"] for row in downstream_queue]
+        if duplicates(queue_ids):
+            errors.append(f"duplicate downstream curation queue IDs: {duplicates(queue_ids)[:5]}")
+        missing_queue_edges = sorted({row["edge_id"] for row in downstream_queue if row["edge_id"] not in edge_id_set})
+        if missing_queue_edges:
+            errors.append(f"downstream curation queue references missing edges: {missing_queue_edges[:5]}")
+        missing_queue_nodes = sorted({node_id for row in downstream_queue for node_id in (row["source_node_id"], row["target_node_id"], row["candidate_intracellular_node_id"]) if node_id and node_id not in node_id_set})
+        if missing_queue_nodes:
+            errors.append(f"downstream curation queue references missing nodes: {missing_queue_nodes[:5]}")
+        invalid_queue_status = [row["queue_id"] for row in downstream_queue if row["curation_status"] != "pending_manual_curation"]
+        if invalid_queue_status:
+            errors.append(f"downstream curation queue rows must remain pending: {invalid_queue_status[:5]}")
 
     if entity_forms_path.exists() and entity_transitions_path.exists():
         form_ids = [row["entity_form_id"] for row in entity_forms]
@@ -672,6 +710,8 @@ def validate(bundle_dir: Path) -> dict[str, object]:
         actual_counts["possible_signaling_paths"] = len(possible_paths)
     if route_evidence_path.exists():
         actual_counts["signaling_route_evidence"] = len(route_evidence)
+    if downstream_queue_path.exists():
+        actual_counts["downstream_curation_queue"] = len(downstream_queue)
     for key, actual in actual_counts.items():
         if metadata_counts.get(key) != actual:
             errors.append(f"metadata count mismatch for {key}: metadata={metadata_counts.get(key)} actual={actual}")
