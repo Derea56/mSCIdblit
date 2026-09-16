@@ -76,7 +76,8 @@ ROUTE_EVIDENCE_FIELDS = [
     "intracellular_continuation_label", "intracellular_tf_edge_id",
     "transcription_factor_node_id", "transcription_factor_label",
     "tf_target_edge_id", "target_gene_node_id", "target_gene_label",
-    "target_output_form_id", "bridge_id", "pathway_name", "input_evidence_type",
+    "target_output_form_id", "output_node_id", "output_label", "output_form_id",
+    "bridge_id", "pathway_name", "input_evidence_type",
     "output_evidence_type", "evidence_ids", "causal_status", "traversal_status",
     "source_chain_id",
 ]
@@ -147,6 +148,7 @@ def audit(bundle_dir: Path) -> tuple[list[dict[str, object]], dict[str, object]]
     roles: dict[str, set[str]] = defaultdict(set)
     for row in read_tsv(bundle_dir / "mechanism_node_roles.tsv"):
         roles[row["node_id"]].add(row["role"])
+    nodes = {row["node_id"]: row for row in read_tsv(bundle_dir / "mechanism_nodes.tsv")}
     edges = read_tsv(bundle_dir / "mechanism_edges.tsv")
 
     ligand_receptor = [
@@ -425,6 +427,7 @@ def build_route_evidence(
     roles: dict[str, set[str]] = defaultdict(set)
     for row in read_tsv(bundle_dir / "mechanism_node_roles.tsv"):
         roles[row["node_id"]].add(row["role"])
+    nodes = {row["node_id"]: row for row in read_tsv(bundle_dir / "mechanism_nodes.tsv")}
     edges = read_tsv(bundle_dir / "mechanism_edges.tsv")
     edge_by_id = {row["edge_id"]: row for row in edges}
     route_rows: list[dict[str, object]] = []
@@ -457,6 +460,9 @@ def build_route_evidence(
         target_gene_node_id: str = "",
         target_gene_label: str = "",
         target_output_form_id: str = "",
+        output_node_id: str = "",
+        output_label: str = "",
+        output_form_id: str = "",
         bridge_id: str = "",
         pathway_name: str = "",
         input_evidence_type: str = "",
@@ -488,6 +494,9 @@ def build_route_evidence(
             "target_gene_node_id": target_gene_node_id,
             "target_gene_label": target_gene_label,
             "target_output_form_id": target_output_form_id,
+            "output_node_id": output_node_id,
+            "output_label": output_label,
+            "output_form_id": output_form_id,
             "bridge_id": bridge_id,
             "pathway_name": pathway_name,
             "input_evidence_type": input_evidence_type,
@@ -547,6 +556,8 @@ def build_route_evidence(
                     tf_target_edge_id=third_id,
                     target_gene_node_id=str(row["target_gene_node_id"]),
                     target_gene_label=str(row["target_gene_label"]),
+                    output_node_id=str(row["target_gene_node_id"]),
+                    output_label=str(row["target_gene_label"]),
                     pathway_name="|".join(
                         value for value in (
                             str(row["ligand_receptor_pathway"]),
@@ -608,6 +619,8 @@ def build_route_evidence(
                     tf_target_edge_id=third_id,
                     target_gene_node_id=target_node_id,
                     target_gene_label=target_label,
+                    output_node_id=target_node_id,
+                    output_label=target_label,
                     pathway_name="|".join(
                         value for value in (
                             str(row["receptor_tf_pathway"]),
@@ -620,32 +633,85 @@ def build_route_evidence(
                 ),
             )
 
-    for row in possible_rows:
-        edge = edge_by_id.get(str(row["ligand_receptor_edge_id"]), {})
-        add(
-            ("bridge_output", str(row["possible_path_id"])),
-            base_row(
-                tier="ligand_receptor_output_missing_intracellular_and_tf",
-                expression=str(row["path_expression"]),
-                known_layers="ligand|receptor|target_gene",
-                missing_layers="intracellular_continuation|transcription_factor",
-                intracellular_status="not_mapped",
-                ligand_node_id=str(row["ligand_node_id"]),
-                ligand_label=str(row["ligand_label"]),
-                ligand_receptor_edge_id=str(row["ligand_receptor_edge_id"]),
-                receptor_node_id=str(row["receptor_node_id"]),
-                receptor_label=str(row["receptor_label"]),
-                target_gene_node_id=str(row["target_gene_node_id"]),
-                target_gene_label=str(row["target_gene_label"]),
-                target_output_form_id=str(row["target_output_form_id"]),
-                bridge_id=str(row["bridge_id"]),
-                pathway_name=str(row["pathway_name"]),
-                input_evidence_type="ligand_receptor_edge",
-                output_evidence_type="output_bridge",
-                evidence_ids=str(row["evidence_ids"] or edge.get("evidence_ids", "")),
-                source_chain_id=str(row["bridge_id"]),
-            ),
-        )
+    bridge_inputs: list[tuple[str, dict[str, str]]] = []
+    validated_output_path = bundle_dir / "mechanism_output_bridges_validated.tsv"
+    if validated_output_path.exists():
+        bridge_inputs.extend(("validated_output_bridge", row) for row in read_tsv(validated_output_path))
+    review_output_path = bundle_dir / "mechanism_output_bridge_candidates.tsv"
+    if review_output_path.exists():
+        bridge_inputs.extend(("review_output_candidate", row) for row in read_tsv(review_output_path))
+
+    for evidence_type, bridge in bridge_inputs:
+        source_edge_rows = [
+            edge_by_id[edge_id]
+            for edge_id in str(bridge.get("source_edge_ids", "")).split(";")
+            if edge_id in edge_by_id
+            and edge_by_id[edge_id]["relation_type"] == "binds_receptor"
+            and "ligand" in roles[edge_by_id[edge_id]["source_node_id"]]
+            and "receptor" in roles[edge_by_id[edge_id]["target_node_id"]]
+        ]
+        if not source_edge_rows:
+            continue
+        output_records: list[tuple[str, str, str]] = []
+        for form_id in str(bridge.get("product_form_ids", "")).split(";"):
+            if not form_id.startswith("OUTPUT_PROTEIN:"):
+                continue
+            output_node_id = form_id.split(":", 1)[1]
+            output_records.append((form_id, output_node_id, nodes.get(output_node_id, {}).get("canonical_name", "")))
+        if not output_records:
+            output_label = str(bridge.get("output_label", "") or bridge.get("target_or_program_label", "")).strip()
+            if output_label:
+                output_records.append(("", "", output_label))
+        evidence_ids = ";".join(dict.fromkeys(
+            value
+            for value in (
+                str(bridge.get("review_evidence_ids", "")),
+                str(bridge.get("review_evidence_id", "")),
+                str(bridge.get("evidence_ids", "")),
+            )
+            for value in value.split(";")
+            if value
+        ))
+        bridge_id = str(bridge.get("bridge_id", "") or bridge.get("candidate_id", ""))
+        for edge in source_edge_rows:
+            for output_form_id, output_node_id, output_label in output_records:
+                is_target_gene = "target_gene" in roles[output_node_id]
+                expression = (
+                    "ligand>receptor>????>????>target_gene_expression"
+                    if is_target_gene else "ligand>receptor>????>????>output"
+                )
+                add(
+                    ("bridge_output", evidence_type, bridge_id, edge["edge_id"], output_form_id or output_label),
+                    base_row(
+                        tier="ligand_receptor_output_missing_intracellular_and_tf",
+                        expression=expression,
+                        known_layers="ligand|receptor|output",
+                        missing_layers="intracellular_continuation|transcription_factor",
+                        intracellular_status="not_mapped",
+                        ligand_node_id=edge["source_node_id"],
+                        ligand_label=edge.get("source_label", ""),
+                        ligand_receptor_edge_id=edge["edge_id"],
+                        receptor_node_id=edge["target_node_id"],
+                        receptor_label=edge.get("target_label", ""),
+                        target_gene_node_id=output_node_id if is_target_gene else "",
+                        target_gene_label=output_label if is_target_gene else "",
+                        target_output_form_id=output_form_id if is_target_gene else "",
+                        output_node_id=output_node_id,
+                        output_label=output_label,
+                        output_form_id=output_form_id,
+                        bridge_id=bridge_id,
+                        pathway_name=str(bridge.get("pathway_name", "") or edge.get("pathway_name", "")),
+                        input_evidence_type="ligand_receptor_edge",
+                        output_evidence_type=evidence_type,
+                        evidence_ids=";".join(dict.fromkeys(
+                            value
+                            for value in (edge.get("evidence_ids", ""), evidence_ids)
+                            for value in value.split(";")
+                            if value
+                        )),
+                        source_chain_id=bridge_id,
+                    ),
+                )
 
     route_rows.sort(key=lambda row: (
         str(row["route_tier"]),
@@ -668,6 +734,11 @@ def build_route_evidence(
             str(row["target_gene_node_id"])
             for row in route_rows
             if str(row["target_gene_node_id"])
+        }),
+        "route_evidence_unique_outputs": len({
+            (str(row["output_node_id"]), str(row["output_form_id"]), str(row["output_label"]))
+            for row in route_rows
+            if str(row["output_node_id"]) or str(row["output_form_id"]) or str(row["output_label"])
         }),
     }
     return route_rows, summary

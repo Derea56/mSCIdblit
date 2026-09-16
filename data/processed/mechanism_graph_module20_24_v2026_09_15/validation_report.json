@@ -17,7 +17,7 @@
     "output_bridge_candidates": 250,
     "output_bridges_validated": 1074,
     "possible_signaling_paths": 2,
-    "signaling_route_evidence": 6070
+    "signaling_route_evidence": 6294
   },
   "checks": {
     "unique_node_ids": true,

@@ -110,7 +110,7 @@
     "output_bridge_candidates": 250,
     "output_bridges_validated": 1074,
     "possible_signaling_paths": 2,
-    "signaling_route_evidence": 6070
+    "signaling_route_evidence": 6294
   },
   "source_locator_status_counts": {
     "local_only_or_unresolved": 1124,

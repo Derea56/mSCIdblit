@@ -43,16 +43,17 @@
     "unique_possible_ligand_receptor_target_paths": 1
   },
   "signaling_route_evidence_counts": {
-    "route_evidence_record_count": 6070,
+    "route_evidence_record_count": 6294,
     "route_evidence_tier_counts": {
       "ligand_receptor_entry_only": 5894,
-      "ligand_receptor_output_missing_intracellular_and_tf": 2,
+      "ligand_receptor_output_missing_intracellular_and_tf": 226,
       "ligand_receptor_tf_missing_intracellular_and_output": 20,
       "ligand_receptor_tf_target_missing_intracellular": 90,
       "tf_target_output_only": 64
     },
     "route_evidence_unique_ligands": 2830,
-    "route_evidence_unique_target_genes": 67
+    "route_evidence_unique_target_genes": 67,
+    "route_evidence_unique_outputs": 239
   },
   "comparison": {
     "prior_bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_10",
@@ -76,9 +77,9 @@
     },
     "partial_delta": {
       "ligand_to_receptor;receptor_to_transcription_factor": -4598,
+      "receptor_to_transcription_factor;transcription_factor_to_target_gene": 4256,
       "ligand_to_receptor": -12,
-      "transcription_factor_to_target_gene": 20,
-      "receptor_to_transcription_factor;transcription_factor_to_target_gene": 4256
+      "transcription_factor_to_target_gene": 20
     },
     "retained_chain_record_delta": -1299
   }

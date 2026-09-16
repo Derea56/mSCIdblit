@@ -96,13 +96,16 @@ continuation and TF are explicitly not asserted and are not traversable as
 causal edges.
 
 The generalized `mechanism_signaling_route_evidence.tsv` artifact retains
-6,070 non-causal evidence routes for downstream plausibility scoring. It
+6,294 non-causal evidence routes for downstream plausibility scoring. It
 contains 5,894 ligand–receptor entry routes, 90 ligand–receptor–TF–target
 routes whose intracellular continuation is collapsed or unresolved, 20
 ligand–receptor–TF fragments without a target output, 64 TF–target output
-fragments without an upstream ligand route, and the 2 output-bridge routes
-above. These tiers preserve known evidence and explicit missing layers without
-turning unknown links into graph edges.
+fragments without an upstream ligand route, and 226 ligand–receptor/output
+routes from validated and review-stage output evidence. Only 2 of those output
+records are currently mapped to a node with an explicit `target_gene` role;
+the remaining generic outputs remain reportable through `output_label` and
+their available form/evidence IDs. These tiers preserve known evidence and
+explicit missing layers without turning unknown links into graph edges.
 
 ## Validation and reproducibility
 
