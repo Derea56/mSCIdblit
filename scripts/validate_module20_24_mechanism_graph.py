@@ -41,7 +41,8 @@ ROUTE_EVIDENCE_FIELDS = [
     "receptor_intracellular_edge_id", "intracellular_continuation_node_id",
     "intracellular_continuation_label", "intracellular_tf_edge_id",
     "transcription_factor_node_id", "transcription_factor_label", "tf_target_edge_id",
-    "target_gene_node_id", "target_gene_label", "target_output_form_id", "bridge_id",
+    "target_gene_node_id", "target_gene_label", "target_output_form_id",
+    "output_node_id", "output_label", "output_form_id", "bridge_id",
     "pathway_name", "input_evidence_type", "output_evidence_type", "evidence_ids",
     "causal_status", "traversal_status", "source_chain_id",
 ]
@@ -332,7 +333,7 @@ def validate(bundle_dir: Path) -> dict[str, object]:
             errors.append(f"signaling route evidence is not explicitly non-causal: {invalid_route_status[:5]}")
         route_node_fields = (
             "ligand_node_id", "receptor_node_id", "intracellular_continuation_node_id",
-            "transcription_factor_node_id", "target_gene_node_id",
+            "transcription_factor_node_id", "target_gene_node_id", "output_node_id",
         )
         missing_route_nodes = sorted({
             row[field]

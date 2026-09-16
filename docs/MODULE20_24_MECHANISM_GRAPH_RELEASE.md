@@ -19,8 +19,9 @@ instances and 57 unique four-node topologies, while retaining 5,947
 evidence-backed partial path fragments with explicit missing-link annotations.
 Two strict possible missing-relay paths are also retained as non-causal
 hypotheses: `Ado>Adora2b>????>????>Vegfa`. The generalized route-evidence
-table retains 6,070 tiered records so mSCS can score entry, intracellular, TF,
-and output evidence independently.
+table retains 6,294 tiered records, including generic ligand–receptor/output
+routes whose output is not yet assigned a `target_gene` role, so mSCS can score
+entry, intracellular, TF, and output evidence independently.
 See the v1.7.0 release note for the complete counts and interpretation
 boundaries.
 
