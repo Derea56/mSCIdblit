@@ -92,10 +92,10 @@
       "same_pathway_edge_chain_instances": 0
     },
     "partial_delta": {
+      "ligand_to_receptor;receptor_to_transcription_factor": -4598,
       "ligand_to_receptor": -12,
-      "transcription_factor_to_target_gene": 20,
       "receptor_to_transcription_factor;transcription_factor_to_target_gene": 4256,
-      "ligand_to_receptor;receptor_to_transcription_factor": -4598
+      "transcription_factor_to_target_gene": 20
     },
     "retained_chain_record_delta": -1299
   }
