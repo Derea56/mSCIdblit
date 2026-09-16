@@ -78,6 +78,7 @@ ALLOWED_ROUTE_TIERS = {
     "ligand_receptor_tf_annotation_missing_intracellular_and_output",
     "ligand_receptor_tf_output_annotation_missing_intracellular",
     "ligand_receptor_tf_target_annotation_missing_intracellular",
+    "ligand_receptor_tf_output_missing_target_gene",
     "ligand_receptor_intracellular_tf_missing_output",
     "ligand_receptor_intracellular_output_missing_tf",
     "ligand_receptor_intracellular_tf_output_missing_target_gene",

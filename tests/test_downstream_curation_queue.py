@@ -5,6 +5,7 @@ from scripts.audit_full_signaling_chains import (
     build_downstream_curation_queue,
     build_route_evidence,
     classify_lr_candidate,
+    label_is_receptor_like,
     label_matches_alias_patterns,
 )
 
@@ -23,10 +24,28 @@ def test_classify_lr_candidate_exposes_receptor_proximal_edges():
     assert semantic_class == "receptor_proximal_or_intracellular"
     assert assessment == "not_a_direct_ligand_receptor_pair"
 
+    semantic_class, assessment = classify_lr_candidate(
+        {
+            "source_node_id": "L",
+            "source_label": "IL21",
+            "target_node_id": "R2",
+            "target_label": "IL21R:IL2RG receptor complex",
+            "register_relation_type": "activates",
+            "relation_type": "binds_receptor",
+            "evidence_layer": "ligand_receptor_binding_or_activation;downstream_or_functional",
+        },
+        {"L": {"ligand"}, "R2": {"receptor"}},
+    )
+    assert semantic_class == "likely_ligand_receptor"
+    assert assessment == "canonical_lr_edge_with_explicit_binding_activation_layer"
+
 
 def test_receptor_identity_alias_matching_avoids_substring_collisions():
     assert label_matches_alias_patterns("MPL/TPO receptor", (("mpl",),))
     assert not label_matches_alias_patterns("complement receptor", (("mpl",),))
+    assert label_matches_alias_patterns("PDGFRβ", (("pdgfrβ",),))
+    assert not label_is_receptor_like("Japanese encephalitis virus")
+    assert label_is_receptor_like("EPHB1 pY594")
 
 
 def test_module21b_downstream_queue_is_evidence_backed():
@@ -39,13 +58,13 @@ def test_module21b_downstream_queue_is_evidence_backed():
     assert {row["curation_status"] for row in rows} == {"pending_manual_curation"}
     assert all(row["evidence_summary"] and row["source_locator"] for row in rows)
     records, record_summary = build_downstream_evidence_records(rows)
-    assert len(records) == 4692
+    assert len(records) == 4685
     assert record_summary["record_type_counts"] == {
         "generic_output_evidence": 3318,
-        "intracellular_cascade_evidence": 331,
+        "intracellular_cascade_evidence": 326,
         "target_gene_output_evidence": 20,
         "transcription_factor_evidence": 94,
-        "unresolved_downstream_claim": 929,
+        "unresolved_downstream_claim": 927,
     }
     assert all(row["source_evidence_ids"] for row in records)
     assert {row["causal_status"] for row in records} == {"not_asserted"}
@@ -60,4 +79,5 @@ def test_module21b_downstream_queue_is_evidence_backed():
     assert route_summary["route_evidence_record_count"] > 10812
     assert route_summary["route_evidence_tier_counts"]["ligand_receptor_intracellular_output_missing_tf"] > 0
     assert route_summary["route_evidence_tier_counts"]["ligand_receptor_intracellular_tf_output_missing_target_gene"] > 0
+    assert route_summary["route_evidence_tier_counts"]["ligand_receptor_tf_output_missing_target_gene"] > 0
     assert all(row["traversal_status"] == "evidence_route_not_causal" for row in route_rows)
