@@ -110,7 +110,7 @@
     "output_bridge_candidates": 250,
     "output_bridges_validated": 1074,
     "possible_signaling_paths": 2,
-    "signaling_route_evidence": 6294,
+    "signaling_route_evidence": 10986,
     "downstream_curation_queue": 3298,
     "downstream_evidence_records": 4692
   },

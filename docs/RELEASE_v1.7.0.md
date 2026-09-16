@@ -96,15 +96,14 @@ continuation and TF are explicitly not asserted and are not traversable as
 causal edges.
 
 The generalized `mechanism_signaling_route_evidence.tsv` artifact retains
-6,294 non-causal evidence routes for downstream plausibility scoring. It
-contains 5,894 ligand–receptor entry routes, 90 ligand–receptor–TF–target
-routes whose intracellular continuation is collapsed or unresolved, 20
-ligand–receptor–TF fragments without a target output, 64 TF–target output
-fragments without an upstream ligand route, and 226 ligand–receptor/output
-routes from validated and review-stage output evidence. Only 2 of those output
-records are currently mapped to a node with an explicit `target_gene` role;
-the remaining generic outputs remain reportable through `output_label` and
-their available form/evidence IDs. These tiers preserve known evidence and
+10,986 non-causal evidence routes for downstream plausibility scoring. It
+contains the original 6,294 route records plus 4,692 Module 21B downstream
+claim routes, one for every explicit downstream evidence record. These added
+routes include LR-linked generic outputs, text-linked TF and target-gene
+annotations, receptor-proximal intracellular evidence missing an upstream LR
+pair, and topology-unresolved claims. Every added route retains its
+`source_queue_id` and `source_evidence_record_id`; generic outputs remain
+labels rather than graph nodes. These tiers preserve known evidence and
 explicit missing layers without turning unknown links into graph edges.
 
 The bundle also contains `mechanism_downstream_curation_queue.tsv`, a
@@ -121,7 +120,9 @@ The companion `mechanism_downstream_evidence_records.tsv` materializes 4,692
 non-causal records from that queue: 3,318 generic output/readout records, 331
 intracellular-cascade records, 94 TF records, 20 target-gene output records,
 and 929 unresolved claims where no explicit node or readout term could be
-extracted. These records are evidence candidates, not completed causal routes.
+extracted. These records are evidence candidates, not completed causal routes;
+all 4,692 are linked into the route-evidence table for mSCS intake and
+confidence scoring.
 
 ## Validation and reproducibility
 
@@ -142,10 +143,10 @@ python3 scripts/audit_full_signaling_chains.py \
   --compare-bundle data/processed/mechanism_graph_module20_24_v2026_09_10
 ```
 
-The audit command writes the chain reports, the downstream curation queue, and
-the explicit downstream evidence records, and updates the bundle manifest with
-these non-causal audit artifacts and their counts; it does not increase the
-traversable edge count.
+The audit command writes the chain reports, the downstream curation queue, the
+explicit downstream evidence records, and their route-evidence links, and
+updates the bundle manifest with these non-causal audit artifacts and their
+counts; it does not increase the traversable edge count.
 
 The bundle remains a conservative snapshot. Canonical database materialization,
 stable source-anchor resolution, and explicit intercellular continuation remain

@@ -79,8 +79,8 @@ ROUTE_EVIDENCE_FIELDS = [
     "tf_target_edge_id", "target_gene_node_id", "target_gene_label",
     "target_output_form_id", "output_node_id", "output_label", "output_form_id",
     "bridge_id", "pathway_name", "input_evidence_type",
-    "output_evidence_type", "evidence_ids", "causal_status", "traversal_status",
-    "source_chain_id",
+    "output_evidence_type", "evidence_ids", "source_queue_id", "source_evidence_record_id",
+    "route_linkage_status", "causal_status", "traversal_status", "source_chain_id",
 ]
 DOWNSTREAM_CURATION_FIELDS = [
     "queue_id", "module", "edge_id", "source_node_id", "source_label",
@@ -720,6 +720,8 @@ def build_route_evidence(
     bundle_dir: Path,
     chain_rows: list[dict[str, object]],
     possible_rows: list[dict[str, object]],
+    downstream_queue_rows: list[dict[str, object]] | None = None,
+    downstream_evidence_rows: list[dict[str, object]] | None = None,
 ) -> tuple[list[dict[str, object]], dict[str, object]]:
     """Build a reusable evidence route index without asserting causal paths."""
     roles: dict[str, set[str]] = defaultdict(set)
@@ -766,6 +768,9 @@ def build_route_evidence(
         input_evidence_type: str = "",
         output_evidence_type: str = "",
         evidence_ids: str = "",
+        source_queue_id: str = "",
+        source_evidence_record_id: str = "",
+        route_linkage_status: str = "graph_edge_linked",
         source_chain_id: str = "",
         intracellular_status: str = "not_assessed",
     ) -> dict[str, object]:
@@ -800,6 +805,9 @@ def build_route_evidence(
             "input_evidence_type": input_evidence_type,
             "output_evidence_type": output_evidence_type,
             "evidence_ids": evidence_ids,
+            "source_queue_id": source_queue_id,
+            "source_evidence_record_id": source_evidence_record_id,
+            "route_linkage_status": route_linkage_status,
             "causal_status": "not_asserted",
             "traversal_status": "evidence_route_not_causal",
             "source_chain_id": source_chain_id,
@@ -827,6 +835,144 @@ def build_route_evidence(
                 pathway_name=edge.get("pathway_name", ""),
                 input_evidence_type="ligand_receptor_edge",
                 evidence_ids=edge.get("evidence_ids", ""),
+            ),
+        )
+
+    # Module 21B contains many downstream claims attached to an edge row but
+    # not yet linked to a complete route. Materialize each claim as a route
+    # evidence record when the queue provides an explicit LR-like edge. The
+    # route remains non-causal and pending curation; generic outputs are kept
+    # as labels rather than being promoted to graph nodes.
+    queue_by_id = {
+        str(row["queue_id"]): row
+        for row in (downstream_queue_rows or [])
+    }
+    for record in downstream_evidence_rows or []:
+        queue = queue_by_id.get(str(record.get("source_queue_id", "")))
+        if not queue:
+            continue
+        edge_semantic_class = str(queue.get("edge_semantic_class", ""))
+        edge = edge_by_id.get(str(queue.get("edge_id", "")))
+        record_type = str(record.get("record_type", ""))
+        evidence_node_id = str(record.get("evidence_node_id", ""))
+        evidence_node_label = str(record.get("evidence_node_label", ""))
+        output_term = str(record.get("output_term", ""))
+        tf_ids = [value for value in str(queue.get("text_matched_tf_node_ids", "")).split(";") if value]
+        target_ids = [value for value in str(queue.get("text_matched_target_gene_node_ids", "")).split(";") if value]
+        likely_lr = edge_semantic_class == "ligand_receptor_edge_with_unlinked_downstream_claim" and edge is not None
+        receptor_proximal = edge_semantic_class == "receptor_proximal_edge_needing_lr_pair_resolution" and edge is not None
+
+        ligand_node_id = str(edge["source_node_id"]) if likely_lr else ""
+        ligand_label = str(edge.get("source_label", "")) if likely_lr else ""
+        receptor_node_id = str(edge["target_node_id"]) if likely_lr else ""
+        receptor_label = str(edge.get("target_label", "")) if likely_lr else ""
+        intracellular_node_id = ""
+        intracellular_label = ""
+        if receptor_proximal:
+            receptor_node_id = str(edge["source_node_id"])
+            receptor_label = str(edge.get("source_label", ""))
+            intracellular_node_id = str(edge["target_node_id"])
+            intracellular_label = str(edge.get("target_label", ""))
+
+        tf_node_id = evidence_node_id if record_type == "transcription_factor_evidence" else (tf_ids[0] if tf_ids else "")
+        tf_label = evidence_node_label if record_type == "transcription_factor_evidence" else str(queue.get("text_matched_tf_labels", "")).split(";", 1)[0]
+        target_node_id = evidence_node_id if record_type == "target_gene_output_evidence" else (target_ids[0] if target_ids else "")
+        target_label = evidence_node_label if record_type == "target_gene_output_evidence" else str(queue.get("text_matched_target_gene_labels", "")).split(";", 1)[0]
+        output_label = evidence_node_label or output_term if record_type == "generic_output_evidence" else ""
+
+        if likely_lr:
+            if tf_node_id and target_node_id:
+                tier = "ligand_receptor_tf_target_annotation_missing_intracellular"
+                expression = "ligand>receptor>????>TF>target_gene_expression"
+                known_layers = "ligand|receptor|transcription_factor|target_gene"
+                missing_layers = "intracellular_continuation"
+            elif tf_node_id and output_label:
+                tier = "ligand_receptor_tf_output_annotation_missing_intracellular"
+                expression = "ligand>receptor>????>TF>output"
+                known_layers = "ligand|receptor|transcription_factor|output"
+                missing_layers = "intracellular_continuation|target_gene_expression"
+            elif tf_node_id:
+                tier = "ligand_receptor_tf_annotation_missing_intracellular_and_output"
+                expression = "ligand>receptor>????>TF>????"
+                known_layers = "ligand|receptor|transcription_factor"
+                missing_layers = "intracellular_continuation|target_gene_expression_or_output"
+            elif target_node_id or output_label:
+                tier = "ligand_receptor_output_annotation_missing_intracellular_and_tf"
+                expression = "ligand>receptor>????>????>target_gene_expression" if target_node_id else "ligand>receptor>????>????>output"
+                known_layers = "ligand|receptor|target_gene_expression" if target_node_id else "ligand|receptor|output"
+                missing_layers = "intracellular_continuation|transcription_factor"
+            else:
+                tier = "ligand_receptor_downstream_claim_unresolved"
+                expression = "ligand>receptor>????>????>????"
+                known_layers = "ligand|receptor|downstream_claim"
+                missing_layers = "intracellular_continuation|transcription_factor|target_gene_expression_or_output"
+            route_linkage_status = "candidate_lr_edge_pending_manual_curation"
+        elif receptor_proximal:
+            if tf_node_id:
+                tier = "receptor_intracellular_tf_annotation_missing_ligand_receptor_and_output"
+                expression = "????>receptor>intracellular>TF>????"
+                known_layers = "receptor|intracellular_continuation|transcription_factor"
+                missing_layers = "ligand_receptor_pair|target_gene_expression_or_output"
+            elif output_label:
+                tier = "receptor_intracellular_output_annotation_missing_ligand_receptor_and_tf"
+                expression = "????>receptor>intracellular>????>output"
+                known_layers = "receptor|intracellular_continuation|output"
+                missing_layers = "ligand_receptor_pair|transcription_factor"
+            else:
+                tier = "receptor_intracellular_claim_unresolved"
+                expression = "????>receptor>intracellular>????>????"
+                known_layers = "receptor|intracellular_continuation"
+                missing_layers = "ligand_receptor_pair|transcription_factor|target_gene_expression_or_output"
+            route_linkage_status = "receptor_proximal_missing_upstream_lr_pair"
+        else:
+            if tf_node_id:
+                tier = "downstream_tf_annotation_unlinked_topology"
+                expression = "????>????>????>TF>????"
+                known_layers = "transcription_factor"
+                missing_layers = "ligand_receptor_pair|intracellular_continuation|target_gene_expression_or_output"
+            elif target_node_id or output_label:
+                tier = "downstream_output_annotation_unlinked_topology"
+                expression = "????>????>????>????>target_gene_expression" if target_node_id else "????>????>????>????>output"
+                known_layers = "target_gene_expression" if target_node_id else "output"
+                missing_layers = "ligand_receptor_pair|receptor|intracellular_continuation|transcription_factor"
+            else:
+                tier = "downstream_claim_unresolved_topology"
+                expression = "????>????>????>????>????"
+                known_layers = "downstream_claim"
+                missing_layers = "ligand_receptor_pair|receptor|intracellular_continuation|transcription_factor|target_gene_expression_or_output"
+            route_linkage_status = "topology_unresolved_pending_manual_curation"
+
+        evidence_ids = str(record.get("source_evidence_ids", "")) or str(queue.get("source_evidence_ids", ""))
+        add(
+            ("downstream_record", str(record.get("record_id", ""))),
+            base_row(
+                tier=tier,
+                expression=expression,
+                known_layers=known_layers,
+                missing_layers=missing_layers,
+                intracellular_status="explicit_receptor_proximal_candidate" if receptor_proximal else "not_mapped",
+                ligand_node_id=ligand_node_id,
+                ligand_label=ligand_label,
+                ligand_receptor_edge_id=str(edge["edge_id"]) if likely_lr else "",
+                receptor_node_id=receptor_node_id,
+                receptor_label=receptor_label,
+                receptor_intracellular_edge_id=str(edge["edge_id"]) if receptor_proximal else "",
+                intracellular_continuation_node_id=intracellular_node_id,
+                intracellular_continuation_label=intracellular_label,
+                transcription_factor_node_id=tf_node_id,
+                transcription_factor_label=tf_label,
+                target_gene_node_id=target_node_id,
+                target_gene_label=target_label,
+                output_node_id=target_node_id if target_node_id else "",
+                output_label=target_label if target_node_id else output_label,
+                pathway_name=str(queue.get("pathway_name", "")),
+                input_evidence_type="module21b_downstream_claim",
+                output_evidence_type=record_type,
+                evidence_ids=evidence_ids,
+                source_queue_id=str(record.get("source_queue_id", "")),
+                source_evidence_record_id=str(record.get("record_id", "")),
+                route_linkage_status=route_linkage_status,
+                source_chain_id=str(record.get("source_queue_id", "")),
             ),
         )
 
@@ -1038,6 +1184,20 @@ def build_route_evidence(
             for row in route_rows
             if str(row["output_node_id"]) or str(row["output_form_id"]) or str(row["output_label"])
         }),
+        "downstream_route_linked_record_count": len({
+            str(row["source_evidence_record_id"])
+            for row in route_rows
+            if str(row["source_evidence_record_id"])
+        }),
+        "downstream_route_linked_queue_count": len({
+            str(row["source_queue_id"])
+            for row in route_rows
+            if str(row["source_queue_id"])
+        }),
+        "route_linkage_status_counts": dict(Counter(
+            str(row["route_linkage_status"])
+            for row in route_rows
+        )),
     }
     return route_rows, summary
 
@@ -1104,13 +1264,15 @@ def main() -> None:
     downstream_evidence_output = bundle_dir / "mechanism_downstream_evidence_records.tsv"
     rows, summary = audit(bundle_dir)
     possible_rows, possible_summary = audit_possible_paths(bundle_dir)
+    downstream_queue_rows, downstream_queue_summary = build_downstream_curation_queue(bundle_dir)
+    downstream_evidence_rows, downstream_evidence_summary = build_downstream_evidence_records(downstream_queue_rows)
     route_evidence_rows, route_evidence_summary = build_route_evidence(
         bundle_dir,
         rows,
         possible_rows,
+        downstream_queue_rows,
+        downstream_evidence_rows,
     )
-    downstream_queue_rows, downstream_queue_summary = build_downstream_curation_queue(bundle_dir)
-    downstream_evidence_rows, downstream_evidence_summary = build_downstream_evidence_records(downstream_queue_rows)
     summary["possible_path_counts"] = possible_summary
     summary["signaling_route_evidence_counts"] = route_evidence_summary
     summary["downstream_curation_queue_counts"] = downstream_queue_summary

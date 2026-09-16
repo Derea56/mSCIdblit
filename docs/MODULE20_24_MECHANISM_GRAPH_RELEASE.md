@@ -19,14 +19,17 @@ instances and 57 unique four-node topologies, while retaining 5,947
 evidence-backed partial path fragments with explicit missing-link annotations.
 Two strict possible missing-relay paths are also retained as non-causal
 hypotheses: `Ado>Adora2b>????>????>Vegfa`. The generalized route-evidence
-table retains 6,294 tiered records, including generic ligand–receptor/output
-routes whose output is not yet assigned a `target_gene` role, so mSCS can score
-entry, intracellular, TF, and output evidence independently.
+table retains 10,986 tiered records, including one route-linked record for each
+of the 4,692 Module 21B downstream evidence records. Generic ligand–receptor/
+output routes whose output is not assigned a `target_gene` role remain labels,
+so mSCS can score entry, intracellular, TF, and output evidence independently
+without treating the route as a causal graph path.
 The Module 21B downstream curation queue retains 3,298 evidence-backed rows
 with downstream/functional annotations but no linked output route. It preserves
 exact source evidence and separates likely LR entries, receptor-proximal
 intracellular claims, and topology-ambiguous rows for manual conversion into
-explicit route evidence.
+explicit route evidence. All queue-linked evidence records retain the queue and
+record IDs used to join those route candidates back to their source claims.
 Its companion evidence-record table contains explicit generic-output,
 intracellular-cascade, TF, and target-gene candidate records while retaining
 929 claims that require manual interpretation.

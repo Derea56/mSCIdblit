@@ -43,17 +43,36 @@
     "unique_possible_ligand_receptor_target_paths": 1
   },
   "signaling_route_evidence_counts": {
-    "route_evidence_record_count": 6294,
+    "route_evidence_record_count": 10986,
     "route_evidence_tier_counts": {
+      "downstream_claim_unresolved_topology": 212,
+      "downstream_output_annotation_unlinked_topology": 813,
+      "downstream_tf_annotation_unlinked_topology": 91,
+      "ligand_receptor_downstream_claim_unresolved": 717,
       "ligand_receptor_entry_only": 5894,
+      "ligand_receptor_output_annotation_missing_intracellular_and_tf": 2044,
       "ligand_receptor_output_missing_intracellular_and_tf": 226,
+      "ligand_receptor_tf_annotation_missing_intracellular_and_output": 38,
       "ligand_receptor_tf_missing_intracellular_and_output": 20,
+      "ligand_receptor_tf_output_annotation_missing_intracellular": 44,
+      "ligand_receptor_tf_target_annotation_missing_intracellular": 11,
       "ligand_receptor_tf_target_missing_intracellular": 90,
+      "receptor_intracellular_claim_unresolved": 320,
+      "receptor_intracellular_output_annotation_missing_ligand_receptor_and_tf": 361,
+      "receptor_intracellular_tf_annotation_missing_ligand_receptor_and_output": 41,
       "tf_target_output_only": 64
     },
     "route_evidence_unique_ligands": 2830,
     "route_evidence_unique_target_genes": 67,
-    "route_evidence_unique_outputs": 239
+    "route_evidence_unique_outputs": 253,
+    "downstream_route_linked_record_count": 4692,
+    "downstream_route_linked_queue_count": 3298,
+    "route_linkage_status_counts": {
+      "topology_unresolved_pending_manual_curation": 1116,
+      "candidate_lr_edge_pending_manual_curation": 2854,
+      "graph_edge_linked": 6294,
+      "receptor_proximal_missing_upstream_lr_pair": 722
+    }
   },
   "downstream_curation_queue_counts": {
     "queue_record_count": 3298,
@@ -105,9 +124,9 @@
     },
     "partial_delta": {
       "ligand_to_receptor": -12,
+      "ligand_to_receptor;receptor_to_transcription_factor": -4598,
       "transcription_factor_to_target_gene": 20,
-      "receptor_to_transcription_factor;transcription_factor_to_target_gene": 4256,
-      "ligand_to_receptor;receptor_to_transcription_factor": -4598
+      "receptor_to_transcription_factor;transcription_factor_to_target_gene": 4256
     },
     "retained_chain_record_delta": -1299
   }
