@@ -1,6 +1,7 @@
 from pathlib import Path
 
 from scripts.audit_full_signaling_chains import (
+    build_downstream_evidence_records,
     build_downstream_curation_queue,
     classify_lr_candidate,
 )
@@ -30,3 +31,14 @@ def test_module21b_downstream_queue_is_evidence_backed():
     assert summary["queue_records_with_text_matched_target_gene"] == 20
     assert {row["curation_status"] for row in rows} == {"pending_manual_curation"}
     assert all(row["evidence_summary"] and row["source_locator"] for row in rows)
+    records, record_summary = build_downstream_evidence_records(rows)
+    assert len(records) == 4692
+    assert record_summary["record_type_counts"] == {
+        "generic_output_evidence": 3318,
+        "intracellular_cascade_evidence": 331,
+        "target_gene_output_evidence": 20,
+        "transcription_factor_evidence": 94,
+        "unresolved_downstream_claim": 929,
+    }
+    assert all(row["source_evidence_ids"] for row in records)
+    assert {row["causal_status"] for row in records} == {"not_asserted"}

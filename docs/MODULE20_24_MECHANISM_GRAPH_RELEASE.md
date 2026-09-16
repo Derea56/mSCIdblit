@@ -27,6 +27,9 @@ with downstream/functional annotations but no linked output route. It preserves
 exact source evidence and separates likely LR entries, receptor-proximal
 intracellular claims, and topology-ambiguous rows for manual conversion into
 explicit route evidence.
+Its companion evidence-record table contains explicit generic-output,
+intracellular-cascade, TF, and target-gene candidate records while retaining
+929 claims that require manual interpretation.
 See the v1.7.0 release note for the complete counts and interpretation
 boundaries.
 

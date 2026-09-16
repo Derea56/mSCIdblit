@@ -88,12 +88,19 @@ DOWNSTREAM_CURATION_FIELDS = [
     "register_relation_type", "pathway_name", "edge_semantic_class",
     "lr_entry_assessment", "evidence_scope", "evidence_status",
     "evidence_layer", "confidence_tier", "source_locator", "citation_note",
-    "evidence_summary", "limitations", "candidate_intracellular_node_id",
+    "source_evidence_ids", "evidence_summary", "limitations", "candidate_intracellular_node_id",
     "candidate_intracellular_label", "text_matched_tf_node_ids",
     "text_matched_tf_labels", "text_matched_target_gene_node_ids",
     "text_matched_target_gene_labels", "candidate_output_terms",
     "missing_layers", "curation_priority", "curation_status",
     "do_not_infer_reason",
+]
+DOWNSTREAM_EVIDENCE_RECORD_FIELDS = [
+    "record_id", "source_queue_id", "module", "edge_id", "record_type",
+    "evidence_node_id", "evidence_node_label", "output_term", "claim_status",
+    "linkage_status", "edge_semantic_class", "confidence_tier",
+    "source_locator", "source_evidence_ids", "citation_note", "evidence_summary",
+    "limitations", "missing_layers", "causal_status", "traversal_status",
 ]
 
 RECEPTOR_LABEL_MARKERS = (
@@ -322,6 +329,7 @@ def build_downstream_curation_queue(
             "confidence_tier": source.get("confidence_tier", ""),
             "source_locator": ";".join(dict.fromkeys(row.get("source_locator", "") for row in source_rows if row.get("source_locator", ""))),
             "citation_note": "; ".join(dict.fromkeys(row.get("citation_note", "") for row in source_rows if row.get("citation_note", ""))),
+            "source_evidence_ids": ";".join(dict.fromkeys(row.get("evidence_id", "") for row in source_rows if row.get("evidence_id", ""))),
             "evidence_summary": " || ".join(dict.fromkeys(row.get("evidence_summary", "") for row in source_rows if row.get("evidence_summary", ""))),
             "limitations": " || ".join(dict.fromkeys(row.get("limitations", "") for row in source_rows if row.get("limitations", ""))),
             "candidate_intracellular_node_id": candidate_intracellular,
@@ -350,10 +358,86 @@ def build_downstream_curation_queue(
     return queue, summary
 
 
+def build_downstream_evidence_records(
+    queue_rows: list[dict[str, object]],
+) -> tuple[list[dict[str, object]], dict[str, object]]:
+    """Materialize explicit downstream evidence candidates from the queue."""
+    output_labels = {name: name.replace("_", " ") for name in OUTPUT_TERM_PATTERNS}
+    records: list[dict[str, object]] = []
+    for queue in queue_rows:
+        candidates: list[tuple[str, str, str, str, str]] = []
+        if queue.get("candidate_intracellular_node_id"):
+            candidates.append((
+                "intracellular_cascade_evidence",
+                str(queue["candidate_intracellular_node_id"]),
+                str(queue["candidate_intracellular_label"]),
+                "",
+                "explicit_exported_receptor_proximal_edge",
+            ))
+        for node_id, label in zip(
+            str(queue.get("text_matched_tf_node_ids", "")).split(";"),
+            str(queue.get("text_matched_tf_labels", "")).split(";"),
+        ):
+            if node_id and label:
+                candidates.append(("transcription_factor_evidence", node_id, label, "", "exact_node_mention_in_evidence_summary"))
+        for node_id, label in zip(
+            str(queue.get("text_matched_target_gene_node_ids", "")).split(";"),
+            str(queue.get("text_matched_target_gene_labels", "")).split(";"),
+        ):
+            if node_id and label:
+                candidates.append(("target_gene_output_evidence", node_id, label, "", "exact_node_mention_in_evidence_summary"))
+        for term in str(queue.get("candidate_output_terms", "")).split(";"):
+            if term:
+                candidates.append(("generic_output_evidence", "", output_labels.get(term, term), term, "assay_or_readout_term_in_evidence_summary"))
+        if not candidates:
+            candidates.append(("unresolved_downstream_claim", "", "", "", "no_explicit_node_or_output_term_extracted"))
+        for record_type, node_id, node_label, output_term, claim_status in candidates:
+            records.append({
+                "record_id": "",
+                "source_queue_id": str(queue["queue_id"]),
+                "module": str(queue["module"]),
+                "edge_id": str(queue["edge_id"]),
+                "record_type": record_type,
+                "evidence_node_id": node_id,
+                "evidence_node_label": node_label,
+                "output_term": output_term,
+                "claim_status": claim_status,
+                "linkage_status": "candidate_unlinked" if record_type != "unresolved_downstream_claim" else "not_extractable_from_current_evidence_summary",
+                "edge_semantic_class": str(queue["edge_semantic_class"]),
+                "confidence_tier": str(queue["confidence_tier"]),
+                "source_locator": str(queue["source_locator"]),
+                "source_evidence_ids": str(queue["source_evidence_ids"]),
+                "citation_note": str(queue["citation_note"]),
+                "evidence_summary": str(queue["evidence_summary"]),
+                "limitations": str(queue["limitations"]),
+                "missing_layers": str(queue["missing_layers"]),
+                "causal_status": "not_asserted",
+                "traversal_status": "evidence_record_not_causal",
+            })
+    records.sort(key=lambda row: (str(row["source_queue_id"]), str(row["record_type"]), str(row["evidence_node_id"]), str(row["output_term"])))
+    for index, row in enumerate(records, start=1):
+        row["record_id"] = f"M21B-DOWNSTREAM-EVID:{index:06d}"
+    summary = {
+        "record_count": len(records),
+        "record_type_counts": dict(Counter(str(row["record_type"]) for row in records)),
+        "records_with_explicit_node": sum(bool(row["evidence_node_id"]) for row in records),
+        "records_with_generic_output_term": sum(bool(row["output_term"]) for row in records),
+    }
+    return records, summary
+
+
 def write_downstream_curation_queue(path: Path, rows: list[dict[str, object]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=DOWNSTREAM_CURATION_FIELDS, delimiter="\t", lineterminator="\n")
+        writer.writeheader()
+        writer.writerows({key: str(value).rstrip() for key, value in row.items()} for row in rows)
+
+
+def write_downstream_evidence_records(path: Path, rows: list[dict[str, object]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=DOWNSTREAM_EVIDENCE_RECORD_FIELDS, delimiter="\t", lineterminator="\n")
         writer.writeheader()
         writer.writerows({key: str(value).rstrip() for key, value in row.items()} for row in rows)
 
@@ -966,6 +1050,8 @@ def update_bundle_metadata(
     route_evidence_count: int,
     downstream_queue_path: Path,
     downstream_queue_count: int,
+    downstream_evidence_path: Path,
+    downstream_evidence_count: int,
 ) -> None:
     """Register the hypothesis artifact without changing graph-edge counts."""
     metadata_path = bundle_dir / "bundle_metadata.json"
@@ -975,9 +1061,11 @@ def update_bundle_metadata(
     metadata.setdefault("files", {})["possible_signaling_paths"] = possible_path.name
     metadata.setdefault("files", {})["signaling_route_evidence"] = route_evidence_path.name
     metadata.setdefault("files", {})["downstream_curation_queue"] = downstream_queue_path.name
+    metadata.setdefault("files", {})["downstream_evidence_records"] = downstream_evidence_path.name
     metadata.setdefault("counts", {})["possible_signaling_paths"] = possible_count
     metadata.setdefault("counts", {})["signaling_route_evidence"] = route_evidence_count
     metadata.setdefault("counts", {})["downstream_curation_queue"] = downstream_queue_count
+    metadata.setdefault("counts", {})["downstream_evidence_records"] = downstream_evidence_count
     policy = metadata.setdefault("graph_policy", {})
     policy["possible_signaling_paths_are_hypotheses_only"] = True
     policy["possible_signaling_paths_are_not_graph_edges"] = True
@@ -1013,6 +1101,7 @@ def main() -> None:
     possible_output = bundle_dir / "mechanism_possible_signaling_paths.tsv"
     route_evidence_output = bundle_dir / "mechanism_signaling_route_evidence.tsv"
     downstream_queue_output = bundle_dir / "mechanism_downstream_curation_queue.tsv"
+    downstream_evidence_output = bundle_dir / "mechanism_downstream_evidence_records.tsv"
     rows, summary = audit(bundle_dir)
     possible_rows, possible_summary = audit_possible_paths(bundle_dir)
     route_evidence_rows, route_evidence_summary = build_route_evidence(
@@ -1021,9 +1110,11 @@ def main() -> None:
         possible_rows,
     )
     downstream_queue_rows, downstream_queue_summary = build_downstream_curation_queue(bundle_dir)
+    downstream_evidence_rows, downstream_evidence_summary = build_downstream_evidence_records(downstream_queue_rows)
     summary["possible_path_counts"] = possible_summary
     summary["signaling_route_evidence_counts"] = route_evidence_summary
     summary["downstream_curation_queue_counts"] = downstream_queue_summary
+    summary["downstream_evidence_record_counts"] = downstream_evidence_summary
     if args.compare_bundle:
         _, previous = audit(args.compare_bundle.resolve())
         current_counts = summary["full_chain_counts"]
@@ -1051,6 +1142,7 @@ def main() -> None:
     write_possible_paths(possible_output, possible_rows)
     write_route_evidence(route_evidence_output, route_evidence_rows)
     write_downstream_curation_queue(downstream_queue_output, downstream_queue_rows)
+    write_downstream_evidence_records(downstream_evidence_output, downstream_evidence_rows)
     update_bundle_metadata(
         bundle_dir,
         possible_output,
@@ -1059,6 +1151,8 @@ def main() -> None:
         len(route_evidence_rows),
         downstream_queue_output,
         len(downstream_queue_rows),
+        downstream_evidence_output,
+        len(downstream_evidence_rows),
     )
     summary_path.parent.mkdir(parents=True, exist_ok=True)
     summary_path.write_text(json.dumps(summary, indent=2) + "\n")

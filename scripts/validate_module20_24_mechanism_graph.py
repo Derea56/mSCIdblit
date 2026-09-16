@@ -52,12 +52,19 @@ DOWNSTREAM_CURATION_FIELDS = [
     "register_relation_type", "pathway_name", "edge_semantic_class",
     "lr_entry_assessment", "evidence_scope", "evidence_status",
     "evidence_layer", "confidence_tier", "source_locator", "citation_note",
-    "evidence_summary", "limitations", "candidate_intracellular_node_id",
+    "source_evidence_ids", "evidence_summary", "limitations", "candidate_intracellular_node_id",
     "candidate_intracellular_label", "text_matched_tf_node_ids",
     "text_matched_tf_labels", "text_matched_target_gene_node_ids",
     "text_matched_target_gene_labels", "candidate_output_terms",
     "missing_layers", "curation_priority", "curation_status",
     "do_not_infer_reason",
+]
+DOWNSTREAM_EVIDENCE_RECORD_FIELDS = [
+    "record_id", "source_queue_id", "module", "edge_id", "record_type",
+    "evidence_node_id", "evidence_node_label", "output_term", "claim_status",
+    "linkage_status", "edge_semantic_class", "confidence_tier",
+    "source_locator", "source_evidence_ids", "citation_note", "evidence_summary",
+    "limitations", "missing_layers", "causal_status", "traversal_status",
 ]
 ALLOWED_ROUTE_TIERS = {
     "ligand_receptor_entry_only",
@@ -155,6 +162,11 @@ def validate(bundle_dir: Path) -> dict[str, object]:
     downstream_queue: list[dict[str, str]] = []
     if downstream_queue_path.exists():
         downstream_queue_fields, downstream_queue = read_tsv(downstream_queue_path)
+    downstream_evidence_path = bundle_dir / "mechanism_downstream_evidence_records.tsv"
+    downstream_evidence_fields: list[str] = []
+    downstream_evidence: list[dict[str, str]] = []
+    if downstream_evidence_path.exists():
+        downstream_evidence_fields, downstream_evidence = read_tsv(downstream_evidence_path)
     metadata = json.loads((bundle_dir / "bundle_metadata.json").read_text())
 
     expected_fields = {
@@ -221,6 +233,7 @@ def validate(bundle_dir: Path) -> dict[str, object]:
         ],
         "signaling_route_evidence": ROUTE_EVIDENCE_FIELDS,
         "downstream_curation_queue": DOWNSTREAM_CURATION_FIELDS,
+        "downstream_evidence_records": DOWNSTREAM_EVIDENCE_RECORD_FIELDS,
     }
     for label, actual, expected in (
         ("nodes", node_fields, expected_fields["nodes"]),
@@ -255,6 +268,11 @@ def validate(bundle_dir: Path) -> dict[str, object]:
         errors.append(
             "downstream_curation_queue header mismatch: "
             f"expected {DOWNSTREAM_CURATION_FIELDS}, got {downstream_queue_fields}"
+        )
+    if downstream_evidence_path.exists() and downstream_evidence_fields != DOWNSTREAM_EVIDENCE_RECORD_FIELDS:
+        errors.append(
+            "downstream_evidence_records header mismatch: "
+            f"expected {DOWNSTREAM_EVIDENCE_RECORD_FIELDS}, got {downstream_evidence_fields}"
         )
 
     node_ids = [row["node_id"] for row in nodes]
@@ -409,6 +427,24 @@ def validate(bundle_dir: Path) -> dict[str, object]:
         invalid_queue_status = [row["queue_id"] for row in downstream_queue if row["curation_status"] != "pending_manual_curation"]
         if invalid_queue_status:
             errors.append(f"downstream curation queue rows must remain pending: {invalid_queue_status[:5]}")
+
+    if downstream_evidence_path.exists():
+        record_ids = [row["record_id"] for row in downstream_evidence]
+        if duplicates(record_ids):
+            errors.append(f"duplicate downstream evidence record IDs: {duplicates(record_ids)[:5]}")
+        queue_ids = {row["queue_id"] for row in downstream_queue}
+        missing_record_queues = sorted({row["source_queue_id"] for row in downstream_evidence if row["source_queue_id"] not in queue_ids})
+        if missing_record_queues:
+            errors.append(f"downstream evidence records reference missing queue IDs: {missing_record_queues[:5]}")
+        invalid_record_state = [row["record_id"] for row in downstream_evidence if row["causal_status"] != "not_asserted" or row["traversal_status"] != "evidence_record_not_causal"]
+        if invalid_record_state:
+            errors.append(f"downstream evidence records are not explicitly non-causal: {invalid_record_state[:5]}")
+        missing_record_edges = sorted({row["edge_id"] for row in downstream_evidence if row["edge_id"] not in edge_id_set})
+        if missing_record_edges:
+            errors.append(f"downstream evidence records reference missing edges: {missing_record_edges[:5]}")
+        missing_record_nodes = sorted({row["evidence_node_id"] for row in downstream_evidence if row["evidence_node_id"] and row["evidence_node_id"] not in node_id_set})
+        if missing_record_nodes:
+            errors.append(f"downstream evidence records reference missing nodes: {missing_record_nodes[:5]}")
 
     if entity_forms_path.exists() and entity_transitions_path.exists():
         form_ids = [row["entity_form_id"] for row in entity_forms]
@@ -712,6 +748,8 @@ def validate(bundle_dir: Path) -> dict[str, object]:
         actual_counts["signaling_route_evidence"] = len(route_evidence)
     if downstream_queue_path.exists():
         actual_counts["downstream_curation_queue"] = len(downstream_queue)
+    if downstream_evidence_path.exists():
+        actual_counts["downstream_evidence_records"] = len(downstream_evidence)
     for key, actual in actual_counts.items():
         if metadata_counts.get(key) != actual:
             errors.append(f"metadata count mismatch for {key}: metadata={metadata_counts.get(key)} actual={actual}")
