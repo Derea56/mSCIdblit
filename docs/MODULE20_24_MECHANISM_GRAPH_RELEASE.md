@@ -1,14 +1,14 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.8.1.md`](RELEASE_v1.8.1.md). The v1.8.0, v1.7.0, v1.6.0, and
+[`RELEASE_v1.8.2.md`](RELEASE_v1.8.2.md). The v1.8.1, v1.8.0, v1.7.0, v1.6.0, and
 v1.5.0
 snapshots below are retained as implementation and historical baseline
 references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-16-reconciled`
+Current release identifier: `module20_24_mechanism_graph:2026-09-16-network-coverage`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_16_reconciled/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_16_network_coverage/`.
 It contains the machine-readable full-chain audit in
 `full_signaling_chain_audit.tsv` and `full_signaling_chain_audit.json`, plus
 the possible-path layer in `mechanism_possible_signaling_paths.tsv` and the
@@ -21,8 +21,9 @@ instances and 95 unique four-node topologies, while retaining 6,118
 evidence-backed partial path fragments with explicit missing-link annotations.
 Two strict possible missing-relay paths are also retained as non-causal
 hypotheses: `Ado>Adora2b>????>????>Vegfa`. The generalized route-evidence
-table retains 11,118 tiered records, including one route-linked record for each
-of the 4,737 Module 21B downstream evidence records. Generic ligand–receptor/
+table retains 13,743 tiered records, including one route-linked record for each
+of the 4,737 Module 21B downstream evidence records and 2,625 exact-shared-
+receptor linkages to receptor-proximal evidence. Generic ligand–receptor/
 output routes whose output is not assigned a `target_gene` role remain labels,
 so mSCS can score entry, intracellular, TF, and output evidence independently
 without treating the route as a causal graph path.
@@ -35,7 +36,7 @@ record IDs used to join those route candidates back to their source claims.
 Its companion evidence-record table contains explicit generic-output,
 intracellular-cascade, TF, and target-gene candidate records while retaining
 929 claims that require manual interpretation.
-See the v1.8.1 release note for the complete counts and interpretation
+See the v1.8.2 release note for the complete counts and interpretation
 boundaries.
 
 Historical v1.8.0 release identifier: `module20_24_mechanism_graph:2026-09-16`
