@@ -55,6 +55,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--input", type=Path, default=DEFAULT_INPUT)
     parser.add_argument("--source-bundle", type=Path, default=DEFAULT_SOURCE_BUNDLE)
     parser.add_argument("--output-bundle", type=Path, default=DEFAULT_OUTPUT_BUNDLE)
+    parser.add_argument(
+        "--release-id",
+        default="",
+        help="Release identifier; required when writing a non-default output bundle.",
+    )
     return parser.parse_args()
 
 
@@ -81,6 +86,12 @@ def validate_rows(rows: list[dict[str, str]], source_bundle: Path) -> None:
     queue_ids = {row["queue_id"] for row in read_tsv(source_bundle / "mechanism_downstream_curation_queue.tsv")}
     downstream_ids = {row["record_id"] for row in read_tsv(source_bundle / "mechanism_downstream_evidence_records.tsv")}
     existing_routes = {row["route_evidence_id"] for row in read_tsv(source_bundle / "mechanism_signaling_route_evidence.tsv")}
+    existing_literature_route_numbers = {
+        int(route_id.split(":", 1)[1])
+        for route_id in existing_routes
+        if route_id.startswith("LITEXP:") and route_id.split(":", 1)[1].isdigit()
+    }
+    next_route_number = max(existing_literature_route_numbers, default=0) + 1
 
     expansion_ids: set[str] = set()
     for row in rows:
@@ -112,7 +123,7 @@ def validate_rows(rows: list[dict[str, str]], source_bundle: Path) -> None:
             raise ValueError(f"{expansion_id} TF-target endpoints do not match its edge")
         if not row["primary_locator"] or not row["evidence_summary"] or not row["limitations"]:
             raise ValueError(f"{expansion_id} must include primary locator, evidence summary, and limitations")
-        route_id = f"LITEXP:{len(expansion_ids):06d}"
+        route_id = f"LITEXP:{next_route_number + len(expansion_ids) - 1:06d}"
         if route_id in existing_routes:
             raise ValueError(f"Generated route ID already exists: {route_id}")
 
@@ -121,6 +132,9 @@ def main() -> int:
     args = parse_args()
     source_bundle = args.source_bundle.resolve()
     output_bundle = args.output_bundle.resolve()
+    if output_bundle != DEFAULT_OUTPUT_BUNDLE.resolve() and not args.release_id:
+        raise ValueError("--release-id is required for a non-default output bundle")
+    release_id = args.release_id or "module20_24_mechanism_graph:2026-09-16-literature-expansion-001"
     rows = read_input(args.input.resolve())
     validate_rows(rows, source_bundle)
     if output_bundle.exists():
@@ -128,11 +142,18 @@ def main() -> int:
     shutil.copytree(source_bundle, output_bundle)
 
     existing_routes = read_tsv(output_bundle / "mechanism_signaling_route_evidence.tsv")
+    existing_literature_route_numbers = {
+        int(row["route_evidence_id"].split(":", 1)[1])
+        for row in existing_routes
+        if row["route_evidence_id"].startswith("LITEXP:")
+        and row["route_evidence_id"].split(":", 1)[1].isdigit()
+    }
+    next_route_number = max(existing_literature_route_numbers, default=0) + 1
     expansion_rows: list[dict[str, str]] = []
     route_rows: list[dict[str, str]] = []
     for index, input_row in enumerate(rows, start=1):
         route = {field: input_row.get(field, "") for field in ROUTE_EVIDENCE_FIELDS}
-        route["route_evidence_id"] = f"LITEXP:{index:06d}"
+        route["route_evidence_id"] = f"LITEXP:{next_route_number + index - 1:06d}"
         route["route_status"] = input_row.get("route_status", "retained_evidence_route")
         route["source_chain_id"] = input_row.get("source_chain_id", input_row["expansion_id"])
         route_rows.append(route)
@@ -160,7 +181,7 @@ def main() -> int:
 
     metadata_path = output_bundle / "bundle_metadata.json"
     metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
-    metadata["release_id"] = "module20_24_mechanism_graph:2026-09-16-literature-expansion-001"
+    metadata["release_id"] = release_id
     metadata.setdefault("files", {})["literature_expansion"] = "mechanism_literature_expansion.tsv"
     metadata.setdefault("counts", {})["literature_expansion"] = len(expansion_rows)
     metadata.setdefault("counts", {})["signaling_route_evidence"] = len(existing_routes) + len(route_rows)
