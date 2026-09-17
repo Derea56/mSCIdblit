@@ -480,3 +480,26 @@ def test_thirty_third_primary_literature_expansion_batch_is_bounded_and_validate
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
+
+
+def test_thirty_fourth_primary_literature_expansion_batch_is_bounded_and_validated():
+    root = Path(__file__).parents[1]
+    input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch034.json"
+    bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion033"
+    rows = read_input(input_path)
+    validate_rows(rows, bundle)
+    assert len(rows) == 8
+    assert {row["curation_status"] for row in rows} == {"curated_primary_route"}
+    assert sum(row["route_tier"] == "ligand_receptor_intracellular_output_missing_tf" for row in rows) == 6
+    assert sum(row["route_tier"] == "ligand_receptor_output_annotation_missing_intracellular_and_tf" for row in rows) == 2
+    assert sum(row["intracellular_status"] == "source_supported" for row in rows) == 6
+    assert sum(row["intracellular_status"] == "not_assayed" for row in rows) == 2
+    assert all(row["causal_status"] == "not_asserted" for row in rows)
+    assert len({row["source_queue_id"] for row in rows}) == len(rows)
+    prior_queue_ids = {
+        prior_row["source_queue_id"]
+        for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
+        if prior_path != input_path
+        for prior_row in json.loads(prior_path.read_text())
+    }
+    assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
