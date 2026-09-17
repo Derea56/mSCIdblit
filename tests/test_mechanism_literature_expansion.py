@@ -906,3 +906,30 @@ def test_fiftieth_primary_literature_expansion_batch_preserves_overlay_and_is_bo
     assert len(route_rows) == 16371
     assert sum(row["route_evidence_id"].startswith("LITEXP:") for row in route_rows) == 324
     assert {row["source_chain_id"] for row in route_rows[-8:]} == {row["expansion_id"] for row in rows}
+
+
+def test_fifty_first_primary_literature_expansion_batch_preserves_overlay_and_is_bounded():
+    root = Path(__file__).parents[1]
+    input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch051.json"
+    source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion050"
+    bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion051"
+    rows = read_input(input_path)
+    validate_rows(rows, source_bundle)
+    assert len(rows) == 8
+    assert {row["curation_status"] for row in rows} == {"curated_primary_route"}
+    assert {row["route_tier"] for row in rows} == {"ligand_receptor_output_annotation_missing_intracellular_and_tf"}
+    assert {row["intracellular_status"] for row in rows} == {"not_assayed"}
+    assert all(row["causal_status"] == "not_asserted" for row in rows)
+    assert len({row["source_queue_id"] for row in rows}) == len(rows)
+    prior_queue_ids = {
+        prior_row["source_queue_id"]
+        for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
+        if prior_path != input_path
+        for prior_row in json.loads(prior_path.read_text())
+    }
+    assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
+
+    route_rows = list(csv.DictReader((bundle / "mechanism_signaling_route_evidence.tsv").open(), delimiter="\t"))
+    assert len(route_rows) == 16379
+    assert sum(row["route_evidence_id"].startswith("LITEXP:") for row in route_rows) == 332
+    assert {row["source_chain_id"] for row in route_rows[-8:]} == {row["expansion_id"] for row in rows}
