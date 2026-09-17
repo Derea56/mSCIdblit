@@ -2840,6 +2840,13 @@ def test_ninety_fourth_primary_literature_expansion_batch_preserves_gpcr_couplin
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
+    covered_queue_ids = prior_queue_ids | {row["source_queue_id"] for row in rows}
+    queue_rows = list(csv.DictReader((source_bundle / "mechanism_downstream_curation_queue.tsv").open(), delimiter="\t"))
+    all_queue_ids = {row["queue_id"] for row in queue_rows}
+    p1_queue_ids = {row["queue_id"] for row in queue_rows if row["curation_priority"] == "P1"}
+    assert len(covered_queue_ids) == 658
+    assert len(all_queue_ids - covered_queue_ids) == 2673
+    assert len(p1_queue_ids - covered_queue_ids) == 1611
 
     route_rows = list(csv.DictReader((bundle / "mechanism_signaling_route_evidence.tsv").open(), delimiter="\t"))
     assert len(route_rows) == 16721

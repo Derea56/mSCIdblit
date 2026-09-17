@@ -37,8 +37,8 @@ Verified bundle counts:
 - Edge-source records: 14,998
 - Signaling route-evidence rows: 16,721
 - Cumulative literature-expansion route rows: 674
-- Unique downstream queue candidates with literature coverage: 657
-- Remaining downstream queue candidates: 2,674, including 1,612 P1 candidates
+- Unique downstream queue candidates with literature coverage: 658
+- Remaining downstream queue candidates: 2,673, including 1,611 P1 candidates
 - Literature route tiers added: 10 receptor–intracellular–output routes
 
 The release is an evidence-layer update only. The remaining queue is intended
