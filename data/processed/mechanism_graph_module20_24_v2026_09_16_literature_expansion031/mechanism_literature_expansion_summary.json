@@ -1,0 +1,24 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 8,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion031",
+  "primary_locators": [
+    "PMID:15784730; PMCID:PMC1895117; DOI:10.1182/blood-2004-09-3686",
+    "PMID:18387945",
+    "PMID:18387945; PMID:16782872",
+    "PMID:25690658; DOI:10.1096/fj.14-268714",
+    "PMID:7515493",
+    "PMID:9544989; DOI:10.1210/mend.12.4.0094",
+    "PMID:9632142",
+    "PMID:9733788"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-16-literature-expansion-031",
+  "route_evidence_rows_after": 16219,
+  "route_evidence_rows_before": 16211,
+  "route_tier_counts": {
+    "ligand_receptor_intracellular_output_missing_tf": 8
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion030"
+}
