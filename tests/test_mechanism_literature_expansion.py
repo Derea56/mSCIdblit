@@ -2058,3 +2058,59 @@ def test_eightieth_primary_literature_expansion_batch_preserves_gpcr_second_mess
     assert len(route_rows) == 16580
     assert sum(row["route_evidence_id"].startswith("LITEXP:") for row in route_rows) == 533
     assert {row["source_chain_id"] for row in route_rows[-10:]} == {row["expansion_id"] for row in rows}
+
+
+def test_eighty_first_primary_literature_expansion_batch_preserves_gpcr_second_messenger_routes():
+    root = Path(__file__).parents[1]
+    input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch081.json"
+    source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion080"
+    bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion081"
+    rows = read_input(input_path)
+    validate_rows(rows, source_bundle)
+    assert len(rows) == 10
+    assert {row["source_queue_id"] for row in rows} == {
+        "M21B-DOWNSTREAM:00538",
+        "M21B-DOWNSTREAM:00545",
+        "M21B-DOWNSTREAM:00547",
+        "M21B-DOWNSTREAM:00554",
+        "M21B-DOWNSTREAM:00559",
+        "M21B-DOWNSTREAM:00563",
+        "M21B-DOWNSTREAM:00566",
+        "M21B-DOWNSTREAM:00644",
+        "M21B-DOWNSTREAM:00652",
+        "M21B-DOWNSTREAM:00664",
+    }
+    assert {row["route_tier"] for row in rows} == {
+        "ligand_receptor_intracellular_output_missing_tf"
+    }
+    assert {row["receptor_intracellular_edge_id"] for row in rows} == {
+        "M21B-E001818",
+        "M21B-E001846",
+        "M21B-E001899",
+        "M21B-E002053",
+        "M21B-E003312",
+        "M21B-E003345",
+        "M21B-E003360",
+        "M21B-E003364",
+        "M21B-E003371",
+        "M21B-E003963",
+    }
+    assert {row["output_class"] for row in rows} == {"second_messenger_readout"}
+    assert {row["effect_polarity"] for row in rows} == {"activating", "inhibitory"}
+    assert not {row["intracellular_tf_edge_id"] for row in rows if row["intracellular_tf_edge_id"]}
+    assert not {row["transcription_factor_node_id"] for row in rows if row["transcription_factor_node_id"]}
+    assert all(row["causal_status"] == "not_asserted" for row in rows)
+    assert all(row["traversal_status"] == "evidence_route_not_causal" for row in rows)
+    assert all(row["curation_status"] == "curated_primary_route" for row in rows)
+    prior_queue_ids = {
+        prior_row["source_queue_id"]
+        for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
+        if prior_path != input_path
+        for prior_row in json.loads(prior_path.read_text())
+    }
+    assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
+
+    route_rows = list(csv.DictReader((bundle / "mechanism_signaling_route_evidence.tsv").open(), delimiter="\t"))
+    assert len(route_rows) == 16590
+    assert sum(row["route_evidence_id"].startswith("LITEXP:") for row in route_rows) == 543
+    assert {row["source_chain_id"] for row in route_rows[-10:]} == {row["expansion_id"] for row in rows}
