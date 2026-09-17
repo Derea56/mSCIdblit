@@ -2396,3 +2396,68 @@ def test_eighty_sixth_primary_literature_expansion_batch_preserves_unique_peptid
     assert len(route_rows) == 16641
     assert sum(row["route_evidence_id"].startswith("LITEXP:") for row in route_rows) == 594
     assert {row["source_chain_id"] for row in route_rows[-10:]} == {row["expansion_id"] for row in rows}
+
+
+def test_eighty_seventh_primary_literature_expansion_batch_preserves_intracellular_and_tf_routes():
+    root = Path(__file__).parents[1]
+    input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch087.json"
+    source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion086"
+    bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion087"
+    rows = read_input(input_path)
+    validate_rows(rows, source_bundle)
+    assert len(rows) == 10
+    assert {row["source_queue_id"] for row in rows} == {
+        "M21B-DOWNSTREAM:00173",
+        "M21B-DOWNSTREAM:00180",
+        "M21B-DOWNSTREAM:00537",
+        "M21B-DOWNSTREAM:00546",
+        "M21B-DOWNSTREAM:00654",
+        "M21B-DOWNSTREAM:00657",
+        "M21B-DOWNSTREAM:00663",
+        "M21B-DOWNSTREAM:02291",
+        "M21B-DOWNSTREAM:02370",
+        "M21B-DOWNSTREAM:02548",
+    }
+    assert {row["route_tier"] for row in rows} == {
+        "ligand_receptor_intracellular_output_missing_tf",
+        "ligand_receptor_output_annotation_missing_intracellular_and_tf",
+        "ligand_receptor_tf_output_annotation_missing_intracellular",
+    }
+    assert {row["receptor_intracellular_edge_id"] for row in rows if row["receptor_intracellular_edge_id"]} == {
+        "M21B-E001810",
+        "M21B-E002053",
+        "M21B-E003317",
+        "M21B-E003349",
+        "M21B-E003351",
+    }
+    assert {row["intracellular_tf_edge_id"] for row in rows if row["intracellular_tf_edge_id"]} == {
+        "M21B-E001717",
+        "M21B-E001781",
+        "M21B-E011519",
+    }
+    assert all(not row["receptor_intracellular_edge_id"] for row in rows if row["route_tier"] == "ligand_receptor_tf_output_annotation_missing_intracellular")
+    assert all(row["intracellular_status"] == "source_supported" for row in rows if row["route_tier"] == "ligand_receptor_intracellular_output_missing_tf")
+    assert all(row["intracellular_status"] == "not_assayed" for row in rows if row["route_tier"] == "ligand_receptor_tf_output_annotation_missing_intracellular")
+    assert {row["output_class"] for row in rows} == {
+        "phosphorylation_or_activation_readout",
+        "second_messenger_readout",
+        "unknown",
+    }
+    assert {row["effect_polarity"] for row in rows} == {"activating"}
+    assert all(not row["tf_target_edge_id"] for row in rows)
+    assert all(not row["target_gene_node_id"] for row in rows)
+    assert all(row["causal_status"] == "not_asserted" for row in rows)
+    assert all(row["traversal_status"] == "evidence_route_not_causal" for row in rows)
+    assert all(row["curation_status"] == "curated_primary_route" for row in rows)
+    prior_queue_ids = {
+        prior_row["source_queue_id"]
+        for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
+        if prior_path != input_path
+        for prior_row in json.loads(prior_path.read_text())
+    }
+    assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
+
+    route_rows = list(csv.DictReader((bundle / "mechanism_signaling_route_evidence.tsv").open(), delimiter="\t"))
+    assert len(route_rows) == 16651
+    assert sum(row["route_evidence_id"].startswith("LITEXP:") for row in route_rows) == 604
+    assert {row["source_chain_id"] for row in route_rows[-10:]} == {row["expansion_id"] for row in rows}
