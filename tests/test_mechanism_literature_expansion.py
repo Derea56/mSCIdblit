@@ -393,7 +393,7 @@ def test_twenty_ninth_primary_literature_expansion_batch_is_bounded_and_validate
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -414,7 +414,7 @@ def test_thirtieth_primary_literature_expansion_batch_is_bounded_and_validated()
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -435,7 +435,7 @@ def test_thirty_first_primary_literature_expansion_batch_is_bounded_and_validate
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -456,7 +456,7 @@ def test_thirty_second_primary_literature_expansion_batch_is_bounded_and_validat
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -477,7 +477,7 @@ def test_thirty_third_primary_literature_expansion_batch_is_bounded_and_validate
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -500,7 +500,7 @@ def test_thirty_fourth_primary_literature_expansion_batch_is_bounded_and_validat
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -521,7 +521,7 @@ def test_thirty_fifth_primary_literature_expansion_batch_is_bounded_and_validate
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -542,7 +542,7 @@ def test_thirty_sixth_primary_literature_expansion_batch_is_bounded_and_validate
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -563,7 +563,7 @@ def test_thirty_seventh_primary_literature_expansion_batch_is_bounded_and_valida
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -584,7 +584,7 @@ def test_thirty_eighth_primary_literature_expansion_batch_is_bounded_and_validat
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -605,7 +605,7 @@ def test_thirty_ninth_primary_literature_expansion_batch_is_bounded_and_validate
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -627,7 +627,7 @@ def test_fortieth_primary_literature_expansion_batch_preserves_overlay_and_is_bo
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -654,7 +654,7 @@ def test_forty_first_primary_literature_expansion_batch_preserves_overlay_and_is
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -681,7 +681,7 @@ def test_forty_second_primary_literature_expansion_batch_preserves_overlay_and_i
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -708,7 +708,7 @@ def test_forty_third_primary_literature_expansion_batch_preserves_overlay_and_is
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -735,7 +735,7 @@ def test_forty_fourth_primary_literature_expansion_batch_preserves_overlay_and_i
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -762,7 +762,7 @@ def test_forty_fifth_primary_literature_expansion_batch_preserves_overlay_and_is
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -789,7 +789,7 @@ def test_forty_sixth_primary_literature_expansion_batch_preserves_overlay_and_is
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -816,7 +816,7 @@ def test_forty_seventh_primary_literature_expansion_batch_preserves_overlay_and_
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -843,7 +843,7 @@ def test_forty_eighth_primary_literature_expansion_batch_preserves_overlay_and_i
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -870,7 +870,7 @@ def test_forty_ninth_primary_literature_expansion_batch_preserves_overlay_and_is
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -897,7 +897,7 @@ def test_fiftieth_primary_literature_expansion_batch_preserves_overlay_and_is_bo
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -924,7 +924,7 @@ def test_fifty_first_primary_literature_expansion_batch_preserves_overlay_and_is
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -951,7 +951,7 @@ def test_fifty_second_primary_literature_expansion_batch_preserves_overlay_and_i
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -978,7 +978,7 @@ def test_fifty_third_primary_literature_expansion_batch_preserves_overlay_and_is
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1005,7 +1005,7 @@ def test_fifty_fourth_primary_literature_expansion_batch_preserves_overlay_and_i
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1032,7 +1032,7 @@ def test_fifty_fifth_primary_literature_expansion_batch_preserves_overlay_and_is
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1059,7 +1059,7 @@ def test_fifty_sixth_primary_literature_expansion_batch_preserves_overlay_and_is
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1086,7 +1086,7 @@ def test_fifty_seventh_primary_literature_expansion_batch_preserves_overlay_and_
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1113,7 +1113,7 @@ def test_fifty_eighth_primary_literature_expansion_batch_preserves_overlay_and_i
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1139,7 +1139,7 @@ def test_fifty_ninth_primary_literature_expansion_batch_preserves_overlay_and_is
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1166,7 +1166,7 @@ def test_sixtieth_primary_literature_expansion_batch_preserves_overlay_and_is_bo
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1193,7 +1193,7 @@ def test_sixty_first_primary_literature_expansion_batch_preserves_overlay_and_is
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1220,7 +1220,7 @@ def test_sixty_second_primary_literature_expansion_batch_preserves_overlay_and_i
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1247,7 +1247,7 @@ def test_sixty_third_primary_literature_expansion_batch_preserves_overlay_and_is
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1274,7 +1274,7 @@ def test_sixty_fourth_primary_literature_expansion_batch_preserves_overlay_and_i
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1307,7 +1307,7 @@ def test_sixty_fifth_primary_literature_expansion_batch_preserves_tf_output_rout
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert row["source_queue_id"] not in prior_queue_ids
@@ -1340,7 +1340,7 @@ def test_sixty_sixth_primary_literature_expansion_batch_preserves_selectin_dr3_t
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert row["source_queue_id"] not in prior_queue_ids
@@ -1369,7 +1369,7 @@ def test_sixty_seventh_primary_literature_expansion_batch_preserves_chemokine_in
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1409,7 +1409,7 @@ def test_sixty_eighth_primary_literature_expansion_batch_preserves_selective_lig
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1451,7 +1451,7 @@ def test_sixty_ninth_primary_literature_expansion_batch_preserves_selective_liga
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1488,7 +1488,7 @@ def test_seventieth_primary_literature_expansion_batch_preserves_partial_output_
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1544,7 +1544,7 @@ def test_seventy_first_primary_literature_expansion_batch_preserves_receptor_pro
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1601,7 +1601,7 @@ def test_seventy_second_primary_literature_expansion_batch_preserves_partial_rou
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1655,7 +1655,7 @@ def test_seventy_third_primary_literature_expansion_batch_preserves_receptor_pro
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1713,7 +1713,7 @@ def test_seventy_fourth_primary_literature_expansion_batch_preserves_gpcr_output
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1767,7 +1767,7 @@ def test_seventy_fifth_primary_literature_expansion_batch_preserves_endocrine_an
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1821,7 +1821,7 @@ def test_seventy_sixth_primary_literature_expansion_batch_preserves_neuroendocri
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1881,7 +1881,7 @@ def test_seventy_seventh_primary_literature_expansion_batch_preserves_non_gpcr_r
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1939,7 +1939,7 @@ def test_seventy_eighth_primary_literature_expansion_batch_preserves_receptor_pr
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -1994,7 +1994,7 @@ def test_seventy_ninth_primary_literature_expansion_batch_preserves_gpcr_second_
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -2049,7 +2049,7 @@ def test_eightieth_primary_literature_expansion_batch_preserves_gpcr_second_mess
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -2105,7 +2105,7 @@ def test_eighty_first_primary_literature_expansion_batch_preserves_gpcr_second_m
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -2163,7 +2163,7 @@ def test_eighty_second_primary_literature_expansion_batch_preserves_gpcr_second_
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -2216,7 +2216,7 @@ def test_eighty_third_primary_literature_expansion_batch_preserves_unique_gpcr_o
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -2275,7 +2275,7 @@ def test_eighty_fourth_primary_literature_expansion_batch_preserves_unique_gpcr_
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -2334,7 +2334,7 @@ def test_eighty_fifth_primary_literature_expansion_batch_preserves_unique_gpcr_o
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -2387,7 +2387,7 @@ def test_eighty_sixth_primary_literature_expansion_batch_preserves_unique_peptid
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -2452,7 +2452,7 @@ def test_eighty_seventh_primary_literature_expansion_batch_preserves_intracellul
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -2507,7 +2507,7 @@ def test_eighty_eighth_primary_literature_expansion_batch_preserves_receptor_out
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -2559,7 +2559,7 @@ def test_eighty_ninth_primary_literature_expansion_batch_preserves_chemokine_and
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -2612,7 +2612,7 @@ def test_ninetieth_primary_literature_expansion_batch_preserves_bounded_receptor
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -2666,7 +2666,7 @@ def test_ninety_first_primary_literature_expansion_batch_preserves_pathway_outpu
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -2719,7 +2719,7 @@ def test_ninety_second_primary_literature_expansion_batch_preserves_gpcr_and_not
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -2772,7 +2772,7 @@ def test_ninety_third_primary_literature_expansion_batch_preserves_receptor_dive
     prior_queue_ids = {
         prior_row["source_queue_id"]
         for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
-        if prior_path != input_path
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
         for prior_row in json.loads(prior_path.read_text())
     }
     assert not ({row["source_queue_id"] for row in rows} & prior_queue_ids)
@@ -3412,4 +3412,80 @@ def test_one_hundred_second_primary_literature_expansion_batch_preserves_recepto
     route_rows = list(csv.DictReader((bundle / "mechanism_signaling_route_evidence.tsv").open(), delimiter="\t"))
     assert len(route_rows) == 16801
     assert sum(row["route_evidence_id"].startswith("LITEXP:") for row in route_rows) == 754
+    assert {row["source_chain_id"] for row in route_rows[-10:]} == {row["expansion_id"] for row in rows}
+
+
+def test_one_hundred_third_primary_literature_expansion_batch_preserves_cytokine_chemokine_and_purinergic_routes():
+    root = Path(__file__).parents[1]
+    input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch103.json"
+    source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion102"
+    bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion103"
+    rows = read_input(input_path)
+    validate_rows(rows, source_bundle)
+    assert len(rows) == 10
+    assert {row["source_queue_id"] for row in rows} == {
+        "M21B-DOWNSTREAM:02551",
+        "M21B-DOWNSTREAM:02547",
+        "M21B-DOWNSTREAM:02548",
+        "M21B-DOWNSTREAM:02550",
+        "M21B-DOWNSTREAM:00025",
+        "M21B-DOWNSTREAM:00105",
+        "M21B-DOWNSTREAM:00112",
+        "M21B-DOWNSTREAM:00017",
+        "M21B-DOWNSTREAM:00064",
+        "M21B-DOWNSTREAM:00556",
+    }
+    assert sum(row["route_tier"] == "ligand_receptor_intracellular_output_missing_tf" for row in rows) == 7
+    assert sum(row["route_tier"] == "ligand_receptor_intracellular_tf_output_missing_target_gene" for row in rows) == 3
+    assert {row["receptor_intracellular_edge_id"] for row in rows} == {
+        "M21B-E000023",
+        "M21B-E001727",
+        "M21B-E001716",
+        "M21B-E000014",
+        "M21B-E001776",
+        "M21B-E011504",
+        "M21B-E000034",
+        "M21B-E003377",
+        "M21B-E003378",
+        "M21B-E001847",
+    }
+    assert {row["transcription_factor_node_id"] for row in rows if row["transcription_factor_node_id"]} == {
+        "NODE10693",
+        "NODE10719",
+    }
+    assert {row["output_class"] for row in rows} == {
+        "phosphorylation_or_activation_readout",
+        "second_messenger_readout",
+        "gene_expression_or_transcription",
+    }
+    assert {row["effect_polarity"] for row in rows} == {"activating"}
+    assert {row["source_scope"] for row in rows} == {"composite_primary_evidence"}
+    assert {row["evidence_directness"] for row in rows} == {"composite_source_claim"}
+    assert all(row["intracellular_status"] == "source_supported" for row in rows)
+    assert sum(bool(row["transcription_factor_node_id"]) for row in rows) == 3
+    assert all(not row["tf_target_edge_id"] for row in rows)
+    assert all(not row["target_gene_node_id"] for row in rows)
+    assert all(row["causal_status"] == "not_asserted" for row in rows)
+    assert all(row["traversal_status"] == "evidence_route_not_causal" for row in rows)
+    assert all(row["curation_status"] == "curated_primary_route" for row in rows)
+    prior_queue_ids = {
+        prior_row["source_queue_id"]
+        for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
+        for prior_row in json.loads(prior_path.read_text())
+    }
+    current_queue_ids = {row["source_queue_id"] for row in rows}
+    assert len(current_queue_ids & prior_queue_ids) == 7
+    assert len(current_queue_ids - prior_queue_ids) == 3
+    covered_queue_ids = prior_queue_ids | current_queue_ids
+    queue_rows = list(csv.DictReader((source_bundle / "mechanism_downstream_curation_queue.tsv").open(), delimiter="\t"))
+    all_queue_ids = {row["queue_id"] for row in queue_rows}
+    p1_queue_ids = {row["queue_id"] for row in queue_rows if row["curation_priority"] == "P1"}
+    assert len(covered_queue_ids) == 741
+    assert len(all_queue_ids - covered_queue_ids) == 2590
+    assert len(p1_queue_ids - covered_queue_ids) == 1545
+
+    route_rows = list(csv.DictReader((bundle / "mechanism_signaling_route_evidence.tsv").open(), delimiter="\t"))
+    assert len(route_rows) == 16811
+    assert sum(row["route_evidence_id"].startswith("LITEXP:") for row in route_rows) == 764
     assert {row["source_chain_id"] for row in route_rows[-10:]} == {row["expansion_id"] for row in rows}
