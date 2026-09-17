@@ -1,0 +1,212 @@
+{
+  "release_name": "mSCIdblit Module 20B-24B mechanism graph",
+  "bundle_name": "module20_24_mechanism_graph",
+  "release_id": "module20_24_mechanism_graph:2026-09-16-literature-expansion-013",
+  "release_status": "conservative_register_backed_snapshot",
+  "source_repo": "mSCIdblit",
+  "target_repo": "mSCS",
+  "source_scope": "validated Module 20B-24B edge and evidence registers",
+  "generated_at": "2026-09-16",
+  "canonical_database_materialization": false,
+  "authoritative_pathway_snapshot": true,
+  "replacement_policy": "Importing this bundle replaces the selected active mechanism release in mSCS; it does not alter atlas-derived tables.",
+  "input_registers": [
+    {
+      "module": "20B",
+      "file": "module20b_edge_register.tsv",
+      "sha256": "1081d928d1d32c7dc96d6e1957a2f0a37cb04f29714eb50f7c6b6dcb5b98c824"
+    },
+    {
+      "module": "20B",
+      "file": "module20b_evidence_register.tsv",
+      "sha256": "92d465bafe7f26346b29051ac0aecd83fc4b1dac460050e7563b65d367db0059"
+    },
+    {
+      "module": "21B",
+      "file": "module21b_edge_register.tsv",
+      "sha256": "618b2294f73837458b1843e790b38c9f66f8edcf8371b3ff8d44bee8bd111554"
+    },
+    {
+      "module": "21B",
+      "file": "module21b_evidence_register.tsv",
+      "sha256": "d8e14867b21cf26a4349344788077d4992b2c836052f1a37fa4780d287889e20"
+    },
+    {
+      "module": "22B",
+      "file": "module22b_edge_register.tsv",
+      "sha256": "49494b3a098a5fbe6d36c649c7b34e813b969dc32dffc22c1d01b5fae3afbfa9"
+    },
+    {
+      "module": "22B",
+      "file": "module22b_evidence_register.tsv",
+      "sha256": "c9c5a9d98a29b3d59cedfcf52d9f9619063ef377e9da3d01f546134a2b84df28"
+    },
+    {
+      "module": "23B",
+      "file": "module23b_edge_register.tsv",
+      "sha256": "727c1fd6a7293c073b3ec62f5a243dc58bbcbc9d2b61671374fbfc0e4615fbc8"
+    },
+    {
+      "module": "23B",
+      "file": "module23b_evidence_register.tsv",
+      "sha256": "0fa0eac8f936e2eca355c587e0c1f96559e512d3022d4a86619279d6b0a33a12"
+    },
+    {
+      "module": "24B",
+      "file": "module24b_edge_register.tsv",
+      "sha256": "04815ef544d4207eed26ee32c0baed018803d0ec97e4d44434297fa0844c46d3"
+    },
+    {
+      "module": "24B",
+      "file": "module24b_evidence_register.tsv",
+      "sha256": "0c3ad6d5fc2f7b9dcfe83c482da0aeb2f7e3f575b4c77db63787fc790dc6b277"
+    }
+  ],
+  "graph_policy": {
+    "exportable_edges_only": true,
+    "composite_labels_preserved": true,
+    "explicit_node_aliases_applied": true,
+    "node_aliases": {
+      "CNTFR-alpha-gp130-LIFR receptor complex": [
+        "cntf:cntfra:gp130:lifr receptor complex",
+        "cntfr-alpha-gp130-lifr receptor complex"
+      ],
+      "IFNLR1-IL10RB receptor complex": [
+        "ifnlr1-il10rb receptor complex",
+        "ifnlr1:il10rb receptor complex"
+      ],
+      "TGFBR1-TGFBR2 receptor complex": [
+        "tgfbr1-tgfbr2 receptor complex",
+        "tgfbr1:tgfbr2",
+        "tgfbr1:tgfbr2 receptor complex",
+        "tgfbr1_tgfbr2"
+      ]
+    },
+    "unresolved_and_nonexportable_edges_excluded_from_graph": true,
+    "evidence_rows_retained_for_exported_edges": true,
+    "self_loops_excluded_from_traversable_graph": true,
+    "output_bridge_candidates_are_review_only": true,
+    "output_bridge_candidates_are_not_graph_edges": true,
+    "validated_output_bridges_are_not_graph_edges": true,
+    "possible_signaling_paths_are_hypotheses_only": true,
+    "possible_signaling_paths_are_not_graph_edges": true,
+    "signaling_route_evidence_is_hypothesis_layer_only": true,
+    "signaling_route_evidence_is_not_graph_edges": true,
+    "literature_expansion_is_evidence_layer_only": true
+  },
+  "counts": {
+    "nodes": 11952,
+    "edges": 14722,
+    "edge_sources": 14998,
+    "node_roles": 17332,
+    "entity_forms": 3014,
+    "entity_transitions": 13,
+    "nodes_with_ligand_role": 2854,
+    "nodes_with_receptor_role": 2408,
+    "nodes_with_transcription_factor_role": 51,
+    "nodes_with_target_gene_role": 67,
+    "pathways": 10881,
+    "boundary_groups": 96,
+    "nonexportable_edges": 9889,
+    "output_bridge_candidates": 342,
+    "output_bridges_validated": 1166,
+    "possible_signaling_paths": 2,
+    "signaling_route_evidence": 16112,
+    "downstream_curation_queue": 3331,
+    "downstream_evidence_records": 4730,
+    "literature_expansion": 5
+  },
+  "source_locator_status_counts": {
+    "local_only_or_unresolved": 1124,
+    "stable": 13111,
+    "stable_plus_local": 763
+  },
+  "module_counts": [
+    {
+      "module": "20B",
+      "edge_count": 5906,
+      "exportable_edge_count": 1124,
+      "evidence_count": 5906,
+      "pathway_count": 14,
+      "nonexportable_edge_count": 4782
+    },
+    {
+      "module": "21B",
+      "edge_count": 11591,
+      "exportable_edge_count": 11509,
+      "evidence_count": 10897,
+      "pathway_count": 9984,
+      "nonexportable_edge_count": 82
+    },
+    {
+      "module": "22B",
+      "edge_count": 5733,
+      "exportable_edge_count": 714,
+      "evidence_count": 5906,
+      "pathway_count": 5,
+      "nonexportable_edge_count": 5019
+    },
+    {
+      "module": "23B",
+      "edge_count": 1230,
+      "exportable_edge_count": 1226,
+      "evidence_count": 1630,
+      "pathway_count": 820,
+      "nonexportable_edge_count": 4
+    },
+    {
+      "module": "24B",
+      "edge_count": 151,
+      "exportable_edge_count": 149,
+      "evidence_count": 200,
+      "pathway_count": 145,
+      "nonexportable_edge_count": 2
+    }
+  ],
+  "files": {
+    "nodes": "mechanism_nodes.tsv",
+    "node_roles": "mechanism_node_roles.tsv",
+    "edges": "mechanism_edges.tsv",
+    "edge_sources": "mechanism_edge_sources.tsv",
+    "pathways": "mechanism_pathways.tsv",
+    "boundaries": "mechanism_boundary_summary.tsv",
+    "entity_forms": "mechanism_entity_forms.tsv",
+    "entity_transitions": "mechanism_entity_transitions.tsv",
+    "validation": "validation_report.json",
+    "output_bridge_candidates": "mechanism_output_bridge_candidates.tsv",
+    "output_bridges_validated": "mechanism_output_bridges_validated.tsv",
+    "possible_signaling_paths": "mechanism_possible_signaling_paths.tsv",
+    "signaling_route_evidence": "mechanism_signaling_route_evidence.tsv",
+    "gap_review": "mechanism_gap_review.tsv",
+    "downstream_curation_queue": "mechanism_downstream_curation_queue.tsv",
+    "downstream_evidence_records": "mechanism_downstream_evidence_records.tsv",
+    "literature_expansion": "mechanism_literature_expansion.tsv"
+  },
+  "accuracy_contract": [
+    "Every exported edge must reference existing source and target nodes.",
+    "Every exported node must have a signaling_cascade role; specialized roles are only added from explicit register layers or curated role hints.",
+    "Every exported edge must retain at least one evidence-register source row.",
+    "Every exported edge must belong to a pathway row.",
+    "Role-aware edges use canonical binds_receptor or target-gene relation types with matching endpoint roles; original register relations remain audit fields.",
+    "Self-loop register rows are retained as boundaries and are not inserted into the normalized graph.",
+    "Non-exportable edges remain summarized as boundaries and are not traversable graph edges.",
+    "Stable PMID/PMCID/DOI/URL locators are retained in edge-source rows where available; local paths are not released.",
+    "Gene and protein/ligand forms are typed auxiliary records; a shared label or role co-occurrence does not assert transcription, translation, secretion, or transport.",
+    "Entity transitions are conditional metadata, never causal graph edges; intercellular continuation requires explicit output/secretion evidence or a separately validated bridge.",
+    "Possible signaling paths retain validated ligand-receptor and target-output evidence with unknown relays; they are hypotheses, not causal graph edges.",
+    "Signaling route evidence retains ligand, receptor, intracellular, TF, and output evidence at different completeness tiers for downstream plausibility scoring.",
+    "The Module 21B downstream curation queue retains text-level functional claims and exact node mentions for manual route-link curation; it is not a causal edge layer.",
+    "Canonical ligand-receptor edges with explicit binding, activation, assembly, or entry-receptor evidence and compatible endpoint roles are retained as likely ligand-receptor entries; ambiguous relations remain unlinked for review.",
+    "Receptor-proximal evidence is linked to ligand-receptor entries only through exact shared receptor node identity or a curated receptor-identity alias; these links remain context-bound, non-causal evidence routes.",
+    "Mechanism evidence rows use mechanism_evidence_v1; output classes, polarity, negative-evidence status, context qualifiers, and missing layers are exported as evidence attributes, not composite biological confidence scores.",
+    "Selective primary-literature expansion adds source-linked route annotations for mSCS plausibility analysis; annotations do not create causal graph edges or database confidence scores."
+  ],
+  "module20b_pathway_family_layer": {
+    "file": "data/processed/module20b_pathway_family_layer_v1/module20b_pathway_family_layer.tsv",
+    "assignment_type": "conservative_receptor_family_grouping",
+    "downstream_pathway_claim": false,
+    "register_unchanged": true,
+    "sha256": "6b85ff4708cab88f00195202c6b3f45805f4472931a381e40054cfcc706621c2"
+  },
+  "mechanism_evidence_contract_version": "mechanism_evidence_v1"
+}
