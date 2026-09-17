@@ -183,3 +183,16 @@ def test_fourteenth_primary_literature_expansion_batch_is_bounded_and_validated(
     assert {row["route_tier"] for row in rows} == {"ligand_receptor_intracellular_output_missing_tf"}
     assert all(row["intracellular_status"] == "source_supported" for row in rows)
     assert all(row["causal_status"] == "not_asserted" for row in rows)
+
+
+def test_fifteenth_primary_literature_expansion_batch_is_bounded_and_validated():
+    root = Path(__file__).parents[1]
+    input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch015.json"
+    bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion014"
+    rows = read_input(input_path)
+    validate_rows(rows, bundle)
+    assert len(rows) == 5
+    assert {row["curation_status"] for row in rows} == {"curated_primary_route"}
+    assert {row["route_tier"] for row in rows} == {"ligand_receptor_tf_output_annotation_missing_intracellular"}
+    assert all(row["intracellular_status"] == "not_assayed" for row in rows)
+    assert all(row["causal_status"] == "not_asserted" for row in rows)
