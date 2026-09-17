@@ -1316,3 +1316,36 @@ def test_sixty_fifth_primary_literature_expansion_batch_preserves_tf_output_rout
     assert len(route_rows) == 16463
     assert sum(row["route_evidence_id"].startswith("LITEXP:") for row in route_rows) == 416
     assert {row["source_chain_id"] for row in route_rows[-1:]} == {row["expansion_id"] for row in rows}
+
+
+def test_sixty_sixth_primary_literature_expansion_batch_preserves_selectin_dr3_tf_output_route_and_is_bounded():
+    root = Path(__file__).parents[1]
+    input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch066.json"
+    source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion065"
+    bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion066"
+    rows = read_input(input_path)
+    validate_rows(rows, source_bundle)
+    assert len(rows) == 1
+    row = rows[0]
+    assert row["source_queue_id"] == "M21B-DOWNSTREAM:00093"
+    assert row["route_tier"] == "ligand_receptor_tf_output_annotation_missing_intracellular"
+    assert row["known_layers"] == "ligand|receptor|transcription_factor|cellular_functional_readout"
+    assert row["missing_layers"] == "intracellular_continuation|target_gene_expression"
+    assert row["ligand_receptor_edge_id"] == "M21B-E000310"
+    assert row["transcription_factor_node_id"] == "NODE07961"
+    assert row["transcription_factor_label"] == "NF-kB"
+    assert row["intracellular_status"] == "not_assayed"
+    assert row["causal_status"] == "not_asserted"
+    assert row["curation_status"] == "curated_primary_route"
+    prior_queue_ids = {
+        prior_row["source_queue_id"]
+        for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
+        if prior_path != input_path
+        for prior_row in json.loads(prior_path.read_text())
+    }
+    assert row["source_queue_id"] not in prior_queue_ids
+
+    route_rows = list(csv.DictReader((bundle / "mechanism_signaling_route_evidence.tsv").open(), delimiter="\t"))
+    assert len(route_rows) == 16464
+    assert sum(row["route_evidence_id"].startswith("LITEXP:") for row in route_rows) == 417
+    assert {row["source_chain_id"] for row in route_rows[-1:]} == {row["expansion_id"] for row in rows}
