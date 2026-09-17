@@ -9,6 +9,23 @@ import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
+try:
+    from .mechanism_evidence_contract import (
+        EVIDENCE_POLARITIES,
+        MECHANISM_EVIDENCE_CONTRACT_VERSION,
+        NEGATIVE_EVIDENCE_STATUSES,
+        OUTPUT_CLASSES,
+        contract_fields,
+    )
+except ImportError:  # pragma: no cover - direct script execution
+    from mechanism_evidence_contract import (
+        EVIDENCE_POLARITIES,
+        MECHANISM_EVIDENCE_CONTRACT_VERSION,
+        NEGATIVE_EVIDENCE_STATUSES,
+        OUTPUT_CLASSES,
+        contract_fields,
+    )
+
 
 ALLOWED_NODE_ROLES = {
     "ligand",
@@ -46,7 +63,7 @@ ROUTE_EVIDENCE_FIELDS = [
     "pathway_name", "input_evidence_type", "output_evidence_type", "evidence_ids",
     "source_queue_id", "source_evidence_record_id", "route_linkage_status",
     "causal_status", "traversal_status", "source_chain_id",
-]
+] + list(contract_fields())
 DOWNSTREAM_CURATION_FIELDS = [
     "queue_id", "module", "edge_id", "source_node_id", "source_label",
     "target_node_id", "target_label", "graph_relation_type",
@@ -59,14 +76,14 @@ DOWNSTREAM_CURATION_FIELDS = [
     "text_matched_target_gene_labels", "candidate_output_terms",
     "missing_layers", "curation_priority", "curation_status",
     "do_not_infer_reason",
-]
+] + list(contract_fields())
 DOWNSTREAM_EVIDENCE_RECORD_FIELDS = [
     "record_id", "source_queue_id", "module", "edge_id", "record_type",
     "evidence_node_id", "evidence_node_label", "output_term", "claim_status",
     "linkage_status", "edge_semantic_class", "confidence_tier",
     "source_locator", "source_evidence_ids", "citation_note", "evidence_summary",
     "limitations", "missing_layers", "causal_status", "traversal_status",
-]
+] + list(contract_fields())
 ALLOWED_ROUTE_TIERS = {
     "ligand_receptor_entry_only",
     "ligand_receptor_tf_target_missing_intracellular",
@@ -118,6 +135,30 @@ def read_tsv(path: Path) -> tuple[list[str], list[dict[str, str]]]:
 
 def duplicates(values: list[str]) -> list[str]:
     return sorted(value for value, count in Counter(values).items() if count > 1)
+
+
+def validate_evidence_contract_rows(
+    rows: list[dict[str, str]],
+    label: str,
+    errors: list[str],
+) -> None:
+    if not rows:
+        return
+    versions = {row.get("evidence_contract_version", "") for row in rows}
+    if versions != {MECHANISM_EVIDENCE_CONTRACT_VERSION}:
+        errors.append(f"{label} has invalid evidence contract versions: {sorted(versions)}")
+    polarities = sorted(set(row.get("evidence_polarity", "") for row in rows) - set(EVIDENCE_POLARITIES))
+    if polarities:
+        errors.append(f"{label} has invalid evidence polarities: {polarities[:5]}")
+    negative_statuses = sorted(
+        set(row.get("negative_evidence_status", "") for row in rows)
+        - set(NEGATIVE_EVIDENCE_STATUSES)
+    )
+    if negative_statuses:
+        errors.append(f"{label} has invalid negative evidence statuses: {negative_statuses[:5]}")
+    output_classes = sorted(set(row.get("output_class", "") for row in rows) - set(OUTPUT_CLASSES))
+    if output_classes:
+        errors.append(f"{label} has invalid output classes: {output_classes[:5]}")
 
 
 def validate(bundle_dir: Path) -> dict[str, object]:
@@ -291,6 +332,9 @@ def validate(bundle_dir: Path) -> dict[str, object]:
             "downstream_evidence_records header mismatch: "
             f"expected {DOWNSTREAM_EVIDENCE_RECORD_FIELDS}, got {downstream_evidence_fields}"
         )
+    validate_evidence_contract_rows(route_evidence, "signaling_route_evidence", errors)
+    validate_evidence_contract_rows(downstream_queue, "downstream_curation_queue", errors)
+    validate_evidence_contract_rows(downstream_evidence, "downstream_evidence_records", errors)
 
     node_ids = [row["node_id"] for row in nodes]
     role_keys = [(row["node_id"], row["role"]) for row in node_roles]

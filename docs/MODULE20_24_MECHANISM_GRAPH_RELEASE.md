@@ -1,14 +1,14 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.8.4.md`](RELEASE_v1.8.4.md). The v1.8.3, v1.8.2, v1.8.1, v1.8.0, v1.7.0, v1.6.0, and
+[`RELEASE_v1.8.5.md`](RELEASE_v1.8.5.md). The v1.8.4, v1.8.3, v1.8.2, v1.8.1, v1.8.0, v1.7.0, v1.6.0, and
 v1.5.0
 snapshots below are retained as implementation and historical baseline
 references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-16-tf-output-coverage`
+Current release identifier: `module20_24_mechanism_graph:2026-09-16-evidence-contract`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_16_tf_output_coverage/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_16_evidence_contract/`.
 It contains the machine-readable full-chain audit in
 `full_signaling_chain_audit.tsv` and `full_signaling_chain_audit.json`, plus
 the possible-path layer in `mechanism_possible_signaling_paths.tsv` and the
@@ -38,7 +38,7 @@ record IDs used to join those route candidates back to their source claims.
 Its companion evidence-record table contains explicit generic-output,
 intracellular-cascade, TF, and target-gene candidate records while retaining
 929 claims that require manual interpretation.
-See the v1.8.4 release note for the complete counts and interpretation
+See the v1.8.5 release note for the complete counts and interpretation
 boundaries.
 
 Historical v1.8.0 release identifier: `module20_24_mechanism_graph:2026-09-16`

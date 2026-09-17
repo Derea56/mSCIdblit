@@ -22,6 +22,25 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
+try:
+    from .mechanism_evidence_contract import (
+        MECHANISM_EVIDENCE_CONTRACT_VERSION,
+        classify_evidence_polarity,
+        classify_negative_evidence_status,
+        contract_fields,
+        evidence_directness,
+        normalize_output_class,
+    )
+except ImportError:  # pragma: no cover - direct script execution
+    from mechanism_evidence_contract import (
+        MECHANISM_EVIDENCE_CONTRACT_VERSION,
+        classify_evidence_polarity,
+        classify_negative_evidence_status,
+        contract_fields,
+        evidence_directness,
+        normalize_output_class,
+    )
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_BUNDLE = ROOT / "data" / "processed" / "mechanism_graph_module20_24_v2026_09_01"
@@ -81,7 +100,7 @@ ROUTE_EVIDENCE_FIELDS = [
     "bridge_id", "pathway_name", "input_evidence_type",
     "output_evidence_type", "evidence_ids", "source_queue_id", "source_evidence_record_id",
     "route_linkage_status", "causal_status", "traversal_status", "source_chain_id",
-]
+] + list(contract_fields())
 DOWNSTREAM_CURATION_FIELDS = [
     "queue_id", "module", "edge_id", "source_node_id", "source_label",
     "target_node_id", "target_label", "graph_relation_type",
@@ -94,14 +113,14 @@ DOWNSTREAM_CURATION_FIELDS = [
     "text_matched_target_gene_labels", "candidate_output_terms",
     "missing_layers", "curation_priority", "curation_status",
     "do_not_infer_reason",
-]
+] + list(contract_fields())
 DOWNSTREAM_EVIDENCE_RECORD_FIELDS = [
     "record_id", "source_queue_id", "module", "edge_id", "record_type",
     "evidence_node_id", "evidence_node_label", "output_term", "claim_status",
     "linkage_status", "edge_semantic_class", "confidence_tier",
     "source_locator", "source_evidence_ids", "citation_note", "evidence_summary",
     "limitations", "missing_layers", "causal_status", "traversal_status",
-]
+] + list(contract_fields())
 
 RECEPTOR_LABEL_PATTERNS = (
     r"(?<![a-z0-9])receptor(?![a-z0-9])",
@@ -205,6 +224,11 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--output", type=Path, default=None)
     parser.add_argument("--summary", type=Path, default=None)
+    parser.add_argument(
+        "--release-id",
+        default="",
+        help="Optional release identifier written to bundle metadata.",
+    )
     return parser.parse_args()
 
 
@@ -351,6 +375,32 @@ def extract_output_terms(text: str) -> list[str]:
     return [name for name, pattern in OUTPUT_TERM_PATTERNS.items() if re.search(pattern, normalized_text)]
 
 
+def source_evidence_profile(
+    source_rows: list[dict[str, str]],
+    *,
+    evidence_status: str = "",
+    evidence_text: str = "",
+) -> dict[str, str]:
+    """Return additive evidence qualifiers without deriving route confidence."""
+
+    scopes = [row.get("source_scope", "") for row in source_rows]
+    return {
+        "evidence_contract_version": MECHANISM_EVIDENCE_CONTRACT_VERSION,
+        "evidence_polarity": classify_evidence_polarity(
+            scopes,
+            evidence_status=evidence_status,
+            evidence_text=evidence_text,
+        ),
+        "negative_evidence_status": classify_negative_evidence_status(
+            scopes,
+            evidence_status=evidence_status,
+            evidence_text=evidence_text,
+        ),
+        "evidence_directness": "source_claim",
+        "source_scope": ";".join(dict.fromkeys(value for value in scopes if value)),
+    }
+
+
 def build_downstream_curation_queue(
     bundle_dir: Path,
 ) -> tuple[list[dict[str, object]], dict[str, object]]:
@@ -409,6 +459,17 @@ def build_downstream_curation_queue(
         stable_locator = any(row.get("source_locator_status") == "stable" for row in source_rows)
         priority = "P1" if direct_edge and stable_locator and (tf_matches or target_matches or output_terms) else "P2" if direct_edge else "P3"
         source = source_rows[0]
+        evidence_text = " || ".join(dict.fromkeys(row.get("evidence_summary", "") for row in source_rows if row.get("evidence_summary", "")))
+        profile = source_evidence_profile(
+            source_rows,
+            evidence_status=edge.get("evidence_status", ""),
+            evidence_text=evidence_text,
+        )
+        profile["output_class"] = normalize_output_class(
+            output_term=output_terms[0] if output_terms else "",
+            target_gene=target_matches[0][1] if target_matches else "",
+        )
+        profile["evidence_directness"] = "source_claim"
         queue.append({
             "queue_id": "",
             "module": edge.get("module", "21B"),
@@ -442,6 +503,14 @@ def build_downstream_curation_queue(
             "curation_priority": priority,
             "curation_status": "pending_manual_curation",
             "do_not_infer_reason": "Text-level downstream or functional evidence is retained, but missing route links are not promoted to causal graph edges.",
+            **profile,
+            "species_context": edge.get("species_context", ""),
+            "cell_type_context": edge.get("cell_type_context", ""),
+            "compartment_context": edge.get("compartment_context", ""),
+            "injury_context": edge.get("injury_context", ""),
+            "context_scope": edge.get("context_scope", ""),
+            "assay_or_perturbation": source.get("assay_or_perturbation", "") or "not_reported",
+            "effect_polarity": edge.get("effect_polarity", ""),
         })
     queue.sort(key=lambda row: (str(row["curation_priority"]), str(row["edge_id"])))
     for index, row in enumerate(queue, start=1):
@@ -512,6 +581,24 @@ def build_downstream_evidence_records(
                 "missing_layers": str(queue["missing_layers"]),
                 "causal_status": "not_asserted",
                 "traversal_status": "evidence_record_not_causal",
+                "evidence_contract_version": str(queue.get("evidence_contract_version", MECHANISM_EVIDENCE_CONTRACT_VERSION)),
+                "evidence_polarity": str(queue.get("evidence_polarity", "unknown")),
+                "negative_evidence_status": str(queue.get("negative_evidence_status", "not_evaluated")),
+                "evidence_directness": evidence_directness(record_type, claim_status),
+                "output_class": normalize_output_class(
+                    record_type=record_type,
+                    output_term=output_term,
+                    output_label=node_label,
+                    target_gene=node_label if record_type == "target_gene_output_evidence" else "",
+                ),
+                "species_context": str(queue.get("species_context", "")),
+                "cell_type_context": str(queue.get("cell_type_context", "")),
+                "compartment_context": str(queue.get("compartment_context", "")),
+                "injury_context": str(queue.get("injury_context", "")),
+                "context_scope": str(queue.get("context_scope", "")),
+                "assay_or_perturbation": str(queue.get("assay_or_perturbation", "not_reported")),
+                "effect_polarity": str(queue.get("effect_polarity", "")),
+                "source_scope": str(queue.get("source_scope", "")),
             })
     records.sort(key=lambda row: (str(row["source_queue_id"]), str(row["record_type"]), str(row["evidence_node_id"]), str(row["output_term"])))
     for index, row in enumerate(records, start=1):
@@ -829,6 +916,9 @@ def build_route_evidence(
     nodes = {row["node_id"]: row for row in read_tsv(bundle_dir / "mechanism_nodes.tsv")}
     edges = read_tsv(bundle_dir / "mechanism_edges.tsv")
     edge_by_id = {row["edge_id"]: row for row in edges}
+    edge_sources_by_edge: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for source in read_tsv(bundle_dir / "mechanism_edge_sources.tsv"):
+        edge_sources_by_edge[str(source.get("edge_id", ""))].append(source)
     ligand_receptor_by_receptor: dict[str, list[dict[str, str]]] = defaultdict(list)
     ligand_receptor_by_target_label: dict[str, list[dict[str, str]]] = defaultdict(list)
     for edge in edges:
@@ -926,6 +1016,19 @@ def build_route_evidence(
         route_linkage_status: str = "graph_edge_linked",
         source_chain_id: str = "",
         intracellular_status: str = "not_assessed",
+        evidence_contract_version: str = MECHANISM_EVIDENCE_CONTRACT_VERSION,
+        evidence_polarity: str = "supports",
+        negative_evidence_status: str = "not_evaluated",
+        evidence_directness_value: str = "source_claim",
+        output_class: str = "",
+        species_context: str = "",
+        cell_type_context: str = "",
+        compartment_context: str = "",
+        injury_context: str = "",
+        context_scope: str = "",
+        assay_or_perturbation: str = "not_reported",
+        effect_polarity: str = "",
+        source_scope: str = "",
     ) -> dict[str, object]:
         return {
             "route_evidence_id": "",
@@ -964,6 +1067,22 @@ def build_route_evidence(
             "causal_status": "not_asserted",
             "traversal_status": "evidence_route_not_causal",
             "source_chain_id": source_chain_id,
+            "evidence_contract_version": evidence_contract_version,
+            "evidence_polarity": evidence_polarity,
+            "negative_evidence_status": negative_evidence_status,
+            "evidence_directness": evidence_directness_value,
+            "output_class": output_class or normalize_output_class(
+                output_label=output_label,
+                target_gene=target_gene_label,
+            ),
+            "species_context": species_context,
+            "cell_type_context": cell_type_context,
+            "compartment_context": compartment_context,
+            "injury_context": injury_context,
+            "context_scope": context_scope,
+            "assay_or_perturbation": assay_or_perturbation,
+            "effect_polarity": effect_polarity,
+            "source_scope": source_scope,
         }
 
     for edge in edges:
@@ -988,6 +1107,28 @@ def build_route_evidence(
                 pathway_name=edge.get("pathway_name", ""),
                 input_evidence_type="ligand_receptor_edge",
                 evidence_ids=edge.get("evidence_ids", ""),
+                evidence_polarity=source_evidence_profile(
+                    edge_sources_by_edge.get(edge["edge_id"], []),
+                    evidence_status=edge.get("evidence_status", ""),
+                    evidence_text=edge.get("notes", ""),
+                )["evidence_polarity"],
+                negative_evidence_status=source_evidence_profile(
+                    edge_sources_by_edge.get(edge["edge_id"], []),
+                    evidence_status=edge.get("evidence_status", ""),
+                    evidence_text=edge.get("notes", ""),
+                )["negative_evidence_status"],
+                evidence_directness_value="explicit_exported_edge",
+                species_context=edge.get("species_context", ""),
+                cell_type_context=edge.get("cell_type_context", ""),
+                compartment_context=edge.get("compartment_context", ""),
+                injury_context=edge.get("injury_context", ""),
+                context_scope=edge.get("context_scope", ""),
+                effect_polarity=edge.get("effect_polarity", ""),
+                source_scope=";".join(dict.fromkeys(
+                    source.get("source_scope", "")
+                    for source in edge_sources_by_edge.get(edge["edge_id"], [])
+                    if source.get("source_scope", "")
+                )),
             ),
         )
 
@@ -1129,6 +1270,19 @@ def build_route_evidence(
                 source_evidence_record_id=str(record.get("record_id", "")),
                 route_linkage_status=route_linkage_status,
                 source_chain_id=str(record.get("source_queue_id", "")),
+                evidence_contract_version=str(record.get("evidence_contract_version", MECHANISM_EVIDENCE_CONTRACT_VERSION)),
+                evidence_polarity=str(record.get("evidence_polarity", "unknown")),
+                negative_evidence_status=str(record.get("negative_evidence_status", "not_evaluated")),
+                evidence_directness_value=str(record.get("evidence_directness", "unknown")),
+                output_class=str(record.get("output_class", "unknown")),
+                species_context=str(queue.get("species_context", "")),
+                cell_type_context=str(queue.get("cell_type_context", "")),
+                compartment_context=str(queue.get("compartment_context", "")),
+                injury_context=str(queue.get("injury_context", "")),
+                context_scope=str(queue.get("context_scope", "")),
+                assay_or_perturbation=str(queue.get("assay_or_perturbation", "not_reported")),
+                effect_polarity=str(queue.get("effect_polarity", "")),
+                source_scope=str(queue.get("source_scope", "")),
             ),
         )
 
@@ -1234,6 +1388,19 @@ def build_route_evidence(
                             "receptor_proximal_evidence_remains_context_bound"
                         ),
                         source_chain_id=str(record.get("source_queue_id", "")),
+                        evidence_contract_version=str(record.get("evidence_contract_version", MECHANISM_EVIDENCE_CONTRACT_VERSION)),
+                        evidence_polarity=str(record.get("evidence_polarity", "unknown")),
+                        negative_evidence_status=str(record.get("negative_evidence_status", "not_evaluated")),
+                        evidence_directness_value=str(record.get("evidence_directness", "unknown")),
+                        output_class=str(record.get("output_class", "unknown")),
+                        species_context=str(queue.get("species_context", "")),
+                        cell_type_context=str(queue.get("cell_type_context", "")),
+                        compartment_context=str(queue.get("compartment_context", "")),
+                        injury_context=str(queue.get("injury_context", "")),
+                        context_scope=str(queue.get("context_scope", "")),
+                        assay_or_perturbation=str(queue.get("assay_or_perturbation", "not_reported")),
+                        effect_polarity=str(queue.get("effect_polarity", "")),
+                        source_scope=str(queue.get("source_scope", "")),
                     ),
                 )
 
@@ -1355,6 +1522,24 @@ def build_route_evidence(
                                 )
                             ),
                             source_chain_id=queue_id,
+                            evidence_contract_version=str(queue.get("evidence_contract_version", MECHANISM_EVIDENCE_CONTRACT_VERSION)),
+                            evidence_polarity=str(queue.get("evidence_polarity", "unknown")),
+                            negative_evidence_status=str(queue.get("negative_evidence_status", "not_evaluated")),
+                            evidence_directness_value="coobserved_source_claim",
+                            output_class=str(output_record.get("output_class", normalize_output_class(
+                                record_type=output_record.get("record_type", ""),
+                                output_term=output_record.get("output_term", ""),
+                                output_label=output_label,
+                                target_gene=output_id,
+                            ))),
+                            species_context=str(queue.get("species_context", "")),
+                            cell_type_context=str(queue.get("cell_type_context", "")),
+                            compartment_context=str(queue.get("compartment_context", "")),
+                            injury_context=str(queue.get("injury_context", "")),
+                            context_scope=str(queue.get("context_scope", "")),
+                            assay_or_perturbation=str(queue.get("assay_or_perturbation", "not_reported")),
+                            effect_polarity=str(queue.get("effect_polarity", "")),
+                            source_scope=str(queue.get("source_scope", "")),
                         ),
                     )
 
@@ -1612,6 +1797,7 @@ def update_bundle_metadata(
     downstream_queue_count: int,
     downstream_evidence_path: Path,
     downstream_evidence_count: int,
+    release_id: str = "",
 ) -> None:
     """Register the hypothesis artifact without changing graph-edge counts."""
     metadata_path = bundle_dir / "bundle_metadata.json"
@@ -1626,6 +1812,9 @@ def update_bundle_metadata(
     metadata.setdefault("counts", {})["signaling_route_evidence"] = route_evidence_count
     metadata.setdefault("counts", {})["downstream_curation_queue"] = downstream_queue_count
     metadata.setdefault("counts", {})["downstream_evidence_records"] = downstream_evidence_count
+    metadata["mechanism_evidence_contract_version"] = MECHANISM_EVIDENCE_CONTRACT_VERSION
+    if release_id:
+        metadata["release_id"] = release_id
     policy = metadata.setdefault("graph_policy", {})
     policy["possible_signaling_paths_are_hypotheses_only"] = True
     policy["possible_signaling_paths_are_not_graph_edges"] = True
@@ -1644,6 +1833,13 @@ def update_bundle_metadata(
     )
     if route_statement not in contract:
         contract.append(route_statement)
+    evidence_contract_statement = (
+        f"Mechanism evidence rows use {MECHANISM_EVIDENCE_CONTRACT_VERSION}; output classes, "
+        "polarity, negative-evidence status, context qualifiers, and missing layers are "
+        "exported as evidence attributes, not composite biological confidence scores."
+    )
+    if evidence_contract_statement not in contract:
+        contract.append(evidence_contract_statement)
     queue_statement = (
         "The Module 21B downstream curation queue retains text-level functional claims "
         "and exact node mentions for manual route-link curation; it is not a causal edge layer."
@@ -1715,6 +1911,7 @@ def main() -> None:
         len(downstream_queue_rows),
         downstream_evidence_output,
         len(downstream_evidence_rows),
+        args.release_id,
     )
     summary_path.parent.mkdir(parents=True, exist_ok=True)
     summary_path.write_text(json.dumps(summary, indent=2) + "\n")
