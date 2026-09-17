@@ -1,0 +1,26 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 10,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion102",
+  "primary_locators": [
+    "PMID:10426993; PMID:11955595; DOI:10.1126/science.285.5428.727",
+    "PMID:11239445; PMID:11777960; PMID:21224393; DOI:10.1016/S1074-7613(01)00095-4",
+    "PMID:15976061",
+    "PMID:17339491",
+    "PMID:19158676; PMID:22949200",
+    "PMID:21757725",
+    "PMID:27068534; DOI:10.1242/jcs.174458",
+    "PMID:28380450; PMCID:PMC5522213; DOI:10.18632/oncotarget.16506",
+    "PMID:35148838",
+    "PMID:8006586; PMCID:PMC2191537; PMID:20080636"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-17-literature-expansion-102",
+  "route_evidence_rows_after": 16801,
+  "route_evidence_rows_before": 16791,
+  "route_tier_counts": {
+    "ligand_receptor_intracellular_output_missing_tf": 10
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion101"
+}
