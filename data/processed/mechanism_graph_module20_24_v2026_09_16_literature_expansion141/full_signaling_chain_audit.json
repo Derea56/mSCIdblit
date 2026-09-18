@@ -1,0 +1,188 @@
+{
+  "bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_16_evidence_contract",
+  "definition": {
+    "step_1": "ligand-role source --binds_receptor--> receptor-role target",
+    "step_2": "receptor-role source --any exported relay--> transcription_factor-role target",
+    "step_3": "transcription_factor-role source --induces/represses/regulates_target_gene--> target_gene-role target",
+    "pathway_label_requirement": "none; pathway labels may differ across module namespaces",
+    "excluded": [
+      "mechanism_output_bridge_candidates.tsv",
+      "mechanism_output_bridges_validated.tsv",
+      "mechanism_entity_transitions.tsv"
+    ]
+  },
+  "step_edge_counts": {
+    "ligand_receptor": 5931,
+    "receptor_transcription_factor": 26,
+    "transcription_factor_target_gene": 78
+  },
+  "full_chain_counts": {
+    "edge_chain_instances": 141,
+    "unique_edge_chains": 141,
+    "unique_four_node_topologies": 95,
+    "same_pathway_edge_chain_instances": 0
+  },
+  "partial_chain_counts": {
+    "ligand_to_receptor;receptor_to_transcription_factor": 63,
+    "receptor_to_transcription_factor;transcription_factor_to_target_gene": 5894,
+    "transcription_factor_to_target_gene": 20
+  },
+  "retained_chain_record_count": 6118,
+  "distinct_receptor_transcription_factor_pairs": 2415,
+  "distinct_ligand_receptor_transcription_factor_routes": 5767,
+  "module_sequences": {
+    "21B>21B>22B": 141
+  },
+  "target_relations_in_full_chains": {
+    "induces_target_gene": 101,
+    "represses_target_gene": 14,
+    "regulates_target_gene": 26
+  },
+  "possible_path_counts": {
+    "possible_missing_relay_instances": 2,
+    "unique_possible_ligand_receptor_target_paths": 1
+  },
+  "signaling_route_evidence_counts": {
+    "route_evidence_record_count": 17191,
+    "route_evidence_tier_counts": {
+      "downstream_claim_unresolved_topology": 141,
+      "downstream_output_annotation_unlinked_topology": 514,
+      "downstream_tf_annotation_unlinked_topology": 27,
+      "ligand_receptor_downstream_claim_unresolved": 797,
+      "ligand_receptor_entry_only": 5931,
+      "ligand_receptor_intracellular_claim_unresolved": 2300,
+      "ligand_receptor_intracellular_output_missing_tf": 2811,
+      "ligand_receptor_intracellular_tf_missing_output": 67,
+      "ligand_receptor_intracellular_tf_output_missing_target_gene": 143,
+      "ligand_receptor_output_annotation_missing_intracellular_and_tf": 2950,
+      "ligand_receptor_output_missing_intracellular_and_tf": 226,
+      "ligand_receptor_tf_annotation_missing_intracellular_and_output": 70,
+      "ligand_receptor_tf_missing_intracellular_and_output": 20,
+      "ligand_receptor_tf_output_annotation_missing_intracellular": 148,
+      "ligand_receptor_tf_output_missing_target_gene": 96,
+      "ligand_receptor_tf_target_annotation_missing_intracellular": 11,
+      "ligand_receptor_tf_target_missing_intracellular": 144,
+      "receptor_intracellular_claim_unresolved": 323,
+      "receptor_intracellular_output_annotation_missing_ligand_receptor_and_tf": 351,
+      "receptor_intracellular_tf_annotation_missing_ligand_receptor_and_output": 41,
+      "tf_target_output_only": 63,
+      "explicit_ligand_receptor_intracellular_tf_target": 15,
+      "ligand_receptor_intracellular_output_annotation_missing_tf": 2
+    },
+    "route_evidence_unique_ligands": 2854,
+    "route_evidence_unique_target_genes": 67,
+    "route_evidence_unique_transcription_factors": 46,
+    "route_evidence_unique_outputs": 253,
+    "downstream_route_linked_record_count": 4730,
+    "downstream_route_linked_queue_count": 3331,
+    "route_linkage_status_counts": {
+      "topology_unresolved_pending_manual_curation": 682,
+      "candidate_lr_edge_pending_manual_curation": 3333,
+      "graph_edge_linked": 6381,
+      "lr_pair_resolved_by_receptor_identity_alias:EGFR;receptor_proximal_evidence_remains_context_bound": 444,
+      "lr_pair_resolved_by_receptor_identity_alias:UNC5B;receptor_proximal_evidence_remains_context_bound": 36,
+      "lr_pair_resolved_by_receptor_identity_alias:ROBO1;receptor_proximal_evidence_remains_context_bound": 16,
+      "lr_pair_resolved_by_receptor_identity_alias:NTRK2/TrkB;receptor_proximal_evidence_remains_context_bound": 64,
+      "lr_pair_resolved_by_receptor_identity_alias:FGFR3;receptor_proximal_evidence_remains_context_bound": 108,
+      "lr_pair_resolved_by_receptor_identity_alias:FGFR1;receptor_proximal_evidence_remains_context_bound": 50,
+      "lr_pair_resolved_by_receptor_identity_alias:CD36;receptor_proximal_evidence_remains_context_bound": 161,
+      "lr_pair_resolved_by_exact_shared_receptor_node;receptor_proximal_evidence_remains_context_bound": 2657,
+      "lr_pair_resolved_by_receptor_identity_alias:ITGAV/ITGB3;receptor_proximal_evidence_remains_context_bound": 226,
+      "lr_pair_resolved_by_receptor_identity_alias:ITGA5/ITGB1;receptor_proximal_evidence_remains_context_bound": 92,
+      "lr_pair_resolved_by_receptor_identity_alias:VEGFR2;receptor_proximal_evidence_remains_context_bound": 180,
+      "lr_pair_resolved_by_receptor_identity_alias:CSF1R;receptor_proximal_evidence_remains_context_bound": 24,
+      "lr_pair_resolved_by_receptor_identity_alias:ROR2/FZD7;receptor_proximal_evidence_remains_context_bound": 42,
+      "lr_pair_resolved_by_receptor_identity_alias:TLR4;receptor_proximal_evidence_remains_context_bound": 106,
+      "lr_pair_resolved_by_receptor_identity_alias:EPHA2;receptor_proximal_evidence_remains_context_bound": 96,
+      "lr_pair_resolved_by_receptor_identity_alias:EPHA4;receptor_proximal_evidence_remains_context_bound": 45,
+      "lr_pair_resolved_by_receptor_identity_alias:EPHB2;receptor_proximal_evidence_remains_context_bound": 27,
+      "lr_pair_resolved_by_receptor_identity_alias:EPHB1;receptor_proximal_evidence_remains_context_bound": 10,
+      "lr_pair_resolved_by_receptor_identity_alias:EPOR;receptor_proximal_evidence_remains_context_bound": 24,
+      "lr_pair_resolved_by_receptor_identity_alias:MERTK;receptor_proximal_evidence_remains_context_bound": 18,
+      "lr_pair_resolved_by_receptor_identity_alias:PRLR;receptor_proximal_evidence_remains_context_bound": 8,
+      "lr_pair_resolved_by_receptor_identity_alias:IL2RB/IL2RG;receptor_proximal_evidence_remains_context_bound": 28,
+      "lr_pair_resolved_by_receptor_identity_alias:PDGFRB;receptor_proximal_evidence_remains_context_bound": 84,
+      "lr_pair_resolved_by_receptor_identity_alias:NTRK3/TrkC;receptor_proximal_evidence_remains_context_bound": 6,
+      "lr_pair_resolved_by_receptor_identity_alias:TLR2;receptor_proximal_evidence_remains_context_bound": 38,
+      "lr_pair_resolved_by_receptor_identity_alias:PLXNA2;receptor_proximal_evidence_remains_context_bound": 30,
+      "lr_pair_resolved_by_receptor_identity_alias:MPL;receptor_proximal_evidence_remains_context_bound": 12,
+      "lr_pair_resolved_by_receptor_identity_alias:IL9RA/IL2RG;receptor_proximal_evidence_remains_context_bound": 3,
+      "lr_pair_resolved_by_receptor_identity_alias:LAIR1;receptor_proximal_evidence_remains_context_bound": 10,
+      "lr_pair_resolved_by_receptor_identity_alias:LILRB1;receptor_proximal_evidence_remains_context_bound": 15,
+      "lr_pair_resolved_by_receptor_identity_alias:CSF3R;receptor_proximal_evidence_remains_context_bound": 21,
+      "lr_pair_resolved_by_receptor_identity_alias:P2RX2;receptor_proximal_evidence_remains_context_bound": 35,
+      "lr_pair_resolved_by_receptor_identity_alias:P2Y1;receptor_proximal_evidence_remains_context_bound": 4,
+      "lr_pair_resolved_by_receptor_identity_alias:NTRK2/TrkB;queue_level_tf_output_evidence_coobserved;receptor_proximal_evidence_remains_context_bound": 8,
+      "lr_pair_resolved_by_receptor_identity_alias:FGFR3;queue_level_tf_output_evidence_coobserved;receptor_proximal_evidence_remains_context_bound": 36,
+      "lr_pair_resolved_by_receptor_identity_alias:CSF1R;queue_level_tf_output_evidence_coobserved;receptor_proximal_evidence_remains_context_bound": 6,
+      "lr_pair_resolved_by_receptor_identity_alias:EPOR;queue_level_tf_output_evidence_coobserved;receptor_proximal_evidence_remains_context_bound": 2,
+      "lr_pair_resolved_by_receptor_identity_alias:IL2RB/IL2RG;queue_level_tf_output_evidence_coobserved;receptor_proximal_evidence_remains_context_bound": 14,
+      "lr_pair_resolved_by_receptor_identity_alias:MPL;queue_level_tf_output_evidence_coobserved;receptor_proximal_evidence_remains_context_bound": 6,
+      "lr_pair_resolved_by_exact_shared_receptor_node;queue_level_tf_output_evidence_coobserved;receptor_proximal_evidence_remains_context_bound": 45,
+      "lr_pair_resolved_by_direct_canonical_lr_edge;queue_level_tf_output_evidence_coobserved;direct_lr_evidence_remains_context_bound": 99,
+      "receptor_proximal_missing_upstream_lr_pair": 715
+    },
+    "receptor_identity_alias_route_record_count": 2135,
+    "receptor_identity_alias_queue_count": 63,
+    "coobserved_intracellular_tf_output_route_record_count": 117
+  },
+  "downstream_curation_queue_counts": {
+    "queue_record_count": 3331,
+    "queue_semantic_class_counts": {
+      "receptor_proximal_edge_needing_lr_pair_resolution": 334,
+      "ligand_receptor_edge_with_unlinked_downstream_claim": 2507,
+      "ambiguous_edge_needing_manual_topology_review": 490
+    },
+    "queue_priority_counts": {
+      "P1": 2264,
+      "P2": 991,
+      "P3": 76
+    },
+    "queue_records_with_text_matched_tf": 87,
+    "queue_records_with_text_matched_target_gene": 20,
+    "queue_records_with_output_terms": 2292
+  },
+  "downstream_evidence_record_counts": {
+    "record_count": 4730,
+    "record_type_counts": {
+      "generic_output_evidence": 3341,
+      "intracellular_cascade_evidence": 334,
+      "transcription_factor_evidence": 97,
+      "target_gene_output_evidence": 20,
+      "unresolved_downstream_claim": 938
+    },
+    "records_with_explicit_node": 451,
+    "records_with_generic_output_term": 3341
+  },
+  "comparison": {
+    "prior_bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_16_tf_output_coverage",
+    "prior_full_chain_counts": {
+      "edge_chain_instances": 141,
+      "unique_edge_chains": 141,
+      "unique_four_node_topologies": 95,
+      "same_pathway_edge_chain_instances": 0
+    },
+    "prior_partial_chain_counts": {
+      "ligand_to_receptor;receptor_to_transcription_factor": 63,
+      "receptor_to_transcription_factor;transcription_factor_to_target_gene": 5894,
+      "transcription_factor_to_target_gene": 20
+    },
+    "prior_retained_chain_record_count": 6118,
+    "delta": {
+      "edge_chain_instances": 0,
+      "unique_edge_chains": 0,
+      "unique_four_node_topologies": 0,
+      "same_pathway_edge_chain_instances": 0
+    },
+    "partial_delta": {
+      "transcription_factor_to_target_gene": 0,
+      "ligand_to_receptor;receptor_to_transcription_factor": 0,
+      "receptor_to_transcription_factor;transcription_factor_to_target_gene": 0
+    },
+    "retained_chain_record_delta": 0
+  },
+  "literature_expansion_counts": {
+    "literature_expansion_rows": 10,
+    "route_evidence_rows_added": 10
+  }
+}
