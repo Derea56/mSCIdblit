@@ -1,0 +1,26 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 10,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion145",
+  "primary_locators": [
+    "PMID:11238599",
+    "PMID:17580308; DOI:10.1074/jbc.M701120200",
+    "PMID:17629517; PMID:18585785; PMID:20587542; PMCID:PMC2707944; DOI:10.1016/j.molimm.2008.05.014",
+    "PMID:20826755; PMCID:PMC2944003; DOI:10.4049/jimmunol.0904191",
+    "PMID:22632727",
+    "PMID:28480349; PMCID:PMC5419422; DOI:10.1126/sciimmunol.aam9628",
+    "PMID:29462330; PMCID:PMC5905647; DOI:10.1093/jb/mvy008",
+    "PMID:31209379; PMCID:PMC6596419",
+    "PMID:41698918; PMCID:PMC13100127; DOI:10.1038/s41467-026-69630-7",
+    "PMID:8274278; PMCID:PMC2132488; PMID:9049255; https://pubmed.ncbi.nlm.nih.gov/8274278/"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-18-literature-expansion-145",
+  "route_evidence_rows_after": 17231,
+  "route_evidence_rows_before": 17221,
+  "route_tier_counts": {
+    "ligand_receptor_intracellular_output_missing_tf": 10
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion144"
+}
