@@ -5906,3 +5906,90 @@ def test_one_hundred_thirtieth_primary_literature_expansion_batch_preserves_p1_o
     assert len(route_rows) == 17081
     assert sum(row["route_evidence_id"].startswith("LITEXP:") for row in route_rows) == 1034
     assert {row["source_chain_id"] for row in route_rows[-10:]} == {row["expansion_id"] for row in rows}
+
+
+def test_one_hundred_thirty_first_primary_literature_expansion_batch_preserves_p1_adaptor_routes():
+    root = Path(__file__).parents[1]
+    input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch131.json"
+    source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion130"
+    bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion131"
+    rows = read_input(input_path)
+    validate_rows(rows, source_bundle)
+    assert len(rows) == 10
+    assert {row["expansion_id"] for row in rows} == {
+        f"M21B-LITEXP-{number:04d}" for number in range(1035, 1045)
+    }
+    assert {row["source_queue_id"] for row in rows} == {
+        "M21B-DOWNSTREAM:00388",
+        "M21B-DOWNSTREAM:00389",
+        "M21B-DOWNSTREAM:00395",
+        "M21B-DOWNSTREAM:00403",
+        "M21B-DOWNSTREAM:00404",
+        "M21B-DOWNSTREAM:00410",
+        "M21B-DOWNSTREAM:00413",
+        "M21B-DOWNSTREAM:00417",
+        "M21B-DOWNSTREAM:00418",
+        "M21B-DOWNSTREAM:00419",
+    }
+    assert sum(row["route_tier"] == "ligand_receptor_output_annotation_missing_intracellular_and_tf" for row in rows) == 5
+    assert sum(row["route_tier"] == "ligand_receptor_intracellular_output_missing_tf" for row in rows) == 5
+    assert {row["output_class"] for row in rows} == {
+        "cellular_functional_readout",
+        "phosphorylation_or_activation_readout",
+        "secreted_protein_or_release",
+    }
+    assert {row["source_evidence_record_id"] for row in rows} == {
+        "M21B-DOWNSTREAM-EVID:000646",
+        "M21B-DOWNSTREAM-EVID:000648",
+        "M21B-DOWNSTREAM-EVID:000660",
+        "M21B-DOWNSTREAM-EVID:000673",
+        "M21B-DOWNSTREAM-EVID:000677",
+        "M21B-DOWNSTREAM-EVID:000686",
+        "M21B-DOWNSTREAM-EVID:000695",
+        "M21B-DOWNSTREAM-EVID:000705",
+        "M21B-DOWNSTREAM-EVID:000708",
+        "M21B-DOWNSTREAM-EVID:000709",
+    }
+    assert all(not row["transcription_factor_node_id"] for row in rows)
+    assert all(not row["target_gene_node_id"] for row in rows)
+    assert all(row["causal_status"] == "not_asserted" for row in rows)
+    assert all(row["traversal_status"] == "evidence_route_not_causal" for row in rows)
+    assert all(row["curation_status"] == "curated_primary_route" for row in rows)
+
+    edges = {
+        row["edge_id"]: (row["source_node_id"], row["target_node_id"])
+        for row in csv.DictReader((source_bundle / "mechanism_edges.tsv").open(), delimiter="\t")
+    }
+    for row in rows:
+        assert edges[row["ligand_receptor_edge_id"]] == (
+            row["ligand_node_id"],
+            row["receptor_node_id"],
+        )
+        if row.get("receptor_intracellular_edge_id", ""):
+            assert edges[row["receptor_intracellular_edge_id"]][1] == row["intracellular_continuation_node_id"]
+            assert row["intracellular_status"] == "source_supported"
+
+    prior_queue_ids = {
+        prior_row["source_queue_id"]
+        for prior_path in input_path.parent.glob("module21b_literature_expansion_batch*.json")
+        if prior_path != input_path and int(prior_path.stem[-3:]) < int(input_path.stem[-3:])
+        for prior_row in json.loads(prior_path.read_text())
+    }
+    current_queue_ids = {row["source_queue_id"] for row in rows}
+    assert not current_queue_ids & prior_queue_ids
+    queue_rows = list(csv.DictReader(
+        (source_bundle / "mechanism_downstream_curation_queue.tsv").open(), delimiter="\t"
+    ))
+    all_queue_ids = {row["queue_id"] for row in queue_rows}
+    p1_queue_ids = {row["queue_id"] for row in queue_rows if row["curation_priority"] == "P1"}
+    covered_after = prior_queue_ids | current_queue_ids
+    assert len(covered_after) == 1014
+    assert len(all_queue_ids - covered_after) == 2317
+    assert len(p1_queue_ids - covered_after) == 1285
+
+    route_rows = list(csv.DictReader(
+        (bundle / "mechanism_signaling_route_evidence.tsv").open(), delimiter="\t"
+    ))
+    assert len(route_rows) == 17091
+    assert sum(row["route_evidence_id"].startswith("LITEXP:") for row in route_rows) == 1044
+    assert {row["source_chain_id"] for row in route_rows[-10:]} == {row["expansion_id"] for row in rows}
