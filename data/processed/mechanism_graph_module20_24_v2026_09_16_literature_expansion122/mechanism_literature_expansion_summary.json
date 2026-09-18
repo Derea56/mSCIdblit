@@ -1,0 +1,26 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 10,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion122",
+  "primary_locators": [
+    "PMID:10617205; DOI:10.1038/45582; PMID:16951355; DOI:10.1016/j.immuni.2006.08.011; PMCID:PMC7545189",
+    "PMID:1723296; PMID:11575926; DOI:10.1006/jmbi.2001.4980; PMCID:PMC16325",
+    "PMID:18641123; PMCID:PMC2492495; DOI:10.1073/pnas.0804453105; PMID:11224527; DOI:10.1038/85330",
+    "PMID:24585933; DOI:10.1189/jlb.3AB0213-092RR",
+    "PMID:24769443; DOI:10.1158/0008-5472.CAN-13-2690",
+    "PMID:25363763; PMCID:PMC4297519; DOI:10.1038/nature13848; DOI:10.1038/nature17421",
+    "PMID:30659054; DOI:10.1038/s41586-019-1275-5",
+    "PMID:7760007; PMCID:PMC2192054; PMID:16352806; DOI:10.1182/blood-2005-09-3881",
+    "PMID:9053440; PMCID:PMC2196039; DOI:10.1084/jem.185.3.393; PMID:7545666; DOI:10.1074/jbc.270.36.21181; PMID:7534620; DOI:10.1016/S1074-7613(94)80021-9",
+    "PMID:9841922; PMCID:PMC2212392; DOI:10.1084/jem.188.11.2083; PMID:18523281; DOI:10.4049/jimmunol.180.12.8159"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-17-literature-expansion-122",
+  "route_evidence_rows_after": 17001,
+  "route_evidence_rows_before": 16991,
+  "route_tier_counts": {
+    "ligand_receptor_output_annotation_missing_intracellular_and_tf": 10
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion121"
+}
