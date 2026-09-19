@@ -1,0 +1,28 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 11,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion206",
+  "primary_locators": [
+    "PMID:10457220; PMCID:PMC2326881",
+    "PMID:10629228",
+    "PMID:11544253; PMCID:PMC3501490",
+    "PMID:14652006",
+    "PMID:18215137; PMID:17616532",
+    "PMID:18922799",
+    "PMID:20457807",
+    "PMID:21887223; PMCID:PMC3160837; DOI:10.1371/journal.pone.0022776",
+    "PMID:7543676",
+    "PMID:8124718"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-19-literature-expansion-206",
+  "route_evidence_rows_after": 19633,
+  "route_evidence_rows_before": 19622,
+  "route_tier_counts": {
+    "ligand_receptor_output_annotation_missing_intracellular_and_tf": 2,
+    "receptor_intracellular_output_annotation_missing_ligand_receptor_and_tf": 8,
+    "receptor_intracellular_tf_annotation_missing_ligand_receptor_and_output": 1
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion205"
+}
