@@ -1,0 +1,26 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 10,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion218",
+  "primary_locators": [
+    "PMID:15814794; PMCID:PMC6725384; DOI:10.1016/j.neuron.2005.03.013",
+    "PMID:21238923; PMCID:PMC6775579",
+    "PMID:21593312; PMCID:PMC6622588; DOI:10.1523/JNEUROSCI.6476-10.2011",
+    "PMID:24478347; PMCID:PMC3905139; DOI:10.1523/JNEUROSCI.3094-13.2014",
+    "PMID:24908487; DOI:10.1016/j.neuron.2014.04.022; PMID:22155786; PMCID:PMC3360552",
+    "PMID:27477018; DOI:10.1016/j.neuron.2016.06.015",
+    "PMID:28549068; PMCID:PMC5446120; PMID:19299462; PMCID:PMC2714439; PMID:29251594; PMCID:PMC5752207; PMID:37407594; PMCID:PMC10322873",
+    "PMID:29661844",
+    "PMID:32144270; PMCID:PMC7060279; DOI:10.1038/s41467-020-15075-5",
+    "PMID:7791754"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-19-literature-expansion-218",
+  "route_evidence_rows_after": 19757,
+  "route_evidence_rows_before": 19747,
+  "route_tier_counts": {
+    "ligand_receptor_output_annotation_missing_intracellular_and_tf": 10
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion217"
+}
