@@ -1,0 +1,28 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 25,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion234",
+  "primary_locators": [
+    "PMID:15096536; PMCID:PMC2211892",
+    "PMID:17418141; DOI:10.1016/j.febslet.2007.03.049",
+    "PMID:18160402; DOI:10.1074/jbc.M704821200",
+    "PMID:18941224; DOI:10.4049/jimmunol.181.9.6328",
+    "PMID:20643852; PMCID:PMC2950363; DOI:10.1128/IAI.00488-10",
+    "PMID:21502375; DOI:10.4049/jimmunol.1002948",
+    "PMID:22184031; PMCID:PMC3416206",
+    "PMID:23589297; PMCID:PMC3668742; DOI:10.1074/jbc.M113.469106",
+    "PMID:25355897; PMCID:PMC4300667; DOI:10.1128/JVI.02427-14",
+    "PMID:28860090; DOI:10.1016/j.molimm.2017.07.010",
+    "PMID:34633872; PMCID:PMC8765433; DOI:10.1128/JB.00184-21",
+    "PMID:35251044; PMCID:PMC8891578; DOI:10.3389/fimmu.2022.844878"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-19-literature-expansion-234",
+  "route_evidence_rows_after": 19989,
+  "route_evidence_rows_before": 19964,
+  "route_tier_counts": {
+    "downstream_output_annotation_unlinked_topology": 25
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion233"
+}
