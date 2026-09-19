@@ -1,0 +1,38 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 25,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion238",
+  "primary_locators": [
+    "PMID:12881416",
+    "PMID:14718537; PMID:17532644",
+    "PMID:15134636",
+    "PMID:15190056",
+    "PMID:16033901; DOI:10.1523/JNEUROSCI.0561-05.2005",
+    "PMID:17057713; PMCID:PMC3018330",
+    "PMID:17481575; DOI:10.1016/j.bbamem.2007.03.020",
+    "PMID:18305175; PMCID:PMC2265186; DOI:10.1073/pnas.0707920105",
+    "PMID:19028690; PMCID:PMC2631967",
+    "PMID:19246390; PMCID:PMC2657456",
+    "PMID:19372736; PMID:19279261; PMCID:PMC3758885",
+    "PMID:21343285; DOI:10.1074/jbc.M110.165282; PMID:15456793; DOI:10.1074/jbc.M410223200",
+    "PMID:21734292; PMCID:PMC3125417",
+    "PMID:23699529; PMCID:PMC4212274; PMID:23264624; PMCID:PMC3567646",
+    "PMID:23804514",
+    "PMID:25186755",
+    "PMID:25701174; PMCID:PMC2681317; DOI:10.1016/j.ejcb.2015.01.005; DOI:10.1073/pnas.0812391106",
+    "PMID:28978485; PMCID:PMC5640807; PMID:28279354; PMCID:PMC5347473",
+    "PMID:29395912; PMCID:PMC5810584",
+    "PMID:31601770; PMCID:PMC7382361",
+    "PMID:9197417; PMID:9799109",
+    "PMID:9369453"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-19-literature-expansion-238",
+  "route_evidence_rows_after": 20097,
+  "route_evidence_rows_before": 20072,
+  "route_tier_counts": {
+    "downstream_output_annotation_unlinked_topology": 25
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion237"
+}
