@@ -1,0 +1,35 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 33,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion236",
+  "primary_locators": [
+    "PMID:10646604",
+    "PMID:15890703; PMCID:PMC1464568",
+    "PMID:16820361; PMID:16096338",
+    "PMID:19347031; PMID:16179260",
+    "PMID:21685541; PMCID:PMC3170916",
+    "PMID:21734298; PMCID:PMC3139999",
+    "PMID:21749376",
+    "PMID:22287711; PMCID:PMC3288752; DOI:10.4049/jimmunol.1101240",
+    "PMID:22726442; PMCID:PMC3383638; DOI:10.1016/j.cell.2012.04.039",
+    "PMID:23814060; PMID:22475410",
+    "PMID:25731175; PMCID:PMC4376489; DOI:10.1038/nature14259",
+    "PMID:26209620; PMCID:PMC4546851",
+    "PMID:26306739; DOI:10.1016/j.imlet.2015.08.009",
+    "PMID:27162353; PMCID:PMC4889410; DOI:10.1073/pnas.1605691113",
+    "PMID:27751231; PMCID:PMC5102578; DOI:10.7554/eLife.19083",
+    "PMID:31434748; PMCID:PMC6706470; DOI:10.1128/mSphere.00484-19",
+    "PMID:33230464; PMCID:PMC7581834",
+    "PMID:35251044; PMCID:PMC8891578; DOI:10.3389/fimmu.2022.844878",
+    "PMID:36063565; DOI:10.1016/j.imbio.2022.152263"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-19-literature-expansion-236",
+  "route_evidence_rows_after": 20047,
+  "route_evidence_rows_before": 20014,
+  "route_tier_counts": {
+    "downstream_output_annotation_unlinked_topology": 33
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion235"
+}
