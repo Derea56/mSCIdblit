@@ -1,0 +1,25 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 9,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion189",
+  "primary_locators": [
+    "DOI:10.1016/j.neuron.2025.12.028; PMCID:PMC13242099",
+    "PMID:10748068; DOI:10.1074/jbc.M002254200",
+    "PMID:18719102",
+    "PMID:22836270; PMCID:PMC3445328",
+    "PMID:23124902; PMCID:PMC3656602; DOI:10.1371/journal.pone.0056142",
+    "PMID:24413464; PMCID:PMC3888969",
+    "PMID:26751287; PMCID:PMC4791069; DOI:10.1038/ncb3319",
+    "PMID:27225479; PMCID:PMC4938725"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-19-literature-expansion-189",
+  "route_evidence_rows_after": 19514,
+  "route_evidence_rows_before": 19505,
+  "route_tier_counts": {
+    "ligand_receptor_intracellular_output_missing_tf": 2,
+    "ligand_receptor_output_annotation_missing_intracellular_and_tf": 7
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion188"
+}
