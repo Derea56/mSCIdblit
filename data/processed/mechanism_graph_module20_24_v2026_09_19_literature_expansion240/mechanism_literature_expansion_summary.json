@@ -1,0 +1,36 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 25,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion240",
+  "primary_locators": [
+    "PMCID:PMC2976315; PMID:20843840",
+    "PMID:10985345; PMCID:PMC136949; PMID:12456642; PMID:15121181; https://pubmed.ncbi.nlm.nih.gov/10985345/",
+    "PMID:12441055; DOI:10.1016/S0896-6273(02)01024-3",
+    "PMID:15494436; PMCID:PMC524452; DOI:10.1073/pnas.0406821101",
+    "PMID:16202709; https://pubmed.ncbi.nlm.nih.gov/16202709/",
+    "PMID:16329996; DOI:10.1016/j.bbrc.2005.11.078",
+    "PMID:16847455; DOI:10.1038/sj.onc.1209803",
+    "PMID:16880211; DOI:10.1074/jbc.M602794200",
+    "PMID:18077678; https://pubmed.ncbi.nlm.nih.gov/18077678/",
+    "PMID:19553454; PMCID:PMC6666056",
+    "PMID:19880183; DOI:10.1016/j.molimm.2009.08.019",
+    "PMID:21814188; PMCID:PMC3242298; DOI:10.1038/npp.2011.155; https://pubmed.ncbi.nlm.nih.gov/21814188/",
+    "PMID:24130805; PMCID:PMC3793910",
+    "PMID:24278397; PMCID:PMC3838367; DOI:10.1371/journal.pone.0081218",
+    "PMID:24560577; DOI:10.1016/j.cub.2014.01.042; https://pubmed.ncbi.nlm.nih.gov/24560577/",
+    "PMID:25228688; PMCID:PMC4231695",
+    "PMID:26306739; DOI:10.1016/j.imlet.2015.08.009",
+    "PMID:27370794; DOI:10.1007/s12035-016-9995-y; https://pubmed.ncbi.nlm.nih.gov/27370794/",
+    "PMID:31670972; DOI:10.1096/fj.201900417R; https://pubmed.ncbi.nlm.nih.gov/31670972/",
+    "PMID:3277170; PMCID:PMC279510; DOI:10.1073/pnas.85.1.193; PMID:3042767; DOI:10.1016/S0021-9258(18)37962-6; PMID:7689538; PMCID:PMC281061; DOI:10.1128/IAI.61.9.3656-3663.1993"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-19-literature-expansion-240",
+  "route_evidence_rows_after": 20147,
+  "route_evidence_rows_before": 20122,
+  "route_tier_counts": {
+    "downstream_output_annotation_unlinked_topology": 25
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion239"
+}
