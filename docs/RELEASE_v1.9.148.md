@@ -39,6 +39,15 @@ The first ranked batch is `primary_evidence_top25.tsv`. Its ranking is a
 review-priority heuristic based on independent public-source support and
 locator density; it is not a biological confidence score.
 
+The first manual primary-evidence pass is documented in
+`docs/PRIMARY_EVIDENCE_AUDIT_TOP25_v1.9.148.md` and
+`data/processed/public_database_comparison_v2/primary_evidence_audit_top25.tsv`.
+This pass does not promote any public-only candidate into the graph. It
+identifies one functional LR/output lead (GRP→NMBR), one direct but
+noncanonical interaction/output lead (APP↔CD74), family-level leads for
+ANGPTL/PIRB and ANGPTL4/syndecan/LRP6 biology, and a larger set requiring
+recovery of the exact primary paper.
+
 Reproduce with:
 
 ```bash

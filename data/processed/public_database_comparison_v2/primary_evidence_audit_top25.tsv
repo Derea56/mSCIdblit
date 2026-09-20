@@ -1,0 +1,26 @@
+candidate_rank	ligand	receptor	supplied_locators	primary_evidence_status	exact_pair_supported	supported_layer	decision	notes
+1	GRP	NMBR	PMID:25209280;PMID:29133874	confirmed_primary_functional	yes	LRO	hold_for_context_normalization	Primary mouse studies support GRP/NMBR functional signaling and itch output; intracellular/TF route not asserted.
+2	HDC	HRH1	PMID:10444208;PMID:35378699	supplied_locator_secondary_or_wrong	unknown	unknown	hold	PMID 10444208 is a review; PMID 35378699 was not verified as the original direct HDC/HRH1 record.
+3	HDC	HRH2	PMID:10444208;PMID:35378699	supplied_locator_secondary_or_wrong	unknown	unknown	hold	Supplied locators do not establish exact primary HDC/HRH2 evidence.
+4	HDC	HRH3	PMID:10444208;PMID:35378699	supplied_locator_secondary_or_wrong	unknown	unknown	hold	Supplied locators do not establish exact primary HDC/HRH3 evidence.
+5	HDC	HRH4	PMID:10444208;PMID:35378699	supplied_locator_secondary_or_wrong	unknown	unknown	hold	Supplied locators do not establish exact primary HDC/HRH4 evidence.
+6	LRRC4B	PTPRS	PMID:23916315;PMID:29674953	supplied_locator_secondary_or_wrong	unknown	unknown	hold	Both supplied locators are reviews.
+7	POMC	OPRD1	KEGG:mmu04080;PMID:29934561;PMID:34724150	supplied_locator_secondary_or_wrong	unknown	unknown	hold	Review/network locators; mature POMC-derived ligand is ambiguous.
+8	POMC	OPRK1	KEGG:mmu04080;PMID:29934561;PMID:34724150	supplied_locator_secondary_or_wrong	unknown	unknown	hold	Review/network locators; mature POMC-derived ligand is ambiguous.
+9	POMC	OPRM1	KEGG:mmu04080;PMID:29934561;PMID:34724150	supplied_locator_secondary_or_wrong	unknown	unknown	hold	Review/network locators; mature POMC-derived ligand is ambiguous.
+10	PTN	SDC1	PMID:25620911;PMID:28356350	supplied_locator_secondary_or_wrong	unknown	unknown	hold	Both supplied locators are reviews.
+11	PTN	SDC2	PMID:25620911;PMID:28356350	supplied_locator_secondary_or_wrong	unknown	unknown	hold	Both supplied locators are reviews.
+12	PTN	SDC3	PMID:25620911;PMID:28356350	supplied_locator_secondary_or_wrong	unknown	unknown	hold	Both supplied locators are reviews.
+13	PTN	SDC4	PMID:25620911;PMID:28356350	supplied_locator_secondary_or_wrong	unknown	unknown	hold	Both supplied locators are reviews.
+14	AGT	AGTR2	PMID:20606419	supplied_locator_secondary_or_wrong	no	unknown	reject_supplied_evidence	Supplied paper is a human genetic-association study, not an exact ligand/receptor interaction study.
+15	ANGPTL1	PIRB	PMID:24478758	family_level_primary_not_isoform_exact	unknown	potential_LRO	hold	Supplied locator is a review; PMID 22660330 is a primary ANGPTL/PIRB lead but exact ANGPTL1 support requires checking.
+16	ANGPTL2	TLR4	PMID:24478758	supplied_locator_secondary_or_wrong	unknown	unknown	hold	Review locator; do not infer TLR4 from ANGPTL2/PIRB evidence.
+17	ANGPTL4	SDC1	PMID:29017031	family_level_primary_not_isoform_exact	unknown	potential_LRO	hold	Primary study supports syndecan-family/LRP6 complex; exact SDC1 was not established.
+18	ANGPTL4	SDC2	PMID:29017031	family_level_primary_not_isoform_exact	unknown	potential_LRO	hold	Primary study supports syndecan-family/LRP6 complex; exact SDC2 was not established.
+19	ANGPTL4	SDC3	PMID:29017031	family_level_primary_not_isoform_exact	unknown	potential_LRO	hold	Primary study supports syndecan-family/LRP6 complex; exact SDC3 was not established.
+20	ANGPTL7	PIRB	PMID:24478758	family_level_primary_not_isoform_exact	unknown	potential_LRO	hold	Supplied locator is a review; PMID 22660330 is a primary ANGPTL/PIRB lead but exact ANGPTL7 support requires checking.
+21	APP	CD74	PMID:19849849	confirmed_primary_interaction_noncanonical	yes	interaction_output	hold_for_role_normalization	Primary study supports CD74/APP interaction and altered Aβ production/trafficking; canonical secreted-ligand role is not asserted.
+22	BTLA	TNFRSF14	PMID:21941365	supplied_locator_secondary_or_wrong	no	unknown	hold	Supplied paper is lymphoma genetics/prognosis; do not substitute PMID 19915044 without separate curation.
+23	C3	CR2	PMID:16234578	locator_not_verified	unknown	unknown	hold	Exact primary C3-fragment/CR2 evidence was not established from supplied locator.
+24	C4B	CR2	PMID:16234578	locator_not_verified	unknown	unknown	hold	Exact primary C4b/CR2 evidence was not established from supplied locator.
+25	CADM3	CADM1	PMID:33397712	supplied_locator_secondary_or_wrong	no	unknown	hold	Primary study supports CADM3 as a functional ligand for CADM4, not CADM1.
