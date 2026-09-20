@@ -29,6 +29,12 @@ Key mSCIdblit inventory values:
 The comparison report and machine-readable summary are in
 `data/processed/public_database_comparison_v2/`.
 
+The public-only candidate inventory is split by evidence gate. Candidates with
+a PMID/PMCID/DOI-like locator are copied to
+`primary_evidence_review_queue.tsv`, but remain explicitly unverified until a
+primary paper is checked for the exact interaction and context. No candidate
+from this comparison is automatically promoted to an edge or route.
+
 Reproduce with:
 
 ```bash
