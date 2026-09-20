@@ -1,0 +1,26 @@
+candidate_rank	ligand	receptor	disposition	new_graph_edge_ids	matched_graph_edge_ids	primary_locators	harvest_note
+1	GRP	NMBR	new_graph_edge	M21B-E011608		PMID:25209280;PMID:29133874	Primary mouse functional evidence supports a weaker GRP-to-NMBR branch with itch-circuit output; no intracellular or TF layer asserted.
+2	HDC	HRH1	already_present_corrected_form		M21B-E001346	PMID:1722337	Public row names the histamine-synthesis gene Hdc; graph stores the mature ligand Histamine to HRH1.
+3	HDC	HRH2	already_present_corrected_form		M21B-E001356	PMID:1313563	Public row names the histamine-synthesis gene Hdc; graph stores the mature ligand Histamine to HRH2.
+4	HDC	HRH3	already_present_corrected_form		M21B-E001357	PMID:10347254	Public row names the histamine-synthesis gene Hdc; graph stores the mature ligand Histamine to HRH3.
+5	HDC	HRH4	already_present_corrected_form		M21B-E001358	PMID:11181941	Public row names the histamine-synthesis gene Hdc; graph stores the mature ligand Histamine to HRH4.
+6	LRRC4B	PTPRS	already_present_alias_and_primary		M21B-E002125;M23B-E000978;M23B-E000979	PMID:20139422;PMID:23345436	Public LRRC4B maps to existing NGL3/LRRC4B-to-PTPRS primary-supported trans-synaptic adhesion entries.
+7	POMC	OPRD1	reject_precursor_form		M21B-E001371;M21B-E001629;M21B-E001630	PMID:29934561;PMID:34724150	POMC is a precursor gene, not the asserted mature ligand for this edge; graph keeps mature opioid products such as DADLE, Met-enkephalin and Leu-enkephalin.
+8	POMC	OPRK1	reject_precursor_form		M21B-E001372	PMID:29934561;PMID:34724150	POMC is a precursor gene, not the asserted mature ligand; graph keeps Dynorphin A to OPRK1.
+9	POMC	OPRM1	reject_precursor_form		M21B-E001577;M21B-E001367;M21B-E001578;M21B-E001579	PMID:29934561;PMID:34724150	POMC is a precursor gene, not the asserted mature ligand; graph keeps beta-endorphin and other mature opioid products to OPRM1.
+10	PTN	SDC1	new_graph_edge	M21B-E011609		PMID:15226297	Primary mouse biochemical evidence supports PTN binding to SDC1-associated HS/CS chains; no unique downstream relay asserted.
+11	PTN	SDC2	hold_conditional_complex		M20B-E004668;M22B-E003610	PMID:18599487	The primary study shows Y-P30-enhanced PTN binding to SDC2/SDC3; it does not establish native PTN-alone SDC2 as an isolated receptor edge.
+12	PTN	SDC3	already_present_primary		M23B-E000253	PMID:8175719;PMID:16908672;PMID:9749725	Existing PTN/HB-GAM-to-SDC3 edge captures the direct binding and neurite/migration context.
+13	PTN	SDC4	new_graph_edge	M21B-E011610		PMID:15226297	Primary mouse biochemical evidence supports PTN binding to SDC4-associated HS/CS chains; no unique downstream relay asserted.
+14	AGT	AGTR2	reject_precursor_form		M21B-E001540	PMID:20606419	Public row names the angiotensinogen precursor; graph stores mature Angiotensin II/Ang II to AGTR2.
+15	ANGPTL1	PIRB	already_present_species_corrected		M21B-E006565	PMID:22660330	Primary evidence supports human ANGPTL1-to-LILRB2 binding; do not substitute a mouse ANGPTL1-to-PIRB edge without mouse isoform-specific evidence.
+16	ANGPTL2	TLR4	contextual_only		M22B-E000620;M24B-E000076	PMID:24478758	Current graph explicitly retains ANGPTL2/TLR4 as an inflammatory program association, not a direct ligand-receptor binding edge.
+17	ANGPTL4	SDC1	hold_family_level		M20B-E002572	PMID:29017031	Primary study supports syndecan-family/SDC4-resolved ANGPTL4-LRP6 complex; do not infer SDC1-specific binding from family language.
+18	ANGPTL4	SDC2	hold_family_level		M20B-E002572	PMID:29017031	Primary study supports syndecan-family/SDC4-resolved ANGPTL4-LRP6 complex; do not infer SDC2-specific binding.
+19	ANGPTL4	SDC3	hold_family_level		M20B-E002572	PMID:29017031	Primary study supports syndecan-family/SDC4-resolved ANGPTL4-LRP6 complex; do not infer SDC3-specific binding.
+20	ANGPTL7	PIRB	already_present_species_corrected		M21B-E006566	PMID:22660330	Primary evidence supports human ANGPTL7-to-LILRB2 cell-surface binding; do not substitute a mouse ANGPTL7-to-PIRB edge without mouse isoform-specific evidence.
+21	APP	CD74	already_present_noncanonical_interaction		M21B-E006161	PMID:19849849	Existing primary-supported APP-CD74 interaction captures altered APP trafficking and Aβ output; it is not relabeled as a canonical secreted-ligand route.
+22	BTLA	TNFRSF14	already_present_correct_primary		M21B-E003112	PMID:16169851	Supplied public locator was wrong, but the graph already contains the correct primary BTLA-HVEM/TNFRSF14 structural interaction.
+23	C3	CR2	already_present_processed_fragment_form		M21B-E001487;M21B-E002874	PMID:11034390;PMID:7868901;PMID:11352728	Graph correctly represents C3d/C3dg to CR2/CD21; intact C3-to-CR2 is not asserted.
+24	C4B	CR2	hold_unresolved_complexed_fragment		M20B-E005328;M24B-E000939	PMID:2973431;PMID:16234578	C4b evidence is complexed/opsonized-antigen or unresolved; current boundary does not support a free C4b-to-CR2 direct edge.
+25	CADM3	CADM1	already_present_reverse_orientation		M21B-E006523	PMID:30131958	Existing CADM1-to-CADM3 edge captures the same heterophilic adhesion interaction; no directional signaling relay is inferred from orientation alone.
