@@ -8,6 +8,7 @@ This report compares `module20_24_mechanism_graph:2026-09-19-literature-expansio
 - The route-evidence layer contains 20,196 records and covers 3,331 of 3,331 queue IDs with literature-linked evidence.
 - The comparison emits 7,753 unique public-only LR candidates for review; these are not causal graph additions.
 - Primary-evidence gate: 1,827 candidates have a locator-like public note requiring verification, and 5,926 have no primary locator in the frozen public snapshot. None is automatically verified.
+- The first review batch contains 25 candidates ranked by independent public-source support and primary-locator density; this is a work queue, not a confidence score.
 - Exact label overlap is intentionally conservative. Component-normalized overlap is the preferred ligand–receptor comparison, especially for heteromeric receptors.
 
 ## Ligand–receptor comparison
@@ -86,4 +87,4 @@ This is the key distinction: mSCIdblit carries an evidence-bearing route layer b
 python3 scripts/compare_release_public_databases_v2.py
 ```
 
-The JSON summary contains input hashes, counts, denominators, and route-tier details. `public_only_lr_candidates.tsv` is a review queue only; `primary_evidence_review_queue.tsv` contains only locator-bearing candidates that still require manual primary-paper verification.
+The JSON summary contains input hashes, counts, denominators, and route-tier details. `public_only_lr_candidates.tsv` is a review queue only; `primary_evidence_review_queue.tsv` contains only locator-bearing candidates that still require manual primary-paper verification; `primary_evidence_top25.tsv` is the first ranked review batch.

@@ -219,6 +219,36 @@ def evidence_gate(row: dict[str, str]) -> str:
     return "no_primary_locator_in_public_snapshot"
 
 
+def locator_count(row: dict[str, str]) -> int:
+    text = " ".join(
+        row.get(field, "")
+        for field in ("evidence_notes", "annotations", "source_record_ids")
+    )
+    return len(PRIMARY_LOCATOR.findall(text))
+
+
+def add_review_priority(row: dict[str, str]) -> dict[str, str]:
+    independent = sorted(
+        set(row.get("source_databases", "").split(";"))
+        & {"CellChatDB.mouse", "LIANA.mouseconsensus", "NicheNet.neutral_v1"}
+    )
+    locators = locator_count(row)
+    score = (
+        len(independent) * 100
+        + min(locators, 5) * 10
+        + (5 if row.get("annotations") else 0)
+        + (5 if row.get("evidence_notes") else 0)
+        + (2 if "+" in row.get("receptor_components", "") else 0)
+    )
+    return {
+        **row,
+        "independent_public_source_count": str(len(independent)),
+        "independent_public_sources": ";".join(independent),
+        "primary_locator_count": str(locators),
+        "review_priority_score": str(score),
+    }
+
+
 def main() -> None:
     args = parse_args()
     args.output_dir.mkdir(parents=True, exist_ok=True)
@@ -360,10 +390,17 @@ def main() -> None:
                 current["primary_evidence_gate"] = "primary_locator_present_unverified"
     gate_counts = Counter(row["primary_evidence_gate"] for row in unique_public_candidates.values())
     primary_review_rows = [
-        {**row, "review_status": "requires_primary_paper_verification"}
+        add_review_priority({**row, "review_status": "requires_primary_paper_verification"})
         for row in unique_public_candidates.values()
         if row["primary_evidence_gate"] == "primary_locator_present_unverified"
     ]
+    primary_review_rows.sort(
+        key=lambda row: (
+            -int(row["review_priority_score"]),
+            row["ligand_components"],
+            row["receptor_components"],
+        )
+    )
     manifest = {
         "comparison_id": "mSCIdblit:literature-expansion242:public-databases-v2",
         "bundle_dir": str(args.bundle_dir),
@@ -393,6 +430,7 @@ def main() -> None:
             "rows": len(unique_public_candidates),
             "primary_evidence_gate_counts": dict(sorted(gate_counts.items())),
             "primary_evidence_review_queue_rows": len(primary_review_rows),
+            "primary_evidence_top25_rows": min(25, len(primary_review_rows)),
             "policy": "public-only candidates remain review evidence and are not causal graph edges",
         },
     }
@@ -411,6 +449,10 @@ def main() -> None:
         "annotations",
         "evidence_notes",
         "primary_evidence_gate",
+        "independent_public_source_count",
+        "independent_public_sources",
+        "primary_locator_count",
+        "review_priority_score",
         "review_status",
         "reason",
     ]
@@ -433,7 +475,17 @@ def main() -> None:
             lineterminator="\n",
         )
         writer.writeheader()
-        writer.writerows(sorted(primary_review_rows, key=lambda row: (row["ligand_components"], row["receptor_components"])))
+        writer.writerows(primary_review_rows)
+    with (args.output_dir / "primary_evidence_top25.tsv").open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=candidate_fields,
+            delimiter="\t",
+            extrasaction="ignore",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows(primary_review_rows[:25])
 
     def pct(value: float) -> str:
         return f"{value * 100:.1f}%"
@@ -449,6 +501,7 @@ def main() -> None:
         f"- The route-evidence layer contains {len(routes):,} records and covers {len(literature_queue_ids):,} of {len(queue_ids):,} queue IDs with literature-linked evidence.",
         f"- The comparison emits {len(unique_public_candidates):,} unique public-only LR candidates for review; these are not causal graph additions.",
         f"- Primary-evidence gate: {gate_counts.get('primary_locator_present_unverified', 0):,} candidates have a locator-like public note requiring verification, and {gate_counts.get('no_primary_locator_in_public_snapshot', 0):,} have no primary locator in the frozen public snapshot. None is automatically verified.",
+        f"- The first review batch contains {min(25, len(primary_review_rows))} candidates ranked by independent public-source support and primary-locator density; this is a work queue, not a confidence score.",
         "- Exact label overlap is intentionally conservative. Component-normalized overlap is the preferred ligand–receptor comparison, especially for heteromeric receptors.",
         "",
         "## Ligand–receptor comparison",
@@ -509,7 +562,7 @@ def main() -> None:
             "python3 scripts/compare_release_public_databases_v2.py",
             "```",
             "",
-            "The JSON summary contains input hashes, counts, denominators, and route-tier details. `public_only_lr_candidates.tsv` is a review queue only; `primary_evidence_review_queue.tsv` contains only locator-bearing candidates that still require manual primary-paper verification.",
+            "The JSON summary contains input hashes, counts, denominators, and route-tier details. `public_only_lr_candidates.tsv` is a review queue only; `primary_evidence_review_queue.tsv` contains only locator-bearing candidates that still require manual primary-paper verification; `primary_evidence_top25.tsv` is the first ranked review batch.",
             "",
         ]
     )

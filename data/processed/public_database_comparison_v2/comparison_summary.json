@@ -8,6 +8,7 @@
       "primary_locator_present_unverified": 1827
     },
     "primary_evidence_review_queue_rows": 1827,
+    "primary_evidence_top25_rows": 25,
     "rows": 7753
   },
   "comparison_id": "mSCIdblit:literature-expansion242:public-databases-v2",
