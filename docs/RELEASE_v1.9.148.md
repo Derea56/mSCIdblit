@@ -35,6 +35,10 @@ a PMID/PMCID/DOI-like locator are copied to
 primary paper is checked for the exact interaction and context. No candidate
 from this comparison is automatically promoted to an edge or route.
 
+The first ranked batch is `primary_evidence_top25.tsv`. Its ranking is a
+review-priority heuristic based on independent public-source support and
+locator density; it is not a biological confidence score.
+
 Reproduce with:
 
 ```bash
