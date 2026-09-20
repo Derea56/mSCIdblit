@@ -28,6 +28,7 @@ DEFAULT_SNAPSHOT = Path("data/raw/method_resources/mscs_phase2_external_snapshot
 PAIR_SEPARATORS = re.compile(r"[|_:;,/+\s]+")
 NON_ALNUM = re.compile(r"[^A-Z0-9]")
 NON_ENTITY_WORDS = {"COMPLEX", "RECEPTOR", "PROTEIN", "FAMILY", "CHAIN"}
+PRIMARY_LOCATOR = re.compile(r"\b(?:PMID|PMCID)\s*:\s*[A-Z0-9]+|\bdoi\s*:\s*10\.\d{4,9}/\S+", re.IGNORECASE)
 
 
 def parse_args() -> argparse.Namespace:
@@ -208,6 +209,16 @@ def nonempty_count(rows: Iterable[dict[str, str]], field: str) -> int:
     return sum(bool(row.get(field, "").strip()) for row in rows)
 
 
+def evidence_gate(row: dict[str, str]) -> str:
+    text = " ".join(
+        row.get(field, "")
+        for field in ("evidence", "annotation", "citation_note", "source_record_id")
+    )
+    if PRIMARY_LOCATOR.search(text):
+        return "primary_locator_present_unverified"
+    return "no_primary_locator_in_public_snapshot"
+
+
 def main() -> None:
     args = parse_args()
     args.output_dir.mkdir(parents=True, exist_ok=True)
@@ -315,14 +326,44 @@ def main() -> None:
                         "pathway": record.get("pathway_name", "") or record.get("pathway", ""),
                         "annotation": record.get("annotation", ""),
                         "evidence": record.get("evidence", ""),
+                        "primary_evidence_gate": evidence_gate(record),
                         "review_status": "candidate_public_only_not_graph_edge",
                         "reason": "no_component_normalized_match_in_mSCIdblit",
                     }
                 )
 
-    unique_public_candidates = {
-        (row["ligand_components"], row["receptor_components"]): row for row in public_only_rows
-    }
+    unique_public_candidates: dict[tuple[str, str], dict[str, str]] = {}
+    for row in public_only_rows:
+        key = (row["ligand_components"], row["receptor_components"])
+        current = unique_public_candidates.setdefault(
+            key,
+            {
+                **row,
+                "source_databases": row["source_database"],
+                "source_record_ids": row["source_record_id"],
+                "pathways": row["pathway"],
+                "annotations": row["annotation"],
+                "evidence_notes": row["evidence"],
+            },
+        )
+        if current is not row:
+            for field, output_field in (
+                ("source_database", "source_databases"),
+                ("source_record_id", "source_record_ids"),
+                ("pathway", "pathways"),
+                ("annotation", "annotations"),
+                ("evidence", "evidence_notes"),
+            ):
+                values = [value for value in (current.get(output_field, "").split(";") + [row.get(field, "")]) if value]
+                current[output_field] = ";".join(sorted(set(values)))
+            if row.get("primary_evidence_gate") == "primary_locator_present_unverified":
+                current["primary_evidence_gate"] = "primary_locator_present_unverified"
+    gate_counts = Counter(row["primary_evidence_gate"] for row in unique_public_candidates.values())
+    primary_review_rows = [
+        {**row, "review_status": "requires_primary_paper_verification"}
+        for row in unique_public_candidates.values()
+        if row["primary_evidence_gate"] == "primary_locator_present_unverified"
+    ]
     manifest = {
         "comparison_id": "mSCIdblit:literature-expansion242:public-databases-v2",
         "bundle_dir": str(args.bundle_dir),
@@ -350,6 +391,8 @@ def main() -> None:
         },
         "candidate_queue": {
             "rows": len(unique_public_candidates),
+            "primary_evidence_gate_counts": dict(sorted(gate_counts.items())),
+            "primary_evidence_review_queue_rows": len(primary_review_rows),
             "policy": "public-only candidates remain review evidence and are not causal graph edges",
         },
     }
@@ -358,22 +401,39 @@ def main() -> None:
     )
 
     candidate_fields = [
-        "source_database",
+        "source_databases",
         "ligand_components",
         "receptor_components",
         "source_ligand",
         "source_receptor",
-        "source_record_id",
-        "pathway",
-        "annotation",
-        "evidence",
+        "source_record_ids",
+        "pathways",
+        "annotations",
+        "evidence_notes",
+        "primary_evidence_gate",
         "review_status",
         "reason",
     ]
     with (args.output_dir / "public_only_lr_candidates.tsv").open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=candidate_fields, delimiter="\t")
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=candidate_fields,
+            delimiter="\t",
+            extrasaction="ignore",
+            lineterminator="\n",
+        )
         writer.writeheader()
-        writer.writerows(sorted(unique_public_candidates.values(), key=lambda row: (row["source_database"], row["ligand_components"], row["receptor_components"])))
+        writer.writerows(sorted(unique_public_candidates.values(), key=lambda row: (row["ligand_components"], row["receptor_components"])))
+    with (args.output_dir / "primary_evidence_review_queue.tsv").open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=candidate_fields,
+            delimiter="\t",
+            extrasaction="ignore",
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows(sorted(primary_review_rows, key=lambda row: (row["ligand_components"], row["receptor_components"])))
 
     def pct(value: float) -> str:
         return f"{value * 100:.1f}%"
@@ -388,6 +448,7 @@ def main() -> None:
         f"- mSCIdblit contains {manifest['mSCIdblit']['lr_edge_rows']:,} ligand–receptor edge rows, {manifest['mSCIdblit']['unique_label_pairs']:,} unique label pairs, and {manifest['mSCIdblit']['unique_component_pairs']:,} component-normalized pairs.",
         f"- The route-evidence layer contains {len(routes):,} records and covers {len(literature_queue_ids):,} of {len(queue_ids):,} queue IDs with literature-linked evidence.",
         f"- The comparison emits {len(unique_public_candidates):,} unique public-only LR candidates for review; these are not causal graph additions.",
+        f"- Primary-evidence gate: {gate_counts.get('primary_locator_present_unverified', 0):,} candidates have a locator-like public note requiring verification, and {gate_counts.get('no_primary_locator_in_public_snapshot', 0):,} have no primary locator in the frozen public snapshot. None is automatically verified.",
         "- Exact label overlap is intentionally conservative. Component-normalized overlap is the preferred ligand–receptor comparison, especially for heteromeric receptors.",
         "",
         "## Ligand–receptor comparison",
@@ -448,7 +509,7 @@ def main() -> None:
             "python3 scripts/compare_release_public_databases_v2.py",
             "```",
             "",
-            "The JSON summary contains input hashes, counts, denominators, and route-tier details. `public_only_lr_candidates.tsv` is a review queue only.",
+            "The JSON summary contains input hashes, counts, denominators, and route-tier details. `public_only_lr_candidates.tsv` is a review queue only; `primary_evidence_review_queue.tsv` contains only locator-bearing candidates that still require manual primary-paper verification.",
             "",
         ]
     )

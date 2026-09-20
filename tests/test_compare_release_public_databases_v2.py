@@ -1,4 +1,4 @@
-from scripts.compare_release_public_databases_v2 import component_key, label_key, metrics
+from scripts.compare_release_public_databases_v2 import component_key, evidence_gate, label_key, metrics
 
 
 def test_component_key_matches_common_complex_encodings():
@@ -20,3 +20,8 @@ def test_metrics_reports_directional_coverage():
     assert result["overlap"] == 1
     assert result["mSCIdblit_coverage_of_public"] == 0.5
     assert result["public_coverage_of_mSCIdblit"] == 0.5
+
+
+def test_public_locator_is_not_treated_as_verified_primary_evidence():
+    assert evidence_gate({"evidence": "PMID:123456", "annotation": "", "citation_note": ""}) == "primary_locator_present_unverified"
+    assert evidence_gate({"evidence": "KEGG:mmu04350", "annotation": "", "citation_note": ""}) == "no_primary_locator_in_public_snapshot"

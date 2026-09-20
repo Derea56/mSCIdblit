@@ -3,6 +3,11 @@
   "bundle_release_id": "module20_24_mechanism_graph:2026-09-19-literature-expansion-242",
   "candidate_queue": {
     "policy": "public-only candidates remain review evidence and are not causal graph edges",
+    "primary_evidence_gate_counts": {
+      "no_primary_locator_in_public_snapshot": 5926,
+      "primary_locator_present_unverified": 1827
+    },
+    "primary_evidence_review_queue_rows": 1827,
     "rows": 7753
   },
   "comparison_id": "mSCIdblit:literature-expansion242:public-databases-v2",
