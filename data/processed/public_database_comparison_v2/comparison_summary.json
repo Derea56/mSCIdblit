@@ -1,0 +1,284 @@
+{
+  "bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion242",
+  "bundle_release_id": "module20_24_mechanism_graph:2026-09-19-literature-expansion-242",
+  "candidate_queue": {
+    "policy": "public-only candidates remain review evidence and are not causal graph edges",
+    "rows": 7753
+  },
+  "comparison_id": "mSCIdblit:literature-expansion242:public-databases-v2",
+  "inputs": {
+    "edges": {
+      "path": "data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion242/mechanism_edges.tsv",
+      "rows": 14722,
+      "sha256": "1848df2b16ada6f8083797f756986298ab1275a4f99c196e6da47db55394505f"
+    },
+    "route_evidence": {
+      "path": "data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion242/mechanism_signaling_route_evidence.tsv",
+      "rows": 20196,
+      "sha256": "5c94299c0d17de893bcc80ccf187ffbc01f1d2cf90f7396b49d931d531cf5fea"
+    }
+  },
+  "mSCIdblit": {
+    "bundle_counts": {
+      "boundary_groups": 96,
+      "downstream_curation_queue": 3331,
+      "downstream_evidence_records": 4730,
+      "edge_sources": 14998,
+      "edges": 14722,
+      "entity_forms": 3014,
+      "entity_transitions": 13,
+      "literature_expansion": 20,
+      "node_roles": 17332,
+      "nodes": 11952,
+      "nodes_with_ligand_role": 2854,
+      "nodes_with_receptor_role": 2408,
+      "nodes_with_target_gene_role": 67,
+      "nodes_with_transcription_factor_role": 51,
+      "nonexportable_edges": 9889,
+      "output_bridge_candidates": 342,
+      "output_bridges_validated": 1166,
+      "pathways": 10881,
+      "possible_signaling_paths": 2,
+      "signaling_route_evidence": 20196
+    },
+    "lr_edge_rows": 5931,
+    "unique_component_pairs": 5680,
+    "unique_label_pairs": 5742
+  },
+  "route_evidence": {
+    "detail": {
+      "contextualized_records": 19427,
+      "distinct_intracellular_continuations": 438,
+      "distinct_ligands": 3091,
+      "distinct_outputs": 1987,
+      "distinct_receptors": 2743,
+      "distinct_target_genes": 110,
+      "distinct_transcription_factors": 61
+    },
+    "literature_expansion_output_classes": {
+      "cellular_functional_readout": 808,
+      "cleavage_or_processing_readout": 72,
+      "gene_expression_or_transcription": 328,
+      "generic_functional_readout": 258,
+      "phagocytosis_or_engulfment": 92,
+      "phosphorylation_or_activation_readout": 501,
+      "reporter_readout": 142,
+      "second_messenger_readout": 217,
+      "secreted_protein_or_release": 125,
+      "target_gene_expression": 95,
+      "translocation_or_localization_readout": 89,
+      "unknown": 922
+    },
+    "route_tiers": {
+      "downstream_claim_unresolved_topology": 141,
+      "downstream_output_annotation_unlinked_topology": 818,
+      "downstream_tf_annotation_unlinked_topology": 27,
+      "explicit_ligand_receptor_intracellular_tf_target": 78,
+      "ligand_receptor_downstream_claim_unresolved": 1208,
+      "ligand_receptor_entry_only": 6701,
+      "ligand_receptor_intracellular_claim_unresolved": 2300,
+      "ligand_receptor_intracellular_output_missing_tf": 2951,
+      "ligand_receptor_intracellular_tf_missing_output": 67,
+      "ligand_receptor_intracellular_tf_output_missing_target_gene": 160,
+      "ligand_receptor_output_annotation_missing_intracellular_and_tf": 4005,
+      "ligand_receptor_output_missing_intracellular_and_tf": 227,
+      "ligand_receptor_tf_annotation_missing_intracellular_and_output": 70,
+      "ligand_receptor_tf_missing_intracellular_and_output": 20,
+      "ligand_receptor_tf_output_annotation_missing_intracellular": 149,
+      "ligand_receptor_tf_output_missing_target_gene": 96,
+      "ligand_receptor_tf_target_annotation_missing_intracellular": 11,
+      "ligand_receptor_tf_target_missing_intracellular": 153,
+      "receptor_intracellular_claim_unresolved": 401,
+      "receptor_intracellular_output_annotation_missing_ligand_receptor_and_tf": 508,
+      "receptor_intracellular_tf_annotation_missing_ligand_receptor_and_output": 42,
+      "tf_target_output_only": 63
+    },
+    "rows": 20196,
+    "unique_queue_ids_with_literature_expansion": 3331,
+    "unique_queue_ids_with_route_evidence": 3331
+  },
+  "snapshot_dir": "data/raw/method_resources/mscs_phase2_external_snapshot_2026-08-05",
+  "snapshot_manifest": "data/raw/method_resources/mscs_phase2_external_snapshot_2026-08-05/resource_manifest.json",
+  "sources": {
+    "CellChatDB.mouse": {
+      "component_overlap": {
+        "jaccard": 0.085505,
+        "mSCIdblit": 5680,
+        "mSCIdblit_coverage_of_public": 0.211968,
+        "mSCIdblit_only": 4968,
+        "overlap": 712,
+        "public": 3359,
+        "public_coverage_of_mSCIdblit": 0.125352,
+        "public_only": 2647
+      },
+      "component_pairs": 3359,
+      "label_overlap": {
+        "jaccard": 0.077807,
+        "mSCIdblit": 5742,
+        "mSCIdblit_coverage_of_public": 0.195594,
+        "mSCIdblit_only": 5085,
+        "overlap": 657,
+        "public": 3359,
+        "public_coverage_of_mSCIdblit": 0.11442,
+        "public_only": 2702
+      },
+      "label_pairs": 3359,
+      "path": "data/raw/method_resources/mscs_phase2_external_snapshot_2026-08-05/cellchat_mouse.tsv",
+      "public_only_component_pairs": 2647,
+      "raw_rows": 3379,
+      "schema": {
+        "fields": [
+          "ligand",
+          "receptor",
+          "ligand_components",
+          "receptor_components",
+          "resource",
+          "source_record_id",
+          "pathway_name",
+          "annotation",
+          "evidence",
+          "cofactor_annotations",
+          "version",
+          "direct_lr_candidate"
+        ],
+        "nonempty_fields": {
+          "annotation": 3379,
+          "cofactor_annotations": 577,
+          "evidence": 3379,
+          "ligand_components": 3379,
+          "receptor_components": 3379
+        }
+      },
+      "sha256": "585340219264f0d44b9d1f228ee097301b0af86da6a823c7eabffb60f3cdffa7"
+    },
+    "LIANA.mouseconsensus": {
+      "component_overlap": {
+        "jaccard": 0.13457,
+        "mSCIdblit": 5680,
+        "mSCIdblit_coverage_of_public": 0.287795,
+        "mSCIdblit_only": 4534,
+        "overlap": 1146,
+        "public": 3982,
+        "public_coverage_of_mSCIdblit": 0.201761,
+        "public_only": 2836
+      },
+      "component_pairs": 3982,
+      "label_overlap": {
+        "jaccard": 0.128755,
+        "mSCIdblit": 5742,
+        "mSCIdblit_coverage_of_public": 0.278265,
+        "mSCIdblit_only": 4632,
+        "overlap": 1110,
+        "public": 3989,
+        "public_coverage_of_mSCIdblit": 0.193312,
+        "public_only": 2879
+      },
+      "label_pairs": 3989,
+      "path": "data/raw/method_resources/mscs_phase2_external_snapshot_2026-08-05/liana_mouseconsensus.tsv",
+      "public_only_component_pairs": 2836,
+      "raw_rows": 3989,
+      "schema": {
+        "fields": [
+          "ligand",
+          "receptor"
+        ],
+        "nonempty_fields": {}
+      },
+      "sha256": "0b9e2307fcbd482bb608f118d7e03bdbfc93e58d2c2032c844b648e3cca86f71"
+    },
+    "NicheNet.neutral_v1": {
+      "component_overlap": {
+        "jaccard": 0.079793,
+        "mSCIdblit": 5680,
+        "mSCIdblit_coverage_of_public": 0.148769,
+        "mSCIdblit_only": 4846,
+        "overlap": 834,
+        "public": 5606,
+        "public_coverage_of_mSCIdblit": 0.146831,
+        "public_only": 4772
+      },
+      "component_pairs": 5606,
+      "label_overlap": {
+        "jaccard": 0.077931,
+        "mSCIdblit": 5742,
+        "mSCIdblit_coverage_of_public": 0.146242,
+        "mSCIdblit_only": 4921,
+        "overlap": 821,
+        "public": 5614,
+        "public_coverage_of_mSCIdblit": 0.142982,
+        "public_only": 4793
+      },
+      "label_pairs": 5614,
+      "path": "data/raw/method_resources/mscs_phase2_external_snapshot_2026-08-05/nichenet_neutral_v1/lr_network.tsv",
+      "public_only_component_pairs": 4772,
+      "raw_rows": 5668,
+      "schema": {
+        "fields": [
+          "from",
+          "to",
+          "database",
+          "source"
+        ],
+        "nonempty_fields": {
+          "database": 5668,
+          "source": 5668
+        }
+      },
+      "sha256": "22279374620ff3a2ecb388107cfd7c03770e9c7c67a920ad44033179e511b282"
+    },
+    "master_LR_union": {
+      "component_overlap": {
+        "jaccard": 0.094543,
+        "mSCIdblit": 5680,
+        "mSCIdblit_coverage_of_public": 0.140751,
+        "mSCIdblit_only": 4410,
+        "overlap": 1270,
+        "public": 9023,
+        "public_coverage_of_mSCIdblit": 0.223592,
+        "public_only": 7753
+      },
+      "component_pairs": 9023,
+      "label_overlap": {
+        "jaccard": 0.091411,
+        "mSCIdblit": 5742,
+        "mSCIdblit_coverage_of_public": 0.136608,
+        "mSCIdblit_only": 4499,
+        "overlap": 1243,
+        "public": 9099,
+        "public_coverage_of_mSCIdblit": 0.216475,
+        "public_only": 7856
+      },
+      "label_pairs": 9099,
+      "path": "data/raw/method_resources/mscs_phase2_external_snapshot_2026-08-05/master_lr_registry.tsv",
+      "public_only_component_pairs": 7753,
+      "raw_rows": 9099,
+      "schema": {
+        "fields": [
+          "registry_id",
+          "ligand",
+          "receptor",
+          "ligand_entity_type",
+          "receptor_entity_type",
+          "ligand_components",
+          "receptor_components",
+          "source_methods",
+          "source_resources",
+          "source_databases",
+          "source_record_ids",
+          "pathway_labels",
+          "interaction_annotations",
+          "evidence_notes",
+          "cofactor_annotations",
+          "species_scope",
+          "direct_lr_candidate"
+        ],
+        "nonempty_fields": {
+          "cofactor_annotations": 577,
+          "ligand_components": 9099,
+          "receptor_components": 9099
+        }
+      },
+      "sha256": "d176eb074427f3ff0f8f38572799e22d22980846315c964bee5380480c42573f"
+    }
+  }
+}
