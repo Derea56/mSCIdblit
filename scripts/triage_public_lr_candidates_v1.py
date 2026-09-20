@@ -26,6 +26,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_BUNDLE = ROOT / "data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion243"
 DEFAULT_CANDIDATES = ROOT / "data/processed/public_database_comparison_v2/public_only_lr_candidates.tsv"
+DEFAULT_PRIOR_AUDIT = ROOT / "data/processed/public_database_comparison_v2/primary_evidence_harvest_resolution.tsv"
 DEFAULT_OUTPUT = ROOT / "data/processed/public_database_comparison_v2/candidate_triage_v1"
 
 PAIR_SEPARATORS = re.compile(r"[|_:;,/+\s]+")
@@ -157,6 +158,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--bundle-dir", type=Path, default=DEFAULT_BUNDLE)
     parser.add_argument("--candidates", type=Path, default=DEFAULT_CANDIDATES)
+    parser.add_argument("--prior-audit", type=Path, default=DEFAULT_PRIOR_AUDIT)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--batch-size", type=int, default=100)
     return parser.parse_args()
@@ -168,6 +170,12 @@ def main() -> None:
         raise SystemExit("--batch-size must be positive")
 
     candidate_rows = read_tsv(args.candidates)
+    prior_audit_rows = read_tsv(args.prior_audit) if args.prior_audit.exists() else []
+    prior_audit = {
+        (row.get("ligand", "").strip().upper(), row.get("receptor", "").strip().upper()): row
+        for row in prior_audit_rows
+        if row.get("ligand") and row.get("receptor")
+    }
     graph_edges = [row for row in read_tsv(args.bundle_dir / "mechanism_edges.tsv") if relation_is_direct_lr(row)]
 
     exact_labels: dict[tuple[str, str], list[dict[str, str]]] = defaultdict(list)
@@ -233,12 +241,41 @@ def main() -> None:
                 "matched_graph_edges": ";".join(match_labels),
                 "review_priority_rank_value": str(priority(row, match_class)),
                 "candidate_unit_id": f"LR:{'+'.join(key[0])}>{'+'.join(key[1])}",
+                "independent_public_source_count": str(source_count(row)),
+                "primary_locator_count": str(locator_count(row)),
+                "prior_harvest_disposition": "",
+                "prior_harvest_primary_locators": "",
             }
         )
+        prior = prior_audit.get(
+            (row.get("ligand_components", "").strip().upper(), row.get("receptor_components", "").strip().upper())
+        )
+        if prior:
+            row_out["prior_harvest_disposition"] = prior.get("disposition", "")
+            row_out["prior_harvest_primary_locators"] = prior.get("primary_locators", "")
+            row_out["review_lane"] = "completed_prior_harvest"
+        elif (
+            match_class == "graph_match_alias_adjudication"
+            and len(key[0]) == 1
+            and len(key[1]) == 1
+            and len(matches) == 1
+        ):
+            # A single public component on each side maps to one direct graph
+            # edge. This resolves representation only; it does not infer new
+            # biological evidence or promote an edge.
+            row_out["review_lane"] = "represented_graph_alias"
         all_rows.append(row_out)
 
     all_rows.sort(key=lambda row: (-int(row["review_priority_rank_value"]), row["candidate_unit_id"]))
-    review_rows = [row for row in all_rows if row["review_lane"] != "resolved_graph_match"]
+    review_rows = [
+        row
+        for row in all_rows
+        if row["review_lane"] not in {
+            "resolved_graph_match",
+            "completed_prior_harvest",
+            "represented_graph_alias",
+        }
+    ]
     for index, row in enumerate(review_rows):
         row["review_batch"] = f"batch_{index // args.batch_size + 1:03d}"
     for row in all_rows:
@@ -251,7 +288,7 @@ def main() -> None:
         "independent_public_sources", "primary_locator_count", "review_priority_score",
         "normalized_ligand_key", "normalized_receptor_key", "normalization_match", "review_lane",
         "matched_graph_edge_ids", "matched_graph_edges", "review_priority_rank_value", "review_batch",
-        "review_status", "reason",
+        "prior_harvest_disposition", "prior_harvest_primary_locators", "review_status", "reason",
     ]
     args.output_dir.mkdir(parents=True, exist_ok=True)
     write_tsv(args.output_dir / "candidate_normalization.tsv", all_rows, fields)
@@ -265,10 +302,17 @@ def main() -> None:
         "bundle_dir": str(args.bundle_dir),
         "bundle_release_id": json.loads((args.bundle_dir / "bundle_metadata.json").read_text(encoding="utf-8")).get("release_id"),
         "candidate_input": {"path": str(args.candidates), "sha256": sha256(args.candidates), "raw_rows": len(candidate_rows)},
+        "prior_audit_input": {
+            "path": str(args.prior_audit),
+            "sha256": sha256(args.prior_audit) if args.prior_audit.exists() else "",
+            "rows": len(prior_audit_rows),
+        },
         "graph_input": {"path": str(args.bundle_dir / "mechanism_edges.tsv"), "sha256": sha256(args.bundle_dir / "mechanism_edges.tsv"), "direct_lr_edges": len(graph_edges)},
         "candidate_units": len(all_rows),
         "normalization_match_counts": dict(sorted(match_counts.items())),
         "review_lane_counts": dict(sorted(lane_counts.items())),
+        "prior_harvest_rows": len(prior_audit_rows),
+        "prior_harvest_matched_units": sum(row["review_lane"] == "completed_prior_harvest" for row in all_rows),
         "review_queue_rows": len(review_rows),
         "review_queue_with_primary_locators": sum(locator_count(row) > 0 for row in review_rows),
         "review_queue_without_primary_locators": sum(locator_count(row) == 0 for row in review_rows),
@@ -288,6 +332,8 @@ def main() -> None:
         "| Triage lane | Candidate units | Meaning |",
         "|---|---:|---|",
         f"| Resolved graph match | {lane_counts.get('resolved_graph_match', 0):,} | Exact label or exact component match; no new edge is implied. |",
+        f"| Completed prior harvest | {lane_counts.get('completed_prior_harvest', 0):,} | Present in the existing primary-evidence harvest ledger; excluded from new review batches. |",
+        f"| Represented graph alias | {lane_counts.get('represented_graph_alias', 0):,} | Conservative one-component/one-edge representation match; no new evidence or edge is inferred. |",
         f"| Alias adjudication | {lane_counts.get('alias_adjudication', 0):,} | Component overlap suggests an alias or composite representation; curator confirmation is required. |",
         f"| Primary-evidence review | {lane_counts.get('primary_evidence_review', 0):,} | No automatic graph match and a public primary-paper locator is present. |",
         f"| Discovery review | {lane_counts.get('discovery_review', 0):,} | No automatic graph match and no primary locator in the frozen public snapshot. |",

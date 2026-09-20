@@ -6,12 +6,14 @@ This report reduces `7,753` public-only rows to `7,753` normalized candidate uni
 
 | Triage lane | Candidate units | Meaning |
 |---|---:|---|
-| Resolved graph match | 7 | Exact label or exact component match; no new edge is implied. |
-| Alias adjudication | 1,071 | Component overlap suggests an alias or composite representation; curator confirmation is required. |
-| Primary-evidence review | 1,630 | No automatic graph match and a public primary-paper locator is present. |
+| Resolved graph match | 5 | Exact label or exact component match; no new edge is implied. |
+| Completed prior harvest | 25 | Present in the existing primary-evidence harvest ledger; excluded from new review batches. |
+| Represented graph alias | 529 | Conservative one-component/one-edge representation match; no new evidence or edge is inferred. |
+| Alias adjudication | 536 | Component overlap suggests an alias or composite representation; curator confirmation is required. |
+| Primary-evidence review | 1,613 | No automatic graph match and a public primary-paper locator is present. |
 | Discovery review | 5,045 | No automatic graph match and no primary locator in the frozen public snapshot. |
 
-The actionable review queue contains `7,746` units, of which `1,820` have a primary locator and `5,926` require discovery or broader evidence search.
+The actionable review queue contains `7,194` units, of which `1,732` have a primary locator and `5,462` require discovery or broader evidence search.
 
 ## Review batches
 
