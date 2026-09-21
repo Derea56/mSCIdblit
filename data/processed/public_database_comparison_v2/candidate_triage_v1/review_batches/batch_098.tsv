@@ -1,0 +1,5 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:IGF1>ITGA6+ITGB4	IGF1	ITGA6+ITGB4	M21B-E000632	PMID:28873464;PMID:28190785	represented_graph_alias	batch_098
+LR:IGF1>ITGAV+ITGB3	IGF1	ITGAV+ITGB3	M21B-E000622	PMID:28873464;PMID:28190785	represented_graph_alias	batch_098
+LR:IGF2>ITGA6+ITGB4	IGF2	ITGA6+ITGB4	M21B-E000633	PMID:28873464;PMID:28190785	represented_graph_alias	batch_098
+LR:IGF2>ITGAV+ITGB3	IGF2	ITGAV+ITGB3	M21B-E000623	PMID:28873464;PMID:28190785	represented_graph_alias	batch_098
