@@ -1,0 +1,3 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:UCN2>CRHR1	UCN2	CRHR1		PMID:11226328	primary_review	batch_078
+LR:UCN3>CRHR1	UCN3	CRHR1		PMID:11416224	primary_review	batch_078

@@ -245,6 +245,75 @@ def main() -> None:
                 layer = "candidate_only_review_locator"
                 summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
                 limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
+        elif row.get("review_batch") == "batch_077":
+            pair = (ligand, receptor)
+            if pair == ("WNT11", "FZD6"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:24873871"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human FZD6 membrane-mobility assay with WNT11 and WNT5B"
+                summary = "A primary FZD6 membrane-mobility study found that WNT11 did not alter FZD6 mobility under the tested conditions and concluded that WNT11 did not act through FZD6 in that assay; pathway or co-expression membership is not direct positive pair evidence."
+                limitations = "Preserve the assay-specific negative result without claiming that WNT11 can never signal through FZD6 in every cellular context; do not materialize the public WNT11-FZD6 row or infer downstream signaling from family-level Wnt annotations."
+            elif pair == ("NECTIN3", "TIGIT"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:23677581", "PMID:22421438", "PMID:28515320"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "mouse and human TIGIT/nectin-family binding assays"
+                summary = "Primary human studies establish TIGIT binding to PVR/CD155 and Nectin2/CD112, while a primary mouse TIGIT study did not detect mNectin3 and noted that an earlier human Nectin3 assignment was not supported; the public NECTIN3-TIGIT row therefore remains species- and assay-conflicted context rather than a direct edge."
+                limitations = "Do not materialize NECTIN3-TIGIT without a reconciled pair-specific primary binding or receptor-triggering study; do not transfer PVR or Nectin2 evidence to Nectin3 or generalize family-level contact annotations."
+            elif pair == ("APOA2", "TREM2+TYROBP"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:26374899", "PMCID:PMC4646256"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human and macaque apolipoprotein/TREM2 biochemical assays"
+                summary = "Primary TREM2 work establishes the TREM2-TYROBP signaling-complex context and detects ApoA-II in TREM2 immunoprecipitates with weak binding of purified ApoA-II alongside stronger apolipoprotein evidence, but the particle assays cannot fully resolve apolipoprotein-specific binding and do not establish the public APOA2-to-TREM2+TYROBP composite as one direct edge."
+                limitations = "Retain weak ApoA-II/component evidence for downstream route evaluation; do not materialize the composite receptor edge, transfer robust ApoE or ApoA-I evidence to APOA2, or infer a complete intracellular or TF route."
+            elif pair == ("APP", "TREM2+TYROBP"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:29518356", "PMID:27477018"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human and mouse TREM2 microglia and amyloid-beta assays"
+                summary = "Primary studies support mature amyloid-beta oligomers or amyloid-beta-lipoprotein complexes binding TREM2 and engaging the DAP12/TYROBP signaling context, not intact APP precursor as the ligand in the public row."
+                limitations = "Represent APP processing and the mature Aβ ligand form explicitly; do not materialize an intact APP-to-TREM2+TYROBP edge or infer that precursor expression alone establishes TREM2 signaling."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
+        elif row.get("review_batch") == "batch_078":
+            pair = (ligand, receptor)
+            if pair == ("UCN2", "CRHR1"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:11226328"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse UCN2 cloning and CRF-receptor pharmacology"
+                summary = "Primary UCN2 characterization identifies selective binding and activity at type-2 CRF receptors, with no appreciable type-1 receptor activity, so the public UCN2-CRHR1 pairing is not supported as a direct edge."
+                limitations = "Model UCN2 as a CRHR2/CRHR2A-selective ligand in downstream route evaluation; do not materialize UCN2-CRHR1 or infer CRHR1 signaling from CRF-family membership."
+            elif pair == ("UCN3", "CRHR1"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:11416224"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human and mouse UCN3 characterization with CRF-receptor assays"
+                summary = "Primary UCN3 identification and receptor characterization identify UCN3 as selective for type-2 CRF receptors, so the public UCN3-CRHR1 pairing is not supported as a direct edge."
+                limitations = "Model UCN3 as a CRHR2/CRHR2A-selective ligand in downstream route evaluation; do not materialize UCN3-CRHR1 or infer CRHR1 signaling from CRF-family membership."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
+        elif row.get("review_batch") == "batch_079":
+            if (ligand, receptor) == ("LAMC3", "DAG1"):
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:29874128"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse retinal endothelial and vascular basement-membrane assays"
+                summary = "Primary retinal arteriogenesis experiments show that laminin gamma-3-containing basement membrane binds dystroglycan and that endothelial Lamc3 or Dag1 loss produces concordant vascular and Notch-target expression phenotypes, supporting a bounded LAMC3-DAG1 ECM-receptor edge with functional output."
+                limitations = "Preserve laminin gamma-3-containing matrix, dystroglycan glycosylation and mouse retinal endothelial context; do not expand LAMC3 into an unreported laminin heterotrimer composition or infer a complete intracellular or TF chain from the vascular/Notch output."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"

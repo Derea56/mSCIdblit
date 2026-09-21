@@ -1,0 +1,5 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:WNT11>FZD6	WNT11	FZD6		PMID:24873871	primary_review	batch_077
+LR:NECTIN3>TIGIT	NECTIN3	TIGIT		PMID:23677581; PMID:22421438; PMID:28515320	primary_review	batch_077
+LR:APOA2>TREM2+TYROBP	APOA2	TREM2+TYROBP		PMID:26374899; PMCID:PMC4646256	primary_review	batch_077
+LR:APP>TREM2+TYROBP	APP	TREM2+TYROBP		PMID:29518356; PMID:27477018	primary_review	batch_077

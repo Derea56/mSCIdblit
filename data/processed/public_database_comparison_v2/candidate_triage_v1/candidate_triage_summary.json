@@ -1,26 +1,26 @@
 {
-  "bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion256",
+  "bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion257",
   "bundle_release_id": "module20_24_mechanism_graph:2026-09-21",
   "candidate_input": {
-    "path": "data/processed/public_database_comparison_v2/candidate_triage_v1/candidate_normalization.tsv",
+    "path": "data/processed/public_database_comparison_v2/public_only_lr_candidates.tsv",
     "raw_rows": 7753,
-    "sha256": "715015dc07c3930badd9937b4861cb481ab73b5ec8383e2e16776fc9d5f28b71"
+    "sha256": "31189239be3f4b6f91a87c92b1716ccac294f468279c7122693624c55c508732"
   },
   "candidate_units": 7753,
   "completed_batch_review_units": 6778,
   "graph_input": {
-    "direct_lr_edges": 8165,
-    "path": "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion256/mechanism_edges.tsv",
-    "sha256": "f6caa7c51e7e8641b4daadf5d6373874d076efa629e754176ec852ca6720a434"
+    "direct_lr_edges": 8166,
+    "path": "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion257/mechanism_edges.tsv",
+    "sha256": "6a6c5c42e577a010e3e077e1ffa722f1a175e5380fd2157f93de326bc22fb015"
   },
   "normalization_match_counts": {
     "graph_match_alias_adjudication": 1100,
-    "graph_match_exact_label": 62,
-    "novel_candidate": 6591
+    "graph_match_exact_label": 63,
+    "novel_candidate": 6590
   },
   "policy": "This triage does not promote edges or assign biological confidence; primary evidence and route plausibility remain separate downstream decisions.",
   "prior_audit_input": {
-    "path": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/public_database_comparison_v2/primary_evidence_harvest_resolution.tsv",
+    "path": "data/processed/public_database_comparison_v2/primary_evidence_harvest_resolution.tsv",
     "rows": 25,
     "sha256": "0ed894fafc921fb08d4c49c0f38a23fb83f2bb730cf0202f85a0f5adee440727"
   },
@@ -29,7 +29,7 @@
   "resolution_ledger_input": {
     "path": "data/processed/public_database_comparison_v2/candidate_triage_v1/review_resolution_ledger.tsv",
     "rows": 6778,
-    "sha256": "00331bd7a3cc05017c47054c8fc69b403dea3c54bd1154ec2c1f7f183d9fc1b7"
+    "sha256": "261f228b0fb6f476f36ebd31a0299e19f85ea1c3caf956586b24abce6a9034f2"
   },
   "review_batch_counts": {},
   "review_batch_size": 100,
