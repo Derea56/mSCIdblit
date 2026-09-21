@@ -94,6 +94,115 @@ def main() -> None:
                     species_value = source.get("species_support", "").strip()
                     if species_value:
                         species = "; ".join(sorted(set(filter(None, (species + "; " + species_value).split("; ")))))
+        elif row.get("review_batch") == "batch_074":
+            pair = (ligand, receptor)
+            if pair == ("CBLN1+NRXN1", "GRID2"):
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:20537373", "PMID:22117778", "PMID:27418511", "PMID:29782851"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse; rat"
+                summary = "Primary binding, structural and cerebellar synapse studies resolve the CBLN1-β-NRXN1-GRID2 trans-synaptic bridge and connect it to synapse formation and GluD2-dependent plasticity outputs."
+                limitations = "Represent CBLN1 as a multicomponent bridge requiring β-NRXN1 and GRID2 context; do not decompose the triad into an isolated binary receptor route or infer a universal intracellular/TF chain from synapse-level outputs."
+            elif pair == ("EFNB1", "EPHB4"):
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:16840724"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human endothelial-cell assays"
+                summary = "Primary endothelial experiments show ephrin-B1-Fc-dependent EphB4 phosphorylation and place EphB4 forward signaling in SDF-1-induced endothelial chemotaxis and branching responses, supporting a bounded EFNB1-EPHB4 receptor-proximal route."
+                limitations = "Preserve ephrin-B1-Fc, EphB4 phosphorylation and endothelial chemotaxis/branching context; do not infer a complete intracellular cascade, terminal TF or SCI transfer."
+            elif pair == ("EFNB3", "EPHB4"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:17090524"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human ovarian-tumor tissue"
+                summary = "The cited primary study reports EFNB3 and EPHB4 coexpression and protein staining in ovarian tumors, but does not directly test EFNB3 binding to or activation of EPHB4."
+                limitations = "Retain tumor coexpression as contextual evidence only; require pair-specific binding or receptor-activation data before promotion and do not infer an intracellular or TF route from coexpression."
+            elif pair == ("EFNA1", "EPHA7"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:10366629", "PMCID:PMC6782661"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "rat striatal tissue"
+                summary = "Primary native-receptor binding assays report ephrin-A1 binding to EphA4 but not detectable binding to EphA7 in striatal lysates, so the public EFNA1-EPHA7 row is retained as a specificity boundary rather than promoted."
+                limitations = "Preserve tissue- and receptor-specific negative binding evidence; do not transfer broad EphA-family promiscuity to EphA7 or infer a downstream route for this pair."
+            elif pair == ("EFNA2", "EPHA1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:10366629", "PMCID:PMC6782661"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "rat striatal tissue"
+                summary = "The reviewed primary native-receptor study resolves ephrin-A2 binding preferentially to EphA7 rather than EphA4 in striatal tissue, but does not verify the exact EFNA2-EPHA1 row."
+                limitations = "Retain ephrin-A2/EphA receptor-family context with tissue-specific selectivity; require an exact EphA1 assay before promotion and do not infer a complete signaling route from family membership."
+            elif pair == ("EFNB3", "EPHB1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:22103419"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse optic-chiasm development"
+                summary = "Primary developmental work supports EphB1 interactions with ephrin-B ligands and identifies ephrin-B2, with lesser ephrin-B1 contribution, in optic-chiasm guidance; it does not establish EFNB3 as the ligand for the listed EphB1 route."
+                limitations = "Preserve ephrin-B2/ephrin-B1 versus ephrin-B3 specificity and developmental context; do not transfer EphB-family evidence to EFNB3 without pair-specific binding or activation data."
+            elif pair[0].startswith("GJA") or pair[0].startswith("GJC"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human and mouse connexin-family context"
+                summary = "Connexin family members form hemichannels and intercellular gap-junction channels; the public pair list does not resolve each listed connexin combination as a conventional ligand-receptor edge or as an independently tested signaling route."
+                limitations = "Retain connexin pairings as channel/adhesion context with explicit connexin and cell-junction topology; do not treat them as soluble ligand-receptor inputs or infer a receptor-to-TF cascade from family-level gap-junction evidence."
+            elif pair == ("LRRC4C", "PTPRF"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:23916315"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "neural synaptic-adhesion context"
+                summary = "The cited LAR-RPTP literature supports synaptic adhesion and receptor-family organization, but the reviewed locator is a review and does not verify an exact LRRC4C-PTPRF primary binding or receptor-activation experiment."
+                limitations = "Retain LRRC4C/LAR-RPTP synaptic-organizer context; require exact pair-specific primary evidence before promotion and do not infer an intracellular or TF route from family-level adhesion biology."
+            elif pair == ("NECTIN1", "CADM3"):
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The cited Nectin locator does not verify an exact Nectin-1-to-CADM3 interaction; primary Nectin/Necl studies address other family pairings and do not support this specific row."
+                limitations = "Retain exact CADM3/Necl and Nectin-family pairs separately; require direct NECTIN1-CADM3 binding or receptor-dependent evidence before promotion."
+            elif pair == ("NECTIN3", "TIGIT"):
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The reviewed locator does not establish NECTIN3 as a direct TIGIT ligand; primary TIGIT ligand work centers on PVR/CD155 and NECTIN2/CD112 rather than Nectin-3."
+                limitations = "Require direct Nectin-3/TIGIT binding or receptor-triggering evidence before promotion; do not transfer PVR-family membership into a canonical TIGIT edge."
+            elif pair == ("PMCH", "MERTK"):
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The cited locator was not verified as an exact PMCH-to-MERTK primary experiment; primary MERTK ligand studies instead establish Gas6 and PROS1 as canonical ligands."
+                limitations = "Retain PMCH-MERTK for targeted discovery only; do not transfer TAM-receptor family biology or Gas6/PROS1 evidence to PMCH."
+            elif pair == ("SELE", "CEACAM1"):
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The public citation is propagated through database tables, but an exact primary SELE-to-CEACAM1 binding or receptor-dependent functional experiment was not verified in this pass."
+                limitations = "Retain E-selectin adhesion evidence for established ligands such as SELPLG and GLG1; require pair-specific SELE-CEACAM1 primary evidence before promotion."
+            elif pair in {
+                ("APOA2", "TREM2+TYROBP"), ("APP", "TREM2+TYROBP"),
+                ("CEACAM1", "CD1D1"), ("CEACAM1", "CD1D2"), ("CEACAM1", "CD8A"),
+                ("CEACAM2", "CD1D1"), ("CEACAM2", "CD1D2"), ("CEACAM2", "CD8A"),
+                ("CEACAM1", "PSG20"), ("CEACAM2", "PSG20"),
+            }:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                if pair[0] in {"APOA2", "APP"}:
+                    primary = []
+                    summary = "The cited locator does not verify the exact APOA2- or APP-to-TREM2/TYROBP composite interaction; related TREM2 studies concern other apolipoproteins, amyloid-lipoprotein complexes or receptor-complex biology."
+                    limitations = "Do not transfer ApoA-I, ApoE, CLU or amyloid-lipoprotein evidence to APOA2 or intact APP; retain the composite row for exact ligand-form and receptor-complex primary review."
+                elif pair[1] in {"CD1D1", "CD1D2", "CD8A"}:
+                    primary = ["PMID:24104458"]
+                    summary = "The cited primary study supports CEACAM5 binding to CD1d and CD8alpha, not the CEACAM1 or CEACAM2 paralog rows."
+                    limitations = "Do not transfer CEACAM5 domain or glycan evidence to CEACAM1/CEACAM2; require exact-paralog binding and functional assays before promotion."
+                else:
+                    primary = ["PMID:24743304"]
+                    summary = "The cited primary study concerns soluble CEACAM8 interaction with CEACAM1, not CEACAM1/CEACAM2 interaction with PSG20."
+                    limitations = "Do not infer PSG20 binding from CEACAM8-CEACAM1 evidence or CEACAM-family database membership."
+            elif pair == ("CEACAM2", "CEACAM2"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:21982860"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "mouse CEACAM-family context"
+                summary = "The cited locator does not establish the exact CEACAM2 homophilic edge, and the graph export contract disallows self-loop materialization for CEACAM2."
+                limitations = "Retain only exact primary-supported CEACAM adhesion pairs; do not encode CEACAM2-to-CEACAM2 as a self-loop or infer downstream signaling from homophilic family context."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
