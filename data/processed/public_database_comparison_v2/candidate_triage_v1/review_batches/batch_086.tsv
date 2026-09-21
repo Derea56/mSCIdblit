@@ -1,0 +1,7 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:FGF2>SDC4	FGF2	SDC4		PMID:19581409;PMCID:PMC2712988	primary_review	batch_086
+LR:FGF2>CD44	FGF2	CD44		PMID:12697740;PMCID:PMC152937	primary_review	batch_086
+LR:COL4A1>SDC1	COL4A1	SDC1		PMID:7949658	primary_review	batch_086
+LR:COL6A1>SDC1	COL6A1	SDC1		PMID:7949658	primary_review	batch_086
+LR:HGF>SDC2	HGF	SDC2		PMID:26381016	primary_review	batch_086
+LR:FGF4>NRP1	FGF4	NRP1		PMID:9531542;PMID:10842181	primary_review	batch_086
