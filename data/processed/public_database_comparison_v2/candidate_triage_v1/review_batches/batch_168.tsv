@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:LAMA5>ITGA3	LAMA5	ITGA3	M20B-E002170;M21B-E003230;M23B-E000071	current bundle includes frozen alias and primary/comparator alpha3beta1 support	represented_graph_alias	batch_168
+LR:LAMA5>ITGA6	LAMA5	ITGA6	M20B-E002171;M20B-E002172;M21B-E002694;M21B-E003231;M23B-E000072;M23B-E000075	current bundle includes frozen aliases and primary/comparator alpha6beta1/alpha6beta4 support	represented_graph_alias	batch_168
+LR:LAMA5>ITGB1	LAMA5	ITGB1	M20B-E002169;M20B-E002170;M20B-E002171;M20B-E002173;M20B-E002345;M21B-E002694;M21B-E003230;M23B-E000071;M23B-E000072;M23B-E000076	current bundle includes frozen aliases and primary/comparator alpha3beta1/alpha6beta1/alpha7beta1 support	represented_graph_alias	batch_168
+LR:LAMA5>ITGB4	LAMA5	ITGB4	M20B-E002172;M21B-E003231;M23B-E000075	current bundle includes frozen alias and primary/comparator alpha6beta4 support	represented_graph_alias	batch_168
+LR:LAMB1>ITGA2	LAMB1	ITGA2	M20B-E002178	frozen Module 20 ECM/integrin-family representation	represented_graph_alias	batch_168
+LR:LAMB1>ITGA3	LAMB1	ITGA3	M20B-E002179	frozen Module 20 ECM/integrin-family representation	represented_graph_alias	batch_168
+LR:LAMB1>ITGA6	LAMB1	ITGA6	M20B-E002180;M20B-E002181;M21B-E002691;M23B-E000068;M23B-E000072	current bundle includes frozen aliases and primary/comparator alpha6beta1 support	represented_graph_alias	batch_168
+LR:LAMB1>ITGA7	LAMB1	ITGA7	M20B-E002182;M21B-E003228	current bundle includes frozen alias and primary alpha7beta1 support	represented_graph_alias	batch_168
+LR:LAMB1>ITGB1	LAMB1	ITGB1	M20B-E002178;M20B-E002179;M20B-E002180;M20B-E002182;M21B-E002691;M21B-E003228;M23B-E000068;M23B-E000069;M23B-E000072	current bundle includes frozen aliases and primary/comparator alpha6beta1/alpha7beta1 support	represented_graph_alias	batch_168
+LR:LAMB1>ITGB4	LAMB1	ITGB4	M20B-E002181	frozen Module 20 ECM/integrin-family representation	represented_graph_alias	batch_168
