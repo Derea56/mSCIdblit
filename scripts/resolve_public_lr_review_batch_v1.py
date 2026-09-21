@@ -2412,6 +2412,73 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "IGSF-family candidates describe immune or cell-adhesion proteins, but exact paralog, trans orientation and pair-specific primary support for these rows were not verified."
                 limitations = "Require exact IGSF paralog, ligand/receptor orientation, species and primary assay; do not transfer immune-adhesion evidence across IGSF, CD or CLEC family members."
+            elif ligand in {"IL1RAPL1", "ILDR2"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses an interleukin-receptor-family or membrane receptor protein as the ligand label, not a mature extracellular cytokine ligand for the listed targets."
+                limitations = "Represent receptor orientation and receptor-complex biology separately; do not invert IL1RAPL1 or ILDR2 into ligand edges."
+            elif ligand == "IL18BP":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "IL18BP is a soluble IL-18-binding protein/decoy regulator rather than a canonical cytokine receptor ligand, and the listed targets were not verified as direct IL18BP receptors."
+                limitations = "Retain IL18 sequestration and cytokine-availability context separately; do not materialize IL18BP-to-receptor rows without an exact primary receptor assay."
+            elif ligand == "ILTIFB":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "ILTIFB remains an unresolved or noncanonical interleukin-family label in this pass, and no exact mature ligand identity or direct receptor assay was verified."
+                limitations = "Resolve the source identifier, mature protein form and receptor before promotion; do not transfer IL-family specificity from the normalized label alone."
+            elif ligand.startswith("IL"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Interleukin-family rows require exact cytokine subtype, species and multi-subunit receptor-complex assignment; the public candidates include isolated subunits and targets not verified as direct receptor pairings in this pass."
+                limitations = "Retain exact interleukin receptor-complex evidence separately; require mature cytokine form, receptor composition and primary binding or activation assay before promotion, and do not transfer specificity across IL paralogs."
+            elif ligand.startswith("INH"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Inhibin/activin-family candidates are mature-ligand and receptor-complex dependent, but the public rows do not resolve exact alpha-beta composition, type-I/type-II receptor topology and pair-specific primary support for each candidate."
+                limitations = "Require exact inhibin or activin ligand form, receptor-complex composition, species and primary assay; do not collapse subunit composites into unsupported binary edges or transfer specificity across INH paralogs."
+            elif ligand == "IRAK4":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "IRAK4 is an intracellular innate-immune kinase, not an extracellular ligand for TLR4, TLR6 or TLR7."
+                limitations = "Represent TLR-to-IRAK4 intracellular continuation separately; do not materialize IRAK4-to-TLR rows as ligand edges."
+            elif ligand == "ITGA4+ITGB1" and receptor == "VCAM1":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E000213"
+                primary = ["PMID:7511143", "PMCID:PMC2290915"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse"
+                summary = "The graph contains the primary-supported VCAM1-to-alpha4beta1 adhesion relationship in the reverse orientation of the public row."
+                limitations = "Preserve VCAM1 as ligand and ITGA4:ITGB1 as the receptor complex; do not add a duplicate reverse edge or treat ITGA4/ITGB1 as an extracellular ligand."
+            elif ligand == "ITGA4+ITGB7" and receptor == "VCAM1":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E000582"
+                primary = ["PMID:8640376"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "The graph contains the primary-supported VCAM1-to-alpha4beta7 adhesion relationship in the reverse orientation of the public row."
+                limitations = "Preserve VCAM1 as ligand and ITGA4:ITGB7 as the receptor complex; do not add a duplicate reverse edge."
+            elif ligand == "ITGA9+ITGB1" and receptor == "VCAM1":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E000589"
+                primary = ["PMID:10209034"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; rat"
+                summary = "The graph contains the primary-supported VCAM1-to-alpha9beta1 adhesion relationship in the reverse orientation of the public row."
+                limitations = "Preserve VCAM1 as ligand and ITGA9:ITGB1 as the receptor complex; do not add a duplicate reverse edge."
+            elif ligand in {"ITGA4", "ITGA9"} and receptor == "VCAM1":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                primary = []
+                species = "as stated in primary model/assay"
+                summary = "VCAM1 evidence supports heterodimeric alpha4beta1 or alpha9beta1 integrin complexes, not isolated ITGA4 or ITGA9 subunits as complete receptors in the public row."
+                limitations = "Retain the intact integrin heterodimer orientation and do not materialize free integrin alpha-subunit rows."
             elif ligand.startswith("ADAM"):
                 disposition = "hold_contextual_or_complex_boundary"
                 primary = reviewed
