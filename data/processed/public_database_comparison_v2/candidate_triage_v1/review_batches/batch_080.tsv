@@ -1,0 +1,5 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:H2DMA>CD4	H2DMA	CD4		PMID:12119342; PMID:32069316; PMID:34696161	primary_review	batch_080
+LR:H2DMB1>CD4	H2DMB1	CD4		PMID:12119342; PMID:32069316; PMID:34696161	primary_review	batch_080
+LR:H2DMB2>CD4	H2DMB2	CD4		PMID:12119342; PMID:32069316; PMID:34696161	primary_review	batch_080
+LR:H2OB>CD4	H2OB	CD4		PMID:12119342; PMID:32069316; PMID:34696161	primary_review	batch_080

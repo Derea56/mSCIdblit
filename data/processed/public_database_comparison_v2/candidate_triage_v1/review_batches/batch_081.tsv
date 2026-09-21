@@ -1,0 +1,4 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:AANAT>MTNR1A	AANAT	MTNR1A		PMID:11313340; PMID:10696085	primary_review	batch_081
+LR:AANAT>MTNR1B	AANAT	MTNR1B		PMID:11313340; PMID:10696085	primary_review	batch_081
+LR:ACE>AGTR2	ACE	AGTR2		PMID:11291769; PMID:15840019	primary_review	batch_081
