@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:CFH>SELL	CFH	SELL	M21B-E000304		represented_graph_alias	batch_139
+LR:CHAD>ITGA2	CHAD	ITGA2	M20B-E001924;M21B-E002685		represented_graph_alias	batch_139
+LR:CHAD>ITGB1	CHAD	ITGB1	M20B-E001924;M21B-E002685		represented_graph_alias	batch_139
+LR:CLCF1>LIFR	CLCF1	LIFR	M20B-E002957		represented_graph_alias	batch_139
+LR:CLDN3>CLDN1	CLDN3	CLDN1	M21B-E003195		represented_graph_alias	batch_139
+LR:CLU>LRP2	CLU	LRP2	M21B-E002930		represented_graph_alias	batch_139
+LR:CLU>TREM2	CLU	TREM2	M21B-E003866		represented_graph_alias	batch_139
+LR:CNTN1>NFASC	CNTN1	NFASC	M21B-E001287		represented_graph_alias	batch_139
+LR:CNTN2>CNTNAP2	CNTN2	CNTNAP2	M20B-E000370;M21B-E005538		represented_graph_alias	batch_139
+LR:CNTN3>APLP1	CNTN3	APLP1	M21B-E003169		represented_graph_alias	batch_139
