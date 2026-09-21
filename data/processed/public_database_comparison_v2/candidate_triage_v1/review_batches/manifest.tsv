@@ -1,3 +1,2 @@
 batch_id	row_count	primary_locator_rows	alias_adjudication_rows	primary_evidence_rows	discovery_rows	first_candidate_unit_id	last_candidate_unit_id	packet_path	status
-batch_001	100	0	0	0	100	LR:WNT11>LRP6	LR:WNT7B>FZD7	data/processed/public_database_comparison_v2/candidate_triage_v1/review_batches/batch_001.tsv	assigned
-batch_002	60	0	0	0	60	LR:WNT7B>FZD8	LR:ZPBP2>CD80	data/processed/public_database_comparison_v2/candidate_triage_v1/review_batches/batch_002.tsv	assigned
+batch_001	60	0	0	0	60	LR:WNT7B>FZD8	LR:ZPBP2>CD80	data/processed/public_database_comparison_v2/candidate_triage_v1/review_batches/batch_001.tsv	assigned
