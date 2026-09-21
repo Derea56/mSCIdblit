@@ -1052,6 +1052,11 @@ def main() -> None:
             layer = "candidate_only_unverified"
             summary = "The current review pass found primary evidence for native type-VI collagen adhesion through selected integrins, but not an exact chain-specific experiment for this COL6 candidate and receptor pair."
             limitations = "Retain native collagen-VI integrin adhesion as family context; require exact chain, assembled isoform and receptor evidence before graph promotion."
+        elif ligand == "HAPLN1":
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_unverified"
+            summary = "Primary HAPLN1 studies support extracellular-matrix organization and CD44/TGF-beta-receptor-II-associated functional effects, but the current review did not verify any of the listed HAPLN1-to-receptor candidates as the initiating pair."
+            limitations = "Retain HAPLN1 matrix and CD44/TGFBR2 context for targeted follow-up; do not materialize the listed candidates from downstream effects, co-expression or matrix association alone."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
