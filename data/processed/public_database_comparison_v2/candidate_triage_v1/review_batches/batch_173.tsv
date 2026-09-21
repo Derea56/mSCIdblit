@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:NECTIN1>FGFR1	NECTIN1	FGFR1	M21B-E001227	current bundle includes primary Nectin-1 Ig3-FGFR1c binding/activation and neuronal outgrowth/survival support	represented_graph_alias	batch_173
+LR:NECTIN2>NECTIN3	NECTIN2	NECTIN3	M21B-E002205	current bundle includes primary Nectin-2/Nectin-3 heterophilic trans-adhesion and junctional affinity support	represented_graph_alias	batch_173
+LR:NECTIN2>PVRIG	NECTIN2	PVRIG	M21B-E000668	current bundle includes primary PVRL2/Nectin-2-CD112 to PVRIG/CD112R binding and inhibitory CD8 T-cell outputs	represented_graph_alias	batch_173
+LR:NEGR1>OPCML	NEGR1	OPCML	M21B-E003182	current bundle includes primary Kilon/NEGR1-OBCAM/OPCML heterophilic interaction in rat brain	represented_graph_alias	batch_173
+LR:NFASC>NRCAM	NFASC	NRCAM	M21B-E006530	current bundle includes primary neurofascin-NrCAM trans-interaction and neurite-outgrowth support	represented_graph_alias	batch_173
+LR:NODAL>ACVR1B	NODAL	ACVR1B	M20B-E004331;M20B-E004333;M20B-E004335;M21B-E000351	current bundle includes primary Cripto-dependent Nodal-ACVR1B/ALK4 receptor-complex assembly and Smad2/3 outputs alongside frozen aliases	represented_graph_alias	batch_173
+LR:NODAL>ACVR1C	NODAL	ACVR1C	M21B-E000353;M21B-E000354	current bundle includes primary Nodal/ALK7/ACVR1C binding and bounded ACVR1C:ACVR2B receptor-complex signaling	represented_graph_alias	batch_173
+LR:NODAL>ACVR1C+ACVR2B	NODAL	ACVR1C+ACVR2B	M21B-E000354	current bundle includes primary Nodal-ACVR1C/ALK7:ACVR2B receptor-complex reconstitution and Smad/reporter outputs	represented_graph_alias	batch_173
+LR:NODAL>ACVR2A	NODAL	ACVR2A	M20B-E004331	current bundle contains only a frozen Nodal type-II receptor alias for ACVR2A without a stable pair-specific primary packet in this bundle	represented_graph_alias	batch_173
+LR:NODAL>ACVR2B	NODAL	ACVR2B	M20B-E004333;M20B-E004335;M21B-E000351;M21B-E000354;M21B-E000355	current bundle includes primary Nodal binding to ACVR2B and bounded Cripto-dependent ACVR1B/ACVR1C receptor-complex branches	represented_graph_alias	batch_173
