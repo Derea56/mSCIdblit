@@ -1132,6 +1132,13 @@ def main() -> None:
             species = "human and rat collagen-I adhesion and recombinant integrin assays"
             summary = "Primary collagen-I studies support selected alpha1beta1/alpha2beta1 collagen receptors and distinguish collagen-subtype and conformation-specific recognition, but no exact primary experiment was verified for the remaining COL1A2-to-listed-receptor candidates."
             limitations = "Retain assembled collagen-I, triple-helical conformation and integrin-family context; do not transfer it to CD44, CD93, alpha2beta, alpha3beta1, alpha9beta1 or beta3 candidates without pair-specific chain/domain evidence."
+        elif ligand == "CCL27B":
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:10725697", "PMID:11821900", "PMID:40975172"]
+            species = "human CCL27/CCR10 and CCL27/CCL28 receptor-specificity studies"
+            summary = "Primary chemokine studies establish CCL27/CCR10 signaling and distinguish CCL28/CCR3 specificity, but no exact primary experiment was verified for the CCL27B-to-listed-receptor candidates."
+            limitations = "Retain mature CCL27-CCR10 and CCL28-CCR3 specificity separately; resolve the CCL27B species/isoform identity before promotion and do not transfer paralog or receptor-family evidence to ACKR2, CCR2, CCR3, GRM7, MTNR1A or ADRA2A."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
