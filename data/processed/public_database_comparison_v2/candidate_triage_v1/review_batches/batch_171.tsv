@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:LGALS8>ITGA3	LGALS8	ITGA3	M23B-E000653	current bundle represents galectin-8 in an alpha3beta1-containing adhesion/apoptosis context, not an isolated alpha3 core-protein interface	represented_graph_alias	batch_171
+LR:LIF>IL6ST	LIF	IL6ST	M20B-E004156	current bundle retains frozen LIF/IL6ST-LIFR composite-receptor representation without a stable pair-specific primary locator	represented_graph_alias	batch_171
+LR:LPL>GPIHBP1	LPL	GPIHBP1	M21B-E007130	current bundle includes primary direct LPL-GPIHBP1 complex binding and endothelial transport/stabilization support	represented_graph_alias	batch_171
+LR:LRFN1>PTPRS	LRFN1	PTPRS	M21B-E005181	current bundle includes primary SALM2/LRFN1-PTPσ extracellular binding validated by cell-surface interaction and SPR assays	represented_graph_alias	batch_171
+LR:LTA>LTBR	LTA	LTBR	M20B-E004193	current bundle retains frozen LTA/LTB complex-to-LTBR representation; the public row cannot be separated into an isolated LTA-LTBR binary edge	represented_graph_alias	batch_171
+LR:LTB>LTBR	LTB	LTBR	M20B-E004193	current bundle retains frozen LTA/LTB complex-to-LTBR representation; the public row cannot be separated into an isolated LTB-LTBR binary edge	represented_graph_alias	batch_171
+LR:MADCAM1>ITGA4	MADCAM1	ITGA4	M21B-E000581;M23B-E000208	current bundle includes primary MAdCAM1-alpha4beta7 binding and mucosal addressin/lymphocyte-homing support	represented_graph_alias	batch_171
+LR:MADCAM1>ITGB7	MADCAM1	ITGB7	M21B-E000581;M23B-E000208	current bundle includes primary MAdCAM1-alpha4beta7 binding and mucosal addressin/lymphocyte-homing support	represented_graph_alias	batch_171
+LR:MCAM>CNTN1	MCAM	CNTN1	M21B-E005495	current bundle includes primary MCAM/CD146-CNTN1 extracellular binding validated by receptor-transfected cell binding and SPR	represented_graph_alias	batch_171
+LR:MDK>ITGA6	MDK	ITGA6	M23B-E000210	current bundle represents midkine in a TSPAN1-associated alpha6beta1 complex with STAT1-alpha output, not isolated ITGA6 binding	represented_graph_alias	batch_171
