@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:IFNAB>IFNAR2	IFNAB	IFNAR2	M20B-E001907		represented_graph_alias	batch_155
+LR:IFNB1>IFNAR1	IFNB1	IFNAR1	M20B-E001908;M21B-E006586		represented_graph_alias	batch_155
+LR:IFNB1>IFNAR2	IFNB1	IFNAR2	M20B-E001908;M21B-E007002		represented_graph_alias	batch_155
+LR:IFNE>IFNAR1	IFNE	IFNAR1	M20B-E001909;M21B-E007010		represented_graph_alias	batch_155
+LR:IFNE>IFNAR2	IFNE	IFNAR2	M20B-E001909;M21B-E007011		represented_graph_alias	batch_155
+LR:IFNG>IFNGR1	IFNG	IFNGR1	M20B-E001910		represented_graph_alias	batch_155
+LR:IFNG>IFNGR2	IFNG	IFNGR2	M20B-E001910		represented_graph_alias	batch_155
+LR:IFNK>IFNAR1	IFNK	IFNAR1	M20B-E001911;M21B-E007012		represented_graph_alias	batch_155
+LR:IFNK>IFNAR2	IFNK	IFNAR2	M20B-E001911;M21B-E007013		represented_graph_alias	batch_155
+LR:IFNL2>IFNLR1	IFNL2	IFNLR1	M21B-E010391		represented_graph_alias	batch_155
