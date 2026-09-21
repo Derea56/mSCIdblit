@@ -1783,6 +1783,55 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "Collagen-family extracellular-matrix proteins can act as receptor ligands through integrins, DDRs or LAIR1, but these broad public rows do not resolve the exact collagen chain, mature trimer/domain and receptor complex for each candidate."
                 limitations = "Require exact collagen isoform/domain, receptor subunit composition, species and primary binding or functional assay; do not transfer collagen-X/DDR2 or integrin-family evidence across collagen paralogs and receptor complexes."
+            elif ligand == "COMP":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "COMP/thrombospondin-5 is an extracellular-matrix protein with integrin and CD47 adhesion contexts, but the public rows do not resolve the exact receptor complex and pair-specific mechanism for these integrin or syndecan candidates."
+                limitations = "Retain exact COMP-CD47 and other primary-supported matrix-receptor relationships; require direct pair-level evidence before promotion and do not transfer COMP interactions across integrin or syndecan subunits."
+            elif ligand == "COPA":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "COPA is a coatomer complex component of intracellular vesicle trafficking, not a mature extracellular ligand for NTSR2 or SORT1."
+                limitations = "Represent coatomer and intracellular trafficking mechanisms separately; do not materialize COPA-to-receptor rows as ligand edges."
+            elif ligand == "CORIN":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "CORIN is a membrane serine protease that processes natriuretic-peptide precursors, not a mature extracellular ligand for KIRREL or LRRC4C."
+                limitations = "Represent protease-substrate processing separately; do not materialize CORIN-to-adhesion-receptor rows as direct ligand edges without exact primary support."
+            elif ligand == "CORT":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "Cortistatin/neuropeptide-family biology is receptor-specific, but the current pass did not verify exact CORT binding or activation of the listed adrenergic, melatonin or MRGPR targets."
+                limitations = "Require mature cortistatin form and direct receptor assay; do not transfer somatostatin or unrelated GPCR-family specificity to MRGPR paralogs."
+            elif ligand == "CP":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "CP/ceruloplasmin is a secreted copper-binding enzyme/protein, not a mature Hedgehog receptor ligand for SMO in this row."
+                limitations = "Represent ceruloplasmin and copper/oxidase biology separately; do not materialize CP-to-SMO from public-database co-membership."
+            elif ligand == "CRB3":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "CRB3 is an epithelial polarity and junctional protein, not a mature extracellular ligand for LIN7C or PATJ."
+                limitations = "Represent Crumbs polarity-complex associations separately; do not materialize intracellular/junctional protein complexes as ligand-receptor edges."
+            elif ligand == "CRH":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Corticotropin-releasing hormone receptor biology is centered on CRHR1 and CRHR2, not the unrelated GPCR and RAMP targets listed here."
+                limitations = "Require mature CRH and direct CRHR-family assay; do not transfer CRH specificity across ADCYAP1R, adrenergic, PTH, RAMP or VIP receptor families."
+            elif ligand.startswith("CRISP"):
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "CRISP-family secreted proteins have reproductive and extracellular-matrix contexts, but an exact CRISP1/CRISP3-to-A1BG receptor or binding mechanism was not verified in this pass."
+                limitations = "Resolve the mature CRISP protein and direct receptor or binding partner before promotion; do not infer a ligand-receptor edge from secreted-protein status alone."
+            elif ligand == "CRLF1":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "CRLF1 is a cytokine-receptor-like complex component that acts with CLCF1 and CNTFR-associated receptor complexes; the public CRLF1-to-LIFR row does not establish LIFR as a standalone receptor."
+                limitations = "Retain intact CRLF1/CLCF1/CNTFR receptor-complex topology; do not materialize LIFR as an isolated CRLF1 receptor or transfer CNTF-family complex evidence to unrelated receptor forms."
             elif ligand.startswith("ADAM"):
                 disposition = "hold_contextual_or_complex_boundary"
                 primary = reviewed
