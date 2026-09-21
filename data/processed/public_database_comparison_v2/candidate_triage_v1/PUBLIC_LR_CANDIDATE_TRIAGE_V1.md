@@ -7,8 +7,8 @@ This report reduces `7,753` public-only rows to `7,753` normalized candidate uni
 | Triage lane | Candidate units | Meaning |
 |---|---:|---|
 | Resolved graph match | 8 | Exact label or exact component match; no new edge is implied. |
-| Completed prior harvest | 25 | Present in the existing primary-evidence harvest ledger; excluded from new review batches. |
-| Completed batch review | 6,760 | Resolved in a batch-specific evidence ledger; excluded from new review batches while retaining the resolution record. |
+| Completed prior harvest | 8 | Present in the existing primary-evidence harvest ledger; excluded from new review batches. |
+| Completed batch review | 6,777 | Resolved in a batch-specific evidence ledger; excluded from new review batches while retaining the resolution record. |
 | Represented graph alias | 960 | Conservative one-component/one-edge representation match; no new evidence or edge is inferred. |
 | Alias adjudication | 0 | Component overlap suggests an alias or composite representation; curator confirmation is required. |
 | Primary-evidence review | 0 | No automatic graph match and a public primary-paper locator is present. |

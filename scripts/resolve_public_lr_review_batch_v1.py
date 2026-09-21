@@ -799,6 +799,68 @@ def main() -> None:
             species = "human; rat comparator"
             summary = "Primary relaxin-family receptor studies identify RXFP2 as the cognate INSL3 receptor and distinguish RXFP1, RXFP3 and RXFP4 ligand specificity; the listed non-RXFP2 candidate is not supported as a canonical INSL3 receptor edge."
             limitations = "Retain the mature INSL3-RXFP2 route and any explicitly tested low-affinity/chimera behavior separately; do not infer INSL3 signaling through unrelated GPCRs, RAMPs or receptor paralogs."
+        elif ligand == "HDC":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:22767596"]
+            species = "human enzyme study"
+            summary = "HDC is histidine decarboxylase, the enzyme that synthesizes histamine from histidine; histamine, not HDC, is the mature agonist assayed at HRH1-4 receptors."
+            limitations = "Retain HDC as an extracellular-mediator biosynthesis node and histamine-HRH1/2/3/4 receptor evidence separately; do not materialize enzyme-to-receptor edges or infer HDC as a secreted ligand."
+        elif ligand == "POMC":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:27837406", "PMID:33389463", "PMID:11070427"]
+            species = "rat and mouse precursor-processing studies"
+            summary = "POMC is a prohormone precursor processed into beta-endorphin and other peptides; opioid-receptor activity is attributed to the processed peptides, not to intact POMC as the direct ligand."
+            limitations = "Retain mature beta-endorphin and other processed peptide-to-opioid-receptor relationships when explicitly assayed; do not materialize precursor-gene labels as direct OPRD1, OPRK1 or OPRM1 ligands."
+        elif ligand == "AGT" and receptor == "AGTR2":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:12045255", "PMID:15534073"]
+            species = "human and rat renin-angiotensin system studies"
+            summary = "Angiotensinogen is processed by renin and downstream enzymes into angiotensin peptides; AT2/AGTR2 responds to angiotensin II or related mature peptides, not to intact angiotensinogen as the direct ligand."
+            limitations = "Retain the angiotensinogen-to-angiotensin-peptide processing cascade and mature peptide-to-AGTR2 evidence separately; do not materialize AGT-to-AGTR2 as a direct binary edge."
+        elif ligand == "PTN" and receptor == "SDC2":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:39285301"]
+            species = "human spermatogonial stem-cell assays"
+            summary = "Primary human spermatogonial-stem-cell work identifies PTN-SDC2 communication, confirms PTN-SDC2 interaction by immunoprecipitation and colocalization, and shows SDC2-dependent proliferation and GFRA1 output that is rescued by exogenous PTN."
+            limitations = "Preserve the human spermatogonial-cell and PTN/SDC2 functional context; do not generalize the edge to every tissue or infer a complete intracellular cascade or terminal-TF route from the reported outputs."
+        elif ligand == "ANGPTL2" and receptor == "TLR4":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:22868908", "PMID:26435501"]
+            species = "mouse inflammatory-cell and retinal models"
+            summary = "Primary studies show ANGPTL2-dependent inflammatory outputs and identify alpha5beta1 integrin as a receptor in an endotoxin model, but they do not establish direct ANGPTL2 binding to TLR4; TLR4 is part of the LPS stimulus context."
+            limitations = "Retain ANGPTL2 inflammatory-output and alpha5beta1-integrin context; do not materialize a direct ANGPTL2-TLR4 edge or transfer LPS/TLR4 pathway dependence into receptor-binding evidence."
+        elif ligand in {"ANGPTL1", "ANGPTL7"} and receptor == "PIRB":
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_unverified"
+            species = ""
+            summary = "The current review did not verify an exact primary binding or receptor-dependent functional experiment for the ANGPTL1/ANGPTL7-to-PIRB candidate."
+            limitations = "Retain angiopoietin-like family and PIRB/LILR receptor-family context only; require exact ligand identity, species and pair-specific assay before promotion."
+        elif ligand == "ANGPTL4" and receptor in {"SDC1", "SDC2", "SDC3"}:
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:30591589", "PMID:35224159"]
+            species = "mouse and human ANGPTL4 functional studies"
+            summary = "Primary ANGPTL4 studies reviewed here support LPL binding or ANGPTL4-dependent inflammatory outputs, but do not establish any of the listed syndecans as the direct ANGPTL4 receptor."
+            limitations = "Retain ANGPTL4 processing, LPL, integrin/neuropilin and inflammatory-output context; do not transfer HSPG or matrix association into a direct SDC1/2/3 ligand-receptor edge without pair-specific evidence."
+        elif ligand == "C4B" and receptor == "CR2":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:2473114", "PMID:12367531"]
+            species = "human and mouse complement-receptor assays"
+            summary = "Primary CR2 assays support recognition of C3d/iC3b fragments and show no C4b binding, while structural work states that C4d is not a CR2 ligand; the public C4B-to-CR2 row conflates complement components or fragments."
+            limitations = "Retain C3d/iC3b-to-CR2 and C4b-to-CR1 complement relationships separately; do not materialize intact C4B or C4d as a direct CR2 ligand."
+        elif ligand == "CADM3" and receptor == "CADM1":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:18003830"]
+            species = "rat forebrain and transfected cell adhesion assays"
+            summary = "Primary SynCAM work detects a weaker CADM3-CADM1 interaction by affinity chromatography but does not show strong CADM1/CADM3 cell adhesion; the row is retained as bounded adhesion-family context rather than a canonical signaling edge."
+            limitations = "Preserve the stronger SynCAM1/2 and SynCAM3/4 adhesion pairs and the reported weak CADM1-CADM3 interaction separately; do not infer a secreted-ligand route, intracellular cascade or terminal-TF output."
         elif ligand in {"KNG1", "KNG2", "PDYN", "PENK", "PMCH", "POMC", "TAC1"}:
             disposition = "reject_precursor_or_non_edge_form"
             layer = "candidate_only_unverified"
@@ -4940,7 +5002,7 @@ def main() -> None:
                 "species_support": species,
                 "evidence_summary": summary,
                 "limitations": limitations,
-                "review_status": "reviewed_batch_001",
+                "review_status": f"reviewed_{row.get('review_batch', 'batch_001')}",
             }
         )
 

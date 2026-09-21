@@ -2,12 +2,12 @@
   "bundle_dir": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion251",
   "bundle_release_id": "module20_24_mechanism_graph:2026-09-21",
   "candidate_input": {
-    "path": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/public_database_comparison_v2/public_only_lr_candidates.tsv",
+    "path": "data/processed/public_database_comparison_v2/candidate_triage_v1/candidate_normalization.tsv",
     "raw_rows": 7753,
-    "sha256": "31189239be3f4b6f91a87c92b1716ccac294f468279c7122693624c55c508732"
+    "sha256": "7bd3b9e59cc5a4bd5b8604fab63f7262d0d1d5467c6127bcfc317018cb9bc967"
   },
   "candidate_units": 7753,
-  "completed_batch_review_units": 6760,
+  "completed_batch_review_units": 6777,
   "graph_input": {
     "direct_lr_edges": 8112,
     "path": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion251/mechanism_edges.tsv",
@@ -24,18 +24,18 @@
     "rows": 25,
     "sha256": "0ed894fafc921fb08d4c49c0f38a23fb83f2bb730cf0202f85a0f5adee440727"
   },
-  "prior_harvest_matched_units": 25,
+  "prior_harvest_matched_units": 8,
   "prior_harvest_rows": 25,
   "resolution_ledger_input": {
-    "path": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/public_database_comparison_v2/candidate_triage_v1/review_resolution_ledger.tsv",
-    "rows": 6760,
-    "sha256": "d0b020a0f5983c9d2cc6511f530beb6257513531f23d30b9a6692742f2885d70"
+    "path": "data/processed/public_database_comparison_v2/candidate_triage_v1/review_resolution_ledger.tsv",
+    "rows": 6777,
+    "sha256": "81151eb7f2163ac36c2aa91825c0c86d703a70aca2cfc1c7f7894da46e2685d5"
   },
   "review_batch_counts": {},
   "review_batch_size": 100,
   "review_lane_counts": {
-    "completed_batch_review": 6760,
-    "completed_prior_harvest": 25,
+    "completed_batch_review": 6777,
+    "completed_prior_harvest": 8,
     "represented_graph_alias": 960,
     "resolved_graph_match": 8
   },
