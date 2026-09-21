@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:RELN>ITGA3	RELN	ITGA3	M20B-E002237;M21B-E002688	current bundle includes primary Reelin-alpha3beta1 binding and developmental cortical migration support	represented_graph_alias	batch_177
+LR:RELN>ITGB1	RELN	ITGB1	M20B-E002237;M21B-E002688	current bundle represents Reelin through alpha3beta1 integrin heterodimer, not isolated ITGB1 binding	represented_graph_alias	batch_177
+LR:RSPO4>LGR4	RSPO4	LGR4	M21B-E006587	current bundle includes primary direct RSPO4-LGR4 binding and R-spondin receptor-complex context	represented_graph_alias	batch_177
+LR:RSPO4>LGR5	RSPO4	LGR5	M21B-E006588	current bundle includes primary direct RSPO4-LGR5 binding and R-spondin receptor-complex context	represented_graph_alias	batch_177
+LR:S100A10>TRPV5	S100A10	TRPV5	M21B-E002551	current bundle represents S100A10/p11 as an annexin-2 auxiliary partner for TRPV5 trafficking/function, not a soluble ligand-receptor edge	represented_graph_alias	batch_177
+LR:SDC2>EZR	SDC2	EZR	M21B-E006770	current bundle represents direct SDC2 cytoplasmic DEGSYD-region binding to ezrin and RhoA-dependent cytoskeletal association	represented_graph_alias	batch_177
+LR:SEMA3A>PLXNA1	SEMA3A	PLXNA1	M20B-E004813;M21B-E000331;M23B-E000262;M23B-E000906	current bundle includes primary SEMA3A-NRP1:PLXNA1 receptor-complex binding/activation and developmental growth-cone/lymphatic outputs	represented_graph_alias	batch_177
+LR:SEMA3A>PLXNA2	SEMA3A	PLXNA2	M20B-E004814;M21B-E000332	current bundle includes primary SEMA3A-NRP1:PLXNA2 multicomponent receptor-complex assembly and growth-cone signaling	represented_graph_alias	batch_177
+LR:SEMA3A>PLXNA3	SEMA3A	PLXNA3	M20B-E004815	current bundle contains only a frozen SEMA3A-NRP1:PLXNA3 alias without a stable pair-specific primary packet	represented_graph_alias	batch_177
+LR:SEMA3A>PLXNA4	SEMA3A	PLXNA4	M20B-E004816;M21B-E000184	current bundle includes primary near-intact SEMA3A-NRP1:PLXNA4 tripartite receptor-complex assembly and activation geometry	represented_graph_alias	batch_177
