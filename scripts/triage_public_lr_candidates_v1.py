@@ -24,7 +24,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_BUNDLE = ROOT / "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion254"
+DEFAULT_BUNDLE = ROOT / "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion256"
 DEFAULT_CANDIDATES = ROOT / "data/processed/public_database_comparison_v2/public_only_lr_candidates.tsv"
 DEFAULT_PRIOR_AUDIT = ROOT / "data/processed/public_database_comparison_v2/primary_evidence_harvest_resolution.tsv"
 DEFAULT_RESOLUTION_LEDGER = ROOT / "data/processed/public_database_comparison_v2/candidate_triage_v1/review_resolution_ledger.tsv"

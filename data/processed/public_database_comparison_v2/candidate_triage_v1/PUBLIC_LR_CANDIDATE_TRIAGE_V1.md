@@ -1,6 +1,6 @@
 # Public ligand--receptor candidate triage v1
 
-This report reduces `7,753` public-only rows to `7,753` normalized candidate units against `8,161` direct ligand--receptor graph edges from `module20_24_mechanism_graph:2026-09-21`.
+This report reduces `7,753` public-only rows to `7,753` normalized candidate units against `8,165` direct ligand--receptor graph edges from `module20_24_mechanism_graph:2026-09-21`.
 
 ## Results
 

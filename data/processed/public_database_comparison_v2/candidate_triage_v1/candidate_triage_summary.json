@@ -1,22 +1,22 @@
 {
-  "bundle_dir": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion254",
+  "bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion256",
   "bundle_release_id": "module20_24_mechanism_graph:2026-09-21",
   "candidate_input": {
     "path": "data/processed/public_database_comparison_v2/candidate_triage_v1/candidate_normalization.tsv",
     "raw_rows": 7753,
-    "sha256": "e273243b521b05f8b2eca372c2246ce23805aa8cc2efe2b6e45ae73cfb6fade4"
+    "sha256": "715015dc07c3930badd9937b4861cb481ab73b5ec8383e2e16776fc9d5f28b71"
   },
   "candidate_units": 7753,
   "completed_batch_review_units": 6778,
   "graph_input": {
-    "direct_lr_edges": 8161,
-    "path": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion254/mechanism_edges.tsv",
-    "sha256": "053828fc5e6d3652cdf88830f5c2aaa1cf95464a4cc354f17308872ef2aa56bd"
+    "direct_lr_edges": 8165,
+    "path": "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion256/mechanism_edges.tsv",
+    "sha256": "f6caa7c51e7e8641b4daadf5d6373874d076efa629e754176ec852ca6720a434"
   },
   "normalization_match_counts": {
-    "graph_match_alias_adjudication": 1099,
-    "graph_match_exact_label": 58,
-    "novel_candidate": 6596
+    "graph_match_alias_adjudication": 1100,
+    "graph_match_exact_label": 62,
+    "novel_candidate": 6591
   },
   "policy": "This triage does not promote edges or assign biological confidence; primary evidence and route plausibility remain separate downstream decisions.",
   "prior_audit_input": {
@@ -29,7 +29,7 @@
   "resolution_ledger_input": {
     "path": "data/processed/public_database_comparison_v2/candidate_triage_v1/review_resolution_ledger.tsv",
     "rows": 6778,
-    "sha256": "ab436afb2bc033f1f5f33dbcd280e4dc721acc358fee703d4fcf784ff8415a68"
+    "sha256": "00331bd7a3cc05017c47054c8fc69b403dea3c54bd1154ec2c1f7f183d9fc1b7"
   },
   "review_batch_counts": {},
   "review_batch_size": 100,

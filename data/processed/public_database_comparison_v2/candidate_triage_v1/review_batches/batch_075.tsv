@@ -1,0 +1,4 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:TSHB>TSHR	TSHB	TSHR		PMID:4372620; PMID:8552586	primary_review	batch_075
+LR:PPY>NPY5R	PPY	NPY5R		PMID:17204471; PMID:18457425	primary_review	batch_075
+LR:CCL21A>CCR7	CCL21A	CCR7		PMID:20201039; PMID:20889506; PMID:41420491	primary_review	batch_075

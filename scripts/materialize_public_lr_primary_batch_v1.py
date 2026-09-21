@@ -94,7 +94,15 @@ BATCH_003 = {
     "LR:PDGFB>PDGFRA+PDGFRB",
 }
 
-BATCHES = {"002": BATCH_002, "003": BATCH_003}
+BATCH_004 = {
+    "LR:TSHB>TSHR",
+    "LR:PPY>NPY5R",
+    "LR:CCL21A>CCR7",
+}
+
+BATCH_005 = {"LR:APOE>LRP2"}
+
+BATCHES = {"002": BATCH_002, "003": BATCH_003, "004": BATCH_004, "005": BATCH_005}
 
 
 def read_tsv(path: Path) -> list[dict[str, str]]:
