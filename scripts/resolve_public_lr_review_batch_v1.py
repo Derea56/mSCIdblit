@@ -17,7 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_BATCH = ROOT / "data/processed/public_database_comparison_v2/candidate_triage_v1/review_batches/batch_001.tsv"
-DEFAULT_BUNDLE = ROOT / "data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion243"
+DEFAULT_BUNDLE = ROOT / "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion251"
 DEFAULT_OUTPUT = ROOT / "data/processed/public_database_comparison_v2/candidate_triage_v1/batch_001_review_resolution.tsv"
 LOCATOR = re.compile(r"(?:PMID:\d+|PMCID:PMC\d+|DOI:10\.\d{4,9}/[^;\s]+)", re.IGNORECASE)
 
@@ -2609,6 +2609,34 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "EFEMP2/fibulin-4 is an extracellular-matrix protein with elastic-fiber and receptor-associated contexts, but the listed CATSPER1 and LINGO1 targets were not verified as exact primary receptor partners."
                 limitations = "Require direct EFEMP2 target binding or receptor-dependent function; do not transfer fibulin-family or extracellular-matrix evidence across unrelated receptors."
+            elif ligand == "EFNA3" and receptor == "EPHA5":
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:10516308"]
+                species = "rat"
+                summary = "Primary entorhino-hippocampal development experiments show EphA5 expression and EphA5-AP binding in hippocampal tissue, while ephrin-A3 produces receptor-contextual neurite repulsion and is proposed to interact with EphA5."
+                limitations = "Promote as a bounded developmental guidance route; the study uses tissue binding and functional outgrowth/stripe assays rather than purified binary binding, and it does not establish an intracellular relay or terminal-TF output."
+            elif ligand == "EFNA5" and receptor == "EPHA8":
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:21343910"]
+                species = "as stated in primary model/assay"
+                summary = "Primary retinocollicular-development experiments stimulate EphA8-expressing cells with clustered ephrin-A5-Fc and measure EphA8-dependent ligand binding and endocytosis of Eph-ephrin complexes."
+                limitations = "Promote as a bounded ephrin-A5/EphA8 receptor-proximal route; the study does not establish a complete intracellular cascade, terminal-TF output or SCI transfer."
+            elif ligand == "EFNB1" and receptor == "EPHA4":
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:19542359", "PMCID:PMC2729353", "DOI:10.1242/dev.034405"]
+                species = "mouse"
+                summary = "Primary cortical-development experiments demonstrate EphA4/ephrin-B1 binding by cell-based binding assays and co-immunoprecipitation, ephrin-B1-dependent EphA4 phosphorylation, and neighboring-cell proliferation outputs."
+                limitations = "Promote as a bounded forward-signaling route in developing cortex; the study does not establish a universal intracellular relay, terminal-TF output or SCI transfer."
+            elif ligand == "EFNB1" and receptor == "EPHB3":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = ["PMID:16786562", "PMCID:PMC2637817", "DOI:10.1002/cne.21001"]
+                species = "mouse; rat"
+                summary = "Primary spinal-cord studies localize ephrin-B1 and EphB3 in complementary developmental domains and characterize EphB3-selective reagents, supporting contact-dependent EphB/ephrin-B developmental context without an exact ephrin-B1-to-EphB3 activation assay."
+                limitations = "Retain as contextual developmental evidence only; do not promote a binary EFNB1-EPHB3 edge or infer a complete downstream relay from co-expression, reagent specificity or family-level affinity context."
             elif ligand.startswith("EFNA") or ligand.startswith("EFNB"):
                 disposition = "hold_contextual_or_complex_boundary"
                 layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
