@@ -4,10 +4,10 @@
   "candidate_input": {
     "path": "data/processed/public_database_comparison_v2/candidate_triage_v1/candidate_normalization.tsv",
     "raw_rows": 7753,
-    "sha256": "5231e307e545c6ff43eb3fa89ec5e3d8c630287cc56ee1ed64cb60771ea22439"
+    "sha256": "12acc922eb54f797134f5602418a8b765903d4f8653b789cd56b630d39d6cbc7"
   },
   "candidate_units": 7753,
-  "completed_batch_review_units": 6777,
+  "completed_batch_review_units": 6778,
   "graph_input": {
     "direct_lr_edges": 8112,
     "path": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion251/mechanism_edges.tsv",
@@ -28,15 +28,15 @@
   "prior_harvest_rows": 25,
   "resolution_ledger_input": {
     "path": "data/processed/public_database_comparison_v2/candidate_triage_v1/review_resolution_ledger.tsv",
-    "rows": 6777,
-    "sha256": "bb295319b91e4341200b9a1b4c96d8ee9b48c10945225a5ba757c121fda69d2b"
+    "rows": 6778,
+    "sha256": "7f48c8b0235f7a67bd379fc88813ac5d86abc6a6015ddc1b293b951780dbd1b7"
   },
   "review_batch_counts": {},
   "review_batch_size": 100,
   "review_lane_counts": {
-    "completed_batch_review": 6777,
+    "completed_batch_review": 6778,
     "completed_prior_harvest": 8,
-    "represented_graph_alias": 960,
+    "represented_graph_alias": 959,
     "resolved_graph_match": 8
   },
   "review_queue_rows": 0,
