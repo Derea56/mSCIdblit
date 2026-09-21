@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:NODAL>TDGF1	NODAL	TDGF1	M20B-E004335;M21B-E000350;M21B-E000351	current bundle includes primary extracellular Nodal-Cripto/TDGF1 association and Cripto-dependent receptor-complex/Smad2/3 support	represented_graph_alias	batch_174
+LR:NPNT>ITGA8	NPNT	ITGA8	M20B-E002377;M20B-E002378;M21B-E002684;M23B-E000223	current bundle includes primary nephronectin-alpha8beta1 direct binding with frozen matrix/co-ligand aliases	represented_graph_alias	batch_174
+LR:NPNT>ITGB1	NPNT	ITGB1	M20B-E002377;M20B-E002378;M21B-E002684;M23B-E000223	current bundle includes primary nephronectin-alpha8beta1 direct binding with frozen matrix/co-ligand aliases	represented_graph_alias	batch_174
+LR:NPPB>NPR2	NPPB	NPR2	M21B-E006991	current bundle includes primary BNP/NPPB preferential NPR2 activation and receptor-specific cGMP output	represented_graph_alias	batch_174
+LR:NRG1>ITGAV	NRG1	ITGAV	M21B-E000620;M23B-E000819	current bundle includes primary NRG1 EGF-domain alphaVbeta3 binding and ErbB3 ternary signaling context	represented_graph_alias	batch_174
+LR:NRG1>ITGB3	NRG1	ITGB3	M21B-E000620;M23B-E000819	current bundle includes primary NRG1 EGF-domain alphaVbeta3 binding and ErbB3 ternary signaling context	represented_graph_alias	batch_174
+LR:NRTN>GFRA1	NRTN	GFRA1	M21B-E007084	current bundle includes primary lower-efficiency NRTN-GFRA1 binding and GFRA1:RET-mediated RET phosphorylation	represented_graph_alias	batch_174
+LR:NRTN>GFRA1+RET	NRTN	GFRA1+RET	M21B-E007084	current bundle includes primary NRTN-GFRA1:RET receptor-complex support as a lower-efficiency alternative branch	represented_graph_alias	batch_174
+LR:NRTN>GFRA2	NRTN	GFRA2	M21B-E003246	current bundle includes primary preferred NRTN-GFRA2 binding and co-receptor-complex support; stale candidate-side M20B-E000328 is omitted because it is not present in the current bundle	represented_graph_alias	batch_174
+LR:NRTN>RET	NRTN	RET	M21B-E007084	current bundle supports NRTN-mediated RET activation through GFRA1/GFRA2 co-receptors, not isolated NRTN-RET binding; stale candidate-side M20B-E000328 is omitted because it is not present in the current bundle	represented_graph_alias	batch_174

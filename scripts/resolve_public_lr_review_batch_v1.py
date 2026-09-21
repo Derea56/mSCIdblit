@@ -3105,6 +3105,66 @@ def main() -> None:
                 limitations = "Preserve Nodal/Cripto and type-I/type-II receptor-complex topology; do not collapse the holocomplex into unsupported free-subunit edges or infer SCI/terminal-TF output beyond the reported assays."
             else:
                 raise SystemExit(f"unhandled batch 173 pair: {pair}")
+        elif row.get("review_batch") == "batch_174":
+            pair = (ligand, receptor)
+            if pair == ("NODAL", "TDGF1"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:18089557", "PMID:11024047"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary cross-linking and receptor-signaling studies support extracellular Nodal-Cripto/TDGF1 association, Cripto-dependent receptor-complex assembly and Smad2/3 outputs."
+                limitations = "Preserve membrane-associated or released Cripto, O-fucosylation and Nodal ligand context; this is a coreceptor-binding edge, not a claim that Cripto is a canonical kinase receptor or that Nodal signals without the receptor holocomplex."
+            elif pair in {("NPNT", "ITGA8"), ("NPNT", "ITGB1")}:
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:19342381", "PMID:11470831", "PMCID:PMC2682901", "DOI:10.1074/jbc.M900200200", "PMID:17537792", "PMCID:PMC2757411"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "mouse; both"
+                summary = "Primary purified-ligand, motif-mapping and matrix studies support nephronectin binding to the alpha8beta1 integrin heterodimer."
+                limitations = "Preserve ITGA8:ITGB1 as the receptor heterodimer and the RGD-plus-LFEIFEIER motif context; FRAS1/FREM1/2 are matrix scaffold context rather than independently validated ligands, with no SCI or downstream transcriptional inference."
+            elif pair == ("NPPB", "NPR2"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:2570358"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "Primary cloned-receptor pharmacology directly compares ANP and BNP/NPPB activation of human NPR2/GC-B and supports preferential BNP/NPPB receptor activation with cGMP output."
+                limitations = "Preserve the NPR2 subtype and heterologous receptor assay; do not generalize to other natriuretic peptide receptors or infer physiological, SCI or terminal-TF effects."
+            elif pair in {("NRG1", "ITGAV"), ("NRG1", "ITGB3")}:
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:20682778", "PMCID:PMC2951213"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary soluble-domain, mutagenesis and breast-cancer-cell assays support NRG1 EGF-domain binding to alphaVbeta3, with ErbB3 phosphorylation and AKT/ERK effects in an NRG1-alphaVbeta3-ErbB3 ternary context."
+                limitations = "Preserve NRG1 EGF-domain/native-isoform, alphaVbeta3-ErbB3 ternary and integrin-binding-mutant semantics; do not split ITGAV from ITGB3 or infer SCI/terminal-TF output."
+            elif pair == ("NRTN", "GFRA1"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:9407096", "DOI:10.1074/jbc.272.52.33111", "PMID:9608533", "DOI:10.1006/mcne.1998.0667"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mixed"
+                summary = "Primary binding, cross-linking and receptor-expression studies support a lower-efficiency NRTN-GFRA1 branch with GFRA1-mediated ligand-dependent RET phosphorylation."
+                limitations = "Preserve the GPI-linked GFRA1:RET receptor-complex context and lower efficiency relative to GFRA2; do not infer a universal or SCI-specific NRTN branch."
+            elif pair == ("NRTN", "GFRA1+RET"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:9407096", "DOI:10.1074/jbc.272.52.33111", "PMID:9608533", "DOI:10.1006/mcne.1998.0667"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mixed"
+                summary = "Primary studies support NRTN signaling through the lower-efficiency GFRA1:RET receptor complex, including ligand-dependent RET phosphorylation."
+                limitations = "Preserve GFRA1:RET as a composite co-receptor complex and the preference of NRTN for GFRA2; do not split the complex or infer a universal/SCI-specific branch."
+            elif pair == ("NRTN", "GFRA2"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:29414779", "PMID:9407096"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human; mixed"
+                summary = "Primary structural, biophysical and receptor-complex studies support preferred NRTN-GFRA2 binding at the co-receptor layer."
+                limitations = "Preserve full-length GFRA2, RET/heparan-sulfate and ligand-preference boundaries; do not infer a free RET receptor edge, SCI output or terminal-TF activity."
+            elif pair == ("NRTN", "RET"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:9407096", "DOI:10.1074/jbc.272.52.33111", "PMID:9608533", "DOI:10.1006/mcne.1998.0667", "PMID:29414779"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human; mixed"
+                summary = "Primary studies support NRTN-mediated RET activation through GFRA1 or GFRA2 co-receptor complexes, but do not establish isolated NRTN-RET binding."
+                limitations = "Preserve GFRA1/GFRA2:RET co-receptor topology and NRTN preference; do not materialize a free RET ligand edge or infer a universal intracellular, SCI or terminal-TF route."
+            else:
+                raise SystemExit(f"unhandled batch 174 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
