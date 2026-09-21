@@ -3165,6 +3165,58 @@ def main() -> None:
                 limitations = "Preserve GFRA1/GFRA2:RET co-receptor topology and NRTN preference; do not materialize a free RET ligand edge or infer a universal intracellular, SCI or terminal-TF route."
             else:
                 raise SystemExit(f"unhandled batch 174 pair: {pair}")
+        elif row.get("review_batch") == "batch_175":
+            pair = (ligand, receptor)
+            if pair == ("NTM", "OPCML"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:11042360"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mixed"
+                summary = "Primary recombinant-protein interaction and neuronal adhesion-growth studies support CEPU-1/neurotrimin-OBCAM/OPCML heterophilic IgLON binding."
+                limitations = "Preserve the chick alias and recombinant-protein context; do not infer a unique downstream signaling mechanism or SCI relevance."
+            elif pair == ("NTRK3", "PTPRS"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:21262467"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse; rat"
+                summary = "Primary ectodomain, cell-adhesion and neuron-coculture studies support a bidirectional TrkC/NTRK3-PTPσ/PTPRS synaptic-organizing complex."
+                limitations = "Preserve TrkC splice/ectodomain and excitatory-synapse context; do not infer TrkC neurotrophin kinase signaling, PTPRS phosphatase catalysis or SCI effects."
+            elif pair == ("NYX", "TRPM1"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:21734298", "PMCID:PMC3139999"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mixed"
+                summary = "Primary two-hybrid, co-immunoprecipitation, localization and electrophysiology studies support nyctalopin/NYX-TRPM1 association in the retinal mGluR6 complex."
+                limitations = "Promote auxiliary/localization function in the retinal receptor complex only; do not infer SCI transfer or a standalone NYX-to-TRPM1 signaling cascade."
+            elif pair == ("OSM", "IL6ST"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:8999038", "PMID:22829597"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human"
+                summary = "Primary receptor-reconstitution and kinetic studies support low-affinity OSM-gp130/IL6ST contact as an initiating step before recruitment of LIFR or OSMR into the heterodimeric receptor complex."
+                limitations = "Preserve gp130-first assembly and gp130:LIFR/OSMR topology; do not materialize autonomous IL6ST signaling or transfer human/rat receptor usage to mouse without qualification."
+            elif pair in {("PLA2G2A", "ITGA4"), ("PLA2G2A", "ITGA5"), ("PLA2G2A", "ITGAV"), ("PLA2G2A", "ITGB1"), ("PLA2G2A", "ITGB3")}:
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:18635536", "PMCID:PMC2533795", "DOI:10.1074/jbc.M804835200", "PMID:25398877", "PMCID:PMC4281730", "DOI:10.1074/jbc.M114.612648"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                if receptor in {"ITGA4", "ITGB1"}:
+                    branch = "alpha4beta1"
+                elif receptor == "ITGA5":
+                    branch = "alpha5beta1"
+                else:
+                    branch = "alphaVbeta3"
+                summary = f"Primary binding and integrin-activation studies support secreted PLA2-IIA/sPLA2-IIA engagement of the {branch} heterodimer, with monocytic adhesion/migration and ERK1/2 outputs where tested."
+                limitations = f"Preserve the {branch} heterodimer, site-1/site-2 and catalytic/M-type-receptor assay boundaries; do not split the integrin subunits or infer a universal intracellular relay, SCI or terminal-TF output."
+            elif pair == ("PODXL", "SELL"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:9625756"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary HEV-derived protein and flow assays support podocalyxin-like protein/PODXL binding to L-selectin/SELL and physiological lymphocyte tethering and rolling."
+                limitations = "Preserve HEV-derived PCLP/PODXL glycoform, sulfated mucin-domain and flow context, distinct from podocyte antiadhesive functions; do not infer an intracellular PODXL relay or SCI signaling."
+            else:
+                raise SystemExit(f"unhandled batch 175 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
