@@ -2642,6 +2642,33 @@ def main() -> None:
                 "assay limits, and the distinction between binding, receptor-proximal signaling and functional output; "
                 "these edges do not assert a universal intracellular cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_161":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The existing edge-source records provide primary-supported IL25-IL17RA:IL17RB assembly/activation, "
+                "IL27-IL27RA:gp130 binding, assembly and activation, IL2 receptor-chain binding and quaternary "
+                "assembly, IL31-OSMR recruitment, IL33-ST2/IL1RAP binding and assembly plus soluble-ST2 decoy binding, "
+                "and IL36A-IL1RL2:IL1RAP binding, assembly and activation at the stated molecular resolution."
+            )
+            limitations = (
+                "Do not add duplicate edges or collapse IL17RA:IL17RB, IL27RA:gp130, IL2RA:IL2RB:IL2RG, "
+                "IL2RB:IL2RG, IL1RL1:IL1RAP, or IL1RL2:IL1RAP complexes into autonomous single-chain receptors. "
+                "Preserve soluble ST2 decoy versus membrane ST2 signaling context, shared-subunit topology, receptor "
+                "assembly versus activation, species and assay limits, and the distinction between binding, "
+                "receptor-proximal signaling and functional output; these edges do not assert a universal intracellular "
+                "cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
