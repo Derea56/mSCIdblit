@@ -827,6 +827,20 @@ def main() -> None:
                 species = "human alpha-subunit/TSHR assay"
                 summary = "CGA encodes the common glycoprotein-hormone alpha subunit rather than a complete mature TSH, FSH, LH or hCG ligand; a primary TSHR assay found no agonist activity for wild-type free alpha, while activity required engineered alpha variants."
                 limitations = "Require the complete hormone heterodimer and exact receptor assay; do not materialize CGA alone as a ligand or transfer one beta-subunit-specific route across FSHR, LHCGR and TSHR."
+            elif ligand == "CCL1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                primary = ["PMID:9207005", "PMID:9469461"]
+                species = "human and mouse CCR8 receptor-expression assays"
+                summary = "Primary cloning, binding and chemotaxis studies identify CCL1/I-309 and its mouse homolog TCA-3 as CCR8 ligands; the listed ACKR and CCR1/2/3/5 rows were not established as direct CCL1 receptor pairings."
+                limitations = "Preserve the CCL1-CCR8 species and chemokine-processing context; do not transfer receptor promiscuity from other CC chemokines or materialize unsupported ACKR/CCR paralog edges."
+            elif ligand == "CCL12":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                primary = ["PMID:8996246", "PMID:18334747"]
+                species = "mouse CCL12/MCP-5 receptor-expression assays"
+                summary = "Primary murine MCP-5/CCL12 studies show calcium flux and chemotaxis through mouse or human CCR2, with no tested response through CCR1, CCR3 or CCR5; the listed ACKR, CCR1, CCR3, CCR4, CCR5 and CCR10 rows are not supported as direct CCL12 edges."
+                limitations = "Preserve mouse-specific CCL12/CCR2 and mature chemokine context; do not transfer human CCL2-family receptor promiscuity to CCL12 or infer ACKR/CCR paralog activity without an exact assay."
             elif ligand == "CORT" and receptor == "MRGPRB2":
                 disposition = "new_primary_supported_edge_candidate"
                 layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
