@@ -2126,6 +2126,136 @@ def main() -> None:
                 layer = "candidate_only_unverified"
                 summary = "FGFR3 is a receptor tyrosine kinase, not an extracellular ligand for EPHA4."
                 limitations = "Represent Eph/FGFR receptor crosstalk in receptor-proximal layers; do not invert receptor identity into a ligand edge."
+            elif ligand.startswith("FGFR"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "FGFR-family labels are receptor tyrosine kinases or receptor-like proteins, not mature extracellular ligands for the listed targets."
+                limitations = "Represent FGFR crosstalk, co-receptor and intracellular signaling separately; do not invert receptor-family identities into ligand edges."
+            elif ligand == "FGG":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "FGG is a fibrinogen gamma-chain structural precursor, not an explicitly defined mature ligand for the listed integrin targets."
+                limitations = "Require exact fibrinogen form, receptor complex and primary assay before promotion; do not materialize fibrinogen-chain labels as direct ligand edges."
+            elif ligand == "FN1":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Fibronectin is an extracellular-matrix ligand with integrin and co-receptor interactions, but the public rows do not resolve the exact FN1 domain, receptor complex and primary mechanism for each listed target."
+                limitations = "Retain exact fibronectin-integrin and receptor-complex evidence separately; require domain, receptor subunit, species and primary assay before promotion and do not transfer FN1 binding across receptor families."
+            elif ligand == "FLRT2":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "FLRT-family proteins have latrophilin and cell-adhesion contexts, but an exact FLRT2-to-FLT4 receptor experiment was not verified in this pass."
+                limitations = "Require direct FLRT2/FLT4 binding or receptor-dependent function; do not transfer FLRT/latrophilin family evidence to VEGFR3/FLT4."
+            elif ligand == "FRS3":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "FRS3 is an intracellular fibroblast growth factor receptor substrate/adaptor, not an extracellular ligand for FGFR1."
+                limitations = "Represent FGFR adaptor signaling separately; do not materialize intracellular FRS3-FGFR associations as ligand-receptor edges."
+            elif ligand == "FURIN":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "FURIN is a protease that processes secreted and membrane proteins, not a mature ligand for ADAM, BACE, insulin, LRP or Notch targets."
+                limitations = "Represent proteolytic maturation and receptor processing in receptor-proximal or intracellular layers; do not materialize protease-substrate rows as ligand edges."
+            elif ligand == "GAL":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Galanin receptor biology is centered on GALR1, GALR2 and GALR3, not the unrelated adrenergic, glutamatergic or melatonin receptors listed here."
+                limitations = "Require mature galanin and direct GALR-family assay; do not transfer galanin specificity to unrelated GPCRs."
+            elif ligand == "GAST":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "Gastrin receptor biology is receptor- and peptide-form-specific, and an exact GAST-to-CCKAR or GAST-to-GPR152 experiment was not verified in this pass."
+                limitations = "Require mature gastrin form and direct CCKAR/CCKBR assay; do not infer activity at GPR152 from peptide-family membership."
+            elif ligand == "GCG":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "GCG/glucagon is a peptide hormone and DPP4 is a protease; the public row is not a conventional glucagon ligand-receptor edge."
+                limitations = "Represent peptide processing and glucagon-receptor signaling separately; require mature ligand and direct receptor assay before promotion."
+            elif ligand.startswith("GDF"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "GDF-family signaling is receptor-complex and paralog specific, but the public rows do not resolve the exact mature GDF form, type-I/type-II receptor composition and primary pair-level assay for each target."
+                limitations = "Retain exact GDF/BMP receptor-complex evidence separately; require ligand form, receptor topology, species and direct primary support before promoting component-only or unrelated receptor rows."
+            elif ligand == "GDNF":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "GDNF signaling is co-receptor and receptor-complex dependent, while the public rows isolate EDNRB, GFRA3 or NCAM1 without establishing the exact GDNF receptor topology for each candidate."
+                limitations = "Retain GDNF/GFRA/RET and NCAM-family receptor-complex boundaries; require exact GDNF form, co-receptor composition and primary assay before promotion."
+            elif ligand in {"GGT1", "GJB2", "GJB6", "GLG1"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses an enzyme, gap-junction protein or intracellular Golgi/membrane protein as the ligand label rather than a mature extracellular ligand."
+                limitations = "Represent enzymatic, gap-junction and intracellular membrane-complex mechanisms separately; do not materialize these protein associations as ligand-receptor edges."
+            elif ligand == "GHRL":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Ghrelin/GHRL receptor biology is centered on GHSR, not the prostacyclin receptor PTGIR."
+                limitations = "Require mature ghrelin and direct GHSR assay; do not transfer ghrelin specificity to unrelated GPCRs."
+            elif ligand == "GIP":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "GIP receptor biology is centered on GIPR, not the unrelated GPCR, insulin, FAP, PTH or RAMP targets listed here."
+                limitations = "Require mature GIP and direct GIPR assay; do not transfer incretin-family specificity to unrelated receptor families."
+            elif ligand.startswith("GM"):
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The GM-prefixed public identifier was not resolved to a verified mature ligand identity and exact receptor assay in this pass."
+                limitations = "Resolve the species-specific identifier and protein form before promotion; do not infer receptor specificity from an unresolved GM label or public-database membership alone."
+            elif ligand == "GNB3":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "GNB3 is an intracellular G-protein beta subunit, not an extracellular ligand for GABBR2 or TGFBR1."
+                limitations = "Represent heterotrimeric G-protein coupling in the intracellular continuation layer; do not materialize GNB3-to-receptor rows as ligand edges."
+            elif ligand == "GNRH1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "GnRH1 receptor biology is centered on GNRHR, while CAMK2A is an intracellular kinase rather than a GnRH receptor."
+                limitations = "Require mature GnRH peptide and direct GNRHR assay; represent CAMK2A downstream signaling separately."
+            elif ligand in {"GP1BA", "GP5", "GP49A"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses a platelet or immune membrane receptor/protein as the ligand label, not a mature extracellular ligand for the listed targets."
+                limitations = "Represent platelet adhesion and immune receptor complexes separately; do not invert receptor identities into ligand edges without exact primary support."
+            elif ligand.startswith("GPC"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Glypican-family proteoglycans can act as co-receptors or extracellular modulators for growth-factor and morphogen pathways, but the public rows do not resolve the exact glypican form, receptor complex and direct primary mechanism for each target."
+                limitations = "Require exact glypican isoform, cleavage state, receptor/co-receptor topology and primary assay; do not transfer FGF, Hedgehog or lipoprotein-receptor context across glypican paralogs."
+            elif ligand == "GPI1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "GPI1 is an intracellular biosynthetic enzyme/component, not a mature extracellular ligand for NTRK1."
+                limitations = "Represent GPI-anchor biosynthesis separately; do not materialize GPI1-to-NTRK1 as a ligand-receptor edge."
+            elif ligand == "GRN":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "GRN/progranulin has receptor and proteolytic-fragment context, but the public CD209F/CD209G and NTRK1 rows were not verified as exact mature GRN receptor interactions in this pass."
+                limitations = "Preserve the contested GRN receptor and granulin-fragment boundaries; require exact ligand form, receptor, species and primary assay before promotion."
+            elif ligand.startswith("GST"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "GST-family labels are intracellular glutathione-transferase enzymes, not mature extracellular ligands for RYR, EGFR or TRAF targets."
+                limitations = "Represent detoxification and intracellular redox mechanisms separately; do not materialize enzyme-protein associations as ligand-receptor edges."
+            elif ligand == "GUCY2E":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "GUCY2E is a membrane guanylate cyclase receptor/enzyme, not a mature ligand for NECTIN3 or NECTIN4."
+                limitations = "Represent membrane guanylate-cyclase and adhesion biology separately; do not invert receptor identity into a ligand edge."
+            elif ligand.startswith("GZM"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Granzyme-family labels are intracellular or released proteases, and the public rows do not define them as mature ligands for the listed muscarinic, IGF or anti-apoptotic targets."
+                limitations = "Represent protease/substrate and cytotoxic-granule mechanisms separately; do not materialize granzyme-to-receptor or granzyme-to-MCL1 rows as ligand edges."
             elif ligand.startswith("ADAM"):
                 disposition = "hold_contextual_or_complex_boundary"
                 primary = reviewed
