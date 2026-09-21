@@ -2427,6 +2427,34 @@ def main() -> None:
                 "locator is present, and the existing edges do not assert a universal intracellular cascade or terminal "
                 "TF route."
             )
+        elif row.get("review_batch") == "batch_153":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The existing edge-source records provide primary-supported GDNF-GFRA1/GFRA2/RET receptor contexts, "
+                "GlyCAM1-L-selectin binding and beta2-integrin functional context, platelet GPIbalpha-Mac-1 adhesion, "
+                "GZMB-CI-MPR/IGF2R binding and uptake, and HJV/RGMc-NEO1 direct binding at the stated molecular "
+                "resolution. IBSP-alphaV and IBSP-beta3 are retained as evidence-bounded represented aliases from the "
+                "frozen graph source."
+            )
+            limitations = (
+                "Do not add a duplicate edge or collapse preferred versus lower-affinity GDNF co-receptor branches, "
+                "GlyCAM1 sulfation and glycan context, platelet GPIb-IX-V and Mac-1 complex context, GZMB uptake versus "
+                "canonical IGF2R signaling, HJV isoform/cleavage and NEO1 domain context, or IBSP alphaV/beta3 receptor "
+                "complexes into autonomous canonical receptors. Preserve species and assay limits and the distinction "
+                "between binding, receptor-proximal signaling and functional output; these edges do not assert a universal "
+                "intracellular cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
