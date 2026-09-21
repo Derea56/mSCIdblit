@@ -2696,6 +2696,34 @@ def main() -> None:
                 "signaling and functional output; these edges do not assert a universal intracellular cascade or "
                 "terminal TF route."
             )
+        elif row.get("review_batch") == "batch_163":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The existing edge-source records provide primary-supported IL7-IL7RA:IL2RG and IL9-IL9RA:IL2RG "
+                "common-gamma receptor binding/activation, INHA inhibin-A binding to ACVR2A/ACVR2B betaglycan "
+                "antagonist complexes, and INHBA/activin-A ACVR1B:ACVR2A/ACVR2B receptor-complex binding/assembly "
+                "and activation. The IL6 rows remain represented by frozen cytokine-receptor-family aliases without "
+                "row-specific stable primary locators in the current source."
+            )
+            limitations = (
+                "Do not add duplicate edges or collapse IL7RA:IL2RG, IL9RA:IL2RG, TGFBR3:ACVR2A, TGFBR3:ACVR2B, "
+                "ACVR1B:ACVR2A, or ACVR1B:ACVR2B complexes into autonomous single-chain receptors. Preserve IL6 "
+                "frozen status, inhibin/betaglycan antagonism versus activin signaling, type-I/type-II receptor "
+                "topology, species and assay limits, and the distinction between binding, receptor-proximal signaling "
+                "and functional output; these edges do not assert a universal intracellular cascade or terminal TF "
+                "route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
