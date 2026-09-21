@@ -2856,6 +2856,148 @@ def main() -> None:
                 layer = "candidate_only_unverified"
                 summary = "Neuromedin U receptor biology is centered on NMUR1/MLNR and NMUR2/MLN2R, not the adrenergic receptor listed here."
                 limitations = "Require mature NMU and direct NMUR-family assay; do not transfer neuromedin-U specificity to unrelated GPCRs."
+            elif ligand == "NODAL":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Nodal signaling is receptor-complex and Cripto/CFC1 dependent, while the public rows do not resolve the complete NODAL type-I/type-II receptor topology as a single binary edge."
+                limitations = "Retain exact NODAL/ACVR/ACVR2/CFC1 complex evidence; do not materialize isolated or composite subunits without exact primary complex-level support."
+            elif ligand == "NOG":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Noggin is a secreted BMP antagonist that binds BMP ligands and modulates receptor access, but the public NOG-to-BMPR rows do not establish NOG as a conventional activating ligand for those receptors."
+                limitations = "Represent Noggin-BMP sequestration and receptor-access modulation separately; do not materialize NOG-to-BMPR as an activating ligand edge."
+            elif ligand == "NPFF":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "NPFF receptor biology is centered on NPFFR1/NPFFR2, not MAS1/GPRC6-family receptor labels in this row."
+                limitations = "Require mature NPFF peptide and direct NPFFR-family assay; do not transfer neuropeptide specificity to unrelated GPCRs."
+            elif ligand == "NPHS1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "NPHS1/nephrin is a membrane slit-diaphragm adhesion protein, not a mature ligand for TRPC6."
+                limitations = "Represent nephrin-podocyte adhesion and channel-complex biology separately; do not invert membrane adhesion proteins into ligand edges."
+            elif ligand == "NPPB":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "NPPB/BNP receptor biology is centered on NPR1/NPR2, while DPP4 and FAP are proteases rather than canonical NPPB receptors."
+                limitations = "Require mature natriuretic peptide and direct NPR-family assay; represent DPP4/FAP protease biology separately."
+            elif ligand == "NPY":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "NPY signaling is receptor-family and peptide-form specific; the public rows mix canonical NPY-family receptors with unrelated GPCRs and protease targets, so exact receptor assignment is not asserted here."
+                limitations = "Require mature NPY form and direct NPY receptor assay; do not transfer NPY-family specificity across adrenergic, melatonin, glutamate, DPP4 or orphan receptor targets."
+            elif ligand == "NRG1" and receptor == "ERBB2+ERBB3":
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E000363;M21B-E001759"
+                primary = ["PMID:34759323", "PMID:9693119"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "as stated in primary model/assay"
+                summary = "The graph already contains primary-supported NRG1/NRG1-beta engagement of the ERBB2:ERBB3 receptor complex."
+                limitations = "Preserve ERBB2:ERBB3 heterodimer topology and NRG1 isoform context; do not collapse the complex into an ERBB2-alone edge."
+            elif ligand.startswith("NRG"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Neuregulin-family signaling is ErbB-paralog and receptor-complex dependent; the graph contains exact NRG1-to-ERBB3, ERBB4 and ERBB2:ERBB3 evidence, but the public rows also include isolated ERBB2 or other unverified ErbB targets."
+                limitations = "Preserve NRG isoform, EGF-like ligand form and ERBB receptor-complex topology; do not transfer NRG1 specificity to NRG2-4 or collapse ERBB2 heterodimer evidence into an ERBB2-alone edge."
+            elif ligand == "NRP1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "NRP1/neuropilin-1 is a membrane co-receptor, not a mature ligand for FLT1, KDR, PDGF receptors, PLXNA1 or the listed targets."
+                limitations = "Represent neuropilin co-receptor complexes and VEGF/semaphorin orientation separately; do not invert NRP1 into ligand position."
+            elif ligand.startswith("NRXN"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Neurexin-family rows describe transsynaptic adhesion and splice-dependent partner recognition, but the exact neurexin isoform, splice state and receptor orientation for these candidates were not all resolved."
+                limitations = "Preserve neurexin splice isoform and transsynaptic orientation; require exact pair-level primary evidence before promotion and do not transfer NLGN/NRXN specificity across paralogs."
+            elif ligand == "NT5E":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "NT5E/CD73 is an ectoenzyme that generates extracellular adenosine, not a mature ligand for FCRL1."
+                limitations = "Represent adenosine production and ectoenzyme signaling separately; do not materialize NT5E-to-receptor rows as ligand edges without exact support."
+            elif ligand.startswith("NTM"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "NTM/neurtrimin-family rows describe neural and immune cell-adhesion contexts, but the exact partner and receptor topology for these candidates were not verified as direct primary-supported ligand edges."
+                limitations = "Preserve NTM family, GPI/membrane orientation and adhesion context; require exact pair-level primary evidence before promotion."
+            elif ligand == "NTNG1":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Netrin-G1/NTNG1 is a neural GPI-anchored adhesion ligand with receptor-family context, but the listed CD300 and SIGLEC targets were not verified as exact direct NTNG1 receptors."
+                limitations = "Require direct NTNG1 target binding or receptor-dependent function; do not transfer neural adhesion evidence to unrelated lectin receptors."
+            elif ligand == "NTS":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Neurotensin receptor biology is centered on NTSR1/NTSR2, not NGFR in the public row."
+                limitations = "Require mature neurotensin and direct NTSR-family assay; do not transfer neurotensin specificity to p75NTR/NGFR."
+            elif ligand in {"NXPH1", "NXPH3"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Neurexophilin-family proteins have synaptic neurexin-binding contexts, but the exact isoform and NRXN3 interaction for this row were not independently verified in this pass."
+                limitations = "Require exact NXPH/NRXN isoform, splice state and primary binding assay; do not transfer synaptic adhesion evidence across paralogs."
+            elif ligand == "OCLN":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "OCLN/occludin is a tight-junction membrane protein, not a mature extracellular ligand for claudins or TGFBR receptors."
+                limitations = "Represent tight-junction and receptor-crosstalk biology separately; do not invert junctional membrane proteins into ligand edges."
+            elif ligand == "OGN":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "OGN/osteoglycin is an extracellular-matrix proteoglycan, but the public OGN-to-H2EB2 row was not verified as an exact direct receptor mechanism."
+                limitations = "Require exact OGN domain, partner, species and primary assay; do not infer immune receptor binding from matrix localization."
+            elif ligand == "OIT1":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "OIT1 remains an unresolved public protein label in this pass, and no exact mature ligand identity or direct FPR1/FPR2 assay was verified."
+                limitations = "Resolve the source identifier and protein form before promotion; do not infer formyl-peptide receptor specificity from an unresolved OIT1 label."
+            elif ligand == "OPCML":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "OPCML is a GPI-anchored neural adhesion protein with homophilic/heterophilic partner context, but the listed NEGR1, NTM and OPCML rows do not establish a complete direct receptor topology for each candidate."
+                limitations = "Preserve OPCML orientation and homophilic self-interaction boundary; do not encode self-loops or transfer neural adhesion specificity across paralogs."
+            elif ligand.startswith("ORM"):
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "ORM1/ORM3 are secreted acute-phase glycoproteins, but exact direct ORM-to-CCR5 receptor evidence was not verified in this pass."
+                limitations = "Require mature ORM form and direct CCR5 binding or activation assay; do not infer chemokine-receptor activity from secreted glycoprotein status."
+            elif ligand in {"P4HB", "PAM", "PATJ"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses an intracellular chaperone/enzyme or junctional scaffold as the ligand label, not a mature extracellular ligand for the listed target."
+                limitations = "Represent ER, enzymatic and tight-junction mechanisms separately; do not materialize intracellular protein associations as ligand edges."
+            elif ligand == "PAPLN":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "PAPLN/papilin is an extracellular-matrix protein, but the listed CD200, Nectin4 and SIRPA targets were not verified as exact direct PAPLN receptor mechanisms."
+                limitations = "Require exact PAPLN domain, receptor or adhesion partner, species and primary assay; do not transfer matrix-family evidence across immune and adhesion receptors."
+            elif ligand.startswith("PCDH"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Protocadherin-family rows describe isoform-specific neuronal cell-adhesion recognition, but the exact paralog, cis/trans orientation and direct primary evidence for these integrin or protocadherin candidates were not resolved."
+                limitations = "Preserve protocadherin isoform and adhesion orientation; do not promote mismatched paralog pairs or infer soluble ligand signaling from adhesion-family membership."
             elif ligand.startswith("ADAM"):
                 disposition = "hold_contextual_or_complex_boundary"
                 primary = reviewed
