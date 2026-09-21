@@ -477,6 +477,62 @@ def main() -> None:
                 layer = "candidate_only_review_locator"
                 summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
                 limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
+        elif row.get("review_batch") == "batch_085":
+            pair = (ligand, receptor)
+            if pair == ("COL1A2", "CD44"):
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:1730778"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human type-I collagen fibrils and isolated CD44 antigen in lymphocyte/HEV adhesion assays"
+                summary = "Primary binding assays show that affinity-purified CD44 binds native type-I collagen fibrils; because COL1A2 is a component of the type-I collagen trimer, this supports a bounded collagen-I-component-to-CD44 interaction rather than an isolated alpha-2-chain assay."
+                limitations = "Represent COL1A2 as a collagen-I trimer/fibril component and preserve the CD44 glycoform and extracellular-matrix context; do not infer binding by free COL1A2 monomer, a universal CD44 isoform, or a complete intracellular/TF route."
+            elif pair == ("COL2A1", "SDC1"):
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:7949658"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human collagen I-VI affinity assays with murine mammary epithelial-cell syndecan-1"
+                summary = "Primary affinity co-electrophoresis measurements show that syndecan-1 binds several human collagens, including type II collagen, with a lower affinity than types I, III, IV and V; this supports a bounded collagen-II-to-SDC1 extracellular interaction."
+                limitations = "Preserve the collagen-II fibrillar form, syndecan-1 heparan-sulfate chain context and cross-species assay design; do not infer isolated COL2A1-chain binding, a protein-core-only mechanism, or a universal downstream route."
+            elif pair == ("TRY4", "F2RL1"):
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:24749982"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse recombinant trypsin-4 and PAR2/F2RL1 calcium-signaling assays"
+                summary = "Primary protease assays show that enterokinase-activated mouse trypsin-4 produces concentration-dependent calcium signaling in PAR2/F2RL1-expressing cells but not vector controls, supporting a direct protease-triggered PAR2 route."
+                limitations = "Represent activated mouse trypsin-4 rather than the inactive zymogen, preserve the PAR2-expressing cell assay and protease-cleavage mechanism, and do not transfer this evidence to other Try genes or PAR family members."
+            elif pair == ("WNT11", "FZD3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:28916299", "PMID:19232955"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human bone-marrow mesenchymal-stem-cell and cardiac/progenitor Wnt11 signaling assays"
+                summary = "Primary studies place Wnt11 among noncanonical Wnts associated with Fzd3/JNK or Fzd-mediated signaling, but the strongest direct Wnt11 receptor-binding and inhibition experiments identify Fzd4 rather than Fzd3; the public WNT11-FZD3 row is therefore contextual rather than an isolated exact-pair binding claim."
+                limitations = "Retain WNT11-FZD3 as a plausible noncanonical receptor context with cell-state and co-receptor boundaries; do not materialize a universal direct WNT11-to-FZD3 edge or infer a unique downstream route from expression/co-occurrence alone."
+            elif pair == ("RLN3", "RXFP2"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:15956688", "PMID:18434306", "PMID:25761609"]
+                layer = "receptor_proximal_or_pathway"
+                species = "human relaxin-family receptor pharmacology and peptide-structure assays"
+                summary = "Primary relaxin-family pharmacology assigns relaxin-3 primarily to RXFP3, whereas RXFP2 is the cognate receptor for INSL3 and can also respond to relaxin; the cited evidence does not establish the public RLN3-RXFP2 pairing as a direct canonical route."
+                limitations = "Represent RLN3-RXFP3 and INSL3-RXFP2 separately; do not transfer relaxin-family cross-reactivity or receptor-family homology into a direct RLN3-to-RXFP2 edge."
+            elif pair == ("THBS4", "CD36"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:1371676", "PMID:7504322", "PMID:7688364"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human thrombospondin/CD36 binding and ectodomain-domain assays"
+                summary = "Primary studies establish CD36 binding to thrombospondin and map thrombospondin motifs required for CD36 interaction, but they do not identify thrombospondin-4 specifically; the public THBS4-CD36 row is family-member context rather than exact isoform evidence."
+                limitations = "Retain CD36-thrombospondin binding with thrombospondin isoform and CSVTCG/SVTCG motif boundaries; do not materialize THBS4-to-CD36 without an isoform-specific primary assay."
+            elif pair == ("PRSS2", "F2RL2"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:12604689", "PMID:12463169", "PMID:24749982"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human/rat trypsin and proteinase-activated receptor cleavage/signaling assays"
+                summary = "Primary PAR studies support trypsin-triggered PAR2/F2RL1 and broader protease/PAR signaling, while PAR3/F2RL2 is primarily described as a thrombin-responsive/cofactor receptor; no exact PRSS2-to-F2RL2 activation assay was verified."
+                limitations = "Retain PRSS2-F2RL2 only as protease/PAR pathway context pending exact PRSS2 and PAR3 cleavage data; do not materialize a direct ligand edge or transfer PAR2/PAR4 evidence to PAR3."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
