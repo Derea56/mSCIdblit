@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:ANGPT1>ITGB1	ANGPT1	ITGB1	M21B-E000636		represented_graph_alias	batch_109
+LR:APOE>LRP5	APOE	LRP5	M21B-E007121		represented_graph_alias	batch_109
+LR:APOE>SCARB1	APOE	SCARB1	M21B-E002929		represented_graph_alias	batch_109
+LR:APP>LRP1	APP	LRP1	M21B-E006250		represented_graph_alias	batch_109
+LR:AREG>EGFR	AREG	EGFR	M20B-E001799;M21B-E000391	KEGG: mmu04012	represented_graph_alias	batch_109
+LR:BGN>TLR2	BGN	TLR2	M21B-E000862;M21B-E002743;M23B-E001089;M23B-E001090		represented_graph_alias	batch_109
+LR:BGN>TLR4	BGN	TLR4	M21B-E000863;M21B-E002744		represented_graph_alias	batch_109
+LR:BMP10>ENG	BMP10	ENG	M21B-E000344		represented_graph_alias	batch_109
+LR:BMP3>ACVR2B	BMP3	ACVR2B	M21B-E006712		represented_graph_alias	batch_109
+LR:BMP7>ENG	BMP7	ENG	M21B-E006598		represented_graph_alias	batch_109
