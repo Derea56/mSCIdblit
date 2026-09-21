@@ -2259,6 +2259,35 @@ def main() -> None:
                 "where no stable primary locator is present, and the existing edges do not assert a universal "
                 "intracellular cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_147":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The public locators are pathway or database records, while the existing graph edge-source records "
+                "provide primary-supported CX3CL1-alpha4beta1/CX3CR1 coreceptor adhesion, CXCL12 allosteric "
+                "alpha4beta1/alpha5beta1/alphaVbeta3 integrin activation, decorin-IGF1R antagonism and LRP1 uptake, "
+                "DHH-PTCH1/PTCH2 binding, DLK1-ACVR2B inhibition and evidence-bounded receptor aliases at the stated "
+                "molecular resolution."
+            )
+            limitations = (
+                "Do not add a duplicate edge or collapse CXCL12 CXCR4-dependent versus CXCR4-independent integrin "
+                "activation, alpha4beta1/alpha5beta1/alphaVbeta3 heterodimers, decorin proteoglycan/core-protein "
+                "transport versus modulation, DHH PTCH1/PTCH2 binding versus productive Hedgehog signaling, or DLK1 "
+                "ACVR2B antagonism into autonomous canonical receptors. Preserve ligand isoform, oligomer, domain, "
+                "heterodimer and co-receptor resolution, species and assay limits, and the distinction between binding, "
+                "receptor-proximal signaling and functional output; the existing edges do not assert a universal "
+                "intracellular cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
