@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:DLL4>NOTCH2	DLL4	NOTCH2	M21B-E006623	PMID:22353464	represented_graph_alias	batch_100
+LR:GHRH>GHSR	GHRH	GHSR	M21B-E011612	PMID:19088192	represented_graph_alias	batch_100
+LR:HGF>MET	HGF	MET	M21B-E000167	PMID:28475121	represented_graph_alias	batch_100
+LR:ICAM1>SPN	ICAM1	SPN	M21B-E011613	PMID:1683685	represented_graph_alias	batch_100
+LR:JAG1>NOTCH1	JAG1	NOTCH1	M21B-E011614	PMID:22353464	represented_graph_alias	batch_100
+LR:MIF>ACKR3	MIF	ACKR3	M21B-E002369	PMID:26175090	represented_graph_alias	batch_100
+LR:NGF>NTRK1	NGF	NTRK1	M21B-E000321	PMID:27908981	represented_graph_alias	batch_100
+LR:NTF3>NTRK1	NTF3	NTRK1	M21B-E005574	PMID:27908981	represented_graph_alias	batch_100
+LR:RETN>TLR4	RETN	TLR4	M24B-E000077	PMID:30809105	represented_graph_alias	batch_100
+LR:SCGB3A2>MARCO	SCGB3A2	MARCO	M21B-E006354	PMID:12847263	represented_graph_alias	batch_100
