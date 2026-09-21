@@ -870,18 +870,19 @@ def main() -> None:
             summary = "Primary studies show ANGPTL2-dependent inflammatory outputs and identify alpha5beta1 integrin as a receptor in an endotoxin model, but they do not establish direct ANGPTL2 binding to TLR4; TLR4 is part of the LPS stimulus context."
             limitations = "Retain ANGPTL2 inflammatory-output and alpha5beta1-integrin context; do not materialize a direct ANGPTL2-TLR4 edge or transfer LPS/TLR4 pathway dependence into receptor-binding evidence."
         elif ligand in {"ANGPTL1", "ANGPTL7"} and receptor == "PIRB":
-            disposition = "no_primary_evidence_found"
-            layer = "candidate_only_unverified"
-            species = ""
-            summary = "The current review did not verify an exact primary binding or receptor-dependent functional experiment for the ANGPTL1/ANGPTL7-to-PIRB candidate."
-            limitations = "Retain angiopoietin-like family and PIRB/LILR receptor-family context only; require exact ligand identity, species and pair-specific assay before promotion."
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:22660330", "PMCID:PMC3367397"]
+            species = "human LILRB2-positive cord-blood cells; mouse PIRB/HSC context"
+            summary = "Primary ANGPTL-receptor work reports ANGPTL1 and ANGPTL7 binding in the human LILRB2-positive hematopoietic-cell context and places ANGPTL-family/PIRB signaling in mouse HSC and leukemia models, but the individual mouse ANGPTL1- or ANGPTL7-to-PIRB binary rows are not resolved as equally direct assays."
+            limitations = "Preserve LILRB2/PIRB orthology, ANGPTL member, species, tag and hematopoietic-cell boundaries; do not treat family-level human LILRB2 binding as a fully resolved mouse PIRB edge or infer a universal downstream cascade for either ANGPTL."
         elif ligand == "ANGPTL4" and receptor in {"SDC1", "SDC2", "SDC3"}:
-            disposition = "no_primary_evidence_found"
-            layer = "candidate_only_unverified"
-            primary = ["PMID:30591589", "PMID:35224159"]
-            species = "mouse and human ANGPTL4 functional studies"
-            summary = "Primary ANGPTL4 studies reviewed here support LPL binding or ANGPTL4-dependent inflammatory outputs, but do not establish any of the listed syndecans as the direct ANGPTL4 receptor."
-            limitations = "Retain ANGPTL4 processing, LPL, integrin/neuropilin and inflammatory-output context; do not transfer HSPG or matrix association into a direct SDC1/2/3 ligand-receptor edge without pair-specific evidence."
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:29017031", "DOI:10.1016/j.devcel.2017.09.011"]
+            species = "human cell/recombinant and Xenopus developmental assays"
+            summary = "Primary studies show that secreted ANGPTL4 binds syndecans and participates in a ternary ANGPTL4-syndecan-LRP6 complex that is internalized and attenuates Wnt/beta-catenin signaling; the evidence supports syndecan-family receptor-proximal context but does not establish each isolated SDC1, SDC2 or SDC3 row as a complete receptor."
+            limitations = "Preserve the syndecan subtype, LRP6 co-receptor, Wnt-complex and assay context; do not decompose the ternary complex into an isolated ANGPTL4-syndecan signaling edge or infer a terminal TF route from Wnt attenuation alone."
         elif ligand == "C4B" and receptor == "CR2":
             disposition = "reject_precursor_or_non_edge_form"
             layer = "candidate_only_unverified"
@@ -1340,6 +1341,20 @@ def main() -> None:
             species = "human CGRP receptor-complex biochemical, structural and binding assays"
             summary = "Primary studies show that mature CGRP binds and activates the CALCRL/CLR-RAMP1 receptor complex, with RAMP1 determining receptor selectivity and contributing to the ligand-binding pocket; RAMP1 is therefore a required complex component rather than a complete receptor by itself."
             limitations = "Represent mature CGRP/CALCA processing and the CALCRL-RAMP1 complex together; do not materialize CALCA-to-RAMP1 as an isolated binary receptor edge or infer a complete downstream/TF route from complex binding and G-protein activation alone."
+        elif ligand == "EFNA3" and receptor == "EPHA4":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:22568954", "PMID:10366629"]
+            species = "mouse hippocampal and rat striatal ephrin-A3/Eph receptor assays"
+            summary = "Primary pull-down, mass-spectrometry and binding studies identify EphA4 as an ephrin-A3-associated receptor in adult mouse hippocampus and connect the pair to dendritic-spine, astrocyte glutamate-uptake and synaptic-plasticity context, while rat striatal assays show tissue-dependent selectivity toward EphA7; this supports a bounded EFNA3-EPHA4 edge rather than universal EphA4 specificity."
+            limitations = "Preserve ephrin-A3 form, EphA4 versus EphA7 tissue selectivity and neuronal context; do not infer identical affinity across EphA paralogs or a complete intracellular/TF route beyond the reported Eph signaling and synaptic outputs."
+        elif ligand == "KLK1" and receptor == "F2R":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:20482314", "PMID:24586431"]
+            species = "human tissue-kallikrein/PAR1 cell and prostate-cancer assays"
+            summary = "Primary studies support tissue kallikrein/KLK1-dependent prostate-cell migration and invasion through PAR1/F2R signaling and show KLK1-associated induction of PAR transcripts and MAPK-linked inflammatory responses; this is proteolytic receptor activation rather than a conventional soluble ligand-binding edge."
+            limitations = "Represent KLK1 as a protease-triggered PAR1 receptor-proximal input with cleavage and substrate-form context; do not materialize KLK1-F2R as an ordinary ligand-binding edge or infer a universal TF/target-gene route from the disease-model outputs."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
