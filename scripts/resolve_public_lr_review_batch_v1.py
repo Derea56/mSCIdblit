@@ -894,6 +894,20 @@ def main() -> None:
             species = "mouse leukocyte and human CCR2 structural/functional studies"
             summary = "Primary receptor-specificity studies identify CCR2 as the conventional CCL2 receptor and ACKR1/ACKR2 as atypical CCL2-binding receptors, while the listed ACKR4, CCR3, CCR5 and CXCR3 candidates were not supported as direct CCL2 receptors."
             limitations = "Retain CCL2-CCR2 and CCL2-ACKR1/ACKR2 with their species and scavenging/signaling boundaries; do not transfer CCL2 activity to other chemokine-receptor paralogs from family membership or shared inflammatory expression."
+        elif ligand == "VEGFD" and receptor == "FLT1":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:9435229", "PMID:11279005"]
+            species = "human and mouse VEGF-D receptor-specificity assays"
+            summary = "Primary receptor-binding and cross-linking studies identify VEGFR2/KDR and VEGFR3/FLT4 as VEGF-D receptors and report that VEGF-D does not bind VEGFR1/FLT1 under the tested conditions."
+            limitations = "Retain mature VEGFD-KDR/FLT4 receptor and species boundaries; do not transfer VEGF-A/FLT1 specificity to VEGF-D or infer an FLT1 route from VEGF-family membership."
+        elif ligand == "VEGFD" and receptor in {"ITGA1", "ITGA2", "ITGA4", "ITGA5"}:
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:21071450", "PMID:11786413", "PMID:11279005"]
+            species = "human and mouse VEGF/VEGF-D endothelial and integrin studies"
+            summary = "Primary studies support VEGF-family cooperation with integrin-mediated endothelial migration and signaling, and directly identify alpha9beta1 as a binding partner for VEGF-A/C/D, but they do not establish VEGFD binding to the listed alpha1, alpha2, alpha4 or alpha5 integrins."
+            limitations = "Retain VEGFD-KDR/FLT4 and integrin-assisted endothelial signaling as separate contextual layers; require an exact VEGFD-to-integrin binding or receptor-dependent assay before promotion and do not transfer alpha9beta1 evidence across integrin subunits."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
