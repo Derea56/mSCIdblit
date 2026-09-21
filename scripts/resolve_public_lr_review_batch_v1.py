@@ -887,6 +887,13 @@ def main() -> None:
             species = "human recombinant receptor and Xenopus embryonic assays"
             summary = "Primary ligand-dot-blot, cell-based and surface-plasmon-resonance studies identify FGFRL1 binding to selected FGF ligands but report no binding of FGF1 to FGFRL1-expressing cells under the tested conditions."
             limitations = "Retain the FGFRL1 decoy-receptor and selected-FGF specificity context; do not transfer canonical FGF1 binding to FGFRL1 without a new pair-specific assay or infer kinase signaling from a receptor lacking the canonical tyrosine-kinase domain."
+        elif ligand == "CCL2" and receptor in {"ACKR4", "CCR3", "CCR5", "CXCR3"}:
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:24890717", "PMID:35570218"]
+            species = "mouse leukocyte and human CCR2 structural/functional studies"
+            summary = "Primary receptor-specificity studies identify CCR2 as the conventional CCL2 receptor and ACKR1/ACKR2 as atypical CCL2-binding receptors, while the listed ACKR4, CCR3, CCR5 and CXCR3 candidates were not supported as direct CCL2 receptors."
+            limitations = "Retain CCL2-CCR2 and CCL2-ACKR1/ACKR2 with their species and scavenging/signaling boundaries; do not transfer CCL2 activity to other chemokine-receptor paralogs from family membership or shared inflammatory expression."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
