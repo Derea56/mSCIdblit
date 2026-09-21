@@ -1021,6 +1021,25 @@ def main() -> None:
             layer = "candidate_only_unverified"
             summary = "The current review pass did not verify an exact primary experiment for this CD40LG-to-listed-protein candidate."
             limitations = "Retain CD40LG-CD40 and separately supported CD40 receptor-proximal machinery; do not materialize the listed candidate from family membership, co-expression or downstream pathway association alone."
+        elif ligand == "RTN4" and receptor in {"LINGO1", "TNFRSF19"}:
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:15694321", "PMID:17189258", "PMID:23438185"]
+            species = "mouse and rat neuronal receptor-complex assays"
+            summary = "Primary Nogo-receptor studies place LINGO1 and TROY/TNFRSF19 in the NgR receptor complex that mediates cellular responses to myelin inhibitors, while direct ligand-binding assays localize Nogo-66 recognition to NgR1 rather than LINGO1; this is receptor-complex evidence, not a standalone RTN4-to-coreceptor binding edge."
+            limitations = "Retain RTN4/NgR1/LINGO1/TROY as a multicomponent inhibitory signaling route with the tested neuronal context; do not materialize RTN4-to-LINGO1 or RTN4-to-TNFRSF19 as independent binary receptor edges or infer a universal intracellular/TF route."
+        elif ligand == "RTN4" and receptor == "RTN4RL1":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:17189258", "PMID:22406547"]
+            species = "mouse Nogo-receptor-family binding and regeneration assays"
+            summary = "Primary ligand-panel and receptor-family studies report RTN4/Nogo-66 binding to NgR1 but not to NgR3/RTN4RL1 under the tested conditions; RTN4RL1 evidence in the cited literature concerns other ligands or receptor-family functions."
+            limitations = "Retain the RTN4-NgR1 route and distinguish RTN4RL1/NgR3 from NgR1; do not transfer receptor-family membership or RTN4RL1 binding by other ligands to an RTN4-RTN4RL1 edge."
+        elif ligand == "RTN4":
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_unverified"
+            summary = "The current review pass did not verify an exact primary experiment for this RTN4-to-listed-protein candidate."
+            limitations = "Retain the canonical RTN4/NgR1 receptor-complex route and the separately supported LINGO1/TROY context; do not materialize this candidate from Nogo-family membership or neuronal co-expression alone."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
