@@ -24,16 +24,25 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_BUNDLE = ROOT / "data/processed/mechanism_graph_module20_24_v2026_09_20_literature_expansion244"
+DEFAULT_BUNDLE = ROOT / "data/processed/mechanism_graph_module20_24_v2026_09_20_literature_expansion246"
 DEFAULT_CANDIDATES = ROOT / "data/processed/public_database_comparison_v2/public_only_lr_candidates.tsv"
 DEFAULT_PRIOR_AUDIT = ROOT / "data/processed/public_database_comparison_v2/primary_evidence_harvest_resolution.tsv"
-DEFAULT_RESOLUTION_LEDGER = ROOT / "data/processed/public_database_comparison_v2/candidate_triage_v1/batch_001_review_resolution.tsv"
+DEFAULT_RESOLUTION_LEDGER = ROOT / "data/processed/public_database_comparison_v2/candidate_triage_v1/review_resolution_ledger.tsv"
 DEFAULT_OUTPUT = ROOT / "data/processed/public_database_comparison_v2/candidate_triage_v1"
 
 PAIR_SEPARATORS = re.compile(r"[|_:;,/+\s]+")
 NON_ALNUM = re.compile(r"[^A-Z0-9]")
 NON_ENTITY_WORDS = {"COMPLEX", "RECEPTOR", "PROTEIN", "FAMILY", "CHAIN"}
-DIRECT_LR_RELATIONS = {"binds", "binds_receptor"}
+DIRECT_LR_RELATIONS = {
+    "binds",
+    "binds_receptor",
+    "activates",
+    "binds/activates",
+    "directly_binds",
+    "binds/acts through",
+    "binds/mediates transsynaptic adhesion",
+    "binds/modulates",
+}
 PRIMARY_LOCATOR = re.compile(r"\b(?:PMID|PMCID)\s*:\s*[A-Z0-9]+|\bdoi\s*:\s*10\.\d{4,9}/\S+", re.IGNORECASE)
 
 
