@@ -2731,6 +2731,131 @@ def main() -> None:
                 layer = "candidate_only_unverified"
                 summary = "MMP-family labels are extracellular proteases that process matrix, receptor or ligand substrates; the public rows do not establish conventional mature ligand-receptor edges."
                 limitations = "Represent proteolytic cleavage, shedding and receptor-proximal remodeling separately; do not materialize MMP-to-substrate or MMP-to-receptor rows as ligand edges without exact primary support."
+            elif ligand == "MPDZ":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "MPDZ is an intracellular polarity and tight-junction scaffold, not a mature extracellular ligand for claudin or JAM-family targets."
+                limitations = "Represent tight-junction scaffolding separately; do not materialize MPDZ-to-junction-protein rows as ligand edges."
+            elif ligand == "MPIG6B":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "MPIG6B is a membrane/platelet-associated protein with immune and adhesion context, but the listed AGER, BOC, IL1RL1, OSCAR, ROBO or UNC5 targets were not verified as exact direct MPIG6B receptors."
+                limitations = "Require exact MPIG6B orientation, receptor, species and primary assay; do not transfer platelet or adhesion-family evidence across unrelated targets."
+            elif ligand == "MPZ":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "MPZ/P0 is a myelin adhesion protein with neural cell-surface context, but the listed immune-receptor and cytokine targets were not verified as exact direct MPZ receptor pairs."
+                limitations = "Require exact MPZ ectodomain, receptor orientation and primary assay; do not transfer myelin adhesion or immune-family evidence across paralogs."
+            elif ligand.startswith("MPZL"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "MPZL-family labels are membrane immunoglobulin-superfamily proteins, not mature soluble ligands for the listed targets."
+                limitations = "Represent MPZL adhesion and receptor-complex orientation separately; do not invert membrane proteins into ligand edges without direct primary support."
+            elif ligand == "MSMB":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "MSMB is a secreted prostate-associated protein, but an exact MSMB-to-GPR55 receptor experiment was not verified in this pass."
+                limitations = "Require direct MSMB/GPR55 binding or receptor-dependent function; do not infer GPR55 specificity from secreted-protein status."
+            elif ligand == "MSN":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "MSN/moesin is an intracellular membrane-cytoskeletal linker, not a mature extracellular ligand for SLC9A1."
+                limitations = "Represent ezrin-radixin-moesin cytoskeletal mechanisms separately; do not materialize MSN-to-transporter rows as ligand edges."
+            elif ligand == "MSTN":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:11459935", "PMID:14517293", "PMID:33219121"]
+                species = "mouse; human comparator"
+                summary = "Primary myostatin evidence supports activin type-II receptor engagement and type-I receptor-complex signaling, but the public single-subunit rows do not establish each component as an independent binary receptor edge."
+                limitations = "Retain mature MSTN and intact ACVR2A/ACVR2B with ACVR1B or TGFBR1 receptor-complex topology; do not collapse complex evidence into unsupported free-subunit edges."
+            elif ligand.startswith("MUC"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Mucin-family rows can represent membrane glycoprotein, secreted-mucus or glycan-mediated interactions, but the exact mucin form, glycan context and direct receptor mechanism for these targets were not verified."
+                limitations = "Require exact mucin isoform/domain, glycosylation state, receptor orientation and primary assay; do not transfer MUC1/MUC2/MUC4 biology across lectin, AGR2 or ERBB-family targets."
+            elif ligand.startswith("MUG"):
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "MUG1/MUG2 remain unresolved public protein labels in this pass, and no exact mature ligand identity or direct MMP/SCTR receptor assay was verified."
+                limitations = "Resolve the source identifiers and protein forms before promotion; do not infer receptor specificity from unresolved MUG labels."
+            elif ligand == "MXRA8":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "MXRA8 is a cell-surface adhesion/immune protein, but the listed JAM3 target was not verified as an exact direct MXRA8 receptor interaction in this pass."
+                limitations = "Require direct MXRA8/JAM3 binding or receptor-dependent function; do not infer an adhesion edge from shared membrane localization."
+            elif ligand.startswith("NAALAD"):
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "NAALADL1 remains an unresolved membrane/enzyme-family label for this candidate, and no exact mature ligand identity or direct CD96 assay was verified."
+                limitations = "Resolve the source identifier and protein form before promotion; do not infer CD96 specificity from database membership alone."
+            elif ligand == "NAMPT":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "NAMPT is an intracellular enzyme and extracellular cytokine-like factor in some contexts, but these free integrin rows describe expression or adhesion regulation rather than a verified mature NAMPT-integrin ligand edge."
+                limitations = "Retain exact extracellular NAMPT receptor evidence separately; do not materialize NAMPT-to-ITGA5/ITGB1 from integrin-expression or adhesion context alone."
+            elif ligand.startswith("NCAM"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "NCAM-family candidates describe neural cell-adhesion and co-receptor contexts, but the exact NCAM isoform, cis/trans orientation and direct mechanism for the listed targets were not verified in this pass."
+                limitations = "Preserve NCAM family, polysialylation/isoform state and adhesion orientation; require exact pair-level primary evidence before promotion and do not infer soluble ligand signaling."
+            elif ligand == "NDP" and receptor == "LRP5":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Norrin/NDP signaling requires the FZD4-LRP5/6 receptor complex and often TSPAN12, so the public NDP-to-LRP5 row is retained as a component-level receptor context rather than a standalone binary edge."
+                limitations = "Preserve the intact NDP/FZD4/LRP5/6/TSPAN12 topology and do not infer LRP5 as a complete standalone NDP receptor."
+            elif ligand.startswith("NECTIN"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Nectin-family rows describe homophilic/heterophilic adhesion and immune-checkpoint interactions, but the exact Nectin paralog, receptor orientation and pair-specific primary support for these candidates were not all resolved in this pass."
+                limitations = "Preserve Nectin isoform, cis/trans orientation and known CD96, CD226, TIGIT, PVRIG or CADM context; do not encode self-loops or transfer evidence across Nectin paralogs."
+            elif ligand.startswith("NEGR") or ligand.startswith("NEO1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "NEGR/Neogenin-family candidates describe neural adhesion and guidance contexts, but the exact receptor or co-receptor topology for these rows was not verified as a direct primary-supported ligand edge."
+                limitations = "Require exact paralog, orientation and primary assay; do not transfer neural guidance or morphogen co-receptor evidence across NEGR/NEO1 targets."
+            elif ligand.startswith("NETO") or ligand.startswith("NFASC"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "NETO/NFASC-family candidates describe neuronal adhesion or ion-channel co-receptor contexts, but the exact receptor complex and pair-specific primary mechanism were not verified."
+                limitations = "Preserve neural adhesion and co-receptor topology; require direct pair-level primary evidence before promotion and do not infer soluble ligand signaling."
+            elif ligand == "NGF":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "NGF signaling is centered on NTRK1 and p75NTR; the listed ERBB2, TRPV1 and other targets may reflect crosstalk or sensitization rather than direct canonical ligand-receptor binding."
+                limitations = "Retain exact NGF/NTRK1/NGFR receptor-complex evidence and distinguish TRPV1 sensitization from direct binding; do not promote unrelated target rows without pair-specific primary support."
+            elif ligand == "NLGN1" and receptor == "NRXN3":
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E005169"
+                primary = ["PMID:20519524"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "as stated in primary model/assay"
+                summary = "The graph already contains the primary-supported neuroligin-1 to beta-neurexin-3 transsynaptic adhesion relationship."
+                limitations = "Preserve splice-isoform and synaptic adhesion context; do not duplicate the edge or infer a universal intracellular or terminal-TF route from adhesion alone."
+            elif ligand == "NMU":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Neuromedin U receptor biology is centered on NMUR1/MLNR and NMUR2/MLN2R, not the adrenergic receptor listed here."
+                limitations = "Require mature NMU and direct NMUR-family assay; do not transfer neuromedin-U specificity to unrelated GPCRs."
             elif ligand.startswith("ADAM"):
                 disposition = "hold_contextual_or_complex_boundary"
                 primary = reviewed
