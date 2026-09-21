@@ -3639,6 +3639,79 @@ def main() -> None:
                 limitations = "Preserve mature TGFB3 dimer, cooperative receptor-receptor assembly and betaglycan handoff semantics; do not promote isolated TGFBR1 signaling or infer unsupported terminal-TF/SCI output."
             else:
                 raise SystemExit(f"unhandled batch 181 pair: {pair}")
+        elif row.get("review_batch") == "batch_182":
+            pair = (ligand, receptor)
+            if pair == ("TGFBI", "ITGA3"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:10906123", "DOI:10.1074/jbc.M002752200", "PMID:12074567"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary recombinant-domain, motif-blocking and cell-adhesion studies support direct TGFBI/betaig-H3 binding to assembled alpha3beta1 with epithelial adhesion, spreading and migration outputs."
+                limitations = "Preserve FAS1-domain motif context and alpha3beta1 heterodimer; do not infer a universal integrin relay, SCI or terminal-TF activity."
+            elif pair == ("TGFBI", "ITGAV"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:12270930", "PMID:16672769", "DOI:10.1038/emm.2006.19", "PMID:23792174", "PMID:15899806", "DOI:10.1158/0008-5472.CAN-04-2705"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; rat; mouse comparator"
+                summary = "Primary motif-mapping, binding, adhesion, migration and anti-angiogenic studies support TGFBI/betaig-H3 engagement of assembled alphaVbeta5 and alphaVbeta3 integrins."
+                limitations = "Preserve the tested alphaV heterodimer, YH18/FAS1/RGD motif and full-length versus fastatin fragment context; do not export autonomous ITGAV signaling or infer SCI/terminal-TF output."
+            elif pair == ("TGFBI", "ITGB1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:10906123", "DOI:10.1074/jbc.M002752200", "PMID:12074567"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary studies support TGFBI/betaig-H3 binding and epithelial adhesion/migration through assembled alpha3beta1."
+                limitations = "Preserve alpha3beta1 and the FAS1-domain motif context; do not split beta1 from alpha3, infer free ITGB1 signaling or assign SCI/terminal-TF output."
+            elif pair == ("TGFBI", "ITGB3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:23792174", "PMID:15899806", "DOI:10.1158/0008-5472.CAN-04-2705"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse comparator"
+                summary = "Primary binding, focal-adhesion and endothelial anti-angiogenic studies support TGFBI/betaig-H3 engagement of assembled alphaVbeta3."
+                limitations = "Preserve full-length versus fastatin/FAS1 fragment and cooperative RGD binding; do not split beta3 from alphaV, infer free ITGB3 signaling or assign SCI output."
+            elif pair == ("TGFBI", "ITGB5"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:12270930", "DOI:10.1074/jbc.M207055200", "PMID:16672769", "DOI:10.1038/emm.2006.19"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; rat"
+                summary = "Primary FAS1/YH-motif mapping, receptor-transfected-cell adhesion and vascular smooth-muscle migration studies support TGFBI/betaig-H3 engagement of assembled alphaVbeta5."
+                limitations = "Preserve alphaVbeta5 and YH18/FAS1 matrix-motif context; do not split beta5 from alphaV, infer free ITGB5 signaling or assign SCI output."
+            elif pair == ("THBS1", "ITGA2B"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:2478219"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "Primary platelet-affinity chromatography supports TSP1 binding to GP IIb-IIIa/alphaIIbbeta3 in an RGD-dependent platelet membrane context."
+                limitations = "Preserve assembled alphaIIbbeta3, platelet membrane and RGD-dependent context; do not split alphaIIb from beta3, infer a universal platelet relay or assign SCI/terminal-TF output."
+            elif pair == ("THBS1", "ITGA3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:10982388", "PMCID:PMC14963", "DOI:10.1091/mbc.11.9.2885", "PMID:10196234", "PMID:11358957", "DOI:10.1074/jbc.274.16.11408"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary endothelial and integrin-adhesion studies support TSP1 recognition of assembled alpha3beta1 and contact-dependent endothelial responses."
+                limitations = "Preserve TSP1 conformation, alpha3beta1 activation state and tested peptide/domain context; do not split alpha3 from beta1, infer free ITGA3 signaling or assign SCI output."
+            elif pair == ("THBS1", "ITGB1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:10982388", "PMID:14699013", "PMID:15292271", "PMID:12909644", "PMID:17413041", "PMID:11980922", "PMCID:PMC2173289"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse; mixed"
+                summary = "Primary studies support multiple TSP1 receptor complexes containing beta1, including alpha3beta1, alpha4beta1, alpha6beta1 and alpha9beta1, with endothelial adhesion, migration or angiogenesis outputs."
+                limitations = "Preserve each assembled integrin heterodimer and TSP1 domain/conformation context; do not promote free ITGB1 signaling, collapse distinct complexes or infer SCI/terminal-TF output."
+            elif pair == ("THBS1", "ITGB3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:2478219"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary platelet-affinity studies support TSP1 binding to assembled alphaVbeta3-containing and alphaIIbbeta3/GP IIb-IIIa platelet integrin contexts."
+                limitations = "Preserve the distinct alphaVbeta3 and alphaIIbbeta3 complexes, RGD-dependent platelet context and receptor-complex resolution; do not promote free ITGB3 signaling or infer SCI/terminal-TF output."
+            elif pair == ("THBS2", "ITGB3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_or_direct_molecular"
+                species = "mouse"
+                summary = "The current graph contains only a frozen THBS2-integrin beta3 alias; no stable pair-specific primary packet for isolated THBS2-ITGB3 is available in this bundle."
+                limitations = "Preserve the possibility of an assembled integrin complex and thrombospondin-domain context; do not promote isolated THBS2-ITGB3 binding or infer downstream, SCI or terminal-TF evidence from the frozen row."
+            else:
+                raise SystemExit(f"unhandled batch 182 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
