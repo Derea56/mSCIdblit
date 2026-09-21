@@ -859,6 +859,20 @@ def main() -> None:
             species = "human collagen-IV and renal-cell assays"
             summary = "Primary studies establish alpha1beta1 binding to collagen-IV regions and distinguish alpha3-chain NC1 interactions through other integrins, but they do not verify alpha1beta1 as the direct receptor for the isolated alpha3 NC1 candidate."
             limitations = "Retain collagen-IV integrin-family and chain-composition context; require an alpha3 NC1-specific alpha1beta1 assay before promotion and do not transfer generic collagen-IV binding across NC1 chains."
+        elif ligand == "FN1" and receptor == "SDC2":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:23333331"]
+            species = "human colon-carcinoma cell adhesion assays"
+            summary = "Primary cell-spreading and interaction assays show that syndecan-2 extracellular-domain expression regulates cellular attachment, spreading and migration on fibronectin, but do not establish a purified direct FN1-to-SDC2 binding edge."
+            limitations = "Retain the fibronectin-matrix and syndecan-2 cell-adhesion context; require direct ligand-binding or receptor-dependent perturbation before promotion and do not infer a canonical intracellular or TF route from matrix adhesion alone."
+        elif ligand == "FN1" and receptor == "PLAUR":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:19411312", "PMID:15684035"]
+            species = "human fibroblast and tumor-cell adhesion assays"
+            summary = "Primary studies place uPAR/PLAUR in integrin-dependent adhesion and signaling on fibronectin, including uPAR modulation of alpha5beta1 fibronectin binding, but the demonstrated interactions are uPAR-integrin and uPAR-uPA mechanisms rather than direct FN1-to-PLAUR receptor binding."
+            limitations = "Retain uPAR-integrin, uPA and fibronectin-matrix crosstalk as receptor-proximal context; do not materialize FN1-PLAUR as a direct binary ligand edge or infer a standalone uPAR signaling route from matrix colocalization."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
