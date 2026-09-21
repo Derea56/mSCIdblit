@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:CXCL11>ACKR3	CXCL11	ACKR3	M21B-E000261	KEGG: mmu04060	represented_graph_alias	batch_114
+LR:CXCL12>ITGB1	CXCL12	ITGB1	M21B-E006238;M21B-E006239;M23B-E000416;M23B-E000419		represented_graph_alias	batch_114
+LR:CXCL1>ACKR1	CXCL1	ACKR1	M21B-E000420	KEGG: mmu04060	represented_graph_alias	batch_114
+LR:CXCL5>ACKR1	CXCL5	ACKR1	M21B-E000421	KEGG: mmu04060	represented_graph_alias	batch_114
+LR:DCN>TLR2	DCN	TLR2	M21B-E000869;M24B-E000125		represented_graph_alias	batch_114
+LR:DLK2>NOTCH1	DLK2	NOTCH1	M21B-E006998		represented_graph_alias	batch_114
+LR:EDA>EDAR	EDA	EDAR	M21B-E000464	KEGG: mmu04060	represented_graph_alias	batch_114
+LR:EDIL3>ITGAV	EDIL3	ITGAV	M21B-E001161;M21B-E001162;M21B-E001163;M23B-E000135;M23B-E000432;M23B-E000958		represented_graph_alias	batch_114
+LR:EDIL3>ITGB3	EDIL3	ITGB3	M21B-E001161;M23B-E000135		represented_graph_alias	batch_114
+LR:EDIL3>ITGB5	EDIL3	ITGB5	M21B-E001162;M23B-E000135;M23B-E000432;M23B-E000958		represented_graph_alias	batch_114
