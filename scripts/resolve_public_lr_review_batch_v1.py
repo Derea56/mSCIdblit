@@ -373,7 +373,14 @@ def main() -> None:
             layer = "candidate_only_unverified"
             summary = "The public row uses a composite steroid-metabolism and receptor-subunit label rather than a mature prostaglandin ligand directly assayed against PTGFR."
             limitations = "Do not materialize AKR1C/CHRNG composite machinery as a PTGFR ligand; retain mature prostaglandin-to-PTGFR evidence only when the ligand form and receptor assay are explicit."
-        elif ligand in {"C4A", "CCL1", "CCL8", "CEACAM2"} or (ligand == "CD200" and receptor == "CD200R3"):
+        elif ligand == "CD200" and receptor == "CD200R3":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:12960329", "PMID:17982101", "PMID:26315370"]
+            species = "mouse"
+            summary = "Primary CD200-receptor-family work distinguishes the canonical CD200-CD200R interaction from CD200R-related activating receptors, while CD200Fc studies report CD200R3 expression and microglial outputs without establishing direct CD200 binding to CD200R3."
+            limitations = "Retain CD200-CD200R1 as the canonical ligand-receptor edge; keep CD200R3 as a receptor-family and functional-context hold until an exact CD200-CD200R3 binding or receptor-dependent ligand assay is identified."
+        elif ligand in {"C4A", "CCL1", "CCL8", "CEACAM2"}:
             disposition = "no_primary_evidence_found"
             layer = "candidate_only_review_locator"
             summary = "The public locator was reviewed, but it did not verify an exact primary experiment for this ligand-receptor pair in the current pass."
@@ -3805,6 +3812,27 @@ def main() -> None:
                 species = "mouse"
                 summary = "Primary Sema5A binding and neuronal-function experiments tested PlexA paralogs and found selective binding/function through PlexA1 and PlexA2, not a verified direct Sema5A-PlexA3 edge."
                 limitations = "Retain the Sema5A-PlexA1/PlexA2 specificity and neuronal context; do not transfer it to PLXNA3 or infer a complete downstream route from semaphorin-family membership."
+            elif ligand == "SEMA5B" and receptor == "PLXNA3":
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:21835343"]
+                species = "mouse"
+                summary = "Primary retinal-development experiments support a Sema5B-PlexinA3 functional route: Sema5A/Sema5B constrain neurite outgrowth through PlexinA1/PlexinA3 in vitro and in vivo, with retinal lamination and response outputs."
+                limitations = "Promote only as a bounded transmembrane-semaphorin functional route; the study establishes receptor-dependent neurite effects rather than purified binary binding, intracellular relay or a terminal-TF output."
+            elif ligand == "JAG2" and receptor == "NOTCH4":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = ["PMID:23530123", "PMID:21372153"]
+                species = "human"
+                summary = "Primary Jagged2 studies support Notch1/Notch3 activation and lineage outputs, but do not verify the exact Jagged2-Notch4 pair represented by this public candidate."
+                limitations = "Retain Jagged2-Notch1/Notch3 specificity and contact-dependent Notch context; do not transfer those results to NOTCH4 or infer a complete downstream route without pair-specific evidence."
+            elif ligand == "CD200" and receptor == "CD200R3":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = ["PMID:12960329", "PMID:17982101", "PMID:26315370"]
+                species = "mouse"
+                summary = "Primary CD200-receptor-family work distinguishes the canonical CD200-CD200R interaction from CD200R-related activating receptors, while CD200Fc studies report CD200R3 expression and microglial outputs without establishing direct CD200 binding to CD200R3."
+                limitations = "Retain CD200-CD200R1 as the canonical ligand-receptor edge; keep CD200R3 as a receptor-family and functional-context hold until an exact CD200-CD200R3 binding or receptor-dependent ligand assay is identified."
             else:
                 disposition = "no_primary_evidence_found"
                 layer = "candidate_only_unverified"
@@ -3845,6 +3873,27 @@ def main() -> None:
             species = "human; mouse; pig"
             summary = "Primary endothelial, mouse-artery and human coronary-cell experiments support a JAG1-NOTCH4 mechanosensing route: disturbed flow increases NOTCH4 activation, JAG1 blockade reduces N4ICD, and endothelial Jag1 deletion changes atherosclerotic and endothelial-state outputs."
             limitations = "Retain the contact-dependent Notch and disturbed-flow context; the study supports receptor-dependent pathway function rather than purified JAG1-NOTCH4 binding, and it does not assert a universal terminal-TF or SCI route."
+        elif ligand == "JAG2" and receptor == "NOTCH4":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:23530123", "PMID:21372153"]
+            species = "human"
+            summary = "Primary Jagged2 studies support Notch1/Notch3 activation and lineage outputs, but do not verify the exact Jagged2-Notch4 pair represented by this public candidate."
+            limitations = "Retain Jagged2-Notch1/Notch3 specificity and contact-dependent Notch context; do not transfer those results to NOTCH4 or infer a complete downstream route without pair-specific evidence."
+        elif ligand == "SEMA5B" and receptor == "PLXNA3":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:21835343"]
+            species = "mouse"
+            summary = "Primary retinal-development experiments support a Sema5B-PlexinA3 functional route: Sema5A/Sema5B constrain neurite outgrowth through PlexinA1/PlexinA3 in vitro and in vivo, with retinal lamination and response outputs."
+            limitations = "Promote only as a bounded transmembrane-semaphorin functional route; the study establishes receptor-dependent neurite effects rather than purified binary binding, intracellular relay or a terminal-TF output."
+        elif ligand == "CD200" and receptor == "CD200R3":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:12960329", "PMID:17982101", "PMID:26315370"]
+            species = "mouse"
+            summary = "Primary CD200-receptor-family work distinguishes the canonical CD200-CD200R interaction from CD200R-related activating receptors, while CD200Fc studies report CD200R3 expression and microglial outputs without establishing direct CD200 binding to CD200R3."
+            limitations = "Retain CD200-CD200R1 as the canonical ligand-receptor edge; keep CD200R3 as a receptor-family and functional-context hold until an exact CD200-CD200R3 binding or receptor-dependent ligand assay is identified."
         elif ligand in {"JAG1", "JAG2"} and receptor == "NOTCH4":
             disposition = "no_primary_evidence_found"
             layer = "candidate_only_review_locator"
