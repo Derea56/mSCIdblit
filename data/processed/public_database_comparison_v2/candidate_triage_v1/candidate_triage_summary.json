@@ -7,7 +7,7 @@
     "sha256": "31189239be3f4b6f91a87c92b1716ccac294f468279c7122693624c55c508732"
   },
   "candidate_units": 7753,
-  "completed_batch_review_units": 4100,
+  "completed_batch_review_units": 4400,
   "graph_input": {
     "direct_lr_edges": 8112,
     "path": "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion251/mechanism_edges.tsv",
@@ -28,8 +28,8 @@
   "prior_harvest_rows": 25,
   "resolution_ledger_input": {
     "path": "data/processed/public_database_comparison_v2/candidate_triage_v1/review_resolution_ledger.tsv",
-    "rows": 4100,
-    "sha256": "27d0b14531395bdee8c23cae0520efcc4713ceb575e859bfc87ff493744f1379"
+    "rows": 4400,
+    "sha256": "00659710350d43258275f8208a753af11fd0e232bc6fc3229b958e777acbecc1"
   },
   "review_batch_counts": {
     "batch_001": 100,
@@ -55,21 +55,18 @@
     "batch_021": 100,
     "batch_022": 100,
     "batch_023": 100,
-    "batch_024": 100,
-    "batch_025": 100,
-    "batch_026": 100,
-    "batch_027": 60
+    "batch_024": 60
   },
   "review_batch_size": 100,
   "review_lane_counts": {
-    "completed_batch_review": 4100,
+    "completed_batch_review": 4400,
     "completed_prior_harvest": 25,
-    "discovery_review": 2660,
+    "discovery_review": 2360,
     "represented_graph_alias": 960,
     "resolved_graph_match": 8
   },
-  "review_queue_rows": 2660,
+  "review_queue_rows": 2360,
   "review_queue_with_primary_locators": 0,
-  "review_queue_without_primary_locators": 2660,
+  "review_queue_without_primary_locators": 2360,
   "triage_id": "mSCIdblit:public-lr-candidate-triage-v1"
 }
