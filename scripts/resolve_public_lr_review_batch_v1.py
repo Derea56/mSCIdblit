@@ -697,6 +697,48 @@ def main() -> None:
                 layer = "candidate_only_review_locator"
                 summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
                 limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
+        elif row.get("review_batch") == "batch_089":
+            pair = (ligand, receptor)
+            if pair == ("CCL11", "ACKR4"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:32480426"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human systematic beta-arrestin screening of chemokines against ACKR4"
+                summary = "A systematic primary screening study tested 43 chemokines against ACKR4 and did not identify CCL11/eotaxin-1 as an ACKR4 agonist, while defining the supported ACKR4 ligand panel."
+                limitations = "Preserve the negative ACKR4 screen and CCL11's established CCR3 context; do not infer ACKR4 binding from CC-chemokine family membership or broad receptor promiscuity."
+            elif pair == ("CCL20", "CXCR3"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:11373289", "PMID:19305396"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "murine CCL20 structure, receptor-specificity and CCR6-dependent CNS-entry studies"
+                summary = "Primary studies define CCL20 as a highly selective CCR6 ligand and link CCL20-CCR6 to cellular recruitment; they do not support CCL20 as a CXCR3 ligand."
+                limitations = "Represent CCL20-CCR6 with the reported structural and cell-migration context; do not transfer CCL20 activity to CXCR3 or infer a receptor edge from coexpression of CXCR3-positive cells."
+            elif pair == ("CCL21B", "CXCR3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:11907075"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "murine microglia and CCR7/CXCR3 knockout chemotaxis assays using CCL21-family ligand"
+                summary = "Primary microglial experiments show that a CCL21-family ligand can activate CXCR3-dependent chloride current and chemotaxis in brain microglia, while CCR7 mediates the canonical lymphoid context; the study does not resolve the public CCL21B label as a distinct isoform."
+                limitations = "Retain CCL21B-CXCR3 as cell-state- and isoform-bounded contextual evidence, especially for CNS microglia; do not generalize it to canonical lymphoid CCL21 signaling or materialize a universal CCL21B-CXCR3 edge without isoform-resolved primary evidence."
+            elif pair == ("CCL25", "CCR10"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:17548595"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "murine CCL25-deficient and CCR9-deficient intestinal immune-cell studies"
+                summary = "Primary genetic and lymphocyte-trafficking studies define CCL25 and CCR9 as the relevant gut-homing chemokine/receptor pair and report matching phenotypes in CCL25- and CCR9-deficient mice; they do not support CCR10 as the CCL25 receptor."
+                limitations = "Represent CCL25-CCR9 with the gut and thymic context tested in the primary study; do not transfer CCL25 activity to CCR10 or infer receptor specificity from chemokine-family relationships."
+            elif pair == ("CCL11", "CCR5"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:8642344", "PMID:11559700"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human CCL11/CCR3 cloning and human CCL11/CCR2b partial-agonist studies"
+                summary = "Primary studies establish CCR3 as the high-affinity eosinophil receptor for CCL11 and separately report weak, high-concentration partial agonism at CCR2b; they do not verify direct CCL11-to-CCR5 activation."
+                limitations = "Retain CCL11-CCR5 only as a bounded unresolved chemokine-family context pending an exact CCR5 assay; represent the demonstrated CCR3 and CCR2b activities separately and do not promote a direct CCR5 edge."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
