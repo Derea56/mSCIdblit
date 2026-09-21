@@ -908,6 +908,13 @@ def main() -> None:
             species = "human and mouse VEGF/VEGF-D endothelial and integrin studies"
             summary = "Primary studies support VEGF-family cooperation with integrin-mediated endothelial migration and signaling, and directly identify alpha9beta1 as a binding partner for VEGF-A/C/D, but they do not establish VEGFD binding to the listed alpha1, alpha2, alpha4 or alpha5 integrins."
             limitations = "Retain VEGFD-KDR/FLT4 and integrin-assisted endothelial signaling as separate contextual layers; require an exact VEGFD-to-integrin binding or receptor-dependent assay before promotion and do not transfer alpha9beta1 evidence across integrin subunits."
+        elif ligand in {"COL9A1", "COL9A2", "COL9A3"} and receptor in {"ITGA1+ITGB1", "ITGA2+ITGB1", "ITGA10+ITGB1"}:
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:15383545"]
+            species = "human recombinant collagen IX and human chondrocyte/CHO adhesion assays"
+            summary = "Primary adhesion, recombinant-integrin and alpha-I-domain studies show collagen IX recognition by alpha1beta1, alpha2beta1 and alpha10beta1, but the public row names one COL9 chain rather than the assembled collagen-IX ligand tested in the primary assays."
+            limitations = "Retain collagen-IX integrin adhesion and cartilaginous-matrix context; require chain-assembly and exact isoform evidence before promotion of an individual COL9A1/2/3 row and do not infer a soluble signaling cascade from matrix adhesion alone."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
