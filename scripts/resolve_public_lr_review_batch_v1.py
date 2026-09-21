@@ -2915,6 +2915,64 @@ def main() -> None:
                 "evidence from frozen Module 20 aliases, and retain species and assay limits; these edges "
                 "do not assert a universal intracellular cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_171":
+            pair = (ligand, receptor)
+            if pair == ("LGALS8", "ITGA3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:10852818", "DOI:10.1098/rsob.2020.0308"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary work links galectin-8 to integrin-mediated adhesion and apoptosis in an alpha3beta1-containing context, which represents the public LGALS8-ITGA3 row through a receptor-complex alias rather than an isolated alpha3 core-protein interface."
+                limitations = "Preserve galectin glycan-binding multivalency and the alpha3beta1 heterodimer; do not split ITGA3 from ITGB1, infer a universal intracellular or TF route, or treat the contextual apoptosis assay as direct binary binding."
+            elif pair == ("LIF", "IL6ST"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_or_direct_molecular"
+                species = "mouse"
+                summary = "The current graph retains a frozen LIF-to-IL6ST/LIFR composite-receptor representation from the LIANA mouse consensus, but no stable pair-specific primary evidence packet is available in this bundle."
+                limitations = "Preserve IL6ST/gp130 and LIFR receptor-complex topology; do not materialize isolated IL6ST as the complete LIF receptor or infer downstream/SCI/terminal-TF evidence from the database-only closure."
+            elif pair == ("LPL", "GPIHBP1"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMCID:PMC6358717", "PMID:30559189"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary structural and biochemical work directly resolves the human LPL-GPIHBP1 complex, including a 1:1 interface, preserved lipase activity and endothelial transport/stabilization context."
+                limitations = "Preserve GPIHBP1 as an endothelial transporter/stabilizing partner rather than a kinase receptor; do not transfer LPL biology to LRP1/VLDLR or infer a kinase, SCI or terminal-TF route."
+            elif pair == ("LRFN1", "PTPRS"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:32822567", "PMCID:PMC7440162"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "Primary human cell-surface interaction and SPR assays validate the SALM2/LRFN1 extracellular interaction with PTPRS/PTPσ."
+                limitations = "Promote exact extracellular binding only; preserve SALM2/LRFN1 and PTPRS splice-family context and do not infer synaptic function, phosphatase relay, SCI transfer or terminal-TF activity."
+            elif pair in {("LTA", "LTBR"), ("LTB", "LTBR")}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_or_direct_molecular"
+                species = "mouse"
+                summary = "The current graph retains a frozen LTA/LTB-complex-to-LTBR representation, but the public row does not resolve whether the ligand is soluble LTalpha3, membrane LTalpha1beta2 or an isolated LTB chain."
+                limitations = "Preserve lymphotoxin ligand-form and LTBR complex distinctions; do not split the composite edge into isolated LTA-LTBR or LTB-LTBR binaries, infer a unique intracellular relay, or claim terminal-TF output."
+            elif pair in {("MADCAM1", "ITGA4"), ("MADCAM1", "ITGB7")}:
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:7687523", "PMID:23553626", "PMID:17868448", "DOI:10.1074/jbc.M113.462630"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mixed"
+                summary = "Primary integrin and adhesion studies resolve MAdCAM-1 binding to the alpha4beta7 heterodimer and connect the interaction to mucosal endothelial addressin and lymphocyte-homing assays."
+                limitations = "Preserve the alpha4beta7 heterodimer, MAdCAM-1 activation state, mucosal endothelial and Mn2+/blocking-antibody assay context; do not split ITGA4 from ITGB7 or infer a universal intracellular or TF route."
+            elif pair == ("MCAM", "CNTN1"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:35922511", "PMCID:PMC9365698", "DOI:10.1038/s41586-022-05028-x"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "Primary human cell-surface interactome mapping validates direct extracellular MCAM/CD146-CNTN1 binding with receptor-transfected cell-binding and SPR assays."
+                limitations = "Promote direct extracellular binding only; preserve CD146/CNTN1 nomenclature and do not infer downstream adhesion, SCI-specific signaling or terminal-TF activity."
+            elif pair == ("MDK", "ITGA6"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:18851943", "DOI:10.1016/j.bbrc.2008.09.138"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary work supports midkine in a TSPAN1-associated alpha6beta1 signaling complex with STAT1-alpha pathway output, representing complex-context evidence rather than isolated MDK-ITGA6 binding."
+                limitations = "Preserve the TSPAN1-associated alpha6beta1 complex and distinguish STAT1-alpha output from direct ligand-TF evidence; do not split ITGA6 from ITGB1 or infer a universal midkine relay."
+            else:
+                raise SystemExit(f"unhandled batch 171 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
