@@ -1220,6 +1220,41 @@ def main() -> None:
             layer = "candidate_only_review_locator"
             summary = "The LOC-prefixed public identifier was not resolved to a verified mature ligand identity and exact receptor assay in this pass."
             limitations = "Resolve the species-specific gene and protein form before promotion; do not infer receptor specificity from an unresolved LOC label or public-database membership alone."
+        elif ligand == "BDNF" and receptor == "NGFR":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:9472042"]
+            species = "mouse sympathetic-neuron and neuronal apoptosis assays"
+            summary = "Primary neuronal studies show that BDNF activates p75/NGFR-dependent apoptosis, with function-blocking p75 antibody and p75-null neurons reducing the response; BDNF also induces c-Jun phosphorylation in the reported model."
+            limitations = "Preserve the BDNF/p75-NGFR, neuronal apoptosis and c-Jun context; do not generalize this p75 route to all BDNF responses or infer a unique intracellular cascade beyond the reported model."
+        elif ligand == "C3" and receptor == "C3AR1":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:9382922", "PMID:10092660"]
+            species = "mouse and human C3a-receptor assays"
+            summary = "Primary C3a-receptor studies show that C3a, the proteolytic fragment generated from complement C3, binds C3AR1 and triggers calcium signaling; the intact C3 precursor label is therefore not the direct ligand form."
+            limitations = "Retain mature C3a-to-C3AR1 signaling and complement C3 processing separately; do not materialize intact C3 as a direct C3AR1 ligand or infer receptor specificity across C3 fragments."
+        elif ligand == "CCL21B" and receptor == "CCR7":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:19451552", "PMID:34586443"]
+            species = "mouse and human CCL21/CCR7 studies"
+            summary = "Primary CCL21 studies establish CCR7-dependent signaling, T-cell costimulation and chemotaxis, but the candidate uses the CCL21B paralog label and the reviewed studies do not resolve the exact CCL21B isoform in the assayed mature ligand."
+            limitations = "Retain CCL21-family-to-CCR7 signaling and the reported DOCK2/Rac/Akt/MEK/ERK outputs; resolve CCL21B isoform and species identity before promoting this exact row."
+        elif ligand == "CCL5" and receptor == "CCR4":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation"
+            primary = ["PMID:8573157"]
+            species = "human and mouse CCR4 transfectant binding assays"
+            summary = "Primary transfectant competition-binding experiments show direct CCL5/RANTES binding to human and murine CCR4, supporting a bounded ligand-receptor edge without asserting downstream signaling in that study."
+            limitations = "Preserve the CCR4 transfectant and direct-binding context; do not infer canonical CCL5 signaling outputs or substitute CCR4 for the better-established CCL5 receptor contexts without cell-type-specific functional evidence."
+        elif ligand == "CXCL13" and receptor == "CXCR3":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:11554781"]
+            species = "human CXCR3-transfectant and chemotaxis assays"
+            summary = "Primary studies show that CXCL13/BCA-1 competes for CXCR3 binding and induces CXCR3-dependent chemotaxis and GTP-gamma-S signaling in transfected cells."
+            limitations = "Preserve the human CXCL13/CXCR3 transfectant and chemotaxis context; do not infer that CXCR3 replaces the canonical CXCR5 route in every tissue or assert a complete intracellular/TF chain from the reported assays."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
