@@ -2331,6 +2331,87 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "HSP90AA1 is an intracellular chaperone with possible extracellular stress context, but the listed CFTR and EGFR rows do not establish an exact mature-ligand receptor mechanism."
                 limitations = "Represent chaperone, receptor-complex and extracellular stress mechanisms separately; require direct HSP90AA1 target binding or receptor-dependent function before promotion."
+            elif ligand.startswith("HSP90"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "HSP90-family chaperones can have intracellular and extracellular stress-associated functions, but the listed receptor targets do not establish exact mature-ligand receptor edges in this pass."
+                limitations = "Require exact HSP90 isoform, extracellular form, receptor, species and primary binding or functional assay; do not transfer chaperone or TLR context across isoforms."
+            elif ligand == "HSPG2":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "HSPG2/perlecan is an extracellular-matrix proteoglycan with growth-factor and matrix-binding context, but the public HSPG2-to-COL13A1 row was not verified as a direct receptor or ligand mechanism."
+                limitations = "Require exact perlecan domain, partner and primary assay; do not transfer matrix proteoglycan context to collagen-chain candidates without direct evidence."
+            elif ligand.startswith("HSP"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "HSP-family labels are intracellular chaperones or stress proteins, not mature extracellular ligands for the listed receptor targets."
+                limitations = "Represent chaperone and stress-response mechanisms separately; do not materialize HSP-to-receptor rows without exact extracellular ligand evidence."
+            elif ligand == "IAPP":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "IAPP/amylin signaling is receptor-complex dependent and primarily uses CALCR-containing RAMP complexes, while the listed GPCR targets are not verified as direct mature IAPP receptors in this pass."
+                limitations = "Retain exact amylin receptor-complex topology and do not transfer CALCR/RAMP evidence to unrelated ADCYAP1R, adrenergic, PTH, RAMP or VIP receptors."
+            elif ligand.startswith("ICAM"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "ICAM-family proteins are cell-adhesion and immune-interaction molecules with integrin and lectin contexts, but the public rows do not resolve exact ICAM isoform, receptor orientation and pair-specific primary mechanisms for each target."
+                limitations = "Preserve ICAM isoform, cis/trans orientation and integrin/lectin complex context; require exact primary assay before promotion and do not infer a soluble ligand route from adhesion-family membership."
+            elif ligand == "ICOSL":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "ICOSL is an immune costimulatory ligand with established ICOS receptor context, but an exact ICOSL-to-NTM receptor experiment was not verified in this pass."
+                limitations = "Require direct ICOSL/NTM binding or receptor-dependent function; do not transfer ICOS-family specificity to unrelated adhesion molecules."
+            elif ligand == "IFITM6":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "IFITM6 is a membrane-associated interferon-induced protein, not a mature ligand for CD81."
+                limitations = "Represent IFITM and tetraspanin membrane-complex biology separately; do not materialize IFITM6-to-CD81 as a ligand edge without direct primary support."
+            elif ligand.startswith("IFNA"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Type-I interferon signaling requires subtype- and species-specific IFNAR1:IFNAR2 receptor-complex evidence, while the public rows do not resolve the exact IFNA paralog and binary/composite topology for each candidate."
+                limitations = "Preserve IFNA subtype, species and IFNAR1/IFNAR2 complex boundaries; do not transfer family-level interferon evidence across paralogs or materialize isolated receptor subunits as complete edges."
+            elif ligand == "IFNG":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "IFNG signaling is established through IFNGR1/IFNGR2, but the IFNG-to-MPL row was not verified as an exact primary receptor interaction."
+                limitations = "Require direct IFNG/MPL binding or receptor-dependent function; do not transfer IFNGR specificity to the thrombopoietin receptor MPL."
+            elif ligand == "IFNE":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "IFNE is a type-I interferon family ligand with IFNAR context, but an exact IFNE-to-ADGRV1 receptor experiment was not verified in this pass."
+                limitations = "Require direct IFNE/ADGRV1 binding or receptor-dependent function; do not transfer IFNAR specificity to an adhesion GPCR."
+            elif ligand in {"IGF1", "IGF2"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "IGF-family signaling is receptor- and binding-protein dependent, but the listed IGF1/IGF2 candidates do not resolve exact mature ligand, receptor-complex and pair-specific primary support in this pass."
+                limitations = "Retain exact IGF1R/IGF2R and IGFBP contexts separately; do not transfer IGF-family specificity to TRPV, GPR or unrelated receptor targets."
+            elif ligand.startswith("IGFBP"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "IGF-binding proteins can modulate IGF availability and have context-dependent receptor interactions, but the listed target pairs were not verified as exact direct IGFBP receptor mechanisms in this pass."
+                limitations = "Require exact IGFBP form, receptor or co-receptor, species and primary assay; do not transfer IGF1R/IGF2R or matrix-family evidence across IGFBP paralogs."
+            elif ligand.startswith("IGSF"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "IGSF-family candidates describe immune or cell-adhesion proteins, but exact paralog, trans orientation and pair-specific primary support for these rows were not verified."
+                limitations = "Require exact IGSF paralog, ligand/receptor orientation, species and primary assay; do not transfer immune-adhesion evidence across IGSF, CD or CLEC family members."
             elif ligand.startswith("ADAM"):
                 disposition = "hold_contextual_or_complex_boundary"
                 primary = reviewed
