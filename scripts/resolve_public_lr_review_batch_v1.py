@@ -2455,6 +2455,33 @@ def main() -> None:
                 "between binding, receptor-proximal signaling and functional output; these edges do not assert a universal "
                 "intracellular cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_154":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The existing edge-source records provide primary-supported ICAM1-LFA-1/Mac-1/CR4 adhesion, ICAM2-LFA-1 "
+                "and Mac-1 adhesion/migration context, and a bounded comparator context for IBSP-alphaVbeta5 adhesion. The "
+                "IFNA9 and IFNAB rows remain represented by frozen cytokine-receptor-family aliases without a row-specific "
+                "stable primary locator in the current source."
+            )
+            limitations = (
+                "Do not add duplicate edges or collapse integrin heterodimers into autonomous ITGAL, ITGAM, ITGAX, or "
+                "ITGB2 receptors. Preserve LFA-1, Mac-1, CR4, and alphaVbeta5 complex topology, adhesion versus "
+                "outside-in activation, immune comparator context, species and assay limits, and the distinction between "
+                "binding, receptor-proximal signaling and functional output. Treat IFNA9/IFNAB frozen aliases as "
+                "evidence-bounded until stable primary support is attached; these edges do not assert a universal "
+                "intracellular cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
