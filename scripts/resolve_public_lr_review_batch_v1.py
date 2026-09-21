@@ -559,6 +559,34 @@ def main() -> None:
             species = "human and rat CALCRL/RAMP receptor-complex studies"
             summary = "Primary ADM studies define the functional adrenomedullin receptor as CALCRL in association with RAMP2 or RAMP3, not standalone CALCR; the public ADM-CALCR row does not specify a validated receptor complex."
             limitations = "Require the complete CALCRL/RAMP2-3 complex and mature ADM assay before promotion; do not transfer amylin/CALCR receptor-family pharmacology to ADM."
+        elif ligand == "GDF9" and receptor in {"ACVR1B+BMPR2", "ACVR2A", "BMPR1A", "BMPR1B"}:
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:12135884", "PMCID:PMC2875809"]
+            species = "rat granulosa-cell and mouse ovarian receptor-context studies"
+            summary = "Primary GDF9 studies identify BMPR2 as a direct binding and functional receptor context and report partial activity through BMPR1A, BMPR1B and ACVR2A ectodomains, indicating a type-II/type-I receptor complex rather than an interchangeable standalone receptor set."
+            limitations = "Retain GDF9 with the complete BMPR2/type-I receptor complex and ovarian cell context; do not promote free ACVR2A, BMPR1A or BMPR1B rows as universal receptors or infer a terminal-TF output from receptor-family membership."
+        elif ligand == "GDF9":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:12135884"]
+            species = "rat GDF9 receptor assays"
+            summary = "Primary GDF9 receptor studies support BMPR2 and associated type-I receptor complexes, but do not establish FXYD6 or ORAI2 as direct GDF9 receptor proteins."
+            limitations = "Represent FXYD6/ORAI2 only as possible downstream or membrane-excitability context when independently supported; do not materialize them as GDF9 ligand receptors."
+        elif ligand == "SLURP1" and receptor in {"CHRNA9", "CHRNA10"}:
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+            primary = ["PMID:29192197", "PMCID:PMC5709491"]
+            species = "human and rat nicotinic-receptor assays"
+            summary = "Primary SLURP1 electrophysiology and binding studies support activity in selected nicotinic receptor contexts, including α9/α10-related complexes, but the public rows isolate individual subunits rather than asserting the complete pentameric receptor."
+            limitations = "Retain the assembled nicotinic receptor topology and assay-specific subunit context; do not treat CHRNA9 or CHRNA10 alone as a standalone SLURP1 receptor or infer a universal intracellular route."
+        elif ligand == "SLURP1":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMCID:PMC5837762", "PMID:29192197"]
+            species = "human and rat nicotinic-receptor assays"
+            summary = "Primary SLURP1 studies support α7-nAChR and selected assembled nicotinic receptor contexts, while affinity testing did not support the listed α3, α4, β2 or β4 subunits as standalone SLURP1 receptors."
+            limitations = "Preserve mature SLURP1 and complete nicotinic pentamer context; do not materialize free CHRNA3, CHRNA4, CHRNB2 or CHRNB4 rows from subunit expression or receptor-family membership alone."
         elif ligand in {"CCL1", "CCL8", "CEACAM2"}:
             disposition = "no_primary_evidence_found"
             layer = "candidate_only_review_locator"
