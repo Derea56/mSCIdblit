@@ -88,6 +88,7 @@ search.
 Return one disposition per candidate unit. Allowed dispositions are:
 
 - `already_present_exact_or_alias`
+- `already_present_reverse_orientation`
 - `new_primary_supported_edge_candidate`
 - `hold_contextual_or_complex_boundary`
 - `reject_precursor_or_non_edge_form`

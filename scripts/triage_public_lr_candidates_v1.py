@@ -24,9 +24,10 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_BUNDLE = ROOT / "data/processed/mechanism_graph_module20_24_v2026_09_19_literature_expansion243"
+DEFAULT_BUNDLE = ROOT / "data/processed/mechanism_graph_module20_24_v2026_09_20_literature_expansion244"
 DEFAULT_CANDIDATES = ROOT / "data/processed/public_database_comparison_v2/public_only_lr_candidates.tsv"
 DEFAULT_PRIOR_AUDIT = ROOT / "data/processed/public_database_comparison_v2/primary_evidence_harvest_resolution.tsv"
+DEFAULT_RESOLUTION_LEDGER = ROOT / "data/processed/public_database_comparison_v2/candidate_triage_v1/batch_001_review_resolution.tsv"
 DEFAULT_OUTPUT = ROOT / "data/processed/public_database_comparison_v2/candidate_triage_v1"
 
 PAIR_SEPARATORS = re.compile(r"[|_:;,/+\s]+")
@@ -159,6 +160,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--bundle-dir", type=Path, default=DEFAULT_BUNDLE)
     parser.add_argument("--candidates", type=Path, default=DEFAULT_CANDIDATES)
     parser.add_argument("--prior-audit", type=Path, default=DEFAULT_PRIOR_AUDIT)
+    parser.add_argument("--resolution-ledger", type=Path, default=DEFAULT_RESOLUTION_LEDGER)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--batch-size", type=int, default=100)
     return parser.parse_args()
@@ -176,7 +178,20 @@ def main() -> None:
         for row in prior_audit_rows
         if row.get("ligand") and row.get("receptor")
     }
+    resolution_rows = read_tsv(args.resolution_ledger) if args.resolution_ledger.exists() else []
+    resolutions = {
+        row.get("candidate_unit_id", ""): row
+        for row in resolution_rows
+        if row.get("candidate_unit_id")
+    }
     graph_edges = [row for row in read_tsv(args.bundle_dir / "mechanism_edges.tsv") if relation_is_direct_lr(row)]
+    edge_sources = read_tsv(args.bundle_dir / "mechanism_edge_sources.tsv")
+    primary_supported_edges = {
+        row.get("edge_id", "")
+        for row in edge_sources
+        if row.get("edge_id")
+        and ("primary" in row.get("source_kind", "") or row.get("support_kind") == "primary_experiment")
+    }
 
     exact_labels: dict[tuple[str, str], list[dict[str, str]]] = defaultdict(list)
     exact_components: dict[tuple[tuple[str, ...], tuple[str, ...]], list[dict[str, str]]] = defaultdict(list)
@@ -245,6 +260,10 @@ def main() -> None:
                 "primary_locator_count": str(locator_count(row)),
                 "prior_harvest_disposition": "",
                 "prior_harvest_primary_locators": "",
+                "review_resolution": "",
+                "review_resolution_primary_locators": "",
+                "review_resolution_notes": "",
+                "review_resolution_status": "",
             }
         )
         prior = prior_audit.get(
@@ -264,6 +283,27 @@ def main() -> None:
             # edge. This resolves representation only; it does not infer new
             # biological evidence or promote an edge.
             row_out["review_lane"] = "represented_graph_alias"
+        elif match_class == "graph_match_alias_adjudication":
+            # A composite public row is represented when all of its candidate
+            # components occur in one primary-supported direct graph edge.
+            # This covers label/complex spelling differences without treating
+            # a graph edge missing a co-receptor or ternary partner as exact.
+            for edge in matches:
+                edge_key = edge_component_keys(edge)
+                if (
+                    edge.get("edge_id", "") in primary_supported_edges
+                    and set(key[0]) <= set(edge_key[0])
+                    and set(key[1]) <= set(edge_key[1])
+                ):
+                    row_out["review_lane"] = "represented_graph_alias"
+                    break
+        resolution = resolutions.get(row_out["candidate_unit_id"])
+        if resolution:
+            row_out["review_resolution"] = resolution.get("disposition", "")
+            row_out["review_resolution_primary_locators"] = resolution.get("supporting_primary_locators", "")
+            row_out["review_resolution_notes"] = resolution.get("evidence_summary", "")
+            row_out["review_resolution_status"] = resolution.get("review_status", "")
+            row_out["review_lane"] = "completed_batch_review"
         all_rows.append(row_out)
 
     all_rows.sort(key=lambda row: (-int(row["review_priority_rank_value"]), row["candidate_unit_id"]))
@@ -273,6 +313,7 @@ def main() -> None:
         if row["review_lane"] not in {
             "resolved_graph_match",
             "completed_prior_harvest",
+            "completed_batch_review",
             "represented_graph_alias",
         }
     ]
@@ -289,6 +330,7 @@ def main() -> None:
         "normalized_ligand_key", "normalized_receptor_key", "normalization_match", "review_lane",
         "matched_graph_edge_ids", "matched_graph_edges", "review_priority_rank_value", "review_batch",
         "prior_harvest_disposition", "prior_harvest_primary_locators", "review_status", "reason",
+        "review_resolution", "review_resolution_primary_locators", "review_resolution_notes", "review_resolution_status",
     ]
     args.output_dir.mkdir(parents=True, exist_ok=True)
     write_tsv(args.output_dir / "candidate_normalization.tsv", all_rows, fields)
@@ -307,12 +349,18 @@ def main() -> None:
             "sha256": sha256(args.prior_audit) if args.prior_audit.exists() else "",
             "rows": len(prior_audit_rows),
         },
+        "resolution_ledger_input": {
+            "path": str(args.resolution_ledger),
+            "sha256": sha256(args.resolution_ledger) if args.resolution_ledger.exists() else "",
+            "rows": len(resolution_rows),
+        },
         "graph_input": {"path": str(args.bundle_dir / "mechanism_edges.tsv"), "sha256": sha256(args.bundle_dir / "mechanism_edges.tsv"), "direct_lr_edges": len(graph_edges)},
         "candidate_units": len(all_rows),
         "normalization_match_counts": dict(sorted(match_counts.items())),
         "review_lane_counts": dict(sorted(lane_counts.items())),
         "prior_harvest_rows": len(prior_audit_rows),
         "prior_harvest_matched_units": sum(row["review_lane"] == "completed_prior_harvest" for row in all_rows),
+        "completed_batch_review_units": sum(row["review_lane"] == "completed_batch_review" for row in all_rows),
         "review_queue_rows": len(review_rows),
         "review_queue_with_primary_locators": sum(locator_count(row) > 0 for row in review_rows),
         "review_queue_without_primary_locators": sum(locator_count(row) == 0 for row in review_rows),
@@ -333,6 +381,7 @@ def main() -> None:
         "|---|---:|---|",
         f"| Resolved graph match | {lane_counts.get('resolved_graph_match', 0):,} | Exact label or exact component match; no new edge is implied. |",
         f"| Completed prior harvest | {lane_counts.get('completed_prior_harvest', 0):,} | Present in the existing primary-evidence harvest ledger; excluded from new review batches. |",
+        f"| Completed batch review | {lane_counts.get('completed_batch_review', 0):,} | Resolved in a batch-specific evidence ledger; excluded from new review batches while retaining the resolution record. |",
         f"| Represented graph alias | {lane_counts.get('represented_graph_alias', 0):,} | Conservative one-component/one-edge representation match; no new evidence or edge is inferred. |",
         f"| Alias adjudication | {lane_counts.get('alias_adjudication', 0):,} | Component overlap suggests an alias or composite representation; curator confirmation is required. |",
         f"| Primary-evidence review | {lane_counts.get('primary_evidence_review', 0):,} | No automatic graph match and a public primary-paper locator is present. |",
@@ -350,7 +399,7 @@ def main() -> None:
         "python3 scripts/triage_public_lr_candidates_v1.py",
         "```",
         "",
-        "Outputs: `candidate_normalization.tsv` contains every normalized unit; `candidate_review_queue.tsv` excludes automatic graph matches; `candidate_triage_summary.json` contains input hashes and counts.",
+        "Outputs: `candidate_normalization.tsv` contains every normalized unit; `candidate_review_queue.tsv` excludes automatic graph matches and completed review-ledger rows; `candidate_triage_summary.json` contains input hashes and counts.",
         "",
     ]
     (args.output_dir / "PUBLIC_LR_CANDIDATE_TRIAGE_V1.md").write_text("\n".join(report), encoding="utf-8")
