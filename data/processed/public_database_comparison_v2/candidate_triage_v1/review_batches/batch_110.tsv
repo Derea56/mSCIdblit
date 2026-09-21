@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:BTC>EGFR	BTC	EGFR	M20B-E001835;M21B-E000389	KEGG: mmu04012	represented_graph_alias	batch_110
+LR:BTC>ERBB3	BTC	ERBB3	M21B-E005621		represented_graph_alias	batch_110
+LR:BTC>ERBB4	BTC	ERBB4	M20B-E001836;M21B-E000390	KEGG: mmu04012	represented_graph_alias	batch_110
+LR:C3>CD46	C3	CD46	M21B-E001293		represented_graph_alias	batch_110
+LR:C3>ITGAM	C3	ITGAM	M20B-E001837;M21B-E000654		represented_graph_alias	batch_110
+LR:C3>ITGAX	C3	ITGAX	M20B-E001838;M21B-E000655		represented_graph_alias	batch_110
+LR:C4B>CD46	C4B	CD46	M21B-E001294		represented_graph_alias	batch_110
+LR:CALR>LRP1	CALR	LRP1	M21B-E005779;M23B-E001031		represented_graph_alias	batch_110
+LR:CALR>SCARF1	CALR	SCARF1	M21B-E006570		represented_graph_alias	batch_110
+LR:CAMP>FPR2	CAMP	FPR2	M21B-E006227		represented_graph_alias	batch_110

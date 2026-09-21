@@ -1230,6 +1230,31 @@ def main() -> None:
                 "species and assay limits, and the distinction between binding, receptor-proximal signaling and output; "
                 "the existing edges do not assert a universal intracellular cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_110":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The public locators are pathway or database records, while the existing graph edge-source records "
+                "provide primary-supported ligand-receptor or opsonin/complement-complex binding and bounded "
+                "receptor-proximal or functional observations at the stated molecular resolution."
+            )
+            limitations = (
+                "Do not add a duplicate edge or treat precursor and processed complement/antimicrobial forms as interchangeable. "
+                "Preserve betacellulin ERBB receptor context, iC3b versus C3b/C4b ligand forms, integrin heterodimers, "
+                "calreticulin uptake/opsonin complexes, FPR2/FPRL1 receptor nomenclature, species and assay limits, and "
+                "the distinction between binding, receptor-proximal signaling and functional output; the existing edges do "
+                "not assert a universal intracellular cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
