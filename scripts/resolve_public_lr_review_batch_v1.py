@@ -2669,6 +2669,33 @@ def main() -> None:
                 "receptor-proximal signaling and functional output; these edges do not assert a universal intracellular "
                 "cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_162":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The existing edge-source records provide primary-supported IL36B/IL36G-IL1RL2:IL1RAP receptor "
+                "complex assembly and binding, IL3-IL3RA:CSF2RB binding/activation, IL4-IL4RA:IL13RA1 and "
+                "IL4-IL4RA:IL2RG receptor assembly/activation, and IL5-IL5RA:CSF2RB binding/activation at the stated "
+                "molecular resolution."
+            )
+            limitations = (
+                "Do not add duplicate edges or collapse IL1RL2:IL1RAP, IL3RA:CSF2RB, IL4RA:IL13RA1, "
+                "IL4RA:IL2RG, or IL5RA:CSF2RB complexes into autonomous single-chain receptors. Preserve IL-36R "
+                "agonist and receptor-complex context, common-beta and common-gamma subunit topology, receptor assembly "
+                "versus activation, species and assay limits, and the distinction between binding, receptor-proximal "
+                "signaling and functional output; these edges do not assert a universal intracellular cascade or "
+                "terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
