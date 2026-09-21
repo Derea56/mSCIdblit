@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:ADAM17>ITGA5	ADAM17	ITGA5	M21B-E005642		represented_graph_alias	batch_108
+LR:ADAM23>ITGB3	ADAM23	ITGB3	M21B-E005640		represented_graph_alias	batch_108
+LR:ADAM28>ITGA4	ADAM28	ITGA4	M21B-E005641;M21B-E006989		represented_graph_alias	batch_108
+LR:ADAM2>ITGA6	ADAM2	ITGA6	M21B-E005644		represented_graph_alias	batch_108
+LR:ADAM2>ITGB1	ADAM2	ITGB1	M21B-E005644		represented_graph_alias	batch_108
+LR:ADAM9>ITGB5	ADAM9	ITGB5	M21B-E005639;M21B-E006988		represented_graph_alias	batch_108
+LR:ADCYAP1>SCTR	ADCYAP1	SCTR	M23B-E000104		represented_graph_alias	batch_108
+LR:AGRN>ITGB1	AGRN	ITGB1	M23B-E000471		represented_graph_alias	batch_108
+LR:AGRP>MC5R	AGRP	MC5R	M21B-E006226		represented_graph_alias	batch_108
+LR:AGT>AGTR1B	AGT	AGTR1B	M23B-E000109	KEGG: mmu04080	represented_graph_alias	batch_108
