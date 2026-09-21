@@ -883,6 +883,13 @@ def main() -> None:
                 species = "mouse and human lymphotoxin-receptor studies"
                 summary = "Primary LTBR studies establish binding and signaling for lymphotoxin alpha/beta complexes, but the reviewed evidence does not establish a direct TNF-alpha-to-LTBR ligand edge; the public row is retained as a TNF-family boundary hold."
                 limitations = "Preserve TNF-alpha/TNFR1-2 and lymphotoxin/LTBR ligand-complex distinctions; require an exact TNF-alpha-LTBR binding or activation assay before promotion and do not infer a terminal-TF route from shared TNF-superfamily membership."
+            elif ligand == "TNF":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:2158863", "PMID:21081755"]
+                species = "human TNFR1/TNFR2 receptor studies"
+                summary = "Primary TNF receptor studies establish direct TNF engagement of TNFR1 and TNFR2, while the listed CELSR2, FAS, FFAR2, FLT4, ICOS, NOTCH1, PTPRS, SEMA4C and TRPM2 rows are retained only as possible downstream or receptor-crosstalk contexts rather than direct TNF receptors."
+                limitations = "Preserve the canonical TNF-TNFR1/TNFR2 ligand topology; require an exact TNF-to-target binding or receptor-dependent assay before promoting any noncanonical row, and do not infer a terminal-TF route from downstream expression or pathway crosstalk alone."
             elif ligand == "PRSS2" and receptor in {"F2R", "F2RL1"}:
                 disposition = "new_primary_supported_edge_candidate"
                 layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
