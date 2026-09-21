@@ -1291,6 +1291,211 @@ def main() -> None:
                 layer = "candidate_only_unverified"
                 summary = "TGF-alpha has primary-supported EGFR binding, but the listed ADAM17, ERBB2 and PTPRD rows do not establish those proteins as direct TGFA signaling receptors."
                 limitations = "Preserve TGFA-EGFR as the direct edge; represent ADAM17-mediated shedding and ERBB-family crosstalk separately, and do not infer receptor specificity from family membership."
+            elif ligand == "TGFBI" and receptor in {"ITGA1", "ITGA4", "ITGA5", "ITGA6", "ITGA7", "ITGB4"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E003059;M21B-E003060;M21B-E006604;M21B-E006605;M21B-E006606"
+                primary = [
+                    "PMID:36325910", "DOI:10.1161/CIRCULATIONAHA.121.058615",
+                    "PMID:10906123", "DOI:10.1074/jbc.M002752200", "PMID:12074567",
+                    "PMID:12270930", "DOI:10.1074/jbc.M207055200", "PMID:16672769", "DOI:10.1038/emm.2006.19",
+                    "PMID:23792174", "DOI:10.1016/j.bbamcr.2013.06.012", "PMID:15899806", "DOI:10.1158/0008-5472.CAN-04-2705",
+                ]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse; rat comparator"
+                summary = "TGFBI has primary-supported stabilin uptake and integrin-complex adhesion contexts, but the listed free ITGA1/4/5/6/7 or ITGB4 subunits are not the exact receptor complexes tested in the graph."
+                limitations = "Preserve STAB1/STAB2, ITGA3:ITGB1, ITGAV:ITGB5 and ITGAV:ITGB3 complex boundaries; do not substitute a free integrin subunit for the tested heterodimer or infer a universal TGFBI integrin receptor."
+            elif ligand == "THBS1" and receptor == "SCARB1":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M23B-E000729"
+                primary = ["PMID:40772900", "PMCID:PMC12665495", "DOI:10.1016/j.jacbts.2025.05.003"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse; human comparator"
+                summary = "The graph contains a primary-supported THBS1-SCARB1-associated endothelial inflammatory/fibrotic program, but the evidence is a receptor-associated functional context rather than a direct binary binding assay."
+                limitations = "Retain the pressure-overload and endothelial-model context; do not promote SCARB1 as a universal direct THBS1 receptor or infer a terminal TF route."
+            elif ligand == "TIGIT" and receptor == "NECTIN2":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E005461"
+                primary = ["PMID:27978489", "PMCID:PMC5220579", "DOI:10.1016/j.molimm.2016.12.003"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "The graph contains primary-supported Nectin-2/CD112-to-TIGIT binding in the reverse orientation of the public row."
+                limitations = "Preserve Nectin-2 as ligand and TIGIT as receptor; do not add the reverse duplicate or infer a complete intracellular cascade from binding alone."
+            elif ligand == "TIGIT" and receptor == "NECTIN4":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E006546"
+                primary = ["PMID:32503945", "PMCID:PMC7279670"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "The graph contains primary-supported Nectin-4-to-TIGIT immune-checkpoint evidence in the reverse orientation of the public row."
+                limitations = "Preserve Nectin-4 as ligand and TIGIT as receptor, including the NK/tumor-cell assay context; do not add a reverse duplicate."
+            elif ligand == "TIGIT" and receptor == "PVR":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E000664"
+                primary = ["PMID:22421438", "DOI:10.1016/j.molimm.2016.12.003"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human"
+                summary = "The graph contains primary-supported PVR/CD155-to-TIGIT checkpoint binding in the reverse orientation of the public row."
+                limitations = "Preserve PVR/CD155 as ligand and TIGIT as receptor; do not add the reverse duplicate or infer universal immune-cell outputs."
+            elif ligand == "TIGIT":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "TIGIT is an immune checkpoint receptor, not a mature extracellular ligand for the listed targets in these orientations."
+                limitations = "Represent PVR, Nectin-2 and Nectin-4 as ligands to TIGIT where directly supported; do not invert TIGIT receptor biology into ligand position."
+            elif ligand in {"TIMD2", "TIMD4"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "TIMD2/TIMD4 are cell-surface TIM-family receptors or phagocytic components, not mature soluble ligands for the listed immune targets in these candidate orientations."
+                limitations = "Represent TIM-family receptor, phosphatidylserine and phagocytic-complex biology in receptor orientation; require exact trans-ligand evidence before promotion."
+            elif ligand == "THY1" and receptor in {"CNTN1", "GM49368", "ITGB2L"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E005515;M21B-E005862;M23B-E000744;M23B-E000746;M23B-E000748"
+                primary = ["PMID:22210915", "DOI:10.4049/jimmunol.1003944", "PMID:19723805", "PMCID:PMC2746130", "DOI:10.1242/jcs.034827", "PMID:23481656"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; rat comparator"
+                summary = "The graph contains primary-supported THY1/CD90 adhesion and receptor-complex signaling through CD97, SDC4, Mac-1 and alphaVbeta3, but the listed CNTN1, GM49368 and ITGB2L targets are not the exact tested complexes."
+                limitations = "Retain THY1 as an extracellular adhesion ligand with exact receptor-complex boundaries; do not substitute CNTN1, GM49368 or ITGB2L for the tested CD97, SDC4, ITGAM:ITGB2 or ITGAV:ITGB3 systems."
+            elif ligand == "TNFRSF14" and receptor == "BTLA":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E003112"
+                primary = ["PMID:16169851", "DOI:10.1074/jbc.M507629200"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "The graph contains primary-supported BTLA-to-HVEM/TNFRSF14 binding in the reverse orientation of the public row."
+                limitations = "Preserve BTLA as ligand and HVEM/TNFRSF14 as receptor; do not add the reverse duplicate or infer a complete inhibitory relay from extracellular binding alone."
+            elif ligand == "TNFRSF14" and receptor == "CD160":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E000695"
+                primary = ["PMCID:PMC7477951", "PMID:25179432", "PMCID:PMC4163173", "DOI:10.1186/s12967-014-0217-y"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "The graph contains primary-supported CD160-to-HVEM/TNFRSF14 binding in the reverse orientation of the public row."
+                limitations = "Preserve CD160 as ligand and HVEM/TNFRSF14 as receptor, including isoform and cis/trans context; do not add the reverse duplicate."
+            elif ligand == "TNFRSF14" and receptor == "TRAF2":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E001806"
+                primary = ["PMID:9162022"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human"
+                summary = "The graph supports HVEM/TNFRSF14 cytoplasmic recruitment of TRAF2, but the public row reverses a receptor-to-adaptor intracellular relationship into a ligand-receptor edge."
+                limitations = "Retain HVEM cytoplasmic-tail and TRAF-adaptor topology; do not materialize TNFRSF14 as a soluble ligand or treat TRAF2 as an extracellular receptor."
+            elif ligand == "TNFRSF14":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "TNFRSF14/HVEM is a membrane TNF-receptor-family protein, not a mature soluble ligand for the listed targets in these orientations."
+                limitations = "Represent LIGHT, BTLA and CD160 interactions with HVEM/TNFRSF14 in their supported orientations; keep intracellular TRAF recruitment in receptor-proximal layers."
+            elif ligand == "TNF" and receptor == "TRADD":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000017"
+                primary = ["PMID:8565075", "PMID:16611992"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse comparator"
+                summary = "The graph supports TNFR1-associated TRADD recruitment and NF-kappaB/death-branch signaling, but TRADD is an intracellular adaptor downstream of TNF receptor engagement rather than a direct extracellular TNF receptor."
+                limitations = "Preserve TNF-TNFR1/TNFR2 and TNFR1-TRADD/TRAF2/FADD topology; do not materialize TNF-TRADD as a direct ligand-receptor edge."
+            elif ligand == "TPSAB1" and receptor == "F2RL1":
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:11606310", "PMID:9354658", "PMID:16470180", "PMID:30219079"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse comparator"
+                summary = "Primary studies support mast-cell tryptase activation of PAR2/F2RL1 and calcium, mitogenic or migration outputs, but the public row uses the TPSAB1 gene label rather than a defined mature tryptase form."
+                limitations = "Preserve mature tryptase processing, proteolytic PAR2 activation and mast-cell/tissue context; do not treat every TPSAB1 transcript or precursor form as an extracellular ligand without processing evidence."
+            elif ligand == "TRAF2" and receptor == "TNFRSF1B":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000065;M21B-E000111"
+                primary = ["PMID:7544915", "DOI:10.1126/science.7544915", "PMID:25152365", "PMID:11112773", "PMID:21081755"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse comparator"
+                summary = "The graph supports TNFR2/TNFRSF1B-associated TRAF2 recruitment or NF-kappaB relay evidence, but TRAF2 is an intracellular adaptor downstream of TNFR2 rather than an extracellular ligand."
+                limitations = "Preserve TNF-TNFR2 membrane/oligomerization context and TRAF2-dependent NF-kappaB branch; do not materialize TRAF2-TNFRSF1B as a direct ligand-receptor edge."
+            elif ligand == "TRH" and receptor == "TRHR2":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E001693"
+                primary = ["PMID:7487872", "PMID:8838148"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse; rat comparator"
+                summary = "The graph contains primary-supported TRH activation of TRHR/type-1 receptor with calcium and PKC-linked outputs, but the public row specifies TRHR2 and the exact subtype assignment is not resolved here."
+                limitations = "Preserve TRHR1 nomenclature, receptor subtype and pituitary/heterologous assay context; require exact TRHR2 evidence before promoting the subtype-specific edge."
+            elif ligand in {"TSPAN3", "TSPAN33", "TSPAN5", "TXLNA", "TLN1", "TYROBP", "VSIR", "VSTM4", "WBP1"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The candidate ligand is a membrane organizer, intracellular adaptor, cytoskeletal/trafficking protein or immune-receptor adaptor rather than a mature extracellular ligand for the listed target."
+                limitations = "Represent membrane-complex, cytoskeletal, vesicle-trafficking and adaptor biology in receptor-proximal or intracellular layers; do not materialize these rows as soluble ligand-receptor edges."
+            elif ligand == "TRF":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Transferrin is a soluble carrier whose canonical receptor is TFRC; the listed HFE, LDLR and LRP2 targets do not establish these rows as direct transferrin signaling receptors."
+                limitations = "Preserve transferrin-TFRC uptake and iron-transport biology separately; require exact receptor binding before promoting alternate receptor-family rows."
+            elif ligand == "TTR" and receptor == "APOA1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "TTR and APOA1 are circulating carrier/apolipoprotein proteins, and this row does not define APOA1 as a cell-surface signaling receptor."
+                limitations = "Represent transport, carrier and lipoprotein biology separately from ligand-receptor signaling."
+            elif ligand == "VEGFB" and receptor == "FLT1+KDR":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000500"
+                primary = ["PMID:9751730"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary evidence supports VEGF-B binding and signaling through FLT1/VEGFR1, but the public row adds KDR as a composite receptor without exact VEGF-B-FLT1:KDR evidence."
+                limitations = "Preserve VEGF-B isoform and FLT1 selectivity; do not promote the composite FLT1+KDR row or infer VEGFR2/KDR signaling from VEGF-family membership."
+            elif ligand == "VEGFB" and receptor == "KDR":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000500;M21B-E000759"
+                primary = ["PMID:9751730", "PMID:10409677"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "The graph supports VEGF-B interaction with FLT1/VEGFR1 and NRP1 coreceptor context, but direct VEGF-B-to-KDR binding was not established in the reviewed evidence."
+                limitations = "Require exact KDR binding or receptor-dependent activation before promotion; do not transfer VEGF-A/KDR evidence to VEGF-B."
+            elif ligand == "VCAM1" and receptor in {"EZR", "ITGB2L", "MSN"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000213;M21B-E000582;M21B-E000585;M21B-E000589"
+                primary = ["PMID:7511143", "PMCID:PMC2290915", "PMID:8640376", "PMID:9841932", "PMID:10438935", "PMID:10209034"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse; rat comparator"
+                summary = "The graph contains primary-supported VCAM1 adhesion through alpha4beta1, alpha4beta7, alphaDbeta2 and alpha9beta1 integrin complexes, but EZR/MSN are intracellular cytoskeletal proteins and ITGB2L is not the tested beta2 integrin complex."
+                limitations = "Preserve assembled VCAM1-integrin topology and adhesion-state context; do not export a free beta subunit or treat EZR/MSN as extracellular VCAM1 receptors."
+            elif ligand == "VEGFA":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "as stated in primary model/assay"
+                summary = "VEGFA has well-established VEGFR and integrin/coreceptor signaling, but the listed EGFR, EPHB2, GRIN2B, RET, SIRPA and TYRO3 rows were not resolved as exact direct VEGFA receptor edges in this pass."
+                limitations = "Retain exact VEGFR1/FLT1, VEGFR2/KDR, neuropilin and tested integrin-complex routes; do not transfer VEGFA family evidence to unrelated receptors or downstream targets."
+            elif ligand == "VEGFC" and receptor in {"FLT1", "CCBE1", "LYVE1"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M23B-E000781;M23B-E000782;M23B-E000783"
+                primary = []
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse comparator"
+                summary = "The graph supports VEGFC interaction with alpha9beta1 and a cooperating VEGFR3 branch, but the listed FLT1, CCBE1 and LYVE1 rows are not asserted as direct canonical VEGFC receptors here."
+                limitations = "Preserve VEGFC-alpha9beta1 and VEGFR3 cooperation as separate branches; require exact pair-specific binding or activation before promoting the listed targets."
+            elif ligand == "WNT10B" and receptor == "FZD6":
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E006146"
+                primary = ["PMID:24873871", "DOI:10.1016/j.cellsig.2014.05.012"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human"
+                summary = "The graph contains primary-supported WNT10B receptor-level action on FZD6 in a live-cell receptor-mobility assay."
+                limitations = "Preserve the FZD6-GFP heterologous assay and mobility-based activation interpretation; do not infer a purified binary complex or terminal TF output."
+            elif ligand == "WNT11" and receptor == "FZD1":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E005565;M21B-E006108;M21B-E006601;M21B-E006663"
+                primary = ["PMID:29717114", "DOI:10.1038/s41467-018-04042-w", "PMID:39468010", "PMID:22309736", "PMID:10862746"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse; Xenopus comparator"
+                summary = "The graph supports WNT11 signaling through FZD8, ROR2, MuSK/LRP4 and FZD7 branches, but the public FZD1 row is not an exact receptor assignment in the reviewed primary evidence."
+                limitations = "Preserve the tested WNT11 receptor and complex topology; require direct WNT11-FZD1 evidence before promotion and do not transfer noncanonical WNT receptor specificity across Frizzled paralogs."
+            elif ligand == "VWF" and receptor in {"ITGA4", "ITGA9", "ITGB1"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M23B-E000281;M23B-E000453;M23B-E000454;M23B-E000455"
+                primary = ["PMID:2104618", "PMCID:PMC1895591", "PMID:7523416"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse comparator"
+                summary = "The graph supports VWF binding to the multimeric GPIb-IX-V complex and platelet alphaIIbbeta3 cooperation, but the listed free integrin subunits are not established as independent VWF receptors."
+                limitations = "Preserve the multimeric platelet receptor and integrin-cooperation topology; do not export free ITGA4, ITGA9 or ITGB1 edges from platelet-complex evidence."
+            elif ligand == "VWF" and receptor in {"ADAMTS13", "F8", "SIRPA"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The listed VWF target is a coagulation protease/cofactor or immune receptor, not an established direct VWF cell-surface receptor in this candidate orientation."
+                limitations = "Represent VWF cleavage, factor-VIII carriage and platelet receptor binding separately; require exact receptor-level evidence before promotion."
             elif ligand.startswith("SIGLEC") or ligand in {"SIRPA", "SIRPB1A"}:
                 disposition = "reject_precursor_or_non_edge_form"
                 layer = "candidate_only_unverified"
