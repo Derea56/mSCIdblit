@@ -440,6 +440,48 @@ def main() -> None:
             species = "human PF4 receptor and proteoglycan studies"
             summary = "Primary PF4 studies support CCR1, Mac-1/integrin and extracellular proteoglycan/GAG contexts, but do not establish the listed non-cognate receptor pair as a direct PF4 edge."
             limitations = "Retain PF4 receptor and matrix-context evidence in its cell, species and receptor-complex boundaries; do not materialize unsupported FGFR2, LDLR, PROCR, ACKR1, ADRA2A, GRM7, LRP1 or MTNR1A rows from pathway co-membership alone."
+        elif ligand == "ADM2":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:26423127", "PMID:40817416", "PMID:27784654"]
+            species = "rat and mouse CALCRL/RAMP receptor-complex studies"
+            summary = "Primary ADM2/intermedin studies place the peptide in CALCRL receptor complexes whose ligand behavior is specified by RAMP1-3, including RAMP3-dependent tissue responses; the listed ADCYAP1R1, ADRB, CALCR, GPR, PTH1R, TSHR and VIPR rows are not direct ADM2 receptor pairings."
+            limitations = "Preserve the mature ADM2-CALCRL/RAMP complex and species boundaries; do not treat CALCR or an individual RAMP as a standalone ADM2 receptor or transfer calcitonin-family activity to unrelated GPCRs."
+        elif ligand == "GDF11" and receptor in {"ACVR1B+ACVR2B", "ACVR2A+TGFBR1"}:
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMCID:PMC1525155", "PMID:35643319", "PMCID:PMC9234707"]
+            species = "mouse developmental assays; human structural/receptor-binding assays"
+            summary = "Primary studies support GDF11 binding to type-II activin receptors and recruitment of type-I receptors in receptor complexes, including Acvr2b-dependent type-I receptor engagement and high-affinity GDF11 recognition by ACVR2A; the public composite rows do not resolve one universal ACVR2A/B plus type-I topology."
+            limitations = "Retain the complete type-II/type-I receptor complex and preserve the developmental, structural and species boundaries; do not split composite rows into standalone ACVR1B, TGFBR1 or ACVR2A edges or infer a universal SMAD route from complex membership alone."
+        elif ligand == "GDF11" and receptor in {"BMPR1A", "BMPR1B"}:
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+            primary = ["PMCID:PMC1525155"]
+            species = "mouse receptor-complex assays"
+            summary = "Primary GDF11 receptor-complex experiments found no direct type-I receptor binding in isolation but detected type-I receptor association when Acvr2b was coexpressed, leaving BMPR1A/B as complex-dependent context rather than standalone GDF11 receptors."
+            limitations = "Require the complete GDF11 type-II/type-I receptor complex and exact receptor-combination assay; do not materialize BMPR1A or BMPR1B as standalone ligand receptors."
+        elif ligand == "GDF11" and receptor == "BMPR2":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:35643319", "PMCID:PMC9234707"]
+            species = "human structural and receptor-binding assays"
+            summary = "Primary comparative receptor-binding work places GDF11 among high-affinity ACVR2A ligands rather than the high-affinity BMPR2 ligand group, and the reviewed structural study does not establish the public GDF11-BMPR2 row as a direct edge."
+            limitations = "Retain GDF11-ACVR2A/ACVR2B complex evidence with its type-I receptor context; do not transfer TGF-beta-family receptor overlap into a direct GDF11-BMPR2 edge without an exact primary assay."
+        elif ligand == "INSL5" and receptor in {"RXFP1", "RXFP2"}:
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:15525639", "PMID:18582868"]
+            species = "human recombinant peptide and receptor-expression assays"
+            summary = "Primary receptor-expression and functional studies identify RXFP4/GPCR142 as the high-affinity INSL5 agonist receptor and report no RXFP1/LGR7 activation, while RXFP2 is not established as an INSL5 receptor in the reviewed assays."
+            limitations = "Preserve the mature INSL5-RXFP4 route and the weak RXFP3 antagonism boundary; do not transfer relaxin-family receptor specificity to RXFP1 or RXFP2."
+        elif ligand == "INSL5":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:15525639", "PMID:18582868"]
+            species = "human recombinant peptide and receptor-expression assays"
+            summary = "Primary INSL5 pharmacology supports selective RXFP4/GPCR142 agonism, with only weak antagonism at RXFP3 and no support for the listed adrenergic, glutamate or melatonin receptors."
+            limitations = "Retain the cognate INSL5-RXFP4 route and its receptor-expression context; do not infer direct INSL5 binding to unrelated GPCRs from public database co-membership."
         elif ligand in {"CCL1", "CCL8", "CEACAM2"}:
             disposition = "no_primary_evidence_found"
             layer = "candidate_only_review_locator"
