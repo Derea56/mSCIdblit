@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:SLITRK3>PTPRS	SLITRK3	PTPRS	M21B-E002134		represented_graph_alias	batch_126
+LR:SPARC>ENG	SPARC	ENG	M21B-E006389		represented_graph_alias	batch_126
+LR:SPON2>ITGA4	SPON2	ITGA4	M21B-E005585		represented_graph_alias	batch_126
+LR:SPON2>ITGA5	SPON2	ITGA5	M21B-E005586		represented_graph_alias	batch_126
+LR:SPON2>ITGB1	SPON2	ITGB1	M21B-E005585;M21B-E005586		represented_graph_alias	batch_126
+LR:TFF2>CXCR4	TFF2	CXCR4	M21B-E007076		represented_graph_alias	batch_126
+LR:TGFA>EGFR	TGFA	EGFR	M21B-E000392;M21B-E001733		represented_graph_alias	batch_126
+LR:TGFB1>ACVRL1	TGFB1	ACVRL1	M21B-E007015		represented_graph_alias	batch_126
+LR:THBS2>ITGA4	THBS2	ITGA4	M21B-E006995;M23B-E000734		represented_graph_alias	batch_126
+LR:THBS2>ITGB1	THBS2	ITGB1	M21B-E006995;M23B-E000734		represented_graph_alias	batch_126
