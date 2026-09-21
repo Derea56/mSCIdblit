@@ -4082,6 +4082,87 @@ def main() -> None:
                 limitations = "Preserve the GPIb-IX-V complex and GPIb-alpha attribution; do not promote isolated GP9 binding or signaling, infer a terminal-TF output or transfer the platelet relay to SCI."
             else:
                 raise SystemExit(f"unhandled batch 187 pair: {pair}")
+        elif row.get("review_batch") == "batch_188":
+            pair = (ligand, receptor)
+            if pair == ("VWF", "ITGA2B"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:2803984", "DOI:10.1111/j.1365-2141.1989.tb00226.x", "PMID:2394830", "PMCID:PMC296793", "DOI:10.1172/JCI114775", "PMID:40400463"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary platelet studies support VWF binding or adhesion through assembled alphaIIbbeta3, including thrombin-activated GPIIb/IIIa and a recent RGDS-alphaIIbbeta3 headpiece study."
+                limitations = "Preserve alphaIIbbeta3 complex, VWF multimer/RGDS and platelet-activation context; do not promote free ITGA2B binding or signaling, infer basal occupancy or assign SCI/terminal-TF output."
+            elif pair == ("VWF", "ITGAV"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:7505120", "PMCID:PMC2115492", "DOI:10.1182/blood.V82.12.3622"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary RGD-dependent binding, endothelial adhesion and flow-cell studies support VWF interaction with assembled alphaVbeta3."
+                limitations = "Preserve mature VWF RGD motif, alphaVbeta3 heterodimer, multimer/flow and endothelial context; do not promote free ITGAV binding or signaling, conflate platelet GPIb with integrin branches or assign SCI/terminal-TF output."
+            elif pair == ("VWF", "ITGB3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:2803984", "DOI:10.1111/j.1365-2141.1989.tb00226.x", "PMID:7505120", "PMCID:PMC2115492", "DOI:10.1182/blood.V82.12.3622", "PMID:40400463"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary studies support VWF interaction with assembled alphaIIbbeta3 and alphaVbeta3 in platelet and endothelial contexts."
+                limitations = "Preserve alphaIIbbeta3 versus alphaVbeta3 complexes, VWF multimer/RGD and activation or flow context; do not promote free ITGB3 binding or signaling, collapse receptor branches or assign SCI/terminal-TF output."
+            elif pair == ("WNT2B", "FZD4"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E006526"
+                primary = ["PMID:31359032"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "The graph already contains the primary-supported WNT2B-FZD4 interaction and FZD4-dependent epithelial EMT context."
+                limitations = "Preserve Crohn disease tissue and HT29 epithelial context; do not infer universal canonical output, SCI transfer or terminal-TF evidence from the existing edge."
+            elif pair == ("WNT3", "FZD8"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E007082"
+                primary = ["PMID:31036956", "DOI:10.1038/s41594-019-0216-z", "PDB:6AHY"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; mouse"
+                summary = "The graph already contains the primary structural WNT3-FZD8 cysteine-rich-domain binding edge."
+                limitations = "Preserve human WNT3/mouse FZD8 ectodomain and 2:2 dimer context; do not infer whole-cell productive activation, LRP6 recruitment, SCI or terminal-TF output."
+            elif pair == ("WNT3A", "FZD8"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E000155;M21B-E003250"
+                primary = ["PMID:20093360", "PMCID:PMC2838336"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; mouse"
+                summary = "The graph already contains primary-supported WNT3A-FZD8 binary binding and the FZD8-LRP6 ternary ectodomain assembly."
+                limitations = "Preserve soluble FZD8/LRP6 ectodomain topology and binding-assay scope; do not infer whole-cell signaling, stoichiometry, SCI function or terminal-TF output."
+            elif pair == ("WNT3A", "LRP6"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E000155;M21B-E000156"
+                primary = ["PMID:20093360", "PMCID:PMC2838336"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; mouse"
+                summary = "The graph already contains primary-supported WNT3A binding to LRP6 E3E4 within the FZD8-LRP6 ternary ectodomain complex."
+                limitations = "Preserve LRP6 E3E4 subdomain and FZD8 co-receptor topology; do not infer isolated whole-cell LRP6 signaling, canonical output, SCI function or terminal-TF evidence."
+            elif pair == ("WNT4", "FZD1"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E007016"
+                primary = ["PMID:25605717", "PMCID:PMC4358105", "DOI:10.1074/jbc.M114.612648"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "The graph already contains the primary-supported weak-to-intermediate WNT4-FZD1 cysteine-rich-domain binding edge."
+                limitations = "Preserve purified-protein/CRD scope and the absence of demonstrated productive WNT4 canonical signaling in the tested cell system; do not infer SCI or terminal-TF output."
+            elif pair == ("WNT4", "FZD2"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E007017"
+                primary = ["PMID:25605717", "PMCID:PMC4358105", "DOI:10.1074/jbc.M114.612648"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "The graph already contains the primary-supported weak-to-intermediate WNT4-FZD2 cysteine-rich-domain binding edge."
+                limitations = "Preserve purified-protein/CRD scope and the absence of demonstrated productive WNT4 canonical signaling in the tested cell system; do not infer SCI or terminal-TF output."
+            elif pair == ("WNT4", "FZD4"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E007018"
+                primary = ["PMID:25605717", "PMCID:PMC4358105", "DOI:10.1074/jbc.M114.612648"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "The graph already contains the primary-supported weak-to-intermediate WNT4-FZD4 cysteine-rich-domain binding edge."
+                limitations = "Preserve purified-protein/CRD scope and the absence of demonstrated productive WNT4 canonical signaling in the tested cell system; do not infer SCI or terminal-TF output."
+            else:
+                raise SystemExit(f"unhandled batch 188 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
