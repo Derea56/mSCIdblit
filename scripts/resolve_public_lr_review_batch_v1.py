@@ -1040,6 +1040,18 @@ def main() -> None:
             layer = "candidate_only_unverified"
             summary = "The current review pass did not verify an exact primary experiment for this RTN4-to-listed-protein candidate."
             limitations = "Retain the canonical RTN4/NgR1 receptor-complex route and the separately supported LINGO1/TROY context; do not materialize this candidate from Nogo-family membership or neuronal co-expression alone."
+        elif ligand in {"COL6A5", "COL6A6"} and receptor in {"ITGA1+ITGB1", "ITGA2+ITGB1"}:
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:8387021", "PMID:10772239", "PMID:1478946"]
+            species = "human collagen-VI adhesion assays and mammalian chondrocyte/vascular smooth-muscle models"
+            summary = "Primary adhesion, affinity and cell-blocking studies identify alpha1beta1 and alpha2beta1 as receptors for native type-VI collagen substrates and collagen-VI microfibrillar assemblies, with beta1-dependent cell-adhesion outputs."
+            limitations = "Retain assembled native collagen-VI and integrin-adhesion context; the candidate names an individual COL6A5/COL6A6 chain not resolved in these native type-VI studies, so do not promote it as a chain-specific direct edge or infer a soluble signaling cascade."
+        elif ligand.startswith("COL6"):
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_unverified"
+            summary = "The current review pass found primary evidence for native type-VI collagen adhesion through selected integrins, but not an exact chain-specific experiment for this COL6 candidate and receptor pair."
+            limitations = "Retain native collagen-VI integrin adhesion as family context; require exact chain, assembled isoform and receptor evidence before graph promotion."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
