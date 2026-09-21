@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:COL11A1>DDR1	COL11A1	DDR1	M23B-E000354		represented_graph_alias	batch_112
+LR:COL18A1>PTPRS	COL18A1	PTPRS	M21B-E002903		represented_graph_alias	batch_112
+LR:COL1A1>CD36	COL1A1	CD36	M23B-E000364;M23B-E000380		represented_graph_alias	batch_112
+LR:COL1A2>CD36	COL1A2	CD36	M23B-E000364;M23B-E000380		represented_graph_alias	batch_112
+LR:COL4A1>GP6	COL4A1	GP6	M23B-E000449	KEGG: mmu04512	represented_graph_alias	batch_112
+LR:COL4A2>GP6	COL4A2	GP6	M23B-E000449	KEGG: mmu04512	represented_graph_alias	batch_112
+LR:COL4A2>ITGA2+ITGB1	COL4A2	ITGA2+ITGB1	M21B-E002696	KEGG: mmu04512	represented_graph_alias	batch_112
+LR:COL4A3>CD47	COL4A3	CD47	M23B-E000950		represented_graph_alias	batch_112
+LR:COL4A3>GP6	COL4A3	GP6	M23B-E000449	KEGG: mmu04512	represented_graph_alias	batch_112
+LR:COL4A3>ITGB3	COL4A3	ITGB3	M21B-E002198;M23B-E000950		represented_graph_alias	batch_112
