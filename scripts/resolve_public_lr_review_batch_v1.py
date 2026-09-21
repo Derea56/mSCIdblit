@@ -3344,6 +3344,79 @@ def main() -> None:
                 limitations = "Preserve NRP1 ligand-binding and PlexinA4 signal-transducing roles and 2:2:2 topology; do not infer SCI/terminal-TF output."
             else:
                 raise SystemExit(f"unhandled batch 177 pair: {pair}")
+        elif row.get("review_batch") == "batch_178":
+            pair = (ligand, receptor)
+            if pair == ("SEMA3B", "NRP1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:18922901"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human"
+                summary = "Primary NRP1 gain- and loss-of-function studies support SEMA3B-dependent tumor-cell growth inhibition/apoptosis and PI3K-AKT suppression in an NRP1-dependent context."
+                limitations = "Preserve NRP1-dependent tumor-cell functional context; direct purified SEMA3B-NRP1 affinity and a Plexin holoreceptor were not established in the cited primary, so do not infer a standalone binary binding edge, SCI route or terminal-TF output."
+            elif pair == ("SEMA3B", "NRP2"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:16202709", "PMID:36399562"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary genetic, culture and recombinant-ligand studies support NRP2 as a SEMA3B receptor-complex component required for neuronal attraction/commissural positioning and cortical progenitor responses."
+                limitations = "Preserve NrCAM/Plexin co-receptor context and neuronal/cortical developmental assays; do not flatten the multicomponent receptor into autonomous NRP2 or infer SCI or terminal-TF output."
+            elif pair == ("SEMA3B", "PLXNA1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:20159958", "PMCID:PMC2816738", "DOI:10.1101/gad.542510"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse; chick"
+                summary = "Primary commissural-neuron and neural-tube studies support SEMA3B-induced signaling through the NRP2:PlexinA1 receptor complex, including PlexinA1 processing, growth-cone collapse and post-crossing axon guidance."
+                limitations = "Preserve NRP2 as the ligand-binding component and PlexinA1 as the signal-transducing coreceptor; do not infer direct SEMA3B-PlexinA1 binary binding independent of NRP2, collapse the row into NRP2-only evidence, or infer SCI/terminal-TF output."
+            elif pair == ("SEMA3C", "PLXNA4"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:29661844"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human"
+                summary = "Primary receptor-reconstitution and cytoskeletal-collapse studies support SEMA3C signaling through the PlexinD1:PlexinA4 complex, with neuropilins enhancing but not being required for the tested response."
+                limitations = "Preserve PlexinD1:PlexinA4 complex topology and neuropilin-enhancement/knockout boundary; do not infer a direct isolated SEMA3C-PLXNA4 edge, a universal NRP-independent route, SCI or terminal-TF output."
+            elif pair == ("SEMA3F", "PLXNA1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:18660502", "PMCID:PMC2555994"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary human glioma and endothelial-cell studies support SEMA3F-dependent NRP2:PlexinA1 complex formation and receptor-dependent cytoskeletal and migration responses."
+                limitations = "Promote only the NRP2:PlexinA1 complex-level activation/function edge; preserve NRP2 as ligand-binding component and PlexinA1 as signal-transducing component, with no purified ternary stoichiometry, SCI or terminal-TF inference."
+            elif pair == ("SEMA3F", "PLXNA2"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:11239433"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mixed"
+                summary = "Primary receptor-reconstitution studies support SEMA3F-dependent activation in cells expressing NRP2 and PlexinA2 together, but not with either component alone."
+                limitations = "Promote only heterologous NRP2:PlexinA2 complex activation/function; preserve NRP2 as ligand-binding component and PlexinA2 as signal-transducing component, with no purified ternary stoichiometry or SCI/terminal-TF inference."
+            elif pair == ("SEMA3F", "PLXNA3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:20010807", "PMID:23063687", "PMID:11683995"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse; rat"
+                summary = "Primary CNS and oligodendrocyte-precursor studies support SEMA3F-dependent responses requiring the NRP2:PlexinA3 holoreceptor, including migration and axon-guidance phenotypes."
+                limitations = "Promote only the NRP2:PlexinA3 complex-level functional edge; support is genetic/perturbation-based rather than purified ternary binding, so do not infer direct SEMA3F-PLXNA3 binary binding, SCI or terminal-TF output."
+            elif pair == ("SEMA3G", "NRP2"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:27880905"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary AP-tagged binding, receptor-complex and lymphatic-endothelial studies support direct SEMA3G binding to NRP2 and NRP2-dependent PlexinD1/PlexinA4/PlexinA1 functional contexts."
+                limitations = "Preserve NRP2 as the ligand-binding subunit and distinguish direct SEMA3G-NRP2 binding from the separate PlexinD1, PlexinA4 and PlexinA1 complex-dependent outputs; do not assign direct SEMA3G binding to those Plexins or infer SCI/terminal-TF output."
+            elif pair == ("SEMA3G", "PLXNA1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:36720439"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary vascular studies support SEMA3G-dependent human smooth-muscle proliferation and migration requiring the NRP2:PlexinA1 complex, with MMP2/MMP9 and LATS1/YAP pathway readouts."
+                limitations = "Promote only NRP2:PlexinA1 complex-dependent vascular function; the primary uses receptor inhibition rather than purified ternary binding, so do not infer isolated SEMA3G-PLXNA1 binding, universal signaling, SCI or terminal-TF output."
+            elif pair == ("SEMA3G", "PLXNA2"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_or_direct_molecular"
+                species = "mouse"
+                summary = "The current graph contains only a frozen SEMA3G-NRP2:PLXNA2 alias from the mouse LR release; no stable pair-specific primary packet for isolated SEMA3G-PLXNA2 is available in this bundle."
+                limitations = "Preserve NRP2 and class-A plexin complex topology; do not promote isolated SEMA3G-PLXNA2 binding or infer downstream, SCI or terminal-TF evidence from the frozen database row."
+            else:
+                raise SystemExit(f"unhandled batch 178 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
