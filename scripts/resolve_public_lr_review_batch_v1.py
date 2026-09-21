@@ -1161,6 +1161,22 @@ def main() -> None:
                 layer = "candidate_only_unverified"
                 summary = "Secretin/SCT signaling is centered on the secretin receptor SCTR, not the unrelated GPCRs and RAMP/TSHR/PTH-family targets listed here."
                 limitations = "Require mature secretin and direct SCTR assay; do not transfer secretin-family specificity across unrelated GPCRs."
+            elif ligand == "SHH" and receptor == "SMO":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000204;M22B-E000584"
+                primary = reviewed
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human; mouse; rat comparator"
+                summary = "The graph assigns direct SHH reception to PTCH1/PTCH2 and represents SMO as the downstream transducer in a composite PTCH1-SMO Hedgehog relay; direct SHH-SMO binding is not asserted."
+                limitations = "Preserve PTCH1/PTCH2 ligand-binding and PTCH-SMO coupling topology; do not materialize SHH-SMO as a standalone direct ligand-receptor edge."
+            elif ligand == "SHH" and receptor == "GPC5":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M22B-E000585"
+                primary = reviewed
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "as stated in primary model/assay"
+                summary = "GPC5 is represented as a Hedgehog co-receptor/scaffold that can facilitate SHH engagement with PTCH1, not as the canonical SHH receptor itself."
+                limitations = "Preserve GPC5/PTCH1/SMO composite topology and developmental or tumor-model context; do not infer an autonomous GPC5 receptor relay or terminal TF output."
             elif ligand == "ROBO1" and receptor == "NCAM1":
                 disposition = "reject_precursor_or_non_edge_form"
                 layer = "candidate_only_unverified"
@@ -1182,6 +1198,18 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "The semaphorin candidate overlaps neuropilin/plexin or immune-receptor family biology, but the exact ligand-receptor pair and composite receptor topology were not verified in a primary assay during this pass."
                 limitations = "Require exact semaphorin isoform, neuropilin/plexin or immune-receptor composition and assay; do not transfer family-level guidance evidence across paralogs."
+            elif ligand == "SERPINE1" and receptor in {"ITGAV", "PLAT", "PLAU"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "PAI-1/SERPINE1 has protease, vitronectin/integrin and receptor-trafficking contexts, but the listed rows do not resolve a single direct canonical receptor topology in the current graph layer."
+                limitations = "Preserve active/cleaved PAI-1, vitronectin, uPA/tPA and LRP1/uPAR context; require exact pair-specific binding or receptor-triggering evidence before promoting ITGAV, PLAT or PLAU as direct signaling receptors."
+            elif ligand.startswith("SIGLEC") or ligand in {"SIRPA", "SIRPB1A"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "SIGLEC and SIRP proteins are cell-surface immunoreceptor-family proteins, not mature extracellular ligands for the listed targets in these candidate orientations."
+                limitations = "Represent sialylated-ligand/SIGLEC and CD47/SIRP cis/trans interactions in receptor orientation; do not invert SIGLEC or SIRP receptors into ligand position."
             elif ligand.startswith("SERPINA") or ligand.startswith("SERPINC") or ligand.startswith("SERPINE") or ligand == "SERPING1":
                 disposition = "hold_contextual_or_complex_boundary"
                 layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
