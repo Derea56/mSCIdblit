@@ -514,10 +514,19 @@ def main() -> None:
             summary = "The reviewed citations support latrophilin/teneurin or guidance-receptor family context, but do not verify this exact ligand-receptor pair in a primary assay."
             limitations = "Retain as family-level contextual evidence; require an exact ligand, receptor, species and assay before graph promotion, and do not infer a complete intracellular or TF route."
         elif ligand == "INSL3" and receptor == "RXFP1":
-            disposition = "no_primary_evidence_found"
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation"
+            primary = ["PMID:15649866", "PMID:22973049"]
+            species = "human; rat comparator"
+            summary = "Primary relaxin-family receptor pharmacology assigns INSL3 to RXFP2 and reports only low-affinity or engineered-chimera behavior at RXFP1-related constructs; the public INSL3-RXFP1 row is retained as a bounded family-context hold."
+            limitations = "Do not materialize a canonical INSL3-RXFP1 edge; preserve the exact INSL3-RXFP2 route and distinguish native receptor assays from RXFP1/RXFP2 chimeras."
+        elif ligand == "INSL3" and receptor != "RXFP2":
+            disposition = "reject_precursor_or_non_edge_form"
             layer = "candidate_only_unverified"
-            summary = "The candidate appears to use the wrong relaxin-family receptor: the verified INSL3 receptor literature supports RXFP2 rather than RXFP1."
-            limitations = "Do not materialize INSL3-to-RXFP1; retain the row only for future receptor-normalization review and separately verify any INSL3-to-RXFP2 evidence."
+            primary = ["PMID:15649866", "PMID:22973049", "PMID:15956688"]
+            species = "human; rat comparator"
+            summary = "Primary relaxin-family receptor studies identify RXFP2 as the cognate INSL3 receptor and distinguish RXFP1, RXFP3 and RXFP4 ligand specificity; the listed non-RXFP2 candidate is not supported as a canonical INSL3 receptor edge."
+            limitations = "Retain the mature INSL3-RXFP2 route and any explicitly tested low-affinity/chimera behavior separately; do not infer INSL3 signaling through unrelated GPCRs, RAMPs or receptor paralogs."
         elif ligand in {"KNG1", "KNG2", "PDYN", "PENK", "PMCH", "POMC", "TAC1"}:
             disposition = "reject_precursor_or_non_edge_form"
             layer = "candidate_only_unverified"
