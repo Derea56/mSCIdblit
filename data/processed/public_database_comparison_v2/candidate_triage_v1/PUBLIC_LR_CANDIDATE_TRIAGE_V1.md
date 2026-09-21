@@ -1,6 +1,6 @@
 # Public ligand--receptor candidate triage v1
 
-This report reduces `7,753` public-only rows to `7,753` normalized candidate units against `8,108` direct ligand--receptor graph edges from `module20_24_mechanism_graph:2026-09-20`.
+This report reduces `7,753` public-only rows to `7,753` normalized candidate units against `8,111` direct ligand--receptor graph edges from `module20_24_mechanism_graph:2026-09-21`.
 
 ## Results
 
@@ -8,13 +8,13 @@ This report reduces `7,753` public-only rows to `7,753` normalized candidate uni
 |---|---:|---|
 | Resolved graph match | 8 | Exact label or exact component match; no new edge is implied. |
 | Completed prior harvest | 25 | Present in the existing primary-evidence harvest ledger; excluded from new review batches. |
-| Completed batch review | 300 | Resolved in a batch-specific evidence ledger; excluded from new review batches while retaining the resolution record. |
-| Represented graph alias | 957 | Conservative one-component/one-edge representation match; no new evidence or edge is inferred. |
+| Completed batch review | 1,400 | Resolved in a batch-specific evidence ledger; excluded from new review batches while retaining the resolution record. |
+| Represented graph alias | 960 | Conservative one-component/one-edge representation match; no new evidence or edge is inferred. |
 | Alias adjudication | 0 | Component overlap suggests an alias or composite representation; curator confirmation is required. |
-| Primary-evidence review | 1,526 | No automatic graph match and a public primary-paper locator is present. |
-| Discovery review | 4,937 | No automatic graph match and no primary locator in the frozen public snapshot. |
+| Primary-evidence review | 895 | No automatic graph match and a public primary-paper locator is present. |
+| Discovery review | 4,465 | No automatic graph match and no primary locator in the frozen public snapshot. |
 
-The actionable review queue contains `6,463` units, of which `1,526` have a primary locator and `4,937` require discovery or broader evidence search.
+The actionable review queue contains `5,360` units, of which `895` have a primary locator and `4,465` require discovery or broader evidence search.
 
 ## Review batches
 
