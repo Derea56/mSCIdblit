@@ -583,6 +583,50 @@ def main() -> None:
                 layer = "candidate_only_review_locator"
                 summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
                 limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
+        elif row.get("review_batch") == "batch_087":
+            pair = (ligand, receptor)
+            if pair == ("CXCL10", "SDC4"):
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:20484822"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse bleomycin-induced pulmonary-fibrosis model and primary lung fibroblast assays"
+                summary = "Primary studies show direct CXCL10-syndecan-4 interaction by radioligand binding and chemical crosslinking, with syndecan-4-dependent inhibition of fibroblast migration and antifibrotic activity; mutation of the CXCL10 heparin-binding domain reduces the effect."
+                limitations = "Represent CXCL10-SDC4 as a heparan-sulfate proteoglycan interaction in the lung fibroblast/fibrosis context, distinct from CXCL10-CXCR3 signaling; do not infer a universal intracellular or terminal-TF route."
+            elif pair == ("CXCL13", "ACKR4"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:32480426"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human systematic beta-arrestin screening of 43 chemokines against ACKR4"
+                summary = "A systematic primary screening study specifically disproved agonist activity of CXCL13 toward ACKR4 while confirming CCL19, CCL20, CCL21, CCL25 and partial CCL22 activity; the public CXCL13-ACKR4 row should not be materialized."
+                limitations = "Represent CXCL13 with its supported receptor context and preserve the negative ACKR4 screen; do not infer ACKR4 binding from the earlier family-level annotation or from CXCL13 homology."
+            elif pair == ("CCL24", "CCR2"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:9365122"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human CCL24/eotaxin-2 cloning, CCR3-transfected-cell binding and eosinophil chemotaxis assays"
+                summary = "Primary cloning and receptor assays identify CCL24/eotaxin-2 as a CCR3 ligand with eosinophil chemotactic activity; the cited study does not support transfer of the CCL24 pair to CCR2."
+                limitations = "Represent CCL24-CCR3 with the tested eosinophil and receptor-transfectant context; do not transfer CCL11/CCL24 family evidence to CCR2 or infer a direct CCL24-CCR2 edge."
+            elif pair in {("CCL21B", "ACKR2"), ("CCL25", "ACKR2")}:
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:19632987", "PMID:11981810", "PMID:23341447"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human/mouse atypical-chemokine-receptor ligand panels and CCX-CKR/ACKR4 binding and beta-arrestin assays"
+                chemokine = "CCL21" if ligand == "CCL21B" else "CCL25"
+                summary = f"Primary atypical-receptor studies place {chemokine} in the homeostatic CCX-CKR/ACKR4 ligand context and define D6/ACKR2 around inflammatory chemokine recognition, but the current evidence does not isolate a direct {chemokine}-to-ACKR2 experiment."
+                limitations = f"Retain {ligand}-ACKR2 only as a receptor-family/context boundary with species and chemokine-processing limits; do not materialize a direct ACKR2 edge or transfer CCX-CKR/ACKR4 evidence to ACKR2."
+            elif pair in {("CXCL10", "ACKR1"), ("CXCL11", "ACKR1")}:
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:13679391", "PMID:19060902"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse DARC/ACKR1 competitive-binding studies and human/mouse endothelial transcytosis assays"
+                chemokine = "CXCL10" if ligand == "CXCL10" else "CXCL11"
+                summary = f"Primary DARC/ACKR1 studies establish broad inflammatory-chemokine binding and receptor-mediated transport, but the cited assays do not provide a bounded isolated {chemokine}-ACKR1 experiment sufficient to promote this public row as a new binary edge."
+                limitations = f"Retain {chemokine}-ACKR1 as plausible atypical-receptor context with DARC/ACKR1 cell-type and transport boundaries; do not infer exact affinity, scavenging, or canonical intracellular signaling from broad promiscuity."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
