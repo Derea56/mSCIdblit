@@ -3858,6 +3858,80 @@ def main() -> None:
                 limitations = "Preserve TN-X FNIII9-10 fragment and alphaVbeta3 context; full-length TNXB showed little antibody-sensitive adhesion, so do not infer autonomous ITGAV binding, SCI or terminal-TF output."
             else:
                 raise SystemExit(f"unhandled batch 184 pair: {pair}")
+        elif row.get("review_batch") == "batch_185":
+            pair = (ligand, receptor)
+            if pair == ("TNXB", "ITGB3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["https://febs.onlinelibrary.wiley.com/doi/10.1046/j.1432-1327.1999.00563.x"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary recombinant-fragment adhesion studies support a TN-X FNIII9-10 fragment engaging assembled alphaVbeta3 in an RGD-dependent context."
+                limitations = "Preserve TN-X FNIII9-10 fragment and alphaVbeta3 context; full-length TNXB showed little antibody-sensitive adhesion, so do not split beta3 from alphaV, infer autonomous ITGB3 binding or assign SCI/terminal-TF output."
+            elif pair == ("TSLP", "CRLF2"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:24632570", "DOI:10.1038/nsmb.2794", "PMID:20144186", "DOI:10.1186/1471-2172-11-5", "PMID:28368013", "PMCID:PMC5382266", "DOI:10.1038/ncomms14937"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary structural, kinetic, mutational and reporter studies support direct TSLP binding to TSLPR/CRLF2 and assembly of the TSLPR/CRLF2:IL7R ternary receptor with STAT5 and proliferative outputs."
+                limitations = "Preserve TSLPR/CRLF2 plus IL7R composition, processed/glycosylated ligand and human-versus-mouse structural systems; do not infer isolated IL7R binding, barrier-tissue/CNS/SCI transfer or terminal-TF output."
+            elif pair == ("TSLP", "IL7R"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:24632570", "DOI:10.1038/nsmb.2794", "PMID:20144186", "DOI:10.1186/1471-2172-11-5"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary ternary-complex and reporter studies support IL7R as the signaling partner in the TSLP-TSLPR/CRLF2:IL7R receptor complex, with STAT5/proliferative responses."
+                limitations = "Promote only the assembled TSLPR/CRLF2:IL7R topology; do not infer isolated TSLP-IL7R binding or free IL7R signaling, and preserve species, processed-ligand and assay boundaries without SCI/terminal-TF transfer."
+            elif pair == ("VCAM1", "ITGA4"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:7511143", "PMCID:PMC2290915", "PMID:8640376"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary VCAM1 domain-mutagenesis, binding and adhesion studies support VCAM1 recognition by assembled alpha4beta1 and alpha4beta7 integrins."
+                limitations = "Preserve VCAM1 Ig-domain, alpha4beta1 versus alpha4beta7 heterodimer and activation-state dependence; do not split alpha4 from its beta subunit, infer free ITGA4 signaling or assign SCI output."
+            elif pair == ("VCAM1", "ITGA9"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:10209034"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary transfected-cell, endothelial and neutrophil-transmigration studies support VCAM1 adhesion through assembled alpha9beta1."
+                limitations = "Preserve alpha9beta1 heterodimer, activated endothelium and neutrophil-transmigration context, distinct from alpha4beta1/alpha4beta7; do not infer free ITGA9 signaling or SCI output."
+            elif pair == ("VCAM1", "ITGAD"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:9841932", "PMID:10438935"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary soluble I-domain, transfected-cell and adhesion studies support VCAM1 as an alternative ligand for assembled alphaDbeta2."
+                limitations = "Preserve alphaDbeta2 as the receptor complex, VCAM1 D40/interface and activation-state context; do not promote isolated ITGAD signaling or infer SCI/terminal-TF output."
+            elif pair == ("VCAM1", "ITGB1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:7511143", "PMCID:PMC2290915", "PMID:10209034"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary studies support VCAM1 interaction with assembled alpha4beta1 and alpha9beta1 integrin complexes in adhesion and transmigration contexts."
+                limitations = "Preserve the distinct alpha4beta1 versus alpha9beta1 heterodimers and VCAM1 activation-state/vascular context; do not promote free ITGB1 signaling, collapse complexes or assign SCI/terminal-TF output."
+            elif pair == ("VCAM1", "ITGB2"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:9841932", "PMID:10438935"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary soluble I-domain and adhesion studies support VCAM1 interaction with assembled alphaDbeta2 in eosinophil/lymphoid-cell models."
+                limitations = "Preserve alphaDbeta2, VCAM1 D40/interface and activation-state context; do not promote free ITGB2 signaling or infer SCI/terminal-TF output."
+            elif pair == ("VCAM1", "ITGB7"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:8640376"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary purified-protein binding studies support activation-state-dependent VCAM1 interaction with assembled alpha4beta7."
+                limitations = "Preserve alpha4beta7 heterodimer and activation-state dependence; do not split beta7 from alpha4, infer free ITGB7 signaling or assign SCI/terminal-TF output."
+            elif pair == ("VEGFA", "ITGA9"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:17363377"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human"
+                summary = "Primary isoform-specific binding, adhesion/migration and angiogenesis studies support VEGF-A121/165 engagement of assembled alpha9beta1 with VEGFR2 cooperation."
+                limitations = "Preserve VEGF-A isoform, alpha9beta1/VEGFR2 cooperative topology and distinction between direct binding and cell-function layers; do not split alpha9 from beta1 or infer SCI/terminal-TF output."
+            else:
+                raise SystemExit(f"unhandled batch 185 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
