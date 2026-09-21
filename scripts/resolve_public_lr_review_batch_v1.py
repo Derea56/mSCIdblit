@@ -2752,6 +2752,35 @@ def main() -> None:
                 "limits remain in force, and these edges do not assert a universal intracellular cascade or terminal TF "
                 "route."
             )
+        elif row.get("review_batch") == "batch_165":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is represented by current graph edge(s) {matched_ids}. "
+                "The existing edge-source records provide primary-supported IZUMO1-JUNO binding, JAML-CAR adhesion "
+                "and transmigration, L1CAM-FGFR1 activation, and L1CAM-VLA5/alphaVbeta3 adhesion. JAM2/JAM3 "
+                "integrin rows are retained as bounded immune-comparator adhesion evidence. Several candidate-side "
+                "Module 20 IDs for the JAM/L1CAM aliases do not resolve in the current bundle and are intentionally "
+                "not carried into the reviewed edge references."
+            )
+            limitations = (
+                "Do not add duplicate edges or collapse JAM2/JAM3 integrin complexes, IZUMO1-JUNO, JAML-CAR, "
+                "L1CAM-FGFR1, or L1CAM integrin heterodimers into autonomous receptor or signaling definitions. Preserve "
+                "fertilization, junctional-adhesion, immune-comparator, neurite-outgrowth, and adhesion/migration "
+                "contexts, exact heterodimer topology, species and assay limits, and the distinction between binding, "
+                "receptor-proximal signaling and functional output. Treat stale candidate-side edge IDs as unresolved "
+                "metadata rather than evidence; these edges do not assert a universal intracellular cascade or terminal "
+                "TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"

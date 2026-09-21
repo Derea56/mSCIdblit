@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:IZUMO1>IZUMO1R	IZUMO1	IZUMO1R	M21B-E006178		represented_graph_alias	batch_165
+LR:JAM2>ITGA4	JAM2	ITGA4	M23B-E000592	stale candidate-side M20B-E000656 omitted; current bundle resolves M23B-E000592	represented_graph_alias	batch_165
+LR:JAM2>ITGA4+ITGB1	JAM2	ITGA4+ITGB1	M23B-E000592	stale candidate-side M20B-E000656 omitted; current bundle resolves M23B-E000592	represented_graph_alias	batch_165
+LR:JAM2>ITGB1	JAM2	ITGB1	M23B-E000592	stale candidate-side M20B-E000656 omitted; current bundle resolves M23B-E000592	represented_graph_alias	batch_165
+LR:JAM3>ITGAM	JAM3	ITGAM	M23B-E000594;M23B-E001064	stale candidate-side M20B-E000592 omitted; current comparator edges resolve	represented_graph_alias	batch_165
+LR:JAM3>ITGB2	JAM3	ITGB2	M23B-E000593;M23B-E000594;M23B-E001064	stale candidate-side M20B-E000592 omitted; current comparator edges resolve	represented_graph_alias	batch_165
+LR:JAML>CXADR	JAML	CXADR	M21B-E000661		represented_graph_alias	batch_165
+LR:L1CAM>FGFR1	L1CAM	FGFR1	M21B-E007007		represented_graph_alias	batch_165
+LR:L1CAM>ITGA5	L1CAM	ITGA5	M21B-E005468	stale candidate-side M20B-E004095 omitted; current bundle resolves M21B-E005468	represented_graph_alias	batch_165
+LR:L1CAM>ITGAV	L1CAM	ITGAV	M21B-E000651	stale candidate-side M20B-E004096 omitted; current bundle resolves M21B-E000651	represented_graph_alias	batch_165
