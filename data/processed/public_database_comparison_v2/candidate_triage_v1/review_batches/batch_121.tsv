@@ -1,0 +1,10 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:NECTIN2>CD226	NECTIN2	CD226	M21B-E000667		represented_graph_alias	batch_121
+LR:NECTIN2>TIGIT	NECTIN2	TIGIT	M21B-E005461		represented_graph_alias	batch_121
+LR:NID1>ITGA3	NID1	ITGA3	M21B-E002823;M23B-E000803		represented_graph_alias	batch_121
+LR:NID1>ITGAV	NID1	ITGAV	M21B-E002824		represented_graph_alias	batch_121
+LR:NID1>ITGB1	NID1	ITGB1	M21B-E002823;M23B-E000803		represented_graph_alias	batch_121
+LR:NID1>ITGB3	NID1	ITGB3	M21B-E002824		represented_graph_alias	batch_121
+LR:NLGN2>NRXN2	NLGN2	NRXN2	M21B-E005867		represented_graph_alias	batch_121
+LR:NLGN3>NRXN2	NLGN3	NRXN2	M21B-E005867		represented_graph_alias	batch_121
+LR:NPPA>NPR2	NPPA	NPR2	M21B-E006990		represented_graph_alias	batch_121
