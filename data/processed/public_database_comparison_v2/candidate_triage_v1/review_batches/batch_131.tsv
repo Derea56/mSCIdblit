@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:AMH>BMPR1B	AMH	BMPR1B	M20B-E001798		represented_graph_alias	batch_131
+LR:ANGPT2>ITGA5	ANGPT2	ITGA5	M20B-E002552;M21B-E000506;M23B-E000113		represented_graph_alias	batch_131
+LR:ANGPT2>ITGB1	ANGPT2	ITGB1	M20B-E002552;M21B-E000506;M23B-E000113		represented_graph_alias	batch_131
+LR:ANGPTL1>ITGA1	ANGPTL1	ITGA1	M20B-E002557;M21B-E006284		represented_graph_alias	batch_131
+LR:ANGPTL1>ITGB1	ANGPTL1	ITGB1	M20B-E002557;M21B-E006284		represented_graph_alias	batch_131
+LR:ANGPTL2>ITGA5	ANGPTL2	ITGA5	M20B-E002560;M21B-E000645;M23B-E000479		represented_graph_alias	batch_131
+LR:ANGPTL2>ITGB1	ANGPTL2	ITGB1	M20B-E002560;M21B-E000645;M23B-E000479		represented_graph_alias	batch_131
+LR:ANGPTL3>ITGAV	ANGPTL3	ITGAV	M20B-E002564;M21B-E000644;M23B-E000116		represented_graph_alias	batch_131
+LR:ANGPTL3>ITGB3	ANGPTL3	ITGB3	M20B-E002564;M21B-E000644;M23B-E000116		represented_graph_alias	batch_131
+LR:ANGPTL4>ITGA5	ANGPTL4	ITGA5	M20B-E002567		represented_graph_alias	batch_131
