@@ -2,7 +2,7 @@
   "bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion251",
   "bundle_release_id": "module20_24_mechanism_graph:2026-09-21",
   "candidate_input": {
-    "path": "data/processed/public_database_comparison_v2/public_only_lr_candidates.tsv",
+    "path": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/public_database_comparison_v2/public_only_lr_candidates.tsv",
     "raw_rows": 7753,
     "sha256": "31189239be3f4b6f91a87c92b1716ccac294f468279c7122693624c55c508732"
   },
@@ -20,16 +20,16 @@
   },
   "policy": "This triage does not promote edges or assign biological confidence; primary evidence and route plausibility remain separate downstream decisions.",
   "prior_audit_input": {
-    "path": "data/processed/public_database_comparison_v2/primary_evidence_harvest_resolution.tsv",
+    "path": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/public_database_comparison_v2/primary_evidence_harvest_resolution.tsv",
     "rows": 25,
     "sha256": "0ed894fafc921fb08d4c49c0f38a23fb83f2bb730cf0202f85a0f5adee440727"
   },
   "prior_harvest_matched_units": 25,
   "prior_harvest_rows": 25,
   "resolution_ledger_input": {
-    "path": "data/processed/public_database_comparison_v2/candidate_triage_v1/review_resolution_ledger.tsv",
+    "path": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/public_database_comparison_v2/candidate_triage_v1/review_resolution_ledger.tsv",
     "rows": 6760,
-    "sha256": "a00fba12ca43154ef385280d0031f9292dd28f4414b4c8a4cb0832e9918e488d"
+    "sha256": "b6766bec85ecf015986a5ec9fee287ad357ae9995411c2ac70d0453b1dd838de"
   },
   "review_batch_counts": {},
   "review_batch_size": 100,
