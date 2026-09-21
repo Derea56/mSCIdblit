@@ -1,22 +1,22 @@
 {
-  "bundle_dir": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion251",
+  "bundle_dir": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion254",
   "bundle_release_id": "module20_24_mechanism_graph:2026-09-21",
   "candidate_input": {
     "path": "data/processed/public_database_comparison_v2/candidate_triage_v1/candidate_normalization.tsv",
     "raw_rows": 7753,
-    "sha256": "503fae1822f5b09722a0800a5adbf0f95081cb613f400d995c94185303ee858f"
+    "sha256": "e273243b521b05f8b2eca372c2246ce23805aa8cc2efe2b6e45ae73cfb6fade4"
   },
   "candidate_units": 7753,
   "completed_batch_review_units": 6778,
   "graph_input": {
-    "direct_lr_edges": 8112,
-    "path": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion251/mechanism_edges.tsv",
-    "sha256": "3615758b63df854ee5ae0dea37c42e29684234e61804ee4375257bd475e1ead0"
+    "direct_lr_edges": 8161,
+    "path": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion254/mechanism_edges.tsv",
+    "sha256": "053828fc5e6d3652cdf88830f5c2aaa1cf95464a4cc354f17308872ef2aa56bd"
   },
   "normalization_match_counts": {
-    "graph_match_alias_adjudication": 1093,
-    "graph_match_exact_label": 10,
-    "novel_candidate": 6650
+    "graph_match_alias_adjudication": 1099,
+    "graph_match_exact_label": 58,
+    "novel_candidate": 6596
   },
   "policy": "This triage does not promote edges or assign biological confidence; primary evidence and route plausibility remain separate downstream decisions.",
   "prior_audit_input": {
@@ -29,7 +29,7 @@
   "resolution_ledger_input": {
     "path": "data/processed/public_database_comparison_v2/candidate_triage_v1/review_resolution_ledger.tsv",
     "rows": 6778,
-    "sha256": "2b0835c7a827ac51890a31a6488e9c01b94b8dc880f0206f53282737873c75e1"
+    "sha256": "ab436afb2bc033f1f5f33dbcd280e4dc721acc358fee703d4fcf784ff8415a68"
   },
   "review_batch_counts": {},
   "review_batch_size": 100,

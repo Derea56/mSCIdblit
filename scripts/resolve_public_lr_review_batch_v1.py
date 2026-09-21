@@ -17,7 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_BATCH = ROOT / "data/processed/public_database_comparison_v2/candidate_triage_v1/review_batches/batch_001.tsv"
-DEFAULT_BUNDLE = ROOT / "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion251"
+DEFAULT_BUNDLE = ROOT / "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion254"
 DEFAULT_OUTPUT = ROOT / "data/processed/public_database_comparison_v2/candidate_triage_v1/batch_001_review_resolution.tsv"
 LOCATOR = re.compile(r"(?:PMID:\d+|PMCID:PMC\d+|DOI:10\.\d{4,9}/[^;\s]+)", re.IGNORECASE)
 
@@ -97,12 +97,13 @@ def main() -> None:
         elif row.get("review_batch") == "batch_074":
             pair = (ligand, receptor)
             if pair == ("CBLN1+NRXN1", "GRID2"):
-                disposition = "new_primary_supported_edge_candidate"
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E002141;M21B-E002142"
                 primary = ["PMID:20537373", "PMID:22117778", "PMID:27418511", "PMID:29782851"]
                 layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
                 species = "mouse; rat"
-                summary = "Primary binding, structural and cerebellar synapse studies resolve the CBLN1-β-NRXN1-GRID2 trans-synaptic bridge and connect it to synapse formation and GluD2-dependent plasticity outputs."
-                limitations = "Represent CBLN1 as a multicomponent bridge requiring β-NRXN1 and GRID2 context; do not decompose the triad into an isolated binary receptor route or infer a universal intracellular/TF chain from synapse-level outputs."
+                summary = "Primary binding, structural and cerebellar synapse studies resolve the CBLN1-β-NRXN1-GRID2 trans-synaptic bridge, while the graph already represents its CBLN1-NRXN1 and CBLN1-GRID2 component edges."
+                limitations = "Retain the validated component edges and the multicomponent bridge context; do not materialize the composite as a duplicate binary ligand-receptor edge or infer a universal intracellular/TF chain from synapse-level outputs."
             elif pair == ("EFNB1", "EPHB4"):
                 disposition = "new_primary_supported_edge_candidate"
                 primary = ["PMID:16840724"]

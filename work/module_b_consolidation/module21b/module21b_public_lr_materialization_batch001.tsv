@@ -1,0 +1,2 @@
+candidate_unit_id	b_edge_id	b_evidence_id	previous_edge_status	new_edge_status	primary_locator	materialization_status	limitations
+LR:EFNB1>EPHB4	M21B-E011625	M21B-EVID-010928	low_evidence	validated_primary_exact_layer	PMID:16840724	materialized_reviewed_primary	Preserve ephrin-B1-Fc, EphB4 phosphorylation and endothelial chemotaxis/branching context; no complete intracellular cascade, terminal TF, target-gene output or SCI transfer is inferred.
