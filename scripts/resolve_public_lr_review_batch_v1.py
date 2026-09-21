@@ -950,6 +950,39 @@ def main() -> None:
             species = "human TspanC8/ADAM10 biochemical, cell-based and primary-cell assays"
             summary = "Primary co-immunoprecipitation and trafficking studies show direct ADAM10 association with the listed TspanC8 tetraspanins, which regulate ADAM10 maturation, surface expression and substrate-selective Notch signaling."
             limitations = "Retain the reverse regulatory-complex orientation and TspanC8-specific substrate/trafficking context; do not materialize ADAM10-to-TSPAN as an extracellular ligand-receptor edge or infer that every TspanC8 complex produces the same signaling output."
+        elif ligand == "APP" and receptor == "GPC1":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:8940123"]
+            species = "mouse brain-derived glypican and chick sympathetic-neuron assays"
+            summary = "Primary affinity-column and purified-protein binding assays show that secreted glypican binds recombinant APP with nanomolar affinity, and the glypican-APP interaction inhibits APP-induced neurite outgrowth."
+            limitations = "Represent this as a direct APP-glypican interaction with a matrix/co-receptor boundary; preserve the secreted glypican, recombinant APP and neurite-outgrowth context, and do not infer a canonical intracellular or TF cascade from the adhesion readout."
+        elif ligand == "APP" and receptor == "NGFR":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:24358169", "PMID:19334058"]
+            species = "mouse cortical-neuron and mammalian cell assays; human, mouse and rat tissue interaction evidence"
+            summary = "Primary co-immunoprecipitation, pull-down, ELISA, reporter and neuronal perturbation studies support direct interaction of APP or soluble APP fragments with p75/NGFR and link the interaction to neurite outgrowth, APP processing and cell-death or transcriptional readouts."
+            limitations = "Preserve the APP form, p75/NGFR context and assay-specific output; distinguish full-length APP or soluble APP-fragment interaction from Aβ or NGF signaling, and do not infer a universal canonical receptor cascade beyond the reported cellular models."
+        elif ligand == "APP" and receptor == "NCSTN":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:16096062", "PMID:12805296", "PMID:12716934"]
+            species = "mammalian cell and mouse knockout/fibroblast assays"
+            summary = "Primary biochemical, imaging and loss-of-function studies show that nicastrin is a gamma-secretase component and substrate-recruitment/docking factor required for processing of APP-derived membrane stubs; this is an enzyme-substrate and proteolytic-complex relationship rather than a conventional extracellular ligand-receptor edge."
+            limitations = "Retain APP-NCSTN as receptor-proximal proteolytic machinery and a source of APP-processing output; do not materialize it as a soluble ligand edge or infer an independent NCSTN-initiated TF route."
+        elif ligand == "APP" and receptor == "FPR2":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:35365641"]
+            species = "human FPR2 structural and functional assays"
+            summary = "Primary structure-function studies establish FPR2 recognition and signaling responses for amyloid-beta Aβ42, not for the APP precursor protein represented by this candidate row."
+            limitations = "Retain Aβ42-FPR2 as a distinct mature-peptide route; do not transfer its receptor evidence to full-length APP or soluble APP fragments without an APP-form-specific assay."
+        elif ligand == "APP" and receptor in {"TREM2+TYROBP", "ADRA2A"}:
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_unverified"
+            summary = "The current review pass did not verify an exact primary experiment supporting the APP-to-listed-receptor candidate; related studies may concern APP processing products, receptor complexes or different ligand forms."
+            limitations = "Retain for targeted follow-up; do not materialize a graph edge from public-database membership or from evidence about Aβ, APP-processing machinery or receptor-family context alone."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
