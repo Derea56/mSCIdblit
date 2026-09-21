@@ -820,6 +820,41 @@ def main() -> None:
             species = "human and rat renin-angiotensin system studies"
             summary = "Angiotensinogen is processed by renin and downstream enzymes into angiotensin peptides; AT2/AGTR2 responds to angiotensin II or related mature peptides, not to intact angiotensinogen as the direct ligand."
             limitations = "Retain the angiotensinogen-to-angiotensin-peptide processing cascade and mature peptide-to-AGTR2 evidence separately; do not materialize AGT-to-AGTR2 as a direct binary edge."
+        elif ligand == "AGT":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:12045255", "PMID:15534073"]
+            species = "human and rat renin-angiotensin system studies"
+            summary = "Angiotensinogen is a precursor processed into angiotensin peptides; the listed receptor rows do not establish intact AGT as the direct mature ligand."
+            limitations = "Retain the angiotensinogen-to-angiotensin-peptide processing cascade and receptor-specific mature peptide evidence separately; do not materialize AGT-to-receptor rows from precursor or pathway membership."
+        elif ligand == "LTA" and receptor == "TNFRSF14":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:15647361"]
+            species = "human and mouse HVEM/LTalpha complex assays"
+            summary = "Primary HVEM complex studies place lymphotoxin-alpha among the ligands that can engage TNFRSF14/HVEM, but the reported interaction is within a receptor-complex and ligand-form context rather than a fully resolved standalone LTalpha3-to-HVEM route."
+            limitations = "Retain soluble LTalpha3, membrane LTalpha-beta complexes, LIGHT, BTLA and HVEM topology separately; require exact ligand form and pair-specific functional evidence before promoting this row as a standalone binary edge."
+        elif ligand == "CXCL1" and receptor == "CXCR1":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:41256520"]
+            species = "human receptor biosensor assays"
+            summary = "Primary receptor-bias experiments directly compare endogenous CXCL1 at CXCR1 and CXCR2 and measure G-protein, arrestin, kinase-translocation and internalization outputs, supporting CXCL1-CXCR1 activation with partial agonist bias."
+            limitations = "Preserve the endogenous human chemokine, receptor-bias and biosensor context; do not infer identical CXCL1 signaling at CXCR1 and CXCR2 or a complete terminal-TF route from the proximal assays."
+        elif ligand == "CXCL5" and receptor == "CXCR1":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:33688078"]
+            species = "human chemokine, receptor-signaling and primary monocyte/neutrophil assays"
+            summary = "Primary studies show that CXCL5 has weak agonist activity at CXCR1 and that N-terminal processing changes CXCR1 calcium and G-protein signaling, with CXCR1/CXCR2-dependent chemotaxis in primary myeloid-cell models."
+            limitations = "Preserve mature CXCL5 form, N-terminal processing and weak-CXCR1 versus stronger-CXCR2 activity distinctions; do not infer equivalent receptor potency or a universal downstream/TF route."
+        elif ligand == "CD200" and receptor == "CD200R4":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+            primary = ["PMID:12960329", "PMID:15187158"]
+            species = "mouse CD200R-family binding studies"
+            summary = "Primary CD200R-family studies report CD200 binding across alternate mouse receptor members, including CD200R4-related nomenclature, but later family analyses describe very low or disputed binding to activating CD200RL paralogs."
+            limitations = "Retain CD200/CD200R-family evidence with exact mouse paralog and affinity context; do not promote CD200R4 as an unqualified physiological receptor or infer canonical inhibitory signaling from family-level binding alone."
         elif ligand == "PTN" and receptor == "SDC2":
             disposition = "new_primary_supported_edge_candidate"
             layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
