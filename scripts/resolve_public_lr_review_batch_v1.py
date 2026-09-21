@@ -827,6 +827,20 @@ def main() -> None:
                 species = "human alpha-subunit/TSHR assay"
                 summary = "CGA encodes the common glycoprotein-hormone alpha subunit rather than a complete mature TSH, FSH, LH or hCG ligand; a primary TSHR assay found no agonist activity for wild-type free alpha, while activity required engineered alpha variants."
                 limitations = "Require the complete hormone heterodimer and exact receptor assay; do not materialize CGA alone as a ligand or transfer one beta-subunit-specific route across FSHR, LHCGR and TSHR."
+            elif ligand == "CORT" and receptor == "MRGPRB2":
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:25517090", "PMCID:PMC4359082", "PMID:32038646", "PMCID:PMC6985555"]
+                species = "mouse mast-cell models"
+                summary = "Primary mouse mast-cell and receptor-expression experiments support cortistatin/CST-14 activation of MrgprB2, the mouse ortholog of human MRGPRX2, with receptor-dependent mast-cell activation and calcium/degranulation outputs."
+                limitations = "Preserve mature cortistatin peptide processing, mouse MrgprB2 and mast-cell context; do not transfer the edge to other MRGPR paralogs or infer a universal intracellular relay or terminal-TF output."
+            elif ligand == "CORT":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:12915402", "PMID:25517090", "PMID:18243519"]
+                species = "human MRGPRX2 and mouse MrgprB2 family studies"
+                summary = "Primary cortistatin pharmacology identifies human MRGPRX2 and mouse MrgprB2 as receptor contexts, while the listed MRGPR paralogs and unrelated adrenergic, glutamate or melatonin targets were not verified as exact cortistatin receptors."
+                limitations = "Retain as family-level contextual evidence pending an exact ligand, receptor paralog and species assay; preserve the human MRGPRX2/mouse MrgprB2 boundary and do not promote unsupported paralogs or infer a terminal-TF route."
             elif ligand == "IL16" and receptor == "CD9":
                 disposition = "new_primary_supported_edge_candidate"
                 layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
