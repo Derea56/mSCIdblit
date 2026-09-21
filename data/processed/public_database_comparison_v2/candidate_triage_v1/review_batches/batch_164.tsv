@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:INHBA>ACVR1B+ACVR2B	INHBA	ACVR1B+ACVR2B	M21B-E000346;M21B-E000347		represented_graph_alias	batch_164
+LR:INHBA>ACVR2A	INHBA	ACVR2A	M21B-E000345;M21B-E000764;M21B-E006431		represented_graph_alias	batch_164
+LR:INHBA>ACVR2B	INHBA	ACVR2B	M21B-E000346;M21B-E000347;M21B-E000352;M21B-E006432		represented_graph_alias	batch_164
+LR:INHBB>ACVR1B	INHBB	ACVR1B	M21B-E003244		represented_graph_alias	batch_164
+LR:INHBB>ACVR1B+ACVR2A	INHBB	ACVR1B+ACVR2A	M21B-E003244		represented_graph_alias	batch_164
+LR:INHBB>ACVR1C	INHBB	ACVR1C	M21B-E003243		represented_graph_alias	batch_164
+LR:INHBB>ACVR1C+ACVR2A	INHBB	ACVR1C+ACVR2A	M21B-E003243		represented_graph_alias	batch_164
+LR:INHBB>ACVR2A	INHBB	ACVR2A	M21B-E003243;M21B-E003244		represented_graph_alias	batch_164
+LR:ITGB3BP>ITGB3	ITGB3BP	ITGB3	M23B-E000585		represented_graph_alias	batch_164
+LR:ITGB3BP>ITGB5	ITGB3BP	ITGB5	M23B-E000588		represented_graph_alias	batch_164

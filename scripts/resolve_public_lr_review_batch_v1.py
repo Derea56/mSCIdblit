@@ -2724,6 +2724,34 @@ def main() -> None:
                 "and functional output; these edges do not assert a universal intracellular cascade or terminal TF "
                 "route."
             )
+        elif row.get("review_batch") == "batch_164":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The existing edge-source records provide primary-supported Activin A ACVR1B:ACVR2A/ACVR2B "
+                "binding and assembly/activation, Activin B ACVR1B:ACVR2A and ACVR1C:ACVR2A assembly/activation, "
+                "and ITGB3BP/TAP20 association with ITGB3 or ITGB5 cytoplasmic tails in bounded comparator "
+                "adhesion/signaling contexts at the stated molecular resolution."
+            )
+            limitations = (
+                "Do not add duplicate edges or collapse ACVR1B:ACVR2A, ACVR1B:ACVR2B, ACVR1C:ACVR2A, or "
+                "betaglycan/ActRII and Cripto/ActRII complexes into autonomous single-chain receptors. Preserve "
+                "activin type-I/type-II receptor topology and the distinction between receptor-complex binding, "
+                "assembly, activation, antagonism, and cytoplasmic-tail adaptor association. Treat ITGB3BP rows as "
+                "bounded comparator evidence rather than extracellular ligand–receptor evidence; species and assay "
+                "limits remain in force, and these edges do not assert a universal intracellular cascade or terminal TF "
+                "route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
