@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:NECTIN1>CD96	NECTIN1	CD96	M21B-E005534	PMID:23027581	represented_graph_alias	batch_106
+LR:NECTIN1>NECTIN4	NECTIN1	NECTIN4	M21B-E002204	PMID:23027581	represented_graph_alias	batch_106
+LR:NPPB>NPR1	NPPB	NPR1	M21B-E001699	PMID:29934640;KEGG: mmu04080	represented_graph_alias	batch_106
+LR:PECAM1>CD38	PECAM1	CD38	M21B-E006625	PMID:26407101	represented_graph_alias	batch_106
+LR:PSPN>GFRA4+RET	PSPN	GFRA4+RET	M21B-E000989;M21B-E008839	PMID:11544105	represented_graph_alias	batch_106
+LR:TAFA4>FPR1	TAFA4	FPR1	M21B-E006514	PMID:35712659	represented_graph_alias	batch_106
+LR:VEGFA>KDR	VEGFA	KDR	M21B-E000183;M21B-E000185	PMID:16633338;KEGG: mmu04370	represented_graph_alias	batch_106
+LR:VEGFB>FLT1	VEGFB	FLT1	M21B-E000500	PMID:16633338;KEGG: mmu04370	represented_graph_alias	batch_106
+LR:VEGFC>FLT4	VEGFC	FLT4	M21B-E000358;M21B-E005133	PMID:16633338;KEGG: mmu04370	represented_graph_alias	batch_106
+LR:VEGFC>KDR	VEGFC	KDR	M21B-E000359	PMID:16633338;KEGG: mmu04370	represented_graph_alias	batch_106
