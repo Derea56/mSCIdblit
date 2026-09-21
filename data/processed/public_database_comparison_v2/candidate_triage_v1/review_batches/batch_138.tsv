@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:CD320>JAML	CD320	JAML	M21B-E005494		represented_graph_alias	batch_138
+LR:CD34>SELE	CD34	SELE	M21B-E000293		represented_graph_alias	batch_138
+LR:CD40LG>ITGA2B	CD40LG	ITGA2B	M21B-E000624;M23B-E000320		represented_graph_alias	batch_138
+LR:CD40LG>ITGA5	CD40LG	ITGA5	M21B-E005466;M23B-E000928		represented_graph_alias	batch_138
+LR:CD40LG>ITGAM	CD40LG	ITGAM	M21B-E000604;M23B-E001038		represented_graph_alias	batch_138
+LR:CD40LG>ITGB1	CD40LG	ITGB1	M21B-E005466;M23B-E000928		represented_graph_alias	batch_138
+LR:CD40LG>ITGB2	CD40LG	ITGB2	M21B-E000604;M23B-E001038		represented_graph_alias	batch_138
+LR:CD40LG>ITGB3	CD40LG	ITGB3	M21B-E000624;M23B-E000320		represented_graph_alias	batch_138
+LR:CDH1>ITGAE	CDH1	ITGAE	M20B-E002922;M21B-E000583;M23B-E000337		represented_graph_alias	batch_138
+LR:CDH1>ITGB7	CDH1	ITGB7	M20B-E002922;M21B-E000583;M23B-E000337		represented_graph_alias	batch_138
