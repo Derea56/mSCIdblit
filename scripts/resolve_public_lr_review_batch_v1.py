@@ -214,6 +214,41 @@ def main() -> None:
             species = "human; mouse comparator"
             summary = "Primary L1CAM adhesion studies support integrin-dependent migration and identify L1CAM as a ligand for VLA-5/alpha5beta1, but do not verify the alpha4beta7 composite receptor in this public row."
             limitations = "Retain L1CAM-integrin crosstalk and the exact alpha5beta1/VLA-5 context; do not promote L1CAM-alpha4beta7 without a pair-specific assay."
+        elif ligand == "L1CAM" and receptor == "ALCAM":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMCID:PMC6703882"]
+            species = "mouse primary midbrain neuron cultures"
+            summary = "Primary neuronal adhesion experiments support a trans-heterophilic L1cam-ALCAM relationship and show that blocking L1cam or Chl1 antibodies abolishes ALCAM-dependent neurite-growth responses."
+            limitations = "Preserve the trans-heterophilic cell-contact and neurite-growth assay context; do not infer a soluble ligand route, a universal intracellular relay or a terminal-TF output from this adhesion experiment."
+        elif ligand == "L1CAM" and receptor == "EPHB2":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMCID:PMC4351967"]
+            species = "mouse retinocollicular mapping model"
+            summary = "Primary EphB studies show EphB2-dependent phosphorylation of L1 during axon mapping, supporting receptor-proximal crosstalk with L1 rather than a direct extracellular L1CAM-to-EPHB2 ligand-receptor interaction."
+            limitations = "Retain EphB-L1 phosphorylation as downstream adhesion/receptor crosstalk; do not materialize L1CAM-EPHB2 as a direct binding edge or infer a complete L1CAM signaling cascade."
+        elif ligand == "L1CAM" and receptor == "PTPRZ1":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+            primary = ["PMID:7528221", "PMCID:PMC2120309"]
+            species = "rat neural cell and biochemical binding assays"
+            summary = "Primary phosphacan/PTPRZ1 studies report binding to neural cell-adhesion molecules including Ng-CAM/L1, but the demonstrated orientation is PTPRZ1/phosphacan toward L1-family substrates and does not establish L1CAM as a canonical ligand for PTPRZ1."
+            limitations = "Retain the neural adhesion and reverse-orientation binding context; do not materialize L1CAM-PTPRZ1 without an exact orientation-matched receptor assay or infer intracellular signaling from the binding study."
+        elif ligand == "L1CAM" and receptor == "CHL1":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMCID:PMC6703882"]
+            species = "mouse primary midbrain neuron cultures"
+            summary = "Primary neuronal experiments place L1cam and Chl1 in an ALCAM-dependent trans-heterophilic adhesion and neurite-growth context, but do not directly establish L1CAM as a ligand for CHL1."
+            limitations = "Retain L1-family and ALCAM-mediated cell-contact context; require pair-specific L1CAM-CHL1 binding or perturbation before promotion and do not infer a soluble signaling route."
+        elif ligand == "L1CAM" and receptor == "NCAM1":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:7528221", "PMCID:PMC2120309"]
+            species = "rat neural cell and biochemical binding assays"
+            summary = "Primary neural adhesion studies report related Ng-CAM/L1 and NCAM interactions with phosphacan/PTPRZ1, supporting neural cell-adhesion network context but not a direct L1CAM-to-NCAM1 receptor pair in the candidate orientation."
+            limitations = "Retain the neural adhesion-family context and exact phosphacan/PTPRZ1 binding relationships; require pair-specific L1CAM-NCAM1 evidence before promotion and do not infer a receptor relay or terminal-TF output."
         elif ligand == "LCK" and receptor == "CD8A+CD8B1":
             disposition = "reject_precursor_or_non_edge_form"
             layer = "candidate_only_unverified"
