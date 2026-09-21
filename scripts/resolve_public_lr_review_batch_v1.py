@@ -1603,6 +1603,101 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "WIF1 is a Wnt-pathway antagonist and RYK is a Wnt-family receptor, but the exact WIF1-RYK binding topology was not verified as a direct primary edge in this pass."
                 limitations = "Require direct WIF1-RYK binding or receptor-triggering evidence; do not infer a binary edge from shared Wnt-pathway membership."
+            elif ligand == "WNT3A":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000155;M21B-E000156;M21B-E003250"
+                primary = ["PMID:20093360", "PMCID:PMC2838336"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human; mouse"
+                summary = "The graph contains primary-supported WNT3A binding to FZD8 and LRP6, including the ternary WNT-FZD8-LRP6 assembly, but the candidate packet also contains receptor and co-receptor combinations that were not verified as the same complete topology."
+                limitations = "Preserve the WNT3A-FZD8-LRP6 complex boundary and ectodomain assay context; do not transfer the exact WNT3A evidence to other Frizzled, LGR5, ROR1 or ATP6AP2 rows without pair-specific evidence."
+            elif ligand == "WNT3":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E007082"
+                primary = ["PMID:31036956", "DOI:10.1038/s41594-019-0216-z"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; mouse"
+                summary = "The graph contains a primary-supported WNT3-FZD8 ectodomain structure, while the candidate packet includes additional Frizzled and LRP6 rows that were not verified as the same direct binary or productive receptor complex."
+                limitations = "Retain the WNT3-FZD8 cysteine-rich-domain and 2:2 structural context; do not infer whole-cell activation, LRP6 recruitment or cross-paralog receptor specificity."
+            elif ligand == "WNT5A":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000472;M21B-E000981;M21B-E005445;M21B-E005446;M21B-E005448;M21B-E005449;M21B-E005450"
+                primary = [
+                    "PMID:12839624",
+                    "PMID:17804197",
+                    "DOI:10.1016/j.cellsig.2007.07.023",
+                    "PMID:26499793",
+                    "PMCID:PMC4683276",
+                    "PMID:24335906",
+                    "DOI:10.1038/ncomms3803",
+                    "PMID:16723543",
+                    "PMCID:PMC6675257",
+                    "PMID:18287027",
+                    "PMID:19910923",
+                    "PMCID:PMC2808370",
+                ]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse; Xenopus"
+                summary = "The graph contains primary-supported WNT5A interactions with ROR2, FZD3, FZD2, PTK7, CD146/MCAM, RYK and ROR1, with bounded noncanonical pathway or functional readouts; the candidate packet contains additional receptor rows not verified as those exact edges."
+                limitations = "Use the matched WNT5A receptor contexts as bounded evidence only; preserve ROR/PTK7/co-receptor, cell-model and noncanonical pathway distinctions, and do not transfer WNT5A evidence across unrelated receptor paralogs."
+            elif ligand == "WNT5B":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M23B-E000282"
+                primary = ["DOI:10.1186/s12964-020-00646-2", "PMCID:PMC7487719", "PMID:31907106"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human"
+                summary = "Primary evidence in the graph supports a WNT5B-associated FZD7 noncanonical signaling context, but WNT5A/B co-immunoprecipitation does not isolate the WNT5B contribution and the candidate packet expands to many composite FZD-LRP5/6 rows."
+                limitations = "Retain the WNT5B-FZD7 contextual boundary and unresolved co-ligand attribution; do not promote composite FZD-LRP5/6 rows or infer a direct WNT5B binary edge without pair-specific evidence."
+            elif ligand == "WNT7A":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000955;M21B-E000957"
+                primary = ["PMID:30304675", "PMCID:PMC6338448", "PMID:40914247", "PMCID:PMC12514574", "DOI:10.1016/j.jbc.2025.110682"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse; rat"
+                summary = "The graph contains primary-supported WNT7A interaction with RECK and the GPR124/RECK/LRP5/6 co-receptor complex, including bounded vascular Wnt signaling readouts; the candidate packet includes receptor rows outside that complete topology."
+                limitations = "Preserve RECK and GPR124/ADGRA2 co-receptor composition, LRP5/6 context and vascular model boundaries; do not transfer WNT7A evidence to isolated LDLR, FZD9 or LRP6 rows as standalone receptors."
+            elif ligand == "WNT7B":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000956;M21B-E000958;M21B-E007023;M21B-E007024"
+                primary = ["PMID:30304675", "PMCID:PMC6338448", "PMID:40914247", "PMCID:PMC12514574", "DOI:10.1016/j.jbc.2025.110682", "PMID:15923619", "PMCID:PMC1140585", "DOI:10.1128/MCB.25.12.5022-5030.2005"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse; rat"
+                summary = "The graph contains primary-supported WNT7B interaction with RECK, the GPR124/RECK/LRP5/6 complex, and FZD1/FZD10 with cooperative LRP5-dependent canonical readouts; other packet rows were not verified as the same topology."
+                limitations = "Preserve the FZD1/FZD10-LRP5 or GPR124/RECK/LRP5/6 complex boundaries and vascular/developmental model context; do not promote isolated FZD2-FZD7 rows or LDLR/LRP6 substitutions without exact evidence."
+            elif ligand == "WNT11":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E005565"
+                primary = ["PMID:29717114", "PMCID:PMC5931552", "DOI:10.1038/s41467-018-04042-w"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human"
+                summary = "The graph contains primary-supported WNT11-FZD8 association with bounded ATF2/AP-1, migration and invasion readouts, while the candidate packet includes LRP6 and other receptor-family rows without verification of the same receptor topology."
+                limitations = "Preserve the WNT11-FZD8 co-immunoprecipitation and prostate-cancer noncanonical context; do not transfer it to LRP6 or unrelated Frizzled paralogs, and do not infer a universal TF route."
+            elif ligand == "XCL1" and receptor == "ADGRV1":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                species = "as stated in primary model/assay"
+                summary = "XCL1 is a chemokine ligand, but ADGRV1 is an adhesion GPCR and an exact XCL1-ADGRV1 binding or receptor-activation experiment was not verified in this pass."
+                limitations = "Require direct XCL1-ADGRV1 binding or receptor-dependent function before promotion; do not transfer canonical chemokine-receptor specificity to an adhesion GPCR."
+            elif ligand == "YBX1" and receptor == "NOTCH1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "YBX1 is an intracellular RNA/DNA-binding protein and is not treated as a mature extracellular ligand for NOTCH1 in this candidate row."
+                limitations = "Represent intracellular YBX1 and Notch pathway biology separately; require an exact extracellular ligand or receptor-proximal assay before materializing a ligand-receptor edge."
+            elif ligand == "ZDHHC5" and receptor == "S1PR1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "ZDHHC5 is an intracellular palmitoyltransferase rather than a mature extracellular ligand for S1PR1."
+                limitations = "Represent protein palmitoylation and S1PR1 signaling separately; do not materialize enzyme-to-receptor rows as direct ligand-receptor edges."
+            elif ligand == "ZNRF3":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "ZNRF3 is a membrane-associated E3 ubiquitin ligase and Wnt-receptor turnover regulator, not a mature secreted ligand for the listed Frizzled or LRP6 rows."
+                limitations = "Represent ZNRF3/RNF43 regulation of Wnt receptor availability separately; do not materialize regulator-to-receptor rows as direct ligand-receptor edges."
+            elif ligand == "ZPBP2" and receptor == "CD80":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "ZPBP2 is an intracellular/sperm-associated protein and is not treated as a mature extracellular ligand for CD80."
+                limitations = "Require an exact extracellular binding or receptor-dependent functional assay before graph promotion; do not infer CD80 activity from co-expression or tissue association."
             elif ligand.startswith("WNT"):
                 disposition = "hold_contextual_or_complex_boundary"
                 layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
