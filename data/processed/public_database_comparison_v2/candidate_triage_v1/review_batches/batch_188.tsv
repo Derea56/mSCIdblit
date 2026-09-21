@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:VWF>ITGA2B	VWF	ITGA2B	M20B-E002289;M21B-E007087;M23B-E000093	current bundle supports VWF interaction with assembled alphaIIbbeta3, not free ITGA2B signaling	represented_graph_alias	batch_188
+LR:VWF>ITGAV	VWF	ITGAV	M20B-E002290;M21B-E006367;M23B-E000898	current bundle supports VWF interaction with assembled alphaVbeta3, not free ITGAV signaling	represented_graph_alias	batch_188
+LR:VWF>ITGB3	VWF	ITGB3	M20B-E002289;M20B-E002290;M21B-E006367;M21B-E007087;M23B-E000093;M23B-E000898	current bundle supports VWF interaction with assembled alphaIIbbeta3 and alphaVbeta3, not free ITGB3 signaling	represented_graph_alias	batch_188
+LR:WNT2B>FZD4	WNT2B	FZD4	M21B-E006526	current bundle already contains primary-supported WNT2B-FZD4 interaction and bounded epithelial output	represented_graph_alias	batch_188
+LR:WNT3>FZD8	WNT3	FZD8	M21B-E007082	current bundle already contains primary-supported WNT3-FZD8 structural binding	represented_graph_alias	batch_188
+LR:WNT3A>FZD8	WNT3A	FZD8	M21B-E000155;M21B-E003250	current bundle already contains primary-supported WNT3A-FZD8 binary and ternary-complex evidence	represented_graph_alias	batch_188
+LR:WNT3A>LRP6	WNT3A	LRP6	M21B-E000155;M21B-E000156	current bundle already contains primary-supported WNT3A-LRP6 ectodomain evidence	represented_graph_alias	batch_188
+LR:WNT4>FZD1	WNT4	FZD1	M21B-E007016	current bundle already contains primary-supported WNT4-FZD1 binding	represented_graph_alias	batch_188
+LR:WNT4>FZD2	WNT4	FZD2	M21B-E007017	current bundle already contains primary-supported WNT4-FZD2 binding	represented_graph_alias	batch_188
+LR:WNT4>FZD4	WNT4	FZD4	M21B-E007018	current bundle already contains primary-supported WNT4-FZD4 binding	represented_graph_alias	batch_188
