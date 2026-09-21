@@ -1139,6 +1139,13 @@ def main() -> None:
             species = "human CCL27/CCR10 and CCL27/CCL28 receptor-specificity studies"
             summary = "Primary chemokine studies establish CCL27/CCR10 signaling and distinguish CCL28/CCR3 specificity, but no exact primary experiment was verified for the CCL27B-to-listed-receptor candidates."
             limitations = "Retain mature CCL27-CCR10 and CCL28-CCR3 specificity separately; resolve the CCL27B species/isoform identity before promotion and do not transfer paralog or receptor-family evidence to ACKR2, CCR2, CCR3, GRM7, MTNR1A or ADRA2A."
+        elif ligand == "FGFRL1":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:19920134", "PMCID:PMC2804375"]
+            species = "human FGFRL1 receptor/decoy and Xenopus embryonic assays"
+            summary = "Primary studies characterize FGFRL1 as an FGFR-like membrane receptor or decoy that can bind selected FGF ligands, not as an extracellular ligand for the listed receptor candidates."
+            limitations = "Represent FGFRL1 in receptor/decoy and receptor-complex layers; do not materialize FGFRL1-to-FGFR1, GP6, GPC4, NRXN2, NRXN3 or PLVAP as ligand-receptor edges."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
