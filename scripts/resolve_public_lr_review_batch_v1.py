@@ -2545,6 +2545,105 @@ def main() -> None:
                 layer = "candidate_only_unverified"
                 summary = "KLK-family labels are serine proteases, not mature extracellular neurotrophin, erythropoietin or coagulation ligands for the listed receptors."
                 limitations = "Represent protease processing and protease-activated receptor mechanisms separately; do not materialize KLK-to-EPOR/NTRK/NGFR rows without exact mature-ligand evidence."
+            elif ligand.startswith(("LAMA", "LAMB", "LAMC")):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Laminin-chain rows represent extracellular-matrix isoforms and receptor complexes, but the public candidates do not resolve the complete mature laminin composition, domain and integrin/syndecan/SV2 receptor topology for each pair."
+                limitations = "Require exact laminin heterotrimer or domain, receptor complex, species and primary assay; do not treat a single laminin chain as the complete ligand or transfer specificity across laminin isoforms."
+            elif ligand == "LAYN":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "LAYN is a membrane immune-cell protein, not a mature extracellular ligand for GP5 or LY6G6F."
+                limitations = "Represent LAYN cell-surface and immune-adhesion biology separately; do not invert membrane protein identity into a ligand edge without direct primary support."
+            elif ligand.startswith("LCN"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Lipocalin-family proteins can be secreted transport or immune-modulatory factors, but the listed PTPRC and FCGR2B targets were not verified as exact direct LCN11/LCN2 receptor mechanisms in this pass."
+                limitations = "Require exact lipocalin isoform, receptor or uptake complex, species and primary binding or functional assay; do not transfer LCN2/LCN-family context across immune receptors."
+            elif ligand == "LFNG":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "LFNG is a glycosyltransferase that modifies Notch receptors, not a mature extracellular ligand for NOTCH1 or NOTCH2."
+                limitations = "Represent Fringe-dependent Notch receptor modification in the receptor-proximal layer; do not materialize LFNG-to-Notch rows as ligand edges."
+            elif ligand == "LGALS3":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Galectin-3 is a secreted and intracellular lectin with glycan-dependent adhesion and receptor-clustering context, but the listed ANXA2 and PTPRK targets were not verified as exact direct LGALS3 receptor pairs."
+                limitations = "Require exact LGALS3 form, glycan/receptor context, species and primary assay; do not transfer galectin family binding across unrelated membrane proteins."
+            elif ligand == "LGALS3BP":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "LGALS3BP is a secreted matrix/immune-associated protein, but an exact LGALS3BP-to-CD33 receptor experiment was not verified in this pass."
+                limitations = "Require direct LGALS3BP/CD33 binding or receptor-dependent function; do not infer CD33 activation from secreted-protein or lectin-family context."
+            elif ligand.startswith("LGI"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "LGI-family proteins have synaptic and ADAM-family receptor contexts, but the public rows do not resolve exact LGI isoform, mature domain and direct target mechanism for these candidates."
+                limitations = "Require exact LGI isoform, receptor orientation, species and primary binding or functional assay; do not transfer LGI1/ADAM22/23 evidence across paralogs or unrelated membrane proteins."
+            elif ligand.startswith("LILR"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "LILR/LILRA/LILRB-family labels are immune receptor proteins, not mature extracellular ligands for CNTFR, FGFR, LAIR1 or other listed targets."
+                limitations = "Represent LILR receptor orientation and immune-complex signaling separately; do not invert receptor-family identities into ligand edges or transfer specificity across LILR paralogs."
+            elif ligand.startswith("LIN7"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "LIN7A/LIN7B are intracellular polarity and membrane-trafficking scaffold proteins, not mature extracellular ligands for the listed channels or transporters."
+                limitations = "Represent scaffold and intracellular membrane-complex biology separately; do not materialize LIN7-to-receptor rows as ligand edges."
+            elif ligand == "LINGO4":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "LINGO-family proteins are neural membrane co-receptors/adhesion proteins, but an exact LINGO4-to-NFASC receptor interaction was not verified in this pass."
+                limitations = "Require direct LINGO4/NFASC binding or receptor-dependent function; do not transfer LINGO1 receptor-complex evidence to LINGO4."
+            elif ligand == "LIPA":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "LIPA is a lysosomal acid lipase, not a mature extracellular ligand for RORC."
+                limitations = "Represent lipid metabolism separately; do not materialize LIPA-to-nuclear-receptor rows as ligand edges."
+            elif ligand == "LMAN1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "LMAN1 is an intracellular cargo receptor/chaperone, not a mature extracellular ligand for MCFD2."
+                limitations = "Represent ER cargo trafficking separately; do not materialize LMAN1-MCFD2 as a ligand-receptor edge."
+            elif ligand.startswith("LOC"):
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The LOC-prefixed public identifier was not resolved to a verified mature ligand identity and exact receptor assay in this pass."
+                limitations = "Resolve the species-specific identifier and protein form before promotion; do not infer receptor specificity from an unresolved LOC label."
+            elif ligand == "LPL":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "LPL is a lipase enzyme and the public row does not define it as a mature signaling ligand for CD44."
+                limitations = "Represent lipoprotein metabolism and enzyme/cofactor interactions separately; do not materialize LPL-to-CD44 as a ligand edge without exact primary support."
+            elif ligand.startswith("LRCH") or ligand.startswith("LRFN") or ligand.startswith("LRIT"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "LRCH/LRFN/LRIT-family rows describe adhesion, synaptic or immune cell-surface proteins, but the exact paralog, orientation and direct receptor mechanism for these candidates were not verified."
+                limitations = "Preserve family and cis/trans orientation; require exact pair-level primary evidence before promotion and do not infer soluble ligand signaling from adhesion-family membership."
+            elif ligand == "LRIG1":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "LRIG1 is a membrane receptor regulator and ligand-like EGFR-family modulator, but the public rows do not establish the listed ERBB or MOG targets as exact direct LRIG1 ligand-receptor edges."
+                limitations = "Represent LRIG1-EGFR/ERBB regulation and receptor trafficking separately; do not invert receptor-regulatory context into a generic soluble ligand edge."
+            elif ligand == "LRPAP1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "LRPAP1 is a receptor-associated protein/chaperone for LDL-receptor family trafficking, not a mature extracellular ligand for CD320, LDLR, LRP8 or SIRPA."
+                limitations = "Represent receptor-chaperone and lipoprotein-uptake biology separately; do not materialize LRPAP1-to-receptor rows as ligand edges."
             elif ligand.startswith("ADAM"):
                 disposition = "hold_contextual_or_complex_boundary"
                 primary = reviewed
