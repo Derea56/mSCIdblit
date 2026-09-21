@@ -932,6 +932,14 @@ def main() -> None:
                 species = "human; mouse"
                 summary = "PlGF/PGF neuropilin interactions are isoform- and receptor-context dependent; the current candidate does not resolve the mature PGF isoform or exact neuropilin assay sufficiently for direct promotion."
                 limitations = "Require isoform-specific primary binding or receptor-triggering evidence before promotion; preserve VEGFR and neuropilin co-receptor topology rather than treating NRP1/NRP2 as interchangeable standalone receptors."
+            elif ligand == "PLAT" and receptor == "ITGB2":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M23B-E000238"
+                primary = ["PMCID:PMC3402285", "PMID:22677557", "PMID:25131752"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse; human"
+                summary = "Primary macrophage studies support tPA/PLAT signaling through an annexin A2 and Mac-1 context, of which ITGB2 is only one required subunit."
+                limitations = "Preserve the complete Mac-1 and annexin-A2 receptor context; do not decompose the relay into direct PLAT-ITGB2 binding or infer a terminal TF route."
             elif ligand in {"PF4", "PI16", "PIP", "PLAT"}:
                 disposition = "no_primary_evidence_found"
                 layer = "candidate_only_review_locator"
@@ -942,6 +950,22 @@ def main() -> None:
                 layer = "candidate_only_unverified"
                 summary = "PIGA is an intracellular GPI-anchor biosynthesis component, not a mature extracellular ligand for PIGR."
                 limitations = "Represent GPI-anchor biosynthesis separately; do not materialize PIGA-to-PIGR as a ligand-receptor edge."
+            elif ligand == "PLAU" and receptor == "ITGA5":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M23B-E000838"
+                primary = ["PMID:15684035", "DOI:10.1083/jcb.200404112", "PMID:19411312", "PMCID:PMC2711805"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse comparator"
+                summary = "Primary perturbation and receptor-complex studies support a uPA/PLAUR-uPAR to alpha5beta1 conformation and fibronectin-adhesion relay, not direct PLAU binding to ITGA5 alone."
+                limitations = "Preserve PLAUR/uPAR, alpha5beta1 and matrix context; do not decompose the complex into a direct PLAU-ITGA5 binary edge or infer a terminal TF."
+            elif ligand == "PLAU" and receptor in {"ITGAM", "ITGB1"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M23B-E000840;M23B-E000838"
+                primary = ["PMID:8874219", "DOI:10.1182/blood.V88.8.3185.bloodjournal8883185", "PMID:8621779", "PMID:19411312", "PMCID:PMC2711805"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse comparator"
+                summary = "Primary studies support uPA/PLAUR-uPAR cooperation with Mac-1 or alpha5beta1 complexes in adhesion, chemotaxis and migration, but not direct PLAU binding to an isolated integrin subunit."
+                limitations = "Preserve the complete PLAUR/uPAR-integrin complex and matrix context; do not promote isolated ITGAM or ITGB1 as the complete receptor or infer a terminal TF route."
             elif ligand in {"PLAU", "PLG", "PRSS2", "PTDSS1", "PTGES", "PTGES2", "PTGES3", "PTGIS"}:
                 disposition = "reject_precursor_or_non_edge_form"
                 layer = "candidate_only_unverified"
@@ -2991,6 +3015,36 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "PAPLN/papilin is an extracellular-matrix protein, but the listed CD200, Nectin4 and SIRPA targets were not verified as exact direct PAPLN receptor mechanisms."
                 limitations = "Require exact PAPLN domain, receptor or adhesion partner, species and primary assay; do not transfer matrix-family evidence across immune and adhesion receptors."
+            elif ligand == "PLTP" and receptor == "APOA1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "PLTP is a phospholipid-transfer protein and APOA1 is an apolipoprotein, not a plasma-membrane receptor in this candidate orientation."
+                limitations = "Retain the primary-supported PLTP-ABCA1 lipid-efflux interaction separately; do not invert lipoprotein-transfer or apolipoprotein associations into a canonical ligand-receptor edge."
+            elif ligand.startswith("PLXNA"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "PLXNA1/PLXNA2 are plexin receptor-family proteins, not mature extracellular ligands for the listed targets; the public rows invert receptor-ligand orientation or omit the required semaphorin complex."
+                limitations = "Represent semaphorin-plexin and neuropilin-plexin complexes in receptor orientation; do not materialize plexin proteins as ligands without exact noncanonical primary support."
+            elif ligand == "POSTN" and receptor in {"ITGAV", "ITGB3", "ITGB5"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000710;M21B-E000711;M23B-E000243;M23B-E000244"
+                primary = ["PMID:19695571", "PMCID:PMC2841688", "DOI:10.1016/j.atherosclerosis.2009.07.046"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary periostin studies support alphaVbeta3 and alphaVbeta5 integrin-complex signaling and migration, while these public rows split the complexes into individual subunits."
+                limitations = "Preserve alphaVbeta3/alphaVbeta5 complex topology and FAK/migration context; do not promote isolated ITGAV, ITGB3 or ITGB5 as complete receptors or infer a terminal TF."
+            elif ligand == "PPBP":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "PPBP is a platelet chemokine precursor associated with processed CXCL7/chemokine biology, not a verified mature ligand for the unrelated receptors listed here."
+                limitations = "Require the processed chemokine form and direct receptor assay; preserve the graph's CXCL7-CXCR2 evidence and do not transfer it to ACKR1, opioid, adrenergic, glutamate or melatonin receptors."
+            elif ligand.startswith("PRL"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Placental-lactogen/prolactin-family candidates are biologically plausible at PRLR, but the current graph directly supports canonical prolactin-PRLR binding and does not verify each listed paralog or ERBB2 row."
+                limitations = "Require exact prolactin-family paralog, species, mature form and PRLR or ERBB assay before promotion; do not transfer canonical prolactin evidence across placental-lactogen paralogs."
             elif ligand.startswith("PCDH"):
                 disposition = "hold_contextual_or_complex_boundary"
                 layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
