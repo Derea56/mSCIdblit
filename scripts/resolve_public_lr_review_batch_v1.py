@@ -739,6 +739,49 @@ def main() -> None:
                 layer = "candidate_only_review_locator"
                 summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
                 limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
+        elif row.get("review_batch") == "batch_090":
+            pair = (ligand, receptor)
+            if pair == ("PMCH", "MERTK"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:25265470", "PMID:11825022"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "murine and rat TAM-receptor biochemical, genetic and phagocytosis studies"
+                summary = "Primary studies identify GAS6 and PROS1 as the endogenous TAM ligands and demonstrate GAS6-dependent MERTK activation and phagocytosis; PMCH is not established as a MERTK ligand."
+                limitations = "Represent GAS6/PROS1-TAM receptor signaling with phosphatidylserine and efferocytosis context; do not materialize PMCH-MERTK or infer receptor activation from a review locator that discusses TAM biology."
+            elif pair == ("TNC", "SDC1"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:11731446"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human and murine glioblastoma/breast-carcinoma cell adhesion assays with tenascin-C and syndecan perturbations"
+                summary = "Primary matrix-adhesion experiments identify direct tenascin-C interaction with fibronectin FNIII13 and interference with the fibronectin-syndecan-4 coreceptor mechanism; syndecan-1 overexpression does not restore the adhesion defect."
+                limitations = "Represent the tenascin-C/fibronectin/syndecan-4 boundary and do not transfer the reported syndecan-4 mechanism to syndecan-1 or materialize a direct TNC-SDC1 edge."
+            elif pair == ("COL2A1", "CD44"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:1730778"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human affinity-purified CD44 binding to native type-I collagen fibrils and other matrix ligands"
+                summary = "Primary binding assays show CD44 interaction with native type-I collagen fibrils, laminin and fibronectin, but do not test type-II collagen or isolate the COL2A1 chain; the public COL2A1-CD44 row remains collagen-family context."
+                limitations = "Retain CD44 binding to the tested native matrix forms and preserve collagen-trimer/isoform boundaries; do not transfer type-I collagen evidence to type-II collagen or materialize COL2A1-CD44 without a pair-specific assay."
+            elif pair == ("LAMC3", "CD44"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:1730778", "PMID:10225960", "PMID:18697739"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human CD44 matrix-binding assays and human/murine laminin-gamma3 characterization"
+                summary = "Primary studies show CD44 binding to laminin in a broad matrix assay and separately characterize laminin-gamma3-containing isoforms, but do not establish a direct LAMC3-specific CD44 binding event."
+                limitations = "Retain laminin-family/CD44 context with gamma3-chain and isoform boundaries; do not transfer generic laminin binding to LAMC3 or materialize LAMC3-CD44 without an exact assay."
+            elif pair in {("THBS2", "SDC1"), ("THBS4", "SDC1")}:
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:11257118"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "murine/human thrombospondin-1 and syndecan-1 cell-spreading/fascin-spike assays"
+                thrombospondin = "THBS2" if ligand == "THBS2" else "THBS4"
+                summary = f"Primary experiments support syndecan-1-dependent matrix responses to thrombospondin-1, but do not test {thrombospondin} specifically; the public row is retained as thrombospondin-family context rather than an exact isoform edge."
+                limitations = f"Preserve the demonstrated THBS1-SDC1 glycosaminoglycan and cytoplasmic-domain context; do not transfer THBS1 evidence to {thrombospondin} or materialize a direct {thrombospondin}-SDC1 edge without isoform-specific primary evidence."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
