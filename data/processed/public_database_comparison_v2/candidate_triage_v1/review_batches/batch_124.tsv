@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:RGMA>BMPR1B	RGMA	BMPR1B	M21B-E003212		represented_graph_alias	batch_124
+LR:S100A10>CFTR	S100A10	CFTR	M21B-E002559		represented_graph_alias	batch_124
+LR:S100A10>HTR1B	S100A10	HTR1B	M21B-E002547		represented_graph_alias	batch_124
+LR:S100A10>TRPV6	S100A10	TRPV6	M21B-E002552		represented_graph_alias	batch_124
+LR:S100A8>AGER	S100A8	AGER	M21B-E000878		represented_graph_alias	batch_124
+LR:S100A8>CD36	S100A8	CD36	M21B-E005476		represented_graph_alias	batch_124
+LR:S100A8>CD69	S100A8	CD69	M21B-E006191		represented_graph_alias	batch_124
+LR:S100A8>ITGB2	S100A8	ITGB2	M23B-E001157;M23B-E001169		represented_graph_alias	batch_124
+LR:S100A8>TLR4	S100A8	TLR4	M21B-E000876		represented_graph_alias	batch_124
+LR:S100A9>TLR4	S100A9	TLR4	M21B-E000877		represented_graph_alias	batch_124
