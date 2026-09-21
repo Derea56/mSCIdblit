@@ -859,6 +859,11 @@ def main() -> None:
             species = "human and mammalian lipoprotein/receptor assays"
             summary = "The current review found primary evidence for apoB-containing particle uptake or oxidation-specific inflammatory signaling, but not an exact mature APOB-to-listed-receptor experiment for this candidate."
             limitations = "Retain apoB-particle, modification-state and receptor-family context; do not transfer evidence for APC, apoE, oxidized LDL or other lipoprotein forms to unmodified APOB without pair-specific testing."
+        elif ligand.startswith("GM"):
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_review_locator"
+            summary = "The GM-prefixed public identifier was not resolved to a verified mature ligand identity and exact receptor assay in this pass."
+            limitations = "Resolve the species-specific identifier and protein form before promotion; do not infer receptor specificity from an unresolved GM label or public-database membership alone."
         elif ligand == "COL4A1" and receptor == "ITGA3+ITGB1":
             disposition = "new_primary_supported_edge_candidate"
             layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
