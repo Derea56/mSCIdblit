@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:IBSP>ITGB5	IBSP	ITGB5	M20B-E002129;M23B-E000557		represented_graph_alias	batch_154
+LR:ICAM1>ITGAM	ICAM1	ITGAM	M20B-E003856;M21B-E000599;M23B-E000190;M23B-E000562		represented_graph_alias	batch_154
+LR:ICAM1>ITGAX	ICAM1	ITGAX	M21B-E005464;M23B-E000565		represented_graph_alias	batch_154
+LR:ICAM1>ITGB2	ICAM1	ITGB2	M20B-E003855;M20B-E003856;M21B-E000599;M21B-E001165;M21B-E005464;M23B-E000188;M23B-E000190;M23B-E000559;M23B-E000562;M23B-E000565		represented_graph_alias	batch_154
+LR:ICAM2>ITGAL	ICAM2	ITGAL	M20B-E003859;M21B-E005463;M23B-E000567		represented_graph_alias	batch_154
+LR:ICAM2>ITGAM	ICAM2	ITGAM	M23B-E000570		represented_graph_alias	batch_154
+LR:ICAM2>ITGB2	ICAM2	ITGB2	M20B-E003859;M21B-E005463;M23B-E000567;M23B-E000570		represented_graph_alias	batch_154
+LR:IFNA9>IFNAR1	IFNA9	IFNAR1	M20B-E001906		represented_graph_alias	batch_154
+LR:IFNA9>IFNAR2	IFNA9	IFNAR2	M20B-E001906		represented_graph_alias	batch_154
+LR:IFNAB>IFNAR1	IFNAB	IFNAR1	M20B-E001907		represented_graph_alias	batch_154
