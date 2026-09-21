@@ -827,6 +827,27 @@ def main() -> None:
                 species = "human alpha-subunit/TSHR assay"
                 summary = "CGA encodes the common glycoprotein-hormone alpha subunit rather than a complete mature TSH, FSH, LH or hCG ligand; a primary TSHR assay found no agonist activity for wild-type free alpha, while activity required engineered alpha variants."
                 limitations = "Require the complete hormone heterodimer and exact receptor assay; do not materialize CGA alone as a ligand or transfer one beta-subunit-specific route across FSHR, LHCGR and TSHR."
+            elif ligand == "IL16" and receptor == "CD9":
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:16144798", "PMCID:PMC1895361"]
+                species = "human and mouse mast-cell models"
+                summary = "Primary mast-cell and CD9-transfectant experiments support IL-16 binding to CD9 as an alternate receptor context, with CD9-dependent chemotaxis, calcium mobilization and PI3K/inositol-phosphate-associated outputs in human and mouse mast-cell systems."
+                limitations = "Preserve CD9 as a cell-type-dependent alternate IL-16 receptor alongside the canonical CD4 route; do not generalize this mast-cell context to all IL-16-responsive cells or infer a terminal-TF output."
+            elif ligand == "IL16":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                primary = ["PMID:10438516", "PMID:17624801", "PMID:16144798"]
+                species = "human and mouse IL-16 receptor studies"
+                summary = "Primary IL-16 studies establish CD4 as the principal receptor and CD9 as a cell-type-dependent alternate receptor; the listed glutamate and potassium-channel targets were not established as direct IL-16 receptor proteins."
+                limitations = "Preserve mature IL-16 processing and CD4/CD9 receptor contexts; do not materialize ion-channel or unrelated membrane-protein rows from downstream calcium, migration or expression responses."
+            elif ligand in {"FSHB", "LHB"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                primary = ["PMID:12773385", "PMID:15249700"]
+                species = "human glycoprotein-hormone receptor assays"
+                summary = "FSHB and LHB encode beta subunits that require the common alpha subunit to form mature FSH or LH; primary glycoprotein-hormone receptor studies define receptor specificity for complete heterodimeric hormones, not isolated beta-subunit labels."
+                limitations = "Require the mature FSH or LH heterodimer and exact FSHR/LHCGR assay before promotion; do not materialize isolated FSHB/LHB rows to unrelated class-B, adrenergic, RAMP or TSH receptors."
             elif ligand == "GHRH" and receptor not in {"VIPR1", "VIPR2"}:
                 disposition = "reject_precursor_or_non_edge_form"
                 layer = "candidate_only_unverified"
