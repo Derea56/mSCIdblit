@@ -963,6 +963,30 @@ def main() -> None:
                 "Preserve the ITGA6+ITGB4 or ITGAV+ITGB3 heterodimer, IGF ligand form, IGF1R crosstalk and assay/species "
                 "boundaries; the existing edge does not assert a universal intracellular cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_099":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The public locator PMID:28676852 is a CD40L receptor review and is not treated as primary support; "
+                "the existing graph edge-source records provide pair-specific CD40L-integrin binding and bounded platelet, "
+                "endothelial or leukocyte functional studies."
+            )
+            limitations = (
+                "Do not add a duplicate edge from the public row or treat the CD40L review as a pair-specific primary experiment. "
+                "Preserve the alphaIIb-beta3, alpha5-beta1 or alphaM-beta2 heterodimer, soluble versus membrane CD40L form, "
+                "biased-adhesive versus signaling behavior and species/cell context; the existing edge does not assert a universal "
+                "intracellular cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"

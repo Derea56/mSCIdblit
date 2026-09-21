@@ -1,0 +1,4 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:CD40LG>ITGA2B+ITGB3	CD40LG	ITGA2B+ITGB3	M21B-E000624;M23B-E000320	PMID:28676852	represented_graph_alias	batch_099
+LR:CD40LG>ITGA5+ITGB1	CD40LG	ITGA5+ITGB1	M21B-E005466;M23B-E000928	PMID:28676852	represented_graph_alias	batch_099
+LR:CD40LG>ITGAM+ITGB2	CD40LG	ITGAM+ITGB2	M21B-E000604;M23B-E001038	PMID:28676852	represented_graph_alias	batch_099
