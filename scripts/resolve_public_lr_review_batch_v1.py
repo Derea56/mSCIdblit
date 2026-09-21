@@ -2781,6 +2781,33 @@ def main() -> None:
                 "metadata rather than evidence; these edges do not assert a universal intracellular cascade or terminal "
                 "TF route."
             )
+        elif row.get("review_batch") == "batch_166":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is represented by graph edge(s) {matched_ids}. "
+                "The existing edge-source records provide primary-supported L1CAM-alphaVbeta3 adhesion/migration and "
+                "L1CAM-NRP1 semaphorin-coreceptor association, plus primary laminin-111/221 alpha6beta1 or alpha7beta1 "
+                "binding where available. The remaining laminin Module 20 rows retain frozen ECM/integrin-family "
+                "representation at the stated molecular resolution."
+            )
+            limitations = (
+                "Do not add duplicate edges or collapse laminin heterotrimer and integrin heterodimer complexes, "
+                "L1CAM-NRP1 coreceptor context, or alphaVbeta3/alpha6beta1/alpha7beta1 branches into autonomous "
+                "single-chain receptors. Preserve laminin isoform, integrin-complex, ECM adhesion, migration and "
+                "semaphorin-coreceptor context, distinguish primary-supported Module 21 evidence from frozen Module 20 "
+                "aliases, and retain species and assay limits; these edges do not assert a universal intracellular "
+                "cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
