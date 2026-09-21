@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:NTM>OPCML	NTM	OPCML	M21B-E003184	current bundle includes primary CEPU-1/neurotrimin-OBCAM/OPCML heterophilic IgLON adhesion evidence	represented_graph_alias	batch_175
+LR:NTRK3>PTPRS	NTRK3	PTPRS	M21B-E002136	current bundle includes primary TrkC-PTPσ extracellular synaptic-organizing complex and excitatory synapse support	represented_graph_alias	batch_175
+LR:NYX>TRPM1	NYX	TRPM1	M21B-E002805	current bundle includes primary nyctalopin-TRPM1 association, retinal localization and electrophysiology support	represented_graph_alias	batch_175
+LR:OSM>IL6ST	OSM	IL6ST	M20B-E004439;M20B-E004440;M21B-E000730	current bundle includes primary low-affinity OSM-gp130/IL6ST initiating contact within gp130:LIFR/OSMR receptor-complex assembly plus frozen aliases	represented_graph_alias	batch_175
+LR:PLA2G2A>ITGA4	PLA2G2A	ITGA4	M21B-E006282	current bundle includes primary sPLA2-IIA alpha4beta1 binding/activation and monocytic adhesion/migration outputs	represented_graph_alias	batch_175
+LR:PLA2G2A>ITGA5	PLA2G2A	ITGA5	M21B-E006283	current bundle includes primary sPLA2-IIA site-2-mediated alpha5beta1 activation in cell-free and cell-surface assays	represented_graph_alias	batch_175
+LR:PLA2G2A>ITGAV	PLA2G2A	ITGAV	M21B-E006281	current bundle includes primary sPLA2-IIA alphaVbeta3 binding/activation and monocytic signaling outputs	represented_graph_alias	batch_175
+LR:PLA2G2A>ITGB1	PLA2G2A	ITGB1	M21B-E006282;M21B-E006283	current bundle represents sPLA2-IIA through alpha4beta1 and alpha5beta1 integrin heterodimers, not isolated ITGB1 binding	represented_graph_alias	batch_175
+LR:PLA2G2A>ITGB3	PLA2G2A	ITGB3	M21B-E006281	current bundle represents sPLA2-IIA through alphaVbeta3 integrin heterodimer, not isolated ITGB3 binding	represented_graph_alias	batch_175
+LR:PODXL>SELL	PODXL	SELL	M21B-E000291	current bundle includes primary HEV-derived podocalyxin-like protein/L-selectin binding and lymphocyte rolling under flow	represented_graph_alias	batch_175
