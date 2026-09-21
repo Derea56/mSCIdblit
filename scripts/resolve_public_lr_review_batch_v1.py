@@ -533,6 +533,56 @@ def main() -> None:
                 layer = "candidate_only_review_locator"
                 summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
                 limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
+        elif row.get("review_batch") == "batch_086":
+            pair = (ligand, receptor)
+            if pair == ("FGF2", "SDC4"):
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:19581409", "PMCID:PMC2712988"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human FGF2 and syndecan-4 signaling studies in endothelial-cell and epithelial-cell systems"
+                summary = "Primary studies support FGF2 association with syndecan-4 and show syndecan-4-dependent PKC-alpha, RhoG/Rac1 and migration/proliferation responses, establishing a bounded FGF2-SDC4 proteoglycan coreceptor route."
+                limitations = "Preserve syndecan-4 heparan-sulfate/proteoglycan and cell-context requirements; do not treat SDC4 as the canonical kinase receptor or infer a universal intracellular/TF chain from the reported proximal and functional outputs."
+            elif pair == ("FGF2", "CD44"):
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:12697740", "PMCID:PMC152937"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human CD44 variant transfectants and primary rheumatoid-arthritis synovial cells with FGF2/FGFR1 binding assays"
+                summary = "Primary experiments show that CD44 variant cells bind FGF2 through associated heparan-sulfate and that a CD44vRA context enhances cell-surface FGF2 presentation to soluble FGFR1 and the resulting mitogenic response, supporting a bounded FGF2-CD44 variant coreceptor route."
+                limitations = "Represent CD44 variant/HS-dependent presentation rather than generic CD44 or isolated protein-core binding; preserve the human inflammatory-cell and FGFR1 assay context and do not infer a universal CD44 isoform or complete downstream route."
+            elif pair in {("COL4A1", "SDC1"), ("COL6A1", "SDC1")}:
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:7949658"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human collagen IV/VI affinity assays with murine mammary epithelial-cell syndecan-1"
+                collagen_type = "type IV" if ligand == "COL4A1" else "type VI"
+                summary = f"Primary affinity co-electrophoresis measurements show that syndecan-1 binds human {collagen_type} collagen, supporting a bounded {collagen_type}-component-to-SDC1 extracellular interaction."
+                limitations = f"Preserve native fibrillar {collagen_type} presentation, syndecan-1 heparan-sulfate chain context and the cross-species assay design; do not infer isolated {ligand} chain binding, a protein-core-only mechanism, or a universal downstream route."
+            elif pair == ("COL4A1", "ITGA3+ITGB1"):
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:11900477"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human neuroblastoma collagen-IV adhesion and integrin-blocking assays"
+                summary = "Primary cell-adhesion experiments show binding to intact collagen IV and inhibition by beta-1 and alpha-3 integrin blocking antibodies, supporting a bounded collagen-IV-to-alpha3beta1 receptor-complex interaction with matrix-remodeling outputs."
+                limitations = "Represent intact collagen-IV heterotrimer and the alpha3beta1 receptor complex in the tested neuroblastoma context; the study uses blocking/adhesion assays rather than purified binary binding and does not establish a universal intracellular or TF route."
+            elif pair == ("HGF", "SDC2"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:26381016"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "rat early-differentiated myoblast HGF/FGF2 and syndecan-2/4 perturbation assays"
+                summary = "Primary myoblast experiments identify syndecan-2/4 as plausible HGF-response receptor candidates and show that knockdown or glycosaminoglycan degradation attenuates HGF-induced Sema3A expression, but the study does not isolate a direct HGF-to-SDC2 binding event."
+                limitations = "Retain HGF-SDC2 as context-dependent proteoglycan/coreceptor evidence with syndecan-2/4 and glycosaminoglycan boundaries; do not materialize a direct binary edge or transfer the result to SDC2-independent HGF signaling."
+            elif pair == ("FGF4", "NRP1"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:9531542", "PMID:10842181"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "mouse limb CD44-variant FGF4 presentation assays and human neuropilin-1 ligand-binding assays"
+                summary = "Primary studies support FGF4 presentation by a CD44 splice variant and neuropilin-1 binding to VEGF165, but they do not establish FGF4 as a neuropilin-1 ligand; the public FGF4-NRP1 row therefore conflates distinct growth-factor presentation and neuropilin ligand contexts."
+                limitations = "Represent FGF4-CD44 variant presentation and VEGF165-NRP1 separately; do not transfer FGF-family or neuropilin-family membership into a direct FGF4-to-NRP1 edge."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
