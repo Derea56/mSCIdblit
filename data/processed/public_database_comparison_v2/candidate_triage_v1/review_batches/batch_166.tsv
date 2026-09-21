@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:L1CAM>ITGB3	L1CAM	ITGB3	M21B-E000651	stale candidate-side M20B-E004096 omitted; current bundle resolves M21B-E000651	represented_graph_alias	batch_166
+LR:L1CAM>NRP1	L1CAM	NRP1	M21B-E005150		represented_graph_alias	batch_166
+LR:LAMA1>ITGA2	LAMA1	ITGA2	M20B-E002133	frozen Module 20 ECM/integrin-family representation	represented_graph_alias	batch_166
+LR:LAMA1>ITGA6	LAMA1	ITGA6	M20B-E002135;M20B-E002136;M21B-E002691	current bundle includes frozen alias and primary alpha6beta1 support	represented_graph_alias	batch_166
+LR:LAMA1>ITGA7	LAMA1	ITGA7	M20B-E002137;M21B-E003228	current bundle includes frozen alias and primary alpha7beta1 support	represented_graph_alias	batch_166
+LR:LAMA1>ITGB1	LAMA1	ITGB1	M20B-E002133;M20B-E002135;M20B-E002137;M20B-E002329;M21B-E002691;M21B-E003228	current bundle includes frozen aliases and primary alpha6beta1/alpha7beta1 support	represented_graph_alias	batch_166
+LR:LAMA1>ITGB4	LAMA1	ITGB4	M20B-E002136	frozen Module 20 ECM/integrin-family representation	represented_graph_alias	batch_166
+LR:LAMA2>ITGA2	LAMA2	ITGA2	M20B-E002142	frozen Module 20 ECM/integrin-family representation	represented_graph_alias	batch_166
+LR:LAMA2>ITGA7	LAMA2	ITGA7	M20B-E002146;M21B-E003232	current bundle includes frozen alias and primary alpha7beta1 support	represented_graph_alias	batch_166
+LR:LAMA2>ITGB1	LAMA2	ITGB1	M20B-E002142;M20B-E002144;M20B-E002146;M20B-E002333;M21B-E003232	current bundle includes frozen aliases and primary alpha7beta1 support	represented_graph_alias	batch_166
