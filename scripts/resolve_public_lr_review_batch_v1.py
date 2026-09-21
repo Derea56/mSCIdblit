@@ -2644,6 +2644,93 @@ def main() -> None:
                 layer = "candidate_only_unverified"
                 summary = "LRPAP1 is a receptor-associated protein/chaperone for LDL-receptor family trafficking, not a mature extracellular ligand for CD320, LDLR, LRP8 or SIRPA."
                 limitations = "Represent receptor-chaperone and lipoprotein-uptake biology separately; do not materialize LRPAP1-to-receptor rows as ligand edges."
+            elif ligand.startswith(("LRRC", "LRRN", "LRRTM", "LRTM")):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "LRRC/LRRN/LRRTM/LRTM-family rows describe neuronal or immune cell-surface adhesion proteins, but the exact paralog, orientation and direct receptor mechanism for these candidates were not verified."
+                limitations = "Preserve cell-adhesion and synaptic receptor-complex context; require exact pair-level primary evidence before promotion and do not infer soluble ligand signaling from family membership."
+            elif ligand == "LSAMP":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "LSAMP is a neural cell-adhesion protein with contactin/OPCML-family context, but the listed NEGR1 and OPCML pairs were not verified as exact direct LSAMP receptor interactions in this pass."
+                limitations = "Require exact LSAMP partner, orientation, species and primary assay; do not transfer neural adhesion-family evidence across L1/OPCML/NEGR paralogs."
+            elif ligand == "LTA":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "Lymphotoxin-alpha signaling is receptor- and complex-specific, while the LTA-to-RIPK1 row does not represent a direct extracellular receptor edge because RIPK1 is an intracellular kinase."
+                limitations = "Retain LTA/TNFR and LTBR complex biology separately; represent RIPK1 as intracellular continuation, not as the extracellular receptor."
+            elif ligand.startswith("LY6"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "LY6-family labels are GPI-anchored or membrane-associated proteins, not mature soluble ligands for the listed receptors and adhesion proteins."
+                limitations = "Represent LY6 family membrane and immune-complex biology separately; do not invert membrane-protein identities into ligand edges without exact primary support."
+            elif ligand == "LY9":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "LY9 is an immune receptor, not a mature ligand for TNFRSF17/BCMA."
+                limitations = "Represent LY9 receptor signaling separately; do not invert receptor-family identity into a ligand edge."
+            elif ligand == "LYPD3":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "LYPD3 is a membrane GPI-anchored protein with adhesion and protease-associated context, but the listed AGR2 and IL20RA targets were not verified as exact direct LYPD3 receptor mechanisms."
+                limitations = "Require direct LYPD3 target binding or receptor-dependent function; do not transfer GPI-anchored adhesion context across unrelated targets."
+            elif ligand == "MADCAM1":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "MAdCAM1 is an endothelial adhesion ligand with integrin and lectin context, but the listed CD44 and SIGLEC targets were not verified as exact direct MADCAM1 receptor pairs in this pass."
+                limitations = "Retain exact MAdCAM1-integrin and adhesion-complex evidence separately; require pair-specific primary support before promotion and do not infer receptor binding from endothelial expression."
+            elif ligand == "MANSC1":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "MANSC1 remains an unresolved extracellular protein label in this pass, and no exact MANSC1-to-GPR55 receptor experiment was verified."
+                limitations = "Resolve the protein form and direct receptor assay before promotion; do not infer GPR55 specificity from public-database membership alone."
+            elif ligand == "MCAM":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "MCAM/CD146 is a membrane adhesion receptor/coreceptor, not a mature ligand for CD226, FGFR4 or TMEM132A."
+                limitations = "Represent MCAM adhesion and receptor-crosstalk orientation separately; do not invert MCAM into a ligand edge without exact primary support."
+            elif ligand == "MDK":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Midkine is an extracellular growth-factor-like protein with integrin, PTP and lipoprotein-receptor co-receptor contexts, but the exact MDK-to-ITGA4/PTPRB/SORL1 mechanisms were not resolved as binary direct edges in this pass."
+                limitations = "Retain exact MDK receptor-complex and co-receptor evidence separately; require ligand form, receptor topology and primary assay before promotion."
+            elif ligand == "MELTF":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "MELTF/MTF1 is a membrane iron-transport receptor/protein, not a mature ligand for TFRC."
+                limitations = "Represent iron-uptake receptor orientation and membrane complex biology separately; do not invert MELTF into a ligand edge."
+            elif ligand == "MFAP3L":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "MFAP3L is an extracellular-matrix microfibril-associated protein, but the listed CEACAM and MPZL2 targets were not verified as exact direct MFAP3L receptor interactions."
+                limitations = "Require exact MFAP3L domain, receptor or adhesion partner, species and primary assay; do not transfer matrix-family evidence across CEACAM or immunoglobulin-superfamily proteins."
+            elif ligand.startswith("MIF"):
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "MIF has established CD74/CXCR4 and inflammatory signaling contexts, but the listed TNFRSF14 target was not verified as an exact direct MIF receptor in this pass."
+                limitations = "Require direct MIF/TNFRSF14 binding or receptor-dependent function; do not transfer CD74/CXCR4 specificity to TNFRSF14."
+            elif ligand.startswith("MILL"):
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "MILL1/MILL2 remain unresolved immune-family labels in this pass, and no exact mature ligand identity or direct HCST/KLRK1 receptor assay was verified."
+                limitations = "Resolve the source identifiers and protein forms before promotion; do not infer NKG2D-ligand specificity from unresolved MILL labels."
+            elif ligand.startswith("MMP"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "MMP-family labels are extracellular proteases that process matrix, receptor or ligand substrates; the public rows do not establish conventional mature ligand-receptor edges."
+                limitations = "Represent proteolytic cleavage, shedding and receptor-proximal remodeling separately; do not materialize MMP-to-substrate or MMP-to-receptor rows as ligand edges without exact primary support."
             elif ligand.startswith("ADAM"):
                 disposition = "hold_contextual_or_complex_boundary"
                 primary = reviewed
