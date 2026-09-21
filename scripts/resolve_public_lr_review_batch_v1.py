@@ -1662,6 +1662,34 @@ def main() -> None:
                 "distinction between binding, receptor-proximal signaling and functional output; the existing edges do "
                 "not assert a universal intracellular cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_126":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The public locators are pathway or database records, while the existing graph edge-source records "
+                "provide primary-supported Slitrk3-PTPRS synaptic adhesion, SPARC-endoglin modulation, "
+                "SPON2/mindin-integrin adhesion, TFF2-CXCR4 activation, TGF-alpha-EGFR activation, TGF-beta1 "
+                "ALK1 receptor-complex signaling and THBS2-alpha4beta1 adhesion at the stated molecular resolution."
+            )
+            limitations = (
+                "Do not add a duplicate edge or collapse LAR-RPTP splice context, SPARC endoglin-alphaV crosstalk, "
+                "mindin matrix-bound activation-state-dependent alpha4beta1 versus alpha5beta1 interactions, "
+                "high-dose TFF2-CXCR4 signaling, TGF-alpha EGFR binding versus activation, TGF-beta1 ALK5/TGFBR2 "
+                "co-receptor topology, or processed THBS2 N-terminal alpha4beta1 fragments into autonomous binary "
+                "receptors. Preserve ligand domain, processed form, receptor heterodimer and co-receptor resolution, "
+                "species and assay limits, and the distinction between binding, receptor-proximal signaling and "
+                "functional output; the existing edges do not assert a universal intracellular cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
