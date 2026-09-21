@@ -2371,6 +2371,34 @@ def main() -> None:
                 "binding, receptor-proximal signaling and functional output; the existing edges do not assert a "
                 "universal intracellular cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_151":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The public locators are pathway or database records, while the existing graph edge-source records "
+                "provide primary-supported GDF11 ACVR2A/ACVR2B receptor binding and ternary-complex activation, "
+                "GDF2 ACVRL1 type-I receptor binding, GDF5 ACVR2A/BMPR2 receptor-complex signaling, and FN1-alpha4beta7 "
+                "adhesion at the stated molecular resolution."
+            )
+            limitations = (
+                "Do not add a duplicate edge or collapse GDF11 ACVR2A versus ACVR2B preference, ALK4 versus ALK5 "
+                "type-I partners, GDF2/GDF5 ligand and receptor complexes, BMP-family receptor heterotetramers, or "
+                "FN1 alpha4beta7 adhesion into autonomous canonical receptors. Preserve mature ligand, receptor-complex "
+                "topology, structural/reconstitution context, species and assay limits, and the distinction between "
+                "binding, receptor-proximal signaling and functional output; frozen GDF11/GDF2/GDF5 aliases remain "
+                "evidence-bounded where no stable primary locator is present, and the existing edges do not assert a "
+                "universal intracellular cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
