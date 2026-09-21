@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:SPP1>ITGB3	SPP1	ITGB3	M20B-E004975;M21B-E000174	current bundle supports osteopontin engagement of assembled alphaVbeta3 integrin and adhesion/function, not isolated ITGB3 signaling	represented_graph_alias	batch_181
+LR:SPP1>ITGB5	SPP1	ITGB5	M20B-E004976;M21B-E000543	current bundle supports RGD-dependent osteopontin binding to assembled alphaVbeta5, not isolated ITGB5 signaling	represented_graph_alias	batch_181
+LR:SPP1>ITGB6	SPP1	ITGB6	M20B-E004977;M21B-E000544	current bundle supports osteopontin binding to assembled alphaVbeta6, not isolated ITGB6 signaling	represented_graph_alias	batch_181
+LR:SPX>GALR2	SPX	GALR2	M21B-E005607	current bundle includes primary mature spexin activation of GALR2-family receptors in receptor-expression pharmacology assays	represented_graph_alias	batch_181
+LR:SPX>GALR3	SPX	GALR3	M21B-E005608	current bundle includes primary mature spexin activation of GALR3-family receptors in receptor-expression pharmacology assays	represented_graph_alias	batch_181
+LR:TGFB1>ITGAV	TGFB1	ITGAV	M20B-E005026;M21B-E000212;M21B-E000507;M21B-E000634;M21B-E000635	current bundle supports latent TGFB1/LAP engagement of assembled alphaVbeta1/3/6/8 integrins, not autonomous ITGAV signaling	represented_graph_alias	batch_181
+LR:TGFB1>ITGB6	TGFB1	ITGB6	M20B-E005026;M21B-E000212	current bundle supports force-dependent latent TGFB1/LAP activation through assembled alphaVbeta6, not isolated ITGB6 signaling	represented_graph_alias	batch_181
+LR:TGFB1>TGFBR1	TGFB1	TGFBR1	M20B-E005033;M21B-E000335;M23B-E000706;M23B-E000709	current bundle supports mature TGFB1 assembly with the TGFBR1:TGFBR2 heterotetramer, not isolated TGFBR1 signaling	represented_graph_alias	batch_181
+LR:TGFB2>TGFBR1	TGFB2	TGFBR1	M20B-E005039;M21B-E000341	current bundle supports cooperative TGFB2 binding/assembly requiring TGFBR1 and TGFBR2, not isolated TGFBR1 signaling	represented_graph_alias	batch_181
+LR:TGFB3>TGFBR1	TGFB3	TGFBR1	M20B-E005041;M20B-E005049;M21B-E000342;M21B-E006429;M23B-E000712	current bundle supports TGFB3 assembly with TGFBR1:TGFBR2 and betaglycan/TGFBR3 context, not isolated TGFBR1 signaling	represented_graph_alias	batch_181

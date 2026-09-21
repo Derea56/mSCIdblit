@@ -3565,6 +3565,80 @@ def main() -> None:
                 limitations = "Preserve each assembled integrin heterodimer, osteopontin processing/cryptic epitope and activation-state boundary; do not promote free ITGB1 signaling, collapse distinct complexes or infer SCI/terminal-TF output."
             else:
                 raise SystemExit(f"unhandled batch 180 pair: {pair}")
+        elif row.get("review_batch") == "batch_181":
+            pair = (ligand, receptor)
+            if pair == ("SPP1", "ITGB3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:15325806"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mixed"
+                summary = "Primary adhesion and blocking studies support osteopontin engagement of assembled alphaVbeta3 in a CD44-containing macrophage-like cell context."
+                limitations = "Preserve RGD osteopontin, alphaVbeta3 heterodimer and CD44/co-receptor boundary; do not split beta3 from alphaV, infer an autonomous ITGB3 relay or assign SCI/terminal-TF output."
+            elif pair == ("SPP1", "ITGB5"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:7592829"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary recombinant-protein affinity and adhesion studies support RGD-dependent osteopontin binding to assembled alphaVbeta5."
+                limitations = "Preserve recombinant GST-osteopontin, RGD/integrin and divalent-cation context; do not split beta5 from alphaV, infer autonomous ITGB5 signaling or assign SCI output."
+            elif pair == ("SPP1", "ITGB6"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:16005200"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mixed"
+                summary = "Primary affinity-chromatography, adhesion and mutational studies support RGD-dependent osteopontin binding to assembled alphaVbeta6."
+                limitations = "Preserve full-length versus thrombin/MMP-cleaved osteopontin and RGD/metal-ion context; do not split beta6 from alphaV, infer universal alphaVbeta6 signaling or assign SCI output."
+            elif pair == ("SPX", "GALR2"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:24517231"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; Xenopus; zebrafish"
+                summary = "Primary receptor-expression pharmacology studies support mature spexin activation of GALR2-family receptors with receptor-selective neuroendocrine signaling responses."
+                limitations = "Promote mature SPX-to-GALR2 activation only in the cited receptor-expression context; preserve SPX isoform and GALR2/GALR3 selectivity, with no SCI or terminal-TF inference."
+            elif pair == ("SPX", "GALR3"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:24517231"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; Xenopus; zebrafish"
+                summary = "Primary receptor-expression pharmacology studies support mature spexin activation of GALR3-family receptors, including high potency relative to galanin in the cited comparison."
+                limitations = "Promote mature SPX-to-GALR3 activation only in the cited receptor-expression context; preserve SPX isoform and GALR2/GALR3 selectivity, with no SCI or terminal-TF inference."
+            elif pair == ("TGFB1", "ITGAV"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:10025398", "PMID:15920172", "PMID:9725916", "PMID:12358597"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse; mixed"
+                summary = "Primary binding, adhesion and reporter studies support latent TGFB1/LAP engagement of assembled alphaVbeta1, alphaVbeta3, alphaVbeta6 and alphaVbeta8 integrins, with context-specific latent-ligand activation or migration outputs."
+                limitations = "Preserve LAP/latent-complex form, the tested alphaV heterodimer and force or metalloproteolytic activation semantics; do not export autonomous ITGAV signaling, infer mature TGFB1 release for every edge or assign SCI/terminal-TF output."
+            elif pair == ("TGFB1", "ITGB6"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:10025398"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary latent-ligand binding, activation and epithelial/integrin-deficient models support alphaVbeta6-mediated engagement and force-dependent activation of latent TGFB1/LAP."
+                limitations = "Preserve assembled alphaVbeta6, latent-complex/LTBP anchoring and force-dependent activation; do not split beta6 from alphaV, equate binding with active TGFB1 release or infer SCI/terminal-TF output."
+            elif pair == ("TGFB1", "TGFBR1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:20207738"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human"
+                summary = "Primary receptor-structure and quantitative binding studies support mature dimeric TGFB1 assembly with the TGFBR1:TGFBR2 heterotetramer."
+                limitations = "Preserve 2:2:2 ligand/receptor stoichiometry, type-II-first assembly, latent-complex activation boundary and TGFBR2 requirement; do not promote isolated TGFBR1 signaling or infer SCI/terminal-TF output."
+            elif pair == ("TGFB2", "TGFBR1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:7608141"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human"
+                summary = "Primary cross-linking and co-immunoprecipitation studies support cooperative TGFB2 binding/assembly requiring coexpressed TGFBR1 and TGFBR2."
+                limitations = "Preserve weak intrinsic TGFB2-TGFBR2 affinity, cooperative TGFBR1/TGFBR2 assembly and betaglycan-facilitated alternatives; do not promote isolated TGFBR1 signaling or infer SCI/terminal-TF output."
+            elif pair == ("TGFB3", "TGFBR1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:18243111", "PMID:40011426"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; rat; zebrafish"
+                summary = "Primary structural, interface-mutagenesis and cell-assembly studies support TGFB3 engagement of the TGFBR1:TGFBR2 heterotetramer, with betaglycan/TGFBR3 as a ligand-binding coreceptor and Smad reporter output."
+                limitations = "Preserve mature TGFB3 dimer, cooperative receptor-receptor assembly and betaglycan handoff semantics; do not promote isolated TGFBR1 signaling or infer unsupported terminal-TF/SCI output."
+            else:
+                raise SystemExit(f"unhandled batch 181 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
