@@ -1,0 +1,10 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:MDK>ITGB1	MDK	ITGB1	M23B-E000210	current bundle represents midkine in a TSPAN1-associated alpha6beta1 complex with STAT1-alpha output, not isolated ITGB1 binding	represented_graph_alias	batch_172
+LR:MIF>CD44	MIF	CD44	M20B-E004247;M21B-E000687;M23B-E000212	current bundle represents MIF engagement of the CD74:CD44 complex; primary evidence identifies CD74 as the ligand-binding component and CD44 as a required signaling component	represented_graph_alias	batch_172
+LR:MIF>CD74	MIF	CD74	M20B-E001912;M20B-E001913;M20B-E004247;M21B-E000687;M23B-E000212	current bundle includes primary MIF-CD74 ligand-binding and CD74:CD44 signaling-complex evidence plus frozen CXCR2/CXCR4 complex aliases	represented_graph_alias	batch_172
+LR:MIF>CXCR2	MIF	CXCR2	M20B-E001912;M21B-E002368	current bundle includes primary noncognate MIF-CXCR2 interaction and chemotaxis/arrest outputs, with CD74 context retained	represented_graph_alias	batch_172
+LR:MIF>CXCR4	MIF	CXCR4	M20B-E001913;M21B-E002367	current bundle includes primary noncognate/allosteric MIF-CXCR4 interaction and chemotaxis/arrest outputs	represented_graph_alias	batch_172
+LR:MMP2>ITGAV	MMP2	ITGAV	M20B-E002373	current bundle retains a frozen MMP2-MMP14-alphaVbeta3 complex representation without pair-specific primary evidence for isolated MMP2-alphaV binding	represented_graph_alias	batch_172
+LR:MMP2>ITGB3	MMP2	ITGB3	M20B-E002373	current bundle retains a frozen MMP2-MMP14-alphaVbeta3 complex representation without pair-specific primary evidence for isolated MMP2-beta3 binding	represented_graph_alias	batch_172
+LR:MRC1>PTPRC	MRC1	PTPRC	M21B-E011617	current bundle includes primary mannose-receptor cysteine-rich-domain binding to PTPRC/CD45 glycoforms in sugar-dependent assays	represented_graph_alias	batch_172
+LR:MSTN>ACVR2B	MSTN	ACVR2B	M21B-E003236;M21B-E003237;M21B-E003238;M21B-E011668;M21B-E011670	current bundle includes primary mature-myostatin binding to ACVR2B and bounded ACVR2B:ALK4/ALK5 receptor-complex signaling	represented_graph_alias	batch_172

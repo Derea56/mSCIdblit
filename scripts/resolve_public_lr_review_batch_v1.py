@@ -2973,6 +2973,65 @@ def main() -> None:
                 limitations = "Preserve the TSPAN1-associated alpha6beta1 complex and distinguish STAT1-alpha output from direct ligand-TF evidence; do not split ITGA6 from ITGB1 or infer a universal midkine relay."
             else:
                 raise SystemExit(f"unhandled batch 171 pair: {pair}")
+        elif row.get("review_batch") == "batch_172":
+            pair = (ligand, receptor)
+            if pair == ("MDK", "ITGB1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:18851943", "DOI:10.1016/j.bbrc.2008.09.138"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary work supports midkine in a TSPAN1-associated alpha6beta1 signaling complex with STAT1-alpha pathway output, representing complex-context evidence rather than isolated MDK-ITGB1 binding."
+                limitations = "Preserve the TSPAN1-associated alpha6beta1 complex and distinguish STAT1-alpha output from direct ligand-TF evidence; do not split ITGA6:ITGB1 or infer a universal midkine relay."
+            elif pair == ("MIF", "CD44"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:12782713", "PMCID:PMC2193907", "DOI:10.1084/jem.20030286", "PMID:17045821", "PMCID:PMC3707630"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary studies establish MIF binding to CD74 with CD44 as the required signaling component of the CD74:CD44 complex; they do not support MIF as a direct isolated CD44 ligand."
+                limitations = "Preserve CD74 as the MIF ligand-binding component and CD44 as the signaling partner; do not materialize an isolated MIF-CD44 binary edge or infer a CD74-independent route, CNS/SCI output or terminal-TF activity."
+            elif pair == ("MIF", "CD74"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:12782713", "PMCID:PMC2193907", "DOI:10.1084/jem.20030286", "PMID:17045821", "PMCID:PMC3707630"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse; mixed"
+                summary = "Primary binding and functional studies support MIF engagement of CD74, with CD44 required for receptor-complex signaling, ERK1/2 activation and apoptosis-protection outputs; CXCR2/CXCR4 branches remain separate noncognate receptor contexts."
+                limitations = "Preserve the CD74:CD44 complex and distinguish CD74 ligand binding from CD44 signaling; retain MIF noncognate CXCR2/CXCR4 branches separately and do not infer a universal intracellular or terminal-TF route."
+            elif pair == ("MIF", "CXCR2"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:17435771", "PMID:21106938"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary receptor and leukocyte studies support MIF as a noncognate CXCR2 ligand with G-alpha-i/integrin-dependent calcium, arrest and chemotaxis outputs and CXCR2-dependent inflammatory recruitment."
+                limitations = "Preserve MIF's noncanonical CXCR2 ligand topology and pseudo-ELR/N-loop determinants; CD74 contributes to some arrest contexts, so do not infer a CD74-independent universal route or SCI/terminal-TF output."
+            elif pair == ("MIF", "CXCR4"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:17435771", "PMID:27226569"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human"
+                summary = "Primary receptor and leukocyte studies support MIF as a noncognate, partial/allosteric CXCR4 ligand with calcium, integrin-arrest and chemotaxis outputs."
+                limitations = "Preserve MIF as distinct from CXCL12 and retain receptor-coupling and chemotaxis context; do not infer a universal intracellular relay, SCI receiver or terminal-TF output."
+            elif pair in {("MMP2", "ITGAV"), ("MMP2", "ITGB3")}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_or_direct_molecular"
+                species = "mouse"
+                summary = "The current graph retains a frozen MMP2-MMP14-alphaVbeta3 complex representation, but no pair-specific primary packet in this bundle resolves isolated MMP2 binding to ITGAV or ITGB3."
+                limitations = "Preserve the MMP14:ITGAV:ITGB3 complex and protease/co-receptor topology; do not split ITGAV from ITGB3, promote MMP2 as an isolated integrin ligand, or infer downstream/TF signaling from the frozen database row."
+            elif pair == ("MRC1", "PTPRC"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:10575006", "DOI:10.1074/jbc.274.49.35211"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "mixed"
+                summary = "Primary purified-domain and glycoform assays support the MRC1/mannose-receptor cysteine-rich-domain interaction with PTPRC/CD45 in the listed orientation."
+                limitations = "Preserve lectin-domain, CD45 glycoform and sugar-dependence boundaries; the study does not establish an intracellular MRC1 relay, TF, target-gene output or SCI signaling route."
+            elif pair == ("MSTN", "ACVR2B"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:11459935", "PMID:14517293", "PMID:33219121"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse; mixed"
+                summary = "Primary studies support mature myostatin/GDF8 binding to ACVR2B/ActRIIB and bounded signaling through ACVR2B with ALK4/ACVR1B or ALK5/TGFBR1 type-I partners, including Smad2/3 reporter outputs."
+                limitations = "Preserve mature-myostatin versus propeptide form and intact ACVR2B:type-I receptor-complex topology; do not collapse the complex into unsupported free-subunit edges or infer a terminal-TF/SCI route beyond the reported reporter assays."
+            else:
+                raise SystemExit(f"unhandled batch 172 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
