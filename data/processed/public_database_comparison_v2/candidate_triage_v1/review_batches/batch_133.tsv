@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:BMP10>ACVR2A	BMP10	ACVR2A	M20B-E001803;M21B-E006573		represented_graph_alias	batch_133
+LR:BMP10>ACVR2B	BMP10	ACVR2B	M21B-E005563		represented_graph_alias	batch_133
+LR:BMP10>ACVRL1	BMP10	ACVRL1	M20B-E001803;M20B-E001804;M21B-E000339;M21B-E003265		represented_graph_alias	batch_133
+LR:BMP15>BMPR1B	BMP15	BMPR1B	M20B-E001805;M21B-E006162		represented_graph_alias	batch_133
+LR:BMP15>BMPR2	BMP15	BMPR2	M20B-E001805;M21B-E006163		represented_graph_alias	batch_133
+LR:BMP2>ACVR2A	BMP2	ACVR2A	M20B-E001806;M20B-E001809;M21B-E000337		represented_graph_alias	batch_133
+LR:BMP2>ACVR2B	BMP2	ACVR2B	M20B-E001807;M20B-E001810;M21B-E006690		represented_graph_alias	batch_133
+LR:BMP2>BMPR1A	BMP2	BMPR1A	M20B-E001806;M20B-E001807;M20B-E001808;M21B-E000186;M21B-E000337;M21B-E001736		represented_graph_alias	batch_133
+LR:BMP2>BMPR1B	BMP2	BMPR1B	M20B-E001809;M20B-E001810;M20B-E001811;M21B-E007014		represented_graph_alias	batch_133
+LR:BMP3>ACVR2A	BMP3	ACVR2A	M21B-E006711		represented_graph_alias	batch_133
