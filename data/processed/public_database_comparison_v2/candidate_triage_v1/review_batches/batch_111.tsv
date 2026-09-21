@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:CCL26>CCR3	CCL26	CCR3	M21B-E000397	KEGG: mmu04060	represented_graph_alias	batch_111
+LR:CCL7>CCR2	CCL7	CCR2	M21B-E000408;M21B-E010699	KEGG: mmu04060	represented_graph_alias	batch_111
+LR:CCL8>CCR2	CCL8	CCR2	M21B-E000441	KEGG: mmu04060	represented_graph_alias	batch_111
+LR:CCL8>CCR5	CCL8	CCR5	M21B-E000442	KEGG: mmu04060	represented_graph_alias	batch_111
+LR:CD99>CD99	CD99	CD99	M23B-E000931	KEGG: mmu04514	represented_graph_alias	batch_111
+LR:CFH>ITGAM	CFH	ITGAM	M21B-E002875;M23B-E000342		represented_graph_alias	batch_111
+LR:CFP>NCR1	CFP	NCR1	M21B-E002952		represented_graph_alias	batch_111
+LR:CLEC11A>ITGA10	CLEC11A	ITGA10	M21B-E005568;M23B-E000936		represented_graph_alias	batch_111
+LR:CLEC11A>ITGB1	CLEC11A	ITGB1	M21B-E005568;M21B-E005569;M23B-E000349;M23B-E000936		represented_graph_alias	batch_111
+LR:CNTN2>L1CAM	CNTN2	L1CAM	M21B-E005155;M23B-E000938	KEGG: mmu04514	represented_graph_alias	batch_111
