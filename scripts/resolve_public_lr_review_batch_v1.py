@@ -1827,10 +1827,13 @@ def main() -> None:
                 summary = "Netrin-4 is supported through DCC, UNC5A, neogenin and integrin contexts, but direct NTRK2/TrkB receptor support was not verified in this pass."
                 limitations = "Require a direct NTN4-NTRK2 binding or activation study before promotion; do not transfer BDNF/NTF5-TrkB evidence to netrin-family ligands."
             elif ligand == "PECAM1" and receptor == "CD177":
-                disposition = "no_primary_evidence_found"
-                layer = "candidate_only_review_locator"
-                summary = "No exact primary experiment was verified for this PECAM1-to-CD177 candidate in the current pass."
-                limitations = "Retain for targeted leukocyte-endothelial adhesion review; do not infer direct CD177 binding from shared vascular or neutrophil expression."
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E005465"
+                primary = ["PMID:17580308", "DOI:10.1074/jbc.M701120200"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "The graph already contains the primary-supported CD177-to-PECAM1/CD31 heterophilic adhesion and transmigration relationship in the reverse orientation of the public row."
+                limitations = "Preserve CD177/PECAM1 direction and neutrophil-transendothelial context; do not add a duplicate PECAM1-to-CD177 edge or infer a universal intracellular relay."
             elif ligand == "RARRES2" and receptor == "CMKLR2":
                 disposition = "reject_precursor_or_non_edge_form"
                 layer = "candidate_only_unverified"
@@ -3792,6 +3795,30 @@ def main() -> None:
                 layer = "candidate_only_review_locator"
                 summary = "No exact primary experiment was verified for this oligodendrocyte-myelin glycoprotein-to-receptor pair in the current pass."
                 limitations = "Retain established myelin-inhibitory receptor-complex evidence separately; do not transfer Nogo-receptor-family context to LINGO1, NGFR or TNFRSF1B as isolated receptors."
+            elif ligand == "H60A" and receptor == "HCST+KLRK1":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E002967"
+                primary = ["PMID:11520456", "PMCID:PMC3900321"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary H60a-NKG2D studies support direct ligand binding and NK-cell activation, and the graph already represents the KLRK1 component; the public HCST+KLRK1 row is retained as a receptor-adaptor composite rather than a single asserted edge."
+                limitations = "Preserve H60a-KLRK1 and the HCST/DAP10 adaptor assembly as separate traversable layers; do not promote the full composite without exact complex-level topology evidence."
+            elif ligand == "H60B" and receptor == "HCST+KLRK1":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E006718"
+                primary = ["PMID:18209064"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary H60b-NKG2D studies support direct ligand binding and NK-cell lysis, and the graph already represents the KLRK1 component; the public HCST+KLRK1 row is retained as a receptor-adaptor composite."
+                limitations = "Preserve H60b-KLRK1 and HCST/DAP10 adaptor assembly separately; do not promote the complete composite as one edge without exact complex-level evidence."
+            elif ligand == "H60C" and receptor == "HCST+KLRK1":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E002969"
+                primary = ["PMID:19342629", "PMCID:PMC3001286"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary H60c-NKG2D studies support direct ligand binding and cytotoxic/co-stimulatory outputs, and the graph already represents the KLRK1 component; the public HCST+KLRK1 row is retained as a receptor-adaptor composite."
+                limitations = "Preserve H60c-KLRK1 and HCST/DAP10 adaptor assembly separately; do not promote the complete composite as one edge without exact complex-level evidence."
             elif "+" in receptor:
                 disposition = "hold_contextual_or_complex_boundary"
                 layer = "ligand_receptor_binding_or_activation"
@@ -3833,6 +3860,27 @@ def main() -> None:
                 species = "mouse"
                 summary = "Primary CD200-receptor-family work distinguishes the canonical CD200-CD200R interaction from CD200R-related activating receptors, while CD200Fc studies report CD200R3 expression and microglial outputs without establishing direct CD200 binding to CD200R3."
                 limitations = "Retain CD200-CD200R1 as the canonical ligand-receptor edge; keep CD200R3 as a receptor-family and functional-context hold until an exact CD200-CD200R3 binding or receptor-dependent ligand assay is identified."
+            elif ligand == "GHRH" and receptor in {"VIPR1", "VIPR2"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                primary = ["PMID:10655511"]
+                species = "rat"
+                summary = "Primary peptide-antagonist and receptor-binding studies distinguish GHRH-receptor activity from VPAC1/VPAC2 activity; the tested GHRH-related analogs do not establish intact GHRH as a canonical VIPR1 or VIPR2 ligand."
+                limitations = "Retain GHRH-GHRHR and VIP/PACAP-VIPR specificity; do not materialize GHRH-to-VIPR1/2 from structural similarity or analog cross-antagonism alone."
+            elif ligand == "VIP" and receptor == "SCTR":
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = ["PMID:7782300"]
+                species = "human"
+                summary = "Primary chimeric-receptor pharmacology detects weak VIP responsiveness at the secretin receptor, with much lower potency than the cognate VIP-receptor response, supporting a bounded cross-family functional route."
+                limitations = "Treat as low-potency cross-reactivity rather than canonical VIP-SCTR signaling; the study does not establish physiological relevance, a complete intracellular relay or a terminal-TF output."
+            elif ligand == "RAET1A" and receptor == "KLRK1":
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = ["PMID:19197141", "PMID:20484740"]
+                species = "mouse"
+                summary = "Primary mouse studies support a RAET1A-KLRK1/NKG2D functional route: inducible Raet1a expression activates NKG2D-dependent cytotoxic pathology, and RAET1-expressing trophoblast systems elicit KLRK1-dependent IFNG responses."
+                limitations = "Promote as a bounded NKG2D ligand-to-immune-output route; the cited studies do not resolve DAP10/DAP12 adaptor choice, a complete intracellular cascade or a terminal-TF output."
             else:
                 disposition = "no_primary_evidence_found"
                 layer = "candidate_only_unverified"
@@ -3894,6 +3942,20 @@ def main() -> None:
             species = "mouse"
             summary = "Primary CD200-receptor-family work distinguishes the canonical CD200-CD200R interaction from CD200R-related activating receptors, while CD200Fc studies report CD200R3 expression and microglial outputs without establishing direct CD200 binding to CD200R3."
             limitations = "Retain CD200-CD200R1 as the canonical ligand-receptor edge; keep CD200R3 as a receptor-family and functional-context hold until an exact CD200-CD200R3 binding or receptor-dependent ligand assay is identified."
+        elif ligand == "GHRH" and receptor in {"VIPR1", "VIPR2"}:
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation"
+            primary = ["PMID:10655511"]
+            species = "rat"
+            summary = "Primary peptide-antagonist and receptor-binding studies distinguish GHRH-receptor activity from VPAC1/VPAC2 activity; the tested GHRH-related analogs do not establish intact GHRH as a canonical VIPR1 or VIPR2 ligand."
+            limitations = "Retain GHRH-GHRHR and VIP/PACAP-VIPR specificity; do not materialize GHRH-to-VIPR1/2 from structural similarity or analog cross-antagonism alone."
+        elif ligand == "VIP" and receptor == "SCTR":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+            primary = ["PMID:7782300"]
+            species = "human"
+            summary = "Primary chimeric-receptor pharmacology detects weak VIP responsiveness at the secretin receptor, with much lower potency than the cognate VIP-receptor response, supporting a bounded cross-family functional route."
+            limitations = "Treat as low-potency cross-reactivity rather than canonical VIP-SCTR signaling; the study does not establish physiological relevance, a complete intracellular relay or a terminal-TF output."
         elif ligand in {"JAG1", "JAG2"} and receptor == "NOTCH4":
             disposition = "no_primary_evidence_found"
             layer = "candidate_only_review_locator"
