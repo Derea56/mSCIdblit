@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:IL19>IL20RA	IL19	IL20RA	M21B-E000743		represented_graph_alias	batch_159
+LR:IL19>IL20RB	IL19	IL20RB	M21B-E000743		represented_graph_alias	batch_159
+LR:IL1A>IL1R1	IL1A	IL1R1	M21B-E000733;M24B-E000091		represented_graph_alias	batch_159
+LR:IL1A>IL1R2	IL1A	IL1R2	M20B-E003940		represented_graph_alias	batch_159
+LR:IL1A>IL1RAP	IL1A	IL1RAP	M20B-E003940;M24B-E000091		represented_graph_alias	batch_159
+LR:IL1B>IL1R1	IL1B	IL1R1	M21B-E000734;M24B-E000092		represented_graph_alias	batch_159
+LR:IL1B>IL1R2	IL1B	IL1R2	M20B-E003942		represented_graph_alias	batch_159
+LR:IL1B>IL1RAP	IL1B	IL1RAP	M20B-E003942;M24B-E000092		represented_graph_alias	batch_159
+LR:IL1RAPL1>PTPRS	IL1RAPL1	PTPRS	M21B-E005516		represented_graph_alias	batch_159
+LR:IL1RN>IL1R1	IL1RN	IL1R1	M21B-E000735		represented_graph_alias	batch_159
