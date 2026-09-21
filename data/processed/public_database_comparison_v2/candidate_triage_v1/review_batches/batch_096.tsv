@@ -1,0 +1,6 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:CD55>ADGRE5	CD55	ADGRE5	M21B-E000945	PMID:31462748	represented_graph_alias	batch_096
+LR:TGM2>ADGRG1	TGM2	ADGRG1	M21B-E000933;M23B-E000999	PMID:31462748	represented_graph_alias	batch_096
+LR:ITGAV+ITGB3>ADGRE5	ITGAV+ITGB3	ADGRE5	M21B-E000949	PMID:31462748	represented_graph_alias	batch_096
+LR:PRNP>ADGRG6	PRNP	ADGRG6	M21B-E000936	PMID:31462748	represented_graph_alias	batch_096
+LR:RTN4R>ADGRB1	RTN4R	ADGRB1	M23B-E000848	PMID:31462748	represented_graph_alias	batch_096

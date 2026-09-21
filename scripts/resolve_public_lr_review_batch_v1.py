@@ -894,6 +894,29 @@ def main() -> None:
                 "Preserve SALM/LRFN isoform aliases, LAR-RPTP paralog, splice-insert and trans-synaptic topology boundaries; "
                 "the existing edge does not assert a universal intracellular cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_096":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The public locator PMID:31462748 is an adhesion-GPCR review and is not treated as primary support; "
+                "the existing graph edge-source records provide pair-specific studies for CD55/CD97, TG2/ADGRG1, "
+                "integrin/ADGRE5, PrP/ADGRG6 or RTN4R/ADGRB1 in their stated assay contexts."
+            )
+            limitations = (
+                "Do not add a duplicate edge from the public row or treat the adhesion-GPCR review as a pair-specific primary experiment. "
+                "Preserve ligand form, adhesion-GPCR receptor processing, receptor-complex and species boundaries; "
+                "the existing edge does not assert a universal intracellular cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
