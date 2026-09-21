@@ -1,0 +1,16 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:WNT4>FZD5	WNT4	FZD5	M21B-E006703	current bundle already contains primary-supported WNT4-FZD5 binding	represented_graph_alias	batch_189
+LR:WNT4>FZD6	WNT4	FZD6	M21B-E005579	current bundle already contains primary-supported WNT4-FZD6 physical association	represented_graph_alias	batch_189
+LR:WNT4>FZD7	WNT4	FZD7	M21B-E007019	current bundle already contains primary-supported WNT4-FZD7 binding	represented_graph_alias	batch_189
+LR:WNT4>FZD8	WNT4	FZD8	M21B-E006704	current bundle already contains primary-supported WNT4-FZD8 binding	represented_graph_alias	batch_189
+LR:WNT5B>LRP6	WNT5B	LRP6	M20B-E005282	current bundle retains a frozen Wnt5b-Fzd1/Lrp6 complex alias without a stable pair-specific primary locator	represented_graph_alias	batch_189
+LR:WNT7A>FZD5	WNT7A	FZD5	M21B-E006709	current bundle already contains primary-supported WNT7A-FZD5 binding and bounded pathway evidence	represented_graph_alias	batch_189
+LR:WNT7A>FZD7	WNT7A	FZD7	M21B-E006710	current bundle already contains primary-supported WNT7A-FZD7 binding and bounded PCP output	represented_graph_alias	batch_189
+LR:WNT7B>ADGRA2	WNT7B	ADGRA2	M21B-E000958	current bundle supports WNT7B only in the assembled ADGRA2/GPR124-RECK-LRP5/6 module	represented_graph_alias	batch_189
+LR:WNT7B>FZD1	WNT7B	FZD1	M21B-E007023	current bundle already contains primary-supported WNT7B-FZD1 binding and bounded LRP5 cooperation	represented_graph_alias	batch_189
+LR:WNT7B>FZD10	WNT7B	FZD10	M21B-E007024	current bundle already contains primary-supported WNT7B-FZD10 binding and bounded LRP5 cooperation	represented_graph_alias	batch_189
+LR:WNT7B>LRP5	WNT7B	LRP5	M21B-E000958	current bundle supports WNT7B only in the assembled ADGRA2/GPR124-RECK-LRP5/6 module	represented_graph_alias	batch_189
+LR:WNT9A>FZD9	WNT9A	FZD9	M21B-E006172	current bundle already contains primary-supported WNT9A-FZD9/FZD9b specificity and output evidence	represented_graph_alias	batch_189
+LR:WNT9B>FZD5	WNT9B	FZD5	M21B-E007086	current bundle already contains primary-supported WNT9B-FZD5/LRP6 canonical evidence	represented_graph_alias	batch_189
+LR:WNT9B>FZD8	WNT9B	FZD8	M21B-E007088	current bundle already contains primary-supported weak WNT9B-FZD8/LRP6 ectodomain binding	represented_graph_alias	batch_189
+LR:WNT9B>LRP6	WNT9B	LRP6	M21B-E000157	current bundle already contains primary-supported WNT9B-LRP6 E1E2 binding-site mapping	represented_graph_alias	batch_189
