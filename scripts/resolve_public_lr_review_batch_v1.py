@@ -391,7 +391,56 @@ def main() -> None:
             species = "human"
             summary = "Primary neutrophil-endothelial adhesion work supports CEA-like CD66/NCA molecules as sialyl-Lewis-x presenters participating in E-selectin-dependent adhesion, but does not resolve CEACAM2 as the exact ligand molecule."
             limitations = "Retain as CEACAM-family/selectin adhesion context; do not materialize a CEACAM2-SELE binary edge without paralog-specific binding or perturbation evidence."
-        elif ligand in {"C4A", "CCL1", "CCL8", "CEACAM2"}:
+        elif ligand == "C4A":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+            primary = ["PMID:14734749", "PMID:8422437", "PMCID:PMC2947992"]
+            species = "human complement and CD46/CR1 studies"
+            summary = "Primary complement studies support processed C4b interactions with complement regulators and cofactors, but the public rows label the ligand as C4A and mix complement, anaphylatoxin and neuropilin receptors without resolving the mature fragment or exact receptor mechanism."
+            limitations = "Retain as complement-fragment and receptor-context evidence pending a direct C4A/C4b-form assay for each target; do not split intact C4A from deposited C4b or infer C3AR1, C5AR2 or NRP1 specificity from complement-family context alone."
+        elif ligand == "CXCL2" and receptor == "ACKR1":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:30446388", "PMCID:PMC6303217"]
+            species = "mouse in vivo cremaster-microcirculation model"
+            summary = "Primary intravital and endothelial-junction studies show that neutrophil-derived CXCL2 is retained and presented by ACKR1 at venular junctions, and that this ACKR1-dependent CXCL2 depot guides paracellular neutrophil transmigration."
+            limitations = "Represent ACKR1 as an atypical chemokine presentation/retention route rather than a canonical G-protein signaling receptor; preserve the mouse endothelial-junction and CXCR2-ligand context and do not infer a universal intracellular relay or terminal-TF output."
+        elif ligand == "CXCL2" and receptor == "CXCR1":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMCID:PMC3748335"]
+            species = "human primary airway smooth-muscle cells"
+            summary = "Primary receptor-blockade and knockdown experiments found CXCL2-induced migration to depend on CXCR2 rather than CXCR1; the study notes only weak or high-concentration CXCR1 activity in recombinant receptor comparisons."
+            limitations = "Preserve the CXCL2-CXCR2 route and the low-affinity/recombinant-system caveat; do not materialize CXCL2-CXCR1 as a direct functional edge without a pair-specific primary assay."
+        elif ligand == "CXCL2":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:30446388", "PMCID:PMC3748335"]
+            species = "mouse and human receptor-specificity studies"
+            summary = "Primary CXCL2 studies support CXCR2 signaling and ACKR1-mediated endothelial presentation, but do not support the listed ADRA2A, GRM7 or MTNR1A pairings as direct CXCL2 receptors."
+            limitations = "Retain CXCL2-CXCR2 and the ACKR1 presentation route with their species and cell-context boundaries; do not transfer chemokine activity to unrelated GPCR families from public database co-membership."
+        elif ligand == "PF4" and receptor == "CXCR3":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:18174362", "PMID:24469069", "PMID:15265941"]
+            species = "human CXCR3 isoform and lymphocyte/endothelial studies; mouse PF4 comparator"
+            summary = "Primary studies support context-dependent PF4/CXCL4 activity through CXCR3 isoforms in human activated T cells and endothelial systems, while other primary work finds no CXCR3B requirement in monocyte oxidative-burst responses."
+            limitations = "Keep this as an isoform-, cell-type- and species-bounded contextual route; the normalized CXCR3 gene label does not resolve CXCR3A versus CXCR3B, and mouse systems lack the human CXCR3B splice context."
+        elif ligand == "PF4" and receptor == "SDC2":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:36640356", "PMCID:PMC11064100"]
+            species = "human and mouse extracellular-matrix/proteoglycan studies"
+            summary = "Primary biophysical and in vivo work shows PF4/CXCL4 binding to glycosaminoglycans on endothelial proteoglycans and altering leukocyte adhesion and recruitment, but it does not establish syndecan-2 as a standalone PF4 signaling receptor."
+            limitations = "Retain SDC2 as a possible proteoglycan presentation context rather than a direct binary receptor edge; require syndecan-2-specific binding or perturbation before promotion and do not infer canonical intracellular signaling."
+        elif ligand == "PF4":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:29930254", "PMID:29540475", "PMID:36640356"]
+            species = "human PF4 receptor and proteoglycan studies"
+            summary = "Primary PF4 studies support CCR1, Mac-1/integrin and extracellular proteoglycan/GAG contexts, but do not establish the listed non-cognate receptor pair as a direct PF4 edge."
+            limitations = "Retain PF4 receptor and matrix-context evidence in its cell, species and receptor-complex boundaries; do not materialize unsupported FGFR2, LDLR, PROCR, ACKR1, ADRA2A, GRM7, LRP1 or MTNR1A rows from pathway co-membership alone."
+        elif ligand in {"CCL1", "CCL8", "CEACAM2"}:
             disposition = "no_primary_evidence_found"
             layer = "candidate_only_review_locator"
             summary = "The public locator was reviewed, but it did not verify an exact primary experiment for this ligand-receptor pair in the current pass."
