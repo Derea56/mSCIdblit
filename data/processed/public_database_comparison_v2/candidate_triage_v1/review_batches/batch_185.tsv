@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:TNXB>ITGB3	TNXB	ITGB3	M20B-E002278;M23B-E000085	current bundle supports a TN-X FNIII9-10 fragment through assembled alphaVbeta3-dependent adhesion, not isolated ITGB3 binding by full-length TNXB	represented_graph_alias	batch_185
+LR:TSLP>CRLF2	TSLP	CRLF2	M20B-E005163;M21B-E000683;M21B-E000721	current bundle includes primary binary TSLP-TSLPR/CRLF2 binding and ternary TSLPR/CRLF2:IL7R receptor assembly with STAT5/proliferative outputs	represented_graph_alias	batch_185
+LR:TSLP>IL7R	TSLP	IL7R	M20B-E005163	current bundle represents TSLP through the assembled TSLPR/CRLF2:IL7R receptor, not isolated IL7R signaling	represented_graph_alias	batch_185
+LR:VCAM1>ITGA4	VCAM1	ITGA4	M20B-E005181;M20B-E005182;M21B-E000213;M21B-E000582;M23B-E000577	current bundle supports VCAM1 adhesion through assembled alpha4beta1/alpha4beta7 integrins, not isolated ITGA4 signaling	represented_graph_alias	batch_185
+LR:VCAM1>ITGA9	VCAM1	ITGA9	M21B-E000589;M23B-E000196;M23B-E000771	current bundle supports VCAM1 adhesion/transmigration through assembled alpha9beta1, not isolated ITGA9 signaling	represented_graph_alias	batch_185
+LR:VCAM1>ITGAD	VCAM1	ITGAD	M20B-E002281;M21B-E000585;M23B-E000773	current bundle supports alternative alphaDbeta2/alphaD I-domain VCAM1 binding, not isolated ITGAD signaling	represented_graph_alias	batch_185
+LR:VCAM1>ITGB1	VCAM1	ITGB1	M20B-E005181;M21B-E000213;M21B-E000589;M23B-E000196;M23B-E000577;M23B-E000771	current bundle supports VCAM1 interaction with assembled alpha4beta1 and alpha9beta1, not free ITGB1 signaling	represented_graph_alias	batch_185
+LR:VCAM1>ITGB2	VCAM1	ITGB2	M20B-E002281;M21B-E000585;M23B-E000773	current bundle supports VCAM1 interaction with assembled alphaDbeta2, not free ITGB2 signaling	represented_graph_alias	batch_185
+LR:VCAM1>ITGB7	VCAM1	ITGB7	M20B-E005182;M21B-E000582	current bundle supports VCAM1 interaction with assembled alpha4beta7, not isolated ITGB7 signaling	represented_graph_alias	batch_185
+LR:VEGFA>ITGA9	VEGFA	ITGA9	M21B-E000638;M23B-E000775;M23B-E000778	current bundle supports VEGF-A121/165 engagement of assembled alpha9beta1 with VEGFR2 cooperation, not isolated ITGA9 signaling	represented_graph_alias	batch_185
