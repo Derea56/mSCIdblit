@@ -1146,6 +1146,11 @@ def main() -> None:
             species = "human FGFRL1 receptor/decoy and Xenopus embryonic assays"
             summary = "Primary studies characterize FGFRL1 as an FGFR-like membrane receptor or decoy that can bind selected FGF ligands, not as an extracellular ligand for the listed receptor candidates."
             limitations = "Represent FGFRL1 in receptor/decoy and receptor-complex layers; do not materialize FGFRL1-to-FGFR1, GP6, GPC4, NRXN2, NRXN3 or PLVAP as ligand-receptor edges."
+        elif ligand == "LOC100861978":
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_review_locator"
+            summary = "The LOC-prefixed public identifier was not resolved to a verified mature ligand identity and exact receptor assay in this pass."
+            limitations = "Resolve the species-specific gene and protein form before promotion; do not infer receptor specificity from an unresolved LOC label or public-database membership alone."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
