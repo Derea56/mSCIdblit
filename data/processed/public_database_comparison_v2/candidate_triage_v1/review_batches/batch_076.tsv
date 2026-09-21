@@ -1,0 +1,2 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:APOE>LRP2	APOE	LRP2		PMID:9122201	primary_review	batch_076

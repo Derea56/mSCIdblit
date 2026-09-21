@@ -17,7 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_BATCH = ROOT / "data/processed/public_database_comparison_v2/candidate_triage_v1/review_batches/batch_001.tsv"
-DEFAULT_BUNDLE = ROOT / "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion254"
+DEFAULT_BUNDLE = ROOT / "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion256"
 DEFAULT_OUTPUT = ROOT / "data/processed/public_database_comparison_v2/candidate_triage_v1/batch_001_review_resolution.tsv"
 LOCATOR = re.compile(r"(?:PMID:\d+|PMCID:PMC\d+|DOI:10\.\d{4,9}/[^;\s]+)", re.IGNORECASE)
 
@@ -199,6 +199,47 @@ def main() -> None:
                 species = "mouse CEACAM-family context"
                 summary = "The cited locator does not establish the exact CEACAM2 homophilic edge, and the graph export contract disallows self-loop materialization for CEACAM2."
                 limitations = "Retain only exact primary-supported CEACAM adhesion pairs; do not encode CEACAM2-to-CEACAM2 as a self-loop or infer downstream signaling from homophilic family context."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
+        elif row.get("review_batch") == "batch_075":
+            pair = (ligand, receptor)
+            if pair == ("TSHB", "TSHR"):
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:4372620"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "bovine TSH subunit; dog and mouse thyroid assays"
+                summary = "Primary subunit-comparison experiments show that the TSH beta subunit binds the thyrotropin receptor and produces a weak but measurable thyroid-stimulation response, while intact TSH is much more active; the beta subunit supplies key receptor-specific determinants."
+                limitations = "Represent TSHB as a subunit-level, partial-activity evidence edge rather than the complete physiological TSH heterodimer; preserve the reported species and assay context and do not infer a full intracellular or TF route from the beta-subunit experiment."
+            elif pair == ("PPY", "NPY5R"):
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:17204471", "PMID:18457425"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human Y5 receptor in heterologous binding/mutagenesis assays"
+                summary = "Primary Y-receptor mutagenesis and binding studies identify pancreatic polypeptide as a ligand for Y5/NPY5R and resolve ligand-contact residues that contribute to binding and signal transduction."
+                limitations = "Preserve the human receptor and peptide-family assay context, including the higher pancreatic-polypeptide preference of Y4 relative to Y5; do not infer a unique tissue output or complete intracellular cascade from receptor binding/mutagenesis alone."
+            elif pair == ("CCL21A", "CCR7"):
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:20201039", "PMID:20889506", "PMID:41420491"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse Ccl21a; human CCL21/CCR7 comparator assays"
+                summary = "Primary mouse genetics and migration studies identify Ccl21a/CCL21 as a functional CCR7 ligand, while receptor-dependent migration studies connect CCL21-CCR7 engagement to PLCγ1 and ERK1/2-associated outputs; Ccl21a is distinguished from the Ccl21b paralog."
+                limitations = "Preserve mouse Ccl21a versus Ccl21b gene-form specificity and the human comparator context; do not transfer CCL21 tail/isoform behavior across species or infer a universal terminal-TF route from the reported migration assays."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
+        elif row.get("review_batch") == "batch_076":
+            if (ligand, receptor) == ("APOE", "LRP2"):
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:9122201"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "rat megalin; apoE-betaVLDL ligand form"
+                summary = "Primary megalin mapping experiments show that apoE-betaVLDL binds the LRP2/megalin receptor and localize the interaction to a ligand-binding repeat cluster, supporting a bounded APOE-containing-particle-to-LRP2 edge."
+                limitations = "Preserve the apoE-betaVLDL particle form, rat megalin assay and receptor-binding/internalization context; do not generalize to every APOE isoform or free APOE molecule, and do not infer a complete intracellular or TF route."
             else:
                 disposition = "no_primary_evidence_found"
                 layer = "candidate_only_review_locator"
