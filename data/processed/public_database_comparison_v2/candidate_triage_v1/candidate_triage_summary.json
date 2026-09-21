@@ -7,7 +7,7 @@
     "sha256": "31189239be3f4b6f91a87c92b1716ccac294f468279c7122693624c55c508732"
   },
   "candidate_units": 7753,
-  "completed_batch_review_units": 7262,
+  "completed_batch_review_units": 7272,
   "graph_input": {
     "direct_lr_edges": 8175,
     "path": "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion261/mechanism_edges.tsv",
@@ -28,15 +28,15 @@
   "prior_harvest_rows": 25,
   "resolution_ledger_input": {
     "path": "data/processed/public_database_comparison_v2/candidate_triage_v1/review_resolution_ledger.tsv",
-    "rows": 7262,
-    "sha256": "6761a88822105302677a5195a9e2cb4dffa4387cc50cb4a725ba7fa7004a4cd8"
+    "rows": 7272,
+    "sha256": "bb9d14f1dadba5aac4a78c8051937510c973b8635e029c68fb1b44485512c7b2"
   },
   "review_batch_counts": {},
   "review_batch_size": 100,
   "review_lane_counts": {
-    "completed_batch_review": 7262,
+    "completed_batch_review": 7272,
     "completed_prior_harvest": 8,
-    "represented_graph_alias": 475,
+    "represented_graph_alias": 465,
     "resolved_graph_match": 8
   },
   "review_queue_rows": 0,
