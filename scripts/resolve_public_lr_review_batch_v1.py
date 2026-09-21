@@ -531,6 +531,34 @@ def main() -> None:
             species = "mouse and human Eph receptor family binding assays"
             summary = "Primary Eph-family profiling supports EFNA5 interactions with EphA receptors and the recognized cross-subfamily EphB2 exception, but does not establish the listed EphB1 or EphB6 rows as direct EFNA5 edges."
             limitations = "Preserve the EphA family and the separately documented EphB2 cross-interaction boundary; do not transfer EFNA5 activity to EphB1/EphB6 from Eph-family membership alone."
+        elif ligand == "ADM" and receptor == "RAMP1":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+            primary = ["PMCID:PMC8222276", "PMID:26423127"]
+            species = "human primary cardiovascular cells; rat vascular smooth-muscle cells"
+            summary = "Primary ADM pharmacology shows that RAMP proteins determine CALCRL ligand specificity and trafficking, with ADM preferentially acting through CALCRL/RAMP2-3 contexts; RAMP1 alone is an accessory component rather than a standalone ADM receptor."
+            limitations = "Retain the complete CALCRL/RAMP receptor complex and ligand-bias context; do not materialize ADM-RAMP1 as a binary receptor edge or infer RAMP1-specific downstream signaling without CALCRL."
+        elif ligand == "ADM" and receptor == "GPR182":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMCID:PMC8092405", "PMCID:PMC10157204"]
+            species = "mouse GPR182 deorphanization studies"
+            summary = "Primary GPR182 studies report that the earlier adrenomedullin-receptor assignment could not be confirmed and instead characterize GPR182/ACKR5 as an atypical chemokine-scavenging receptor."
+            limitations = "Do not materialize ADM-GPR182 from the historical ADMR name; retain GPR182 in the atypical chemokine receptor layer and require a direct mature-ADM assay before reconsideration."
+        elif ligand == "ADM" and receptor in {"MRGPRB1", "MRGPRX2"}:
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:15823563"]
+            species = "human MRGPRX2/PAMP receptor assay"
+            summary = "Primary MRGPRX2 work identifies proadrenomedullin N-terminal peptides PAMP-12/PAMP-20, not mature adrenomedullin, as MRGPRX2 agonists; the public mature-ADM-to-MRGPR rows therefore do not define the same ligand form."
+            limitations = "Preserve proadrenomedullin peptide processing and MRGPRX2/MrgprB paralog boundaries; do not transfer PAMP activity to mature ADM or infer mouse MrgprB1 specificity without an exact mature-peptide assay."
+        elif ligand == "ADM" and receptor == "CALCR":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMCID:PMC8222276", "PMID:26423127"]
+            species = "human and rat CALCRL/RAMP receptor-complex studies"
+            summary = "Primary ADM studies define the functional adrenomedullin receptor as CALCRL in association with RAMP2 or RAMP3, not standalone CALCR; the public ADM-CALCR row does not specify a validated receptor complex."
+            limitations = "Require the complete CALCRL/RAMP2-3 complex and mature ADM assay before promotion; do not transfer amylin/CALCR receptor-family pharmacology to ADM."
         elif ligand in {"CCL1", "CCL8", "CEACAM2"}:
             disposition = "no_primary_evidence_found"
             layer = "candidate_only_review_locator"
