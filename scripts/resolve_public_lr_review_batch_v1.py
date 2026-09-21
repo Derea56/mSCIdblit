@@ -1290,6 +1290,28 @@ def main() -> None:
             species = "human CXCR3-transfectant and chemotaxis assays"
             summary = "Primary studies show that CXCL13/BCA-1 competes for CXCR3 binding and induces CXCR3-dependent chemotaxis and GTP-gamma-S signaling in transfected cells."
             limitations = "Preserve the human CXCL13/CXCR3 transfectant and chemotaxis context; do not infer that CXCR3 replaces the canonical CXCR5 route in every tissue or assert a complete intracellular/TF chain from the reported assays."
+        elif ligand == "NPPB" and receptor == "NPR3":
+            disposition = "already_present_exact_or_alias"
+            matched_ids = "M21B-E001702"
+            primary = ["PMID:1309330", "PMCID:PMC2939486", "PMID:34919054"]
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            species = "human and rat receptor-binding assays; mouse functional model"
+            summary = "The graph already contains the BNP/NPPB-to-NPR3/NPR-C clearance-receptor edge. Primary receptor-selectivity work supports BNP binding to NPR-C, and newer functional work places NPRC in a BNP-dependent receptor context, strengthening the existing alias without asserting a universal NPR3 signaling route."
+            limitations = "Preserve NPR3/NPR-C as a clearance-receptor and context-dependent functional route; do not duplicate the graph edge, treat NPR3 as equivalent to NPR1/NPR2, or infer a complete intracellular, TF or terminal-gene chain from the cited assays."
+        elif ligand == "ICOSL" and receptor in {"CD28", "CTLA4"}:
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation"
+            primary = ["PMID:10744980"]
+            species = "human LICOS/ICOSL receptor-family binding assays"
+            summary = "Primary receptor-specificity experiments identify ICOS as the physiological LICOS/ICOSL receptor and report only weak CD28 or CTLA4 binding under nonphysiological lower-temperature conditions; the candidate rows therefore retain family-level context but are not canonical signaling edges."
+            limitations = "Preserve ICOSL-ICOS costimulatory specificity and the assay-temperature boundary; do not materialize ICOSL-CD28 or ICOSL-CTLA4 as physiological signaling routes or infer downstream output from the weak conditional binding result."
+        elif ligand == "PPY" and receptor in {"NPY1R", "NPY2R"}:
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation"
+            primary = ["PMID:8641440", "PMID:17204471"]
+            species = "NPY-family receptor cloning and ligand-binding assays"
+            summary = "Primary NPY-family receptor studies distinguish pancreatic polypeptide preference for the Y4/NPY4R subtype from the Y1/NPY1R and Y2/NPY2R preference for NPY or PYY; the public PPY-to-NPY1R/NPY2R rows are therefore retained as receptor-family context rather than promoted as exact edges."
+            limitations = "Resolve mature PPY identity and NPY4R/Y4 specificity before promotion; do not transfer Y4 preference to NPY1R or NPY2R, or infer downstream signaling from NPY-family membership alone."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
