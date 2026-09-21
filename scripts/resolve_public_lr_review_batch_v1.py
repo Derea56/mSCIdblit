@@ -1774,6 +1774,13 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "The candidate reflects adhesion-GPCR, integrin or syndecan receptor-complex context, but the exact direct ligand-receptor topology is not resolved for this row."
                 limitations = "Require exact receptor-complex composition and pair-specific primary binding or activation evidence; do not treat receptor subunits or co-receptors as standalone ligand targets."
+            elif ligand == "KLK5" and receptor == "F2RL1":
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:20703245", "DOI:10.1038/jid.2010.233"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary Netherton-syndrome mouse work identifies unrestricted KLK5 activity as a direct activator of PAR2/F2RL1 and shows that Par2 deletion reduces the downstream TSLP output."
+                limitations = "Promote only as a bounded protease-activated receptor route; the cited study establishes functional activation and a TSLP readout rather than a purified cleavage biochemistry, SCI transfer or a terminal-TF claim."
             elif ligand.startswith("KLK"):
                 disposition = "hold_contextual_or_complex_boundary"
                 primary = reviewed
@@ -2156,6 +2163,20 @@ def main() -> None:
                 layer = "candidate_only_unverified"
                 summary = "CCL19PS1 is a pseudogene-like public label and is not treated as a verified mature chemokine ligand for ACKR, CCR or CXCR receptors."
                 limitations = "Resolve the expressed chemokine product and mature form before review; do not transfer CCL19/CCR7 evidence to a pseudogene label."
+            elif ligand == "CCL5" and receptor == "ACKR2":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = ["PMID:17095748", "PMID:29469612"]
+                species = "mouse"
+                summary = "Primary ACKR2/D6 studies support a chemokine-scavenging and inflammatory-context relationship for CCL5, but also show concentration- and tissue-dependent effects; this is contextual scavenging evidence, not a canonical G-protein signaling edge."
+                limitations = "Preserve ACKR2 as an atypical scavenger receptor and retain the mouse lung/fibrosis context; do not infer conventional chemotaxis, intracellular relay or terminal-TF output from CCL5 abundance changes alone."
+            elif ligand == "CCL24" and receptor == "ACKR2":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                primary = ["PMID:17095748", "PMCID:PMC1899265"]
+                species = "mouse"
+                summary = "Primary D6/ACKR2 work establishes concentration-dependent chemokine scavenging and receptor-family context, but the cited experiments do not verify a direct CCL24-ACKR2 interaction; the candidate remains a bounded search hold."
+                limitations = "Require an exact CCL24-D6 binding or internalization assay before promotion; do not transfer CCL17/CCL22 or other CC-chemokine evidence to CCL24 without isoform-specific support."
             elif ligand.startswith("CCL"):
                 disposition = "hold_contextual_or_complex_boundary"
                 layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
@@ -3670,6 +3691,13 @@ def main() -> None:
                 layer = "candidate_only_unverified"
                 summary = "PDCD1LG2/PD-L2 is a ligand for PDCD1/PD-1, not for PDCD2 or TNFRSF11A in the listed rows."
                 limitations = "Retain the primary-supported PDCD1LG2-PDCD1 checkpoint relationship; do not transfer PD-L2 specificity to paralogous or unrelated receptors."
+            elif ligand == "PDGFA" and receptor == "PDGFRB":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "ligand_receptor_binding_or_activation"
+                primary = ["PMID:7679113", "PMID:2842148", "PMID:1318231"]
+                species = "human"
+                summary = "Primary isoform-specific binding studies show PDGF-AA/PDGFA binding predominantly to PDGFRA, whereas high-affinity PDGFRB binding is mediated by PDGF-BB or PDGF-AB; the public PDGFA-to-PDGFRB row is therefore not promoted as a direct canonical edge."
+                limitations = "Preserve PDGF-AA versus PDGF-AB/BB isoform and PDGFRA/PDGFRB receptor-subtype boundaries; require a direct PDGF-AA-PDGFRB study before reconsideration."
             elif ligand == "PDGFA" and receptor == "FURIN":
                 disposition = "reject_precursor_or_non_edge_form"
                 layer = "candidate_only_unverified"
@@ -3763,6 +3791,20 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "The public row encodes a multi-subunit receptor complex or pathway prediction; component overlap does not establish the complete composite topology as one primary graph edge."
                 limitations = "Retain the composite as contextual traversal evidence and require exact mature ligand, receptor-subunit composition, species and assay support before promotion."
+            elif ligand == "JAG1" and receptor == "NOTCH4":
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:36044575", "PMCID:PMC9432841", "DOI:10.1126/sciadv.abo7958"]
+                species = "human; mouse; pig"
+                summary = "Primary endothelial, mouse-artery and human coronary-cell experiments support a JAG1-NOTCH4 mechanosensing route: disturbed flow increases NOTCH4 activation, JAG1 blockade reduces N4ICD, and endothelial Jag1 deletion changes atherosclerotic and endothelial-state outputs."
+                limitations = "Retain the contact-dependent Notch and disturbed-flow context; the study supports receptor-dependent pathway function rather than purified JAG1-NOTCH4 binding, and it does not assert a universal terminal-TF or SCI route."
+            elif ligand == "SEMA5A" and receptor == "PLXNA3":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:25313870", "DOI:10.7554/eLife.04390"]
+                species = "mouse"
+                summary = "Primary Sema5A binding and neuronal-function experiments tested PlexA paralogs and found selective binding/function through PlexA1 and PlexA2, not a verified direct Sema5A-PlexA3 edge."
+                limitations = "Retain the Sema5A-PlexA1/PlexA2 specificity and neuronal context; do not transfer it to PLXNA3 or infer a complete downstream route from semaphorin-family membership."
             else:
                 disposition = "no_primary_evidence_found"
                 layer = "candidate_only_unverified"
@@ -3796,12 +3838,26 @@ def main() -> None:
             species = "human"
             summary = "The primary studies support human CEACAM1-Lewis-X interaction with DC-SIGN/CD209 in the reported adhesion context, but the public rows mix direction, species, and mouse CD209/CEACAM paralogs."
             limitations = "Retain family-level adhesion evidence without asserting the exact mouse paralog pair or reversing ligand-receptor direction; exact species/paralog mapping requires primary verification."
+        elif ligand == "JAG1" and receptor == "NOTCH4":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:36044575", "PMCID:PMC9432841", "DOI:10.1126/sciadv.abo7958"]
+            species = "human; mouse; pig"
+            summary = "Primary endothelial, mouse-artery and human coronary-cell experiments support a JAG1-NOTCH4 mechanosensing route: disturbed flow increases NOTCH4 activation, JAG1 blockade reduces N4ICD, and endothelial Jag1 deletion changes atherosclerotic and endothelial-state outputs."
+            limitations = "Retain the contact-dependent Notch and disturbed-flow context; the study supports receptor-dependent pathway function rather than purified JAG1-NOTCH4 binding, and it does not assert a universal terminal-TF or SCI route."
         elif ligand in {"JAG1", "JAG2"} and receptor == "NOTCH4":
             disposition = "no_primary_evidence_found"
             layer = "candidate_only_review_locator"
             primary = ["PMID:22353464"]
             summary = "The public citation was recorded, but the reviewed primary evidence did not verify an exact Jagged1/2-Notch4 relationship for this row."
             limitations = "Keep as a searchable Notch-family candidate; do not infer Notch4 binding or activation from Notch1/Notch3 evidence."
+        elif ligand == "SEMA5A" and receptor == "PLXNA3":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:25313870", "DOI:10.7554/eLife.04390"]
+            species = "mouse"
+            summary = "Primary Sema5A binding and neuronal-function experiments tested PlexA paralogs and found selective binding/function through PlexA1 and PlexA2, not a verified direct Sema5A-PlexA3 edge."
+            limitations = "Retain the Sema5A-PlexA1/PlexA2 specificity and neuronal context; do not transfer it to PLXNA3 or infer a complete downstream route from semaphorin-family membership."
         elif ligand in {"GHRH", "PDGFA", "PMCH", "SELE", "SEMA5A", "SEMA5B", "VIP"}:
             disposition = "no_primary_evidence_found"
             layer = "candidate_only_unverified"
@@ -3833,6 +3889,20 @@ def main() -> None:
             species = "rat"
             summary = "The primary striatal binding study reports selective ephrin-A5 binding and precipitation of EphA7, but not EphA4, in postnatal rat striatal tissue lysates."
             limitations = "Candidate is limited to selective tissue binding; lysate precipitation does not establish purified binary binding, forward signaling, SCI transfer, or terminal-TF activity."
+        elif ligand == "CCL5" and receptor == "ACKR2":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:17095748", "PMID:29469612"]
+            species = "mouse"
+            summary = "Primary ACKR2/D6 studies support a chemokine-scavenging and inflammatory-context relationship for CCL5, but also show concentration- and tissue-dependent effects; this is contextual scavenging evidence, not a canonical G-protein signaling edge."
+            limitations = "Preserve ACKR2 as an atypical scavenger receptor and retain the mouse lung/fibrosis context; do not infer conventional chemotaxis, intracellular relay or terminal-TF output from CCL5 abundance changes alone."
+        elif ligand == "CCL24" and receptor == "ACKR2":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation"
+            primary = ["PMID:17095748", "PMCID:PMC1899265"]
+            species = "mouse"
+            summary = "Primary D6/ACKR2 work establishes concentration-dependent chemokine scavenging and receptor-family context, but the cited experiments do not verify a direct CCL24-ACKR2 interaction; the candidate remains a bounded search hold."
+            limitations = "Require an exact CCL24-D6 binding or internalization assay before promotion; do not transfer CCL17/CCL22 or other CC-chemokine evidence to CCL24 without isoform-specific support."
         elif ligand in {"CCL24", "CCL5"} and receptor == "ACKR2":
             disposition = "no_primary_evidence_found"
             layer = "candidate_only_unverified"
