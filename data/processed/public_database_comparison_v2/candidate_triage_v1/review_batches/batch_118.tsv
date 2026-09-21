@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:IL34>CSF1R	IL34	CSF1R	M20B-E003168;M21B-E000121;M21B-E000723		represented_graph_alias	batch_118
+LR:IL4>IL4RA	IL4	IL4RA	M20B-E003979;M20B-E003982;M21B-E000239;M21B-E000240;M21B-E000323;M21B-E001754		represented_graph_alias	batch_118
+LR:INHA>TGFBR3	INHA	TGFBR3	M21B-E006430;M21B-E006431;M21B-E006432		represented_graph_alias	batch_118
+LR:INHBA>TGFBR3	INHBA	TGFBR3	M21B-E006430;M21B-E006431;M21B-E006432		represented_graph_alias	batch_118
+LR:KNG1>ITGB2	KNG1	ITGB2	M21B-E000612		represented_graph_alias	batch_118
+LR:L1CAM>ERBB2	L1CAM	ERBB2	M21B-E006562		represented_graph_alias	batch_118
+LR:L1CAM>ERBB3	L1CAM	ERBB3	M21B-E006563		represented_graph_alias	batch_118
+LR:LAMA3>SDC2	LAMA3	SDC2	M21B-E007074		represented_graph_alias	batch_118
+LR:LCN2>LRP2	LCN2	LRP2	M21B-E006558		represented_graph_alias	batch_118
+LR:LEP>ISLR2	LEP	ISLR2	M21B-E005186		represented_graph_alias	batch_118
