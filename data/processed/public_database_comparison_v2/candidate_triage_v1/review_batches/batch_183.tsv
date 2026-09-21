@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:THBS4>ITGAV	THBS4	ITGAV	M20B-E002254;M23B-E000742	current bundle supports THBS4 through assembled alphaVbeta3 integrin context, not autonomous ITGAV signaling	represented_graph_alias	batch_183
+LR:THBS4>ITGB3	THBS4	ITGB3	M20B-E002254;M23B-E000742	current bundle supports THBS4 through assembled alphaVbeta3 integrin context, not autonomous ITGB3 signaling	represented_graph_alias	batch_183
+LR:THY1>ITGAM	THY1	ITGAM	M20B-E005071;M21B-E000603;M23B-E000582;M23B-E000746	current bundle supports Thy-1 engagement of Mac-1/alphaMbeta2 in leukocyte-endothelial adhesion, not isolated ITGAM signaling	represented_graph_alias	batch_183
+LR:THY1>ITGAV	THY1	ITGAV	M20B-E005072;M21B-E000601;M23B-E000198;M23B-E000748	current bundle supports Thy-1 engagement of assembled alphaVbeta3 with syndecan/co-receptor and neurite/adhesion context	represented_graph_alias	batch_183
+LR:THY1>ITGAX	THY1	ITGAX	M20B-E005073;M21B-E000602	current bundle supports direct Thy-1 binding to the alphaX I-domain with alphaXbeta2 complex interpretation, not isolated ITGAX signaling	represented_graph_alias	batch_183
+LR:THY1>ITGB2	THY1	ITGB2	M20B-E005071;M20B-E005073;M21B-E000602;M21B-E000603;M23B-E000582;M23B-E000746	current bundle supports Thy-1 engagement of alphaMbeta2/Mac-1 and alphaXbeta2 integrin complexes, not free ITGB2 signaling	represented_graph_alias	batch_183
+LR:THY1>ITGB3	THY1	ITGB3	M20B-E005072;M21B-E000601;M23B-E000748	current bundle supports Thy-1 engagement of assembled alphaVbeta3, not isolated ITGB3 signaling	represented_graph_alias	batch_183
+LR:TLN1>ITGB5	TLN1	ITGB5	M23B-E000754	current bundle represents talin binding to the ITGB5 cytoplasmic tail in alphaVbeta5/phagocytic scaffold context, not an extracellular ligand-receptor edge	represented_graph_alias	batch_183
+LR:TMPRSS6>HJV	TMPRSS6	HJV	M21B-E006160	current bundle supports in-vitro TMPRSS6 proteolytic cleavage of cell-surface hemojuvelin, not a canonical ligand-receptor interaction	represented_graph_alias	batch_183
+LR:TNC>ITGA2	TNC	ITGA2	M21B-E000534;M23B-E000761	current bundle supports TNC engagement of assembled alpha2beta1 in endothelial matrix context, not isolated ITGA2 signaling	represented_graph_alias	batch_183
