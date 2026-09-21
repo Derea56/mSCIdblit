@@ -1092,6 +1092,13 @@ def main() -> None:
             species = "human chondrocyte, collagen-II adhesion and collagen-VI comparator assays"
             summary = "Primary chondrocyte and collagen-adhesion studies support selected alpha1beta1/alpha2beta1 interactions with type-II collagen, but no exact primary experiment was verified for the remaining COL2A1-to-listed-receptor candidates."
             limitations = "Retain assembled collagen-II and beta1-integrin adhesion context; do not transfer it to CD44, syndecan, alpha2beta, alpha3/9 or alphaVbeta8 candidates without pair-specific evidence or infer a soluble signaling cascade from matrix adhesion."
+        elif ligand == "CEACAM2":
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:8576129"]
+            species = "mouse and rat C-CAM/CEACAM cell-adhesion studies"
+            summary = "Primary CEACAM/C-CAM work supports CEACAM2-containing homophilic adhesion and cytoplasmic calmodulin regulation, but the current review did not verify any of the listed CEACAM2-to-receptor candidates as an exact ligand-receptor pair."
+            limitations = "Retain CEACAM2 homophilic adhesion and paralog-specific context; do not transfer CEACAM1/5, glycan or viral-receptor evidence to CEACAM2 or materialize the listed rows without exact pair-specific testing."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
