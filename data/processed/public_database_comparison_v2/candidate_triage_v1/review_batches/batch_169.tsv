@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:LAMB2>ITGA3	LAMB2	ITGA3	M20B-E002188;M21B-E003230	current bundle includes frozen laminin-221/521 component aliases and primary laminin-521 alpha3beta1 support	represented_graph_alias	batch_169
+LR:LAMB2>ITGA6	LAMB2	ITGA6	M20B-E002189;M20B-E002190;M21B-E002694;M21B-E003231	current bundle includes frozen laminin-221/521 component aliases and primary laminin-521 alpha6beta1/alpha6beta4 support	represented_graph_alias	batch_169
+LR:LAMB2>ITGB1	LAMB2	ITGB1	M20B-E002188;M20B-E002189;M20B-E002191;M21B-E002694;M21B-E003230;M21B-E003232	current bundle includes frozen laminin-221/521 component aliases and primary laminin-521 alpha3beta1/alpha6beta1/alpha7beta1 support	represented_graph_alias	batch_169
+LR:LAMB2>ITGB4	LAMB2	ITGB4	M20B-E002190;M21B-E003231	current bundle includes frozen laminin-221/521 component aliases and primary laminin-521 alpha6beta4 support	represented_graph_alias	batch_169
+LR:LAMB3>ITGA2	LAMB3	ITGA2	M20B-E002196	current bundle contains a frozen laminin-332 component-family alias for alpha2beta1	represented_graph_alias	batch_169
+LR:LAMB3>ITGA3	LAMB3	ITGA3	M20B-E002197;M23B-E000063;M23B-E001066	current bundle includes frozen component alias and primary laminin-332 alpha3beta1 support	represented_graph_alias	batch_169
+LR:LAMB3>ITGA6	LAMB3	ITGA6	M20B-E002198;M20B-E002199;M23B-E000065;M23B-E000066;M23B-E000626	current bundle includes frozen component aliases and primary laminin-332 alpha6beta1/alpha6beta4 adhesion support	represented_graph_alias	batch_169
+LR:LAMB3>ITGB1	LAMB3	ITGB1	M20B-E002196;M20B-E002197;M20B-E002198;M23B-E000063;M23B-E000065;M23B-E001066	current bundle includes frozen component aliases and primary laminin-332 alpha2beta1/alpha3beta1/alpha6beta1 comparator support	represented_graph_alias	batch_169
+LR:LAMB3>ITGB4	LAMB3	ITGB4	M20B-E002199;M23B-E000066;M23B-E000626	current bundle includes frozen component aliases and primary laminin-332 alpha6beta4 support	represented_graph_alias	batch_169
+LR:LAMC1>ITGA2	LAMC1	ITGA2	M20B-E002205	current bundle contains a frozen laminin-511/521 gamma-chain component alias for alpha2beta1	represented_graph_alias	batch_169
