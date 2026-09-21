@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:EFNB2>EPHB6	EFNB2	EPHB6	M21B-E006721;M23B-E000310		represented_graph_alias	batch_115
+LR:EREG>ERBB4	EREG	ERBB4	M20B-E001857;M21B-E000386	KEGG: mmu04012	represented_graph_alias	batch_115
+LR:F10>ITGAM	F10	ITGAM	M21B-E000613		represented_graph_alias	batch_115
+LR:FBLN2>ITGB3	FBLN2	ITGB3	M21B-E003028;M21B-E003029		represented_graph_alias	batch_115
+LR:FBN1>ITGA5	FBN1	ITGA5	M21B-E006242		represented_graph_alias	batch_115
+LR:FBN1>ITGB1	FBN1	ITGB1	M21B-E006242		represented_graph_alias	batch_115
+LR:FBN1>ITGB3	FBN1	ITGB3	M21B-E005625		represented_graph_alias	batch_115
+LR:FGA>ITGA2B	FGA	ITGA2B	M23B-E001047		represented_graph_alias	batch_115
+LR:FGA>ITGB3	FGA	ITGB3	M23B-E001047		represented_graph_alias	batch_115
+LR:FGB>CDH5	FGB	CDH5	M23B-E000521		represented_graph_alias	batch_115

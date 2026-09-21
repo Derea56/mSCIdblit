@@ -1356,6 +1356,33 @@ def main() -> None:
                 "species and assay limits, and the distinction between binding, receptor-proximal signaling and "
                 "functional output; the existing edges do not assert a universal intracellular cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_115":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The public locators are pathway or database records, while the existing graph edge-source records "
+                "provide primary-supported ephrin/pseudokinase, ERBB, coagulation-integrin, fibrillin/fibulin, "
+                "fibrinogen-integrin or vascular-adhesion binding and bounded receptor-proximal or functional "
+                "observations at the stated molecular resolution."
+            )
+            limitations = (
+                "Do not add a duplicate edge or collapse EphB6 pseudokinase binding, ERBB receptor-family usage, "
+                "Mac-1 heterodimers, fibrillin/fibulin matrix domains, fibrinogen motifs, or endothelial adhesion "
+                "complexes into a single canonical receptor. Preserve processed or recombinant ligand forms, "
+                "integrin heterodimer and motif/complex resolution, species and assay limits, and the distinction "
+                "between binding, receptor-proximal signaling and functional output; the existing edges do not assert "
+                "a universal intracellular cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
