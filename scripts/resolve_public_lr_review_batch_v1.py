@@ -2998,6 +2998,71 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "Protocadherin-family rows describe isoform-specific neuronal cell-adhesion recognition, but the exact paralog, cis/trans orientation and direct primary evidence for these integrin or protocadherin candidates were not resolved."
                 limitations = "Preserve protocadherin isoform and adhesion orientation; do not promote mismatched paralog pairs or infer soluble ligand signaling from adhesion-family membership."
+            elif ligand == "PDGFB" and receptor == "PDGFRA+PDGFRB":
+                disposition = "new_primary_supported_edge_candidate"
+                matched_ids = "M21B-E000182;M21B-E000761"
+                primary = ["PMID:20534510", "PMID:7679113"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "The graph contains primary-supported PDGF-BB binding to PDGFRB and PDGFRA receptor dimers; together these support a PDGFR-alpha/beta complex candidate without asserting a single unbounded binary subunit edge."
+                limitations = "Preserve PDGF-BB dimerization and PDGFRA/PDGFRB receptor-complex topology; materialize only after exact heterodimer normalization and do not infer a terminal TF or SCI-specific output."
+            elif ligand == "PDGFB" and receptor == "ITGAV":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M23B-E000229"
+                primary = ["PMID:12881526"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary glioblastoma work supports PDGFB-stimulated PDGFRB cooperation with alphaV-integrin adhesion during migration, but not direct PDGFB binding to ITGAV alone."
+                limitations = "Preserve the alphaVbeta3/PDGFRB complex and migration context; do not decompose alphaVbeta3 into ITGAV alone or promote this as a canonical ligand-receptor binding edge."
+            elif ligand == "PDGFD" and receptor == "PDGFRA+PDGFRB":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000521"
+                primary = ["PMID:11331881", "DOI:10.1038/35074588"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "Primary PDGF-DD studies support protease-activated PDGFRB specificity; the listed PDGFRA/PDGFRB complex row is retained as a topology question rather than promoted as direct dual-subunit binding."
+                limitations = "Require exact PDGF-DD/PDGFRA-containing complex evidence before promotion; preserve proteolytic activation and PDGFRB-specificity boundaries."
+            elif ligand == "PDCD1LG2" and receptor in {"PDCD2", "TNFRSF11A"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "PDCD1LG2/PD-L2 is a ligand for PDCD1/PD-1, not for PDCD2 or TNFRSF11A in the listed rows."
+                limitations = "Retain the primary-supported PDCD1LG2-PDCD1 checkpoint relationship; do not transfer PD-L2 specificity to paralogous or unrelated receptors."
+            elif ligand == "PDGFA" and receptor == "FURIN":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "PDGFA/PDGF-AA is a secreted growth-factor ligand, whereas FURIN is a proprotein convertase rather than its canonical signaling receptor."
+                limitations = "Represent proteolytic processing separately and require a direct PDGFA-FURIN assay before any noncanonical edge is considered."
+            elif ligand == "PDX1" and receptor == "SLC2A2":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "PDX1 is a transcription factor and SLC2A2/GLUT2 is a target gene or transporter context; this is not a ligand-receptor relationship."
+                limitations = "Represent PDX1-dependent gene regulation in the transcriptional layer; do not materialize intracellular TF-to-gene relationships as extracellular ligand edges."
+            elif ligand == "PECAM1" and receptor in {"ITGAV", "ITGB3"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M23B-E000012;M21B-E006569"
+                primary = ["PMID:7542249", "PMCID:PMC2199946", "DOI:10.1083/jcb.130.2.451", "PMID:8838667", "DOI:10.1242/jcs.109.2.437"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mixed mammalian"
+                summary = "Primary adhesion studies support PECAM1 interaction with the alphaVbeta3 integrin complex, while the public rows split that heteromer into ITGAV or ITGB3 components."
+                limitations = "Preserve alphaVbeta3 complex topology and adhesion context; do not promote isolated ITGAV or ITGB3 as complete receptors or infer a soluble signaling route."
+            elif ligand == "PLAT" and receptor == "ITGB2":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M23B-E000238"
+                primary = ["PMCID:PMC3402285", "PMID:22677557", "PMID:25131752"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse; human"
+                summary = "Primary macrophage studies support tPA/PLAT signaling through an annexin A2 and Mac-1 context, of which ITGB2 is only one required subunit."
+                limitations = "Preserve the complete Mac-1 and annexin-A2 receptor context; do not decompose the relay into direct PLAT-ITGB2 binding or infer a terminal TF route."
+            elif ligand in {"PDAP1", "PKM"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses an intracellular adaptor or metabolic enzyme as the ligand label rather than a mature extracellular signaling ligand."
+                limitations = "Represent intracellular adaptor or metabolic mechanisms in their appropriate layers; do not materialize them as ligand-receptor edges without exact extracellular evidence."
+            elif ligand.startswith("PIRA") or ligand == "PIRB":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "PIRA/PIRB proteins are immunoreceptor-family membrane proteins, not mature extracellular ligands for CNTFR or LAIR1 in the listed rows."
+                limitations = "Preserve immunoreceptor orientation and ligand-binding context; do not invert receptor-family proteins into ligand position."
             elif ligand.startswith("ADAM"):
                 disposition = "hold_contextual_or_complex_boundary"
                 primary = reviewed
