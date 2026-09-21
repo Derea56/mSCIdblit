@@ -4006,6 +4006,82 @@ def main() -> None:
                 limitations = "Preserve alpha8beta1 heterodimer and recombinant/transfected-cell context; do not split alpha8 from beta1, infer autonomous ITGA8 signaling or assign SCI/terminal-TF output."
             else:
                 raise SystemExit(f"unhandled batch 186 pair: {pair}")
+        elif row.get("review_batch") == "batch_187":
+            pair = (ligand, receptor)
+            if pair == ("VTN", "ITGAV"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:9480902", "PMID:1694173", "PMID:9137089", "PMID:7525578", "DOI:10.1016/S0021-9258(19)61963-0"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; rat"
+                summary = "Primary studies support vitronectin binding or adhesion through assembled alphaVbeta3, alphaVbeta5 and alphaVbeta8 integrins, with the current graph also retaining frozen alphaV-containing complex aliases."
+                limitations = "Preserve alphaVbeta3, alphaVbeta5 and alphaVbeta8 heterodimer contexts and assay-specific ligand forms; do not promote free ITGAV binding, infer autonomous ITGAV signaling or assign SCI/terminal-TF output."
+            elif pair == ("VTN", "ITGB1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:7559467", "DOI:10.1074/jbc.270.39.23196"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary vitronectin-Sepharose and transfected-cell assays support RGD-dependent binding and adhesion through assembled alpha8beta1, while the public alias also spans other beta1-containing integrin complexes."
+                limitations = "Preserve alpha8beta1 heterodimer and recombinant/transfected-cell context; do not promote free ITGB1 binding, collapse distinct alpha-subunit complexes, infer autonomous ITGB1 signaling or assign SCI/terminal-TF output."
+            elif pair == ("VTN", "ITGB3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:9480902", "PMID:9153222"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary studies support vitronectin interaction with assembled alphaVbeta3 and an assay-specific alphaIIbbeta3 context."
+                limitations = "Preserve alphaVbeta3 versus alphaIIbbeta3 heterodimers and the altered/denatured-vitronectin caveat for the platelet assay; do not promote free ITGB3 binding, infer autonomous ITGB3 signaling or assign SCI/terminal-TF output."
+            elif pair == ("VTN", "ITGB5"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:1694173", "PMID:9137089"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; rat"
+                summary = "Primary purification, solid-phase binding and adhesion studies support vitronectin recognition by assembled alphaVbeta5."
+                limitations = "Preserve purified alphaVbeta5 and human adhesion/neuroblastoma or fibroblast contexts; do not split beta5 from alphaV, infer free ITGB5 signaling or assign SCI/terminal-TF output."
+            elif pair == ("VTN", "ITGB8"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:7525578", "DOI:10.1016/S0021-9258(19)61963-0"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "Primary biochemical and cell-surface assays support vitronectin binding to assembled alphaVbeta8, but not alphaVbeta8-driven vitronectin adhesion in the cited system."
+                limitations = "Preserve alphaVbeta8 heterodimer, purified/transfected-cell context and the absence of productive adhesion in the cited assay; do not promote free ITGB8 signaling or assign SCI/terminal-TF output."
+            elif pair == ("VTN", "PVR"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E007075"
+                primary = ["PMID:11437656", "DOI:10.1006/viro.2001.0943"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "The graph already contains the primary-supported vitronectin-CD155/PVR binding and bounded cell-adhesion context."
+                limitations = "Preserve CD155/PVR isoform and recombinant/follicular-dendritic-cell/B-cell context; do not duplicate the edge or infer a universal PVR relay or terminal-TF output."
+            elif pair == ("VWF", "GP1BA"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E006993"
+                primary = ["PMID:12087105", "PMID:8578449"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "The graph already contains the primary-supported VWF-A1 to GPIb-alpha interaction under the GPIb-IX-V receptor-complex alias."
+                limitations = "Preserve VWF-A1, GPIb-IX-V complex, immobilized or shear-activated multimeric VWF and platelet tethering context; do not duplicate the edge or infer a complete downstream route."
+            elif pair == ("VWF", "GP1BB"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:2104618", "PMCID:PMC1895591", "DOI:10.1182/blood-2002-03-0806"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human"
+                summary = "Primary platelet studies support VWF engagement of the multimeric GPIb-IX-V complex through GPIb-alpha, with a proximal Src-Syk-PLCgamma2 relay, but do not establish independent GP1BB binding."
+                limitations = "Preserve the GPIb-IX-V complex and GPIb-alpha attribution; do not promote isolated GP1BB binding or signaling, infer a terminal-TF output or transfer the platelet relay to SCI."
+            elif pair == ("VWF", "GP5"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:2104618", "PMCID:PMC1895591", "DOI:10.1182/blood-2002-03-0806"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human"
+                summary = "Primary platelet studies support VWF engagement of the multimeric GPIb-IX-V complex through GPIb-alpha, with a proximal Src-Syk-PLCgamma2 relay, but do not establish independent GP5 binding."
+                limitations = "Preserve the GPIb-IX-V complex and GPIb-alpha attribution; do not promote isolated GP5 binding or signaling, infer a terminal-TF output or transfer the platelet relay to SCI."
+            elif pair == ("VWF", "GP9"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:2104618", "PMCID:PMC1895591", "DOI:10.1182/blood-2002-03-0806"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human"
+                summary = "Primary platelet studies support VWF engagement of the multimeric GPIb-IX-V complex through GPIb-alpha, with a proximal Src-Syk-PLCgamma2 relay, but do not establish independent GP9 binding."
+                limitations = "Preserve the GPIb-IX-V complex and GPIb-alpha attribution; do not promote isolated GP9 binding or signaling, infer a terminal-TF output or transfer the platelet relay to SCI."
+            else:
+                raise SystemExit(f"unhandled batch 187 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"

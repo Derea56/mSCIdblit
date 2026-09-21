@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:VTN>ITGAV	VTN	ITGAV	M20B-E002284;M20B-E002285;M20B-E002286;M20B-E002287;M21B-E000277;M21B-E000547;M21B-E007099;M23B-E000089;M23B-E000092;M23B-E000890;M23B-E000893	current bundle supports vitronectin interaction with assembled alphaV-containing integrins, not free ITGAV signaling	represented_graph_alias	batch_187
+LR:VTN>ITGB1	VTN	ITGB1	M20B-E002283;M20B-E002284;M21B-E007100;M23B-E000087;M23B-E000887	current bundle supports vitronectin interaction with assembled beta1-containing integrins, not free ITGB1 signaling	represented_graph_alias	batch_187
+LR:VTN>ITGB3	VTN	ITGB3	M20B-E002282;M20B-E002285;M21B-E000277;M23B-E000086;M23B-E000089	current bundle supports vitronectin interaction with assembled alphaVbeta3 or alphaIIbbeta3, not free ITGB3 signaling	represented_graph_alias	batch_187
+LR:VTN>ITGB5	VTN	ITGB5	M20B-E002286;M21B-E000547;M23B-E000890	current bundle supports vitronectin interaction with assembled alphaVbeta5, not free ITGB5 signaling	represented_graph_alias	batch_187
+LR:VTN>ITGB8	VTN	ITGB8	M20B-E002287;M21B-E007099;M23B-E000092;M23B-E000893	current bundle supports vitronectin interaction with assembled alphaVbeta8, not free ITGB8 signaling	represented_graph_alias	batch_187
+LR:VTN>PVR	VTN	PVR	M21B-E007075	current bundle already contains primary-supported vitronectin-PVR binding	represented_graph_alias	batch_187
+LR:VWF>GP1BA	VWF	GP1BA	M20B-E005243;M21B-E006993	current bundle already contains VWF-A1 binding to the GPIb-alpha-containing GPIb-IX-V complex	represented_graph_alias	batch_187
+LR:VWF>GP1BB	VWF	GP1BB	M20B-E005243;M23B-E000453;M23B-E000454	current bundle supports only the assembled GPIb-IX-V complex, not independent GP1BB binding	represented_graph_alias	batch_187
+LR:VWF>GP5	VWF	GP5	M23B-E000453;M23B-E000454	current bundle supports only the assembled GPIb-IX-V complex, not independent GP5 binding	represented_graph_alias	batch_187
+LR:VWF>GP9	VWF	GP9	M23B-E000453;M23B-E000454	current bundle supports only the assembled GPIb-IX-V complex, not independent GP9 binding	represented_graph_alias	batch_187
