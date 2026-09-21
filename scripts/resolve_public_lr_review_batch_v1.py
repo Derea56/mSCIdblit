@@ -1085,6 +1085,13 @@ def main() -> None:
             species = "human collagen-IV fragment, NC1-domain and renal-cell assays"
             summary = "Primary studies support collagen-IV fragment or NC1-domain interactions with selected integrins and distinguish chain/domain-specific recognition, but no exact primary experiment was verified for this remaining collagen-IV-chain-to-receptor candidate."
             limitations = "Retain collagen-IV chain assembly, NC1/CB3 fragment and integrin-family context; do not transfer evidence between alpha3, alpha4, alpha5 or alpha6 chains or materialize an unrelated receptor edge without exact chain/domain and receptor-complex support."
+        elif ligand == "COL2A1":
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:10772239", "PMID:8832409", "PMID:9041938"]
+            species = "human chondrocyte, collagen-II adhesion and collagen-VI comparator assays"
+            summary = "Primary chondrocyte and collagen-adhesion studies support selected alpha1beta1/alpha2beta1 interactions with type-II collagen, but no exact primary experiment was verified for the remaining COL2A1-to-listed-receptor candidates."
+            limitations = "Retain assembled collagen-II and beta1-integrin adhesion context; do not transfer it to CD44, syndecan, alpha2beta, alpha3/9 or alphaVbeta8 candidates without pair-specific evidence or infer a soluble signaling cascade from matrix adhesion."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
