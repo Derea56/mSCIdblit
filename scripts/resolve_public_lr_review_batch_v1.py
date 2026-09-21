@@ -750,6 +750,60 @@ def main() -> None:
                 layer = "candidate_only_unverified"
                 summary = "Fibrinogen-chain labels in the public prediction are extracellular structural components, not an explicitly defined mature signaling ligand for the listed receptor."
                 limitations = "Require an exact fibrinogen form, receptor identity and primary binding or functional assay before treating this as a ligand-receptor edge."
+            elif ligand == "FGF17" and receptor in {"FGFR1", "FGFR2"}:
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:10381577", "PMID:16597617", "PMCID:PMC2080618"]
+                species = "mouse; human recombinant protein"
+                summary = "Primary FGF17 studies support receptor-dependent activity through the c-spliced FGFR1 and FGFR2 family: transforming assays identify activation of either receptor c isoform, and a complete FGF-family BaF3 comparison shows FGF17 activity on FGFR1c and FGFR2c with heparin context."
+                limitations = "Preserve the c-splice-isoform and heparan-sulfate context; the evidence does not assert an isoform-free receptor edge, a universal intracellular relay or a terminal-TF output."
+            elif ligand == "FGF20" and receptor == "FGFR1":
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:16597617", "PMCID:PMC2080618", "PMID:19564416", "PMCID:PMC2725704", "DOI:10.1128/MCB.01780-08"]
+                species = "human recombinant protein; mouse cell assays"
+                summary = "Primary receptor-specificity and structural/functional studies support FGF20 activity through FGFR1c: the complete FGF-family BaF3 comparison detects FGF20 activation of c-spliced receptors, while independent work demonstrates FGF20-FGFR1c binding, mitogenesis and ERK output."
+                limitations = "Preserve the FGF20 dimerization, heparin/heparan-sulfate and FGFR1c context; do not generalize across receptor splice isoforms or infer a terminal-TF output."
+            elif ligand == "FGF20" and receptor == "FGFR2":
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:16597617", "PMCID:PMC2080618"]
+                species = "human recombinant protein; mouse BaF3 cell assays"
+                summary = "The complete primary FGF-family BaF3 comparison detects FGF20 activity on the c-spliced FGFR2 receptor, with heparin-dependent mitogenic readout under the tested conditions."
+                limitations = "Preserve the FGFR2c splice-isoform and heparan-sulfate assay context; the study is semiquantitative and does not establish a universal intracellular relay or terminal-TF output."
+            elif ligand == "FGF23" and receptor == "FGFR3":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:37286607", "PMCID:PMC10284700", "DOI:10.1038/s41586-023-06155-9"]
+                species = "human structural system; cell-based receptor-complex assays"
+                summary = "Primary structural and cell-based studies support an FGF23-FGFR3c-alphaKlotho quaternary signaling complex, but the public row omits the required alphaKlotho co-receptor and therefore is retained as complex-boundary evidence rather than a standalone FGFR3 edge."
+                limitations = "Represent FGF23 with the intact alphaKlotho/FGFR3c complex and heparan-sulfate context; do not split the complex into a standalone FGF23-FGFR3 edge or infer a terminal-TF output."
+            elif ligand == "FGF3" and receptor in {"FGFR1", "FGFR2"}:
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:7592624", "DOI:10.1074/jbc.270.41.24197"]
+                species = "mouse FGF3; receptor isoform assays"
+                summary = "Primary receptor-binding competition and BaF3 mitogenic assays show FGF3 binding and activating FGFR1 and FGFR2, with strongest activity at the IIIb isoforms and lower-affinity interaction with FGFR2c."
+                limitations = "Preserve the FGFR1/FGFR2 splice-isoform, heparin and potency differences; do not collapse isoform-specific activity into one universal receptor edge or infer a terminal-TF output."
+            elif ligand == "FGF8" and receptor == "FGFR1":
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:16384934", "PMCID:PMC1356110"]
+                species = "human recombinant protein; chick and mouse developmental assays"
+                summary = "Primary structural, SPR and developmental assays support FGF8b interaction with FGFR1c and receptor-dependent organizer activity; FGF8b binds FGFR1c as part of the c-isoform receptor profile."
+                limitations = "Preserve FGF8 splice-isoform and developmental-context boundaries; the evidence does not justify an isoform-free FGF8-FGFR1 edge, universal intracellular relay or terminal-TF output."
+            elif ligand == "FGF7" and receptor in {"FGFR3", "FGFR4"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                primary = ["PMID:10950949", "PMID:16597617", "PMCID:PMC2080618"]
+                summary = "Primary receptor-specificity studies restrict FGF7 activity to the FGFR2 IIIb/KGFR receptor context and do not support the listed FGFR3 or FGFR4 pairings."
+                limitations = "Retain FGF7-FGFR2b evidence with its splice-isoform boundary; do not transfer FGF-family receptor specificity to FGFR3/FGFR4."
+            elif ligand == "FGF10" and receptor in {"FGFR3", "FGFR4"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                primary = ["PMID:12591959", "PMID:16597617", "PMCID:PMC2080618"]
+                summary = "Primary structural and receptor-specificity studies restrict FGF10 signaling to the FGFR2 IIIb receptor context and do not support the listed FGFR3 or FGFR4 pairings."
+                limitations = "Retain FGF10-FGFR2b evidence with its splice-isoform boundary; do not transfer FGF-family receptor specificity to FGFR3/FGFR4."
             elif ligand in {"FGF11", "FGF12", "FGF13", "FGF14"}:
                 disposition = "reject_precursor_or_non_edge_form"
                 layer = "candidate_only_unverified"
