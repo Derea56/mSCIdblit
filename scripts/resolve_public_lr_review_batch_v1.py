@@ -1750,6 +1750,36 @@ def main() -> None:
                 "records remain evidence-bounded and do not assert a primary locator, universal intracellular cascade "
                 "or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_129":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The public locators are pathway or database records, while the existing graph edge-source records "
+                "provide primary-supported IAPP-CALCR/RAMP3 amylin-complex assembly, galectin-9-CD44 and TIM-3 "
+                "interactions, LRRTM4-GPC4-PTPRS synaptic organization, NRG1-integrin/ERBB3 crosstalk, PPIA-CD147 "
+                "activation, Sema4A-Tim-2, tubby-MerTK and TULP1-AXL interaction or functional observations at the "
+                "stated molecular resolution."
+            )
+            limitations = (
+                "Do not add a duplicate edge or collapse CALCR/RAMP amylin receptor complexes, galectin glycan and "
+                "CD44 isoform context, the LRRTM4-GPC4-PTPRS three-component heparan-sulfate complex, NRG1 "
+                "integrin-ErbB3 ternary topology, PPIA secreted/heparan-sulfate-assisted CD147 binding, mouse Tim-2, "
+                "tubby MerTK cargo/phagocytosis, or TULP1 TAM-receptor spectrum into autonomous binary receptors. "
+                "Preserve ligand processing, glycan, splice, heterodimer and co-receptor resolution, species and assay "
+                "limits, and the distinction between binding, receptor-proximal signaling and functional output; the "
+                "IAPP-CALCR/RAMP1 row remains evidence-bounded where no stable primary locator is present, and the "
+                "existing edges do not assert a universal intracellular cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
