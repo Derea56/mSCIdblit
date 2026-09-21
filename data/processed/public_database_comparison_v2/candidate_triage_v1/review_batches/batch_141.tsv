@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:COL13A1>ITGB1	COL13A1	ITGB1	M20B-E003004;M20B-E003005;M23B-E000357;M23B-E000360		represented_graph_alias	batch_141
+LR:COL16A1>ITGA1	COL16A1	ITGA1	M20B-E003018		represented_graph_alias	batch_141
+LR:COL16A1>ITGA2	COL16A1	ITGA2	M20B-E003019		represented_graph_alias	batch_141
+LR:COL18A1>ITGA3	COL18A1	ITGA3	M23B-E000940		represented_graph_alias	batch_141
+LR:COL18A1>ITGB1	COL18A1	ITGB1	M21B-E002192;M23B-E000940		represented_graph_alias	batch_141
+LR:COL1A1>ITGA1	COL1A1	ITGA1	M20B-E001931;M21B-E000279		represented_graph_alias	batch_141
+LR:COL1A1>ITGA10	COL1A1	ITGA10	M20B-E001929		represented_graph_alias	batch_141
+LR:COL1A1>ITGA11	COL1A1	ITGA11	M20B-E001930;M21B-E006557;M23B-E000372		represented_graph_alias	batch_141
+LR:COL1A1>ITGA2	COL1A1	ITGA2	M20B-E001932;M21B-E000280;M23B-E000374		represented_graph_alias	batch_141
+LR:COL1A1>ITGA3	COL1A1	ITGA3	M20B-E001933		represented_graph_alias	batch_141
