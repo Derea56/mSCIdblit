@@ -1057,6 +1057,13 @@ def main() -> None:
             layer = "candidate_only_unverified"
             summary = "Primary HAPLN1 studies support extracellular-matrix organization and CD44/TGF-beta-receptor-II-associated functional effects, but the current review did not verify any of the listed HAPLN1-to-receptor candidates as the initiating pair."
             limitations = "Retain HAPLN1 matrix and CD44/TGFBR2 context for targeted follow-up; do not materialize the listed candidates from downstream effects, co-expression or matrix association alone."
+        elif ligand == "COL4A2":
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:8344274", "PMID:9139675", "PMID:19229828"]
+            species = "human collagen-IV fragment, integrin-domain and renal-cell assays"
+            summary = "Primary studies support collagen-IV CB3 or NC1-domain interactions with selected alpha1beta1/alpha2beta1 integrins and distinguish chain/domain-specific recognition, but no exact primary experiment was verified for this COL4A2-to-listed-receptor candidate."
+            limitations = "Retain collagen-IV fragment, chain-assembly and integrin-family context; do not transfer alpha1beta1/alpha2beta1 evidence to unrelated receptors or materialize an isolated COL4A2 edge without exact chain/domain and receptor-complex support."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
