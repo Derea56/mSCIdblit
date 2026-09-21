@@ -8,13 +8,13 @@ This report reduces `7,753` public-only rows to `7,753` normalized candidate uni
 |---|---:|---|
 | Resolved graph match | 8 | Exact label or exact component match; no new edge is implied. |
 | Completed prior harvest | 25 | Present in the existing primary-evidence harvest ledger; excluded from new review batches. |
-| Completed batch review | 6,000 | Resolved in a batch-specific evidence ledger; excluded from new review batches while retaining the resolution record. |
+| Completed batch review | 6,100 | Resolved in a batch-specific evidence ledger; excluded from new review batches while retaining the resolution record. |
 | Represented graph alias | 960 | Conservative one-component/one-edge representation match; no new evidence or edge is inferred. |
 | Alias adjudication | 0 | Component overlap suggests an alias or composite representation; curator confirmation is required. |
 | Primary-evidence review | 0 | No automatic graph match and a public primary-paper locator is present. |
-| Discovery review | 760 | No automatic graph match and no primary locator in the frozen public snapshot. |
+| Discovery review | 660 | No automatic graph match and no primary locator in the frozen public snapshot. |
 
-The actionable review queue contains `760` units, of which `0` have a primary locator and `760` require discovery or broader evidence search.
+The actionable review queue contains `660` units, of which `0` have a primary locator and `660` require discovery or broader evidence search.
 
 ## Review batches
 
