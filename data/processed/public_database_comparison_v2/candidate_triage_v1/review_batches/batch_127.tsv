@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:TNC>PTPRB	TNC	PTPRB	M21B-E006541		represented_graph_alias	batch_127
+LR:TNF>TRAF2	TNF	TRAF2	M21B-E008851		represented_graph_alias	batch_127
+LR:TNFSF12>CD163	TNFSF12	CD163	M21B-E005615		represented_graph_alias	batch_127
+LR:TNFSF9>TNFRSF9	TNFSF9	TNFRSF9	M21B-E000454		represented_graph_alias	batch_127
+LR:TPSB2>F2RL1	TPSB2	F2RL1	M21B-E006978		represented_graph_alias	batch_127
+LR:VEGFA>NRP1	VEGFA	NRP1	M21B-E000185;M21B-E000590;M21B-E005131;M21B-E005132		represented_graph_alias	batch_127
+LR:WFIKKN2>PRTG	WFIKKN2	PRTG	M21B-E005200		represented_graph_alias	batch_127
+LR:WNT3A>RYK	WNT3A	RYK	M21B-E007004		represented_graph_alias	batch_127
+LR:WNT5B>FZD1	WNT5B	FZD1	M20B-E005282;M21B-E007020		represented_graph_alias	batch_127
+LR:WNT5B>FZD2	WNT5B	FZD2	M21B-E006533		represented_graph_alias	batch_127

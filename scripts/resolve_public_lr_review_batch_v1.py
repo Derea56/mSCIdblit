@@ -1690,6 +1690,36 @@ def main() -> None:
                 "species and assay limits, and the distinction between binding, receptor-proximal signaling and "
                 "functional output; the existing edges do not assert a universal intracellular cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_127":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The public locators are pathway or database records, while the existing graph edge-source records "
+                "provide primary-supported tenascin-C-PTPRB adhesion, TNF-TNFR2 adaptor context, TWEAK-CD163 "
+                "scavenging, 4-1BBL-TNFRSF9 assembly, tryptase-PAR2 activation, VEGFA-neuropilin complex evidence, "
+                "WFIKKN2-PRTG binding, WNT3A-RYK coreceptor function and WNT5B-FZD2 pathway observations at the "
+                "stated molecular resolution."
+            )
+            limitations = (
+                "Do not add a duplicate edge or collapse alternatively spliced TNC domains, TNFR2-associated TRAF "
+                "adaptor bridges, CD163 scavenging versus Fn14 signaling, 4-1BB receptor oligomerization, proteolytic "
+                "PAR2 activation, VEGFA isoform/heparin-dependent neuropilin complexes, WFIKKN2 extracellular binding, "
+                "RYK context-dependent FZD coupling, or WNT5B FZD2 versus other FZD binding/pathway contexts into a "
+                "single canonical receptor. Preserve ligand processing, isoform, receptor-complex and co-receptor "
+                "resolution, species and assay limits, and the distinction between binding, receptor-proximal signaling "
+                "and functional output; the existing edges do not assert a universal intracellular cascade or terminal "
+                "TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
