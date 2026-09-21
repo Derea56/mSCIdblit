@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:NPPA>NPR3	NPPA	NPR3	M21B-E001701		represented_graph_alias	batch_122
+LR:NPPC>NPR3	NPPC	NPR3	M21B-E001703		represented_graph_alias	batch_122
+LR:NPY>NPY4R	NPY	NPY4R	M21B-E001461		represented_graph_alias	batch_122
+LR:NRG1>ERBB3	NRG1	ERBB3	M23B-E000816;M23B-E000819		represented_graph_alias	batch_122
+LR:NRG2>ERBB3	NRG2	ERBB3	M20B-E004385		represented_graph_alias	batch_122
+LR:NRG2>ERBB4	NRG2	ERBB4	M20B-E004386		represented_graph_alias	batch_122
+LR:NRG3>ERBB4	NRG3	ERBB4	M21B-E000366		represented_graph_alias	batch_122
+LR:NRG4>ERBB4	NRG4	ERBB4	M21B-E000380		represented_graph_alias	batch_122
+LR:NTN4>UNC5A	NTN4	UNC5A	M21B-E000817		represented_graph_alias	batch_122
+LR:OMG>RTN4R	OMG	RTN4R	M21B-E002883		represented_graph_alias	batch_122
