@@ -627,6 +627,76 @@ def main() -> None:
                 layer = "candidate_only_review_locator"
                 summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
                 limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
+        elif row.get("review_batch") == "batch_088":
+            pair = (ligand, receptor)
+            if pair == ("IL11", "IL6RA"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:39473075", "PMID:8940087"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human and murine IL-11/IL-11 receptor studies; human IL-6 receptor cross-reactivity study"
+                summary = "Primary receptor studies identify IL11RA as the ligand-binding alpha receptor for IL-11 and gp130/IL6ST as the signaling partner; a direct cross-reactivity study reports that IL-11 does not bind IL-6R."
+                limitations = "Represent IL11-IL11RA-gp130/IL6ST receptor-complex evidence separately; do not transfer IL-6Ralpha usage to IL-11 or infer an IL11-IL6RA edge from shared gp130 signaling."
+            elif pair == ("IL22", "IL10RA"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:18599299"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human IL-22/IL-22R1/IL-10R2 structural and binding assays"
+                summary = "Primary structural and binding experiments define IL-22 recognition by IL-22R1 and functional receptor assembly with IL-10R2/IL10RB; they do not support IL-10RA as the IL-22 receptor subunit."
+                limitations = "Represent IL22-IL22RA1-IL10RB receptor-complex evidence; do not materialize IL22-IL10RA or conflate IL-10RA with IL-10R2/IL10RB."
+            elif pair == ("IL15", "IL2RA"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:8026467", "PMID:8530383", "PMID:23104097"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human IL-15 receptor binding and reconstituted receptor-complex studies"
+                summary = "Primary binding and structural studies show that IL-15 uses IL15RA for ligand-specific high-affinity recognition and signals through IL2RB/IL2RG; IL2RA is not the IL-15-specific alpha receptor and is not required for IL-15 binding."
+                limitations = "Represent IL15-IL15RA-IL2RB-IL2RG complex evidence; do not transfer IL-2Ralpha usage to IL-15 or materialize IL15-IL2RA as a direct ligand-receptor edge."
+            elif pair == ("CSF2", "IL3RA"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:8543766"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human GM-CSF and IL-3 receptor subunit expression and receptor-complex studies"
+                summary = "Primary receptor studies distinguish the GM-CSF receptor alpha chain from IL-3Ralpha as separate ligand-specific binding components that share the common beta signaling subunit."
+                limitations = "Represent CSF2/GM-CSF with CSF2RA and CSF2RB; do not transfer IL-3Ralpha specificity to GM-CSF or materialize CSF2-IL3RA from shared beta-chain signaling."
+            elif pair == ("CNTF", "IL6RA"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:7500350", "PMID:18775332"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human CNTF receptor-complex biochemical and structural studies"
+                summary = "Primary biochemical and structural studies define CNTF binding through CNTFRalpha and assembly of a CNTFRalpha-gp130/LIFR signaling complex; IL-6Ralpha is not the CNTF-specific receptor subunit."
+                limitations = "Represent CNTF-CNTFR-LIFR/gp130 complex evidence; do not transfer IL-6Ralpha usage to CNTF or infer a direct CNTF-IL6RA edge from shared gp130-family signaling."
+            elif pair == ("IL13", "IL2RG"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:18852293", "PMID:25766112"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human and murine IL-4/IL-13 receptor-complex and receptor-knockout studies"
+                summary = "Primary receptor-complex and knockout studies show that IL-13 uses the type II IL4RA-IL13RA1 receptor and remains responsive when IL2RG is absent, whereas the common gamma chain is relevant to type I IL-4 signaling."
+                limitations = "Represent IL13-IL4RA-IL13RA1 and its tested STAT6/output context; do not materialize IL13-IL2RG or transfer type I IL-4 receptor usage to IL-13."
+            elif pair == ("IL21", "IL4RA"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:11418623", "PMID:22235133"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human IL-21 receptor-complex binding, cross-linking and structural studies"
+                summary = "Primary studies define the functional IL-21 receptor as IL21R paired with the common gamma chain and demonstrate IL-21 binding to that complex; IL4RA is not identified as an IL-21 receptor subunit."
+                limitations = "Represent IL21-IL21R-IL2RG complex evidence; do not transfer IL-4 receptor alpha usage to IL-21 or materialize IL21-IL4RA."
+            elif pair == ("IL24", "IL10RB"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:12351624"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human IL-19/IL-20/IL-24 receptor-complex and reporter/signaling assays"
+                summary = "Primary receptor-complex assays place IL-24 in the IL20RA-IL20RB and IL22RA1-IL20RB complexes, with reporter and STAT activation readouts; IL10RB is not the receptor subunit identified for IL-24 in these assays."
+                limitations = "Represent IL24-IL20RA-IL20RB and IL24-IL22RA1-IL20RB complex evidence; do not conflate IL20RB with IL10RB or materialize IL24-IL10RB."
+            elif pair in {("IL18", "IL1RL1"), ("IL18", "IL1RAPL1"), ("IL18", "IL1RL2")}:
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:9325300", "PMID:10227969"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human and murine IL-18 receptor binding and receptor-deficiency studies"
+                summary = "Primary receptor purification, expression and receptor-deficiency studies identify IL18R1/IL-1Rrp as the essential IL-18 ligand-binding receptor; the reviewed studies do not support the candidate IL1-family paralog as the IL-18 receptor."
+                limitations = "Represent IL18-IL18R1 with IL18RAP as the receptor-complex context; do not transfer IL-18 binding or signaling to IL1RL1, IL1RAPL1 or IL1RL2 without an exact pair-specific primary assay."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
