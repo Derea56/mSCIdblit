@@ -482,6 +482,55 @@ def main() -> None:
             species = "human recombinant peptide and receptor-expression assays"
             summary = "Primary INSL5 pharmacology supports selective RXFP4/GPCR142 agonism, with only weak antagonism at RXFP3 and no support for the listed adrenergic, glutamate or melatonin receptors."
             limitations = "Retain the cognate INSL5-RXFP4 route and its receptor-expression context; do not infer direct INSL5 binding to unrelated GPCRs from public database co-membership."
+        elif ligand == "CCL8" and receptor == "CCR8":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:21217759", "PMCID:PMC3863381"]
+            species = "mouse CCL8 and CCR8-dependent Th2-cell migration"
+            summary = "Primary mouse chemokine and migration studies identify CCL8 as a CCR8 agonist and show that CCR8 is required for CCL8-induced Th2-cell migration in atopic-skin models."
+            limitations = "Preserve the mouse CCL8/CCR8 orthology and Th2-cell context; do not transfer this result to human CCL8 receptor promiscuity or infer a universal intracellular relay or terminal-TF output."
+        elif ligand == "CCL8" and receptor in {"ACKR1", "ACKR2"}:
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+            primary = ["PMID:21217759", "PMCID:PMC3863381"]
+            species = "mouse CCL8/CCR8 study; atypical-receptor context unresolved"
+            summary = "Primary mouse work establishes a CCL8-CCR8 functional route, while the public ACKR1/ACKR2 rows remain possible chemokine retention or scavenging contexts rather than directly assayed signaling receptors in that study."
+            limitations = "Retain as an atypical-receptor context hold pending direct CCL8-ACKR1/ACKR2 binding or trafficking data; preserve mouse versus human chemokine-receptor boundaries and do not infer canonical G-protein signaling."
+        elif ligand == "CCL8":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:21217759", "PMCID:PMC3863381"]
+            species = "mouse CCL8 receptor-specificity study"
+            summary = "Primary mouse studies support CCL8 activity through CCR8 and report no CCR2 agonism under the tested conditions; the remaining public receptor rows are not established as direct CCL8 receptor edges."
+            limitations = "Retain mouse CCL8-CCR8 and the separate atypical-receptor hold; do not transfer receptor promiscuity from human MCP-family chemokines to mouse CCL8 without an exact assay."
+        elif ligand == "EFNA4" and receptor in {"EPHA1", "EPHA3", "EPHA5", "EPHA6"}:
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation"
+            primary = ["PMCID:PMC3499309", "PMCID:PMC6782661"]
+            species = "mouse and human EphA receptor binding assays"
+            summary = "Primary Eph receptor profiling and native-neural-tissue binding assays support ephrin-A4 interaction with the listed EphA receptor family members, with receptor- and tissue-dependent affinity differences."
+            limitations = "Represent EFNA4 as a membrane-tethered ephrin-A ligand and preserve receptor affinity, glycosylation, cell-contact and species boundaries; this batch asserts binding evidence only, not reverse signaling or a terminal-TF output."
+        elif ligand == "EFNA4" and receptor == "EPHA7":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMCID:PMC6782661"]
+            species = "mouse native-striatal receptor binding assay"
+            summary = "Native striatal ligand-binding assays detected ephrin-A4 binding to EphA4 but not EphA7, despite broader Eph-family promiscuity in recombinant systems."
+            limitations = "Retain the tissue- and assay-specific EphA4 context; do not materialize EFNA4-EPHA7 from EphA-family membership alone without a direct pair-specific assay."
+        elif ligand == "EFNA5" and receptor in {"EPHA1", "EPHA5", "EPHA6"}:
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation"
+            primary = ["PMCID:PMC3499309", "PMCID:PMC6782661"]
+            species = "mouse and human EphA receptor binding assays"
+            summary = "Primary Eph receptor profiling supports ephrin-A5 binding across the listed EphA receptor contexts, with affinity and native-tissue selectivity varying by receptor and cellular system."
+            limitations = "Represent EFNA5 as a membrane-tethered ephrin-A ligand and preserve receptor affinity, cell-contact and species boundaries; this batch asserts binding evidence only and does not infer reverse signaling or a terminal-TF output."
+        elif ligand == "EFNA5" and receptor in {"EPHB1", "EPHB6"}:
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMCID:PMC3499309", "PMCID:PMC6782661"]
+            species = "mouse and human Eph receptor family binding assays"
+            summary = "Primary Eph-family profiling supports EFNA5 interactions with EphA receptors and the recognized cross-subfamily EphB2 exception, but does not establish the listed EphB1 or EphB6 rows as direct EFNA5 edges."
+            limitations = "Preserve the EphA family and the separately documented EphB2 cross-interaction boundary; do not transfer EFNA5 activity to EphB1/EphB6 from Eph-family membership alone."
         elif ligand in {"CCL1", "CCL8", "CEACAM2"}:
             disposition = "no_primary_evidence_found"
             layer = "candidate_only_review_locator"
