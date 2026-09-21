@@ -1029,6 +1029,38 @@ def main() -> None:
                 species = "human; mouse"
                 summary = "The graph contains the primary-supported CD34-to-SELL/L-selectin adhesion relationship in the reverse orientation of this public row."
                 limitations = "Preserve CD34 glycoform/PNAd and high-endothelial-venule context; do not add a duplicate reverse edge or infer a canonical intracellular relay from adhesion alone."
+            elif ligand == "SELE" and receptor == "SELPLG":
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E000282"
+                primary = ["PMID:8621728", "PMID:9128259", "PMID:11071658"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse"
+                summary = "The graph already contains primary-supported E-selectin/SELE binding to PSGL1/SELPLG with leukocyte rolling and adhesion outputs."
+                limitations = "Preserve PSGL1 glycoform, selectin carbohydrate-dependence and flow-adhesion context; no unique intracellular or terminal-TF route is inferred."
+            elif ligand == "SELL" and receptor == "SELPLG":
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E000283"
+                primary = ["PMID:8892633", "PMID:12403782"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse"
+                summary = "The graph already contains primary-supported L-selectin/SELL binding to PSGL1/SELPLG with leukocyte rolling and adhesion outputs."
+                limitations = "Preserve PSGL1 glycoform and selectin-adhesion context; no unique intracellular or terminal-TF route is inferred."
+            elif ligand == "SELP" and receptor == "SELPLG":
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E000214"
+                primary = ["PMID:9829984", "PMID:7532174"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "The graph already contains primary-supported P-selectin/SELP binding to PSGL1/SELPLG with leukocyte rolling and adhesion outputs."
+                limitations = "Preserve PSGL1 glycoform, selectin carbohydrate-dependence and flow-adhesion context; no unique intracellular or terminal-TF route is inferred."
+            elif ligand == "SELPLG" and receptor in {"ITGAM", "ITGB2"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M23B-E000260;M23B-E000261"
+                primary = ["PMID:1709677", "PMCID:PMC2190843", "DOI:10.1084/jem.173.6.1493", "PMID:15187162", "DOI:10.4049/jimmunol.172.12.7780"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse comparator"
+                summary = "Primary selectin-PSGL1 studies support Mac-1/ITGAM:ITGB2 activation and beta2-integrin avidity during firm leukocyte adhesion, but not direct PSGL1 binding to an isolated integrin subunit."
+                limitations = "Preserve selectin-PSGL1 to Mac-1 activation context; do not promote isolated ITGAM or ITGB2 as the complete receptor or infer a terminal TF route."
             elif ligand == "SIRPA" and receptor == "CD47":
                 disposition = "already_present_reverse_orientation"
                 matched_ids = "M21B-E000179"
@@ -1037,6 +1069,22 @@ def main() -> None:
                 species = "human; mouse"
                 summary = "The graph contains the primary-supported CD47-to-SIRPA/SIRPalpha inhibitory interaction in the reverse orientation of this public row."
                 limitations = "Preserve CD47/SIRPA species, cis/trans and phagocytosis-brake context; do not add a duplicate reverse edge or infer a universal macrophage response."
+            elif ligand == "RSPO2" and receptor in {"FZD4", "SDC4"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E003271;M21B-E005577;M21B-E005578;M21B-E006688"
+                primary = ["PMID:26123262", "PMID:27328992", "PMID:24225776", "PMID:37402772", "DOI:10.1038/s41598-023-37856-w"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human; mouse"
+                summary = "Primary RSPO2 studies support LGR4/LGR5 and RNF43/ZNRF3 Wnt-potentiator complexes, but do not establish FZD4 or SDC4 as complete direct RSPO2 receptors in these rows."
+                limitations = "Preserve LGR/E3-ligase/Wnt receptor-complex topology; do not collapse R-spondin potentiation into a binary RSPO2-FZD4 or RSPO2-SDC4 edge."
+            elif ligand == "RSPO4" and receptor in {"LGR4+LRP5", "LGR4+LRP6", "LGR5+LRP5", "LGR5+LRP6", "LRP5", "LRP6"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E006587;M21B-E006588"
+                primary = ["PMID:21727895", "DOI:10.1038/nature10337"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human; mouse"
+                summary = "Primary studies support RSPO4 binding to LGR4/LGR5 and association with Frizzled/LRP Wnt receptor complexes, but the listed composite or isolated LRP rows do not resolve a single direct RSPO4 receptor topology."
+                limitations = "Preserve LGR-dependent multicomponent Wnt-potentiator topology and the binding-focused RSPO4 evidence; do not assign RSPO4-specific Wnt activation to isolated LRP5/LRP6."
             elif ligand.startswith("RSPO") and receptor in {"FZD8", "LRP6"}:
                 disposition = "hold_contextual_or_complex_boundary"
                 layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
@@ -1060,12 +1108,74 @@ def main() -> None:
                 species = "human; mouse"
                 summary = "Serum amyloid A has receptor-family and inflammatory-context evidence, but the current candidate rows do not resolve a direct mature SAA ligand assay for the listed receptor (including the established FPR2/AGER distinctions)."
                 limitations = "Require exact SAA isoform, receptor and activation assay before promotion; do not transfer FPR2, TLR2/4 or RAGE family context to unrelated GPCRs or scavenger receptors."
+            elif ligand in {"S100A8", "S100A9"} and receptor == "ITGB2L":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M23B-E001157;M23B-E001169;M23B-E000851"
+                primary = ["PMID:12626582", "PMCID:PMC3281816", "PMID:22363402", "DOI:10.1371/journal.pone.0029333", "PMID:9570563", "DOI:10.4049/jimmunol.160.3.1427"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse comparator"
+                summary = "Primary S100A8/A9 studies support Mac-1/CR3 ITGAM:ITGB2 activation and cell-based complex binding, but the public row contains the incomplete ITGB2L component and does not establish direct binding to that isolated chain."
+                limitations = "Preserve S100A8/A9 dimer-state, Mac-1/CR3 and alternate-receptor context; do not decompose the receptor complex into ITGB2L alone or infer a terminal TF route."
+            elif ligand == "S100A1" and receptor in {"RYR1", "RYR2", "TRPM3"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "S100A1 is an intracellular calcium-binding protein and these channels are intracellular or membrane-proximal partners, not an extracellular ligand-receptor route."
+                limitations = "Represent S100A1 calcium-handling or channel-association mechanisms in intracellular layers; do not materialize them as extracellular ligand edges."
             elif ligand.startswith("S100A"):
                 disposition = "hold_contextual_or_complex_boundary"
                 layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
                 species = "human; mouse"
                 summary = "S100A-family extracellular danger-signal biology overlaps RAGE, TLR and scavenger-receptor contexts, but the listed candidate receptor is not asserted as an exact primary-supported edge here."
                 limitations = "Require S100 paralog-specific mature-protein binding or receptor-triggering evidence; do not transfer S100A8/A9 family context across CD36, CD68, AGER or integrin candidates."
+            elif ligand == "SEMA3C" and receptor.startswith("PLXNA"):
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E006550"
+                primary = ["PMID:29661844"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human"
+                summary = "Primary SEMA3C work supports a Plexin-D1:Plexin-A4 receptor complex; the public rows split or substitute Plexin-A paralogs not resolved by that study."
+                limitations = "Preserve Plexin-D1:Plexin-A4 topology and neuropilin-enhancement boundary; do not promote SEMA3C-to-PLXNA1/2/3 as isolated direct edges."
+            elif ligand == "SEMA3D":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E006621"
+                primary = ["PMID:26243191", "PMCID:PMC4811025", "DOI:10.1038/srep23241"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary SEMA3D work supports PLXND1 binding and invasion/guidance outputs, while the public rows list neuropilin or Plexin-A paralogs not established as the complete direct receptor."
+                limitations = "Preserve PLXND1 and NRP1-enhanced context; do not transfer SEMA3D specificity to PLXNA1-4 or NRP1/2 as isolated receptors."
+            elif ligand == "SEMA6D" and receptor != "PLXNA1":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000334"
+                primary = ["PMID:14977921", "PMID:36156831"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse; chick"
+                summary = "Primary SEMA6D work identifies PLXNA1 as the direct receptor and documents broader receptor-panel or co-receptor context; the listed alternative targets are not individually promoted."
+                limitations = "Preserve PLXNA1, NRCAM and region-specific co-receptor context; do not transfer SEMA6D binding to KDR, PLXNA4, PLXNC1 or TYROBP without exact pair-level primary evidence."
+            elif ligand == "SEMA4A" and receptor.startswith("PLXNA"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The reviewed primary SEMA4A branch supports TIMD2/Tim-2 and other non-Plexin-A contexts, while Plexin-A evidence from SEMA3 ligands cannot be transferred to SEMA4A."
+                limitations = "Require exact SEMA4A-Plexin-A binding or activation evidence; do not infer receptor specificity from semaphorin-family membership."
+            elif ligand == "SCT":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Secretin/SCT signaling is centered on the secretin receptor SCTR, not the unrelated GPCRs and RAMP/TSHR/PTH-family targets listed here."
+                limitations = "Require mature secretin and direct SCTR assay; do not transfer secretin-family specificity across unrelated GPCRs."
+            elif ligand == "ROBO1" and receptor == "NCAM1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "ROBO1 is a guidance receptor and NCAM1 is an adhesion molecule; this row does not establish ROBO1 as a mature extracellular ligand for NCAM1."
+                limitations = "Represent SLIT-ROBO and NCAM adhesion mechanisms in their proper orientations; do not invert ROBO receptors into ligand position."
+            elif ligand == "SARAF":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "SARAF is an intracellular ER calcium-entry regulator, not a mature extracellular ligand for DAG1."
+                limitations = "Represent SARAF-STIM/Orai calcium-homeostasis biology separately; do not materialize SARAF-DAG1 as a ligand-receptor edge."
+            elif ligand.startswith("SERPINA") and receptor == "F12":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "SERPINA family proteins inhibit or regulate coagulation proteases such as factor XII; F12 is not a canonical cell-surface receptor in this row."
+                limitations = "Represent serpin-protease inhibition separately from ligand-receptor signaling; require a defined membrane receptor and direct assay before promotion."
             elif ligand in {"SEMA3A", "SEMA3E", "SEMA3G", "SEMA4F"}:
                 disposition = "hold_contextual_or_complex_boundary"
                 layer = "ligand_receptor_binding_or_activation"
