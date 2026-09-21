@@ -3278,6 +3278,72 @@ def main() -> None:
                 limitations = "Preserve transmembrane ULBP4, NKG2D/DAP10 context and isoform/shedding limits; do not infer SCI or terminal-TF output."
             else:
                 raise SystemExit(f"unhandled batch 176 pair: {pair}")
+        elif row.get("review_batch") == "batch_177":
+            pair = (ligand, receptor)
+            if pair in {("RELN", "ITGA3"), ("RELN", "ITGB1")}:
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:10939329"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary Reelin interaction and cortical migration studies support Reelin engagement of the alpha3beta1 integrin heterodimer and developmental neuron-glia detachment/migration outputs."
+                limitations = "Preserve alpha3beta1 as the integrin heterodimer and distinguish it from VLDLR/ApoER2 and EphB2 Reelin receptors; retain developmental mouse cortex context and do not infer SCI/terminal-TF effects."
+            elif pair == ("RSPO4", "LGR4"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:21727895", "DOI:10.1038/nature10337"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; mouse"
+                summary = "Primary cell-surface and biochemical assays support direct RSPO4 binding to LGR4 in the R-spondin receptor context."
+                limitations = "Preserve RSPO4 furin-domain/receptor-binding context; the cited functional rescue is strongest for RSPO1, so do not assign RSPO4-specific WNT potentiation beyond binding or infer SCI/terminal-TF output."
+            elif pair == ("RSPO4", "LGR5"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:21727895", "DOI:10.1038/nature10337"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; mouse"
+                summary = "Primary cell-surface and biochemical assays support direct RSPO4 binding to LGR5 in the R-spondin receptor context."
+                limitations = "Preserve RSPO4 furin-domain/receptor-binding context; the cited functional rescue is strongest for RSPO1, so do not assign RSPO4-specific WNT potentiation beyond binding or infer SCI/terminal-TF output."
+            elif pair == ("S100A10", "TRPV5"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:12660155", "PMCID:PMC152906"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary biochemical, localization and patch-clamp studies support S100A10/p11 association with the TRPV5 C-terminal VATTV motif through the annexin-2 auxiliary complex and channel trafficking/function."
+                limitations = "Preserve S100A10-annexin-2 as an intracellular auxiliary complex; do not treat p11 as an autonomous pore-forming ligand/receptor or infer an extracellular signaling route or SCI function."
+            elif pair == ("SDC2", "EZR"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:10704377", "DOI:10.1242/jcs.113.7.1267", "PMID:12860416", "DOI:10.1016/S0014-5793(03)00712-9"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mixed"
+                summary = "Primary recombinant-domain, truncation, co-immunoprecipitation and localization studies support direct SDC2 cytoplasmic DEGSYD-region binding to ezrin and RhoA-dependent cytoskeletal association."
+                limitations = "Preserve the intracellular SDC2 cytoplasmic-tail and actin-cytoskeleton linkage; do not infer a generic ERM-family extracellular receptor edge, SCI or terminal-TF output."
+            elif pair == ("SEMA3A", "PLXNA1"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:10520994", "PMID:22723296", "DOI:10.1016/S0092-8674(00)80062-8", "PMID:10985345", "PMID:12613546", "PMCID:PMC8610419"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse; chick; both"
+                summary = "Primary biochemical, reconstitution and developmental studies support SEMA3A signaling through the multicomponent NRP1:PLXNA1 receptor complex, with growth-cone and lymphatic-valve outputs."
+                limitations = "Preserve NRP1 ligand-binding and PLXNA1 signal-transducing roles, multimeric semaphorin/plexin avidity and L1CAM cis-modulator context; do not model a direct SEMA3A-L1CAM edge or infer SCI/terminal-TF output."
+            elif pair == ("SEMA3A", "PLXNA2"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:23104057", "PMID:10781943"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse; chick"
+                summary = "Primary structural, receptor-assembly and sensory-neuron studies support the multicomponent SEMA3A-NRP1:PLXNA2 receptor complex and semaphorin-dependent growth-cone signaling."
+                limitations = "Preserve NRP1 cross-brace/co-receptor and PLXNA2 signal-transducing roles, semaphorin dimer avidity and structural/cellular assay boundaries; do not infer SCI/terminal-TF output."
+            elif pair == ("SEMA3A", "PLXNA3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_or_direct_molecular"
+                species = "mouse"
+                summary = "The current graph contains only a frozen SEMA3A-NRP1:PLXNA3 alias from the LIANA mouse consensus; no stable pair-specific primary packet for this complex is available in this bundle."
+                limitations = "Preserve NRP1 and class-A plexin complex topology; do not promote isolated SEMA3A-PLXNA3 binding or infer downstream, SCI or terminal-TF evidence from the frozen database row."
+            elif pair == ("SEMA3A", "PLXNA4"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:34039996"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human; mammalian"
+                summary = "Primary near-intact cryo-EM studies support the 2:2:2 SEMA3A-PlexinA4-NRP1 tripartite receptor complex and membrane-proximal plexin activation geometry."
+                limitations = "Preserve NRP1 ligand-binding and PlexinA4 signal-transducing roles and 2:2:2 topology; do not infer SCI/terminal-TF output."
+            else:
+                raise SystemExit(f"unhandled batch 177 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
