@@ -1205,6 +1205,92 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "PAI-1/SERPINE1 has protease, vitronectin/integrin and receptor-trafficking contexts, but the listed rows do not resolve a single direct canonical receptor topology in the current graph layer."
                 limitations = "Preserve active/cleaved PAI-1, vitronectin, uPA/tPA and LRP1/uPAR context; require exact pair-specific binding or receptor-triggering evidence before promoting ITGAV, PLAT or PLAU as direct signaling receptors."
+            elif ligand in {"SIRPB1B", "SIRPB1C"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "SIRPB1B/C are cell-surface immunoreceptor-family proteins, not established soluble ligands for PTPRD in these candidate orientations."
+                limitations = "Represent SIRPB1 paralogs in receptor and adaptor-complex orientation; require exact trans-interaction evidence before materializing a SIRPB1B/C-to-PTPRD edge."
+            elif ligand in {"SLAMF6", "SLAMF7", "TARM1", "TCTN1", "TCTN3", "TEX101"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The candidate uses a membrane receptor, adhesion/ciliary component or cell-surface protein as the ligand label; the listed target is not established as its direct soluble-ligand receptor in this orientation."
+                limitations = "Preserve membrane-protein cis/trans, adhesion and receptor-complex biology separately; require an exact extracellular interaction assay before promotion."
+            elif ligand in {"SLURP1", "SLURP2"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = (
+                    ["PMID:29192197", "PMCID:PMC5709491", "DOI:10.1038/s41598-017-16809-0", "PMID:24365495", "DOI:10.1016/j.jneuroim.2013.12.003"]
+                    if ligand == "SLURP1" else
+                    ["PMID:27485575", "DOI:10.1016/j.biochi.2016.07.011", "PMID:16575903", "PMID:25558396"]
+                )
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; rat comparator"
+                summary = "Primary studies support SLURP-family modulation of nicotinic acetylcholine receptor activity, but the public rows enumerate many individual subunits rather than a single validated receptor-complex topology."
+                limitations = "Preserve SLURP1 alpha7/alpha3-beta4/alpha4-beta4/alpha3-beta2/alpha9-alpha10 and SLURP2 alpha3-beta2 or muscarinic context only where the assay supports it; do not promote every listed free subunit or infer a universal receptor complex."
+            elif ligand == "SPINK1" and receptor == "EGFR":
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:36053457"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human"
+                summary = "A primary cancer-cell study reports SPINK1-EGFR association and EGFR-linked ERK/p38/JNK and proliferation outputs, but this is not yet bounded as a canonical secreted ligand-binding mechanism in the graph."
+                limitations = "Retain the reported cell-line and disease context; require extracellular binding, ligand-dependence and receptor-triggering assays before promoting SPINK1 as a conventional EGFR ligand."
+            elif ligand == "SPON2" and receptor == "ITGB2L":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000891;M23B-E000882;M23B-E000883;M23B-E000884"
+                primary = ["PMID:30910815", "PMID:16105980", "PMCID:PMC1895097", "DOI:10.1182/blood-2005-04-1658", "PMID:19153605", "PMCID:PMC6484411", "PMID:30869196"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse; human comparator"
+                summary = "The graph contains primary-supported mindin/SPON2 binding and Mac-1 signaling, including Syk/MAPK and NF-kappaB-linked phagocytic outputs, but the tested receptor is the ITGAM:ITGB2 Mac-1 heterodimer rather than ITGB2L."
+                limitations = "Retain ITGB2L as a receptor-component boundary candidate only; do not substitute ITGB2L for the tested ITGAM:ITGB2 complex or export a free beta subunit."
+            elif ligand in {"SOCS2", "SORBS1", "SPTAN1", "SPTBN2", "STX1A", "SYT1"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The candidate ligand is an intracellular scaffold, signaling regulator or vesicle-exocytosis component, not a mature extracellular ligand for the listed membrane target."
+                limitations = "Represent intracellular adaptor, trafficking and channel-coupling biology in receptor-proximal or intracellular layers; do not materialize these rows as secreted ligand-receptor edges."
+            elif ligand.startswith("SULT") or ligand.startswith("SRD5A"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The candidate ligand is a steroid-metabolizing enzyme paired with a nuclear receptor/transcriptional regulator, not a conventional extracellular ligand-receptor interaction."
+                limitations = "Represent steroid biosynthesis and nuclear-receptor activation as intracellular or non-protein signaling; do not materialize enzyme-to-PPAR or enzyme-to-AR rows as cell-surface ligand edges."
+            elif ligand == "SST":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Somatostatin signaling is receptor-family specific, while the listed ADRA2A, GRM7 and MTNR1A targets are not established as direct somatostatin receptors in this candidate orientation."
+                limitations = "Retain mature somatostatin-to-SSTR relationships only with exact receptor evidence; do not transfer specificity across unrelated GPCR families."
+            elif ligand == "ST14" and receptor == "PLAU":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "ST14/matriptase is a membrane serine protease and PLAU/uPA is a protease substrate or pathway component; this row does not establish a mature ligand-receptor interaction."
+                limitations = "Represent proteolytic processing and uPA/uPAR signaling separately; require direct extracellular receptor binding before promotion."
+            elif ligand == "TDGF1" and receptor in {"LRP5", "LRP6"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000350;M21B-E000351;M23B-E000266"
+                primary = ["PMID:18089557", "PMID:11024047", "PMID:12649175"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human; mouse comparator"
+                summary = "The graph supports TDGF1/Cripto as a NODAL coreceptor and contains a TDGF1-GPC1 association, but the listed LRP5/LRP6 rows are not established as direct TDGF1 receptor edges."
+                limitations = "Preserve the NODAL-CRIPTO-ACVR1B/ACVR2B complex and TDGF1-GPC1 context; require exact TDGF1-LRP5/LRP6 binding or receptor-dependent function before promotion."
+            elif ligand == "TFF3" and receptor in {"ACKR3", "CXCR4"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M22B-E000696;M22B-E000697"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human comparator"
+                summary = "The graph preserves TFF3-associated epithelial phenotypes and CXCR4/ACKR3 hypotheses, but receptor assignment remains unresolved and the current evidence is phenotype-only rather than a direct ligand-receptor demonstration."
+                limitations = "Do not promote TFF3-ACKR3 or TFF3-CXCR4 as direct edges; preserve the negative or unresolved pharmacology and require pair-specific binding and receptor-dependence assays."
+            elif ligand == "TFF2" and receptor == "MUC6":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "TFF2 and MUC6 are secreted epithelial products, but this row does not define MUC6 as a signaling receptor or establish a direct ligand-receptor mechanism."
+                limitations = "Retain epithelial repair and mucin/trefoil co-expression separately; require a defined receptor and direct assay before graph materialization."
+            elif ligand == "TFPI" and receptor == "F10":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "TFPI is a coagulation inhibitor and F10/factor Xa is a protease target, not a cell-surface receptor in this candidate orientation."
+                limitations = "Represent protease inhibition and coagulation biochemistry separately from ligand-receptor signaling."
+            elif ligand == "TGFA" and receptor in {"ADAM17", "ERBB2", "PTPRD"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "TGF-alpha has primary-supported EGFR binding, but the listed ADAM17, ERBB2 and PTPRD rows do not establish those proteins as direct TGFA signaling receptors."
+                limitations = "Preserve TGFA-EGFR as the direct edge; represent ADAM17-mediated shedding and ERBB-family crosstalk separately, and do not infer receptor specificity from family membership."
             elif ligand.startswith("SIGLEC") or ligand in {"SIRPA", "SIRPB1A"}:
                 disposition = "reject_precursor_or_non_edge_form"
                 layer = "candidate_only_unverified"

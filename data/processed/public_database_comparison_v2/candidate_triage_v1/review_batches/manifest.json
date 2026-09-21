@@ -1,11 +1,11 @@
 {
-  "batch_count": 5,
-  "batch_rows": 460,
+  "batch_count": 4,
+  "batch_rows": 360,
   "batch_size_max": 100,
   "lane_counts": {
-    "discovery_review": 460
+    "discovery_review": 360
   },
   "policy": "Packets are evidence-review inputs only; they do not create graph edges or confidence scores.",
   "queue_path": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/public_database_comparison_v2/candidate_triage_v1/candidate_review_queue.tsv",
-  "queue_rows": 460
+  "queue_rows": 360
 }
