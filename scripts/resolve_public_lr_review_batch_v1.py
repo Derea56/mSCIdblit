@@ -3491,6 +3491,80 @@ def main() -> None:
                 limitations = "Use only as direct Slitrk4 LRR1-PTPRD binding; the observation is supplementary/screening-level without Slitrk4-specific synaptogenic function, and PTPRD splice-insert context must be preserved; do not infer SCI or terminal-TF output."
             else:
                 raise SystemExit(f"unhandled batch 179 pair: {pair}")
+        elif row.get("review_batch") == "batch_180":
+            pair = (ligand, receptor)
+            if pair == ("SLITRK5", "PTPRD"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:26004511", "PMCID:PMC4784688", "DOI:10.1016/j.devcel.2015.04.009"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary purified-protein binding, heterophilic cell-adhesion and competition studies support PTP-delta/PTPRD binding to Slitrk5 through LRR1, with BDNF-dependent cis TrkB competition."
+                limitations = "Preserve basal trans PTPRD binding versus BDNF-induced cis TrkB competition, LRR1 dependence and heterologous/neural model limits; do not infer universal synaptogenesis or SCI relevance."
+            elif pair == ("SLURP2", "CHRNA3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:27485575", "PMCID:PMC4971505", "DOI:10.1038/srep30698"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary receptor-interaction and electrophysiology studies support concentration-dependent SLURP-2 modulation of assembled alpha3beta2 nicotinic acetylcholine receptors."
+                limitations = "Preserve alpha3beta2 as the tested receptor subtype and distinguish direct-subunit affinity-purification from heterologous receptor function; do not promote isolated CHRNA3, infer a universal nicotinic route or assign SCI output."
+            elif pair == ("SLURP2", "CHRNA7"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:27485575", "PMCID:PMC4971505", "DOI:10.1038/srep30698"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary receptor-interaction and electrophysiology studies support subtype-specific SLURP-2 association and concentration-dependent priming/inhibition of alpha7 nicotinic acetylcholine receptors."
+                limitations = "Preserve recombinant SLURP-2 analogue, alpha7 subtype and heterologous-oocyte context, including low-dose priming versus higher-dose inhibition; do not infer a universal alpha7 pathway or SCI function."
+            elif pair == ("SLURP2", "CHRNB2"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:27485575", "PMCID:PMC4971505", "DOI:10.1038/srep30698"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary receptor-interaction and electrophysiology studies support concentration-dependent SLURP-2 modulation of assembled alpha3beta2 nicotinic acetylcholine receptors."
+                limitations = "Preserve alpha3beta2 as the tested receptor subtype and distinguish direct-subunit affinity-purification from heterologous receptor function; do not promote isolated CHRNB2, infer a universal nicotinic route or assign SCI output."
+            elif pair == ("SPP1", "ITGA4"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:9547293"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary leukocyte-adhesion, affinity-chromatography and blockade studies support osteopontin binding to assembled alpha4beta1 and alpha4beta1-dependent adhesion."
+                limitations = "Preserve integrin activation state and osteopontin fragment/sequence context; do not split alpha4 from beta1 or infer a free ITGA4 relay, SCI or terminal-TF output."
+            elif pair == ("SPP1", "ITGA5"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:10673366"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary binding and adhesion studies support activation-state- and thrombin-cleavage-dependent osteopontin engagement of assembled alpha5beta1."
+                limitations = "Promote thrombin-cleaved osteopontin and alpha5beta1-dependent adhesion only in the tested activation state; do not split alpha5 from beta1, infer intact-osteopontin equivalence or assign SCI output."
+            elif pair == ("SPP1", "ITGA8"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:9614184", "PMCID:PMC25364"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary biochemical and cell-adhesion studies support RGD-dependent osteopontin binding to assembled alpha8beta1."
+                limitations = "Preserve RGD dependence and kidney-development comparator context; do not split alpha8 from beta1 or infer SCI/terminal-TF output."
+            elif pair == ("SPP1", "ITGA9"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:19346516", "PMID:8910476"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary adhesion and chemotaxis studies support processed or polymeric osteopontin binding to assembled alpha9beta1 through the exposed SVVYGLR/SLAYGLR cryptic epitope."
+                limitations = "Preserve thrombin cleavage or transglutaminase polymerization and species-specific cryptic sequence; do not split alpha9 from beta1, infer intact-osteopontin equivalence or assign SCI output."
+            elif pair == ("SPP1", "ITGAV"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:15325806", "PMID:7592829", "PMID:16005200"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse; mixed"
+                summary = "Primary adhesion, affinity and affinity-chromatography studies support osteopontin engagement of assembled alphaVbeta1, alphaVbeta3 and alphaVbeta6 integrins."
+                limitations = "Preserve the tested alphaV heterodimer, RGD/metal-ion and full-length versus processed osteopontin context; do not export autonomous ITGAV signaling or infer SCI/terminal-TF output."
+            elif pair == ("SPP1", "ITGB1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:9547293", "PMID:10673366", "PMID:9614184", "PMID:19346516", "PMID:8910476", "PMID:7592829"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse; mixed"
+                summary = "Primary studies support several osteopontin receptor complexes containing beta1, including alpha4beta1, alpha5beta1, alpha8beta1, alpha9beta1 and alphaVbeta1, with adhesion or chemotaxis outputs in the stated ligand/domain contexts."
+                limitations = "Preserve each assembled integrin heterodimer, osteopontin processing/cryptic epitope and activation-state boundary; do not promote free ITGB1 signaling, collapse distinct complexes or infer SCI/terminal-TF output."
+            else:
+                raise SystemExit(f"unhandled batch 180 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
