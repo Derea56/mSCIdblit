@@ -873,6 +873,20 @@ def main() -> None:
             species = "human fibroblast and tumor-cell adhesion assays"
             summary = "Primary studies place uPAR/PLAUR in integrin-dependent adhesion and signaling on fibronectin, including uPAR modulation of alpha5beta1 fibronectin binding, but the demonstrated interactions are uPAR-integrin and uPAR-uPA mechanisms rather than direct FN1-to-PLAUR receptor binding."
             limitations = "Retain uPAR-integrin, uPA and fibronectin-matrix crosstalk as receptor-proximal context; do not materialize FN1-PLAUR as a direct binary ligand edge or infer a standalone uPAR signaling route from matrix colocalization."
+        elif ligand == "FGF1" and receptor == "NRP1":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+            primary = ["PMID:15695515"]
+            species = "human recombinant-protein biosensor and solution-binding assays"
+            summary = "Primary optical-biosensor and solution-binding assays detect direct interaction of FGF1 with neuropilin-1, in a heparin-sensitive binding context shared with other heparin-binding growth factors."
+            limitations = "Represent FGF1-NRP1 as a heparin-sensitive co-receptor or presentation interaction; do not infer canonical NRP1 signaling, a unique intracellular relay or a terminal-TF output from the binding study alone."
+        elif ligand == "FGF1" and receptor == "FGFRL1":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:19920134", "PMCID:PMC2804375"]
+            species = "human recombinant receptor and Xenopus embryonic assays"
+            summary = "Primary ligand-dot-blot, cell-based and surface-plasmon-resonance studies identify FGFRL1 binding to selected FGF ligands but report no binding of FGF1 to FGFRL1-expressing cells under the tested conditions."
+            limitations = "Retain the FGFRL1 decoy-receptor and selected-FGF specificity context; do not transfer canonical FGF1 binding to FGFRL1 without a new pair-specific assay or infer kinase signaling from a receptor lacking the canonical tyrosine-kinase domain."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
