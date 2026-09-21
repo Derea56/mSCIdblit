@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:MIA>ITGA4	MIA	ITGA4	M23B-E000682;M23B-E000787		represented_graph_alias	batch_120
+LR:MIA>ITGA5	MIA	ITGA5	M23B-E000787		represented_graph_alias	batch_120
+LR:MIA>ITGB1	MIA	ITGB1	M23B-E000682;M23B-E000787		represented_graph_alias	batch_120
+LR:MMP12>PLAUR	MMP12	PLAUR	M21B-E006609		represented_graph_alias	batch_120
+LR:MMP13>LRP1	MMP13	LRP1	M21B-E003064		represented_graph_alias	batch_120
+LR:MMP9>LRP1	MMP9	LRP1	M21B-E003092;M23B-E001078		represented_graph_alias	batch_120
+LR:MSMP>CCR2	MSMP	CCR2	M21B-E007000		represented_graph_alias	batch_120
+LR:NCAM1>NCAM1	NCAM1	NCAM1	M23B-E000219		represented_graph_alias	batch_120
+LR:NDP>FZD4	NDP	FZD4	M21B-E005583		represented_graph_alias	batch_120
+LR:NECTIN1>NECTIN3	NECTIN1	NECTIN3	M21B-E002203		represented_graph_alias	batch_120
