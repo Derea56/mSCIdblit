@@ -529,6 +529,231 @@ def main() -> None:
             species = "human"
             summary = "The graph already contains the primary-supported PD-L1/CD274-to-B7-1/CD80 cis interaction in the reverse orientation."
             limitations = "Preserve the cis interaction orientation and human biochemical/cell-adhesion context; do not add a duplicate CD80-to-CD274 edge or infer canonical trans signaling."
+        elif row.get("review_batch") == "batch_015":
+            # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
+            # machinery, receptor-complex encodings, self-loops, and several
+            # locator mismatches. Keep those distinctions explicit here so a
+            # public-database row is never promoted merely because a pathway
+            # database or family annotation names the same components.
+            if ligand == "CD1D2" and receptor == "PIRA2":
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E011624"
+                primary = ["PMID:42045157", "PMCID:PMC13253836", "DOI:10.1038/s41419-026-08789-9"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse; human"
+                summary = "A current primary study directly identifies CD1d1/CD1d2 as PIRA2/LILRA2 ligands, confirms direct interaction, and reports FcRgamma-ITAM and macrophage inflammatory outputs."
+                limitations = "Preserve the CD1d1/CD1d2 and murine PIRA2/LILRA2 domain, reporter, macrophage and NAFLD contexts; the edge supports receptor-proximal and functional evidence but does not assert a universal intracellular route or SCI transfer."
+            elif ligand == "CD1D1" and receptor == "CEACAM5":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E002921"
+                primary = ["PMID:24104458", "PMCID:PMC3981948"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "The primary study supports CEACAM5/CD66e B3-domain binding to CD1d in the reverse orientation of the public CD1D1-to-CEACAM5 row."
+                limitations = "Preserve CEACAM5 domain, CD1d and intestinal/T-cell context; do not add a duplicate reverse edge or transfer the result to CEACAM1/CEACAM2 paralogs."
+            elif ligand == "CD8A" and receptor == "CEACAM5":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E002920"
+                primary = ["PMID:24104458", "PMCID:PMC3981948"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "The primary study supports CEACAM5/CD66e N-domain binding to CD8alpha in the reverse orientation of the public CD8A-to-CEACAM5 row."
+                limitations = "Preserve CEACAM5 domain, CD8alpha and intestinal/T-cell context; do not add a duplicate reverse edge or transfer the result to CEACAM1/CEACAM2 paralogs."
+            elif ligand == "CD46" and receptor == "JAG1":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E005467"
+                primary = ["PMID:23086448"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "The graph contains the primary-supported Jagged1-to-CD46 interaction in the reverse orientation of the public CD46-to-JAG1 row."
+                limitations = "Preserve the human CD46/Jagged1 Th1-immunity context; do not add a duplicate reverse edge or infer a complete Notch-like route."
+            elif ligand in {"CD99"} and receptor in {"PILRB1", "PILRB2"}:
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E002915"
+                primary = ["PMID:18234675", "PMID:18209065", "PMCID:PMC2577149"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse; human comparator"
+                summary = "The graph contains the CD99/D4-to-PILRB/PILRbeta interaction under the PILRB1/PILRB2 alias family; the reviewed primary supports O-glycosylated CD99 recognition by paired Ig-like receptors."
+                limitations = "Preserve glycoform, paired-receptor, species and cell-assay boundaries; do not infer a universal PILRB paralog assignment or complete signaling route."
+            elif ligand == "CEACAM1" and receptor == "CEACAM5":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E005471"
+                primary = ["PMID:15905509"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "The graph contains the primary-supported CEACAM5-to-CEACAM1 heterophilic interaction in the reverse orientation of the public CEACAM1-to-CEACAM5 row."
+                limitations = "Preserve CEACAM glycoform and adhesion context; do not add a duplicate reverse edge or infer intracellular signaling from adhesion alone."
+            elif ligand == "CGA+TSHB" and receptor == "TSHR":
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E001403"
+                primary = ["PMID:12045259"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "as stated in primary model/assay"
+                summary = "The public CGA+TSHB composite is retained as a TSH ligand-form alias for the existing TSH-to-TSHR edge."
+                limitations = "The cited locator is not the primary TSHR ligand study in this release; preserve mature TSH and receptor context and do not treat the CGA/TSHB gene composite as an independently verified ligand form."
+            elif ligand in {"ANXA1"} and receptor == "FPR2+FPR3":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000709"
+                primary = ["PMID:22610094"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "as stated in primary model/assay"
+                summary = "ANXA1/FPR2 evidence overlaps the composite FPR2+FPR3 row, but the complete multi-receptor topology is not asserted as one edge."
+                limitations = "Retain the exact ANXA1-FPR2 evidence and require a primary FPR3 component assay before promoting the composite."
+            elif ligand == "APOA1" and receptor == "TREM2+TYROBP":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E003868;M21B-E001120"
+                primary = ["PMID:26374899", "PMCID:PMC4646257", "PMID:11602640", "PMCID:PMC2193511"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human"
+                summary = "Primary evidence supports ApoA-I binding to TREM2 and a separate TREM2-DAP12/TYROBP receptor-complex association, but not one ApoA-I-to-TREM2:TYROBP composite edge."
+                limitations = "Keep ligand binding and receptor-adaptor assembly as separate traversable evidence layers; do not collapse the complex or infer ligand-specific DAP12 activation without direct evidence."
+            elif ligand in {"APOA2", "APP"} and receptor == "TREM2+TYROBP":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The public row is a composite TREM2/TYROBP representation, but its cited locators do not verify the exact APOA2 or APP ligand-to-complex interaction in this pass."
+                limitations = "Do not transfer ApoA-I-to-TREM2 evidence to APOA2 or APP; retain each candidate for exact ligand and receptor-complex primary review."
+            elif ligand == "CD200" and receptor == "CD200R1L":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000190"
+                primary = ["PMID:15557172"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "mouse"
+                summary = "The cited biology supports canonical CD200-CD200R1, while CD200R1L is a receptor-paralog label not verified as the same primary receptor in the current graph."
+                limitations = "Retain the exact CD200-CD200R1 edge; do not extend it to CD200R1L by family membership or alias inference."
+            elif ligand == "CD276" and receptor == "TREML2":
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:18650384", "PMID:19544488", "PMID:24328742", "PMID:31044564"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse; human comparator"
+                summary = "B7-H3/CD276-TLT2/TREML2 is contested: one primary study reports counter-receptor activity, while other primary studies report no interaction; the cited 31044564 locator is not an interaction study."
+                limitations = "Keep as a contested contextual candidate; do not materialize a direct edge until the conflicting primary evidence is reconciled for species, construct and assay context."
+            elif ligand in {"CEACAM1", "CEACAM2"} and receptor in {"CD1D1", "CD1D2", "CD8A"}:
+                disposition = "no_primary_evidence_found"
+                primary = ["PMID:24104458"]
+                layer = "candidate_only_review_locator"
+                species = "human"
+                summary = "The cited CEACAM5 study supports CD1d/CD8alpha interactions for CEACAM5, not the CEACAM1 or CEACAM2 paralog rows."
+                limitations = "Do not transfer CEACAM5 domain evidence to CEACAM1/CEACAM2; retain these rows for exact-paralog primary review."
+            elif (ligand, receptor) in {("CEACAM1", "CEACAM2"), ("CEACAM2", "CEACAM2")}:
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:21982860"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "as stated in primary model/assay"
+                summary = "The public locator does not establish the exact CEACAM1-CEACAM2 or CEACAM2 homophilic edge; the graph export contract also disallows self-loop materialization for CEACAM2."
+                limitations = "Retain only exact primary-supported CEACAM adhesion pairs; do not encode CEACAM2-to-CEACAM2 as a self-loop."
+            elif (ligand, receptor) in {("CEACAM1", "PSG20"), ("CEACAM2", "PSG20")}:
+                disposition = "no_primary_evidence_found"
+                primary = ["PMID:24743304"]
+                layer = "candidate_only_review_locator"
+                summary = "The cited locator concerns soluble CEACAM8 interaction with CEACAM1, not CEACAM1/CEACAM2 interaction with PSG20."
+                limitations = "Do not infer PSG20 binding from the CEACAM8-CEACAM1 study or family-level database membership."
+            elif ligand == "BAG6" and receptor == "NCR3PS":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses the NCR3PS pseudogene/paralog label, whereas the primary BAG6 ligand evidence concerns the NKp30/NCR3 receptor."
+                limitations = "Retain the exact BAG6-fragment-to-NCR3/NKp30 edge; do not transfer it to NCR3PS without an exact receptor assay."
+            elif ligand == "CDH12" and receptor == "ITGA1+ITGB1":
+                disposition = "no_primary_evidence_found"
+                primary = ["PMID:34385456"]
+                layer = "candidate_only_review_locator"
+                summary = "The cited locator did not verify an exact CDH12-to-alpha1beta1 integrin interaction in the current pass."
+                limitations = "Require direct CDH12/ITGA1:ITGB1 binding or receptor-proximal evidence before promotion."
+            elif ligand == "COL4A1" or (ligand.startswith("COL4A") and receptor == "ADGRG6"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E000934"
+                primary = ["PMID:25118328", "PMCID:PMC4159047"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "mouse; human comparator"
+                summary = "The collagen-IV family rows map to the existing collagen-IV-to-ADGRG6/GPR126 edge; the cited public locator is a review-level family record rather than the primary interaction locator."
+                limitations = "Preserve collagen-IV family and ADGRG6/GPR126 assay context; do not treat each COL4A paralog as independently resolved from the family alias."
+            elif ligand.startswith("COL4A") and receptor == "ADGRG6":
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E000934"
+                primary = ["PMID:25118328", "PMCID:PMC4159047"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "mouse; human comparator"
+                summary = "The collagen-IV family row maps to the existing collagen-IV-to-ADGRG6/GPR126 edge."
+                limitations = "Preserve family and assay boundaries; do not treat each COL4A paralog as independently resolved."
+            elif ligand in {"ASMT", "CEL", "CYP11B1+CYP11B2", "DAGLA", "DAGLB", "DBH+SLC18A1", "DBH+SLC18A2", "ALOX12", "ALOX5+ALOX5AP+LTC4S", "AKR1C18+AKR1C6+ALOX5+ALOX5AP+LTC4S"} or ligand.startswith("CHAT+"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses biosynthetic, enzymatic or vesicular-transport machinery as the ligand label rather than the mature secreted mediator or neurotransmitter assayed at the receptor."
+                limitations = "Retain mature mediator-to-receptor edges separately; do not materialize a gene/enzyme/transporter composite as a direct ligand-receptor edge."
+            elif ligand == "BMP8B" and "+" in receptor:
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:26893264"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "mouse"
+                summary = "The row is a BMP8B multi-subunit receptor-complex prediction from pathway/database context, not an exact primary assay of the complete receptor composite."
+                limitations = "Require exact BMP8B receptor-complex binding or activation evidence before promotion; do not split the composite into unsupported subunit edges."
+            elif ligand == "ANXA1" and receptor.startswith("FPRRS"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:33082511"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "mouse"
+                summary = "The public row assigns ANXA1 to an Fpr-rs paralog family, but the exact mouse paralog interaction is not resolved by the current graph evidence."
+                limitations = "Retain exact ANXA1-FPR2/FPR1 evidence; require paralog-specific primary receptor assays before promotion."
+            elif ligand == "CLDN1" or ligand == "CLDN2" or ligand == "CLDN3":
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:31942240"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "as stated in primary model/assay"
+                summary = "Primary claudin adhesion evidence is retained as contextual homophilic/junctional evidence, but the graph export contract disallows self-loop edges."
+                limitations = "Do not encode claudin self-loops or infer a signaling relay from junctional association alone."
+            elif ligand == "CTSG" and receptor == "FPR1":
+                disposition = "no_primary_evidence_found"
+                primary = ["PMID:26516201"]
+                layer = "candidate_only_review_locator"
+                species = "human; mouse"
+                summary = "The cited primary establishes ANXA1-FPR1-dependent anticancer immunity, not a direct cathepsin-G-to-FPR1 interaction; cathepsin-G/FPR1 is retained only as a future targeted candidate."
+                limitations = "Do not promote CTSG-FPR1 from an IUPHAR/family annotation or a locator that names ANXA1; require an exact CTSG ligand assay."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The batch row was reviewed, but no exact primary experiment was verified for this ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not materialize an edge from database membership, family context, or an unverified locator alone."
+        elif row.get("review_batch") == "batch_001":
+            if ligand in {"GAD1", "GAD2"} or ligand.startswith(("GAD1+", "GAD2+")):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses GAD1 plus GABA synthesis or transport machinery as the ligand label rather than mature extracellular GABA."
+                limitations = "Do not materialize enzyme/transporter-to-GABA-receptor edges; retain mature GABA-to-receptor evidence only when the ligand form and receptor assay are explicit."
+            elif ligand in {"FGB", "FGG"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Fibrinogen-chain labels in the public prediction are extracellular structural components, not an explicitly defined mature signaling ligand for the listed receptor."
+                limitations = "Require an exact fibrinogen form, receptor identity and primary binding or functional assay before treating this as a ligand-receptor edge."
+            elif ligand in {"FGF11", "FGF12", "FGF13", "FGF14"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "FGF11-14 are intracellular FGF homologous factors and are not treated as secreted FGF receptor ligands in this graph layer."
+                limitations = "Represent intracellular FGF homologous-factor functions separately; do not materialize an extracellular FGF-to-FGFR edge from the public prediction alone."
+            elif ligand == "FGF15" and receptor == "KLB":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                species = "mouse"
+                summary = "FGF15 biology requires an FGFR/β-Klotho receptor complex; the public FGF15-to-KLB row alone does not assert the complete receptor topology."
+                limitations = "Retain exact FGF15/FGFR/β-Klotho complex evidence when available; do not materialize KLB as a standalone FGF15 receptor."
+            elif ligand.startswith("FGF"):
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_unverified"
+                summary = "The public database row names a mature FGF family ligand, but no exact primary assay for this ligand-receptor pair was verified in the current pass."
+                limitations = "Retain for targeted pair-specific primary review; do not transfer receptor specificity across FGF paralogs or infer a receptor complex from family membership."
+            elif ligand in {"FST", "FSTL5"}:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_unverified"
+                summary = "The public row names a follistatin-family interaction, but no exact primary ligand-receptor experiment for this pair was verified in the current pass."
+                limitations = "Require exact mature ligand, receptor complex, species and assay evidence before promotion; do not transfer activin/BMP family binding across paralogs."
+            elif ligand.startswith("GLS+"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses glutamate synthesis and transport machinery as a composite ligand label rather than mature extracellular glutamate."
+                limitations = "Do not materialize GLS/SLC-to-glutamate-receptor edges; retain mature glutamate-to-receptor evidence only when the ligand form and receptor assay are explicit."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_unverified"
+                summary = "No exact primary experiment was verified for this database-only candidate in the current pass."
+                limitations = "Retain for targeted discovery; do not materialize a graph edge from public-database membership alone."
         elif ligand == "POMC" and receptor in {"MC3R", "MC4R"}:
             disposition = "reject_precursor_or_non_edge_form"
             layer = "candidate_only_unverified"
