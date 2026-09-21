@@ -1,0 +1,8 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:SEMA4A>PLXNB2	SEMA4A	PLXNB2	M21B-E006992	PMID:27533782	represented_graph_alias	batch_094
+LR:SEMA4A>PLXNB3	SEMA4A	PLXNB3	M21B-E007006	PMID:27533782	represented_graph_alias	batch_094
+LR:SEMA6A>PLXNA4	SEMA6A	PLXNA4	M21B-E002820	PMID:27533782	represented_graph_alias	batch_094
+LR:SEMA6B>PLXNA4	SEMA6B	PLXNA4	M21B-E007005	PMID:27533782	represented_graph_alias	batch_094
+LR:SEMA3B>NRP2+PLXNA1	SEMA3B	NRP2+PLXNA1	M21B-E005123	PMID:27533782	represented_graph_alias	batch_094
+LR:SEMA3C>NRP1+NRP2+PLXND1	SEMA3C	NRP1+NRP2+PLXND1	M21B-E000491;M21B-E000492;M23B-E000858	PMID:27533782	represented_graph_alias	batch_094
+LR:SEMA3C>PLXND1	SEMA3C	PLXND1	M21B-E006550;M23B-E000858	PMID:27533782	represented_graph_alias	batch_094
