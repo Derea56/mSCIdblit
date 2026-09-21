@@ -1,0 +1,7 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:PMCH>MERTK	PMCH	MERTK		PMID:25265470; PMID:11825022	primary_review	batch_090
+LR:TNC>SDC1	TNC	SDC1		PMID:11731446	primary_review	batch_090
+LR:COL2A1>CD44	COL2A1	CD44		PMID:1730778	primary_review	batch_090
+LR:LAMC3>CD44	LAMC3	CD44		PMID:1730778; PMID:10225960; PMID:18697739	primary_review	batch_090
+LR:THBS2>SDC1	THBS2	SDC1		PMID:11257118	primary_review	batch_090
+LR:THBS4>SDC1	THBS4	SDC1		PMID:11257118	primary_review	batch_090
