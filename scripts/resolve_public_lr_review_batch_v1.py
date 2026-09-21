@@ -3712,6 +3712,80 @@ def main() -> None:
                 limitations = "Preserve the possibility of an assembled integrin complex and thrombospondin-domain context; do not promote isolated THBS2-ITGB3 binding or infer downstream, SCI or terminal-TF evidence from the frozen row."
             else:
                 raise SystemExit(f"unhandled batch 182 pair: {pair}")
+        elif row.get("review_batch") == "batch_183":
+            pair = (ligand, receptor)
+            if pair == ("THBS4", "ITGAV"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMCID:PMC2993182"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary complex-level evidence supports THBS4 engagement of assembled alphaVbeta3 in the stated matrix or adhesion context."
+                limitations = "Preserve alphaVbeta3 heterodimer and thrombospondin domain/context; do not split alphaV from beta3, infer autonomous ITGAV signaling or assign SCI/terminal-TF output."
+            elif pair == ("THBS4", "ITGB3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMCID:PMC2993182"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary complex-level evidence supports THBS4 engagement of assembled alphaVbeta3 in the stated matrix or adhesion context."
+                limitations = "Preserve alphaVbeta3 heterodimer and thrombospondin domain/context; do not split beta3 from alphaV, infer autonomous ITGB3 signaling or assign SCI/terminal-TF output."
+            elif pair == ("THY1", "ITGAM"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:15004192", "PMID:16374458"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary endothelial and leukocyte-adhesion studies support Thy-1 engagement of assembled alphaMbeta2/Mac-1 in cell-adhesion and blockade contexts."
+                limitations = "Preserve Mac-1 alphaMbeta2 heterodimer, endothelial Thy-1 presentation and inflammatory adhesion assay context; do not split alphaM from beta2, infer free ITGAM signaling or assign SCI/terminal-TF output."
+            elif pair == ("THY1", "ITGAV"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:11470407", "PMID:22479590", "PMID:18346467", "PMID:23481656"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse; rat; mixed"
+                summary = "Primary recombinant-protein and neuronal/astrocyte studies support Thy-1 engagement of assembled alphaVbeta3, with focal-adhesion and neurite-growth/retraction outputs."
+                limitations = "Preserve trans versus cis topology, Thy-1 RLD motif, alphaVbeta3 heterodimer, syndecan-4 co-receptor and astrocyte-neuron context; do not export autonomous ITGAV signaling or infer SCI output."
+            elif pair == ("THY1", "ITGAX"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:15850796"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "Primary purified-protein kinetics and interface-mutant studies support divalent-cation-dependent Thy-1 binding to the alphaX I-domain, interpreted in the alphaXbeta2 integrin context."
+                limitations = "Preserve alphaX I-domain biochemical scope, divalent-cation dependence and alphaXbeta2 heterodimer interpretation; do not infer isolated ITGAX signaling, a downstream relay or SCI output."
+            elif pair == ("THY1", "ITGB2"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:15850796", "PMID:16374458", "PMID:15004192"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary biochemical and cell-adhesion studies support Thy-1 interaction with beta2-containing alphaXbeta2 and alphaMbeta2/Mac-1 integrin complexes."
+                limitations = "Preserve the distinct alphaXbeta2 versus alphaMbeta2 complexes and assay-specific I-domain or blockade context; do not promote free ITGB2 signaling, collapse complexes or assign SCI/terminal-TF output."
+            elif pair == ("THY1", "ITGB3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:11470407", "PMID:22479590", "PMID:18346467", "PMID:23481656"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse; rat; mixed"
+                summary = "Primary recombinant-protein and neuronal/astrocyte studies support Thy-1 engagement of assembled alphaVbeta3, with focal-adhesion and neurite-growth/retraction outputs."
+                limitations = "Preserve trans versus cis topology, Thy-1 RLD motif, alphaVbeta3 heterodimer, syndecan-4 co-receptor and astrocyte-neuron context; do not split beta3 from alphaV or infer SCI output."
+            elif pair == ("TLN1", "ITGB5"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMCID:PMC2777537", "PMCID:PMC9234671"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human"
+                summary = "Primary intracellular scaffold studies support talin binding to the ITGB5 cytoplasmic tail in alphaVbeta5/phagocytic-complex contexts."
+                limitations = "Treat this as an intracellular cytoplasmic-tail/scaffold interaction rather than an extracellular ligand-receptor edge; preserve alphaVbeta5 and phagocytic expression context and do not infer a soluble ligand route, SCI or terminal-TF output."
+            elif pair == ("TMPRSS6", "HJV"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:25704252", "PMCID:PMC4395201", "DOI:10.1159/000368371"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mixed"
+                summary = "Primary co-expression, mutagenesis and fragment-mapping studies support TMPRSS6 proteolytic cleavage of cell-surface hemojuvelin at mapped Arg sites in vitro."
+                limitations = "Promote only the in-vitro proteolytic processing edge; in-vivo TMPRSS6 substrate status remains debated, so do not infer systemic causality, canonical ligand-receptor signaling, SCI or terminal-TF activity."
+            elif pair == ("TNC", "ITGA2"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:7693733", "DOI:10.1242/jcs.105.4.1001"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary endothelial adhesion and receptor-identification studies support TNC engagement of assembled alpha2beta1 in a matrix context."
+                limitations = "Preserve tenascin-C isoform/domain and alpha2beta1 heterodimer presentation; do not split alpha2 from beta1, infer universal TNC signaling or assign SCI/terminal-TF output."
+            else:
+                raise SystemExit(f"unhandled batch 183 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
