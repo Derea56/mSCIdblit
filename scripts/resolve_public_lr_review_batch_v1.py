@@ -3217,6 +3217,67 @@ def main() -> None:
                 limitations = "Preserve HEV-derived PCLP/PODXL glycoform, sulfated mucin-domain and flow context, distinct from podocyte antiadhesive functions; do not infer an intracellular PODXL relay or SCI signaling."
             else:
                 raise SystemExit(f"unhandled batch 175 pair: {pair}")
+        elif row.get("review_batch") == "batch_176":
+            pair = (ligand, receptor)
+            if pair == ("PRG4", "CD44"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:25708025", "DOI:10.1002/art.39087"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary ELISA/SPR and synoviocyte studies support full-length PRG4/lubricin binding to CD44 and CD44-dependent suppression of cytokine-induced proliferation."
+                limitations = "Preserve recombinant full-length PRG4, glycosylation and CD44 competition with hyaluronan; this is inhibitory signaling modulation rather than a productive CD44 relay, with no SCI or terminal-TF output inferred."
+            elif pair in {("PRG4", "TLR2"), ("PRG4", "TLR4")}:
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:26752378", "PMCID:PMC4707532", "DOI:10.1038/srep18910", "PMID:26643105", "PMCID:PMC4672561"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                receptor_name = "TLR2" if receptor == "TLR2" else "TLR4"
+                summary = f"Primary purified-protein binding and reporter studies support PRG4/lubricin binding to {receptor_name} and blockade of agonist-driven receptor activity."
+                limitations = f"Preserve PRG4 as an antagonist/competitor rather than a productive {receptor_name} agonist; recombinant-protein concentration, synovial-fluid and assay-context limits apply, with no SCI or terminal-TF output inferred."
+            elif pair == ("PSPN", "GFRA4"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:11116144", "PMID:9740802"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human"
+                summary = "Primary displacement, cross-linking and functional studies support persephin/PSPN binding to GFRA4 within the GFRA4:RET receptor complex, with RET autophosphorylation and sympathetic-neuron survival outputs."
+                limitations = "Promote only at the exact PSPN-GFRA4-RET topology; preserve GFRA4 as ligand-binding subunit and RET as signaling kinase, with thyroid/cell-line and sympathetic-neuron comparator limits and no SCI/glial inference."
+            elif pair == ("PSPN", "RET"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:11116144", "PMID:9740802"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human"
+                summary = "Primary studies support PSPN-mediated RET activation through the GFRA4:RET receptor complex, but do not establish isolated PSPN-RET binding."
+                limitations = "Preserve GFRA4 as the ligand-binding co-receptor and RET as the signaling kinase; do not materialize a free RET ligand edge or infer SCI/glial signaling."
+            elif pair in {("PTN", "ITGAV"), ("PTN", "ITGB3")}:
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:19141530", "DOI:10.1096/fj.08-117564"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human"
+                summary = "Primary work supports PTN engagement of assembled alphaVbeta3 in a PTPRZ1/c-Src migration context and PTN-associated beta3 phosphorylation, but not isolated PTN binding to a single integrin subunit."
+                limitations = "Preserve assembled alphaVbeta3 and PTPRZ1 requirement; do not split ITGAV from ITGB3, assign a standalone PTN-integrin kinase pathway or infer SCI-specific migration output."
+            elif pair == ("PTPRC", "CD247"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMCID:PMC45139", "DOI:10.1073/pnas.91.23.10928"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mixed"
+                summary = "Primary substrate-trapping and phosphatase assays support CD45/PTPRC dephosphorylation of phosphorylated CD3-zeta/CD247 as a bounded TCR termination step, not an extracellular ligand-receptor interaction."
+                limitations = "Preserve intracellular TCR substrate topology and purified phosphatase context; do not treat PTPRC as a soluble ligand, assign individual ITAM tyrosines or infer SCI/terminal-TF output."
+            elif pair == ("PVR", "CD96"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:15034010", "DOI:10.4049/jimmunol.172.7.3994", "PMID:19056733", "DOI:10.1074/jbc.M807698200"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary NK-cell and receptor-domain studies support PVR/CD155 binding to CD96/TACTILE with isoform/domain-dependent NK adhesion and cytotoxicity outputs."
+                limitations = "Preserve CD96 splice-variant and species dependence and NK adhesion/cytotoxicity context; do not assume uniformly activating or inhibitory function or infer SCI signaling."
+            elif pair == ("RAET1E", "KLRK1"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:12732206", "DOI:10.1016/S0006-291X(03)00714-9"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary transduction, recombinant-binding and NK-cell assays support ULBP4/RAET1E binding to NKG2D/KLRK1 with DAP10-context cytotoxicity."
+                limitations = "Preserve transmembrane ULBP4, NKG2D/DAP10 context and isoform/shedding limits; do not infer SCI or terminal-TF output."
+            else:
+                raise SystemExit(f"unhandled batch 176 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
