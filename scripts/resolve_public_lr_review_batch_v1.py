@@ -380,6 +380,13 @@ def main() -> None:
             species = "mouse"
             summary = "Primary CD200-receptor-family work distinguishes the canonical CD200-CD200R interaction from CD200R-related activating receptors, while CD200Fc studies report CD200R3 expression and microglial outputs without establishing direct CD200 binding to CD200R3."
             limitations = "Retain CD200-CD200R1 as the canonical ligand-receptor edge; keep CD200R3 as a receptor-family and functional-context hold until an exact CD200-CD200R3 binding or receptor-dependent ligand assay is identified."
+        elif ligand == "CEACAM2" and receptor == "SELE":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:1378450"]
+            species = "human"
+            summary = "Primary neutrophil-endothelial adhesion work supports CEA-like CD66/NCA molecules as sialyl-Lewis-x presenters participating in E-selectin-dependent adhesion, but does not resolve CEACAM2 as the exact ligand molecule."
+            limitations = "Retain as CEACAM-family/selectin adhesion context; do not materialize a CEACAM2-SELE binary edge without paralog-specific binding or perturbation evidence."
         elif ligand in {"C4A", "CCL1", "CCL8", "CEACAM2"}:
             disposition = "no_primary_evidence_found"
             layer = "candidate_only_review_locator"
@@ -1917,12 +1924,12 @@ def main() -> None:
                 summary = "ALDH1A-family labels are retinoid-metabolizing enzymes; the composite rows with CRABP/RAR/RXR or RORB do not represent a mature extracellular ligand acting on those receptors."
                 limitations = "Represent retinoic-acid production and nuclear-receptor activation only when the mature retinoid, receptor and primary assay are explicit; do not materialize enzyme-to-receptor composites as ligand edges."
             elif ligand == "ALKAL1" and receptor == "ALK":
-                disposition = "no_primary_evidence_found"
-                layer = "candidate_only_review_locator"
-                primary = ["PMID:25331893", "DOI:10.1073/pnas.1414841111"]
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = ["PMID:34646012", "PMID:25331893", "DOI:10.1073/pnas.1412009111"]
                 species = "human"
-                summary = "The graph contains primary-supported ALKAL1/FAM150A activation of LTK, whereas the reviewed primary-supported ALK edge is ALKAL2/FAM150B; ALKAL1-to-ALK was not verified here."
-                limitations = "Preserve the ligand-specific ALKAL1-LTK and ALKAL2-ALK relationships; do not transfer ALKAL2 specificity to ALKAL1 without an exact ALKAL1/ALK primary assay."
+                summary = "Primary structure-function work supports ALKAL1/FAM150A engagement of the ALK-family receptor system, including ALK-complex formation, while an independent extracellular-proteome screen establishes ALKAL1 as a high-affinity activating ligand for the related LTK receptor."
+                limitations = "Treat ALKAL1-ALK as a bounded receptor-complex candidate with receptor-preference and assay-context constraints; do not equate it with the stronger ALKAL2-ALK activation route or infer a complete intracellular/TF chain."
             elif ligand == "ALOX5AP" and receptor == "ALOX5":
                 disposition = "reject_precursor_or_non_edge_form"
                 layer = "candidate_only_unverified"
@@ -2284,6 +2291,13 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "CDCP1 is a transmembrane receptor-like protein that can participate in EGFR and Src-family crosstalk, but the public row does not establish a conventional soluble CDCP1-to-EGFR ligand mechanism."
                 limitations = "Represent receptor crosstalk and proteolytic processing in receptor-proximal layers; do not materialize CDCP1-to-EGFR as a canonical ligand edge without direct extracellular binding evidence."
+            elif ligand == "CDH12" and receptor == "ITGA1+ITGB1":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = ["PMID:34385456"]
+                species = "human"
+                summary = "Primary spatial and single-cell profiling links CDH12-enriched tumor cells with CD49a/ITGA1-positive exhausted T-cell neighborhoods, but the study does not establish direct CDH12 binding to an ITGA1:ITGB1 receptor complex."
+                limitations = "Retain as a cell-neighborhood and integrin-context hold; require direct CDH12-ITGA1:ITGB1 binding or receptor-proximal perturbation before promotion as a binary edge."
             elif ligand.startswith("CDH"):
                 disposition = "hold_contextual_or_complex_boundary"
                 layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
@@ -2291,6 +2305,13 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "Cadherin-family candidates represent homophilic or heterophilic cell-adhesion and crosstalk contexts, but the public rows do not resolve exact trans orientation and pair-specific primary support for each target."
                 limitations = "Preserve cadherin isoform, cis/trans orientation and adhesion context; do not infer soluble ligand signaling or transfer evidence across cadherin paralogs without an exact primary assay."
+            elif ligand == "CEACAM2" and receptor == "SELE":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = ["PMID:1378450"]
+                species = "human"
+                summary = "Primary neutrophil-endothelial adhesion work supports CEA-like CD66/NCA molecules as sialyl-Lewis-x presenters participating in E-selectin-dependent adhesion, but does not resolve CEACAM2 as the exact ligand molecule."
+                limitations = "Retain as CEACAM-family/selectin adhesion context; do not materialize a CEACAM2-SELE binary edge without paralog-specific binding or perturbation evidence."
             elif ligand.startswith("CEACAM"):
                 disposition = "hold_contextual_or_complex_boundary"
                 layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
@@ -2435,6 +2456,13 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "CSF-family cytokines require exact receptor subunit complexes, while the public rows isolate alternate subunits or list integrin targets that were not verified as direct CSF ligand receptors in this pass."
                 limitations = "Retain CSF1-CSF1R and CSF2-CSF2RA:CSF2RB receptor-complex boundaries; require exact receptor composition and primary assay before promoting alternate subunit or integrin rows."
+            elif ligand == "CTSG" and receptor == "FPR1":
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:15210802", "DOI:10.4049/jimmunol.173.1.428"]
+                species = "human; rat"
+                summary = "Primary chemotaxis and receptor-transfectant experiments identify cathepsin G as an FPR1 agonist: FPR1-dependent migration, receptor internalization, weak MAPK activation and PKCζ-dependent chemotactic signaling were observed."
+                limitations = "Promote as a bounded protease-to-FPR1 inflammatory route; the study reports weaker and atypical signaling than fMLP, and does not establish a universal intracellular relay or terminal-TF output."
             elif ligand in {"CTSD", "CTSG"}:
                 disposition = "reject_precursor_or_non_edge_form"
                 layer = "candidate_only_unverified"
@@ -3795,6 +3823,34 @@ def main() -> None:
                 layer = "candidate_only_review_locator"
                 summary = "No exact primary experiment was verified for this oligodendrocyte-myelin glycoprotein-to-receptor pair in the current pass."
                 limitations = "Retain established myelin-inhibitory receptor-complex evidence separately; do not transfer Nogo-receptor-family context to LINGO1, NGFR or TNFRSF1B as isolated receptors."
+            elif ligand == "ALKAL1" and receptor == "ALK":
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = ["PMID:34646012", "PMID:25331893", "DOI:10.1073/pnas.1412009111"]
+                species = "human"
+                summary = "Primary structure-function work supports ALKAL1/FAM150A engagement of the ALK-family receptor system, including ALK-complex formation, while an independent extracellular-proteome screen establishes ALKAL1 as a high-affinity activating ligand for the related LTK receptor."
+                limitations = "Treat ALKAL1-ALK as a bounded receptor-complex candidate with receptor-preference and assay-context constraints; do not equate it with the stronger ALKAL2-ALK activation route or infer a complete intracellular/TF chain."
+            elif ligand == "CTSG" and receptor == "FPR1":
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:15210802", "DOI:10.4049/jimmunol.173.1.428"]
+                species = "human; rat"
+                summary = "Primary chemotaxis and receptor-transfectant experiments identify cathepsin G as an FPR1 agonist: FPR1-dependent migration, receptor internalization, weak MAPK activation and PKCζ-dependent chemotactic signaling were observed."
+                limitations = "Promote as a bounded protease-to-FPR1 inflammatory route; the study reports weaker and atypical signaling than fMLP, and does not establish a universal intracellular relay or terminal-TF output."
+            elif ligand == "CDH12" and receptor == "ITGA1+ITGB1":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = ["PMID:34385456"]
+                species = "human"
+                summary = "Primary spatial and single-cell profiling links CDH12-enriched tumor cells with CD49a/ITGA1-positive exhausted T-cell neighborhoods, but the study does not establish direct CDH12 binding to an ITGA1:ITGB1 receptor complex."
+                limitations = "Retain as a cell-neighborhood and integrin-context hold; require direct CDH12-ITGA1:ITGB1 binding or receptor-proximal perturbation before promotion as a binary edge."
+            elif ligand == "CEACAM2" and receptor == "SELE":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = ["PMID:1378450"]
+                species = "human"
+                summary = "Primary neutrophil-endothelial adhesion work supports CEA-like CD66/NCA molecules as sialyl-Lewis-x presenters participating in E-selectin-dependent adhesion, but does not resolve CEACAM2 as the exact ligand molecule."
+                limitations = "Retain as CEACAM-family/selectin adhesion context; do not materialize a CEACAM2-SELE binary edge without paralog-specific binding or perturbation evidence."
             elif ligand == "H60A" and receptor == "HCST+KLRK1":
                 disposition = "hold_contextual_or_complex_boundary"
                 matched_ids = "M21B-E002967"
