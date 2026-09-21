@@ -3786,6 +3786,78 @@ def main() -> None:
                 limitations = "Preserve tenascin-C isoform/domain and alpha2beta1 heterodimer presentation; do not split alpha2 from beta1, infer universal TNC signaling or assign SCI/terminal-TF output."
             else:
                 raise SystemExit(f"unhandled batch 183 pair: {pair}")
+        elif row.get("review_batch") == "batch_184":
+            pair = (ligand, receptor)
+            if pair == ("TNC", "ITGA8"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:7541634", "PMCID:PMC2692383"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mixed"
+                summary = "Primary neuronal and transfected-cell adhesion studies support TNC interaction with assembled alpha8beta1 and neurite outgrowth."
+                limitations = "Promote only bounded alpha8beta1/TNC fragment or substrate adhesion; preserve alpha8beta1 heterodimer and do not split alpha8, infer free ITGA8 signaling or assign SCI/terminal-TF output."
+            elif pair == ("TNC", "ITGA9"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:9565552", "PMID:7523411"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary mutagenesis, peptide-competition and recombinant-fragment studies support TNC FNIII3 interaction with assembled alpha9beta1 through the non-RGD IDG motif."
+                limitations = "Preserve TNC FNIII3 fragment and non-RGD IDG motif, alpha9beta1 heterodimer and adhesion-only scope; do not split alpha9, infer free ITGA9 signaling or assign SCI output."
+            elif pair == ("TNC", "ITGAV"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:7693733", "PMID:7505785", "PMID:23958855"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary endothelial receptor-identification and cancer-cell assays support TNC engagement of assembled alphaVbeta3, alphaVbeta6 and alphaVbeta1 integrin contexts."
+                limitations = "Preserve each alphaV heterodimer, TNC domain, RGD/metal-ion and cell-model context; do not export autonomous ITGAV signaling or infer SCI/terminal-TF output."
+            elif pair == ("TNC", "ITGB1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:7541634", "PMID:9565552", "PMID:7693733", "PMID:23958855", "PMID:14715956"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse; rat; mixed"
+                summary = "Primary studies support multiple TNC receptor complexes containing beta1, including alpha8beta1, alpha9beta1, alpha2beta1, alphaVbeta1 and alpha7beta1, with adhesion or neurite-outgrowth outputs."
+                limitations = "Preserve each assembled heterodimer and exact TNC isoform/domain or peptide context; do not promote free ITGB1 signaling, collapse distinct complexes or infer SCI/terminal-TF output."
+            elif pair == ("TNC", "ITGB3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:7693733", "PMID:7505785", "PMID:23958855"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary endothelial and cancer-cell studies support TNC engagement of assembled alphaVbeta3 in adhesion and cell-response contexts."
+                limitations = "Preserve alphaVbeta3 heterodimer and TNC domain/cell-model context; do not split beta3 from alphaV, infer free ITGB3 signaling or assign SCI output."
+            elif pair == ("TNC", "ITGB6"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:23958855"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary breast-cancer-cell receptor-association and neutralization studies support RGD/metal-ion-dependent TNC interaction with assembled alphaVbeta6 and an EMT-like response."
+                limitations = "Preserve human cancer-cell, RGD/metal-ion and alphaVbeta6 context; do not split beta6 from alphaV, infer a universal pathway or assign SCI/terminal-TF output."
+            elif pair == ("TNFSF11", "LGR4"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:27064449", "DOI:10.1038/nm.4076"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary binding, osteoclast differentiation and in-vivo bone-resorption studies support direct RANKL/TNFSF11 binding to LGR4 as a competitive alternative receptor that negatively modulates osteoclastogenesis."
+                limitations = "Preserve LGR4 as a competitive alternative to RANK, soluble extracellular-domain and osteoclast/bone context; do not infer productive RANK-like NF-kB signaling, SCI or terminal-TF evidence."
+            elif pair == ("TNN", "ITGA8"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_or_direct_molecular"
+                species = "mouse"
+                summary = "The current graph contains only a frozen tenascin-N/alpha8 alias; no stable pair-specific primary packet for isolated TNN-ITGA8 is available in this bundle."
+                limitations = "Preserve tenascin-N domain and assembled alpha8beta1 possibility; do not promote isolated TNN-ITGA8 binding or infer downstream, SCI or terminal-TF evidence from the frozen row."
+            elif pair == ("TNN", "ITGB1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_or_direct_molecular"
+                species = "mouse"
+                summary = "The current graph contains only a frozen tenascin-N/beta1 alias; no stable pair-specific primary packet for isolated TNN-ITGB1 is available in this bundle."
+                limitations = "Preserve tenascin-N domain and assembled beta1-containing integrin possibility; do not promote free ITGB1 signaling or infer downstream, SCI or terminal-TF evidence from the frozen row."
+            elif pair == ("TNXB", "ITGAV"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["https://febs.onlinelibrary.wiley.com/doi/10.1046/j.1432-1327.1999.00563.x"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary recombinant-fragment adhesion studies support a TN-X FNIII9-10 fragment engaging assembled alphaVbeta3 in an RGD-dependent context."
+                limitations = "Preserve TN-X FNIII9-10 fragment and alphaVbeta3 context; full-length TNXB showed little antibody-sensitive adhesion, so do not infer autonomous ITGAV binding, SCI or terminal-TF output."
+            else:
+                raise SystemExit(f"unhandled batch 184 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
