@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:VEGFD>FLT4	VEGFD	FLT4	M21B-E000360;M21B-E005134	PMID:16633338;KEGG: mmu04370	represented_graph_alias	batch_107
+LR:VEGFD>KDR	VEGFD	KDR	M21B-E000361	PMID:16633338;KEGG: mmu04370	represented_graph_alias	batch_107
+LR:ACE>BDKRB2	ACE	BDKRB2	M21B-E006572		represented_graph_alias	batch_107
+LR:ADAM10>EPHA3	ADAM10	EPHA3	M21B-E005637		represented_graph_alias	batch_107
+LR:ADAM12>ITGA9	ADAM12	ITGA9	M21B-E005635;M21B-E006610;M23B-E000464		represented_graph_alias	batch_107
+LR:ADAM12>ITGB1	ADAM12	ITGB1	M21B-E005635;M21B-E005636;M21B-E005645;M21B-E006610;M23B-E000464		represented_graph_alias	batch_107
+LR:ADAM15>ITGA5	ADAM15	ITGA5	M21B-E005593		represented_graph_alias	batch_107
+LR:ADAM15>ITGA9	ADAM15	ITGA9	M21B-E005594		represented_graph_alias	batch_107
+LR:ADAM15>ITGB1	ADAM15	ITGB1	M21B-E005593;M21B-E005594		represented_graph_alias	batch_107
+LR:ADAM15>ITGB3	ADAM15	ITGB3	M21B-E005592		represented_graph_alias	batch_107
