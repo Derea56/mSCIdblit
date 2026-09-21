@@ -1002,6 +1002,25 @@ def main() -> None:
             layer = "candidate_only_unverified"
             summary = "The current review pass did not verify an exact primary experiment for this LTF-to-receptor candidate."
             limitations = "Retain for targeted follow-up; do not materialize an edge from public-database membership or from evidence for an unidentified lactoferrin-binding site alone."
+        elif ligand == "CD40LG" and receptor == "TRAF3":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:10984535", "PMID:15708970", "PMID:24391649"]
+            species = "human and mouse CD40 signaling studies"
+            summary = "Primary structural, mutational and cell-signaling studies place TRAF3 on the cytoplasmic CD40 receptor complex and show CD40L-dependent NF-kB pathway modulation, but TRAF3 is an intracellular adaptor rather than the extracellular CD40LG receptor."
+            limitations = "Retain CD40LG-CD40-TRAF3 as a receptor-proximal continuation and intracellular signaling context; do not materialize CD40LG-TRAF3 as a direct ligand-receptor edge or infer a standalone TRAF3 receptor."
+        elif ligand == "CD40LG" and receptor == "CD9":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "downstream_or_functional"
+            primary = ["PMID:24918051"]
+            species = "human germinal-center B-cell assays"
+            summary = "Primary cell assays report that CD9-positive germinal-center B cells survive differently in CD40L-containing co-culture conditions, but do not establish CD9 as a direct CD40 ligand receptor or binding partner."
+            limitations = "Retain CD40L and CD9 as a cell-state/costimulatory context; require direct pair-specific binding or receptor-dependence before graph promotion and do not infer a CD9-initiated intracellular route."
+        elif ligand == "CD40LG":
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_unverified"
+            summary = "The current review pass did not verify an exact primary experiment for this CD40LG-to-listed-protein candidate."
+            limitations = "Retain CD40LG-CD40 and separately supported CD40 receptor-proximal machinery; do not materialize the listed candidate from family membership, co-expression or downstream pathway association alone."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
