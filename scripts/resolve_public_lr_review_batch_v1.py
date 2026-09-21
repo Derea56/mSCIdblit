@@ -2888,6 +2888,33 @@ def main() -> None:
                 "Module 20 aliases, and retain species and assay limits; these edges do not assert a "
                 "universal intracellular cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_170":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is represented by graph edge(s) {matched_ids}. "
+                "The existing edge-source records provide primary/comparator support for laminin-111, "
+                "laminin-221 and laminin-332 integrin binding, plus laminin-411 and laminin-511/521 "
+                "alpha6beta1/alpha6beta4 comparator support. The remaining laminin Module 20 rows retain "
+                "frozen ECM/integrin-family representation at the stated molecular resolution."
+            )
+            limitations = (
+                "Do not add duplicate edges or collapse laminin-111/221/332/411/511/521 heterotrimers and "
+                "ITGA2:ITGB1, ITGA3:ITGB1, ITGA6:ITGB1, ITGA6:ITGB4, or ITGA7:ITGB1 complexes into "
+                "autonomous single-chain receptors. Preserve laminin isoform, chain composition, alpha7 "
+                "splice-variant, ECM adhesion and hemidesmosome context, distinguish primary/comparator "
+                "evidence from frozen Module 20 aliases, and retain species and assay limits; these edges "
+                "do not assert a universal intracellular cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
