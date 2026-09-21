@@ -7,7 +7,7 @@
     "sha256": "31189239be3f4b6f91a87c92b1716ccac294f468279c7122693624c55c508732"
   },
   "candidate_units": 7753,
-  "completed_batch_review_units": 5600,
+  "completed_batch_review_units": 5700,
   "graph_input": {
     "direct_lr_edges": 8112,
     "path": "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion251/mechanism_edges.tsv",
@@ -28,8 +28,8 @@
   "prior_harvest_rows": 25,
   "resolution_ledger_input": {
     "path": "data/processed/public_database_comparison_v2/candidate_triage_v1/review_resolution_ledger.tsv",
-    "rows": 5600,
-    "sha256": "16f6bc8ffa0797f8ae48586bd789a9cb28ca6a637a22c8e2093fa27bacfa9258"
+    "rows": 5700,
+    "sha256": "f90d3e45e93996eaac44e048d0f198be397cea5c6d435da230c4f7290c91481e"
   },
   "review_batch_counts": {
     "batch_001": 100,
@@ -42,19 +42,18 @@
     "batch_008": 100,
     "batch_009": 100,
     "batch_010": 100,
-    "batch_011": 100,
-    "batch_012": 60
+    "batch_011": 60
   },
   "review_batch_size": 100,
   "review_lane_counts": {
-    "completed_batch_review": 5600,
+    "completed_batch_review": 5700,
     "completed_prior_harvest": 25,
-    "discovery_review": 1160,
+    "discovery_review": 1060,
     "represented_graph_alias": 960,
     "resolved_graph_match": 8
   },
-  "review_queue_rows": 1160,
+  "review_queue_rows": 1060,
   "review_queue_with_primary_locators": 0,
-  "review_queue_without_primary_locators": 1160,
+  "review_queue_without_primary_locators": 1060,
   "triage_id": "mSCIdblit:public-lr-candidate-triage-v1"
 }
