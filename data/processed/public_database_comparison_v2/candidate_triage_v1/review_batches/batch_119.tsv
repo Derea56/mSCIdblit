@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:LGALS1>PTPRC	LGALS1	PTPRC	M21B-E005484		represented_graph_alias	batch_119
+LR:LPL>LRP1	LPL	LRP1	M21B-E007129		represented_graph_alias	batch_119
+LR:LPL>LRP2	LPL	LRP2	M21B-E002943		represented_graph_alias	batch_119
+LR:LRIG1>EGFR	LRIG1	EGFR	M21B-E006144		represented_graph_alias	batch_119
+LR:LRPAP1>LRP1	LRPAP1	LRP1	M21B-E005634		represented_graph_alias	batch_119
+LR:LRRC4>NTNG2	LRRC4	NTNG2	M23B-E000670		represented_graph_alias	batch_119
+LR:LRRC4C>NTNG1	LRRC4C	NTNG1	M23B-E000674		represented_graph_alias	batch_119
+LR:LUM>ITGB1	LUM	ITGB1	M21B-E000890		represented_graph_alias	batch_119
+LR:MDK>SDC3	MDK	SDC3	M23B-E000680		represented_graph_alias	batch_119
+LR:MFGE8>ITGAV	MFGE8	ITGAV	M21B-E000209;M21B-E000210;M23B-E001075		represented_graph_alias	batch_119
