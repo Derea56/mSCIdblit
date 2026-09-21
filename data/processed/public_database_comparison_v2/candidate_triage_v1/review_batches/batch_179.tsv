@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:SEMA4B>PLXNB2	SEMA4B	PLXNB2	M21B-E005966	current bundle includes primary SEMA4B-PlexinB2 binding, receptor-dependent collapse and injury-associated microglial/macrophage functional outputs	represented_graph_alias	batch_179
+LR:SEMA6C>PLXNA1	SEMA6C	PLXNA1	M21B-E006664	current bundle includes primary direct Sema6C-PlexinA1 binding and developmental proprioceptive-axon guidance	represented_graph_alias	batch_179
+LR:SEMA6D>TREM2	SEMA6D	TREM2	M21B-E005119	current bundle represents SEMA6D through the PlexinA1-TREM2-DAP12 receptor complex, not isolated SEMA6D-TREM2 binding	represented_graph_alias	batch_179
+LR:SEMA7A>ITGA1	SEMA7A	ITGA1	M20B-E001677;M20B-E004877;M21B-E000646;M23B-E000264	current bundle includes primary SEMA7A engagement of the alpha1beta1 integrin complex and immune/neural functional context	represented_graph_alias	batch_179
+LR:SERPINF1>LRP6	SERPINF1	LRP6	M21B-E006380	current bundle includes primary PEDF binding to LRP6 and inhibition of Wnt3a-FZD-LRP6 receptor dimerization	represented_graph_alias	batch_179
+LR:SFTPD>LY96	SFTPD	LY96	M21B-E005562	current bundle includes primary direct calcium/carbohydrate-dependent SP-D binding to recombinant MD-2/LY96	represented_graph_alias	batch_179
+LR:SHH>PTCH1	SHH	PTCH1	M21B-E000204	current bundle includes primary native palmitoylated/cholesterylated SHH-PTCH1 binding and Hedgehog receptor assembly	represented_graph_alias	batch_179
+LR:SHH>PTCH2	SHH	PTCH2	M21B-E003220	current bundle includes primary labeled Hedgehog binding to PTCH2-expressing cells	represented_graph_alias	batch_179
+LR:SLIT2>APP	SLIT2	APP	M21B-E006529	current bundle includes primary Slit2-APP E1-domain binding, APP ectodomain shedding, FE65-Pak-Rac1 signaling and axon-repulsion output	represented_graph_alias	batch_179
+LR:SLITRK4>PTPRD	SLITRK4	PTPRD	M21B-E005402	current bundle includes a primary supplementary/screening observation of Slitrk4 LRR1 binding to PTP-delta, without Slitrk4-specific synaptogenic function	represented_graph_alias	batch_179

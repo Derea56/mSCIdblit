@@ -3417,6 +3417,80 @@ def main() -> None:
                 limitations = "Preserve NRP2 and class-A plexin complex topology; do not promote isolated SEMA3G-PLXNA2 binding or infer downstream, SCI or terminal-TF evidence from the frozen database row."
             else:
                 raise SystemExit(f"unhandled batch 178 pair: {pair}")
+        elif row.get("review_batch") == "batch_179":
+            pair = (ligand, receptor)
+            if pair == ("SEMA4B", "PLXNB2"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:38781210", "PMCID:PMC11145257", "DOI:10.1073/pnas.2400648121"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary injury-model, live-binding, receptor-collapse and loss-of-function studies support astrocytic SEMA4B engagement of PlexinB2 and enhanced microglial/macrophage reactivity."
+                limitations = "Preserve astrocyte-derived transmembrane SEMA4B, microglial/macrophage PlexinB2 and cortical-injury/DAMP context; do not infer traumatic-SCI transfer or terminal-TF output."
+            elif pair == ("SEMA6C", "PLXNA1"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:17145500", "PMCID:PMC1847564", "DOI:10.1016/j.neuron.2006.10.032"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse; chick"
+                summary = "Primary AP-tagged binding, affinity, developmental tissue and genetic studies support direct SEMA6C binding to PlexinA1 and PlexinA1-dependent proprioceptive-axon exclusion/guidance."
+                limitations = "Preserve PlexinA1 receptor context, the related Sema6D contribution and developmental mouse/chick model limits; do not infer traumatic-SCI or terminal-TF effects."
+            elif pair == ("SEMA6D", "TREM2"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:16715077", "DOI:10.1038/ncb1416"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary dendritic-cell and osteoclast studies support SEMA6D signaling through the PlexinA1:TREM2:DAP12 receptor complex, with cytokine and osteoclastogenesis outputs."
+                limitations = "Preserve SEMA6D as the PlexinA1 ligand, TREM2 as the bridge to DAP12 and the dendritic-cell/osteoclast models; do not infer direct SEMA6D-TREM2 or SEMA6D-DAP12 binary binding, CNS/SCI receiver state or terminal-TF output."
+            elif pair == ("SEMA7A", "ITGA1"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:17377534", "DOI:10.1038/nature05652"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary immune-cell interaction and genetic/blocking studies support membrane-associated SEMA7A engagement of the alpha1beta1 integrin complex and cytokine/inflammatory effector responses."
+                limitations = "Preserve GPI-anchored or membrane-associated SEMA7A, assembled alpha1beta1 immunological-synapse topology and immune/EAE context; do not infer a universal intracellular relay or SCI output."
+            elif pair == ("SERPINF1", "LRP6"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:21576363", "PMCID:PMC3133395", "DOI:10.1128/MCB.01211-10"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary binding, receptor-dimerization and retinal-ischemia studies support PEDF/SERPINF1 binding to LRP6 through E1E2 and inhibition of Wnt3a-induced FZD-LRP6 dimerization."
+                limitations = "Preserve PEDF as an endogenous LRP6 antagonist and the E1E2/Wnt3a-FZD-LRP6 context; do not represent this as productive Wnt signaling or infer SCI/terminal-TF output."
+            elif pair == ("SFTPD", "LY96"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:18991397", "DOI:10.1074/jbc.M807268200"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "Primary cosedimentation, ligand-blot and BIAcore studies support direct calcium- and carbohydrate-dependent SP-D/SFTPD binding to recombinant MD-2/LY96 with CRD, mannose and glycosylation controls."
+                limitations = "Promote direct SP-D-MD-2/LY96 binding only; preserve collectin carbohydrate-recognition, calcium and glycosylation context and do not infer an independent LY96 relay, SCI or terminal-TF effect."
+            elif pair == ("SHH", "PTCH1"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:29995851", "PMID:35231446"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human"
+                summary = "Primary cryo-EM, receptor-reconstitution and assembly studies support native palmitoylated/cholesterylated SHH binding to PTCH1 in the Hedgehog receptor complex."
+                limitations = "Preserve SHH N-terminal palmitate/C-terminal cholesterol, PTCH1 1:2 topology and GAS1/SCUBE2 carrier dependence; do not infer terminal GLI or SCI output."
+            elif pair == ("SHH", "PTCH2"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:9811851"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "Primary receptor-characterization assays support direct labeled Hedgehog binding to PTCH2-expressing cells."
+                limitations = "Promote SHH binding to PTCH2 only at the direct ligand-receptor layer; preserve mature Hedgehog ligand and PTCH2 expression/assay context, and do not infer PTCH1-equivalent signaling, SMO derepression, SCI or terminal GLI output."
+            elif pair == ("SLIT2", "APP"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:28785723", "PMCID:PMC5534435", "DOI:10.1523/ENEURO.0185-17.2017"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse; nematode comparator"
+                summary = "Primary biochemical, explant and genetic studies support Slit2 binding to the APP E1 domain, APP ectodomain shedding, FE65-Pak-Rac1 signaling and Slit-dependent axon repulsion/circuit formation."
+                limitations = "Preserve full-length Slit2/N-terminal ligand form, APP E1-domain binding and APP/APLP2 family context; this is a noncanonical axon-guidance receptor edge, not a generic amyloid pathway, SCI receiver claim or terminal-TF inference."
+            elif pair == ("SLITRK4", "PTPRD"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:25989451", "PMCID:PMC4437028", "DOI:10.1038/srep09686"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "mouse"
+                summary = "Primary structural/synaptic-adhesion work reports a supplementary screening observation that mouse Slitrk4 LRR1 binds the PTP-delta/PTPRD extracellular domain."
+                limitations = "Use only as direct Slitrk4 LRR1-PTPRD binding; the observation is supplementary/screening-level without Slitrk4-specific synaptogenic function, and PTPRD splice-insert context must be preserved; do not infer SCI or terminal-TF output."
+            else:
+                raise SystemExit(f"unhandled batch 179 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
