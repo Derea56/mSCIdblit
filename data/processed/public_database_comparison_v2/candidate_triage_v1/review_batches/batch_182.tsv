@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:TGFBI>ITGA3	TGFBI	ITGA3	M21B-E006604	current bundle includes primary TGFBI/betaig-H3 binding to alpha3beta1 and epithelial adhesion/migration outputs	represented_graph_alias	batch_182
+LR:TGFBI>ITGAV	TGFBI	ITGAV	M21B-E006605;M21B-E006606	current bundle supports TGFBI through assembled alphaVbeta5 and alphaVbeta3 integrins, not autonomous ITGAV signaling	represented_graph_alias	batch_182
+LR:TGFBI>ITGB1	TGFBI	ITGB1	M21B-E006604	current bundle supports TGFBI through assembled alpha3beta1, not isolated ITGB1 signaling	represented_graph_alias	batch_182
+LR:TGFBI>ITGB3	TGFBI	ITGB3	M21B-E006606	current bundle supports TGFBI through assembled alphaVbeta3, not isolated ITGB3 signaling	represented_graph_alias	batch_182
+LR:TGFBI>ITGB5	TGFBI	ITGB5	M21B-E006605	current bundle supports TGFBI through assembled alphaVbeta5, not isolated ITGB5 signaling	represented_graph_alias	batch_182
+LR:THBS1>ITGA2B	THBS1	ITGA2B	M20B-E005058;M21B-E006994	current bundle supports TSP1 binding to assembled alphaIIbbeta3/GP IIb-IIIa in platelet context, not isolated ITGA2B signaling	represented_graph_alias	batch_182
+LR:THBS1>ITGA3	THBS1	ITGA3	M20B-E002240;M21B-E002995;M23B-E001022	current bundle supports TSP1 recognition of assembled alpha3beta1, not isolated ITGA3 signaling	represented_graph_alias	batch_182
+LR:THBS1>ITGB1	THBS1	ITGB1	M20B-E002240;M21B-E002995;M21B-E002996;M21B-E002997;M21B-E002998;M23B-E000722;M23B-E001022	current bundle supports multiple TSP1 integrin complexes containing beta1, not free ITGB1 signaling	represented_graph_alias	batch_182
+LR:THBS1>ITGB3	THBS1	ITGB3	M20B-E002241;M20B-E005058;M21B-E000712;M21B-E006994	current bundle supports TSP1 binding to assembled alphaVbeta3 and alphaIIbbeta3, not isolated ITGB3 signaling	represented_graph_alias	batch_182
+LR:THBS2>ITGB3	THBS2	ITGB3	M20B-E002247	current bundle contains a frozen THBS2-ITGB3 alias without a stable pair-specific primary packet	represented_graph_alias	batch_182
