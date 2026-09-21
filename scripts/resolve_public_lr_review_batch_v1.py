@@ -3032,6 +3032,79 @@ def main() -> None:
                 limitations = "Preserve mature-myostatin versus propeptide form and intact ACVR2B:type-I receptor-complex topology; do not collapse the complex into unsupported free-subunit edges or infer a terminal-TF/SCI route beyond the reported reporter assays."
             else:
                 raise SystemExit(f"unhandled batch 172 pair: {pair}")
+        elif row.get("review_batch") == "batch_173":
+            pair = (ligand, receptor)
+            if pair == ("NECTIN1", "FGFR1"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:22955284"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary soluble-domain and cell-based assays support Nectin-1 Ig3 binding to FGFR1c, FGFR1c phosphorylation and neuronal neurite-outgrowth/survival outputs."
+                limitations = "Preserve the Nectin-1 Ig3 and FGFR1c neuronal-development assay layer; do not generalize across nectins or FGFRs or infer SCI/terminal-TF effects."
+            elif pair == ("NECTIN2", "NECTIN3"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:12121624", "PMID:12011057"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary junctional, knockout and recombinant-ectodomain studies support the selective Nectin-2/Nectin-3 heterophilic trans-adhesion interaction."
+                limitations = "Preserve heterotypic trans-adhesion, junctional tissue and mouse context; do not infer a soluble ligand route, SCI output or terminal-TF activity."
+            elif pair == ("NECTIN2", "PVRIG"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:30659054", "DOI:10.1038/s41586-019-1275-5"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary human and mouse interaction and tumor-model studies support PVRL2/Nectin-2/CD112 binding to PVRIG/CD112R and inhibitory CD8 T-cell outputs."
+                limitations = "Preserve PVRIG/CD112R checkpoint and PVRL2-family redundancy; do not infer TIGIT equivalence, universal checkpoint dominance or SCI function."
+            elif pair == ("NEGR1", "OPCML"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:12617969"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "rat"
+                summary = "Primary rat-brain cross-linking and immunoprecipitation studies support the Kilon/NEGR1-OBCAM/OPCML heterophilic IgLON interaction."
+                limitations = "Preserve the rat-brain IgLON and cross-linking context; do not infer universal receptor signaling, SCI relevance or terminal-TF activity."
+            elif pair == ("NFASC", "NRCAM"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:8922386", "PMCID:PMC2133392", "DOI:10.1083/jcb.135.4.1059"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mixed"
+                summary = "Primary transfected-cell, immunoprecipitation and neurite assays support direct neurofascin-NrCAM extracellular interaction and neurite outgrowth."
+                limitations = "Preserve heterophilic IgCAM adhesion directionality and alternative-splicing limits; do not infer intracellular signaling, SCI transfer or terminal-TF activity."
+            elif pair == ("NODAL", "ACVR1B"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:18089557", "PMID:11024047"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary receptor-association and reporter studies support Cripto-dependent Nodal recruitment to ACVR1B/ALK4 with activin type-II partners and Smad2/3 activation."
+                limitations = "Preserve membrane-associated Cripto and the ACVR1B/ALK4 plus ACVR2A/ACVR2B receptor-complex topology; do not materialize isolated ACVR1B as the complete Nodal receptor or infer SCI/terminal-TF output."
+            elif pair == ("NODAL", "ACVR1C"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:11485994"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "both"
+                summary = "Primary reconstitution and embryonic studies support Nodal/Xnr1 binding and responsiveness through ALK7/ACVR1C, including the ACVR1C:ACVR2B receptor-complex branch."
+                limitations = "Preserve Nodal/Xnr1 species and Cripto-enhanced ALK7 context; do not treat ACVR1C as the sole universal Nodal receptor or infer SCI relevance."
+            elif pair == ("NODAL", "ACVR1C+ACVR2B"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:11485994"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "both"
+                summary = "Primary reconstitution and Xenopus studies support the Nodal-ACVR1C/ALK7:ACVR2B receptor complex, with Cripto enhancement and reporter/Smad outputs."
+                limitations = "Preserve the composite ACVR1C/ALK7:ACVR2B topology and Nodal/Xnr1 context; do not split the complex into unsupported autonomous receptor edges or infer SCI/terminal-TF effects."
+            elif pair == ("NODAL", "ACVR2A"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_or_direct_molecular"
+                species = "mouse"
+                summary = "The current graph contains only a frozen Nodal-to-ACVR2A alias from the LIANA mouse consensus; no stable pair-specific primary packet for this isolated row is available in this bundle."
+                limitations = "Preserve ACVR2A as a type-II subunit within the Nodal/Cripto receptor holocomplex; do not promote an isolated binary edge or infer downstream/SCI/terminal-TF evidence from the database-only closure."
+            elif pair == ("NODAL", "ACVR2B"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:18089557", "PMID:11024047", "PMID:11485994"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse; both"
+                summary = "Primary studies support Nodal binding to ACVR2B/ActRIIB and Cripto-dependent receptor-complex branches with ACVR1B/ALK4 or ACVR1C/ALK7, including Smad/reporter outputs."
+                limitations = "Preserve Nodal/Cripto and type-I/type-II receptor-complex topology; do not collapse the holocomplex into unsupported free-subunit edges or infer SCI/terminal-TF output beyond the reported assays."
+            else:
+                raise SystemExit(f"unhandled batch 173 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
