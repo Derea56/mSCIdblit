@@ -838,6 +838,27 @@ def main() -> None:
             species = "human and rat lipoprotein-receptor studies"
             summary = "Primary receptor-specificity studies report that VLDLR binds apoE-containing remnant lipoproteins but not apoB as the direct recognition ligand; the candidate therefore conflates particle composition with receptor ligand specificity."
             limitations = "Retain apoE/VLDLR and apoB/LDLR or megalin relationships separately; do not materialize APOB-VLDLR without an apoB-specific binding assay that resolves the lipoprotein particle and cofactor context."
+        elif ligand == "COL4A1" and receptor == "ITGA3+ITGB1":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:19229828"]
+            species = "human renal epithelial-cell assays"
+            summary = "Primary affinity-chromatography and solid-phase assays show that the alpha1 NC1 domain of type IV collagen binds renal epithelial cells through alpha3beta1 integrin, with an associated matrix-response readout."
+            limitations = "Preserve the collagen-IV alpha1 NC1 domain, renal epithelial-cell and integrin-complex context; do not generalize from a collagen-chain NC1 fragment to every mature collagen-IV isoform or infer a universal intracellular/TF route."
+        elif ligand == "COL4A3" and receptor == "ITGA2+ITGB1":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:19229828"]
+            species = "human glomerular epithelial-cell assays"
+            summary = "Primary affinity-chromatography and solid-phase assays show preferential binding of the alpha3 NC1 domain of type IV collagen through alpha2beta1 integrin in human glomerular epithelial cells, with modulation of MMP-2 and MMP-9 expression."
+            limitations = "Preserve the collagen-IV alpha3 NC1 domain, glomerular epithelial-cell and alpha2beta1 context; do not generalize to intact alpha3alpha4alpha5 collagen IV without chain-assembly evidence or infer a complete signaling cascade from the MMP readout."
+        elif ligand == "COL4A3" and receptor == "ITGA1+ITGB1":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:19229828", "PMID:8344274"]
+            species = "human collagen-IV and renal-cell assays"
+            summary = "Primary studies establish alpha1beta1 binding to collagen-IV regions and distinguish alpha3-chain NC1 interactions through other integrins, but they do not verify alpha1beta1 as the direct receptor for the isolated alpha3 NC1 candidate."
+            limitations = "Retain collagen-IV integrin-family and chain-composition context; require an alpha3 NC1-specific alpha1beta1 assay before promotion and do not transfer generic collagen-IV binding across NC1 chains."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
