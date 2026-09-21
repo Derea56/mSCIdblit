@@ -1,0 +1,2 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:LAMC3>DAG1	LAMC3	DAG1		PMID:29874128	primary_review	batch_079
