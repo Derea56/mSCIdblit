@@ -929,6 +929,27 @@ def main() -> None:
             species = "human recombinant alpha4(IV) NC1 and melanoma-cell assays"
             summary = "Primary surface-plasmon-resonance and adhesion studies show that recombinant alpha4(IV) NC1/tetrastatin binds the alphaVbeta3 integrin complex, while the public row supplies only the ITGB3 subunit and therefore does not resolve the complete receptor topology."
             limitations = "Retain alpha4(IV) NC1, alphaVbeta3 and matrikine/adhesion context; do not materialize COL4A4-ITGB3 as a standalone receptor edge without the alphaV subunit and exact mature-domain context."
+        elif ligand == "ADAM10" and receptor == "AXL":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:27237127"]
+            species = "lupus-prone mouse and human PBMC AXL-shedding assays"
+            summary = "Primary cleavage and inhibition studies show that ADAM10, together with ADAM17/TACE, mediates AXL ectodomain shedding and thereby changes cellular responsiveness to Gas6."
+            limitations = "Retain ADAM10 as a proteolytic regulator of AXL availability rather than an extracellular ligand; do not materialize ADAM10-AXL as a canonical ligand-receptor edge or infer a direct ADAM10-to-TF route."
+        elif ligand == "ADAM10" and receptor == "NOTCH1":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:19726682", "PMID:19704010", "PMID:33673337"]
+            species = "human and mouse Notch1 cell-based cleavage/signaling assays"
+            summary = "Primary protease-dependence studies show that ADAM10 performs ligand-dependent Notch1 S2 cleavage and is required for the receptor-proximal step leading to gamma-secretase release of Notch intracellular domain."
+            limitations = "Retain ADAM10-Notch1 as a proteolytic continuation of juxtacrine Notch signaling, not as a soluble ligand edge; preserve ligand-dependent versus ligand-independent ADAM17 context and do not infer a universal TF output outside Notch-specific assays."
+        elif ligand == "ADAM10" and receptor in {"TSPAN5", "TSPAN10", "TSPAN14", "TSPAN15", "TSPAN17"}:
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:23035126", "PMID:23091066", "PMID:26668317"]
+            species = "human TspanC8/ADAM10 biochemical, cell-based and primary-cell assays"
+            summary = "Primary co-immunoprecipitation and trafficking studies show direct ADAM10 association with the listed TspanC8 tetraspanins, which regulate ADAM10 maturation, surface expression and substrate-selective Notch signaling."
+            limitations = "Retain the reverse regulatory-complex orientation and TspanC8-specific substrate/trafficking context; do not materialize ADAM10-to-TSPAN as an extracellular ligand-receptor edge or infer that every TspanC8 complex produces the same signaling output."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
