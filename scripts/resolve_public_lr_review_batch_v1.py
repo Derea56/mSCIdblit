@@ -2321,6 +2321,11 @@ def main() -> None:
                 species = "human"
                 summary = "Primary neutrophil-endothelial adhesion work supports CEA-like CD66/NCA molecules as sialyl-Lewis-x presenters participating in E-selectin-dependent adhesion, but does not resolve CEACAM2 as the exact ligand molecule."
                 limitations = "Retain as CEACAM-family/selectin adhesion context; do not materialize a CEACAM2-SELE binary edge without paralog-specific binding or perturbation evidence."
+            elif ligand.startswith("CHAT+"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses CHAT acetylcholine-synthesis machinery together with SLC10A4, SLC18A3 or SLC5A7 transport components as the ligand label rather than mature extracellular acetylcholine."
+                limitations = "Represent acetylcholine synthesis, vesicular loading and release separately; do not materialize enzyme/transporter composites as direct muscarinic or nicotinic ligand-receptor edges."
             elif ligand.startswith("CEACAM"):
                 disposition = "hold_contextual_or_complex_boundary"
                 layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
