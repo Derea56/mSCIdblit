@@ -983,6 +983,25 @@ def main() -> None:
             layer = "candidate_only_unverified"
             summary = "The current review pass did not verify an exact primary experiment supporting the APP-to-listed-receptor candidate; related studies may concern APP processing products, receptor complexes or different ligand forms."
             limitations = "Retain for targeted follow-up; do not materialize a graph edge from public-database membership or from evidence about Aβ, APP-processing machinery or receptor-family context alone."
+        elif ligand == "LTF" and receptor == "AGER":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:8387541", "PMCID:PMC288218"]
+            species = "human mononuclear-phagocyte and rat implant assays"
+            summary = "The primary study concerns AGE-albumin recognition by RAGE and a lactoferrin-like cell-surface polypeptide; it does not establish mature lactoferrin/LTF as an AGER/RAGE ligand."
+            limitations = "Do not transfer the lactoferrin-like-protein terminology to the LTF gene product or materialize LTF-AGER without an LTF-specific binding assay."
+        elif ligand == "LTF" and receptor == "TNFRSF11B":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "downstream_or_functional"
+            primary = ["PMID:22902986"]
+            species = "bovine lactoferrin-treated ovariectomized-rat bone model"
+            summary = "Primary in-vivo treatment experiments show that bovine lactoferrin changes osteoprotegerin/TNFRSF11B and RANKL expression during bone remodeling, but do not establish TNFRSF11B as a direct lactoferrin receptor."
+            limitations = "Retain the lactoferrin bone-remodeling and OPG/RANKL/RANK pathway context; do not materialize a direct LTF-TNFRSF11B binding edge or infer that TNFRSF11B is the initiating receptor."
+        elif ligand == "LTF":
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_unverified"
+            summary = "The current review pass did not verify an exact primary experiment for this LTF-to-receptor candidate."
+            limitations = "Retain for targeted follow-up; do not materialize an edge from public-database membership or from evidence for an unidentified lactoferrin-binding site alone."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
