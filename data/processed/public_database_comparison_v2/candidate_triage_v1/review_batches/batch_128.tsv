@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:WNT5B>FZD4	WNT5B	FZD4	M21B-E007021		represented_graph_alias	batch_128
+LR:WNT5B>FZD5	WNT5B	FZD5	M21B-E006707		represented_graph_alias	batch_128
+LR:WNT5B>FZD7	WNT5B	FZD7	M21B-E007022		represented_graph_alias	batch_128
+LR:WNT5B>FZD8	WNT5B	FZD8	M21B-E006708		represented_graph_alias	batch_128
+LR:APELA>APLNR	APELA	APLNR	M21B-E005598		represented_graph_alias	batch_128
+LR:CD99>PILRA	CD99	PILRA	M21B-E002914		represented_graph_alias	batch_128
+LR:CEACAM1>CEACAM1	CEACAM1	CEACAM1	M23B-E000122		represented_graph_alias	batch_128
+LR:COL3A1>ADGRG1	COL3A1	ADGRG1	M21B-E000932;M23B-E000945		represented_graph_alias	batch_128
+LR:GPHA2+GPHB5>TSHR	GPHA2+GPHB5	TSHR	M20B-E003717;M20B-E003718;M21B-E006715		represented_graph_alias	batch_128
+LR:IAPP>CALCR+RAMP1	IAPP	CALCR+RAMP1	M20B-E003841;M20B-E001561		represented_graph_alias	batch_128
