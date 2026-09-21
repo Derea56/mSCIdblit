@@ -2534,6 +2534,34 @@ def main() -> None:
                 "limits, and the distinction between binding, receptor-proximal signaling and functional output; these "
                 "edges do not assert a universal intracellular cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_157":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The existing edge-source records provide primary-supported IGF2-alpha6beta4 crosstalk, IGSF11/VSIG3-"
+                "VISTA binding and inhibition, IHH-PTCH1/PTCH2 binding, IL10-IL10RA/IL10RB receptor assembly and "
+                "activation, and IL12 receptor-chain binding/activation at the stated molecular resolution. The IL11 "
+                "rows remain represented by frozen cytokine-receptor-family aliases without row-specific stable primary "
+                "locators in the current source."
+            )
+            limitations = (
+                "Do not add duplicate edges or collapse alpha6beta4/IGF1R, IL10RA-IL10RB, or IL12RB1-IL12RB2 receptor "
+                "complexes into autonomous single-chain receptors. Preserve Hedgehog PTCH1 versus PTCH2 identity, "
+                "checkpoint inhibition versus cytokine activation, receptor-complex topology, species and assay limits, "
+                "and the distinction between binding, receptor-proximal signaling and functional output. Treat IL11 "
+                "frozen aliases as evidence-bounded until stable primary support is attached; these edges do not assert "
+                "a universal intracellular cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
