@@ -1,0 +1,6 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:CCL11>ACKR4	CCL11	ACKR4		PMID:32480426	primary_review	batch_089
+LR:CCL20>CXCR3	CCL20	CXCR3		PMID:11373289; PMID:19305396	primary_review	batch_089
+LR:CCL21B>CXCR3	CCL21B	CXCR3		PMID:11907075	primary_review	batch_089
+LR:CCL25>CCR10	CCL25	CCR10		PMID:17548595	primary_review	batch_089
+LR:CCL11>CCR5	CCL11	CCR5		PMID:8642344; PMID:11559700	primary_review	batch_089
