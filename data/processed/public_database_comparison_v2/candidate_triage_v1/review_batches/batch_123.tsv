@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:PDCD1LG2>RGMB	PDCD1LG2	RGMB	M21B-E003213		represented_graph_alias	batch_123
+LR:PDGFC>PDGFRB	PDGFC	PDGFRB	M21B-E000520		represented_graph_alias	batch_123
+LR:PENK>OGFR	PENK	OGFR	M21B-E006186		represented_graph_alias	batch_123
+LR:PF4>THBD	PF4	THBD	M21B-E006730		represented_graph_alias	batch_123
+LR:PLAT>LRP1	PLAT	LRP1	M21B-E003089;M21B-E003090		represented_graph_alias	batch_123
+LR:PLAU>LRP1	PLAU	LRP1	M21B-E003094		represented_graph_alias	batch_123
+LR:PODXL2>SELL	PODXL2	SELL	M21B-E007094		represented_graph_alias	batch_123
+LR:PVR>CD226	PVR	CD226	M21B-E000665		represented_graph_alias	batch_123
+LR:PVR>TIGIT	PVR	TIGIT	M21B-E000664		represented_graph_alias	batch_123
+LR:PYY>NPY4R	PYY	NPY4R	M21B-E001462		represented_graph_alias	batch_123
