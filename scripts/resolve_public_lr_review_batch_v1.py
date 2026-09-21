@@ -4163,6 +4163,129 @@ def main() -> None:
                 limitations = "Preserve purified-protein/CRD scope and the absence of demonstrated productive WNT4 canonical signaling in the tested cell system; do not infer SCI or terminal-TF output."
             else:
                 raise SystemExit(f"unhandled batch 188 pair: {pair}")
+        elif row.get("review_batch") == "batch_189":
+            pair = (ligand, receptor)
+            if pair == ("WNT4", "FZD5"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E006703"
+                primary = ["PMID:25605717"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; mouse"
+                summary = "The graph already contains the primary-supported WNT4-FZD5 cysteine-rich-domain binding edge."
+                limitations = "Preserve purified-protein CRD scope; do not infer full-length receptor activation, LRP5/6 recruitment, downstream beta-catenin output, SCI or terminal-TF evidence."
+            elif pair == ("WNT4", "FZD6"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E005579"
+                primary = ["PMID:15265686"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; canine"
+                summary = "The graph already contains the primary-supported WNT4-FZD6 cysteine-rich-domain association, restricted to physical binding."
+                limitations = "Preserve the MDCK/canine-cell context and explicit lack of FZD6-driven TOPFlash activation in the primary; do not infer productive canonical, SCI or terminal-TF output."
+            elif pair == ("WNT4", "FZD7"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E007019"
+                primary = ["PMID:25605717", "PMCID:PMC4358105", "DOI:10.1074/jbc.M114.612648"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "The graph already contains the primary-supported weak-to-intermediate WNT4-FZD7 cysteine-rich-domain binding edge."
+                limitations = "Preserve purified-protein/CRD scope and the absence of demonstrated productive WNT4 canonical signaling in the tested cell system; do not infer SCI or terminal-TF output."
+            elif pair == ("WNT4", "FZD8"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E006704"
+                primary = ["PMID:25605717", "PMCID:PMC4358105", "DOI:10.1074/jbc.M114.612648"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "The graph already contains the primary-supported strong WNT4-FZD8 cysteine-rich-domain binding edge."
+                limitations = "Preserve purified-protein CRD scope; do not infer full-length receptor activation, LRP5/6 recruitment, downstream beta-catenin output, SCI or terminal-TF evidence."
+            elif pair == ("WNT5B", "LRP6"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = []
+                layer = "ligand_receptor_or_direct_molecular"
+                species = "mouse"
+                summary = "The current graph retains a frozen Wnt5b-to-Fzd1/Lrp6 receptor-complex alias accepted in the prior curation, but the source packet has no stable pair-specific primary locator."
+                limitations = "Preserve the Fzd1/Lrp6 composite receptor and frozen local-only provenance; do not promote isolated LRP6 binding, infer canonical activation or assign SCI/terminal-TF output until a stable primary packet is added."
+            elif pair == ("WNT7A", "FZD5"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E006709"
+                primary = ["PMID:18230341", "PMCID:PMC2277340", "DOI:10.1016/j.bbrc.2008.01.088"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse"
+                summary = "The graph already contains primary-supported WNT7A-FZD5 cysteine-rich-domain binding and bounded cellular interaction/pathway evidence."
+                limitations = "Preserve purified CRD and split-eGFP assay context; do not infer LRP5/6 stoichiometry, SCI or terminal-TF output."
+            elif pair == ("WNT7A", "FZD7"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E006710"
+                primary = ["PMID:19497282", "PMCID:PMC2743383", "DOI:10.1016/j.stem.2009.03.013"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse"
+                summary = "The graph already contains primary-supported WNT7A-FZD7 interaction and FZD7-dependent PCP/satellite-cell functional evidence."
+                limitations = "Preserve mouse satellite-cell and muscle-regeneration PCP context; do not infer canonical beta-catenin, SCI or terminal-TF output."
+            elif pair == ("WNT7B", "ADGRA2"):
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000958"
+                primary = ["PMID:40914247", "PMCID:PMC12514574", "DOI:10.1016/j.jbc.2025.110682"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary reconstitution and rescue studies support WNT7B-dependent signaling through the assembled GPR124/ADGRA2-RECK-LRP5/6 coreceptor module."
+                limitations = "Preserve ADGRA2/GPR124, RECK and LRP5/6 multicomponent topology and endothelial/reconstituted context; do not promote isolated ADGRA2 signaling or assign SCI/terminal-TF output."
+            elif pair == ("WNT7B", "FZD1"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E007023"
+                primary = ["PMID:15923619", "PMCID:PMC1140585", "DOI:10.1128/MCB.25.12.5022-5030.2005"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "mouse"
+                summary = "The graph already contains primary-supported WNT7B-FZD1 cell-surface binding and bounded cooperative canonical activation with LRP5."
+                limitations = "Preserve FZD1/LRP5 multicomponent context and vascular/developmental models; do not infer isolated FZD1 signaling, SCI or terminal-TF output."
+            elif pair == ("WNT7B", "FZD10"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E007024"
+                primary = ["PMID:15923619", "PMCID:PMC1140585", "DOI:10.1128/MCB.25.12.5022-5030.2005"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "mouse"
+                summary = "The graph already contains primary-supported WNT7B-FZD10 cell-surface binding and bounded cooperative canonical activation with LRP5."
+                limitations = "Preserve FZD10/LRP5 multicomponent context and vascular/developmental models; do not infer isolated FZD10 signaling, SCI or terminal-TF output."
+            elif pair == ("WNT7B", "LRP5"):
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000958"
+                primary = ["PMID:40914247", "PMCID:PMC12514574", "DOI:10.1016/j.jbc.2025.110682"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary reconstitution and rescue studies support WNT7B-dependent signaling through the assembled GPR124/ADGRA2-RECK-LRP5/6 coreceptor module."
+                limitations = "Preserve LRP5/6 within the GPR124/ADGRA2-RECK coreceptor architecture and endothelial/reconstituted context; do not promote isolated LRP5 binding or assign SCI/terminal-TF output."
+            elif pair == ("WNT9A", "FZD9"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E006172"
+                primary = ["PMID:31110287", "PMCID:PMC6559346", "DOI:10.1038/s41556-019-0330-5"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; zebrafish"
+                summary = "The graph already contains primary-supported WNT9A-FZD9/FZD9b specificity, receptor association and beta-catenin/hematopoietic progenitor outputs."
+                limitations = "Preserve zebrafish Fzd9b versus human FZD9 orthology, LRP5/6 and EGFR cofactor dependence; do not infer generic FZD9 or SCI/terminal-TF output."
+            elif pair == ("WNT9B", "FZD5"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E007086"
+                primary = ["PMID:18509025", "PMCID:PMC6670808", "DOI:10.1523/JNEUROSCI.1056-08.2008"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse; human"
+                summary = "The graph already contains primary-supported WNT9B-FZD5/LRP6 receptor-dependent canonical activation evidence."
+                limitations = "Preserve FZD5/LRP6 coexpression, Fz5-CRD competition and neuronal/heterologous reporter contexts; do not infer a purified binary complex, universal FZD5 specificity, SCI or terminal-TF output."
+            elif pair == ("WNT9B", "FZD8"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E007088"
+                primary = ["PMID:20093360", "PMCID:PMC2838336", "DOI:10.1016/j.molcel.2009.12.008"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; mouse"
+                summary = "The graph already contains primary-supported weak WNT9B-FZD8 ectodomain binding in the FZD8/LRP6 receptor-context assay."
+                limitations = "Preserve low-affinity soluble reconstitution and LRP6 context; do not infer productive whole-cell activation, universal FZD8 specificity, SCI or terminal-TF output."
+            elif pair == ("WNT9B", "LRP6"):
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E000157"
+                primary = ["PMID:20093360", "PMCID:PMC2838336"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; mouse"
+                summary = "The graph already contains primary-supported WNT9B binding-site mapping to LRP6 E1E2 in the purified receptor-complex study."
+                limitations = "Preserve LRP6 E1E2 mapping and comparator/reconstitution scope; do not infer whole-cell activation, FZD requirement, SCI or terminal-TF output."
+            else:
+                raise SystemExit(f"unhandled batch 189 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
