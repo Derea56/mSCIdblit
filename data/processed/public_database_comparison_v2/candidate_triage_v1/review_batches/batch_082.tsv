@@ -1,0 +1,4 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:ADAM10>NOTCH2	ADAM10	NOTCH2		PMID:20156974	primary_review	batch_082
+LR:ADAM17>NOTCH1	ADAM17	NOTCH1		PMID:19704010; PMID:33673337	primary_review	batch_082
+LR:ADAM17>ERBB4	ADAM17	ERBB4		PMID:10744726	primary_review	batch_082

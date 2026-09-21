@@ -314,6 +314,68 @@ def main() -> None:
                 layer = "candidate_only_review_locator"
                 summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
                 limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
+        elif row.get("review_batch") == "batch_080":
+            if ligand in {"H2DMA", "H2DMB1", "H2DMB2", "H2OB"} and receptor == "CD4":
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:12119342", "PMID:32069316", "PMID:34696161"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human HLA-DM biochemical assays; mouse H2-O and H2-M antigen-presentation models"
+                summary = "Primary antigen-presentation studies define H2-DM/H2-O components as intracellular MHC class II peptide-loading and editing factors that shape peptide-MHC-II display and CD4 T-cell activation; they do not establish the listed H2 component as an extracellular ligand directly binding CD4."
+                limitations = "Represent H2-DM/H2-O as antigen-processing and MHC-II-loading context, with CD4 activation occurring through peptide-MHC-II complexes; do not materialize H2 component-to-CD4 ligand-receptor edges or infer direct CD4 signaling from chaperone function."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
+        elif row.get("review_batch") == "batch_081":
+            pair = (ligand, receptor)
+            if pair in {("AANAT", "MTNR1A"), ("AANAT", "MTNR1B")}:
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:11313340", "PMID:10696085"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human AANAT melatonin-synthesis system; recombinant human MT1/MT2 receptor assays"
+                summary = "Primary studies define AANAT as the intracellular penultimate enzyme in melatonin synthesis, while recombinant MT1 and MT2 assays identify melatonin—not AANAT—as the receptor ligand and measure Gi/o-coupled cAMP responses."
+                limitations = "Represent AANAT as a biosynthetic precursor/enzyme that contributes to melatonin availability; do not materialize AANAT-to-MTNR1A or AANAT-to-MTNR1B ligand-receptor edges or infer receptor signaling from enzyme expression alone."
+            elif pair == ("ACE", "AGTR2"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:11291769", "PMID:15840019"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "rat and human vascular-cell ACE conversion assays; cloned human/mouse/rat AT2 receptor assays"
+                summary = "Primary studies define ACE as the converting enzyme that generates angiotensin II from angiotensin substrates, while AT2 receptor assays identify angiotensin peptides as receptor ligands; ACE itself is not the extracellular ligand for AGTR2."
+                limitations = "Represent ACE-dependent peptide production separately from angiotensin-II-to-AGTR2 signaling; do not materialize ACE-to-AGTR2 or infer direct receptor engagement from ACE expression."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
+        elif row.get("review_batch") == "batch_082":
+            pair = (ligand, receptor)
+            if pair == ("ADAM10", "NOTCH2"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:20156974"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse B-cell ADAM10 conditional-knockout and Notch2 signaling assays"
+                summary = "Primary conditional-knockout and rescue studies show that ADAM10 is required for Notch2 receptor-proximal signaling and marginal-zone B-cell development, supporting a proteolytic continuation role rather than an extracellular ligand interaction."
+                limitations = "Retain ADAM10-Notch2 as receptor-proximal proteolytic context for Notch signaling; do not materialize ADAM10-to-NOTCH2 as a canonical ligand-receptor edge or infer a universal downstream route outside the tested B-cell context."
+            elif pair == ("ADAM17", "NOTCH1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:19704010", "PMID:33673337"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse embryonic fibroblast and cell-based Notch1 processing assays"
+                summary = "Primary processing studies show that ADAM17 can contribute to Notch1 cleavage in ligand-independent or EDTA-triggered settings, whereas ADAM10 is required for Delta-like ligand-induced Notch1 processing; the evidence supports context-dependent receptor-proximal proteolysis, not a soluble ligand edge."
+                limitations = "Retain ADAM17-Notch1 as context-dependent proteolytic continuation evidence and preserve ligand-dependent versus ligand-independent conditions; do not materialize ADAM17-to-NOTCH1 as a canonical ligand-receptor edge or infer a universal Notch transcriptional output."
+            elif pair == ("ADAM17", "ERBB4"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:10744726"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse fibroblast TACE/ADAM17 loss-and-rescue HER4/ErbB4 shedding assays"
+                summary = "Primary loss-and-rescue experiments show that TACE/ADAM17 is required for regulated HER4/ErbB4 ectodomain shedding, supporting a receptor-proximal proteolytic continuation step rather than ADAM17 acting as an extracellular ligand."
+                limitations = "Retain ADAM17-ErbB4 as receptor-proximal shedding context for ErbB4 signaling; do not materialize ADAM17-to-ERBB4 as a canonical ligand-receptor edge or infer a complete intracellular or TF route from shedding alone."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
