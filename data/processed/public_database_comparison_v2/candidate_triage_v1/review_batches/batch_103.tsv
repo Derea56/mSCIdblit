@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:TNFSF13B>TNFRSF13C	TNFSF13B	TNFRSF13C	M21B-E000199	KEGG: mmu04060	represented_graph_alias	batch_103
+LR:TNFSF13B>TNFRSF17	TNFSF13B	TNFRSF17	M21B-E000457	KEGG: mmu04060	represented_graph_alias	batch_103
+LR:TNFSF14>LTBR	TNFSF14	LTBR	M21B-E000461	KEGG: mmu04060	represented_graph_alias	batch_103
+LR:TNFSF14>TNFRSF14	TNFSF14	TNFRSF14	M21B-E000460	KEGG: mmu04060	represented_graph_alias	batch_103
+LR:TNFSF15>TNFRSF25	TNFSF15	TNFRSF25	M21B-E000455	KEGG: mmu04060	represented_graph_alias	batch_103
+LR:TNFSF18>TNFRSF18	TNFSF18	TNFRSF18	M21B-E000459	KEGG: mmu04060	represented_graph_alias	batch_103
+LR:TNFSF4>TNFRSF4	TNFSF4	TNFRSF4	M21B-E000453	KEGG: mmu04060	represented_graph_alias	batch_103
+LR:TNFSF8>TNFRSF8	TNFSF8	TNFRSF8	M21B-E000456	KEGG: mmu04060	represented_graph_alias	batch_103
+LR:WNT5A>FZD1	WNT5A	FZD1	M21B-E006705	KEGG: mmu04310	represented_graph_alias	batch_103
+LR:WNT5A>FZD8	WNT5A	FZD8	M21B-E006706	KEGG: mmu04310	represented_graph_alias	batch_103
