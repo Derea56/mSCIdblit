@@ -1383,6 +1383,34 @@ def main() -> None:
                 "between binding, receptor-proximal signaling and functional output; the existing edges do not assert "
                 "a universal intracellular cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_116":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The public locators are pathway or database records, while the existing graph edge-source records "
+                "provide primary-supported intracellular FGF13–SCN5A association, FGF21–KLB binding, syndecan "
+                "heparan-sulfate presentation, fibrinogen gamma-motif recognition, irisin–integrin binding, "
+                "GDF15–GFRAL/RET complex signaling or GPIbalpha–Mac-1 adhesion observations at the stated molecular "
+                "resolution."
+            )
+            limitations = (
+                "Do not add a duplicate edge or collapse intracellular auxiliary-factor association, beta-Klotho or "
+                "GFRAL/RET receptor complexes, syndecan co-receptors, fibrinogen motifs, processed irisin, or "
+                "GPIbalpha/Mac-1 adhesion topology into a single canonical receptor. Preserve processed ligand, "
+                "heterodimer/complex and motif resolution, donor/reporter and cell-type context, species and assay "
+                "limits, and the distinction between binding, receptor-proximal signaling and functional output; the "
+                "existing edges do not assert a universal intracellular cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
