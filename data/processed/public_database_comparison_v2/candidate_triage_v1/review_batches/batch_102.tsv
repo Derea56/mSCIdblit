@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:NTF5>NGFR	NTF5	NGFR	M21B-E000752	uniprot	represented_graph_alias	batch_102
+LR:PTN>NCL	PTN	NCL	M21B-E010721	PMID:25620911;PMID:28356350	represented_graph_alias	batch_102
+LR:SELE>CD44	SELE	CD44	M21B-E000284;M23B-E000855	PMC4571854	represented_graph_alias	batch_102
+LR:TNFSF10>TNFRSF10B	TNFSF10	TNFRSF10B	M21B-E000468	KEGG: mmu04060	represented_graph_alias	batch_102
+LR:TNFSF11>TNFRSF11A	TNFSF11	TNFRSF11A	M21B-E000462	KEGG: mmu04060	represented_graph_alias	batch_102
+LR:TNFSF11>TNFRSF11B	TNFSF11	TNFRSF11B	M21B-E000470	KEGG: mmu04060	represented_graph_alias	batch_102
+LR:TNFSF12>TNFRSF12A	TNFSF12	TNFRSF12A	M21B-E000463	KEGG: mmu04060	represented_graph_alias	batch_102
+LR:TNFSF13>TNFRSF13B	TNFSF13	TNFRSF13B	M21B-E000200;M21B-E001741	KEGG: mmu04060	represented_graph_alias	batch_102
+LR:TNFSF13>TNFRSF17	TNFSF13	TNFRSF17	M21B-E000201;M21B-E001742	KEGG: mmu04060	represented_graph_alias	batch_102
+LR:TNFSF13B>TNFRSF13B	TNFSF13B	TNFRSF13B	M21B-E000458	KEGG: mmu04060	represented_graph_alias	batch_102
