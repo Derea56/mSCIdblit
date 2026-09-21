@@ -2288,6 +2288,35 @@ def main() -> None:
                 "receptor-proximal signaling and functional output; the existing edges do not assert a universal "
                 "intracellular cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_148":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The public locators are pathway or database records, while the existing graph edge-source records "
+                "provide primary-supported factor-X-Mac-1, JAM-A-LFA-1 adhesion, ephrin-A5/EphA10 cellular "
+                "association and evidence-bounded DMP1/DSPP-integrin, EBI3-IL27RA and EGF-ERBB2 aliases at the "
+                "stated molecular resolution."
+            )
+            limitations = (
+                "Do not add a duplicate edge or collapse zymogen factor-X versus Xa, Mac-1/LFA-1 activation state, "
+                "JAM-A endothelial-leukocyte adhesion, ephrin-A5 EphA10 isoform/complex association, DMP1/DSPP "
+                "processed matrix forms, EBI3 cytokine-receptor complexes, or EGF ERBB receptor topology into "
+                "autonomous canonical receptors. Preserve ligand form, isoform, complex and heterodimer resolution, "
+                "species and assay limits, and the distinction between binding, receptor-proximal signaling and "
+                "functional output; frozen DMP1/DSPP, EBI3 and EGF aliases remain evidence-bounded where no stable "
+                "primary locator is present, and the existing edges do not assert a universal intracellular cascade or "
+                "terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
