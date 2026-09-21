@@ -186,10 +186,12 @@ def main() -> None:
             summary = "The graph already contains primary-supported insulin-to-INSR binding under the Ins1/insulin ligand alias."
             limitations = "Preserve mature insulin and INSR receptor context; do not duplicate the Ins2 or generic insulin aliases or infer a complete downstream route from receptor binding alone."
         elif ligand == "JAM2" and receptor == "ITGA3+ITGB1":
-            disposition = "no_primary_evidence_found"
-            layer = "candidate_only_review_locator"
-            summary = "The cited primary locator supports JAM2 engagement of alpha4beta1, not the alpha3beta1 composite receptor in this public row."
-            limitations = "Retain exact JAM2-alpha4beta1 evidence separately; do not promote the alpha3beta1 row from a receptor-subunit mismatch."
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:12070135", "DOI:10.1074/jbc.C200331200"]
+            species = "human"
+            summary = "Primary JAM2 adhesion work supports engagement of the alpha4beta1 integrin complex, not the alpha3beta1 composite receptor in this public row; the candidate is retained as integrin-family context."
+            limitations = "Preserve the exact JAM2-alpha4beta1/JAM3 topology and leukocyte-adhesion context; do not promote JAM2-alpha3beta1 without a pair-specific assay."
         elif ligand == "KLK1B4" and receptor == "NTRK1":
             disposition = "reject_precursor_or_non_edge_form"
             layer = "candidate_only_unverified"
@@ -204,10 +206,12 @@ def main() -> None:
             summary = "Primary evidence supports trans-homophilic L1CAM adhesion, but the graph export contract disallows self-loop edges, so this relationship remains a contextual boundary rather than a materialized edge."
             limitations = "Retain the primary homophilic adhesion evidence for traversal/context review; do not encode L1CAM-to-L1CAM as a self-loop or infer an intracellular relay or terminal-TF output."
         elif ligand == "L1CAM" and receptor == "ITGA4+ITGB7":
-            disposition = "no_primary_evidence_found"
-            layer = "candidate_only_review_locator"
-            summary = "The cited L1CAM locator supports general integrin-binding or adhesion context but does not verify the exact alpha4beta7 composite receptor in this pass."
-            limitations = "Retain exact L1CAM-integrin edges already supported in the graph; require an alpha4beta7-specific primary assay before promotion."
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:8557754", "PMID:12077189"]
+            species = "human; mouse comparator"
+            summary = "Primary L1CAM adhesion studies support integrin-dependent migration and identify L1CAM as a ligand for VLA-5/alpha5beta1, but do not verify the alpha4beta7 composite receptor in this public row."
+            limitations = "Retain L1CAM-integrin crosstalk and the exact alpha5beta1/VLA-5 context; do not promote L1CAM-alpha4beta7 without a pair-specific assay."
         elif ligand == "LCK" and receptor == "CD8A+CD8B1":
             disposition = "reject_precursor_or_non_edge_form"
             layer = "candidate_only_unverified"
