@@ -1,0 +1,6 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:PDGFA>PDGFRA	PDGFA	PDGFRA	M21B-E000760	PMID:15207812	represented_graph_alias	batch_092
+LR:PDGFC>PDGFRA	PDGFC	PDGFRA	M21B-E000519;M21B-E000520	PMID:15207812	represented_graph_alias	batch_092
+LR:PDGFB>PDGFRA	PDGFB	PDGFRA	M21B-E000761;M21B-E011671	PMID:15207812	represented_graph_alias	batch_092
+LR:PDGFB>PDGFRB	PDGFB	PDGFRB	M21B-E000182;M21B-E011671	PMID:15207812	represented_graph_alias	batch_092
+LR:PDGFD>PDGFRB	PDGFD	PDGFRB	M21B-E000521	PMID:15207812	represented_graph_alias	batch_092
