@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:S100B>AGER	S100B	AGER	M21B-E000880;M24B-E000101		represented_graph_alias	batch_125
+LR:SAA1>TLR2	SAA1	TLR2	M21B-E006996		represented_graph_alias	batch_125
+LR:SAA2>SCARB1	SAA2	SCARB1	M23B-E000852		represented_graph_alias	batch_125
+LR:SCT>SCTR	SCT	SCTR	M21B-E007116		represented_graph_alias	batch_125
+LR:SDC2>PTPRJ	SDC2	PTPRJ	M21B-E006773		represented_graph_alias	batch_125
+LR:SEMA3E>NRP1	SEMA3E	NRP1	M21B-E005124		represented_graph_alias	batch_125
+LR:SEMA4B>DCBLD2	SEMA4B	DCBLD2	M21B-E006675		represented_graph_alias	batch_125
+LR:SFTPD>LAIR1	SFTPD	LAIR1	M21B-E000698		represented_graph_alias	batch_125
+LR:SHH>LRP2	SHH	LRP2	M21B-E002936		represented_graph_alias	batch_125
+LR:SLIT2>GPC1	SLIT2	GPC1	M21B-E007090		represented_graph_alias	batch_125
