@@ -1111,6 +1111,13 @@ def main() -> None:
             species = "human collagen-IV fragment, NC1-domain and renal-cell assays"
             summary = "Primary studies support collagen-IV fragment or NC1-domain interactions with selected integrins and distinguish chain/domain-specific recognition, but no exact primary experiment was verified for this remaining collagen-IV-chain-to-receptor candidate."
             limitations = "Retain collagen-IV chain assembly, NC1/CB3 fragment and integrin-family context; do not transfer evidence between alpha3, alpha4, alpha5 or alpha6 chains or materialize an unrelated receptor edge without exact chain/domain and receptor-complex support."
+        elif ligand == "COL4A1":
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:8344274", "PMID:9139675", "PMID:19229828"]
+            species = "human collagen-IV fragment, NC1-domain and renal-cell assays"
+            summary = "Primary studies support selected collagen-IV CB3 or NC1-domain interactions, including an alpha1 NC1-to-alpha3beta1 result already captured separately, but no exact primary experiment was verified for this remaining COL4A1-to-receptor candidate."
+            limitations = "Retain collagen-IV alpha1-chain domain and integrin-family context; do not transfer alpha1 NC1 evidence to other receptors or materialize an isolated COL4A1 edge without exact chain/domain and receptor-complex support."
         elif ligand == "COL2A1":
             disposition = "no_primary_evidence_found"
             layer = "candidate_only_unverified"
