@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:ANXA1>FPR2	ANXA1	FPR2	M21B-E000709	PMID:23230437	represented_graph_alias	batch_104
+LR:ANXA1>FPR3	ANXA1	FPR3	M21B-E006143	PMID:33082511	represented_graph_alias	batch_104
+LR:APP>SORL1	APP	SORL1	M21B-E011618	PMID:24523320	represented_graph_alias	batch_104
+LR:BMP7>ACVR1+BMPR2	BMP7	ACVR1+BMPR2	M21B-E000774;M21B-E001720	PMID:26893264;KEGG: mmu04350	represented_graph_alias	batch_104
+LR:CCL5>ACKR1	CCL5	ACKR1	M21B-E000423	PMID:26740381	represented_graph_alias	batch_104
+LR:CCL7>ACKR1	CCL7	ACKR1	M21B-E000424	PMID:26740381	represented_graph_alias	batch_104
+LR:CD96>PVR	CD96	PVR	M23B-E000326	PMID:15034010	represented_graph_alias	batch_104
+LR:CSPG4>ITGA3+ITGB1	CSPG4	ITGA3+ITGB1	M21B-E011621	PMID:30213051	represented_graph_alias	batch_104
+LR:F11R>ITGAL+ITGB2	F11R	ITGAL+ITGB2	M21B-E000584;M23B-E000508	PMID:11812992	represented_graph_alias	batch_104
+LR:FCER2A>ITGAM+ITGB2	FCER2A	ITGAM+ITGB2	M21B-E011620	PMID:7621072	represented_graph_alias	batch_104
