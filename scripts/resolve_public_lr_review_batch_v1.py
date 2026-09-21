@@ -2317,6 +2317,33 @@ def main() -> None:
                 "primary locator is present, and the existing edges do not assert a universal intracellular cascade or "
                 "terminal TF route."
             )
+        elif row.get("review_batch") == "batch_149":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The public locators are pathway or database records, while the existing graph edge-source records "
+                "provide primary-supported thrombin-GPIb alpha docking, fibrillin-1 alphaVbeta3/alphaVbeta6 adhesion, "
+                "CD23/FCER2A Mac-1 and CR4 integrin binding, FGF1/FGF2 alphaVbeta3 binding and FGF14-Nav1.6 "
+                "intracellular auxiliary-factor interaction at the stated molecular resolution."
+            )
+            limitations = (
+                "Do not add a duplicate edge or collapse thrombin GPIb-IX-V versus PAR cleavage, fibrillin RGD/TB4 "
+                "fragments and integrin heterodimers, CD23 Mac-1/CR4 complex context, FGF heparin/FGFR crosstalk, or "
+                "intracellular FGF14/Nav auxiliary binding into autonomous canonical receptors. Preserve ligand form, "
+                "domain, motif, heterodimer, complex and intracellular-association resolution, species and assay limits, "
+                "and the distinction between binding, receptor-proximal signaling and functional output; the existing "
+                "edges do not assert a universal intracellular cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
