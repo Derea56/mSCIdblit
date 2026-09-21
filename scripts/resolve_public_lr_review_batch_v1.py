@@ -3932,6 +3932,80 @@ def main() -> None:
                 limitations = "Preserve VEGF-A isoform, alpha9beta1/VEGFR2 cooperative topology and distinction between direct binding and cell-function layers; do not split alpha9 from beta1 or infer SCI/terminal-TF output."
             else:
                 raise SystemExit(f"unhandled batch 185 pair: {pair}")
+        elif row.get("review_batch") == "batch_186":
+            pair = (ligand, receptor)
+            if pair == ("VEGFA", "ITGAV"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:12709411"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary immobilized-ligand endothelial assays support VEGF-A165/189-dependent adhesion, migration and survival through assembled alphaVbeta3."
+                limitations = "Preserve immobilized VEGF-A isoforms, alphaVbeta3-dependent adhesion/function and direct-binding caveat; do not split alphaV from beta3, infer generic soluble VEGF or assign SCI/terminal-TF output."
+            elif pair == ("VEGFA", "ITGB1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:17363377", "PMID:12709411"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary studies support VEGF-A121/165 interaction with assembled alpha9beta1 and immobilized VEGF-A165/189 function through alpha3beta1 contexts."
+                limitations = "Preserve VEGF-A isoform, alpha9beta1 versus alpha3beta1 heterodimers and direct-binding versus immobilized-function boundaries; do not promote free ITGB1 signaling or infer SCI output."
+            elif pair == ("VEGFA", "ITGB3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:12709411"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary immobilized VEGF-A165/189 endothelial assays support alphaVbeta3-dependent adhesion, migration and survival."
+                limitations = "Preserve assembled alphaVbeta3, immobilized ligand form and direct-binding caveat; do not split beta3 from alphaV, infer generic soluble VEGF signaling or assign SCI output."
+            elif pair == ("VEGFC", "ITGA9"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMCID:PMC1368959", "DOI:10.1074/jbc.M412816200"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary solid-phase binding, adhesion, migration and phosphorylation studies support fully processed VEGF-C binding to assembled alpha9beta1."
+                limitations = "Preserve fully processed VEGF-C, alpha9beta1, VEGFR3 crosstalk, cation dependence and endothelial/lymphangiogenic context; do not split alpha9 from beta1 or assign SCI output."
+            elif pair == ("VEGFC", "ITGB1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMCID:PMC1368959", "DOI:10.1074/jbc.M412816200"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary studies support fully processed VEGF-C binding to assembled alpha9beta1 with endothelial adhesion, migration and ERK1/2/paxillin outputs."
+                limitations = "Preserve alpha9beta1 and VEGFR3/cation-dependent processed-VEGF-C context; do not promote free ITGB1 signaling or infer SCI/terminal-TF output."
+            elif pair == ("VEGFD", "ITGA9"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMCID:PMC1368959", "DOI:10.1074/jbc.M412816200"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary solid-phase binding, adhesion, migration and phosphorylation studies support fully processed VEGF-D binding to assembled alpha9beta1."
+                limitations = "Preserve fully processed VEGF-D, alpha9beta1, VEGFR3 crosstalk, cation dependence and endothelial/lymphangiogenic context; do not split alpha9 from beta1 or assign SCI output."
+            elif pair == ("VEGFD", "ITGB1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMCID:PMC1368959", "DOI:10.1074/jbc.M412816200"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary studies support fully processed VEGF-D binding to assembled alpha9beta1 with endothelial adhesion, migration and ERK1/2/paxillin outputs."
+                limitations = "Preserve alpha9beta1 and VEGFR3/cation-dependent processed-VEGF-D context; do not promote free ITGB1 signaling or infer SCI/terminal-TF output."
+            elif pair == ("VEGFD", "NRP2"):
+                disposition = "already_present_exact_or_alias"
+                primary = ["PMID:16816121", "DOI:10.1182/blood-2005-11-4447"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human"
+                summary = "Primary binding, co-immunoprecipitation and endothelial cointernalization studies support VEGF-D binding to NRP2 and NRP2-VEGFR3 complex association in lymphatic endothelial systems."
+                limitations = "Preserve NRP2 as a neuropilin coreceptor, VEGFR3 association, heparin dependence and VEGF-D processing/isoform context; do not infer independent NRP2 signaling, universal VEGFR3 activation, SCI or terminal-TF output."
+            elif pair == ("VTN", "ITGA2B"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:9153222"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "Primary assay-specific evidence supports conformation-dependent binding of denatured or altered vitronectin to assembled alphaIIbbeta3, while native plasma vitronectin did not bind in that assay."
+                limitations = "Preserve altered/denatured vitronectin and alphaIIbbeta3 platelet-integrin context; do not infer a universal native VTN edge, split alphaIIb from beta3 or assign SCI/terminal-TF output."
+            elif pair == ("VTN", "ITGA8"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:7559467", "DOI:10.1074/jbc.270.39.23196"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary vitronectin-Sepharose, RGD-elution and transfected-cell assays support RGD-dependent extracellular vitronectin binding and adhesion through assembled alpha8beta1."
+                limitations = "Preserve alpha8beta1 heterodimer and recombinant/transfected-cell context; do not split alpha8 from beta1, infer autonomous ITGA8 signaling or assign SCI/terminal-TF output."
+            else:
+                raise SystemExit(f"unhandled batch 186 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"

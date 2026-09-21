@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:VEGFA>ITGAV	VEGFA	ITGAV	M21B-E000643	current bundle supports immobilized VEGF-A165/189 engagement of assembled alphaVbeta3, not autonomous ITGAV signaling	represented_graph_alias	batch_186
+LR:VEGFA>ITGB1	VEGFA	ITGB1	M21B-E000638;M21B-E000642;M23B-E000775;M23B-E000778	current bundle supports VEGF-A interaction with assembled alpha9beta1 and alpha3beta1 contexts, not free ITGB1 signaling	represented_graph_alias	batch_186
+LR:VEGFA>ITGB3	VEGFA	ITGB3	M21B-E000643	current bundle supports immobilized VEGF-A165/189 engagement of assembled alphaVbeta3, not isolated ITGB3 signaling	represented_graph_alias	batch_186
+LR:VEGFC>ITGA9	VEGFC	ITGA9	M21B-E000618;M23B-E000781;M23B-E000784	current bundle supports fully processed VEGF-C binding to assembled alpha9beta1 with endothelial adhesion/migration outputs	represented_graph_alias	batch_186
+LR:VEGFC>ITGB1	VEGFC	ITGB1	M21B-E000618;M23B-E000781;M23B-E000784	current bundle supports fully processed VEGF-C binding to assembled alpha9beta1, not free ITGB1 signaling	represented_graph_alias	batch_186
+LR:VEGFD>ITGA9	VEGFD	ITGA9	M21B-E000619	current bundle supports fully processed VEGF-D binding to assembled alpha9beta1 with endothelial adhesion/migration outputs	represented_graph_alias	batch_186
+LR:VEGFD>ITGB1	VEGFD	ITGB1	M21B-E000619	current bundle supports fully processed VEGF-D binding to assembled alpha9beta1, not free ITGB1 signaling	represented_graph_alias	batch_186
+LR:VEGFD>NRP2	VEGFD	NRP2	M21B-E000767;M21B-E005134	current bundle includes primary direct VEGF-D-NRP2 binding and NRP2-VEGFR3 complex association/cointernalization	represented_graph_alias	batch_186
+LR:VTN>ITGA2B	VTN	ITGA2B	M20B-E002282;M23B-E000086	current bundle supports conformation-dependent vitronectin binding to assembled alphaIIbbeta3, not isolated ITGA2B signaling	represented_graph_alias	batch_186
+LR:VTN>ITGA8	VTN	ITGA8	M20B-E002283;M21B-E007100;M23B-E000087;M23B-E000887	current bundle supports RGD-dependent vitronectin binding/adhesion through assembled alpha8beta1, not isolated ITGA8 signaling	represented_graph_alias	batch_186
