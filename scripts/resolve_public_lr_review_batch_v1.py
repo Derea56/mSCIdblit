@@ -1976,6 +1976,34 @@ def main() -> None:
                 "integrin branches have distinct site and pathway semantics, and the existing edges do not assert a "
                 "universal intracellular cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_137":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The public locators are pathway or database records, while the existing graph edge-source records "
+                "provide primary-supported CCN1-TLR4 activation, CCN2 alpha5beta1/Mac-1 adhesion, LRP1 transport, "
+                "TrkA-p75NTR signaling, CCN3-NOTCH1 association and Notch outputs, contextual CCN4-alpha5beta1 "
+                "interaction, and LPS-bound CD14 transfer to TLR4-MD2 at the stated molecular resolution."
+            )
+            limitations = (
+                "Do not add a duplicate edge or collapse CCN1 TLR4 versus TLR2 site semantics, CCN2 integrin "
+                "heterodimers and HSPG co-receptors, CCN2-LRP1 internalization versus direct binding, CTGF TrkA-"
+                "p75NTR complexes, CCN3 Notch1 extracellular mapping, CCN4 assembled alpha5beta1 context, or "
+                "LPS-bound CD14 transient transfer into autonomous canonical receptors. Preserve ligand domain, matrix, "
+                "co-receptor and receptor-complex resolution, species and assay limits, and the distinction between "
+                "binding, receptor-proximal signaling and functional output; the existing edges do not assert a "
+                "universal intracellular cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
