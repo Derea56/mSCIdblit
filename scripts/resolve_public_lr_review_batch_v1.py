@@ -1331,6 +1331,499 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "Alpha-2-macroglobulin is a protease-binding and clearance factor; the candidate rows do not establish it as a direct mature ligand for KLK1-family receptor targets."
                 limitations = "Require exact A2M-protein complex or receptor assay before promotion; do not infer direct signaling from protease inhibition or endocytic clearance context."
+            elif ligand == "ADGRE5" and receptor == "CD55":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E000945"
+                primary = ["PMID:9064337", "PMCID:PMC2192782", "DOI:10.1084/jem.184.3.1185"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "The graph contains the primary-supported CD55/DAF-to-ADGRE5/CD97 cell-adhesion relationship in the reverse orientation of this public row."
+                limitations = "Preserve ADGRE5 EGF-repeat and CD55/DAF adhesion context; do not add a duplicate reverse edge or infer a universal intracellular signaling route."
+            elif ligand == "ALCAM" and receptor == "ALCAM":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                primary = []
+                species = "as stated in primary model/assay"
+                summary = "ALCAM is a cell-adhesion molecule with homophilic and heterophilic binding contexts, but the public self-pair is not materialized as a graph self-loop."
+                limitations = "Retain exact ALCAM adhesion and receptor-complex evidence separately; do not encode an ALCAM self-loop or infer a unique intracellular relay from adhesion alone."
+            elif ligand.startswith("ALDH1A"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "ALDH1A-family labels are retinoid-metabolizing enzymes; the composite rows with CRABP/RAR/RXR or RORB do not represent a mature extracellular ligand acting on those receptors."
+                limitations = "Represent retinoic-acid production and nuclear-receptor activation only when the mature retinoid, receptor and primary assay are explicit; do not materialize enzyme-to-receptor composites as ligand edges."
+            elif ligand == "ALKAL1" and receptor == "ALK":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                primary = ["PMID:25331893", "DOI:10.1073/pnas.1414841111"]
+                species = "human"
+                summary = "The graph contains primary-supported ALKAL1/FAM150A activation of LTK, whereas the reviewed primary-supported ALK edge is ALKAL2/FAM150B; ALKAL1-to-ALK was not verified here."
+                limitations = "Preserve the ligand-specific ALKAL1-LTK and ALKAL2-ALK relationships; do not transfer ALKAL2 specificity to ALKAL1 without an exact ALKAL1/ALK primary assay."
+            elif ligand == "ALOX5AP" and receptor == "ALOX5":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "ALOX5AP and ALOX5 are intracellular 5-lipoxygenase-complex components, not an extracellular ligand and cell-surface receptor pair."
+                limitations = "Represent the 5-lipoxygenase complex and leukotriene production in intracellular or metabolic layers; do not materialize the protein-complex association as a ligand-receptor edge."
+            elif ligand.startswith("ANG"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Angiopoietin/angiopoietin-like and angiogenin-family labels are heterogeneous, and the public rows do not resolve the exact mature ligand form and receptor assay for the listed candidates."
+                limitations = "Require exact ANG/ANGPTL protein identity, receptor topology, species and primary binding or functional assay; do not transfer evidence across angiopoietin, angiopoietin-like or angiogenin paralogs."
+            elif ligand == "ANTXR1" and receptor == "TREML2":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "ANTXR1 is a membrane anthrax-toxin receptor and the current pass did not verify an exact ANTXR1-to-TREML2 ligand-receptor experiment."
+                limitations = "Retain ANTXR1 toxin-binding biology and exact TREML2 interactions separately; do not promote the database-only pair without a direct primary assay."
+            elif ligand == "ANXA1":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Annexin A1 has established FPR1/FPR2 and membrane-associated contexts, but the listed adrenergic, glutamatergic and melatonin receptors were not verified as direct ANXA1 receptor pairs."
+                limitations = "Require exact ANXA1 form, receptor, species and primary binding or activation assay; do not transfer FPR-family evidence to unrelated GPCRs."
+            elif ligand == "ANXA2":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Annexin A2 participates in plasminogen/tPA, membrane and cofactor interactions, but the public rows do not establish a conventional mature-ligand receptor edge for DYSF, EGFR or PLAT."
+                limitations = "Retain exact ANXA2 membrane, plasminogen and receptor-proximal mechanisms; do not materialize enzyme, substrate or cofactor relationships as direct ligand-receptor edges without an exact assay."
+            elif ligand == "APLN":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Apelin/APLN receptor biology is centered on APLNR/APJ, not the unrelated adrenergic or melatonin receptors listed in these rows."
+                limitations = "Require mature apelin isoform and direct APLNR assay; do not transfer APLN/APLNR specificity to unrelated GPCRs."
+            elif ligand == "APOA1" and receptor == "AMN+CUBN":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "APOA1 and the cubilin/amnionless complex are linked to lipoprotein uptake and trafficking contexts, but the public composite does not provide an exact mature-ligand receptor assay for this graph edge in the current pass."
+                limitations = "Preserve the intact CUBN:AMN uptake complex and lipoprotein context; do not collapse uptake/cofactor biology into a generic signaling receptor edge without direct primary support."
+            elif ligand in {"APOA5", "APOC1", "APOC2", "APOC3", "APOE"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Apolipoprotein-family rows can represent lipoprotein uptake, cofactor, competition or inflammatory contexts, but the exact mature apolipoprotein form and receptor mechanism are not resolved for this candidate."
+                limitations = "Require exact apolipoprotein form, receptor or uptake complex, species and primary binding or functional assay; do not transfer APOA/APOC/APOE evidence across receptor families or treat LPL/cofactor interactions as canonical signaling edges."
+            elif ligand == "APOB" and receptor == "APOBR":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "APOB/APOBR is a plausible lipoprotein-receptor relationship, but the current candidate row lacks a verified exact primary locator and is retained pending pair-specific confirmation."
+                limitations = "Require direct APOB100/APOBR binding or receptor-dependent functional evidence with the mature lipoprotein form; do not promote from family-level apolipoprotein or uptake annotations alone."
+            elif ligand == "APOB":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The remaining APOB rows are lipoprotein, enzyme, transporter or receptor-context predictions rather than verified direct APOB ligand-receptor edges in this pass."
+                limitations = "Retain exact APOB100/LDLR, APOB/TREM2 and other primary-supported lipoprotein contexts separately; do not transfer them to unrelated candidate targets."
+            elif ligand == "APOO":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "APOO is a mitochondrial protein label, not a mature extracellular ligand for IL1RAPL1."
+                limitations = "Represent mitochondrial protein interactions separately; do not materialize APOO-to-IL1RAPL1 as a ligand-receptor edge without exact primary support."
+            elif ligand == "APP" and receptor == "ADRA2A":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The current pass did not verify an exact APP-to-ADRA2A ligand-receptor or receptor-triggering experiment."
+                limitations = "Retain APP processing and exact APP receptor/cofactor evidence separately; do not infer an adrenergic receptor route from database co-membership."
+            elif ligand == "APP":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "APP is a membrane protein and proteolytic-adhesion signaling substrate with several binding partners, but the public rows do not establish the listed targets as direct mature-ligand receptors in this pass."
+                limitations = "Retain exact APP processing, adhesion and receptor/cofactor evidence separately; do not transfer APP-family interactions across unrelated targets or infer a canonical extracellular ligand route from database membership."
+            elif ligand == "AREG" and receptor == "MMP9":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "AREG is an EGFR ligand, whereas MMP9 is a protease and not a receptor in the public row."
+                limitations = "Represent EGFR activation and MMP9-mediated shedding or matrix remodeling in their appropriate layers; do not materialize AREG-to-MMP9 as a ligand-receptor edge."
+            elif ligand.startswith(("ARF", "ARPC")):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "ARF and ARPC-family labels are intracellular trafficking or actin-complex components, not extracellular ligands for the listed membrane proteins."
+                limitations = "Represent intracellular trafficking and cytoskeletal mechanisms separately; do not materialize the database row as a ligand-receptor edge."
+            elif ligand == "ARMH4":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The current pass did not verify ARMH4 as a mature extracellular ligand or an exact ARMH4-to-TNFRSF11B receptor interaction."
+                limitations = "Retain for targeted primary review; do not promote an edge from public-database membership alone."
+            elif ligand == "ARTN" and receptor == "NCAM1":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "Artemin is established in GFRalpha3/RET neurotrophic receptor contexts, but an exact ARTN-to-NCAM1 receptor assay was not verified in this pass."
+                limitations = "Require direct ARTN/NCAM1 binding or receptor-dependent functional evidence; do not transfer GFRalpha3/RET specificity to NCAM1."
+            elif ligand == "ATP1B1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "ATP1B1 is a membrane Na/K-ATPase subunit, not a mature extracellular ligand for NEGR1."
+                limitations = "Represent Na/K-ATPase and adhesion-complex biology separately; do not materialize ATP1B1-to-NEGR1 as a ligand-receptor edge without exact primary support."
+            elif ligand == "AU040320":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "AU040320 is an unresolved gene/protein label in this candidate snapshot, and no exact mature-ligand identity or receptor assay was verified."
+                limitations = "Resolve the entity identifier and protein form before any evidence promotion; do not infer receptor specificity from the public prediction alone."
+            elif ligand == "AVP":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Arginine vasopressin receptor biology is centered on AVPR1A, AVPR1B and AVPR2, not the unrelated receptors listed in these rows."
+                limitations = "Require mature AVP and direct AVPR-family assay; do not transfer vasopressin specificity to ADCYAP1R1, adrenergic, PTH, RAMP or transporter candidates."
+            elif ligand == "B2M":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "B2M is a class-I MHC component and beta-2-microglobulin-associated extracellular protein, not a generic mature ligand for the listed immune, transporter or T-cell components."
+                limitations = "Represent exact MHC-I assembly and immune-recognition interactions separately; do not materialize B2M-to-receptor rows from family or pathway membership alone."
+            elif ligand in {"BACE1", "BACE2"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "BACE1/BACE2 are intracellular or membrane-associated proteases; the public rows describe enzyme-substrate or processing contexts rather than mature ligand-receptor edges."
+                limitations = "Represent APP and other substrate processing in a receptor-proximal or intracellular layer; do not materialize protease-to-substrate rows as ligand-receptor edges."
+            elif ligand == "BC053393":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "BC053393 remains an unresolved public identifier in this pass, with no verified mature extracellular ligand identity or exact receptor assay."
+                limitations = "Resolve the identifier and protein form before promotion; do not infer specificity across CD300, IGSF or SIGLEC families."
+            elif ligand == "BDNF" and receptor == "GPR152":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "BDNF signaling is established through TrkB/NTRK2 and p75NTR contexts, but an exact BDNF-to-GPR152 receptor experiment was not verified in this pass."
+                limitations = "Require direct BDNF/GPR152 binding or receptor-dependent function; do not transfer TrkB/p75NTR specificity to GPR152."
+            elif ligand == "BGN":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Biglycan is an extracellular matrix proteoglycan with context-dependent innate-receptor signaling, but the public rows do not resolve an exact BGN-to-FGFR3 or BGN-to-LY96 direct receptor mechanism."
+                limitations = "Retain exact biglycan/TLR or matrix-receptor evidence separately; do not transfer proteoglycan-family signaling to unrelated receptor candidates without a direct primary assay."
+            elif ligand.startswith("BMP"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "BMP-family rows overlap known type-I/type-II receptor and SMAD signaling, but the public candidates do not resolve the exact mature BMP form, receptor complex and pair-specific primary assay for each listed target."
+                limitations = "Retain exact BMP-to-receptor and BMP-to-complex evidence already present in the graph; do not transfer receptor specificity across BMP paralogs or collapse a multi-subunit complex into an unsupported binary edge."
+            elif ligand == "BOC":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "BOC is a cell-surface Hedgehog co-receptor/adhesion protein, not a mature extracellular ligand for LILRA6, PTCH1, PTCH2 or SMO."
+                limitations = "Represent BOC as a co-receptor in Hedgehog signaling when directly supported; do not materialize BOC-to-receptor rows as ligand edges."
+            elif ligand == "BSG":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "BSG/CD147 is a membrane immunoglobulin-superfamily protein and chaperone for monocarboxylate transporters, not a soluble ligand for SLC16A1 or SLC16A7."
+                limitations = "Represent BSG-MCT complex biology separately; do not materialize receptor/transporter complex associations as ligand-receptor edges."
+            elif ligand == "BST1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "BST1 is an ectoenzyme and cell-surface protein, not a verified soluble ligand for CAV1 in this row."
+                limitations = "Require direct BST1/CAV1 binding or receptor-dependent function before promotion; do not infer an edge from membrane co-localization or database membership."
+            elif ligand == "BST2":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "BST2/tetherin is a membrane antiviral and immune-regulatory protein, but the public rows do not establish the listed LILRA/PIRA paralogs as its direct receptor pair."
+                limitations = "Require exact BST2 receptor identity, species and primary binding or functional assay; do not transfer evidence among LILRA/PIRA paralogs."
+            elif ligand == "BTLA":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "BTLA is an immune-checkpoint membrane protein with established HVEM/TNFRSF14 context, but the public rows do not verify CD276 or VTCN1 as its direct receptor pair."
+                limitations = "Require exact BTLA ligand/receptor orientation, species and primary binding or functional assay; do not transfer HVEM or B7-family evidence across checkpoint paralogs."
+            elif ligand == "BTN1A1":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "BTN1A1/JAML is a plausible cell-adhesion or immune-complex relationship, but the current candidate row lacks a verified exact primary locator and is retained as contextual pending pair-specific review."
+                limitations = "Require direct BTN1A1/JAML binding or receptor-dependent function with exact orientation and species; do not infer a general butyrophilin-family interaction."
+            elif ligand.startswith("BTNL"):
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "Butyrophilin-like family membership does not establish the listed IL6RA or LRFN5 targets as direct receptors for BTNL9 in this pass."
+                limitations = "Require exact BTNL9 receptor identity and primary binding or functional assay; do not transfer evidence across butyrophilin-like paralogs."
+            elif ligand.startswith("C1Q"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "C1Q-family complement and collectin proteins have context-dependent immune, phagocytic and matrix interactions, but the public rows do not resolve exact mature C1Q-chain forms and receptor mechanisms for each target."
+                limitations = "Require exact C1Q isoform or assembled ligand, receptor, species and primary assay; do not transfer C1Q, complement-receptor or collagen-like-domain evidence across paralogs."
+            elif ligand in {"C3", "C4A", "C4B"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "C3/C4A/C4B labels are complement precursor or mature-fragment families; the public rows do not specify the processed complement ligand form required for a direct receptor edge."
+                limitations = "Require exact mature C3a/C3b/C4a or C4b form, receptor identity and primary assay; do not materialize precursor-to-receptor rows or transfer specificity across complement fragments."
+            elif ligand == "C4BP":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "C4BP is a complement-regulatory protein and the current pass did not verify an exact C4BP-to-BMPR2 ligand-receptor experiment."
+                limitations = "Retain complement-regulatory and extracellular-matrix context separately; do not promote a database-only BMPR2 pair."
+            elif ligand == "C920025E04RIK":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "C920025E04RIK remains an unresolved public identifier in this pass, with no verified mature ligand identity or direct CD8A/CD8B1 receptor assay."
+                limitations = "Resolve the identifier and protein form before promotion; do not infer receptor specificity from database membership alone."
+            elif ligand.startswith("CADM"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "CADM family rows describe cell-adhesion and trans-interaction contexts, but the public candidates do not establish each exact CADM paralog pair or the listed ERBB3, MAG and unrelated targets as a single direct signaling edge."
+                limitations = "Preserve cis/trans orientation and paralog specificity; require exact pair-level primary adhesion or receptor-triggering evidence before promotion, and do not infer a soluble ligand route from adhesion-family membership."
+            elif ligand in {"CALCA", "CALCB"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Calcitonin/CGRP-family biology is receptor-complex dependent, while the public rows do not resolve the mature peptide form and complete CALCR, CALCRL or RAMP composition for each listed target."
+                limitations = "Require mature CALCA/CALCB peptide, exact receptor-complex composition, species and primary binding or activation assay; do not transfer CGRP, calcitonin or amylin receptor specificity across paralogs and RAMPs."
+            elif ligand.startswith("CALM") or ligand == "CALML3":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Calmodulin and calmodulin-like proteins are intracellular signaling components, not extracellular ligands for the listed channels, enzymes or kinases."
+                limitations = "Represent calmodulin-dependent intracellular regulation separately; do not materialize protein-complex associations as ligand-receptor edges."
+            elif ligand == "CALR":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "CALR/calreticulin is primarily an endoplasmic-reticulum chaperone and immune-surface context protein, not a mature ligand for TAP1/TAP2."
+                limitations = "Represent calreticulin, MHC-I assembly and antigen-processing mechanisms in their appropriate layers; do not materialize CALR-to-TAP rows as ligand-receptor edges."
+            elif ligand == "CAMP" and receptor == "FPR3":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "Antimicrobial peptide/CAMP signaling has receptor-specific and processed-peptide context, but an exact CAMP-to-FPR3 receptor experiment was not verified in this pass."
+                limitations = "Require exact mature CAMP peptide and direct FPR3 binding or activation evidence; do not transfer FPR1/FPR2 or unrelated chemotactic receptor evidence to FPR3."
+            elif ligand == "CAR12":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "CAR12/CA12 is a membrane carbonic-anhydrase protein, not a mature extracellular ligand for the listed immune receptors."
+                limitations = "Represent carbonic-anhydrase and membrane-complex biology separately; do not materialize CAR12-to-CD33/SIGLEC rows without exact primary support."
+            elif ligand.startswith("CCL19PS"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "CCL19PS1 is a pseudogene-like public label and is not treated as a verified mature chemokine ligand for ACKR, CCR or CXCR receptors."
+                limitations = "Resolve the expressed chemokine product and mature form before review; do not transfer CCL19/CCR7 evidence to a pseudogene label."
+            elif ligand.startswith("CCL"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Chemokine-family candidates can involve signaling, scavenging or atypical-receptor contexts, but the public rows do not establish the exact mature chemokine form and receptor mechanism for each listed pair."
+                limitations = "Require exact CCL isoform, receptor orientation, species and primary binding or functional assay; do not transfer canonical CCR specificity to ACKR, CCRL or CXCR paralogs without pair-specific evidence."
+            elif ligand.startswith("CCN"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "CCN matricellular proteins can bind integrins, growth-factor receptors and extracellular-matrix partners, but the public rows do not establish the exact CCN isoform, receptor complex and pair-specific primary mechanism for each candidate."
+                limitations = "Require exact CCN form, receptor subunit composition, species and primary binding or functional assay; do not transfer integrin, FGFR, ERBB or LRP-family evidence across CCN paralogs or collapse matrix/co-receptor context into a binary edge."
+            elif ligand == "CD14":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "CD14 is a GPI-anchored innate immune co-receptor and pattern-recognition component, not a mature extracellular ligand for the listed integrins, PLXND1, RIPK1 or TLR subunits."
+                limitations = "Represent CD14-containing innate receptor complexes and co-receptor function separately; do not materialize CD14-to-target rows as ligand edges without exact primary support."
+            elif ligand.startswith("CD209"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "CD209-family proteins are membrane C-type lectin receptors, not soluble ligands for CEACAM-family targets in these rows."
+                limitations = "Represent lectin receptor binding and cis/trans immune-complex biology separately; do not materialize CD209-to-CEACAM rows as ligand-receptor edges without direct primary support."
+            elif ligand == "CD226":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "CD226 is an immune adhesion/co-receptor with known PVR/CD155 and Nectin-2 context, but the public rows do not resolve the exact trans-interaction orientation or establish MCAM as a direct CD226 ligand/receptor partner."
+                limitations = "Preserve CD226/PVR-family orientation and immune-cell context; require exact MCAM or PVR-family primary assay before promotion and do not infer a soluble ligand route."
+            elif ligand in {"CD22", "CD244A", "CD24A", "CD274", "CD28"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "The candidate uses a membrane immune-receptor or checkpoint protein as the ligand label, but the listed target does not have a verified exact pair-specific primary interaction in this pass."
+                limitations = "Require exact ligand/receptor orientation, receptor-complex composition, species and direct primary assay; do not transfer checkpoint, adhesion or intracellular adaptor evidence across immune-protein paralogs."
+            elif ligand == "CD40" and receptor == "CD40LG":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E000679"
+                primary = ["PMID:21285457", "PMCID:PMC3064178", "DOI:10.1073/pnas.1016567108", "PMID:7664782"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human"
+                summary = "The graph contains the primary-supported CD40LG/CD154-to-CD40 costimulatory interaction in the reverse orientation of the public row."
+                limitations = "Preserve CD40LG as ligand and CD40/TNFRSF5 as receptor; do not add a duplicate reverse edge or infer a complete terminal-TF route from receptor engagement alone."
+            elif ligand == "CD96" and receptor == "NECTIN1":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E005534"
+                primary = ["PMID:17971293", "PMCID:PMC6373967", "DOI:10.1371/journal.pone.0191588"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "The graph contains primary-supported Nectin-1/CD111-to-CD96/TACTILE immune-adhesion evidence in the reverse orientation of the public row."
+                limitations = "Preserve Nectin-1 as the adhesion ligand and CD96 as the receptor; do not add a duplicate reverse edge or infer a unique intracellular relay from adhesion alone."
+            elif ligand in {"CD44", "CD59A", "CD59B", "CD79B", "CD82", "CD9"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses a membrane adhesion, complement-regulatory, B-cell-receptor or tetraspanin protein as the ligand label, but the listed target is not established as its direct mature-ligand receptor in this pass."
+                limitations = "Represent exact cis/trans adhesion, receptor-complex and membrane-organizer mechanisms separately; do not materialize membrane-protein associations as soluble ligand-receptor edges without exact primary support."
+            elif ligand == "CD47":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "CD47 has primary-supported SIRPA/SIRPG and integrin-associated checkpoint contexts, but the public rows target SIRPB paralogs and unrelated proteins for which exact pair-specific evidence was not verified here."
+                limitations = "Preserve CD47/SIRPA and CD47/SIRPG orientation and receptor-family specificity; do not transfer evidence to SIRPB or unrelated targets without direct primary support."
+            elif ligand == "CD48":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "CD48 is a GPI-anchored immune adhesion ligand with receptor-family-specific interactions, but an exact CD48-to-PDCD1 primary experiment was not verified in this pass."
+                limitations = "Require direct CD48/PDCD1 binding or receptor-dependent function; do not transfer CD2-family adhesion evidence to PDCD1."
+            elif ligand == "CD6":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "CD6 is an immune receptor with established ALCAM/CD166 and CD318 contexts, but the listed DAG1 and SIGLEC targets were not verified as direct CD6 receptor partners in this pass."
+                limitations = "Preserve CD6 receptor orientation and known adhesion/costimulation partners; do not transfer evidence across SIGLEC or dystroglycan families."
+            elif ligand == "CD70":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "CD70 is established as the ligand for CD27/TNFRSF7, but the listed TNFRSF13B and TNFRSF17 targets were not verified as direct CD70 receptor pairs."
+                limitations = "Require exact CD70 receptor identity and primary binding or activation assay; do not transfer CD27, BAFF-R or BCMA family specificity."
+            elif ligand == "CD72":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "CD72 is an immune C-type lectin-like receptor and the public rows may reflect immune adhesion or receptor-family context, but exact CD72-to-NCAM2/SEMA4D pair evidence was not verified."
+                limitations = "Require exact ligand/receptor orientation and primary assay; do not transfer CD72 family or SEMA4D signaling evidence across unrelated immune receptors."
+            elif ligand == "CDCP1":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "CDCP1 is a transmembrane receptor-like protein that can participate in EGFR and Src-family crosstalk, but the public row does not establish a conventional soluble CDCP1-to-EGFR ligand mechanism."
+                limitations = "Represent receptor crosstalk and proteolytic processing in receptor-proximal layers; do not materialize CDCP1-to-EGFR as a canonical ligand edge without direct extracellular binding evidence."
+            elif ligand.startswith("CDH"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Cadherin-family candidates represent homophilic or heterophilic cell-adhesion and crosstalk contexts, but the public rows do not resolve exact trans orientation and pair-specific primary support for each target."
+                limitations = "Preserve cadherin isoform, cis/trans orientation and adhesion context; do not infer soluble ligand signaling or transfer evidence across cadherin paralogs without an exact primary assay."
+            elif ligand.startswith("CEACAM"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "CEACAM-family candidates describe cell-adhesion, lectin and immune-checkpoint contexts, but the exact CEACAM paralog, orientation and receptor mechanism for these LILRA, CD209 or selectin rows were not verified in this pass."
+                limitations = "Require exact CEACAM paralog, receptor orientation, species and primary binding or functional assay; do not transfer adhesion or checkpoint evidence across CEACAM family members."
+            elif ligand in {"CIB1", "CIRBP"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "CIB1 and CIRBP are intracellular signaling or RNA-binding proteins, not mature extracellular ligands for the listed receptors or integrin subunits."
+                limitations = "Represent intracellular adaptor, integrin-tail and stress-RNA mechanisms separately; do not materialize protein-association rows as ligand-receptor edges."
+            elif ligand in {"CFD", "CFH"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Complement factor and adipokine-family proteins can participate in extracellular immune and protease-regulatory complexes, but the public rows do not resolve the exact mature form and receptor mechanism for these candidates."
+                limitations = "Require exact complement-factor form, receptor or complex, species and primary assay; do not transfer complement-regulatory or adipokine evidence across paralogs or treat factor-factor associations as canonical ligand edges."
+            elif ligand == "CGN":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "CGN/cingulin is a junctional cytoskeletal scaffolding protein, not a mature extracellular ligand for occludin or TGFBR targets."
+                limitations = "Represent tight-junction and intracellular scaffolding mechanisms separately; do not materialize CGN-to-OCLN/TGFBR rows as ligand-receptor edges."
+            elif ligand == "CHL1":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "CHL1 is a neural cell-adhesion molecule with contactin/co-receptor contexts, but the listed CNTN, SIRPA and TMEM132A targets were not verified as exact primary CHL1 receptor pairs in this pass."
+                limitations = "Preserve CHL1/contactin orientation and neural adhesion context; require exact pair-level primary evidence before promotion and do not infer a soluble ligand route."
+            elif ligand == "CLEC11A":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "CLEC11A is an extracellular lectin-like protein with osteogenic context, but an exact CLEC11A-to-KIT receptor assay was not verified in this pass."
+                limitations = "Require direct CLEC11A/KIT binding or receptor-dependent function; do not infer KIT activation from extracellular localization or family annotation."
+            elif ligand.startswith("CLEC"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "C-type lectin-family rows can represent membrane immune receptors or context-dependent trans-interactions, but the exact CLEC isoform, ligand/receptor orientation and primary mechanism for these candidates were not verified."
+                limitations = "Require exact CLEC form, receptor orientation, species and direct primary assay; do not transfer KLRB or NCAM-family evidence across CLEC paralogs."
+            elif ligand in {"CLMP", "CMTM8", "CNMD"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "The candidate uses a membrane adhesion, tetraspanin-like or junction-associated protein in a receptor/crosstalk context, but no exact mature-ligand receptor experiment was verified for this row."
+                limitations = "Represent cell-contact, membrane-organizer and receptor-crosstalk mechanisms separately; do not materialize these candidates as canonical soluble ligand edges without direct primary support."
+            elif ligand.startswith("CNTF"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "CNTF signaling is supported through CNTFR-alpha with gp130 and LIFR or OSMR receptor complexes, but the public rows isolate receptor subunits, omit partners or list unrelated EGFR targets."
+                limitations = "Retain the intact CNTFR-alpha:gp130:LIFR/OSMR topology and existing CNTF receptor-complex evidence; do not materialize isolated subunits as standalone CNTF receptors or transfer specificity to EGFR."
+            elif ligand.startswith("CNTN"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Contactin-family candidates describe neural cell-adhesion and co-receptor contexts, but the exact contactin isoform, trans/cis orientation and receptor mechanism for these rows were not verified in this pass."
+                limitations = "Preserve contactin isoform and adhesion orientation; require exact pair-level primary evidence before promotion and do not infer soluble ligand signaling from family membership."
+            elif ligand.startswith("COL"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Collagen-family extracellular-matrix proteins can act as receptor ligands through integrins, DDRs or LAIR1, but these broad public rows do not resolve the exact collagen chain, mature trimer/domain and receptor complex for each candidate."
+                limitations = "Require exact collagen isoform/domain, receptor subunit composition, species and primary binding or functional assay; do not transfer collagen-X/DDR2 or integrin-family evidence across collagen paralogs and receptor complexes."
+            elif ligand.startswith("ADAM"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = reviewed
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "as stated in primary model/assay"
+                summary = "ADAM-family sheddases can process receptors, adhesion molecules or ligands and thereby alter signaling, but the public row is not a conventional extracellular ligand-receptor binding edge."
+                limitations = "Retain exact substrate cleavage, shedding and receptor-processing evidence as receptor-proximal mechanism; do not materialize ADAM-to-substrate rows as direct ligand edges or infer a unique downstream TF route."
+            elif ligand in {"ABCA1", "ACE2", "ACP4", "ACTR2", "ADGRF5", "ADAM11", "ADAM20", "ADAM21", "ADAM23", "ADAM25", "ADAM39"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses a transporter, enzyme, intracellular cytoskeletal component or receptor-family protein as the ligand label rather than a mature extracellular ligand for the listed target."
+                limitations = "Represent transporter, enzymatic, intracellular or receptor-receptor mechanisms in their appropriate layers; do not materialize the row as a direct ligand-receptor edge without exact primary support."
+            elif ligand == "ADCYAP1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "PACAP/ADCYAP1 is established through PAC1/ADCYAP1R1 and VPAC-family receptor contexts, not the unrelated receptors listed in these rows."
+                limitations = "Require mature PACAP isoform and direct receptor assay before promotion; do not transfer PAC1/VPAC specificity to adrenergic, RAMP or orphan GPCR candidates."
+            elif ligand == "ADIPOQ":
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = reviewed
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human; mouse; rat comparator"
+                summary = "Adiponectin has primary-supported AdipoR1/AdipoR2 and LAIR1 receptor contexts, but the listed ASGR2, FFAR3, GPR152 or PROKR2 candidates were not verified as direct receptor pairings in this pass."
+                limitations = "Require isoform/form-specific adiponectin binding or activation evidence; do not transfer AdipoR1/2 or LAIR1 biology to unrelated receptor families."
+            elif ligand in {"ADM", "ADM2"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = reviewed
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; mouse; rat comparator"
+                summary = "Adrenomedullin-family signaling is receptor-complex dependent, principally involving CALCRL with RAMP2/RAMP3; the listed non-CALCRL receptor rows were not verified as direct mature-ligand pairings."
+                limitations = "Require exact ADM/ADM2 form, CALCRL/RAMP composition, species and receptor assay; do not infer activity at unrelated GPCRs or DCLK/MRGP receptor paralogs."
+            elif ligand in {"AGRP", "AGT"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The peptide-family candidate is paired with receptors outside its established cognate receptor context: AGRP with melanocortin receptors and angiotensin peptides with AGTR receptors."
+                limitations = "Require mature peptide form and direct receptor assay; do not transfer AGRP/AGTR receptor specificity to SDC, adrenergic, glutamatergic or metabolic enzymes."
+            elif ligand.startswith("AKR1") or ligand.startswith("AKR1C"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "AKR-family labels are steroid or prostanoid metabolic enzymes/composites, not mature extracellular ligands for the listed receptor."
+                limitations = "Represent steroid/prostanoid metabolism separately; do not materialize AKR-family enzyme composites as direct receptor ligands."
             elif ligand in {"PTH", "PTH2", "PTHLH"}:
                 disposition = "reject_precursor_or_non_edge_form"
                 layer = "candidate_only_unverified"

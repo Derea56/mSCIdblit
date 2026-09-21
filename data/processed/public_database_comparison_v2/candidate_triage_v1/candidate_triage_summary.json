@@ -2,12 +2,12 @@
   "bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion251",
   "bundle_release_id": "module20_24_mechanism_graph:2026-09-21",
   "candidate_input": {
-    "path": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/public_database_comparison_v2/public_only_lr_candidates.tsv",
+    "path": "data/processed/public_database_comparison_v2/public_only_lr_candidates.tsv",
     "raw_rows": 7753,
     "sha256": "31189239be3f4b6f91a87c92b1716ccac294f468279c7122693624c55c508732"
   },
   "candidate_units": 7753,
-  "completed_batch_review_units": 3100,
+  "completed_batch_review_units": 3800,
   "graph_input": {
     "direct_lr_edges": 8112,
     "path": "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion251/mechanism_edges.tsv",
@@ -20,7 +20,7 @@
   },
   "policy": "This triage does not promote edges or assign biological confidence; primary evidence and route plausibility remain separate downstream decisions.",
   "prior_audit_input": {
-    "path": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/public_database_comparison_v2/primary_evidence_harvest_resolution.tsv",
+    "path": "data/processed/public_database_comparison_v2/primary_evidence_harvest_resolution.tsv",
     "rows": 25,
     "sha256": "0ed894fafc921fb08d4c49c0f38a23fb83f2bb730cf0202f85a0f5adee440727"
   },
@@ -28,8 +28,8 @@
   "prior_harvest_rows": 25,
   "resolution_ledger_input": {
     "path": "data/processed/public_database_comparison_v2/candidate_triage_v1/review_resolution_ledger.tsv",
-    "rows": 3100,
-    "sha256": "32fd8dea1499082252cf1400e06ae7920413e4e2cd4058b0abf5252842ef4d85"
+    "rows": 3800,
+    "sha256": "7ec087b6f230d9568aa09055262ee39156f255c364878099c2c6f99621b26ec9"
   },
   "review_batch_counts": {
     "batch_001": 100,
@@ -61,25 +61,18 @@
     "batch_027": 100,
     "batch_028": 100,
     "batch_029": 100,
-    "batch_030": 100,
-    "batch_031": 100,
-    "batch_032": 100,
-    "batch_033": 100,
-    "batch_034": 100,
-    "batch_035": 100,
-    "batch_036": 100,
-    "batch_037": 60
+    "batch_030": 60
   },
   "review_batch_size": 100,
   "review_lane_counts": {
-    "completed_batch_review": 3100,
+    "completed_batch_review": 3800,
     "completed_prior_harvest": 25,
-    "discovery_review": 3660,
+    "discovery_review": 2960,
     "represented_graph_alias": 960,
     "resolved_graph_match": 8
   },
-  "review_queue_rows": 3660,
+  "review_queue_rows": 2960,
   "review_queue_with_primary_locators": 0,
-  "review_queue_without_primary_locators": 3660,
+  "review_queue_without_primary_locators": 2960,
   "triage_id": "mSCIdblit:public-lr-candidate-triage-v1"
 }
