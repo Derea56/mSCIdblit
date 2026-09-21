@@ -2479,6 +2479,72 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "VCAM1 evidence supports heterodimeric alpha4beta1 or alpha9beta1 integrin complexes, not isolated ITGA4 or ITGA9 subunits as complete receptors in the public row."
                 limitations = "Retain the intact integrin heterodimer orientation and do not materialize free integrin alpha-subunit rows."
+            elif ligand == "ITGAM" and receptor == "ICAM1":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E000599"
+                primary = ["PMID:1980124"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "The graph contains the primary-supported ICAM1-to-Mac-1/ITGAM:ITGB2 adhesion relationship in the reverse orientation of the public row."
+                limitations = "Preserve ICAM1 as ligand and ITGAM:ITGB2 as the receptor complex; do not add a duplicate reverse edge or treat free ITGAM as the complete receptor."
+            elif ligand in {"ITGAV", "ITGB1", "ITGB2", "ITGB2L"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                primary = []
+                species = "as stated in primary model/assay"
+                summary = "The public row places a free integrin subunit or unresolved beta2-like label in ligand position, while the relevant adhesion relationships require an intact heterodimeric receptor complex and a defined extracellular ligand orientation."
+                limitations = "Retain exact integrin heterodimer composition and ligand orientation; do not materialize free-subunit rows or transfer alpha/beta integrin evidence across complexes."
+            elif ligand == "ITM2B":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "ITM2B is a membrane-associated protein with intracellular and processing context, not a mature extracellular ligand for ROR2."
+                limitations = "Represent ITM2B processing and membrane biology separately; do not materialize ITM2B-to-ROR2 as a ligand edge without exact primary support."
+            elif ligand == "IZUMO1":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "IZUMO1 is a gamete-fusion membrane protein, but an exact IZUMO1-to-LILRA5 receptor experiment was not verified in this pass."
+                limitations = "Require direct IZUMO1/LILRA5 binding or receptor-dependent function; do not transfer gamete-adhesion or immune-receptor family evidence."
+            elif ligand == "JAML":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "JAML is a junctional adhesion membrane protein/receptor partner, not a mature soluble ligand for CD320 or other membrane targets in these rows."
+                limitations = "Represent JAML/CXADR and related adhesion-complex orientation separately; do not invert JAML into a ligand edge without exact primary support."
+            elif ligand.startswith("JAM"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "JAM-family candidates describe junctional cell-adhesion and trans-interaction contexts, but the exact JAM paralog, orientation and receptor mechanism for these rows were not verified as primary-supported direct edges."
+                limitations = "Preserve JAM family, cis/trans orientation and adhesion context; require exact pair-level primary assay before promotion and do not infer soluble ligand signaling."
+            elif ligand.startswith("KCN"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "KCNA1 is an ion-channel protein, not a mature extracellular ligand for contactin, RTN4 or related membrane targets."
+                limitations = "Represent channel and membrane-complex biology separately; do not materialize KCNA1-to-receptor rows as ligand edges."
+            elif ligand in {"KIRREL", "KIRREL3"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "KIRREL-family proteins are cell-adhesion receptors with homophilic or heterophilic contact context, but the exact KIRREL paralog and target orientation for these rows were not verified."
+                limitations = "Preserve KIRREL paralog and adhesion orientation; do not encode self-loops or infer a soluble ligand route from adhesion-family membership."
+            elif ligand == "KISS1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "KISS1 receptor biology is centered on KISS1R, not MMP24 in the public row."
+                limitations = "Require mature kisspeptin form and direct KISS1R assay; represent MMP24 protease biology separately."
+            elif ligand == "KL":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Klotho/KL is a co-receptor or context-dependent extracellular regulator for FGF23 and related pathways, but the public rows do not resolve the complete KL/FGFR or KL/IGF receptor topology for each target."
+                limitations = "Retain intact Klotho-containing receptor complexes and exact co-receptor roles; do not materialize KL as a generic standalone ligand for FGFR, IGF1R, INSR or TRPV channels."
+            elif ligand.startswith("KLK"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "KLK-family labels are serine proteases, not mature extracellular neurotrophin, erythropoietin or coagulation ligands for the listed receptors."
+                limitations = "Represent protease processing and protease-activated receptor mechanisms separately; do not materialize KLK-to-EPOR/NTRK/NGFR rows without exact mature-ligand evidence."
             elif ligand.startswith("ADAM"):
                 disposition = "hold_contextual_or_complex_boundary"
                 primary = reviewed
