@@ -1,0 +1,8 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:COL1A2>CD44	COL1A2	CD44			primary_review	batch_085
+LR:COL2A1>SDC1	COL2A1	SDC1			primary_review	batch_085
+LR:TRY4>F2RL1	TRY4	F2RL1			primary_review	batch_085
+LR:WNT11>FZD3	WNT11	FZD3			primary_review	batch_085
+LR:RLN3>RXFP2	RLN3	RXFP2			primary_review	batch_085
+LR:THBS4>CD36	THBS4	CD36			primary_review	batch_085
+LR:PRSS2>F2RL2	PRSS2	F2RL2			primary_review	batch_085
