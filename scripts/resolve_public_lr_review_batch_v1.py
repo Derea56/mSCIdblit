@@ -3015,6 +3015,71 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "PAPLN/papilin is an extracellular-matrix protein, but the listed CD200, Nectin4 and SIRPA targets were not verified as exact direct PAPLN receptor mechanisms."
                 limitations = "Require exact PAPLN domain, receptor or adhesion partner, species and primary assay; do not transfer matrix-family evidence across immune and adhesion receptors."
+            elif ligand in {"PRSS1", "PRSS3", "PRSS3L"} and receptor in {"F2R", "F2RL1", "F2RL2", "F2RL3"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Trypsin-family proteases can activate protease-activated receptor family members by proteolytic unmasking, but the current graph release records thrombin and factor-Xa branches rather than an exact PRSS1/PRSS3/PRSS3L pair for every listed PAR."
+                limitations = "Require mature protease, cleavage-site, receptor-paralog and assay-specific primary evidence before promotion; preserve PAR1-4 proteolytic activation and do not infer a generic protease-to-PAR edge across paralogs."
+            elif ligand == "PVR" and receptor == "NECTIN3":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E011623"
+                primary = ["PMID:23027581", "PMCID:PMC3792040"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "The graph contains the primary-supported Nectin-3-to-PVR heterophilic adhesion relationship in the reverse orientation of this public row."
+                limitations = "Preserve Nectin-3/PVR adhesion and endothelial transendothelial-migration context; do not add a duplicate reverse edge or infer a soluble ligand route."
+            elif ligand == "PVR" and receptor == "PVRIG":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "PVR/CD155 is a ligand for TIGIT, CD226 and CD96, whereas PVRIG/CD112R is the receptor for Nectin-2/CD112 rather than an established PVR ligand target."
+                limitations = "Preserve the PVR checkpoint/adhesion branches and the separate Nectin-2-PVRIG axis; do not transfer specificity between PVR and PVRIG."
+            elif ligand == "QRFP" and receptor == "QRFPRL":
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E005549"
+                primary = ["PMID:12714592", "DOI:10.1074/jbc.M302945200"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "The graph already contains primary-supported mature QRFP/26RFa activation of QRFPR under the QRFPRL receptor alias."
+                limitations = "Preserve mature RF-amide peptide processing, QRFPR alias and heterologous GPCR assay context; no SCI or terminal-TF inference is asserted."
+            elif ligand == "RAET1E" and receptor == "KLRK1":
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E005632"
+                primary = ["PMID:12732206", "DOI:10.1016/S0006-291X(03)00714-9"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "The graph already contains primary-supported ULBP4/RAET1E binding to NKG2D/KLRK1 with NK-cell cytotoxicity output."
+                limitations = "Preserve ULBP4 transmembrane/shedding and NKG2D-DAP10 context; no SCI or terminal-TF inference is asserted."
+            elif ligand == "RET" and receptor in {"GFRA1", "GFRA2", "GFRA3", "GFRA4"}:
+                disposition = "already_present_reverse_orientation"
+                matched_ids = {"GFRA1": "M21B-E000322", "GFRA2": "M21B-E000328", "GFRA3": "M21B-E000329", "GFRA4": "M21B-E000989"}[receptor]
+                primary = {"GFRA1": ["PMID:15722196", "PMID:10545102"], "GFRA2": ["PMID:31392261", "PMID:29414779"], "GFRA3": ["PMID:9883723", "PMID:17013378", "PMID:16765900"], "GFRA4": ["PMID:11116144"]}[receptor]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "as stated in primary model/assay"
+                summary = "The graph contains the corresponding GDNF-family ligand to GFRA:RET receptor-complex relationship; this public row reverses the signaling orientation by placing RET in ligand position."
+                limitations = "Preserve the tripartite GDNF-family/GFRA/RET topology and RET kinase role; do not add a duplicate RET-to-GFRA ligand edge."
+            elif ligand == "RGMB" and receptor in {"BMPR1B", "BMPR2"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000832"
+                primary = ["PMID:25938661"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "Primary structural work supports RGMB binding to BMP2 and an RGMB-BMP2-NEO1 bridging architecture, but not direct RGMB binding to the listed BMPR subunits as isolated receptors."
+                limitations = "Preserve RGMb-mediated BMP2 co-receptor topology and require exact BMPR-containing complex evidence before promotion; do not decompose the bridge into a direct RGMB-BMPR1B/BMPR2 edge."
+            elif ligand == "RLN3":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E007105;M21B-E007106"
+                primary = ["PMID:24802387", "DOI:10.1111/febs.12830"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human"
+                summary = "Primary relaxin-3 studies support cognate/cross-reactive signaling at RXFP3 and RXFP1/RXFP4, while the listed public receptors are not those validated relaxin-family targets."
+                limitations = "Preserve mature relaxin-3 processing and RXFP receptor selectivity; do not transfer RXFP1/RXFP4 evidence to unrelated GPCRs."
+            elif ligand in {"PTGS2", "PTPN6", "PTPRC", "PTPRK", "PTPRM", "PTPRZ1", "RIMS1", "RIMS2"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses an intracellular enzyme, phosphatase, receptor-family protein or presynaptic scaffold in ligand position rather than a mature extracellular ligand."
+                limitations = "Represent phosphatase, receptor, adhesion and synaptic-scaffold mechanisms in their appropriate layers; do not invert receptor or intracellular proteins into ligand position."
             elif ligand == "PLTP" and receptor == "APOA1":
                 disposition = "reject_precursor_or_non_edge_form"
                 layer = "candidate_only_unverified"
