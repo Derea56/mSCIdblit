@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:IL11>IL6RA	IL11	IL6RA		PMID:39473075; PMID:8940087	primary_review	batch_088
+LR:IL22>IL10RA	IL22	IL10RA		PMID:18599299	primary_review	batch_088
+LR:IL15>IL2RA	IL15	IL2RA		PMID:8026467; PMID:8530383; PMID:23104097	primary_review	batch_088
+LR:CSF2>IL3RA	CSF2	IL3RA		PMID:8543766	primary_review	batch_088
+LR:CNTF>IL6RA	CNTF	IL6RA		PMID:7500350; PMID:18775332	primary_review	batch_088
+LR:IL13>IL2RG	IL13	IL2RG		PMID:18852293; PMID:25766112	primary_review	batch_088
+LR:IL21>IL4RA	IL21	IL4RA		PMID:11418623; PMID:22235133	primary_review	batch_088
+LR:IL24>IL10RB	IL24	IL10RB		PMID:12351624	primary_review	batch_088
+LR:IL18>IL1RAPL1	IL18	IL1RAPL1		PMID:9325300; PMID:10227969	primary_review	batch_088
+LR:IL18>IL1RL2	IL18	IL1RL2		PMID:9325300; PMID:10227969	primary_review	batch_088
