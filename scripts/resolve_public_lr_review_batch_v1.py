@@ -2256,6 +2256,81 @@ def main() -> None:
                 layer = "candidate_only_unverified"
                 summary = "Granzyme-family labels are intracellular or released proteases, and the public rows do not define them as mature ligands for the listed muscarinic, IGF or anti-apoptotic targets."
                 limitations = "Represent protease/substrate and cytotoxic-granule mechanisms separately; do not materialize granzyme-to-receptor or granzyme-to-MCL1 rows as ligand edges."
+            elif ligand == "HAPLN1":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "HAPLN1 is an extracellular-matrix link protein with matrix and adhesion context, but the listed ADGRA2 and MPIG6B targets were not verified as exact HAPLN1 receptor partners in this pass."
+                limitations = "Require direct HAPLN1 target binding or receptor-dependent function; do not transfer extracellular-matrix or adhesion-family evidence across unrelated receptors."
+            elif ligand in {"HAS1", "HAS2"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "HAS1/HAS2 are hyaluronan-synthesizing enzymes; the public rows do not represent the mature hyaluronan ligand or an exact receptor mechanism."
+                limitations = "Represent hyaluronan production separately and use mature hyaluronan-to-CD44 or other receptor evidence when directly supported; do not materialize synthase-to-receptor rows."
+            elif ligand == "HAVCR1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "HAVCR1/KIM-1 is a membrane immune/uptake receptor, not a mature extracellular ligand for CD300, IGSF, SIGLEC or TIMD targets."
+                limitations = "Represent receptor orientation and uptake/immune-complex biology separately; do not invert HAVCR1 into a ligand edge."
+            elif ligand == "HBEGF":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "HB-EGF is an EGFR-family ligand, but the listed CD6, ERBB2, MOG and PRLR rows do not resolve the exact mature HB-EGF form and receptor topology as direct primary-supported pairs."
+                limitations = "Retain exact EGFR/ERBB-family receptor-complex evidence; require direct pair-specific assay before promoting ERBB2 or unrelated target rows and do not infer signaling from receptor-family membership alone."
+            elif ligand == "HC":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "HC is an unresolved or ambiguous public ligand label in this pass, and no exact mature protein identity or receptor assay was verified for the listed targets."
+                limitations = "Resolve the source identifier and protein form before promotion; do not infer receptor specificity from the normalized label alone."
+            elif ligand == "HEBP1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "HEBP1 is a heme-binding intracellular protein, not a mature extracellular ligand for the listed GPCRs."
+                limitations = "Represent intracellular heme and stress biology separately; do not materialize HEBP1-to-receptor rows as ligand edges."
+            elif ligand == "HGF":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "HGF signaling is centered on MET and can involve integrin co-receptor context, but the public HGF-to-ITGB1 row does not establish the exact receptor topology as a standalone direct ligand edge."
+                limitations = "Retain HGF/MET and exact integrin co-receptor evidence separately; require direct ITGB1-specific primary support before promotion."
+            elif ligand == "HHIPL2":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "HHIPL2 is a Hedgehog-related extracellular protein, but an exact HHIPL2-to-CACHD1 receptor or binding experiment was not verified in this pass."
+                limitations = "Require direct HHIPL2/CACHD1 binding or receptor-dependent function; do not transfer Hedgehog-family context to CACHD1."
+            elif ligand == "HP":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "Haptoglobin is a secreted hemoglobin-binding protein with receptor and uptake context, but the listed APOA1, GM49368 and integrin targets were not verified as exact direct HP receptors in this pass."
+                limitations = "Require exact HP form, receptor or uptake complex, species and primary assay; do not transfer CD163 or lipoprotein-uptake evidence to unrelated targets."
+            elif ligand == "HRAS":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "HRAS is an intracellular small GTPase, not an extracellular ligand for AGTR1A, CAV1, INSR or TLR9."
+                limitations = "Represent Ras-family intracellular continuation separately; do not materialize HRAS-to-receptor rows as ligand edges."
+            elif ligand == "HRG":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "HRG is an ambiguous normalized label that may refer to distinct protein families, and the exact mature ligand identity and ERBB/FCGR receptor assay were not resolved in this pass."
+                limitations = "Resolve the source database identifier and protein form before promotion; do not transfer heregulin/NRG or histidine-rich glycoprotein evidence across unrelated meanings."
+            elif ligand.startswith("HSD"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "HSD-family labels are steroid-metabolizing enzymes, not mature extracellular ligands for androgen, estrogen, bile-acid or ion-channel receptors."
+                limitations = "Represent steroid biosynthesis separately; require the mature steroid and direct nuclear-receptor assay before materializing a signaling edge."
+            elif ligand == "HSP90AA1":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                primary = reviewed
+                species = "as stated in primary model/assay"
+                summary = "HSP90AA1 is an intracellular chaperone with possible extracellular stress context, but the listed CFTR and EGFR rows do not establish an exact mature-ligand receptor mechanism."
+                limitations = "Represent chaperone, receptor-complex and extracellular stress mechanisms separately; require direct HSP90AA1 target binding or receptor-dependent function before promotion."
             elif ligand.startswith("ADAM"):
                 disposition = "hold_contextual_or_complex_boundary"
                 primary = reviewed
