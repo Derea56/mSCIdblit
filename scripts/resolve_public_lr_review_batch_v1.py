@@ -2562,6 +2562,33 @@ def main() -> None:
                 "frozen aliases as evidence-bounded until stable primary support is attached; these edges do not assert "
                 "a universal intracellular cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_158":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The existing edge-source records provide primary-supported IL12B-containing IL-12 and IL-23 "
+                "receptor-chain binding/activation, IL13 type-II receptor assembly, IL15 IL2RB/IL2RG receptor "
+                "assembly and activation, IL17C-IL17RA/IL17RE complex activation, and IL18-IL18R1/IL18RAP assembly "
+                "and activation at the stated molecular resolution."
+            )
+            limitations = (
+                "Do not add duplicate edges or collapse IL12RB1:IL12RB2, IL12RB1:IL23R, IL4RA:IL13RA1, "
+                "IL15RA:IL2RB:IL2RG, IL17RA:IL17RE, or IL18R1:IL18RAP complexes into autonomous single-chain "
+                "receptors. Preserve IL12B p40 context and the distinction between IL-12 and IL-23, receptor-complex "
+                "assembly versus activation, species and assay limits, and the distinction between binding, "
+                "receptor-proximal signaling and functional output; these edges do not assert a universal intracellular "
+                "cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
