@@ -2146,6 +2146,34 @@ def main() -> None:
                 "remain evidence-bounded where no stable primary locator is present, and the existing edges do not "
                 "assert a universal intracellular cascade or terminal TF route."
             )
+        elif row.get("review_batch") == "batch_143":
+            disposition = "already_present_exact_or_alias"
+            layer_values = []
+            species_values = []
+            for edge_id in filter(None, matched_ids.split(";")):
+                for source in sources_by_edge.get(edge_id, []):
+                    if source.get("evidence_layer", "").strip():
+                        layer_values.extend(filter(None, source["evidence_layer"].split(";")))
+                    if source.get("species_support", "").strip():
+                        species_values.extend(filter(None, source["species_support"].split(";")))
+            layer = ";".join(dict.fromkeys(layer_values)) or "ligand_receptor_binding_or_activation"
+            species = "; ".join(dict.fromkeys(species_values))
+            summary = (
+                f"The public {ligand}-{receptor} row is already represented by graph edge(s) {matched_ids}. "
+                "The public locators are pathway or database records, while the existing graph edge-source records "
+                "provide primary-supported collagen-II alpha10beta1 and alpha2beta1 binding/adhesion, collagen-III "
+                "alpha2beta1 motif/adhesion evidence, and evidence-bounded collagen-II/III chain-to-integrin aliases "
+                "at the stated molecular resolution."
+            )
+            limitations = (
+                "Do not add a duplicate edge or collapse fibrillar/triple-helical collagen presentation, GROGER/GAOGER "
+                "or other collagen motifs, collagen-chain versus assembled collagen specificity, integrin heterodimers, "
+                "cation dependence, or chondrocyte/platelet matrix context into autonomous subunit receptors. Preserve "
+                "collagen chain, domain, motif, heterodimer and matrix-complex resolution, species and assay limits, "
+                "and the distinction between binding, receptor-proximal signaling and functional output; frozen "
+                "collagen-II/III aliases remain evidence-bounded where no stable primary locator is present, and the "
+                "existing edges do not assert a universal intracellular cascade or terminal TF route."
+            )
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
