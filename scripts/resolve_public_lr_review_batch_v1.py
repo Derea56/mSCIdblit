@@ -1078,6 +1078,13 @@ def main() -> None:
             species = "human hepatocellular-carcinoma tissue and cell/xenograft models"
             summary = "Primary FSTL5 studies support expression-associated effects on epithelial-mesenchymal transition, proliferation, invasion and apoptosis in hepatocellular-carcinoma models, but do not identify any of the listed proteins as a direct FSTL5 receptor."
             limitations = "Retain FSTL5 functional and disease-model outputs as ligand-form and cell-state context; do not infer a follistatin/activin receptor route or materialize a listed FSTL5 receptor from family analogy or expression correlation."
+        elif ligand in {"COL4A3", "COL4A4", "COL4A5", "COL4A6"}:
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:8344274", "PMID:9326385", "PMID:19229828"]
+            species = "human collagen-IV fragment, NC1-domain and renal-cell assays"
+            summary = "Primary studies support collagen-IV fragment or NC1-domain interactions with selected integrins and distinguish chain/domain-specific recognition, but no exact primary experiment was verified for this remaining collagen-IV-chain-to-receptor candidate."
+            limitations = "Retain collagen-IV chain assembly, NC1/CB3 fragment and integrin-family context; do not transfer evidence between alpha3, alpha4, alpha5 or alpha6 chains or materialize an unrelated receptor edge without exact chain/domain and receptor-complex support."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
