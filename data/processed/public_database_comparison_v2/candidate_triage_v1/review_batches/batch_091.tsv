@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:EFNA2>EPHA3	EFNA2	EPHA3	M21B-E005633;M23B-E000435	PMID:15114347	represented_graph_alias	batch_091
+LR:EFNA3>EPHA2	EFNA3	EPHA2	M23B-E000438	PMID:15114347	represented_graph_alias	batch_091
+LR:EFNA4>EPHA4	EFNA4	EPHA4	M21B-E006684;M23B-E000296	PMID:15114347	represented_graph_alias	batch_091
+LR:EFNA4>EPHA8	EFNA4	EPHA8	M23B-E000297	PMID:15114347	represented_graph_alias	batch_091
+LR:EFNB1>EPHB2	EFNB1	EPHB2	M21B-E000369;M21B-E005866;M23B-E000302	PMID:15114347	represented_graph_alias	batch_091
+LR:EFNB2>EPHA4	EFNB2	EPHA4	M21B-E000384;M23B-E000305	PMID:15114347	represented_graph_alias	batch_091
+LR:EFNB2>EPHB3	EFNB2	EPHB3	M23B-E000307	PMID:15114347	represented_graph_alias	batch_091
+LR:EFNB2>EPHB4	EFNB2	EPHB4	M21B-E000197;M23B-E000308	PMID:15114347	represented_graph_alias	batch_091
+LR:EFNB3>EPHA4	EFNB3	EPHA4	M21B-E006595;M23B-E000311	PMID:15114347	represented_graph_alias	batch_091
+LR:EFNB3>EPHB3	EFNB3	EPHB3	M21B-E000383	PMID:15114347	represented_graph_alias	batch_091
