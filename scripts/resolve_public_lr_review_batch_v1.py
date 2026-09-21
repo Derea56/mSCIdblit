@@ -249,6 +249,13 @@ def main() -> None:
             species = "rat neural cell and biochemical binding assays"
             summary = "Primary neural adhesion studies report related Ng-CAM/L1 and NCAM interactions with phosphacan/PTPRZ1, supporting neural cell-adhesion network context but not a direct L1CAM-to-NCAM1 receptor pair in the candidate orientation."
             limitations = "Retain the neural adhesion-family context and exact phosphacan/PTPRZ1 binding relationships; require pair-specific L1CAM-NCAM1 evidence before promotion and do not infer a receptor relay or terminal-TF output."
+        elif ligand == "L1CAM":
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:9396761", "PMID:22815787", "PMID:12925712"]
+            species = "human and rat L1CAM adhesion, integrin and receptor-crosstalk assays"
+            summary = "Primary studies establish L1CAM heterophilic adhesion through selected integrins, ErbB-family receptor crosstalk and cytoskeletal anchoring, but no exact primary experiment was verified for this remaining L1CAM-to-listed-protein candidate."
+            limitations = "Retain L1CAM adhesion, selected integrin and ErbB/cytoskeletal context; do not transfer those results to CD9, EZR, FGFR2, ITGA4, ITGB7, LVRN or PLXNA1 without pair-specific evidence."
         elif ligand == "LCK" and receptor == "CD8A+CD8B1":
             disposition = "reject_precursor_or_non_edge_form"
             layer = "candidate_only_unverified"
