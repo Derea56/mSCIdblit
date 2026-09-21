@@ -166,10 +166,12 @@ def main() -> None:
             summary = "The public row combines mouse H2 class-I nomenclature with human KIR3DL1; the cited locator does not establish an exact species-matched H2-to-KIR3DL1 edge for each paralog row."
             limitations = "Retain exact HLA/KIR3DL1 and other species-matched graph edges; do not infer mouse H2 paralog specificity from cross-species family context."
         elif ligand == "ICAM5" and receptor == "CD209A":
-            disposition = "no_primary_evidence_found"
-            layer = "candidate_only_review_locator"
-            summary = "The cited public locator concerns ICAM5 adhesion biology but does not verify an exact ICAM5-to-CD209A binding or receptor-triggering experiment in the current pass."
-            limitations = "Retain ICAM5 interactions with exact primary support, including integrin and neural adhesion contexts; do not promote ICAM5/CD209A from family-level or unrelated adhesion evidence."
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMCID:PMC5743933"]
+            species = "mouse neuronal ICAM5 and microglial adhesion studies"
+            summary = "Primary ICAM5 studies support beta-integrin-associated microglial adhesion and phagocytosis contexts, but do not establish CD209A as a direct ICAM5 receptor."
+            limitations = "Preserve neuronal ICAM5 and beta-integrin cell-adhesion context; do not transfer ICAM-family or adhesion-network membership into a direct ICAM5-CD209A edge without pair-specific binding or perturbation."
         elif ligand == "INHA+INHBB" and receptor == "ACVR2B":
             disposition = "hold_contextual_or_complex_boundary"
             layer = "ligand_receptor_binding_or_activation"
@@ -587,6 +589,34 @@ def main() -> None:
             species = "human and rat nicotinic-receptor assays"
             summary = "Primary SLURP1 studies support α7-nAChR and selected assembled nicotinic receptor contexts, while affinity testing did not support the listed α3, α4, β2 or β4 subunits as standalone SLURP1 receptors."
             limitations = "Preserve mature SLURP1 and complete nicotinic pentamer context; do not materialize free CHRNA3, CHRNA4, CHRNB2 or CHRNB4 rows from subunit expression or receptor-family membership alone."
+        elif ligand == "ICAM5" and receptor == "ITGB2L":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMCID:PMC5743933"]
+            species = "mouse neuronal ICAM5 and microglial beta-integrin studies"
+            summary = "Primary microglial binding and immunoprecipitation studies show soluble neuronal ICAM5 association with beta-2 integrin-containing complexes and anti-adhesive/phagocytic outputs, but the candidate uses ITGB2L rather than the assayed ITGB2 subunit."
+            limitations = "Retain as an integrin-complex/paralog boundary hold; require direct ICAM5-ITGB2L evidence before promotion and do not decompose beta-integrin complexes into a standalone receptor edge."
+        elif ligand == "ICAM5":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMCID:PMC5743933"]
+            species = "mouse neuronal ICAM5 and microglial adhesion studies"
+            summary = "Primary ICAM5 studies support beta-integrin-associated microglial adhesion and phagocytosis contexts, but do not establish the listed CD209, IGDCC4 or PRTG proteins as direct ICAM5 receptors."
+            limitations = "Preserve neuronal ICAM5 and beta-integrin cell-adhesion context; do not transfer ICAM-family or adhesion-network membership into direct ICAM5 receptor edges without pair-specific binding or perturbation."
+        elif ligand == "EFNB2" and receptor in {"EPHA3", "EPHA6"}:
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMCID:PMC3499309", "PMCID:PMC2170431"]
+            species = "mouse and human Eph/ephrin receptor profiling"
+            summary = "Primary Eph/ephrin profiling supports ephrin-B2 binding to EphB receptors and the established EphA4 cross-subfamily context, but does not establish the listed EphA3 or EphA6 rows as direct EFNB2 interactions."
+            limitations = "Preserve EFNB2-EphB and EFNB2-EphA4 cross-subfamily boundaries; do not transfer ephrin-A receptor promiscuity to EFNB2 or materialize EphA3/EphA6 without an exact assay."
+        elif ligand == "EFNB2":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMCID:PMC3499309", "PMCID:PMC2170431"]
+            species = "mouse and human Eph/ephrin receptor profiling"
+            summary = "Primary Eph/ephrin studies define EFNB2 as a membrane-tethered ephrin-B ligand for Eph receptor contexts, not for the listed glutamate receptors, PECAM1 or RHBDL2 targets."
+            limitations = "Represent EFNB2 in the Eph receptor/cell-contact layer; do not materialize unrelated receptor or membrane-protein rows from interaction-network co-occurrence."
         elif ligand in {"CCL1", "CCL8", "CEACAM2"}:
             disposition = "no_primary_evidence_found"
             layer = "candidate_only_review_locator"
