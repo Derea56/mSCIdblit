@@ -1312,6 +1312,34 @@ def main() -> None:
             species = "NPY-family receptor cloning and ligand-binding assays"
             summary = "Primary NPY-family receptor studies distinguish pancreatic polypeptide preference for the Y4/NPY4R subtype from the Y1/NPY1R and Y2/NPY2R preference for NPY or PYY; the public PPY-to-NPY1R/NPY2R rows are therefore retained as receptor-family context rather than promoted as exact edges."
             limitations = "Resolve mature PPY identity and NPY4R/Y4 specificity before promotion; do not transfer Y4 preference to NPY1R or NPY2R, or infer downstream signaling from NPY-family membership alone."
+        elif ligand == "GCG" and receptor == "GCGR":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:23863937", "PMID:29300013", "PMID:23185367"]
+            species = "human GCGR structural, mutational and cellular assays"
+            summary = "Primary structural, mutational and cellular studies directly resolve glucagon recognition by GCGR and link receptor engagement to receptor activation and cAMP responses, supporting a bounded GCG/glucagon-to-GCGR edge."
+            limitations = "Preserve mature glucagon, human GCGR and the reported ligand-binding/second-messenger contexts; do not infer a complete intracellular kinase or TF chain, or transfer glucagon specificity to other class-B peptide receptors."
+        elif ligand == "GHRL" and receptor == "GHRHR":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation"
+            primary = ["PMID:11314756", "PMID:30686667"]
+            species = "human ghrelin receptor-binding and structural assays"
+            summary = "Primary studies establish mature, octanoylated ghrelin binding to the growth-hormone-secretagogue receptor GHSR and define its GHSR-binding determinants, but do not establish GHRHR as the receptor for ghrelin; the candidate is retained as a receptor-label boundary rather than promoted."
+            limitations = "Resolve GHRHR versus GHSR nomenclature and preserve the mature ghrelin modification requirement; do not transfer GHSR binding or signaling evidence to GHRHR."
+        elif ligand == "EFNB3" and receptor == "EPHB2":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:20678574"]
+            species = "mouse hippocampal and HEK-cell ephrin-B3/EphB2 assays"
+            summary = "Primary studies place ephrin-B3 and EphB2 in a neuronal cis-interaction context and show altered EphB2 and NMDA-receptor phosphorylation when ephrin-B3 is present or absent; this supports receptor-proximal EphB2 context but does not resolve a conventional trans EFNB3-to-EPHB2 ligand edge."
+            limitations = "Preserve ephrin-B3/EphB2 cis-versus-trans orientation and neuronal synaptic context; do not materialize a canonical trans edge or infer a universal EphB2 intracellular or TF route from the reported phosphorylation phenotypes."
+        elif ligand == "CALCA" and receptor == "RAMP1":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:24115156", "PMID:30209400", "PMID:16776831"]
+            species = "human CGRP receptor-complex biochemical, structural and binding assays"
+            summary = "Primary studies show that mature CGRP binds and activates the CALCRL/CLR-RAMP1 receptor complex, with RAMP1 determining receptor selectivity and contributing to the ligand-binding pocket; RAMP1 is therefore a required complex component rather than a complete receptor by itself."
+            limitations = "Represent mature CGRP/CALCA processing and the CALCRL-RAMP1 complex together; do not materialize CALCA-to-RAMP1 as an isolated binary receptor edge or infer a complete downstream/TF route from complex binding and G-protein activation alone."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
