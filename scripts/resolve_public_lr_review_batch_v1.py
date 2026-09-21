@@ -817,6 +817,27 @@ def main() -> None:
             species = "human"
             summary = "The graph already contains the primary-supported PD-L1/CD274-to-B7-1/CD80 cis interaction in the reverse orientation."
             limitations = "Preserve the cis interaction orientation and human biochemical/cell-adhesion context; do not add a duplicate CD80-to-CD274 edge or infer canonical trans signaling."
+        elif ligand == "APOB" and receptor == "LRP2":
+            disposition = "new_primary_supported_edge_candidate"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:10330424", "PMCID:PMC408451"]
+            species = "human apoB-containing particles; rabbit and human renal megalin assays"
+            summary = "Primary ligand-blot, solid-phase binding and cell-uptake experiments show that apoB-containing particles and apoB-100 fragments bind megalin/LRP2 and that megalin mediates renal uptake of the tested apoB truncation."
+            limitations = "Preserve the apoB-100/apoB-truncation, lipoprotein-particle and renal endocytic context; do not generalize the edge to every APOB isoform or infer a canonical transcriptional signaling cascade from uptake."
+        elif ligand == "APOB" and receptor == "OLR1":
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            primary = ["PMID:9588202", "PMID:18346743", "PMID:18845619"]
+            species = "mouse and human oxidized-LDL/LOX-1 studies"
+            summary = "Primary studies establish OLR1/LOX-1 recognition of oxidized LDL and measure LOX-1 ligands containing apoB, but the receptor recognizes a modified lipoprotein particle rather than unmodified APOB as an isolated mature ligand."
+            limitations = "Retain the oxidized/modified LDL, apoB-particle and endothelial/macrophage scavenger-receptor context; do not materialize unmodified APOB-to-OLR1 as a generic binary edge or infer a route independent of lipoprotein modification state."
+        elif ligand == "APOB" and receptor == "VLDLR":
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:12870663", "PMID:3670075"]
+            species = "human and rat lipoprotein-receptor studies"
+            summary = "Primary receptor-specificity studies report that VLDLR binds apoE-containing remnant lipoproteins but not apoB as the direct recognition ligand; the candidate therefore conflates particle composition with receptor ligand specificity."
+            limitations = "Retain apoE/VLDLR and apoB/LDLR or megalin relationships separately; do not materialize APOB-VLDLR without an apoB-specific binding assay that resolves the lipoprotein particle and cofactor context."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
