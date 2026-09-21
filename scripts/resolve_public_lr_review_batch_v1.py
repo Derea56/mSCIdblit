@@ -94,6 +94,76 @@ def main() -> None:
                     species_value = source.get("species_support", "").strip()
                     if species_value:
                         species = "; ".join(sorted(set(filter(None, (species + "; " + species_value).split("; ")))))
+        elif ligand == "NTF3" and receptor == "NGFR":
+            disposition = "already_present_exact_or_alias"
+            matched_ids = "M21B-E000751"
+            primary = ["PMID:18596692", "PMID:7744005"]
+            layer = "ligand_receptor_binding_or_activation"
+            species = "as stated in primary model/assay"
+            summary = "The graph already contains the primary-supported NT3/NTF3-to-NGFR/p75NTR binding edge under the mature NT3 alias."
+            limitations = "Preserve the mature NT3/p75NTR binding form and the reported assay context; do not duplicate the edge or infer a complete intracellular or TF route."
+        elif ligand == "TNF" and receptor == "TNFRSF1A":
+            disposition = "already_present_exact_or_alias"
+            matched_ids = "M21B-E000110"
+            layer = "ligand_receptor_binding_or_activation"
+            species = "human"
+            summary = "The graph already contains the TNF-to-TNFR1/p55 edge under the TNFRSF1A receptor alias."
+            limitations = "Preserve the TNFR1/p55 nomenclature and receptor-binding context; do not duplicate the edge or infer downstream steps from this alias match alone."
+        elif ligand == "TNF" and receptor == "TNFRSF1B":
+            disposition = "already_present_exact_or_alias"
+            matched_ids = "M21B-E000111;M21B-E001764"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+            species = "human"
+            summary = "The graph already contains TNF-to-TNFR2 receptor engagement and activation under the TNFRSF1B/TNFR2 alias."
+            limitations = "Preserve TNFR2 receptor-complex and membrane/oligomerized-TNF context; do not duplicate an alias edge or collapse receptor engagement into a universal downstream route."
+        elif ligand == "PTPRC" and receptor == "MRC1":
+            disposition = "already_present_reverse_orientation"
+            matched_ids = "M21B-E011617"
+            primary = ["PMID:10575006", "DOI:10.1074/jbc.274.49.35211"]
+            layer = "ligand_receptor_binding_or_activation"
+            species = "as stated in primary model/assay"
+            summary = "The primary study supports the reverse MRC1/mannose-receptor cysteine-rich-domain to PTPRC/CD45 counter-receptor orientation."
+            limitations = "Preserve the reverse orientation and glycoform/sugar-dependent binding context; do not add a duplicate PTPRC-to-MRC1 edge or infer canonical signaling."
+        elif ligand == "APP" and receptor == "SORL1":
+            disposition = "already_present_exact_or_alias"
+            matched_ids = "M21B-E011618"
+            primary = ["PMID:16407538", "PMCID:PMC1224625"]
+            layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+            species = "as stated in primary model/assay"
+            summary = "The graph now contains the primary-supported APP-sorLA/SORL1 interaction and trafficking edge."
+            limitations = "This is an APP-sorLA protein-interaction/trafficking relationship rather than a classical secreted ligand route; no unique extracellular relay or terminal-TF output is inferred."
+        elif ligand == "LTA" and receptor == "TNFRSF1B":
+            disposition = "already_present_exact_or_alias"
+            matched_ids = "M21B-E011619"
+            primary = ["PMID:9552007"]
+            layer = "ligand_receptor_binding_or_activation"
+            species = "as stated in primary model/assay"
+            summary = "The graph now contains the primary-supported soluble LTalpha3/LTA-to-TNFR2/TNFRSF1B binding layer."
+            limitations = "Preserve soluble LTalpha3 versus membrane LTalpha1beta2 form distinctions; do not infer LTBR binding, a unique intracellular relay, or terminal-TF output."
+        elif ligand in {"INHBA+INHBB"} or (ligand in {"BMP7", "BMP8A"} and "+" in receptor):
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation"
+            primary = []
+            species = "as stated in primary model/assay"
+            summary = "The public row is a multi-subunit ligand or receptor-complex representation. Component-level graph evidence is retained, but the exact composite topology is not asserted as one edge."
+            limitations = "The cited public locators do not provide a verified exact primary assay for this complete composite row; preserve component overlap and require exact complex-level evidence before promotion."
+        elif ligand in {"TENM1", "TENM3", "UNC5A"} and receptor.startswith("ADGRL"):
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation"
+            primary = []
+            species = "as stated in primary model/assay"
+            summary = "The reviewed citations support latrophilin/teneurin or guidance-receptor family context, but do not verify this exact ligand-receptor pair in a primary assay."
+            limitations = "Retain as family-level contextual evidence; require an exact ligand, receptor, species and assay before graph promotion, and do not infer a complete intracellular or TF route."
+        elif ligand == "INSL3" and receptor == "RXFP1":
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_unverified"
+            summary = "The candidate appears to use the wrong relaxin-family receptor: the verified INSL3 receptor literature supports RXFP2 rather than RXFP1."
+            limitations = "Do not materialize INSL3-to-RXFP1; retain the row only for future receptor-normalization review and separately verify any INSL3-to-RXFP2 evidence."
+        elif ligand in {"KNG1", "KNG2", "PDYN", "PENK", "PMCH", "POMC", "TAC1"}:
+            disposition = "reject_precursor_or_non_edge_form"
+            layer = "candidate_only_unverified"
+            summary = "The public row uses a precursor gene label rather than a verified mature peptide ligand form for the receptor interaction."
+            limitations = "Retain mature peptide-to-receptor relationships only when the ligand form and receptor assay are explicit; do not materialize the precursor label as a direct edge."
         elif ligand == "ENHO" and receptor == "GPR19":
             disposition = "hold_contextual_or_complex_boundary"
             layer = "receptor_proximal_or_pathway;downstream_or_functional"

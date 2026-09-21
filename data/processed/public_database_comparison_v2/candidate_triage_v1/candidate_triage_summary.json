@@ -1,5 +1,5 @@
 {
-  "bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_20_literature_expansion246",
+  "bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_20_literature_expansion247",
   "bundle_release_id": "module20_24_mechanism_graph:2026-09-20",
   "candidate_input": {
     "path": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/public_database_comparison_v2/public_only_lr_candidates.tsv",
@@ -7,16 +7,16 @@
     "sha256": "31189239be3f4b6f91a87c92b1716ccac294f468279c7122693624c55c508732"
   },
   "candidate_units": 7753,
-  "completed_batch_review_units": 200,
+  "completed_batch_review_units": 300,
   "graph_input": {
-    "direct_lr_edges": 8105,
-    "path": "data/processed/mechanism_graph_module20_24_v2026_09_20_literature_expansion246/mechanism_edges.tsv",
-    "sha256": "29aa00f52861585ffc9b6ce387a715560f3a5447d71d4385dc8d5569e7afe280"
+    "direct_lr_edges": 8108,
+    "path": "data/processed/mechanism_graph_module20_24_v2026_09_20_literature_expansion247/mechanism_edges.tsv",
+    "sha256": "c9b86149ade751ee4ab2790d5d650dff2857fbc4372e74050245f867912bfe9b"
   },
   "normalization_match_counts": {
-    "graph_match_alias_adjudication": 1085,
+    "graph_match_alias_adjudication": 1088,
     "graph_match_exact_label": 10,
-    "novel_candidate": 6658
+    "novel_candidate": 6655
   },
   "policy": "This triage does not promote edges or assign biological confidence; primary evidence and route plausibility remain separate downstream decisions.",
   "prior_audit_input": {
@@ -28,8 +28,8 @@
   "prior_harvest_rows": 25,
   "resolution_ledger_input": {
     "path": "data/processed/public_database_comparison_v2/candidate_triage_v1/review_resolution_ledger.tsv",
-    "rows": 200,
-    "sha256": "7ac356dc4ccf17d51d5bca0d51e731884ff80a12875fcef83609fa2f7838c69d"
+    "rows": 300,
+    "sha256": "c8093c195e863290a18511e3e96efd223818ad24be46dcbd490298c412c98894"
   },
   "review_batch_counts": {
     "batch_001": 100,
@@ -96,21 +96,19 @@
     "batch_062": 100,
     "batch_063": 100,
     "batch_064": 100,
-    "batch_065": 100,
-    "batch_066": 66
+    "batch_065": 63
   },
   "review_batch_size": 100,
   "review_lane_counts": {
-    "alias_adjudication": 9,
-    "completed_batch_review": 200,
+    "completed_batch_review": 300,
     "completed_prior_harvest": 25,
-    "discovery_review": 5008,
-    "primary_evidence_review": 1549,
-    "represented_graph_alias": 954,
+    "discovery_review": 4937,
+    "primary_evidence_review": 1526,
+    "represented_graph_alias": 957,
     "resolved_graph_match": 8
   },
-  "review_queue_rows": 6566,
-  "review_queue_with_primary_locators": 1549,
-  "review_queue_without_primary_locators": 5017,
+  "review_queue_rows": 6463,
+  "review_queue_with_primary_locators": 1526,
+  "review_queue_without_primary_locators": 4937,
   "triage_id": "mSCIdblit:public-lr-candidate-triage-v1"
 }
