@@ -1862,6 +1862,11 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "The candidate reflects syndecan/collectin and adhesion-GPCR family context, but the exact direct ligand-receptor topology was not verified in this pass."
                 limitations = "Require exact mature ligand, receptor complex, species and direct binding or activation assay; do not treat a co-receptor or matrix-associated protein as a standalone canonical ligand edge."
+            elif ligand.startswith("SHMT") and receptor == "GLRA2":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row combines serine-hydroxymethyltransferase enzymes with glycine transporters in ligand position; mature glycine, not SHMT/SLC6 composite machinery, is the ligand for GLRA2/glycine-receptor signaling."
+                limitations = "Represent glycine biosynthesis and transport separately; do not materialize enzyme/transporter composites as direct GLRA2 ligand edges."
             elif ligand.startswith("SHMT+") or ligand.startswith("SLC18A") or ligand.startswith("SLC6A4+"):
                 disposition = "reject_precursor_or_non_edge_form"
                 layer = "candidate_only_unverified"
@@ -2157,6 +2162,18 @@ def main() -> None:
                 species = "as stated in primary model/assay"
                 summary = "CADM family rows describe cell-adhesion and trans-interaction contexts, but the public candidates do not establish each exact CADM paralog pair or the listed ERBB3, MAG and unrelated targets as a single direct signaling edge."
                 limitations = "Preserve cis/trans orientation and paralog specificity; require exact pair-level primary adhesion or receptor-triggering evidence before promotion, and do not infer a soluble ligand route from adhesion-family membership."
+            elif ligand == "CALCB" and receptor in {"CALCR+RAMP1", "CALCR+RAMP2", "CALCR+RAMP3"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:30741933", "PMID:18599553"]
+                species = "human"
+                summary = "Primary Ewing-sarcoma work supports a secreted CALCB signal through a RAMP1-containing CGRP receptor complex, while receptor-pharmacology work shows that RAMP composition changes family-B receptor coupling; the public CALCR:RAMP composite rows do not resolve the exact CALCRL/CALCR core topology."
+                limitations = "Retain CALCB/RAMP1 and receptor-complex evidence as a bounded route; do not promote CALCR:RAMP1/2/3 as one exact binary receptor topology or infer identical signaling across RAMP compositions."
+            elif ligand == "CBR1+CBR1B" and receptor == "PTGFR":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "CBR1/CBR1B are carbonyl-reductase enzymes, not mature prostaglandin ligands for the PTGFR receptor."
+                limitations = "Represent prostaglandin synthesis and metabolism separately; do not materialize enzyme composites as direct PTGFR ligand edges."
             elif ligand in {"CALCA", "CALCB"}:
                 disposition = "hold_contextual_or_complex_boundary"
                 layer = "ligand_receptor_binding_or_activation"
