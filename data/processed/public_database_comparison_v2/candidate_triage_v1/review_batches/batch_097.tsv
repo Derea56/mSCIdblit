@@ -1,0 +1,6 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:CLEC2D>KLRB1	CLEC2D	KLRB1	M21B-E002973	PMID:24223577	represented_graph_alias	batch_097
+LR:CLEC2D>KLRB1B	CLEC2D	KLRB1B	M21B-E006653	PMID:24223577	represented_graph_alias	batch_097
+LR:CLEC2I>KLRB1F	CLEC2I	KLRB1F	M21B-E006636	PMID:24223577	represented_graph_alias	batch_097
+LR:H60A>KLRK1	H60A	KLRK1	M21B-E002967	PMID:24223577	represented_graph_alias	batch_097
+LR:ULBP1>KLRK1	ULBP1	KLRK1	M21B-E002958	PMID:24223577	represented_graph_alias	batch_097
