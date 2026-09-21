@@ -1071,6 +1071,13 @@ def main() -> None:
             species = "recombinant collagen-IX and human chondrocyte/osteoblast adhesion assays"
             summary = "Primary collagen-IX adhesion studies support alpha1beta1, alpha2beta1 and alpha10beta1 recognition of recombinant collagen IX, but the current candidate uses an individual COL9 chain label and a different receptor assignment that was not verified as an exact pair."
             limitations = "Retain assembled collagen-IX, chain-composition and integrin-specificity context; do not transfer the collagen-IX integrin result to CD44, GP6, MAG, syndecan or unrelated integrin complexes without pair-specific evidence."
+        elif ligand == "FSTL5":
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:32740091", "PMID:30255547"]
+            species = "human hepatocellular-carcinoma tissue and cell/xenograft models"
+            summary = "Primary FSTL5 studies support expression-associated effects on epithelial-mesenchymal transition, proliferation, invasion and apoptosis in hepatocellular-carcinoma models, but do not identify any of the listed proteins as a direct FSTL5 receptor."
+            limitations = "Retain FSTL5 functional and disease-model outputs as ligand-form and cell-state context; do not infer a follistatin/activin receptor route or materialize a listed FSTL5 receptor from family analogy or expression correlation."
         elif row.get("review_batch") == "batch_015":
             # Batch 015 mixes mature-ligand aliases, biosynthetic/transport
             # machinery, receptor-complex encodings, self-loops, and several
