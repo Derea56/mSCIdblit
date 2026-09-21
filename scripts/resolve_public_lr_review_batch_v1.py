@@ -4286,6 +4286,25 @@ def main() -> None:
                 limitations = "Preserve LRP6 E1E2 mapping and comparator/reconstitution scope; do not infer whole-cell activation, FZD requirement, SCI or terminal-TF output."
             else:
                 raise SystemExit(f"unhandled batch 189 pair: {pair}")
+        elif row.get("review_batch") == "batch_190":
+            pair = (ligand, receptor)
+            if pair == ("CNTN2", "CNTN2"):
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M20B-E000370"
+                primary = [
+                    "PMID:27621318",
+                    "PMCID:PMC5104938",
+                    "DOI:10.1074/jbc.M116.748236",
+                    "PMID:38968938",
+                    "PMCID:PMC11455609",
+                    "DOI:10.1016/j.str.2024.06.004",
+                ]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; mouse"
+                summary = "Primary ectodomain-binding and homophilic-interaction studies support both the existing CNTN2-CNTNAP2 alias and a separate CNTN2 homophilic interaction, but the public self-pair cannot be materialized as a graph self-loop."
+                limitations = "Preserve the distinction between CNTN2 homophilic adhesion and the CNTN2-CNTNAP2 heterophilic alias; do not encode CNTN2>CNTN2 as a self-loop, collapse it into CNTNAP2, or infer intracellular, TF or SCI output from adhesion studies."
+            else:
+                raise SystemExit(f"unhandled batch 190 pair: {pair}")
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"

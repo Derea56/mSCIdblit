@@ -1,0 +1,2 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:CNTN2>CNTN2	CNTN2	CNTN2	M20B-E000370	primary studies support CNTN2 homophilic interaction and the existing CNTN2-CNTNAP2 alias, but a public self-pair must not become a graph self-loop	represented_graph_alias	batch_190
