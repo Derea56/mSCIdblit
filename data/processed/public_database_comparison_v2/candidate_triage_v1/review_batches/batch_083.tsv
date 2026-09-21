@@ -1,0 +1,8 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:AGRP>SDC3	AGRP	SDC3		PMID:11461706; PMID:12851299; PMID:20923696	primary_review	batch_083
+LR:AREG>ERBB3	AREG	ERBB3		PMID:8626392; PMID:32533590	primary_review	batch_083
+LR:ARTN>GFRA2	ARTN	GFRA2		PMID:31535977	primary_review	batch_083
+LR:BMP10>BMPR1B	BMP10	BMPR1B		PMID:35504921; PMID:28646109	primary_review	batch_083
+LR:BMP15>BMPR1A	BMP15	BMPR1A		PMID:24140593	primary_review	batch_083
+LR:BMP15>TGFBR1	BMP15	TGFBR1		PMID:18633140	primary_review	batch_083
+LR:C3>C5AR2	C3	C5AR2		PMID:31274379	primary_review	batch_083

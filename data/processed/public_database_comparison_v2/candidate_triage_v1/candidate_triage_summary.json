@@ -1,5 +1,5 @@
 {
-  "bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion257",
+  "bundle_dir": "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion258",
   "bundle_release_id": "module20_24_mechanism_graph:2026-09-21",
   "candidate_input": {
     "path": "data/processed/public_database_comparison_v2/public_only_lr_candidates.tsv",
@@ -9,14 +9,14 @@
   "candidate_units": 7753,
   "completed_batch_review_units": 6778,
   "graph_input": {
-    "direct_lr_edges": 8166,
-    "path": "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion257/mechanism_edges.tsv",
-    "sha256": "6a6c5c42e577a010e3e077e1ffa722f1a175e5380fd2157f93de326bc22fb015"
+    "direct_lr_edges": 8167,
+    "path": "data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion258/mechanism_edges.tsv",
+    "sha256": "a5d58a42d8980b6cf4c5dc833b2d68fe154e111fc07dd923a0eff2fec85953b3"
   },
   "normalization_match_counts": {
     "graph_match_alias_adjudication": 1100,
-    "graph_match_exact_label": 63,
-    "novel_candidate": 6590
+    "graph_match_exact_label": 64,
+    "novel_candidate": 6589
   },
   "policy": "This triage does not promote edges or assign biological confidence; primary evidence and route plausibility remain separate downstream decisions.",
   "prior_audit_input": {
@@ -29,7 +29,7 @@
   "resolution_ledger_input": {
     "path": "data/processed/public_database_comparison_v2/candidate_triage_v1/review_resolution_ledger.tsv",
     "rows": 6778,
-    "sha256": "f721739c68c20ebbd34a769e0b134b7ee3daa9cf48e52e8ce8677f7c21638481"
+    "sha256": "16c19450ab31e3265a78c3191042bdb4f3e44cc134a6be2bd60535b24565b64b"
   },
   "review_batch_counts": {},
   "review_batch_size": 100,

@@ -1,0 +1,12 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:PMCH>MERTK	PMCH	MERTK		PMID:30501104	primary_review	batch_084
+LR:SELE>CEACAM1	SELE	CEACAM1		PMID:1378450	primary_review	batch_084
+LR:NECTIN1>CADM3	NECTIN1	CADM3		PMID:23027581	primary_review	batch_084
+LR:CEACAM1>CD1D1	CEACAM1	CD1D1		PMID:24104458	primary_review	batch_084
+LR:CEACAM1>CD1D2	CEACAM1	CD1D2		PMID:24104458	primary_review	batch_084
+LR:CEACAM1>CD8A	CEACAM1	CD8A		PMID:24104458	primary_review	batch_084
+LR:CEACAM1>PSG20	CEACAM1	PSG20		PMID:24743304	primary_review	batch_084
+LR:CEACAM2>CD1D1	CEACAM2	CD1D1		PMID:24104458	primary_review	batch_084
+LR:CEACAM2>CD1D2	CEACAM2	CD1D2		PMID:24104458	primary_review	batch_084
+LR:CEACAM2>CD8A	CEACAM2	CD8A		PMID:24104458	primary_review	batch_084
+LR:CEACAM2>PSG20	CEACAM2	PSG20		PMID:24743304	primary_review	batch_084

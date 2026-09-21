@@ -376,6 +376,107 @@ def main() -> None:
                 layer = "candidate_only_review_locator"
                 summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
                 limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
+        elif row.get("review_batch") == "batch_083":
+            pair = (ligand, receptor)
+            if pair == ("AGRP", "SDC3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:11461706", "PMID:12851299", "PMID:20923696"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse hypothalamic SDC3 transgenic/knockout and AgRP-melanocortin feeding models"
+                summary = "Primary transgenic, knockout and feeding studies show that membrane-bound syndecan-3 and its heparan-sulfate chains potentiate AgRP action and that SDC3 loss changes AgRP-dependent melanocortin feeding responses, supporting a co-receptor context rather than a standalone receptor interaction."
+                limitations = "Retain AGRP-SDC3 as heparan-sulfate co-receptor evidence for the MC3R/MC4R pathway; do not assert a purified binary AGRP-SDC3 protein interface, treat SDC3 as the primary signaling receptor, or infer a universal intracellular or TF route outside the hypothalamic models."
+            elif pair == ("AREG", "ERBB3"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:8626392", "PMID:32533590"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human T47D mammary epithelial and colon-cancer cell assays"
+                summary = "Primary receptor-phosphorylation and cancer-cell studies show that amphiregulin can produce a moderate ERBB3 phosphorylation response and participate in EGFR/ERBB3 crosstalk, but AREG is established as an EGFR ligand and these assays do not establish a purified direct AREG-ERBB3 binding edge."
+                limitations = "Retain AREG-ERBB3 as context-dependent functional crosstalk downstream of EGFR or other receptor activation; do not materialize a canonical direct AREG-to-ERBB3 ligand edge or infer a universal ERBB3 route outside the tested cell systems."
+            elif pair == ("ARTN", "GFRA2"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:31535977"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human recombinant RET/GFR co-receptor structural and cell-based assays"
+                summary = "Primary cryo-EM and cell-based studies resolve ARTN in an ARTN-GFRα3-RET complex and NRTN in an NRTN-GFRα2-RET complex; they do not support the public ARTN-GFRA2 pairing."
+                limitations = "Represent ARTN with GFRA3/RET and NRTN with GFRA2/RET; do not transfer the co-receptor assignment across GDNF-family ligands or materialize ARTN-to-GFRA2."
+            elif pair == ("BMP10", "BMPR1B"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:35504921", "PMID:28646109"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human recombinant BMP10 receptor-complex structures and human endothelial BMP9/10 receptor perturbation assays"
+                summary = "Primary structural and endothelial perturbation studies support BMP10 signaling through BMPR2 with ALK1/ALK2 and ACTR-IIA-associated receptor contexts, not the listed BMPR1B/ALK6 receptor pair."
+                limitations = "Represent BMP10 with the reported BMPR2-ALK1/ALK2 receptor contexts and preserve the endothelial/structural assay boundaries; do not materialize BMP10-to-BMPR1B or infer ALK6 specificity from BMP-family homology."
+            elif pair == ("BMP15", "BMPR1A"):
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:24140593"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human SVOG and KGN granulosa-cell assays"
+                summary = "Primary human granulosa-cell experiments show that BMP15 induces SMAD1/5/8 phosphorylation and suppresses StAR expression and progesterone production, while ALK3/BMPR1A depletion reverses the signaling and output effects, supporting a bounded BMP15-BMPR1A route."
+                limitations = "Preserve the human granulosa-cell, BMP15 preparation and ALK3/BMPR1A receptor-specific siRNA context; the study supports receptor dependence and downstream output rather than purified extracellular binding, and does not establish a universal intracellular or terminal-TF chain."
+            elif pair == ("BMP15", "TGFBR1"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:18633140"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse BMP15/GDF9 and rat granulosa-cell cooperative-signaling assays"
+                summary = "Primary cooperative-signaling studies report that recombinant mouse BMP15 together with GDF9 signals through BMPR2 and ACVR1B/TGFBR1/ACVR1C-associated pathways, but the TGFBR1 contribution is a complex/cooperative context rather than an isolated BMP15-TGFBR1 binary edge."
+                limitations = "Retain BMP15-TGFBR1 only as GDF9-dependent receptor-complex context; preserve species and cooperative ligand boundaries and do not materialize a standalone BMP15-to-TGFBR1 edge or infer a universal output route."
+            elif pair == ("C3", "C5AR2"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:31274379"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse anaphylatoxin-receptor knockout and human whole-blood infection assays"
+                summary = "Primary complement studies identify C5a and C5adesArg—not intact C3—as ligands for C5AR2, while C3 is processed into C3a and other fragments; the public C3-C5AR2 row therefore does not specify the direct ligand form."
+                limitations = "Represent C5a/C5adesArg-to-C5AR2 and C3a-to-C3AR1 separately; do not materialize intact C3-to-C5AR2 or infer receptor activation from complement-family membership alone."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
+        elif row.get("review_batch") == "batch_084":
+            pair = (ligand, receptor)
+            if pair == ("PMCH", "MERTK"):
+                disposition = "no_primary_evidence_found"
+                primary = ["PMID:30501104"]
+                layer = "candidate_only_review_locator"
+                species = "review locator is a TYRO3-focused review; no exact PMCH-MERTK primary experiment verified"
+                summary = "The public locator is a review focused on TYRO3 rather than an exact primary PMCH-MERTK ligand-receptor experiment, and the current pass did not verify a direct PMCH-MERTK study."
+                limitations = "Retain for targeted primary review; do not materialize PMCH-MERTK from a review citation or from MERTK family membership."
+            elif pair == ("SELE", "CEACAM1"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:1378450"]
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human CD66/CEACAM neutrophil adhesion and cytokine-activated endothelial-cell assays"
+                summary = "The cited primary study concerns CD66 antigens on neutrophils and E-selectin-dependent adhesion, with sialylated Lewis-x structures as the E-selectin ligands; it does not establish SELE as a ligand for CEACAM1."
+                limitations = "Represent the reported E-selectin/vascular-adhesion context with the appropriate CD66 glycoform and direction; do not materialize SELE-to-CEACAM1 from this locator."
+            elif pair == ("NECTIN1", "CADM3"):
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:23027581"]
+                layer = "receptor_proximal_or_pathway"
+                species = "mammalian nectin-family adhesion review"
+                summary = "The cited paper is a review of nectin-family cell-cell adhesion and does not provide an exact primary NECTIN1-CADM3 experiment; CADM3/Necl-1 is a nectin-like molecule rather than one of the canonical nectin family members discussed."
+                limitations = "Retain canonical nectin trans-interactions only when the exact partner and primary assay are specified; do not materialize NECTIN1-to-CADM3 from the review citation."
+            elif pair in {
+                ("CEACAM1", "CD1D1"), ("CEACAM1", "CD1D2"), ("CEACAM1", "CD8A"),
+                ("CEACAM2", "CD1D1"), ("CEACAM2", "CD1D2"), ("CEACAM2", "CD8A"),
+            }:
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:24104458"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human intestinal epithelial CEACAM5-CD1d/CD8 interaction assays"
+                summary = "The cited primary study identifies CEACAM5, not CEACAM1 or CEACAM2, as the CEACAM member interacting with CD1d and CD8alpha; the public rows therefore transfer a family-member interaction to the wrong CEACAM gene."
+                limitations = "Represent the reported CEACAM5-CD1d/CD8 context with its intestinal epithelial and glycosylation boundaries; do not materialize CEACAM1/2-to-CD1D1/2 or CEACAM1/2-to-CD8A from this study."
+            elif pair in {("CEACAM1", "PSG20"), ("CEACAM2", "PSG20")}:
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:24743304"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human soluble CEACAM8 and membrane CEACAM1 innate-immune assays"
+                summary = "The cited primary study reports soluble CEACAM8 interaction with CEACAM1 and inhibition of TLR2-triggered responses; it does not support CEACAM1 or CEACAM2 as a ligand for PSG20."
+                limitations = "Represent soluble CEACAM8-to-CEACAM1 interaction separately; do not transfer it to PSG20 or materialize CEACAM1/2-to-PSG20 from the cited study."
+            else:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "The reviewed locator was not verified as an exact primary experiment for this ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not materialize a graph edge from public-database membership or family-level context alone."
         elif ligand == "BST2" and receptor == "PIRA2":
             disposition = "already_present_exact_or_alias"
             matched_ids = "M21B-E001953"
