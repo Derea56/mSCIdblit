@@ -845,6 +845,20 @@ def main() -> None:
             species = "human and rat lipoprotein-receptor studies"
             summary = "Primary receptor-specificity studies report that VLDLR binds apoE-containing remnant lipoproteins but not apoB as the direct recognition ligand; the candidate therefore conflates particle composition with receptor ligand specificity."
             limitations = "Retain apoE/VLDLR and apoB/LDLR or megalin relationships separately; do not materialize APOB-VLDLR without an apoB-specific binding assay that resolves the lipoprotein particle and cofactor context."
+        elif ligand == "APOB" and receptor in {"TLR4", "TLR6"}:
+            disposition = "hold_contextual_or_complex_boundary"
+            layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+            primary = ["PMID:24792928"]
+            species = "primary human monocytes and THP-1 macrophage assays"
+            summary = "Primary studies show that oxidized LDL or apoB-containing modified lipoprotein preparations induce TLR4/TLR6-dependent PKCdelta-IRAK1-JNK/AP-1 and IL-1beta responses, but do not establish unmodified APOB as the direct TLR4 or TLR6 ligand."
+            limitations = "Retain oxidation-specific lipoprotein, TLR4/TLR6 and inflammatory-output context; do not materialize a generic APOB-TLR4/TLR6 edge or infer signaling independent of particle modification and co-receptor composition."
+        elif ligand == "APOB":
+            disposition = "no_primary_evidence_found"
+            layer = "candidate_only_unverified"
+            primary = ["PMID:24792928", "PMID:19116273"]
+            species = "human and mammalian lipoprotein/receptor assays"
+            summary = "The current review found primary evidence for apoB-containing particle uptake or oxidation-specific inflammatory signaling, but not an exact mature APOB-to-listed-receptor experiment for this candidate."
+            limitations = "Retain apoB-particle, modification-state and receptor-family context; do not transfer evidence for APC, apoE, oxidized LDL or other lipoprotein forms to unmodified APOB without pair-specific testing."
         elif ligand == "COL4A1" and receptor == "ITGA3+ITGB1":
             disposition = "new_primary_supported_edge_candidate"
             layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
