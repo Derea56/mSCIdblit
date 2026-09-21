@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:GDNF>GFRA1	GDNF	GFRA1	M20B-E001905;M20B-E000322;M21B-E003245		represented_graph_alias	batch_153
+LR:GDNF>GFRA2	GDNF	GFRA2	M20B-E003579;M21B-E007083		represented_graph_alias	batch_153
+LR:GDNF>RET	GDNF	RET	M20B-E001905;M20B-E003579;M20B-E000322;M21B-E007083		represented_graph_alias	batch_153
+LR:GLYCAM1>SELL	GLYCAM1	SELL	M21B-E000298		represented_graph_alias	batch_153
+LR:GP1BA>ITGAM	GP1BA	ITGAM	M21B-E000595		represented_graph_alias	batch_153
+LR:GP1BA>ITGB2	GP1BA	ITGB2	M21B-E000595		represented_graph_alias	batch_153
+LR:GZMB>IGF2R	GZMB	IGF2R	M21B-E005439		represented_graph_alias	batch_153
+LR:HJV>NEO1	HJV	NEO1	M21B-E000836		represented_graph_alias	batch_153
+LR:IBSP>ITGAV	IBSP	ITGAV	M20B-E002128		represented_graph_alias	batch_153
+LR:IBSP>ITGB3	IBSP	ITGB3	M20B-E002128		represented_graph_alias	batch_153
