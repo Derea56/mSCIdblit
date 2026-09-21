@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:PRG4>CD44	PRG4	CD44	M21B-E006371	current bundle includes primary full-length PRG4-CD44 binding and CD44-dependent anti-inflammatory synoviocyte outputs	represented_graph_alias	batch_176
+LR:PRG4>TLR2	PRG4	TLR2	M21B-E006372	current bundle includes primary PRG4-TLR2 binding and antagonist/competitor blockade of agonist-driven reporter activity	represented_graph_alias	batch_176
+LR:PRG4>TLR4	PRG4	TLR4	M21B-E006373	current bundle includes primary PRG4-TLR4 binding and antagonist/competitor blockade of agonist-driven reporter activity	represented_graph_alias	batch_176
+LR:PSPN>GFRA4	PSPN	GFRA4	M21B-E000989;M21B-E003248;M21B-E008839	current bundle includes primary PSPN-GFRA4 binding/cross-linking within GFRA4:RET complex and RET phosphorylation/survival outputs	represented_graph_alias	batch_176
+LR:PSPN>RET	PSPN	RET	M21B-E000989;M21B-E008839	current bundle supports PSPN-mediated RET activation through GFRA4:RET complex, not isolated PSPN-RET binding	represented_graph_alias	batch_176
+LR:PTN>ITGAV	PTN	ITGAV	M20B-E004661;M23B-E000251	current bundle supports PTN engagement of assembled alphaVbeta3 in PTPRZ1/c-Src migration context, not isolated ITGAV binding	represented_graph_alias	batch_176
+LR:PTN>ITGB3	PTN	ITGB3	M20B-E004661;M23B-E000251	current bundle supports PTN engagement of assembled alphaVbeta3 in PTPRZ1/c-Src migration context, not isolated ITGB3 binding	represented_graph_alias	batch_176
+LR:PTPRC>CD247	PTPRC	CD247	M21B-E002296	current bundle represents CD45/PTPRC dephosphorylation of phosphorylated CD3-zeta/CD247 as a TCR termination substrate edge, not an extracellular ligand-receptor interaction	represented_graph_alias	batch_176
+LR:PVR>CD96	PVR	CD96	M21B-E000666	current bundle includes primary PVR/CD155-CD96/TACTILE binding, NK adhesion and cytotoxicity support	represented_graph_alias	batch_176
+LR:RAET1E>KLRK1	RAET1E	KLRK1	M21B-E005632	current bundle includes primary ULBP4/RAET1E-NKG2D binding and DAP10-context NK cytotoxicity support	represented_graph_alias	batch_176
