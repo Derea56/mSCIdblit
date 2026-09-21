@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:TNC>ITGA8	TNC	ITGA8	M20B-E002257;M21B-E003040;M23B-E000078	current bundle supports TNC through assembled alpha8beta1 adhesion/neurite-outgrowth context, not isolated ITGA8 signaling	represented_graph_alias	batch_184
+LR:TNC>ITGA9	TNC	ITGA9	M20B-E002258;M21B-E000211;M23B-E000079;M23B-E000765	current bundle supports TNC through assembled alpha9beta1 fragment-binding context, not isolated ITGA9 signaling	represented_graph_alias	batch_184
+LR:TNC>ITGAV	TNC	ITGAV	M20B-E002259;M20B-E002260;M21B-E000535;M21B-E000536;M21B-E000540;M23B-E000080;M23B-E000082;M23B-E000767	current bundle supports TNC through assembled alphaVbeta3/alphaVbeta6/alphaVbeta1 integrin contexts, not autonomous ITGAV signaling	represented_graph_alias	batch_184
+LR:TNC>ITGB1	TNC	ITGB1	M20B-E002257;M20B-E002258;M21B-E000211;M21B-E000534;M21B-E000540;M21B-E003040;M21B-E003041;M23B-E000078;M23B-E000079;M23B-E000761;M23B-E000765;M23B-E001009	current bundle supports multiple TNC receptor complexes containing beta1, not free ITGB1 signaling	represented_graph_alias	batch_184
+LR:TNC>ITGB3	TNC	ITGB3	M20B-E002259;M21B-E000535;M23B-E000080;M23B-E000767	current bundle supports TNC through assembled alphaVbeta3, not isolated ITGB3 signaling	represented_graph_alias	batch_184
+LR:TNC>ITGB6	TNC	ITGB6	M20B-E002260;M21B-E000536;M23B-E000082	current bundle supports TNC through assembled alphaVbeta6, not isolated ITGB6 signaling	represented_graph_alias	batch_184
+LR:TNFSF11>LGR4	TNFSF11	LGR4	M21B-E005440	current bundle includes primary direct RANKL-LGR4 binding and competitive negative osteoclastogenic modulation	represented_graph_alias	batch_184
+LR:TNN>ITGA8	TNN	ITGA8	M20B-E002264	current bundle contains only a frozen TNN-alpha8 alias without a stable pair-specific primary packet	represented_graph_alias	batch_184
+LR:TNN>ITGB1	TNN	ITGB1	M20B-E002264	current bundle contains only a frozen TNN-beta1 alias without a stable pair-specific primary packet	represented_graph_alias	batch_184
+LR:TNXB>ITGAV	TNXB	ITGAV	M20B-E002278;M23B-E000085	current bundle supports a TN-X FNIII9-10 fragment through alphaVbeta3-dependent adhesion, not autonomous ITGAV binding by full-length TNXB	represented_graph_alias	batch_184
