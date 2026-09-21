@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:LAMA2>ITGB4	LAMA2	ITGB4	M20B-E002145	frozen Module 20 ECM/integrin-family representation	represented_graph_alias	batch_167
+LR:LAMA3>ITGA3	LAMA3	ITGA3	M20B-E002152;M23B-E000063;M23B-E001066	current bundle includes frozen alias and laminin-332 alpha3beta1 support	represented_graph_alias	batch_167
+LR:LAMA3>ITGA6	LAMA3	ITGA6	M20B-E002153;M20B-E002154;M23B-E000065;M23B-E000066;M23B-E000626	current bundle includes frozen aliases and laminin-332 alpha6beta1/alpha6beta4 support	represented_graph_alias	batch_167
+LR:LAMA3>ITGB1	LAMA3	ITGB1	M20B-E002151;M20B-E002152;M20B-E002153;M23B-E000063;M23B-E000065;M23B-E001066	current bundle includes frozen aliases and laminin-332 alpha3beta1/alpha6beta1 support	represented_graph_alias	batch_167
+LR:LAMA3>ITGB4	LAMA3	ITGB4	M20B-E002154;M23B-E000066;M23B-E000626	current bundle includes frozen alias and laminin-332 alpha6beta4 support	represented_graph_alias	batch_167
+LR:LAMA4>ITGA3	LAMA4	ITGA3	M20B-E002161;M21B-E007079	current bundle includes frozen alias and primary alpha3beta1 support	represented_graph_alias	batch_167
+LR:LAMA4>ITGA6	LAMA4	ITGA6	M20B-E002162;M21B-E007080;M23B-E000068	current bundle includes frozen alias and primary/comparator alpha6beta1 support	represented_graph_alias	batch_167
+LR:LAMA4>ITGAV	LAMA4	ITGAV	M21B-E007078		represented_graph_alias	batch_167
+LR:LAMA4>ITGB1	LAMA4	ITGB1	M20B-E002161;M20B-E002162;M20B-E002164;M21B-E007079;M21B-E007080;M23B-E000068;M23B-E000069	current bundle includes frozen aliases and primary/comparator alpha3beta1/alpha6beta1/alpha7beta1 support	represented_graph_alias	batch_167
+LR:LAMA5>ITGA2	LAMA5	ITGA2	M20B-E002169	frozen Module 20 ECM/integrin-family representation	represented_graph_alias	batch_167
