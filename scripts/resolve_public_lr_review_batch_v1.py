@@ -744,11 +744,609 @@ def main() -> None:
                 layer = "candidate_only_unverified"
                 summary = "The public row names a follistatin-family interaction, but no exact primary ligand-receptor experiment for this pair was verified in the current pass."
                 limitations = "Require exact mature ligand, receptor complex, species and assay evidence before promotion; do not transfer activin/BMP family binding across paralogs."
-            elif ligand.startswith("GLS+"):
+            elif ligand.startswith(("GLS+", "GLS2+")):
                 disposition = "reject_precursor_or_non_edge_form"
                 layer = "candidate_only_unverified"
                 summary = "The public row uses glutamate synthesis and transport machinery as a composite ligand label rather than mature extracellular glutamate."
                 limitations = "Do not materialize GLS/SLC-to-glutamate-receptor edges; retain mature glutamate-to-receptor evidence only when the ligand form and receptor assay are explicit."
+            elif ligand.startswith("GNA"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "GNAS/GNA-family labels are intracellular G-protein signaling components, not extracellular ligands for the listed receptors."
+                limitations = "Represent G-protein coupling in the intracellular continuation layer when directly supported; do not materialize it as a ligand-receptor edge."
+            elif ligand.startswith("H2"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                species = "mouse"
+                summary = "The public row uses mouse H2/MHC-I paralog labels and KEGG pathway membership; this supports a cell-surface immune-recognition context but not each exact H2-to-receptor pair as one primary edge."
+                limitations = "Require exact H2 paralog, receptor, species and assay evidence before promotion; do not infer paralog specificity from MHC-family or pathway membership."
+            elif ligand == "IFNA11" and receptor == "IFNAR1+IFNAR2":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E001762"
+                primary = ["PMID:10493588", "PMID:23830819"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; mouse family comparator"
+                summary = "IFNA11 is retained as a type-I-interferon family alias for the existing IFN-alpha/beta-to-IFNAR1:IFNAR2 evidence, but the exact IFNA11 paralog and species-specific composite were not independently resolved here."
+                limitations = "Preserve subtype, species and receptor-complex boundaries; do not treat family-level IFNAR evidence as an exact IFNA11 edge without subtype-specific primary support."
+            elif ligand == "IAPP" and receptor == "RAMP2":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E001562"
+                primary = ["PMID:10385705", "PMID:10871296"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "as stated in primary model/assay"
+                summary = "Primary amylin/IAPP receptor evidence supports CALCR-containing complexes with RAMP subunits, while the public row isolates RAMP2 without asserting the complete receptor complex."
+                limitations = "Retain the intact amylin receptor complex and do not materialize RAMP2 as a standalone IAPP receptor."
+            elif ligand == "ICAM4" and receptor == "ITGB3":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M23B-E000574"
+                primary = ["PMID:12477717", "DOI:10.1074/jbc.M211282200"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "Primary evidence supports ICAM4 binding to an ITGB3-containing integrin complex, but the public row omits the intact receptor-complex partner composition."
+                limitations = "Retain the complete ITGB3-containing integrin context; do not materialize a bare ICAM4-to-ITGB3 subunit edge."
+            elif ligand == "GRN" and receptor in {"TNFRSF1A", "TNFRSF1B"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = []
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse comparator"
+                summary = "PGRN/GRN-to-TNFR1/TNFR2 remains a contested ligand-receptor assignment in the current evidence layer, so the public rows remain contextual rather than direct graph edges."
+                limitations = "Preserve the conflicting ligand-form, receptor, species and antagonist/agonist contexts; do not promote a direct GRN-TNFR edge until the primary disagreement is reconciled."
+            elif ligand in {"KNG1", "KNG2"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses a kininogen precursor label rather than a defined mature kinin or other extracellular ligand form."
+                limitations = "Retain mature peptide-to-receptor evidence only when the processed ligand form and receptor assay are explicit; do not materialize kininogen precursor rows as direct edges."
+            elif ligand.startswith(("LAMA", "LAMB")):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                species = "as stated in primary model/assay"
+                summary = "The public row overlaps laminin-chain, integrin and dystroglycan evidence, but the exact mature laminin isoform, chain composition and receptor topology are not resolved for this candidate."
+                limitations = "Require exact laminin isoform/chain composition and receptor assay before promotion; do not transfer evidence across laminin chains or treat a single chain as the complete mature ligand complex."
+            elif ligand == "LTF" and receptor == "TFRC":
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:2166510"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "Primary lactoferrin uptake work supports a specific lactoferrin-binding receptor on HT29-D4 cells, but the cited experiment does not identify that receptor as TFRC."
+                limitations = "Retain as receptor-context evidence only; do not materialize LTF-TFRC until a primary study identifies TFRC/TFR1 or TFR2 as the assayed lactoferrin receptor."
+            elif ligand == "LTF":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "No exact primary experiment was verified for this lactoferrin-to-receptor pair in the current pass."
+                limitations = "Retain for targeted primary review; do not transfer LTF evidence from LRP1, DCC-family or IL6R contexts to unrelated receptor candidates."
+            elif ligand.startswith("PCDH") and receptor.startswith("PCDH"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = reviewed
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse; human family comparator"
+                summary = "The cited clustered-protocadherin studies support cell-contact recognition and strict homophilic trans specificity, but the public row is not treated as a soluble ligand route or as a general heterophilic signaling edge."
+                limitations = "Preserve cis/trans orientation and isoform-specific recognition; do not promote mismatched paralog pairs or infer a unique intracellular continuation or terminal-TF output from adhesion evidence alone."
+            elif ligand == "MSTN" and receptor in {
+                "ACVR1B+ACVR2A", "ACVR1B+ACVR2B", "ACVR2A+TGFBR1", "ACVR2B+TGFBR1"
+            }:
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:14517293", "PMID:33219121"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary myostatin studies support signaling through activin type-II receptors with type-I receptor partners ALK4/ACVR1B or ALK5/TGFBR1, and in vivo use of the four listed type-I/type-II combinations."
+                limitations = "Preserve the composite receptor topology and muscle-cell context; this is a candidate for graph materialization after exact complex normalization, not four independent binary receptor edges."
+            elif ligand == "NRG3" and receptor == "ERBB4":
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:9275162", "PMCID:PMC23218", "DOI:10.1073/pnas.94.18.9562"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human; mouse"
+                summary = "Primary work shows the NRG3 EGF-like domain binds ERBB4 and stimulates ERBB4 tyrosine phosphorylation in cells."
+                limitations = "Preserve the transmembrane/proteolytically released NRG3 form and neural context; no complete intracellular relay or terminal-TF output is asserted by this edge alone."
+            elif ligand == "NRG3" and receptor == "ERBB2+ERBB4":
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:9275162", "PMCID:PMC23218", "DOI:10.1073/pnas.94.18.9562"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; mouse"
+                summary = "Primary NRG3 evidence supports ERBB4 binding and activation, but does not establish the complete ERBB2:ERBB4 composite receptor topology in this row."
+                limitations = "Retain NRG3-to-ERBB4 as the supported receptor relationship; require exact heterodimer-complex evidence before promoting the composite row."
+            elif ligand == "NRG4" and receptor == "ERBB4":
+                disposition = "new_primary_supported_edge_candidate"
+                primary = ["PMID:10348342", "DOI:10.1038/sj.onc.1202631"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human"
+                summary = "Primary work shows NRG4 activates ERBB4 and not the other tested ERBB receptors or receptor combinations."
+                limitations = "Preserve the NRG4 EGF-like ligand and ERBB4 assay context; no complete intracellular relay or terminal-TF output is asserted by this edge alone."
+            elif ligand == "NRG4" and receptor == "ERBB2+ERBB4":
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:10348342", "DOI:10.1038/sj.onc.1202631"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human"
+                summary = "Primary NRG4 work supports strict ERBB4 specificity, not the complete ERBB2:ERBB4 composite receptor topology in this row."
+                limitations = "Retain NRG4-to-ERBB4 as the supported relationship; do not promote the composite receptor from pathway or complex inference."
+            elif ligand == "NMB" and receptor == "GRPR":
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:19628633", "PMCID:PMC2766219", "DOI:10.1124/jpet.109.154245"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "Primary receptor-selectivity work shows NMB can interact with GRPR but has much higher affinity for NMBR; the row is retained as a lower-affinity/contextual relationship rather than an unqualified canonical edge."
+                limitations = "Preserve NMBR as the preferred receptor and the assay-specific affinity context; do not infer equivalent signaling potency or a complete downstream route through GRPR."
+            elif ligand == "NRTN" and receptor == "GFRA3":
+                disposition = "reject_precursor_or_non_edge_form"
+                primary = ["PMID:9576965", "PMID:9407096"]
+                layer = "candidate_only_unverified"
+                species = "human; mouse"
+                summary = "Primary GDNF-family receptor studies identify GFRA3 as an orphan co-receptor and do not establish neurturin as its ligand; neurturin is supported through GFRA1/GFRA2 complexes instead."
+                limitations = "Do not transfer neurturin/GFRA1-GFRA2 evidence to GFRA3 by homology; require a direct GFRA3 ligand-binding and Ret-activation study."
+            elif ligand == "NTF5" and receptor == "NTRK1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "NTF5/NT-4 is a neurotrophin whose canonical Trk receptor is NTRK2 rather than NTRK1 in the candidate row."
+                limitations = "Require a direct NTF5-NTRK1 binding or activation assay before promotion; do not transfer NT-3 or NGF receptor specificity across neurotrophin paralogs."
+            elif ligand == "NPPC" and receptor == "NPR1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "NPPC/CNP is canonically associated with NPR2/NPR-B, while NPR1/NPR-A is the receptor class associated with ANP and BNP in this ligand family."
+                limitations = "Require a direct NPPC-NPR1 primary assay before promotion; do not infer receptor specificity from natriuretic-peptide family membership."
+            elif ligand == "NPS" and receptor != "NPSR1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "NPS is an endogenous ligand of NPSR1, not an established ligand for the unrelated receptor listed in this row."
+                limitations = "Require a direct NPS-to-receptor assay before promotion; do not transfer NPSR1 signaling to other GPCRs or RAMP subunits."
+            elif ligand in {"MMP1A", "MMP2", "MMP7", "MMP9", "NAMPT", "MFNG"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses an extracellular protease, enzyme, or glycosyltransferase as the ligand label; that molecule is not itself established as the mature ligand for the listed receptor."
+                limitations = "Represent proteolysis, substrate processing, receptor shedding, or receptor glycosylation in separate mechanistic layers when directly supported; do not materialize the enzyme-to-receptor row as a ligand-receptor edge."
+            elif ligand in {"MBL2", "MDK"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                species = "as stated in primary model/assay"
+                summary = "The candidate overlaps known collectin or midkine receptor-family biology, but the exact pair and mature receptor topology were not verified as a primary-supported edge in this pass."
+                limitations = "Retain exact graph-supported family members and require a pair-specific primary binding or receptor-triggering assay; do not transfer evidence across receptor families or co-receptor complexes."
+            elif ligand in {"MPZ", "NCAM1", "NCAN", "NEGR1", "NFASC", "NRXN3", "OCLN"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = reviewed
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "as stated in primary model/assay"
+                summary = "The public row is an adhesion, junctional, or homophilic cell-contact relationship; it is retained as contextual traversal evidence rather than treated as a soluble ligand route."
+                limitations = "Preserve cell-contact, cis/trans orientation and self-loop boundaries; do not infer a unique intracellular continuation or terminal-TF output from adhesion evidence alone."
+            elif ligand == "PCSK9":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse"
+                summary = "PCSK9 is a secreted regulator of LDL-receptor-family trafficking, but the exact candidate receptor and mature extracellular topology were not verified as a direct primary ligand-receptor edge in this pass."
+                limitations = "Retain exact PCSK9-LDLR-family binding and trafficking evidence separately; require a receptor-specific primary assay before promoting PCSK9-LRP1, PCSK9-SORT1 or PCSK9-VLDLR as a direct edge."
+            elif ligand == "PDGFC" and receptor in {"FLT1", "FLT4", "KDR"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "PDGFC is a PDGF-family ligand whose canonical signaling is through PDGF receptors, not the VEGF receptor tyrosine kinases listed in these rows."
+                limitations = "Require a direct PDGFC-to-VEGFR binding or activation study before promotion; do not transfer PDGF-family or VEGF-family receptor specificity across ligand families."
+            elif ligand in {"PDYN", "PENK"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses a propeptide precursor label rather than a defined mature opioid peptide ligand."
+                limitations = "Retain mature dynorphin or enkephalin-to-opioid-receptor relationships only when the processed ligand form and receptor assay are explicit; do not materialize the precursor label directly."
+            elif ligand == "NPB":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "NPB is an endogenous neuropeptide with a cognate NPBW/NmU receptor context, not an established ligand for the unrelated receptors listed in this packet."
+                limitations = "Require a direct NPB-to-receptor assay before promotion; do not infer cross-family GPCR specificity from expression or pathway membership."
+            elif ligand == "PGF" and receptor in {"NRP1", "NRP2"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; mouse"
+                summary = "PlGF/PGF neuropilin interactions are isoform- and receptor-context dependent; the current candidate does not resolve the mature PGF isoform or exact neuropilin assay sufficiently for direct promotion."
+                limitations = "Require isoform-specific primary binding or receptor-triggering evidence before promotion; preserve VEGFR and neuropilin co-receptor topology rather than treating NRP1/NRP2 as interchangeable standalone receptors."
+            elif ligand in {"PF4", "PI16", "PIP", "PLAT"}:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "No exact primary experiment was verified for this candidate ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted pair-specific review; do not infer direct receptor binding from chemokine, protease, extracellular-matrix, or expression-family context alone."
+            elif ligand == "PIGA":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "PIGA is an intracellular GPI-anchor biosynthesis component, not a mature extracellular ligand for PIGR."
+                limitations = "Represent GPI-anchor biosynthesis separately; do not materialize PIGA-to-PIGR as a ligand-receptor edge."
+            elif ligand in {"PLAU", "PLG", "PRSS2", "PTDSS1", "PTGES", "PTGES2", "PTGES3", "PTGIS"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses a protease, zymogen, lipid-biosynthesis enzyme, or prostanoid synthase as the ligand label rather than the mature extracellular mediator acting at the listed receptor."
+                limitations = "Represent enzyme activity, substrate processing, or mediator production in separate mechanistic layers when directly supported; do not materialize the enzyme-to-receptor row as a ligand-receptor edge."
+            elif ligand == "PSEN1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "PSEN1 is a gamma-secretase component that processes receptors such as NOTCH; it is not an extracellular ligand for NOTCH."
+                limitations = "Represent gamma-secretase cleavage and receptor-intracellular-domain release separately; do not materialize PSEN1-to-NOTCH as a ligand-receptor edge."
+            elif ligand == "PSPN":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Persephin/PSPN does not have verified ligand-binding support for the listed GFRA or syndecan receptors in this pass; GFRA3 is specifically reported as an orphan co-receptor."
+                limitations = "Require an exact PSPN receptor-complex binding and Ret-activation study before promotion; do not transfer GDNF-family receptor specificity across GFRA paralogs."
+            elif ligand in {"POMC", "PTH", "PTH2", "PTHLH", "PPY", "PYY"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses a precursor or peptide-family label with a receptor that is not the established cognate receptor for this ligand form."
+                limitations = "Require the mature peptide identity and direct receptor assay before promotion; do not transfer specificity across PTH/PTH2, pancreatic-polypeptide, NPY or related GPCR families."
+            elif ligand == "PROC":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "as stated in primary model/assay"
+                summary = "Protein C is a zymogen whose activation depends on thrombin-thrombomodulin and endothelial protein C receptor context; the listed candidate receptors are not asserted as direct mature-ligand receptors here."
+                limitations = "Preserve the protein-C activation complex and PAR/EPCR topology when directly supported; do not materialize PROC-to-ITGAM, TEK or THBD as simple binary ligand-receptor edges."
+            elif ligand in {"PRN", "PRND", "PTN", "PTN"}:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "No exact primary experiment was verified for this adhesion or prion-family candidate-to-receptor pair in the current pass."
+                limitations = "Retain for targeted protein-interaction review; do not infer a classical ligand-receptor route from family membership or pathway context alone."
+            elif ligand in {"RAET1A", "RAET1B", "RAET1C", "RAET1D", "RAET1E"} and receptor == "HCST+KLRK1":
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = reviewed
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "mouse"
+                summary = "Primary work supports the mouse RAE-1 ligand family as activating the NKG2D/KLRK1 receptor complex, but the cited family-level studies do not resolve each individual RAET1 paralog row as a separate exact edge here."
+                limitations = "Preserve RAE-1 paralog, species, GPI-anchor and NKG2D/DAP10-DAP12 context; require paralog-specific primary evidence before materializing individual edges."
+            elif ligand == "RARRES2" and receptor == "CCRL2":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; mouse"
+                summary = "Chemerin/RARRES2 biology includes CCRL2 as a ligand-presenting or scavenging context, but this candidate does not resolve a signaling receptor topology equivalent to CMKLR1."
+                limitations = "Preserve CMKLR1/GPR1/CCRL2 functional distinctions; do not infer canonical signaling through CCRL2 without an exact primary receptor-activation assay."
+            elif ligand in {"PRXL2B", "PTGDS", "PTGIS"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses an enzyme or non-ligand protein label rather than the mature prostanoid ligand for the listed receptor."
+                limitations = "Represent prostanoid synthesis and downstream receptor signaling separately; do not materialize the biosynthetic protein as the ligand."
+            elif ligand in {"PSAP"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "as stated in primary model/assay"
+                summary = "Prosaposin has trophic, lysosomal and receptor-trafficking contexts, but the exact PSAP-to-CELSR1/LRP1 topology was not verified as a direct primary ligand-receptor edge in this pass."
+                limitations = "Require exact mature prosaposin or prosaposin-domain ligand form and receptor assay before promotion; do not transfer LRP1 uptake or trophic-family context to a canonical signaling edge."
+            elif ligand == "SELL" and receptor == "CD34":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E000290"
+                primary = ["PMID:7692600", "PMID:7559783"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse"
+                summary = "The graph contains the primary-supported CD34-to-SELL/L-selectin adhesion relationship in the reverse orientation of this public row."
+                limitations = "Preserve CD34 glycoform/PNAd and high-endothelial-venule context; do not add a duplicate reverse edge or infer a canonical intracellular relay from adhesion alone."
+            elif ligand == "SIRPA" and receptor == "CD47":
+                disposition = "already_present_reverse_orientation"
+                matched_ids = "M21B-E000179"
+                primary = ["PMID:18657508", "PMID:11283158"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse"
+                summary = "The graph contains the primary-supported CD47-to-SIRPA/SIRPalpha inhibitory interaction in the reverse orientation of this public row."
+                limitations = "Preserve CD47/SIRPA species, cis/trans and phagocytosis-brake context; do not add a duplicate reverse edge or infer a universal macrophage response."
+            elif ligand.startswith("RSPO") and receptor in {"FZD8", "LRP6"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human; mouse"
+                summary = "R-spondin proteins potentiate Wnt signaling through LGR/heparan-sulfate receptor contexts, but these rows do not establish FZD8 or LRP6 as the complete direct R-spondin receptor topology."
+                limitations = "Require isoform-specific primary binding and receptor-complex evidence; do not collapse R-spondin/LGR/co-receptor potentiation into a binary R-spondin-to-FZD/LRP6 edge."
+            elif ligand == "SLIT2" and receptor == "ROBO4":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human; mouse"
+                summary = "The public row is consistent with Slit/Robo vascular-guidance family biology, but the current graph directly supports other Slit/Robo4 or Slit2/Robo pairings rather than this exact pair as an independently verified primary edge."
+                limitations = "Require exact SLIT2-ROBO4 binding or receptor-triggering evidence before promotion; do not transfer SLIT3-ROBO4 or SLIT2-ROBO1/2 evidence across paralogs."
+            elif ligand.startswith("SLIT"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Slit guidance ligands are established primarily through Robo-family receptor complexes; the listed non-Robo receptor or co-receptor row is not verified as a direct ligand-receptor edge in this pass."
+                limitations = "Require exact Slit paralog, receptor, species and binding or functional assay; do not transfer Slit/Robo or heparan-sulfate context to unrelated receptors."
+            elif ligand in {"SAA1", "SAA2"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; mouse"
+                summary = "Serum amyloid A has receptor-family and inflammatory-context evidence, but the current candidate rows do not resolve a direct mature SAA ligand assay for the listed receptor (including the established FPR2/AGER distinctions)."
+                limitations = "Require exact SAA isoform, receptor and activation assay before promotion; do not transfer FPR2, TLR2/4 or RAGE family context to unrelated GPCRs or scavenger receptors."
+            elif ligand.startswith("S100A"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse"
+                summary = "S100A-family extracellular danger-signal biology overlaps RAGE, TLR and scavenger-receptor contexts, but the listed candidate receptor is not asserted as an exact primary-supported edge here."
+                limitations = "Require S100 paralog-specific mature-protein binding or receptor-triggering evidence; do not transfer S100A8/A9 family context across CD36, CD68, AGER or integrin candidates."
+            elif ligand in {"SEMA3A", "SEMA3E", "SEMA3G", "SEMA4F"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                species = "as stated in primary model/assay"
+                summary = "The semaphorin candidate overlaps neuropilin/plexin or immune-receptor family biology, but the exact ligand-receptor pair and composite receptor topology were not verified in a primary assay during this pass."
+                limitations = "Require exact semaphorin isoform, neuropilin/plexin or immune-receptor composition and assay; do not transfer family-level guidance evidence across paralogs."
+            elif ligand.startswith("SERPINA") or ligand.startswith("SERPINC") or ligand.startswith("SERPINE") or ligand == "SERPING1":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "as stated in primary model/assay"
+                summary = "The serpin candidate may reflect protease inhibition, clearance, or co-receptor/ECM binding rather than a canonical mature ligand-receptor signal; the exact pair was not verified as a direct primary edge here."
+                limitations = "Require exact serpin form, receptor topology and direct binding or receptor-triggering evidence; do not transfer LRP1, uPAR, selectin or protease-substrate context across serpin paralogs."
+            elif ligand == "SOSTDC1" and receptor == "LRP5":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "mouse; human family comparator"
+                summary = "SOSTDC1/USAG1 is a BMP/Wnt antagonist with LRP-family context, but the candidate does not establish the exact SOSTDC1-LRP5 topology as a direct primary-supported edge in this pass."
+                limitations = "Preserve SOSTDC1 effects on BMP7 and Wnt receptor complexes; require exact LRP5 binding or functional blockade evidence before promotion."
+            elif ligand in {"TAC1", "TAC2", "TAC4"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses a tachykinin precursor label rather than a defined mature tachykinin peptide ligand."
+                limitations = "Retain mature substance P, neurokinin A/B or other processed peptide-to-TACR relationships only when the ligand form and receptor assay are explicit; do not materialize precursor labels directly."
+            elif ligand == "TG" or ligand == "TGM2":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "TG is a thyroid-hormone precursor and TGM2 is an enzyme; neither is treated as the mature extracellular ligand for the listed receptor."
+                limitations = "Represent hormone biosynthesis or transglutaminase activity separately; do not materialize these protein labels as direct ligand-receptor edges."
+            elif ligand == "TGFA" and receptor in {"ERBB3", "ERBB4"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "TGF-alpha is a canonical EGFR ligand, but the listed ERBB3/ERBB4 receptors are not supported as direct TGFA receptors by the evidence reviewed here."
+                limitations = "Require direct TGFA-to-ERBB3 or TGFA-to-ERBB4 binding/activation evidence before promotion; do not infer receptor specificity from the broader ERBB family."
+            elif ligand in {"TGFB2", "TGFB3"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; mouse"
+                summary = "TGF-beta family receptor and co-receptor biology is strongly complex-dependent; the listed ENG or integrin rows are retained as contextual candidates rather than asserted as direct binary edges."
+                limitations = "Require isoform-specific primary binding and complete receptor/co-receptor topology; do not transfer TGFBR2, betaglycan or latent-complex evidence to ENG or integrin subunits without exact assays."
+            elif ligand in {"TFPI", "TCN2", "TCTN1", "TFF1", "ST6GAL1", "SLC6A8", "SNX14"}:
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "No exact primary experiment was verified for this candidate ligand-receptor pair in the current pass."
+                limitations = "Retain for targeted pair-specific review; do not infer direct signaling from enzyme, carrier, ciliary, transporter or intracellular-protein family context alone."
+            elif ligand.startswith(("THBS",)) or ligand in {"TNC", "TNN", "TNR", "TNXB", "VCAN"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "as stated in primary model/assay"
+                summary = "The extracellular-matrix or matricellular candidate overlaps integrin, syndecan and proteoglycan adhesion biology, but the exact mature ligand and receptor-complex topology were not verified as a direct primary edge in this pass."
+                limitations = "Require exact matrix isoform, receptor complex, species and binding or functional assay; do not transfer thrombospondin/tenascin/vacan family evidence across integrin or syndecan subunits."
+            elif ligand.startswith("TIMP"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "TIMP proteins are endogenous metalloprotease inhibitors and are not treated as mature ligands for the listed receptor rows."
+                limitations = "Represent MMP inhibition, receptor shedding or matrix remodeling separately; do not materialize TIMP-to-receptor edges without an exact direct ligand assay."
+            elif ligand.startswith("TNFSF"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The TNFSF candidate is paired with a receptor or adaptor outside the established cognate TNFR-family topology in this row."
+                limitations = "Require the exact TNFSF ligand, TNFR-family receptor complex and primary binding/activation assay; do not infer activity at downstream adaptors or unrelated TNFR paralogs."
+            elif ligand == "TNF" and receptor == "TNFRSF21":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; mouse comparator"
+                summary = "TNF is established through TNFRSF1A/TNFR1 and TNFRSF1B/TNFR2, while direct TNF-to-TNFRSF21/DR6 support was not verified in this pass."
+                limitations = "Require a direct TNF-TNFRSF21 binding or receptor-triggering study before promotion; do not transfer TNFR1/TNFR2 evidence across TNFR-family paralogs."
+            elif ligand in {"TPH1", "TRY10", "TRY4", "TRY5"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses a serotonin-biosynthesis enzyme or trypsin-family protease as the ligand label rather than the mature extracellular mediator."
+                limitations = "Represent serotonin production or proteolytic receptor activation separately; do not materialize enzyme-to-receptor rows as direct ligand-receptor edges."
+            elif ligand == "TSHB":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "TSHB is a subunit/precursor of thyrotropin, whose cognate receptor is TSHR; the listed non-TSHR receptors are not established direct receptors for this ligand form."
+                limitations = "Require mature TSH and direct receptor assay; do not transfer activity to unrelated GPCRs or RAMP subunits."
+            elif ligand == "TTR":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "No exact primary experiment was verified for this transthyretin-to-NGFR pair in the current pass."
+                limitations = "Retain for targeted protein-transport and neurotrophic-context review; do not infer direct receptor signaling from family or expression overlap."
+            elif ligand in {"UCN2", "UCN3"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Urocortin-2 and urocortin-3 are corticotropin-releasing factor-family ligands with CRHR2-family receptor context, not established ligands for IL10RB."
+                limitations = "Require exact mature urocortin form and CRHR receptor assay; do not infer cytokine-receptor activity from family membership."
+            elif ligand in {"VEGFB", "VEGFC"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The VEGF-family candidate is paired with a receptor outside the established VEGFR topology for this ligand row."
+                limitations = "Require exact VEGF isoform, VEGFR/co-receptor complex and primary assay; do not transfer VEGF or unrelated GPCR receptor specificity across paralogs."
+            elif ligand == "VGF":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "No exact primary experiment was verified for this VGF-to-NTRK1 candidate in the current pass."
+                limitations = "Retain VGF-derived peptide and neurotrophic-family biology for targeted review; do not infer direct NTRK1 binding from expression or pathway context."
+            elif ligand == "VTN" and receptor in {"ITGA5", "ITGB6"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Vitronectin is a primary-supported integrin ligand in alphaV-containing receptor complexes, but the public rows isolate receptor subunits and do not assert the complete mature integrin topology."
+                limitations = "Retain exact alphaVbeta3/alphaVbeta5 vitronectin complexes; require direct alpha5 or beta6-containing receptor evidence before promotion and do not treat receptor subunits as standalone receptors."
+            elif ligand == "WIF1" and receptor == "RYK":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "as stated in primary model/assay"
+                summary = "WIF1 is a Wnt-pathway antagonist and RYK is a Wnt-family receptor, but the exact WIF1-RYK binding topology was not verified as a direct primary edge in this pass."
+                limitations = "Require direct WIF1-RYK binding or receptor-triggering evidence; do not infer a binary edge from shared Wnt-pathway membership."
+            elif ligand.startswith("WNT"):
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "as stated in primary model/assay"
+                summary = "The Wnt candidate overlaps Frizzled, LRP, RYK or noncanonical receptor-family biology, but this exact ligand-receptor pair and complete co-receptor topology were not verified as a primary edge in this pass."
+                limitations = "Require exact Wnt isoform, receptor/co-receptor composition, species and binding or activation assay; do not transfer WNT5A-FZD3/ROR2 or WNT11-ROR2 evidence across unrelated FZD/LRP/RYK paralogs."
+            elif ligand == "ADM" and receptor == "CALCR+RAMP1":
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = ["PMID:32296767", "PMID:12970090"]
+                layer = "ligand_receptor_binding_or_activation"
+                species = "human; rat"
+                summary = "Primary adrenomedullin receptor work supports CALCRL-containing AM1/AM2 receptor complexes with RAMP2 or RAMP3, whereas this row specifies CALCR:RAMP1 and is not promoted as the complete receptor topology."
+                limitations = "Preserve AM1/AM2 receptor-complex boundaries; do not infer that CALCR:RAMP1 is an adrenomedullin receptor from CGRP-receptor family membership."
+            elif ligand == "ZP3":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "as stated in primary model/assay"
+                summary = "ZP3 candidate rows reflect gamete-recognition and fertilization biology, not a generally established secreted ligand-to-signaling-receptor route for the listed receptors."
+                limitations = "Retain species- and assay-specific zona-pellucida binding evidence; do not infer canonical signaling through CHRNA7, EGFR or MERTK without exact primary receptor assays."
+            elif ligand == "LAMA2" and receptor == "ADGRG6":
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E000935;M23B-E000609"
+                primary = ["PMID:25695270", "PMCID:PMC4335265"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "mouse; zebrafish; human protein comparator"
+                summary = "The graph already contains primary-supported laminin-211/LAMA2-containing ligand interaction with ADGRG6/GPR126 and its bounded cAMP/myelination context."
+                limitations = "Preserve laminin-211 chain composition, ADGRG6 NTF/CTF and Schwann-cell context; do not duplicate the alias edge or infer a universal intracellular or TF route."
+            elif ligand == "NODAL" and receptor == "ACVR1C+ACVR2B+CFC1":
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E000350;M21B-E000354"
+                primary = ["PMID:11485994", "PMID:18089557", "PMID:11024047"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse; Xenopus"
+                summary = "The graph already contains primary-supported Nodal signaling through ACVR1C/ALK7, ACVR2B/ActRIIB and the CFC1/Cripto co-receptor complex under normalized aliases."
+                limitations = "Preserve CFC1/Cripto and type-I/type-II receptor stoichiometry and developmental assay context; do not duplicate the alias edge or infer a universal Nodal route or terminal-TF output."
+            elif ligand.startswith("DBH+") or ligand.startswith("PNMT+") or ligand.startswith("NT5E+"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses biosynthetic enzyme and transporter machinery as a composite ligand label rather than the mature extracellular neurotransmitter or adenosine mediator."
+                limitations = "Represent mediator production, vesicular transport and extracellular metabolism separately; do not materialize enzyme/transporter composites as direct receptor ligands."
+            elif ligand in {"DHCR24", "DHCR7", "DPEP1", "DPEP2", "DPEP3", "GGT1+GGT5", "LIPA", "LTA4H", "PTGR1"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The candidate is an enzyme or metabolic-processing component rather than the mature ligand for the listed receptor."
+                limitations = "Represent biosynthesis, degradation or lipid mediator production in a separate mechanistic layer; do not materialize the enzyme-to-receptor row as a direct ligand-receptor edge."
+            elif ligand.startswith("FLRT") and receptor == ligand:
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = reviewed
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Primary FLRT studies support homophilic cell-contact adhesion, but the graph export contract keeps self-loop adhesion relationships contextual rather than materializing them as signaling edges."
+                limitations = "Preserve trans-homophilic and cis/adhesion orientation; do not encode a self-loop or infer a unique intracellular continuation or terminal-TF output from adhesion alone."
+            elif ligand == "GAST" and receptor == "ADGRG1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Gastrin is a peptide ligand for the CCK receptor family, whereas ADGRG1/GPR56 has a distinct adhesion-GPCR ligand context; the public row is not supported as a direct pair."
+                limitations = "Require a direct gastrin-ADGRG1 binding or activation assay before promotion; do not transfer CCK receptor specificity to ADGRG1."
+            elif ligand in {"H2D", "H2K1", "H2T23"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = reviewed
+                layer = "ligand_receptor_binding_or_activation"
+                species = "mouse"
+                summary = "The public row reflects mouse MHC-I/NK-receptor recognition family biology, but the cited family-level evidence does not resolve each exact H2 paralog and KLRA/KLRC:KLRD1 composite topology as one graph edge."
+                limitations = "Require exact H2 paralog, receptor complex, species and binding/activation assay before promotion; do not infer paralog specificity from MHC-family membership."
+            elif ligand.startswith("ICAM5"):
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "No exact primary experiment was verified for this ICAM5-to-CD209F candidate in the current pass."
+                limitations = "Retain for targeted neural-adhesion and receptor-paralog review; do not infer direct CD209F binding from ICAM family membership."
+            elif ligand.startswith("ITGAV+") or ligand == "LPAR1" or ligand == "LPAR2" or ligand == "LPAR3" or ligand == "SDC1":
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = reviewed
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "as stated in primary model/assay"
+                summary = "The candidate reflects adhesion-GPCR, integrin or syndecan receptor-complex context, but the exact direct ligand-receptor topology is not resolved for this row."
+                limitations = "Require exact receptor-complex composition and pair-specific primary binding or activation evidence; do not treat receptor subunits or co-receptors as standalone ligand targets."
+            elif ligand.startswith("KLK"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = reviewed
+                layer = "receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human"
+                summary = "Primary candidate literature supports a protease-activated-receptor mechanism for this kallikrein/PAR row, but proteolytic receptor cleavage is retained as receptor-proximal activation rather than a conventional soluble-ligand binding edge."
+                limitations = "Preserve active protease form, PAR cleavage site, cell context and biased signaling; do not infer a canonical ligand-binding affinity or universal PAR1/PAR2 route from family-level evidence."
+            elif ligand == "LAIR1":
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = reviewed
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "human; mouse comparator"
+                summary = "LAIR1 and LILRB/PIRA2 are inhibitory immune receptors; this candidate is retained as receptor-family/context evidence, not asserted as a conventional ligand-receptor edge."
+                limitations = "Require direct extracellular binding and receptor-triggering evidence for the exact receptor pair; preserve inhibitory ITIM/adaptor boundaries and do not transfer receptor-receptor associations into an extracellular ligand layer."
+            elif ligand == "LGALS9":
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = reviewed
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse"
+                summary = "Galectin-9 has primary-supported receptor and glycan-dependent immune contexts in the graph, but these candidate rows do not resolve a single exact receptor topology beyond the established CD44, TIM-3 and TLR4 branches."
+                limitations = "Retain glycoform, receptor and cell-context distinctions; do not transfer LGALS9 evidence to BCR/CD22/PTPRC, IGHM or P4HB without exact pair-specific assays."
+            elif ligand in {"LTA4H"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "LTA4H produces leukotriene B4 but is not itself the mature ligand for LTB4R1 or LTB4R2."
+                limitations = "Represent leukotriene biosynthesis separately and materialize LTB4 receptor edges only with explicit mature LTB4 ligand evidence."
+            elif ligand.startswith("NRXN") and receptor.startswith("CLSTN"):
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = reviewed
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human; mouse"
+                summary = "The candidate is a neuronal adhesion or synaptic protein-interaction row, not a soluble ligand route; exact trans/cis orientation and receptor-complex role require pair-specific validation."
+                limitations = "Preserve synaptic adhesion and intracellular adaptor context; do not infer a canonical extracellular ligand-receptor signaling route or terminal-TF output."
+            elif ligand == "NTN4" and receptor == "NTRK2":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Netrin-4 is supported through DCC, UNC5A, neogenin and integrin contexts, but direct NTRK2/TrkB receptor support was not verified in this pass."
+                limitations = "Require a direct NTN4-NTRK2 binding or activation study before promotion; do not transfer BDNF/NTF5-TrkB evidence to netrin-family ligands."
+            elif ligand == "PECAM1" and receptor == "CD177":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "No exact primary experiment was verified for this PECAM1-to-CD177 candidate in the current pass."
+                limitations = "Retain for targeted leukocyte-endothelial adhesion review; do not infer direct CD177 binding from shared vascular or neutrophil expression."
+            elif ligand == "RARRES2" and receptor == "CMKLR2":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "Chemerin/RARRES2 is established through CMKLR1/CHEMR23 and related receptor contexts, not the receptor label CMKLR2 in this row."
+                limitations = "Require direct RARRES2-CMKLR2 evidence before promotion; do not transfer CMKLR1 receptor specificity across paralogs."
+            elif ligand in {"SDC2", "SFTPD"}:
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = reviewed
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "as stated in primary model/assay"
+                summary = "The candidate reflects syndecan/collectin and adhesion-GPCR family context, but the exact direct ligand-receptor topology was not verified in this pass."
+                limitations = "Require exact mature ligand, receptor complex, species and direct binding or activation assay; do not treat a co-receptor or matrix-associated protein as a standalone canonical ligand edge."
+            elif ligand.startswith("SHMT+") or ligand.startswith("SLC18A") or ligand.startswith("SLC6A4+"):
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The public row uses amino-acid/monoamine synthesis, vesicular transport or reuptake machinery as a composite ligand label rather than the mature neurotransmitter glycine or serotonin."
+                limitations = "Represent neurotransmitter production, packaging and reuptake separately; do not materialize enzyme/transporter composites as direct glycine- or serotonin-receptor edges."
+            elif ligand == "TAX1BP3":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "TAX1BP3 is an intracellular adaptor/scaffold label, not a mature extracellular ligand for the listed adhesion-GPCR receptors."
+                limitations = "Represent intracellular receptor-associated scaffolding separately; do not materialize TAX1BP3-to-ADGRB1/ADGRB2 as a ligand-receptor edge."
+            elif ligand == "TBXAS1":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "TBXAS1 synthesizes thromboxane A2 but is not itself the mature ligand for TBXA2R."
+                limitations = "Represent thromboxane biosynthesis separately and materialize TBXA2R edges only with explicit mature TXA2 ligand evidence."
+            elif ligand == "TULP2" and receptor == "TYRO3":
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = reviewed
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                species = "as stated in primary model/assay"
+                summary = "The candidate suggests a tubby-like/TAM-receptor family interaction, but the exact TULP2-TYRO3 ligand-receptor topology and mature extracellular form were not independently verified in this pass."
+                limitations = "Require direct TULP2-TYRO3 binding or receptor-activation evidence; do not transfer Gas6/Pros1 TAM-ligand specificity to tubby-family candidates by family analogy."
+            elif ligand == "UBASH3B":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "UBASH3B is an intracellular signaling/ubiquitin-associated protein, not the mature extracellular ligand for PPARA."
+                limitations = "Represent intracellular regulation separately; do not materialize UBASH3B-to-PPARA as a ligand-receptor edge."
+            elif ligand == "ULBP1" and receptor == "HCST+KLRK1":
+                disposition = "already_present_exact_or_alias"
+                matched_ids = "M21B-E002958"
+                primary = ["PMID:11239445", "PMID:11777960", "DOI:10.4049/jimmunol.168.2.671"]
+                layer = "ligand_receptor_binding_or_activation;downstream_or_functional"
+                species = "human"
+                summary = "The graph already contains the primary-supported ULBP1/RAET1I-to-NKG2D/KLRK1 interaction under the ULBP1 ligand and HCST/KLRK1 receptor-complex aliases."
+                limitations = "Preserve GPI-linked ULBP1 and NKG2D/DAP10 receptor context; do not duplicate the alias edge or infer a universal NK-cell transcriptional output."
+            elif ligand == "VEGFD" and receptor == "FLT4+KDR":
+                disposition = "hold_contextual_or_complex_boundary"
+                matched_ids = "M21B-E000360;M21B-E000361"
+                primary = ["PMID:11279005", "PMID:15215251"]
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                species = "human; mouse"
+                summary = "The graph contains primary-supported VEGF-D interactions with FLT4/VEGFR3 and KDR/VEGFR2 as separate edges, while this public row encodes a composite receptor topology."
+                limitations = "Retain the separate receptor-specific VEGFD edges and receptor-complex boundaries; do not materialize the composite as one binary edge without an exact heteromeric receptor assay."
+            elif ligand == "A2M":
+                disposition = "hold_contextual_or_complex_boundary"
+                primary = reviewed
+                layer = "receptor_proximal_or_pathway"
+                species = "as stated in primary model/assay"
+                summary = "Alpha-2-macroglobulin is a protease-binding and clearance factor; the candidate rows do not establish it as a direct mature ligand for KLK1-family receptor targets."
+                limitations = "Require exact A2M-protein complex or receptor assay before promotion; do not infer direct signaling from protease inhibition or endocytic clearance context."
+            elif ligand in {"PTH", "PTH2", "PTHLH"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                summary = "The parathyroid-hormone family candidate is paired with receptors outside the established cognate PTH/PTH2 receptor context."
+                limitations = "Require a mature ligand-form and direct receptor assay; do not infer activity at unrelated GPCRs or RAMP subunits from family membership."
+            elif ligand == "OMG":
+                disposition = "no_primary_evidence_found"
+                layer = "candidate_only_review_locator"
+                summary = "No exact primary experiment was verified for this oligodendrocyte-myelin glycoprotein-to-receptor pair in the current pass."
+                limitations = "Retain established myelin-inhibitory receptor-complex evidence separately; do not transfer Nogo-receptor-family context to LINGO1, NGFR or TNFRSF1B as isolated receptors."
+            elif "+" in receptor:
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation"
+                species = "as stated in primary model/assay"
+                summary = "The public row encodes a multi-subunit receptor complex or pathway prediction; component overlap does not establish the complete composite topology as one primary graph edge."
+                limitations = "Retain the composite as contextual traversal evidence and require exact mature ligand, receptor-subunit composition, species and assay support before promotion."
             else:
                 disposition = "no_primary_evidence_found"
                 layer = "candidate_only_unverified"
