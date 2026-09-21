@@ -820,6 +820,34 @@ def main() -> None:
                 layer = "candidate_only_unverified"
                 summary = "The public database row names a mature FGF family ligand, but no exact primary assay for this ligand-receptor pair was verified in the current pass."
                 limitations = "Retain for targeted pair-specific primary review; do not transfer receptor specificity across FGF paralogs or infer a receptor complex from family membership."
+            elif ligand == "CGA":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                primary = ["PMID:15249700"]
+                species = "human alpha-subunit/TSHR assay"
+                summary = "CGA encodes the common glycoprotein-hormone alpha subunit rather than a complete mature TSH, FSH, LH or hCG ligand; a primary TSHR assay found no agonist activity for wild-type free alpha, while activity required engineered alpha variants."
+                limitations = "Require the complete hormone heterodimer and exact receptor assay; do not materialize CGA alone as a ligand or transfer one beta-subunit-specific route across FSHR, LHCGR and TSHR."
+            elif ligand == "GHRH" and receptor not in {"VIPR1", "VIPR2"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                primary = ["PMID:1333056", "PMID:7680413"]
+                species = "rat; human receptor-expression assays"
+                summary = "Primary cloning and expression studies identify GHRHR as the high-affinity, GHRH-specific receptor and show GHRH-dependent cAMP signaling; the listed non-GHRHR targets were not established as direct GHRH receptors."
+                limitations = "Preserve the mature GHRH-GHRHR route and distinguish related class-B GPCRs; do not infer direct GHRH binding to unrelated receptors, transporters or signaling components from sequence similarity."
+            elif ligand == "VIP" and receptor not in {"VIPR1", "VIPR2", "SCTR"}:
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                primary = ["PMID:8933357"]
+                species = "human receptor-expression and cAMP assays"
+                summary = "Primary cloning and pharmacology identify VPAC1/VIPR1 and VPAC2/VIPR2 as the high-affinity VIP receptor pair; the listed adrenergic, vasopressin, melatonin, PTH, RAMP and enzyme targets were not established as direct VIP receptors."
+                limitations = "Preserve VIPR1/VIPR2 and the separate PACAP/PAC1 specificity boundary; do not materialize VIP-to-unrelated-receptor rows from peptide-family homology or pathway co-occurrence."
+            elif ligand == "TNF" and receptor == "LTBR":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:7594541", "PMID:8798772"]
+                species = "mouse and human lymphotoxin-receptor studies"
+                summary = "Primary LTBR studies establish binding and signaling for lymphotoxin alpha/beta complexes, but the reviewed evidence does not establish a direct TNF-alpha-to-LTBR ligand edge; the public row is retained as a TNF-family boundary hold."
+                limitations = "Preserve TNF-alpha/TNFR1-2 and lymphotoxin/LTBR ligand-complex distinctions; require an exact TNF-alpha-LTBR binding or activation assay before promotion and do not infer a terminal-TF route from shared TNF-superfamily membership."
             elif ligand == "PRSS2" and receptor in {"F2R", "F2RL1"}:
                 disposition = "new_primary_supported_edge_candidate"
                 layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
