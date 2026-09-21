@@ -820,6 +820,41 @@ def main() -> None:
                 layer = "candidate_only_unverified"
                 summary = "The public database row names a mature FGF family ligand, but no exact primary assay for this ligand-receptor pair was verified in the current pass."
                 limitations = "Retain for targeted pair-specific primary review; do not transfer receptor specificity across FGF paralogs or infer a receptor complex from family membership."
+            elif ligand == "PRSS2" and receptor in {"F2R", "F2RL1"}:
+                disposition = "new_primary_supported_edge_candidate"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:16231009", "PMCID:PMC1751236", "DOI:10.1038/sj.bjp.0706410"]
+                species = "human recombinant PRSS2; mouse orthology not directly tested"
+                summary = "Primary recombinant-protease experiments show anionic trypsin/PRSS2 activation of human PAR1/F2R and PAR2/F2RL1, with calcium responses and receptor-desensitization controls in epithelial and neural cell models."
+                limitations = "Preserve mature trypsin processing, proteolytic receptor activation and the human assay context; do not infer mouse activity, PAR3/PAR4 specificity, intracellular intermediates or a terminal-TF output without pair- and species-specific evidence."
+            elif ligand == "PRSS2" and receptor == "F2RL3":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway"
+                primary = ["PMID:16231009", "PMID:9618465"]
+                species = "human recombinant trypsin/PAR family; exact PRSS2-PAR4 assay not shown"
+                summary = "Primary work establishes that trypsin-family proteases can cleave and activate PAR4/F2RL3 and separately shows that recombinant PRSS2 activates epithelial PARs, but the exact PRSS2-PAR4 pairing was not directly assayed in the reviewed study."
+                limitations = "Retain as a bounded PAR-family hypothesis only; require a direct PRSS2-PAR4 cleavage or activation assay before promotion and do not transfer PAR1/PAR2 evidence across PAR paralogs."
+            elif ligand == "RLN1" and receptor == "RXFP2":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:15649866", "PMID:19416162", "PMID:23024363", "PMID:17623071"]
+                species = "human relaxin-family pharmacology; species- and isoform-dependent"
+                summary = "Primary relaxin-family pharmacology shows that relaxin can bind and activate RXFP2 in addition to its cognate RXFP1 route, generally with lower affinity or species-dependent activity, and identifies the RXFP2 extracellular binding site."
+                limitations = "Preserve mature relaxin isoform, species, affinity and receptor-context boundaries; keep this as cross-reactive/conditional evidence rather than a universal canonical RLN1-RXFP2 edge, and do not infer a terminal-TF output."
+            elif ligand == "RLN1" and receptor == "RXFP3":
+                disposition = "hold_contextual_or_complex_boundary"
+                layer = "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional"
+                primary = ["PMID:20159943"]
+                species = "human relaxin-family pharmacology; receptor-expressing cell models"
+                summary = "Primary RXFP3 studies detect weaker H2/relaxin-family activity at RXFP3 than the cognate H3-relaxin response, including receptor binding and biased cAMP, ERK1/2, NF-kappaB or AP-1 outputs."
+                limitations = "Preserve relaxin isoform, receptor-expression system and biased signaling context; retain as cross-reactive evidence rather than a canonical RLN1-RXFP3 edge, and do not generalize H3-relaxin specificity to all relaxin forms."
+            elif ligand == "RLN1" and receptor == "RXFP4":
+                disposition = "reject_precursor_or_non_edge_form"
+                layer = "candidate_only_unverified"
+                primary = ["PMID:27888281"]
+                species = "human receptor-expressing cell model"
+                summary = "Primary RXFP4 peptide-comparison experiments found no signaling activity or receptor internalization from relaxin-2/RLN1 under the tested conditions, whereas INSL5 and relaxin-3 were active."
+                limitations = "Retain the cognate INSL5-RXFP4 and validated relaxin-3 cross-reactive routes; do not materialize RLN1-RXFP4 from relaxin-family membership alone."
             elif ligand in {"FST", "FSTL5"}:
                 disposition = "no_primary_evidence_found"
                 layer = "candidate_only_unverified"
