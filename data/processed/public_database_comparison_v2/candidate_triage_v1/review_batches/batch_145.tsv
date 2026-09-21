@@ -1,0 +1,11 @@
+candidate_unit_id	normalized_ligand_key	normalized_receptor_key	matched_graph_edge_ids	evidence_notes	review_lane	review_batch
+LR:COL5A1>DDR1	COL5A1	DDR1	M21B-E003215		represented_graph_alias	batch_145
+LR:COL5A1>DDR2	COL5A1	DDR2	M21B-E003219		represented_graph_alias	batch_145
+LR:COL6A1>ITGA1	COL6A1	ITGA1	M20B-E002021		represented_graph_alias	batch_145
+LR:COL6A1>ITGA2	COL6A1	ITGA2	M20B-E002022		represented_graph_alias	batch_145
+LR:COL6A2>ITGA1	COL6A2	ITGA1	M20B-E002031		represented_graph_alias	batch_145
+LR:COL6A2>ITGA2	COL6A2	ITGA2	M20B-E002032		represented_graph_alias	batch_145
+LR:COL6A3>ITGA1	COL6A3	ITGA1	M20B-E002041		represented_graph_alias	batch_145
+LR:COL6A3>ITGA2	COL6A3	ITGA2	M20B-E002042		represented_graph_alias	batch_145
+LR:COL8A1>DDR1	COL8A1	DDR1	M21B-E003216		represented_graph_alias	batch_145
+LR:COMP>ITGAV	COMP	ITGAV	M20B-E002100;M21B-E002738;M23B-E000402		represented_graph_alias	batch_145
