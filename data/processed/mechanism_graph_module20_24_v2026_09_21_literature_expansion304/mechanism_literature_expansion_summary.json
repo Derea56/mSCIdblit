@@ -1,0 +1,36 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 26,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion304",
+  "primary_locators": [
+    "PMCID:PMC7477951; PMID:25179432; PMCID:PMC4163173; DOI:10.1186/s12967-014-0217-y",
+    "PMID:12889478; DOI:10.1074/jbc.M304204200",
+    "PMID:12917326",
+    "PMID:14978109; DOI:10.4049/jimmunol.172.5.3042",
+    "PMID:15733087",
+    "PMID:1657993; PMID:7790902",
+    "PMID:18230341; PMCID:PMC2277340; DOI:10.1016/j.bbrc.2008.01.088; https://pubmed.ncbi.nlm.nih.gov/18230341/",
+    "PMID:18694564; PMCID:PMC2581521; PMID:20886103; DOI:10.1371/journal.pone.0012846",
+    "PMID:19116665; PMCID:PMC2605561; DOI:10.1371/journal.pone.0004092",
+    "PMID:20855886; PMCID:PMC2992280",
+    "PMID:21533891; PMCID:PMC4336547",
+    "PMID:2311122; DOI:10.1016/0092-8674(90)90099-Z",
+    "PMID:26323479; PMCID:PMC4601662; DOI:10.15252/embj.201591397",
+    "PMID:28641111; PMID:28641112",
+    "PMID:30304675; PMCID:PMC6338448",
+    "PMID:35328445; PMCID:PMC8953949",
+    "PMID:37318128",
+    "PMID:41248277; PMCID:PMC12663928; DOI:10.1073/pnas.2517436122; https://pubmed.ncbi.nlm.nih.gov/41248277/",
+    "PMID:7519807; PMID:10573151; DOI:10.1006/viro.1994.1494",
+    "PMID:9647658; PMCID:PMC2133008"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-22-literature-expansion-304",
+  "route_evidence_rows_after": 19651,
+  "route_evidence_rows_before": 19625,
+  "route_tier_counts": {
+    "downstream_output_annotation_unlinked_topology": 26
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion303"
+}
