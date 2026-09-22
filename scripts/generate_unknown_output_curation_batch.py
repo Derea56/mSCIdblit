@@ -50,13 +50,61 @@ RULES: tuple[tuple[str, str], ...] = (
     ),
     (
         "cellular_functional_readout",
-        r"\b(?:chemotaxis|chemotactic|migration|migrat(?:e|ion)|proliferat(?:e|ion)|mitogenic|growth|survival|apoptosis|apoptotic|differentiation|differenti(?:ate|ation)|adhesion|rolling|repulsion|repulsive|neurite|axon|growth.?cone|contraction|injury|inflammation|inflammatory|tolerance|cytotoxic|cytotoxicity|lysis|killing|homeostasis|plasticity|myelination|scaveng(?:e|ing)|uptake|cellular response|cell response|barrier|permeability|degranulation|osteoclast|osteoblast|osteogenic|alkaline phosphatase|ALP|morphogenesis|organogenesis|synap(?:se|tic|togenesis)|angiogenesis|vascular|wound|regeneration|branching|spreading|lamellipodia|costimulation|immune response|cytokine|antiviral|antiproliferative|antimicrobial|pathogen|infection|infectivity|viral entry|disease resistance|platelet aggregation|thrombosis|hemostasis|electrophysiolog|membrane current|cell death|death response|hemolysis|clotting|anticoagulant|thrombus|entry|clearance|degradation|recruitment|sorting|turnover|depletion|inhibition|inhibitory|suppression|suppresses|neutraliz|blockade|blocked|antagon|phenotype|phenotypic|functional|function|bioactivity|potency|response|readout|outcome|developmental activity|organizer activity|neural induction|dorsalization|ganglion assembly|osteoclastogenesis|hepcidin|FSH|transformation|immune suppression|T-cell response|NKT|induction|production|modulatory activity|externalization|transport|cofactor activity|decay activity|convertase|complement deposition|serum resistance|mechanosensitivity|mechanotransduction|cointernalization|transmigration|physiological response|BMP response|developmental assay|antigen-specific response|receptor-specific activity|enzymatic activity|protease activity|ligand-induced|agonist response|sensitivity|LTP|hemisynapse clustering|surface/stability|stability and insertion|motor recovery|perineuronal-net architecture|AChR.?clustering|fibrillogenesis|receptor availability|NK-cell stimulation)\b",
+        r"\b(?:chemotaxis|chemotactic|migration|migrat(?:e|ion)|proliferat(?:e|ion)|mitogenic|growth|survival|apoptosis|apoptotic|differentiation|differenti(?:ate|ation)|adhesion|rolling|repulsion|repulsive|neurite|axon|growth.?cone|contraction|injury|inflammation|inflammatory|tolerance|cytotoxic|cytotoxicity|lysis|killing|homeostasis|plasticity|myelination|scaveng(?:e|ing)|uptake|cellular response|cell response|barrier|permeability|degranulation|osteoclast|osteoblast|osteogenic|alkaline phosphatase|ALP|morphogenesis|organogenesis|synap(?:se|tic|togenesis)|angiogenesis|vascular|wound|regeneration|branching|spreading|lamellipodia|costimulation|immune response|cytokine|antiviral|antiproliferative|antimicrobial|pathogen|infection|infectivity|viral entry|disease resistance|platelet aggregation|thrombosis|hemostasis|electrophysiolog|membrane current|cell death|death response|hemolysis|clotting|anticoagulant|thrombus|entry|clearance|degradation|recruitment|sorting|turnover|depletion|inhibition|inhibitory|suppression|suppresses|neutraliz|blockade|blocked|antagon|phenotype|phenotypic|functional|function|bioactivity|potency|response|readout|outcome|developmental activity|organizer activity|neural induction|dorsalization|ganglion assembly|osteoclastogenesis|hepcidin|FSH|transformation|immune suppression|T-cell response|NKT|induction|production|modulatory activity|externalization|transport|cofactor activity|decay activity|convertase|complement deposition|serum resistance|mechanosensitivity|mechanotransduction|cointernalization|transmigration|physiological response|BMP response|developmental assay|antigen-specific response|receptor-specific activity|enzymatic activity|protease activity|ligand-induced|agonist response|sensitivity|LTP|hemisynapse clustering|surface/stability|stability and insertion|motor recovery|perineuronal-net architecture|AChR.?clustering|fibrillogenesis|receptor availability|NK-cell stimulation|patterning|patterning ability|organizing activity|mid.?hindbrain|midbrain explants|chick embryos|ectodermal.?development|developmental defect|developmental phenotype|PCP pathway|canonical pathway|developmental abnormalit(?:y|ies))\b",
     ),
     (
         "generic_functional_readout",
-        r"(?:\b(?:calcium|adenylyl|adenylate|beta.?arrestin|arrestin|second messenger|functional assays?|functional response|bioactivity|biological.?activity|receptor response|ligand response|phosphatidylinositol|phosphoinositide|inositol.?phosphate|IP1|IP3|agonist.?evoked|evoked response|evoked currents|GABA-induced currents|desensitization|patch.?clamp|voltage.?clamp|cytokine|interleukin|TSLP|externalization|lipase activity|specific activity|activity reduction|chylomicron|receptor pharmacology|peptide activity|complement evasion|complement resistance|complement.?regulatory|complement-control consequences|MAC deposition|C3 deposition|C4b deposition|C4b.?C4dg|C9 deposition|serum bactericidal|lectin-pathway readouts|MBL-to-mannose interference|adherence|cell attachment|bacterial penetration|postattachment MHC-I|axonal Nav delivery|cotransport|genetic interaction|mutant phenotypes|antigen-specific responses|BMP responses|developmental assays|plasminogen.?activator|uPA|PAI.?1|surface stabilization|dendritic targeting|excitability|cross.?presentation|channel.?gating|electroretinograph|visual.?adaptation|perineuronal.?net|architecture readout|AChR.?clustering|cell.?death|deacetylation|nucleocytoplasmic shuttling|cell.?surface organization|Schwann.?cell organization|active.?monomer stabilization|ligand stabilization|synaptogenic competition|Treg effects|Treg assays|GlyR clustering|actin bundling|spine assays|process morphology|cytoskeletal/process morphology|coenrichment|tight.?junction|strand analysis|surface GluA2 mobility|AMPAR-EPSC|membrane clustering|sodium extrusion|Wnt/BMP activity readouts|pathway assay|BMP patterning|ligand.?activity|cytoplasmic sequestration|glycine-receptor clustering)\b|(?-i:\bcAMP\b)|\bCa2\+|\b(?:inward current|outward current|chloride current|whole.?cell current|ion current|conductance|electrophysiolog))",
+        r"(?:\b(?:calcium|adenylyl|adenylate|beta.?arrestin|arrestin|second messenger|functional assays?|functional response|bioactivity|biological.?activity|receptor response|ligand response|phosphatidylinositol|phosphoinositide|inositol.?phosphate|IP1|IP3|agonist.?evoked|evoked response|evoked currents|GABA-induced currents|desensitization|patch.?clamp|voltage.?clamp|cytokine|interleukin|TSLP|externalization|lipase activity|specific activity|activity reduction|chylomicron|receptor pharmacology|peptide activity|complement evasion|complement resistance|complement.?regulatory|complement-control consequences|MAC deposition|C3 deposition|C4b deposition|C4b.?C4dg|C9 deposition|serum bactericidal|lectin-pathway readouts|MBL-to-mannose interference|adherence|cell attachment|bacterial penetration|postattachment MHC-I|axonal Nav delivery|cotransport|genetic interaction|mutant phenotypes|antigen-specific responses|BMP responses|developmental assays|plasminogen.?activator|uPA|PAI.?1|surface stabilization|dendritic targeting|excitability|cross.?presentation|channel.?gating|electroretinograph|visual.?adaptation|perineuronal.?net|architecture readout|AChR.?clustering|cell.?death|deacetylation|nucleocytoplasmic shuttling|cell.?surface organization|Schwann.?cell organization|active.?monomer stabilization|ligand stabilization|synaptogenic competition|Treg effects|Treg assays|GlyR clustering|actin bundling|spine assays|process morphology|cytoskeletal/process morphology|coenrichment|tight.?junction|strand analysis|surface GluA2 mobility|AMPAR-EPSC|membrane clustering|sodium extrusion|Wnt/BMP activity readouts|pathway assay|BMP patterning|ligand.?activity|cytoplasmic sequestration|glycine-receptor clustering|destruction complex|Wnt response|Wnt regulation)\b|(?-i:\bcAMP\b)|\bCa2\+|\b(?:inward current|outward current|chloride current|whole.?cell current|ion current|conductance|electrophysiolog))",
     ),
 )
+
+
+# A small, source-reviewed override table for records whose stored queue
+# summary is too compressed for the classifier to preserve the readout that
+# is explicit in the cited primary paper. These remain evidence-only route
+# annotations; they do not assert topology, causality, or confidence.
+CURATION_OVERRIDES: dict[str, dict[str, str]] = {
+    "M21B-DOWNSTREAM:02329": {
+        "output_class": "reporter_readout",
+        "output_label": "EDA/TNFSF27-EDAR/TNFRSF27 documented NF-kB reporter activation and ectodermal developmental phenotype",
+        "primary_locator": "PMID:36765055; PMCID:PMC9918506",
+        "citation_note": "Primary study: PMID:36765055; PMCID:PMC9918506; primary locator: PMID:36765055; PMCID:PMC9918506",
+        "evidence_summary": "Primary study reports the EDA-EDAR ectodomain structure and validates pathogenic variants with biochemical and cellular assays; full-length EDAR luciferase reporter assays show wild-type EDA activates NF-kB dose-dependently, and EDA/EDAR disruption produces ectodermal dysplasia phenotypes in developmental models.",
+        "assay_or_perturbation": "EDAR NF-kB luciferase reporter assays in HEK293T cells, HaCaT cellular assays, recombinant EDA/EDAR binding and mouse ectodermal-development models",
+    },
+    "M21B-DOWNSTREAM:02349": {
+        "output_class": "gene_expression_or_transcription",
+        "output_label": "FGF8b-FGFR3c documented mid-hindbrain patterning and developmental gene-expression readout",
+        "primary_locator": "PMID:16384934; PMCID:PMC1356110",
+        "citation_note": "Primary study: PMID:16384934; PMCID:PMC1356110; primary locator: PMID:16384934; PMCID:PMC1356110",
+        "evidence_summary": "Primary study measures FGF8 splice-isoform receptor binding and shows in chick embryos and murine midbrain explants that the FGF8b F32A mutation changes mid-hindbrain patterning ability; the reported patterning differences correlate with expression of Gbx2, Otx2, En1/2 and Spry1/2.",
+        "assay_or_perturbation": "SPR receptor-binding panel, FGF8b-FGFR2c structure, FGF8b mutant analysis, chick embryo electroporation and murine midbrain explants",
+    },
+    "M21B-DOWNSTREAM:03007": {
+        "output_class": "phosphorylation_or_activation_readout",
+        "output_label": "CTHRC1-FZD5 documented Wnt/PCP pathway activation and canonical-pathway suppression",
+        "primary_locator": "PMID:18606138; DOI:10.1016/j.devcel.2008.05.007",
+        "citation_note": "Primary study: PMID:18606138; DOI:10.1016/j.devcel.2008.05.007; primary locator: PMID:18606138; DOI:10.1016/j.devcel.2008.05.007",
+        "evidence_summary": "Primary study shows that CTHRC1 binds Wnt and Frizzled/Ror2 complexes, activates the planar-cell-polarity pathway, suppresses canonical Wnt signaling in HEK293T cells, and is associated with PCP-related developmental abnormalities in genetic comparator models.",
+        "assay_or_perturbation": "Cell-surface-anchored CTHRC1, Wnt/FZD/Ror2 interaction assays, HEK293T PCP and canonical-pathway assays, and mouse genetic comparator models",
+    },
+    "M21B-DOWNSTREAM:03308": {
+        "output_class": "generic_functional_readout",
+        "output_label": "YAP1-AXIN1/Axin documented Wnt response regulation",
+        "primary_locator": "PMID:24976009; DOI:10.1016/j.cell.2014.06.013",
+        "citation_note": "Primary study: PMID:24976009; DOI:10.1016/j.cell.2014.06.013; primary locator: PMID:24976009; DOI:10.1016/j.cell.2014.06.013",
+        "evidence_summary": "Primary study provides biochemical, functional and genetic evidence that YAP1 is incorporated into the beta-catenin destruction complex through Axin1; Wnt-on release of YAP1/TAZ supports nuclear accumulation and Wnt/YAP/TAZ-dependent biological responses, while APC-loss models link the mechanism to crypt overgrowth and regeneration.",
+        "assay_or_perturbation": "Biochemical destruction-complex assays, Wnt-on/Wnt-off cellular perturbations, APC-loss intestinal models and ex vivo crypt regeneration assays",
+    },
+    "M21B-DOWNSTREAM:03309": {
+        "output_class": "generic_functional_readout",
+        "output_label": "WWTR1/TAZ-AXIN1/Axin documented Wnt response regulation",
+        "primary_locator": "PMID:24976009; DOI:10.1016/j.cell.2014.06.013",
+        "citation_note": "Primary study: PMID:24976009; DOI:10.1016/j.cell.2014.06.013; primary locator: PMID:24976009; DOI:10.1016/j.cell.2014.06.013",
+        "evidence_summary": "Primary study provides biochemical, functional and genetic evidence that WWTR1/TAZ is incorporated into the beta-catenin destruction complex through Axin1; Wnt-on release of YAP1/TAZ supports nuclear accumulation and Wnt/YAP/TAZ-dependent biological responses, while APC-loss models link the mechanism to crypt overgrowth and regeneration.",
+        "assay_or_perturbation": "Biochemical destruction-complex assays, Wnt-on/Wnt-off cellular perturbations, APC-loss intestinal models and ex vivo crypt regeneration assays",
+    },
+}
 
 
 def read_tsv(path: Path) -> list[dict[str, str]]:
@@ -170,10 +218,12 @@ def main() -> int:
         record = records[0]
         evidence_ids = [row["edge_id"], *filter(None, row.get("source_evidence_ids", "").split(";")), record["record_id"], *filter(None, row.get("source_locator", "").split(";"))]
         limitations = row.get("limitations", "").rstrip()
-        topology_boundary = "Ligand-receptor topology remains unresolved; output evidence is retained without assigning source or target roles. Output class was assigned from explicit output/readout language in the stored primary-supported summary."
+        topology_boundary = "Ligand-receptor topology remains unresolved; output evidence is retained without assigning source or target roles. Output class was assigned from explicit output/readout language in the source-reviewed primary paper or its stored primary-supported summary."
         if topology_boundary not in limitations:
             limitations = f"{limitations} {topology_boundary}".strip()
         expansion = f"M21B-LITEXP-{next_id + index}"
+        override = CURATION_OVERRIDES.get(row["queue_id"], {})
+        output_class = override.get("output_class", output_class)
         output.append(
             {
                 "expansion_id": expansion,
@@ -193,7 +243,7 @@ def main() -> int:
                 "transcription_factor_label": "",
                 "target_gene_node_id": "",
                 "target_gene_label": "",
-                "output_label": f"{row['source_label']}-{row['target_label']} documented {output_class}",
+                "output_label": override.get("output_label", f"{row['source_label']}-{row['target_label']} documented {output_class}"),
                 "pathway_name": row.get("pathway_name", ""),
                 "input_evidence_type": "primary_literature_route_expansion",
                 "output_evidence_type": "primary_documented_output_unlinked_topology",
@@ -208,14 +258,14 @@ def main() -> int:
                 "negative_evidence_status": row.get("negative_evidence_status", "not_evaluated"),
                 "evidence_directness": row.get("evidence_directness", "source_claim"),
                 "output_class": output_class,
-                "primary_locator": row["source_locator"],
-                "citation_note": row.get("citation_note", ""),
-                "evidence_summary": row["evidence_summary"],
+                "primary_locator": override.get("primary_locator", row["source_locator"]),
+                "citation_note": override.get("citation_note", row.get("citation_note", "")),
+                "evidence_summary": override.get("evidence_summary", row["evidence_summary"]),
                 "limitations": limitations,
                 "curation_status": "curated_primary_route",
                 "species_context": row.get("species_context", ""),
                 "cell_type_context": row.get("cell_type_context", ""),
-                "assay_or_perturbation": row.get("assay_or_perturbation", ""),
+                "assay_or_perturbation": override.get("assay_or_perturbation", row.get("assay_or_perturbation", "")),
                 "effect_polarity": row.get("effect_polarity", ""),
                 "source_scope": row.get("source_scope", row.get("evidence_scope", "direct_edge")),
             }
