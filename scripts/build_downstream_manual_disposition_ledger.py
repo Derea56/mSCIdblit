@@ -43,6 +43,8 @@ FIELDS = [
     "disposition",
     "output_class_observed",
     "route_action",
+    "existing_output_route_count",
+    "existing_output_route_ids",
     "review_basis",
     "source_locator",
     "source_evidence_ids",
@@ -56,6 +58,7 @@ def main() -> int:
     args = parse_args()
     bundle = args.bundle_dir.resolve()
     queue = read_tsv(bundle / "mechanism_downstream_curation_queue.tsv")
+    routes = read_tsv(bundle / "mechanism_signaling_route_evidence.tsv")
     curated_ids: set[str] = set()
     for path in sorted(bundle.parent.glob("mechanism_graph_module20_24_v2026_09_21_literature_expansion*/mechanism_literature_expansion.tsv")):
         curated_ids.update(row.get("source_queue_id", "") for row in read_tsv(path))
@@ -66,7 +69,16 @@ def main() -> int:
         if queue_id in curated_ids:
             continue
         scope = source.get("evidence_scope", "")
-        if scope == "direct_edge":
+        existing_output_routes = [
+            route
+            for route in routes
+            if route.get("ligand_label") == source.get("source_label")
+            and route.get("receptor_label") == source.get("target_label")
+            and (route.get("output_label") or route.get("target_gene_label"))
+        ]
+        if existing_output_routes:
+            disposition = "reviewed_no_new_output_in_record_existing_output_route_present"
+        elif scope == "direct_edge":
             disposition = "reviewed_no_explicit_downstream_output_in_curated_record"
         elif scope == "contextual_support":
             disposition = "reviewed_contextual_association_without_explicit_output"
@@ -85,7 +97,15 @@ def main() -> int:
                 "curation_priority": source.get("curation_priority", ""),
                 "disposition": disposition,
                 "output_class_observed": source.get("output_class", "unknown"),
-                "route_action": "retain_entry_evidence_only",
+                "route_action": (
+                    "retain_entry_evidence_and_existing_output_routes"
+                    if existing_output_routes
+                    else "retain_entry_evidence_only"
+                ),
+                "existing_output_route_count": str(len(existing_output_routes)),
+                "existing_output_route_ids": ";".join(
+                    route.get("route_evidence_id", "") for route in existing_output_routes
+                ),
                 "review_basis": (
                     "Manual audit of the stored primary-supported evidence_summary and "
                     "assay_or_perturbation fields; no explicit downstream output/readout "
