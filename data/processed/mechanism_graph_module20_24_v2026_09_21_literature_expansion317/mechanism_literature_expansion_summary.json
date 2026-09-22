@@ -1,0 +1,32 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 16,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion317",
+  "primary_locators": [
+    "PMID:10556042; PMID:11196670",
+    "PMID:12660326; PMCID:PMC2169393",
+    "PMID:12950167; DOI:10.1021/bi027093c; PMCID:PMC6672528",
+    "PMID:16252253; DOI:10.1002/eji.200425914",
+    "PMID:17056715; PMCID:PMC1637596; PMID:17549736; PMID:22144141",
+    "PMID:17056715; PMCID:PMC1637596; PMID:20702625",
+    "PMID:17195076; PMID:17804752",
+    "PMID:18334217; PMID:8576240; PMCID:PMC2826211",
+    "PMID:20823509; PMCID:PMC2935210; PMID:12535517",
+    "PMID:26602187; PMCID:PMC4752817; PMID:11857337; PMID:12538684",
+    "PMID:30459611; PMCID:PMC6232869; PMID:32547396; PMCID:PMC7273965",
+    "PMID:34188035; PMCID:PMC4281560",
+    "PMID:8344274; PMID:1646206; PMID:10457223",
+    "PMID:8344274; PMID:1646206; PMID:7933990",
+    "PMID:8576240; PMID:17042500; PMID:17897391",
+    "PMID:9343190; PMCID:PMC192296; PMID:7533862"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-22-literature-expansion-317",
+  "route_evidence_rows_after": 19709,
+  "route_evidence_rows_before": 19693,
+  "route_tier_counts": {
+    "downstream_output_annotation_unlinked_topology": 16
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion316"
+}
