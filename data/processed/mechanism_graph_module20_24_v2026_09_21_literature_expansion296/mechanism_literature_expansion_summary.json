@@ -1,0 +1,29 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 20,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion296",
+  "primary_locators": [
+    "PMID:10330424; PMCID:PMC408451",
+    "PMID:11554781",
+    "PMID:12483210; DOI:10.1038/ni875",
+    "PMID:12697740; PMCID:PMC152937",
+    "PMID:14517293; PMID:33219121",
+    "PMID:16597617; PMCID:PMC2080618",
+    "PMID:19079182; PMCID:PMC2614303; DOI:10.1038/mi.2008.1",
+    "PMID:21343910",
+    "PMID:22669948",
+    "PMID:27477018; DOI:10.1016/j.neuron.2016.06.015",
+    "PMID:28549068; PMCID:PMC5446120; PMID:19299462; PMCID:PMC2714439; PMID:29251594; PMCID:PMC5752207; PMID:37407594; PMCID:PMC10322873",
+    "PMID:28900043; PMCID:PMC5594226",
+    "PMID:7592624; DOI:10.1074/jbc.270.41.24197"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-22-literature-expansion-296",
+  "route_evidence_rows_after": 19312,
+  "route_evidence_rows_before": 19292,
+  "route_tier_counts": {
+    "downstream_output_annotation_unlinked_topology": 20
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion295"
+}
