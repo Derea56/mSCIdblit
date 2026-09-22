@@ -54,7 +54,7 @@ RULES: tuple[tuple[str, str], ...] = (
     ),
     (
         "generic_functional_readout",
-        r"(?:\b(?:calcium|adenylyl|adenylate|beta.?arrestin|arrestin|second messenger|functional assay|functional response|bioactivity|biological.?activity|receptor response|ligand response|phosphatidylinositol|phosphoinositide|inositol.?phosphate|IP1|IP3|agonist.?evoked|evoked response|desensitization|patch.?clamp|voltage.?clamp|cytokine|interleukin|TSLP|externalization|lipase activity|chylomicron)\b|(?-i:\bcAMP\b)|\bCa2\+|\b(?:inward current|outward current|chloride current|whole.?cell current|ion current|conductance|electrophysiolog))",
+        r"(?:\b(?:calcium|adenylyl|adenylate|beta.?arrestin|arrestin|second messenger|functional assay|functional response|bioactivity|biological.?activity|receptor response|ligand response|phosphatidylinositol|phosphoinositide|inositol.?phosphate|IP1|IP3|agonist.?evoked|evoked response|evoked currents|desensitization|patch.?clamp|voltage.?clamp|cytokine|interleukin|TSLP|externalization|lipase activity|specific activity|activity reduction|chylomicron|receptor pharmacology|peptide activity|complement evasion|complement resistance|complement.?regulatory|MAC deposition|C3 deposition|C4b deposition|C4b.?C4dg|C9 deposition|serum bactericidal|adherence|axonal Nav delivery|cotransport|genetic interaction|antigen-specific responses|BMP responses|developmental assays)\b|(?-i:\bcAMP\b)|\bCa2\+|\b(?:inward current|outward current|chloride current|whole.?cell current|ion current|conductance|electrophysiolog))",
     ),
 )
 
