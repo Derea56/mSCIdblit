@@ -1,0 +1,20 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 5,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion307",
+  "primary_locators": [
+    "PMID:16384934; PMCID:PMC1356110",
+    "PMID:18606138; DOI:10.1016/j.devcel.2008.05.007",
+    "PMID:24976009; DOI:10.1016/j.cell.2014.06.013",
+    "PMID:36765055; PMCID:PMC9918506"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-22-literature-expansion-307",
+  "route_evidence_rows_after": 19656,
+  "route_evidence_rows_before": 19651,
+  "route_tier_counts": {
+    "downstream_output_annotation_unlinked_topology": 5
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion306"
+}
