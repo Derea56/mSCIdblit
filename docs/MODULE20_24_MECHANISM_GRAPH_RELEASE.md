@@ -1,44 +1,26 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.8.5.md`](RELEASE_v1.8.5.md). The v1.8.4, v1.8.3, v1.8.2, v1.8.1, v1.8.0, v1.7.0, v1.6.0, and
-v1.5.0
-snapshots below are retained as implementation and historical baseline
-references.
+[`RELEASE_v1.9.150.md`](RELEASE_v1.9.150.md). Earlier snapshots, including
+v1.9.149 and the v1.8.x series, are retained as implementation and historical
+baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-16-evidence-contract`
+Current release identifier: `module20_24_mechanism_graph:2026-09-21-literature-expansion-262`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_16_evidence_contract/`.
-It contains the machine-readable full-chain audit in
-`full_signaling_chain_audit.tsv` and `full_signaling_chain_audit.json`, plus
-the possible-path layer in `mechanism_possible_signaling_paths.tsv` and the
-generalized evidence-route layer in `mechanism_signaling_route_evidence.tsv`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion262/`.
+It contains the machine-readable full-chain audit, generalized evidence-route
+layer, public-LR evidence supplement, mSCS coverage report, and import
+manifest.
 
-The current bundle has 11,952 nodes, 14,722 traversable edges, 14,998 linked
-source rows, 17,332 node-role assignments, 10,881 pathway summaries, and 96
+The current bundle has 11,988 nodes, 14,801 traversable edges, 17,242 linked
+source rows, 17,406 node-role assignments, 10,960 pathway summaries, and 96
 boundary groups. The full-chain audit reports 141 evidence-backed edge-chain
-instances and 95 unique four-node topologies, while retaining 6,118
-evidence-backed partial path fragments with explicit missing-link annotations.
-Two strict possible missing-relay paths are also retained as non-causal
-hypotheses: `Ado>Adora2b>????>????>Vegfa`. The generalized route-evidence
-table retains 16,047 tiered records, including one route-linked record for each
-of the 4,730 Module 21B downstream evidence records, 2,625 exact-shared-
-receptor linkages, 2,135 receptor-identity-alias linkages, 96 direct
-LR–TF–output records, and 117 co-observed intracellular–TF–output records.
-Generic ligand–receptor/
-output routes whose output is not assigned a `target_gene` role remain labels,
-so mSCS can score entry, intracellular, TF, and output evidence independently
-without treating the route as a causal graph path.
-The Module 21B downstream curation queue retains 3,331 evidence-backed rows
-with downstream/functional annotations but no linked output route. It preserves
-exact source evidence and separates likely LR entries, receptor-proximal
-intracellular claims, and topology-ambiguous rows for manual conversion into
-explicit route evidence. All queue-linked evidence records retain the queue and
-record IDs used to join those route candidates back to their source claims.
-Its companion evidence-record table contains explicit generic-output,
-intracellular-cascade, TF, and target-gene candidate records while retaining
-929 claims that require manual interpretation.
-See the v1.8.5 release note for the complete counts and interpretation
+instances and 95 unique four-node topologies. The route-evidence layer retains
+16,247 records across entry, output, intracellular, TF, and combined route
+categories; it remains evidence-only so mSCS can evaluate plausibility and
+confidence using cell context. The public-LR supplement contributes primary
+evidence to existing edges without creating graph edges or confidence scores.
+See the v1.9.150 release note for the complete counts and interpretation
 boundaries.
 
 Historical v1.8.0 release identifier: `module20_24_mechanism_graph:2026-09-16`
