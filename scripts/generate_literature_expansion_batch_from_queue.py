@@ -39,19 +39,20 @@ def normalized(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", value.casefold())
 
 
-RECEPTOR_TERMS = (
-    "receptor", "gpcr", "integrin", "cxcr", "ccr", "xcr", "ackr", "ntrk",
-    "notch", "robo", "unc5", "plexin", "tlr", "lrp1", "cd44", "esl-1",
-    "selectin", "itga", "itgb", "eph", "nrp", "frizzled", "fzd", "bmpr",
-    "tgfbr", "egfr", "pdgfr", "fgfr", "igf1r", "insr", "csf1r", "il1r",
-    "il6r", "il2r", "il4r", "il7r", "il9r", "il10r", "il17r", "tnfr",
-    "fas", "cd40", "mcam", "neogenin", "dcc", "ptprz1", "syndecan",
+SOURCE_RECEPTOR_PATTERNS = (
+    r"\b(?:pdgfr|vegfr|fgfr|csf1r|egfr|erbb|ntrk|igf1r|insr|kit|mpl|rage|mcam)\b",
+    r"\b(?:il(?:1|2|4|6|7|9|10|17|18|21|22|23|27|31|34)r|tlr|notch|robo|unc5|dcc)\b",
+    r"\b(?:fzd|frizzled|lrp\d*|acvr|bmpr|tgfbr|tnfr|eph[ab]\d|plxn[ab][1-4])\b",
+    r"\b(?:nrp[12]|itga\d|itgb\d|cxcr\d|ccr\d|xcr\d|ackr\d|p2[xy]\d)\b",
 )
+SOURCE_RECEPTOR_PREFIXES = ("pdgfr", "vegfr", "fgfr", "csf1r", "egfr", "erbb", "ntrk", "igf1r", "insr")
 
 
 def looks_like_receptor(label: str) -> bool:
     lowered = label.casefold()
-    return any(term in lowered for term in RECEPTOR_TERMS)
+    if any(prefix in lowered for prefix in SOURCE_RECEPTOR_PREFIXES):
+        return True
+    return any(re.search(pattern, lowered) for pattern in SOURCE_RECEPTOR_PATTERNS)
 
 
 def select_evidence_record(
@@ -73,7 +74,9 @@ def main() -> int:
     bundle = args.bundle_dir.resolve()
     queue = read_tsv(bundle / "mechanism_downstream_curation_queue.tsv")
     evidence = read_tsv(bundle / "mechanism_downstream_evidence_records.tsv")
-    previous = read_tsv(bundle / "mechanism_literature_expansion.tsv")
+    previous: list[dict[str, str]] = []
+    for path in sorted(bundle.parent.glob("mechanism_graph_module20_24_v2026_09_21_literature_expansion*/mechanism_literature_expansion.tsv")):
+        previous.extend(read_tsv(path))
     already_curated = {row.get("source_queue_id", "") for row in previous}
     records_by_queue: dict[str, list[dict[str, str]]] = {}
     for record in evidence:
