@@ -89,8 +89,6 @@ def main() -> int:
             continue
         if looks_like_receptor(row.get("source_label", "")):
             continue
-        if not looks_like_receptor(row.get("target_label", "")):
-            continue
         target_label = row.get("target_label", "").casefold()
         if any(term in target_label for term in (" receptor-associated ", " signaling branch", " pathway branch")):
             continue
