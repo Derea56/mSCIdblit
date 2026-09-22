@@ -1,0 +1,86 @@
+{
+  "bundle_dir": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion264",
+  "confidence_scores_created": false,
+  "counts": {
+    "boundary_groups": 96,
+    "downstream_curation_queue": 3384,
+    "downstream_evidence_records": 4806,
+    "edge_sources": 17242,
+    "edges": 14801,
+    "entity_forms": 3031,
+    "entity_transitions": 13,
+    "literature_expansion": 7,
+    "node_roles": 17406,
+    "nodes": 11988,
+    "nodes_with_ligand_role": 2871,
+    "nodes_with_receptor_role": 2429,
+    "nodes_with_target_gene_role": 67,
+    "nodes_with_transcription_factor_role": 51,
+    "nonexportable_edges": 9889,
+    "output_bridge_candidates": 342,
+    "output_bridges_validated": 1166,
+    "pathways": 10960,
+    "possible_signaling_paths": 2,
+    "public_lr_evidence_supplements": 2165,
+    "signaling_route_evidence": 16257
+  },
+  "files": {
+    "mechanism_downstream_curation_queue.tsv": {
+      "bytes": 7106808,
+      "sha256": "77a74da3198934cc40013341b814b08ff2d068deb02ab43dbb148f40bfc8a89f"
+    },
+    "mechanism_downstream_evidence_records.tsv": {
+      "bytes": 8837938,
+      "sha256": "ac3a0bbc86747ce3f2f05a747bdc3ac194f28c5700e51b68d7527203a6e7680f"
+    },
+    "mechanism_edge_sources.tsv": {
+      "bytes": 23139842,
+      "sha256": "07038c7d86e0b16c6a82b85596f685dfa3c7f14683274221ce02e6bb2e1fcc90"
+    },
+    "mechanism_edges.tsv": {
+      "bytes": 17780873,
+      "sha256": "ac5be2c562f75641efec682f76b08632eccf39412ce30860aa633214da262ce6"
+    },
+    "mechanism_literature_expansion.tsv": {
+      "bytes": 14062,
+      "sha256": "d4bdb8da241b7384e769c89adb6b225d195064d7acb4ba44764c40c79121bcba"
+    },
+    "mechanism_node_roles.tsv": {
+      "bytes": 2288219,
+      "sha256": "370f6eaa27943983798c695e10d5f2ba94b9d7510e91058b93022e563c7ddea3"
+    },
+    "mechanism_nodes.tsv": {
+      "bytes": 4360292,
+      "sha256": "ac618c5a1d2a9e54c919bb2010497b4161ec4d5977e83839d4f110522e9d1ba6"
+    },
+    "mechanism_possible_signaling_paths.tsv": {
+      "bytes": 995,
+      "sha256": "6d2b3554220444667db42c932be760e57e777b0e74189d20b936e3993ef2f808"
+    },
+    "mechanism_signaling_route_evidence.tsv": {
+      "bytes": 16729102,
+      "sha256": "df9c45f642c5658dd8e9bbcf55a59772389d267b994e05646713ef720c32faeb"
+    }
+  },
+  "graph_edges_created_by_public_lr_overlay": 0,
+  "import_command": "python3 mSCS/src/mscs/import_mechanism_bundle.py <bundle> --mechanism-dir <active_release> --export-tsv",
+  "manifest_schema": "mscs_import_manifest_v1",
+  "optional_files_present": [
+    "mechanism_node_roles.tsv",
+    "mechanism_possible_signaling_paths.tsv",
+    "mechanism_signaling_route_evidence.tsv",
+    "mechanism_downstream_curation_queue.tsv",
+    "mechanism_downstream_evidence_records.tsv",
+    "mechanism_literature_expansion.tsv"
+  ],
+  "original_graph_bundle_preserved": true,
+  "release_id": "module20_24_mechanism_graph:2026-09-21-literature-expansion-264",
+  "required_files": [
+    "mechanism_nodes.tsv",
+    "mechanism_edges.tsv",
+    "mechanism_edge_sources.tsv"
+  ],
+  "route_evidence_is_non_causal": true,
+  "source_project": "mSCIdblit",
+  "target_consumer": "mSCS"
+}

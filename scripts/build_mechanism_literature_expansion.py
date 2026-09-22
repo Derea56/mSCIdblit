@@ -70,7 +70,7 @@ def validate_rows(rows: list[dict[str, str]], source_bundle: Path) -> None:
         "receptor_label", "transcription_factor_node_id", "transcription_factor_label", "target_gene_node_id",
         "target_gene_label", "source_evidence_record_id", "causal_status", "traversal_status",
         "evidence_contract_version", "evidence_polarity", "negative_evidence_status", "evidence_directness",
-        "output_class", "primary_locator", "evidence_summary", "limitations", "curation_status"
+        "output_class", "primary_locator", "citation_note", "evidence_summary", "limitations", "curation_status"
     }
     if not rows:
         raise ValueError("Literature expansion input is empty")
