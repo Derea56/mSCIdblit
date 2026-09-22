@@ -1,13 +1,13 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.157.md`](RELEASE_v1.9.157.md). Earlier snapshots, including
+[`RELEASE_v1.9.158.md`](RELEASE_v1.9.158.md). Earlier snapshots, including
 v1.9.149 and the v1.8.x series, are retained as implementation and historical
 baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-22-literature-expansion-270`
+Current release identifier: `module20_24_mechanism_graph:2026-09-22-literature-expansion-271`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion270/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion271/`.
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, mSCS coverage report, and import
 manifest.
@@ -16,11 +16,11 @@ The current bundle has 11,988 nodes, 14,801 traversable edges, 17,242 linked
 source rows, 17,406 node-role assignments, 10,960 pathway summaries, and 96
 boundary groups. The full-chain audit reports 141 evidence-backed edge-chain
 instances and 95 unique four-node topologies. The route-evidence layer retains
-16,291 records across entry, output, intracellular, TF, and combined route
+16,297 records across entry, output, intracellular, TF, and combined route
 categories; it remains evidence-only so mSCS can evaluate plausibility and
 confidence using cell context. The public-LR supplement and literature-
 expansion overlays contribute primary evidence to existing edges without
-creating graph edges or confidence scores. See the v1.9.157 release note for
+creating graph edges or confidence scores. See the v1.9.158 release note for
 the complete counts and interpretation
 boundaries.
 
