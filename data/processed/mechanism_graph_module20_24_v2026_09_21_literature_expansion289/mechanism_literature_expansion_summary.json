@@ -1,0 +1,23 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 10,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion289",
+  "primary_locators": [
+    "PMID:12530978",
+    "PMID:16867992; PMID:10518221",
+    "PMID:19836339; PMCID:PMC2766095; PMID:17675517",
+    "PMID:21990362",
+    "PMID:23671278",
+    "PMID:25559892; PMCID:PMC4291531",
+    "PMID:28329704"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-22-literature-expansion-289",
+  "route_evidence_rows_after": 18692,
+  "route_evidence_rows_before": 18682,
+  "route_tier_counts": {
+    "downstream_output_annotation_unlinked_topology": 10
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion288"
+}
