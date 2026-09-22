@@ -42,6 +42,7 @@ def main() -> int:
         records_by_queue.setdefault(record["source_queue_id"], []).append(record)
 
     eligible_semantics = {
+        "ligand_receptor_edge_with_unlinked_downstream_claim",
         "ambiguous_edge_needing_manual_topology_review",
         "receptor_proximal_edge_needing_lr_pair_resolution",
     }
@@ -50,7 +51,7 @@ def main() -> int:
         if row["queue_id"] not in already_curated
         and row.get("edge_semantic_class") in eligible_semantics
         and row.get("evidence_status") == "validated_primary_exact_layer"
-        and row.get("evidence_scope") == "direct_edge"
+        and row.get("evidence_scope") in {"direct_edge", "contextual_support", "pathway_membership"}
         and row.get("output_class") not in {"", "unknown"}
         and row.get("source_locator")
         and row.get("evidence_summary")
