@@ -103,7 +103,7 @@ def main() -> int:
     ]
     full_sequence_start = max(existing_full_sequence_numbers, default=0) + 1
 
-    candidates: list[tuple[dict[str, str], dict[str, str], dict[str, str]]] = []
+    candidates: list[tuple[dict[str, str], dict[str, str], dict[str, str], bool]] = []
     skipped = {"missing_layer": 0, "missing_locator": 0, "missing_route_source": 0, "already_present": 0}
     for row in full_queue:
         if not all(
@@ -139,6 +139,20 @@ def main() -> int:
             ),
             None,
         )
+        graph_linked = False
+        if source_route is None:
+            source_route = next(
+                (
+                    route_by_id[route_id]
+                    for route_id in split_values(row.get("route_evidence_ids", ""))
+                    if route_id in route_by_id
+                    and "graph_supported_lr_receptor_relay_tf_output" in route_by_id[route_id].get(
+                        "route_linkage_status", ""
+                    )
+                ),
+                None,
+            )
+            graph_linked = source_route is not None
         if source_route is None:
             skipped["missing_route_source"] += 1
             continue
@@ -152,8 +166,8 @@ def main() -> int:
         if signature in existing_signatures:
             skipped["already_present"] += 1
             continue
-        source_record = evidence_by_id[source_route["source_evidence_record_id"]]
-        candidates.append((row, source_route, source_record))
+        source_record = {} if graph_linked else evidence_by_id[source_route["source_evidence_record_id"]]
+        candidates.append((row, source_route, source_record, graph_linked))
 
     candidates.sort(key=lambda item: item[0]["curation_candidate_id"])
     if args.limit:
@@ -162,7 +176,7 @@ def main() -> int:
         raise ValueError("No eligible full-intermediate queue records found")
 
     rows: list[dict[str, str]] = []
-    for index, (queue_row, source_route, source_record) in enumerate(candidates, start=1):
+    for index, (queue_row, source_route, source_record, graph_linked) in enumerate(candidates, start=1):
         target_gene_ids = split_values(queue_row.get("target_gene_node_ids", ""))
         target_gene_labels = split_values(queue_row.get("target_gene_labels", ""))
         has_target = bool(
@@ -225,6 +239,7 @@ def main() -> int:
             "literature_expansion:full_intermediate_queue_composition",
             "primary_layers_source_linked",
             "end_to_end_chain_not_asserted_by_single_source",
+            "graph_linked_route_source" if graph_linked else "",
         )
         summary = source_record.get("evidence_summary", "").strip()
         if not summary:
@@ -267,7 +282,11 @@ def main() -> int:
             "output_form_id": "",
             "bridge_id": "",
             "pathway_name": split_values(queue_row.get("pathway_names", ""))[0] if queue_row.get("pathway_names") else "",
-            "input_evidence_type": "primary_layer_evidence_route_composition",
+            "input_evidence_type": (
+                "primary_graph_linked_layer_evidence_route_composition"
+                if graph_linked
+                else "primary_layer_evidence_route_composition"
+            ),
             "output_evidence_type": "primary_composed_downstream_output",
             "evidence_ids": evidence_ids,
             "source_chain_id": f"full_sequence_queue:{queue_row['curation_candidate_id']}",
@@ -298,7 +317,7 @@ def main() -> int:
             "context_scope": source_record.get("context_scope", ""),
             "assay_or_perturbation": source_record.get("assay_or_perturbation", ""),
             "effect_polarity": source_record.get("effect_polarity", ""),
-            "source_scope": "composite_primary_evidence",
+            "source_scope": "graph_linked_composite_primary_evidence" if graph_linked else "composite_primary_evidence",
         })
 
     args.output.resolve().write_text(json.dumps(rows, indent=2) + "\n", encoding="utf-8")
