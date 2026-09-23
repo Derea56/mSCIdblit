@@ -1,13 +1,13 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.207.md`](RELEASE_v1.9.207.md). Earlier snapshots, including
+[`RELEASE_v1.9.208.md`](RELEASE_v1.9.208.md). Earlier snapshots, including
 v1.9.149 and the v1.8.x series, are retained as implementation and historical
 baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-22-cross-record-route-linkage-324`
+Current release identifier: `module20_24_mechanism_graph:2026-09-22-graph-supported-route-expansion-325`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion324/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion325/`.
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
@@ -15,12 +15,14 @@ The current bundle has 11,988 nodes, 14,801 traversable edges, 17,242 linked
 source rows, 17,406 node-role assignments, 10,960 pathway summaries, and 96
 boundary groups. The full-chain audit reports 141 evidence-backed edge-chain
 instances and 95 unique four-node topologies. The route-evidence layer retains
-19,928 records across entry, output, intracellular, TF, and combined route
+333,678 records across entry, output, intracellular, TF, and combined route
 categories; it remains evidence-only so mSCS can evaluate plausibility and
-confidence using cell context. This release adds 215 conservative cross-record
-compositions across 66 exact ligand–receptor edges when intracellular and
-TF/output records share an evidence identifier. These rows do not create graph
-edges, causal assertions, or database confidence scores.
+confidence using cell context. This release adds 313,750 graph-supported
+compositions across 1,413 exact ligand–receptor edges. Six added rows contain
+an asserted intracellular-component→TF edge; the remaining relayed additions
+retain the missing-link state explicitly. These rows do not create graph
+edges, causal assertions, or database confidence scores. Parquet is deferred
+until this TSV route contract is stable.
 
 Historical v1.8.0 release identifier: `module20_24_mechanism_graph:2026-09-16`
 
