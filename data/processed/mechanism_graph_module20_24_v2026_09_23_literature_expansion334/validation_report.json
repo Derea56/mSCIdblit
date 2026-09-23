@@ -17,12 +17,12 @@
     "output_bridge_candidates": 342,
     "output_bridges_validated": 1166,
     "possible_signaling_paths": 2,
-    "signaling_route_evidence": 333810,
+    "signaling_route_evidence": 333794,
     "downstream_curation_queue": 3384,
     "downstream_evidence_records": 4806,
     "full_sequence_curation_queue": 7742,
-    "route_nodes": 1291319,
-    "route_edges": 1274429
+    "route_nodes": 1291239,
+    "route_edges": 1274363
   },
   "checks": {
     "unique_node_ids": true,

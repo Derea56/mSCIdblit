@@ -11,12 +11,12 @@ This report separates route-evidence coverage from biological confidence. The ro
 | L→R→output | 8,693 |
 | L→R→TF→output | 516 |
 | L→R→intracellular→output | 3,228 |
-| L→R→intracellular→TF→output | 308,950 |
+| L→R→intracellular→TF→output | 308,934 |
 | L→R→entry→only | 9,307 |
 
 ## Audit and public-LR coverage
 
-- Route-evidence records: 333,810
+- Route-evidence records: 333,794
 - Graph edges: 14,801
 - Graph evidence-source rows: 17,242
 - Public-LR candidates covered: 7,737

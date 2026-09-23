@@ -36,7 +36,7 @@
     "entity_forms": 3031,
     "entity_transitions": 13,
     "full_sequence_curation_queue": 7742,
-    "literature_expansion": 128,
+    "literature_expansion": 112,
     "node_roles": 17406,
     "nodes": 11988,
     "nodes_with_ligand_role": 2871,
@@ -49,14 +49,14 @@
     "pathways": 10960,
     "possible_signaling_paths": 2,
     "public_lr_evidence_supplements": 2165,
-    "route_edges": 1274429,
-    "route_nodes": 1291319,
-    "signaling_route_evidence": 333810
+    "route_edges": 1274363,
+    "route_nodes": 1291239,
+    "signaling_route_evidence": 333794
   },
   "integrity_inputs": {
     "edge_count_observed": 14801,
     "edge_source_count_observed": 17242,
-    "route_evidence_sha256": "305673b80f6e4aa2351c277cba48dea22c73dd26f5e9921c214506d7d481e76b"
+    "route_evidence_sha256": "7f8ba1036c44e1d427a298ec9d3eda1b3f11b103b72b0e13608376458a53baba"
   },
   "primary_evidence_integration": {
     "affected_graph_edges": 1267,
@@ -76,11 +76,11 @@
     "category_counts": {
       "L_R_TF_output": 516,
       "L_R_entry_only": 9307,
-      "L_R_intracellular_TF_output": 308950,
+      "L_R_intracellular_TF_output": 308934,
       "L_R_intracellular_output": 3228,
       "L_R_output": 8693
     },
-    "record_count": 333810,
+    "record_count": 333794,
     "tier_counts": {
       "downstream_claim_unresolved_topology": 141,
       "downstream_output_annotation_unlinked_topology": 2154,
@@ -92,7 +92,7 @@
       "ligand_receptor_intracellular_output_missing_tf": 3228,
       "ligand_receptor_intracellular_tf_missing_output": 67,
       "ligand_receptor_intracellular_tf_output_missing_target_gene": 24967,
-      "ligand_receptor_intracellular_tf_target_missing_direct_tf_edges": 132,
+      "ligand_receptor_intracellular_tf_target_missing_direct_tf_edges": 116,
       "ligand_receptor_output_annotation_missing_intracellular_and_tf": 2433,
       "ligand_receptor_output_missing_intracellular_and_tf": 6260,
       "ligand_receptor_tf_annotation_missing_intracellular_and_output": 74,
