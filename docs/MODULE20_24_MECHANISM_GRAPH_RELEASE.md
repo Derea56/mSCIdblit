@@ -1,13 +1,13 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.224.md`](RELEASE_v1.9.224.md). Earlier snapshots, including
+[`RELEASE_v1.9.225.md`](RELEASE_v1.9.225.md). Earlier snapshots, including
 v1.9.149 and the v1.8.x series, are retained as implementation and historical
 baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-23-il17a-primary-relay-342`
+Current release identifier: `module20_24_mechanism_graph:2026-09-23-tslp-primary-relay-343`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion342/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion343/`.
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
