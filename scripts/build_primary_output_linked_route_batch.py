@@ -11,6 +11,17 @@ from pathlib import Path
 
 FAMILIES = (
     {
+        "name": "IL1B",
+        "lr_edge_id": "M21B-E001766",
+        "relays": (("MYD88", "M21B-E000023"),),
+        "tf": "NF-kB",
+        "targets": (
+            ("M21B-E008705", "ICAM1", "M21B-E008200", "NF-kappaB RelA/c-Rel-containing complex"),
+            ("M21B-E008714", "IL6", "M21B-E008187", "NF-IL6/NFKB p65 complex"),
+            ("M21B-E008733", "CXCL1", "M21B-E008191", "NFKB p65/p50 complex"),
+        ),
+    },
+    {
         "name": "IL4",
         "lr_edge_id": "M21B-E001754",
         "relays": (("JAK1", "M21B-E001782"), ("JAK3", "M21B-E001783")),

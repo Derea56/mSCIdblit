@@ -1,13 +1,13 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.238.md`](RELEASE_v1.9.238.md). Earlier snapshots, including
+[`RELEASE_v1.9.239.md`](RELEASE_v1.9.239.md). Earlier snapshots, including
 v1.9.149 and the v1.8.x series, are retained as implementation and historical
 baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-23-all-ligand-output-linked-361`
+Current release identifier: `module20_24_mechanism_graph:2026-09-23-all-ligand-output-linked-362`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion361/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion362/`.
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
@@ -15,21 +15,23 @@ The current bundle has 11,988 nodes, 14,801 traversable edges, 17,242 linked
 source rows, 17,406 node-role assignments, 10,960 pathway summaries, and 96
 boundary groups. The full-chain audit reports 141 evidence-backed edge-chain
 instances and 95 unique four-node topologies. The route-evidence layer retains
-334,214 records across entry, output, intracellular, TF, and combined route
+334,217 records across entry, output, intracellular, TF, and combined route
 categories; it remains evidence-only so mSCS can evaluate plausibility and
 confidence using cell context. This release retains the 313,750
 graph-supported compositions across 1,413 exact ligand–receptor edges and
-retains 546 literature-expansion route annotations across the existing ligand labels,
+retains 549 literature-expansion route annotations across the existing ligand labels,
 including the IL1B TF-family-supported routes, expanded cytokine/JAK/STAT and
 Notch/BMP/RTK routes, receptor aliases, and composite intracellular relays.
-The IL1B pilot covers
+IL1B coverage now includes explicit primary-supported NF-kappaB-family target
+links for ICAM1/CD54, IL6, and CXCL1 in addition to the existing bounded route
+annotations. The IL1B pilot covers
 the IL1R1/IL1RAP → MYD88 → IRAK4 → IRAK1 → TRAF6 → TAK1 → NF-kappaB branch
 with ICAM1, IL6, CCL20, and CXCL1 transcriptional outputs. Exact intracellular
 to TF relay edges remain explicitly unasserted; direct TF-to-target edges are
 retained where present. These rows do not create graph edges, causal assertions,
 or database confidence scores. The
 normalized route companion tables now expose ordered route nodes and route
-edges for all 334,214 routes, including explicit missing-link rows and
+edges for all 334,217 routes, including explicit missing-link rows and
 separate output-observation edges. They allow shared intermediates such as
 MYD88 to be indexed across ligands and outputs for downstream perturbation
 analysis in mSCS. The normalized tables are compressed TSV artifacts; Parquet
