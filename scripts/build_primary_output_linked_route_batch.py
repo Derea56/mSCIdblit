@@ -132,6 +132,84 @@ FAMILIES = (
             ("M21B-E008872", "CCL2", "M21B-E008441"),
         ),
     },
+    {
+        "name": "IL2",
+        "lr_edge_id": "M21B-E000236",
+        "relays": (("JAK1/JAK3", "M21B-E000237"),),
+        "tf": "STAT5",
+        "targets": (
+            ("M21B-E008941", "IL9", "M21B-E008484", "STAT5"),
+            ("M21B-E008942", "IRF4", "M21B-E008341", "STAT3"),
+            ("M21B-E008987", "CISH", "M21B-E008251", "STAT5"),
+            ("M21B-E008988", "MYC", "M21B-E008480", "STAT5"),
+            ("M21B-E008988", "MYC", "M21B-E008280", "STAT3"),
+            ("M21B-E008989", "BCL2", "M21B-E008257", "STAT5"),
+            ("M21B-E008989", "BCL2", "M21B-E008285", "STAT3"),
+            ("M21B-E008990", "BCL2L1", "M21B-E008253", "STAT5"),
+        ),
+    },
+    {
+        "name": "GM-CSF/CSF2",
+        "lr_edge_id": "M21B-E000177",
+        "relays": (("JAK2", "M21B-E001776"),),
+        "tf": "STAT5",
+        "targets": (
+            ("M21B-E008945", "CISH", "M21B-E008251", "STAT5"),
+            ("M21B-E008946", "IRF4", "M21B-E008341", "STAT3"),
+            ("M21B-E008947", "CCL17", "M21B-E008389", "STAT6"),
+            ("M21B-E008994", "BCL2L1", "M21B-E008253", "STAT5"),
+        ),
+    },
+    {
+        "name": "IL3",
+        "lr_edge_id": "M21B-E000326",
+        "relays": (("JAK2", "M21B-E001778"),),
+        "tf": "STAT5",
+        "targets": (
+            ("M21B-E008938", "BCL2L1", "M21B-E008253"),
+            ("M21B-E008992", "CISH", "M21B-E008251"),
+        ),
+    },
+    {
+        "name": "IL5",
+        "lr_edge_id": "M21B-E000327",
+        "relays": (("JAK2", "M21B-E001780"),),
+        "tf": "STAT5",
+        "targets": (
+            ("M21B-E008936", "CISH", "M21B-E008251"),
+            ("M21B-E008991", "BCL2", "M21B-E008257"),
+        ),
+    },
+    {
+        "name": "OSM",
+        "lr_edge_id": "M21B-E008848",
+        "relays": (("JAK1", "M21B-E000003"), ("JAK2", "M21B-E000004"), ("TYK2", "M21B-E000005")),
+        "tf": "STAT3",
+        "targets": (
+            ("M21B-E008702", "SOCS3", "M21B-E008279"),
+            ("M21B-E008711", "PTGS2", "M21B-E008328"),
+        ),
+    },
+    {
+        "name": "IL12B/IL23A",
+        "lr_edge_id": "M21B-E001768",
+        "relays": (("JAK2", "M21B-E001769"), ("TYK2", "M21B-E001770")),
+        "tf": "STAT3",
+        "targets": (
+            ("M21B-E009015", "CSF2", "M21B-E008442", "STAT5"),
+            ("M21B-E009016", "IL23R", "M21B-E008336", "STAT3"),
+        ),
+    },
+    {
+        "name": "LIF",
+        "lr_edge_id": "M21B-E001732",
+        "relays": (("JAK1", "M21B-E000001"),),
+        "tf": "STAT3",
+        "targets": (
+            ("M21B-E008967", "SOCS3", "M21B-E008279"),
+            ("M21B-E008968", "POMC", "M21B-E008321"),
+        ),
+    },
 )
 
 
