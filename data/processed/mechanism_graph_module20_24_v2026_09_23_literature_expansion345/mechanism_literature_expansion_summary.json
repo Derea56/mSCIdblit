@@ -1,0 +1,20 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 385,
+  "literature_expansion_rows_added": 2,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion345",
+  "primary_locators": [
+    "PMID:8390097; PMID:8385113; PMID:7500350; PMID:11882386; PMID:7898939"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-23-cntf-jak-stat3-345",
+  "route_edges": 1275291,
+  "route_evidence_rows_after": 334053,
+  "route_evidence_rows_before": 334051,
+  "route_nodes": 1292317,
+  "route_tier_counts": {
+    "ligand_receptor_intracellular_tf_target_missing_direct_tf_edges": 2
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion344"
+}
