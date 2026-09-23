@@ -85,6 +85,13 @@ def main() -> int:
         ))
         for row in existing
     }
+    existing_relay_numbers = [
+        int(row["expansion_id"].rsplit("-", 1)[1])
+        for row in existing
+        if row.get("expansion_id", "").startswith("M21B-LITEXP-RELAY-")
+        and row["expansion_id"].rsplit("-", 1)[-1].isdigit()
+    ]
+    relay_start = max(existing_relay_numbers, default=0) + 1
     stable_by_edge: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in edge_sources:
         if row.get("source_locator_status") in {"stable", "stable_plus_local"} and row.get("source_locator"):
@@ -164,7 +171,7 @@ def main() -> int:
             "This is a composed evidence route, not a claim that one source demonstrated every handoff.",
         )
         rows.append({
-            "expansion_id": f"M21B-LITEXP-RELAY-{index:04d}",
+            "expansion_id": f"M21B-LITEXP-RELAY-{relay_start + index - 1:04d}",
             "source_queue_id": route["source_queue_id"],
             "route_status": "retained_evidence_route",
             "path_expression": "ligand>receptor>intracellular>TF>target_gene_expression" if has_target else "ligand>receptor>intracellular>TF>output",

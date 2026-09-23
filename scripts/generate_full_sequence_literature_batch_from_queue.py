@@ -91,6 +91,13 @@ def main() -> int:
         ))
         for row in existing_expansions
     }
+    existing_full_sequence_numbers = [
+        int(row["expansion_id"].rsplit("-", 1)[1])
+        for row in existing_expansions
+        if row.get("expansion_id", "").startswith("M21B-LITEXP-FULLSEQ-")
+        and row["expansion_id"].rsplit("-", 1)[-1].isdigit()
+    ]
+    full_sequence_start = max(existing_full_sequence_numbers, default=0) + 1
 
     candidates: list[tuple[dict[str, str], dict[str, str], dict[str, str]]] = []
     skipped = {"missing_layer": 0, "missing_locator": 0, "missing_route_source": 0, "already_present": 0}
@@ -211,7 +218,7 @@ def main() -> int:
             "The route remains non-causal and non-traversable; mSCS must evaluate layer linkage and cell context.",
         )
         rows.append({
-            "expansion_id": f"M21B-LITEXP-FULLSEQ-{index:04d}",
+            "expansion_id": f"M21B-LITEXP-FULLSEQ-{full_sequence_start + index - 1:04d}",
             "source_queue_id": source_route["source_queue_id"],
             "route_status": "retained_evidence_route",
             "path_expression": path_expression,
