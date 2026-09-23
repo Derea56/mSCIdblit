@@ -567,15 +567,18 @@ def main() -> int:
         raise FileExistsError(f"Output bundle already exists: {output}")
     shutil.copytree(source, output)
     route_path = output / ROUTE_FILE
+    if not route_path.exists():
+        route_path = route_path.with_suffix(route_path.suffix + ".gz")
     rows = read_tsv(route_path)
     additions, summary = compose_graph_routes(rows, output)
     fields = list(rows[0])
     all_rows = rows + additions
-    write_tsv(route_path, fields, all_rows)
-    compressed_route_path = route_path.with_suffix(route_path.suffix + ".gz")
-    with route_path.open("rb") as source, gzip.open(compressed_route_path, "wb") as target:
+    uncompressed_route_path = output / ROUTE_FILE
+    write_tsv(uncompressed_route_path, fields, all_rows)
+    compressed_route_path = uncompressed_route_path.with_suffix(uncompressed_route_path.suffix + ".gz")
+    with uncompressed_route_path.open("rb") as source, gzip.open(compressed_route_path, "wb") as target:
         target.writelines(source)
-    route_path.unlink()
+    uncompressed_route_path.unlink()
     normalized_counts = write_normalized_route_artifacts(
         output,
         all_rows,
