@@ -27,6 +27,11 @@ except ImportError:  # pragma: no cover - direct script execution
         contract_fields,
     )
 
+try:
+    from .route_artifacts import ROUTE_EDGE_FIELDS, ROUTE_NODE_FIELDS
+except ImportError:  # pragma: no cover - direct script execution
+    from route_artifacts import ROUTE_EDGE_FIELDS, ROUTE_NODE_FIELDS
+
 
 ALLOWED_NODE_ROLES = {
     "ligand",
@@ -230,6 +235,17 @@ def validate(bundle_dir: Path) -> dict[str, object]:
     downstream_evidence: list[dict[str, str]] = []
     if downstream_evidence_path.exists():
         downstream_evidence_fields, downstream_evidence = read_tsv(downstream_evidence_path)
+    route_nodes_path = bundle_dir / "mechanism_route_nodes.tsv.gz"
+    route_edges_path = bundle_dir / "mechanism_route_edges.tsv.gz"
+    route_nodes_fields: list[str] = []
+    route_nodes: list[dict[str, str]] = []
+    route_edges_fields: list[str] = []
+    route_edges: list[dict[str, str]] = []
+    if route_nodes_path.exists() != route_edges_path.exists():
+        errors.append("normalized route node and edge files must be present together")
+    if route_nodes_path.exists() and route_edges_path.exists():
+        route_nodes_fields, route_nodes = read_tsv(route_nodes_path)
+        route_edges_fields, route_edges = read_tsv(route_edges_path)
     metadata = json.loads((bundle_dir / "bundle_metadata.json").read_text())
 
     expected_fields = {
@@ -337,6 +353,10 @@ def validate(bundle_dir: Path) -> dict[str, object]:
             "downstream_evidence_records header mismatch: "
             f"expected {DOWNSTREAM_EVIDENCE_RECORD_FIELDS}, got {downstream_evidence_fields}"
         )
+    if route_nodes_path.exists() and route_nodes_fields != ROUTE_NODE_FIELDS:
+        errors.append(f"route node header mismatch: expected {ROUTE_NODE_FIELDS}, got {route_nodes_fields}")
+    if route_edges_path.exists() and route_edges_fields != ROUTE_EDGE_FIELDS:
+        errors.append(f"route edge header mismatch: expected {ROUTE_EDGE_FIELDS}, got {route_edges_fields}")
     validate_evidence_contract_rows(route_evidence, "signaling_route_evidence", errors)
     validate_evidence_contract_rows(downstream_queue, "downstream_curation_queue", errors)
     validate_evidence_contract_rows(downstream_evidence, "downstream_evidence_records", errors)
@@ -850,6 +870,26 @@ def validate(bundle_dir: Path) -> dict[str, object]:
         actual_counts["downstream_curation_queue"] = len(downstream_queue)
     if downstream_evidence_path.exists():
         actual_counts["downstream_evidence_records"] = len(downstream_evidence)
+    if route_nodes_path.exists():
+        actual_counts["route_nodes"] = len(route_nodes)
+        actual_counts["route_edges"] = len(route_edges)
+        route_id_set = set(route_ids) if route_evidence_path.exists() else set()
+        missing_route_node_links = sorted({row["route_evidence_id"] for row in route_nodes} - route_id_set)
+        missing_route_edge_links = sorted({row["route_evidence_id"] for row in route_edges} - route_id_set)
+        if missing_route_node_links:
+            errors.append(f"normalized route nodes reference missing routes: {missing_route_node_links[:5]}")
+        if missing_route_edge_links:
+            errors.append(f"normalized route edges reference missing routes: {missing_route_edge_links[:5]}")
+        missing_normalized_nodes = sorted({
+            row["node_id"] for row in route_nodes if row["node_id"] and row["node_id"] not in node_id_set
+        })
+        if missing_normalized_nodes:
+            errors.append(f"normalized route nodes reference missing graph nodes: {missing_normalized_nodes[:5]}")
+        missing_normalized_edges = sorted({
+            row["edge_id"] for row in route_edges if row["edge_id"] and row["edge_id"] not in edge_id_set
+        })
+        if missing_normalized_edges:
+            errors.append(f"normalized route edges reference missing graph edges: {missing_normalized_edges[:5]}")
     for key, actual in actual_counts.items():
         if metadata_counts.get(key) != actual:
             errors.append(f"metadata count mismatch for {key}: metadata={metadata_counts.get(key)} actual={actual}")
