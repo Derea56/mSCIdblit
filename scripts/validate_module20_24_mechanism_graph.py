@@ -90,6 +90,18 @@ DOWNSTREAM_EVIDENCE_RECORD_FIELDS = [
     "source_locator", "source_evidence_ids", "citation_note", "evidence_summary",
     "limitations", "missing_layers", "causal_status", "traversal_status",
 ] + list(contract_fields())
+FULL_SEQUENCE_CURATION_QUEUE_FIELDS = [
+    "curation_candidate_id", "review_priority", "ligand_node_id", "ligand_label",
+    "receptor_node_id", "receptor_label", "intracellular_continuation_node_id",
+    "intracellular_continuation_label", "transcription_factor_node_id",
+    "transcription_factor_label", "target_gene_node_id", "target_gene_label",
+    "target_gene_node_ids", "target_gene_labels", "output_node_id", "output_label",
+    "output_node_ids", "output_labels", "known_layers", "missing_layers",
+    "route_tiers", "path_expressions", "route_count", "route_evidence_ids",
+    "source_chain_ids", "ligand_receptor_edge_ids", "receptor_intracellular_edge_ids",
+    "intracellular_tf_edge_ids", "tf_target_edge_ids", "pathway_names",
+    "route_linkage_statuses", "evidence_ids", "stable_primary_locators", "source_scopes",
+]
 ALLOWED_ROUTE_TIERS = {
     "ligand_receptor_entry_only",
     "ligand_receptor_tf_target_missing_intracellular",
@@ -235,6 +247,11 @@ def validate(bundle_dir: Path) -> dict[str, object]:
     downstream_evidence: list[dict[str, str]] = []
     if downstream_evidence_path.exists():
         downstream_evidence_fields, downstream_evidence = read_tsv(downstream_evidence_path)
+    full_sequence_queue_path = bundle_dir / "mechanism_full_sequence_curation_queue.tsv.gz"
+    full_sequence_queue_fields: list[str] = []
+    full_sequence_queue: list[dict[str, str]] = []
+    if full_sequence_queue_path.exists():
+        full_sequence_queue_fields, full_sequence_queue = read_tsv(full_sequence_queue_path)
     route_nodes_path = bundle_dir / "mechanism_route_nodes.tsv.gz"
     route_edges_path = bundle_dir / "mechanism_route_edges.tsv.gz"
     route_nodes_fields: list[str] = []
@@ -313,6 +330,7 @@ def validate(bundle_dir: Path) -> dict[str, object]:
         "signaling_route_evidence": ROUTE_EVIDENCE_FIELDS,
         "downstream_curation_queue": DOWNSTREAM_CURATION_FIELDS,
         "downstream_evidence_records": DOWNSTREAM_EVIDENCE_RECORD_FIELDS,
+        "full_sequence_curation_queue": FULL_SEQUENCE_CURATION_QUEUE_FIELDS,
     }
     for label, actual, expected in (
         ("nodes", node_fields, expected_fields["nodes"]),
@@ -352,6 +370,11 @@ def validate(bundle_dir: Path) -> dict[str, object]:
         errors.append(
             "downstream_evidence_records header mismatch: "
             f"expected {DOWNSTREAM_EVIDENCE_RECORD_FIELDS}, got {downstream_evidence_fields}"
+        )
+    if full_sequence_queue_path.exists() and full_sequence_queue_fields != FULL_SEQUENCE_CURATION_QUEUE_FIELDS:
+        errors.append(
+            "full_sequence_curation_queue header mismatch: "
+            f"expected {FULL_SEQUENCE_CURATION_QUEUE_FIELDS}, got {full_sequence_queue_fields}"
         )
     if route_nodes_path.exists() and route_nodes_fields != ROUTE_NODE_FIELDS:
         errors.append(f"route node header mismatch: expected {ROUTE_NODE_FIELDS}, got {route_nodes_fields}")
@@ -565,6 +588,20 @@ def validate(bundle_dir: Path) -> dict[str, object]:
         missing_record_nodes = sorted({row["evidence_node_id"] for row in downstream_evidence if row["evidence_node_id"] and row["evidence_node_id"] not in node_id_set})
         if missing_record_nodes:
             errors.append(f"downstream evidence records reference missing nodes: {missing_record_nodes[:5]}")
+
+    if full_sequence_queue_path.exists():
+        candidate_ids = [row["curation_candidate_id"] for row in full_sequence_queue]
+        if duplicates(candidate_ids):
+            errors.append(f"duplicate full-sequence curation candidate IDs: {duplicates(candidate_ids)[:5]}")
+        invalid_priorities = sorted({row["review_priority"] for row in full_sequence_queue} - {"P1", "P2", "P3"})
+        if invalid_priorities:
+            errors.append(f"invalid full-sequence curation priorities: {invalid_priorities[:5]}")
+        invalid_counts = [row["curation_candidate_id"] for row in full_sequence_queue if not row["route_count"].isdigit() or int(row["route_count"]) < 1]
+        if invalid_counts:
+            errors.append(f"full-sequence curation rows must retain a positive route_count: {invalid_counts[:5]}")
+        missing_queue_ids = [row["curation_candidate_id"] for row in full_sequence_queue if not row["ligand_node_id"] or not row["receptor_node_id"]]
+        if missing_queue_ids:
+            errors.append(f"full-sequence curation rows must retain ligand and receptor IDs: {missing_queue_ids[:5]}")
 
     if entity_forms_path.exists() and entity_transitions_path.exists():
         form_ids = [row["entity_form_id"] for row in entity_forms]
@@ -870,6 +907,8 @@ def validate(bundle_dir: Path) -> dict[str, object]:
         actual_counts["downstream_curation_queue"] = len(downstream_queue)
     if downstream_evidence_path.exists():
         actual_counts["downstream_evidence_records"] = len(downstream_evidence)
+    if full_sequence_queue_path.exists():
+        actual_counts["full_sequence_curation_queue"] = len(full_sequence_queue)
     if route_nodes_path.exists():
         actual_counts["route_nodes"] = len(route_nodes)
         actual_counts["route_edges"] = len(route_edges)
