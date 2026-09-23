@@ -22,6 +22,35 @@ FAMILIES = (
         ),
     },
     {
+        "name": "CSF3/G-CSF",
+        "lr_edge_id": "M21B-E007119",
+        "relays": (("SHC1", "M21B-E004659"), ("GRB2", "M21B-E004660")),
+        "tf": "STAT3",
+        "targets": (
+            ("M21B-E008973", "SOCS3", "M21B-E008279"),
+        ),
+    },
+    {
+        "name": "TNF/TNFR1",
+        "lr_edge_id": "M21B-E000110",
+        "relays": (("TRADD", "M21B-E000017"),),
+        "tf": "NF-kB",
+        "targets": (
+            ("M21B-E008704", "ICAM1", "M21B-E008200", "NF-kappaB RelA/c-Rel-containing complex"),
+            ("M21B-E008713", "IL6", "M21B-E008187", "NF-IL6/NFKB p65 complex"),
+        ),
+    },
+    {
+        "name": "TNF/TNFR2",
+        "lr_edge_id": "M21B-E000111",
+        "relays": (("IKK-NFKB1-RELA", "M21B-E000066"),),
+        "tf": "NF-kB",
+        "targets": (
+            ("M21B-E008704", "ICAM1", "M21B-E008200", "NF-kappaB RelA/c-Rel-containing complex"),
+            ("M21B-E008713", "IL6", "M21B-E008187", "NF-IL6/NFKB p65 complex"),
+        ),
+    },
+    {
         "name": "IL4",
         "lr_edge_id": "M21B-E001754",
         "relays": (("JAK1", "M21B-E001782"), ("JAK3", "M21B-E001783")),
