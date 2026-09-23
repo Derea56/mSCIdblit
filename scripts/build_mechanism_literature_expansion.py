@@ -189,8 +189,16 @@ def main() -> int:
         read_tsv(output_bundle / "mechanism_edges.tsv"),
         read_tsv(output_bundle / "mechanism_edge_sources.tsv"),
     )
+    expansion_path = output_bundle / "mechanism_literature_expansion.tsv"
+    existing_expansions = read_tsv(expansion_path) if expansion_path.exists() else []
     expansion_fields = list(rows[0].keys()) + ["route_evidence_id"]
-    write_tsv(output_bundle / "mechanism_literature_expansion.tsv", expansion_fields, expansion_rows)
+    if existing_expansions:
+        expansion_fields = list(existing_expansions[0].keys())
+        for field in expansion_rows[0]:
+            if field not in expansion_fields:
+                expansion_fields.append(field)
+    cumulative_expansions = existing_expansions + expansion_rows
+    write_tsv(expansion_path, expansion_fields, cumulative_expansions)
 
     audit_path = output_bundle / "full_signaling_chain_audit.json"
     if audit_path.exists():
@@ -201,7 +209,8 @@ def main() -> int:
         for row in expansion_rows:
             tiers[row["route_tier"]] = tiers.get(row["route_tier"], 0) + 1
         audit_summary["literature_expansion_counts"] = {
-            "literature_expansion_rows": len(expansion_rows),
+            "literature_expansion_rows": len(cumulative_expansions),
+            "literature_expansion_rows_added": len(expansion_rows),
             "route_evidence_rows_added": len(route_rows),
         }
         audit_path.write_text(json.dumps(audit_summary, indent=2) + "\n", encoding="utf-8")
@@ -211,7 +220,7 @@ def main() -> int:
     metadata["release_id"] = release_id
     metadata.setdefault("files", {})["literature_expansion"] = "mechanism_literature_expansion.tsv"
     metadata.setdefault("files", {})["signaling_route_evidence"] = "mechanism_signaling_route_evidence.tsv.gz"
-    metadata.setdefault("counts", {})["literature_expansion"] = len(expansion_rows)
+    metadata.setdefault("counts", {})["literature_expansion"] = len(cumulative_expansions)
     metadata.setdefault("counts", {})["signaling_route_evidence"] = len(existing_routes) + len(route_rows)
     metadata.setdefault("graph_policy", {})["literature_expansion_is_evidence_layer_only"] = True
     statement = (
@@ -226,7 +235,8 @@ def main() -> int:
         "source_bundle": str(source_bundle),
         "output_bundle": str(output_bundle),
         "release_id": metadata["release_id"],
-        "literature_expansion_rows": len(expansion_rows),
+        "literature_expansion_rows": len(cumulative_expansions),
+        "literature_expansion_rows_added": len(expansion_rows),
         "route_evidence_rows_before": len(existing_routes),
         "route_evidence_rows_after": len(existing_routes) + len(route_rows),
         **normalized_counts,
