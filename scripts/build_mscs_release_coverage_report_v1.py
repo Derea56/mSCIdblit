@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import hashlib
 import json
 from collections import Counter, defaultdict
@@ -17,7 +18,11 @@ DEFAULT_LEDGER = ROOT / "data/processed/public_database_comparison_v2/candidate_
 
 
 def read_tsv(path: Path) -> list[dict[str, str]]:
-    with path.open(newline="", encoding="utf-8", errors="replace") as handle:
+    if path.suffix == ".gz":
+        handle = gzip.open(path, "rt", newline="", encoding="utf-8", errors="replace")
+    else:
+        handle = path.open(newline="", encoding="utf-8", errors="replace")
+    with handle:
         return list(csv.DictReader(handle, delimiter="\t"))
 
 
@@ -27,6 +32,11 @@ def sha256(path: Path) -> str:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def route_path(bundle: Path) -> Path:
+    path = bundle / "mechanism_signaling_route_evidence.tsv"
+    return path if path.exists() else path.with_suffix(path.suffix + ".gz")
 
 
 def write_tsv(path: Path, fields: list[str], rows: list[dict[str, object]]) -> None:
@@ -127,7 +137,8 @@ def main() -> int:
     bundle = args.bundle_dir.resolve()
     ledger = args.ledger.resolve()
     metadata = json.loads((bundle / "bundle_metadata.json").read_text(encoding="utf-8"))
-    routes = read_tsv(bundle / "mechanism_signaling_route_evidence.tsv")
+    route_file = route_path(bundle)
+    routes = read_tsv(route_file)
     ledger_rows = read_tsv(ledger)
     edges = read_tsv(bundle / "mechanism_edges.tsv")
     sources = read_tsv(bundle / "mechanism_edge_sources.tsv")
@@ -189,7 +200,7 @@ def main() -> int:
         "integrity_inputs": {
             "edge_count_observed": len(edges),
             "edge_source_count_observed": len(sources),
-            "route_evidence_sha256": sha256(bundle / "mechanism_signaling_route_evidence.tsv"),
+            "route_evidence_sha256": sha256(route_file),
         },
     }
     (bundle / "release_coverage_report.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8")

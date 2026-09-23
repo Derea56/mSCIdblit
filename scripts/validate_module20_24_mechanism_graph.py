@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import json
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -127,7 +128,8 @@ def parse_args() -> argparse.Namespace:
 
 
 def read_tsv(path: Path) -> tuple[list[str], list[dict[str, str]]]:
-    with path.open(newline="") as handle:
+    opener = gzip.open if path.suffix == ".gz" else open
+    with opener(path, "rt", newline="") if path.suffix == ".gz" else opener(path, newline="") as handle:
         reader = csv.DictReader(handle, delimiter="\t")
         rows = list(reader)
         return reader.fieldnames or [], rows
@@ -211,6 +213,8 @@ def validate(bundle_dir: Path) -> dict[str, object]:
     if possible_path.exists():
         possible_fields, possible_paths = read_tsv(possible_path)
     route_evidence_path = bundle_dir / "mechanism_signaling_route_evidence.tsv"
+    if not route_evidence_path.exists():
+        route_evidence_path = route_evidence_path.with_suffix(route_evidence_path.suffix + ".gz")
     route_evidence_fields: list[str] = []
     route_evidence: list[dict[str, str]] = []
     if route_evidence_path.exists():
