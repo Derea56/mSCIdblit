@@ -1,0 +1,18 @@
+{
+  "composition_counts": {
+    "lr_output": 4299,
+    "lr_receptor_relay_output": 807,
+    "lr_receptor_relay_tf_output": 415,
+    "lr_receptor_relay_tf_output_without_direct_tf_edge": 308057,
+    "lr_receptor_tf_output": 172
+  },
+  "distinct_ligand_receptor_edges_linked": 1413,
+  "graph_supported_route_rows_added": 313750,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion325",
+  "policy": "Exact exported LR edge plus graph components with a shared pathway/evidence anchor; no Cartesian product, causal edge, or confidence assertion.",
+  "release_id": "module20_24_mechanism_graph:2026-09-22-graph-supported-route-expansion-325",
+  "rows_with_asserted_intracellular_to_tf_edge": 6,
+  "rows_with_unasserted_intracellular_to_tf_link": 309273,
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion324",
+  "source_route_rows": 19928
+}
