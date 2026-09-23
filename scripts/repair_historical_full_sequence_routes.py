@@ -21,6 +21,13 @@ from pathlib import Path
 
 FULL_PATH = "ligand>receptor>intracellular>TF>target_gene_expression"
 
+RECEPTOR_SOURCE_ALIASES = {
+    frozenset({"mpl", "mpltporeceptor"}),
+    frozenset({"tlr2", "tlr2tirdomain"}),
+    frozenset({"tlr4", "tlr4tirdomain"}),
+    frozenset({"epor", "eporeporeceptor"}),
+}
+
 
 def read_tsv(path: Path) -> list[dict[str, str]]:
     opener = gzip.open if path.suffix == ".gz" else open
@@ -60,6 +67,13 @@ def intermediate_label_match(edge_label: str, historical_label: str) -> bool:
     if label_match(edge_label, historical_label):
         return True
     return any(label_match(edge_label, part) for part in label_parts(historical_label))
+
+
+def receptor_source_match(edge_label: str, historical_label: str) -> bool:
+    if label_match(edge_label, historical_label):
+        return True
+    pair = frozenset({normalize(edge_label), normalize(historical_label)})
+    return pair in RECEPTOR_SOURCE_ALIASES
 
 
 def join_unique(values: list[str]) -> str:
@@ -115,7 +129,7 @@ def resolve_receptor_edges(
     intermediate_label = row.get("intracellular_continuation_label", "")
     parts = label_parts(intermediate_label)
     if historical_edge and intermediate_label_match(historical_edge["target_label"], intermediate_label) and len(parts) <= 1:
-        if historical_edge["source_node_id"] == receptor_node_id or label_match(historical_edge["source_label"], receptor_label):
+        if historical_edge["source_node_id"] == receptor_node_id or receptor_source_match(historical_edge["source_label"], receptor_label):
             return [historical_edge], "historical_edge_id"
 
     exact_candidates = [
@@ -126,7 +140,13 @@ def resolve_receptor_edges(
     ]
     if exact_candidates:
         return exact_candidates, "current_receptor_match"
-    return [], f"ambiguous_or_missing:0"
+    alias_candidates = [
+        edge
+        for edge in edges.values()
+        if receptor_source_match(edge["source_label"], receptor_label)
+        and intermediate_label_match(edge["target_label"], intermediate_label)
+    ]
+    return alias_candidates, "receptor_source_alias" if alias_candidates else "ambiguous_or_missing:0"
 
 
 def historical_rows(root: Path) -> list[dict[str, str]]:
@@ -208,6 +228,13 @@ def reconcile(root: Path, bundle: Path) -> tuple[list[dict[str, str]], dict[str,
             if len(receptor_edges) > 1:
                 branch_id = f"{expansion_id}-via-{normalize(intermediate_label)}"
                 linkage_parts.append(f"composite_intermediate_split:{row.get('intracellular_continuation_label', '')}")
+            if receptor_edge["source_node_id"] != receptor_node_id or not label_match(receptor_edge["source_label"], lr_edge["target_label"]):
+                linkage_parts.append(f"receptor_identity_alias:{receptor_edge['source_label']}")
+            if len(label_parts(row.get("intracellular_continuation_label", ""))) > 1 and not label_match(
+                intermediate_label,
+                row.get("intracellular_continuation_label", ""),
+            ):
+                linkage_parts.append(f"composite_relay_reconciled:{row.get('intracellular_continuation_label', '')}")
             if not intracellular_tf_edge:
                 linkage_parts.append("intracellular_to_tf_edge_not_asserted")
             linkage_parts.append("evidence_route_only")
