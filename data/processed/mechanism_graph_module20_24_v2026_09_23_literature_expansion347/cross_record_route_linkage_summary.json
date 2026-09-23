@@ -1,0 +1,10 @@
+{
+  "cross_record_route_rows_added": 215,
+  "distinct_ligand_receptor_edges_linked": 66,
+  "linkage_policy": "Exact exported ligand-receptor edge plus separately curated receptor-proximal intracellular evidence and TF/output evidence with a shared evidence identifier; no intracellular-to-TF edge or causal relationship is asserted.",
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion324",
+  "release_id": "module20_24_mechanism_graph:2026-09-22-cross-record-route-linkage-324",
+  "route_tier": "ligand_receptor_intracellular_tf_output_missing_target_gene",
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion320",
+  "source_route_rows": 19713
+}
