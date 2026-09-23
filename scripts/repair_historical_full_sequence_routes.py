@@ -50,6 +50,18 @@ def label_match(left: str, right: str) -> bool:
     return bool(left_relaxed and right_relaxed and (left_relaxed in right_relaxed or right_relaxed in left_relaxed) and min(len(left_relaxed), len(right_relaxed)) >= 5)
 
 
+def label_parts(value: str) -> list[str]:
+    """Return the independently named components of a composite label."""
+
+    return [part.strip() for part in re.split(r"[/;,]", value) if part.strip()]
+
+
+def intermediate_label_match(edge_label: str, historical_label: str) -> bool:
+    if label_match(edge_label, historical_label):
+        return True
+    return any(label_match(edge_label, part) for part in label_parts(historical_label))
+
+
 def join_unique(values: list[str]) -> str:
     seen: set[str] = set()
     result: list[str] = []
@@ -80,6 +92,41 @@ def resolve_edge(
     if len(candidates) == 1:
         return candidates[0], "current_label_match"
     return None, f"ambiguous_or_missing:{len(candidates)}"
+
+
+def resolve_receptor_edges(
+    row: dict[str, str],
+    edges: dict[str, dict[str, str]],
+    receptor_node_id: str,
+    receptor_label: str,
+) -> tuple[list[dict[str, str]], str]:
+    """Resolve receptor-proximal edges, including explicit composite intermediates.
+
+    Historical rows sometimes report a receptor-associated pair such as
+    ``JAK1/JAK3`` while the current graph stores one edge per kinase.  When
+    the current receptor node is exact, each matching component is retained as
+    its own evidence route.  A label-based fallback is limited to a historical
+    edge ID whose current source label still matches, preserving known receptor
+    aliases without guessing a new receptor identity.
+    """
+
+    historical_edge_id = row.get("receptor_intracellular_edge_id", "")
+    historical_edge = edges.get(historical_edge_id)
+    intermediate_label = row.get("intracellular_continuation_label", "")
+    parts = label_parts(intermediate_label)
+    if historical_edge and intermediate_label_match(historical_edge["target_label"], intermediate_label) and len(parts) <= 1:
+        if historical_edge["source_node_id"] == receptor_node_id or label_match(historical_edge["source_label"], receptor_label):
+            return [historical_edge], "historical_edge_id"
+
+    exact_candidates = [
+        edge
+        for edge in edges.values()
+        if edge["source_node_id"] == receptor_node_id
+        and intermediate_label_match(edge["target_label"], intermediate_label)
+    ]
+    if exact_candidates:
+        return exact_candidates, "current_receptor_match"
+    return [], f"ambiguous_or_missing:0"
 
 
 def historical_rows(root: Path) -> list[dict[str, str]]:
@@ -135,65 +182,78 @@ def reconcile(root: Path, bundle: Path) -> tuple[list[dict[str, str]], dict[str,
         ligand_node_id = lr_edge["source_node_id"]
         tf_node_id = tf_edge["source_node_id"]
         target_node_id = tf_edge["target_node_id"]
-        receptor_edge = edges.get(row.get("receptor_intracellular_edge_id", ""))
-        if not receptor_edge or receptor_edge["source_node_id"] != receptor_node_id or receptor_edge["target_label"] != row.get("intracellular_continuation_label", ""):
-            candidates = [
-                edge for edge in edges.values()
-                if edge["source_node_id"] == receptor_node_id and label_match(edge["target_label"], row.get("intracellular_continuation_label", ""))
-            ]
-            receptor_edge = candidates[0] if len(candidates) == 1 else None
+        receptor_edges, receptor_resolution = resolve_receptor_edges(
+            row,
+            edges,
+            receptor_node_id,
+            lr_edge["target_label"],
+        )
 
-        if not receptor_edge:
+        if not receptor_edges:
             skipped.append({"expansion_id": expansion_id, "reason": "missing_or_ambiguous_receptor_intracellular_edge"})
             continue
 
-        intermediate_id = receptor_edge["target_node_id"] if receptor_edge else ""
-        intermediate_label = receptor_edge["target_label"] if receptor_edge else ""
-        intracellular_tf_edge = edges.get(row.get("intracellular_tf_edge_id", ""))
-        if not intracellular_tf_edge or intracellular_tf_edge["source_node_id"] != intermediate_id or intracellular_tf_edge["target_node_id"] != tf_node_id:
-            intracellular_tf_edge = None
+        for branch_index, receptor_edge in enumerate(receptor_edges, start=1):
+            intermediate_id = receptor_edge["target_node_id"]
+            intermediate_label = receptor_edge["target_label"]
+            intracellular_tf_edge = edges.get(row.get("intracellular_tf_edge_id", ""))
+            if not intracellular_tf_edge or intracellular_tf_edge["source_node_id"] != intermediate_id or intracellular_tf_edge["target_node_id"] != tf_node_id:
+                intracellular_tf_edge = None
 
-        row = dict(row)
-        row.update(
-            {
-                "ligand_node_id": ligand_node_id,
-                "ligand_label": lr_edge["source_label"],
-                "ligand_receptor_edge_id": lr_edge["edge_id"],
-                "receptor_node_id": receptor_node_id,
-                "receptor_label": lr_edge["target_label"],
-                "receptor_intracellular_edge_id": receptor_edge["edge_id"] if receptor_edge else "",
-                "intracellular_continuation_node_id": intermediate_id,
-                "intracellular_continuation_label": intermediate_label,
-                "intracellular_tf_edge_id": intracellular_tf_edge["edge_id"] if intracellular_tf_edge else "",
-                "transcription_factor_node_id": tf_node_id,
-                "transcription_factor_label": tf_edge["source_label"],
-                "tf_target_edge_id": tf_edge["edge_id"],
-                "target_gene_node_id": target_node_id,
-                "target_gene_label": tf_edge["target_label"],
-                "output_node_id": target_node_id,
-                "route_tier": "ligand_receptor_intracellular_tf_target_missing_direct_tf_edges",
-                "known_layers": "ligand|receptor|intracellular_continuation|transcription_factor|target_gene_expression",
-                "intracellular_status": "source_supported",
-                "route_linkage_status": "historical_primary_route_reconciled;primary_layer_linked;intracellular_to_tf_edge_not_asserted;evidence_route_only",
-                "causal_status": "not_asserted",
-                "traversal_status": "evidence_route_not_causal",
-                "source_chain_id": expansion_id,
-                "route_status": "retained_evidence_route",
-                "evidence_ids": join_unique(
-                    [
-                        row.get("evidence_ids", ""),
-                        lr_edge["edge_id"],
-                        tf_edge["edge_id"],
-                        receptor_edge["edge_id"] if receptor_edge else "",
-                        intracellular_tf_edge["edge_id"] if intracellular_tf_edge else "",
-                        *[source.get("source_locator", "") for source in sources_by_edge[lr_edge["edge_id"]]],
-                        *[source.get("source_locator", "") for source in sources_by_edge[tf_edge["edge_id"]]],
-                    ]
-                ),
-                "missing_layers": "" if intracellular_tf_edge else "intracellular_to_tf_edge",
-            }
-        )
-        output.append(row)
+            branch_id = expansion_id
+            linkage_parts = [
+                "historical_primary_route_reconciled",
+                "primary_layer_linked",
+            ]
+            if len(receptor_edges) > 1:
+                branch_id = f"{expansion_id}-via-{normalize(intermediate_label)}"
+                linkage_parts.append(f"composite_intermediate_split:{row.get('intracellular_continuation_label', '')}")
+            if not intracellular_tf_edge:
+                linkage_parts.append("intracellular_to_tf_edge_not_asserted")
+            linkage_parts.append("evidence_route_only")
+
+            reconciled = dict(row)
+            reconciled.update(
+                {
+                    "expansion_id": branch_id,
+                    "ligand_node_id": ligand_node_id,
+                    "ligand_label": lr_edge["source_label"],
+                    "ligand_receptor_edge_id": lr_edge["edge_id"],
+                    "receptor_node_id": receptor_node_id,
+                    "receptor_label": lr_edge["target_label"],
+                    "receptor_intracellular_edge_id": receptor_edge["edge_id"],
+                    "intracellular_continuation_node_id": intermediate_id,
+                    "intracellular_continuation_label": intermediate_label,
+                    "intracellular_tf_edge_id": intracellular_tf_edge["edge_id"] if intracellular_tf_edge else "",
+                    "transcription_factor_node_id": tf_node_id,
+                    "transcription_factor_label": tf_edge["source_label"],
+                    "tf_target_edge_id": tf_edge["edge_id"],
+                    "target_gene_node_id": target_node_id,
+                    "target_gene_label": tf_edge["target_label"],
+                    "output_node_id": target_node_id,
+                    "route_tier": "ligand_receptor_intracellular_tf_target_missing_direct_tf_edges",
+                    "known_layers": "ligand|receptor|intracellular_continuation|transcription_factor|target_gene_expression",
+                    "intracellular_status": "source_supported",
+                    "route_linkage_status": ";".join(linkage_parts),
+                    "causal_status": "not_asserted",
+                    "traversal_status": "evidence_route_not_causal",
+                    "source_chain_id": branch_id,
+                    "route_status": "retained_evidence_route",
+                    "evidence_ids": join_unique(
+                        [
+                            row.get("evidence_ids", ""),
+                            lr_edge["edge_id"],
+                            tf_edge["edge_id"],
+                            receptor_edge["edge_id"],
+                            intracellular_tf_edge["edge_id"] if intracellular_tf_edge else "",
+                            *[source.get("source_locator", "") for source in sources_by_edge[lr_edge["edge_id"]]],
+                            *[source.get("source_locator", "") for source in sources_by_edge[tf_edge["edge_id"]]],
+                        ]
+                    ),
+                    "missing_layers": "" if intracellular_tf_edge else "intracellular_to_tf_edge",
+                }
+            )
+            output.append(reconciled)
 
     audit = {
         "historical_unique_full_routes": len(source_rows),
