@@ -210,6 +210,22 @@ FAMILIES = (
             ("M21B-E008968", "POMC", "M21B-E008321"),
         ),
     },
+    {
+        "name": "GH1/growth hormone (GH)",
+        "lr_edge_id": "M21B-E007085",
+        "relays": (("JAK2", "M21B-E001712"),),
+        "tf": "STAT5",
+        "extra_locators": "PMID:10064602; PMCID:PMC1171226; DOI:10.1093/emboj/18.5.1367; PMID:1549776; PMID:20644163; PMID:9129017; PMID:14627821; PMCID:PMC290274; DOI:10.1093/nar/gkg907; PMID:9231797",
+        "targets": (("", "BCL2", "M21B-E008257"),),
+    },
+    {
+        "name": "Prolactin",
+        "lr_edge_id": "M21B-E001428",
+        "relays": (("JAK2", "M21B-E001712"),),
+        "tf": "STAT5",
+        "extra_locators": "PMID:10064602; PMCID:PMC1171226; DOI:10.1093/emboj/18.5.1367; PMID:7925280; PMID:7984244; DOI:10.1038/372478a0; PMID:9129017; PMID:14627821; PMCID:PMC290274; DOI:10.1093/nar/gkg907",
+        "targets": (("", "BCL2", "M21B-E008257"),),
+    },
 )
 
 
@@ -250,22 +266,23 @@ def make_rows(bundle: Path) -> list[dict[str, str]]:
                 output_edge_id, target_label, tf_target_edge_id = target_spec[:3]
                 target_tf_label = target_spec[3] if len(target_spec) == 4 else family["tf"]
                 tf = next(row for row in nodes.values() if row["canonical_label"] == target_tf_label)
-                output_edge = edges[output_edge_id]
                 tf_target_edge = edges[tf_target_edge_id]
-                target = nodes[output_edge["target_node_id"]]
+                output_edge = edges.get(output_edge_id)
+                target = nodes[output_edge["target_node_id"] if output_edge else tf_target_edge["target_node_id"]]
                 locators = unique_join(
                     [
                         *(source.get("source_locator", "") for source in source_by_edge.get(lr_edge["edge_id"], [])),
                         *(source.get("source_locator", "") for source in source_by_edge.get(relay_edge_id, [])),
                         *(source.get("source_locator", "") for source in source_by_edge.get(output_edge_id, [])),
                         *(source.get("source_locator", "") for source in source_by_edge.get(tf_target_edge_id, [])),
+                        family.get("extra_locators", ""),
                     ]
                 )
                 evidence_ids = unique_join(
                     [
                         lr_edge.get("evidence_ids", ""),
                         relay_edge.get("evidence_ids", ""),
-                        output_edge.get("evidence_ids", ""),
+                        output_edge.get("evidence_ids", "") if output_edge else "",
                         tf_target_edge.get("evidence_ids", ""),
                         *(source.get("evidence_id", "") for source in source_by_edge.get(lr_edge["edge_id"], [])),
                         *(source.get("evidence_id", "") for source in source_by_edge.get(relay_edge_id, [])),
@@ -282,7 +299,7 @@ def make_rows(bundle: Path) -> list[dict[str, str]]:
                         "path_expression": "ligand>receptor>intracellular>TF>target_gene_expression",
                         "route_tier": "ligand_receptor_intracellular_tf_target_missing_direct_tf_edges",
                         "known_layers": "ligand|receptor|intracellular_continuation|transcription_factor|target_gene_expression",
-                        "missing_layers": "intracellular_to_tf_edge",
+                        "missing_layers": "intracellular_to_tf_edge" if output_edge else "intracellular_to_tf_edge|ligand_to_output_graph_edge",
                         "intracellular_status": "source_supported",
                         "ligand_node_id": lr_edge["source_node_id"],
                         "ligand_label": lr_edge["source_label"],
@@ -310,7 +327,7 @@ def make_rows(bundle: Path) -> list[dict[str, str]]:
                         "evidence_ids": evidence_ids,
                         "source_chain_id": f"M21B-LITEXP-{family['name']}-{relay_label}-{target_tf_label}-{target_label}-{index:03d}",
                         "source_evidence_record_id": "",
-                        "route_linkage_status": f"manual_primary_{family['name'].lower()}_output_linked_route;graph_linked_route_source;primary_layer_linked;receptor_to_intracellular_edge_asserted_as_graph_edge;intracellular_to_tf_edge_not_asserted;tf_to_target_edge_asserted_as_graph_edge;output_edge_asserted_as_graph_edge;evidence_route_only",
+                        "route_linkage_status": f"manual_primary_{family['name'].lower()}_output_linked_route;graph_linked_route_source;primary_layer_linked;receptor_to_intracellular_edge_asserted_as_graph_edge;intracellular_to_tf_edge_not_asserted;tf_to_target_edge_asserted_as_graph_edge;{'output_edge_asserted_as_graph_edge' if output_edge else 'output_edge_not_asserted_primary_output_evidence_only'};evidence_route_only",
                         "causal_status": "not_asserted",
                         "traversal_status": "evidence_route_not_causal",
                         "evidence_contract_version": "mechanism_evidence_v1",
@@ -319,8 +336,8 @@ def make_rows(bundle: Path) -> list[dict[str, str]]:
                         "evidence_directness": "composite_primary_route",
                         "output_class": "target_gene_expression",
                         "primary_locator": locators,
-                        "citation_note": f"Primary {family['name']} receptor, {relay_label}-associated, {target_tf_label}-target, and target-gene evidence is retained as a linked evidence route; the intracellular-to-TF handoff remains unasserted.",
-                        "evidence_summary": f"Primary evidence supports {family['name']} engagement of the {receptor['canonical_label']} receptor complex, {relay_label}-associated signaling, {target_tf_label} regulation, and {target_label} expression. The direct ligand-output and TF-target graph edges are preserved as linked components without asserting a new causal chain.",
+                        "citation_note": f"Primary {family['name']} receptor, {relay_label}-associated, {target_tf_label}-target, and target-gene evidence is retained as a linked evidence route; the intracellular-to-TF handoff remains unasserted and the ligand-to-output graph edge is not asserted." if not output_edge else f"Primary {family['name']} receptor, {relay_label}-associated, {target_tf_label}-target, and target-gene evidence is retained as a linked evidence route; the intracellular-to-TF handoff remains unasserted.",
+                        "evidence_summary": f"Primary evidence supports {family['name']} engagement of the {receptor['canonical_label']} receptor complex, {relay_label}-associated signaling, {target_tf_label} regulation, and {target_label} expression. The ligand-to-output observation is retained as primary route evidence without asserting a new output graph edge." if not output_edge else f"Primary evidence supports {family['name']} engagement of the {receptor['canonical_label']} receptor complex, {relay_label}-associated signaling, {target_tf_label} regulation, and {target_label} expression. The direct ligand-output and TF-target graph edges are preserved as linked components without asserting a new causal chain.",
                         "limitations": "The receptor, kinase, TF, and target-gene studies use complementary model systems and may not arise from one experiment or cell type. Preserve source-specific context and the distinction between evidence-route composition and asserted graph connectivity; no SCI transfer, causal traversal, or database confidence score is inferred.",
                         "curation_status": "curated_primary_route",
                         "species_context": "human; mouse comparator systems",
