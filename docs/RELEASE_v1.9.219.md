@@ -20,7 +20,7 @@ handoff, causal activation, or a database confidence score. No graph edges were
 created or changed.
 
 Together with earlier releases, the bundle contains 320 literature route
-annotations across 102 ligand labels and 334,002 normalized signaling-route
+annotations across 100 ligand labels and 334,002 normalized signaling-route
 evidence records.
 
 | Artifact | Count |
@@ -29,7 +29,7 @@ evidence records.
 | Traversable graph edges | 14,801 |
 | Evidence-route records | 334,002 |
 | Full-sequence literature annotations | 320 |
-| Ligand labels represented in literature annotations | 102 |
+| Ligand labels represented in literature annotations | 100 |
 | Full-sequence curation candidates | 7,742 |
 | Normalized route nodes | 1,292,068 |
 | Normalized route edges | 1,275,093 |

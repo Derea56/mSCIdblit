@@ -100,7 +100,8 @@ def main() -> int:
     for edge in edges:
         outgoing[edge["source_node_id"]].append(edge)
 
-    selected: list[tuple[dict[str, str], dict[str, str], dict[str, str], dict[str, str], list[dict[str, str]]]] = []
+    selected: list[tuple[dict[str, str], dict[str, str], dict[str, str], dict[str, str], list[dict[str, str]], bool]] = []
+    selected_signatures: set[tuple[str, ...]] = set()
     for queue_row in queue:
         if queue_row.get("intracellular_continuation_label"):
             continue
@@ -127,31 +128,52 @@ def main() -> int:
             ),
             None,
         )
+        graph_linked = False
+        if route is None:
+            route = next(
+                (
+                    route_by_id[route_id]
+                    for route_id in split_values(queue_row.get("route_evidence_ids", ""))
+                    if route_id in route_by_id
+                    and not route_by_id[route_id].get("source_queue_id")
+                    and not route_by_id[route_id].get("source_evidence_record_id")
+                    and "graph_edge_linked" in route_by_id[route_id].get("route_linkage_status", "")
+                    and route_by_id[route_id].get("ligand_node_id") == queue_row["ligand_node_id"]
+                    and route_by_id[route_id].get("receptor_node_id") == queue_row["receptor_node_id"]
+                    and route_by_id[route_id].get("transcription_factor_node_id") == queue_row["transcription_factor_node_id"]
+                ),
+                None,
+            )
+            graph_linked = route is not None
         if route is None:
             continue
-        source_record = evidence_by_id[route["source_evidence_record_id"]]
+        source_record = {} if graph_linked else evidence_by_id[route["source_evidence_record_id"]]
         for edge in outgoing[queue_row["receptor_node_id"]]:
             relay_label = nodes.get(edge["target_node_id"], {}).get("canonical_label", "")
             if relay_label not in RELAY_ALLOWLIST or edge["relation_type"] in DISALLOWED_RELATIONS:
                 continue
             if not stable_by_edge.get(edge["edge_id"]):
                 continue
+            target_ids = split_values(queue_row.get("target_gene_node_ids", ""))
+            target_id = queue_row.get("target_gene_node_id", "") or (target_ids[0] if target_ids else "")
+            output_label = queue_row.get("output_label", "") or (split_values(queue_row.get("output_labels", "")) or [""])[0]
             signature = (
                 queue_row["ligand_node_id"], queue_row["receptor_node_id"], edge["target_node_id"],
                 queue_row["transcription_factor_node_id"],
-                split_values(queue_row.get("target_gene_node_ids", ""))[0] if queue_row.get("target_gene_node_ids") else "",
-                queue_row.get("output_label", "") or (split_values(queue_row.get("output_labels", "")) or [""])[0],
+                target_id,
+                output_label,
             )
-            if signature in existing_signatures:
+            if signature in existing_signatures or signature in selected_signatures:
                 continue
-            selected.append((queue_row, route, source_record, edge, stable_by_edge[edge["edge_id"]]))
+            selected_signatures.add(signature)
+            selected.append((queue_row, route, source_record, edge, stable_by_edge[edge["edge_id"]], graph_linked))
 
     rows: list[dict[str, str]] = []
-    for index, (queue_row, route, source_record, relay_edge, relay_sources) in enumerate(selected, start=1):
+    for index, (queue_row, route, source_record, relay_edge, relay_sources, graph_linked) in enumerate(selected, start=1):
         target_ids = split_values(queue_row.get("target_gene_node_ids", ""))
         target_labels = split_values(queue_row.get("target_gene_labels", ""))
-        target_id = target_ids[0] if target_ids else ""
-        target_label = target_labels[0] if target_labels else ""
+        target_id = queue_row.get("target_gene_node_id", "") or (target_ids[0] if target_ids else "")
+        target_label = queue_row.get("target_gene_label", "") or (target_labels[0] if target_labels else "")
         output_label = queue_row.get("output_label", "") or (split_values(queue_row.get("output_labels", "")) or [""])[0]
         output_id = queue_row.get("output_node_id", "") or (split_values(queue_row.get("output_node_ids", "")) or [""])[0]
         has_target = bool(target_id or target_label)
@@ -164,12 +186,24 @@ def main() -> int:
             source_record.get("evidence_summary", ""),
             edge_source.get("evidence_summary", ""),
         )
+        if not evidence_summary and graph_linked:
+            evidence_summary = (
+                f"Graph-linked primary-evidence composition for {queue_row['ligand_label']} > "
+                f"{queue_row['receptor_label']} > {nodes[relay_edge['target_node_id']]['canonical_label']} > "
+                f"{queue_row['transcription_factor_label']} > {output_label}; source locators are retained "
+                "from the route queue and receptor-relay edge."
+            )
         limitations = join_unique(
             source_record.get("limitations", ""),
             edge_source.get("limitations", ""),
             "Receptor-to-relay edge is source-linked; relay-to-TF handoff remains unasserted.",
             "This is a composed evidence route, not a claim that one source demonstrated every handoff.",
         )
+        if graph_linked:
+            limitations = join_unique(
+                limitations,
+                "The route is linked to graph-supported primary evidence rather than a downstream manual-evidence record; mSCS must evaluate the component linkage and context.",
+            )
         rows.append({
             "expansion_id": f"M21B-LITEXP-RELAY-{relay_start + index - 1:04d}",
             "source_queue_id": route["source_queue_id"],
@@ -199,12 +233,12 @@ def main() -> int:
             "output_form_id": "",
             "bridge_id": "",
             "pathway_name": (split_values(queue_row.get("pathway_names", "")) or [""])[0],
-            "input_evidence_type": "primary_receptor_relay_and_downstream_evidence_composition",
+            "input_evidence_type": "primary_graph_linked_receptor_relay_and_downstream_evidence_composition" if graph_linked else "primary_receptor_relay_and_downstream_evidence_composition",
             "output_evidence_type": "primary_composed_downstream_output",
             "evidence_ids": join_unique(queue_row.get("evidence_ids", ""), route.get("evidence_ids", ""), route.get("source_evidence_record_id", ""), edge_source.get("evidence_id", ""), queue_row.get("stable_primary_locators", ""), edge_source.get("source_locator", "")),
-            "source_chain_id": f"missing_intermediate_queue:{queue_row['curation_candidate_id']}+{relay_edge['edge_id']}",
-            "source_evidence_record_id": route["source_evidence_record_id"],
-            "route_linkage_status": join_unique(queue_row.get("route_linkage_statuses", ""), "literature_expansion:source_linked_receptor_relay", "receptor_to_intracellular_edge_asserted_primary_source", "intracellular_to_tf_edge_not_asserted", "end_to_end_chain_not_asserted_by_single_source"),
+            "source_chain_id": f"{'graph_linked_route' if graph_linked else 'missing_intermediate_queue'}:{queue_row['curation_candidate_id']}+{relay_edge['edge_id']}",
+            "source_evidence_record_id": route.get("source_evidence_record_id", ""),
+            "route_linkage_status": join_unique(queue_row.get("route_linkage_statuses", ""), "literature_expansion:source_linked_receptor_relay", "receptor_to_intracellular_edge_asserted_primary_source", "intracellular_to_tf_edge_not_asserted", "end_to_end_chain_not_asserted_by_single_source", "graph_linked_route_source" if graph_linked else ""),
             "causal_status": "not_asserted",
             "traversal_status": "evidence_route_not_causal",
             "evidence_contract_version": "mechanism_evidence_v1",
@@ -224,7 +258,7 @@ def main() -> int:
             "context_scope": source_record.get("context_scope", "") or relay_edge.get("context_scope", ""),
             "assay_or_perturbation": source_record.get("assay_or_perturbation", ""),
             "effect_polarity": relay_edge.get("effect_polarity", "") or source_record.get("effect_polarity", ""),
-            "source_scope": "composite_primary_evidence",
+            "source_scope": "graph_linked_composite_primary_evidence" if graph_linked else "composite_primary_evidence",
         })
 
     if not rows:
