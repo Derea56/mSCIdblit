@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import json
 import shutil
 from collections import Counter
@@ -30,7 +31,13 @@ DEFAULT_OUTPUT_BUNDLE = ROOT / "data/processed/mechanism_graph_module20_24_v2026
 
 
 def read_tsv(path: Path) -> list[dict[str, str]]:
-    with path.open(newline="", encoding="utf-8", errors="replace") as handle:
+    opener = gzip.open if path.suffix == ".gz" else open
+    open_kwargs = {
+        "newline": "",
+        "encoding": "utf-8",
+        "errors": "replace",
+    }
+    with opener(path, "rt", **open_kwargs) if path.suffix == ".gz" else opener(path, **open_kwargs) as handle:
         return list(csv.DictReader(handle, delimiter="\t"))
 
 
@@ -85,7 +92,10 @@ def validate_rows(rows: list[dict[str, str]], source_bundle: Path) -> None:
     }
     queue_ids = {row["queue_id"] for row in read_tsv(source_bundle / "mechanism_downstream_curation_queue.tsv")}
     downstream_ids = {row["record_id"] for row in read_tsv(source_bundle / "mechanism_downstream_evidence_records.tsv")}
-    existing_routes = {row["route_evidence_id"] for row in read_tsv(source_bundle / "mechanism_signaling_route_evidence.tsv")}
+    source_route_path = source_bundle / "mechanism_signaling_route_evidence.tsv"
+    if not source_route_path.exists():
+        source_route_path = source_route_path.with_suffix(source_route_path.suffix + ".gz")
+    existing_routes = {row["route_evidence_id"] for row in read_tsv(source_route_path)}
     existing_literature_route_numbers = {
         int(route_id.split(":", 1)[1])
         for route_id in existing_routes
@@ -141,7 +151,10 @@ def main() -> int:
         raise FileExistsError(f"Output bundle already exists: {output_bundle}")
     shutil.copytree(source_bundle, output_bundle)
 
-    existing_routes = read_tsv(output_bundle / "mechanism_signaling_route_evidence.tsv")
+    route_path = output_bundle / "mechanism_signaling_route_evidence.tsv"
+    if not route_path.exists():
+        route_path = route_path.with_suffix(route_path.suffix + ".gz")
+    existing_routes = read_tsv(route_path)
     existing_literature_route_numbers = {
         int(row["route_evidence_id"].split(":", 1)[1])
         for row in existing_routes
@@ -161,7 +174,12 @@ def main() -> int:
         expansion["route_evidence_id"] = route["route_evidence_id"]
         expansion_rows.append(expansion)
 
-    write_tsv(output_bundle / "mechanism_signaling_route_evidence.tsv", ROUTE_EVIDENCE_FIELDS, existing_routes + route_rows)
+    uncompressed_route_path = output_bundle / "mechanism_signaling_route_evidence.tsv"
+    write_tsv(uncompressed_route_path, ROUTE_EVIDENCE_FIELDS, existing_routes + route_rows)
+    compressed_route_path = uncompressed_route_path.with_suffix(uncompressed_route_path.suffix + ".gz")
+    with uncompressed_route_path.open("rb") as source, gzip.open(compressed_route_path, "wb") as target:
+        target.writelines(source)
+    uncompressed_route_path.unlink()
     expansion_fields = list(rows[0].keys()) + ["route_evidence_id"]
     write_tsv(output_bundle / "mechanism_literature_expansion.tsv", expansion_fields, expansion_rows)
 
@@ -183,6 +201,7 @@ def main() -> int:
     metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
     metadata["release_id"] = release_id
     metadata.setdefault("files", {})["literature_expansion"] = "mechanism_literature_expansion.tsv"
+    metadata.setdefault("files", {})["signaling_route_evidence"] = "mechanism_signaling_route_evidence.tsv.gz"
     metadata.setdefault("counts", {})["literature_expansion"] = len(expansion_rows)
     metadata.setdefault("counts", {})["signaling_route_evidence"] = len(existing_routes) + len(route_rows)
     metadata.setdefault("graph_policy", {})["literature_expansion_is_evidence_layer_only"] = True

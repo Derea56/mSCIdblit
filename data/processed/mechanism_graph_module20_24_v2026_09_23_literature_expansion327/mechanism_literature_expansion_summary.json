@@ -1,0 +1,20 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 4,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion327",
+  "primary_locators": [
+    "PMID:9820540; PMID:22426547; PMID:11416133; PMID:11518704; PMID:12538665; PMID:12528183; DOI:10.1002/glia.10193",
+    "PMID:9820540; PMID:22426547; PMID:11416133; PMID:11518704; PMID:12538665; PMID:1644898",
+    "PMID:9820540; PMID:22426547; PMID:11416133; PMID:11518704; PMID:12538665; PMID:35384588; PMCID:PMC9684245; DOI:10.1007/s12017-022-08709-y",
+    "PMID:9820540; PMID:22426547; PMID:11416133; PMID:11518704; PMID:12538665; PMID:7910170"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-23-il1b-tf-route-pilot-327",
+  "route_evidence_rows_after": 333682,
+  "route_evidence_rows_before": 333678,
+  "route_tier_counts": {
+    "ligand_receptor_intracellular_tf_target_missing_direct_tf_edges": 4
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion325"
+}
