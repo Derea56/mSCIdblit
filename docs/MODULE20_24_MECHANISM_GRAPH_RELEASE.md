@@ -1,13 +1,13 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.209.md`](RELEASE_v1.9.209.md). Earlier snapshots, including
+[`RELEASE_v1.9.210.md`](RELEASE_v1.9.210.md). Earlier snapshots, including
 v1.9.149 and the v1.8.x series, are retained as implementation and historical
 baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-23-il1b-tf-route-pilot-327`
+Current release identifier: `module20_24_mechanism_graph:2026-09-23-normalized-route-artifacts-328`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion327/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion328/`.
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
@@ -18,13 +18,18 @@ instances and 95 unique four-node topologies. The route-evidence layer retains
 333,682 records across entry, output, intracellular, TF, and combined route
 categories; it remains evidence-only so mSCS can evaluate plausibility and
 confidence using cell context. This release retains the 313,750
-graph-supported compositions across 1,413 exact ligand–receptor edges and adds
-four manually curated IL1B TF-family-supported routes. The IL1B pilot covers
+graph-supported compositions across 1,413 exact ligand–receptor edges and
+retains four manually curated IL1B TF-family-supported routes. The IL1B pilot covers
 the IL1R1/IL1RAP → MYD88 → IRAK4 → IRAK1 → TRAF6 → TAK1 → NF-kappaB branch
 with ICAM1, IL6, CCL20, and CXCL1 transcriptional outputs. Exact intracellular
 to TF and TF-to-target edges remain explicitly unasserted. These rows do not
-create graph edges, causal assertions, or database confidence scores. Parquet
-is deferred until this TSV route contract is stable.
+create graph edges, causal assertions, or database confidence scores. The
+normalized route companion tables now expose ordered route nodes and route
+edges for all 333,686 routes, including explicit missing-link rows and
+separate output-observation edges. They allow shared intermediates such as
+MYD88 to be indexed across ligands and outputs for downstream perturbation
+analysis in mSCS. The normalized tables are compressed TSV artifacts; Parquet
+remains available through the mSCS columnar import.
 
 Historical v1.8.0 release identifier: `module20_24_mechanism_graph:2026-09-16`
 

@@ -31,6 +31,7 @@ try:
         evidence_directness,
         normalize_output_class,
     )
+    from .route_artifacts import write_normalized_route_artifacts
 except ImportError:  # pragma: no cover - direct script execution
     from mechanism_evidence_contract import (
         MECHANISM_EVIDENCE_CONTRACT_VERSION,
@@ -40,6 +41,7 @@ except ImportError:  # pragma: no cover - direct script execution
         evidence_directness,
         normalize_output_class,
     )
+    from route_artifacts import write_normalized_route_artifacts
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -1899,6 +1901,13 @@ def main() -> None:
     write_tsv(output, rows)
     write_possible_paths(possible_output, possible_rows)
     write_route_evidence(route_evidence_output, route_evidence_rows)
+    write_normalized_route_artifacts(
+        bundle_dir,
+        route_evidence_rows,
+        read_tsv(bundle_dir / "mechanism_nodes.tsv"),
+        read_tsv(bundle_dir / "mechanism_edges.tsv"),
+        read_tsv(bundle_dir / "mechanism_edge_sources.tsv"),
+    )
     write_downstream_curation_queue(downstream_queue_output, downstream_queue_rows)
     write_downstream_evidence_records(downstream_evidence_output, downstream_evidence_rows)
     update_bundle_metadata(

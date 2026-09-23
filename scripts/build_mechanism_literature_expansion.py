@@ -19,9 +19,11 @@ from pathlib import Path
 try:
     from .audit_full_signaling_chains import ROUTE_EVIDENCE_FIELDS
     from .mechanism_evidence_contract import MECHANISM_EVIDENCE_CONTRACT_VERSION
+    from .route_artifacts import write_normalized_route_artifacts
 except ImportError:  # pragma: no cover - direct script execution
     from audit_full_signaling_chains import ROUTE_EVIDENCE_FIELDS
     from mechanism_evidence_contract import MECHANISM_EVIDENCE_CONTRACT_VERSION
+    from route_artifacts import write_normalized_route_artifacts
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -180,6 +182,13 @@ def main() -> int:
     with uncompressed_route_path.open("rb") as source, gzip.open(compressed_route_path, "wb") as target:
         target.writelines(source)
     uncompressed_route_path.unlink()
+    normalized_counts = write_normalized_route_artifacts(
+        output_bundle,
+        existing_routes + route_rows,
+        read_tsv(output_bundle / "mechanism_nodes.tsv"),
+        read_tsv(output_bundle / "mechanism_edges.tsv"),
+        read_tsv(output_bundle / "mechanism_edge_sources.tsv"),
+    )
     expansion_fields = list(rows[0].keys()) + ["route_evidence_id"]
     write_tsv(output_bundle / "mechanism_literature_expansion.tsv", expansion_fields, expansion_rows)
 
@@ -220,6 +229,7 @@ def main() -> int:
         "literature_expansion_rows": len(expansion_rows),
         "route_evidence_rows_before": len(existing_routes),
         "route_evidence_rows_after": len(existing_routes) + len(route_rows),
+        **normalized_counts,
         "route_tier_counts": dict(sorted(Counter(row["route_tier"] for row in expansion_rows).items())),
         "primary_locators": sorted({row["primary_locator"] for row in expansion_rows}),
         "graph_edges_changed": False,

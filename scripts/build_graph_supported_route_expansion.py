@@ -23,6 +23,11 @@ import shutil
 from collections import Counter, defaultdict
 from pathlib import Path
 
+try:
+    from .route_artifacts import write_normalized_route_artifacts
+except ImportError:  # pragma: no cover - direct script execution
+    from route_artifacts import write_normalized_route_artifacts
+
 
 ROUTE_FILE = "mechanism_signaling_route_evidence.tsv"
 SUMMARY_FILE = "graph_supported_route_expansion_summary.json"
@@ -571,6 +576,13 @@ def main() -> int:
     with route_path.open("rb") as source, gzip.open(compressed_route_path, "wb") as target:
         target.writelines(source)
     route_path.unlink()
+    normalized_counts = write_normalized_route_artifacts(
+        output,
+        all_rows,
+        read_tsv(output / "mechanism_nodes.tsv"),
+        read_tsv(output / "mechanism_edges.tsv"),
+        read_tsv(output / "mechanism_edge_sources.tsv"),
+    )
     update_audit(output / "full_signaling_chain_audit.json", all_rows)
 
     metadata_path = output / "bundle_metadata.json"
@@ -587,7 +599,7 @@ def main() -> int:
         metadata["accuracy_contract"].append(statement)
     metadata_path.write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
 
-    summary.update({"source_bundle": str(source), "output_bundle": str(output), "release_id": args.release_id})
+    summary.update({"source_bundle": str(source), "output_bundle": str(output), "release_id": args.release_id, **normalized_counts})
     (output / SUMMARY_FILE).write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps(summary, sort_keys=True))
     return 0
