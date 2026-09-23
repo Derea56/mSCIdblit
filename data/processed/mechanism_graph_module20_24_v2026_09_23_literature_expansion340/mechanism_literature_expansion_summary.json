@@ -1,0 +1,24 @@
+{
+  "catalogued_existing_route_evidence_rows": 14,
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 358,
+  "literature_expansion_rows_added": 14,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion340",
+  "primary_locators": [
+    "PMID:11412113; PMID:8511589; PMID:7744001;PMID:15895091;PMID:27539849; PMCID:PMC5076839; DOI:10.1074/jbc.M116.748483;PMID:7537214;PMID:7624343; PMID:9794795",
+    "PMID:12118366; DOI:10.1038/sj.onc.1205623;PMID:16027725; DOI:10.1038/sj.onc.1208944;PMID:20097766;PMID:27604640; PMCID:PMC5015047;PMID:31582430;PMID:9679056; PMID:9843571;PMID:9813111; PMID:9679056; PMID:9843571",
+    "PMID:12118366; DOI:10.1038/sj.onc.1205623;PMID:16027725; DOI:10.1038/sj.onc.1208944;PMID:27604640; PMCID:PMC5015047;PMID:9689110;PMID:9813111",
+    "PMID:27539849; PMCID:PMC5076839; DOI:10.1074/jbc.M116.748483;PMID:8390097;PMID:8999038; DOI:10.1074/jbc.271.51.32635; https://pubmed.ncbi.nlm.nih.gov/8999038/; PMID:9188471; DOI:10.1074/jbc.272.25.15760; https://pubmed.ncbi.nlm.nih.gov/9188471/"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-23-catalogued-full-routes-340",
+  "route_edges": 1275189,
+  "route_evidence_rows_after": 334026,
+  "route_evidence_rows_before": 334026,
+  "route_nodes": 1292188,
+  "route_tier_counts": {
+    "ligand_receptor_intracellular_tf_output_missing_target_gene": 5
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion339"
+}
