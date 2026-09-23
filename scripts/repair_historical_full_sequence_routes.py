@@ -274,6 +274,11 @@ def reconcile(root: Path, bundle: Path) -> tuple[list[dict[str, str]], dict[str,
     evidence_ids = {row["record_id"] for row in read_tsv(bundle / "mechanism_downstream_evidence_records.tsv")}
     with gzip.open(bundle / "mechanism_signaling_route_evidence.tsv.gz", "rt", encoding="utf-8", newline="") as handle:
         existing_chains = {row["source_chain_id"] for row in csv.DictReader(handle, delimiter="\t") if row["route_evidence_id"].startswith("LITEXP:")}
+    existing_expansion_ids = {
+        row["expansion_id"]
+        for row in read_tsv(bundle / "mechanism_literature_expansion.tsv")
+        if row.get("expansion_id")
+    }
     sources_by_edge: dict[str, list[dict[str, str]]] = defaultdict(list)
     for source in read_tsv(bundle / "mechanism_edge_sources.tsv"):
         sources_by_edge[source["edge_id"]].append(source)
@@ -421,6 +426,9 @@ def reconcile(root: Path, bundle: Path) -> tuple[list[dict[str, str]], dict[str,
                     ),
                 }
             )
+            if branch_id in existing_chains or branch_id in existing_expansion_ids:
+                skipped.append({"expansion_id": branch_id, "reason": "already_materialized"})
+                continue
             output.append(reconciled)
 
     audit = {
