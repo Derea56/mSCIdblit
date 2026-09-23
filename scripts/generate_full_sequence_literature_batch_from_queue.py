@@ -81,6 +81,10 @@ def main() -> int:
         row["edge_id"]: row
         for row in read_tsv(bundle / "mechanism_edges.tsv")
     }
+    role_rows = read_tsv(bundle / "mechanism_node_roles.tsv")
+    roles: dict[str, set[str]] = {}
+    for role_row in role_rows:
+        roles.setdefault(role_row["node_id"], set()).add(role_row["role"])
     valid_queue_ids = {row["queue_id"] for row in downstream_queue}
     evidence_by_id = {row["record_id"]: row for row in downstream_evidence}
     existing_expansions = read_tsv(bundle / "mechanism_literature_expansion.tsv")
@@ -115,6 +119,15 @@ def main() -> int:
         if not row.get("stable_primary_locators"):
             skipped["missing_locator"] += 1
             continue
+        if "ligand" not in roles.get(row["ligand_node_id"], set()) or "receptor" in roles.get(row["ligand_node_id"], set()):
+            skipped["missing_layer"] += 1
+            continue
+        if "receptor" not in roles.get(row["receptor_node_id"], set()) or "transcription_factor" in roles.get(row["receptor_node_id"], set()):
+            skipped["missing_layer"] += 1
+            continue
+        if "transcription_factor" not in roles.get(row["transcription_factor_node_id"], set()):
+            skipped["missing_layer"] += 1
+            continue
 
         source_route = next(
             (
@@ -129,10 +142,13 @@ def main() -> int:
         if source_route is None:
             skipped["missing_route_source"] += 1
             continue
+        target_ids = split_values(row.get("target_gene_node_ids", ""))
+        target_id = row.get("target_gene_node_id", "") or (target_ids[0] if target_ids else "")
+        output_label = row.get("output_label", "") or (split_values(row.get("output_labels", "")) or [""])[0]
         signature = tuple(row.get(field, "") for field in (
             "ligand_node_id", "receptor_node_id", "intracellular_continuation_node_id",
-            "transcription_factor_node_id", "target_gene_node_id", "output_label",
-        ))
+            "transcription_factor_node_id",
+        )) + (target_id, output_label)
         if signature in existing_signatures:
             skipped["already_present"] += 1
             continue
@@ -149,9 +165,14 @@ def main() -> int:
     for index, (queue_row, source_route, source_record) in enumerate(candidates, start=1):
         target_gene_ids = split_values(queue_row.get("target_gene_node_ids", ""))
         target_gene_labels = split_values(queue_row.get("target_gene_labels", ""))
-        has_target = bool(target_gene_ids or target_gene_labels)
-        target_gene_node_id = target_gene_ids[0] if target_gene_ids else ""
-        target_gene_label = target_gene_labels[0] if target_gene_labels else ""
+        has_target = bool(
+            queue_row.get("target_gene_node_id")
+            or queue_row.get("target_gene_label")
+            or target_gene_ids
+            or target_gene_labels
+        )
+        target_gene_node_id = queue_row.get("target_gene_node_id", "") or (target_gene_ids[0] if target_gene_ids else "")
+        target_gene_label = queue_row.get("target_gene_label", "") or (target_gene_labels[0] if target_gene_labels else "")
         output_labels = split_values(queue_row.get("output_labels", ""))
         output_node_ids = split_values(queue_row.get("output_node_ids", ""))
         output_label = queue_row.get("output_label", "") or (output_labels[0] if output_labels else "")

@@ -3,7 +3,8 @@
 
 The overlay is evidence-layer data. It may connect independently curated
 ligand/receptor, intracellular, TF, and output observations for plausibility
-analysis, but it never creates or rewrites a causal graph edge.
+analysis, including graph-linked route records with stable primary locators,
+but it never creates or rewrites a causal graph edge.
 """
 
 from __future__ import annotations
@@ -111,10 +112,13 @@ def validate_rows(rows: list[dict[str, str]], source_bundle: Path) -> None:
         if not expansion_id or expansion_id in expansion_ids:
             raise ValueError(f"Duplicate or empty expansion_id: {expansion_id!r}")
         expansion_ids.add(expansion_id)
-        if row["source_queue_id"] not in queue_ids:
+        graph_linked_route = "graph_linked_route_source" in row.get("route_linkage_status", "")
+        if row["source_queue_id"] and row["source_queue_id"] not in queue_ids:
             raise ValueError(f"{expansion_id} references missing source queue {row['source_queue_id']}")
-        if row["source_evidence_record_id"] not in downstream_ids:
+        if row["source_evidence_record_id"] and row["source_evidence_record_id"] not in downstream_ids:
             raise ValueError(f"{expansion_id} references missing downstream evidence record {row['source_evidence_record_id']}")
+        if not graph_linked_route and (not row["source_queue_id"] or not row["source_evidence_record_id"]):
+            raise ValueError(f"{expansion_id} requires downstream source linkage unless marked graph_linked_route_source")
         if row["evidence_contract_version"] != MECHANISM_EVIDENCE_CONTRACT_VERSION:
             raise ValueError(f"{expansion_id} uses unsupported evidence contract {row['evidence_contract_version']!r}")
         if row.get("route_status", "retained_evidence_route") != "retained_evidence_route":
@@ -229,6 +233,12 @@ def main() -> int:
     )
     if statement not in metadata.setdefault("accuracy_contract", []):
         metadata["accuracy_contract"].append(statement)
+    graph_linked_statement = (
+        "Graph-linked literature compositions may retain empty downstream queue/evidence pointers when the source route "
+        "itself is explicitly marked graph_edge_linked; stable primary locators and component limitations remain required."
+    )
+    if graph_linked_statement not in metadata.setdefault("accuracy_contract", []):
+        metadata["accuracy_contract"].append(graph_linked_statement)
     metadata_path.write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
 
     summary = {
