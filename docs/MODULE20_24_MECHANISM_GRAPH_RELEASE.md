@@ -1,36 +1,45 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.296.md`](RELEASE_v1.9.296.md). Earlier snapshots, including
+[`RELEASE_v1.9.297.md`](RELEASE_v1.9.297.md). Earlier snapshots, including
 v1.9.262, v1.9.261, v1.9.260,
 v1.9.259, v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
 historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-24-il6-stat3-gap-477`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-norepi-adrb2-creb-480`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion477/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion480/`.
 
-The current snapshot is documented in [`RELEASE_v1.9.296.md`](RELEASE_v1.9.296.md).
+The current snapshot is documented in [`RELEASE_v1.9.297.md`](RELEASE_v1.9.297.md).
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
-## Current v1.9.296 snapshot
+## Current v1.9.297 snapshot
 
 The current bundle contains 11,988 nodes, 14,831 traversable edges, 15,107
 linked source rows, 17,406 node-role assignments, 10,973 pathway summaries,
-and 96 boundary groups. It retains 588,242 evidence-route records and 22,128
+and 96 boundary groups. It retains 588,244 evidence-route records and 22,130
 literature-expansion annotations. The normalized route artifacts contain
-2,463,947 route nodes and 2,271,883 route edges. This release adds four
-primary-literature evidence routes for IL-6 across the IL-6R/gp130→JAK1→STAT3
-branch and preserves the all-ligand curation queue at 15,418
-deduplicated candidates. The routes remain evidence-only and are intended for
-mSCS confidence evaluation; no causal assertions or database confidence scores
-are created.
+2,463,957 route nodes and 2,271,891 route edges. This release adds two
+primary-literature evidence routes for norepinephrine→ADRB2→GNAS/CREB→BDNF
+exon-specific transcript outputs and preserves the all-ligand curation queue at
+15,419 deduplicated candidates. The routes remain evidence-only and are
+intended for mSCS confidence evaluation; no causal assertions or database
+confidence scores are created.
 
-The new tranche retains IL-6→JAK1→STAT3 evidence for CRP, HAMP/hepcidin,
-CEBPD, and SOCS3 target-gene outputs. Receptor-to-relay, relay-to-STAT3, and
-STAT3-to-target handoffs remain unasserted unless an existing graph edge
-supports them.
+The new tranche retains norepinephrine/ADRB2 and ADRB2-Gs/GNAS graph anchors
+and maps primary astrocyte evidence for BDNF exon IV and exon VI mRNA outputs.
+The beta2 contribution is not treated as exclusive, and the receptor-to-CREB
+and CREB-to-output handoffs remain unasserted. Alternative CREB-associated
+mechanisms reported in the primary literature remain represented in the route
+evidence rather than collapsed into a single causal chain.
+
+## Previous v1.9.296 snapshot
+
+The previous snapshot added four primary-literature evidence routes for IL-6
+across the IL-6R/gp130→JAK1→STAT3 branch and retained 588,242 evidence-route
+records, 22,128 literature-expansion annotations, and a 15,418-candidate
+curation queue.
 
 ## Previous v1.9.295 snapshot
 
