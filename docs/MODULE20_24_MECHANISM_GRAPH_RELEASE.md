@@ -1,37 +1,42 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.288.md`](RELEASE_v1.9.288.md). Earlier snapshots, including
+[`RELEASE_v1.9.289.md`](RELEASE_v1.9.289.md). Earlier snapshots, including
 v1.9.262, v1.9.261, v1.9.260,
 v1.9.259, v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
 historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-24-glutamate-matrix-gap-453`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-wnt-canonical-gap-456`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion453/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion456/`.
 
-The current snapshot is documented in [`RELEASE_v1.9.288.md`](RELEASE_v1.9.288.md).
+The current snapshot is documented in [`RELEASE_v1.9.289.md`](RELEASE_v1.9.289.md).
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
-## Current v1.9.288 snapshot
+## Current v1.9.289 snapshot
 
 The current bundle contains 11,988 nodes, 14,831 traversable edges, 15,107
 linked source rows, 17,406 node-role assignments, 10,973 pathway summaries,
-and 96 boundary groups. It retains 588,218 evidence-route records and 22,104
+and 96 boundary groups. It retains 588,222 evidence-route records and 22,108
 literature-expansion annotations. The normalized route artifacts contain
-2,463,828 route nodes and 2,271,788 route edges. This release adds three
-primary-literature evidence routes across three ligand labels and preserves
-the all-ligand curation queue at 15,409 deduplicated candidates. The routes
-remain evidence-only and are intended for mSCS confidence evaluation; no
-causal assertions or database confidence scores are created.
+2,463,848 route nodes and 2,271,804 route edges. This release adds four
+primary-literature evidence routes for WNT3A across four receptor contexts and
+preserves the all-ligand curation queue at 15,413 deduplicated candidates. The
+routes remain evidence-only and are intended for mSCS confidence evaluation;
+no causal assertions or database confidence scores are created.
 
-The new tranche contains one route retaining a target-gene node and two
-intracellular-to-TF functional-output routes. Shared-source and manually
-composed layers remain separately auditable so mSCS can evaluate their relative
-plausibility. The component evidence is preserved and receptor-to-intracellular,
-intracellular-to-TF, and TF-to-target handoffs remain unasserted unless an
-existing graph edge supports them.
+The new tranche retains canonical WNT3A→Frizzled/LRP6→β-catenin/TCF routes
+ending in MYC or CCND1 expression. Shared-source and manually composed layers
+remain separately auditable so mSCS can evaluate their relative plausibility.
+Receptor-to-relay, relay-to-TCF, and TCF-to-target handoffs remain unasserted
+unless an existing graph edge supports them.
+
+## Previous v1.9.288 snapshot
+
+The previous snapshot added three primary-literature evidence routes across
+glutamate, decorin, and ATP. It contained 588,218 evidence-route records,
+22,104 literature-expansion annotations, and a 15,409-candidate curation queue.
 
 ## Previous v1.9.287 snapshot
 
