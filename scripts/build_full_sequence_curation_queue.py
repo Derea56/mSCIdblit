@@ -90,7 +90,11 @@ OUTPUT_FIELDS = (
     "source_scopes",
 )
 
-LOCATOR_RE = re.compile(r"(?:PMID:\S+|PMCID:\S+|DOI:\S+|https?://\S+)")
+# Evidence identifiers are semicolon-delimited in the graph tables.  A broad
+# ``\S+`` suffix turns a long semicolon-delimited locator list into one giant
+# token, which can make the queue grow quadratically when many source-linked
+# route records share a signature.
+LOCATOR_RE = re.compile(r"(?:PMID:[^;\s]+|PMCID:[^;\s]+|DOI:[^;\s]+|https?://[^;\s]+)")
 
 
 def read_tsv(path: Path) -> list[dict[str, str]]:
