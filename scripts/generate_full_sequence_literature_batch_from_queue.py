@@ -68,6 +68,25 @@ def join_unique(*values: str) -> str:
     return ";".join(result)
 
 
+def is_eligible_ligand_input(label: str) -> bool:
+    """Reject receptor-tail and receptor-complex aliases from the L input layer."""
+
+    value = label.casefold()
+    return not any(
+        marker in value
+        for marker in (
+            "receptor",
+            "complex",
+            "site-set",
+            " py",
+            "itsm",
+            "itim",
+            "hem itam",
+            "tir domain",
+        )
+    )
+
+
 def main() -> int:
     args = parse_args()
     bundle = args.bundle_dir.resolve()
@@ -118,6 +137,9 @@ def main() -> int:
             continue
         if not row.get("stable_primary_locators"):
             skipped["missing_locator"] += 1
+            continue
+        if not is_eligible_ligand_input(row["ligand_label"]):
+            skipped["missing_layer"] += 1
             continue
         if "ligand" not in roles.get(row["ligand_node_id"], set()) or "receptor" in roles.get(row["ligand_node_id"], set()):
             skipped["missing_layer"] += 1

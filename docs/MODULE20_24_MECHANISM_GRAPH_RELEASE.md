@@ -1,32 +1,32 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.271.md`](RELEASE_v1.9.271.md). Earlier snapshots, including
+[`RELEASE_v1.9.272.md`](RELEASE_v1.9.272.md). Earlier snapshots, including
 v1.9.262, v1.9.261, v1.9.260,
 v1.9.259, v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
 historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-24-all-ligand-full-intermediate-promotion-402`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-all-ligand-full-intermediate-curation-404`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion402/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion404/`.
 
-The current snapshot is documented in [`RELEASE_v1.9.271.md`](RELEASE_v1.9.271.md).
+The current snapshot is documented in [`RELEASE_v1.9.272.md`](RELEASE_v1.9.272.md).
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
-## Current v1.9.271 snapshot
+## Current v1.9.272 snapshot
 
 The current bundle contains 11,988 nodes, 14,831 traversable edges, 15,107
 linked source rows, 17,406 node-role assignments, 10,973 pathway summaries,
-and 96 boundary groups. It retains 573,597 evidence-route records and 7,483
+and 96 boundary groups. It retains 574,269 evidence-route records and 8,155
 literature-expansion annotations. The normalized route artifacts contain
-2,394,517 route nodes and 2,217,068 route edges. This release adds 98
-source-linked full-intermediate route compositions across four ligand labels
-and carries forward the 30 primary-evidence JAK→STAT handoff edges and 18,611
-graph-supported compositions from v1.9.270. The all-ligand curation queue now
-contains 15,302 deduplicated candidates. The routes remain evidence-only and
-are intended for mSCS confidence evaluation; no causal assertions or database
-confidence scores are created.
+2,397,857 route nodes and 2,219,752 route edges. This release adds 672
+source-linked full-intermediate route compositions across 138 ligand labels
+and carries forward the earlier primary-evidence JAK→STAT handoff edges and
+graph-supported compositions. The all-ligand curation queue contains 15,302
+deduplicated candidates. The routes remain evidence-only and are intended for
+mSCS confidence evaluation; no causal assertions or database confidence
+scores are created.
 
 ## Previous v1.9.270 snapshot
 
