@@ -499,6 +499,13 @@ def compose_graph_routes(rows: list[dict[str, str]], bundle: Path) -> tuple[list
                 tf_id = tf_output.get("source_node_id", "")
                 if tf_id in direct_tf_ids:
                     continue
+                # A shared pathway/evidence anchor is not enough to treat an
+                # arbitrary downstream component as a transcription factor.
+                # Keep this composition only when the output source is
+                # explicitly typed as a TF or the edge itself is a direct
+                # TF-to-target relation.
+                if "transcription_factor" not in roles.get(tf_id, set()) and tf_output.get("relation_type") not in TARGET_RELATIONS:
+                    continue
                 anchor = compatible_anchor(lr, relay, tf_output)
                 if not anchor:
                     continue
@@ -508,7 +515,7 @@ def compose_graph_routes(rows: list[dict[str, str]], bundle: Path) -> tuple[list
                 missing = "" if target else "target_gene_expression"
                 add_candidate(
                     ("lritf", lr["edge_id"], relay["edge_id"], tf_id, tf_output["edge_id"]),
-                    build_row(rows[0], roles=roles, tier=tier, expression="ligand>receptor>intracellular>TF>target_gene_expression" if target else "ligand>receptor>intracellular>TF>output", known_layers=known, missing_layers=missing, lr=lr, output=tf_output, anchor=anchor, relay=relay, composition="lr_receptor_relay_tf_output_without_direct_tf_edge"),
+                    build_row(rows[0], roles=roles, tier=tier, expression="ligand>receptor>intracellular>TF>target_gene_expression" if target else "ligand>receptor>intracellular>TF>output", known_layers=known, missing_layers=missing, lr=lr, output=tf_output, anchor=anchor, relay=relay, tf_output=tf_output, composition="lr_receptor_relay_tf_output_without_direct_tf_edge"),
                     "lr_receptor_relay_tf_output_without_direct_tf_edge",
                 )
 

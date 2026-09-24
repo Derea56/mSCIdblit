@@ -1,18 +1,33 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.268.md`](RELEASE_v1.9.268.md). Earlier snapshots, including
+[`RELEASE_v1.9.269.md`](RELEASE_v1.9.269.md). Earlier snapshots, including
 v1.9.262, v1.9.261, v1.9.260,
 v1.9.259, v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
 historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-24-il20-stat3-routes-391`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-all-ligand-route-expansion-392`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion391/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion392/`.
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
-## Current v1.9.268 snapshot
+## Current v1.9.269 snapshot
+
+The current bundle contains 11,988 nodes, 14,801 traversable edges, 17,242
+linked source rows, 17,406 node-role assignments, 10,960 pathway summaries,
+and 96 boundary groups. It retains 554,888 evidence-route records and 7,385
+literature-expansion annotations, including 1,368 explicit
+`ligand>receptor>intracellular>TF>target_gene_expression` records. The
+normalized route artifacts contain 2,302,921 route nodes and 2,141,150 route
+edges. This release adds 213,835 graph-supported route compositions across
+206 exact ligand–receptor edges and 174 ligand labels: 198,096 include a
+target-gene layer and 15,739 end at a supported output without target-gene
+attribution. The routes are evidence-only, require shared pathway or evidence
+anchors, and retain the relay-to-TF handoff as unasserted. No graph edges,
+causal assertions, or database confidence scores are created.
+
+## Previous v1.9.268 snapshot
 
 The current bundle contains 11,988 nodes, 14,801 traversable edges, 17,242
 linked source rows, 17,406 node-role assignments, 10,960 pathway summaries,
