@@ -1,36 +1,43 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.300.md`](RELEASE_v1.9.300.md). Earlier snapshots, including
+[`RELEASE_v1.9.301.md`](RELEASE_v1.9.301.md). Earlier snapshots, including
 v1.9.262, v1.9.261, v1.9.260,
 v1.9.259, v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
 historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-24-ifng-stat1-489`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-il1b-myd88-nfkb-492`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion489/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion492/`.
 
-The current snapshot is documented in [`RELEASE_v1.9.300.md`](RELEASE_v1.9.300.md).
+The current snapshot is documented in [`RELEASE_v1.9.301.md`](RELEASE_v1.9.301.md).
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
-## Current v1.9.300 snapshot
+## Current v1.9.301 snapshot
 
 The current bundle contains 11,988 nodes, 14,831 traversable edges, 15,107
 linked source rows, 17,406 node-role assignments, 10,973 pathway summaries,
-and 96 boundary groups. It retains 588,253 evidence-route records and 22,139
+and 96 boundary groups. It retains 588,256 evidence-route records and 22,142
 literature-expansion annotations. The normalized route artifacts contain
-2,464,002 route nodes and 2,271,927 route edges. This release adds three
-primary-literature evidence routes for IFN-γ→IFNGR→JAK1→STAT1→IRF1, GBP2, and
-CXCL9 target-gene outputs and preserves the all-ligand curation queue at 15,420
-deduplicated candidates. The routes remain evidence-only and are intended for
-mSCS confidence evaluation; no causal assertions or database confidence scores
-are created.
+2,464,017 route nodes and 2,271,939 route edges. This release adds three
+primary-literature evidence routes for IL-1β→IL1R1/IL1RAP→MyD88→NF-κB→IL6,
+CCL20, and CXCL1 target-gene outputs and preserves the all-ligand curation queue
+at 15,420 deduplicated candidates. The routes remain evidence-only and are
+intended for mSCS confidence evaluation; no causal assertions or database
+confidence scores are created.
 
-The new tranche maps IRF1, GBP2, and CXCL9 output evidence to the existing
-IFNGR/JAK1/STAT1 graph layers. The JAK1-to-STAT1 handoffs remain unasserted,
-and the route descriptions preserve the distinct primary cell systems and
-target assays.
+The new tranche maps IL-1β output evidence to the existing IL1R1/IL1RAP,
+MyD88, and NF-κB graph layers. The MyD88-to-NF-κB and NF-κB-to-target handoffs
+remain unasserted because the graph does not contain exact endpoint edges for
+these three composed routes.
+
+## Previous v1.9.300 snapshot
+
+The previous snapshot added three primary-literature evidence routes for
+IFN-γ→IFNGR→JAK1→STAT1→IRF1, GBP2, and CXCL9 outputs and retained 588,253
+evidence-route records, 22,139 literature-expansion annotations, and a
+15,420-candidate curation queue.
 
 ## Previous v1.9.299 snapshot
 
