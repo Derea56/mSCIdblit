@@ -60,6 +60,24 @@ def join_unique(*values: str) -> str:
     return ";".join(result)
 
 
+def join_stable_locators(*values: str) -> str:
+    """Keep public paper locators separate from internal graph identifiers."""
+
+    result: list[str] = []
+    seen: set[str] = set()
+    for value in values:
+        for item in split_values(value):
+            normalized = item.casefold()
+            if not (
+                normalized.startswith(("pmid:", "pmcid:", "doi:", "http://", "https://"))
+            ):
+                continue
+            if item not in seen:
+                seen.add(item)
+                result.append(item)
+    return ";".join(result)
+
+
 def normalize(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", value.casefold())
 
@@ -99,6 +117,7 @@ def matching_edge(
 
 def make_rows(bundle: Path) -> list[dict[str, str]]:
     expansions = read_tsv(bundle / "mechanism_literature_expansion.tsv")
+    existing_expansion_ids = {row.get("expansion_id", "") for row in expansions}
     nodes = {row["node_id"]: row for row in read_tsv(bundle / "mechanism_nodes.tsv")}
     edges = {row["edge_id"]: row for row in read_tsv(bundle / "mechanism_edges.tsv")}
     queue_ids = {row["queue_id"] for row in read_tsv(bundle / "mechanism_downstream_curation_queue.tsv")}
@@ -240,7 +259,7 @@ def make_rows(bundle: Path) -> list[dict[str, str]]:
                         "end_to_end_chain_not_asserted_by_single_source",
                         "evidence_route_only",
                     ),
-                    "primary_locator": join_unique(alias_row["primary_locator"], template["primary_locator"]),
+                    "primary_locator": join_stable_locators(alias_row["primary_locator"], template["primary_locator"]),
                     "citation_note": (
                         f"The {alias_label} ligand/receptor record is linked to the canonical {canonical_label} "
                         "target-gene route using the retained primary locators. The alias is exposed as an "
@@ -262,6 +281,19 @@ def make_rows(bundle: Path) -> list[dict[str, str]]:
                     "source_scope": "alias_composed_primary_evidence",
                 })
                 rows.append(row)
+    # Earlier snapshots may already contain a small prefix of this generated
+    # family under the same human-readable IDs but with different signatures.
+    # Re-number the generated rows around those IDs so the release importer
+    # never receives duplicate expansion identifiers.
+    used_ids = set(existing_expansion_ids)
+    ordinal = 1
+    for row in rows:
+        while f"M21B-LITEXP-ALIASFULL-{normalize(row['ligand_label']).upper()}-{ordinal:04d}" in used_ids:
+            ordinal += 1
+        expansion_id = f"M21B-LITEXP-ALIASFULL-{normalize(row['ligand_label']).upper()}-{ordinal:04d}"
+        row["expansion_id"] = expansion_id
+        used_ids.add(expansion_id)
+        ordinal += 1
     return rows
 
 
