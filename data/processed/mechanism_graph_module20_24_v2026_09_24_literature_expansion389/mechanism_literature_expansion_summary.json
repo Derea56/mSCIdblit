@@ -1,0 +1,20 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 7377,
+  "literature_expansion_rows_added": 1,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion389",
+  "primary_locators": [
+    "PMID:9820540; PMID:11416133; PMID:11594800; PMID:8134378; PMCID:PMC201562; PMCID:PMC43343; DOI:10.1006/cyto.2001.0946; PMID:11518704; PMID:12538665"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-24-il1a-il33-il18-routes-389",
+  "route_edges": 1287955,
+  "route_evidence_rows_after": 341045,
+  "route_evidence_rows_before": 341044,
+  "route_nodes": 1311330,
+  "route_tier_counts": {
+    "ligand_receptor_intracellular_tf_target_missing_direct_tf_edges": 1
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion387"
+}
