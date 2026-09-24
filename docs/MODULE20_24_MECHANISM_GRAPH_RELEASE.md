@@ -1,35 +1,45 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.307.md`](RELEASE_v1.9.307.md). Earlier snapshots, including
+[`RELEASE_v1.9.308.md`](RELEASE_v1.9.308.md). Earlier snapshots, including
 v1.9.262, v1.9.261, v1.9.260,
 v1.9.259, v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
 historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-24-all-ligand-route-coverage-508`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-all-ligand-route-repair-and-dadle-creb-509`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion508/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion509/`.
 
-The current snapshot is documented in [`RELEASE_v1.9.307.md`](RELEASE_v1.9.307.md).
+The current snapshot is documented in [`RELEASE_v1.9.308.md`](RELEASE_v1.9.308.md).
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, mSCS coverage report, and the all-ligand
 full-sequence curation tranche plus the all-ligand route-coverage index.
 
-## Current v1.9.307 snapshot
+## Current v1.9.308 snapshot
 
-This release adds `mechanism_ligand_route_coverage.tsv.gz`, a semantic
-all-ligand index derived from the existing route-evidence and literature-
-expansion tables. It contains one row for each of 2,613 ligand nodes that pass
-the exported ligand-role filter. The index identifies 59 ligand nodes with a
-full target-gene route, 167 with a full intracellular–TF functional-output
-route, 1,583 with partial downstream evidence, and 804 with LR-only evidence.
-It does not create edges, confidence scores, causal assertions, or traversal
-permissions.
+This release adds one composite primary-evidence route for
+DADLE→OPRD1/DOR→GNAI→CREB phosphorylation, with target-gene expression left
+unresolved. It also repairs 11,215 uniquely resolvable node-ID references in
+the evidence layer; ambiguous and edge-conflicting rows are preserved and
+reported. The route and repairs do not create edges, confidence scores, causal
+assertions, or traversal permissions.
 
-The underlying graph and route tables are unchanged from v1.9.306: 11,988
-nodes, 14,831 traversable edges, 15,107 linked source rows, 591,165
-evidence-route records, 2,478,543 route nodes, 2,283,559 route edges, and
-25,051 literature-expansion annotations.
+The all-ligand index contains one row for each of 2,613 ligand nodes that pass
+the exported ligand-role filter. It identifies 59 ligand nodes with a full
+target-gene route, 174 with a full intracellular–TF functional-output route,
+1,576 with partial downstream evidence, and 804 with LR-only evidence.
+
+The underlying graph is unchanged: 11,988 nodes, 14,831 traversable edges,
+and 15,107 linked source rows. The evidence layer contains 591,166 route
+records, 2,478,540 normalized route nodes, 2,283,137 normalized route edges,
+and 25,052 literature-expansion annotations.
+
+## Previous v1.9.307 snapshot
+
+The previous snapshot added the all-ligand route-coverage index without
+changing the underlying route tables: 2,613 ligand nodes, 59 full target-gene
+routes, 167 full intracellular–TF functional-output routes, 1,583 partial
+downstream routes, and 804 LR-only routes.
 
 ## Previous v1.9.306 snapshot
 
