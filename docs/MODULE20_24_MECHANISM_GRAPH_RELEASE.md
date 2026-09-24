@@ -1,41 +1,42 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.290.md`](RELEASE_v1.9.290.md). Earlier snapshots, including
+[`RELEASE_v1.9.291.md`](RELEASE_v1.9.291.md). Earlier snapshots, including
 v1.9.262, v1.9.261, v1.9.260,
 v1.9.259, v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
 historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-24-il34-ap1-gap-459`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-wnt5a-noncanonical-gap-462`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion459/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion462/`.
 
-The current snapshot is documented in [`RELEASE_v1.9.290.md`](RELEASE_v1.9.290.md).
+The current snapshot is documented in [`RELEASE_v1.9.291.md`](RELEASE_v1.9.291.md).
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
-## Current v1.9.290 snapshot
+## Current v1.9.291 snapshot
 
 The current bundle contains 11,988 nodes, 14,831 traversable edges, 15,107
 linked source rows, 17,406 node-role assignments, 10,973 pathway summaries,
-and 96 boundary groups. It retains 588,223 evidence-route records and 22,109
+and 96 boundary groups. It retains 588,224 evidence-route records and 22,110
 literature-expansion annotations. The normalized route artifacts contain
-2,463,853 route nodes and 2,271,808 route edges. This release adds one
-primary-literature evidence route for IL-34 across the CSF1R→MEK/ERK/JNK→AP-1
-branch and preserves the all-ligand curation queue at 15,414 deduplicated
-candidates. The routes remain evidence-only and are intended for mSCS
-confidence evaluation; no causal assertions or database confidence scores are
-created.
+2,463,857 route nodes and 2,271,811 route edges. This release adds one
+primary-literature evidence route for WNT5A across the ROR2→JNK/AP-1 branch
+and preserves the all-ligand curation queue at 15,415 deduplicated candidates.
+The routes remain evidence-only and are intended for mSCS confidence
+evaluation; no causal assertions or database confidence scores are created.
 
-The new tranche retains IL-34→CSF1R→kinase-relay→AP-1→c-FOS expression
-evidence. CSF1R-to-relay, relay-to-AP-1, and AP-1-to-target handoffs remain
+The new tranche retains WNT5A→ROR2→kinase-relay→AP-1→MMP13 functional-output
+evidence. The MMP13 target-gene node is unresolved in the current graph, so the
+route remains an output route; receptor-to-relay and target-gene handoffs remain
 unasserted unless an existing graph edge supports them.
 
-## Previous v1.9.288 snapshot
+## Previous v1.9.290 snapshot
 
-The previous snapshot added three primary-literature evidence routes across
-glutamate, decorin, and ATP. It contained 588,218 evidence-route records,
-22,104 literature-expansion annotations, and a 15,409-candidate curation queue.
+The previous snapshot added one primary-literature evidence route for
+IL-34→CSF1R→MEK/ERK/JNK→AP-1→c-FOS expression. It contained 588,223
+evidence-route records, 22,109 literature-expansion annotations, and a
+15,414-candidate curation queue.
 
 ## Previous v1.9.289 snapshot
 
@@ -43,6 +44,12 @@ The previous snapshot added four primary-literature evidence routes for WNT3A
 across FZD2, FZD4, FZD7, and FZD8:LRP6 receptor contexts. It contained 588,222
 evidence-route records, 22,108 literature-expansion annotations, and a
 15,413-candidate curation queue.
+
+## Previous v1.9.288 snapshot
+
+The previous snapshot added three primary-literature evidence routes across
+glutamate, decorin, and ATP. It contained 588,218 evidence-route records,
+22,104 literature-expansion annotations, and a 15,409-candidate curation queue.
 
 ## Previous v1.9.287 snapshot
 
