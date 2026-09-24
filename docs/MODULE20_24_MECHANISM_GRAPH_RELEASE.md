@@ -1,13 +1,13 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.253.md`](RELEASE_v1.9.253.md). Earlier snapshots, including
+[`RELEASE_v1.9.254.md`](RELEASE_v1.9.254.md). Earlier snapshots, including
 v1.9.149 and the v1.8.x series, are retained as implementation and historical
 baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-23-alias-full-target-routes-376`
+Current release identifier: `module20_24_mechanism_graph:2026-09-23-relay-target-promotion-377`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion376/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion377/`.
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
@@ -15,21 +15,26 @@ The current bundle has 11,988 nodes, 14,801 traversable edges, 17,242 linked
 source rows, 17,406 node-role assignments, 10,960 pathway summaries, and 96
 boundary groups. The full-chain audit reports 141 evidence-backed edge-chain
 instances and 95 unique four-node topologies. The route-evidence layer retains
-340,159 records across entry, output, intracellular, TF, and combined route
+340,353 records across entry, output, intracellular, TF, and combined route
 categories; it remains evidence-only so mSCS can evaluate plausibility and
 confidence using cell context. This release retains the 313,750
 graph-supported compositions across 1,413 exact ligand–receptor edges and
-retains 6,491 literature-expansion route annotations across 1,870 ligand labels,
+retains 6,685 literature-expansion route annotations across 1,870 ligand labels,
 including 5,318 previously exposed source-linked routes, 441 newly promoted
 source-linked target-gene route components across 44 ligand labels, and three
 BDNF–TrkB–relay–CREB–Arc route alternatives, and 55 alias-composed target-gene
 routes across eight ligand aliases. The latest pass adds 42 full-layer alias
 routes for Bdnf, Il15, Il2, and Thpo while preserving unasserted receptor-to-relay
 handoffs. The prior
-GH/GHR–JAK2–STAT5–Cish routes now cover both the GH1 and historical growth-hormone
+relay-promotion pass now adds 194 full-layer routes across seven ligand labels
+by carrying relay identities from existing full routes with identical ligand,
+receptor, and TF node identities onto source-linked partial target-gene routes.
+The 194 routes retain unresolved edge assertions explicitly and do not replace
+their 162 partial source records. The total full-layer target-gene route count
+is now 675. GH/GHR–JAK2–STAT5–Cish routes now cover both the GH1 and historical growth-hormone
 ligand labels. Six PDGF-BB/PDGFRB receptor-proximal alternatives now connect to
 the primary-linked STAT3→FOS target component. Two CSF1/IL-34→CSF1R/c-Fms→MEK/ERK→ELK1→c-FOS evidence routes add ligand-specific output support while preserving the unresolved ERK-to-ELK1 and ELK1-to-c-FOS links. This release adds a Prolactin→PRLR→JAK2→STAT5→Csn2 target-gene route from primary beta-casein reporter evidence while preserving the unresolved STAT5-to-Csn2 link. The prior
-481 explicit `ligand>receptor>intracellular>TF>target_gene_expression` records
+675 explicit `ligand>receptor>intracellular>TF>target_gene_expression` records
 remain, and the new routes preserve unresolved `????` layers rather than
 inventing intracellular or TF links. The import is restricted to records
 with known ligand and receptor fields, valid current graph references, source
