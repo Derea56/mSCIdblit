@@ -1,21 +1,37 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.306.md`](RELEASE_v1.9.306.md). Earlier snapshots, including
+[`RELEASE_v1.9.307.md`](RELEASE_v1.9.307.md). Earlier snapshots, including
 v1.9.262, v1.9.261, v1.9.260,
 v1.9.259, v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
 historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-24-all-ligand-full-sequence-507`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-all-ligand-route-coverage-508`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion507/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion508/`.
 
-The current snapshot is documented in [`RELEASE_v1.9.306.md`](RELEASE_v1.9.306.md).
+The current snapshot is documented in [`RELEASE_v1.9.307.md`](RELEASE_v1.9.307.md).
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, mSCS coverage report, and the all-ligand
-full-sequence curation tranche.
+full-sequence curation tranche plus the all-ligand route-coverage index.
 
-## Current v1.9.306 snapshot
+## Current v1.9.307 snapshot
+
+This release adds `mechanism_ligand_route_coverage.tsv.gz`, a semantic
+all-ligand index derived from the existing route-evidence and literature-
+expansion tables. It contains one row for each of 2,613 ligand nodes that pass
+the exported ligand-role filter. The index identifies 59 ligand nodes with a
+full target-gene route, 167 with a full intracellular–TF functional-output
+route, 1,583 with partial downstream evidence, and 804 with LR-only evidence.
+It does not create edges, confidence scores, causal assertions, or traversal
+permissions.
+
+The underlying graph and route tables are unchanged from v1.9.306: 11,988
+nodes, 14,831 traversable edges, 15,107 linked source rows, 591,165
+evidence-route records, 2,478,543 route nodes, 2,283,559 route edges, and
+25,051 literature-expansion annotations.
+
+## Previous v1.9.306 snapshot
 
 The current bundle contains 11,988 nodes, 14,831 traversable edges, 15,107
 linked source rows, 17,406 node-role assignments, 10,973 pathway summaries,

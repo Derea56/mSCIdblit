@@ -19,10 +19,14 @@ from pathlib import Path
 
 try:
     from .audit_full_signaling_chains import ROUTE_EVIDENCE_FIELDS
+    from .build_all_ligand_route_coverage import build as build_ligand_route_coverage
+    from .build_all_ligand_route_coverage import write_tsv_gz as write_ligand_route_coverage
     from .mechanism_evidence_contract import MECHANISM_EVIDENCE_CONTRACT_VERSION
     from .route_artifacts import write_normalized_route_artifacts
 except ImportError:  # pragma: no cover - direct script execution
     from audit_full_signaling_chains import ROUTE_EVIDENCE_FIELDS
+    from build_all_ligand_route_coverage import build as build_ligand_route_coverage
+    from build_all_ligand_route_coverage import write_tsv_gz as write_ligand_route_coverage
     from mechanism_evidence_contract import MECHANISM_EVIDENCE_CONTRACT_VERSION
     from route_artifacts import write_normalized_route_artifacts
 
@@ -204,6 +208,13 @@ def main() -> int:
     cumulative_expansions = existing_expansions + expansion_rows
     write_tsv(expansion_path, expansion_fields, cumulative_expansions)
 
+    coverage_rows, coverage_summary = build_ligand_route_coverage(output_bundle)
+    coverage_path = output_bundle / "mechanism_ligand_route_coverage.tsv.gz"
+    write_ligand_route_coverage(coverage_path, coverage_rows)
+    (output_bundle / "ligand_route_coverage_summary.json").write_text(
+        json.dumps(coverage_summary, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
+
     audit_path = output_bundle / "full_signaling_chain_audit.json"
     if audit_path.exists():
         audit_summary = json.loads(audit_path.read_text(encoding="utf-8"))
@@ -224,8 +235,10 @@ def main() -> int:
     metadata["release_id"] = release_id
     metadata.setdefault("files", {})["literature_expansion"] = "mechanism_literature_expansion.tsv"
     metadata.setdefault("files", {})["signaling_route_evidence"] = "mechanism_signaling_route_evidence.tsv.gz"
+    metadata.setdefault("files", {})["ligand_route_coverage"] = "mechanism_ligand_route_coverage.tsv.gz"
     metadata.setdefault("counts", {})["literature_expansion"] = len(cumulative_expansions)
     metadata.setdefault("counts", {})["signaling_route_evidence"] = len(existing_routes) + len(route_rows)
+    metadata.setdefault("counts", {})["ligand_route_coverage"] = len(coverage_rows)
     metadata.setdefault("graph_policy", {})["literature_expansion_is_evidence_layer_only"] = True
     statement = (
         "Selective primary-literature expansion adds source-linked route annotations for mSCS plausibility analysis; "
@@ -239,6 +252,12 @@ def main() -> int:
     )
     if graph_linked_statement not in metadata.setdefault("accuracy_contract", []):
         metadata["accuracy_contract"].append(graph_linked_statement)
+    coverage_statement = (
+        "The all-ligand route-coverage index is a derived evidence-layer summary; it does not assign confidence, "
+        "authorize causal traversal, or create graph edges."
+    )
+    if coverage_statement not in metadata.setdefault("accuracy_contract", []):
+        metadata["accuracy_contract"].append(coverage_statement)
     metadata_path.write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
 
     summary = {
@@ -252,6 +271,7 @@ def main() -> int:
         **normalized_counts,
         "route_tier_counts": dict(sorted(Counter(row["route_tier"] for row in expansion_rows).items())),
         "primary_locators": sorted({row["primary_locator"] for row in expansion_rows}),
+        "ligand_route_coverage": coverage_summary,
         "graph_edges_changed": False,
         "causal_edges_created": False,
         "confidence_scores_created": False,
