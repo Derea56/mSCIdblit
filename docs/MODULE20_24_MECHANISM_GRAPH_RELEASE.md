@@ -1,17 +1,32 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.258.md`](RELEASE_v1.9.258.md). Earlier snapshots, including
-v1.9.149 and the v1.8.x series, are retained as implementation and historical
-baseline references.
+[`RELEASE_v1.9.259.md`](RELEASE_v1.9.259.md). Earlier snapshots, including
+v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
+historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-23-component-promotion-381`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-wnt3a-canonical-routes-382`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion381/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion382/`.
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
-The current bundle has 11,988 nodes, 14,801 traversable edges, 17,242 linked
+## Current v1.9.259 snapshot
+
+The current bundle contains 11,988 nodes, 14,801 traversable edges, 17,242
+linked source rows, 17,406 node-role assignments, 10,960 pathway summaries,
+and 96 boundary groups. It retains 341,033 evidence-route records and 7,365
+literature-expansion annotations, including 1,355 explicit
+`ligand>receptor>intracellular>TF>target_gene_expression` records. The
+normalized route artifacts contain 1,311,270 route nodes and 1,287,907 route
+edges. This release adds 15 WNT3A routes across FZD2, FZD4, FZD5, FZD7, and
+FZD10 branches with MYC, CCND1, and CDKN1A outputs. All route annotations are
+evidence-only; missing handoffs remain explicit and no graph edges or database
+confidence scores are created.
+
+## Historical evolution through v1.9.258
+
+The v1.9.258 bundle had 11,988 nodes, 14,801 traversable edges, 17,242 linked
 source rows, 17,406 node-role assignments, 10,960 pathway summaries, and 96
 boundary groups. The full-chain audit reports 141 evidence-backed edge-chain
 instances and 95 unique four-node topologies. The route-evidence layer retains
