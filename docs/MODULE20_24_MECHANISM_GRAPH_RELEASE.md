@@ -1,13 +1,13 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.243.md`](RELEASE_v1.9.243.md). Earlier snapshots, including
+[`RELEASE_v1.9.244.md`](RELEASE_v1.9.244.md). Earlier snapshots, including
 v1.9.149 and the v1.8.x series, are retained as implementation and historical
 baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-23-all-ligand-source-linked-366`
+Current release identifier: `module20_24_mechanism_graph:2026-09-23-all-ligand-target-promotions-367`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion366/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion367/`.
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
@@ -19,9 +19,9 @@ instances and 95 unique four-node topologies. The route-evidence layer retains
 categories; it remains evidence-only so mSCS can evaluate plausibility and
 confidence using cell context. This release retains the 313,750
 graph-supported compositions across 1,413 exact ligand–receptor edges and
-retains 5,878 literature-expansion route annotations across 1,868 ligand labels,
+retains 5,939 literature-expansion route annotations across 1,868 ligand labels,
 including 5,318 newly exposed source-linked routes covering 1,844 ligands and
-3,085 ligand–receptor edges. These include 24 additional explicit
+3,085 ligand–receptor edges. These include 61 additional explicit
 `ligand>receptor>intracellular>TF>target_gene_expression` records and preserve
 unresolved `????` layers in partial routes. The import is restricted to records
 with known ligand and receptor fields, valid current graph references, source
@@ -45,7 +45,7 @@ with the SMAD3-to-SMAD3/4 handoff explicitly unresolved. These rows
 do not create graph edges, causal assertions,
 or database confidence scores. The
 normalized route companion tables now expose ordered route nodes and route
-edges for all 339,546 routes, including explicit missing-link rows and
+edges for all 339,607 routes, including explicit missing-link rows and
 separate output-observation edges. They allow shared intermediates such as
 MYD88 to be indexed across ligands and outputs for downstream perturbation
 analysis in mSCS. The normalized tables are compressed TSV artifacts; Parquet
