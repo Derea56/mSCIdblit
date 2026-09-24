@@ -36,6 +36,16 @@ def split_values(value: str) -> list[str]:
     return [part.strip() for part in value.split(";") if part.strip()]
 
 
+def next_expansion_ordinal(expansions: list[dict[str, str]], prefix: str) -> int:
+    values = [
+        int(row["expansion_id"][len(prefix):])
+        for row in expansions
+        if row.get("expansion_id", "").startswith(prefix)
+        and row["expansion_id"][len(prefix):].isdigit()
+    ]
+    return max(values, default=0) + 1
+
+
 def join_unique(*values: str) -> str:
     result: list[str] = []
     seen: set[str] = set()
@@ -180,6 +190,7 @@ def make_rows(bundle: Path) -> tuple[list[dict[str, str]], dict[str, int]]:
 
     rows: list[dict[str, str]] = []
     generated: set[tuple[str, ...]] = set()
+    expansion_ordinal = next_expansion_ordinal(expansions, "M21B-LITEXP-COMPONENTPROMO-")
     skipped = {"no_relay_template": 0, "no_tf_template": 0, "duplicate_signature": 0, "missing_primary_locator": 0, "missing_source_linkage": 0}
     for partial in [row for row in expansions if row.get("path_expression") in {PARTIAL_TF_PATH, PARTIAL_BOTH_PATH}]:
         if not partial.get("primary_locator"):
@@ -208,7 +219,16 @@ def make_rows(bundle: Path) -> tuple[list[dict[str, str]], dict[str, int]]:
                 skipped["duplicate_signature"] += 1
                 continue
             generated.add(signature)
-            rows.append(make_row(partial, relay_template, tf_template, edges, downstream_evidence, len(rows) + 1))
+            rows.append(
+                make_row(
+                    partial,
+                    relay_template,
+                    tf_template,
+                    edges,
+                    downstream_evidence,
+                    expansion_ordinal + len(rows),
+                )
+            )
     return rows, skipped
 
 
