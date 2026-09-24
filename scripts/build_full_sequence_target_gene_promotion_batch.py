@@ -59,6 +59,65 @@ def target_output_label(label: str) -> str:
     return label if label.casefold().endswith((" expression", " gene")) else f"{label} expression"
 
 
+def is_target_gene_label(label: str) -> bool:
+    """Reject named programs/readouts from the target-gene route tier."""
+
+    value = label.casefold().strip()
+    if not value:
+        return False
+    non_gene_markers = (
+        "program",
+        "readout",
+        "output",
+        "response",
+        "assay",
+        "signaling",
+        "activation",
+        "phosphorylation",
+        "phenotype",
+        "cellular function",
+        "proliferation",
+        "differentiation",
+        "migration",
+        "recruitment",
+        "survival",
+    )
+    if any(marker in value for marker in non_gene_markers):
+        return False
+    if any(marker in value for marker in ("gene", "mrna", "promoter", "expression")):
+        return True
+    return bool(re.fullmatch(r"[a-z][a-z0-9/_.-]{1,30}", value))
+
+
+def eligible_ligand_input(label: str, roles: set[str]) -> bool:
+    """Keep biological ligand nodes out of receptor-tail alias promotion."""
+
+    value = label.casefold()
+    excluded_markers = (
+        "receptor",
+        "complex",
+        "site-set",
+        " py",
+        "itsm",
+        "itim",
+        "hem itam",
+        "tir domain",
+        "slc6a",
+        "gp130",
+        "ralpha",
+        "rbeta",
+        "rgamma",
+    )
+    return (
+        "ligand" in roles
+        and "receptor" not in roles
+        and "transcription_factor" not in roles
+        and "target_gene" not in roles
+        and not any(marker in value for marker in excluded_markers)
+        and value not in {"yap1", "wwtr1/taz", "ctnnb1-beta-catenin"}
+    )
+
+
 def matching_edge(
     candidate_ids: str,
     fallback_id: str,
@@ -83,6 +142,9 @@ def main() -> int:
     queue_rows = read_tsv(bundle / "mechanism_full_sequence_curation_queue.tsv.gz")
     downstream_queue = {row["queue_id"]: row for row in read_tsv(bundle / "mechanism_downstream_curation_queue.tsv")}
     downstream_evidence = {row["record_id"]: row for row in read_tsv(bundle / "mechanism_downstream_evidence_records.tsv")}
+    node_roles: dict[str, set[str]] = {}
+    for row in read_tsv(bundle / "mechanism_node_roles.tsv"):
+        node_roles.setdefault(row["node_id"], set()).add(row["role"])
     existing_expansions = read_tsv(bundle / "mechanism_literature_expansion.tsv")
     existing_signatures = {
         (
@@ -97,7 +159,13 @@ def main() -> int:
     }
 
     rows: list[dict[str, str]] = []
-    skipped = {"missing_required_layer": 0, "target_label_mismatch": 0, "already_present": 0, "missing_route_source": 0}
+    skipped = {
+        "missing_required_layer": 0,
+        "ineligible_ligand": 0,
+        "target_label_mismatch": 0,
+        "already_present": 0,
+        "missing_route_source": 0,
+    }
     for queue_row in queue_rows:
         required = (
             queue_row.get("ligand_node_id", ""),
@@ -113,6 +181,11 @@ def main() -> int:
             queue_row.get("stable_primary_locators", ""),
         )
         if not all(required):
+            continue
+        if not eligible_ligand_input(
+            queue_row["ligand_label"], node_roles.get(queue_row["ligand_node_id"], set())
+        ):
+            skipped["ineligible_ligand"] += 1
             continue
         target_ids = split_values(queue_row["target_gene_node_ids"])
         target_labels = split_values(queue_row["target_gene_labels"])
@@ -136,6 +209,9 @@ def main() -> int:
 
         for target_id, target_label in zip(target_ids, target_labels):
             if target_id not in nodes:
+                skipped["target_label_mismatch"] += 1
+                continue
+            if not is_target_gene_label(target_label):
                 skipped["target_label_mismatch"] += 1
                 continue
             target_route = next(

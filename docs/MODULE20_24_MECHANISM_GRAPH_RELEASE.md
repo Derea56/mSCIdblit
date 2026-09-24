@@ -1,32 +1,48 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.304.md`](RELEASE_v1.9.304.md). Earlier snapshots, including
+[`RELEASE_v1.9.305.md`](RELEASE_v1.9.305.md). Earlier snapshots, including
 v1.9.262, v1.9.261, v1.9.260,
 v1.9.259, v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
 historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-24-source-linked-501`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-all-ligand-full-sequence-504`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion501/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion504/`.
 
-The current snapshot is documented in [`RELEASE_v1.9.304.md`](RELEASE_v1.9.304.md).
+The current snapshot is documented in [`RELEASE_v1.9.305.md`](RELEASE_v1.9.305.md).
 It contains the machine-readable full-chain audit, generalized evidence-route
-layer, public-LR evidence supplement, and mSCS coverage report.
+layer, public-LR evidence supplement, mSCS coverage report, and the all-ligand
+full-sequence curation tranche.
 
-## Current v1.9.304 snapshot
+## Current v1.9.305 snapshot
 
 The current bundle contains 11,988 nodes, 14,831 traversable edges, 15,107
 linked source rows, 17,406 node-role assignments, 10,973 pathway summaries,
-and 96 boundary groups. It retains 588,266 evidence-route records and 22,152
+and 96 boundary groups. It retains 588,967 evidence-route records and 22,853
 literature-expansion annotations. The normalized route artifacts contain
-2,464,067 route nodes and 2,271,981 route edges. This release adds five
-source-linked full-sequence evidence compositions for HGF (cleaved two-chain
-form)→MET→GAB1→STAT3→TWIST1, all anchored to the shared primary source queue
-and PMID:15218027. It preserves the all-ligand curation queue at 15,427
-deduplicated candidates. The routes remain evidence-only and are intended for
-mSCS confidence evaluation; no causal assertions or database confidence scores
-are created.
+2,467,553 route nodes and 2,274,767 route edges. This release adds 701 audited
+full-sequence evidence-route annotations across 48 ligand labels, combining
+source-linked intracellular, transcription-factor, and target-gene evidence
+where available. It preserves 15,449 deduplicated full-sequence curation
+candidates across 1,862 ligand labels and 1,633 receptor labels. Named
+transcriptional programs and generic readouts were retained outside the
+target-gene tier rather than being mislabeled as genes. The routes remain
+evidence-only and are intended for mSCS confidence evaluation; no causal
+assertions or database confidence scores are created.
+
+The all-ligand tranche is a conservative evidence-layer expansion. It does
+not promote receptor aliases or intracellular component labels to ligand
+inputs, and it does not turn unresolved intracellular-to-TF or TF-to-target
+handoffs into graph edges. Stable source locators and route limitations remain
+attached to the exported annotations for downstream review.
+
+## Previous v1.9.304 snapshot
+
+The previous snapshot added five source-linked full-sequence evidence
+compositions for HGF (cleaved two-chain form)→MET→GAB1→STAT3→TWIST1 and
+retained 588,266 evidence-route records, 22,152 literature-expansion
+annotations, and a 15,427-candidate curation queue.
 
 The source-linked compositions retain the HGF/MET/GAB1/STAT3/TWIST1 layer
 identities while keeping intracellular-to-TF and TF-to-target handoffs
