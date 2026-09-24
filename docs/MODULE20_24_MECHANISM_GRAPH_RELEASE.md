@@ -1,26 +1,28 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.263.md`](RELEASE_v1.9.263.md). Earlier snapshots, including
+[`RELEASE_v1.9.264.md`](RELEASE_v1.9.264.md). Earlier snapshots, including
 v1.9.262, v1.9.261, v1.9.260,
 v1.9.259, v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
 historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-24-il21-stat3-routes-386`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-il33-il18-routes-387`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion386/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion387/`.
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
-## Current v1.9.263 snapshot
+## Current v1.9.264 snapshot
 
 The current bundle contains 11,988 nodes, 14,801 traversable edges, 17,242
 linked source rows, 17,406 node-role assignments, 10,960 pathway summaries,
-and 96 boundary groups. It retains 341,041 evidence-route records and 7,373
-literature-expansion annotations, including 1,363 explicit
+and 96 boundary groups. It retains 341,044 evidence-route records and 7,376
+literature-expansion annotations, including 1,366 explicit
 `ligand>receptor>intracellular>TF>target_gene_expression` records. The
-normalized route artifacts contain 1,311,310 route nodes and 1,287,939 route
-edges. This release carries 15 WNT3A routes across FZD2, FZD4, FZD5, FZD7, and
+normalized route artifacts contain 1,311,325 route nodes and 1,287,951 route
+edges. This release adds two IL-33/MYD88/STAT3 target-gene routes and one
+IL-18/MYD88/STAT4/IFNG route while preserving the unresolved receptor-to-relay
+and relay-to-TF handoffs. It carries forward the 15 WNT3A routes across FZD2, FZD4, FZD5, FZD7, and
 FZD10 branches with MYC, CCND1, and CDKN1A outputs and adds two VIP/VPAC2
 routes ending in Per1 and IL6, plus two PACAP/PAC1 routes ending in Bdnf
 promoter IV through parallel GNAS and GNAQ/GNA11 receptor-proximal branches.
