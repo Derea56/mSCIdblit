@@ -1,31 +1,42 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.275.md`](RELEASE_v1.9.275.md). Earlier snapshots, including
+[`RELEASE_v1.9.276.md`](RELEASE_v1.9.276.md). Earlier snapshots, including
 v1.9.262, v1.9.261, v1.9.260,
 v1.9.259, v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
 historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-24-next-all-ligand-primary-routes-415`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-high-yield-primary-routes-417`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion415/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion417/`.
 
-The current snapshot is documented in [`RELEASE_v1.9.275.md`](RELEASE_v1.9.275.md).
+The current snapshot is documented in [`RELEASE_v1.9.276.md`](RELEASE_v1.9.276.md).
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
-## Current v1.9.275 snapshot
+## Current v1.9.276 snapshot
 
 The current bundle contains 11,988 nodes, 14,831 traversable edges, 15,107
 linked source rows, 17,406 node-role assignments, 10,973 pathway summaries,
-and 96 boundary groups. It retains 579,039 evidence-route records and 12,925
+and 96 boundary groups. It retains 579,045 evidence-route records and 12,931
 literature-expansion annotations. The normalized route artifacts contain
-2,421,410 route nodes and 2,238,535 route edges. This release adds four
-primary-literature route annotations relative to v1.9.274 and raises the
-materialized full-route count to 6,308. The all-ligand curation queue contains
-15,316 deduplicated candidates. The routes remain evidence-only and are
-intended for mSCS confidence evaluation; no causal assertions or database
-confidence scores are created.
+2,421,440 route nodes and 2,238,559 route edges. This release adds six
+primary-literature route annotations relative to v1.9.275 and raises the
+all-ligand curation queue to 15,321 deduplicated candidates. The routes remain
+evidence-only and are intended for mSCS confidence evaluation; no causal
+assertions or database confidence scores are created.
+
+The six additions cover IL-27/STAT1/STAT3 transcriptional outputs, IL-17A
+ACT1/NF-kB-associated DEFB4 and CCL20 outputs, HBEGF/EGFR/ERK/EGR1/CYP24A1,
+and PDGFA/PDGFRA/ERK/ELK1/EGR1. Where the graph does not contain a matching
+handoff, the route records retain that missing layer rather than promoting a
+composed literature interpretation into a graph edge.
+
+## Previous v1.9.275 snapshot
+
+The previous snapshot added four bounded primary-literature route annotations
+for FGF2, LPA, VEGFA, and norepinephrine. It contained 12,925
+literature-expansion annotations and a 15,316-candidate curation queue.
 
 ## Previous v1.9.270 snapshot
 
