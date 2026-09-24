@@ -1,38 +1,43 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.280.md`](RELEASE_v1.9.280.md). Earlier snapshots, including
+[`RELEASE_v1.9.281.md`](RELEASE_v1.9.281.md). Earlier snapshots, including
 v1.9.262, v1.9.261, v1.9.260,
 v1.9.259, v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
 historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-24-pairwise-source-overlap-queue-425`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-pairwise-full-output-queue-429`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion425/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion429/`.
 
-The current snapshot is documented in [`RELEASE_v1.9.280.md`](RELEASE_v1.9.280.md).
+The current snapshot is documented in [`RELEASE_v1.9.281.md`](RELEASE_v1.9.281.md).
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
-## Current v1.9.280 snapshot
+## Current v1.9.281 snapshot
 
 The current bundle contains 11,988 nodes, 14,831 traversable edges, 15,107
 linked source rows, 17,406 node-role assignments, 10,973 pathway summaries,
-and 96 boundary groups. It retains 587,704 evidence-route records and 21,590
+and 96 boundary groups. It retains 587,741 evidence-route records and 21,627
 literature-expansion annotations. The normalized route artifacts contain
-2,461,314 route nodes and 2,269,776 route edges. This release adds 72
-pairwise-source-overlap composed full-sequence annotations across 12 ligand
-labels and preserves the all-ligand curation queue at 15,388 deduplicated
-candidates. The routes remain evidence-only and are intended for mSCS
-confidence evaluation; no causal assertions or database confidence scores are
-created.
+2,461,495 route nodes and 2,269,920 route edges. This release adds 37
+full-output composed routes across three ligand labels and preserves the
+all-ligand curation queue at 15,388 deduplicated candidates. The routes remain
+evidence-only and are intended for mSCS confidence evaluation; no causal
+assertions or database confidence scores are created.
 
-The new tranche requires at least one shared public locator between source-
-linked relay, TF, and target-gene component pairs. Two-pair and one-pair
-overlap tiers are retained separately so mSCS can evaluate their relative
-plausibility. The component evidence is preserved and intracellular-to-TF or
-TF-to-target handoffs remain unasserted unless an existing graph edge supports
-them.
+The new tranche retains full intracellular-to-TF sequences ending in measured
+outputs without asserting a target-gene edge. Shared-source and pairwise
+source-overlap tiers remain separate so mSCS can evaluate their relative
+plausibility. The component evidence is preserved and intracellular-to-TF
+handoffs remain unasserted unless an existing graph edge supports them.
+
+## Previous v1.9.280 snapshot
+
+The previous snapshot added 72 pairwise-source-overlap composed full-sequence
+annotations across 12 ligand labels. It contained 587,704 evidence-route
+records, 21,590 literature-expansion annotations, and a 15,388-candidate
+curation queue.
 
 ## Previous v1.9.279 snapshot
 
