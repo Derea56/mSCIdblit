@@ -28,6 +28,10 @@ except ImportError:  # pragma: no cover - direct script execution
 
 ROLE_REPAIRS = {
     "NODE02454": "CREB1/CREB",
+    "NODE00609": "AP-1",
+    "NODE02456": "CREB1/CREB pS133 in mouse bone-marrow-derived mast cells",
+    "NODE03137": "EGR1",
+    "NODE06343": "LEF1",
     "NODE04692": "HIF-1 (HIF1A/ARNT) complex",
     "NODE05712": "ISGF3 (STAT1-STAT2-IRF9) complex",
     "NODE06054": "JUN-ATF2 complex",
@@ -36,12 +40,29 @@ ROLE_REPAIRS = {
     "NODE07976": "NF-kappaB RelA/c-Rel-containing complex",
     "NODE08035": "NFKB p65/p50 complex",
     "NODE10709": "STAT1 and STAT3 cooperative promoter factors",
+    "NODE07994": "NF-kB/ATF2/AML1/AP-1 transcription factor program",
+    "NODE10705": "STAT1",
+    "NODE10719": "STAT1/STAT3/STAT5",
+    "NODE10725": "STAT2",
+    "NODE10918": "TCF7L2 transcriptional complex",
 }
 
-ROLE_SOURCE = "role_repair_direct_transcription_edge"
+ROLE_REPAIR_EVIDENCE_EDGE_IDS = {
+    "NODE00609": ("M22B-E000001", "M22B-E000002", "M22B-E000003"),
+    "NODE02456": ("M21B-E011501",),
+    "NODE03137": ("M21B-E010881",),
+    "NODE06343": ("M21B-E007531", "M21B-E008147", "M21B-E008155"),
+    "NODE07994": ("M21B-E008907",),
+    "NODE10719": ("M21B-E000244",),
+    "NODE10725": ("M21B-E001045", "M21B-E010840"),
+    "NODE10918": ("M21B-E000053",),
+}
+
+ROLE_SOURCE = "role_repair_route_tf_evidence"
 ROLE_EVIDENCE = (
     "Node is used in an existing route transcription_factor_node_id field and "
-    "has an evidence-gated transcription-like mechanism edge; role repair only."
+    "has an evidence-gated TF, transcriptional-complex, or pathway record; "
+    "role repair only."
 )
 
 
@@ -91,6 +112,7 @@ def main() -> int:
     direct_edge_ids: dict[str, list[str]] = {node_id: [] for node_id in ROLE_REPAIRS}
     for row in edge_rows:
         source_id = row.get("source_node_id", "")
+        target_id = row.get("target_node_id", "")
         pathway = row.get("pathway_name", "").casefold()
         relation = row.get("relation_type", "").casefold()
         if source_id in direct_edge_ids and (
@@ -99,6 +121,21 @@ def main() -> int:
             or relation in {"activates", "represses", "induces_target_gene"}
         ):
             direct_edge_ids[source_id].append(row["edge_id"])
+        elif target_id in direct_edge_ids and (
+            "transcription" in pathway
+            or "target_gene" in pathway
+            or relation in {"activates", "represses", "induces_target_gene", "forms complex with", "binds_receptor"}
+        ):
+            # Some exported TF nodes are the target of a reviewed
+            # transcriptional-complex or pathway edge rather than the source
+            # of a terminal target-gene edge. This supports semantic role
+            # repair only; it does not create or promote a route edge.
+            direct_edge_ids[target_id].append(row["edge_id"])
+        for node_id, evidence_edge_ids in ROLE_REPAIR_EVIDENCE_EDGE_IDS.items():
+            if row["edge_id"] in evidence_edge_ids:
+                direct_edge_ids[node_id].append(row["edge_id"])
+    for node_id in direct_edge_ids:
+        direct_edge_ids[node_id] = list(dict.fromkeys(direct_edge_ids[node_id]))
 
     added: list[dict[str, str]] = []
     for node_id, expected_label in ROLE_REPAIRS.items():
@@ -133,7 +170,11 @@ def main() -> int:
     metadata["release_id"] = args.release_id
     metadata.setdefault("files", {})["mechanism_node_roles"] = "mechanism_node_roles.tsv"
     metadata.setdefault("files", {})["ligand_route_coverage"] = "mechanism_ligand_route_coverage.tsv.gz"
-    metadata.setdefault("counts", {})["node_roles"] = len(role_rows) + len(added)
+    final_role_rows = role_rows + added
+    metadata.setdefault("counts", {})["node_roles"] = len(final_role_rows)
+    metadata.setdefault("counts", {})["nodes_with_transcription_factor_role"] = len(
+        {row["node_id"] for row in final_role_rows if row.get("role") == "transcription_factor"}
+    )
     metadata.setdefault("counts", {})["ligand_route_coverage"] = len(coverage_rows)
     metadata.setdefault("graph_policy", {})["transcription_factor_role_repairs_are_evidence_layer_only"] = True
     statement = (
@@ -150,7 +191,9 @@ def main() -> int:
         "release_id": args.release_id,
         "role_repairs_added": len(added),
         "role_repair_nodes": [row["node_id"] for row in added],
-        "direct_transcription_edge_counts": {node_id: len(edge_ids) for node_id, edge_ids in sorted(direct_edge_ids.items())},
+        "role_repair_evidence_edge_counts": {
+            node_id: len(edge_ids) for node_id, edge_ids in sorted(direct_edge_ids.items())
+        },
         "coverage": coverage_summary,
         "graph_edges_changed": False,
         "route_evidence_rows_changed": False,
