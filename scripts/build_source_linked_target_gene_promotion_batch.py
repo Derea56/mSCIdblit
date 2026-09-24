@@ -57,6 +57,16 @@ def target_output_label(label: str) -> str:
     return label if label.casefold().endswith((" expression", " gene")) else f"{label} expression"
 
 
+def next_expansion_ordinal(expansions: list[dict[str, str]], prefix: str) -> int:
+    values = [
+        int(row["expansion_id"][len(prefix):])
+        for row in expansions
+        if row.get("expansion_id", "").startswith(prefix)
+        and row["expansion_id"][len(prefix):].isdigit()
+    ]
+    return max(values, default=0) + 1
+
+
 def matching_edge(
     candidate_ids: str,
     fallback_id: str,
@@ -84,7 +94,7 @@ def route_shape(queue_row: dict[str, str]) -> tuple[str, str, str, str]:
     if has_intracellular:
         return (
             "ligand>receptor>intracellular>????>target_gene_expression",
-            "ligand_receptor_intracellular_target_missing_tf",
+            "ligand_receptor_intracellular_output_missing_tf",
             "ligand|receptor|intracellular_continuation|target_gene_expression",
             "transcription_factor|intracellular_to_tf_edge",
         )
@@ -128,6 +138,10 @@ def main() -> int:
 
     rows: list[dict[str, str]] = []
     generated_signatures: set[tuple[str, ...]] = set()
+    expansion_ordinal = next_expansion_ordinal(
+        existing_expansions,
+        "M21B-LITEXP-TARGETPROMO-ALL-",
+    )
     skipped = {
         "missing_required_fields": 0,
         "target_label_mismatch": 0,
@@ -263,7 +277,7 @@ def main() -> int:
             )
             rows.append(
                 {
-                    "expansion_id": f"M21B-LITEXP-TARGETPROMO-ALL-{len(rows) + 1:04d}",
+                    "expansion_id": f"M21B-LITEXP-TARGETPROMO-ALL-{expansion_ordinal + len(rows):04d}",
                     "source_queue_id": target_route.get("source_queue_id", ""),
                     "route_status": "retained_evidence_route",
                     "path_expression": path_expression,
