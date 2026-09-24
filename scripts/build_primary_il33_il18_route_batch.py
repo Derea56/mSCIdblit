@@ -112,7 +112,7 @@ def unique_join(values: list[str]) -> str:
     return "; ".join(result)
 
 
-def make_rows(bundle: Path) -> list[dict[str, str]]:
+def make_rows(bundle: Path, only: set[str] | None = None) -> list[dict[str, str]]:
     nodes = {row["node_id"]: row for row in read_tsv(bundle / "mechanism_nodes.tsv")}
     edges = {row["edge_id"]: row for row in read_tsv(bundle / "mechanism_edges.tsv")}
     source_by_edge: dict[str, list[dict[str, str]]] = {}
@@ -121,6 +121,8 @@ def make_rows(bundle: Path) -> list[dict[str, str]]:
 
     rows: list[dict[str, str]] = []
     for route in ROUTES:
+        if only and route["name"] not in only:
+            continue
         required = [
             route["ligand_node_id"],
             route["receptor_node_id"],
@@ -229,8 +231,9 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--bundle", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--only", action="append", help="Route name to emit; may be repeated")
     args = parser.parse_args()
-    rows = make_rows(args.bundle.resolve())
+    rows = make_rows(args.bundle.resolve(), set(args.only or []))
     args.output.write_text(json.dumps(rows, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"rows": len(rows), "output": str(args.output)}, sort_keys=True))
     return 0

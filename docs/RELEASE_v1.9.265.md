@@ -1,5 +1,7 @@
 # mSCIdblit release v1.9.265
 
+> Superseded by corrected release [v1.9.266](RELEASE_v1.9.266.md) before mSCS import because the v388 batch re-emitted carried-forward route IDs.
+
 Release date: 2026-09-24
 
 Graph identifier: `module20_24_mechanism_graph:2026-09-24-il1a-il33-il18-routes-388`
