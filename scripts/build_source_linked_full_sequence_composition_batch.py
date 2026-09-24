@@ -94,6 +94,33 @@ def route_key(row: dict[str, str]) -> tuple[str, str, str]:
     return row.get("ligand_node_id", ""), row.get("receptor_node_id", ""), row.get("source_queue_id", "")
 
 
+def unique_layer_rows(
+    rows: list[dict[str, str]], identity_field: str
+) -> list[dict[str, str]]:
+    """Keep one deterministic evidence row per asserted layer identity.
+
+    The normalized route table can contain many records for the same source
+    queue and node identity because independent graph compositions point to
+    the same relay, TF, or target.  Composing every record would create a
+    Cartesian product of duplicate observations.  The route identity is the
+    node sequence, so one stable representative per layer identity is enough;
+    its evidence fields remain auditable in the resulting row.
+    """
+    selected: dict[str, dict[str, str]] = {}
+    for row in sorted(
+        rows,
+        key=lambda value: (
+            value.get(identity_field, ""),
+            value.get("output_label", ""),
+            value.get("route_evidence_id", ""),
+        ),
+    ):
+        identity = row.get(identity_field, "")
+        if identity and identity not in selected:
+            selected[identity] = row
+    return [selected[key] for key in sorted(selected)]
+
+
 def source_locators(
     row: dict[str, str], records: dict[str, dict[str, str]]
 ) -> str:
@@ -267,10 +294,11 @@ def make_rows(bundle: Path) -> tuple[list[dict[str, str]], dict[str, int]]:
     rows: list[dict[str, str]] = []
     generated: set[tuple[str, ...]] = set()
     skipped = {"no_complete_shared_source": 0, "existing_signature": 0, "duplicate_signature": 0}
+    next_id = next_ordinal(expansions)
     for key in sorted(set(relay_by_key) & set(tf_by_key) & set(target_by_key)):
-        relays = sorted(relay_by_key[key], key=lambda row: (row.get("intracellular_continuation_node_id", ""), row.get("route_evidence_id", "")))
-        tfs = sorted(tf_by_key[key], key=lambda row: (row.get("transcription_factor_node_id", ""), row.get("route_evidence_id", "")))
-        targets = sorted(target_by_key[key], key=lambda row: (row.get("target_gene_node_id", ""), row.get("output_label", ""), row.get("route_evidence_id", "")))
+        relays = unique_layer_rows(relay_by_key[key], "intracellular_continuation_node_id")
+        tfs = unique_layer_rows(tf_by_key[key], "transcription_factor_node_id")
+        targets = unique_layer_rows(target_by_key[key], "target_gene_node_id")
         for relay in relays:
             for tf in tfs:
                 for target in targets:
@@ -286,7 +314,7 @@ def make_rows(bundle: Path) -> tuple[list[dict[str, str]], dict[str, int]]:
                         skipped["duplicate_signature"] += 1
                         continue
                     generated.add(signature)
-                    rows.append(make_row(target, relay, tf, records, edges, len(rows) + 1))
+                    rows.append(make_row(target, relay, tf, records, edges, next_id + len(rows)))
     if not rows:
         raise ValueError("No source-linked full-sequence compositions found")
     return rows, skipped
