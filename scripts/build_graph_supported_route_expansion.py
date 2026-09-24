@@ -120,6 +120,13 @@ def join_unique(*values: str) -> str:
 
 
 def is_ligand_receptor(edge: dict[str, str], roles: dict[str, set[str]]) -> bool:
+    source_label = edge.get("source_label", "").casefold()
+    # Some pathway-register rows carry the ligand/receptor evidence layer even
+    # though their source is already a receptor complex or a receptor-tail
+    # signaling component.  Those rows must remain graph edges, but cannot be
+    # used as the ligand input of an L>R route.
+    if any(token in source_label for token in ("receptor", "complex", "site-set", " pY".casefold())):
+        return False
     return (
         edge.get("relation_type") == "binds_receptor"
         and "ligand" in roles[edge.get("source_node_id", "")]
@@ -235,7 +242,17 @@ def build_row(
             ),
             "transcription_factor_node_id": tf_id if tf_edge or tf_output else "",
             "transcription_factor_label": tf_label if tf_edge or tf_output else "",
-            "tf_target_edge_id": tf_output.get("edge_id", "") if tf_output and tf_output.get("relation_type") in TARGET_RELATIONS else "",
+            # Target-gene register rows use several relation labels (for
+            # example ``activates``) even when the target node is explicitly
+            # typed as a target gene.  Preserve that direct edge identifier
+            # whenever the output is target-gene evidence; mSCS can evaluate
+            # the relation semantics separately.
+            "tf_target_edge_id": (
+                output.get("edge_id", "")
+                if (tf_edge or tf_output)
+                and (output.get("relation_type") in TARGET_RELATIONS or is_target_output(output, roles))
+                else ""
+            ),
             "target_gene_node_id": target_id,
             "target_gene_label": target_label,
             "output_node_id": output.get("target_node_id", ""),
@@ -306,6 +323,26 @@ def compose_graph_routes(rows: list[dict[str, str]], bundle: Path) -> tuple[list
             evidence_common = values if evidence_common is None else evidence_common & values
         if evidence_common:
             return sorted(evidence_common)[0]
+        return ""
+
+    def compatible_tf_output_anchor(
+        base_edges: tuple[dict[str, str], ...], output: dict[str, str]
+    ) -> str:
+        """Allow an explicit TF identity to bridge TF-specific output labels.
+
+        Target-gene registers are commonly named ``STAT3-SOCS3`` or
+        ``STAT5-CISH`` rather than repeating the upstream ligand/receptor
+        pathway anchor.  Once the preceding route is explicit and the output
+        edge starts at the same TF node, that identity is a sufficient
+        linkage for evidence-route enumeration.  It does not promote the
+        route to causality or assign a confidence score.
+        """
+        anchor = compatible_anchor(*base_edges, output)
+        if anchor:
+            return anchor
+        tf_node_id = base_edges[-1].get("target_node_id", "") if base_edges else ""
+        if tf_node_id and output.get("source_node_id", "") == tf_node_id and is_output_edge(output):
+            return f"tf_output:{tf_node_id}"
         return ""
 
     def compatible_edges(
@@ -430,7 +467,7 @@ def compose_graph_routes(rows: list[dict[str, str]], bundle: Path) -> tuple[list
         for receptor_tf in receptor_tf_edges:
             tf_outputs = [edge for edge in edge_by_source.get(receptor_tf.get("target_node_id", ""), []) if is_output_edge(edge)]
             for output in tf_outputs:
-                anchor = compatible_anchor(lr, receptor_tf, output)
+                anchor = compatible_tf_output_anchor((lr, receptor_tf), output)
                 if not anchor:
                     continue
                 target = is_target_output(output, roles)
@@ -443,7 +480,7 @@ def compose_graph_routes(rows: list[dict[str, str]], bundle: Path) -> tuple[list
                     "lr_receptor_tf_output",
                 )
                 for relay in relays:
-                    anchor = compatible_anchor(lr, relay, receptor_tf, output)
+                    anchor = compatible_tf_output_anchor((lr, relay, receptor_tf), output)
                     if not anchor:
                         continue
                     target = is_target_output(output, roles)
@@ -467,7 +504,7 @@ def compose_graph_routes(rows: list[dict[str, str]], bundle: Path) -> tuple[list
                     if is_output_edge(edge)
                 ]
                 for output in tf_outputs:
-                    anchor = compatible_anchor(lr, relay, intracellular_tf, output)
+                    anchor = compatible_tf_output_anchor((lr, relay, intracellular_tf), output)
                     if not anchor:
                         continue
                     target = is_target_output(output, roles)
@@ -598,7 +635,20 @@ def main() -> int:
     metadata_path = output / "bundle_metadata.json"
     metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
     metadata["release_id"] = args.release_id
-    metadata.setdefault("counts", {})["signaling_route_evidence"] = len(all_rows)
+    metadata_counts = metadata.setdefault("counts", {})
+    metadata_counts["signaling_route_evidence"] = len(all_rows)
+    # A fresh graph export does not carry the route-queue counts because those
+    # artifacts are materialized by the route-release layer.  Recompute them
+    # from the copied artifacts so the validator can audit the bundle without
+    # relying on counts from the previous release.
+    for count_name, filename in (
+        ("downstream_curation_queue", "mechanism_downstream_curation_queue.tsv"),
+        ("downstream_evidence_records", "mechanism_downstream_evidence_records.tsv"),
+        ("full_sequence_curation_queue", "mechanism_full_sequence_curation_queue.tsv.gz"),
+    ):
+        artifact = output / filename
+        if artifact.exists():
+            metadata_counts[count_name] = len(read_tsv(artifact))
     metadata.setdefault("graph_policy", {})["graph_supported_route_composition_is_evidence_layer_only"] = True
     statement = (
         "Graph-supported route compositions require an exact exported ligand-receptor edge plus "
