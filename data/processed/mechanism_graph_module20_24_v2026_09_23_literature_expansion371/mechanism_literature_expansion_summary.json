@@ -1,0 +1,25 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 6391,
+  "literature_expansion_rows_added": 6,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion371",
+  "primary_locators": [
+    "PMID:20534510; PMCID:PMC2895058; PMID:8657151; PMID:12600988; PMID:10391677",
+    "PMID:20534510; PMCID:PMC2895058; PMID:8657151; PMID:12600988; PMID:34144039; PMCID:PMC8259415",
+    "PMID:20534510; PMCID:PMC2895058; PMID:8657151; PMID:12600988; PMID:7678051",
+    "PMID:20534510; PMCID:PMC2895058; PMID:8657151; PMID:12600988; PMID:7689724; PMID:9507012",
+    "PMID:20534510; PMCID:PMC2895058; PMID:8657151; PMID:12600988; PMID:7691811; PMID:7688466; PMID:10318871",
+    "PMID:20534510; PMCID:PMC2895058; PMID:8657151; PMID:12600988; PMID:7935391; PMCID:PMC359202"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-23-pdgfb-stat3-fos-371",
+  "route_edges": 1284110,
+  "route_evidence_rows_after": 340059,
+  "route_evidence_rows_before": 340053,
+  "route_nodes": 1306499,
+  "route_tier_counts": {
+    "ligand_receptor_intracellular_tf_target_missing_direct_tf_edges": 6
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion370"
+}
