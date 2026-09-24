@@ -1,27 +1,27 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.267.md`](RELEASE_v1.9.267.md). Earlier snapshots, including
+[`RELEASE_v1.9.268.md`](RELEASE_v1.9.268.md). Earlier snapshots, including
 v1.9.262, v1.9.261, v1.9.260,
 v1.9.259, v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
 historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-24-il17b-il36-cxcl1-routes-390`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-il20-stat3-routes-391`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion390/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion391/`.
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
-## Current v1.9.267 snapshot
+## Current v1.9.268 snapshot
 
 The current bundle contains 11,988 nodes, 14,801 traversable edges, 17,242
 linked source rows, 17,406 node-role assignments, 10,960 pathway summaries,
-and 96 boundary groups. It retains 341,049 evidence-route records and 7,381
+and 96 boundary groups. It retains 341,053 evidence-route records and 7,385
 literature-expansion annotations, including 1,368 explicit
 `ligand>receptor>intracellular>TF>target_gene_expression` records. The
-normalized route artifacts contain 1,311,347 route nodes and 1,287,968 route
-edges. This release adds one IL-17B/NFKB/CXCL1 route and three IL-36/NFKB/CXCL1
-routes while preserving the unresolved intracellular handoffs. It carries
+normalized route artifacts contain 1,311,363 route nodes and 1,287,980 route
+edges. This release adds four IL-20/STAT3 target-gene routes while preserving
+the unresolved intracellular handoffs. It carries
 forward the
 15 WNT3A routes across FZD2, FZD4, FZD5, FZD7, and
 FZD10 branches with MYC, CCND1, and CDKN1A outputs and adds two VIP/VPAC2
