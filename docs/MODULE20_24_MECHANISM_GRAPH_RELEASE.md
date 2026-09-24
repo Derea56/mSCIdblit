@@ -1,31 +1,33 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.261.md`](RELEASE_v1.9.261.md). Earlier snapshots, including
-v1.9.260,
+[`RELEASE_v1.9.262.md`](RELEASE_v1.9.262.md). Earlier snapshots, including
+v1.9.261, v1.9.260,
 v1.9.259, v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
 historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-24-pacap-pac1-routes-384`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-il15-jak-stat5-routes-385`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion384/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion385/`.
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
-## Current v1.9.261 snapshot
+## Current v1.9.262 snapshot
 
 The current bundle contains 11,988 nodes, 14,801 traversable edges, 17,242
 linked source rows, 17,406 node-role assignments, 10,960 pathway summaries,
-and 96 boundary groups. It retains 341,037 evidence-route records and 7,369
-literature-expansion annotations, including 1,359 explicit
+and 96 boundary groups. It retains 341,039 evidence-route records and 7,371
+literature-expansion annotations, including 1,361 explicit
 `ligand>receptor>intracellular>TF>target_gene_expression` records. The
-normalized route artifacts contain 1,311,290 route nodes and 1,287,923 route
+normalized route artifacts contain 1,311,300 route nodes and 1,287,931 route
 edges. This release carries 15 WNT3A routes across FZD2, FZD4, FZD5, FZD7, and
 FZD10 branches with MYC, CCND1, and CDKN1A outputs and adds two VIP/VPAC2
 routes ending in Per1 and IL6, plus two PACAP/PAC1 routes ending in Bdnf
 promoter IV through parallel GNAS and GNAQ/GNA11 receptor-proximal branches.
-All route annotations are evidence-only; missing handoffs remain explicit and
-no graph edges or database confidence scores are created.
+It also adds two IL-15 routes through parallel JAK1 and JAK3 branches to
+STAT5-associated Il17A regulation. All route annotations are evidence-only;
+missing handoffs remain explicit and no graph edges or database confidence
+scores are created.
 
 ## Historical evolution through v1.9.258
 
