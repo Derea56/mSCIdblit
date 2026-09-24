@@ -1,31 +1,31 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.273.md`](RELEASE_v1.9.273.md). Earlier snapshots, including
+[`RELEASE_v1.9.274.md`](RELEASE_v1.9.274.md). Earlier snapshots, including
 v1.9.262, v1.9.261, v1.9.260,
 v1.9.259, v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
 historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-24-all-ligand-full-intermediate-second-pass-408`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-all-ligand-shared-route-full-sequence-410`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion408/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion410/`.
 
-The current snapshot is documented in [`RELEASE_v1.9.273.md`](RELEASE_v1.9.273.md).
+The current snapshot is documented in [`RELEASE_v1.9.274.md`](RELEASE_v1.9.274.md).
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
-## Current v1.9.273 snapshot
+## Current v1.9.274 snapshot
 
 The current bundle contains 11,988 nodes, 14,831 traversable edges, 15,107
 linked source rows, 17,406 node-role assignments, 10,973 pathway summaries,
-and 96 boundary groups. It retains 576,659 evidence-route records and 10,545
+and 96 boundary groups. It retains 579,035 evidence-route records and 12,921
 literature-expansion annotations. The normalized route artifacts contain
-2,409,529 route nodes and 2,229,034 route edges. This release adds 2,390
-source-linked annotations relative to v1.9.272, including 2,125 full
-intermediate route compositions across 50 ligand labels. The all-ligand
-curation queue contains 15,313 deduplicated candidates. The routes remain
-evidence-only and are intended for mSCS confidence evaluation; no causal
-assertions or database confidence scores are created.
+2,421,394 route nodes and 2,238,523 route edges. This release adds 2,376
+shared-anchor full-intermediate route compositions relative to v1.9.273 and
+raises the materialized full-route count to 6,307. The all-ligand curation
+queue contains 15,313 deduplicated candidates. The routes remain evidence-only
+and are intended for mSCS confidence evaluation; no causal assertions or
+database confidence scores are created.
 
 ## Previous v1.9.270 snapshot
 
