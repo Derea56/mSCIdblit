@@ -1,13 +1,13 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.246.md`](RELEASE_v1.9.246.md). Earlier snapshots, including
+[`RELEASE_v1.9.247.md`](RELEASE_v1.9.247.md). Earlier snapshots, including
 v1.9.149 and the v1.8.x series, are retained as implementation and historical
 baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-23-bdnf-creb-arc-369`
+Current release identifier: `module20_24_mechanism_graph:2026-09-23-gh-jak2-stat5-cish-370`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion369/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion370/`.
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
@@ -15,14 +15,16 @@ The current bundle has 11,988 nodes, 14,801 traversable edges, 17,242 linked
 source rows, 17,406 node-role assignments, 10,960 pathway summaries, and 96
 boundary groups. The full-chain audit reports 141 evidence-backed edge-chain
 instances and 95 unique four-node topologies. The route-evidence layer retains
-340,051 records across entry, output, intracellular, TF, and combined route
+340,053 records across entry, output, intracellular, TF, and combined route
 categories; it remains evidence-only so mSCS can evaluate plausibility and
 confidence using cell context. This release retains the 313,750
 graph-supported compositions across 1,413 exact ligand–receptor edges and
-retains 6,383 literature-expansion route annotations across 1,868 ligand labels,
+retains 6,385 literature-expansion route annotations across 1,868 ligand labels,
 including 5,318 previously exposed source-linked routes, 441 newly promoted
 source-linked target-gene route components across 44 ligand labels, and three
 BDNF–TrkB–relay–CREB–Arc route alternatives. The prior
+GH/GHR–JAK2–STAT5–Cish routes now cover both the GH1 and historical growth-hormone
+ligand labels. The prior
 61 explicit `ligand>receptor>intracellular>TF>target_gene_expression` records
 remain, and the new routes preserve unresolved `????` layers rather than
 inventing intracellular or TF links. The import is restricted to records
@@ -47,7 +49,7 @@ with the SMAD3-to-SMAD3/4 handoff explicitly unresolved. These rows
 do not create graph edges, causal assertions,
 or database confidence scores. The
 normalized route companion tables now expose ordered route nodes and route
-edges for all 340,051 routes, including explicit missing-link rows and
+edges for all 340,053 routes, including explicit missing-link rows and
 separate output-observation edges. They allow shared intermediates such as
 MYD88 to be indexed across ligands and outputs for downstream perturbation
 analysis in mSCS. The normalized tables are compressed TSV artifacts; Parquet
