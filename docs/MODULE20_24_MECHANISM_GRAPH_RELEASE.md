@@ -1,35 +1,42 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.291.md`](RELEASE_v1.9.291.md). Earlier snapshots, including
+[`RELEASE_v1.9.292.md`](RELEASE_v1.9.292.md). Earlier snapshots, including
 v1.9.262, v1.9.261, v1.9.260,
 v1.9.259, v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
 historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-24-wnt5a-noncanonical-gap-462`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-cntf-stat3-gap-465`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion462/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion465/`.
 
-The current snapshot is documented in [`RELEASE_v1.9.291.md`](RELEASE_v1.9.291.md).
+The current snapshot is documented in [`RELEASE_v1.9.292.md`](RELEASE_v1.9.292.md).
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
-## Current v1.9.291 snapshot
+## Current v1.9.292 snapshot
 
 The current bundle contains 11,988 nodes, 14,831 traversable edges, 15,107
 linked source rows, 17,406 node-role assignments, 10,973 pathway summaries,
-and 96 boundary groups. It retains 588,224 evidence-route records and 22,110
+and 96 boundary groups. It retains 588,226 evidence-route records and 22,112
 literature-expansion annotations. The normalized route artifacts contain
-2,463,857 route nodes and 2,271,811 route edges. This release adds one
-primary-literature evidence route for WNT5A across the ROR2→JNK/AP-1 branch
-and preserves the all-ligand curation queue at 15,415 deduplicated candidates.
-The routes remain evidence-only and are intended for mSCS confidence
-evaluation; no causal assertions or database confidence scores are created.
+2,463,867 route nodes and 2,271,819 route edges. This release adds two
+primary-literature evidence routes for CNTF across the CNTFR-alpha/gp130/LIFR→
+JAK/STAT3 branch and preserves the all-ligand curation queue at 15,416
+deduplicated candidates. The routes remain evidence-only and are intended for
+mSCS confidence evaluation; no causal assertions or database confidence scores
+are created.
 
-The new tranche retains WNT5A→ROR2→kinase-relay→AP-1→MMP13 functional-output
-evidence. The MMP13 target-gene node is unresolved in the current graph, so the
-route remains an output route; receptor-to-relay and target-gene handoffs remain
-unasserted unless an existing graph edge supports them.
+The new tranche retains CNTF→JAK/STAT3→SOCS3 and CNTF→JAK/STAT3→CXCL10
+target-gene evidence. Receptor-to-relay, relay-to-STAT3, and STAT3-to-target
+handoffs remain unasserted unless an existing graph edge supports them.
+
+## Previous v1.9.291 snapshot
+
+The previous snapshot added one primary-literature evidence route for
+WNT5A→ROR2→JNK/AP-1 with MMP13 expression as a functional output. It contained
+588,224 evidence-route records, 22,110 literature-expansion annotations, and a
+15,415-candidate curation queue.
 
 ## Previous v1.9.290 snapshot
 
