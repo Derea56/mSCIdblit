@@ -157,9 +157,6 @@ def make_rows(bundle: Path) -> list[dict[str, str]]:
                             alias_row["receptor_node_id"],
                             relay_node_id,
                         )
-                    if not relay_edge_id:
-                        relay_node_id = ""
-                        relay_label = ""
 
                 tf_node_id = template["transcription_factor_node_id"]
                 target_node_id = template["target_gene_node_id"]
@@ -176,6 +173,10 @@ def make_rows(bundle: Path) -> list[dict[str, str]]:
                     continue
                 generated_signatures.add(signature)
 
+                # The canonical route supplies a source-supported relay
+                # identity even when the alias receptor has no exact current
+                # graph edge to that relay.  Keep the node in the evidence
+                # route and carry the missing edge explicitly below.
                 full = bool(relay_node_id)
                 path_expression = (
                     "ligand>receptor>intracellular>TF>target_gene_expression"
@@ -191,14 +192,18 @@ def make_rows(bundle: Path) -> list[dict[str, str]]:
                 missing_layers = ""
                 if not full:
                     missing_layers = "intracellular_continuation|intracellular_to_tf_edge"
-                elif not template.get("intracellular_tf_edge_id"):
-                    missing_layers = "intracellular_to_tf_edge"
+                elif not relay_edge_id:
+                    missing_layers = "receptor_to_intracellular_edge"
+                if full and not template.get("intracellular_tf_edge_id"):
+                    missing_layers = join_unique(missing_layers, "intracellular_to_tf_edge")
+                elif not full:
+                    missing_layers = join_unique(missing_layers, "intracellular_to_tf_edge")
                 if not tf_target_edge_id:
                     missing_layers = join_unique(missing_layers, "tf_to_target_edge")
 
                 row = dict(template)
                 row.update({
-                    "expansion_id": f"M21B-LITEXP-ALIAS-{normalize(alias_label).upper()}-{len(rows) + 1:04d}",
+                    "expansion_id": f"M21B-LITEXP-ALIASFULL-{normalize(alias_label).upper()}-{len(rows) + 1:04d}",
                     "source_queue_id": alias_row["source_queue_id"],
                     "ligand_node_id": alias_row["ligand_node_id"],
                     "ligand_label": alias_label,

@@ -1,0 +1,13 @@
+{
+  "affected_graph_edges": 1267,
+  "bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_21_literature_expansion262",
+  "causal_routes_created": false,
+  "confidence_scores_created": false,
+  "integrated_source_rows": 2165,
+  "integrated_supplement_rows": 2165,
+  "ledger": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/public_database_comparison_v2/candidate_triage_v1/review_resolution_ledger.tsv",
+  "ledger_rows": 7737,
+  "new_graph_edges": 0,
+  "skipped_integrated_disposition_without_primary_locator": 2935,
+  "skipped_primary_rows_without_current_graph_match": 238
+}
