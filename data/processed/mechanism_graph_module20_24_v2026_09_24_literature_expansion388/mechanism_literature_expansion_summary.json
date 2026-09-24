@@ -1,0 +1,23 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 7380,
+  "literature_expansion_rows_added": 4,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion388",
+  "primary_locators": [
+    "PMID:29099095; PMCID:PMC5704190; PMID:19836339; PMCID:PMC2766095; PMID:17675517; DOI:10.1073/pnas.1308651110; PMCID:PMC3773798; PMID:17623648; PMID:23980170; PMID:10903771; DOI:10.4049/jimmunol.165.3.1612; PMID:32103032; PMCID:PMC7044202; DOI:10.1038/s41598-020-60089-0; PMID:18802081; DOI:10.4049/jimmunol.181.7.4780",
+    "PMID:30333314; PMCID:PMC6237443; PMID:19836339; PMCID:PMC2766095; PMID:17675517; DOI:10.1073/pnas.1308651110; PMCID:PMC3773798; PMID:17623648; PMID:23980170; PMID:17572495; PMCID:PMC5578655; PMID:32103032; PMCID:PMC7044202; DOI:10.1038/s41598-020-60089-0; PMID:18802081; DOI:10.4049/jimmunol.181.7.4780",
+    "PMID:9792649; PMID:10229825; PMCID:PMC4275594; PMID:25261253; PMID:25500532; PMID:24415943; PMCID:PMC3886902; PMID:9697844",
+    "PMID:9820540; PMID:11416133; PMID:11594800; PMID:8134378; PMCID:PMC201562; PMCID:PMC43343; DOI:10.1006/cyto.2001.0946; PMID:11518704; PMID:12538665"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-24-il1a-il33-il18-routes-388",
+  "route_edges": 1287967,
+  "route_evidence_rows_after": 341048,
+  "route_evidence_rows_before": 341044,
+  "route_nodes": 1311345,
+  "route_tier_counts": {
+    "ligand_receptor_intracellular_tf_target_missing_direct_tf_edges": 4
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion387"
+}

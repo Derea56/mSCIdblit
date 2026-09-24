@@ -17,6 +17,25 @@ from pathlib import Path
 
 ROUTES = (
     {
+        "name": "IL1A-IL6",
+        "ligand_node_id": "NODE05362",
+        "ligand_label": "IL1A",
+        "lr_edge_id": "M21B-E001765",
+        "receptor_node_id": "NODE05380",
+        "receptor_label": "IL1R1-IL1RAP receptor complex",
+        "relay_edge_id": "M21B-E000023",
+        "supporting_edge_ids": [],
+        "relay_node_id": "NODE07611",
+        "relay_label": "MYD88",
+        "tf_node_id": "NODE09694",
+        "tf_label": "RELA",
+        "tf_target_edge_id": "M21B-E008632",
+        "direct_output_edge_id": "M21B-E008919",
+        "prefix": "M21B-LITEXP-IL1A-MYD88-RELA-IL6",
+        "locators": "PMID:9820540; PMID:11416133; PMID:11594800; PMID:8134378",
+        "summary": "Primary-linked evidence supports IL-1A engagement of the IL1R1-IL1RAP receptor complex, receptor-associated MYD88, and IL1A-associated IL6 expression; the route retains the existing RELA-to-IL6 graph edge while leaving the MYD88-to-RELA handoff unresolved.",
+    },
+    {
         "name": "IL33-IL10",
         "ligand_node_id": "NODE05467",
         "ligand_label": "IL33",
