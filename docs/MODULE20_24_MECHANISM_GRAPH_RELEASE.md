@@ -1,38 +1,42 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.297.md`](RELEASE_v1.9.297.md). Earlier snapshots, including
+[`RELEASE_v1.9.298.md`](RELEASE_v1.9.298.md). Earlier snapshots, including
 v1.9.262, v1.9.261, v1.9.260,
 v1.9.259, v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
 historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-24-norepi-adrb2-creb-480`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-csf1-erk-elk1-483`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion480/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion483/`.
 
-The current snapshot is documented in [`RELEASE_v1.9.297.md`](RELEASE_v1.9.297.md).
+The current snapshot is documented in [`RELEASE_v1.9.298.md`](RELEASE_v1.9.298.md).
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
-## Current v1.9.297 snapshot
+## Current v1.9.298 snapshot
 
 The current bundle contains 11,988 nodes, 14,831 traversable edges, 15,107
 linked source rows, 17,406 node-role assignments, 10,973 pathway summaries,
-and 96 boundary groups. It retains 588,244 evidence-route records and 22,130
+and 96 boundary groups. It retains 588,245 evidence-route records and 22,131
 literature-expansion annotations. The normalized route artifacts contain
-2,463,957 route nodes and 2,271,891 route edges. This release adds two
-primary-literature evidence routes for norepinephrine→ADRB2→GNAS/CREB→BDNF
-exon-specific transcript outputs and preserves the all-ligand curation queue at
-15,419 deduplicated candidates. The routes remain evidence-only and are
-intended for mSCS confidence evaluation; no causal assertions or database
-confidence scores are created.
+2,463,962 route nodes and 2,271,895 route edges. This release adds one
+primary-literature evidence route for CSF1→CSF1R/c-Fms→MEK/ERK→Elk-1→c-Fos
+and preserves the all-ligand curation queue at 15,419 deduplicated candidates.
+The routes remain evidence-only and are intended for mSCS confidence
+evaluation; no causal assertions or database confidence scores are created.
 
-The new tranche retains norepinephrine/ADRB2 and ADRB2-Gs/GNAS graph anchors
-and maps primary astrocyte evidence for BDNF exon IV and exon VI mRNA outputs.
-The beta2 contribution is not treated as exclusive, and the receptor-to-CREB
-and CREB-to-output handoffs remain unasserted. Alternative CREB-associated
-mechanisms reported in the primary literature remain represented in the route
-evidence rather than collapsed into a single causal chain.
+The new tranche retains the existing CSF1/CSF1R and CSF1R-to-MEK/ERK graph
+anchors and maps primary c-Fos transcription and Elk-1 activation evidence.
+Receptor-to-ERK, ERK-to-Elk-1, and Elk-1-to-c-Fos handoffs remain unasserted.
+The norepinephrine/ADRB2 tranche from v1.9.297 remains in the source bundle.
+
+## Previous v1.9.297 snapshot
+
+The previous snapshot added two primary-literature evidence routes for
+norepinephrine→ADRB2→GNAS/CREB→BDNF exon-specific transcript outputs and
+retained 588,244 evidence-route records, 22,130 literature-expansion
+annotations, and a 15,419-candidate curation queue.
 
 ## Previous v1.9.296 snapshot
 
