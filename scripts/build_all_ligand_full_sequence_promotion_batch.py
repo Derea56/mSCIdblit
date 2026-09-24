@@ -20,6 +20,8 @@ import tempfile
 from collections import defaultdict
 from pathlib import Path
 
+from build_full_sequence_target_gene_promotion_batch import is_target_gene_label
+
 
 SIGNATURE_FIELDS = (
     "ligand_node_id",
@@ -40,6 +42,11 @@ MERGE_FIELDS = (
 NO_ROWS_MARKERS = (
     "No eligible full-intermediate queue records found",
     "No source-linked full-sequence compositions found",
+    "No shared-route full-sequence compositions found",
+    "No pairwise source-overlap full-sequence compositions found",
+    "No source-linked component promotions found",
+    "No eligible source-linked target-gene routes found",
+    "No source-linked missing-intermediate routes found",
     "No eligible source-linked target routes found",
     "No eligible route candidates found",
 )
@@ -78,7 +85,13 @@ def prefix_and_number(expansion_id: str) -> tuple[str, int] | None:
 
 def run_generator(script: Path, bundle: Path, temp_dir: Path) -> list[dict[str, str]]:
     output = temp_dir / f"{script.stem}.json"
-    if script.name in {"build_full_sequence_target_gene_promotion_batch.py", "build_source_linked_component_promotion_batch.py", "build_source_linked_target_gene_promotion_batch.py"}:
+    if script.name in {
+        "build_full_sequence_target_gene_promotion_batch.py",
+        "build_source_linked_component_promotion_batch.py",
+        "build_source_linked_target_gene_promotion_batch.py",
+        "build_source_linked_full_sequence_composition_batch.py",
+        "build_pairwise_source_overlap_full_sequence_batch.py",
+    }:
         command = [sys.executable, str(script), "--bundle", str(bundle), "--output", str(output)]
     else:
         command = [sys.executable, str(script), "--bundle-dir", str(bundle), "--output", str(output)]
@@ -120,6 +133,8 @@ def main() -> int:
     seen_signatures = {signature(row) for row in existing}
 
     generator_names = (
+        "build_source_linked_full_sequence_composition_batch.py",
+        "build_pairwise_source_overlap_full_sequence_batch.py",
         "build_full_sequence_target_gene_promotion_batch.py",
         "build_source_linked_component_promotion_batch.py",
         "build_source_linked_target_gene_promotion_batch.py",
@@ -128,12 +143,16 @@ def main() -> int:
     )
     generated: list[dict[str, str]] = []
     generator_counts: dict[str, int] = {}
+    filtered_counts: defaultdict[str, int] = defaultdict(int)
     with tempfile.TemporaryDirectory(prefix="mSCIdblit_full_sequence_") as temp_name:
         temp_dir = Path(temp_name)
         for name in generator_names:
             rows = run_generator(Path(__file__).with_name(name), bundle, temp_dir)
             generator_counts[name] = len(rows)
             for row in rows:
+                if row.get("target_gene_node_id") and not is_target_gene_label(row.get("target_gene_label", "")):
+                    filtered_counts["non_gene_target_label"] += 1
+                    continue
                 key = signature(row)
                 if key in seen_signatures:
                     existing_match = next((item for item in generated if signature(item) == key), None)
@@ -151,6 +170,7 @@ def main() -> int:
         "rows": len(generated),
         "ligands": len({row.get("ligand_label", "") for row in generated}),
         "generator_counts": generator_counts,
+        "filtered_counts": dict(filtered_counts),
     }, sort_keys=True))
     return 0
 

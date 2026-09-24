@@ -84,7 +84,9 @@ def is_target_gene_label(label: str) -> bool:
     )
     if any(marker in value for marker in non_gene_markers):
         return False
-    if any(marker in value for marker in ("gene", "mrna", "promoter", "expression")):
+    if any(marker in value for marker in ("gene", "mrna", "promoter", "expression", "target enhancer")):
+        return True
+    if re.fullmatch(r"[a-z][a-z0-9_.-]{1,30}(?:\s*\([a-z0-9_.-]{1,30}\))?", value):
         return True
     return bool(re.fullmatch(r"[a-z][a-z0-9/_.-]{1,30}", value))
 
