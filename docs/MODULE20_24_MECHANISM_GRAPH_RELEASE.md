@@ -1,35 +1,42 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.302.md`](RELEASE_v1.9.302.md). Earlier snapshots, including
+[`RELEASE_v1.9.303.md`](RELEASE_v1.9.303.md). Earlier snapshots, including
 v1.9.262, v1.9.261, v1.9.260,
 v1.9.259, v1.9.258, v1.9.149, and the v1.8.x series, are retained as implementation and
 historical baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-24-il33-st2-495`
+Current release identifier: `module20_24_mechanism_graph:2026-09-24-il18-myd88-498`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion495/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion498/`.
 
-The current snapshot is documented in [`RELEASE_v1.9.302.md`](RELEASE_v1.9.302.md).
+The current snapshot is documented in [`RELEASE_v1.9.303.md`](RELEASE_v1.9.303.md).
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
-## Current v1.9.302 snapshot
+## Current v1.9.303 snapshot
 
 The current bundle contains 11,988 nodes, 14,831 traversable edges, 15,107
 linked source rows, 17,406 node-role assignments, 10,973 pathway summaries,
-and 96 boundary groups. It retains 588,259 evidence-route records and 22,145
+and 96 boundary groups. It retains 588,261 evidence-route records and 22,147
 literature-expansion annotations. The normalized route artifacts contain
-2,464,032 route nodes and 2,271,953 route edges. This release adds three
-primary-literature evidence routes for IL-33→ST2/IL1RAP signaling to IL-5 and
-IL-13 protein outputs and ERK/CREB-associated GZMC mRNA, and preserves the
-all-ligand curation queue at 15,422 deduplicated candidates. The routes remain
+2,464,042 route nodes and 2,271,961 route edges. This release adds two
+primary-literature evidence routes for IL-18→IL18R1/IL18RAP→MyD88→NF-κB to
+IFN-γ protein and IFNG-transcription outputs, and preserves the all-ligand
+curation queue at 15,423 deduplicated candidates. The routes remain
 evidence-only and are intended for mSCS confidence evaluation; no causal
 assertions or database confidence scores are created.
 
-The new tranche maps IL-33/ST2 evidence to measured ILC2 cytokine outputs and
-to a mast-cell GZMC transcript output. The intracellular-to-TF handoffs remain
-unasserted, and protein outputs are kept distinct from target-gene expression.
+The new tranche maps IL-18 receptor/MyD88 evidence to distinct IFN-γ protein and
+transcriptional outputs in IL-12-stimulated NK cells. The intracellular-to-TF
+and TF-to-output handoffs remain unasserted.
+
+## Previous v1.9.302 snapshot
+
+The previous snapshot added three primary-literature evidence routes for
+IL-33→ST2/IL1RAP signaling to IL-5 and IL-13 protein outputs and ERK/CREB-
+associated GZMC mRNA, retaining 588,259 evidence-route records, 22,145
+literature-expansion annotations, and a 15,422-candidate curation queue.
 
 ## Previous v1.9.301 snapshot
 
