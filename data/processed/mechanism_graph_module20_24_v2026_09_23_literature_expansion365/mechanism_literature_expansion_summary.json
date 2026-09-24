@@ -1,0 +1,23 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "literature_expansion_rows": 560,
+  "literature_expansion_rows_added": 4,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion365",
+  "primary_locators": [
+    "PMID:20207738; PMID:11262418; PMID:11850637; PMID:1700790; PMID:19339207; PMID:40011426; PMID:7693660; PMID:8940041; PMCID:PMC1170167; PMID:9311995; DOI:10.1093/emboj/16.17.5353; https://europepmc.org/articles/PMC1170167?pdf=render; PMID:10022869; PMCID:PMC83975; DOI:10.1128/MCB.19.3.1821",
+    "PMID:20207738; PMID:11262418; PMID:11850637; PMID:1700790; PMID:19339207; PMID:40011426; PMID:7693660; PMID:8940041; PMCID:PMC1170167; PMID:9311995; DOI:10.1093/emboj/16.17.5353; https://europepmc.org/articles/PMC1170167?pdf=render; PMID:10092624; DOI:10.1074/jbc.274.14.9431",
+    "PMID:20207738; PMID:11262418; PMID:11850637; PMID:1700790; PMID:19339207; PMID:40011426; PMID:7693660; PMID:8940041; PMCID:PMC1170167; PMID:9311995; DOI:10.1093/emboj/16.17.5353; https://europepmc.org/articles/PMC1170167?pdf=render; PMID:18314002; PMCID:PMC2430079; DOI:10.1016/j.bone.2008.01.006; PMID:19210343; DOI:10.1111/j.1600-0765.2008.01093.x",
+    "PMID:20207738; PMID:11262418; PMID:11850637; PMID:1700790; PMID:19339207; PMID:40011426; PMID:7693660; PMID:8940041; PMCID:PMC1170167; PMID:9311995; DOI:10.1093/emboj/16.17.5353; https://europepmc.org/articles/PMC1170167?pdf=render; PMID:9886263; DOI:10.1046/j.1523-1747.1999.00477.x"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-23-all-ligand-output-linked-365",
+  "route_edges": 1276042,
+  "route_evidence_rows_after": 334228,
+  "route_evidence_rows_before": 334224,
+  "route_nodes": 1293192,
+  "route_tier_counts": {
+    "ligand_receptor_intracellular_tf_target_missing_direct_tf_edges": 4
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion364"
+}

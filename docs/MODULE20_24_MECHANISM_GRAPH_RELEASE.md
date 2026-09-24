@@ -1,13 +1,13 @@
 # Module 20B–24B mechanism graph release reference
 
 The current release is documented in
-[`RELEASE_v1.9.241.md`](RELEASE_v1.9.241.md). Earlier snapshots, including
+[`RELEASE_v1.9.242.md`](RELEASE_v1.9.242.md). Earlier snapshots, including
 v1.9.149 and the v1.8.x series, are retained as implementation and historical
 baseline references.
 
-Current release identifier: `module20_24_mechanism_graph:2026-09-23-all-ligand-output-linked-364`
+Current release identifier: `module20_24_mechanism_graph:2026-09-23-all-ligand-output-linked-365`
 
-Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion364/`.
+Current bundle: `data/processed/mechanism_graph_module20_24_v2026_09_23_literature_expansion365/`.
 It contains the machine-readable full-chain audit, generalized evidence-route
 layer, public-LR evidence supplement, and mSCS coverage report.
 
@@ -15,11 +15,11 @@ The current bundle has 11,988 nodes, 14,801 traversable edges, 17,242 linked
 source rows, 17,406 node-role assignments, 10,960 pathway summaries, and 96
 boundary groups. The full-chain audit reports 141 evidence-backed edge-chain
 instances and 95 unique four-node topologies. The route-evidence layer retains
-334,224 records across entry, output, intracellular, TF, and combined route
+334,228 records across entry, output, intracellular, TF, and combined route
 categories; it remains evidence-only so mSCS can evaluate plausibility and
 confidence using cell context. This release retains the 313,750
 graph-supported compositions across 1,413 exact ligand–receptor edges and
-retains 556 literature-expansion route annotations across the existing ligand labels,
+retains 560 literature-expansion route annotations across the existing ligand labels,
 including the IL1B TF-family-supported routes, expanded cytokine/JAK/STAT and
 Notch/BMP/RTK routes, receptor aliases, and composite intracellular relays.
 IL1B coverage now includes explicit primary-supported NF-kappaB-family target
@@ -31,11 +31,13 @@ the IL1R1/IL1RAP → MYD88 → IRAK4 → IRAK1 → TRAF6 → TAK1 → NF-kappaB 
 with ICAM1, IL6, CCL20, and CXCL1 transcriptional outputs. Exact intracellular
 to TF relay edges remain explicitly unasserted; direct TF-to-target edges are
 retained where present. EGF now includes a bounded EGFR–SHC1/RAS/ERK–ELK1–EGR1
-evidence route with the SHC1-to-ELK1 handoff explicitly unresolved. These rows
+evidence route with the SHC1-to-ELK1 handoff explicitly unresolved. TGFB1 now
+includes bounded TGFBR–SMAD3/4 routes to COL1A2, CTGF/CCN2, JUN, and SERPINE1/PAI-1,
+with the SMAD3-to-SMAD3/4 handoff explicitly unresolved. These rows
 do not create graph edges, causal assertions,
 or database confidence scores. The
 normalized route companion tables now expose ordered route nodes and route
-edges for all 334,224 routes, including explicit missing-link rows and
+edges for all 334,228 routes, including explicit missing-link rows and
 separate output-observation edges. They allow shared intermediates such as
 MYD88 to be indexed across ligands and outputs for downstream perturbation
 analysis in mSCS. The normalized tables are compressed TSV artifacts; Parquet
