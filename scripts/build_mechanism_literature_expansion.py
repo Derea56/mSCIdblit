@@ -19,10 +19,14 @@ from pathlib import Path
 
 try:
     from .audit_full_signaling_chains import ROUTE_EVIDENCE_FIELDS
+    from .build_all_ligand_route_coverage import build as build_ligand_route_coverage
+    from .build_all_ligand_route_coverage import write_tsv_gz as write_ligand_route_coverage
     from .mechanism_evidence_contract import MECHANISM_EVIDENCE_CONTRACT_VERSION
     from .route_artifacts import write_normalized_route_artifacts
 except ImportError:  # pragma: no cover - direct script execution
     from audit_full_signaling_chains import ROUTE_EVIDENCE_FIELDS
+    from build_all_ligand_route_coverage import build as build_ligand_route_coverage
+    from build_all_ligand_route_coverage import write_tsv_gz as write_ligand_route_coverage
     from mechanism_evidence_contract import MECHANISM_EVIDENCE_CONTRACT_VERSION
     from route_artifacts import write_normalized_route_artifacts
 
@@ -60,6 +64,21 @@ def write_tsv(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) 
         writer.writerows({field: str(row.get(field, "")) for field in fieldnames} for row in rows)
 
 
+def write_tsv_gz(
+    path: Path,
+    fieldnames: list[str],
+    rows: list[dict[str, object]],
+    *,
+    append: bool = False,
+) -> None:
+    mode = "at" if append and path.exists() else "wt"
+    with gzip.open(path, mode, newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t", lineterminator="\n")
+        if mode == "wt":
+            writer.writeheader()
+        writer.writerows({field: str(row.get(field, "")) for field in fieldnames} for row in rows)
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", type=Path, default=DEFAULT_INPUT)
@@ -69,6 +88,16 @@ def parse_args() -> argparse.Namespace:
         "--release-id",
         default="",
         help="Release identifier; required when writing a non-default output bundle.",
+    )
+    parser.add_argument(
+        "--reuse-output-bundle",
+        action="store_true",
+        help="Reuse an already-created copy-on-write clone of the source bundle instead of copying it again.",
+    )
+    parser.add_argument(
+        "--incremental-output-bundle",
+        action="store_true",
+        help="Append to an existing copy-on-write output bundle and rewrite only derived route artifacts.",
     )
     return parser.parse_args()
 
@@ -153,9 +182,12 @@ def main() -> int:
     release_id = args.release_id or "module20_24_mechanism_graph:2026-09-16-literature-expansion-001"
     rows = read_input(args.input.resolve())
     validate_rows(rows, source_bundle)
-    if output_bundle.exists():
+    if output_bundle.exists() and not args.reuse_output_bundle:
         raise FileExistsError(f"Output bundle already exists: {output_bundle}")
-    shutil.copytree(source_bundle, output_bundle)
+    if args.incremental_output_bundle and not args.reuse_output_bundle:
+        raise ValueError("--incremental-output-bundle requires --reuse-output-bundle")
+    if not output_bundle.exists():
+        shutil.copytree(source_bundle, output_bundle)
 
     route_path = output_bundle / "mechanism_signaling_route_evidence.tsv"
     if not route_path.exists():
@@ -180,18 +212,18 @@ def main() -> int:
         expansion["route_evidence_id"] = route["route_evidence_id"]
         expansion_rows.append(expansion)
 
-    uncompressed_route_path = output_bundle / "mechanism_signaling_route_evidence.tsv"
-    write_tsv(uncompressed_route_path, ROUTE_EVIDENCE_FIELDS, existing_routes + route_rows)
-    compressed_route_path = uncompressed_route_path.with_suffix(uncompressed_route_path.suffix + ".gz")
-    with uncompressed_route_path.open("rb") as source, gzip.open(compressed_route_path, "wb") as target:
-        target.writelines(source)
-    uncompressed_route_path.unlink()
+    compressed_route_path = output_bundle / "mechanism_signaling_route_evidence.tsv.gz"
+    if args.incremental_output_bundle:
+        write_tsv_gz(compressed_route_path, ROUTE_EVIDENCE_FIELDS, route_rows, append=True)
+    else:
+        write_tsv_gz(compressed_route_path, ROUTE_EVIDENCE_FIELDS, existing_routes + route_rows)
     normalized_counts = write_normalized_route_artifacts(
         output_bundle,
-        existing_routes + route_rows,
+        route_rows if args.incremental_output_bundle else existing_routes + route_rows,
         read_tsv(output_bundle / "mechanism_nodes.tsv"),
         read_tsv(output_bundle / "mechanism_edges.tsv"),
         read_tsv(output_bundle / "mechanism_edge_sources.tsv"),
+        append=args.incremental_output_bundle,
     )
     expansion_path = output_bundle / "mechanism_literature_expansion.tsv"
     existing_expansions = read_tsv(expansion_path) if expansion_path.exists() else []
@@ -202,7 +234,25 @@ def main() -> int:
             if field not in expansion_fields:
                 expansion_fields.append(field)
     cumulative_expansions = existing_expansions + expansion_rows
-    write_tsv(expansion_path, expansion_fields, cumulative_expansions)
+    if args.incremental_output_bundle:
+        missing_existing_fields = sorted(set(expansion_rows[0]) - set(existing_expansions[0]))
+        if missing_existing_fields:
+            raise ValueError(
+                "Incremental expansion append requires existing columns for: "
+                f"{missing_existing_fields}"
+            )
+        with expansion_path.open("a", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(handle, fieldnames=expansion_fields, delimiter="\t", lineterminator="\n")
+            writer.writerows({field: str(row.get(field, "")) for field in expansion_fields} for row in expansion_rows)
+    else:
+        write_tsv(expansion_path, expansion_fields, cumulative_expansions)
+
+    coverage_rows, coverage_summary = build_ligand_route_coverage(output_bundle)
+    coverage_path = output_bundle / "mechanism_ligand_route_coverage.tsv.gz"
+    write_ligand_route_coverage(coverage_path, coverage_rows)
+    (output_bundle / "ligand_route_coverage_summary.json").write_text(
+        json.dumps(coverage_summary, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
 
     audit_path = output_bundle / "full_signaling_chain_audit.json"
     if audit_path.exists():
@@ -224,8 +274,10 @@ def main() -> int:
     metadata["release_id"] = release_id
     metadata.setdefault("files", {})["literature_expansion"] = "mechanism_literature_expansion.tsv"
     metadata.setdefault("files", {})["signaling_route_evidence"] = "mechanism_signaling_route_evidence.tsv.gz"
+    metadata.setdefault("files", {})["ligand_route_coverage"] = "mechanism_ligand_route_coverage.tsv.gz"
     metadata.setdefault("counts", {})["literature_expansion"] = len(cumulative_expansions)
     metadata.setdefault("counts", {})["signaling_route_evidence"] = len(existing_routes) + len(route_rows)
+    metadata.setdefault("counts", {})["ligand_route_coverage"] = len(coverage_rows)
     metadata.setdefault("graph_policy", {})["literature_expansion_is_evidence_layer_only"] = True
     statement = (
         "Selective primary-literature expansion adds source-linked route annotations for mSCS plausibility analysis; "
@@ -239,6 +291,12 @@ def main() -> int:
     )
     if graph_linked_statement not in metadata.setdefault("accuracy_contract", []):
         metadata["accuracy_contract"].append(graph_linked_statement)
+    coverage_statement = (
+        "The all-ligand route-coverage index is a derived evidence-layer summary; it does not assign confidence, "
+        "authorize causal traversal, or create graph edges."
+    )
+    if coverage_statement not in metadata.setdefault("accuracy_contract", []):
+        metadata["accuracy_contract"].append(coverage_statement)
     metadata_path.write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
 
     summary = {
@@ -252,6 +310,7 @@ def main() -> int:
         **normalized_counts,
         "route_tier_counts": dict(sorted(Counter(row["route_tier"] for row in expansion_rows).items())),
         "primary_locators": sorted({row["primary_locator"] for row in expansion_rows}),
+        "ligand_route_coverage": coverage_summary,
         "graph_edges_changed": False,
         "causal_edges_created": False,
         "confidence_scores_created": False,

@@ -1,0 +1,58 @@
+{
+  "confidence_scores_created": false,
+  "coverage": {
+    "confidence_or_causal_fields_created": false,
+    "coverage_rows": 2613,
+    "coverage_status_counts": {
+      "full_functional_output_route": 184,
+      "full_target_gene_route": 62,
+      "ligand_receptor_only": 808,
+      "partial_downstream_route": 1559
+    },
+    "rows_with_full_functional_output_route": 184,
+    "rows_with_full_target_gene_route": 62,
+    "rows_with_ligand_receptor_only": 808,
+    "rows_with_partial_downstream_route": 1559,
+    "semantic_role_filter": "ligand role required; receptor/TF/target-gene role overlap excluded from ligand input",
+    "source_literature_expansion_rows": 25686,
+    "source_route_evidence_rows": 591800
+  },
+  "graph_edges_changed": false,
+  "literature_expansion_rows_changed": false,
+  "output_bundle": "/private/tmp/mscidblit_role_repair524",
+  "release_id": "module20_24_mechanism_graph:2026-09-24-all-ligand-tf-role-repair-524",
+  "role_repair_evidence_edge_counts": {
+    "NODE00609": 3,
+    "NODE02454": 3,
+    "NODE02456": 1,
+    "NODE03137": 1,
+    "NODE04692": 28,
+    "NODE05712": 10,
+    "NODE06054": 1,
+    "NODE06343": 3,
+    "NODE07961": 2,
+    "NODE07969": 8,
+    "NODE07976": 2,
+    "NODE07994": 1,
+    "NODE08035": 2,
+    "NODE10705": 31,
+    "NODE10709": 2,
+    "NODE10719": 1,
+    "NODE10725": 4,
+    "NODE10918": 1
+  },
+  "role_repair_nodes": [
+    "NODE00609",
+    "NODE02456",
+    "NODE03137",
+    "NODE06343",
+    "NODE07994",
+    "NODE10705",
+    "NODE10719",
+    "NODE10725",
+    "NODE10918"
+  ],
+  "role_repairs_added": 9,
+  "route_evidence_rows_changed": false,
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_24_literature_expansion523"
+}
