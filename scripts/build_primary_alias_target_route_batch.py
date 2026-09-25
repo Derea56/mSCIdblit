@@ -147,16 +147,29 @@ def make_rows(bundle: Path) -> list[dict[str, str]]:
         and row.get("transcription_factor_node_id")
         and row.get("primary_locator")
     ]
+    # Index the canonical templates by ligand and receptor identity before
+    # joining them to alias rows.  The previous implementation compared every
+    # alias row with every canonical route, which made this evidence-only pass
+    # impractical once the route table reached hundreds of thousands of rows.
+    canonical_routes_by_key: dict[tuple[str, frozenset[str]], list[dict[str, str]]] = {}
+    for row in canonical_routes:
+        key = (row["ligand_label"], receptor_identity(row["receptor_label"]))
+        canonical_routes_by_key.setdefault(key, []).append(row)
 
     rows: list[dict[str, str]] = []
     generated_signatures: set[tuple[str, ...]] = set()
     for alias_label, canonical_label in ALIAS_TO_CANONICAL.items():
         alias_rows = alias_rows_by_label.get(alias_label, [])
-        templates = [row for row in canonical_routes if row.get("ligand_label") == canonical_label]
+        alias_relay_edges_by_label: dict[str, list[str]] = {}
         for alias_row in alias_rows:
+            alias_relay_edges_by_label.setdefault(
+                normalize(alias_row.get("intracellular_continuation_label", "")), []
+            ).append(alias_row.get("receptor_intracellular_edge_id", ""))
+        for alias_row in alias_rows:
+            templates = canonical_routes_by_key.get(
+                (canonical_label, receptor_identity(alias_row["receptor_label"])), []
+            )
             for template in templates:
-                if not same_receptor_family(alias_row["receptor_label"], template["receptor_label"]):
-                    continue
 
                 relay_node_id = template.get("intracellular_continuation_node_id", "")
                 relay_label = template.get("intracellular_continuation_label", "")
@@ -170,8 +183,7 @@ def make_rows(bundle: Path) -> list[dict[str, str]]:
                     )
                     if not relay_edge_id:
                         relay_edge_id = matching_edge(
-                            [row.get("receptor_intracellular_edge_id", "") for row in alias_rows
-                             if normalize(row.get("intracellular_continuation_label", "")) == normalize(relay_label)],
+                            alias_relay_edges_by_label.get(normalize(relay_label), []),
                             edges,
                             alias_row["receptor_node_id"],
                             relay_node_id,
