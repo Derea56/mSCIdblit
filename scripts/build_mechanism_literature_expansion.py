@@ -64,6 +64,13 @@ def write_tsv(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) 
         writer.writerows({field: str(row.get(field, "")) for field in fieldnames} for row in rows)
 
 
+def write_tsv_gz(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) -> None:
+    with gzip.open(path, "wt", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t", lineterminator="\n")
+        writer.writeheader()
+        writer.writerows({field: str(row.get(field, "")) for field in fieldnames} for row in rows)
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", type=Path, default=DEFAULT_INPUT)
@@ -184,12 +191,8 @@ def main() -> int:
         expansion["route_evidence_id"] = route["route_evidence_id"]
         expansion_rows.append(expansion)
 
-    uncompressed_route_path = output_bundle / "mechanism_signaling_route_evidence.tsv"
-    write_tsv(uncompressed_route_path, ROUTE_EVIDENCE_FIELDS, existing_routes + route_rows)
-    compressed_route_path = uncompressed_route_path.with_suffix(uncompressed_route_path.suffix + ".gz")
-    with uncompressed_route_path.open("rb") as source, gzip.open(compressed_route_path, "wb") as target:
-        target.writelines(source)
-    uncompressed_route_path.unlink()
+    compressed_route_path = output_bundle / "mechanism_signaling_route_evidence.tsv.gz"
+    write_tsv_gz(compressed_route_path, ROUTE_EVIDENCE_FIELDS, existing_routes + route_rows)
     normalized_counts = write_normalized_route_artifacts(
         output_bundle,
         existing_routes + route_rows,
