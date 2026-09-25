@@ -64,10 +64,18 @@ def write_tsv(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) 
         writer.writerows({field: str(row.get(field, "")) for field in fieldnames} for row in rows)
 
 
-def write_tsv_gz(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) -> None:
-    with gzip.open(path, "wt", newline="", encoding="utf-8") as handle:
+def write_tsv_gz(
+    path: Path,
+    fieldnames: list[str],
+    rows: list[dict[str, object]],
+    *,
+    append: bool = False,
+) -> None:
+    mode = "at" if append and path.exists() else "wt"
+    with gzip.open(path, mode, newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t", lineterminator="\n")
-        writer.writeheader()
+        if mode == "wt":
+            writer.writeheader()
         writer.writerows({field: str(row.get(field, "")) for field in fieldnames} for row in rows)
 
 
@@ -85,6 +93,11 @@ def parse_args() -> argparse.Namespace:
         "--reuse-output-bundle",
         action="store_true",
         help="Reuse an already-created copy-on-write clone of the source bundle instead of copying it again.",
+    )
+    parser.add_argument(
+        "--incremental-output-bundle",
+        action="store_true",
+        help="Append to an existing copy-on-write output bundle and rewrite only derived route artifacts.",
     )
     return parser.parse_args()
 
@@ -171,6 +184,8 @@ def main() -> int:
     validate_rows(rows, source_bundle)
     if output_bundle.exists() and not args.reuse_output_bundle:
         raise FileExistsError(f"Output bundle already exists: {output_bundle}")
+    if args.incremental_output_bundle and not args.reuse_output_bundle:
+        raise ValueError("--incremental-output-bundle requires --reuse-output-bundle")
     if not output_bundle.exists():
         shutil.copytree(source_bundle, output_bundle)
 
@@ -198,13 +213,17 @@ def main() -> int:
         expansion_rows.append(expansion)
 
     compressed_route_path = output_bundle / "mechanism_signaling_route_evidence.tsv.gz"
-    write_tsv_gz(compressed_route_path, ROUTE_EVIDENCE_FIELDS, existing_routes + route_rows)
+    if args.incremental_output_bundle:
+        write_tsv_gz(compressed_route_path, ROUTE_EVIDENCE_FIELDS, route_rows, append=True)
+    else:
+        write_tsv_gz(compressed_route_path, ROUTE_EVIDENCE_FIELDS, existing_routes + route_rows)
     normalized_counts = write_normalized_route_artifacts(
         output_bundle,
-        existing_routes + route_rows,
+        route_rows if args.incremental_output_bundle else existing_routes + route_rows,
         read_tsv(output_bundle / "mechanism_nodes.tsv"),
         read_tsv(output_bundle / "mechanism_edges.tsv"),
         read_tsv(output_bundle / "mechanism_edge_sources.tsv"),
+        append=args.incremental_output_bundle,
     )
     expansion_path = output_bundle / "mechanism_literature_expansion.tsv"
     existing_expansions = read_tsv(expansion_path) if expansion_path.exists() else []
@@ -215,7 +234,18 @@ def main() -> int:
             if field not in expansion_fields:
                 expansion_fields.append(field)
     cumulative_expansions = existing_expansions + expansion_rows
-    write_tsv(expansion_path, expansion_fields, cumulative_expansions)
+    if args.incremental_output_bundle:
+        missing_existing_fields = sorted(set(expansion_rows[0]) - set(existing_expansions[0]))
+        if missing_existing_fields:
+            raise ValueError(
+                "Incremental expansion append requires existing columns for: "
+                f"{missing_existing_fields}"
+            )
+        with expansion_path.open("a", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(handle, fieldnames=expansion_fields, delimiter="\t", lineterminator="\n")
+            writer.writerows({field: str(row.get(field, "")) for field in expansion_fields} for row in expansion_rows)
+    else:
+        write_tsv(expansion_path, expansion_fields, cumulative_expansions)
 
     coverage_rows, coverage_summary = build_ligand_route_coverage(output_bundle)
     coverage_path = output_bundle / "mechanism_ligand_route_coverage.tsv.gz"

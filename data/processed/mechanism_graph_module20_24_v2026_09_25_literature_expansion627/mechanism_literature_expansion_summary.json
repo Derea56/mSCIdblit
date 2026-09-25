@@ -1,0 +1,43 @@
+{
+  "causal_edges_created": false,
+  "confidence_scores_created": false,
+  "graph_edges_changed": false,
+  "ligand_route_coverage": {
+    "confidence_or_causal_fields_created": false,
+    "coverage_rows": 2613,
+    "coverage_status_counts": {
+      "full_functional_output_route": 182,
+      "full_target_gene_route": 177,
+      "ligand_receptor_only": 802,
+      "partial_downstream_route": 1452
+    },
+    "rows_with_full_functional_output_route": 182,
+    "rows_with_full_target_gene_route": 177,
+    "rows_with_ligand_receptor_only": 802,
+    "rows_with_partial_downstream_route": 1452,
+    "semantic_role_filter": "ligand role required; receptor/TF/target-gene role overlap excluded from ligand input",
+    "source_literature_expansion_rows": 31080,
+    "source_route_evidence_rows": 597194
+  },
+  "literature_expansion_rows": 31080,
+  "literature_expansion_rows_added": 5,
+  "output_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627",
+  "primary_locators": [
+    "PMID:11071904; PMID:15218027",
+    "PMID:11149911; PMID:11387210",
+    "PMID:21878648; PMID:28325822",
+    "PMID:27036869; DOI:10.1152/ajplung.00226.2015"
+  ],
+  "release_id": "module20_24_mechanism_graph:2026-09-25-literature-expansion-627",
+  "route_edges": 2305111,
+  "route_evidence_rows_after": 597194,
+  "route_evidence_rows_before": 597189,
+  "route_nodes": 2506538,
+  "route_tier_counts": {
+    "ligand_receptor_intracellular_output_missing_tf": 1,
+    "ligand_receptor_intracellular_tf_output_missing_target_gene": 2,
+    "ligand_receptor_intracellular_tf_target_missing_direct_tf_edges": 2
+  },
+  "source_bundle": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion626",
+  "parent_release_id": "module20_24_mechanism_graph:2026-09-25-literature-expansion-626"
+}

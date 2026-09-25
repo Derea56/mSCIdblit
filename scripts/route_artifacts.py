@@ -51,11 +51,19 @@ ROUTE_NODE_FILE = "mechanism_route_nodes.tsv.gz"
 ROUTE_EDGE_FILE = "mechanism_route_edges.tsv.gz"
 
 
-def _write_gzip_tsv(path: Path, fieldnames: list[str], rows: Iterable[Mapping[str, object]]) -> int:
+def _write_gzip_tsv(
+    path: Path,
+    fieldnames: list[str],
+    rows: Iterable[Mapping[str, object]],
+    *,
+    append: bool = False,
+) -> int:
     count = 0
-    with gzip.open(path, "wt", newline="", encoding="utf-8") as handle:
+    mode = "at" if append and path.exists() else "wt"
+    with gzip.open(path, mode, newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t", lineterminator="\n")
-        writer.writeheader()
+        if mode == "wt":
+            writer.writeheader()
         for row in rows:
             writer.writerow({field: str(row.get(field, "")) for field in fieldnames})
             count += 1
@@ -297,16 +305,26 @@ def write_normalized_route_artifacts(
     nodes: Iterable[Mapping[str, str]],
     edges: Iterable[Mapping[str, str]],
     edge_sources: Iterable[Mapping[str, str]] = (),
+    *,
+    append: bool = False,
 ) -> dict[str, int]:
-    """Write compressed normalized route artifacts and update bundle metadata."""
+    """Write or append compressed normalized route artifacts and update metadata."""
 
     route_rows = list(routes)
     node_rows, edge_rows = build_normalized_route_artifacts(route_rows, nodes, edges, edge_sources)
-    node_count = _write_gzip_tsv(bundle_dir / ROUTE_NODE_FILE, ROUTE_NODE_FIELDS, node_rows)
-    edge_count = _write_gzip_tsv(bundle_dir / ROUTE_EDGE_FILE, ROUTE_EDGE_FIELDS, edge_rows)
     metadata_path = bundle_dir / "bundle_metadata.json"
+    metadata = json.loads(metadata_path.read_text(encoding="utf-8")) if metadata_path.exists() else {}
+    prior_node_count = int(metadata.get("counts", {}).get("route_nodes", 0)) if append else 0
+    prior_edge_count = int(metadata.get("counts", {}).get("route_edges", 0)) if append else 0
+    node_count = _write_gzip_tsv(
+        bundle_dir / ROUTE_NODE_FILE, ROUTE_NODE_FIELDS, node_rows, append=append
+    )
+    edge_count = _write_gzip_tsv(
+        bundle_dir / ROUTE_EDGE_FILE, ROUTE_EDGE_FIELDS, edge_rows, append=append
+    )
+    node_count += prior_node_count
+    edge_count += prior_edge_count
     if metadata_path.exists():
-        metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
         metadata.setdefault("files", {})["route_nodes"] = ROUTE_NODE_FILE
         metadata.setdefault("files", {})["route_edges"] = ROUTE_EDGE_FILE
         metadata.setdefault("counts", {})["route_nodes"] = node_count

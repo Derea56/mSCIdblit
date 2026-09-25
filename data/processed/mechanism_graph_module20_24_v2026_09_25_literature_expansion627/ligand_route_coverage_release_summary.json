@@ -1,0 +1,25 @@
+{
+  "confidence_scores_created": false,
+  "coverage": {
+    "confidence_or_causal_fields_created": false,
+    "coverage_rows": 2613,
+    "coverage_status_counts": {
+      "full_functional_output_route": 183,
+      "full_target_gene_route": 175,
+      "ligand_receptor_only": 803,
+      "partial_downstream_route": 1452
+    },
+    "rows_with_full_functional_output_route": 183,
+    "rows_with_full_target_gene_route": 175,
+    "rows_with_ligand_receptor_only": 803,
+    "rows_with_partial_downstream_route": 1452,
+    "semantic_role_filter": "ligand role required; receptor/TF/target-gene role overlap excluded from ligand input",
+    "source_literature_expansion_rows": 31073,
+    "source_route_evidence_rows": 597187
+  },
+  "graph_edges_changed": false,
+  "literature_expansion_rows_changed": true,
+  "output_bundle": "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion625",
+  "release_id": "module20_24_mechanism_graph:2026-09-25-literature-expansion-625",
+  "source_bundle": "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion624"
+}
