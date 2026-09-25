@@ -81,6 +81,11 @@ def parse_args() -> argparse.Namespace:
         default="",
         help="Release identifier; required when writing a non-default output bundle.",
     )
+    parser.add_argument(
+        "--reuse-output-bundle",
+        action="store_true",
+        help="Reuse an already-created copy-on-write clone of the source bundle instead of copying it again.",
+    )
     return parser.parse_args()
 
 
@@ -164,9 +169,10 @@ def main() -> int:
     release_id = args.release_id or "module20_24_mechanism_graph:2026-09-16-literature-expansion-001"
     rows = read_input(args.input.resolve())
     validate_rows(rows, source_bundle)
-    if output_bundle.exists():
+    if output_bundle.exists() and not args.reuse_output_bundle:
         raise FileExistsError(f"Output bundle already exists: {output_bundle}")
-    shutil.copytree(source_bundle, output_bundle)
+    if not output_bundle.exists():
+        shutil.copytree(source_bundle, output_bundle)
 
     route_path = output_bundle / "mechanism_signaling_route_evidence.tsv"
     if not route_path.exists():

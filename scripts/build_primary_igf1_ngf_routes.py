@@ -72,7 +72,7 @@ def make_rows(bundle: Path) -> list[dict[str, str]]:
             "assay_or_perturbation": "IGF-1 stimulation; PI3K inhibition; FoxO1 knockdown or overexpression; FoxO1 chromatin immunoprecipitation at the GPR17 promoter; GPR17 expression assays",
         },
         {
-            "expansion_id": "M21B-LITEXP-NGF-NTRK1-ERK-CREB-BDNF-001",
+            "expansion_id": "M21B-LITEXP-NGF-NTRK1-ERK-CREB-BDNF-002",
             "ligand_node_id": "NODE08052",
             "ligand_label": "NGF",
             "lr_edge_id": "M21B-E000321",
@@ -82,26 +82,28 @@ def make_rows(bundle: Path) -> list[dict[str, str]]:
             "relay_label": "ERK1/2/MAPK1/3",
             "tf_node_id": "NODE02446",
             "tf_label": "CREB",
-            "target_node_id": "",
-            "target_label": "",
-            "output_node_id": "",
-            "output_label": "BDNF mRNA and protein expression",
-            "path_expression": "ligand>receptor>intracellular>TF>output",
-            "route_tier": "ligand_receptor_intracellular_tf_output_missing_target_gene",
-            "known_layers": "ligand|receptor|intracellular_continuation|transcription_factor|output",
-            "missing_layers": "receptor_to_intracellular_edge|intracellular_to_tf_edge|target_gene_expression",
-            "pathway_name": "NGF-TrkA-ERK/p38-CREB-BDNF-output",
-            "primary_locator": "PMID:9528766; PMID:9262478; PMID:9334420; PMID:15207334; PMID:22280975",
+            "target_node_id": "NODE01191",
+            "target_label": "Bdnf promoter IV",
+            "tf_target_edge_id": "M22B-E000036",
+            "output_node_id": "NODE01191",
+            "output_label": "BDNF promoter IV activity and BDNF expression",
+            "path_expression": "ligand>receptor>intracellular>TF>target_gene_expression",
+            "route_tier": "ligand_receptor_intracellular_tf_target_missing_direct_tf_edges",
+            "known_layers": "ligand|receptor|intracellular_continuation|transcription_factor|target_gene_expression",
+            "missing_layers": "receptor_to_intracellular_edge|intracellular_to_tf_edge",
+            "pathway_name": "NGF-TrkA-ERK/p38-CREB-BDNF-promoter-IV",
+            "primary_locator": "PMID:9528766; PMID:9334420; PMCID:PMC6573719; PMID:15207334",
             "evidence_summary": (
                 "Primary studies support NGF-TrkA signaling, ERK and p38 MAPK activation, CREB Ser133 "
-                "phosphorylation, and NGF-associated BDNF mRNA/protein induction in sensory and sympathetic "
-                "neuronal systems. The route retains CREB as the transcriptional layer while reporting BDNF "
-                "as the measured output rather than inventing a promoter-specific target edge."
+                "phosphorylation, and NGF-associated BDNF induction in sensory and sympathetic neuronal "
+                "systems. The route links those observations to the existing graph edge for CREB induction "
+                "of Bdnf promoter IV, while retaining the cross-study handoffs as evidence-layer composition."
             ),
             "limitations": (
                 "The supporting studies use complementary neuronal systems and do not establish one uninterrupted "
-                "NGF-TrkA-to-BDNF promoter chain. The exact ERK/p38-to-CREB branch and BDNF target locus remain "
-                "unresolved in this graph release; no causal graph edge, SCI transfer, or confidence score is inferred."
+                "NGF-TrkA-to-BDNF promoter chain. The receptor-to-ERK and ERK-to-CREB handoffs remain unasserted "
+                "as direct graph edges, and the CREB-to-Bdnf promoter edge is retained from separate primary graph "
+                "evidence; no causal graph edge, SCI transfer, or confidence score is inferred."
             ),
             "cell_type_context": "rat sympathetic neurons, dorsal-root-ganglion neurons, and cultured neuronal systems",
             "assay_or_perturbation": "NGF stimulation; TrkA kinase inhibition or dependence; ERK/p38 pathway inhibition; CREB phosphorylation; BDNF mRNA and protein assays",
@@ -236,8 +238,17 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--bundle", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument(
+        "--expansion-id",
+        default="",
+        help="Emit only the named expansion row; useful when extending a bundle without re-adding prior rows.",
+    )
     args = parser.parse_args()
     rows = make_rows(args.bundle.resolve())
+    if args.expansion_id:
+        rows = [row for row in rows if row["expansion_id"] == args.expansion_id]
+        if not rows:
+            raise ValueError(f"Unknown expansion_id: {args.expansion_id}")
     args.output.resolve().write_text(json.dumps(rows, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"rows": len(rows), "output": str(args.output)}, sort_keys=True))
     return 0
