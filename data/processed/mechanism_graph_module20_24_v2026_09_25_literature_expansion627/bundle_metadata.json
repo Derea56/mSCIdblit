@@ -108,7 +108,21 @@
       "PMID:28325822"
     ],
     "graph_edges_changed": false,
-    "confidence_scores_created": false
+    "confidence_scores_created": false,
+    "downstream_compatibility_normalizations": [
+      {
+        "field": "curation_status",
+        "from": "curated_primary_alias_route",
+        "to": "curated_primary_route",
+        "row_ids": [
+          "M21B-LITEXP-PACAP-ALIAS-001",
+          "M21B-LITEXP-PACAP-ALIAS-002",
+          "M21B-LITEXP-PACAP-ALIAS-003",
+          "M21B-LITEXP-PACAP-ALIAS-004"
+        ],
+        "reason": "mSCS import contract compatibility; alias-specific provenance remains in route_linkage_status"
+      }
+    ]
   },
   "graph_policy": {
     "composite_labels_preserved": true,

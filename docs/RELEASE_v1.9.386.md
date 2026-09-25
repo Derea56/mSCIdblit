@@ -38,6 +38,11 @@ database confidence score is created.
 Validation passed. The inherited warning remains that some evidence sources
 lack stable public locators; those rows retain their limitations for review.
 
+The literature-expansion table is mSCS-compatible: all 31,080 rows use the
+importer-required `curated_primary_route` status. Four inherited PACAP alias
+rows retain their alias-specific evidence semantics in `route_linkage_status`;
+the release metadata records this compatibility normalization.
+
 Bundle:
 
 `data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627/`
