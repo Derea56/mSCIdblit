@@ -827,7 +827,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
 
     manifest = {
         "context_pack_id": "spinal_cord_injury",
-        "context_pack_version": "0.5.1",
+        "context_pack_version": "0.5.2",
         "status": "populated",
         "pack_type": "disease_injury_evidence_overlay",
         "source_repo": "mSCIdblit",
