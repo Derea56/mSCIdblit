@@ -35,8 +35,11 @@ RELEASE_TAG = "mSCIdblit-v1.9.386"
 CONTEXT_FIELDS = [
     "context_id", "context_name", "context_kind", "disease_context",
     "anatomical_context", "species", "injury_model", "injury_level",
+    "injury_severity", "sex",
     "timepoint_value", "timepoint_unit", "perturbation", "treatment",
-    "cell_type", "sample_id", "study_id", "tissue", "context_status",
+    "experimental_condition", "study_perturbation_status", "injury_distance",
+    "injury_distance_unit", "sample_scope", "sample_count", "cell_type",
+    "sample_id", "study_id", "tissue", "context_status",
     "provenance_note",
 ]
 OBSERVATION_FIELDS = [
@@ -120,6 +123,57 @@ def timepoint_label(value: Any, unit: Any) -> str:
     return f"unknown ({unit_text})" if unit_text else "unknown"
 
 
+def nonempty_context(value: Any) -> bool:
+    return value is not None and str(value).strip().lower() not in {"", "unknown", "not_reported"}
+
+
+def valid_timepoint(value: Any) -> bool:
+    parsed = timepoint_number(value)
+    return parsed is not None
+
+
+def protein_value(row: dict[str, Any]) -> float | None:
+    return number(row.get("transcribed_value_numeric")) if row.get("transcribed_value_numeric") not in (None, "") else number(row.get("value"))
+
+
+def protein_has_measurement(row: dict[str, Any]) -> bool:
+    return (
+        protein_value(row) is not None
+        or nonempty_context(row.get("transcribed_value_text"))
+        or row.get("direction_vs_control") not in (None, "", "unknown", "not_reported")
+    )
+
+
+def is_protein_expression_candidate(row: dict[str, Any], selected_ids: set[str]) -> bool:
+    if row["observation_id"] in selected_ids:
+        return False
+    if not nonempty_context(row.get("injury_model")):
+        return False
+    if row.get("extraction_status") not in {"figure_table_transcribed", "source_data_transcribed"}:
+        return False
+    if not protein_has_measurement(row):
+        return False
+    assay = (row.get("assay") or "").lower()
+    form = (row.get("protein_form") or "").lower()
+    measurement = (row.get("measurement_kind") or "").lower()
+    if "ambiguous:" in assay or "reporter" in assay or "reporter" in form:
+        return False
+    if any(token in form for token in ("phosph", "active")):
+        return False
+    if any(token in assay for token in ("emsa", "enzyme activity", "lipid assay", "zymography")):
+        return False
+    if "association" in measurement or "complex" in measurement:
+        return False
+    return any(
+        token in assay
+        for token in (
+            "immunofluorescence", "immunohistochemistry", "immunocytochemistry",
+            "western", "elisa", "flow_cytometry", "multiplex", "electrochemiluminescence",
+            "mass_spectrometry", "gel_electrophoresis",
+        )
+    )
+
+
 def stable_id(prefix: str, *values: Any) -> str:
     raw = "|".join("" if value is None else str(value) for value in values)
     digest = hashlib.sha1(raw.encode("utf-8")).hexdigest()[:16]
@@ -171,10 +225,12 @@ def protein_context_rows(db_path: Path, selected_ids: set[str], artifact_hash: s
     observations: dict[str, dict[str, Any]] = {}
     query = """
         SELECT po.*, st.title AS study_title, st.doi_or_pmid, st.source_url AS study_source_url,
-               st.organism, st.injury_model, st.injury_level, st.perturbation_status,
+               st.organism, st.injury_model, st.injury_severity, st.injury_level, st.sex,
+               st.perturbation_status,
                cp.reported_label AS population_label, cp.normalized_label AS population_normalized_label,
                tp.post_injury_value, tp.unit AS timepoint_unit, tp.condition,
-               tp.tissue_region, src.source_location, src.source_url, src.repository_accession
+               tp.tissue_region, tp.injury_distance, tp.injury_distance_unit, tp.sample_count,
+               src.source_location, src.source_url, src.repository_accession
         FROM protein_observations po
         JOIN studies st ON st.study_id = po.study_id
         JOIN cell_populations cp ON cp.population_id = po.population_id
@@ -206,10 +262,18 @@ def protein_context_rows(db_path: Path, selected_ids: set[str], artifact_hash: s
             "species": row["organism"] or "",
             "injury_model": row["injury_model"] or "",
             "injury_level": row["injury_level"] or "",
+            "injury_severity": row.get("injury_severity") or "",
+            "sex": row.get("sex") or "",
             "timepoint_value": display_timepoint(row["post_injury_value"]),
             "timepoint_unit": row["timepoint_unit"] or "",
             "perturbation": perturbation,
             "treatment": treatment,
+            "experimental_condition": row["condition"] or "",
+            "study_perturbation_status": row["perturbation_status"] or "",
+            "injury_distance": display_number(row.get("injury_distance")),
+            "injury_distance_unit": row.get("injury_distance_unit") or "",
+            "sample_scope": row.get("sample_scope") or "",
+            "sample_count": row.get("sample_count"),
             "cell_type": population,
             "sample_id": "", "study_id": row["study_id"],
             "tissue": row["tissue_region"] or "",
@@ -228,6 +292,9 @@ def protein_context_rows(db_path: Path, selected_ids: set[str], artifact_hash: s
             "organism": row["organism"], "injury_model": row["injury_model"],
             "injury_level": row["injury_level"], "timepoint_id": row["timepoint_id"],
             "population_id": row["population_id"], "condition": row["condition"],
+            "injury_severity": row["injury_severity"], "sex": row["sex"],
+            "injury_distance": row["injury_distance"], "injury_distance_unit": row["injury_distance_unit"],
+            "sample_scope": row["sample_scope"], "sample_count": row["sample_count"],
             "tissue_region": row["tissue_region"], "source_location": row["source_location"],
         })
         numeric = number(selected.get("value"))
@@ -294,6 +361,123 @@ def protein_context_rows(db_path: Path, selected_ids: set[str], artifact_hash: s
     return list(contexts.values()), context_meta, observations
 
 
+def protein_expression_rows(db_path: Path, selected_ids: set[str], artifact_hash: str) -> tuple[list[dict[str, str]], dict[str, dict[str, Any]], dict[str, dict[str, Any]]]:
+    """Select directly measured, source-extracted non-phosphorylated protein records."""
+    contexts: dict[str, dict[str, str]] = {}
+    context_meta: dict[str, dict[str, Any]] = {}
+    observations: dict[str, dict[str, Any]] = {}
+    query = """
+        SELECT po.*, st.title AS study_title, st.doi_or_pmid, st.source_url AS study_source_url,
+               st.organism, st.injury_model, st.injury_severity, st.injury_level, st.sex,
+               st.perturbation_status,
+               cp.reported_label AS population_label, cp.normalized_label AS population_normalized_label,
+               tp.post_injury_value, tp.unit AS timepoint_unit, tp.condition,
+               tp.tissue_region, tp.injury_distance, tp.injury_distance_unit, tp.sample_count,
+               src.source_location, src.source_url, src.repository_accession,
+               ec.evidence_status, ec.evidence_id
+        FROM protein_observations po
+        JOIN studies st ON st.study_id = po.study_id
+        JOIN cell_populations cp ON cp.population_id = po.population_id
+        JOIN study_timepoints tp ON tp.timepoint_id = po.timepoint_id
+        LEFT JOIN sources src ON src.source_id = po.source_id
+        LEFT JOIN evidence_claims ec ON ec.observation_id = po.observation_id
+        ORDER BY po.observation_id
+    """
+    with sqlite3.connect(db_path) as db:
+        db.row_factory = sqlite3.Row
+        rows = [dict(row) for row in db.execute(query)]
+    for row in rows:
+        if not is_protein_expression_candidate(row, selected_ids):
+            continue
+        observation_id = row["observation_id"]
+        context_id = stable_id("sci:protein", row["study_id"], row["timepoint_id"], row["population_id"])
+        population = row["population_label"] or row["population_normalized_label"] or ""
+        perturbation = row["condition"] or ""
+        treatment = row["perturbation_status"] or ""
+        contexts.setdefault(context_id, {
+            "context_id": context_id,
+            "context_name": f"{row['study_id']} protein context at {timepoint_label(row['post_injury_value'], row['timepoint_unit'])}",
+            "context_kind": "sample_context", "disease_context": "spinal_cord_injury",
+            "anatomical_context": "spinal_cord", "species": row["organism"] or "",
+            "injury_model": row["injury_model"] or "", "injury_level": row["injury_level"] or "",
+            "injury_severity": row.get("injury_severity") or "", "sex": row.get("sex") or "",
+            "timepoint_value": display_timepoint(row["post_injury_value"]),
+            "timepoint_unit": row["timepoint_unit"] or "", "perturbation": perturbation,
+            "treatment": treatment, "experimental_condition": row["condition"] or "",
+            "study_perturbation_status": row["perturbation_status"] or "",
+            "injury_distance": display_number(row.get("injury_distance")),
+            "injury_distance_unit": row.get("injury_distance_unit") or "",
+            "sample_scope": row.get("sample_scope") or "", "sample_count": row.get("sample_count"),
+            "cell_type": population, "sample_id": "", "study_id": row["study_id"],
+            "tissue": row["tissue_region"] or "", "context_status": "defined",
+            "provenance_note": source_locator(
+                "mSCS/data/flow_protein/flow_protein.sqlite",
+                f"studies.study_id={row['study_id']}",
+                f"study_timepoints.timepoint_id={row['timepoint_id']}",
+                f"cell_populations.population_id={row['population_id']}",
+                f"study_title={row['study_title']}",
+            ),
+        })
+        context_meta.setdefault(context_id, {
+            "study_id": row["study_id"], "study_title": row["study_title"],
+            "doi_or_pmid": row["doi_or_pmid"], "source_url": row["study_source_url"],
+            "organism": row["organism"], "injury_model": row["injury_model"],
+            "injury_level": row["injury_level"], "injury_severity": row["injury_severity"],
+            "sex": row["sex"], "timepoint_id": row["timepoint_id"],
+            "population_id": row["population_id"], "condition": row["condition"],
+            "perturbation_status": row["perturbation_status"],
+            "tissue_region": row["tissue_region"], "injury_distance": row["injury_distance"],
+            "injury_distance_unit": row["injury_distance_unit"], "sample_scope": row["sample_scope"],
+            "sample_count": row["sample_count"], "source_location": row["source_location"],
+        })
+        numeric = protein_value(row)
+        direction = row.get("direction_vs_control") or "not_reported"
+        value_text = row.get("transcribed_value_text") or ("" if numeric is not None else direction)
+        value_kind = "numeric" if numeric is not None else ("qualitative" if value_text not in {"", "unknown", "not_reported"} else "unreported")
+        source_loc = source_locator(
+            f"flow_protein.protein_observations.observation_id={observation_id}",
+            row.get("source_location"),
+        )
+        observations[observation_id] = {
+            "observation_id": observation_id, "context_id": context_id,
+            "source_system": "mSCS", "source_database": "flow_protein",
+            "source_record_type": "protein_observation", "source_record_key": observation_id,
+            "source_version": f"sha256:{artifact_hash}", "modality": "protein",
+            "assay": row.get("assay"), "measurement_kind": row.get("measurement_kind"),
+            "measured_entity_name": row.get("protein") or row.get("gene_symbol"),
+            "measured_entity_type": "protein_expression", "feature_id": row.get("gene_symbol") or row.get("protein"),
+            "value_numeric": numeric, "value_text": value_text, "value_kind": value_kind,
+            "unit": row.get("unit"), "direction_vs_control": direction,
+            "comparator": "reference_control" if direction == "reference_control" else "",
+            "biological_replicates": row.get("biological_replicates"),
+            "timepoint_value": timepoint_number(row["post_injury_value"]), "timepoint_unit": row["timepoint_unit"],
+            "perturbation": perturbation, "cell_type": population, "sample_id": "",
+            "observation_status": "transcribed", "evidence_role": "dataset_observation",
+            "dependency_group": f"mSCS:flow_protein:{row['study_id']}:{row['timepoint_id']}:{row['population_id']}",
+            "source_artifact_path": "mSCS/data/flow_protein/flow_protein.sqlite",
+            "source_artifact_sha256": artifact_hash, "source_locator": source_loc,
+            "provenance_note": json_text({
+                "canonical_source": "mSCS/data/flow_protein/flow_protein.sqlite",
+                "canonical_observation_id": observation_id,
+                "selection_rule": "direct protein assay; explicit SCI injury model; source-extracted measurement; non-phosphorylated/non-active form",
+                "study_id": row.get("study_id"), "timepoint_id": row.get("timepoint_id"),
+                "population_id": row.get("population_id"), "protein_form": row.get("protein_form"),
+                "protein_resolution": row.get("protein_resolution"), "sample_scope": row.get("sample_scope"),
+                "evidence_grade": row.get("evidence_grade"), "measurement_quality": row.get("measurement_quality"),
+                "extraction_status": row.get("extraction_status"), "evidence_status": row.get("evidence_status"),
+                "evidence_id": row.get("evidence_id"), "negative_evidence_status": row.get("negative_evidence_status"),
+                "source_location": row.get("source_location"), "source_repository_accession": row.get("repository_accession"),
+                "study_condition": row.get("condition"), "study_perturbation_status": row.get("perturbation_status"),
+            }),
+            "_gene_symbol": row.get("gene_symbol"), "_entity": row.get("protein") or row.get("gene_symbol"),
+            "_context_meta": context_meta[context_id], "_study_key": row["study_id"],
+            "_injury_model": row["injury_model"] or "unknown",
+            "_timepoint_key": timepoint_label(row["post_injury_value"], row["timepoint_unit"]),
+            "_evidence_label": row.get("evidence_grade") or "unknown",
+        }
+    return list(contexts.values()), context_meta, observations
+
+
 def epigenetic_rows(db_path: Path, artifact_hash: str) -> tuple[list[dict[str, str]], dict[str, dict[str, Any]], dict[str, dict[str, Any]]]:
     contexts: dict[str, dict[str, str]] = {}
     context_meta: dict[str, dict[str, Any]] = {}
@@ -327,9 +511,14 @@ def epigenetic_rows(db_path: Path, artifact_hash: str) -> tuple[list[dict[str, s
             "disease_context": "spinal_cord_injury", "anatomical_context": "spinal_cord",
             "species": row.get("species") or "", "injury_model": row.get("injury_model") or "",
             "injury_level": row.get("injury_level") or "",
-            "timepoint_value": display_number(row.get("post_injury_value")),
+            "injury_severity": "", "sex": "",
+            "timepoint_value": display_timepoint(row.get("post_injury_value")),
             "timepoint_unit": row.get("post_injury_unit") or "",
             "perturbation": row.get("condition") or "", "treatment": "",
+            "experimental_condition": row.get("condition") or "",
+            "study_perturbation_status": row.get("condition") or "",
+            "injury_distance": "", "injury_distance_unit": "",
+            "sample_scope": "", "sample_count": row.get("replicate_count"),
             "cell_type": context_cell, "sample_id": sample_id,
             "study_id": row["study_id"], "tissue": row.get("tissue_region") or row.get("tissue") or "",
             "context_status": "defined",
@@ -450,6 +639,13 @@ def build(mscs_root: Path, pack: Path, bundle: Path) -> dict[str, Any]:
     selected = read_tsv(phospho_view)
     selected_ids = {row["observation_id"] for row in selected}
     protein_contexts, protein_meta, protein_obs = protein_context_rows(protein_db, selected_ids, protein_hash)
+    expression_contexts, expression_meta, expression_obs = protein_expression_rows(protein_db, selected_ids, protein_hash)
+    protein_context_by_id = {row["context_id"]: row for row in protein_contexts}
+    for row in expression_contexts:
+        protein_context_by_id.setdefault(row["context_id"], row)
+    protein_contexts = list(protein_context_by_id.values())
+    protein_meta.update(expression_meta)
+    protein_obs.update(expression_obs)
     epi_contexts, epi_meta, epi_obs = epigenetic_rows(epigenetic_db, epigenetic_hash)
     all_contexts = protein_contexts + [row for row in epi_contexts if row["context_id"] not in {item["context_id"] for item in protein_contexts}]
     scope = {
@@ -458,6 +654,9 @@ def build(mscs_root: Path, pack: Path, bundle: Path) -> dict[str, Any]:
         "anatomical_context": "spinal_cord", "species": "", "injury_model": "",
         "injury_level": "", "timepoint_value": "", "timepoint_unit": "",
         "perturbation": "", "treatment": "", "cell_type": "", "sample_id": "",
+        "experimental_condition": "", "study_perturbation_status": "",
+        "injury_severity": "", "sex": "", "injury_distance": "",
+        "injury_distance_unit": "", "sample_scope": "", "sample_count": "",
         "study_id": "", "tissue": "",
         "context_status": "defined", "provenance_note": "Scope-level context only; study/sample observations are listed separately.",
     }
@@ -499,7 +698,9 @@ def build(mscs_root: Path, pack: Path, bundle: Path) -> dict[str, Any]:
         "scope_rule": "Only source records with explicit spinal-cord, spinal-cord-injury, or injury-model context were selected; no generic mechanism evidence was copied.",
         "selected_evidence": {
             "protein_state_view_rows": len(selected),
-            "protein_state_observations_imported": len(protein_obs),
+            "protein_state_observations_imported": len(selected_ids),
+            "protein_expression_candidate_rows": len(expression_obs),
+            "protein_observations_imported": len(protein_obs),
             "epigenetic_observations_imported": len(epi_obs),
             "spatial_pilot_rows_assessed_but_excluded": 144,
             "spatial_exclusion_reason": "GSE269377 is a healthy/mutant FUS spinal-cord spatial dataset without an explicit spinal-cord-injury model; mSCS spatial_evidence has zero rows.",
@@ -535,7 +736,8 @@ def build(mscs_root: Path, pack: Path, bundle: Path) -> dict[str, Any]:
             "route_confidence_created": 0,
         },
         "notes": [
-            "Protein observations are the mSCS phosphorylation-support selection, not the full 1,259-row canonical protein store.",
+            "Protein observations combine the 110-row mSCS phosphorylation-support selection with directly measured, source-extracted non-phosphorylated protein records; they are not the full 1,259-row canonical store.",
+            "Protein-expression selection excludes phosphoprotein/active-form duplicates, ambiguous or inaccessible extraction states, reporter/activity-only assays, and records without a measured value or reported direction.",
             "Dependency groups are source/study/timepoint/population or source/study/assay/context groups; they are intended to prevent correlated readouts from being double-counted.",
             "Downstream protein and phosphoprotein measurements are linked only to the measured state/node when an exact stable node match exists; no upstream ligand/receptor causality is inferred.",
             "Missing values and source ambiguity remain unreported or unknown; they are not converted to negative protein evidence.",
@@ -545,14 +747,14 @@ def build(mscs_root: Path, pack: Path, bundle: Path) -> dict[str, Any]:
 
     manifest = {
         "context_pack_id": "spinal_cord_injury",
-        "context_pack_version": "0.2.0",
+        "context_pack_version": "0.3.0",
         "status": "populated",
         "pack_type": "disease_injury_evidence_overlay",
         "source_repo": "mSCIdblit",
         "target_consumer": "mSCS",
         "scope": {
             "disease_context": "spinal_cord_injury", "anatomical_context": "spinal_cord",
-            "study_level_fields_required_when_reported": ["study_id", "species", "tissue", "injury_model", "injury_level", "timepoint", "perturbation", "treatment", "cell_type", "sample_id"],
+            "study_level_fields_required_when_reported": ["study_id", "species", "tissue", "injury_model", "injury_severity", "injury_level", "sex", "timepoint", "injury_distance", "sample_scope", "perturbation", "treatment", "experimental_condition", "study_perturbation_status", "cell_type", "sample_id"],
         },
         "mechanism_dependency": {
             "release_id": RELEASE_ID, "release_tag": RELEASE_TAG,
@@ -566,7 +768,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path) -> dict[str, Any]:
             "mSCS_evaluates_route_plausibility": True,
         },
         "modalities": [
-            {"modality": "protein", "status": "populated", "selection": "mSCS phosphorylation_support_observations.tsv", "observation_file": "observations.tsv"},
+            {"modality": "protein", "status": "populated", "selection": "mSCS phosphorylation_support_observations.tsv plus direct source-extracted non-phosphorylated protein observations from flow_protein.sqlite", "observation_file": "observations.tsv"},
             {"modality": "transcriptomics", "status": "assessed_not_imported", "reason": "No curated transcriptomic observation table with exact SCI context was selected in this release."},
             {"modality": "spatial", "status": "assessed_excluded", "reason": audit["selected_evidence"]["spatial_exclusion_reason"]},
             {"modality": "epigenomics", "status": "populated", "observation_file": "observations.tsv"},

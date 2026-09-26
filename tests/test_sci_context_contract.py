@@ -29,8 +29,9 @@ def test_sci_context_manifest_pins_neutral_mechanism_release():
     bundle_path = PACK / manifest["mechanism_dependency"]["bundle_metadata"]
     assert bundle_path.resolve().is_file()
     assert manifest["counts"]["context_profiles"] > 1
-    assert manifest["counts"]["observations"] == 127
-    assert manifest["counts"]["mechanism_links"] == 127
+    assert manifest["context_pack_version"] == "0.3.0"
+    assert manifest["counts"]["observations"] == 741
+    assert manifest["counts"]["mechanism_links"] == 741
     assert 0 < manifest["counts"]["included_mechanism_links"] < manifest["counts"]["mechanism_links"]
 
 
@@ -87,15 +88,15 @@ def test_sci_context_pack_validator_accepts_populated_release():
     summary = validate_pack(PACK)
 
     assert summary["pack_id"] == "spinal_cord_injury"
-    assert summary["counts"]["observations"] == 127
-    assert summary["counts"]["mechanism_links"] == 127
+    assert summary["counts"]["observations"] == 741
+    assert summary["counts"]["mechanism_links"] == 741
 
 
 def test_sci_observations_and_links_preserve_evidence_boundaries():
     observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
     links = list(csv.DictReader((PACK / "mechanism_links.tsv").open(), delimiter="\t"))
-    assert Counter(row["modality"] for row in observations) == {"protein": 110, "epigenomics": 17}
-    assert Counter(row["evidence_role"] for row in observations) == {"dataset_observation": 127}
+    assert Counter(row["modality"] for row in observations) == {"protein": 724, "epigenomics": 17}
+    assert Counter(row["evidence_role"] for row in observations) == {"dataset_observation": 741}
     assert all(row["dependency_group"] for row in observations)
     assert all(row["mechanism_release_id"] == "module20_24_mechanism_graph:2026-09-25-literature-expansion-627" for row in links)
     assert all(row["mechanism_target_kind"] == "node" for row in links if row["release_status"] == "included")

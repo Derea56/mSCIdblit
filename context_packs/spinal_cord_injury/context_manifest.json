@@ -6,12 +6,12 @@
     "observations": "observations.tsv"
   },
   "context_pack_id": "spinal_cord_injury",
-  "context_pack_version": "0.2.0",
+  "context_pack_version": "0.3.0",
   "counts": {
-    "context_profiles": 101,
-    "included_mechanism_links": 67,
-    "mechanism_links": 127,
-    "observations": 127
+    "context_profiles": 597,
+    "included_mechanism_links": 371,
+    "mechanism_links": 741,
+    "observations": 741
   },
   "evidence_policy": {
     "context_attaches_to": "observation_or_reviewed_mechanism_link",
@@ -32,7 +32,7 @@
     {
       "modality": "protein",
       "observation_file": "observations.tsv",
-      "selection": "mSCS phosphorylation_support_observations.tsv",
+      "selection": "mSCS phosphorylation_support_observations.tsv plus direct source-extracted non-phosphorylated protein observations from flow_protein.sqlite",
       "status": "populated"
     },
     {
@@ -76,10 +76,16 @@
       "species",
       "tissue",
       "injury_model",
+      "injury_severity",
       "injury_level",
+      "sex",
       "timepoint",
+      "injury_distance",
+      "sample_scope",
       "perturbation",
       "treatment",
+      "experimental_condition",
+      "study_perturbation_status",
       "cell_type",
       "sample_id"
     ]
