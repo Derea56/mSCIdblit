@@ -30,7 +30,7 @@ def test_sci_context_manifest_pins_neutral_mechanism_release():
     bundle_path = PACK / manifest["mechanism_dependency"]["bundle_metadata"]
     assert bundle_path.resolve().is_file()
     assert manifest["counts"]["context_profiles"] > 1
-    assert manifest["context_pack_version"] == "0.5.15"
+    assert manifest["context_pack_version"] == "0.5.16"
     assert manifest["counts"]["observations"] == 760
     assert manifest["counts"]["mechanism_links"] == 760
     assert 0 < manifest["counts"]["included_mechanism_links"] < manifest["counts"]["mechanism_links"]
@@ -87,7 +87,7 @@ def test_sci_context_profiles_preserve_scope_and_reported_study_fields():
 
 def test_sci_protein_context_curation_overrides_are_applied_with_source_provenance():
     overrides = list(csv.DictReader((PACK / "protein_context_curation_overrides.tsv").open(), delimiter="\t"))
-    assert len(overrides) == 83
+    assert len(overrides) == 86
     assert all(row["curation_status"] == "applied" for row in overrides)
     assert all(row["source_locator"] and row["source_url"] for row in overrides)
 
@@ -229,6 +229,13 @@ def test_sci_protein_context_curation_overrides_are_applied_with_source_provenan
     assert {row["injury_level"] for row in by_study["FLOW_SCI_202"]} == {"T9/T10"}
     assert {row["injury_severity"] for row in by_study["FLOW_SCI_202"]} == {"60 kdyn moderate contusion"}
     assert {row["sample_scope"] for row in by_study["FLOW_SCI_202"]} == {"lesion-centered 1 cm spinal-cord tissue lysate"}
+    assert {row["injury_severity"] for row in by_study["FLOW_MSCS_ITDB_000005"]} == {"dorsal-column lesion; exact lesion dimensions not reported"}
+    assert {row["sample_scope"] for row in by_study["FLOW_MSCS_ITDB_000005"]} == {"within 250 micrometres of lesion border"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_411"]} == {"50 kdyn moderate contusion; 400-500 micrometre displacement"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_411"]} == {"adult female C57BL/6 mice"}
+    assert {row["sample_scope"] for row in by_study["FLOW_SCI_411"]} == {"12-mm spinal-cord segment centered over lesion and divided into rostral, medial, and caudal 4-mm blocks"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_090"]} == {"female mice"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_091"]} == {"female mice"}
     sci253_t2 = [row for row in contexts if row["study_id"] == "FLOW_SCI_253" and row["timepoint_value"] == "24 h; 48 h; 5 d; 8 d"]
     assert len(sci253_t2) == 1
     assert sci253_t2[0]["timepoint_unit"] == "mixed"

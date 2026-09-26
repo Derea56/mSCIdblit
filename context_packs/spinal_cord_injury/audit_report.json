@@ -84,7 +84,10 @@
       "SCICTX-CUR-0081": 4,
       "SCICTX-CUR-0082": 1,
       "SCICTX-CUR-0083": 1,
-      "SCICTX-CUR-0084": 4
+      "SCICTX-CUR-0084": 4,
+      "SCICTX-CUR-0085": 3,
+      "SCICTX-CUR-0086": 2,
+      "SCICTX-CUR-0087": 2
     },
     "evidence_role": {
       "dataset_observation": 760
@@ -193,6 +196,8 @@
       "Thoracic contusion SCI using the NYU weight-drop impactor": 11,
       "Thoracic contusion using the NYU impactor": 4,
       "Thoracic spinal cord injury in adult wild-type and 5-HT2C receptor loss-of-function mice; exact injury parameters pending extraction.": 3,
+      "Traumatic spinal cord injury; mild mouse SCI model": 2,
+      "Traumatic spinal cord injury; mouse in-vivo injury model": 2,
       "acute compression spinal cord injury in adult pNestin-LacZ reporter mice": 2,
       "acute mouse spinal cord injury with intravital two-photon imaging of spinal microvessels; exact impact parameters pending full-text extraction": 4,
       "acute traumatic spinal cord injury": 1,
@@ -329,8 +334,6 @@
       "traumatic spinal cord injury in adult WT, IL-1alpha-knockout, and IL-1beta-knockout mice; exact injury method requires extraction": 1,
       "traumatic spinal cord injury in male mice; injury level and force pending extraction": 3,
       "traumatic spinal cord injury; exact impact model parameters pending full-text extraction": 2,
-      "traumatic spinal cord injury; mild mouse SCI model": 2,
-      "traumatic spinal cord injury; mouse in-vivo injury model": 2,
       "vascular-clip compression injury after T6-T7 laminectomy": 2,
       "vascular-clip traumatic spinal cord injury": 4,
       "weight-drop contusion SCI at T12": 2,
@@ -381,7 +384,7 @@
       "PBS, recombinant IL-4, or recombinant IL-13 treatment": 1,
       "PLX5622 diet": 11,
       "Plexin-B2 conditional deletion versus littermate control after contusion": 1,
-      "SCI": 102,
+      "SCI": 98,
       "SCI + AAV-KLF7 or AAV-GFP; sham comparator": 1,
       "SCI 1 dpi; Ryk+/+ GFAPcreERT2; C5 dorsal-column lesion study": 1,
       "SCI 1 dpi; Rykfl/fl GFAPcreERT2; C5 dorsal-column lesion study": 1,
@@ -498,6 +501,7 @@
       "acute 0-3 days post-injury clinical visit": 2,
       "acute SCI": 1,
       "acute SCI versus pre-injury/untreated comparison": 1,
+      "acute SCI with AG-490 mechanistic comparison": 2,
       "adult WT, aged WT, and adult IL-4Ralpha knockout SCI": 1,
       "adult complete transection; chronic locomotor-circuit analysis": 1,
       "adult na\u00efve spinal cord; no injury": 1,
@@ -507,9 +511,8 @@
       "complete SCI versus intact mouse": 1,
       "conditional-lineage SCI groups and controls": 1,
       "constitutive or conditional Plexin-B1 deletion versus control": 1,
-      "contusion SCI": 2,
       "contusion SCI in control and Chd7-cKO mice": 3,
-      "contusion SCI versus naive/control": 1,
+      "contusion SCI versus naive/sham control": 3,
       "contusion SCI versus no-contusion controls": 2,
       "contusion SCI versus sham": 2,
       "contusion SCI with sham, anti-CD8, Rag2-knockout, and adoptive-transfer arms": 3,
@@ -527,7 +530,7 @@
       "injured; wild-type/LysM-eGFP mice": 2,
       "injury time course, saline, recombinant human CRYAB, and GST-tagged CRYAB groups": 4,
       "intact or sham control": 1,
-      "mild SCI versus control": 2,
+      "mild SCI versus control": 4,
       "moderate compression SCI versus surgical control": 2,
       "moderate contusion SCI and uninjured controls": 5,
       "mouse SCI": 1,
@@ -949,11 +952,11 @@
   ],
   "scope_rule": "Only source records with explicit spinal-cord, spinal-cord-injury, or injury-model context were selected; no generic mechanism evidence was copied.",
   "selected_evidence": {
-    "context_curation_overrides_applied": 83,
+    "context_curation_overrides_applied": 86,
     "epigenetic_observations_imported": 17,
     "functional_observation_rows_imported": 0,
     "imaging_observation_rows_imported": 0,
-    "observations_with_context_curation": 325,
+    "observations_with_context_curation": 332,
     "perturbation_observation_rows_imported": 0,
     "protein_expression_candidate_rows": 633,
     "protein_observations_imported": 743,
@@ -991,8 +994,8 @@
     },
     {
       "path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv",
-      "sha256": "d698c638b51b7fd8777ecd106f300e0fe25ff3de49f98609a3b155fc9ed41b3f",
-      "size_bytes": 62893
+      "sha256": "30548cd1a26e23fcd25228d5ed1dcda745041c84fbff3b469ef28aff2d1afcd2",
+      "size_bytes": 65072
     }
   ]
 }
