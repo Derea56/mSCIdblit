@@ -102,3 +102,14 @@ def test_sci_observations_and_links_preserve_evidence_boundaries():
     assert all(row["mechanism_target_kind"] == "node" for row in links if row["release_status"] == "included")
     assert all(row["mechanism_target_key"] == "21B" for row in links if row["release_status"] == "staging")
     assert all(row["mechanism_route_id"] == "" for row in links)
+
+
+def test_sci_protein_context_gap_audit_is_reproducible_and_separate_from_evidence():
+    audit = json.loads((PACK / "protein_context_gap_audit.json").read_text())
+    assert (PACK / "protein_context_coverage.tsv").is_file()
+    assert (PACK / "protein_context_gap_candidates.tsv").is_file()
+    assert audit["pack_inputs"]["protein_observations"] == 724
+    assert audit["pack_inputs"]["protein_expression_observations"] == 614
+    assert audit["canonical_store"]["protein_observations"] == 1259
+    assert audit["canonical_store"]["remaining_gap_records"] == 535
+    assert audit["policy"].startswith("This audit prioritizes metadata refinement only")

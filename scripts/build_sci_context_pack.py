@@ -776,7 +776,13 @@ def build(mscs_root: Path, pack: Path, bundle: Path) -> dict[str, Any]:
             {"modality": "perturbation", "status": "represented_in_context_fields", "reason": "Perturbation and treatment fields are preserved when reported; no intervention-only observation is fabricated."},
             {"modality": "functional", "status": "assessed_not_imported", "reason": "No standalone functional observation table was selected for this release."},
         ],
-        "artifacts": {"contexts": "contexts.tsv", "observations": "observations.tsv", "mechanism_links": "mechanism_links.tsv", "audit_report": "audit_report.json"},
+        "artifacts": {
+            "contexts": "contexts.tsv", "observations": "observations.tsv",
+            "mechanism_links": "mechanism_links.tsv", "audit_report": "audit_report.json",
+            "protein_context_coverage": "protein_context_coverage.tsv",
+            "protein_context_gap_audit": "protein_context_gap_audit.json",
+            "protein_context_gap_candidates": "protein_context_gap_candidates.tsv",
+        },
         "counts": {
             "context_profiles": len(all_contexts), "observations": len(observations),
             "mechanism_links": len(links), "included_mechanism_links": sum(row["release_status"] == "included" for row in links),
