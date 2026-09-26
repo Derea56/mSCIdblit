@@ -37,12 +37,14 @@ modality-weight promotion. Downstream protein measurements support the
 measured protein state only; they do not establish upstream ligand/receptor
 causality.
 
-This refinement applies three study-level protein context overrides from exact
-primary-source locators: `FLOW_MSCS_ITDB_000006` is resolved to a 75-kdyne T9
-contusion, `FLOW_MSCS_ITDB_000010` to a 60-kdyn T9 contusion, and
-`FLOW_MSCS_ITDB_000005` to a C5 dorsal-column lesion. The overrides do not
-replace reported perturbation or treatment fields, and do not fill sex or
-injury severity where the inspected source does not explicitly establish it.
+This refinement applies nine study/timepoint protein context overrides from
+exact primary-source locators. In addition to the 75-kdyne T9, 60-kdyn T9,
+and C5 dorsal-column refinements, it resolves `FLOW_SCI_414` to a 60-kdyn T9
+contusion, `FLOW_SCI_024` to a 150-kdyn T10 contusion with a 5-mm soluble
+lesion-epicenter fraction, and endpoint-specific plasma-EV sample scopes for
+`FLOW_SCI_471`. The overrides do not replace reported perturbation or
+treatment fields, and do not fill sex or injury severity where the inspected
+source does not explicitly establish it.
 Their source URLs, locators, curation notes, and checksum are retained in
 `protein_context_curation_overrides.tsv` and the generated provenance fields.
 

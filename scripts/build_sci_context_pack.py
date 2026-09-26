@@ -35,7 +35,7 @@ DEFAULT_CURATION_OVERRIDES = DEFAULT_PACK / "protein_context_curation_overrides.
 
 CURATION_OVERRIDE_FIELDS = {
     "injury_model", "injury_level", "injury_severity", "sex",
-    "perturbation_status", "condition",
+    "perturbation_status", "condition", "sample_scope",
 }
 
 CONTEXT_FIELDS = [
@@ -827,7 +827,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
 
     manifest = {
         "context_pack_id": "spinal_cord_injury",
-        "context_pack_version": "0.4.0",
+        "context_pack_version": "0.5.0",
         "status": "populated",
         "pack_type": "disease_injury_evidence_overlay",
         "source_repo": "mSCIdblit",

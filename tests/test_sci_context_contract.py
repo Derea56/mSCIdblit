@@ -29,7 +29,7 @@ def test_sci_context_manifest_pins_neutral_mechanism_release():
     bundle_path = PACK / manifest["mechanism_dependency"]["bundle_metadata"]
     assert bundle_path.resolve().is_file()
     assert manifest["counts"]["context_profiles"] > 1
-    assert manifest["context_pack_version"] == "0.4.0"
+    assert manifest["context_pack_version"] == "0.5.0"
     assert manifest["counts"]["observations"] == 741
     assert manifest["counts"]["mechanism_links"] == 741
     assert 0 < manifest["counts"]["included_mechanism_links"] < manifest["counts"]["mechanism_links"]
@@ -86,7 +86,7 @@ def test_sci_context_profiles_preserve_scope_and_reported_study_fields():
 
 def test_sci_protein_context_curation_overrides_are_applied_with_source_provenance():
     overrides = list(csv.DictReader((PACK / "protein_context_curation_overrides.tsv").open(), delimiter="\t"))
-    assert len(overrides) == 3
+    assert len(overrides) == 9
     assert all(row["curation_status"] == "applied" for row in overrides)
     assert all(row["source_locator"] and row["source_url"] for row in overrides)
 
@@ -100,6 +100,16 @@ def test_sci_protein_context_curation_overrides_are_applied_with_source_provenan
     assert {row["injury_level"] for row in by_study["FLOW_MSCS_ITDB_000010"]} == {"T9"}
     assert {row["injury_severity"] for row in by_study["FLOW_MSCS_ITDB_000010"]} == {"60 kdyn moderate contusion"}
     assert {row["injury_level"] for row in by_study["FLOW_MSCS_ITDB_000005"]} == {"C5"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_414"]} == {"T9"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_414"]} == {"60 kdyn contusion"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_024"]} == {"T10"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_024"]} == {"150 kdyn mild-to-moderate contusion"}
+    assert {row["sample_scope"] for row in by_study["FLOW_SCI_024"]} == {"5-mm lesion-epicenter soluble spinal-cord fraction"}
+    ev_contexts = [row for row in contexts if row["study_id"] == "FLOW_SCI_471"]
+    assert {row["sample_scope"] for row in ev_contexts} == {
+        "plasma EV and T10 lesion-centered spinal-cord samples",
+        "plasma extracellular-vesicle fraction",
+    }
     observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
     curated = [row for row in observations if row["context_id"] in {context["context_id"] for context in contexts if context["study_id"] in by_study}]
     assert curated
