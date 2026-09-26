@@ -8,39 +8,39 @@
     "gap_records_by_reason": {
       "activity_or_non_expression_assay": 4,
       "ambiguous_or_reporter_assay": 21,
-      "outside_current_expression_selection_rule": 27,
-      "phospho_or_active_form_review_scope": 22,
+      "outside_current_expression_selection_rule": 13,
+      "phospho_or_active_form_review_scope": 17,
       "protein_association_not_expression": 1,
       "source_extraction_not_final": 460
     },
-    "imported_observations": 724,
+    "imported_observations": 743,
     "protein_observations": 1259,
-    "remaining_gap_records": 535
+    "remaining_gap_records": 516
   },
   "context_completeness": {
     "by_core_completeness": {
       "6/9": 1,
-      "8/9": 6,
-      "9/9": 575
+      "8/9": 7,
+      "9/9": 585
     },
     "by_refinement_priority": {
       "complete": 65,
-      "high": 2,
-      "medium": 515
+      "high": 3,
+      "medium": 525
     },
     "by_secondary_completeness": {
       "0/5": 3,
       "1/5": 44,
-      "2/5": 100,
-      "3/5": 357,
-      "4/5": 13,
+      "2/5": 103,
+      "3/5": 364,
+      "4/5": 14,
       "5/5": 65
     }
   },
   "pack_inputs": {
-    "protein_context_profiles": 582,
-    "protein_expression_observations": 614,
-    "protein_observations": 724,
+    "protein_context_profiles": 593,
+    "protein_expression_observations": 633,
+    "protein_observations": 743,
     "protein_state_observations": 110
   },
   "policy": "This audit prioritizes metadata refinement only. It does not assign numeric confidence, create graph edges, or promote unresolved mechanism mappings.",
@@ -52,6 +52,14 @@
       "protein_observation_count": 1,
       "refinement_priority": "high",
       "study_id": "FLOW_SCI_013"
+    },
+    {
+      "context_id": "sci:protein:68e161a3f6f0fd65",
+      "missing_core_fields": "injury_level",
+      "missing_secondary_fields": "injury_severity;injury_distance;injury_distance_unit",
+      "protein_observation_count": 1,
+      "refinement_priority": "high",
+      "study_id": "FLOW_SCI_018"
     },
     {
       "context_id": "sci:protein:87866d468a18e9f9",
@@ -116,6 +124,14 @@
       "protein_observation_count": 4,
       "refinement_priority": "medium",
       "study_id": "FLOW_SCI_360"
+    },
+    {
+      "context_id": "sci:protein:aef5c04993f7374b",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "sex;injury_distance;injury_distance_unit",
+      "protein_observation_count": 4,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_202"
     },
     {
       "context_id": "sci:protein:bf7ae567969733d0",
@@ -366,6 +382,14 @@
       "study_id": "FLOW_SCI_300"
     },
     {
+      "context_id": "sci:protein:5cbf22a4bffe0906",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_223"
+    },
+    {
       "context_id": "sci:protein:60c9e8b287cb623e",
       "missing_core_fields": "",
       "missing_secondary_fields": "injury_distance;injury_distance_unit",
@@ -420,30 +444,6 @@
       "protein_observation_count": 2,
       "refinement_priority": "medium",
       "study_id": "FLOW_SCI_311"
-    },
-    {
-      "context_id": "sci:protein:80ec77da93bcd54b",
-      "missing_core_fields": "",
-      "missing_secondary_fields": "injury_distance;injury_distance_unit",
-      "protein_observation_count": 2,
-      "refinement_priority": "medium",
-      "study_id": "FLOW_SCI_312"
-    },
-    {
-      "context_id": "sci:protein:86f4a2e50250d381",
-      "missing_core_fields": "",
-      "missing_secondary_fields": "injury_distance;injury_distance_unit;sample_count",
-      "protein_observation_count": 2,
-      "refinement_priority": "medium",
-      "study_id": "FLOW_SCI_325"
-    },
-    {
-      "context_id": "sci:protein:88198a0685e0ddbe",
-      "missing_core_fields": "",
-      "missing_secondary_fields": "injury_distance;injury_distance_unit",
-      "protein_observation_count": 2,
-      "refinement_priority": "medium",
-      "study_id": "FLOW_SCI_384"
     }
   ],
   "source_artifact": {

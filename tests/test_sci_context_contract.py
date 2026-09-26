@@ -5,6 +5,7 @@ import json
 from collections import Counter
 from pathlib import Path
 
+from scripts.build_sci_context_pack import protein_form_requires_state_review
 from scripts.validate_context_pack import validate_pack
 
 
@@ -29,9 +30,9 @@ def test_sci_context_manifest_pins_neutral_mechanism_release():
     bundle_path = PACK / manifest["mechanism_dependency"]["bundle_metadata"]
     assert bundle_path.resolve().is_file()
     assert manifest["counts"]["context_profiles"] > 1
-    assert manifest["context_pack_version"] == "0.5.13"
-    assert manifest["counts"]["observations"] == 741
-    assert manifest["counts"]["mechanism_links"] == 741
+    assert manifest["context_pack_version"] == "0.5.14"
+    assert manifest["counts"]["observations"] == 760
+    assert manifest["counts"]["mechanism_links"] == 760
     assert 0 < manifest["counts"]["included_mechanism_links"] < manifest["counts"]["mechanism_links"]
 
 
@@ -241,15 +242,15 @@ def test_sci_context_pack_validator_accepts_populated_release():
     summary = validate_pack(PACK)
 
     assert summary["pack_id"] == "spinal_cord_injury"
-    assert summary["counts"]["observations"] == 741
-    assert summary["counts"]["mechanism_links"] == 741
+    assert summary["counts"]["observations"] == 760
+    assert summary["counts"]["mechanism_links"] == 760
 
 
 def test_sci_observations_and_links_preserve_evidence_boundaries():
     observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
     links = list(csv.DictReader((PACK / "mechanism_links.tsv").open(), delimiter="\t"))
-    assert Counter(row["modality"] for row in observations) == {"protein": 724, "epigenomics": 17}
-    assert Counter(row["evidence_role"] for row in observations) == {"dataset_observation": 741}
+    assert Counter(row["modality"] for row in observations) == {"protein": 743, "epigenomics": 17}
+    assert Counter(row["evidence_role"] for row in observations) == {"dataset_observation": 760}
     assert all(row["dependency_group"] for row in observations)
     assert all(row["mechanism_release_id"] == "module20_24_mechanism_graph:2026-09-25-literature-expansion-627" for row in links)
     assert all(row["mechanism_target_kind"] == "node" for row in links if row["release_status"] == "included")
@@ -261,8 +262,32 @@ def test_sci_protein_context_gap_audit_is_reproducible_and_separate_from_evidenc
     audit = json.loads((PACK / "protein_context_gap_audit.json").read_text())
     assert (PACK / "protein_context_coverage.tsv").is_file()
     assert (PACK / "protein_context_gap_candidates.tsv").is_file()
-    assert audit["pack_inputs"]["protein_observations"] == 724
-    assert audit["pack_inputs"]["protein_expression_observations"] == 614
+    assert audit["pack_inputs"]["protein_observations"] == 743
+    assert audit["pack_inputs"]["protein_expression_observations"] == 633
     assert audit["canonical_store"]["protein_observations"] == 1259
-    assert audit["canonical_store"]["remaining_gap_records"] == 535
+    assert audit["canonical_store"]["remaining_gap_records"] == 516
     assert audit["policy"].startswith("This audit prioritizes metadata refinement only")
+
+
+def test_sci_protein_selector_keeps_direct_expression_and_excludes_unresolved_states():
+    observations = {
+        row["observation_id"]: row
+        for row in csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t")
+    }
+    for observation_id in {
+        "FLOW_SCI_001__O1",  # intracellular protein flow
+        "FLOW_SCI_015__FLOW_SCI_015_OBS2",  # human SCI plasma CRP
+        "FLOW_SCI_065__FLOW_SCI_065_O_IL6",  # protein array
+        "FLOW_SCI_202__O1",  # antibody array
+        "FLOW_SCI_223__OBS223_12H_S100A8_MILD",  # discovery proteomics
+        "FLOW_SCI_300__OBS300_MLKL_1H",  # total MLKL; phospho unresolved
+        "FLOW_SCI_526__OBS526_CXCL12",  # antibody array
+    }:
+        assert observation_id in observations
+
+    # A timepoint explicitly marked inferred remains outside the release.
+    assert "FLOW_SCI_536__OBS536_FTH1" not in observations
+    assert "FLOW_SCI_553__O_PERK5_WB" not in observations
+    assert not protein_form_requires_state_review({"protein_form": "soluble C-reactive protein", "measurement_kind": "group median"})
+    assert not protein_form_requires_state_review({"protein_form": "total MLKL; phospho-MLKL not directly resolved", "measurement_kind": "MLKL protein by Western blot"})
+    assert protein_form_requires_state_review({"protein_form": "phosphorylated ERK5", "measurement_kind": "relative abundance"})

@@ -24,7 +24,12 @@ DEFAULT_PACK = ROOT / "context_packs" / "spinal_cord_injury"
 
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-from scripts.build_sci_context_pack import is_protein_expression_candidate, nonempty_context, read_tsv
+from scripts.build_sci_context_pack import (
+    is_protein_expression_candidate,
+    nonempty_context,
+    protein_form_requires_state_review,
+    read_tsv,
+)
 
 CORE_CONTEXT_FIELDS = [
     "injury_model", "injury_level", "timepoint_value", "timepoint_unit",
@@ -90,7 +95,7 @@ def classify_gap(row: dict[str, Any], selected_ids: set[str], imported_ids: set[
     assay = (row.get("assay") or "").lower()
     form = (row.get("protein_form") or "").lower()
     measurement = (row.get("measurement_kind") or "").lower()
-    if any(token in form for token in ("phosph", "active")):
+    if protein_form_requires_state_review(row):
         return "phospho_or_active_form_review_scope"
     if "ambiguous:" in assay or "reporter" in assay or "reporter" in form:
         return "ambiguous_or_reporter_assay"

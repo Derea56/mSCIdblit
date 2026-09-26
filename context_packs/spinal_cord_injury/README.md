@@ -7,16 +7,17 @@ read only for stable identifier resolution and is not rewritten or duplicated.
 
 ## Current status
 
-The release contains 741 dataset observations from the mSCS evidence stores:
+Release 0.5.14 contains 760 dataset observations from the mSCS evidence stores:
 
 - 110 protein/phosphoprotein observations selected from the curated
   `mSCS/data/derived/phosphorylation_support_observations.tsv` view and joined
   back to exact records in `mSCS/data/flow_protein/flow_protein.sqlite`.
-- 614 additional directly measured, source-extracted non-phosphorylated protein
+- 633 additional directly measured, source-extracted non-phosphorylated or
+  total-protein
   observations selected from the canonical flow-protein store. The selection
   excludes phosphoprotein/active-form duplicates, ambiguous or inaccessible
-  extraction states, reporter/activity-only assays, and records without a
-  measured value or reported direction.
+  extraction states, reporter/activity-only assays, inferred timepoints, and
+  records without a measured value or reported direction.
 - 17 epigenomics observations from
   `mSCS/data/epigenetic/epigenetic.sqlite`, preserving occupancy, accessibility,
   histone, methylation, and RNA-modification context where reported.
@@ -30,21 +31,19 @@ unreported; they are not converted into negative evidence. The release uses
 `dataset_observation` only. It does not fabricate external context-matched
 observations or inferred bridges.
 
-There are 371 included exact stable-node links and 370 unresolved staging links.
+There are 382 included exact stable-node links and 378 unresolved staging links.
 Unresolved observations are retained at module boundary `21B` solely as a
 review scope, with no graph-edge, partial-route, route-confidence, or numeric
 modality-weight promotion. Downstream protein measurements support the
 measured protein state only; they do not establish upstream ligand/receptor
 causality.
 
-This refinement applies eight study/timepoint protein context overrides from
-exact primary-source locators. In addition to the 75-kdyne T9, 60-kdyn T9,
-and C5 dorsal-column refinements, it resolves `FLOW_SCI_414` to a 60-kdyn T9
-contusion, `FLOW_SCI_024` to a 150-kdyn T10 contusion with a 5-mm soluble
-lesion-epicenter fraction, and endpoint-specific plasma-EV sample scopes for
-`FLOW_SCI_471`. The overrides do not replace reported perturbation or
-treatment fields, and do not fill sex or injury severity where the inspected
-source does not explicitly establish it.
+This refinement applies 80 study/timepoint protein context curation rows from
+exact primary-source locators, including injury model, level, severity, sex,
+timepoint, treatment, and sample-scope refinements where the inspected source
+explicitly establishes them. The overrides do not replace reported
+perturbation or treatment fields, and do not fill sex or injury severity where
+the inspected source does not explicitly establish it.
 Their source URLs, locators, curation notes, and checksum are retained in
 `protein_context_curation_overrides.tsv` and the generated provenance fields.
 
