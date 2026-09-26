@@ -20,8 +20,14 @@ import gzip
 import json
 import re
 import shutil
+import sys
 from collections import Counter, defaultdict
 from pathlib import Path
+
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
 
 try:
     from .route_artifacts import write_normalized_route_artifacts

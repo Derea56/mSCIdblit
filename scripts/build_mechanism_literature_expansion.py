@@ -19,16 +19,23 @@ from pathlib import Path
 
 try:
     from .audit_full_signaling_chains import ROUTE_EVIDENCE_FIELDS
-    from .build_all_ligand_route_coverage import build as build_ligand_route_coverage
-    from .build_all_ligand_route_coverage import write_tsv_gz as write_ligand_route_coverage
     from .mechanism_evidence_contract import MECHANISM_EVIDENCE_CONTRACT_VERSION
     from .route_artifacts import write_normalized_route_artifacts
 except ImportError:  # pragma: no cover - direct script execution
     from audit_full_signaling_chains import ROUTE_EVIDENCE_FIELDS
-    from build_all_ligand_route_coverage import build as build_ligand_route_coverage
-    from build_all_ligand_route_coverage import write_tsv_gz as write_ligand_route_coverage
     from mechanism_evidence_contract import MECHANISM_EVIDENCE_CONTRACT_VERSION
     from route_artifacts import write_normalized_route_artifacts
+
+try:
+    from .build_all_ligand_route_coverage import build as build_ligand_route_coverage
+    from .build_all_ligand_route_coverage import write_tsv_gz as write_ligand_route_coverage
+except ImportError:  # pragma: no cover - helper was removed from the current branch
+    try:
+        from build_all_ligand_route_coverage import build as build_ligand_route_coverage
+        from build_all_ligand_route_coverage import write_tsv_gz as write_ligand_route_coverage
+    except ImportError:
+        build_ligand_route_coverage = None
+        write_ligand_route_coverage = None
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -247,6 +254,12 @@ def main() -> int:
     else:
         write_tsv(expansion_path, expansion_fields, cumulative_expansions)
 
+    if build_ligand_route_coverage is None or write_ligand_route_coverage is None:
+        raise RuntimeError(
+            "The all-ligand route-coverage helper is unavailable on this branch; "
+            "restore scripts/build_all_ligand_route_coverage.py before building "
+            "a literature-expansion release."
+        )
     coverage_rows, coverage_summary = build_ligand_route_coverage(output_bundle)
     coverage_path = output_bundle / "mechanism_ligand_route_coverage.tsv.gz"
     write_ligand_route_coverage(coverage_path, coverage_rows)
