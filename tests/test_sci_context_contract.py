@@ -29,7 +29,7 @@ def test_sci_context_manifest_pins_neutral_mechanism_release():
     bundle_path = PACK / manifest["mechanism_dependency"]["bundle_metadata"]
     assert bundle_path.resolve().is_file()
     assert manifest["counts"]["context_profiles"] > 1
-    assert manifest["context_pack_version"] == "0.5.0"
+    assert manifest["context_pack_version"] == "0.5.1"
     assert manifest["counts"]["observations"] == 741
     assert manifest["counts"]["mechanism_links"] == 741
     assert 0 < manifest["counts"]["included_mechanism_links"] < manifest["counts"]["mechanism_links"]
@@ -86,7 +86,7 @@ def test_sci_context_profiles_preserve_scope_and_reported_study_fields():
 
 def test_sci_protein_context_curation_overrides_are_applied_with_source_provenance():
     overrides = list(csv.DictReader((PACK / "protein_context_curation_overrides.tsv").open(), delimiter="\t"))
-    assert len(overrides) == 8
+    assert len(overrides) == 13
     assert all(row["curation_status"] == "applied" for row in overrides)
     assert all(row["source_locator"] and row["source_url"] for row in overrides)
 
@@ -105,6 +105,16 @@ def test_sci_protein_context_curation_overrides_are_applied_with_source_provenan
     assert {row["injury_level"] for row in by_study["FLOW_SCI_024"]} == {"T10"}
     assert {row["injury_severity"] for row in by_study["FLOW_SCI_024"]} == {"150 kdyn mild-to-moderate contusion"}
     assert {row["sample_scope"] for row in by_study["FLOW_SCI_024"]} == {"5-mm lesion-epicenter soluble spinal-cord fraction"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_052"]} == {"T11"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_052"]} == {"50 kdyn contusion; 400-500 micrometre tissue displacement"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_052"]} == {"adult female C57BL/6J mice"}
+    assert {row["injury_level"] for row in by_study["FLOW_MSCS_ITDB_000071"]} == {"T10"}
+    assert {row["injury_severity"] for row in by_study["FLOW_MSCS_ITDB_000071"]} == {"full crush for 2 seconds with forceps; forceps width 0.1 mm in the last 5 mm of the tips"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_135"]} == {"0.5 mm displacement contusion at 1.0 m/s"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_071"]} == {"L1/L2"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_071"]} == {"0.4 mm residual closure; 10-second bilateral lateral compression"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_080"]} == {"2,000 dynes moderate contusion"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_080"]} == {"adult female mice, 3-4 months, 20-24 g"}
     ev_contexts = [row for row in contexts if row["study_id"] == "FLOW_SCI_471"]
     assert {row["sample_scope"] for row in ev_contexts} == {
         "plasma EV and T10 lesion-centered spinal-cord samples",

@@ -9,7 +9,12 @@
       "SCICTX-CUR-0005": 7,
       "SCICTX-CUR-0006": 5,
       "SCICTX-CUR-0007": 1,
-      "SCICTX-CUR-0008": 1
+      "SCICTX-CUR-0008": 1,
+      "SCICTX-CUR-0009": 6,
+      "SCICTX-CUR-0010": 6,
+      "SCICTX-CUR-0011": 6,
+      "SCICTX-CUR-0012": 5,
+      "SCICTX-CUR-0013": 3
     },
     "evidence_role": {
       "dataset_observation": 741
@@ -28,11 +33,15 @@
       "Dorsal column crush or transection at the upper thoracic cord in adult BALB/c, 129sv, and p75NTR-knockout mice.": 2,
       "Infinite Horizons T9 contusion spinal cord injury": 4,
       "Infinite Horizons contusion spinal cord injury": 3,
+      "L1/L2 moderate spinal cord crush injury using Dumont forceps": 5,
+      "Moderate thoracic contusion SCI using an electromagnetic spinal cord injury device": 3,
       "NYU weight-drop thoracic contusion": 2,
+      "P2/P7 neonatal spinal cord crush injury at T10": 6,
       "T10 artery-clamp spinal cord injury in male ICR mice": 2,
       "T10 clamp/crush spinal cord injury in adult C57BL/6J mice": 1,
       "T10 compressive SCI using a 10-g aneurysm clip for 2 minutes": 1,
       "T10 contusion SCI in C57BL/6J mice": 2,
+      "T10 contusion spinal cord injury using the Louisville Injury System Apparatus": 6,
       "T10 contusion using the Infinite Horizons impactor": 7,
       "T10 forceps-compression spinal cord injury; 5-second calibrated forceps clamp": 3,
       "T10 moderate contusion spinal cord injury using an Infinite Horizons impactor": 2,
@@ -40,6 +49,7 @@
       "T10 severe spinal cord crush injury": 4,
       "T10 thoracic spinal cord contusion and lateral hemisection; contusion used for the protein time course": 2,
       "T10 weight-drop SCI in mice with or without streptozotocin/high-fat-high-sucrose diet-induced diabetes; exact weight-drop force/height not captured in first pass": 3,
+      "T11 contusion spinal cord injury using the Infinite Horizon Impactor": 6,
       "T11 contusive spinal cord injury using Infinite Horizon impactor": 6,
       "T12 compression spinal cord injury; 50 g applied for 5 minutes after T12 laminectomy": 2,
       "T12 dorsal hemisection": 1,
@@ -159,7 +169,6 @@
       "moderate mid-thoracic contusion spinal cord injury": 3,
       "moderate mid-thoracic traumatic spinal cord contusion": 3,
       "moderate thoracic contusion SCI": 12,
-      "moderate thoracic contusion SCI in wild-type and GFAP-I\u03baB\u03b1-dn transgenic mice": 3,
       "moderate thoracic contusion SCI using a 5 g weight dropped from 30 mm with a W.M. KECK+ Model III impactor": 1,
       "moderate thoracic contusion in GFAP-I\u03baB\u03b1-dn transgenic and wild-type mice": 4,
       "moderate thoracic contusion using a 1 g weight dropped from 30 mm": 4,
@@ -194,7 +203,6 @@
       "mouse traumatic spinal cord injury with a 5-mm lesion-centered tissue segment; exact impact parameters pending extraction": 7,
       "mouse traumatic spinal cord injury with endothelial-targeted AAV-MCT1 rescue arm": 3,
       "mouse traumatic spinal cord injury; exact contusion/hemisection parameters not captured in first-pass extraction": 2,
-      "neonatal traumatic spinal cord injury": 6,
       "partial T10 contusion SCI in Lcn2 knockout and wild-type mice": 1,
       "pyramidotomy and spinal cord injury paradigms in conditional Pten mice": 1,
       "severe 80 kdyn contusive SCI": 2,
@@ -218,13 +226,10 @@
       "thoracic contusion SCI in adult female C57BL/6J mice": 1,
       "thoracic contusion SCI in adult female TLR4-null and wild-type mice": 3,
       "thoracic contusion SCI in rats with clodronate-liposome monocyte depletion arm": 5,
-      "thoracic contusion SCI with local PBS, recombinant IL-4, or recombinant IL-13 administration": 6,
       "thoracic contusion spinal cord injury": 1,
       "thoracic contusion spinal cord injury at T8": 3,
       "thoracic contusion spinal cord injury in wild-type and Mapkapk2/MK2-null mice": 6,
-      "thoracic contusive SCI with AAV2-KLF7 or AAV2-GFP": 6,
       "thoracic crush spinal cord injury in GLT1 heterozygous and wild-type mice": 1,
-      "thoracic spinal cord crush injury": 5,
       "thoracic spinal cord injury with retrograde labeling of long and short propriospinal neurons": 2,
       "thoracic traumatic SCI with injury-centered spinal cord harvest": 2,
       "traumatic SCI": 3,
@@ -820,11 +825,11 @@
   ],
   "scope_rule": "Only source records with explicit spinal-cord, spinal-cord-injury, or injury-model context were selected; no generic mechanism evidence was copied.",
   "selected_evidence": {
-    "context_curation_overrides_applied": 8,
+    "context_curation_overrides_applied": 13,
     "epigenetic_observations_imported": 17,
     "functional_observation_rows_imported": 0,
     "imaging_observation_rows_imported": 0,
-    "observations_with_context_curation": 79,
+    "observations_with_context_curation": 105,
     "perturbation_observation_rows_imported": 0,
     "protein_expression_candidate_rows": 614,
     "protein_observations_imported": 724,
@@ -862,8 +867,8 @@
     },
     {
       "path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv",
-      "sha256": "427f1165e55aafaa0ef52419a91bc4377ece78e59d45ba6fce87d9eba7549e5a",
-      "size_bytes": 4256
+      "sha256": "0beed73fe18bc19aa7aa554e495e2bc1fd296d5eb65653361cc0e01c93e47256",
+      "size_bytes": 7589
     }
   ]
 }
