@@ -29,7 +29,7 @@ def test_sci_context_manifest_pins_neutral_mechanism_release():
     bundle_path = PACK / manifest["mechanism_dependency"]["bundle_metadata"]
     assert bundle_path.resolve().is_file()
     assert manifest["counts"]["context_profiles"] > 1
-    assert manifest["context_pack_version"] == "0.5.9"
+    assert manifest["context_pack_version"] == "0.5.10"
     assert manifest["counts"]["observations"] == 741
     assert manifest["counts"]["mechanism_links"] == 741
     assert 0 < manifest["counts"]["included_mechanism_links"] < manifest["counts"]["mechanism_links"]
@@ -86,7 +86,7 @@ def test_sci_context_profiles_preserve_scope_and_reported_study_fields():
 
 def test_sci_protein_context_curation_overrides_are_applied_with_source_provenance():
     overrides = list(csv.DictReader((PACK / "protein_context_curation_overrides.tsv").open(), delimiter="\t"))
-    assert len(overrides) == 39
+    assert len(overrides) == 46
     assert all(row["curation_status"] == "applied" for row in overrides)
     assert all(row["source_locator"] and row["source_url"] for row in overrides)
 
@@ -136,6 +136,22 @@ def test_sci_protein_context_curation_overrides_are_applied_with_source_provenan
     assert {row["injury_level"] for row in by_study["FLOW_SCI_334"]} == {"T10"}
     assert {row["sex"] for row in by_study["FLOW_SCI_334"]} == {"adult male ICR mice, 7 weeks, 20-25 g"}
     assert {row["injury_level"] for row in by_study["FLOW_SCI_274"]} == {"T7"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_272"]} == {"T8-T9"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_272"]} == {"female C57BL/6 mice, 8-10 weeks, 25-30 g"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_293"]} == {"1-minute artery clamp after laminectomy; recovery-period SCI model"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_293"]} == {"male ICR mice, 6-8 weeks"}
+    sci_294_in_vivo = [row for row in by_study["FLOW_SCI_294"] if row["timepoint_value"] == "7"]
+    assert {row["injury_severity"] for row in sci_294_in_vivo} == {"0.3-mm-spacer clamp compression for 30 seconds"}
+    assert {row["sex"] for row in sci_294_in_vivo} == {"male C57BL/6 mice, 6-8 weeks"}
+    sci_294_in_vitro = [row for row in by_study["FLOW_SCI_294"] if row["timepoint_value"] == "-1.0"]
+    assert {row["injury_severity"] for row in sci_294_in_vitro} == {"clamp-compression; exact force not extracted"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_311"]} == {"10-g weight dropped from 5 cm after T8-T10 laminectomy"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_311"]} == {"T9"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_322"]} == {"10-g weight dropped from 12.5 mm"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_322"]} == {"T11-T12"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_343"]} == {"T10"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_343"]} == {"female CD1 mice"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_344"]} == {"female C57BL/6 mice, 10 weeks"}
     assert {row["injury_level"] for row in by_study["FLOW_SCI_470"]} == {"T9"}
     assert {row["sex"] for row in by_study["FLOW_SCI_470"]} == {"female C57BL/6J mice, 7-8 weeks, 17-22 g"}
     assert {row["injury_level"] for row in by_study["FLOW_SCI_434"]} == {"T12"}
@@ -171,7 +187,12 @@ def test_sci_protein_context_curation_overrides_are_applied_with_source_provenan
         "plasma extracellular-vesicle fraction",
     }
     observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
-    curated = [row for row in observations if row["context_id"] in {context["context_id"] for context in contexts if context["study_id"] in by_study}]
+    curated_context_ids = {
+        context["context_id"]
+        for context in contexts
+        if context["study_id"] in by_study and "context_curation=" in context["provenance_note"]
+    }
+    curated = [row for row in observations if row["context_id"] in curated_context_ids]
     assert curated
     assert all("context_curation" in json.loads(row["provenance_note"]) for row in curated)
 
