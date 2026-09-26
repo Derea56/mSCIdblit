@@ -37,7 +37,7 @@ modality-weight promotion. Downstream protein measurements support the
 measured protein state only; they do not establish upstream ligand/receptor
 causality.
 
-This refinement applies nine study/timepoint protein context overrides from
+This refinement applies eight study/timepoint protein context overrides from
 exact primary-source locators. In addition to the 75-kdyne T9, 60-kdyn T9,
 and C5 dorsal-column refinements, it resolves `FLOW_SCI_414` to a 60-kdyn T9
 contusion, `FLOW_SCI_024` to a 150-kdyn T10 contusion with a 5-mm soluble
