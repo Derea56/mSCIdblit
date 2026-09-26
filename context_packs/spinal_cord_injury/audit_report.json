@@ -225,7 +225,15 @@
       "SCICTX-CUR-0222": 1,
       "SCICTX-CUR-0223": 1,
       "SCICTX-CUR-0224": 1,
-      "SCICTX-CUR-0225": 1
+      "SCICTX-CUR-0225": 1,
+      "SCICTX-CUR-0226": 1,
+      "SCICTX-CUR-0227": 1,
+      "SCICTX-CUR-0228": 1,
+      "SCICTX-CUR-0229": 1,
+      "SCICTX-CUR-0230": 1,
+      "SCICTX-CUR-0231": 1,
+      "SCICTX-CUR-0232": 1,
+      "SCICTX-CUR-0233": 1
     },
     "evidence_role": {
       "dataset_observation": 760
@@ -448,7 +456,7 @@
       "severe 80 kdyn contusive SCI": 2,
       "severe T10 crush injury": 2,
       "severe contusive mouse SCI with vehicle, sham, and IVIg treatment groups": 1,
-      "severe crush spinal cord injury in TLR2 floxed and GFAP-Cre conditional astrocyte-TLR2 knockout mice": 1,
+      "severe crush spinal cord injury in TLR2-floxed and GFAP-Cre conditional astrocyte-TLR2 knockout mice": 1,
       "spinal cord compression injury by aneurysm clip; perilesional cord": 1,
       "spinal cord crush injury in female wild-type and TREM2-knockout mice": 2,
       "spinal cord injury with cortical AAV-shPTEN or control AAV-GFP": 1,
@@ -579,8 +587,8 @@
       "SCI versus sham; genotype and chimera-stratified injury-site protein context": 2,
       "SCI versus sham; microglial RhoA genotype comparison": 1,
       "SCI versus sham; shCebpb/shFcgr1 where specified": 1,
-      "SCI versus sham; treatment-stratified": 1,
       "SCI versus sham; treatment-stratified injured spinal cord": 2,
+      "SCI versus sham; treatment-stratified injury epicenter spinal cord": 1,
       "SCI versus sham; untreated endogenous trajectory": 1,
       "SCI versus sham; vehicle and DLK-inhibitor arms": 3,
       "SCI versus sham; vehicle, zileuton, or montelukast arms": 2,
@@ -599,7 +607,7 @@
       "SCI+formoterol": 2,
       "SCI, Irg-1/4-octyl-itaconate, and control groups": 1,
       "SCI, LV3NC-control, MSK1-siRNA, and sham/normal groups": 1,
-      "SCI, Lcn2 knockout versus wild-type": 1,
+      "SCI, Lcn2 knockout versus wild-type injury-region spinal cord cells": 1,
       "SCI, depletion, and control groups": 1,
       "SCI, photobiomodulation, and inhibitor groups": 1,
       "SCI, sham, Rgs6-silenced, Rgs6-overexpressing, and compound C groups": 2,
@@ -1090,11 +1098,11 @@
   ],
   "scope_rule": "Only source records with explicit spinal-cord, spinal-cord-injury, or injury-model context were selected; no generic mechanism evidence was copied.",
   "selected_evidence": {
-    "context_curation_overrides_applied": 224,
+    "context_curation_overrides_applied": 232,
     "epigenetic_observations_imported": 17,
     "functional_observation_rows_imported": 0,
     "imaging_observation_rows_imported": 0,
-    "observations_with_context_curation": 722,
+    "observations_with_context_curation": 730,
     "perturbation_observation_rows_imported": 0,
     "protein_expression_candidate_rows": 633,
     "protein_observations_imported": 743,
@@ -1132,8 +1140,8 @@
     },
     {
       "path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv",
-      "sha256": "6a16a5a076a96021fe1dfa290c66bc6a74fc1c7a2305b841d50777a08eb4ec85",
-      "size_bytes": 172174
+      "sha256": "a5d4535c028c082cae36feef37767861f9c3498b913d7b9b87106b22307d6d08",
+      "size_bytes": 178237
     }
   ]
 }
