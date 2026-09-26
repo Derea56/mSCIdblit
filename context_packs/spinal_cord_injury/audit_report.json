@@ -241,7 +241,12 @@
       "SCICTX-CUR-0238": 1,
       "SCICTX-CUR-0239": 1,
       "SCICTX-CUR-0240": 1,
-      "SCICTX-CUR-0241": 1
+      "SCICTX-CUR-0241": 1,
+      "SCICTX-CUR-0242": 1,
+      "SCICTX-CUR-0243": 1,
+      "SCICTX-CUR-0244": 1,
+      "SCICTX-CUR-0245": 1,
+      "SCICTX-CUR-0246": 1
     },
     "evidence_role": {
       "dataset_observation": 760
@@ -363,7 +368,7 @@
       "Traumatic spinal cord injury; mouse in-vivo injury model": 2,
       "acute compression spinal cord injury in adult pNestin-LacZ reporter mice": 2,
       "acute mouse spinal cord injury with intravital two-photon imaging of spinal microvessels": 4,
-      "acute traumatic spinal cord injury": 1,
+      "acute traumatic spinal cord injury in human participants": 1,
       "adult mouse spinal cord contusion injury": 2,
       "adult mouse spinal cord injury with microglial FBXL12 overexpression and control arms; exact injury parameters pending extraction": 2,
       "adult mouse spinal cord lesion/dorsal-column injury; exact lesion geometry requires full-text extraction": 2,
@@ -534,7 +539,7 @@
       "PBS, recombinant IL-4, or recombinant IL-13 treatment": 1,
       "PLX5622 diet": 11,
       "Plexin-B2 conditional deletion versus littermate control after contusion": 1,
-      "SCI": 83,
+      "SCI": 84,
       "SCI + AAV-KLF7 or AAV-GFP; sham comparator": 1,
       "SCI 1 dpi; Ryk+/+ GFAPcreERT2; C5 dorsal-column lesion study": 1,
       "SCI 1 dpi; Rykfl/fl GFAPcreERT2; C5 dorsal-column lesion study": 1,
@@ -653,7 +658,7 @@
       "WT, CD200L-knockout, and bone-marrow chimera SCI groups": 2,
       "WT-SCI versus WT-sham; p38alpha-perturbed SCI comparison": 2,
       "acute 0-3 days post-injury clinical visit": 2,
-      "acute SCI": 1,
+      "acute SCI clinical groups": 1,
       "acute SCI versus pre-injury/untreated comparison": 1,
       "acute SCI with AG-490 mechanistic comparison": 2,
       "acute SCI; vehicle or methylene blue": 2,
@@ -700,7 +705,6 @@
       "not_reported": 1,
       "p75-positive and p75-knockout dorsal-hemisection SCI groups": 1,
       "perilesional spinal cord tissue": 4,
-      "primary mouse astrocytes with inflammatory induction": 1,
       "pyramidotomy with AAV-Cre or AAV-GFP in Pten-floxed mice": 1,
       "rat sham, SCI, and SCI plus clodronate liposomes": 5,
       "sham, SCI WT, WT, and SCI-CX3:BDNF microglia-overexpression groups": 1,
@@ -1106,11 +1110,11 @@
   ],
   "scope_rule": "Only source records with explicit spinal-cord, spinal-cord-injury, or injury-model context were selected; no generic mechanism evidence was copied.",
   "selected_evidence": {
-    "context_curation_overrides_applied": 240,
+    "context_curation_overrides_applied": 245,
     "epigenetic_observations_imported": 17,
     "functional_observation_rows_imported": 0,
     "imaging_observation_rows_imported": 0,
-    "observations_with_context_curation": 738,
+    "observations_with_context_curation": 743,
     "perturbation_observation_rows_imported": 0,
     "protein_expression_candidate_rows": 633,
     "protein_observations_imported": 743,
@@ -1148,8 +1152,8 @@
     },
     {
       "path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv",
-      "sha256": "813dac27a2bdb334fc1ab12a5741f21e5902c41dd58702c21de3fdf00448b028",
-      "size_bytes": 184439
+      "sha256": "3eefba21f533357c1ee42f4ab57c8c945f0985bffdfc0f3aa2fb28e36072001d",
+      "size_bytes": 187866
     }
   ]
 }
