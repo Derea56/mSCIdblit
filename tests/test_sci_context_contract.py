@@ -29,7 +29,7 @@ def test_sci_context_manifest_pins_neutral_mechanism_release():
     bundle_path = PACK / manifest["mechanism_dependency"]["bundle_metadata"]
     assert bundle_path.resolve().is_file()
     assert manifest["counts"]["context_profiles"] > 1
-    assert manifest["context_pack_version"] == "0.5.8"
+    assert manifest["context_pack_version"] == "0.5.9"
     assert manifest["counts"]["observations"] == 741
     assert manifest["counts"]["mechanism_links"] == 741
     assert 0 < manifest["counts"]["included_mechanism_links"] < manifest["counts"]["mechanism_links"]
@@ -86,7 +86,7 @@ def test_sci_context_profiles_preserve_scope_and_reported_study_fields():
 
 def test_sci_protein_context_curation_overrides_are_applied_with_source_provenance():
     overrides = list(csv.DictReader((PACK / "protein_context_curation_overrides.tsv").open(), delimiter="\t"))
-    assert len(overrides) == 36
+    assert len(overrides) == 39
     assert all(row["curation_status"] == "applied" for row in overrides)
     assert all(row["source_locator"] and row["source_url"] for row in overrides)
 
@@ -133,6 +133,9 @@ def test_sci_protein_context_curation_overrides_are_applied_with_source_provenan
     assert {row["sex"] for row in by_study["FLOW_SCI_094"]} == {"female C57BL/6 mice, 3-5 months, 30-35 g"}
     assert {row["injury_level"] for row in by_study["FLOW_SCI_253"]} == {"T10"}
     assert {row["sample_scope"] for row in by_study["FLOW_SCI_253"]} == {"3-mm spinal-cord blocks centered on, rostral to, and caudal to the lesion"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_334"]} == {"T10"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_334"]} == {"adult male ICR mice, 7 weeks, 20-25 g"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_274"]} == {"T7"}
     assert {row["injury_level"] for row in by_study["FLOW_SCI_470"]} == {"T9"}
     assert {row["sex"] for row in by_study["FLOW_SCI_470"]} == {"female C57BL/6J mice, 7-8 weeks, 17-22 g"}
     assert {row["injury_level"] for row in by_study["FLOW_SCI_434"]} == {"T12"}
@@ -159,6 +162,9 @@ def test_sci_protein_context_curation_overrides_are_applied_with_source_provenan
     assert {row["sex"] for row in by_study["FLOW_SCI_008"]} == {"male Sprague-Dawley rats, 90-110 days, 300-350 g"}
     assert {row["timepoint_value"] for row in by_study["FLOW_SCI_013"]} == {"0-3"}
     assert {row["timepoint_unit"] for row in by_study["FLOW_SCI_013"]} == {"day"}
+    sci253_t2 = [row for row in contexts if row["study_id"] == "FLOW_SCI_253" and row["timepoint_value"] == "24 h; 48 h; 5 d; 8 d"]
+    assert len(sci253_t2) == 1
+    assert sci253_t2[0]["timepoint_unit"] == "mixed"
     ev_contexts = [row for row in contexts if row["study_id"] == "FLOW_SCI_471"]
     assert {row["sample_scope"] for row in ev_contexts} == {
         "plasma EV and T10 lesion-centered spinal-cord samples",

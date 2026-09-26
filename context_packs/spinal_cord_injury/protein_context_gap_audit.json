@@ -20,13 +20,13 @@
   "context_completeness": {
     "by_core_completeness": {
       "6/9": 1,
-      "8/9": 7,
-      "9/9": 574
+      "8/9": 6,
+      "9/9": 575
     },
     "by_refinement_priority": {
       "complete": 65,
-      "high": 3,
-      "medium": 514
+      "high": 2,
+      "medium": 515
     },
     "by_secondary_completeness": {
       "0/5": 3,
@@ -60,14 +60,6 @@
       "protein_observation_count": 1,
       "refinement_priority": "high",
       "study_id": "FLOW_SCI_013"
-    },
-    {
-      "context_id": "sci:protein:e8e571e67337c26f",
-      "missing_core_fields": "timepoint_unit",
-      "missing_secondary_fields": "injury_distance;injury_distance_unit;sample_count",
-      "protein_observation_count": 1,
-      "refinement_priority": "high",
-      "study_id": "FLOW_SCI_253"
     },
     {
       "context_id": "sci:protein:7db2ab1ac73d68fb",
@@ -444,6 +436,14 @@
       "protein_observation_count": 2,
       "refinement_priority": "medium",
       "study_id": "FLOW_SCI_325"
+    },
+    {
+      "context_id": "sci:protein:88198a0685e0ddbe",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_384"
     }
   ],
   "source_artifact": {
