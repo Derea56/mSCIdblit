@@ -19,23 +19,22 @@
   },
   "context_completeness": {
     "by_core_completeness": {
-      "5/9": 1,
-      "7/9": 3,
-      "8/9": 22,
-      "9/9": 556
+      "6/9": 1,
+      "8/9": 7,
+      "9/9": 574
     },
     "by_refinement_priority": {
-      "complete": 63,
-      "high": 20,
-      "medium": 499
+      "complete": 65,
+      "high": 3,
+      "medium": 514
     },
     "by_secondary_completeness": {
-      "0/5": 10,
-      "1/5": 49,
-      "2/5": 99,
-      "3/5": 346,
-      "4/5": 14,
-      "5/5": 64
+      "0/5": 3,
+      "1/5": 44,
+      "2/5": 104,
+      "3/5": 353,
+      "4/5": 13,
+      "5/5": 65
     }
   },
   "pack_inputs": {
@@ -47,172 +46,28 @@
   "policy": "This audit prioritizes metadata refinement only. It does not assign numeric confidence, create graph edges, or promote unresolved mechanism mappings.",
   "priority_contexts": [
     {
-      "context_id": "sci:protein:120d177701af527d",
-      "missing_core_fields": "injury_level",
-      "missing_secondary_fields": "injury_severity;sex;injury_distance;injury_distance_unit",
-      "protein_observation_count": 2,
-      "refinement_priority": "high",
-      "study_id": "FLOW_SCI_012"
-    },
-    {
-      "context_id": "sci:protein:168788bf6cc66a24",
-      "missing_core_fields": "injury_level",
-      "missing_secondary_fields": "injury_severity;sex;injury_distance;injury_distance_unit",
-      "protein_observation_count": 1,
-      "refinement_priority": "high",
-      "study_id": "FLOW_SCI_012"
-    },
-    {
       "context_id": "sci:protein:238075fa3e4375da",
-      "missing_core_fields": "injury_level;timepoint_value",
+      "missing_core_fields": "injury_level",
       "missing_secondary_fields": "injury_severity;sex;injury_distance;injury_distance_unit",
       "protein_observation_count": 1,
       "refinement_priority": "high",
       "study_id": "FLOW_SCI_013"
-    },
-    {
-      "context_id": "sci:protein:23f17131de991ef4",
-      "missing_core_fields": "sample_scope",
-      "missing_secondary_fields": "injury_distance;injury_distance_unit;sample_count",
-      "protein_observation_count": 1,
-      "refinement_priority": "high",
-      "study_id": "FLOW_SCI_253"
-    },
-    {
-      "context_id": "sci:protein:408bff1cedbf1737",
-      "missing_core_fields": "injury_level",
-      "missing_secondary_fields": "injury_severity;sex;injury_distance;injury_distance_unit",
-      "protein_observation_count": 1,
-      "refinement_priority": "high",
-      "study_id": "FLOW_SCI_094"
-    },
-    {
-      "context_id": "sci:protein:41ea33fd7056c587",
-      "missing_core_fields": "injury_level",
-      "missing_secondary_fields": "injury_severity;sex;injury_distance;injury_distance_unit;sample_count",
-      "protein_observation_count": 1,
-      "refinement_priority": "high",
-      "study_id": "FLOW_MSCS_ITDB_000032"
-    },
-    {
-      "context_id": "sci:protein:4fb4a8601fd7a65d",
-      "missing_core_fields": "injury_level",
-      "missing_secondary_fields": "injury_severity;sex;injury_distance;injury_distance_unit;sample_count",
-      "protein_observation_count": 1,
-      "refinement_priority": "high",
-      "study_id": "FLOW_MSCS_ITDB_000101"
-    },
-    {
-      "context_id": "sci:protein:51f6c3081812ebd4",
-      "missing_core_fields": "injury_level",
-      "missing_secondary_fields": "injury_severity;sex;injury_distance;injury_distance_unit;sample_count",
-      "protein_observation_count": 1,
-      "refinement_priority": "high",
-      "study_id": "FLOW_MSCS_ITDB_000057"
     },
     {
       "context_id": "sci:protein:87866d468a18e9f9",
-      "missing_core_fields": "injury_level;timepoint_value",
+      "missing_core_fields": "injury_level",
       "missing_secondary_fields": "injury_severity;sex;injury_distance;injury_distance_unit",
       "protein_observation_count": 1,
       "refinement_priority": "high",
       "study_id": "FLOW_SCI_013"
     },
     {
-      "context_id": "sci:protein:92138dc6c68d876a",
-      "missing_core_fields": "injury_level",
-      "missing_secondary_fields": "injury_severity;sex;injury_distance;injury_distance_unit;sample_count",
-      "protein_observation_count": 1,
-      "refinement_priority": "high",
-      "study_id": "FLOW_MSCS_ITDB_000105"
-    },
-    {
-      "context_id": "sci:protein:9b5a8bd24465e337",
-      "missing_core_fields": "timepoint_value",
-      "missing_secondary_fields": "injury_distance;injury_distance_unit;sample_count",
-      "protein_observation_count": 1,
-      "refinement_priority": "high",
-      "study_id": "FLOW_SCI_363"
-    },
-    {
-      "context_id": "sci:protein:ab2b93170ff067be",
-      "missing_core_fields": "injury_level",
-      "missing_secondary_fields": "injury_severity;sex;injury_distance;injury_distance_unit;sample_count",
-      "protein_observation_count": 1,
-      "refinement_priority": "high",
-      "study_id": "FLOW_MSCS_ITDB_000057"
-    },
-    {
-      "context_id": "sci:protein:abcfc819fe762829",
-      "missing_core_fields": "injury_level",
-      "missing_secondary_fields": "injury_severity;sex;injury_distance;injury_distance_unit;sample_count",
-      "protein_observation_count": 1,
-      "refinement_priority": "high",
-      "study_id": "FLOW_MSCS_ITDB_000105"
-    },
-    {
-      "context_id": "sci:protein:af6afce4728b8865",
-      "missing_core_fields": "injury_level",
-      "missing_secondary_fields": "injury_severity;sex;injury_distance;injury_distance_unit",
-      "protein_observation_count": 1,
-      "refinement_priority": "high",
-      "study_id": "FLOW_SCI_001"
-    },
-    {
-      "context_id": "sci:protein:b4ffc063b89a440f",
-      "missing_core_fields": "injury_level",
-      "missing_secondary_fields": "injury_severity;sex;injury_distance;injury_distance_unit",
-      "protein_observation_count": 1,
-      "refinement_priority": "high",
-      "study_id": "FLOW_SCI_008"
-    },
-    {
-      "context_id": "sci:protein:d4f6dbea2a82a56d",
-      "missing_core_fields": "injury_level",
-      "missing_secondary_fields": "injury_severity;sex;injury_distance;injury_distance_unit;sample_count",
-      "protein_observation_count": 1,
-      "refinement_priority": "high",
-      "study_id": "FLOW_MSCS_ITDB_000057"
-    },
-    {
-      "context_id": "sci:protein:df774f41fd1e77c2",
-      "missing_core_fields": "timepoint_value",
-      "missing_secondary_fields": "injury_distance;injury_distance_unit;sample_count",
-      "protein_observation_count": 1,
-      "refinement_priority": "high",
-      "study_id": "FLOW_SCI_176"
-    },
-    {
-      "context_id": "sci:protein:e06d8617a5fca891",
-      "missing_core_fields": "sample_scope",
-      "missing_secondary_fields": "",
-      "protein_observation_count": 1,
-      "refinement_priority": "high",
-      "study_id": "FLOW_SCI_470"
-    },
-    {
       "context_id": "sci:protein:e8e571e67337c26f",
-      "missing_core_fields": "timepoint_value;timepoint_unit",
+      "missing_core_fields": "timepoint_unit",
       "missing_secondary_fields": "injury_distance;injury_distance_unit;sample_count",
       "protein_observation_count": 1,
       "refinement_priority": "high",
       "study_id": "FLOW_SCI_253"
-    },
-    {
-      "context_id": "sci:protein:eabc66b75a6350ad",
-      "missing_core_fields": "injury_level",
-      "missing_secondary_fields": "injury_severity;sex;injury_distance;injury_distance_unit",
-      "protein_observation_count": 1,
-      "refinement_priority": "high",
-      "study_id": "FLOW_SCI_008"
-    },
-    {
-      "context_id": "sci:protein:51460f05806b71bd",
-      "missing_core_fields": "",
-      "missing_secondary_fields": "sex",
-      "protein_observation_count": 7,
-      "refinement_priority": "medium",
-      "study_id": "FLOW_SCI_024"
     },
     {
       "context_id": "sci:protein:7db2ab1ac73d68fb",
@@ -225,7 +80,7 @@
     {
       "context_id": "sci:protein:0c960a5681dd40d9",
       "missing_core_fields": "",
-      "missing_secondary_fields": "sex;injury_distance;injury_distance_unit;sample_count",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit;sample_count",
       "protein_observation_count": 4,
       "refinement_priority": "medium",
       "study_id": "FLOW_SCI_204"
@@ -321,7 +176,7 @@
     {
       "context_id": "sci:protein:90ebde77e793dcd7",
       "missing_core_fields": "",
-      "missing_secondary_fields": "sex;injury_distance;injury_distance_unit",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
       "protein_observation_count": 3,
       "refinement_priority": "medium",
       "study_id": "FLOW_SCI_111"
@@ -399,6 +254,14 @@
       "study_id": "FLOW_SCI_380"
     },
     {
+      "context_id": "sci:protein:120d177701af527d",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_012"
+    },
+    {
       "context_id": "sci:protein:18149ddf1a9b9689",
       "missing_core_fields": "",
       "missing_secondary_fields": "injury_distance;injury_distance_unit;sample_count",
@@ -445,6 +308,142 @@
       "protein_observation_count": 2,
       "refinement_priority": "medium",
       "study_id": "FLOW_SCI_240"
+    },
+    {
+      "context_id": "sci:protein:3c14c8bfc59071e8",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit;sample_count",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_464"
+    },
+    {
+      "context_id": "sci:protein:3c7c6d20440012b1",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_444"
+    },
+    {
+      "context_id": "sci:protein:3ca824550246f8bc",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_384"
+    },
+    {
+      "context_id": "sci:protein:405beb6cad73101d",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit;sample_count",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_246"
+    },
+    {
+      "context_id": "sci:protein:42d5d6cf55abb211",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_421"
+    },
+    {
+      "context_id": "sci:protein:47d09a1b82121b9e",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_123"
+    },
+    {
+      "context_id": "sci:protein:4835695b422b7da7",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_040"
+    },
+    {
+      "context_id": "sci:protein:55d5c87f6bab1d53",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_300"
+    },
+    {
+      "context_id": "sci:protein:60c9e8b287cb623e",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_052"
+    },
+    {
+      "context_id": "sci:protein:6db218168758b53e",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_052"
+    },
+    {
+      "context_id": "sci:protein:702f51c2b42229d4",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_075"
+    },
+    {
+      "context_id": "sci:protein:71a36852b96ea240",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_130"
+    },
+    {
+      "context_id": "sci:protein:731b5de3067354c0",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_130"
+    },
+    {
+      "context_id": "sci:protein:7412ffe6d6cbfcf3",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_113"
+    },
+    {
+      "context_id": "sci:protein:80be2c2b8833937a",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_311"
+    },
+    {
+      "context_id": "sci:protein:80ec77da93bcd54b",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_312"
+    },
+    {
+      "context_id": "sci:protein:86f4a2e50250d381",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit;sample_count",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_325"
     }
   ],
   "source_artifact": {

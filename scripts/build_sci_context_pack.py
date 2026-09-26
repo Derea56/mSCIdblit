@@ -36,6 +36,7 @@ DEFAULT_CURATION_OVERRIDES = DEFAULT_PACK / "protein_context_curation_overrides.
 CURATION_OVERRIDE_FIELDS = {
     "injury_model", "injury_level", "injury_severity", "sex",
     "perturbation_status", "condition", "sample_scope",
+    "timepoint_value", "timepoint_unit",
 }
 
 CONTEXT_FIELDS = [
@@ -119,6 +120,8 @@ def apply_curation_override(row: dict[str, Any], overrides: dict[tuple[str, str]
                 merged["perturbation_status"] = value
             elif field == "condition":
                 merged["condition"] = value
+            elif field == "timepoint_value":
+                merged["post_injury_value"] = value
             else:
                 merged[field] = value
     merged["_context_curation"] = {
@@ -173,7 +176,12 @@ def timepoint_number(value: Any) -> float | None:
 
 
 def display_timepoint(value: Any) -> str:
-    return display_number(timepoint_number(value))
+    rendered = display_number(timepoint_number(value))
+    if rendered:
+        return rendered
+    if value not in (None, ""):
+        return str(value).strip()
+    return ""
 
 
 def timepoint_label(value: Any, unit: Any) -> str:
@@ -827,7 +835,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
 
     manifest = {
         "context_pack_id": "spinal_cord_injury",
-        "context_pack_version": "0.5.2",
+        "context_pack_version": "0.5.8",
         "status": "populated",
         "pack_type": "disease_injury_evidence_overlay",
         "source_repo": "mSCIdblit",
