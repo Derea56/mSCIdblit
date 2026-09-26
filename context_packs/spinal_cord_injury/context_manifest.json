@@ -10,12 +10,12 @@
     "protein_context_gap_candidates": "protein_context_gap_candidates.tsv"
   },
   "context_pack_id": "spinal_cord_injury",
-  "context_pack_version": "0.5.24",
+  "context_pack_version": "0.5.25",
   "counts": {
-    "context_profiles": 608,
+    "context_profiles": 637,
     "included_mechanism_links": 382,
-    "mechanism_links": 760,
-    "observations": 760
+    "mechanism_links": 762,
+    "observations": 762
   },
   "evidence_policy": {
     "context_attaches_to": "observation_or_reviewed_mechanism_link",
@@ -52,6 +52,7 @@
     {
       "modality": "epigenomics",
       "observation_file": "observations.tsv",
+      "selection": "mSCS epigenetic observations, all explicit assay contexts, and exact binary feature-status records",
       "status": "populated"
     },
     {

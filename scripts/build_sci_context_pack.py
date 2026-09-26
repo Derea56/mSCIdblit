@@ -586,13 +586,74 @@ def epigenetic_rows(db_path: Path, artifact_hash: str) -> tuple[list[dict[str, s
     contexts: dict[str, dict[str, str]] = {}
     context_meta: dict[str, dict[str, Any]] = {}
     observations: dict[str, dict[str, Any]] = {}
+    def add_context(row: dict[str, Any]) -> str:
+        context_key = row.get("context_id") or row.get("assay_id")
+        context_id = stable_id("sci:epigenetic", row["study_id"], context_key)
+        if context_id in contexts:
+            return context_id
+        context_cell = row.get("cell_type") or ""
+        sample_scope = row.get("sorting_or_enrichment") or row.get("sample_unit") or ""
+        contexts[context_id] = {
+            "context_id": context_id,
+            "context_name": f"{row['study_id']} epigenetic context at {timepoint_label(row.get('post_injury_value'), row.get('post_injury_unit'))}",
+            "context_kind": "sample_context" if sample_scope or context_cell else "study_context",
+            "disease_context": "spinal_cord_injury", "anatomical_context": "spinal_cord",
+            "species": row.get("species") or "", "injury_model": row.get("injury_model") or "",
+            "injury_level": row.get("injury_level") or "",
+            "injury_severity": row.get("injury_severity") or "", "sex": row.get("sex") or "",
+            "timepoint_value": display_timepoint(row.get("post_injury_value")),
+            "timepoint_unit": row.get("post_injury_unit") or "",
+            "perturbation": row.get("condition") or "", "treatment": "",
+            "experimental_condition": row.get("condition") or "",
+            "study_perturbation_status": row.get("condition") or "",
+            "injury_distance": "", "injury_distance_unit": "",
+            "sample_scope": sample_scope, "sample_count": row.get("replicate_count"),
+            "cell_type": context_cell, "sample_id": "",
+            "study_id": row["study_id"], "tissue": row.get("tissue_region") or row.get("tissue") or "",
+            "context_status": "defined",
+            "provenance_note": source_locator(
+                "mSCS/data/epigenetic/epigenetic.sqlite",
+                f"studies.study_id={row['study_id']}",
+                f"assays.assay_id={row['assay_id']}",
+                f"assay_contexts.context_id={context_key}",
+                f"study_title={row.get('study_title')}",
+                f"source_url={row.get('source_url')}",
+            ),
+        }
+        context_meta[context_id] = {
+            "study_id": row["study_id"], "study_title": row.get("study_title"),
+            "species": row.get("species"), "injury_model": row.get("injury_model"),
+            "injury_level": row.get("injury_level"), "injury_severity": row.get("injury_severity"),
+            "sex": row.get("sex"), "timepoint_id": context_key,
+            "condition": row.get("condition"), "source_location": row.get("source_location"),
+            "source_url": row.get("source_url"),
+        }
+        return context_id
+
+    context_query = """
+        SELECT c.*, a.assay_name,
+               s.study_id, s.title AS study_title, s.species, s.injury_model,
+               s.injury_level, s.injury_severity, s.sex, s.curation_status,
+               src.source_location, src.source_url
+        FROM assay_contexts c
+        JOIN assays a ON a.assay_id = c.assay_id
+        JOIN studies s ON s.study_id = a.study_id
+        LEFT JOIN sources src ON src.source_id = a.source_id
+        ORDER BY c.context_id
+    """
+    with sqlite3.connect(db_path) as db:
+        db.row_factory = sqlite3.Row
+        for row in db.execute(context_query):
+            add_context(dict(row))
+
     query = """
         SELECT o.*, a.assay_name, a.epigenetic_class, a.target AS assay_target,
                a.directness, a.evidence_scope, a.evidence_level,
                c.condition, c.post_injury_value, c.post_injury_unit, c.tissue,
-               c.tissue_region, c.cell_type, c.replicate_count, c.sample_unit,
+               c.tissue_region, c.cell_type, c.sorting_or_enrichment,
+               c.replicate_count, c.sample_unit,
                s.study_id, s.title AS study_title, s.species, s.injury_model,
-               s.injury_level, s.pmid, s.doi, s.curation_status,
+               s.injury_level, s.injury_severity, s.sex, s.pmid, s.doi, s.curation_status,
                src.source_location, src.source_url
         FROM observations o
         JOIN assays a ON a.assay_id = o.assay_id
@@ -605,41 +666,8 @@ def epigenetic_rows(db_path: Path, artifact_hash: str) -> tuple[list[dict[str, s
         db.row_factory = sqlite3.Row
         rows = [dict(row) for row in db.execute(query)]
     for row in rows:
-        context_id = stable_id("sci:epigenetic", row["study_id"], row["context_id"] or row["assay_id"])
-        sample_id = row.get("sample_unit") or ""
+        context_id = add_context(row)
         context_cell = row.get("cell_type") or ""
-        contexts.setdefault(context_id, {
-            "context_id": context_id,
-            "context_name": f"{row['study_id']} epigenetic context at {timepoint_label(row.get('post_injury_value'), row.get('post_injury_unit'))}",
-            "context_kind": "sample_context" if sample_id or context_cell else "study_context",
-            "disease_context": "spinal_cord_injury", "anatomical_context": "spinal_cord",
-            "species": row.get("species") or "", "injury_model": row.get("injury_model") or "",
-            "injury_level": row.get("injury_level") or "",
-            "injury_severity": "", "sex": "",
-            "timepoint_value": display_timepoint(row.get("post_injury_value")),
-            "timepoint_unit": row.get("post_injury_unit") or "",
-            "perturbation": row.get("condition") or "", "treatment": "",
-            "experimental_condition": row.get("condition") or "",
-            "study_perturbation_status": row.get("condition") or "",
-            "injury_distance": "", "injury_distance_unit": "",
-            "sample_scope": "", "sample_count": row.get("replicate_count"),
-            "cell_type": context_cell, "sample_id": sample_id,
-            "study_id": row["study_id"], "tissue": row.get("tissue_region") or row.get("tissue") or "",
-            "context_status": "defined",
-            "provenance_note": source_locator(
-                "mSCS/data/epigenetic/epigenetic.sqlite",
-                f"studies.study_id={row['study_id']}",
-                f"assays.assay_id={row['assay_id']}",
-                f"assay_contexts.context_id={row['context_id']}",
-                f"study_title={row['study_title']}",
-            ),
-        })
-        context_meta.setdefault(context_id, {
-            "study_id": row["study_id"], "study_title": row["study_title"],
-            "species": row["species"], "injury_model": row["injury_model"],
-            "injury_level": row["injury_level"], "timepoint_id": row["context_id"],
-            "condition": row["condition"], "source_location": row["source_location"],
-        })
         numeric = number(row.get("effect_value"))
         direction = row.get("direction_vs_control") or "not_reported"
         value_kind = "numeric" if numeric is not None else ("qualitative" if direction not in {"", "not_reported"} else "unreported")
@@ -660,7 +688,7 @@ def epigenetic_rows(db_path: Path, artifact_hash: str) -> tuple[list[dict[str, s
             "unit": row.get("effect_unit"), "direction_vs_control": direction,
             "comparator": "", "biological_replicates": number(row.get("replicate_count")),
             "timepoint_value": timepoint_number(row.get("post_injury_value")), "timepoint_unit": row.get("post_injury_unit"),
-            "perturbation": row.get("condition"), "cell_type": context_cell, "sample_id": sample_id,
+            "perturbation": row.get("condition"), "cell_type": context_cell, "sample_id": "",
             "observation_status": "reported", "evidence_role": "dataset_observation",
             "dependency_group": f"mSCS:epigenetic:{row['study_id']}:{row['assay_id']}:{row['context_id']}",
             "source_artifact_path": "mSCS/data/epigenetic/epigenetic.sqlite",
@@ -672,9 +700,87 @@ def epigenetic_rows(db_path: Path, artifact_hash: str) -> tuple[list[dict[str, s
                 "evidence_scope": row.get("evidence_scope"), "evidence_level": row.get("evidence_level"),
                 "evidence_status": row.get("evidence_status"), "curation_status": row.get("curation_status"),
                 "pmid": row.get("pmid"), "doi": row.get("doi"),
-                "source_location": row.get("source_location"), "notes": row.get("notes"),
+                "source_location": row.get("source_location"), "source_url": row.get("source_url"),
+                "notes": row.get("notes"),
             }),
             "_gene_symbol": row.get("gene_symbol"), "_entity": feature_name,
+            "_context_meta": context_meta[context_id], "_study_key": row["study_id"],
+            "_injury_model": row.get("injury_model") or "unknown",
+            "_timepoint_key": timepoint_label(row.get("post_injury_value"), row.get("post_injury_unit")),
+            "_evidence_label": f"{row.get('epigenetic_class')}:{row.get('directness')}:{row.get('evidence_level')}",
+        }
+    binary_query = """
+        SELECT b.*, a.assay_name, a.epigenetic_class, a.directness,
+               a.evidence_scope, a.evidence_level,
+               c.condition, c.post_injury_value, c.post_injury_unit, c.tissue,
+               c.tissue_region, c.cell_type, c.sorting_or_enrichment,
+               c.replicate_count, c.sample_unit,
+               s.study_id, s.title AS study_title, s.species, s.injury_model,
+               s.injury_level, s.injury_severity, s.sex, s.pmid, s.doi,
+               s.curation_status, src.source_location, src.source_url
+        FROM binary_feature_status b
+        JOIN assays a ON a.assay_id = b.assay_id
+        LEFT JOIN assay_contexts c ON c.context_id = b.context_id
+        JOIN studies s ON s.study_id = a.study_id
+        LEFT JOIN sources src ON src.source_id = a.source_id
+        ORDER BY b.binary_id
+    """
+    with sqlite3.connect(db_path) as db:
+        db.row_factory = sqlite3.Row
+        binary_rows = [dict(row) for row in db.execute(binary_query)]
+    status_map = {
+        "present": "observed", "absent": "negative",
+        "not_assayed": "not_measured", "unavailable": "not_measured",
+        "insufficient_coverage": "unknown", "not_evaluable": "unknown",
+    }
+    for row in binary_rows:
+        context_id = add_context(row)
+        observation_id = f"EPIGENETIC_BINARY:{row['binary_id']}"
+        numeric = number(row.get("quantitative_value"))
+        detection_status = row.get("detection_status") or "unknown"
+        source_artifact = row.get("source_artifact") or ""
+        source_artifact_path = f"mSCS/{source_artifact}" if source_artifact else "mSCS/data/epigenetic/epigenetic.sqlite"
+        source_artifact_hash = row.get("source_artifact_hash") or artifact_hash
+        feature_name = row.get("target") or row.get("feature_id") or row.get("feature_type")
+        source_loc = source_locator(
+            f"epigenetic.binary_feature_status.binary_id={row['binary_id']}",
+            f"feature_type={row.get('feature_type')}",
+            f"feature_id={row.get('feature_id')}",
+            row.get("source_location"),
+            f"source_url={row.get('source_url')}",
+        )
+        observations[observation_id] = {
+            "observation_id": observation_id, "context_id": context_id,
+            "source_system": "mSCS", "source_database": "epigenetic",
+            "source_record_type": "epigenetic_binary_feature", "source_record_key": row["binary_id"],
+            "source_version": f"sha256:{artifact_hash}", "modality": "epigenomics",
+            "assay": row.get("assay_name"), "measurement_kind": "binary feature status",
+            "measured_entity_name": feature_name, "measured_entity_type": row.get("feature_type"),
+            "feature_id": row.get("feature_id"), "value_numeric": numeric,
+            "value_text": "" if numeric is not None else detection_status,
+            "value_kind": "numeric" if numeric is not None else "qualitative",
+            "unit": row.get("quantitative_unit"), "direction_vs_control": "not_reported",
+            "comparator": "", "biological_replicates": number(row.get("replicate_count")),
+            "timepoint_value": timepoint_number(row.get("post_injury_value")),
+            "timepoint_unit": row.get("post_injury_unit"), "perturbation": row.get("condition"),
+            "cell_type": row.get("cell_type") or "", "sample_id": "",
+            "observation_status": status_map.get(detection_status, "unknown"),
+            "evidence_role": "dataset_observation",
+            "dependency_group": f"mSCS:epigenetic:{row['study_id']}:{row['assay_id']}:{row.get('context_id') or row['assay_id']}",
+            "source_artifact_path": source_artifact_path,
+            "source_artifact_sha256": source_artifact_hash, "source_locator": source_loc,
+            "provenance_note": json_text({
+                "study_id": row["study_id"], "study_title": row.get("study_title"),
+                "binary_id": row["binary_id"], "assay_id": row["assay_id"],
+                "epigenetic_class": row.get("epigenetic_class"), "directness": row.get("directness"),
+                "evidence_scope": row.get("evidence_scope"), "evidence_level": row.get("evidence_level"),
+                "detection_status": detection_status, "availability_observed": row.get("availability_observed"),
+                "analysis_version": row.get("analysis_version"),
+                "source_artifact": source_artifact, "source_artifact_hash": source_artifact_hash,
+                "source_location": row.get("source_location"), "source_url": row.get("source_url"),
+                "notes": row.get("notes"),
+            }),
+            "_gene_symbol": row.get("target"), "_entity": feature_name,
             "_context_meta": context_meta[context_id], "_study_key": row["study_id"],
             "_injury_model": row.get("injury_model") or "unknown",
             "_timepoint_key": timepoint_label(row.get("post_injury_value"), row.get("post_injury_unit")),
@@ -815,6 +921,10 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             "protein_expression_candidate_rows": len(expression_obs),
             "protein_observations_imported": len(protein_obs),
             "epigenetic_observations_imported": len(epi_obs),
+            "epigenetic_binary_feature_observations_imported": sum(
+                observation["source_record_type"] == "epigenetic_binary_feature"
+                for observation in epi_obs.values()
+            ),
             "spatial_pilot_rows_assessed_but_excluded": 144,
             "spatial_exclusion_reason": "GSE269377 is a healthy/mutant FUS spinal-cord spatial dataset without an explicit spinal-cord-injury model; mSCS spatial_evidence has zero rows.",
             "transcriptomic_observation_rows_imported": 0,
@@ -854,6 +964,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
         },
         "notes": [
             "Protein observations combine the 110-row mSCS phosphorylation-support selection with directly measured, source-extracted non-phosphorylated protein records; they are not the full 1,259-row canonical store.",
+            "Epigenomics imports all explicitly reported assay contexts from the mSCS epigenetic store and retains exact binary feature-status records with their own source artifact paths and checksums; binary status is not converted into a directional comparison.",
             "Protein-expression selection excludes phosphoprotein/active-form duplicates, ambiguous or inaccessible extraction states, reporter/activity-only assays, and records without a measured value or reported direction.",
             "Dependency groups are source/study/timepoint/population or source/study/assay/context groups; they are intended to prevent correlated readouts from being double-counted.",
             "Downstream protein and phosphoprotein measurements are linked only to the measured state/node when an exact stable node match exists; no upstream ligand/receptor causality is inferred.",
@@ -864,7 +975,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
 
     manifest = {
         "context_pack_id": "spinal_cord_injury",
-        "context_pack_version": "0.5.24",
+        "context_pack_version": "0.5.25",
         "status": "populated",
         "pack_type": "disease_injury_evidence_overlay",
         "source_repo": "mSCIdblit",
@@ -888,7 +999,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             {"modality": "protein", "status": "populated", "selection": "mSCS phosphorylation_support_observations.tsv plus direct source-extracted non-phosphorylated protein observations from flow_protein.sqlite", "observation_file": "observations.tsv"},
             {"modality": "transcriptomics", "status": "assessed_not_imported", "reason": "No curated transcriptomic observation table with exact SCI context was selected in this release."},
             {"modality": "spatial", "status": "assessed_excluded", "reason": audit["selected_evidence"]["spatial_exclusion_reason"]},
-            {"modality": "epigenomics", "status": "populated", "observation_file": "observations.tsv"},
+            {"modality": "epigenomics", "status": "populated", "selection": "mSCS epigenetic observations, all explicit assay contexts, and exact binary feature-status records", "observation_file": "observations.tsv"},
             {"modality": "imaging", "status": "represented_as_protein_assay_context", "reason": "Immunofluorescence observations remain protein observations; no separate imaging claim is created."},
             {"modality": "perturbation", "status": "represented_in_context_fields", "reason": "Perturbation and treatment fields are preserved when reported; no intervention-only observation is fabricated."},
             {"modality": "functional", "status": "assessed_not_imported", "reason": "No standalone functional observation table was selected for this release."},

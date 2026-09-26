@@ -30,9 +30,10 @@ def test_sci_context_manifest_pins_neutral_mechanism_release():
     bundle_path = PACK / manifest["mechanism_dependency"]["bundle_metadata"]
     assert bundle_path.resolve().is_file()
     assert manifest["counts"]["context_profiles"] > 1
-    assert manifest["context_pack_version"] == "0.5.24"
-    assert manifest["counts"]["observations"] == 760
-    assert manifest["counts"]["mechanism_links"] == 760
+    assert manifest["context_pack_version"] == "0.5.25"
+    assert manifest["counts"]["context_profiles"] == 637
+    assert manifest["counts"]["observations"] == 762
+    assert manifest["counts"]["mechanism_links"] == 762
     assert 0 < manifest["counts"]["included_mechanism_links"] < manifest["counts"]["mechanism_links"]
 
 
@@ -83,6 +84,27 @@ def test_sci_context_profiles_preserve_scope_and_reported_study_fields():
         assert row["tissue"]
         assert row["disease_context"] == "spinal_cord_injury"
         assert row["anatomical_context"] == "spinal_cord"
+
+
+def test_sci_epigenomic_contexts_and_binary_statuses_preserve_source_scope():
+    contexts = list(csv.DictReader((PACK / "contexts.tsv").open(), delimiter="\t"))
+    epigenomic_contexts = [row for row in contexts if row["context_id"].startswith("sci:epigenetic:")]
+
+    assert len(epigenomic_contexts) == 43
+    assert all(row["study_id"] and row["tissue"] for row in epigenomic_contexts)
+    assert all(row["sample_id"] == "" for row in epigenomic_contexts)
+    assert any(row["study_id"] == "STUDY_TABULAE_MULTIOME" and row["timepoint_value"] == "60" for row in epigenomic_contexts)
+    assert any(row["study_id"] == "STUDY_METHYLATION_2023" and row["timepoint_value"] == "42" for row in epigenomic_contexts)
+
+    observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
+    epigenomic_observations = [row for row in observations if row["modality"] == "epigenomics"]
+    binary = [row for row in epigenomic_observations if row["source_record_type"] == "epigenetic_binary_feature"]
+
+    assert len(epigenomic_observations) == 19
+    assert len(binary) == 2
+    assert {row["observation_status"] for row in binary} == {"observed"}
+    assert {row["direction_vs_control"] for row in binary} == {"not_reported"}
+    assert all(row["source_artifact_path"].startswith("mSCS/data/epigenetic/processed/") for row in binary)
 
 
 def test_sci_protein_context_curation_overrides_are_applied_with_source_provenance():
@@ -348,15 +370,15 @@ def test_sci_context_pack_validator_accepts_populated_release():
     summary = validate_pack(PACK)
 
     assert summary["pack_id"] == "spinal_cord_injury"
-    assert summary["counts"]["observations"] == 760
-    assert summary["counts"]["mechanism_links"] == 760
+    assert summary["counts"]["observations"] == 762
+    assert summary["counts"]["mechanism_links"] == 762
 
 
 def test_sci_observations_and_links_preserve_evidence_boundaries():
     observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
     links = list(csv.DictReader((PACK / "mechanism_links.tsv").open(), delimiter="\t"))
-    assert Counter(row["modality"] for row in observations) == {"protein": 743, "epigenomics": 17}
-    assert Counter(row["evidence_role"] for row in observations) == {"dataset_observation": 760}
+    assert Counter(row["modality"] for row in observations) == {"protein": 743, "epigenomics": 19}
+    assert Counter(row["evidence_role"] for row in observations) == {"dataset_observation": 762}
     assert all(row["dependency_group"] for row in observations)
     assert all(row["mechanism_release_id"] == "module20_24_mechanism_graph:2026-09-25-literature-expansion-627" for row in links)
     assert all(row["mechanism_target_kind"] == "node" for row in links if row["release_status"] == "included")
