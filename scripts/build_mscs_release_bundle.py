@@ -47,6 +47,13 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--graph-bundle-dir", type=Path, default=DEFAULT_GRAPH)
     parser.add_argument("--method-migration-dir", type=Path, default=DEFAULT_METHOD)
+    parser.add_argument(
+        "--candidate-universe-dir",
+        type=Path,
+        default=None,
+        help="Optional output from build_mechanism_lr_candidate_universe.py.",
+    )
+    parser.add_argument("--release-id", default=None)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
     return parser.parse_args()
 
@@ -55,6 +62,7 @@ def main() -> int:
     args = parse_args()
     graph = args.graph_bundle_dir.resolve()
     method = args.method_migration_dir.resolve()
+    candidate = args.candidate_universe_dir.resolve() if args.candidate_universe_dir else None
     output = args.output_dir.resolve()
     required_graph = [
         "bundle_metadata.json",
@@ -82,6 +90,9 @@ def main() -> int:
     ]
     missing = [str(graph / name) for name in required_graph if not (graph / name).exists()]
     missing.extend(str(method / name) for name in required_method if not (method / name).exists())
+    required_candidate = ["mechanism_lr_candidate_universe.tsv", "mechanism_lr_candidate_universe_report.json"]
+    if candidate is not None:
+        missing.extend(str(candidate / name) for name in required_candidate if not (candidate / name).is_file())
     if missing:
         raise SystemExit("Missing release inputs: " + ", ".join(missing))
 
@@ -100,23 +111,42 @@ def main() -> int:
             shutil.copy2(source, target)
             method_files.append(target)
 
+    candidate_files: list[Path] = []
+    if candidate is not None:
+        for name in required_candidate:
+            source = candidate / name
+            target = output / "candidate_universe" / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source, target)
+            candidate_files.append(target)
+
     graph_metadata = json.loads((graph / "bundle_metadata.json").read_text(encoding="utf-8"))
     method_report = json.loads((method / "method_resource_migration_report.json").read_text(encoding="utf-8"))
+    candidate_report = (
+        json.loads((candidate / "mechanism_lr_candidate_universe_report.json").read_text(encoding="utf-8"))
+        if candidate is not None else {}
+    )
     file_manifest: dict[str, dict[str, Any]] = {}
-    for path in sorted(graph_files + method_files):
+    for path in sorted(graph_files + method_files + candidate_files):
         file_manifest[str(path.relative_to(output))] = {
             "sha256": sha256(path),
             "bytes": path.stat().st_size,
         }
     manifest = {
         "schema_version": "mscs_release_bundle_v1",
-        "release_id": "mscs_release_bundle_v1_4_0_method_resources_v1",
+        "release_id": args.release_id or (
+            "mscs_release_bundle_v1_5_0_candidate_universe_v1"
+            if candidate is not None else "mscs_release_bundle_v1_4_0_method_resources_v1"
+        ),
         "project": "mSCIdblit",
         "target_consumer": "mSCS",
         "mechanism_graph_release": graph_metadata.get("release_id", "unknown"),
         "mechanism_graph_version": graph_metadata.get("graph_version", "unknown"),
         "method_resource_schema": "method_resource_layer_v1",
         "method_resource_migration_schema": method_report.get("schema_version"),
+        "candidate_universe_schema": (
+            candidate_report.get("schema_version") if candidate is not None else None
+        ),
         "database_is_source_of_truth": True,
         "original_mscs_resources_preserved": True,
         "biological_validation_created_by_resource_import": False,
@@ -128,7 +158,11 @@ def main() -> int:
             "method_resource_records": method_report.get("method_resource_record_count"),
             "method_resource_projections": method_report.get("projection_count"),
             "numeric_artifacts": method_report.get("numeric_artifact_count"),
+            "candidate_universe_records": (
+                candidate_report.get("canonical_communication_count") if candidate is not None else None
+            ),
         },
+        "candidate_universe_path": "candidate_universe/mechanism_lr_candidate_universe.tsv" if candidate is not None else None,
         "migration_gaps": method_report.get("migration_gaps", []),
         "files": file_manifest,
     }

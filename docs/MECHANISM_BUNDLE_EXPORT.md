@@ -84,6 +84,31 @@ passes. The current bundle still records the large NicheNet RDS and neutral
 matrix as exact source references; it is not yet a self-contained replacement
 for the mSCS NicheNet scoring resource.
 
+## Additive LR candidate-universe projection
+
+The complete method-resource candidate universe can be projected alongside a
+specific graph release without changing the graph tables:
+
+```bash
+python3 scripts/build_mechanism_lr_candidate_universe.py \
+  --graph-bundle-dir data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627 \
+  --method-migration-dir data/processed/method_resource_migration_v1 \
+  --output-dir data/processed/mechanism_lr_candidate_universe_v1
+
+python3 scripts/build_mscs_release_bundle.py \
+  --graph-bundle-dir data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627 \
+  --method-migration-dir data/processed/method_resource_migration_v1 \
+  --candidate-universe-dir data/processed/mechanism_lr_candidate_universe_v1 \
+  --output-dir data/processed/mscs_release_bundle_v1_5_0_candidate_universe_v1
+```
+
+The projection retains every canonical method-resource pair and records exact
+graph and route joins when available. Its statuses are descriptive release
+metadata only: candidates remain `method_resource_only` unless independently
+supported elsewhere, and staged or unresolved mappings are retained rather
+than discarded. The projection never creates mechanism edges, confidence
+scores, causal assertions, or numeric modality weights.
+
 ## Recommended Strict Mouse-First Export
 
 For the first `mSCS` astrocyte transition build, start with a conservative bundle:
