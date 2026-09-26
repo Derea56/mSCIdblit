@@ -10,12 +10,12 @@
     "protein_context_gap_candidates": "protein_context_gap_candidates.tsv"
   },
   "context_pack_id": "spinal_cord_injury",
-  "context_pack_version": "0.5.13",
+  "context_pack_version": "0.5.14",
   "counts": {
-    "context_profiles": 597,
-    "included_mechanism_links": 371,
-    "mechanism_links": 741,
-    "observations": 741
+    "context_profiles": 608,
+    "included_mechanism_links": 382,
+    "mechanism_links": 760,
+    "observations": 760
   },
   "evidence_policy": {
     "context_attaches_to": "observation_or_reviewed_mechanism_link",

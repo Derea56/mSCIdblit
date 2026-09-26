@@ -213,12 +213,40 @@ def protein_has_measurement(row: dict[str, Any]) -> bool:
     )
 
 
+def protein_form_requires_state_review(row: dict[str, Any]) -> bool:
+    """Return true for explicitly phospho/active or mixed-state records.
+
+    Do not use substring matching for ``active``: ``C-reactive`` is a normal
+    protein name, not an active-form measurement.  Total-protein records that
+    merely say that phosphorylation was not resolved remain eligible.
+    """
+    form = (row.get("protein_form") or "").lower()
+    measurement = (row.get("measurement_kind") or "").lower()
+    if "total and phospho" in measurement or "total and phospho" in form:
+        return True
+    # A total-protein assay may explicitly state that a phospho-form was not
+    # resolved.  That is still a total-protein observation, not a phospho
+    # observation (for example, total MLKL with phospho-MLKL unresolved).
+    total_protein = form.startswith("total ")
+    if re.search(r"\bphospho(?:[-\s]|$)", form):
+        return not total_protein
+    if re.search(r"\bphosphorylated\b", form):
+        return not total_protein
+    if re.search(r"\bphosphorylation[- ]state-specific\b", form):
+        return True
+    if re.search(r"\bactive(?:[\s\-/]|$)", form):
+        return True
+    return False
+
+
 def is_protein_expression_candidate(row: dict[str, Any], selected_ids: set[str]) -> bool:
     if row["observation_id"] in selected_ids:
         return False
     if not nonempty_context(row.get("injury_model")):
         return False
     if row.get("extraction_status") not in {"figure_table_transcribed", "source_data_transcribed"}:
+        return False
+    if "inferred" in (row.get("timepoint_id") or "").lower():
         return False
     if not protein_has_measurement(row):
         return False
@@ -227,7 +255,7 @@ def is_protein_expression_candidate(row: dict[str, Any], selected_ids: set[str])
     measurement = (row.get("measurement_kind") or "").lower()
     if "ambiguous:" in assay or "reporter" in assay or "reporter" in form:
         return False
-    if any(token in form for token in ("phosph", "active")):
+    if protein_form_requires_state_review(row):
         return False
     if any(token in assay for token in ("emsa", "enzyme activity", "lipid assay", "zymography")):
         return False
@@ -239,6 +267,7 @@ def is_protein_expression_candidate(row: dict[str, Any], selected_ids: set[str])
             "immunofluorescence", "immunohistochemistry", "immunocytochemistry",
             "western", "elisa", "flow_cytometry", "multiplex", "electrochemiluminescence",
             "mass_spectrometry", "gel_electrophoresis",
+            "intracellular_flow", "protein_array", "antibody array", "proteomics", "lc-ms",
         )
     )
 
@@ -835,7 +864,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
 
     manifest = {
         "context_pack_id": "spinal_cord_injury",
-        "context_pack_version": "0.5.13",
+        "context_pack_version": "0.5.14",
         "status": "populated",
         "pack_type": "disease_injury_evidence_overlay",
         "source_repo": "mSCIdblit",
