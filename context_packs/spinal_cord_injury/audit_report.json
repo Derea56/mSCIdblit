@@ -81,7 +81,10 @@
       "SCICTX-CUR-0078": 2,
       "SCICTX-CUR-0079": 4,
       "SCICTX-CUR-0080": 3,
-      "SCICTX-CUR-0081": 4
+      "SCICTX-CUR-0081": 4,
+      "SCICTX-CUR-0082": 1,
+      "SCICTX-CUR-0083": 1,
+      "SCICTX-CUR-0084": 4
     },
     "evidence_role": {
       "dataset_observation": 760
@@ -96,6 +99,7 @@
       "Adult mouse spinal cord injury model using TrkBF616 mice and pharmacogenetic TrkB inhibition with 1NMP; exact injury level and contusion parameters pending extraction.": 2,
       "Allen contusion SCI": 1,
       "C5 dorsal column lesion": 10,
+      "Complete T10 crush spinal cord injury": 1,
       "Complete T10 spinal cord transection in adult mice, with comparison to neonatal injury and circuit-specific genetic manipulations.": 1,
       "Complete T8-T9 spinal cord transection in adult female C57BL/6 mice; animals were studied from 1 day to 6 weeks after injury.": 1,
       "Complete spinal-cord crush at T10 using No. 5 Dumont forceps": 4,
@@ -182,6 +186,8 @@
       "T9 thoracic contusion using the Infinite Horizons impactor": 4,
       "T9-T10 dorsal hemisection spinal cord injury with NG2-reporter retrovirus labeling": 3,
       "T9-T10 lateral hemisection with immediate lenti-Gsx1-RFP injection": 2,
+      "T9/T10 moderate contusion spinal cord injury using Infinite Horizons": 4,
+      "Thoracic T11 contusion spinal cord injury using Infinite Horizons": 1,
       "Thoracic clip-compression spinal cord injury at T4": 2,
       "Thoracic contusion SCI using the Infinite Horizons spinal cord impactor": 6,
       "Thoracic contusion SCI using the NYU weight-drop impactor": 11,
@@ -246,7 +252,6 @@
       "low-thoracic contusion SCI": 1,
       "lumbar spinal cord hemisection": 3,
       "maximal-compression T7-T9 mouse SCI model in female C57BL/6J mice": 5,
-      "mid-thoracic contusion SCI": 1,
       "mid-thoracic contusion spinal cord injury": 2,
       "mid-thoracic contusive spinal cord injury": 3,
       "mid-thoracic contusive spinal cord injury in adult female C57BL/6J mice; GFP bone-marrow chimeras used for trafficking context": 5,
@@ -307,10 +312,9 @@
       "spinal cord transection in CMV-BDNF26 transgenic and wild-type mice": 2,
       "spinal lesion in adult wild-type and Sema7A-deficient mice": 2,
       "thoracic T10 contusion SCI": 4,
-      "thoracic contusion SCI": 7,
+      "thoracic contusion SCI": 6,
       "thoracic contusion SCI in C57BL/6-background mice": 1,
       "thoracic contusion SCI in C57BL/6J mice": 1,
-      "thoracic contusion SCI in Ly6G/Gr-1-depleted and control mice": 4,
       "thoracic contusion SCI in adult female C57BL/6J mice": 1,
       "thoracic contusion SCI in adult female TLR4-null and wild-type mice": 3,
       "thoracic contusion spinal cord injury": 1,
@@ -945,11 +949,11 @@
   ],
   "scope_rule": "Only source records with explicit spinal-cord, spinal-cord-injury, or injury-model context were selected; no generic mechanism evidence was copied.",
   "selected_evidence": {
-    "context_curation_overrides_applied": 80,
+    "context_curation_overrides_applied": 83,
     "epigenetic_observations_imported": 17,
     "functional_observation_rows_imported": 0,
     "imaging_observation_rows_imported": 0,
-    "observations_with_context_curation": 319,
+    "observations_with_context_curation": 325,
     "perturbation_observation_rows_imported": 0,
     "protein_expression_candidate_rows": 633,
     "protein_observations_imported": 743,
@@ -987,8 +991,8 @@
     },
     {
       "path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv",
-      "sha256": "6577be847b88e0bd3869df3ce123e45092951d577504ae24f27f782d8f56c749",
-      "size_bytes": 60367
+      "sha256": "d698c638b51b7fd8777ecd106f300e0fe25ff3de49f98609a3b155fc9ed41b3f",
+      "size_bytes": 62893
     }
   ]
 }
