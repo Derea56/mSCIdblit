@@ -1,27 +1,36 @@
 # Spinal cord injury context pack
 
-This is the first populated spinal-cord-injury evidence overlay for mSCIdblit.
+This is the first populated spinal-cord-injury evidence overlay for mSCIdblit,
+now expanded with context-rich protein-expression records.
 It is a separate release layer: the pinned Module 20B–24B mechanism graph is
 read only for stable identifier resolution and is not rewritten or duplicated.
 
 ## Current status
 
-The release contains 127 dataset observations from the mSCS evidence stores:
+The release contains 741 dataset observations from the mSCS evidence stores:
 
 - 110 protein/phosphoprotein observations selected from the curated
   `mSCS/data/derived/phosphorylation_support_observations.tsv` view and joined
   back to exact records in `mSCS/data/flow_protein/flow_protein.sqlite`.
+- 614 additional directly measured, source-extracted non-phosphorylated protein
+  observations selected from the canonical flow-protein store. The selection
+  excludes phosphoprotein/active-form duplicates, ambiguous or inaccessible
+  extraction states, reporter/activity-only assays, and records without a
+  measured value or reported direction.
 - 17 epigenomics observations from
   `mSCS/data/epigenetic/epigenetic.sqlite`, preserving occupancy, accessibility,
   histone, methylation, and RNA-modification context where reported.
 
 Each observation retains its source record key, artifact SHA-256, source
-locator, study/context fields, and dependency group. Missing values remain
-unknown or unreported; they are not converted into negative evidence. The
-release uses `dataset_observation` only. It does not fabricate external
-context-matched observations or inferred bridges.
+locator, study/context fields, and dependency group. Context profiles preserve
+species, injury model, injury severity, injury level, sex, post-injury
+timepoint, tissue, lesion distance, cell population, sample scope, condition,
+and perturbation status when reported. Missing values remain unknown or
+unreported; they are not converted into negative evidence. The release uses
+`dataset_observation` only. It does not fabricate external context-matched
+observations or inferred bridges.
 
-There are 67 included exact stable-node links and 60 unresolved staging links.
+There are 371 included exact stable-node links and 370 unresolved staging links.
 Unresolved observations are retained at module boundary `21B` solely as a
 review scope, with no graph-edge, partial-route, route-confidence, or numeric
 modality-weight promotion. Downstream protein measurements support the
