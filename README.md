@@ -46,6 +46,15 @@ The linked `EvidenceObservationDetail` layer preserves queryable reported and
 transcribed values while retaining the native mSCS row snapshot and source
 artifact hash.
 
+Context-specific evidence is maintained as a separate overlay. The initial
+SCI pack is a validated scaffold at
+[`context_packs/spinal_cord_injury/`](context_packs/spinal_cord_injury/).
+It links future SCI study observations to stable mechanism-release identifiers
+without adding SCI qualifiers to generic Module 20B–24B edges. The pack keeps
+modality, timepoint, perturbation, tissue, and sample context separate from
+mechanism topology; it stores no route confidence or numeric modality weights.
+See [`docs/SCI_CONTEXT_PACK.md`](docs/SCI_CONTEXT_PACK.md).
+
 For a single read-only pathway/entity retrieval across these layers, use
 [`scripts/query_pathway.py`](/Users/derea/Documents/SCI/mSCIdblit/scripts/query_pathway.py)
 and see the [release query contract](/Users/derea/Documents/SCI/mSCIdblit/docs/RELEASE_QUERY.md).
@@ -208,6 +217,7 @@ mSCIdblit/
 │   ├── build_mscs_release_bundle.py  # Combine graph and method-resource release layers
 │   ├── validate_mscs_release_bundle.py # Check combined release checksums and contents
 │   ├── import_mscs_modality_evidence.py # Build mSCS evidence bridge materialization
+│   ├── validate_context_pack.py       # Validate disease/injury context overlays
 │   ├── ollama_chunk_extract.py       # Generate small Ollama extraction prompts
 │   └── validate_module_evidence_crosswalk.sql # Crosswalk integrity gate
 ├── templates/

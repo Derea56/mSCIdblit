@@ -1,0 +1,2 @@
+context_id	context_name	context_kind	disease_context	anatomical_context	species	injury_model	injury_level	timepoint_value	timepoint_unit	perturbation	treatment	cell_type	sample_id	context_status	provenance_note
+sci_scope	Spinal cord injury evidence scope	ontology_scope	spinal_cord_injury	spinal_cord										defined	Scope-level context only; no study-level observation is asserted.
