@@ -185,7 +185,15 @@
       "SCICTX-CUR-0182": 2,
       "SCICTX-CUR-0183": 2,
       "SCICTX-CUR-0184": 2,
-      "SCICTX-CUR-0185": 2
+      "SCICTX-CUR-0185": 2,
+      "SCICTX-CUR-0186": 2,
+      "SCICTX-CUR-0187": 2,
+      "SCICTX-CUR-0188": 2,
+      "SCICTX-CUR-0189": 2,
+      "SCICTX-CUR-0190": 2,
+      "SCICTX-CUR-0191": 2,
+      "SCICTX-CUR-0192": 2,
+      "SCICTX-CUR-0193": 2
     },
     "evidence_role": {
       "dataset_observation": 760
@@ -507,9 +515,8 @@
       "SCI plus control TAT peptide or PTEN antagonistic peptide": 4,
       "SCI plus control antibody versus SCI plus anti-\u03b21-integrin antibody": 2,
       "SCI plus lenti-Gsx1 or control RFP-positive virally transduced cells": 2,
-      "SCI plus vehicle or IM7": 1,
       "SCI plus vehicle or ruxolitinib versus sham": 1,
-      "SCI plus vehicle, IM7, or AG490 comparison": 1,
+      "SCI plus vehicle, IM7, or AG490 comparison": 2,
       "SCI saline versus Smad3-inhibitor and caspase-1-inhibitor groups": 2,
       "SCI time course and 14-day injured-spinal-cord decellularization/proteomics arms": 4,
       "SCI time course and modified-citrus-pectin treatment groups": 4,
@@ -1051,11 +1058,11 @@
   ],
   "scope_rule": "Only source records with explicit spinal-cord, spinal-cord-injury, or injury-model context were selected; no generic mechanism evidence was copied.",
   "selected_evidence": {
-    "context_curation_overrides_applied": 184,
+    "context_curation_overrides_applied": 192,
     "epigenetic_observations_imported": 17,
     "functional_observation_rows_imported": 0,
     "imaging_observation_rows_imported": 0,
-    "observations_with_context_curation": 659,
+    "observations_with_context_curation": 675,
     "perturbation_observation_rows_imported": 0,
     "protein_expression_candidate_rows": 633,
     "protein_observations_imported": 743,
@@ -1093,8 +1100,8 @@
     },
     {
       "path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv",
-      "sha256": "1c5d38d60ef7e740e44ad0423a56f9c9469c433507da3baeb57539eefbfe8f99",
-      "size_bytes": 141292
+      "sha256": "6bcd4ff029bee3bf0d50c0b415e84863d4d277bf0e3843e5432ebe70c7a0fee3",
+      "size_bytes": 147438
     }
   ]
 }
