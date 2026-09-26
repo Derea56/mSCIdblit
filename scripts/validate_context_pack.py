@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -15,6 +16,16 @@ TABLES = {
     "observations": "observations.tsv",
     "mechanism_links": "mechanism_links.tsv",
 }
+
+OBSERVATION_STATUSES = {
+    "observed", "reported", "transcribed", "digitized", "derived",
+    "inferred", "negative", "not_measured", "unknown",
+}
+EVIDENCE_ROLES = {
+    "dataset_observation", "context_matched_external_observation",
+    "inferred_bridge", "contextual_annotation",
+}
+SHA256_PATTERN = re.compile(r"^[0-9a-fA-F]{64}$")
 
 
 def _read_tsv(path: Path) -> list[dict[str, str]]:
@@ -69,8 +80,21 @@ def validate_pack(pack: Path) -> dict[str, Any]:
     _unique(contexts, "context_id", pack / TABLES["contexts"])
     context_ids = {row["context_id"] for row in contexts}
 
-    for field in ("observation_id", "context_id", "modality", "measurement_kind", "evidence_role", "dependency_group", "provenance_note"):
+    for field in (
+        "observation_id", "context_id", "source_system", "source_database",
+        "source_record_type", "source_record_key", "source_version", "modality",
+        "measurement_kind", "evidence_role", "dependency_group",
+        "source_artifact_path", "source_artifact_sha256", "source_locator",
+        "provenance_note",
+    ):
         _require_nonempty(observations, field, pack / TABLES["observations"])
+    for number, row in enumerate(observations, start=2):
+        if row["observation_status"] not in OBSERVATION_STATUSES:
+            raise ValueError(f"{pack / TABLES['observations']}:{number}: invalid observation_status")
+        if row["evidence_role"] not in EVIDENCE_ROLES:
+            raise ValueError(f"{pack / TABLES['observations']}:{number}: invalid evidence_role")
+        if not SHA256_PATTERN.fullmatch(row["source_artifact_sha256"]):
+            raise ValueError(f"{pack / TABLES['observations']}:{number}: source_artifact_sha256 must be a SHA-256 hex digest")
     _unique(observations, "observation_id", pack / TABLES["observations"])
     observation_ids = {row["observation_id"] for row in observations}
     unknown_contexts = sorted({row["context_id"] for row in observations} - context_ids)
