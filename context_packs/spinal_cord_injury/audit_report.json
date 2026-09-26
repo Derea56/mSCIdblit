@@ -994,8 +994,8 @@
     },
     {
       "path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv",
-      "sha256": "30548cd1a26e23fcd25228d5ed1dcda745041c84fbff3b469ef28aff2d1afcd2",
-      "size_bytes": 65072
+      "sha256": "48b4da73914c59e0743df623d50aa97fc3c787c4a9faeed69d9f30ee86bba3e7",
+      "size_bytes": 65183
     }
   ]
 }

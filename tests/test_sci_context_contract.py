@@ -30,7 +30,7 @@ def test_sci_context_manifest_pins_neutral_mechanism_release():
     bundle_path = PACK / manifest["mechanism_dependency"]["bundle_metadata"]
     assert bundle_path.resolve().is_file()
     assert manifest["counts"]["context_profiles"] > 1
-    assert manifest["context_pack_version"] == "0.5.16"
+    assert manifest["context_pack_version"] == "0.5.17"
     assert manifest["counts"]["observations"] == 760
     assert manifest["counts"]["mechanism_links"] == 760
     assert 0 < manifest["counts"]["included_mechanism_links"] < manifest["counts"]["mechanism_links"]
@@ -137,6 +137,7 @@ def test_sci_protein_context_curation_overrides_are_applied_with_source_provenan
     assert {row["injury_level"] for row in by_study["FLOW_SCI_334"]} == {"T10"}
     assert {row["sex"] for row in by_study["FLOW_SCI_334"]} == {"adult male ICR mice, 7 weeks, 20-25 g"}
     assert {row["injury_level"] for row in by_study["FLOW_SCI_274"]} == {"T7"}
+    assert {row["sample_count"] for row in by_study["FLOW_SCI_274"]} == {"6"}
     assert {row["injury_level"] for row in by_study["FLOW_SCI_272"]} == {"T8-T9"}
     assert {row["sex"] for row in by_study["FLOW_SCI_272"]} == {"female C57BL/6 mice, 8-10 weeks, 25-30 g"}
     assert {row["injury_severity"] for row in by_study["FLOW_SCI_293"]} == {"1-minute artery clamp after laminectomy; recovery-period SCI model"}
