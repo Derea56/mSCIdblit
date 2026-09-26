@@ -217,7 +217,15 @@
       "SCICTX-CUR-0214": 1,
       "SCICTX-CUR-0215": 1,
       "SCICTX-CUR-0216": 1,
-      "SCICTX-CUR-0217": 1
+      "SCICTX-CUR-0217": 1,
+      "SCICTX-CUR-0218": 1,
+      "SCICTX-CUR-0219": 1,
+      "SCICTX-CUR-0220": 1,
+      "SCICTX-CUR-0221": 1,
+      "SCICTX-CUR-0222": 1,
+      "SCICTX-CUR-0223": 1,
+      "SCICTX-CUR-0224": 1,
+      "SCICTX-CUR-0225": 1
     },
     "evidence_role": {
       "dataset_observation": 760
@@ -609,7 +617,7 @@
       "SCI; control versus ependymal-cell-specific Il17ra deletion": 1,
       "SCI; non-diabetic and diabetic groups with MST1 perturbation": 3,
       "SCI; sham and vehicle comparison": 4,
-      "SCI; sham versus PBM": 1,
+      "SCI; sham versus PBM and mechanistic arms": 1,
       "SCI; vehicle or LM11A-31/LM11A-24 treatment": 1,
       "SCI; wild-type and Apoe knockout comparison": 2,
       "SCI; wild-type and HO-1 heterozygous mice": 3,
@@ -677,7 +685,7 @@
       "p75-positive and p75-knockout dorsal-hemisection SCI groups": 1,
       "perilesional spinal cord tissue": 4,
       "primary mouse astrocytes with inflammatory induction": 1,
-      "pyramidotomy with AAV-Cre or AAV-GFP in Pten floxed mice": 1,
+      "pyramidotomy with AAV-Cre or AAV-GFP in Pten-floxed mice": 1,
       "rat sham, SCI, and SCI plus clodronate liposomes": 5,
       "sham, SCI WT, WT, and SCI-CX3:BDNF microglia-overexpression groups": 1,
       "sham, SCI plus control agomiR, SCI plus miR-92a-3p agomiR, and PTEN-vector arms": 3,
@@ -1082,11 +1090,11 @@
   ],
   "scope_rule": "Only source records with explicit spinal-cord, spinal-cord-injury, or injury-model context were selected; no generic mechanism evidence was copied.",
   "selected_evidence": {
-    "context_curation_overrides_applied": 216,
+    "context_curation_overrides_applied": 224,
     "epigenetic_observations_imported": 17,
     "functional_observation_rows_imported": 0,
     "imaging_observation_rows_imported": 0,
-    "observations_with_context_curation": 714,
+    "observations_with_context_curation": 722,
     "perturbation_observation_rows_imported": 0,
     "protein_expression_candidate_rows": 633,
     "protein_observations_imported": 743,
@@ -1124,8 +1132,8 @@
     },
     {
       "path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv",
-      "sha256": "c580b0813e98af9b6e2b8ba03a80d79024d41facc3e5c902748cad5a7557713c",
-      "size_bytes": 166145
+      "sha256": "6a16a5a076a96021fe1dfa290c66bc6a74fc1c7a2305b841d50777a08eb4ec85",
+      "size_bytes": 172174
     }
   ]
 }
