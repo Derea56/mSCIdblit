@@ -233,7 +233,15 @@
       "SCICTX-CUR-0230": 1,
       "SCICTX-CUR-0231": 1,
       "SCICTX-CUR-0232": 1,
-      "SCICTX-CUR-0233": 1
+      "SCICTX-CUR-0233": 1,
+      "SCICTX-CUR-0234": 1,
+      "SCICTX-CUR-0235": 1,
+      "SCICTX-CUR-0236": 1,
+      "SCICTX-CUR-0237": 1,
+      "SCICTX-CUR-0238": 1,
+      "SCICTX-CUR-0239": 1,
+      "SCICTX-CUR-0240": 1,
+      "SCICTX-CUR-0241": 1
     },
     "evidence_role": {
       "dataset_observation": 760
@@ -1098,11 +1106,11 @@
   ],
   "scope_rule": "Only source records with explicit spinal-cord, spinal-cord-injury, or injury-model context were selected; no generic mechanism evidence was copied.",
   "selected_evidence": {
-    "context_curation_overrides_applied": 232,
+    "context_curation_overrides_applied": 240,
     "epigenetic_observations_imported": 17,
     "functional_observation_rows_imported": 0,
     "imaging_observation_rows_imported": 0,
-    "observations_with_context_curation": 730,
+    "observations_with_context_curation": 738,
     "perturbation_observation_rows_imported": 0,
     "protein_expression_candidate_rows": 633,
     "protein_observations_imported": 743,
@@ -1140,8 +1148,8 @@
     },
     {
       "path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv",
-      "sha256": "a5d4535c028c082cae36feef37767861f9c3498b913d7b9b87106b22307d6d08",
-      "size_bytes": 178237
+      "sha256": "813dac27a2bdb334fc1ab12a5741f21e5902c41dd58702c21de3fdf00448b028",
+      "size_bytes": 184439
     }
   ]
 }
