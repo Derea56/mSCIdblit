@@ -38,7 +38,7 @@ modality-weight promotion. Downstream protein measurements support the
 measured protein state only; they do not establish upstream ligand/receptor
 causality.
 
-This refinement applies 192 study/timepoint protein context curation rows from
+This refinement applies 200 study/timepoint protein context curation rows from
 exact primary-source locators, including injury model, level, severity, sex,
 timepoint, treatment, and sample-scope refinements where the inspected source
 explicitly establishes them. The overrides do not replace reported
