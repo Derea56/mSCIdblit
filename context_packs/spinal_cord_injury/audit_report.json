@@ -820,7 +820,7 @@
   ],
   "scope_rule": "Only source records with explicit spinal-cord, spinal-cord-injury, or injury-model context were selected; no generic mechanism evidence was copied.",
   "selected_evidence": {
-    "context_curation_overrides_applied": 9,
+    "context_curation_overrides_applied": 8,
     "epigenetic_observations_imported": 17,
     "functional_observation_rows_imported": 0,
     "imaging_observation_rows_imported": 0,
@@ -862,8 +862,8 @@
     },
     {
       "path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv",
-      "sha256": "478861473dca6d73af211587e2d308fa55dd5322077adafa42f2bf4b415d0c38",
-      "size_bytes": 4649
+      "sha256": "427f1165e55aafaa0ef52419a91bc4377ece78e59d45ba6fce87d9eba7549e5a",
+      "size_bytes": 4256
     }
   ]
 }
