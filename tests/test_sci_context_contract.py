@@ -30,7 +30,7 @@ def test_sci_context_manifest_pins_neutral_mechanism_release():
     bundle_path = PACK / manifest["mechanism_dependency"]["bundle_metadata"]
     assert bundle_path.resolve().is_file()
     assert manifest["counts"]["context_profiles"] > 1
-    assert manifest["context_pack_version"] == "0.5.17"
+    assert manifest["context_pack_version"] == "0.5.18"
     assert manifest["counts"]["observations"] == 760
     assert manifest["counts"]["mechanism_links"] == 760
     assert 0 < manifest["counts"]["included_mechanism_links"] < manifest["counts"]["mechanism_links"]
@@ -87,7 +87,7 @@ def test_sci_context_profiles_preserve_scope_and_reported_study_fields():
 
 def test_sci_protein_context_curation_overrides_are_applied_with_source_provenance():
     overrides = list(csv.DictReader((PACK / "protein_context_curation_overrides.tsv").open(), delimiter="\t"))
-    assert len(overrides) == 86
+    assert len(overrides) == 90
     assert all(row["curation_status"] == "applied" for row in overrides)
     assert all(row["source_locator"] and row["source_url"] for row in overrides)
 
@@ -118,6 +118,16 @@ def test_sci_protein_context_curation_overrides_are_applied_with_source_provenan
     assert {row["injury_severity"] for row in by_study["FLOW_SCI_080"]} == {"2,000 dynes moderate contusion"}
     assert {row["sex"] for row in by_study["FLOW_SCI_080"]} == {"adult female mice, 3-4 months, 20-24 g"}
     assert {row["sex"] for row in by_study["FLOW_SCI_204"]} == {"8-10-week-old female C57BL/6 mice, 20-25 g"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_018"]} == {"T10"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_018"]} == {"10-g weight dropped from 2.5 cm using the Allen model; source reports weight and height rather than a kdyn value"}
+    assert {row["sample_count"] for row in by_study["FLOW_SCI_018"]} == {"5"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_173"]} == {"T10"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_173"]} == {"70 kdyne zero-dwell contusion"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_246"]} == {"T8"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_246"]} == {"70 kilodyne severe contusion"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_246"]} == {"8-10-week-old female C57BL/6 mice"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_464"]} == {"T9"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_464"]} == {"70 kDyne zero-dwell contusion; reported as moderate severity"}
     assert {row["injury_severity"] for row in by_study["FLOW_SCI_111"]} == {"0.2 mm lateral-compression depth for 20 seconds"}
     assert {row["injury_level"] for row in by_study["FLOW_SCI_216"]} == {"T9"}
     assert {row["injury_severity"] for row in by_study["FLOW_SCI_216"]} == {"30-g vascular clip compression for 10 seconds"}
