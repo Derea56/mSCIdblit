@@ -1,16 +1,42 @@
 # Spinal cord injury context pack
 
-This is the initial scaffold for spinal-cord-injury-specific evidence linked
-to the neutral mSCIdblit mechanism graph. It is intentionally a separate
-release layer: Module 20B–24B mechanism records remain reusable for other
-diseases and are not rewritten with SCI-specific claims.
+This is the first populated spinal-cord-injury evidence overlay for mSCIdblit.
+It is a separate release layer: the pinned Module 20B–24B mechanism graph is
+read only for stable identifier resolution and is not rewritten or duplicated.
 
 ## Current status
 
-This pack is a contract scaffold, not a populated SCI evidence release. It
-contains no study-level observations or mechanism links yet. Empty tables are
-kept with their headers so importers and validators can be developed against
-the final shape without fabricating identifiers or measurements.
+The release contains 127 dataset observations from the mSCS evidence stores:
+
+- 110 protein/phosphoprotein observations selected from the curated
+  `mSCS/data/derived/phosphorylation_support_observations.tsv` view and joined
+  back to exact records in `mSCS/data/flow_protein/flow_protein.sqlite`.
+- 17 epigenomics observations from
+  `mSCS/data/epigenetic/epigenetic.sqlite`, preserving occupancy, accessibility,
+  histone, methylation, and RNA-modification context where reported.
+
+Each observation retains its source record key, artifact SHA-256, source
+locator, study/context fields, and dependency group. Missing values remain
+unknown or unreported; they are not converted into negative evidence. The
+release uses `dataset_observation` only. It does not fabricate external
+context-matched observations or inferred bridges.
+
+There are 67 included exact stable-node links and 60 unresolved staging links.
+Unresolved observations are retained at module boundary `21B` solely as a
+review scope, with no graph-edge, partial-route, route-confidence, or numeric
+modality-weight promotion. Downstream protein measurements support the
+measured protein state only; they do not establish upstream ligand/receptor
+causality.
+
+## Assessed evidence gaps
+
+The current mSCS spatial pilot was assessed but excluded: GSE269377 is a
+healthy/mutant-FUS spinal-cord spatial dataset without an explicit SCI injury
+model. It is therefore not treated as negative SCI spatial evidence. No
+curated transcriptomic, standalone imaging, perturbation-only, or functional
+observation table was imported in this release. Perturbation and treatment
+fields are preserved when reported in selected protein or epigenetic records;
+immunofluorescence remains represented as a protein assay context.
 
 The current generic mechanism dependency is recorded in
 [`context_manifest.json`](context_manifest.json). The manifest pins the
@@ -26,8 +52,19 @@ that context evidence cannot create or promote a generic graph edge.
 - `observations.tsv` — modality-native or explicitly derived SCI observations.
 - `mechanism_links.tsv` — reviewed links from observations to stable route,
   node, edge, pathway, or module identifiers in the pinned mechanism release.
+- `audit_report.json` — counts by modality, study, injury model, timepoint,
+  perturbation, observation status, evidence role, link status, and unresolved
+  mapping reason.
+- `../../scripts/build_sci_context_pack.py` — reproducible importer/curator.
 
-## Planned evidence layers
+Regenerate and validate with:
+
+```bash
+python3 scripts/build_sci_context_pack.py
+python3 scripts/validate_context_pack.py context_packs/spinal_cord_injury
+```
+
+## Evidence-layer policy
 
 | Layer | Intended use | Initial rule |
 |---|---|---|
