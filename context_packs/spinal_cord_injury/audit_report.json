@@ -4,7 +4,12 @@
     "context_curation": {
       "SCICTX-CUR-0001": 22,
       "SCICTX-CUR-0002": 30,
-      "SCICTX-CUR-0003": 10
+      "SCICTX-CUR-0003": 10,
+      "SCICTX-CUR-0004": 3,
+      "SCICTX-CUR-0005": 7,
+      "SCICTX-CUR-0006": 5,
+      "SCICTX-CUR-0007": 1,
+      "SCICTX-CUR-0008": 1
     },
     "evidence_role": {
       "dataset_observation": 741
@@ -28,6 +33,7 @@
       "T10 clamp/crush spinal cord injury in adult C57BL/6J mice": 1,
       "T10 compressive SCI using a 10-g aneurysm clip for 2 minutes": 1,
       "T10 contusion SCI in C57BL/6J mice": 2,
+      "T10 contusion using the Infinite Horizons impactor": 7,
       "T10 forceps-compression spinal cord injury; 5-second calibrated forceps clamp": 3,
       "T10 moderate contusion spinal cord injury using an Infinite Horizons impactor": 2,
       "T10 moderate contusion using Infinite Horizon impactor": 2,
@@ -45,6 +51,7 @@
       "T9 bilateral clip-compression spinal cord injury": 3,
       "T9 clamp-compression spinal cord injury": 1,
       "T9 clamp-compression spinal cord injury in adult male mice": 2,
+      "T9 contusion spinal cord injury using an Infinite Horizons impactor": 3,
       "T9 thoracic contusion using the Infinite Horizons impactor": 4,
       "T9-T10 dorsal hemisection spinal cord injury with NG2-reporter retrovirus labeling": 3,
       "T9-T10 lateral hemisection with immediate lenti-Gsx1-RFP injection": 2,
@@ -69,7 +76,6 @@
       "contusion SCI": 2,
       "contusive SCI with TFE3 knock-in and wild-type comparisons": 2,
       "contusive spinal cord injury in C57BL/6 mice": 2,
-      "contusive spinal cord injury in PDGFRalpha-lineage reporter and Chd7 conditional-knockout mice": 3,
       "contusive spinal cord injury in Swiss Albino female mice; T9 laminectomy with T10 segment stabilized": 3,
       "contusive spinal cord injury; exact contusion parameters require full-text extraction": 3,
       "contusive traumatic spinal cord injury": 1,
@@ -135,7 +141,6 @@
       "mid-thoracic traumatic contusion SCI in C57BL/6-background mice": 2,
       "mild thoracic contusion SCI in CD1 wild-type and sigma-1 receptor knockout mice": 1,
       "mild, moderate, or severe thoracic contusion SCI; separate complete transection arm": 1,
-      "mild-to-moderate thoracic contusion SCI": 7,
       "moderate T10 contusion using a modified Allen weight-drop model": 4,
       "moderate T10 contusion using the Infinite Horizon impactor": 4,
       "moderate T10 contusion, 5 g x 5 cm, adult C57BL/6J mice": 1,
@@ -815,11 +820,11 @@
   ],
   "scope_rule": "Only source records with explicit spinal-cord, spinal-cord-injury, or injury-model context were selected; no generic mechanism evidence was copied.",
   "selected_evidence": {
-    "context_curation_overrides_applied": 3,
+    "context_curation_overrides_applied": 9,
     "epigenetic_observations_imported": 17,
     "functional_observation_rows_imported": 0,
     "imaging_observation_rows_imported": 0,
-    "observations_with_context_curation": 62,
+    "observations_with_context_curation": 79,
     "perturbation_observation_rows_imported": 0,
     "protein_expression_candidate_rows": 614,
     "protein_observations_imported": 724,
@@ -857,8 +862,8 @@
     },
     {
       "path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv",
-      "sha256": "f8a3c469716e02cde077faada48cf09b9605c2c9b69ff417bebcdddfbdeaddcb",
-      "size_bytes": 1830
+      "sha256": "478861473dca6d73af211587e2d308fa55dd5322077adafa42f2bf4b415d0c38",
+      "size_bytes": 4649
     }
   ]
 }
