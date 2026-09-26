@@ -31,6 +31,12 @@ DEFAULT_PACK = ROOT / "context_packs" / "spinal_cord_injury"
 DEFAULT_BUNDLE = ROOT / "data" / "processed" / "mechanism_graph_module20_24_v2026_09_25_literature_expansion627"
 RELEASE_ID = "module20_24_mechanism_graph:2026-09-25-literature-expansion-627"
 RELEASE_TAG = "mSCIdblit-v1.9.386"
+DEFAULT_CURATION_OVERRIDES = DEFAULT_PACK / "protein_context_curation_overrides.tsv"
+
+CURATION_OVERRIDE_FIELDS = {
+    "injury_model", "injury_level", "injury_severity", "sex",
+    "perturbation_status", "condition",
+}
 
 CONTEXT_FIELDS = [
     "context_id", "context_name", "context_kind", "disease_context",
@@ -72,6 +78,61 @@ def sha256(path: Path) -> str:
 def read_tsv(path: Path) -> list[dict[str, str]]:
     with path.open(newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle, delimiter="\t"))
+
+
+def load_curation_overrides(path: Path) -> dict[tuple[str, str], dict[str, str]]:
+    rows = read_tsv(path)
+    required = {
+        "curation_id", "study_id", "timepoint_id", "source_locator", "source_url",
+        "curation_note", "curation_status",
+    } | CURATION_OVERRIDE_FIELDS
+    if rows and not required.issubset(rows[0]):
+        missing = sorted(required - set(rows[0]))
+        raise ValueError(f"curation override file is missing fields: {', '.join(missing)}")
+    overrides: dict[tuple[str, str], dict[str, str]] = {}
+    for row in rows:
+        if row.get("curation_status") != "applied":
+            continue
+        key = (row.get("study_id", ""), row.get("timepoint_id", ""))
+        if not key[0]:
+            raise ValueError("curation override rows require study_id")
+        if key in overrides:
+            raise ValueError(f"duplicate applied curation override key: {key}")
+        if not row.get("source_locator") or not row.get("source_url"):
+            raise ValueError(f"curation override {row.get('curation_id')} lacks exact source provenance")
+        overrides[key] = row
+    return overrides
+
+
+def apply_curation_override(row: dict[str, Any], overrides: dict[tuple[str, str], dict[str, str]]) -> dict[str, Any]:
+    """Apply only explicitly curated study/timepoint fields and retain provenance."""
+    merged = dict(row)
+    study_id = str(row.get("study_id") or "")
+    timepoint_id = str(row.get("timepoint_id") or "")
+    override = overrides.get((study_id, timepoint_id)) or overrides.get((study_id, ""))
+    if not override:
+        return merged
+    for field in CURATION_OVERRIDE_FIELDS:
+        value = override.get(field, "")
+        if value:
+            if field == "perturbation_status":
+                merged["perturbation_status"] = value
+            elif field == "condition":
+                merged["condition"] = value
+            else:
+                merged[field] = value
+    merged["_context_curation"] = {
+        "curation_id": override["curation_id"],
+        "source_locator": override["source_locator"],
+        "source_url": override["source_url"],
+        "curation_note": override["curation_note"],
+    }
+    return merged
+
+
+def curation_provenance(row: dict[str, Any]) -> dict[str, Any] | None:
+    value = row.get("_context_curation")
+    return value if isinstance(value, dict) else None
 
 
 def write_tsv(path: Path, fields: list[str], rows: Iterable[dict[str, Any]]) -> None:
@@ -219,7 +280,7 @@ def exact_node(node_index: dict[str, list[dict[str, str]]], gene_symbol: str | N
     return None, gene_reason or "no exact stable mechanism-node match"
 
 
-def protein_context_rows(db_path: Path, selected_ids: set[str], artifact_hash: str) -> tuple[list[dict[str, str]], dict[str, dict[str, Any]], dict[str, dict[str, Any]]]:
+def protein_context_rows(db_path: Path, selected_ids: set[str], artifact_hash: str, curation_overrides: dict[tuple[str, str], dict[str, str]]) -> tuple[list[dict[str, str]], dict[str, dict[str, Any]], dict[str, dict[str, Any]]]:
     contexts: dict[str, dict[str, str]] = {}
     context_meta: dict[str, dict[str, Any]] = {}
     observations: dict[str, dict[str, Any]] = {}
@@ -248,7 +309,7 @@ def protein_context_rows(db_path: Path, selected_ids: set[str], artifact_hash: s
             row = db.execute(query, (observation_id,)).fetchone()
         if row is None:
             raise ValueError(f"selected mSCS protein observation is absent from canonical store: {observation_id}")
-        row = dict(row)
+        row = apply_curation_override(dict(row), curation_overrides)
         context_id = stable_id("sci:protein", row["study_id"], row["timepoint_id"], row["population_id"])
         population = row["population_label"] or row["population_normalized_label"] or ""
         perturbation = row["condition"] or ""
@@ -284,6 +345,7 @@ def protein_context_rows(db_path: Path, selected_ids: set[str], artifact_hash: s
                 f"study_timepoints.timepoint_id={row['timepoint_id']}",
                 f"cell_populations.population_id={row['population_id']}",
                 f"study_title={row['study_title']}",
+                f"context_curation={json_text(curation_provenance(row))}" if curation_provenance(row) else None,
             ),
         })
         context_meta.setdefault(context_id, {
@@ -349,10 +411,12 @@ def protein_context_rows(db_path: Path, selected_ids: set[str], artifact_hash: s
                 "primary_source_url": selected.get("primary_source_url"),
                 "source_location": selected.get("source_location"),
                 "notes": selected.get("notes"),
+                **({"context_curation": curation_provenance(row)} if curation_provenance(row) else {}),
             }),
             "_gene_symbol": selected.get("gene_symbol"),
             "_entity": selected.get("protein") or selected.get("gene_symbol"),
             "_context_meta": context_meta[context_id],
+            "_context_curation": curation_provenance(row),
             "_study_key": row["study_id"],
             "_injury_model": row["injury_model"] or "unknown",
             "_timepoint_key": timepoint_label(row["post_injury_value"], row["timepoint_unit"]),
@@ -361,7 +425,7 @@ def protein_context_rows(db_path: Path, selected_ids: set[str], artifact_hash: s
     return list(contexts.values()), context_meta, observations
 
 
-def protein_expression_rows(db_path: Path, selected_ids: set[str], artifact_hash: str) -> tuple[list[dict[str, str]], dict[str, dict[str, Any]], dict[str, dict[str, Any]]]:
+def protein_expression_rows(db_path: Path, selected_ids: set[str], artifact_hash: str, curation_overrides: dict[tuple[str, str], dict[str, str]]) -> tuple[list[dict[str, str]], dict[str, dict[str, Any]], dict[str, dict[str, Any]]]:
     """Select directly measured, source-extracted non-phosphorylated protein records."""
     contexts: dict[str, dict[str, str]] = {}
     context_meta: dict[str, dict[str, Any]] = {}
@@ -387,6 +451,7 @@ def protein_expression_rows(db_path: Path, selected_ids: set[str], artifact_hash
         db.row_factory = sqlite3.Row
         rows = [dict(row) for row in db.execute(query)]
     for row in rows:
+        row = apply_curation_override(row, curation_overrides)
         if not is_protein_expression_candidate(row, selected_ids):
             continue
         observation_id = row["observation_id"]
@@ -416,6 +481,7 @@ def protein_expression_rows(db_path: Path, selected_ids: set[str], artifact_hash
                 f"study_timepoints.timepoint_id={row['timepoint_id']}",
                 f"cell_populations.population_id={row['population_id']}",
                 f"study_title={row['study_title']}",
+                f"context_curation={json_text(curation_provenance(row))}" if curation_provenance(row) else None,
             ),
         })
         context_meta.setdefault(context_id, {
@@ -468,9 +534,10 @@ def protein_expression_rows(db_path: Path, selected_ids: set[str], artifact_hash
                 "evidence_id": row.get("evidence_id"), "negative_evidence_status": row.get("negative_evidence_status"),
                 "source_location": row.get("source_location"), "source_repository_accession": row.get("repository_accession"),
                 "study_condition": row.get("condition"), "study_perturbation_status": row.get("perturbation_status"),
+                **({"context_curation": curation_provenance(row)} if curation_provenance(row) else {}),
             }),
             "_gene_symbol": row.get("gene_symbol"), "_entity": row.get("protein") or row.get("gene_symbol"),
-            "_context_meta": context_meta[context_id], "_study_key": row["study_id"],
+            "_context_meta": context_meta[context_id], "_context_curation": curation_provenance(row), "_study_key": row["study_id"],
             "_injury_model": row["injury_model"] or "unknown",
             "_timepoint_key": timepoint_label(row["post_injury_value"], row["timepoint_unit"]),
             "_evidence_label": row.get("evidence_grade") or "unknown",
@@ -619,7 +686,7 @@ def count_values(rows: Iterable[dict[str, Any]], key: str) -> dict[str, int]:
     return dict(sorted(counter.items()))
 
 
-def build(mscs_root: Path, pack: Path, bundle: Path) -> dict[str, Any]:
+def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Path = DEFAULT_CURATION_OVERRIDES) -> dict[str, Any]:
     global DEFAULT_MSCS_ROOT
     DEFAULT_MSCS_ROOT = mscs_root
     protein_db = mscs_root / "data/flow_protein/flow_protein.sqlite"
@@ -627,7 +694,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path) -> dict[str, Any]:
     epigenetic_db = mscs_root / "data/epigenetic/epigenetic.sqlite"
     spatial_catalog = mscs_root / "data/spatial/spatial_catalog.sqlite"
     spatial_pilot = mscs_root / "data/spatial/pilot_all_studies/gse269377_cluster_proxy/spatial_pair_percentages_all_samples.tsv"
-    for path in (protein_db, phospho_view, epigenetic_db, spatial_catalog, spatial_pilot, bundle / "mechanism_nodes.tsv"):
+    for path in (protein_db, phospho_view, epigenetic_db, spatial_catalog, spatial_pilot, bundle / "mechanism_nodes.tsv", curation_overrides_path):
         if not path.exists():
             raise FileNotFoundError(path)
 
@@ -636,10 +703,12 @@ def build(mscs_root: Path, pack: Path, bundle: Path) -> dict[str, Any]:
     epigenetic_hash = sha256(epigenetic_db)
     spatial_catalog_hash = sha256(spatial_catalog)
     spatial_pilot_hash = sha256(spatial_pilot)
+    curation_overrides_hash = sha256(curation_overrides_path)
+    curation_overrides = load_curation_overrides(curation_overrides_path)
     selected = read_tsv(phospho_view)
     selected_ids = {row["observation_id"] for row in selected}
-    protein_contexts, protein_meta, protein_obs = protein_context_rows(protein_db, selected_ids, protein_hash)
-    expression_contexts, expression_meta, expression_obs = protein_expression_rows(protein_db, selected_ids, protein_hash)
+    protein_contexts, protein_meta, protein_obs = protein_context_rows(protein_db, selected_ids, protein_hash, curation_overrides)
+    expression_contexts, expression_meta, expression_obs = protein_expression_rows(protein_db, selected_ids, protein_hash, curation_overrides)
     protein_context_by_id = {row["context_id"]: row for row in protein_contexts}
     for row in expression_contexts:
         protein_context_by_id.setdefault(row["context_id"], row)
@@ -663,12 +732,19 @@ def build(mscs_root: Path, pack: Path, bundle: Path) -> dict[str, Any]:
     all_contexts = [scope] + all_contexts
     node_index = load_nodes(bundle)
     observations = list(protein_obs.values()) + list(epi_obs.values())
+    curation_counts = Counter(
+        item["curation_id"]
+        for observation in observations
+        for item in [curation_provenance(observation)]
+        if item
+    )
     links = [link_for_observation(observation, node_index) for observation in observations]
     context_by_id = {row["context_id"]: row for row in all_contexts}
     for observation in observations:
         observation.pop("_gene_symbol", None)
         observation.pop("_entity", None)
         observation.pop("_context_meta", None)
+        observation.pop("_context_curation", None)
         observation.pop("_study_key", None)
         observation.pop("_injury_model", None)
         observation.pop("_timepoint_key", None)
@@ -708,6 +784,8 @@ def build(mscs_root: Path, pack: Path, bundle: Path) -> dict[str, Any]:
             "imaging_observation_rows_imported": 0,
             "perturbation_observation_rows_imported": 0,
             "functional_observation_rows_imported": 0,
+            "context_curation_overrides_applied": len(curation_overrides),
+            "observations_with_context_curation": sum(curation_counts.values()),
         },
         "source_artifacts": [
             {"path": "mSCS/data/flow_protein/flow_protein.sqlite", "sha256": protein_hash, "size_bytes": protein_db.stat().st_size},
@@ -715,6 +793,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path) -> dict[str, Any]:
             {"path": "mSCS/data/epigenetic/epigenetic.sqlite", "sha256": epigenetic_hash, "size_bytes": epigenetic_db.stat().st_size},
             {"path": "mSCS/data/spatial/spatial_catalog.sqlite", "sha256": spatial_catalog_hash, "size_bytes": spatial_catalog.stat().st_size},
             {"path": "mSCS/data/spatial/pilot_all_studies/gse269377_cluster_proxy/spatial_pair_percentages_all_samples.tsv", "sha256": spatial_pilot_hash, "size_bytes": spatial_pilot.stat().st_size},
+            {"path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv", "sha256": curation_overrides_hash, "size_bytes": curation_overrides_path.stat().st_size},
         ],
         "counts_by": {
             "modality": count_values(enriched, "modality"),
@@ -726,6 +805,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path) -> dict[str, Any]:
             "evidence_role": count_values(enriched, "evidence_role"),
             "linked_status": count_values(enriched, "linked_status"),
             "unresolved_mapping_reason": count_values([row for row in enriched if row["linked_status"] == "unlinked"], "unresolved_mapping_reason"),
+            "context_curation": dict(sorted(curation_counts.items())),
         },
         "mechanism_link_counts": {
             "included": sum(row["release_status"] == "included" for row in links),
@@ -747,7 +827,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path) -> dict[str, Any]:
 
     manifest = {
         "context_pack_id": "spinal_cord_injury",
-        "context_pack_version": "0.3.0",
+        "context_pack_version": "0.4.0",
         "status": "populated",
         "pack_type": "disease_injury_evidence_overlay",
         "source_repo": "mSCIdblit",
@@ -782,12 +862,13 @@ def build(mscs_root: Path, pack: Path, bundle: Path) -> dict[str, Any]:
             "protein_context_coverage": "protein_context_coverage.tsv",
             "protein_context_gap_audit": "protein_context_gap_audit.json",
             "protein_context_gap_candidates": "protein_context_gap_candidates.tsv",
+            "protein_context_curation_overrides": "protein_context_curation_overrides.tsv",
         },
         "counts": {
             "context_profiles": len(all_contexts), "observations": len(observations),
             "mechanism_links": len(links), "included_mechanism_links": sum(row["release_status"] == "included" for row in links),
         },
-        "provenance_note": "Generated by scripts/build_sci_context_pack.py from exact mSCS source artifacts. Generic Module 20B-24B graph files were read for stable identifier resolution only and were not modified or duplicated.",
+        "provenance_note": "Generated by scripts/build_sci_context_pack.py from exact mSCS source artifacts plus explicitly applied protein context curation overrides. Generic Module 20B-24B graph files were read for stable identifier resolution only and were not modified or duplicated.",
     }
     (pack / "context_manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return {"manifest": manifest, "audit": audit}
@@ -798,8 +879,9 @@ def main() -> int:
     parser.add_argument("--mscs-root", type=Path, default=DEFAULT_MSCS_ROOT)
     parser.add_argument("--pack", type=Path, default=DEFAULT_PACK)
     parser.add_argument("--bundle", type=Path, default=DEFAULT_BUNDLE)
+    parser.add_argument("--curation-overrides", type=Path, default=DEFAULT_CURATION_OVERRIDES)
     args = parser.parse_args()
-    result = build(args.mscs_root, args.pack, args.bundle)
+    result = build(args.mscs_root, args.pack, args.bundle, args.curation_overrides)
     print(json.dumps({"counts": result["manifest"]["counts"], "audit": result["audit"]["selected_evidence"]}, sort_keys=True))
     return 0
 

@@ -1,6 +1,11 @@
 {
   "audit_version": "sci_context_pack_audit_v1",
   "counts_by": {
+    "context_curation": {
+      "SCICTX-CUR-0001": 22,
+      "SCICTX-CUR-0002": 30,
+      "SCICTX-CUR-0003": 10
+    },
     "evidence_role": {
       "dataset_observation": 741
     },
@@ -10,7 +15,9 @@
       "70 kdyne thoracic contusion spinal cord injury": 1,
       "70-kdyn thoracic contusion SCI using the Infinite Horizon impactor": 2,
       "70-kdyn thoracic contusion spinal cord injury": 2,
+      "75 kdyne T9 contusion spinal cord injury": 22,
       "Adult mouse spinal cord injury model using TrkBF616 mice and pharmacogenetic TrkB inhibition with 1NMP; exact injury level and contusion parameters pending extraction.": 2,
+      "C5 dorsal column lesion": 10,
       "Complete T10 spinal cord transection in adult mice, with comparison to neonatal injury and circuit-specific genetic manipulations.": 1,
       "Complete T8-T9 spinal cord transection in adult female C57BL/6 mice; animals were studied from 1 day to 6 weeks after injury.": 1,
       "Dorsal column crush or transection at the upper thoracic cord in adult BALB/c, 129sv, and p75NTR-knockout mice.": 2,
@@ -136,6 +143,7 @@
       "moderate T8\u2013T10 contusion SCI in conditional myeloid-TNF mouse lines": 4,
       "moderate T9 contusion SCI; 80 kdyn": 4,
       "moderate T9 contusion using an IH-0400 impactor at 50 kdyn": 1,
+      "moderate T9 contusive spinal cord injury using an Infinite Horizons Impactor": 30,
       "moderate T9/T10 contusion SCI, 50 kdyn": 3,
       "moderate contusion SCI": 3,
       "moderate contusion SCI in adult CD36 knockout and wild-type mice": 2,
@@ -218,7 +226,7 @@
       "traumatic SCI with sorted endogenous microglia and adoptive microglia perturbation arm": 4,
       "traumatic contusion SCI in TNFR1-null, TNFR2-null, and wild-type mice": 1,
       "traumatic mouse spinal cord injury; exact injury geometry requires full-text extraction": 1,
-      "traumatic spinal cord injury": 70,
+      "traumatic spinal cord injury": 8,
       "traumatic spinal cord injury in adult WT, IL-1alpha-knockout, and IL-1beta-knockout mice; exact injury method requires extraction": 1,
       "traumatic spinal cord injury in male mice; injury level and force pending extraction": 3,
       "traumatic spinal cord injury with intrathecal agomiR treatment": 3,
@@ -807,9 +815,11 @@
   ],
   "scope_rule": "Only source records with explicit spinal-cord, spinal-cord-injury, or injury-model context were selected; no generic mechanism evidence was copied.",
   "selected_evidence": {
+    "context_curation_overrides_applied": 3,
     "epigenetic_observations_imported": 17,
     "functional_observation_rows_imported": 0,
     "imaging_observation_rows_imported": 0,
+    "observations_with_context_curation": 62,
     "perturbation_observation_rows_imported": 0,
     "protein_expression_candidate_rows": 614,
     "protein_observations_imported": 724,
@@ -844,6 +854,11 @@
       "path": "mSCS/data/spatial/pilot_all_studies/gse269377_cluster_proxy/spatial_pair_percentages_all_samples.tsv",
       "sha256": "520a2314b4b44bd68ada05136a35e9031575c4a9d4052a8c8c7e23d3cba029b5",
       "size_bytes": 32109
+    },
+    {
+      "path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv",
+      "sha256": "f8a3c469716e02cde077faada48cf09b9605c2c9b69ff417bebcdddfbdeaddcb",
+      "size_bytes": 1830
     }
   ]
 }

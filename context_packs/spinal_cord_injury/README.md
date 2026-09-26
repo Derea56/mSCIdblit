@@ -37,6 +37,15 @@ modality-weight promotion. Downstream protein measurements support the
 measured protein state only; they do not establish upstream ligand/receptor
 causality.
 
+This refinement applies three study-level protein context overrides from exact
+primary-source locators: `FLOW_MSCS_ITDB_000006` is resolved to a 75-kdyne T9
+contusion, `FLOW_MSCS_ITDB_000010` to a 60-kdyn T9 contusion, and
+`FLOW_MSCS_ITDB_000005` to a C5 dorsal-column lesion. The overrides do not
+replace reported perturbation or treatment fields, and do not fill sex or
+injury severity where the inspected source does not explicitly establish it.
+Their source URLs, locators, curation notes, and checksum are retained in
+`protein_context_curation_overrides.tsv` and the generated provenance fields.
+
 ## Assessed evidence gaps
 
 The current mSCS spatial pilot was assessed but excluded: GSE269377 is a
@@ -69,6 +78,9 @@ that context evidence cannot create or promote a generic graph edge.
 - `protein_context_gap_audit.json` and `protein_context_gap_candidates.tsv` —
   reproducible accounting of canonical protein records not imported and the
   reason each remains outside the current selection rule.
+- `protein_context_curation_overrides.tsv` — exact, study-level context
+  refinements with source locators; this is an input to the reproducible
+  builder, not a manually edited derived table.
 - `../../scripts/build_sci_context_pack.py` — reproducible importer/curator.
 - `../../scripts/audit_sci_protein_context_coverage.py` — reproducible protein
   context refinement audit.

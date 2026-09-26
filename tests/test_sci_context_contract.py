@@ -29,7 +29,7 @@ def test_sci_context_manifest_pins_neutral_mechanism_release():
     bundle_path = PACK / manifest["mechanism_dependency"]["bundle_metadata"]
     assert bundle_path.resolve().is_file()
     assert manifest["counts"]["context_profiles"] > 1
-    assert manifest["context_pack_version"] == "0.3.0"
+    assert manifest["context_pack_version"] == "0.4.0"
     assert manifest["counts"]["observations"] == 741
     assert manifest["counts"]["mechanism_links"] == 741
     assert 0 < manifest["counts"]["included_mechanism_links"] < manifest["counts"]["mechanism_links"]
@@ -82,6 +82,28 @@ def test_sci_context_profiles_preserve_scope_and_reported_study_fields():
         assert row["tissue"]
         assert row["disease_context"] == "spinal_cord_injury"
         assert row["anatomical_context"] == "spinal_cord"
+
+
+def test_sci_protein_context_curation_overrides_are_applied_with_source_provenance():
+    overrides = list(csv.DictReader((PACK / "protein_context_curation_overrides.tsv").open(), delimiter="\t"))
+    assert len(overrides) == 3
+    assert all(row["curation_status"] == "applied" for row in overrides)
+    assert all(row["source_locator"] and row["source_url"] for row in overrides)
+
+    contexts = list(csv.DictReader((PACK / "contexts.tsv").open(), delimiter="\t"))
+    by_study = {}
+    for study_id in {row["study_id"] for row in overrides}:
+        by_study[study_id] = [row for row in contexts if row["study_id"] == study_id]
+        assert by_study[study_id]
+    assert {row["injury_level"] for row in by_study["FLOW_MSCS_ITDB_000006"]} == {"T9"}
+    assert {row["injury_severity"] for row in by_study["FLOW_MSCS_ITDB_000006"]} == {"75 kdyne contusion"}
+    assert {row["injury_level"] for row in by_study["FLOW_MSCS_ITDB_000010"]} == {"T9"}
+    assert {row["injury_severity"] for row in by_study["FLOW_MSCS_ITDB_000010"]} == {"60 kdyn moderate contusion"}
+    assert {row["injury_level"] for row in by_study["FLOW_MSCS_ITDB_000005"]} == {"C5"}
+    observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
+    curated = [row for row in observations if row["context_id"] in {context["context_id"] for context in contexts if context["study_id"] in by_study}]
+    assert curated
+    assert all("context_curation" in json.loads(row["provenance_note"]) for row in curated)
 
 
 def test_sci_context_pack_validator_accepts_populated_release():
