@@ -1,0 +1,86 @@
+{
+  "context_pack_id": "spinal_cord_injury",
+  "context_pack_version": "0.1.0",
+  "status": "scaffold",
+  "pack_type": "disease_injury_evidence_overlay",
+  "source_repo": "mSCIdblit",
+  "target_consumer": "mSCS",
+  "scope": {
+    "disease_context": "spinal_cord_injury",
+    "anatomical_context": "spinal_cord",
+    "study_level_fields_required_when_reported": [
+      "species",
+      "injury_model",
+      "injury_level",
+      "timepoint",
+      "perturbation",
+      "treatment",
+      "cell_type",
+      "sample_id"
+    ]
+  },
+  "mechanism_dependency": {
+    "release_id": "module20_24_mechanism_graph:2026-09-25-literature-expansion-627",
+    "release_tag": "mSCIdblit-v1.9.386",
+    "bundle_metadata": "../../data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627/bundle_metadata.json",
+    "generic_graph_is_unchanged": true,
+    "context_links_are_not_graph_edges": true
+  },
+  "evidence_policy": {
+    "context_attaches_to": "observation_or_reviewed_mechanism_link",
+    "not_measured_is_not_negative": true,
+    "source_dependency_groups_required": true,
+    "route_confidence_stored": false,
+    "numeric_modality_weights_stored": false,
+    "mSCS_evaluates_route_plausibility": true
+  },
+  "modalities": [
+    {
+      "modality": "protein",
+      "status": "planned",
+      "observation_file": "observations.tsv"
+    },
+    {
+      "modality": "transcriptomics",
+      "status": "planned",
+      "observation_file": "observations.tsv"
+    },
+    {
+      "modality": "spatial",
+      "status": "planned",
+      "observation_file": "observations.tsv"
+    },
+    {
+      "modality": "epigenomics",
+      "status": "planned",
+      "observation_file": "observations.tsv"
+    },
+    {
+      "modality": "imaging",
+      "status": "planned",
+      "observation_file": "observations.tsv"
+    },
+    {
+      "modality": "perturbation",
+      "status": "planned",
+      "observation_file": "observations.tsv"
+    },
+    {
+      "modality": "functional",
+      "status": "planned",
+      "observation_file": "observations.tsv"
+    }
+  ],
+  "artifacts": {
+    "contexts": "contexts.tsv",
+    "observations": "observations.tsv",
+    "mechanism_links": "mechanism_links.tsv"
+  },
+  "counts": {
+    "context_profiles": 1,
+    "observations": 0,
+    "mechanism_links": 0,
+    "included_mechanism_links": 0
+  },
+  "provenance_note": "Scaffold created for the SCI context overlay. No study-level observation, identifier, or mechanism link has been asserted yet."
+}
