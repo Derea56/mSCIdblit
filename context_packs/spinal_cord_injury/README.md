@@ -7,7 +7,7 @@ read only for stable identifier resolution and is not rewritten or duplicated.
 
 ## Current status
 
-Release 0.5.16 contains 760 dataset observations from the mSCS evidence stores:
+Release 0.5.17 contains 760 dataset observations from the mSCS evidence stores:
 
 - 110 protein/phosphoprotein observations selected from the curated
   `mSCS/data/derived/phosphorylation_support_observations.tsv` view and joined

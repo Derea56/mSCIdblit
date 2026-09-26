@@ -30,8 +30,8 @@
     },
     "by_secondary_completeness": {
       "1/5": 45,
-      "2/5": 102,
-      "3/5": 356,
+      "2/5": 101,
+      "3/5": 357,
       "4/5": 24,
       "5/5": 66
     }
@@ -111,7 +111,7 @@
     {
       "context_id": "sci:protein:9423061c39a06881",
       "missing_core_fields": "",
-      "missing_secondary_fields": "injury_distance;injury_distance_unit;sample_count",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
       "protein_observation_count": 4,
       "refinement_priority": "medium",
       "study_id": "FLOW_SCI_274"
