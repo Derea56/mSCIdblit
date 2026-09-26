@@ -177,7 +177,15 @@
       "SCICTX-CUR-0174": 2,
       "SCICTX-CUR-0175": 2,
       "SCICTX-CUR-0176": 2,
-      "SCICTX-CUR-0177": 2
+      "SCICTX-CUR-0177": 2,
+      "SCICTX-CUR-0178": 2,
+      "SCICTX-CUR-0179": 2,
+      "SCICTX-CUR-0180": 2,
+      "SCICTX-CUR-0181": 2,
+      "SCICTX-CUR-0182": 2,
+      "SCICTX-CUR-0183": 2,
+      "SCICTX-CUR-0184": 2,
+      "SCICTX-CUR-0185": 2
     },
     "evidence_role": {
       "dataset_observation": 760
@@ -598,7 +606,7 @@
       "contusion SCI in control and Chd7-cKO mice": 3,
       "contusion SCI versus naive/sham control": 3,
       "contusion SCI versus no-contusion controls": 2,
-      "contusion SCI versus sham": 2,
+      "contusion SCI versus sham; treatment-stratified protein observations": 2,
       "contusion SCI with sham, anti-CD8, Rag2-knockout, and adoptive-transfer arms": 3,
       "dorsal column injury; wild-type versus p75NTR-deficient context": 1,
       "female T9 contusion SCI groups": 2,
@@ -1043,11 +1051,11 @@
   ],
   "scope_rule": "Only source records with explicit spinal-cord, spinal-cord-injury, or injury-model context were selected; no generic mechanism evidence was copied.",
   "selected_evidence": {
-    "context_curation_overrides_applied": 176,
+    "context_curation_overrides_applied": 184,
     "epigenetic_observations_imported": 17,
     "functional_observation_rows_imported": 0,
     "imaging_observation_rows_imported": 0,
-    "observations_with_context_curation": 643,
+    "observations_with_context_curation": 659,
     "perturbation_observation_rows_imported": 0,
     "protein_expression_candidate_rows": 633,
     "protein_observations_imported": 743,
@@ -1085,8 +1093,8 @@
     },
     {
       "path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv",
-      "sha256": "e1cdeaad66d8e4a1bccd5d145b45a0132755029b3b737029cc0498ff1c543d7d",
-      "size_bytes": 135023
+      "sha256": "1c5d38d60ef7e740e44ad0423a56f9c9469c433507da3baeb57539eefbfe8f99",
+      "size_bytes": 141292
     }
   ]
 }
