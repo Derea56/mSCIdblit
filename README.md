@@ -50,28 +50,36 @@ For a single read-only pathway/entity retrieval across these layers, use
 [`scripts/query_pathway.py`](/Users/derea/Documents/SCI/mSCIdblit/scripts/query_pathway.py)
 and see the [release query contract](/Users/derea/Documents/SCI/mSCIdblit/docs/RELEASE_QUERY.md).
 
-## Current release checkpoint — 2026-09-01
+## Current mechanism release checkpoint — 2026-09-26
 
-The v1.4.0 database materialization and layered pathway query utility are
-pushed on `main`. The utility executes one read-only SQL statement against the
-PostgreSQL release and keeps canonical mechanism edges, register provenance,
-modality observations, method-resource membership, and public-TF staging
-records in separate result layers. Five focused tests pass, and the utility
-was integration-tested against a temporary restore of the v1.4.0 dump.
+The current `main` branch publishes the validated mechanism release
+`mSCIdblit-v1.9.386`, with release ID
+`module20_24_mechanism_graph:2026-09-25-literature-expansion-627`.
 
-For the IL1B test query, the release returned 7 canonical edges, 8 register
-evidence rows, 8 method-resource communications, and 10 native method
-records. It also found 60 public-TF staging rows and 56 matching rows in the
-exact local modality-import snapshots. The v1.4.0 database contains the
-modality schema but currently has zero materialized modality rows; the utility
-reports that boundary explicitly rather than merging local snapshots into the
-database result.
+The release is a file-based bundle for mSCS rather than a new PostgreSQL
+database materialization. Its core graph contains 11,988 nodes, 14,831
+exported edges, and 15,107 edge-source records. Its evidence layer contains
+597,194 route-evidence rows, 2,506,538 normalized route nodes, 2,305,111
+normalized route edges, 31,080 literature-expansion rows, and 15,525
+full-sequence curation candidates.
 
-Next steps are to use the query utility for pathway-level review, decide and
-validate whether the modality import rows belong in the next database release,
-and then rerun the release integrity, provenance, and cross-layer validation
-gates before versioning the next release. No evidence is promoted by the
-query utility itself.
+The core graph is the validated graph layer. Route, literature, coverage, and
+curation tables are evidence layers: they preserve partial routes, missing
+links, shared intermediates, source provenance, and model limitations without
+creating causal graph edges or database confidence scores. mSCS is responsible
+for route plausibility and confidence evaluation.
+
+The release bundle is at
+`data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627/`.
+The release validator passes with zero errors; the remaining warning concerns
+source rows without stable public locators. See
+[`docs/RELEASE_v1.9.386.md`](docs/RELEASE_v1.9.386.md) for the release record
+and [`docs/MODULE20_24_NEXT_STEPS.md`](docs/MODULE20_24_NEXT_STEPS.md) for the
+division of responsibility between mSCIdblit and mSCS.
+
+The PostgreSQL schema and historical materializations remain available for
+database-oriented workflows, but `bundle_metadata.json` intentionally records
+`canonical_database_materialization: false` for this mSCS mechanism release.
 
 ## mSCS method-resource intake
 
@@ -270,13 +278,22 @@ python3 /Users/derea/Documents/SCI/mSCIdblit/scripts/export_mechanism_bundle.py 
   --bundle-name astro_strict_mouse_v1
 ```
 
-That export produces the exact three-file contract that `mSCS` imports:
+That command produces the base three-file contract used by the stable graph
+import path:
 
 - `mechanism_nodes.tsv`
 - `mechanism_edges.tsv`
 - `mechanism_edge_sources.tsv`
 
 See [`docs/MECHANISM_BUNDLE_EXPORT.md`](/Users/derea/Documents/SCI/mSCIdblit/docs/MECHANISM_BUNDLE_EXPORT.md) for the full filter and provenance rules.
+
+The current Module 20B–24B release extends that base contract with compressed
+route and evidence tables, including
+`mechanism_signaling_route_evidence.tsv.gz`,
+`mechanism_route_nodes.tsv.gz`, `mechanism_route_edges.tsv.gz`,
+`mechanism_literature_expansion.tsv.gz`, and the curation/coverage overlays.
+These tables are part of the release bundle and must be imported by the
+route-aware mSCS intake path; they are not additional causal graph edges.
 
 For the register-backed Module 20B–24B release snapshot, see
 [`docs/MODULE20_24_MECHANISM_GRAPH_RELEASE.md`](/Users/derea/Documents/SCI/mSCIdblit/docs/MODULE20_24_MECHANISM_GRAPH_RELEASE.md).
