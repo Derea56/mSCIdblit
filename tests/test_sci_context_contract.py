@@ -29,7 +29,7 @@ def test_sci_context_manifest_pins_neutral_mechanism_release():
     bundle_path = PACK / manifest["mechanism_dependency"]["bundle_metadata"]
     assert bundle_path.resolve().is_file()
     assert manifest["counts"]["context_profiles"] > 1
-    assert manifest["context_pack_version"] == "0.5.2"
+    assert manifest["context_pack_version"] == "0.5.8"
     assert manifest["counts"]["observations"] == 741
     assert manifest["counts"]["mechanism_links"] == 741
     assert 0 < manifest["counts"]["included_mechanism_links"] < manifest["counts"]["mechanism_links"]
@@ -86,7 +86,7 @@ def test_sci_context_profiles_preserve_scope_and_reported_study_fields():
 
 def test_sci_protein_context_curation_overrides_are_applied_with_source_provenance():
     overrides = list(csv.DictReader((PACK / "protein_context_curation_overrides.tsv").open(), delimiter="\t"))
-    assert len(overrides) == 19
+    assert len(overrides) == 36
     assert all(row["curation_status"] == "applied" for row in overrides)
     assert all(row["source_locator"] and row["source_url"] for row in overrides)
 
@@ -104,6 +104,7 @@ def test_sci_protein_context_curation_overrides_are_applied_with_source_provenan
     assert {row["injury_severity"] for row in by_study["FLOW_SCI_414"]} == {"60 kdyn contusion"}
     assert {row["injury_level"] for row in by_study["FLOW_SCI_024"]} == {"T10"}
     assert {row["injury_severity"] for row in by_study["FLOW_SCI_024"]} == {"150 kdyn mild-to-moderate contusion"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_024"]} == {"young adult female Long-Evans rats, approximately 200 g"}
     assert {row["sample_scope"] for row in by_study["FLOW_SCI_024"]} == {"5-mm lesion-epicenter soluble spinal-cord fraction"}
     assert {row["injury_level"] for row in by_study["FLOW_SCI_052"]} == {"T11"}
     assert {row["injury_severity"] for row in by_study["FLOW_SCI_052"]} == {"50 kdyn contusion; 400-500 micrometre tissue displacement"}
@@ -115,6 +116,25 @@ def test_sci_protein_context_curation_overrides_are_applied_with_source_provenan
     assert {row["injury_severity"] for row in by_study["FLOW_SCI_071"]} == {"0.4 mm residual closure; 10-second bilateral lateral compression"}
     assert {row["injury_severity"] for row in by_study["FLOW_SCI_080"]} == {"2,000 dynes moderate contusion"}
     assert {row["sex"] for row in by_study["FLOW_SCI_080"]} == {"adult female mice, 3-4 months, 20-24 g"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_204"]} == {"8-10-week-old female C57BL/6 mice, 20-25 g"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_111"]} == {"0.2 mm lateral-compression depth for 20 seconds"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_216"]} == {"T9"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_216"]} == {"30-g vascular clip compression for 10 seconds"}
+    assert {row["sample_scope"] for row in by_study["FLOW_SCI_413"]} == {"ependymal layer/central canal; proliferating cells quantified 0.1-0.2 mm from the lesion"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_529"]} == {"1.85 g weight dropped from 20 mm onto an impounder"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_390"]} == {"T10"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_390"]} == {"0.5 mm forceps-tip width; bilateral lateral compression for 5 seconds"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_390"]} == {"female C57BL/6J mice, 6-8 weeks"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_001"]} == {"T12"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_001"]} == {"200 kdyn centralized contusion without complete penetration"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_012"]} == {"T10"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_012"]} == {"5-g rod dropped from 15 mm; exact functional severity not reported in the cited methods"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_094"]} == {"L1/L2"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_094"]} == {"female C57BL/6 mice, 3-5 months, 30-35 g"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_253"]} == {"T10"}
+    assert {row["sample_scope"] for row in by_study["FLOW_SCI_253"]} == {"3-mm spinal-cord blocks centered on, rostral to, and caudal to the lesion"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_470"]} == {"T9"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_470"]} == {"female C57BL/6J mice, 7-8 weeks, 17-22 g"}
     assert {row["injury_level"] for row in by_study["FLOW_SCI_434"]} == {"T12"}
     assert {row["sex"] for row in by_study["FLOW_SCI_434"]} == {"female C57BL/6 mice, 6-8 weeks, 18-22 g"}
     assert {row["injury_severity"] for row in by_study["FLOW_SCI_352"]} == {"50 kdyn force; 500-600 micrometre tissue displacement"}
@@ -126,6 +146,19 @@ def test_sci_protein_context_curation_overrides_are_applied_with_source_provenan
     assert {row["injury_severity"] for row in by_study["FLOW_SCI_054"]} == {"50-g compression for 5 minutes over a 2 x 5 mm platform"}
     assert {row["injury_level"] for row in by_study["FLOW_SCI_022"]} == {"T10"}
     assert {row["injury_severity"] for row in by_study["FLOW_SCI_022"]} == {"5-g weight dropped from 8 cm; reported injury energy 40 g x cm"}
+    assert {row["injury_level"] for row in by_study["FLOW_MSCS_ITDB_000032"]} == {"T8"}
+    assert {row["injury_severity"] for row in by_study["FLOW_MSCS_ITDB_000032"]} == {"dorsal-column transection; exact transection geometry not reported in the cited passage"}
+    assert {row["injury_level"] for row in by_study["FLOW_MSCS_ITDB_000057"]} == {"T10"}
+    assert {row["sex"] for row in by_study["FLOW_MSCS_ITDB_000057"]} == {"adult male C57BL/6 mice, 8 weeks"}
+    assert {row["injury_level"] for row in by_study["FLOW_MSCS_ITDB_000101"]} == {"T9"}
+    assert {row["injury_severity"] for row in by_study["FLOW_MSCS_ITDB_000101"]} == {"50 kdyn force with 400-600 micrometre displacement; moderate contusion"}
+    assert {row["injury_level"] for row in by_study["FLOW_MSCS_ITDB_000105"]} == {"T9"}
+    assert {row["sex"] for row in by_study["FLOW_MSCS_ITDB_000105"]} == {"adult female C57BL/6J congenic mice"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_008"]} == {"T12"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_008"]} == {"150 kdyn force with 1-second dwell time; moderate contusion"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_008"]} == {"male Sprague-Dawley rats, 90-110 days, 300-350 g"}
+    assert {row["timepoint_value"] for row in by_study["FLOW_SCI_013"]} == {"0-3"}
+    assert {row["timepoint_unit"] for row in by_study["FLOW_SCI_013"]} == {"day"}
     ev_contexts = [row for row in contexts if row["study_id"] == "FLOW_SCI_471"]
     assert {row["sample_scope"] for row in ev_contexts} == {
         "plasma EV and T10 lesion-centered spinal-cord samples",
