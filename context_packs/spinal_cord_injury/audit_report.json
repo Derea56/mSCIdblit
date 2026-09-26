@@ -249,7 +249,7 @@
       "SCICTX-CUR-0246": 1
     },
     "evidence_role": {
-      "dataset_observation": 760
+      "dataset_observation": 762
     },
     "injury_model": {
       "65-kdyn T9 contusion in adult male and female C57BL/6 mice": 3,
@@ -431,7 +431,7 @@
       "moderate contusion SCI": 1,
       "moderate contusion SCI in adult CD36 knockout and wild-type mice": 2,
       "moderate contusion spinal cord injury": 3,
-      "moderate contusive SCI": 1,
+      "moderate contusive SCI": 3,
       "moderate mid-thoracic T9 contusion spinal cord injury, 75 kdyn": 3,
       "moderate mid-thoracic contusion SCI": 2,
       "moderate mid-thoracic contusion spinal cord injury": 3,
@@ -499,13 +499,14 @@
     },
     "linked_status": {
       "linked": 382,
-      "unlinked": 378
+      "unlinked": 380
     },
     "modality": {
-      "epigenomics": 17,
+      "epigenomics": 19,
       "protein": 743
     },
     "observation_status": {
+      "observed": 2,
       "reported": 85,
       "transcribed": 659,
       "unknown": 16
@@ -539,7 +540,7 @@
       "PBS, recombinant IL-4, or recombinant IL-13 treatment": 1,
       "PLX5622 diet": 11,
       "Plexin-B2 conditional deletion versus littermate control after contusion": 1,
-      "SCI": 84,
+      "SCI": 85,
       "SCI + AAV-KLF7 or AAV-GFP; sham comparator": 1,
       "SCI 1 dpi; Ryk+/+ GFAPcreERT2; C5 dorsal-column lesion study": 1,
       "SCI 1 dpi; Rykfl/fl GFAPcreERT2; C5 dorsal-column lesion study": 1,
@@ -707,6 +708,7 @@
       "perilesional spinal cord tissue": 4,
       "pyramidotomy with AAV-Cre or AAV-GFP in Pten-floxed mice": 1,
       "rat sham, SCI, and SCI plus clodronate liposomes": 5,
+      "sham": 1,
       "sham, SCI WT, WT, and SCI-CX3:BDNF microglia-overexpression groups": 1,
       "sham, SCI plus control agomiR, SCI plus miR-92a-3p agomiR, and PTEN-vector arms": 3,
       "sham, SCI wild-type, and SCI Trem2 knockout": 2,
@@ -1009,7 +1011,7 @@
       "STUDY_METHYLATION_2023": 1,
       "STUDY_SCHOLPA_DNAMETH_2023": 2,
       "STUDY_TABULAE_MULTIOME": 1,
-      "STUDY_WU_2021": 1,
+      "STUDY_WU_2021": 3,
       "STUDY_ZAMBONI_MULTIOME_2026": 1,
       "STUDY_ZAMBONI_SOX9_2026": 1
     },
@@ -1019,6 +1021,7 @@
       "-1.0 unknown": 1,
       "-1.0 week": 1,
       "0 day": 13,
+      "0 dpi": 1,
       "0-3 day": 2,
       "0-3 days": 1,
       "0.5 hours": 1,
@@ -1081,7 +1084,7 @@
       "63 day": 2,
       "7 day": 131,
       "7 days": 8,
-      "7 dpi": 8,
+      "7 dpi": 9,
       "72 hour": 2,
       "8 hours": 1,
       "8 week": 2,
@@ -1090,7 +1093,7 @@
     "unresolved_mapping_reason": {
       "ambiguous canonical entity label match (2 stable nodes); staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 29,
       "ambiguous gene_symbol match (2 stable nodes); staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 1,
-      "no exact stable mechanism-node match; staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 348
+      "no exact stable mechanism-node match; staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 350
     }
   },
   "mechanism_link_counts": {
@@ -1099,10 +1102,11 @@
     "numeric_modality_weights_created": 0,
     "partial_routes_promoted": 0,
     "route_confidence_created": 0,
-    "staging_unresolved": 378
+    "staging_unresolved": 380
   },
   "notes": [
     "Protein observations combine the 110-row mSCS phosphorylation-support selection with directly measured, source-extracted non-phosphorylated protein records; they are not the full 1,259-row canonical store.",
+    "Epigenomics imports all explicitly reported assay contexts from the mSCS epigenetic store and retains exact binary feature-status records with their own source artifact paths and checksums; binary status is not converted into a directional comparison.",
     "Protein-expression selection excludes phosphoprotein/active-form duplicates, ambiguous or inaccessible extraction states, reporter/activity-only assays, and records without a measured value or reported direction.",
     "Dependency groups are source/study/timepoint/population or source/study/assay/context groups; they are intended to prevent correlated readouts from being double-counted.",
     "Downstream protein and phosphoprotein measurements are linked only to the measured state/node when an exact stable node match exists; no upstream ligand/receptor causality is inferred.",
@@ -1111,7 +1115,8 @@
   "scope_rule": "Only source records with explicit spinal-cord, spinal-cord-injury, or injury-model context were selected; no generic mechanism evidence was copied.",
   "selected_evidence": {
     "context_curation_overrides_applied": 245,
-    "epigenetic_observations_imported": 17,
+    "epigenetic_binary_feature_observations_imported": 2,
+    "epigenetic_observations_imported": 19,
     "functional_observation_rows_imported": 0,
     "imaging_observation_rows_imported": 0,
     "observations_with_context_curation": 743,

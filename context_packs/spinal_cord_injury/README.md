@@ -7,7 +7,7 @@ read only for stable identifier resolution and is not rewritten or duplicated.
 
 ## Current status
 
-Release 0.5.24 contains 760 dataset observations from the mSCS evidence stores:
+Release 0.5.25 contains 762 dataset observations from the mSCS evidence stores:
 
 - 110 protein/phosphoprotein observations selected from the curated
   `mSCS/data/derived/phosphorylation_support_observations.tsv` view and joined
@@ -18,9 +18,17 @@ Release 0.5.24 contains 760 dataset observations from the mSCS evidence stores:
   excludes phosphoprotein/active-form duplicates, ambiguous or inaccessible
   extraction states, reporter/activity-only assays, inferred timepoints, and
   records without a measured value or reported direction.
-- 17 epigenomics observations from
-  `mSCS/data/epigenetic/epigenetic.sqlite`, preserving occupancy, accessibility,
-  histone, methylation, and RNA-modification context where reported.
+- 19 epigenomics observations from `mSCS/data/epigenetic/epigenetic.sqlite`,
+  preserving occupancy, accessibility, histone, methylation, and
+  RNA-modification context where reported. This includes two exact binary
+  feature-status records with their processed peak-artifact paths and
+  checksums; their quantitative signal is retained without inferring a
+  direction versus control.
+
+All 43 reported epigenetic assay contexts in the mSCS store are retained as
+context profiles, including contexts for which no observation-level readout was
+selected. Sample IDs remain blank when the source reports only a sample unit,
+such as `mouse` or `pooled`, rather than an exact sample identifier.
 
 Each observation retains its source record key, artifact SHA-256, source
 locator, study/context fields, and dependency group. Context profiles preserve
@@ -31,7 +39,7 @@ unreported; they are not converted into negative evidence. The release uses
 `dataset_observation` only. It does not fabricate external context-matched
 observations or inferred bridges.
 
-There are 382 included exact stable-node links and 378 unresolved staging links.
+There are 382 included exact stable-node links and 380 unresolved staging links.
 Unresolved observations are retained at module boundary `21B` solely as a
 review scope, with no graph-edge, partial-route, route-confidence, or numeric
 modality-weight promotion. Downstream protein measurements support the
