@@ -169,7 +169,15 @@
       "SCICTX-CUR-0166": 2,
       "SCICTX-CUR-0167": 2,
       "SCICTX-CUR-0168": 2,
-      "SCICTX-CUR-0169": 2
+      "SCICTX-CUR-0169": 2,
+      "SCICTX-CUR-0170": 2,
+      "SCICTX-CUR-0171": 2,
+      "SCICTX-CUR-0172": 2,
+      "SCICTX-CUR-0173": 2,
+      "SCICTX-CUR-0174": 2,
+      "SCICTX-CUR-0175": 2,
+      "SCICTX-CUR-0176": 2,
+      "SCICTX-CUR-0177": 2
     },
     "evidence_role": {
       "dataset_observation": 760
@@ -311,7 +319,7 @@
       "contusive spinal cord injury": 3,
       "contusive spinal cord injury in C57BL/6 mice": 2,
       "contusive spinal cord injury in Swiss Albino female mice; T9 laminectomy with T10 segment stabilized": 3,
-      "contusive traumatic spinal cord injury; modified impactor": 2,
+      "contusive traumatic spinal cord injury using a modified impactor": 2,
       "crush spinal cord injury": 1,
       "custom-designed compressed spinal cord injury model": 4,
       "dorsal T9 microknife hemisection/transection model in adult female C57BL/6J mice and Jnk1/Jnk3 knockout mice": 2,
@@ -512,12 +520,12 @@
       "SCI versus sham and CD36 inhibition": 2,
       "SCI versus sham/laminectomy control": 1,
       "SCI versus sham/naive; 4- and 14-month-old male and female mice": 4,
+      "SCI versus sham; AAV-Fbxl12 overexpression comparison": 2,
       "SCI versus sham; L-P treatment and AMPK-genotype comparisons": 1,
       "SCI versus sham; Lv-shPARP14 versus control lentivirus": 2,
       "SCI versus sham; WT versus C3ar1-null": 1,
       "SCI versus sham; conditional-deletion and control cohorts": 2,
       "SCI versus sham; control- and LRCH1-shRNA-infected microglia transfer arms": 4,
-      "SCI versus sham; endogenous protein localization": 2,
       "SCI versus sham; floxed control and microglial RhoA conditional knockout arms": 1,
       "SCI versus sham; shCebpb/shFcgr1 where specified": 1,
       "SCI versus sham; treatment-stratified": 3,
@@ -526,7 +534,7 @@
       "SCI versus sham; vehicle, zileuton, or montelukast arms": 2,
       "SCI versus uninjured control": 1,
       "SCI versus uninjured; GLT1+/\u2212 versus wild-type": 1,
-      "SCI wild-type and NB-3 knockout": 2,
+      "SCI wild-type and NB-3 knockout scar-forming astrocytes": 2,
       "SCI with Treg manipulation versus control": 2,
       "SCI with anti-CD11d or control antibody": 2,
       "SCI with anti-Ly6G/Gr-1, isotype, or sham": 4,
@@ -571,11 +579,11 @@
       "Vehicle": 11,
       "WT SCI versus uninjured context and genotype/transfer arms": 2,
       "WT and knockout SCI groups with NET-inhibitor and bone-marrow-transplant interventions": 3,
-      "WT contusion versus laminectomy sham": 2,
+      "WT contusion versus laminectomy sham and complement-perturbed SCI": 2,
       "WT sham, vehicle, anti-factor B, factor B-deficient, and CD59a-deficient groups": 11,
       "WT versus PD-1-knockout SCI": 3,
       "WT, CD200L-knockout, and bone-marrow chimera SCI groups": 2,
-      "WT-SCI versus WT-sham; p38alpha+/- SCI comparison": 2,
+      "WT-SCI versus WT-sham; p38alpha-perturbed SCI comparison": 2,
       "acute 0-3 days post-injury clinical visit": 2,
       "acute SCI": 1,
       "acute SCI versus pre-injury/untreated comparison": 1,
@@ -1035,11 +1043,11 @@
   ],
   "scope_rule": "Only source records with explicit spinal-cord, spinal-cord-injury, or injury-model context were selected; no generic mechanism evidence was copied.",
   "selected_evidence": {
-    "context_curation_overrides_applied": 168,
+    "context_curation_overrides_applied": 176,
     "epigenetic_observations_imported": 17,
     "functional_observation_rows_imported": 0,
     "imaging_observation_rows_imported": 0,
-    "observations_with_context_curation": 627,
+    "observations_with_context_curation": 643,
     "perturbation_observation_rows_imported": 0,
     "protein_expression_candidate_rows": 633,
     "protein_observations_imported": 743,
@@ -1077,8 +1085,8 @@
     },
     {
       "path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv",
-      "sha256": "ae3157c85c09ee8bf16273be25b5ce88d603947b72df4d9138ce6b831ee19dfa",
-      "size_bytes": 128727
+      "sha256": "e1cdeaad66d8e4a1bccd5d145b45a0132755029b3b737029cc0498ff1c543d7d",
+      "size_bytes": 135023
     }
   ]
 }
