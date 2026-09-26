@@ -7,7 +7,7 @@ read only for stable identifier resolution and is not rewritten or duplicated.
 
 ## Current status
 
-Release 0.5.17 contains 760 dataset observations from the mSCS evidence stores:
+Release 0.5.18 contains 760 dataset observations from the mSCS evidence stores:
 
 - 110 protein/phosphoprotein observations selected from the curated
   `mSCS/data/derived/phosphorylation_support_observations.tsv` view and joined
@@ -38,7 +38,7 @@ modality-weight promotion. Downstream protein measurements support the
 measured protein state only; they do not establish upstream ligand/receptor
 causality.
 
-This refinement applies 86 study/timepoint protein context curation rows from
+This refinement applies 90 study/timepoint protein context curation rows from
 exact primary-source locators, including injury model, level, severity, sex,
 timepoint, treatment, and sample-scope refinements where the inspected source
 explicitly establishes them. The overrides do not replace reported
