@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import hashlib
 import json
 from pathlib import Path
@@ -50,6 +51,19 @@ def main() -> int:
     missing = [relative for relative in required if not (bundle / relative).is_file()]
     if missing:
         raise SystemExit("Release bundle is missing required files: " + ", ".join(missing))
+    candidate_relative = manifest.get("candidate_universe_path")
+    if candidate_relative:
+        candidate_path = bundle / str(candidate_relative)
+        if not candidate_path.is_file():
+            raise SystemExit(f"Release bundle is missing candidate universe: {candidate_path}")
+        csv.field_size_limit(max(csv.field_size_limit(), 10_000_000))
+        with candidate_path.open(newline="", encoding="utf-8") as handle:
+            candidate_rows = list(csv.DictReader(handle, delimiter="\t"))
+        expected_count = manifest.get("counts", {}).get("candidate_universe_records")
+        if expected_count is not None and len(candidate_rows) != expected_count:
+            raise SystemExit(
+                f"Candidate universe row count mismatch: {len(candidate_rows)} != {expected_count}"
+            )
     mismatches: list[str] = []
     for relative, expected in manifest.get("files", {}).items():
         path = bundle / relative
@@ -66,6 +80,7 @@ def main() -> int:
         "release_id": manifest.get("release_id"),
         "manifest_files_checked": len(manifest.get("files", {})),
         "migration_gaps": len(manifest.get("migration_gaps", [])),
+        "candidate_universe_records": manifest.get("counts", {}).get("candidate_universe_records"),
         "original_mscs_resources_preserved": manifest.get("original_mscs_resources_preserved"),
     }, indent=2))
     return 0

@@ -1,0 +1,54 @@
+{
+  "candidate_role": "method_resource_candidate_projection",
+  "canonical_communication_count": 9099,
+  "causal_assertions_created": false,
+  "evidence_status_counts": {
+    "method_resource_only": 9099
+  },
+  "graph_edges_created": false,
+  "graph_status_counts": {
+    "mapped_not_graph_edge": 1406,
+    "staged_unresolved": 6779,
+    "validated_exportable_core_edge": 914
+  },
+  "inputs": {
+    "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627/bundle_metadata.json": {
+      "bytes": 12209,
+      "sha256": "61259b115bfd1a807f12112b4cd36375be31fbc2f4c66579fc71e90e8dfca623"
+    },
+    "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627/mechanism_edges.tsv": {
+      "bytes": 17772765,
+      "sha256": "d0ef850fbf362536b25683828aa16f6b1669b62ecaf3ea7a9ebd8e3d0728a9cc"
+    },
+    "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627/mechanism_nodes.tsv": {
+      "bytes": 4362002,
+      "sha256": "bcd6319fdda48662a7dff9b49a34b89553f7e786d15eecc3c39625febd7734b9"
+    },
+    "data/processed/method_resource_migration_v1/canonical_communication_records.tsv": {
+      "bytes": 1993967,
+      "sha256": "f5fc14f7802883e6181ab371866c594f0fb29139f17d342d0b53daac8c461a88"
+    },
+    "data/processed/method_resource_migration_v1/method_resource_complex_components.tsv": {
+      "bytes": 2189025,
+      "sha256": "8e25c1534dcd14202e767229674406aba514e0042efb54d4d3767754c9d5bee5"
+    },
+    "data/processed/method_resource_migration_v1/method_resource_migration_report.json": {
+      "bytes": 1497,
+      "sha256": "1698f9d05531045bc5e158ccc47cf60000d87a940bf9265a5b014a0abc66a6fb"
+    },
+    "data/processed/method_resource_migration_v1/method_resource_records.tsv": {
+      "bytes": 6434677,
+      "sha256": "1b87a2156851e77dd576523e1f6a4fc5ee63d8bd758e5c57a45e1bb2d4788a1e"
+    }
+  },
+  "mechanism_graph_release": "module20_24_mechanism_graph:2026-09-25-literature-expansion-627",
+  "numeric_weights_created": false,
+  "output": {
+    "bytes": 4881360,
+    "path": "data/processed/mechanism_lr_candidate_universe_v1/mechanism_lr_candidate_universe.tsv",
+    "row_count": 9099,
+    "sha256": "e05c7f38596110c98a471dee1445ff1d883cfcbe64b94361456bef2fccc9ca51"
+  },
+  "schema_version": "mechanism_lr_candidate_universe_v1",
+  "source_snapshot_id": "phase2_external_snapshot_2026-08-05"
+}
