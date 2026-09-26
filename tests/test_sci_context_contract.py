@@ -87,7 +87,7 @@ def test_sci_context_profiles_preserve_scope_and_reported_study_fields():
 
 def test_sci_protein_context_curation_overrides_are_applied_with_source_provenance():
     overrides = list(csv.DictReader((PACK / "protein_context_curation_overrides.tsv").open(), delimiter="\t"))
-    assert len(overrides) == 105
+    assert len(overrides) == 120
     assert all(row["curation_status"] == "applied" for row in overrides)
     assert all(row["source_locator"] and row["source_url"] for row in overrides)
 
@@ -161,6 +161,30 @@ def test_sci_protein_context_curation_overrides_are_applied_with_source_provenan
     assert {row["injury_level"] for row in by_study["FLOW_SCI_031"]} == {"between T9 and T10"}
     assert {row["injury_severity"] for row in by_study["FLOW_SCI_031"]} == {"complete transection"}
     assert {row["sex"] for row in by_study["FLOW_SCI_031"]} == {"adult male C57BL/6 mice, 8-12 weeks, 17-25 g"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_261"]} == {"T7-T9"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_261"]} == {"robust compression; forceps maximally compressed the exposed cord"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_261"]} == {"female"}
+    assert {row["sample_count"] for row in by_study["FLOW_SCI_323"]} == {"6"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_282"]} == {"T8-T10"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_282"]} == {"75-kdyn contusion"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_332"]} == {"moderate contusion; 3-g weight from 25 mm"}
+    assert {row["sample_count"] for row in by_study["FLOW_SCI_332"]} == {"7"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_051"]} == {"T9"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_124"]} == {"T9"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_124"]} == {"male"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_254"]} == {"T9"}
+    assert {row["sample_count"] for row in by_study["FLOW_SCI_254"]} == {"3"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_121"]} == {"T9"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_132"]} == {"T12"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_170"]} == {"T8-T9"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_170"]} == {"female"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_176"]} == {"T10"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_180"]} == {"thoracic T9/T10 region"}
+    assert {row["sex"] for row in by_study["FLOW_SCI_180"]} == {"female"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_197"]} == {"T8"}
+    assert {row["injury_severity"] for row in by_study["FLOW_SCI_197"]} == {"moderate crush using forceps with a 0.4 mm spacer"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_210"]} == {"T10"}
+    assert {row["injury_level"] for row in by_study["FLOW_SCI_520"]} == {"T10"}
     assert {row["injury_severity"] for row in by_study["FLOW_SCI_111"]} == {"0.2 mm lateral-compression depth for 20 seconds"}
     assert {row["injury_level"] for row in by_study["FLOW_SCI_216"]} == {"T9"}
     assert {row["injury_severity"] for row in by_study["FLOW_SCI_216"]} == {"30-g vascular clip compression for 10 seconds"}
