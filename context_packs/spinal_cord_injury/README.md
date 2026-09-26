@@ -64,12 +64,20 @@ that context evidence cannot create or promote a generic graph edge.
 - `audit_report.json` — counts by modality, study, injury model, timepoint,
   perturbation, observation status, evidence role, link status, and unresolved
   mapping reason.
+- `protein_context_coverage.tsv` — per-context protein coverage and missing
+  context fields for refinement.
+- `protein_context_gap_audit.json` and `protein_context_gap_candidates.tsv` —
+  reproducible accounting of canonical protein records not imported and the
+  reason each remains outside the current selection rule.
 - `../../scripts/build_sci_context_pack.py` — reproducible importer/curator.
+- `../../scripts/audit_sci_protein_context_coverage.py` — reproducible protein
+  context refinement audit.
 
 Regenerate and validate with:
 
 ```bash
 python3 scripts/build_sci_context_pack.py
+python3 scripts/audit_sci_protein_context_coverage.py
 python3 scripts/validate_context_pack.py context_packs/spinal_cord_injury
 ```
 

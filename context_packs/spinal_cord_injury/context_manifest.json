@@ -3,7 +3,10 @@
     "audit_report": "audit_report.json",
     "contexts": "contexts.tsv",
     "mechanism_links": "mechanism_links.tsv",
-    "observations": "observations.tsv"
+    "observations": "observations.tsv",
+    "protein_context_coverage": "protein_context_coverage.tsv",
+    "protein_context_gap_audit": "protein_context_gap_audit.json",
+    "protein_context_gap_candidates": "protein_context_gap_candidates.tsv"
   },
   "context_pack_id": "spinal_cord_injury",
   "context_pack_version": "0.3.0",
