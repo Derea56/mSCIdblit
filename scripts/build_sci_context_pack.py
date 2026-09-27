@@ -31,7 +31,16 @@ DEFAULT_PACK = ROOT / "context_packs" / "spinal_cord_injury"
 DEFAULT_BUNDLE = ROOT / "data" / "processed" / "mechanism_graph_module20_24_v2026_09_25_literature_expansion627"
 RELEASE_ID = "module20_24_mechanism_graph:2026-09-25-literature-expansion-627"
 RELEASE_TAG = "mSCIdblit-v1.9.386"
+CONTEXT_PACK_VERSION = "0.5.26"
 DEFAULT_CURATION_OVERRIDES = DEFAULT_PACK / "protein_context_curation_overrides.tsv"
+
+METABOLOMICS_TRANSCRIPTION_ARTIFACTS = {
+    "FLOW_SCI_222__OBS222_6W_ATP_MS": "data/flow_protein/transcriptions/batch_2026-08-20_study222_atp_ms_not_reported.tsv",
+    "FLOW_SCI_240__FLOW_SCI_240_OBS1": "data/flow_protein/transcriptions/batch_2026-08-21_study240_lipid_mediators.tsv",
+    "FLOW_SCI_240__FLOW_SCI_240_OBS2": "data/flow_protein/transcriptions/batch_2026-08-21_study240_lipid_mediators.tsv",
+    "FLOW_SCI_241__FLOW_SCI_241_OBS3": "data/flow_protein/transcriptions/batch_2026-08-20_direct_text_numeric_222_241_243_424.tsv",
+    "FLOW_SCI_241__FLOW_SCI_241_OBS4": "data/flow_protein/transcriptions/batch_2026-08-20_direct_text_numeric_222_241_243_424.tsv",
+}
 
 CURATION_OVERRIDE_FIELDS = {
     "injury_model", "injury_level", "injury_severity", "sex",
@@ -213,6 +222,41 @@ def protein_has_measurement(row: dict[str, Any]) -> bool:
     )
 
 
+def metabolomics_candidate_kind(row: dict[str, Any]) -> str:
+    """Classify explicit metabolite-oriented records without broad text matching."""
+    assay = (row.get("assay") or "").lower()
+    form = (row.get("protein_form") or "").lower()
+    measurement = (row.get("measurement_kind") or "").lower()
+    entity = (row.get("protein") or "").lower()
+    if "mature lipid mediator" in form and assay in {"elisa", "lc-ms/ms", "lc-ms", "mass_spectrometry"}:
+        return "lipid_mediator_assay"
+    if assay == "elisa" and "lipid-mediator" in measurement:
+        return "lipid_mediator_assay"
+    if any(token in assay for token in ("metabolomics", "lc-ms", "mass spectrometry", "mass_spectrometry")):
+        if any(token in f"{form} {measurement}" for token in ("metabolite", "atp", "lipid mediator")):
+            return "mass_spectrometry_metabolite"
+    if entity == "anandamide" and "mature lipid mediator" in form:
+        return "queued_lipid_mediator_assay"
+    if "atp" in entity and any(token in f"{form} {measurement}" for token in ("atp", "metabolite")):
+        return "non_metabolomics_metabolite_readout"
+    return ""
+
+
+def is_metabolomics_import_candidate(row: dict[str, Any]) -> bool:
+    """Return true only for directly measured metabolite/lipid assays."""
+    kind = metabolomics_candidate_kind(row)
+    if kind not in {"lipid_mediator_assay", "mass_spectrometry_metabolite"}:
+        return False
+    if not nonempty_context(row.get("injury_model")):
+        return False
+    if row.get("extraction_status") not in {
+        "figure_table_transcribed", "source_data_transcribed", "primary_source_checked_not_reported",
+        "text_extracted",
+    }:
+        return False
+    return row.get("transcription_status") not in {"ambiguous"}
+
+
 def protein_form_requires_state_review(row: dict[str, Any]) -> bool:
     """Return true for explicitly phospho/active or mixed-state records.
 
@@ -241,6 +285,8 @@ def protein_form_requires_state_review(row: dict[str, Any]) -> bool:
 
 def is_protein_expression_candidate(row: dict[str, Any], selected_ids: set[str]) -> bool:
     if row["observation_id"] in selected_ids:
+        return False
+    if is_metabolomics_import_candidate(row):
         return False
     if not nonempty_context(row.get("injury_model")):
         return False
@@ -582,6 +628,156 @@ def protein_expression_rows(db_path: Path, selected_ids: set[str], artifact_hash
     return list(contexts.values()), context_meta, observations
 
 
+def metabolomics_rows(
+    db_path: Path,
+    artifact_hash: str,
+    curation_overrides: dict[tuple[str, str], dict[str, str]],
+    mscs_root: Path,
+) -> tuple[list[dict[str, str]], dict[str, dict[str, Any]], dict[str, dict[str, Any]]]:
+    """Import explicit SCI metabolite assays from the mSCS canonical store."""
+    contexts: dict[str, dict[str, str]] = {}
+    context_meta: dict[str, dict[str, Any]] = {}
+    observations: dict[str, dict[str, Any]] = {}
+    query = """
+        SELECT po.*, st.title AS study_title, st.doi_or_pmid, st.source_url AS study_source_url,
+               st.organism, st.injury_model, st.injury_severity, st.injury_level, st.sex,
+               st.perturbation_status,
+               cp.reported_label AS population_label, cp.normalized_label AS population_normalized_label,
+               tp.post_injury_value, tp.unit AS timepoint_unit, tp.condition,
+               tp.tissue_region, tp.injury_distance, tp.injury_distance_unit, tp.sample_count,
+               src.source_id AS canonical_source_id, src.source_location, src.source_url, src.repository_accession
+        FROM protein_observations po
+        JOIN studies st ON st.study_id = po.study_id
+        JOIN cell_populations cp ON cp.population_id = po.population_id
+        JOIN study_timepoints tp ON tp.timepoint_id = po.timepoint_id
+        LEFT JOIN sources src ON src.source_id = po.source_id
+        ORDER BY po.observation_id
+    """
+    with sqlite3.connect(db_path) as db:
+        db.row_factory = sqlite3.Row
+        rows = [dict(row) for row in db.execute(query)]
+
+    for raw_row in rows:
+        if not is_metabolomics_import_candidate(raw_row):
+            continue
+        row = apply_curation_override(raw_row, curation_overrides)
+        observation_id = row["observation_id"]
+        relative_transcription_path = METABOLOMICS_TRANSCRIPTION_ARTIFACTS.get(observation_id)
+        if not relative_transcription_path:
+            raise ValueError(f"metabolomics observation lacks a curated transcription artifact mapping: {observation_id}")
+        transcription_path = mscs_root / relative_transcription_path
+        if not transcription_path.exists():
+            raise FileNotFoundError(transcription_path)
+        transcription_hash = sha256(transcription_path)
+        context_id = stable_id("sci:metabolomics", row["study_id"], row["timepoint_id"], row["population_id"])
+        population = row["population_label"] or row["population_normalized_label"] or ""
+        perturbation = row["condition"] or ""
+        treatment = row["perturbation_status"] or ""
+        contexts.setdefault(context_id, {
+            "context_id": context_id,
+            "context_name": f"{row['study_id']} metabolomics context at {timepoint_label(row['post_injury_value'], row['timepoint_unit'])}",
+            "context_kind": "sample_context", "disease_context": "spinal_cord_injury",
+            "anatomical_context": "spinal_cord", "species": row["organism"] or "",
+            "injury_model": row["injury_model"] or "", "injury_level": row["injury_level"] or "",
+            "injury_severity": row.get("injury_severity") or "", "sex": row.get("sex") or "",
+            "timepoint_value": display_timepoint(row["post_injury_value"]),
+            "timepoint_unit": row["timepoint_unit"] or "", "perturbation": perturbation,
+            "treatment": treatment, "experimental_condition": row["condition"] or "",
+            "study_perturbation_status": row["perturbation_status"] or "",
+            "injury_distance": display_number(row.get("injury_distance")),
+            "injury_distance_unit": row.get("injury_distance_unit") or "",
+            "sample_scope": row.get("sample_scope") or "", "sample_count": row.get("sample_count"),
+            "cell_type": "", "sample_id": "", "study_id": row["study_id"],
+            "tissue": row["tissue_region"] or "", "context_status": "defined",
+            "provenance_note": source_locator(
+                "mSCS/data/flow_protein/flow_protein.sqlite",
+                f"studies.study_id={row['study_id']}",
+                f"study_timepoints.timepoint_id={row['timepoint_id']}",
+                f"cell_populations.population_id={row['population_id']}",
+                f"sources.source_id={row.get('canonical_source_id')}",
+                f"transcription_artifact=mSCS/{relative_transcription_path}",
+                f"transcription_sha256={transcription_hash}",
+                f"study_title={row['study_title']}",
+                f"context_curation={json_text(curation_provenance(row))}" if curation_provenance(row) else None,
+            ),
+        })
+        context_meta.setdefault(context_id, {
+            "study_id": row["study_id"], "study_title": row["study_title"],
+            "doi_or_pmid": row["doi_or_pmid"], "source_url": row["study_source_url"],
+            "organism": row["organism"], "injury_model": row["injury_model"],
+            "injury_level": row["injury_level"], "timepoint_id": row["timepoint_id"],
+            "population_id": row["population_id"], "condition": row["condition"],
+            "injury_severity": row["injury_severity"], "sex": row["sex"],
+            "injury_distance": row["injury_distance"], "injury_distance_unit": row["injury_distance_unit"],
+            "sample_scope": row["sample_scope"], "sample_count": row["sample_count"],
+            "tissue_region": row["tissue_region"], "source_location": row["source_location"],
+        })
+        numeric = protein_value(row)
+        direction = row.get("direction_vs_control") or "not_reported"
+        value_text = row.get("transcribed_value_text") or ("" if numeric is not None else direction)
+        extraction = row.get("extraction_status") or "unknown"
+        value_kind = "numeric" if numeric is not None else (
+            "qualitative" if value_text not in {"", "unknown", "not_reported"} else "unreported"
+        )
+        if numeric is not None and "digit" in extraction:
+            status = "digitized"
+        elif numeric is not None:
+            status = "transcribed"
+        elif direction not in {"", "unknown", "not_reported"}:
+            status = "reported"
+        else:
+            status = "not_measured"
+        source_loc = source_locator(
+            f"flow_protein.protein_observations.observation_id={observation_id}",
+            f"sources.source_id={row.get('canonical_source_id')}",
+            row.get("source_location"),
+            f"transcription_artifact=mSCS/{relative_transcription_path}",
+        )
+        measured_entity = row.get("protein") or ""
+        measured_type = "lipid_mediator" if "lipid" in (row.get("protein_form") or "").lower() else "metabolite"
+        observations[observation_id] = {
+            "observation_id": observation_id, "context_id": context_id,
+            "source_system": "mSCS", "source_database": "flow_protein",
+            "source_record_type": "metabolomics_observation", "source_record_key": observation_id,
+            "source_version": f"sha256:{artifact_hash}", "modality": "metabolomics",
+            "assay": row.get("assay"), "measurement_kind": row.get("measurement_kind"),
+            "measured_entity_name": measured_entity, "measured_entity_type": measured_type,
+            "feature_id": measured_entity, "value_numeric": numeric, "value_text": value_text,
+            "value_kind": value_kind, "unit": row.get("unit"),
+            "direction_vs_control": direction,
+            "comparator": "reference_control" if direction == "reference_control" else "",
+            "biological_replicates": row.get("biological_replicates"),
+            "timepoint_value": timepoint_number(row["post_injury_value"]), "timepoint_unit": row["timepoint_unit"],
+            "perturbation": perturbation, "cell_type": "", "sample_id": "",
+            "observation_status": status, "evidence_role": "dataset_observation",
+            "dependency_group": f"mSCS:flow_metabolomics:{row['study_id']}:{row['timepoint_id']}:{row['population_id']}",
+            "source_artifact_path": "mSCS/data/flow_protein/flow_protein.sqlite",
+            "source_artifact_sha256": artifact_hash, "source_locator": source_loc,
+            "provenance_note": json_text({
+                "canonical_source": "mSCS/data/flow_protein/flow_protein.sqlite",
+                "canonical_observation_id": observation_id,
+                "canonical_source_id": row.get("canonical_source_id"),
+                "transcription_source_artifact": f"mSCS/{relative_transcription_path}",
+                "transcription_source_sha256": transcription_hash,
+                "selection_rule": "explicit SCI metabolite/lipid-mediator assay; direct source-extracted or explicitly reported direction; no protein relabeling",
+                "study_id": row.get("study_id"), "timepoint_id": row.get("timepoint_id"),
+                "population_id": row.get("population_id"), "protein_form": row.get("protein_form"),
+                "protein_resolution": row.get("protein_resolution"), "sample_scope": row.get("sample_scope"),
+                "evidence_grade": row.get("evidence_grade"), "measurement_quality": row.get("measurement_quality"),
+                "extraction_status": extraction, "negative_evidence_status": row.get("negative_evidence_status"),
+                "source_location": row.get("source_location"), "source_repository_accession": row.get("repository_accession"),
+                "study_condition": row.get("condition"), "study_perturbation_status": row.get("perturbation_status"),
+                **({"context_curation": curation_provenance(row)} if curation_provenance(row) else {}),
+            }),
+            "_gene_symbol": None, "_entity": measured_entity,
+            "_context_meta": context_meta[context_id], "_context_curation": curation_provenance(row),
+            "_study_key": row["study_id"], "_injury_model": row["injury_model"] or "unknown",
+            "_timepoint_key": timepoint_label(row["post_injury_value"], row["timepoint_unit"]),
+            "_evidence_label": row.get("evidence_grade") or "unknown",
+        }
+    return list(contexts.values()), context_meta, observations
+
+
 def epigenetic_rows(db_path: Path, artifact_hash: str) -> tuple[list[dict[str, str]], dict[str, dict[str, Any]], dict[str, dict[str, Any]]]:
     contexts: dict[str, dict[str, str]] = {}
     context_meta: dict[str, dict[str, Any]] = {}
@@ -829,6 +1025,51 @@ def count_values(rows: Iterable[dict[str, Any]], key: str) -> dict[str, int]:
     return dict(sorted(counter.items()))
 
 
+def metabolomics_assessment(db_path: Path, imported_ids: set[str]) -> dict[str, Any]:
+    """Report metabolite-oriented records that were included or held out."""
+    query = """
+        SELECT po.observation_id, po.study_id, po.protein, po.assay, po.protein_form,
+               po.measurement_kind, po.extraction_status, po.direction_vs_control,
+               st.injury_model
+        FROM protein_observations po
+        JOIN studies st USING(study_id)
+        ORDER BY po.observation_id
+    """
+    with sqlite3.connect(db_path) as db:
+        db.row_factory = sqlite3.Row
+        rows = [dict(row) for row in db.execute(query)]
+    assessed = []
+    for row in rows:
+        if not nonempty_context(row.get("injury_model")):
+            continue
+        kind = metabolomics_candidate_kind(row)
+        if not kind:
+            continue
+        oid = row["observation_id"]
+        if oid in imported_ids:
+            decision, reason = "included", "explicit SCI metabolite/lipid-mediator assay"
+        elif "ambiguous" in (row.get("extraction_status") or ""):
+            decision, reason = "excluded", "canonical queue record retains an assay/context mismatch; no assay remapping"
+        elif "microdialysis" in (row.get("assay") or "").lower():
+            decision, reason = "excluded", "dynamic metabolite release readout reserved for functional evidence"
+        elif "fluorescence" in (row.get("assay") or "").lower() or "fret" in (row.get("measurement_kind") or "").lower():
+            decision, reason = "excluded", "metabolite imaging readout reserved for imaging evidence"
+        else:
+            decision, reason = "excluded", "does not satisfy the direct metabolomics import rule"
+        assessed.append({
+            "observation_id": oid, "study_id": row.get("study_id"), "entity": row.get("protein"),
+            "candidate_kind": kind, "assay": row.get("assay"), "measurement_kind": row.get("measurement_kind"),
+            "extraction_status": row.get("extraction_status"),
+            "decision": decision, "reason": reason,
+        })
+    return {
+        "candidate_rows_assessed": len(assessed),
+        "included_rows": sum(row["decision"] == "included" for row in assessed),
+        "excluded_rows": sum(row["decision"] == "excluded" for row in assessed),
+        "records": assessed,
+    }
+
+
 def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Path = DEFAULT_CURATION_OVERRIDES) -> dict[str, Any]:
     global DEFAULT_MSCS_ROOT
     DEFAULT_MSCS_ROOT = mscs_root
@@ -847,11 +1088,27 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     spatial_catalog_hash = sha256(spatial_catalog)
     spatial_pilot_hash = sha256(spatial_pilot)
     curation_overrides_hash = sha256(curation_overrides_path)
+    metabolomics_transcription_paths = {
+        relative_path: mscs_root / relative_path
+        for relative_path in sorted(set(METABOLOMICS_TRANSCRIPTION_ARTIFACTS.values()))
+    }
+    for path in metabolomics_transcription_paths.values():
+        if not path.exists():
+            raise FileNotFoundError(path)
+    metabolomics_transcription_hashes = {
+        relative_path: sha256(path) for relative_path, path in metabolomics_transcription_paths.items()
+    }
     curation_overrides = load_curation_overrides(curation_overrides_path)
     selected = read_tsv(phospho_view)
     selected_ids = {row["observation_id"] for row in selected}
+    metabolomics_contexts, metabolomics_meta, metabolomics_obs = metabolomics_rows(
+        protein_db, protein_hash, curation_overrides, mscs_root,
+    )
+    metabolomics_ids = set(metabolomics_obs)
     protein_contexts, protein_meta, protein_obs = protein_context_rows(protein_db, selected_ids, protein_hash, curation_overrides)
-    expression_contexts, expression_meta, expression_obs = protein_expression_rows(protein_db, selected_ids, protein_hash, curation_overrides)
+    expression_contexts, expression_meta, expression_obs = protein_expression_rows(
+        protein_db, selected_ids | metabolomics_ids, protein_hash, curation_overrides,
+    )
     protein_context_by_id = {row["context_id"]: row for row in protein_contexts}
     for row in expression_contexts:
         protein_context_by_id.setdefault(row["context_id"], row)
@@ -859,7 +1116,12 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     protein_meta.update(expression_meta)
     protein_obs.update(expression_obs)
     epi_contexts, epi_meta, epi_obs = epigenetic_rows(epigenetic_db, epigenetic_hash)
-    all_contexts = protein_contexts + [row for row in epi_contexts if row["context_id"] not in {item["context_id"] for item in protein_contexts}]
+    protein_context_ids = {item["context_id"] for item in protein_contexts}
+    all_contexts = protein_contexts + [
+        row for row in metabolomics_contexts if row["context_id"] not in protein_context_ids
+    ] + [
+        row for row in epi_contexts if row["context_id"] not in protein_context_ids
+    ]
     scope = {
         "context_id": "sci_scope", "context_name": "Spinal cord injury evidence scope",
         "context_kind": "ontology_scope", "disease_context": "spinal_cord_injury",
@@ -874,7 +1136,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     }
     all_contexts = [scope] + all_contexts
     node_index = load_nodes(bundle)
-    observations = list(protein_obs.values()) + list(epi_obs.values())
+    observations = list(protein_obs.values()) + list(metabolomics_obs.values()) + list(epi_obs.values())
     curation_counts = Counter(
         item["curation_id"]
         for observation in observations
@@ -900,17 +1162,22 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
 
     enriched = []
     link_by_observation = {row["observation_id"]: row for row in links}
-    for original in list(protein_obs.values()) + list(epi_obs.values()):
+    meta_by_modality = {
+        "protein": protein_meta, "metabolomics": metabolomics_meta, "epigenomics": epi_meta,
+    }
+    for original in list(protein_obs.values()) + list(metabolomics_obs.values()) + list(epi_obs.values()):
         row = dict(original)
         context = context_by_id[row["context_id"]]
         link = link_by_observation[row["observation_id"]]
         row.update({
-            "study_id": (protein_meta if row["modality"] == "protein" else epi_meta)[row["context_id"]]["study_id"],
+            "study_id": meta_by_modality[row["modality"]][row["context_id"]]["study_id"],
             "injury_model": context["injury_model"], "timepoint_key": timepoint_label(context["timepoint_value"], context["timepoint_unit"]),
             "perturbation_key": context["perturbation"], "linked_status": "linked" if link["release_status"] == "included" else "unlinked",
             "unresolved_mapping_reason": "" if link["release_status"] == "included" else link["link_basis"],
         })
         enriched.append(row)
+
+    metabolomics_audit = metabolomics_assessment(protein_db, metabolomics_ids)
 
     audit = {
         "audit_version": "sci_context_pack_audit_v1",
@@ -920,6 +1187,9 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             "protein_state_observations_imported": len(selected_ids),
             "protein_expression_candidate_rows": len(expression_obs),
             "protein_observations_imported": len(protein_obs),
+            "metabolomics_candidate_rows_assessed": metabolomics_audit["candidate_rows_assessed"],
+            "metabolomics_observations_imported": len(metabolomics_obs),
+            "metabolomics_observations_excluded": metabolomics_audit["excluded_rows"],
             "epigenetic_observations_imported": len(epi_obs),
             "epigenetic_binary_feature_observations_imported": sum(
                 observation["source_record_type"] == "epigenetic_binary_feature"
@@ -941,6 +1211,10 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             {"path": "mSCS/data/spatial/spatial_catalog.sqlite", "sha256": spatial_catalog_hash, "size_bytes": spatial_catalog.stat().st_size},
             {"path": "mSCS/data/spatial/pilot_all_studies/gse269377_cluster_proxy/spatial_pair_percentages_all_samples.tsv", "sha256": spatial_pilot_hash, "size_bytes": spatial_pilot.stat().st_size},
             {"path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv", "sha256": curation_overrides_hash, "size_bytes": curation_overrides_path.stat().st_size},
+            *[
+                {"path": f"mSCS/{relative_path}", "sha256": digest, "size_bytes": metabolomics_transcription_paths[relative_path].stat().st_size}
+                for relative_path, digest in metabolomics_transcription_hashes.items()
+            ],
         ],
         "counts_by": {
             "modality": count_values(enriched, "modality"),
@@ -954,6 +1228,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             "unresolved_mapping_reason": count_values([row for row in enriched if row["linked_status"] == "unlinked"], "unresolved_mapping_reason"),
             "context_curation": dict(sorted(curation_counts.items())),
         },
+        "metabolomics_assessment": metabolomics_audit,
         "mechanism_link_counts": {
             "included": sum(row["release_status"] == "included" for row in links),
             "staging_unresolved": sum(row["release_status"] == "staging" for row in links),
@@ -966,6 +1241,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             "Protein observations combine the 110-row mSCS phosphorylation-support selection with directly measured, source-extracted non-phosphorylated protein records; they are not the full 1,259-row canonical store.",
             "Epigenomics imports all explicitly reported assay contexts from the mSCS epigenetic store and retains exact binary feature-status records with their own source artifact paths and checksums; binary status is not converted into a directional comparison.",
             "Protein-expression selection excludes phosphoprotein/active-form duplicates, ambiguous or inaccessible extraction states, reporter/activity-only assays, and records without a measured value or reported direction.",
+            "Metabolomics imports explicit ATP, anandamide, prostaglandin E2, and leukotriene B4 assay records from the canonical mSCS store; queue rows with assay mismatch, imaging, or dynamic-release endpoints remain excluded from this modality.",
             "Dependency groups are source/study/timepoint/population or source/study/assay/context groups; they are intended to prevent correlated readouts from being double-counted.",
             "Downstream protein and phosphoprotein measurements are linked only to the measured state/node when an exact stable node match exists; no upstream ligand/receptor causality is inferred.",
             "Missing values and source ambiguity remain unreported or unknown; they are not converted to negative protein evidence.",
@@ -975,7 +1251,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
 
     manifest = {
         "context_pack_id": "spinal_cord_injury",
-        "context_pack_version": "0.5.25",
+        "context_pack_version": CONTEXT_PACK_VERSION,
         "status": "populated",
         "pack_type": "disease_injury_evidence_overlay",
         "source_repo": "mSCIdblit",
@@ -997,6 +1273,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
         },
         "modalities": [
             {"modality": "protein", "status": "populated", "selection": "mSCS phosphorylation_support_observations.tsv plus direct source-extracted non-phosphorylated protein observations from flow_protein.sqlite", "observation_file": "observations.tsv"},
+            {"modality": "metabolomics", "status": "populated", "selection": "Explicit SCI metabolite/lipid-mediator assay records from mSCS flow_protein.sqlite, with exact transcription artifacts retained in provenance", "observation_file": "observations.tsv"},
             {"modality": "transcriptomics", "status": "assessed_not_imported", "reason": "No curated transcriptomic observation table with exact SCI context was selected in this release."},
             {"modality": "spatial", "status": "assessed_excluded", "reason": audit["selected_evidence"]["spatial_exclusion_reason"]},
             {"modality": "epigenomics", "status": "populated", "selection": "mSCS epigenetic observations, all explicit assay contexts, and exact binary feature-status records", "observation_file": "observations.tsv"},
@@ -1016,7 +1293,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             "context_profiles": len(all_contexts), "observations": len(observations),
             "mechanism_links": len(links), "included_mechanism_links": sum(row["release_status"] == "included" for row in links),
         },
-        "provenance_note": "Generated by scripts/build_sci_context_pack.py from exact mSCS source artifacts plus explicitly applied protein context curation overrides. Generic Module 20B-24B graph files were read for stable identifier resolution only and were not modified or duplicated.",
+        "provenance_note": "Generated by scripts/build_sci_context_pack.py from exact mSCS source artifacts plus explicitly applied context curation overrides. Metabolomics records are selected from explicit metabolite/lipid-mediator assays and preserve their transcription artifact paths and checksums. Generic Module 20B-24B graph files were read for stable identifier resolution only and were not modified or duplicated.",
     }
     (pack / "context_manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return {"manifest": manifest, "audit": audit}

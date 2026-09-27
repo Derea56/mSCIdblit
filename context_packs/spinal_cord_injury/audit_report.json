@@ -249,7 +249,7 @@
       "SCICTX-CUR-0246": 1
     },
     "evidence_role": {
-      "dataset_observation": 762
+      "dataset_observation": 763
     },
     "injury_model": {
       "65-kdyn T9 contusion in adult male and female C57BL/6 mice": 3,
@@ -458,6 +458,7 @@
       "mouse spinal cord injury with reporter-line fate mapping; exact lesion paradigm requires extraction": 2,
       "mouse spinal cord injury with systemic SHP2 inhibitor treatment and SCI controls; exact impact parameters pending extraction": 1,
       "mouse spinal cord injury; exact lesion paradigm and level not captured in this pass": 2,
+      "mouse thoracic contusion SCI, including a 50-kdyn cohort, with GO-ATeam2 ATP-biosensor mice": 1,
       "mouse thoracic contusion SCI; exact force and level not extracted in this pass": 1,
       "mouse traumatic SCI": 3,
       "mouse traumatic SCI with lesion-centered histology": 1,
@@ -498,21 +499,23 @@
       "wild-type mouse thoracic spinal cord hemisection": 1
     },
     "linked_status": {
-      "linked": 382,
+      "linked": 383,
       "unlinked": 380
     },
     "modality": {
       "epigenomics": 19,
-      "protein": 743
+      "metabolomics": 5,
+      "protein": 739
     },
     "observation_status": {
       "observed": 2,
-      "reported": 85,
-      "transcribed": 659,
+      "reported": 90,
+      "transcribed": 655,
       "unknown": 16
     },
     "perturbation": {
       "+PLX3397": 2,
+      "50-kdyn SCI; allodynia-positive versus allodynia-negative versus sham": 1,
       "BDNF-overexpression SCT versus WT SCT": 2,
       "Bmal1 knockout and WT T9 contusion SCI groups": 1,
       "CSCI versus normal and sham": 4,
@@ -876,6 +879,7 @@
       "FLOW_SCI_217": 2,
       "FLOW_SCI_220": 3,
       "FLOW_SCI_221": 2,
+      "FLOW_SCI_222": 1,
       "FLOW_SCI_223": 4,
       "FLOW_SCI_224": 1,
       "FLOW_SCI_231": 5,
@@ -1079,7 +1083,7 @@
       "56 day": 8,
       "6 hour": 12,
       "6 hours": 2,
-      "6 week": 2,
+      "6 week": 3,
       "60 day": 2,
       "63 day": 2,
       "7 day": 131,
@@ -1098,16 +1102,134 @@
   },
   "mechanism_link_counts": {
     "graph_edges_created": 0,
-    "included": 382,
+    "included": 383,
     "numeric_modality_weights_created": 0,
     "partial_routes_promoted": 0,
     "route_confidence_created": 0,
     "staging_unresolved": 380
   },
+  "metabolomics_assessment": {
+    "candidate_rows_assessed": 10,
+    "excluded_rows": 5,
+    "included_rows": 5,
+    "records": [
+      {
+        "assay": "live-cell fluorescence imaging",
+        "candidate_kind": "non_metabolomics_metabolite_readout",
+        "decision": "excluded",
+        "entity": "ATP",
+        "extraction_status": "figure_table_transcribed",
+        "measurement_kind": "intracellular ATP FRET biosensor ratio",
+        "observation_id": "FLOW_SCI_222__OBS222_6W_ATP_FRET",
+        "reason": "metabolite imaging readout reserved for imaging evidence",
+        "study_id": "FLOW_SCI_222"
+      },
+      {
+        "assay": "liquid chromatography-tandem mass spectrometry metabolomics",
+        "candidate_kind": "mass_spectrometry_metabolite",
+        "decision": "included",
+        "entity": "ATP",
+        "extraction_status": "primary_source_checked_not_reported",
+        "measurement_kind": "relative tissue ATP metabolite abundance",
+        "observation_id": "FLOW_SCI_222__OBS222_6W_ATP_MS",
+        "reason": "explicit SCI metabolite/lipid-mediator assay",
+        "study_id": "FLOW_SCI_222"
+      },
+      {
+        "assay": "microdialysis with ATP assay",
+        "candidate_kind": "non_metabolomics_metabolite_readout",
+        "decision": "excluded",
+        "entity": "ATP",
+        "extraction_status": "figure_table_transcribed",
+        "measurement_kind": "extracellular ATP release after mechanical stimulation",
+        "observation_id": "FLOW_SCI_222__OBS222_6W_ATP_RELEASE",
+        "reason": "dynamic metabolite release readout reserved for functional evidence",
+        "study_id": "FLOW_SCI_222"
+      },
+      {
+        "assay": "elisa",
+        "candidate_kind": "lipid_mediator_assay",
+        "decision": "included",
+        "entity": "prostaglandin E2",
+        "extraction_status": "figure_table_transcribed",
+        "measurement_kind": "ELISA lipid-mediator concentration",
+        "observation_id": "FLOW_SCI_240__FLOW_SCI_240_OBS1",
+        "reason": "explicit SCI metabolite/lipid-mediator assay",
+        "study_id": "FLOW_SCI_240"
+      },
+      {
+        "assay": "elisa",
+        "candidate_kind": "lipid_mediator_assay",
+        "decision": "included",
+        "entity": "leukotriene B4",
+        "extraction_status": "figure_table_transcribed",
+        "measurement_kind": "ELISA lipid-mediator concentration",
+        "observation_id": "FLOW_SCI_240__FLOW_SCI_240_OBS2",
+        "reason": "explicit SCI metabolite/lipid-mediator assay",
+        "study_id": "FLOW_SCI_240"
+      },
+      {
+        "assay": "flow_cytometry",
+        "candidate_kind": "queued_lipid_mediator_assay",
+        "decision": "excluded",
+        "entity": "anandamide",
+        "extraction_status": "primary_source_checked_ambiguous",
+        "measurement_kind": "concentration",
+        "observation_id": "FLOW_SCI_241__FLOW_SCI_241_OBS1",
+        "reason": "canonical queue record retains an assay/context mismatch; no assay remapping",
+        "study_id": "FLOW_SCI_241"
+      },
+      {
+        "assay": "flow_cytometry",
+        "candidate_kind": "queued_lipid_mediator_assay",
+        "decision": "excluded",
+        "entity": "anandamide",
+        "extraction_status": "primary_source_checked_ambiguous",
+        "measurement_kind": "concentration",
+        "observation_id": "FLOW_SCI_241__FLOW_SCI_241_OBS2",
+        "reason": "canonical queue record retains an assay/context mismatch; no assay remapping",
+        "study_id": "FLOW_SCI_241"
+      },
+      {
+        "assay": "LC-MS/MS",
+        "candidate_kind": "lipid_mediator_assay",
+        "decision": "included",
+        "entity": "anandamide",
+        "extraction_status": "figure_table_transcribed",
+        "measurement_kind": "anandamide tissue content",
+        "observation_id": "FLOW_SCI_241__FLOW_SCI_241_OBS3",
+        "reason": "explicit SCI metabolite/lipid-mediator assay",
+        "study_id": "FLOW_SCI_241"
+      },
+      {
+        "assay": "LC-MS/MS",
+        "candidate_kind": "lipid_mediator_assay",
+        "decision": "included",
+        "entity": "anandamide",
+        "extraction_status": "figure_table_transcribed",
+        "measurement_kind": "anandamide tissue content",
+        "observation_id": "FLOW_SCI_241__FLOW_SCI_241_OBS4",
+        "reason": "explicit SCI metabolite/lipid-mediator assay",
+        "study_id": "FLOW_SCI_241"
+      },
+      {
+        "assay": "western_blot",
+        "candidate_kind": "non_metabolomics_metabolite_readout",
+        "decision": "excluded",
+        "entity": "ATP synthase beta",
+        "extraction_status": "figure_table_transcribed",
+        "measurement_kind": "ATP synthase \u03b2 western-blot optical density",
+        "observation_id": "FLOW_SCI_360__O360_ATP5B",
+        "reason": "does not satisfy the direct metabolomics import rule",
+        "study_id": "FLOW_SCI_360"
+      }
+    ]
+  },
   "notes": [
     "Protein observations combine the 110-row mSCS phosphorylation-support selection with directly measured, source-extracted non-phosphorylated protein records; they are not the full 1,259-row canonical store.",
     "Epigenomics imports all explicitly reported assay contexts from the mSCS epigenetic store and retains exact binary feature-status records with their own source artifact paths and checksums; binary status is not converted into a directional comparison.",
     "Protein-expression selection excludes phosphoprotein/active-form duplicates, ambiguous or inaccessible extraction states, reporter/activity-only assays, and records without a measured value or reported direction.",
+    "Metabolomics imports explicit ATP, anandamide, prostaglandin E2, and leukotriene B4 assay records from the canonical mSCS store; queue rows with assay mismatch, imaging, or dynamic-release endpoints remain excluded from this modality.",
     "Dependency groups are source/study/timepoint/population or source/study/assay/context groups; they are intended to prevent correlated readouts from being double-counted.",
     "Downstream protein and phosphoprotein measurements are linked only to the measured state/node when an exact stable node match exists; no upstream ligand/receptor causality is inferred.",
     "Missing values and source ambiguity remain unreported or unknown; they are not converted to negative protein evidence."
@@ -1119,10 +1241,13 @@
     "epigenetic_observations_imported": 19,
     "functional_observation_rows_imported": 0,
     "imaging_observation_rows_imported": 0,
+    "metabolomics_candidate_rows_assessed": 10,
+    "metabolomics_observations_excluded": 5,
+    "metabolomics_observations_imported": 5,
     "observations_with_context_curation": 743,
     "perturbation_observation_rows_imported": 0,
-    "protein_expression_candidate_rows": 633,
-    "protein_observations_imported": 743,
+    "protein_expression_candidate_rows": 629,
+    "protein_observations_imported": 739,
     "protein_state_observations_imported": 110,
     "protein_state_view_rows": 110,
     "spatial_exclusion_reason": "GSE269377 is a healthy/mutant FUS spinal-cord spatial dataset without an explicit spinal-cord-injury model; mSCS spatial_evidence has zero rows.",
@@ -1159,6 +1284,21 @@
       "path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv",
       "sha256": "3eefba21f533357c1ee42f4ab57c8c945f0985bffdfc0f3aa2fb28e36072001d",
       "size_bytes": 187866
+    },
+    {
+      "path": "mSCS/data/flow_protein/transcriptions/batch_2026-08-20_direct_text_numeric_222_241_243_424.tsv",
+      "sha256": "23ba900e1c62dfd2608058f358ef4349eb53b4bf6f81806564ce5c8ce41b3e84",
+      "size_bytes": 12627
+    },
+    {
+      "path": "mSCS/data/flow_protein/transcriptions/batch_2026-08-20_study222_atp_ms_not_reported.tsv",
+      "sha256": "1aedb7b1321a90afc5fbb7a616956a27fb1290d38112120e6bbf4e89cd1e300c",
+      "size_bytes": 3151
+    },
+    {
+      "path": "mSCS/data/flow_protein/transcriptions/batch_2026-08-21_study240_lipid_mediators.tsv",
+      "sha256": "72471b5e5d48d179479ce7a218bb3ee81aaa6a924ce1f45ec8b0488f9a4449b4",
+      "size_bytes": 5773
     }
   ]
 }

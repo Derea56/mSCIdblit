@@ -26,6 +26,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 from scripts.build_sci_context_pack import (
     is_protein_expression_candidate,
+    metabolomics_candidate_kind,
     nonempty_context,
     protein_form_requires_state_review,
     read_tsv,
@@ -178,6 +179,8 @@ def build(mscs_root: Path, pack: Path) -> dict[str, Any]:
 
     gap_rows: list[dict[str, Any]] = []
     for row in canonical:
+        if metabolomics_candidate_kind(row):
+            continue
         gap = classify_gap(row, selected_ids, imported_ids)
         if gap == "already_imported":
             continue
