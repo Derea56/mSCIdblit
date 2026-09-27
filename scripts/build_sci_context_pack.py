@@ -2,10 +2,10 @@
 """Build the populated spinal-cord-injury context evidence overlay.
 
 The builder reads the current mSCS protein-state support view, curated mSCS
-epigenetic SQLite store, mSCS spatial-transcriptomic catalog, and two explicit
-SCI qRT-PCR records from the pinned mechanism-release evidence table. It writes
-only the file-based context pack; it does not modify mSCS or the neutral Module
-20B-24B mechanism bundle.
+epigenetic SQLite store, mSCS spatial-transcriptomic catalog, and explicit SCI
+records from the pinned mechanism-release downstream-evidence and literature-
+expansion tables. It writes only the file-based context pack; it does not
+modify mSCS or the neutral Module 20B-24B mechanism bundle.
 
 Observations retain source observation identifiers, source artifact hashes,
 study/sample context, and dependency groups.  Exact mechanism-node matches
@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import hashlib
 import json
 import re
@@ -33,7 +34,7 @@ DEFAULT_PACK = ROOT / "context_packs" / "spinal_cord_injury"
 DEFAULT_BUNDLE = ROOT / "data" / "processed" / "mechanism_graph_module20_24_v2026_09_25_literature_expansion627"
 RELEASE_ID = "module20_24_mechanism_graph:2026-09-25-literature-expansion-627"
 RELEASE_TAG = "mSCIdblit-v1.9.386"
-CONTEXT_PACK_VERSION = "0.5.27"
+CONTEXT_PACK_VERSION = "0.5.28"
 DEFAULT_CURATION_OVERRIDES = DEFAULT_PACK / "protein_context_curation_overrides.tsv"
 
 SCI_SPATIAL_TRANSCRIPTOMIC_DATASETS = {
@@ -104,7 +105,11 @@ def sha256(path: Path) -> str:
 
 
 def read_tsv(path: Path) -> list[dict[str, str]]:
-    with path.open(newline="", encoding="utf-8") as handle:
+    if path.name.endswith(".gz"):
+        handle = gzip.open(path, "rt", newline="", encoding="utf-8")
+    else:
+        handle = path.open(newline="", encoding="utf-8")
+    with handle:
         return list(csv.DictReader(handle, delimiter="\t"))
 
 
@@ -1281,6 +1286,176 @@ def transcriptomic_rows(spatial_catalog_path: Path, spatial_hash: str, evidence_
     return spatial_contexts + external_contexts, {**spatial_meta, **external_meta}, {**spatial_obs, **external_obs}, assessment
 
 
+def mechanism_context_rows(
+    downstream_path: Path,
+    downstream_hash: str,
+    route_path: Path,
+    route_hash: str,
+) -> tuple[list[dict[str, str]], dict[str, dict[str, Any]], dict[str, dict[str, Any]], dict[str, int]]:
+    """Import only explicitly SCI-supported module-evidence applicability rows.
+
+    These rows document that a source-backed mechanism-evidence record has an
+    explicit SCI context.  They are not direct protein, transcript, or other
+    modality measurements, and remain staged at the module boundary because
+    this builder does not promote literature routes or graph edges.
+    """
+    contexts: dict[str, dict[str, str]] = {}
+    context_meta: dict[str, dict[str, Any]] = {}
+    observations: dict[str, dict[str, Any]] = {}
+    selected: list[tuple[str, dict[str, str], Path, str]] = []
+    downstream_rows = read_tsv(downstream_path)
+    downstream_sci = [
+        row for row in downstream_rows
+        if (row.get("injury_context") or "").strip().lower() == "traumatic spinal cord injury"
+    ]
+    route_rows = read_tsv(route_path)
+    route_sci = [
+        row for row in route_rows
+        if (row.get("injury_context") or "").strip().lower() == "traumatic spinal cord injury"
+    ]
+    selected.extend(("downstream", row, downstream_path, downstream_hash) for row in downstream_sci)
+    selected.extend(("route", row, route_path, route_hash) for row in route_sci)
+    module_counts: Counter[str] = Counter()
+    source_kind_counts: Counter[str] = Counter()
+
+    for source_kind, row, artifact_path, artifact_hash in selected:
+        if source_kind == "downstream":
+            source_key = row["record_id"]
+            module = row.get("module") or ""
+            locator = row.get("source_locator") or ""
+            label = row.get("output_term") or row.get("evidence_node_label") or source_key
+            entity_type = "mechanism_downstream_evidence_output"
+            artifact_label = "mechanism_downstream_evidence_records"
+        else:
+            source_key = row["expansion_id"]
+            source_module_prefix = source_key.split("-LITEXP-", 1)[0]
+            module = source_module_prefix[1:] if source_module_prefix in {"M20B", "M21B", "M22B", "M23B", "M24B"} else source_module_prefix
+            locator = row.get("primary_locator") or ""
+            label = row.get("pathway_name") or row.get("output_label") or row.get("target_gene_label") or source_key
+            entity_type = "mechanism_literature_expansion_output"
+            artifact_label = "mechanism_literature_expansion"
+        if not module:
+            raise ValueError(f"SCI mechanism context row lacks an exact module identifier: {source_key}")
+        module_counts[module] += 1
+        source_kind_counts[source_kind] += 1
+
+        context_key = (
+            source_kind, module, locator, row.get("species_context") or "",
+            row.get("injury_context") or "", row.get("cell_type_context") or "",
+            row.get("compartment_context") or "", row.get("context_scope") or "",
+            row.get("assay_or_perturbation") or "",
+        )
+        context_id = stable_id("sci:mechanism_evidence", *context_key)
+        if context_id not in contexts:
+            assay_or_perturbation = row.get("assay_or_perturbation") or ""
+            contexts[context_id] = {
+                "context_id": context_id,
+                "context_name": f"{module} {artifact_label} SCI context: {locator or source_key}",
+                "context_kind": "evidence_context",
+                "disease_context": "spinal_cord_injury",
+                "anatomical_context": "spinal_cord",
+                "species": row.get("species_context") or "",
+                "injury_model": row.get("injury_context") or "",
+                "injury_level": "", "injury_severity": "", "sex": "",
+                "timepoint_value": "", "timepoint_unit": "",
+                "perturbation": "" if assay_or_perturbation == "not_reported" else assay_or_perturbation,
+                "treatment": "",
+                "experimental_condition": row.get("context_scope") or "",
+                "study_perturbation_status": "",
+                "injury_distance": "", "injury_distance_unit": "",
+                "sample_scope": "",
+                "sample_count": "",
+                "cell_type": row.get("cell_type_context") or "",
+                "sample_id": "", "study_id": "", "tissue": "",
+                "context_status": "defined",
+                "provenance_note": json_text({
+                    "source_artifact_path": str(artifact_path.relative_to(ROOT)),
+                    "source_artifact_sha256": artifact_hash,
+                    "source_record_key": source_key,
+                    "source_module_prefix": source_module_prefix if source_kind == "route" else module,
+                    "module": module,
+                    "source_locator": locator,
+                    "compartment_context": row.get("compartment_context") or "",
+                    "selection": "exact injury_context=traumatic spinal cord injury; module-evidence applicability annotation only",
+                    "source_row": row,
+                }),
+            }
+            context_meta[context_id] = {
+                "study_id": "", "study_title": "", "injury_model": row.get("injury_context") or "",
+                "timepoint_id": "", "tissue": "",
+            }
+
+        observation_id = f"MECHANISM_CONTEXT:{source_key}"
+        dependency_group = f"mSCIdblit:mechanism_sci_context:{source_kind}:{stable_id('source', module, locator)}"
+        source_locator_value = source_locator(
+            f"{artifact_label}.{('record_id' if source_kind == 'downstream' else 'expansion_id')}={source_key}",
+            f"source_locator={locator}" if locator else None,
+        )
+        observations[observation_id] = {
+            "observation_id": observation_id,
+            "context_id": context_id,
+            "source_system": "mSCIdblit",
+            "source_database": artifact_label,
+            "source_record_type": "mechanism_sci_context_annotation",
+            "source_record_key": source_key,
+            "source_version": f"sha256:{artifact_hash}",
+            "modality": "mechanism_evidence",
+            "assay": row.get("assay_or_perturbation") or "",
+            "measurement_kind": "module SCI-context applicability annotation",
+            "measured_entity_name": label,
+            "measured_entity_type": entity_type,
+            "feature_id": "",
+            "value_numeric": None,
+            "value_text": "Explicit SCI-context support recorded in the module evidence source; contextual annotation only, not a direct modality measurement",
+            "value_kind": "qualitative",
+            "unit": "",
+            "direction_vs_control": "not_reported",
+            "comparator": "",
+            "biological_replicates": "",
+            "timepoint_value": "", "timepoint_unit": "",
+            "perturbation": "" if row.get("assay_or_perturbation") == "not_reported" else row.get("assay_or_perturbation") or "",
+            "cell_type": row.get("cell_type_context") or "",
+            "sample_id": "",
+            "observation_status": "reported",
+            "evidence_role": "contextual_annotation",
+            "dependency_group": dependency_group,
+            "source_artifact_path": str(artifact_path.relative_to(ROOT)),
+            "source_artifact_sha256": artifact_hash,
+            "source_locator": source_locator_value,
+            "provenance_note": json_text({
+                "module": module,
+                "source_module_prefix": source_module_prefix if source_kind == "route" else module,
+                "source_kind": source_kind,
+                "source_record_key": source_key,
+                "source_locator": locator,
+                "injury_context": row.get("injury_context") or "",
+                "selection": "exact injury_context=traumatic spinal cord injury; module-evidence applicability annotation only",
+                "source_row": row,
+            }),
+            "_gene_symbol": None, "_entity": None,
+            "_context_meta": context_meta[context_id],
+            "_study_key": "unknown",
+            "_injury_model": row.get("injury_context") or "unknown",
+            "_timepoint_key": "unknown",
+            "_evidence_label": "mechanism_sci_context_annotation",
+        }
+
+    assessment = {
+        "downstream_rows_assessed": len(downstream_rows),
+        "downstream_sci_supported_rows_imported": len(downstream_sci),
+        "downstream_generic_or_non_sci_rows_not_imported": len(downstream_rows) - len(downstream_sci),
+        "route_rows_assessed": len(route_rows),
+        "route_sci_supported_rows_imported": len(route_sci),
+        "route_generic_or_non_sci_rows_not_imported": len(route_rows) - len(route_sci),
+        "rows_imported": len(observations),
+        "rows_imported_by_module": dict(sorted(module_counts.items())),
+        "rows_imported_by_source_kind": dict(sorted(source_kind_counts.items())),
+        "selection_rule": "Exact injury_context == 'traumatic spinal cord injury'; imported as contextual annotations only; no route or graph-edge promotion.",
+        "exclusion_reason": "Generic, non-SCI, and rows explicitly stating no SCI transfer were assessed but not copied because neutral Module 20B-24B mechanism evidence must not be duplicated in the SCI pack.",
+    }
+    return list(contexts.values()), context_meta, observations, assessment
+
+
 def link_for_observation(observation: dict[str, Any], node_index: dict[str, list[dict[str, str]]]) -> dict[str, str]:
     node, reason = exact_node(node_index, observation.get("_gene_symbol"), observation.get("_entity"))
     if node is not None:
@@ -1375,7 +1550,8 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     spatial_catalog = mscs_root / "data/spatial/spatial_catalog.sqlite"
     spatial_pilot = mscs_root / "data/spatial/pilot_all_studies/gse269377_cluster_proxy/spatial_pair_percentages_all_samples.tsv"
     downstream_evidence = bundle / "mechanism_downstream_evidence_records.tsv"
-    for path in (protein_db, phospho_view, epigenetic_db, spatial_catalog, spatial_pilot, bundle / "mechanism_nodes.tsv", downstream_evidence, curation_overrides_path):
+    literature_expansion = bundle / "mechanism_literature_expansion.tsv.gz"
+    for path in (protein_db, phospho_view, epigenetic_db, spatial_catalog, spatial_pilot, bundle / "mechanism_nodes.tsv", downstream_evidence, literature_expansion, curation_overrides_path):
         if not path.exists():
             raise FileNotFoundError(path)
 
@@ -1385,6 +1561,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     spatial_catalog_hash = sha256(spatial_catalog)
     spatial_pilot_hash = sha256(spatial_pilot)
     downstream_evidence_hash = sha256(downstream_evidence)
+    literature_expansion_hash = sha256(literature_expansion)
     curation_overrides_hash = sha256(curation_overrides_path)
     metabolomics_transcription_paths = {
         relative_path: mscs_root / relative_path
@@ -1417,6 +1594,9 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     transcriptomic_contexts, transcriptomic_meta, transcriptomic_obs, transcriptomic_assessment = transcriptomic_rows(
         spatial_catalog, spatial_catalog_hash, downstream_evidence, downstream_evidence_hash,
     )
+    mechanism_contexts, mechanism_context_meta, mechanism_context_obs, mechanism_context_assessment = mechanism_context_rows(
+        downstream_evidence, downstream_evidence_hash, literature_expansion, literature_expansion_hash,
+    )
     protein_context_ids = {item["context_id"] for item in protein_contexts}
     all_contexts = protein_contexts + [
         row for row in metabolomics_contexts if row["context_id"] not in protein_context_ids
@@ -1425,6 +1605,8 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     ] + [
         row for row in transcriptomic_contexts if row["context_id"] not in protein_context_ids
     ]
+    existing_context_ids = {item["context_id"] for item in all_contexts}
+    all_contexts += [row for row in mechanism_contexts if row["context_id"] not in existing_context_ids]
     scope = {
         "context_id": "sci_scope", "context_name": "Spinal cord injury evidence scope",
         "context_kind": "ontology_scope", "disease_context": "spinal_cord_injury",
@@ -1439,7 +1621,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     }
     all_contexts = [scope] + all_contexts
     node_index = load_nodes(bundle)
-    observations = list(protein_obs.values()) + list(metabolomics_obs.values()) + list(epi_obs.values()) + list(transcriptomic_obs.values())
+    observations = list(protein_obs.values()) + list(metabolomics_obs.values()) + list(epi_obs.values()) + list(transcriptomic_obs.values()) + list(mechanism_context_obs.values())
     curation_counts = Counter(
         item["curation_id"]
         for observation in observations
@@ -1467,9 +1649,9 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     link_by_observation = {row["observation_id"]: row for row in links}
     meta_by_modality = {
         "protein": protein_meta, "metabolomics": metabolomics_meta, "epigenomics": epi_meta,
-        "transcriptomics": transcriptomic_meta,
+        "transcriptomics": transcriptomic_meta, "mechanism_evidence": mechanism_context_meta,
     }
-    for original in list(protein_obs.values()) + list(metabolomics_obs.values()) + list(epi_obs.values()) + list(transcriptomic_obs.values()):
+    for original in list(protein_obs.values()) + list(metabolomics_obs.values()) + list(epi_obs.values()) + list(transcriptomic_obs.values()) + list(mechanism_context_obs.values()):
         row = dict(original)
         context = context_by_id[row["context_id"]]
         link = link_by_observation[row["observation_id"]]
@@ -1515,6 +1697,17 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             ),
             "transcriptomic_gene_level_matrix_rows_imported": 0,
             "transcriptomic_exclusion_reason": "Healthy/mutant FUS GSE269377 lacks explicit SCI; the human GSE305911 organoid record is related to the SCI study but is not injured spinal-cord tissue and is excluded from this injured-spinal-cord overlay.",
+            "mechanism_context_rows_imported": mechanism_context_assessment["rows_imported"],
+            "mechanism_downstream_rows_assessed": mechanism_context_assessment["downstream_rows_assessed"],
+            "mechanism_downstream_sci_supported_rows_imported": mechanism_context_assessment["downstream_sci_supported_rows_imported"],
+            "mechanism_downstream_generic_or_non_sci_rows_not_imported": mechanism_context_assessment["downstream_generic_or_non_sci_rows_not_imported"],
+            "mechanism_route_rows_assessed": mechanism_context_assessment["route_rows_assessed"],
+            "mechanism_route_sci_supported_rows_imported": mechanism_context_assessment["route_sci_supported_rows_imported"],
+            "mechanism_route_generic_or_non_sci_rows_not_imported": mechanism_context_assessment["route_generic_or_non_sci_rows_not_imported"],
+            "mechanism_context_rows_imported_by_module": mechanism_context_assessment["rows_imported_by_module"],
+            "mechanism_context_rows_imported_by_source_kind": mechanism_context_assessment["rows_imported_by_source_kind"],
+            "mechanism_context_selection_rule": mechanism_context_assessment["selection_rule"],
+            "mechanism_context_exclusion_reason": mechanism_context_assessment["exclusion_reason"],
             "imaging_observation_rows_imported": 0,
             "perturbation_observation_rows_imported": 0,
             "functional_observation_rows_imported": 0,
@@ -1528,6 +1721,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             {"path": "mSCS/data/spatial/spatial_catalog.sqlite", "sha256": spatial_catalog_hash, "size_bytes": spatial_catalog.stat().st_size},
             {"path": "mSCS/data/spatial/pilot_all_studies/gse269377_cluster_proxy/spatial_pair_percentages_all_samples.tsv", "sha256": spatial_pilot_hash, "size_bytes": spatial_pilot.stat().st_size},
             {"path": str(downstream_evidence.relative_to(ROOT)), "sha256": downstream_evidence_hash, "size_bytes": downstream_evidence.stat().st_size},
+            {"path": str(literature_expansion.relative_to(ROOT)), "sha256": literature_expansion_hash, "size_bytes": literature_expansion.stat().st_size},
             {"path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv", "sha256": curation_overrides_hash, "size_bytes": curation_overrides_path.stat().st_size},
             *[
                 {"path": f"mSCS/{relative_path}", "sha256": digest, "size_bytes": metabolomics_transcription_paths[relative_path].stat().st_size}
@@ -1566,6 +1760,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             "Missing values and source ambiguity remain unreported or unknown; they are not converted to negative protein evidence.",
             "Transcriptomic context annotations are imported from explicit SCI-related spatial-catalog records, with capture-level or reported timepoint context retained where available; gene/spot-level matrix values are reserved for a later spatial release.",
             "The two external transcriptomic observations are the exact SCI qRT-PCR records M21B-DOWNSTREAM-EVID:004631 and M21B-DOWNSTREAM-EVID:004632 from the pinned mechanism release. Their source records do not provide an exact stable mechanism-node identifier, so both remain staged and do not establish upstream causality.",
+            "Module evidence applicability is contained as mechanism_evidence contextual annotations for the 7 downstream and 58 literature-expansion records whose source field injury_context is exactly 'traumatic spinal cord injury'. These are not direct modality measurements and remain staged at module 21B; generic/non-SCI mechanism evidence was assessed but not copied.",
         ],
     }
     (pack / "audit_report.json").write_text(json.dumps(audit, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -1596,6 +1791,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             {"modality": "protein", "status": "populated", "selection": "mSCS phosphorylation_support_observations.tsv plus direct source-extracted non-phosphorylated protein observations from flow_protein.sqlite", "observation_file": "observations.tsv"},
             {"modality": "metabolomics", "status": "populated", "selection": "Explicit SCI metabolite/lipid-mediator assay records from mSCS flow_protein.sqlite, with exact transcription artifacts retained in provenance", "observation_file": "observations.tsv"},
             {"modality": "transcriptomics", "status": "populated", "selection": "Explicit SCI-context external qRT-PCR observations plus SCI-related spatial-transcriptomic dataset context annotations; no gene-level matrix values are imported.", "observation_file": "observations.tsv"},
+            {"modality": "mechanism_evidence", "status": "populated", "selection": "Exact pinned Module 20B-24B evidence rows with injury_context=traumatic spinal cord injury, retained as contextual annotations only; no routes or graph edges are promoted.", "observation_file": "observations.tsv"},
             {"modality": "spatial", "status": "context_annotations_only", "reason": "Spatial transcriptomic datasets are represented as transcriptomic contextual annotations; spot/gene-level spatial evidence remains reserved for a later spatial release."},
             {"modality": "epigenomics", "status": "populated", "selection": "mSCS epigenetic observations, all explicit assay contexts, and exact binary feature-status records", "observation_file": "observations.tsv"},
             {"modality": "imaging", "status": "represented_as_protein_assay_context", "reason": "Immunofluorescence observations remain protein observations; no separate imaging claim is created."},
@@ -1614,7 +1810,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             "context_profiles": len(all_contexts), "observations": len(observations),
             "mechanism_links": len(links), "included_mechanism_links": sum(row["release_status"] == "included" for row in links),
         },
-        "provenance_note": "Generated by scripts/build_sci_context_pack.py from exact mSCS source artifacts, the pinned mechanism-release downstream evidence table, and explicitly applied context curation overrides. Transcriptomic catalog records are contextual annotations only; gene/spot-level matrix values are not imported. Generic Module 20B-24B graph files were read for stable identifier resolution only and were not modified or duplicated.",
+        "provenance_note": "Generated by scripts/build_sci_context_pack.py from exact mSCS source artifacts, the pinned mechanism-release downstream evidence and literature-expansion tables, and explicitly applied context curation overrides. Transcriptomic catalog records and mechanism-evidence applicability records are contextual annotations only; gene/spot-level matrix values are not imported, and no mechanism routes or graph edges are promoted. Generic Module 20B-24B graph files were read for stable identifier resolution only and were not modified or duplicated.",
     }
     (pack / "context_manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return {"manifest": manifest, "audit": audit}

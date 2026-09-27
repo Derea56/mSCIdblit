@@ -250,7 +250,7 @@
     },
     "evidence_role": {
       "context_matched_external_observation": 2,
-      "contextual_annotation": 19,
+      "contextual_annotation": 84,
       "dataset_observation": 763
     },
     "injury_model": {
@@ -498,7 +498,7 @@
       "traumatic SCI": 3,
       "traumatic contusion SCI in TNFR1-null, TNFR2-null, and wild-type mice": 1,
       "traumatic mouse spinal cord injury; exact injury geometry requires full-text extraction": 1,
-      "traumatic spinal cord injury": 2,
+      "traumatic spinal cord injury": 67,
       "traumatic spinal cord injury in adult WT, IL-1alpha-knockout, and IL-1beta-knockout mice; exact injury method requires extraction": 1,
       "traumatic spinal cord injury in male mice": 3,
       "traumatic spinal cord injury; exact impact model parameters pending full-text extraction": 2,
@@ -509,17 +509,18 @@
     },
     "linked_status": {
       "linked": 383,
-      "unlinked": 401
+      "unlinked": 466
     },
     "modality": {
       "epigenomics": 19,
+      "mechanism_evidence": 65,
       "metabolomics": 5,
       "protein": 739,
       "transcriptomics": 21
     },
     "observation_status": {
       "observed": 2,
-      "reported": 111,
+      "reported": 176,
       "transcribed": 655,
       "unknown": 16
     },
@@ -663,6 +664,9 @@
       "Sham; Rykfl/fl GFAPcreERT2; C5 dorsal-column lesion study": 1,
       "Sham; spinal cord injury experiment; 2-hour endpoint": 1,
       "T8 dorsal-column transection SCI and control mice": 1,
+      "TGF-alpha exposure or expression, astrocyte morphology/matrix assays and neurite-support readouts": 1,
+      "TGF-alpha infusion or AAV expression, primary astrocyte/progenitor assays, EGFR expression and BrdU/proliferation readouts": 1,
+      "TGF-alpha infusion or AAV expression, primary-cell migration/wound-closure assays and lesion-border distribution": 1,
       "Vehicle": 11,
       "WT SCI versus uninjured context and genotype/transfer arms": 2,
       "WT and knockout SCI groups with NET-inhibitor and bone-marrow-transplant interventions": 3,
@@ -736,7 +740,7 @@
       "thrombin; PAR1-pathway inhibition": 1,
       "uninjured": 1,
       "uninjured CNS reference cell extracts": 4,
-      "unknown": 19,
+      "unknown": 81,
       "vascular penumbra and LEA-positive spinal-cord microvessels/endothelial cells": 3,
       "western-blot time course: sham, 24 h, 48 h, 5 d, and 8 d post-injury": 1,
       "wild-type SCI": 2,
@@ -1040,7 +1044,8 @@
       "STUDY_TABULAE_MULTIOME": 1,
       "STUDY_WU_2021": 3,
       "STUDY_ZAMBONI_MULTIOME_2026": 1,
-      "STUDY_ZAMBONI_SOX9_2026": 1
+      "STUDY_ZAMBONI_SOX9_2026": 1,
+      "unknown": 65
     },
     "timepoint": {
       "-1.0 hour": 1,
@@ -1122,7 +1127,7 @@
       "8 hours": 1,
       "8 week": 2,
       "84 day": 2,
-      "unknown": 7
+      "unknown": 72
     },
     "treatment": {
       "810-nm photobiomodulation and pathway-inhibitor arms": 2,
@@ -1355,7 +1360,7 @@
       "systemic PTEN antagonistic peptide (PAP) versus control TAT peptide (CTP)": 4,
       "systemic SCH58261 antagonist and CGS21680 agonist arms": 3,
       "tryptanthrin treatment versus DMSO vehicle after SCI": 3,
-      "unknown": 38,
+      "unknown": 103,
       "untreated SCI time course with complementary astrocyte culture/LPS experiments": 3,
       "untreated contusion versus laminectomy-only controls; neuropathic-pain phenotype study": 5,
       "untreated temporal injury study with uninjured/sham comparison": 5,
@@ -1370,7 +1375,7 @@
     "unresolved_mapping_reason": {
       "ambiguous canonical entity label match (2 stable nodes); staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 29,
       "ambiguous gene_symbol match (2 stable nodes); staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 1,
-      "no exact stable mechanism-node match; staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 371
+      "no exact stable mechanism-node match; staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 436
     }
   },
   "mechanism_link_counts": {
@@ -1379,7 +1384,7 @@
     "numeric_modality_weights_created": 0,
     "partial_routes_promoted": 0,
     "route_confidence_created": 0,
-    "staging_unresolved": 401
+    "staging_unresolved": 466
   },
   "metabolomics_assessment": {
     "candidate_rows_assessed": 10,
@@ -1507,7 +1512,8 @@
     "Downstream protein and phosphoprotein measurements are linked only to the measured state/node when an exact stable node match exists; no upstream ligand/receptor causality is inferred.",
     "Missing values and source ambiguity remain unreported or unknown; they are not converted to negative protein evidence.",
     "Transcriptomic context annotations are imported from explicit SCI-related spatial-catalog records, with capture-level or reported timepoint context retained where available; gene/spot-level matrix values are reserved for a later spatial release.",
-    "The two external transcriptomic observations are the exact SCI qRT-PCR records M21B-DOWNSTREAM-EVID:004631 and M21B-DOWNSTREAM-EVID:004632 from the pinned mechanism release. Their source records do not provide an exact stable mechanism-node identifier, so both remain staged and do not establish upstream causality."
+    "The two external transcriptomic observations are the exact SCI qRT-PCR records M21B-DOWNSTREAM-EVID:004631 and M21B-DOWNSTREAM-EVID:004632 from the pinned mechanism release. Their source records do not provide an exact stable mechanism-node identifier, so both remain staged and do not establish upstream causality.",
+    "Module evidence applicability is contained as mechanism_evidence contextual annotations for the 7 downstream and 58 literature-expansion records whose source field injury_context is exactly 'traumatic spinal cord injury'. These are not direct modality measurements and remain staged at module 21B; generic/non-SCI mechanism evidence was assessed but not copied."
   ],
   "scope_rule": "Only source records with explicit spinal-cord, spinal-cord-injury, or injury-model context were selected; no generic mechanism evidence was copied.",
   "selected_evidence": {
@@ -1516,6 +1522,22 @@
     "epigenetic_observations_imported": 19,
     "functional_observation_rows_imported": 0,
     "imaging_observation_rows_imported": 0,
+    "mechanism_context_exclusion_reason": "Generic, non-SCI, and rows explicitly stating no SCI transfer were assessed but not copied because neutral Module 20B-24B mechanism evidence must not be duplicated in the SCI pack.",
+    "mechanism_context_rows_imported": 65,
+    "mechanism_context_rows_imported_by_module": {
+      "21B": 65
+    },
+    "mechanism_context_rows_imported_by_source_kind": {
+      "downstream": 7,
+      "route": 58
+    },
+    "mechanism_context_selection_rule": "Exact injury_context == 'traumatic spinal cord injury'; imported as contextual annotations only; no route or graph-edge promotion.",
+    "mechanism_downstream_generic_or_non_sci_rows_not_imported": 4799,
+    "mechanism_downstream_rows_assessed": 4806,
+    "mechanism_downstream_sci_supported_rows_imported": 7,
+    "mechanism_route_generic_or_non_sci_rows_not_imported": 31022,
+    "mechanism_route_rows_assessed": 31080,
+    "mechanism_route_sci_supported_rows_imported": 58,
     "metabolomics_candidate_rows_assessed": 10,
     "metabolomics_observations_excluded": 5,
     "metabolomics_observations_imported": 5,
@@ -1570,6 +1592,11 @@
       "path": "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627/mechanism_downstream_evidence_records.tsv",
       "sha256": "ac3a0bbc86747ce3f2f05a747bdc3ac194f28c5700e51b68d7527203a6e7680f",
       "size_bytes": 8837938
+    },
+    {
+      "path": "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627/mechanism_literature_expansion.tsv.gz",
+      "sha256": "7ab48537f89ff4a5fa9e51a7e04d102fa3df4ee8aed461a88cd64d19875441a6",
+      "size_bytes": 7202776
     },
     {
       "path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv",
