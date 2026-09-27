@@ -30,10 +30,10 @@ def test_sci_context_manifest_pins_neutral_mechanism_release():
     bundle_path = PACK / manifest["mechanism_dependency"]["bundle_metadata"]
     assert bundle_path.resolve().is_file()
     assert manifest["counts"]["context_profiles"] > 1
-    assert manifest["context_pack_version"] == "0.5.27"
-    assert manifest["counts"]["context_profiles"] == 659
-    assert manifest["counts"]["observations"] == 784
-    assert manifest["counts"]["mechanism_links"] == 784
+    assert manifest["context_pack_version"] == "0.5.28"
+    assert manifest["counts"]["context_profiles"] == 678
+    assert manifest["counts"]["observations"] == 849
+    assert manifest["counts"]["mechanism_links"] == 849
     assert 0 < manifest["counts"]["included_mechanism_links"] < manifest["counts"]["mechanism_links"]
 
 
@@ -80,8 +80,9 @@ def test_sci_context_profiles_preserve_scope_and_reported_study_fields():
     assert rows[0]["study_id"] == ""
     assert rows[0]["tissue"] == ""
     for row in rows[1:]:
-        assert row["study_id"]
-        assert row["tissue"]
+        if row["context_kind"] != "evidence_context":
+            assert row["study_id"]
+            assert row["tissue"]
         assert row["disease_context"] == "spinal_cord_injury"
         assert row["anatomical_context"] == "spinal_cord"
 
@@ -370,17 +371,17 @@ def test_sci_context_pack_validator_accepts_populated_release():
     summary = validate_pack(PACK)
 
     assert summary["pack_id"] == "spinal_cord_injury"
-    assert summary["counts"]["observations"] == 784
-    assert summary["counts"]["mechanism_links"] == 784
+    assert summary["counts"]["observations"] == 849
+    assert summary["counts"]["mechanism_links"] == 849
 
 
 def test_sci_observations_and_links_preserve_evidence_boundaries():
     observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
     links = list(csv.DictReader((PACK / "mechanism_links.tsv").open(), delimiter="\t"))
-    assert Counter(row["modality"] for row in observations) == {"protein": 739, "metabolomics": 5, "epigenomics": 19, "transcriptomics": 21}
+    assert Counter(row["modality"] for row in observations) == {"protein": 739, "metabolomics": 5, "epigenomics": 19, "transcriptomics": 21, "mechanism_evidence": 65}
     assert Counter(row["evidence_role"] for row in observations) == {
         "dataset_observation": 763,
-        "contextual_annotation": 19,
+        "contextual_annotation": 84,
         "context_matched_external_observation": 2,
     }
     assert all(row["dependency_group"] for row in observations)
@@ -424,6 +425,41 @@ def test_sci_transcriptomic_context_preserves_timepoints_roles_and_exclusions():
     assert selected["transcriptomic_context_annotation_rows_imported"] == 19
     assert selected["transcriptomic_external_observation_rows_imported"] == 2
     assert selected["transcriptomic_gene_level_matrix_rows_imported"] == 0
+
+
+def test_sci_module_evidence_context_is_contained_without_route_promotion():
+    observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
+    contexts = list(csv.DictReader((PACK / "contexts.tsv").open(), delimiter="\t"))
+    links = list(csv.DictReader((PACK / "mechanism_links.tsv").open(), delimiter="\t"))
+    mechanism = [row for row in observations if row["modality"] == "mechanism_evidence"]
+    mechanism_contexts = [row for row in contexts if row["context_kind"] == "evidence_context"]
+    mechanism_links = {row["observation_id"]: row for row in links if row["observation_id"].startswith("MECHANISM_CONTEXT:")}
+
+    assert len(mechanism) == 65
+    assert len(mechanism_contexts) == 19
+    assert {row["evidence_role"] for row in mechanism} == {"contextual_annotation"}
+    assert {row["observation_status"] for row in mechanism} == {"reported"}
+    assert {row["value_numeric"] for row in mechanism} == {""}
+    assert all(row["source_record_type"] == "mechanism_sci_context_annotation" for row in mechanism)
+    assert sum(row["source_record_key"].startswith("M21B-DOWNSTREAM-EVID:") for row in mechanism) == 7
+    assert sum(row["source_record_key"].startswith("M21B-LITEXP-") for row in mechanism) == 58
+    assert all("injury_context=traumatic spinal cord injury" in row["provenance_note"] for row in mechanism)
+    assert all(row["release_status"] == "staging" for row in mechanism_links.values())
+    assert all(row["mechanism_target_kind"] == "module" for row in mechanism_links.values())
+    assert {row["mechanism_target_key"] for row in mechanism_links.values()} == {"21B"}
+    assert all(row["mechanism_route_id"] == "" for row in mechanism_links.values())
+    assert all(row["context_id"] in {context["context_id"] for context in mechanism_contexts} for row in mechanism)
+    assert all(context["injury_model"] == "traumatic spinal cord injury" for context in mechanism_contexts)
+
+    audit = json.loads((PACK / "audit_report.json").read_text())
+    selected = audit["selected_evidence"]
+    assert selected["mechanism_downstream_rows_assessed"] == 4806
+    assert selected["mechanism_downstream_sci_supported_rows_imported"] == 7
+    assert selected["mechanism_route_rows_assessed"] == 31080
+    assert selected["mechanism_route_sci_supported_rows_imported"] == 58
+    assert selected["mechanism_context_rows_imported"] == 65
+    assert selected["mechanism_downstream_generic_or_non_sci_rows_not_imported"] == 4799
+    assert selected["mechanism_route_generic_or_non_sci_rows_not_imported"] == 31022
 
 
 def test_sci_metabolomics_preserves_explicit_assay_context_and_exclusions():
