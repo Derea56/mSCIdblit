@@ -30,10 +30,10 @@ def test_sci_context_manifest_pins_neutral_mechanism_release():
     bundle_path = PACK / manifest["mechanism_dependency"]["bundle_metadata"]
     assert bundle_path.resolve().is_file()
     assert manifest["counts"]["context_profiles"] > 1
-    assert manifest["context_pack_version"] == "0.5.26"
-    assert manifest["counts"]["context_profiles"] == 638
-    assert manifest["counts"]["observations"] == 763
-    assert manifest["counts"]["mechanism_links"] == 763
+    assert manifest["context_pack_version"] == "0.5.27"
+    assert manifest["counts"]["context_profiles"] == 659
+    assert manifest["counts"]["observations"] == 784
+    assert manifest["counts"]["mechanism_links"] == 784
     assert 0 < manifest["counts"]["included_mechanism_links"] < manifest["counts"]["mechanism_links"]
 
 
@@ -370,20 +370,60 @@ def test_sci_context_pack_validator_accepts_populated_release():
     summary = validate_pack(PACK)
 
     assert summary["pack_id"] == "spinal_cord_injury"
-    assert summary["counts"]["observations"] == 763
-    assert summary["counts"]["mechanism_links"] == 763
+    assert summary["counts"]["observations"] == 784
+    assert summary["counts"]["mechanism_links"] == 784
 
 
 def test_sci_observations_and_links_preserve_evidence_boundaries():
     observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
     links = list(csv.DictReader((PACK / "mechanism_links.tsv").open(), delimiter="\t"))
-    assert Counter(row["modality"] for row in observations) == {"protein": 739, "metabolomics": 5, "epigenomics": 19}
-    assert Counter(row["evidence_role"] for row in observations) == {"dataset_observation": 763}
+    assert Counter(row["modality"] for row in observations) == {"protein": 739, "metabolomics": 5, "epigenomics": 19, "transcriptomics": 21}
+    assert Counter(row["evidence_role"] for row in observations) == {
+        "dataset_observation": 763,
+        "contextual_annotation": 19,
+        "context_matched_external_observation": 2,
+    }
     assert all(row["dependency_group"] for row in observations)
     assert all(row["mechanism_release_id"] == "module20_24_mechanism_graph:2026-09-25-literature-expansion-627" for row in links)
     assert all(row["mechanism_target_kind"] == "node" for row in links if row["release_status"] == "included")
     assert all(row["mechanism_target_key"] == "21B" for row in links if row["release_status"] == "staging")
     assert all(row["mechanism_route_id"] == "" for row in links)
+
+
+def test_sci_transcriptomic_context_preserves_timepoints_roles_and_exclusions():
+    observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
+    contexts = {row["context_id"]: row for row in csv.DictReader((PACK / "contexts.tsv").open(), delimiter="\t")}
+    transcriptomics = [row for row in observations if row["modality"] == "transcriptomics"]
+    annotations = [row for row in transcriptomics if row["evidence_role"] == "contextual_annotation"]
+    external = [row for row in transcriptomics if row["evidence_role"] == "context_matched_external_observation"]
+
+    assert len(annotations) == 19
+    assert len(external) == 2
+    assert {row["source_record_key"] for row in external} == {
+        "M21B-DOWNSTREAM-EVID:004631",
+        "M21B-DOWNSTREAM-EVID:004632",
+    }
+    assert all(row["observation_status"] == "reported" for row in transcriptomics)
+    assert all(row["release_status"] == "staging" for row in csv.DictReader((PACK / "mechanism_links.tsv").open(), delimiter="\t") if row["observation_id"] in {item["observation_id"] for item in transcriptomics})
+    assert {contexts[row["context_id"]]["injury_model"] for row in annotations} >= {
+        "right lateral hemisection", "acute spinal cord injury", "mouse spinal cord injury",
+    }
+    assert {row["timepoint_unit"] for row in annotations if row["timepoint_unit"]} >= {
+        "dpi", "hpi", "weeks_after_transplantation",
+    }
+    assert all(row["value_numeric"] == "" for row in annotations)
+    assert all(row["source_artifact_path"] == "mSCS/data/spatial/spatial_catalog.sqlite" for row in annotations)
+    assert all(row["source_artifact_path"].endswith("mechanism_downstream_evidence_records.tsv") for row in external)
+
+    audit = json.loads((PACK / "audit_report.json").read_text())
+    selected = audit["selected_evidence"]
+    assert selected["transcriptomic_catalog_rows_assessed"] == 11
+    assert selected["transcriptomic_catalog_datasets_imported"] == 9
+    assert selected["transcriptomic_catalog_datasets_excluded"] == 2
+    assert selected["transcriptomic_catalog_excluded_dataset_ids"] == ["MSCIDATA000020", "MSCIDATA000180"]
+    assert selected["transcriptomic_context_annotation_rows_imported"] == 19
+    assert selected["transcriptomic_external_observation_rows_imported"] == 2
+    assert selected["transcriptomic_gene_level_matrix_rows_imported"] == 0
 
 
 def test_sci_metabolomics_preserves_explicit_assay_context_and_exclusions():

@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Build the populated spinal-cord-injury context evidence overlay.
 
-The builder reads the current mSCS protein-state support view and the curated
-mSCS epigenetic SQLite store.  It writes only the file-based context pack; it
-does not modify mSCS or the neutral Module 20B-24B mechanism bundle.
+The builder reads the current mSCS protein-state support view, curated mSCS
+epigenetic SQLite store, mSCS spatial-transcriptomic catalog, and two explicit
+SCI qRT-PCR records from the pinned mechanism-release evidence table. It writes
+only the file-based context pack; it does not modify mSCS or the neutral Module
+20B-24B mechanism bundle.
 
 Observations retain source observation identifiers, source artifact hashes,
 study/sample context, and dependency groups.  Exact mechanism-node matches
@@ -31,8 +33,24 @@ DEFAULT_PACK = ROOT / "context_packs" / "spinal_cord_injury"
 DEFAULT_BUNDLE = ROOT / "data" / "processed" / "mechanism_graph_module20_24_v2026_09_25_literature_expansion627"
 RELEASE_ID = "module20_24_mechanism_graph:2026-09-25-literature-expansion-627"
 RELEASE_TAG = "mSCIdblit-v1.9.386"
-CONTEXT_PACK_VERSION = "0.5.26"
+CONTEXT_PACK_VERSION = "0.5.27"
 DEFAULT_CURATION_OVERRIDES = DEFAULT_PACK / "protein_context_curation_overrides.tsv"
+
+SCI_SPATIAL_TRANSCRIPTOMIC_DATASETS = {
+    "MSCIDATA000008",  # GSE195783: explicit T10 hemisection SCI time course
+    "MSCIDATA000011",  # GSE234774: explicit spinal-cord-injury atlas
+    "MSCIDATA000016",  # GSE268779: explicit injury-site spatial atlas
+    "MSCIDATA000019",  # GSE305911 mouse SCI organoid-transplant tissue
+    "MSCIDATA000027",  # GSE298545: explicit acute SCI dataset
+    "MSCIDATA000029",  # GSE184369: paralysis/SCI EES rehabilitation dataset
+    "MSCIDATA000038",  # GSE190910: explicit SCI/sham/solu-medrol sections
+    "MSCIDATA000043",  # GSE256397: explicit mouse SCI time/space atlas
+    "MSCIDATA000199",  # GSE312910: lesion-remote spinal-cord repair context
+}
+EXTERNAL_TRANSCRIPTOMIC_RECORDS = {
+    "M21B-DOWNSTREAM-EVID:004631",
+    "M21B-DOWNSTREAM-EVID:004632",
+}
 
 METABOLOMICS_TRANSCRIPTION_ARTIFACTS = {
     "FLOW_SCI_222__OBS222_6W_ATP_MS": "data/flow_protein/transcriptions/batch_2026-08-20_study222_atp_ms_not_reported.tsv",
@@ -985,6 +1003,284 @@ def epigenetic_rows(db_path: Path, artifact_hash: str) -> tuple[list[dict[str, s
     return list(contexts.values()), context_meta, observations
 
 
+def transcriptomic_timepoints(dataset_id: str, curator_notes: str, capture: dict[str, Any] | None) -> list[tuple[float, str]]:
+    """Return only timepoints explicitly retained by the spatial catalog."""
+    if capture and capture.get("timepoint"):
+        match = re.fullmatch(r"\s*(\d+(?:\.\d+)?)\s*(dpi|hpi)\s*", str(capture["timepoint"]))
+        if match:
+            return [(float(match.group(1)), match.group(2))]
+    explicit = {
+        "MSCIDATA000043": [(0.0, "hpi"), (3.0, "hpi"), (24.0, "hpi"), (72.0, "hpi")],
+        "MSCIDATA000027": [(3.0, "dpi")],
+        "MSCIDATA000019": [(7.0, "weeks_after_transplantation")],
+    }
+    return explicit.get(dataset_id, [])
+
+
+def transcriptomic_context_fields(dataset_id: str, dataset: dict[str, Any], protocols: list[dict[str, Any]]) -> dict[str, str]:
+    """Map catalog text to context fields without treating catalog annotations as measurements."""
+    metadata = json.loads(dataset["dataset_metadata_json"] or "{}")
+    notes = metadata.get("curator_notes") or ""
+    protocol_text = " | ".join(
+        str(item.get("dissociation_method_reported") or item.get("notes") or "")
+        for item in protocols
+        if item.get("dissociation_method_reported") or item.get("notes")
+    )
+    fields = {
+        "species": dataset.get("organism") or "",
+        "injury_model": "",
+        "injury_level": "",
+        "injury_severity": "",
+        "sex": "",
+        "perturbation": "",
+        "treatment": "",
+        "experimental_condition": notes,
+        "study_perturbation_status": "",
+        "sample_scope": notes,
+        "sample_count": "",
+        "cell_type": "",
+        "tissue": dataset.get("tissue") or "",
+    }
+    if dataset_id == "MSCIDATA000008":
+        fields.update({"injury_model": "right lateral hemisection", "injury_level": "T10"})
+    elif dataset_id == "MSCIDATA000011":
+        fields.update({
+            "injury_model": "spinal cord injury",
+            "injury_level": "mid-thoracic (GEO label); lumbar (protocol text)",
+            "sample_count": "72",
+            "experimental_condition": "lesion-epicenter sections; serial sampling through the dorsoventral axis",
+        })
+    elif dataset_id == "MSCIDATA000016":
+        fields.update({"injury_model": "spinal cord injury", "sample_count": "7"})
+    elif dataset_id == "MSCIDATA000019":
+        fields.update({
+            "injury_model": "complete spinal cord transection",
+            "injury_level": "T9",
+            "sex": "female",
+            "treatment": "enTsOrg or sOrg transplantation",
+            "sample_count": "2",
+            "experimental_condition": "mouse spinal cord spatial transcriptomics at 7 weeks after enTsOrg or sOrg transplantation",
+        })
+    elif dataset_id == "MSCIDATA000027":
+        fields.update({"injury_model": "acute spinal cord injury", "sample_count": "4"})
+    elif dataset_id == "MSCIDATA000029":
+        fields.update({
+            "injury_model": "paralysis/spinal cord injury rehabilitation context",
+            "treatment": "EES rehabilitation",
+            "sample_count": "16",
+            "experimental_condition": "SCI->EES::walking labels are present in the deposited spot-level metadata",
+        })
+    elif dataset_id == "MSCIDATA000038":
+        fields.update({
+            "injury_model": "spinal cord injury",
+            "experimental_condition": "SCI/sham/solu-medrol spinal cord sections",
+            "study_perturbation_status": "SCI/sham/solu-medrol",
+        })
+    elif dataset_id == "MSCIDATA000043":
+        fields.update({
+            "injury_model": "mouse spinal cord injury",
+            "experimental_condition": "rostral/caudal distances; 0, 3, 24, and 72 hpi",
+        })
+    elif dataset_id == "MSCIDATA000199":
+        fields.update({
+            "injury_model": "lesion-remote spinal-cord repair context",
+            "cell_type": "lesion-remote astrocytes",
+            "sample_count": "16",
+        })
+    fields["sample_scope"] = fields["sample_scope"] or protocol_text
+    return fields
+
+
+def spatial_transcriptomic_rows(spatial_catalog_path: Path, artifact_hash: str) -> tuple[list[dict[str, str]], dict[str, dict[str, Any]], dict[str, dict[str, Any]], dict[str, int]]:
+    """Import SCI-specific spatial-transcriptomic context, not gene/spot measurements."""
+    contexts: dict[str, dict[str, str]] = {}
+    context_meta: dict[str, dict[str, Any]] = {}
+    observations: dict[str, dict[str, Any]] = {}
+    assessed = {"catalog_rows_assessed": 0, "datasets_imported": 0, "datasets_excluded": 0, "excluded_dataset_ids": []}
+    with sqlite3.connect(spatial_catalog_path) as db:
+        db.row_factory = sqlite3.Row
+        datasets = [dict(row) for row in db.execute(
+            "SELECT * FROM datasets WHERE assay_family = 'spatial_transcriptomics' ORDER BY dataset_id"
+        )]
+        for dataset in datasets:
+            assessed["catalog_rows_assessed"] += 1
+            dataset_id = dataset["dataset_id"]
+            if dataset_id not in SCI_SPATIAL_TRANSCRIPTOMIC_DATASETS:
+                assessed["datasets_excluded"] += 1
+                assessed["excluded_dataset_ids"].append(dataset_id)
+                continue
+            assessed["datasets_imported"] += 1
+            metadata = json.loads(dataset["dataset_metadata_json"] or "{}")
+            citation = json.loads(dataset["citation_metadata_json"] or "[]")
+            protocols = json.loads(dataset["protocol_metadata_json"] or "[]")
+            fields = transcriptomic_context_fields(dataset_id, dataset, protocols)
+            captures = [dict(row) for row in db.execute(
+                "SELECT * FROM captures WHERE dataset_id = ? ORDER BY capture_id", (dataset_id,)
+            )]
+            context_specs: list[dict[str, Any]] = []
+            if captures:
+                for capture in captures:
+                    context_specs.append({
+                        "label": f"capture {capture['capture_id']}",
+                        "capture": capture,
+                        "timepoints": transcriptomic_timepoints(dataset_id, metadata.get("curator_notes") or "", capture),
+                        "sample_id": f"{dataset_id}:{capture['capture_id']}",
+                    })
+            else:
+                timepoints = transcriptomic_timepoints(dataset_id, metadata.get("curator_notes") or "", None)
+                context_specs.append({
+                    "label": "dataset context",
+                    "capture": None,
+                    "timepoints": timepoints or [(None, "")],
+                    "sample_id": "",
+                })
+            for spec in context_specs:
+                for timepoint_value, timepoint_unit in spec["timepoints"]:
+                    timepoint_suffix = f":{display_number(timepoint_value)}{timepoint_unit}" if timepoint_value is not None else ""
+                    context_id = stable_id("sci:transcriptomics", dataset_id, spec["sample_id"], timepoint_value, timepoint_unit)
+                    if context_id not in contexts:
+                        context_status = "defined"
+                        context_name = f"{dataset['accession']} {spec['label']} transcriptomic context"
+                        contexts[context_id] = {
+                            "context_id": context_id, "context_name": context_name,
+                            "context_kind": "sample_context" if spec["sample_id"] else "study_context",
+                            "disease_context": "spinal_cord_injury", "anatomical_context": "spinal_cord",
+                            "species": fields["species"], "injury_model": fields["injury_model"],
+                            "injury_level": fields["injury_level"], "injury_severity": fields["injury_severity"],
+                            "sex": fields["sex"], "timepoint_value": display_timepoint(timepoint_value),
+                            "timepoint_unit": timepoint_unit, "perturbation": fields["perturbation"],
+                            "treatment": fields["treatment"], "experimental_condition": fields["experimental_condition"],
+                            "study_perturbation_status": fields["study_perturbation_status"], "injury_distance": "",
+                            "injury_distance_unit": "", "sample_scope": fields["sample_scope"],
+                            "sample_count": fields["sample_count"],
+                            "cell_type": fields["cell_type"], "sample_id": spec["sample_id"],
+                            "study_id": metadata.get("study_id") or "", "tissue": fields["tissue"],
+                            "context_status": context_status,
+                            "provenance_note": source_locator(
+                                "mSCS/data/spatial/spatial_catalog.sqlite",
+                                f"datasets.dataset_id={dataset_id}", f"datasets.accession={dataset['accession']}",
+                                f"datasets.source_row_hash={dataset.get('source_row_hash')}",
+                                f"datasets.source_manifest={dataset.get('source_manifest')}",
+                                f"captures.capture_id={spec['capture']['capture_id']}" if spec["capture"] else None,
+                                f"captures.source_row_hash={spec['capture'].get('source_row_hash')}" if spec["capture"] else None,
+                            ),
+                        }
+                        context_meta[context_id] = {
+                            "study_id": metadata.get("study_id") or "", "study_title": dataset.get("title"),
+                            "injury_model": fields["injury_model"], "timepoint_id": spec["capture"].get("capture_id") if spec["capture"] else "",
+                            "timepoint_value": timepoint_value, "timepoint_unit": timepoint_unit,
+                            "sample_id": spec["sample_id"], "tissue": fields["tissue"],
+                        }
+                    observation_id = f"TRANSCRIPTOMIC_CONTEXT:{dataset_id}:{spec['sample_id'] or 'dataset'}{timepoint_suffix}"
+                    capture_locator = (
+                        f"captures.capture_id={spec['capture']['capture_id']};captures.timepoint={spec['capture']['timepoint']};captures.replicate={spec['capture']['replicate']}"
+                        if spec["capture"] else None
+                    )
+                    source_loc = source_locator(
+                        f"spatial_catalog.datasets.dataset_id={dataset_id}",
+                        f"spatial_catalog.datasets.accession={dataset['accession']}",
+                        capture_locator,
+                        f"source_manifest={dataset.get('source_manifest')}",
+                    )
+                    observations[observation_id] = {
+                        "observation_id": observation_id, "context_id": context_id,
+                        "source_system": "mSCS", "source_database": "spatial_catalog",
+                        "source_record_type": "spatial_transcriptomic_dataset_context",
+                        "source_record_key": f"{dataset_id}:{spec['sample_id'] or 'dataset'}{timepoint_suffix}",
+                        "source_version": f"sha256:{artifact_hash}", "modality": "transcriptomics",
+                        "assay": metadata.get("technology_reported") or metadata.get("assay_family"),
+                        "measurement_kind": "dataset context annotation",
+                        "measured_entity_name": dataset["accession"], "measured_entity_type": "spatial_transcriptomic_dataset",
+                        "feature_id": dataset["accession"], "value_numeric": None,
+                        "value_text": "SCI-context dataset annotation; gene-level and spot-level values not imported in this release",
+                        "value_kind": "unreported", "unit": "", "direction_vs_control": "not_reported",
+                        "comparator": "", "biological_replicates": "",
+                        "timepoint_value": timepoint_value, "timepoint_unit": timepoint_unit,
+                        "perturbation": fields["perturbation"], "cell_type": fields["cell_type"],
+                        "sample_id": spec["sample_id"], "observation_status": "reported",
+                        "evidence_role": "contextual_annotation", "dependency_group": f"mSCS:spatial_catalog:{dataset_id}",
+                        "source_artifact_path": "mSCS/data/spatial/spatial_catalog.sqlite",
+                        "source_artifact_sha256": artifact_hash, "source_locator": source_loc,
+                        "provenance_note": json_text({
+                            "dataset_id": dataset_id, "accession": dataset["accession"], "title": dataset["title"],
+                            "study_id": metadata.get("study_id"), "organism": dataset.get("organism"), "tissue": dataset.get("tissue"),
+                            "dataset_metadata": metadata, "protocol_metadata": protocols, "citation_metadata": citation,
+                            "source_manifest": dataset.get("source_manifest"), "source_row_hash": dataset.get("source_row_hash"),
+                            "capture": spec["capture"], "selection": "explicit SCI-context spatial-transcriptomic catalog record; annotation only",
+                        }),
+                        "_gene_symbol": None, "_entity": None, "_context_meta": context_meta[context_id],
+                        "_study_key": metadata.get("study_id") or dataset_id, "_injury_model": fields["injury_model"] or "unknown",
+                        "_timepoint_key": timepoint_label(timepoint_value, timepoint_unit), "_evidence_label": "contextual_annotation",
+                    }
+    return list(contexts.values()), context_meta, observations, assessed
+
+
+def external_transcriptomic_rows(evidence_path: Path, artifact_hash: str) -> tuple[list[dict[str, str]], dict[str, dict[str, Any]], dict[str, dict[str, Any]]]:
+    """Import only explicit SCI qRT-PCR transcript observations from the pinned release."""
+    contexts: dict[str, dict[str, str]] = {}
+    context_meta: dict[str, dict[str, Any]] = {}
+    observations: dict[str, dict[str, Any]] = {}
+    rows = [row for row in read_tsv(evidence_path) if row.get("record_id") in EXTERNAL_TRANSCRIPTOMIC_RECORDS]
+    if len(rows) != len(EXTERNAL_TRANSCRIPTOMIC_RECORDS):
+        missing = sorted(EXTERNAL_TRANSCRIPTOMIC_RECORDS - {row.get("record_id") for row in rows})
+        raise ValueError(f"missing curated external transcriptomic evidence records: {', '.join(missing)}")
+    try:
+        source_artifact_path = str(evidence_path.relative_to(ROOT))
+    except ValueError:
+        source_artifact_path = str(evidence_path)
+    for row in rows:
+        record_id = row["record_id"]
+        context_id = stable_id("sci:external_transcriptomics", record_id)
+        target = "ppET-1 qRT-PCR target (source wording)" if record_id.endswith("4631") else "ECE1/ECE2/ECE3 qRT-PCR targets (source wording)"
+        perturbation = "thrombin; PAR1-pathway inhibition" if record_id.endswith("4631") else "thrombin; ECE1 siRNA"
+        contexts[context_id] = {
+            "context_id": context_id, "context_name": f"{row['source_locator']} external SCI transcript context",
+            "context_kind": "sample_context", "disease_context": "spinal_cord_injury", "anatomical_context": "spinal_cord",
+            "species": row.get("species_context") or "", "injury_model": "rat spinal-cord contusion", "injury_level": "",
+            "injury_severity": "", "sex": "", "timepoint_value": "", "timepoint_unit": "",
+            "perturbation": perturbation, "treatment": "", "experimental_condition": row.get("context_scope") or "",
+            "study_perturbation_status": "", "injury_distance": "", "injury_distance_unit": "",
+            "sample_scope": row.get("context_scope") or "", "sample_count": "", "cell_type": "primary rat astrocytes",
+            "sample_id": "", "study_id": "PMID:40443301", "tissue": "spinal cord lesion site; primary rat astrocyte assay",
+            "context_status": "defined",
+            "provenance_note": source_locator(source_artifact_path, f"record_id={record_id}", f"source_locator={row.get('source_locator')}"),
+        }
+        context_meta[context_id] = {"study_id": "PMID:40443301", "study_title": row.get("citation_note"), "injury_model": "rat spinal-cord contusion", "timepoint_id": "", "tissue": "spinal cord lesion site; primary rat astrocyte assay"}
+        observation_id = f"EXTERNAL_TRANSCRIPTOMIC:{record_id}"
+        observations[observation_id] = {
+            "observation_id": observation_id, "context_id": context_id, "source_system": "mSCIdblit",
+            "source_database": "mechanism_downstream_evidence_records", "source_record_type": "external_transcriptomic_observation",
+            "source_record_key": record_id, "source_version": f"sha256:{artifact_hash}", "modality": "transcriptomics",
+            "assay": "qRT-PCR", "measurement_kind": "transcript expression", "measured_entity_name": target,
+            "measured_entity_type": "transcript_target_set", "feature_id": "", "value_numeric": None,
+            "value_text": "increased/induced as reported in the evidence summary; scalar value not retained in the mechanism evidence record",
+            "value_kind": "qualitative", "unit": "", "direction_vs_control": "increased", "comparator": "",
+            "biological_replicates": "", "timepoint_value": "", "timepoint_unit": "", "perturbation": perturbation,
+            "cell_type": "primary rat astrocytes", "sample_id": "", "observation_status": "reported",
+            "evidence_role": "context_matched_external_observation", "dependency_group": f"mSCIdblit:external_transcriptomics:{row['source_locator']}",
+            "source_artifact_path": source_artifact_path, "source_artifact_sha256": artifact_hash,
+            "source_locator": source_locator(
+                f"record_id={record_id}", row.get("source_locator"),
+                f"evidence_node_id={row.get('evidence_node_id')}" if row.get("evidence_node_id") else None,
+            ),
+            "provenance_note": json_text({
+                "record_id": record_id, "source_locator": row.get("source_locator"), "source_evidence_ids": row.get("source_evidence_ids"),
+                "citation_note": row.get("citation_note"), "evidence_summary": row.get("evidence_summary"),
+                "limitations": row.get("limitations"), "context_scope": row.get("context_scope"),
+                "assay_or_perturbation": row.get("assay_or_perturbation"), "selection": "explicit SCI qRT-PCR observation; no upstream causality inferred",
+            }),
+            "_gene_symbol": None, "_entity": None, "_context_meta": context_meta[context_id], "_study_key": "PMID:40443301",
+            "_injury_model": "rat spinal-cord contusion", "_timepoint_key": "unknown", "_evidence_label": "external_qRT_PCR",
+        }
+    return list(contexts.values()), context_meta, observations
+
+
+def transcriptomic_rows(spatial_catalog_path: Path, spatial_hash: str, evidence_path: Path, evidence_hash: str) -> tuple[list[dict[str, str]], dict[str, dict[str, Any]], dict[str, dict[str, Any]], dict[str, int]]:
+    spatial_contexts, spatial_meta, spatial_obs, assessment = spatial_transcriptomic_rows(spatial_catalog_path, spatial_hash)
+    external_contexts, external_meta, external_obs = external_transcriptomic_rows(evidence_path, evidence_hash)
+    return spatial_contexts + external_contexts, {**spatial_meta, **external_meta}, {**spatial_obs, **external_obs}, assessment
+
+
 def link_for_observation(observation: dict[str, Any], node_index: dict[str, list[dict[str, str]]]) -> dict[str, str]:
     node, reason = exact_node(node_index, observation.get("_gene_symbol"), observation.get("_entity"))
     if node is not None:
@@ -1078,7 +1374,8 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     epigenetic_db = mscs_root / "data/epigenetic/epigenetic.sqlite"
     spatial_catalog = mscs_root / "data/spatial/spatial_catalog.sqlite"
     spatial_pilot = mscs_root / "data/spatial/pilot_all_studies/gse269377_cluster_proxy/spatial_pair_percentages_all_samples.tsv"
-    for path in (protein_db, phospho_view, epigenetic_db, spatial_catalog, spatial_pilot, bundle / "mechanism_nodes.tsv", curation_overrides_path):
+    downstream_evidence = bundle / "mechanism_downstream_evidence_records.tsv"
+    for path in (protein_db, phospho_view, epigenetic_db, spatial_catalog, spatial_pilot, bundle / "mechanism_nodes.tsv", downstream_evidence, curation_overrides_path):
         if not path.exists():
             raise FileNotFoundError(path)
 
@@ -1087,6 +1384,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     epigenetic_hash = sha256(epigenetic_db)
     spatial_catalog_hash = sha256(spatial_catalog)
     spatial_pilot_hash = sha256(spatial_pilot)
+    downstream_evidence_hash = sha256(downstream_evidence)
     curation_overrides_hash = sha256(curation_overrides_path)
     metabolomics_transcription_paths = {
         relative_path: mscs_root / relative_path
@@ -1116,11 +1414,16 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     protein_meta.update(expression_meta)
     protein_obs.update(expression_obs)
     epi_contexts, epi_meta, epi_obs = epigenetic_rows(epigenetic_db, epigenetic_hash)
+    transcriptomic_contexts, transcriptomic_meta, transcriptomic_obs, transcriptomic_assessment = transcriptomic_rows(
+        spatial_catalog, spatial_catalog_hash, downstream_evidence, downstream_evidence_hash,
+    )
     protein_context_ids = {item["context_id"] for item in protein_contexts}
     all_contexts = protein_contexts + [
         row for row in metabolomics_contexts if row["context_id"] not in protein_context_ids
     ] + [
         row for row in epi_contexts if row["context_id"] not in protein_context_ids
+    ] + [
+        row for row in transcriptomic_contexts if row["context_id"] not in protein_context_ids
     ]
     scope = {
         "context_id": "sci_scope", "context_name": "Spinal cord injury evidence scope",
@@ -1136,7 +1439,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     }
     all_contexts = [scope] + all_contexts
     node_index = load_nodes(bundle)
-    observations = list(protein_obs.values()) + list(metabolomics_obs.values()) + list(epi_obs.values())
+    observations = list(protein_obs.values()) + list(metabolomics_obs.values()) + list(epi_obs.values()) + list(transcriptomic_obs.values())
     curation_counts = Counter(
         item["curation_id"]
         for observation in observations
@@ -1164,15 +1467,17 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     link_by_observation = {row["observation_id"]: row for row in links}
     meta_by_modality = {
         "protein": protein_meta, "metabolomics": metabolomics_meta, "epigenomics": epi_meta,
+        "transcriptomics": transcriptomic_meta,
     }
-    for original in list(protein_obs.values()) + list(metabolomics_obs.values()) + list(epi_obs.values()):
+    for original in list(protein_obs.values()) + list(metabolomics_obs.values()) + list(epi_obs.values()) + list(transcriptomic_obs.values()):
         row = dict(original)
         context = context_by_id[row["context_id"]]
         link = link_by_observation[row["observation_id"]]
         row.update({
             "study_id": meta_by_modality[row["modality"]][row["context_id"]]["study_id"],
             "injury_model": context["injury_model"], "timepoint_key": timepoint_label(context["timepoint_value"], context["timepoint_unit"]),
-            "perturbation_key": context["perturbation"], "linked_status": "linked" if link["release_status"] == "included" else "unlinked",
+            "perturbation_key": context["perturbation"], "treatment_key": context["treatment"],
+            "linked_status": "linked" if link["release_status"] == "included" else "unlinked",
             "unresolved_mapping_reason": "" if link["release_status"] == "included" else link["link_basis"],
         })
         enriched.append(row)
@@ -1197,7 +1502,19 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             ),
             "spatial_pilot_rows_assessed_but_excluded": 144,
             "spatial_exclusion_reason": "GSE269377 is a healthy/mutant FUS spinal-cord spatial dataset without an explicit spinal-cord-injury model; mSCS spatial_evidence has zero rows.",
-            "transcriptomic_observation_rows_imported": 0,
+            "transcriptomic_catalog_rows_assessed": transcriptomic_assessment["catalog_rows_assessed"],
+            "transcriptomic_catalog_datasets_imported": transcriptomic_assessment["datasets_imported"],
+            "transcriptomic_catalog_datasets_excluded": transcriptomic_assessment["datasets_excluded"],
+            "transcriptomic_catalog_excluded_dataset_ids": transcriptomic_assessment["excluded_dataset_ids"],
+            "transcriptomic_observation_rows_imported": len(transcriptomic_obs),
+            "transcriptomic_context_annotation_rows_imported": sum(
+                observation["evidence_role"] == "contextual_annotation" for observation in transcriptomic_obs.values()
+            ),
+            "transcriptomic_external_observation_rows_imported": sum(
+                observation["evidence_role"] == "context_matched_external_observation" for observation in transcriptomic_obs.values()
+            ),
+            "transcriptomic_gene_level_matrix_rows_imported": 0,
+            "transcriptomic_exclusion_reason": "Healthy/mutant FUS GSE269377 lacks explicit SCI; the human GSE305911 organoid record is related to the SCI study but is not injured spinal-cord tissue and is excluded from this injured-spinal-cord overlay.",
             "imaging_observation_rows_imported": 0,
             "perturbation_observation_rows_imported": 0,
             "functional_observation_rows_imported": 0,
@@ -1210,6 +1527,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             {"path": "mSCS/data/epigenetic/epigenetic.sqlite", "sha256": epigenetic_hash, "size_bytes": epigenetic_db.stat().st_size},
             {"path": "mSCS/data/spatial/spatial_catalog.sqlite", "sha256": spatial_catalog_hash, "size_bytes": spatial_catalog.stat().st_size},
             {"path": "mSCS/data/spatial/pilot_all_studies/gse269377_cluster_proxy/spatial_pair_percentages_all_samples.tsv", "sha256": spatial_pilot_hash, "size_bytes": spatial_pilot.stat().st_size},
+            {"path": str(downstream_evidence.relative_to(ROOT)), "sha256": downstream_evidence_hash, "size_bytes": downstream_evidence.stat().st_size},
             {"path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv", "sha256": curation_overrides_hash, "size_bytes": curation_overrides_path.stat().st_size},
             *[
                 {"path": f"mSCS/{relative_path}", "sha256": digest, "size_bytes": metabolomics_transcription_paths[relative_path].stat().st_size}
@@ -1222,6 +1540,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             "injury_model": count_values(enriched, "injury_model"),
             "timepoint": count_values(enriched, "timepoint_key"),
             "perturbation": count_values(enriched, "perturbation_key"),
+            "treatment": count_values(enriched, "treatment_key"),
             "observation_status": count_values(enriched, "observation_status"),
             "evidence_role": count_values(enriched, "evidence_role"),
             "linked_status": count_values(enriched, "linked_status"),
@@ -1245,6 +1564,8 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             "Dependency groups are source/study/timepoint/population or source/study/assay/context groups; they are intended to prevent correlated readouts from being double-counted.",
             "Downstream protein and phosphoprotein measurements are linked only to the measured state/node when an exact stable node match exists; no upstream ligand/receptor causality is inferred.",
             "Missing values and source ambiguity remain unreported or unknown; they are not converted to negative protein evidence.",
+            "Transcriptomic context annotations are imported from explicit SCI-related spatial-catalog records, with capture-level or reported timepoint context retained where available; gene/spot-level matrix values are reserved for a later spatial release.",
+            "The two external transcriptomic observations are the exact SCI qRT-PCR records M21B-DOWNSTREAM-EVID:004631 and M21B-DOWNSTREAM-EVID:004632 from the pinned mechanism release. Their source records do not provide an exact stable mechanism-node identifier, so both remain staged and do not establish upstream causality.",
         ],
     }
     (pack / "audit_report.json").write_text(json.dumps(audit, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -1274,8 +1595,8 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
         "modalities": [
             {"modality": "protein", "status": "populated", "selection": "mSCS phosphorylation_support_observations.tsv plus direct source-extracted non-phosphorylated protein observations from flow_protein.sqlite", "observation_file": "observations.tsv"},
             {"modality": "metabolomics", "status": "populated", "selection": "Explicit SCI metabolite/lipid-mediator assay records from mSCS flow_protein.sqlite, with exact transcription artifacts retained in provenance", "observation_file": "observations.tsv"},
-            {"modality": "transcriptomics", "status": "assessed_not_imported", "reason": "No curated transcriptomic observation table with exact SCI context was selected in this release."},
-            {"modality": "spatial", "status": "assessed_excluded", "reason": audit["selected_evidence"]["spatial_exclusion_reason"]},
+            {"modality": "transcriptomics", "status": "populated", "selection": "Explicit SCI-context external qRT-PCR observations plus SCI-related spatial-transcriptomic dataset context annotations; no gene-level matrix values are imported.", "observation_file": "observations.tsv"},
+            {"modality": "spatial", "status": "context_annotations_only", "reason": "Spatial transcriptomic datasets are represented as transcriptomic contextual annotations; spot/gene-level spatial evidence remains reserved for a later spatial release."},
             {"modality": "epigenomics", "status": "populated", "selection": "mSCS epigenetic observations, all explicit assay contexts, and exact binary feature-status records", "observation_file": "observations.tsv"},
             {"modality": "imaging", "status": "represented_as_protein_assay_context", "reason": "Immunofluorescence observations remain protein observations; no separate imaging claim is created."},
             {"modality": "perturbation", "status": "represented_in_context_fields", "reason": "Perturbation and treatment fields are preserved when reported; no intervention-only observation is fabricated."},
@@ -1293,7 +1614,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             "context_profiles": len(all_contexts), "observations": len(observations),
             "mechanism_links": len(links), "included_mechanism_links": sum(row["release_status"] == "included" for row in links),
         },
-        "provenance_note": "Generated by scripts/build_sci_context_pack.py from exact mSCS source artifacts plus explicitly applied context curation overrides. Metabolomics records are selected from explicit metabolite/lipid-mediator assays and preserve their transcription artifact paths and checksums. Generic Module 20B-24B graph files were read for stable identifier resolution only and were not modified or duplicated.",
+        "provenance_note": "Generated by scripts/build_sci_context_pack.py from exact mSCS source artifacts, the pinned mechanism-release downstream evidence table, and explicitly applied context curation overrides. Transcriptomic catalog records are contextual annotations only; gene/spot-level matrix values are not imported. Generic Module 20B-24B graph files were read for stable identifier resolution only and were not modified or duplicated.",
     }
     (pack / "context_manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return {"manifest": manifest, "audit": audit}
