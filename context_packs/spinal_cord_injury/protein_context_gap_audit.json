@@ -8,38 +8,38 @@
     "gap_records_by_reason": {
       "activity_or_non_expression_assay": 4,
       "ambiguous_or_reporter_assay": 21,
-      "outside_current_expression_selection_rule": 13,
+      "outside_current_expression_selection_rule": 11,
       "phospho_or_active_form_review_scope": 17,
       "protein_association_not_expression": 1,
-      "source_extraction_not_final": 460
+      "source_extraction_not_final": 457
     },
-    "imported_observations": 743,
+    "imported_observations": 739,
     "protein_observations": 1259,
-    "remaining_gap_records": 516
+    "remaining_gap_records": 511
   },
   "context_completeness": {
     "by_core_completeness": {
       "6/9": 1,
       "8/9": 6,
-      "9/9": 586
+      "9/9": 583
     },
     "by_refinement_priority": {
-      "complete": 66,
+      "complete": 70,
       "high": 2,
-      "medium": 525
+      "medium": 518
     },
     "by_secondary_completeness": {
-      "1/5": 45,
-      "2/5": 97,
-      "3/5": 361,
-      "4/5": 24,
-      "5/5": 66
+      "1/5": 23,
+      "2/5": 102,
+      "3/5": 375,
+      "4/5": 20,
+      "5/5": 70
     }
   },
   "pack_inputs": {
-    "protein_context_profiles": 593,
-    "protein_expression_observations": 633,
-    "protein_observations": 743,
+    "protein_context_profiles": 590,
+    "protein_expression_observations": 629,
+    "protein_observations": 739,
     "protein_state_observations": 110
   },
   "policy": "This audit prioritizes metadata refinement only. It does not assign numeric confidence, create graph edges, or promote unresolved mechanism mappings.",
@@ -301,14 +301,6 @@
       "study_id": "FLOW_SCI_251"
     },
     {
-      "context_id": "sci:protein:38023690bb9bada9",
-      "missing_core_fields": "",
-      "missing_secondary_fields": "injury_distance;injury_distance_unit",
-      "protein_observation_count": 2,
-      "refinement_priority": "medium",
-      "study_id": "FLOW_SCI_240"
-    },
-    {
       "context_id": "sci:protein:3c14c8bfc59071e8",
       "missing_core_fields": "",
       "missing_secondary_fields": "injury_distance;injury_distance_unit;sample_count",
@@ -443,6 +435,14 @@
       "protein_observation_count": 2,
       "refinement_priority": "medium",
       "study_id": "FLOW_SCI_312"
+    },
+    {
+      "context_id": "sci:protein:86f4a2e50250d381",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit;sample_count",
+      "protein_observation_count": 2,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_325"
     }
   ],
   "source_artifact": {

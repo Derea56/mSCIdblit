@@ -1,23 +1,32 @@
 # Spinal cord injury context pack
 
 This is the first populated spinal-cord-injury evidence overlay for mSCIdblit,
-now expanded with context-rich protein-expression records.
+now expanded with context-rich protein-expression and metabolomics records.
 It is a separate release layer: the pinned Module 20B–24B mechanism graph is
 read only for stable identifier resolution and is not rewritten or duplicated.
 
 ## Current status
 
-Release 0.5.25 contains 762 dataset observations from the mSCS evidence stores:
+Release 0.5.26 contains 763 dataset observations from the mSCS evidence stores:
 
 - 110 protein/phosphoprotein observations selected from the curated
   `mSCS/data/derived/phosphorylation_support_observations.tsv` view and joined
   back to exact records in `mSCS/data/flow_protein/flow_protein.sqlite`.
-- 633 additional directly measured, source-extracted non-phosphorylated or
+- 629 additional directly measured, source-extracted non-phosphorylated or
   total-protein
   observations selected from the canonical flow-protein store. The selection
   excludes phosphoprotein/active-form duplicates, ambiguous or inaccessible
   extraction states, reporter/activity-only assays, inferred timepoints, and
-  records without a measured value or reported direction.
+  records without a measured value or reported direction. Explicit metabolite
+  and lipid-mediator records are excluded from this protein count.
+- 5 metabolomics observations selected from explicit SCI metabolite assays in
+  the canonical flow-protein store: ATP by LC-MS/MS at 6 weeks after SCI,
+  PGE2 and LTB4 by spinal-cord ELISA at 24 hours after SCI, and anandamide by
+  LC-MS/MS in dorsal-root-ganglion and below-lesion spinal tissue at day 28.
+  The ATP and lipid-mediator values are retained as reported qualitative
+  comparisons when exact concentration values were not printed. Their exact
+  transcription artifact paths and SHA-256 checksums are retained in the
+  observation provenance.
 - 19 epigenomics observations from `mSCS/data/epigenetic/epigenetic.sqlite`,
   preserving occupancy, accessibility, histone, methylation, and
   RNA-modification context where reported. This includes two exact binary
@@ -39,7 +48,13 @@ unreported; they are not converted into negative evidence. The release uses
 `dataset_observation` only. It does not fabricate external context-matched
 observations or inferred bridges.
 
-There are 382 included exact stable-node links and 380 unresolved staging links.
+The metabolomics audit assessed 10 metabolite-oriented records. Five were
+imported. Five remain excluded with explicit reasons: two queued anandamide
+rows retain an unresolved flow-cytometry-versus-LC-MS/MS mismatch, ATP FRET is
+reserved for imaging, ATP microdialysis is reserved for functional evidence,
+and the ATP-synthase protein immunoblot remains protein evidence.
+
+There are 383 included exact stable-node links and 380 unresolved staging links.
 Unresolved observations are retained at module boundary `21B` solely as a
 review scope, with no graph-edge, partial-route, route-confidence, or numeric
 modality-weight promotion. Downstream protein measurements support the

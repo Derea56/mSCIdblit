@@ -30,10 +30,10 @@ def test_sci_context_manifest_pins_neutral_mechanism_release():
     bundle_path = PACK / manifest["mechanism_dependency"]["bundle_metadata"]
     assert bundle_path.resolve().is_file()
     assert manifest["counts"]["context_profiles"] > 1
-    assert manifest["context_pack_version"] == "0.5.25"
-    assert manifest["counts"]["context_profiles"] == 637
-    assert manifest["counts"]["observations"] == 762
-    assert manifest["counts"]["mechanism_links"] == 762
+    assert manifest["context_pack_version"] == "0.5.26"
+    assert manifest["counts"]["context_profiles"] == 638
+    assert manifest["counts"]["observations"] == 763
+    assert manifest["counts"]["mechanism_links"] == 763
     assert 0 < manifest["counts"]["included_mechanism_links"] < manifest["counts"]["mechanism_links"]
 
 
@@ -370,15 +370,15 @@ def test_sci_context_pack_validator_accepts_populated_release():
     summary = validate_pack(PACK)
 
     assert summary["pack_id"] == "spinal_cord_injury"
-    assert summary["counts"]["observations"] == 762
-    assert summary["counts"]["mechanism_links"] == 762
+    assert summary["counts"]["observations"] == 763
+    assert summary["counts"]["mechanism_links"] == 763
 
 
 def test_sci_observations_and_links_preserve_evidence_boundaries():
     observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
     links = list(csv.DictReader((PACK / "mechanism_links.tsv").open(), delimiter="\t"))
-    assert Counter(row["modality"] for row in observations) == {"protein": 743, "epigenomics": 19}
-    assert Counter(row["evidence_role"] for row in observations) == {"dataset_observation": 762}
+    assert Counter(row["modality"] for row in observations) == {"protein": 739, "metabolomics": 5, "epigenomics": 19}
+    assert Counter(row["evidence_role"] for row in observations) == {"dataset_observation": 763}
     assert all(row["dependency_group"] for row in observations)
     assert all(row["mechanism_release_id"] == "module20_24_mechanism_graph:2026-09-25-literature-expansion-627" for row in links)
     assert all(row["mechanism_target_kind"] == "node" for row in links if row["release_status"] == "included")
@@ -386,14 +386,45 @@ def test_sci_observations_and_links_preserve_evidence_boundaries():
     assert all(row["mechanism_route_id"] == "" for row in links)
 
 
+def test_sci_metabolomics_preserves_explicit_assay_context_and_exclusions():
+    observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
+    metabolomics = {row["observation_id"]: row for row in observations if row["modality"] == "metabolomics"}
+    assert set(metabolomics) == {
+        "FLOW_SCI_222__OBS222_6W_ATP_MS",
+        "FLOW_SCI_240__FLOW_SCI_240_OBS1",
+        "FLOW_SCI_240__FLOW_SCI_240_OBS2",
+        "FLOW_SCI_241__FLOW_SCI_241_OBS3",
+        "FLOW_SCI_241__FLOW_SCI_241_OBS4",
+    }
+    assert all(row["source_record_type"] == "metabolomics_observation" for row in metabolomics.values())
+    assert all(row["observation_status"] == "reported" for row in metabolomics.values())
+    assert all(row["dependency_group"].startswith("mSCS:flow_metabolomics:") for row in metabolomics.values())
+    assert all(row["source_artifact_sha256"] == "db992d208fd37ed1483ff711ad05dc45ebf8254638f54b0a752d374c219e2aaf" for row in metabolomics.values())
+    assert all("transcription_source_sha256" in json.loads(row["provenance_note"]) for row in metabolomics.values())
+
+    audit = json.loads((PACK / "audit_report.json").read_text())
+    assert audit["selected_evidence"]["metabolomics_candidate_rows_assessed"] == 10
+    assert audit["selected_evidence"]["metabolomics_observations_imported"] == 5
+    assert audit["selected_evidence"]["metabolomics_observations_excluded"] == 5
+    excluded = {
+        row["observation_id"]: row["reason"]
+        for row in audit["metabolomics_assessment"]["records"]
+        if row["decision"] == "excluded"
+    }
+    assert "FLOW_SCI_241__FLOW_SCI_241_OBS1" in excluded
+    assert "assay/context mismatch" in excluded["FLOW_SCI_241__FLOW_SCI_241_OBS1"]
+    assert "FLOW_SCI_222__OBS222_6W_ATP_FRET" in excluded
+    assert "FLOW_SCI_222__OBS222_6W_ATP_RELEASE" in excluded
+
+
 def test_sci_protein_context_gap_audit_is_reproducible_and_separate_from_evidence():
     audit = json.loads((PACK / "protein_context_gap_audit.json").read_text())
     assert (PACK / "protein_context_coverage.tsv").is_file()
     assert (PACK / "protein_context_gap_candidates.tsv").is_file()
-    assert audit["pack_inputs"]["protein_observations"] == 743
-    assert audit["pack_inputs"]["protein_expression_observations"] == 633
+    assert audit["pack_inputs"]["protein_observations"] == 739
+    assert audit["pack_inputs"]["protein_expression_observations"] == 629
     assert audit["canonical_store"]["protein_observations"] == 1259
-    assert audit["canonical_store"]["remaining_gap_records"] == 516
+    assert audit["canonical_store"]["remaining_gap_records"] == 511
     assert audit["policy"].startswith("This audit prioritizes metadata refinement only")
 
 
