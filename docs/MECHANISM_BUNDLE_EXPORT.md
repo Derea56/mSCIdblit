@@ -93,13 +93,13 @@ specific graph release without changing the graph tables:
 python3 scripts/build_mechanism_lr_candidate_universe.py \
   --graph-bundle-dir data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627 \
   --method-migration-dir data/processed/method_resource_migration_v1 \
-  --output-dir data/processed/mechanism_lr_candidate_universe_v1
+  --output-dir data/processed/mechanism_lr_candidate_universe_v2
 
 python3 scripts/build_mscs_release_bundle.py \
   --graph-bundle-dir data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627 \
   --method-migration-dir data/processed/method_resource_migration_v1 \
-  --candidate-universe-dir data/processed/mechanism_lr_candidate_universe_v1 \
-  --output-dir data/processed/mscs_release_bundle_v1_5_0_candidate_universe_v1
+  --candidate-universe-dir data/processed/mechanism_lr_candidate_universe_v2 \
+  --output-dir data/processed/mscs_release_bundle_v1_5_0_candidate_universe_v2
 ```
 
 The projection retains every canonical method-resource pair and records exact
@@ -108,6 +108,16 @@ metadata only: candidates remain `method_resource_only` unless independently
 supported elsewhere, and staged or unresolved mappings are retained rather
 than discarded. The projection never creates mechanism edges, confidence
 scores, causal assertions, or numeric modality weights.
+
+When the migrated method resources include
+`method_native/CellChatDB.mouse.standalone.json`, the projection reconciles its
+source-record IDs against `cellchat_mouse.tsv`. It preserves both native pair
+spellings and the JSON complex components in the candidate row, and records
+the source-record and pair-key coverage in
+`cellchat_json_reconciliation`. This is an inclusive candidate-universe
+reconciliation; it does not promote alternate spellings to graph edges or
+biological evidence. A different standalone JSON can be supplied with
+`--cellchat-json`.
 
 ## Recommended Strict Mouse-First Export
 

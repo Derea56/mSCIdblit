@@ -23,6 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_GRAPH = ROOT / "data" / "processed" / "mechanism_graph_module20_24_v2026_09_25_literature_expansion627"
 DEFAULT_METHOD = ROOT / "data" / "processed" / "method_resource_migration_v1"
 DEFAULT_OUTPUT = ROOT / "data" / "processed" / "mechanism_lr_candidate_universe_v1"
+CANDIDATE_UNIVERSE_SCHEMA = "mechanism_lr_candidate_universe_v2"
 
 FIELDS = [
     "candidate_pair_id",
@@ -37,6 +38,8 @@ FIELDS = [
     "source_methods_json",
     "source_resource_keys_json",
     "source_record_keys_json",
+    "source_native_variants_json",
+    "cellchat_json_pair_variants_json",
     "ligand_components",
     "receptor_components",
     "ligand_node_id",
@@ -75,8 +78,51 @@ def read_gzip_tsv(path: Path) -> Iterable[dict[str, str]]:
         yield from csv.DictReader(handle, delimiter="\t")
 
 
+def read_cellchat_json(path: Path | None) -> dict[str, dict[str, object]]:
+    """Index standalone CellChat interactions by their stable source ID.
+
+    The TSV projection and standalone JSON preserve the same CellChat source
+    IDs but do not always use the same complex/non-protein spelling.  The JSON
+    interaction is the canonical native CellChat representation for candidate
+    coverage; the TSV representation remains in the source-native provenance.
+    """
+
+    if path is None or not path.is_file():
+        return {}
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    interactions = payload.get("interactions", [])
+    complexes = payload.get("complexes", {})
+    if not isinstance(interactions, list) or not isinstance(complexes, dict):
+        raise ValueError(f"Invalid standalone CellChat resource: {path}")
+    indexed: dict[str, dict[str, object]] = {}
+    for raw in interactions:
+        if not isinstance(raw, dict):
+            raise ValueError(f"Invalid CellChat interaction row in {path}")
+        source_id = str(raw.get("interaction_name") or "").strip()
+        ligand = str(raw.get("ligand") or "").strip()
+        receptor = str(raw.get("receptor") or "").strip()
+        if not source_id or not ligand or not receptor:
+            raise ValueError(f"CellChat interaction lacks source ID or LR fields in {path}")
+        if source_id in indexed:
+            raise ValueError(f"Duplicate CellChat interaction_name: {source_id}")
+        indexed[source_id] = {
+            "ligand": ligand,
+            "receptor": receptor,
+            "ligand_components": [str(value) for value in complexes.get(ligand, []) if str(value).strip()],
+            "receptor_components": [str(value) for value in complexes.get(receptor, []) if str(value).strip()],
+        }
+    return indexed
+
+
 def stable_json(values: Iterable[str]) -> str:
     return json.dumps(sorted({value for value in values if value}), separators=(",", ":"))
+
+
+def canonical_pair_key(ligand: str, receptor: str) -> tuple[str, str]:
+    """Return the cross-export comparison key without changing source text."""
+
+    normalize = lambda value: "".join(character for character in value.casefold() if character.isalnum())
+    return normalize(ligand), normalize(receptor)
 
 
 def display_path(path: Path) -> str:
@@ -162,6 +208,12 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--graph-bundle-dir", type=Path, default=DEFAULT_GRAPH)
     parser.add_argument("--method-migration-dir", type=Path, default=DEFAULT_METHOD)
+    parser.add_argument(
+        "--cellchat-json",
+        type=Path,
+        default=None,
+        help="Standalone CellChat JSON used to reconcile source-record pair spellings.",
+    )
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
     return parser.parse_args()
 
@@ -170,6 +222,11 @@ def main() -> int:
     args = parse_args()
     graph = args.graph_bundle_dir.resolve()
     method = args.method_migration_dir.resolve()
+    cellchat_json_path = (
+        args.cellchat_json.resolve()
+        if args.cellchat_json is not None
+        else method / "method_native" / "CellChatDB.mouse.standalone.json"
+    )
     output = args.output_dir.resolve()
     required = [
         graph / "bundle_metadata.json",
@@ -193,6 +250,7 @@ def main() -> int:
     component_rows = read_tsv(method / "method_resource_complex_components.tsv")
     node_rows = read_tsv(graph / "mechanism_nodes.tsv")
     edge_rows = read_tsv(graph / "mechanism_edges.tsv")
+    cellchat_json = read_cellchat_json(cellchat_json_path)
 
     records_by_id: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in resource_rows:
@@ -207,6 +265,8 @@ def main() -> int:
     output.mkdir(parents=True)
     rows: list[dict[str, str]] = []
     status_counts: dict[str, int] = defaultdict(int)
+    cellchat_json_pairs_by_id: dict[str, set[tuple[str, str]]] = defaultdict(set)
+    cellchat_tsv_pairs_by_id: dict[str, set[tuple[str, str]]] = defaultdict(set)
     for canonical in canonical_rows:
         candidate_id = canonical.get("canonical_communication_id", "")
         if not candidate_id:
@@ -251,6 +311,42 @@ def main() -> int:
         component_values = components_by_id.get(candidate_id, {})
         ligand_components = [value for _ordinal, value in sorted(component_values.get("ligand", []))]
         receptor_components = [value for _ordinal, value in sorted(component_values.get("receptor", []))]
+        source_native_variants: list[dict[str, object]] = []
+        cellchat_json_variants: dict[tuple[str, str], dict[str, object]] = {}
+        for resource_record in resource_records:
+            source_id = resource_record.get("source_record_key", "").strip()
+            resource_key = resource_record.get("resource_key", "").strip()
+            native_variant = {
+                "resource_key": resource_key,
+                "source_record_key": source_id,
+                "representation": "method_resource_tsv",
+                "ligand": resource_record.get("native_ligand", ""),
+                "receptor": resource_record.get("native_receptor", ""),
+            }
+            source_native_variants.append(native_variant)
+            if resource_key != "mscs_phase2:cellchat_mouse.tsv":
+                continue
+            tsv_pair = (
+                str(resource_record.get("native_ligand", "") or "").strip(),
+                str(resource_record.get("native_receptor", "") or "").strip(),
+            )
+            cellchat_tsv_pairs_by_id[candidate_id].add(canonical_pair_key(*tsv_pair))
+            json_variant = cellchat_json.get(source_id)
+            if json_variant is None:
+                continue
+            json_ligand = str(json_variant["ligand"])
+            json_receptor = str(json_variant["receptor"])
+            json_key = canonical_pair_key(json_ligand, json_receptor)
+            cellchat_json_pairs_by_id[candidate_id].add(json_key)
+            cellchat_json_variants[json_key] = {
+                "source_record_key": source_id,
+                "representation": "CellChatDB.mouse.standalone.json",
+                "ligand": json_ligand,
+                "receptor": json_receptor,
+                "ligand_components": "|".join(str(value) for value in json_variant["ligand_components"]),
+                "receptor_components": "|".join(str(value) for value in json_variant["receptor_components"]),
+            }
+            source_native_variants.append(cellchat_json_variants[json_key])
         row = {
             "candidate_pair_id": candidate_id,
             "species_scope": canonical.get("species_scope", ""),
@@ -264,6 +360,13 @@ def main() -> int:
             "source_methods_json": canonical.get("source_methods_json", "[]"),
             "source_resource_keys_json": stable_json(row.get("resource_key", "") for row in resource_records),
             "source_record_keys_json": stable_json(row.get("source_record_key", "") for row in resource_records),
+            "source_native_variants_json": json.dumps(source_native_variants, ensure_ascii=False, sort_keys=True, separators=(",", ":")),
+            "cellchat_json_pair_variants_json": json.dumps(
+                sorted(cellchat_json_variants.values(), key=lambda value: (str(value["ligand"]), str(value["receptor"]), str(value["source_record_key"]))),
+                ensure_ascii=False,
+                sort_keys=True,
+                separators=(",", ":"),
+            ),
             "ligand_components": "|".join(ligand_components),
             "receptor_components": "|".join(receptor_components),
             "ligand_node_id": ligand_nodes[0] if len(ligand_nodes) == 1 else "",
@@ -295,17 +398,68 @@ def main() -> int:
         if declared != observed:
             raise ValueError(f"Source record count mismatch for {row['candidate_pair_id']}: {declared} != {observed}")
 
+    cellchat_source_records = {
+        row.get("source_record_key", "").strip()
+        for row in resource_rows
+        if row.get("resource_key") == "mscs_phase2:cellchat_mouse.tsv" and row.get("source_record_key", "").strip()
+    }
+    cellchat_projection = {
+        key
+        for values in cellchat_json_pairs_by_id.values()
+        for key in values
+    }
+    cellchat_tsv_projection = {
+        key
+        for values in cellchat_tsv_pairs_by_id.values()
+        for key in values
+    }
+    if cellchat_json:
+        json_source_records = set(cellchat_json)
+        if json_source_records != cellchat_source_records:
+            raise ValueError(
+                "CellChat standalone JSON/source TSV source-record mismatch: "
+                f"json_only={len(json_source_records - cellchat_source_records)}, "
+                f"tsv_only={len(cellchat_source_records - json_source_records)}"
+            )
+        expected_json_pairs = {
+            canonical_pair_key(str(value["ligand"]), str(value["receptor"]))
+            for value in cellchat_json.values()
+        }
+        if cellchat_projection != expected_json_pairs:
+            raise ValueError(
+                "CellChat JSON pair keys were not retained in candidate projection: "
+                f"missing={len(expected_json_pairs - cellchat_projection)}, "
+                f"extra={len(cellchat_projection - expected_json_pairs)}"
+            )
+    else:
+        expected_json_pairs = set()
+
     table_path = output / "mechanism_lr_candidate_universe.tsv"
     with table_path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=FIELDS, delimiter="\t", lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     report = {
-        "schema_version": "mechanism_lr_candidate_universe_v1",
+        "schema_version": CANDIDATE_UNIVERSE_SCHEMA,
         "candidate_role": "method_resource_candidate_projection",
         "mechanism_graph_release": metadata.get("release_id", ""),
         "source_snapshot_id": migration.get("source_snapshot_id", ""),
         "canonical_communication_count": len(rows),
+        "cellchat_json_reconciliation": {
+            "status": "complete" if cellchat_json else "not_provided",
+            "source_record_count": len(cellchat_json),
+            "source_record_coverage": 1.0 if cellchat_json and cellchat_source_records == set(cellchat_json) else None,
+            "json_unique_pair_count": len(expected_json_pairs),
+            "json_pair_key_coverage": (
+                round(len(cellchat_projection & expected_json_pairs) / len(expected_json_pairs), 6)
+                if expected_json_pairs else None
+            ),
+            "tsv_unique_pair_key_count": len(cellchat_tsv_projection),
+            "shared_canonical_pair_key_count": len(cellchat_tsv_projection & expected_json_pairs),
+            "json_only_canonical_pair_key_count": len(expected_json_pairs - cellchat_tsv_projection),
+            "tsv_only_canonical_pair_key_count": len(cellchat_tsv_projection - expected_json_pairs),
+            "pair_key_semantics": "casefolded alphanumeric comparison only; source spellings and components remain preserved",
+        },
         "graph_status_counts": dict(sorted(status_counts.items())),
         "evidence_status_counts": {"method_resource_only": len(rows)},
         "graph_edges_created": False,
@@ -322,6 +476,11 @@ def main() -> int:
             "row_count": len(rows),
         },
     }
+    if cellchat_json_path.is_file():
+        report["inputs"][display_path(cellchat_json_path)] = {
+            "sha256": sha256(cellchat_json_path),
+            "bytes": cellchat_json_path.stat().st_size,
+        }
     (output / "mechanism_lr_candidate_universe_report.json").write_text(
         json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
