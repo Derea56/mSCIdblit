@@ -30,10 +30,10 @@ def test_sci_context_manifest_pins_neutral_mechanism_release():
     bundle_path = PACK / manifest["mechanism_dependency"]["bundle_metadata"]
     assert bundle_path.resolve().is_file()
     assert manifest["counts"]["context_profiles"] > 1
-    assert manifest["context_pack_version"] == "0.5.29"
-    assert manifest["counts"]["context_profiles"] == 681
-    assert manifest["counts"]["observations"] == 902
-    assert manifest["counts"]["mechanism_links"] == 902
+    assert manifest["context_pack_version"] == "0.5.30"
+    assert manifest["counts"]["context_profiles"] == 684
+    assert manifest["counts"]["observations"] == 910
+    assert manifest["counts"]["mechanism_links"] == 910
     assert 0 < manifest["counts"]["included_mechanism_links"] < manifest["counts"]["mechanism_links"]
 
 
@@ -101,11 +101,19 @@ def test_sci_epigenomic_contexts_and_binary_statuses_preserve_source_scope():
     epigenomic_observations = [row for row in observations if row["modality"] == "epigenomics"]
     binary = [row for row in epigenomic_observations if row["source_record_type"] == "epigenetic_binary_feature"]
 
-    assert len(epigenomic_observations) == 19
+    assert len(epigenomic_observations) == 27
     assert len(binary) == 2
     assert {row["observation_status"] for row in binary} == {"observed"}
     assert {row["direction_vs_control"] for row in binary} == {"not_reported"}
     assert all(row["source_artifact_path"].startswith("mSCS/data/epigenetic/processed/") for row in binary)
+
+    external_epigenomic_contexts = [
+        row for row in contexts if row["context_id"].startswith("sci:external_epigenomics:")
+    ]
+    assert len(external_epigenomic_contexts) == 3
+    assert {row["study_id"] for row in external_epigenomic_contexts} == {
+        "PRJNA791459", "PMCID:PMC11711147",
+    }
 
 
 def test_sci_protein_context_curation_overrides_are_applied_with_source_provenance():
@@ -371,18 +379,18 @@ def test_sci_context_pack_validator_accepts_populated_release():
     summary = validate_pack(PACK)
 
     assert summary["pack_id"] == "spinal_cord_injury"
-    assert summary["counts"]["observations"] == 902
-    assert summary["counts"]["mechanism_links"] == 902
+    assert summary["counts"]["observations"] == 910
+    assert summary["counts"]["mechanism_links"] == 910
 
 
 def test_sci_observations_and_links_preserve_evidence_boundaries():
     observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
     links = list(csv.DictReader((PACK / "mechanism_links.tsv").open(), delimiter="\t"))
-    assert Counter(row["modality"] for row in observations) == {"protein": 762, "metabolomics": 35, "epigenomics": 19, "transcriptomics": 21, "mechanism_evidence": 65}
+    assert Counter(row["modality"] for row in observations) == {"protein": 762, "metabolomics": 35, "epigenomics": 27, "transcriptomics": 21, "mechanism_evidence": 65}
     assert Counter(row["evidence_role"] for row in observations) == {
         "dataset_observation": 765,
         "contextual_annotation": 84,
-        "context_matched_external_observation": 53,
+        "context_matched_external_observation": 61,
     }
     assert all(row["dependency_group"] for row in observations)
     assert all(row["mechanism_release_id"] == "module20_24_mechanism_graph:2026-09-25-literature-expansion-627" for row in links)
@@ -530,6 +538,35 @@ def test_external_protein_and_metabolomics_curation_preserve_primary_source_cont
     audit = json.loads((PACK / "audit_report.json").read_text())
     assert audit["selected_evidence"]["external_protein_observations_imported"] == 21
     assert audit["selected_evidence"]["external_metabolomics_observations_imported"] == 30
+
+
+def test_external_epigenomics_curation_preserves_primary_source_context():
+    observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
+    contexts = {row["context_id"]: row for row in csv.DictReader((PACK / "contexts.tsv").open(), delimiter="\t")}
+    external = [row for row in observations if row["observation_id"].startswith("EXTERNAL_EPIGENOMICS:")]
+
+    assert len(external) == 8
+    assert {contexts[row["context_id"]]["study_id"] for row in external} == {
+        "PRJNA791459", "PMCID:PMC11711147",
+    }
+    assert {row["timepoint_value"] for row in external} == {"14.0", "4.0"}
+    assert {row["timepoint_unit"] for row in external} == {"day", "week"}
+    assert {row["direction_vs_control"] for row in external} == {"increased", "decreased"}
+    assert all(row["evidence_role"] == "context_matched_external_observation" for row in external)
+    assert all(row["source_artifact_path"].endswith("external_epigenomics_context_curation.tsv") for row in external)
+    assert all(row["dependency_group"] for row in external)
+    assert all("primary_source_id" in row["provenance_note"] for row in external)
+    assert all(contexts[row["context_id"]]["injury_model"] for row in external)
+    assert all(row["sample_id"] == "" for row in external)
+
+    tlr4 = next(row for row in external if row["feature_id"] == "Tlr4")
+    assert tlr4["direction_vs_control"] == "increased"
+    il18 = next(row for row in external if row["measured_entity_name"] == "IL-18 bp")
+    assert il18["feature_id"] == ""
+    assert il18["value_text"].startswith("IL-18 bp was reported")
+
+    audit = json.loads((PACK / "audit_report.json").read_text())
+    assert audit["selected_evidence"]["external_epigenomics_observations_imported"] == 8
 
 
 def test_sci_protein_context_gap_audit_is_reproducible_and_separate_from_evidence():

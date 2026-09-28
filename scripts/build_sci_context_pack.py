@@ -34,11 +34,12 @@ DEFAULT_PACK = ROOT / "context_packs" / "spinal_cord_injury"
 DEFAULT_BUNDLE = ROOT / "data" / "processed" / "mechanism_graph_module20_24_v2026_09_25_literature_expansion627"
 RELEASE_ID = "module20_24_mechanism_graph:2026-09-25-literature-expansion-627"
 RELEASE_TAG = "mSCIdblit-v1.9.386"
-CONTEXT_PACK_VERSION = "0.5.29"
+CONTEXT_PACK_VERSION = "0.5.30"
 DEFAULT_CURATION_OVERRIDES = DEFAULT_PACK / "protein_context_curation_overrides.tsv"
 DEFAULT_STATE_SELECTIONS = DEFAULT_PACK / "protein_context_state_selections.tsv"
 DEFAULT_EXTERNAL_PROTEIN_CURATION = DEFAULT_PACK / "external_protein_context_curation.tsv"
 DEFAULT_EXTERNAL_METABOLOMICS_CURATION = DEFAULT_PACK / "external_metabolomics_context_curation.tsv"
+DEFAULT_EXTERNAL_EPIGENOMICS_CURATION = DEFAULT_PACK / "external_epigenomics_context_curation.tsv"
 
 SCI_SPATIAL_TRANSCRIPTOMIC_DATASETS = {
     "MSCIDATA000008",  # GSE195783: explicit T10 hemisection SCI time course
@@ -1421,7 +1422,11 @@ def external_curation_rows(
             "source_record_key": row["source_record_key"], "source_version": f"sha256:{artifact_hash}",
             "modality": modality, "assay": row.get("assay") or "", "measurement_kind": row.get("measurement_kind") or "",
             "measured_entity_name": row["measured_entity_name"],
-            "measured_entity_type": "protein" if modality == "protein" else "metabolite",
+            "measured_entity_type": {
+                "protein": "protein",
+                "metabolomics": "metabolite",
+                "epigenomics": "epigenetic_feature",
+            }.get(modality, "measured_entity"),
             "feature_id": row.get("feature_id") or "", "value_numeric": numeric,
             "value_text": "" if numeric is not None else row.get("value_text") or "",
             "value_kind": value_kind, "unit": row.get("unit") or "",
@@ -1783,7 +1788,8 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     state_selections_path = DEFAULT_STATE_SELECTIONS
     external_protein_curation = DEFAULT_EXTERNAL_PROTEIN_CURATION
     external_metabolomics_curation = DEFAULT_EXTERNAL_METABOLOMICS_CURATION
-    for path in (protein_db, phospho_view, epigenetic_db, spatial_catalog, spatial_pilot, bundle / "mechanism_nodes.tsv", downstream_evidence, literature_expansion, curation_overrides_path, state_selections_path, external_protein_curation, external_metabolomics_curation):
+    external_epigenomics_curation = DEFAULT_EXTERNAL_EPIGENOMICS_CURATION
+    for path in (protein_db, phospho_view, epigenetic_db, spatial_catalog, spatial_pilot, bundle / "mechanism_nodes.tsv", downstream_evidence, literature_expansion, curation_overrides_path, state_selections_path, external_protein_curation, external_metabolomics_curation, external_epigenomics_curation):
         if not path.exists():
             raise FileNotFoundError(path)
 
@@ -1798,6 +1804,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     state_selections_hash = sha256(state_selections_path)
     external_protein_curation_hash = sha256(external_protein_curation)
     external_metabolomics_curation_hash = sha256(external_metabolomics_curation)
+    external_epigenomics_curation_hash = sha256(external_epigenomics_curation)
     metabolomics_transcription_paths = {
         relative_path: mscs_root / relative_path
         for relative_path in sorted(set(METABOLOMICS_TRANSCRIPTION_ARTIFACTS.values()))
@@ -1844,6 +1851,12 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     metabolomics_meta.update(external_metabolomics_meta)
     metabolomics_obs.update(external_metabolomics_obs)
     epi_contexts, epi_meta, epi_obs = epigenetic_rows(epigenetic_db, epigenetic_hash)
+    external_epigenomics_contexts, external_epigenomics_meta, external_epigenomics_obs = external_curation_rows(
+        external_epigenomics_curation, external_epigenomics_curation_hash, "epigenomics",
+    )
+    epi_contexts.extend(external_epigenomics_contexts)
+    epi_meta.update(external_epigenomics_meta)
+    epi_obs.update(external_epigenomics_obs)
     transcriptomic_contexts, transcriptomic_meta, transcriptomic_obs, transcriptomic_assessment = transcriptomic_rows(
         spatial_catalog, spatial_catalog_hash, downstream_evidence, downstream_evidence_hash,
     )
@@ -1930,6 +1943,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             "protein_observations_imported": len(protein_obs),
             "external_protein_observations_imported": len(external_protein_obs),
             "external_metabolomics_observations_imported": len(external_metabolomics_obs),
+            "external_epigenomics_observations_imported": len(external_epigenomics_obs),
             "metabolomics_candidate_rows_assessed": metabolomics_audit["candidate_rows_assessed"],
             "metabolomics_observations_imported": len(metabolomics_obs),
             "mSCS_metabolomics_observations_imported": mscs_metabolomics_observations_imported,
@@ -1983,6 +1997,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             {"path": "context_packs/spinal_cord_injury/protein_context_state_selections.tsv", "sha256": state_selections_hash, "size_bytes": state_selections_path.stat().st_size},
             {"path": "context_packs/spinal_cord_injury/external_protein_context_curation.tsv", "sha256": external_protein_curation_hash, "size_bytes": external_protein_curation.stat().st_size},
             {"path": "context_packs/spinal_cord_injury/external_metabolomics_context_curation.tsv", "sha256": external_metabolomics_curation_hash, "size_bytes": external_metabolomics_curation.stat().st_size},
+            {"path": "context_packs/spinal_cord_injury/external_epigenomics_context_curation.tsv", "sha256": external_epigenomics_curation_hash, "size_bytes": external_epigenomics_curation.stat().st_size},
             *[
                 {"path": f"mSCS/{relative_path}", "sha256": digest, "size_bytes": metabolomics_transcription_paths[relative_path].stat().st_size}
                 for relative_path, digest in metabolomics_transcription_hashes.items()
@@ -2018,6 +2033,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             "Dependency groups are source/study/timepoint/population or source/study/assay/context groups; they are intended to prevent correlated readouts from being double-counted.",
             "Downstream protein and phosphoprotein measurements are linked only to the measured state/node when an exact stable node match exists; no upstream ligand/receptor causality is inferred.",
             "External protein and metabolomics curation inputs are context_matched_external_observation records. Their primary source identifiers, accessions, URLs, source locators, and local curation-artifact checksums are retained; unreported sample identifiers remain blank.",
+            "External epigenomics curation inputs are context_matched_external_observation records. They retain primary source identifiers, accessions when reported, explicit SCI model/timepoint context, assay scope, source locators, dependency groups, and local curation-artifact checksums; in-vitro mechanistic records are not silently treated as injured-cord measurements.",
             "Missing values and source ambiguity remain unreported or unknown; they are not converted to negative protein evidence.",
             "Transcriptomic context annotations are imported from explicit SCI-related spatial-catalog records, with capture-level or reported timepoint context retained where available; gene/spot-level matrix values are reserved for a later spatial release.",
             "The two external transcriptomic observations are the exact SCI qRT-PCR records M21B-DOWNSTREAM-EVID:004631 and M21B-DOWNSTREAM-EVID:004632 from the pinned mechanism release. Their source records do not provide an exact stable mechanism-node identifier, so both remain staged and do not establish upstream causality.",
@@ -2054,7 +2070,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             {"modality": "transcriptomics", "status": "populated", "selection": "Explicit SCI-context external qRT-PCR observations plus SCI-related spatial-transcriptomic dataset context annotations; no gene-level matrix values are imported.", "observation_file": "observations.tsv"},
             {"modality": "mechanism_evidence", "status": "populated", "selection": "Exact pinned Module 20B-24B evidence rows with injury_context=traumatic spinal cord injury, retained as contextual annotations only; no routes or graph edges are promoted.", "observation_file": "observations.tsv"},
             {"modality": "spatial", "status": "context_annotations_only", "reason": "Spatial transcriptomic datasets are represented as transcriptomic contextual annotations; spot/gene-level spatial evidence remains reserved for a later spatial release."},
-            {"modality": "epigenomics", "status": "populated", "selection": "mSCS epigenetic observations, all explicit assay contexts, and exact binary feature-status records", "observation_file": "observations.tsv"},
+            {"modality": "epigenomics", "status": "populated", "selection": "mSCS epigenetic observations and all explicit assay contexts plus source-located external m6A literature observations; exact binary feature-status records retain their own artifact paths", "observation_file": "observations.tsv"},
             {"modality": "imaging", "status": "represented_as_protein_assay_context", "reason": "Immunofluorescence observations remain protein observations; no separate imaging claim is created."},
             {"modality": "perturbation", "status": "represented_in_context_fields", "reason": "Perturbation and treatment fields are preserved when reported; no intervention-only observation is fabricated."},
             {"modality": "functional", "status": "assessed_not_imported", "reason": "No standalone functional observation table was selected for this release."},
@@ -2069,12 +2085,13 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             "protein_context_state_selections": "protein_context_state_selections.tsv",
             "external_protein_context_curation": "external_protein_context_curation.tsv",
             "external_metabolomics_context_curation": "external_metabolomics_context_curation.tsv",
+            "external_epigenomics_context_curation": "external_epigenomics_context_curation.tsv",
         },
         "counts": {
             "context_profiles": len(all_contexts), "observations": len(observations),
             "mechanism_links": len(links), "included_mechanism_links": sum(row["release_status"] == "included" for row in links),
         },
-        "provenance_note": "Generated by scripts/build_sci_context_pack.py from exact mSCS source artifacts, the pinned mechanism-release downstream evidence and literature-expansion tables, explicitly applied context curation overrides, and source-located external protein/metabolomics curation artifacts. External rows are context_matched_external_observation records; transcriptomic catalog records and mechanism-evidence applicability records are contextual annotations only; gene/spot-level matrix values are not imported, and no mechanism routes or graph edges are promoted. Generic Module 20B-24B graph files were read for stable identifier resolution only and were not modified or duplicated.",
+        "provenance_note": "Generated by scripts/build_sci_context_pack.py from exact mSCS source artifacts, the pinned mechanism-release downstream evidence and literature-expansion tables, explicitly applied context curation overrides, and source-located external protein/metabolomics/epigenomics curation artifacts. External rows are context_matched_external_observation records; transcriptomic catalog records and mechanism-evidence applicability records are contextual annotations only; gene/spot-level matrix values are not imported, and no mechanism routes or graph edges are promoted. Generic Module 20B-24B graph files were read for stable identifier resolution only and were not modified or duplicated.",
     }
     (pack / "context_manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return {"manifest": manifest, "audit": audit}

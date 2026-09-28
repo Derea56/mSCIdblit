@@ -249,7 +249,7 @@
       "SCICTX-CUR-0246": 1
     },
     "evidence_role": {
-      "context_matched_external_observation": 53,
+      "context_matched_external_observation": 61,
       "contextual_annotation": 84,
       "dataset_observation": 765
     },
@@ -262,6 +262,7 @@
       "Acute thoracic compression SCI using bilateral aneurysm clip": 2,
       "Allen weight-drop contusion spinal cord injury": 1,
       "C5 dorsal column lesion": 10,
+      "Central thoracic spinal cord contusion using modified impactor": 4,
       "Complete T10 crush spinal cord injury": 1,
       "Complete spinal-cord crush at T10 using No. 5 Dumont forceps": 4,
       "Dorsal overhemisection spinal cord injury at T7": 4,
@@ -322,6 +323,7 @@
       "T10 moderate contusion using the Infinite Horizon impactor": 2,
       "T10 severe spinal cord crush injury using No. 5 Dumont forceps": 4,
       "T10 thoracic spinal cord contusion and lateral hemisection; contusion used for the protein time course": 2,
+      "T10 traumatic spinal cord injury; 25 gcm impact energy": 4,
       "T10 weight-drop spinal cord injury in mice with or without streptozotocin/high-fat-high-sucrose diet-induced diabetes": 3,
       "T11 contusion spinal cord injury using the Infinite Horizon Impactor": 6,
       "T11 contusive spinal cord injury using the Infinite Horizon impactor": 6,
@@ -510,11 +512,11 @@
       "wild-type mouse thoracic spinal cord hemisection": 1
     },
     "linked_status": {
-      "linked": 385,
-      "unlinked": 517
+      "linked": 389,
+      "unlinked": 521
     },
     "modality": {
-      "epigenomics": 19,
+      "epigenomics": 27,
       "mechanism_evidence": 65,
       "metabolomics": 35,
       "protein": 762,
@@ -522,7 +524,7 @@
     },
     "observation_status": {
       "observed": 2,
-      "reported": 198,
+      "reported": 206,
       "transcribed": 686,
       "unknown": 16
     },
@@ -722,7 +724,7 @@
       "naive and 6-hour SCI; Tnf^fl/fl versus LysM^CreTnf^fl/fl mice": 4,
       "naive mouse versus injured mouse": 2,
       "naive, saline, and DHA groups": 4,
-      "none": 51,
+      "none": 59,
       "not_reported": 1,
       "p75-positive and p75-knockout dorsal-hemisection SCI groups": 1,
       "perilesional spinal cord tissue": 4,
@@ -1034,7 +1036,9 @@
       "MSCISTUDY000038": 4,
       "MSCISTUDY000192": 1,
       "MTBLS6350": 30,
+      "PMCID:PMC11711147": 4,
       "PMID:40443301": 2,
+      "PRJNA791459": 4,
       "PXD003473": 21,
       "STUDY_ATF4_ZBTB38_2017": 2,
       "STUDY_BURDA_2022": 1,
@@ -1075,7 +1079,7 @@
       "10 week": 5,
       "12 hour": 19,
       "12 hours": 8,
-      "14 day": 64,
+      "14 day": 68,
       "14 dpi": 5,
       "17 day": 29,
       "18 hours": 4,
@@ -1111,7 +1115,7 @@
       "4 dpi": 2,
       "4 hour": 10,
       "4 hours": 1,
-      "4 week": 2,
+      "4 week": 6,
       "42 day": 13,
       "42 days": 1,
       "48 hour": 4,
@@ -1334,7 +1338,7 @@
       "naive versus SCI; plasma EV transfer experiments retained as context only": 7,
       "natural-history time course; no molecular treatment": 3,
       "no molecular treatment reported for the imported protein time course": 4,
-      "none": 56,
+      "none": 64,
       "none for the primary time course; cell-marker colocalization and biochemical validation": 3,
       "none reported in curated direct set": 2,
       "none; observational": 2,
@@ -1380,16 +1384,16 @@
     "unresolved_mapping_reason": {
       "ambiguous canonical entity label match (2 stable nodes); staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 29,
       "ambiguous gene_symbol match (2 stable nodes); staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 1,
-      "no exact stable mechanism-node match; staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 487
+      "no exact stable mechanism-node match; staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 491
     }
   },
   "mechanism_link_counts": {
     "graph_edges_created": 0,
-    "included": 385,
+    "included": 389,
     "numeric_modality_weights_created": 0,
     "partial_routes_promoted": 0,
     "route_confidence_created": 0,
-    "staging_unresolved": 517
+    "staging_unresolved": 521
   },
   "metabolomics_assessment": {
     "candidate_rows_assessed": 10,
@@ -1516,6 +1520,7 @@
     "Dependency groups are source/study/timepoint/population or source/study/assay/context groups; they are intended to prevent correlated readouts from being double-counted.",
     "Downstream protein and phosphoprotein measurements are linked only to the measured state/node when an exact stable node match exists; no upstream ligand/receptor causality is inferred.",
     "External protein and metabolomics curation inputs are context_matched_external_observation records. Their primary source identifiers, accessions, URLs, source locators, and local curation-artifact checksums are retained; unreported sample identifiers remain blank.",
+    "External epigenomics curation inputs are context_matched_external_observation records. They retain primary source identifiers, accessions when reported, explicit SCI model/timepoint context, assay scope, source locators, dependency groups, and local curation-artifact checksums; in-vitro mechanistic records are not silently treated as injured-cord measurements.",
     "Missing values and source ambiguity remain unreported or unknown; they are not converted to negative protein evidence.",
     "Transcriptomic context annotations are imported from explicit SCI-related spatial-catalog records, with capture-level or reported timepoint context retained where available; gene/spot-level matrix values are reserved for a later spatial release.",
     "The two external transcriptomic observations are the exact SCI qRT-PCR records M21B-DOWNSTREAM-EVID:004631 and M21B-DOWNSTREAM-EVID:004632 from the pinned mechanism release. Their source records do not provide an exact stable mechanism-node identifier, so both remain staged and do not establish upstream causality.",
@@ -1525,7 +1530,8 @@
   "selected_evidence": {
     "context_curation_overrides_applied": 245,
     "epigenetic_binary_feature_observations_imported": 2,
-    "epigenetic_observations_imported": 19,
+    "epigenetic_observations_imported": 27,
+    "external_epigenomics_observations_imported": 8,
     "external_metabolomics_observations_imported": 30,
     "external_protein_observations_imported": 21,
     "functional_observation_rows_imported": 0,
@@ -1627,6 +1633,11 @@
       "path": "context_packs/spinal_cord_injury/external_metabolomics_context_curation.tsv",
       "sha256": "c14ac80fcc5e0dbd64d499fd1c181b33721750938a3543c7961ddd446f48cc23",
       "size_bytes": 25314
+    },
+    {
+      "path": "context_packs/spinal_cord_injury/external_epigenomics_context_curation.tsv",
+      "sha256": "9920de7f8c945284a11dc4188ef5ee866dea2341c21418c8db04821f86cde2db",
+      "size_bytes": 9240
     },
     {
       "path": "mSCS/data/flow_protein/transcriptions/batch_2026-08-20_direct_text_numeric_222_241_243_424.tsv",

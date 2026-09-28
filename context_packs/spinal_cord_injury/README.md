@@ -1,14 +1,15 @@
 # Spinal cord injury context pack
 
 This is the first populated spinal-cord-injury evidence overlay for mSCIdblit,
-now expanded with context-rich protein-expression and metabolomics records.
+now expanded with context-rich protein-expression, metabolomics, and
+epigenomics records.
 It is a separate release layer: the pinned Module 20B–24B mechanism graph is
 read only for stable identifier resolution and is not rewritten or duplicated.
 
 ## Current status
 
-Release 0.5.29 contains 902 observations: 765 dataset observations from the
-mSCS evidence stores, 53 context-matched external observations, and 84
+Release 0.5.30 contains 910 observations: 765 dataset observations from the
+mSCS evidence stores, 61 context-matched external observations, and 84
 contextual annotations.
 
 - 112 protein/phosphoprotein observations selected from the curated
@@ -44,11 +45,20 @@ contextual annotations.
   feature-status records with their processed peak-artifact paths and
   checksums; their quantitative signal is retained without inferring a
   direction versus control.
+- 8 context-matched external epigenomics observations from primary SCI
+  literature: four 14-day T10 traumatic-SCI m6A records from `PRJNA791459`
+  and four chronic 4-week T10 contusion m6A records from `PMCID:PMC11711147`.
+  These retain the reported injury model, spinal-cord tissue, assay, timepoint,
+  comparator, feature label, and source locator; the source label `IL-18 bp`
+  remains unnormalized because an exact feature identifier was not reported.
 
 All 43 reported epigenetic assay contexts in the mSCS store are retained as
 context profiles, including contexts for which no observation-level readout was
 selected. Sample IDs remain blank when the source reports only a sample unit,
-such as `mouse` or `pooled`, rather than an exact sample identifier.
+such as `mouse`, `pooled`, or a group-level replicate count, rather than an
+exact sample identifier. The external epigenomics observations use dependency
+groups at the study/model/timepoint/tissue level so multiple readouts from one
+assay cannot be double-counted.
 
 Each observation retains its source record key, artifact SHA-256, source
 locator, study/context fields, and dependency group. Context profiles preserve
@@ -120,6 +130,8 @@ that context evidence cannot create or promote a generic graph edge.
   neuroproteomic observations used by the reproducible builder.
 - `external_metabolomics_context_curation.tsv` — source-located external SCI
   metabolomics observations used by the reproducible builder.
+- `external_epigenomics_context_curation.tsv` — source-located external SCI
+  epigenomics observations used by the reproducible builder.
 - `../../scripts/build_sci_context_pack.py` — reproducible importer/curator.
 - `../../scripts/audit_sci_protein_context_coverage.py` — reproducible protein
   context refinement audit.
