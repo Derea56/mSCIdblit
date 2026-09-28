@@ -7,15 +7,16 @@
     "protein_context_coverage": "protein_context_coverage.tsv",
     "protein_context_curation_overrides": "protein_context_curation_overrides.tsv",
     "protein_context_gap_audit": "protein_context_gap_audit.json",
-    "protein_context_gap_candidates": "protein_context_gap_candidates.tsv"
+    "protein_context_gap_candidates": "protein_context_gap_candidates.tsv",
+    "protein_context_state_selections": "protein_context_state_selections.tsv"
   },
   "context_pack_id": "spinal_cord_injury",
-  "context_pack_version": "0.5.28",
+  "context_pack_version": "0.5.29",
   "counts": {
     "context_profiles": 678,
     "included_mechanism_links": 383,
-    "mechanism_links": 849,
-    "observations": 849
+    "mechanism_links": 851,
+    "observations": 851
   },
   "evidence_policy": {
     "context_attaches_to": "observation_or_reviewed_mechanism_link",

@@ -26,6 +26,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 from scripts.build_sci_context_pack import (
     is_protein_expression_candidate,
+    load_state_selections,
     metabolomics_candidate_kind,
     nonempty_context,
     protein_form_requires_state_review,
@@ -112,6 +113,7 @@ def classify_gap(row: dict[str, Any], selected_ids: set[str], imported_ids: set[
 def build(mscs_root: Path, pack: Path) -> dict[str, Any]:
     protein_db = mscs_root / "data/flow_protein/flow_protein.sqlite"
     phospho_view = mscs_root / "data/derived/phosphorylation_support_observations.tsv"
+    state_selections_path = pack / "protein_context_state_selections.tsv"
     if not protein_db.exists() or not phospho_view.exists():
         raise FileNotFoundError("required mSCS protein artifacts are missing")
 
@@ -120,6 +122,8 @@ def build(mscs_root: Path, pack: Path) -> dict[str, Any]:
     protein_observations = [row for row in observations if row["modality"] == "protein"]
     imported_ids = {row["observation_id"] for row in protein_observations}
     selected_ids = {row["observation_id"] for row in read_tsv(phospho_view)}
+    state_selections = load_state_selections(state_selections_path)
+    selected_ids |= {row["observation_id"] for row in state_selections}
 
     grouped: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in protein_observations:
@@ -204,6 +208,7 @@ def build(mscs_root: Path, pack: Path) -> dict[str, Any]:
             "protein_context_profiles": len(coverage_rows),
             "protein_expression_observations": sum(int(row["protein_expression_observation_count"]) for row in coverage_rows),
             "protein_state_observations": sum(int(row["protein_state_observation_count"]) for row in coverage_rows),
+            "protein_state_curation_rows": len(state_selections),
         },
         "context_completeness": {
             "by_refinement_priority": dict(sorted(Counter(row["refinement_priority"] for row in coverage_rows).items())),

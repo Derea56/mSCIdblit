@@ -9,13 +9,13 @@
       "activity_or_non_expression_assay": 4,
       "ambiguous_or_reporter_assay": 21,
       "outside_current_expression_selection_rule": 11,
-      "phospho_or_active_form_review_scope": 17,
+      "phospho_or_active_form_review_scope": 15,
       "protein_association_not_expression": 1,
       "source_extraction_not_final": 457
     },
-    "imported_observations": 739,
+    "imported_observations": 741,
     "protein_observations": 1259,
-    "remaining_gap_records": 511
+    "remaining_gap_records": 509
   },
   "context_completeness": {
     "by_core_completeness": {
@@ -39,8 +39,9 @@
   "pack_inputs": {
     "protein_context_profiles": 590,
     "protein_expression_observations": 629,
-    "protein_observations": 739,
-    "protein_state_observations": 110
+    "protein_observations": 741,
+    "protein_state_curation_rows": 2,
+    "protein_state_observations": 112
   },
   "policy": "This audit prioritizes metadata refinement only. It does not assign numeric confidence, create graph edges, or promote unresolved mechanism mappings.",
   "priority_contexts": [
@@ -163,6 +164,14 @@
       "protein_observation_count": 3,
       "refinement_priority": "medium",
       "study_id": "FLOW_SCI_043"
+    },
+    {
+      "context_id": "sci:protein:80be2c2b8833937a",
+      "missing_core_fields": "",
+      "missing_secondary_fields": "injury_distance;injury_distance_unit",
+      "protein_observation_count": 3,
+      "refinement_priority": "medium",
+      "study_id": "FLOW_SCI_311"
     },
     {
       "context_id": "sci:protein:863a14fea3165516",
@@ -419,14 +428,6 @@
       "protein_observation_count": 2,
       "refinement_priority": "medium",
       "study_id": "FLOW_SCI_113"
-    },
-    {
-      "context_id": "sci:protein:80be2c2b8833937a",
-      "missing_core_fields": "",
-      "missing_secondary_fields": "injury_distance;injury_distance_unit",
-      "protein_observation_count": 2,
-      "refinement_priority": "medium",
-      "study_id": "FLOW_SCI_311"
     },
     {
       "context_id": "sci:protein:80ec77da93bcd54b",

@@ -34,8 +34,9 @@ DEFAULT_PACK = ROOT / "context_packs" / "spinal_cord_injury"
 DEFAULT_BUNDLE = ROOT / "data" / "processed" / "mechanism_graph_module20_24_v2026_09_25_literature_expansion627"
 RELEASE_ID = "module20_24_mechanism_graph:2026-09-25-literature-expansion-627"
 RELEASE_TAG = "mSCIdblit-v1.9.386"
-CONTEXT_PACK_VERSION = "0.5.28"
+CONTEXT_PACK_VERSION = "0.5.29"
 DEFAULT_CURATION_OVERRIDES = DEFAULT_PACK / "protein_context_curation_overrides.tsv"
+DEFAULT_STATE_SELECTIONS = DEFAULT_PACK / "protein_context_state_selections.tsv"
 
 SCI_SPATIAL_TRANSCRIPTOMIC_DATASETS = {
     "MSCIDATA000008",  # GSE195783: explicit T10 hemisection SCI time course
@@ -135,6 +136,35 @@ def load_curation_overrides(path: Path) -> dict[tuple[str, str], dict[str, str]]
             raise ValueError(f"curation override {row.get('curation_id')} lacks exact source provenance")
         overrides[key] = row
     return overrides
+
+
+def load_state_selections(path: Path) -> list[dict[str, str]]:
+    """Load explicit protein-state selections that are outside the mSCS view."""
+    rows = read_tsv(path)
+    required = {
+        "selection_id", "observation_id", "selection_status", "source_artifact_path",
+        "source_artifact_sha256", "source_locator", "selection_reason",
+    }
+    if rows and not required.issubset(rows[0]):
+        missing = sorted(required - set(rows[0]))
+        raise ValueError(f"protein state selection file is missing fields: {', '.join(missing)}")
+    applied: list[dict[str, str]] = []
+    seen: set[str] = set()
+    for row in rows:
+        if row.get("selection_status") != "applied":
+            continue
+        observation_id = row.get("observation_id", "")
+        if not observation_id:
+            raise ValueError(f"protein state selection {row.get('selection_id')} lacks observation_id")
+        if observation_id in seen:
+            raise ValueError(f"duplicate applied protein state selection: {observation_id}")
+        if not row.get("source_artifact_path") or not row.get("source_artifact_sha256"):
+            raise ValueError(f"protein state selection {row.get('selection_id')} lacks source artifact provenance")
+        if not row.get("source_locator") or not row.get("selection_reason"):
+            raise ValueError(f"protein state selection {row.get('selection_id')} lacks selection provenance")
+        seen.add(observation_id)
+        applied.append(row)
+    return applied
 
 
 def apply_curation_override(row: dict[str, Any], overrides: dict[tuple[str, str], dict[str, str]]) -> dict[str, Any]:
@@ -386,7 +416,13 @@ def exact_node(node_index: dict[str, list[dict[str, str]]], gene_symbol: str | N
     return None, gene_reason or "no exact stable mechanism-node match"
 
 
-def protein_context_rows(db_path: Path, selected_ids: set[str], artifact_hash: str, curation_overrides: dict[tuple[str, str], dict[str, str]]) -> tuple[list[dict[str, str]], dict[str, dict[str, Any]], dict[str, dict[str, Any]]]:
+def protein_context_rows(
+    db_path: Path,
+    selected_ids: set[str],
+    artifact_hash: str,
+    curation_overrides: dict[tuple[str, str], dict[str, str]],
+    state_selections: list[dict[str, str]],
+) -> tuple[list[dict[str, str]], dict[str, dict[str, Any]], dict[str, dict[str, Any]]]:
     contexts: dict[str, dict[str, str]] = {}
     context_meta: dict[str, dict[str, Any]] = {}
     observations: dict[str, dict[str, Any]] = {}
@@ -406,10 +442,49 @@ def protein_context_rows(db_path: Path, selected_ids: set[str], artifact_hash: s
         WHERE po.observation_id = ?
     """
     phospho_path = DEFAULT_MSCS_ROOT / "data/derived/phosphorylation_support_observations.tsv"
-    for selected in read_tsv(phospho_path):
+    selected_rows = {
+        row["observation_id"]: row
+        for row in read_tsv(phospho_path)
+        if row["observation_id"] in selected_ids
+    }
+    with sqlite3.connect(db_path) as db:
+        db.row_factory = sqlite3.Row
+        for selection in state_selections:
+            observation_id = selection["observation_id"]
+            if observation_id not in selected_ids:
+                continue
+            raw = db.execute(query, (observation_id,)).fetchone()
+            if raw is None:
+                raise ValueError(f"curated protein state observation is absent from canonical store: {observation_id}")
+            raw = dict(raw)
+            if selection["source_artifact_path"] != "mSCS/data/flow_protein/flow_protein.sqlite":
+                raise ValueError(f"curated protein state selection has unsupported source artifact: {observation_id}")
+            if selection["source_artifact_sha256"] != artifact_hash:
+                raise ValueError(f"curated protein state selection has stale source checksum: {observation_id}")
+            selected_rows[observation_id] = {
+                "observation_id": observation_id,
+                "gene_symbol": raw.get("gene_symbol") or "",
+                "protein": raw.get("protein") or "",
+                "protein_form": raw.get("protein_form") or "",
+                "state_class": "phosphorylation_specific",
+                "support_tier": raw.get("evidence_grade") or "unknown",
+                "assay": raw.get("assay") or "",
+                "measurement_kind": raw.get("measurement_kind") or "",
+                "value": raw.get("transcribed_value_numeric") if raw.get("transcribed_value_numeric") is not None else raw.get("value"),
+                "unit": raw.get("unit") or "",
+                "direction_vs_control": raw.get("direction_vs_control") or "not_reported",
+                "biological_replicates": raw.get("biological_replicates") or "",
+                "evidence_grade": raw.get("evidence_grade") or "unknown",
+                "extraction_status": raw.get("extraction_status") or "unknown",
+                "primary_source_url": raw.get("source_url") or "",
+                "source_location": selection["source_locator"],
+                "notes": raw.get("notes") or "",
+                "_selection_source": "context_packs/spinal_cord_injury/protein_context_state_selections.tsv",
+                "_selection_id": selection["selection_id"],
+                "_selection_reason": selection["selection_reason"],
+            }
+    for selected in selected_rows.values():
         observation_id = selected["observation_id"]
-        if observation_id not in selected_ids:
-            continue
         with sqlite3.connect(db_path) as db:
             db.row_factory = sqlite3.Row
             row = db.execute(query, (observation_id,)).fetchone()
@@ -485,7 +560,11 @@ def protein_context_rows(db_path: Path, selected_ids: set[str], artifact_hash: s
         source_loc = source_locator(
             f"flow_protein.protein_observations.observation_id={observation_id}",
             row["source_location"],
-            f"selected_view_line_observation_id={observation_id}",
+            (
+                f"selection_id={selected['_selection_id']};{selected['_selection_reason']}"
+                if selected.get("_selection_id") else
+                f"selected_view_line_observation_id={observation_id}"
+            ),
         )
         observations[observation_id] = {
             "observation_id": observation_id, "context_id": context_id,
@@ -509,7 +588,8 @@ def protein_context_rows(db_path: Path, selected_ids: set[str], artifact_hash: s
             "provenance_note": json_text({
                 "canonical_source": "mSCS/data/flow_protein/flow_protein.sqlite",
                 "canonical_observation_id": observation_id,
-                "selection_view": "mSCS/data/derived/phosphorylation_support_observations.tsv",
+                "selection_view": selected.get("_selection_source") or "mSCS/data/derived/phosphorylation_support_observations.tsv",
+                "selection_reason": selected.get("_selection_reason"),
                 "selection_state_class": selected.get("state_class"),
                 "support_tier": selected.get("support_tier"),
                 "evidence_grade": selected.get("evidence_grade"),
@@ -1551,7 +1631,8 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     spatial_pilot = mscs_root / "data/spatial/pilot_all_studies/gse269377_cluster_proxy/spatial_pair_percentages_all_samples.tsv"
     downstream_evidence = bundle / "mechanism_downstream_evidence_records.tsv"
     literature_expansion = bundle / "mechanism_literature_expansion.tsv.gz"
-    for path in (protein_db, phospho_view, epigenetic_db, spatial_catalog, spatial_pilot, bundle / "mechanism_nodes.tsv", downstream_evidence, literature_expansion, curation_overrides_path):
+    state_selections_path = DEFAULT_STATE_SELECTIONS
+    for path in (protein_db, phospho_view, epigenetic_db, spatial_catalog, spatial_pilot, bundle / "mechanism_nodes.tsv", downstream_evidence, literature_expansion, curation_overrides_path, state_selections_path):
         if not path.exists():
             raise FileNotFoundError(path)
 
@@ -1563,6 +1644,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
     downstream_evidence_hash = sha256(downstream_evidence)
     literature_expansion_hash = sha256(literature_expansion)
     curation_overrides_hash = sha256(curation_overrides_path)
+    state_selections_hash = sha256(state_selections_path)
     metabolomics_transcription_paths = {
         relative_path: mscs_root / relative_path
         for relative_path in sorted(set(METABOLOMICS_TRANSCRIPTION_ARTIFACTS.values()))
@@ -1574,13 +1656,18 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
         relative_path: sha256(path) for relative_path, path in metabolomics_transcription_paths.items()
     }
     curation_overrides = load_curation_overrides(curation_overrides_path)
+    state_selections = load_state_selections(state_selections_path)
     selected = read_tsv(phospho_view)
-    selected_ids = {row["observation_id"] for row in selected}
+    selected_ids = {row["observation_id"] for row in selected} | {
+        row["observation_id"] for row in state_selections
+    }
     metabolomics_contexts, metabolomics_meta, metabolomics_obs = metabolomics_rows(
         protein_db, protein_hash, curation_overrides, mscs_root,
     )
     metabolomics_ids = set(metabolomics_obs)
-    protein_contexts, protein_meta, protein_obs = protein_context_rows(protein_db, selected_ids, protein_hash, curation_overrides)
+    protein_contexts, protein_meta, protein_obs = protein_context_rows(
+        protein_db, selected_ids, protein_hash, curation_overrides, state_selections,
+    )
     expression_contexts, expression_meta, expression_obs = protein_expression_rows(
         protein_db, selected_ids | metabolomics_ids, protein_hash, curation_overrides,
     )
@@ -1671,6 +1758,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
         "scope_rule": "Only source records with explicit spinal-cord, spinal-cord-injury, or injury-model context were selected; no generic mechanism evidence was copied.",
         "selected_evidence": {
             "protein_state_view_rows": len(selected),
+            "protein_state_curation_rows": len(state_selections),
             "protein_state_observations_imported": len(selected_ids),
             "protein_expression_candidate_rows": len(expression_obs),
             "protein_observations_imported": len(protein_obs),
@@ -1723,6 +1811,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             {"path": str(downstream_evidence.relative_to(ROOT)), "sha256": downstream_evidence_hash, "size_bytes": downstream_evidence.stat().st_size},
             {"path": str(literature_expansion.relative_to(ROOT)), "sha256": literature_expansion_hash, "size_bytes": literature_expansion.stat().st_size},
             {"path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv", "sha256": curation_overrides_hash, "size_bytes": curation_overrides_path.stat().st_size},
+            {"path": "context_packs/spinal_cord_injury/protein_context_state_selections.tsv", "sha256": state_selections_hash, "size_bytes": state_selections_path.stat().st_size},
             *[
                 {"path": f"mSCS/{relative_path}", "sha256": digest, "size_bytes": metabolomics_transcription_paths[relative_path].stat().st_size}
                 for relative_path, digest in metabolomics_transcription_hashes.items()
@@ -1751,9 +1840,9 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             "route_confidence_created": 0,
         },
         "notes": [
-            "Protein observations combine the 110-row mSCS phosphorylation-support selection with directly measured, source-extracted non-phosphorylated protein records; they are not the full 1,259-row canonical store.",
+            "Protein observations combine the mSCS phosphorylation-support selection, one explicitly curated source-extracted phosphoproteomic state record, and directly measured non-phosphorylated protein observations; they are not the full 1,259-row canonical store.",
             "Epigenomics imports all explicitly reported assay contexts from the mSCS epigenetic store and retains exact binary feature-status records with their own source artifact paths and checksums; binary status is not converted into a directional comparison.",
-            "Protein-expression selection excludes phosphoprotein/active-form duplicates, ambiguous or inaccessible extraction states, reporter/activity-only assays, and records without a measured value or reported direction.",
+            "Protein-expression selection excludes phosphoprotein/active-form duplicates, ambiguous or inaccessible extraction states, reporter/activity-only assays, inferred timepoints, and records without a measured value or reported direction. The explicit phosphoproteomic selection is retained separately through protein_context_state_selections.tsv.",
             "Metabolomics imports explicit ATP, anandamide, prostaglandin E2, and leukotriene B4 assay records from the canonical mSCS store; queue rows with assay mismatch, imaging, or dynamic-release endpoints remain excluded from this modality.",
             "Dependency groups are source/study/timepoint/population or source/study/assay/context groups; they are intended to prevent correlated readouts from being double-counted.",
             "Downstream protein and phosphoprotein measurements are linked only to the measured state/node when an exact stable node match exists; no upstream ligand/receptor causality is inferred.",
@@ -1805,6 +1894,7 @@ def build(mscs_root: Path, pack: Path, bundle: Path, curation_overrides_path: Pa
             "protein_context_gap_audit": "protein_context_gap_audit.json",
             "protein_context_gap_candidates": "protein_context_gap_candidates.tsv",
             "protein_context_curation_overrides": "protein_context_curation_overrides.tsv",
+            "protein_context_state_selections": "protein_context_state_selections.tsv",
         },
         "counts": {
             "context_profiles": len(all_contexts), "observations": len(observations),

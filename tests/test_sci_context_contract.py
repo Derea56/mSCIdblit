@@ -30,10 +30,10 @@ def test_sci_context_manifest_pins_neutral_mechanism_release():
     bundle_path = PACK / manifest["mechanism_dependency"]["bundle_metadata"]
     assert bundle_path.resolve().is_file()
     assert manifest["counts"]["context_profiles"] > 1
-    assert manifest["context_pack_version"] == "0.5.28"
+    assert manifest["context_pack_version"] == "0.5.29"
     assert manifest["counts"]["context_profiles"] == 678
-    assert manifest["counts"]["observations"] == 849
-    assert manifest["counts"]["mechanism_links"] == 849
+    assert manifest["counts"]["observations"] == 851
+    assert manifest["counts"]["mechanism_links"] == 851
     assert 0 < manifest["counts"]["included_mechanism_links"] < manifest["counts"]["mechanism_links"]
 
 
@@ -371,16 +371,16 @@ def test_sci_context_pack_validator_accepts_populated_release():
     summary = validate_pack(PACK)
 
     assert summary["pack_id"] == "spinal_cord_injury"
-    assert summary["counts"]["observations"] == 849
-    assert summary["counts"]["mechanism_links"] == 849
+    assert summary["counts"]["observations"] == 851
+    assert summary["counts"]["mechanism_links"] == 851
 
 
 def test_sci_observations_and_links_preserve_evidence_boundaries():
     observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
     links = list(csv.DictReader((PACK / "mechanism_links.tsv").open(), delimiter="\t"))
-    assert Counter(row["modality"] for row in observations) == {"protein": 739, "metabolomics": 5, "epigenomics": 19, "transcriptomics": 21, "mechanism_evidence": 65}
+    assert Counter(row["modality"] for row in observations) == {"protein": 741, "metabolomics": 5, "epigenomics": 19, "transcriptomics": 21, "mechanism_evidence": 65}
     assert Counter(row["evidence_role"] for row in observations) == {
-        "dataset_observation": 763,
+        "dataset_observation": 765,
         "contextual_annotation": 84,
         "context_matched_external_observation": 2,
     }
@@ -497,10 +497,10 @@ def test_sci_protein_context_gap_audit_is_reproducible_and_separate_from_evidenc
     audit = json.loads((PACK / "protein_context_gap_audit.json").read_text())
     assert (PACK / "protein_context_coverage.tsv").is_file()
     assert (PACK / "protein_context_gap_candidates.tsv").is_file()
-    assert audit["pack_inputs"]["protein_observations"] == 739
+    assert audit["pack_inputs"]["protein_observations"] == 741
     assert audit["pack_inputs"]["protein_expression_observations"] == 629
     assert audit["canonical_store"]["protein_observations"] == 1259
-    assert audit["canonical_store"]["remaining_gap_records"] == 511
+    assert audit["canonical_store"]["remaining_gap_records"] == 509
     assert audit["policy"].startswith("This audit prioritizes metadata refinement only")
 
 
@@ -519,6 +519,25 @@ def test_sci_protein_selector_keeps_direct_expression_and_excludes_unresolved_st
         "FLOW_SCI_526__OBS526_CXCL12",  # antibody array
     }:
         assert observation_id in observations
+
+    phosphoproteomic = observations["FLOW_SCI_024__S024_O10"]
+    assert phosphoproteomic["measured_entity_type"] == "phosphorylated_protein"
+    assert phosphoproteomic["value_numeric"] == "1.23"
+    assert phosphoproteomic["timepoint_value"] == "24.0"
+    assert phosphoproteomic["timepoint_unit"] == "hours"
+    assert phosphoproteomic["observation_status"] == "transcribed"
+    assert phosphoproteomic["evidence_role"] == "dataset_observation"
+    assert "SCI-PROTEIN-STATE-0001" in phosphoproteomic["source_locator"]
+    assert phosphoproteomic["source_artifact_sha256"] == "db992d208fd37ed1483ff711ad05dc45ebf8254638f54b0a752d374c219e2aaf"
+
+    qualitative_phosphoproteomic = observations["FLOW_SCI_311__O2"]
+    assert qualitative_phosphoproteomic["measured_entity_type"] == "phosphorylated_protein"
+    assert qualitative_phosphoproteomic["value_numeric"] == ""
+    assert qualitative_phosphoproteomic["value_kind"] == "qualitative"
+    assert qualitative_phosphoproteomic["observation_status"] == "reported"
+    assert qualitative_phosphoproteomic["timepoint_value"] == "7.0"
+    assert qualitative_phosphoproteomic["timepoint_unit"] == "day"
+    assert "SCI-PROTEIN-STATE-0002" in qualitative_phosphoproteomic["source_locator"]
 
     # A timepoint explicitly marked inferred remains outside the release.
     assert "FLOW_SCI_536__OBS536_FTH1" not in observations

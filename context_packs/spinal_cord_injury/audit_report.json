@@ -6,7 +6,7 @@
       "SCICTX-CUR-0002": 30,
       "SCICTX-CUR-0003": 10,
       "SCICTX-CUR-0004": 3,
-      "SCICTX-CUR-0005": 7,
+      "SCICTX-CUR-0005": 8,
       "SCICTX-CUR-0006": 5,
       "SCICTX-CUR-0007": 1,
       "SCICTX-CUR-0008": 1,
@@ -44,7 +44,7 @@
       "SCICTX-CUR-0040": 3,
       "SCICTX-CUR-0041": 2,
       "SCICTX-CUR-0042": 1,
-      "SCICTX-CUR-0043": 2,
+      "SCICTX-CUR-0043": 3,
       "SCICTX-CUR-0044": 5,
       "SCICTX-CUR-0045": 4,
       "SCICTX-CUR-0046": 2,
@@ -251,7 +251,7 @@
     "evidence_role": {
       "context_matched_external_observation": 2,
       "contextual_annotation": 84,
-      "dataset_observation": 763
+      "dataset_observation": 765
     },
     "injury_model": {
       "65-kdyn T9 contusion in adult male and female C57BL/6 mice": 3,
@@ -306,7 +306,7 @@
       "T10 contusion SCI in C57BL/6J mice": 2,
       "T10 contusion SCI using the NYU II impactor": 3,
       "T10 contusion spinal cord injury using the Louisville Injury System Apparatus": 6,
-      "T10 contusion using the Infinite Horizons impactor": 7,
+      "T10 contusion using the Infinite Horizons impactor": 8,
       "T10 contusive spinal cord injury using a standardized weight-drop impact": 13,
       "T10 contusive spinal cord injury using the Infinite Horizon impactor": 3,
       "T10 contusive spinal cord injury using the Louisville Injury System Apparatus": 2,
@@ -347,7 +347,7 @@
       "T9 compressive spinal cord injury using No. 5 Dumont forceps": 3,
       "T9 compressive spinal cord injury using a vascular clip": 4,
       "T9 contusion spinal cord injury using a 1.85-g weight-drop impactor": 5,
-      "T9 contusion spinal cord injury using a mouse weight-drop impactor": 2,
+      "T9 contusion spinal cord injury using a mouse weight-drop impactor": 3,
       "T9 contusion spinal cord injury using an Infinite Horizons impactor": 3,
       "T9 contusion spinal cord injury using the Infinite Horizon impactor": 2,
       "T9 contusion spinal cord injury using the Infinite Horizons impactor": 4,
@@ -509,19 +509,19 @@
     },
     "linked_status": {
       "linked": 383,
-      "unlinked": 466
+      "unlinked": 468
     },
     "modality": {
       "epigenomics": 19,
       "mechanism_evidence": 65,
       "metabolomics": 5,
-      "protein": 739,
+      "protein": 741,
       "transcriptomics": 21
     },
     "observation_status": {
       "observed": 2,
-      "reported": 176,
-      "transcribed": 655,
+      "reported": 177,
+      "transcribed": 656,
       "unknown": 16
     },
     "perturbation": {
@@ -600,7 +600,7 @@
       "SCI versus naive": 5,
       "SCI versus naive control": 7,
       "SCI versus normal control": 1,
-      "SCI versus sham": 26,
+      "SCI versus sham": 27,
       "SCI versus sham and C3aR1/CXCR2 perturbation arms": 2,
       "SCI versus sham and CD36 inhibition": 2,
       "SCI versus sham and treatment-stratified receptor regulation": 2,
@@ -638,7 +638,7 @@
       "SCI, Lcn2 knockout versus wild-type injury-region spinal cord cells": 1,
       "SCI, depletion, and control groups": 1,
       "SCI, photobiomodulation, and inhibitor groups": 1,
-      "SCI, sham, Rgs6-silenced, Rgs6-overexpressing, and compound C groups": 2,
+      "SCI, sham, Rgs6-silenced, Rgs6-overexpressing, and compound C groups": 3,
       "SCI, sham, and SCI plus NSC87877 inhibitor": 1,
       "SCI, sham, and olprinone-treatment groups": 4,
       "SCI, sham, manual-acupuncture, and electroacupuncture groups": 3,
@@ -804,7 +804,7 @@
       "FLOW_SCI_020": 1,
       "FLOW_SCI_021": 36,
       "FLOW_SCI_022": 7,
-      "FLOW_SCI_024": 7,
+      "FLOW_SCI_024": 8,
       "FLOW_SCI_026": 4,
       "FLOW_SCI_030": 2,
       "FLOW_SCI_031": 5,
@@ -939,7 +939,7 @@
       "FLOW_SCI_302": 2,
       "FLOW_SCI_303": 2,
       "FLOW_SCI_304": 4,
-      "FLOW_SCI_311": 2,
+      "FLOW_SCI_311": 3,
       "FLOW_SCI_312": 2,
       "FLOW_SCI_321": 3,
       "FLOW_SCI_322": 5,
@@ -1082,7 +1082,7 @@
       "21 day": 4,
       "24 h; 48 h; 5 d; 8 d mixed": 1,
       "24 hour": 38,
-      "24 hours": 23,
+      "24 hours": 24,
       "24 hpi": 1,
       "25 hours": 1,
       "28 d": 1,
@@ -1118,7 +1118,7 @@
       "6 week": 3,
       "60 day": 2,
       "63 day": 2,
-      "7 day": 131,
+      "7 day": 132,
       "7 days": 8,
       "7 dpi": 11,
       "7 weeks_after_transplantation": 1,
@@ -1222,7 +1222,7 @@
       "Plexin-B1 constitutive or astrocyte-targeted conditional deletion versus control mice": 3,
       "Postn knockout and periostin-neutralizing antibody arms": 1,
       "Repeated intravenous morphine versus saline after SCI": 2,
-      "Rgs6-silencing or Rgs6-overexpression lentivirus injected rostral and caudal to the lesion immediately after SCI; compound C 20 mg/kg every 2 days beginning 1 week before SCI": 2,
+      "Rgs6-silencing or Rgs6-overexpression lentivirus injected rostral and caudal to the lesion immediately after SCI; compound C 20 mg/kg every 2 days beginning 1 week before SCI": 3,
       "S14 or VP1.15 PDE7 inhibitor versus SCI vehicle and sham controls": 4,
       "SCI vehicle versus intrathecal ODN 2088 (150 ng/g at 24 hours and every 48 hours thereafter)": 2,
       "SCI vehicle versus zileuton or montelukast treatment": 2,
@@ -1336,7 +1336,7 @@
       "observational": 8,
       "observational SCI time course": 3,
       "observational acute time course": 7,
-      "observational injury versus sham comparison": 7,
+      "observational injury versus sham comparison": 8,
       "observational injury versus sham time course": 4,
       "observational injury-versus-sham study with rapamycin rescue arm": 5,
       "observational severity comparison": 1,
@@ -1375,7 +1375,7 @@
     "unresolved_mapping_reason": {
       "ambiguous canonical entity label match (2 stable nodes); staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 29,
       "ambiguous gene_symbol match (2 stable nodes); staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 1,
-      "no exact stable mechanism-node match; staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 436
+      "no exact stable mechanism-node match; staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 438
     }
   },
   "mechanism_link_counts": {
@@ -1384,7 +1384,7 @@
     "numeric_modality_weights_created": 0,
     "partial_routes_promoted": 0,
     "route_confidence_created": 0,
-    "staging_unresolved": 466
+    "staging_unresolved": 468
   },
   "metabolomics_assessment": {
     "candidate_rows_assessed": 10,
@@ -1504,9 +1504,9 @@
     ]
   },
   "notes": [
-    "Protein observations combine the 110-row mSCS phosphorylation-support selection with directly measured, source-extracted non-phosphorylated protein records; they are not the full 1,259-row canonical store.",
+    "Protein observations combine the mSCS phosphorylation-support selection, one explicitly curated source-extracted phosphoproteomic state record, and directly measured non-phosphorylated protein observations; they are not the full 1,259-row canonical store.",
     "Epigenomics imports all explicitly reported assay contexts from the mSCS epigenetic store and retains exact binary feature-status records with their own source artifact paths and checksums; binary status is not converted into a directional comparison.",
-    "Protein-expression selection excludes phosphoprotein/active-form duplicates, ambiguous or inaccessible extraction states, reporter/activity-only assays, and records without a measured value or reported direction.",
+    "Protein-expression selection excludes phosphoprotein/active-form duplicates, ambiguous or inaccessible extraction states, reporter/activity-only assays, inferred timepoints, and records without a measured value or reported direction. The explicit phosphoproteomic selection is retained separately through protein_context_state_selections.tsv.",
     "Metabolomics imports explicit ATP, anandamide, prostaglandin E2, and leukotriene B4 assay records from the canonical mSCS store; queue rows with assay mismatch, imaging, or dynamic-release endpoints remain excluded from this modality.",
     "Dependency groups are source/study/timepoint/population or source/study/assay/context groups; they are intended to prevent correlated readouts from being double-counted.",
     "Downstream protein and phosphoprotein measurements are linked only to the measured state/node when an exact stable node match exists; no upstream ligand/receptor causality is inferred.",
@@ -1541,11 +1541,12 @@
     "metabolomics_candidate_rows_assessed": 10,
     "metabolomics_observations_excluded": 5,
     "metabolomics_observations_imported": 5,
-    "observations_with_context_curation": 743,
+    "observations_with_context_curation": 745,
     "perturbation_observation_rows_imported": 0,
     "protein_expression_candidate_rows": 629,
-    "protein_observations_imported": 739,
-    "protein_state_observations_imported": 110,
+    "protein_observations_imported": 741,
+    "protein_state_curation_rows": 2,
+    "protein_state_observations_imported": 112,
     "protein_state_view_rows": 110,
     "spatial_exclusion_reason": "GSE269377 is a healthy/mutant FUS spinal-cord spatial dataset without an explicit spinal-cord-injury model; mSCS spatial_evidence has zero rows.",
     "spatial_pilot_rows_assessed_but_excluded": 144,
@@ -1602,6 +1603,11 @@
       "path": "context_packs/spinal_cord_injury/protein_context_curation_overrides.tsv",
       "sha256": "3eefba21f533357c1ee42f4ab57c8c945f0985bffdfc0f3aa2fb28e36072001d",
       "size_bytes": 187866
+    },
+    {
+      "path": "context_packs/spinal_cord_injury/protein_context_state_selections.tsv",
+      "sha256": "18c3dd7fa41ddc87c358b94888d77ec29f6809c146213615f7e5dcbc42fb4b29",
+      "size_bytes": 901
     },
     {
       "path": "mSCS/data/flow_protein/transcriptions/batch_2026-08-20_direct_text_numeric_222_241_243_424.tsv",
