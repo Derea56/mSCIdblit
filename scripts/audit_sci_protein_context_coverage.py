@@ -119,7 +119,13 @@ def build(mscs_root: Path, pack: Path) -> dict[str, Any]:
 
     contexts = {row["context_id"]: row for row in read_tsv(pack / "contexts.tsv")}
     observations = read_tsv(pack / "observations.tsv")
-    protein_observations = [row for row in observations if row["modality"] == "protein"]
+    # This audit reconciles the canonical mSCS flow-protein store only.
+    # External context-matched protein observations are audited through their
+    # curation inputs and must not inflate canonical-store coverage counts.
+    protein_observations = [
+        row for row in observations
+        if row["modality"] == "protein" and row["source_system"] == "mSCS"
+    ]
     imported_ids = {row["observation_id"] for row in protein_observations}
     selected_ids = {row["observation_id"] for row in read_tsv(phospho_view)}
     state_selections = load_state_selections(state_selections_path)

@@ -31,9 +31,9 @@ def test_sci_context_manifest_pins_neutral_mechanism_release():
     assert bundle_path.resolve().is_file()
     assert manifest["counts"]["context_profiles"] > 1
     assert manifest["context_pack_version"] == "0.5.29"
-    assert manifest["counts"]["context_profiles"] == 678
-    assert manifest["counts"]["observations"] == 851
-    assert manifest["counts"]["mechanism_links"] == 851
+    assert manifest["counts"]["context_profiles"] == 681
+    assert manifest["counts"]["observations"] == 902
+    assert manifest["counts"]["mechanism_links"] == 902
     assert 0 < manifest["counts"]["included_mechanism_links"] < manifest["counts"]["mechanism_links"]
 
 
@@ -371,18 +371,18 @@ def test_sci_context_pack_validator_accepts_populated_release():
     summary = validate_pack(PACK)
 
     assert summary["pack_id"] == "spinal_cord_injury"
-    assert summary["counts"]["observations"] == 851
-    assert summary["counts"]["mechanism_links"] == 851
+    assert summary["counts"]["observations"] == 902
+    assert summary["counts"]["mechanism_links"] == 902
 
 
 def test_sci_observations_and_links_preserve_evidence_boundaries():
     observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
     links = list(csv.DictReader((PACK / "mechanism_links.tsv").open(), delimiter="\t"))
-    assert Counter(row["modality"] for row in observations) == {"protein": 741, "metabolomics": 5, "epigenomics": 19, "transcriptomics": 21, "mechanism_evidence": 65}
+    assert Counter(row["modality"] for row in observations) == {"protein": 762, "metabolomics": 35, "epigenomics": 19, "transcriptomics": 21, "mechanism_evidence": 65}
     assert Counter(row["evidence_role"] for row in observations) == {
         "dataset_observation": 765,
         "contextual_annotation": 84,
-        "context_matched_external_observation": 2,
+        "context_matched_external_observation": 53,
     }
     assert all(row["dependency_group"] for row in observations)
     assert all(row["mechanism_release_id"] == "module20_24_mechanism_graph:2026-09-25-literature-expansion-627" for row in links)
@@ -464,7 +464,10 @@ def test_sci_module_evidence_context_is_contained_without_route_promotion():
 
 def test_sci_metabolomics_preserves_explicit_assay_context_and_exclusions():
     observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
-    metabolomics = {row["observation_id"]: row for row in observations if row["modality"] == "metabolomics"}
+    metabolomics = {
+        row["observation_id"]: row for row in observations
+        if row["modality"] == "metabolomics" and row["source_record_type"] == "metabolomics_observation"
+    }
     assert set(metabolomics) == {
         "FLOW_SCI_222__OBS222_6W_ATP_MS",
         "FLOW_SCI_240__FLOW_SCI_240_OBS1",
@@ -480,7 +483,9 @@ def test_sci_metabolomics_preserves_explicit_assay_context_and_exclusions():
 
     audit = json.loads((PACK / "audit_report.json").read_text())
     assert audit["selected_evidence"]["metabolomics_candidate_rows_assessed"] == 10
-    assert audit["selected_evidence"]["metabolomics_observations_imported"] == 5
+    assert audit["selected_evidence"]["metabolomics_observations_imported"] == 35
+    assert audit["selected_evidence"]["mSCS_metabolomics_observations_imported"] == 5
+    assert audit["selected_evidence"]["external_metabolomics_observations_imported"] == 30
     assert audit["selected_evidence"]["metabolomics_observations_excluded"] == 5
     excluded = {
         row["observation_id"]: row["reason"]
@@ -491,6 +496,40 @@ def test_sci_metabolomics_preserves_explicit_assay_context_and_exclusions():
     assert "assay/context mismatch" in excluded["FLOW_SCI_241__FLOW_SCI_241_OBS1"]
     assert "FLOW_SCI_222__OBS222_6W_ATP_FRET" in excluded
     assert "FLOW_SCI_222__OBS222_6W_ATP_RELEASE" in excluded
+
+
+def test_external_protein_and_metabolomics_curation_preserve_primary_source_context():
+    observations = list(csv.DictReader((PACK / "observations.tsv").open(), delimiter="\t"))
+    contexts = {row["context_id"]: row for row in csv.DictReader((PACK / "contexts.tsv").open(), delimiter="\t")}
+    external_protein = [row for row in observations if row["observation_id"].startswith("EXTERNAL_PROTEIN:")]
+    external_metabolomics = [row for row in observations if row["observation_id"].startswith("EXTERNAL_METABOLOMICS:")]
+
+    assert len(external_protein) == 21
+    assert len(external_metabolomics) == 30
+    assert {contexts[row["context_id"]]["study_id"] for row in external_protein} == {"PXD003473"}
+    assert {contexts[row["context_id"]]["study_id"] for row in external_metabolomics} == {"MTBLS6350"}
+    assert {row["timepoint_value"] for row in external_protein} == {"24.0", "7.0"}
+    assert {row["timepoint_unit"] for row in external_protein} == {"hour", "day"}
+    assert {row["timepoint_value"] for row in external_metabolomics} == {"3.0"}
+    assert {row["timepoint_unit"] for row in external_metabolomics} == {"day"}
+    assert {row["direction_vs_control"] for row in external_protein} == {"increased", "decreased"}
+    assert {row["direction_vs_control"] for row in external_metabolomics} == {"increased", "decreased"}
+    assert all(row["evidence_role"] == "context_matched_external_observation" for row in external_protein + external_metabolomics)
+    assert all(row["source_artifact_path"].endswith("external_protein_context_curation.tsv") for row in external_protein)
+    assert all(row["source_artifact_path"].endswith("external_metabolomics_context_curation.tsv") for row in external_metabolomics)
+    assert all(row["dependency_group"] for row in external_protein + external_metabolomics)
+    assert all("primary_source_id" in row["provenance_note"] for row in external_protein + external_metabolomics)
+    assert all(contexts[row["context_id"]]["injury_model"] for row in external_protein + external_metabolomics)
+    assert all(contexts[row["context_id"]]["sample_id"] == "" for row in external_protein + external_metabolomics)
+
+    tln1 = next(row for row in external_protein if row["source_record_key"].endswith("Tln1:24h"))
+    assert tln1["feature_id"] == "Tln1"
+    metabolite = next(row for row in external_metabolomics if row["source_record_key"].endswith("Guanidoacetic_acid:3d"))
+    assert metabolite["value_numeric"] == "4.061"
+    assert metabolite["unit"] == "log2 fold change (ASCI/sham)"
+    audit = json.loads((PACK / "audit_report.json").read_text())
+    assert audit["selected_evidence"]["external_protein_observations_imported"] == 21
+    assert audit["selected_evidence"]["external_metabolomics_observations_imported"] == 30
 
 
 def test_sci_protein_context_gap_audit_is_reproducible_and_separate_from_evidence():

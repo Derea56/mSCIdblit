@@ -7,9 +7,11 @@ read only for stable identifier resolution and is not rewritten or duplicated.
 
 ## Current status
 
-Release 0.5.26 contains 763 dataset observations from the mSCS evidence stores:
+Release 0.5.29 contains 902 observations: 765 dataset observations from the
+mSCS evidence stores, 53 context-matched external observations, and 84
+contextual annotations.
 
-- 110 protein/phosphoprotein observations selected from the curated
+- 112 protein/phosphoprotein observations selected from the curated
   `mSCS/data/derived/phosphorylation_support_observations.tsv` view and joined
   back to exact records in `mSCS/data/flow_protein/flow_protein.sqlite`.
 - 629 additional directly measured, source-extracted non-phosphorylated or
@@ -19,7 +21,12 @@ Release 0.5.26 contains 763 dataset observations from the mSCS evidence stores:
   extraction states, reporter/activity-only assays, inferred timepoints, and
   records without a measured value or reported direction. Explicit metabolite
   and lipid-mediator records are excluded from this protein count.
-- 5 metabolomics observations selected from explicit SCI metabolite assays in
+- 21 context-matched external protein observations from rat SCI
+  neuroproteomics study `PXD003473` (primary source `PMCID:PMC4937511`),
+  covering severe T9 contusion, rostral spinal cord, and 24-hour or 7-day
+  pooled samples. These retain qualitative source-reported direction without
+  inventing scalar values or sample IDs.
+- 35 metabolomics observations: 5 selected from explicit SCI metabolite assays in
   the canonical flow-protein store: ATP by LC-MS/MS at 6 weeks after SCI,
   PGE2 and LTB4 by spinal-cord ELISA at 24 hours after SCI, and anandamide by
   LC-MS/MS in dorsal-root-ganglion and below-lesion spinal tissue at day 28.
@@ -27,6 +34,10 @@ Release 0.5.26 contains 763 dataset observations from the mSCS evidence stores:
   comparisons when exact concentration values were not printed. Their exact
   transcription artifact paths and SHA-256 checksums are retained in the
   observation provenance.
+- 30 context-matched external metabolomics observations from `MTBLS6350`
+  (`PRJNA895603`; primary source `DOI:10.3389/fnins.2022.1066528`), covering
+  3-day T10 lateral-hemisection SCI rat spinal-cord samples and table-level
+  log2 fold changes.
 - 19 epigenomics observations from `mSCS/data/epigenetic/epigenetic.sqlite`,
   preserving occupancy, accessibility, histone, methylation, and
   RNA-modification context where reported. This includes two exact binary
@@ -44,9 +55,9 @@ locator, study/context fields, and dependency group. Context profiles preserve
 species, injury model, injury severity, injury level, sex, post-injury
 timepoint, tissue, lesion distance, cell population, sample scope, condition,
 and perturbation status when reported. Missing values remain unknown or
-unreported; they are not converted into negative evidence. The release uses
-`dataset_observation` only. It does not fabricate external context-matched
-observations or inferred bridges.
+unreported; they are not converted into negative evidence. External records
+are explicitly labeled `context_matched_external_observation`; no inferred
+bridges are included.
 
 The metabolomics audit assessed 10 metabolite-oriented records. Five were
 imported. Five remain excluded with explicit reasons: two queued anandamide
@@ -54,7 +65,7 @@ rows retain an unresolved flow-cytometry-versus-LC-MS/MS mismatch, ATP FRET is
 reserved for imaging, ATP microdialysis is reserved for functional evidence,
 and the ATP-synthase protein immunoblot remains protein evidence.
 
-There are 383 included exact stable-node links and 380 unresolved staging links.
+There are 385 included exact stable-node links and 517 unresolved staging links.
 Unresolved observations are retained at module boundary `21B` solely as a
 review scope, with no graph-edge, partial-route, route-confidence, or numeric
 modality-weight promotion. Downstream protein measurements support the
@@ -105,6 +116,10 @@ that context evidence cannot create or promote a generic graph edge.
 - `protein_context_curation_overrides.tsv` — exact, study-level context
   refinements with source locators; this is an input to the reproducible
   builder, not a manually edited derived table.
+- `external_protein_context_curation.tsv` — source-located external SCI
+  neuroproteomic observations used by the reproducible builder.
+- `external_metabolomics_context_curation.tsv` — source-located external SCI
+  metabolomics observations used by the reproducible builder.
 - `../../scripts/build_sci_context_pack.py` — reproducible importer/curator.
 - `../../scripts/audit_sci_protein_context_coverage.py` — reproducible protein
   context refinement audit.

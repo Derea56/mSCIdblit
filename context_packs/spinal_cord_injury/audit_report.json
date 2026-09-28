@@ -249,7 +249,7 @@
       "SCICTX-CUR-0246": 1
     },
     "evidence_role": {
-      "context_matched_external_observation": 2,
+      "context_matched_external_observation": 53,
       "contextual_annotation": 84,
       "dataset_observation": 765
     },
@@ -292,6 +292,7 @@
       "Moderate thoracic contusion using the W.M. KECK+ Model III impactor": 1,
       "Moderately severe T10 crush SCI using Dumont forceps": 7,
       "NYU weight-drop thoracic contusion": 2,
+      "NYU-MASCIS weight-drop thoracic contusion": 21,
       "P2/P7 neonatal spinal cord crush injury at T10": 6,
       "Severe T10 contusion spinal cord injury without laminectomy using a computer-controlled impactor": 4,
       "Severe T9 contusive spinal cord injury using the Louisville Injury Systems Apparatus": 3,
@@ -314,6 +315,7 @@
       "T10 falling-object contusion spinal cord injury": 3,
       "T10 forceps-compression spinal cord injury": 3,
       "T10 graded contusion spinal cord injury using the MASCIS Impactor-III": 36,
+      "T10 lateral hemisection SCI": 30,
       "T10 midline contusion spinal cord injury using the Infinite Horizon Impactor": 2,
       "T10 midline contusion spinal cord injury using the Infinite Horizon Spinal Cord Impactor": 4,
       "T10 moderate contusion spinal cord injury using the Infinite Horizons impactor": 2,
@@ -508,20 +510,20 @@
       "wild-type mouse thoracic spinal cord hemisection": 1
     },
     "linked_status": {
-      "linked": 383,
-      "unlinked": 468
+      "linked": 385,
+      "unlinked": 517
     },
     "modality": {
       "epigenomics": 19,
       "mechanism_evidence": 65,
-      "metabolomics": 5,
-      "protein": 741,
+      "metabolomics": 35,
+      "protein": 762,
       "transcriptomics": 21
     },
     "observation_status": {
       "observed": 2,
-      "reported": 177,
-      "transcribed": 656,
+      "reported": 198,
+      "transcribed": 686,
       "unknown": 16
     },
     "perturbation": {
@@ -720,6 +722,7 @@
       "naive and 6-hour SCI; Tnf^fl/fl versus LysM^CreTnf^fl/fl mice": 4,
       "naive mouse versus injured mouse": 2,
       "naive, saline, and DHA groups": 4,
+      "none": 51,
       "not_reported": 1,
       "p75-positive and p75-knockout dorsal-hemisection SCI groups": 1,
       "perilesional spinal cord tissue": 4,
@@ -1030,7 +1033,9 @@
       "MSCISTUDY000033": 1,
       "MSCISTUDY000038": 4,
       "MSCISTUDY000192": 1,
+      "MTBLS6350": 30,
       "PMID:40443301": 2,
+      "PXD003473": 21,
       "STUDY_ATF4_ZBTB38_2017": 2,
       "STUDY_BURDA_2022": 1,
       "STUDY_FBXL12_M6A_2025": 2,
@@ -1081,7 +1086,7 @@
       "2 week": 1,
       "21 day": 4,
       "24 h; 48 h; 5 d; 8 d mixed": 1,
-      "24 hour": 38,
+      "24 hour": 51,
       "24 hours": 24,
       "24 hpi": 1,
       "25 hours": 1,
@@ -1089,7 +1094,7 @@
       "28 day": 21,
       "28 dpi": 2,
       "3 d": 1,
-      "3 day": 112,
+      "3 day": 142,
       "3 days": 10,
       "3 dpi": 5,
       "3 hour": 1,
@@ -1118,7 +1123,7 @@
       "6 week": 3,
       "60 day": 2,
       "63 day": 2,
-      "7 day": 132,
+      "7 day": 140,
       "7 days": 8,
       "7 dpi": 11,
       "7 weeks_after_transplantation": 1,
@@ -1329,7 +1334,7 @@
       "naive versus SCI; plasma EV transfer experiments retained as context only": 7,
       "natural-history time course; no molecular treatment": 3,
       "no molecular treatment reported for the imported protein time course": 4,
-      "none": 5,
+      "none": 56,
       "none for the primary time course; cell-marker colocalization and biochemical validation": 3,
       "none reported in curated direct set": 2,
       "none; observational": 2,
@@ -1375,16 +1380,16 @@
     "unresolved_mapping_reason": {
       "ambiguous canonical entity label match (2 stable nodes); staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 29,
       "ambiguous gene_symbol match (2 stable nodes); staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 1,
-      "no exact stable mechanism-node match; staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 438
+      "no exact stable mechanism-node match; staged at module boundary 21B because the source observation has explicit SCI context but no exact stable route/node/edge/pathway mapping was resolved. The module boundary is a dependency scope only and does not assert a graph edge, route, or causal mechanism.": 487
     }
   },
   "mechanism_link_counts": {
     "graph_edges_created": 0,
-    "included": 383,
+    "included": 385,
     "numeric_modality_weights_created": 0,
     "partial_routes_promoted": 0,
     "route_confidence_created": 0,
-    "staging_unresolved": 468
+    "staging_unresolved": 517
   },
   "metabolomics_assessment": {
     "candidate_rows_assessed": 10,
@@ -1504,12 +1509,13 @@
     ]
   },
   "notes": [
-    "Protein observations combine the mSCS phosphorylation-support selection, one explicitly curated source-extracted phosphoproteomic state record, and directly measured non-phosphorylated protein observations; they are not the full 1,259-row canonical store.",
+    "Protein observations combine the mSCS phosphorylation-support selection, explicitly curated source-extracted phosphoproteomic state records, directly measured non-phosphorylated protein observations, and source-located external SCI neuroproteomic observations; they are not the full canonical store.",
     "Epigenomics imports all explicitly reported assay contexts from the mSCS epigenetic store and retains exact binary feature-status records with their own source artifact paths and checksums; binary status is not converted into a directional comparison.",
     "Protein-expression selection excludes phosphoprotein/active-form duplicates, ambiguous or inaccessible extraction states, reporter/activity-only assays, inferred timepoints, and records without a measured value or reported direction. The explicit phosphoproteomic selection is retained separately through protein_context_state_selections.tsv.",
     "Metabolomics imports explicit ATP, anandamide, prostaglandin E2, and leukotriene B4 assay records from the canonical mSCS store; queue rows with assay mismatch, imaging, or dynamic-release endpoints remain excluded from this modality.",
     "Dependency groups are source/study/timepoint/population or source/study/assay/context groups; they are intended to prevent correlated readouts from being double-counted.",
     "Downstream protein and phosphoprotein measurements are linked only to the measured state/node when an exact stable node match exists; no upstream ligand/receptor causality is inferred.",
+    "External protein and metabolomics curation inputs are context_matched_external_observation records. Their primary source identifiers, accessions, URLs, source locators, and local curation-artifact checksums are retained; unreported sample identifiers remain blank.",
     "Missing values and source ambiguity remain unreported or unknown; they are not converted to negative protein evidence.",
     "Transcriptomic context annotations are imported from explicit SCI-related spatial-catalog records, with capture-level or reported timepoint context retained where available; gene/spot-level matrix values are reserved for a later spatial release.",
     "The two external transcriptomic observations are the exact SCI qRT-PCR records M21B-DOWNSTREAM-EVID:004631 and M21B-DOWNSTREAM-EVID:004632 from the pinned mechanism release. Their source records do not provide an exact stable mechanism-node identifier, so both remain staged and do not establish upstream causality.",
@@ -1520,8 +1526,11 @@
     "context_curation_overrides_applied": 245,
     "epigenetic_binary_feature_observations_imported": 2,
     "epigenetic_observations_imported": 19,
+    "external_metabolomics_observations_imported": 30,
+    "external_protein_observations_imported": 21,
     "functional_observation_rows_imported": 0,
     "imaging_observation_rows_imported": 0,
+    "mSCS_metabolomics_observations_imported": 5,
     "mechanism_context_exclusion_reason": "Generic, non-SCI, and rows explicitly stating no SCI transfer were assessed but not copied because neutral Module 20B-24B mechanism evidence must not be duplicated in the SCI pack.",
     "mechanism_context_rows_imported": 65,
     "mechanism_context_rows_imported_by_module": {
@@ -1540,11 +1549,11 @@
     "mechanism_route_sci_supported_rows_imported": 58,
     "metabolomics_candidate_rows_assessed": 10,
     "metabolomics_observations_excluded": 5,
-    "metabolomics_observations_imported": 5,
+    "metabolomics_observations_imported": 35,
     "observations_with_context_curation": 745,
     "perturbation_observation_rows_imported": 0,
     "protein_expression_candidate_rows": 629,
-    "protein_observations_imported": 741,
+    "protein_observations_imported": 762,
     "protein_state_curation_rows": 2,
     "protein_state_observations_imported": 112,
     "protein_state_view_rows": 110,
@@ -1608,6 +1617,16 @@
       "path": "context_packs/spinal_cord_injury/protein_context_state_selections.tsv",
       "sha256": "18c3dd7fa41ddc87c358b94888d77ec29f6809c146213615f7e5dcbc42fb4b29",
       "size_bytes": 901
+    },
+    {
+      "path": "context_packs/spinal_cord_injury/external_protein_context_curation.tsv",
+      "sha256": "5b2aa7fc7bce971ff1211d5025c7e625a61ed9da2f548a1e2e2fd9bfb8239d94",
+      "size_bytes": 17140
+    },
+    {
+      "path": "context_packs/spinal_cord_injury/external_metabolomics_context_curation.tsv",
+      "sha256": "c14ac80fcc5e0dbd64d499fd1c181b33721750938a3543c7961ddd446f48cc23",
+      "size_bytes": 25314
     },
     {
       "path": "mSCS/data/flow_protein/transcriptions/batch_2026-08-20_direct_text_numeric_222_241_243_424.tsv",
