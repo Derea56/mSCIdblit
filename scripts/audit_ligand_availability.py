@@ -44,6 +44,45 @@ SOURCE_FIELDS = (
     "claim_source_section",
 )
 
+CONTEXT_FORM_CLASSES = {
+    "soluble": "soluble",
+    "soluble cytokine": "soluble",
+    "membrane_bound": "membrane_bound",
+    "surface receptor": "membrane_bound",
+    "surface CD3/CD4 or CD3/CD8α proteins": "membrane_bound",
+}
+CONTEXT_FORM_PATTERNS = (
+    (re.compile(r"\b(?:soluble|secreted)\b", re.IGNORECASE), "soluble"),
+    (re.compile(r"\b(?:extracellular[ _-]+matrix|matrix[ _-](?:associated|assembled|bands?)|fibrillar[ _-]+(?:matrix|network))\b", re.IGNORECASE), "ecm_retained"),
+)
+
+SOURCE_FORM_OVERRIDES = {
+    "M20B-EVID-001936": {
+        "candidate": "ecm_retained",
+        "signals": ["ecm_retained"],
+        "fields": ("observation_value_or_blocker", "observation_perturbation"),
+        "pattern": re.compile(r"\bcollagen[- ]I\b.*\bmatrix\b|\bcollagen[- ]I\s+matrix\b", re.IGNORECASE),
+    },
+    "M20B-EVID-002127": {
+        "candidate": "ecm_retained",
+        "signals": ["ecm_retained"],
+        "fields": ("observation_value_or_blocker", "claim_text_or_blocker"),
+        "pattern": re.compile(r"\b(?:perlecan|HSPG2)\b.*\bextracellular[- ]matrix\b", re.IGNORECASE),
+    },
+    "M20B-EVID-002232": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("observation_value_or_blocker",),
+        "pattern": re.compile(r"\bsoluble\s+netrin\b", re.IGNORECASE),
+    },
+    "M23B-EVID-000749": {
+        "candidate": "both_or_context_dependent",
+        "signals": ["soluble", "ecm_retained"],
+        "fields": ("observation_value_or_blocker",),
+        "pattern": re.compile(r"\b(?:soluble/cellular\s+FN|FN\s+matrix)\b", re.IGNORECASE),
+    },
+}
+
 FORM_PATTERNS = {
     "soluble": re.compile(
         r"\b(?:soluble|secreted|diffusible|free[- ]form)\b",
@@ -51,7 +90,8 @@ FORM_PATTERNS = {
     ),
     "membrane_bound": re.compile(
         r"\b(?:membrane[- ]bound|membrane[- ]tethered|cell[- ]surface|surface[- ]bound|"
-        r"transmembrane|juxtacrine|cell[- ]associated|anchored)\b",
+        r"transmembrane|juxtacrine|cell[- ]associated|GPI[- ]anchored|"
+        r"glycosylphosphatidylinositol[- ]anchored|anchored)\b",
         re.IGNORECASE,
     ),
     "ecm_retained": re.compile(
@@ -68,6 +108,7 @@ FORM_EXCLUSION = re.compile(
 )
 
 OUTPUT_FIELDS = [
+    "assertion_origin",
     "mechanism_node_id",
     "ligand_canonical_name",
     "ligand_source_label",
@@ -80,6 +121,26 @@ OUTPUT_FIELDS = [
     "b_evidence_id",
     "extraction_id",
     "dependency_group",
+    "context_observation_id",
+    "context_evidence_role",
+    "context_study_id",
+    "context_timepoint_id",
+    "context_species",
+    "context_injury_model",
+    "context_injury_level",
+    "context_injury_severity",
+    "context_tissue",
+    "context_cell_type",
+    "context_sample_id",
+    "context_timepoint_value",
+    "context_timepoint_unit",
+    "context_perturbation",
+    "context_treatment",
+    "context_sample_scope",
+    "context_protein_form",
+    "context_protein_resolution",
+    "context_source_locator",
+    "context_source_record_key",
     "canonical_paper_key",
     "module_source_locator",
     "observation_status",
@@ -156,7 +217,10 @@ def directly_attached(text: str, match: re.Match[str], positions: list[tuple[int
         else:
             return True
         words = re.findall(r"[A-Za-z0-9-]+", between)
-        if len(words) <= 4 and not assay_words.search(between):
+        if (
+            (len(words) <= 4 or (len(words) <= 8 and re.search(r"\bforms?\b", between, re.IGNORECASE)))
+            and not assay_words.search(between)
+        ):
             return True
     return False
 
@@ -197,6 +261,123 @@ def classify_availability(text: str, labels: list[str]) -> tuple[str, str, list[
     return "unknown", "not_reported_in_source_record", [], "", []
 
 
+def normalized_key(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", value.lower())
+
+
+def context_form_class(protein_form: str) -> str:
+    normalized_form = protein_form.lower()
+    if (
+        "exact molecular form not further specified" in normalized_form
+        or "exact processing state not resolved" in normalized_form
+    ):
+        return ""
+    if "secreted" in normalized_form and "total" in normalized_form:
+        return ""
+    if protein_form in CONTEXT_FORM_CLASSES:
+        return CONTEXT_FORM_CLASSES[protein_form]
+    for pattern, candidate in CONTEXT_FORM_PATTERNS:
+        if pattern.search(protein_form):
+            return candidate
+    return ""
+
+
+def context_form_matches(
+    observations: list[dict[str, str]],
+    ligand_nodes: dict[str, dict[str, str]],
+) -> list[tuple[dict[str, str], dict[str, str], dict[str, Any], str, str, list[str], str]]:
+    """Return exact node/observation matches with an explicit SCI protein form.
+
+    The match is deliberately limited to exact normalized mechanism labels or
+    label variants. It does not infer gene-to-protein aliases, receptor
+    families, or form from assay type alone.
+    """
+
+    label_index: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for node in ligand_nodes.values():
+        for field in ("canonical_name", "canonical_label"):
+            label = node.get(field, "")
+            if label:
+                label_index[normalized_key(label)].append(node)
+        for label in filter(None, node.get("label_variants", "").split(";")):
+            label_index[normalized_key(label)].append(node)
+
+    matches: dict[tuple[str, str], tuple[dict[str, str], dict[str, str], dict[str, Any], str, str, list[str], str]] = {}
+    for observation in observations:
+        if observation.get("modality") != "protein":
+            continue
+        try:
+            provenance = json.loads(observation.get("provenance_note", "{}"))
+        except json.JSONDecodeError:
+            continue
+        protein_form = str(provenance.get("protein_form", "")).strip()
+        form_evidence: tuple[str, list[str], str] | None = None
+        direct_class = context_form_class(protein_form)
+        if direct_class:
+            form_evidence = (direct_class, ["observations.tsv:provenance_note.protein_form"], protein_form)
+        else:
+            observed_labels = [observation.get("measured_entity_name", ""), observation.get("feature_id", "")]
+            label_patterns = [
+                re.compile(rf"(?<![A-Za-z0-9]){re.escape(label)}(?![A-Za-z0-9])", re.IGNORECASE)
+                for label in observed_labels
+                if label
+            ]
+            for field in ("value_text", "direction_vs_control"):
+                text = observation.get(field, "")
+                if not text or not any(pattern.search(text) for pattern in label_patterns):
+                    continue
+                candidate = context_form_class(text)
+                if candidate:
+                    signal_match = next(
+                        match for pattern, _candidate in CONTEXT_FORM_PATTERNS for match in pattern.finditer(text)
+                        if _candidate == candidate
+                    )
+                    form_evidence = (
+                        candidate,
+                        [f"observations.tsv:{field}"],
+                        compact_snippet(text, signal_match.start(), signal_match.end()),
+                    )
+                    break
+        if not form_evidence:
+            continue
+        candidate_nodes: dict[str, dict[str, str]] = {}
+        for field in ("measured_entity_name", "feature_id"):
+            key = normalized_key(observation.get(field, ""))
+            for node in label_index.get(key, []):
+                candidate_nodes[node["node_id"]] = node
+        for node in candidate_nodes.values():
+            matches[(node["node_id"], observation["observation_id"])] = (
+                node,
+                observation,
+                provenance,
+                protein_form,
+                form_evidence[0],
+                form_evidence[1],
+                form_evidence[2],
+            )
+    return list(matches.values())
+
+
+def source_form_override(module_row: dict[str, str]) -> tuple[str, str, list[str], str, list[str]] | None:
+    """Apply only explicitly keyed, source-text-backed form curation rules."""
+
+    rule = SOURCE_FORM_OVERRIDES.get(module_row.get("b_evidence_id", ""))
+    if not rule:
+        return None
+    for field in rule["fields"]:
+        text = module_row.get(field, "")
+        match = rule["pattern"].search(text)
+        if match:
+            return (
+                rule["candidate"],
+                "source_reported_candidate",
+                rule["signals"],
+                compact_snippet(text, match.start(), match.end()),
+                [field],
+            )
+    return None
+
+
 def build(
     release_dir: Path = DEFAULT_RELEASE,
     ledger_path: Path = DEFAULT_LEDGER,
@@ -219,6 +400,7 @@ def build(
 
     ledger_rows = read_tsv(ledger_path)
     observations = read_tsv(pack / "observations.tsv")
+    contexts = {row["context_id"]: row for row in read_tsv(pack / "contexts.tsv")}
     context_index = index_pack_rows(observations, ("source_locator", "source_record_key"))
     output_rows: list[dict[str, Any]] = []
     counts_by: dict[str, Counter[str]] = {
@@ -228,6 +410,8 @@ def build(
         "observation_status": Counter(),
         "evidence_layer": Counter(),
         "sci_context_match_status": Counter(),
+        "assertion_origin": Counter(),
+        "context_form_class": Counter(),
     }
     matched_ledger_rows = 0
     ligand_associations = 0
@@ -254,7 +438,10 @@ def build(
             attached_results = [result for _field, result in field_results if result[1] == "source_reported_candidate"]
             unattached_results = [result for _field, result in field_results if result[1] == "assay_or_form_language_not_attached_to_exact_ligand"]
             attached_signals = {signal for _candidate, _state, signals, _snippet, _basis in attached_results for signal in signals}
-            if attached_signals:
+            override = source_form_override(module_row)
+            if override:
+                candidate, state, signals, snippet, basis = override
+            elif attached_signals:
                 if attached_signals == {"ecm_retained"}:
                     candidate = "ecm_retained"
                 elif attached_signals == {"soluble"}:
@@ -281,6 +468,7 @@ def build(
                 basis = []
             ligand_associations += 1
             row = {
+                "assertion_origin": "source_linked_mechanism_evidence",
                 "mechanism_node_id": ligand["node_id"],
                 "ligand_canonical_name": ligand.get("canonical_name", ""),
                 "ligand_source_label": edge.get("source_label", ""),
@@ -293,6 +481,26 @@ def build(
                 "b_evidence_id": evidence_id,
                 "extraction_id": module_row.get("extraction_id", ""),
                 "dependency_group": f"{evidence_id}|{ligand['node_id']}",
+                "context_observation_id": "",
+                "context_evidence_role": "",
+                "context_study_id": "",
+                "context_timepoint_id": "",
+                "context_species": "",
+                "context_injury_model": "",
+                "context_injury_level": "",
+                "context_injury_severity": "",
+                "context_tissue": "",
+                "context_cell_type": "",
+                "context_sample_id": "",
+                "context_timepoint_value": "",
+                "context_timepoint_unit": "",
+                "context_perturbation": "",
+                "context_treatment": "",
+                "context_sample_scope": "",
+                "context_protein_form": "",
+                "context_protein_resolution": "",
+                "context_source_locator": "",
+                "context_source_record_key": "",
                 "canonical_paper_key": module_row.get("canonical_paper_key", ""),
                 "module_source_locator": module_row.get("source_locator", ""),
                 "observation_status": module_row.get("observation_status", ""),
@@ -326,6 +534,86 @@ def build(
             counts_by["observation_status"][row["observation_status"] or "unknown"] += 1
             counts_by["evidence_layer"][row["evidence_layer"] or "unknown"] += 1
             counts_by["sci_context_match_status"][context_status] += 1
+            counts_by["assertion_origin"][row["assertion_origin"]] += 1
+
+    context_matches = context_form_matches(observations, ligand_nodes)
+    for ligand, observation, provenance, protein_form, context_class, form_basis, form_snippet in context_matches:
+        context_curation = provenance.get("context_curation", {})
+        context = contexts.get(observation.get("context_id", ""), {})
+        context_source_locator = provenance.get("source_location", "") or observation.get("source_locator", "")
+        row = {
+            "assertion_origin": "sci_context_observation",
+            "mechanism_node_id": ligand["node_id"],
+            "ligand_canonical_name": ligand.get("canonical_name", ""),
+            "ligand_source_label": "",
+            "mechanism_edge_id": "",
+            "target_node_id": "",
+            "target_label": "",
+            "relation_type": "",
+            "pathway_name": "",
+            "module": ligand.get("modules", ""),
+            "b_evidence_id": "",
+            "extraction_id": "",
+            "dependency_group": f"{observation['dependency_group']}|{ligand['node_id']}",
+            "context_observation_id": observation.get("observation_id", ""),
+            "context_evidence_role": observation.get("evidence_role", ""),
+            "context_study_id": context.get("study_id", "") or provenance.get("study_id", ""),
+            "context_timepoint_id": provenance.get("timepoint_id", ""),
+            "context_species": context.get("species", ""),
+            "context_injury_model": context.get("injury_model", ""),
+            "context_injury_level": context.get("injury_level", ""),
+            "context_injury_severity": context.get("injury_severity", ""),
+            "context_tissue": context.get("tissue", ""),
+            "context_cell_type": context.get("cell_type", "") or observation.get("cell_type", ""),
+            "context_sample_id": context.get("sample_id", "") or observation.get("sample_id", ""),
+            "context_timepoint_value": context.get("timepoint_value", "") or observation.get("timepoint_value", ""),
+            "context_timepoint_unit": context.get("timepoint_unit", "") or observation.get("timepoint_unit", ""),
+            "context_perturbation": context.get("perturbation", "") or provenance.get("study_perturbation_status", "") or observation.get("perturbation", ""),
+            "context_treatment": context.get("treatment", ""),
+            "context_sample_scope": context.get("sample_scope", "") or provenance.get("sample_scope", ""),
+            "context_protein_form": protein_form,
+            "context_protein_resolution": provenance.get("protein_resolution", ""),
+            "context_source_locator": context_source_locator,
+            "context_source_record_key": observation.get("source_record_key", ""),
+            "canonical_paper_key": "",
+            "module_source_locator": "",
+            "observation_status": observation.get("observation_status", ""),
+            "evidence_layer": "context_matched_external_observation",
+            "confidence": provenance.get("evidence_grade", ""),
+            "observation_value_or_blocker": observation.get("value_text", ""),
+            "observation_cell_or_model": observation.get("cell_type", ""),
+            "observation_assay": observation.get("assay", ""),
+            "observation_perturbation": observation.get("perturbation", ""),
+            "claim_text_or_blocker": (
+                f"Explicit SCI protein-form annotation: protein_form={protein_form}; "
+                f"protein_resolution={provenance.get('protein_resolution', '')}"
+            ),
+            "availability_class_candidate": context_class,
+            "availability_evidence_state": "context_observation_explicit_protein_form",
+            "availability_signal_terms": context_class,
+            "availability_evidence_snippet": form_snippet,
+            "availability_basis_fields": ";".join(form_basis),
+            "sci_context_match_status": "matched_exact_ligand_observation",
+            "sci_context_observation_ids": observation.get("observation_id", ""),
+            "sci_context_ids": observation.get("context_id", ""),
+            "sci_context_source_artifact_paths": observation.get("source_artifact_path", ""),
+            "sci_context_source_artifact_sha256": observation.get("source_artifact_sha256", ""),
+            "promotion_state": "audit_only_not_promoted",
+            "audit_note": (
+                "SCI observation explicitly annotates the measured protein form. This is context-matched "
+                "evidence for the observed SCI sample, not a universal protein property and not causal "
+                "evidence for a mechanism edge."
+            ),
+        }
+        output_rows.append(row)
+        counts_by["module"][row["module"] or "unknown"] += 1
+        counts_by["availability_class_candidate"][context_class] += 1
+        counts_by["availability_evidence_state"][row["availability_evidence_state"]] += 1
+        counts_by["observation_status"][row["observation_status"] or "unknown"] += 1
+        counts_by["evidence_layer"][row["evidence_layer"]] += 1
+        counts_by["sci_context_match_status"][row["sci_context_match_status"]] += 1
+        counts_by["assertion_origin"][row["assertion_origin"]] += 1
+        counts_by["context_form_class"][context_class] += 1
 
     output_rows.sort(key=lambda row: (row["mechanism_node_id"], row["mechanism_edge_id"], row["b_evidence_id"], row["extraction_id"]))
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -340,6 +628,7 @@ def build(
         release_dir / "mechanism_edges.tsv",
         ledger_path,
         pack / "observations.tsv",
+        pack / "contexts.tsv",
     ]
     input_artifacts = [
         {"path": str(path.relative_to(ROOT)), "sha256": sha256(path), "size_bytes": path.stat().st_size, "rows": len(read_tsv(path)) if path.suffix == ".tsv" else None}
@@ -355,12 +644,15 @@ def build(
         "phase2_ledger_rows_scanned": len(ledger_rows),
         "phase2_rows_with_pinned_ligand_edge": matched_ledger_rows,
         "ligand_evidence_associations": ligand_associations,
+        "ligand_context_form_assertions": len(context_matches),
+        "ligand_context_form_assertion_nodes": len({ligand["node_id"] for ligand, _observation, _provenance, _form, _class, _basis, _snippet in context_matches}),
         "unique_dependency_groups": len({row["dependency_group"] for row in output_rows}),
         "counts_by": {key: dict(sorted(counter.items())) for key, counter in sorted(counts_by.items())},
         "interpretation": {
             "availability_classes": "soluble, membrane_bound, both_or_context_dependent, and ecm_retained are staged candidates; unknown is retained when the source does not resolve physical availability.",
             "assay_format_gate": "Soluble ectodomain, recombinant-receptor, cell-surface-binding, SPR, or immobilized-assay language is not sufficient by itself to classify the ligand form.",
             "sci_context_linking": "SCI context is linked only through exact PMID, PMCID, or DOI intersections with observations.tsv; absence of a match is not negative protein evidence.",
+            "context_form_assertions": "Exact ligand-label matches to observations.tsv provenance_note protein_form values are emitted as context_matched_external_observation rows; they describe the observed SCI sample and do not establish a universal protein property.",
             "dependency_policy": "Rows sharing b_evidence_id and ligand node_id share a dependency group and must not be counted as independent experiments.",
             "promotion_policy": "This audit does not modify mechanism_nodes.tsv, mechanism_edges.tsv, observations.tsv, mechanism_links.tsv, or the pinned graph release.",
             "next_step": "Manually review source-reported candidates before exposing them as soft spatial filters; preserve unknown and assay-only states separately.",

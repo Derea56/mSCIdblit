@@ -94,8 +94,12 @@ The release also has an audit-only ligand-availability layer at
 `data/processed/ligand_availability_audit_v1/`. It stages source-backed
 soluble, membrane-bound, dual/context-dependent, and ECM-retained candidates,
 keeps assay-format language separate, and links exact SCI protein observations
-when PMID/PMCID/DOI identifiers match. It does not modify the graph or assign
-numeric spatial weights. Regenerate it with
+when PMID/PMCID/DOI identifiers match. The report also carries 123 exact
+ligand-node matches to explicit SCI protein-form observations across 24 nodes,
+with study, injury, timepoint, perturbation, sample, locator, and artifact
+checksum fields preserved. These context assertions describe the observed SCI
+sample and are not universal protein properties. It does not modify the graph
+or assign numeric spatial weights. Regenerate it with
 `python3 scripts/audit_ligand_availability.py`.
 
 ## mSCS method-resource intake

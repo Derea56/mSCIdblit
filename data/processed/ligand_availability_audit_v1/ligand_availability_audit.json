@@ -5,19 +5,30 @@
   },
   "audit_version": "ligand_availability_audit_v1",
   "counts_by": {
+    "assertion_origin": {
+      "sci_context_observation": 123,
+      "source_linked_mechanism_evidence": 2238
+    },
     "availability_class_candidate": {
-      "both_or_context_dependent": 10,
-      "ecm_retained": 3,
-      "membrane_bound": 35,
-      "soluble": 40,
-      "unknown": 2150
+      "both_or_context_dependent": 11,
+      "ecm_retained": 14,
+      "membrane_bound": 44,
+      "soluble": 148,
+      "unknown": 2144
     },
     "availability_evidence_state": {
-      "assay_or_form_language_not_attached_to_exact_ligand": 618,
+      "assay_or_form_language_not_attached_to_exact_ligand": 612,
+      "context_observation_explicit_protein_form": 123,
       "not_reported_in_source_record": 1532,
-      "source_reported_candidate": 88
+      "source_reported_candidate": 94
+    },
+    "context_form_class": {
+      "ecm_retained": 9,
+      "membrane_bound": 8,
+      "soluble": 106
     },
     "evidence_layer": {
+      "context_matched_external_observation": 123,
       "contextual_or_unresolved": 641,
       "downstream_or_functional": 134,
       "ligand_receptor_or_direct_molecular": 1208,
@@ -25,8 +36,16 @@
       "receptor_proximal_relay": 5
     },
     "module": {
-      "20B": 1114,
-      "21B": 10,
+      "20B": 1127,
+      "20B;21B": 6,
+      "20B;21B;23B": 1,
+      "20B;21B;24B": 16,
+      "20B;22B": 17,
+      "20B;23B": 11,
+      "21B": 63,
+      "21B;22B": 3,
+      "21B;23B": 1,
+      "21B;24B": 2,
       "23B": 994,
       "24B": 120
     },
@@ -36,6 +55,7 @@
       "not_required_exact_primary_result_not_found": 20,
       "reused_validated_evidence": 2,
       "search_boundary": 13,
+      "transcribed": 123,
       "unresolved": 664,
       "unresolved_manifest_source": 390,
       "unresolved_no_evidence": 10,
@@ -52,6 +72,7 @@
       "validated_primary_observation": 45
     },
     "sci_context_match_status": {
+      "matched_exact_ligand_observation": 123,
       "matched_exact_source_identifier": 9,
       "no_exact_source_identifier_match": 2229
     }
@@ -86,16 +107,25 @@
       "rows": 910,
       "sha256": "858fe3c74f17c1d70b1efe66d7f55bbbd6ef110a298759e40ae98af0b17e55e4",
       "size_bytes": 2925298
+    },
+    {
+      "path": "context_packs/spinal_cord_injury/contexts.tsv",
+      "rows": 684,
+      "sha256": "a5a7dabd15f7dce349cff6910510ffb8fb05a4d62e18d9de5101de717bbb3319",
+      "size_bytes": 1074960
     }
   ],
   "interpretation": {
     "assay_format_gate": "Soluble ectodomain, recombinant-receptor, cell-surface-binding, SPR, or immobilized-assay language is not sufficient by itself to classify the ligand form.",
     "availability_classes": "soluble, membrane_bound, both_or_context_dependent, and ecm_retained are staged candidates; unknown is retained when the source does not resolve physical availability.",
+    "context_form_assertions": "Exact ligand-label matches to observations.tsv provenance_note protein_form values are emitted as context_matched_external_observation rows; they describe the observed SCI sample and do not establish a universal protein property.",
     "dependency_policy": "Rows sharing b_evidence_id and ligand node_id share a dependency group and must not be counted as independent experiments.",
     "next_step": "Manually review source-reported candidates before exposing them as soft spatial filters; preserve unknown and assay-only states separately.",
     "promotion_policy": "This audit does not modify mechanism_nodes.tsv, mechanism_edges.tsv, observations.tsv, mechanism_links.tsv, or the pinned graph release.",
     "sci_context_linking": "SCI context is linked only through exact PMID, PMCID, or DOI intersections with observations.tsv; absence of a match is not negative protein evidence."
   },
+  "ligand_context_form_assertion_nodes": 24,
+  "ligand_context_form_assertions": 123,
   "ligand_evidence_associations": 2238,
   "mechanism_release_id": "module20_24_mechanism_graph:2026-09-25-literature-expansion-627",
   "mechanism_release_path": "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627",
@@ -103,5 +133,5 @@
   "phase2_rows_with_pinned_ligand_edge": 2238,
   "release_ligand_node_count": 2871,
   "scope": "Source-linked ligand evidence in the pinned Module 20B-24B mechanism release; SCI context is linked by exact source identifiers when present.",
-  "unique_dependency_groups": 2210
+  "unique_dependency_groups": 2332
 }
