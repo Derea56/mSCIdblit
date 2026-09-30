@@ -97,9 +97,9 @@ keeps assay-format language separate, and links exact SCI protein observations
 when PMID/PMCID/DOI identifiers match. The report also carries 123 exact
 ligand-node matches to explicit SCI protein-form observations across 24 nodes,
 with study, injury, timepoint, perturbation, sample, locator, and artifact
-checksum fields preserved. It additionally carries 276 explicitly curated
-source-register evidence IDs (283 output rows where one register record maps
-to multiple exact ligand edges). Nine additional exact source-register form
+checksum fields preserved. It additionally carries 317 explicitly curated
+source-register evidence IDs (324 output rows where one register record maps
+to multiple exact ligand edges). Twenty-one additional exact source-register form
 assertions are applied to existing ledger rows without adding duplicate
 dependency groups. These context and register assertions are not universal protein
 properties. It does not modify the graph or assign numeric spatial weights.
