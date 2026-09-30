@@ -20,8 +20,8 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     assert summary["mechanism_release_id"] == "module20_24_mechanism_graph:2026-09-25-literature-expansion-627"
     assert summary["release_ligand_node_count"] > 0
     assert summary["ligand_evidence_associations"] > 0
-    assert summary["source_register_form_assertions"] == 365
-    assert summary["source_register_form_assertion_ids"] == 358
+    assert summary["source_register_form_assertions"] == 394
+    assert summary["source_register_form_assertion_ids"] == 387
     assert summary["source_register_skipped_existing_ledger"] == 21
     assert summary["source_register_form_applied_to_ledger"] == 21
     assert summary["source_register_form_applied_to_ledger_ids"] == [
@@ -189,8 +189,8 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     source_register_rows = [
         row for row in rows if row["assertion_origin"] == "source_register_form_observation"
     ]
-    assert len(source_register_rows) == 365
-    assert len({row["b_evidence_id"] for row in source_register_rows}) == 358
+    assert len(source_register_rows) == 394
+    assert len({row["b_evidence_id"] for row in source_register_rows}) == 387
     assert all(row["availability_evidence_state"] == "source_register_explicit_form" for row in source_register_rows)
     assert all(row["observation_status"] == "source_register_curated" for row in source_register_rows)
     assert all(row["promotion_state"] == "audit_only_not_promoted" for row in source_register_rows)
@@ -320,6 +320,35 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
         "M21B-EVID-006538": ("membrane_bound", "NODE03107", "PMID:12383247; PMID:31011859; DOI:10.1046/j.1460-9568.2002.02166.x; DOI:10.1038/s41586-019-1151-3"),
         "M21B-EVID-006662": ("membrane_bound", "NODE03104", "PMID:10066262; PMCID:PMC6782574; DOI:10.1523/JNEUROSCI.19-06-02090.1999"),
         "M21B-EVID-007033": ("soluble", "NODE10406", "PMID:11375980; PMID:10364234; DOI:10.1074/jbc.M100240200; DOI:10.1074/jbc.274.25.17885"),
+        "M21B-EVID-001861": ("soluble", "NODE08961", "PMID:25595774; PMCID:PMC4319313"),
+        "M21B-EVID-002787": ("soluble", "NODE04756", "PMID:10190900; PMCID:PMC2193010; PMCID:PMC1318474; PMID:16366734"),
+        "M21B-EVID-004607": ("soluble", "NODE04368", "PMID:34582891; PMCID:PMC8524194; DOI:10.3390/ijms222112057"),
+        "M21B-EVID-004611": ("soluble", "NODE04368", "PMID:39455836; DOI:10.1038/s44161-024-00555-4"),
+        "M21B-EVID-004640": ("soluble", "NODE04777", "PMID:17448537; DOI:10.1016/j.molimm.2007.03.003"),
+        "M21B-EVID-004642": ("soluble", "NODE04891", "PMID:19896716; DOI:10.1016/j.molimm.2009.10.006"),
+        "M21B-EVID-004643": ("both_or_context_dependent", "NODE11905", "PMID:17132743; PMCID:PMC1664712; DOI:10.1073/pnas.0605668103"),
+        "M21B-EVID-004644": ("soluble", "NODE02824", "PMID:20308361; PMCID:PMC2856034; DOI:10.1084/jem.20092545"),
+        "M21B-EVID-004682": ("both_or_context_dependent", "NODE09236", "PMID:19850343; DOI:10.1016/j.molimm.2009.07.017"),
+        "M21B-EVID-004684": ("soluble", "NODE09236", "PMID:28860090; DOI:10.1016/j.molimm.2017.07.010"),
+        "M21B-EVID-004809": ("soluble", "NODE02115", "PMID:15153520; DOI:10.4049/jimmunol.172.11.6994"),
+        "M21B-EVID-004876": ("soluble", "NODE04621", "PMID:19428671; DOI:10.1016/j.molbiopara.2009.02.007"),
+        "M21B-EVID-004877": ("both_or_context_dependent", "NODE11510", "PMID:30587214; PMCID:PMC6307294; DOI:10.1186/s13071-018-3258-x"),
+        "M21B-EVID-004880": ("both_or_context_dependent", "NODE03176", "PMID:36668954; PMCID:PMC9864966"),
+        "M21B-EVID-004881": ("soluble", "NODE03176", "PMID:40333123; PMCID:PMC12030537; DOI:10.3390/pathogens14040354"),
+        "M21B-EVID-004882": ("soluble", "NODE04622", "PMID:26332726; DOI:10.1111/pim.12273"),
+        "M21B-EVID-004883": ("soluble", "NODE04622", "PMID:23927077; DOI:10.1111/pim.12058; PMID:26332726; DOI:10.1111/pim.12273"),
+        "M21B-EVID-004889": ("soluble", "NODE10043", "PMID:36063565; DOI:10.1016/j.imbio.2022.152263"),
+        "M21B-EVID-004890": ("soluble", "NODE10043", "PMID:36063565; DOI:10.1016/j.imbio.2022.152263"),
+        "M21B-EVID-005409": ("soluble", "NODE01898", "PMID:17182621; DOI:10.1074/jbc.M608342200; PMID:22461623"),
+        "M21B-EVID-005455": ("soluble", "NODE03765", "PMID:34016966; PMCID:PMC8137956; DOI:10.1038/s41467-021-22579-1"),
+        "M21B-EVID-005528": ("ecm_retained", "NODE07224", "PMID:16105980"),
+        "M21B-EVID-006140": ("soluble", "NODE03246", "PMID:29981429; PMID:30261040; PMID:32978170"),
+        "M21B-EVID-006220": ("soluble", "NODE03547", "PMID:10037797"),
+        "M21B-EVID-006674": ("soluble", "NODE11512", "PMID:22884297; PMCID:PMC3466361; DOI:10.1016/j.jneuroim.2012.07.009"),
+        "M21B-EVID-006687": ("soluble", "NODE02328", "PMID:11956183; DOI:10.1074/jbc.M107583200"),
+        "M21B-EVID-006688": ("soluble", "NODE02328", "PMID:11956183; DOI:10.1074/jbc.M107583200"),
+        "M21B-EVID-006689": ("soluble", "NODE02328", "PMID:11956183; DOI:10.1074/jbc.M107583200"),
+        "M21B-EVID-006946": ("membrane_bound", "NODE06594", "PMID:7594541; PMID:7916655"),
         "M23B-EVID-001602": ("ecm_retained", "NODE02392", "PMID:2269670; PMCID:PMC2116373; DOI:10.1083/jcb.111.6.3177; PMID:8305732; PMCID:PMC275746; DOI:10.1091/mbc.4.11.1097; local:data/raw/evidence/module23a_review_led_20260904/collagen_vi_ng2_interaction_fulltext.html; local:data/raw/evidence/module23a_review_led_20260904/collagen_vi_ng2_interaction_pubmed.xml; local:data/raw/evidence/module23a_review_led_20260904/collagen_vi_ng2_fulltext.html; local:data/raw/evidence/module23a_review_led_20260904/collagen_vi_ng2_pubmed.xml"),
         "M21B-EVID-000391": ("soluble", "NODE05421", "PMID:12513909; PMID:12087100"),
         "M21B-EVID-000770": ("soluble", "NODE10179", "PMID:18922901"),

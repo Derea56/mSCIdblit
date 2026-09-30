@@ -1504,6 +1504,185 @@ SOURCE_REGISTER_FORM_OVERRIDES.update(
     }
 )
 
+SOURCE_REGISTER_FORM_OVERRIDES.update(
+    {
+        "M21B-EVID-001861": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bmonomeric soluble PGLYRP1\b", re.IGNORECASE),
+        },
+        "M21B-EVID-002787": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsoluble-HLA-G signaling\b", re.IGNORECASE),
+        },
+        "M21B-EVID-004607": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsoluble GPNMB extracellular-domain form\b", re.IGNORECASE),
+        },
+        "M21B-EVID-004611": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsoluble GPNMB extracellular-domain form\b", re.IGNORECASE),
+        },
+        "M21B-EVID-004640": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsoluble complement edge\b", re.IGNORECASE),
+        },
+        "M21B-EVID-004642": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsoluble complement inhibition\b", re.IGNORECASE),
+        },
+        "M21B-EVID-004643": {
+            "candidate": "both_or_context_dependent",
+            "signals": ["soluble", "membrane_bound"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsoluble versus cell-surface form\b", re.IGNORECASE),
+        },
+        "M21B-EVID-004644": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsecreted flavivirus NS1\b", re.IGNORECASE),
+        },
+        "M21B-EVID-004682": {
+            "candidate": "both_or_context_dependent",
+            "signals": ["soluble", "membrane_bound"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bPra1 surface/secreted form\b", re.IGNORECASE),
+        },
+        "M21B-EVID-004684": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsecreted fungal protease/inhibitor\b", re.IGNORECASE),
+        },
+        "M21B-EVID-004809": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bpathogen-secreted receptor antagonist\b", re.IGNORECASE),
+        },
+        "M21B-EVID-004876": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsecreted parasite calreticulin\b", re.IGNORECASE),
+        },
+        "M21B-EVID-004877": {
+            "candidate": "both_or_context_dependent",
+            "signals": ["soluble", "membrane_bound"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsurface/secreted TsPmy\b", re.IGNORECASE),
+        },
+        "M21B-EVID-004880": {
+            "candidate": "both_or_context_dependent",
+            "signals": ["soluble", "membrane_bound"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsecreted/surface-associated EmCRT\b", re.IGNORECASE),
+        },
+        "M21B-EVID-004881": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsecreted EmCRT S-domain\b", re.IGNORECASE),
+        },
+        "M21B-EVID-004882": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsecreted H\. contortus GAPDH\b", re.IGNORECASE),
+        },
+        "M21B-EVID-004883": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsecreted H\. contortus GAPDH\b", re.IGNORECASE),
+        },
+        "M21B-EVID-004889": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\brecombinant/secreted Sapt1\b", re.IGNORECASE),
+        },
+        "M21B-EVID-004890": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\brecombinant/secreted Sapt1\b", re.IGNORECASE),
+        },
+        "M21B-EVID-005409": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsoluble/trimeric ligand\b", re.IGNORECASE),
+        },
+        "M21B-EVID-005455": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bprocessed soluble FNDC4\b", re.IGNORECASE),
+        },
+        "M21B-EVID-005528": {
+            "candidate": "ecm_retained",
+            "signals": ["ecm_retained"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bmatrix-bound ligand\b", re.IGNORECASE),
+        },
+        "M21B-EVID-006140": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsoluble/cleaved EpEX\b", re.IGNORECASE),
+        },
+        "M21B-EVID-006220": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsoluble CD23\b", re.IGNORECASE),
+        },
+        "M21B-EVID-006674": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsoluble tubby\b", re.IGNORECASE),
+        },
+        "M21B-EVID-006687": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bshed ectodomain\b", re.IGNORECASE),
+        },
+        "M21B-EVID-006688": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bshed ectodomain\b", re.IGNORECASE),
+        },
+        "M21B-EVID-006689": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bshed ectodomain\b", re.IGNORECASE),
+        },
+        "M21B-EVID-006946": {
+            "candidate": "membrane_bound",
+            "signals": ["membrane_bound"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bmembrane LTalpha1beta2-to-LTBR ligand\b", re.IGNORECASE),
+        },
+    }
+)
+
 # These records contain availability language for a receptor, assay presentation,
 # processed partner, or an explicit negative statement rather than for the exact
 # ligand node. Keep them auditable but do not emit a positive ligand-form
