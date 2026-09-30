@@ -97,9 +97,12 @@ keeps assay-format language separate, and links exact SCI protein observations
 when PMID/PMCID/DOI identifiers match. The report also carries 123 exact
 ligand-node matches to explicit SCI protein-form observations across 24 nodes,
 with study, injury, timepoint, perturbation, sample, locator, and artifact
-checksum fields preserved. These context assertions describe the observed SCI
-sample and are not universal protein properties. It does not modify the graph
-or assign numeric spatial weights. Regenerate it with
+checksum fields preserved. It additionally carries 30 explicitly curated form
+assertions from the five module-B evidence registers, while retaining five
+register IDs already represented in the phase-2 ledger as skipped to avoid
+duplicate dependency counting. These context and register assertions are not
+universal protein properties. It does not modify the graph or assign numeric
+spatial weights. Regenerate it with
 `python3 scripts/audit_ligand_availability.py`.
 
 ## mSCS method-resource intake

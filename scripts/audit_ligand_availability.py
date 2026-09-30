@@ -25,6 +25,10 @@ DEFAULT_RELEASE = ROOT / "data/processed/mechanism_graph_module20_24_v2026_09_25
 DEFAULT_LEDGER = ROOT / "work/cross_module_synthesis/canonical_evidence_review/module20_24_integrated_phase2_extractions.tsv"
 DEFAULT_PACK = ROOT / "context_packs/spinal_cord_injury"
 DEFAULT_OUTPUT = ROOT / "data/processed/ligand_availability_audit_v1"
+DEFAULT_SOURCE_REGISTERS = tuple(
+    ROOT / "work/module_b_consolidation" / module / f"{module}_evidence_register.tsv"
+    for module in ("module20b", "module21b", "module22b", "module23b", "module24b")
+)
 
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
@@ -145,6 +149,223 @@ SOURCE_FORM_OVERRIDES = {
         "signals": ["soluble", "immobilized"],
         "fields": ("observation_value_or_blocker", "observation_perturbation"),
         "pattern": re.compile(r"\b(?:Immobilized VWF.*soluble VWF|soluble versus immobilized VWF)\b", re.IGNORECASE),
+    },
+}
+
+# These are keyed, source-register curation rules.  They are intentionally
+# separate from SOURCE_FORM_OVERRIDES: register rows are preserved as a
+# distinct provenance layer and are only used when the same b_evidence_id is
+# not already materialized in the integrated phase-2 ledger.
+SOURCE_REGISTER_FORM_OVERRIDES = {
+    "M20B-EVID-002097": {
+        "candidate": "ecm_retained",
+        "signals": ["ecm_retained"],
+        "fields": ("evidence_summary",),
+        "pattern": re.compile(r"\bCOMP is an extracellular matrix protein\b", re.IGNORECASE),
+    },
+    "M21B-EVID-000095": {
+        "candidate": "membrane_bound",
+        "signals": ["membrane_bound"],
+        "fields": ("evidence_summary",),
+        "pattern": re.compile(r"\bmembrane-bound DLL1\b", re.IGNORECASE),
+    },
+    "M21B-EVID-000137": {
+        "candidate": "membrane_bound",
+        "signals": ["membrane_bound"],
+        "fields": ("limitations",),
+        "pattern": re.compile(r"\bmembrane-spanning semaphorin dimer\b", re.IGNORECASE),
+    },
+    "M21B-EVID-000241": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("limitations",),
+        "pattern": re.compile(r"\bsecreted mouse GlyCAM1\b", re.IGNORECASE),
+    },
+    "M21B-EVID-000245": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("limitations",),
+        "pattern": re.compile(r"\bsecreted ligand\b", re.IGNORECASE),
+    },
+    "M21B-EVID-000246": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("limitations",),
+        "pattern": re.compile(r"\bsecreted ligand\b", re.IGNORECASE),
+    },
+    "M21B-EVID-000277": {
+        "candidate": "both_or_context_dependent",
+        "signals": ["soluble", "membrane_bound"],
+        "fields": ("limitations",),
+        "pattern": re.compile(r"\bmembrane/soluble SEMA6D ectodomain\b", re.IGNORECASE),
+    },
+    "M21B-EVID-000434": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("limitations",),
+        "pattern": re.compile(r"\bsecreted SEMA3C processing\b", re.IGNORECASE),
+    },
+    "M21B-EVID-000436": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("limitations",),
+        "pattern": re.compile(r"\bsecreted SEMA3C processing\b", re.IGNORECASE),
+    },
+    "M21B-EVID-000438": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("evidence_summary",),
+        "pattern": re.compile(r"\btumor-secreted ProS1\b", re.IGNORECASE),
+    },
+    "M21B-EVID-000439": {
+        "candidate": "both_or_context_dependent",
+        "signals": ["soluble", "membrane_bound"],
+        "fields": ("limitations",),
+        "pattern": re.compile(r"\bsoluble versus membrane SCF\b", re.IGNORECASE),
+    },
+    "M21B-EVID-000445": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("evidence_summary",),
+        "pattern": re.compile(r"\bsoluble human GAS6\b", re.IGNORECASE),
+    },
+    "M21B-EVID-000513": {
+        "candidate": "membrane_bound",
+        "signals": ["membrane_bound"],
+        "fields": ("evidence_summary",),
+        "pattern": re.compile(r"\bGPI-anchored SEMA7A\b", re.IGNORECASE),
+    },
+    "M21B-EVID-000589": {
+        "candidate": "membrane_bound",
+        "signals": ["membrane_bound"],
+        "fields": ("limitations",),
+        "pattern": re.compile(r"\bGPI-anchored/membrane SEMA7A\b", re.IGNORECASE),
+    },
+    "M21B-EVID-000696": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("evidence_summary",),
+        "pattern": re.compile(r"\bproBDNF secreted from COS-7 cells\b", re.IGNORECASE),
+    },
+    "M21B-EVID-000786": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("evidence_summary",),
+        "pattern": re.compile(r"\bGremlin1 as a secreted BMP antagonist\b", re.IGNORECASE),
+    },
+    "M21B-EVID-000787": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("evidence_summary",),
+        "pattern": re.compile(r"\bGremlin1 as a secreted BMP antagonist\b", re.IGNORECASE),
+    },
+    "M21B-EVID-000793": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("limitations",),
+        "pattern": re.compile(r"\bsecreted BMP7 antagonist\b", re.IGNORECASE),
+    },
+    "M21B-EVID-006703": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("evidence_summary",),
+        "pattern": re.compile(r"\bsecreted MADD-4/Punctin\b", re.IGNORECASE),
+    },
+    "M21B-EVID-006910": {
+        "candidate": "ecm_retained",
+        "signals": ["ecm_retained"],
+        "fields": ("evidence_summary", "limitations"),
+        "pattern": re.compile(r"\bmatrix-bound GDNF\b|\bimmobilized matrix-bound GDNF\b", re.IGNORECASE),
+    },
+    "M21B-EVID-006973": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("limitations",),
+        "pattern": re.compile(r"\bUSAG1/SOSTDC1 as a soluble BMP2 antagonist\b", re.IGNORECASE),
+    },
+    "M21B-EVID-006974": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("limitations",),
+        "pattern": re.compile(r"\bUSAG1/SOSTDC1 as a soluble BMP4 antagonist\b", re.IGNORECASE),
+    },
+    "M21B-EVID-006975": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("limitations",),
+        "pattern": re.compile(r"\bUSAG1/SOSTDC1 as a soluble BMP6 antagonist\b", re.IGNORECASE),
+    },
+    "M21B-EVID-006976": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("limitations",),
+        "pattern": re.compile(r"\bNoggin as a soluble BMP7-sequestering antagonist\b", re.IGNORECASE),
+    },
+    "M21B-EVID-009994": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("evidence_summary",),
+        "pattern": re.compile(r"\breactive astrocyte-secreted TNF-alpha\b", re.IGNORECASE),
+    },
+    "M21B-EVID-010943": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("evidence_summary",),
+        "pattern": re.compile(r"\bsoluble APP fragments\b", re.IGNORECASE),
+    },
+    "M21B-EVID-010981": {
+        "candidate": "ecm_retained",
+        "signals": ["ecm_retained"],
+        "fields": ("evidence_summary", "limitations"),
+        "pattern": re.compile(r"\bbasement membrane\b|\bLAMC3-DAG1 ECM\b", re.IGNORECASE),
+    },
+    "M21B-EVID-010984": {
+        "candidate": "ecm_retained",
+        "signals": ["ecm_retained"],
+        "fields": ("limitations",),
+        "pattern": re.compile(r"\bcollagen-II fibrillar form\b", re.IGNORECASE),
+    },
+    "M21B-EVID-010986": {
+        "candidate": "ecm_retained",
+        "signals": ["ecm_retained"],
+        "fields": ("limitations",),
+        "pattern": re.compile(r"\bnative fibrillar type IV presentation\b", re.IGNORECASE),
+    },
+    "M21B-EVID-010987": {
+        "candidate": "ecm_retained",
+        "signals": ["ecm_retained"],
+        "fields": ("limitations",),
+        "pattern": re.compile(r"\bnative fibrillar type VI presentation\b", re.IGNORECASE),
+    },
+    "M23B-EVID-001552": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("evidence_summary",),
+        "pattern": re.compile(r"\bsoluble ephrin-A2 conditioned-medium\b", re.IGNORECASE),
+    },
+    "M23B-EVID-000580": {
+        "candidate": "both_or_context_dependent",
+        "signals": ["soluble", "membrane_bound"],
+        "fields": ("evidence_summary", "limitations"),
+        "pattern": re.compile(r"\bCX3CL1 membrane/soluble fractalkine\b|\bMembrane-tethered adhesion and soluble chemotaxis\b", re.IGNORECASE),
+    },
+    "M23B-EVID-000604": {
+        "candidate": "both_or_context_dependent",
+        "signals": ["soluble", "membrane_bound"],
+        "fields": ("evidence_summary", "limitations"),
+        "pattern": re.compile(r"\bCXCL16 membrane/shedded chemokine\b|\bMembrane versus soluble CXCL16\b", re.IGNORECASE),
+    },
+    "M23B-EVID-001390": {
+        "candidate": "membrane_bound",
+        "signals": ["membrane_bound"],
+        "fields": ("limitations",),
+        "pattern": re.compile(r"\bcell-surface CALR\b", re.IGNORECASE),
+    },
+    "M23B-EVID-001392": {
+        "candidate": "membrane_bound",
+        "signals": ["membrane_bound"],
+        "fields": ("evidence_summary",),
+        "pattern": re.compile(r"\bCell-surface CALR/LRP1\b", re.IGNORECASE),
     },
 }
 
@@ -474,6 +695,26 @@ def source_form_suppression(module_row: dict[str, str]) -> str:
     return SOURCE_FORM_SUPPRESSIONS.get(module_row.get("b_evidence_id", ""), "")
 
 
+def source_register_form_override(register_row: dict[str, str]) -> tuple[str, str, list[str], str, list[str]] | None:
+    """Apply an exact, manually reviewed form rule to a module-B register row."""
+
+    rule = SOURCE_REGISTER_FORM_OVERRIDES.get(register_row.get("b_evidence_id", ""))
+    if not rule:
+        return None
+    for field in rule["fields"]:
+        text = register_row.get(field, "")
+        match = rule["pattern"].search(text)
+        if match:
+            return (
+                rule["candidate"],
+                "source_register_explicit_form",
+                rule["signals"],
+                compact_snippet(text, match.start(), match.end()),
+                [field],
+            )
+    return None
+
+
 def build(
     release_dir: Path = DEFAULT_RELEASE,
     ledger_path: Path = DEFAULT_LEDGER,
@@ -511,6 +752,11 @@ def build(
     }
     matched_ledger_rows = 0
     ligand_associations = 0
+    source_register_rows_scanned = 0
+    source_register_form_assertions = 0
+    source_register_skipped_existing_ledger = 0
+    source_register_unresolved_mappings: list[dict[str, str]] = []
+    ledger_evidence_ids = {row.get("b_evidence_id", "") for row in ledger_rows}
 
     for module_row in ledger_rows:
         evidence_id = module_row.get("b_evidence_id", "")
@@ -640,6 +886,117 @@ def build(
             counts_by["sci_context_match_status"][context_status] += 1
             counts_by["assertion_origin"][row["assertion_origin"]] += 1
 
+    # Module-B registers contain curated summaries and limitations that are not
+    # all repeated in the integrated phase-2 ledger.  Only explicitly keyed
+    # form assertions are emitted, and IDs already represented in the ledger
+    # are skipped to preserve one dependency group per source record.
+    for register_path in DEFAULT_SOURCE_REGISTERS:
+        for register_row in read_tsv(register_path):
+            source_register_rows_scanned += 1
+            evidence_id = register_row.get("b_evidence_id", "")
+            if evidence_id not in SOURCE_REGISTER_FORM_OVERRIDES:
+                continue
+            if evidence_id in ledger_evidence_ids:
+                source_register_skipped_existing_ledger += 1
+                continue
+            associated_edges = evidence_to_edges.get(evidence_id, [])
+            if not associated_edges:
+                source_register_unresolved_mappings.append(
+                    {
+                        "b_evidence_id": evidence_id,
+                        "reason": "curated source-register form rule has no exact ligand-source edge in the pinned release",
+                    }
+                )
+                continue
+            override = source_register_form_override(register_row)
+            if not override:
+                source_register_unresolved_mappings.append(
+                    {
+                        "b_evidence_id": evidence_id,
+                        "reason": "curated source-register rule did not match its declared source field",
+                    }
+                )
+                continue
+            candidate, state, signals, snippet, basis = override
+            source_ids = source_identifiers("", register_row.get("source_locator", ""))
+            matched_context = [row for source_id in source_ids for row in context_index.get(source_id, [])]
+            matched_context = list({row["observation_id"]: row for row in matched_context}.values())
+            context_status = "matched_exact_source_identifier" if matched_context else "no_exact_source_identifier_match"
+            unique_edges = {edge["edge_id"]: edge for edge in associated_edges}
+            for edge in unique_edges.values():
+                ligand = ligand_nodes[edge["source_node_id"]]
+                row = {
+                    "assertion_origin": "source_register_form_observation",
+                    "mechanism_node_id": ligand["node_id"],
+                    "ligand_canonical_name": ligand.get("canonical_name", ""),
+                    "ligand_source_label": edge.get("source_label", ""),
+                    "mechanism_edge_id": edge.get("edge_id", ""),
+                    "target_node_id": edge.get("target_node_id", ""),
+                    "target_label": edge.get("target_label", ""),
+                    "relation_type": edge.get("relation_type", ""),
+                    "pathway_name": edge.get("pathway_name", ""),
+                    "module": edge.get("module", "") or ligand.get("modules", ""),
+                    "b_evidence_id": evidence_id,
+                    "extraction_id": "",
+                    "dependency_group": f"{evidence_id}|{ligand['node_id']}",
+                    "context_observation_id": "",
+                    "context_evidence_role": "",
+                    "context_study_id": "",
+                    "context_timepoint_id": "",
+                    "context_species": "",
+                    "context_injury_model": "",
+                    "context_injury_level": "",
+                    "context_injury_severity": "",
+                    "context_tissue": "",
+                    "context_cell_type": "",
+                    "context_sample_id": "",
+                    "context_timepoint_value": "",
+                    "context_timepoint_unit": "",
+                    "context_perturbation": "",
+                    "context_treatment": "",
+                    "context_sample_scope": "",
+                    "context_protein_form": "",
+                    "context_protein_resolution": "",
+                    "context_source_locator": "",
+                    "context_source_record_key": "",
+                    "canonical_paper_key": "",
+                    "module_source_locator": register_row.get("source_locator", ""),
+                    "observation_status": "source_register_curated",
+                    "evidence_layer": register_row.get("evidence_layer", ""),
+                    "confidence": register_row.get("confidence_tier", ""),
+                    "observation_value_or_blocker": register_row.get("evidence_summary", ""),
+                    "observation_cell_or_model": register_row.get("species_support", ""),
+                    "observation_assay": register_row.get("support_kind", ""),
+                    "observation_perturbation": register_row.get("consolidation_note", ""),
+                    "claim_text_or_blocker": register_row.get("limitations", ""),
+                    "availability_class_candidate": candidate,
+                    "availability_evidence_state": state,
+                    "availability_signal_terms": ";".join(signals),
+                    "availability_evidence_snippet": snippet,
+                    "availability_basis_fields": ";".join(basis),
+                    "sci_context_match_status": context_status,
+                    "sci_context_observation_ids": ";".join(unique_values(matched_context, "observation_id")),
+                    "sci_context_ids": ";".join(unique_values(matched_context, "context_id")),
+                    "sci_context_source_artifact_paths": ";".join(unique_values(matched_context, "source_artifact_path")),
+                    "sci_context_source_artifact_sha256": ";".join(unique_values(matched_context, "source_artifact_sha256")),
+                    "promotion_state": "audit_only_not_promoted",
+                    "audit_note": (
+                        "Exact form assertion curated from a module-B evidence register. This is source-register "
+                        "evidence for the cited form/context, not a universal protein property; no graph edge, "
+                        "route confidence, or numeric weight was created. Existing phase-2 ledger IDs were excluded "
+                        "to avoid duplicate source/dependency counting."
+                    ),
+                }
+                output_rows.append(row)
+                source_register_form_assertions += 1
+                counts_by["module"][row["module"] or "unknown"] += 1
+                counts_by["availability_class_candidate"][candidate] += 1
+                counts_by["availability_evidence_state"][state] += 1
+                counts_by["observation_status"][row["observation_status"]] += 1
+                counts_by["evidence_layer"][row["evidence_layer"] or "unknown"] += 1
+                counts_by["sci_context_match_status"][context_status] += 1
+                counts_by["assertion_origin"][row["assertion_origin"]] += 1
+
     context_matches = context_form_matches(observations, ligand_nodes)
     for ligand, observation, provenance, protein_form, context_class, form_basis, form_snippet in context_matches:
         context_curation = provenance.get("context_curation", {})
@@ -731,6 +1088,7 @@ def build(
         release_dir / "mechanism_nodes.tsv",
         release_dir / "mechanism_edges.tsv",
         ledger_path,
+        *DEFAULT_SOURCE_REGISTERS,
         pack / "observations.tsv",
         pack / "contexts.tsv",
     ]
@@ -748,6 +1106,10 @@ def build(
         "phase2_ledger_rows_scanned": len(ledger_rows),
         "phase2_rows_with_pinned_ligand_edge": matched_ledger_rows,
         "ligand_evidence_associations": ligand_associations,
+        "source_register_rows_scanned": source_register_rows_scanned,
+        "source_register_form_assertions": source_register_form_assertions,
+        "source_register_skipped_existing_ledger": source_register_skipped_existing_ledger,
+        "source_register_unresolved_mappings": source_register_unresolved_mappings,
         "ligand_context_form_assertions": len(context_matches),
         "ligand_context_form_assertion_nodes": len({ligand["node_id"] for ligand, _observation, _provenance, _form, _class, _basis, _snippet in context_matches}),
         "unique_dependency_groups": len({row["dependency_group"] for row in output_rows}),
@@ -757,6 +1119,7 @@ def build(
             "assay_format_gate": "Soluble ectodomain, recombinant-receptor, cell-surface-binding, SPR, or immobilized-assay language is not sufficient by itself to classify the ligand form.",
             "sci_context_linking": "SCI context is linked only through exact PMID, PMCID, or DOI intersections with observations.tsv; absence of a match is not negative protein evidence.",
             "context_form_assertions": "Exact ligand-label matches to observations.tsv provenance_note protein_form values are emitted as context_matched_external_observation rows; they describe the observed SCI sample and do not establish a universal protein property.",
+            "source_register_form_assertions": "Only explicitly keyed source-register summaries or limitations are emitted; generic register language is ignored, and b_evidence_ids already present in the phase-2 ledger are skipped to prevent duplicate dependency counting.",
             "dependency_policy": "Rows sharing b_evidence_id and ligand node_id share a dependency group and must not be counted as independent experiments.",
             "promotion_policy": "This audit does not modify mechanism_nodes.tsv, mechanism_edges.tsv, observations.tsv, mechanism_links.tsv, or the pinned graph release.",
             "next_step": "Manually review source-reported candidates before exposing them as soft spatial filters; preserve unknown and assay-only states separately.",

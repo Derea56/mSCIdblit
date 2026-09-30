@@ -20,6 +20,9 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     assert summary["mechanism_release_id"] == "module20_24_mechanism_graph:2026-09-25-literature-expansion-627"
     assert summary["release_ligand_node_count"] > 0
     assert summary["ligand_evidence_associations"] > 0
+    assert summary["source_register_form_assertions"] == 30
+    assert summary["source_register_skipped_existing_ledger"] == 5
+    assert summary["source_register_unresolved_mappings"] == []
     assert summary["ligand_context_form_assertions"] == 123
     assert summary["ligand_context_form_assertion_nodes"] == 24
     assert summary["counts_by"]["availability_evidence_state"]["not_reported_in_source_record"] > 0
@@ -98,6 +101,46 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
         assert row["availability_evidence_state"] == "assay_or_form_language_not_attached_to_exact_ligand"
         assert "Manual adjudication:" in row["audit_note"]
 
+    source_register_rows = [
+        row for row in rows if row["assertion_origin"] == "source_register_form_observation"
+    ]
+    assert len(source_register_rows) == 30
+    assert len({row["b_evidence_id"] for row in source_register_rows}) == 30
+    assert all(row["availability_evidence_state"] == "source_register_explicit_form" for row in source_register_rows)
+    assert all(row["observation_status"] == "source_register_curated" for row in source_register_rows)
+    assert all(row["promotion_state"] == "audit_only_not_promoted" for row in source_register_rows)
+
+    register_expectations = {
+        "M21B-EVID-000095": ("membrane_bound", "NODE02888", "PMID:10958687"),
+        "M21B-EVID-000137": ("membrane_bound", "NODE10207", "PMID:20877282; PMCID:PMC3587840"),
+        "M21B-EVID-000241": ("soluble", "NODE04255", "PMID:7679207; PMID:9422729; PMID:8879206"),
+        "M21B-EVID-000277": ("both_or_context_dependent", "NODE10230", "PMID:14977921; PMID:36156831"),
+        "M21B-EVID-006910": ("ecm_retained", "NODE04057", "PMID:21200028; PMCID:PMC3019558; DOI:10.1083/jcb.201009136"),
+        "M21B-EVID-009994": ("soluble", "NODE09672", "PMID:19997621; PMCID:PMC2780297; DOI:10.1371/journal.pone.0008141"),
+        "M21B-EVID-010981": ("ecm_retained", "NODE06236", "PMID:29874128"),
+        "M23B-EVID-001552": ("soluble", "NODE03078", "PMID:19299512; DOI:10.1074/jbc.M807598200; PMCID:PMC2682911; local:data/raw/evidence/module23a_review_led_20260904/efna2_epha2_osteoclast_pubmed.xml; local:data/raw/evidence/module23a_review_led_20260904/efna2_epha2_osteoclast_pmc.html"),
+    }
+    for evidence_id, (candidate, node_id, locator) in register_expectations.items():
+        row = next(item for item in source_register_rows if item["b_evidence_id"] == evidence_id)
+        assert row["availability_class_candidate"] == candidate
+        assert row["mechanism_node_id"] == node_id
+        assert row["module_source_locator"] == locator
+        assert row["dependency_group"] == f"{evidence_id}|{node_id}"
+
+    # Register evidence is additive only for IDs absent from the integrated
+    # ledger; these IDs remain represented by their existing ledger rows.
+    assert not any(
+        row["assertion_origin"] == "source_register_form_observation"
+        and row["b_evidence_id"] in {
+            "M20B-EVID-002097",
+            "M23B-EVID-000580",
+            "M23B-EVID-000604",
+            "M23B-EVID-001390",
+            "M23B-EVID-001392",
+        }
+        for row in rows
+    )
+
     context_rows = [
         row
         for row in rows
@@ -159,6 +202,11 @@ def test_ligand_availability_audit_records_exact_inputs(tmp_path):
         "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627/mechanism_nodes.tsv",
         "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627/mechanism_edges.tsv",
         "work/cross_module_synthesis/canonical_evidence_review/module20_24_integrated_phase2_extractions.tsv",
+        "work/module_b_consolidation/module20b/module20b_evidence_register.tsv",
+        "work/module_b_consolidation/module21b/module21b_evidence_register.tsv",
+        "work/module_b_consolidation/module22b/module22b_evidence_register.tsv",
+        "work/module_b_consolidation/module23b/module23b_evidence_register.tsv",
+        "work/module_b_consolidation/module24b/module24b_evidence_register.tsv",
         "context_packs/spinal_cord_injury/observations.tsv",
         "context_packs/spinal_cord_injury/contexts.tsv",
     ]
