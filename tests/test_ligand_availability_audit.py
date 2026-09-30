@@ -68,6 +68,19 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
         assert row["availability_class_candidate"] == "both_or_context_dependent"
         assert row["availability_evidence_state"] == "source_reported_candidate"
 
+    expected_source_candidates = {
+        "M20B-EVID-002904": "membrane_bound",
+        "M20B-EVID-004969": "soluble",
+        "M20B-EVID-002994": "ecm_retained",
+        "M20B-EVID-003007": "ecm_retained",
+        "M20B-EVID-004966": "ecm_retained",
+        "M23B-EVID-000346": "ecm_retained",
+    }
+    for evidence_id, candidate in expected_source_candidates.items():
+        row = next(item for item in rows if item["b_evidence_id"] == evidence_id)
+        assert row["availability_class_candidate"] == candidate
+        assert row["availability_evidence_state"] == "source_reported_candidate"
+
     context_rows = [
         row
         for row in rows

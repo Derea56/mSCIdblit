@@ -99,6 +99,42 @@ SOURCE_FORM_OVERRIDES = {
         "fields": ("observation_perturbation",),
         "pattern": re.compile(r"\bsoluble/immobilized decorin\b", re.IGNORECASE),
     },
+    "M20B-EVID-002904": {
+        "candidate": "membrane_bound",
+        "signals": ["membrane_bound"],
+        "fields": ("observation_value_or_blocker",),
+        "pattern": re.compile(r"\bCD47 displayed on cell membranes\b", re.IGNORECASE),
+    },
+    "M20B-EVID-004969": {
+        "candidate": "soluble",
+        "signals": ["soluble"],
+        "fields": ("observation_value_or_blocker",),
+        "pattern": re.compile(r"\bmacrophage-secreted osteopontin\b", re.IGNORECASE),
+    },
+    "M20B-EVID-002994": {
+        "candidate": "ecm_retained",
+        "signals": ["ecm_retained"],
+        "fields": ("observation_value_or_blocker", "observation_perturbation"),
+        "pattern": re.compile(r"\bcollagen XI(?:-containing matrices| in collagen I matrices)\b", re.IGNORECASE),
+    },
+    "M20B-EVID-003007": {
+        "candidate": "ecm_retained",
+        "signals": ["ecm_retained"],
+        "fields": ("claim_text_or_blocker", "observation_value_or_blocker"),
+        "pattern": re.compile(r"\bdirect matrix-receptor adhesion edge\b|\bcollagen XIV/undulin\b", re.IGNORECASE),
+    },
+    "M20B-EVID-004966": {
+        "candidate": "ecm_retained",
+        "signals": ["ecm_retained"],
+        "fields": ("observation_value_or_blocker",),
+        "pattern": re.compile(r"\bMindin/SPON2 matrix\b", re.IGNORECASE),
+    },
+    "M23B-EVID-000346": {
+        "candidate": "ecm_retained",
+        "signals": ["ecm_retained"],
+        "fields": ("observation_value_or_blocker", "observation_perturbation", "claim_text_or_blocker"),
+        "pattern": re.compile(r"\b(?:matrix-associated ligand context|PTN immobilization|matrix-presentation boundaries)\b", re.IGNORECASE),
+    },
 }
 
 FORM_PATTERNS = {
