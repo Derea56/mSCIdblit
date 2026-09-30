@@ -34,14 +34,7 @@ from scripts.build_sci_context_pack import read_tsv
 
 SOURCE_FIELDS = (
     "observation_value_or_blocker",
-    "observation_source_section",
-    "observation_figure_or_table",
-    "observation_species",
-    "observation_cell_or_model",
-    "observation_assay",
-    "observation_perturbation",
     "claim_text_or_blocker",
-    "claim_source_section",
 )
 
 CONTEXT_FORM_CLASSES = {
@@ -135,6 +128,49 @@ SOURCE_FORM_OVERRIDES = {
         "fields": ("observation_value_or_blocker", "observation_perturbation", "claim_text_or_blocker"),
         "pattern": re.compile(r"\b(?:matrix-associated ligand context|PTN immobilization|matrix-presentation boundaries)\b", re.IGNORECASE),
     },
+    "M20B-EVID-001844": {
+        "candidate": "both_or_context_dependent",
+        "signals": ["soluble", "immobilized"],
+        "fields": ("observation_value_or_blocker",),
+        "pattern": re.compile(r"\b(?:soluble and immobilized|soluble versus immobilized) CCL21\b", re.IGNORECASE),
+    },
+    "M20B-EVID-005357": {
+        "candidate": "both_or_context_dependent",
+        "signals": ["soluble", "membrane_bound"],
+        "fields": ("observation_value_or_blocker", "claim_text_or_blocker"),
+        "pattern": re.compile(r"\b(?:soluble-fractalkine chemotaxis and membrane-fractalkine adhesion|membrane-bound versus soluble CX3CL1)\b", re.IGNORECASE),
+    },
+    "M20B-EVID-002290": {
+        "candidate": "both_or_context_dependent",
+        "signals": ["soluble", "immobilized"],
+        "fields": ("observation_value_or_blocker", "observation_perturbation"),
+        "pattern": re.compile(r"\b(?:Immobilized VWF.*soluble VWF|soluble versus immobilized VWF)\b", re.IGNORECASE),
+    },
+}
+
+# These records contain availability language for a receptor, assay presentation,
+# processed partner, or an explicit negative statement rather than for the exact
+# ligand node. Keep them auditable but do not emit a positive ligand-form
+# candidate from the generic proximity matcher.
+SOURCE_FORM_SUPPRESSIONS = {
+    "M20B-EVID-002230": "claim explicitly says NCAM1 is not to be treated as a secreted ligand",
+    "M20B-EVID-002242": "cell-surface and immobilized language describes SDC1/thrombospondin presentation, not THBS1 form",
+    "M20B-EVID-002262": "cell-surface language describes the SDC4 receptor for a processed TNC peptide",
+    "M20B-EVID-003425": "membrane-bound and soluble language describes FGFRL1 receptor presentation, not FGF10 form",
+    "M20B-EVID-003441": "membrane-bound and soluble language describes FGFRL1 receptor presentation, not FGF2 form",
+    "M20B-EVID-003444": "immobilized and soluble language describes NRP1 receptor presentation, not FGF2 form",
+    "M20B-EVID-003452": "membrane-bound and soluble language describes FGFRL1 receptor presentation, not FGF22 form",
+    "M20B-EVID-003457": "membrane-bound and soluble language describes FGFRL1 receptor presentation, not FGF3 form",
+    "M20B-EVID-003458": "membrane-bound and soluble language describes FGFRL1 receptor presentation, not FGF4 form",
+    "M20B-EVID-003464": "membrane-bound and soluble language describes FGFRL1 receptor presentation, not FGF8 form",
+    "M20B-EVID-003506": "cell-surface language describes DIP2A receptor localization, not FSTL1 form",
+    "M20B-EVID-005074": "cell-surface language describes CD63 receptor localization, not TIMP1 form",
+    "M21B-EVID-000052": "transmembrane language describes IFNGR2 receptor topology, not IFN-gamma form",
+    "M21B-EVID-000053": "membrane and soluble language describes TNF-binding receptor forms, not TNF form",
+    "M21B-EVID-000054": "cell-surface aggregation describes the TNF-TNFR2 assay context, not membrane-bound TNF",
+    "M23B-EVID-000597": "soluble language describes the alphaIIbbeta3 receptor preparation, not CXCL12 form",
+    "M23B-EVID-000738": "cell-surface language describes the alphaVbeta1 receptor record, not FN1 form",
+    "M24B-EVID-000171": "cell-surface association describes HMGB1 binding to TLR2/TLR4, not membrane anchoring of HMGB1",
 }
 
 FORM_PATTERNS = {
@@ -145,7 +181,7 @@ FORM_PATTERNS = {
     "membrane_bound": re.compile(
         r"\b(?:membrane[- ]bound|membrane[- ]tethered|cell[- ]surface|surface[- ]bound|"
         r"transmembrane|juxtacrine|cell[- ]associated|GPI[- ]anchored|"
-        r"glycosylphosphatidylinositol[- ]anchored|anchored)\b",
+        r"glycosylphosphatidylinositol[- ]anchored)\b",
         re.IGNORECASE,
     ),
     "ecm_retained": re.compile(
@@ -432,6 +468,12 @@ def source_form_override(module_row: dict[str, str]) -> tuple[str, str, list[str
     return None
 
 
+def source_form_suppression(module_row: dict[str, str]) -> str:
+    """Return the curation reason for a known non-ligand form phrase."""
+
+    return SOURCE_FORM_SUPPRESSIONS.get(module_row.get("b_evidence_id", ""), "")
+
+
 def build(
     release_dir: Path = DEFAULT_RELEASE,
     ledger_path: Path = DEFAULT_LEDGER,
@@ -492,8 +534,15 @@ def build(
             attached_results = [result for _field, result in field_results if result[1] == "source_reported_candidate"]
             unattached_results = [result for _field, result in field_results if result[1] == "assay_or_form_language_not_attached_to_exact_ligand"]
             attached_signals = {signal for _candidate, _state, signals, _snippet, _basis in attached_results for signal in signals}
+            suppression_reason = source_form_suppression(module_row)
             override = source_form_override(module_row)
-            if override:
+            if suppression_reason:
+                candidate = "unknown"
+                state = "assay_or_form_language_not_attached_to_exact_ligand"
+                signals = []
+                snippet = ""
+                basis = []
+            elif override:
                 candidate, state, signals, snippet, basis = override
             elif attached_signals:
                 if attached_signals == {"ecm_retained"}:
@@ -579,6 +628,7 @@ def build(
                 "audit_note": (
                     "Availability class is a staged source-text candidate, not a finalized protein property. "
                     "Assay format is not treated as physical localization; no graph edge, route confidence, or numeric weight was created."
+                    + (f" Manual adjudication: {suppression_reason}." if suppression_reason else "")
                 ),
             }
             output_rows.append(row)

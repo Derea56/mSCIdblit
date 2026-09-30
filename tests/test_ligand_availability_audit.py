@@ -69,17 +69,34 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
         assert row["availability_evidence_state"] == "source_reported_candidate"
 
     expected_source_candidates = {
+        "M20B-EVID-001844": "both_or_context_dependent",
         "M20B-EVID-002904": "membrane_bound",
         "M20B-EVID-004969": "soluble",
         "M20B-EVID-002994": "ecm_retained",
         "M20B-EVID-003007": "ecm_retained",
         "M20B-EVID-004966": "ecm_retained",
+        "M20B-EVID-005357": "both_or_context_dependent",
         "M23B-EVID-000346": "ecm_retained",
+        "M20B-EVID-002290": "both_or_context_dependent",
     }
     for evidence_id, candidate in expected_source_candidates.items():
         row = next(item for item in rows if item["b_evidence_id"] == evidence_id)
         assert row["availability_class_candidate"] == candidate
         assert row["availability_evidence_state"] == "source_reported_candidate"
+
+    suppressed_form_records = {
+        "M20B-EVID-002230",  # explicit negative: NCAM1 is not a secreted ligand
+        "M20B-EVID-003441",  # soluble/membrane-bound FGFRL1 receptor, not FGF2
+        "M20B-EVID-003444",  # soluble/immobilized NRP1 receptor, not FGF2
+        "M21B-EVID-000052",  # transmembrane IFNGR2 receptor, not IFN-gamma
+        "M23B-EVID-000597",  # soluble alphaIIbbeta3 receptor, not CXCL12
+        "M23B-EVID-000738",  # cell-surface alphaVbeta1 receptor, not FN1
+    }
+    for evidence_id in suppressed_form_records:
+        row = next(item for item in rows if item["b_evidence_id"] == evidence_id)
+        assert row["availability_class_candidate"] == "unknown"
+        assert row["availability_evidence_state"] == "assay_or_form_language_not_attached_to_exact_ligand"
+        assert "Manual adjudication:" in row["audit_note"]
 
     context_rows = [
         row
