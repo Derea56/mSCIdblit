@@ -20,7 +20,8 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     assert summary["mechanism_release_id"] == "module20_24_mechanism_graph:2026-09-25-literature-expansion-627"
     assert summary["release_ligand_node_count"] > 0
     assert summary["ligand_evidence_associations"] > 0
-    assert summary["source_register_form_assertions"] == 30
+    assert summary["source_register_form_assertions"] == 169
+    assert summary["source_register_form_assertion_ids"] == 162
     assert summary["source_register_skipped_existing_ledger"] == 5
     assert summary["source_register_unresolved_mappings"] == []
     assert summary["ligand_context_form_assertions"] == 123
@@ -104,8 +105,8 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     source_register_rows = [
         row for row in rows if row["assertion_origin"] == "source_register_form_observation"
     ]
-    assert len(source_register_rows) == 30
-    assert len({row["b_evidence_id"] for row in source_register_rows}) == 30
+    assert len(source_register_rows) == 169
+    assert len({row["b_evidence_id"] for row in source_register_rows}) == 162
     assert all(row["availability_evidence_state"] == "source_register_explicit_form" for row in source_register_rows)
     assert all(row["observation_status"] == "source_register_curated" for row in source_register_rows)
     assert all(row["promotion_state"] == "audit_only_not_promoted" for row in source_register_rows)
@@ -113,6 +114,21 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     register_expectations = {
         "M21B-EVID-000095": ("membrane_bound", "NODE02888", "PMID:10958687"),
         "M21B-EVID-000137": ("membrane_bound", "NODE10207", "PMID:20877282; PMCID:PMC3587840"),
+        "M21B-EVID-000902": ("membrane_bound", "NODE03727", "PMID:22405201; PMCID:PMC3326387"),
+        "M21B-EVID-000111": ("both_or_context_dependent", "NODE02607", "PMID:25395671"),
+        "M21B-EVID-000122": ("membrane_bound", "NODE01922", "PMID:18657508; PMID:11283158"),
+        "M21B-EVID-000206": ("both_or_context_dependent", "NODE01686", "PMID:33875601; PMCID:PMC8092586"),
+        "M21B-EVID-000334": ("both_or_context_dependent", "NODE00742", "PMID:7929459"),
+        "M21B-EVID-000469": ("ecm_retained", "NODE02354", "PMID:18305222; PMCID:PMC2602586"),
+        "M21B-EVID-000585": ("ecm_retained", "NODE11720", "PMID:12709411"),
+        "M21B-EVID-000627": ("soluble", "NODE03686", "PMID:30580966; PMCID:PMC6365968; DOI:10.1016/j.cell.2018.11.010"),
+        "M21B-EVID-002324": ("soluble", "NODE08446", "PMID:9856994"),
+        "M21B-EVID-002336": ("membrane_bound", "NODE05070", "PMID:28864826; PMCID:PMC5581337"),
+        "M21B-EVID-002796": ("both_or_context_dependent", "NODE07584", "PMID:20497550; PMCID:PMC2890604; DOI:10.1186/1476-4598-9-118"),
+        "M21B-EVID-006991": ("ecm_retained", "NODE01296", "PMID:18339631; PMCID:PMC2376219; DOI:10.1074/jbc.M707820200"),
+        "M21B-EVID-009291": ("both_or_context_dependent", "NODE11398", "PMID:27147664; PMCID:PMC4854972; DOI:10.1523/JNEUROSCI.0211-16.2016"),
+        "M21B-EVID-009997": ("soluble", "NODE09672", "PMID:19997621; PMCID:PMC2780297; DOI:10.1371/journal.pone.0008141"),
+        "M23B-EVID-001470": ("soluble", "NODE01247", "PMID:29777767; PMID:16025156; PMID:25017885; PMID:22821552; PMCID:PMC3527886; PMCID:PMC4099942; local:data/raw/evidence/module23a_review_led_20260904/biglycan_pubmed.xml; local:data/raw/evidence/module23a_review_led_20260904/biglycan_and_sci_review_pubmed.xml; local:data/raw/evidence/module23a_review_led_20260904/PMC3527886_fulltext.xml; local:data/raw/evidence/module23a_review_led_20260904/PMC4099942_fulltext.xml"),
         "M21B-EVID-000241": ("soluble", "NODE04255", "PMID:7679207; PMID:9422729; PMID:8879206"),
         "M21B-EVID-000277": ("both_or_context_dependent", "NODE10230", "PMID:14977921; PMID:36156831"),
         "M21B-EVID-006910": ("ecm_retained", "NODE04057", "PMID:21200028; PMCID:PMC3019558; DOI:10.1083/jcb.201009136"),
@@ -137,6 +153,18 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
             "M23B-EVID-000604",
             "M23B-EVID-001390",
             "M23B-EVID-001392",
+        }
+        for row in rows
+    )
+    # Form words referring only to a receptor ectodomain/decoy are not
+    # promoted as ligand-form assertions.
+    assert not any(
+        row["assertion_origin"] == "source_register_form_observation"
+        and row["b_evidence_id"] in {
+            "M21B-EVID-000104",  # soluble IL-1R2 decoy, not IL-1alpha
+            "M21B-EVID-000105",  # soluble IL-1R2/accessory complex, not IL-1beta
+            "M21B-EVID-000286",  # soluble endoglin, not BMP9
+            "M21B-EVID-000287",  # soluble endoglin, not BMP10
         }
         for row in rows
     )
