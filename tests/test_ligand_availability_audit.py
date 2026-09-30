@@ -20,8 +20,8 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     assert summary["mechanism_release_id"] == "module20_24_mechanism_graph:2026-09-25-literature-expansion-627"
     assert summary["release_ligand_node_count"] > 0
     assert summary["ligand_evidence_associations"] > 0
-    assert summary["source_register_form_assertions"] == 189
-    assert summary["source_register_form_assertion_ids"] == 182
+    assert summary["source_register_form_assertions"] == 277
+    assert summary["source_register_form_assertion_ids"] == 270
     assert summary["source_register_skipped_existing_ledger"] == 5
     assert summary["source_register_unresolved_mappings"] == []
     assert summary["ligand_context_form_assertions"] == 123
@@ -105,8 +105,8 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     source_register_rows = [
         row for row in rows if row["assertion_origin"] == "source_register_form_observation"
     ]
-    assert len(source_register_rows) == 189
-    assert len({row["b_evidence_id"] for row in source_register_rows}) == 182
+    assert len(source_register_rows) == 277
+    assert len({row["b_evidence_id"] for row in source_register_rows}) == 270
     assert all(row["availability_evidence_state"] == "source_register_explicit_form" for row in source_register_rows)
     assert all(row["observation_status"] == "source_register_curated" for row in source_register_rows)
     assert all(row["promotion_state"] == "audit_only_not_promoted" for row in source_register_rows)
@@ -155,6 +155,94 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
         "M21B-EVID-010958": ("membrane_bound", "NODE03089", "PMCID:PMC3499309; PMCID:PMC6782661"),
         "M21B-EVID-010988": ("ecm_retained", "NODE03620", "PMID:12697740; PMCID:PMC152937"),
         "M23B-EVID-001602": ("ecm_retained", "NODE02392", "PMID:2269670; PMCID:PMC2116373; DOI:10.1083/jcb.111.6.3177; PMID:8305732; PMCID:PMC275746; DOI:10.1091/mbc.4.11.1097; local:data/raw/evidence/module23a_review_led_20260904/collagen_vi_ng2_interaction_fulltext.html; local:data/raw/evidence/module23a_review_led_20260904/collagen_vi_ng2_interaction_pubmed.xml; local:data/raw/evidence/module23a_review_led_20260904/collagen_vi_ng2_fulltext.html; local:data/raw/evidence/module23a_review_led_20260904/collagen_vi_ng2_pubmed.xml"),
+        "M21B-EVID-000391": ("soluble", "NODE05421", "PMID:12513909; PMID:12087100"),
+        "M21B-EVID-000770": ("soluble", "NODE10179", "PMID:18922901"),
+        "M21B-EVID-000794": ("soluble", "NODE02075", "PMCID:PMC2323273"),
+        "M21B-EVID-000898": ("soluble", "NODE11887", "PMID:30304675; PMCID:PMC6338448"),
+        "M21B-EVID-000899": ("soluble", "NODE11895", "PMID:30304675; PMCID:PMC6338448"),
+        "M21B-EVID-001428": ("membrane_bound", "NODE01457", "PMID:11955431"),
+        "M21B-EVID-001429": ("soluble", "NODE01465", "PMID:14734749"),
+        "M21B-EVID-001432": ("membrane_bound", "NODE04936", "PMID:16530040"),
+        "M21B-EVID-001703": ("soluble", "NODE05231", "PMID:11412113; PMID:8511589; PMID:7744001"),
+        "M21B-EVID-001707": ("both_or_context_dependent", "NODE11244", "PMID:21081755; PMID:7544915"),
+        "M21B-EVID-002102": ("soluble", "NODE06379", "PMID:16990550; PMCID:PMC2840530"),
+        "M21B-EVID-002112": ("soluble", "NODE06380", "PMID:20220021"),
+        "M21B-EVID-002113": ("soluble", "NODE06381", "PMID:20220021"),
+        "M21B-EVID-002835": ("soluble", "NODE06379", "PMID:20463223; PMCID:PMC6632578"),
+        "M21B-EVID-002914": ("soluble", "NODE01123", "PMID:24133212; PMCID:PMC3843045"),
+        "M21B-EVID-002915": ("soluble", "NODE04746", "PMID:12486241; PMCID:PMC139252"),
+        "M21B-EVID-003053": ("soluble", "NODE04881", "PMID:23868935; PMCID:PMC3892666; DOI:10.1161/ATVBAHA.113.301893"),
+        "M21B-EVID-004650": ("both_or_context_dependent", "NODE10567", "PMID:18768877; PMCID:PMC2774262; DOI:10.4049/jimmunol.181.6.4199"),
+        "M21B-EVID-004651": ("both_or_context_dependent", "NODE10567", "PMID:18768877; PMCID:PMC2774262; DOI:10.4049/jimmunol.181.6.4199"),
+        "M21B-EVID-005373": ("both_or_context_dependent", "NODE02894", "PMID:17533181; DOI:10.1161/CIRCRESAHA.106.135988"),
+        "M21B-EVID-005378": ("membrane_bound", "NODE02575", "PMID:18606138"),
+        "M21B-EVID-005379": ("membrane_bound", "NODE02575", "PMID:18606138"),
+        "M21B-EVID-005380": ("membrane_bound", "NODE02575", "PMID:18606138"),
+        "M21B-EVID-005396": ("soluble", "NODE10264", "PMID:28840375"),
+        "M21B-EVID-005397": ("soluble", "NODE10262", "PMID:16172602"),
+        "M21B-EVID-005559": ("soluble", "NODE03505", "PMID:30692635; PMID:37927213"),
+        "M21B-EVID-005781": ("soluble", "NODE10547", "PMID:21788491; PMCID:PMC3156217; DOI:10.1073/pnas.1104977108"),
+        "M21B-EVID-006123": ("soluble", "NODE00445", "PMID:25331893; DOI:10.1073/pnas.1414841111"),
+        "M21B-EVID-006124": ("soluble", "NODE00446", "PMID:25331893; DOI:10.1073/pnas.1414841111"),
+        "M21B-EVID-006158": ("soluble", "NODE02119", "PMID:38503280; DOI:10.1016/j.cell.2024.02.024"),
+        "M21B-EVID-006165": ("soluble", "NODE09080", "PMID:37438365; PMCID:PMC10338493; DOI:10.1038/s41467-023-39881-9"),
+        "M21B-EVID-006208": ("both_or_context_dependent", "NODE03620", "PMID:35348113; PMCID:PMC8986318; DOI:10.7554/eLife.75545"),
+        "M21B-EVID-006465": ("both_or_context_dependent", "NODE02575", "PMID:18606138; DOI:10.1016/j.devcel.2008.05.007"),
+        "M21B-EVID-006514": ("soluble", "NODE01434", "PMID:16600989"),
+        "M21B-EVID-006586": ("soluble", "NODE02045", "PMID:25080593; PMCID:PMC4115139"),
+        "M21B-EVID-006587": ("soluble", "NODE02045", "PMID:25080593; PMCID:PMC4115139"),
+        "M21B-EVID-006608": ("soluble", "NODE06632", "PMID:36178190; PMCID:PMC9578707; DOI:10.7554/eLife.81398"),
+        "M21B-EVID-006609": ("soluble", "NODE08317", "PMID:36178190; PMCID:PMC9578707; DOI:10.7554/eLife.81398"),
+        "M21B-EVID-006610": ("soluble", "NODE11809", "PMID:36178190; PMCID:PMC9578707; DOI:10.7554/eLife.81398"),
+        "M21B-EVID-006611": ("soluble", "NODE10108", "PMID:36178190; PMCID:PMC9578707; DOI:10.7554/eLife.81398"),
+        "M21B-EVID-006615": ("soluble", "NODE10487", "PMID:36178190; PMCID:PMC9578707; DOI:10.7554/eLife.81398"),
+        "M21B-EVID-006642": ("soluble", "NODE03110", "PMID:19503073; DOI:10.1038/ncb1896"),
+        "M21B-EVID-006643": ("soluble", "NODE03110", "PMID:19503073; DOI:10.1038/ncb1896"),
+        "M21B-EVID-006644": ("soluble", "NODE03110", "PMID:19503073; DOI:10.1038/ncb1896"),
+        "M21B-EVID-006911": ("ecm_retained", "NODE08357", "PMID:21200028; PMCID:PMC3019558; DOI:10.1083/jcb.201009136"),
+        "M21B-EVID-006912": ("ecm_retained", "NODE00776", "PMID:21200028; PMCID:PMC3019558; DOI:10.1083/jcb.201009136"),
+        "M21B-EVID-000824": ("soluble", "NODE09969", "PMID:24952599; PMCID:PMC4102805"),
+        "M21B-EVID-008802": ("soluble", "NODE05097", "PMID:10948192"),
+        "M21B-EVID-001700": ("soluble", "NODE05292", "PMID:10948192; PMID:11141475"),
+        "M21B-EVID-002817": ("membrane_bound", "NODE01462", "PMID:7868901; PMID:11352728"),
+        "M21B-EVID-002900": ("membrane_bound", "NODE06989", "PMID:11239445; DOI:10.1016/S1074-7613(01)00095-4"),
+        "M21B-EVID-002901": ("membrane_bound", "NODE11575", "PMID:11239445; PMID:11777960; DOI:10.4049/jimmunol.168.2.671"),
+        "M21B-EVID-002903": ("membrane_bound", "NODE11577", "PMID:11239445; PMID:11777960; DOI:10.4049/jimmunol.168.2.671"),
+        "M21B-EVID-003194": ("membrane_bound", "NODE03982", "PMID:16362042; PMID:8621659"),
+        "M21B-EVID-005513": ("ecm_retained", "NODE11857", "PMID:27157618; DOI:10.1038/onc.2016.149; PMCID:PMC5346747"),
+        "M21B-EVID-006080": ("ecm_retained", "NODE03620", "PMID:23124902; PMCID:PMC3656602; DOI:10.1371/journal.pone.0056142"),
+        "M21B-EVID-006201": ("ecm_retained", "NODE03620", "PMID:9462693; DOI:10.1002/(SICI)1097-4652(199803)174:3<310::AID-JCP5>3.0.CO;2-R"),
+        "M21B-EVID-006202": ("ecm_retained", "NODE03642", "PMID:9531542; PMCID:PMC316674; DOI:10.1101/gad.12.7.1058"),
+        "M21B-EVID-006203": ("ecm_retained", "NODE03652", "PMID:9531542; PMCID:PMC316674; DOI:10.1101/gad.12.7.1058"),
+        "M21B-EVID-006212": ("ecm_retained", "NODE03599", "PMID:17959718; DOI:10.1016/j.devcell.2007.09.017"),
+        "M21B-EVID-006213": ("ecm_retained", "NODE03599", "PMID:17959718; DOI:10.1016/j.devcell.2007.09.017"),
+        "M21B-EVID-006502": ("membrane_bound", "NODE00255", "PMID:19389207; DOI:10.1111/j.1537-2995.2008.01978.x"),
+        "M21B-EVID-006668": ("ecm_retained", "NODE04678", "PMID:11830493"),
+        "M21B-EVID-003784": ("membrane_bound", "NODE08875", "PMID:18215137; PMID:17616532"),
+        "M21B-EVID-000779": ("both_or_context_dependent", "NODE09762", "PMID:16103117; PMID:18335997; PMCID:PMC2819367"),
+        "M21B-EVID-000780": ("membrane_bound", "NODE09762", "PMID:18287331; PMID:18335997; PMCID:PMC2819367"),
+        "M21B-EVID-002453": ("membrane_bound", "NODE06638", "PMID:19246390; PMCID:PMC2657456"),
+        "M21B-EVID-002563": ("membrane_bound", "NODE10786", "PMID:24662763"),
+        "M21B-EVID-002564": ("membrane_bound", "NODE10786", "PMID:24662763"),
+        "M21B-EVID-002783": ("membrane_bound", "NODE06661", "PMID:12060703; PMID:17537914; PMCID:PMC1891256; PMID:18566392; PMCID:PMC2507881"),
+        "M21B-EVID-002899": ("membrane_bound", "NODE06988", "PMID:10426993; PMID:11955595; DOI:10.1126/science.285.5428.727"),
+        "M21B-EVID-003132": ("membrane_bound", "NODE02051", "PMID:26483485; PMCID:PMC4640789; DOI:10.1073/pnas.1511617112; PMID:11590190; PMID:11095950"),
+        "M21B-EVID-005174": ("membrane_bound", "NODE08455", "PMID:41248277; PMCID:PMC12663928; DOI:10.1073/pnas.2517436122; https://pubmed.ncbi.nlm.nih.gov/41248277/"),
+        "M21B-EVID-005175": ("membrane_bound", "NODE08405", "PMID:41248277; PMCID:PMC12663928; DOI:10.1073/pnas.2517436122; https://pubmed.ncbi.nlm.nih.gov/41248277/"),
+        "M21B-EVID-005791": ("membrane_bound", "NODE03084", "PMID:12496762; DOI:10.1038/nn994"),
+        "M21B-EVID-005798": ("membrane_bound", "NODE02295", "PMID:14567914; DOI:10.1016/S0092-8674(03)00810-9"),
+        "M21B-EVID-006117": ("soluble", "NODE00374", "PMID:25646014; PMCID:PMC4710371; DOI:10.1158/1535-7163.MCT-14-0470"),
+        "M21B-EVID-006121": ("membrane_bound", "NODE05998", "PMID:27309808; DOI:10.1038/nature18596"),
+        "M21B-EVID-006137": ("membrane_bound", "NODE03088", "PMID:33436772; PMCID:PMC7804096"),
+        "M21B-EVID-006376": ("membrane_bound", "NODE01493", "PMID:39768175; PMCID:PMC11674933; DOI:10.3390/cells13242083"),
+        "M21B-EVID-006460": ("membrane_bound", "NODE11432", "PMID:36399563; PMCID:PMC9674301; DOI:10.1126/scitranslmed.abq4077"),
+        "M21B-EVID-006467": ("soluble", "NODE08260", "PMID:10748068; DOI:10.1074/jbc.M002254200"),
+        "M21B-EVID-006468": ("membrane_bound", "NODE00607", "PMID:21238923; PMCID:PMC6775579"),
+        "M21B-EVID-006556": ("soluble", "NODE04758", "PMID:16809620; DOI:10.1182/blood-2005-12-019919"),
+        "M21B-EVID-006716": ("both_or_context_dependent", "NODE10124", "PMID:21813734; PMCID:PMC3183016; DOI:10.1371/journal.pone.0021952"),
+        "M21B-EVID-006941": ("both_or_context_dependent", "NODE02887", "PMID:21419176; DOI:10.1016/j.bbamcr.2011.03.004"),
+        "M23B-EVID-001546": ("membrane_bound", "NODE03078", "PMID:9053851; DOI:10.1038/sj.onc.1200857; local:data/raw/evidence/module23a_review_led_20260904/efna2_epha8_activation_pubmed.xml"),
+        "M21B-EVID-006667": ("membrane_bound", "NODE03728", "PMID:26633812; PMCID:PMC4737655; DOI:10.7554/eLife.08149"),
     }
     for evidence_id, (candidate, node_id, locator) in register_expectations.items():
         row = next(item for item in source_register_rows if item["b_evidence_id"] == evidence_id)
