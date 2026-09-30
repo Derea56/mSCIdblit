@@ -13,16 +13,16 @@
     "availability_class_candidate": {
       "both_or_context_dependent": 51,
       "ecm_retained": 49,
-      "membrane_bound": 123,
-      "soluble": 233,
-      "unknown": 2188
+      "membrane_bound": 128,
+      "soluble": 236,
+      "unknown": 2180
     },
     "availability_evidence_state": {
-      "assay_or_form_language_not_attached_to_exact_ligand": 100,
+      "assay_or_form_language_not_attached_to_exact_ligand": 97,
       "context_observation_explicit_protein_form": 123,
-      "not_reported_in_source_record": 2088,
+      "not_reported_in_source_record": 2083,
       "source_register_explicit_form": 292,
-      "source_reported_candidate": 41
+      "source_reported_candidate": 49
     },
     "context_form_class": {
       "ecm_retained": 9,

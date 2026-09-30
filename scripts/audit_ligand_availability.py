@@ -280,6 +280,54 @@ SOURCE_FORM_OVERRIDES.update(
             "fields": ("observation_value_or_blocker",),
             "pattern": re.compile(r"\bLTB4 was released from traumatized spinal-cord slices\b", re.IGNORECASE),
         },
+        "M20B-EVID-001856": {
+            "candidate": "membrane_bound",
+            "signals": ["membrane_bound"],
+            "fields": ("context_and_limitations",),
+            "pattern": re.compile(r"\bEREG EGF domain rather than full-length membrane-tethered ligand\b", re.IGNORECASE),
+        },
+        "M20B-EVID-001983": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("context_and_limitations",),
+            "pattern": re.compile(r"\bsoluble alpha3NC1 fragment\b", re.IGNORECASE),
+        },
+        "M20B-EVID-002893": {
+            "candidate": "membrane_bound",
+            "signals": ["membrane_bound"],
+            "fields": ("claim_text_or_blocker", "context_and_limitations"),
+            "pattern": re.compile(r"\bCD22-PTPRC/CD45.*cell-surface association boundary\b|\bcell-surface cross-linking\b", re.IGNORECASE),
+        },
+        "M20B-EVID-002980": {
+            "candidate": "membrane_bound",
+            "signals": ["membrane_bound"],
+            "fields": ("context_and_limitations",),
+            "pattern": re.compile(r"\bCNTN2/TAG1 is a GPI-anchored adhesion molecule\b", re.IGNORECASE),
+        },
+        "M20B-EVID-002984": {
+            "candidate": "membrane_bound",
+            "signals": ["membrane_bound"],
+            "fields": ("context_and_limitations",),
+            "pattern": re.compile(r"\bCNTN6/NB-3 is GPI-anchored\b", re.IGNORECASE),
+        },
+        "M20B-EVID-003707": {
+            "candidate": "membrane_bound",
+            "signals": ["membrane_bound"],
+            "fields": ("context_and_limitations",),
+            "pattern": re.compile(r"\bGPC3 is a GPI-anchored heparan-sulfate proteoglycan\b", re.IGNORECASE),
+        },
+        "M24B-EVID-000085": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("context_and_limitations",),
+            "pattern": re.compile(r"\bFAM3D is a secreted chemokine-like ligand\b", re.IGNORECASE),
+        },
+        "M24B-EVID-000165": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("context_and_limitations",),
+            "pattern": re.compile(r"\bsecreted ANXA2 tetramer\b", re.IGNORECASE),
+        },
     }
 )
 
