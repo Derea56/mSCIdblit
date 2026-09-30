@@ -1,0 +1,121 @@
+{
+  "artifacts": {
+    "json": "sci_module_spatial_reconciliation.json",
+    "tsv": "sci_module_spatial_reconciliation.tsv"
+  },
+  "audit_version": "sci_module_spatial_reconciliation_v1",
+  "candidate_counts": {
+    "module_rows_with_explicit_context": 204,
+    "review_required_exclusion_rows": 25,
+    "source_resolved_context_rows": 179,
+    "unique_module_evidence_groups": 169,
+    "unique_source_identifier_keys": 342
+  },
+  "counts_by": {
+    "context_pack_match_status": {
+      "matched_exact_source_identifier": 28,
+      "no_exact_source_identifier_match": 176
+    },
+    "evidence_layer": {
+      "contextual_or_unresolved": 12,
+      "downstream_or_functional": 82,
+      "ligand_receptor_or_direct_molecular": 71,
+      "mixed_receptor_proximal_and_downstream": 3,
+      "receptor_proximal_or_pathway": 34,
+      "receptor_proximal_relay": 2
+    },
+    "module": {
+      "20B": 11,
+      "21B": 21,
+      "22B": 12,
+      "23B": 33,
+      "24B": 127
+    },
+    "observation_status": {
+      "abstract_only_not_import_ready": 5,
+      "not_required_exact_primary_result_not_found": 2,
+      "reused_validated_evidence": 2,
+      "unresolved": 4,
+      "validated_abstract_bounded": 70,
+      "validated_full_text": 14,
+      "validated_full_text_importable": 33,
+      "validated_fulltext": 11,
+      "validated_observation": 27,
+      "validated_primary_bounded": 1,
+      "validated_primary_observation": 35
+    },
+    "paper_status": {
+      "paper_ready": 3,
+      "paper_ready_observation_and_claim_required": 1,
+      "resolved_primary_abstract": 6,
+      "resolved_primary_fulltext": 7,
+      "resolved_primary_publications": 1,
+      "validated_primary_abstract": 10,
+      "validated_primary_full_text_bundle": 1,
+      "validated_primary_fulltext": 23,
+      "validated_primary_observation": 1,
+      "validated_primary_paper": 151
+    },
+    "source_context_basis_field": {
+      "claim_source_section": 1,
+      "claim_text_or_blocker": 70,
+      "observation_assay": 5,
+      "observation_cell_or_model": 119,
+      "observation_figure_or_table": 3,
+      "observation_perturbation": 20,
+      "observation_source_section": 15,
+      "observation_species": 2,
+      "observation_value_or_blocker": 112
+    },
+    "source_context_class": {
+      "explicit_context_with_exclusion_language": 25,
+      "explicit_sci_injury_context": 139,
+      "explicit_spinal_cord_context": 40
+    },
+    "spatial_audit_match_status": {
+      "matched_exact_source_identifier": 17,
+      "no_exact_source_identifier_match": 187
+    }
+  },
+  "input_artifacts": [
+    {
+      "path": "work/cross_module_synthesis/canonical_evidence_review/module20_24_integrated_phase2_extractions.tsv",
+      "rows": 4722,
+      "sha256": "2a308bfea1d37ded995e04afabc0336ad8aa55db49c9c13bc9ae283d6e0978ad",
+      "size_bytes": 8332611
+    },
+    {
+      "path": "context_packs/spinal_cord_injury/contexts.tsv",
+      "rows": 684,
+      "sha256": "a5a7dabd15f7dce349cff6910510ffb8fb05a4d62e18d9de5101de717bbb3319",
+      "size_bytes": 1074960
+    },
+    {
+      "path": "context_packs/spinal_cord_injury/observations.tsv",
+      "rows": 910,
+      "sha256": "858fe3c74f17c1d70b1efe66d7f55bbbd6ef110a298759e40ae98af0b17e55e4",
+      "size_bytes": 2925298
+    },
+    {
+      "path": "context_packs/spinal_cord_injury/spatial_localization_audit.tsv",
+      "rows": 397,
+      "sha256": "0de6869febe61272fbe3cc6a6bc7d06c58b68dad5b08ebbed7c5848dfd6df3f6",
+      "size_bytes": 1314587
+    }
+  ],
+  "interpretation": {
+    "dependency_policy": "Multiple extraction rows sharing b_evidence_id remain grouped and must not be double-counted as independent experiments.",
+    "next_step": "Review module-only explicit SCI rows first; promote only source-resolved, non-duplicative observations after exact study/sample/timepoint reconciliation.",
+    "promotion_policy": "This audit does not modify contexts.tsv, observations.tsv, mechanism_links.tsv, context_manifest.json, or the pinned mechanism graph.",
+    "source_matching": "Only exact PMID, PMCID, or DOI intersections were used; text similarity and inferred study identity were not used.",
+    "spatial_policy": "A module record is not treated as proximity evidence unless its source-derived fields explicitly report localization, cell assignment, co-localization, or a spatial-transcriptomic context."
+  },
+  "module_ledger_rows_scanned": 4722,
+  "module_rows_without_explicit_context_skipped": 4518,
+  "reconciliation_counts": {
+    "candidate_rows_matching_existing_context_pack_observations": 28,
+    "candidate_rows_matching_existing_spatial_audit_rows": 17,
+    "candidate_rows_module_only": 176
+  },
+  "scope": "Canonical Module 20B-24B phase-2 extraction rows with explicit source-derived spinal-cord or SCI context; no evidence import was performed."
+}

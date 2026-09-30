@@ -141,11 +141,19 @@ that context evidence cannot create or promote a generic graph edge.
   source-preserving classification of existing IF/IHC localization,
   co-localization, cell-assignment, structural, and spatial-transcriptomic
   context records. These are audit-only and do not create proximity relations.
+- `sci_module_spatial_reconciliation.tsv` and
+  `sci_module_spatial_reconciliation.json` — source-preserving reconciliation
+  of explicit spinal-cord/SCI context in the canonical Module 20B-24B phase-2
+  extraction ledger against the existing SCI context pack. Exact
+  PMID/PMCID/DOI matches and module-only candidates are reported; no rows are
+  imported by this audit.
 - `../../scripts/build_sci_context_pack.py` — reproducible importer/curator.
 - `../../scripts/build_sci_perturbation_curation.py` — reproducible generator
   for the staged perturbation-design ledger.
 - `../../scripts/audit_sci_spatial_localization.py` — reproducible audit of
   extractable spatial/localization information.
+- `../../scripts/audit_sci_module_spatial_reconciliation.py` — reproducible
+  crosswalk of module evidence to existing SCI context and spatial audit rows.
 - `../../scripts/audit_sci_protein_context_coverage.py` — reproducible protein
   context refinement audit.
 
