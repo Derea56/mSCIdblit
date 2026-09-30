@@ -90,6 +90,14 @@ The PostgreSQL schema and historical materializations remain available for
 database-oriented workflows, but `bundle_metadata.json` intentionally records
 `canonical_database_materialization: false` for this mSCS mechanism release.
 
+The release also has an audit-only ligand-availability layer at
+`data/processed/ligand_availability_audit_v1/`. It stages source-backed
+soluble, membrane-bound, dual/context-dependent, and ECM-retained candidates,
+keeps assay-format language separate, and links exact SCI protein observations
+when PMID/PMCID/DOI identifiers match. It does not modify the graph or assign
+numeric spatial weights. Regenerate it with
+`python3 scripts/audit_ligand_availability.py`.
+
 ## mSCS method-resource intake
 
 The frozen LIANA, CellChatDB, and NicheNet resources used by mSCS can be

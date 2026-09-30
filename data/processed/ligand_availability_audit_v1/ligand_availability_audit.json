@@ -1,0 +1,107 @@
+{
+  "artifacts": {
+    "json": "ligand_availability_audit.json",
+    "tsv": "ligand_availability_audit.tsv"
+  },
+  "audit_version": "ligand_availability_audit_v1",
+  "counts_by": {
+    "availability_class_candidate": {
+      "both_or_context_dependent": 10,
+      "ecm_retained": 3,
+      "membrane_bound": 35,
+      "soluble": 40,
+      "unknown": 2150
+    },
+    "availability_evidence_state": {
+      "assay_or_form_language_not_attached_to_exact_ligand": 618,
+      "not_reported_in_source_record": 1532,
+      "source_reported_candidate": 88
+    },
+    "evidence_layer": {
+      "contextual_or_unresolved": 641,
+      "downstream_or_functional": 134,
+      "ligand_receptor_or_direct_molecular": 1208,
+      "receptor_proximal_or_pathway": 250,
+      "receptor_proximal_relay": 5
+    },
+    "module": {
+      "20B": 1114,
+      "21B": 10,
+      "23B": 994,
+      "24B": 120
+    },
+    "observation_status": {
+      "abstract_only_not_import_ready": 77,
+      "boundary_not_exportable": 4,
+      "not_required_exact_primary_result_not_found": 20,
+      "reused_validated_evidence": 2,
+      "search_boundary": 13,
+      "unresolved": 664,
+      "unresolved_manifest_source": 390,
+      "unresolved_no_evidence": 10,
+      "unresolved_primary_mismatch": 1,
+      "validated_abstract_bounded": 187,
+      "validated_abstract_importable": 45,
+      "validated_conflicting_observation": 1,
+      "validated_full_text": 23,
+      "validated_full_text_importable": 157,
+      "validated_fulltext": 4,
+      "validated_in_silico_bounded": 1,
+      "validated_observation": 590,
+      "validated_primary_bounded": 4,
+      "validated_primary_observation": 45
+    },
+    "sci_context_match_status": {
+      "matched_exact_source_identifier": 9,
+      "no_exact_source_identifier_match": 2229
+    }
+  },
+  "input_artifacts": [
+    {
+      "path": "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627/bundle_metadata.json",
+      "rows": null,
+      "sha256": "61259b115bfd1a807f12112b4cd36375be31fbc2f4c66579fc71e90e8dfca623",
+      "size_bytes": 12209
+    },
+    {
+      "path": "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627/mechanism_nodes.tsv",
+      "rows": 11988,
+      "sha256": "bcd6319fdda48662a7dff9b49a34b89553f7e786d15eecc3c39625febd7734b9",
+      "size_bytes": 4362002
+    },
+    {
+      "path": "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627/mechanism_edges.tsv",
+      "rows": 14831,
+      "sha256": "d0ef850fbf362536b25683828aa16f6b1669b62ecaf3ea7a9ebd8e3d0728a9cc",
+      "size_bytes": 17772765
+    },
+    {
+      "path": "work/cross_module_synthesis/canonical_evidence_review/module20_24_integrated_phase2_extractions.tsv",
+      "rows": 4722,
+      "sha256": "2a308bfea1d37ded995e04afabc0336ad8aa55db49c9c13bc9ae283d6e0978ad",
+      "size_bytes": 8332611
+    },
+    {
+      "path": "context_packs/spinal_cord_injury/observations.tsv",
+      "rows": 910,
+      "sha256": "858fe3c74f17c1d70b1efe66d7f55bbbd6ef110a298759e40ae98af0b17e55e4",
+      "size_bytes": 2925298
+    }
+  ],
+  "interpretation": {
+    "assay_format_gate": "Soluble ectodomain, recombinant-receptor, cell-surface-binding, SPR, or immobilized-assay language is not sufficient by itself to classify the ligand form.",
+    "availability_classes": "soluble, membrane_bound, both_or_context_dependent, and ecm_retained are staged candidates; unknown is retained when the source does not resolve physical availability.",
+    "dependency_policy": "Rows sharing b_evidence_id and ligand node_id share a dependency group and must not be counted as independent experiments.",
+    "next_step": "Manually review source-reported candidates before exposing them as soft spatial filters; preserve unknown and assay-only states separately.",
+    "promotion_policy": "This audit does not modify mechanism_nodes.tsv, mechanism_edges.tsv, observations.tsv, mechanism_links.tsv, or the pinned graph release.",
+    "sci_context_linking": "SCI context is linked only through exact PMID, PMCID, or DOI intersections with observations.tsv; absence of a match is not negative protein evidence."
+  },
+  "ligand_evidence_associations": 2238,
+  "mechanism_release_id": "module20_24_mechanism_graph:2026-09-25-literature-expansion-627",
+  "mechanism_release_path": "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627",
+  "phase2_ledger_rows_scanned": 4722,
+  "phase2_rows_with_pinned_ligand_edge": 2238,
+  "release_ligand_node_count": 2871,
+  "scope": "Source-linked ligand evidence in the pinned Module 20B-24B mechanism release; SCI context is linked by exact source identifiers when present.",
+  "unique_dependency_groups": 2210
+}
