@@ -152,6 +152,137 @@ SOURCE_FORM_OVERRIDES = {
     },
 }
 
+SOURCE_FORM_OVERRIDES.update(
+    {
+        "M20B-EVID-000472": {
+            "candidate": "both_or_context_dependent",
+            "signals": ["soluble", "membrane_bound"],
+            "fields": ("observation_value_or_blocker", "observation_perturbation"),
+            "pattern": re.compile(r"(?:cell-surface and soluble ectodomain assays|soluble FLRT2 ECD)", re.IGNORECASE),
+        },
+        "M20B-EVID-001792": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("observation_value_or_blocker",),
+            "pattern": re.compile(r"\bSoluble Slit2\b", re.IGNORECASE),
+        },
+        "M20B-EVID-002382": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("observation_value_or_blocker",),
+            "pattern": re.compile(r"\bTHBS2 secreted by\b", re.IGNORECASE),
+        },
+        "M20B-EVID-002567": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("observation_value_or_blocker",),
+            "pattern": re.compile(r"\bsecreted ANGPTL4\b", re.IGNORECASE),
+        },
+        "M20B-EVID-002886": {
+            "candidate": "membrane_bound",
+            "signals": ["membrane_bound"],
+            "fields": ("claim_text_or_blocker",),
+            "pattern": re.compile(r"\bCD177 is GPI-anchored\b", re.IGNORECASE),
+        },
+        "M20B-EVID-002906": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("observation_value_or_blocker",),
+            "pattern": re.compile(r"\bpurified soluble CD48\b", re.IGNORECASE),
+        },
+        "M20B-EVID-002912": {
+            "candidate": "membrane_bound",
+            "signals": ["membrane_bound"],
+            "fields": ("observation_value_or_blocker",),
+            "pattern": re.compile(r"\bB-cell surface protein CD72\b", re.IGNORECASE),
+        },
+        "M20B-EVID-002929": {
+            "candidate": "both_or_context_dependent",
+            "signals": ["soluble", "ecm_retained"],
+            "fields": ("observation_value_or_blocker", "claim_text_or_blocker"),
+            "pattern": re.compile(r"(?:Secreted CEACAM16.*tectorial membrane|secreted extracellular-matrix context)", re.IGNORECASE),
+        },
+        "M20B-EVID-002958": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("observation_value_or_blocker",),
+            "pattern": re.compile(r"\bform a secreted composite cytokine complex\b", re.IGNORECASE),
+        },
+        "M20B-EVID-002981": {
+            "candidate": "membrane_bound",
+            "signals": ["membrane_bound"],
+            "fields": ("claim_text_or_blocker",),
+            "pattern": re.compile(r"\bGPI-anchored CNTN3\b", re.IGNORECASE),
+        },
+        "M20B-EVID-002982": {
+            "candidate": "membrane_bound",
+            "signals": ["membrane_bound"],
+            "fields": ("claim_text_or_blocker",),
+            "pattern": re.compile(r"\bGPI-anchored CNTN4\b", re.IGNORECASE),
+        },
+        "M20B-EVID-002985": {
+            "candidate": "membrane_bound",
+            "signals": ["membrane_bound"],
+            "fields": ("claim_text_or_blocker",),
+            "pattern": re.compile(r"\bGPI-anchored CNTN6\b", re.IGNORECASE),
+        },
+        "M20B-EVID-003389": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("observation_value_or_blocker",),
+            "pattern": re.compile(r"\bSecreted FAM3C/ILEI\b", re.IGNORECASE),
+        },
+        "M20B-EVID-003739": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("observation_value_or_blocker",),
+            "pattern": re.compile(r"\bsecreted GZMA\b", re.IGNORECASE),
+        },
+        "M20B-EVID-003767": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("observation_value_or_blocker",),
+            "pattern": re.compile(r"\bSoluble tetrameric murine Qa-1/H2-T23 complexes\b", re.IGNORECASE),
+        },
+        "M20B-EVID-003768": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("observation_value_or_blocker",),
+            "pattern": re.compile(r"\bSoluble tetrameric murine Qa-1/H2-T23 complexes\b", re.IGNORECASE),
+        },
+        "M20B-EVID-005366": {
+            "candidate": "both_or_context_dependent",
+            "signals": ["soluble", "membrane_bound"],
+            "fields": ("observation_value_or_blocker", "claim_text_or_blocker"),
+            "pattern": re.compile(r"\bSoluble and membrane-anchored CXCL16\b", re.IGNORECASE),
+        },
+        "M24B-EVID-000043": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("observation_value_or_blocker", "claim_text_or_blocker"),
+            "pattern": re.compile(r"\bsecreted (?:astrocyte-derived )?CCN1\b", re.IGNORECASE),
+        },
+        "M24B-EVID-000152": {
+            "candidate": "ecm_retained",
+            "signals": ["ecm_retained"],
+            "fields": ("observation_value_or_blocker",),
+            "pattern": re.compile(r"\bCCL27/CTACK bound extracellular matrix\b", re.IGNORECASE),
+        },
+        "M24B-EVID-000167": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("observation_value_or_blocker", "claim_text_or_blocker", "observation_perturbation"),
+            "pattern": re.compile(r"\bSoluble intact human decorin\b|\bsoluble decorin acts\b|\bSoluble intact decorin;", re.IGNORECASE),
+        },
+        "M24B-EVID-000195": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("observation_value_or_blocker",),
+            "pattern": re.compile(r"\bLTB4 was released from traumatized spinal-cord slices\b", re.IGNORECASE),
+        },
+    }
+)
+
 # These are keyed, source-register curation rules.  They are intentionally
 # separate from SOURCE_FORM_OVERRIDES: register rows are preserved as a
 # distinct provenance layer and are only used when the same b_evidence_id is
@@ -664,6 +795,76 @@ SOURCE_REGISTER_FORM_OVERRIDES.update(
     }
 )
 
+SOURCE_REGISTER_FORM_OVERRIDES.update(
+    {
+        "M21B-EVID-000294": {
+            "candidate": "membrane_bound",
+            "signals": ["membrane_bound"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bmembrane-associated Nodal\b", re.IGNORECASE),
+        },
+        "M21B-EVID-000413": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("evidence_summary",),
+            "pattern": re.compile(r"\bsoluble RANKL\b", re.IGNORECASE),
+        },
+        "M21B-EVID-000414": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("evidence_summary",),
+            "pattern": re.compile(r"\bsoluble IL-22\b", re.IGNORECASE),
+        },
+        "M21B-EVID-000512": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("evidence_summary",),
+            "pattern": re.compile(r"\bsoluble CD100\b", re.IGNORECASE),
+        },
+        "M21B-EVID-002936": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("evidence_summary",),
+            "pattern": re.compile(r"\breleased vimentin\b", re.IGNORECASE),
+        },
+        "M23B-EVID-001488": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("evidence_summary",),
+            "pattern": re.compile(r"\bmicroglia-released Gal3\b", re.IGNORECASE),
+        },
+    }
+)
+
+SOURCE_REGISTER_FORM_OVERRIDES.update(
+    {
+        "M20B-EVID-003285": {
+            "candidate": "membrane_bound",
+            "signals": ["membrane_bound"],
+            "fields": ("evidence_summary",),
+            "pattern": re.compile(r"\bEphrin-A1 is membrane-tethered\b", re.IGNORECASE),
+        },
+        "M20B-EVID-003287": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("evidence_summary",),
+            "pattern": re.compile(r"\bsoluble EFNA1-Fc\b", re.IGNORECASE),
+        },
+        "M23B-EVID-001429": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("evidence_summary",),
+            "pattern": re.compile(r"\bReleased gp96\b", re.IGNORECASE),
+        },
+        "M24B-EVID-000110": {
+            "candidate": "soluble",
+            "signals": ["soluble"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bsecreted Gal-9\b", re.IGNORECASE),
+        },
+    }
+)
+
 # These records contain availability language for a receptor, assay presentation,
 # processed partner, or an explicit negative statement rather than for the exact
 # ligand node. Keep them auditable but do not emit a positive ligand-form
@@ -1050,8 +1251,26 @@ def build(
     source_register_rows_scanned = 0
     source_register_form_assertions = 0
     source_register_skipped_existing_ledger = 0
+    source_register_form_applied_to_ledger_ids: set[str] = set()
     source_register_unresolved_mappings: list[dict[str, str]] = []
     ledger_evidence_ids = {row.get("b_evidence_id", "") for row in ledger_rows}
+
+    source_register_rows: list[tuple[Path, dict[str, str]]] = []
+    source_register_rows_by_id: dict[str, list[tuple[Path, dict[str, str]]]] = defaultdict(list)
+    for register_path in DEFAULT_SOURCE_REGISTERS:
+        for register_row in read_tsv(register_path):
+            source_register_rows_scanned += 1
+            source_register_rows.append((register_path, register_row))
+            source_register_rows_by_id[register_row.get("b_evidence_id", "")].append((register_path, register_row))
+    source_register_form_by_id: dict[str, tuple[str, str, list[str], str, list[str]]] = {}
+    for evidence_id, register_items in source_register_rows_by_id.items():
+        if evidence_id not in SOURCE_REGISTER_FORM_OVERRIDES:
+            continue
+        for _register_path, register_row in register_items:
+            register_override = source_register_form_override(register_row)
+            if register_override:
+                source_register_form_by_id[evidence_id] = register_override
+                break
 
     for module_row in ledger_rows:
         evidence_id = module_row.get("b_evidence_id", "")
@@ -1077,6 +1296,7 @@ def build(
             attached_signals = {signal for _candidate, _state, signals, _snippet, _basis in attached_results for signal in signals}
             suppression_reason = source_form_suppression(module_row)
             override = source_form_override(module_row)
+            source_register_override = source_register_form_by_id.get(evidence_id)
             if suppression_reason:
                 candidate = "unknown"
                 state = "assay_or_form_language_not_attached_to_exact_ligand"
@@ -1085,6 +1305,11 @@ def build(
                 basis = []
             elif override:
                 candidate, state, signals, snippet, basis = override
+            elif source_register_override:
+                candidate, state, signals, snippet, basis = source_register_override
+                state = "source_register_explicit_form"
+                basis = [f"source_register:{field}" for field in basis]
+                source_register_form_applied_to_ledger_ids.add(evidence_id)
             elif attached_signals:
                 if attached_signals == {"ecm_retained"}:
                     candidate = "ecm_retained"
@@ -1169,6 +1394,11 @@ def build(
                 "audit_note": (
                     "Availability class is a staged source-text candidate, not a finalized protein property. "
                     "Assay format is not treated as physical localization; no graph edge, route confidence, or numeric weight was created."
+                    + (
+                        " Source-register form curation was applied to this existing ledger row; the original dependency group was retained."
+                        if state == "source_register_explicit_form"
+                        else ""
+                    )
                     + (f" Manual adjudication: {suppression_reason}." if suppression_reason else "")
                 ),
             }
@@ -1185,9 +1415,7 @@ def build(
     # all repeated in the integrated phase-2 ledger.  Only explicitly keyed
     # form assertions are emitted, and IDs already represented in the ledger
     # are skipped to preserve one dependency group per source record.
-    for register_path in DEFAULT_SOURCE_REGISTERS:
-        for register_row in read_tsv(register_path):
-            source_register_rows_scanned += 1
+    for register_path, register_row in source_register_rows:
             evidence_id = register_row.get("b_evidence_id", "")
             if evidence_id not in SOURCE_REGISTER_FORM_OVERRIDES:
                 continue
@@ -1411,6 +1639,8 @@ def build(
             }
         ),
         "source_register_skipped_existing_ledger": source_register_skipped_existing_ledger,
+        "source_register_form_applied_to_ledger": len(source_register_form_applied_to_ledger_ids),
+        "source_register_form_applied_to_ledger_ids": sorted(source_register_form_applied_to_ledger_ids),
         "source_register_unresolved_mappings": source_register_unresolved_mappings,
         "ligand_context_form_assertions": len(context_matches),
         "ligand_context_form_assertion_nodes": len({ligand["node_id"] for ligand, _observation, _provenance, _form, _class, _basis, _snippet in context_matches}),
@@ -1421,7 +1651,7 @@ def build(
             "assay_format_gate": "Soluble ectodomain, recombinant-receptor, cell-surface-binding, SPR, or immobilized-assay language is not sufficient by itself to classify the ligand form.",
             "sci_context_linking": "SCI context is linked only through exact PMID, PMCID, or DOI intersections with observations.tsv; absence of a match is not negative protein evidence.",
             "context_form_assertions": "Exact ligand-label matches to observations.tsv provenance_note protein_form values are emitted as context_matched_external_observation rows; they describe the observed SCI sample and do not establish a universal protein property.",
-            "source_register_form_assertions": "Only explicitly keyed source-register summaries or limitations are emitted; generic register language is ignored, and b_evidence_ids already present in the phase-2 ledger are skipped to prevent duplicate dependency counting.",
+            "source_register_form_assertions": "Only explicitly keyed source-register summaries or limitations are emitted; generic register language is ignored. When an exact source-register form rule targets an existing phase-2 ledger ID, the form assertion is applied to that existing ledger row so its dependency group is retained without adding a duplicate row.",
             "dependency_policy": "Rows sharing b_evidence_id and ligand node_id share a dependency group and must not be counted as independent experiments.",
             "promotion_policy": "This audit does not modify mechanism_nodes.tsv, mechanism_edges.tsv, observations.tsv, mechanism_links.tsv, or the pinned graph release.",
             "next_step": "Manually review source-reported candidates before exposing them as soft spatial filters; preserve unknown and assay-only states separately.",

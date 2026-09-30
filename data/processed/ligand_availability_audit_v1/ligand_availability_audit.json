@@ -8,21 +8,21 @@
     "assertion_origin": {
       "sci_context_observation": 123,
       "source_linked_mechanism_evidence": 2238,
-      "source_register_form_observation": 277
+      "source_register_form_observation": 283
     },
     "availability_class_candidate": {
-      "both_or_context_dependent": 47,
-      "ecm_retained": 48,
-      "membrane_bound": 119,
-      "soluble": 225,
-      "unknown": 2199
+      "both_or_context_dependent": 51,
+      "ecm_retained": 49,
+      "membrane_bound": 123,
+      "soluble": 233,
+      "unknown": 2188
     },
     "availability_evidence_state": {
-      "assay_or_form_language_not_attached_to_exact_ligand": 101,
+      "assay_or_form_language_not_attached_to_exact_ligand": 100,
       "context_observation_explicit_protein_form": 123,
-      "not_reported_in_source_record": 2098,
-      "source_register_explicit_form": 277,
-      "source_reported_candidate": 39
+      "not_reported_in_source_record": 2088,
+      "source_register_explicit_form": 292,
+      "source_reported_candidate": 41
     },
     "context_form_class": {
       "ecm_retained": 9,
@@ -34,10 +34,10 @@
       "contextual_or_unresolved": 648,
       "downstream_or_functional": 146,
       "ligand_receptor_binding_or_activation": 52,
-      "ligand_receptor_binding_or_activation;downstream_or_functional": 151,
+      "ligand_receptor_binding_or_activation;downstream_or_functional": 155,
       "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway": 9,
-      "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional": 44,
-      "ligand_receptor_or_direct_molecular": 1208,
+      "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional": 45,
+      "ligand_receptor_or_direct_molecular": 1209,
       "receptor_proximal_or_pathway": 250,
       "receptor_proximal_or_pathway;downstream_or_functional": 2,
       "receptor_proximal_relay": 5
@@ -49,11 +49,11 @@
       "20B;21B;24B": 16,
       "20B;22B": 17,
       "20B;23B": 11,
-      "21B": 333,
+      "21B": 338,
       "21B;22B": 3,
       "21B;23B": 1,
       "21B;24B": 2,
-      "23B": 1001,
+      "23B": 1002,
       "24B": 120
     },
     "observation_status": {
@@ -62,7 +62,7 @@
       "not_required_exact_primary_result_not_found": 20,
       "reused_validated_evidence": 2,
       "search_boundary": 13,
-      "source_register_curated": 277,
+      "source_register_curated": 283,
       "transcribed": 123,
       "unresolved": 664,
       "unresolved_manifest_source": 390,
@@ -82,7 +82,7 @@
     "sci_context_match_status": {
       "matched_exact_ligand_observation": 123,
       "matched_exact_source_identifier": 9,
-      "no_exact_source_identifier_match": 2506
+      "no_exact_source_identifier_match": 2512
     }
   },
   "input_artifacts": [
@@ -161,7 +161,7 @@
     "next_step": "Manually review source-reported candidates before exposing them as soft spatial filters; preserve unknown and assay-only states separately.",
     "promotion_policy": "This audit does not modify mechanism_nodes.tsv, mechanism_edges.tsv, observations.tsv, mechanism_links.tsv, or the pinned graph release.",
     "sci_context_linking": "SCI context is linked only through exact PMID, PMCID, or DOI intersections with observations.tsv; absence of a match is not negative protein evidence.",
-    "source_register_form_assertions": "Only explicitly keyed source-register summaries or limitations are emitted; generic register language is ignored, and b_evidence_ids already present in the phase-2 ledger are skipped to prevent duplicate dependency counting."
+    "source_register_form_assertions": "Only explicitly keyed source-register summaries or limitations are emitted; generic register language is ignored. When an exact source-register form rule targets an existing phase-2 ledger ID, the form assertion is applied to that existing ledger row so its dependency group is retained without adding a duplicate row."
   },
   "ligand_context_form_assertion_nodes": 24,
   "ligand_context_form_assertions": 123,
@@ -172,10 +172,22 @@
   "phase2_rows_with_pinned_ligand_edge": 2238,
   "release_ligand_node_count": 2871,
   "scope": "Source-linked ligand evidence in the pinned Module 20B-24B mechanism release; SCI context is linked by exact source identifiers when present.",
-  "source_register_form_assertion_ids": 270,
-  "source_register_form_assertions": 277,
+  "source_register_form_applied_to_ledger": 9,
+  "source_register_form_applied_to_ledger_ids": [
+    "M20B-EVID-002097",
+    "M20B-EVID-003285",
+    "M20B-EVID-003287",
+    "M23B-EVID-000580",
+    "M23B-EVID-000604",
+    "M23B-EVID-001390",
+    "M23B-EVID-001392",
+    "M23B-EVID-001429",
+    "M24B-EVID-000110"
+  ],
+  "source_register_form_assertion_ids": 276,
+  "source_register_form_assertions": 283,
   "source_register_rows_scanned": 24618,
-  "source_register_skipped_existing_ledger": 5,
+  "source_register_skipped_existing_ledger": 9,
   "source_register_unresolved_mappings": [],
-  "unique_dependency_groups": 2602
+  "unique_dependency_groups": 2608
 }
