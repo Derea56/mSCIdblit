@@ -137,9 +137,15 @@ that context evidence cannot create or promote a generic graph edge.
   perturbation-design audit, is not ingested as evidence, and requires source
   review before any intervention target, route, dose, duration, or comparator
   label is promoted.
+- `spatial_localization_audit.tsv` and `spatial_localization_audit.json` —
+  source-preserving classification of existing IF/IHC localization,
+  co-localization, cell-assignment, structural, and spatial-transcriptomic
+  context records. These are audit-only and do not create proximity relations.
 - `../../scripts/build_sci_context_pack.py` — reproducible importer/curator.
 - `../../scripts/build_sci_perturbation_curation.py` — reproducible generator
   for the staged perturbation-design ledger.
+- `../../scripts/audit_sci_spatial_localization.py` — reproducible audit of
+  extractable spatial/localization information.
 - `../../scripts/audit_sci_protein_context_coverage.py` — reproducible protein
   context refinement audit.
 
