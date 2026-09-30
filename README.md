@@ -97,8 +97,8 @@ keeps assay-format language separate, and links exact SCI protein observations
 when PMID/PMCID/DOI identifiers match. The report also carries 123 exact
 ligand-node matches to explicit SCI protein-form observations across 24 nodes,
 with study, injury, timepoint, perturbation, sample, locator, and artifact
-checksum fields preserved. It additionally carries 162 explicitly curated
-source-register evidence IDs (169 output rows where one register record maps
+checksum fields preserved. It additionally carries 182 explicitly curated
+source-register evidence IDs (189 output rows where one register record maps
 to multiple exact ligand edges), while retaining five register IDs already
 represented in the phase-2 ledger as skipped to avoid duplicate dependency
 counting. These context and register assertions are not universal protein

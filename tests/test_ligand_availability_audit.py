@@ -20,8 +20,8 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     assert summary["mechanism_release_id"] == "module20_24_mechanism_graph:2026-09-25-literature-expansion-627"
     assert summary["release_ligand_node_count"] > 0
     assert summary["ligand_evidence_associations"] > 0
-    assert summary["source_register_form_assertions"] == 169
-    assert summary["source_register_form_assertion_ids"] == 162
+    assert summary["source_register_form_assertions"] == 189
+    assert summary["source_register_form_assertion_ids"] == 182
     assert summary["source_register_skipped_existing_ledger"] == 5
     assert summary["source_register_unresolved_mappings"] == []
     assert summary["ligand_context_form_assertions"] == 123
@@ -105,8 +105,8 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     source_register_rows = [
         row for row in rows if row["assertion_origin"] == "source_register_form_observation"
     ]
-    assert len(source_register_rows) == 169
-    assert len({row["b_evidence_id"] for row in source_register_rows}) == 162
+    assert len(source_register_rows) == 189
+    assert len({row["b_evidence_id"] for row in source_register_rows}) == 182
     assert all(row["availability_evidence_state"] == "source_register_explicit_form" for row in source_register_rows)
     assert all(row["observation_status"] == "source_register_curated" for row in source_register_rows)
     assert all(row["promotion_state"] == "audit_only_not_promoted" for row in source_register_rows)
@@ -135,6 +135,26 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
         "M21B-EVID-009994": ("soluble", "NODE09672", "PMID:19997621; PMCID:PMC2780297; DOI:10.1371/journal.pone.0008141"),
         "M21B-EVID-010981": ("ecm_retained", "NODE06236", "PMID:29874128"),
         "M23B-EVID-001552": ("soluble", "NODE03078", "PMID:19299512; DOI:10.1074/jbc.M807598200; PMCID:PMC2682911; local:data/raw/evidence/module23a_review_led_20260904/efna2_epha2_osteoclast_pubmed.xml; local:data/raw/evidence/module23a_review_led_20260904/efna2_epha2_osteoclast_pmc.html"),
+        "M21B-EVID-000157": ("soluble", "NODE10169", "PMID:9829984; PMID:7532174"),
+        "M21B-EVID-000249": ("membrane_bound", "NODE07703", "PMID:11736641"),
+        "M21B-EVID-000638": ("both_or_context_dependent", "NODE01806", "PMCID:PMC7477951; PMID:25179432; PMCID:PMC4163173; DOI:10.1186/s12967-014-0217-y"),
+        "M21B-EVID-000774": ("membrane_bound", "NODE09761", "PMID:23744777; PMCID:PMC4730555"),
+        "M21B-EVID-002824": ("soluble", "NODE08176", "PMID:11201742; DOI:10.1038/35053072"),
+        "M21B-EVID-004681": ("both_or_context_dependent", "NODE09236", "PMID:19850343; DOI:10.1016/j.molimm.2009.07.017"),
+        "M21B-EVID-005527": ("both_or_context_dependent", "NODE03752", "PMID:8896403; PMID:12969963"),
+        "M21B-EVID-005548": ("both_or_context_dependent", "NODE03110", "PMID:23386126"),
+        "M21B-EVID-006331": ("ecm_retained", "NODE03721", "PMID:11805835; DOI:10.1038/415168a"),
+        "M21B-EVID-006496": ("ecm_retained", "NODE02405", "PMID:37356721; PMCID:PMC10382678; DOI:10.1016/j.jbc.2023.104962"),
+        "M21B-EVID-010922": ("soluble", "NODE06593", "PMID:9552007"),
+        "M21B-EVID-010952": ("membrane_bound", "NODE03085", "PMCID:PMC3499309; PMCID:PMC6782661"),
+        "M21B-EVID-010953": ("membrane_bound", "NODE03085", "PMCID:PMC3499309; PMCID:PMC6782661"),
+        "M21B-EVID-010954": ("membrane_bound", "NODE03085", "PMCID:PMC3499309; PMCID:PMC6782661"),
+        "M21B-EVID-010955": ("membrane_bound", "NODE03085", "PMCID:PMC3499309; PMCID:PMC6782661"),
+        "M21B-EVID-010956": ("membrane_bound", "NODE03089", "PMCID:PMC3499309; PMCID:PMC6782661"),
+        "M21B-EVID-010957": ("membrane_bound", "NODE03089", "PMCID:PMC3499309; PMCID:PMC6782661"),
+        "M21B-EVID-010958": ("membrane_bound", "NODE03089", "PMCID:PMC3499309; PMCID:PMC6782661"),
+        "M21B-EVID-010988": ("ecm_retained", "NODE03620", "PMID:12697740; PMCID:PMC152937"),
+        "M23B-EVID-001602": ("ecm_retained", "NODE02392", "PMID:2269670; PMCID:PMC2116373; DOI:10.1083/jcb.111.6.3177; PMID:8305732; PMCID:PMC275746; DOI:10.1091/mbc.4.11.1097; local:data/raw/evidence/module23a_review_led_20260904/collagen_vi_ng2_interaction_fulltext.html; local:data/raw/evidence/module23a_review_led_20260904/collagen_vi_ng2_interaction_pubmed.xml; local:data/raw/evidence/module23a_review_led_20260904/collagen_vi_ng2_fulltext.html; local:data/raw/evidence/module23a_review_led_20260904/collagen_vi_ng2_pubmed.xml"),
     }
     for evidence_id, (candidate, node_id, locator) in register_expectations.items():
         row = next(item for item in source_register_rows if item["b_evidence_id"] == evidence_id)

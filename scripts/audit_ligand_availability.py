@@ -530,6 +530,39 @@ SOURCE_REGISTER_FORM_OVERRIDES.update(
     }
 )
 
+SOURCE_REGISTER_FORM_OVERRIDES.update(
+    {
+        evidence_id: {
+            "candidate": candidate,
+            "signals": signals,
+            "fields": fields,
+            "pattern": re.compile(pattern, re.IGNORECASE),
+        }
+        for evidence_id, candidate, signals, fields, pattern in (
+            ("M21B-EVID-000157", "soluble", ["soluble"], ("evidence_summary",), r"Human soluble P-selectin"),
+            ("M21B-EVID-000249", "membrane_bound", ["membrane_bound"], ("evidence_summary", "limitations"), r"cell-surface nucleolin|cell-surface-exposed nucleolin"),
+            ("M21B-EVID-000638", "both_or_context_dependent", ["soluble", "membrane_bound"], ("evidence_summary", "limitations"), r"CD160-GPI/TM-expressing|CD160 GPI versus transmembrane isoforms"),
+            ("M21B-EVID-000774", "membrane_bound", ["membrane_bound"], ("limitations",), r"GPI-anchored RGMb topology"),
+            ("M21B-EVID-002824", "soluble", ["soluble"], ("evidence_summary",), r"soluble Nogo-66 binding systems"),
+            ("M21B-EVID-004681", "both_or_context_dependent", ["soluble", "membrane_bound"], ("limitations",), r"secreted/surface-bound Pra1"),
+            ("M21B-EVID-005527", "both_or_context_dependent", ["soluble", "membrane_bound"], ("limitations",), r"membrane/soluble FLT3LG form"),
+            ("M21B-EVID-005548", "both_or_context_dependent", ["soluble", "ecm_retained"], ("evidence_summary", "limitations"), r"Endothelial-cell-secreted EGFL7|matrix-attached EGFL7 context"),
+            ("M21B-EVID-006331", "ecm_retained", ["ecm_retained"], ("limitations",), r"extracellular matrix assembly only"),
+            ("M21B-EVID-006496", "ecm_retained", ["ecm_retained"], ("limitations",), r"extracellular matrix ligand/regulator"),
+            ("M21B-EVID-010922", "soluble", ["soluble"], ("evidence_summary",), r"soluble LTalpha3"),
+            ("M21B-EVID-010952", "membrane_bound", ["membrane_bound"], ("limitations",), r"membrane-tethered ephrin-A ligand"),
+            ("M21B-EVID-010953", "membrane_bound", ["membrane_bound"], ("limitations",), r"membrane-tethered ephrin-A ligand"),
+            ("M21B-EVID-010954", "membrane_bound", ["membrane_bound"], ("limitations",), r"membrane-tethered ephrin-A ligand"),
+            ("M21B-EVID-010955", "membrane_bound", ["membrane_bound"], ("limitations",), r"membrane-tethered ephrin-A ligand"),
+            ("M21B-EVID-010956", "membrane_bound", ["membrane_bound"], ("limitations",), r"membrane-tethered ephrin-A ligand"),
+            ("M21B-EVID-010957", "membrane_bound", ["membrane_bound"], ("limitations",), r"membrane-tethered ephrin-A ligand"),
+            ("M21B-EVID-010958", "membrane_bound", ["membrane_bound"], ("limitations",), r"membrane-tethered ephrin-A ligand"),
+            ("M21B-EVID-010988", "ecm_retained", ["ecm_retained"], ("evidence_summary",), r"cell-surface FGF2 presentation"),
+            ("M23B-EVID-001602", "ecm_retained", ["ecm_retained"], ("evidence_summary",), r"cell-surface collagen-VI retention"),
+        )
+    }
+)
+
 # These records contain availability language for a receptor, assay presentation,
 # processed partner, or an explicit negative statement rather than for the exact
 # ligand node. Keep them auditable but do not emit a positive ligand-form
