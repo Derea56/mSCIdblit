@@ -63,6 +63,11 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     assert fibronectin["availability_class_candidate"] == "both_or_context_dependent"
     assert fibronectin["availability_evidence_state"] == "source_reported_candidate"
 
+    for evidence_id in ("M20B-EVID-002154", "M20B-EVID-002199", "M20B-EVID-003229"):
+        row = next(item for item in rows if item["b_evidence_id"] == evidence_id)
+        assert row["availability_class_candidate"] == "both_or_context_dependent"
+        assert row["availability_evidence_state"] == "source_reported_candidate"
+
     context_rows = [
         row
         for row in rows

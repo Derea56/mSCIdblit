@@ -81,6 +81,24 @@ SOURCE_FORM_OVERRIDES = {
         "fields": ("observation_value_or_blocker",),
         "pattern": re.compile(r"\b(?:soluble/cellular\s+FN|FN\s+matrix)\b", re.IGNORECASE),
     },
+    "M20B-EVID-002154": {
+        "candidate": "both_or_context_dependent",
+        "signals": ["soluble", "ecm_retained"],
+        "fields": ("observation_value_or_blocker", "observation_perturbation"),
+        "pattern": re.compile(r"\b(?:polymerized laminin-332 matrices|matrix versus soluble ligand comparison)\b", re.IGNORECASE),
+    },
+    "M20B-EVID-002199": {
+        "candidate": "both_or_context_dependent",
+        "signals": ["soluble", "ecm_retained"],
+        "fields": ("observation_value_or_blocker", "observation_perturbation"),
+        "pattern": re.compile(r"\b(?:polymerized laminin-332 matrices|matrix versus soluble ligand comparison)\b", re.IGNORECASE),
+    },
+    "M20B-EVID-003229": {
+        "candidate": "both_or_context_dependent",
+        "signals": ["soluble", "ecm_retained"],
+        "fields": ("observation_perturbation",),
+        "pattern": re.compile(r"\bsoluble/immobilized decorin\b", re.IGNORECASE),
+    },
 }
 
 FORM_PATTERNS = {
