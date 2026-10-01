@@ -1748,6 +1748,13 @@ SOURCE_REGISTER_FORM_OVERRIDES.update(
             ("M21B-EVID-002109", "soluble", ["soluble"], ("evidence_summary",), r"Hevin as an astrocyte-secreted bridge"),
             ("M21B-EVID-002155", "both_or_context_dependent", ["soluble", "membrane_bound"], ("evidence_summary",), r"JAM-B/JAM-C transfectants.*recombinant soluble Ig-domain proteins"),
             ("M21B-EVID-002557", "membrane_bound", ["membrane_bound"], ("evidence_summary", "limitations"), r"membrane-bound NPTXR/NPR"),
+            ("M21B-EVID-000121", "both_or_context_dependent", ["soluble", "ecm_retained"], ("evidence_summary", "limitations"), r"immobilized/polymerized.*fibrinogen|fibrinogen-versus-fibrin form"),
+            ("M21B-EVID-000814", "both_or_context_dependent", ["soluble", "ecm_retained"], ("evidence_summary",), r"matrix-associated TGF-beta1 bioactivity depending on decorin form and assay context"),
+            ("M21B-EVID-003183", "both_or_context_dependent", ["soluble", "ecm_retained"], ("evidence_summary", "limitations"), r"thrombin-cleaved or polymeric osteopontin|processed/polymeric osteopontin"),
+            ("M21B-EVID-003184", "soluble", ["soluble"], ("evidence_summary", "limitations"), r"Thrombin-cleaved human osteopontin N-terminal fragment"),
+            ("M21B-EVID-004722", "membrane_bound", ["membrane_bound"], ("evidence_summary",), r"Hsf as an H\. influenzae vitronectin-recruiting surface fibril"),
+            ("M21B-EVID-004723", "both_or_context_dependent", ["soluble", "membrane_bound"], ("evidence_summary",), r"surface-expressed and soluble E\. coli-expressed Protein E variants"),
+            ("M21B-EVID-007028", "soluble", ["soluble"], ("evidence_summary",), r"Soluble human growth hormone"),
         )
     }
 )
