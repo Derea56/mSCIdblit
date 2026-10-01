@@ -20,8 +20,8 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     assert summary["mechanism_release_id"] == "module20_24_mechanism_graph:2026-09-25-literature-expansion-627"
     assert summary["release_ligand_node_count"] > 0
     assert summary["ligand_evidence_associations"] > 0
-    assert summary["source_register_form_assertions"] == 485
-    assert summary["source_register_form_assertion_ids"] == 478
+    assert summary["source_register_form_assertions"] == 495
+    assert summary["source_register_form_assertion_ids"] == 488
     assert summary["source_register_skipped_existing_ledger"] == 66
     assert summary["source_register_form_applied_to_ledger"] == 64
     assert summary["source_register_form_applied_to_ledger_ids"] == [
@@ -293,6 +293,16 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
         "M21B-EVID-000732": "soluble",
         "M21B-EVID-000844": "soluble",
         "M21B-EVID-000913": "soluble",
+        "M21B-EVID-007044": "soluble",
+        "M21B-EVID-009964": "soluble",
+        "M21B-EVID-009973": "soluble",
+        "M21B-EVID-009974": "soluble",
+        "M21B-EVID-009976": "soluble",
+        "M21B-EVID-009977": "soluble",
+        "M21B-EVID-002635": "ecm_retained",
+        "M21B-EVID-002636": "ecm_retained",
+        "M21B-EVID-002845": "ecm_retained",
+        "M21B-EVID-002846": "ecm_retained",
         "M21B-EVID-002700": "soluble",
         "M21B-EVID-000121": "both_or_context_dependent",
         "M21B-EVID-000814": "both_or_context_dependent",
@@ -380,8 +390,8 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     source_register_rows = [
         row for row in rows if row["assertion_origin"] == "source_register_form_observation"
     ]
-    assert len(source_register_rows) == 485
-    assert len({row["b_evidence_id"] for row in source_register_rows}) == 478
+    assert len(source_register_rows) == 495
+    assert len({row["b_evidence_id"] for row in source_register_rows}) == 488
     assert all(row["availability_evidence_state"] == "source_register_explicit_form" for row in source_register_rows)
     assert all(row["observation_status"] == "source_register_curated" for row in source_register_rows)
     assert all(row["promotion_state"] == "audit_only_not_promoted" for row in source_register_rows)
