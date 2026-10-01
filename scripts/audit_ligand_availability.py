@@ -2061,6 +2061,152 @@ SOURCE_REGISTER_FORM_OVERRIDES.update(
     }
 )
 
+SOURCE_FORM_OVERRIDES.update(
+    {
+        evidence_id: {
+            "candidate": candidate,
+            "signals": signals,
+            "fields": fields,
+            "pattern": re.compile(pattern, re.IGNORECASE),
+        }
+        for evidence_id, candidate, signals, fields, pattern in (
+            (
+                "M20B-EVID-001875",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("observation_value_or_blocker",),
+                r"Substrate-bound FGF2",
+            ),
+            (
+                "M20B-EVID-001914",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("observation_value_or_blocker", "claim_text_or_blocker"),
+                r"trans-synaptic Slitrk1-PTPRD association|not soluble ligand signaling",
+            ),
+            (
+                "M20B-EVID-001915",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("observation_value_or_blocker",),
+                r"trans-synaptic binding",
+            ),
+            (
+                "M20B-EVID-001916",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("claim_text_or_blocker",),
+                r"trans-synaptic binding",
+            ),
+            (
+                "M20B-EVID-001793",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("observation_value_or_blocker",),
+                r"trans-synaptic adhesion",
+            ),
+            (
+                "M20B-EVID-001670",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("observation_value_or_blocker",),
+                r"Native PSGL-1/SELPLG glycoforms|initial tethering under flow",
+            ),
+            (
+                "M20B-EVID-002262",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("observation_value_or_blocker",),
+                r"matricryptic TNC peptide",
+            ),
+            (
+                "M20B-EVID-002917",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("observation_value_or_blocker", "claim_text_or_blocker"),
+                r"heterophilic cadherin adhesion edge|heterophilic interaction through their membrane-distal ectodomains",
+            ),
+            (
+                "M20B-EVID-002921",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("claim_text_or_blocker",),
+                r"heterophilic adhesion edge",
+            ),
+            (
+                "M20B-EVID-002930",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("claim_text_or_blocker",),
+                r"extracellular tectorial-membrane complex",
+            ),
+            (
+                "M20B-EVID-003254",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("observation_value_or_blocker", "claim_text_or_blocker"),
+                r"heterophilic adhesive pair|intercellular receptor-complex output",
+            ),
+            (
+                "M20B-EVID-003255",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("observation_value_or_blocker", "claim_text_or_blocker"),
+                r"heterophilic adhesive pair|intercellular adhesion output",
+            ),
+            (
+                "M20B-EVID-003256",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("observation_value_or_blocker", "claim_text_or_blocker"),
+                r"heterophilic adhesive pair|intercellular adhesion output",
+            ),
+            (
+                "M20B-EVID-003257",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("observation_value_or_blocker", "claim_text_or_blocker"),
+                r"heterophilic adhesive pair|intercellular adhesion output",
+            ),
+            (
+                "M20B-EVID-003259",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("observation_value_or_blocker", "claim_text_or_blocker"),
+                r"heterophilic adhesive pair|intercellular adhesion output",
+            ),
+            (
+                "M20B-EVID-003263",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("observation_value_or_blocker", "claim_text_or_blocker"),
+                r"heterophilic adhesive pair|intercellular adhesion output",
+            ),
+            (
+                "M20B-EVID-003264",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("observation_value_or_blocker", "claim_text_or_blocker"),
+                r"heterophilic adhesive pair|intercellular adhesion output",
+            ),
+            (
+                "M20B-EVID-003396",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("observation_value_or_blocker", "claim_text_or_blocker"),
+                r"heterophilic cadherin complex|cell-boundary assays",
+            ),
+            (
+                "M23B-EVID-000673",
+                "soluble",
+                ["soluble"],
+                ("observation_value_or_blocker", "observation_assay"),
+                r"soluble extracellular CADM3|soluble CADM3-Fc",
+            ),
+        )
+    }
+)
+
 # These records contain availability language for a receptor, assay presentation,
 # processed partner, or an explicit negative statement rather than for the exact
 # ligand node. Keep them auditable but do not emit a positive ligand-form
@@ -2068,7 +2214,6 @@ SOURCE_REGISTER_FORM_OVERRIDES.update(
 SOURCE_FORM_SUPPRESSIONS = {
     "M20B-EVID-002230": "claim explicitly says NCAM1 is not to be treated as a secreted ligand",
     "M20B-EVID-002242": "cell-surface and immobilized language describes SDC1/thrombospondin presentation, not THBS1 form",
-    "M20B-EVID-002262": "cell-surface language describes the SDC4 receptor for a processed TNC peptide",
     "M20B-EVID-003425": "membrane-bound and soluble language describes FGFRL1 receptor presentation, not FGF10 form",
     "M20B-EVID-003441": "membrane-bound and soluble language describes FGFRL1 receptor presentation, not FGF2 form",
     "M20B-EVID-003444": "immobilized and soluble language describes NRP1 receptor presentation, not FGF2 form",
