@@ -2071,6 +2071,13 @@ SOURCE_FORM_OVERRIDES.update(
         }
         for evidence_id, candidate, signals, fields, pattern in (
             (
+                "M20B-EVID-002539",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("observation_value_or_blocker", "claim_text_or_blocker"),
+                r"trans-heterophilic interaction|trans-heterophilic support",
+            ),
+            (
                 "M20B-EVID-001875",
                 "ecm_retained",
                 ["ecm_retained"],

@@ -156,6 +156,7 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
         assert row["availability_evidence_state"] == "source_reported_candidate"
 
     expected_additional_ledger_forms = {
+        "M20B-EVID-002539": ("membrane_bound", "source_reported_candidate"),
         "M20B-EVID-000472": ("both_or_context_dependent", "source_reported_candidate"),
         "M20B-EVID-001792": ("soluble", "source_reported_candidate"),
         "M20B-EVID-002382": ("soluble", "source_reported_candidate"),
