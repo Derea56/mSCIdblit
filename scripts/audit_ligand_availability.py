@@ -1776,6 +1776,291 @@ SOURCE_REGISTER_FORM_OVERRIDES.update(
     }
 )
 
+SOURCE_REGISTER_FORM_OVERRIDES.update(
+    {
+        evidence_id: {
+            "candidate": candidate,
+            "signals": signals,
+            "fields": fields,
+            "pattern": re.compile(pattern, re.IGNORECASE),
+        }
+        for evidence_id, candidate, signals, fields, pattern in (
+            (
+                "M23B-EVID-000028",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("limitations",),
+                r"retained as an ECM mechanistic anchor",
+            ),
+            (
+                "M20B-EVID-003231",
+                "soluble",
+                ["soluble"],
+                ("evidence_summary",),
+                r"study addresses a secreted proteoglycan core protein",
+            ),
+            (
+                "M23B-EVID-000190",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("limitations",),
+                r"Homophilic receptor adhesion",
+            ),
+            (
+                "M23B-EVID-000204",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary", "limitations"),
+                r"Contact-dependent ephrin-A1-EphA2 activation|Ligand presentation/clustering is required",
+            ),
+            (
+                "M23B-EVID-000653",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"trans-adhesion interaction",
+            ),
+            (
+                "M23B-EVID-001433",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"interacted in trans",
+            ),
+            (
+                "M20B-EVID-001461",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"intercellular adhesion complex",
+            ),
+            (
+                "M20B-EVID-001470",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"intercellular adhesion complex",
+            ),
+            (
+                "M20B-EVID-001479",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"intercellular adhesion complex",
+            ),
+            (
+                "M20B-EVID-004190",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"trans-synaptic cell-adhesion interaction rather than a soluble ligand-receptor pair",
+            ),
+            (
+                "M20B-EVID-004312",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"transsynaptic adhesion interaction rather than a conventional secreted-ligand system",
+            ),
+            (
+                "M23B-EVID-001439",
+                "soluble",
+                ["soluble"],
+                ("evidence_summary",),
+                r"Extracellular ISG15",
+            ),
+            (
+                "M23B-EVID-001345",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("evidence_summary",),
+                r"keratinocytes on TG2 ECM",
+            ),
+            (
+                "M23B-EVID-001346",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("evidence_summary",),
+                r"keratinocytes on TG2 ECM",
+            ),
+            (
+                "M23B-EVID-001347",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("evidence_summary",),
+                r"keratinocytes on TG2 ECM",
+            ),
+            (
+                "M20B-EVID-004268",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("evidence_summary",),
+                r"adhesion/ECM receptor association rather than a classical soluble cytokine pair",
+            ),
+            (
+                "M23B-EVID-000836",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("evidence_summary",),
+                r"laminin to cytoskeleton and synaptic basement-membrane organization",
+            ),
+        )
+    }
+)
+
+SOURCE_REGISTER_FORM_OVERRIDES.update(
+    {
+        evidence_id: {
+            "candidate": candidate,
+            "signals": signals,
+            "fields": fields,
+            "pattern": re.compile(pattern, re.IGNORECASE),
+        }
+        for evidence_id, candidate, signals, fields, pattern in (
+            (
+                "M20B-EVID-001922",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("evidence_summary",),
+                r"adhesion/synaptic-matrix role",
+            ),
+            (
+                "M23B-EVID-000672",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"heterophilic cell adhesion",
+            ),
+            (
+                "M23B-EVID-000676",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"heterophilic axon[-–]Schwann adhesion",
+            ),
+            (
+                "M23B-EVID-000189",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"heterophilic binding",
+            ),
+            (
+                "M20B-EVID-000370",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"contact-mediated axonal growth/adhesion phenotypes",
+            ),
+            (
+                "M23B-EVID-000453",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"contact-dependent neural crest repulsion",
+            ),
+            (
+                "M23B-EVID-000304",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"NCAM1 homophilic binding",
+            ),
+            (
+                "M23B-EVID-000305",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"NCAM1 homophilic engagement",
+            ),
+            (
+                "M23B-EVID-000013",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"heterophilic adhesion",
+            ),
+            (
+                "M23B-EVID-001141",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"PTPRS-NTRK3 transsynaptic adhesion",
+            ),
+            (
+                "M23B-EVID-000893",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"trans-synaptic adhesion complex",
+            ),
+            (
+                "M23B-EVID-000896",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"trans-synaptic organization",
+            ),
+            (
+                "M23B-EVID-000884",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"trans-synaptic organizer output",
+            ),
+            (
+                "M23B-EVID-001085",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"paranodal adhesion complex",
+            ),
+            (
+                "M20B-EVID-002928",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"heterophilic ligand/co-receptor and topology is cis/trans context dependent",
+            ),
+            (
+                "M23B-EVID-000193",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("limitations",),
+                r"Matrix composition-dependent",
+            ),
+            (
+                "M23B-EVID-000516",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("evidence_summary",),
+                r"collagen-XI fibril.*matrix response branch",
+            ),
+            (
+                "M23B-EVID-001359",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("evidence_summary",),
+                r"VCAN/versican-associated matrix",
+            ),
+            (
+                "M23B-EVID-001360",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("evidence_summary",),
+                r"VCAN/versican-associated matrix",
+            ),
+            (
+                "M23B-EVID-001361",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("evidence_summary",),
+                r"VCAN/versican-associated matrix",
+            ),
+        )
+    }
+)
+
 # These records contain availability language for a receptor, assay presentation,
 # processed partner, or an explicit negative statement rather than for the exact
 # ligand node. Keep them auditable but do not emit a positive ligand-form
