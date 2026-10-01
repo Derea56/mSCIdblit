@@ -12,16 +12,16 @@
     },
     "availability_class_candidate": {
       "both_or_context_dependent": 76,
-      "ecm_retained": 83,
+      "ecm_retained": 85,
       "membrane_bound": 200,
       "soluble": 399,
-      "unknown": 2102
+      "unknown": 2100
     },
     "availability_evidence_state": {
       "assay_or_form_language_not_attached_to_exact_ligand": 91,
       "context_observation_explicit_protein_form": 123,
-      "not_reported_in_source_record": 2011,
-      "source_register_explicit_form": 567,
+      "not_reported_in_source_record": 2009,
+      "source_register_explicit_form": 569,
       "source_reported_candidate": 68
     },
     "context_form_class": {
@@ -172,7 +172,7 @@
   "phase2_rows_with_pinned_ligand_edge": 2238,
   "release_ligand_node_count": 2871,
   "scope": "Source-linked ligand evidence in the pinned Module 20B-24B mechanism release; SCI context is linked by exact source identifiers when present.",
-  "source_register_form_applied_to_ledger": 65,
+  "source_register_form_applied_to_ledger": 67,
   "source_register_form_applied_to_ledger_ids": [
     "M20B-EVID-000370",
     "M20B-EVID-001461",
@@ -203,6 +203,8 @@
     "M23B-EVID-000476",
     "M23B-EVID-000477",
     "M23B-EVID-000516",
+    "M23B-EVID-000529",
+    "M23B-EVID-000532",
     "M23B-EVID-000580",
     "M23B-EVID-000581",
     "M23B-EVID-000582",
@@ -243,7 +245,7 @@
   "source_register_form_assertion_ids": 492,
   "source_register_form_assertions": 499,
   "source_register_rows_scanned": 24618,
-  "source_register_skipped_existing_ledger": 67,
+  "source_register_skipped_existing_ledger": 69,
   "source_register_unresolved_mappings": [],
   "unique_dependency_groups": 2824
 }

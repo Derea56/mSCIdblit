@@ -22,8 +22,8 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     assert summary["ligand_evidence_associations"] > 0
     assert summary["source_register_form_assertions"] == 499
     assert summary["source_register_form_assertion_ids"] == 492
-    assert summary["source_register_skipped_existing_ledger"] == 67
-    assert summary["source_register_form_applied_to_ledger"] == 65
+    assert summary["source_register_skipped_existing_ledger"] == 69
+    assert summary["source_register_form_applied_to_ledger"] == 67
     assert summary["source_register_form_applied_to_ledger_ids"] == [
         "M20B-EVID-000370",
         "M20B-EVID-001461",
@@ -54,6 +54,8 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
         "M23B-EVID-000476",
         "M23B-EVID-000477",
         "M23B-EVID-000516",
+        "M23B-EVID-000529",
+        "M23B-EVID-000532",
         "M23B-EVID-000580",
         "M23B-EVID-000581",
         "M23B-EVID-000582",
@@ -175,6 +177,8 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
         "M20B-EVID-003767": ("soluble", "source_reported_candidate"),
         "M20B-EVID-003768": ("soluble", "source_reported_candidate"),
         "M20B-EVID-005366": ("both_or_context_dependent", "source_register_explicit_form"),
+        "M23B-EVID-000529": ("ecm_retained", "source_register_explicit_form"),
+        "M23B-EVID-000532": ("ecm_retained", "source_register_explicit_form"),
         "M24B-EVID-000043": ("soluble", "source_reported_candidate"),
         "M24B-EVID-000152": ("ecm_retained", "source_reported_candidate"),
         "M24B-EVID-000167": ("soluble", "source_reported_candidate"),

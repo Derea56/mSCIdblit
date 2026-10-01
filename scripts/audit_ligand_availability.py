@@ -2465,6 +2465,27 @@ SOURCE_REGISTER_FORM_OVERRIDES.update(
     }
 )
 
+# These two records are representative form assertions for native fibrillar
+# collagen-I source nodes.  Other records at the same source locator encode
+# downstream readouts of the same experiment; do not emit each readout again
+# as an independent physical-form assertion.
+SOURCE_REGISTER_FORM_OVERRIDES.update(
+    {
+        "M23B-EVID-000529": {
+            "candidate": "ecm_retained",
+            "signals": ["ecm_retained"],
+            "fields": ("limitations",),
+            "pattern": re.compile(r"\bMature fibrillar collagen-I is multichain\b", re.IGNORECASE),
+        },
+        "M23B-EVID-000532": {
+            "candidate": "ecm_retained",
+            "signals": ["ecm_retained"],
+            "fields": ("evidence_summary", "limitations"),
+            "pattern": re.compile(r"\b(?:native fibrillar collagen I|fibrillar collagen-I)\b", re.IGNORECASE),
+        },
+    }
+)
+
 # These records contain availability language for a receptor, assay presentation,
 # processed partner, or an explicit negative statement rather than for the exact
 # ligand node. Keep them auditable but do not emit a positive ligand-form
