@@ -1,0 +1,17 @@
+{
+  "confidence_or_causal_fields_created": false,
+  "coverage_rows": 2613,
+  "coverage_status_counts": {
+    "full_functional_output_route": 182,
+    "full_target_gene_route": 177,
+    "ligand_receptor_only": 802,
+    "partial_downstream_route": 1452
+  },
+  "rows_with_full_functional_output_route": 182,
+  "rows_with_full_target_gene_route": 177,
+  "rows_with_ligand_receptor_only": 802,
+  "rows_with_partial_downstream_route": 1452,
+  "semantic_role_filter": "ligand role required; receptor/TF/target-gene role overlap excluded from ligand input",
+  "source_literature_expansion_rows": 31080,
+  "source_route_evidence_rows": 597194
+}

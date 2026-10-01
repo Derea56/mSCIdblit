@@ -15,11 +15,13 @@ import shutil
 from pathlib import Path
 from typing import Any
 
+from nichenet_release_contract import CONTRACT_RELATIVE, build_contract
+
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_GRAPH = ROOT / "data" / "processed" / "mechanism_graph_module20_24_v2026_09_01"
+DEFAULT_GRAPH = ROOT / "data" / "processed" / "mechanism_graph_module20_24_v2026_09_25_literature_expansion627"
 DEFAULT_METHOD = ROOT / "data" / "processed" / "method_resource_migration_v1"
-DEFAULT_OUTPUT = ROOT / "data" / "processed" / "mscs_release_bundle_v1_4_0_method_resources_v1"
+DEFAULT_OUTPUT = ROOT / "data" / "processed" / "mscs_release_bundle_v1_6_0_nichenet_prior_v1"
 
 
 def sha256(path: Path) -> str:
@@ -54,6 +56,12 @@ def parse_args() -> argparse.Namespace:
         help="Optional output from build_mechanism_lr_candidate_universe.py.",
     )
     parser.add_argument("--release-id", default=None)
+    parser.add_argument(
+        "--nichenet-artifact-root",
+        type=Path,
+        required=True,
+        help="Companion root containing nichenet_neutral_v1/ligand_target_matrix.f64le.bin; it is verified but not copied.",
+    )
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
     return parser.parse_args()
 
@@ -63,6 +71,7 @@ def main() -> int:
     graph = args.graph_bundle_dir.resolve()
     method = args.method_migration_dir.resolve()
     candidate = args.candidate_universe_dir.resolve() if args.candidate_universe_dir else None
+    nichenet_artifact_root = args.nichenet_artifact_root.resolve()
     output = args.output_dir.resolve()
     required_graph = [
         "bundle_metadata.json",
@@ -120,6 +129,15 @@ def main() -> int:
             shutil.copy2(source, target)
             candidate_files.append(target)
 
+    nichenet_contract = build_contract(
+        method_dir=method,
+        bundle=output,
+        companion_artifact_root=nichenet_artifact_root,
+    )
+    contract_path = output / CONTRACT_RELATIVE
+    contract_path.parent.mkdir(parents=True, exist_ok=True)
+    contract_path.write_text(json.dumps(nichenet_contract, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
     graph_metadata = json.loads((graph / "bundle_metadata.json").read_text(encoding="utf-8"))
     method_report = json.loads((method / "method_resource_migration_report.json").read_text(encoding="utf-8"))
     candidate_report = (
@@ -127,7 +145,7 @@ def main() -> int:
         if candidate is not None else {}
     )
     file_manifest: dict[str, dict[str, Any]] = {}
-    for path in sorted(graph_files + method_files + candidate_files):
+    for path in sorted(graph_files + method_files + candidate_files + [contract_path]):
         file_manifest[str(path.relative_to(output))] = {
             "sha256": sha256(path),
             "bytes": path.stat().st_size,
@@ -135,8 +153,8 @@ def main() -> int:
     manifest = {
         "schema_version": "mscs_release_bundle_v1",
         "release_id": args.release_id or (
-            "mscs_release_bundle_v1_5_0_candidate_universe_v1"
-            if candidate is not None else "mscs_release_bundle_v1_4_0_method_resources_v1"
+            "mscs_release_bundle_v1_6_0_nichenet_prior_v1_candidate_universe_v1"
+            if candidate is not None else "mscs_release_bundle_v1_6_0_nichenet_prior_v1"
         ),
         "project": "mSCIdblit",
         "target_consumer": "mSCS",
@@ -161,7 +179,10 @@ def main() -> int:
             "candidate_universe_records": (
                 candidate_report.get("canonical_communication_count") if candidate is not None else None
             ),
+            "nichenet_output_projection_records": nichenet_contract["output_projection"]["row_count"],
         },
+        "nichenet_ligand_target_prior_manifest": CONTRACT_RELATIVE.as_posix(),
+        "nichenet_companion_artifact_root_config_key": "nichenet_companion_artifact_root",
         "candidate_universe_path": "candidate_universe/mechanism_lr_candidate_universe.tsv" if candidate is not None else None,
         "migration_gaps": method_report.get("migration_gaps", []),
         "files": file_manifest,

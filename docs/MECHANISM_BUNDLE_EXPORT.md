@@ -70,19 +70,29 @@ projections, first run the method-resource importer and then use:
 
 ```bash
 python3 /Users/derea/Documents/SCI/mSCIdblit/scripts/build_mscs_release_bundle.py \
-  --graph-bundle-dir /Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_01 \
+  --graph-bundle-dir /Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627 \
   --method-migration-dir /Users/derea/Documents/SCI/mSCIdblit/data/processed/method_resource_migration_v1 \
-  --output-dir /Users/derea/Documents/SCI/mSCIdblit/data/processed/mscs_release_bundle_v1_4_0_method_resources_v1
-python3 /Users/derea/Documents/SCI/mSCIdblit/scripts/validate_mscs_release_bundle.py
+  --candidate-universe-dir /Users/derea/Documents/SCI/mSCIdblit/data/processed/mechanism_lr_candidate_universe_v2 \
+  --nichenet-artifact-root /path/to/phase2_external_snapshot_2026-08-05 \
+  --output-dir /Users/derea/Documents/SCI/mSCIdblit/data/processed/mscs_release_bundle_v1_6_0_nichenet_prior_v1_candidate_universe_v2
+python3 /Users/derea/Documents/SCI/mSCIdblit/scripts/validate_mscs_release_bundle.py \
+  --bundle-dir /Users/derea/Documents/SCI/mSCIdblit/data/processed/mscs_release_bundle_v1_6_0_nichenet_prior_v1_candidate_universe_v2 \
+  --nichenet-artifact-root /path/to/phase2_external_snapshot_2026-08-05
 ```
 
 The combined bundle contains the graph snapshot and method-resource tables,
 native projections, checksums, crosswalks, and migration reports. Configure an
 mSCS transition run to read native resources from its
 `method_resources/method_native/` directory after the resource-level benchmark
-passes. The current bundle still records the large NicheNet RDS and neutral
-matrix as exact source references; it is not yet a self-contained replacement
-for the mSCS NicheNet scoring resource.
+passes. The NicheNet neutral matrix is exposed through the release-owned
+`method_resources/nichenet_ligand_target_prior_manifest.json` contract. Supply
+the companion root through the `nichenet_companion_artifact_root` configuration
+field; the validator verifies the complete matrix and both axes and refuses an
+unavailable or mismatched artifact. The contract also identifies
+`mechanism_graph/mechanism_output_bridges_validated.tsv` as the broad,
+response-independent ligand-to-output evidence projection. It remains an
+evidence layer and requires a later receiver-compatible LR join; it does not
+create graph edges, route confidence, or numeric weights.
 
 ## Additive LR candidate-universe projection
 

@@ -246,6 +246,8 @@ CREATE TABLE IF NOT EXISTS MethodResourceNumericArtifact (
   shape_json TEXT,
   axis_artifacts_json TEXT NOT NULL DEFAULT '[]',
   source_model_version TEXT,
+  release_contract_status VARCHAR(32) NOT NULL DEFAULT 'unresolved',
+  release_relative_path TEXT,
   notes TEXT NOT NULL,
   FOREIGN KEY (method_resource_id) REFERENCES MethodResource(method_resource_id)
     ON DELETE CASCADE,
@@ -254,6 +256,9 @@ CREATE TABLE IF NOT EXISTS MethodResourceNumericArtifact (
   ),
   CONSTRAINT method_resource_numeric_sha256 CHECK (
     artifact_sha256 ~ '^[0-9a-fA-F]{64}$'
+  ),
+  CONSTRAINT method_resource_numeric_release_status CHECK (
+    release_contract_status IN ('self_contained', 'companion_required', 'unresolved')
   ),
   CONSTRAINT method_resource_numeric_nonempty CHECK (
     btrim(artifact_key) <> ''
@@ -277,6 +282,6 @@ COMMENT ON TABLE MethodResourceAnnotation IS
 COMMENT ON TABLE MethodResourceProjection IS
   'Versioned native-input or compatibility projection emitted for a downstream tool.';
 COMMENT ON TABLE MethodResourceNumericArtifact IS
-  'Storage metadata for numeric priors such as the dense NicheNet ligand-target matrix; axis and source hashes are retained for exact lookup.';
+  'Storage metadata for numeric priors such as the dense NicheNet ligand-target matrix; axis and source hashes are retained for exact lookup, and release contract fields distinguish self-contained from companion-required artifacts.';
 
 COMMIT;

@@ -9,9 +9,11 @@ import hashlib
 import json
 from pathlib import Path
 
+from nichenet_release_contract import CONTRACT_RELATIVE, validate_contract
+
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_BUNDLE = ROOT / "data" / "processed" / "mscs_release_bundle_v1_4_0_method_resources_v1"
+DEFAULT_BUNDLE = ROOT / "data" / "processed" / "mscs_release_bundle_v1_6_0_nichenet_prior_v1"
 
 
 def sha256(path: Path) -> str:
@@ -25,16 +27,25 @@ def sha256(path: Path) -> str:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--bundle-dir", type=Path, default=DEFAULT_BUNDLE)
+    parser.add_argument(
+        "--nichenet-artifact-root",
+        type=Path,
+        required=True,
+        help="Companion root containing nichenet_neutral_v1/ligand_target_matrix.f64le.bin.",
+    )
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
     bundle = args.bundle_dir.resolve()
+    companion_root = args.nichenet_artifact_root.resolve()
     manifest_path = bundle / "release_manifest.json"
     if not manifest_path.is_file():
         raise SystemExit(f"Missing release manifest: {manifest_path}")
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    if manifest.get("nichenet_ligand_target_prior_manifest") != CONTRACT_RELATIVE.as_posix():
+        raise SystemExit("Release manifest does not point to the NicheNet prior contract")
     required = [
         "mechanism_graph/mechanism_nodes.tsv",
         "mechanism_graph/mechanism_node_roles.tsv",
@@ -47,6 +58,9 @@ def main() -> int:
         "method_resources/method_resource_records.tsv",
         "method_resources/method_resource_projections.tsv",
         "method_resources/method_resource_materialization.sql",
+        "method_resources/method_resource_numeric_artifacts.tsv",
+        "method_resources/method_native/nichenet_neutral_v1/neutral_model_manifest.json",
+        "mechanism_graph/mechanism_output_bridges_validated.tsv",
     ]
     missing = [relative for relative in required if not (bundle / relative).is_file()]
     if missing:
@@ -75,6 +89,12 @@ def main() -> int:
             mismatches.append(f"checksum/size mismatch: {relative}")
     if mismatches:
         raise SystemExit("Release bundle validation failed: " + "; ".join(mismatches))
+    try:
+        nichenet_summary = validate_contract(
+            bundle=bundle, companion_artifact_root=companion_root
+        )
+    except ValueError as exc:
+        raise SystemExit(f"NicheNet release contract validation failed: {exc}") from exc
     print(json.dumps({
         "status": "PASS combined mSCS release bundle validation",
         "release_id": manifest.get("release_id"),
@@ -82,6 +102,7 @@ def main() -> int:
         "migration_gaps": len(manifest.get("migration_gaps", [])),
         "candidate_universe_records": manifest.get("counts", {}).get("candidate_universe_records"),
         "original_mscs_resources_preserved": manifest.get("original_mscs_resources_preserved"),
+        "nichenet": nichenet_summary,
     }, indent=2))
     return 0
 

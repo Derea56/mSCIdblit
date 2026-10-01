@@ -73,26 +73,45 @@ versions, parameters, and input data.
 ## Combined mSCS release bundle
 
 After the mechanism graph and method-resource migration artifacts exist, build
-the combined release snapshot:
+the combined release snapshot. The dense neutral NicheNet matrix is verified
+from an explicitly supplied companion root and is not copied into Git:
 
 ```bash
-python3 scripts/build_mscs_release_bundle.py
+python3 scripts/build_mscs_release_bundle.py \
+  --nichenet-artifact-root /path/to/phase2_external_snapshot_2026-08-05
 ```
 
 The resulting bundle contains the mechanism graph, method-resource intake
 tables and SQL, native projections, checksums, crosswalks, transformation
-reports, and migration gaps in one immutable directory. The original mSCS
-files remain untouched. Large NicheNet binaries remain available through their
-exact source paths and SHA-256 values until a distribution-safe artifact store
-is selected.
+reports, migration gaps, and
+`method_resources/nichenet_ligand_target_prior_manifest.json` in one immutable
+directory. The manifest pins the complete 22,521 x 1,287 float64 little-endian
+column-major matrix, both axis files, and the broad response-independent
+ligand-to-output projection. It does not select top-k targets or condition the
+prior on an observed response. The original mSCS files remain untouched.
+
+Validate with the same companion root:
+
+```bash
+python3 scripts/validate_mscs_release_bundle.py \
+  --bundle-dir data/processed/mscs_release_bundle_v1_6_0_nichenet_prior_v1_candidate_universe_v2 \
+  --nichenet-artifact-root /path/to/phase2_external_snapshot_2026-08-05
+```
+
+Downstream configuration must provide the release manifest path from
+`nichenet_ligand_target_prior_manifest` and a
+`nichenet_companion_artifact_root` pointing to a directory containing
+`nichenet_neutral_v1/ligand_target_matrix.f64le.bin`. Validation fails closed
+if that file, its checksum, byte size, axes, shape, or layout is unavailable or
+inconsistent. No mSCS working-tree path is embedded in the release contract.
 
 ## Migration safety
 
 The current mSCS method resources must not be deleted or overwritten. Before
 retirement, the next migration pass must:
 
-1. place the large NicheNet binaries in a release-capable artifact store or
-   otherwise provide an immutable release-pinned copy;
+1. place the large NicheNet binaries in a release-capable artifact store and
+   configure `nichenet_companion_artifact_root` to that immutable location;
 2. make the mSCS loader consume the combined mSCIdblit bundle;
 3. run existing mSCS smoke tests against the native projections;
 4. review any source/version/checksum differences; and

@@ -487,6 +487,8 @@ def numeric_artifacts(source_root: Path, resources: list[dict[str, Any]], neutra
             "shape_json": json_text(neutral_manifest.get("matrix_shape")),
             "axis_artifacts_json": json_text([neutral_manifest.get("target_axis_file"), neutral_manifest.get("ligand_axis_file")]),
             "source_model_version": neutral_manifest.get("source_model"),
+            "release_contract_status": "companion_required",
+            "release_relative_path": "method_resources/nichenet_ligand_target_prior_manifest.json",
             "notes": "The exact dense numerical prior remains available by checksum-pinned source reference; relational expansion is a documented migration gap.",
         })
     return rows
@@ -547,7 +549,7 @@ def emit_sql(output: Path, resources: list[dict[str, Any]], canonical: list[dict
             "ON CONFLICT (projection_key) DO UPDATE SET " + ", ".join(f"{field}=EXCLUDED.{field}" for field in fields[1:]) + ";"
         )
     for row in numeric:
-        fields = ["method_resource_id", "artifact_key", "artifact_kind", "storage_path", "storage_status", "artifact_sha256", "byte_size", "dtype", "endianness", "layout", "shape_json", "axis_artifacts_json", "source_model_version", "notes"]
+        fields = ["method_resource_id", "artifact_key", "artifact_kind", "storage_path", "storage_status", "artifact_sha256", "byte_size", "dtype", "endianness", "layout", "shape_json", "axis_artifacts_json", "source_model_version", "release_contract_status", "release_relative_path", "notes"]
         values = [f"(SELECT method_resource_id FROM MethodResource WHERE resource_key={sql(row['resource_key'])})"] + [sql(row.get(field)) for field in fields[1:]]
         lines.append(
             "INSERT INTO MethodResourceNumericArtifact (" + ", ".join(fields) + ") VALUES (" + ", ".join(values) + ") "
@@ -646,7 +648,7 @@ def main() -> int:
     write_tsv(output / "method_resource_numeric_artifacts.tsv", [
         "resource_key", "artifact_key", "artifact_kind", "storage_path", "storage_status", "artifact_sha256",
         "byte_size", "dtype", "endianness", "layout", "shape_json", "axis_artifacts_json",
-        "source_model_version", "notes",
+        "source_model_version", "release_contract_status", "release_relative_path", "notes",
     ], numeric)
     write_tsv(output / "method_resource_manifest.tsv", [
         "resource_key", "method_name", "resource_name", "resource_role", "species_scope", "source_release",
