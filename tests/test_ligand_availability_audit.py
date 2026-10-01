@@ -20,8 +20,8 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     assert summary["mechanism_release_id"] == "module20_24_mechanism_graph:2026-09-25-literature-expansion-627"
     assert summary["release_ligand_node_count"] > 0
     assert summary["ligand_evidence_associations"] > 0
-    assert summary["source_register_form_assertions"] == 466
-    assert summary["source_register_form_assertion_ids"] == 459
+    assert summary["source_register_form_assertions"] == 471
+    assert summary["source_register_form_assertion_ids"] == 464
     assert summary["source_register_skipped_existing_ledger"] == 66
     assert summary["source_register_form_applied_to_ledger"] == 64
     assert summary["source_register_form_applied_to_ledger_ids"] == [
@@ -274,6 +274,11 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
         )
 
     expected_new_source_register_forms = {
+        "M21B-EVID-002894": "membrane_bound",
+        "M21B-EVID-006470": "membrane_bound",
+        "M21B-EVID-006524": "soluble",
+        "M21B-EVID-006660": "membrane_bound",
+        "M21B-EVID-002850": "ecm_retained",
         "M21B-EVID-002700": "soluble",
         "M21B-EVID-000121": "both_or_context_dependent",
         "M21B-EVID-000814": "both_or_context_dependent",
@@ -361,8 +366,8 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     source_register_rows = [
         row for row in rows if row["assertion_origin"] == "source_register_form_observation"
     ]
-    assert len(source_register_rows) == 466
-    assert len({row["b_evidence_id"] for row in source_register_rows}) == 459
+    assert len(source_register_rows) == 471
+    assert len({row["b_evidence_id"] for row in source_register_rows}) == 464
     assert all(row["availability_evidence_state"] == "source_register_explicit_form" for row in source_register_rows)
     assert all(row["observation_status"] == "source_register_curated" for row in source_register_rows)
     assert all(row["promotion_state"] == "audit_only_not_promoted" for row in source_register_rows)

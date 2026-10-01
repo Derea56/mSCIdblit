@@ -2214,6 +2214,54 @@ SOURCE_FORM_OVERRIDES.update(
     }
 )
 
+SOURCE_REGISTER_FORM_OVERRIDES.update(
+    {
+        evidence_id: {
+            "candidate": candidate,
+            "signals": signals,
+            "fields": fields,
+            "pattern": re.compile(pattern, re.IGNORECASE),
+        }
+        for evidence_id, candidate, signals, fields, pattern in (
+            (
+                "M21B-EVID-002894",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"B7-H6 is a selective cell-surface ligand",
+            ),
+            (
+                "M21B-EVID-006470",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"cell-surface TG2 directly associates",
+            ),
+            (
+                "M21B-EVID-006524",
+                "soluble",
+                ["soluble"],
+                ("evidence_summary",),
+                r"recombinant/secreted IL-16 binding inhibition",
+            ),
+            (
+                "M21B-EVID-006660",
+                "membrane_bound",
+                ["membrane_bound"],
+                ("evidence_summary",),
+                r"ULBP6/RAET1L.*cell-surface expression",
+            ),
+            (
+                "M21B-EVID-002850",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("evidence_summary",),
+                r"laminin.?nidogen extracellular-matrix complex as a ligand",
+            ),
+        )
+    }
+)
+
 # These records contain availability language for a receptor, assay presentation,
 # processed partner, or an explicit negative statement rather than for the exact
 # ligand node. Keep them auditable but do not emit a positive ligand-form
