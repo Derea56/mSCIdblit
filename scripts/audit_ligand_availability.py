@@ -1683,6 +1683,75 @@ SOURCE_REGISTER_FORM_OVERRIDES.update(
     }
 )
 
+SOURCE_REGISTER_FORM_OVERRIDES.update(
+    {
+        evidence_id: {
+            "candidate": candidate,
+            "signals": signals,
+            "fields": fields,
+            "pattern": re.compile(pattern, re.IGNORECASE),
+        }
+        for evidence_id, candidate, signals, fields, pattern in (
+            ("M20B-EVID-003426", "soluble", ["soluble"], ("evidence_summary",), r"FGF11 is an unconventional, noncanonical secreted FHF"),
+            ("M21B-EVID-002700", "soluble", ["soluble"], ("evidence_summary",), r"SAP130 released from necrotic cells"),
+            ("M21B-EVID-004645", "soluble", ["soluble"], ("limitations",), r"Preserve soluble NS1"),
+            ("M21B-EVID-004800", "soluble", ["soluble"], ("evidence_summary",), r"StcE as a secreted metalloprotease"),
+            ("M21B-EVID-004807", "soluble", ["soluble"], ("evidence_summary",), r"aureolysin as a secreted C3-cleaving complement inhibitor"),
+            ("M21B-EVID-004825", "soluble", ["soluble"], ("evidence_summary",), r"Sat as a secreted autotransporter complement protease"),
+            ("M21B-EVID-004826", "soluble", ["soluble"], ("evidence_summary",), r"Sat as a secreted autotransporter complement protease"),
+            ("M21B-EVID-004827", "soluble", ["soluble"], ("evidence_summary",), r"Sat as a secreted autotransporter complement protease"),
+            ("M21B-EVID-004828", "soluble", ["soluble"], ("evidence_summary",), r"Sat as a secreted autotransporter complement protease"),
+            ("M21B-EVID-004829", "soluble", ["soluble"], ("evidence_summary",), r"Sat as a secreted autotransporter complement protease"),
+            ("M21B-EVID-004830", "soluble", ["soluble"], ("evidence_summary",), r"Sat as a secreted autotransporter complement protease"),
+            ("M21B-EVID-004831", "soluble", ["soluble"], ("evidence_summary",), r"Sat as a secreted autotransporter complement protease"),
+            ("M21B-EVID-004832", "soluble", ["soluble"], ("evidence_summary",), r"Sat as a secreted autotransporter complement protease"),
+            ("M21B-EVID-004833", "soluble", ["soluble"], ("evidence_summary",), r"Sat as a secreted autotransporter complement protease"),
+            ("M21B-EVID-004834", "soluble", ["soluble"], ("evidence_summary",), r"Sat as a secreted autotransporter complement protease"),
+            ("M21B-EVID-004905", "soluble", ["soluble"], ("evidence_summary",), r"FhSrp1/FhSrp2 as secreted Fasciola complement-evasion serpins"),
+            ("M21B-EVID-004911", "both_or_context_dependent", ["soluble", "membrane_bound"], ("evidence_summary",), r"membrane and soluble forms retaining C3b binding"),
+            ("M21B-EVID-004912", "both_or_context_dependent", ["soluble", "membrane_bound"], ("evidence_summary",), r"160-kDa soluble and 185-kDa membrane CRP/Gp160 forms"),
+            ("M21B-EVID-004915", "soluble", ["soluble"], ("evidence_summary",), r"Secreted H\. contortus calreticulin"),
+            ("M21B-EVID-004916", "soluble", ["soluble"], ("evidence_summary",), r"hookworm calreticulin among secreted products"),
+            ("M21B-EVID-004917", "soluble", ["soluble"], ("evidence_summary",), r"hookworm calreticulin among secreted products"),
+            ("M21B-EVID-004919", "soluble", ["soluble"], ("evidence_summary",), r"shed 87-93-kDa T-DAF activity"),
+            ("M21B-EVID-004920", "soluble", ["soluble"], ("evidence_summary",), r"shed 87-93-kDa T-DAF activity"),
+            ("M21B-EVID-004923", "soluble", ["soluble"], ("evidence_summary",), r"Released parasite OvCALR"),
+            ("M21B-EVID-005419", "soluble", ["soluble"], ("evidence_summary",), r"secreted S100A8/A9 carrying arachidonic acid"),
+            ("M21B-EVID-005457", "soluble", ["soluble"], ("evidence_summary",), r"secreted BAI1 extracellular cleavage products"),
+            ("M21B-EVID-005552", "soluble", ["soluble"], ("evidence_summary",), r"Secreted or recombinant human CTRP8"),
+            ("M21B-EVID-005740", "both_or_context_dependent", ["soluble", "membrane_bound"], ("limitations",), r"neuron-derived membrane/soluble fractalkine"),
+            ("M21B-EVID-005816", "soluble", ["soluble"], ("evidence_summary",), r"soluble GPC4"),
+            ("M21B-EVID-006087", "soluble", ["soluble"], ("evidence_summary",), r"soluble LRIG1 ectodomain"),
+            ("M21B-EVID-006221", "soluble", ["soluble"], ("evidence_summary",), r"Recombinant human soluble CD23"),
+            ("M21B-EVID-006224", "soluble", ["soluble"], ("evidence_summary",), r"secreted PLA2-IIA as a direct integrin ligand"),
+            ("M21B-EVID-006225", "soluble", ["soluble"], ("evidence_summary",), r"secreted PLA2-IIA as a direct integrin ligand"),
+            ("M21B-EVID-006226", "soluble", ["soluble"], ("evidence_summary",), r"secreted PLA2-IIA as a direct integrin ligand"),
+            ("M21B-EVID-006239", "soluble", ["soluble"], ("evidence_summary",), r"soluble/recombinant EhCP5"),
+            ("M21B-EVID-006297", "soluble", ["soluble"], ("evidence_summary",), r"secreted UGRP1/SCGB3A2"),
+            ("M21B-EVID-007077", "soluble", ["soluble"], ("limitations",), r"MBL–MASP-2 soluble complex association"),
+            ("M21B-EVID-007078", "soluble", ["soluble"], ("limitations",), r"MBL–MASP-1 soluble complex association"),
+            ("M21B-EVID-005587", "membrane_bound", ["membrane_bound"], ("limitations",), r"membrane-anchored sperm"),
+            ("M23B-EVID-001424", "soluble", ["soluble"], ("limitations",), r"extracellular Hsp90alpha"),
+            ("M23B-EVID-001425", "soluble", ["soluble"], ("evidence_summary",), r"Extracellular Hsp90alpha"),
+            ("M23B-EVID-001426", "soluble", ["soluble"], ("evidence_summary",), r"Extracellular Hsp90alpha"),
+            ("M23B-EVID-001427", "soluble", ["soluble"], ("limitations",), r"released gp96/gp96-peptide complexes"),
+            ("M23B-EVID-001437", "soluble", ["soluble"], ("evidence_summary",), r"Extracellular ISG15"),
+            ("M24B-EVID-000167", "soluble", ["soluble"], ("evidence_summary",), r"Soluble decorin"),
+            ("M24B-EVID-000195", "soluble", ["soluble"], ("evidence_summary",), r"LTB4 was detectable and released from traumatized rat spinal cord slices"),
+            ("M21B-EVID-001171", "both_or_context_dependent", ["soluble", "membrane_bound"], ("evidence_summary",), r"N-cadherin and FGFR1 cocluster.*soluble N-cadherin-Fc"),
+            ("M21B-EVID-003155", "soluble", ["soluble"], ("evidence_summary", "limitations"), r"Soluble human RGMa\.Fc"),
+            ("M21B-EVID-004606", "both_or_context_dependent", ["soluble", "membrane_bound"], ("limitations",), r"membrane or shed GPNMB/DC-HIL"),
+            ("M21B-EVID-005415", "soluble", ["soluble"], ("evidence_summary", "limitations"), r"soluble CEACAM8"),
+            ("M21B-EVID-005478", "soluble", ["soluble"], ("evidence_summary",), r"Human and murine soluble PSGL1"),
+            ("M24B-EVID-000008", "soluble", ["soluble"], ("evidence_summary",), r"Sustained extracellular ATP"),
+            ("M21B-EVID-002108", "soluble", ["soluble"], ("evidence_summary",), r"Hevin as an astrocyte-secreted bridge"),
+            ("M21B-EVID-002109", "soluble", ["soluble"], ("evidence_summary",), r"Hevin as an astrocyte-secreted bridge"),
+            ("M21B-EVID-002155", "both_or_context_dependent", ["soluble", "membrane_bound"], ("evidence_summary",), r"JAM-B/JAM-C transfectants.*recombinant soluble Ig-domain proteins"),
+            ("M21B-EVID-002557", "membrane_bound", ["membrane_bound"], ("evidence_summary", "limitations"), r"membrane-bound NPTXR/NPR"),
+        )
+    }
+)
+
 # These records contain availability language for a receptor, assay presentation,
 # processed partner, or an explicit negative statement rather than for the exact
 # ligand node. Keep them auditable but do not emit a positive ligand-form

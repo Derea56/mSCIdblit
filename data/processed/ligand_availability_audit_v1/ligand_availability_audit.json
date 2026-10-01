@@ -8,20 +8,20 @@
     "assertion_origin": {
       "sci_context_observation": 123,
       "source_linked_mechanism_evidence": 2238,
-      "source_register_form_observation": 394
+      "source_register_form_observation": 442
     },
     "availability_class_candidate": {
-      "both_or_context_dependent": 63,
+      "both_or_context_dependent": 69,
       "ecm_retained": 56,
-      "membrane_bound": 143,
-      "soluble": 325,
-      "unknown": 2168
+      "membrane_bound": 145,
+      "soluble": 371,
+      "unknown": 2162
     },
     "availability_evidence_state": {
-      "assay_or_form_language_not_attached_to_exact_ligand": 96,
+      "assay_or_form_language_not_attached_to_exact_ligand": 95,
       "context_observation_explicit_protein_form": 123,
-      "not_reported_in_source_record": 2072,
-      "source_register_explicit_form": 415,
+      "not_reported_in_source_record": 2067,
+      "source_register_explicit_form": 469,
       "source_reported_candidate": 49
     },
     "context_form_class": {
@@ -31,15 +31,15 @@
     },
     "evidence_layer": {
       "context_matched_external_observation": 123,
-      "contextual_or_unresolved": 648,
+      "contextual_or_unresolved": 649,
       "downstream_or_functional": 148,
-      "ligand_receptor_binding_or_activation": 62,
-      "ligand_receptor_binding_or_activation;downstream_or_functional": 239,
+      "ligand_receptor_binding_or_activation": 67,
+      "ligand_receptor_binding_or_activation;downstream_or_functional": 279,
       "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway": 10,
-      "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional": 56,
+      "ligand_receptor_binding_or_activation;receptor_proximal_or_pathway;downstream_or_functional": 57,
       "ligand_receptor_or_direct_molecular": 1209,
       "receptor_proximal_or_pathway": 250,
-      "receptor_proximal_or_pathway;downstream_or_functional": 5,
+      "receptor_proximal_or_pathway;downstream_or_functional": 6,
       "receptor_proximal_relay": 5
     },
     "module": {
@@ -49,11 +49,11 @@
       "20B;21B;24B": 16,
       "20B;22B": 17,
       "20B;23B": 11,
-      "21B": 449,
+      "21B": 496,
       "21B;22B": 3,
       "21B;23B": 1,
       "21B;24B": 2,
-      "23B": 1002,
+      "23B": 1003,
       "24B": 120
     },
     "observation_status": {
@@ -62,7 +62,7 @@
       "not_required_exact_primary_result_not_found": 20,
       "reused_validated_evidence": 2,
       "search_boundary": 13,
-      "source_register_curated": 394,
+      "source_register_curated": 442,
       "transcribed": 123,
       "unresolved": 664,
       "unresolved_manifest_source": 390,
@@ -82,7 +82,7 @@
     "sci_context_match_status": {
       "matched_exact_ligand_observation": 123,
       "matched_exact_source_identifier": 9,
-      "no_exact_source_identifier_match": 2623
+      "no_exact_source_identifier_match": 2671
     }
   },
   "input_artifacts": [
@@ -172,11 +172,12 @@
   "phase2_rows_with_pinned_ligand_edge": 2238,
   "release_ligand_node_count": 2871,
   "scope": "Source-linked ligand evidence in the pinned Module 20B-24B mechanism release; SCI context is linked by exact source identifiers when present.",
-  "source_register_form_applied_to_ledger": 21,
+  "source_register_form_applied_to_ledger": 27,
   "source_register_form_applied_to_ledger_ids": [
     "M20B-EVID-002097",
     "M20B-EVID-003285",
     "M20B-EVID-003287",
+    "M20B-EVID-003426",
     "M23B-EVID-000350",
     "M23B-EVID-000475",
     "M23B-EVID-000476",
@@ -193,13 +194,18 @@
     "M23B-EVID-000711",
     "M23B-EVID-001390",
     "M23B-EVID-001392",
+    "M23B-EVID-001424",
+    "M23B-EVID-001426",
+    "M23B-EVID-001427",
     "M23B-EVID-001429",
+    "M23B-EVID-001437",
+    "M24B-EVID-000008",
     "M24B-EVID-000110"
   ],
-  "source_register_form_assertion_ids": 387,
-  "source_register_form_assertions": 394,
+  "source_register_form_assertion_ids": 435,
+  "source_register_form_assertions": 442,
   "source_register_rows_scanned": 24618,
-  "source_register_skipped_existing_ledger": 21,
+  "source_register_skipped_existing_ledger": 29,
   "source_register_unresolved_mappings": [],
-  "unique_dependency_groups": 2719
+  "unique_dependency_groups": 2767
 }

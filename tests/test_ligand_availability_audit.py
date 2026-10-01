@@ -20,14 +20,15 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     assert summary["mechanism_release_id"] == "module20_24_mechanism_graph:2026-09-25-literature-expansion-627"
     assert summary["release_ligand_node_count"] > 0
     assert summary["ligand_evidence_associations"] > 0
-    assert summary["source_register_form_assertions"] == 394
-    assert summary["source_register_form_assertion_ids"] == 387
-    assert summary["source_register_skipped_existing_ledger"] == 21
-    assert summary["source_register_form_applied_to_ledger"] == 21
+    assert summary["source_register_form_assertions"] == 442
+    assert summary["source_register_form_assertion_ids"] == 435
+    assert summary["source_register_skipped_existing_ledger"] == 29
+    assert summary["source_register_form_applied_to_ledger"] == 27
     assert summary["source_register_form_applied_to_ledger_ids"] == [
         "M20B-EVID-002097",
         "M20B-EVID-003285",
         "M20B-EVID-003287",
+        "M20B-EVID-003426",
         "M23B-EVID-000350",
         "M23B-EVID-000475",
         "M23B-EVID-000476",
@@ -44,7 +45,12 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
         "M23B-EVID-000711",
         "M23B-EVID-001390",
         "M23B-EVID-001392",
+        "M23B-EVID-001424",
+        "M23B-EVID-001426",
+        "M23B-EVID-001427",
         "M23B-EVID-001429",
+        "M23B-EVID-001437",
+        "M24B-EVID-000008",
         "M24B-EVID-000110",
     ]
     assert summary["source_register_unresolved_mappings"] == []
@@ -134,6 +140,7 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
         "M24B-EVID-000152": ("ecm_retained", "source_reported_candidate"),
         "M24B-EVID-000167": ("soluble", "source_reported_candidate"),
         "M24B-EVID-000195": ("soluble", "source_reported_candidate"),
+        "M24B-EVID-000008": ("soluble", "source_register_explicit_form"),
         "M20B-EVID-001856": ("membrane_bound", "source_reported_candidate"),
         "M20B-EVID-001983": ("soluble", "source_reported_candidate"),
         "M20B-EVID-002893": ("membrane_bound", "source_reported_candidate"),
@@ -172,6 +179,53 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
             for row in rows
         )
 
+    expected_new_source_register_forms = {
+        "M21B-EVID-002700": "soluble",
+        "M21B-EVID-002108": "soluble",
+        "M21B-EVID-002109": "soluble",
+        "M21B-EVID-002155": "both_or_context_dependent",
+        "M21B-EVID-002557": "membrane_bound",
+        "M21B-EVID-004645": "soluble",
+        "M21B-EVID-004800": "soluble",
+        "M21B-EVID-004807": "soluble",
+        **{f"M21B-EVID-{evidence_id:06d}": "soluble" for evidence_id in range(4825, 4835)},
+        "M21B-EVID-004905": "soluble",
+        "M21B-EVID-004911": "both_or_context_dependent",
+        "M21B-EVID-004912": "both_or_context_dependent",
+        "M21B-EVID-004915": "soluble",
+        "M21B-EVID-004916": "soluble",
+        "M21B-EVID-004917": "soluble",
+        "M21B-EVID-004919": "soluble",
+        "M21B-EVID-004920": "soluble",
+        "M21B-EVID-004923": "soluble",
+        "M21B-EVID-005419": "soluble",
+        "M21B-EVID-005457": "soluble",
+        "M21B-EVID-005552": "soluble",
+        "M21B-EVID-005587": "membrane_bound",
+        "M21B-EVID-005740": "both_or_context_dependent",
+        "M21B-EVID-005816": "soluble",
+        "M21B-EVID-006087": "soluble",
+        "M21B-EVID-006221": "soluble",
+        "M21B-EVID-006224": "soluble",
+        "M21B-EVID-006225": "soluble",
+        "M21B-EVID-006226": "soluble",
+        "M21B-EVID-006239": "soluble",
+        "M21B-EVID-006297": "soluble",
+        "M21B-EVID-007077": "soluble",
+        "M21B-EVID-007078": "soluble",
+        "M23B-EVID-001425": "soluble",
+    }
+    for evidence_id, candidate in expected_new_source_register_forms.items():
+        matches = [
+            row
+            for row in rows
+            if row["b_evidence_id"] == evidence_id
+            and row["assertion_origin"] == "source_register_form_observation"
+        ]
+        assert matches
+        assert {row["availability_class_candidate"] for row in matches} == {candidate}
+        assert all(row["module_source_locator"] for row in matches)
+
     suppressed_form_records = {
         "M20B-EVID-002230",  # explicit negative: NCAM1 is not a secreted ligand
         "M20B-EVID-003441",  # soluble/membrane-bound FGFRL1 receptor, not FGF2
@@ -189,8 +243,8 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     source_register_rows = [
         row for row in rows if row["assertion_origin"] == "source_register_form_observation"
     ]
-    assert len(source_register_rows) == 394
-    assert len({row["b_evidence_id"] for row in source_register_rows}) == 387
+    assert len(source_register_rows) == 442
+    assert len({row["b_evidence_id"] for row in source_register_rows}) == 435
     assert all(row["availability_evidence_state"] == "source_register_explicit_form" for row in source_register_rows)
     assert all(row["observation_status"] == "source_register_curated" for row in source_register_rows)
     assert all(row["promotion_state"] == "audit_only_not_promoted" for row in source_register_rows)
