@@ -2426,6 +2426,41 @@ SOURCE_REGISTER_FORM_OVERRIDES.update(
                 ("limitations",),
                 r"retinal-basement-membrane context",
             ),
+            (
+                "M20B-EVID-005366",
+                "both_or_context_dependent",
+                ["soluble", "membrane_bound"],
+                ("evidence_summary",),
+                r"Soluble and membrane-anchored CXCL16",
+            ),
+            (
+                "M21B-EVID-004630",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("evidence_summary",),
+                r"collagen IX NC4 as a direct complement-binding extracellular-matrix domain",
+            ),
+            (
+                "M21B-EVID-004631",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("evidence_summary",),
+                r"collagen IX NC4 as a direct complement-binding extracellular-matrix domain",
+            ),
+            (
+                "M21B-EVID-004632",
+                "ecm_retained",
+                ["ecm_retained"],
+                ("evidence_summary",),
+                r"collagen IX NC4 as a direct complement-binding extracellular-matrix domain",
+            ),
+            (
+                "M21B-EVID-006402",
+                "soluble",
+                ["soluble"],
+                ("limitations",),
+                r"phenol-soluble modulin",
+            ),
         )
     }
 )
