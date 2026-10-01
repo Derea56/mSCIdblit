@@ -20,8 +20,8 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     assert summary["mechanism_release_id"] == "module20_24_mechanism_graph:2026-09-25-literature-expansion-627"
     assert summary["release_ligand_node_count"] > 0
     assert summary["ligand_evidence_associations"] > 0
-    assert summary["source_register_form_assertions"] == 449
-    assert summary["source_register_form_assertion_ids"] == 442
+    assert summary["source_register_form_assertions"] == 466
+    assert summary["source_register_form_assertion_ids"] == 459
     assert summary["source_register_skipped_existing_ledger"] == 29
     assert summary["source_register_form_applied_to_ledger"] == 27
     assert summary["source_register_form_applied_to_ledger_ids"] == [
@@ -188,6 +188,23 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
         "M21B-EVID-004722": "membrane_bound",
         "M21B-EVID-004723": "both_or_context_dependent",
         "M21B-EVID-007028": "soluble",
+        "M21B-EVID-000543": "both_or_context_dependent",
+        "M21B-EVID-000709": "membrane_bound",
+        "M21B-EVID-000710": "membrane_bound",
+        "M21B-EVID-004638": "ecm_retained",
+        "M21B-EVID-004639": "soluble",
+        "M21B-EVID-004647": "soluble",
+        "M21B-EVID-004658": "soluble",
+        "M21B-EVID-004659": "soluble",
+        "M21B-EVID-004687": "membrane_bound",
+        "M21B-EVID-004688": "membrane_bound",
+        "M21B-EVID-004693": "membrane_bound",
+        "M21B-EVID-004695": "membrane_bound",
+        "M21B-EVID-004709": "membrane_bound",
+        "M21B-EVID-004710": "membrane_bound",
+        "M21B-EVID-004718": "membrane_bound",
+        "M21B-EVID-006490": "both_or_context_dependent",
+        "M21B-EVID-006557": "both_or_context_dependent",
         "M21B-EVID-002108": "soluble",
         "M21B-EVID-002109": "soluble",
         "M21B-EVID-002155": "both_or_context_dependent",
@@ -250,8 +267,8 @@ def test_ligand_availability_audit_is_source_preserving(tmp_path):
     source_register_rows = [
         row for row in rows if row["assertion_origin"] == "source_register_form_observation"
     ]
-    assert len(source_register_rows) == 449
-    assert len({row["b_evidence_id"] for row in source_register_rows}) == 442
+    assert len(source_register_rows) == 466
+    assert len({row["b_evidence_id"] for row in source_register_rows}) == 459
     assert all(row["availability_evidence_state"] == "source_register_explicit_form" for row in source_register_rows)
     assert all(row["observation_status"] == "source_register_curated" for row in source_register_rows)
     assert all(row["promotion_state"] == "audit_only_not_promoted" for row in source_register_rows)

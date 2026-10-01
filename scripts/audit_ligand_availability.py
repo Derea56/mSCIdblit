@@ -1755,6 +1755,23 @@ SOURCE_REGISTER_FORM_OVERRIDES.update(
             ("M21B-EVID-004722", "membrane_bound", ["membrane_bound"], ("evidence_summary",), r"Hsf as an H\. influenzae vitronectin-recruiting surface fibril"),
             ("M21B-EVID-004723", "both_or_context_dependent", ["soluble", "membrane_bound"], ("evidence_summary",), r"surface-expressed and soluble E\. coli-expressed Protein E variants"),
             ("M21B-EVID-007028", "soluble", ["soluble"], ("evidence_summary",), r"Soluble human growth hormone"),
+            ("M21B-EVID-000543", "both_or_context_dependent", ["soluble", "membrane_bound"], ("evidence_summary", "limitations"), r"recombinant soluble EPCR|soluble versus endothelial EPCR"),
+            ("M21B-EVID-000709", "membrane_bound", ["membrane_bound"], ("evidence_summary",), r"cell-surface human VEGF-C/VEGF-D"),
+            ("M21B-EVID-000710", "membrane_bound", ["membrane_bound"], ("evidence_summary",), r"cell-surface human VEGF-C/VEGF-D"),
+            ("M21B-EVID-004638", "ecm_retained", ["ecm_retained"], ("evidence_summary",), r"biglycan as an MBL-binding extracellular-matrix proteoglycan"),
+            ("M21B-EVID-004639", "soluble", ["soluble"], ("evidence_summary",), r"HNP-1 binding to intact C1q and fluid-phase complex formation"),
+            ("M21B-EVID-004647", "soluble", ["soluble"], ("limitations",), r"soluble viral complement evasion"),
+            ("M21B-EVID-004658", "soluble", ["soluble"], ("evidence_summary", "limitations"), r"Purified soluble CCPH|CCPH soluble regulator"),
+            ("M21B-EVID-004659", "soluble", ["soluble"], ("evidence_summary", "limitations"), r"Purified soluble CCPH|CCPH soluble regulator"),
+            ("M21B-EVID-004687", "membrane_bound", ["membrane_bound"], ("evidence_summary", "limitations"), r"Gpd2.*surface protein|surface-exposed moonlighting Gpd2"),
+            ("M21B-EVID-004688", "membrane_bound", ["membrane_bound"], ("evidence_summary", "limitations"), r"Gpd2.*surface protein|surface-exposed Gpd2"),
+            ("M21B-EVID-004693", "membrane_bound", ["membrane_bound"], ("evidence_summary", "limitations"), r"surface acquisition|surface-exposed moonlighting AfEno1"),
+            ("M21B-EVID-004695", "membrane_bound", ["membrane_bound"], ("evidence_summary", "limitations"), r"surface-exposed AfEno1"),
+            ("M21B-EVID-004709", "membrane_bound", ["membrane_bound"], ("evidence_summary",), r"surface-exposed.*Lsa23"),
+            ("M21B-EVID-004710", "membrane_bound", ["membrane_bound"], ("evidence_summary",), r"surface-exposed.*Lsa23"),
+            ("M21B-EVID-004718", "membrane_bound", ["membrane_bound"], ("limitations",), r"surface-exposed Lpd"),
+            ("M21B-EVID-006490", "both_or_context_dependent", ["soluble", "membrane_bound"], ("limitations",), r"soluble versus membrane SECTM1 isoforms"),
+            ("M21B-EVID-006557", "both_or_context_dependent", ["soluble", "membrane_bound"], ("limitations",), r"soluble versus membrane HLA-G isoforms"),
         )
     }
 )
