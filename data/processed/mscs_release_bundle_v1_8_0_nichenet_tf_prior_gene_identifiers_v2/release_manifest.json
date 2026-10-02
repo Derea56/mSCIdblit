@@ -1,0 +1,555 @@
+{
+  "biological_validation_created_by_resource_import": false,
+  "candidate_universe_path": "candidate_universe/mechanism_lr_candidate_universe.tsv",
+  "candidate_universe_schema": "mechanism_lr_candidate_universe_v2",
+  "counts": {
+    "candidate_universe_records": 9099,
+    "canonical_communication_records": 9099,
+    "gene_active_release_candidate_components_total": 1439,
+    "gene_active_release_candidate_labels_total": 2809,
+    "gene_active_release_label_audit_rows": 5258,
+    "gene_active_release_output_product_labels_mouse_ambiguous": 51,
+    "gene_active_release_output_product_labels_mouse_unique": 445,
+    "gene_active_release_output_product_labels_mouse_unresolved": 514,
+    "gene_active_release_output_product_labels_total": 1010,
+    "gene_crosswalk_ambiguous_rows": 2800,
+    "gene_crosswalk_resolved_rows": 24733,
+    "gene_crosswalk_rows": 48693,
+    "gene_crosswalk_unresolved_rows": 1821,
+    "gene_nichenet_target_ids_mouse_ambiguous": 922,
+    "gene_nichenet_target_ids_mouse_unique": 21563,
+    "gene_nichenet_target_ids_mouse_unresolved": 36,
+    "gene_nichenet_target_ids_total": 22521,
+    "gene_orthology_rows": 17095,
+    "mechanism_graph_files": 35,
+    "method_resource_files": 23,
+    "method_resource_projections": 14,
+    "method_resource_records": 13036,
+    "nichenet_output_projection_records": 1166,
+    "numeric_artifacts": 1,
+    "tf_target_prior_direct_graph_edge_count": 326,
+    "tf_target_prior_pairs": 6490,
+    "tf_target_prior_source_records": 7057,
+    "tf_target_prior_target_count": 2092,
+    "tf_target_prior_tf_count": 827
+  },
+  "database_is_source_of_truth": true,
+  "files": {
+    "candidate_universe/mechanism_lr_candidate_universe.tsv": {
+      "bytes": 8900964,
+      "sha256": "7303ad7969891714b0b17790e53326acf8b209c6a2ea4c03c3bd0b545427728c"
+    },
+    "candidate_universe/mechanism_lr_candidate_universe_report.json": {
+      "bytes": 3088,
+      "sha256": "90648a25cb1a71d3bfdd01557e73a2911cf8a1a1b55d975e421f82fd7bae52fe"
+    },
+    "gene_identifier_crosswalk/gene_catalog.tsv": {
+      "bytes": 85486535,
+      "sha256": "a7b32de57ff30352ba4414f781a3231ea37a1d9a0010c43f141de3a7c4b0becc"
+    },
+    "gene_identifier_crosswalk/gene_crosswalk.tsv": {
+      "bytes": 58004999,
+      "sha256": "8aecd29c408c8dd7d35a8258c7452befc780411f4d1379e095a230197f150b90"
+    },
+    "gene_identifier_crosswalk/gene_identifier_crosswalk_manifest.json": {
+      "bytes": 4201,
+      "sha256": "03a5c9f79f8d2d3039e651839d6db8b34ea7743f5e0d6b92e8dce0abe520ce9e"
+    },
+    "gene_identifier_crosswalk/gene_label_coverage_audit.tsv": {
+      "bytes": 24252689,
+      "sha256": "9fa8a08c3cb99cdd3d5c317523a3a30873d7ece1ea481cebae71a274a29ce131"
+    },
+    "gene_identifier_crosswalk/gene_orthology.tsv": {
+      "bytes": 2880062,
+      "sha256": "42fd5372992f6936435fefb56f300757a8316b4508b21705f71c2c94acd174f3"
+    },
+    "mechanism_graph/bundle_metadata.json": {
+      "bytes": 12209,
+      "sha256": "61259b115bfd1a807f12112b4cd36375be31fbc2f4c66579fc71e90e8dfca623"
+    },
+    "mechanism_graph/cross_record_route_linkage_summary.json": {
+      "bytes": 810,
+      "sha256": "8d8d21ac6be817bc952e9d9003e3d0dbbb9361669f91f2b4273ef4335ea4794b"
+    },
+    "mechanism_graph/full_sequence_curation_queue.tsv.gz": {
+      "bytes": 17306726,
+      "sha256": "1499900a766b5a5ce4e337f8fa77eb4512e3e5492dbe2a6f55db188924bbb1c1"
+    },
+    "mechanism_graph/full_sequence_curation_queue_summary.json": {
+      "bytes": 2507,
+      "sha256": "4839d3d673b581145585c79f34044c7c64eef9085ee289839c01f74b892f37f5"
+    },
+    "mechanism_graph/full_signaling_chain_audit.json": {
+      "bytes": 1672926,
+      "sha256": "72e568c7a5404f522d0e83ae8dbfc933e76491365cc499167d5c53b839d190f6"
+    },
+    "mechanism_graph/full_signaling_chain_audit.tsv": {
+      "bytes": 1361493,
+      "sha256": "27d8ad339e0e0a53b9a31f67a2492782993265f4166ad4ef6fc84fa0688ba577"
+    },
+    "mechanism_graph/graph_supported_route_expansion_summary.json": {
+      "bytes": 706,
+      "sha256": "d41edb856e736e3f5998c7c49790011668971782d2dee4bf3ed09df51df2c53c"
+    },
+    "mechanism_graph/ligand_route_coverage_release_summary.json": {
+      "bytes": 1086,
+      "sha256": "b92f5998f07da1bc967ad6ee07abf09f491ab751f3d994775c58c3805b5d2fbd"
+    },
+    "mechanism_graph/ligand_route_coverage_summary.json": {
+      "bytes": 636,
+      "sha256": "ea6a076298543f52094c307be93243ba897aef5256beb5188f203ed67961dedd"
+    },
+    "mechanism_graph/mechanism_boundary_summary.tsv": {
+      "bytes": 12578,
+      "sha256": "aa64f2ec185d8f9fa68a08dd962b58d05ece1ef780777fe59926272babbb0d50"
+    },
+    "mechanism_graph/mechanism_downstream_curation_queue.tsv": {
+      "bytes": 7106808,
+      "sha256": "77a74da3198934cc40013341b814b08ff2d068deb02ab43dbb148f40bfc8a89f"
+    },
+    "mechanism_graph/mechanism_downstream_evidence_records.tsv": {
+      "bytes": 8837938,
+      "sha256": "ac3a0bbc86747ce3f2f05a747bdc3ac194f28c5700e51b68d7527203a6e7680f"
+    },
+    "mechanism_graph/mechanism_downstream_manual_disposition.tsv": {
+      "bytes": 8916,
+      "sha256": "1a06ca92d6ae0335751e49af62d065d37f50ef3b60880b95a481b02a919f108b"
+    },
+    "mechanism_graph/mechanism_edge_sources.tsv": {
+      "bytes": 20157152,
+      "sha256": "f8a378b92c10d225df6c5115fca60dc83a30c14b751718b37d68c46622ea955b"
+    },
+    "mechanism_graph/mechanism_edges.tsv": {
+      "bytes": 17772765,
+      "sha256": "d0ef850fbf362536b25683828aa16f6b1669b62ecaf3ea7a9ebd8e3d0728a9cc"
+    },
+    "mechanism_graph/mechanism_entity_forms.tsv": {
+      "bytes": 577101,
+      "sha256": "c82f9d152a0b957ad458755beb58882da62809f495cef3299f6656deaf6fbb17"
+    },
+    "mechanism_graph/mechanism_entity_transitions.tsv": {
+      "bytes": 5127,
+      "sha256": "b940b5f8bacd16c59d39d700e6d47f662017834a547ae982143f4f440ec6a2a0"
+    },
+    "mechanism_graph/mechanism_full_sequence_curation_queue.tsv.gz": {
+      "bytes": 17306726,
+      "sha256": "1499900a766b5a5ce4e337f8fa77eb4512e3e5492dbe2a6f55db188924bbb1c1"
+    },
+    "mechanism_graph/mechanism_ligand_route_coverage.tsv.gz": {
+      "bytes": 72002,
+      "sha256": "90a2093b6f69203aef3db2e8b20344efd6ffb95e95f3f9d43bbec6b7b1627d3d"
+    },
+    "mechanism_graph/mechanism_literature_expansion.tsv.gz": {
+      "bytes": 7202776,
+      "sha256": "7ab48537f89ff4a5fa9e51a7e04d102fa3df4ee8aed461a88cd64d19875441a6"
+    },
+    "mechanism_graph/mechanism_literature_expansion_summary.json": {
+      "bytes": 1880,
+      "sha256": "2547b12f7c8a9a5a924f68d188e1f9dafff14eecb8aa6bc7880fedb7bd10bed2"
+    },
+    "mechanism_graph/mechanism_node_roles.tsv": {
+      "bytes": 3090299,
+      "sha256": "be978f8d836427276b9f25ce8d9557456cdffe212c489b276a3d4307c931d9bf"
+    },
+    "mechanism_graph/mechanism_nodes.tsv": {
+      "bytes": 4362002,
+      "sha256": "bcd6319fdda48662a7dff9b49a34b89553f7e786d15eecc3c39625febd7734b9"
+    },
+    "mechanism_graph/mechanism_output_bridge_candidates.tsv": {
+      "bytes": 455606,
+      "sha256": "d3b14b966c7f8814290e024e1f3a28f65afd89d9bd581d95b965dea0526ed2f4"
+    },
+    "mechanism_graph/mechanism_output_bridges_validated.tsv": {
+      "bytes": 1588464,
+      "sha256": "a067034a1da48dd1d66c62994efa81d33db0086f4aa022f868be42de306d9fb5"
+    },
+    "mechanism_graph/mechanism_pathways.tsv": {
+      "bytes": 485725,
+      "sha256": "d44146c2db27538ceba064a7176c92644620e8c1253d1e342859075ff7384977"
+    },
+    "mechanism_graph/mechanism_route_edges.tsv.gz": {
+      "bytes": 31310181,
+      "sha256": "45349be853dc67e2a6ce172599beb265aef362ca73ac52d0a35c0e6325285032"
+    },
+    "mechanism_graph/mechanism_route_gap_priorities.tsv": {
+      "bytes": 1384702,
+      "sha256": "369e143e7651bf02a5097ea97c4c93dd83dd56611d693071df000328d350f328"
+    },
+    "mechanism_graph/mechanism_route_nodes.tsv.gz": {
+      "bytes": 18228051,
+      "sha256": "d01c75bc66edb32711cd8ead9f29a9c14fa55a40d930176e13fd08a12f63c4c0"
+    },
+    "mechanism_graph/mechanism_signaling_route_evidence.tsv.gz": {
+      "bytes": 63888356,
+      "sha256": "ea9129b6b37b83ccd80e6e2930ba3b511c8fa447487193e52dd426116600a4e4"
+    },
+    "mechanism_graph/release_provenance_cleanup_manifest.json": {
+      "bytes": 7727,
+      "sha256": "7aa68b75a09dbfd8ac71318f0379e78247871cb20f84cb038c90fcce1f71cb3f"
+    },
+    "mechanism_graph/route_node_id_repair_summary.json": {
+      "bytes": 46924,
+      "sha256": "0652f4fc47c49c6f6e27c6567f2921b09c5353c727c63a26186c177de416d396"
+    },
+    "mechanism_graph/target_gene_role_repair_summary.json": {
+      "bytes": 6529,
+      "sha256": "b41e94cb8f12cfc245fc9e887a6b305546b88438deebc6a8b6fab21752fa36fe"
+    },
+    "mechanism_graph/transcription_factor_role_repair_summary.json": {
+      "bytes": 1742,
+      "sha256": "c896debf52ee074703af08fa38758adbe84502d5e6a7da57c0ffdc58b9698799"
+    },
+    "mechanism_graph/validation_report.json": {
+      "bytes": 1468,
+      "sha256": "82273f6d7a6c89ea179ad819f700de25e301a050b8930e53f22dbe6266d0a85c"
+    },
+    "method_resources/canonical_communication_records.tsv": {
+      "bytes": 1993967,
+      "sha256": "f5fc14f7802883e6181ab371866c594f0fb29139f17d342d0b53daac8c461a88"
+    },
+    "method_resources/method_native/CellChatDB.mouse.rda": {
+      "bytes": 1279646,
+      "sha256": "dd59b19646e546b3ed41f394ad2cf64cf44f3d3fcfbb58ac176f0fe1322f9413"
+    },
+    "method_resources/method_native/CellChatDB.mouse.standalone.json": {
+      "bytes": 1174853,
+      "sha256": "777878377aa926bdf8200edb76bba14661a403b870c798f40c3fb9dd03b3b0ae"
+    },
+    "method_resources/method_native/cellchat_mouse.tsv": {
+      "bytes": 497299,
+      "sha256": "585340219264f0d44b9d1f228ee097301b0af86da6a823c7eabffb60f3cdffa7"
+    },
+    "method_resources/method_native/liana_mouseconsensus.tsv": {
+      "bytes": 52104,
+      "sha256": "0b9e2307fcbd482bb608f118d7e03bdbfc93e58d2c2032c844b648e3cca86f71"
+    },
+    "method_resources/method_native/master_lr_registry.manifest.json": {
+      "bytes": 1515,
+      "sha256": "fc518a344be8ae5395cac6c60fb46034ee81c8f6f1f347213de3fa8060e687c3"
+    },
+    "method_resources/method_native/master_lr_registry.tsv": {
+      "bytes": 1315321,
+      "sha256": "d176eb074427f3ff0f8f38572799e22d22980846315c964bee5380480c42573f"
+    },
+    "method_resources/method_native/nichenet_neutral_v1/ligands.tsv": {
+      "bytes": 7725,
+      "sha256": "8d7ed03d765cb6444d3b472eb079dc6b54c20978c24d9f24d6bcc88df1fa3760"
+    },
+    "method_resources/method_native/nichenet_neutral_v1/lr_network.tsv": {
+      "bytes": 183598,
+      "sha256": "22279374620ff3a2ecb388107cfd7c03770e9c7c67a920ad44033179e511b282"
+    },
+    "method_resources/method_native/nichenet_neutral_v1/neutral_model_manifest.json": {
+      "bytes": 945,
+      "sha256": "44370631b52f3101b4a12fb6128f3b407cf5d030743de8871f56f2fcc91b90e5"
+    },
+    "method_resources/method_native/nichenet_neutral_v1/target_genes.tsv": {
+      "bytes": 156389,
+      "sha256": "045a4033173eb5cbd7ff02446cf9c5080de12eb1af1a1546a1aba35be517b6ee"
+    },
+    "method_resources/method_native/nichenet_v2_mouse/lr_network_mouse_21122021.rds": {
+      "bytes": 32993,
+      "sha256": "a6f9528e567a39a3a335560bfe5440873a0c08446a422cd92f5bc9617164061e"
+    },
+    "method_resources/method_native/resource_manifest.json": {
+      "bytes": 3419,
+      "sha256": "c8cea2914ea29ba7a8997e481782bdb05ddd2468078c4fa917738ee4d840206b"
+    },
+    "method_resources/method_resource_annotations.tsv": {
+      "bytes": 2427591,
+      "sha256": "d5ca97cfbef778dfda12004d26d1f4c12c945b6dae5d620ac38add45268ec378"
+    },
+    "method_resources/method_resource_complex_components.tsv": {
+      "bytes": 2189025,
+      "sha256": "8e25c1534dcd14202e767229674406aba514e0042efb54d4d3767754c9d5bee5"
+    },
+    "method_resources/method_resource_equivalence_report.json": {
+      "bytes": 11758,
+      "sha256": "3744dd310f914f9301527c500b84486cc80456243cb129e0953c01bfd9847eb0"
+    },
+    "method_resources/method_resource_manifest.tsv": {
+      "bytes": 9028,
+      "sha256": "a4cc19ed4ae9561fd52594c2f13d2bb2fb5fc4bc5939554accb1880a664f946d"
+    },
+    "method_resources/method_resource_materialization.sql": {
+      "bytes": 45216750,
+      "sha256": "a097c73a9fabd0b8f4dcadb8906feaf38dab528301fccf27e59c533e293adfeb"
+    },
+    "method_resources/method_resource_migration_report.json": {
+      "bytes": 1497,
+      "sha256": "1698f9d05531045bc5e158ccc47cf60000d87a940bf9265a5b014a0abc66a6fb"
+    },
+    "method_resources/method_resource_numeric_artifacts.tsv": {
+      "bytes": 891,
+      "sha256": "098cb20bcd52cfdbfd9bb738c8419b11f49d3dc12a4a343f3e35e005fae17e7e"
+    },
+    "method_resources/method_resource_projections.tsv": {
+      "bytes": 5381,
+      "sha256": "9fbf540fa4ec02b9d202f4789ca133444b4a10268005ebba3a410c891aab5b20"
+    },
+    "method_resources/method_resource_records.tsv": {
+      "bytes": 6434677,
+      "sha256": "1b87a2156851e77dd576523e1f6a4fc5ee63d8bd758e5c57a45e1bb2d4788a1e"
+    },
+    "method_resources/nichenet_ligand_target_prior_manifest.json": {
+      "bytes": 2413,
+      "sha256": "0c387dc9d7032923f5eee5d01396281e01a2a5b72b96f86b7b2549918b05640b"
+    },
+    "method_resources/source_snapshot_manifest.tsv": {
+      "bytes": 6382,
+      "sha256": "826f426e1ae49215e4d9f3ac3093df65c091370eca8a70cbedc17e3e0e8ced6b"
+    },
+    "tf_target_prior/source_registry.tsv": {
+      "bytes": 899,
+      "sha256": "67d8b0aeea0b37eb27fff0ed0b27017bc17d97756846a238c5a0b99ec2cba985"
+    },
+    "tf_target_prior/target_axis.tsv": {
+      "bytes": 112415,
+      "sha256": "39617d1b2fe9cc2ba1080fd590d21e6fe03d8cfa9720e25c8e581393280e1dc6"
+    },
+    "tf_target_prior/tf_axis.tsv": {
+      "bytes": 44211,
+      "sha256": "2eb2ed011a912b4cd09ad48c3fcab55c9bf184d8bebb8931964aeb585d58636e"
+    },
+    "tf_target_prior/tf_target_direct_graph_tier.tsv": {
+      "bytes": 97150,
+      "sha256": "d3604bcd78f67f4b278dbc7d8910121085efb67f91a2066a90ad7b4e3900a4a1"
+    },
+    "tf_target_prior/tf_target_prior.tsv": {
+      "bytes": 3070730,
+      "sha256": "eb14a7ad008026955be2b7a14d6f54eaff6fdf395b6408536292ea8c05d4a86a"
+    },
+    "tf_target_prior/tf_target_prior_source_records.tsv": {
+      "bytes": 3659664,
+      "sha256": "6f0f2ffeee00728b7b8944365fa1bf1eb9dde0472046228bf1a06d44493a2133"
+    }
+  },
+  "gene_identifier_contract": {
+    "ambiguous_mappings_preserved": true,
+    "case_normalized_lookup_supported": true,
+    "orthology_inference": false,
+    "schema_version": "gene_identifier_crosswalk_v1",
+    "species_explicit": true,
+    "unresolved_mappings_preserved": true
+  },
+  "gene_identifier_crosswalk": {
+    "counts": {
+      "active_release_candidate_components_total": 1439,
+      "active_release_candidate_labels_total": 2809,
+      "active_release_label_audit_rows": 5258,
+      "active_release_output_product_labels_mouse_ambiguous": 51,
+      "active_release_output_product_labels_mouse_unique": 445,
+      "active_release_output_product_labels_mouse_unresolved": 514,
+      "active_release_output_product_labels_total": 1010,
+      "crosswalk_ambiguous_rows": 2800,
+      "crosswalk_by_mapping_status": {
+        "ambiguous_source_alias": 2800,
+        "explicit_orthology_one_to_one": 19339,
+        "resolved_source_alias": 1610,
+        "resolved_source_canonical": 23123,
+        "unresolved_source_symbol": 1821
+      },
+      "crosswalk_by_query_species_scope": {
+        "mouse": 41790,
+        "unscoped": 6903
+      },
+      "crosswalk_by_species": {
+        "human": 21922,
+        "mouse": 26771
+      },
+      "crosswalk_orthology_rows": 19339,
+      "crosswalk_resolved_rows": 24733,
+      "crosswalk_rows": 48693,
+      "crosswalk_unresolved_rows": 1821,
+      "human_catalog_records": 193873,
+      "mouse_catalog_records": 112258,
+      "nichenet_target_ids_mouse_ambiguous": 922,
+      "nichenet_target_ids_mouse_unique": 21563,
+      "nichenet_target_ids_mouse_unresolved": 36,
+      "nichenet_target_ids_total": 22521,
+      "orthology_by_mapping_cardinality": {
+        "one_to_one": 17095
+      },
+      "orthology_rows": 17095,
+      "query_symbol_scope_records": 25330
+    },
+    "files": {
+      "gene_catalog.tsv": {
+        "bytes": 85486535,
+        "sha256": "a7b32de57ff30352ba4414f781a3231ea37a1d9a0010c43f141de3a7c4b0becc"
+      },
+      "gene_crosswalk.tsv": {
+        "bytes": 58004999,
+        "sha256": "8aecd29c408c8dd7d35a8258c7452befc780411f4d1379e095a230197f150b90"
+      },
+      "gene_label_coverage_audit.tsv": {
+        "bytes": 24252689,
+        "sha256": "9fa8a08c3cb99cdd3d5c317523a3a30873d7ece1ea481cebae71a274a29ce131"
+      },
+      "gene_orthology.tsv": {
+        "bytes": 2880062,
+        "sha256": "42fd5372992f6936435fefb56f300757a8316b4508b21705f71c2c94acd174f3"
+      }
+    },
+    "limitations": [
+      "The crosswalk does not infer identity from capitalization, punctuation, substring matches, or symbol similarity.",
+      "Unresolved and ambiguous aliases remain explicitly represented; downstream consumers must not choose among ambiguous rows.",
+      "The raw NCBI snapshots are checksum-pinned references and are not copied into the Git release."
+    ],
+    "lookup_normalization": "Unicode-preserving casefold only; punctuation and aliases are not guessed or stripped.",
+    "orthology_policy": "Retain explicit NCBI mouse-human orthology records; preserve one-to-many mappings without selecting arbitrarily.",
+    "query_scope": "Committed mSCS TF-prior axes, neutral NicheNet mouse axes, mechanism graph gene symbols, active candidate-universe labels/components, and exact validated output-product labels.",
+    "release_input": {
+      "release_id": "mscs_release_bundle:2026-10-01-nichenet-tf-target-prior-v1",
+      "release_path": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mscs_release_bundle_v1_7_0_nichenet_tf_prior_v1"
+    },
+    "schema_version": "gene_identifier_crosswalk_v1",
+    "source_inputs": [
+      {
+        "bytes": 3932773,
+        "local_snapshot_path": "/private/tmp/Mus_musculus.gene_info.gz",
+        "name": "mouse_gene_info",
+        "sha256": "0229fddbe526d6e9d916bc89e5448bc65e99a0f93507101f2d2b727feb5baef5",
+        "url": "https://ftp.ncbi.nlm.nih.gov/gene/DATA/GENE_INFO/Mammalia/Mus_musculus.gene_info.gz"
+      },
+      {
+        "bytes": 5191979,
+        "local_snapshot_path": "/private/tmp/Homo_sapiens.gene_info.gz",
+        "name": "human_gene_info",
+        "sha256": "25ce679f406cf465ab8b5e693e453102dbb9cb90dba9abb179219c40866cb964",
+        "url": "https://ftp.ncbi.nlm.nih.gov/gene/DATA/GENE_INFO/Mammalia/Homo_sapiens.gene_info.gz"
+      },
+      {
+        "bytes": 130253728,
+        "local_snapshot_path": "/private/tmp/gene_orthologs.gz",
+        "name": "gene_orthologs",
+        "sha256": "28d320adea6c7957b37c382944cdcbbbc5f022887e7eba93c5a7e40af6199429",
+        "url": "https://ftp.ncbi.nlm.nih.gov/gene/DATA/gene_orthologs.gz"
+      }
+    ],
+    "species": {
+      "human": {
+        "tax_id": "9606"
+      },
+      "mouse": {
+        "tax_id": "10090"
+      }
+    }
+  },
+  "gene_identifier_crosswalk_manifest": "gene_identifier_crosswalk/gene_identifier_crosswalk_manifest.json",
+  "gene_label_coverage_audit": "gene_identifier_crosswalk/gene_label_coverage_audit.tsv",
+  "mechanism_graph_release": "module20_24_mechanism_graph:2026-09-25-literature-expansion-627",
+  "mechanism_graph_version": "unknown",
+  "method_resource_membership_is_not_biological_validation": true,
+  "method_resource_migration_schema": "method_resource_migration_v1",
+  "method_resource_schema": "method_resource_layer_v1",
+  "migration_gaps": [
+    "The large NicheNet v2 ligand-target RDS file and the 221 MiB neutral ligand-target matrix remain checksum-pinned references rather than Git-copied binaries.",
+    "No local Paper, Observation, AuthorClaim, or SignalingEdge rows are created by this resource import.",
+    "LIANA source URL/citation is not present in the frozen mSCS manifest and remains null.",
+    "No frozen Tensor-cell2cell resource was present in the inspected mSCS method-resource directory; no Tensor projection was created.",
+    "The genome-scale TF-target prior is a separate broad response-independent resource and does not create mechanism-graph edges.",
+    "The TRRUST raw snapshot is not redistributed; exact source and record checksums are retained for reproducibility.",
+    "The NCBI GeneInfo and gene_orthologs raw snapshots are checksum-pinned references and are not copied into the Git release.",
+    "Ambiguous and unresolved gene identifier mappings remain in the crosswalk and require downstream policy rather than automatic selection."
+  ],
+  "nichenet_companion_artifact_root_config_key": "nichenet_companion_artifact_root",
+  "nichenet_ligand_target_prior_manifest": "method_resources/nichenet_ligand_target_prior_manifest.json",
+  "original_mscs_resources_preserved": true,
+  "parent_release_id": "mscs_release_bundle:2026-10-01-nichenet-tf-target-prior-v1",
+  "project": "mSCIdblit",
+  "release_id": "mscs_release_bundle:2026-10-02-nichenet-tf-prior-gene-identifiers-v2",
+  "schema_version": "mscs_release_bundle_v1",
+  "target_consumer": "mSCS",
+  "tf_target_prior": {
+    "counts": {
+      "direct_graph_edge_count": 326,
+      "pair_count": 6490,
+      "source_record_count": 7057,
+      "target_count": 2092,
+      "tf_count": 827
+    },
+    "files": {
+      "tf_target_prior/source_registry.tsv": {
+        "bytes": 899,
+        "sha256": "67d8b0aeea0b37eb27fff0ed0b27017bc17d97756846a238c5a0b99ec2cba985"
+      },
+      "tf_target_prior/target_axis.tsv": {
+        "bytes": 112415,
+        "sha256": "39617d1b2fe9cc2ba1080fd590d21e6fe03d8cfa9720e25c8e581393280e1dc6"
+      },
+      "tf_target_prior/tf_axis.tsv": {
+        "bytes": 44211,
+        "sha256": "2eb2ed011a912b4cd09ad48c3fcab55c9bf184d8bebb8931964aeb585d58636e"
+      },
+      "tf_target_prior/tf_target_direct_graph_tier.tsv": {
+        "bytes": 97150,
+        "sha256": "d3604bcd78f67f4b278dbc7d8910121085efb67f91a2066a90ad7b4e3900a4a1"
+      },
+      "tf_target_prior/tf_target_prior.tsv": {
+        "bytes": 3070730,
+        "sha256": "eb14a7ad008026955be2b7a14d6f54eaff6fdf395b6408536292ea8c05d4a86a"
+      },
+      "tf_target_prior/tf_target_prior_source_records.tsv": {
+        "bytes": 3659664,
+        "sha256": "6f0f2ffeee00728b7b8944365fa1bf1eb9dde0472046228bf1a06d44493a2133"
+      }
+    },
+    "identifier_namespace": "mouse_gene_symbol",
+    "input_provenance": {
+      "direct_graph_edges_changed": false,
+      "graph_bundle_path": "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627",
+      "observed_response_dataset_used": false,
+      "processed_pair_records_path": "data/processed/public_tf_union_expansion_v1/tf_pair_records.tsv",
+      "processed_pair_records_sha256": "43fc8a53bf6574f579ea96b4ffb884f29f3be50ed6fddd189f2c748f6e7aebe6",
+      "source_registry_path": "data/processed/public_tf_union_expansion_v1/source_registry.tsv",
+      "source_registry_sha256": "064a913ceef9b214744449fc265d170125cf893b0ad3065bee2285b76665584d"
+    },
+    "limitations": [
+      "This is a broad source prior, not a causal graph and not a TF activity state.",
+      "TRRUST signs are source-supported relationship modes; unknown and conflicting signs are retained as unknown.",
+      "TRRUST provides no association weights or ranks in the retained source snapshot.",
+      "The raw source snapshot is not redistributed; source URL, snapshot checksum, record hashes, and locators are retained."
+    ],
+    "observed_response_used": false,
+    "orthology_inference_used": false,
+    "prior_kind": "response_independent_mouse_tf_target_prior",
+    "ranks": {
+      "column": "association_rank",
+      "status": "not_supplied"
+    },
+    "response_selection": "none",
+    "schema_version": "tf_target_prior_v1",
+    "sign_policy": "retain source-supported activation/repression; conflicting or unknown source signs remain unknown",
+    "source": {
+      "license_basis_locator": "https://www.grnpedia.org/trrust/",
+      "license_name": "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_locator": "https://www.grnpedia.org/trrust/data/trrust_rawdata.mouse.tsv",
+      "source_registry": "TRRUST",
+      "source_snapshot_sha256": "4847c960c7c2ce0173b056184137b1cc71e8d61d1b1edc825247504ad882dd55",
+      "source_version": "TRRUST_v2_snapshot_2026-08-25",
+      "usage_scope": "non_commercial_research"
+    },
+    "species": "mouse",
+    "storage": {
+      "dtype": null,
+      "format": "tsv",
+      "layout": null,
+      "numeric_artifact": false
+    },
+    "weights": {
+      "column": "association_weight",
+      "status": "not_supplied"
+    }
+  },
+  "tf_target_prior_contract": {
+    "causal_assertions_created": false,
+    "direct_graph_tier_preserved": true,
+    "graph_edges_created": false,
+    "observed_response_used": false,
+    "ranks_status": "not_supplied",
+    "weights_status": "not_supplied"
+  },
+  "tf_target_prior_manifest": "tf_target_prior/tf_target_prior_manifest.json"
+}

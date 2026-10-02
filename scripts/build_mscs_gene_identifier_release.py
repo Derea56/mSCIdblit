@@ -13,9 +13,9 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_BASE = ROOT / "data/processed/mscs_release_bundle_v1_7_0_nichenet_tf_prior_v1"
-DEFAULT_CROSSWALK = ROOT / "data/processed/gene_identifier_crosswalk_ncbi_2026_10_02_v1"
-DEFAULT_OUTPUT = ROOT / "data/processed/mscs_release_bundle_v1_8_0_nichenet_tf_prior_gene_identifiers_v1"
-DEFAULT_RELEASE_ID = "mscs_release_bundle:2026-10-02-nichenet-tf-prior-gene-identifiers-v1"
+DEFAULT_CROSSWALK = ROOT / "data/processed/gene_identifier_crosswalk_ncbi_2026_10_02_v2"
+DEFAULT_OUTPUT = ROOT / "data/processed/mscs_release_bundle_v1_8_0_nichenet_tf_prior_gene_identifiers_v2"
+DEFAULT_RELEASE_ID = "mscs_release_bundle:2026-10-02-nichenet-tf-prior-gene-identifiers-v2"
 
 
 def sha256(path: Path) -> str:
@@ -47,7 +47,7 @@ def main() -> int:
         raise SystemExit(f"Refusing to overwrite gene-identifier release: {output}")
     base_manifest = load_json(base / "release_manifest.json")
     crosswalk_manifest = load_json(crosswalk / "gene_identifier_crosswalk_manifest.json")
-    source_files = [crosswalk / name for name in ("gene_catalog.tsv", "gene_crosswalk.tsv", "gene_orthology.tsv", "gene_identifier_crosswalk_manifest.json")]
+    source_files = [crosswalk / name for name in ("gene_catalog.tsv", "gene_crosswalk.tsv", "gene_orthology.tsv", "gene_label_coverage_audit.tsv", "gene_identifier_crosswalk_manifest.json")]
     missing = [str(path) for path in source_files if not path.is_file()]
     if missing:
         raise SystemExit("Missing gene crosswalk files: " + ", ".join(missing))
@@ -65,6 +65,7 @@ def main() -> int:
     manifest["release_id"] = args.release_id
     manifest["parent_release_id"] = base_manifest.get("release_id")
     manifest["gene_identifier_crosswalk_manifest"] = "gene_identifier_crosswalk/gene_identifier_crosswalk_manifest.json"
+    manifest["gene_label_coverage_audit"] = "gene_identifier_crosswalk/gene_label_coverage_audit.tsv"
     manifest["gene_identifier_crosswalk"] = crosswalk_manifest
     manifest["gene_identifier_contract"] = {
         "schema_version": crosswalk_manifest.get("schema_version"),
@@ -82,6 +83,9 @@ def main() -> int:
         "gene_crosswalk_unresolved_rows": crosswalk_manifest["counts"]["crosswalk_unresolved_rows"],
         "gene_orthology_rows": crosswalk_manifest["counts"]["orthology_rows"],
     })
+    for key, value in crosswalk_manifest["counts"].items():
+        if key.startswith("active_release_") or key.startswith("nichenet_target_ids_"):
+            counts[f"gene_{key}"] = value
     manifest["counts"] = counts
     manifest["migration_gaps"] = list(base_manifest.get("migration_gaps", [])) + [
         "The NCBI GeneInfo and gene_orthologs raw snapshots are checksum-pinned references and are not copied into the Git release.",

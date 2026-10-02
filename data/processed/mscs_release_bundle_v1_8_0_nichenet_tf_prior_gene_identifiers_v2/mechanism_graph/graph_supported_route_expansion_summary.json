@@ -1,0 +1,14 @@
+{
+  "composition_counts": {},
+  "distinct_ligand_receptor_edges_linked": 0,
+  "graph_supported_route_rows_added": 0,
+  "output_bundle": "/private/tmp/mscidblit_release_506",
+  "policy": "Exact exported LR edge plus graph components with a shared pathway/evidence anchor; no Cartesian product, causal edge, or confidence assertion.",
+  "release_id": "2026-09-24-all-ligand-full-sequence-506",
+  "route_edges": 2283559,
+  "route_nodes": 2478543,
+  "rows_with_asserted_intracellular_to_tf_edge": 0,
+  "rows_with_unasserted_intracellular_to_tf_link": 0,
+  "source_bundle": "<_io.BufferedReader name='/private/tmp/mscidblit_release_506/mechanism_signaling_route_evidence.tsv'>",
+  "source_route_rows": 591165
+}

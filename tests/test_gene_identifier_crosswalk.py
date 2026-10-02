@@ -10,7 +10,7 @@ from scripts.validate_mscs_gene_identifier_release import validate_gene_crosswal
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CROSSWALK = ROOT / "data/processed/gene_identifier_crosswalk_ncbi_2026_10_02_v1"
+CROSSWALK = ROOT / "data/processed/gene_identifier_crosswalk_ncbi_2026_10_02_v2"
 
 
 def _gene_info_row(tax_id, gene_id, symbol, synonyms, dbxrefs):
@@ -47,11 +47,11 @@ def test_real_ncbi_crosswalk_validates_and_keeps_species_explicit():
     assert summary == {
         "mouse_catalog_records": 112258,
         "human_catalog_records": 193873,
-        "crosswalk_rows": 46030,
-        "crosswalk_resolved_rows": 24023,
-        "crosswalk_ambiguous_rows": 2595,
-        "crosswalk_unresolved_rows": 485,
-        "crosswalk_orthology_rows": 18927,
+        "crosswalk_rows": 48693,
+        "crosswalk_resolved_rows": 24733,
+        "crosswalk_ambiguous_rows": 2800,
+        "crosswalk_unresolved_rows": 1821,
+        "crosswalk_orthology_rows": 19339,
         "orthology_rows": 17095,
     }
     with (CROSSWALK / "gene_crosswalk.tsv").open(newline="", encoding="utf-8") as handle:
@@ -62,10 +62,17 @@ def test_real_ncbi_crosswalk_validates_and_keeps_species_explicit():
     }
     unscoped_tnf = [row for row in rows if row["query_symbol"] == "TNF" and row["query_species_scope"] == "unscoped"]
     assert {row["species"] for row in unscoped_tnf} == {"mouse", "human"}
+    with (CROSSWALK / "gene_label_coverage_audit.tsv").open(newline="", encoding="utf-8") as handle:
+        audit = list(csv.DictReader(handle, delimiter="\t"))
+    for label in ("AQP4", "BDNF", "CXCL2"):
+        rows_for_label = [row for row in audit if row["label"] == label and row["label_kind"] == "validated_output_product_label"]
+        assert rows_for_label
+        assert all(row["mouse_mapping_status"] == "uniquely_mapped_source_gene" for row in rows_for_label)
+    assert any(row["label_kind"] == "validated_output_product_label" and row["mouse_mapping_status"] == "unresolved_source_symbol" for row in audit)
 
 
 def test_crosswalk_validator_rejects_checksum_drift(tmp_path):
-    for name in ("gene_catalog.tsv", "gene_crosswalk.tsv", "gene_orthology.tsv"):
+    for name in ("gene_catalog.tsv", "gene_crosswalk.tsv", "gene_orthology.tsv", "gene_label_coverage_audit.tsv"):
         source = CROSSWALK / name
         target = tmp_path / name
         target.write_bytes(source.read_bytes())

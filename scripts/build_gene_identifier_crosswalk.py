@@ -18,7 +18,7 @@ DEFAULT_RELEASE = ROOT / "data/processed/mscs_release_bundle_v1_7_0_nichenet_tf_
 DEFAULT_MOUSE_GENE_INFO = Path("/private/tmp/Mus_musculus.gene_info.gz")
 DEFAULT_HUMAN_GENE_INFO = Path("/private/tmp/Homo_sapiens.gene_info.gz")
 DEFAULT_ORTHOLOGS = Path("/private/tmp/gene_orthologs.gz")
-DEFAULT_OUTPUT = ROOT / "data/processed/gene_identifier_crosswalk_ncbi_2026_10_02_v1"
+DEFAULT_OUTPUT = ROOT / "data/processed/gene_identifier_crosswalk_ncbi_2026_10_02_v2"
 
 SPECIES = {
     "mouse": {"tax_id": "10090", "prefix": "ENSMUSG"},
@@ -40,6 +40,12 @@ CROSSWALK_FIELDS = [
 ORTHOLOGY_FIELDS = [
     "orthology_record_id", "mouse_entrez_gene_id", "mouse_symbol", "human_entrez_gene_id",
     "human_symbol", "relationship", "mapping_cardinality", "source_path", "source_sha256",
+]
+LABEL_AUDIT_FIELDS = [
+    "label_audit_id", "label", "label_kind", "query_species_scope", "source_records_json",
+    "mouse_mapping_status", "mouse_entrez_gene_ids", "mouse_symbols", "mouse_ensembl_gene_ids",
+    "human_mapping_status", "human_entrez_gene_ids", "human_symbols", "human_ensembl_gene_ids",
+    "unresolved_mapping_reason",
 ]
 
 
@@ -144,15 +150,88 @@ def load_query_symbols(release: Path) -> list[dict[str, Any]]:
         path = prior / filename
         for row in read_tsv(path):
             add(row[field], "mouse", "tf_target_prior_axis", str(path), row[id_field])
-    for filename, field in (("target_genes.tsv", "target_id"), ("ligands.tsv", "ligand_id")):
+    for filename, field, source in (("target_genes.tsv", "target_id", "nichenet_target_axis"), ("ligands.tsv", "ligand_id", "nichenet_ligand_axis")):
         path = release / "method_resources/method_native/nichenet_neutral_v1" / filename
         for row in read_tsv(path):
-            add(row[field], "mouse", "nichenet_axis", str(path), row[field])
+            add(row[field], "mouse", source, str(path), row[field])
     graph_path = release / "mechanism_graph/mechanism_nodes.tsv"
     for row in read_tsv(graph_path):
         if row.get("gene_symbol", "").strip():
             add(row["gene_symbol"], "unscoped", "mechanism_graph_gene_symbol", str(graph_path), row.get("node_id", ""))
+    candidate_path = release / "candidate_universe/mechanism_lr_candidate_universe.tsv"
+    candidate_fields = (
+        ("ligand_name", "candidate_universe_label"),
+        ("receptor_name", "candidate_universe_label"),
+        ("normalized_ligand_name", "candidate_universe_label"),
+        ("normalized_receptor_name", "candidate_universe_label"),
+    )
+    for row in read_tsv(candidate_path):
+        for field, source in candidate_fields:
+            add(row.get(field, ""), "mouse", source, str(candidate_path), row.get("candidate_pair_id", ""))
+        for field in ("ligand_components", "receptor_components"):
+            for component in row.get(field, "").split("|"):
+                add(component, "mouse", "candidate_component_label", str(candidate_path), row.get("candidate_pair_id", ""))
+    bridge_path = release / "mechanism_graph/mechanism_output_bridges_validated.tsv"
+    for row in read_tsv(bridge_path):
+        for label in row.get("output_product_labels", "").split(";"):
+            add(label, "unscoped", "validated_output_product_label", str(bridge_path), row.get("bridge_id", ""))
     return sorted(queries.values(), key=lambda item: (item["query_species_scope"], item["query_symbol"].casefold()))
+
+
+def build_label_audit(queries: list[dict[str, Any]], crosswalk: list[dict[str, str]]) -> list[dict[str, str]]:
+    """Summarize exact active-release candidate/output labels by source-backed species mapping."""
+    relevant = {"candidate_universe_label", "candidate_component_label", "validated_output_product_label"}
+    audit_rows: list[dict[str, str]] = []
+    direct_statuses = {"resolved_source_canonical", "resolved_source_alias", "ambiguous_source_alias"}
+
+    def mapped(rows: list[dict[str, str]], species: str) -> tuple[str, list[dict[str, str]]]:
+        matches = [row for row in rows if row.get("species") == species and row.get("mapping_status") in direct_statuses]
+        ids = {row.get("entrez_gene_id", "") for row in matches if row.get("entrez_gene_id")}
+        if not matches:
+            return "unresolved_source_symbol", []
+        if any(row.get("mapping_status") == "ambiguous_source_alias" for row in matches):
+            return "ambiguous_source_alias", matches
+        if len(ids) == 1:
+            return "uniquely_mapped_source_gene", matches
+        return "multiple_source_mappings", matches
+
+    for query in queries:
+        source_kinds = sorted({item["source"] for item in query["sources"] if item["source"] in relevant})
+        if not source_kinds:
+            continue
+        query_rows = [
+            row for row in crosswalk
+            if row.get("query_symbol") == query["query_symbol"]
+            and row.get("query_species_scope") == query["query_species_scope"]
+        ]
+        token = query_token(query["query_symbol"], query["query_species_scope"])
+        for source_kind in source_kinds:
+            mouse_status, mouse_rows = mapped(query_rows, "mouse")
+            human_status, human_rows = mapped(query_rows, "human")
+            def values(rows: list[dict[str, str]], field: str) -> str:
+                return "|".join(sorted({row.get(field, "") for row in rows if row.get(field, "")}))
+            reason = ""
+            if mouse_status == "unresolved_source_symbol" or human_status == "unresolved_source_symbol":
+                reason = "No exact case-normalized source-backed mouse or human record for this active-release label."
+            elif mouse_status in {"ambiguous_source_alias", "multiple_source_mappings"} or human_status in {"ambiguous_source_alias", "multiple_source_mappings"}:
+                reason = "Multiple or ambiguous source-backed records retained without selecting one."
+            audit_rows.append({
+                "label_audit_id": f"GENE_LABEL_AUDIT:{source_kind}:{token}",
+                "label": query["query_symbol"],
+                "label_kind": source_kind,
+                "query_species_scope": query["query_species_scope"],
+                "source_records_json": json.dumps(query["sources"], sort_keys=True, separators=(",", ":")),
+                "mouse_mapping_status": mouse_status,
+                "mouse_entrez_gene_ids": values(mouse_rows, "entrez_gene_id"),
+                "mouse_symbols": values(mouse_rows, "canonical_symbol"),
+                "mouse_ensembl_gene_ids": values(mouse_rows, "ensembl_gene_id"),
+                "human_mapping_status": human_status,
+                "human_entrez_gene_ids": values(human_rows, "entrez_gene_id"),
+                "human_symbols": values(human_rows, "canonical_symbol"),
+                "human_ensembl_gene_ids": values(human_rows, "ensembl_gene_id"),
+                "unresolved_mapping_reason": reason,
+            })
+    return sorted(audit_rows, key=lambda row: (row["label_kind"], row["label"].casefold(), row["query_species_scope"]))
 
 
 def load_orthology(path: Path, catalogs: dict[str, dict[str, dict[str, str]]]) -> list[dict[str, str]]:
@@ -290,12 +369,33 @@ def main() -> int:
                 "notes": "Explicit NCBI gene_orthologs relationship; no ortholog chosen when one-to-many.",
             })
 
+    label_audit = build_label_audit(queries, crosswalk)
+    direct_statuses = {"resolved_source_canonical", "resolved_source_alias", "ambiguous_source_alias"}
+    nichenet_target_queries = [
+        query for query in queries
+        if any(source.get("source") == "nichenet_target_axis" for source in query["sources"])
+    ]
+    nichenet_target_statuses = []
+    for query in nichenet_target_queries:
+        rows = [
+            row for row in crosswalk
+            if row.get("query_symbol") == query["query_symbol"]
+            and row.get("query_species_scope") == "mouse"
+            and row.get("species") == "mouse"
+            and row.get("mapping_status") in direct_statuses
+        ]
+        ids = {row.get("entrez_gene_id") for row in rows if row.get("entrez_gene_id")}
+        nichenet_target_statuses.append(
+            "ambiguous" if any(row.get("mapping_status") == "ambiguous_source_alias" for row in rows)
+            else "unique" if len(ids) == 1 else "unresolved"
+        )
     output.mkdir(parents=True)
     write_tsv(output / "gene_catalog.tsv", CATALOG_FIELDS, mouse_catalog_rows + human_catalog_rows)
     write_tsv(output / "gene_crosswalk.tsv", CROSSWALK_FIELDS, crosswalk)
     write_tsv(output / "gene_orthology.tsv", ORTHOLOGY_FIELDS, orthology_rows)
+    write_tsv(output / "gene_label_coverage_audit.tsv", LABEL_AUDIT_FIELDS, label_audit)
     files = {}
-    for path in (output / "gene_catalog.tsv", output / "gene_crosswalk.tsv", output / "gene_orthology.tsv"):
+    for path in (output / "gene_catalog.tsv", output / "gene_crosswalk.tsv", output / "gene_orthology.tsv", output / "gene_label_coverage_audit.tsv"):
         files[path.name] = {"sha256": sha256(path), "bytes": path.stat().st_size}
     source_inputs = []
     for name, path, url in (
@@ -313,7 +413,7 @@ def main() -> int:
         "species": {name: {"tax_id": value["tax_id"]} for name, value in SPECIES.items()},
         "lookup_normalization": "Unicode-preserving casefold only; punctuation and aliases are not guessed or stripped.",
         "orthology_policy": "Retain explicit NCBI mouse-human orthology records; preserve one-to-many mappings without selecting arbitrarily.",
-        "query_scope": "Committed mSCS TF-prior axes, neutral NicheNet mouse axes, and gene_symbol fields in the mechanism graph.",
+        "query_scope": "Committed mSCS TF-prior axes, neutral NicheNet mouse axes, mechanism graph gene symbols, active candidate-universe labels/components, and exact validated output-product labels.",
         "source_inputs": source_inputs,
         "counts": {
             "mouse_catalog_records": len(mouse_catalog_rows),
@@ -329,6 +429,17 @@ def main() -> int:
             "crosswalk_by_species": crosswalk_species_counts,
             "crosswalk_by_query_species_scope": crosswalk_scope_counts,
             "orthology_by_mapping_cardinality": orthology_cardinality_counts,
+            "active_release_label_audit_rows": len(label_audit),
+            "active_release_output_product_labels_total": sum(row["label_kind"] == "validated_output_product_label" for row in label_audit),
+            "active_release_output_product_labels_mouse_unique": sum(row["label_kind"] == "validated_output_product_label" and row["mouse_mapping_status"] == "uniquely_mapped_source_gene" for row in label_audit),
+            "active_release_output_product_labels_mouse_ambiguous": sum(row["label_kind"] == "validated_output_product_label" and row["mouse_mapping_status"] in {"ambiguous_source_alias", "multiple_source_mappings"} for row in label_audit),
+            "active_release_output_product_labels_mouse_unresolved": sum(row["label_kind"] == "validated_output_product_label" and row["mouse_mapping_status"] == "unresolved_source_symbol" for row in label_audit),
+            "active_release_candidate_labels_total": sum(row["label_kind"] == "candidate_universe_label" for row in label_audit),
+            "active_release_candidate_components_total": sum(row["label_kind"] == "candidate_component_label" for row in label_audit),
+            "nichenet_target_ids_total": len(nichenet_target_queries),
+            "nichenet_target_ids_mouse_unique": nichenet_target_statuses.count("unique"),
+            "nichenet_target_ids_mouse_ambiguous": nichenet_target_statuses.count("ambiguous"),
+            "nichenet_target_ids_mouse_unresolved": nichenet_target_statuses.count("unresolved"),
         },
         "files": files,
         "release_input": {"release_path": str(release), "release_id": json.loads((release / "release_manifest.json").read_text())["release_id"]},

@@ -1,6 +1,6 @@
 # Species-aware gene identifier crosswalk
 
-The `mscs_release_bundle_v1_8_0_nichenet_tf_prior_gene_identifiers_v1` release adds a source-bound gene identifier layer to the existing mouse NicheNet and TF-target prior release. It is additive: the mechanism graph, NicheNet prior, and TF-target prior are copied from the pinned parent release without biological edge or confidence changes.
+The `mscs_release_bundle_v1_8_0_nichenet_tf_prior_gene_identifiers_v2` release adds a source-bound gene identifier layer to the existing mouse NicheNet and TF-target prior release. It is additive: the mechanism graph, NicheNet prior, and TF-target prior are copied from the pinned parent release without biological edge or confidence changes. Version 1 remains immutable; version 2 adds exact active-release candidate and validated output-product label coverage.
 
 The crosswalk is built by `scripts/build_gene_identifier_crosswalk.py` from checksum-pinned NCBI GeneInfo snapshots for *Mus musculus* and *Homo sapiens*, plus the NCBI `gene_orthologs.gz` snapshot. The raw downloads remain external inputs; their exact URLs, local snapshot paths, byte sizes, and SHA-256 checksums are recorded in `gene_identifier_crosswalk/gene_identifier_crosswalk_manifest.json`.
 
@@ -13,7 +13,10 @@ The generated standalone artifact contains:
 - `gene_catalog.tsv`: source records for all mouse and human NCBI GeneInfo entries used by the crosswalk.
 - `gene_crosswalk.tsv`: exact query-to-source mappings and explicit orthology projections, including source checksums and query provenance.
 - `gene_orthology.tsv`: source-backed mouse-human orthology records with mapping cardinality.
+- `gene_label_coverage_audit.tsv`: exact active-release candidate and output-product labels with separate mouse/human mapping states. Prose output labels are not tokenized or interpreted.
 - `gene_identifier_crosswalk_manifest.json`: schema, source, checksum, count, and limitation metadata.
+
+In the v2 active-release audit, 1,010 distinct validated output-product labels were assessed: 445 mapped uniquely to a mouse source gene, 51 were ambiguous or multi-mapped, and 514 remained unresolved. The 22,521 NicheNet target IDs were assessed separately: 21,563 mapped uniquely to mouse genes, 922 were ambiguous, and 36 were unresolved.
 
 Rebuild and validate with:
 

@@ -1,0 +1,104 @@
+{
+  "counts": {
+    "active_release_candidate_components_total": 1439,
+    "active_release_candidate_labels_total": 2809,
+    "active_release_label_audit_rows": 5258,
+    "active_release_output_product_labels_mouse_ambiguous": 51,
+    "active_release_output_product_labels_mouse_unique": 445,
+    "active_release_output_product_labels_mouse_unresolved": 514,
+    "active_release_output_product_labels_total": 1010,
+    "crosswalk_ambiguous_rows": 2800,
+    "crosswalk_by_mapping_status": {
+      "ambiguous_source_alias": 2800,
+      "explicit_orthology_one_to_one": 19339,
+      "resolved_source_alias": 1610,
+      "resolved_source_canonical": 23123,
+      "unresolved_source_symbol": 1821
+    },
+    "crosswalk_by_query_species_scope": {
+      "mouse": 41790,
+      "unscoped": 6903
+    },
+    "crosswalk_by_species": {
+      "human": 21922,
+      "mouse": 26771
+    },
+    "crosswalk_orthology_rows": 19339,
+    "crosswalk_resolved_rows": 24733,
+    "crosswalk_rows": 48693,
+    "crosswalk_unresolved_rows": 1821,
+    "human_catalog_records": 193873,
+    "mouse_catalog_records": 112258,
+    "nichenet_target_ids_mouse_ambiguous": 922,
+    "nichenet_target_ids_mouse_unique": 21563,
+    "nichenet_target_ids_mouse_unresolved": 36,
+    "nichenet_target_ids_total": 22521,
+    "orthology_by_mapping_cardinality": {
+      "one_to_one": 17095
+    },
+    "orthology_rows": 17095,
+    "query_symbol_scope_records": 25330
+  },
+  "files": {
+    "gene_catalog.tsv": {
+      "bytes": 85486535,
+      "sha256": "a7b32de57ff30352ba4414f781a3231ea37a1d9a0010c43f141de3a7c4b0becc"
+    },
+    "gene_crosswalk.tsv": {
+      "bytes": 58004999,
+      "sha256": "8aecd29c408c8dd7d35a8258c7452befc780411f4d1379e095a230197f150b90"
+    },
+    "gene_label_coverage_audit.tsv": {
+      "bytes": 24252689,
+      "sha256": "9fa8a08c3cb99cdd3d5c317523a3a30873d7ece1ea481cebae71a274a29ce131"
+    },
+    "gene_orthology.tsv": {
+      "bytes": 2880062,
+      "sha256": "42fd5372992f6936435fefb56f300757a8316b4508b21705f71c2c94acd174f3"
+    }
+  },
+  "limitations": [
+    "The crosswalk does not infer identity from capitalization, punctuation, substring matches, or symbol similarity.",
+    "Unresolved and ambiguous aliases remain explicitly represented; downstream consumers must not choose among ambiguous rows.",
+    "The raw NCBI snapshots are checksum-pinned references and are not copied into the Git release."
+  ],
+  "lookup_normalization": "Unicode-preserving casefold only; punctuation and aliases are not guessed or stripped.",
+  "orthology_policy": "Retain explicit NCBI mouse-human orthology records; preserve one-to-many mappings without selecting arbitrarily.",
+  "query_scope": "Committed mSCS TF-prior axes, neutral NicheNet mouse axes, mechanism graph gene symbols, active candidate-universe labels/components, and exact validated output-product labels.",
+  "release_input": {
+    "release_id": "mscs_release_bundle:2026-10-01-nichenet-tf-target-prior-v1",
+    "release_path": "/Users/derea/Documents/SCI/mSCIdblit/data/processed/mscs_release_bundle_v1_7_0_nichenet_tf_prior_v1"
+  },
+  "schema_version": "gene_identifier_crosswalk_v1",
+  "source_inputs": [
+    {
+      "bytes": 3932773,
+      "local_snapshot_path": "/private/tmp/Mus_musculus.gene_info.gz",
+      "name": "mouse_gene_info",
+      "sha256": "0229fddbe526d6e9d916bc89e5448bc65e99a0f93507101f2d2b727feb5baef5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/gene/DATA/GENE_INFO/Mammalia/Mus_musculus.gene_info.gz"
+    },
+    {
+      "bytes": 5191979,
+      "local_snapshot_path": "/private/tmp/Homo_sapiens.gene_info.gz",
+      "name": "human_gene_info",
+      "sha256": "25ce679f406cf465ab8b5e693e453102dbb9cb90dba9abb179219c40866cb964",
+      "url": "https://ftp.ncbi.nlm.nih.gov/gene/DATA/GENE_INFO/Mammalia/Homo_sapiens.gene_info.gz"
+    },
+    {
+      "bytes": 130253728,
+      "local_snapshot_path": "/private/tmp/gene_orthologs.gz",
+      "name": "gene_orthologs",
+      "sha256": "28d320adea6c7957b37c382944cdcbbbc5f022887e7eba93c5a7e40af6199429",
+      "url": "https://ftp.ncbi.nlm.nih.gov/gene/DATA/gene_orthologs.gz"
+    }
+  ],
+  "species": {
+    "human": {
+      "tax_id": "9606"
+    },
+    "mouse": {
+      "tax_id": "10090"
+    }
+  }
+}

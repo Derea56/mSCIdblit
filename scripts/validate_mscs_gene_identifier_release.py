@@ -19,7 +19,7 @@ except ModuleNotFoundError:  # Imported as scripts.validate_mscs_gene_identifier
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_BUNDLE = ROOT / "data/processed/mscs_release_bundle_v1_8_0_nichenet_tf_prior_gene_identifiers_v1"
+DEFAULT_BUNDLE = ROOT / "data/processed/mscs_release_bundle_v1_8_0_nichenet_tf_prior_gene_identifiers_v2"
 DEFAULT_PARENT = ROOT / "data/processed/mscs_release_bundle_v1_7_0_nichenet_tf_prior_v1"
 GENE_DIR = Path("gene_identifier_crosswalk")
 GENE_MANIFEST = GENE_DIR / "gene_identifier_crosswalk_manifest.json"
@@ -76,6 +76,7 @@ def validate_gene_crosswalk_artifact(crosswalk_dir: Path) -> dict[str, int]:
     catalogs = read_tsv(crosswalk_dir / "gene_catalog.tsv")
     crosswalk = read_tsv(crosswalk_dir / "gene_crosswalk.tsv")
     orthology = read_tsv(crosswalk_dir / "gene_orthology.tsv")
+    audit_path = crosswalk_dir / "gene_label_coverage_audit.tsv"
     catalog_required = {"species", "tax_id", "entrez_gene_id", "canonical_symbol", "source_record_id", "source_sha256"}
     crosswalk_required = {"crosswalk_id", "query_symbol", "lookup_key", "query_species_scope", "species", "mapping_status", "entrez_gene_id", "source_record_id", "source_registry_sha256"}
     orthology_required = {"orthology_record_id", "mouse_entrez_gene_id", "human_entrez_gene_id", "mapping_cardinality", "source_sha256"}
@@ -113,6 +114,69 @@ def validate_gene_crosswalk_artifact(crosswalk_dir: Path) -> dict[str, int]:
             raise ValueError("orthology row points outside the source catalogs")
         if row["mapping_cardinality"] not in {"one_to_one", "one_to_many"}:
             raise ValueError("orthology row has unknown cardinality")
+
+    if audit_path.is_file():
+        audit = read_tsv(audit_path)
+        required_audit = {
+            "label_audit_id", "label", "label_kind", "query_species_scope", "source_records_json",
+            "mouse_mapping_status", "mouse_entrez_gene_ids", "human_mapping_status",
+            "human_entrez_gene_ids", "unresolved_mapping_reason",
+        }
+        if not audit or not required_audit.issubset(audit[0]):
+            raise ValueError("gene label audit columns are incomplete")
+        audit_ids = [row["label_audit_id"] for row in audit]
+        if len(set(audit_ids)) != len(audit_ids):
+            raise ValueError("gene label audit contains duplicate IDs")
+        allowed_audit_statuses = {"uniquely_mapped_source_gene", "multiple_source_mappings", "ambiguous_source_alias", "unresolved_source_symbol"}
+        for row in audit:
+            if row["label_kind"] not in {"candidate_universe_label", "candidate_component_label", "validated_output_product_label"}:
+                raise ValueError("gene label audit contains an unknown label kind")
+            if row["mouse_mapping_status"] not in allowed_audit_statuses or row["human_mapping_status"] not in allowed_audit_statuses:
+                raise ValueError("gene label audit contains an unknown mapping status")
+            for field, species in (("mouse_entrez_gene_ids", "mouse"), ("human_entrez_gene_ids", "human")):
+                for entrez_id in filter(None, row[field].split("|")):
+                    if (species, entrez_id) not in catalog_keys:
+                        raise ValueError("gene label audit points outside the source catalog")
+        if counts := manifest.get("counts", {}):
+            expected_audit_counts = {
+                "active_release_label_audit_rows": len(audit),
+                "active_release_output_product_labels_total": sum(row["label_kind"] == "validated_output_product_label" for row in audit),
+                "active_release_output_product_labels_mouse_unique": sum(row["label_kind"] == "validated_output_product_label" and row["mouse_mapping_status"] == "uniquely_mapped_source_gene" for row in audit),
+                "active_release_output_product_labels_mouse_ambiguous": sum(row["label_kind"] == "validated_output_product_label" and row["mouse_mapping_status"] in {"ambiguous_source_alias", "multiple_source_mappings"} for row in audit),
+                "active_release_output_product_labels_mouse_unresolved": sum(row["label_kind"] == "validated_output_product_label" and row["mouse_mapping_status"] == "unresolved_source_symbol" for row in audit),
+                "active_release_candidate_labels_total": sum(row["label_kind"] == "candidate_universe_label" for row in audit),
+                "active_release_candidate_components_total": sum(row["label_kind"] == "candidate_component_label" for row in audit),
+            }
+            for key, value in expected_audit_counts.items():
+                if counts.get(key) != value:
+                    raise ValueError(f"gene label audit count mismatch for {key}: {counts.get(key)} != {value}")
+
+    if "nichenet_target_ids_total" in counts:
+        target_keys: dict[tuple[str, str], set[str]] = {}
+        target_ambiguous: set[tuple[str, str]] = set()
+        for row in crosswalk:
+            if row.get("species") != "mouse" or row.get("query_species_scope") != "mouse" or row.get("mapping_status") not in {"resolved_source_canonical", "resolved_source_alias", "ambiguous_source_alias"}:
+                continue
+            sources = json.loads(row.get("query_sources_json", "[]"))
+            if not any(source.get("source") == "nichenet_target_axis" for source in sources):
+                continue
+            key = (row["query_symbol"], row["query_species_scope"])
+            target_keys.setdefault(key, set()).add(row.get("entrez_gene_id", ""))
+            if row.get("mapping_status") == "ambiguous_source_alias":
+                target_ambiguous.add(key)
+        target_total = len(target_keys)
+        target_unique = sum(len(ids) == 1 and key not in target_ambiguous for key, ids in target_keys.items())
+        target_ambiguous_count = len(target_ambiguous)
+        target_unresolved = int(counts["nichenet_target_ids_total"]) - target_total
+        expected_target_counts = {
+            "nichenet_target_ids_total": target_total + target_unresolved,
+            "nichenet_target_ids_mouse_unique": target_unique,
+            "nichenet_target_ids_mouse_ambiguous": target_ambiguous_count,
+            "nichenet_target_ids_mouse_unresolved": target_unresolved,
+        }
+        for key, value in expected_target_counts.items():
+            if counts.get(key) != value:
+                raise ValueError(f"NicheNet target count mismatch for {key}: {counts.get(key)} != {value}")
 
     counts = manifest.get("counts", {})
     expected = {
@@ -159,6 +223,8 @@ def main() -> int:
         raise SystemExit("gene-identifier release does not identify the expected parent release")
     if manifest.get("gene_identifier_crosswalk_manifest") != GENE_MANIFEST.as_posix():
         raise SystemExit("release manifest does not point to the gene crosswalk manifest")
+    if manifest.get("gene_label_coverage_audit") != (GENE_DIR / "gene_label_coverage_audit.tsv").as_posix():
+        raise SystemExit("release manifest does not point to the active-label audit")
     if manifest.get("gene_identifier_contract", {}).get("orthology_inference") is not False:
         raise SystemExit("gene release does not explicitly disable inferred orthology")
     _check_files(bundle, manifest.get("files", {}))
