@@ -1,0 +1,82 @@
+{
+  "counts": {
+    "direct_graph_edge_count": 326,
+    "pair_count": 6490,
+    "source_record_count": 7057,
+    "target_count": 2092,
+    "tf_count": 827
+  },
+  "files": {
+    "tf_target_prior/source_registry.tsv": {
+      "bytes": 899,
+      "sha256": "67d8b0aeea0b37eb27fff0ed0b27017bc17d97756846a238c5a0b99ec2cba985"
+    },
+    "tf_target_prior/target_axis.tsv": {
+      "bytes": 112415,
+      "sha256": "39617d1b2fe9cc2ba1080fd590d21e6fe03d8cfa9720e25c8e581393280e1dc6"
+    },
+    "tf_target_prior/tf_axis.tsv": {
+      "bytes": 44211,
+      "sha256": "2eb2ed011a912b4cd09ad48c3fcab55c9bf184d8bebb8931964aeb585d58636e"
+    },
+    "tf_target_prior/tf_target_direct_graph_tier.tsv": {
+      "bytes": 97150,
+      "sha256": "d3604bcd78f67f4b278dbc7d8910121085efb67f91a2066a90ad7b4e3900a4a1"
+    },
+    "tf_target_prior/tf_target_prior.tsv": {
+      "bytes": 3070730,
+      "sha256": "eb14a7ad008026955be2b7a14d6f54eaff6fdf395b6408536292ea8c05d4a86a"
+    },
+    "tf_target_prior/tf_target_prior_source_records.tsv": {
+      "bytes": 3659664,
+      "sha256": "6f0f2ffeee00728b7b8944365fa1bf1eb9dde0472046228bf1a06d44493a2133"
+    }
+  },
+  "identifier_namespace": "mouse_gene_symbol",
+  "input_provenance": {
+    "direct_graph_edges_changed": false,
+    "graph_bundle_path": "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627",
+    "observed_response_dataset_used": false,
+    "processed_pair_records_path": "data/processed/public_tf_union_expansion_v1/tf_pair_records.tsv",
+    "processed_pair_records_sha256": "43fc8a53bf6574f579ea96b4ffb884f29f3be50ed6fddd189f2c748f6e7aebe6",
+    "source_registry_path": "data/processed/public_tf_union_expansion_v1/source_registry.tsv",
+    "source_registry_sha256": "064a913ceef9b214744449fc265d170125cf893b0ad3065bee2285b76665584d"
+  },
+  "limitations": [
+    "This is a broad source prior, not a causal graph and not a TF activity state.",
+    "TRRUST signs are source-supported relationship modes; unknown and conflicting signs are retained as unknown.",
+    "TRRUST provides no association weights or ranks in the retained source snapshot.",
+    "The raw source snapshot is not redistributed; source URL, snapshot checksum, record hashes, and locators are retained."
+  ],
+  "observed_response_used": false,
+  "orthology_inference_used": false,
+  "prior_kind": "response_independent_mouse_tf_target_prior",
+  "ranks": {
+    "column": "association_rank",
+    "status": "not_supplied"
+  },
+  "response_selection": "none",
+  "schema_version": "tf_target_prior_v1",
+  "sign_policy": "retain source-supported activation/repression; conflicting or unknown source signs remain unknown",
+  "source": {
+    "license_basis_locator": "https://www.grnpedia.org/trrust/",
+    "license_name": "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source_locator": "https://www.grnpedia.org/trrust/data/trrust_rawdata.mouse.tsv",
+    "source_registry": "TRRUST",
+    "source_snapshot_sha256": "4847c960c7c2ce0173b056184137b1cc71e8d61d1b1edc825247504ad882dd55",
+    "source_version": "TRRUST_v2_snapshot_2026-08-25",
+    "usage_scope": "non_commercial_research"
+  },
+  "species": "mouse",
+  "storage": {
+    "dtype": null,
+    "format": "tsv",
+    "layout": null,
+    "numeric_artifact": false
+  },
+  "weights": {
+    "column": "association_weight",
+    "status": "not_supplied"
+  }
+}

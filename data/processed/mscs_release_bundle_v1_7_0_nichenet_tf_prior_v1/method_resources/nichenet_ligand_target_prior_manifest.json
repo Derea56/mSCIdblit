@@ -1,0 +1,61 @@
+{
+  "artifact_key": "nichenet_neutral_v1_ligand_target_matrix",
+  "axes": {
+    "ligand": {
+      "column": "ligand_id",
+      "release_path": "method_resources/method_native/nichenet_neutral_v1/ligands.tsv",
+      "row_count": 1287,
+      "sha256": "8d7ed03d765cb6444d3b472eb079dc6b54c20978c24d9f24d6bcc88df1fa3760"
+    },
+    "target": {
+      "column": "target_id",
+      "release_path": "method_resources/method_native/nichenet_neutral_v1/target_genes.tsv",
+      "row_count": 22521,
+      "sha256": "045a4033173eb5cbd7ff02446cf9c5080de12eb1af1a1546a1aba35be517b6ee"
+    }
+  },
+  "limitations": [
+    "The dense prior is not expanded into relational rows or top-k mappings.",
+    "The output projection is evidence-layer metadata and does not create causal graph edges or route confidence.",
+    "The companion artifact root must be supplied by the downstream consumer and is verified fail-closed."
+  ],
+  "lr_network": {
+    "release_path": "method_resources/method_native/nichenet_neutral_v1/lr_network.tsv",
+    "row_count": 5668,
+    "sha256": "22279374620ff3a2ecb388107cfd7c03770e9c7c67a920ad44033179e511b282"
+  },
+  "matrix": {
+    "byte_size": 231876216,
+    "companion_relative_path": "nichenet_neutral_v1/ligand_target_matrix.f64le.bin",
+    "dtype": "float64",
+    "endianness": "little",
+    "layout": "column_major",
+    "response_dependence": "response_independent_prior",
+    "selection": "complete_matrix",
+    "sha256": "7311a7dc6bb245bdebcd97ee5f0e6974788170f8b86cea987708577c832aa0c0",
+    "shape": [
+      22521,
+      1287
+    ]
+  },
+  "output_projection": {
+    "causal_assertions_created": false,
+    "graph_edges_created": false,
+    "receiver_compatible_lr_join_required": true,
+    "release_path": "mechanism_graph/mechanism_output_bridges_validated.tsv",
+    "role": "broad_response_independent_ligand_to_output_mapping",
+    "row_count": 1166,
+    "selection": "all_validated_output_bridges",
+    "sha256": "a067034a1da48dd1d66c62994efa81d33db0086f4aa022f868be42de306d9fb5"
+  },
+  "resource_key": "mscs_phase2:nichenet_neutral_v1/ligand_target_matrix.f64le.bin",
+  "schema_version": "nichenet_release_resource_v1",
+  "source_model": "NicheNet v2 mouse",
+  "species": "mouse",
+  "storage": {
+    "companion_artifact_root_config_key": "nichenet_companion_artifact_root",
+    "mode": "companion_required",
+    "release_owned_contract": true,
+    "working_tree_dependency": false
+  }
+}
