@@ -1,0 +1,97 @@
+{
+  "candidate_role": "method_resource_candidate_projection",
+  "canonical_communication_count": 9099,
+  "causal_assertions_created": false,
+  "cellchat_json_reconciliation": {
+    "json_only_canonical_pair_key_count": 1056,
+    "json_pair_key_coverage": 1.0,
+    "json_unique_pair_count": 3379,
+    "pair_key_semantics": "casefolded alphanumeric comparison only; source spellings and components remain preserved",
+    "shared_canonical_pair_key_count": 2323,
+    "source_record_count": 3379,
+    "source_record_coverage": 1.0,
+    "status": "complete",
+    "tsv_only_canonical_pair_key_count": 1036,
+    "tsv_unique_pair_key_count": 3359
+  },
+  "component_crosswalk": {
+    "biological_component_inference": false,
+    "bytes": 3958549,
+    "handoff_bytes": 1309,
+    "handoff_path": "data/processed/mechanism_lr_candidate_universe_v3_component_crosswalk_v1/candidate_component_handoff.json",
+    "handoff_sha256": "744ae358a395a490f52234c3e2d7b8ab8e4c89a917b1541bff4d0713937f46b3",
+    "mapping_count": 9099,
+    "mapping_rule": "exact normalized ligand/receptor pair lookup in the explicit master registry; no underscore splitting",
+    "master_registry_status_counts": {
+      "explicit_source_complex": 2107,
+      "single_gene_identity": 6992
+    },
+    "path": "data/processed/mechanism_lr_candidate_universe_v3_component_crosswalk_v1/mechanism_lr_candidate_component_crosswalk.tsv",
+    "schema_version": "mechanism_lr_component_crosswalk_v1",
+    "sha256": "f809ff4fd62404c4b289c2cfaaf71faa8436b76df01308dea92cad3aa8b32170",
+    "source_registry_path": "data/processed/method_resource_migration_v1/method_native/master_lr_registry.tsv",
+    "source_registry_sha256": "d176eb074427f3ff0f8f38572799e22d22980846315c964bee5380480c42573f",
+    "status_counts": {
+      "explicit_source_complex": 239,
+      "single_gene_identity": 5501,
+      "source_registry_and_explicit_resource_agree": 3359
+    }
+  },
+  "evidence_status_counts": {
+    "method_resource_only": 9099
+  },
+  "graph_edges_created": false,
+  "graph_status_counts": {
+    "mapped_not_graph_edge": 1406,
+    "staged_unresolved": 6779,
+    "validated_exportable_core_edge": 914
+  },
+  "inputs": {
+    "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627/bundle_metadata.json": {
+      "bytes": 12209,
+      "sha256": "61259b115bfd1a807f12112b4cd36375be31fbc2f4c66579fc71e90e8dfca623"
+    },
+    "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627/mechanism_edges.tsv": {
+      "bytes": 17772765,
+      "sha256": "d0ef850fbf362536b25683828aa16f6b1669b62ecaf3ea7a9ebd8e3d0728a9cc"
+    },
+    "data/processed/mechanism_graph_module20_24_v2026_09_25_literature_expansion627/mechanism_nodes.tsv": {
+      "bytes": 4362002,
+      "sha256": "bcd6319fdda48662a7dff9b49a34b89553f7e786d15eecc3c39625febd7734b9"
+    },
+    "data/processed/method_resource_migration_v1/canonical_communication_records.tsv": {
+      "bytes": 1993967,
+      "sha256": "f5fc14f7802883e6181ab371866c594f0fb29139f17d342d0b53daac8c461a88"
+    },
+    "data/processed/method_resource_migration_v1/method_native/CellChatDB.mouse.standalone.json": {
+      "bytes": 1174853,
+      "sha256": "777878377aa926bdf8200edb76bba14661a403b870c798f40c3fb9dd03b3b0ae"
+    },
+    "data/processed/method_resource_migration_v1/method_native/master_lr_registry.tsv": {
+      "bytes": 1315321,
+      "sha256": "d176eb074427f3ff0f8f38572799e22d22980846315c964bee5380480c42573f"
+    },
+    "data/processed/method_resource_migration_v1/method_resource_complex_components.tsv": {
+      "bytes": 2189025,
+      "sha256": "8e25c1534dcd14202e767229674406aba514e0042efb54d4d3767754c9d5bee5"
+    },
+    "data/processed/method_resource_migration_v1/method_resource_migration_report.json": {
+      "bytes": 1497,
+      "sha256": "1698f9d05531045bc5e158ccc47cf60000d87a940bf9265a5b014a0abc66a6fb"
+    },
+    "data/processed/method_resource_migration_v1/method_resource_records.tsv": {
+      "bytes": 6434677,
+      "sha256": "1b87a2156851e77dd576523e1f6a4fc5ee63d8bd758e5c57a45e1bb2d4788a1e"
+    }
+  },
+  "mechanism_graph_release": "module20_24_mechanism_graph:2026-09-25-literature-expansion-627",
+  "numeric_weights_created": false,
+  "output": {
+    "bytes": 9656158,
+    "path": "data/processed/mechanism_lr_candidate_universe_v3_component_crosswalk_v1/mechanism_lr_candidate_universe.tsv",
+    "row_count": 9099,
+    "sha256": "973dfb091ca06caf4e7cfedcf43264b3bba2c683667c08083db031dc3c00623c"
+  },
+  "schema_version": "mechanism_lr_candidate_universe_v3",
+  "source_snapshot_id": "phase2_external_snapshot_2026-08-05"
+}

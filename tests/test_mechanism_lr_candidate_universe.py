@@ -193,4 +193,4 @@ def test_candidate_projection_reconciles_cellchat_native_json_variants(tmp_path,
     assert reconciliation["source_record_coverage"] == 1.0
     assert reconciliation["json_pair_key_coverage"] == 1.0
     assert reconciliation["json_only_canonical_pair_key_count"] == 2
-    assert report["schema_version"] == "mechanism_lr_candidate_universe_v2"
+    assert report["schema_version"] == "mechanism_lr_candidate_universe_v3"

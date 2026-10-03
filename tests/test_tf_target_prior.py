@@ -135,6 +135,8 @@ def test_additive_release_identity_requires_distinct_parent_and_preservation():
         "schema_version": "mscs_release_bundle_v1",
         "nichenet_ligand_target_prior_manifest": "method_resources/nichenet_ligand_target_prior_manifest.json",
         "tf_target_prior_manifest": "tf_target_prior/tf_target_prior_manifest.json",
+        "candidate_universe_component_crosswalk_path": "candidate_universe/mechanism_lr_candidate_component_crosswalk.tsv",
+        "candidate_component_handoff_path": "candidate_universe/candidate_component_handoff.json",
         "release_id": "child",
         "parent_release_id": "parent",
         "original_mscs_resources_preserved": True,

@@ -18,7 +18,7 @@ except ModuleNotFoundError:  # Imported as scripts.validate_mscs_tf_target_relea
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_BUNDLE = ROOT / "data/processed/mscs_release_bundle_v1_7_0_nichenet_tf_prior_v1"
+DEFAULT_BUNDLE = ROOT / "data/processed/mscs_release_bundle_v1_8_0_nichenet_tf_prior_candidate_components_v1"
 
 
 def sha256(path: Path) -> str:
@@ -37,6 +37,54 @@ def read_tsv(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(handle, delimiter="\t"))
 
 
+def validate_component_crosswalk(bundle: Path, manifest: dict[str, object]) -> dict[str, int]:
+    candidate_relative = manifest.get("candidate_universe_path")
+    crosswalk_relative = manifest.get("candidate_universe_component_crosswalk_path")
+    if not isinstance(candidate_relative, str) or not isinstance(crosswalk_relative, str):
+        raise SystemExit("Release manifest lacks candidate component-crosswalk paths")
+    candidates = read_tsv(bundle / candidate_relative)
+    crosswalk = read_tsv(bundle / crosswalk_relative)
+    candidate_ids = {row.get("candidate_pair_id", "") for row in candidates}
+    crosswalk_ids = {row.get("candidate_pair_id", "") for row in crosswalk}
+    if len(candidate_ids) != len(candidates) or len(crosswalk_ids) != len(crosswalk):
+        raise SystemExit("Candidate or component crosswalk contains duplicate IDs")
+    if candidate_ids != crosswalk_ids:
+        raise SystemExit("Candidate and component crosswalk ID sets differ")
+    required_candidate = {"component_mapping_id", "component_mapping_status", "ligand_components", "receptor_components"}
+    required_crosswalk = {"component_mapping_id", "candidate_pair_id", "component_mapping_status", "ligand_components", "receptor_components", "source_registry_sha256"}
+    if not candidates or not required_candidate.issubset(candidates[0]) or not crosswalk or not required_crosswalk.issubset(crosswalk[0]):
+        raise SystemExit("Candidate component crosswalk columns are incomplete")
+    cross_by_id = {row["candidate_pair_id"]: row for row in crosswalk}
+    allowed = {
+        "explicit_source_complex", "single_gene_identity",
+        "source_registry_and_explicit_resource_agree",
+        "unresolved_no_exact_source_registry_pair",
+        "unresolved_source_component_disagreement",
+        "unresolved_missing_or_invalid_source_components",
+        "unresolved_duplicate_source_components",
+        "unresolved_entity_type_component_mismatch",
+    }
+    for row in candidates:
+        cross = cross_by_id[row["candidate_pair_id"]]
+        if row["component_mapping_id"] != cross["component_mapping_id"] or row["component_mapping_status"] != cross["component_mapping_status"]:
+            raise SystemExit("Candidate and component crosswalk mapping identity mismatch")
+        if row["component_mapping_status"] not in allowed:
+            raise SystemExit("Unknown component mapping status")
+        if not row["component_mapping_status"].startswith("unresolved_"):
+            if row["ligand_components"] != cross["ligand_components"] or row["receptor_components"] != cross["receptor_components"]:
+                raise SystemExit("Resolved candidate component fields disagree with crosswalk")
+    source_path = bundle / "method_resources/method_native/master_lr_registry.tsv"
+    source_hash = sha256(source_path)
+    if any(row["source_registry_sha256"] != source_hash for row in crosswalk):
+        raise SystemExit("Component crosswalk source-registry checksum does not match release resource")
+    return {
+        "candidate_count": len(candidates),
+        "crosswalk_count": len(crosswalk),
+        "resolved_count": sum(not row["component_mapping_status"].startswith("unresolved_") for row in crosswalk),
+        "unresolved_count": sum(row["component_mapping_status"].startswith("unresolved_") for row in crosswalk),
+    }
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--bundle-dir", type=Path, default=DEFAULT_BUNDLE)
@@ -52,6 +100,10 @@ def validate_release_identity(manifest: dict[str, object]) -> None:
         raise SystemExit("Release manifest does not point to the NicheNet prior contract")
     if manifest.get("tf_target_prior_manifest") != PRIOR_MANIFEST.as_posix():
         raise SystemExit("Release manifest does not point to the TF-target prior contract")
+    if not manifest.get("candidate_universe_component_crosswalk_path"):
+        raise SystemExit("Release manifest does not point to the candidate component crosswalk")
+    if not manifest.get("candidate_component_handoff_path"):
+        raise SystemExit("Release manifest does not point to the candidate component handoff")
     if not manifest.get("parent_release_id") or manifest.get("parent_release_id") == manifest.get("release_id"):
         raise SystemExit("TF-target release does not identify a distinct parent release")
     if manifest.get("original_mscs_resources_preserved") is not True:
@@ -99,6 +151,7 @@ def main() -> int:
     expected_pairs = manifest.get("counts", {}).get("tf_target_prior_pairs")
     if expected_pairs != prior_summary["pair_count"]:
         raise SystemExit("Top-level TF-target pair count does not match the prior contract")
+    component_summary = validate_component_crosswalk(bundle, manifest)
     print(json.dumps({
         "status": "PASS additive mSCS TF-target prior release validation",
         "release_id": manifest.get("release_id"),
@@ -106,6 +159,7 @@ def main() -> int:
         "manifest_files_checked": len(manifest.get("files", {})),
         "nichenet": nichenet_summary,
         "tf_target_prior": prior_summary,
+        "candidate_components": component_summary,
     }, indent=2))
     return 0
 

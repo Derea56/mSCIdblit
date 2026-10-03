@@ -23,7 +23,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_GRAPH = ROOT / "data" / "processed" / "mechanism_graph_module20_24_v2026_09_25_literature_expansion627"
 DEFAULT_METHOD = ROOT / "data" / "processed" / "method_resource_migration_v1"
 DEFAULT_OUTPUT = ROOT / "data" / "processed" / "mechanism_lr_candidate_universe_v1"
-CANDIDATE_UNIVERSE_SCHEMA = "mechanism_lr_candidate_universe_v2"
+CANDIDATE_UNIVERSE_SCHEMA = "mechanism_lr_candidate_universe_v3"
+COMPONENT_CROSSWALK_SCHEMA = "mechanism_lr_component_crosswalk_v1"
 
 FIELDS = [
     "candidate_pair_id",
@@ -57,6 +58,30 @@ FIELDS = [
     "source_snapshot_id",
     "mechanism_graph_release",
     "candidate_role",
+    "component_mapping_status",
+    "component_mapping_id",
+]
+
+CROSSWALK_FIELDS = [
+    "component_mapping_id",
+    "candidate_pair_id",
+    "species_scope",
+    "ligand_name",
+    "receptor_name",
+    "ligand_entity_type",
+    "receptor_entity_type",
+    "ligand_components",
+    "receptor_components",
+    "component_mapping_status",
+    "component_mapping_basis",
+    "source_registry_id",
+    "source_methods",
+    "source_resources",
+    "source_record_ids",
+    "source_databases",
+    "source_evidence_notes",
+    "source_registry_path",
+    "source_registry_sha256",
 ]
 
 
@@ -142,6 +167,68 @@ def parse_json_list(value: str) -> list[str]:
     return [str(item) for item in parsed]
 
 
+def component_tokens(value: str) -> list[str]:
+    """Parse only an explicit pipe-delimited source component field."""
+    return [part.strip() for part in value.split("|") if part.strip()]
+
+
+def validate_registry_component_row(row: dict[str, str]) -> tuple[str, str, str]:
+    """Validate one explicit master-registry component mapping.
+
+    This deliberately does not split canonical names.  Components must be
+    present in the source registry fields and must agree with the registry's
+    entity type.
+    """
+    statuses = []
+    resolved: list[str] = []
+    for side in ("ligand", "receptor"):
+        entity_type = row.get(f"{side}_entity_type", "").strip()
+        name = row.get(side, "").strip()
+        values = component_tokens(row.get(f"{side}_components", ""))
+        if entity_type not in {"gene", "complex"} or not name or not values:
+            statuses.append("unresolved_missing_or_invalid_source_components")
+            continue
+        if len(values) != len(set(values)):
+            statuses.append("unresolved_duplicate_source_components")
+            continue
+        if entity_type == "gene" and values != [name]:
+            statuses.append("unresolved_entity_type_component_mismatch")
+            continue
+        if entity_type == "complex" and len(values) < 2:
+            statuses.append("unresolved_entity_type_component_mismatch")
+            continue
+        resolved.extend(values)
+    if statuses:
+        return ";".join(sorted(set(statuses))), "", ""
+    ligand = "|".join(component_tokens(row["ligand_components"]))
+    receptor = "|".join(component_tokens(row["receptor_components"]))
+    status = "explicit_source_complex" if "complex" in {row["ligand_entity_type"], row["receptor_entity_type"]} else "single_gene_identity"
+    return status, ligand, receptor
+
+
+def load_master_component_registry(path: Path) -> tuple[dict[tuple[str, str], dict[str, str]], dict[str, int]]:
+    """Load exact pair/component mappings from the frozen master registry."""
+    if not path.is_file():
+        return {}, {"status": "not_provided"}
+    rows = read_tsv(path)
+    by_pair: dict[tuple[str, str], dict[str, str]] = {}
+    status_counts: dict[str, int] = defaultdict(int)
+    for row in rows:
+        pair = (row.get("ligand", "").strip(), row.get("receptor", "").strip())
+        if not pair[0] or not pair[1]:
+            raise ValueError("Master registry contains an empty ligand or receptor")
+        if pair in by_pair:
+            raise ValueError(f"Master registry contains an ambiguous duplicate pair: {pair}")
+        status, ligand, receptor = validate_registry_component_row(row)
+        enriched = dict(row)
+        enriched["component_mapping_status"] = status
+        enriched["validated_ligand_components"] = ligand
+        enriched["validated_receptor_components"] = receptor
+        by_pair[pair] = enriched
+        status_counts[status] += 1
+    return by_pair, dict(sorted(status_counts.items()))
+
+
 def index_nodes(rows: list[dict[str, str]]) -> dict[str, set[str]]:
     index: dict[str, set[str]] = defaultdict(set)
     for row in rows:
@@ -168,6 +255,12 @@ def component_index(rows: list[dict[str, str]]) -> dict[str, dict[str, list[tupl
         except ValueError:
             ordinal = 0
         result[candidate_id][side].append((ordinal, component))
+    for values_by_side in result.values():
+        for side, values in values_by_side.items():
+            first_ordinal_by_component: dict[str, int] = {}
+            for ordinal, component in values:
+                first_ordinal_by_component[component] = min(first_ordinal_by_component.get(component, ordinal), ordinal)
+            values_by_side[side] = sorted((ordinal, component) for component, ordinal in first_ordinal_by_component.items())
     return result
 
 
@@ -214,6 +307,12 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Standalone CellChat JSON used to reconcile source-record pair spellings.",
     )
+    parser.add_argument(
+        "--master-lr-registry",
+        type=Path,
+        default=None,
+        help="Exact compatibility registry with explicit ligand/receptor component fields.",
+    )
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
     return parser.parse_args()
 
@@ -248,6 +347,12 @@ def main() -> int:
     canonical_rows = read_tsv(method / "canonical_communication_records.tsv")
     resource_rows = read_tsv(method / "method_resource_records.tsv")
     component_rows = read_tsv(method / "method_resource_complex_components.tsv")
+    master_registry_path = (
+        args.master_lr_registry.resolve()
+        if args.master_lr_registry is not None
+        else method / "method_native" / "master_lr_registry.tsv"
+    )
+    master_registry, master_registry_status_counts = load_master_component_registry(master_registry_path)
     node_rows = read_tsv(graph / "mechanism_nodes.tsv")
     edge_rows = read_tsv(graph / "mechanism_edges.tsv")
     cellchat_json = read_cellchat_json(cellchat_json_path)
@@ -267,6 +372,8 @@ def main() -> int:
     status_counts: dict[str, int] = defaultdict(int)
     cellchat_json_pairs_by_id: dict[str, set[tuple[str, str]]] = defaultdict(set)
     cellchat_tsv_pairs_by_id: dict[str, set[tuple[str, str]]] = defaultdict(set)
+    crosswalk_rows: list[dict[str, str]] = []
+    component_status_counts: dict[str, int] = defaultdict(int)
     for canonical in canonical_rows:
         candidate_id = canonical.get("canonical_communication_id", "")
         if not candidate_id:
@@ -311,6 +418,60 @@ def main() -> int:
         component_values = components_by_id.get(candidate_id, {})
         ligand_components = [value for _ordinal, value in sorted(component_values.get("ligand", []))]
         receptor_components = [value for _ordinal, value in sorted(component_values.get("receptor", []))]
+        registry_row = master_registry.get((ligand, receptor))
+        component_mapping_id = f"COMPONENTMAP:{candidate_id}"
+        component_mapping_status = "unresolved_no_exact_source_registry_pair"
+        component_mapping_basis = "no_exact_master_lr_registry_pair"
+        registry_ligand_components = ""
+        registry_receptor_components = ""
+        if registry_row is not None:
+            registry_status = registry_row["component_mapping_status"]
+            registry_ligand_components = registry_row["validated_ligand_components"]
+            registry_receptor_components = registry_row["validated_receptor_components"]
+            explicit_sets_agree = (
+                set(ligand_components) == set(component_tokens(registry_ligand_components))
+                and set(receptor_components) == set(component_tokens(registry_receptor_components))
+            )
+            if registry_status.startswith("unresolved_"):
+                component_mapping_status = registry_status
+                component_mapping_basis = "master_lr_registry_explicit_fields_failed_validation"
+            elif ligand_components or receptor_components:
+                if explicit_sets_agree:
+                    component_mapping_status = "source_registry_and_explicit_resource_agree"
+                    component_mapping_basis = "exact_master_lr_registry_and_method_resource_component_fields"
+                else:
+                    component_mapping_status = "unresolved_source_component_disagreement"
+                    component_mapping_basis = "master_lr_registry_disagrees_with_method_resource_component_fields"
+                    registry_ligand_components = ""
+                    registry_receptor_components = ""
+            else:
+                component_mapping_status = registry_status
+                component_mapping_basis = "exact_master_lr_registry_explicit_component_fields"
+            if not component_mapping_status.startswith("unresolved_"):
+                ligand_components = component_tokens(registry_ligand_components)
+                receptor_components = component_tokens(registry_receptor_components)
+        component_status_counts[component_mapping_status] += 1
+        crosswalk_rows.append({
+            "component_mapping_id": component_mapping_id,
+            "candidate_pair_id": candidate_id,
+            "species_scope": canonical.get("species_scope", ""),
+            "ligand_name": ligand,
+            "receptor_name": receptor,
+            "ligand_entity_type": registry_row.get("ligand_entity_type", "") if registry_row else "",
+            "receptor_entity_type": registry_row.get("receptor_entity_type", "") if registry_row else "",
+            "ligand_components": registry_ligand_components,
+            "receptor_components": registry_receptor_components,
+            "component_mapping_status": component_mapping_status,
+            "component_mapping_basis": component_mapping_basis,
+            "source_registry_id": registry_row.get("registry_id", "") if registry_row else "",
+            "source_methods": registry_row.get("source_methods", "") if registry_row else "",
+            "source_resources": registry_row.get("source_resources", "") if registry_row else "",
+            "source_record_ids": registry_row.get("source_record_ids", "") if registry_row else "",
+            "source_databases": registry_row.get("source_databases", "") if registry_row else "",
+            "source_evidence_notes": registry_row.get("evidence_notes", "") if registry_row else "",
+            "source_registry_path": display_path(master_registry_path),
+            "source_registry_sha256": sha256(master_registry_path) if master_registry_path.is_file() else "",
+        })
         source_native_variants: list[dict[str, object]] = []
         cellchat_json_variants: dict[tuple[str, str], dict[str, object]] = {}
         for resource_record in resource_records:
@@ -384,6 +545,8 @@ def main() -> int:
             "source_snapshot_id": migration.get("source_snapshot_id", ""),
             "mechanism_graph_release": metadata.get("release_id", ""),
             "candidate_role": "candidate_universe_record",
+            "component_mapping_status": component_mapping_status,
+            "component_mapping_id": component_mapping_id,
         }
         rows.append(row)
         status_counts[graph_status] += 1
@@ -439,6 +602,11 @@ def main() -> int:
         writer = csv.DictWriter(handle, fieldnames=FIELDS, delimiter="\t", lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
+    crosswalk_path = output / "mechanism_lr_candidate_component_crosswalk.tsv"
+    with crosswalk_path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=CROSSWALK_FIELDS, delimiter="\t", lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(crosswalk_rows)
     report = {
         "schema_version": CANDIDATE_UNIVERSE_SCHEMA,
         "candidate_role": "method_resource_candidate_projection",
@@ -461,6 +629,19 @@ def main() -> int:
             "pair_key_semantics": "casefolded alphanumeric comparison only; source spellings and components remain preserved",
         },
         "graph_status_counts": dict(sorted(status_counts.items())),
+        "component_crosswalk": {
+            "schema_version": COMPONENT_CROSSWALK_SCHEMA,
+            "mapping_count": len(crosswalk_rows),
+            "status_counts": dict(sorted(component_status_counts.items())),
+            "master_registry_status_counts": master_registry_status_counts,
+            "source_registry_path": display_path(master_registry_path),
+            "source_registry_sha256": sha256(master_registry_path) if master_registry_path.is_file() else None,
+            "path": display_path(crosswalk_path),
+            "sha256": sha256(crosswalk_path),
+            "bytes": crosswalk_path.stat().st_size,
+            "biological_component_inference": False,
+            "mapping_rule": "exact normalized ligand/receptor pair lookup in the explicit master registry; no underscore splitting",
+        },
         "evidence_status_counts": {"method_resource_only": len(rows)},
         "graph_edges_created": False,
         "causal_assertions_created": False,
@@ -469,18 +650,46 @@ def main() -> int:
             display_path(path): {"sha256": sha256(path), "bytes": path.stat().st_size}
             for path in required
         },
-        "output": {
+            "output": {
             "path": display_path(table_path),
             "sha256": sha256(table_path),
             "bytes": table_path.stat().st_size,
             "row_count": len(rows),
-        },
-    }
+            },
+        }
+    report["inputs"][display_path(master_registry_path)] = {
+        "sha256": sha256(master_registry_path),
+        "bytes": master_registry_path.stat().st_size,
+    } if master_registry_path.is_file() else {"available": False}
     if cellchat_json_path.is_file():
         report["inputs"][display_path(cellchat_json_path)] = {
             "sha256": sha256(cellchat_json_path),
             "bytes": cellchat_json_path.stat().st_size,
         }
+    handoff = {
+        "schema_version": "candidate_component_handoff_v1",
+        "candidate_universe_schema": CANDIDATE_UNIVERSE_SCHEMA,
+        "candidate_universe_path": display_path(table_path),
+        "component_crosswalk_path": display_path(crosswalk_path),
+        "candidate_pair_count": len(rows),
+        "component_mapping_status_counts": dict(sorted(component_status_counts.items())),
+        "component_mapping_rule": "exact source-registry pair lookup; explicit pipe-delimited component fields only; no underscore splitting",
+        "biological_component_inference": False,
+        "external_downstream_audit": {
+            "available_in_repository": False,
+            "required_for_pair_level_recovery_accounting": True,
+            "coordinator_reported_missing_pair_count": 88,
+            "coordinator_reported_potentially_recoverable_lower_bound": 48,
+            "coordinator_reported_remaining_count": 40,
+            "verification_status": "not_verified_without_the_88_pair_audit_input",
+            "required_input_fields": ["ligand", "receptor", "missing_reason", "measured_feature_requirement"],
+        },
+    }
+    handoff_path = output / "candidate_component_handoff.json"
+    handoff_path.write_text(json.dumps(handoff, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    report["component_crosswalk"]["handoff_path"] = display_path(handoff_path)
+    report["component_crosswalk"]["handoff_sha256"] = sha256(handoff_path)
+    report["component_crosswalk"]["handoff_bytes"] = handoff_path.stat().st_size
     (output / "mechanism_lr_candidate_universe_report.json").write_text(
         json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
