@@ -12,10 +12,10 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_BASE = ROOT / "data/processed/mscs_release_bundle_v1_7_0_nichenet_tf_prior_v1"
+DEFAULT_BASE = ROOT / "data/processed/mscs_release_bundle_v1_8_0_nichenet_tf_prior_gene_identifiers_v2"
 DEFAULT_CANDIDATE = ROOT / "data/processed/mechanism_lr_candidate_universe_v3_component_crosswalk_v1"
-DEFAULT_OUTPUT = ROOT / "data/processed/mscs_release_bundle_v1_8_0_nichenet_tf_prior_candidate_components_v1"
-DEFAULT_RELEASE_ID = "mscs_release_bundle:2026-10-02-nichenet-tf-prior-candidate-components-v1"
+DEFAULT_OUTPUT = ROOT / "data/processed/mscs_release_bundle_v1_9_0_nichenet_tf_prior_gene_identifiers_candidate_components_v1"
+DEFAULT_RELEASE_ID = "mscs_release_bundle:2026-10-03-nichenet-tf-prior-gene-identifiers-candidate-components-v1"
 
 
 def sha256(path: Path) -> str:

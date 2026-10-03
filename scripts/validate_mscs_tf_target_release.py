@@ -18,7 +18,7 @@ except ModuleNotFoundError:  # Imported as scripts.validate_mscs_tf_target_relea
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_BUNDLE = ROOT / "data/processed/mscs_release_bundle_v1_8_0_nichenet_tf_prior_candidate_components_v1"
+DEFAULT_BUNDLE = ROOT / "data/processed/mscs_release_bundle_v1_9_0_nichenet_tf_prior_gene_identifiers_candidate_components_v1"
 
 
 def sha256(path: Path) -> str:
