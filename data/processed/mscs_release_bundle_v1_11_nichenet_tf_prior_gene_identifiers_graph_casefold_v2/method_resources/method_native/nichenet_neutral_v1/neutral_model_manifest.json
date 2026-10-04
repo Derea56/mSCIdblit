@@ -1,0 +1,20 @@
+{
+  "schema_version": "nichenet_neutral_model_v1",
+  "source_model": "NicheNet v2 mouse",
+  "source_resource_id": "Zenodo 7074291",
+  "source_matrix_rds_sha256": "622df69272ded29fe32ff60d581527be59d01184ed17c86c8103aa4ee9d978d6",
+  "source_lr_network_rds_sha256": "a6f9528e567a39a3a335560bfe5440873a0c08446a422cd92f5bc9617164061e",
+  "matrix_file": "ligand_target_matrix.f64le.bin",
+  "matrix_sha256": "7311a7dc6bb245bdebcd97ee5f0e6974788170f8b86cea987708577c832aa0c0",
+  "matrix_dtype": "float64",
+  "matrix_endianness": "little",
+  "matrix_layout": "column_major",
+  "matrix_shape": [22521, 1287],
+  "target_axis_file": "target_genes.tsv",
+  "ligand_axis_file": "ligands.tsv",
+  "lr_network_file": "lr_network.tsv",
+  "target_count": 22521,
+  "ligand_count": 1287,
+  "lr_network_row_count": 5668,
+  "package_dependency_boundary": "This neutral snapshot can be read without nichenetr or R; scoring parity remains a separate validation task."
+}

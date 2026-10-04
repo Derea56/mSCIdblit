@@ -127,6 +127,14 @@ or chooses among competing nodes. The report records the normalization rule
 and recovery counts so downstream consumers can distinguish identity recovery
 from new biological evidence.
 
+The immutable release
+`mscs_release_bundle:2026-10-04-nichenet-tf-prior-gene-identifiers-graph-casefold-v2`
+is the canonical graph-label correction. The earlier same-day `v1` artifact
+was superseded before downstream use after its real-data audit exposed an
+internal normalized-key lookup defect; it must not be used as an mSCS input.
+The v2 release was rebuilt after that correction and passed the additive
+release validator.
+
 When the migrated method resources include
 `method_native/CellChatDB.mouse.standalone.json`, the projection reconciles its
 source-record IDs against `cellchat_mouse.tsv`. It preserves both native pair
