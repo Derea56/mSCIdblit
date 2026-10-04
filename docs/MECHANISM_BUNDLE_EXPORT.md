@@ -119,6 +119,14 @@ supported elsewhere, and staged or unresolved mappings are retained rather
 than discarded. The projection never creates mechanism edges, confidence
 scores, causal assertions, or numeric modality weights.
 
+Graph-node and LR-edge joins use a `strip()` plus `casefold()` comparison key
+while preserving the original graph labels and node identifiers in the output.
+If a normalized label maps to multiple graph node identifiers, the candidate
+remains unresolved/ambiguous; case-insensitive matching never creates an edge
+or chooses among competing nodes. The report records the normalization rule
+and recovery counts so downstream consumers can distinguish identity recovery
+from new biological evidence.
+
 When the migrated method resources include
 `method_native/CellChatDB.mouse.standalone.json`, the projection reconciles its
 source-record IDs against `cellchat_mouse.tsv`. It preserves both native pair

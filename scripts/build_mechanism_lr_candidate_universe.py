@@ -229,7 +229,17 @@ def load_master_component_registry(path: Path) -> tuple[dict[tuple[str, str], di
     return by_pair, dict(sorted(status_counts.items()))
 
 
-def index_nodes(rows: list[dict[str, str]]) -> dict[str, set[str]]:
+def graph_label_key(value: str) -> str:
+    """Return the graph-label comparison key without rewriting source text."""
+
+    return str(value or "").strip().casefold()
+
+
+def index_nodes(
+    rows: list[dict[str, str]],
+    *,
+    case_insensitive: bool = True,
+) -> dict[str, set[str]]:
     index: dict[str, set[str]] = defaultdict(set)
     for row in rows:
         node_id = row.get("node_id", "")
@@ -238,7 +248,8 @@ def index_nodes(rows: list[dict[str, str]]) -> dict[str, set[str]]:
         for field in ("canonical_name", "canonical_label", "gene_symbol"):
             value = row.get(field, "").strip()
             if value:
-                index[value].add(node_id)
+                key = graph_label_key(value) if case_insensitive else value
+                index[key].add(node_id)
     return index
 
 
@@ -267,6 +278,8 @@ def component_index(rows: list[dict[str, str]]) -> dict[str, dict[str, list[tupl
 def graph_indexes(
     edges: list[dict[str, str]],
     nodes: list[dict[str, str]],
+    *,
+    case_insensitive: bool = True,
 ) -> dict[tuple[str, str], list[dict[str, str]]]:
     node_labels = {row.get("node_id", ""): row.get("canonical_name", "") for row in nodes}
     pairs: dict[tuple[str, str], list[dict[str, str]]] = defaultdict(list)
@@ -276,7 +289,11 @@ def graph_indexes(
         ligand = edge.get("source_label", "") or node_labels.get(edge.get("source_node_id", ""), "")
         receptor = edge.get("target_label", "") or node_labels.get(edge.get("target_node_id", ""), "")
         if ligand and receptor:
-            pairs[(ligand.strip(), receptor.strip())].append(edge)
+            key = (
+                graph_label_key(ligand) if case_insensitive else ligand.strip(),
+                graph_label_key(receptor) if case_insensitive else receptor.strip(),
+            )
+            pairs[key].append(edge)
     return pairs
 
 
@@ -363,8 +380,10 @@ def main() -> int:
         if candidate_id:
             records_by_id[candidate_id].append(row)
     components_by_id = component_index(component_rows)
-    exact_edges = graph_indexes(edge_rows, node_rows)
-    node_index = index_nodes(node_rows)
+    exact_edges = graph_indexes(edge_rows, node_rows, case_insensitive=False)
+    graph_edges = graph_indexes(edge_rows, node_rows, case_insensitive=True)
+    exact_node_index = index_nodes(node_rows, case_insensitive=False)
+    node_index = index_nodes(node_rows, case_insensitive=True)
     routes = route_index(graph / "mechanism_signaling_route_evidence.tsv.gz")
 
     output.mkdir(parents=True)
@@ -374,6 +393,12 @@ def main() -> int:
     cellchat_tsv_pairs_by_id: dict[str, set[tuple[str, str]]] = defaultdict(set)
     crosswalk_rows: list[dict[str, str]] = []
     component_status_counts: dict[str, int] = defaultdict(int)
+    graph_resolution_audit = {
+        "normalization": "strip+casefold",
+        "case_insensitive_edge_recovery_count": 0,
+        "case_insensitive_node_recovery_count": 0,
+        "ambiguous_case_insensitive_node_label_count": 0,
+    }
     for canonical in canonical_rows:
         candidate_id = canonical.get("canonical_communication_id", "")
         if not candidate_id:
@@ -382,7 +407,23 @@ def main() -> int:
         receptor = canonical.get("normalized_receptor_name", "").strip()
         ligand_nodes = sorted(node_index.get(ligand, set()))
         receptor_nodes = sorted(node_index.get(receptor, set()))
+        exact_ligand_nodes = sorted(exact_node_index.get(ligand, set()))
+        exact_receptor_nodes = sorted(exact_node_index.get(receptor, set()))
         matching_edges = exact_edges.get((ligand, receptor), [])
+        if not matching_edges:
+            matching_edges = graph_edges.get(
+                (graph_label_key(ligand), graph_label_key(receptor)), []
+            )
+            if matching_edges:
+                graph_resolution_audit["case_insensitive_edge_recovery_count"] += 1
+        if not exact_ligand_nodes and len(ligand_nodes) == 1:
+            graph_resolution_audit["case_insensitive_node_recovery_count"] += 1
+        if not exact_receptor_nodes and len(receptor_nodes) == 1:
+            graph_resolution_audit["case_insensitive_node_recovery_count"] += 1
+        if len(ligand_nodes) > 1:
+            graph_resolution_audit["ambiguous_case_insensitive_node_label_count"] += 1
+        if len(receptor_nodes) > 1:
+            graph_resolution_audit["ambiguous_case_insensitive_node_label_count"] += 1
         edge_ids = sorted({edge.get("edge_id", "") for edge in matching_edges if edge.get("edge_id")})
         exportable_values = {edge.get("exportable", "").strip().lower() for edge in matching_edges}
         if matching_edges and "true" in exportable_values:
@@ -629,6 +670,7 @@ def main() -> int:
             "pair_key_semantics": "casefolded alphanumeric comparison only; source spellings and components remain preserved",
         },
         "graph_status_counts": dict(sorted(status_counts.items())),
+        "graph_label_resolution": graph_resolution_audit,
         "component_crosswalk": {
             "schema_version": COMPONENT_CROSSWALK_SCHEMA,
             "mapping_count": len(crosswalk_rows),

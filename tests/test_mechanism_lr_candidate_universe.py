@@ -7,7 +7,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from scripts.build_mechanism_lr_candidate_universe import main  # noqa: E402
+from scripts.build_mechanism_lr_candidate_universe import (  # noqa: E402
+    graph_indexes,
+    index_nodes,
+    main,
+)
 
 
 def write_tsv(path: Path, fields: list[str], rows: list[dict[str, str]]) -> None:
@@ -51,7 +55,7 @@ def test_candidate_projection_preserves_candidates_and_does_not_create_edges(tmp
         [
             {
                 "canonical_communication_id": "PAIR1", "species_scope": "mouse", "ligand_name": "L1",
-                "receptor_name": "R1", "normalized_ligand_name": "L1", "normalized_receptor_name": "R1",
+                "receptor_name": "R1", "normalized_ligand_name": "l1", "normalized_receptor_name": "r1",
                 "communication_kind": "direct_lr_candidate", "evidence_status": "method_resource_only",
                 "source_method_count": "1", "source_record_count": "1", "source_methods_json": '["liana"]',
             },
@@ -93,6 +97,27 @@ def test_candidate_projection_preserves_candidates_and_does_not_create_edges(tmp
     report = json.loads((output / "mechanism_lr_candidate_universe_report.json").read_text())
     assert report["graph_edges_created"] is False
     assert report["canonical_communication_count"] == 2
+    assert report["graph_label_resolution"]["case_insensitive_edge_recovery_count"] == 1
+    assert report["graph_label_resolution"]["case_insensitive_node_recovery_count"] == 2
+
+
+def test_graph_label_indexes_casefold_without_collapsing_ambiguous_nodes():
+    nodes = [
+        {"node_id": "NODE1", "canonical_name": "A2M", "canonical_label": "", "gene_symbol": ""},
+        {"node_id": "NODE2", "canonical_name": "a2m", "canonical_label": "", "gene_symbol": ""},
+    ]
+    edges = [
+        {
+            "edge_id": "EDGE1",
+            "source_node_id": "NODE1",
+            "target_node_id": "NODE3",
+            "source_label": "A2M",
+            "target_label": "MMP9",
+            "relation_type": "binds_receptor",
+        }
+    ]
+    assert index_nodes(nodes)["a2m"] == {"NODE1", "NODE2"}
+    assert ("a2m", "mmp9") in graph_indexes(edges, nodes)
 
 
 def test_candidate_projection_reconciles_cellchat_native_json_variants(tmp_path, monkeypatch):
