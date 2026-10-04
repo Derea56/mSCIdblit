@@ -1,0 +1,57 @@
+{
+  "curation_candidate_count": 15525,
+  "known_layer_counts": {
+    "cellular_functional_readout": 144,
+    "cleavage_or_processing_readout": 3,
+    "gene_expression_or_transcription": 55,
+    "generic_functional_readout": 27,
+    "intracellular_continuation": 12686,
+    "ligand": 15525,
+    "output": 11543,
+    "phagocytosis_or_engulfment": 27,
+    "phosphorylation_or_activation_readout": 146,
+    "protein_secretion_or_release": 2,
+    "receptor": 15525,
+    "reporter_readout": 41,
+    "second_messenger_readout": 169,
+    "secreted_protein_or_release": 10,
+    "target_gene": 6985,
+    "target_gene_expression": 823,
+    "transcription_factor": 10085,
+    "translocation_or_localization_readout": 15,
+    "unknown": 3
+  },
+  "policy": "Deduplicated evidence-route signatures for all ligands; source chains and stable locators are retained. This is a primary-literature curation queue only: no confidence score, causal edge, or missing-link assertion is created.",
+  "review_priority_counts": {
+    "P1": 9757,
+    "P2": 1877,
+    "P3": 3891
+  },
+  "route_records_excluded": {
+    "ligand_receptor_entry_only": 9985,
+    "missing_ligand_or_receptor": 3116
+  },
+  "route_records_seen": 597189,
+  "route_tier_counts": {
+    "explicit_ligand_receptor_intracellular_tf_target": 6665,
+    "ligand_receptor_intracellular_claim_unresolved": 2232,
+    "ligand_receptor_intracellular_output_missing_tf": 2234,
+    "ligand_receptor_intracellular_tf_missing_output": 65,
+    "ligand_receptor_intracellular_tf_output_missing_target_gene": 7068,
+    "ligand_receptor_intracellular_tf_output_pairwise_source_overlap": 5,
+    "ligand_receptor_intracellular_tf_output_source_queue_composition": 5,
+    "ligand_receptor_intracellular_tf_target_missing_direct_tf_edges": 757,
+    "ligand_receptor_intracellular_tf_target_one_pair_source_overlap": 28,
+    "ligand_receptor_intracellular_tf_target_two_pair_source_overlap": 16,
+    "ligand_receptor_output_annotation_missing_intracellular_and_tf": 1653,
+    "ligand_receptor_output_missing_intracellular_and_tf": 2644,
+    "ligand_receptor_tf_annotation_missing_intracellular_and_output": 71,
+    "ligand_receptor_tf_missing_intracellular_and_output": 8,
+    "ligand_receptor_tf_output_annotation_missing_intracellular": 88,
+    "ligand_receptor_tf_output_missing_target_gene": 116,
+    "ligand_receptor_tf_target_annotation_missing_intracellular": 3,
+    "ligand_receptor_tf_target_missing_intracellular": 58
+  },
+  "unique_ligands": 1872,
+  "unique_receptors": 1640
+}

@@ -1,0 +1,28 @@
+{
+  "biological_component_inference": false,
+  "candidate_pair_count": 9099,
+  "candidate_universe_path": "/private/tmp/mscidblit_graph_casefold_audit_v1/mechanism_lr_candidate_universe.tsv",
+  "candidate_universe_schema": "mechanism_lr_candidate_universe_v3",
+  "component_crosswalk_path": "/private/tmp/mscidblit_graph_casefold_audit_v1/mechanism_lr_candidate_component_crosswalk.tsv",
+  "component_mapping_rule": "exact source-registry pair lookup; explicit pipe-delimited component fields only; no underscore splitting",
+  "component_mapping_status_counts": {
+    "explicit_source_complex": 239,
+    "single_gene_identity": 5501,
+    "source_registry_and_explicit_resource_agree": 3359
+  },
+  "external_downstream_audit": {
+    "available_in_repository": false,
+    "coordinator_reported_missing_pair_count": 88,
+    "coordinator_reported_potentially_recoverable_lower_bound": 48,
+    "coordinator_reported_remaining_count": 40,
+    "required_for_pair_level_recovery_accounting": true,
+    "required_input_fields": [
+      "ligand",
+      "receptor",
+      "missing_reason",
+      "measured_feature_requirement"
+    ],
+    "verification_status": "not_verified_without_the_88_pair_audit_input"
+  },
+  "schema_version": "candidate_component_handoff_v1"
+}
