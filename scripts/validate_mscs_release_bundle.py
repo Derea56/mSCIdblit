@@ -89,6 +89,26 @@ def main() -> int:
             mismatches.append(f"checksum/size mismatch: {relative}")
     if mismatches:
         raise SystemExit("Release bundle validation failed: " + "; ".join(mismatches))
+    connector_summary = None
+    connector_relative = manifest.get("route_connector_manifest_path")
+    if connector_relative:
+        connector_manifest_path = bundle / str(connector_relative)
+        if not connector_manifest_path.is_file():
+            raise SystemExit(f"Release bundle is missing route connector manifest: {connector_manifest_path}")
+        connector = json.loads(connector_manifest_path.read_text(encoding="utf-8"))
+        if connector.get("schema_version") != "mscs_route_connectors_v1":
+            raise SystemExit("Route connector manifest schema is unsupported")
+        table = connector.get("connector_table", {})
+        table_path = connector_manifest_path.parent / str(table.get("relative_path", ""))
+        if not table_path.is_file() or sha256(table_path) != table.get("sha256"):
+            raise SystemExit("Route connector table checksum validation failed")
+        if connector.get("source_release", {}).get("release_id") != manifest.get("release_id"):
+            raise SystemExit("Route connector release_id disagrees with release manifest")
+        connector_summary = {
+            "manifest_path": str(connector_manifest_path),
+            "table_path": str(table_path),
+            "route_connector_count": connector.get("counts", {}).get("route_connectors"),
+        }
     try:
         nichenet_summary = validate_contract(
             bundle=bundle, companion_artifact_root=companion_root
@@ -103,6 +123,7 @@ def main() -> int:
         "candidate_universe_records": manifest.get("counts", {}).get("candidate_universe_records"),
         "original_mscs_resources_preserved": manifest.get("original_mscs_resources_preserved"),
         "nichenet": nichenet_summary,
+        "route_connectors": connector_summary,
     }, indent=2))
     return 0
 
