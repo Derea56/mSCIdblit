@@ -231,6 +231,14 @@
       "bytes": 7727,
       "sha256": "7aa68b75a09dbfd8ac71318f0379e78247871cb20f84cb038c90fcce1f71cb3f"
     },
+    "mechanism_graph/route_connectors/route_connectors.tsv.gz": {
+      "bytes": 11671805,
+      "sha256": "25e93e75e38675c95c2f07806fd9ac42df7cd1f4c2ef5cd63afb62235bd6bdb0"
+    },
+    "mechanism_graph/route_connectors/route_connectors_manifest.json": {
+      "bytes": 1983,
+      "sha256": "9b6e556bce1bfec475bda5e5584353c918784bbed1c97cf331dd78e4540823c5"
+    },
     "mechanism_graph/route_node_id_repair_summary.json": {
       "bytes": 46924,
       "sha256": "0652f4fc47c49c6f6e27c6567f2921b09c5353c727c63a26186c177de416d396"
@@ -505,6 +513,14 @@
   "parent_release_id": "mscs_release_bundle:2026-10-02-nichenet-tf-prior-gene-identifiers-v2",
   "project": "mSCIdblit",
   "release_id": "mscs_release_bundle:2026-10-04-nichenet-tf-prior-gene-identifiers-graph-casefold-v2",
+  "route_connector_contract": {
+    "causal_assertions_created": false,
+    "missing_layers_preserved": true,
+    "schema_version": "mscs_route_connectors_v1",
+    "storage": "gzip_tsv"
+  },
+  "route_connector_manifest_path": "mechanism_graph/route_connectors/route_connectors_manifest.json",
+  "route_connector_table_path": "mechanism_graph/route_connectors/route_connectors.tsv.gz",
   "schema_version": "mscs_release_bundle_v1",
   "target_consumer": "mSCS",
   "tf_target_prior": {

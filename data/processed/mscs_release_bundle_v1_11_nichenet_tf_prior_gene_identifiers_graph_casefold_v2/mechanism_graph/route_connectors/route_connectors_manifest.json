@@ -1,0 +1,70 @@
+{
+  "connector_table": {
+    "bytes": 11671805,
+    "columns": [
+      "route_evidence_id",
+      "route_status",
+      "route_tier",
+      "path_expression",
+      "known_layers",
+      "missing_layers",
+      "route_class",
+      "ligand_node_id",
+      "ligand_receptor_edge_id",
+      "receptor_node_id",
+      "receptor_intracellular_edge_id",
+      "intracellular_continuation_node_id",
+      "intracellular_tf_edge_id",
+      "transcription_factor_node_id",
+      "tf_target_edge_id",
+      "target_gene_node_id",
+      "output_node_id",
+      "bridge_id",
+      "evidence_ids",
+      "source_chain_id",
+      "effect_polarity"
+    ],
+    "format": "gzip_tsv",
+    "relative_path": "route_connectors.tsv.gz",
+    "sha256": "25e93e75e38675c95c2f07806fd9ac42df7cd1f4c2ef5cd63afb62235bd6bdb0",
+    "table": "route_connectors.tsv.gz"
+  },
+  "counts": {
+    "by_route_class": {
+      "evidence_only": 3116,
+      "l_r": 22977,
+      "l_r_o": 4763,
+      "l_r_s_o": 309176,
+      "l_r_s_tf": 1941,
+      "l_r_s_tf_o": 252001,
+      "l_r_tf_o": 3220
+    },
+    "by_route_status": {
+      "retained_evidence_route": 597194
+    },
+    "route_connectors": 597194
+  },
+  "runtime": "python_stdlib_gzip_tsv",
+  "schema_version": "mscs_route_connectors_v1",
+  "semantics": {
+    "causal_assertions_created": false,
+    "labels_resolved_from_release_graph": true,
+    "missing_layers_preserved": true,
+    "response_dependence": "response_independent_evidence",
+    "route_classes": [
+      "evidence_only",
+      "l_r",
+      "l_r_o",
+      "l_r_s_o",
+      "l_r_s_tf",
+      "l_r_s_tf_o",
+      "l_r_tf_o"
+    ]
+  },
+  "source_release": {
+    "release_id": "mscs_release_bundle:2026-10-04-nichenet-tf-prior-gene-identifiers-graph-casefold-v2",
+    "release_manifest_path": "release_manifest.json",
+    "route_evidence_path": "mechanism_graph/mechanism_signaling_route_evidence.tsv.gz",
+    "route_evidence_sha256": "ea9129b6b37b83ccd80e6e2930ba3b511c8fa447487193e52dd426116600a4e4"
+  }
+}
