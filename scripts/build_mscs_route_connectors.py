@@ -133,8 +133,8 @@ def build_route_connectors(release_directory: Path | str, output_directory: Path
         },
         "source_release": {
             "release_id": _text(release_manifest["release_id"]),
-            "release_manifest_path": str(release_manifest_path),
-            "route_evidence_path": str(source),
+            "release_manifest_path": str(release_manifest_path.relative_to(release)),
+            "route_evidence_path": str(source.relative_to(release)),
             "route_evidence_sha256": sha256(source),
         },
         "connector_table": {
