@@ -14,6 +14,7 @@ import argparse
 import csv
 import hashlib
 import json
+import sqlite3
 from pathlib import Path
 
 from nichenet_release_contract import CONTRACT_RELATIVE, validate_contract
@@ -29,6 +30,46 @@ def sha256(path: Path) -> str:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def validate_ligand_output_evidence(
+    *, bundle: Path, release_manifest: dict[str, object]
+) -> dict[str, object] | None:
+    manifest_relative = release_manifest.get("ligand_output_evidence_manifest_path")
+    database_relative = release_manifest.get("ligand_output_evidence_database_path")
+    if manifest_relative is None and database_relative is None:
+        return None
+    if not isinstance(manifest_relative, str) or not isinstance(database_relative, str):
+        raise SystemExit("Ligand-output evidence release paths are incomplete")
+    evidence_manifest_path = (bundle / manifest_relative).resolve(strict=True)
+    evidence_manifest = json.loads(evidence_manifest_path.read_text(encoding="utf-8"))
+    if evidence_manifest.get("schema_version") != "mscs_ligand_output_evidence_v1":
+        raise SystemExit("Ligand-output evidence manifest schema is unsupported")
+    source_release = evidence_manifest.get("source_release", {})
+    if source_release.get("release_id") != release_manifest.get("release_id"):
+        raise SystemExit("Ligand-output evidence release_id disagrees with release manifest")
+    database = evidence_manifest.get("database", {})
+    database_path = (evidence_manifest_path.parent / str(database.get("relative_path", ""))).resolve(strict=True)
+    if str(database_path.relative_to(bundle)) != database_relative:
+        raise SystemExit("Ligand-output evidence database path disagrees with release manifest")
+    if sha256(database_path) != database.get("sha256"):
+        raise SystemExit("Ligand-output evidence database checksum validation failed")
+    counts = evidence_manifest.get("counts", {})
+    with sqlite3.connect(f"file:{database_path}?mode=ro", uri=True) as connection:
+        relationship_count = connection.execute("SELECT count(*) FROM ligand_output_prior").fetchone()[0]
+        ligand_count = connection.execute("SELECT count(*) FROM ligands").fetchone()[0]
+        output_count = connection.execute("SELECT count(*) FROM targets").fetchone()[0]
+    if relationship_count != counts.get("relationships"):
+        raise SystemExit("Ligand-output evidence relationship count disagrees")
+    if ligand_count != counts.get("ligands") or output_count != counts.get("outputs"):
+        raise SystemExit("Ligand-output evidence axis counts disagree")
+    return {
+        "manifest_path": str(evidence_manifest_path),
+        "database_path": str(database_path),
+        "relationship_count": relationship_count,
+        "ligand_count": ligand_count,
+        "output_count": output_count,
+    }
 
 
 def parse_args() -> argparse.Namespace:
@@ -113,6 +154,9 @@ def main() -> int:
             mismatches.append(f"checksum/size mismatch: {relative}")
     if mismatches:
         raise SystemExit("Release bundle validation failed: " + "; ".join(mismatches))
+    ligand_output_summary = validate_ligand_output_evidence(
+        bundle=bundle, release_manifest=manifest
+    )
     connector_summary = None
     connector_relative = manifest.get("route_connector_manifest_path")
     if connector_relative:
@@ -163,6 +207,7 @@ def main() -> int:
         "candidate_universe_records": manifest.get("counts", {}).get("candidate_universe_records"),
         "original_mscs_resources_preserved": manifest.get("original_mscs_resources_preserved"),
         "nichenet": nichenet_summary,
+        "ligand_output_evidence": ligand_output_summary,
         "route_connectors": connector_summary,
     }, indent=2))
     return 0
