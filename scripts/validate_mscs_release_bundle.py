@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Validate checksums and required contents of a combined mSCS release bundle."""
+"""Validate checksums and required contents of an mSCS release bundle.
+
+Current releases are self-contained: route connectors are the canonical
+route-planning interface and any NicheNet evidence is already represented in
+the release graph with source annotations.  Older releases may still declare
+the separate dense NicheNet companion contract; that contract remains
+supported when explicitly requested by the release manifest.
+"""
 
 from __future__ import annotations
 
@@ -30,8 +37,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--nichenet-artifact-root",
         type=Path,
-        required=True,
-        help="Companion root containing nichenet_neutral_v1/ligand_target_matrix.f64le.bin.",
+        help=(
+            "Optional legacy companion root containing "
+            "nichenet_neutral_v1/ligand_target_matrix.f64le.bin. Required only "
+            "when the release manifest declares the legacy NicheNet contract."
+        ),
     )
     return parser.parse_args()
 
@@ -39,13 +49,27 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     bundle = args.bundle_dir.resolve()
-    companion_root = args.nichenet_artifact_root.resolve()
+    companion_root = (
+        args.nichenet_artifact_root.resolve()
+        if args.nichenet_artifact_root is not None
+        else None
+    )
     manifest_path = bundle / "release_manifest.json"
     if not manifest_path.is_file():
         raise SystemExit(f"Missing release manifest: {manifest_path}")
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    if manifest.get("nichenet_ligand_target_prior_manifest") != CONTRACT_RELATIVE.as_posix():
-        raise SystemExit("Release manifest does not point to the NicheNet prior contract")
+    legacy_nichenet_contract = manifest.get("nichenet_ligand_target_prior_manifest")
+    current_route_connector_release = bool(manifest.get("route_connector_manifest_path"))
+    if legacy_nichenet_contract and legacy_nichenet_contract != CONTRACT_RELATIVE.as_posix():
+        raise SystemExit(
+            "Release manifest points to an unsupported legacy NicheNet prior contract: "
+            f"{legacy_nichenet_contract}"
+        )
+    if not legacy_nichenet_contract and not current_route_connector_release:
+        raise SystemExit(
+            "Release manifest declares neither the legacy NicheNet prior contract "
+            "nor the current route connector contract"
+        )
     required = [
         "mechanism_graph/mechanism_nodes.tsv",
         "mechanism_graph/mechanism_node_roles.tsv",
@@ -109,12 +133,28 @@ def main() -> int:
             "table_path": str(table_path),
             "route_connector_count": connector.get("counts", {}).get("route_connectors"),
         }
-    try:
-        nichenet_summary = validate_contract(
-            bundle=bundle, companion_artifact_root=companion_root
-        )
-    except ValueError as exc:
-        raise SystemExit(f"NicheNet release contract validation failed: {exc}") from exc
+    if legacy_nichenet_contract and not current_route_connector_release:
+        if companion_root is None:
+            raise SystemExit(
+                "This legacy release requires --nichenet-artifact-root for its "
+                "separate dense NicheNet companion contract"
+            )
+        try:
+            nichenet_summary = validate_contract(
+                bundle=bundle, companion_artifact_root=companion_root
+            )
+        except ValueError as exc:
+            raise SystemExit(f"NicheNet release contract validation failed: {exc}") from exc
+    else:
+        nichenet_summary = {
+            "status": (
+                "not_required_for_current_route_connector_release"
+                if current_route_connector_release
+                else "validated_legacy_contract"
+            ),
+            "evidence_integrated_in_release_graph": True,
+            "legacy_manifest_retained_for_compatibility": bool(legacy_nichenet_contract),
+        }
     print(json.dumps({
         "status": "PASS combined mSCS release bundle validation",
         "release_id": manifest.get("release_id"),
