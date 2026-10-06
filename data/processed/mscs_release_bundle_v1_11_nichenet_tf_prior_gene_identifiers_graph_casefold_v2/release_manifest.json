@@ -135,6 +135,14 @@
       "bytes": 706,
       "sha256": "d41edb856e736e3f5998c7c49790011668971782d2dee4bf3ed09df51df2c53c"
     },
+    "mechanism_graph/ligand_output_evidence/ligand_output_evidence.sqlite": {
+      "bytes": 1509285888,
+      "sha256": "dbc5ea42b91c300949231ebbc8d4b4231b93f13281eb4eb663debbd4ae565ee8"
+    },
+    "mechanism_graph/ligand_output_evidence/ligand_output_evidence_manifest.json": {
+      "bytes": 1283,
+      "sha256": "9101808f960aac2308655749bc2d15548c667062abfd407b05975731eddf45d8"
+    },
     "mechanism_graph/ligand_route_coverage_release_summary.json": {
       "bytes": 1086,
       "sha256": "b92f5998f07da1bc967ad6ee07abf09f491ab751f3d994775c58c3805b5d2fbd"
@@ -490,6 +498,13 @@
   },
   "gene_identifier_crosswalk_manifest": "gene_identifier_crosswalk/gene_identifier_crosswalk_manifest.json",
   "gene_label_coverage_audit": "gene_identifier_crosswalk/gene_label_coverage_audit.tsv",
+  "ligand_output_evidence_contract": {
+    "schema_version": "mscs_ligand_output_evidence_v1",
+    "source_method_is_provenance_only": true,
+    "storage": "sqlite"
+  },
+  "ligand_output_evidence_database_path": "mechanism_graph/ligand_output_evidence/ligand_output_evidence.sqlite",
+  "ligand_output_evidence_manifest_path": "mechanism_graph/ligand_output_evidence/ligand_output_evidence_manifest.json",
   "mechanism_graph_release": "module20_24_mechanism_graph:2026-09-25-literature-expansion-627",
   "mechanism_graph_version": "unknown",
   "method_resource_membership_is_not_biological_validation": true,

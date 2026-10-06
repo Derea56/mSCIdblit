@@ -1,0 +1,35 @@
+{
+  "counts": {
+    "ligands": 1287,
+    "maximum_target_rank": 22521,
+    "outputs": 22521,
+    "relationships": 28984527
+  },
+  "database": {
+    "bytes": 1509285888,
+    "columns": [
+      "ligand_idx",
+      "target_idx",
+      "target_rank_within_ligand",
+      "regulatory_potential"
+    ],
+    "relative_path": "ligand_output_evidence.sqlite",
+    "sha256": "dbc5ea42b91c300949231ebbc8d4b4231b93f13281eb4eb663debbd4ae565ee8",
+    "table": "ligand_output_prior"
+  },
+  "runtime": "python_stdlib_sqlite",
+  "schema_version": "mscs_ligand_output_evidence_v1",
+  "semantics": {
+    "direction_assigned": false,
+    "interpretation": "ranked_ligand_output_prior_not_probability_or_causal_edge",
+    "response_dependence": "response_independent_prior",
+    "source_method_is_provenance_only": true
+  },
+  "source_release": {
+    "matrix_reference": "method_resources/nichenet_ligand_target_prior_manifest.json",
+    "matrix_sha256": "7311a7dc6bb245bdebcd97ee5f0e6974788170f8b86cea987708577c832aa0c0",
+    "neutral_model_manifest_path": "method_resources/method_native/nichenet_neutral_v1/neutral_model_manifest.json",
+    "release_id": "mscs_release_bundle:2026-10-04-nichenet-tf-prior-gene-identifiers-graph-casefold-v2",
+    "release_manifest_path": "release_manifest.json"
+  }
+}
