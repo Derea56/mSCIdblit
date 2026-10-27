@@ -2,13 +2,35 @@ import csv
 import json
 from pathlib import Path
 
+import pytest
+
 from scripts.build_mechanism_literature_expansion import read_input, validate_rows
+
+
+def _require_snapshot(bundle):
+    """Resolve a mechanism-graph snapshot or skip the test when it is absent.
+
+    The superseded snapshots were untracked and deleted from the laptop on 2026-10-27
+    (mSCIdblit D-009/D-010; regenerable from the database and curation registers, not
+    mirrored). Resolution follows ``scripts.mscidblit_paths.resolve``: the local
+    ``data/`` copy first, else the same path under ``MSCIDBLIT_DATA_ROOT``. A missing
+    snapshot skips (never fails) by decision; a regression in a present snapshot still
+    fails.
+    """
+    from scripts.mscidblit_paths import REPO_ROOT, resolve
+
+    relative = Path(bundle).resolve().relative_to((REPO_ROOT / "data").resolve())
+    resolved = resolve(relative)
+    if not resolved.is_dir():
+        pytest.skip(f"mechanism-graph snapshot not present (mSCIdblit D-010): {relative}")
+    return resolved
 
 
 def test_primary_literature_expansion_batch_is_bounded_and_validated():
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch001.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_evidence_contract"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -22,6 +44,7 @@ def test_second_primary_literature_expansion_batch_is_bounded_and_validated():
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch002.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion001"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -35,6 +58,7 @@ def test_third_primary_literature_expansion_batch_is_bounded_and_validated():
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch003.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion002"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -47,6 +71,7 @@ def test_fourth_primary_literature_expansion_batch_is_bounded_and_validated():
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch004.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion003"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -60,6 +85,7 @@ def test_fifth_primary_literature_expansion_batch_is_bounded_and_validated():
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch005.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion004"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -74,6 +100,7 @@ def test_sixth_primary_literature_expansion_batch_is_bounded_and_validated():
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch006.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion005"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -87,6 +114,7 @@ def test_seventh_primary_literature_expansion_batch_is_bounded_and_validated():
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch007.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion006"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -101,6 +129,7 @@ def test_eighth_primary_literature_expansion_batch_is_bounded_and_validated():
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch008.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion007"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -115,6 +144,7 @@ def test_ninth_primary_literature_expansion_batch_is_bounded_and_validated():
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch009.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion008"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -127,6 +157,7 @@ def test_tenth_primary_literature_expansion_batch_is_bounded_and_validated():
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch010.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion009"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -140,6 +171,7 @@ def test_eleventh_primary_literature_expansion_batch_is_bounded_and_validated():
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch011.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion010"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -152,6 +184,7 @@ def test_twelfth_primary_literature_expansion_batch_is_bounded_and_validated():
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch012.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion011"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -165,6 +198,7 @@ def test_thirteenth_primary_literature_expansion_batch_is_bounded_and_validated(
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch013.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion012"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -178,6 +212,7 @@ def test_fourteenth_primary_literature_expansion_batch_is_bounded_and_validated(
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch014.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion013"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -191,6 +226,7 @@ def test_fifteenth_primary_literature_expansion_batch_is_bounded_and_validated()
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch015.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion014"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -204,6 +240,7 @@ def test_sixteenth_primary_literature_expansion_batch_is_bounded_and_validated()
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch016.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion015"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -217,6 +254,7 @@ def test_seventeenth_primary_literature_expansion_batch_is_bounded_and_validated
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch017.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion016"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -230,6 +268,7 @@ def test_eighteenth_primary_literature_expansion_batch_is_bounded_and_validated(
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch018.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion017"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -244,6 +283,7 @@ def test_nineteenth_primary_literature_expansion_batch_is_bounded_and_validated(
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch019.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion018"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -258,6 +298,7 @@ def test_twentieth_primary_literature_expansion_batch_is_bounded_and_validated()
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch020.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion019"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -271,6 +312,7 @@ def test_twenty_first_primary_literature_expansion_batch_is_bounded_and_validate
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch021.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion020"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -285,6 +327,7 @@ def test_twenty_second_primary_literature_expansion_batch_is_bounded_and_validat
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch022.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion021"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -298,6 +341,7 @@ def test_twenty_third_primary_literature_expansion_batch_is_bounded_and_validate
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch023.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion022"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -313,6 +357,7 @@ def test_twenty_fourth_primary_literature_expansion_batch_is_bounded_and_validat
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch024.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion023"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -326,6 +371,7 @@ def test_twenty_fifth_primary_literature_expansion_batch_is_bounded_and_validate
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch025.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion024"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -339,6 +385,7 @@ def test_twenty_sixth_primary_literature_expansion_batch_is_bounded_and_validate
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch026.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion025"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 5
@@ -353,6 +400,7 @@ def test_twenty_seventh_primary_literature_expansion_batch_is_bounded_and_valida
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch027.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion026"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 10
@@ -368,6 +416,7 @@ def test_twenty_eighth_primary_literature_expansion_batch_is_bounded_and_validat
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch028.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion027"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 8
@@ -382,6 +431,7 @@ def test_twenty_ninth_primary_literature_expansion_batch_is_bounded_and_validate
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch029.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion028"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 8
@@ -403,6 +453,7 @@ def test_thirtieth_primary_literature_expansion_batch_is_bounded_and_validated()
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch030.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion029"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 8
@@ -424,6 +475,7 @@ def test_thirty_first_primary_literature_expansion_batch_is_bounded_and_validate
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch031.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion030"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 8
@@ -445,6 +497,7 @@ def test_thirty_second_primary_literature_expansion_batch_is_bounded_and_validat
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch032.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion031"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 8
@@ -466,6 +519,7 @@ def test_thirty_third_primary_literature_expansion_batch_is_bounded_and_validate
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch033.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion032"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 8
@@ -487,6 +541,7 @@ def test_thirty_fourth_primary_literature_expansion_batch_is_bounded_and_validat
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch034.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion033"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 8
@@ -510,6 +565,7 @@ def test_thirty_fifth_primary_literature_expansion_batch_is_bounded_and_validate
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch035.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion034"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 8
@@ -531,6 +587,7 @@ def test_thirty_sixth_primary_literature_expansion_batch_is_bounded_and_validate
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch036.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion035"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 8
@@ -552,6 +609,7 @@ def test_thirty_seventh_primary_literature_expansion_batch_is_bounded_and_valida
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch037.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion036"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 8
@@ -573,6 +631,7 @@ def test_thirty_eighth_primary_literature_expansion_batch_is_bounded_and_validat
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch038.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion037"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 8
@@ -594,6 +653,7 @@ def test_thirty_ninth_primary_literature_expansion_batch_is_bounded_and_validate
     root = Path(__file__).parents[1]
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch039.json"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion038"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, bundle)
     assert len(rows) == 8
@@ -616,6 +676,7 @@ def test_fortieth_primary_literature_expansion_batch_preserves_overlay_and_is_bo
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch040.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion039"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion040"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 8
@@ -643,6 +704,7 @@ def test_forty_first_primary_literature_expansion_batch_preserves_overlay_and_is
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch041.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion040"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion041"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 8
@@ -670,6 +732,7 @@ def test_forty_second_primary_literature_expansion_batch_preserves_overlay_and_i
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch042.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion041"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion042"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 8
@@ -697,6 +760,7 @@ def test_forty_third_primary_literature_expansion_batch_preserves_overlay_and_is
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch043.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion042"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion043"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 8
@@ -724,6 +788,7 @@ def test_forty_fourth_primary_literature_expansion_batch_preserves_overlay_and_i
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch044.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion043"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion044"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 8
@@ -751,6 +816,7 @@ def test_forty_fifth_primary_literature_expansion_batch_preserves_overlay_and_is
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch045.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion044"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion045"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 8
@@ -778,6 +844,7 @@ def test_forty_sixth_primary_literature_expansion_batch_preserves_overlay_and_is
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch046.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion045"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion046"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 8
@@ -805,6 +872,7 @@ def test_forty_seventh_primary_literature_expansion_batch_preserves_overlay_and_
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch047.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion046"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion047"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 8
@@ -832,6 +900,7 @@ def test_forty_eighth_primary_literature_expansion_batch_preserves_overlay_and_i
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch048.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion047"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion048"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 8
@@ -859,6 +928,7 @@ def test_forty_ninth_primary_literature_expansion_batch_preserves_overlay_and_is
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch049.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion048"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion049"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 8
@@ -886,6 +956,7 @@ def test_fiftieth_primary_literature_expansion_batch_preserves_overlay_and_is_bo
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch050.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion049"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion050"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 8
@@ -913,6 +984,7 @@ def test_fifty_first_primary_literature_expansion_batch_preserves_overlay_and_is
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch051.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion050"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion051"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 8
@@ -940,6 +1012,7 @@ def test_fifty_second_primary_literature_expansion_batch_preserves_overlay_and_i
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch052.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion051"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion052"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 8
@@ -967,6 +1040,7 @@ def test_fifty_third_primary_literature_expansion_batch_preserves_overlay_and_is
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch053.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion052"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion053"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 2
@@ -994,6 +1068,7 @@ def test_fifty_fourth_primary_literature_expansion_batch_preserves_overlay_and_i
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch054.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion053"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion054"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -1021,6 +1096,7 @@ def test_fifty_fifth_primary_literature_expansion_batch_preserves_overlay_and_is
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch055.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion054"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion055"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 7
@@ -1048,6 +1124,7 @@ def test_fifty_sixth_primary_literature_expansion_batch_preserves_overlay_and_is
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch056.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion055"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion056"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 7
@@ -1075,6 +1152,7 @@ def test_fifty_seventh_primary_literature_expansion_batch_preserves_overlay_and_
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch057.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion056"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion057"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 7
@@ -1102,6 +1180,7 @@ def test_fifty_eighth_primary_literature_expansion_batch_preserves_overlay_and_i
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch058.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion057"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion058"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 7
@@ -1129,6 +1208,7 @@ def test_fifty_ninth_primary_literature_expansion_batch_preserves_overlay_and_is
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch059.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion058"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion059"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 7
@@ -1155,6 +1235,7 @@ def test_sixtieth_primary_literature_expansion_batch_preserves_overlay_and_is_bo
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch060.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion059"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion060"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 7
@@ -1182,6 +1263,7 @@ def test_sixty_first_primary_literature_expansion_batch_preserves_overlay_and_is
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch061.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion060"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion061"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 6
@@ -1209,6 +1291,7 @@ def test_sixty_second_primary_literature_expansion_batch_preserves_overlay_and_i
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch062.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion061"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion062"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 3
@@ -1236,6 +1319,7 @@ def test_sixty_third_primary_literature_expansion_batch_preserves_overlay_and_is
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch063.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion062"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion063"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 6
@@ -1263,6 +1347,7 @@ def test_sixty_fourth_primary_literature_expansion_batch_preserves_overlay_and_i
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch064.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion063"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion064"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 6
@@ -1290,6 +1375,7 @@ def test_sixty_fifth_primary_literature_expansion_batch_preserves_tf_output_rout
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch065.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion064"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion065"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 1
@@ -1323,6 +1409,7 @@ def test_sixty_sixth_primary_literature_expansion_batch_preserves_selectin_dr3_t
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch066.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion065"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion066"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 1
@@ -1356,6 +1443,7 @@ def test_sixty_seventh_primary_literature_expansion_batch_preserves_chemokine_in
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch067.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion067"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion067"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 3
@@ -1385,6 +1473,7 @@ def test_sixty_eighth_primary_literature_expansion_batch_preserves_selective_lig
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch068.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion067"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion068"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 3
@@ -1425,6 +1514,7 @@ def test_sixty_ninth_primary_literature_expansion_batch_preserves_selective_liga
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch069.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion068"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion069"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 4
@@ -1467,6 +1557,7 @@ def test_seventieth_primary_literature_expansion_batch_preserves_partial_output_
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch070.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion069"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion070"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 6
@@ -1504,6 +1595,7 @@ def test_seventy_first_primary_literature_expansion_batch_preserves_receptor_pro
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch071.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion070"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion071"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -1560,6 +1652,7 @@ def test_seventy_second_primary_literature_expansion_batch_preserves_partial_rou
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch072.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion071"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion072"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -1617,6 +1710,7 @@ def test_seventy_third_primary_literature_expansion_batch_preserves_receptor_pro
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch073.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion072"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion073"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -1671,6 +1765,7 @@ def test_seventy_fourth_primary_literature_expansion_batch_preserves_gpcr_output
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch074.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion073"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion074"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -1729,6 +1824,7 @@ def test_seventy_fifth_primary_literature_expansion_batch_preserves_endocrine_an
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch075.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion074"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion075"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -1783,6 +1879,7 @@ def test_seventy_sixth_primary_literature_expansion_batch_preserves_neuroendocri
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch076.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion075"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion076"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -1837,6 +1934,7 @@ def test_seventy_seventh_primary_literature_expansion_batch_preserves_non_gpcr_r
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch077.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion076"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion077"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -1897,6 +1995,7 @@ def test_seventy_eighth_primary_literature_expansion_batch_preserves_receptor_pr
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch078.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion077"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion078"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -1955,6 +2054,7 @@ def test_seventy_ninth_primary_literature_expansion_batch_preserves_gpcr_second_
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch079.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion078"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion079"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -2010,6 +2110,7 @@ def test_eightieth_primary_literature_expansion_batch_preserves_gpcr_second_mess
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch080.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion079"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion080"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -2065,6 +2166,7 @@ def test_eighty_first_primary_literature_expansion_batch_preserves_gpcr_second_m
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch081.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion080"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion081"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -2121,6 +2223,7 @@ def test_eighty_second_primary_literature_expansion_batch_preserves_gpcr_second_
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch082.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion081"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion082"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 11
@@ -2179,6 +2282,7 @@ def test_eighty_third_primary_literature_expansion_batch_preserves_unique_gpcr_o
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch083.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion082"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion083"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -2232,6 +2336,7 @@ def test_eighty_fourth_primary_literature_expansion_batch_preserves_unique_gpcr_
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch084.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion083"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion084"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -2291,6 +2396,7 @@ def test_eighty_fifth_primary_literature_expansion_batch_preserves_unique_gpcr_o
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch085.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion084"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion085"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -2350,6 +2456,7 @@ def test_eighty_sixth_primary_literature_expansion_batch_preserves_unique_peptid
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch086.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion085"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion086"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -2403,6 +2510,7 @@ def test_eighty_seventh_primary_literature_expansion_batch_preserves_intracellul
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch087.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion086"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion087"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -2468,6 +2576,7 @@ def test_eighty_eighth_primary_literature_expansion_batch_preserves_receptor_out
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch088.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion087"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion088"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -2523,6 +2632,7 @@ def test_eighty_ninth_primary_literature_expansion_batch_preserves_chemokine_and
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch089.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion088"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion089"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -2575,6 +2685,7 @@ def test_ninetieth_primary_literature_expansion_batch_preserves_bounded_receptor
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch090.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion089"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion090"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -2628,6 +2739,7 @@ def test_ninety_first_primary_literature_expansion_batch_preserves_pathway_outpu
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch091.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion090"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion091"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -2682,6 +2794,7 @@ def test_ninety_second_primary_literature_expansion_batch_preserves_gpcr_and_not
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch092.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion091"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion092"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -2735,6 +2848,7 @@ def test_ninety_third_primary_literature_expansion_batch_preserves_receptor_dive
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch093.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion092"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion093"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -2788,6 +2902,7 @@ def test_ninety_fourth_primary_literature_expansion_batch_preserves_gpcr_couplin
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch094.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion093"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion094"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -2859,6 +2974,7 @@ def test_ninety_fifth_primary_literature_expansion_batch_preserves_immune_and_ne
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch095.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion094"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion095"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -2930,6 +3046,7 @@ def test_ninety_sixth_primary_literature_expansion_batch_preserves_immune_resolu
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch096.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion095"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion096"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -3003,6 +3120,7 @@ def test_ninety_seventh_primary_literature_expansion_batch_preserves_gpcr_second
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch097.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion096"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion097"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -3072,6 +3190,7 @@ def test_ninety_eighth_primary_literature_expansion_batch_preserves_immune_gpcr_
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch098.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion097"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion098"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -3138,6 +3257,7 @@ def test_ninety_ninth_primary_literature_expansion_batch_preserves_endocrine_and
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch099.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion098"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion099"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -3209,6 +3329,7 @@ def test_one_hundredth_primary_literature_expansion_batch_preserves_innate_and_n
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch100.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion099"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion100"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -3276,6 +3397,7 @@ def test_one_hundred_first_primary_literature_expansion_batch_preserves_shared_r
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch101.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion100"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion101"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -3350,6 +3472,7 @@ def test_one_hundred_second_primary_literature_expansion_batch_preserves_recepto
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch102.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion101"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion102"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -3420,6 +3543,7 @@ def test_one_hundred_third_primary_literature_expansion_batch_preserves_cytokine
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch103.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion102"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion103"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -3496,6 +3620,7 @@ def test_one_hundred_fourth_primary_literature_expansion_batch_preserves_recepto
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch104.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion103"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion104"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -3590,6 +3715,7 @@ def test_one_hundred_fifth_primary_literature_expansion_batch_preserves_dap12_li
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch105.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion104"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion105"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -3675,6 +3801,7 @@ def test_one_hundred_sixth_primary_literature_expansion_batch_preserves_ligand_r
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch106.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion105"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion106"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -3756,6 +3883,7 @@ def test_one_hundred_seventh_primary_literature_expansion_batch_preserves_semaph
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch107.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion106"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion107"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -3847,6 +3975,7 @@ def test_one_hundred_eighth_primary_literature_expansion_batch_preserves_recepto
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch108.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion107"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion108"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -3939,6 +4068,7 @@ def test_one_hundred_ninth_primary_literature_expansion_batch_preserves_output_r
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch109.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion108"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion109"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -4030,6 +4160,7 @@ def test_one_hundred_tenth_primary_literature_expansion_batch_preserves_mixed_ou
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch110.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion109"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion110"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -4134,6 +4265,7 @@ def test_one_hundred_eleventh_primary_literature_expansion_batch_preserves_cytok
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch111.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion110"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion111"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -4224,6 +4356,7 @@ def test_one_hundred_twelfth_primary_literature_expansion_batch_preserves_select
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch112.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion111"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion112"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -4314,6 +4447,7 @@ def test_one_hundred_thirteenth_primary_literature_expansion_batch_preserves_sel
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch113.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion112"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion113"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -4407,6 +4541,7 @@ def test_one_hundred_fourteenth_primary_literature_expansion_batch_preserves_can
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch114.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion113"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion114"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -4498,6 +4633,7 @@ def test_one_hundred_fifteenth_primary_literature_expansion_batch_preserves_grow
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch115.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion114"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion115"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -4589,6 +4725,7 @@ def test_one_hundred_sixteenth_primary_literature_expansion_batch_preserves_adhe
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch116.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion115"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion116"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -4676,6 +4813,7 @@ def test_one_hundred_seventeenth_primary_literature_expansion_batch_preserves_ma
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch117.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion116"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion117"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -4763,6 +4901,7 @@ def test_one_hundred_eighteenth_primary_literature_expansion_batch_preserves_gro
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch118.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion117"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion118"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -4853,6 +4992,7 @@ def test_one_hundred_nineteenth_primary_literature_expansion_batch_preserves_igf
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch119.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion118"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion119"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -4943,6 +5083,7 @@ def test_one_hundred_twentieth_primary_literature_expansion_batch_preserves_grow
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch120.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion119"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion120"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -5030,6 +5171,7 @@ def test_one_hundred_twenty_first_primary_literature_expansion_batch_preserves_i
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch121.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion120"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion121"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -5112,6 +5254,7 @@ def test_one_hundred_twenty_second_primary_literature_expansion_batch_preserves_
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch122.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion121"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion122"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -5205,6 +5348,7 @@ def test_one_hundred_twenty_third_primary_literature_expansion_batch_preserves_e
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch123.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion122"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion123"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -5296,6 +5440,7 @@ def test_one_hundred_twenty_fourth_primary_literature_expansion_batch_preserves_
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch124.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion123"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion124"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -5387,6 +5532,7 @@ def test_one_hundred_twenty_fifth_primary_literature_expansion_batch_preserves_i
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch125.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion124"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion125"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -5479,6 +5625,7 @@ def test_one_hundred_twenty_sixth_primary_literature_expansion_batch_preserves_g
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch126.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion125"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion126"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -5571,6 +5718,7 @@ def test_one_hundred_twenty_seventh_primary_literature_expansion_batch_preserves
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch127.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion126"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion127"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -5664,6 +5812,7 @@ def test_one_hundred_twenty_eighth_primary_literature_expansion_batch_preserves_
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch128.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion127"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion128"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -5731,6 +5880,7 @@ def test_one_hundred_twenty_ninth_primary_literature_expansion_batch_preserves_p
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch129.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion128"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion129"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -5821,6 +5971,7 @@ def test_one_hundred_thirtieth_primary_literature_expansion_batch_preserves_p1_o
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch130.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion129"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion130"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -5913,6 +6064,7 @@ def test_one_hundred_thirty_first_primary_literature_expansion_batch_preserves_p
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch131.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion130"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion131"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -6000,6 +6152,7 @@ def test_one_hundred_thirty_second_primary_literature_expansion_batch_preserves_
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch132.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion131"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion132"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -6091,6 +6244,7 @@ def test_one_hundred_thirty_third_primary_literature_expansion_batch_preserves_p
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch133.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion132"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion133"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -6180,6 +6334,7 @@ def test_one_hundred_thirty_fourth_primary_literature_expansion_batch_preserves_
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch134.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion133"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion134"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -6268,6 +6423,7 @@ def test_one_hundred_thirty_fifth_primary_literature_expansion_batch_preserves_p
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch135.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion134"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion135"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -6356,6 +6512,7 @@ def test_one_hundred_thirty_sixth_primary_literature_expansion_batch_preserves_p
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch136.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion135"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion136"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -6435,6 +6592,7 @@ def test_one_hundred_thirty_seventh_primary_literature_expansion_batch_preserves
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch137.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion136"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion137"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -6522,6 +6680,7 @@ def test_one_hundred_thirty_eighth_primary_literature_expansion_batch_preserves_
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch138.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion137"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion138"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -6609,6 +6768,7 @@ def test_one_hundred_thirty_ninth_primary_literature_expansion_batch_preserves_p
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch139.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion138"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion139"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -6705,6 +6865,7 @@ def test_one_hundred_fortieth_primary_literature_expansion_batch_preserves_p1_re
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch140.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion139"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion140"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -6782,6 +6943,7 @@ def test_one_hundred_forty_first_primary_literature_expansion_batch_preserves_re
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch141.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion140"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion141"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -6860,6 +7022,7 @@ def test_one_hundred_forty_second_primary_literature_expansion_batch_preserves_r
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch142.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion141"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion142"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -6939,6 +7102,7 @@ def test_one_hundred_forty_third_primary_literature_expansion_batch_preserves_re
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch143.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion142"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion143"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -7019,6 +7183,7 @@ def test_one_hundred_forty_fourth_primary_literature_expansion_batch_preserves_r
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch144.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion143"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion144"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -7098,6 +7263,7 @@ def test_one_hundred_forty_fifth_primary_literature_expansion_batch_preserves_re
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch145.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion144"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion145"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -7175,6 +7341,7 @@ def test_one_hundred_forty_sixth_primary_literature_expansion_batch_preserves_re
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch146.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion145"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion146"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -7251,6 +7418,7 @@ def test_one_hundred_forty_seventh_primary_literature_expansion_batch_preserves_
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch147.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion146"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion147"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -7329,6 +7497,7 @@ def test_one_hundred_forty_eighth_primary_literature_expansion_batch_preserves_r
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch148.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion147"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion148"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -7407,6 +7576,7 @@ def test_one_hundred_forty_ninth_primary_literature_expansion_batch_preserves_re
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch149.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion148"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion149"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 10
@@ -7484,6 +7654,7 @@ def test_one_hundred_fiftieth_primary_literature_expansion_batch_preserves_recep
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch150.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion149"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion150"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 11
@@ -7562,6 +7733,7 @@ def test_one_hundred_fifty_first_primary_literature_expansion_batch_resolves_can
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch151.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion150"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion151"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 594
@@ -7644,6 +7816,7 @@ def test_one_hundred_fifty_second_primary_literature_expansion_batch_closes_rema
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch152.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion151"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion152"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 500
@@ -7715,6 +7888,7 @@ def test_one_hundred_fifty_third_primary_literature_expansion_batch_closes_remai
     input_path = root / "work/module_b_consolidation/module21b/module21b_literature_expansion_batch153.json"
     source_bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion152"
     bundle = root / "data/processed/mechanism_graph_module20_24_v2026_09_16_literature_expansion153"
+    bundle = _require_snapshot(bundle)
     rows = read_input(input_path)
     validate_rows(rows, source_bundle)
     assert len(rows) == 1032

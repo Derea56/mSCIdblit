@@ -1,5 +1,7 @@
 from pathlib import Path
 
+import pytest
+
 from scripts.audit_full_signaling_chains import (
     build_downstream_evidence_records,
     build_downstream_curation_queue,
@@ -8,6 +10,25 @@ from scripts.audit_full_signaling_chains import (
     label_is_receptor_like,
     label_matches_alias_patterns,
 )
+
+
+def _require_snapshot(bundle):
+    """Resolve a mechanism-graph snapshot or skip the test when it is absent.
+
+    The superseded snapshots were untracked and deleted from the laptop on 2026-10-27
+    (mSCIdblit D-009/D-010; regenerable from the database and curation registers, not
+    mirrored). Resolution follows ``scripts.mscidblit_paths.resolve``: the local
+    ``data/`` copy first, else the same path under ``MSCIDBLIT_DATA_ROOT``. A missing
+    snapshot skips (never fails) by decision; a regression in a present snapshot still
+    fails.
+    """
+    from scripts.mscidblit_paths import REPO_ROOT, resolve
+
+    relative = Path(bundle).resolve().relative_to((REPO_ROOT / "data").resolve())
+    resolved = resolve(relative)
+    if not resolved.is_dir():
+        pytest.skip(f"mechanism-graph snapshot not present (mSCIdblit D-010): {relative}")
+    return resolved
 
 
 def test_classify_lr_candidate_exposes_receptor_proximal_edges():
@@ -50,6 +71,7 @@ def test_receptor_identity_alias_matching_avoids_substring_collisions():
 
 def test_module21b_downstream_queue_is_evidence_backed():
     bundle = Path(__file__).parents[1] / "data" / "processed" / "mechanism_graph_module20_24_v2026_09_15"
+    bundle = _require_snapshot(bundle)
     rows, summary = build_downstream_curation_queue(bundle)
     assert len(rows) == 3298
     assert summary["queue_records_with_output_terms"] == 2275
